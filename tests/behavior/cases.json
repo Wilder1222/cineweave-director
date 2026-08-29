@@ -285,6 +285,17 @@
       "behaviorAssertions": ["preserves Story Character and Scene ownership", "links every beat to coverage and continuity", "flags hazardous methods for qualified review without claiming safety approval"]
     },
     {
+      "id": "director.direct.fight-choreography-detail",
+      "category": "direct",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to design a weapon fight for storyboard prompts. For every visible weapon, state its exact name, type, distinguishing characteristics, owner and current state; for every technique, state the guard/setup, body mechanics, intent, contact or miss and recovery; describe each trajectory from start point through path, direction, depth, height, speed/rhythm to end point; and map the exchange as initiator, defense, counter/reposition and result while preserving axis and continuity.",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "action_sequence",
+      "mustProduce": ["cineweave_codex_action_sequence_spec"],
+      "mustNotProduce": ["cineweave_codex_shot_spec", "cineweave_codex_image_prompt"],
+      "behaviorAssertions": ["emits weapon profiles with name type and characteristics", "describes observable technique mechanics and trajectories", "links initiator defense counter and contact/result in order", "carries selected fight details into the shot prompt handoff", "keeps stunt safety and execution methods unresolved"]
+    },
+    {
       "id": "director.edge.unmotivated-move",
       "category": "edge",
       "targetSkill": "cineweave-director",
@@ -328,6 +339,17 @@
       "mustProduce": ["cineweave_codex_prompt_record"],
       "mustNotProduce": ["cineweave_codex_image_prompt"],
       "behaviorAssertions": ["applies a visibility and contradiction budget", "preserves source provenance"]
+    },
+    {
+      "id": "prompt.direct.cinematic-template-import",
+      "category": "direct",
+      "targetSkill": "cineweave-prompt",
+      "request": "Use $cineweave-prompt to import a Chinese short-drama/anime/manga template with global visual settings, timed shot rows, lighting presets and sound notes. Preserve the source, split representation, shot, physical-light, delivery and sound intent, and leave 8K, 24fps, dB, lip-sync and camera-brand claims unresolved until Production verifies them.",
+      "expectedSkill": "cineweave-prompt",
+      "expectedRoute": "prompt_import",
+      "mustProduce": ["cineweave_codex_prompt_record"],
+      "mustNotProduce": ["cineweave_codex_shot_spec", "cineweave_codex_temporal_spec", "cineweave_codex_render_plan"],
+      "behaviorAssertions": ["preserves source provenance", "routes timed camera decisions to Director contracts", "separates physical light from style treatment", "keeps representation variants independent", "does not claim unverified technical or audio capability"]
     },
     {
       "id": "prompt.negative.screenplay",
@@ -418,6 +440,61 @@
       "mustProduce": ["cineweave_codex_prompt_record"],
       "mustNotProduce": ["cineweave_codex_character_spec"],
       "behaviorAssertions": ["loads conditional surface-response guidance for a primary material target", "uses source geometry form and contact rather than generic gloss adjectives", "keeps stable identity current appearance state and style treatment separate", "filters detail for full-body scale and avoids default wet oily or latex skin"]
+    },
+    {
+      "id": "character.direct.appearance-styling-control",
+      "category": "direct",
+      "targetSkill": "cineweave-character",
+      "request": "Use $cineweave-character to version a controlled appearance state for the approved adult character: regional makeup, pinned hair, layered indigo workwear, brass hair accessory and rain-darkened skin response. Keep identity anchors fixed and create separate hero and video-safe versions when their detail budgets differ.",
+      "expectedSkill": "cineweave-character",
+      "expectedRoute": "appearance_state",
+      "mustProduce": ["cineweave_codex_character_appearance_state"],
+      "mustNotProduce": ["cineweave_codex_shot_spec", "cineweave_codex_image_prompt"],
+      "behaviorAssertions": ["structures makeup hair costume and skin material", "keeps identity separate from current look", "uses versioned hero and video-safe states", "preserves regional reference scope and movement response"]
+    },
+    {
+      "id": "director.direct.camera-previsualization",
+      "category": "direct",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to previsualize the approved reveal from sequence coverage through shot blocking, one motivated dolly behavior, camera pose/keyframes, focus target and stable end frame. Keep Character performance timing and Scene geography as exact upstream bindings.",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "temporal_direction",
+      "mustProduce": ["cineweave_codex_temporal_spec"],
+      "mustNotProduce": ["cineweave_codex_image_prompt"],
+      "behaviorAssertions": ["resolves sequence-to-pose camera hierarchy", "uses one dominant motivated move with start peak and stable end", "does not rewrite Character performance or Scene geography", "keeps provider-specific controls at the adapter boundary"]
+    },
+    {
+      "id": "director.direct.storyboard-coverage",
+      "category": "direct",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to turn the approved action into a minimal storyboard with establish, preparation, decisive action, reaction/consequence and transition coverage. Give every panel one purpose, one dominant action, exact bindings, continuity dependencies and an independent retryable task for later deterministic assembly.",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "storyboard",
+      "mustProduce": ["cineweave_codex_storyboard_sequence"],
+      "mustNotProduce": ["cineweave_codex_image_prompt"],
+      "behaviorAssertions": ["maintains a beat-to-panel coverage ledger", "uses independent panel tasks and fixed assembly regions", "retains continuity and provenance per panel", "does not ask one image model to draw a coherent grid"]
+    },
+    {
+      "id": "production.direct.opensource-adapter-capability",
+      "category": "direct",
+      "targetSkill": "cineweave-production",
+      "request": "Use $cineweave-production to match a ComfyUI-style graph that combines a face identity reference, a regional makeup mask, pose/depth control and a short motion module against exact ControlChannels. Record custom-node/model dependencies, input limits, license status, benchmark evidence and partial or unknown support without inventing provider weights.",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "capability_profile",
+      "mustProduce": ["cineweave_codex_capability_profile"],
+      "mustNotProduce": ["cineweave_codex_image_prompt", "cineweave_codex_shot_spec"],
+      "behaviorAssertions": ["separates graph dependencies from creative intent", "matches every hard control channel", "keeps unknown or partial capability visible", "requires rights and benchmark evidence"]
+    },
+    {
+      "id": "production.direct.control-benchmark-review",
+      "category": "direct",
+      "targetSkill": "cineweave-production",
+      "request": "Use $cineweave-production to review already verified Draft video candidates against this exact ControlBench. Bind every completed case to the exact ExecutionReceipt, MediaImport and candidate observations; record film-realism, contact, optics, source-light and temporal findings with one owning repair variable. Do not generate media, approve an asset or publish anything.",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "control_benchmark_review",
+      "mustProduce": ["cineweave_codex_control_benchmark_review"],
+      "mustNotProduce": ["cineweave_execution_request", "cineweave_execution_receipt"],
+      "behaviorAssertions": ["requires observed-media evidence for a completed review", "blocks advancement on failed blocking findings", "keeps human review and one-owner repair routing explicit", "does not claim generation approval or release"]
     }
   ]
 }

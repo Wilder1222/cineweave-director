@@ -14,9 +14,20 @@ Director consumes exact asset and style bindings; it does not redefine them.
 8. Check action mechanics against architecture, props, surfaces and weather.
 9. For multi-beat action, verify ActionSequenceSpec participant, zone, beat,
    coverage, continuity and risk links before any ShotSpec selects action beats.
+   For fights, also verify weapon profiles, technique/trajectory fields and
+   exchange event links before compiling the prompt handoff.
 10. Resolve light and material response from SceneBinding without erasing character skin/costume readability.
 11. Compile prompt/storyboard blocks by domain, then append scoped StyleCompile blocks.
 12. Preserve all refs and hashes in downstream records or explicit provenance.
+
+For cross-domain AIGC work, use the control stack `intent → asset state → shot/time
+state → adapter controls → review receipt`. Read `aigc-control-stack.md` for
+Control Cards, `appearance-styling-direction.md` for look-state handoffs,
+`camera-previsualization.md` for the sequence-to-pose camera ladder,
+`storyboard-coverage.md` for beat coverage and partial retry, and
+`opensource-adapter-patterns.md` for capability evidence. These guides add
+handoff discipline without moving Character, Scene, Prompt or Production
+ownership into Director.
 
 ## Conflict handling
 

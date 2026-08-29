@@ -462,6 +462,65 @@ function validateBenchmark(payload, errors) {
   push(errors, payload?.acceptance?.blockingDimensionPassRate === 1, "Blocking dimensions require perfect pass rate");
 }
 
+function validateBenchmarkReview(payload, errors, benchmark) {
+  const results = payload?.caseResults || [];
+  const media = payload?.mediaEvidence || [];
+  push(errors, unique(results.map((item) => item?.caseId)), "ControlBenchmarkReview case IDs must be unique");
+  push(errors, unique(media.map((item) => item?.mediaId)), "ControlBenchmarkReview media IDs must be unique");
+  const knownMediaIds = new Set(media.map((item) => item?.mediaId));
+  const knownObservationIds = new Set(media.flatMap((item) => item?.candidateObservationIds || []));
+  const findingIds = [];
+  for (const result of results) {
+    push(errors, unique((result?.reviewedMediaIds || [])), `${result?.caseId}: reviewed media IDs must be unique`);
+    for (const mediaId of result?.reviewedMediaIds || []) push(errors, knownMediaIds.has(mediaId), `${result?.caseId}: unknown reviewed media ${mediaId}`);
+    push(errors, unique((result?.findings || []).map((item) => item?.findingId)), `${result?.caseId}: finding IDs must be unique`);
+    push(errors, unique((result?.metricResults || []).map((item) => item?.metricId)), `${result?.caseId}: metric IDs must be unique`);
+    for (const finding of result?.findings || []) {
+      findingIds.push(finding?.findingId);
+      for (const observationId of finding?.evidenceObservationIds || []) push(errors, knownObservationIds.has(observationId), `${finding?.findingId}: finding evidence must be bound to candidate media`);
+      if (["warn", "fail"].includes(finding?.status)) push(errors, nonEmpty(finding?.smallestRepairVariable), `${finding?.findingId}: warning or failure requires one smallest repair variable`);
+    }
+    for (const metric of result?.metricResults || []) for (const observationId of metric?.evidenceObservationIds || []) push(errors, knownObservationIds.has(observationId), `${metric?.metricId}: metric evidence must be bound to candidate media`);
+    if (["pass", "warn", "fail"].includes(result?.status)) {
+      push(errors, (result?.reviewedMediaIds || []).length > 0, `${result?.caseId}: completed case requires reviewed media`);
+      push(errors, (result?.findings || []).length > 0, `${result?.caseId}: completed case requires findings`);
+      push(errors, (result?.metricResults || []).length > 0, `${result?.caseId}: completed case requires metrics`);
+    }
+  }
+  push(errors, unique(findingIds), "ControlBenchmarkReview finding IDs must be unique across cases");
+  if (benchmark) {
+    const expectedCaseIds = (benchmark.cases || []).map((item) => item?.caseId).sort();
+    const actualCaseIds = results.map((item) => item?.caseId).sort();
+    const expectedMetricIds = new Set((benchmark.metrics || []).map((item) => item?.metricId));
+    push(errors, JSON.stringify(actualCaseIds) === JSON.stringify(expectedCaseIds), "ControlBenchmarkReview must cover every bound benchmark case exactly once");
+    push(errors, payload?.benchmarkRef?.id === benchmark?.suiteId && payload?.benchmarkRef?.version === benchmark?.version, "ControlBenchmarkReview benchmark ref must match the supplied ControlBenchmark");
+    for (const result of results) for (const metric of result?.metricResults || []) push(errors, expectedMetricIds.has(metric?.metricId), `${result?.caseId}: unknown benchmark metric ${metric?.metricId}`);
+  }
+  const blockingFailures = results.flatMap((result) => result?.findings || []).filter((finding) => finding?.severity === "blocking" && finding?.status === "fail").map((finding) => finding?.findingId).sort();
+  const declaredBlockingFailures = [...(payload?.decision?.blockingFindingIds || [])].sort();
+  push(errors, JSON.stringify(declaredBlockingFailures) === JSON.stringify(blockingFailures), "ControlBenchmarkReview must declare every and only failed blocking finding");
+  if (payload?.status === "planned") {
+    push(errors, media.length === 0, "Planned ControlBenchmarkReview cannot claim media evidence");
+    push(errors, results.every((result) => result?.status === "planned"), "Planned ControlBenchmarkReview cases must remain planned");
+    push(errors, payload?.decision?.overallStatus === "planned" && payload?.decision?.mayAdvanceToApproval === false, "Planned ControlBenchmarkReview cannot advance a candidate");
+  }
+  if (payload?.status === "completed") {
+    push(errors, media.length > 0, "Completed ControlBenchmarkReview requires observed media evidence");
+    push(errors, results.every((result) => result?.status !== "planned"), "Completed ControlBenchmarkReview cannot retain planned cases");
+    push(errors, payload?.humanReview?.status === "completed" && payload?.humanReview?.reviewerCount >= 1, "Completed ControlBenchmarkReview requires completed human review");
+  }
+  if (blockingFailures.length > 0) {
+    push(errors, payload?.decision?.overallStatus === "fail", "Blocking ControlBench failure requires overallStatus=fail");
+    push(errors, payload?.decision?.nextAction === "repair" && payload?.decision?.mayAdvanceToApproval === false, "Blocking ControlBench failure must repair and cannot advance");
+  }
+  if (payload?.decision?.mayAdvanceToApproval) {
+    push(errors, payload?.status === "completed" && payload?.decision?.overallStatus === "pass", "Only a completed passing ControlBenchmarkReview may advance");
+    push(errors, blockingFailures.length === 0, "ControlBenchmarkReview with a blocking failure cannot advance");
+  }
+  for (const key of ["benchmarkBound", "casesComplete", "exactMediaEvidence", "blockingFailuresBlockAdvancement", "noAttractivenessScore", "noBiometricInference", "oneOwnerPerRepair"]) push(errors, payload?.validation?.[key] === true, `ControlBenchmarkReview validation.${key} must be true`);
+  push(errors, payload?.executionBoundary?.generatesMedia === false && payload?.executionBoundary?.approvesAssets === false, "ControlBenchmarkReview cannot generate media or approve assets");
+}
+
 function validateAdapterDescriptor(payload, errors, capabilityProfile) {
   const operations = payload?.operations || [];
   push(errors, unique(operations.map((item) => item?.operationId)), "Adapter operation IDs must be unique");
@@ -947,6 +1006,9 @@ function validateActionSequenceSpec(payload, errors) {
   const participants = payload?.participants || [];
   const participantIds = participants.map((item) => item?.participantId);
   const knownParticipants = new Set(participantIds);
+  const weaponProfiles = payload?.weaponProfiles || [];
+  const weaponIds = weaponProfiles.map((item) => item?.weaponId);
+  const knownWeapons = new Set(weaponIds);
   const zones = new Set(payload?.geography?.activeZoneIds || []);
   const beats = payload?.beats || [];
   const beatIds = beats.map((item) => item?.beatId);
@@ -959,6 +1021,7 @@ function validateActionSequenceSpec(payload, errors) {
   const riskById = new Map(risks.map((item) => [item?.riskId, item]));
 
   push(errors, unique(participantIds), "ActionSequenceSpec participant IDs must be unique");
+  push(errors, unique(weaponIds), "ActionSequenceSpec weapon IDs must be unique");
   push(errors, payload?.bindings?.scene?.kind === "scene_binding", "ActionSequenceSpec must bind an exact SceneBinding");
   for (const ref of payload?.bindings?.interactionConstraints || []) push(errors, ref?.kind === "cineweave_codex_interaction_constraint_set", "ActionSequenceSpec interaction refs must target InteractionConstraintSet");
   for (const participant of participants) {
@@ -966,6 +1029,13 @@ function validateActionSequenceSpec(payload, errors) {
     if (participant?.performanceTimelineRef) push(errors, participant.performanceTimelineRef.kind === "cineweave_codex_performance_timeline", `${participant?.participantId}: performance ref must target PerformanceTimeline`);
     push(errors, zones.has(participant?.entryZoneId), `${participant?.participantId}: unknown entry zone ${participant?.entryZoneId}`);
     push(errors, zones.has(participant?.exitZoneId), `${participant?.participantId}: unknown exit zone ${participant?.exitZoneId}`);
+  }
+  for (const weapon of weaponProfiles) {
+    push(errors, knownParticipants.has(weapon?.ownerParticipantId), `${weapon?.weaponId}: unknown weapon owner ${weapon?.ownerParticipantId}`);
+    push(errors, nonEmpty(weapon?.name) && nonEmpty(weapon?.type), `${weapon?.weaponId}: weapon name and type are required`);
+    push(errors, Array.isArray(weapon?.characteristics) && weapon.characteristics.length > 0, `${weapon?.weaponId}: weapon characteristics are required`);
+    push(errors, nonEmpty(weapon?.combatFunction), `${weapon?.weaponId}: weapon combat function is required`);
+    push(errors, nonEmpty(weapon?.initialState) && nonEmpty(weapon?.continuityRule), `${weapon?.weaponId}: weapon state and continuity rule are required`);
   }
 
   for (const path of payload?.geography?.movementPaths || []) {
@@ -978,14 +1048,47 @@ function validateActionSequenceSpec(payload, errors) {
   push(errors, unique(coverageIds), "ActionSequenceSpec coverage IDs must be unique");
   push(errors, unique(riskIds), "ActionSequenceSpec risk IDs must be unique");
   const eventIds = [];
+  const eventById = new Map();
+  const exchangeIds = [];
   for (const [index, beat] of beats.entries()) {
     push(errors, beat?.order === index + 1, `ActionSequenceSpec beat order must be contiguous at ${beat?.beatId}`);
+    const beatEventIds = new Set();
     for (const event of beat?.actions || []) {
       eventIds.push(event?.eventId);
+      beatEventIds.add(event?.eventId);
+      eventById.set(event?.eventId, { beat, event });
       push(errors, knownParticipants.has(event?.participantId), `${event?.eventId}: unknown participant ${event?.participantId}`);
       push(errors, zones.has(event?.fromZoneId), `${event?.eventId}: unknown start zone ${event?.fromZoneId}`);
       push(errors, zones.has(event?.toZoneId), `${event?.eventId}: unknown end zone ${event?.toZoneId}`);
       push(errors, Array.isArray(event?.constraintRefs) && event.constraintRefs.length > 0, `${event?.eventId}: observable action must cite at least one interaction or support constraint`);
+      if (event?.weaponRef) {
+        const weapon = weaponProfiles.find((item) => item?.weaponId === event.weaponRef);
+        push(errors, knownWeapons.has(event.weaponRef), `${event?.eventId}: unknown weapon ${event?.weaponRef}`);
+        if (weapon && event?.propRef) push(errors, event.propRef === weapon.propRef, `${event?.eventId}: propRef must match its weapon profile`);
+      }
+      if (event?.exchangeRole) push(errors, Boolean(event?.exchangeId), `${event?.eventId}: exchangeRole requires exchangeId`);
+      if (event?.responseToEventId) push(errors, event.responseToEventId !== event.eventId, `${event?.eventId}: action cannot respond to itself`);
+    }
+    if (beat?.exchange) {
+      const exchange = beat.exchange;
+      exchangeIds.push(exchange.exchangeId);
+      push(errors, exchange.participantIds.every((id) => knownParticipants.has(id)), `${exchange.exchangeId}: unknown exchange participant`);
+      push(errors, unique(exchange.sequence.map((step) => step?.eventId)), `${exchange.exchangeId}: exchange event IDs must be unique`);
+      let lastStep = 0;
+      for (const step of exchange.sequence || []) {
+        push(errors, step?.step === lastStep + 1, `${exchange.exchangeId}: exchange steps must be contiguous`);
+        lastStep = step?.step;
+        const event = eventById.get(step?.eventId)?.event;
+        push(errors, beatEventIds.has(step?.eventId), `${exchange.exchangeId}: step references an event outside its beat`);
+        push(errors, Boolean(event), `${exchange.exchangeId}: unknown exchange event ${step?.eventId}`);
+        push(errors, knownParticipants.has(step?.participantId), `${exchange.exchangeId}: unknown step participant ${step?.participantId}`);
+        if (event) {
+          push(errors, event.participantId === step.participantId, `${step?.eventId}: exchange participant must match action participant`);
+          push(errors, event.exchangeId === exchange.exchangeId, `${step?.eventId}: action exchangeId must match beat exchange`);
+          push(errors, event.exchangeRole === step.role, `${step?.eventId}: exchange role must match action exchangeRole`);
+        }
+        push(errors, exchange.participantIds.includes(step?.participantId), `${step?.eventId}: step participant must belong to the exchange`);
+      }
     }
     for (const coverageId of beat?.coverageRequirementIds || []) {
       const item = coverageById.get(coverageId);
@@ -999,6 +1102,30 @@ function validateActionSequenceSpec(payload, errors) {
     }
   }
   push(errors, unique(eventIds), "ActionSequenceSpec event IDs must be unique");
+  push(errors, unique(exchangeIds), "ActionSequenceSpec exchange IDs must be unique");
+  for (const beat of beats) for (const event of beat?.actions || []) {
+    if (event?.responseToEventId) {
+      const response = eventById.get(event.responseToEventId);
+      push(errors, Boolean(response), `${event?.eventId}: unknown response event ${event.responseToEventId}`);
+      if (response) push(errors, response.beat.order <= beat.order, `${event?.eventId}: response event must not occur after the action`);
+    }
+  }
+
+  const promptHandoff = payload?.promptHandoff;
+  if (promptHandoff) {
+    const blocks = promptHandoff.orderedBlocks || [];
+    push(errors, unique(blocks), "ActionSequenceSpec prompt handoff blocks must be unique");
+    if (promptHandoff.mode === "fight_specific") {
+      for (const block of ["weapon_profile", "technique", "trajectory", "exchange", "contact_result"]) {
+        push(errors, blocks.includes(block), `ActionSequenceSpec fight prompt handoff must include ${block}`);
+      }
+      for (const beat of beats) for (const event of beat?.actions || []) if (event?.exchangeRole) {
+        push(errors, nonEmpty(event?.techniqueMechanics), `${event?.eventId}: fight exchange action requires technique mechanics`);
+        push(errors, isObject(event?.trajectory), `${event?.eventId}: fight exchange action requires an explicit trajectory`);
+        push(errors, isObject(event?.contact), `${event?.eventId}: fight exchange action requires contact or near-miss state`);
+      }
+    }
+  }
 
   for (const check of payload?.physicalChecks || []) {
     for (const beatId of check?.beatIds || []) push(errors, knownBeats.has(beatId), `${check?.checkId}: unknown action beat ${beatId}`);
@@ -1047,6 +1174,22 @@ function validateShotSpec(payload, errors, actionSequenceSpec) {
       push(errors, payload.actionSequenceRef.id === actionSequenceSpec.actionSequenceId && payload.actionSequenceRef.version === actionSequenceSpec.version, "ShotSpec must bind the supplied exact ActionSequenceSpec identity and version");
       const knownActionBeats = new Set((actionSequenceSpec.beats || []).map((item) => item?.beatId));
       for (const beatId of payload?.actionBeatIds || []) push(errors, knownActionBeats.has(beatId), `ShotSpec selects unknown action beat ${beatId}`);
+    }
+  }
+  const actionBreakdown = payload?.promptHandoff?.actionBreakdown;
+  if (actionBreakdown) {
+    push(errors, Boolean(payload?.actionSequenceRef && Array.isArray(payload?.actionBeatIds) && payload.actionBeatIds.length > 0), "ShotSpec actionBreakdown requires selected ActionSequenceSpec beats");
+    if (actionSequenceSpec) {
+      const knownWeapons = new Set((actionSequenceSpec.weaponProfiles || []).map((item) => item?.weaponId));
+      const profiles = new Map((actionSequenceSpec.weaponProfiles || []).map((item) => [item?.weaponId, item]));
+      for (const weapon of actionBreakdown.weaponDetails || []) {
+        push(errors, knownWeapons.has(weapon?.weaponRef), `ShotSpec actionBreakdown references unknown weapon ${weapon?.weaponRef}`);
+        const profile = profiles.get(weapon?.weaponRef);
+        if (profile) {
+          push(errors, weapon.name === profile.name, `ShotSpec actionBreakdown weapon name must match ${weapon?.weaponRef}`);
+          push(errors, weapon.type === profile.type, `ShotSpec actionBreakdown weapon type must match ${weapon?.weaponRef}`);
+        }
+      }
     }
   }
   push(errors, nonEmpty(payload?.camera?.movementIntent), "ShotSpec needs a motivated movement intent, including static");
@@ -1351,6 +1494,7 @@ function validateByKind(payload, context = {}) {
     case "cineweave_codex_capability_profile": validateCapabilityProfile(payload, errors); break;
     case "cineweave_codex_license_profile": validateLicenseProfile(payload, errors); break;
     case "cineweave_codex_control_benchmark": validateBenchmark(payload, errors); break;
+    case "cineweave_codex_control_benchmark_review": validateBenchmarkReview(payload, errors, context.benchmark); break;
     case "cineweave_adapter_descriptor": validateAdapterDescriptor(payload, errors, context.capabilityProfile); break;
     case "cineweave_execution_request": validateExecutionRequest(payload, errors); break;
     case "cineweave_execution_receipt": validateExecutionReceipt(payload, errors, context.executionRequest); break;
@@ -1397,6 +1541,7 @@ async function runSelfTest(mode = "all") {
   const referenceObservation = await readJson("examples/reference-observation.json");
   const referenceBindingSet = await readJson("examples/reference-binding-set.json");
   const actionSequenceSpec = await readJson("examples/action-sequence-spec.json");
+  const benchmark = await readJson("examples/control-benchmark.json");
   const referenceObservations = [{ artifactRef: referenceBindingSet.bindings[0].observationRef, payload: referenceObservation }];
   const cases = [
     ["examples/character-spec.json", {}], ["examples/character-morphology-spec.json", {}], ["examples/morphology-review.json", {}], ["examples/character-exploration-brief.json", {}], ["examples/character-option-set.json", {}], ["examples/character-preference-feedback.json", {}], ["examples/character-binding.json", {}], ["examples/character-reference-plan.json", {}], ["examples/character-appearance-state.json", {}], ["examples/character-review.json", {}], ["examples/character-repair.json", {}],
@@ -1406,13 +1551,13 @@ async function runSelfTest(mode = "all") {
     ["examples/performance-timeline.json", {}],
     ["examples/scene-spec.json", {}], ["examples/scene-state.json", { sceneSpec }], ["examples/scene-binding.json", { sceneSpec }], ["examples/scene-reference-plan.json", { sceneSpec }], ["examples/interaction-constraint-set.json", {}], ["examples/scene-review.json", { sceneSpec }], ["examples/scene-repair.json", { sceneSpec }],
     ["examples/scene-light-state.json", {}],
-    ["examples/asset-recipe.json", { controlSet }], ["recipes/character-morphology-neutral-3view.json", {}], ["recipes/character-identity-reference-sheet-3x3.json", {}], ["recipes/natural-human-fixtures-3up.json", {}], ["recipes/style-exploration-board-4up.json", {}], ["recipes/anime-character-fixtures-3up.json", {}], ["recipes/manga-character-fixtures-3up.json", {}], ["recipes/cross-representation-character-6up.json", {}], ["examples/board-assembly-plan.json", {}], ["examples/control-channel-set.json", {}], ["examples/evidence-bundle.json", {}], ["examples/capability-profile.json", {}], ["examples/license-profile.json", {}], ["examples/control-benchmark.json", {}],
+    ["examples/asset-recipe.json", { controlSet }], ["recipes/character-morphology-neutral-3view.json", {}], ["recipes/character-identity-reference-sheet-3x3.json", {}], ["recipes/natural-human-fixtures-3up.json", {}], ["recipes/style-exploration-board-4up.json", {}], ["recipes/anime-character-fixtures-3up.json", {}], ["recipes/manga-character-fixtures-3up.json", {}], ["recipes/cross-representation-character-6up.json", {}], ["examples/board-assembly-plan.json", {}], ["examples/control-channel-set.json", {}], ["examples/evidence-bundle.json", {}], ["examples/capability-profile.json", {}], ["examples/license-profile.json", {}], ["examples/control-benchmark.json", {}], ["examples/control-benchmark-review.json", { benchmark }],
     ["examples/adapter-descriptor.json", {}], ["examples/execution-request.json", {}], ["examples/execution-receipt.json", {}], ["examples/execution-receipt-blocked.json", {}], ["examples/skill-evaluation-run.json", {}],
     ["examples/artifact-graph.json", {}], ["examples/project-bundle-manifest.json", {}],
     ["examples/reference-asset.json", {}], ["examples/reference-observation.json", { referenceAsset }],
     ["examples/reference-observation-portrait-face.json", { referenceAsset }], ["examples/reference-observation-portrait-skin.json", { referenceAsset }], ["examples/reference-observation-portrait-capture.json", { referenceAsset }],
     ["examples/reference-review.json", {}], ["examples/reference-binding-set.json", { referenceObservations }],
-    ["examples/integrated-image-prompt.json", { sceneSpec }], ["examples/integrated-image-prompt-reference-reframe.json", {}], ["examples/integrated-storyboard.json", { sceneSpec }], ["examples/prompt-record.json", {}], ["examples/prompt-record-reference-reframe.json", {}],
+    ["examples/integrated-image-prompt.json", { sceneSpec }], ["examples/integrated-image-prompt-reference-reframe.json", {}], ["examples/integrated-storyboard.json", { sceneSpec }], ["examples/prompt-record.json", {}], ["examples/prompt-record-reference-reframe.json", {}], ["examples/prompt-record-cinematic-director-template.json", {}],
     ["examples/style-package.json", {}], ["examples/style-package-anime.json", {}], ["examples/style-package-manga.json", {}], ["examples/style-exploration-brief.json", {}], ["examples/style-option-set.json", {}], ["examples/style-preference-feedback.json", {}], ["examples/representation-binding.json", {}], ["examples/style-reference-plan.json", {}], ["examples/style-compile.json", {}], ["examples/style-compile-anime.json", {}], ["examples/style-light-grammar.json", {}], ["examples/style-review.json", {}],
     ["examples/action-sequence-spec.json", {}], ["examples/shot-spec.json", {}], ["examples/shot-spec-action.json", { actionSequenceSpec }], ["examples/shot-lighting-plan.json", { sceneLightState }], ["examples/temporal-spec.json", {}], ["examples/prompt-repair.json", {}],
     ["examples/creative-brief.json", {}], ["examples/creative-brief-zero-prompt.json", {}], ["examples/workflow-plan.json", {}], ["examples/workflow-plan-character-exploration.json", {}], ["examples/workflow-plan-character-morphology.json", {}], ["examples/workflow-plan-cross-representation.json", {}], ["examples/workflow-plan-reference-prompt.json", {}], ["examples/workflow-plan-portrait-reference.json", {}], ["examples/workflow-plan-action-sequence.json", {}],
@@ -1441,6 +1586,7 @@ async function runSelfTest(mode = "all") {
   const badEvidence = await readJson("examples/evidence-bundle.json"); badEvidence.evidence = badEvidence.evidence.filter((item) => item.role !== "body_identity"); negative.push(["reject missing required evidence role", badEvidence, {}]);
   const badCapability = await readJson("examples/capability-profile.json"); badCapability.capabilities.push(structuredClone(badCapability.capabilities[0])); negative.push(["reject duplicate capability", badCapability, {}]);
   const badFamilyBench = await readJson("examples/control-benchmark.json"); badFamilyBench.cases = badFamilyBench.cases.filter((item) => item.category !== "manga_representation"); negative.push(["reject MangaBench without manga case", badFamilyBench, {}]);
+  const badBenchmarkReview = await readJson("examples/control-benchmark-review.json"); badBenchmarkReview.decision.mayAdvanceToApproval = true; negative.push(["reject planned ControlBenchmarkReview that advances", badBenchmarkReview, { benchmark }]);
   const badInteraction = await readJson("examples/interaction-constraint-set.json"); badInteraction.constraints.occlusions.push({ frontRef: badInteraction.constraints.occlusions[0].backRef, backRef: badInteraction.constraints.occlusions[0].frontRef, region: "reverse", ordering: "front_before_back" }); negative.push(["reject cyclic occlusion", badInteraction, {}]);
   const badStyle = await readJson("examples/style-package.json"); badStyle.recipe.atomRefs[0].atomId = "unknown.style.atom"; negative.push(["reject StylePackage unknown atom", badStyle, {}]);
   const badStyleActivation = await readJson("examples/style-package.json"); badStyleActivation.status = "active"; negative.push(["reject active StylePackage without activation approval", badStyleActivation, {}]);
@@ -1465,11 +1611,15 @@ async function runSelfTest(mode = "all") {
   const badSceneLight = await readJson("examples/scene-light-state.json"); badSceneLight.sources[1].sourceId = badSceneLight.sources[0].sourceId; negative.push(["reject duplicate SceneLightState source", badSceneLight, {}]);
   const badStyleLight = await readJson("examples/style-light-grammar.json"); badStyleLight.validation.noPhysicalSourcePlacement = false; negative.push(["reject StyleLightGrammar physical placement", badStyleLight, {}]);
   const badActionParticipant = await readJson("examples/action-sequence-spec.json"); badActionParticipant.beats[0].actions[0].participantId = "participant.unknown"; negative.push(["reject ActionSequenceSpec unknown participant", badActionParticipant, {}]);
+  const badActionWeapon = await readJson("examples/action-sequence-spec.json"); badActionWeapon.beats[1].actions[0].weaponRef = "weapon.unknown"; negative.push(["reject ActionSequenceSpec unknown weapon", badActionWeapon, {}]);
+  const badActionExchange = await readJson("examples/action-sequence-spec.json"); badActionExchange.beats[1].exchange.sequence[1].eventId = "event.unknown"; negative.push(["reject ActionSequenceSpec unknown exchange event", badActionExchange, {}]);
+  const badActionPromptHandoff = await readJson("examples/action-sequence-spec.json"); badActionPromptHandoff.promptHandoff.orderedBlocks = badActionPromptHandoff.promptHandoff.orderedBlocks.filter((item) => item !== "trajectory"); negative.push(["reject incomplete fight prompt handoff", badActionPromptHandoff, {}]);
   const badActionCoverage = await readJson("examples/action-sequence-spec.json"); badActionCoverage.coverageRequirements[0].beatIds.shift(); negative.push(["reject ActionSequenceSpec asymmetric coverage link", badActionCoverage, {}]);
   const badActionRisk = await readJson("examples/action-sequence-spec.json"); badActionRisk.riskRegister[0].requiresQualifiedReview = false; negative.push(["reject unreviewed high-risk action", badActionRisk, {}]);
   const badActionContinuity = await readJson("examples/action-sequence-spec.json"); badActionContinuity.continuityTracks[0].exitState = "silently moved elsewhere"; negative.push(["reject open ActionSequenceSpec continuity", badActionContinuity, {}]);
   const badShot = await readJson("examples/shot-spec.json"); badShot.blocking[0].subjectRef = "binding.unknown"; negative.push(["reject ShotSpec unknown blocking subject", badShot, {}]);
   const badActionShot = await readJson("examples/shot-spec-action.json"); badActionShot.actionBeatIds[0] = "action-beat.unknown"; negative.push(["reject ShotSpec unknown action beat", badActionShot, { actionSequenceSpec }]);
+  const badActionShotWeapon = await readJson("examples/shot-spec-action.json"); badActionShotWeapon.promptHandoff.actionBreakdown.weaponDetails[0].weaponRef = "weapon.unknown"; negative.push(["reject ShotSpec unknown action breakdown weapon", badActionShotWeapon, { actionSequenceSpec }]);
   const badShotLight = await readJson("examples/shot-lighting-plan.json"); badShotLight.key.sourceId = "light.unknown"; negative.push(["reject ShotLightingPlan unknown source", badShotLight, { sceneLightState }]);
   const badTemporal = await readJson("examples/temporal-spec.json"); badTemporal.actionTimeline[1].timeSeconds = 0.1; negative.push(["reject unordered TemporalSpec", badTemporal, {}]);
   const badPromptRepair = await readJson("examples/prompt-repair.json"); badPromptRepair.changeOnly.push("also change composition"); negative.push(["reject multi-variable PromptRepair", badPromptRepair, {}]);

@@ -101,7 +101,8 @@
         "primaryTarget": { "type": "string", "minLength": 1, "maxLength": 800 },
         "mustPreserve": { "$ref": "common.schema.json#/$defs/stringList" },
         "mayVary": { "type": "array", "maxItems": 16, "items": { "type": "string", "minLength": 1, "maxLength": 800 } },
-        "unresolved": { "type": "array", "maxItems": 16, "items": { "type": "string", "minLength": 1, "maxLength": 800 } }
+        "unresolved": { "type": "array", "maxItems": 16, "items": { "type": "string", "minLength": 1, "maxLength": 800 } },
+        "actionBreakdown": { "$ref": "#/$defs/actionBreakdown" }
       }
     },
     "validation": {
@@ -115,6 +116,42 @@
         "axisCoherent": { "const": true },
         "actionPlayable": { "const": true },
         "endStateStable": { "const": true }
+      }
+    }
+  },
+  "$defs": {
+    "actionBreakdown": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["weaponDetails", "technique", "trajectory", "exchange", "contactAndResult", "continuity"],
+      "properties": {
+        "weaponDetails": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["weaponRef", "name", "type", "characteristics", "currentState"],
+            "properties": {
+              "weaponRef": { "type": "string", "minLength": 1, "maxLength": 240 },
+              "name": { "type": "string", "minLength": 1, "maxLength": 240 },
+              "type": { "type": "string", "minLength": 1, "maxLength": 240 },
+              "characteristics": {
+                "type": "array",
+                "minItems": 1,
+                "maxItems": 8,
+                "items": { "type": "string", "minLength": 1, "maxLength": 500 }
+              },
+              "currentState": { "type": "string", "minLength": 1, "maxLength": 800 }
+            }
+          }
+        },
+        "technique": { "type": "string", "minLength": 1, "maxLength": 1600 },
+        "trajectory": { "type": "string", "minLength": 1, "maxLength": 1600 },
+        "exchange": { "type": "string", "minLength": 1, "maxLength": 1600 },
+        "contactAndResult": { "type": "string", "minLength": 1, "maxLength": 1200 },
+        "continuity": { "type": "string", "minLength": 1, "maxLength": 1200 }
       }
     }
   },

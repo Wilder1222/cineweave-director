@@ -128,7 +128,23 @@
     "primaryTarget": "顾行舟用横置长桌改变追兵路线后发现楼梯退路被封的动作转折",
     "mustPreserve": ["ActionSequenceSpec 的两个精确节拍", "三组 CharacterBinding", "SceneBinding 与 InteractionConstraintSet", "脚—桌—追兵路径因果", "35mm 人体尺度地理"],
     "mayVary": ["前景柱边裁切", "倒下茶具的细节", "摄影机小幅修正距离"],
-    "unresolved": ["镜头最终时长与具体表演秒点由 TemporalSpec 对齐"]
+    "unresolved": ["镜头最终时长与具体表演秒点由 TemporalSpec 对齐"],
+    "actionBreakdown": {
+      "weaponDetails": [
+        {
+          "weaponRef": "weapon.pursuer-dao",
+          "name": "制式单刀",
+          "type": "单刃短刀，近距离劈砍型兵器",
+          "characteristics": ["窄长单刃、厚刀背", "深色缠带刀柄", "只保留短促冷色金属反光"],
+          "currentState": "前景追兵右手持刀，刀锋从画面左上向右下斜落后收住。"
+        }
+      ],
+      "technique": "追兵使用斜劈压线：前脚跨入、肩线带动持刀臂，意在逼退；顾行舟以侧闪卸线让开刀路，随后不追击而借桌转位。",
+      "trajectory": "刀锋从追兵右肩外侧的高位起，经画面左上至右下的斜线，在顾行舟左肩外侧的前景空位收住；顾行舟左脚向画面右侧短移，双手再沿长桌近端作短弧推动，桌体由纵深方向转为横向。",
+      "exchange": "追兵发起斜劈压线 → 顾行舟侧闪卸线并保持沈蘅身前保护位 → 顾行舟以借桌转位反制通道 → 追兵由并列推进被迫改单列，主动权短暂转移。",
+      "contactAndResult": "制式单刀与人体无接触，属于可读 near miss；唯一接触是顾行舟与长桌的 prop contact，动作结果是通道被横桌切断而非人物受伤。",
+      "continuity": "顾行舟仍未拔出右侧窄身佩刀，刀具不进入本拍；长桌从本拍结束起保持横置，顾行舟仍在沈蘅与追兵之间，主行动轴保持在南侧。"
+    }
   },
   "validation": {
     "onePurpose": true,

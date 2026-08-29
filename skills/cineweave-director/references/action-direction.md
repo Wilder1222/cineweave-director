@@ -48,6 +48,10 @@ character's capabilities, move a fixed scene anchor or certify a stunt as safe.
    injuries, wardrobe/environment damage and other changing states.
 10. Flag visible production risks and hand the sequence to shot breakdown.
 
+For armed or unarmed fights, also read [fight-choreography.md](fight-choreography.md)
+and complete the weapon, technique, trajectory and exchange layers before
+calling the sequence shot-breakdown ready.
+
 ## Beat discipline
 
 An action beat needs a trigger, dramatic function, attention target, rhythm,
@@ -64,6 +68,13 @@ observable actions and one resulting state. Prefer state-changing beats such as:
 Do not split a sequence into one beat per limb motion. Conversely, do not hide
 several spatial changes inside “they fight.” Every beat must be playable from
 its entry state and hand a stable result to the next beat.
+
+For a fight beat, do not hide the exchange inside one `observableAction` string.
+Use the structured `weaponRef`, `techniqueType`/`techniqueName`, `trajectory`,
+`contact`, `exchangeRole` and `responseToEventId` fields when those facts are
+known. Add the beat-level `exchange` so the causal order of initiation,
+defense, counter or reposition, and reset is explicit. A named technique never
+replaces its visible mechanics.
 
 ## Physical readability
 
@@ -89,6 +100,12 @@ before compressing it. Show the action that creates a new state and the result
 that makes the next beat possible. Cut on information, choice, contact,
 possession, support or direction change—not because an arbitrary duration has
 elapsed.
+
+For fight coverage, keep the weapon path and the defender's response in the
+same readable causal window whenever possible. If a cut separates them, the
+handoff must repeat the initiating weapon state, facing, distance and
+`responseToEventId` context; never use a montage cut to conceal an unresolved
+exchange.
 
 `ActionSequenceSpec` expresses coverage needs without lenses or exact camera
 curves. A downstream `ShotSpec` binds `actionSequenceRef` plus one or more
@@ -134,6 +151,12 @@ more important than move count.
 - Does every beat change a meaningful state?
 - Can every participant and path be found in exact bindings?
 - Does each move preserve Character-owned motion identity and timing?
+- When the sequence is a fight, can every visible weapon be named, typed and
+  distinguished, and does every technique expose its mechanics?
+- Does every weapon/body path state an explicit start, shape, direction, depth,
+  height, speed/rhythm and end point?
+- Can the audience follow initiator → defense → counter/reposition → contact or
+  miss → resulting position without guessing?
 - Are contact, support, reach and prop states readable rather than assumed?
 - Does every beat have at least one linked coverage requirement?
 - Do continuity tracks close on their final state?

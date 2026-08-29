@@ -109,6 +109,42 @@
       "visibilityPriority": "context"
     }
   ],
+  "weaponProfiles": [
+    {
+      "weaponId": "weapon.pursuer-dao",
+      "ownerParticipantId": "participant.pursuers",
+      "propRef": "prop.pursuer-weapon",
+      "name": "制式单刀",
+      "type": "单刃短刀，近距离劈砍型兵器",
+      "characteristics": [
+        "窄长单刃，刀背厚于刃口，前景轮廓能与人物手臂区分",
+        "刀柄用深色缠带包裹，右手持握时刀锋朝外",
+        "刀身只出现短促冷色反光，不使用夸张发光或拖影"
+      ],
+      "visualSignature": "追兵右手持刀从画面左前景切入，刀锋斜向下形成第一条威胁线。",
+      "combatFunction": "以斜向劈击压缩顾行舟的横向退路，迫使他先让开刀路再处理长桌。",
+      "initialState": "正门追兵右手下垂持刀，跨入一臂距离后抬腕发起攻击。",
+      "continuityRule": "未明确收刀或掉落前，刀始终由追兵持有，不得在切镜后改变手侧或凭空消失。",
+      "sourceBasis": "declared_brief"
+    },
+    {
+      "weaponId": "weapon.gu-dao",
+      "ownerParticipantId": "participant.gu-xingzhou",
+      "propRef": "prop.gu-dao",
+      "name": "窄身佩刀",
+      "type": "单刃短刀，收束距离与警戒线型兵器",
+      "characteristics": [
+        "窄身单刃、短护手，适合在茶楼狭窄空间建立侧向距离线",
+        "深色刀鞘贴在顾行舟右侧腰部，拔出后刀锋保持低于沈蘅肩线",
+        "刀锋反光细而短，强调身份暴露与距离控制而非杀伤展示"
+      ],
+      "visualSignature": "顾行舟右手拔刀，刀身从腰侧向画面横向展开，始终与沈蘅保持可读间隔。",
+      "combatFunction": "在唯一出口前建立警戒线，让追兵停顿并为沈蘅打开两步撤离窗口。",
+      "initialState": "刀在顾行舟右侧鞘内，右手尚未完全握住刀柄。",
+      "continuityRule": "拔刀后持续由右手持有，除非出现明确收刀、交接或掉落动作，不得自动回鞘或换手。",
+      "sourceBasis": "declared_brief"
+    }
+  ],
   "geography": {
     "activeZoneIds": ["zone.counter", "zone.tea-floor", "zone.front-door", "zone.stair-foot", "zone.window-approach", "zone.river-boat"],
     "movementPaths": [
@@ -192,6 +228,77 @@
       "rhythm": "compress",
       "actions": [
         {
+          "eventId": "event.pursuer-diagonal-cut",
+          "participantId": "participant.pursuers",
+          "observableAction": "正门前排追兵跨入一臂距离，右手抬起制式单刀，从顾行舟左前景向其右侧斜向劈下，意在逼退而非命中。",
+          "fromZoneId": "zone.front-door",
+          "toZoneId": "zone.tea-floor",
+          "targetRef": "participant.gu-xingzhou",
+          "weaponRef": "weapon.pursuer-dao",
+          "techniqueName": "斜劈压线",
+          "techniqueType": "cut",
+          "techniqueMechanics": "前脚先跨入，肩线带动持刀臂展开，刀路从高位斜落后立即收住，追兵没有追随顾行舟冲出保护线。",
+          "trajectory": {
+            "startPoint": "追兵右肩外侧的高位刀柄",
+            "pathType": "diagonal",
+            "path": "由画面左上向画面右下斜落，在顾行舟左肩外侧经过后收住",
+            "endPoint": "顾行舟左侧前方的空位，距离其身体保持可读间隔",
+            "screenDirection": "左上 → 右下",
+            "depthDirection": "从前景向中景逼近",
+            "heightBand": "肩线以上起势，落到胸口以下的警戒高度",
+            "speedAndRhythm": "跨步后突然加速，接近峰值时短暂停住，不连续乱挥",
+            "cameraRead": "必须同时看到刀锋斜线、顾行舟的左脚让位和沈蘅仍在其身后的保护关系"
+          },
+          "exchangeId": "exchange.first-entry",
+          "exchangeRole": "initiate",
+          "contact": {
+            "state": "near_miss",
+            "contactPoint": "刀锋经过顾行舟左肩外侧的前景空位",
+            "effect": "没有人体接触，刀路迫使顾行舟先改变脚位",
+            "separation": "刀锋与顾行舟、沈蘅保持明确间隔"
+          },
+          "intendedOutcome": "逼顾行舟让出直线路径，使第二名追兵获得并列推进机会。",
+          "constraintRefs": ["clearance.pursuer-entry", "support.pursuers-wet-floor"],
+          "supportAndWeight": "前脚跨入后由后脚刹住，刀锋峰值时追兵没有因湿地继续滑进顾行舟的支撑范围。",
+          "resultingState": "顾行舟的左侧直线路径被刀路占据，长桌仍未移动。"
+        },
+        {
+          "eventId": "event.gu-evades-blade",
+          "participantId": "participant.gu-xingzhou",
+          "observableAction": "顾行舟先将视线落在刀柄与刀锋连接处，左脚向画面右侧外移半步，肩线后收但上身不后仰，让开斜劈轨迹。",
+          "fromZoneId": "zone.tea-floor",
+          "toZoneId": "zone.tea-floor",
+          "targetRef": "participant.pursuers",
+          "techniqueName": "侧闪卸线",
+          "techniqueType": "evade",
+          "techniqueMechanics": "以脚步和躯干微转让开攻击线，不抬手硬接，不离开沈蘅前方的保护位置，避让后立即恢复面对正门的站姿。",
+          "trajectory": {
+            "startPoint": "顾行舟双脚位于长桌内侧，左肩正对追兵",
+            "pathType": "step_and_turn",
+            "path": "左脚向画面右侧短移，骨盆随之转开小角度，刀锋经过后肩线回正",
+            "endPoint": "长桌近端内侧，身体仍位于沈蘅与追兵之间",
+            "screenDirection": "向画面右侧短移后回正",
+            "depthDirection": "横向移动，前后景深关系不改变",
+            "heightBand": "脚底与骨盆高度变化可见，肩线保持在刀锋下方",
+            "speedAndRhythm": "短促闪避—半拍停顿—立刻衔接推桌，不加入腾空或旋转",
+            "cameraRead": "脚步、刀锋与保护线必须在同一中远景中可读"
+          },
+          "exchangeId": "exchange.first-entry",
+          "exchangeRole": "defend",
+          "responseToEventId": "event.pursuer-diagonal-cut",
+          "contact": {
+            "state": "near_miss",
+            "contactPoint": "刀锋从左肩外侧经过，未触及身体或衣料",
+            "effect": "顾行舟保留支撑并取得半步横向空间",
+            "separation": "避让后两人仍隔着长桌近端保持一臂以上可读距离"
+          },
+          "intendedOutcome": "消解第一条刀路，同时保留用环境改变追兵队形的时间。",
+          "constraintRefs": ["clearance.gu-dao", "support.gu-wet-floor", "contact.gu-protection-line"],
+          "performancePhaseIds": ["phase.gu-evade", "phase.gu-redirect-space"],
+          "supportAndWeight": "右脚先稳住湿地，左脚只做短移，骨盆仍落在双脚支撑范围内。",
+          "resultingState": "刀锋落空，顾行舟没有后退出保护线，长桌成为下一步反制媒介。"
+        },
+        {
           "eventId": "event.gu-turns-table",
           "participantId": "participant.gu-xingzhou",
           "observableAction": "避开迎面兵器的清晰轨迹，双手短促推动长桌边缘，使桌面转向并切断第二人的直线路径。",
@@ -199,12 +306,73 @@
           "toZoneId": "zone.tea-floor",
           "targetRef": "participant.pursuers",
           "propRef": "anchor.long-table",
+          "techniqueName": "借桌转位",
+          "techniqueType": "reposition",
+          "techniqueMechanics": "避让完成后不追击持刀者，前脚改向、后脚支撑，双手沿桌长边推动，使桌体转过九十度并把追兵的并列路线压成单列。",
+          "trajectory": {
+            "startPoint": "长桌纵向摆放时的近端桌沿与顾行舟双手",
+            "pathType": "circular",
+            "path": "桌体以远端接地点为视觉支点转过约九十度，顾行舟的手沿桌沿短弧移动",
+            "endPoint": "长桌横置，近端桌角指向正门，桌体横切追兵直线路径",
+            "screenDirection": "桌沿由纵深方向转为横向展开",
+            "depthDirection": "中景内原地转向，不穿越人物身体",
+            "heightBand": "桌面保持腰部高度，手臂与桌沿接触清楚",
+            "speedAndRhythm": "闪避后的短促发力，桌体到位时出现一次停顿，留下追兵反应空拍",
+            "cameraRead": "需要看见刀路落空、脚底支撑、双手接触桌沿和通道从并列变单列的结果"
+          },
+          "exchangeId": "exchange.first-entry",
+          "exchangeRole": "counter",
+          "responseToEventId": "event.gu-evades-blade",
+          "contact": {
+            "state": "prop_contact",
+            "contactPoint": "顾行舟双手与长桌近端桌沿接触，桌脚与湿木地面保持支撑",
+            "effect": "环境位置改变，追兵不得继续沿原直线并列推进",
+            "separation": "桌体成为双方之间的持续障碍，不与人体发生撞击"
+          },
+          "intendedOutcome": "以环境反制替代追击，改变人数优势带来的推进节奏。",
           "constraintRefs": ["contact.gu-table-edge", "support.table-floor", "clearance.table-turn"],
           "performancePhaseIds": ["phase.gu-evade", "phase.gu-redirect-space"],
           "supportAndWeight": "前脚改变方向，后脚提供推桌支撑；上身不越过桌沿。",
           "resultingState": "长桌横置，追兵从并列推进变为单列通过。"
         }
       ],
+      "exchange": {
+        "exchangeId": "exchange.first-entry",
+        "participantIds": ["participant.pursuers", "participant.gu-xingzhou"],
+        "initiativeAtStart": "追兵先取得主动，以刀路占据顾行舟左侧空间。",
+        "sequence": [
+          {
+            "step": 1,
+            "eventId": "event.pursuer-diagonal-cut",
+            "participantId": "participant.pursuers",
+            "role": "initiate",
+            "respondsTo": "无前置攻击；由正门逼近触发本轮发起。",
+            "intent": "用斜向刀路逼退顾行舟并打开并列推进路线。",
+            "resultingState": "顾行舟左侧直线路径被占据。"
+          },
+          {
+            "step": 2,
+            "eventId": "event.gu-evades-blade",
+            "participantId": "participant.gu-xingzhou",
+            "role": "defend",
+            "respondsTo": "针对 event.pursuer-diagonal-cut 的斜劈刀路，侧移而不硬接。",
+            "intent": "让开刀锋并维持沈蘅前方的保护线。",
+            "resultingState": "刀锋落空，顾行舟获得半步横向空间。"
+          },
+          {
+            "step": 3,
+            "eventId": "event.gu-turns-table",
+            "participantId": "participant.gu-xingzhou",
+            "role": "counter",
+            "respondsTo": "利用 event.gu-evades-blade 形成的空隙，以长桌转向反制追兵路线。",
+            "intent": "不追击、不造成命中，以环境改变人数优势。",
+            "resultingState": "长桌横置，追兵被迫改单列，主动权短暂转给顾行舟。"
+          }
+        ],
+        "contactOutcome": "制式单刀与人体没有接触；刀路是 near miss，反制发生在顾行舟与长桌的 prop contact。",
+        "positionalOutcome": "顾行舟仍挡在沈蘅前方，追兵由并列推进变为桌体两端的单列压迫。",
+        "initiativeAtEnd": "顾行舟通过环境反制取得短暂主动，但没有离开保护线或追击追兵。"
+      },
       "coverageRequirementIds": ["coverage.geography", "coverage.exchange"],
       "riskIds": ["risk.weapon-contact"],
       "resultingState": "顾行舟仍未拔刀，茶楼中央通道被重新塑形。"
@@ -251,6 +419,28 @@
           "toZoneId": "zone.window-approach",
           "targetRef": "participant.pursuers",
           "propRef": "prop.gu-dao",
+          "weaponRef": "weapon.gu-dao",
+          "techniqueName": "横向出鞘警戒",
+          "techniqueType": "draw",
+          "techniqueMechanics": "顾行舟以一次稳定的重心转换完成出鞘和侧移，刀锋从右腰向画面左侧横向展开，身体始终遮住沈蘅。",
+          "trajectory": {
+            "startPoint": "顾行舟右侧腰间的刀鞘口",
+            "pathType": "horizontal",
+            "path": "刀身沿腰线向画面左侧平移出鞘，末端在追兵与沈蘅之间停住",
+            "endPoint": "顾行舟身体左前方的警戒线位置",
+            "screenDirection": "右腰 → 画面左侧",
+            "depthDirection": "从身体近侧向中景横向展开",
+            "heightBand": "刀锋低于沈蘅肩线并保持在腰胸之间",
+            "speedAndRhythm": "出鞘短促，刀尖到位后立即停住，停顿长于移动",
+            "cameraRead": "需要同时看到右手、刀鞘口、刀锋终点与沈蘅的遮挡关系"
+          },
+          "contact": {
+            "state": "no_contact",
+            "contactPoint": "刀锋在追兵前方形成横向距离线，没有触碰人体",
+            "effect": "追兵因距离线和身份暴露产生停顿",
+            "separation": "刀锋与沈蘅身体保持稳定间隔"
+          },
+          "intendedOutcome": "用最小出鞘动作建立不可忽视的距离，给沈蘅两步撤离窗口。",
           "constraintRefs": ["interaction.gu-draw", "clearance.gu-dao", "contact.gu-shen-guide"],
           "performancePhaseIds": ["phase.gu-reveal", "phase.gu-hold-line"],
           "supportAndWeight": "拔刀与侧移共用一次稳定重心转换，避免大幅旋身和刀锋越过同伴。",
@@ -302,6 +492,15 @@
           "toZoneId": "zone.river-boat",
           "targetRef": "participant.shen-heng",
           "propRef": "prop.gu-dao",
+          "weaponRef": "weapon.gu-dao",
+          "techniqueType": "recover",
+          "techniqueMechanics": "顾行舟确认沈蘅站稳后收束持刀手，刀尖向下，跨窗动作结束时恢复稳定站姿。",
+          "contact": {
+            "state": "no_contact",
+            "contactPoint": "刀锋全程不接触沈蘅、窗框或船栏",
+            "effect": "保持人物与刀具的分离关系，避免撤离动作被误读为攻击",
+            "separation": "刀锋朝下并与沈蘅、窗框、船栏保持可读间距"
+          },
           "constraintRefs": ["clearance.window-opening", "support.boat-deck", "clearance.gu-dao-shen"],
           "performancePhaseIds": ["phase.gu-confirm", "phase.gu-exit"],
           "supportAndWeight": "落点和刀具隔离只作为画面要求，不能替代现场特技、刀具与水域安全方案。",
@@ -499,6 +698,13 @@
     "mayVary": ["追兵具体人数在三人以内的画面分配", "各覆盖镜头的焦段与长度", "茶具倾倒的非关键细节"],
     "blockers": [],
     "unresolved": ["实拍或虚拟制作的窗—船转移方法", "刀具、落差和水域的合格现场安全方案", "每个 Character PerformanceTimeline 的最终秒数"]
+  },
+  "promptHandoff": {
+    "mode": "fight_specific",
+    "orderedBlocks": ["dramatic_purpose", "spatial_geography", "weapon_profile", "technique", "trajectory", "exchange", "contact_result", "continuity", "camera_read"],
+    "selectedBeatRule": "每个 ShotSpec 只选择连续且可见的 actionBeatIds；分镜提示词只写所选节拍的兵器、招式、轨迹和交手结果，并保留上一拍的持有手、朝向、距离与主动权作为连续性上下文。",
+    "mustInclude": ["制式单刀与窄身佩刀的名称、类型、可见特征和当前状态", "斜劈压线→侧闪卸线→借桌转位的招式机制", "每条兵器或身体轨迹的起点、路径、方向、深度、高度、速度节奏和终点", "追兵发起、顾行舟防守、环境反制以及无人体接触的结果", "主行动轴、保护线、持刀手和长桌横置后的连续性"],
+    "mustAvoid": ["只写激烈打斗、挥刀、快速闪避等无起止点的泛化动作", "无依据新增兵器、招式名称、命中或受伤结果", "把动作描写改写成特技执行、安全或武器制作教程", "把连续交手压成无法判断先后的动作海报"]
   },
   "executionBoundary": {
     "generatesMedia": false,
