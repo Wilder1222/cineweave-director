@@ -10,10 +10,17 @@
 - prompt-owned `MidjourneyExplorationCase` for reusable prior MJ styles,
   source prompts, parameter records and exact result-image references with
   rights-aware, scoped visual reuse;
+- prompt-owned `MidjourneyAestheticProfile` that separates creator
+  Personalization, curated project Moodboards, shot-level references and current
+  prompt responsibility, with explicit `--p` code snapshots and parameter
+  compatibility checks;
+- Production-owned `WorkflowTemplateProfile` plus an exact optional
+  `ExecutionRequest` binding for serialized graph identity, dependencies and
+  typed artifact slots;
 - Director-owned `ActionSequenceSpec` for exact multi-beat choreography,
   physical-design checks, coverage requirements, closed sequence continuity and
   visible qualified-review risks before ShotSpec selection;
-- current source coverage of 74 contracts, 72 uniquely owned routes and 47
+- current source coverage of 76 contracts, 74 uniquely owned routes and 49
   behavior cases.
 
 ## Shipped in V2.2

@@ -184,6 +184,19 @@ async function validateNode(value, schema, context, path = "$", errors = []) {
         await validateNode(value[index], schema.items, context, `${path}[${index}]`, errors);
       }
     }
+    if (schema.contains !== undefined) {
+      let matches = 0;
+      for (let index = 0; index < value.length; index += 1) {
+        const branch = [];
+        await validateNode(value[index], schema.contains, context, `${path}[${index}]`, branch);
+        if (branch.length === 0) matches += 1;
+      }
+      const minContains = schema.minContains ?? 1;
+      if (matches < minContains) errors.push(`${path} must contain at least ${minContains} item(s) matching contains schema`);
+      if (schema.maxContains !== undefined && matches > schema.maxContains) {
+        errors.push(`${path} must contain at most ${schema.maxContains} item(s) matching contains schema`);
+      }
+    }
   }
 
   if (isObject(value)) {

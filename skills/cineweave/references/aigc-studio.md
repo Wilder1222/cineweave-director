@@ -7,6 +7,7 @@ production loop, not a single mega-prompt:
 idea
   → creative brief and lock matrix
   → optional import of prior Midjourney exploration cases (after result-file ingestion)
+  → optional creator Personalization / project Moodboard profile import
   → Midjourney exploration pack
   → user visual exploration and selection
   → exact reference ingest and role-scoped observations
@@ -22,13 +23,14 @@ idea
 | --- | --- | --- | --- |
 | 0. Intent | `cineweave` | `CreativeBrief` + `WorkflowPlan` | target, intended use, output medium and hard locks |
 | 0.5. Existing exploration reuse (optional) | Prompt + Reference | `MidjourneyExplorationCase` | original prompt/parameters, exact result files already ingested as `ReferenceAsset`, selected/rejected notes, allowed reuse and rights/usage boundary |
-| 1. Visual exploration | `cineweave-prompt` | `MidjourneyPromptPack` | one or more visual hypotheses and a version-pinned prompt pack |
-| Gate A. Human selection | user | selected master candidates | original image bytes, prompt metadata, parameter/version record and selection notes |
+| 0.75. Aesthetic system (optional) | Prompt + Reference | `MidjourneyAestheticProfile` | curated Moodboard source assets or Personalization selection-history method, explicit `--p` ID/code, visual scope and model compatibility |
+| 1. Visual exploration | `cineweave-prompt` | `MidjourneyPromptPack` | one or more visual hypotheses, a version-pinned prompt pack and explicit Aesthetic Profile tokens |
+| Gate A. Human selection | user | selected master candidates | original image bytes, prompt metadata, parameter/version record, resolved `--p` code and selection notes |
 | 2. Evidence | `cineweave-reference` | `ReferenceAsset`, atomic `ReferenceObservation`, `ReferenceReview`, `ReferenceBindingSet` | role, scope, preserve/ignore list and rights/usage status |
 | Gate B. Visual bible | Character / Scene / Style | exact `CharacterSpec`, `AppearanceState`, `SceneSpec`/`SceneLightState`, `StylePackage`/`StyleCompile`, `RepresentationBinding` | identity, current look, geography, physical light and representation are approved separately |
 | 3. Narrative | `cineweave-story` | `StoryBrief`, `BeatSheet`, `ScriptScene`, `ContinuityLedger` | dramatic question, causal beats and changed states |
 | 4. Direction | `cineweave-director` | `ActionSequenceSpec`, `ShotSpec`, `ShotLightingPlan`, `TemporalSpec`, `Storyboard` | action coverage, blocking, camera purpose, time and panel acceptance |
-| 5. Asset and prompt production | Prompt / Production | `PromptRecord`, `ImagePrompt`, `AssetRecipe`, `BoardAssemblyPlan`, controls and evidence plan | exact refs, capabilities, rights and deterministic retry boundaries |
+| 5. Asset and prompt production | Prompt / Production | `PromptRecord`, `ImagePrompt`, `AssetRecipe`, `BoardAssemblyPlan`, `WorkflowTemplateProfile`, controls and evidence plan | exact refs, graph/template identity, capabilities, rights and deterministic retry boundaries |
 | Gate C. Execution review | user + Production | `MediaImport`, review receipt and repair route | actual output bytes, execution metadata and human review |
 
 The router may return the next stage immediately and leave later stages
@@ -51,6 +53,21 @@ Keep exploration and production separate:
 
 The first loop is allowed to be rough and comparative. The second loop must be
 versioned, reference-bound and reviewable.
+
+## Personalization, Moodboard and prompt responsibilities
+
+Treat a creator Personalization Profile as a broad creator baseline and a
+Moodboard as an intentionally curated project/world visual system. They are not
+identity locks, scene geometry or replacements for the approved visual bible.
+Use exact image/style/Omni references only for their declared shot-level roles;
+let the prompt describe the current shot.
+
+For a reproducible pack, use an explicit `--p` ID/code on every variant rather
+than relying on the user's default selections. After the user runs the prompt,
+store the resolved code Midjourney returns. Moodboard influence is tested with
+`--s` while holding the fixture fixed; do not put `--sw` or `--sv` into a
+Moodboard pack. See Prompt's `midjourney-aesthetic-profiles.md` for the current
+provider rules and version caveats.
 
 ## Reusing an existing Midjourney exploration
 
@@ -75,6 +92,8 @@ Ask for the smallest complete handoff:
   URL;
 - the exact prompt text used for each selected result;
 - model/version, aspect ratio, stylize and other parameters;
+- the explicit Personalization/Moodboard ID used and the resolved `--p` code
+  returned after submission;
 - which image is intended for identity, appearance, style, scene, composition
   or validation, with separate preserve and ignore notes;
 - rights, likeness-consent and permitted-use status, including unknowns;

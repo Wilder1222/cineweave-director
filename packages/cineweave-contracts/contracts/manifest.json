@@ -63,7 +63,7 @@
     {
       "name": "cineweave-prompt",
       "role": "image_prompt_assets",
-      "owns": ["prompt_design", "prompt_import", "prompt_compile", "prompt_compare", "reference_hypothesis", "draft_brief", "midjourney_case_import", "midjourney_compile", "prompt_repair"],
+      "owns": ["prompt_design", "prompt_import", "prompt_compile", "prompt_compare", "reference_hypothesis", "draft_brief", "midjourney_case_import", "midjourney_profile_import", "midjourney_compile", "prompt_repair"],
       "consumes": ["NaturalLanguageBrief", "ExistingPromptText", "CreativeBrief", "StoryBrief", "ReferenceAsset", "ReferenceObservation", "ReferenceBindingSet", "CharacterBinding", "RepresentationBinding", "SceneBinding", "StyleCompile", "ShotSpec", "ShotLightingPlan", "EvidenceBundle", "UserSelectionFeedback", "ProviderOutputMetadata"],
       "standalone": true,
       "composable": true
@@ -71,7 +71,7 @@
     {
       "name": "cineweave-production",
       "role": "production_validation",
-      "owns": ["asset_recipe", "board_assembly", "control_plan", "evidence_bundle", "capability_profile", "license_profile", "control_benchmark", "control_benchmark_review", "adapter_descriptor", "execution_request", "execution_receipt"],
+      "owns": ["asset_recipe", "board_assembly", "control_plan", "evidence_bundle", "capability_profile", "workflow_template_profile", "license_profile", "control_benchmark", "control_benchmark_review", "adapter_descriptor", "execution_request", "execution_receipt"],
       "consumes": ["CreativeBrief", "ReferenceAsset", "ReferenceObservation", "ReferenceBindingSet", "StoryContracts", "CharacterContracts", "RepresentationBinding", "SceneContracts", "StyleContracts", "DirectorContracts", "PromptContracts"],
       "standalone": true,
       "composable": true
@@ -140,12 +140,14 @@
     { "kind": "cineweave_codex_prompt_repair", "schema": "schemas/prompt-repair.schema.json", "example": "examples/prompt-repair.json", "owner": "cineweave-prompt" },
     { "kind": "cineweave_codex_midjourney_prompt_pack", "schema": "schemas/midjourney-prompt-pack.schema.json", "example": "examples/midjourney-prompt-pack.json", "owner": "cineweave-prompt" },
     { "kind": "cineweave_codex_midjourney_exploration_case", "schema": "schemas/midjourney-exploration-case.schema.json", "example": "examples/midjourney-exploration-case.json", "owner": "cineweave-prompt" },
+    { "kind": "cineweave_codex_midjourney_aesthetic_profile", "schema": "schemas/midjourney-aesthetic-profile.schema.json", "example": "examples/midjourney-aesthetic-profile.json", "owner": "cineweave-prompt" },
 
     { "kind": "cineweave_codex_asset_recipe", "schema": "schemas/asset-recipe.schema.json", "example": "examples/asset-recipe.json", "owner": "cineweave-production" },
     { "kind": "cineweave_codex_board_assembly_plan", "schema": "schemas/board-assembly-plan.schema.json", "example": "examples/board-assembly-plan.json", "owner": "cineweave-production" },
     { "kind": "cineweave_codex_control_channel_set", "schema": "schemas/control-channel-set.schema.json", "example": "examples/control-channel-set.json", "owner": "cineweave-production" },
     { "kind": "cineweave_codex_evidence_bundle", "schema": "schemas/evidence-bundle.schema.json", "example": "examples/evidence-bundle.json", "owner": "cineweave-production" },
     { "kind": "cineweave_codex_capability_profile", "schema": "schemas/capability-profile.schema.json", "example": "examples/capability-profile.json", "owner": "cineweave-production" },
+    { "kind": "cineweave_codex_workflow_template_profile", "schema": "schemas/workflow-template-profile.schema.json", "example": "examples/workflow-template-profile.json", "owner": "cineweave-production" },
     { "kind": "cineweave_codex_license_profile", "schema": "schemas/license-profile.schema.json", "example": "examples/license-profile.json", "owner": "cineweave-production" },
     { "kind": "cineweave_codex_control_benchmark", "schema": "schemas/control-benchmark.schema.json", "example": "examples/control-benchmark.json", "owner": "cineweave-production" },
     { "kind": "cineweave_codex_control_benchmark_review", "schema": "schemas/control-benchmark-review.schema.json", "example": "examples/control-benchmark-review.json", "owner": "cineweave-production" },

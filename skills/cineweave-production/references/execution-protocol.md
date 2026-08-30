@@ -16,6 +16,8 @@ CapabilityProfile
       +
 AdapterDescriptor
       +
+optional WorkflowTemplateProfile
+      +
 exact RenderPlan and Prompt refs
       ↓
 ExecutionRequest artifact
@@ -31,6 +33,9 @@ verified output hashes + ExecutionReceipt artifact
 
 - `AdapterDescriptor` says which operations, modes, MIME types and limits are
   supported and binds one exact CapabilityProfile.
+- `WorkflowTemplateProfile` says which exact serialized graph/template,
+  dependencies and typed slots are selected when a graph-level handoff matters;
+  it never embeds a provider endpoint or node JSON in the request.
 - `implementation.entrypointId` is a registry identifier, never a file path.
 - `implementation.contentHash` is verified against the registered adapter.
 - `semanticEmphasis` records only which canonical levels (`required`, `strong`, `supporting`) the adapter accepts and whether it can preserve ordering or translate them natively. It never stores provider-specific prompt syntax, numeric weights or a hidden conversion table.
@@ -43,6 +48,9 @@ verified output hashes + ExecutionReceipt artifact
 
 - Store the request immutably before execution.
 - Bind exact AdapterDescriptor, CapabilityProfile, RenderPlan and Prompt refs.
+- When a graph/template is selected, bind the exact WorkflowTemplateProfile,
+  serialized graph hash and slot-to-artifact mappings. The runtime checks them
+  before it invokes a registered adapter.
 - Use one stable idempotency key for one intended side effect.
 - `dry_run` validates and predicts no output; `fixture` produces only local,
   deterministic test media; `external` may reach a provider.

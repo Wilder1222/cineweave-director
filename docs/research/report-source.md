@@ -120,3 +120,53 @@ requires one primary target, one hypothesis per variant, separated reference
 roles, explicit version/parameters, manual selection and exact-file return.
 Downstream visual-bible, story, direction, prompt and production stages remain
 separate exact-contract handoffs.
+
+## 2026-08-30 addendum: production-template provenance and MJ compatibility
+
+The detailed evidence record is
+[2026-08-30-aigc-production-workflow-and-github.md](2026-08-30-aigc-production-workflow-and-github.md).
+
+- Official [Midjourney Version](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version)
+  documentation still lists V8.2 as the current default at this research pass,
+  while [Omni Reference](https://docs.midjourney.com/hc/en-us/articles/36285124473997-Omni-Reference)
+  is V7-only. A pack therefore cannot honestly combine a V8.2 policy with an
+  Omni Reference slot; version/reference-role compatibility becomes an explicit
+  validation rule rather than a prose reminder.
+- Official [ComfyUI Workflow JSON](https://docs.comfy.org/specs/workflow_json),
+  [Cloud API](https://docs.comfy.org/api-reference/cloud/overview) and
+  [workflow-template](https://docs.comfy.org/custom-nodes/workflow_templates)
+  documentation distinguish serializable graphs, jobs, assets, nodes and
+  reusable templates. `CapabilityProfile` and `AdapterDescriptor` explain
+  what an adapter can do, but do not identify the exact graph used by one run.
+- [InvokeAI](https://github.com/invoke-ai/InvokeAI) reinforces workflow plus
+  gallery/metadata recall; [StoryDiffusion](https://github.com/HVision-NKU/StoryDiffusion)
+  separates long-range consistency from a later condition-image video stage;
+  [Wan2.1](https://github.com/Wan-Video/Wan2.1) exposes materially different
+  text-to-video, image-to-video, first/last-frame and edit inputs. These are
+  reasons to record an exact template profile and role-scoped bindings rather
+  than make a generic “video capable” claim.
+- This increment adds a Production-owned `WorkflowTemplateProfile` and an
+  optional exact binding from an `ExecutionRequest`. It records serializable
+  template identity, content hash, dependency locks and input mappings without
+  storing provider URLs, nodes, credentials or claiming that a template has
+  executed. Runtime preflight now verifies the active profile, adapter/operation,
+  template hash, input slots, output slot and profile license refs before an
+  adapter invocation.
+
+## 2026-08-30 addendum: versioned Midjourney aesthetic layers
+
+- Official [Moodboards](https://docs.midjourney.com/hc/en-us/articles/39193335040013-Moodboards)
+  documentation defines a curated image collection used through `--p`; a board
+  ID resolves to a versioned code, and Moodboard influence is controlled through
+  `--s` from 0 to 1000 (default 100). It explicitly disallows `--sw` and
+  `--sv` with Moodboards.
+- Official [Personalization](https://docs.midjourney.com/hc/en-us/articles/32433330574221-Personalization)
+  documentation distinguishes selection-history Personalization Profiles from
+  a curated Moodboard. A V7 Global Profile works with V8.2, while V8 profiles
+  are not compatible with V7. Both require version re-check before execution.
+- The implementation adds Prompt-owned `MidjourneyAestheticProfile`, a
+  `midjourney_profile_import` route and explicit profile bindings in
+  `MidjourneyPromptPack`. The design treats creator baseline, project
+  Moodboard, shot-level references and the current shot prompt as separate
+  controls; it records exact `--p` ID/code snapshots and rejects an invalid
+  Moodboard + `--sw`/`--sv` parameter mix structurally.

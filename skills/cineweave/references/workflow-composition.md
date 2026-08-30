@@ -48,10 +48,11 @@ story scene with physical interaction
 
 visual-first AIGC studio
   → CreativeBrief / WorkflowPlan (`studio`)
+  → Prompt `midjourney_profile_import` (optional explicit Personalization/Moodboard)
   → Prompt `midjourney_compile` → human runs/selects → Reference ingest/review/bind
   → Character + AppearanceState / Scene + Light / Style + RepresentationBinding
   → Story / continuity → Director action / shot / storyboard
-  → Prompt compile → Production recipes / controls / rights / QA
+  → Prompt compile → Production recipes / optional WorkflowTemplateProfile / controls / rights / QA
 ```
 
 ActionSequenceSpec is upstream of ShotSpec. The action step binds exact

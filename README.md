@@ -69,22 +69,24 @@ Use `$cineweave` when you want one guided entry across the whole creative
 process:
 
 ```text
-idea
+  idea
   → CreativeBrief + WorkflowPlan
   → optional MidjourneyExplorationCase import (prior prompt + ReferenceAsset-backed result images)
+  → optional MidjourneyAestheticProfile (creator Personalization or project Moodboard)
   → MidjourneyPromptPack (3–8 hypotheses)
   → you explore and select master references in Midjourney
   → ReferenceAsset / observations / review / binding
   → approved visual bible
   → story + character + scene + style + director
-  → prompts + storyboard + asset recipes + production gates
+  → prompts + storyboard + asset recipes + workflow-template provenance + production gates
 ```
 
 The first response stops at a human gate. Bring back the selected original
 files, exact prompts, model/version/parameters, selection notes and usage
 status; the workflow then resumes from `cineweave-reference`. A master image is
 never silently treated as identity, costume, style, scene and composition at
-once. See the [Midjourney projection contract](skills/cineweave-prompt/references/midjourney-projection.md)
+once. See the [Midjourney projection contract](skills/cineweave-prompt/references/midjourney-projection.md),
+[aesthetic profile guide](skills/cineweave-prompt/references/midjourney-aesthetic-profiles.md)
 and the [executable workflow example](packages/cineweave-contracts/examples/workflow-plan-aigc-studio.json).
 
 ### Reuse previous Midjourney explorations
@@ -136,8 +138,8 @@ entry; specialist Skills remain independently invocable.
 | `$cineweave-style` | one-axis style exploration and visual/temporal representation grammar | style exploration contracts, `StylePackage`, `RepresentationBinding`, `StyleCompile`, `StyleLightGrammar` |
 | `$cineweave-reference` | content-addressed media, atomic observations, suitability and exact role bindings | `ReferenceAsset`, `ReferenceObservation`, `ReferenceReview`, `ReferenceBindingSet` |
 | `$cineweave-director` | action choreography, shot purpose, blocking, camera, shot light use and time | `ActionSequenceSpec`, `ShotSpec`, `ShotLightingPlan`, `TemporalSpec`, storyboard |
-| `$cineweave-prompt` | general text-to-image prompts plus Midjourney exploration packs/cases | `PromptRecord`, `ImagePrompt`, `MidjourneyPromptPack`, `MidjourneyExplorationCase`, explicit reference transforms, hypotheses and one-variable repairs |
-| `$cineweave-production` | recipes, deterministic board assembly, controls, evidence, capabilities, rights, execution intent and QA | `AssetRecipe`, `BoardAssemblyPlan`, capability/license profiles, `ControlBenchmarkReview`, `AdapterDescriptor`, `ExecutionRequest`, `ExecutionReceipt` |
+| `$cineweave-prompt` | general text-to-image prompts plus Midjourney profiles, exploration packs/cases | `PromptRecord`, `ImagePrompt`, `MidjourneyAestheticProfile`, `MidjourneyPromptPack`, `MidjourneyExplorationCase`, explicit reference transforms, hypotheses and one-variable repairs |
+| `$cineweave-production` | recipes, deterministic board assembly, workflow-template provenance, controls, evidence, capabilities, rights, execution intent and QA | `AssetRecipe`, `BoardAssemblyPlan`, `WorkflowTemplateProfile`, capability/license profiles, `ControlBenchmarkReview`, `AdapterDescriptor`, `ExecutionRequest`, `ExecutionReceipt` |
 
 ### Start without prompt terminology
 
@@ -491,11 +493,11 @@ feedback; they remain observation-only and never write State or Canon directly.
 
 ## Verification
 
-The current source gate validates 74 contracts, 72 uniquely owned routes and 15 built-in
+The current source gate validates 76 contracts, 74 uniquely owned routes and 15 built-in
 deterministic recipes. It also validates every schema/example pair, semantic
-positive and negative cases, 47 static behavior cases, validated modern and legacy
-evaluation fixtures, a 13-case deterministic live-evaluation replay set and 38 runtime
-tests plus 47 World OS tests, together with standalone Skill bundles, reference links, rights boundaries,
+positive and negative cases, 49 static behavior cases, validated modern and legacy
+evaluation fixtures, a 13-case deterministic live-evaluation replay set and 40 runtime
+tests plus 49 World OS tests, together with standalone Skill bundles, reference links, rights boundaries,
 media-ingestion threats and distributable assets.
 
 ```bash

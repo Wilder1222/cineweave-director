@@ -2,11 +2,11 @@
   "contractPackage": "cineweave-contracts@2.5.1",
   "standalone": {
     "accepts": ["NaturalLanguageBrief", "ExistingPromptText", "OptionalReferenceBindingSet", "ReferenceAssets", "MidjourneyPromptPack"],
-    "produces": ["PromptRecord", "ImagePrompt", "PromptHypothesis", "DraftBrief", "PromptRepair", "MidjourneyPromptPack", "MidjourneyExplorationCase"]
+    "produces": ["PromptRecord", "ImagePrompt", "PromptHypothesis", "DraftBrief", "PromptRepair", "MidjourneyPromptPack", "MidjourneyExplorationCase", "MidjourneyAestheticProfile"]
   },
   "composed": {
-    "consumes": ["CreativeBrief", "StoryBrief", "ReferenceAsset", "ReferenceObservation", "ReferenceBindingSet", "MidjourneyExplorationCase", "CharacterBinding", "RepresentationBinding", "SceneBinding", "StyleCompile", "ShotSpec", "ShotLightingPlan", "EvidenceBundle", "UserSelectionFeedback", "ProviderOutputMetadata"],
-    "produces": ["PromptRecord", "ImagePrompt", "PromptHypothesis", "DraftBrief", "PromptRepair", "MidjourneyPromptPack", "MidjourneyExplorationCase"]
+    "consumes": ["CreativeBrief", "StoryBrief", "ReferenceAsset", "ReferenceObservation", "ReferenceBindingSet", "MidjourneyExplorationCase", "MidjourneyAestheticProfile", "CharacterBinding", "RepresentationBinding", "SceneBinding", "StyleCompile", "ShotSpec", "ShotLightingPlan", "EvidenceBundle", "UserSelectionFeedback", "ProviderOutputMetadata"],
+    "produces": ["PromptRecord", "ImagePrompt", "PromptHypothesis", "DraftBrief", "PromptRepair", "MidjourneyPromptPack", "MidjourneyExplorationCase", "MidjourneyAestheticProfile"]
   },
   "contractKinds": [
     "cineweave_codex_prompt_record",
@@ -16,6 +16,7 @@
     "cineweave_codex_prompt_repair",
     "cineweave_codex_midjourney_prompt_pack",
     "cineweave_codex_midjourney_exploration_case",
+    "cineweave_codex_midjourney_aesthetic_profile",
     "cineweave_codex_creative_brief",
     "cineweave_codex_story_brief",
     "character_binding",

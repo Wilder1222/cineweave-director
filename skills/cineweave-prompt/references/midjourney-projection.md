@@ -15,10 +15,12 @@ with 3–8 comparable variants and a human return gate.
 3. Write a concise semantic prompt. Midjourney's own guidance recommends
    describing the subject, medium, environment, lighting, color, mood and
    composition; extra adjectives are not a substitute for visible relations.
-4. Add only the reference roles needed by the hypothesis. Store placeholders in
-   the contract and let the user substitute them on the chosen surface.
-5. Pin the model version, aspect ratio and relevant parameters. Record the
-   verification note because parameter behavior can change between versions.
+4. Add only the reference roles and Aesthetic Profiles needed by the
+   hypothesis. Store reference placeholders and explicit `--p` tokens in the
+   contract; never rely on account defaults.
+5. Pin a model version compatible with every selected reference role, then set
+   the aspect ratio and relevant parameters. Record the verification note
+   because parameter behavior can change between versions.
 6. Add acceptance checks, known failure modes and the next experiment.
 7. State exactly what the user should run, save and bring back. Never state
    that Midjourney was called or that a result exists.
@@ -32,7 +34,7 @@ Use the following semantic boundary when choosing slots:
 | Image Prompt | content, broad composition, color or spatial inspiration | exact objects, exact pose or faithful copying |
 | Style Reference (`--sref`) | visual vibe, palette, medium, texture and lighting treatment | the source person, objects or layout |
 | Omni Reference (`--oref`, V7 surface) | a declared subject/identity or object anchor | full-body identity, costume, scene and action unless separately evidenced |
-| Moodboard (`--p`) | a curated, broad style direction | a single exact subject, shot or canonical design |
+| Moodboard (`--p`) | a curated, broad project/style direction | a single exact subject, shot or canonical design |
 | Starting/ending frame | a video transition or frame relationship | a general image/style-reference control for every video mode |
 
 The official documentation describes Image Prompts as inspiration for content,
@@ -41,19 +43,47 @@ and Omni Reference as a V7 subject reference. Keep those roles separate even
 when one image is used in more than one controlled experiment. A reference is
 evidence for a declared purpose, not an exact-copy promise.
 
+## Aesthetic-layer separation
+
+When a visual system should persist across many prompts, record it as a
+`MidjourneyAestheticProfile`, not as an unbounded prose suffix:
+
+1. a creator Personalization Profile supplies a broad creator baseline;
+2. a project Moodboard supplies curated world or domain visual grammar;
+3. image/style/Omni references control one declared shot-level role; and
+4. `promptText` describes the subject, action, scene, camera and physical light
+   needed now.
+
+Read `midjourney-aesthetic-profiles.md` before compiling any pack with `--p`.
+Bind profile refs and an explicit profile ID or resolved code in
+`aestheticProfileBindings`; include the same `--p` token in every comparable
+variant. A profile ID follows its latest state, while a resolved code is a
+snapshot—ask the user to return the code Midjourney actually resolves after
+submission.
+
 ## Version and parameter policy
 
-At the time of this research pass (2026-08-29), Midjourney's version page lists
+At the time of this research pass (2026-08-30), Midjourney's version page lists
 V8.2 as the current default. This is time-sensitive: before execution, check the
 official [Version](https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version)
 page and pin the selected version in `parameterPolicy`.
+
+### Reference-role compatibility gate
+
+At this verification point, Midjourney documents Omni Reference as V7-only even
+though the current default is V8.2. If a pack contains `omni_reference`, pin
+`modelVersion: "V7"` and use `--v 7` for all comparable variants. A V8.2 pack
+must omit Omni Reference or become a separate V7 identity experiment. Do not use
+a default-version statement to override a feature-specific compatibility rule;
+re-check the official Version and Omni Reference pages immediately before
+execution.
 
 Keep provider syntax in the projection only:
 
 ```text
 {{style_reference}} {{identity_reference}} subject, visible action, scene,
 viewpoint and composition, physical light, material response, restrained mood
---v 8.2 --ar 3:2 --s 150
+--v 7 --ar 3:2 --s 150
 ```
 
 The pack should retain the parameter tokens as data, not bury them in a
@@ -61,6 +91,11 @@ provider-neutral `PromptRecord`. Do not invent private CDN paths, credentials,
 seed guarantees or unsupported parameter combinations. Use the surface named
 by the user (`web`, `discord` or `both`) and tell them to replace each
 placeholder with the correct reference input.
+
+For any Moodboard, `--s` controls the influence; it ranges from 0 to 1000 and
+defaults to 100 at this verification point. Do not use `--sw` or `--sv` in a
+Moodboard pack. A scoped `--sref` or Omni reference may still be available when
+the selected model supports it, but all model-specific conditions still apply.
 
 Useful official references for the projection are:
 
@@ -134,6 +169,10 @@ Before returning, verify:
 - one exploration axis per pack/variant;
 - image, style, omni and moodboard roles have explicit preserve/do-not-transfer
   scopes;
-- model version and parameters are explicit and marked for re-verification;
+- creator personalization, project Moodboard, shot-level references and current
+  prompt responsibilities are separated;
+- every profile token is explicit and a Moodboard pack has no `--sw` or `--sv`;
+- model version and parameters are explicit, marked for re-verification and
+  compatible with every selected reference role;
 - no private locator, invented receipt or generated-media claim is present;
 - manual selection, exact-file return and next stage are specified.

@@ -16,6 +16,7 @@
     "promptLanguage",
     "variants",
     "referenceSlots",
+    "aestheticProfileBindings",
     "parameterPolicy",
     "handoff",
     "preserve",
@@ -149,6 +150,39 @@
         }
       }
     },
+    "aestheticProfileBindings": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["bindingId", "profileRef", "profileType", "scope", "providerToken", "tokenKind", "knownCompatibleVersions", "reverifyBeforeUse", "purpose", "preserve", "doNotTransfer"],
+        "properties": {
+          "bindingId": { "$ref": "common.schema.json#/$defs/identifier" },
+          "profileRef": {
+            "allOf": [
+              { "$ref": "common.schema.json#/$defs/contractRef" },
+              { "properties": { "kind": { "const": "cineweave_codex_midjourney_aesthetic_profile" } } }
+            ]
+          },
+          "profileType": { "enum": ["moodboard", "personalization_profile"] },
+          "scope": { "enum": ["creator_baseline", "world_visual_bible", "project_domain", "shot_experiment"] },
+          "providerToken": { "type": "string", "pattern": "^[A-Za-z0-9][A-Za-z0-9._-]{1,239}$" },
+          "tokenKind": { "enum": ["profile_id_latest", "resolved_code_snapshot"] },
+          "knownCompatibleVersions": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 12,
+            "uniqueItems": true,
+            "items": { "type": "string", "minLength": 1, "maxLength": 40 }
+          },
+          "reverifyBeforeUse": { "const": true },
+          "purpose": { "type": "string", "minLength": 1, "maxLength": 800 },
+          "preserve": { "$ref": "common.schema.json#/$defs/stringList" },
+          "doNotTransfer": { "$ref": "common.schema.json#/$defs/stringList" }
+        }
+      }
+    },
     "parameterPolicy": {
       "type": "object",
       "additionalProperties": false,
@@ -183,12 +217,17 @@
     "validation": {
       "type": "object",
       "additionalProperties": false,
-      "required": ["providerProjectionOnly", "onePrimaryTarget", "oneAxisPerVariant", "referenceRolesSeparated", "noPrivateLocators", "versionExplicit", "manualSelectionRequired"],
+      "required": ["providerProjectionOnly", "onePrimaryTarget", "oneAxisPerVariant", "referenceRolesSeparated", "referenceVersionCompatible", "aestheticLayersSeparated", "aestheticProfilesVersionCompatible", "profileTokensExplicit", "moodboardStyleReferenceParametersCompatible", "noPrivateLocators", "versionExplicit", "manualSelectionRequired"],
       "properties": {
         "providerProjectionOnly": { "const": true },
         "onePrimaryTarget": { "const": true },
         "oneAxisPerVariant": { "const": true },
         "referenceRolesSeparated": { "const": true },
+        "referenceVersionCompatible": { "const": true },
+        "aestheticLayersSeparated": { "const": true },
+        "aestheticProfilesVersionCompatible": { "const": true },
+        "profileTokensExplicit": { "const": true },
+        "moodboardStyleReferenceParametersCompatible": { "const": true },
         "noPrivateLocators": { "const": true },
         "versionExplicit": { "const": true },
         "manualSelectionRequired": { "const": true }
@@ -196,5 +235,81 @@
     },
     "provenance": { "$ref": "common.schema.json#/$defs/provenance" },
     "skillReceipt": { "$ref": "common.schema.json#/$defs/skillReceipt" }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "referenceSlots": {
+            "contains": {
+              "type": "object",
+              "required": ["role"],
+              "properties": { "role": { "const": "omni_reference" } }
+            }
+          }
+        },
+        "required": ["referenceSlots"]
+      },
+      "then": {
+        "properties": {
+          "parameterPolicy": {
+            "properties": {
+              "modelVersion": { "pattern": "^V7(?:\\.|$)" }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": ["aestheticProfileBindings"],
+        "properties": {
+          "aestheticProfileBindings": { "minItems": 1 }
+        }
+      },
+      "then": {
+        "properties": {
+          "variants": {
+            "items": {
+              "properties": {
+                "parameterTokens": {
+                  "contains": { "type": "string", "pattern": "^--p\\s+[A-Za-z0-9][A-Za-z0-9._-]{1,239}$" }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": ["aestheticProfileBindings"],
+        "properties": {
+          "aestheticProfileBindings": {
+            "contains": {
+              "type": "object",
+              "required": ["profileType"],
+              "properties": { "profileType": { "const": "moodboard" } }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "variants": {
+            "not": {
+              "contains": {
+                "type": "object",
+                "properties": {
+                  "parameterTokens": {
+                    "contains": { "type": "string", "pattern": "^--s(?:w|v)(?:\\s|$)" }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
 }

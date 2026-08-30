@@ -2,11 +2,11 @@
   "contractPackage": "cineweave-contracts@2.5.1",
   "standalone": {
     "accepts": ["NaturalLanguageBrief", "OptionalApprovedContracts", "OptionalEvidence", "OptionalReferenceContracts"],
-    "produces": ["AssetRecipe", "BoardAssemblyPlan", "ControlChannelSet", "EvidenceBundle", "CapabilityProfile", "LicenseProfile", "ControlBenchmark", "ControlBenchmarkReview", "AdapterDescriptor", "ExecutionRequest", "ExecutionReceipt"]
+    "produces": ["AssetRecipe", "BoardAssemblyPlan", "ControlChannelSet", "EvidenceBundle", "CapabilityProfile", "WorkflowTemplateProfile", "LicenseProfile", "ControlBenchmark", "ControlBenchmarkReview", "AdapterDescriptor", "ExecutionRequest", "ExecutionReceipt"]
   },
   "composed": {
     "consumes": ["CreativeBrief", "ReferenceAsset", "ReferenceObservation", "ReferenceBindingSet", "StoryContracts", "CharacterContracts", "RepresentationBinding", "SceneContracts", "StyleCompile", "DirectorContracts", "PromptContracts"],
-    "produces": ["AssetRecipe", "BoardAssemblyPlan", "ControlChannelSet", "EvidenceBundle", "CapabilityProfile", "LicenseProfile", "ControlBenchmark", "ControlBenchmarkReview", "AdapterDescriptor", "ExecutionRequest", "ExecutionReceipt"]
+    "produces": ["AssetRecipe", "BoardAssemblyPlan", "ControlChannelSet", "EvidenceBundle", "CapabilityProfile", "WorkflowTemplateProfile", "LicenseProfile", "ControlBenchmark", "ControlBenchmarkReview", "AdapterDescriptor", "ExecutionRequest", "ExecutionReceipt"]
   },
   "contractKinds": [
     "cineweave_codex_asset_recipe",
@@ -14,6 +14,7 @@
     "cineweave_codex_control_channel_set",
     "cineweave_codex_evidence_bundle",
     "cineweave_codex_capability_profile",
+    "cineweave_codex_workflow_template_profile",
     "cineweave_codex_license_profile",
     "cineweave_codex_control_benchmark",
     "cineweave_codex_control_benchmark_review",

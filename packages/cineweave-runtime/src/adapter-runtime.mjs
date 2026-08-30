@@ -97,6 +97,15 @@ function validateRequestShape(request) {
   }
   if (!Number.isInteger(request?.budget?.maxAttempts) || request.budget.maxAttempts < 1) throw policyError("preflight", "budget.attempts", "Attempt budget is invalid");
   if (!Number.isFinite(request?.budget?.maxAmount) || request.budget.maxAmount < 0) throw policyError("preflight", "budget.amount", "Cost budget is invalid");
+  const binding = request.workflowTemplateBinding;
+  if (binding) {
+    if (request.preflight?.workflowTemplateResolved !== true) throw policyError("preflight", "template.not_resolved", "ExecutionRequest preflight failed: workflowTemplateResolved");
+    if (!binding.templateProfileRef || typeof binding.templateProfileRef !== "object") throw policyError("preflight", "template.profile_ref", "Workflow template profile reference is required");
+    if (!["serialized", "provider_managed"].includes(binding.mode)) throw policyError("preflight", "template.mode", "Workflow template binding mode is invalid");
+    if (binding.mode === "serialized" && !/^sha256:[0-9a-f]{64}$/.test(binding.templateContentHash || "")) throw policyError("preflight", "template.content_hash", "Serialized workflow template requires a lowercase SHA-256 hash");
+    if (binding.mode === "provider_managed" && binding.templateContentHash !== null) throw policyError("preflight", "template.content_hash", "Provider-managed workflow template must not claim a serialized hash");
+    if (!Array.isArray(binding.inputBindings) || !identifierPattern.test(binding.outputSlotId || "")) throw policyError("preflight", "template.bindings", "Workflow template bindings are malformed");
+  }
 }
 
 function assertReceiptFields(request) {
@@ -127,7 +136,69 @@ async function resolveExecutionContext(projectRoot, request) {
   if ((request.inputArtifactRefs || []).length > operation.maxInputs) throw policyError("preflight", "adapter.input_count", "Input count exceeds adapter limit");
   for (const mime of request.outputRequest.acceptedMimeTypes || []) if (!(operation.outputMimeTypes || []).includes(mime)) throw policyError("preflight", "adapter.mime", `Unsupported output MIME type: ${mime}`);
   if (descriptor.costPolicy?.currency !== request.budget.currency) throw policyError("preflight", "budget.currency", "Adapter and request currencies differ");
-  return { descriptor, capability, operation };
+  const workflowTemplate = await resolveWorkflowTemplateBinding(projectRoot, request, descriptor);
+  return { descriptor, capability, operation, workflowTemplate };
+}
+
+async function resolveWorkflowTemplateBinding(projectRoot, request, descriptor) {
+  const binding = request.workflowTemplateBinding;
+  if (!binding) return null;
+  const templateArtifact = await findArtifact(projectRoot, binding.templateProfileRef);
+  const template = templateArtifact.envelope.payload;
+  if (template?.kind !== "cineweave_codex_workflow_template_profile" || template?.status !== "active") {
+    throw policyError("preflight", "template.inactive", "WorkflowTemplateProfile is not active");
+  }
+  if (template.adapterId !== descriptor.adapterId) throw policyError("preflight", "template.adapter_id", "WorkflowTemplateProfile and AdapterDescriptor adapter IDs differ");
+  if (template.operationId !== request.operationId) throw policyError("preflight", "template.operation", "WorkflowTemplateProfile and ExecutionRequest operations differ");
+
+  const identity = template.templateIdentity;
+  if (!identity || typeof identity !== "object" || typeof identity.serializable !== "boolean") {
+    throw policyError("preflight", "template.identity", "WorkflowTemplateProfile template identity is malformed");
+  }
+  const expectedMode = identity.serializable ? "serialized" : "provider_managed";
+  if (binding.mode !== expectedMode) throw policyError("preflight", "template.mode", "WorkflowTemplateProfile and ExecutionRequest template modes differ");
+  if (identity.serializable && binding.templateContentHash !== identity.contentHash) {
+    throw policyError("preflight", "template.content_hash", "Workflow template content hash differs from the active profile");
+  }
+  if (!identity.serializable && binding.templateContentHash !== null) {
+    throw policyError("preflight", "template.content_hash", "Provider-managed workflow template must not claim a serialized hash");
+  }
+
+  const slots = new Map();
+  for (const slot of template.inputSlots || []) {
+    if (!identifierPattern.test(slot?.slotId || "") || slots.has(slot.slotId)) throw policyError("preflight", "template.input_slots", "WorkflowTemplateProfile input slots are malformed");
+    slots.set(slot.slotId, slot);
+  }
+  const boundSlots = new Set();
+  for (const item of binding.inputBindings) {
+    if (!identifierPattern.test(item?.slotId || "") || !item?.artifactRef || typeof item.artifactRef !== "object") {
+      throw policyError("preflight", "template.input_binding", "Workflow template input binding is malformed");
+    }
+    if (boundSlots.has(item.slotId)) throw policyError("preflight", "template.input_duplicate", `Workflow template slot is bound more than once: ${item.slotId}`);
+    const slot = slots.get(item.slotId);
+    if (!slot) throw policyError("preflight", "template.input_slot", `Workflow template does not declare input slot: ${item.slotId}`);
+    if (!(request.inputArtifactRefs || []).some((ref) => sameRef(ref, item.artifactRef))) {
+      throw policyError("preflight", "template.input_ref", `Workflow template input is absent from inputArtifactRefs: ${item.slotId}`);
+    }
+    if (!(slot.acceptedArtifactKinds || []).includes(item.artifactRef.kind)) {
+      throw policyError("preflight", "template.input_kind", `Workflow template input kind is unsupported for slot: ${item.slotId}`);
+    }
+    boundSlots.add(item.slotId);
+  }
+  for (const slot of slots.values()) {
+    if (slot.required === true && !boundSlots.has(slot.slotId)) {
+      throw policyError("preflight", "template.input_required", `Workflow template requires input slot: ${slot.slotId}`);
+    }
+  }
+
+  const output = (template.outputSlots || []).find((slot) => slot?.slotId === binding.outputSlotId);
+  if (!output) throw policyError("preflight", "template.output_slot", `Workflow template does not declare output slot: ${binding.outputSlotId}`);
+  if (output.mediaKind !== request.outputRequest.mediaKind) throw policyError("preflight", "template.output_media_kind", "Workflow template output media kind differs from the request");
+  for (const mime of request.outputRequest.acceptedMimeTypes || []) {
+    if (!(output.acceptedMimeTypes || []).includes(mime)) throw policyError("preflight", "template.output_mime", `Workflow template output MIME is unsupported: ${mime}`);
+  }
+  for (const ref of template.licenseProfileRefs || []) await findArtifact(projectRoot, ref);
+  return templateArtifact;
 }
 
 async function authorizationEvidence(projectRoot, requestRef, request, allowExternal) {

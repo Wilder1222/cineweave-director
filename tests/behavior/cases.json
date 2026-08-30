@@ -23,7 +23,7 @@
       "expectedRoute": "aigc_studio",
       "mustProduce": ["cineweave_codex_creative_brief", "cineweave_codex_workflow_plan"],
       "mustNotProduce": ["cineweave_codex_midjourney_prompt_pack", "cineweave_codex_image_prompt"],
-      "behaviorAssertions": ["selects studio mode and exposes a resumable stage ledger", "puts Midjourney behind a human execution gate", "requires exact reference ingest before visual-bible lock", "composes story director prompt and production owners without flattening them"]
+      "behaviorAssertions": ["selects studio mode and exposes a resumable stage ledger", "puts Midjourney behind a human execution gate", "keeps creator personalization and project Moodboard separate from shot-level references", "requires exact reference ingest before visual-bible lock", "composes story director prompt and production owners without flattening them"]
     },
     {
       "id": "router.indirect.vague-project",
@@ -349,7 +349,7 @@
       "expectedRoute": "midjourney_compile",
       "mustProduce": ["cineweave_codex_midjourney_prompt_pack"],
       "mustNotProduce": ["cineweave_execution_request", "cineweave_codex_image_prompt"],
-      "behaviorAssertions": ["returns a provider-specific projection rather than a provider-neutral core mutation", "changes one exploration axis per variant", "separates image style and identity reference roles", "pins and asks to reverify the model version", "requires human selection and exact metadata return"]
+      "behaviorAssertions": ["returns a provider-specific projection rather than a provider-neutral core mutation", "changes one exploration axis per variant", "separates image style and identity reference roles", "keeps the pinned model compatible with every selected reference role", "pins and asks to reverify the model version", "requires human selection and exact metadata return"]
     },
     {
       "id": "prompt.direct.midjourney-case-import",
@@ -361,6 +361,17 @@
       "mustProduce": ["cineweave_codex_midjourney_exploration_case"],
       "mustNotProduce": ["cineweave_codex_reference_asset", "cineweave_codex_character_spec"],
       "behaviorAssertions": ["requires exact ReferenceAsset refs rather than raw paths", "records original prompt and model parameters", "scopes reusable visual grammar away from non-transferable subject and scene facts", "keeps rights and human selection explicit", "does not imply provider execution or Canon approval"]
+    },
+    {
+      "id": "prompt.direct.midjourney-aesthetic-profile",
+      "category": "direct",
+      "targetSkill": "cineweave-prompt",
+      "request": "Use $cineweave-prompt to import my project Moodboard for a Song-inspired film world. Its curated source images have already been ingested as exact ReferenceAssets and I have one selected exploration case. Record the project-level palette, material and lighting grammar, its explicit --p ID/code snapshot, compatible model versions and a small --s comparison plan. Do not let it define a character identity, scene layout or Canon, do not use account defaults, and do not create or run anything in Midjourney.",
+      "expectedSkill": "cineweave-prompt",
+      "expectedRoute": "midjourney_profile_import",
+      "mustProduce": ["cineweave_codex_midjourney_aesthetic_profile"],
+      "mustNotProduce": ["cineweave_codex_midjourney_prompt_pack", "cineweave_execution_request"],
+      "behaviorAssertions": ["distinguishes a project Moodboard from creator personalization and shot references", "requires exact curation evidence for a Moodboard", "records an explicit profile ID or code rather than a hidden default", "keeps identity and visual-bible decisions outside the profile", "does not claim Midjourney execution"]
     },
     {
       "id": "prompt.indirect.overlong-source",
@@ -517,6 +528,17 @@
       "mustProduce": ["cineweave_codex_capability_profile"],
       "mustNotProduce": ["cineweave_codex_image_prompt", "cineweave_codex_shot_spec"],
       "behaviorAssertions": ["separates graph dependencies from creative intent", "matches every hard control channel", "keeps unknown or partial capability visible", "requires rights and benchmark evidence"]
+    },
+    {
+      "id": "production.direct.workflow-template-profile",
+      "category": "direct",
+      "targetSkill": "cineweave-production",
+      "request": "Use $cineweave-production to register a selected ComfyUI-style image-to-video graph for a known adapter operation. Capture only the graph format, exact content hash, native schema revision, typed starting-frame and prompt slots, video output slot, model/custom-node dependencies, license refs and known limits. Keep it draft until installed dependencies are checked; do not embed node JSON, paths, endpoints, credentials or claim that it executed.",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "workflow_template_profile",
+      "mustProduce": ["cineweave_codex_workflow_template_profile"],
+      "mustNotProduce": ["cineweave_execution_request", "cineweave_execution_receipt"],
+      "behaviorAssertions": ["separates exact graph provenance from adapter capability", "records content hash and typed input/output slots", "keeps dependency and license uncertainty visible", "does not claim graph installation or provider execution"]
     },
     {
       "id": "production.direct.control-benchmark-review",

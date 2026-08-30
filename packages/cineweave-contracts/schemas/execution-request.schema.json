@@ -49,6 +49,7 @@
       "uniqueItems": true,
       "items": { "$ref": "common.schema.json#/$defs/contractRef" }
     },
+    "workflowTemplateBinding": { "$ref": "#/$defs/workflowTemplateBinding" },
     "observationIds": {
       "type": "array",
       "maxItems": 64,
@@ -72,6 +73,53 @@
     "provenance": { "$ref": "common.schema.json#/$defs/provenance" }
   },
   "$defs": {
+    "workflowTemplateBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["templateProfileRef", "mode", "templateContentHash", "inputBindings", "outputSlotId"],
+      "properties": {
+        "templateProfileRef": {
+          "allOf": [
+            { "$ref": "common.schema.json#/$defs/contractRef" },
+            { "properties": { "kind": { "const": "cineweave_codex_workflow_template_profile" } } }
+          ]
+        },
+        "mode": { "enum": ["serialized", "provider_managed"] },
+        "templateContentHash": { "type": ["string", "null"], "pattern": "^sha256:[0-9a-f]{64}$" },
+        "inputBindings": {
+          "type": "array",
+          "maxItems": 64,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["slotId", "artifactRef"],
+            "properties": {
+              "slotId": { "$ref": "common.schema.json#/$defs/identifier" },
+              "artifactRef": { "$ref": "common.schema.json#/$defs/contractRef" }
+            }
+          }
+        },
+        "outputSlotId": { "$ref": "common.schema.json#/$defs/identifier" }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": ["mode"],
+            "properties": { "mode": { "const": "serialized" } }
+          },
+          "then": {
+            "properties": {
+              "templateContentHash": { "$ref": "common.schema.json#/$defs/contentHash" }
+            }
+          },
+          "else": {
+            "properties": {
+              "templateContentHash": { "const": null }
+            }
+          }
+        }
+      ]
+    },
     "parameter": {
       "type": "object",
       "additionalProperties": false,
@@ -139,8 +187,23 @@
         "hardCapabilitiesSatisfied": { "type": "boolean" },
         "rightsResolved": { "type": "boolean" },
         "budgetResolved": { "type": "boolean" },
-        "secretsAbsent": { "type": "boolean" }
+        "secretsAbsent": { "type": "boolean" },
+        "workflowTemplateResolved": { "type": "boolean" }
       }
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": { "required": ["workflowTemplateBinding"] },
+      "then": {
+        "properties": {
+          "preflight": {
+            "properties": {
+              "workflowTemplateResolved": { "const": true }
+            }
+          }
+        }
+      }
+    }
+  ]
 }

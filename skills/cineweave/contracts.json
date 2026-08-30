@@ -5,7 +5,7 @@
     "produces": ["CreativeBrief", "WorkflowPlan"]
   },
   "composed": {
-    "consumes": ["NaturalLanguageBrief", "OptionalExactContractRefs", "CharacterMorphologySpec", "MorphologyReview", "StyleExplorationBrief", "StyleOptionSet", "StylePreferenceFeedback", "RepresentationBinding", "ActionSequenceSpec", "MidjourneyPromptPack", "MidjourneyExplorationCase", "ReferenceAsset", "ReferenceObservation", "ReferenceReview", "ReferenceBindingSet", "StoryContracts", "DirectorContracts", "ProductionContracts"],
+    "consumes": ["NaturalLanguageBrief", "OptionalExactContractRefs", "CharacterMorphologySpec", "MorphologyReview", "StyleExplorationBrief", "StyleOptionSet", "StylePreferenceFeedback", "RepresentationBinding", "ActionSequenceSpec", "MidjourneyPromptPack", "MidjourneyExplorationCase", "MidjourneyAestheticProfile", "ReferenceAsset", "ReferenceObservation", "ReferenceReview", "ReferenceBindingSet", "StoryContracts", "DirectorContracts", "ProductionContracts"],
     "produces": ["CreativeBrief", "WorkflowPlan"]
   },
   "contractKinds": [
@@ -21,6 +21,8 @@
     "cineweave_codex_representation_binding",
     "cineweave_codex_action_sequence_spec",
     "cineweave_codex_midjourney_prompt_pack",
-    "cineweave_codex_midjourney_exploration_case"
+    "cineweave_codex_midjourney_exploration_case",
+    "cineweave_codex_midjourney_aesthetic_profile",
+    "cineweave_codex_workflow_template_profile"
   ]
 }

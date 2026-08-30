@@ -11,12 +11,22 @@
   },
   "steps": [
     {
+      "stepId": "aesthetic-profile",
+      "skill": "cineweave-prompt",
+      "route": "midjourney_profile_import",
+      "invocationMode": "composed",
+      "requires": ["CreativeBrief", "ReferenceAsset", "MidjourneyExplorationCase"],
+      "produces": ["cineweave_codex_midjourney_aesthetic_profile"],
+      "humanGate": "approve"
+    },
+    {
       "stepId": "mj-exploration",
       "skill": "cineweave-prompt",
       "route": "midjourney_compile",
       "invocationMode": "composed",
-      "requires": ["CreativeBrief", "NaturalLanguageBrief"],
+      "requires": ["CreativeBrief", "NaturalLanguageBrief", "MidjourneyAestheticProfile"],
       "produces": ["cineweave_codex_midjourney_prompt_pack"],
+      "dependsOn": ["aesthetic-profile"],
       "humanGate": "select"
     },
     {
@@ -200,6 +210,16 @@
       "humanGate": "approve"
     },
     {
+      "stepId": "workflow-template-profile",
+      "skill": "cineweave-production",
+      "route": "workflow_template_profile",
+      "invocationMode": "composed",
+      "requires": ["AssetRecipe", "CapabilityProfile", "AdapterDescriptor"],
+      "produces": ["cineweave_codex_workflow_template_profile"],
+      "dependsOn": ["production-recipes"],
+      "humanGate": "approve"
+    },
+    {
       "stepId": "production-board",
       "skill": "cineweave-production",
       "route": "board_assembly",
@@ -211,6 +231,7 @@
     }
   ],
   "outputs": [
+    { "contractKind": "cineweave_codex_midjourney_aesthetic_profile", "producer": "aesthetic-profile" },
     { "contractKind": "cineweave_codex_midjourney_prompt_pack", "producer": "mj-exploration" },
     { "contractKind": "cineweave_codex_reference_binding_set", "producer": "reference-bind" },
     { "contractKind": "cineweave_codex_character_spec", "producer": "character-design" },
@@ -224,16 +245,20 @@
     { "contractKind": "cineweave_codex_storyboard_sequence", "producer": "director-storyboard" },
     { "contractKind": "cineweave_codex_image_prompt", "producer": "prompt-compile" },
     { "contractKind": "cineweave_codex_asset_recipe", "producer": "production-recipes" },
+    { "contractKind": "cineweave_codex_workflow_template_profile", "producer": "workflow-template-profile" },
     { "contractKind": "cineweave_codex_board_assembly_plan", "producer": "production-board" }
   ],
   "questions": [
     "本轮 Midjourney 探索优先比较身份、表现媒介、构图还是光线？",
+    "已有的 Personalization 或 Moodboard 是否要作为项目视觉系统输入？",
     "选中的母版图分别承担身份、风格、场景、构图中的哪些角色？"
   ],
   "warnings": [
     "MidjourneyPromptPack 只是一组人工执行的 provider projection，不代表已生成或已选出母版。",
+    "AestheticProfile 是可选的审美上下文；它必须使用显式 --p 快照，不定义身份、场景几何或 Canon。",
     "只有在 Reference 完成精确摄取、角色拆分、权限记录和人工批准后，才能建立视觉圣经并进入资产生产。",
-    "下游资产按独立任务和确定性组装规划；失败任务只重试其 owning recipe。"
+    "下游资产按独立任务和确定性组装规划；失败任务只重试其 owning recipe。",
+    "WorkflowTemplateProfile 只有在选定具体图/模板时才进入执行准备；它不代表已安装或已运行。"
   ],
   "executionBoundary": {
     "generatesMedia": false,

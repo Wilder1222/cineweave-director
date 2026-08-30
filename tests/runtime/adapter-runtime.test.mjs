@@ -89,6 +89,56 @@ function makeRequest(common, descriptorRef, options = {}) {
   };
 }
 
+function makeFixtureWorkflowTemplateProfile(common) {
+  return {
+    kind: "cineweave_codex_workflow_template_profile",
+    contractVersion: "1.0.0",
+    templateProfileId: "template.fixture-svg.v1",
+    title: "Deterministic SVG fixture workflow template",
+    version: 1,
+    status: "active",
+    adapterId: common.adapterId,
+    operationId: "image.generate.fixture",
+    executionSurface: "generic_graph",
+    templateIdentity: {
+      format: "generic_json",
+      templateId: "template.fixture-svg.v1",
+      templateRevision: "1",
+      contentHash: fixedHash("f"),
+      nativeSchemaVersion: "fixture-graph-v1",
+      serializable: true,
+      reverifyBeforeExecution: false
+    },
+    inputSlots: [],
+    outputSlots: [{
+      slotId: "image",
+      mediaKind: "image",
+      acceptedMimeTypes: ["image/svg+xml"],
+      purpose: "Deterministic local fixture output."
+    }],
+    dependencyLocks: [{
+      dependencyId: "runtime.fixture-svg",
+      dependencyKind: "runtime",
+      version: "1.0.0",
+      contentHash: fixtureSvgAdapter.implementationContentHash,
+      status: "pinned",
+      purpose: "Trusted deterministic fixture adapter implementation."
+    }],
+    licenseProfileRefs: [common.license.envelope.artifactRef],
+    knownLimits: ["Fixture profile produces only deterministic local SVG output."],
+    validation: {
+      templateIdentityPinned: true,
+      inputSlotIdsUnique: true,
+      outputSlotIdsUnique: true,
+      dependenciesDeclared: true,
+      licensesLinked: true,
+      noEndpointOrCredentials: true
+    },
+    provenance: provenance(common.timestamp, "v1: bind fixture execution to an exact serialized template"),
+    skillReceipt: skillReceipt(common.timestamp)
+  };
+}
+
 async function storeFixtureExecution(root, options = {}) {
   await initProject(root, { projectId: options.projectId || "project.adapter-runtime", name: "Adapter Runtime", createdAt: "2026-08-21T10:00:00.000Z" });
   const common = await storeCommonArtifacts(root, options);
@@ -131,6 +181,52 @@ test("fixture execution is deterministic, idempotent and byte-verifiable", async
     const tampered = await verifyProject(root);
     assert.equal(tampered.valid, false);
     assert.match(tampered.errors.join("\n"), /Execution output (hash|byte length) mismatch/);
+  } finally { await rm(root, { recursive: true, force: true }); }
+});
+
+test("workflow template bindings lock an execution to the active graph profile and content hash", async () => {
+  const root = await mkdtemp(join(tmpdir(), "cineweave-adapter-template-"));
+  try {
+    await initProject(root, { projectId: "project.adapter-template", name: "Adapter Template", createdAt: "2026-08-21T10:00:00.000Z" });
+    const common = await storeCommonArtifacts(root);
+    const descriptorPayload = createFixtureAdapterDescriptor({
+      capabilityProfileRef: common.capability.envelope.artifactRef,
+      licenseProfileRefs: [common.license.envelope.artifactRef],
+      skillReceipt: skillReceipt(common.timestamp),
+      timestamp: common.timestamp
+    });
+    const descriptor = await putArtifact(root, descriptorPayload, { kind: "cineweave_adapter_descriptor", id: descriptorPayload.adapterId, version: 1, createdAt: common.timestamp });
+    const templatePayload = makeFixtureWorkflowTemplateProfile(common);
+    const templatePath = join(root, "workflow-template-profile.json");
+    await writeFile(templatePath, JSON.stringify(templatePayload, null, 2), "utf8");
+    const templateSchema = join(process.cwd(), "packages", "cineweave-contracts", "schemas", "workflow-template-profile.schema.json");
+    assert.equal((await validateDocument(templateSchema, templatePath)).valid, true);
+    const template = await putArtifact(root, templatePayload, { kind: templatePayload.kind, id: templatePayload.templateProfileId, version: 1, createdAt: common.timestamp });
+
+    const requestPayload = makeRequest(common, descriptor.envelope.artifactRef, { requestId: "execution.fixture-template", idempotencyKey: "fixture:template:0001" });
+    requestPayload.workflowTemplateBinding = {
+      templateProfileRef: template.envelope.artifactRef,
+      mode: "serialized",
+      templateContentHash: templatePayload.templateIdentity.contentHash,
+      inputBindings: [],
+      outputSlotId: "image"
+    };
+    requestPayload.preflight.workflowTemplateResolved = true;
+    const request = await putArtifact(root, requestPayload, { kind: requestPayload.kind, id: requestPayload.requestId, version: 1, createdAt: common.timestamp });
+    const registry = createAdapterRegistry([fixtureSvgAdapter]);
+    const success = await executeRequest(root, request.envelope.artifactRef, registry, { now: advancingClock() });
+    assert.equal(success.envelope.payload.status, "succeeded");
+
+    const mismatch = {
+      ...requestPayload,
+      requestId: "execution.fixture-template-mismatch",
+      idempotencyKey: "fixture:template:0002",
+      workflowTemplateBinding: { ...requestPayload.workflowTemplateBinding, templateContentHash: fixedHash("e") }
+    };
+    const mismatchedRequest = await putArtifact(root, mismatch, { kind: mismatch.kind, id: mismatch.requestId, version: 1, createdAt: common.timestamp });
+    const blocked = await executeRequest(root, mismatchedRequest.envelope.artifactRef, registry, { now: advancingClock() });
+    assert.equal(blocked.envelope.payload.status, "blocked");
+    assert.equal(blocked.envelope.payload.failure.code, "template.content_hash");
   } finally { await rm(root, { recursive: true, force: true }); }
 });
 
