@@ -131,6 +131,19 @@
         "only failed required task outputs block assembly while successful tasks remain immutable",
         "the image model is not asked to draw the composite board in one pass"
       ]
+    },
+    {
+      "id": "control-bench-review-observed-media-gate",
+      "route": "control_benchmark_review",
+      "prompt": "对已验证导入的真人短片候选进行最终质检：逐项绑定执行收据、Draft 导入和观察证据，检查皮肤/材质、光学、接触、光源方向和时间连续性。",
+      "expectedContract": "ControlBenchmarkReview",
+      "assertions": [
+        "planned review has complete case coverage but no media evidence and cannot advance",
+        "completed cases bind exact ExecutionReceipt, Draft MediaImport and candidate observations",
+        "blocking failure produces one owner, one smallest repair variable and prevents advancement",
+        "human review checks plausibility and continuity without beauty or biometric scoring",
+        "review does not claim generation, approval, rights grant or release"
+      ]
     }
   ]
 }

@@ -1,11 +1,11 @@
 {
   "contractPackage": "cineweave-contracts@2.5.1",
   "standalone": {
-    "accepts": ["NaturalLanguageBrief", "ReferenceAssets", "ReferenceBindingSet", "OptionalExactContractRefs"],
+    "accepts": ["NaturalLanguageBrief", "ReferenceAssets", "ReferenceBindingSet", "OptionalExactContractRefs", "UserSelectionFeedback", "ProviderOutputMetadata"],
     "produces": ["CreativeBrief", "WorkflowPlan"]
   },
   "composed": {
-    "consumes": ["NaturalLanguageBrief", "OptionalExactContractRefs", "CharacterMorphologySpec", "MorphologyReview", "StyleExplorationBrief", "StyleOptionSet", "StylePreferenceFeedback", "RepresentationBinding", "ActionSequenceSpec"],
+    "consumes": ["NaturalLanguageBrief", "OptionalExactContractRefs", "CharacterMorphologySpec", "MorphologyReview", "StyleExplorationBrief", "StyleOptionSet", "StylePreferenceFeedback", "RepresentationBinding", "ActionSequenceSpec", "MidjourneyPromptPack", "MidjourneyExplorationCase", "ReferenceAsset", "ReferenceObservation", "ReferenceReview", "ReferenceBindingSet", "StoryContracts", "DirectorContracts", "ProductionContracts"],
     "produces": ["CreativeBrief", "WorkflowPlan"]
   },
   "contractKinds": [
@@ -19,6 +19,8 @@
     "cineweave_codex_style_option_set",
     "cineweave_codex_style_preference_feedback",
     "cineweave_codex_representation_binding",
-    "cineweave_codex_action_sequence_spec"
+    "cineweave_codex_action_sequence_spec",
+    "cineweave_codex_midjourney_prompt_pack",
+    "cineweave_codex_midjourney_exploration_case"
   ]
 }

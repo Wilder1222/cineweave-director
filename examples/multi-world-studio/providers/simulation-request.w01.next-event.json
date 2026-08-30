@@ -1,0 +1,72 @@
+{
+  "$schema": "../schemas/simulation-request.schema.json",
+  "kind": "world_os_simulation_request",
+  "contractVersion": "0.1.0",
+  "requestId": "simulation-request.w01.next-event",
+  "version": 1,
+  "workspaceRef": {
+    "kind": "world_os_workspace",
+    "id": "workspace.world-matrix",
+    "version": 1,
+    "contentHash": "sha256:1b57cea7a7cbdaf564eff5f6956a27902a37beee1195acc9a94e0cf55e3c2420"
+  },
+  "worldCardRef": {
+    "kind": "world_os_world_design_proposal",
+    "id": "world.w01",
+    "version": 1,
+    "contentHash": "sha256:9f46cd053ca3a3a7d73d9b1b61818ef22a9fb6a9a497e39c95ea7fc4e1a6aece"
+  },
+  "stateRef": {
+    "kind": "world_os_state_snapshot",
+    "id": "state.world.w01.simulation.main",
+    "version": 1,
+    "contentHash": "sha256:c02d8e3d5aa7af0eec62801a65eb9c4327a986d0ae0bceb491514e669f425de0"
+  },
+  "providerPolicyRef": {
+    "kind": "world_os_llm_provider_policy",
+    "id": "provider-policy.future.default",
+    "version": 1,
+    "contentHash": "sha256:5039f7ea2c15878bc7f2c99229e791d8938bf6ca55ab5b85109f7d7f0fedc64b"
+  },
+  "triggerCatalogRef": {
+    "kind": "world_os_trigger_catalog",
+    "id": "trigger-catalog.w01",
+    "version": 1,
+    "contentHash": "sha256:3fe299b3c0aec372dcb9282688937756364c60e871d00b993d1a6855ce63fdfe"
+  },
+  "actionCatalogRef": {
+    "kind": "world_os_action_catalog",
+    "id": "action-catalog.w01",
+    "version": 1,
+    "contentHash": "sha256:be5d1a33fe6aff1c3ba2f7f9127702d2ba14e9790a82d02d2323e7040c96f1f7"
+  },
+  "actorIds": [
+    "character.w01.viewpoint-recordkeeper"
+  ],
+  "allowedActionIds": [
+    "action.w01.hide-carrier-and-deny-encounter"
+  ],
+  "triggerIds": [
+    "trigger.w01.injured-traveler-arrives"
+  ],
+  "branchPolicy": {
+    "allowed": [
+      "baseline",
+      "deterioration",
+      "opportunity"
+    ],
+    "maxCandidates": 3
+  },
+  "budget": {
+    "maxOutputTokens": 4000,
+    "maxCostUsd": 0.25,
+    "timeoutMs": 30000
+  },
+  "mutationAllowed": false,
+  "requiredResponseKind": "world_os_event_proposal",
+  "requestedAt": "2026-08-22T08:00:00.000Z",
+  "requestedBy": {
+    "kind": "codex",
+    "id": "codex.root"
+  }
+}

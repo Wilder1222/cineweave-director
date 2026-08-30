@@ -1,0 +1,34 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "world-release-receipt.schema.json",
+  "title": "World OS private release receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "contractVersion", "releaseId", "version", "worldId", "sliceRef", "approvedAssetRefs", "releaseGateDecisionRef", "visibility", "public", "status", "destination", "releasedAt", "releasedBy", "publishReceiptRefs", "recordedBy"],
+  "properties": {
+    "kind": { "const": "world_os_release_receipt" },
+    "contractVersion": { "const": "0.1.0" },
+    "releaseId": { "$ref": "common.schema.json#/$defs/identifier" },
+    "version": { "const": 1 },
+    "worldId": { "$ref": "common.schema.json#/$defs/worldId" },
+    "sliceRef": { "$ref": "common.schema.json#/$defs/exactRef" },
+    "approvedAssetRefs": { "type": "array", "minItems": 1, "items": { "$ref": "common.schema.json#/$defs/exactRef" } },
+    "releaseGateDecisionRef": { "$ref": "common.schema.json#/$defs/exactRef" },
+    "visibility": { "const": "private_workspace" },
+    "public": { "const": false },
+    "status": { "const": "private_ready" },
+    "destination": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "id"],
+      "properties": {
+        "kind": { "const": "private_workspace" },
+        "id": { "$ref": "common.schema.json#/$defs/identifier" }
+      }
+    },
+    "releasedAt": { "type": "string", "format": "date-time" },
+    "releasedBy": { "type": "object", "additionalProperties": false, "required": ["kind", "id"], "properties": { "kind": { "const": "human" }, "id": { "type": "string", "minLength": 1, "maxLength": 160 } } },
+    "publishReceiptRefs": { "type": "array", "items": { "$ref": "common.schema.json#/$defs/exactRef" } },
+    "recordedBy": { "$ref": "common.schema.json#/$defs/codexWriter" }
+  }
+}

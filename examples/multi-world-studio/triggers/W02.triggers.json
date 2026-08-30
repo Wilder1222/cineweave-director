@@ -1,0 +1,140 @@
+{
+  "$schema": "../schemas/trigger-catalog.schema.json",
+  "kind": "world_os_trigger_catalog",
+  "contractVersion": "0.1.0",
+  "catalogId": "trigger-catalog.w02",
+  "version": 1,
+  "worldId": "W02",
+  "worldCardRef": {
+    "kind": "world_os_world_design_proposal",
+    "id": "world.w02",
+    "version": 1,
+    "contentHash": "sha256:1cf5e7ca93c0c2d53d5155170b0b2a052e5ba28e14cfc1fb5a1b9c9445da1f78"
+  },
+  "initialStateRef": {
+    "kind": "world_os_state_snapshot",
+    "id": "state.world.w02.simulation.main",
+    "version": 1,
+    "contentHash": "sha256:1dabf82d80b188f954e621fb9db20911e721a5dd675c51d32cf0543da89fea78"
+  },
+  "triggers": [
+    {
+      "id": "trigger.w02.begin-baseline-window-assessment",
+      "type": "state_threshold",
+      "status": "proposed",
+      "priority": 95,
+      "locationId": "scene.w02.gate-outpost",
+      "when": {
+        "all": [
+          {
+            "path": "/variables/resources/borderCityWaterTrend",
+            "op": "eq",
+            "value": "declining"
+          },
+          {
+            "path": "/variables/gate/windowPrediction",
+            "op": "eq",
+            "value": "partial"
+          },
+          {
+            "path": "/variables/gate/stabilizationStatus",
+            "op": "eq",
+            "value": "not_started"
+          },
+          {
+            "path": "/variables/gate/assessmentStatus",
+            "op": "eq",
+            "value": "not_started"
+          },
+          {
+            "path": "/actors/character.w02.survey-cartographer/status",
+            "op": "eq",
+            "value": "preparing-survey"
+          }
+        ]
+      },
+      "unknownPolicy": "block",
+      "once": true,
+      "eventId": "event.w02.begin-baseline-window-assessment",
+      "requiredRuleRefs": [
+        "rule.w02.gate-has-thresholds"
+      ],
+      "gatePolicy": "auto_simulation"
+    },
+    {
+      "id": "trigger.w02.gate-window-assessment",
+      "type": "state_threshold",
+      "status": "proposed",
+      "priority": 80,
+      "locationId": "scene.w02.gate-outpost",
+      "when": {
+        "all": [
+          {
+            "path": "/variables/resources/borderCityWaterTrend",
+            "op": "eq",
+            "value": "declining"
+          },
+          {
+            "path": "/variables/gate/windowPrediction",
+            "op": "eq",
+            "value": "partial"
+          },
+          {
+            "path": "/variables/gate/stabilizationStatus",
+            "op": "eq",
+            "value": "not_started"
+          },
+          {
+            "path": "/variables/gate/assessmentStatus",
+            "op": "eq",
+            "value": "collecting_baseline"
+          },
+          {
+            "path": "/actors/character.w02.survey-cartographer/status",
+            "op": "eq",
+            "value": "verifying-window"
+          }
+        ]
+      },
+      "unknownPolicy": "block",
+      "once": true,
+      "eventId": "event.w02.gate-window-assessment",
+      "requiredRuleRefs": [
+        "rule.w02.gate-has-thresholds"
+      ],
+      "gatePolicy": "blocked_until-threshold-values"
+    },
+    {
+      "id": "trigger.w02.remote-impact-measurable",
+      "type": "state_threshold",
+      "status": "proposed",
+      "priority": 90,
+      "locationId": "scene.w02.living-mountain-valley",
+      "when": {
+        "all": [
+          {
+            "path": "/variables/ecology/remoteImpact",
+            "op": "in",
+            "value": [
+              "measurable",
+              "severe"
+            ]
+          },
+          {
+            "path": "/variables/gate/stabilizationStatus",
+            "op": "ne",
+            "value": "not_started"
+          }
+        ]
+      },
+      "unknownPolicy": "block",
+      "once": false,
+      "eventId": "event.w02.ecological-debt-response",
+      "requiredRuleRefs": [
+        "rule.w02.life-is-ecological-function",
+        "rule.w02.gate-has-ecological-debt"
+      ],
+      "gatePolicy": "requires-debt-model-and-human-review"
+    }
+  ]
+}

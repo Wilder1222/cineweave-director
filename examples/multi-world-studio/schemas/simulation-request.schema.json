@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "simulation-request.schema.json",
+  "title": "World OS LLM simulation request",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "requestId",
+    "version",
+    "workspaceRef",
+    "worldCardRef",
+    "stateRef",
+    "providerPolicyRef",
+    "triggerCatalogRef",
+    "actionCatalogRef",
+    "actorIds",
+    "allowedActionIds",
+    "triggerIds",
+    "branchPolicy",
+    "budget",
+    "mutationAllowed",
+    "requiredResponseKind",
+    "requestedAt",
+    "requestedBy"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "kind": {
+      "const": "world_os_simulation_request"
+    },
+    "contractVersion": {
+      "const": "0.1.0"
+    },
+    "requestId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "workspaceRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "worldCardRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "stateRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "providerPolicyRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "triggerCatalogRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "actionCatalogRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "actorIds": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "common.schema.json#/$defs/identifier"
+      }
+    },
+    "allowedActionIds": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "common.schema.json#/$defs/identifier"
+      }
+    },
+    "triggerIds": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "common.schema.json#/$defs/identifier"
+      }
+    },
+    "branchPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "allowed",
+        "maxCandidates"
+      ],
+      "properties": {
+        "allowed": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 3,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "baseline",
+              "deterioration",
+              "opportunity"
+            ]
+          }
+        },
+        "maxCandidates": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 3
+        }
+      }
+    },
+    "budget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "maxOutputTokens",
+        "maxCostUsd",
+        "timeoutMs"
+      ],
+      "properties": {
+        "maxOutputTokens": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "maxCostUsd": {
+          "type": "number",
+          "minimum": 0
+        },
+        "timeoutMs": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "mutationAllowed": {
+      "const": false
+    },
+    "requiredResponseKind": {
+      "const": "world_os_event_proposal"
+    },
+    "requestedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "requestedBy": {
+      "$ref": "common.schema.json#/$defs/codexWriter"
+    }
+  }
+}

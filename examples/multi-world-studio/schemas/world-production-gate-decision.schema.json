@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "world-production-gate-decision.schema.json",
+  "title": "World OS human production Gate decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "contractVersion", "decisionId", "version", "sliceRef", "gate", "decision", "actor", "decidedAt", "rationale", "evidenceRefs", "authority", "recordedBy"],
+  "properties": {
+    "kind": { "const": "world_os_production_gate_decision" },
+    "contractVersion": { "const": "0.1.0" },
+    "decisionId": { "$ref": "common.schema.json#/$defs/identifier" },
+    "version": { "const": 1 },
+    "sliceRef": { "$ref": "common.schema.json#/$defs/exactRef" },
+    "gate": { "enum": ["story_ready", "character_identity", "scene_geography", "style_activation", "rights", "qa", "release"] },
+    "decision": { "enum": ["approve", "reject", "revise"] },
+    "actor": { "type": "object", "additionalProperties": false, "required": ["kind", "id"], "properties": { "kind": { "const": "human" }, "id": { "type": "string", "minLength": 1, "maxLength": 160 } } },
+    "decidedAt": { "type": "string", "format": "date-time" },
+    "rationale": { "type": "string", "minLength": 1, "maxLength": 2000 },
+    "evidenceRefs": { "type": "array", "minItems": 1, "items": { "$ref": "common.schema.json#/$defs/exactRef" } },
+    "authority": { "const": "human_gate" },
+    "recordedBy": { "$ref": "common.schema.json#/$defs/codexWriter" }
+  }
+}

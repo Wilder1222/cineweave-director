@@ -7,7 +7,7 @@ import { fileURLToPath } from "node:url";
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const read = async (path) => JSON.parse(await readFile(resolve(repoRoot, "packages/cineweave-contracts", path), "utf8"));
 
-function validateCrossContracts({ benchmark, recipe, controls, evidence, capability, license, catalog }) {
+function validateCrossContracts({ benchmark, review, recipe, controls, evidence, capability, license, catalog }) {
   const errors = [];
   const recipeIds = new Set([recipe.recipeId, ...(catalog.recipes || []).map((item) => item.recipeId)]);
   const metricIds = new Set((benchmark.metrics || []).map((item) => item.metricId));
@@ -38,12 +38,21 @@ function validateCrossContracts({ benchmark, recipe, controls, evidence, capabil
     if (requiredCategory && !categories.has(requiredCategory)) errors.push(`${scope} requires a ${requiredCategory} case`);
   }
   if (!(benchmark.cases || []).some((item) => item.category === "rights")) errors.push("ControlBench requires a rights case");
+  const expectedCaseIds = (benchmark.cases || []).map((item) => item.caseId).sort();
+  const reviewCaseIds = (review.caseResults || []).map((item) => item.caseId).sort();
+  if (review.benchmarkRef?.id !== benchmark.suiteId || review.benchmarkRef?.version !== benchmark.version) errors.push("ControlBenchmarkReview does not bind the supplied ControlBench version");
+  if (JSON.stringify(reviewCaseIds) !== JSON.stringify(expectedCaseIds)) errors.push("ControlBenchmarkReview does not cover every ControlBench case exactly once");
+  if (review.status === "planned") {
+    if ((review.mediaEvidence || []).length !== 0) errors.push("planned ControlBenchmarkReview cannot contain media evidence");
+    if (!(review.caseResults || []).every((item) => item.status === "planned")) errors.push("planned ControlBenchmarkReview must leave all cases planned");
+    if (review.decision?.mayAdvanceToApproval !== false) errors.push("planned ControlBenchmarkReview cannot advance a candidate");
+  }
   return errors;
 }
 
 async function loadAll() {
   return {
-    benchmark: await read("examples/control-benchmark.json"), recipe: await read("examples/asset-recipe.json"), controls: await read("examples/control-channel-set.json"), evidence: await read("examples/evidence-bundle.json"), capability: await read("examples/capability-profile.json"), license: await read("examples/license-profile.json"), catalog: await read("recipes/catalog.json"),
+    benchmark: await read("examples/control-benchmark.json"), review: await read("examples/control-benchmark-review.json"), recipe: await read("examples/asset-recipe.json"), controls: await read("examples/control-channel-set.json"), evidence: await read("examples/evidence-bundle.json"), capability: await read("examples/capability-profile.json"), license: await read("examples/license-profile.json"), catalog: await read("recipes/catalog.json"),
   };
 }
 
@@ -67,6 +76,16 @@ async function selfTest() {
   badFamilyCoverage.benchmark.cases = badFamilyCoverage.benchmark.cases.filter((item) => item.category !== "anime_representation");
   if (!validateCrossContracts(badFamilyCoverage).length) { console.error("Negative test failed: AnimeBench without an anime case was accepted"); return false; }
   console.log("Rejected as expected: missing AnimeBench family case");
+
+  const badReviewCoverage = structuredClone(data);
+  badReviewCoverage.review.caseResults.pop();
+  if (!validateCrossContracts(badReviewCoverage).length) { console.error("Negative test failed: incomplete ControlBenchmarkReview was accepted"); return false; }
+  console.log("Rejected as expected: incomplete ControlBenchmarkReview coverage");
+
+  const badReviewAdvance = structuredClone(data);
+  badReviewAdvance.review.decision.mayAdvanceToApproval = true;
+  if (!validateCrossContracts(badReviewAdvance).length) { console.error("Negative test failed: planned ControlBenchmarkReview advanced"); return false; }
+  console.log("Rejected as expected: planned ControlBenchmarkReview advance");
   return true;
 }
 

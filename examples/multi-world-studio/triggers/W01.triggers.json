@@ -1,0 +1,154 @@
+{
+  "$schema": "../schemas/trigger-catalog.schema.json",
+  "kind": "world_os_trigger_catalog",
+  "contractVersion": "0.1.0",
+  "catalogId": "trigger-catalog.w01",
+  "version": 1,
+  "worldId": "W01",
+  "worldCardRef": {
+    "kind": "world_os_world_design_proposal",
+    "id": "world.w01",
+    "version": 1,
+    "contentHash": "sha256:9f46cd053ca3a3a7d73d9b1b61818ef22a9fb6a9a497e39c95ea7fc4e1a6aece"
+  },
+  "initialStateRef": {
+    "kind": "world_os_state_snapshot",
+    "id": "state.world.w01.simulation.main",
+    "version": 1,
+    "contentHash": "sha256:c02d8e3d5aa7af0eec62801a65eb9c4327a986d0ae0bceb491514e669f425de0"
+  },
+  "triggers": [
+    {
+      "id": "trigger.w01.injured-traveler-arrives",
+      "type": "external_arrival",
+      "status": "proposed",
+      "priority": 90,
+      "locationId": "scene.w01.incense-shop",
+      "when": {
+        "all": [
+          {
+            "path": "/actors/character.w01.viewpoint-recordkeeper/status",
+            "op": "eq",
+            "value": "closing_shop"
+          },
+          {
+            "path": "/variables/environment/weather",
+            "op": "eq",
+            "value": "light_rain"
+          },
+          {
+            "path": "/variables/information/oldCaseExposure",
+            "op": "eq",
+            "value": "very_low"
+          }
+        ]
+      },
+      "unknownPolicy": "block",
+      "once": true,
+      "eventId": "event.w01.rain-night-incense",
+      "requiredRuleRefs": [
+        "rule.w01.secret-needs-carrier",
+        "rule.w01.incense-not-magic"
+      ],
+      "gatePolicy": "simulation_candidate_only"
+    },
+    {
+      "id": "trigger.w01.hidden-stock-pressure",
+      "type": "state_threshold",
+      "status": "proposed",
+      "priority": 70,
+      "locationId": "scene.w01.incense-shop",
+      "when": {
+        "all": [
+          {
+            "path": "/variables/resources/incenseAvailability",
+            "op": "eq",
+            "value": "scarce"
+          },
+          {
+            "path": "/actors/character.w01.viewpoint-recordkeeper/knowledge",
+            "op": "contains",
+            "value": "hidden-stock"
+          }
+        ]
+      },
+      "unknownPolicy": "block",
+      "once": true,
+      "eventId": "event.w01.hidden-stock-choice",
+      "requiredRuleRefs": [
+        "rule.w01.secret-needs-carrier"
+      ],
+      "gatePolicy": "simulation_candidate_only"
+    },
+    {
+      "id": "trigger.w01.official-search-escalates",
+      "type": "state_threshold",
+      "status": "proposed",
+      "priority": 80,
+      "locationId": "scene.w01.incense-shop",
+      "when": {
+        "all": [
+          {
+            "path": "/variables/institutions/officialPressure",
+            "op": "in",
+            "value": [
+              "medium",
+              "high"
+            ]
+          },
+          {
+            "path": "/threads/old_case/status",
+            "op": "eq",
+            "value": "active"
+          }
+        ]
+      },
+      "unknownPolicy": "block",
+      "once": true,
+      "eventId": "event.w01.official-search-pressure",
+      "requiredRuleRefs": [
+        "rule.w01.secret-needs-carrier"
+      ],
+      "gatePolicy": "simulation_candidate_only"
+    },
+    {
+      "id": "trigger.w01.inspect-old-tag-order",
+      "type": "state_threshold",
+      "status": "proposed",
+      "priority": 75,
+      "locationId": "scene.w01.incense-shop",
+      "when": {
+        "all": [
+          {
+            "path": "/actors/character.w01.viewpoint-recordkeeper/status",
+            "op": "eq",
+            "value": "responding-to-official-search"
+          },
+          {
+            "path": "/actors/character.w01.viewpoint-recordkeeper/knowledge",
+            "op": "contains",
+            "value": "injured-traveler-left-old-incense-tag"
+          },
+          {
+            "path": "/entities/carriers/carrier.old-incense-tag/holderId",
+            "op": "eq",
+            "value": "character.w01.viewpoint-recordkeeper"
+          },
+          {
+            "path": "/threads/old_case/status",
+            "op": "eq",
+            "value": "active"
+          }
+        ]
+      },
+      "unknownPolicy": "block",
+      "once": true,
+      "eventId": "event.w01.inspect-old-tag-order",
+      "requiredRuleRefs": [
+        "rule.w01.secret-needs-carrier",
+        "rule.w01.incense-not-magic"
+      ],
+      "gatePolicy": "simulation_candidate_only"
+    }
+  ]
+}

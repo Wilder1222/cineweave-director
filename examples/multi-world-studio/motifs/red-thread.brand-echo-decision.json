@@ -1,0 +1,18 @@
+{
+  "kind": "world_os_brand_echo_decision",
+  "contractVersion": "0.1.0",
+  "decisionId": "brand-echo-decision.red-thread-demo",
+  "version": 1,
+  "brandEchoRef": {
+    "kind": "world_os_brand_echo",
+    "id": "brand-echo.red-thread-demo",
+    "version": 1,
+    "contentHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000"
+  },
+  "decision": "approve",
+  "actor": { "kind": "human", "id": "human.brand-owner" },
+  "decidedAt": "2026-08-24T11:05:00.000Z",
+  "rationale": "仅作为跨世界可识别的视觉母题，不进入任何世界的事实、人物或状态。",
+  "authority": "human_gate",
+  "recordedBy": { "kind": "codex", "id": "codex.root" }
+}

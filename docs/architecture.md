@@ -7,14 +7,20 @@ can accept a direct brief and return its smallest owned artifact. Composable
 means it can consume exact upstream kind/ID/version/hash refs without hidden
 chat state, implicit “latest” resolution or circular artifact dependencies.
 
-The optional `$cineweave` Skill is an intake router, not a creative super-Skill.
+`$cineweave` is the all-in-one, stage-aware AIGC entry point. It orchestrates
+the specialist Skills and human gates, but it is not a creative super-Skill:
+domain facts remain owned by the specialist that produces them.
 
 ## Layers
 
 ```text
 Intent and optional untrusted reference media
               ↓
-Optional CreativeBrief / WorkflowPlan
+CreativeBrief / WorkflowPlan (`studio` mode can start with MJ projection)
+              ↓
+optional existing MidjourneyExplorationCase (prior prompt + already-ingested result assets + scoped reuse)
+              ↓
+MidjourneyPromptPack → human exploration → selected master files + metadata
               ↓
 ReferenceAsset → atomic Observation / Review / BindingSet
               ↓
@@ -39,18 +45,36 @@ The dependency direction is selective. A bounded task bypasses unrelated
 layers. A workflow is a DAG of route invocations, so a Skill may appear in two
 phases without an artifact referencing its own downstream output.
 
+For cross-domain AIGC work, the DAG should also preserve this control-stack
+order inside each handoff:
+
+```text
+intent → asset state → shot/time state → adapter controls → review receipt
+```
+
+Reference authority and rights are cross-cutting inputs. Makeup, hair,
+wardrobe, accessories and skin response remain Character `AppearanceState`
+variables; camera behavior is resolved from sequence coverage through shot
+purpose, movement curve, pose/keyframes and frame; storyboard panels are
+independent tasks assembled deterministically. See the Director references
+[`aigc-control-stack.md`](../skills/cineweave-director/references/aigc-control-stack.md),
+[`appearance-styling-direction.md`](../skills/cineweave-director/references/appearance-styling-direction.md),
+[`camera-previsualization.md`](../skills/cineweave-director/references/camera-previsualization.md),
+[`storyboard-coverage.md`](../skills/cineweave-director/references/storyboard-coverage.md)
+and [`opensource-adapter-patterns.md`](../skills/cineweave-director/references/opensource-adapter-patterns.md).
+
 ## Ownership matrix
 
 | Domain | Owner | Does not own |
 | --- | --- | --- |
-| intake and workflow | `cineweave` | specialist artifacts |
+| intake, visual-first studio orchestration and workflow | `cineweave` | specialist facts, provider execution and master-reference approval |
 | story causality and continuity | `cineweave-story` | shots or image prompts |
 | semantic morphology, identity, stable surface baseline, appearance state and actor behavior | `cineweave-character` | medium, camera or scene geography |
 | geography, materials, interaction and physical light | `cineweave-scene` | post-process look or shot source selection |
 | style exploration, RepresentationBinding, visual/temporal grammar and realism treatment | `cineweave-style` | canonical identity, physical skin/material state, geography or source placement |
 | reference bytes, observations, suitability and role bindings | `cineweave-reference` | character/scene/style design, rights grants or provider execution |
 | action beats, sequence coverage and continuity, blocking, camera, shot light use and time | `cineweave-director` | story causality, persistent identity, scene geography, stunt-safety approval or general prompt library |
-| text-to-image prompt assets | `cineweave-prompt` | story causality or shot invention when a ShotSpec is required |
+| text-to-image prompt assets and Midjourney exploration cases | `cineweave-prompt` | story causality or shot invention when a ShotSpec is required |
 | recipes, evidence, capability, rights, execution intent and QA | `cineweave-production` | creative facts, credentials, endpoints or claims that execution succeeded |
 
 ## Separations with high leverage
@@ -162,6 +186,16 @@ never a stunt plan or safety approval.
 
 ### Direction and prompts
 
+The studio entry has a deliberate provider boundary. `$cineweave-prompt`
+can first retain a prior prompt, parameter record and exact selected result
+assets as a scoped `MidjourneyExplorationCase`, then creates a
+`MidjourneyPromptPack` projection for the user's visual exploration;
+the user runs Midjourney and returns selected original files plus metadata;
+`$cineweave-reference` then establishes exact evidence and role-scoped
+bindings. The same workflow can continue through Story, Character, Scene,
+Style, Director, Prompt and Production, but no stage treats a prompt or a
+single image as a universal source of truth.
+
 `ShotSpec` decides purpose, blocking, attention, camera and composition.
 `PromptRecord` manages reusable image language in any domain. `ImagePrompt`
 compiles an exact shot when one exists. Prompt detail is limited by framing,
@@ -208,9 +242,49 @@ credential or network adapter. A plugin extension may register one, but cannot
 bypass the exact-request approval, explicit caller enablement, budget or receipt
 boundaries.
 
+### World OS production execution boundary
+
+World OS does not turn a simulation event directly into a provider call. The
+vertical slice is deliberately split into two immutable layers:
+
+```text
+EventCommit + StateSnapshot
+        ↓
+ProductionSlice + ordered human Gates
+        ↓  (Rights approved: qa_pending)
+RenderPlan + generic ExecutionRequest
+        ↓
+trusted adapter runtime → ExecutionReceipt / blocked receipt
+       ↓
+MediaImport callback (PNG/JPEG/WebP bytes + hash + dimensions)
+        ↓
+human QA Review → ApprovedAsset → private ReleaseReceipt
+        ↓ (optional successful non-authoritative PublishReceipt)
+platform projection / public release (separate, explicit contract)
+```
+
+`packages/cineweave-world-os/src/production-execution.mjs` is the only bridge
+between the World OS slice and the generic runtime. It copies the selected
+provider-neutral PromptRecord into the immutable Store, binds the slice and all
+contract snapshots as exact input refs, and refuses stale slice versions before
+execution. It never accepts a provider URL, credential, raw prompt text or
+arbitrary effect. The bridge can create a blocked request for missing Rights or
+unsupported capability; only the generic runtime can produce media bytes and an
+auditable receipt. `production-media.mjs` may then re-read a successful image
+receipt, verify the immutable execution-store bytes and persist a Draft
+`MediaImport` plus an exact `world_os_production_media_import` binding to the
+slice, request, receipt and RenderPlan. This binding is admissible QA evidence
+but cannot advance a Gate. `production-release.mjs` then requires a human QA
+checklist, creates an exact private `ApprovedAsset` only after the QA stage is
+activated, and creates a `private_workspace` `ReleaseReceipt` only after the
+Release stage is activated. `public` is fixed to false; a platform receipt is
+optional and must itself be successful and non-authoritative. An
+`ExecutionReceipt` or Draft `MediaImport` is intentionally not an
+`ApprovedAsset` or a Release receipt.
+
 ## Contracts and portable bundles
 
-The canonical manifest owns 71 contract kinds. Each Skill declares its portable
+The canonical manifest owns 74 contract kinds. Each Skill declares its portable
 subset in `skills/<skill>/contracts.json`. Bundle construction copies only the
 needed schemas and recipes and rewrites local references, so a specialist bundle
 does not depend on the repository layout.

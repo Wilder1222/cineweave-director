@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "gate-decision.schema.json",
+  "title": "World OS human Gate decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind", "contractVersion", "gateDecisionId", "version", "worldId", "stream", "gateRequestRef",
+    "previousDecisionRef", "decision", "status", "approvalScope", "decidedAt", "decidedBy", "rationale"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "kind": { "const": "world_os_gate_decision" },
+    "contractVersion": { "const": "0.1.0" },
+    "gateDecisionId": { "$ref": "common.schema.json#/$defs/identifier" },
+    "version": { "type": "integer", "minimum": 1 },
+    "worldId": { "$ref": "common.schema.json#/$defs/worldId" },
+    "stream": { "const": "simulation.main" },
+    "gateRequestRef": { "$ref": "common.schema.json#/$defs/exactRef" },
+    "previousDecisionRef": {
+      "anyOf": [
+        { "$ref": "common.schema.json#/$defs/exactRef" },
+        { "type": "null" }
+      ]
+    },
+    "decision": { "enum": ["approve", "reject", "revise"] },
+    "status": { "enum": ["approved", "rejected", "revision_requested"] },
+    "approvalScope": { "const": "exact_proposal_resume_and_canon_promotion" },
+    "decidedAt": { "type": "string", "format": "date-time" },
+    "decidedBy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "id", "role"],
+      "properties": {
+        "kind": { "const": "human" },
+        "id": { "type": "string", "minLength": 1, "maxLength": 240 },
+        "role": { "type": "string", "minLength": 1, "maxLength": 240 }
+      }
+    },
+    "rationale": { "type": "string", "minLength": 1, "maxLength": 4000 }
+  }
+}

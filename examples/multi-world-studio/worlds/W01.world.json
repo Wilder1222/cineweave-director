@@ -1,0 +1,748 @@
+{
+  "$schema": "../schemas/world-design.schema.json",
+  "kind": "world_os_world_design_proposal",
+  "contractVersion": "0.1.0",
+  "worldId": "W01",
+  "version": 1,
+  "displayName": "临安春信",
+  "canonDisposition": "proposal",
+  "productionEligibility": "design_exploration_only",
+  "culturalTreatment": {
+    "inspiration": "宋代城市生活与审美",
+    "mode": "架空宋韵与诗意影视化",
+    "historicalReconstructionClaim": false,
+    "researchRequiredBeforeSpecificClaims": true
+  },
+  "audiencePromise": "在一座以临安意象为灵感的架空城市里，香药铺少女沈蘅循着父亲未完成的《百香谱》，从十二种香与十二段人生中发现：人情、江湖规矩与城中法度，正共同保护也共同掩盖一桩旧事。",
+  "experiencePromise": "先想住进鹤鸣巷，再逐渐意识到普通生活与贸易、规矩和秘密相连。",
+  "themeTension": "具体的人情是否应该为抽象的法度让路；保护一个人而隐瞒事实，何时会伤害更多人。",
+  "seasonQuestion": "沈蘅会不会交出父亲留下的完整记录来换取鹤鸣巷的安全；如果不交，她愿意承担什么后果？",
+  "endingDirection": "她建立自己的记录原则，并通过一次有代价的公开或保留选择回答首季问题。",
+  "layers": [
+    {
+      "id": "layer.w01.ordinary-life",
+      "name": "人间",
+      "function": "用香铺、茶肆、渡口与邻里生活建立情感地基。"
+    },
+    {
+      "id": "layer.w01.jianghu-network",
+      "name": "江湖",
+      "function": "由护送者、船帮、药师、线人与地下路线构成松散关系网。"
+    },
+    {
+      "id": "layer.w01.civic-institutions",
+      "name": "制度",
+      "function": "以治安、商税、货运与档案压力限制人物选择。"
+    }
+  ],
+  "rules": [
+    {
+      "id": "rule.w01.force-has-cost",
+      "name": "武力有身体与社会代价",
+      "capability": "受训者可依赖支点、距离、空间与经验完成有限的快速行动。",
+      "limit": "禁止腾空飞行、无支点移动、无伤压制大量对手或伤后立即恢复。",
+      "costs": [
+        "疲劳或伤势",
+        "财物破坏",
+        "平民风险",
+        "官府追责"
+      ],
+      "exception": "极少数高水平行动仍必须显示支点、落地与后果。",
+      "governance": {
+        "canonStatus": "proposed",
+        "requestedLock": "hard",
+        "effectiveLock": "undefined",
+        "approvalRef": null
+      }
+    },
+    {
+      "id": "rule.w01.secret-needs-carrier",
+      "name": "秘密必须有载体和路线",
+      "capability": "香方、账册、书信、画、货序、口信与人的记忆可以传递信息。",
+      "limit": "禁止凭直觉获得完整真相或让未传播事实瞬间成为公共知识。",
+      "costs": [
+        "载体被截获、伪造、误读或销毁",
+        "传递者暴露",
+        "传播链降低准确性"
+      ],
+      "exception": "传闻可以快速扩散，但必须降低置信度并保留传播路径。",
+      "governance": {
+        "canonStatus": "proposed",
+        "requestedLock": "hard",
+        "effectiveLock": "undefined",
+        "approvalRef": null
+      }
+    },
+    {
+      "id": "rule.w01.incense-not-magic",
+      "name": "香不是万能魔法",
+      "capability": "香可支持药理、工艺、产地、贸易、习惯、情绪联想与痕迹假设。",
+      "limit": "禁止读取记忆、判定善恶、无条件控制他人或独立证明案件真相。",
+      "costs": [
+        "原料稀缺",
+        "误判与嗅觉疲劳",
+        "配伍风险",
+        "商路依赖"
+      ],
+      "exception": "暂时无法解释的巧合只能登记为 unresolved。",
+      "governance": {
+        "canonStatus": "proposed",
+        "requestedLock": "hard",
+        "effectiveLock": "undefined",
+        "approvalRef": null
+      }
+    }
+  ],
+  "scarceResources": [
+    {
+      "id": "resource.w01.imported-incense-medicine",
+      "name": "进口香材与药材",
+      "controllers": [
+        "香行",
+        "海商",
+        "货运关系网"
+      ],
+      "imbalanceConsequences": [
+        "涨价",
+        "掺假",
+        "黑市",
+        "民生受损"
+      ]
+    },
+    {
+      "id": "resource.w01.route-permits",
+      "name": "路引与安全路线",
+      "controllers": [
+        "官府",
+        "江上熟路者"
+      ],
+      "imbalanceConsequences": [
+        "滞留",
+        "勒索",
+        "身份风险"
+      ]
+    },
+    {
+      "id": "resource.w01.trustworthy-records",
+      "name": "可信记录",
+      "controllers": [
+        "识字者",
+        "画师",
+        "账房",
+        "记录持有人"
+      ],
+      "imbalanceConsequences": [
+        "谣言替代事实",
+        "权力垄断解释"
+      ]
+    },
+    {
+      "id": "resource.w01.social-credit",
+      "name": "人情信用",
+      "controllers": [
+        "居民",
+        "行业网络"
+      ],
+      "imbalanceConsequences": [
+        "孤立",
+        "断供",
+        "无人作证"
+      ]
+    }
+  ],
+  "historicalWound": {
+    "id": "wound.w01.missing-incense-cargo",
+    "status": "proposed_setup",
+    "summary": "十余年前，一批从外港进入城中的香材和随行人员在河网中失踪；正式记录与民间版本互相冲突。",
+    "unresolved": [
+      "失踪是一件事还是数件事被合并",
+      "沈蘅父亲是在调查、保护人还是曾经犯错",
+      "当下短缺是否与旧案同源"
+    ]
+  },
+  "factions": [
+    {
+      "id": "faction.w01.hemingxiang-community",
+      "name": "鹤鸣巷共同体",
+      "publicGoal": "维持生计与相互照应",
+      "hiddenGoal": "避免旧事再次伤害居民",
+      "blindSpot": "把沉默误认为团结"
+    },
+    {
+      "id": "faction.w01.incense-cargo-network",
+      "name": "香行与货运网络",
+      "publicGoal": "维持货物流转与价格稳定",
+      "hiddenGoal": "控制产地、路线和旧账解释权",
+      "blindSpot": "低估普通从业者掌握的事实"
+    },
+    {
+      "id": "faction.w01.enforcement-tax-system",
+      "name": "城中执法与商税系统",
+      "publicGoal": "调查走私、伤人和治安风险",
+      "hiddenGoal": "避免旧案暴露制度错误",
+      "blindSpot": "把没有正式记录的人当作没有价值的证词"
+    },
+    {
+      "id": "faction.w01.itinerant-river-network",
+      "name": "行脚人与江上关系网",
+      "publicGoal": "护送人货、交换路线、偿还旧债",
+      "hiddenGoal": "保护旧案幸存者或未结承诺",
+      "blindSpot": "以个人义气替代长期后果"
+    }
+  ],
+  "dailySystems": [
+    "开铺、清点、称量、记账与备茶",
+    "货船抵达、验货、议价、赊欠与路线变化",
+    "雨季、花期、节令、晾晒、食物保存与身体不适",
+    "关门、巡查、灯火与夜间货运改变空间用途"
+  ],
+  "characters": [
+    {
+      "id": "character.w01.viewpoint-recordkeeper",
+      "displayName": "沈蘅",
+      "nameStatus": "proposed",
+      "narrativeFunction": "视角主角与新记录原则的建立者",
+      "outerGoal": "完成父亲的《百香谱》，保住香铺与巷中生活。",
+      "innerNeed": "学会用自己的原则判断何时保存、何时公开。",
+      "fear": "自己的追查让无辜者付出代价。",
+      "behavioralFingerprint": [
+        "紧张时仍恢复称量与抽屉秩序",
+        "先看手、衣物和气味来源，再看眼睛",
+        "回答前有短暂停顿"
+      ],
+      "forbiddenReaction": [
+        "突然成为全知侦探",
+        "以武力升级作为主要解决方式"
+      ],
+      "actorPolicy": {
+        "goals": [
+          {
+            "id": "goal.w01.preserve-shop-and-neighborhood",
+            "priority": 90,
+            "visibility": "public"
+          },
+          {
+            "id": "goal.w01.understand-fathers-records",
+            "priority": 70,
+            "visibility": "private"
+          }
+        ],
+        "capabilities": [
+          "capability.inspect-material-origin",
+          "capability.compare-carrier-sequence",
+          "capability.query-social-network"
+        ],
+        "limits": [
+          "limit.no-omniscient-deduction",
+          "limit.no-martial-escalation"
+        ],
+        "preferences": [
+          "observe_before_accuse",
+          "protect_before_disclose"
+        ]
+      },
+      "identity": {
+        "status": "unreviewed",
+        "rightsStatus": "unresolved",
+        "productionEligible": false,
+        "visualAnchors": "hypothesis_only"
+      }
+    },
+    {
+      "id": "character.w01.action-mirror",
+      "displayName": "顾行舟",
+      "nameStatus": "proposed",
+      "narrativeFunction": "行动者、保护冲动与责任回避的镜像",
+      "outerGoal": "不让旧关系重新伤害鹤鸣巷。",
+      "innerNeed": "承认退出行动并不能免除责任。",
+      "fear": "重新出手会再次失去被保护的人。",
+      "behavioralFingerprint": [
+        "进场先确认出口和高低差",
+        "让普通人处于安全侧",
+        "危险越大语言越少"
+      ],
+      "forbiddenReaction": [
+        "无代价压制大量对手",
+        "用暗中控制替代公开承担"
+      ],
+      "actorPolicy": {
+        "goals": [
+          {
+            "id": "goal.w01.protect-lane",
+            "priority": 90,
+            "visibility": "private"
+          },
+          {
+            "id": "goal.w01.avoid-old-network",
+            "priority": 65,
+            "visibility": "private"
+          }
+        ],
+        "capabilities": [
+          "capability.read-constrained-space",
+          "capability.protective-positioning",
+          "capability.recognize-routes"
+        ],
+        "limits": [
+          "limit.force-has-cost",
+          "limit.injury-reduces-capability"
+        ],
+        "preferences": [
+          "deescalate_in_public",
+          "move_bystanders_first"
+        ]
+      },
+      "identity": {
+        "status": "unreviewed",
+        "rightsStatus": "unresolved",
+        "productionEligible": false,
+        "visualAnchors": "hypothesis_only"
+      }
+    },
+    {
+      "id": "character.w01.community-connector",
+      "displayName": "周满娘",
+      "nameStatus": "working_free",
+      "narrativeFunction": "邻里关系、人情信用与公共证词的连接者",
+      "outerGoal": "让生意和邻里关系不被风波拖垮。",
+      "innerNeed": "承认表面和气不能解决累积的恐惧。",
+      "fear": "一个人的秘密毁掉整条巷子。",
+      "behavioralFingerprint": [
+        "用座位安排与续茶调节冲突",
+        "记得谁欠谁一顿饭",
+        "先保护公共秩序再私下追问"
+      ],
+      "forbiddenReaction": [
+        "只作为笑料",
+        "只作为无条件信息工具"
+      ],
+      "actorPolicy": {
+        "goals": [
+          {
+            "id": "goal.w01.keep-community-functioning",
+            "priority": 85,
+            "visibility": "public"
+          }
+        ],
+        "capabilities": [
+          "capability.mediate-social-space",
+          "capability.track-social-debts"
+        ],
+        "limits": [
+          "limit.no-unearned-information"
+        ],
+        "preferences": [
+          "mediate_before_expose",
+          "protect_collective_livelihood"
+        ]
+      },
+      "identity": {
+        "status": "unreviewed",
+        "rightsStatus": "unresolved",
+        "productionEligible": false,
+        "visualAnchors": "undefined"
+      }
+    },
+    {
+      "id": "character.w01.institutional-opponent",
+      "displayName": "程砚",
+      "nameStatus": "working_free",
+      "narrativeFunction": "制度逻辑、程序正当性与记录盲区的对手",
+      "outerGoal": "查清货物、伤人事件与旧案联系。",
+      "innerNeed": "理解正式记录不等于全部事实。",
+      "fear": "因同情忽略细节而造成更大伤害。",
+      "behavioralFingerprint": [
+        "先确认时间、位置与物件",
+        "压力越大措辞越准确",
+        "不轻易用威胁代替程序"
+      ],
+      "forbiddenReaction": [
+        "扁平恶官",
+        "为推动剧情故意愚蠢"
+      ],
+      "actorPolicy": {
+        "goals": [
+          {
+            "id": "goal.w01.establish-verifiable-record",
+            "priority": 88,
+            "visibility": "public"
+          }
+        ],
+        "capabilities": [
+          "capability.verify-time-place-object",
+          "capability.request-formal-records"
+        ],
+        "limits": [
+          "limit.office-and-authority-undefined",
+          "limit.no-knowledge-without-carrier"
+        ],
+        "preferences": [
+          "verify_before_infer",
+          "use_procedure_before_force"
+        ]
+      },
+      "identity": {
+        "status": "unreviewed",
+        "rightsStatus": "unresolved",
+        "productionEligible": false,
+        "visualAnchors": "undefined"
+      }
+    }
+  ],
+  "heroLocations": [
+    {
+      "id": "scene.w01.incense-shop",
+      "workingName": "沈家香药铺",
+      "function": "日常中心、线索入口、父女记忆与近距离危险空间。",
+      "anchors": [
+        "临街柜台与门",
+        "成排药柜",
+        "通向后院的窄门",
+        "称量工作台"
+      ],
+      "stateAxes": [
+        "开铺或闭铺",
+        "晴或雨",
+        "货足或短缺",
+        "搜查前或搜查后"
+      ],
+      "undefinedGeometry": [
+        "朝向",
+        "尺度",
+        "平面",
+        "材料",
+        "建筑年代"
+      ],
+      "sceneSpecEligible": false
+    },
+    {
+      "id": "scene.w01.tea-house",
+      "workingName": "巷中茶肆",
+      "function": "公共信息、关系调停、传闻与社会观察。",
+      "anchors": [
+        "临街敞口",
+        "灶与水",
+        "楼梯或后间",
+        "巷口视点"
+      ],
+      "stateAxes": [],
+      "undefinedGeometry": [
+        "所有权",
+        "朝向",
+        "尺度",
+        "平面"
+      ],
+      "sceneSpecEligible": false
+    },
+    {
+      "id": "scene.w01.wine-house",
+      "workingName": "巷中酒肆",
+      "function": "普通生活与旧行动身份冲突的狭窄空间。",
+      "anchors": [
+        "柜台",
+        "桌椅",
+        "楼梯或后门",
+        "储物区"
+      ],
+      "stateAxes": [],
+      "undefinedGeometry": [
+        "所有权",
+        "朝向",
+        "尺度",
+        "平面"
+      ],
+      "sceneSpecEligible": false
+    },
+    {
+      "id": "scene.w01.bridge-dock",
+      "workingName": "鹤鸣桥与渡口",
+      "function": "货运、离开与返回、公开追逐和世界外部联系。",
+      "anchors": [
+        "桥洞",
+        "系船点",
+        "上岸台阶",
+        "巷口方向"
+      ],
+      "stateAxes": [],
+      "undefinedGeometry": [
+        "水路拓扑",
+        "通行时间",
+        "潮水",
+        "尺度"
+      ],
+      "sceneSpecEligible": false
+    },
+    {
+      "id": "scene.w01.small-temple",
+      "workingName": "小寺与后墙",
+      "function": "安静对话、旧记录、临时庇护和空间边界。",
+      "anchors": [
+        "山门或巷门",
+        "院中树或井",
+        "廊下",
+        "后墙路径"
+      ],
+      "stateAxes": [],
+      "undefinedGeometry": [
+        "宗教属性",
+        "时代可行性",
+        "地理连接",
+        "尺度"
+      ],
+      "sceneSpecEligible": false
+    }
+  ],
+  "season": {
+    "status": "candidate",
+    "beats": [
+      {
+        "id": "beat.w01.s01.b01",
+        "order": 1,
+        "title": "雨夜沉香",
+        "goal": "沈蘅关铺并保护正常生活。",
+        "obstacle": "受伤客留下物件，追查者随后出现。",
+        "choice": "她否认见过此人。",
+        "stateChange": "她从观察者变成涉事者，搜查开始转向鹤鸣巷。",
+        "nextCause": "需要确认物件来源并处理扩大的谎言。",
+        "simulationReadiness": "prototype_event_ready"
+      },
+      {
+        "id": "beat.w01.s01.b02",
+        "order": 2,
+        "title": "柜下旧签",
+        "goal": "确认物件来源。",
+        "obstacle": "邻里担心受牵连。",
+        "choice": "不交官，按香材次序寻找货路。",
+        "stateChange": "谎言扩大，线索指向父亲旧账与渡口。",
+        "nextCause": "她需要顾行舟辨认路线。",
+        "simulationReadiness": "requires_action_catalog"
+      },
+      {
+        "id": "beat.w01.s01.b03",
+        "order": 3,
+        "title": "行舟不行",
+        "goal": "请顾行舟辨认路线。",
+        "obstacle": "顾拒绝触碰旧事。",
+        "choice": "她独自前往渡口。",
+        "stateChange": "她遇险，顾被迫出手，旧身份暴露。",
+        "nextCause": "暴露的旧关系指向一页名单。",
+        "simulationReadiness": "requires_geography_and_action_costs"
+      },
+      {
+        "id": "beat.w01.s01.b04",
+        "order": 4,
+        "title": "一页名单",
+        "goal": "弄清名单用途。",
+        "obstacle": "名单牵连熟悉居民。",
+        "choice": "暂时隐去一个名字。",
+        "stateChange": "香铺货物被扣，居民开始分裂。",
+        "nextCause": "供应危机逼迫她寻找可用库存。",
+        "simulationReadiness": "requires_name-and-knowledge-setup"
+      },
+      {
+        "id": "beat.w01.s01.b05",
+        "order": 5,
+        "title": "香价与人情",
+        "goal": "维持基本药材供应。",
+        "obstacle": "公开库存会暴露旧路线。",
+        "choice": "开启隐秘库存帮助居民。",
+        "stateChange": "香行与制度力量同时注意香铺。",
+        "nextCause": "短缺从私事变成公共压力。",
+        "simulationReadiness": "blocked_by_hidden-stock-knowledge-setup"
+      },
+      {
+        "id": "beat.w01.s01.b06",
+        "order": 6,
+        "title": "不是走私",
+        "goal": "保护幸存者并帮助被捕者。",
+        "obstacle": "可用记录也会暴露受保护者。",
+        "choice": "公开一段可验证记录。",
+        "stateChange": "一人获救，旧案正式重启。",
+        "nextCause": "未定义的对手获得剩余载体线索。",
+        "simulationReadiness": "blocked_by-antagonist-and-evidence-definition"
+      },
+      {
+        "id": "beat.w01.s01.b07",
+        "order": 7,
+        "title": "最后一程",
+        "goal": "抢先找到最后持有人。",
+        "obstacle": "顾主张用旧江湖方式解决。",
+        "choice": "拒绝牺牲持有人换取完整证据。",
+        "stateChange": "部分真相丢失。",
+        "nextCause": "沈蘅必须决定什么值得公开。",
+        "simulationReadiness": "requires_irreversible-human-gate"
+      },
+      {
+        "id": "beat.w01.s01.b08",
+        "order": 8,
+        "title": "人间一味",
+        "goal": "回应制度、香行与居民的不同要求。",
+        "obstacle": "任何答案都会伤害一部分人。",
+        "choice": "公开可承担的事实、保留会直接伤人的部分并署名。",
+        "stateChange": "她成为新的记录者。",
+        "nextCause": "留下下一季关于记录权与责任的冲突。",
+        "simulationReadiness": "requires_canon-owner-gate"
+      }
+    ]
+  },
+  "style": {
+    "mediumDirection": "自然人像与真人影视感作为第一验证媒介；其他媒介需独立 RepresentationBinding。",
+    "palette": [
+      "米白",
+      "茶褐",
+      "淡墨青绿",
+      "低饱和朱砂"
+    ],
+    "materials": [
+      "木",
+      "纸",
+      "陶",
+      "布",
+      "湿石"
+    ],
+    "lighting": "日间自然光与夜间地理绑定灯火。",
+    "motion": "表演依赖视线、呼吸、手部任务与微小停顿；动作依赖真实支点和重量。",
+    "exclusions": [
+      "统一磨皮与理想化古偶脸",
+      "仙侠飘纱和无支点飞行",
+      "无材料结构的服装与建筑贴图",
+      "以创作者姓名代替可观察风格语法"
+    ],
+    "activationStatus": "unapproved"
+  },
+  "day0State": {
+    "time": "春末，雨季将至；具体历法未定义。",
+    "resources": "香材表面稳定，部分进口材料已经延迟。",
+    "power": "正式权力、货运资金、巷中声望与路线经验分散在不同派系。",
+    "trust": "居民内部较高，对制度与外商的信任分化。",
+    "knowledge": "旧案公开度极低；主角只知道父亲留下未完成香谱。",
+    "ecology": "城市水路与雨季只作为环境约束，尚未完成地理研究。",
+    "threat": "制度压力中低但正在上升。",
+    "debts": "父亲记录、顾的旧债与居民沉默协议仍未偿。"
+  },
+  "locks": [
+    {
+      "id": "lock.w01.setting-boundary",
+      "scope": "world:W01",
+      "subject": "架空宋韵而非历史复原结论",
+      "path": "/canon/settingBoundary",
+      "level": "hard",
+      "status": "proposed",
+      "sourceType": "design_proposal",
+      "value": true,
+      "activationRequirement": "human_approval"
+    },
+    {
+      "id": "lock.w01.rule.force-cost",
+      "scope": "world:W01",
+      "subject": "武力有身体与社会代价",
+      "path": "/canon/rules/rule.w01.force-has-cost",
+      "level": "hard",
+      "status": "proposed",
+      "sourceType": "design_proposal",
+      "value": true,
+      "activationRequirement": "human_approval"
+    },
+    {
+      "id": "lock.w01.rule.secret-carrier",
+      "scope": "world:W01",
+      "subject": "秘密必须有载体和路线",
+      "path": "/canon/rules/rule.w01.secret-needs-carrier",
+      "level": "hard",
+      "status": "proposed",
+      "sourceType": "design_proposal",
+      "value": true,
+      "activationRequirement": "human_approval"
+    },
+    {
+      "id": "lock.w01.rule.incense",
+      "scope": "world:W01",
+      "subject": "香不是万能魔法",
+      "path": "/canon/rules/rule.w01.incense-not-magic",
+      "level": "hard",
+      "status": "proposed",
+      "sourceType": "design_proposal",
+      "value": true,
+      "activationRequirement": "human_approval"
+    },
+    {
+      "id": "lock.w01.identity",
+      "scope": "world:W01",
+      "subject": "核心人物具体身份外观",
+      "path": "/characters/identity",
+      "level": "undefined",
+      "status": "unresolved",
+      "sourceType": "design_unknown"
+    },
+    {
+      "id": "lock.w01.geography",
+      "scope": "world:W01",
+      "subject": "鹤鸣巷精确平面与建筑年代",
+      "path": "/scenes/geography",
+      "level": "undefined",
+      "status": "unresolved",
+      "sourceType": "design_unknown"
+    },
+    {
+      "id": "lock.w01.old-case-truth",
+      "scope": "world:W01",
+      "subject": "旧案最终真相",
+      "path": "/story/oldCaseTruth",
+      "level": "undefined",
+      "status": "unresolved",
+      "sourceType": "story_unknown"
+    }
+  ],
+  "humanGates": [
+    {
+      "id": "gate.w01.historical-policy",
+      "status": "pending",
+      "purpose": "确认架空程度和历史研究标准"
+    },
+    {
+      "id": "gate.w01.supernatural-policy",
+      "status": "pending",
+      "purpose": "确认超自然边界"
+    },
+    {
+      "id": "gate.w01.character-function-and-names",
+      "status": "pending",
+      "purpose": "确认角色功能与工作名"
+    },
+    {
+      "id": "gate.w01.old-case-boundary",
+      "status": "pending",
+      "purpose": "限制旧案只服务人物选择"
+    },
+    {
+      "id": "gate.w01.character-identity",
+      "status": "pending",
+      "purpose": "批准身份锚点与权利"
+    },
+    {
+      "id": "gate.w01.scene-geography",
+      "status": "pending",
+      "purpose": "批准空间拓扑与研究依据"
+    },
+    {
+      "id": "gate.w01.style-activation",
+      "status": "pending",
+      "purpose": "激活精确 StylePackage"
+    },
+    {
+      "id": "gate.w01.rights-production",
+      "status": "pending",
+      "purpose": "批准生产与发布权利"
+    },
+    {
+      "id": "gate.story.canon-mutation",
+      "status": "pending",
+      "purpose": "批准不可逆故事事实进入 Canon"
+    }
+  ],
+  "source": {
+    "documentId": "doc.world.w01",
+    "documentVersion": "draft-v0.1",
+    "path": "docs/examples/multi-world-studio/02-w01-linan-chunxin.md"
+  }
+}

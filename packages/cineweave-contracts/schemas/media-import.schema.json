@@ -63,15 +63,27 @@
       "required": ["mediaId", "mediaType", "fileName", "format", "byteSize", "contentHash", "width", "height", "source"],
       "properties": {
         "mediaId": { "type": "string", "minLength": 1, "maxLength": 160 },
-        "mediaType": { "enum": ["still", "storyboard_frame", "keyframe_candidate"] },
+        "mediaType": { "enum": ["still", "storyboard_frame", "keyframe_candidate", "video_candidate"] },
         "fileName": { "type": "string", "minLength": 1, "maxLength": 300, "pattern": "^[^/\\\\?%*:|\"<>]+$" },
-        "format": { "enum": ["png", "jpeg", "webp"] },
+        "format": { "enum": ["png", "jpeg", "webp", "mp4", "mov", "webm"] },
         "byteSize": { "type": "integer", "minimum": 1 },
         "contentHash": { "type": "string", "pattern": "^sha256:[0-9a-fA-F]{64}$" },
         "width": { "type": "integer", "minimum": 1 },
         "height": { "type": "integer", "minimum": 1 },
+        "durationSeconds": { "type": "number", "exclusiveMinimum": 0, "maximum": 86400 },
+        "frameRate": { "type": "number", "exclusiveMinimum": 0, "maximum": 480 },
         "source": { "enum": ["codex_interactive", "user_upload", "external_adapter"] }
-      }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "mediaType": { "const": "video_candidate" } } },
+          "then": {
+            "required": ["durationSeconds", "frameRate"],
+            "properties": { "format": { "enum": ["mp4", "mov", "webm"] } }
+          },
+          "else": { "properties": { "format": { "enum": ["png", "jpeg", "webp"] } } }
+        }
+      ]
     }
   }
 }

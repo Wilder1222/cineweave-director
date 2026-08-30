@@ -106,6 +106,14 @@
       "loads": ["reference-transforms", "reference-bindings", "prompt-architecture"],
       "expectedOutput": "PromptRecord with an exact ReferenceTransform",
       "assertions": ["exact ReferenceReview is bound", "preserve replace and exclude dimensions are explicit", "target pose crop and source-only props are not inferred from source evidence", "unknown back-view and footwear evidence remains flagged", "acceptance criteria prevent seated-pose leakage"]
+    },
+    {
+      "id": "prompt-import-cinematic-director-template",
+      "mode": "prompt_management",
+      "prompt": "导入一份包含全局基线、0–2 秒／2–5 秒逐镜运镜、色温表和环境声／音效／配乐的真人短剧／漫画提示词模板。保留原文，拆出表现媒介、镜头、光源、时序、交付和声音意图；把 8K、24fps、dB、口型同步和相机品牌降为待 Production/CapabilityProfile 验证的变量。",
+      "loads": ["prompt-lifecycle", "prompt-architecture", "cinematic-template-import"],
+      "expectedOutput": "prompt-record",
+      "assertions": ["sourceText is preserved", "global baseline is split by owner rather than flattened into one prompt", "live_action/anime/manga are separate representation variants", "shot camera and timed beats are handed to ShotSpec/TemporalSpec", "physical light is separate from StyleLightGrammar", "technical and audio capability claims remain unresolved", "negative constraints are targeted and scoped", "normalization does not claim media generation"]
     }
   ]
 }

@@ -26,7 +26,7 @@
       "additionalProperties": false,
       "required": ["mode", "source"],
       "properties": {
-        "mode": { "enum": ["zero_prompt", "quick", "guided", "professional"] },
+        "mode": { "enum": ["zero_prompt", "quick", "guided", "professional", "studio"] },
         "source": { "enum": ["direct", "router"] },
         "creativeBriefRef": { "type": "string", "minLength": 1 }
       }

@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "world-candidate-card.schema.json",
+  "title": "World OS candidate card",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "contractVersion", "worldId", "displayName", "version", "canonDisposition", "audiencePromise", "candidateRules", "productionValue", "openQuestions", "risks"],
+  "properties": {
+    "kind": { "const": "world_os_world_candidate_card" },
+    "contractVersion": { "const": "0.1.0" },
+    "worldId": { "$ref": "common.schema.json#/$defs/worldId" },
+    "displayName": { "type": "string", "minLength": 1 },
+    "version": { "type": "integer", "minimum": 1 },
+    "canonDisposition": { "const": "proposal" },
+    "audiencePromise": { "type": "string", "minLength": 1 },
+    "candidateRules": { "type": "array", "minItems": 3, "uniqueItems": true, "items": { "type": "string", "minLength": 1 } },
+    "productionValue": { "type": "string", "minLength": 1 },
+    "openQuestions": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } },
+    "risks": { "type": "array", "minItems": 1, "items": { "type": "string", "minLength": 1 } }
+  }
+}

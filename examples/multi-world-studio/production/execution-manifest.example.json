@@ -1,0 +1,30 @@
+{
+  "adapterDescriptorRef": {
+    "kind": "cineweave_adapter_descriptor",
+    "id": "adapter.fixture-svg",
+    "version": 1,
+    "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "capabilityProfileRef": {
+    "kind": "cineweave_codex_capability_profile",
+    "id": "capability.fixture-svg",
+    "version": 1,
+    "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+  },
+  "executionMode": "dry_run",
+  "operationId": "image.generate.fixture",
+  "outputRequest": {
+    "mediaKind": "image",
+    "acceptedMimeTypes": ["image/svg+xml"],
+    "variantCount": 1
+  },
+  "budget": {
+    "currency": "USD",
+    "maxAmount": 0,
+    "maxAttempts": 1,
+    "maxWallSeconds": 30
+  },
+  "qualityBudget": "explore",
+  "renderMode": "generate",
+  "notes": "Replace the exact adapter/capability refs with artifacts in the target project; this file is a shape example only."
+}

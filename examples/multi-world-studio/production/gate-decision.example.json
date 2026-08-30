@@ -1,0 +1,15 @@
+{
+  "kind": "world_os_production_gate_decision",
+  "contractVersion": "0.1.0",
+  "decisionId": "production-gate.example",
+  "version": 1,
+  "sliceRef": { "kind": "world_os_production_slice", "id": "production-slice.example", "version": 1, "contentHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000" },
+  "gate": "story_ready",
+  "decision": "approve",
+  "actor": { "kind": "human", "id": "human.producer" },
+  "decidedAt": "2026-08-24T13:05:00.000Z",
+  "rationale": "故事桥接输入已由责任人审阅。",
+  "evidenceRefs": [{ "kind": "world_os_production_contract_snapshot", "id": "production-snapshot.example-story", "version": 1, "contentHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000" }],
+  "authority": "human_gate",
+  "recordedBy": { "kind": "codex", "id": "codex.root" }
+}

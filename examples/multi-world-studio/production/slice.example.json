@@ -1,0 +1,33 @@
+{
+  "kind": "world_os_production_slice",
+  "contractVersion": "0.1.0",
+  "sliceId": "production-slice.example",
+  "version": 1,
+  "workspaceRef": { "kind": "world_os_workspace", "id": "workspace.multi-world-studio", "version": 1, "contentHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000" },
+  "worldId": "W01",
+  "sourceCommitRef": { "kind": "world_os_event_commit", "id": "commit.w01.simulation.main", "version": 1, "contentHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000" },
+  "sourceStateRef": { "kind": "world_os_state_snapshot", "id": "state.world.w01.simulation.main", "version": 1, "contentHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000" },
+  "episodeId": "episode.w01.example",
+  "title": "生产纵切片示例",
+  "contractRefs": {
+    "storyBrief": { "kind": "world_os_production_contract_snapshot", "id": "production-snapshot.example-story", "version": 1, "contentHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000" },
+    "beatSheet": { "kind": "world_os_production_contract_snapshot", "id": "production-snapshot.example-beat", "version": 1, "contentHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000" },
+    "scriptScene": { "kind": "world_os_production_contract_snapshot", "id": "production-snapshot.example-script", "version": 1, "contentHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000" },
+    "characterSpecs": [{ "kind": "world_os_production_contract_snapshot", "id": "production-snapshot.example-character", "version": 1, "contentHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000" }],
+    "sceneSpecs": [{ "kind": "world_os_production_contract_snapshot", "id": "production-snapshot.example-scene", "version": 1, "contentHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000" }],
+    "stylePackages": [{ "kind": "world_os_production_contract_snapshot", "id": "production-snapshot.example-style", "version": 1, "contentHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000" }],
+    "shotSpecs": [{ "kind": "world_os_production_contract_snapshot", "id": "production-snapshot.example-shot", "version": 1, "contentHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000" }],
+    "promptRecords": [{ "kind": "world_os_production_contract_snapshot", "id": "production-snapshot.example-prompt", "version": 1, "contentHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000" }],
+    "recipe": { "kind": "world_os_production_contract_snapshot", "id": "production-snapshot.example-recipe", "version": 1, "contentHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000" },
+    "rightsProfile": { "kind": "world_os_production_contract_snapshot", "id": "production-snapshot.example-rights", "version": 1, "contentHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000" },
+    "qaReviews": []
+  },
+  "requiredGates": ["story_ready", "character_identity", "scene_geography", "style_activation", "rights", "qa", "release"],
+  "gateDecisionRefs": [],
+  "stage": "planned",
+  "status": "proposed",
+  "releaseVisibility": "private_workspace",
+  "createdAt": "2026-08-24T13:00:00.000Z",
+  "updatedAt": "2026-08-24T13:00:00.000Z",
+  "createdBy": { "kind": "codex", "id": "codex.root" }
+}

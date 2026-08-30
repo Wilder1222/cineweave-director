@@ -1,0 +1,175 @@
+{
+  "$schema": "../schemas/state.schema.json",
+  "kind": "world_os_state_snapshot",
+  "contractVersion": "0.1.0",
+  "stateId": "state.world.w01.simulation.main",
+  "worldId": "W01",
+  "stream": "simulation.main",
+  "version": 1,
+  "sequence": 0,
+  "canonDisposition": "proposal",
+  "writer": {
+    "kind": "codex",
+    "id": "codex.root"
+  },
+  "clock": {
+    "at": "2026-04-20T18:00:00.000Z",
+    "display": "春末，雨季将至",
+    "calendarStatus": "undefined"
+  },
+  "variables": {
+    "resources": {
+      "incenseAvailability": "apparently_stable",
+      "importTrend": "delayed"
+    },
+    "information": {
+      "oldCaseExposure": "very_low",
+      "publicCarrierKnown": false
+    },
+    "institutions": {
+      "officialPressure": "medium_low",
+      "searchFocus": "outside_hemingxiang"
+    },
+    "community": {
+      "laneTrust": "high",
+      "externalMerchantTrust": "polarized"
+    },
+    "environment": {
+      "weather": "light_rain",
+      "riverTraffic": "normal"
+    }
+  },
+  "actors": {
+    "character.w01.viewpoint-recordkeeper": {
+      "locationId": "scene.w01.incense-shop",
+      "status": "closing_shop",
+      "knowledge": [
+        "father-left-unfinished-incense-catalog"
+      ],
+      "unknown": [
+        "catalog-protected-subject",
+        "hidden-stock"
+      ],
+      "exposure": "low",
+      "health": "uninjured"
+    },
+    "character.w01.action-mirror": {
+      "locationId": "scene.w01.wine-house",
+      "status": "ordinary_business",
+      "knowledge": [
+        "some-old-routes"
+      ],
+      "unknown": [
+        "current-cargo-holder"
+      ],
+      "exposure": "low",
+      "health": "old-injury-unquantified"
+    },
+    "character.w01.community-connector": {
+      "locationId": "scene.w01.tea-house",
+      "status": "ordinary_business",
+      "knowledge": [
+        "current-neighborhood-debts"
+      ],
+      "unknown": [
+        "old-case-carriers"
+      ],
+      "exposure": "low",
+      "health": "undefined"
+    },
+    "character.w01.institutional-opponent": {
+      "locationId": "undefined",
+      "status": "outside-lane",
+      "knowledge": [
+        "recent-cargo-anomaly"
+      ],
+      "unknown": [
+        "incense-catalog-exists"
+      ],
+      "exposure": "public-official-role",
+      "health": "undefined"
+    }
+  },
+  "relationships": {
+    "hemingxiang_internal_trust": "high",
+    "hemingxiang_to_institutions": "polarized",
+    "viewpoint_to_action_mirror": "guarded_familiarity"
+  },
+  "threads": {
+    "old_case": {
+      "status": "latent",
+      "visibility": "very_low",
+      "carrierRefs": [
+        "carrier.unfinished-incense-catalog"
+      ]
+    },
+    "supply_delay": {
+      "status": "active",
+      "visibility": "trade_only"
+    }
+  },
+  "entities": {
+    "carriers": {
+      "carrier.unfinished-incense-catalog": {
+        "holderId": "character.w01.viewpoint-recordkeeper",
+        "locationId": "scene.w01.incense-shop",
+        "condition": "unfinished",
+        "provenance": "left_by_father",
+        "knownBy": [
+          "character.w01.viewpoint-recordkeeper"
+        ]
+      }
+    }
+  },
+  "pendingConsequences": [],
+  "timeline": [],
+  "fieldPolicies": [
+    {
+      "path": "/variables/resources/incenseAvailability",
+      "type": "enum",
+      "values": [
+        "abundant",
+        "apparently_stable",
+        "strained",
+        "scarce",
+        "temporary_relief"
+      ]
+    },
+    {
+      "path": "/variables/information/oldCaseExposure",
+      "type": "enum",
+      "values": [
+        "very_low",
+        "low",
+        "medium",
+        "high",
+        "public"
+      ]
+    },
+    {
+      "path": "/variables/institutions/officialPressure",
+      "type": "enum",
+      "values": [
+        "low",
+        "medium_low",
+        "medium",
+        "high"
+      ]
+    },
+    {
+      "path": "/variables/community/laneTrust",
+      "type": "enum",
+      "values": [
+        "low",
+        "strained",
+        "medium",
+        "high"
+      ]
+    }
+  ],
+  "source": {
+    "documentId": "doc.world.w01",
+    "section": "Day 0 世界状态",
+    "status": "proposal_seed"
+  }
+}

@@ -105,6 +105,13 @@
       "entrySkill": "cineweave",
       "mode": "router",
       "requiresSpecialists": ["cineweave-character", "cineweave-style", "cineweave-prompt", "cineweave-production"]
+    },
+    {
+      "id": "router-visual-first-aigc-studio",
+      "request": "我先提出一个短片想法，请先帮我生成 Midjourney 探索提示词；我会在 Midjourney 里选母版参考图，之后再基于统一视觉风格生成角色、场景、资产、剧本、分镜和成片生产计划。",
+      "entrySkill": "cineweave",
+      "mode": "router",
+      "requiresSpecialists": ["cineweave-story", "cineweave-character", "cineweave-scene", "cineweave-style", "cineweave-reference", "cineweave-director", "cineweave-prompt", "cineweave-production"]
     }
   ]
 }

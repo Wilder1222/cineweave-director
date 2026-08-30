@@ -40,7 +40,10 @@ async function checkNodeSyntax() {
     join(repoRoot, "scripts"),
     join(repoRoot, "packages", "cineweave-runtime", "src"),
     join(repoRoot, "packages", "cineweave-runtime", "bin"),
-    join(repoRoot, "tests", "runtime")
+    join(repoRoot, "packages", "cineweave-world-os", "src"),
+    join(repoRoot, "packages", "cineweave-world-os", "bin"),
+    join(repoRoot, "tests", "runtime"),
+    join(repoRoot, "tests", "world-os")
   ];
   const files = (await Promise.all(roots.map((root) => walk(root)))).flat().filter((path) => path.endsWith(".mjs"));
   for (const path of files) {
@@ -71,8 +74,10 @@ async function checkManifestContracts() {
   }
   for (const [schema, example] of [
     ["schemas/execution-receipt.schema.json", "examples/execution-receipt-blocked.json"],
+    ["schemas/media-import.schema.json", "examples/media-import-video.json"],
     ["schemas/shot-spec.schema.json", "examples/shot-spec-action.json"],
     ["schemas/prompt-record.schema.json", "examples/prompt-record-reference-reframe.json"],
+    ["schemas/prompt-record.schema.json", "examples/prompt-record-cinematic-director-template.json"],
     ["schemas/image-prompt-output.schema.json", "examples/integrated-image-prompt-reference-reframe.json"],
     ["schemas/style-package.schema.json", "examples/style-package-anime.json"],
     ["schemas/style-package.schema.json", "examples/style-package-manga.json"],
@@ -136,6 +141,15 @@ async function checkRuntimeTests() {
   else pass(`${testFiles.length} deterministic runtime test files`);
 }
 
+async function checkWorldOsTests() {
+  const testFiles = (await walk(join(repoRoot, "tests", "world-os"))).filter((path) => path.endsWith(".test.mjs"));
+  const result = spawnSync(process.execPath, ["--test", ...testFiles], { cwd: repoRoot, encoding: "utf8" });
+  process.stdout.write(result.stdout || "");
+  process.stderr.write(result.stderr || "");
+  if (result.status !== 0) fail("World OS tests failed");
+  else pass(`${testFiles.length} World OS test files`);
+}
+
 async function checkMigration() {
   const temp = await mkdtemp(join(tmpdir(), "cineweave-v2-migrate-"));
   try {
@@ -179,6 +193,8 @@ async function main() {
   await checkManifestContracts();
   await checkRecipeCatalog();
   await checkRuntimeTests();
+  await checkWorldOsTests();
+  await runScript("World OS workspace review", "packages/cineweave-world-os/bin/world-os.mjs", ["review", join(repoRoot, "examples", "multi-world-studio", "workspace.json")]);
   await runScript("V2 architecture tests", "scripts/validate-v2-architecture.mjs");
   await runScript("V2 activation and workflow tests", "scripts/validate-v2-workflows.mjs");
   await runScript("contract semantic positive and negative tests", "scripts/validate-contract-semantics.mjs", ["--self-test"]);

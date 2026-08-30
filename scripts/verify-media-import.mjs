@@ -1,11 +1,18 @@
 #!/usr/bin/env node
 
 import { createHash } from "node:crypto";
+import { execFile as execFileCallback } from "node:child_process";
+import { createReadStream } from "node:fs";
 import { readFile, stat } from "node:fs/promises";
 import { basename, extname, resolve } from "node:path";
+import { promisify } from "node:util";
+
+const execFile = promisify(execFileCallback);
+const MAX_IMAGE_BYTES = 64 * 1024 * 1024;
+const MAX_VIDEO_BYTES = 512 * 1024 * 1024;
 
 function usage() {
-  console.error("Usage: node scripts/verify-media-import.mjs <image-file> --world-id <id> --render-plan-ref <ref> --receipt <receipt.json> [--shot-id <id>] [--media-type still|storyboard_frame|keyframe_candidate] [--source codex_interactive|user_upload|external_adapter]");
+  console.error("Usage: node scripts/verify-media-import.mjs <media-file> --world-id <id> --render-plan-ref <ref> --receipt <receipt.json> [--shot-id <id>] [--media-type still|storyboard_frame|keyframe_candidate|video_candidate] [--source codex_interactive|user_upload|external_adapter]");
 }
 
 function argValue(args, name, required = true) {
@@ -25,6 +32,50 @@ function detectFormat(bytes, fileName) {
   if (bytes.length >= 12 && bytes.toString("ascii", 0, 4) === "RIFF" && bytes.toString("ascii", 8, 12) === "WEBP") return "webp";
   const extension = extname(fileName).slice(1).toLowerCase();
   return extension === "jpg" ? "jpeg" : extension;
+}
+
+function extensionFormat(fileName) {
+  const extension = extname(fileName).slice(1).toLowerCase();
+  if (extension === "jpg") return "jpeg";
+  if (extension === "m4v") return "mp4";
+  return extension;
+}
+
+function parseFrameRate(value) {
+  const [numeratorText, denominatorText] = String(value || "").split("/", 2);
+  const numerator = Number(numeratorText);
+  const denominator = Number(denominatorText);
+  if (!Number.isFinite(numerator) || !Number.isFinite(denominator) || numerator <= 0 || denominator <= 0) return null;
+  return numerator / denominator;
+}
+
+async function hashFile(filePath) {
+  const hash = createHash("sha256");
+  for await (const chunk of createReadStream(filePath)) hash.update(chunk);
+  return `sha256:${hash.digest("hex")}`;
+}
+
+async function probeVideo(filePath, expectedFormat) {
+  let output;
+  try {
+    output = await execFile("ffprobe", ["-v", "error", "-select_streams", "v:0", "-show_entries", "stream=codec_type,width,height,avg_frame_rate,r_frame_rate:format=format_name,duration", "-of", "json", filePath], { windowsHide: true, timeout: 10000, maxBuffer: 1024 * 1024 });
+  } catch (error) {
+    throw new Error(`video import requires local ffprobe metadata verification: ${error instanceof Error ? error.message : String(error)}`);
+  }
+  let probe;
+  try { probe = JSON.parse(output.stdout); } catch { throw new Error("ffprobe did not return valid JSON"); }
+  const stream = probe?.streams?.find((item) => item?.codec_type === "video");
+  const width = Number(stream?.width);
+  const height = Number(stream?.height);
+  const durationSeconds = Number(probe?.format?.duration);
+  const frameRate = parseFrameRate(stream?.avg_frame_rate) ?? parseFrameRate(stream?.r_frame_rate);
+  const formatNames = String(probe?.format?.format_name || "").split(",");
+  const containerMatches = expectedFormat === "webm" ? formatNames.includes("webm") : formatNames.some((name) => ["mov", "mp4", "m4a", "3gp", "3g2", "mj2"].includes(name));
+  if (!containerMatches) throw new Error(`ffprobe container does not match ${expectedFormat}`);
+  if (!Number.isInteger(width) || width < 1 || !Number.isInteger(height) || height < 1) throw new Error("ffprobe could not detect video dimensions");
+  if (!Number.isFinite(durationSeconds) || durationSeconds <= 0) throw new Error("ffprobe could not detect video duration");
+  if (!Number.isFinite(frameRate) || frameRate <= 0) throw new Error("ffprobe could not detect video frame rate");
+  return { width, height, durationSeconds, frameRate };
 }
 
 function detectDimensions(bytes, format) {
@@ -58,8 +109,8 @@ function detectDimensions(bytes, format) {
 
 async function main() {
   const args = process.argv.slice(2);
-  const imagePath = args[0];
-  if (!imagePath) {
+  const mediaPath = args[0];
+  if (!mediaPath) {
     usage();
     process.exitCode = 2;
     return;
@@ -72,25 +123,30 @@ async function main() {
     const shotId = argValue(args, "--shot-id", false);
     const mediaType = argValue(args, "--media-type", false) ?? "keyframe_candidate";
     const source = argValue(args, "--source", false) ?? "user_upload";
-    if (!["still", "storyboard_frame", "keyframe_candidate"].includes(mediaType)) throw new Error("--media-type is unsupported");
+    if (!["still", "storyboard_frame", "keyframe_candidate", "video_candidate"].includes(mediaType)) throw new Error("--media-type is unsupported");
     if (!["codex_interactive", "user_upload", "external_adapter"].includes(source)) throw new Error("--source is unsupported");
 
-    const resolvedPath = resolve(imagePath);
+    const resolvedPath = resolve(mediaPath);
     const fileInfo = await stat(resolvedPath);
-    if (!fileInfo.isFile()) throw new Error("image path is not a file");
-    const bytes = await readFile(resolvedPath);
+    if (!fileInfo.isFile()) throw new Error("media path is not a file");
     const fileName = basename(resolvedPath);
-    const format = detectFormat(bytes, fileName);
-    if (!["png", "jpeg", "webp"].includes(format)) throw new Error("only png, jpeg and webp media are supported");
-    const dimensions = detectDimensions(bytes, format);
-    if (!dimensions || dimensions.width < 1 || dimensions.height < 1) throw new Error("could not detect image dimensions");
-    const contentHash = `sha256:${createHash("sha256").update(bytes).digest("hex")}`;
+    const isVideo = mediaType === "video_candidate";
+    const byteLimit = isVideo ? MAX_VIDEO_BYTES : MAX_IMAGE_BYTES;
+    if (fileInfo.size > byteLimit) throw new Error(`media exceeds the ${isVideo ? "video" : "image"} byte limit`);
+    const bytes = isVideo ? null : await readFile(resolvedPath);
+    const format = isVideo ? extensionFormat(fileName) : detectFormat(bytes, fileName);
+    const allowedFormats = isVideo ? ["mp4", "mov", "webm"] : ["png", "jpeg", "webp"];
+    if (!allowedFormats.includes(format)) throw new Error(isVideo ? "video candidates must be mp4, mov or webm" : "still media must be png, jpeg or webp");
+    const dimensions = isVideo ? await probeVideo(resolvedPath, format) : detectDimensions(bytes, format);
+    if (!dimensions || dimensions.width < 1 || dimensions.height < 1) throw new Error(`could not detect ${isVideo ? "video" : "image"} dimensions`);
+    const contentHash = isVideo ? await hashFile(resolvedPath) : `sha256:${createHash("sha256").update(bytes).digest("hex")}`;
     const receipt = JSON.parse(await readFile(resolve(receiptPath), "utf8"));
     if (!receipt || typeof receipt !== "object" || Array.isArray(receipt)) throw new Error("receipt file must contain a JSON object");
 
     const mediaId = `media-${contentHash.slice(-16)}`;
     const result = {
       kind: "cineweave_codex_media_import",
+      contractVersion: "2.0.0",
       worldId,
       ...(shotId ? { shotId } : {}),
       renderPlanRef,
@@ -101,10 +157,11 @@ async function main() {
         mediaType,
         fileName,
         format,
-        byteSize: bytes.length,
+        byteSize: fileInfo.size,
         contentHash,
         width: dimensions.width,
         height: dimensions.height,
+        ...(isVideo ? { durationSeconds: dimensions.durationSeconds, frameRate: dimensions.frameRate } : {}),
         source
       }],
       verification: {
@@ -117,7 +174,7 @@ async function main() {
       importContract: {
         source,
         statusOnCreation: "draft",
-        nextAction: "Bind the verified Draft media to the Candidate, review continuity, then explicitly lock it as a Keyframe."
+        nextAction: isVideo ? "Bind the verified Draft video to candidate observations, review temporal continuity, then send it to the explicit QA gate." : "Bind the verified Draft media to the Candidate, review continuity, then explicitly lock it as a Keyframe."
       }
     };
     const receiptText = JSON.stringify(receipt);

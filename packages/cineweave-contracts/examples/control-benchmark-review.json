@@ -1,0 +1,44 @@
+{
+  "kind": "cineweave_codex_control_benchmark_review",
+  "contractVersion": "2.0.0",
+  "reviewId": "review.controlbench.shen.production-v1",
+  "benchmarkRef": { "kind": "cineweave_codex_control_benchmark", "id": "benchmark.cineweave-controlbench", "version": 1, "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" },
+  "capabilityProfileRef": { "kind": "cineweave_codex_capability_profile", "id": "capability.reference-image-composite", "version": 1, "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" },
+  "status": "planned",
+  "mediaEvidence": [],
+  "caseResults": [
+    { "caseId": "case.morphology-neutral-3view", "status": "planned", "reviewedMediaIds": [], "findings": [], "metricResults": [], "notes": "Collect exact imported candidate observations first." },
+    { "caseId": "case.natural-human-fixtures", "status": "planned", "reviewedMediaIds": [], "findings": [], "metricResults": [], "notes": "Review neutral close, warm-backlight and full-body fixtures at delivery scale." },
+    { "caseId": "case.anime-character-fixtures", "status": "planned", "reviewedMediaIds": [], "findings": [], "metricResults": [], "notes": "Run only when the exact anime binding is selected." },
+    { "caseId": "case.manga-character-fixtures", "status": "planned", "reviewedMediaIds": [], "findings": [], "metricResults": [], "notes": "Run only when the exact manga binding is selected." },
+    { "caseId": "case.cross-representation-character", "status": "planned", "reviewedMediaIds": [], "findings": [], "metricResults": [], "notes": "Compare semantic anchors rather than same-medium pixel similarity." },
+    { "caseId": "case.expression-sheet", "status": "planned", "reviewedMediaIds": [], "findings": [], "metricResults": [], "notes": "Keep all non-expression anchors fixed." },
+    { "caseId": "case.scene-interaction", "status": "planned", "reviewedMediaIds": [], "findings": [], "metricResults": [], "notes": "Review contact, occlusion, support and source-consistent shadows." },
+    { "caseId": "case.rights-gate", "status": "planned", "reviewedMediaIds": [], "findings": [], "metricResults": [], "notes": "Unknown or restricted rights remain blocking." }
+  ],
+  "humanReview": {
+    "requiredForBlockingFindings": true,
+    "status": "planned",
+    "reviewerCount": 0,
+    "rubric": [
+      "Review photography and human plausibility, never attractiveness.",
+      "Review surface response, optics, contact, motivated light and temporal continuity at the delivered scale.",
+      "Route each failed dimension to one owner while preserving passing dimensions."
+    ]
+  },
+  "decision": {
+    "overallStatus": "planned",
+    "nextAction": "collect_observed_media",
+    "mayAdvanceToApproval": false,
+    "blockingFindingIds": [],
+    "summary": "This is a review plan, not evidence that media was generated, imported or approved."
+  },
+  "executionBoundary": { "providerNeutral": true, "generatesMedia": false, "approvesAssets": false, "observedMediaRequiredForCompletion": true },
+  "validation": { "benchmarkBound": true, "casesComplete": true, "exactMediaEvidence": true, "blockingFailuresBlockAdvancement": true, "noAttractivenessScore": true, "noBiometricInference": true, "oneOwnerPerRepair": true },
+  "provenance": {
+    "source": "suite_builtin",
+    "createdAt": "2026-08-26T10:00:00.000Z",
+    "updatedAt": "2026-08-26T10:00:00.000Z",
+    "changeLog": ["v1: planned ControlBench review receipt with complete case coverage and no claimed media output"]
+  }
+}

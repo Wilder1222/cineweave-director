@@ -8,13 +8,33 @@
     "node": ">=22"
   },
   "scripts": {
-    "test": "node --test tests/runtime/*.test.mjs",
+    "test": "node --test tests/runtime/*.test.mjs tests/world-os/*.test.mjs",
     "validate": "node scripts/run-release-checks.mjs",
     "runtime": "node packages/cineweave-runtime/bin/cineweave.mjs",
     "board": "node packages/cineweave-runtime/bin/assemble-board.mjs",
     "evals": "node scripts/run-behavior-evals.mjs --validate",
     "evals:fixtures": "node scripts/validate-eval-fixtures.mjs",
-    "evals:live": "node scripts/run-live-skill-evals.mjs"
+    "evals:live": "node scripts/run-live-skill-evals.mjs",
+    "worlds": "node packages/cineweave-world-os/bin/world-os.mjs",
+    "worlds:review": "node packages/cineweave-world-os/bin/world-os.mjs review examples/multi-world-studio/workspace.json",
+    "worlds:rebuild": "node packages/cineweave-world-os/bin/world-os.mjs rebuild examples/multi-world-studio/seed-manifest.json .build/multi-world-studio",
+    "worlds:simulate": "node packages/cineweave-world-os/bin/world-os.mjs simulate .build/multi-world-studio examples/multi-world-studio/events/event.w01.rain-night-incense.json",
+    "worlds:simulate:next": "node packages/cineweave-world-os/bin/world-os.mjs simulate .build/multi-world-studio examples/multi-world-studio/events/event.w01.official-search-pressure.json",
+    "worlds:simulate:third": "node packages/cineweave-world-os/bin/world-os.mjs simulate .build/multi-world-studio examples/multi-world-studio/events/event.w01.inspect-old-tag-order.json",
+    "worlds:actions": "node packages/cineweave-world-os/bin/world-os.mjs actions .build/multi-world-studio W01",
+    "worlds:step": "node packages/cineweave-world-os/bin/world-os.mjs step .build/multi-world-studio W01",
+    "worlds:run": "node packages/cineweave-world-os/bin/world-os.mjs run .build/multi-world-studio W01 --max-steps 10",
+    "worlds:audit": "node packages/cineweave-world-os/bin/world-os.mjs audit .build/multi-world-studio",
+    "worlds:outbox": "node packages/cineweave-world-os/bin/world-os.mjs outbox .build/multi-world-studio examples/multi-world-studio/platforms/studio-platform.json",
+    "worlds:signals": "node packages/cineweave-world-os/bin/world-os.mjs signals .build/multi-world-studio",
+    "worlds:portfolio": "node packages/cineweave-world-os/bin/world-os.mjs portfolio-run .build/multi-world-studio --worlds W01,W02 --max-cycles 10",
+    "worlds:brain": "node packages/cineweave-world-os/bin/world-os.mjs brain-run .build/multi-world-studio --worlds W01,W02 --max-cycles 10",
+    "worlds:brain-status": "node packages/cineweave-world-os/bin/world-os.mjs brain-status .build/multi-world-studio --worlds W01,W02",
+    "worlds:forecast": "node packages/cineweave-world-os/bin/world-os.mjs forecast .build/multi-world-studio --worlds W01,W02",
+    "worlds:serve": "node packages/cineweave-world-os/bin/world-os.mjs serve .build/multi-world-studio --host 127.0.0.1 --port 8787",
+    "worlds:reconcile": "node packages/cineweave-world-os/bin/world-os.mjs reconcile .build/multi-world-studio examples/multi-world-studio/platforms/studio-platform.json",
+    "worlds:triggers": "node packages/cineweave-world-os/bin/world-os.mjs triggers .build/multi-world-studio examples/multi-world-studio/triggers/W01.triggers.json",
+    "worlds:head": "node packages/cineweave-world-os/bin/world-os.mjs head .build/multi-world-studio W01"
   },
   "bin": {
     "cineweave-studio": "./packages/cineweave-runtime/bin/cineweave.mjs"

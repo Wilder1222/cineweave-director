@@ -17,6 +17,8 @@ only fields that change a downstream decision:
 | reusable or one-off text-to-image prompt in any domain | `cineweave-prompt` | prompt compilation must remain usable beyond cinematic shots |
 | recipe, evidence, capability, rights or repeatable QA | `cineweave-production` | production validation is separate from creative facts |
 
+| idea → Midjourney exploration → selected master references → full AIGC pipeline | `cineweave` `aigc_studio` | the router exposes a resumable DAG; Prompt projects the first pack, Reference establishes evidence, and downstream specialists retain ownership |
+
 Use a direct specialist route if one row answers the request. Use a composed
 workflow only when a final output explicitly needs more than one owner.
 
@@ -41,3 +43,9 @@ For zero-prompt character exploration, ask no more than the six simple cards:
 visual world, temperament, representation, adornment, adult age impression and
 first visual priority. Send blank answers as `undefined`; `$cineweave-character`
 owns candidate semantics, preference feedback and eventual identity drafting.
+
+If the user explicitly says “先给我 MJ 提示词，我自己探索并带回母版图，再做
+资产/剧本/分镜”, select `studio` mode. Do not ask them to provide final
+character terminology before the first exploration pack. Make the first gate
+collect exact selected image files, original prompts, model/version/parameters,
+selection notes and rights/usage status; then route to `reference_ingest`.

@@ -1,0 +1,71 @@
+{
+  "kind": "cineweave_codex_midjourney_exploration_case",
+  "contractVersion": "1.0.0",
+  "caseId": "mj-case-song-courtyard-naturalism",
+  "version": 1,
+  "status": "reviewed",
+  "title": "雨后江南庭院：自然主义风格探索",
+  "purpose": "保存一轮已探索的风格、原始 Midjourney 提示词和选中结果图，供后续提示词只借用其视觉语法与评审结论。",
+  "styleProfile": {
+    "summary": "低饱和青灰与米白、阴天漫射光、湿润石面反射和克制的自然主义人物叙事。",
+    "styleAtoms": ["representation.naturalistic", "palette.desaturated_blue_gray", "mood.quiet_reunion"],
+    "lighting": ["阴天漫射主光", "湿润石面低对比反射", "人物与回廊保留层次"],
+    "composition": ["3:2 横构图", "人物在回廊尽头作为第一焦点", "回廊和石阶引导纵深"],
+    "colorMaterial": ["青灰与米白的低饱和关系", "雨后石材、木材和织物呈现不同的湿润响应"],
+    "representation": "真实摄影式自然主义"
+  },
+  "prompt": {
+    "originalText": "雨后江南庭院中的原创成年女性角色，克制而温柔，穿宋韵层叠青灰衣裙，站在木回廊尽头回望，白墙黛瓦、浅水石阶、稀疏竹影，湿润石面反射阴天漫射光，人物与回廊形成清晰前后景，低饱和青灰与米白色，安静含蓄，真实摄影式自然主义 --v 8.2 --ar 3:2 --s 125",
+    "copyablePrompt": "雨后江南庭院中的原创成年女性角色，克制而温柔，穿宋韵层叠青灰衣裙，站在木回廊尽头回望，白墙黛瓦、浅水石阶、稀疏竹影，湿润石面反射阴天漫射光，人物与回廊形成清晰前后景，低饱和青灰与米白色，安静含蓄，真实摄影式自然主义 --v 8.2 --ar 3:2 --s 125",
+    "parameterTokens": ["--v 8.2", "--ar 3:2", "--s 125"],
+    "modelVersion": "V8.2",
+    "surface": "both",
+    "notes": ["这是已探索案例的原始记录；继续使用前需要重新确认当前 Midjourney 版本与参数兼容性。"]
+  },
+  "resultImages": [
+    {
+      "resultId": "mj-result-courtyard-naturalism-01",
+      "referenceAssetRef": {
+        "kind": "cineweave_codex_reference_asset",
+        "id": "reference.user_upload.1111111111111111111111111111111111111111111111111111111111111111",
+        "version": 1,
+        "contentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+      },
+      "status": "selected",
+      "roles": ["style_reference", "validation"],
+      "observedStrengths": ["回廊、石阶和人物形成可复用的纵深关系", "阴天漫射光和湿润材质逻辑一致", "低饱和色彩没有压掉人物焦点"],
+      "observedRisks": ["不能据此锁定人物身份", "不能把示例中的具体服装、姿势或庭院物件默认为后续事实"],
+      "selectionNote": "作为风格与空间层次参考；后续身份、造型和场景几何必须由各自 owner 单独确认。"
+    }
+  ],
+  "reusePolicy": {
+    "allowedRoles": ["style_grammar", "lighting", "material", "prompt_pattern"],
+    "preserve": ["低饱和青灰—米白关系", "阴天漫射光与湿润材质关系", "人物优先且回廊提供纵深"],
+    "doNotTransfer": ["示例人物的身份与五官", "示例服装、姿势和具体庭院物件", "未验证的镜头、版权或生成能力结论"],
+    "doNotUseFor": ["作为全身身份锚点", "替代 SceneSpec 的地理设计", "替代权限或商用许可判断"],
+    "requiresHumanReview": true
+  },
+  "rightsStatus": "unknown",
+  "usageBoundary": "private_exploration_only",
+  "validation": {
+    "exactResultAssets": true,
+    "sourcePromptRecorded": true,
+    "resultsRoleScoped": true,
+    "noImplicitCanon": true,
+    "manualSelectionRecorded": true
+  },
+  "provenance": {
+    "source": "codex_authored",
+    "createdAt": "2026-08-29T12:30:00.000Z",
+    "updatedAt": "2026-08-29T12:30:00.000Z",
+    "changeLog": ["示范将一个已探索的 Midjourney 风格、提示词和结果图引用记录为可复用案例；真实结果图由 ReferenceAsset 管理。"]
+  },
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-studio",
+    "ref": "v2.5.1",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-29T12:30:00.000Z"
+  }
+}

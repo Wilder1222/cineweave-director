@@ -1,0 +1,43 @@
+{
+  "kind": "cineweave_codex_media_import",
+  "contractVersion": "2.0.0",
+  "worldId": "world-cloud-dynasty",
+  "shotId": "scene-01-shot-04",
+  "renderPlanRef": "render-plan:scene-01-shot-04",
+  "skillReceipt": {
+    "repository": "https://github.com/owner/repository",
+    "ref": "v2.0.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-26T10:00:00.000Z"
+  },
+  "status": "draft",
+  "media": [
+    {
+      "mediaId": "media-cloud-palace-take-001",
+      "mediaType": "video_candidate",
+      "fileName": "cloud-palace-reveal.mp4",
+      "format": "mp4",
+      "byteSize": 2457600,
+      "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "width": 1280,
+      "height": 720,
+      "durationSeconds": 5.04,
+      "frameRate": 24,
+      "source": "external_adapter"
+    }
+  ],
+  "verification": {
+    "fileExists": true,
+    "contentHashPresent": true,
+    "dimensionsDetected": true,
+    "privateUrlAbsent": true,
+    "status": "verified"
+  },
+  "importContract": {
+    "source": "external_adapter",
+    "statusOnCreation": "draft",
+    "nextAction": "Bind the verified Draft video to candidate observations, review temporal continuity, then send it to the explicit QA gate."
+  }
+}

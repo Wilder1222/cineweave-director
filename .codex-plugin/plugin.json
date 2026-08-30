@@ -1,7 +1,7 @@
 {
   "name": "cineweave-studio",
   "version": "2.5.1",
-  "description": "CineWeave Studio is a composable creative Skill system for independent story, character, scene, style, reference, direction, prompt and production workflows.",
+  "description": "CineWeave Studio is a visual-first, human-in-the-loop AIGC Skill system: turn ideas into Midjourney exploration prompts, converge on master references, then compose consistent characters, scenes, styles, stories, shots, storyboards, prompts and production workflows.",
   "homepage": "https://github.com/Wilder1222/cineweave-studio",
   "repository": "https://github.com/Wilder1222/cineweave-studio",
   "license": "MIT",
@@ -31,6 +31,10 @@
     "storyboard",
     "cinematography",
     "text-to-image",
+    "midjourney",
+    "visual-exploration",
+    "master-reference",
+    "aigc-studio",
     "prompt-management",
     "prompt-repair",
     "reference-review",
@@ -70,13 +74,14 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "CineWeave Studio",
-    "shortDescription": "Composable creative workflows for images, video and production design.",
-    "longDescription": "CineWeave Studio v2.5.1 provides an optional $cineweave entry point plus eight independently usable specialist Skills. Story owns causality and continuity; Character owns preference-led exploration, provider-neutral semantic morphology, identity and performance; Scene owns geography and physical light; Style owns visual representation, one-axis style exploration and exact Character-to-Style RepresentationBindings; Reference owns content-addressed media, atomic observations and role-scoped bindings; Director owns action sequences, shots and time; Prompt owns reusable image prompts; Production owns recipes, controls, family-specific benches, rights, adapters, exact execution requests and auditable receipts. Exact versioned contracts support standalone use and acyclic composition. The local runtime stores immutable artifacts and verified reference bytes, exposes exact dependency and approval-gate queries, safely transfers project bundles, runs only trusted registered adapters, defaults external effects to denied and verifies output bytes.",
+    "shortDescription": "Visual-first AIGC workflows for images, video and production design.",
+    "longDescription": "CineWeave Studio v2.5.1 provides an all-in-one $cineweave entry point plus eight independently usable specialist Skills. Start from an idea, receive a version-pinned Midjourney exploration pack, return selected master references, and resume through content-addressed reference evidence, visual-bible locks, story, character, scene, style, director, prompt and production stages. Story owns causality and continuity; Character owns preference-led exploration, provider-neutral semantic morphology, identity and appearance; Scene owns geography and physical light; Style owns visual representation and Character-to-Style RepresentationBindings; Reference owns content-addressed media, atomic observations and role-scoped bindings; Director owns action sequences, shots, storyboards and time; Prompt owns reusable image prompts and Midjourney projections; Production owns recipes, controls, benchmarks, rights, adapters, exact execution requests and auditable receipts. Exact versioned contracts support standalone use and acyclic composition. The local runtime stores immutable artifacts and verified reference bytes, exposes exact dependency and approval-gate queries, safely transfers project bundles, runs only trusted registered adapters, defaults external effects to denied and verifies output bytes.",
     "developerName": "CineWeave",
     "category": "Productivity",
     "capabilities": [],
     "defaultPrompt": [
-      "Turn my vague visual idea into an editable creative brief.",
+      "Turn my vague visual idea into an editable AIGC studio plan and Midjourney exploration handoff.",
+      "Return selected master references and resume with a consistent visual bible.",
       "Explore and semantically sculpt a reusable character without a beauty score.",
       "Keep one character recognizable across photoreal, anime, manga and illustration.",
       "Score this reference and compile an observable image prompt."

@@ -15,6 +15,17 @@
       "behaviorAssertions": ["creates an acyclic specialist plan", "does not absorb specialist domain logic"]
     },
     {
+      "id": "router.direct.visual-first-aigc-studio",
+      "category": "direct",
+      "targetSkill": "cineweave",
+      "request": "Use $cineweave as an all-in-one AIGC studio. I will give you an idea, run Midjourney myself to explore and select master references, then I want consistent assets, story, script, shots, storyboard, prompts and a production plan.",
+      "expectedSkill": "cineweave",
+      "expectedRoute": "aigc_studio",
+      "mustProduce": ["cineweave_codex_creative_brief", "cineweave_codex_workflow_plan"],
+      "mustNotProduce": ["cineweave_codex_midjourney_prompt_pack", "cineweave_codex_image_prompt"],
+      "behaviorAssertions": ["selects studio mode and exposes a resumable stage ledger", "puts Midjourney behind a human execution gate", "requires exact reference ingest before visual-bible lock", "composes story director prompt and production owners without flattening them"]
+    },
+    {
       "id": "router.indirect.vague-project",
       "category": "indirect",
       "targetSkill": "cineweave",
@@ -328,6 +339,28 @@
       "mustProduce": ["cineweave_codex_prompt_record"],
       "mustNotProduce": ["cineweave_codex_shot_spec"],
       "behaviorAssertions": ["works outside cinematic content", "uses observable light and material relations"]
+    },
+    {
+      "id": "prompt.direct.midjourney-exploration",
+      "category": "direct",
+      "targetSkill": "cineweave-prompt",
+      "request": "Use $cineweave-prompt to turn this visual idea into a Midjourney exploration pack: give me three comparable copyable prompts, change only one visual hypothesis per variant, separate style and identity references, pin the model version, and tell me what exact files and metadata to bring back after I choose a master image.",
+      "expectedSkill": "cineweave-prompt",
+      "expectedRoute": "midjourney_compile",
+      "mustProduce": ["cineweave_codex_midjourney_prompt_pack"],
+      "mustNotProduce": ["cineweave_execution_request", "cineweave_codex_image_prompt"],
+      "behaviorAssertions": ["returns a provider-specific projection rather than a provider-neutral core mutation", "changes one exploration axis per variant", "separates image style and identity reference roles", "pins and asks to reverify the model version", "requires human selection and exact metadata return"]
+    },
+    {
+      "id": "prompt.direct.midjourney-case-import",
+      "category": "direct",
+      "targetSkill": "cineweave-prompt",
+      "request": "Use $cineweave-prompt to import my prior Midjourney exploration. I have the original prompt, model and parameters, plus three selected result images already ingested as exact ReferenceAssets. Only the muted cyan palette, rain-wet material response and corridor depth may transfer; the old actor, signage and location must not. Create a reusable exploration case, keep rights unknown, and do not create a CharacterSpec or Canon lock.",
+      "expectedSkill": "cineweave-prompt",
+      "expectedRoute": "midjourney_case_import",
+      "mustProduce": ["cineweave_codex_midjourney_exploration_case"],
+      "mustNotProduce": ["cineweave_codex_reference_asset", "cineweave_codex_character_spec"],
+      "behaviorAssertions": ["requires exact ReferenceAsset refs rather than raw paths", "records original prompt and model parameters", "scopes reusable visual grammar away from non-transferable subject and scene facts", "keeps rights and human selection explicit", "does not imply provider execution or Canon approval"]
     },
     {
       "id": "prompt.indirect.overlong-source",

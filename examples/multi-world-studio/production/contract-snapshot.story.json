@@ -1,0 +1,14 @@
+{
+  "kind": "world_os_production_contract_snapshot",
+  "contractVersion": "0.1.0",
+  "snapshotId": "production-snapshot.example-story",
+  "version": 1,
+  "contractKind": "cineweave_codex_story_brief",
+  "sourceContractId": "story.w01.slice",
+  "sourceContractVersion": 1,
+  "sourceContractHash": "sha256:0000000000000000000000000000000000000000000000000000000000000000",
+  "worldId": null,
+  "documentJson": "{\"kind\":\"cineweave_codex_story_brief\",\"storyId\":\"story.w01.slice\",\"version\":1}",
+  "capturedAt": "2026-08-24T13:00:00.000Z",
+  "capturedBy": { "kind": "codex", "id": "codex.root" }
+}

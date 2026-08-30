@@ -1,0 +1,160 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "branch-set.schema.json",
+  "title": "World OS branch set",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "branchSetId",
+    "version",
+    "worldId",
+    "stream",
+    "baseStateRef",
+    "triggerCatalogRef",
+    "triggerId",
+    "actionCatalogRef",
+    "templateCatalogRef",
+    "selectionPolicy",
+    "candidates",
+    "selectedProposalRef",
+    "selectionStatus"
+  ],
+  "properties": {
+    "kind": {
+      "const": "world_os_branch_set"
+    },
+    "contractVersion": {
+      "const": "0.1.0"
+    },
+    "branchSetId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "worldId": {
+      "$ref": "common.schema.json#/$defs/worldId"
+    },
+    "stream": {
+      "const": "simulation.main"
+    },
+    "baseStateRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "triggerCatalogRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "triggerId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "actionCatalogRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "templateCatalogRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "selectionPolicy": {
+      "const": "hard_constraints_then_codex_score_then_candidate_id"
+    },
+    "candidates": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "candidateId",
+          "branchRole",
+          "proposalRef",
+          "evaluationStatus",
+          "hardConstraintsPassed",
+          "selectionScore",
+          "differingPremise",
+          "projectedDeltaSummary",
+          "delayedConsequenceIds",
+          "unresolvedInputs",
+          "failedCheckIds",
+          "gatedCheckIds"
+        ],
+        "properties": {
+          "candidateId": {
+            "$ref": "common.schema.json#/$defs/identifier"
+          },
+          "branchRole": {
+            "enum": [
+              "baseline",
+              "deterioration",
+              "opportunity"
+            ]
+          },
+          "proposalRef": {
+            "$ref": "common.schema.json#/$defs/exactRef"
+          },
+          "evaluationStatus": {
+            "enum": [
+              "accepted_simulation",
+              "needs_human_gate",
+              "rejected"
+            ]
+          },
+          "hardConstraintsPassed": {
+            "type": "boolean"
+          },
+          "selectionScore": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "differingPremise": {
+            "type": "string",
+            "minLength": 1
+          },
+          "projectedDeltaSummary": {
+            "type": "string",
+            "minLength": 1
+          },
+          "delayedConsequenceIds": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "$ref": "common.schema.json#/$defs/identifier"
+            }
+          },
+          "unresolvedInputs": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "$ref": "common.schema.json#/$defs/identifier"
+            }
+          },
+          "failedCheckIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "gatedCheckIds": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "selectedProposalRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "selectionStatus": {
+      "enum": [
+        "selected_for_simulation",
+        "selected_but_gated",
+        "no_valid_candidate"
+      ]
+    }
+  }
+}

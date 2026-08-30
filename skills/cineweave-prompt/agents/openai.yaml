@@ -1,6 +1,6 @@
 interface:
   display_name: "CineWeave Prompt"
   short_description: "Design and manage observable text-to-image prompts"
-  default_prompt: "Use $cineweave-prompt to turn my visual intent into a reusable provider-neutral image prompt with scoped references and testable constraints."
+  default_prompt: "Use $cineweave-prompt to turn my visual intent into a reusable provider-neutral image prompt with scoped references and testable constraints, or import an explored Midjourney case with its prompt, parameters and exact result assets."
 policy:
   allow_implicit_invocation: true

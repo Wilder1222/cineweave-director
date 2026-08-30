@@ -1,0 +1,69 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mcp-dispatch-claim.schema.json",
+  "title": "World OS MCP dispatch claim",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "claimId",
+    "version",
+    "projectionRef",
+    "platformProfileRef",
+    "dispatchId",
+    "idempotencyKey",
+    "attemptNumber",
+    "claimedAt",
+    "leaseUntil",
+    "claimedBy",
+    "status"
+  ],
+  "properties": {
+    "kind": {
+      "const": "world_os_mcp_dispatch_claim"
+    },
+    "contractVersion": {
+      "const": "0.1.0"
+    },
+    "claimId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "version": {
+      "type": "integer",
+      "const": 1
+    },
+    "projectionRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "platformProfileRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "dispatchId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "idempotencyKey": {
+      "type": "string",
+      "minLength": 1
+    },
+    "attemptNumber": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 100
+    },
+    "claimedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "leaseUntil": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "claimedBy": {
+      "$ref": "common.schema.json#/$defs/codexWriter"
+    },
+    "status": {
+      "const": "active"
+    }
+  }
+}

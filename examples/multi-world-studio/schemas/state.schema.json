@@ -1,0 +1,141 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "state.schema.json",
+  "title": "World OS state snapshot",
+  "type": "object",
+  "required": [
+    "kind",
+    "contractVersion",
+    "stateId",
+    "worldId",
+    "stream",
+    "version",
+    "sequence",
+    "canonDisposition",
+    "writer",
+    "clock",
+    "variables",
+    "actors",
+    "relationships",
+    "threads",
+    "entities",
+    "pendingConsequences",
+    "timeline",
+    "fieldPolicies"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "kind": {
+      "const": "world_os_state_snapshot"
+    },
+    "contractVersion": {
+      "const": "0.1.0"
+    },
+    "stateId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "worldId": {
+      "$ref": "common.schema.json#/$defs/worldId"
+    },
+    "stream": {
+      "const": "simulation.main"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "canonDisposition": {
+      "const": "proposal"
+    },
+    "writer": {
+      "$ref": "common.schema.json#/$defs/codexWriter"
+    },
+    "clock": {
+      "type": "object",
+      "required": [
+        "at",
+        "display",
+        "calendarStatus"
+      ],
+      "properties": {
+        "at": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "variables": {
+      "type": "object"
+    },
+    "actors": {
+      "type": "object"
+    },
+    "relationships": {
+      "type": "object"
+    },
+    "threads": {
+      "type": "object"
+    },
+    "entities": {
+      "type": "object"
+    },
+    "pendingConsequences": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "targetEventId",
+          "description",
+          "when",
+          "status",
+          "scheduledAt",
+          "sourceProposalRef"
+        ],
+        "properties": {
+          "id": {
+            "$ref": "common.schema.json#/$defs/identifier"
+          },
+          "targetEventId": {
+            "$ref": "common.schema.json#/$defs/identifier"
+          },
+          "status": {
+            "enum": [
+              "pending",
+              "realized"
+            ]
+          },
+          "scheduledAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "sourceProposalRef": {
+            "$ref": "common.schema.json#/$defs/exactRef"
+          },
+          "realizedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "realizedByEventId": {
+            "$ref": "common.schema.json#/$defs/identifier"
+          },
+          "realizedByProposalRef": {
+            "$ref": "common.schema.json#/$defs/exactRef"
+          }
+        }
+      }
+    },
+    "timeline": {
+      "type": "array"
+    },
+    "fieldPolicies": {
+      "type": "array"
+    }
+  }
+}

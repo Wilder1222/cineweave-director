@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "mcp-dispatch.schema.json",
+  "title": "World OS MCP dispatch",
+  "type": "object",
+  "required": [
+    "kind",
+    "contractVersion",
+    "dispatchId",
+    "transport",
+    "serverAlias",
+    "toolName",
+    "platformProfileRef",
+    "idempotencyKey",
+    "sourceProjectionRef",
+    "arguments"
+  ],
+  "properties": {
+    "kind": {
+      "const": "world_os_mcp_dispatch"
+    },
+    "contractVersion": {
+      "const": "0.1.0"
+    },
+    "dispatchId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "transport": {
+      "const": "mcp"
+    },
+    "serverAlias": {
+      "type": "string",
+      "minLength": 1
+    },
+    "toolName": {
+      "type": "string",
+      "minLength": 1
+    },
+    "platformProfileRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "idempotencyKey": {
+      "type": "string",
+      "minLength": 8
+    },
+    "sourceProjectionRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "arguments": {
+      "type": "object",
+      "required": [
+        "idempotencyKey",
+        "projection",
+        "metadata"
+      ]
+    }
+  }
+}

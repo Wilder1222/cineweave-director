@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "external-signal-use.schema.json",
+  "title": "World OS ExternalSignal use receipt",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "signalUseId",
+    "version",
+    "worldId",
+    "signalRef",
+    "proposalRef",
+    "outcome",
+    "recordedAt",
+    "recordedBy"
+  ],
+  "properties": {
+    "kind": {
+      "const": "world_os_external_signal_use"
+    },
+    "contractVersion": {
+      "const": "0.1.0"
+    },
+    "signalUseId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "version": {
+      "type": "integer",
+      "const": 1
+    },
+    "worldId": {
+      "$ref": "common.schema.json#/$defs/worldId"
+    },
+    "signalRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "proposalRef": {
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/$defs/exactRef"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "outcome": {
+      "enum": [
+        "used_as_evidence",
+        "deferred_for_context",
+        "dismissed_as_noise"
+      ]
+    },
+    "recordedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "recordedBy": {
+      "$ref": "common.schema.json#/$defs/codexWriter"
+    }
+  }
+}

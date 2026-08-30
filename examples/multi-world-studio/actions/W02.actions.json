@@ -1,0 +1,174 @@
+{
+  "$schema": "../schemas/action-catalog.schema.json",
+  "kind": "world_os_action_catalog",
+  "contractVersion": "0.1.0",
+  "catalogId": "action-catalog.w02",
+  "version": 1,
+  "worldId": "W02",
+  "worldCardRef": {
+    "kind": "world_os_world_design_proposal",
+    "id": "world.w02",
+    "version": 1,
+    "contentHash": "sha256:1cf5e7ca93c0c2d53d5155170b0b2a052e5ba28e14cfc1fb5a1b9c9445da1f78"
+  },
+  "actions": [
+    {
+      "id": "action.w02.start-baseline-window-measurement",
+      "status": "proposed",
+      "actorId": "character.w02.survey-cartographer",
+      "applicableTriggerIds": [
+        "trigger.w02.begin-baseline-window-assessment"
+      ],
+      "locationId": "scene.w02.gate-outpost",
+      "preconditions": {
+        "all": [
+          {
+            "path": "/variables/gate/assessmentStatus",
+            "op": "eq",
+            "value": "not_started"
+          },
+          {
+            "path": "/actors/character.w02.survey-cartographer/status",
+            "op": "eq",
+            "value": "preparing-survey"
+          }
+        ]
+      },
+      "goalRefs": [
+        "goal.w02.preserve-border-city",
+        "goal.w02.verify-gate-model"
+      ],
+      "capabilityRefs": [
+        "capability.read-survey-instruments",
+        "capability.compare-route-data"
+      ],
+      "knowledgeRefs": [
+        "partial-window-model"
+      ],
+      "preferenceRefs": [
+        "verify_reference_points",
+        "preserve_reversible_options"
+      ],
+      "limitRefs": [
+        "limit.no-intuitive-gate-sense",
+        "limit.specialist-not-omniscient"
+      ],
+      "ruleRefs": [
+        "rule.w02.gate-has-thresholds"
+      ],
+      "ruleChecks": [
+        {
+          "ruleRef": "rule.w02.gate-has-thresholds",
+          "result": "pass",
+          "evidence": "动作只开始基线测量并登记阈值未定义，不提交可稳定结论。"
+        }
+      ],
+      "choice": "先启动基线测量，公开标记数据不完整，不把窗口预测升级为工程许可。",
+      "costs": [
+        "消耗枯水压力期中的测量时间",
+        "城市仍得不到立即工程承诺",
+        "岑野必须对不完整数据负责"
+      ],
+      "effects": [
+        {
+          "op": "replace",
+          "path": "/variables/gate/assessmentStatus",
+          "value": "collecting_baseline"
+        },
+        {
+          "op": "replace",
+          "path": "/actors/character.w02.survey-cartographer/status",
+          "value": "verifying-window"
+        },
+        {
+          "op": "append",
+          "path": "/actors/character.w02.survey-cartographer/knowledge",
+          "value": "baseline-incomplete"
+        },
+        {
+          "op": "replace",
+          "path": "/threads/new_gate/status",
+          "value": "baseline_collection"
+        }
+      ],
+      "durationMinutes": 30,
+      "canonImpactCeiling": "none",
+      "irreversibility": "reversible",
+      "gatePolicy": "auto_simulation",
+      "sourceBeatRefs": [
+        "beat.w02.s01.b01.precondition"
+      ]
+    },
+    {
+      "id": "action.w02.prepare-threshold-review-packet",
+      "status": "proposed",
+      "actorId": "character.w02.survey-cartographer",
+      "applicableTriggerIds": [
+        "trigger.w02.gate-window-assessment"
+      ],
+      "locationId": "scene.w02.gate-outpost",
+      "preconditions": {
+        "all": [
+          {
+            "path": "/variables/gate/assessmentStatus",
+            "op": "eq",
+            "value": "collecting_baseline"
+          },
+          {
+            "path": "/actors/character.w02.survey-cartographer/status",
+            "op": "eq",
+            "value": "verifying-window"
+          }
+        ]
+      },
+      "goalRefs": [
+        "goal.w02.verify-gate-model"
+      ],
+      "capabilityRefs": [
+        "capability.submit-gate-assessment"
+      ],
+      "knowledgeRefs": [
+        "baseline-incomplete",
+        "partial-window-model"
+      ],
+      "preferenceRefs": [
+        "verify_reference_points",
+        "preserve_reversible_options"
+      ],
+      "limitRefs": [
+        "limit.no-intuitive-gate-sense",
+        "limit.specialist-not-omniscient"
+      ],
+      "ruleRefs": [
+        "rule.w02.gate-has-thresholds"
+      ],
+      "ruleChecks": [
+        {
+          "ruleRef": "rule.w02.gate-has-thresholds",
+          "result": "pass",
+          "evidence": "复核包明确缺少阈值，不把相关观测解释为稳定能力。"
+        }
+      ],
+      "choice": "提交带缺口标记的阈值复核请求，等待人类定义阈值与科学边界。",
+      "costs": [
+        "工程决策继续等待",
+        "数据缺口公开后会增加机构压力",
+        "任何越过门控的结论都可能外部化生态代价"
+      ],
+      "effects": [
+        {
+          "op": "replace",
+          "path": "/variables/gate/assessmentStatus",
+          "value": "awaiting_threshold_review"
+        }
+      ],
+      "durationMinutes": 15,
+      "canonImpactCeiling": "candidate_fact",
+      "irreversibility": "costly_to_reverse",
+      "gatePolicy": "blocked_until_threshold_values",
+      "sourceBeatRefs": [
+        "beat.w02.s01.b01"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "kind": "cineweave_codex_prompt_record",
+  "contractVersion": "2.0.0",
+  "promptId": "cinematic-director-template",
+  "title": "短剧／漫画导演模板导入基线",
+  "version": 1,
+  "status": "draft",
+  "domain": "cinematic",
+  "generationMode": "generate",
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-studio",
+    "ref": "main",
+    "commit": "dc4cfc1d0501359f1c32f3f5969a6be996f3244c",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-26T00:00:00.000Z"
+  },
+  "collection": "cinematic-template-imports",
+  "purpose": "把用户提供的短剧／漫画提示词表单保存为可追溯的 PromptRecord；逐镜相机、时序、物理光与交付能力继续由对应 CineWeave contracts 管理。",
+  "sourceText": "AIGC 真人短剧／漫画通用提示词模板（用户截图转录的结构）：全局基线包含画幅、相机与镜头观感、胶片或调色、帧率与时长、真人自然外观和漫画表现分支；逐镜使用‘时间段 + 运镜 + 景别 + 主体 + 核心动作 + 限制’；光影使用‘光源 + 色温 + 方向 + 阴影 + 情绪功能’；声音使用环境声、关键音效、对白或配乐及其发生时机。原模板中的设备、8K、24fps、dB 与精确能力要求需在导入时降级为待验证意图。",
+  "tags": ["cinematic", "director-intake", "short-drama", "anime", "manga", "prompt-import"],
+  "prompt": {
+    "language": "zh-CN",
+    "positive": "在{{scene}}中，{{shot_subject}}于{{dramatic_action}}这一可读时刻被观察；镜头采用{{shot_scale}}、{{focal_length_mm}}mm起始焦段和{{camera_movement}}，明确主体与环境的前中后景、视线方向、承重与遮挡关系，并在{{light_source}}形成的物理光源下保持连贯的阴影与材质响应。表现媒介为{{representation_mode}}；交付参数{{technical_delivery}}仅作为待 Production/CapabilityProfile 验证的意图。声音意图{{sound_intent}}只进入镜头或剪辑语义，不等同于已验证的混音控制。",
+    "negative": "不要把相机品牌、胶片名、8K、24fps、时长或音量数值写成无条件的生成保证；不要让风格重写角色身份、角色外观、场景地理或物理光源；不要使用无范围的全局美颜、全身或口型承诺；不要叠加互相竞争的镜头运动；不要添加文字、水印或未声明的来源身份。",
+    "blocks": {
+      "context": ["一个有明确目的、注意力顺序和稳定终态的短剧或漫画镜头"],
+      "subject": ["{{shot_subject}}", "角色身份与当前外观由上游 Character/AppearanceState 绑定；未知项保持变量"],
+      "action": ["{{dramatic_action}}", "只描述一个当前镜头可读的动作变化；多步因果动作先路由 ActionSequenceSpec"],
+      "composition": ["{{shot_scale}}", "主体、前景、中景、背景、负空间和视线方向必须服务同一注意力目标"],
+      "environment": ["{{scene}}", "场景地理与接触关系由 Scene/SceneBinding 提供，不从风格词猜测"],
+      "camera": ["{{focal_length_mm}}mm 起始焦段", "{{camera_movement}}；镜头运动必须有动机、峰值、停止和稳定交接"],
+      "lighting": ["{{light_source}}", "色温只描述已声明光源的属性；保留方向、曝光关系、阴影和材质响应"],
+      "materials": ["皮肤、头发、服装、金属、木石或液体按可见尺度呈现不同的接触、粗糙度和高光响应"],
+      "style": ["{{representation_mode}}", "使用可观察的媒介、线条、形体、上色、景深和后处理语义，不把作品名当作黑箱 token"],
+      "technical": ["{{technical_delivery}}；交付画幅、像素、帧率、时长、编码和适配器能力由 Production 验证"],
+      "constraints": ["must preserve：身份、外观、地理、接触、轴线和已通过的物理光", "may vary：只改变声明的表现或镜头变量", "must avoid：当前镜头可观察且会导致失败的具体问题"]
+    }
+  },
+  "styleBinding": {
+    "mode": "inline_atoms",
+    "atoms": ["representation.{{representation_mode}}", "camera.observable_perspective", "lighting.physical_source_first", "style.semantic_treatment"],
+    "visualTemporalSeparated": true,
+    "preserve": ["角色身份和当前外观", "场景地理、接触和轴线", "物理光源方向与阴影连续性", "镜头的主注意力目标"],
+    "allowedVariation": ["表现媒介的线条、形体和上色语法", "符合镜头目的的焦段和单一主运镜", "场景内已声明光源的镜头功能"],
+    "forbidden": ["风格覆盖身份或场景事实", "把设备／胶片品牌当作硬能力", "把自然皮肤改写成无范围美颜", "把 dB、口型或 24fps 写成未验证的保证"]
+  },
+  "variables": [
+    {
+      "name": "representation_mode",
+      "type": "enum",
+      "description": "当前镜头的表现媒介；真人、Anime 与 Manga 是独立变体，不同时生效。",
+      "required": true,
+      "default": "live_action",
+      "values": ["live_action", "anime", "manga"]
+    },
+    {
+      "name": "shot_subject",
+      "type": "string",
+      "description": "本镜头的主体或主体关系，必要时绑定 Character/Scene contract。",
+      "required": true
+    },
+    {
+      "name": "scene",
+      "type": "string",
+      "description": "本镜头中的场景、地理和接触关系。",
+      "required": true
+    },
+    {
+      "name": "dramatic_action",
+      "type": "string",
+      "description": "本镜头唯一主要可读动作和结果状态。",
+      "required": true
+    },
+    {
+      "name": "shot_scale",
+      "type": "enum",
+      "description": "由构图和注意力目标决定的景别。",
+      "required": true,
+      "values": ["close-up", "medium", "medium-wide", "wide", "extreme-wide"]
+    },
+    {
+      "name": "focal_length_mm",
+      "type": "number",
+      "description": "服务当前空间关系的起始焦段假设，不是所有镜头的硬默认。",
+      "required": true,
+      "default": 50
+    },
+    {
+      "name": "camera_movement",
+      "type": "enum",
+      "description": "一个有动机且具有稳定终态的主运镜。",
+      "required": true,
+      "default": "static",
+      "values": ["static", "dolly-in", "dolly-out", "truck", "pan", "tilt", "arc"]
+    },
+    {
+      "name": "light_source",
+      "type": "string",
+      "description": "已声明的物理光源、方向和镜头功能；色温不能替代光源。",
+      "required": true
+    },
+    {
+      "name": "technical_delivery",
+      "type": "string",
+      "description": "画幅、像素、帧率、时长和编码等交付意图，等待 CapabilityProfile 验证。",
+      "required": false,
+      "default": "由 Production/CapabilityProfile 验证，不作质量保证"
+    },
+    {
+      "name": "sound_intent",
+      "type": "string",
+      "description": "环境声、音效、对白或配乐的叙事功能与相对发生时机；精确音量和混音不在此模板中保证。",
+      "required": false,
+      "default": "仅描述环境声、关键音效和剪辑桥接意图"
+    }
+  ],
+  "references": [],
+  "variants": [
+    {
+      "variantId": "cinematic-director-template-live-action",
+      "label": "自然人像表现",
+      "change": "只将 representation_mode 设为 live_action；保留镜头、场景、物理光和动作变量。",
+      "positive": "自然人体结构、真实材质响应、克制的捕捉处理，不磨皮或重写身份。",
+      "status": "draft"
+    },
+    {
+      "variantId": "cinematic-director-template-anime",
+      "label": "Anime 表现",
+      "change": "只将 representation_mode 设为 anime；保留角色锚点、场景地理和光源逻辑。",
+      "positive": "声明的 Anime 线条、形体简化和上色语法；身份、动作和物理光仍由上游事实约束。",
+      "status": "draft"
+    },
+    {
+      "variantId": "cinematic-director-template-manga",
+      "label": "Manga 表现",
+      "change": "只将 representation_mode 设为 manga；保留分镜目的、构图关系和动作阅读顺序。",
+      "positive": "声明的 Manga 线条、黑白或有限色阶、网点与面板语法；文字和气泡在后续确定性组装。",
+      "status": "draft"
+    }
+  ],
+  "evaluation": {
+    "criteria": [
+      {
+        "criterion": "owner-routing",
+        "check": "每个全局或逐镜字段都能路由到 Style、Character、Scene、Director、Prompt 或 Production 的唯一 owner。",
+        "status": "pending"
+      },
+      {
+        "criterion": "temporal-safety",
+        "check": "逐镜时间意图不会被误读为已验证的逐秒生成能力，并且最终能落到 TemporalSpec/Storyboard 的稳定终态。",
+        "status": "pending"
+      },
+      {
+        "criterion": "physical-light",
+        "check": "光影描述包含已声明光源、方向、阴影和材质响应，而非只包含色温或情绪形容词。",
+        "status": "pending"
+      },
+      {
+        "criterion": "provider-neutral",
+        "check": "没有把相机品牌、胶片品牌、dB、口型、8K 或 24fps 当作无条件的生成结果。",
+        "status": "pending"
+      }
+    ],
+    "knownRisks": ["全局预设被误当作每个镜头的硬锁", "时间轴和变焦能力超出适配器", "音频混音或口型同步能力未声明", "真人与漫画变体混用导致身份或光线漂移"],
+    "nextExperiment": "绑定一个真实 ShotSpec、SceneLightState 和 TemporalSpec，比较同一镜头的 live_action、anime 与 manga 变体；只改变 representation_mode。"
+  },
+  "provenance": {
+    "source": "adapted",
+    "createdAt": "2026-08-26T00:00:00.000Z",
+    "updatedAt": "2026-08-26T00:00:00.000Z",
+    "changeLog": ["根据用户提供的短剧／漫画提示词截图，将全局基线、逐镜时序、光影和声音意图改造成 provider-neutral PromptRecord 导入基线。", "把交付规格、物理光、角色外观、镜头时序和音频混音的 owner 边界显式化；未验证能力保持待定。"]
+  },
+  "validation": {
+    "onePrimaryTarget": true,
+    "providerNeutral": true,
+    "variablesBound": true,
+    "referencesScoped": true,
+    "observationReady": true
+  }
+}

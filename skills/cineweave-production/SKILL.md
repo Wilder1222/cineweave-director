@@ -18,6 +18,7 @@ This Skill owns:
 - `CapabilityProfile`: provider-neutral adapter capabilities and known limits, never endpoint or credential data;
 - `LicenseProfile`: code, weight, dependency, asset and identity-rights status;
 - `ControlBenchmark`: repeatable Character, Morphology, Appearance, Scene, Interaction, Representation, Surface, CrossRepresentation, Storyboard, Temporal and Rights evaluation cases.
+- `ControlBenchmarkReview`: a planned or evidence-bound review receipt for completed ControlBench cases, findings, human review and repair routing;
 - `AdapterDescriptor`: an exact, versioned runtime adapter identity and operation surface without endpoint or secret values;
 - `ExecutionRequest`: a budgeted, idempotent request bound to exact approved production artifacts;
 - `ExecutionReceipt`: immutable evidence of authorization, attempts, costs, verified output hashes and failure state.
@@ -41,9 +42,10 @@ Choose the smallest route that satisfies the request.
 - `board_assembly`: compose accepted independent recipe tasks into a deterministic board with explicit regions, labels and per-tile provenance. Use `references/asset-recipes.md`. Return `../../packages/cineweave-contracts/schemas/board-assembly-plan.schema.json`.
 - `control_plan`: translate invariants and allowed changes into prioritized hard/soft/advisory controls. Use `references/control-channels.md`. Return `../../packages/cineweave-contracts/schemas/control-channel-set.schema.json`.
 - `evidence_bundle`: bind face, body, costume, pose, depth, mask, lighting, material and scene observations to explicit semantic roles. Use `references/evidence-and-rights.md`. Return `../../packages/cineweave-contracts/schemas/evidence-bundle.schema.json`.
-- `capability_profile`: describe an adapter class without endpoint, credential or hidden vendor parameters, then match required controls and evidence. Use `references/capability-matching.md`. Return `../../packages/cineweave-contracts/schemas/capability-profile.schema.json`.
+- `capability_profile`: describe an adapter class without endpoint, credential or hidden vendor parameters, then match required controls and evidence. For open-source graphs, capture workflow/custom-node/model dependencies, input limits, rights and benchmark evidence. Use `references/capability-matching.md`. Return `../../packages/cineweave-contracts/schemas/capability-profile.schema.json`.
 - `license_profile`: record code, weights, dependencies, assets, identity consent, publication and data-handling status. Use `references/evidence-and-rights.md`. Return `../../packages/cineweave-contracts/schemas/license-profile.schema.json`.
 - `control_benchmark`: design or update a repeatable ControlBench suite. Use `references/control-bench.md`. Return `../../packages/cineweave-contracts/schemas/control-benchmark.schema.json`.
+- `control_benchmark_review`: record a planned or completed review of exact Draft media against one ControlBench suite. Bind each evaluated candidate to exact `ExecutionReceipt`, `MediaImport` and candidate observations; record dimension findings, metrics, human review and one-owner repair routing. Use `references/control-benchmark-review.md`. Return `../../packages/cineweave-contracts/schemas/control-benchmark-review.schema.json`. Never claim media generation, asset approval or release.
 - `adapter_descriptor`: register or review a provider-neutral adapter protocol surface. Use `references/execution-protocol.md`. Return `../../packages/cineweave-contracts/schemas/adapter-descriptor.schema.json`.
 - `execution_request`: prepare an idempotent, budgeted request from exact artifact refs. Use `references/execution-protocol.md`. Return `../../packages/cineweave-contracts/schemas/execution-request.schema.json`.
 - `execution_receipt`: record or audit authorization, attempts, cost and output hashes after runtime execution. Use `references/execution-protocol.md`. Return `../../packages/cineweave-contracts/schemas/execution-receipt.schema.json`.
@@ -62,7 +64,7 @@ Choose the smallest route that satisfies the request.
 9. Produce a provider-neutral RenderPlan reference package for Director.
 10. Resolve an exact AdapterDescriptor and prepare an ExecutionRequest. Dry-run and fixture modes must deny network access; external mode requires approval of the stored request artifact itself.
 11. Let the deterministic runtime execute the registered adapter and persist an ExecutionReceipt. Do not infer success from a provider message or an output filename.
-12. Evaluate verified outputs with ControlBench and repair only failed tasks or one smallest variable.
+12. Evaluate verified Draft outputs with ControlBench and record a `ControlBenchmarkReview`. A planned review has no media evidence; a completed review binds exact execution/import/observation evidence. Repair only failed tasks or one smallest variable.
 
 ## Required behavior
 
@@ -76,6 +78,7 @@ Choose the smallest route that satisfies the request.
 - A zero-prompt character exploration board uses `recipe.character-exploration-board-4up`: it receives a CharacterExplorationBrief and CharacterOptionSet, runs each option independently under one shared fixture, and leaves selection to the user.
 - Morphology lock evidence uses `recipe.character-morphology-neutral-3view`: independent neutral front, three-quarter and profile tasks followed by deterministic assembly and MorphologyBench review.
 - Natural-human coverage uses `recipe.natural-human-fixtures-3up`: independent neutral close, warm-backlight and natural full-body tasks. It is evaluated as evidence, not treated as a realism guarantee.
+- A completed photoreal-human review must inspect surface response, optics, contact, motivated light and temporal continuity at delivery scale; a design contract, still frame or provider message is not a review receipt.
 - One-axis style discovery uses `recipe.style-exploration-board-4up`: exact Character, Appearance, Scene, camera and physical light stay fixed while each independent tile selects one StyleOptionSet option. Selection remains human-owned.
 - Anime coverage uses `recipe.anime-character-fixtures-3up`: neutral close, expression medium and action full-body tasks share one exact RepresentationBinding and StyleCompile, then AnimeBench reports dimension-level findings.
 - Manga coverage uses `recipe.manga-character-fixtures-3up`: neutral ink, dramatic medium and action-panel tasks share one exact RepresentationBinding and StyleCompile. Final lettering remains deterministic post-assembly work.
@@ -93,4 +96,4 @@ Choose the smallest route that satisfies the request.
 
 ## Output contracts
 
-Return only the matching schema object. A combined production request may return named `assetRecipe`, `controlChannelSet`, `evidenceBundle`, `capabilityProfile`, `licenseProfiles`, `controlBenchmark`, `adapterDescriptor`, `executionRequest` and `executionReceipt` payloads. Keep Skill receipts on authored contracts; execution receipts are produced by the runtime, not invented by the Skill.
+Return only the matching schema object. A combined production request may return named `assetRecipe`, `controlChannelSet`, `evidenceBundle`, `capabilityProfile`, `licenseProfiles`, `controlBenchmark`, `controlBenchmarkReview`, `adapterDescriptor`, `executionRequest` and `executionReceipt` payloads. Keep Skill receipts on authored contracts; execution receipts are produced by the runtime, not invented by the Skill.

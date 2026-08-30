@@ -1,5 +1,7 @@
 # Storyboard layer
 
+For production-facing boards, pair this guide with [storyboard-coverage.md](storyboard-coverage.md). The storyboard owns readable sequence coverage; Production owns independent panel tasks, deterministic assembly, provenance and retry.
+
 Use this reference when the creator needs a sequence of shots, a visual beat sheet, camera coverage, continuity planning or storyboard frames for later image generation.
 
 ## Sequence construction

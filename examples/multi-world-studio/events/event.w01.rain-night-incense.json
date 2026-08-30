@@ -1,0 +1,137 @@
+{
+  "$schema": "../schemas/event-proposal.schema.json",
+  "kind": "world_os_event_proposal",
+  "contractVersion": "0.1.0",
+  "proposalId": "proposal.w01.s000001.rain-night-incense.baseline",
+  "eventId": "event.w01.rain-night-incense",
+  "proposalVersion": 1,
+  "worldId": "W01",
+  "stream": "simulation.main",
+  "workspaceRef": {
+    "kind": "world_os_workspace",
+    "id": "workspace.world-matrix",
+    "version": 1,
+    "contentHash": "sha256:1b57cea7a7cbdaf564eff5f6956a27902a37beee1195acc9a94e0cf55e3c2420"
+  },
+  "worldCardRef": {
+    "kind": "world_os_world_design_proposal",
+    "id": "world.w01",
+    "version": 1,
+    "contentHash": "sha256:9f46cd053ca3a3a7d73d9b1b61818ef22a9fb6a9a497e39c95ea7fc4e1a6aece"
+  },
+  "baseStateRef": {
+    "kind": "world_os_state_snapshot",
+    "id": "state.world.w01.simulation.main",
+    "version": 1,
+    "contentHash": "sha256:c02d8e3d5aa7af0eec62801a65eb9c4327a986d0ae0bceb491514e669f425de0"
+  },
+  "platformProfileRef": {
+    "kind": "world_os_platform_profile",
+    "id": "platform-profile.studio-private",
+    "version": 1,
+    "contentHash": "sha256:61332753dbb4e29e6e288857b607452ed8e365a5b110649cda1b2adf9a4e9037"
+  },
+  "triggerCatalogRef": {
+    "kind": "world_os_trigger_catalog",
+    "id": "trigger-catalog.w01",
+    "version": 1,
+    "contentHash": "sha256:3fe299b3c0aec372dcb9282688937756364c60e871d00b993d1a6855ce63fdfe"
+  },
+  "actionCatalogRef": {
+    "kind": "world_os_action_catalog",
+    "id": "action-catalog.w01",
+    "version": 1,
+    "contentHash": "sha256:be5d1a33fe6aff1c3ba2f7f9127702d2ba14e9790a82d02d2323e7040c96f1f7"
+  },
+  "eventTemplateCatalogRef": {
+    "kind": "world_os_event_template_catalog",
+    "id": "event-template-catalog.w01",
+    "version": 1,
+    "contentHash": "sha256:df622c3b6d5aaf34d9c527cc66bd25d7c5d5814b5bc3245801fd3578b666bdb9"
+  },
+  "eventTemplateId": "template.w01.rain-night-incense.baseline",
+  "parentCommitRef": null,
+  "expectedSequence": 0,
+  "proposedAt": "2026-04-20T18:15:00.000Z",
+  "source": {
+    "origin": "codex",
+    "authority": "proposal_only",
+    "orchestratorId": "codex.root",
+    "basis": "beat.w01.s01.b01"
+  },
+  "branchRole": "baseline",
+  "title": "雨夜沉香",
+  "publicSummary": "雨夜关铺前，一名受伤旅人把带有沉香余味的旧签留在香药铺；沈蘅选择藏起载体并否认相遇，追查因此转向鹤鸣巷。",
+  "objective": "在不掌握伤者身份与旧签意义时保护来客，并保住香铺与巷中生活。",
+  "opposition": "追查沿伤者路线逼近，而秘密必须依附可被搜出或误读的实体载体。",
+  "choiceUnderPressure": "沈蘅藏起旧签并否认相遇，不把气味假设说成真相。",
+  "stateChange": "旧签成为可追踪实体，旧案线程被激活，制度压力由 medium_low 升至 medium。",
+  "causesNext": "制度压力已达到搜查阈值，因此下一事件必须处理载体与邻里代价。",
+  "irreversibility": "costly_to_reverse",
+  "delayedConsequences": [
+    {
+      "id": "consequence.w01.official-search-pressure",
+      "targetEventId": "event.w01.official-search-pressure",
+      "description": "谎言与伤者路线使搜查压力在下一时段落到香药铺。",
+      "when": {
+        "all": [
+          {
+            "path": "/variables/institutions/officialPressure",
+            "op": "in",
+            "value": [
+              "medium",
+              "high"
+            ]
+          },
+          {
+            "path": "/threads/old_case/status",
+            "op": "eq",
+            "value": "active"
+          }
+        ]
+      }
+    }
+  ],
+  "realizesConsequenceRefs": [],
+  "trigger": {
+    "triggerId": "trigger.w01.injured-traveler-arrives",
+    "type": "external_arrival",
+    "occurredAt": "2026-04-20T18:15:00.000Z",
+    "locationId": "scene.w01.incense-shop",
+    "preconditions": {
+      "all": [
+        {
+          "path": "/actors/character.w01.viewpoint-recordkeeper/status",
+          "op": "eq",
+          "value": "closing_shop"
+        },
+        {
+          "path": "/variables/environment/weather",
+          "op": "eq",
+          "value": "light_rain"
+        },
+        {
+          "path": "/variables/information/oldCaseExposure",
+          "op": "eq",
+          "value": "very_low"
+        }
+      ]
+    },
+    "unknownPolicy": "block"
+  },
+  "participants": [
+    "character.w01.viewpoint-recordkeeper"
+  ],
+  "actions": [
+    {
+      "actionId": "action.w01.hide-carrier-and-deny-encounter",
+      "parameters": {}
+    }
+  ],
+  "canonImpact": "none",
+  "publicationIntent": {
+    "platformId": "platform.studio-private",
+    "lane": "simulation_preview",
+    "audience": "private_workspace"
+  }
+}

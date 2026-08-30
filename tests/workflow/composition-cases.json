@@ -90,6 +90,27 @@
         "cineweave_codex_temporal_spec",
         "cineweave_codex_storyboard_sequence"
       ]
+    },
+    {
+      "id": "visual-first-aigc-studio",
+      "workflowExample": "packages/cineweave-contracts/examples/workflow-plan-aigc-studio.json",
+      "requiresSkills": ["cineweave-prompt", "cineweave-reference", "cineweave-character", "cineweave-style", "cineweave-scene", "cineweave-story", "cineweave-director", "cineweave-production"],
+      "requiresOutputs": [
+        "cineweave_codex_midjourney_prompt_pack",
+        "cineweave_codex_reference_binding_set",
+        "cineweave_codex_character_spec",
+        "cineweave_codex_character_appearance_state",
+        "cineweave_codex_style_compile",
+        "cineweave_codex_scene_spec",
+        "cineweave_codex_story_brief",
+        "cineweave_codex_script_scene",
+        "cineweave_codex_action_sequence_spec",
+        "cineweave_codex_shot_spec",
+        "cineweave_codex_storyboard_sequence",
+        "cineweave_codex_image_prompt",
+        "cineweave_codex_asset_recipe",
+        "cineweave_codex_board_assembly_plan"
+      ]
     }
   ]
 }

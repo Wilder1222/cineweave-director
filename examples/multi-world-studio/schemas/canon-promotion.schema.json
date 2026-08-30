@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "canon-promotion.schema.json",
+  "title": "World OS Canon promotion",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind", "contractVersion", "promotionId", "version", "worldId", "stream", "status", "simulationCommitRef",
+    "gateRequestRef", "gateDecisionRef", "previousCanonHeadRef", "outputLedgerRef", "factRefs", "promotedAt", "promotedBy"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "kind": { "const": "world_os_canon_promotion" },
+    "contractVersion": { "const": "0.1.0" },
+    "promotionId": { "$ref": "common.schema.json#/$defs/identifier" },
+    "version": { "type": "integer", "minimum": 1 },
+    "worldId": { "$ref": "common.schema.json#/$defs/worldId" },
+    "stream": { "const": "canon.main" },
+    "status": { "enum": ["promoted", "promoted_with_conflicts"] },
+    "simulationCommitRef": { "$ref": "common.schema.json#/$defs/exactRef" },
+    "gateRequestRef": { "$ref": "common.schema.json#/$defs/exactRef" },
+    "gateDecisionRef": { "$ref": "common.schema.json#/$defs/exactRef" },
+    "previousCanonHeadRef": {
+      "anyOf": [
+        { "$ref": "common.schema.json#/$defs/exactRef" },
+        { "type": "null" }
+      ]
+    },
+    "outputLedgerRef": { "$ref": "common.schema.json#/$defs/exactRef" },
+    "factRefs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": { "$ref": "common.schema.json#/$defs/exactRef" }
+    },
+    "promotedAt": { "type": "string", "format": "date-time" },
+    "promotedBy": { "$ref": "common.schema.json#/$defs/codexWriter" }
+  }
+}

@@ -1,0 +1,250 @@
+{
+  "kind": "cineweave_codex_workflow_plan",
+  "contractVersion": "2.0.0",
+  "workflowId": "workflow.visual-first-aigc-studio@1",
+  "projectId": "project.song-courtyard-visual-bible",
+  "status": "ready_for_specialists",
+  "entry": {
+    "mode": "studio",
+    "source": "router",
+    "creativeBriefRef": "brief.visual-first-song-courtyard-01"
+  },
+  "steps": [
+    {
+      "stepId": "mj-exploration",
+      "skill": "cineweave-prompt",
+      "route": "midjourney_compile",
+      "invocationMode": "composed",
+      "requires": ["CreativeBrief", "NaturalLanguageBrief"],
+      "produces": ["cineweave_codex_midjourney_prompt_pack"],
+      "humanGate": "select"
+    },
+    {
+      "stepId": "reference-ingest",
+      "skill": "cineweave-reference",
+      "route": "reference_ingest",
+      "invocationMode": "composed",
+      "requires": ["MidjourneyPromptPack", "SelectedMasterReferences", "ProviderOutputMetadata"],
+      "produces": ["cineweave_codex_reference_asset"],
+      "dependsOn": ["mj-exploration"],
+      "humanGate": "approve"
+    },
+    {
+      "stepId": "reference-observe",
+      "skill": "cineweave-reference",
+      "route": "reference_observe",
+      "invocationMode": "composed",
+      "requires": ["ReferenceAsset"],
+      "produces": ["cineweave_codex_reference_observation"],
+      "dependsOn": ["reference-ingest"]
+    },
+    {
+      "stepId": "reference-review",
+      "skill": "cineweave-reference",
+      "route": "reference_review",
+      "invocationMode": "composed",
+      "requires": ["ReferenceObservation", "ReferenceAsset"],
+      "produces": ["cineweave_codex_reference_review"],
+      "dependsOn": ["reference-observe"],
+      "humanGate": "approve"
+    },
+    {
+      "stepId": "reference-bind",
+      "skill": "cineweave-reference",
+      "route": "reference_bind",
+      "invocationMode": "composed",
+      "requires": ["ReferenceAsset", "ReferenceObservation", "ReferenceReview"],
+      "produces": ["cineweave_codex_reference_binding_set"],
+      "dependsOn": ["reference-review"],
+      "humanGate": "approve"
+    },
+    {
+      "stepId": "character-design",
+      "skill": "cineweave-character",
+      "route": "character_design",
+      "invocationMode": "composed",
+      "requires": ["CreativeBrief", "ReferenceBindingSet"],
+      "produces": ["cineweave_codex_character_spec"],
+      "dependsOn": ["reference-bind"],
+      "humanGate": "approve"
+    },
+    {
+      "stepId": "appearance-state",
+      "skill": "cineweave-character",
+      "route": "appearance_state",
+      "invocationMode": "composed",
+      "requires": ["CharacterSpec", "ReferenceBindingSet"],
+      "produces": ["cineweave_codex_character_appearance_state"],
+      "dependsOn": ["character-design"]
+    },
+    {
+      "stepId": "style-compile",
+      "skill": "cineweave-style",
+      "route": "style_compile",
+      "invocationMode": "composed",
+      "requires": ["CreativeBrief", "CharacterSpec", "ReferenceBindingSet"],
+      "produces": ["cineweave_codex_style_compile"],
+      "dependsOn": ["character-design", "reference-bind"],
+      "humanGate": "approve"
+    },
+    {
+      "stepId": "representation-bind",
+      "skill": "cineweave-style",
+      "route": "representation_binding",
+      "invocationMode": "composed",
+      "requires": ["CharacterSpec", "StyleCompile"],
+      "produces": ["cineweave_codex_representation_binding"],
+      "dependsOn": ["style-compile"],
+      "humanGate": "approve"
+    },
+    {
+      "stepId": "scene-design",
+      "skill": "cineweave-scene",
+      "route": "scene_design",
+      "invocationMode": "composed",
+      "requires": ["CreativeBrief", "ReferenceBindingSet", "StyleCompile"],
+      "produces": ["cineweave_codex_scene_spec"],
+      "dependsOn": ["reference-bind", "style-compile"],
+      "humanGate": "approve"
+    },
+    {
+      "stepId": "scene-light",
+      "skill": "cineweave-scene",
+      "route": "scene_light_state",
+      "invocationMode": "composed",
+      "requires": ["SceneSpec"],
+      "produces": ["cineweave_codex_scene_light_state"],
+      "dependsOn": ["scene-design"]
+    },
+    {
+      "stepId": "story-develop",
+      "skill": "cineweave-story",
+      "route": "story_develop",
+      "invocationMode": "composed",
+      "requires": ["CreativeBrief"],
+      "produces": ["cineweave_codex_story_brief"]
+    },
+    {
+      "stepId": "beat-sheet",
+      "skill": "cineweave-story",
+      "route": "beat_sheet",
+      "invocationMode": "composed",
+      "requires": ["StoryBrief"],
+      "produces": ["cineweave_codex_beat_sheet"],
+      "dependsOn": ["story-develop"]
+    },
+    {
+      "stepId": "script-scene",
+      "skill": "cineweave-story",
+      "route": "script_scene",
+      "invocationMode": "composed",
+      "requires": ["BeatSheet", "CharacterSpec", "SceneSpec"],
+      "produces": ["cineweave_codex_script_scene"],
+      "dependsOn": ["beat-sheet", "character-design", "scene-design"]
+    },
+    {
+      "stepId": "continuity-ledger",
+      "skill": "cineweave-story",
+      "route": "continuity_ledger",
+      "invocationMode": "composed",
+      "requires": ["ScriptScene", "CharacterSpec", "SceneSpec"],
+      "produces": ["cineweave_codex_continuity_ledger"],
+      "dependsOn": ["script-scene"]
+    },
+    {
+      "stepId": "director-action",
+      "skill": "cineweave-director",
+      "route": "action_sequence",
+      "invocationMode": "composed",
+      "requires": ["ScriptScene", "CharacterSpec", "SceneSpec", "ContinuityLedger"],
+      "produces": ["cineweave_codex_action_sequence_spec"],
+      "dependsOn": ["continuity-ledger"],
+      "humanGate": "approve"
+    },
+    {
+      "stepId": "director-shot",
+      "skill": "cineweave-director",
+      "route": "shot_direction",
+      "invocationMode": "composed",
+      "requires": ["ActionSequenceSpec", "CharacterSpec", "SceneSpec", "StyleCompile", "RepresentationBinding"],
+      "produces": ["cineweave_codex_shot_spec"],
+      "dependsOn": ["director-action", "representation-bind", "scene-design"],
+      "humanGate": "approve"
+    },
+    {
+      "stepId": "director-storyboard",
+      "skill": "cineweave-director",
+      "route": "storyboard",
+      "invocationMode": "composed",
+      "requires": ["ActionSequenceSpec", "ShotSpec", "ContinuityLedger"],
+      "produces": ["cineweave_codex_storyboard_sequence"],
+      "dependsOn": ["director-shot"]
+    },
+    {
+      "stepId": "prompt-compile",
+      "skill": "cineweave-prompt",
+      "route": "prompt_compile",
+      "invocationMode": "composed",
+      "requires": ["ShotSpec", "AppearanceState", "StyleCompile", "RepresentationBinding", "SceneSpec", "ReferenceBindingSet"],
+      "produces": ["cineweave_codex_image_prompt"],
+      "dependsOn": ["director-shot", "appearance-state", "representation-bind", "scene-design"]
+    },
+    {
+      "stepId": "production-recipes",
+      "skill": "cineweave-production",
+      "route": "asset_recipe",
+      "invocationMode": "composed",
+      "requires": ["CharacterSpec", "AppearanceState", "SceneSpec", "StyleCompile", "ImagePrompt", "ReferenceBindingSet"],
+      "produces": ["cineweave_codex_asset_recipe"],
+      "dependsOn": ["prompt-compile"],
+      "humanGate": "approve"
+    },
+    {
+      "stepId": "production-board",
+      "skill": "cineweave-production",
+      "route": "board_assembly",
+      "invocationMode": "composed",
+      "requires": ["AssetRecipe", "Storyboard"],
+      "produces": ["cineweave_codex_board_assembly_plan"],
+      "dependsOn": ["production-recipes", "director-storyboard"],
+      "humanGate": "approve"
+    }
+  ],
+  "outputs": [
+    { "contractKind": "cineweave_codex_midjourney_prompt_pack", "producer": "mj-exploration" },
+    { "contractKind": "cineweave_codex_reference_binding_set", "producer": "reference-bind" },
+    { "contractKind": "cineweave_codex_character_spec", "producer": "character-design" },
+    { "contractKind": "cineweave_codex_character_appearance_state", "producer": "appearance-state" },
+    { "contractKind": "cineweave_codex_style_compile", "producer": "style-compile" },
+    { "contractKind": "cineweave_codex_scene_spec", "producer": "scene-design" },
+    { "contractKind": "cineweave_codex_story_brief", "producer": "story-develop" },
+    { "contractKind": "cineweave_codex_script_scene", "producer": "script-scene" },
+    { "contractKind": "cineweave_codex_action_sequence_spec", "producer": "director-action" },
+    { "contractKind": "cineweave_codex_shot_spec", "producer": "director-shot" },
+    { "contractKind": "cineweave_codex_storyboard_sequence", "producer": "director-storyboard" },
+    { "contractKind": "cineweave_codex_image_prompt", "producer": "prompt-compile" },
+    { "contractKind": "cineweave_codex_asset_recipe", "producer": "production-recipes" },
+    { "contractKind": "cineweave_codex_board_assembly_plan", "producer": "production-board" }
+  ],
+  "questions": [
+    "本轮 Midjourney 探索优先比较身份、表现媒介、构图还是光线？",
+    "选中的母版图分别承担身份、风格、场景、构图中的哪些角色？"
+  ],
+  "warnings": [
+    "MidjourneyPromptPack 只是一组人工执行的 provider projection，不代表已生成或已选出母版。",
+    "只有在 Reference 完成精确摄取、角色拆分、权限记录和人工批准后，才能建立视觉圣经并进入资产生产。",
+    "下游资产按独立任务和确定性组装规划；失败任务只重试其 owning recipe。"
+  ],
+  "executionBoundary": {
+    "generatesMedia": false,
+    "requiresHumanApproval": true
+  },
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-studio",
+    "ref": "v2.5.1",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-29T12:00:00.000Z"
+  }
+}

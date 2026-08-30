@@ -45,6 +45,13 @@ portrait reference decomposition and reusable prompt
 
 story scene with physical interaction
   → story + character + scene + style → director → prompt → production
+
+visual-first AIGC studio
+  → CreativeBrief / WorkflowPlan (`studio`)
+  → Prompt `midjourney_compile` → human runs/selects → Reference ingest/review/bind
+  → Character + AppearanceState / Scene + Light / Style + RepresentationBinding
+  → Story / continuity → Director action / shot / storyboard
+  → Prompt compile → Production recipes / controls / rights / QA
 ```
 
 ActionSequenceSpec is upstream of ShotSpec. The action step binds exact
@@ -62,3 +69,10 @@ next phase instead.
 The binding step follows target-contract creation because ReferenceBindingSet requires exact target refs. Atomic observations may inform target creation; the later binding records the reviewed precedence, exclusions and rights gates for those exact results.
 
 Keep two branches optional. Insert `character_morphology → morphology_review` only when the user wants an editable reusable face/body design; one beauty portrait may seed a draft but cannot pass the neutral multi-view identity gate. Insert `style_package → representation_binding` only when identity must survive a declared representation change or the selected StylePackage requires it. A one-off prompt under the current representation does not need either branch.
+
+For `studio`, the Midjourney step is an explicit divergence gate, not a hidden
+execution call. The user may return several selected images with different
+roles; Reference must ingest them before Character, Scene or Style can promote
+their observations into a visual bible. Downstream asset tasks should be
+independent and retryable, with exact upstream refs and a deterministic board
+assembly where a board is requested.

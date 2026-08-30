@@ -1,0 +1,44 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "canon-fact.schema.json",
+  "title": "World OS Canon fact",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind", "contractVersion", "canonFactId", "version", "worldId", "factPath", "value", "validFromCommitRef",
+    "validUntilCommitRef", "status", "lock", "sourceRefs", "approvalRef", "conflictRefs", "writer", "createdAt"
+  ],
+  "properties": {
+    "$schema": { "type": "string" },
+    "kind": { "const": "world_os_canon_fact" },
+    "contractVersion": { "const": "0.1.0" },
+    "canonFactId": { "$ref": "common.schema.json#/$defs/identifier" },
+    "version": { "type": "integer", "minimum": 1 },
+    "worldId": { "$ref": "common.schema.json#/$defs/worldId" },
+    "factPath": { "type": "string", "pattern": "^/", "minLength": 2 },
+    "value": {},
+    "validFromCommitRef": { "$ref": "common.schema.json#/$defs/exactRef" },
+    "validUntilCommitRef": {
+      "anyOf": [
+        { "$ref": "common.schema.json#/$defs/exactRef" },
+        { "type": "null" }
+      ]
+    },
+    "status": { "enum": ["active", "conflicted", "superseded", "rejected"] },
+    "lock": { "enum": ["hard", "soft", "free"] },
+    "sourceRefs": {
+      "type": "array",
+      "minItems": 2,
+      "uniqueItems": true,
+      "items": { "$ref": "common.schema.json#/$defs/exactRef" }
+    },
+    "approvalRef": { "$ref": "common.schema.json#/$defs/exactRef" },
+    "conflictRefs": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": { "$ref": "common.schema.json#/$defs/exactRef" }
+    },
+    "writer": { "$ref": "common.schema.json#/$defs/codexWriter" },
+    "createdAt": { "type": "string", "format": "date-time" }
+  }
+}

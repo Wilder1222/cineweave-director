@@ -2,10 +2,18 @@
 
 ## In development after V2.5.1
 
+- visual-first `studio` orchestration from Midjourney exploration through
+  master-reference evidence, visual-bible locks, story, shots, storyboard and
+  production gates;
+- prompt-owned `MidjourneyPromptPack` with separated reference roles,
+  version-pinned parameters and a human return gate;
+- prompt-owned `MidjourneyExplorationCase` for reusable prior MJ styles,
+  source prompts, parameter records and exact result-image references with
+  rights-aware, scoped visual reuse;
 - Director-owned `ActionSequenceSpec` for exact multi-beat choreography,
   physical-design checks, coverage requirements, closed sequence continuity and
   visible qualified-review risks before ShotSpec selection;
-- current source coverage of 71 contracts, 68 uniquely owned routes and 37
+- current source coverage of 74 contracts, 72 uniquely owned routes and 47
   behavior cases.
 
 ## Shipped in V2.2

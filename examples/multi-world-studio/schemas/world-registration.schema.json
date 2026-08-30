@@ -1,0 +1,32 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "world-registration.schema.json",
+  "title": "World OS immutable world registration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "contractVersion", "registrationId", "version", "workspaceRef", "worldId", "displayName", "portfolioRole", "allocationShare", "stage", "canonDisposition", "candidateCardRef", "worldCardRef", "initialStateRef", "triggerCatalogRef", "actionCatalogRef", "eventTemplateCatalogRef", "platformProfileRef", "status", "createdAt", "updatedAt", "createdBy"],
+  "properties": {
+    "kind": { "const": "world_os_world_registration" },
+    "contractVersion": { "const": "0.1.0" },
+    "registrationId": { "$ref": "common.schema.json#/$defs/identifier" },
+    "version": { "type": "integer", "minimum": 1 },
+    "workspaceRef": { "$ref": "common.schema.json#/$defs/exactRef" },
+    "worldId": { "$ref": "common.schema.json#/$defs/worldId" },
+    "displayName": { "type": "string", "minLength": 1 },
+    "portfolioRole": { "enum": ["primary", "incubator", "lab"] },
+    "allocationShare": { "type": "integer", "minimum": 1, "maximum": 100 },
+    "stage": { "enum": ["candidate_card", "world_bible_draft", "prototype", "active_production", "paused", "retired"] },
+    "canonDisposition": { "const": "proposal" },
+    "candidateCardRef": { "$ref": "common.schema.json#/$defs/exactRef" },
+    "worldCardRef": { "anyOf": [{ "$ref": "common.schema.json#/$defs/exactRef" }, { "type": "null" }] },
+    "initialStateRef": { "anyOf": [{ "$ref": "common.schema.json#/$defs/exactRef" }, { "type": "null" }] },
+    "triggerCatalogRef": { "anyOf": [{ "$ref": "common.schema.json#/$defs/exactRef" }, { "type": "null" }] },
+    "actionCatalogRef": { "anyOf": [{ "$ref": "common.schema.json#/$defs/exactRef" }, { "type": "null" }] },
+    "eventTemplateCatalogRef": { "anyOf": [{ "$ref": "common.schema.json#/$defs/exactRef" }, { "type": "null" }] },
+    "platformProfileRef": { "anyOf": [{ "$ref": "common.schema.json#/$defs/exactRef" }, { "type": "null" }] },
+    "status": { "enum": ["candidate", "runnable", "paused", "rejected", "retired"] },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" },
+    "createdBy": { "$ref": "common.schema.json#/$defs/codexWriter" }
+  }
+}

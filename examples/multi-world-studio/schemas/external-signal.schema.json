@@ -1,0 +1,210 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "external-signal.schema.json",
+  "title": "World OS observation-only external signal",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "signalId",
+    "version",
+    "worldId",
+    "sourceProjectionRef",
+    "sourceReceiptRef",
+    "platformProfileRef",
+    "signalType",
+    "sourceEventId",
+    "dedupeKey",
+    "observedAt",
+    "receivedAt",
+    "observation",
+    "privacy",
+    "routing",
+    "recordedBy"
+  ],
+  "properties": {
+    "kind": {
+      "const": "world_os_external_signal"
+    },
+    "contractVersion": {
+      "const": "0.1.0"
+    },
+    "signalId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "version": {
+      "type": "integer",
+      "const": 1
+    },
+    "worldId": {
+      "$ref": "common.schema.json#/$defs/worldId"
+    },
+    "sourceProjectionRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "sourceReceiptRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "platformProfileRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "signalType": {
+      "enum": [
+        "reaction",
+        "comment",
+        "vote",
+        "share",
+        "view",
+        "report",
+        "moderation"
+      ]
+    },
+    "sourceEventId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 240
+    },
+    "dedupeKey": {
+      "$ref": "common.schema.json#/$defs/contentHash"
+    },
+    "observedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "receivedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "observation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "metric",
+        "value",
+        "choiceId",
+        "commentHash",
+        "commentClass"
+      ],
+      "properties": {
+        "metric": {
+          "enum": [
+            "reaction",
+            "comment",
+            "vote",
+            "share",
+            "view",
+            "report",
+            "moderation"
+          ]
+        },
+        "value": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "maximum": 1000000000,
+          "minimum": -1000000000
+        },
+        "choiceId": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/identifier"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "commentHash": {
+          "anyOf": [
+            {
+              "$ref": "common.schema.json#/$defs/contentHash"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "commentClass": {
+          "anyOf": [
+            {
+              "enum": [
+                "question",
+                "praise",
+                "criticism",
+                "spoiler",
+                "other"
+              ]
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      }
+    },
+    "privacy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "identity",
+        "content",
+        "retention",
+        "containsRawText"
+      ],
+      "properties": {
+        "identity": {
+          "enum": [
+            "none",
+            "redacted",
+            "hashed"
+          ]
+        },
+        "content": {
+          "enum": [
+            "none",
+            "classified",
+            "hashed"
+          ]
+        },
+        "retention": {
+          "enum": [
+            "ephemeral",
+            "standard"
+          ]
+        },
+        "containsRawText": {
+          "const": false
+        }
+      }
+    },
+    "routing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "proposalOnly",
+        "stateMutation",
+        "canonMutation"
+      ],
+      "properties": {
+        "mode": {
+          "const": "proposal_input_only"
+        },
+        "proposalOnly": {
+          "const": true
+        },
+        "stateMutation": {
+          "const": false
+        },
+        "canonMutation": {
+          "const": false
+        }
+      }
+    },
+    "recordedBy": {
+      "$ref": "common.schema.json#/$defs/codexWriter"
+    }
+  }
+}

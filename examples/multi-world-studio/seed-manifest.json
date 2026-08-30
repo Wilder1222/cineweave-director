@@ -1,0 +1,182 @@
+{
+  "$schema": "./schemas/seed-manifest.schema.json",
+  "kind": "world_os_seed_manifest",
+  "contractVersion": "0.1.0",
+  "project": {
+    "id": "project.world-matrix-studio",
+    "name": "万象织境 World OS",
+    "createdAt": "2026-08-22T08:00:00.000Z"
+  },
+  "entries": [
+    {
+      "path": "providers/future-llm-policy.json",
+      "kind": "world_os_llm_provider_policy",
+      "id": "provider-policy.future.default",
+      "version": 1,
+      "status": "draft",
+      "createdAt": "2026-08-22T08:00:00.000Z",
+      "createdBy": "codex.root",
+      "expectedContentHash": "sha256:5039f7ea2c15878bc7f2c99229e791d8938bf6ca55ab5b85109f7d7f0fedc64b"
+    },
+    {
+      "path": "workspace.json",
+      "kind": "world_os_workspace",
+      "id": "workspace.world-matrix",
+      "version": 1,
+      "status": "candidate",
+      "createdAt": "2026-08-22T08:00:00.000Z",
+      "createdBy": "codex.root",
+      "expectedContentHash": "sha256:1b57cea7a7cbdaf564eff5f6956a27902a37beee1195acc9a94e0cf55e3c2420"
+    },
+    {
+      "path": "worlds/W01.world.json",
+      "kind": "world_os_world_design_proposal",
+      "id": "world.w01",
+      "version": 1,
+      "status": "candidate",
+      "createdAt": "2026-08-22T08:00:00.000Z",
+      "createdBy": "codex.root",
+      "expectedContentHash": "sha256:9f46cd053ca3a3a7d73d9b1b61818ef22a9fb6a9a497e39c95ea7fc4e1a6aece"
+    },
+    {
+      "path": "worlds/W02.world.json",
+      "kind": "world_os_world_design_proposal",
+      "id": "world.w02",
+      "version": 1,
+      "status": "candidate",
+      "createdAt": "2026-08-22T08:00:00.000Z",
+      "createdBy": "codex.root",
+      "expectedContentHash": "sha256:1cf5e7ca93c0c2d53d5155170b0b2a052e5ba28e14cfc1fb5a1b9c9445da1f78"
+    },
+    {
+      "path": "actions/W01.actions.json",
+      "kind": "world_os_action_catalog",
+      "id": "action-catalog.w01",
+      "version": 1,
+      "status": "draft",
+      "createdAt": "2026-08-22T08:00:00.000Z",
+      "createdBy": "codex.root",
+      "expectedContentHash": "sha256:be5d1a33fe6aff1c3ba2f7f9127702d2ba14e9790a82d02d2323e7040c96f1f7"
+    },
+    {
+      "path": "actions/W02.actions.json",
+      "kind": "world_os_action_catalog",
+      "id": "action-catalog.w02",
+      "version": 1,
+      "status": "draft",
+      "createdAt": "2026-08-22T08:00:00.000Z",
+      "createdBy": "codex.root",
+      "expectedContentHash": "sha256:e23148617d6f820e6e366651b255f26fbc323f1008f6fa5e8683172cf4b58ae0"
+    },
+    {
+      "path": "states/W01.day0.json",
+      "kind": "world_os_state_snapshot",
+      "id": "state.world.w01.simulation.main",
+      "version": 1,
+      "status": "candidate",
+      "createdAt": "2026-08-22T08:00:00.000Z",
+      "createdBy": "codex.root",
+      "expectedContentHash": "sha256:c02d8e3d5aa7af0eec62801a65eb9c4327a986d0ae0bceb491514e669f425de0"
+    },
+    {
+      "path": "states/W02.day0.json",
+      "kind": "world_os_state_snapshot",
+      "id": "state.world.w02.simulation.main",
+      "version": 1,
+      "status": "candidate",
+      "createdAt": "2026-08-22T08:00:00.000Z",
+      "createdBy": "codex.root",
+      "expectedContentHash": "sha256:1dabf82d80b188f954e621fb9db20911e721a5dd675c51d32cf0543da89fea78"
+    },
+    {
+      "path": "triggers/W01.triggers.json",
+      "kind": "world_os_trigger_catalog",
+      "id": "trigger-catalog.w01",
+      "version": 1,
+      "status": "draft",
+      "createdAt": "2026-08-22T08:00:00.000Z",
+      "createdBy": "codex.root",
+      "expectedContentHash": "sha256:3fe299b3c0aec372dcb9282688937756364c60e871d00b993d1a6855ce63fdfe"
+    },
+    {
+      "path": "triggers/W02.triggers.json",
+      "kind": "world_os_trigger_catalog",
+      "id": "trigger-catalog.w02",
+      "version": 1,
+      "status": "draft",
+      "createdAt": "2026-08-22T08:00:00.000Z",
+      "createdBy": "codex.root",
+      "expectedContentHash": "sha256:0653f17538d6b957cedd522bc680e24867b56518a025b542cc394439c62564c0"
+    },
+    {
+      "path": "templates/W01.events.json",
+      "kind": "world_os_event_template_catalog",
+      "id": "event-template-catalog.w01",
+      "version": 1,
+      "status": "draft",
+      "createdAt": "2026-08-22T08:00:00.000Z",
+      "createdBy": "codex.root",
+      "expectedContentHash": "sha256:df622c3b6d5aaf34d9c527cc66bd25d7c5d5814b5bc3245801fd3578b666bdb9"
+    },
+    {
+      "path": "templates/W02.events.json",
+      "kind": "world_os_event_template_catalog",
+      "id": "event-template-catalog.w02",
+      "version": 1,
+      "status": "draft",
+      "createdAt": "2026-08-22T08:00:00.000Z",
+      "createdBy": "codex.root",
+      "expectedContentHash": "sha256:78cad9ec016e8ad6ac24fd0ed7d9d72b5855e1c9ea63a101c9dcae48a0690772"
+    },
+    {
+      "path": "providers/simulation-request.w01.next-event.json",
+      "kind": "world_os_simulation_request",
+      "id": "simulation-request.w01.next-event",
+      "version": 1,
+      "status": "draft",
+      "createdAt": "2026-08-22T08:00:00.000Z",
+      "createdBy": "codex.root",
+      "expectedContentHash": "sha256:7ed8be4e32e87b96cd2ec021ff399ab7cb43d8294f2dd212e704ceda5de11e07"
+    },
+    {
+      "path": "worlds/W03.card.json",
+      "kind": "world_os_world_candidate_card",
+      "id": "world.w03",
+      "version": 1,
+      "status": "draft",
+      "createdAt": "2026-08-22T08:00:00.000Z",
+      "createdBy": "codex.root",
+      "expectedContentHash": "sha256:5078d70a5906ee5fa017922346e2100090af84b3bec5ca3b2436943afd6f4bb2"
+    },
+    {
+      "path": "worlds/W04.card.json",
+      "kind": "world_os_world_candidate_card",
+      "id": "world.w04",
+      "version": 1,
+      "status": "draft",
+      "createdAt": "2026-08-22T08:00:00.000Z",
+      "createdBy": "codex.root",
+      "expectedContentHash": "sha256:2235a875303e83a6997c4e8621de52df9dcf7fe9512e5d9efb1b18114f294848"
+    },
+    {
+      "path": "platforms/studio-platform.json",
+      "kind": "world_os_platform_profile",
+      "id": "platform-profile.studio-private",
+      "version": 1,
+      "status": "candidate",
+      "createdAt": "2026-08-22T08:00:00.000Z",
+      "createdBy": "codex.root",
+      "expectedContentHash": "sha256:61332753dbb4e29e6e288857b607452ed8e365a5b110649cda1b2adf9a4e9037"
+    },
+    {
+      "path": "reviews/baseline-review.json",
+      "kind": "world_os_review_report",
+      "id": "review.workspace.baseline",
+      "version": 1,
+      "status": "candidate",
+      "createdAt": "2026-08-22T08:00:00.000Z",
+      "createdBy": "codex.root",
+      "expectedContentHash": "sha256:58b2e3cf1c5144f1632b14c287860b1ae53f90033a364064fdb4379c919dc4e1"
+    }
+  ]
+}

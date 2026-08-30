@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "world-production-qa-review.schema.json",
+  "title": "World OS human production QA review",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "contractVersion", "reviewId", "version", "sliceRef", "worldId", "mediaBindingRefs", "qaSnapshotRefs", "decision", "status", "actor", "decidedAt", "checklist", "rationale", "authority", "recordedBy"],
+  "properties": {
+    "kind": { "const": "world_os_production_qa_review" },
+    "contractVersion": { "const": "0.1.0" },
+    "reviewId": { "$ref": "common.schema.json#/$defs/identifier" },
+    "version": { "const": 1 },
+    "sliceRef": { "$ref": "common.schema.json#/$defs/exactRef" },
+    "worldId": { "$ref": "common.schema.json#/$defs/worldId" },
+    "mediaBindingRefs": { "type": "array", "minItems": 1, "maxItems": 12, "items": { "$ref": "common.schema.json#/$defs/exactRef" } },
+    "qaSnapshotRefs": { "type": "array", "minItems": 1, "items": { "$ref": "common.schema.json#/$defs/exactRef" } },
+    "decision": { "enum": ["approve", "reject", "revise"] },
+    "status": { "enum": ["approved", "rejected", "needs_revision"] },
+    "actor": { "type": "object", "additionalProperties": false, "required": ["kind", "id"], "properties": { "kind": { "const": "human" }, "id": { "type": "string", "minLength": 1, "maxLength": 160 } } },
+    "decidedAt": { "type": "string", "format": "date-time" },
+    "checklist": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["identityConsistent", "geographyConsistent", "styleConsistent", "rightsConsistent", "technicalValid", "continuityValid"],
+      "properties": {
+        "identityConsistent": { "type": "boolean" },
+        "geographyConsistent": { "type": "boolean" },
+        "styleConsistent": { "type": "boolean" },
+        "rightsConsistent": { "type": "boolean" },
+        "technicalValid": { "type": "boolean" },
+        "continuityValid": { "type": "boolean" }
+      }
+    },
+    "rationale": { "type": "string", "minLength": 1, "maxLength": 2000 },
+    "authority": { "const": "human_qa" },
+    "recordedBy": { "$ref": "common.schema.json#/$defs/codexWriter" }
+  }
+}

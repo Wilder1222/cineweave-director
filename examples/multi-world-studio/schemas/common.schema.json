@@ -1,0 +1,110 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "common.schema.json",
+  "title": "World OS shared definitions",
+  "$defs": {
+    "identifier": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{1,159}$"
+    },
+    "worldId": {
+      "type": "string",
+      "pattern": "^W[0-9]{2}$"
+    },
+    "contentHash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-f]{64}$"
+    },
+    "exactRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "id",
+        "version",
+        "contentHash"
+      ],
+      "properties": {
+        "kind": {
+          "$ref": "#/$defs/identifier"
+        },
+        "id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "contentHash": {
+          "$ref": "#/$defs/contentHash"
+        }
+      }
+    },
+    "codexWriter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "id"
+      ],
+      "properties": {
+        "kind": {
+          "const": "codex"
+        },
+        "id": {
+          "const": "codex.root"
+        }
+      }
+    },
+    "lock": {
+      "type": "object",
+      "required": [
+        "id",
+        "scope",
+        "subject",
+        "path",
+        "level",
+        "status",
+        "sourceType"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/identifier"
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "subject": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "pattern": "^/"
+        },
+        "level": {
+          "enum": [
+            "hard",
+            "soft",
+            "free",
+            "undefined"
+          ]
+        },
+        "status": {
+          "enum": [
+            "proposed",
+            "active",
+            "unresolved",
+            "rejected",
+            "superseded"
+          ]
+        },
+        "sourceType": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

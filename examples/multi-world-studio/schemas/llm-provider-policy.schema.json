@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "llm-provider-policy.schema.json",
+  "title": "World OS LLM provider policy",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "policyId",
+    "version",
+    "enabled",
+    "modelAlias",
+    "endpointMode",
+    "credentials",
+    "outputScope",
+    "canApprove",
+    "canCommit",
+    "canWriteState",
+    "requiredRequestKind",
+    "requiredResponseKind",
+    "budgets",
+    "dataPolicy"
+  ],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "kind": {
+      "const": "world_os_llm_provider_policy"
+    },
+    "contractVersion": {
+      "const": "0.1.0"
+    },
+    "policyId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "enabled": {
+      "type": "boolean"
+    },
+    "modelAlias": {
+      "type": "string",
+      "minLength": 1
+    },
+    "endpointMode": {
+      "const": "runtime_injected"
+    },
+    "credentials": {
+      "const": "environment_only"
+    },
+    "outputScope": {
+      "const": "proposal_only"
+    },
+    "canApprove": {
+      "const": false
+    },
+    "canCommit": {
+      "const": false
+    },
+    "canWriteState": {
+      "const": false
+    },
+    "requiredRequestKind": {
+      "const": "world_os_simulation_request"
+    },
+    "requiredResponseKind": {
+      "const": "world_os_event_proposal"
+    },
+    "budgets": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "maxCandidates",
+        "maxOutputTokens",
+        "maxCostUsd",
+        "timeoutMs"
+      ],
+      "properties": {
+        "maxCandidates": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "maxOutputTokens": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "maxCostUsd": {
+          "type": "number",
+          "minimum": 0
+        },
+        "timeoutMs": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "dataPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sendExactRefs",
+        "sendPrivateActorGoals",
+        "sendRightsRestrictedMedia",
+        "storeRawResponse",
+        "storeHiddenReasoning",
+        "retainUsageReceipt"
+      ],
+      "properties": {
+        "sendExactRefs": {
+          "const": true
+        },
+        "sendPrivateActorGoals": {
+          "const": false
+        },
+        "sendRightsRestrictedMedia": {
+          "const": false
+        },
+        "storeRawResponse": {
+          "const": false
+        },
+        "storeHiddenReasoning": {
+          "const": false
+        },
+        "retainUsageReceipt": {
+          "const": true
+        }
+      }
+    }
+  }
+}

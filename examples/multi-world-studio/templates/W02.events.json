@@ -1,0 +1,137 @@
+{
+  "$schema": "../schemas/event-template-catalog.schema.json",
+  "kind": "world_os_event_template_catalog",
+  "contractVersion": "0.1.0",
+  "catalogId": "event-template-catalog.w02",
+  "version": 1,
+  "worldId": "W02",
+  "worldCardRef": {
+    "kind": "world_os_world_design_proposal",
+    "id": "world.w02",
+    "version": 1,
+    "contentHash": "sha256:1cf5e7ca93c0c2d53d5155170b0b2a052e5ba28e14cfc1fb5a1b9c9445da1f78"
+  },
+  "triggerCatalogRef": {
+    "kind": "world_os_trigger_catalog",
+    "id": "trigger-catalog.w02",
+    "version": 1,
+    "contentHash": "sha256:0653f17538d6b957cedd522bc680e24867b56518a025b542cc394439c62564c0"
+  },
+  "actionCatalogRef": {
+    "kind": "world_os_action_catalog",
+    "id": "action-catalog.w02",
+    "version": 1,
+    "contentHash": "sha256:e23148617d6f820e6e366651b255f26fbc323f1008f6fa5e8683172cf4b58ae0"
+  },
+  "platformProfileRef": {
+    "kind": "world_os_platform_profile",
+    "id": "platform-profile.studio-private",
+    "version": 1,
+    "contentHash": "sha256:61332753dbb4e29e6e288857b607452ed8e365a5b110649cda1b2adf9a4e9037"
+  },
+  "templates": [
+    {
+      "id": "template.w02.begin-baseline-window-assessment.baseline",
+      "candidateId": "begin-baseline-window-assessment.baseline",
+      "status": "proposed",
+      "eventId": "event.w02.begin-baseline-window-assessment",
+      "triggerId": "trigger.w02.begin-baseline-window-assessment",
+      "branchRole": "baseline",
+      "selectionScore": 95,
+      "clockAdvanceMinutes": 30,
+      "title": "基线窗口",
+      "publicSummary": "枯水压力下，岑野先启动天门窗口的基线测量，并把数据不完整写入记录；她没有提交可稳定结论，也没有为工程试验授予许可。",
+      "participants": [
+        "character.w02.survey-cartographer"
+      ],
+      "actionIds": [
+        "action.w02.start-baseline-window-measurement"
+      ],
+      "objective": "在资源期限压力下获得可复核的窗口基线。",
+      "opposition": "城市要求立即承诺，但门阈值、工程逻辑与生态债模型仍未定义。",
+      "choiceUnderPressure": "岑野先测量并公开标记 baseline-incomplete，不提交稳定判断。",
+      "stateChange": "assessmentStatus 进入 collecting_baseline，岑野进入 verifying-window。",
+      "delayedConsequences": [
+        {
+          "id": "consequence.w02.threshold-review-request",
+          "targetEventId": "event.w02.gate-window-assessment",
+          "description": "基线开始收集后，下一步只能请求阈值复核，不能自动给出工程结论。",
+          "when": {
+            "all": [
+              {
+                "path": "/variables/gate/assessmentStatus",
+                "op": "eq",
+                "value": "collecting_baseline"
+              },
+              {
+                "path": "/actors/character.w02.survey-cartographer/status",
+                "op": "eq",
+                "value": "verifying-window"
+              }
+            ]
+          }
+        }
+      ],
+      "irreversibility": "reversible",
+      "causesNext": "基线状态满足复核请求条件，但未定义阈值使下一步必须停在人类 Gate。",
+      "canonImpact": "none",
+      "publicationIntent": {
+        "platformId": "platform.studio-private",
+        "lane": "simulation_preview",
+        "audience": "private_workspace"
+      },
+      "differingPremise": "基准分支：用可逆测量换取证据，不用资源危机替未知阈值背书。",
+      "projectedDeltaSummary": "assessmentStatus collecting_baseline；无稳定许可、无资源传输、无生态债计算。",
+      "unresolvedInputs": [
+        "gate-threshold-values",
+        "gate-engineering-logic",
+        "ecological-debt-model"
+      ],
+      "sourceBeatRefs": [
+        "beat.w02.s01.b01.precondition"
+      ]
+    },
+    {
+      "id": "template.w02.gate-window-assessment.baseline",
+      "candidateId": "gate-window-assessment.baseline",
+      "status": "proposed",
+      "eventId": "event.w02.gate-window-assessment",
+      "triggerId": "trigger.w02.gate-window-assessment",
+      "branchRole": "baseline",
+      "selectionScore": 80,
+      "clockAdvanceMinutes": 15,
+      "title": "阈值复核请求",
+      "publicSummary": "基线数据开始收集后，岑野整理一份带缺口标记的复核请求；由于门阈值与科学边界尚未批准，系统不允许它变成稳定结论。",
+      "participants": [
+        "character.w02.survey-cartographer"
+      ],
+      "actionIds": [
+        "action.w02.prepare-threshold-review-packet"
+      ],
+      "objective": "把已知观测与未知阈值分开，形成可被人类审阅的请求。",
+      "opposition": "资源期限推动机构把不完整基线解释为可稳定结论。",
+      "choiceUnderPressure": "岑野提交缺口清单并请求阈值审阅，不自行批准工程。",
+      "stateChange": "若获批准，assessmentStatus 才可进入 awaiting_threshold_review；当前自动流不得改变状态。",
+      "delayedConsequences": [],
+      "irreversibility": "costly_to_reverse",
+      "causesNext": "需要人类批准阈值、世界基础与科学艺术边界后，才能设计下一份可执行模板。",
+      "canonImpact": "candidate_fact",
+      "publicationIntent": {
+        "platformId": "platform.studio-private",
+        "lane": "simulation_preview",
+        "audience": "private_workspace"
+      },
+      "differingPremise": "门控分支：只请求审阅，不伪造稳定结论。",
+      "projectedDeltaSummary": "自动流无状态变化；候选停在 needs_human_gate。",
+      "unresolvedInputs": [
+        "gate-threshold-values",
+        "world-basis",
+        "science-art-boundary",
+        "ecological-debt-model"
+      ],
+      "sourceBeatRefs": [
+        "beat.w02.s01.b01"
+      ]
+    }
+  ]
+}

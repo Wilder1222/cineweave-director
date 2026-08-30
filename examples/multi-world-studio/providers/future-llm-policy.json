@@ -1,0 +1,31 @@
+{
+  "$schema": "../schemas/llm-provider-policy.schema.json",
+  "kind": "world_os_llm_provider_policy",
+  "contractVersion": "0.1.0",
+  "policyId": "provider-policy.future.default",
+  "version": 1,
+  "enabled": false,
+  "modelAlias": "unconfigured",
+  "endpointMode": "runtime_injected",
+  "credentials": "environment_only",
+  "outputScope": "proposal_only",
+  "canApprove": false,
+  "canCommit": false,
+  "canWriteState": false,
+  "requiredRequestKind": "world_os_simulation_request",
+  "requiredResponseKind": "world_os_event_proposal",
+  "budgets": {
+    "maxCandidates": 3,
+    "maxOutputTokens": 6000,
+    "maxCostUsd": 0.5,
+    "timeoutMs": 60000
+  },
+  "dataPolicy": {
+    "sendExactRefs": true,
+    "sendPrivateActorGoals": false,
+    "sendRightsRestrictedMedia": false,
+    "storeRawResponse": false,
+    "storeHiddenReasoning": false,
+    "retainUsageReceipt": true
+  }
+}

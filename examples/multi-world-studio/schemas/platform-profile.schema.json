@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "platform-profile.schema.json",
+  "title": "World OS platform profile",
+  "type": "object",
+  "required": [
+    "kind",
+    "contractVersion",
+    "profileId",
+    "version",
+    "platformId",
+    "transport",
+    "serverAlias",
+    "toolName",
+    "operation",
+    "authority",
+    "allowCanonMutation",
+    "canWriteCanon",
+    "audience",
+    "locale",
+    "redactions",
+    "publicStatePaths"
+  ],
+  "properties": {
+    "kind": {
+      "const": "world_os_platform_profile"
+    },
+    "contractVersion": {
+      "const": "0.1.0"
+    },
+    "profileId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "platformId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "transport": {
+      "const": "mcp"
+    },
+    "authority": {
+      "const": "non_authoritative_view"
+    },
+    "allowCanonMutation": {
+      "const": false
+    },
+    "canWriteCanon": {
+      "const": false
+    },
+    "audience": {
+      "enum": [
+        "private_workspace",
+        "public_after_release_gate"
+      ]
+    },
+    "redactions": {
+      "type": "array",
+      "minItems": 1
+    },
+    "publicStatePaths": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "pattern": "^/"
+      }
+    }
+  }
+}

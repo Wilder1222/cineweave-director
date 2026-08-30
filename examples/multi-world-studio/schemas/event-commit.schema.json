@@ -1,0 +1,164 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "event-commit.schema.json",
+  "title": "World OS terminal event commit",
+  "type": "object",
+  "required": [
+    "kind",
+    "contractVersion",
+    "commitId",
+    "version",
+    "worldId",
+    "stream",
+    "authoritativeScope",
+    "canonDisposition",
+    "writer",
+    "committedAt",
+    "expectedVersion",
+    "nextVersion",
+    "expectedSequence",
+    "nextSequence",
+    "parentCommitRef",
+    "selectionRef",
+    "proposalRef",
+    "actionCatalogRef",
+    "decisionRef",
+    "inputStateRefs",
+    "outputStateRefs",
+    "approvalRefs",
+    "choices",
+    "costs",
+    "changes",
+    "causality",
+    "terminalMarker"
+  ],
+  "properties": {
+    "kind": {
+      "const": "world_os_event_commit"
+    },
+    "contractVersion": {
+      "const": "0.1.0"
+    },
+    "commitId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "worldId": {
+      "$ref": "common.schema.json#/$defs/worldId"
+    },
+    "stream": {
+      "const": "simulation.main"
+    },
+    "authoritativeScope": {
+      "const": "simulation_branch"
+    },
+    "canonDisposition": {
+      "const": "proposal"
+    },
+    "writer": {
+      "$ref": "common.schema.json#/$defs/codexWriter"
+    },
+    "committedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expectedVersion": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "nextVersion": {
+      "type": "integer",
+      "minimum": 2
+    },
+    "expectedSequence": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "nextSequence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "parentCommitRef": {
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/$defs/exactRef"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "proposalRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "selectionRef": {
+      "anyOf": [
+        {
+          "$ref": "common.schema.json#/$defs/exactRef"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "actionCatalogRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "decisionRef": {
+      "$ref": "common.schema.json#/$defs/exactRef"
+    },
+    "inputStateRefs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "common.schema.json#/$defs/exactRef"
+      }
+    },
+    "outputStateRefs": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "common.schema.json#/$defs/exactRef"
+      }
+    },
+    "approvalRefs": {
+      "type": "array",
+      "maxItems": 4,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "common.schema.json#/$defs/exactRef"
+      }
+    },
+    "choices": {
+      "type": "array",
+      "minItems": 1
+    },
+    "costs": {
+      "type": "array",
+      "minItems": 1
+    },
+    "changes": {
+      "type": "array",
+      "minItems": 1
+    },
+    "causality": {
+      "type": "object",
+      "required": [
+        "objective",
+        "opposition",
+        "choiceUnderPressure",
+        "stateChange",
+        "causesNext",
+        "irreversibility",
+        "realizedConsequenceRefs",
+        "scheduledConsequenceIds"
+      ]
+    },
+    "terminalMarker": {
+      "const": true
+    }
+  }
+}
