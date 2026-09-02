@@ -1,0 +1,390 @@
+{
+  "$id": "https://cineweave.dev/contracts/prompt-projection-plan.schema.json",
+  "title": "CineWeave Prompt Projection Plan",
+  "description": "A non-executing projection of an exact provider-neutral prompt artifact into one versioned provider dialect and manual handoff.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "projectionPlanId",
+    "version",
+    "status",
+    "skillReceipt",
+    "sourcePromptRef",
+    "capabilityProfileRef",
+    "licenseProfileRef",
+    "dialect",
+    "officialEvidence",
+    "promptBody",
+    "referenceBindings",
+    "profileBindings",
+    "parameterTokens",
+    "renderedPrompt",
+    "experimentPlan",
+    "compatibilityChecks",
+    "manualHandoff",
+    "exactReturnRequirements",
+    "planningBoundary",
+    "validation",
+    "provenance"
+  ],
+  "properties": {
+    "kind": { "const": "cineweave_codex_prompt_projection_plan" },
+    "contractVersion": { "const": "3.0.0" },
+    "projectionPlanId": { "$ref": "common.schema.json#/$defs/identifier" },
+    "version": { "type": "integer", "minimum": 1 },
+    "status": { "enum": ["draft", "ready_for_human", "needs_review", "blocked", "archived"] },
+    "skillReceipt": { "$ref": "common.schema.json#/$defs/skillReceipt" },
+    "sourcePromptRef": { "$ref": "#/$defs/sourcePromptRef" },
+    "capabilityProfileRef": { "$ref": "#/$defs/capabilityProfileRef" },
+    "licenseProfileRef": { "$ref": "#/$defs/licenseProfileRef" },
+    "capabilityResolutionPlanRef": { "$ref": "#/$defs/capabilityResolutionPlanRef" },
+    "dialect": { "$ref": "#/$defs/dialect" },
+    "officialEvidence": { "type": "array", "minItems": 1, "maxItems": 32, "items": { "$ref": "#/$defs/officialEvidence" } },
+    "promptBody": { "type": "string", "minLength": 1, "maxLength": 12000 },
+    "referenceBindings": { "type": "array", "maxItems": 12, "items": { "$ref": "#/$defs/referenceBinding" } },
+    "profileBindings": { "type": "array", "maxItems": 12, "items": { "$ref": "#/$defs/profileBinding" } },
+    "parameterTokens": { "type": "array", "maxItems": 32, "items": { "$ref": "#/$defs/parameterToken" } },
+    "renderedPrompt": { "$ref": "#/$defs/renderedPrompt" },
+    "experimentPlan": { "$ref": "#/$defs/experimentPlan" },
+    "compatibilityChecks": { "type": "array", "minItems": 1, "maxItems": 48, "items": { "$ref": "#/$defs/compatibilityCheck" } },
+    "manualHandoff": { "$ref": "#/$defs/manualHandoff" },
+    "exactReturnRequirements": { "$ref": "#/$defs/exactReturnRequirements" },
+    "planningBoundary": { "$ref": "#/$defs/planningBoundary" },
+    "validation": { "$ref": "#/$defs/validation" },
+    "provenance": { "$ref": "common.schema.json#/$defs/provenance" }
+  },
+  "allOf": [
+    {
+      "properties": {
+        "compatibilityChecks": {
+          "contains": {
+            "type": "object",
+            "required": ["checkId"],
+            "properties": { "checkId": { "const": "check.rights-licensing" } }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        }
+      }
+    },
+    {
+      "if": {
+        "required": ["compatibilityChecks"],
+        "properties": {
+          "compatibilityChecks": {
+            "contains": {
+              "type": "object",
+              "required": ["status"],
+              "properties": { "status": { "enum": ["block", "unknown"] } }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "validation": {
+            "properties": { "noBlockingCompatibilityIssue": { "const": false } }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "validation": {
+            "properties": { "noBlockingCompatibilityIssue": { "const": true } }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "anyOf": [
+          {
+            "required": ["status"],
+            "properties": { "status": { "const": "ready_for_human" } }
+          },
+          {
+            "required": ["manualHandoff"],
+            "properties": {
+              "manualHandoff": {
+                "required": ["status"],
+                "properties": { "status": { "const": "ready" } }
+              }
+            }
+          }
+        ]
+      },
+      "then": {
+        "properties": {
+          "status": { "const": "ready_for_human" },
+          "compatibilityChecks": {
+            "allOf": [
+              {
+                "not": {
+                  "contains": {
+                    "type": "object",
+                    "required": ["status"],
+                    "properties": { "status": { "enum": ["block", "unknown"] } }
+                  }
+                }
+              },
+              {
+                "contains": {
+                  "type": "object",
+                  "required": ["checkId", "status"],
+                  "properties": {
+                    "checkId": { "const": "check.rights-licensing" },
+                    "status": { "const": "pass" }
+                  }
+                },
+                "minContains": 1,
+                "maxContains": 1
+              }
+            ]
+          },
+          "manualHandoff": {
+            "properties": {
+              "status": { "const": "ready" },
+              "hiddenDefaultChecks": {
+                "not": {
+                  "contains": {
+                    "type": "object",
+                    "required": ["status"],
+                    "properties": { "status": { "const": "blocked" } }
+                  }
+                }
+              }
+            }
+          },
+          "validation": {
+            "properties": { "noBlockingCompatibilityIssue": { "const": true } }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "sourcePromptRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        { "properties": { "kind": { "enum": ["cineweave_codex_prompt_record", "cineweave_codex_image_prompt"] } } }
+      ]
+    },
+    "capabilityProfileRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        { "properties": { "kind": { "const": "cineweave_codex_capability_profile" } } }
+      ]
+    },
+    "licenseProfileRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        { "properties": { "kind": { "const": "cineweave_codex_license_profile" } } }
+      ]
+    },
+    "capabilityResolutionPlanRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        { "properties": { "kind": { "const": "cineweave_codex_capability_resolution_plan" } } }
+      ]
+    },
+    "stringList": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 32,
+      "items": { "type": "string", "minLength": 1, "maxLength": 1600 }
+    },
+    "dialect": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["dialectId", "modelVersion", "surface", "verifiedAt"],
+      "properties": {
+        "dialectId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "modelVersion": { "type": "string", "minLength": 1, "maxLength": 120 },
+        "surface": { "enum": ["web", "discord", "editor", "api", "other"] },
+        "verifiedAt": { "type": "string", "format": "date" }
+      }
+    },
+    "officialEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidenceId", "title", "url", "checkedAt", "claim"],
+      "properties": {
+        "evidenceId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "title": { "type": "string", "minLength": 1, "maxLength": 240 },
+        "url": { "type": "string", "format": "uri" },
+        "checkedAt": { "type": "string", "format": "date" },
+        "claim": { "type": "string", "minLength": 1, "maxLength": 1600 }
+      }
+    },
+    "referenceBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bindingId", "bindingType", "sourceObservationRef", "role", "surfaceSlot", "externalLocatorPlaceholder", "preserve", "exclude", "locatorPolicy"],
+      "properties": {
+        "bindingId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "bindingType": { "enum": ["image_prompt", "style_reference", "edit_reference", "omni_reference"] },
+        "sourceObservationRef": { "$ref": "reference-transform.schema.json#/$defs/referenceObservationRef" },
+        "role": { "$ref": "reference-observation.schema.json#/$defs/role" },
+        "surfaceSlot": { "type": "string", "minLength": 1, "maxLength": 240 },
+        "externalLocatorPlaceholder": { "type": "string", "pattern": "^REF_[A-Z0-9_]{3,120}$" },
+        "preserve": { "$ref": "#/$defs/stringList" },
+        "exclude": { "$ref": "#/$defs/stringList" },
+        "locatorPolicy": { "const": "human_resolved_no_private_locator" }
+      }
+    },
+    "profileBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["bindingId", "bindingType", "providerHandle", "resolvedCodeState", "purpose"],
+      "properties": {
+        "bindingId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "bindingType": { "enum": ["personalization_profile", "moodboard", "style_code"] },
+        "providerHandle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240,
+          "not": { "pattern": "(?:https?:|file:|[\\\\/?#])" }
+        },
+        "resolvedCodeState": { "enum": ["not_applicable", "pending_external_submission", "returned_exact"] },
+        "resolvedCode": { "type": "string", "minLength": 1, "maxLength": 240 },
+        "purpose": { "type": "string", "minLength": 1, "maxLength": 800 }
+      }
+    },
+    "parameterToken": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["parameterId", "order", "name", "value", "rendered", "source", "rationale"],
+      "properties": {
+        "parameterId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "order": { "type": "integer", "minimum": 1, "maximum": 64 },
+        "name": { "type": "string", "pattern": "^--[a-z][a-z0-9-]*$" },
+        "value": { "type": ["string", "number", "boolean", "null"] },
+        "rendered": { "type": "string", "pattern": "^--[a-z][a-z0-9-]*(?: [^,;]+)?$" },
+        "source": { "enum": ["canon", "projection_policy", "compatibility_evidence", "human_choice"] },
+        "rationale": { "type": "string", "minLength": 1, "maxLength": 1000 }
+      }
+    },
+    "renderedPrompt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["body", "parameterTail", "copyText", "referencePlaceholders", "parametersAtEnd", "containsPrivateLocator"],
+      "properties": {
+        "body": { "type": "string", "minLength": 1, "maxLength": 12000 },
+        "parameterTail": { "type": "string", "maxLength": 4000 },
+        "copyText": { "type": "string", "minLength": 1, "maxLength": 16000 },
+        "referencePlaceholders": { "type": "array", "maxItems": 12, "items": { "type": "string", "pattern": "^REF_[A-Z0-9_]{3,120}$" } },
+        "parametersAtEnd": { "const": true },
+        "containsPrivateLocator": { "const": false }
+      }
+    },
+    "experimentPlan": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["baselineVariantId", "variants", "oneVariablePerVariant"],
+      "properties": {
+        "baselineVariantId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "variants": { "type": "array", "minItems": 1, "maxItems": 12, "items": { "$ref": "#/$defs/experimentVariant" } },
+        "oneVariablePerVariant": { "const": true }
+      }
+    },
+    "experimentVariant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["variantId", "role", "changedVariable", "heldConstants", "expectedEffect", "acceptanceCheck", "renderedPrompt"],
+      "properties": {
+        "variantId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "role": { "enum": ["baseline", "single_variable_test"] },
+        "changedVariable": { "type": ["string", "null"], "maxLength": 240 },
+        "heldConstants": { "$ref": "#/$defs/stringList" },
+        "expectedEffect": { "type": "string", "minLength": 1, "maxLength": 1200 },
+        "acceptanceCheck": { "type": "string", "minLength": 1, "maxLength": 1200 },
+        "renderedPrompt": { "type": "string", "minLength": 1, "maxLength": 16000 }
+      }
+    },
+    "compatibilityCheck": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["checkId", "status", "message", "evidenceIds"],
+      "properties": {
+        "checkId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "status": { "enum": ["pass", "warn", "block", "unknown"] },
+        "message": { "type": "string", "minLength": 1, "maxLength": 1600 },
+        "evidenceIds": { "type": "array", "maxItems": 16, "uniqueItems": true, "items": { "$ref": "common.schema.json#/$defs/identifier" } }
+      }
+    },
+    "manualHandoff": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "executionOwner", "requiresHumanApproval", "steps", "hiddenDefaultChecks"],
+      "properties": {
+        "status": { "enum": ["ready", "needs_review", "blocked"] },
+        "executionOwner": { "const": "human_external" },
+        "requiresHumanApproval": { "const": true },
+        "steps": { "$ref": "#/$defs/stringList" },
+        "hiddenDefaultChecks": { "type": "array", "minItems": 1, "maxItems": 24, "items": { "$ref": "#/$defs/hiddenDefaultCheck" } }
+      }
+    },
+    "hiddenDefaultCheck": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["setting", "expectedState", "status"],
+      "properties": {
+        "setting": { "type": "string", "minLength": 1, "maxLength": 240 },
+        "expectedState": { "type": "string", "minLength": 1, "maxLength": 500 },
+        "status": { "enum": ["confirmed", "human_must_confirm", "blocked"] }
+      }
+    },
+    "exactReturnRequirements": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["requiredItems", "unknownPolicy"],
+      "properties": {
+        "requiredItems": { "type": "array", "minItems": 1, "maxItems": 32, "items": { "$ref": "#/$defs/returnRequirement" } },
+        "unknownPolicy": { "const": "record_unknown_never_infer" }
+      }
+    },
+    "returnRequirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["fieldId", "required", "description"],
+      "properties": {
+        "fieldId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "required": { "type": "boolean" },
+        "description": { "type": "string", "minLength": 1, "maxLength": 1000 }
+      }
+    },
+    "planningBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["projectionOnly", "mutatesCanon", "generatesMedia", "invokesExternalTool", "selectsProvider", "humanExecutionRequired"],
+      "properties": {
+        "projectionOnly": { "const": true },
+        "mutatesCanon": { "const": false },
+        "generatesMedia": { "const": false },
+        "invokesExternalTool": { "const": false },
+        "selectsProvider": { "const": false },
+        "humanExecutionRequired": { "const": true }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourcePromptExact", "capabilityProfileExact", "officialEvidenceCurrent", "parametersStructured", "parametersAtEnd", "referencesRoleScoped", "oneVariablePerVariant", "hiddenDefaultsExposed", "noBlockingCompatibilityIssue", "noPrivateLocator", "noExternalExecution"],
+      "properties": {
+        "sourcePromptExact": { "const": true },
+        "capabilityProfileExact": { "const": true },
+        "officialEvidenceCurrent": { "const": true },
+        "parametersStructured": { "const": true },
+        "parametersAtEnd": { "const": true },
+        "referencesRoleScoped": { "const": true },
+        "oneVariablePerVariant": { "const": true },
+        "hiddenDefaultsExposed": { "const": true },
+        "noBlockingCompatibilityIssue": { "type": "boolean" },
+        "noPrivateLocator": { "const": true },
+        "noExternalExecution": { "const": true }
+      }
+    }
+  }
+}

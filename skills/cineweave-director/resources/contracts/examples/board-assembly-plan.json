@@ -1,0 +1,258 @@
+{
+  "kind": "cineweave_codex_board_assembly_plan",
+  "contractVersion": "2.0.0",
+  "worldId": "world-template",
+  "boardPlanId": "board.character-identity-dossier-v1",
+  "version": 1,
+  "status": "active",
+  "purpose": "把已验收的角色正侧背三视图与九个身份/服饰细节任务放入一张 8K-class 角色设定板；所有图块都来自独立 recipe task，最终标签、区域和来源链由确定性组装器处理。",
+  "canvas": {
+    "width": 7680,
+    "height": 9600,
+    "background": "#F4F0EA",
+    "padding": 160,
+    "gap": 56,
+    "labelHeight": 120,
+    "labelFontSize": 54
+  },
+  "recipeRuns": [
+    {
+      "recipeRunId": "run.turnaround",
+      "recipeRef": {
+        "kind": "cineweave_codex_asset_recipe",
+        "id": "recipe.character-turnaround-3view",
+        "version": 1,
+        "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "taskIds": [
+        "task.view.front",
+        "task.view.side",
+        "task.view.back"
+      ]
+    },
+    {
+      "recipeRunId": "run.identity-detail",
+      "recipeRef": {
+        "kind": "cineweave_codex_asset_recipe",
+        "id": "recipe.character-identity-reference-sheet-3x3",
+        "version": 1,
+        "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "taskIds": [
+        "task.identity-detail.face-front",
+        "task.identity-detail.face-three-quarter",
+        "task.identity-detail.face-profile",
+        "task.identity-detail.hair-headwear",
+        "task.identity-detail.shoulder-bodice",
+        "task.identity-detail.hand-sleeve-material",
+        "task.identity-detail.fullbody-silhouette",
+        "task.identity-detail.costume-motion",
+        "task.identity-detail.mood-portrait"
+      ]
+    }
+  ],
+  "regions": [
+    {
+      "regionId": "turnaround",
+      "x": 0.125,
+      "y": 0.04,
+      "width": 0.75,
+      "height": 0.3,
+      "rows": 1,
+      "columns": 3,
+      "tileAspectRatio": "2:3",
+      "labelPolicy": "outside_tile"
+    },
+    {
+      "regionId": "details",
+      "x": 0.125,
+      "y": 0.39,
+      "width": 0.75,
+      "height": 0.58,
+      "rows": 3,
+      "columns": 3,
+      "tileAspectRatio": "1:1",
+      "labelPolicy": "outside_tile"
+    }
+  ],
+  "tilePlacements": [
+    {
+      "tileId": "front",
+      "recipeRunId": "run.turnaround",
+      "taskId": "task.view.front",
+      "regionId": "turnaround",
+      "row": 0,
+      "column": 0,
+      "label": "FRONT VIEW",
+      "required": true,
+      "fit": "contain",
+      "minimumPixelDimensions": "1600x2400"
+    },
+    {
+      "tileId": "side",
+      "recipeRunId": "run.turnaround",
+      "taskId": "task.view.side",
+      "regionId": "turnaround",
+      "row": 0,
+      "column": 1,
+      "label": "SIDE VIEW",
+      "required": true,
+      "fit": "contain",
+      "minimumPixelDimensions": "1600x2400"
+    },
+    {
+      "tileId": "back",
+      "recipeRunId": "run.turnaround",
+      "taskId": "task.view.back",
+      "regionId": "turnaround",
+      "row": 0,
+      "column": 2,
+      "label": "BACK VIEW",
+      "required": true,
+      "fit": "contain",
+      "minimumPixelDimensions": "1600x2400"
+    },
+    {
+      "tileId": "face-front",
+      "recipeRunId": "run.identity-detail",
+      "taskId": "task.identity-detail.face-front",
+      "regionId": "details",
+      "row": 0,
+      "column": 0,
+      "label": "FACE · FRONT",
+      "required": true,
+      "fit": "contain",
+      "minimumPixelDimensions": "1600x1600"
+    },
+    {
+      "tileId": "face-three-quarter",
+      "recipeRunId": "run.identity-detail",
+      "taskId": "task.identity-detail.face-three-quarter",
+      "regionId": "details",
+      "row": 0,
+      "column": 1,
+      "label": "FACE · 3/4",
+      "required": true,
+      "fit": "contain",
+      "minimumPixelDimensions": "1600x1600"
+    },
+    {
+      "tileId": "face-profile",
+      "recipeRunId": "run.identity-detail",
+      "taskId": "task.identity-detail.face-profile",
+      "regionId": "details",
+      "row": 0,
+      "column": 2,
+      "label": "FACE · PROFILE",
+      "required": true,
+      "fit": "contain",
+      "minimumPixelDimensions": "1600x1600"
+    },
+    {
+      "tileId": "hair-headwear",
+      "recipeRunId": "run.identity-detail",
+      "taskId": "task.identity-detail.hair-headwear",
+      "regionId": "details",
+      "row": 1,
+      "column": 0,
+      "label": "HAIR & HEADWEAR",
+      "required": true,
+      "fit": "contain",
+      "minimumPixelDimensions": "1600x1600"
+    },
+    {
+      "tileId": "shoulder-bodice",
+      "recipeRunId": "run.identity-detail",
+      "taskId": "task.identity-detail.shoulder-bodice",
+      "regionId": "details",
+      "row": 1,
+      "column": 1,
+      "label": "SHOULDER & BODICE",
+      "required": true,
+      "fit": "contain",
+      "minimumPixelDimensions": "1600x1600"
+    },
+    {
+      "tileId": "hand-sleeve-material",
+      "recipeRunId": "run.identity-detail",
+      "taskId": "task.identity-detail.hand-sleeve-material",
+      "regionId": "details",
+      "row": 1,
+      "column": 2,
+      "label": "HAND & MATERIAL",
+      "required": true,
+      "fit": "contain",
+      "minimumPixelDimensions": "1600x1600"
+    },
+    {
+      "tileId": "fullbody-silhouette",
+      "recipeRunId": "run.identity-detail",
+      "taskId": "task.identity-detail.fullbody-silhouette",
+      "regionId": "details",
+      "row": 2,
+      "column": 0,
+      "label": "FULL BODY",
+      "required": true,
+      "fit": "contain",
+      "minimumPixelDimensions": "1600x1600"
+    },
+    {
+      "tileId": "costume-motion",
+      "recipeRunId": "run.identity-detail",
+      "taskId": "task.identity-detail.costume-motion",
+      "regionId": "details",
+      "row": 2,
+      "column": 1,
+      "label": "COSTUME MOTION",
+      "required": true,
+      "fit": "contain",
+      "minimumPixelDimensions": "1600x1600"
+    },
+    {
+      "tileId": "mood-portrait",
+      "recipeRunId": "run.identity-detail",
+      "taskId": "task.identity-detail.mood-portrait",
+      "regionId": "details",
+      "row": 2,
+      "column": 2,
+      "label": "MOOD PORTRAIT",
+      "required": true,
+      "fit": "contain",
+      "minimumPixelDimensions": "1600x1600"
+    }
+  ],
+  "failurePolicy": {
+    "strategy": "retry_failed_tiles_only",
+    "preserveAcceptedOutputs": true,
+    "blockOnRequiredTileFailure": true
+  },
+  "planningBoundary": {
+    "providerNeutral": true,
+    "generatesMedia": false,
+    "humanApprovalRequired": true,
+    "notes": "BoardAssemblyPlan 不调用 Provider，也不宣称单一模型能生成正确标签或异构布局。"
+  },
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.0.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-22T13:00:00.000Z"
+  },
+  "validation": {
+    "exactRecipeTasks": true,
+    "regionsNonOverlapping": true,
+    "perTileProvenance": true,
+    "heterogeneousLayoutsAllowed": true,
+    "deterministicAssembly": true
+  },
+  "provenance": {
+    "source": "suite_builtin",
+    "createdAt": "2026-08-22T13:00:00.000Z",
+    "updatedAt": "2026-08-22T13:00:00.000Z",
+    "changeLog": [
+      "v1: deterministic top turnaround plus 3x3 character/costume detail board"
+    ]
+  }
+}

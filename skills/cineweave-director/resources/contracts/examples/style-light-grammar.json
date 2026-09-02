@@ -1,0 +1,54 @@
+{
+  "kind": "cineweave_codex_style_light_grammar",
+  "contractVersion": "2.2.0",
+  "grammarId": "style-light.poetic-period-naturalism-v1",
+  "version": 1,
+  "stylePackageRef": {
+    "kind": "cineweave_codex_style_package",
+    "id": "style.song-poetic-period-drama",
+    "version": 2,
+    "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+  },
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.0.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-21T03:25:00.000Z"
+  },
+  "medium": "真人历史剧情影像",
+  "intent": "让光线保持生活来源和低调诗意，人物可读但不呈现商业棚拍式无影美化。",
+  "contrast": "总体低至中对比，局部人物关系可通过一档以内的明度差建立。",
+  "highlightTreatment": "高光柔和滚降，保留湿材质的小面积亮点，不形成塑料式大面积白斑。",
+  "shadowTreatment": "阴影保留层次和环境色，黑位不压死，边缘服从实际光源尺寸。",
+  "colorRelationship": "冷中性环境光与小面积低饱和暖色实景光并存，不做强烈青橙分离。",
+  "atmosphereTreatment": "雾与水汽降低远景对比度，不制造无来源神光。",
+  "postprocess": {
+    "bloom": "仅作用于真实高亮区域，强度很低",
+    "halation": "暖色实景光边缘允许极轻微扩散",
+    "grain": "细而克制的模拟颗粒",
+    "sharpening": "低，不强化皮肤边缘和织物噪声"
+  },
+  "invariants": [
+    "光源必须有物理动机",
+    "人物肤质保留自然明度变化",
+    "高光不过度锐化",
+    "阴影含环境信息"
+  ],
+  "allowedVariation": [
+    "整体可在偏冷与中性之间变化",
+    "室内夜景可提高暖色实景光占比"
+  ],
+  "forbidden": [
+    "无来源全局辉光",
+    "商业磨皮棚拍光",
+    "纯黑无层次阴影",
+    "过度青橙分离"
+  ],
+  "validation": {
+    "noPhysicalSourcePlacement": true,
+    "noGeographyOwnership": true,
+    "visualTemporalSeparated": true,
+    "mediumAware": true
+  }
+}

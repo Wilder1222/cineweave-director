@@ -1,6 +1,0 @@
-interface:
-  display_name: "CineWeave Scene"
-  short_description: "Design geography, physical light and grounded interaction"
-  default_prompt: "Use $cineweave-scene to create or bind a scene from my direct brief, preserving geography and physical interaction rules."
-policy:
-  allow_implicit_invocation: true

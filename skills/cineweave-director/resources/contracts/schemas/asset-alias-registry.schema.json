@@ -1,0 +1,386 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cineweave.dev/contracts/asset-alias-registry.schema.json",
+  "title": "CineWeave Exact Asset Alias Registry",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "assetAliasRegistryId",
+    "version",
+    "status",
+    "scope",
+    "aliases",
+    "collisionPolicy",
+    "resolutionPolicy",
+    "skillReceipt",
+    "planningBoundary",
+    "validation",
+    "provenance"
+  ],
+  "properties": {
+    "kind": {
+      "const": "cineweave_codex_asset_alias_registry"
+    },
+    "contractVersion": {
+      "const": "2.5.0"
+    },
+    "assetAliasRegistryId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "active",
+        "locked",
+        "archived"
+      ]
+    },
+    "scope": {
+      "$ref": "#/$defs/scope"
+    },
+    "aliases": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 128,
+      "items": {
+        "$ref": "#/$defs/alias"
+      }
+    },
+    "collisionPolicy": {
+      "$ref": "#/$defs/collisionPolicy"
+    },
+    "resolutionPolicy": {
+      "$ref": "#/$defs/resolutionPolicy"
+    },
+    "skillReceipt": {
+      "$ref": "common.schema.json#/$defs/skillReceipt"
+    },
+    "planningBoundary": {
+      "$ref": "#/$defs/planningBoundary"
+    },
+    "validation": {
+      "$ref": "#/$defs/validation"
+    },
+    "provenance": {
+      "$ref": "common.schema.json#/$defs/provenance"
+    }
+  },
+  "$defs": {
+    "targetRef": {
+      "oneOf": [
+        {
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/contractRef"
+            },
+            {
+              "properties": {
+                "kind": {
+                  "const": "cineweave_codex_reference_asset"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/contractRef"
+            },
+            {
+              "properties": {
+                "kind": {
+                  "const": "cineweave_codex_reference_observation"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/contractRef"
+            },
+            {
+              "properties": {
+                "kind": {
+                  "const": "cineweave_codex_reference_binding_set"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/contractRef"
+            },
+            {
+              "properties": {
+                "kind": {
+                  "const": "character_binding"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/contractRef"
+            },
+            {
+              "properties": {
+                "kind": {
+                  "const": "scene_binding"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/contractRef"
+            },
+            {
+              "properties": {
+                "kind": {
+                  "const": "cineweave_codex_style_compile"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "scope": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scopeType",
+        "scopeId",
+        "targetContractKinds"
+      ],
+      "properties": {
+        "scopeType": {
+          "enum": [
+            "project",
+            "sequence",
+            "shot"
+          ]
+        },
+        "scopeId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "targetContractKinds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 6,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "cineweave_codex_reference_asset",
+              "cineweave_codex_reference_observation",
+              "cineweave_codex_reference_binding_set",
+              "character_binding",
+              "scene_binding",
+              "cineweave_codex_style_compile"
+            ]
+          }
+        }
+      }
+    },
+    "alias": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "alias",
+        "normalizedAlias",
+        "targetRef",
+        "role",
+        "status"
+      ],
+      "properties": {
+        "alias": {
+          "type": "string",
+          "pattern": "^@[^\\s@]{1,120}$"
+        },
+        "normalizedAlias": {
+          "type": "string",
+          "pattern": "^@[^\\s@]{1,120}$"
+        },
+        "targetRef": {
+          "$ref": "#/$defs/targetRef"
+        },
+        "role": {
+          "enum": [
+            "character",
+            "appearance",
+            "scene",
+            "prop",
+            "style",
+            "camera",
+            "lighting",
+            "performance",
+            "reference"
+          ]
+        },
+        "status": {
+          "const": "resolved"
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        }
+      }
+    },
+    "collisionPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "aliasUniqueness",
+        "canonicalization",
+        "unresolvedAlias"
+      ],
+      "properties": {
+        "aliasUniqueness": {
+          "const": "reject"
+        },
+        "canonicalization": {
+          "const": "unicode_nfc_exact"
+        },
+        "unresolvedAlias": {
+          "enum": [
+            "block",
+            "request_explicit_binding"
+          ]
+        }
+      }
+    },
+    "resolutionPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "exactRefsOnly",
+        "allowLatest",
+        "inferFromPrompt",
+        "crossScopeResolution",
+        "executesProvider"
+      ],
+      "properties": {
+        "mode": {
+          "const": "declared_map_only"
+        },
+        "exactRefsOnly": {
+          "const": true
+        },
+        "allowLatest": {
+          "const": false
+        },
+        "inferFromPrompt": {
+          "const": false
+        },
+        "crossScopeResolution": {
+          "const": false
+        },
+        "executesProvider": {
+          "const": false
+        }
+      }
+    },
+    "planningBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "providerNeutral",
+        "resolvesReferencesOnly",
+        "generatesMedia",
+        "invokesExternalTool",
+        "mutatesCanon",
+        "writesFiles",
+        "humanApprovalRequired"
+      ],
+      "properties": {
+        "providerNeutral": {
+          "const": true
+        },
+        "resolvesReferencesOnly": {
+          "const": true
+        },
+        "generatesMedia": {
+          "const": false
+        },
+        "invokesExternalTool": {
+          "const": false
+        },
+        "mutatesCanon": {
+          "const": false
+        },
+        "writesFiles": {
+          "const": false
+        },
+        "humanApprovalRequired": {
+          "const": true
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "aliasesUnique",
+        "aliasesNfcNormalized",
+        "exactTargetRefs",
+        "noLatestResolution",
+        "noInference",
+        "noProviderSyntax",
+        "noPrivateLocators",
+        "noCanonMutation",
+        "noExternalExecution"
+      ],
+      "properties": {
+        "aliasesUnique": {
+          "const": true
+        },
+        "aliasesNfcNormalized": {
+          "const": true
+        },
+        "exactTargetRefs": {
+          "const": true
+        },
+        "noLatestResolution": {
+          "const": true
+        },
+        "noInference": {
+          "const": true
+        },
+        "noProviderSyntax": {
+          "const": true
+        },
+        "noPrivateLocators": {
+          "const": true
+        },
+        "noCanonMutation": {
+          "const": true
+        },
+        "noExternalExecution": {
+          "const": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,683 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cineweave.dev/contracts/image-prompt-output.schema.json",
+  "title": "CineWeave Codex Cinematic Text-to-Image Prompt Package",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "worldId",
+    "skillReceipt",
+    "intent",
+    "shotDesign",
+    "promptBlocks",
+    "prompt",
+    "negativePrompt",
+    "preserve",
+    "allowedChanges",
+    "validation"
+  ],
+  "properties": {
+    "contractVersion": {
+      "const": "2.0.0"
+    },
+    "kind": {
+      "const": "cineweave_codex_image_prompt"
+    },
+    "worldId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "shotId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "skillReceipt": {
+      "$ref": "#/$defs/skillReceipt"
+    },
+    "intent": {
+      "$ref": "#/$defs/intent"
+    },
+    "shotDesign": {
+      "$ref": "#/$defs/shotDesign"
+    },
+    "styleBinding": {
+      "$ref": "#/$defs/styleBinding"
+    },
+    "referenceTransform": {
+      "$ref": "reference-transform.schema.json"
+    },
+    "characterBindings": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "$ref": "character-binding.schema.json"
+      }
+    },
+    "promptBlocks": {
+      "$ref": "#/$defs/promptBlocks"
+    },
+    "prompt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "language",
+        "concise",
+        "expanded"
+      ],
+      "properties": {
+        "language": {
+          "enum": [
+            "zh-CN",
+            "en",
+            "bilingual"
+          ]
+        },
+        "concise": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 6000
+        },
+        "expanded": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 12000
+        }
+      }
+    },
+    "negativePrompt": {
+      "type": "array",
+      "maxItems": 32,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1200
+      }
+    },
+    "preserve": {
+      "$ref": "#/$defs/stringList"
+    },
+    "allowedChanges": {
+      "$ref": "#/$defs/stringList"
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "onePrimaryTarget",
+        "cameraCoherent",
+        "providerNeutral"
+      ],
+      "properties": {
+        "onePrimaryTarget": {
+          "const": true
+        },
+        "physicalLight": {
+          "type": "boolean"
+        },
+        "cameraCoherent": {
+          "const": true
+        },
+        "realismAnchors": {
+          "type": "array",
+          "maxItems": 16,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "observableAnchors": {
+          "type": "array",
+          "maxItems": 16,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 500
+          }
+        },
+        "representationCoherent": {
+          "type": "boolean"
+        },
+        "observationReady": {
+          "type": "boolean"
+        },
+        "providerNeutral": {
+          "const": true
+        },
+        "characterBindingsResolved": {
+          "type": "boolean"
+        },
+        "sceneBindingResolved": {
+          "type": "boolean"
+        },
+        "crossSkillReceiptsChecked": {
+          "type": "boolean"
+        },
+        "productionContextResolved": {
+          "type": "boolean"
+        },
+        "interactionConstraintsResolved": {
+          "type": "boolean"
+        }
+      }
+    },
+    "sceneBinding": {
+      "$ref": "scene-binding.schema.json"
+    },
+    "productionContext": {
+      "$ref": "#/$defs/productionContext"
+    }
+  },
+  "$defs": {
+    "skillReceipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "ref",
+        "commit",
+        "installedBy",
+        "usedAt"
+      ],
+      "properties": {
+        "repository": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://(www\\.)?github\\.com/[^/]+/[^/]+(?:\\.git)?/?$"
+        },
+        "ref": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{7,64}$"
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        },
+        "installedBy": {
+          "const": "codex-environment"
+        },
+        "environmentId": {
+          "type": "string",
+          "maxLength": 240
+        },
+        "usedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "stringList": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 32,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1200
+      }
+    },
+    "intent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "narrativePurpose",
+        "audienceFeeling",
+        "primaryTarget"
+      ],
+      "properties": {
+        "narrativePurpose": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "audienceFeeling": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "primaryTarget": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "secondaryTarget": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        }
+      }
+    },
+    "lens": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "focalLengthMm",
+        "character"
+      ],
+      "properties": {
+        "focalLengthMm": {
+          "type": "number",
+          "minimum": 12,
+          "maximum": 400
+        },
+        "character": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        }
+      }
+    },
+    "movementCue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "type",
+        "direction",
+        "speedCurve",
+        "startState",
+        "peakState",
+        "endState"
+      ],
+      "properties": {
+        "type": {
+          "enum": [
+            "static",
+            "dolly",
+            "truck",
+            "pan",
+            "tilt",
+            "arc",
+            "crane",
+            "handheld",
+            "gimbal",
+            "rack-focus"
+          ]
+        },
+        "direction": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "speedCurve": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "startState": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "peakState": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "endState": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        }
+      }
+    },
+    "composition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primaryTarget",
+        "layout",
+        "depthLayers",
+        "subjectScale"
+      ],
+      "properties": {
+        "primaryTarget": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "layout": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "depthLayers": {
+          "$ref": "#/$defs/stringList"
+        },
+        "subjectScale": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "negativeSpace": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        }
+      }
+    },
+    "shotDesign": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primaryTarget",
+        "shotScale",
+        "cameraAngle",
+        "cameraHeight",
+        "lens",
+        "depth",
+        "movementCue",
+        "focusTarget",
+        "composition",
+        "actionMoment",
+        "endState",
+        "styleStack"
+      ],
+      "properties": {
+        "primaryTarget": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "shotScale": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200
+        },
+        "cameraAngle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "cameraHeight": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "lens": {
+          "$ref": "#/$defs/lens"
+        },
+        "depth": {
+          "$ref": "#/$defs/stringList"
+        },
+        "movementCue": {
+          "$ref": "#/$defs/movementCue"
+        },
+        "focusTarget": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "composition": {
+          "$ref": "#/$defs/composition"
+        },
+        "actionMoment": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        },
+        "endState": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "styleStack": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 5,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "label",
+              "importance"
+            ],
+            "properties": {
+              "label": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 240
+              },
+              "importance": {
+                "enum": [
+                  "required",
+                  "strong",
+                  "supporting"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    "styleBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "visualTemporalSeparated",
+        "preserve",
+        "allowedVariation",
+        "forbidden"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "inline_atoms",
+            "package",
+            "compiled"
+          ]
+        },
+        "stylePackageRef": {
+          "$ref": "#/$defs/contractRef"
+        },
+        "styleCompileRef": {
+          "$ref": "#/$defs/contractRef"
+        },
+        "atoms": {
+          "$ref": "#/$defs/stringList"
+        },
+        "visualTemporalSeparated": {
+          "const": true
+        },
+        "preserve": {
+          "$ref": "#/$defs/stringList"
+        },
+        "allowedVariation": {
+          "$ref": "#/$defs/stringList"
+        },
+        "forbidden": {
+          "$ref": "#/$defs/stringList"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "enum": [
+                  "package",
+                  "compiled"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "stylePackageRef"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "compiled"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "styleCompileRef"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "inline_atoms"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "atoms"
+            ]
+          }
+        }
+      ]
+    },
+    "contractRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "version",
+        "contentHash"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        }
+      }
+    },
+    "promptBlocks": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "world",
+        "story",
+        "subject",
+        "miseEnScene",
+        "camera",
+        "lighting",
+        "realism",
+        "style",
+        "technical"
+      ],
+      "properties": {
+        "world": {
+          "$ref": "#/$defs/stringList"
+        },
+        "story": {
+          "$ref": "#/$defs/stringList"
+        },
+        "subject": {
+          "$ref": "#/$defs/stringList"
+        },
+        "characterIdentity": {
+          "$ref": "#/$defs/stringList"
+        },
+        "characterBody": {
+          "$ref": "#/$defs/stringList"
+        },
+        "characterPerformance": {
+          "$ref": "#/$defs/stringList"
+        },
+        "wardrobe": {
+          "$ref": "#/$defs/stringList"
+        },
+        "miseEnScene": {
+          "$ref": "#/$defs/stringList"
+        },
+        "camera": {
+          "$ref": "#/$defs/stringList"
+        },
+        "lighting": {
+          "$ref": "#/$defs/stringList"
+        },
+        "realism": {
+          "$ref": "#/$defs/stringList"
+        },
+        "style": {
+          "$ref": "#/$defs/stringList"
+        },
+        "technical": {
+          "$ref": "#/$defs/stringList"
+        },
+        "sceneGeography": {
+          "$ref": "#/$defs/stringList"
+        },
+        "sceneArchitecture": {
+          "$ref": "#/$defs/stringList"
+        },
+        "sceneMaterials": {
+          "$ref": "#/$defs/stringList"
+        },
+        "sceneLighting": {
+          "$ref": "#/$defs/stringList"
+        },
+        "sceneAtmosphere": {
+          "$ref": "#/$defs/stringList"
+        },
+        "spatialContinuity": {
+          "$ref": "#/$defs/stringList"
+        },
+        "sceneInteraction": {
+          "$ref": "#/$defs/stringList"
+        }
+      }
+    },
+    "productionContext": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "assetRecipeRef",
+        "controlSetRef",
+        "evidenceBundleRef",
+        "capabilityProfileRef",
+        "licenseProfileRefs"
+      ],
+      "properties": {
+        "assetRecipeRef": {
+          "$ref": "#/$defs/contractRef"
+        },
+        "controlSetRef": {
+          "$ref": "#/$defs/contractRef"
+        },
+        "evidenceBundleRef": {
+          "$ref": "#/$defs/contractRef"
+        },
+        "capabilityProfileRef": {
+          "$ref": "#/$defs/contractRef"
+        },
+        "licenseProfileRefs": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 24,
+          "items": {
+            "$ref": "#/$defs/contractRef"
+          }
+        }
+      }
+    }
+  }
+}

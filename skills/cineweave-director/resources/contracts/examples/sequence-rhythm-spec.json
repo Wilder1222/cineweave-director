@@ -1,0 +1,97 @@
+{
+  "kind": "cineweave_codex_sequence_rhythm_spec",
+  "contractVersion": "2.5.0",
+  "sequenceRhythmSpecId": "rhythm.rain-teahouse-table-turn-v1",
+  "version": 1,
+  "storyboardRef": {
+    "kind": "cineweave_codex_storyboard_sequence",
+    "id": "storyboard.rain-teahouse-table-turn-v1",
+    "version": 1,
+    "contentHash": "sha256:59e78bde7f12bfe463f3611026bd90dab76578101895c512690494e0f3471aee"
+  },
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.0.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-09-02T03:40:00.000Z"
+  },
+  "rhythmIntent": "从稳定读空间开始，在桌体改变追兵路径时形成一次受控加压，随后停在楼梯退路被封的新压力上。",
+  "timebase": {
+    "numerator": 24,
+    "denominator": 1,
+    "unit": "frames",
+    "frameIndexOrigin": 0,
+    "notes": "所有窗口使用零基、端点包含的整数帧；24/1 是约分后的帧率。"
+  },
+  "shotDurationPolicy": {
+    "minimumFrames": 72,
+    "preferredFrames": 100,
+    "maximumFrames": 144,
+    "rationale": "该段需要读清长桌的因果动作，不能为追求切镜密度压缩到动作不可辨。"
+  },
+  "tempoPhases": [
+    {
+      "phaseId": "phase.controlled-pressure",
+      "order": 1,
+      "tempo": "controlled",
+      "cutDensity": "low",
+      "shotIds": [
+        "shot.rain-teahouse-table-turn-v1"
+      ],
+      "purpose": "保持一个连续覆盖，让观众读清保护线、桌体转向和楼梯新威胁之间的因果。"
+    }
+  ],
+  "shotWindows": [
+    {
+      "shotId": "shot.rain-teahouse-table-turn-v1",
+      "order": 1,
+      "startFrame": 0,
+      "endFrame": 100,
+      "purpose": "以单一中远景承载准备、动作、后果和稳定结束。",
+      "breathing": true
+    }
+  ],
+  "breathingPoints": [
+    {
+      "shotId": "shot.rain-teahouse-table-turn-v1",
+      "frame": 88,
+      "rationale": "楼梯追兵落地后保留约半秒稳定，让新的撤离压力被看见而不是被切掉。"
+    }
+  ],
+  "transitions": [],
+  "continuity": {
+    "preserveScreenDirection": true,
+    "axisPolicy": "全段保持正门—临河窗主轴南侧；任何后续拆镜都必须继承这一屏幕方向。",
+    "stableEndStates": true,
+    "shotOrderLocked": true,
+    "notes": "节奏计划描述镜头窗口和转场语法，不取代 Production-owned EditorialTimelinePlan。"
+  },
+  "planningBoundary": {
+    "providerNeutral": true,
+    "generatesMedia": false,
+    "invokesExternalTool": false,
+    "editsMedia": false,
+    "humanApprovalRequired": true,
+    "notes": "该契约只编排序列节奏；不生成面板、不剪辑媒体、不导出 OTIO。"
+  },
+  "validation": {
+    "exactStoryboardRef": true,
+    "rationalTimebase": true,
+    "shotWindowsOrdered": true,
+    "storyboardShotsCovered": true,
+    "phaseCoverageClosed": true,
+    "transitionsAdjacent": true,
+    "continuityExplicit": true,
+    "providerNeutral": true,
+    "noMediaGeneration": true
+  },
+  "provenance": {
+    "source": "codex_authored",
+    "createdAt": "2026-09-02T03:40:00.000Z",
+    "updatedAt": "2026-09-02T03:40:00.000Z",
+    "changeLog": [
+      "v1: sequence-level rhythm with explicit rational frame timebase, closed phases and adjacent transition grammar"
+    ]
+  }
+}

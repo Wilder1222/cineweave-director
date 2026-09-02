@@ -1,0 +1,152 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cineweave.dev/contracts/style-light-grammar.schema.json",
+  "title": "CineWeave Style Light Grammar",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "grammarId",
+    "version",
+    "skillReceipt",
+    "medium",
+    "intent",
+    "contrast",
+    "highlightTreatment",
+    "shadowTreatment",
+    "colorRelationship",
+    "atmosphereTreatment",
+    "postprocess",
+    "invariants",
+    "forbidden",
+    "validation"
+  ],
+  "properties": {
+    "kind": {
+      "const": "cineweave_codex_style_light_grammar"
+    },
+    "contractVersion": {
+      "const": "2.2.0"
+    },
+    "grammarId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "stylePackageRef": {
+      "$ref": "common.schema.json#/$defs/contractRef"
+    },
+    "skillReceipt": {
+      "$ref": "common.schema.json#/$defs/skillReceipt"
+    },
+    "medium": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500
+    },
+    "intent": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1000
+    },
+    "contrast": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 800
+    },
+    "highlightTreatment": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 800
+    },
+    "shadowTreatment": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 800
+    },
+    "colorRelationship": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 800
+    },
+    "atmosphereTreatment": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 800
+    },
+    "postprocess": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bloom",
+        "halation",
+        "grain",
+        "sharpening"
+      ],
+      "properties": {
+        "bloom": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "halation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "grain": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "sharpening": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        }
+      }
+    },
+    "invariants": {
+      "$ref": "common.schema.json#/$defs/stringList"
+    },
+    "allowedVariation": {
+      "type": "array",
+      "maxItems": 16,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1000
+      }
+    },
+    "forbidden": {
+      "$ref": "common.schema.json#/$defs/stringList"
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "noPhysicalSourcePlacement",
+        "noGeographyOwnership",
+        "visualTemporalSeparated",
+        "mediumAware"
+      ],
+      "properties": {
+        "noPhysicalSourcePlacement": {
+          "const": true
+        },
+        "noGeographyOwnership": {
+          "const": true
+        },
+        "visualTemporalSeparated": {
+          "const": true
+        },
+        "mediumAware": {
+          "const": true
+        }
+      }
+    }
+  }
+}

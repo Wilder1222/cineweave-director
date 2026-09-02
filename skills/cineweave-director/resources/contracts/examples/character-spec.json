@@ -1,0 +1,374 @@
+{
+  "kind": "cineweave_codex_character_spec",
+  "worldId": "world-cloud-dynasty",
+  "characterId": "char.shen-yanqiu",
+  "name": "沈砚秋",
+  "version": 1,
+  "status": "draft",
+  "morphologySpecRef": {
+    "kind": "cineweave_codex_character_morphology_spec",
+    "id": "morphology.shen-yanqiu.v1",
+    "version": 1,
+    "contentHash": "sha256:abababababababababababababababababababababababababababababababab"
+  },
+  "collection": "cloud-dynasty-main-cast",
+  "tags": [
+    "character",
+    "chinese-fantasy",
+    "controlled-performance"
+  ],
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.0.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-19T12:00:00.000Z"
+  },
+  "narrativeCore": {
+    "role": "天界巡察使",
+    "oneLineConcept": "一名极度克制的天界监察女官，害怕自己终有一天会像父亲一样失控。",
+    "coreDesire": "维持秩序并证明自己能够控制命运。",
+    "coreFear": "情绪与力量失控，重蹈父亲的命运。",
+    "publicMask": "冷静、严格、疏离，几乎不在公开场合暴露情绪。",
+    "privateContradiction": "嘴上否认自己关心别人，却会本能地用身体保护弱者。",
+    "backstorySignals": [
+      "长期监察训练留下的右侧惯用痕迹"
+    ],
+    "behavioralPrinciples": [
+      "先观察危险来源，再决定是否行动",
+      "情绪越强，外部动作反而越少"
+    ]
+  },
+  "identityCore": {
+    "apparentAge": "27 岁左右",
+    "immutableAnchors": [
+      {
+        "anchorId": "face.shape",
+        "type": "face",
+        "description": "偏长、方中带圆的鹅蛋脸，下颌转折清晰，下巴短而略平。",
+        "priority": "critical",
+        "visibleAt": [
+          "closeup",
+          "medium"
+        ]
+      },
+      {
+        "anchorId": "eyes.horizontal",
+        "type": "face",
+        "description": "细长内双眼，眼尾接近水平，右眼上眼睑折痕略深。",
+        "priority": "critical",
+        "visibleAt": [
+          "closeup",
+          "medium"
+        ]
+      },
+      {
+        "anchorId": "mouth.asymmetry",
+        "type": "surface",
+        "description": "左嘴角天然略高于右侧，放松时仍可观察。",
+        "priority": "critical",
+        "visibleAt": [
+          "closeup"
+        ]
+      },
+      {
+        "anchorId": "body.silhouette",
+        "type": "silhouette",
+        "description": "高腰、前臂略长、肩略宽于胯，站立时右腿承重。",
+        "priority": "critical",
+        "visibleAt": [
+          "medium",
+          "fullbody",
+          "wide",
+          "silhouette"
+        ]
+      }
+    ],
+    "face": {
+      "geometry": [
+        "颧骨较高但不外扩",
+        "下颌线清晰但宽度中等",
+        "下巴短而略平"
+      ],
+      "features": [
+        "鼻梁直而鼻尖略钝",
+        "平直眉尾部微向下",
+        "上唇偏薄"
+      ],
+      "surface": [
+        "暖调偏白肤色",
+        "鼻梁附近有非常淡的雀斑",
+        "保留自然毛孔和唇纹"
+      ],
+      "asymmetry": [
+        "左眉略低",
+        "右眼上眼睑折痕略深",
+        "左嘴角略高"
+      ]
+    },
+    "body": {
+      "headToBodyRatio": 7.7,
+      "silhouette": "高挑但不纤弱，胸腔窄而深，腰线偏高。",
+      "proportions": [
+        "肩略宽于胯",
+        "前臂和手指略长",
+        "小腿比例略长但不过度时装化"
+      ],
+      "centerOfGravity": "静止时偏右且稳定，受威胁时整体降低而不上身后仰。",
+      "dominantSide": "right",
+      "muscleAndFatDistribution": [
+        "肩背、前臂与核心有长期训练形成的轻微肌肉结构"
+      ],
+      "occupationalTraces": [
+        "右肩与右前臂略强",
+        "握剑位置有轻微手茧"
+      ]
+    },
+    "surfaceProfile": {
+      "baselineComplexion": {
+        "toneRange": "light warm-neutral human complexion",
+        "undertone": "neutral peach with restrained warmth"
+      },
+      "regionalVariation": [
+        {
+          "region": "eyelids",
+          "behavior": "Slightly warmer than the outer cheeks."
+        },
+        {
+          "region": "nose",
+          "behavior": "Subtle natural warmth around the nose tip and alar region."
+        },
+        {
+          "region": "under_eye",
+          "behavior": "Age-appropriate tonal transition remains visible."
+        },
+        {
+          "region": "neck",
+          "behavior": "Naturally a little cooler and darker than central facial planes."
+        }
+      ],
+      "microTexture": {
+        "poreVisibility": "subtle",
+        "peachFuzz": "natural",
+        "underEyeTexture": "preserved",
+        "fineLines": "age_appropriate"
+      },
+      "eyes": {
+        "scleraTone": "natural off-white rather than pure white",
+        "tearLineMoisture": "natural"
+      },
+      "lips": {
+        "naturalLines": true,
+        "edgeCharacter": "Soft natural edge with mild left-right asymmetry."
+      },
+      "persistentMarks": [
+        "Very faint freckles near the nasal bridge."
+      ],
+      "forbidden": [
+        "Porcelain uniformity",
+        "Beauty-filter smoothing",
+        "Lighting or makeup encoded as identity"
+      ],
+      "calibration": {
+        "providerNeutral": true,
+        "notBiometric": true,
+        "excludesMakeup": true,
+        "excludesLighting": true
+      }
+    },
+    "forbiddenChanges": [
+      "不得改成尖下巴",
+      "不得生成大圆眼",
+      "不得改变头身比和肩胯关系",
+      "不得完全消除面部自然不对称"
+    ]
+  },
+  "appearanceLayers": {
+    "locked": [
+      "faceGeometry",
+      "bodyProportion",
+      "naturalAsymmetry",
+      "dominantSide"
+    ],
+    "controlledVariables": [
+      {
+        "variableId": "wardrobe.state",
+        "type": "wardrobe",
+        "label": "服装状态",
+        "defaultState": "月白巡察常服",
+        "allowedValues": [
+          "月白巡察常服",
+          "正式朝服",
+          "轻装战斗服",
+          "受伤后的残损状态"
+        ],
+        "constraints": [
+          "服装不得改变肩胯比例判断",
+          "保留腰线位置和右侧佩剑习惯"
+        ]
+      },
+      {
+        "variableId": "hair.state",
+        "type": "hair",
+        "label": "发型状态",
+        "defaultState": "黑色长发简洁束起",
+        "allowedValues": [
+          "简洁束发",
+          "正式高束",
+          "战斗后散落",
+          "雨湿贴面"
+        ],
+        "constraints": [
+          "发型不得成为唯一身份锚点",
+          "不得遮挡全部脸部关键结构"
+        ]
+      }
+    ]
+  },
+  "motionFingerprint": {
+    "baselinePosture": "身体直立，下巴微收，右腿承重，肩膀几乎没有多余晃动。",
+    "gazeSequence": "先移动眼睛，再转头，最后才转动身体。",
+    "walk": "沿直线行走，步幅中等，脚步轻，手臂摆动极小。",
+    "turn": "先调整脚部重心，再由骨盆与胸腔整体转向。",
+    "signatureGestures": [
+      "思考时拇指只按压一次剑格",
+      "保护他人时无意识站到危险与对方之间"
+    ],
+    "tempo": "measured",
+    "amplitude": "restrained",
+    "weightQuality": "precise",
+    "forbiddenMotions": [
+      "频繁夸张手势",
+      "轻佻跳跃式步态",
+      "说话时大幅摆动上半身"
+    ]
+  },
+  "behaviorModel": {
+    "baselineState": "controlled",
+    "emotionalLeakage": [
+      {
+        "emotionId": "emotion.anger",
+        "emotion": "愤怒",
+        "observableCues": [
+          "下眼睑收紧",
+          "下颌绷紧",
+          "语速下降而不是提高音量"
+        ],
+        "intensityRange": {
+          "min": 0.15,
+          "max": 0.75
+        },
+        "concealmentBehavior": "强度越高，面部动作越少，动作之间的停顿越明显。"
+      },
+      {
+        "emotionId": "emotion.fear",
+        "emotion": "恐惧",
+        "observableCues": [
+          "脚尖转向出口",
+          "短暂屏息",
+          "目光先锁定危险者双手"
+        ],
+        "intensityRange": {
+          "min": 0.1,
+          "max": 0.7
+        },
+        "concealmentBehavior": "上半身保持稳定，不通过夸张后退暴露恐惧。"
+      }
+    ],
+    "states": [
+      {
+        "stateId": "controlled",
+        "label": "受控基线",
+        "triggers": [
+          "无直接危险",
+          "处于公开职责场合"
+        ],
+        "objectivePattern": "保持秩序并限制自身情绪泄漏。",
+        "observableCues": {
+          "posture": "直立，下巴微收，右腿承重。",
+          "gaze": "观察对方手部、出口和空间关系后才看向面部。",
+          "face": "下眼睑张力适中，嘴角不主动上扬。",
+          "hands": "一只手自然垂下，另一只手保持在腰间可控位置。",
+          "breath": "低幅度稳定呼吸。",
+          "voice": "语速偏慢，句子短，很少使用语气词。"
+        },
+        "forbiddenResponses": [
+          "无动机的微笑",
+          "频繁眨眼和摆手"
+        ],
+        "exitConditions": [
+          "出现明确威胁",
+          "看到弱者受伤",
+          "私人关系触发失控风险"
+        ]
+      },
+      {
+        "stateId": "threatened",
+        "label": "感知威胁",
+        "triggers": [
+          "对方抬起武器",
+          "退路被切断"
+        ],
+        "objectivePattern": "保护身后目标，同时避免过早暴露自己的攻击意图。",
+        "observableCues": {
+          "posture": "左脚后撤半步，重心降低，上半身仍保持直立。",
+          "gaze": "先锁定对方双手，再确认出口。",
+          "face": "下眼睑收紧，下颌轻微绷紧。",
+          "hands": "右手靠近剑柄但不立刻拔出。",
+          "breath": "触发瞬间短暂停顿，随后恢复低幅度呼吸。",
+          "voice": "音量不升高，语速略慢。"
+        },
+        "forbiddenResponses": [
+          "夸张睁眼",
+          "整个人向后倒退",
+          "无准备直接拔剑"
+        ],
+        "exitConditions": [
+          "威胁解除",
+          "攻击正式开始",
+          "被保护者脱离危险区域"
+        ]
+      }
+    ]
+  },
+  "referencePolicy": {
+    "requiredViews": [
+      "neutral_front",
+      "three_quarter_left",
+      "three_quarter_right",
+      "profile_left",
+      "full_body_front",
+      "full_body_side",
+      "signature_pose",
+      "expression_sheet"
+    ],
+    "identityObservationIds": [],
+    "referenceLock": "draft",
+    "notes": "先锁定中性脸、全身比例和标志性站姿，再扩展服装、表情与动作参考。"
+  },
+  "rights": {
+    "sourceClass": "fictional_original",
+    "likenessConsent": "not_applicable",
+    "redistribution": "allowed",
+    "notes": "角色为原创虚构人物；后续若引入真人参考，应重新记录肖像授权状态。"
+  },
+  "validation": {
+    "recognizableWithoutWardrobe": "pending",
+    "silhouetteDistinct": "pending",
+    "crossExpressionStable": "pending",
+    "crossShotStable": "pending",
+    "dominantSideStable": "pending",
+    "anchorCoverage": "pending",
+    "notes": "这是契约示例，不是已通过真实生成验证的角色。"
+  },
+  "provenance": {
+    "source": "codex_authored",
+    "createdAt": "2026-08-19T12:00:00.000Z",
+    "updatedAt": "2026-08-19T12:00:00.000Z",
+    "changeLog": [
+      "v1: establish narrative core, identity anchors, body rhythm, motion fingerprint and behavior states"
+    ]
+  },
+  "contractVersion": "2.0.0"
+}

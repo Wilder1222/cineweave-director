@@ -1,0 +1,1242 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cineweave.dev/contracts/action-sequence-spec.schema.json",
+  "title": "CineWeave Director Action Sequence Specification",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "actionSequenceId",
+    "version",
+    "skillReceipt",
+    "purpose",
+    "bindings",
+    "participants",
+    "geography",
+    "beats",
+    "physicalChecks",
+    "coverageRequirements",
+    "continuityTracks",
+    "riskRegister",
+    "handoff",
+    "planningBoundary",
+    "validation",
+    "provenance"
+  ],
+  "properties": {
+    "kind": {
+      "const": "cineweave_codex_action_sequence_spec"
+    },
+    "contractVersion": {
+      "const": "2.5.0"
+    },
+    "actionSequenceId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "scriptSceneRef": {
+      "$ref": "common.schema.json#/$defs/contractRef"
+    },
+    "storyBeatIds": {
+      "type": "array",
+      "maxItems": 16,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "common.schema.json#/$defs/identifier"
+      }
+    },
+    "skillReceipt": {
+      "$ref": "common.schema.json#/$defs/skillReceipt"
+    },
+    "purpose": {
+      "$ref": "#/$defs/purpose"
+    },
+    "bindings": {
+      "$ref": "#/$defs/bindings"
+    },
+    "participants": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "items": {
+        "$ref": "#/$defs/participant"
+      }
+    },
+    "weaponProfiles": {
+      "type": "array",
+      "maxItems": 24,
+      "items": {
+        "$ref": "#/$defs/weaponProfile"
+      }
+    },
+    "geography": {
+      "$ref": "#/$defs/geography"
+    },
+    "beats": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 32,
+      "items": {
+        "$ref": "#/$defs/actionBeat"
+      }
+    },
+    "physicalChecks": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 48,
+      "items": {
+        "$ref": "#/$defs/physicalCheck"
+      }
+    },
+    "coverageRequirements": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 24,
+      "items": {
+        "$ref": "#/$defs/coverageRequirement"
+      }
+    },
+    "continuityTracks": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 48,
+      "items": {
+        "$ref": "#/$defs/continuityTrack"
+      }
+    },
+    "riskRegister": {
+      "type": "array",
+      "maxItems": 32,
+      "items": {
+        "$ref": "#/$defs/risk"
+      }
+    },
+    "handoff": {
+      "$ref": "#/$defs/handoff"
+    },
+    "promptHandoff": {
+      "$ref": "#/$defs/actionPromptHandoff"
+    },
+    "planningBoundary": {
+      "$ref": "#/$defs/planningBoundary"
+    },
+    "validation": {
+      "$ref": "#/$defs/validation"
+    },
+    "provenance": {
+      "$ref": "common.schema.json#/$defs/provenance"
+    }
+  },
+  "$defs": {
+    "boundedString": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1200
+    },
+    "optionalStrings": {
+      "type": "array",
+      "maxItems": 32,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1600
+      }
+    },
+    "identifierList": {
+      "type": "array",
+      "maxItems": 32,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "common.schema.json#/$defs/identifier"
+      }
+    },
+    "purpose": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dramaticFunction",
+        "audienceShift",
+        "readableAction",
+        "entryState",
+        "exitState"
+      ],
+      "properties": {
+        "dramaticFunction": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "audienceShift": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "readableAction": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "entryState": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "exitState": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "stakes": {
+          "$ref": "#/$defs/boundedString"
+        }
+      }
+    },
+    "bindings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "scene"
+      ],
+      "properties": {
+        "scene": {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        "interactionConstraints": {
+          "type": "array",
+          "maxItems": 24,
+          "items": {
+            "$ref": "common.schema.json#/$defs/contractRef"
+          }
+        }
+      }
+    },
+    "participant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "participantId",
+        "characterBindingRef",
+        "sequenceRole",
+        "entryZoneId",
+        "entryFacing",
+        "exitZoneId",
+        "exitFacing",
+        "motionFingerprintUse",
+        "visibilityPriority"
+      ],
+      "properties": {
+        "participantId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "characterBindingRef": {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        "performanceTimelineRef": {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        "sequenceRole": {
+          "enum": [
+            "protagonist",
+            "opponent",
+            "protected",
+            "pursuer",
+            "fleeing",
+            "rescuer",
+            "bystander",
+            "ensemble",
+            "other"
+          ]
+        },
+        "entryZoneId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "entryFacing": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "exitZoneId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "exitFacing": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "motionFingerprintUse": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "visibilityPriority": {
+          "enum": [
+            "primary",
+            "secondary",
+            "context",
+            "background"
+          ]
+        }
+      }
+    },
+    "weaponProfile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "weaponId",
+        "ownerParticipantId",
+        "propRef",
+        "name",
+        "type",
+        "characteristics",
+        "combatFunction",
+        "initialState",
+        "continuityRule"
+      ],
+      "properties": {
+        "weaponId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "ownerParticipantId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "propRef": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "type": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "characteristics": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 600
+          }
+        },
+        "visualSignature": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "combatFunction": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "initialState": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "continuityRule": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "sourceBasis": {
+          "enum": [
+            "scene_prop",
+            "character_binding",
+            "declared_brief",
+            "unknown"
+          ]
+        }
+      }
+    },
+    "movementPath": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pathRef",
+        "fromZoneId",
+        "toZoneId",
+        "direction",
+        "use"
+      ],
+      "properties": {
+        "pathRef": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "fromZoneId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "toZoneId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "direction": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "use": {
+          "$ref": "#/$defs/boundedString"
+        }
+      }
+    },
+    "environmentUse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "anchorRef",
+        "beatIds",
+        "actionUse",
+        "constraintRefs"
+      ],
+      "properties": {
+        "anchorRef": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "beatIds": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "actionUse": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "constraintRefs": {
+          "$ref": "#/$defs/identifierList"
+        }
+      }
+    },
+    "geography": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "activeZoneIds",
+        "movementPaths",
+        "axisPolicy",
+        "environmentUses",
+        "forbiddenSpatialChanges"
+      ],
+      "properties": {
+        "activeZoneIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 24,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/identifier"
+          }
+        },
+        "movementPaths": {
+          "type": "array",
+          "maxItems": 24,
+          "items": {
+            "$ref": "#/$defs/movementPath"
+          }
+        },
+        "axisPolicy": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "environmentUses": {
+          "type": "array",
+          "maxItems": 32,
+          "items": {
+            "$ref": "#/$defs/environmentUse"
+          }
+        },
+        "forbiddenSpatialChanges": {
+          "$ref": "common.schema.json#/$defs/stringList"
+        }
+      }
+    },
+    "actionEvent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "eventId",
+        "participantId",
+        "observableAction",
+        "fromZoneId",
+        "toZoneId",
+        "supportAndWeight",
+        "resultingState"
+      ],
+      "properties": {
+        "eventId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "participantId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "observableAction": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "fromZoneId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "toZoneId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "targetRef": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "propRef": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "weaponRef": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "techniqueName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "techniqueType": {
+          "enum": [
+            "strike",
+            "thrust",
+            "cut",
+            "sweep",
+            "parry",
+            "block",
+            "bind",
+            "feint",
+            "evade",
+            "grapple",
+            "throw",
+            "disarm",
+            "draw",
+            "sheathe",
+            "reposition",
+            "recover",
+            "unarmed",
+            "other"
+          ]
+        },
+        "techniqueMechanics": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "trajectory": {
+          "$ref": "#/$defs/trajectory"
+        },
+        "exchangeId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "exchangeRole": {
+          "enum": [
+            "initiate",
+            "defend",
+            "counter",
+            "feint",
+            "reposition",
+            "reset",
+            "support",
+            "other"
+          ]
+        },
+        "responseToEventId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "contact": {
+          "$ref": "#/$defs/contact"
+        },
+        "intendedOutcome": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "constraintRefs": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "performancePhaseIds": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "supportAndWeight": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "resultingState": {
+          "$ref": "#/$defs/boundedString"
+        }
+      }
+    },
+    "actionBeat": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "beatId",
+        "order",
+        "phase",
+        "trigger",
+        "dramaticFunction",
+        "attentionTarget",
+        "rhythm",
+        "actions",
+        "coverageRequirementIds",
+        "riskIds",
+        "resultingState"
+      ],
+      "properties": {
+        "beatId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "order": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "phase": {
+          "enum": [
+            "setup",
+            "initiation",
+            "exchange",
+            "reversal",
+            "choice",
+            "escape",
+            "aftermath",
+            "transition"
+          ]
+        },
+        "trigger": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "dramaticFunction": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "attentionTarget": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "rhythm": {
+          "enum": [
+            "hold",
+            "compress",
+            "accelerate",
+            "decelerate",
+            "impact_pause",
+            "release"
+          ]
+        },
+        "actions": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 16,
+          "items": {
+            "$ref": "#/$defs/actionEvent"
+          }
+        },
+        "exchange": {
+          "$ref": "#/$defs/exchange"
+        },
+        "coverageRequirementIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/identifier"
+          }
+        },
+        "riskIds": {
+          "$ref": "#/$defs/identifierList"
+        },
+        "resultingState": {
+          "$ref": "#/$defs/boundedString"
+        }
+      }
+    },
+    "trajectory": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "startPoint",
+        "pathType",
+        "path",
+        "endPoint",
+        "screenDirection",
+        "depthDirection",
+        "heightBand",
+        "speedAndRhythm",
+        "cameraRead"
+      ],
+      "properties": {
+        "startPoint": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "pathType": {
+          "enum": [
+            "straight",
+            "arc",
+            "diagonal",
+            "vertical",
+            "horizontal",
+            "circular",
+            "s_curve",
+            "step_and_turn",
+            "none",
+            "other"
+          ]
+        },
+        "path": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "endPoint": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "screenDirection": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "depthDirection": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "heightBand": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "speedAndRhythm": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "cameraRead": {
+          "$ref": "#/$defs/boundedString"
+        }
+      }
+    },
+    "contact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "contactPoint",
+        "effect"
+      ],
+      "properties": {
+        "state": {
+          "enum": [
+            "no_contact",
+            "near_miss",
+            "weapon_on_weapon",
+            "weapon_on_body",
+            "body_on_body",
+            "grip_or_control",
+            "prop_contact",
+            "unclear"
+          ]
+        },
+        "contactPoint": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "effect": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "separation": {
+          "$ref": "#/$defs/boundedString"
+        }
+      }
+    },
+    "exchangeStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "step",
+        "eventId",
+        "participantId",
+        "role",
+        "respondsTo",
+        "intent",
+        "resultingState"
+      ],
+      "properties": {
+        "step": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "eventId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "participantId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "role": {
+          "enum": [
+            "initiate",
+            "defend",
+            "counter",
+            "feint",
+            "reposition",
+            "reset",
+            "support",
+            "other"
+          ]
+        },
+        "respondsTo": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "intent": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "resultingState": {
+          "$ref": "#/$defs/boundedString"
+        }
+      }
+    },
+    "exchange": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "exchangeId",
+        "participantIds",
+        "initiativeAtStart",
+        "sequence",
+        "contactOutcome",
+        "positionalOutcome",
+        "initiativeAtEnd"
+      ],
+      "properties": {
+        "exchangeId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "participantIds": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 8,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/identifier"
+          }
+        },
+        "initiativeAtStart": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "sequence": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 16,
+          "items": {
+            "$ref": "#/$defs/exchangeStep"
+          }
+        },
+        "contactOutcome": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "positionalOutcome": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "initiativeAtEnd": {
+          "$ref": "#/$defs/boundedString"
+        }
+      }
+    },
+    "physicalCheck": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "checkId",
+        "beatIds",
+        "category",
+        "requirement",
+        "basis",
+        "status"
+      ],
+      "properties": {
+        "checkId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "beatIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 16,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/identifier"
+          }
+        },
+        "category": {
+          "enum": [
+            "balance",
+            "reach",
+            "clearance",
+            "support",
+            "momentum",
+            "contact",
+            "prop_handling",
+            "fall",
+            "vehicle",
+            "water",
+            "fire",
+            "crowd",
+            "other"
+          ]
+        },
+        "requirement": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "basis": {
+          "enum": [
+            "scene_constraint",
+            "character_binding",
+            "declared_assumption",
+            "specialist_evidence"
+          ]
+        },
+        "basisRef": {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        "status": {
+          "enum": [
+            "design_resolved",
+            "assumption",
+            "unresolved",
+            "qualified_review_required"
+          ]
+        }
+      }
+    },
+    "coverageRequirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "coverageId",
+        "beatIds",
+        "purpose",
+        "mustSee",
+        "mayOcclude",
+        "axisIntent",
+        "framingPriority",
+        "movementMotivation",
+        "cutMotivation",
+        "stableHandoffState"
+      ],
+      "properties": {
+        "coverageId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "beatIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 16,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/identifier"
+          }
+        },
+        "purpose": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "mustSee": {
+          "$ref": "common.schema.json#/$defs/stringList"
+        },
+        "mayOcclude": {
+          "$ref": "#/$defs/optionalStrings"
+        },
+        "axisIntent": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "framingPriority": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "movementMotivation": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "cutMotivation": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "stableHandoffState": {
+          "$ref": "#/$defs/boundedString"
+        }
+      }
+    },
+    "stateChange": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "beatId",
+        "state"
+      ],
+      "properties": {
+        "beatId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "state": {
+          "$ref": "#/$defs/boundedString"
+        }
+      }
+    },
+    "continuityTrack": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "trackId",
+        "entityRef",
+        "stateType",
+        "entryState",
+        "changes",
+        "exitState",
+        "handoffRule"
+      ],
+      "properties": {
+        "trackId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "entityRef": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "stateType": {
+          "enum": [
+            "position",
+            "facing",
+            "hand_occupancy",
+            "prop_state",
+            "injury",
+            "wardrobe_damage",
+            "environment_damage",
+            "energy",
+            "visibility",
+            "other"
+          ]
+        },
+        "entryState": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "changes": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 32,
+          "items": {
+            "$ref": "#/$defs/stateChange"
+          }
+        },
+        "exitState": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "handoffRule": {
+          "$ref": "#/$defs/boundedString"
+        }
+      }
+    },
+    "risk": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "riskId",
+        "beatIds",
+        "category",
+        "severity",
+        "creativeIntent",
+        "depictionStrategy",
+        "requiresQualifiedReview",
+        "status"
+      ],
+      "properties": {
+        "riskId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "beatIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 16,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/identifier"
+          }
+        },
+        "category": {
+          "enum": [
+            "weapon_contact",
+            "fall_or_height",
+            "vehicle",
+            "water",
+            "fire_or_heat",
+            "breakaway",
+            "crowd",
+            "animal",
+            "restricted_visibility",
+            "other"
+          ]
+        },
+        "severity": {
+          "enum": [
+            "low",
+            "moderate",
+            "high",
+            "critical"
+          ]
+        },
+        "creativeIntent": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "depictionStrategy": {
+          "enum": [
+            "performance_only",
+            "camera_cheat",
+            "edit_cheat",
+            "prop_or_vfx_simulation",
+            "qualified_specialist_required"
+          ]
+        },
+        "requiresQualifiedReview": {
+          "type": "boolean"
+        },
+        "status": {
+          "enum": [
+            "flagged",
+            "requires_review",
+            "not_applicable"
+          ]
+        }
+      }
+    },
+    "actionPromptHandoff": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "orderedBlocks",
+        "selectedBeatRule",
+        "mustInclude",
+        "mustAvoid"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "general_action",
+            "fight_specific"
+          ]
+        },
+        "orderedBlocks": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 10,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "dramatic_purpose",
+              "spatial_geography",
+              "weapon_profile",
+              "technique",
+              "trajectory",
+              "exchange",
+              "contact_result",
+              "continuity",
+              "camera_read"
+            ]
+          }
+        },
+        "selectedBeatRule": {
+          "$ref": "#/$defs/boundedString"
+        },
+        "mustInclude": {
+          "$ref": "common.schema.json#/$defs/stringList"
+        },
+        "mustAvoid": {
+          "$ref": "#/$defs/optionalStrings"
+        }
+      }
+    },
+    "handoff": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "shotBreakdownReady",
+        "requiredDownstreamContracts",
+        "mustPreserve",
+        "mayVary",
+        "blockers",
+        "unresolved"
+      ],
+      "properties": {
+        "shotBreakdownReady": {
+          "type": "boolean"
+        },
+        "requiredDownstreamContracts": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 8,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "InteractionConstraintSet",
+              "PerformanceTimeline",
+              "ShotSpec",
+              "TemporalSpec",
+              "Storyboard",
+              "ProductionReview"
+            ]
+          }
+        },
+        "mustPreserve": {
+          "$ref": "common.schema.json#/$defs/stringList"
+        },
+        "mayVary": {
+          "$ref": "#/$defs/optionalStrings"
+        },
+        "blockers": {
+          "$ref": "#/$defs/optionalStrings"
+        },
+        "unresolved": {
+          "$ref": "#/$defs/optionalStrings"
+        }
+      }
+    },
+    "planningBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "generatesMedia",
+        "providerNeutral",
+        "constitutesStuntSafetyApproval",
+        "qualifiedReviewRequired"
+      ],
+      "properties": {
+        "generatesMedia": {
+          "const": false
+        },
+        "providerNeutral": {
+          "const": true
+        },
+        "constitutesStuntSafetyApproval": {
+          "const": false
+        },
+        "qualifiedReviewRequired": {
+          "type": "boolean"
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "exactBindings",
+        "beatsOrdered",
+        "participantRefsResolved",
+        "sceneZonesResolved",
+        "constraintRefsScoped",
+        "continuityClosed",
+        "coverageLinked",
+        "cameraDetailsDeferred",
+        "performanceNotRewritten",
+        "storyCausalityNotInvented",
+        "riskVisibilityExplicit",
+        "providerNeutral"
+      ],
+      "properties": {
+        "exactBindings": {
+          "const": true
+        },
+        "beatsOrdered": {
+          "const": true
+        },
+        "participantRefsResolved": {
+          "const": true
+        },
+        "sceneZonesResolved": {
+          "const": true
+        },
+        "constraintRefsScoped": {
+          "const": true
+        },
+        "continuityClosed": {
+          "const": true
+        },
+        "coverageLinked": {
+          "const": true
+        },
+        "cameraDetailsDeferred": {
+          "const": true
+        },
+        "performanceNotRewritten": {
+          "const": true
+        },
+        "storyCausalityNotInvented": {
+          "const": true
+        },
+        "riskVisibilityExplicit": {
+          "const": true
+        },
+        "providerNeutral": {
+          "const": true
+        }
+      }
+    }
+  }
+}

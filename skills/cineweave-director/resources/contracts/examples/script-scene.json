@@ -1,0 +1,89 @@
+{
+  "kind": "cineweave_codex_script_scene",
+  "contractVersion": "2.2.0",
+  "scriptSceneId": "script-scene.rain-courtyard-confrontation",
+  "version": 1,
+  "storyRef": {
+    "kind": "cineweave_codex_story_brief",
+    "id": "story.rain-courtyard",
+    "version": 1,
+    "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "beatRefs": [
+    "beat.pressure",
+    "beat.choice"
+  ],
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.0.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-21T01:10:00.000Z"
+  },
+  "slugline": {
+    "interiorExterior": "EXT",
+    "location": "医馆后院",
+    "time": "雨后黄昏"
+  },
+  "scenePurpose": "让女医停止用解释控制结果，实际把证据和决定权交还给故人。",
+  "participants": [
+    {
+      "participantId": "character.healer",
+      "role": "女医",
+      "want": "让对方安全离开",
+      "tactic": "以冷静的事实压住私人情绪",
+      "subtext": "她害怕对方知道真相后仍然选择离开"
+    },
+    {
+      "participantId": "character.returned-friend",
+      "role": "故人",
+      "want": "确认自己是否再次被替代做决定",
+      "tactic": "拒绝讨论动机，只追问具体事实",
+      "subtext": "他更在意她是否愿意信任自己，而非当年的答案"
+    }
+  ],
+  "entryState": "两人保持礼貌距离；女医仍把关键证据藏在药箱夹层。",
+  "objective": "女医必须决定是否交出证据。",
+  "obstacle": "交出证据意味着她无法再控制对方是否留下。",
+  "beats": [
+    {
+      "order": 1,
+      "type": "dialogue",
+      "speakerId": "character.returned-friend",
+      "action": "他把普通旧物放回石桌。",
+      "dialogue": "我要的不是这个。",
+      "subtext": "我知道你仍在替我决定。",
+      "turn": "她的敷衍方案失败。"
+    },
+    {
+      "order": 2,
+      "type": "silence",
+      "action": "她的拇指停在药箱锁扣上，没有立即打开。",
+      "subtext": "她第一次承认真正阻止自己的不是危险，而是失去。",
+      "turn": "沉默替代辩解。"
+    },
+    {
+      "order": 3,
+      "type": "decision",
+      "action": "她打开夹层，把密封证据推到两人之间，手没有收回。",
+      "dialogue": "你看完以后，留下还是走，都由你。",
+      "subtext": "她放弃对结果的控制。",
+      "turn": "关系获得重新选择的可能。"
+    }
+  ],
+  "exitState": "证据位于两人之间；对方尚未触碰，女医不再撤回。",
+  "continuity": [
+    "雨已经停，但屋檐仍滴水",
+    "证据封口完整",
+    "药箱放在女医右手边"
+  ],
+  "productionNotes": [
+    "对白保持短句，主要变化由停顿、手部行为和物件位置承担。"
+  ],
+  "validation": {
+    "sceneChangesState": true,
+    "dialogueHasSubtext": true,
+    "actionIsPlayable": true,
+    "noCameraDirections": true
+  }
+}

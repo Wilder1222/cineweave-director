@@ -1,0 +1,846 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cineweave.dev/contracts/control-benchmark-review.schema.json",
+  "title": "CineWeave Control Benchmark Review",
+  "description": "Provider-neutral review of observed candidate evidence. It records evaluation only and never claims generation, approval, or release.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "reviewId",
+    "benchmarkRef",
+    "capabilityProfileRef",
+    "status",
+    "mediaEvidence",
+    "caseResults",
+    "humanReview",
+    "decision",
+    "planningBoundary",
+    "validation",
+    "provenance"
+  ],
+  "properties": {
+    "kind": {
+      "const": "cineweave_codex_control_benchmark_review"
+    },
+    "contractVersion": {
+      "const": "2.0.0"
+    },
+    "reviewId": {
+      "$ref": "#/$defs/lowerId"
+    },
+    "benchmarkRef": {
+      "$ref": "#/$defs/benchmarkRef"
+    },
+    "capabilityProfileRef": {
+      "$ref": "#/$defs/capabilityProfileRef"
+    },
+    "status": {
+      "enum": [
+        "planned",
+        "in_review",
+        "completed"
+      ]
+    },
+    "mediaEvidence": {
+      "type": "array",
+      "maxItems": 256,
+      "items": {
+        "$ref": "#/$defs/mediaEvidence"
+      }
+    },
+    "caseResults": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 256,
+      "items": {
+        "$ref": "#/$defs/caseResult"
+      }
+    },
+    "humanReview": {
+      "$ref": "#/$defs/humanReview"
+    },
+    "decision": {
+      "$ref": "#/$defs/decision"
+    },
+    "planningBoundary": {
+      "$ref": "#/$defs/planningBoundary"
+    },
+    "validation": {
+      "$ref": "#/$defs/validation"
+    },
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "planned"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "mediaEvidence": {
+            "maxItems": 0
+          },
+          "humanReview": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "not_started",
+                  "planned"
+                ]
+              }
+            }
+          },
+          "decision": {
+            "properties": {
+              "overallStatus": {
+                "const": "planned"
+              },
+              "mayAdvanceToApproval": {
+                "const": false
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "completed"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "mediaEvidence": {
+            "minItems": 1
+          },
+          "humanReview": {
+            "properties": {
+              "status": {
+                "const": "completed"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "lowerId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,159}$"
+    },
+    "stableId": {
+      "type": "string",
+      "pattern": "^[a-zA-Z][a-zA-Z0-9._-]{1,159}$"
+    },
+    "contentHash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-fA-F]{64}$"
+    },
+    "observationId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "not": {
+        "pattern": "(?:https?:|file:|[\\\\/?#])"
+      }
+    },
+    "exactRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "kind",
+        "id",
+        "version",
+        "contentHash"
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "id": {
+          "$ref": "#/$defs/lowerId"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "contentHash": {
+          "$ref": "#/$defs/contentHash"
+        }
+      }
+    },
+    "benchmarkRef": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/exactRef"
+        },
+        {
+          "properties": {
+            "kind": {
+              "const": "cineweave_codex_control_benchmark"
+            }
+          }
+        }
+      ]
+    },
+    "capabilityProfileRef": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/exactRef"
+        },
+        {
+          "properties": {
+            "kind": {
+              "const": "cineweave_codex_capability_profile"
+            }
+          }
+        }
+      ]
+    },
+    "mediaEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mediaId",
+        "candidateObservationIds"
+      ],
+      "properties": {
+        "mediaId": {
+          "$ref": "#/$defs/stableId"
+        },
+        "candidateObservationIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 48,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/observationId"
+          }
+        }
+      }
+    },
+    "caseResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "caseId",
+        "status",
+        "reviewedMediaIds",
+        "findings",
+        "metricResults",
+        "notes"
+      ],
+      "properties": {
+        "caseId": {
+          "$ref": "#/$defs/stableId"
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "pass",
+            "warn",
+            "fail",
+            "not_applicable"
+          ]
+        },
+        "reviewedMediaIds": {
+          "type": "array",
+          "maxItems": 64,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/stableId"
+          }
+        },
+        "findings": {
+          "type": "array",
+          "maxItems": 96,
+          "items": {
+            "$ref": "#/$defs/finding"
+          }
+        },
+        "metricResults": {
+          "type": "array",
+          "maxItems": 96,
+          "items": {
+            "$ref": "#/$defs/metricResult"
+          }
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 2400
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "pass",
+                  "warn",
+                  "fail"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "reviewedMediaIds": {
+                "minItems": 1
+              },
+              "findings": {
+                "minItems": 1
+              },
+              "metricResults": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "findingId",
+        "dimensionId",
+        "severity",
+        "status",
+        "owner",
+        "evidenceObservationIds",
+        "evidence"
+      ],
+      "properties": {
+        "findingId": {
+          "$ref": "#/$defs/stableId"
+        },
+        "dimensionId": {
+          "$ref": "#/$defs/stableId"
+        },
+        "severity": {
+          "enum": [
+            "advisory",
+            "important",
+            "blocking"
+          ]
+        },
+        "status": {
+          "enum": [
+            "pass",
+            "warn",
+            "fail",
+            "not_applicable"
+          ]
+        },
+        "owner": {
+          "enum": [
+            "character",
+            "scene",
+            "style",
+            "director",
+            "prompt",
+            "production",
+            "rights"
+          ]
+        },
+        "evidenceObservationIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 48,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/observationId"
+          }
+        },
+        "evidence": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1600
+        },
+        "failureLabels": {
+          "type": "array",
+          "maxItems": 24,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/stableId"
+          }
+        },
+        "smallestRepairVariable": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 320
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "warn",
+                  "fail"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "smallestRepairVariable"
+            ]
+          }
+        }
+      ]
+    },
+    "metricResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "metricId",
+        "status",
+        "method",
+        "value",
+        "evidenceObservationIds"
+      ],
+      "properties": {
+        "metricId": {
+          "$ref": "#/$defs/stableId"
+        },
+        "status": {
+          "enum": [
+            "pass",
+            "warn",
+            "fail",
+            "not_applicable"
+          ]
+        },
+        "method": {
+          "enum": [
+            "rule",
+            "embedding",
+            "pose",
+            "segmentation",
+            "layout",
+            "temporal",
+            "vlm",
+            "human"
+          ]
+        },
+        "value": {
+          "type": [
+            "number",
+            "boolean",
+            "null"
+          ]
+        },
+        "evidenceObservationIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 48,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/observationId"
+          }
+        }
+      }
+    },
+    "humanReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requiredForBlockingFindings",
+        "status",
+        "reviewerCount",
+        "rubric"
+      ],
+      "properties": {
+        "requiredForBlockingFindings": {
+          "const": true
+        },
+        "status": {
+          "enum": [
+            "not_started",
+            "planned",
+            "in_progress",
+            "completed"
+          ]
+        },
+        "reviewerCount": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 12
+        },
+        "rubric": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 32,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1600
+          }
+        },
+        "calibration": {
+          "$ref": "#/$defs/reviewCalibration"
+        },
+        "completedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "completed"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "completedAt"
+            ],
+            "properties": {
+              "reviewerCount": {
+                "minimum": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "reviewCalibration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "protocolId",
+        "status",
+        "independentReviewerCount",
+        "agreementScore",
+        "adjudicationStatus"
+      ],
+      "properties": {
+        "protocolId": {
+          "$ref": "#/$defs/stableId"
+        },
+        "status": {
+          "enum": [
+            "not_started",
+            "planned",
+            "in_progress",
+            "completed"
+          ]
+        },
+        "independentReviewerCount": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 12
+        },
+        "agreementScore": {
+          "type": [
+            "number",
+            "null"
+          ],
+          "minimum": 0,
+          "maximum": 1
+        },
+        "adjudicationStatus": {
+          "enum": [
+            "not_started",
+            "not_required",
+            "required",
+            "completed"
+          ]
+        },
+        "adjudicationNotes": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1600
+        },
+        "pairResults": {
+          "type": "array",
+          "maxItems": 128,
+          "items": {
+            "$ref": "#/$defs/calibrationPairResult"
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "enum": [
+                  "not_started",
+                  "planned"
+                ]
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "independentReviewerCount": {
+                "const": 0
+              },
+              "agreementScore": {
+                "const": null
+              },
+              "adjudicationStatus": {
+                "const": "not_started"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "completed"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "independentReviewerCount": {
+                "minimum": 2
+              },
+              "agreementScore": {
+                "type": "number"
+              },
+              "adjudicationStatus": {
+                "enum": [
+                  "not_required",
+                  "completed"
+                ]
+              }
+            }
+          }
+        }
+      ]
+    },
+    "calibrationPairResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pairId",
+        "caseId",
+        "dimensionId",
+        "leftMediaId",
+        "rightMediaId",
+        "decision",
+        "presentationOrder",
+        "evidenceObservationIds"
+      ],
+      "properties": {
+        "pairId": {
+          "$ref": "#/$defs/stableId"
+        },
+        "caseId": {
+          "$ref": "#/$defs/stableId"
+        },
+        "dimensionId": {
+          "$ref": "#/$defs/stableId"
+        },
+        "leftMediaId": {
+          "$ref": "#/$defs/stableId"
+        },
+        "rightMediaId": {
+          "$ref": "#/$defs/stableId"
+        },
+        "decision": {
+          "enum": [
+            "left",
+            "right",
+            "tie",
+            "not_applicable"
+          ]
+        },
+        "presentationOrder": {
+          "enum": [
+            "left_first",
+            "right_first"
+          ]
+        },
+        "evidenceObservationIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 48,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/observationId"
+          }
+        }
+      }
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "overallStatus",
+        "nextAction",
+        "mayAdvanceToApproval",
+        "blockingFindingIds",
+        "summary"
+      ],
+      "properties": {
+        "overallStatus": {
+          "enum": [
+            "planned",
+            "pass",
+            "warn",
+            "fail"
+          ]
+        },
+        "nextAction": {
+          "enum": [
+            "collect_observed_media",
+            "conduct_human_review",
+            "repair",
+            "retain_candidate"
+          ]
+        },
+        "mayAdvanceToApproval": {
+          "type": "boolean"
+        },
+        "blockingFindingIds": {
+          "type": "array",
+          "maxItems": 96,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/stableId"
+          }
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2400
+        }
+      }
+    },
+    "planningBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "providerNeutral",
+        "generatesMedia",
+        "approvesAssets",
+        "observedMediaRequiredForCompletion"
+      ],
+      "properties": {
+        "providerNeutral": {
+          "const": true
+        },
+        "generatesMedia": {
+          "const": false
+        },
+        "approvesAssets": {
+          "const": false
+        },
+        "observedMediaRequiredForCompletion": {
+          "const": true
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "benchmarkBound",
+        "casesComplete",
+        "exactMediaEvidence",
+        "blockingFailuresBlockAdvancement",
+        "noAttractivenessScore",
+        "noBiometricInference",
+        "oneOwnerPerRepair"
+      ],
+      "properties": {
+        "benchmarkBound": {
+          "const": true
+        },
+        "casesComplete": {
+          "const": true
+        },
+        "exactMediaEvidence": {
+          "const": true
+        },
+        "blockingFailuresBlockAdvancement": {
+          "const": true
+        },
+        "noAttractivenessScore": {
+          "const": true
+        },
+        "noBiometricInference": {
+          "const": true
+        },
+        "oneOwnerPerRepair": {
+          "const": true
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source",
+        "createdAt",
+        "updatedAt",
+        "changeLog"
+      ],
+      "properties": {
+        "source": {
+          "enum": [
+            "user_authored",
+            "codex_authored",
+            "adapted",
+            "imported",
+            "suite_builtin"
+          ]
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "parentId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "changeLog": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 32,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1600
+          }
+        }
+      }
+    }
+  }
+}

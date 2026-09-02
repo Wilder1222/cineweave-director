@@ -1,0 +1,89 @@
+{
+  "$id": "https://cineweave.dev/contracts/repair-plan.schema.json",
+  "title": "CineWeave Single-variable Repair Plan",
+  "description": "One evidence-bound, domain-owned repair that preserves every passing dimension and never claims success before new review.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "contractVersion", "repairId", "version", "status", "sourceReviewRef", "findingId", "domain", "targetRef", "change", "preserve", "acceptanceChecks", "stopCondition", "humanGate", "planningBoundary", "validation", "skillReceipt", "provenance"],
+  "properties": {
+    "kind": { "const": "cineweave_codex_repair_plan" },
+    "contractVersion": { "const": "3.0.0" },
+    "repairId": { "$ref": "common.schema.json#/$defs/identifier" },
+    "version": { "type": "integer", "minimum": 1 },
+    "status": { "enum": ["planned", "blocked", "approved", "rejected", "superseded"] },
+    "sourceReviewRef": { "allOf": [{ "$ref": "common.schema.json#/$defs/contractRef" }, { "properties": { "kind": { "const": "cineweave_codex_creative_review" } } }] },
+    "findingId": { "$ref": "common.schema.json#/$defs/identifier" },
+    "domain": { "enum": ["world", "story", "character", "scene", "style", "reference", "action", "direction", "storyboard", "prompt", "production", "rights"] },
+    "targetRef": { "$ref": "common.schema.json#/$defs/contractRef" },
+    "change": { "$ref": "#/$defs/change" },
+    "preserve": { "$ref": "common.schema.json#/$defs/stringList" },
+    "acceptanceChecks": { "type": "array", "minItems": 1, "maxItems": 24, "items": { "$ref": "#/$defs/acceptanceCheck" } },
+    "stopCondition": { "type": "string", "minLength": 1, "maxLength": 1600 },
+    "humanGate": { "$ref": "#/$defs/humanGate" },
+    "planningBoundary": { "$ref": "#/$defs/planningBoundary" },
+    "validation": { "$ref": "#/$defs/validation" },
+    "skillReceipt": { "$ref": "common.schema.json#/$defs/skillReceipt" },
+    "provenance": { "$ref": "common.schema.json#/$defs/provenance" }
+  },
+  "$defs": {
+    "change": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["variable", "targetPath", "currentState", "targetState", "rationale"],
+      "properties": {
+        "variable": { "type": "string", "minLength": 1, "maxLength": 320 },
+        "targetPath": { "type": "string", "minLength": 1, "maxLength": 480 },
+        "currentState": { "type": "string", "minLength": 1, "maxLength": 1600 },
+        "targetState": { "type": "string", "minLength": 1, "maxLength": 1600 },
+        "rationale": { "type": "string", "minLength": 1, "maxLength": 1600 }
+      }
+    },
+    "acceptanceCheck": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["checkId", "criterion", "expectedEvidence", "status"],
+      "properties": {
+        "checkId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "criterion": { "type": "string", "minLength": 1, "maxLength": 1600 },
+        "expectedEvidence": { "type": "string", "minLength": 1, "maxLength": 1600 },
+        "status": { "const": "pending" }
+      }
+    },
+    "humanGate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "status"],
+      "properties": {
+        "required": { "const": true },
+        "status": { "enum": ["pending", "approved", "rejected"] },
+        "decisionNote": { "type": "string", "maxLength": 1200 }
+      }
+    },
+    "planningBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["providerNeutral", "generatesMedia", "invokesExternalTool", "mutatesTarget", "claimsSuccess"],
+      "properties": {
+        "providerNeutral": { "const": true },
+        "generatesMedia": { "const": false },
+        "invokesExternalTool": { "const": false },
+        "mutatesTarget": { "const": false },
+        "claimsSuccess": { "const": false }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["singleVariable", "singleDomain", "parentImmutable", "evidenceBound", "passingDimensionsPreserved", "checksPending", "noSuccessClaim"],
+      "properties": {
+        "singleVariable": { "const": true },
+        "singleDomain": { "const": true },
+        "parentImmutable": { "const": true },
+        "evidenceBound": { "const": true },
+        "passingDimensionsPreserved": { "const": true },
+        "checksPending": { "const": true },
+        "noSuccessClaim": { "const": true }
+      }
+    }
+  }
+}

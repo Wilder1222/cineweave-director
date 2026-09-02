@@ -1,0 +1,670 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cineweave.dev/contracts/color-pipeline-profile.schema.json",
+  "title": "CineWeave Production Color Pipeline Profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "colorPipelineProfileId",
+    "version",
+    "skillReceipt",
+    "profileStatus",
+    "ocioConfig",
+    "sourceMedia",
+    "referenceSpacePolicy",
+    "outputTargets",
+    "creativeLookPolicy",
+    "planningBoundary",
+    "validation",
+    "provenance"
+  ],
+  "properties": {
+    "kind": {
+      "const": "cineweave_codex_color_pipeline_profile"
+    },
+    "contractVersion": {
+      "const": "2.5.0"
+    },
+    "colorPipelineProfileId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "worldId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "skillReceipt": {
+      "$ref": "common.schema.json#/$defs/skillReceipt"
+    },
+    "profileStatus": {
+      "const": "planned"
+    },
+    "ocioConfig": {
+      "$ref": "#/$defs/ocioConfig"
+    },
+    "sourceMedia": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "$ref": "#/$defs/sourceMediaBinding"
+      }
+    },
+    "referenceSpacePolicy": {
+      "$ref": "#/$defs/referenceSpacePolicy"
+    },
+    "outputTargets": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 16,
+      "items": {
+        "$ref": "#/$defs/outputTarget"
+      }
+    },
+    "creativeLookPolicy": {
+      "$ref": "#/$defs/creativeLookPolicy"
+    },
+    "planningBoundary": {
+      "$ref": "#/$defs/planningBoundary"
+    },
+    "validation": {
+      "$ref": "#/$defs/validation"
+    },
+    "provenance": {
+      "$ref": "common.schema.json#/$defs/provenance"
+    }
+  },
+  "$defs": {
+    "ocioConfig": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "configId",
+        "configVersion",
+        "contentHash",
+        "configSource",
+        "referenceSpaceModel",
+        "loadStatus"
+      ],
+      "properties": {
+        "configId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "configVersion": {
+          "type": "string",
+          "pattern": "^\\d+(?:\\.\\d+){0,2}(?:[-+][A-Za-z0-9._-]+)?$",
+          "maxLength": 80
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-f]{64}$"
+        },
+        "configSource": {
+          "enum": [
+            "project_registry",
+            "user_supplied",
+            "capability_catalog"
+          ]
+        },
+        "referenceSpaceModel": {
+          "const": "ocio-scene-and-display-reference"
+        },
+        "loadStatus": {
+          "const": "not_loaded"
+        }
+      }
+    },
+    "sourceMediaBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "bindingId",
+        "mediaId",
+        "inputColorSpace",
+        "metadata"
+      ],
+      "properties": {
+        "bindingId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "mediaId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "inputColorSpace": {
+          "$ref": "#/$defs/inputColorSpace"
+        },
+        "metadata": {
+          "$ref": "#/$defs/sourceColorMetadata"
+        }
+      }
+    },
+    "inputColorSpace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "assignmentStatus",
+        "basis"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "assignmentStatus": {
+          "enum": [
+            "declared",
+            "verified",
+            "unknown"
+          ]
+        },
+        "basis": {
+          "enum": [
+            "embedded_metadata",
+            "sidecar_metadata",
+            "manual_review",
+            "unknown"
+          ]
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "assignmentStatus"
+            ],
+            "properties": {
+              "assignmentStatus": {
+                "const": "unknown"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "name": {
+                "const": "unknown"
+              },
+              "basis": {
+                "const": "unknown"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "assignmentStatus"
+            ],
+            "properties": {
+              "assignmentStatus": {
+                "enum": [
+                  "declared",
+                  "verified"
+                ]
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "name": {
+                "not": {
+                  "const": "unknown"
+                }
+              },
+              "basis": {
+                "not": {
+                  "const": "unknown"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "sourceColorMetadata": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "primaries",
+        "transfer",
+        "matrix",
+        "range"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "declared",
+            "verified",
+            "unknown"
+          ]
+        },
+        "primaries": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "transfer": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "matrix": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "range": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "evidence": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "method",
+            "tool",
+            "toolVersion",
+            "observedAt"
+          ],
+          "properties": {
+            "method": {
+              "enum": [
+                "container_metadata",
+                "sidecar_metadata",
+                "manual_verification"
+              ]
+            },
+            "tool": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 160
+            },
+            "toolVersion": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 120
+            },
+            "observedAt": {
+              "type": "string",
+              "format": "date-time"
+            }
+          }
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "status"
+            ],
+            "properties": {
+              "status": {
+                "const": "unknown"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "primaries": {
+                "const": "unknown"
+              },
+              "transfer": {
+                "const": "unknown"
+              },
+              "matrix": {
+                "const": "unknown"
+              },
+              "range": {
+                "const": "unknown"
+              }
+            },
+            "not": {
+              "required": [
+                "evidence"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "status"
+            ],
+            "properties": {
+              "status": {
+                "const": "declared"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "primaries": {
+                "not": {
+                  "const": "unknown"
+                }
+              },
+              "transfer": {
+                "not": {
+                  "const": "unknown"
+                }
+              },
+              "matrix": {
+                "not": {
+                  "const": "unknown"
+                }
+              },
+              "range": {
+                "not": {
+                  "const": "unknown"
+                }
+              }
+            },
+            "not": {
+              "required": [
+                "evidence"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "status"
+            ],
+            "properties": {
+              "status": {
+                "const": "verified"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "evidence"
+            ],
+            "properties": {
+              "primaries": {
+                "not": {
+                  "const": "unknown"
+                }
+              },
+              "transfer": {
+                "not": {
+                  "const": "unknown"
+                }
+              },
+              "matrix": {
+                "not": {
+                  "const": "unknown"
+                }
+              },
+              "range": {
+                "not": {
+                  "const": "unknown"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "referenceSpacePolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sceneReferenceSpace",
+        "displayReferenceSpace",
+        "workingColorSpace",
+        "workingRole"
+      ],
+      "properties": {
+        "sceneReferenceSpace": {
+          "const": "scene_referred"
+        },
+        "displayReferenceSpace": {
+          "const": "display_referred"
+        },
+        "workingColorSpace": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "workingRole": {
+          "const": "scene_linear"
+        }
+      }
+    },
+    "outputTarget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "targetId",
+        "purpose",
+        "display",
+        "view",
+        "outputColorSpace",
+        "path"
+      ],
+      "properties": {
+        "targetId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "purpose": {
+          "enum": [
+            "preview",
+            "delivery"
+          ]
+        },
+        "display": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "view": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "outputColorSpace": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "path": {
+          "$ref": "#/$defs/outputPath"
+        }
+      }
+    },
+    "outputPath": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "colorspace",
+            "view_transform_and_display_colorspace"
+          ]
+        },
+        "colorspace": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "viewTransform": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "displayColorSpace": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "mode"
+            ],
+            "properties": {
+              "mode": {
+                "const": "colorspace"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "colorspace"
+            ],
+            "not": {
+              "anyOf": [
+                {
+                  "required": [
+                    "viewTransform"
+                  ]
+                },
+                {
+                  "required": [
+                    "displayColorSpace"
+                  ]
+                }
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "mode"
+            ],
+            "properties": {
+              "mode": {
+                "const": "view_transform_and_display_colorspace"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "viewTransform",
+              "displayColorSpace"
+            ],
+            "not": {
+              "required": [
+                "colorspace"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "creativeLookPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "appliesCreativeLook",
+        "creativeLookTransformNames",
+        "ownerBoundary"
+      ],
+      "properties": {
+        "appliesCreativeLook": {
+          "const": false
+        },
+        "creativeLookTransformNames": {
+          "type": "array",
+          "maxItems": 0,
+          "items": {
+            "type": "string"
+          }
+        },
+        "ownerBoundary": {
+          "const": "style-intent-separate"
+        }
+      }
+    },
+    "planningBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "providerNeutral",
+        "loadsOcioConfig",
+        "appliesColorTransforms",
+        "writesMedia",
+        "exportsLut",
+        "humanApprovalRequired"
+      ],
+      "properties": {
+        "providerNeutral": {
+          "const": true
+        },
+        "loadsOcioConfig": {
+          "const": false
+        },
+        "appliesColorTransforms": {
+          "const": false
+        },
+        "writesMedia": {
+          "const": false
+        },
+        "exportsLut": {
+          "const": false
+        },
+        "humanApprovalRequired": {
+          "const": true
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "configIdentityExact",
+        "sourceBindingsExact",
+        "metadataHonest",
+        "referenceSpacesSeparated",
+        "outputPathsDeclared",
+        "previewDeliverySeparated",
+        "providerNeutral"
+      ],
+      "properties": {
+        "configIdentityExact": {
+          "const": true
+        },
+        "sourceBindingsExact": {
+          "const": true
+        },
+        "metadataHonest": {
+          "const": true
+        },
+        "referenceSpacesSeparated": {
+          "const": true
+        },
+        "outputPathsDeclared": {
+          "const": true
+        },
+        "previewDeliverySeparated": {
+          "const": true
+        },
+        "providerNeutral": {
+          "const": true
+        }
+      }
+    }
+  }
+}

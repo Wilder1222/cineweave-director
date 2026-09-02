@@ -1,0 +1,212 @@
+{
+  "kind": "cineweave_codex_character_appearance_state",
+  "contractVersion": "2.0.0",
+  "worldId": "world-cloud-dynasty",
+  "appearanceStateId": "appearance.shen-duty",
+  "characterSpecRef": {
+    "characterId": "char.shen-yanqiu",
+    "version": 1,
+    "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "label": "月白巡察常服",
+  "version": 1,
+  "status": "draft",
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.0.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-20T12:00:00.000Z"
+  },
+  "purpose": "角色在日常巡察任务中的默认可变外观，不改变脸部、比例和惯用侧。",
+  "assignments": [
+    {
+      "variableId": "wardrobe.state",
+      "value": "月白巡察常服",
+      "rationale": "提供职责识别，同时保持身体轮廓可读。"
+    },
+    {
+      "variableId": "hair.state",
+      "value": "简洁束发",
+      "rationale": "露出脸部锚点并避免发型成为唯一身份标记。"
+    }
+  ],
+  "preserveAnchorIds": [
+    "face.shape",
+    "eyes.horizontal",
+    "mouth.asymmetry",
+    "body.silhouette"
+  ],
+  "construction": {
+    "summary": "高腰交领月白常服，右侧佩剑，织物重量真实，装饰克制。",
+    "hair": [
+      "黑色长发简洁束起，保留少量自然碎发"
+    ],
+    "wardrobe": [
+      "肩线不增宽",
+      "腰线保持角色既定位置",
+      "袖口允许巡察动作"
+    ],
+    "makeup": [
+      "无明显舞台妆，仅保留自然肤色和唇纹"
+    ],
+    "injury": [],
+    "weatherResponse": [
+      "潮湿时丝绸变重但不改变裁剪结构"
+    ],
+    "accessories": [
+      "右侧佩剑",
+      "一枚低反射身份牌"
+    ]
+  },
+  "referenceObservationIds": [],
+  "transitions": {
+    "allowedFrom": [
+      "无指定服装状态",
+      "正式朝服"
+    ],
+    "allowedTo": [
+      "轻装战斗服",
+      "受伤后的残损状态"
+    ],
+    "transitionCues": [
+      "换装必须有叙事时间或明确场景切换",
+      "同一连续动作内不得无原因改变发型"
+    ]
+  },
+  "forbiddenChanges": [
+    "不得改变面部几何",
+    "不得遮挡全部眼部锚点",
+    "不得把佩剑移动到左侧"
+  ],
+  "validation": {
+    "identityPreserved": true,
+    "variablesDeclared": true,
+    "providerNeutral": true,
+    "rightsChecked": true
+  },
+  "provenance": {
+    "source": "codex_authored",
+    "createdAt": "2026-08-20T12:00:00.000Z",
+    "updatedAt": "2026-08-20T12:00:00.000Z",
+    "changeLog": [
+      "v1: define default duty appearance state"
+    ]
+  },
+  "styling": {
+    "skinMaterial": {
+      "baselineRelation": "保留 CharacterSpec 的暖调偏白基线、淡雀斑和自然不对称；妆面只改变可变表面状态，不漂白或重塑面部。",
+      "undertoneShift": "月白巡察常服状态维持中性暖底，眼周、鼻翼和面颊保留轻微自然红度变化。",
+      "makeupCoverage": 0.24,
+      "hydration": 0.52,
+      "microRoughness": 0.46,
+      "specularStrength": 0.28,
+      "translucencyReadability": 0.5,
+      "poreVisibility": 0.42,
+      "microTextureVisibility": 0.5,
+      "peachFuzzVisibility": 0.24,
+      "tonalVariation": 0.36,
+      "rednessVariation": 0.26,
+      "sebumVisibility": 0.14,
+      "imperfectionVisibility": 0.3,
+      "zoneVariation": [
+        "鼻翼与面中保留细小毛孔和轻微红度",
+        "眼下保留自然细纹，不用高遮瑕抹平",
+        "面颊高点只有柔和窄高光，不形成油膜"
+      ],
+      "temporaryConditions": [],
+      "lightResponse": "柔光下保留细微色调起伏；高光随面部曲率平缓滚降，皮肤、唇部和丝绸不能共享同一种镜面反射。",
+      "identityPreservation": "不得用高覆盖底妆、统一肤色或强高光改变脸部锚点、年龄感、雀斑和自然不对称。",
+      "calibration": {
+        "scale": "normalized_creative_intent",
+        "notMeasuredPhysicalProperty": true,
+        "notBiometric": true,
+        "notProviderControl": true
+      }
+    },
+    "makeup": {
+      "style": "清冷写实巡察妆",
+      "base": "薄透半哑光底妆，保留毛孔、雀斑和自然肤色起伏。",
+      "brows": "平直眉，左眉自然略低，不做对称修正。",
+      "eyes": "灰棕低饱和眼影，极细内眼线，保持水平细长眼型。",
+      "cheeks": "低存在感冷粉气色，不扩大面中。",
+      "lips": "低饱和豆沙色薄涂，保留唇纹和左嘴角轻微不对称。",
+      "finish": "natural",
+      "intensity": 0.28,
+      "identityPreservation": "妆容不能改变眼型、鼻唇比例、年龄感和自然不对称。"
+    },
+    "hair": {
+      "length": "腰下长发",
+      "structure": "低位简洁束发，后部结构清楚，少量碎发贴近面侧。",
+      "parting": "中线略偏右",
+      "fringe": "无厚重刘海，保留两侧细碎发。",
+      "texture": "自然直发，细而有重量。",
+      "volume": "头顶克制，不人为增高颅顶。",
+      "finish": "低光泽、真实发丝分束。",
+      "accessories": [
+        "暗银发扣"
+      ],
+      "movementResponse": "弱风下只有碎发和尾部产生延迟，不遮挡眼部锚点。"
+    },
+    "costume": {
+      "style": "克制中式幻想巡察常服",
+      "silhouette": "高腰交领、窄肩自然落线、下摆纵向延伸，不夸张放大肩胯。",
+      "components": [
+        "内层月白交领",
+        "深灰窄腰封",
+        "轻薄外层长衫",
+        "右侧剑带"
+      ],
+      "construction": [
+        "交领在锁骨下稳定交叠",
+        "腋下与袖笼允许抬臂",
+        "腰封固定于既定高腰线"
+      ],
+      "layering": "内层贴合身体节奏，外层保留少量空气层，披帛不遮挡手部和脚部。",
+      "fit": "肩部合体，腰部适度收束，下摆不贴腿但具有真实重力。",
+      "palette": {
+        "primary": "月白",
+        "secondary": "石青灰",
+        "accent": "暗朱红"
+      },
+      "materials": [
+        {
+          "materialId": "material.moon-silk",
+          "baseType": "silk",
+          "weaveOrSurface": "细密平纹，近看可见轻微织纹。",
+          "roughness": 0.34,
+          "sheen": 0.58,
+          "translucency": 0.12,
+          "thickness": "light",
+          "condition": "clean",
+          "lightResponse": "软方向高光沿褶皱移动，边缘只有轻微透光。"
+        },
+        {
+          "materialId": "material.waist-brocade",
+          "baseType": "brocade",
+          "weaveOrSurface": "细小暗纹，不形成高对比图案。",
+          "roughness": 0.48,
+          "sheen": 0.28,
+          "translucency": 0,
+          "thickness": "medium",
+          "condition": "clean",
+          "lightResponse": "低光泽，保持腰部结构清楚。"
+        }
+      ],
+      "pairingLogic": [
+        "丝绸主体与锦缎腰封形成软硬对比",
+        "暗银配件只做低反射点缀",
+        "主色不超过三组"
+      ],
+      "condition": "日常维护良好，无战损。",
+      "movementResponse": "后撤时下摆延迟半拍，袖口跟随手臂，不出现无风飘飞。"
+    },
+    "accessories": [
+      "右侧佩剑",
+      "暗银身份牌",
+      "单一发扣"
+    ],
+    "surfaceState": "皮肤、发丝、丝绸、锦缎和金属保持不同的粗糙度与高光形态。"
+  }
+}

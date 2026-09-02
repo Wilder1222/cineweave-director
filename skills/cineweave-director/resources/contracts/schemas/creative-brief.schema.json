@@ -1,0 +1,144 @@
+{
+  "$id": "https://cineweave.dev/contracts/creative-brief.schema.json",
+  "title": "CineWeave Creative Brief",
+  "description": "Route-aware intake for one self-contained AIGC creation skill.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "contractVersion", "briefId", "version", "status", "inputMode", "purpose", "task", "intent", "world", "referenceInputs", "locks", "constraints", "unknowns", "stagePlan", "humanGates", "planningBoundary", "validation", "skillReceipt", "provenance"],
+  "properties": {
+    "kind": { "const": "cineweave_codex_creative_brief" },
+    "contractVersion": { "const": "3.0.0" },
+    "briefId": { "$ref": "common.schema.json#/$defs/identifier" },
+    "version": { "type": "integer", "minimum": 1 },
+    "status": { "enum": ["draft", "ready", "blocked", "approved", "archived"] },
+    "inputMode": { "enum": ["zero_prompt", "quick", "guided", "professional"] },
+    "purpose": { "type": "string", "minLength": 1, "maxLength": 2400 },
+    "sourcePrompt": { "type": "string", "maxLength": 12000 },
+    "task": { "$ref": "#/$defs/task" },
+    "intent": { "$ref": "#/$defs/intent" },
+    "world": { "$ref": "#/$defs/world" },
+    "referenceInputs": { "type": "array", "maxItems": 32, "items": { "$ref": "#/$defs/referenceInput" } },
+    "locks": { "type": "array", "maxItems": 64, "items": { "$ref": "common.schema.json#/$defs/lock" } },
+    "constraints": { "type": "array", "maxItems": 32, "items": { "type": "string", "minLength": 1, "maxLength": 1600 } },
+    "assumptions": { "type": "array", "maxItems": 24, "items": { "type": "string", "minLength": 1, "maxLength": 1200 } },
+    "unknowns": { "type": "array", "maxItems": 24, "items": { "$ref": "#/$defs/unknown" } },
+    "stagePlan": { "type": "array", "minItems": 1, "maxItems": 24, "items": { "$ref": "#/$defs/stage" } },
+    "humanGates": { "type": "array", "maxItems": 16, "items": { "$ref": "#/$defs/humanGate" } },
+    "planningBoundary": { "$ref": "#/$defs/planningBoundary" },
+    "validation": { "$ref": "#/$defs/validation" },
+    "skillReceipt": { "$ref": "common.schema.json#/$defs/skillReceipt" },
+    "provenance": { "$ref": "common.schema.json#/$defs/provenance" }
+  },
+  "$defs": {
+    "route": { "enum": ["brief_world", "story", "character", "scene", "style", "reference_evidence", "action", "shot_direction", "storyboard_rhythm", "image_prompt", "production_plan", "review_repair"] },
+    "task": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["routes", "deliverables", "medium", "temporalRequired"],
+      "properties": {
+        "routes": { "type": "array", "minItems": 1, "maxItems": 12, "uniqueItems": true, "items": { "$ref": "#/$defs/route" } },
+        "deliverables": { "type": "array", "minItems": 1, "maxItems": 24, "uniqueItems": true, "items": { "enum": ["world_bible", "story", "script", "character", "scene", "style_system", "reference_analysis", "action_sequence", "shot", "storyboard", "image_prompt", "production_plan", "review", "repair", "mixed"] } },
+        "medium": { "enum": ["live_action", "hand_drawn_2d", "digital_2d", "three_d", "comic", "illustration", "mixed", "unknown"] },
+        "temporalRequired": { "type": "boolean" },
+        "aspectRatio": { "type": "string", "maxLength": 32 },
+        "durationIntent": { "type": "string", "maxLength": 160 }
+      }
+    },
+    "intent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["narrative", "visual", "audienceExperience", "delivery"],
+      "properties": {
+        "narrative": { "type": "string", "minLength": 1, "maxLength": 2400 },
+        "visual": { "type": "string", "minLength": 1, "maxLength": 2400 },
+        "audienceExperience": { "type": "string", "minLength": 1, "maxLength": 1600 },
+        "delivery": { "type": "string", "minLength": 1, "maxLength": 1600 }
+      }
+    },
+    "world": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["summary", "authority"],
+      "properties": {
+        "summary": { "type": "string", "minLength": 1, "maxLength": 2400 },
+        "authority": { "enum": ["new_world_bible_required", "supplied_world_bible", "bounded_one_off_context"] },
+        "worldBibleRef": { "allOf": [{ "$ref": "common.schema.json#/$defs/contractRef" }, { "properties": { "kind": { "const": "cineweave_codex_world_bible" } } }] }
+      },
+      "allOf": [{ "if": { "properties": { "authority": { "const": "supplied_world_bible" } }, "required": ["authority"] }, "then": { "required": ["worldBibleRef"] } }]
+    },
+    "referenceInput": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["sourceLabel", "intendedRole", "rightsStatus"],
+      "properties": {
+        "sourceLabel": { "type": "string", "minLength": 1, "maxLength": 240 },
+        "assetRef": { "$ref": "common.schema.json#/$defs/contractRef" },
+        "observationRef": { "$ref": "common.schema.json#/$defs/contractRef" },
+        "intendedRole": { "enum": ["identity", "morphology", "appearance", "performance", "capture", "composition", "lighting", "material", "style", "geography", "motion", "control", "validation"] },
+        "rightsStatus": { "enum": ["verified", "restricted", "unknown", "blocked"] }
+      }
+    },
+    "unknown": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "impact", "question"],
+      "properties": {
+        "path": { "type": "string", "minLength": 1, "maxLength": 320 },
+        "impact": { "enum": ["high", "medium", "low"] },
+        "question": { "type": "string", "minLength": 1, "maxLength": 1000 },
+        "safeDefault": { "type": "string", "maxLength": 800 }
+      }
+    },
+    "stage": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stageId", "route", "status", "purpose", "requires", "produces", "dependsOn", "gate"],
+      "properties": {
+        "stageId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "route": { "$ref": "#/$defs/route" },
+        "status": { "enum": ["pending", "in_progress", "blocked", "ready", "approved", "skipped"] },
+        "purpose": { "type": "string", "minLength": 1, "maxLength": 1200 },
+        "requires": { "type": "array", "maxItems": 24, "uniqueItems": true, "items": { "type": "string", "minLength": 1, "maxLength": 160 } },
+        "produces": { "type": "array", "minItems": 1, "maxItems": 24, "uniqueItems": true, "items": { "type": "string", "minLength": 1, "maxLength": 160 } },
+        "dependsOn": { "type": "array", "maxItems": 16, "uniqueItems": true, "items": { "$ref": "common.schema.json#/$defs/identifier" } },
+        "gate": { "type": "string", "minLength": 1, "maxLength": 1200 }
+      }
+    },
+    "humanGate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["gateId", "afterStage", "decision", "status"],
+      "properties": {
+        "gateId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "afterStage": { "$ref": "common.schema.json#/$defs/identifier" },
+        "decision": { "type": "string", "minLength": 1, "maxLength": 1200 },
+        "status": { "enum": ["pending", "approved", "rejected", "not_required"] }
+      }
+    },
+    "planningBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["singleSkill", "providerNeutral", "generatesMedia", "invokesExternalTool", "requiresHumanApproval"],
+      "properties": {
+        "singleSkill": { "const": true },
+        "providerNeutral": { "const": true },
+        "generatesMedia": { "const": false },
+        "invokesExternalTool": { "const": false },
+        "requiresHumanApproval": { "const": true }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["intentParsed", "worldAuthorityExplicit", "routesAcyclic", "referencesRoleScoped", "questionsPrioritized", "noProviderClaim"],
+      "properties": {
+        "intentParsed": { "const": true },
+        "worldAuthorityExplicit": { "const": true },
+        "routesAcyclic": { "const": true },
+        "referencesRoleScoped": { "const": true },
+        "questionsPrioritized": { "const": true },
+        "noProviderClaim": { "const": true }
+      }
+    }
+  }
+}

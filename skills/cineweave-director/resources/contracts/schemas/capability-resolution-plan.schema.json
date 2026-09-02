@@ -1,0 +1,248 @@
+{
+  "$id": "https://cineweave.dev/contracts/capability-resolution-plan.schema.json",
+  "title": "CineWeave Capability Resolution Plan",
+  "description": "Provider-neutral comparison of exact capability profiles for creative feasibility planning. It never selects a provider or invokes an external tool.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "contractVersion", "resolutionPlanId", "version", "status", "request", "candidates", "selection", "explanation", "planningBoundary", "validation", "skillReceipt", "provenance"],
+  "properties": {
+    "kind": { "const": "cineweave_codex_capability_resolution_plan" },
+    "contractVersion": { "const": "3.0.0" },
+    "resolutionPlanId": { "$ref": "common.schema.json#/$defs/identifier" },
+    "version": { "type": "integer", "minimum": 1 },
+    "status": { "enum": ["selected", "needs_review", "blocked"] },
+    "request": { "$ref": "#/$defs/request" },
+    "candidates": { "type": "array", "minItems": 1, "maxItems": 32, "items": { "$ref": "#/$defs/candidate" } },
+    "selection": { "$ref": "#/$defs/selection" },
+    "explanation": { "$ref": "#/$defs/explanation" },
+    "planningBoundary": { "$ref": "#/$defs/planningBoundary" },
+    "validation": { "$ref": "#/$defs/validation" },
+    "skillReceipt": { "$ref": "common.schema.json#/$defs/skillReceipt" },
+    "provenance": { "$ref": "common.schema.json#/$defs/provenance" }
+  },
+  "oneOf": [
+    {
+      "properties": {
+        "status": { "const": "selected" },
+        "selection": { "properties": { "status": { "const": "selected" } } },
+        "candidates": {
+          "contains": {
+            "type": "object",
+            "required": ["status"],
+            "properties": { "status": { "const": "selected" } }
+          },
+          "minContains": 1,
+          "maxContains": 1
+        }
+      }
+    },
+    {
+      "properties": {
+        "status": { "const": "needs_review" },
+        "selection": { "properties": { "status": { "const": "needs_review" } } },
+        "candidates": {
+          "not": {
+            "contains": {
+              "type": "object",
+              "required": ["status"],
+              "properties": { "status": { "const": "selected" } }
+            }
+          }
+        }
+      }
+    },
+    {
+      "properties": {
+        "status": { "const": "blocked" },
+        "selection": { "properties": { "status": { "const": "blocked" } } },
+        "candidates": {
+          "not": {
+            "contains": {
+              "type": "object",
+              "required": ["status"],
+              "properties": { "status": { "const": "selected" } }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "capabilityRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        { "properties": { "kind": { "const": "cineweave_codex_capability_profile" } } }
+      ]
+    },
+    "request": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["operationId", "operation", "mediaKind", "inputCount", "outputCount", "requirements"],
+      "properties": {
+        "operationId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "operation": { "enum": ["generate", "edit", "inpaint", "multi_reference", "layout", "sequence"] },
+        "mediaKind": { "enum": ["image", "video", "mixed"] },
+        "inputCount": { "type": "integer", "minimum": 0, "maximum": 64 },
+        "outputCount": { "type": "integer", "minimum": 1, "maximum": 64 },
+        "requirements": { "type": "array", "minItems": 1, "maxItems": 48, "items": { "$ref": "#/$defs/requirement" } }
+      }
+    },
+    "requirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["requirementId", "capabilityId", "level", "reason"],
+      "properties": {
+        "requirementId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "capabilityId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "level": { "enum": ["hard", "soft", "advisory"] },
+        "scope": { "type": "string", "maxLength": 240 },
+        "reason": { "type": "string", "minLength": 1, "maxLength": 1000 }
+      }
+    },
+    "capabilityResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["requirementId", "capabilityId", "support", "status", "score", "reason"],
+      "properties": {
+        "requirementId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "capabilityId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "support": { "enum": ["strong", "partial", "experimental", "unsupported", "unknown"] },
+        "status": { "enum": ["pass", "review", "warn", "fail"] },
+        "score": { "type": "number", "minimum": 0, "maximum": 1 },
+        "reason": { "type": "string", "minLength": 1, "maxLength": 1000 }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": ["support"],
+            "properties": { "support": { "const": "unknown" } }
+          },
+          "then": { "properties": { "status": { "not": { "const": "pass" } } } }
+        },
+        {
+          "if": {
+            "required": ["support"],
+            "properties": { "support": { "const": "unsupported" } }
+          },
+          "then": { "properties": { "status": { "const": "fail" } } }
+        }
+      ]
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["candidateId", "capabilityProfileRef", "capabilityResults", "score", "status", "hardFailures", "warnings", "rationale"],
+      "properties": {
+        "candidateId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "capabilityProfileRef": { "$ref": "#/$defs/capabilityRef" },
+        "capabilityResults": { "type": "array", "minItems": 1, "maxItems": 64, "items": { "$ref": "#/$defs/capabilityResult" } },
+        "score": { "type": "number", "minimum": 0, "maximum": 100 },
+        "status": { "enum": ["eligible", "selected", "needs_review", "blocked"] },
+        "hardFailures": { "type": "array", "maxItems": 32, "uniqueItems": true, "items": { "type": "string", "minLength": 1, "maxLength": 320 } },
+        "warnings": { "type": "array", "maxItems": 48, "uniqueItems": true, "items": { "type": "string", "minLength": 1, "maxLength": 480 } },
+        "rationale": { "type": "string", "minLength": 1, "maxLength": 1600 }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": ["status"],
+            "properties": { "status": { "const": "selected" } }
+          },
+          "then": {
+            "properties": {
+              "hardFailures": { "maxItems": 0 },
+              "capabilityResults": {
+                "not": {
+                  "contains": {
+                    "type": "object",
+                    "anyOf": [
+                      {
+                        "required": ["support"],
+                        "properties": { "support": { "enum": ["unsupported", "unknown"] } }
+                      },
+                      {
+                        "required": ["status"],
+                        "properties": { "status": { "const": "fail" } }
+                      }
+                    ]
+                  }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "selection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "selectedCandidateId", "selectedCapabilityProfileRef", "rationale", "humanApprovalRequired"],
+      "properties": {
+        "status": { "enum": ["selected", "needs_review", "blocked"] },
+        "selectedCandidateId": { "type": ["string", "null"], "pattern": "^[a-z0-9][a-z0-9._-]{1,159}$" },
+        "selectedCapabilityProfileRef": { "anyOf": [{ "type": "null" }, { "$ref": "#/$defs/capabilityRef" }] },
+        "rationale": { "type": "string", "minLength": 1, "maxLength": 1600 },
+        "humanApprovalRequired": { "const": true }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": ["status"],
+            "properties": { "status": { "const": "selected" } }
+          },
+          "then": {
+            "properties": {
+              "selectedCandidateId": { "type": "string" },
+              "selectedCapabilityProfileRef": { "$ref": "#/$defs/capabilityRef" }
+            }
+          },
+          "else": {
+            "properties": {
+              "selectedCandidateId": { "const": null },
+              "selectedCapabilityProfileRef": { "const": null }
+            }
+          }
+        }
+      ]
+    },
+    "explanation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["primaryDecision", "rankingPolicy", "hardConstraints", "tradeoffs", "fallbackCandidateIds"],
+      "properties": {
+        "primaryDecision": { "type": "string", "minLength": 1, "maxLength": 1600 },
+        "rankingPolicy": { "type": "string", "minLength": 1, "maxLength": 1200 },
+        "hardConstraints": { "type": "array", "maxItems": 32, "items": { "type": "string", "minLength": 1, "maxLength": 600 } },
+        "tradeoffs": { "type": "array", "maxItems": 32, "items": { "type": "string", "minLength": 1, "maxLength": 800 } },
+        "fallbackCandidateIds": { "type": "array", "maxItems": 16, "uniqueItems": true, "items": { "$ref": "common.schema.json#/$defs/identifier" } }
+      }
+    },
+    "planningBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["providerNeutral", "generatesMedia", "invokesExternalTool", "selectsProvider", "mutatesCanon", "humanApprovalRequired"],
+      "properties": {
+        "providerNeutral": { "const": true },
+        "generatesMedia": { "const": false },
+        "invokesExternalTool": { "const": false },
+        "selectsProvider": { "const": false },
+        "mutatesCanon": { "const": false },
+        "humanApprovalRequired": { "const": true }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["candidateRefsExact", "hardRequirementsBlock", "unknownDoesNotPass", "rankingDeterministic", "explanationPresent", "noProviderSelection", "noExternalExecution"],
+      "properties": {
+        "candidateRefsExact": { "const": true },
+        "hardRequirementsBlock": { "const": true },
+        "unknownDoesNotPass": { "const": true },
+        "rankingDeterministic": { "const": true },
+        "explanationPresent": { "const": true },
+        "noProviderSelection": { "const": true },
+        "noExternalExecution": { "const": true }
+      }
+    }
+  }
+}

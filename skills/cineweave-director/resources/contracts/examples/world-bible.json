@@ -1,0 +1,58 @@
+{
+  "kind": "cineweave_codex_world_bible",
+  "contractVersion": "3.0.0",
+  "worldId": "world.river-lanterns",
+  "title": "The River Lantern City",
+  "version": 1,
+  "status": "draft",
+  "premise": "A dense river city survives seasonal floods through guild-managed medicine, waterways, and public memory rituals; private choices are constrained by obligations that remain visible in everyday space.",
+  "scope": "One city, its upstream farming basin, and the social systems needed for a short dramatic film.",
+  "canon": [
+    { "claimId": "canon.flood-cycle", "namespace": "ecology", "statement": "The lower wards flood predictably each late summer.", "status": "canonical", "rationale": "This pressure shapes architecture, transport, labor, and the story deadline." },
+    { "claimId": "canon.memory-ritual", "namespace": "culture", "statement": "Households float one marked lantern for each publicly acknowledged debt.", "status": "provisional", "rationale": "The ritual externalizes reputation but still requires user approval." },
+    { "claimId": "canon.instant-cure", "namespace": "technology", "statement": "No treatment cures severe illness instantly or without trade-offs.", "status": "forbidden", "rationale": "Medical choices must retain dramatic cost." }
+  ],
+  "systems": [
+    { "systemId": "system.guild-medicine", "name": "Guild medicine", "rules": ["Licensed houses share flood-season triage duties.", "Patient records create social obligations as well as clinical history."], "limits": ["Knowledge and supplies vary by district."], "costs": ["Breaking guild duty risks license, household income, and public trust."], "exceptions": ["Emergency aid may be given before identity is recorded."] }
+  ],
+  "geography": [
+    { "regionId": "region.lower-ward", "name": "Lower Ward", "scale": "A walkable canal district of six linked blocks.", "orientation": "The medical guild hall sits uphill north; the ferry steps and courtyard houses descend south toward the river.", "relationships": ["Three narrow bridges connect the lower ward to the market spine.", "Floodwater first enters through the southern ferry lane."], "climate": ["Humid summers", "frequent rain", "late-summer flood risk"], "materials": ["dark stone paving", "lime plaster", "aged timber", "unglazed roof tile"] }
+  ],
+  "societies": [
+    { "societyId": "society.medical-guild", "name": "Medical guild households", "values": ["competence", "reciprocal duty", "public restraint"], "powerStructure": ["Senior license holders allocate supplies and apprenticeships."], "everydayLife": ["Consultations open before the market and continue after dusk during flood season."], "taboos": ["Publicly abandoning a registered patient"], "conflicts": ["Household loyalty can oppose equal treatment across districts."] }
+  ],
+  "history": [
+    { "eraId": "era.great-flood", "name": "The Great Flood generation", "order": 0, "events": ["A failed embankment erased the old southern ward."], "lastingConsequences": ["Buildings preserve upper escape doors.", "Guild duty is enforced through public debt records."] },
+    { "eraId": "era.present", "name": "Present flood season", "order": 1, "events": ["Repairs are incomplete as the next heavy rains arrive."], "lastingConsequences": ["Private reconciliation competes with urgent civic duty."] }
+  ],
+  "narrativeConstraints": {
+    "possible": ["Characters can cross districts by foot, skiff, or bridge."],
+    "impossible": ["A character cannot erase a public debt without witnesses noticing."],
+    "costly": ["Defying guild orders risks both livelihood and patient access."],
+    "centralTensions": ["Private care versus public duty", "remembered harm versus present need"],
+    "storyHooks": ["Two former intimates meet while triaging a flood-threatened household."]
+  },
+  "visualBaseline": {
+    "architecture": ["raised thresholds", "narrow covered walkways", "upper escape doors"],
+    "materials": ["rain-dark stone", "weathered timber", "lime plaster", "paper and oiled-cloth lanterns"],
+    "technology": ["hand tools", "herbal medicine", "skiffs", "oil lanterns"],
+    "wardrobeLogic": ["layered practical clothing communicates trade, duty, and wet-weather adaptation"],
+    "recurringMotifs": ["marked lanterns", "waterlines", "medicine wrapping cords"],
+    "physicalLightLogic": ["overcast sky dominates by day", "oil flame and reflected water motivate night light"],
+    "representationRemainsStyleOwned": true
+  },
+  "continuityPolicy": {
+    "immutableFacts": ["north-south slope from guild hall to river", "late-summer flood cycle", "public debt ritual"],
+    "allowedVariation": ["minor household decoration", "non-canonical background vendors"],
+    "changeRequiresCause": true,
+    "conflictResolution": "Surface same-namespace conflicts for human decision; never select the newest statement automatically."
+  },
+  "unknowns": ["Exact historical analogues remain intentionally unspecified."],
+  "locks": [
+    { "path": "geography.region.lower-ward.orientation", "level": "hard", "reason": "Scene geography and screen direction depend on the uphill-north relationship." },
+    { "path": "visualBaseline.representation", "level": "free", "reason": "The world defines physical design, while Style owns representation." }
+  ],
+  "validation": { "canonStatusExplicit": true, "rulesHaveLimits": true, "geographyRelational": true, "societiesPlayable": true, "historyHasConsequences": true, "styleDoesNotRewriteWorld": true, "unknownsPreserved": true },
+  "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-director", "ref": "v3.0.0", "commit": "0000000000000000000000000000000000000000", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00Z" },
+  "provenance": { "source": "suite_builtin", "createdAt": "2026-09-02T00:00:00Z", "updatedAt": "2026-09-02T00:00:00Z", "changeLog": ["Created as the canonical WorldBible example."] }
+}

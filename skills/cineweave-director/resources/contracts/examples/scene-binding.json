@@ -1,0 +1,183 @@
+{
+  "kind": "scene_binding",
+  "contractVersion": "2.0.0",
+  "bindingId": "binding.scene-shot-12",
+  "sceneSpecRef": {
+    "sceneId": "scene.jade-corridor",
+    "version": 1,
+    "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+  },
+  "sceneStateRef": {
+    "sceneStateId": "scene-state.jade-corridor-storm",
+    "version": 1,
+    "contentHash": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+  },
+  "roleInShot": "primary_environment",
+  "activeAnchorIds": [
+    "geo.main-axis",
+    "arch.jade-rail",
+    "scale.column-bays",
+    "occlusion.screen"
+  ],
+  "activeZoneIds": [
+    "zone.main-corridor",
+    "zone.screen-bay"
+  ],
+  "cameraPlacement": {
+    "cameraAnchorId": "camera.screen-side",
+    "zoneId": "zone.screen-bay",
+    "axisId": "axis.main-corridor",
+    "side": "B",
+    "height": "成人肩高",
+    "orientation": "沿主轴朝西南回看追兵"
+  },
+  "spatialRelations": [
+    {
+      "subjectRef": "char.shen-yanqiu@1",
+      "zoneId": "zone.screen-bay",
+      "relation": "位于孩子与追兵之间，靠屏风东北侧",
+      "screenDirection": "面向画面左下的追兵，身体仍沿主轴",
+      "eyelineTarget": "追兵双手"
+    },
+    {
+      "subjectRef": "char.child-01@1",
+      "zoneId": "zone.screen-bay",
+      "relation": "位于女主东北后方半步",
+      "screenDirection": "沿主轴向东北",
+      "eyelineTarget": "女主肩部"
+    }
+  ],
+  "depthPlan": {
+    "foreground": [
+      "屏风木格与一根朱红立柱"
+    ],
+    "midground": [
+      "女主、孩子与白玉地面"
+    ],
+    "background": [
+      "沿主轴逼近的追兵、宫门方向低角度暖光"
+    ]
+  },
+  "lightingState": {
+    "key": "西南低角度暖光只勾勒追兵与柱边",
+    "fill": "东北云海冷光照亮女主正侧面",
+    "practicals": [
+      "檐角铜铃上的小面积反光"
+    ],
+    "shadowDirection": "柱影沿东北拉长",
+    "atmosphere": "中等云雾和统一向东北的风压"
+  },
+  "materialResponse": [
+    "白玉地面出现低饱和湿润反射",
+    "朱红木柱保持低光泽和漆面龟裂",
+    "屏风绢面受风轻微鼓动"
+  ],
+  "referenceObservationIds": [
+    "OBS_SCENE_AXIS_01",
+    "OBS_SCENE_MATERIAL_01"
+  ],
+  "preserve": [
+    "主轴与 B 侧机位",
+    "第三开间屏风",
+    "宫门暖光方向",
+    "白玉与朱红材质体系"
+  ],
+  "allowedDeviations": [
+    "云雾可在不遮挡动作的范围内变化",
+    "铜铃和绢面可响应风"
+  ],
+  "forbiddenChanges": [
+    "不得跨轴",
+    "不得交换宫门与断桥方向",
+    "不得把屏风移到前景另一侧",
+    "不得生成无支撑机位"
+  ],
+  "interactionConstraints": {
+    "contacts": [
+      {
+        "contactId": "contact.shen-floor",
+        "subjectBindingId": "binding.char-shot-12-shen",
+        "subjectPart": "both_feet",
+        "targetType": "ground",
+        "targetRef": "anchor.floor-stone",
+        "relation": "standing_on",
+        "pressure": "moderate",
+        "duration": "shot",
+        "required": true
+      },
+      {
+        "contactId": "contact.shen-child-shield",
+        "subjectBindingId": "binding.char-shot-12-shen",
+        "subjectPart": "left_forearm",
+        "targetType": "character",
+        "targetRef": "binding.char-shot-12-child",
+        "relation": "shielding",
+        "pressure": "light",
+        "duration": "beat",
+        "required": true
+      }
+    ],
+    "supports": [
+      {
+        "subjectBindingId": "binding.char-shot-12-shen",
+        "supportTargetRef": "anchor.floor-stone",
+        "supportedParts": [
+          "right foot carries most weight",
+          "left foot stabilizes the retreat"
+        ],
+        "weightDistribution": "约六成重量在右脚，四成在后撤的左脚。",
+        "centerOfGravity": "骨盆下沉但保持在双脚支撑多边形内。"
+      }
+    ],
+    "occlusions": [
+      {
+        "frontRef": "prop.pursuer-weapon",
+        "backRef": "binding.char-shot-12-shen",
+        "region": "左前景遮挡人物左肩边缘",
+        "ordering": "front_before_back"
+      },
+      {
+        "frontRef": "binding.char-shot-12-shen",
+        "backRef": "binding.char-shot-12-child",
+        "region": "人物身体遮挡孩子胸口与下半身",
+        "ordering": "front_before_back"
+      }
+    ],
+    "lightingResponse": [
+      {
+        "subjectBindingId": "binding.char-shot-12-shen",
+        "keySourceRef": "light.window-southwest",
+        "castShadowOn": "anchor.floor-stone",
+        "contactShadow": "双脚与石地保持短而清晰的接触阴影。",
+        "bounceSource": "material.white-jade-rail",
+        "exposureRelation": "人物面部略亮于走廊背景但不脱离环境。"
+      }
+    ],
+    "environmentResponse": [
+      {
+        "subjectBindingId": "binding.char-shot-12-shen",
+        "driver": "wind",
+        "direction": "西南至东北",
+        "intensity": 0.35,
+        "hairEffect": "少量碎发向东北偏移。",
+        "garmentEffect": "衣摆与披帛轻微延迟摆动，不遮挡双脚。",
+        "skinEffect": "无明显影响。"
+      }
+    ],
+    "propInteractions": [
+      {
+        "interactionId": "interaction.sword-ready",
+        "subjectBindingId": "binding.char-shot-12-shen",
+        "propRef": "prop.sword-shen",
+        "handOrBodyPart": "right_hand",
+        "grip": "手指尚未完全闭合，只接近剑柄。",
+        "action": "准备但不拔剑。",
+        "continuityState": "剑仍在右侧剑鞘中，下一镜头若拔出需明确动作触发。"
+      }
+    ]
+  },
+  "interactionConstraintSetRef": {
+    "interactionSetId": "interaction.shot-12-corridor",
+    "contentHash": "sha256:7777777777777777777777777777777777777777777777777777777777777777"
+  }
+}

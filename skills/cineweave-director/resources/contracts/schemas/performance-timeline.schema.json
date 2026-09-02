@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cineweave.dev/contracts/performance-timeline.schema.json",
+  "title": "CineWeave Character Performance Timeline",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "timelineId",
+    "version",
+    "characterBindingRef",
+    "durationSeconds",
+    "skillReceipt",
+    "phases",
+    "invariants",
+    "validation"
+  ],
+  "properties": {
+    "kind": {
+      "const": "cineweave_codex_performance_timeline"
+    },
+    "contractVersion": {
+      "const": "2.2.0"
+    },
+    "timelineId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "characterBindingRef": {
+      "$ref": "common.schema.json#/$defs/contractRef"
+    },
+    "durationSeconds": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 300
+    },
+    "skillReceipt": {
+      "$ref": "common.schema.json#/$defs/skillReceipt"
+    },
+    "phases": {
+      "type": "array",
+      "minItems": 2,
+      "maxItems": 24,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "phaseId",
+          "startSeconds",
+          "endSeconds",
+          "trigger",
+          "objective",
+          "subtext",
+          "gaze",
+          "face",
+          "breath",
+          "posture",
+          "action",
+          "secondaryMotion"
+        ],
+        "properties": {
+          "phaseId": {
+            "$ref": "common.schema.json#/$defs/identifier"
+          },
+          "startSeconds": {
+            "type": "number",
+            "minimum": 0
+          },
+          "endSeconds": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          },
+          "trigger": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 800
+          },
+          "objective": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 800
+          },
+          "subtext": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "gaze": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "face": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1200
+          },
+          "breath": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 800
+          },
+          "posture": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "action": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1200
+          },
+          "secondaryMotion": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1000
+          },
+          "residualState": {
+            "type": "string",
+            "maxLength": 1000
+          }
+        }
+      }
+    },
+    "invariants": {
+      "$ref": "common.schema.json#/$defs/stringList"
+    },
+    "allowedVariation": {
+      "type": "array",
+      "maxItems": 16,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1000
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "ordered",
+        "nonOverlapping",
+        "withinDuration",
+        "behaviorOwned",
+        "noCameraDirections"
+      ],
+      "properties": {
+        "ordered": {
+          "const": true
+        },
+        "nonOverlapping": {
+          "const": true
+        },
+        "withinDuration": {
+          "const": true
+        },
+        "behaviorOwned": {
+          "const": true
+        },
+        "noCameraDirections": {
+          "const": true
+        }
+      }
+    }
+  }
+}

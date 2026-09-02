@@ -1,0 +1,378 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cineweave.dev/contracts/board-assembly-plan.schema.json",
+  "title": "CineWeave Deterministic Board Assembly Plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "boardPlanId",
+    "version",
+    "status",
+    "purpose",
+    "canvas",
+    "recipeRuns",
+    "regions",
+    "tilePlacements",
+    "failurePolicy",
+    "planningBoundary",
+    "skillReceipt",
+    "validation",
+    "provenance"
+  ],
+  "properties": {
+    "kind": {
+      "const": "cineweave_codex_board_assembly_plan"
+    },
+    "contractVersion": {
+      "const": "2.0.0"
+    },
+    "worldId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "boardPlanId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "active",
+        "archived",
+        "retired"
+      ]
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "canvas": {
+      "$ref": "#/$defs/canvas"
+    },
+    "recipeRuns": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "items": {
+        "$ref": "#/$defs/recipeRun"
+      }
+    },
+    "regions": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "items": {
+        "$ref": "#/$defs/region"
+      }
+    },
+    "tilePlacements": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "$ref": "#/$defs/tilePlacement"
+      }
+    },
+    "failurePolicy": {
+      "$ref": "#/$defs/failurePolicy"
+    },
+    "planningBoundary": {
+      "$ref": "#/$defs/planningBoundary"
+    },
+    "skillReceipt": {
+      "$ref": "common.schema.json#/$defs/skillReceipt"
+    },
+    "validation": {
+      "$ref": "#/$defs/validation"
+    },
+    "provenance": {
+      "$ref": "common.schema.json#/$defs/provenance"
+    }
+  },
+  "$defs": {
+    "canvas": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "width",
+        "height",
+        "background",
+        "padding",
+        "gap",
+        "labelHeight",
+        "labelFontSize"
+      ],
+      "properties": {
+        "width": {
+          "type": "integer",
+          "minimum": 256,
+          "maximum": 32768
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 256,
+          "maximum": 32768
+        },
+        "background": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "padding": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4096
+        },
+        "gap": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 2048
+        },
+        "labelHeight": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1024
+        },
+        "labelFontSize": {
+          "type": "integer",
+          "minimum": 8,
+          "maximum": 512
+        }
+      }
+    },
+    "recipeRun": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "recipeRunId",
+        "recipeRef",
+        "taskIds"
+      ],
+      "properties": {
+        "recipeRunId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "recipeRef": {
+          "allOf": [
+            {
+              "$ref": "common.schema.json#/$defs/contractRef"
+            },
+            {
+              "properties": {
+                "kind": {
+                  "const": "cineweave_codex_asset_recipe"
+                }
+              }
+            }
+          ]
+        },
+        "taskIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 64,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/identifier"
+          }
+        }
+      }
+    },
+    "region": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "regionId",
+        "x",
+        "y",
+        "width",
+        "height",
+        "rows",
+        "columns",
+        "tileAspectRatio",
+        "labelPolicy"
+      ],
+      "properties": {
+        "regionId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "x": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "y": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "width": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "height": {
+          "type": "number",
+          "exclusiveMinimum": 0,
+          "maximum": 1
+        },
+        "rows": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12
+        },
+        "columns": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 12
+        },
+        "tileAspectRatio": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*:[1-9][0-9]*$"
+        },
+        "labelPolicy": {
+          "enum": [
+            "none",
+            "outside_tile",
+            "metadata_only"
+          ]
+        }
+      }
+    },
+    "tilePlacement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "tileId",
+        "recipeRunId",
+        "taskId",
+        "regionId",
+        "row",
+        "column",
+        "label",
+        "required",
+        "fit"
+      ],
+      "properties": {
+        "tileId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "recipeRunId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "taskId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "regionId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "row": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 11
+        },
+        "column": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 11
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "fit": {
+          "enum": [
+            "contain",
+            "cover"
+          ]
+        },
+        "minimumPixelDimensions": {
+          "type": "string",
+          "pattern": "^[1-9][0-9]*x[1-9][0-9]*$"
+        }
+      }
+    },
+    "failurePolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "strategy",
+        "preserveAcceptedOutputs",
+        "blockOnRequiredTileFailure"
+      ],
+      "properties": {
+        "strategy": {
+          "const": "retry_failed_tiles_only"
+        },
+        "preserveAcceptedOutputs": {
+          "const": true
+        },
+        "blockOnRequiredTileFailure": {
+          "const": true
+        }
+      }
+    },
+    "planningBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "providerNeutral",
+        "generatesMedia",
+        "humanApprovalRequired"
+      ],
+      "properties": {
+        "providerNeutral": {
+          "const": true
+        },
+        "generatesMedia": {
+          "const": false
+        },
+        "humanApprovalRequired": {
+          "const": true
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 1200
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "exactRecipeTasks",
+        "regionsNonOverlapping",
+        "perTileProvenance",
+        "heterogeneousLayoutsAllowed",
+        "deterministicAssembly"
+      ],
+      "properties": {
+        "exactRecipeTasks": {
+          "const": true
+        },
+        "regionsNonOverlapping": {
+          "const": true
+        },
+        "perTileProvenance": {
+          "const": true
+        },
+        "heterogeneousLayoutsAllowed": {
+          "const": true
+        },
+        "deterministicAssembly": {
+          "const": true
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,48 @@
+# Route: review_repair
+
+Use to define evidence-based benchmarks, review an actual creative artifact or candidate, classify failure, or plan the smallest correction. Load the relevant domain route as well.
+
+## Benchmarks
+
+`ControlBenchmark` defines cases, dimensions, severity, required evidence, and pass criteria before observation. `ControlBenchmarkReview` records the results only when the required evidence is actually accessible. A planned benchmark with no observed evidence remains planned; unknown is never pass.
+
+Prefer the unified `CreativeReview` when one actual candidate must be reviewed across multiple creative domains. Benchmarks and reviews do not execute production work or manufacture evidence.
+
+## Review
+
+A completed review requires actual accessible evidence. A prompt, projection plan, copy-ready handoff, submission screen, description, or intended result is not observed media. For externally executed provider work, also require the exact returned job metadata, resolved prompt/parameters/codes, variant mapping, and original output files; unavailable fields remain unknown. For each dimension record:
+
+- exact target;
+- expected observable result;
+- observed result;
+- evidence basis and confidence;
+- status: pass, warn, fail, unknown, or not applicable;
+- severity: advisory, important, or blocking;
+- owning domain;
+- smallest repair variable for warn/fail.
+
+`unknown` is not pass. A blocking failure cannot be averaged away by overall aesthetics. Separate policy/technical qualification from user preference. Do not score beauty, attractiveness, or biometric identity.
+
+Use one `CreativeReview` across domains. Relevant dimensions include world/canon, story causality, identity, appearance, performance, geography, contact, physical light, representation, action, camera, coverage, prompt contradiction, rights, and production feasibility.
+
+## Repair routing
+
+Choose the domain that owns the failed fact:
+
+- world laws/history/geography baseline → world;
+- causality/dialogue/knowledge → story;
+- identity/appearance/performance → character;
+- topology/material/source light/contact → scene;
+- representation grammar → style;
+- evidence scope/transfer/rights claim → reference or rights;
+- action mechanics/coverage → action;
+- blocking/camera/shot light/time → direction;
+- panel sequence/rhythm → storyboard;
+- omission/contradiction/reference leakage → prompt;
+- task/control/evidence/feasibility → production.
+
+A `RepairPlan` changes one variable in one domain, preserves every passing dimension, binds the exact target and source review, defines observable acceptance checks, and stops after one revised candidate. Multiple-domain failures become ordered separate plans according to dependency direction.
+
+The plan never mutates the target, invokes a tool, or claims success. New evidence and a new review are required before any check can pass.
+
+Outputs: `ControlBenchmark`, `ControlBenchmarkReview`, `CreativeReview`, `RepairPlan`.

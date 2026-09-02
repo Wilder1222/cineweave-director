@@ -1,0 +1,51 @@
+{
+  "kind": "cineweave_codex_creative_brief",
+  "contractVersion": "3.0.0",
+  "briefId": "brief.rain-courtyard",
+  "version": 1,
+  "status": "ready",
+  "inputMode": "guided",
+  "purpose": "Develop a short cinematic sequence from world rules through storyboard, image prompts, and a non-executing production plan.",
+  "sourcePrompt": "A physician meets the person she once pushed away in a rain-washed courtyard.",
+  "task": {
+    "routes": ["brief_world", "story", "character", "scene", "style", "shot_direction", "storyboard_rhythm", "image_prompt", "production_plan"],
+    "deliverables": ["world_bible", "story", "character", "scene", "style_system", "shot", "storyboard", "image_prompt", "production_plan"],
+    "medium": "live_action",
+    "temporalRequired": true,
+    "aspectRatio": "16:9",
+    "durationIntent": "45-60 seconds"
+  },
+  "intent": {
+    "narrative": "Recognition forces both characters to choose whether old harm still controls the present.",
+    "visual": "Rain-dark stone, restrained period clothing, practical lantern and overcast source light, intimate blocking.",
+    "audienceExperience": "Move from guarded distance to unresolved mutual recognition.",
+    "delivery": "A reviewable script scene, shot sequence, storyboard, image prompt set, and feasibility plan."
+  },
+  "world": {
+    "summary": "A historically grounded river city where medical guild obligations and household reputation constrain private choices.",
+    "authority": "new_world_bible_required"
+  },
+  "referenceInputs": [],
+  "locks": [
+    { "path": "intent.narrative", "level": "hard", "reason": "The encounter must turn on a costly recognition choice." },
+    { "path": "task.medium", "level": "soft", "reason": "Live action is preferred but may be revised before style approval." },
+    { "path": "intent.visual", "level": "undefined", "reason": "No exact identity, architecture, or style evidence has been supplied." }
+  ],
+  "constraints": ["Do not claim historical certainty where research has not been supplied.", "Do not treat a plan or prompt as generated media."],
+  "assumptions": ["The first pass may use a bounded fictional city until the user approves the world bible."],
+  "unknowns": [
+    { "path": "world.period", "impact": "high", "question": "Should the setting remain a fictional period world or target a researched historical era?", "safeDefault": "Use a fictional period world and label all historical parallels as inspiration." }
+  ],
+  "stagePlan": [
+    { "stageId": "stage.world", "route": "brief_world", "status": "ready", "purpose": "Resolve world authority and immutable constraints.", "requires": ["NaturalLanguageBrief"], "produces": ["cineweave_codex_world_bible"], "dependsOn": [], "gate": "User approves the world premise and hard canon claims." },
+    { "stageId": "stage.story", "route": "story", "status": "pending", "purpose": "Build causal beats and a playable script scene.", "requires": ["cineweave_codex_world_bible"], "produces": ["cineweave_codex_story_brief", "cineweave_codex_beat_sheet", "cineweave_codex_script_scene"], "dependsOn": ["stage.world"], "gate": "One dramatic question and changed scene state are explicit." },
+    { "stageId": "stage.direction", "route": "shot_direction", "status": "pending", "purpose": "Stage the approved beat before choosing lenses and timing.", "requires": ["cineweave_codex_script_scene", "character_binding", "scene_binding"], "produces": ["cineweave_codex_shot_spec", "cineweave_codex_temporal_spec"], "dependsOn": ["stage.story"], "gate": "Blocking, attention order, physical light, and stable end state are reviewable." }
+  ],
+  "humanGates": [
+    { "gateId": "gate.world", "afterStage": "stage.world", "decision": "Approve, revise, or bound the world bible before story canon is derived from it.", "status": "pending" }
+  ],
+  "planningBoundary": { "singleSkill": true, "providerNeutral": true, "generatesMedia": false, "invokesExternalTool": false, "requiresHumanApproval": true },
+  "validation": { "intentParsed": true, "worldAuthorityExplicit": true, "routesAcyclic": true, "referencesRoleScoped": true, "questionsPrioritized": true, "noProviderClaim": true },
+  "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-director", "ref": "v3.0.0", "commit": "0000000000000000000000000000000000000000", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00Z" },
+  "provenance": { "source": "suite_builtin", "createdAt": "2026-09-02T00:00:00Z", "updatedAt": "2026-09-02T00:00:00Z", "changeLog": ["Created as the canonical single-skill intake example."] }
+}

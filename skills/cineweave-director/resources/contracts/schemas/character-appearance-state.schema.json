@@ -1,0 +1,899 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cineweave.dev/contracts/character-appearance-state.schema.json",
+  "title": "CineWeave Character Appearance State",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "worldId",
+    "appearanceStateId",
+    "characterSpecRef",
+    "label",
+    "version",
+    "status",
+    "skillReceipt",
+    "purpose",
+    "assignments",
+    "preserveAnchorIds",
+    "construction",
+    "transitions",
+    "forbiddenChanges",
+    "validation",
+    "provenance"
+  ],
+  "properties": {
+    "kind": {
+      "const": "cineweave_codex_character_appearance_state"
+    },
+    "contractVersion": {
+      "const": "2.0.0"
+    },
+    "worldId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "appearanceStateId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,159}$"
+    },
+    "characterSpecRef": {
+      "$ref": "#/$defs/characterSpecRef"
+    },
+    "label": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 240
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "active",
+        "locked",
+        "archived",
+        "retired"
+      ]
+    },
+    "skillReceipt": {
+      "$ref": "#/$defs/skillReceipt"
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "assignments": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/assignment"
+      },
+      "minItems": 1,
+      "maxItems": 24
+    },
+    "preserveAnchorIds": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/stableId"
+      },
+      "minItems": 1,
+      "maxItems": 16,
+      "uniqueItems": true
+    },
+    "construction": {
+      "$ref": "#/$defs/construction"
+    },
+    "referenceObservationIds": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/observationId"
+      },
+      "maxItems": 16,
+      "uniqueItems": true
+    },
+    "transitions": {
+      "$ref": "#/$defs/transitions"
+    },
+    "forbiddenChanges": {
+      "$ref": "#/$defs/stringList"
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "identityPreserved": {
+          "const": true
+        },
+        "variablesDeclared": {
+          "const": true
+        },
+        "providerNeutral": {
+          "const": true
+        },
+        "rightsChecked": {
+          "const": true
+        }
+      },
+      "required": [
+        "identityPreserved",
+        "variablesDeclared",
+        "providerNeutral",
+        "rightsChecked"
+      ]
+    },
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+    "styling": {
+      "$ref": "#/$defs/styling"
+    }
+  },
+  "$defs": {
+    "skillReceipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "repository": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://(www\\.)?github\\.com/[^/]+/[^/]+(?:\\.git)?/?$"
+        },
+        "ref": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{7,64}$"
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        },
+        "installedBy": {
+          "const": "codex-environment"
+        },
+        "environmentId": {
+          "type": "string",
+          "maxLength": 240
+        },
+        "usedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "repository",
+        "ref",
+        "commit",
+        "installedBy",
+        "usedAt"
+      ]
+    },
+    "stableId": {
+      "type": "string",
+      "pattern": "^[a-zA-Z][a-zA-Z0-9._-]{1,159}$"
+    },
+    "lowerId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,159}$"
+    },
+    "observationId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "not": {
+        "pattern": "(?:https?:|file:|[\\\\/?#])"
+      }
+    },
+    "contentHash": {
+      "type": "string",
+      "pattern": "^sha256:[0-9a-fA-F]{64}$"
+    },
+    "stringList": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1200
+      },
+      "minItems": 1,
+      "maxItems": 24
+    },
+    "optionalStringList": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1200
+      },
+      "maxItems": 24
+    },
+    "characterSpecRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "characterId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]{2,159}$"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        }
+      },
+      "required": [
+        "characterId",
+        "version",
+        "contentHash"
+      ]
+    },
+    "appearanceStateRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "appearanceStateId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]{2,159}$"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        }
+      },
+      "required": [
+        "appearanceStateId",
+        "version",
+        "contentHash"
+      ]
+    },
+    "sceneSpecRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sceneId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]{2,159}$"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        }
+      },
+      "required": [
+        "sceneId",
+        "version",
+        "contentHash"
+      ]
+    },
+    "sceneStateRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "sceneStateId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]{2,159}$"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        }
+      },
+      "required": [
+        "sceneStateId",
+        "version",
+        "contentHash"
+      ]
+    },
+    "approvalGate": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "requiresHumanApproval": {
+          "const": true
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "approved",
+            "blocked",
+            "rejected"
+          ]
+        },
+        "approvedBy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "approvedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "requiresHumanApproval",
+        "status"
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "source": {
+          "enum": [
+            "user_authored",
+            "codex_authored",
+            "adapted",
+            "imported",
+            "migrated"
+          ]
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "parentId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "changeLog": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 1200
+          },
+          "minItems": 1,
+          "maxItems": 24
+        }
+      },
+      "required": [
+        "source",
+        "createdAt",
+        "updatedAt",
+        "changeLog"
+      ]
+    },
+    "assignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "variableId": {
+          "$ref": "#/$defs/stableId"
+        },
+        "value": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "rationale": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        }
+      },
+      "required": [
+        "variableId",
+        "value",
+        "rationale"
+      ]
+    },
+    "construction": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "hair": {
+          "$ref": "#/$defs/optionalStringList"
+        },
+        "wardrobe": {
+          "$ref": "#/$defs/optionalStringList"
+        },
+        "makeup": {
+          "$ref": "#/$defs/optionalStringList"
+        },
+        "injury": {
+          "$ref": "#/$defs/optionalStringList"
+        },
+        "weatherResponse": {
+          "$ref": "#/$defs/optionalStringList"
+        },
+        "accessories": {
+          "$ref": "#/$defs/optionalStringList"
+        }
+      },
+      "required": [
+        "summary"
+      ]
+    },
+    "transitions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "allowedFrom": {
+          "$ref": "#/$defs/stringList"
+        },
+        "allowedTo": {
+          "$ref": "#/$defs/stringList"
+        },
+        "transitionCues": {
+          "$ref": "#/$defs/stringList"
+        }
+      },
+      "required": [
+        "allowedFrom",
+        "allowedTo",
+        "transitionCues"
+      ]
+    },
+    "materialLook": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "materialId",
+        "baseType",
+        "roughness",
+        "sheen",
+        "translucency",
+        "thickness",
+        "condition",
+        "lightResponse"
+      ],
+      "properties": {
+        "materialId": {
+          "$ref": "#/$defs/stableId"
+        },
+        "baseType": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "weaveOrSurface": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "roughness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "sheen": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "translucency": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "thickness": {
+          "enum": [
+            "ultralight",
+            "light",
+            "medium",
+            "heavy",
+            "rigid"
+          ]
+        },
+        "condition": {
+          "enum": [
+            "new",
+            "clean",
+            "worn",
+            "aged",
+            "damaged",
+            "wet",
+            "dusty"
+          ]
+        },
+        "lightResponse": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        }
+      }
+    },
+    "skinMaterialLook": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "baselineRelation",
+        "undertoneShift",
+        "makeupCoverage",
+        "hydration",
+        "microRoughness",
+        "specularStrength",
+        "translucencyReadability",
+        "poreVisibility",
+        "microTextureVisibility",
+        "peachFuzzVisibility",
+        "tonalVariation",
+        "rednessVariation",
+        "sebumVisibility",
+        "imperfectionVisibility",
+        "zoneVariation",
+        "temporaryConditions",
+        "lightResponse",
+        "identityPreservation",
+        "calibration"
+      ],
+      "properties": {
+        "baselineRelation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "undertoneShift": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "makeupCoverage": {
+          "$ref": "#/$defs/intentScale"
+        },
+        "hydration": {
+          "$ref": "#/$defs/intentScale"
+        },
+        "microRoughness": {
+          "$ref": "#/$defs/intentScale"
+        },
+        "specularStrength": {
+          "$ref": "#/$defs/intentScale"
+        },
+        "translucencyReadability": {
+          "$ref": "#/$defs/intentScale"
+        },
+        "poreVisibility": {
+          "$ref": "#/$defs/intentScale"
+        },
+        "microTextureVisibility": {
+          "$ref": "#/$defs/intentScale"
+        },
+        "peachFuzzVisibility": {
+          "$ref": "#/$defs/intentScale"
+        },
+        "tonalVariation": {
+          "$ref": "#/$defs/intentScale"
+        },
+        "rednessVariation": {
+          "$ref": "#/$defs/intentScale"
+        },
+        "sebumVisibility": {
+          "$ref": "#/$defs/intentScale"
+        },
+        "imperfectionVisibility": {
+          "$ref": "#/$defs/intentScale"
+        },
+        "zoneVariation": {
+          "$ref": "#/$defs/stringList"
+        },
+        "temporaryConditions": {
+          "$ref": "#/$defs/optionalStringList"
+        },
+        "lightResponse": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "identityPreservation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "calibration": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "scale",
+            "notMeasuredPhysicalProperty",
+            "notBiometric",
+            "notProviderControl"
+          ],
+          "properties": {
+            "scale": {
+              "const": "normalized_creative_intent"
+            },
+            "notMeasuredPhysicalProperty": {
+              "const": true
+            },
+            "notBiometric": {
+              "const": true
+            },
+            "notProviderControl": {
+              "const": true
+            }
+          }
+        }
+      }
+    },
+    "intentScale": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "makeupLook": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "style",
+        "base",
+        "brows",
+        "eyes",
+        "cheeks",
+        "lips",
+        "finish",
+        "intensity",
+        "identityPreservation"
+      ],
+      "properties": {
+        "style": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 300
+        },
+        "base": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "brows": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "eyes": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "cheeks": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "lips": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "finish": {
+          "enum": [
+            "natural",
+            "matte",
+            "satin",
+            "dewy",
+            "editorial",
+            "stage"
+          ]
+        },
+        "intensity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "identityPreservation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        }
+      }
+    },
+    "hairLook": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "length",
+        "structure",
+        "parting",
+        "texture",
+        "volume",
+        "finish",
+        "accessories",
+        "movementResponse"
+      ],
+      "properties": {
+        "length": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "structure": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "parting": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "fringe": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "texture": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "volume": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 400
+        },
+        "finish": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "accessories": {
+          "$ref": "#/$defs/optionalStringList"
+        },
+        "movementResponse": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        }
+      }
+    },
+    "costumeLook": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "style",
+        "silhouette",
+        "components",
+        "construction",
+        "layering",
+        "fit",
+        "palette",
+        "materials",
+        "pairingLogic",
+        "condition",
+        "movementResponse"
+      ],
+      "properties": {
+        "style": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "silhouette": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "components": {
+          "$ref": "#/$defs/stringList"
+        },
+        "construction": {
+          "$ref": "#/$defs/stringList"
+        },
+        "layering": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "fit": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "palette": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "primary",
+            "secondary",
+            "accent"
+          ],
+          "properties": {
+            "primary": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240
+            },
+            "secondary": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240
+            },
+            "accent": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240
+            }
+          }
+        },
+        "materials": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 16,
+          "items": {
+            "$ref": "#/$defs/materialLook"
+          }
+        },
+        "pairingLogic": {
+          "$ref": "#/$defs/stringList"
+        },
+        "condition": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "movementResponse": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        }
+      }
+    },
+    "styling": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "makeup",
+        "hair",
+        "costume",
+        "accessories",
+        "surfaceState"
+      ],
+      "properties": {
+        "skinMaterial": {
+          "$ref": "#/$defs/skinMaterialLook"
+        },
+        "makeup": {
+          "$ref": "#/$defs/makeupLook"
+        },
+        "hair": {
+          "$ref": "#/$defs/hairLook"
+        },
+        "costume": {
+          "$ref": "#/$defs/costumeLook"
+        },
+        "accessories": {
+          "$ref": "#/$defs/stringList"
+        },
+        "surfaceState": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        }
+      }
+    }
+  }
+}

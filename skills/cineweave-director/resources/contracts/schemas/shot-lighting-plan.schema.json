@@ -1,0 +1,338 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cineweave.dev/contracts/shot-lighting-plan.schema.json",
+  "title": "CineWeave Shot Lighting Plan",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "lightingPlanId",
+    "version",
+    "shotSpecRef",
+    "sceneLightStateRef",
+    "skillReceipt",
+    "key",
+    "fill",
+    "practicals",
+    "exposure",
+    "subjectBackgroundRelation",
+    "materialResponse",
+    "continuity",
+    "validation"
+  ],
+  "properties": {
+    "kind": {
+      "const": "cineweave_codex_shot_lighting_plan"
+    },
+    "contractVersion": {
+      "enum": [
+        "2.2.0",
+        "2.5.0"
+      ]
+    },
+    "lightingPlanId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "shotSpecRef": {
+      "$ref": "common.schema.json#/$defs/contractRef"
+    },
+    "sceneLightStateRef": {
+      "$ref": "common.schema.json#/$defs/contractRef"
+    },
+    "styleLightGrammarRef": {
+      "$ref": "common.schema.json#/$defs/contractRef"
+    },
+    "skillReceipt": {
+      "$ref": "common.schema.json#/$defs/skillReceipt"
+    },
+    "key": {
+      "$ref": "#/$defs/shotLightUse"
+    },
+    "fill": {
+      "$ref": "#/$defs/optionalShotLightUse"
+    },
+    "rim": {
+      "$ref": "#/$defs/optionalShotLightUse"
+    },
+    "practicals": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "$ref": "#/$defs/shotLightUse"
+      }
+    },
+    "exposure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "priority",
+        "highlightPolicy",
+        "shadowPolicy",
+        "adaptation"
+      ],
+      "properties": {
+        "priority": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 600
+        },
+        "highlightPolicy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 600
+        },
+        "shadowPolicy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 600
+        },
+        "adaptation": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 600
+        }
+      }
+    },
+    "subjectBackgroundRelation": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1000
+    },
+    "materialResponse": {
+      "$ref": "common.schema.json#/$defs/stringList"
+    },
+    "continuity": {
+      "$ref": "common.schema.json#/$defs/stringList"
+    },
+    "allowedVariation": {
+      "type": "array",
+      "maxItems": 16,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 800
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourcesFromScene",
+        "stylePhysicalSeparated",
+        "geographyCoherent",
+        "exposureIntentional",
+        "continuityBound"
+      ],
+      "properties": {
+        "sourcesFromScene": {
+          "const": true
+        },
+        "stylePhysicalSeparated": {
+          "const": true
+        },
+        "geographyCoherent": {
+          "const": true
+        },
+        "exposureIntentional": {
+          "const": true
+        },
+        "continuityBound": {
+          "const": true
+        },
+        "fillIntentional": {
+          "const": true
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "contractVersion": {
+            "const": "2.2.0"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "key": {
+            "$ref": "#/$defs/shotLightUse"
+          },
+          "fill": {
+            "$ref": "#/$defs/shotLightUse"
+          },
+          "rim": {
+            "$ref": "#/$defs/optionalShotLightUse"
+          },
+          "practicals": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/shotLightUse"
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "contractVersion": {
+            "const": "2.5.0"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "key": {
+            "$ref": "#/$defs/modernShotLightUse"
+          },
+          "fill": {
+            "$ref": "#/$defs/optionalModernShotLightUse"
+          },
+          "rim": {
+            "$ref": "#/$defs/optionalModernShotLightUse"
+          },
+          "practicals": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/modernShotLightUse"
+            }
+          },
+          "validation": {
+            "required": [
+              "fillIntentional"
+            ],
+            "properties": {
+              "fillIntentional": {
+                "const": true
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "shotLightUse": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceId",
+        "shotFunction",
+        "subjectEffect",
+        "shadowEffect"
+      ],
+      "properties": {
+        "sourceId": {
+          "$ref": "common.schema.json#/$defs/identifier"
+        },
+        "shotFunction": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 600
+        },
+        "subjectEffect": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "shadowEffect": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "transport": {
+          "enum": [
+            "direct",
+            "bounce",
+            "transmitted"
+          ]
+        },
+        "viaSurfaceAnchor": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        }
+      }
+    },
+    "modernShotLightUse": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/shotLightUse"
+        },
+        {
+          "required": [
+            "transport"
+          ],
+          "allOf": [
+            {
+              "if": {
+                "required": [
+                  "transport"
+                ],
+                "properties": {
+                  "transport": {
+                    "enum": [
+                      "bounce",
+                      "transmitted"
+                    ]
+                  }
+                }
+              },
+              "then": {
+                "required": [
+                  "viaSurfaceAnchor"
+                ]
+              }
+            },
+            {
+              "if": {
+                "required": [
+                  "transport"
+                ],
+                "properties": {
+                  "transport": {
+                    "const": "direct"
+                  }
+                }
+              },
+              "then": {
+                "not": {
+                  "required": [
+                    "viaSurfaceAnchor"
+                  ]
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "optionalShotLightUse": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/shotLightUse"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "optionalModernShotLightUse": {
+      "anyOf": [
+        {
+          "$ref": "#/$defs/modernShotLightUse"
+        },
+        {
+          "type": "null"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,385 @@
+{
+  "kind": "cineweave_codex_shot_compiler_plan",
+  "contractVersion": "2.5.0",
+  "shotCompilerPlanId": "compiler-plan.rain-courtyard-reaction-v1",
+  "version": 1,
+  "cinematicSkillManifestRef": {
+    "kind": "cineweave_codex_cinematic_skill_manifest",
+    "id": "manifest.cinematic-skills.v1",
+    "version": 1,
+    "contentHash": "sha256:6bc03376887256474419c1222ea26c63933403c7d36532ad5e5174fa0df1ca84"
+  },
+  "skillSelection": {
+    "skillId": "slow-push-reaction",
+    "version": 1,
+    "selectionMode": "explicit",
+    "selectionReason": "用户需要把压住情绪的发现编译为推进、表演和时间三类可交接控制。"
+  },
+  "intent": {
+    "summary": "她察觉身后脚步却不回头，表面维持前行，注意力和紧张逐步收紧。",
+    "storyFunction": "reaction",
+    "targetLevel": "shot",
+    "source": "user_authored"
+  },
+  "parameterValues": [
+    {
+      "parameterId": "push_intensity",
+      "value": 0.62,
+      "source": "user_override",
+      "displayValue": "推进 62%"
+    },
+    {
+      "parameterId": "performance_restraint",
+      "value": 0.86,
+      "source": "user_override",
+      "displayValue": "克制 86%"
+    },
+    {
+      "parameterId": "duration_seconds",
+      "value": 5.5,
+      "source": "manifest_default",
+      "displayValue": "5.5 秒"
+    }
+  ],
+  "resolvedBindings": [
+    {
+      "slotId": "character",
+      "source": "exact_ref",
+      "refs": [
+        {
+          "kind": "character_binding",
+          "id": "binding.shenheng-rain-night",
+          "version": 3,
+          "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ]
+    },
+    {
+      "slotId": "scene",
+      "source": "exact_ref",
+      "refs": [
+        {
+          "kind": "scene_binding",
+          "id": "binding.lin-an-street-rain-night",
+          "version": 2,
+          "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        }
+      ]
+    },
+    {
+      "slotId": "performance",
+      "source": "exact_ref",
+      "refs": [
+        {
+          "kind": "cineweave_codex_performance_timeline",
+          "id": "performance.shenheng-restrained-alertness",
+          "version": 1,
+          "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        }
+      ]
+    }
+  ],
+  "upstreamRefs": [
+    {
+      "kind": "cineweave_codex_story_brief",
+      "id": "story.brief-rain-following",
+      "version": 1,
+      "contentHash": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+    }
+  ],
+  "controlSurface": {
+    "surfaceVersion": "1.0.0",
+    "projectionOnly": true,
+    "groups": [
+      {
+        "groupId": "camera",
+        "order": 1,
+        "label": "摄影机",
+        "domain": "camera",
+        "controls": [
+          {
+            "controlId": "control.slow-push-reaction.push-intensity",
+            "parameterId": "push_intensity",
+            "label": "推进强度",
+            "domain": "camera",
+            "value": 0.62,
+            "state": "editable",
+            "enforcement": "soft",
+            "ownerRoute": "shot_direction",
+            "target": {
+              "contractKind": "cineweave_codex_shot_spec",
+              "ownerRoute": "shot_direction",
+              "route": "shot_direction",
+              "fieldPath": "camera.movementIntent"
+            }
+          }
+        ]
+      },
+      {
+        "groupId": "performance",
+        "order": 2,
+        "label": "表演",
+        "domain": "performance",
+        "controls": [
+          {
+            "controlId": "control.slow-push-reaction.performance-restraint",
+            "parameterId": "performance_restraint",
+            "label": "表演克制度",
+            "domain": "performance",
+            "value": 0.86,
+            "state": "editable",
+            "enforcement": "soft",
+            "ownerRoute": "character",
+            "target": {
+              "contractKind": "cineweave_codex_performance_timeline",
+              "ownerRoute": "character",
+              "route": "performance_timeline",
+              "fieldPath": "phases"
+            }
+          }
+        ]
+      },
+      {
+        "groupId": "pacing",
+        "order": 3,
+        "label": "节奏",
+        "domain": "pacing",
+        "controls": [
+          {
+            "controlId": "control.slow-push-reaction.duration-seconds",
+            "parameterId": "duration_seconds",
+            "label": "反应时长",
+            "domain": "pacing",
+            "value": 5.5,
+            "unit": "seconds",
+            "state": "derived",
+            "enforcement": "soft",
+            "ownerRoute": "shot_direction",
+            "target": {
+              "contractKind": "cineweave_codex_temporal_spec",
+              "ownerRoute": "shot_direction",
+              "route": "temporal_direction",
+              "fieldPath": "durationSeconds"
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "handoffs": [
+    {
+      "handoffId": "handoff.shot-direction",
+      "order": 1,
+      "contractKind": "cineweave_codex_shot_spec",
+      "ownerRoute": "shot_direction",
+      "route": "shot_direction",
+      "status": "planned",
+      "purpose": "由 Director 把反应目的、调度、镜头和稳定收势写成 ShotSpec。",
+      "dependencyRefs": [
+        {
+          "kind": "character_binding",
+          "id": "binding.shenheng-rain-night",
+          "version": 3,
+          "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        {
+          "kind": "scene_binding",
+          "id": "binding.lin-an-street-rain-night",
+          "version": 2,
+          "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        }
+      ],
+      "fieldAssignments": [
+        {
+          "targetPath": "bindings.characters",
+          "sourceType": "binding_slot",
+          "sourceId": "character",
+          "note": "保留精确人物身份。"
+        },
+        {
+          "targetPath": "camera.movementIntent",
+          "sourceType": "parameter",
+          "sourceId": "push_intensity",
+          "note": "推进服务于情绪发现。"
+        }
+      ]
+    },
+    {
+      "handoffId": "handoff.performance-timeline",
+      "order": 2,
+      "contractKind": "cineweave_codex_performance_timeline",
+      "ownerRoute": "character",
+      "route": "performance_timeline",
+      "status": "planned",
+      "purpose": "由 Character 把克制和紧张的变化编译为可观察表演节拍。",
+      "dependencyRefs": [
+        {
+          "kind": "character_binding",
+          "id": "binding.shenheng-rain-night",
+          "version": 3,
+          "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        {
+          "kind": "cineweave_codex_performance_timeline",
+          "id": "performance.shenheng-restrained-alertness",
+          "version": 1,
+          "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        }
+      ],
+      "fieldAssignments": [
+        {
+          "targetPath": "phases",
+          "sourceType": "parameter",
+          "sourceId": "performance_restraint",
+          "note": "情绪只作为表演编译入口。"
+        }
+      ]
+    },
+    {
+      "handoffId": "handoff.temporal-direction",
+      "order": 3,
+      "contractKind": "cineweave_codex_temporal_spec",
+      "ownerRoute": "shot_direction",
+      "route": "temporal_direction",
+      "status": "planned",
+      "purpose": "由 Director 绑定 ShotSpec 后编译推进、焦点、动作时间线和稳定收势。",
+      "dependencyRefs": [
+        {
+          "kind": "scene_binding",
+          "id": "binding.lin-an-street-rain-night",
+          "version": 2,
+          "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        }
+      ],
+      "fieldAssignments": [
+        {
+          "targetPath": "durationSeconds",
+          "sourceType": "parameter",
+          "sourceId": "duration_seconds",
+          "note": "时长保留完整反应过程。"
+        },
+        {
+          "targetPath": "cameraMotion.motivation",
+          "sourceType": "constant",
+          "sourceId": "emotional-realization",
+          "note": "运动动机必须显式写出。"
+        }
+      ]
+    }
+  ],
+  "compileTrace": {
+    "stages": [
+      "resolve_intent",
+      "resolve_exact_bindings",
+      "project_control_surface",
+      "prepare_department_handoffs"
+    ],
+    "steps": [
+      {
+        "stepId": "bind-character",
+        "order": 1,
+        "operation": "bind",
+        "ownerRoute": "shot_direction",
+        "target": {
+          "contractKind": "cineweave_codex_shot_spec",
+          "ownerRoute": "shot_direction",
+          "route": "shot_direction",
+          "fieldPath": "bindings.characters"
+        },
+        "source": {
+          "type": "binding_slot",
+          "id": "character"
+        }
+      },
+      {
+        "stepId": "set-push",
+        "order": 2,
+        "operation": "set",
+        "ownerRoute": "shot_direction",
+        "target": {
+          "contractKind": "cineweave_codex_shot_spec",
+          "ownerRoute": "shot_direction",
+          "route": "shot_direction",
+          "fieldPath": "camera.movementIntent"
+        },
+        "source": {
+          "type": "parameter",
+          "id": "push_intensity"
+        }
+      },
+      {
+        "stepId": "handoff-performance",
+        "order": 3,
+        "operation": "handoff",
+        "ownerRoute": "character",
+        "target": {
+          "contractKind": "cineweave_codex_performance_timeline",
+          "ownerRoute": "character",
+          "route": "performance_timeline",
+          "fieldPath": "phases"
+        },
+        "source": {
+          "type": "parameter",
+          "id": "performance_restraint"
+        }
+      },
+      {
+        "stepId": "set-time",
+        "order": 4,
+        "operation": "set",
+        "ownerRoute": "shot_direction",
+        "target": {
+          "contractKind": "cineweave_codex_temporal_spec",
+          "ownerRoute": "shot_direction",
+          "route": "temporal_direction",
+          "fieldPath": "durationSeconds"
+        },
+        "source": {
+          "type": "parameter",
+          "id": "duration_seconds"
+        }
+      }
+    ],
+    "unresolved": [
+      "完整 ShotSpec 的表演动作节拍待 Character 和 Director handoff 后填写"
+    ],
+    "conflicts": []
+  },
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.0.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-09-02T04:05:00.000Z"
+  },
+  "planningBoundary": {
+    "providerNeutral": true,
+    "generatesMedia": false,
+    "invokesExternalTool": false,
+    "mutatesCanon": false,
+    "writesFiles": false,
+    "humanApprovalRequired": true,
+    "notes": "Shot Compiler 只生成可审阅的部门交接计划；各 owner 仍需生成自己的 canonical contract，Production 才能规划执行。"
+  },
+  "validation": {
+    "manifestRefExact": true,
+    "skillSelectionExact": true,
+    "parametersResolved": true,
+    "bindingsResolved": true,
+    "controlsProjectionOnly": true,
+    "handoffsOwned": true,
+    "programTraceOrdered": true,
+    "noProviderSelection": true,
+    "noCanonMutation": true,
+    "noExternalExecution": true
+  },
+  "provenance": {
+    "source": "codex_authored",
+    "createdAt": "2026-09-02T04:05:00.000Z",
+    "updatedAt": "2026-09-02T04:05:00.000Z",
+    "changeLog": [
+      "v1: compile slow-push-reaction into exact department handoffs and creator controls"
+    ]
+  }
+}

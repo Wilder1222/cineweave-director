@@ -1,0 +1,217 @@
+{
+  "kind": "cineweave_codex_camera_previs_spec",
+  "contractVersion": "2.5.0",
+  "cameraPrevisSpecId": "camera-previs.rain-courtyard-recognition-v1",
+  "version": 1,
+  "shotSpecRef": {
+    "kind": "cineweave_codex_shot_spec",
+    "id": "shot.rain-courtyard-recognition-v1",
+    "version": 1,
+    "contentHash": "sha256:47ecc379955cbfd7a44c43c6c37b781d10f2aef57f05b0173a4c41d4d199c95f"
+  },
+  "sceneBindingRef": {
+    "kind": "scene_binding",
+    "id": "binding.scene-rain-courtyard-01",
+    "version": 1,
+    "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "temporalSpecRef": {
+    "kind": "cineweave_codex_temporal_spec",
+    "id": "temporal.rain-courtyard-recognition-v1",
+    "version": 1,
+    "contentHash": "sha256:4d1654ec389b9a574e3aa302efb2bf2471d8efec16bd135a7e6ef680fe2cb421"
+  },
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.0.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-09-01T01:20:00.000Z"
+  },
+  "coordinateSystem": {
+    "space": "scene_binding_local",
+    "linearUnit": "meter",
+    "upAxis": "Y",
+    "handedness": "right",
+    "cameraForwardAxis": "-Z",
+    "origin": "SceneBinding binding.scene-rain-courtyard-01 的庭院中心地面投影点。"
+  },
+  "frameRate": {
+    "numerator": 24,
+    "denominator": 1
+  },
+  "frameRange": {
+    "startFrame": 0,
+    "endFrame": 132
+  },
+  "camera": {
+    "projection": "perspective",
+    "filmback": {
+      "horizontalApertureMm": 36,
+      "verticalApertureMm": 24
+    },
+    "clippingRangeMeters": {
+      "near": 0.1,
+      "far": 100
+    },
+    "shutter": {
+      "openFrameOffset": -0.25,
+      "closeFrameOffset": 0.25
+    },
+    "focusTarget": "她靠近镜头的眼睛；故人保持背景可识别而不夺走注意。"
+  },
+  "motion": {
+    "primaryBehavior": "dolly",
+    "components": [
+      "translation",
+      "focus_pull"
+    ],
+    "motivation": "只在她确认来人身份时缩短摄影机距离，把发现转化为克制的亲密压力。",
+    "framingChange": "从双人中景轻微收紧为以她为主的中近景；这是摄影机位移而非变焦，故人始终留在背景。"
+  },
+  "tracks": {
+    "poseInterpolation": "linear",
+    "intrinsicsInterpolation": "linear",
+    "pose": [
+      {
+        "frame": 0,
+        "positionMeters": {
+          "x": 0,
+          "y": 1.55,
+          "z": 4.2
+        },
+        "orientationQuaternion": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        }
+      },
+      {
+        "frame": 29,
+        "positionMeters": {
+          "x": 0,
+          "y": 1.55,
+          "z": 4.2
+        },
+        "orientationQuaternion": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        }
+      },
+      {
+        "frame": 48,
+        "positionMeters": {
+          "x": 0,
+          "y": 1.55,
+          "z": 4.13
+        },
+        "orientationQuaternion": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        }
+      },
+      {
+        "frame": 77,
+        "positionMeters": {
+          "x": 0,
+          "y": 1.55,
+          "z": 4.01
+        },
+        "orientationQuaternion": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        }
+      },
+      {
+        "frame": 91,
+        "positionMeters": {
+          "x": 0,
+          "y": 1.55,
+          "z": 4
+        },
+        "orientationQuaternion": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        }
+      },
+      {
+        "frame": 132,
+        "positionMeters": {
+          "x": 0,
+          "y": 1.55,
+          "z": 4
+        },
+        "orientationQuaternion": {
+          "x": 0,
+          "y": 0,
+          "z": 0,
+          "w": 1
+        }
+      }
+    ],
+    "intrinsics": [
+      {
+        "frame": 0,
+        "focalLengthMm": 50,
+        "focusDistanceMeters": 3.2,
+        "fStop": 4
+      },
+      {
+        "frame": 29,
+        "focalLengthMm": 50,
+        "focusDistanceMeters": 3.2,
+        "fStop": 4
+      },
+      {
+        "frame": 77,
+        "focalLengthMm": 50,
+        "focusDistanceMeters": 2.9,
+        "fStop": 4
+      },
+      {
+        "frame": 91,
+        "focalLengthMm": 50,
+        "focusDistanceMeters": 2.85,
+        "fStop": 4
+      },
+      {
+        "frame": 132,
+        "focalLengthMm": 50,
+        "focusDistanceMeters": 2.85,
+        "fStop": 4
+      }
+    ]
+  },
+  "endState": "第 91 帧后摄影机与焦点均稳定：她在门槛内三分之四回望，故人在背景门槛外，双方确认身份但无人开口。",
+  "planningBoundary": {
+    "providerNeutral": true,
+    "generatesMedia": false,
+    "invokesExternalTool": false
+  },
+  "validation": {
+    "exactDependencies": true,
+    "coordinateSystemExplicit": true,
+    "tracksSeparate": true,
+    "keyframesOrdered": true,
+    "motionComponentsExplicit": true,
+    "providerNeutral": true,
+    "noMediaGeneration": true
+  },
+  "provenance": {
+    "source": "suite_builtin",
+    "createdAt": "2026-09-01T01:20:00.000Z",
+    "updatedAt": "2026-09-01T01:20:00.000Z",
+    "changeLog": [
+      "Initial provider-neutral camera previs example derived from the exact rain-courtyard ShotSpec and TemporalSpec."
+    ]
+  }
+}

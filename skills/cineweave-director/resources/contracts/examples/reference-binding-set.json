@@ -1,0 +1,68 @@
+{
+  "kind": "cineweave_codex_reference_binding_set",
+  "contractVersion": "2.4.0",
+  "bindingSetId": "references.song-portrait-test",
+  "version": 1,
+  "status": "draft",
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.0.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-22T01:10:00.000Z"
+  },
+  "purpose": "为宋韵真人肖像测试绑定风格证据，同时明确排除来源人物身份、服装和姿势。",
+  "targetRefs": [
+    {
+      "kind": "cineweave_codex_style_compile",
+      "id": "style.song-portrait-live-action",
+      "version": 1,
+      "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+    }
+  ],
+  "bindings": [
+    {
+      "observationRef": {
+        "kind": "cineweave_codex_reference_observation",
+        "id": "observation.portrait-style-01",
+        "version": 1,
+        "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+      },
+      "role": "style",
+      "priority": 40,
+      "required": true,
+      "notes": "只传递低饱和暖灰色盘、克制对比和柔和高光过渡；光源结构与皮肤物理状态保持排除。"
+    }
+  ],
+  "resolutionOrder": [
+    "identity",
+    "appearance",
+    "geography",
+    "composition",
+    "lighting",
+    "style"
+  ],
+  "conflictPolicy": {
+    "identityCannotBeOverridden": true,
+    "geographyCannotBeOverridden": true,
+    "overlappingSelectors": "reject",
+    "sameRoleConflict": "explicit_priority"
+  },
+  "rightsPolicy": {
+    "allProfilesResolved": false,
+    "unresolvedBehavior": "warn_exploration",
+    "redistributionAllowed": false,
+    "unresolvedObservationIds": [
+      "observation.portrait-style-01"
+    ]
+  },
+  "validation": {
+    "exactObservationRefs": true,
+    "uniqueObservationRefs": true,
+    "oneRolePerObservation": true,
+    "selectorConflictsChecked": true,
+    "rightsChecked": true,
+    "noPrivateLocators": true
+  }
+}

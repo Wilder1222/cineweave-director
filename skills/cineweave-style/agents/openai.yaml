@@ -1,6 +1,0 @@
-interface:
-  display_name: "CineWeave Style"
-  short_description: "Compose reusable visual and temporal style systems"
-  default_prompt: "Use $cineweave-style to turn my style request and references into a reusable StylePackage or target-specific StyleCompile."
-policy:
-  allow_implicit_invocation: true

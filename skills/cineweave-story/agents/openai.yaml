@@ -1,6 +1,0 @@
-interface:
-  display_name: "CineWeave Story"
-  short_description: "Develop causal stories, script scenes and continuity"
-  default_prompt: "Use $cineweave-story to turn this idea into a dramatic question, causal beats, a playable scene or a continuity ledger without inventing camera directions."
-policy:
-  allow_implicit_invocation: true

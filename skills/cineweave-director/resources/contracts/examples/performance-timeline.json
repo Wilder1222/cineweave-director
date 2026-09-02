@@ -1,0 +1,84 @@
+{
+  "kind": "cineweave_codex_performance_timeline",
+  "contractVersion": "2.2.0",
+  "timelineId": "performance.gu-yin-rain-return-v1",
+  "version": 1,
+  "characterBindingRef": {
+    "kind": "character_binding",
+    "id": "binding.gu-yin-courtyard-01",
+    "version": 1,
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "durationSeconds": 5.5,
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.0.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-21T03:10:00.000Z"
+  },
+  "phases": [
+    {
+      "phaseId": "phase.notice",
+      "startSeconds": 0,
+      "endSeconds": 1.1,
+      "trigger": "身后石阶传来熟悉但迟疑的脚步声。",
+      "objective": "确认来人而不暴露期待。",
+      "subtext": "她害怕自己认错，也害怕没有认错。",
+      "gaze": "眼球先向右后方移动，短暂停在声音来源。",
+      "face": "下眼睑轻微收紧，嘴角原有张力保持，眉毛不同时上抬。",
+      "breath": "吸气在一半处停住。",
+      "posture": "胸腔保持朝前，肩膀暂不响应。",
+      "action": "握住药盒的手指压力略微增加。",
+      "secondaryMotion": "袖口因手指收紧产生极小牵拉。",
+      "residualState": "注意力已经离开手中药盒。"
+    },
+    {
+      "phaseId": "phase.turn",
+      "startSeconds": 1.1,
+      "endSeconds": 3.4,
+      "trigger": "来人停在廊柱外，没有叫她的名字。",
+      "objective": "看清对方，同时保留退回礼貌距离的可能。",
+      "subtext": "她想靠近，却先准备结束会面。",
+      "gaze": "眼神继续领先，下巴随后转动，直到形成三分之四回望。",
+      "face": "右侧嘴角先收紧，眼眶湿度略增但不流泪。",
+      "breath": "缓慢呼出未完成的吸气，幅度很小。",
+      "posture": "头部转动后胸腔才响应少量，骨盆和双脚保持原位。",
+      "action": "药盒下降约一掌高度，但没有松手。",
+      "secondaryMotion": "耳坠比头部晚停止，靠近面部的碎发轻微扫过脸颊。",
+      "residualState": "她已认出来人，但仍保持身体距离。"
+    },
+    {
+      "phaseId": "phase.hold",
+      "startSeconds": 3.4,
+      "endSeconds": 5.5,
+      "trigger": "双方目光第一次稳定相接。",
+      "objective": "等待对方先说明来意。",
+      "subtext": "沉默是她最后一层防御。",
+      "gaze": "凝视稳定约一秒，随后短暂落向对方手中的旧物。",
+      "face": "眉眼张力缓慢下降，嘴角仍保留未说出口的话。",
+      "breath": "恢复浅而均匀的呼吸。",
+      "posture": "下巴轻收，肩线下降极少。",
+      "action": "没有迈步，只把药盒移到身体侧边。",
+      "secondaryMotion": "耳坠和袖口完全停稳。",
+      "residualState": "情绪回落但未恢复到初始平静。"
+    }
+  ],
+  "invariants": [
+    "眼神先于头部",
+    "动作幅度克制",
+    "右侧嘴角先泄漏紧张",
+    "不主动靠近"
+  ],
+  "allowedVariation": [
+    "每阶段时长可在百分之十范围内调整",
+    "碎发摆动幅度随实际风力调整"
+  ],
+  "validation": {
+    "ordered": true,
+    "nonOverlapping": true,
+    "withinDuration": true,
+    "behaviorOwned": true,
+    "noCameraDirections": true
+  }
+}

@@ -1,0 +1,355 @@
+{
+  "kind": "cineweave_codex_prompt_projection_plan",
+  "contractVersion": "3.0.0",
+  "projectionPlanId": "projection.midjourney.corridor-shot-03",
+  "version": 1,
+  "status": "ready_for_human",
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.0.0",
+    "commit": "0000000000000000000000000000000000000000",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-09-02T00:00:00Z"
+  },
+  "sourcePromptRef": {
+    "kind": "cineweave_codex_image_prompt",
+    "id": "image-prompt.corridor-shot-03",
+    "version": 1,
+    "contentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+  },
+  "capabilityProfileRef": {
+    "kind": "cineweave_codex_capability_profile",
+    "id": "capability.midjourney-v8.2-web",
+    "version": 1,
+    "contentHash": "sha256:2222222222222222222222222222222222222222222222222222222222222222"
+  },
+  "licenseProfileRef": {
+    "kind": "cineweave_codex_license_profile",
+    "id": "license.corridor-material-01",
+    "version": 1,
+    "contentHash": "sha256:3333333333333333333333333333333333333333333333333333333333333333"
+  },
+  "dialect": {
+    "dialectId": "midjourney",
+    "modelVersion": "8.2",
+    "surface": "web",
+    "verifiedAt": "2026-09-02"
+  },
+  "officialEvidence": [
+    {
+      "evidenceId": "mj.version.2026-09-02",
+      "title": "Version",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
+      "checkedAt": "2026-09-02",
+      "claim": "V8.2 is the current default and uses the Edit Model instead of Omni Reference."
+    },
+    {
+      "evidenceId": "mj.parameters.2026-09-02",
+      "title": "Parameter List",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/32859204029709-Parameter-List",
+      "checkedAt": "2026-09-02",
+      "claim": "Parameters follow prompt text, use one preceding space, and contain no punctuation in the parameter section."
+    },
+    {
+      "evidenceId": "mj.style-reference.2026-09-02",
+      "title": "Style Reference",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/32180011136653-Style-Reference",
+      "checkedAt": "2026-09-02",
+      "claim": "Style Reference is supported in V6 and later; text should describe target content without conflicting style instructions."
+    },
+    {
+      "evidenceId": "mj.seed.2026-09-02",
+      "title": "Seeds",
+      "url": "https://docs.midjourney.com/hc/en-us/articles/32604356340877-Seeds",
+      "checkedAt": "2026-09-02",
+      "claim": "A seed can hold short-session experiment noise but is not a style or identity bookmark."
+    }
+  ],
+  "promptBody": "restrained cinematic medium full shot of Shen Yanqiu shifting half a step between an armed pursuer and a child in a narrow stone-and-wood corridor, right hand near the sheathed sword without drawing, concealed fear visible only in tightened lower eyelids and jaw, stable weight through both feet, weapon edge in the left foreground, blocked exit behind, motivated cool side light, coherent contact shadows, distinct skin silk wood stone and metal response, restrained Chinese fantasy realism",
+  "referenceBindings": [
+    {
+      "bindingId": "binding.style.corridor-material",
+      "bindingType": "style_reference",
+      "sourceObservationRef": {
+        "kind": "cineweave_codex_reference_observation",
+        "id": "observation.corridor-material-style",
+        "version": 1,
+        "contentHash": "sha256:3333333333333333333333333333333333333333333333333333333333333333"
+      },
+      "role": "style",
+      "surfaceSlot": "web.style_reference",
+      "externalLocatorPlaceholder": "REF_STYLE_CORRIDOR_MATERIAL_01",
+      "preserve": [
+        "restrained palette",
+        "natural material separation",
+        "low-gloss stone and aged lacquer response"
+      ],
+      "exclude": [
+        "depicted identity",
+        "source costume",
+        "source architecture layout"
+      ],
+      "locatorPolicy": "human_resolved_no_private_locator"
+    }
+  ],
+  "profileBindings": [],
+  "parameterTokens": [
+    {
+      "parameterId": "parameter.version",
+      "order": 1,
+      "name": "--v",
+      "value": "8.2",
+      "rendered": "--v 8.2",
+      "source": "compatibility_evidence",
+      "rationale": "Pin the verified model instead of relying on the account default."
+    },
+    {
+      "parameterId": "parameter.aspect-ratio",
+      "order": 2,
+      "name": "--ar",
+      "value": "16:9",
+      "rendered": "--ar 16:9",
+      "source": "canon",
+      "rationale": "Preserve the approved widescreen framing intent."
+    },
+    {
+      "parameterId": "parameter.raw",
+      "order": 3,
+      "name": "--raw",
+      "value": true,
+      "rendered": "--raw",
+      "source": "projection_policy",
+      "rationale": "Test stronger adherence to explicit performance, material, and lighting language."
+    },
+    {
+      "parameterId": "parameter.stylize",
+      "order": 4,
+      "name": "--s",
+      "value": 100,
+      "rendered": "--s 100",
+      "source": "projection_policy",
+      "rationale": "Use the documented neutral default as the experiment baseline."
+    },
+    {
+      "parameterId": "parameter.seed",
+      "order": 5,
+      "name": "--seed",
+      "value": 1742,
+      "rendered": "--seed 1742",
+      "source": "human_choice",
+      "rationale": "Hold short-session noise while testing stylize only; do not treat the seed as continuity evidence."
+    }
+  ],
+  "renderedPrompt": {
+    "body": "restrained cinematic medium full shot of Shen Yanqiu shifting half a step between an armed pursuer and a child in a narrow stone-and-wood corridor, right hand near the sheathed sword without drawing, concealed fear visible only in tightened lower eyelids and jaw, stable weight through both feet, weapon edge in the left foreground, blocked exit behind, motivated cool side light, coherent contact shadows, distinct skin silk wood stone and metal response, restrained Chinese fantasy realism",
+    "parameterTail": "--v 8.2 --ar 16:9 --raw --s 100 --seed 1742",
+    "copyText": "restrained cinematic medium full shot of Shen Yanqiu shifting half a step between an armed pursuer and a child in a narrow stone-and-wood corridor, right hand near the sheathed sword without drawing, concealed fear visible only in tightened lower eyelids and jaw, stable weight through both feet, weapon edge in the left foreground, blocked exit behind, motivated cool side light, coherent contact shadows, distinct skin silk wood stone and metal response, restrained Chinese fantasy realism --v 8.2 --ar 16:9 --raw --s 100 --seed 1742",
+    "referencePlaceholders": [
+      "REF_STYLE_CORRIDOR_MATERIAL_01"
+    ],
+    "parametersAtEnd": true,
+    "containsPrivateLocator": false
+  },
+  "experimentPlan": {
+    "baselineVariantId": "variant.baseline-s100",
+    "variants": [
+      {
+        "variantId": "variant.baseline-s100",
+        "role": "baseline",
+        "changedVariable": null,
+        "heldConstants": [
+          "prompt body",
+          "V8.2 web surface",
+          "16:9 aspect ratio",
+          "Raw mode",
+          "style reference binding",
+          "seed 1742"
+        ],
+        "expectedEffect": "Establish a restrained baseline with the documented stylize default.",
+        "acceptanceCheck": "The protection beat reads first while identity, body weight, corridor pressure, light direction, and material separation remain reviewable.",
+        "renderedPrompt": "restrained cinematic medium full shot of Shen Yanqiu shifting half a step between an armed pursuer and a child in a narrow stone-and-wood corridor, right hand near the sheathed sword without drawing, concealed fear visible only in tightened lower eyelids and jaw, stable weight through both feet, weapon edge in the left foreground, blocked exit behind, motivated cool side light, coherent contact shadows, distinct skin silk wood stone and metal response, restrained Chinese fantasy realism --v 8.2 --ar 16:9 --raw --s 100 --seed 1742"
+      },
+      {
+        "variantId": "variant.stylize-s250",
+        "role": "single_variable_test",
+        "changedVariable": "stylize: 100 -> 250",
+        "heldConstants": [
+          "prompt body",
+          "V8.2 web surface",
+          "16:9 aspect ratio",
+          "Raw mode",
+          "style reference binding",
+          "seed 1742"
+        ],
+        "expectedEffect": "Increase aesthetic interpretation without changing story, identity, blocking, camera, or reference inputs.",
+        "acceptanceCheck": "Visual treatment may strengthen, but the protection beat and all hard continuity facts must remain as readable as the baseline.",
+        "renderedPrompt": "restrained cinematic medium full shot of Shen Yanqiu shifting half a step between an armed pursuer and a child in a narrow stone-and-wood corridor, right hand near the sheathed sword without drawing, concealed fear visible only in tightened lower eyelids and jaw, stable weight through both feet, weapon edge in the left foreground, blocked exit behind, motivated cool side light, coherent contact shadows, distinct skin silk wood stone and metal response, restrained Chinese fantasy realism --v 8.2 --ar 16:9 --raw --s 250 --seed 1742"
+      }
+    ],
+    "oneVariablePerVariant": true
+  },
+  "compatibilityChecks": [
+    {
+      "checkId": "check.rights-licensing",
+      "status": "pass",
+      "message": "The exact LicenseProfile reference records a resolved external-use rights gate for this structure-only fixture.",
+      "evidenceIds": []
+    },
+    {
+      "checkId": "check.model-surface",
+      "status": "pass",
+      "message": "The plan pins V8.2 on the web surface.",
+      "evidenceIds": [
+        "mj.version.2026-09-02"
+      ]
+    },
+    {
+      "checkId": "check.parameter-tail",
+      "status": "pass",
+      "message": "Every parameter is structured once and rendered after the prompt body without punctuation.",
+      "evidenceIds": [
+        "mj.parameters.2026-09-02"
+      ]
+    },
+    {
+      "checkId": "check.reference-mode",
+      "status": "pass",
+      "message": "The binding uses a V6+ Style Reference and does not use V7-only Omni Reference.",
+      "evidenceIds": [
+        "mj.version.2026-09-02",
+        "mj.style-reference.2026-09-02"
+      ]
+    },
+    {
+      "checkId": "check.multi-prompt",
+      "status": "pass",
+      "message": "The V8.2 prompt contains no unsupported multi-prompt separator or numeric text weight.",
+      "evidenceIds": [
+        "mj.version.2026-09-02"
+      ]
+    },
+    {
+      "checkId": "check.seed-scope",
+      "status": "pass",
+      "message": "The seed is limited to a short-session one-variable comparison and is not treated as identity or style evidence.",
+      "evidenceIds": [
+        "mj.seed.2026-09-02"
+      ]
+    }
+  ],
+  "manualHandoff": {
+    "status": "ready",
+    "executionOwner": "human_external",
+    "requiresHumanApproval": true,
+    "steps": [
+      "Select V8.2 on the Midjourney web surface.",
+      "Confirm every hidden default below before submission.",
+      "Attach REF_STYLE_CORRIDOR_MATERIAL_01 only in the Style Reference slot.",
+      "Verify that the exact referenced LicenseProfile remains approved for this external use.",
+      "Paste the baseline copyText exactly and submit manually.",
+      "Run the stylize-250 variant only after preserving the baseline result and metadata.",
+      "Return original files and exact metadata; do not report a planned or submitted job as a successful image."
+    ],
+    "hiddenDefaultChecks": [
+      {
+        "setting": "model",
+        "expectedState": "V8.2",
+        "status": "human_must_confirm"
+      },
+      {
+        "setting": "personalization",
+        "expectedState": "off unless a separately recorded profile binding is approved",
+        "status": "human_must_confirm"
+      },
+      {
+        "setting": "moodboards",
+        "expectedState": "none",
+        "status": "human_must_confirm"
+      },
+      {
+        "setting": "variety",
+        "expectedState": "0 unless explicitly added as the one changed variable",
+        "status": "human_must_confirm"
+      },
+      {
+        "setting": "pinned references",
+        "expectedState": "only REF_STYLE_CORRIDOR_MATERIAL_01",
+        "status": "human_must_confirm"
+      }
+    ]
+  },
+  "exactReturnRequirements": {
+    "requiredItems": [
+      {
+        "fieldId": "external-job-id",
+        "required": true,
+        "description": "The exact Midjourney job/task identifier and creation timestamp."
+      },
+      {
+        "fieldId": "actual-model-surface",
+        "required": true,
+        "description": "The model version and surface shown for the completed external job."
+      },
+      {
+        "fieldId": "submitted-and-resolved-prompt",
+        "required": true,
+        "description": "The exact submitted text plus any provider-resolved prompt or code form."
+      },
+      {
+        "fieldId": "resolved-parameters",
+        "required": true,
+        "description": "Actual parameters, automatic rewrites, aspect ratio, dimensions, Raw state, stylize, variety, quality, weird, and seed when present."
+      },
+      {
+        "fieldId": "reference-slot-record",
+        "required": true,
+        "description": "The type, count, and stable user-side identifier of each attached reference without credentials or expiring private URLs."
+      },
+      {
+        "fieldId": "original-output-files",
+        "required": true,
+        "description": "Original downloaded files, filenames, and hashes computed only after the files are locally available."
+      },
+      {
+        "fieldId": "warnings-and-failures",
+        "required": true,
+        "description": "Any moderation block, incompatibility, provider warning, failed variant, or automatic rewrite."
+      },
+      {
+        "fieldId": "variant-mapping",
+        "required": true,
+        "description": "The exact baseline or one-variable variant associated with each returned output."
+      }
+    ],
+    "unknownPolicy": "record_unknown_never_infer"
+  },
+  "planningBoundary": {
+    "projectionOnly": true,
+    "mutatesCanon": false,
+    "generatesMedia": false,
+    "invokesExternalTool": false,
+    "selectsProvider": false,
+    "humanExecutionRequired": true
+  },
+  "validation": {
+    "sourcePromptExact": true,
+    "capabilityProfileExact": true,
+    "officialEvidenceCurrent": true,
+    "parametersStructured": true,
+    "parametersAtEnd": true,
+    "referencesRoleScoped": true,
+    "oneVariablePerVariant": true,
+    "hiddenDefaultsExposed": true,
+    "noBlockingCompatibilityIssue": true,
+    "noPrivateLocator": true,
+    "noExternalExecution": true
+  },
+  "provenance": {
+    "source": "suite_builtin",
+    "createdAt": "2026-09-02T00:00:00Z",
+    "updatedAt": "2026-09-02T00:00:00Z",
+    "changeLog": [
+      "Created a non-executing Midjourney V8.2 projection fixture with exact source/capability references and manual return requirements."
+    ]
+  }
+}

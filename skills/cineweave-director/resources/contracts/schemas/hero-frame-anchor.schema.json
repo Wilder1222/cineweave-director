@@ -1,0 +1,590 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cineweave.dev/contracts/hero-frame-anchor.schema.json",
+  "title": "CineWeave Director Hero Frame Anchor",
+  "description": "A provider-neutral visual anchor that carries one exact hero frame and its shot-level visual DNA into later temporal direction without generating media or mutating Canon.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "heroFrameAnchorId",
+    "version",
+    "heroFrameRef",
+    "sourceSelection",
+    "shotSpecRef",
+    "bindingRefs",
+    "skillReceipt",
+    "visualDna",
+    "inheritancePolicy",
+    "planningBoundary",
+    "validation",
+    "provenance"
+  ],
+  "properties": {
+    "kind": {
+      "const": "cineweave_codex_hero_frame_anchor"
+    },
+    "contractVersion": {
+      "const": "2.5.0"
+    },
+    "heroFrameAnchorId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "heroFrameRef": {
+      "$ref": "#/$defs/heroFrameRef"
+    },
+    "sourceSelection": {
+      "$ref": "#/$defs/sourceSelection"
+    },
+    "shotSpecRef": {
+      "$ref": "#/$defs/shotSpecRef"
+    },
+    "cameraPrevisRef": {
+      "$ref": "#/$defs/cameraPrevisRef"
+    },
+    "shotLightingPlanRef": {
+      "$ref": "#/$defs/shotLightingPlanRef"
+    },
+    "styleCompileRef": {
+      "$ref": "#/$defs/styleCompileRef"
+    },
+    "bindingRefs": {
+      "$ref": "#/$defs/bindingRefs"
+    },
+    "skillReceipt": {
+      "$ref": "common.schema.json#/$defs/skillReceipt"
+    },
+    "visualDna": {
+      "$ref": "#/$defs/visualDna"
+    },
+    "inheritancePolicy": {
+      "$ref": "#/$defs/inheritancePolicy"
+    },
+    "planningBoundary": {
+      "$ref": "#/$defs/planningBoundary"
+    },
+    "validation": {
+      "$ref": "#/$defs/validation"
+    },
+    "provenance": {
+      "$ref": "common.schema.json#/$defs/provenance"
+    }
+  },
+  "$defs": {
+    "heroFrameRef": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        {
+          "properties": {
+            "kind": {
+              "const": "cineweave_codex_reference_asset"
+            }
+          }
+        }
+      ]
+    },
+    "shotSpecRef": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        {
+          "properties": {
+            "kind": {
+              "const": "cineweave_codex_shot_spec"
+            }
+          }
+        }
+      ]
+    },
+    "cameraPrevisRef": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        {
+          "properties": {
+            "kind": {
+              "const": "cineweave_codex_camera_previs_spec"
+            }
+          }
+        }
+      ]
+    },
+    "shotLightingPlanRef": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        {
+          "properties": {
+            "kind": {
+              "const": "cineweave_codex_shot_lighting_plan"
+            }
+          }
+        }
+      ]
+    },
+    "styleCompileRef": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        {
+          "properties": {
+            "kind": {
+              "const": "cineweave_codex_style_compile"
+            }
+          }
+        }
+      ]
+    },
+    "characterRef": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        {
+          "properties": {
+            "kind": {
+              "const": "character_binding"
+            }
+          }
+        }
+      ]
+    },
+    "sceneRef": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        {
+          "properties": {
+            "kind": {
+              "const": "scene_binding"
+            }
+          }
+        }
+      ]
+    },
+    "appearanceStateRef": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        {
+          "properties": {
+            "kind": {
+              "const": "cineweave_codex_character_appearance_state"
+            }
+          }
+        }
+      ]
+    },
+    "referenceBindingSetRef": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        {
+          "properties": {
+            "kind": {
+              "const": "cineweave_codex_reference_binding_set"
+            }
+          }
+        }
+      ]
+    },
+    "sourceSelection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "description"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "whole_asset",
+            "frame_index",
+            "time_seconds"
+          ]
+        },
+        "frameIndex": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100000000
+        },
+        "timeSeconds": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 86400
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "required": [
+              "mode"
+            ],
+            "properties": {
+              "mode": {
+                "const": "frame_index"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "frameIndex"
+            ],
+            "not": {
+              "required": [
+                "timeSeconds"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "mode"
+            ],
+            "properties": {
+              "mode": {
+                "const": "time_seconds"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "timeSeconds"
+            ],
+            "not": {
+              "required": [
+                "frameIndex"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "required": [
+              "mode"
+            ],
+            "properties": {
+              "mode": {
+                "const": "whole_asset"
+              }
+            }
+          },
+          "then": {
+            "not": {
+              "anyOf": [
+                {
+                  "required": [
+                    "frameIndex"
+                  ]
+                },
+                {
+                  "required": [
+                    "timeSeconds"
+                  ]
+                }
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "bindingRefs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "characterRefs"
+      ],
+      "properties": {
+        "characterRefs": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/characterRef"
+          }
+        },
+        "sceneRef": {
+          "$ref": "#/$defs/sceneRef"
+        },
+        "appearanceStateRef": {
+          "$ref": "#/$defs/appearanceStateRef"
+        },
+        "referenceBindingSetRef": {
+          "$ref": "#/$defs/referenceBindingSetRef"
+        }
+      }
+    },
+    "visualDna": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "camera",
+        "composition",
+        "appearance",
+        "scene",
+        "captureIntent"
+      ],
+      "properties": {
+        "camera": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "projection",
+            "focalLengthMm",
+            "focusTarget",
+            "apertureFStop",
+            "axisSide"
+          ],
+          "properties": {
+            "projection": {
+              "enum": [
+                "perspective",
+                "orthographic"
+              ]
+            },
+            "focalLengthMm": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 2000
+            },
+            "focusTarget": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 800
+            },
+            "apertureFStop": {
+              "type": "number",
+              "exclusiveMinimum": 0,
+              "maximum": 256
+            },
+            "axisSide": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 400
+            }
+          }
+        },
+        "composition": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "layout",
+            "negativeSpace",
+            "visualHierarchy"
+          ],
+          "properties": {
+            "layout": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1600
+            },
+            "negativeSpace": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1000
+            },
+            "visualHierarchy": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1200
+            },
+            "frameOrientation": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 240
+            }
+          }
+        },
+        "appearance": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "identitySummary",
+            "costumeSummary",
+            "performanceMoment"
+          ],
+          "properties": {
+            "identitySummary": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1200
+            },
+            "costumeSummary": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1200
+            },
+            "performanceMoment": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1200
+            }
+          }
+        },
+        "scene": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "geographySummary",
+            "lightingSummary"
+          ],
+          "properties": {
+            "geographySummary": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1200
+            },
+            "lightingSummary": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 1200
+            }
+          }
+        },
+        "captureIntent": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        }
+      }
+    },
+    "inheritancePolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "preserve",
+        "allowOverrides",
+        "lockedPaths",
+        "overrideRequiresNewAnchor"
+      ],
+      "properties": {
+        "preserve": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 400
+          }
+        },
+        "allowOverrides": {
+          "type": "array",
+          "maxItems": 24,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 400
+          }
+        },
+        "lockedPaths": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 32,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "common.schema.json#/$defs/lock"
+          }
+        },
+        "overrideRequiresNewAnchor": {
+          "const": true
+        }
+      }
+    },
+    "planningBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "providerNeutral",
+        "generatesMedia",
+        "invokesExternalTool",
+        "mutatesCanon",
+        "humanApprovalRequired"
+      ],
+      "properties": {
+        "providerNeutral": {
+          "const": true
+        },
+        "generatesMedia": {
+          "const": false
+        },
+        "invokesExternalTool": {
+          "const": false
+        },
+        "mutatesCanon": {
+          "const": false
+        },
+        "humanApprovalRequired": {
+          "const": true
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 1200
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "exactHeroFrameRef",
+        "exactShotSpecRef",
+        "visualDnaProviderNeutral",
+        "inheritanceExplicit",
+        "identityCannotBeOverridden",
+        "geographyCannotBeOverridden",
+        "cameraCompositionSeparated",
+        "noMediaGeneration"
+      ],
+      "properties": {
+        "exactHeroFrameRef": {
+          "const": true
+        },
+        "exactShotSpecRef": {
+          "const": true
+        },
+        "visualDnaProviderNeutral": {
+          "const": true
+        },
+        "inheritanceExplicit": {
+          "const": true
+        },
+        "identityCannotBeOverridden": {
+          "const": true
+        },
+        "geographyCannotBeOverridden": {
+          "const": true
+        },
+        "cameraCompositionSeparated": {
+          "const": true
+        },
+        "noMediaGeneration": {
+          "const": true
+        }
+      }
+    }
+  }
+}

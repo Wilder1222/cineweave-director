@@ -1,0 +1,426 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cineweave.dev/contracts/character-binding.schema.json",
+  "title": "CineWeave Shot Character Performance Binding",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "bindingId",
+    "characterSpecRef",
+    "roleInShot",
+    "activeAnchorIds",
+    "performanceState",
+    "actionArc",
+    "observablePerformance",
+    "preserve",
+    "allowedDeviations",
+    "forbiddenChanges"
+  ],
+  "properties": {
+    "kind": {
+      "const": "character_binding"
+    },
+    "contractVersion": {
+      "const": "2.0.0"
+    },
+    "bindingId": {
+      "$ref": "#/$defs/stableId"
+    },
+    "characterSpecRef": {
+      "$ref": "#/$defs/characterSpecRef"
+    },
+    "roleInShot": {
+      "enum": [
+        "primary",
+        "secondary",
+        "supporting",
+        "background",
+        "silhouette"
+      ]
+    },
+    "activeAnchorIds": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 16,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/stableId"
+      }
+    },
+    "performanceState": {
+      "$ref": "#/$defs/performanceState"
+    },
+    "actionArc": {
+      "$ref": "#/$defs/actionArc"
+    },
+    "observablePerformance": {
+      "$ref": "#/$defs/observablePerformance"
+    },
+    "referenceObservationIds": {
+      "type": "array",
+      "maxItems": 16,
+      "uniqueItems": true,
+      "items": {
+        "$ref": "#/$defs/observationId"
+      }
+    },
+    "preserve": {
+      "$ref": "#/$defs/stringList"
+    },
+    "allowedDeviations": {
+      "$ref": "#/$defs/stringList"
+    },
+    "forbiddenChanges": {
+      "$ref": "#/$defs/stringList"
+    },
+    "appearanceStateRef": {
+      "$ref": "#/$defs/appearanceStateRef"
+    },
+    "continuityFromBindingId": {
+      "$ref": "#/$defs/stableId"
+    },
+    "behaviorLogic": {
+      "$ref": "#/$defs/behaviorLogic"
+    },
+    "emotionControl": {
+      "$ref": "#/$defs/emotionControl"
+    },
+    "microExpression": {
+      "$ref": "#/$defs/microExpression"
+    },
+    "environmentResponse": {
+      "type": "array",
+      "maxItems": 16,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1200
+      }
+    }
+  },
+  "$defs": {
+    "stableId": {
+      "type": "string",
+      "pattern": "^[a-zA-Z][a-zA-Z0-9._-]{1,159}$"
+    },
+    "observationId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160,
+      "not": {
+        "pattern": "(?:https?:|file:|[\\\\/?#])"
+      }
+    },
+    "stringList": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 24,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1200
+      }
+    },
+    "characterSpecRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "characterId",
+        "version",
+        "contentHash"
+      ],
+      "properties": {
+        "characterId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]{2,159}$"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        }
+      }
+    },
+    "performanceState": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "stateId",
+        "emotion",
+        "intensity",
+        "concealment",
+        "objective",
+        "obstacle"
+      ],
+      "properties": {
+        "stateId": {
+          "$ref": "#/$defs/stableId"
+        },
+        "emotion": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "intensity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "concealment": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "objective": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "obstacle": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        }
+      }
+    },
+    "actionArc": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "startState",
+        "trigger",
+        "peakState",
+        "endState"
+      ],
+      "properties": {
+        "startState": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "trigger": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "peakState": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "endState": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        }
+      }
+    },
+    "observablePerformance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "posture",
+        "gaze",
+        "face",
+        "hands",
+        "breath"
+      ],
+      "properties": {
+        "posture": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "gaze": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "face": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "hands": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "breath": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "voice": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        }
+      }
+    },
+    "appearanceStateRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "appearanceStateId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]{2,159}$"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        }
+      },
+      "required": [
+        "appearanceStateId",
+        "version",
+        "contentHash"
+      ]
+    },
+    "behaviorLogic": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "perception",
+        "appraisal",
+        "chosenStrategy",
+        "suppressedImpulse",
+        "actionReason"
+      ],
+      "properties": {
+        "perception": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "appraisal": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "chosenStrategy": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "suppressedImpulse": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "actionReason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        }
+      }
+    },
+    "emotionControl": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "primary",
+        "secondary",
+        "intensity",
+        "concealment",
+        "valence",
+        "arousal",
+        "dominance",
+        "trajectory",
+        "leakageChannels"
+      ],
+      "properties": {
+        "primary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "secondary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "intensity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "concealment": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "valence": {
+          "type": "number",
+          "minimum": -1,
+          "maximum": 1
+        },
+        "arousal": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "dominance": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "trajectory": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        },
+        "leakageChannels": {
+          "$ref": "#/$defs/stringList"
+        }
+      }
+    },
+    "microExpression": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "eyes",
+        "brows",
+        "mouth",
+        "jaw",
+        "timing"
+      ],
+      "properties": {
+        "eyes": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "brows": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "mouth": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "jaw": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "timing": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        }
+      }
+    }
+  }
+}

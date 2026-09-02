@@ -1,6 +1,0 @@
-interface:
-  display_name: "CineWeave Character"
-  short_description: "Explore and build reusable identity, appearance and performance contracts"
-  default_prompt: "Use $cineweave-character to turn my feeling or direct brief into comparable character directions, record my preference, then return only the requested character contract."
-policy:
-  allow_implicit_invocation: true

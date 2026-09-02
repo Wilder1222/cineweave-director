@@ -1,6 +1,0 @@
-interface:
-  display_name: "CineWeave Studio"
-  short_description: "Turn a creative idea or zero-prompt feeling into an editable brief and workflow"
-  default_prompt: "Use $cineweave to turn my creative request or zero-prompt character feeling into an editable CreativeBrief and the smallest independent or composed CineWeave workflow."
-policy:
-  allow_implicit_invocation: true

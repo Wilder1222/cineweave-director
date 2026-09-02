@@ -1,0 +1,87 @@
+{
+  "kind": "cineweave_codex_shot_lighting_plan",
+  "contractVersion": "2.5.0",
+  "lightingPlanId": "shot-light.rain-courtyard-recognition-v1",
+  "version": 1,
+  "shotSpecRef": {
+    "kind": "cineweave_codex_shot_spec",
+    "id": "shot.rain-courtyard-recognition-v1",
+    "version": 1,
+    "contentHash": "sha256:47ecc379955cbfd7a44c43c6c37b781d10f2aef57f05b0173a4c41d4d199c95f"
+  },
+  "sceneLightStateRef": {
+    "kind": "cineweave_codex_scene_light_state",
+    "id": "light.rain-courtyard-dusk-v1",
+    "version": 1,
+    "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "styleLightGrammarRef": {
+    "kind": "cineweave_codex_style_light_grammar",
+    "id": "style-light.poetic-period-naturalism-v1",
+    "version": 1,
+    "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+  },
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.0.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-21T03:35:00.000Z"
+  },
+  "key": {
+    "sourceId": "light.north-sky",
+    "transport": "direct",
+    "shotFunction": "保持她的回望可读，并让眼神变化先于故人身份被确认。",
+    "subjectEffect": "从左前上方柔和塑造面部，靠镜头的眼睛获得清晰但不夸张的泪膜高光。",
+    "shadowEffect": "面部右侧保留柔和层次，主阴影方向与廊柱一致。"
+  },
+  "fill": {
+    "sourceId": "light.north-sky",
+    "transport": "bounce",
+    "viaSurfaceAnchor": "被雨水润湿的庭院石地与东廊浅色墙面",
+    "shotFunction": "由湿石和浅墙的自然反射抬起廊内黑位。",
+    "subjectEffect": "衣服暗部保留丝麻纹理，但不消除面部塑形。",
+    "shadowEffect": "只降低阴影密度，不改变方向。"
+  },
+  "rim": null,
+  "practicals": [
+    {
+      "sourceId": "light.corridor-lamp",
+      "transport": "direct",
+      "shotFunction": "说明廊内已入夜并把她与深廊局部分离。",
+      "subjectEffect": "只在右后侧发丝、耳饰与衣领形成小面积暖反射。",
+      "shadowEffect": "近处产生很弱的反向小影，不覆盖主阴影。"
+    }
+  ],
+  "exposure": {
+    "priority": "优先保留她的眼睛、肤色层次和门槛关系。",
+    "highlightPolicy": "庭院天空与湿地高光不剪白，油灯火焰允许极小面积超出。",
+    "shadowPolicy": "深廊保持可辨材质但低于人物约一档。",
+    "adaptation": "镜头推进期间不进行可见自动曝光漂移。"
+  },
+  "subjectBackgroundRelation": "她的面部略亮于深廊，故人在较亮庭院中的轮廓可读但不抢先成为第一注意点。",
+  "materialResponse": [
+    "皮肤高光细小且分区",
+    "湿木柱高光窄而暗",
+    "湿石庭院反射宽而低饱和",
+    "丝麻衣料不出现塑料亮边"
+  ],
+  "continuity": [
+    "北向天光始终为主光",
+    "油灯始终在她右后方",
+    "推进前后曝光关系不变",
+    "故人不出现独立无来源轮廓光"
+  ],
+  "allowedVariation": [
+    "油灯自然闪动幅度不超过局部亮度的小幅变化",
+    "云层整体亮度可缓慢下降"
+  ],
+  "validation": {
+    "sourcesFromScene": true,
+    "stylePhysicalSeparated": true,
+    "geographyCoherent": true,
+    "exposureIntentional": true,
+    "continuityBound": true,
+    "fillIntentional": true
+  }
+}

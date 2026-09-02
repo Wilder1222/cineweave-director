@@ -1,4 +1,0 @@
-interface:
-  display_name: "CineWeave Reference"
-  short_description: "Ingest, review and bind role-scoped references"
-  default_prompt: "Use $cineweave-reference to ingest, inspect, scope and bind these reference assets without leaking identity, content or rights assumptions."

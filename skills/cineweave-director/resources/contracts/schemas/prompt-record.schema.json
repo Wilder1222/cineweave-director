@@ -1,0 +1,647 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cineweave.dev/contracts/prompt-record.schema.json",
+  "title": "CineWeave Codex General Text-to-Image Prompt Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "promptId",
+    "title",
+    "version",
+    "status",
+    "domain",
+    "generationMode",
+    "skillReceipt",
+    "purpose",
+    "prompt",
+    "variables",
+    "references",
+    "variants",
+    "evaluation",
+    "provenance",
+    "validation"
+  ],
+  "properties": {
+    "kind": {
+      "const": "cineweave_codex_prompt_record"
+    },
+    "contractVersion": {
+      "const": "2.0.0"
+    },
+    "promptId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,159}$"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 240
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "active",
+        "archived",
+        "retired"
+      ]
+    },
+    "domain": {
+      "enum": [
+        "general",
+        "cinematic",
+        "portrait",
+        "product",
+        "fashion",
+        "architecture",
+        "landscape",
+        "interior",
+        "food",
+        "vehicle",
+        "character",
+        "fantasy",
+        "illustration",
+        "anime",
+        "editorial",
+        "social",
+        "abstract",
+        "technical",
+        "other"
+      ]
+    },
+    "generationMode": {
+      "enum": [
+        "generate",
+        "edit",
+        "inpaint",
+        "multi_reference"
+      ]
+    },
+    "skillReceipt": {
+      "$ref": "#/$defs/skillReceipt"
+    },
+    "worldId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "collection": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "sourceText": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 16000
+    },
+    "tags": {
+      "type": "array",
+      "maxItems": 24,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 120
+      }
+    },
+    "prompt": {
+      "$ref": "#/$defs/prompt"
+    },
+    "styleBinding": {
+      "$ref": "#/$defs/styleBinding"
+    },
+    "referenceTransform": {
+      "$ref": "reference-transform.schema.json"
+    },
+    "variables": {
+      "type": "array",
+      "maxItems": 24,
+      "items": {
+        "$ref": "#/$defs/variable"
+      }
+    },
+    "references": {
+      "type": "array",
+      "maxItems": 8,
+      "items": {
+        "$ref": "#/$defs/reference"
+      }
+    },
+    "variants": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 12,
+      "items": {
+        "$ref": "#/$defs/variant"
+      }
+    },
+    "evaluation": {
+      "$ref": "#/$defs/evaluation"
+    },
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+    "validation": {
+      "$ref": "#/$defs/validation"
+    }
+  },
+  "$defs": {
+    "skillReceipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "ref",
+        "commit",
+        "installedBy",
+        "usedAt"
+      ],
+      "properties": {
+        "repository": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://(www\\.)?github\\.com/[^/]+/[^/]+(?:\\.git)?/?$"
+        },
+        "ref": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{7,64}$"
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        },
+        "installedBy": {
+          "const": "codex-environment"
+        },
+        "environmentId": {
+          "type": "string",
+          "maxLength": 240
+        },
+        "usedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "stringList": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 24,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1200
+      }
+    },
+    "prompt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "language",
+        "positive",
+        "blocks"
+      ],
+      "properties": {
+        "language": {
+          "enum": [
+            "zh-CN",
+            "en",
+            "bilingual"
+          ]
+        },
+        "positive": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 12000
+        },
+        "negative": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 6000
+        },
+        "blocks": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "subject"
+          ],
+          "properties": {
+            "context": {
+              "$ref": "#/$defs/stringList"
+            },
+            "subject": {
+              "$ref": "#/$defs/stringList"
+            },
+            "action": {
+              "$ref": "#/$defs/stringList"
+            },
+            "composition": {
+              "$ref": "#/$defs/stringList"
+            },
+            "environment": {
+              "$ref": "#/$defs/stringList"
+            },
+            "camera": {
+              "$ref": "#/$defs/stringList"
+            },
+            "lighting": {
+              "$ref": "#/$defs/stringList"
+            },
+            "materials": {
+              "$ref": "#/$defs/stringList"
+            },
+            "style": {
+              "$ref": "#/$defs/stringList"
+            },
+            "technical": {
+              "$ref": "#/$defs/stringList"
+            },
+            "constraints": {
+              "$ref": "#/$defs/stringList"
+            }
+          }
+        }
+      }
+    },
+    "variable": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "type",
+        "description",
+        "required"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "pattern": "^[a-zA-Z][a-zA-Z0-9_]{0,63}$"
+        },
+        "type": {
+          "enum": [
+            "string",
+            "number",
+            "boolean",
+            "enum"
+          ]
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "required": {
+          "type": "boolean"
+        },
+        "default": {
+          "type": [
+            "string",
+            "number",
+            "boolean",
+            "null"
+          ]
+        },
+        "values": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 24,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 300
+          }
+        }
+      }
+    },
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "observationId",
+        "referenceObservationRef",
+        "role",
+        "purpose",
+        "preserve",
+        "allowedTransforms"
+      ],
+      "properties": {
+        "observationId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "referenceObservationRef": {
+          "$ref": "reference-transform.schema.json#/$defs/referenceObservationRef"
+        },
+        "role": {
+          "$ref": "reference-observation.schema.json#/$defs/role"
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "preserve": {
+          "$ref": "#/$defs/stringList"
+        },
+        "allowedTransforms": {
+          "$ref": "#/$defs/stringList"
+        },
+        "excluded": {
+          "$ref": "#/$defs/stringList"
+        }
+      }
+    },
+    "styleBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "visualTemporalSeparated",
+        "preserve",
+        "allowedVariation",
+        "forbidden"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "inline_atoms",
+            "package",
+            "compiled"
+          ]
+        },
+        "stylePackageRef": {
+          "$ref": "#/$defs/contractRef"
+        },
+        "styleCompileRef": {
+          "$ref": "#/$defs/contractRef"
+        },
+        "atoms": {
+          "$ref": "#/$defs/stringList"
+        },
+        "visualTemporalSeparated": {
+          "const": true
+        },
+        "preserve": {
+          "$ref": "#/$defs/stringList"
+        },
+        "allowedVariation": {
+          "$ref": "#/$defs/stringList"
+        },
+        "forbidden": {
+          "$ref": "#/$defs/stringList"
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "enum": [
+                  "package",
+                  "compiled"
+                ]
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "stylePackageRef"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "compiled"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "styleCompileRef"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "mode": {
+                "const": "inline_atoms"
+              }
+            }
+          },
+          "then": {
+            "required": [
+              "atoms"
+            ]
+          }
+        }
+      ]
+    },
+    "contractRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "version",
+        "contentHash"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        }
+      }
+    },
+    "variant": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "variantId",
+        "label",
+        "change",
+        "positive"
+      ],
+      "properties": {
+        "variantId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]{2,159}$"
+        },
+        "label": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "change": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "positive": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 12000
+        },
+        "negative": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 6000
+        },
+        "status": {
+          "enum": [
+            "draft",
+            "selected",
+            "rejected",
+            "archived"
+          ]
+        }
+      }
+    },
+    "evaluation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "criteria",
+        "knownRisks",
+        "nextExperiment"
+      ],
+      "properties": {
+        "criteria": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "criterion",
+              "check",
+              "status"
+            ],
+            "properties": {
+              "criterion": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 300
+              },
+              "check": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 800
+              },
+              "status": {
+                "enum": [
+                  "pending",
+                  "pass",
+                  "fail"
+                ]
+              },
+              "evidence": {
+                "type": "string",
+                "maxLength": 1200
+              }
+            }
+          }
+        },
+        "knownRisks": {
+          "$ref": "#/$defs/stringList"
+        },
+        "nextExperiment": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1000
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source",
+        "createdAt",
+        "updatedAt",
+        "changeLog"
+      ],
+      "properties": {
+        "source": {
+          "enum": [
+            "user_authored",
+            "codex_authored",
+            "adapted",
+            "imported"
+          ]
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "parentPromptId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "changeLog": {
+          "$ref": "#/$defs/stringList"
+        }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "onePrimaryTarget",
+        "providerNeutral",
+        "variablesBound",
+        "referencesScoped",
+        "observationReady"
+      ],
+      "properties": {
+        "onePrimaryTarget": {
+          "const": true
+        },
+        "providerNeutral": {
+          "const": true
+        },
+        "variablesBound": {
+          "const": true
+        },
+        "referencesScoped": {
+          "const": true
+        },
+        "observationReady": {
+          "const": true
+        }
+      }
+    }
+  }
+}

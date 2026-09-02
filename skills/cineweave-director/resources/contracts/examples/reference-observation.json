@@ -1,0 +1,79 @@
+{
+  "kind": "cineweave_codex_reference_observation",
+  "contractVersion": "2.4.0",
+  "observationId": "observation.portrait-style-01",
+  "version": 1,
+  "status": "reviewed",
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.0.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-22T01:00:00.000Z"
+  },
+  "assetRef": {
+    "kind": "cineweave_codex_reference_asset",
+    "id": "reference.user_upload.1111111111111111111111111111111111111111111111111111111111111111",
+    "version": 1,
+    "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "selector": {
+    "type": "full_asset"
+  },
+  "role": "style",
+  "scope": "style",
+  "evidence": {
+    "basis": "visible",
+    "confidence": 0.88,
+    "observations": [
+      "低饱和暖灰色盘、克制对比和柔和高光过渡清晰可见。",
+      "画面中的人物身份、服装、姿势、光源结构和皮肤物理状态不属于本观察的可迁移范围。"
+    ]
+  },
+  "transfer": {
+    "extract": [
+      "低饱和暖灰色盘",
+      "克制对比与柔和高光过渡"
+    ],
+    "ignore": [
+      "人物身份",
+      "服装设计",
+      "具体姿势",
+      "背景内容",
+      "光源结构",
+      "皮肤物理状态"
+    ],
+    "allowedTransforms": [
+      "适配不同人物和场景",
+      "在保持色彩关系时调整整体曝光"
+    ],
+    "forbiddenUses": [
+      "复制来源人物长相",
+      "把色调观察扩张成光源、镜头或皮肤材质证据"
+    ]
+  },
+  "authority": {
+    "identity": 0,
+    "appearance": 0,
+    "performance": 0,
+    "capture": 0,
+    "style": 0.9,
+    "environment": 0.1
+  },
+  "rightsGate": {
+    "status": "unknown",
+    "allowedForExploration": true,
+    "allowedForProduction": false,
+    "allowedForRedistribution": false,
+    "unresolvedBlocksPromotion": true
+  },
+  "validation": {
+    "assetExact": true,
+    "selectorChecked": true,
+    "onePrimaryRole": true,
+    "extractIgnoreDisjoint": true,
+    "noPrivateLocator": true,
+    "rightsReviewed": true
+  }
+}

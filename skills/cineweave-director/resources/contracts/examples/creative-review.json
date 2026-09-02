@@ -1,0 +1,23 @@
+{
+  "kind": "cineweave_codex_creative_review",
+  "contractVersion": "3.0.0",
+  "reviewId": "review.courtyard-shot",
+  "version": 1,
+  "status": "completed",
+  "targetRefs": [
+    { "kind": "cineweave_codex_shot_spec", "id": "shot.courtyard-recognition", "version": 1, "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" }
+  ],
+  "evidence": [
+    { "evidenceId": "evidence.frame-001", "observationRef": { "kind": "cineweave_codex_reference_observation", "id": "observation.frame-001", "version": 1, "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" }, "basis": "visible", "statement": "The eyeline and face are visible, but the support hand does not meet the stone threshold.", "confidence": 0.94 }
+  ],
+  "findings": [
+    { "findingId": "finding.eyeline", "domain": "direction", "dimension": "audience_attention", "expected": "The physician's eyeline should lead the audience to the returning character.", "observed": "The eyeline is clear and unopposed.", "status": "pass", "severity": "important", "evidenceIds": ["evidence.frame-001"] },
+    { "findingId": "finding.hand-contact", "domain": "scene", "dimension": "contact_support", "expected": "The left hand bears weight against the wet stone threshold.", "observed": "A visible gap separates the palm from the threshold.", "status": "fail", "severity": "blocking", "evidenceIds": ["evidence.frame-001"], "smallestRepairVariable": "left-hand contact point" }
+  ],
+  "humanReview": { "requiredForBlockingFindings": true, "status": "completed", "rubric": ["Judge only observable contact and weight transfer.", "Do not trade identity or eyeline continuity for the repair."], "completedAt": "2026-09-02T00:10:00Z" },
+  "decision": { "overallStatus": "fail", "nextAction": "repair", "mayAdvance": false, "blockingFindingIds": ["finding.hand-contact"], "summary": "Preserve the passing eyeline and identity; repair one Scene-owned contact variable." },
+  "planningBoundary": { "providerNeutral": true, "generatesMedia": false, "approvesAssets": false, "observedEvidenceRequiredForCompletion": true },
+  "validation": { "targetsExact": true, "unknownNeverPasses": true, "blockingFailuresBlockAdvancement": true, "noAttractivenessScore": true, "oneDomainPerRepair": true, "noSuccessClaim": true },
+  "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-director", "ref": "v3.0.0", "commit": "0000000000000000000000000000000000000000", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00Z" },
+  "provenance": { "source": "suite_builtin", "createdAt": "2026-09-02T00:00:00Z", "updatedAt": "2026-09-02T00:10:00Z", "changeLog": ["Added one evidence-bound Scene failure while preserving the passing direction finding."] }
+}

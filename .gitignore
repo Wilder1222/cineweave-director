@@ -1,7 +1,5 @@
 node_modules/
 .build/
-.cineweave/
-.cineweave-evals/
 .DS_Store
 Thumbs.db
 *.local.json

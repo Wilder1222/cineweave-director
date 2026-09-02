@@ -1,0 +1,51 @@
+{
+  "kind": "cineweave_codex_capability_resolution_plan",
+  "contractVersion": "3.0.0",
+  "resolutionPlanId": "capability-resolution.storyboard-stills",
+  "version": 1,
+  "status": "needs_review",
+  "request": {
+    "operationId": "operation.storyboard-stills",
+    "operation": "multi_reference",
+    "mediaKind": "image",
+    "inputCount": 4,
+    "outputCount": 8,
+    "requirements": [
+      { "requirementId": "requirement.identity", "capabilityId": "identity_consistency", "level": "hard", "scope": "sequence", "reason": "The same approved character identity must remain recognizable across all shots." },
+      { "requirementId": "requirement.layout", "capabilityId": "independent_tile_generation", "level": "soft", "scope": "storyboard", "reason": "Each panel should be independently reviewable before deterministic assembly." }
+    ]
+  },
+  "candidates": [
+    {
+      "candidateId": "candidate.profile-a",
+      "capabilityProfileRef": { "kind": "cineweave_codex_capability_profile", "id": "capability.profile-a", "version": 1, "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" },
+      "capabilityResults": [
+        { "requirementId": "requirement.identity", "capabilityId": "identity_consistency", "support": "partial", "status": "review", "score": 0.65, "reason": "The supplied profile declares partial support; no observed sequence benchmark was supplied." },
+        { "requirementId": "requirement.layout", "capabilityId": "independent_tile_generation", "support": "strong", "status": "pass", "score": 1, "reason": "Independent outputs are explicitly supported." }
+      ],
+      "score": 72,
+      "status": "needs_review",
+      "hardFailures": [],
+      "warnings": ["Identity consistency has no observed benchmark evidence."],
+      "rationale": "The profile is feasible for exploration but cannot satisfy the hard identity requirement without review evidence."
+    }
+  ],
+  "selection": {
+    "status": "needs_review",
+    "selectedCandidateId": null,
+    "selectedCapabilityProfileRef": null,
+    "rationale": "Retain the candidate for human feasibility review; do not treat partial identity support as a pass.",
+    "humanApprovalRequired": true
+  },
+  "explanation": {
+    "primaryDecision": "No profile is production-ready because hard identity support remains unverified.",
+    "rankingPolicy": "Hard failures block; unknown or partial hard support requires review; ties use candidate ID only for stable display order.",
+    "hardConstraints": ["Identity consistency must not be silently weakened."],
+    "tradeoffs": ["Independent panels are supported, while sequence identity remains uncertain."],
+    "fallbackCandidateIds": []
+  },
+  "planningBoundary": { "providerNeutral": true, "generatesMedia": false, "invokesExternalTool": false, "selectsProvider": false, "mutatesCanon": false, "humanApprovalRequired": true },
+  "validation": { "candidateRefsExact": true, "hardRequirementsBlock": true, "unknownDoesNotPass": true, "rankingDeterministic": true, "explanationPresent": true, "noProviderSelection": true, "noExternalExecution": true },
+  "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-director", "ref": "v3.0.0", "commit": "0000000000000000000000000000000000000000", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00Z" },
+  "provenance": { "source": "suite_builtin", "createdAt": "2026-09-02T00:00:00Z", "updatedAt": "2026-09-02T00:00:00Z", "changeLog": ["Removed adapter selection and retained capability-only feasibility comparison."] }
+}

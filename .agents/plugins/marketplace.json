@@ -1,15 +1,15 @@
 {
-  "name": "cineweave-studio",
+  "name": "cineweave-director",
   "interface": {
-    "displayName": "CineWeave Studio"
+    "displayName": "CineWeave Director"
   },
   "plugins": [
     {
-      "name": "cineweave-studio",
+      "name": "cineweave-director",
       "source": {
         "source": "url",
-        "url": "https://github.com/Wilder1222/cineweave-studio.git",
-        "ref": "v2.5.1"
+        "url": "https://github.com/Wilder1222/cineweave-director.git",
+        "ref": "v3.0.0"
       },
       "policy": {
         "installation": "AVAILABLE",

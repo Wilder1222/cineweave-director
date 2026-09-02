@@ -1,15 +1,84 @@
 {
-  "contractPackage": "cineweave-contracts@2.5.1",
-  "standalone": {
-    "accepts": ["NaturalLanguageBrief", "OptionalReferenceBindingSet", "CinematicSkillManifest", "OptionalAssetAliasRegistry"],
-    "produces": ["DirectorProposals", "ActionSequenceSpec", "CinematicSkillManifest", "ShotCompilerPlan", "ShotSpec", "ShotLightingPlan", "TemporalSpec", "CameraPrevisSpec", "HeroFrameAnchor", "Storyboard", "SequenceRhythmSpec", "RenderPlan", "MediaImport", "DirectorRepair"]
-  },
-  "composed": {
-    "consumes": ["CreativeBrief", "StoryBrief", "ScriptScene", "ReferenceObservation", "ReferenceReview", "ReferenceBindingSet", "AssetAliasRegistry", "CharacterBinding", "PerformanceTimeline", "RepresentationBinding", "SceneBinding", "SceneLightState", "InteractionConstraintSet", "ActionSequenceSpec", "StyleCompile", "StyleLightGrammar", "PromptRecord", "ImagePrompt", "BoardAssemblyPlan", "Storyboard", "HeroFrameAnchor", "CinematicSkillManifest", "ControlBenchmarkReview", "ProductionContracts"],
-    "produces": ["DirectorProposals", "ActionSequenceSpec", "CinematicSkillManifest", "ShotCompilerPlan", "ShotSpec", "ShotLightingPlan", "TemporalSpec", "CameraPrevisSpec", "HeroFrameAnchor", "Storyboard", "SequenceRhythmSpec", "RenderPlan", "MediaImport", "DirectorRepair"]
+  "schemaVersion": "3.0.0",
+  "skill": "cineweave-director",
+  "version": "3.0.0",
+  "contractIndex": "resources/contracts/index.json",
+  "routes": {
+    "brief_world": {
+      "references": ["references/routes/brief-world.md"],
+      "produces": ["cineweave_codex_creative_brief", "cineweave_codex_workflow_plan", "cineweave_codex_world_bible"]
+    },
+    "story": {
+      "references": ["references/routes/story.md"],
+      "produces": ["cineweave_codex_story_brief", "cineweave_codex_beat_sheet", "cineweave_codex_script_scene", "cineweave_codex_continuity_ledger"]
+    },
+    "character": {
+      "references": ["references/routes/character.md"],
+      "produces": ["cineweave_codex_character_morphology_spec", "cineweave_codex_character_spec", "cineweave_codex_character_appearance_state", "character_binding", "cineweave_codex_performance_timeline"]
+    },
+    "scene": {
+      "references": ["references/routes/scene.md"],
+      "produces": ["cineweave_codex_scene_spec", "cineweave_codex_scene_state", "cineweave_codex_scene_light_state", "cineweave_codex_interaction_constraint_set", "scene_binding"]
+    },
+    "style": {
+      "references": ["references/routes/style.md"],
+      "produces": ["cineweave_codex_style_package", "cineweave_codex_representation_binding", "cineweave_codex_style_compile", "cineweave_codex_style_light_grammar"]
+    },
+    "reference_evidence": {
+      "references": ["references/core/reference-evidence-and-rights.md", "references/routes/reference-evidence.md"],
+      "produces": ["cineweave_codex_reference_asset", "cineweave_codex_reference_observation", "cineweave_codex_reference_binding_set", "cineweave_codex_asset_alias_registry"]
+    },
+    "action": {
+      "references": ["references/routes/action.md"],
+      "produces": ["cineweave_codex_action_sequence_spec"]
+    },
+    "shot_direction": {
+      "references": ["references/routes/shot-direction.md"],
+      "produces": ["cineweave_codex_cinematic_skill_manifest", "cineweave_codex_shot_compiler_plan", "cineweave_codex_shot_spec", "cineweave_codex_shot_lighting_plan", "cineweave_codex_temporal_spec", "cineweave_codex_camera_previs_spec", "cineweave_codex_hero_frame_anchor"]
+    },
+    "storyboard_rhythm": {
+      "references": ["references/routes/storyboard-rhythm.md"],
+      "produces": ["cineweave_codex_storyboard_sequence", "cineweave_codex_sequence_rhythm_spec"]
+    },
+    "image_prompt": {
+      "references": ["references/routes/image-prompt.md"],
+      "produces": ["cineweave_codex_prompt_record", "cineweave_codex_image_prompt", "cineweave_codex_prompt_projection_plan"]
+    },
+    "production_plan": {
+      "references": ["references/routes/production-plan.md"],
+      "produces": ["cineweave_codex_render_plan", "cineweave_codex_asset_recipe", "cineweave_codex_board_assembly_plan", "cineweave_codex_editorial_timeline_plan", "cineweave_codex_color_pipeline_profile", "cineweave_codex_control_channel_set", "cineweave_codex_evidence_bundle", "cineweave_codex_capability_profile", "cineweave_codex_capability_resolution_plan", "cineweave_codex_license_profile"]
+    },
+    "review_repair": {
+      "references": ["references/routes/review-repair.md"],
+      "produces": ["cineweave_codex_control_benchmark", "cineweave_codex_control_benchmark_review", "cineweave_codex_creative_review", "cineweave_codex_repair_plan"]
+    }
   },
   "contractKinds": [
-    "cineweave_codex_director_proposals",
+    "cineweave_codex_creative_brief",
+    "cineweave_codex_workflow_plan",
+    "cineweave_codex_world_bible",
+    "cineweave_codex_story_brief",
+    "cineweave_codex_beat_sheet",
+    "cineweave_codex_script_scene",
+    "cineweave_codex_continuity_ledger",
+    "cineweave_codex_character_morphology_spec",
+    "cineweave_codex_character_spec",
+    "cineweave_codex_character_appearance_state",
+    "character_binding",
+    "cineweave_codex_performance_timeline",
+    "cineweave_codex_scene_spec",
+    "cineweave_codex_scene_state",
+    "cineweave_codex_scene_light_state",
+    "cineweave_codex_interaction_constraint_set",
+    "scene_binding",
+    "cineweave_codex_style_package",
+    "cineweave_codex_representation_binding",
+    "cineweave_codex_style_compile",
+    "cineweave_codex_style_light_grammar",
+    "cineweave_codex_reference_asset",
+    "cineweave_codex_reference_observation",
+    "cineweave_codex_reference_binding_set",
+    "cineweave_codex_asset_alias_registry",
     "cineweave_codex_action_sequence_spec",
     "cineweave_codex_cinematic_skill_manifest",
     "cineweave_codex_shot_compiler_plan",
@@ -21,31 +90,32 @@
     "cineweave_codex_storyboard_sequence",
     "cineweave_codex_sequence_rhythm_spec",
     "cineweave_codex_render_plan",
-    "cineweave_codex_media_import",
-    "cineweave_codex_director_repair",
-    "cineweave_codex_creative_brief",
-    "cineweave_codex_story_brief",
-    "cineweave_codex_script_scene",
-    "character_binding",
-    "cineweave_codex_performance_timeline",
-    "cineweave_codex_representation_binding",
-    "scene_binding",
-    "cineweave_codex_scene_light_state",
-    "cineweave_codex_interaction_constraint_set",
-    "cineweave_codex_style_compile",
-    "cineweave_codex_style_light_grammar",
     "cineweave_codex_prompt_record",
     "cineweave_codex_image_prompt",
+    "cineweave_codex_prompt_projection_plan",
     "cineweave_codex_asset_recipe",
     "cineweave_codex_board_assembly_plan",
+    "cineweave_codex_editorial_timeline_plan",
+    "cineweave_codex_color_pipeline_profile",
     "cineweave_codex_control_channel_set",
     "cineweave_codex_evidence_bundle",
     "cineweave_codex_capability_profile",
-    "cineweave_codex_control_benchmark_review",
+    "cineweave_codex_capability_resolution_plan",
     "cineweave_codex_license_profile",
-    "cineweave_codex_reference_observation",
-    "cineweave_codex_reference_review",
-    "cineweave_codex_reference_binding_set",
-    "cineweave_codex_asset_alias_registry"
+    "cineweave_codex_control_benchmark",
+    "cineweave_codex_control_benchmark_review",
+    "cineweave_codex_creative_review",
+    "cineweave_codex_repair_plan"
+  ],
+  "excludedPlatformKinds": [
+    "cineweave_adapter_descriptor",
+    "cineweave_execution_request",
+    "cineweave_codex_execution_preview",
+    "cineweave_execution_receipt",
+    "cineweave_codex_media_import",
+    "cineweave_codex_media_technical_probe",
+    "cineweave_codex_content_credential_handoff",
+    "cineweave_codex_repair_run_receipt",
+    "cineweave_codex_workflow_template_profile"
   ]
 }

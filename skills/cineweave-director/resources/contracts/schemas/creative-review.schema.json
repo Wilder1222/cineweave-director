@@ -1,0 +1,108 @@
+{
+  "$id": "https://cineweave.dev/contracts/creative-review.schema.json",
+  "title": "CineWeave Creative Review",
+  "description": "Cross-domain review of actual creative evidence. Unknown evidence never passes and a plan never counts as generated media.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["kind", "contractVersion", "reviewId", "version", "status", "targetRefs", "evidence", "findings", "humanReview", "decision", "planningBoundary", "validation", "skillReceipt", "provenance"],
+  "properties": {
+    "kind": { "const": "cineweave_codex_creative_review" },
+    "contractVersion": { "const": "3.0.0" },
+    "reviewId": { "$ref": "common.schema.json#/$defs/identifier" },
+    "version": { "type": "integer", "minimum": 1 },
+    "status": { "enum": ["planned", "in_review", "completed"] },
+    "targetRefs": { "type": "array", "minItems": 1, "maxItems": 32, "items": { "$ref": "common.schema.json#/$defs/contractRef" } },
+    "evidence": { "type": "array", "maxItems": 256, "items": { "$ref": "#/$defs/evidence" } },
+    "findings": { "type": "array", "minItems": 1, "maxItems": 256, "items": { "$ref": "#/$defs/finding" } },
+    "humanReview": { "$ref": "#/$defs/humanReview" },
+    "decision": { "$ref": "#/$defs/decision" },
+    "planningBoundary": { "$ref": "#/$defs/planningBoundary" },
+    "validation": { "$ref": "#/$defs/validation" },
+    "skillReceipt": { "$ref": "common.schema.json#/$defs/skillReceipt" },
+    "provenance": { "$ref": "common.schema.json#/$defs/provenance" }
+  },
+  "allOf": [
+    { "if": { "properties": { "status": { "const": "planned" } }, "required": ["status"] }, "then": { "properties": { "evidence": { "maxItems": 0 }, "humanReview": { "properties": { "status": { "enum": ["not_started", "planned"] } } } } } },
+    { "if": { "properties": { "status": { "const": "completed" } }, "required": ["status"] }, "then": { "properties": { "evidence": { "minItems": 1 }, "humanReview": { "properties": { "status": { "const": "completed" } } } } } }
+  ],
+  "$defs": {
+    "domain": { "enum": ["world", "story", "character", "scene", "style", "reference", "action", "direction", "storyboard", "prompt", "production", "rights"] },
+    "evidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["evidenceId", "basis", "statement", "confidence"],
+      "properties": {
+        "evidenceId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "observationRef": { "allOf": [{ "$ref": "common.schema.json#/$defs/contractRef" }, { "properties": { "kind": { "const": "cineweave_codex_reference_observation" } } }] },
+        "basis": { "enum": ["visible", "declared", "inferred", "unknown"] },
+        "statement": { "type": "string", "minLength": 1, "maxLength": 2000 },
+        "confidence": { "type": "number", "minimum": 0, "maximum": 1 }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["findingId", "domain", "dimension", "expected", "observed", "status", "severity", "evidenceIds"],
+      "properties": {
+        "findingId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "domain": { "$ref": "#/$defs/domain" },
+        "dimension": { "type": "string", "minLength": 1, "maxLength": 320 },
+        "expected": { "type": "string", "minLength": 1, "maxLength": 1600 },
+        "observed": { "type": "string", "minLength": 1, "maxLength": 1600 },
+        "status": { "enum": ["pass", "warn", "fail", "unknown", "not_applicable"] },
+        "severity": { "enum": ["advisory", "important", "blocking"] },
+        "evidenceIds": { "type": "array", "maxItems": 32, "uniqueItems": true, "items": { "$ref": "common.schema.json#/$defs/identifier" } },
+        "smallestRepairVariable": { "type": "string", "minLength": 1, "maxLength": 320 }
+      },
+      "allOf": [{ "if": { "properties": { "status": { "enum": ["warn", "fail"] } }, "required": ["status"] }, "then": { "required": ["smallestRepairVariable"] } }]
+    },
+    "humanReview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["requiredForBlockingFindings", "status", "rubric"],
+      "properties": {
+        "requiredForBlockingFindings": { "const": true },
+        "status": { "enum": ["not_started", "planned", "in_progress", "completed"] },
+        "rubric": { "type": "array", "minItems": 1, "maxItems": 32, "items": { "type": "string", "minLength": 1, "maxLength": 1200 } },
+        "completedAt": { "type": "string", "format": "date-time" }
+      },
+      "allOf": [{ "if": { "properties": { "status": { "const": "completed" } }, "required": ["status"] }, "then": { "required": ["completedAt"] } }]
+    },
+    "decision": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["overallStatus", "nextAction", "mayAdvance", "blockingFindingIds", "summary"],
+      "properties": {
+        "overallStatus": { "enum": ["planned", "pass", "warn", "fail", "blocked"] },
+        "nextAction": { "enum": ["collect_evidence", "conduct_human_review", "repair", "retain_candidate"] },
+        "mayAdvance": { "type": "boolean" },
+        "blockingFindingIds": { "type": "array", "maxItems": 128, "uniqueItems": true, "items": { "$ref": "common.schema.json#/$defs/identifier" } },
+        "summary": { "type": "string", "minLength": 1, "maxLength": 2400 }
+      }
+    },
+    "planningBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["providerNeutral", "generatesMedia", "approvesAssets", "observedEvidenceRequiredForCompletion"],
+      "properties": {
+        "providerNeutral": { "const": true },
+        "generatesMedia": { "const": false },
+        "approvesAssets": { "const": false },
+        "observedEvidenceRequiredForCompletion": { "const": true }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["targetsExact", "unknownNeverPasses", "blockingFailuresBlockAdvancement", "noAttractivenessScore", "oneDomainPerRepair", "noSuccessClaim"],
+      "properties": {
+        "targetsExact": { "const": true },
+        "unknownNeverPasses": { "const": true },
+        "blockingFailuresBlockAdvancement": { "const": true },
+        "noAttractivenessScore": { "const": true },
+        "oneDomainPerRepair": { "const": true },
+        "noSuccessClaim": { "const": true }
+      }
+    }
+  }
+}

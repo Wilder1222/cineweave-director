@@ -1,0 +1,68 @@
+{
+  "kind": "cineweave_codex_story_brief",
+  "contractVersion": "2.2.0",
+  "storyId": "story.rain-courtyard",
+  "title": "雨后见故人",
+  "version": 1,
+  "status": "draft",
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.0.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-21T01:00:00.000Z"
+  },
+  "premise": "一位习惯以疏离保护自己的南宋女医，在雨后庭院遇见曾被她亲手推开的故人，必须决定继续隐藏真相还是承担关系破裂的代价。",
+  "dramaticQuestion": "她能否在失去对方之前说出当年的真实选择？",
+  "theme": [
+    "克制不是无情",
+    "真相需要承担后果"
+  ],
+  "genre": [
+    "历史情感",
+    "短片"
+  ],
+  "tone": [
+    "安静",
+    "含蓄",
+    "逐渐紧张"
+  ],
+  "audience": "偏好人物关系、微表演和历史诗意氛围的成年观众。",
+  "worldContext": "诗意影视化的南宋江南，不把影视重构误写成严格考据事实。",
+  "protagonist": {
+    "role": "在地方医馆行医的年轻女医",
+    "want": "让故人安全离开而不追问旧事。",
+    "need": "承认保护对方不能替代尊重对方的选择。",
+    "fear": "真相会证明她当年的牺牲毫无意义。",
+    "contradiction": "越在意对方，言行越显得疏离。"
+  },
+  "stakes": {
+    "personal": "她可能继续活在自我合理化中。",
+    "relational": "故人将在当夜离城，两人可能永久失去解释机会。",
+    "external": "旧案线索会随故人带走，影响医馆与当地百姓。"
+  },
+  "endingDirection": "她没有获得立即原谅，但主动交出旧案证据，第一次把选择权还给对方。",
+  "locks": [
+    {
+      "path": "protagonist.contradiction",
+      "level": "hard",
+      "reason": "这是推动人物行为和表演的核心矛盾。"
+    },
+    {
+      "path": "worldContext",
+      "level": "soft",
+      "reason": "保持宋韵语境，但允许诗意影视化。"
+    }
+  ],
+  "unknowns": [
+    "故人是否已经知道部分真相",
+    "旧案证据的具体物件"
+  ],
+  "validation": {
+    "oneDramaticQuestion": true,
+    "protagonistCausality": true,
+    "stakesEscalate": true,
+    "noShotDecisions": true
+  }
+}

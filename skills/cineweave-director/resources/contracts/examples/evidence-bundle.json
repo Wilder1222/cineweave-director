@@ -1,0 +1,238 @@
+{
+  "kind": "cineweave_codex_evidence_bundle",
+  "contractVersion": "2.0.0",
+  "worldId": "world-cloud-dynasty",
+  "bundleId": "evidence.shen-production",
+  "title": "沈砚秋人物生产证据包",
+  "version": 1,
+  "status": "active",
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.0.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-20T18:00:00.000Z"
+  },
+  "purpose": "为身份、身体、造型、表情、姿态和场景融合提供分工明确的证据。",
+  "evidence": [
+    {
+      "evidenceId": "evidence.face.front",
+      "observationId": "OBS_FACE_FRONT_01",
+      "role": "face_identity",
+      "scope": "face",
+      "sourceType": "world_observation",
+      "contentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+      "targetRefs": [
+        {
+          "kind": "character_spec",
+          "id": "char.shen-yanqiu",
+          "version": 1,
+          "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ],
+      "preserve": [
+        "脸型、眼型、鼻唇关系、自然不对称"
+      ],
+      "allowedUses": [
+        "肖像身份保持",
+        "表情表身份基线"
+      ],
+      "excludedUses": [
+        "不得承担全身比例或服装材质证据"
+      ],
+      "quality": {
+        "confidence": 0.92,
+        "coverage": "complete",
+        "resolutionStatus": "production",
+        "view": "正面平视",
+        "framing": "胸像"
+      },
+      "licenseProfileRef": {
+        "id": "license.original-character-assets",
+        "version": 1,
+        "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+      }
+    },
+    {
+      "evidenceId": "evidence.body.neutral",
+      "observationId": "OBS_BODY_NEUTRAL_01",
+      "role": "body_identity",
+      "scope": "body",
+      "sourceType": "world_observation",
+      "contentHash": "sha256:2222222222222222222222222222222222222222222222222222222222222222",
+      "targetRefs": [
+        {
+          "kind": "character_spec",
+          "id": "char.shen-yanqiu",
+          "version": 1,
+          "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        }
+      ],
+      "preserve": [
+        "7.7 头身、肩胯关系、腰线和惯用侧"
+      ],
+      "allowedUses": [
+        "三视图",
+        "动作页",
+        "全身镜头"
+      ],
+      "excludedUses": [
+        "不得替代脸部精细身份"
+      ],
+      "quality": {
+        "confidence": 0.88,
+        "coverage": "complete",
+        "resolutionStatus": "production",
+        "view": "正面全身",
+        "framing": "完整脚部接触"
+      },
+      "licenseProfileRef": {
+        "id": "license.original-character-assets",
+        "version": 1,
+        "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+      }
+    },
+    {
+      "evidenceId": "evidence.appearance.duty",
+      "observationId": "OBS_APPEARANCE_DUTY_01",
+      "role": "costume",
+      "scope": "costume",
+      "sourceType": "world_observation",
+      "contentHash": "sha256:3333333333333333333333333333333333333333333333333333333333333333",
+      "targetRefs": [
+        {
+          "kind": "appearance_state",
+          "id": "appearance.shen-duty",
+          "version": 1,
+          "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        }
+      ],
+      "preserve": [
+        "月白交领结构、右侧佩剑、丝绸与金属材质关系"
+      ],
+      "allowedUses": [
+        "定妆表",
+        "分镜和关键帧造型保持"
+      ],
+      "excludedUses": [
+        "不得改变身体比例"
+      ],
+      "quality": {
+        "confidence": 0.86,
+        "coverage": "sufficient",
+        "resolutionStatus": "reviewable",
+        "view": "三分之四全身",
+        "framing": "全身"
+      },
+      "licenseProfileRef": {
+        "id": "license.original-character-assets",
+        "version": 1,
+        "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+      }
+    },
+    {
+      "evidenceId": "evidence.pose.threatened",
+      "observationId": "OBS_POSE_THREATENED_01",
+      "role": "pose",
+      "scope": "pose",
+      "sourceType": "world_observation",
+      "contentHash": "sha256:4444444444444444444444444444444444444444444444444444444444444444",
+      "targetRefs": [
+        {
+          "kind": "character_binding",
+          "id": "binding.char-shot-12-shen",
+          "version": 1,
+          "contentHash": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        }
+      ],
+      "preserve": [
+        "左脚后撤、右手近剑柄、上身不后仰"
+      ],
+      "allowedUses": [
+        "受威胁动作和行为逻辑"
+      ],
+      "excludedUses": [
+        "不得覆盖身份或服装结构"
+      ],
+      "quality": {
+        "confidence": 0.8,
+        "coverage": "sufficient",
+        "resolutionStatus": "reviewable",
+        "view": "侧前全身",
+        "framing": "脚部完整"
+      },
+      "licenseProfileRef": {
+        "id": "license.original-character-assets",
+        "version": 1,
+        "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+      }
+    },
+    {
+      "evidenceId": "evidence.scene.depth",
+      "observationId": "OBS_SCENE_DEPTH_01",
+      "role": "depth",
+      "scope": "geography",
+      "sourceType": "derived_control",
+      "contentHash": "sha256:5555555555555555555555555555555555555555555555555555555555555555",
+      "targetRefs": [
+        {
+          "kind": "scene_spec",
+          "id": "scene.cloud-palace-east-corridor",
+          "version": 1,
+          "contentHash": "sha256:6666666666666666666666666666666666666666666666666666666666666666"
+        }
+      ],
+      "preserve": [
+        "走廊纵深、柱列和人物落点"
+      ],
+      "allowedUses": [
+        "场景布局和人物背景融合"
+      ],
+      "excludedUses": [
+        "不得改变角色身份"
+      ],
+      "quality": {
+        "confidence": 0.82,
+        "coverage": "sufficient",
+        "resolutionStatus": "reviewable",
+        "view": "主轴 B 侧",
+        "framing": "16:9 中景"
+      },
+      "licenseProfileRef": {
+        "id": "license.original-character-assets",
+        "version": 1,
+        "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+      }
+    }
+  ],
+  "requirements": {
+    "requiredRoles": [
+      "face_identity",
+      "body_identity",
+      "costume",
+      "pose",
+      "depth"
+    ],
+    "minimumConfidence": 0.75,
+    "missingEvidencePolicy": "block"
+  },
+  "rightsResolution": {
+    "allProfilesResolved": true,
+    "unresolved": []
+  },
+  "validation": {
+    "observationIdsScoped": true,
+    "rolesDistinct": true,
+    "rightsProfilesLinked": true,
+    "noPrivatePaths": true
+  },
+  "provenance": {
+    "source": "codex_authored",
+    "createdAt": "2026-08-20T18:00:00.000Z",
+    "updatedAt": "2026-08-20T18:00:00.000Z",
+    "changeLog": [
+      "v1: separate identity, body, styling, pose and scene evidence"
+    ]
+  }
+}

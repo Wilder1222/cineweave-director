@@ -1,0 +1,29 @@
+{
+  "kind": "cineweave_codex_repair_plan",
+  "contractVersion": "3.0.0",
+  "repairId": "repair.courtyard-hand-contact",
+  "version": 1,
+  "status": "planned",
+  "sourceReviewRef": { "kind": "cineweave_codex_creative_review", "id": "review.courtyard-shot", "version": 1, "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd" },
+  "findingId": "finding.hand-contact",
+  "domain": "scene",
+  "targetRef": { "kind": "cineweave_codex_interaction_constraint_set", "id": "interaction.courtyard-threshold", "version": 1, "contentHash": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" },
+  "change": {
+    "variable": "left-hand contact point",
+    "targetPath": "/constraints/left_hand/supportAnchor",
+    "currentState": "The intended palm support is not spatially closed against the threshold.",
+    "targetState": "The palm visibly compresses against the named threshold anchor with plausible wrist and shoulder weight transfer.",
+    "rationale": "This is the smallest Scene-owned change that addresses the blocking observation."
+  },
+  "preserve": ["character identity", "wardrobe state", "eyeline", "camera position", "physical light direction", "approved background geometry"],
+  "acceptanceChecks": [
+    { "checkId": "check.contact", "criterion": "No visible gap remains between palm and threshold at the support moment.", "expectedEvidence": "A new visible observation of the contact region.", "status": "pending" },
+    { "checkId": "check.preserve", "criterion": "Identity, eyeline, framing, and light still match the passing review evidence.", "expectedEvidence": "Side-by-side observations for each preserved dimension.", "status": "pending" }
+  ],
+  "stopCondition": "Stop after one revised candidate; if contact still fails, review the new evidence before changing any second variable.",
+  "humanGate": { "required": true, "status": "pending", "decisionNote": "Approve the bounded repair before any external generation or edit." },
+  "planningBoundary": { "providerNeutral": true, "generatesMedia": false, "invokesExternalTool": false, "mutatesTarget": false, "claimsSuccess": false },
+  "validation": { "singleVariable": true, "singleDomain": true, "parentImmutable": true, "evidenceBound": true, "passingDimensionsPreserved": true, "checksPending": true, "noSuccessClaim": true },
+  "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-director", "ref": "v3.0.0", "commit": "0000000000000000000000000000000000000000", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00Z" },
+  "provenance": { "source": "suite_builtin", "createdAt": "2026-09-02T00:00:00Z", "updatedAt": "2026-09-02T00:00:00Z", "changeLog": ["Created from finding.hand-contact as a one-variable Scene repair."] }
+}

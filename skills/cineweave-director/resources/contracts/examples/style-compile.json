@@ -1,0 +1,202 @@
+{
+  "kind": "cineweave_codex_style_compile",
+  "contractVersion": "2.0.0",
+  "compileId": "compile.song-poetic-portrait-image-01",
+  "stylePackageRef": {
+    "id": "song-poetic-period-drama",
+    "version": 1,
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "representationBindingRef": {
+    "id": "representation.jialing.song-photoreal",
+    "version": 1,
+    "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "representationVariant": {
+    "variantId": "variant.song-poetic-photoreal",
+    "family": "photoreal",
+    "separateCompileArtifact": true,
+    "identityTranslationBound": true,
+    "protectedDomains": [
+      "character_identity",
+      "character_appearance",
+      "scene_geography",
+      "physical_light"
+    ]
+  },
+  "target": {
+    "medium": "image",
+    "output": "shot",
+    "stage": "appearance",
+    "aspectRatio": "3:4"
+  },
+  "blocks": [
+    {
+      "channel": "medium",
+      "importance": "required",
+      "directives": [
+        "live-action image representation",
+        "natural human anatomy and physical materials"
+      ]
+    },
+    {
+      "channel": "geometry",
+      "importance": "required",
+      "directives": [
+        "preserve canonical facial relations and adult body proportions",
+        "retain controlled natural asymmetry"
+      ]
+    },
+    {
+      "channel": "surface",
+      "importance": "strong",
+      "directives": [
+        "regional human skin variation",
+        "shot-scale-appropriate microtexture",
+        "restrained nonuniform specular response"
+      ],
+      "negativeDirectives": [
+        "porcelain uniformity",
+        "beauty-filter smoothing",
+        "razor-sharp pores"
+      ]
+    },
+    {
+      "channel": "depth",
+      "importance": "strong",
+      "directives": [
+        "consistent photographic perspective",
+        "selective focus with believable optical falloff"
+      ]
+    },
+    {
+      "channel": "costume",
+      "importance": "strong",
+      "directives": [
+        "restrained Song-inspired layering",
+        "muted jade and moon-white textile palette",
+        "real folds, weight and contact"
+      ]
+    },
+    {
+      "channel": "lighting",
+      "importance": "strong",
+      "directives": [
+        "soft motivated window or overcast courtyard light",
+        "controlled falloff and contact shadow"
+      ]
+    },
+    {
+      "channel": "performance",
+      "importance": "supporting",
+      "directives": [
+        "small facial amplitude",
+        "eyes carry the emotion",
+        "head follows gaze with slight delay"
+      ]
+    },
+    {
+      "channel": "palette",
+      "importance": "supporting",
+      "directives": [
+        "low saturation jade, moon-white, tea-brown and old wood",
+        "warm skin highlights against cool surroundings"
+      ],
+      "negativeDirectives": [
+        "neon saturation",
+        "plastic specular bloom"
+      ]
+    },
+    {
+      "channel": "postprocess",
+      "importance": "supporting",
+      "directives": [
+        "subtle grain, low sharpening, restrained highlight rolloff"
+      ]
+    }
+  ],
+  "preserve": [
+    "exact CharacterSpec identity anchors",
+    "exact AppearanceState construction",
+    "Director camera and crop decisions",
+    "SceneBinding geography if supplied"
+  ],
+  "allowedVariation": [
+    "minor accessory exploration if AppearanceState leaves it free",
+    "warm/cool light within package bounds",
+    "background detail within SceneSpec"
+  ],
+  "forbidden": [
+    "changing face geometry",
+    "changing body proportions",
+    "copying a source person's likeness without permission",
+    "using style to move locked geography"
+  ],
+  "realismProfile": {
+    "representationalRealism": 0.9,
+    "anatomyFidelity": 0.95,
+    "surfaceMicrodetailVisibility": 0.55,
+    "materialDifferentiation": 0.92,
+    "naturalAsymmetryRetention": 0.82,
+    "opticalImperfection": 0.28,
+    "idealization": 0.4,
+    "beautyRetouch": 0.52,
+    "calibration": {
+      "scale": "normalized_creative_intent",
+      "providerNeutral": true,
+      "notQualityScore": true,
+      "identityProtected": true,
+      "materialStateProtected": true,
+      "doesNotPromiseOutput": true
+    }
+  },
+  "referenceInputs": [
+    {
+      "referenceId": "ref-costume-song",
+      "role": "costume",
+      "required": true,
+      "preserve": [
+        "layering",
+        "textile weight",
+        "muted palette"
+      ],
+      "ignore": [
+        "source face",
+        "source pose"
+      ]
+    },
+    {
+      "referenceId": "ref-light-song",
+      "role": "lighting",
+      "required": false,
+      "preserve": [
+        "soft directional response"
+      ],
+      "ignore": [
+        "exact set layout",
+        "identity"
+      ]
+    }
+  ],
+  "validation": {
+    "packageResolved": true,
+    "identityNotOverwritten": true,
+    "sceneNotOverwritten": true,
+    "temporalSeparated": true,
+    "providerNeutral": true
+  },
+  "planningBoundary": {
+    "providerNeutral": true,
+    "generatesMedia": false,
+    "humanApprovalRequired": true,
+    "notes": "Compiled directives are passed to Prompt assembly and may consume an exact Director ShotSpec; no Provider is called."
+  },
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.0.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-20T12:00:00.000Z"
+  }
+}

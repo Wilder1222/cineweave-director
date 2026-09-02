@@ -1,0 +1,286 @@
+{
+  "kind": "cineweave_codex_capability_profile",
+  "contractVersion": "2.0.0",
+  "profileId": "capability.reference-image-composite",
+  "title": "Reference-image composite adapter capability profile",
+  "version": 1,
+  "status": "active",
+  "adapterId": "adapter.reference-image-composite",
+  "adapterClass": "composite",
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.0.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-20T18:00:00.000Z"
+  },
+  "capabilities": [
+    {
+      "capabilityId": "image_generation",
+      "support": "strong",
+      "maxInputs": 8,
+      "maxSubjects": 3,
+      "supportedScopes": [
+        "character",
+        "scene"
+      ],
+      "constraints": [
+        "Provider execution remains outside the Skill."
+      ]
+    },
+    {
+      "capabilityId": "multi_reference",
+      "support": "strong",
+      "maxInputs": 8,
+      "maxSubjects": 3,
+      "supportedScopes": [
+        "face",
+        "body",
+        "costume",
+        "pose",
+        "scene_geography"
+      ],
+      "constraints": [
+        "Every reference requires one semantic role."
+      ]
+    },
+    {
+      "capabilityId": "semantic_morphology",
+      "support": "partial",
+      "maxInputs": 1,
+      "maxSubjects": 1,
+      "supportedScopes": [
+        "face_morphology",
+        "body_morphology"
+      ],
+      "constraints": [
+        "Semantic axes compile to descriptive controls; they are not provider weights or measured anatomy."
+      ]
+    },
+    {
+      "capabilityId": "style_reference",
+      "support": "partial",
+      "maxInputs": 3,
+      "maxSubjects": 3,
+      "supportedScopes": [
+        "linework",
+        "shading",
+        "color_system",
+        "surface_style"
+      ],
+      "constraints": [
+        "Each style reference remains role-scoped and cannot supply identity."
+      ]
+    },
+    {
+      "capabilityId": "representation_binding",
+      "support": "strong",
+      "maxInputs": 1,
+      "maxSubjects": 3,
+      "supportedScopes": [
+        "character",
+        "representation"
+      ],
+      "constraints": [
+        "The binding is compiled before provider execution and never mutates CharacterSpec."
+      ]
+    },
+    {
+      "capabilityId": "cross_representation",
+      "support": "partial",
+      "maxInputs": 6,
+      "maxSubjects": 1,
+      "supportedScopes": [
+        "full_character",
+        "representation"
+      ],
+      "constraints": [
+        "Cross-family identity requires semantic-anchor review rather than a single pixel similarity score."
+      ]
+    },
+    {
+      "capabilityId": "face_landmarks",
+      "support": "unsupported",
+      "maxInputs": 0,
+      "maxSubjects": 0,
+      "supportedScopes": [],
+      "constraints": [
+        "This adapter exposes no landmark control; hard landmark requirements must block or select another adapter."
+      ]
+    },
+    {
+      "capabilityId": "mesh_morph",
+      "support": "unsupported",
+      "maxInputs": 0,
+      "maxSubjects": 0,
+      "supportedScopes": [],
+      "constraints": [
+        "A 3D-looking image is not a mesh asset or morph-target result."
+      ]
+    },
+    {
+      "capabilityId": "face_identity",
+      "support": "strong",
+      "maxInputs": 3,
+      "maxSubjects": 2,
+      "supportedScopes": [
+        "face"
+      ],
+      "constraints": [
+        "Extreme profiles require multiple views and human review."
+      ]
+    },
+    {
+      "capabilityId": "full_body_identity",
+      "support": "partial",
+      "maxInputs": 4,
+      "maxSubjects": 1,
+      "supportedScopes": [
+        "body",
+        "full_character"
+      ],
+      "constraints": [
+        "Body proportion requires full-body evidence and pose guidance."
+      ]
+    },
+    {
+      "capabilityId": "expression_control",
+      "support": "partial",
+      "maxInputs": 2,
+      "maxSubjects": 1,
+      "supportedScopes": [
+        "expression"
+      ],
+      "constraints": [
+        "Emotion must be translated into observable cues."
+      ]
+    },
+    {
+      "capabilityId": "pose_guidance",
+      "support": "strong",
+      "maxInputs": 2,
+      "maxSubjects": 3,
+      "supportedScopes": [
+        "pose"
+      ],
+      "constraints": [
+        "Hand-object contact remains review-gated."
+      ]
+    },
+    {
+      "capabilityId": "scene_layout",
+      "support": "partial",
+      "maxInputs": 4,
+      "maxSubjects": 4,
+      "supportedScopes": [
+        "geography",
+        "composition"
+      ],
+      "constraints": [
+        "Complex multi-object interactions may require regional repair."
+      ]
+    },
+    {
+      "capabilityId": "relighting",
+      "support": "partial",
+      "maxInputs": 2,
+      "maxSubjects": 2,
+      "supportedScopes": [
+        "lighting"
+      ],
+      "constraints": [
+        "Motivated source direction must be supplied."
+      ]
+    },
+    {
+      "capabilityId": "identity_consistency",
+      "support": "partial",
+      "maxInputs": 4,
+      "maxSubjects": 2,
+      "supportedScopes": [
+        "sequence",
+        "character"
+      ],
+      "constraints": [
+        "A declared capability remains unverified until returned sequence evidence is reviewed."
+      ]
+    }
+  ],
+  "evidenceRequirements": [
+    {
+      "capabilityId": "face_identity",
+      "requiredRoles": [
+        "face_identity"
+      ],
+      "minimumConfidence": 0.8
+    },
+    {
+      "capabilityId": "semantic_morphology",
+      "requiredRoles": [
+        "face_morphology",
+        "body_morphology"
+      ],
+      "minimumConfidence": 0.75
+    },
+    {
+      "capabilityId": "style_reference",
+      "requiredRoles": [
+        "linework"
+      ],
+      "minimumConfidence": 0.7
+    },
+    {
+      "capabilityId": "full_body_identity",
+      "requiredRoles": [
+        "body_identity"
+      ],
+      "minimumConfidence": 0.75
+    },
+    {
+      "capabilityId": "pose_guidance",
+      "requiredRoles": [
+        "pose"
+      ],
+      "minimumConfidence": 0.7
+    },
+    {
+      "capabilityId": "scene_layout",
+      "requiredRoles": [
+        "scene_geography"
+      ],
+      "minimumConfidence": 0.75
+    }
+  ],
+  "knownLimits": [
+    "Extreme perspective can distort body rhythm.",
+    "Complex layered garments may require local repair.",
+    "Precise hand-object contact is not guaranteed in one pass."
+  ],
+  "licenseProfileRefs": [
+    {
+      "id": "license.original-character-assets",
+      "version": 1,
+      "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+    }
+  ],
+  "matchingPolicy": {
+    "hardRequirementPolicy": "block",
+    "partialSupportPolicy": "allow_with_review",
+    "unknownCapabilityPolicy": "block"
+  },
+  "validation": {
+    "noEndpoint": true,
+    "noCredentials": true,
+    "capabilityIdsUnique": true,
+    "licensesLinked": true
+  },
+  "provenance": {
+    "source": "codex_authored",
+    "createdAt": "2026-08-20T18:00:00.000Z",
+    "updatedAt": "2026-08-20T18:00:00.000Z",
+    "changeLog": [
+      "v1: declare provider-neutral composite adapter capabilities"
+    ]
+  }
+}

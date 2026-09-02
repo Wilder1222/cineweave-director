@@ -1,0 +1,972 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cineweave.dev/contracts/style-package.schema.json",
+  "title": "CineWeave Style Package",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "stylePackageId",
+    "version",
+    "status",
+    "displayName",
+    "semanticSpec",
+    "atoms",
+    "recipe",
+    "referencePolicy",
+    "validationSuite",
+    "activationGate",
+    "planningBoundary",
+    "skillReceipt"
+  ],
+  "properties": {
+    "kind": {
+      "const": "cineweave_codex_style_package"
+    },
+    "contractVersion": {
+      "const": "2.0.0"
+    },
+    "worldId": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 160
+    },
+    "stylePackageId": {
+      "$ref": "#/$defs/lowerId"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "status": {
+      "enum": [
+        "draft",
+        "active",
+        "deprecated",
+        "archived"
+      ]
+    },
+    "displayName": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "zh",
+        "en"
+      ],
+      "properties": {
+        "zh": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        }
+      }
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000
+    },
+    "semanticSpec": {
+      "$ref": "#/$defs/semanticSpec"
+    },
+    "representationModel": {
+      "$ref": "#/$defs/representationModel"
+    },
+    "abstractionBudget": {
+      "$ref": "#/$defs/abstractionBudget"
+    },
+    "detailBudgetByScale": {
+      "$ref": "#/$defs/detailBudgetByScale"
+    },
+    "identityTranslationPolicy": {
+      "$ref": "#/$defs/identityTranslationPolicy"
+    },
+    "atoms": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "$ref": "#/$defs/atom"
+      }
+    },
+    "recipe": {
+      "$ref": "#/$defs/recipe"
+    },
+    "referencePlanRef": {
+      "$ref": "#/$defs/contractRef"
+    },
+    "referencePolicy": {
+      "$ref": "#/$defs/referencePolicy"
+    },
+    "compilerProfiles": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "$ref": "#/$defs/compilerProfile"
+      }
+    },
+    "validationSuite": {
+      "$ref": "#/$defs/validationSuite"
+    },
+    "activationGate": {
+      "$ref": "#/$defs/activationGate"
+    },
+    "licenseProfileRefs": {
+      "type": "array",
+      "maxItems": 24,
+      "items": {
+        "$ref": "#/$defs/contractRef"
+      }
+    },
+    "provenance": {
+      "$ref": "#/$defs/provenance"
+    },
+    "planningBoundary": {
+      "$ref": "#/$defs/planningBoundary"
+    },
+    "skillReceipt": {
+      "$ref": "#/$defs/skillReceipt"
+    }
+  },
+  "$defs": {
+    "lowerId": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._-]{2,159}$"
+    },
+    "stringList": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 32,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 1200
+      }
+    },
+    "contractRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "version",
+        "contentHash"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        }
+      }
+    },
+    "semanticSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "medium",
+        "representation",
+        "visualDna",
+        "temporalDna",
+        "invariants",
+        "forbidden"
+      ],
+      "properties": {
+        "medium": {
+          "enum": [
+            "live_action",
+            "hand_drawn_2d",
+            "digital_2d",
+            "three_d",
+            "comic",
+            "illustration",
+            "print",
+            "mixed",
+            "unknown"
+          ]
+        },
+        "representation": {
+          "enum": [
+            "photoreal",
+            "naturalistic_stylized",
+            "graphic",
+            "painterly",
+            "abstract",
+            "mixed",
+            "unknown"
+          ]
+        },
+        "culture": {
+          "type": "string",
+          "maxLength": 500
+        },
+        "historicalTreatment": {
+          "enum": [
+            "none",
+            "historical_reconstruction",
+            "poetic_adaptation",
+            "fictional_reconstruction",
+            "contemporary_reinterpretation",
+            "unknown"
+          ]
+        },
+        "visualDna": {
+          "$ref": "#/$defs/stringList"
+        },
+        "temporalDna": {
+          "$ref": "#/$defs/stringList"
+        },
+        "invariants": {
+          "$ref": "#/$defs/stringList"
+        },
+        "forbidden": {
+          "$ref": "#/$defs/stringList"
+        }
+      }
+    },
+    "representationModel": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "family",
+        "geometryModel",
+        "surfaceModel",
+        "lightModel",
+        "depthModel",
+        "visualGrammar",
+        "temporalGrammar"
+      ],
+      "properties": {
+        "family": {
+          "enum": [
+            "photoreal",
+            "anime",
+            "manga",
+            "illustration",
+            "stylized_3d",
+            "hybrid"
+          ]
+        },
+        "geometryModel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "surfaceModel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "lightModel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "depthModel": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "visualGrammar": {
+          "$ref": "#/$defs/stringList"
+        },
+        "temporalGrammar": {
+          "$ref": "#/$defs/stringList"
+        }
+      }
+    },
+    "abstractionBudget": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "dimensions",
+        "providerNeutral"
+      ],
+      "properties": {
+        "dimensions": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 16,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "dimension",
+              "level",
+              "rationale"
+            ],
+            "properties": {
+              "dimension": {
+                "enum": [
+                  "geometry",
+                  "proportion",
+                  "feature_abstraction",
+                  "silhouette",
+                  "surface",
+                  "material",
+                  "color",
+                  "light",
+                  "line",
+                  "depth",
+                  "motion",
+                  "expression",
+                  "physics",
+                  "detail"
+                ]
+              },
+              "level": {
+                "enum": [
+                  "literal",
+                  "restrained",
+                  "moderate",
+                  "high",
+                  "symbolic"
+                ]
+              },
+              "rationale": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 800
+              }
+            }
+          }
+        },
+        "providerNeutral": {
+          "const": true
+        }
+      }
+    },
+    "detailBudgetByScale": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "closeup",
+        "medium",
+        "fullbody",
+        "wide"
+      ],
+      "properties": {
+        "closeup": {
+          "$ref": "#/$defs/stringList"
+        },
+        "medium": {
+          "$ref": "#/$defs/stringList"
+        },
+        "fullbody": {
+          "$ref": "#/$defs/stringList"
+        },
+        "wide": {
+          "$ref": "#/$defs/stringList"
+        }
+      }
+    },
+    "identityTranslationPolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "requiresRepresentationBinding",
+        "preserve",
+        "allow",
+        "forbid"
+      ],
+      "properties": {
+        "requiresRepresentationBinding": {
+          "const": true
+        },
+        "preserve": {
+          "$ref": "#/$defs/stringList"
+        },
+        "allow": {
+          "$ref": "#/$defs/stringList"
+        },
+        "forbid": {
+          "$ref": "#/$defs/stringList"
+        }
+      }
+    },
+    "atom": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "atomId",
+        "domain",
+        "level",
+        "version",
+        "contentHash",
+        "summary",
+        "invariants",
+        "forbidden",
+        "appliesTo"
+      ],
+      "properties": {
+        "atomId": {
+          "$ref": "#/$defs/lowerId"
+        },
+        "domain": {
+          "enum": [
+            "medium",
+            "representation",
+            "geometry",
+            "shape_language",
+            "surface",
+            "depth",
+            "effects",
+            "panel_layout",
+            "typography",
+            "character",
+            "culture",
+            "costume",
+            "production_design",
+            "linework",
+            "shading",
+            "color",
+            "lighting",
+            "composition",
+            "cinematography",
+            "performance",
+            "motion",
+            "temporal",
+            "postprocess"
+          ]
+        },
+        "level": {
+          "enum": [
+            "domain",
+            "family",
+            "subclass",
+            "micro_style",
+            "project"
+          ]
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        },
+        "parentRefs": {
+          "type": "array",
+          "maxItems": 8,
+          "items": {
+            "$ref": "#/$defs/contractRef"
+          }
+        },
+        "summary": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1200
+        },
+        "invariants": {
+          "$ref": "#/$defs/stringList"
+        },
+        "forbidden": {
+          "$ref": "#/$defs/stringList"
+        },
+        "compatibleWith": {
+          "$ref": "#/$defs/stringList"
+        },
+        "conflictsWith": {
+          "$ref": "#/$defs/stringList"
+        },
+        "variables": {
+          "type": "array",
+          "maxItems": 24,
+          "items": {
+            "$ref": "#/$defs/variable"
+          }
+        },
+        "appliesTo": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": [
+              "image",
+              "video",
+              "character",
+              "costume",
+              "scene",
+              "camera",
+              "performance",
+              "temporal",
+              "representation",
+              "page",
+              "text"
+            ]
+          }
+        }
+      }
+    },
+    "variable": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "variableId",
+        "type"
+      ],
+      "properties": {
+        "variableId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]{2,159}$"
+        },
+        "type": {
+          "enum": [
+            "number",
+            "enum",
+            "boolean",
+            "string"
+          ]
+        },
+        "min": {
+          "type": "number"
+        },
+        "max": {
+          "type": "number"
+        },
+        "default": {
+          "type": [
+            "number",
+            "string",
+            "boolean"
+          ]
+        },
+        "allowedValues": {
+          "type": "array",
+          "maxItems": 24,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          }
+        }
+      }
+    },
+    "recipe": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "recipeId",
+        "atomRefs",
+        "scopeBindings",
+        "invariants",
+        "forbidden"
+      ],
+      "properties": {
+        "recipeId": {
+          "$ref": "#/$defs/lowerId"
+        },
+        "parentRecipeRef": {
+          "$ref": "#/$defs/contractRef"
+        },
+        "atomRefs": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 64,
+          "items": {
+            "$ref": "#/$defs/atomRef"
+          }
+        },
+        "scopeBindings": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "enum": [
+              "character",
+              "costume",
+              "scene",
+              "camera",
+              "performance",
+              "image",
+              "video",
+              "temporal",
+              "postprocess",
+              "representation",
+              "page",
+              "text"
+            ]
+          }
+        },
+        "invariants": {
+          "$ref": "#/$defs/stringList"
+        },
+        "allowedVariation": {
+          "$ref": "#/$defs/stringList"
+        },
+        "forbidden": {
+          "$ref": "#/$defs/stringList"
+        }
+      }
+    },
+    "atomRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "atomId",
+        "role",
+        "version",
+        "contentHash"
+      ],
+      "properties": {
+        "atomId": {
+          "$ref": "#/$defs/lowerId"
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        },
+        "priority": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 1000
+        }
+      }
+    },
+    "referencePolicy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "designTime",
+        "application",
+        "fallback"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "none",
+            "design_time_only",
+            "optional_application",
+            "required_application",
+            "adaptive"
+          ]
+        },
+        "designTime": {
+          "$ref": "#/$defs/referenceRequirement"
+        },
+        "application": {
+          "$ref": "#/$defs/referenceRequirement"
+        },
+        "fallback": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "useSemanticSpec",
+            "useCompilerProfile",
+            "blockOnMissingTemporalEvidence"
+          ],
+          "properties": {
+            "useSemanticSpec": {
+              "type": "boolean"
+            },
+            "useCompilerProfile": {
+              "type": "boolean"
+            },
+            "blockOnMissingTemporalEvidence": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "referenceRequirement": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "visual",
+        "temporal",
+        "maxVisual",
+        "maxTemporal"
+      ],
+      "properties": {
+        "visual": {
+          "enum": [
+            "none",
+            "optional",
+            "recommended",
+            "required",
+            "conditional"
+          ]
+        },
+        "temporal": {
+          "enum": [
+            "none",
+            "optional",
+            "recommended",
+            "required",
+            "conditional"
+          ]
+        },
+        "maxVisual": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 24
+        },
+        "maxTemporal": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 24
+        },
+        "requiredWhen": {
+          "type": "array",
+          "maxItems": 16,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 240
+          }
+        }
+      }
+    },
+    "compilerProfile": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target",
+        "directives",
+        "negativeDirectives",
+        "temporalRules"
+      ],
+      "properties": {
+        "target": {
+          "enum": [
+            "image",
+            "video"
+          ]
+        },
+        "directives": {
+          "$ref": "#/$defs/stringList"
+        },
+        "negativeDirectives": {
+          "$ref": "#/$defs/stringList"
+        },
+        "temporalRules": {
+          "$ref": "#/$defs/stringList"
+        }
+      }
+    },
+    "validationSuite": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "cases",
+        "dimensions",
+        "requiresHumanReview"
+      ],
+      "properties": {
+        "cases": {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 24,
+          "items": {
+            "$ref": "#/$defs/validationCase"
+          }
+        },
+        "dimensions": {
+          "$ref": "#/$defs/stringList"
+        },
+        "requiresHumanReview": {
+          "const": true
+        }
+      }
+    },
+    "validationCase": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "caseId",
+        "kind",
+        "purpose"
+      ],
+      "properties": {
+        "caseId": {
+          "type": "string",
+          "pattern": "^[a-z0-9][a-z0-9._-]{2,159}$"
+        },
+        "kind": {
+          "enum": [
+            "positive",
+            "boundary",
+            "negative",
+            "temporal"
+          ]
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "observationIds": {
+          "type": "array",
+          "maxItems": 24,
+          "items": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 160
+          }
+        }
+      }
+    },
+    "activationGate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "humanApprovalRequired",
+        "status",
+        "rightsResolved",
+        "validationPassed"
+      ],
+      "properties": {
+        "humanApprovalRequired": {
+          "const": true
+        },
+        "status": {
+          "enum": [
+            "planned",
+            "approved",
+            "blocked",
+            "rejected"
+          ]
+        },
+        "rightsResolved": {
+          "type": "boolean"
+        },
+        "validationPassed": {
+          "type": "boolean"
+        },
+        "approvedBy": {
+          "type": "string",
+          "maxLength": 240
+        },
+        "approvedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source",
+        "createdAt",
+        "updatedAt",
+        "changeLog"
+      ],
+      "properties": {
+        "source": {
+          "enum": [
+            "user_authored",
+            "codex_authored",
+            "adapted",
+            "imported",
+            "migrated"
+          ]
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "parentId": {
+          "type": "string",
+          "maxLength": 160
+        },
+        "changeLog": {
+          "$ref": "#/$defs/stringList"
+        }
+      }
+    },
+    "planningBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "providerNeutral",
+        "generatesMedia",
+        "humanApprovalRequired"
+      ],
+      "properties": {
+        "providerNeutral": {
+          "const": true
+        },
+        "generatesMedia": {
+          "const": false
+        },
+        "humanApprovalRequired": {
+          "const": true
+        },
+        "notes": {
+          "type": "string",
+          "maxLength": 1200
+        }
+      }
+    },
+    "skillReceipt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository",
+        "ref",
+        "commit",
+        "installedBy",
+        "usedAt"
+      ],
+      "properties": {
+        "repository": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://(www\\.)?github\\.com/[^/]+/[^/]+(?:\\.git)?/?$"
+        },
+        "ref": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 240
+        },
+        "commit": {
+          "type": "string",
+          "pattern": "^[0-9a-fA-F]{7,64}$"
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        },
+        "installedBy": {
+          "const": "codex-environment"
+        },
+        "environmentId": {
+          "type": "string",
+          "maxLength": 240
+        },
+        "usedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    }
+  }
+}

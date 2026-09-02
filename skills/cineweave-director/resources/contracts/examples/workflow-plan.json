@@ -1,0 +1,29 @@
+{
+  "kind": "cineweave_codex_workflow_plan",
+  "contractVersion": "3.0.0",
+  "workflowId": "workflow.rain-courtyard",
+  "version": 1,
+  "status": "ready",
+  "creativeBriefRef": { "kind": "cineweave_codex_creative_brief", "id": "brief.rain-courtyard", "version": 1, "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" },
+  "steps": [
+    { "stepId": "step.world", "route": "brief_world", "status": "ready", "purpose": "Create and approve world authority.", "inputKinds": ["cineweave_codex_creative_brief"], "outputKinds": ["cineweave_codex_world_bible"], "dependsOn": [], "humanGate": "approve" },
+    { "stepId": "step.story", "route": "story", "status": "pending", "purpose": "Create causal story artifacts without camera decisions.", "inputKinds": ["cineweave_codex_world_bible"], "outputKinds": ["cineweave_codex_story_brief", "cineweave_codex_beat_sheet", "cineweave_codex_script_scene"], "dependsOn": ["step.world"], "humanGate": "approve" },
+    { "stepId": "step.assets", "route": "reference_evidence", "status": "pending", "purpose": "Separate visible evidence by role, scope, transfer, and rights.", "inputKinds": ["cineweave_codex_creative_brief"], "outputKinds": ["cineweave_codex_reference_asset", "cineweave_codex_reference_observation", "cineweave_codex_reference_binding_set"], "dependsOn": [], "humanGate": "select" },
+    { "stepId": "step.direction", "route": "shot_direction", "status": "pending", "purpose": "Resolve blocking, camera, physical shot light, and time from exact upstream artifacts.", "inputKinds": ["cineweave_codex_script_scene", "character_binding", "scene_binding", "cineweave_codex_style_compile"], "outputKinds": ["cineweave_codex_shot_spec", "cineweave_codex_shot_lighting_plan", "cineweave_codex_temporal_spec"], "dependsOn": ["step.story", "step.assets"], "humanGate": "approve" },
+    { "stepId": "step.delivery", "route": "production_plan", "status": "pending", "purpose": "Plan controls, evidence, rights, feasibility, and acceptance without invoking a provider.", "inputKinds": ["cineweave_codex_storyboard_sequence", "cineweave_codex_image_prompt"], "outputKinds": ["cineweave_codex_render_plan", "cineweave_codex_control_channel_set", "cineweave_codex_evidence_bundle"], "dependsOn": ["step.direction"], "humanGate": "approve" }
+  ],
+  "deliverables": [
+    { "kind": "cineweave_codex_world_bible", "route": "brief_world", "required": true },
+    { "kind": "cineweave_codex_script_scene", "route": "story", "required": true },
+    { "kind": "cineweave_codex_storyboard_sequence", "route": "storyboard_rhythm", "required": true },
+    { "kind": "cineweave_codex_image_prompt", "route": "image_prompt", "required": true },
+    { "kind": "cineweave_codex_render_plan", "route": "production_plan", "required": true }
+  ],
+  "currentGate": { "type": "approval", "status": "open", "nextAction": "Approve or revise the world bible before deriving story canon." },
+  "questions": ["Should the world target researched history or remain explicitly fictional?"],
+  "warnings": ["Capability planning does not select or call a provider."],
+  "planningBoundary": { "singleSkill": true, "providerNeutral": true, "generatesMedia": false, "invokesExternalTool": false, "mutatesSourceArtifacts": false },
+  "validation": { "stepsUnique": true, "dependenciesAcyclic": true, "routesKnown": true, "outputsOwned": true, "gatesExplicit": true, "noExecutionClaim": true },
+  "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-director", "ref": "v3.0.0", "commit": "0000000000000000000000000000000000000000", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00Z" },
+  "provenance": { "source": "suite_builtin", "createdAt": "2026-09-02T00:00:00Z", "updatedAt": "2026-09-02T00:00:00Z", "changeLog": ["Replaced the multi-skill workflow graph with internal route ownership."] }
+}
