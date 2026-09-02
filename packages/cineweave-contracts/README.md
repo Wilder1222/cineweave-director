@@ -1,7 +1,7 @@
 # CineWeave Contracts 2.5.1
 
 `cineweave-contracts` is the canonical exchange layer for CineWeave Studio. Its
-manifest records 71 contract kinds, one owner per contract and one owner per
+manifest records 89 contract kinds, one owner per contract and one owner per
 Skill route.
 
 ## Domains
@@ -15,15 +15,21 @@ Skill route.
 - Style: one-axis exploration, StylePackage, RepresentationBinding, reference
   policy, semantic-emphasis/representation-variant StyleCompile with optional
   calibrated realism treatment, and StyleLightGrammar.
-- Reference: byte-bound assets, atomic observations, suitability reviews and
-  exact role-scoped binding sets.
-- Director: proposals, ActionSequenceSpec, ShotSpec, ShotLightingPlan,
-  TemporalSpec, storyboard, reference consumption and render planning.
+- Reference: byte-bound assets, planned or externally recorded
+  content-credential inspections, atomic observations, suitability reviews and
+  exact role-scoped binding sets, plus scoped `AssetAliasRegistry` maps.
+- Director: proposals, ActionSequenceSpec, the parameterized
+  `CinematicSkillManifest` catalog, `ShotCompilerPlan`, ShotSpec,
+  HeroFrameAnchor, ShotLightingPlan, TemporalSpec, optional CameraPrevisSpec,
+  storyboard, SequenceRhythmSpec, reference consumption and render planning.
 - Prompt: PromptRecord, ImagePrompt, explicit reference transforms,
   PromptHypothesis, DraftBrief and PromptRepair.
-- Production: recipes, deterministic BoardAssemblyPlan, controls, evidence,
-  capability, rights, adapter descriptors, exact execution requests, receipts
-  and benchmarks.
+- Production: recipes, deterministic BoardAssemblyPlan, rational-frame
+  EditorialTimelinePlan, local MediaTechnicalProbe records, planned
+  OCIO-model-aligned ColorPipelineProfile and content-credential handoffs,
+  contract-aware one-variable repair runs, controls, ControlBenchmark/ControlBenchmarkReview,
+  evidence, capability, rights, adapter descriptors, exact execution requests,
+  receipts and benchmarks.
 - Runtime: project, artifact, exact dependency graph, approval, safe project
   bundle, board-provenance and Skill-evaluation records.
 
@@ -53,9 +59,21 @@ and a non-destructive migration report.
 
 Schema validity is necessary but not sufficient. Semantic tests also enforce
 causal beats, non-overlapping performance phases, physical/style light
-separation, source-bound shot lighting, ordered temporal events, one-variable
-repair, deterministic grids, execution authorization/cost integrity, artifact-
-graph summaries, safe bundle manifests and evaluation-summary consistency.
+separation, source-bound shot lighting, ordered temporal events, exact
+camera-previs dependencies, exact hero-frame inheritance, rational sequence
+timing, contiguous shot windows, exact scoped asset aliases, ordered separate pose/intrinsic
+tracks and no false zoom claims, closed editorial tracks with explicit
+transitions and honest conform states, exact MediaImport-bound media probes
+with explicit missing fields and sanitized ffprobe boundaries, exact planned
+color-config/media bindings, honest source metadata, separate scene/display
+reference spaces and non-executing preview/delivery paths, one-variable repair, deterministic
+grids, execution authorization/cost integrity, artifact-graph summaries, safe
+bundle manifests, contract-aware repair receipts and evaluation-summary consistency.
+ControlBenchmark semantics additionally require exact CameraPrevisSpec or
+Director artifact bindings for the applicable suite, dimension-specific
+pass/warn/fail anchors and, for DirectorQualityBench completion, paired distinct
+observed media, balanced left/right presentation and observations attached to
+both media items.
 Action semantics additionally enforce ordered beats, resolved participants and
 zones, symmetric coverage/risk links, closed continuity and visible qualified
 review for high-risk depiction.

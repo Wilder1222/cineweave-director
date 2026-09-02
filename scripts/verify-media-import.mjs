@@ -6,10 +6,12 @@ import { createReadStream } from "node:fs";
 import { readFile, stat } from "node:fs/promises";
 import { basename, extname, resolve } from "node:path";
 import { promisify } from "node:util";
+import { sha256Canonical } from "../packages/cineweave-runtime/src/canonical-json.mjs";
 
 const execFile = promisify(execFileCallback);
 const MAX_IMAGE_BYTES = 64 * 1024 * 1024;
 const MAX_VIDEO_BYTES = 512 * 1024 * 1024;
+const EXACT_ARTIFACT_REF = /^([a-z0-9][a-z0-9._-]{1,159})\/([a-z0-9][a-z0-9._-]{1,159})@([1-9][0-9]*)\/(sha256:[0-9a-f]{64})$/;
 
 function usage() {
   console.error("Usage: node scripts/verify-media-import.mjs <media-file> --world-id <id> --render-plan-ref <ref> --receipt <receipt.json> [--shot-id <id>] [--media-type still|storyboard_frame|keyframe_candidate|video_candidate] [--source codex_interactive|user_upload|external_adapter]");
@@ -39,6 +41,17 @@ function extensionFormat(fileName) {
   if (extension === "jpg") return "jpeg";
   if (extension === "m4v") return "mp4";
   return extension;
+}
+
+function parseExactRenderPlanRef(value) {
+  const match = EXACT_ARTIFACT_REF.exec(value);
+  if (!match || match[1] !== "cineweave_codex_render_plan") return null;
+  return {
+    kind: match[1],
+    id: match[2],
+    version: Number(match[3]),
+    contentHash: match[4]
+  };
 }
 
 function parseFrameRate(value) {
@@ -139,47 +152,79 @@ async function main() {
     if (!allowedFormats.includes(format)) throw new Error(isVideo ? "video candidates must be mp4, mov or webm" : "still media must be png, jpeg or webp");
     const dimensions = isVideo ? await probeVideo(resolvedPath, format) : detectDimensions(bytes, format);
     if (!dimensions || dimensions.width < 1 || dimensions.height < 1) throw new Error(`could not detect ${isVideo ? "video" : "image"} dimensions`);
-    const contentHash = isVideo ? await hashFile(resolvedPath) : `sha256:${createHash("sha256").update(bytes).digest("hex")}`;
+    const contentHash = isVideo ? await hashFile(resolvedPath) : "sha256:" + createHash("sha256").update(bytes).digest("hex");
     const receipt = JSON.parse(await readFile(resolve(receiptPath), "utf8"));
     if (!receipt || typeof receipt !== "object" || Array.isArray(receipt)) throw new Error("receipt file must contain a JSON object");
+    const receiptText = JSON.stringify(receipt);
+    if (!receipt.repository || !receipt.ref || !/^[0-9a-f]{7,64}$/i.test(receipt.commit ?? "") || receipt.installedBy !== "codex-environment"
+      || typeof receipt.usedAt !== "string" || Number.isNaN(Date.parse(receipt.usedAt))
+      || /owner\/repository|placeholder|40-character-git-sha|sha256:<[^>]+>/i.test(receiptText)) {
+      throw new Error("receipt must contain a real repository, ref, Git commit, codex-environment installer and valid usedAt date");
+    }
 
-    const mediaId = `media-${contentHash.slice(-16)}`;
+    const mediaId = "media-" + contentHash.slice(-16);
+    const media = [{
+      mediaId,
+      mediaType,
+      fileName,
+      format,
+      byteSize: fileInfo.size,
+      contentHash,
+      width: dimensions.width,
+      height: dimensions.height,
+      ...(isVideo ? { durationSeconds: dimensions.durationSeconds, frameRate: dimensions.frameRate } : {}),
+      source
+    }];
+    const verification = {
+      fileExists: true,
+      contentHashPresent: true,
+      dimensionsDetected: true,
+      privateUrlAbsent: true,
+      status: "verified"
+    };
+    const importContract = {
+      source,
+      statusOnCreation: "draft",
+      nextAction: isVideo ? "Bind the verified Draft video to candidate observations, review temporal continuity, then send it to the explicit QA gate." : "Bind the verified Draft media to the Candidate, review continuity, then explicitly lock it as a Keyframe."
+    };
+    const exactRenderPlanRef = parseExactRenderPlanRef(renderPlanRef);
     const result = {
       kind: "cineweave_codex_media_import",
-      contractVersion: "2.0.0",
       worldId,
       ...(shotId ? { shotId } : {}),
-      renderPlanRef,
       skillReceipt: receipt,
       status: "draft",
-      media: [{
-        mediaId,
-        mediaType,
-        fileName,
-        format,
-        byteSize: fileInfo.size,
-        contentHash,
-        width: dimensions.width,
-        height: dimensions.height,
-        ...(isVideo ? { durationSeconds: dimensions.durationSeconds, frameRate: dimensions.frameRate } : {}),
-        source
-      }],
-      verification: {
-        fileExists: true,
-        contentHashPresent: true,
-        dimensionsDetected: true,
-        privateUrlAbsent: true,
-        status: "verified"
-      },
-      importContract: {
-        source,
-        statusOnCreation: "draft",
-        nextAction: isVideo ? "Bind the verified Draft video to candidate observations, review temporal continuity, then send it to the explicit QA gate." : "Bind the verified Draft media to the Candidate, review continuity, then explicitly lock it as a Keyframe."
-      }
+      media,
+      verification,
+      importContract
     };
-    const receiptText = JSON.stringify(receipt);
-    if (!receipt.repository || !receipt.ref || !/^[0-9a-f]{7,64}$/i.test(receipt.commit ?? "") || /owner\/repository|placeholder|40-character-git-sha|sha256:<[^>]+>/i.test(receiptText)) {
-      throw new Error("receipt must contain a real repository, ref, Git commit and must not be a fixture placeholder");
+    if (exactRenderPlanRef) {
+      const provenance = {
+        source: "imported",
+        createdAt: new Date(receipt.usedAt).toISOString(),
+        updatedAt: new Date(receipt.usedAt).toISOString(),
+        changeLog: ["Verified local media bytes and normalized an exact RenderPlan reference."]
+      };
+      const mediaImportIdentity = {
+        contractVersion: "2.5.0",
+        worldId,
+        ...(shotId ? { shotId } : {}),
+        renderPlanRef: exactRenderPlanRef,
+        skillReceipt: receipt,
+        status: result.status,
+        media,
+        verification,
+        importContract,
+        provenance
+      };
+      result.contractVersion = "2.5.0";
+      result.mediaImportId = "media-import." + sha256Canonical(mediaImportIdentity).slice(7, 39);
+      result.version = 1;
+      result.renderPlanRef = exactRenderPlanRef;
+      result.provenance = provenance;
+    } else {
+      result.contractVersion = "2.0.0";
+      result.renderPlanRef = renderPlanRef;
     }
     console.log(JSON.stringify(result, null, 2));
   } catch (error) {

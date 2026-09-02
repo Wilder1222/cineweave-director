@@ -1,0 +1,240 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Wilder1222/cineweave-studio/schemas/shot-compiler-plan.schema.json",
+  "title": "CineWeave Director Shot Compiler Plan",
+  "description": "A deterministic handoff plan compiled from one Atomic Cinematic Skill invocation. It projects creator controls and delegates canonical contracts to their owning Skills without executing a provider.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "shotCompilerPlanId",
+    "version",
+    "cinematicSkillManifestRef",
+    "skillSelection",
+    "intent",
+    "parameterValues",
+    "resolvedBindings",
+    "upstreamRefs",
+    "controlSurface",
+    "handoffs",
+    "compileTrace",
+    "skillReceipt",
+    "executionBoundary",
+    "validation",
+    "provenance"
+  ],
+  "properties": {
+    "kind": { "const": "cineweave_codex_shot_compiler_plan" },
+    "contractVersion": { "const": "2.5.0" },
+    "shotCompilerPlanId": { "$ref": "common.schema.json#/$defs/identifier" },
+    "version": { "type": "integer", "minimum": 1 },
+    "cinematicSkillManifestRef": { "$ref": "#/$defs/manifestRef" },
+    "assetAliasRegistryRef": { "$ref": "#/$defs/assetAliasRegistryRef" },
+    "skillSelection": { "$ref": "#/$defs/skillSelection" },
+    "intent": { "$ref": "#/$defs/intent" },
+    "parameterValues": { "type": "array", "minItems": 1, "maxItems": 32, "items": { "$ref": "#/$defs/parameterValue" } },
+    "resolvedBindings": { "type": "array", "minItems": 1, "maxItems": 12, "items": { "$ref": "#/$defs/resolvedBinding" } },
+    "upstreamRefs": { "type": "array", "maxItems": 32, "uniqueItems": true, "items": { "$ref": "common.schema.json#/$defs/contractRef" } },
+    "controlSurface": { "$ref": "#/$defs/controlSurface" },
+    "handoffs": { "type": "array", "minItems": 1, "maxItems": 12, "items": { "$ref": "#/$defs/handoff" } },
+    "compileTrace": { "$ref": "#/$defs/compileTrace" },
+    "skillReceipt": { "$ref": "common.schema.json#/$defs/skillReceipt" },
+    "executionBoundary": { "$ref": "#/$defs/executionBoundary" },
+    "validation": { "$ref": "#/$defs/validation" },
+    "provenance": { "$ref": "common.schema.json#/$defs/provenance" }
+  },
+  "$defs": {
+    "primitive": {
+      "type": ["string", "number", "boolean", "null"]
+    },
+    "manifestRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        { "properties": { "kind": { "const": "cineweave_codex_cinematic_skill_manifest" } } }
+      ]
+    },
+    "assetAliasRegistryRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        { "properties": { "kind": { "const": "cineweave_codex_asset_alias_registry" } } }
+      ]
+    },
+    "skillSelection": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["skillId", "version", "selectionMode"],
+      "properties": {
+        "skillId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "version": { "type": "integer", "minimum": 1 },
+        "selectionMode": { "enum": ["explicit", "recommended"] },
+        "selectionReason": { "type": "string", "maxLength": 1200 }
+      }
+    },
+    "intent": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["summary", "storyFunction", "targetLevel", "source"],
+      "properties": {
+        "summary": { "type": "string", "minLength": 1, "maxLength": 1600 },
+        "storyFunction": { "enum": ["establish", "reveal", "reaction", "entrance", "dialogue", "intimacy", "follow", "pursuit", "orbit", "match", "transition", "impact", "memory"] },
+        "targetLevel": { "enum": ["shot", "sequence"] },
+        "source": { "enum": ["user_authored", "codex_normalized", "upstream_contract"] }
+      }
+    },
+    "parameterValue": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["parameterId", "value", "source"],
+      "properties": {
+        "parameterId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "value": { "$ref": "#/$defs/primitive" },
+        "source": { "enum": ["manifest_default", "user_override", "derived"] },
+        "displayValue": { "type": "string", "maxLength": 240 }
+      }
+    },
+    "resolvedBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["slotId", "source", "refs"],
+      "properties": {
+        "slotId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "source": { "enum": ["exact_ref", "asset_alias"] },
+        "alias": { "type": "string", "pattern": "^@[^\\s@]{1,120}$" },
+        "refs": { "type": "array", "minItems": 1, "maxItems": 12, "uniqueItems": true, "items": { "$ref": "common.schema.json#/$defs/contractRef" } }
+      }
+    },
+    "target": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["contractKind", "ownerSkill", "route", "fieldPath"],
+      "properties": {
+        "contractKind": { "$ref": "common.schema.json#/$defs/identifier" },
+        "ownerSkill": { "enum": ["cineweave-director", "cineweave-character", "cineweave-scene", "cineweave-style", "cineweave-prompt", "cineweave-production"] },
+        "route": { "$ref": "common.schema.json#/$defs/identifier" },
+        "fieldPath": { "type": "string", "minLength": 1, "maxLength": 320 }
+      }
+    },
+    "control": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["controlId", "parameterId", "label", "domain", "value", "state", "enforcement", "ownerSkill", "target"],
+      "properties": {
+        "controlId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "parameterId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "label": { "type": "string", "minLength": 1, "maxLength": 240 },
+        "domain": { "enum": ["camera", "performance", "pacing", "blocking", "composition", "lighting", "continuity", "transition"] },
+        "value": { "$ref": "#/$defs/primitive" },
+        "unit": { "type": "string", "maxLength": 80 },
+        "state": { "enum": ["editable", "locked", "derived"] },
+        "enforcement": { "enum": ["hard", "soft", "advisory"] },
+        "ownerSkill": { "enum": ["cineweave-director", "cineweave-character", "cineweave-scene", "cineweave-style", "cineweave-prompt", "cineweave-production"] },
+        "target": { "$ref": "#/$defs/target" }
+      }
+    },
+    "controlGroup": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["groupId", "order", "label", "domain", "controls"],
+      "properties": {
+        "groupId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "order": { "type": "integer", "minimum": 1 },
+        "label": { "type": "string", "minLength": 1, "maxLength": 240 },
+        "domain": { "enum": ["camera", "performance", "pacing", "blocking", "composition", "lighting", "continuity", "transition"] },
+        "controls": { "type": "array", "minItems": 1, "maxItems": 16, "items": { "$ref": "#/$defs/control" } }
+      }
+    },
+    "controlSurface": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["surfaceVersion", "projectionOnly", "groups"],
+      "properties": {
+        "surfaceVersion": { "const": "1.0.0" },
+        "projectionOnly": { "const": true },
+        "groups": { "type": "array", "minItems": 1, "maxItems": 12, "items": { "$ref": "#/$defs/controlGroup" } }
+      }
+    },
+    "fieldAssignment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["targetPath", "sourceType", "sourceId"],
+      "properties": {
+        "targetPath": { "type": "string", "minLength": 1, "maxLength": 320 },
+        "sourceType": { "enum": ["parameter", "binding_slot", "upstream_ref", "constant", "preserve"] },
+        "sourceId": { "type": "string", "minLength": 1, "maxLength": 240 },
+        "note": { "type": "string", "maxLength": 800 }
+      }
+    },
+    "handoff": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["handoffId", "order", "contractKind", "ownerSkill", "route", "status", "purpose", "dependencyRefs", "fieldAssignments"],
+      "properties": {
+        "handoffId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "order": { "type": "integer", "minimum": 1 },
+        "contractKind": { "$ref": "common.schema.json#/$defs/identifier" },
+        "ownerSkill": { "enum": ["cineweave-director", "cineweave-character", "cineweave-scene", "cineweave-style", "cineweave-prompt", "cineweave-production"] },
+        "route": { "$ref": "common.schema.json#/$defs/identifier" },
+        "status": { "const": "planned" },
+        "purpose": { "type": "string", "minLength": 1, "maxLength": 1200 },
+        "dependencyRefs": { "type": "array", "maxItems": 32, "uniqueItems": true, "items": { "$ref": "common.schema.json#/$defs/contractRef" } },
+        "fieldAssignments": { "type": "array", "minItems": 1, "maxItems": 32, "items": { "$ref": "#/$defs/fieldAssignment" } }
+      }
+    },
+    "traceStep": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stepId", "order", "operation", "ownerSkill", "target", "source"],
+      "properties": {
+        "stepId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "order": { "type": "integer", "minimum": 1 },
+        "operation": { "enum": ["bind", "set", "derive", "preserve", "handoff", "validate"] },
+        "ownerSkill": { "enum": ["cineweave-director", "cineweave-character", "cineweave-scene", "cineweave-style", "cineweave-prompt", "cineweave-production"] },
+        "target": { "$ref": "#/$defs/target" },
+        "source": { "type": "object", "additionalProperties": false, "required": ["type", "id"], "properties": { "type": { "enum": ["parameter", "binding_slot", "upstream_ref", "constant", "preserve"] }, "id": { "type": "string", "minLength": 1, "maxLength": 240 } } }
+      }
+    },
+    "compileTrace": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stages", "steps", "unresolved", "conflicts"],
+      "properties": {
+        "stages": { "type": "array", "minItems": 1, "maxItems": 12, "items": { "type": "string", "minLength": 1, "maxLength": 240 } },
+        "steps": { "type": "array", "minItems": 1, "maxItems": 64, "items": { "$ref": "#/$defs/traceStep" } },
+        "unresolved": { "type": "array", "maxItems": 24, "items": { "type": "string", "minLength": 1, "maxLength": 800 } },
+        "conflicts": { "type": "array", "maxItems": 24, "items": { "type": "string", "minLength": 1, "maxLength": 800 } }
+      }
+    },
+    "executionBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["providerNeutral", "generatesMedia", "executesAdapter", "mutatesCanon", "writesFiles", "humanApprovalRequired"],
+      "properties": {
+        "providerNeutral": { "const": true },
+        "generatesMedia": { "const": false },
+        "executesAdapter": { "const": false },
+        "mutatesCanon": { "const": false },
+        "writesFiles": { "const": false },
+        "humanApprovalRequired": { "const": true },
+        "notes": { "type": "string", "maxLength": 1600 }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["manifestRefExact", "skillSelectionExact", "parametersResolved", "bindingsResolved", "controlsProjectionOnly", "handoffsOwned", "programTraceOrdered", "noProviderSelection", "noCanonMutation", "noExecution"],
+      "properties": {
+        "manifestRefExact": { "const": true },
+        "skillSelectionExact": { "const": true },
+        "parametersResolved": { "const": true },
+        "bindingsResolved": { "const": true },
+        "controlsProjectionOnly": { "const": true },
+        "handoffsOwned": { "const": true },
+        "programTraceOrdered": { "const": true },
+        "noProviderSelection": { "const": true },
+        "noCanonMutation": { "const": true },
+        "noExecution": { "const": true }
+      }
+    }
+  }
+}

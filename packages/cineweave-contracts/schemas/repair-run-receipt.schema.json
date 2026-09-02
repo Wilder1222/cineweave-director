@@ -1,0 +1,233 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Wilder1222/cineweave-studio/schemas/repair-run-receipt.schema.json",
+  "title": "CineWeave Contract-aware Repair Run Receipt",
+  "description": "Immutable runtime evidence for a guarded one-variable repair attempt. A candidate remains awaiting human review.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "kind",
+    "contractVersion",
+    "repairRunId",
+    "version",
+    "status",
+    "repairRef",
+    "targetRef",
+    "candidateRef",
+    "before",
+    "after",
+    "preserve",
+    "preservedInputRefs",
+    "changeEvidence",
+    "approvalEvidence",
+    "adapter",
+    "timing",
+    "acceptance",
+    "executionBoundary",
+    "validation",
+    "failure",
+    "provenance"
+  ],
+  "properties": {
+    "kind": { "const": "cineweave_codex_repair_run_receipt" },
+    "contractVersion": { "const": "2.5.0" },
+    "repairRunId": { "$ref": "common.schema.json#/$defs/identifier" },
+    "version": { "type": "integer", "minimum": 1 },
+    "status": { "enum": ["blocked", "failed", "awaiting_review"] },
+    "repairRef": { "$ref": "#/$defs/repairRef" },
+    "targetRef": { "anyOf": [{ "$ref": "common.schema.json#/$defs/contractRef" }, { "type": "null" }] },
+    "candidateRef": { "anyOf": [{ "$ref": "common.schema.json#/$defs/contractRef" }, { "type": "null" }] },
+    "before": { "$ref": "#/$defs/snapshot" },
+    "after": { "$ref": "#/$defs/snapshot" },
+    "preserve": { "$ref": "common.schema.json#/$defs/stringList" },
+    "preservedInputRefs": {
+      "type": "array",
+      "maxItems": 64,
+      "uniqueItems": true,
+      "items": { "$ref": "common.schema.json#/$defs/contractRef" }
+    },
+    "changeEvidence": { "$ref": "#/$defs/changeEvidence" },
+    "approvalEvidence": { "$ref": "#/$defs/approvalEvidence" },
+    "adapter": { "anyOf": [{ "$ref": "#/$defs/adapter" }, { "type": "null" }] },
+    "timing": { "$ref": "#/$defs/timing" },
+    "acceptance": { "$ref": "#/$defs/acceptance" },
+    "executionBoundary": { "$ref": "#/$defs/executionBoundary" },
+    "validation": { "$ref": "#/$defs/validation" },
+    "failure": {
+      "oneOf": [
+        { "type": "null" },
+        { "$ref": "#/$defs/failure" }
+      ]
+    },
+    "provenance": { "$ref": "common.schema.json#/$defs/provenance" }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": ["status"],
+        "properties": { "status": { "const": "awaiting_review" } }
+      },
+      "then": {
+        "properties": {
+          "targetRef": { "$ref": "common.schema.json#/$defs/contractRef" },
+          "candidateRef": { "$ref": "common.schema.json#/$defs/contractRef" },
+          "before": { "properties": { "status": { "const": "captured" } } },
+          "after": { "properties": { "status": { "const": "captured" } } },
+          "failure": { "type": "null" }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": ["status"],
+        "properties": { "status": { "enum": ["blocked", "failed"] } }
+      },
+      "then": {
+        "properties": {
+          "candidateRef": { "type": "null" },
+          "after": { "properties": { "status": { "const": "not_captured" } } },
+          "failure": { "$ref": "#/$defs/failure" }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "repairRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        {
+          "properties": {
+            "kind": {
+              "enum": [
+                "cineweave_codex_director_repair",
+                "cineweave_codex_character_repair",
+                "cineweave_codex_scene_repair",
+                "cineweave_codex_prompt_repair"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "snapshot": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "artifactRef", "payloadHash", "capturedAt"],
+      "properties": {
+        "status": { "enum": ["captured", "not_captured"] },
+        "artifactRef": { "anyOf": [{ "$ref": "common.schema.json#/$defs/contractRef" }, { "type": "null" }] },
+        "payloadHash": { "anyOf": [{ "$ref": "common.schema.json#/$defs/contentHash" }, { "type": "null" }] },
+        "capturedAt": { "type": "string", "format": "date-time" }
+      }
+    },
+    "changeEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["variable", "targetPath", "requestedTargetState", "observedChangedPaths"],
+      "properties": {
+        "variable": { "type": "string", "minLength": 1, "maxLength": 320 },
+        "targetPath": { "type": "string", "minLength": 1, "maxLength": 500 },
+        "requestedTargetState": { "type": "string", "minLength": 1, "maxLength": 1600 },
+        "observedChangedPaths": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 64,
+          "uniqueItems": true,
+          "items": { "type": "string", "minLength": 1, "maxLength": 500 }
+        }
+      }
+    },
+    "approvalEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["required", "decision", "approvalRecordHash", "exactRepairHashMatched"],
+      "properties": {
+        "required": { "const": true },
+        "decision": { "enum": ["approved", "missing", "rejected"] },
+        "approvalRecordHash": {
+          "anyOf": [{ "$ref": "common.schema.json#/$defs/contentHash" }, { "type": "null" }]
+        },
+        "exactRepairHashMatched": { "type": "boolean" }
+      }
+    },
+    "adapter": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["adapterId", "implementationContentHash", "networkAccess", "writesMedia", "mutatesParent", "providerNeutral"],
+      "properties": {
+        "adapterId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "implementationContentHash": { "$ref": "common.schema.json#/$defs/contentHash" },
+        "networkAccess": { "const": false },
+        "writesMedia": { "const": false },
+        "mutatesParent": { "const": false },
+        "providerNeutral": { "const": true }
+      }
+    },
+    "timing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["startedAt", "finishedAt", "durationMs"],
+      "properties": {
+        "startedAt": { "type": "string", "format": "date-time" },
+        "finishedAt": { "type": "string", "format": "date-time" },
+        "durationMs": { "type": "integer", "minimum": 0 }
+      }
+    },
+    "acceptance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "checkIds", "humanReviewRequired"],
+      "properties": {
+        "status": { "const": "pending" },
+        "checkIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "uniqueItems": true,
+          "items": { "$ref": "common.schema.json#/$defs/identifier" }
+        },
+        "humanReviewRequired": { "const": true }
+      }
+    },
+    "executionBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["providerNeutral", "callsNetwork", "writesSourceMedia", "writesDerivedMedia", "mutatesParentArtifact", "claimsApproval", "humanReviewRequired"],
+      "properties": {
+        "providerNeutral": { "const": true },
+        "callsNetwork": { "const": false },
+        "writesSourceMedia": { "const": false },
+        "writesDerivedMedia": { "const": false },
+        "mutatesParentArtifact": { "const": false },
+        "claimsApproval": { "const": false },
+        "humanReviewRequired": { "const": true }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["repairPlanValid", "targetExact", "parentImmutable", "preservedInputRefsExact", "changedPathBounded", "candidateSchemaValid", "candidateSemanticValid", "noSuccessClaim"],
+      "properties": {
+        "repairPlanValid": { "type": "boolean" },
+        "targetExact": { "type": "boolean" },
+        "parentImmutable": { "const": true },
+        "preservedInputRefsExact": { "type": "boolean" },
+        "changedPathBounded": { "type": "boolean" },
+        "candidateSchemaValid": { "type": "boolean" },
+        "candidateSemanticValid": { "type": "boolean" },
+        "noSuccessClaim": { "const": true }
+      }
+    },
+    "failure": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["stage", "code", "retryable", "message"],
+      "properties": {
+        "stage": { "enum": ["preflight", "authorization", "adapter", "output_verification", "receipt_persistence"] },
+        "code": { "$ref": "common.schema.json#/$defs/identifier" },
+        "retryable": { "type": "boolean" },
+        "message": { "type": "string", "minLength": 1, "maxLength": 1200 }
+      }
+    }
+  }
+}

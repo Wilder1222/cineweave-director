@@ -64,6 +64,7 @@ async function writeImmutable(path, value) {
 }
 
 export async function readStrictJson(path) {
+  await assertRegularFile(path);
   return parseJsonStrict(await readFile(path, "utf8"));
 }
 
@@ -75,15 +76,19 @@ export async function initProject(projectRoot, options = {}) {
   await mkdir(join(root, "executions"), { recursive: true });
   await mkdir(join(root, "idempotency"), { recursive: true });
   await mkdir(join(root, "reference-blobs"), { recursive: true });
+  await assertRealDirectory(root);
+  for (const directory of ["artifacts", "approvals", "executions", "idempotency", "reference-blobs"]) {
+    await assertRealDirectory(join(root, directory));
+  }
   if (existsSync(projectPath)) return readStrictJson(projectPath);
-  const createdAt = options.createdAt || new Date().toISOString();
-  const name = options.name || "Untitled CineWeave Project";
+  const createdAt = options.createdAt === undefined ? new Date().toISOString() : options.createdAt;
+  const name = options.name === undefined ? "Untitled CineWeave Project" : options.name;
   if (Number.isNaN(Date.parse(createdAt))) throw new TypeError("createdAt must be an ISO date-time");
   if (typeof name !== "string" || !name.trim() || name.length > 240) throw new TypeError("name must contain 1 to 240 characters");
   const project = {
     kind: "cineweave_project_manifest",
     contractVersion: RUNTIME_VERSION,
-    projectId: assertIdentifier(options.projectId || `project.${randomUUID().toLowerCase()}`, "projectId"),
+    projectId: assertIdentifier(options.projectId === undefined ? `project.${randomUUID().toLowerCase()}` : options.projectId, "projectId"),
     name,
     createdAt,
     runtimeVersion: RUNTIME_VERSION,
@@ -107,19 +112,24 @@ function artifactDirectory(projectRoot, kind, id) {
 
 export async function putArtifact(projectRoot, payload, options = {}) {
   if (!existsSync(join(storeRoot(projectRoot), "project.json"))) throw new Error("Project is not initialized; run init first");
-  const kind = assertIdentifier(options.kind || payload?.kind, "kind");
+  await assertRealDirectory(storeRoot(projectRoot));
+  await assertRealDirectory(join(storeRoot(projectRoot), "artifacts"));
+  const kind = assertIdentifier(options.kind === undefined ? payload?.kind : options.kind, "kind");
   const id = assertIdentifier(options.id, "id");
-  const version = Number(options.version || 1);
+  const version = Number(options.version === undefined ? 1 : options.version);
   if (!Number.isSafeInteger(version) || version < 1) throw new TypeError("version must be a positive safe integer");
-  const status = options.status || "draft";
-  const createdAt = options.createdAt || new Date().toISOString();
-  const createdBy = options.createdBy || "cineweave-runtime";
+  const status = options.status === undefined ? "draft" : options.status;
+  const createdAt = options.createdAt === undefined ? new Date().toISOString() : options.createdAt;
+  const createdBy = options.createdBy === undefined ? "cineweave-runtime" : options.createdBy;
   if (!["draft", "candidate", "approved", "rejected", "archived", "dry_run", "succeeded", "failed", "blocked"].includes(status)) throw new TypeError("status is invalid");
   if (Number.isNaN(Date.parse(createdAt))) throw new TypeError("createdAt must be an ISO date-time");
   if (typeof createdBy !== "string" || !createdBy.trim() || createdBy.length > 240) throw new TypeError("createdBy must contain 1 to 240 characters");
   const contentHash = sha256Canonical(payload);
   const shortHash = contentHash.slice("sha256:".length, "sha256:".length + 16);
   const directory = artifactDirectory(projectRoot, kind, id);
+  const kindDirectory = join(storeRoot(projectRoot), "artifacts", kind);
+  if (existsSync(kindDirectory)) await assertRealDirectory(kindDirectory);
+  if (existsSync(directory)) await assertRealDirectory(directory);
   await mkdir(directory, { recursive: true });
   const expectedName = `v${version}-${shortHash}.json`;
   const artifactRef = { kind, id, version, contentHash };
@@ -152,6 +162,7 @@ export async function findArtifact(projectRoot, artifactRef) {
   const { kind, id, version, contentHash } = exactRef;
   const directory = artifactDirectory(projectRoot, kind, id);
   if (!existsSync(directory)) throw new Error(`Artifact does not exist: ${kind}/${id}@${version}`);
+  await assertRealDirectory(directory);
   const pointerPath = join(directory, `v${version}.ref`);
   if (!existsSync(pointerPath)) throw new Error(`Immutable version pointer does not exist: ${kind}/${id}@${version}`);
   const pointer = assertArtifactRef(await readStrictJson(pointerPath));
@@ -176,11 +187,12 @@ export async function findArtifactByVersion(projectRoot, kind, id, version = 1) 
 export async function recordApproval(projectRoot, artifactRef, options = {}) {
   const exactRef = assertArtifactRef(artifactRef);
   await findArtifact(projectRoot, exactRef);
+  await assertRealDirectory(join(storeRoot(projectRoot), "approvals"));
   if (!['approved', 'rejected'].includes(options.decision)) throw new TypeError("decision must be approved or rejected");
   if (typeof options.actor !== "string" || !options.actor.trim() || options.actor.length > 240) throw new TypeError("actor must contain 1 to 240 characters");
-  const approvalId = assertIdentifier(options.approvalId || `approval.${randomUUID().toLowerCase()}`, "approvalId");
-  const decidedAt = options.decidedAt || new Date().toISOString();
-  const rationale = options.rationale || "No rationale supplied.";
+  const approvalId = assertIdentifier(options.approvalId === undefined ? `approval.${randomUUID().toLowerCase()}` : options.approvalId, "approvalId");
+  const decidedAt = options.decidedAt === undefined ? new Date().toISOString() : options.decidedAt;
+  const rationale = options.rationale === undefined ? "No rationale supplied." : options.rationale;
   if (Number.isNaN(Date.parse(decidedAt))) throw new TypeError("decidedAt must be an ISO date-time");
   if (typeof rationale !== "string" || !rationale.trim() || rationale.length > 2000) throw new TypeError("rationale must contain 1 to 2000 characters");
   const body = {
@@ -226,13 +238,14 @@ export async function claimIdempotency(projectRoot, idempotencyKey, requestArtif
   if (typeof idempotencyKey !== "string" || idempotencyKey.length < 8 || idempotencyKey.length > 240) throw new TypeError("idempotencyKey must contain 8 to 240 characters");
   const requestRef = assertArtifactRef(requestArtifactRef);
   await findArtifact(projectRoot, requestRef);
+  await assertRealDirectory(join(storeRoot(projectRoot), "idempotency"));
   const keyHash = sha256Bytes(Buffer.from(idempotencyKey, "utf8"));
   const claim = {
     kind: "cineweave_idempotency_claim",
     contractVersion: RUNTIME_VERSION,
     keyHash,
     requestArtifactRef: requestRef,
-    claimedAt: options.claimedAt || new Date().toISOString()
+    claimedAt: options.claimedAt === undefined ? new Date().toISOString() : options.claimedAt
   };
   const path = join(storeRoot(projectRoot), "idempotency", `${keyHash.slice(7)}.json`);
   if (!existsSync(path)) {
@@ -317,6 +330,7 @@ export async function verifyProject(projectRoot) {
             errors.push(`Execution output is missing: ${output.storageRef}`);
             continue;
           }
+          await assertRegularFile(outputPath);
           const bytes = await readFile(outputPath);
           if (sha256Bytes(bytes) !== output.contentHash) errors.push(`Execution output hash mismatch: ${output.storageRef}`);
           if (bytes.byteLength !== output.byteLength) errors.push(`Execution output byte length mismatch: ${output.storageRef}`);
@@ -386,6 +400,11 @@ export async function verifyProject(projectRoot) {
     for (const path of referencedBlobs) if (!referenceBlobPaths.includes(path)) errors.push(`ReferenceAsset blob is missing from project storage: ${path}`);
   } catch (error) { errors.push(`Invalid reference blob storage: ${error.message}`); }
   return { valid: errors.length === 0, artifacts: artifactPaths.length, approvals: approvalPaths.length, referenceBlobs: referenceBlobPaths.length, errors };
+}
+
+export async function assertRealDirectory(path) {
+  const info = await lstat(path);
+  if (info.isSymbolicLink() || !info.isDirectory()) throw new Error("Expected a real non-link directory: " + path);
 }
 
 export async function assertRegularFile(path) {

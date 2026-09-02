@@ -4,6 +4,144 @@
   "route": "shot_direction",
   "outcome": "answer",
   "contractKinds": ["cineweave_codex_shot_spec"],
+  "payloads": [
+    {
+      "kind": "cineweave_codex_shot_spec",
+      "payload": {
+        "kind": "cineweave_codex_shot_spec",
+        "contractVersion": "2.2.0",
+        "shotSpecId": "shot.rain-courtyard-recognition-v1",
+        "version": 1,
+        "scriptSceneRef": {
+          "kind": "cineweave_codex_script_scene",
+          "id": "script-scene.rain-courtyard-arrival",
+          "version": 1,
+          "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        },
+        "beatIds": [
+          "beat.arrival"
+        ],
+        "skillReceipt": {
+          "repository": "https://github.com/Wilder1222/cineweave-studio",
+          "ref": "v2.3.1",
+          "commit": "0123456789abcdef0123456789abcdef01234567",
+          "installedBy": "codex-environment",
+          "usedAt": "2026-08-21T03:30:00.000Z"
+        },
+        "purpose": "让观众先察觉她对脚步声的身体反应，再确认来人是她一直回避的故人。",
+        "dramaticBeat": "她试图维持日常动作，但熟悉的脚步迫使她回望。",
+        "audienceAttention": [
+          "握药盒的手指突然收紧",
+          "眼神先移向右后方",
+          "三分之四回望中认出来人",
+          "两人之间未被跨越的门槛"
+        ],
+        "bindings": {
+          "characters": [
+            {
+              "kind": "character_binding",
+              "id": "binding.gu-yin-courtyard-01",
+              "version": 1,
+              "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+            },
+            {
+              "kind": "character_binding",
+              "id": "binding.lu-cheng-courtyard-01",
+              "version": 1,
+              "contentHash": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+            }
+          ],
+          "scene": {
+            "kind": "scene_binding",
+            "id": "binding.scene-rain-courtyard-01",
+            "version": 1,
+            "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          }
+        },
+        "blocking": [
+          {
+            "subjectRef": "binding.gu-yin-courtyard-01",
+            "startZone": "东廊内侧，距门槛半步",
+            "action": "手指先收紧药盒，眼神向右后方移动，头部随后转至三分之四角度，双脚不移动。",
+            "endZone": "保持东廊内侧原位",
+            "eyeline": "先看右后方脚步来源，再与门槛外人物短暂对视",
+            "weightAndContact": "重量约六成在前脚，双脚与湿木地板保持接触，不因回头而后仰。"
+          },
+          {
+            "subjectRef": "binding.lu-cheng-courtyard-01",
+            "startZone": "庭院与东廊之间的门槛外",
+            "action": "停步，不跨过门槛，把旧物保持在腰前。",
+            "endZone": "门槛外原位",
+            "eyeline": "看向她的侧脸而不是药盒",
+            "weightAndContact": "双脚落在湿石地，站姿略显旅途疲惫但稳定。"
+          }
+        ],
+        "camera": {
+          "shotScale": "双人中景，以她为前景主角",
+          "position": "东廊南侧柱后，沿门槛斜向观察庭院",
+          "height": "略低于人物眼平",
+          "angle": "人物起始为近侧后肩，回头后形成三分之四面",
+          "focalLengthMm": 50,
+          "perspectiveIntent": "自然空间距离，让门槛成为真实关系边界而不压缩两人间距",
+          "focusTarget": "她靠近镜头的眼睛；回望完成后允许故人保持可识别的轻度虚化",
+          "depthOfField": "中浅景深，手、眼和门槛关系均可读",
+          "axisSide": "始终位于两人关系轴南侧",
+          "movementIntent": "极慢推进只在她认出来人的瞬间发生，动机是情绪发现"
+        },
+        "composition": {
+          "layout": "东廊柱形成左侧窄框，她位于画面右中部，故人在左后方门槛外。",
+          "foreground": "湿木柱边缘和她握药盒的手",
+          "midground": "她的回望、身体与门槛",
+          "background": "故人与雨后庭院",
+          "negativeSpace": "两人之间保留一段空门槛和湿石地",
+          "visualHierarchy": "手指张力先于眼神，眼神先于故人身份，空门槛最后显出关系距离。"
+        },
+        "performanceTimelineRefs": [
+          {
+            "kind": "cineweave_codex_performance_timeline",
+            "id": "performance.gu-yin-rain-return-v1",
+            "version": 1,
+            "contentHash": "sha256:8888888888888888888888888888888888888888888888888888888888888888"
+          }
+        ],
+        "actionMoment": "她的头部刚完成三分之四回望，药盒已下降但仍握紧，故人停在门槛外。",
+        "endState": "双方已确认彼此身份，但空间距离和沉默仍未被打破。",
+        "continuity": [
+          "她始终在门槛内",
+          "故人不跨门槛",
+          "药盒从胸前降至身体侧边",
+          "关系轴南侧不变",
+          "油灯位于她右后方"
+        ],
+        "promptHandoff": {
+          "primaryTarget": "她认出故人但压住情绪的三分之四回望",
+          "mustPreserve": [
+            "角色与场景精确绑定",
+            "手—眼—故人的注意顺序",
+            "门槛空间距离",
+            "50mm 自然透视",
+            "北向天光主导"
+          ],
+          "mayVary": [
+            "柱边前景裁切宽度",
+            "庭院雨雾密度",
+            "极慢推进的总距离"
+          ],
+          "unresolved": [
+            "最终输出为单帧还是 5.5 秒视频"
+          ]
+        },
+        "validation": {
+          "onePurpose": true,
+          "oneDominantCameraIdea": true,
+          "bindingsExact": true,
+          "axisCoherent": true,
+          "actionPlayable": true,
+          "endStateStable": true
+        }
+      }
+    }
+  ],
   "response": "表演顺序是眼神先向声源移动，半拍后头部转动，肩和胸腔最后只跟随一小段。摄影机移动的动机是陪观众确认她察觉了危险：从稳定中景极慢推近，不抢先揭示来人。焦点先停在她的近眼，转头峰值时短暂迁移到耳后空间，再回到眼睛。收势保持三分之四侧身，呼吸变浅，衣袖和耳坠晚于身体停止。",
   "questions": [],
   "unsupportedClaims": []

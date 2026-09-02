@@ -3,6 +3,10 @@
 import { readFile } from "node:fs/promises";
 import { dirname, resolve, basename } from "node:path";
 import { pathToFileURL } from "node:url";
+import {
+  canonicalize,
+  parseJsonStrict,
+} from "../packages/cineweave-runtime/src/canonical-json.mjs";
 
 function usage() {
   console.error("Usage: node scripts/validate-output.mjs <schema.json> <payload.json>");
@@ -12,8 +16,12 @@ function isObject(value) {
   return value !== null && typeof value === "object" && !Array.isArray(value);
 }
 
+function unicodeLength(value) {
+  return Array.from(value).length;
+}
+
 function deepEqual(a, b) {
-  return JSON.stringify(a) === JSON.stringify(b);
+  return canonicalize(a) === canonicalize(b);
 }
 
 function typeMatches(value, expected) {
@@ -35,7 +43,7 @@ function pointerGet(document, pointer) {
   if (!pointer.startsWith("#/")) throw new Error(`Unsupported JSON pointer: ${pointer}`);
   return pointer.slice(2).split("/").reduce((current, token) => {
     const key = token.replace(/~1/g, "/").replace(/~0/g, "~");
-    if (current === undefined || current === null || !(key in current)) {
+    if (current === undefined || current === null || !Object.hasOwn(Object(current), key)) {
       throw new Error(`Unresolved JSON pointer: ${pointer}`);
     }
     return current[key];
@@ -44,7 +52,7 @@ function pointerGet(document, pointer) {
 
 function formatValid(value, format) {
   if (typeof value !== "string") return true;
-  if (format === "date-time") return !Number.isNaN(Date.parse(value));
+  if (format === "date-time") return /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(?:\.\d+)?(?:Z|[+-]\d{2}:\d{2})$/.test(value) && !Number.isNaN(Date.parse(value));
   if (format === "uri") {
     try {
       const parsed = new URL(value);
@@ -65,7 +73,7 @@ class SchemaLoader {
   async load(path) {
     const absolute = resolve(path);
     if (!this.cache.has(absolute)) {
-      this.cache.set(absolute, JSON.parse(await readFile(absolute, "utf8")));
+      this.cache.set(absolute, parseJsonStrict(await readFile(absolute, "utf8")));
     }
     return this.cache.get(absolute);
   }
@@ -145,8 +153,9 @@ async function validateNode(value, schema, context, path = "$", errors = []) {
   }
 
   if (typeof value === "string") {
-    if (schema.minLength !== undefined && value.length < schema.minLength) errors.push(`${path} must contain at least ${schema.minLength} characters`);
-    if (schema.maxLength !== undefined && value.length > schema.maxLength) errors.push(`${path} must contain at most ${schema.maxLength} characters`);
+    const length = unicodeLength(value);
+    if (schema.minLength !== undefined && length < schema.minLength) errors.push(`${path} must contain at least ${schema.minLength} characters`);
+    if (schema.maxLength !== undefined && length > schema.maxLength) errors.push(`${path} must contain at most ${schema.maxLength} characters`);
     if (schema.pattern !== undefined) {
       let regex;
       try { regex = new RegExp(schema.pattern); } catch { errors.push(`${path}: schema contains invalid pattern ${schema.pattern}`); }
@@ -169,7 +178,7 @@ async function validateNode(value, schema, context, path = "$", errors = []) {
     if (schema.uniqueItems) {
       const seen = new Set();
       value.forEach((item, index) => {
-        const key = JSON.stringify(item);
+        const key = canonicalize(item);
         if (seen.has(key)) errors.push(`${path}[${index}] duplicates an earlier item`);
         seen.add(key);
       });
@@ -179,8 +188,9 @@ async function validateNode(value, schema, context, path = "$", errors = []) {
         await validateNode(value[index], schema.prefixItems[index], context, `${path}[${index}]`, errors);
       }
     }
-    if (schema.items && isObject(schema.items)) {
-      for (let index = 0; index < value.length; index += 1) {
+    if (schema.items !== undefined) {
+      const start = Array.isArray(schema.prefixItems) ? schema.prefixItems.length : 0;
+      for (let index = start; index < value.length; index += 1) {
         await validateNode(value[index], schema.items, context, `${path}[${index}]`, errors);
       }
     }
@@ -204,11 +214,11 @@ async function validateNode(value, schema, context, path = "$", errors = []) {
     if (schema.minProperties !== undefined && keys.length < schema.minProperties) errors.push(`${path} must contain at least ${schema.minProperties} properties`);
     if (schema.maxProperties !== undefined && keys.length > schema.maxProperties) errors.push(`${path} must contain at most ${schema.maxProperties} properties`);
     for (const required of schema.required || []) {
-      if (!(required in value)) errors.push(`${path}.${required} is required`);
+      if (!Object.hasOwn(value, required)) errors.push(`${path}.${required} is required`);
     }
     const properties = schema.properties || {};
     for (const [key, child] of Object.entries(value)) {
-      if (key in properties) {
+      if (Object.hasOwn(properties, key)) {
         await validateNode(child, properties[key], context, `${path}.${key}`, errors);
       } else if (schema.patternProperties) {
         const matches = Object.entries(schema.patternProperties).filter(([pattern]) => new RegExp(pattern).test(key));
@@ -227,8 +237,8 @@ async function validateNode(value, schema, context, path = "$", errors = []) {
     }
     if (schema.dependentRequired) {
       for (const [key, dependencies] of Object.entries(schema.dependentRequired)) {
-        if (key in value) {
-          for (const dependency of dependencies) if (!(dependency in value)) errors.push(`${path}.${dependency} is required when ${key} is present`);
+        if (Object.hasOwn(value, key)) {
+          for (const dependency of dependencies) if (!Object.hasOwn(value, dependency)) errors.push(`${path}.${dependency} is required when ${key} is present`);
         }
       }
     }
@@ -237,14 +247,18 @@ async function validateNode(value, schema, context, path = "$", errors = []) {
   return errors;
 }
 
-export async function validateDocument(schemaPath, payloadPath) {
+export async function validatePayload(schemaPath, payload) {
   const absoluteSchema = resolve(schemaPath);
   const loader = new SchemaLoader(absoluteSchema);
   const document = await loader.load(absoluteSchema);
-  const payload = JSON.parse(await readFile(resolve(payloadPath), "utf8"));
   const errors = [];
   await validateNode(payload, document, { loader, document, schemaPath: absoluteSchema }, "$", errors);
   return { valid: errors.length === 0, errors, schema: document.$id || absoluteSchema, payload };
+}
+
+export async function validateDocument(schemaPath, payloadPath) {
+  const payload = parseJsonStrict(await readFile(resolve(payloadPath), "utf8"));
+  return validatePayload(schemaPath, payload);
 }
 
 async function main() {

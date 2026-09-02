@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0.0",
+  "caseId": "case.atlas.editorial-original",
+  "category": "editorial",
+  "title": "Form and field editorial grid",
+  "summary": "An original geometric editorial fixture combining a safe area, three-column grid and fictional garment silhouette without a real model, publication mark or imported typeface.",
+  "status": "worked_fixture",
+  "routing": {
+    "indexPath": "../index.json",
+    "categoryPath": "../categories/editorial.md",
+    "triggers": ["editorial", "fashion spread", "编辑大片", "时尚版式"],
+    "excludedCategories": ["portrait", "product", "food", "architecture", "diagrams", "exact-text"]
+  },
+  "prompt": {
+    "contentHash": "sha256:e3fd78652da269ec0970eeaebb191818ada4b63dc851d271c3b2894ce1975291",
+    "record": {
+      "kind": "cineweave_codex_prompt_record",
+      "contractVersion": "2.0.0",
+      "promptId": "atlas-editorial-original",
+      "title": "Form and field editorial grid prompt",
+      "version": 1,
+      "status": "active",
+      "domain": "editorial",
+      "generationMode": "generate",
+      "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-studio.git", "ref": "working-tree-v2.5.x", "commit": "6dd43cb645122f57b5c545803b374d831da454d9", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00.000Z" },
+      "purpose": "Provide a bounded editorial worked example with observable safe area, grid, headline and fictional garment silhouette.",
+      "sourceText": "A fictional editorial spread using a three-column grid, one abstract garment silhouette and original copy.",
+      "tags": ["atlas", "editorial", "original", "deterministic"],
+      "prompt": {
+        "language": "en",
+        "positive": "One fictional garment silhouette placed on a visible three-column editorial grid, generous safe area, original headline FORM & FIELD, restrained rose and charcoal palette, graphic page-number accent.",
+        "negative": "No real model, no magazine logo, no trademark, no watermark, no imported typeface or image reference.",
+        "blocks": {
+          "subject": ["one fictional abstract garment silhouette"],
+          "composition": ["visible safe area and three-column editorial grid", "headline at upper left and page number at lower right"],
+          "style": ["restrained original fashion-editorial geometry"],
+          "technical": ["system-font text with declared literal copy"],
+          "constraints": ["original vector primitives only", "no publication identity"]
+        }
+      },
+      "variables": [],
+      "references": [],
+      "variants": [{ "variantId": "atlas-editorial-original-baseline", "label": "Baseline grid", "change": "No variation; retain the checked fixture grid and copy.", "positive": "Retain the safe area, three-column grid, silhouette and original headline.", "status": "selected" }],
+      "evaluation": {
+        "criteria": [{ "criterion": "grid-hierarchy", "check": "Headline, silhouette and page number occupy distinct grid roles.", "status": "pass", "evidence": "The deterministic SVG exposes safe-area, editorial-grid and garment-silhouette elements." }],
+        "knownRisks": ["A geometric fixture does not establish publication-ready typography or model styling."],
+        "nextExperiment": "Human review may compare headline scale without changing copy, grid or silhouette."
+      },
+      "provenance": { "source": "codex_authored", "createdAt": "2026-09-02T00:00:00.000Z", "updatedAt": "2026-09-02T00:00:00.000Z", "changeLog": ["v1: create an original deterministic editorial prompt fixture."] },
+      "validation": { "onePrimaryTarget": true, "providerNeutral": true, "variablesBound": true, "referencesScoped": true, "observationReady": true }
+    }
+  },
+  "adapterContext": { "adapterId": "adapter.atlas-svg.local", "adapterVersion": "1.0.0", "implementationPath": "skills/cineweave-prompt/scripts/generate-original-case-atlas.mjs", "implementationContentHash": "sha256:581fbf2a9209b062abc2c1a9dcc4c6aa1bd1aa572c9ee7e24cd242055b2b358a", "executionMode": "fixture", "runtime": "node>=22", "networkAccess": false, "externalEffects": false, "providerNeutral": true, "costAmount": 0, "currency": "USD" },
+  "visualSpec": {
+    "width": 1200,
+    "height": 900,
+    "seed": "atlas-editorial-v1",
+    "palette": ["#F4F0EA", "#D7A6A1", "#B5485B", "#79706B", "#261F25"],
+    "exactText": ["FORM & FIELD", "An original editorial grid"],
+    "elements": ["safe-area", "editorial-grid", "garment-silhouette"],
+    "composition": "A visible safe area and three-column grid organize one fictional garment silhouette, original headline, subtitle and page-number accent."
+  },
+  "candidate": { "path": "../../assets/original-case-atlas/editorial-original.svg", "mimeType": "image/svg+xml", "byteLength": 1295, "contentHash": "sha256:d8bccd8ef04b7c070f675e7186f87119d45e38b8f5135205d079178fc0d0d6f7", "width": 1200, "height": 900 },
+  "rights": { "profilePath": "../rights/license-profile.json", "profileContentHash": "sha256:1b01597f19ed1dad561fb3fae0907b6003869faf5e63e347a240c0c59a11eae8", "creatorOwned": true, "redistribution": "allowed", "publication": "allowed", "thirdPartyAssets": false, "identityRights": "not_applicable", "fontPolicy": "system-font-codepoints-not-pixel-pinned" },
+  "reviewEvidence": {
+    "status": "deterministic_checks_complete", "candidateContentHash": "sha256:d8bccd8ef04b7c070f675e7186f87119d45e38b8f5135205d079178fc0d0d6f7", "reviewType": "machine", "checkedAt": "2026-09-02T00:00:00.000Z",
+    "criteria": [
+      { "criterionId": "rebuild.byte-identical", "status": "pass", "evidence": "The local generator must reproduce the committed candidate byte for byte." },
+      { "criterionId": "svg.active-content-absent", "status": "pass", "evidence": "The candidate uses static SVG primitives and system-font text only." },
+      { "criterionId": "rights.profile-verified", "status": "pass", "evidence": "The shared creator-owned rights profile is verified and hash-bound." }
+    ],
+    "humanReview": { "status": "not_performed", "reviewerCount": 0 }, "decision": "mechanical_fixture_pass",
+    "notAssessed": ["human aesthetic quality", "provider generation quality", "cross-platform font pixel equivalence"]
+  },
+  "reproduction": { "generatorPath": "skills/cineweave-prompt/scripts/generate-original-case-atlas.mjs", "generatorVersion": "1.0.0", "caseSelector": "editorial", "expectedContentHash": "sha256:d8bccd8ef04b7c070f675e7186f87119d45e38b8f5135205d079178fc0d0d6f7", "deterministic": true, "networkRequired": false, "externalInputs": [] },
+  "claimsBoundary": { "scope": "mechanical_fixture_only", "humanReview": "not_performed", "providerOutput": "not_generated", "providerQuality": "not_assessed", "photorealism": "not_assessed", "domainFitness": "not_assessed", "crossPlatformFontPixels": "not_guaranteed" }
+}

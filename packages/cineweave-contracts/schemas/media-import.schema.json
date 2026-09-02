@@ -4,13 +4,22 @@
   "title": "CineWeave Codex Verified Draft Media Import",
   "type": "object",
   "additionalProperties": false,
-  "required": ["kind", "contractVersion", "worldId", "renderPlanRef", "skillReceipt", "status", "media", "verification", "importContract"],
+  "required": ["kind", "worldId", "renderPlanRef", "skillReceipt", "status", "media", "verification", "importContract"],
   "properties": {
     "kind": { "const": "cineweave_codex_media_import" },
-    "contractVersion": { "const": "2.0.0" },
+    "contractVersion": { "enum": ["2.0.0", "2.5.0"] },
+    "mediaImportId": { "$ref": "common.schema.json#/$defs/identifier" },
+    "version": { "type": "integer", "minimum": 1 },
     "worldId": { "type": "string", "minLength": 1, "maxLength": 160 },
     "shotId": { "type": "string", "minLength": 1, "maxLength": 160 },
-    "renderPlanRef": { "type": "string", "minLength": 1, "maxLength": 240 },
+    "renderPlanRef": {
+      "anyOf": [
+        { "type": "string", "minLength": 1, "maxLength": 240, "deprecated": true },
+        { "$ref": "#/$defs/exactRenderPlanRef" }
+      ]
+    },
+    "executionRequestRef": { "$ref": "#/$defs/exactExecutionRequestRef" },
+    "executionReceiptRef": { "$ref": "#/$defs/exactExecutionReceiptRef" },
     "skillReceipt": { "$ref": "#/$defs/skillReceipt" },
     "status": { "const": "draft" },
     "media": {
@@ -40,9 +49,64 @@
         "statusOnCreation": { "const": "draft" },
         "nextAction": { "type": "string", "minLength": 1, "maxLength": 1200 }
       }
-    }
+    },
+    "provenance": { "$ref": "common.schema.json#/$defs/provenance" }
   },
+  "dependentRequired": {
+    "executionRequestRef": ["executionReceiptRef"],
+    "executionReceiptRef": ["executionRequestRef"]
+  },
+  "allOf": [
+    {
+      "if": {
+        "anyOf": [
+          { "not": { "required": ["contractVersion"] } },
+          {
+            "required": ["contractVersion"],
+            "properties": { "contractVersion": { "const": "2.0.0" } }
+          }
+        ]
+      },
+      "then": {
+        "properties": {
+          "renderPlanRef": { "type": "string", "minLength": 1, "maxLength": 240 }
+        }
+      }
+    },
+    {
+      "if": {
+        "required": ["contractVersion"],
+        "properties": { "contractVersion": { "const": "2.5.0" } }
+      },
+      "then": {
+        "required": ["mediaImportId", "version", "provenance"],
+        "properties": {
+          "renderPlanRef": { "$ref": "#/$defs/exactRenderPlanRef" },
+          "executionRequestRef": { "$ref": "#/$defs/exactExecutionRequestRef" },
+          "executionReceiptRef": { "$ref": "#/$defs/exactExecutionReceiptRef" }
+        }
+      }
+    }
+  ],
   "$defs": {
+    "exactRenderPlanRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        { "properties": { "kind": { "const": "cineweave_codex_render_plan" } } }
+      ]
+    },
+    "exactExecutionRequestRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        { "properties": { "kind": { "const": "cineweave_execution_request" } } }
+      ]
+    },
+    "exactExecutionReceiptRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        { "properties": { "kind": { "const": "cineweave_execution_receipt" } } }
+      ]
+    },
     "skillReceipt": {
       "type": "object",
       "additionalProperties": false,

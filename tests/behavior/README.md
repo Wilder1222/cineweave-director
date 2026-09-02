@@ -38,7 +38,11 @@ The grader checks declared activation, route, output ownership, forbidden output
 plus a should-not-activate case. Unlike `cases.json`, the live harness captures
 the model's complete schema-constrained final response, hashes it and evaluates
 activation, route, contract choice, observable output requirements and safety
-rules with deterministic checks.
+rules with deterministic checks. Every declared contract also needs an inline
+payload: the runner derives unique evidence kinds from `payloads`, requires
+them to match `contractKinds` in first-seen order, then validates manifest ownership, JSON
+Schema and the available contract semantics. Prose alone never proves that a
+contract was emitted.
 
 Validate definitions and committed replay fixtures without a model call:
 

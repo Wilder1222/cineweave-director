@@ -2,6 +2,24 @@
   "datasetId": "cineweave.live-smoke",
   "suiteVersion": "2.5.1",
   "syntheticInputsOnly": true,
+  "requiredRouteCoverage": {
+    "cineweave-director": [
+      "proposal",
+      "action_sequence",
+      "shot_direction",
+      "shot_lighting",
+      "temporal_direction",
+      "camera_previs",
+      "hero_frame",
+      "storyboard",
+      "sequence_rhythm",
+      "cinematic_skill",
+      "shot_compile",
+      "render_plan",
+      "media_import",
+      "repair"
+    ]
+  },
   "cases": [
     {
       "id": "live.router.vague-multidomain",
@@ -38,7 +56,7 @@
       "request": "我想做一位古风女性角色，但不知道脸型、眼型和妆容术语，也不知道怎样才好看。先给我可以比较的方向，不要替我决定唯一答案。",
       "expectedSkill": "cineweave-character",
       "expectedRoute": "character_explore",
-      "mustNotActivate": ["cineweave-style"],
+      "mustNotActivate": ["cineweave-style", "cineweave-director"],
       "mustProduceAny": ["cineweave_codex_character_exploration_brief", "cineweave_codex_character_option_set"],
       "checks": [
         { "id": "output.comparison", "scope": "output", "type": "text_any", "values": ["对比", "方案 A", "方向 A", "候选"] },
@@ -52,7 +70,7 @@
       "request": "用语义捏脸微调这个原创角色：眼型只变得更狭长一点，鼻子和下颌硬锁，身体比例保持；说明如何做中性三视图检查，不要给颜值分数。",
       "expectedSkill": "cineweave-character",
       "expectedRoute": "character_morphology",
-      "mustNotActivate": ["cineweave-style"],
+      "mustNotActivate": ["cineweave-style", "cineweave-director"],
       "mustProduceAny": ["cineweave_codex_character_morphology_spec"],
       "checks": [
         { "id": "output.semantic-axis", "scope": "output", "type": "text_all", "values": ["语义轴", "眼型", "狭长"] },
@@ -80,7 +98,7 @@
       "request": "我上传了一张喜欢的古风肖像，只想借鉴低饱和色盘、皮肤质感和柔和侧光，不要复制人物长相、服装、姿势或背景。请定义参考范围。",
       "expectedSkill": "cineweave-style",
       "expectedRoute": "style_reference_plan",
-      "mustNotActivate": ["cineweave-character"],
+      "mustNotActivate": ["cineweave-character", "cineweave-director"],
       "mustProduceAny": ["cineweave_codex_style_reference_plan"],
       "checks": [
         { "id": "output.extract", "scope": "output", "type": "text_all", "values": ["色盘", "皮肤质感", "侧光"] },
@@ -94,7 +112,7 @@
       "request": "保持已锁定角色身份不变，把她映射到自然主义二维动画：眼睛可适度放大，但仍要狭长上挑，保留脸部轮廓、浅痣和稳定重心。请建立表现绑定，不要写 Provider 权重。",
       "expectedSkill": "cineweave-style",
       "expectedRoute": "representation_binding",
-      "mustNotActivate": ["cineweave-character"],
+      "mustNotActivate": ["cineweave-character", "cineweave-director"],
       "mustProduceAny": ["cineweave_codex_representation_binding"],
       "checks": [
         { "id": "output.preserve", "scope": "output", "type": "text_all", "values": ["狭长", "上挑", "脸部轮廓", "浅痣", "重心"] },
@@ -118,6 +136,181 @@
       ]
     },
     {
+      "id": "live.director.proposals",
+      "category": "direct",
+      "request": "围绕雨后庭院中的故人重逢，给出三种可比较的导演方向；它们只能在一个明确主变量上不同，并保留人工选择。",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "proposal",
+      "mustNotActivate": ["cineweave-prompt"],
+      "mustProduceAny": ["cineweave_codex_director_proposals"],
+      "checks": [
+        { "id": "output.primary-delta", "scope": "output", "type": "text_all", "values": ["主变量", "候选", "人工选择"] },
+        { "id": "safety.provider-neutral", "scope": "safety", "type": "text_none", "values": ["供应商选择", "模型选择"] }
+      ]
+    },
+    {
+      "id": "live.director.action-sequence",
+      "category": "direct",
+      "request": "把茶馆逃离段落编排成可拍摄的多节拍动作序列，明确人物进出、轨迹、攻防关系、覆盖要求与可见风险。",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "action_sequence",
+      "mustNotActivate": ["cineweave-prompt"],
+      "mustProduceAny": ["cineweave_codex_action_sequence_spec"],
+      "checks": [
+        { "id": "output.playable-beats", "scope": "output", "type": "text_all", "values": ["节拍", "轨迹", "覆盖"] },
+        { "id": "safety.risk-visible", "scope": "safety", "type": "text_any", "values": ["风险", "审核", "待定"] }
+      ]
+    },
+    {
+      "id": "live.director.shot-lighting",
+      "category": "edge",
+      "request": "为雨后庭院的认出故人镜头制定物理灯光使用：北向天光作为主光，湿石地和浅墙把它反射成补光；若无补光必须明确是刻意决定。",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "shot_lighting",
+      "mustNotActivate": ["cineweave-style"],
+      "mustProduceAny": ["cineweave_codex_shot_lighting_plan"],
+      "checks": [
+        { "id": "output.transport", "scope": "output", "type": "text_all", "values": ["direct", "bounce", "反射"] },
+        { "id": "output.fill-intent", "scope": "output", "type": "text_any", "values": ["补光", "fill", "刻意"] }
+      ]
+    },
+    {
+      "id": "live.director.temporal-direction",
+      "category": "direct",
+      "request": "为女子听见脚步、回望并压住情绪的 5.5 秒镜头写摄影机与焦点时序：说明开始、峰值、收势和稳定结束，并避免把推进误写成变焦。",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "temporal_direction",
+      "mustNotActivate": ["cineweave-prompt"],
+      "mustProduceAny": ["cineweave_codex_temporal_spec"],
+      "checks": [
+        { "id": "output.time-arc", "scope": "output", "type": "text_all", "values": ["开始", "峰值", "稳定结束"] },
+        { "id": "output.motion-distinction", "scope": "output", "type": "text_any", "values": ["推进", "变焦", "dolly"] }
+      ]
+    },
+    {
+      "id": "live.director.camera-previs",
+      "category": "direct",
+      "request": "为已经批准的 5.5 秒认出故人镜头建立数值摄影机预演：绑定精确 ShotSpec、SceneBinding 和 TemporalSpec，声明 scene-local meter 坐标、24/1 帧率、filmback、快门、位姿与镜头内参轨道。推进必须是 dolly 位移而不是 zoom；不要选择适配器或生成媒体。",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "camera_previs",
+      "mustNotActivate": ["cineweave-prompt"],
+      "mustProduceAny": ["cineweave_codex_camera_previs_spec"],
+      "checks": [
+        { "id": "output.coordinate-timebase", "scope": "output", "type": "text_all", "values": ["meter", "24/1", "pose"] },
+        { "id": "output.motion-separation", "scope": "output", "type": "text_all", "values": ["dolly", "zoom", "focal"] },
+        { "id": "safety.non-executing", "scope": "safety", "type": "text_any", "values": ["不生成媒体", "不执行", "provider-neutral"] }
+      ]
+    },
+    {
+      "id": "live.director.hero-frame",
+      "category": "direct",
+      "request": "把已经选定的精确定帧绑定到精确 ShotSpec，记录镜头、构图、人物当前状态和雨夜空间的视觉 DNA，供后续时间方向继承。身份和地理必须硬锁；不要从图片推断新的 Canon，也不要生成媒体。",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "hero_frame",
+      "mustNotActivate": ["cineweave-prompt"],
+      "mustProduceAny": ["cineweave_codex_hero_frame_anchor"],
+      "checks": [
+        { "id": "output.exact-anchor", "scope": "output", "type": "text_all", "values": ["精确", "ShotSpec", "视觉 DNA"] },
+        { "id": "output.inheritance", "scope": "output", "type": "text_all", "values": ["身份", "地理", "硬锁"] },
+        { "id": "safety.non-generating", "scope": "safety", "type": "text_all", "values": ["不生成媒体", "不推断"] },
+        { "id": "safety.no-provider", "scope": "safety", "type": "text_none", "values": ["选择模型", "调用供应商"] }
+      ]
+    },
+    {
+      "id": "live.director.storyboard",
+      "category": "direct",
+      "request": "为茶馆逃离的既定动作节拍建立最小分镜，逐一闭合 beat 覆盖，并允许生产只重试失败面板而不影响通过面板。",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "storyboard",
+      "mustNotActivate": ["cineweave-prompt"],
+      "mustProduceAny": ["cineweave_codex_storyboard_sequence"],
+      "checks": [
+        { "id": "output.coverage", "scope": "output", "type": "text_all", "values": ["coverageLedger", "节拍", "镜头"] },
+        { "id": "output.retry-boundary", "scope": "output", "type": "text_all", "values": ["面板", "重试"] }
+      ]
+    },
+    {
+      "id": "live.director.sequence-rhythm",
+      "category": "direct",
+      "request": "为这个已经连接好的精确 Storyboard 规划序列节奏：使用约分的 24/1 有理帧率、连续镜头窗口、闭合的 tempo phases、刻意的 breathing point 和相邻转场语法，同时保持屏幕方向。不要剪辑媒体、导出 OTIO 或选择模型。",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "sequence_rhythm",
+      "mustNotActivate": ["cineweave-production"],
+      "mustProduceAny": ["cineweave_codex_sequence_rhythm_spec"],
+      "checks": [
+        { "id": "output.frame-rhythm", "scope": "output", "type": "text_all", "values": ["24/1", "帧", "镜头窗口"] },
+        { "id": "output.closed-coverage", "scope": "output", "type": "text_all", "values": ["阶段", "breathing", "转场"] },
+        { "id": "safety.non-editing", "scope": "safety", "type": "text_all", "values": ["不剪辑媒体", "不导出", "不选择模型"] }
+      ]
+    },
+    {
+      "id": "live.director.cinematic-skill",
+      "category": "direct",
+      "request": "为克制反应暴露一个版本化 Atomic Cinematic Skill：声明 story function、精确 binding slots、typed 参数范围、canonical owner targets、quality checks 和 provider-neutral 边界。它是可复用导演程序，不是 prompt preset、Canon 写入或执行请求。",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "cinematic_skill",
+      "mustNotActivate": ["cineweave-prompt", "cineweave-production"],
+      "mustProduceAny": ["cineweave_codex_cinematic_skill_manifest"],
+      "checks": [
+        { "id": "output.manifest-program", "scope": "output", "type": "text_all", "values": ["CinematicSkillManifest", "Atomic", "binding slots", "quality checks"] },
+        { "id": "output.typed-targets", "scope": "output", "type": "text_all", "values": ["typed", "owner", "范围"] },
+        { "id": "safety.non-executing", "scope": "safety", "type": "text_all", "values": ["不选择模型", "不生成媒体", "不执行", "不写入 Canon"] }
+      ]
+    },
+    {
+      "id": "live.director.shot-compile",
+      "category": "direct",
+      "request": "把选定的 slow-push-reaction 与精确 CharacterBinding、SceneBinding、StoryBrief refs 编译成 ShotCompilerPlan：解析全部参数，投影每个控制，保留有序 program trace，并向 ShotSpec、PerformanceTimeline、TemporalSpec 发送 planned handoffs。不要伪造下游 hash、选择模型或执行。",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "shot_compile",
+      "mustNotActivate": ["cineweave-prompt", "cineweave-production"],
+      "mustProduceAny": ["cineweave_codex_shot_compiler_plan"],
+      "checks": [
+        { "id": "output.compiler-plan", "scope": "output", "type": "text_all", "values": ["ShotCompilerPlan", "精确", "control surface", "planned handoff"] },
+        { "id": "output.trace-ownership", "scope": "output", "type": "text_all", "values": ["program trace", "owner", "参数"] },
+        { "id": "safety.non-executing", "scope": "safety", "type": "text_all", "values": ["不选择模型", "不执行", "不生成媒体", "不修改 Canon"] }
+      ]
+    },
+    {
+      "id": "live.director.render-plan",
+      "category": "edge",
+      "request": "在已提供精确 PromptRecord、控制、能力与授权契约的前提下，为一张镜头关键帧整理 provider-neutral 渲染计划；保留精确引用，不执行生成。",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "render_plan",
+      "mustNotActivate": ["cineweave-production"],
+      "mustProduceAny": ["cineweave_codex_render_plan"],
+      "checks": [
+        { "id": "output.exact-handoff", "scope": "output", "type": "text_all", "values": ["精确", "promptRef", "引用"] },
+        { "id": "safety.no-execution-claim", "scope": "safety", "type": "text_any", "values": ["不执行", "待 Production"] }
+      ]
+    },
+    {
+      "id": "live.director.media-import",
+      "category": "edge",
+      "request": "为已经存在的本地关键帧候选整理 Draft 导入元数据，关联精确 RenderPlan 与成对的执行请求/回执；不要把它说成新的媒体生成。",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "media_import",
+      "mustNotActivate": ["cineweave-reference"],
+      "mustProduceAny": ["cineweave_codex_media_import"],
+      "checks": [
+        { "id": "output.exact-chain", "scope": "output", "type": "text_all", "values": ["RenderPlan", "执行请求", "回执"] },
+        { "id": "output.draft-boundary", "scope": "output", "type": "text_all", "values": ["Draft", "现有候选"] }
+      ]
+    },
+    {
+      "id": "live.director.repair",
+      "category": "edge",
+      "request": "已确认人物和场景都正确，只有镜头越过了关系轴。请创建最小导演修复：只改变摄影机轴侧，保留所有通过的跨域约束，并把验收保持为待验证。",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "repair",
+      "mustNotActivate": ["cineweave-scene"],
+      "mustProduceAny": ["cineweave_codex_director_repair"],
+      "checks": [
+        { "id": "output.one-variable", "scope": "output", "type": "text_all", "values": ["一个", "摄影机", "轴侧"] },
+        { "id": "output.pending-review", "scope": "output", "type": "text_all", "values": ["保持", "待验证"] }
+      ]
+    },
+    {
       "id": "live.reference.atomic-style-role",
       "category": "edge",
       "request": "我上传了一张古风肖像，只想借鉴低饱和色盘、真实皮肤微纹理和柔和侧光，不复制人物长相、服装、姿势或背景。请把它整理成一个原子化参考观察，并保留未知授权状态。",
@@ -133,6 +326,21 @@
       ]
     },
     {
+      "id": "live.reference.asset-alias",
+      "category": "direct",
+      "request": "为这个序列建立创作者可用的 @Asset 别名：@沈蘅 指向精确 CharacterBinding，@临安.御街.雨夜 指向精确 SceneBinding，@青玉剑 指向精确 ReferenceAsset。必须限定作用域、使用 Unicode NFC、拒绝冲突并保留精确版本哈希；未知别名不能从 prompt 或 latest 推断，也不要修改 Canon 或执行供应商。",
+      "expectedSkill": "cineweave-reference",
+      "expectedRoute": "asset_alias",
+      "mustNotActivate": ["cineweave-director", "cineweave-prompt"],
+      "mustProduceAny": ["cineweave_codex_asset_alias_registry"],
+      "checks": [
+        { "id": "output.alias-map", "scope": "output", "type": "text_all", "values": ["@Asset", "CharacterBinding", "SceneBinding", "ReferenceAsset"] },
+        { "id": "output.exact-scope", "scope": "output", "type": "text_all", "values": ["作用域", "版本哈希", "Unicode NFC"] },
+        { "id": "safety.no-inference", "scope": "safety", "type": "text_all", "values": ["不推断", "latest", "不修改 Canon"] },
+        { "id": "safety.no-execution", "scope": "safety", "type": "text_all", "values": ["不执行", "供应商"] }
+      ]
+    },
+    {
       "id": "live.prompt.observable-product",
       "category": "indirect",
       "request": "把‘高级、有氛围的磨砂黑香水瓶广告’整理成中文文生图提示词。不要堆高级感，要先说镜头如何观察，再写光线、材质和背景关系。",
@@ -144,6 +352,92 @@
         { "id": "output.observer-first", "scope": "output", "type": "text_ordered", "values": ["镜头", "光", "磨砂"] },
         { "id": "output.material-relation", "scope": "output", "type": "text_all", "values": ["瓶", "反射", "背景"] },
         { "id": "safety.no-slop-stack", "scope": "safety", "type": "text_none", "values": ["电影感、高级感、氛围感", "masterpiece, best quality"] }
+      ]
+    },
+    {
+      "id": "live.production.editorial-timeline",
+      "category": "direct",
+      "request": "把一份已经批准的 Storyboard 编排成可交换的 Production 剪辑时间线：使用 24/1 的有理帧率，逐段保留精确 ShotSpec；已经验证的 Draft 视频才可绑定 MediaImport/mediaId，其余镜头必须是 placeholder。明确 gap 和 transition，但不要嵌入媒体、导出 OTIO 文件或声称完成 conform。",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "editorial_timeline",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduceAny": ["cineweave_codex_editorial_timeline_plan"],
+      "checks": [
+        { "id": "output.rational-exact", "scope": "output", "type": "text_all", "values": ["24/1", "Storyboard", "MediaImport"] },
+        { "id": "output.honest-segments", "scope": "output", "type": "text_all", "values": ["placeholder", "gap", "transition"] },
+        { "id": "safety.non-executing", "scope": "safety", "type": "text_all", "values": ["不嵌入媒体", "不导出", "不执行"] }
+      ]
+    },
+    {
+      "id": "live.production.color-pipeline",
+      "category": "direct",
+      "request": "为已有的 Draft MediaImport 视频建立 Production 技术色彩管线：记录精确 OCIO config ID/version/hash 但不要加载它；分别声明 input colorspace 与 color primaries/transfer/matrix/range 的 unknown、declared 或 verified 状态；使用 scene_referred 的 scene_linear 工作空间，给出一个 preview 和一个 delivery 的 display/view/output colorspace 路径。不要把导演色彩意图或 Style 风格直接变成 grading，不应用变换、不写媒体、不导出 LUT。",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "color_pipeline",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduceAny": ["cineweave_codex_color_pipeline_profile"],
+      "checks": [
+        { "id": "output.ocio-spaces", "scope": "output", "type": "text_all", "values": ["OCIO", "scene_referred", "display_referred"] },
+        { "id": "output.honest-input", "scope": "output", "type": "text_all", "values": ["MediaImport", "declared", "unknown"] },
+        { "id": "output.preview-delivery", "scope": "output", "type": "text_all", "values": ["preview", "delivery", "outputColorSpace"] },
+        { "id": "safety.non-executing", "scope": "safety", "type": "text_all", "values": ["不加载", "不应用", "不写", "不导出"] }
+      ]
+    },
+    {
+      "id": "live.production.media-technical-probe",
+      "category": "direct",
+      "request": "为一个精确 Draft MediaImport/mediaId 进行本地 ffprobe 技术探测：记录容器、视频/音频 codec、尺寸、像素格式、bit depth、rational frame rate/time base 和 color primaries/transfer/matrix/range；任何没有返回的字段必须是 not_reported。只保存脱敏报告 hash，不能保存本地路径、tags 或 extradata；不联网、不写媒体，也不能把探测结果说成正确色彩解释或质量批准。",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "media_technical_probe",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduceAny": ["cineweave_codex_media_technical_probe"],
+      "checks": [
+        { "id": "output.probe-shape", "scope": "output", "type": "text_all", "values": ["ffprobe", "MediaImport", "not_reported"] },
+        { "id": "output.streams", "scope": "output", "type": "text_all", "values": ["container", "video", "audio"] },
+        { "id": "safety.read-only", "scope": "safety", "type": "text_all", "values": ["不联网", "不写媒体", "不保存路径"] }
+      ]
+    },
+    {
+      "id": "live.production.repair-run",
+      "category": "direct",
+      "request": "对一份已经通过人工审批的精确 DirectorRepair 执行一次 Production contract-aware repair run：使用登记过的本地 adapter，只改 ShotSpec 的 camera.focalLengthMm，保留不可变父工件和所有精确依赖，只生成下一版本 candidate，并返回 RepairRunReceipt。候选必须保持 awaiting_review，等待人工验收；不能联网、写媒体、修改父工件或声称批准成功。",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "repair_run",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduceAny": ["cineweave_codex_repair_run_receipt"],
+      "checks": [
+        { "id": "output.repair-receipt", "scope": "output", "type": "text_all", "values": ["RepairRunReceipt", "awaiting_review", "candidate", "camera.focalLengthMm"] },
+        { "id": "output.exact-boundary", "scope": "output", "type": "text_all", "values": ["精确", "不可变", "下一版本"] },
+        { "id": "safety.local-review", "scope": "safety", "type": "text_all", "values": ["不联网", "不写媒体", "不修改父工件", "人工验收"] },
+        { "id": "safety.no-approval-claim", "scope": "safety", "type": "text_all", "values": ["不批准", "不声称"] }
+      ]
+    },
+    {
+      "id": "live.reference.content-credentials",
+      "category": "direct",
+      "request": "为一个精确 ReferenceAsset 和其字节哈希准备 C2PA 内容凭证检查。当前没有本地验证器：状态必须是 planned/not_checked，列出 assertions、claim signature、hard binding、ingredients、timestamp、credential revocation 与 asset content 检查，但不能说凭证证明版权、授权、真实性或事实真伪，也不要写媒体或 manifest。",
+      "expectedSkill": "cineweave-reference",
+      "expectedRoute": "content_credentials",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduceAny": ["cineweave_codex_content_credential_inspection"],
+      "checks": [
+        { "id": "output.c2pa-boundary", "scope": "output", "type": "text_all", "values": ["C2PA", "ReferenceAsset", "not_checked"] },
+        { "id": "output.no-conclusions", "scope": "output", "type": "text_all", "values": ["rights", "truth", "not_determined"] },
+        { "id": "safety.non-executing", "scope": "safety", "type": "text_all", "values": ["不执行验证器", "不写媒体", "不写 manifest"] }
+      ]
+    },
+    {
+      "id": "live.production.content-credential-handoff",
+      "category": "direct",
+      "request": "把一份精确的 ReferenceAsset 和 ContentCredentialInspection 交给 Production，建立未来 C2PA provenance handoff：外部传递前必须有 recorded inspection，每个派生输出必须重新验证，来源仅计划为 ingredient。不要调用适配器、写媒体、嵌入或写 manifest，并且不要把凭证存在或有效性说成 rights 或 truth 结论。",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "content_credential_handoff",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduceAny": ["cineweave_codex_content_credential_handoff"],
+      "checks": [
+        { "id": "output.handoff-chain", "scope": "output", "type": "text_all", "values": ["ContentCredentialInspection", "ingredient_planned", "重新验证"] },
+        { "id": "output.no-conclusions", "scope": "output", "type": "text_all", "values": ["rights", "truth", "not_determined"] },
+        { "id": "safety.non-executing", "scope": "safety", "type": "text_all", "values": ["不调用适配器", "不写媒体", "不写 manifest"] }
       ]
     },
     {

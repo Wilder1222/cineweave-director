@@ -4,6 +4,364 @@
   "route": "scene_design",
   "outcome": "answer",
   "contractKinds": ["cineweave_codex_scene_spec"],
+  "payloads": [
+    {
+      "kind": "cineweave_codex_scene_spec",
+      "payload": {
+        "kind": "cineweave_codex_scene_spec",
+        "contractVersion": "2.0.0",
+        "worldId": "world-cloud-dynasty",
+        "sceneId": "scene.jade-corridor",
+        "name": "云宫东侧玉廊",
+        "version": 1,
+        "status": "draft",
+        "collection": "cloud-palace-core-locations",
+        "tags": [
+          "scene",
+          "chinese-fantasy",
+          "corridor",
+          "continuity"
+        ],
+        "skillReceipt": {
+          "repository": "https://github.com/owner/repository",
+          "ref": "v2.0.0",
+          "commit": "0123456789abcdef0123456789abcdef01234567",
+          "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "installedBy": "codex-environment",
+          "usedAt": "2026-08-20T12:00:00.000Z"
+        },
+        "narrativeFunction": {
+          "role": "追逐与保护场面的狭长压力空间",
+          "oneLineConcept": "一条悬于云海之上的白玉长廊，视野开阔却没有真正退路。",
+          "dramaticPressure": "狭长轴线迫使角色面对来敌，侧面云海形成坠落风险。",
+          "audienceExperience": "秩序 → 压迫 → 暴露 → 决断"
+        },
+        "geography": {
+          "orientation": "主廊沿西南至东北方向延伸，宫殿在西南，断桥与云海在东北。",
+          "immutableAnchors": [
+            {
+              "anchorId": "geo.main-axis",
+              "type": "geography",
+              "description": "从西南宫门通向东北断桥的单一主轴",
+              "priority": "critical",
+              "zoneId": "zone.main-corridor"
+            },
+            {
+              "anchorId": "arch.jade-rail",
+              "type": "architecture",
+              "description": "长廊两侧连续白玉栏杆，东南侧局部断裂",
+              "priority": "critical",
+              "zoneId": "zone.main-corridor"
+            },
+            {
+              "anchorId": "scale.column-bays",
+              "type": "scale",
+              "description": "每两个朱红立柱形成一个等距开间",
+              "priority": "critical",
+              "zoneId": "zone.main-corridor"
+            },
+            {
+              "anchorId": "occlusion.screen",
+              "type": "occlusion",
+              "description": "第三开间的木质屏风可短暂遮挡追兵",
+              "priority": "high",
+              "zoneId": "zone.screen-bay"
+            }
+          ],
+          "zones": [
+            {
+              "zoneId": "zone.palace-entry",
+              "label": "宫门入口",
+              "function": "角色进入与退路来源",
+              "elevation": "与主廊同高",
+              "capacity": "可容纳六人并排",
+              "visibility": "可从主廊前三个开间看到"
+            },
+            {
+              "zoneId": "zone.main-corridor",
+              "label": "主廊",
+              "function": "主要追逐和对峙空间",
+              "elevation": "悬空白玉基座",
+              "capacity": "可容纳三人并排",
+              "visibility": "沿主轴长距离可见"
+            },
+            {
+              "zoneId": "zone.screen-bay",
+              "label": "屏风开间",
+              "function": "遮挡与短暂停顿",
+              "elevation": "与主廊同高",
+              "capacity": "两人可侧身通过",
+              "visibility": "从宫门方向被屏风部分遮挡"
+            },
+            {
+              "zoneId": "zone.broken-end",
+              "label": "断桥端",
+              "function": "危机终点与云海暴露区",
+              "elevation": "主廊末端略向下沉",
+              "capacity": "两人站立",
+              "visibility": "从中段可见断裂轮廓"
+            }
+          ],
+          "connections": [
+            {
+              "fromZone": "zone.palace-entry",
+              "toZone": "zone.main-corridor",
+              "type": "open",
+              "direction": "西南到东北",
+              "traversal": "无门槛连续进入"
+            },
+            {
+              "fromZone": "zone.main-corridor",
+              "toZone": "zone.screen-bay",
+              "type": "path",
+              "direction": "沿主轴前进",
+              "traversal": "经过第三开间屏风右侧"
+            },
+            {
+              "fromZone": "zone.screen-bay",
+              "toZone": "zone.broken-end",
+              "type": "bridge",
+              "direction": "继续东北",
+              "traversal": "栏杆逐渐破损，终点无法继续"
+            }
+          ],
+          "entrancesExits": [
+            {
+              "anchorId": "entry.palace",
+              "kind": "both",
+              "zoneId": "zone.palace-entry",
+              "orientation": "面向东北主廊"
+            },
+            {
+              "anchorId": "exit.broken-end",
+              "kind": "exit",
+              "zoneId": "zone.broken-end",
+              "orientation": "仅可跃入云海，不是安全出口"
+            }
+          ],
+          "scaleAnchors": [
+            {
+              "anchorId": "scale.human-column",
+              "description": "成人身高约为朱红立柱可见高度的八分之一",
+              "realWorldRelation": "用于保持长廊巨构尺度"
+            },
+            {
+              "anchorId": "scale.bay-width",
+              "description": "一个开间约为成人身高的四倍宽",
+              "realWorldRelation": "用于统一远近景透视"
+            }
+          ],
+          "forbiddenGeographyChanges": [
+            "不得把断桥端改成完整出口",
+            "不得交换宫门与断桥方向",
+            "不得删除第三开间屏风"
+          ]
+        },
+        "architecture": {
+          "styleGrammar": [
+            "宋式木构秩序",
+            "白玉基座与栏杆",
+            "朱红立柱",
+            "深色瓦檐的克制装饰"
+          ],
+          "structures": [
+            {
+              "structureId": "structure.corridor-frame",
+              "label": "廊架",
+              "zoneId": "zone.main-corridor",
+              "function": "定义主轴与重复节奏",
+              "silhouette": "连续深色檐线、朱红柱列和白玉水平基座",
+              "placement": "贯穿宫门至断桥端",
+              "construction": "榫卯木构立柱、横梁与深色瓦顶，柱脚落在白玉基座",
+              "continuityPriority": "critical"
+            },
+            {
+              "structureId": "structure.screen",
+              "label": "木质屏风",
+              "zoneId": "zone.screen-bay",
+              "function": "制造遮挡与视觉延迟",
+              "silhouette": "竖向木格与半透明绢面",
+              "placement": "第三开间偏西北侧",
+              "construction": "深色木格、磨损绢面、固定底座",
+              "continuityPriority": "high"
+            }
+          ],
+          "constructionRules": [
+            "柱距保持等距",
+            "栏杆与基座连续受力",
+            "瓦檐排水方向朝向云海外侧"
+          ],
+          "forbiddenChanges": [
+            "不得使用西式石拱",
+            "不得生成悬浮无支撑柱",
+            "不得把屏风移动到断桥端"
+          ]
+        },
+        "materialSystem": [
+          {
+            "materialId": "material.white-jade",
+            "surface": "微冷白色、半哑光、有细小矿物纹理",
+            "construction": "大块白玉基座与栏杆拼接",
+            "ageState": "长期风化但维护良好",
+            "weathering": "边缘磨圆、裂缝积灰、雨水路径略深",
+            "lightResponse": "柔和高光与浅层透光，不呈塑料镜面"
+          },
+          {
+            "materialId": "material.red-timber",
+            "surface": "暗朱红漆面、局部露出木纹",
+            "construction": "大型木柱与榫卯横梁",
+            "ageState": "漆面有细微龟裂",
+            "weathering": "迎风面褪色、柱脚潮痕",
+            "lightResponse": "暖色低光泽反射，边缘受逆光勾勒"
+          }
+        ],
+        "propLayout": [
+          {
+            "propId": "prop.bell",
+            "label": "檐角铜铃",
+            "function": "提供风向和声音连续性",
+            "zoneId": "zone.main-corridor",
+            "placement": "每隔两个开间悬于东南檐角",
+            "mobility": "fixed",
+            "continuityPriority": "high"
+          },
+          {
+            "propId": "prop.broken-stone",
+            "label": "断裂栏杆碎块",
+            "function": "标记断桥端危险",
+            "zoneId": "zone.broken-end",
+            "placement": "靠东南边缘散落",
+            "mobility": "movable",
+            "continuityPriority": "supporting"
+          }
+        ],
+        "cameraTopology": {
+          "safeAxes": [
+            {
+              "axisId": "axis.main-corridor",
+              "description": "沿主廊西南—东北方向的动作轴线",
+              "sideA": "东南云海侧",
+              "sideB": "西北内墙侧"
+            }
+          ],
+          "cameraAnchors": [
+            {
+              "cameraAnchorId": "camera.entry-low",
+              "zoneId": "zone.palace-entry",
+              "height": "低于成人眼平约二十厘米",
+              "orientation": "朝东北看向主廊",
+              "purpose": "建立人物与长廊深度",
+              "allowedMovements": [
+                "static",
+                "slow dolly forward"
+              ]
+            },
+            {
+              "cameraAnchorId": "camera.screen-side",
+              "zoneId": "zone.screen-bay",
+              "height": "成人肩高",
+              "orientation": "沿主轴朝西南回看",
+              "purpose": "屏风遮挡后的反应与追兵关系",
+              "allowedMovements": [
+                "static",
+                "short truck"
+              ]
+            }
+          ],
+          "occlusionAnchors": [
+            "第三开间屏风",
+            "连续朱红柱列",
+            "断裂栏杆近景"
+          ],
+          "forbiddenPositions": [
+            "不可跨越主轴后不标记轴线变化",
+            "不可置于云海中形成无支撑机位"
+          ]
+        },
+        "stateModel": {
+          "defaultStateId": "scene-state.jade-corridor-clear",
+          "controllableVariables": [
+            {
+              "variableId": "scene.time",
+              "type": "time",
+              "allowedValues": [
+                "清晨",
+                "正午",
+                "黄昏",
+                "夜晚"
+              ],
+              "defaultValue": "清晨",
+              "constraints": [
+                "光向必须与宫殿世界太阳位置一致"
+              ]
+            },
+            {
+              "variableId": "scene.weather",
+              "type": "weather",
+              "allowedValues": [
+                "晴朗薄云",
+                "暴雨前风压",
+                "细雨",
+                "雪"
+              ],
+              "defaultValue": "晴朗薄云",
+              "constraints": [
+                "天气不得改变主廊地理结构"
+              ]
+            },
+            {
+              "variableId": "scene.damage",
+              "type": "damage",
+              "allowedValues": [
+                "维护良好",
+                "局部战损",
+                "严重坍塌"
+              ],
+              "defaultValue": "维护良好",
+              "constraints": [
+                "严重坍塌需要新 SceneSpec 版本或明确 Canon 事件"
+              ]
+            }
+          ]
+        },
+        "referencePolicy": {
+          "requiredViews": [
+            "主轴建立镜头",
+            "反向主轴镜头",
+            "俯视平面关系",
+            "白玉与木构材质细节",
+            "断桥端尺度参考"
+          ],
+          "geographyObservationIds": [],
+          "materialObservationIds": [],
+          "referenceLock": "draft",
+          "notes": "先锁定平面、轴线与尺度，再扩展天气和光照状态。"
+        },
+        "rights": {
+          "sourceClass": "fictional_original",
+          "locationPermission": "not_applicable",
+          "redistribution": "allowed",
+          "notes": "原创虚构场景；若引入真实地点照片，应重新记录拍摄与再分发限制。"
+        },
+        "validation": {
+          "geographyCoherent": "pending",
+          "scaleReadable": "pending",
+          "axisDefined": "pending",
+          "materialLogic": "pending",
+          "propContinuity": "pending",
+          "notes": "示例不是已通过真实生成验证的场景。"
+        },
+        "provenance": {
+          "source": "codex_authored",
+          "createdAt": "2026-08-20T12:00:00.000Z",
+          "updatedAt": "2026-08-20T12:00:00.000Z",
+          "changeLog": [
+            "v1: establish geography, architecture, material, prop and camera topology"
+          ]
+        }
+      }
+    }
+  ],
   "response": "入口位于南侧月洞门，人物路径沿东侧回廊进入院心。前景是湿石栏与芭蕉，中景是人物和方形积水庭坪，后景是书斋窗与竹影。材质以吸水青砖、木柱和灰瓦为主；窗光从北侧书斋投出，先落在湿砖，再由积水形成低亮度反射，反射方向受水面和窗的位置约束。",
   "questions": [],
   "unsupportedClaims": []

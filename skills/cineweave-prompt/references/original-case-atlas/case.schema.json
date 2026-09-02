@@ -1,0 +1,167 @@
+{
+  "title": "CineWeave Original Worked Case",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schemaVersion", "caseId", "category", "title", "summary", "status", "routing", "prompt", "adapterContext", "visualSpec", "candidate", "rights", "reviewEvidence", "reproduction", "claimsBoundary"],
+  "properties": {
+    "schemaVersion": { "const": "1.0.0" },
+    "caseId": { "type": "string", "pattern": "^case\\.atlas\\.[a-z-]+$" },
+    "category": { "$ref": "#/$defs/category" },
+    "title": { "type": "string", "minLength": 1, "maxLength": 240 },
+    "summary": { "type": "string", "minLength": 1, "maxLength": 1200 },
+    "status": { "const": "worked_fixture" },
+    "routing": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["indexPath", "categoryPath", "triggers", "excludedCategories"],
+      "properties": {
+        "indexPath": { "const": "../index.json" },
+        "categoryPath": { "type": "string", "pattern": "^../categories/[a-z-]+\\.md$" },
+        "triggers": { "$ref": "#/$defs/stringList" },
+        "excludedCategories": {
+          "type": "array",
+          "minItems": 6,
+          "maxItems": 6,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/category" }
+        }
+      }
+    },
+    "prompt": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["contentHash", "record"],
+      "properties": {
+        "contentHash": { "$ref": "#/$defs/contentHash" },
+        "record": { "type": "object" }
+      }
+    },
+    "adapterContext": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["adapterId", "adapterVersion", "implementationPath", "implementationContentHash", "executionMode", "runtime", "networkAccess", "externalEffects", "providerNeutral", "costAmount", "currency"],
+      "properties": {
+        "adapterId": { "const": "adapter.atlas-svg.local" },
+        "adapterVersion": { "const": "1.0.0" },
+        "implementationPath": { "const": "skills/cineweave-prompt/scripts/generate-original-case-atlas.mjs" },
+        "implementationContentHash": { "$ref": "#/$defs/contentHash" },
+        "executionMode": { "const": "fixture" },
+        "runtime": { "const": "node>=22" },
+        "networkAccess": { "const": false },
+        "externalEffects": { "const": false },
+        "providerNeutral": { "const": true },
+        "costAmount": { "const": 0 },
+        "currency": { "const": "USD" }
+      }
+    },
+    "visualSpec": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["width", "height", "seed", "palette", "exactText", "elements", "composition"],
+      "properties": {
+        "width": { "const": 1200 },
+        "height": { "const": 900 },
+        "seed": { "type": "string", "pattern": "^atlas-[a-z-]+-v1$" },
+        "palette": { "type": "array", "minItems": 5, "maxItems": 5, "items": { "type": "string", "pattern": "^#[0-9A-Fa-f]{6}$" } },
+        "exactText": { "type": "array", "minItems": 2, "maxItems": 6, "items": { "type": "string", "minLength": 1, "maxLength": 160 } },
+        "elements": { "type": "array", "minItems": 3, "maxItems": 12, "uniqueItems": true, "items": { "type": "string", "pattern": "^[a-z][a-z0-9-]{1,79}$" } },
+        "composition": { "type": "string", "minLength": 1, "maxLength": 800 }
+      }
+    },
+    "candidate": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "mimeType", "byteLength", "contentHash", "width", "height"],
+      "properties": {
+        "path": { "type": "string", "pattern": "^../../assets/original-case-atlas/[a-z-]+\\.svg$" },
+        "mimeType": { "const": "image/svg+xml" },
+        "byteLength": { "type": "integer", "minimum": 1 },
+        "contentHash": { "$ref": "#/$defs/contentHash" },
+        "width": { "const": 1200 },
+        "height": { "const": 900 }
+      }
+    },
+    "rights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["profilePath", "profileContentHash", "creatorOwned", "redistribution", "publication", "thirdPartyAssets", "identityRights", "fontPolicy"],
+      "properties": {
+        "profilePath": { "const": "../rights/license-profile.json" },
+        "profileContentHash": { "$ref": "#/$defs/contentHash" },
+        "creatorOwned": { "const": true },
+        "redistribution": { "const": "allowed" },
+        "publication": { "const": "allowed" },
+        "thirdPartyAssets": { "const": false },
+        "identityRights": { "const": "not_applicable" },
+        "fontPolicy": { "const": "system-font-codepoints-not-pixel-pinned" }
+      }
+    },
+    "reviewEvidence": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["status", "candidateContentHash", "reviewType", "checkedAt", "criteria", "humanReview", "decision", "notAssessed"],
+      "properties": {
+        "status": { "const": "deterministic_checks_complete" },
+        "candidateContentHash": { "$ref": "#/$defs/contentHash" },
+        "reviewType": { "const": "machine" },
+        "checkedAt": { "type": "string", "format": "date-time" },
+        "criteria": {
+          "type": "array",
+          "minItems": 3,
+          "maxItems": 12,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["criterionId", "status", "evidence"],
+            "properties": {
+              "criterionId": { "type": "string", "pattern": "^[a-z][a-z0-9._-]{2,159}$" },
+              "status": { "const": "pass" },
+              "evidence": { "type": "string", "minLength": 1, "maxLength": 1200 }
+            }
+          }
+        },
+        "humanReview": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["status", "reviewerCount"],
+          "properties": { "status": { "const": "not_performed" }, "reviewerCount": { "const": 0 } }
+        },
+        "decision": { "const": "mechanical_fixture_pass" },
+        "notAssessed": { "const": ["human aesthetic quality", "provider generation quality", "cross-platform font pixel equivalence"] }
+      }
+    },
+    "reproduction": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["generatorPath", "generatorVersion", "caseSelector", "expectedContentHash", "deterministic", "networkRequired", "externalInputs"],
+      "properties": {
+        "generatorPath": { "const": "skills/cineweave-prompt/scripts/generate-original-case-atlas.mjs" },
+        "generatorVersion": { "const": "1.0.0" },
+        "caseSelector": { "$ref": "#/$defs/category" },
+        "expectedContentHash": { "$ref": "#/$defs/contentHash" },
+        "deterministic": { "const": true },
+        "networkRequired": { "const": false },
+        "externalInputs": { "type": "array", "maxItems": 0 }
+      }
+    },
+    "claimsBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["scope", "humanReview", "providerOutput", "providerQuality", "photorealism", "domainFitness", "crossPlatformFontPixels"],
+      "properties": {
+        "scope": { "const": "mechanical_fixture_only" },
+        "humanReview": { "const": "not_performed" },
+        "providerOutput": { "const": "not_generated" },
+        "providerQuality": { "const": "not_assessed" },
+        "photorealism": { "const": "not_assessed" },
+        "domainFitness": { "const": "not_assessed" },
+        "crossPlatformFontPixels": { "const": "not_guaranteed" }
+      }
+    }
+  },
+  "$defs": {
+    "category": { "enum": ["portrait", "product", "food", "architecture", "editorial", "diagrams", "exact-text"] },
+    "contentHash": { "type": "string", "pattern": "^sha256:[0-9a-f]{64}$" },
+    "stringList": { "type": "array", "minItems": 1, "maxItems": 24, "uniqueItems": true, "items": { "type": "string", "minLength": 1, "maxLength": 1200 } }
+  }
+}

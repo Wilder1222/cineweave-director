@@ -4,6 +4,261 @@
   "route": "character_morphology",
   "outcome": "answer",
   "contractKinds": ["cineweave_codex_character_morphology_spec"],
+  "payloads": [
+    {
+      "kind": "cineweave_codex_character_morphology_spec",
+      "payload": {
+        "kind": "cineweave_codex_character_morphology_spec",
+        "contractVersion": "2.5.0",
+        "worldId": "world.silk-road-sky",
+        "morphologyId": "morphology.jialing.v1",
+        "version": 1,
+        "status": "reviewing",
+        "characterExplorationBriefRef": {
+          "kind": "cineweave_codex_character_exploration_brief",
+          "id": "explore.jialing.identity",
+          "version": 1,
+          "contentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        "identitySource": "fictional_original",
+        "inputModes": [
+          "natural_language",
+          "visual_cards",
+          "semantic_sliders",
+          "a_b_preference"
+        ],
+        "axes": [
+          {
+            "axisId": "axis.face.overall.length",
+            "region": "face",
+            "featurePath": "face.overall.length",
+            "value": 0.28,
+            "semanticLabel": "slightly elongated",
+            "observableMeaning": "The facial oval is mildly longer than wide without an exaggerated lower face.",
+            "lock": "soft",
+            "variationRadius": 0.12
+          },
+          {
+            "axisId": "axis.face.cheekbone.prominence",
+            "region": "face",
+            "featurePath": "face.cheekbone.prominence",
+            "value": 0.18,
+            "semanticLabel": "subtly defined",
+            "observableMeaning": "Cheekbones sit slightly high but do not flare beyond the facial oval.",
+            "lock": "soft",
+            "variationRadius": 0.1
+          },
+          {
+            "axisId": "axis.face.eyes.length",
+            "region": "face",
+            "featurePath": "face.eyes.length",
+            "value": 0.42,
+            "semanticLabel": "moderately long",
+            "observableMeaning": "The palpebral fissure reads long relative to its vertical openness.",
+            "lock": "hard",
+            "variationRadius": 0
+          },
+          {
+            "axisId": "axis.face.eyes.openness",
+            "region": "face",
+            "featurePath": "face.eyes.openness",
+            "value": -0.24,
+            "semanticLabel": "restrained openness",
+            "observableMeaning": "The eyes remain narrow rather than round or doll-like.",
+            "lock": "hard",
+            "variationRadius": 0
+          },
+          {
+            "axisId": "axis.face.eyes.canthal_tilt",
+            "region": "face",
+            "featurePath": "face.eyes.canthal_tilt",
+            "value": 0.22,
+            "semanticLabel": "gently upturned",
+            "observableMeaning": "The outer eye corner rises only slightly above the inner corner.",
+            "lock": "hard",
+            "variationRadius": 0
+          },
+          {
+            "axisId": "axis.face.nose.bridge_shape",
+            "region": "face",
+            "featurePath": "face.nose.bridge_shape",
+            "value": 0.08,
+            "semanticLabel": "naturally straight",
+            "observableMeaning": "The bridge is straight with a soft radix and no exaggerated height.",
+            "lock": "soft",
+            "variationRadius": 0.08
+          },
+          {
+            "axisId": "axis.face.mouth.corner_angle",
+            "region": "face",
+            "featurePath": "face.mouth.corner_angle",
+            "value": -0.08,
+            "semanticLabel": "slightly downturned at rest",
+            "observableMeaning": "The resting mouth has mild downward corner tension independent of expression.",
+            "lock": "soft",
+            "variationRadius": 0.08
+          },
+          {
+            "axisId": "axis.face.asymmetry.left_eye_height",
+            "region": "face",
+            "featurePath": "face.asymmetry.left_eye_height",
+            "value": -0.06,
+            "semanticLabel": "subtle natural asymmetry",
+            "observableMeaning": "The left eye sits imperceptibly lower than the right without anatomical error.",
+            "lock": "hard",
+            "variationRadius": 0
+          },
+          {
+            "axisId": "axis.body.shoulder.width",
+            "region": "body",
+            "featurePath": "body.shoulder.width",
+            "value": -0.22,
+            "semanticLabel": "narrow shoulders",
+            "observableMeaning": "The shoulder line is narrow and naturally dropped rather than fragile.",
+            "lock": "soft",
+            "variationRadius": 0.1
+          },
+          {
+            "axisId": "axis.body.leg.proportion",
+            "region": "body",
+            "featurePath": "body.leg.proportion",
+            "value": 0.24,
+            "semanticLabel": "slightly long legs",
+            "observableMeaning": "Leg length is mildly above neutral while retaining plausible adult anatomy.",
+            "lock": "soft",
+            "variationRadius": 0.1
+          }
+        ],
+        "relations": [
+          {
+            "relationId": "relation.eye.length_to_openness",
+            "type": "ratio",
+            "memberAxisIds": [
+              "axis.face.eyes.length",
+              "axis.face.eyes.openness"
+            ],
+            "semanticConstraint": "Eyes must remain recognizably long and restrained, never round after any nearby mutation.",
+            "priority": "blocking"
+          },
+          {
+            "relationId": "relation.face.cheek_to_length",
+            "type": "transition",
+            "memberAxisIds": [
+              "axis.face.overall.length",
+              "axis.face.cheekbone.prominence"
+            ],
+            "semanticConstraint": "High cheek placement must transition into a soft elongated oval without lateral flare.",
+            "priority": "important"
+          },
+          {
+            "relationId": "relation.eye.asymmetry",
+            "type": "asymmetry",
+            "memberAxisIds": [
+              "axis.face.eyes.canthal_tilt",
+              "axis.face.asymmetry.left_eye_height"
+            ],
+            "semanticConstraint": "Preserve subtle left-right difference while avoiding misalignment artifacts.",
+            "priority": "important"
+          }
+        ],
+        "constraintPolicy": {
+          "anatomical": [
+            "Preserve plausible adult orbital, nasal, jaw and limb transitions."
+          ],
+          "relational": [
+            "Structural relations outrank isolated adjective intensity."
+          ],
+          "lockRules": {
+            "hardBlocksMutation": true,
+            "softRequiresReview": true,
+            "freeMayExplore": true
+          },
+          "samplingRules": {
+            "nearbyOnly": true,
+            "onePrimaryAxisPerRound": true,
+            "respectVariationRadius": true
+          }
+        },
+        "referenceEvidence": [
+          {
+            "observationRef": {
+              "kind": "cineweave_codex_reference_observation",
+              "id": "observation.eye-shape-semantics",
+              "version": 1,
+              "contentHash": "sha256:2222222222222222222222222222222222222222222222222222222222222222"
+            },
+            "scope": "face_morphology",
+            "transfer": "borrow_observable_semantics",
+            "excludedUses": [
+              "Do not copy the source person's identity, hairstyle, makeup or expression."
+            ]
+          }
+        ],
+        "neutralFixture": {
+          "views": [
+            "front",
+            "three_quarter_left",
+            "profile_left"
+          ],
+          "expression": "Neutral face, relaxed mouth, gaze level.",
+          "grooming": "Hair pulled away from the face with no contour-changing ornament.",
+          "wardrobe": "Simple neutral crew-neck base layer.",
+          "camera": "Consistent eye-level perspective and working distance across views.",
+          "lighting": "Broad neutral soft light that preserves facial planes.",
+          "background": "Uniform neutral gray.",
+          "fixedAcrossViews": true
+        },
+        "identityLockGate": {
+          "status": "pending",
+          "requiresHumanApproval": true,
+          "requiredViews": [
+            "front",
+            "three_quarter_left",
+            "profile_left"
+          ],
+          "requiredChecks": [
+            "Axis preservation",
+            "Structural relation coherence",
+            "Anatomical plausibility",
+            "Identity stability across neutral views"
+          ],
+          "noAutoLock": true
+        },
+        "executionBoundary": {
+          "providerNeutral": true,
+          "generatesMedia": false,
+          "containsProviderWeights": false,
+          "humanApprovalRequired": true,
+          "notes": "Provider landmarks, embeddings, mesh morph targets and generation parameters are adapter concerns."
+        },
+        "validation": {
+          "semanticAxesProviderNeutral": true,
+          "relationsPreferredOverRawMeasures": true,
+          "noBiometricInference": true,
+          "noUniversalBeautyScore": true,
+          "noRealPersonPartMashup": true,
+          "identityNotAutoLocked": true,
+          "noGenerationClaim": true
+        },
+        "skillReceipt": {
+          "repository": "https://github.com/Wilder1222/cineweave-studio",
+          "ref": "v2.5.0",
+          "commit": "0123456789abcdef0123456789abcdef01234567",
+          "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "installedBy": "codex-environment",
+          "usedAt": "2026-08-22T12:00:00.000Z"
+        },
+        "provenance": {
+          "source": "codex_authored",
+          "createdAt": "2026-08-22T12:00:00.000Z",
+          "updatedAt": "2026-08-22T12:00:00.000Z",
+          "changeLog": [
+            "v1: semantic face and body morphology checkpoint before identity lock"
+          ]
+        }
+      }
+    }
+  ],
   "response": "建立一个 provider-neutral 语义轴：只把眼型的水平长度向狭长方向小幅调整。鼻部结构、下颌关系和身体比例设为硬锁，允许变化半径为零；其他轴保持当前值。身份锁定前使用同一中性表情、妆发、服装、光线和机位，分别检查正面、四分之三侧面与完整侧面的一致性。技术检查只判断结构、关系和锁定保持，不进行任何自动美貌判断。",
   "questions": [],
   "unsupportedClaims": []

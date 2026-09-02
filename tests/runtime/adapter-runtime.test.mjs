@@ -1,6 +1,7 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { existsSync } from "node:fs";
+import { mkdtemp, readFile, readdir, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join, resolve } from "node:path";
 import {
@@ -53,7 +54,7 @@ async function storeCommonArtifacts(root, options = {}) {
   const adapterId = options.adapterId || "adapter.fixture-svg";
   const license = await putArtifact(root, { kind: "cineweave_codex_license_profile", status: "verified" }, { kind: "cineweave_codex_license_profile", id: `license.${adapterId}`, version: 1, createdAt: timestamp });
   const capability = await putArtifact(root, { kind: "cineweave_codex_capability_profile", adapterId }, { kind: "cineweave_codex_capability_profile", id: `capability.${adapterId}`, version: 1, createdAt: timestamp });
-  const render = await putArtifact(root, { kind: "cineweave_codex_render_plan", mode: "generate" }, { kind: "cineweave_codex_render_plan", id: `render.${adapterId}`, version: 1, createdAt: timestamp });
+  const render = await putArtifact(root, { kind: "cineweave_codex_render_plan", mode: options.renderPlanMode || "generate" }, { kind: "cineweave_codex_render_plan", id: `render.${adapterId}`, version: 1, createdAt: timestamp });
   const prompt = await putArtifact(root, { kind: "cineweave_codex_prompt_record", text: "observable fixture" }, { kind: "cineweave_codex_prompt_record", id: `prompt.${adapterId}`, version: 1, createdAt: timestamp });
   return { timestamp, adapterId, license, capability, render, prompt };
 }
@@ -80,7 +81,7 @@ function makeRequest(common, descriptorRef, options = {}) {
     observationIds: [],
     parameters: [{ name: "label", value: options.label || "Runtime fixture", sensitive: false }],
     outputRequest: { mediaKind: "image", acceptedMimeTypes: ["image/svg+xml"], variantCount: options.variantCount || 1, destinationPolicy: "project_execution_store" },
-    budget: { currency: "USD", maxAmount: options.maxAmount ?? 0, maxAttempts: options.maxAttempts || 1, maxWallSeconds: 30, unknownCostAction: "block" },
+    budget: { currency: "USD", maxAmount: options.maxAmount ?? 0, maxAttempts: options.maxAttempts || 1, maxWallSeconds: options.maxWallSeconds ?? 30, unknownCostAction: "block" },
     authorization: executionMode === "external"
       ? { externalEffects: "exact_request_approval_required", approvalScope: "exact_execution_request" }
       : { externalEffects: "denied", approvalScope: "none" },
@@ -333,6 +334,55 @@ test("retry receipt accounts for every failed and successful attempt", async () 
   } finally { await rm(root, { recursive: true, force: true }); }
 });
 
+test("failed output verification rolls back files created by the partial attempt", async () => {
+  const root = await mkdtemp(join(tmpdir(), "cineweave-adapter-output-rollback-"));
+  try {
+    const stored = await storeFixtureExecution(root, {
+      requestId: "execution.output-rollback",
+      idempotencyKey: "fixture:output-rollback:0001",
+      variantCount: 2,
+    });
+    const adapter = {
+      ...fixtureSvgAdapter,
+      async execute(input) {
+        const result = await fixtureSvgAdapter.execute(input);
+        result.outputs[1] = { ...result.outputs[1], mimeType: "image/png" };
+        return result;
+      },
+    };
+    const result = await executeRequest(root, stored.request.envelope.artifactRef, createAdapterRegistry([adapter]), { now: advancingClock() });
+    assert.equal(result.envelope.payload.status, "failed");
+    assert.equal(result.envelope.payload.failure.code, "output.mime");
+    const outputDirectory = join(root, ".cineweave", "executions", stored.requestPayload.requestId);
+    assert.deepEqual(await readdir(outputDirectory), []);
+    assert.equal((await verifyProject(root)).valid, true);
+  } finally { await rm(root, { recursive: true, force: true }); }
+});
+
+test("adapter output metadata is validated before receipt persistence", async () => {
+  const root = await mkdtemp(join(tmpdir(), "cineweave-adapter-output-metadata-"));
+  try {
+    const stored = await storeFixtureExecution(root, {
+      requestId: "execution.output-metadata",
+      idempotencyKey: "fixture:output-metadata:0001",
+    });
+    const adapter = {
+      ...fixtureSvgAdapter,
+      async execute(input) {
+        const result = await fixtureSvgAdapter.execute(input);
+        result.outputs[0] = { ...result.outputs[0], width: Number.NaN };
+        return result;
+      },
+    };
+    const result = await executeRequest(root, stored.request.envelope.artifactRef, createAdapterRegistry([adapter]), { now: advancingClock() });
+    assert.equal(result.envelope.payload.status, "failed");
+    assert.equal(result.envelope.payload.failure.code, "output.width");
+    const outputDirectory = join(root, ".cineweave", "executions", stored.requestPayload.requestId);
+    assert.equal(existsSync(outputDirectory), false);
+    assert.equal((await verifyProject(root)).valid, true);
+  } finally { await rm(root, { recursive: true, force: true }); }
+});
+
 test("malformed requests fail before an incomplete receipt can be persisted", async () => {
   const root = await mkdtemp(join(tmpdir(), "cineweave-adapter-malformed-"));
   try {
@@ -343,5 +393,83 @@ test("malformed requests fail before an incomplete receipt can be persisted", as
       /cannot produce an auditable receipt/
     );
     assert.equal((await verifyProject(root)).artifacts, 1);
+  } finally { await rm(root, { recursive: true, force: true }); }
+});
+
+test("execution enforces the contract attempt limit before invoking an adapter", async () => {
+  const root = await mkdtemp(join(tmpdir(), "cineweave-adapter-attempt-limit-"));
+  try {
+    const stored = await storeFixtureExecution(root, {
+      requestId: "execution.attempt-limit",
+      idempotencyKey: "fixture:attempt-limit:0001",
+      maxAttempts: 9,
+    });
+    let calls = 0;
+    const adapter = {
+      ...fixtureSvgAdapter,
+      async execute(...args) {
+        calls += 1;
+        return fixtureSvgAdapter.execute(...args);
+      },
+    };
+    const result = await executeRequest(root, stored.request.envelope.artifactRef, createAdapterRegistry([adapter]), { now: advancingClock() });
+    assert.equal(result.envelope.payload.status, "blocked");
+    assert.equal(result.envelope.payload.failure.code, "budget.attempts");
+    assert.equal(calls, 0);
+  } finally { await rm(root, { recursive: true, force: true }); }
+});
+
+test("execution rejects a RenderPlan mode the adapter operation does not support", async () => {
+  const root = await mkdtemp(join(tmpdir(), "cineweave-adapter-render-mode-"));
+  try {
+    const stored = await storeFixtureExecution(root, {
+      requestId: "execution.render-mode",
+      idempotencyKey: "fixture:render-mode:0001",
+      renderPlanMode: "inpaint",
+    });
+    let calls = 0;
+    const adapter = {
+      ...fixtureSvgAdapter,
+      async execute(...args) {
+        calls += 1;
+        return fixtureSvgAdapter.execute(...args);
+      },
+    };
+    const result = await executeRequest(root, stored.request.envelope.artifactRef, createAdapterRegistry([adapter]), { now: advancingClock() });
+    assert.equal(result.envelope.payload.status, "blocked");
+    assert.equal(result.envelope.payload.failure.code, "adapter.render_mode");
+    assert.equal(calls, 0);
+  } finally { await rm(root, { recursive: true, force: true }); }
+});
+
+test("adapter execution is aborted when the wall-time budget expires", async () => {
+  const root = await mkdtemp(join(tmpdir(), "cineweave-adapter-wall-time-"));
+  try {
+    const stored = await storeFixtureExecution(root, {
+      requestId: "execution.wall-time",
+      idempotencyKey: "fixture:wall-time:0001",
+      maxWallSeconds: 1,
+    });
+    let aborted = false;
+    const adapter = {
+      ...fixtureSvgAdapter,
+      async execute(_input, { signal } = {}) {
+        await new Promise((resolve, reject) => {
+          const timer = setTimeout(resolve, 1500);
+          signal?.addEventListener("abort", () => {
+            aborted = true;
+            clearTimeout(timer);
+            reject(new Error("adapter observed abort"));
+          }, { once: true });
+        });
+        return { costAmount: 0, currency: "USD", outputs: [] };
+      },
+    };
+    const started = Date.now();
+    const result = await executeRequest(root, stored.request.envelope.artifactRef, createAdapterRegistry([adapter]), { now: advancingClock() });
+    assert.ok(Date.now() - started < 1400);
+    assert.equal(result.envelope.payload.status, "failed");
+    assert.equal(result.envelope.payload.attempts[0].errorCode, "cost.unknown_after_attempt");
+    assert.equal(aborted, true);
   } finally { await rm(root, { recursive: true, force: true }); }
 });

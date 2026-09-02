@@ -1,5 +1,5 @@
 import { existsSync } from "node:fs";
-import { mkdir, readFile, writeFile } from "node:fs/promises";
+import { mkdir, readFile, unlink, writeFile } from "node:fs/promises";
 import { basename, join, resolve, sep } from "node:path";
 import {
   RUNTIME_VERSION,
@@ -7,13 +7,22 @@ import {
   findApprovalDecision,
   findArtifact,
   findArtifactByVersion,
-  putArtifact
+  putArtifact,
+  assertRegularFile
 } from "./artifact-store.mjs";
 import { sha256Bytes, sha256Canonical } from "./canonical-json.mjs";
 
 const identifierPattern = /^[a-z0-9][a-z0-9._-]{1,159}$/;
 const sensitiveNamePattern = /(?:api.?key|token|secret|password|credential|endpoint|signed.?url|url)/i;
 const unsafeValuePattern = /(?:https?:\/\/|file:|[?&](?:token|signature|sig|expires)=)/i;
+const mimeTypePattern = /^[a-z0-9.+-]+\/[a-z0-9.+-]+$/;
+const MAX_PARAMETERS = 48;
+const MAX_INPUTS = 64;
+const MAX_OBSERVATIONS = 64;
+const MAX_OUTPUT_MIME_TYPES = 12;
+const MAX_VARIANTS = 64;
+const MAX_ATTEMPTS = 8;
+const MAX_WALL_SECONDS = 86400;
 
 function sameRef(left, right) {
   return left?.kind === right?.kind && left?.id === right?.id && left?.version === right?.version && left?.contentHash === right?.contentHash;
@@ -88,6 +97,31 @@ function validateRequestShape(request) {
   for (const check of ["exactRefsResolved", "operationSupported", "hardCapabilitiesSatisfied", "rightsResolved", "budgetResolved", "secretsAbsent"]) {
     if (request?.preflight?.[check] !== true) throw policyError("preflight", `request.${check}`, `ExecutionRequest preflight failed: ${check}`);
   }
+  if (!Array.isArray(request.inputArtifactRefs) || request.inputArtifactRefs.length > MAX_INPUTS) throw policyError("preflight", "request.inputs", "Input artifact references exceed the request limit");
+  if (!Array.isArray(request.observationIds) || request.observationIds.length > MAX_OBSERVATIONS) throw policyError("preflight", "request.observations", "Observation references exceed the request limit");
+  for (const observationId of request.observationIds) {
+    if (typeof observationId !== "string" || observationId.length < 1 || observationId.length > 160 || /(?:https?:|file:|[\\/?#])/.test(observationId)) {
+      throw policyError("preflight", "request.observation", "Observation reference is malformed");
+    }
+  }
+  if (!Array.isArray(request.parameters) || request.parameters.length > MAX_PARAMETERS) throw policyError("preflight", "request.parameters", "Parameters exceed the request limit");
+  for (const parameter of request.parameters) {
+    if (!parameter || typeof parameter !== "object" || Array.isArray(parameter)) throw policyError("preflight", "parameter.shape", "Parameter entry is malformed");
+    if (!identifierPattern.test(parameter?.name || "")) throw policyError("preflight", "parameter.name", "Parameter name is invalid");
+    if (!["string", "number", "boolean"].includes(typeof parameter.value) && parameter.value !== null) throw policyError("preflight", "parameter.value", "Parameter value is not a JSON scalar");
+    if (typeof parameter.value === "string" && parameter.value.length > 1600) throw policyError("preflight", "parameter.value", "Parameter string value exceeds the limit");
+    if (typeof parameter.value === "number" && !Number.isFinite(parameter.value)) throw policyError("preflight", "parameter.value", "Parameter value is not finite");
+  }
+  if (!request.outputRequest || typeof request.outputRequest !== "object" || Array.isArray(request.outputRequest) || !["image", "video"].includes(request.outputRequest.mediaKind)) throw policyError("preflight", "output.media_kind", "Output media kind is invalid");
+  if (!Array.isArray(request.outputRequest.acceptedMimeTypes) || request.outputRequest.acceptedMimeTypes.length < 1 || request.outputRequest.acceptedMimeTypes.length > MAX_OUTPUT_MIME_TYPES || new Set(request.outputRequest.acceptedMimeTypes).size !== request.outputRequest.acceptedMimeTypes.length || request.outputRequest.acceptedMimeTypes.some((mime) => typeof mime !== "string" || !mimeTypePattern.test(mime))) {
+    throw policyError("preflight", "output.mime", "Accepted output MIME types are invalid");
+  }
+  if (request.outputRequest.destinationPolicy !== "project_execution_store") throw policyError("preflight", "output.destination", "Outputs must remain in the project execution store");
+  if (!Number.isInteger(request.outputRequest.variantCount) || request.outputRequest.variantCount < 1 || request.outputRequest.variantCount > MAX_VARIANTS) throw policyError("preflight", "output.count", "Output variant count is invalid");
+  if (!request.budget || typeof request.budget !== "object" || Array.isArray(request.budget)) throw policyError("preflight", "budget.shape", "Budget is malformed");
+  if (!Number.isInteger(request.budget.maxAttempts) || request.budget.maxAttempts < 1 || request.budget.maxAttempts > MAX_ATTEMPTS) throw policyError("preflight", "budget.attempts", "Attempt budget is invalid");
+  if (!Number.isInteger(request.budget.maxWallSeconds) || request.budget.maxWallSeconds < 1 || request.budget.maxWallSeconds > MAX_WALL_SECONDS) throw policyError("preflight", "budget.wall_time", "Wall-time budget is invalid");
+  if (!/^[A-Z]{3}$/.test(request.budget.currency || "") || request.budget.unknownCostAction !== "block") throw policyError("preflight", "budget.policy", "Budget currency or unknown-cost policy is invalid");
   const names = new Set();
   for (const parameter of request.parameters || []) {
     if (names.has(parameter.name)) throw policyError("preflight", "parameter.duplicate", `Duplicate parameter: ${parameter.name}`);
@@ -95,10 +129,10 @@ function validateRequestShape(request) {
     if (parameter.sensitive !== false || sensitiveNamePattern.test(parameter.name || "")) throw policyError("preflight", "parameter.sensitive", `Sensitive parameter is forbidden: ${parameter.name}`);
     if (typeof parameter.value === "string" && unsafeValuePattern.test(parameter.value)) throw policyError("preflight", "parameter.external_value", `Endpoint or signed URL values are forbidden: ${parameter.name}`);
   }
-  if (!Number.isInteger(request?.budget?.maxAttempts) || request.budget.maxAttempts < 1) throw policyError("preflight", "budget.attempts", "Attempt budget is invalid");
   if (!Number.isFinite(request?.budget?.maxAmount) || request.budget.maxAmount < 0) throw policyError("preflight", "budget.amount", "Cost budget is invalid");
   const binding = request.workflowTemplateBinding;
-  if (binding) {
+  if (binding !== undefined) {
+    if (!binding || typeof binding !== "object" || Array.isArray(binding)) throw policyError("preflight", "template.binding", "Workflow template binding is malformed");
     if (request.preflight?.workflowTemplateResolved !== true) throw policyError("preflight", "template.not_resolved", "ExecutionRequest preflight failed: workflowTemplateResolved");
     if (!binding.templateProfileRef || typeof binding.templateProfileRef !== "object") throw policyError("preflight", "template.profile_ref", "Workflow template profile reference is required");
     if (!["serialized", "provider_managed"].includes(binding.mode)) throw policyError("preflight", "template.mode", "Workflow template binding mode is invalid");
@@ -120,16 +154,20 @@ function assertReceiptFields(request) {
 async function resolveExecutionContext(projectRoot, request) {
   const descriptorArtifact = await findArtifact(projectRoot, request.adapterDescriptorRef);
   const capabilityArtifact = await findArtifact(projectRoot, request.capabilityProfileRef);
-  await findArtifact(projectRoot, request.renderPlanRef);
+  const renderPlanArtifact = await findArtifact(projectRoot, request.renderPlanRef);
   await findArtifact(projectRoot, request.promptRef);
   for (const ref of request.inputArtifactRefs || []) await findArtifact(projectRoot, ref);
   const descriptor = descriptorArtifact.envelope.payload;
   const capability = capabilityArtifact.envelope.payload;
+  const renderPlan = renderPlanArtifact.envelope.payload;
+  if (renderPlan?.kind !== "cineweave_codex_render_plan" || typeof renderPlan.mode !== "string") throw policyError("preflight", "render_plan.invalid", "RenderPlan kind or mode is invalid");
   if (descriptor?.kind !== "cineweave_adapter_descriptor" || descriptor?.status !== "active") throw policyError("preflight", "adapter.inactive", "AdapterDescriptor is not active");
   if (!sameRef(descriptor.capabilityProfileRef, request.capabilityProfileRef)) throw policyError("preflight", "adapter.capability_ref", "AdapterDescriptor and ExecutionRequest bind different CapabilityProfiles");
   if (descriptor.adapterId !== capability.adapterId) throw policyError("preflight", "adapter.capability_id", "AdapterDescriptor and CapabilityProfile adapter IDs differ");
   if (!(descriptor.executionModes || []).includes(request.executionMode)) throw policyError("preflight", "adapter.mode", `Adapter does not support ${request.executionMode}`);
   const operation = descriptor.operations?.find((item) => item.operationId === request.operationId);
+  if (operation && !(operation.requestModes || []).includes(renderPlan.mode)) throw policyError("preflight", "adapter.render_mode", "Adapter does not support RenderPlan mode: " + renderPlan.mode);
+  if (operation && renderPlan.variantCount !== undefined && renderPlan.variantCount !== request.outputRequest.variantCount) throw policyError("preflight", "render_plan.output_count", "RenderPlan variant count differs from the request");
   if (!operation) throw policyError("preflight", "adapter.operation", `Adapter does not expose ${request.operationId}`);
   if (!(operation.mediaKinds || []).includes(request.outputRequest.mediaKind)) throw policyError("preflight", "adapter.media_kind", "Requested media kind is unsupported");
   if (request.outputRequest.variantCount > operation.maxOutputs) throw policyError("preflight", "adapter.output_count", "Requested variant count exceeds adapter limit");
@@ -137,7 +175,7 @@ async function resolveExecutionContext(projectRoot, request) {
   for (const mime of request.outputRequest.acceptedMimeTypes || []) if (!(operation.outputMimeTypes || []).includes(mime)) throw policyError("preflight", "adapter.mime", `Unsupported output MIME type: ${mime}`);
   if (descriptor.costPolicy?.currency !== request.budget.currency) throw policyError("preflight", "budget.currency", "Adapter and request currencies differ");
   const workflowTemplate = await resolveWorkflowTemplateBinding(projectRoot, request, descriptor);
-  return { descriptor, capability, operation, workflowTemplate };
+  return { descriptor, capability, operation, renderPlan, workflowTemplate };
 }
 
 async function resolveWorkflowTemplateBinding(projectRoot, request, descriptor) {
@@ -284,6 +322,9 @@ async function writeOutput(projectRoot, requestId, output, index, acceptedMimeTy
   if (!acceptedMimeTypes.includes(output.mimeType)) throw policyError("output_verification", "output.mime", `Adapter returned unaccepted MIME type: ${output.mimeType}`);
   if (output.mediaKind !== expectedMediaKind) throw policyError("output_verification", "output.media_kind", "Adapter output media kind differs from the request");
   if (!/^[a-zA-Z0-9][a-zA-Z0-9._-]{0,159}$/.test(output.filename || "") || basename(output.filename) !== output.filename) throw policyError("output_verification", "output.filename", "Adapter output filename is unsafe");
+  if (output.width !== undefined && output.width !== null && (!Number.isSafeInteger(output.width) || output.width < 1)) throw policyError("output_verification", "output.width", "Adapter output width is invalid");
+  if (output.height !== undefined && output.height !== null && (!Number.isSafeInteger(output.height) || output.height < 1)) throw policyError("output_verification", "output.height", "Adapter output height is invalid");
+  if (output.durationMs !== undefined && output.durationMs !== null && (!Number.isSafeInteger(output.durationMs) || output.durationMs < 0)) throw policyError("output_verification", "output.duration", "Adapter output duration is invalid");
   const bytes = Buffer.isBuffer(output.bytes) ? output.bytes : Buffer.from(output.bytes);
   const relativeRef = `executions/${requestId}/${output.filename}`;
   const storeRoot = resolve(projectRoot, ".cineweave");
@@ -291,11 +332,14 @@ async function writeOutput(projectRoot, requestId, output, index, acceptedMimeTy
   if (!outputPath.startsWith(`${storeRoot}${sep}`)) throw policyError("output_verification", "output.path", "Adapter output escapes the project execution store");
   await mkdir(resolve(storeRoot, "executions", requestId), { recursive: true });
   const hash = sha256Bytes(bytes);
+  let created = false;
   if (existsSync(outputPath)) {
+    await assertRegularFile(outputPath);
     const existing = await readFile(outputPath);
     if (sha256Bytes(existing) !== hash) throw policyError("output_verification", "output.conflict", `Immutable execution output conflict: ${relativeRef}`);
   } else {
     await writeFile(outputPath, bytes, { flag: "wx" });
+    created = true;
   }
   return {
     outputId: `output.${requestId}.${String(index + 1).padStart(2, "0")}`,
@@ -306,8 +350,32 @@ async function writeOutput(projectRoot, requestId, output, index, acceptedMimeTy
     storageRef: relativeRef,
     width: output.width ?? null,
     height: output.height ?? null,
-    durationMs: output.durationMs ?? null
+    durationMs: output.durationMs ?? null,
+    createdPath: created ? outputPath : null
   };
+}
+
+async function executeAdapterWithinWallBudget(adapter, request, descriptor, attempt, idempotencyKey, remainingMs) {
+  if (!Number.isFinite(remainingMs) || remainingMs <= 0) {
+    throw policyError("adapter", "adapter.timeout", "ExecutionRequest wall-time budget was exhausted before the adapter attempt started");
+  }
+  const controller = new AbortController();
+  let timer;
+  const timeout = new Promise((_, reject) => {
+    timer = setTimeout(() => {
+      controller.abort();
+      reject(policyError("adapter", "adapter.timeout", "Adapter execution exceeded the remaining wall-time budget"));
+    }, Math.max(1, Math.ceil(remainingMs)));
+  });
+  try {
+    const execution = Promise.resolve().then(() => adapter.execute(
+      { request, descriptor, attempt, idempotencyKey },
+      { signal: controller.signal },
+    ));
+    return await Promise.race([execution, timeout]);
+  } finally {
+    if (timer !== undefined) clearTimeout(timer);
+  }
 }
 
 export async function executeRequest(projectRoot, requestArtifactRef, registry, options = {}) {
@@ -371,13 +439,21 @@ export async function executeRequest(projectRoot, requestArtifactRef, registry, 
   const outputs = [];
   let actualAmount = 0;
   let failure = null;
+  const executionDeadline = Date.now() + request.budget.maxWallSeconds * 1000;
   for (let number = 1; number <= request.budget.maxAttempts; number += 1) {
     const attemptStartedAt = isoNow(now);
     let reportedCost = 0;
     let costKnown = false;
     let providerRequestId = null;
     try {
-      const result = await adapter.execute({ request, descriptor: context.descriptor, attempt: number, idempotencyKey: request.idempotencyKey });
+      const result = await executeAdapterWithinWallBudget(
+        adapter,
+        request,
+        context.descriptor,
+        number,
+        request.idempotencyKey,
+        executionDeadline - Date.now(),
+      );
       const costAmount = Number(result?.costAmount);
       if (!Number.isFinite(costAmount) || costAmount < 0 || result?.currency !== request.budget.currency) throw policyError("adapter", "cost.invalid", "Adapter returned invalid attempt cost");
       reportedCost = costAmount;
@@ -387,7 +463,18 @@ export async function executeRequest(projectRoot, requestArtifactRef, registry, 
       if (actualAmount > request.budget.maxAmount) throw policyError("adapter", "cost.budget_exceeded", "Actual cost exceeds request budget");
       if (!Array.isArray(result.outputs) || result.outputs.length !== request.outputRequest.variantCount) throw policyError("output_verification", "output.count", "Adapter output count differs from the request");
       const attemptOutputs = [];
-      for (let index = 0; index < result.outputs.length; index += 1) attemptOutputs.push(await writeOutput(projectRoot, request.requestId, result.outputs[index], index, request.outputRequest.acceptedMimeTypes, request.outputRequest.mediaKind));
+      const createdOutputPaths = [];
+      try {
+        for (let index = 0; index < result.outputs.length; index += 1) {
+          const written = await writeOutput(projectRoot, request.requestId, result.outputs[index], index, request.outputRequest.acceptedMimeTypes, request.outputRequest.mediaKind);
+          const { createdPath, ...outputRecord } = written;
+          attemptOutputs.push(outputRecord);
+          if (createdPath) createdOutputPaths.push(createdPath);
+        }
+      } catch (error) {
+        await Promise.all(createdOutputPaths.map((path) => unlink(path).catch(() => {})));
+        throw error;
+      }
       const attemptFinishedAt = isoNow(now);
       attempts.push({ attempt: number, status: "succeeded", startedAt: attemptStartedAt, finishedAt: attemptFinishedAt, providerRequestId, retryReason: null, errorCode: null, costAmount, currency: result.currency });
       outputs.push(...attemptOutputs);
@@ -407,7 +494,7 @@ export async function executeRequest(projectRoot, requestArtifactRef, registry, 
         actualAmount += errorCost;
       }
       failure = normalizeError(error);
-      const retry = error?.retryable === true && number < request.budget.maxAttempts && actualAmount <= request.budget.maxAmount;
+      const retry = error?.retryable === true && number < request.budget.maxAttempts && actualAmount <= request.budget.maxAmount && Date.now() < executionDeadline;
       attempts.push({ attempt: number, status: "failed", startedAt: attemptStartedAt, finishedAt: attemptFinishedAt, providerRequestId, retryReason: retry ? failure.code : null, errorCode: failure.code, costAmount: reportedCost, currency: request.budget.currency });
       if (!retry) break;
     }

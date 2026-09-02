@@ -8,6 +8,7 @@
     "route",
     "outcome",
     "contractKinds",
+    "payloads",
     "response",
     "questions",
     "unsupportedClaims"
@@ -35,6 +36,19 @@
       "maxItems": 12,
       "uniqueItems": true,
       "items": { "type": "string", "minLength": 1, "maxLength": 160 }
+    },
+    "payloads": {
+      "type": "array",
+      "maxItems": 12,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind", "payload"],
+        "properties": {
+          "kind": { "type": "string", "minLength": 1, "maxLength": 160 },
+          "payload": { "type": "object" }
+        }
+      }
     },
     "response": { "type": "string", "minLength": 1, "maxLength": 16000 },
     "questions": {

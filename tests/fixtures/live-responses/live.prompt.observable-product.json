@@ -4,6 +4,200 @@
   "route": "prompt_design",
   "outcome": "answer",
   "contractKinds": ["cineweave_codex_prompt_record"],
+  "payloads": [
+    {
+      "kind": "cineweave_codex_prompt_record",
+      "payload": {
+        "kind": "cineweave_codex_prompt_record",
+        "contractVersion": "2.0.0",
+        "promptId": "portrait-golden-garden",
+        "title": "暖金花园人物肖像",
+        "version": 1,
+        "status": "draft",
+        "domain": "portrait",
+        "generationMode": "generate",
+        "skillReceipt": {
+          "repository": "https://github.com/owner/repository",
+          "ref": "v2.0.0",
+          "commit": "0123456789abcdef0123456789abcdef01234567",
+          "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "installedBy": "codex-environment",
+          "usedAt": "2026-08-18T12:00:00.000Z"
+        },
+        "collection": "personal-visual-prompts",
+        "purpose": "管理一个可复用的暖金自然光人物肖像 Prompt，后续只改变人物身份或花园背景，不丢失光线和材质逻辑。",
+        "sourceText": "一位身穿浅色薄纱服装的女性站在花园中，金色阳光穿过树叶照在她的脸和肩膀上，旁边有白色玫瑰，真实摄影感，浅景深。",
+        "tags": [
+          "portrait",
+          "garden",
+          "golden-hour",
+          "reference-ready"
+        ],
+        "styleBinding": {
+          "mode": "inline_atoms",
+          "atoms": [
+            "representation.naturalistic",
+            "lighting.golden_dappled",
+            "color.warm_muted_garden"
+          ],
+          "visualTemporalSeparated": true,
+          "preserve": [
+            "natural skin response",
+            "golden leaf-shadow pattern",
+            "soft textile translucency"
+          ],
+          "allowedVariation": [
+            "garden density",
+            "light softness",
+            "flower placement"
+          ],
+          "forbidden": [
+            "plastic skin",
+            "identity replacement by the style reference",
+            "global neon saturation"
+          ]
+        },
+        "prompt": {
+          "language": "zh-CN",
+          "positive": "{{subject_identity}}，置于{{background}}与白色玫瑰之间；她身穿浅色半透明薄纱服装，抬头望向右上方的金色光源，树叶间隙形成斑驳光影，头发边缘有柔和轮廓光，前景花朵形成轻微遮挡和景深层次；皮肤、头发、珍珠首饰、薄纱和花瓣具有不同且可信的材质响应，宁静、浪漫、克制，真实摄影质感。",
+          "negative": "不要过度磨皮，不要塑料皮肤，不要重复首饰，不要畸形五官，不要多余手指，不要文字水印，不要把背景处理成无意义的纯色渐变。",
+          "blocks": {
+            "subject": [
+              "{{subject_identity}}",
+              "浅色薄纱服装",
+              "自然发丝与简洁首饰"
+            ],
+            "action": [
+              "抬头望向右上方的光源",
+              "保持宁静而克制的表情"
+            ],
+            "composition": [
+              "竖幅近景",
+              "三分之四侧脸",
+              "人物位于中右区域",
+              "前景花朵形成柔化遮挡"
+            ],
+            "environment": [
+              "{{background}}",
+              "白色玫瑰",
+              "树叶与柔和散景"
+            ],
+            "lighting": [
+              "金色侧逆光",
+              "树叶斑驳光影",
+              "头发边缘轮廓光",
+              "背景阴影保持层次"
+            ],
+            "materials": [
+              "皮肤、头发、薄纱、珍珠和花瓣具有不同高光与透光响应"
+            ],
+            "style": [
+              "浪漫自然主义",
+              "克制的时尚肖像",
+              "真实摄影质感"
+            ],
+            "technical": [
+              "竖幅构图",
+              "浅景深",
+              "前中后景分层"
+            ]
+          }
+        },
+        "variables": [
+          {
+            "name": "subject_identity",
+            "type": "string",
+            "description": "人物身份或外观锚点",
+            "required": true,
+            "default": "未指定的新角色"
+          },
+          {
+            "name": "background",
+            "type": "enum",
+            "description": "人物所在的自然背景",
+            "required": true,
+            "default": "花园",
+            "values": [
+              "花园",
+              "林间空地",
+              "温室",
+              "庭院"
+            ]
+          }
+        ],
+        "references": [
+          {
+            "observationId": "observation-garden-light-01",
+            "role": "lighting",
+            "purpose": "提供金色侧逆光、树叶斑驳影和轮廓光的视觉证据。",
+            "preserve": [
+              "光源方向",
+              "暖色高光与深绿背景的关系",
+              "前景花朵造成的景深层次"
+            ],
+            "allowedTransforms": [
+              "替换人物身份",
+              "改变服装颜色",
+              "改变花园背景密度"
+            ],
+            "excluded": [
+              "原图人物的具体面部身份",
+              "原图精确首饰布局"
+            ]
+          }
+        ],
+        "variants": [
+          {
+            "variantId": "portrait-golden-garden-soft-light",
+            "label": "柔和光线",
+            "change": "只降低斑驳光影对脸部的对比度，保持人物、花园和构图不变。",
+            "positive": "更柔和的金色侧光，脸部阴影过渡平滑，保留发丝轮廓光和前景花朵景深。",
+            "status": "draft"
+          }
+        ],
+        "evaluation": {
+          "criteria": [
+            {
+              "criterion": "primary-target",
+              "check": "人物脸部和视线是否是第一视觉焦点。",
+              "status": "pending"
+            },
+            {
+              "criterion": "light-coherence",
+              "check": "脸部、头发、薄纱和花朵的高光是否来自同一主光方向。",
+              "status": "pending"
+            },
+            {
+              "criterion": "material-separation",
+              "check": "皮肤、薄纱、珍珠和花瓣是否具有不同的材质反应。",
+              "status": "pending"
+            }
+          ],
+          "knownRisks": [
+            "过度美颜",
+            "花朵和首饰抢夺人物注意力",
+            "生成结果变成婚纱广告风格"
+          ],
+          "nextExperiment": "只改变背景密度，比较花园、林间空地和温室对人物主体清晰度的影响。"
+        },
+        "provenance": {
+          "source": "codex_authored",
+          "createdAt": "2026-08-18T12:00:00.000Z",
+          "updatedAt": "2026-08-18T12:00:00.000Z",
+          "changeLog": [
+            "创建通用人物肖像 Prompt 管理记录；电影镜头语言不是必填条件。"
+          ]
+        },
+        "validation": {
+          "onePrimaryTarget": true,
+          "providerNeutral": true,
+          "variablesBound": true,
+          "referencesScoped": true,
+          "observationReady": true
+        }
+      }
+    }
+  ],
   "response": "镜头以略低于瓶肩的平视角度近距离观察一只磨砂黑香水瓶，瓶体偏离画面中心，前缘清晰，后缘轻微失焦。狭长柔光从左后方擦过瓶肩，只在磨砂表面形成克制的灰色渐变；正面用很弱的卡纸反射补出标签轮廓。瓶底与深灰石台有明确接触阴影，背景比瓶体亮半档，避免黑色轮廓消失；反射受粗糙材质压低，不出现镜面高光。",
   "questions": [],
   "unsupportedClaims": []

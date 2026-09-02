@@ -6,18 +6,31 @@
   "additionalProperties": false,
   "required": [
     "kind",
-    "worldId",
+    "contractVersion",
+    "storyboardId",
+    "version",
     "skillReceipt",
     "sequenceTitle",
     "scenePurpose",
-    "shots"
+    "shots",
+    "coverageLedger",
+    "executionBoundary",
+    "validation",
+    "provenance"
   ],
   "properties": {
     "contractVersion": {
-      "const": "2.0.0"
+      "const": "2.5.0"
     },
     "kind": {
       "const": "cineweave_codex_storyboard_sequence"
+    },
+    "storyboardId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
     },
     "worldId": {
       "type": "string",
@@ -30,7 +43,9 @@
     "sequenceId": {
       "type": "string",
       "minLength": 1,
-      "maxLength": 160
+      "maxLength": 160,
+      "deprecated": true,
+      "description": "Legacy sequence identifier. New artifacts use storyboardId."
     },
     "sequenceTitle": {
       "type": "string",
@@ -42,6 +57,16 @@
       "minLength": 1,
       "maxLength": 2000
     },
+    "actionSequenceRef": {
+      "$ref": "#/$defs/actionSequenceRef"
+    },
+    "actionBeatIds": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 32,
+      "uniqueItems": true,
+      "items": { "$ref": "common.schema.json#/$defs/identifier" }
+    },
     "shots": {
       "type": "array",
       "minItems": 1,
@@ -49,6 +74,24 @@
       "items": {
         "$ref": "#/$defs/shot"
       }
+    },
+    "coverageLedger": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": { "$ref": "#/$defs/coverageLedgerEntry" }
+    },
+    "productionBindings": {
+      "$ref": "#/$defs/storyboardProductionBindings"
+    },
+    "executionBoundary": {
+      "$ref": "#/$defs/executionBoundary"
+    },
+    "validation": {
+      "$ref": "#/$defs/validation"
+    },
+    "provenance": {
+      "$ref": "common.schema.json#/$defs/provenance"
     }
   },
   "$defs": {
@@ -92,6 +135,136 @@
           "type": "string",
           "format": "date-time"
         }
+      }
+    },
+    "actionSequenceRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        { "properties": { "kind": { "const": "cineweave_codex_action_sequence_spec" } } }
+      ]
+    },
+    "shotSpecRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        { "properties": { "kind": { "const": "cineweave_codex_shot_spec" } } }
+      ]
+    },
+    "boardAssemblyPlanRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        { "properties": { "kind": { "const": "cineweave_codex_board_assembly_plan" } } }
+      ]
+    },
+    "promptRecordRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        { "properties": { "kind": { "const": "cineweave_codex_prompt_record" } } }
+      ]
+    },
+    "imagePromptRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        { "properties": { "kind": { "const": "cineweave_codex_image_prompt" } } }
+      ]
+    },
+    "executionReceiptRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        { "properties": { "kind": { "const": "cineweave_execution_receipt" } } }
+      ]
+    },
+    "evidenceBundleRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        { "properties": { "kind": { "const": "cineweave_codex_evidence_bundle" } } }
+      ]
+    },
+    "coverageLedgerEntry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["coverageId", "beatIds", "shotIds", "coverageTypes", "purpose", "continuityDependencies"],
+      "properties": {
+        "coverageId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "beatIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 32,
+          "uniqueItems": true,
+          "items": { "$ref": "common.schema.json#/$defs/identifier" }
+        },
+        "shotIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 24,
+          "uniqueItems": true,
+          "items": { "$ref": "common.schema.json#/$defs/identifier" }
+        },
+        "coverageTypes": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 7,
+          "uniqueItems": true,
+          "items": { "enum": ["establish", "orientation", "preparation", "action", "reaction", "consequence", "transition"] }
+        },
+        "purpose": { "type": "string", "minLength": 1, "maxLength": 1600 },
+        "continuityDependencies": { "$ref": "common.schema.json#/$defs/stringList" },
+        "editorialDisposition": { "enum": ["visible", "offscreen_approved"] }
+      }
+    },
+    "panelBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["shotId", "panelId", "recipeRunId", "taskId", "regionId", "tileId", "status"],
+      "properties": {
+        "shotId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "panelId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "recipeRunId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "taskId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "regionId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "tileId": { "$ref": "common.schema.json#/$defs/identifier" },
+        "status": { "enum": ["planned", "rendered", "accepted", "failed"] },
+        "promptRecordRef": { "$ref": "#/$defs/promptRecordRef" },
+        "imagePromptRef": { "$ref": "#/$defs/imagePromptRef" },
+        "executionReceiptRef": { "$ref": "#/$defs/executionReceiptRef" },
+        "evidenceBundleRef": { "$ref": "#/$defs/evidenceBundleRef" }
+      }
+    },
+    "storyboardProductionBindings": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["boardAssemblyPlanRef", "panels"],
+      "properties": {
+        "boardAssemblyPlanRef": { "$ref": "#/$defs/boardAssemblyPlanRef" },
+        "panels": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 24,
+          "items": { "$ref": "#/$defs/panelBinding" }
+        }
+      }
+    },
+    "executionBoundary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["providerNeutral", "generatesMedia", "humanApprovalRequired"],
+      "properties": {
+        "providerNeutral": { "const": true },
+        "generatesMedia": { "const": false },
+        "humanApprovalRequired": { "const": true },
+        "notes": { "type": "string", "maxLength": 1200 }
+      }
+    },
+    "validation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["ordersContiguous", "shotSpecsExact", "coverageLedgerClosed", "actionCoverageComplete", "productionBindingsExact", "providerNeutral"],
+      "properties": {
+        "ordersContiguous": { "const": true },
+        "shotSpecsExact": { "const": true },
+        "coverageLedgerClosed": { "const": true },
+        "actionCoverageComplete": { "type": "boolean" },
+        "productionBindingsExact": { "type": "boolean" },
+        "providerNeutral": { "const": true }
       }
     },
     "lens": {
@@ -248,6 +421,7 @@
       "additionalProperties": false,
       "required": [
         "shotId",
+        "shotSpecRef",
         "order",
         "durationSeconds",
         "purpose",
@@ -263,6 +437,7 @@
         "soundEdit",
         "transition",
         "continuity",
+        "coverageLedgerIds",
         "framePrompt"
       ],
       "properties": {
@@ -270,6 +445,16 @@
           "type": "string",
           "minLength": 1,
           "maxLength": 160
+        },
+        "shotSpecRef": {
+          "$ref": "#/$defs/shotSpecRef"
+        },
+        "actionBeatIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 16,
+          "uniqueItems": true,
+          "items": { "$ref": "common.schema.json#/$defs/identifier" }
         },
         "order": {
           "type": "integer",
@@ -354,6 +539,13 @@
         "continuity": {
           "$ref": "#/$defs/continuity"
         },
+        "coverageLedgerIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 16,
+          "uniqueItems": true,
+          "items": { "$ref": "common.schema.json#/$defs/identifier" }
+        },
         "imagePromptId": {
           "type": "string",
           "minLength": 1,
@@ -393,5 +585,9 @@
         }
       }
     }
+  },
+  "dependentRequired": {
+    "actionSequenceRef": ["actionBeatIds"],
+    "actionBeatIds": ["actionSequenceRef"]
   }
 }

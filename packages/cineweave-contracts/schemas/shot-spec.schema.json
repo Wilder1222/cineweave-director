@@ -87,8 +87,16 @@
         "visualHierarchy": { "type": "string", "minLength": 1, "maxLength": 800 }
       }
     },
-    "lightingPlanRef": { "$ref": "common.schema.json#/$defs/contractRef" },
-    "temporalSpecRef": { "$ref": "common.schema.json#/$defs/contractRef" },
+    "lightingPlanRef": {
+      "$ref": "common.schema.json#/$defs/contractRef",
+      "deprecated": true,
+      "description": "Forbidden legacy back-reference. ShotLightingPlan is downstream and must reference this ShotSpec instead."
+    },
+    "temporalSpecRef": {
+      "$ref": "common.schema.json#/$defs/contractRef",
+      "deprecated": true,
+      "description": "Forbidden legacy back-reference. TemporalSpec is downstream and must reference this ShotSpec instead."
+    },
     "performanceTimelineRefs": { "type": "array", "maxItems": 12, "items": { "$ref": "common.schema.json#/$defs/contractRef" } },
     "actionMoment": { "type": "string", "minLength": 1, "maxLength": 1200 },
     "endState": { "type": "string", "minLength": 1, "maxLength": 1000 },
@@ -154,6 +162,12 @@
         "continuity": { "type": "string", "minLength": 1, "maxLength": 1200 }
       }
     }
+  },
+  "not": {
+    "anyOf": [
+      { "required": ["lightingPlanRef"] },
+      { "required": ["temporalSpecRef"] }
+    ]
   },
   "dependentRequired": {
     "actionSequenceRef": ["actionBeatIds"],

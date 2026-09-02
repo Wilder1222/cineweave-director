@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" data-case-id="case.atlas.portrait-original">
+  <title>Quiet profile light study</title>
+  <desc>Original deterministic portrait fixture; no external media or provider output.</desc>
+  <rect width="1200" height="900" fill="#F4E9DB"/>
+  <circle data-element="key-light" cx="890" cy="180" r="118" fill="#E7B65A" opacity="0.72"/>
+  <path data-element="subject-silhouette" d="M475 735 C480 590 520 500 600 475 C540 430 530 335 575 275 C625 205 735 220 770 300 C805 382 760 447 710 478 C805 510 850 610 850 735 Z" fill="#2E4057"/>
+  <path data-element="gaze-line" d="M650 340 L885 245" fill="none" stroke="#1D2733" stroke-width="8" stroke-dasharray="18 14"/>
+  <circle cx="651" cy="338" r="13" fill="#1D2733"/>
+  <text x="72" y="100" fill="#1D2733" font-family="system-ui, sans-serif" font-size="46" font-weight="600" text-anchor="start">QUIET PROFILE</text>
+  <text x="72" y="150" fill="#6B7A5A" font-family="system-ui, sans-serif" font-size="20" font-weight="500" text-anchor="start">Geometric light study</text>
+</svg>

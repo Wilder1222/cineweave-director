@@ -4,6 +4,99 @@
   "route": "execution_request",
   "outcome": "clarify",
   "contractKinds": ["cineweave_execution_request"],
+  "payloads": [
+    {
+      "kind": "cineweave_execution_request",
+      "payload": {
+        "kind": "cineweave_execution_request",
+        "contractVersion": "2.3.0",
+        "requestId": "execution.fixture-portrait",
+        "version": 1,
+        "status": "ready",
+        "createdAt": "2026-08-21T10:05:00.000Z",
+        "skillReceipt": {
+          "repository": "https://github.com/Wilder1222/cineweave-studio",
+          "ref": "v2.3.1",
+          "commit": "0123456789abcdef0123456789abcdef01234567",
+          "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "installedBy": "codex-environment",
+          "usedAt": "2026-08-21T10:05:00.000Z"
+        },
+        "adapterDescriptorRef": {
+          "kind": "cineweave_adapter_descriptor",
+          "id": "adapter.fixture-svg",
+          "version": 1,
+          "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        "capabilityProfileRef": {
+          "kind": "cineweave_codex_capability_profile",
+          "id": "capability.fixture-svg",
+          "version": 1,
+          "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+        },
+        "renderPlanRef": {
+          "kind": "cineweave_codex_render_plan",
+          "id": "render.fixture-portrait",
+          "version": 1,
+          "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+        },
+        "promptRef": {
+          "kind": "cineweave_codex_prompt_record",
+          "id": "prompt.fixture-portrait",
+          "version": 1,
+          "contentHash": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+        },
+        "operationId": "image.generate.fixture",
+        "executionMode": "fixture",
+        "idempotencyKey": "fixture:portrait:0001",
+        "inputArtifactRefs": [],
+        "observationIds": [],
+        "parameters": [
+          {
+            "name": "label",
+            "value": "CineWeave fixture portrait",
+            "sensitive": false
+          }
+        ],
+        "outputRequest": {
+          "mediaKind": "image",
+          "acceptedMimeTypes": [
+            "image/svg+xml"
+          ],
+          "variantCount": 1,
+          "destinationPolicy": "project_execution_store"
+        },
+        "budget": {
+          "currency": "USD",
+          "maxAmount": 0,
+          "maxAttempts": 1,
+          "maxWallSeconds": 30,
+          "unknownCostAction": "block"
+        },
+        "authorization": {
+          "externalEffects": "denied",
+          "approvalScope": "none"
+        },
+        "preflight": {
+          "status": "ready",
+          "exactRefsResolved": true,
+          "operationSupported": true,
+          "hardCapabilitiesSatisfied": true,
+          "rightsResolved": true,
+          "budgetResolved": true,
+          "secretsAbsent": true
+        },
+        "provenance": {
+          "source": "codex_authored",
+          "createdAt": "2026-08-21T10:05:00.000Z",
+          "updatedAt": "2026-08-21T10:05:00.000Z",
+          "changeLog": [
+            "v1: prepare a no-network fixture execution"
+          ]
+        }
+      }
+    }
+  ],
   "response": "当前执行请求必须保持 blocked：RenderPlan、PromptRecord、AdapterDescriptor 和 CapabilityProfile 都缺少精确版本与 contentHash，预算 maxAmount 未定义，也没有绑定该 ExecutionRequest 本身的审批。补齐这些信息前阻断外部执行；审批其他上游资产不能替代对精确请求哈希的审批。",
   "questions": [
     "请提供四个输入工件的精确版本和 contentHash。",

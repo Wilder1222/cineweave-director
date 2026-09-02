@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" data-case-id="case.atlas.editorial-original">
+  <title>Form and field editorial grid</title>
+  <desc>Original deterministic editorial fixture; no external media or provider output.</desc>
+  <rect width="1200" height="900" fill="#F4F0EA"/>
+  <rect data-element="safe-area" x="55" y="55" width="1090" height="790" fill="none" stroke="#79706B" stroke-width="3" stroke-dasharray="16 12"/>
+  <g data-element="editorial-grid" stroke="#79706B" stroke-width="2" opacity="0.45"><path d="M420 55 V845"/><path d="M790 55 V845"/><path d="M55 280 H1145"/></g>
+  <path data-element="garment-silhouette" d="M590 225 Q600 175 650 175 Q700 175 710 225 L760 360 L690 405 L780 735 H520 L610 405 L540 360 Z" fill="#D7A6A1" stroke="#261F25" stroke-width="8"/>
+  <text x="90" y="145" fill="#261F25" font-family="system-ui, sans-serif" font-size="58" font-weight="600" text-anchor="start">FORM &amp; FIELD</text>
+  <text x="92" y="220" fill="#B5485B" font-family="system-ui, sans-serif" font-size="22" font-weight="600" text-anchor="start">An original editorial grid</text>
+  <text x="1080" y="800" fill="#79706B" font-family="system-ui, sans-serif" font-size="84" font-weight="700" text-anchor="end">01</text>
+</svg>

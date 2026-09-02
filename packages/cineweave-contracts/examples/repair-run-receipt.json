@@ -1,0 +1,94 @@
+{
+  "kind": "cineweave_codex_repair_run_receipt",
+  "contractVersion": "2.5.0",
+  "repairRunId": "repair-run.blocked-camera-plan",
+  "version": 1,
+  "status": "blocked",
+  "repairRef": {
+    "kind": "cineweave_codex_director_repair",
+    "id": "repair.director.rain-courtyard-camera-v1",
+    "version": 1,
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "targetRef": {
+    "kind": "cineweave_codex_shot_spec",
+    "id": "shot.rain-courtyard-recognition-v1",
+    "version": 1,
+    "contentHash": "sha256:47ecc379955cbfd7a44c43c6c37b781d10f2aef57f05b0173a4c41d4d199c95f"
+  },
+  "candidateRef": null,
+  "before": {
+    "status": "not_captured",
+    "artifactRef": null,
+    "payloadHash": null,
+    "capturedAt": "2026-09-02T14:00:00.000Z"
+  },
+  "after": {
+    "status": "not_captured",
+    "artifactRef": null,
+    "payloadHash": null,
+    "capturedAt": "2026-09-02T14:00:00.000Z"
+  },
+  "preserve": [
+    "角色身份、服装、姿态和三分之四回望",
+    "北向天光与廊下暖灯的既有物理关系",
+    "门槛、药盒和两人未跨越的空间关系",
+    "原 ShotSpec 的戏剧目的和稳定结束状态"
+  ],
+  "preservedInputRefs": [],
+  "changeEvidence": {
+    "variable": "camera",
+    "targetPath": "camera.focalLengthMm",
+    "requestedTargetState": "改为 50mm，并保持相同轴侧、眼线和三分之四回望。",
+    "observedChangedPaths": ["/camera/focalLengthMm"]
+  },
+  "approvalEvidence": {
+    "required": true,
+    "decision": "missing",
+    "approvalRecordHash": null,
+    "exactRepairHashMatched": false
+  },
+  "adapter": null,
+  "timing": {
+    "startedAt": "2026-09-02T14:00:00.000Z",
+    "finishedAt": "2026-09-02T14:00:00.000Z",
+    "durationMs": 0
+  },
+  "acceptance": {
+    "status": "pending",
+    "checkIds": ["check.camera-space", "check.camera-regression"],
+    "humanReviewRequired": true
+  },
+  "executionBoundary": {
+    "providerNeutral": true,
+    "callsNetwork": false,
+    "writesSourceMedia": false,
+    "writesDerivedMedia": false,
+    "mutatesParentArtifact": false,
+    "claimsApproval": false,
+    "humanReviewRequired": true
+  },
+  "validation": {
+    "repairPlanValid": true,
+    "targetExact": false,
+    "parentImmutable": true,
+    "preservedInputRefsExact": true,
+    "changedPathBounded": false,
+    "candidateSchemaValid": false,
+    "candidateSemanticValid": false,
+    "noSuccessClaim": true
+  },
+  "failure": {
+    "stage": "authorization",
+    "code": "repair.approval_missing",
+    "retryable": false,
+    "message": "The exact repair plan has no approved runtime decision."
+  },
+  "provenance": {
+    "source": "suite_builtin",
+    "createdAt": "2026-09-02T14:00:00.000Z",
+    "updatedAt": "2026-09-02T14:00:00.000Z",
+    "parentId": "repair.director.rain-courtyard-camera-v1",
+    "changeLog": ["Synthetic blocked receipt demonstrating exact-approval and pending-review boundaries."]
+  }
+}

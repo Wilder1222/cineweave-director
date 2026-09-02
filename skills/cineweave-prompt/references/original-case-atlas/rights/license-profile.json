@@ -1,0 +1,65 @@
+{
+  "kind": "cineweave_codex_license_profile",
+  "contractVersion": "2.0.0",
+  "profileId": "license.original-case-atlas-fixtures",
+  "title": "Original case atlas fixture rights",
+  "version": 1,
+  "status": "verified",
+  "subjectType": "reference_asset",
+  "subjectRef": "skills/cineweave-prompt/assets/original-case-atlas",
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-studio.git",
+    "ref": "working-tree-v2.5.x",
+    "commit": "6dd43cb645122f57b5c545803b374d831da454d9",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-09-02T00:00:00.000Z"
+  },
+  "licenseId": "MIT",
+  "commercialUse": "allowed",
+  "redistribution": "allowed",
+  "derivativeUse": "allowed",
+  "attribution": {
+    "required": true,
+    "instructions": "Retain the repository MIT License copyright and permission notice with substantial copies."
+  },
+  "identityRights": {
+    "likenessConsent": "not_applicable",
+    "identityUse": "not_applicable",
+    "publication": "allowed",
+    "notes": "All depicted subjects are fictional geometric constructions and are not based on a real person's likeness."
+  },
+  "assetRights": {
+    "ownership": "creator_owned",
+    "generationUse": "allowed",
+    "publication": "allowed",
+    "notes": "The SVG source and deterministic generator are original repository-authored fixtures with no imported media, logos, fonts or third-party artwork."
+  },
+  "dataHandling": {
+    "retention": "project_scoped",
+    "trainingUse": "prohibited",
+    "privateAssetPolicy": "local_only"
+  },
+  "dependencies": [],
+  "evidence": [
+    {
+      "sourceLabel": "Repository MIT License and deterministic SVG source review",
+      "checkedAt": "2026-09-02T00:00:00.000Z",
+      "status": "verified",
+      "notes": "Every atlas candidate is rebuilt from repository-authored SVG primitives without external input bytes."
+    }
+  ],
+  "validation": {
+    "checked": true,
+    "noAssumedCommercialUse": true,
+    "dependenciesReviewed": true,
+    "identityRightsReviewed": true
+  },
+  "provenance": {
+    "source": "codex_authored",
+    "createdAt": "2026-09-02T00:00:00.000Z",
+    "updatedAt": "2026-09-02T00:00:00.000Z",
+    "changeLog": [
+      "v1: record creator-owned, redistributable rights for the deterministic Original Case Atlas fixtures"
+    ]
+  }
+}

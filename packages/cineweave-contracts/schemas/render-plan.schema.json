@@ -9,7 +9,6 @@
     "worldId",
     "skillReceipt",
     "mode",
-    "promptPayloadRef",
     "canvas",
     "qualityBudget",
     "variantCount",
@@ -20,10 +19,20 @@
   ],
   "properties": {
     "contractVersion": {
-      "const": "2.0.0"
+      "enum": [
+        "2.0.0",
+        "2.5.0"
+      ]
     },
     "kind": {
       "const": "cineweave_codex_render_plan"
+    },
+    "renderPlanId": {
+      "$ref": "common.schema.json#/$defs/identifier"
+    },
+    "version": {
+      "type": "integer",
+      "minimum": 1
     },
     "worldId": {
       "type": "string",
@@ -54,7 +63,11 @@
     "promptPayloadRef": {
       "type": "string",
       "minLength": 1,
-      "maxLength": 240
+      "maxLength": 240,
+      "deprecated": true
+    },
+    "promptRef": {
+      "$ref": "#/$defs/exactPromptRef"
     },
     "canvas": {
       "$ref": "#/$defs/canvas"
@@ -114,27 +127,14 @@
       "maxLength": 2000
     },
     "assetRecipeRef": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "id",
-        "contentHash"
-      ],
-      "properties": {
-        "id": {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 160
+      "anyOf": [
+        {
+          "$ref": "#/$defs/legacyArtifactRef"
         },
-        "version": {
-          "type": "integer",
-          "minimum": 1
-        },
-        "contentHash": {
-          "type": "string",
-          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        {
+          "$ref": "#/$defs/exactAssetRecipeRef"
         }
-      }
+      ]
     },
     "recipeTaskIds": {
       "type": "array",
@@ -147,99 +147,47 @@
       }
     },
     "controlSetRef": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "id",
-        "contentHash"
-      ],
-      "properties": {
-        "id": {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 160
+      "anyOf": [
+        {
+          "$ref": "#/$defs/legacyArtifactRef"
         },
-        "version": {
-          "type": "integer",
-          "minimum": 1
-        },
-        "contentHash": {
-          "type": "string",
-          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        {
+          "$ref": "#/$defs/exactControlSetRef"
         }
-      }
+      ]
     },
     "evidenceBundleRef": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "id",
-        "contentHash"
-      ],
-      "properties": {
-        "id": {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 160
+      "anyOf": [
+        {
+          "$ref": "#/$defs/legacyArtifactRef"
         },
-        "version": {
-          "type": "integer",
-          "minimum": 1
-        },
-        "contentHash": {
-          "type": "string",
-          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        {
+          "$ref": "#/$defs/exactEvidenceBundleRef"
         }
-      }
+      ]
     },
     "capabilityProfileRef": {
-      "type": "object",
-      "additionalProperties": false,
-      "required": [
-        "id",
-        "contentHash"
-      ],
-      "properties": {
-        "id": {
-          "type": "string",
-          "minLength": 1,
-          "maxLength": 160
+      "anyOf": [
+        {
+          "$ref": "#/$defs/legacyArtifactRef"
         },
-        "version": {
-          "type": "integer",
-          "minimum": 1
-        },
-        "contentHash": {
-          "type": "string",
-          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        {
+          "$ref": "#/$defs/exactCapabilityProfileRef"
         }
-      }
+      ]
     },
     "licenseProfileRefs": {
       "type": "array",
       "maxItems": 24,
       "items": {
-        "type": "object",
-        "additionalProperties": false,
-        "required": [
-          "id",
-          "contentHash"
-        ],
-        "properties": {
-          "id": {
-            "type": "string",
-            "minLength": 1,
-            "maxLength": 160
+        "anyOf": [
+          {
+            "$ref": "#/$defs/legacyArtifactRef"
           },
-          "version": {
-            "type": "integer",
-            "minimum": 1
-          },
-          "contentHash": {
-            "type": "string",
-            "pattern": "^sha256:[0-9a-fA-F]{64}$"
+          {
+            "$ref": "#/$defs/exactLicenseProfileRef"
           }
-        }
+        ]
       }
     },
     "capabilityMatch": {
@@ -286,9 +234,197 @@
           "type": "boolean"
         }
       }
+    },
+    "provenance": {
+      "$ref": "common.schema.json#/$defs/provenance"
     }
   },
+  "allOf": [
+    {
+      "if": {
+        "anyOf": [
+          {
+            "not": {
+              "required": [
+                "contractVersion"
+              ]
+            }
+          },
+          {
+            "required": [
+              "contractVersion"
+            ],
+            "properties": {
+              "contractVersion": {
+                "const": "2.0.0"
+              }
+            }
+          }
+        ]
+      },
+      "then": {
+        "required": [
+          "promptPayloadRef"
+        ]
+      }
+    },
+    {
+      "if": {
+        "required": [
+          "contractVersion"
+        ],
+        "properties": {
+          "contractVersion": {
+            "const": "2.5.0"
+          }
+        }
+      },
+      "then": {
+        "required": [
+          "renderPlanId",
+          "version",
+          "promptRef",
+          "provenance"
+        ],
+        "not": {
+          "required": [
+            "promptPayloadRef"
+          ]
+        },
+        "properties": {
+          "assetRecipeRef": {
+            "$ref": "#/$defs/exactAssetRecipeRef"
+          },
+          "controlSetRef": {
+            "$ref": "#/$defs/exactControlSetRef"
+          },
+          "evidenceBundleRef": {
+            "$ref": "#/$defs/exactEvidenceBundleRef"
+          },
+          "capabilityProfileRef": {
+            "$ref": "#/$defs/exactCapabilityProfileRef"
+          },
+          "licenseProfileRefs": {
+            "type": "array",
+            "items": {
+              "$ref": "#/$defs/exactLicenseProfileRef"
+            }
+          }
+        }
+      }
+    }
+  ],
   "$defs": {
+    "legacyArtifactRef": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "contentHash"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "contentHash": {
+          "type": "string",
+          "pattern": "^sha256:[0-9a-fA-F]{64}$"
+        }
+      }
+    },
+    "exactPromptRef": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        {
+          "properties": {
+            "kind": {
+              "enum": [
+                "cineweave_codex_prompt_record",
+                "cineweave_codex_image_prompt"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    "exactAssetRecipeRef": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        {
+          "properties": {
+            "kind": {
+              "const": "cineweave_codex_asset_recipe"
+            }
+          }
+        }
+      ]
+    },
+    "exactControlSetRef": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        {
+          "properties": {
+            "kind": {
+              "const": "cineweave_codex_control_channel_set"
+            }
+          }
+        }
+      ]
+    },
+    "exactEvidenceBundleRef": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        {
+          "properties": {
+            "kind": {
+              "const": "cineweave_codex_evidence_bundle"
+            }
+          }
+        }
+      ]
+    },
+    "exactCapabilityProfileRef": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        {
+          "properties": {
+            "kind": {
+              "const": "cineweave_codex_capability_profile"
+            }
+          }
+        }
+      ]
+    },
+    "exactLicenseProfileRef": {
+      "allOf": [
+        {
+          "$ref": "common.schema.json#/$defs/contractRef"
+        },
+        {
+          "properties": {
+            "kind": {
+              "const": "cineweave_codex_license_profile"
+            }
+          }
+        }
+      ]
+    },
     "skillReceipt": {
       "type": "object",
       "additionalProperties": false,

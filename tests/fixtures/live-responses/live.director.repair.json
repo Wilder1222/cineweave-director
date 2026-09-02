@@ -1,0 +1,103 @@
+{
+  "caseId": "live.director.repair",
+  "selectedSkill": "cineweave-director",
+  "route": "repair",
+  "outcome": "answer",
+  "contractKinds": [
+    "cineweave_codex_director_repair"
+  ],
+  "payloads": [
+    {
+      "kind": "cineweave_codex_director_repair",
+      "payload": {
+        "kind": "cineweave_codex_director_repair",
+        "contractVersion": "2.5.0",
+        "repairId": "repair.director.rain-courtyard-camera-v1",
+        "version": 1,
+        "worldId": "world-rain-courtyard",
+        "disposition": "repair",
+        "skillReceipt": {
+          "repository": "https://github.com/Wilder1222/cineweave-studio",
+          "ref": "v2.5.1",
+          "commit": "0123456789abcdef0123456789abcdef01234567",
+          "installedBy": "codex-environment",
+          "usedAt": "2026-09-01T10:30:00.000Z"
+        },
+        "observedFailure": {
+          "owningDomain": "director",
+          "variable": "camera",
+          "description": "候选镜头的焦段过长，压平了人物与门槛之间的距离，导致她先听见脚步、再回望来人的空间因果不可读。",
+          "evidenceObservationIds": [
+            "observation.director-camera-compression-v1"
+          ],
+          "severity": "important",
+          "confidence": "medium"
+        },
+        "preserve": [
+          "角色身份、服装、姿态和三分之四回望",
+          "北向天光与廊下暖灯的既有物理关系",
+          "门槛、药盒和两人未跨越的空间关系",
+          "原 ShotSpec 的戏剧目的和稳定结束状态"
+        ],
+        "targetRef": {
+          "kind": "cineweave_codex_shot_spec",
+          "id": "shot.rain-courtyard-recognition-v1",
+          "version": 1,
+          "contentHash": "sha256:47ecc379955cbfd7a44c43c6c37b781d10f2aef57f05b0173a4c41d4d199c95f"
+        },
+        "change": {
+          "variable": "camera",
+          "targetPath": "camera.focalLengthMm",
+          "currentState": "85mm 令门槛和两人距离被长焦压平。",
+          "targetState": "改为 50mm，并保持相同轴侧、眼线和三分之四回望，使门槛和未跨越距离在中景中可读。",
+          "rationale": "只调整 Director 的镜头透视变量，恢复空间关系，不改写 Character、Scene、Style、Prompt 或 Production 所有的事实。"
+        },
+        "acceptanceChecks": [
+          {
+            "checkId": "check.camera-space",
+            "criterion": "人物、门槛和来人之间的距离在目标观看尺度上可读。",
+            "expectedEvidence": "中景保留门槛宽度、人物脚下支撑和两人之间未跨越的空带。",
+            "status": "pending"
+          },
+          {
+            "checkId": "check.camera-regression",
+            "criterion": "既有身份、光向、屏幕方向和表演意图不退化。",
+            "expectedEvidence": "角色锚点、北向主光、同轴侧机位和三分之四回望保持不变。",
+            "status": "pending"
+          }
+        ],
+        "stopCondition": "仅当空间可读性检查通过且没有新的阻塞级连续性回归时停止；否则返回新的 observed failure，不宣称修复成功。",
+        "executionGate": {
+          "requiresHumanApproval": true,
+          "status": "planned"
+        },
+        "executionBoundary": {
+          "providerNeutral": true,
+          "generatesMedia": false,
+          "approvesAssets": false,
+          "humanApprovalRequired": true,
+          "notes": "该合同只计划一个镜头变量的修改，不调用 Provider、不修改父工件且不宣称候选已通过。"
+        },
+        "validation": {
+          "singleVariable": true,
+          "parentImmutable": true,
+          "evidenceBound": true,
+          "ownershipResolved": true,
+          "providerNeutral": true,
+          "noSuccessClaim": true
+        },
+        "provenance": {
+          "source": "codex_authored",
+          "createdAt": "2026-09-01T10:30:00.000Z",
+          "updatedAt": "2026-09-01T10:30:00.000Z",
+          "changeLog": [
+            "v1: single Director camera repair with exact ShotSpec parent and preserved cross-domain constraints"
+          ]
+        }
+      }
+    }
+  ],
+  "response": "修复只允许一个摄影机变量：把镜头恢复到正确轴侧。保持已经通过的人物、场景和动作约束不变，所有验收仍为待验证。",
+  "questions": [],
+  "unsupportedClaims": []
+}

@@ -1,0 +1,70 @@
+{
+  "suite": "cineweave-original-case-atlas",
+  "version": "1.0.0",
+  "purpose": "Verify that a worked-example request loads the small Original Case Atlas index first and then exactly one matching category page.",
+  "cases": [
+    {
+      "id": "atlas-route-portrait",
+      "category": "portrait",
+      "route": "prompt_design",
+      "prompt": "给我一个人物肖像 worked example，并保留明确的视线和主光层级。",
+      "loads": ["references/original-case-atlas/index.json", "references/original-case-atlas/categories/portrait.md"],
+      "expectedOutput": "prompt-record with one original portrait worked case",
+      "assertions": ["index loads before category", "only portrait category loads", "PromptRecord version and candidate evidence remain bound"]
+    },
+    {
+      "id": "atlas-route-product",
+      "category": "product",
+      "route": "prompt_design",
+      "prompt": "Show an unbranded product packshot worked example with a support plane and contact shadow.",
+      "loads": ["references/original-case-atlas/index.json", "references/original-case-atlas/categories/product.md"],
+      "expectedOutput": "prompt-record with one original product worked case",
+      "assertions": ["index loads before category", "only product category loads", "PromptRecord version and candidate evidence remain bound"]
+    },
+    {
+      "id": "atlas-route-food",
+      "category": "food",
+      "route": "prompt_design",
+      "prompt": "给我一个菜品与蒸汽层级清楚的原创食物案例。",
+      "loads": ["references/original-case-atlas/index.json", "references/original-case-atlas/categories/food.md"],
+      "expectedOutput": "prompt-record with one original food worked case",
+      "assertions": ["index loads before category", "only food category loads", "PromptRecord version and candidate evidence remain bound"]
+    },
+    {
+      "id": "atlas-route-architecture",
+      "category": "architecture",
+      "route": "prompt_design",
+      "prompt": "Show an architecture worked example with readable massing, facade rhythm and a scale cue.",
+      "loads": ["references/original-case-atlas/index.json", "references/original-case-atlas/categories/architecture.md"],
+      "expectedOutput": "prompt-record with one original architecture worked case",
+      "assertions": ["index loads before category", "only architecture category loads", "PromptRecord version and candidate evidence remain bound"]
+    },
+    {
+      "id": "atlas-route-editorial",
+      "category": "editorial",
+      "route": "prompt_design",
+      "prompt": "给我一个有安全区、栅格和原创标题的时尚版式 worked example。",
+      "loads": ["references/original-case-atlas/index.json", "references/original-case-atlas/categories/editorial.md"],
+      "expectedOutput": "prompt-record with one original editorial worked case",
+      "assertions": ["index loads before category", "only editorial category loads", "PromptRecord version and candidate evidence remain bound"]
+    },
+    {
+      "id": "atlas-route-diagrams",
+      "category": "diagrams",
+      "route": "prompt_design",
+      "prompt": "Show a three-node left-to-right flowchart worked example with exact topology.",
+      "loads": ["references/original-case-atlas/index.json", "references/original-case-atlas/categories/diagrams.md"],
+      "expectedOutput": "prompt-record with one original diagram worked case",
+      "assertions": ["index loads before category", "only diagrams category loads", "PromptRecord version and candidate evidence remain bound"]
+    },
+    {
+      "id": "atlas-route-exact-text",
+      "category": "exact-text",
+      "route": "prompt_design",
+      "prompt": "给我一个必须保留中英文、大小写和标点的精确文字案例。",
+      "loads": ["references/original-case-atlas/index.json", "references/original-case-atlas/categories/exact-text.md"],
+      "expectedOutput": "prompt-record with one original exact-text worked case",
+      "assertions": ["index loads before category", "only exact-text category loads", "UTF-8 NFC codepoints and non-pixel-pinned font policy remain explicit"]
+    }
+  ]
+}

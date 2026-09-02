@@ -210,6 +210,8 @@ export async function dispatchOutbox(projectRoot, platform, connector, options =
   if (options.allowNetwork !== true) throw new Error("MCP network dispatch is disabled; pass allowNetwork=true only with a trusted connector");
   assertConnector(connector);
   const now = nowFrom(options);
+  const timeoutMs = Number(options.timeoutMs ?? 60_000);
+  if (!Number.isSafeInteger(timeoutMs) || timeoutMs < 1 || timeoutMs > 300_000) throw new TypeError("timeoutMs must be an integer from 1 to 300000");
   const attempts = [];
   const attemptResults = [];
   const receipts = [];
@@ -244,8 +246,6 @@ export async function dispatchOutbox(projectRoot, platform, connector, options =
     let response = null;
     let error = null;
     const controller = new AbortController();
-    const timeoutMs = Number(options.timeoutMs ?? 60_000);
-    if (!Number.isSafeInteger(timeoutMs) || timeoutMs < 1 || timeoutMs > 300_000) throw new TypeError("timeoutMs must be an integer from 1 to 300000");
     let timeoutId;
     try {
       const timeout = new Promise((_, reject) => {

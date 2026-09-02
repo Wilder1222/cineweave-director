@@ -1,0 +1,478 @@
+{
+  "kind": "cineweave_codex_cinematic_skill_manifest",
+  "contractVersion": "2.5.0",
+  "cinematicSkillManifestId": "manifest.cinematic-skills.v1",
+  "version": 1,
+  "title": "CineWeave 首批原子电影技能",
+  "status": "active",
+  "skills": [
+    {
+      "skillId": "establishing-reveal",
+      "version": 1,
+      "title": "Establishing Reveal",
+      "summary": "先建立可读空间，再用一个有动机的揭示改写观众对空间的理解。",
+      "storyFunction": "establish",
+      "targetLevel": "shot",
+      "bindingSlots": [
+        { "slotId": "scene", "label": "场景绑定", "role": "scene", "required": true, "acceptedContractKinds": ["scene_binding"], "maxBindings": 1 },
+        { "slotId": "anchor_character", "label": "尺度人物", "role": "character", "required": false, "acceptedContractKinds": ["character_binding"], "maxBindings": 1 }
+      ],
+      "parameters": [
+        { "parameterId": "reveal_motion", "label": "揭示运动", "domain": "camera", "valueType": "enum", "defaultValue": "dolly_reveal", "options": ["dolly_reveal", "lateral_reveal", "tilt_reveal"], "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "camera.movementIntent" }] },
+        { "parameterId": "reveal_intensity", "label": "揭示强度", "domain": "composition", "valueType": "number", "defaultValue": 0.55, "range": { "minimum": 0, "maximum": 1, "step": 0.05 }, "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "composition.visualHierarchy" }] },
+        { "parameterId": "duration_seconds", "label": "持续时间", "domain": "tempo", "valueType": "number", "defaultValue": 5, "range": { "minimum": 0.5, "maximum": 30, "step": 0.1 }, "unit": "seconds", "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "durationSeconds" }] }
+      ],
+      "program": [
+        { "stepId": "bind-scene", "order": 1, "operation": "bind", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "bindings.scene" }, "source": { "type": "binding_slot", "id": "scene" }, "rationale": "空间揭示必须从一个可复用的精确地理开始。" },
+        { "stepId": "set-reveal-motion", "order": 2, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "camera.movementIntent" }, "source": { "type": "parameter", "id": "reveal_motion" }, "rationale": "运动服务于信息揭示，而不是装饰。" },
+        { "stepId": "set-reveal-time", "order": 3, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "durationSeconds" }, "source": { "type": "parameter", "id": "duration_seconds" }, "rationale": "揭示需要保留可读的时间窗口。" },
+        { "stepId": "handoff-shot", "order": 4, "operation": "handoff", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "shotSpec" }, "source": { "type": "constant", "id": "shot_direction" }, "rationale": "由 Director 继续生成完整 ShotSpec。" }
+      ],
+      "outputContracts": [
+        { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "required": true, "purpose": "承载空间建立、构图和揭示动机。" },
+        { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "required": true, "purpose": "承载揭示运动和稳定收势。" }
+      ],
+      "controlGroups": [
+        { "groupId": "camera", "order": 1, "domain": "camera", "label": "摄影机", "parameterIds": ["reveal_motion", "reveal_intensity"] },
+        { "groupId": "pacing", "order": 2, "domain": "pacing", "label": "节奏", "parameterIds": ["duration_seconds"] }
+      ],
+      "qualityChecks": [
+        { "checkId": "space-readable", "label": "空间先可读", "targetContractKind": "cineweave_codex_shot_spec", "targetPath": "composition.visualHierarchy", "severity": "hard", "observation": "揭示前观众能够定位主体、前景和背景关系。" },
+        { "checkId": "reveal-motivated", "label": "揭示有动机", "targetContractKind": "cineweave_codex_temporal_spec", "targetPath": "cameraMotion.motivation", "severity": "soft", "observation": "运动由信息或注意力变化触发。" }
+      ]
+    },
+    {
+      "skillId": "slow-push-reaction",
+      "version": 1,
+      "title": "Slow Push Reaction",
+      "summary": "把克制的情绪发现转译为逐步收紧的注意力和可观察表演。",
+      "storyFunction": "reaction",
+      "targetLevel": "shot",
+      "bindingSlots": [
+        { "slotId": "character", "label": "反应人物", "role": "character", "required": true, "acceptedContractKinds": ["character_binding"], "maxBindings": 1 },
+        { "slotId": "scene", "label": "反应空间", "role": "scene", "required": true, "acceptedContractKinds": ["scene_binding"], "maxBindings": 1 },
+        { "slotId": "performance", "label": "表演时间线", "role": "performance", "required": false, "acceptedContractKinds": ["cineweave_codex_performance_timeline"], "maxBindings": 1 }
+      ],
+      "parameters": [
+        { "parameterId": "push_intensity", "label": "推进强度", "domain": "camera", "valueType": "number", "defaultValue": 0.55, "range": { "minimum": 0, "maximum": 1, "step": 0.05 }, "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "camera.movementIntent" }] },
+        { "parameterId": "performance_restraint", "label": "表演克制度", "domain": "performance", "valueType": "number", "defaultValue": 0.8, "range": { "minimum": 0, "maximum": 1, "step": 0.05 }, "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_performance_timeline", "ownerSkill": "cineweave-character", "route": "performance_timeline", "fieldPath": "phases" }] },
+        { "parameterId": "duration_seconds", "label": "反应时长", "domain": "tempo", "valueType": "number", "defaultValue": 5.5, "range": { "minimum": 0.5, "maximum": 30, "step": 0.1 }, "unit": "seconds", "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "durationSeconds" }] }
+      ],
+      "program": [
+        { "stepId": "bind-character", "order": 1, "operation": "bind", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "bindings.characters" }, "source": { "type": "binding_slot", "id": "character" }, "rationale": "反应镜头必须锁定具体人物。" },
+        { "stepId": "set-push", "order": 2, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "camera.movementIntent" }, "source": { "type": "parameter", "id": "push_intensity" }, "rationale": "推进压缩注意力，但不替代表演。" },
+        { "stepId": "handoff-performance", "order": 3, "operation": "handoff", "ownerSkill": "cineweave-character", "target": { "contractKind": "cineweave_codex_performance_timeline", "ownerSkill": "cineweave-character", "route": "performance_timeline", "fieldPath": "phases" }, "source": { "type": "parameter", "id": "performance_restraint" }, "rationale": "情绪入口必须由 Character 编译为观察得到的表演节拍。" },
+        { "stepId": "set-time", "order": 4, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "durationSeconds" }, "source": { "type": "parameter", "id": "duration_seconds" }, "rationale": "反应需要让表演变化完成。" }
+      ],
+      "outputContracts": [
+        { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "required": true, "purpose": "承载单一反应目的、镜头和空间关系。" },
+        { "contractKind": "cineweave_codex_performance_timeline", "ownerSkill": "cineweave-character", "route": "performance_timeline", "required": true, "purpose": "把克制情绪展开为可观察的身体节拍。" },
+        { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "required": true, "purpose": "承载推进、焦点和稳定收势。" }
+      ],
+      "controlGroups": [
+        { "groupId": "camera", "order": 1, "domain": "camera", "label": "摄影机", "parameterIds": ["push_intensity"] },
+        { "groupId": "performance", "order": 2, "domain": "performance", "label": "表演", "parameterIds": ["performance_restraint"] },
+        { "groupId": "pacing", "order": 3, "domain": "pacing", "label": "节奏", "parameterIds": ["duration_seconds"] }
+      ],
+      "qualityChecks": [
+        { "checkId": "performance-observable", "label": "表演可观察", "targetContractKind": "cineweave_codex_performance_timeline", "targetPath": "phases", "severity": "hard", "observation": "情绪必须落到眼神、呼吸、肌肉或动作时序。" },
+        { "checkId": "push-motivated", "label": "推进由发现驱动", "targetContractKind": "cineweave_codex_shot_spec", "targetPath": "camera.movementIntent", "severity": "soft", "observation": "摄影机靠近与认知或情绪变化同步。" }
+      ]
+    },
+    {
+      "skillId": "hero-entrance",
+      "version": 1,
+      "title": "Hero Entrance",
+      "summary": "用清楚的路径、尺度和收势建立人物第一次进入空间时的视觉权重。",
+      "storyFunction": "entrance",
+      "targetLevel": "shot",
+      "bindingSlots": [
+        { "slotId": "character", "label": "登场人物", "role": "character", "required": true, "acceptedContractKinds": ["character_binding"], "maxBindings": 1 },
+        { "slotId": "scene", "label": "登场空间", "role": "scene", "required": true, "acceptedContractKinds": ["scene_binding"], "maxBindings": 1 }
+      ],
+      "parameters": [
+        { "parameterId": "entrance_path", "label": "进入路径", "domain": "blocking", "valueType": "enum", "defaultValue": "threshold_to_center", "options": ["threshold_to_center", "background_to_foreground", "lateral_cross"], "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "blocking" }] },
+        { "parameterId": "camera_move", "label": "跟拍意图", "domain": "camera", "valueType": "enum", "defaultValue": "locked_then_track", "options": ["locked_then_track", "lateral_track", "slow_arc"], "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "camera.movementIntent" }] },
+        { "parameterId": "hold_seconds", "label": "收势停留", "domain": "tempo", "valueType": "number", "defaultValue": 1.5, "range": { "minimum": 0.2, "maximum": 10, "step": 0.1 }, "unit": "seconds", "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "endState" }] }
+      ],
+      "program": [
+        { "stepId": "bind-character", "order": 1, "operation": "bind", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "bindings.characters" }, "source": { "type": "binding_slot", "id": "character" }, "rationale": "人物登场的视觉权重来自精确身份绑定。" },
+        { "stepId": "set-path", "order": 2, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "blocking" }, "source": { "type": "parameter", "id": "entrance_path" }, "rationale": "先规定可执行路径，再设计摄影机。" },
+        { "stepId": "set-camera", "order": 3, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "camera.movementIntent" }, "source": { "type": "parameter", "id": "camera_move" }, "rationale": "摄影机强化进入关系，不抢走人物行动。" },
+        { "stepId": "set-hold", "order": 4, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "endState" }, "source": { "type": "parameter", "id": "hold_seconds" }, "rationale": "收势停留让人物和空间关系落稳。" }
+      ],
+      "outputContracts": [
+        { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "required": true, "purpose": "承载登场路径、尺度和视觉层级。" },
+        { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "required": true, "purpose": "承载进入过程和收势停留。" }
+      ],
+      "controlGroups": [
+        { "groupId": "blocking", "order": 1, "domain": "blocking", "label": "调度", "parameterIds": ["entrance_path"] },
+        { "groupId": "camera", "order": 2, "domain": "camera", "label": "摄影机", "parameterIds": ["camera_move"] },
+        { "groupId": "pacing", "order": 3, "domain": "pacing", "label": "收势", "parameterIds": ["hold_seconds"] }
+      ],
+      "qualityChecks": [
+        { "checkId": "path-closed", "label": "路径闭合", "targetContractKind": "cineweave_codex_shot_spec", "targetPath": "blocking", "severity": "hard", "observation": "人物的起点、动作和终点都可定位。" },
+        { "checkId": "entrance-end-state", "label": "登场收势稳定", "targetContractKind": "cineweave_codex_temporal_spec", "targetPath": "endState", "severity": "soft", "observation": "镜头结束时人物与空间关系可继续剪辑。" }
+      ]
+    },
+    {
+      "skillId": "ots-dialogue",
+      "version": 1,
+      "title": "Over-the-Shoulder Dialogue",
+      "summary": "用视线、肩前景和轴线连续性组织一段可切换的双人对话覆盖。",
+      "storyFunction": "dialogue",
+      "targetLevel": "shot",
+      "bindingSlots": [
+        { "slotId": "speaker_a", "label": "说话者 A", "role": "character", "required": true, "acceptedContractKinds": ["character_binding"], "maxBindings": 1 },
+        { "slotId": "speaker_b", "label": "说话者 B", "role": "character", "required": true, "acceptedContractKinds": ["character_binding"], "maxBindings": 1 },
+        { "slotId": "scene", "label": "对话空间", "role": "scene", "required": true, "acceptedContractKinds": ["scene_binding"], "maxBindings": 1 }
+      ],
+      "parameters": [
+        { "parameterId": "foreground_ratio", "label": "前景肩比例", "domain": "composition", "valueType": "number", "defaultValue": 0.22, "range": { "minimum": 0, "maximum": 0.6, "step": 0.01 }, "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "composition.foreground" }] },
+        { "parameterId": "eyeline_mode", "label": "视线关系", "domain": "blocking", "valueType": "enum", "defaultValue": "shared_axis", "options": ["shared_axis", "dominant_a", "dominant_b"], "controlLevel": "hard", "targets": [{ "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "blocking.eyeline" }] },
+        { "parameterId": "pause_seconds", "label": "反应停顿", "domain": "tempo", "valueType": "number", "defaultValue": 0.6, "range": { "minimum": 0, "maximum": 5, "step": 0.1 }, "unit": "seconds", "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "actionTimeline" }] }
+      ],
+      "program": [
+        { "stepId": "bind-speakers", "order": 1, "operation": "bind", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "bindings.characters" }, "source": { "type": "binding_slot", "id": "speaker_a" }, "rationale": "对话覆盖必须知道双方身份和相对位置。" },
+        { "stepId": "set-eyelines", "order": 2, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "blocking.eyeline" }, "source": { "type": "parameter", "id": "eyeline_mode" }, "rationale": "视线是对话切换的连续性约束。" },
+        { "stepId": "set-foreground", "order": 3, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "composition.foreground" }, "source": { "type": "parameter", "id": "foreground_ratio" }, "rationale": "肩前景提供关系方向而不遮挡主要表演。" },
+        { "stepId": "set-pause", "order": 4, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "actionTimeline" }, "source": { "type": "parameter", "id": "pause_seconds" }, "rationale": "停顿必须成为可剪辑的时间事件。" }
+      ],
+      "outputContracts": [
+        { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "required": true, "purpose": "承载双人轴线、前景和构图。" },
+        { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "required": true, "purpose": "承载停顿、反应和收势。" }
+      ],
+      "controlGroups": [
+        { "groupId": "blocking", "order": 1, "domain": "blocking", "label": "视线与轴线", "parameterIds": ["eyeline_mode"] },
+        { "groupId": "composition", "order": 2, "domain": "composition", "label": "前景关系", "parameterIds": ["foreground_ratio"] },
+        { "groupId": "pacing", "order": 3, "domain": "pacing", "label": "反应停顿", "parameterIds": ["pause_seconds"] }
+      ],
+      "qualityChecks": [
+        { "checkId": "axis-preserved", "label": "轴线可切换", "targetContractKind": "cineweave_codex_shot_spec", "targetPath": "camera.axisSide", "severity": "hard", "observation": "双方视线与屏幕方向保持一致。" },
+        { "checkId": "foreground-readable", "label": "肩前景可读", "targetContractKind": "cineweave_codex_shot_spec", "targetPath": "composition.foreground", "severity": "soft", "observation": "前景肩表达关系但不遮住说话者。" }
+      ]
+    },
+    {
+      "skillId": "intimate-closeup",
+      "version": 1,
+      "title": "Intimate Close-up",
+      "summary": "在身份和表演已锁定时，把观众注意力压缩到最小但可观察的情绪变化。",
+      "storyFunction": "intimacy",
+      "targetLevel": "shot",
+      "bindingSlots": [
+        { "slotId": "character", "label": "近景人物", "role": "character", "required": true, "acceptedContractKinds": ["character_binding"], "maxBindings": 1 },
+        { "slotId": "scene", "label": "近景空间", "role": "scene", "required": true, "acceptedContractKinds": ["scene_binding"], "maxBindings": 1 },
+        { "slotId": "performance", "label": "表演时间线", "role": "performance", "required": false, "acceptedContractKinds": ["cineweave_codex_performance_timeline"], "maxBindings": 1 }
+      ],
+      "parameters": [
+        { "parameterId": "closeup_scale", "label": "近景尺度", "domain": "camera", "valueType": "enum", "defaultValue": "close_up", "options": ["medium_close_up", "close_up", "extreme_close_up"], "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "camera.shotScale" }] },
+        { "parameterId": "focus_behavior", "label": "焦点行为", "domain": "camera", "valueType": "enum", "defaultValue": "eye_hold", "options": ["eye_hold", "eye_to_hand", "eye_to_background"], "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "focusTimeline" }] },
+        { "parameterId": "restraint", "label": "情绪克制", "domain": "performance", "valueType": "number", "defaultValue": 0.85, "range": { "minimum": 0, "maximum": 1, "step": 0.05 }, "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_performance_timeline", "ownerSkill": "cineweave-character", "route": "performance_timeline", "fieldPath": "phases" }] }
+      ],
+      "program": [
+        { "stepId": "bind-character", "order": 1, "operation": "bind", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "bindings.characters" }, "source": { "type": "binding_slot", "id": "character" }, "rationale": "亲密近景必须从精确人物身份开始。" },
+        { "stepId": "set-scale", "order": 2, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "camera.shotScale" }, "source": { "type": "parameter", "id": "closeup_scale" }, "rationale": "尺度服务于观众注意力压缩。" },
+        { "stepId": "set-focus", "order": 3, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "focusTimeline" }, "source": { "type": "parameter", "id": "focus_behavior" }, "rationale": "焦点变化必须有表演或信息动机。" },
+        { "stepId": "handoff-performance", "order": 4, "operation": "handoff", "ownerSkill": "cineweave-character", "target": { "contractKind": "cineweave_codex_performance_timeline", "ownerSkill": "cineweave-character", "route": "performance_timeline", "fieldPath": "phases" }, "source": { "type": "parameter", "id": "restraint" }, "rationale": "近景表演由 Character 具体化为可观察节拍。" }
+      ],
+      "outputContracts": [
+        { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "required": true, "purpose": "承载近景尺度、构图和注意力层级。" },
+        { "contractKind": "cineweave_codex_performance_timeline", "ownerSkill": "cineweave-character", "route": "performance_timeline", "required": true, "purpose": "承载微表情、呼吸和身体克制。" },
+        { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "required": true, "purpose": "承载焦点和停留。" }
+      ],
+      "controlGroups": [
+        { "groupId": "camera", "order": 1, "domain": "camera", "label": "尺度与焦点", "parameterIds": ["closeup_scale", "focus_behavior"] },
+        { "groupId": "performance", "order": 2, "domain": "performance", "label": "表演", "parameterIds": ["restraint"] }
+      ],
+      "qualityChecks": [
+        { "checkId": "identity-stable", "label": "身份稳定", "targetContractKind": "cineweave_codex_shot_spec", "targetPath": "bindings.characters", "severity": "hard", "observation": "近景不以新猜测替换已绑定身份。" },
+        { "checkId": "micro-cue", "label": "微小线索可观察", "targetContractKind": "cineweave_codex_performance_timeline", "targetPath": "phases", "severity": "hard", "observation": "每个情绪变化都有身体或视线证据。" }
+      ]
+    },
+    {
+      "skillId": "tracking-follow",
+      "version": 1,
+      "title": "Tracking Follow",
+      "summary": "沿人物的可执行路径跟随行动，保持空间方向、接触和收势连续。",
+      "storyFunction": "follow",
+      "targetLevel": "shot",
+      "bindingSlots": [
+        { "slotId": "character", "label": "跟随人物", "role": "character", "required": true, "acceptedContractKinds": ["character_binding"], "maxBindings": 1 },
+        { "slotId": "scene", "label": "跟随空间", "role": "scene", "required": true, "acceptedContractKinds": ["scene_binding"], "maxBindings": 1 }
+      ],
+      "parameters": [
+        { "parameterId": "follow_mode", "label": "跟随方式", "domain": "camera", "valueType": "enum", "defaultValue": "gimbal_follow", "options": ["gimbal_follow", "dolly_follow", "lateral_follow"], "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "camera.movementIntent" }] },
+        { "parameterId": "pace", "label": "跟随节奏", "domain": "tempo", "valueType": "number", "defaultValue": 0.5, "range": { "minimum": 0, "maximum": 1, "step": 0.05 }, "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "cameraMotion" }] },
+        { "parameterId": "duration_seconds", "label": "跟随时长", "domain": "tempo", "valueType": "number", "defaultValue": 6, "range": { "minimum": 0.5, "maximum": 30, "step": 0.1 }, "unit": "seconds", "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "durationSeconds" }] }
+      ],
+      "program": [
+        { "stepId": "bind-route", "order": 1, "operation": "bind", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "blocking" }, "source": { "type": "binding_slot", "id": "character" }, "rationale": "跟随先锁定人物路径与空间。" },
+        { "stepId": "set-follow", "order": 2, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "camera.movementIntent" }, "source": { "type": "parameter", "id": "follow_mode" }, "rationale": "跟随方式由人物行动而不是模型习惯决定。" },
+        { "stepId": "set-pace", "order": 3, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "cameraMotion" }, "source": { "type": "parameter", "id": "pace" }, "rationale": "跟随节奏必须与行动变化同步。" },
+        { "stepId": "set-duration", "order": 4, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "durationSeconds" }, "source": { "type": "parameter", "id": "duration_seconds" }, "rationale": "时长要覆盖路径且留出稳定结尾。" }
+      ],
+      "outputContracts": [
+        { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "required": true, "purpose": "承载人物路径和摄影机跟随关系。" },
+        { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "required": true, "purpose": "承载跟随曲线和稳定收势。" }
+      ],
+      "controlGroups": [
+        { "groupId": "camera", "order": 1, "domain": "camera", "label": "跟随方式", "parameterIds": ["follow_mode", "pace"] },
+        { "groupId": "pacing", "order": 2, "domain": "pacing", "label": "路径时长", "parameterIds": ["duration_seconds"] }
+      ],
+      "qualityChecks": [
+        { "checkId": "path-visible", "label": "路径可读", "targetContractKind": "cineweave_codex_shot_spec", "targetPath": "blocking", "severity": "hard", "observation": "人物起点、方向和终点可被复述。" },
+        { "checkId": "contact-preserved", "label": "接触连续", "targetContractKind": "cineweave_codex_shot_spec", "targetPath": "blocking.weightAndContact", "severity": "hard", "observation": "脚与地面及手与道具的关系不因跟拍丢失。" }
+      ]
+    },
+    {
+      "skillId": "handheld-pursuit",
+      "version": 1,
+      "title": "Handheld Pursuit",
+      "summary": "以受控的手持漂移和方向压力制造追逐紧张感，同时保持行动因果可读。",
+      "storyFunction": "pursuit",
+      "targetLevel": "shot",
+      "bindingSlots": [
+        { "slotId": "character", "label": "追逐人物", "role": "character", "required": true, "acceptedContractKinds": ["character_binding"], "maxBindings": 1 },
+        { "slotId": "scene", "label": "追逐空间", "role": "scene", "required": true, "acceptedContractKinds": ["scene_binding"], "maxBindings": 1 }
+      ],
+      "parameters": [
+        { "parameterId": "handheld_drift", "label": "手持漂移", "domain": "camera", "valueType": "number", "defaultValue": 0.35, "range": { "minimum": 0, "maximum": 1, "step": 0.05 }, "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "camera.movementIntent" }] },
+        { "parameterId": "pressure", "label": "追逐压力", "domain": "tempo", "valueType": "number", "defaultValue": 0.7, "range": { "minimum": 0, "maximum": 1, "step": 0.05 }, "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "cameraMotion.acceleration" }] },
+        { "parameterId": "pursuit_duration", "label": "追逐时长", "domain": "tempo", "valueType": "number", "defaultValue": 4.5, "range": { "minimum": 0.5, "maximum": 30, "step": 0.1 }, "unit": "seconds", "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "durationSeconds" }] }
+      ],
+      "program": [
+        { "stepId": "bind-pursuit", "order": 1, "operation": "bind", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "blocking" }, "source": { "type": "binding_slot", "id": "character" }, "rationale": "追逐必须从可执行的行动路径开始。" },
+        { "stepId": "set-drift", "order": 2, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "camera.movementIntent" }, "source": { "type": "parameter", "id": "handheld_drift" }, "rationale": "手持感是受控变量，不是失控借口。" },
+        { "stepId": "set-pressure", "order": 3, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "cameraMotion.acceleration" }, "source": { "type": "parameter", "id": "pressure" }, "rationale": "压力由运动曲线和行动结果共同建立。" },
+        { "stepId": "set-duration", "order": 4, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "durationSeconds" }, "source": { "type": "parameter", "id": "pursuit_duration" }, "rationale": "追逐镜头必须在冲击后留下可接续的停点。" }
+      ],
+      "outputContracts": [
+        { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "required": true, "purpose": "承载追逐路径、屏幕方向和行动结果。" },
+        { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "required": true, "purpose": "承载受控手持曲线和压力节奏。" }
+      ],
+      "controlGroups": [
+        { "groupId": "camera", "order": 1, "domain": "camera", "label": "手持行为", "parameterIds": ["handheld_drift"] },
+        { "groupId": "pacing", "order": 2, "domain": "pacing", "label": "压力节奏", "parameterIds": ["pressure", "pursuit_duration"] }
+      ],
+      "qualityChecks": [
+        { "checkId": "action-readable", "label": "动作仍可读", "targetContractKind": "cineweave_codex_shot_spec", "targetPath": "actionMoment", "severity": "hard", "observation": "手持运动不遮蔽关键行动结果。" },
+        { "checkId": "direction-stable", "label": "方向稳定", "targetContractKind": "cineweave_codex_shot_spec", "targetPath": "camera.axisSide", "severity": "hard", "observation": "追逐压力不以无动机越轴表达。" }
+      ]
+    },
+    {
+      "skillId": "orbit-reveal",
+      "version": 1,
+      "title": "Orbit Reveal",
+      "summary": "围绕人物或场景主体改变观察角度，揭示原来不可见的关系，而不丢失空间锚点。",
+      "storyFunction": "orbit",
+      "targetLevel": "shot",
+      "bindingSlots": [
+        { "slotId": "character", "label": "环绕主体", "role": "character", "required": true, "acceptedContractKinds": ["character_binding"], "maxBindings": 1 },
+        { "slotId": "scene", "label": "环绕空间", "role": "scene", "required": true, "acceptedContractKinds": ["scene_binding"], "maxBindings": 1 }
+      ],
+      "parameters": [
+        { "parameterId": "orbit_degrees", "label": "环绕角度", "domain": "camera", "valueType": "number", "defaultValue": 120, "range": { "minimum": 15, "maximum": 330, "step": 5 }, "unit": "degrees", "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "camera.movementIntent" }] },
+        { "parameterId": "orbit_speed", "label": "环绕速度", "domain": "tempo", "valueType": "number", "defaultValue": 0.45, "range": { "minimum": 0, "maximum": 1, "step": 0.05 }, "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "cameraMotion" }] },
+        { "parameterId": "reveal_focus", "label": "揭示焦点", "domain": "composition", "valueType": "enum", "defaultValue": "relationship", "options": ["relationship", "object", "background"], "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "camera.focusTarget" }] }
+      ],
+      "program": [
+        { "stepId": "bind-orbit-subject", "order": 1, "operation": "bind", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "bindings.characters" }, "source": { "type": "binding_slot", "id": "character" }, "rationale": "环绕必须围绕一个明确主体。" },
+        { "stepId": "set-orbit", "order": 2, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "camera.movementIntent" }, "source": { "type": "parameter", "id": "orbit_degrees" }, "rationale": "角度范围决定揭示信息而不是炫技。" },
+        { "stepId": "set-focus", "order": 3, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "camera.focusTarget" }, "source": { "type": "parameter", "id": "reveal_focus" }, "rationale": "焦点必须指向被揭示的关系。" },
+        { "stepId": "set-speed", "order": 4, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "cameraMotion" }, "source": { "type": "parameter", "id": "orbit_speed" }, "rationale": "速度由观众读取关系所需的时间决定。" }
+      ],
+      "outputContracts": [
+        { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "required": true, "purpose": "承载主体、空间锚点和揭示焦点。" },
+        { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "required": true, "purpose": "承载环绕曲线和揭示收势。" }
+      ],
+      "controlGroups": [
+        { "groupId": "camera", "order": 1, "domain": "camera", "label": "环绕摄影", "parameterIds": ["orbit_degrees", "orbit_speed"] },
+        { "groupId": "composition", "order": 2, "domain": "composition", "label": "揭示焦点", "parameterIds": ["reveal_focus"] }
+      ],
+      "qualityChecks": [
+        { "checkId": "anchor-preserved", "label": "空间锚点保留", "targetContractKind": "cineweave_codex_shot_spec", "targetPath": "continuity", "severity": "hard", "observation": "环绕中主体与场景的相对关系持续可读。" },
+        { "checkId": "reveal-completes", "label": "揭示完成", "targetContractKind": "cineweave_codex_temporal_spec", "targetPath": "endState", "severity": "soft", "observation": "结束帧明确展示新增信息。" }
+      ]
+    },
+    {
+      "skillId": "match-cut",
+      "version": 1,
+      "title": "Match Cut",
+      "summary": "把两个已定义镜头之间的动作、视线或形状对应关系编译为明确的序列转接。",
+      "storyFunction": "match",
+      "targetLevel": "sequence",
+      "bindingSlots": [
+        { "slotId": "from_shot", "label": "前镜头", "role": "shot", "required": true, "acceptedContractKinds": ["cineweave_codex_shot_spec"], "maxBindings": 1 },
+        { "slotId": "to_shot", "label": "后镜头", "role": "shot", "required": true, "acceptedContractKinds": ["cineweave_codex_shot_spec"], "maxBindings": 1 }
+      ],
+      "parameters": [
+        { "parameterId": "match_axis", "label": "匹配轴", "domain": "transition", "valueType": "enum", "defaultValue": "action", "options": ["action", "gaze", "shape", "direction"], "controlLevel": "hard", "targets": [{ "contractKind": "cineweave_codex_sequence_rhythm_spec", "ownerSkill": "cineweave-director", "route": "sequence_rhythm", "fieldPath": "transitions" }] },
+        { "parameterId": "overlap_frames", "label": "重叠帧数", "domain": "transition", "valueType": "frame_count", "defaultValue": 0, "range": { "minimum": 0, "maximum": 24, "step": 1 }, "unit": "frames", "controlLevel": "hard", "targets": [{ "contractKind": "cineweave_codex_sequence_rhythm_spec", "ownerSkill": "cineweave-director", "route": "sequence_rhythm", "fieldPath": "transitions" }] },
+        { "parameterId": "breathing_frames", "label": "呼吸帧数", "domain": "tempo", "valueType": "frame_count", "defaultValue": 12, "range": { "minimum": 0, "maximum": 120, "step": 1 }, "unit": "frames", "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_sequence_rhythm_spec", "ownerSkill": "cineweave-director", "route": "sequence_rhythm", "fieldPath": "breathingPoints" }] }
+      ],
+      "program": [
+        { "stepId": "bind-from", "order": 1, "operation": "bind", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_sequence_rhythm_spec", "ownerSkill": "cineweave-director", "route": "sequence_rhythm", "fieldPath": "transitions.fromShotId" }, "source": { "type": "binding_slot", "id": "from_shot" }, "rationale": "转接只能连接精确的前镜头。" },
+        { "stepId": "bind-to", "order": 2, "operation": "bind", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_sequence_rhythm_spec", "ownerSkill": "cineweave-director", "route": "sequence_rhythm", "fieldPath": "transitions.toShotId" }, "source": { "type": "binding_slot", "id": "to_shot" }, "rationale": "转接只能连接精确的后镜头。" },
+        { "stepId": "set-match", "order": 3, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_sequence_rhythm_spec", "ownerSkill": "cineweave-director", "route": "sequence_rhythm", "fieldPath": "transitions" }, "source": { "type": "parameter", "id": "match_axis" }, "rationale": "明确匹配轴，避免把转场写成情绪形容词。" },
+        { "stepId": "set-overlap", "order": 4, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_sequence_rhythm_spec", "ownerSkill": "cineweave-director", "route": "sequence_rhythm", "fieldPath": "transitions" }, "source": { "type": "parameter", "id": "overlap_frames" }, "rationale": "重叠量以精确帧数表达。" }
+      ],
+      "outputContracts": [
+        { "contractKind": "cineweave_codex_sequence_rhythm_spec", "ownerSkill": "cineweave-director", "route": "sequence_rhythm", "required": true, "purpose": "承载前后镜头、匹配轴和相邻转接。" },
+        { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "required": false, "purpose": "仅在需要补充匹配动作的镜头说明时使用。" }
+      ],
+      "controlGroups": [
+        { "groupId": "transition", "order": 1, "domain": "transition", "label": "匹配转接", "parameterIds": ["match_axis", "overlap_frames"] },
+        { "groupId": "pacing", "order": 2, "domain": "pacing", "label": "呼吸", "parameterIds": ["breathing_frames"] }
+      ],
+      "qualityChecks": [
+        { "checkId": "adjacent-shots", "label": "镜头相邻", "targetContractKind": "cineweave_codex_sequence_rhythm_spec", "targetPath": "transitions", "severity": "hard", "observation": "匹配转接只发生在相邻且有序的镜头之间。" },
+        { "checkId": "match-observable", "label": "匹配可观察", "targetContractKind": "cineweave_codex_sequence_rhythm_spec", "targetPath": "transitions", "severity": "hard", "observation": "前后镜头共享一个可指出的动作、视线、形状或方向。" }
+      ]
+    },
+    {
+      "skillId": "whip-pan-transition",
+      "version": 1,
+      "title": "Whip Pan Transition",
+      "summary": "用有方向的快速摄影机运动连接两个相邻镜头，并保留切点和屏幕方向契约。",
+      "storyFunction": "transition",
+      "targetLevel": "sequence",
+      "bindingSlots": [
+        { "slotId": "from_shot", "label": "前镜头", "role": "shot", "required": true, "acceptedContractKinds": ["cineweave_codex_shot_spec"], "maxBindings": 1 },
+        { "slotId": "to_shot", "label": "后镜头", "role": "shot", "required": true, "acceptedContractKinds": ["cineweave_codex_shot_spec"], "maxBindings": 1 }
+      ],
+      "parameters": [
+        { "parameterId": "pan_direction", "label": "摇摄方向", "domain": "transition", "valueType": "enum", "defaultValue": "screen_right", "options": ["screen_left", "screen_right", "vertical_up", "vertical_down"], "controlLevel": "hard", "targets": [{ "contractKind": "cineweave_codex_sequence_rhythm_spec", "ownerSkill": "cineweave-director", "route": "sequence_rhythm", "fieldPath": "transitions" }] },
+        { "parameterId": "transition_frames", "label": "转接帧数", "domain": "transition", "valueType": "frame_count", "defaultValue": 4, "range": { "minimum": 1, "maximum": 24, "step": 1 }, "unit": "frames", "controlLevel": "hard", "targets": [{ "contractKind": "cineweave_codex_sequence_rhythm_spec", "ownerSkill": "cineweave-director", "route": "sequence_rhythm", "fieldPath": "transitions" }] },
+        { "parameterId": "motion_blur", "label": "运动模糊", "domain": "camera", "valueType": "number", "defaultValue": 0.5, "range": { "minimum": 0, "maximum": 1, "step": 0.05 }, "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "cameraMotion" }] }
+      ],
+      "program": [
+        { "stepId": "bind-from", "order": 1, "operation": "bind", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_sequence_rhythm_spec", "ownerSkill": "cineweave-director", "route": "sequence_rhythm", "fieldPath": "transitions.fromShotId" }, "source": { "type": "binding_slot", "id": "from_shot" }, "rationale": "转接边界必须绑定前镜头。" },
+        { "stepId": "bind-to", "order": 2, "operation": "bind", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_sequence_rhythm_spec", "ownerSkill": "cineweave-director", "route": "sequence_rhythm", "fieldPath": "transitions.toShotId" }, "source": { "type": "binding_slot", "id": "to_shot" }, "rationale": "转接边界必须绑定后镜头。" },
+        { "stepId": "set-direction", "order": 3, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_sequence_rhythm_spec", "ownerSkill": "cineweave-director", "route": "sequence_rhythm", "fieldPath": "transitions" }, "source": { "type": "parameter", "id": "pan_direction" }, "rationale": "方向是连续性的硬约束。" },
+        { "stepId": "set-duration", "order": 4, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_sequence_rhythm_spec", "ownerSkill": "cineweave-director", "route": "sequence_rhythm", "fieldPath": "transitions" }, "source": { "type": "parameter", "id": "transition_frames" }, "rationale": "快速转接仍然用帧数而不是模糊的快慢。" }
+      ],
+      "outputContracts": [
+        { "contractKind": "cineweave_codex_sequence_rhythm_spec", "ownerSkill": "cineweave-director", "route": "sequence_rhythm", "required": true, "purpose": "承载相邻镜头之间的有向转接。" },
+        { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "required": true, "purpose": "承载转接镜头的运动曲线。" }
+      ],
+      "controlGroups": [
+        { "groupId": "transition", "order": 1, "domain": "transition", "label": "方向与边界", "parameterIds": ["pan_direction", "transition_frames"] },
+        { "groupId": "camera", "order": 2, "domain": "camera", "label": "运动质感", "parameterIds": ["motion_blur"] }
+      ],
+      "qualityChecks": [
+        { "checkId": "direction-continuous", "label": "方向连续", "targetContractKind": "cineweave_codex_sequence_rhythm_spec", "targetPath": "continuity.preserveScreenDirection", "severity": "hard", "observation": "快速转接不隐藏屏幕方向变化。" },
+        { "checkId": "cut-bounded", "label": "切点闭合", "targetContractKind": "cineweave_codex_sequence_rhythm_spec", "targetPath": "transitions", "severity": "hard", "observation": "转接只占据声明的相邻边界。" }
+      ]
+    },
+    {
+      "skillId": "action-impact",
+      "version": 1,
+      "title": "Action Impact",
+      "summary": "从一个已批准动作节拍中提取接触、结果和冲击收势，避免把整段动作压成形容词。",
+      "storyFunction": "impact",
+      "targetLevel": "shot",
+      "bindingSlots": [
+        { "slotId": "character", "label": "动作人物", "role": "character", "required": true, "acceptedContractKinds": ["character_binding"], "maxBindings": 1 },
+        { "slotId": "scene", "label": "动作空间", "role": "scene", "required": true, "acceptedContractKinds": ["scene_binding"], "maxBindings": 1 },
+        { "slotId": "action", "label": "动作序列", "role": "action", "required": true, "acceptedContractKinds": ["cineweave_codex_action_sequence_spec"], "maxBindings": 1 }
+      ],
+      "parameters": [
+        { "parameterId": "impact_timing", "label": "冲击时机", "domain": "tempo", "valueType": "enum", "defaultValue": "contact_peak", "options": ["contact_peak", "result_reveal", "reaction_first"], "controlLevel": "hard", "targets": [{ "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "actionTimeline" }] },
+        { "parameterId": "impact_camera", "label": "冲击摄影", "domain": "camera", "valueType": "enum", "defaultValue": "short_push", "options": ["short_push", "locked_frame", "impact_arc"], "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "camera.movementIntent" }] },
+        { "parameterId": "result_hold_seconds", "label": "结果停留", "domain": "tempo", "valueType": "number", "defaultValue": 0.8, "range": { "minimum": 0.1, "maximum": 8, "step": 0.1 }, "unit": "seconds", "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "endState" }] }
+      ],
+      "program": [
+        { "stepId": "bind-action", "order": 1, "operation": "bind", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "actionMoment" }, "source": { "type": "binding_slot", "id": "action" }, "rationale": "冲击镜头只能选择已定义的动作节拍。" },
+        { "stepId": "set-camera", "order": 2, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "camera.movementIntent" }, "source": { "type": "parameter", "id": "impact_camera" }, "rationale": "摄影机突出接触和结果，但不改写动作因果。" },
+        { "stepId": "set-timing", "order": 3, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "actionTimeline" }, "source": { "type": "parameter", "id": "impact_timing" }, "rationale": "冲击时机由动作节拍和观众注意顺序决定。" },
+        { "stepId": "set-result", "order": 4, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "endState" }, "source": { "type": "parameter", "id": "result_hold_seconds" }, "rationale": "冲击之后需要看见结果而非立刻消失。" }
+      ],
+      "outputContracts": [
+        { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "required": true, "purpose": "承载选定动作节拍、冲击构图和接触结果。" },
+        { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "required": true, "purpose": "承载冲击时机和结果停留。" }
+      ],
+      "controlGroups": [
+        { "groupId": "camera", "order": 1, "domain": "camera", "label": "冲击摄影", "parameterIds": ["impact_camera"] },
+        { "groupId": "pacing", "order": 2, "domain": "pacing", "label": "接触与结果", "parameterIds": ["impact_timing", "result_hold_seconds"] }
+      ],
+      "qualityChecks": [
+        { "checkId": "contact-result", "label": "接触与结果成对", "targetContractKind": "cineweave_codex_shot_spec", "targetPath": "actionMoment", "severity": "hard", "observation": "镜头同时说明接触点和可见结果。" },
+        { "checkId": "action-not-invented", "label": "不发明动作", "targetContractKind": "cineweave_codex_action_sequence_spec", "targetPath": "beats", "severity": "hard", "observation": "只引用精确动作序列，不凭空增加技巧或武器事实。" }
+      ]
+    },
+    {
+      "skillId": "memory-flashback",
+      "version": 1,
+      "title": "Memory Flashback",
+      "summary": "用明确的时间和感知断裂把回忆接入当前叙事，同时保留人物与空间锚点。",
+      "storyFunction": "memory",
+      "targetLevel": "sequence",
+      "bindingSlots": [
+        { "slotId": "character", "label": "回忆人物", "role": "character", "required": true, "acceptedContractKinds": ["character_binding"], "maxBindings": 1 },
+        { "slotId": "scene", "label": "回忆空间", "role": "scene", "required": true, "acceptedContractKinds": ["scene_binding"], "maxBindings": 1 },
+        { "slotId": "style", "label": "回忆表现绑定", "role": "style", "required": false, "acceptedContractKinds": ["cineweave_codex_style_compile"], "maxBindings": 1 }
+      ],
+      "parameters": [
+        { "parameterId": "transition_mode", "label": "回忆进入方式", "domain": "transition", "valueType": "enum", "defaultValue": "sound_bridge", "options": ["sound_bridge", "match_gaze", "hard_cut"], "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_sequence_rhythm_spec", "ownerSkill": "cineweave-director", "route": "sequence_rhythm", "fieldPath": "transitions" }] },
+        { "parameterId": "temporal_offset", "label": "时间断裂", "domain": "continuity", "valueType": "enum", "defaultValue": "nonlinear_recall", "options": ["nonlinear_recall", "earlier_same_day", "distant_past"], "controlLevel": "hard", "targets": [{ "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "purpose" }] },
+        { "parameterId": "memory_restraint", "label": "回忆克制度", "domain": "performance", "valueType": "number", "defaultValue": 0.65, "range": { "minimum": 0, "maximum": 1, "step": 0.05 }, "controlLevel": "soft", "targets": [{ "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "cameraMotion" }] }
+      ],
+      "program": [
+        { "stepId": "bind-character", "order": 1, "operation": "bind", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "bindings.characters" }, "source": { "type": "binding_slot", "id": "character" }, "rationale": "回忆仍然属于同一人物而不是新身份。" },
+        { "stepId": "set-time", "order": 2, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "fieldPath": "purpose" }, "source": { "type": "parameter", "id": "temporal_offset" }, "rationale": "先声明回忆的时间关系，再选择表现方式。" },
+        { "stepId": "set-transition", "order": 3, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_sequence_rhythm_spec", "ownerSkill": "cineweave-director", "route": "sequence_rhythm", "fieldPath": "transitions" }, "source": { "type": "parameter", "id": "transition_mode" }, "rationale": "进入回忆的转接是序列语法，不是 Provider preset。" },
+        { "stepId": "set-restraint", "order": 4, "operation": "set", "ownerSkill": "cineweave-director", "target": { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "fieldPath": "cameraMotion" }, "source": { "type": "parameter", "id": "memory_restraint" }, "rationale": "感知断裂仍需保留可读的时间运动。" }
+      ],
+      "outputContracts": [
+        { "contractKind": "cineweave_codex_shot_spec", "ownerSkill": "cineweave-director", "route": "shot_direction", "required": true, "purpose": "承载回忆镜头的人物、空间和时间目的。" },
+        { "contractKind": "cineweave_codex_sequence_rhythm_spec", "ownerSkill": "cineweave-director", "route": "sequence_rhythm", "required": true, "purpose": "承载当前与回忆之间的明确转接。" },
+        { "contractKind": "cineweave_codex_temporal_spec", "ownerSkill": "cineweave-director", "route": "temporal_direction", "required": true, "purpose": "承载回忆镜头内的时间方向。" }
+      ],
+      "controlGroups": [
+        { "groupId": "transition", "order": 1, "domain": "transition", "label": "回忆转接", "parameterIds": ["transition_mode"] },
+        { "groupId": "continuity", "order": 2, "domain": "continuity", "label": "时间关系", "parameterIds": ["temporal_offset"] },
+        { "groupId": "performance", "order": 3, "domain": "performance", "label": "感知克制", "parameterIds": ["memory_restraint"] }
+      ],
+      "qualityChecks": [
+        { "checkId": "time-legible", "label": "时间关系可读", "targetContractKind": "cineweave_codex_shot_spec", "targetPath": "purpose", "severity": "hard", "observation": "观众可以区分当前事件与回忆，不靠含糊滤镜。" },
+        { "checkId": "identity-continuous", "label": "身份连续", "targetContractKind": "cineweave_codex_shot_spec", "targetPath": "bindings.characters", "severity": "hard", "observation": "回忆不重建另一套未经绑定的人物身份。" }
+      ]
+    }
+  ],
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-studio",
+    "ref": "v2.5.1",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-09-02T04:00:00.000Z"
+  },
+  "executionBoundary": {
+    "providerNeutral": true,
+    "generatesMedia": false,
+    "executesAdapter": false,
+    "mutatesCanon": false,
+    "writesFiles": false,
+    "humanApprovalRequired": true,
+    "notes": "原子技能是可参数化的导演程序和控制面板投影，不是 Prompt preset、Canon 写入或执行授权。"
+  },
+  "validation": {
+    "skillIdsUnique": true,
+    "parametersUnique": true,
+    "programOrdered": true,
+    "targetOwnersDeclared": true,
+    "controlSurfaceProjectionOnly": true,
+    "noProviderSyntax": true,
+    "noCanonMutation": true,
+    "noExecution": true
+  },
+  "provenance": {
+    "source": "suite_builtin",
+    "createdAt": "2026-09-02T04:00:00.000Z",
+    "updatedAt": "2026-09-02T04:00:00.000Z",
+    "changeLog": [
+      "v1: add twelve provider-neutral parameterized cinematic programs",
+      "v1: separate creator controls from department-owned canonical contracts"
+    ]
+  }
+}

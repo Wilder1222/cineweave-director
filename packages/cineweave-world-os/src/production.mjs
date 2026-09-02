@@ -1,5 +1,5 @@
 import { findArtifact, findArtifactByVersion, listArtifacts, putArtifact } from "../../cineweave-runtime/src/artifact-store.mjs";
-import { sha256Canonical } from "../../cineweave-runtime/src/canonical-json.mjs";
+import { canonicalize, parseJsonStrict, sha256Canonical } from "../../cineweave-runtime/src/canonical-json.mjs";
 import { ARTIFACT_KINDS, IDENTIFIER_PATTERN, WORLD_ID_PATTERN, WORLD_OS_VERSION } from "./constants.mjs";
 import { exactRef, isExactRef, isPlainObject, sameRef } from "./json.mjs";
 import { listWorldRegistrations } from "./registry.mjs";
@@ -95,7 +95,7 @@ export function assertProductionContractSnapshotContract(snapshot) {
   const contractRef = { kind: snapshot.contractKind, id: snapshot.sourceContractId, version: snapshot.sourceContractVersion, contentHash: snapshot.sourceContractHash };
   assertExternalContractRef(contractRef, "ProductionContractSnapshot.sourceContract");
   let document;
-  try { document = JSON.parse(snapshot.documentJson); } catch { throw new TypeError("ProductionContractSnapshot.documentJson must be valid JSON"); }
+  try { document = parseJsonStrict(snapshot.documentJson); } catch { throw new TypeError("ProductionContractSnapshot.documentJson must be valid JSON"); }
   if (!IDENTIFIER_PATTERN.test(snapshot.snapshotId) || snapshot.snapshotId !== snapshotId(contractRef) || snapshot.version !== 1
     || (snapshot.worldId !== null && (typeof snapshot.worldId !== "string" || !snapshot.worldId.trim()))
     || !isPlainObject(document) || document.kind !== snapshot.contractKind || sha256Canonical(document) !== contractRef.contentHash) throw new TypeError("ProductionContractSnapshot identity or payload hash is invalid");
@@ -107,7 +107,7 @@ export function assertProductionContractSnapshotContract(snapshot) {
 }
 
 function snapshotDocument(snapshot) {
-  try { return JSON.parse(snapshot.documentJson); } catch { throw new Error("ProductionContractSnapshot.documentJson is invalid"); }
+  try { return parseJsonStrict(snapshot.documentJson); } catch { throw new Error("ProductionContractSnapshot.documentJson is invalid"); }
 }
 
 function assertSnapshotRef(ref, label) {
@@ -124,7 +124,7 @@ function assertContractRefs(contractRefs) {
   assertExactKeys(contractRefs, SLICE_CONTRACT_KEYS, "ProductionSlice.contractRefs");
   for (const role of ["storyBrief", "beatSheet", "scriptScene", "recipe", "rightsProfile"]) assertRoleSnapshotRef(role, contractRefs[role], `ProductionSlice.contractRefs.${role}`);
   for (const role of ["characterSpecs", "sceneSpecs", "stylePackages", "shotSpecs", "promptRecords", "qaReviews"]) {
-    if (!Array.isArray(contractRefs[role]) || new Set(contractRefs[role].map((ref) => JSON.stringify(ref))).size !== contractRefs[role].length) throw new TypeError(`ProductionSlice.contractRefs.${role} must be a unique array`);
+    if (!Array.isArray(contractRefs[role]) || new Set(contractRefs[role].map((ref) => canonicalize(ref))).size !== contractRefs[role].length) throw new TypeError(`ProductionSlice.contractRefs.${role} must be a unique array`);
     for (const [index, ref] of contractRefs[role].entries()) assertRoleSnapshotRef(role, ref, `ProductionSlice.contractRefs.${role}[${index}]`);
   }
   if (!contractRefs.characterSpecs.length || !contractRefs.sceneSpecs.length || !contractRefs.stylePackages.length || !contractRefs.shotSpecs.length || !contractRefs.promptRecords.length) {
@@ -142,7 +142,7 @@ export function assertProductionSliceContract(slice) {
     || !isExactRef(slice.sourceStateRef) || slice.sourceStateRef.kind !== ARTIFACT_KINDS.state
     || !IDENTIFIER_PATTERN.test(slice.episodeId) || typeof slice.title !== "string" || !slice.title.trim() || slice.title.length > 240
     || JSON.stringify(slice.requiredGates) !== JSON.stringify(PRODUCTION_GATES)
-    || !Array.isArray(slice.gateDecisionRefs) || new Set(slice.gateDecisionRefs.map((ref) => JSON.stringify(ref))).size !== slice.gateDecisionRefs.length
+    || !Array.isArray(slice.gateDecisionRefs) || new Set(slice.gateDecisionRefs.map((ref) => canonicalize(ref))).size !== slice.gateDecisionRefs.length
     || !STAGES.has(slice.stage) || !STATUSES.has(slice.status) || slice.releaseVisibility !== "private_workspace") throw new TypeError("ProductionSlice identity, lifecycle or visibility is invalid");
   for (const [index, ref] of slice.gateDecisionRefs.entries()) if (!isExactRef(ref) || ref.kind !== ARTIFACT_KINDS.productionGateDecision) throw new TypeError(`ProductionSlice.gateDecisionRefs[${index}] is invalid`);
   assertContractRefs(slice.contractRefs);
@@ -321,8 +321,8 @@ export async function createProductionSlice(projectRoot, input = {}) {
   if (!WORLD_ID_PATTERN.test(input.worldId || "")) throw new TypeError("ProductionSlice.worldId must be W##");
   if (!isExactRef(input.sourceCommitRef) || input.sourceCommitRef.kind !== ARTIFACT_KINDS.commit || !isExactRef(input.sourceStateRef) || input.sourceStateRef.kind !== ARTIFACT_KINDS.state) throw new TypeError("ProductionSlice requires exact sourceCommitRef and sourceStateRef");
   await verifySource(root, workspaceItem.envelope.artifactRef, input.worldId, input.sourceCommitRef, input.sourceStateRef);
-  const roles = roleDocuments(input.contracts || input.contractDocuments);
-  const capturedAt = assertDate(input.createdAt || new Date().toISOString(), "ProductionSlice.createdAt");
+  const roles = roleDocuments(input.contracts === undefined ? input.contractDocuments : input.contracts);
+  const capturedAt = assertDate(input.createdAt === undefined ? new Date().toISOString() : input.createdAt, "ProductionSlice.createdAt");
   const contractRefs = {};
   const snapshots = [];
   for (const role of SLICE_CONTRACT_KEYS) {
@@ -442,14 +442,14 @@ export async function recordProductionGateDecision(projectRoot, sliceRef, input 
   }
   if (input.gate === "qa" && !slice.contractRefs.qaReviews.length) throw new Error("Production Gate qa requires at least one QA review snapshot");
   if (input.gate === "release" && slice.contractRefs.qaReviews.length === 0) throw new Error("Production Gate release requires QA evidence");
-  const evidenceRefs = input.evidenceRefs || sourceRefsForGate(slice, input.gate);
+  const evidenceRefs = input.evidenceRefs === undefined ? sourceRefsForGate(slice, input.gate) : input.evidenceRefs;
   if (!Array.isArray(evidenceRefs) || !evidenceRefs.length) throw new TypeError(`Production Gate ${input.gate} requires evidenceRefs`);
   for (const ref of evidenceRefs) {
     if (!isExactRef(ref)) throw new TypeError("ProductionGateDecision evidenceRefs must be exact refs");
     if (ref.kind === ARTIFACT_KINDS.productionContractSnapshot) await loadSnapshot(projectRoot, ref);
     else await findArtifact(projectRoot, ref);
   }
-  const decidedAt = assertDate(input.decidedAt || new Date().toISOString(), "ProductionGateDecision.decidedAt");
+  const decidedAt = assertDate(input.decidedAt === undefined ? new Date().toISOString() : input.decidedAt, "ProductionGateDecision.decidedAt");
   const actor = { kind: "human", id: input.actorId };
   const decision = {
     kind: ARTIFACT_KINDS.productionGateDecision,
@@ -461,7 +461,7 @@ export async function recordProductionGateDecision(projectRoot, sliceRef, input 
     decision: input.decision,
     actor,
     decidedAt,
-    rationale: input.rationale || "Human production Gate decision recorded by the Canon owner.",
+    rationale: input.rationale === undefined ? "Human production Gate decision recorded by the Canon owner." : input.rationale,
     evidenceRefs,
     authority: "human_gate",
     recordedBy: { kind: "codex", id: "codex.root" }
@@ -507,7 +507,7 @@ export async function activateProductionStage(projectRoot, sliceRef, decisionRef
   if (expectedGate !== decision.gate || gateIndex < 0) throw new Error(`Production stage activation requires the next Gate ${expectedGate}`);
   if (decision.gate === "qa" && !slice.contractRefs.qaReviews.length) throw new Error("Production stage activation requires QA snapshots");
   const gateDecisionRefs = [...latestRefs.entries(), [decision.gate, decisionRef]].sort((left, right) => PRODUCTION_GATES.indexOf(left[0]) - PRODUCTION_GATES.indexOf(right[0])).map(([, ref]) => ref);
-  const updatedAt = assertDate(options.updatedAt || decision.decidedAt, "ProductionSlice.updatedAt");
+  const updatedAt = assertDate(options.updatedAt === undefined ? decision.decidedAt : options.updatedAt, "ProductionSlice.updatedAt");
   const next = {
     ...slice,
     version: slice.version + 1,

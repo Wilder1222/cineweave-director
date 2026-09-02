@@ -111,6 +111,9 @@
           "type": "integer",
           "minimum": 1,
           "maximum": 12
+        },
+        "calibration": {
+          "$ref": "#/$defs/reviewCalibration"
         }
       }
     },
@@ -188,6 +191,31 @@
       "$ref": "#/$defs/provenance"
     }
   },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "scopes": {
+            "contains": {
+              "const": "CinematographyBench"
+            }
+          }
+        },
+        "required": [
+          "scopes"
+        ]
+      },
+      "then": {
+        "properties": {
+          "humanReview": {
+            "required": [
+              "calibration"
+            ]
+          }
+        }
+      }
+    }
+  ],
   "$defs": {
     "skillReceipt": {
       "type": "object",
@@ -358,6 +386,11 @@
         "contentHash"
       ],
       "properties": {
+        "kind": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 160
+        },
         "id": {
           "type": "string",
           "minLength": 1,
@@ -369,6 +402,161 @@
         },
         "contentHash": {
           "$ref": "#/$defs/contentHash"
+        }
+      }
+    },
+    "cameraPrevisRef": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/contractRef"
+        },
+        {
+          "required": [
+            "kind",
+            "version"
+          ],
+          "properties": {
+            "kind": {
+              "const": "cineweave_codex_camera_previs_spec"
+            }
+          }
+        }
+      ]
+    },
+    "reviewCalibration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "protocolId",
+        "blindComparison",
+        "trainingRequired",
+        "minimumIndependentReviewers",
+        "agreementMeasure",
+        "minimumAgreement",
+        "disagreementResolution",
+        "anchors"
+      ],
+      "properties": {
+        "protocolId": {
+          "$ref": "#/$defs/stableId"
+        },
+        "blindComparison": {
+          "const": true
+        },
+        "trainingRequired": {
+          "const": true
+        },
+        "minimumIndependentReviewers": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 12
+        },
+        "agreementMeasure": {
+          "enum": [
+            "percent_agreement",
+            "cohen_kappa",
+            "krippendorff_alpha"
+          ]
+        },
+        "minimumAgreement": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "disagreementResolution": {
+          "enum": [
+            "third_reviewer",
+            "lead_adjudication"
+          ]
+        },
+        "anchors": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 64,
+          "items": {
+            "$ref": "#/$defs/reviewAnchor"
+          }
+        },
+        "observedMediaCalibration": {
+          "$ref": "#/$defs/observedMediaCalibration"
+        }
+      }
+    },
+    "reviewAnchor": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "anchorId",
+        "dimensionId",
+        "criterion",
+        "evidenceRequirement",
+        "passAnchor",
+        "warnAnchor",
+        "failAnchor"
+      ],
+      "properties": {
+        "anchorId": {
+          "$ref": "#/$defs/stableId"
+        },
+        "dimensionId": {
+          "$ref": "#/$defs/stableId"
+        },
+        "criterion": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1600
+        },
+        "evidenceRequirement": {
+          "enum": [
+            "observed_media",
+            "track_and_frame_evidence",
+            "exact_contract_and_observed_media"
+          ]
+        },
+        "passAnchor": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1600
+        },
+        "warnAnchor": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1600
+        },
+        "failAnchor": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 1600
+        }
+      }
+    },
+    "observedMediaCalibration": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "mode",
+        "minimumPairs",
+        "requiresObservedMedia",
+        "balancedPresentationOrder",
+        "decisionScale"
+      ],
+      "properties": {
+        "mode": {
+          "const": "paired_observed_media"
+        },
+        "minimumPairs": {
+          "type": "integer",
+          "minimum": 2,
+          "maximum": 64
+        },
+        "requiresObservedMedia": {
+          "const": true
+        },
+        "balancedPresentationOrder": {
+          "const": true
+        },
+        "decisionScale": {
+          "const": "left_right_tie"
         }
       }
     },
@@ -434,6 +622,7 @@
             "interaction",
             "storyboard",
             "cinematography",
+            "direction",
             "rights",
             "production"
           ]
@@ -552,6 +741,7 @@
             "interaction",
             "storyboard_continuity",
             "cinematography",
+            "director_quality",
             "rights"
           ]
         },
@@ -563,6 +753,18 @@
         },
         "evidenceBundleRef": {
           "$ref": "#/$defs/contractRef"
+        },
+        "directorArtifactRefs": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 12,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/directorArtifactRef"
+          }
+        },
+        "cameraPrevisRef": {
+          "$ref": "#/$defs/cameraPrevisRef"
         },
         "perturbation": {
           "type": "string",
@@ -586,7 +788,58 @@
         "humanReviewRequired": {
           "type": "boolean"
         }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "category": {
+                "const": "cinematography"
+              }
+            },
+            "required": [
+              "category"
+            ]
+          },
+          "then": {
+            "required": [
+              "cameraPrevisRef"
+            ]
+          }
+        }
+      ]
+    },
+    "directorArtifactRef": {
+    "type": "object",
+    "additionalProperties": false,
+    "required": [
+      "kind",
+      "id",
+      "version",
+      "contentHash"
+    ],
+    "properties": {
+      "kind": {
+        "enum": [
+          "cineweave_codex_action_sequence_spec",
+          "cineweave_codex_shot_spec",
+          "cineweave_codex_shot_lighting_plan",
+          "cineweave_codex_temporal_spec",
+          "cineweave_codex_camera_previs_spec",
+          "cineweave_codex_storyboard_sequence"
+        ]
+      },
+      "id": {
+        "$ref": "#/$defs/stableId"
+      },
+      "version": {
+        "type": "integer",
+        "minimum": 1
+      },
+      "contentHash": {
+        "$ref": "#/$defs/contentHash"
       }
     }
   }
+}
 }

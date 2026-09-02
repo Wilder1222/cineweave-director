@@ -211,6 +211,10 @@ export async function runEventProposal(projectRoot, proposalPath, options = {}) 
 
 export async function runEventProposalDocument(projectRoot, proposalDocument, options = {}) {
   const root = resolve(projectRoot);
+  if (options.verifyHealth !== undefined && typeof options.verifyHealth !== "boolean") {
+    throw new TypeError("verifyHealth must be boolean when provided");
+  }
+  const verifyHealth = options.verifyHealth !== false;
   const proposal = assertEventProposalContract(proposalDocument);
   const [workspaceItem, worldItem, stateItem, platformItem, triggerCatalogItem, actionCatalogItem, templateCatalogItem] = await Promise.all([
     findArtifact(root, proposal.workspaceRef),
@@ -286,8 +290,8 @@ export async function runEventProposalDocument(projectRoot, proposalDocument, op
       createdAt: proposal.proposedAt,
       createdBy: "codex.root"
     });
-    await assertHealthyGraph(root);
-    return { ...transition, stored: { proposalRef: storedProposal.envelope.artifactRef, decisionRef: storedDecision.envelope.artifactRef } };
+    const health = verifyHealth ? await assertHealthyGraph(root) : null;
+    return { ...transition, stored: { proposalRef: storedProposal.envelope.artifactRef, decisionRef: storedDecision.envelope.artifactRef }, health };
   }
 
   const storedState = await putArtifact(root, transition.nextState, {
@@ -323,7 +327,7 @@ export async function runEventProposalDocument(projectRoot, proposalDocument, op
   } catch (error) {
     if (!String(error?.message || error).includes("Version conflict")) throw error;
     const winnerHead = await deriveStreamHead(root, proposal.worldId, proposal.stream);
-    const health = await assertHealthyGraph(root);
+    const health = verifyHealth ? await assertHealthyGraph(root) : null;
     return {
       ...transition,
       status: "stale_after_race",
@@ -352,7 +356,7 @@ export async function runEventProposalDocument(projectRoot, proposalDocument, op
     createdAt: proposal.proposedAt,
     createdBy: "codex.root"
   });
-  const health = await assertHealthyGraph(root);
+  const health = verifyHealth ? await assertHealthyGraph(root) : null;
   return {
     ...transition,
     projection,
@@ -444,43 +448,44 @@ export async function reconcilePlatformProjections(projectRoot, platform) {
 export async function verifyWorldOsProject(projectRoot) {
   const root = resolve(projectRoot);
   const health = await assertHealthyGraph(root);
-  const signals = (await listArtifacts(root))
+  const artifacts = await listArtifacts(root);
+  const signals = artifacts
     .filter((item) => item.envelope.payload?.kind === ARTIFACT_KINDS.externalSignal);
   for (const item of signals) await verifyExternalSignal(root, item.envelope.artifactRef);
-  const signalUses = (await listArtifacts(root))
+  const signalUses = artifacts
     .filter((item) => item.envelope.payload?.kind === ARTIFACT_KINDS.externalSignalUse);
   for (const item of signalUses) await verifyExternalSignalUse(root, item.envelope.artifactRef);
-  const mcpClaims = (await listArtifacts(root))
+  const mcpClaims = artifacts
     .filter((item) => item.envelope.payload?.kind === ARTIFACT_KINDS.mcpDispatchClaim);
   for (const item of mcpClaims) await verifyMcpDispatchClaim(root, item.envelope.artifactRef);
-  const mcpAttempts = (await listArtifacts(root))
+  const mcpAttempts = artifacts
     .filter((item) => item.envelope.payload?.kind === ARTIFACT_KINDS.mcpAttemptReceipt);
   for (const item of mcpAttempts) await verifyMcpAttemptReceipt(root, item.envelope.artifactRef);
-  const llmShadowRuns = (await listArtifacts(root))
+  const llmShadowRuns = artifacts
     .filter((item) => item.envelope.payload?.kind === ARTIFACT_KINDS.llmShadowReceipt);
   for (const item of llmShadowRuns) await verifyLlmShadowReceipt(root, item.envelope.artifactRef);
-  const worldRegistrations = (await listArtifacts(root))
+  const worldRegistrations = artifacts
     .filter((item) => item.envelope.payload?.kind === ARTIFACT_KINDS.worldRegistration);
   for (const item of worldRegistrations) await verifyWorldRegistration(root, item.envelope.artifactRef);
-  const inceptionDecisions = (await listArtifacts(root))
+  const inceptionDecisions = artifacts
     .filter((item) => item.envelope.payload?.kind === ARTIFACT_KINDS.worldInceptionDecision);
   for (const item of inceptionDecisions) await verifyWorldInceptionDecision(root, item.envelope.artifactRef);
-  const brandEchoes = (await listArtifacts(root))
+  const brandEchoes = artifacts
     .filter((item) => item.envelope.payload?.kind === ARTIFACT_KINDS.brandEcho);
   for (const item of brandEchoes) await verifyBrandEcho(root, item.envelope.artifactRef);
-  const brandEchoDecisions = (await listArtifacts(root))
+  const brandEchoDecisions = artifacts
     .filter((item) => item.envelope.payload?.kind === ARTIFACT_KINDS.brandEchoDecision);
   for (const item of brandEchoDecisions) await verifyBrandEchoDecision(root, item.envelope.artifactRef);
-  const productionSnapshots = (await listArtifacts(root))
+  const productionSnapshots = artifacts
     .filter((item) => item.envelope.payload?.kind === ARTIFACT_KINDS.productionContractSnapshot);
   for (const item of productionSnapshots) await verifyProductionContractSnapshot(root, item.envelope.artifactRef);
-  const productionSlices = (await listArtifacts(root))
+  const productionSlices = artifacts
     .filter((item) => item.envelope.payload?.kind === ARTIFACT_KINDS.productionSlice);
   for (const item of productionSlices) await verifyProductionSlice(root, item.envelope.artifactRef);
-  const productionGateDecisions = (await listArtifacts(root))
+  const productionGateDecisions = artifacts
     .filter((item) => item.envelope.payload?.kind === ARTIFACT_KINDS.productionGateDecision);
   for (const item of productionGateDecisions) await verifyProductionGateDecision(root, item.envelope.artifactRef);
-  const productionMediaImports = (await listArtifacts(root))
+  const productionMediaImports = artifacts
     .filter((item) => item.envelope.payload?.kind === ARTIFACT_KINDS.productionMediaImport);
   const productionVerificationCache = {
     media: new Map(),
@@ -489,16 +494,16 @@ export async function verifyWorldOsProject(projectRoot) {
     release: new Map()
   };
   for (const item of productionMediaImports) await verifyProductionMediaImport(root, item.envelope.artifactRef, { cache: productionVerificationCache });
-  const productionQaReviews = (await listArtifacts(root))
+  const productionQaReviews = artifacts
     .filter((item) => item.envelope.payload?.kind === ARTIFACT_KINDS.productionQaReview);
   for (const item of productionQaReviews) await verifyProductionQaReview(root, item.envelope.artifactRef, { cache: productionVerificationCache });
-  const approvedAssets = (await listArtifacts(root))
+  const approvedAssets = artifacts
     .filter((item) => item.envelope.payload?.kind === ARTIFACT_KINDS.approvedAsset);
   for (const item of approvedAssets) await verifyApprovedAsset(root, item.envelope.artifactRef, { cache: productionVerificationCache });
-  const releaseReceipts = (await listArtifacts(root))
+  const releaseReceipts = artifacts
     .filter((item) => item.envelope.payload?.kind === ARTIFACT_KINDS.releaseReceipt);
   for (const item of releaseReceipts) await verifyPrivateReleaseReceipt(root, item.envelope.artifactRef, { cache: productionVerificationCache });
-  const portfolioRuns = (await listArtifacts(root))
+  const portfolioRuns = artifacts
     .filter((item) => item.envelope.payload?.kind === ARTIFACT_KINDS.portfolioRunReceipt);
   for (const item of portfolioRuns) {
     const receipt = assertPortfolioRunReceiptContract(item.envelope.payload);
@@ -516,7 +521,7 @@ export async function verifyWorldOsProject(projectRoot) {
         }
       }
   }
-  const brainRuns = (await listArtifacts(root))
+  const brainRuns = artifacts
     .filter((item) => item.envelope.payload?.kind === ARTIFACT_KINDS.codexBrainRunReceipt);
   for (const item of brainRuns) {
     const receipt = assertCodexBrainRunReceiptContract(item.envelope.payload);

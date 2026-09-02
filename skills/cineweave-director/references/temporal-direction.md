@@ -20,3 +20,7 @@ Declare motivation, path, start hold, acceleration, peak, deceleration, stop and
 - edit: entry, exit, transition and sound bridge.
 
 Finish on a stable state suitable for the next shot or a video model's final frames. Reduce high-frequency accessories, intersecting layers and uncontrolled particles in video-safe constraints. Never describe a still-image style as if it proved temporal stability.
+
+`TemporalSpec` is derived after its exact `ShotSpec` exists and owns the
+one-way `shotSpecRef`. Never write a temporal-spec ref back into ShotSpec; doing
+so would create an unresolvable content-hash cycle.

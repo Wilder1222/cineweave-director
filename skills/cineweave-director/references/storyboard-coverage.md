@@ -4,12 +4,16 @@ Use this guide when a request asks for a storyboard, contact sheet, character bo
 
 ## Coverage ledger
 
-Maintain a derived ledger before generation. It may live in a planning note or production manifest; do not invent a new contract field when the current schema does not expose one.
+Maintain the storyboard's top-level `coverageLedger` before generation. It is
+the Director-owned record of why a shot exists and must be serialized with the
+Storyboard rather than left only in a planning note or production manifest.
+Every shot lists its `coverageLedgerIds`, and every ledger row lists the
+`shotIds` and `beatIds` it closes.
 
 ```text
-sequenceId / sceneId
-beatId and causal change
-shotId / panelId
+storyboardId / selected action scope
+coverageId, beatId and causal change
+shotId / exact ShotSpec ref / optional panelId
 purpose and audience attention
 required coverage: establish | orientation | action | reaction | consequence | transition
 character/scene/appearance/light refs
@@ -52,6 +56,13 @@ Generate or edit each panel as an independent task with:
 - model/adapter capability and rights checks;
 - provenance including recipe/task ID, source refs, seed or execution receipt when available;
 - a review status separate from the board assembly status.
+
+When Production has supplied a matching BoardAssemblyPlan, record the exact
+plan ref and the panel's recipe run, task, region and tile in the Storyboard
+`productionBindings`. This is a handoff, not a replacement for Production's
+plan: Director does not fabricate execution receipts, evidence or accepted
+status. If no exact board plan exists yet, omit production bindings and keep
+the storyboard provider-neutral.
 
 Assemble only after the tiles pass their own checks. Use a deterministic external board assembly with fixed non-overlapping regions, labels and metadata. Retry only failed tasks; retain immutable passing tiles. For heterogeneous boards, use separate recipes for turnarounds, identity/detail panels, environment plates and shot thumbnails.
 

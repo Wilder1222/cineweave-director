@@ -34,6 +34,7 @@ const IDENTIFIER = IDENTIFIER_PATTERN;
 const MEDIA_KEYS = ["mediaId", "mediaType", "fileName", "format", "byteSize", "contentHash", "width", "height", "source"];
 const VERIFICATION_KEYS = ["fileExists", "contentHashPresent", "dimensionsDetected", "privateUrlAbsent", "status"];
 const IMPORT_CONTRACT_KEYS = ["source", "statusOnCreation", "nextAction"];
+const PROVENANCE_SOURCES = new Set(["user_authored", "codex_authored", "adapted", "imported", "suite_builtin"]);
 
 function assertDate(value, label) {
   if (typeof value !== "string" || Number.isNaN(Date.parse(value))) throw new TypeError(`${label} must be a valid ISO date-time`);
@@ -52,6 +53,20 @@ function assertWriter(value, label) {
 
 function refString(ref) {
   return `${ref.kind}/${ref.id}@${ref.version}/${ref.contentHash}`;
+}
+
+function assertProvenance(value, label) {
+  const allowedKeys = new Set(["source", "createdAt", "updatedAt", "parentId", "changeLog"]);
+  if (!isPlainObject(value) || Object.keys(value).some((key) => !allowedKeys.has(key))
+    || !PROVENANCE_SOURCES.has(value.source) || typeof value.createdAt !== "string" || typeof value.updatedAt !== "string"
+    || !Array.isArray(value.changeLog) || !value.changeLog.length || value.changeLog.length > 32
+    || value.changeLog.some((item) => typeof item !== "string" || !item.trim() || item.length > 1600)
+    || (value.parentId !== undefined && (typeof value.parentId !== "string" || !value.parentId.trim() || value.parentId.length > 160))) {
+    throw new TypeError(label + " is invalid");
+  }
+  assertDate(value.createdAt, label + ".createdAt");
+  assertDate(value.updatedAt, label + ".updatedAt");
+  return value;
 }
 
 function mediaFormat(mimeType) {
@@ -110,11 +125,29 @@ function safeOutputPath(projectRoot, storageRef) {
 }
 
 function assertMediaImportPayload(payload) {
-  if (!isPlainObject(payload) || payload.kind !== PRODUCTION_MEDIA_IMPORT_KIND || payload.contractVersion !== "2.0.0") throw new TypeError("Unsupported MediaImport contract");
+  const modern = payload?.contractVersion === "2.5.0";
+  const legacy = payload?.contractVersion === "2.0.0";
+  if (!isPlainObject(payload) || payload.kind !== PRODUCTION_MEDIA_IMPORT_KIND || (!legacy && !modern)) throw new TypeError("Unsupported MediaImport contract");
   if (typeof payload.worldId !== "string" || !payload.worldId.trim() || payload.worldId.length > 160
-    || typeof payload.renderPlanRef !== "string" || !payload.renderPlanRef.trim()
     || payload.status !== "draft" || !Array.isArray(payload.media) || !payload.media.length || payload.media.length > 12) {
     throw new TypeError("MediaImport identity or status is invalid");
+  }
+  if (legacy && (typeof payload.renderPlanRef !== "string" || !payload.renderPlanRef.trim())) {
+    throw new TypeError("Legacy MediaImport.renderPlanRef must be a non-empty string");
+  }
+  if (modern) {
+    if (!IDENTIFIER.test(payload.mediaImportId || "") || payload.version < 1 || !Number.isSafeInteger(payload.version)
+      || !isExactRef(payload.renderPlanRef) || payload.renderPlanRef.kind !== "cineweave_codex_render_plan") {
+      throw new TypeError("MediaImport 2.5 identity or RenderPlan reference is invalid");
+    }
+    assertProvenance(payload.provenance, "MediaImport.provenance");
+    const hasRequest = Object.hasOwn(payload, "executionRequestRef");
+    const hasReceipt = Object.hasOwn(payload, "executionReceiptRef");
+    if (hasRequest !== hasReceipt
+      || (hasRequest && (!isExactRef(payload.executionRequestRef) || payload.executionRequestRef.kind !== "cineweave_execution_request"
+        || !isExactRef(payload.executionReceiptRef) || payload.executionReceiptRef.kind !== "cineweave_execution_receipt"))) {
+      throw new TypeError("MediaImport 2.5 execution references must be an exact request/receipt pair");
+    }
   }
   if (!isPlainObject(payload.skillReceipt)
     || typeof payload.skillReceipt.repository !== "string" || !/^https:\/\/(www\.)?github\.com\/[^/]+\/[^/]+(?:\.git)?\/?$/.test(payload.skillReceipt.repository)
@@ -148,8 +181,11 @@ function assertMediaImportPayload(payload) {
 
 export function productionMediaImportRef(payload) {
   assertMediaImportPayload(payload);
-  const id = `media-import.${sha256Canonical(payload).slice(7, 39)}`;
-  return exactRef(PRODUCTION_MEDIA_IMPORT_KIND, id, 1, payload);
+  const id = payload.contractVersion === "2.5.0"
+    ? payload.mediaImportId
+    : "media-import." + sha256Canonical(payload).slice(7, 39);
+  const version = payload.contractVersion === "2.5.0" ? payload.version : 1;
+  return exactRef(PRODUCTION_MEDIA_IMPORT_KIND, id, version, payload);
 }
 
 export function assertProductionMediaBindingContract(binding) {
@@ -224,12 +260,19 @@ export async function createProductionMediaImport(projectRoot, executionRequestR
   const renderPlanRef = assertExactRef(requestItem.envelope.payload.renderPlanRef, "request.renderPlanRef");
   const renderPlan = (await findArtifact(projectRoot, renderPlanRef)).envelope.payload;
   const createdAt = assertDate(options.createdAt || receipt.timing.finishedAt, "createdAt");
-  const mediaImport = {
-    kind: PRODUCTION_MEDIA_IMPORT_KIND,
-    contractVersion: "2.0.0",
+  const provenance = {
+    source: "codex_authored",
+    createdAt,
+    updatedAt: createdAt,
+    changeLog: ["Imported exact image bytes from a successful ExecutionReceipt."]
+  };
+  const mediaImportIdentity = {
+    contractVersion: "2.5.0",
     worldId: binding.slice.worldId,
     ...(renderPlan.shotId ? { shotId: renderPlan.shotId } : {}),
-    renderPlanRef: refString(renderPlanRef),
+    renderPlanRef,
+    executionRequestRef: binding.requestRef,
+    executionReceiptRef,
     skillReceipt: structuredClone(requestItem.envelope.payload.skillReceipt),
     status: "draft",
     media,
@@ -244,16 +287,23 @@ export async function createProductionMediaImport(projectRoot, executionRequestR
       source,
       statusOnCreation: "draft",
       nextAction: "Bind this Draft MediaImport to exact QA evidence, then activate the ProductionSlice QA Gate."
-    }
+    },
+    provenance
+  };
+  const mediaImport = {
+    kind: PRODUCTION_MEDIA_IMPORT_KIND,
+    mediaImportId: "media-import." + sha256Canonical(mediaImportIdentity).slice(7, 39),
+    version: 1,
+    ...mediaImportIdentity
   };
   assertMediaImportPayload(mediaImport);
   const mediaRef = productionMediaImportRef(mediaImport);
-  const existingMedia = await findArtifactByVersion(projectRoot, PRODUCTION_MEDIA_IMPORT_KIND, mediaRef.id, 1);
+  const existingMedia = await findArtifactByVersion(projectRoot, PRODUCTION_MEDIA_IMPORT_KIND, mediaRef.id, mediaRef.version);
   if (existingMedia && !sameRef(existingMedia.envelope.artifactRef, mediaRef)) throw new Error("MediaImport identity is bound to different content");
   const mediaArtifact = existingMedia || await putArtifact(projectRoot, mediaImport, {
     kind: PRODUCTION_MEDIA_IMPORT_KIND,
     id: mediaRef.id,
-    version: 1,
+    version: mediaRef.version,
     status: "candidate",
     createdAt,
     createdBy: "codex.root"
@@ -315,7 +365,15 @@ export async function verifyProductionMediaImport(projectRoot, bindingRef, optio
   if (!sameRef(mediaItem.envelope.artifactRef, binding.mediaImportRef)
     || !sameRef(productionMediaImportRef(mediaImport), binding.mediaImportRef)
     || mediaImport.worldId !== binding.worldId) throw new Error("ProductionMediaImport media payload is not exact");
-  if (mediaImport.renderPlanRef !== refString(binding.renderPlanRef)) throw new Error("MediaImport renderPlanRef does not match the exact RenderPlan");
+  if (mediaImport.contractVersion === "2.5.0") {
+    if (!sameRef(mediaImport.renderPlanRef, binding.renderPlanRef)
+      || !sameRef(mediaImport.executionRequestRef, binding.executionRequestRef)
+      || !sameRef(mediaImport.executionReceiptRef, binding.executionReceiptRef)) {
+      throw new Error("MediaImport 2.5 references do not match the exact execution binding");
+    }
+  } else if (mediaImport.renderPlanRef !== refString(binding.renderPlanRef)) {
+    throw new Error("MediaImport renderPlanRef does not match the exact RenderPlan");
+  }
   if (mediaImport.media.length !== receipt.outputs.length) throw new Error("MediaImport media count does not match the exact ExecutionReceipt");
   const verifiedOutputs = [];
   for (let index = 0; index < receipt.outputs.length; index += 1) {

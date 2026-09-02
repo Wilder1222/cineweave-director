@@ -1055,6 +1055,30 @@ test("MCP dispatcher applies deterministic backoff and dead-letters after the ex
   assert.equal(health.graph.summary.missingReferenceCount, 0);
 });
 
+test("MCP dispatcher validates timeout options before creating a claim", async (t) => {
+  const root = await tempDirectory(t);
+  const project = join(root, "project");
+  await rebuildSeedStore(seedManifestPath, project);
+  await runEventProposal(project, proposalPath);
+  const platform = await readJson(platformPath);
+  const connector = {
+    kind: "world_os_mcp_connector",
+    trusted: true,
+    id: "fixture.timeout-validation",
+    async call() {
+      throw new Error("must not be called");
+    }
+  };
+
+  await assert.rejects(
+    () => dispatchOutbox(project, platform, connector, { allowNetwork: true, timeoutMs: 0 }),
+    /timeoutMs must be an integer/,
+  );
+  assert.equal((await listMcpClaims(project)).length, 0);
+  assert.equal((await listMcpAttempts(project)).length, 0);
+  assert.equal((await listOutbox(project, platform)).pending, 1);
+});
+
 test("event to terminal commit to MCP outbox to receipt is end-to-end auditable", async (t) => {
   const root = await tempDirectory(t);
   const project = join(root, "project");

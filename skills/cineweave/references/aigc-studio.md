@@ -29,7 +29,7 @@ idea
 | 2. Evidence | `cineweave-reference` | `ReferenceAsset`, atomic `ReferenceObservation`, `ReferenceReview`, `ReferenceBindingSet` | role, scope, preserve/ignore list and rights/usage status |
 | Gate B. Visual bible | Character / Scene / Style | exact `CharacterSpec`, `AppearanceState`, `SceneSpec`/`SceneLightState`, `StylePackage`/`StyleCompile`, `RepresentationBinding` | identity, current look, geography, physical light and representation are approved separately |
 | 3. Narrative | `cineweave-story` | `StoryBrief`, `BeatSheet`, `ScriptScene`, `ContinuityLedger` | dramatic question, causal beats and changed states |
-| 4. Direction | `cineweave-director` | `ActionSequenceSpec`, `ShotSpec`, `ShotLightingPlan`, `TemporalSpec`, `Storyboard` | action coverage, blocking, camera purpose, time and panel acceptance |
+| 4. Direction | `cineweave-director` | `ActionSequenceSpec`, `ShotSpec`, `ShotLightingPlan`, `TemporalSpec`, optional `CameraPrevisSpec`, `Storyboard` | action coverage, blocking, camera purpose, time, numerical previs when needed and panel acceptance |
 | 5. Asset and prompt production | Prompt / Production | `PromptRecord`, `ImagePrompt`, `AssetRecipe`, `BoardAssemblyPlan`, `WorkflowTemplateProfile`, controls and evidence plan | exact refs, graph/template identity, capabilities, rights and deterministic retry boundaries |
 | Gate C. Execution review | user + Production | `MediaImport`, review receipt and repair route | actual output bytes, execution metadata and human review |
 
@@ -66,7 +66,7 @@ For a reproducible pack, use an explicit `--p` ID/code on every variant rather
 than relying on the user's default selections. After the user runs the prompt,
 store the resolved code Midjourney returns. Moodboard influence is tested with
 `--s` while holding the fixture fixed; do not put `--sw` or `--sv` into a
-Moodboard pack. See Prompt's `midjourney-aesthetic-profiles.md` for the current
+Moodboard pack. See Prompt's `../../cineweave-prompt/references/midjourney-aesthetic-profiles.md` for the current
 provider rules and version caveats.
 
 ## Reusing an existing Midjourney exploration
@@ -119,7 +119,7 @@ identity        CharacterSpec / CharacterBinding
 current look    AppearanceState
 place + sources SceneSpec / SceneLightState / SceneBinding
 representation  StylePackage / StyleCompile / RepresentationBinding
-shot + time     ShotSpec / ShotLightingPlan / TemporalSpec
+shot + time     ShotSpec / ShotLightingPlan / TemporalSpec / optional CameraPrevisSpec
 ```
 
 “保持一致” means that downstream tasks reuse these dimensions and record

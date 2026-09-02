@@ -56,7 +56,7 @@ Do not bind to a target artifact before that exact `{kind,id,version,contentHash
 
 `CharacterMorphologySpec` is optional and remains draft until neutral front, three-quarter and profile evidence passes MorphologyReview. `RepresentationBinding` is optional unless the target changes representation family or the selected StylePackage requires an explicit identity translation policy. Neither is needed merely to write a bounded one-off prompt.
 
-For a multi-role explanatory response, use a named `observations` collection whose members each validate against `reference-observation.schema.json`. Follow it with a short uncertainty ledger and handoff recommendations. Do not replace the collection with one prose mega-prompt.
+For a multi-role explanatory response, use a named `observations` collection whose members each validate against `../../../packages/cineweave-contracts/schemas/reference-observation.schema.json`. Follow it with a short uncertainty ledger and handoff recommendations. Do not replace the collection with one prose mega-prompt.
 
 ## Prompt reconstruction
 

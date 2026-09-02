@@ -14,6 +14,14 @@ function requiredString(value, path, errors) {
   if (typeof value !== "string" || !value.trim()) errors.push(`${path} must be a non-empty string`);
 }
 
+function isExactPromptRef(value) {
+  return isRecord(value)
+    && ["cineweave_codex_prompt_record", "cineweave_codex_image_prompt"].includes(value.kind)
+    && typeof value.id === "string" && value.id.trim()
+    && Number.isSafeInteger(value.version) && value.version >= 1
+    && /^sha256:[0-9a-f]{64}$/.test(value.contentHash || "");
+}
+
 function check(checks, code, condition, message) {
   checks.push({ code, status: condition ? "pass" : "fail", message });
 }
@@ -63,7 +71,14 @@ async function main() {
   }
 
   requiredString(plan.worldId, "worldId", errors);
-  requiredString(plan.promptPayloadRef, "promptPayloadRef", errors);
+  const modern = plan.contractVersion === "2.5.0";
+  if (modern) {
+    requiredString(plan.renderPlanId, "renderPlanId", errors);
+    check(checks, "EXACT_PROMPT_REF", isExactPromptRef(plan.promptRef), "RenderPlan 2.5 requires an exact PromptRecord or ImagePrompt reference");
+    check(checks, "NO_LEGACY_PROMPT_STRING", !Object.hasOwn(plan, "promptPayloadRef"), "RenderPlan 2.5 must not retain the legacy prompt string");
+  } else {
+    requiredString(plan.promptPayloadRef, "promptPayloadRef", errors);
+  }
   const modes = new Set(["generate", "edit", "inpaint", "multi_reference"]);
   check(checks, "MODE_SUPPORTED", modes.has(plan.mode), "mode must be generate, edit, inpaint or multi_reference");
   check(checks, "RECEIPT_PRESENT", isRecord(plan.skillReceipt) && !placeholderReceipt(plan.skillReceipt), "production preflight requires a real non-placeholder Skill receipt");

@@ -136,7 +136,7 @@ export async function advancePortfolio(projectRoot, options = {}) {
     const worldId = chooseWorld(active, served, runtime.shares);
     served.set(worldId, served.get(worldId) + 1);
     const before = await currentHead(runtime.root, worldId);
-    const result = await advanceWorld(runtime.root, worldId, { maxSteps: 1 });
+    const result = await advanceWorld(runtime.root, worldId, { maxSteps: 1, verifyHealth: false });
     const after = await currentHead(runtime.root, worldId);
     rounds.push({
       cycle,

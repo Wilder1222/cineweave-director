@@ -1,0 +1,81 @@
+{
+  "schemaVersion": "1.0.0",
+  "caseId": "case.atlas.food-original",
+  "category": "food",
+  "title": "Seasonal plate hierarchy",
+  "summary": "An original geometric food fixture with one plate, three bounded food forms and explicit steam cues, created without ingredient photography or third-party media.",
+  "status": "worked_fixture",
+  "routing": {
+    "indexPath": "../index.json",
+    "categoryPath": "../categories/food.md",
+    "triggers": ["food", "dish", "食物摄影", "菜品"],
+    "excludedCategories": ["portrait", "product", "architecture", "editorial", "diagrams", "exact-text"]
+  },
+  "prompt": {
+    "contentHash": "sha256:8f8571bcf1da97e4904ae668eef891f3d02e519578b6e7e74abf17440c19978f",
+    "record": {
+      "kind": "cineweave_codex_prompt_record",
+      "contractVersion": "2.0.0",
+      "promptId": "atlas-food-original",
+      "title": "Seasonal plate hierarchy prompt",
+      "version": 1,
+      "status": "active",
+      "domain": "food",
+      "generationMode": "generate",
+      "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-studio.git", "ref": "working-tree-v2.5.x", "commit": "6dd43cb645122f57b5c545803b374d831da454d9", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00.000Z" },
+      "purpose": "Provide a bounded food worked example with observable plate, ingredient grouping and steam hierarchy.",
+      "sourceText": "A fictional warm seasonal plate composed from simple color forms and three steam paths.",
+      "tags": ["atlas", "food", "original", "deterministic"],
+      "prompt": {
+        "language": "en",
+        "positive": "One oval plate containing three clearly separated fictional food forms, a green base accent and three rising steam paths, warm restrained palette, simple overhead-oblique presentation.",
+        "negative": "No brand, no packaging, no watermark, no utensils, no external food photograph.",
+        "blocks": {
+          "subject": ["one fictional plated dish built from three distinct food forms"],
+          "composition": ["large centered oval plate with bounded internal grouping"],
+          "lighting": ["warm graphic contrast with visible steam paths"],
+          "materials": ["separate color response for plate, food forms and green base accent"],
+          "constraints": ["original vector primitives only", "no imported ingredient imagery"]
+        }
+      },
+      "variables": [],
+      "references": [],
+      "variants": [{ "variantId": "atlas-food-original-baseline", "label": "Baseline geometry", "change": "No variation; retain the checked fixture geometry.", "positive": "Retain one plate, three food forms and three steam paths.", "status": "selected" }],
+      "evaluation": {
+        "criteria": [{ "criterion": "primary-target", "check": "The plated dish is the unambiguous primary target.", "status": "pass", "evidence": "The deterministic SVG contains one plate and one food-components group." }],
+        "knownRisks": ["A geometric fixture does not establish appetizing photoreal texture."],
+        "nextExperiment": "Human review may compare component spacing without changing color or steam count."
+      },
+      "provenance": { "source": "codex_authored", "createdAt": "2026-09-02T00:00:00.000Z", "updatedAt": "2026-09-02T00:00:00.000Z", "changeLog": ["v1: create an original deterministic food prompt fixture."] },
+      "validation": { "onePrimaryTarget": true, "providerNeutral": true, "variablesBound": true, "referencesScoped": true, "observationReady": true }
+    }
+  },
+  "adapterContext": { "adapterId": "adapter.atlas-svg.local", "adapterVersion": "1.0.0", "implementationPath": "skills/cineweave-prompt/scripts/generate-original-case-atlas.mjs", "implementationContentHash": "sha256:581fbf2a9209b062abc2c1a9dcc4c6aa1bd1aa572c9ee7e24cd242055b2b358a", "executionMode": "fixture", "runtime": "node>=22", "networkAccess": false, "externalEffects": false, "providerNeutral": true, "costAmount": 0, "currency": "USD" },
+  "visualSpec": {
+    "width": 1200,
+    "height": 900,
+    "seed": "atlas-food-v1",
+    "palette": ["#FFF7E8", "#F1D7A7", "#D86B3E", "#5D8A55", "#3E2D27"],
+    "exactText": ["SEASONAL PLATE", "Steam and color hierarchy"],
+    "elements": ["plate", "food-components", "steam"],
+    "composition": "One centered oval plate contains three separated food forms and a base accent; three steam paths establish warmth without external imagery."
+  },
+  "candidate": { "path": "../../assets/original-case-atlas/food-original.svg", "mimeType": "image/svg+xml", "byteLength": 1237, "contentHash": "sha256:9d55f1ab9c5eb0202cde4ea98d5e50c66fdacd67dec1925d19d3cf4975bfc62e", "width": 1200, "height": 900 },
+  "rights": { "profilePath": "../rights/license-profile.json", "profileContentHash": "sha256:1b01597f19ed1dad561fb3fae0907b6003869faf5e63e347a240c0c59a11eae8", "creatorOwned": true, "redistribution": "allowed", "publication": "allowed", "thirdPartyAssets": false, "identityRights": "not_applicable", "fontPolicy": "system-font-codepoints-not-pixel-pinned" },
+  "reviewEvidence": {
+    "status": "deterministic_checks_complete",
+    "candidateContentHash": "sha256:9d55f1ab9c5eb0202cde4ea98d5e50c66fdacd67dec1925d19d3cf4975bfc62e",
+    "reviewType": "machine",
+    "checkedAt": "2026-09-02T00:00:00.000Z",
+    "criteria": [
+      { "criterionId": "rebuild.byte-identical", "status": "pass", "evidence": "The local generator must reproduce the committed candidate byte for byte." },
+      { "criterionId": "svg.active-content-absent", "status": "pass", "evidence": "The candidate uses static SVG primitives and system-font text only." },
+      { "criterionId": "rights.profile-verified", "status": "pass", "evidence": "The shared creator-owned rights profile is verified and hash-bound." }
+    ],
+    "humanReview": { "status": "not_performed", "reviewerCount": 0 },
+    "decision": "mechanical_fixture_pass",
+    "notAssessed": ["human aesthetic quality", "provider generation quality", "cross-platform font pixel equivalence"]
+  },
+  "reproduction": { "generatorPath": "skills/cineweave-prompt/scripts/generate-original-case-atlas.mjs", "generatorVersion": "1.0.0", "caseSelector": "food", "expectedContentHash": "sha256:9d55f1ab9c5eb0202cde4ea98d5e50c66fdacd67dec1925d19d3cf4975bfc62e", "deterministic": true, "networkRequired": false, "externalInputs": [] },
+  "claimsBoundary": { "scope": "mechanical_fixture_only", "humanReview": "not_performed", "providerOutput": "not_generated", "providerQuality": "not_assessed", "photorealism": "not_assessed", "domainFitness": "not_assessed", "crossPlatformFontPixels": "not_guaranteed" }
+}

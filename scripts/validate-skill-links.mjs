@@ -16,13 +16,16 @@ async function listMarkdownFiles(directory) {
 
 function localTargets(markdown) {
   const targets = [];
-  const linkPattern = /\[[^\]]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)/g;
-  for (const match of markdown.matchAll(linkPattern)) {
-    const target = match[1].replace(/^<|>$/g, "");
-    if (!target || target.startsWith("#") || /^[a-z][a-z0-9+.-]*:/i.test(target)) continue;
+  const addLocalTarget = (value) => {
+    const target = value.replace(/^<|>$/g, "");
+    if (!target || target.startsWith("#") || /^[a-z][a-z0-9+.-]*:/i.test(target)) return;
     targets.push(decodeURIComponent(target.split("#", 1)[0]));
-  }
-  return targets;
+  };
+  const linkPattern = /\[[^\]]*\]\(([^)\s]+)(?:\s+"[^"]*")?\)/g;
+  for (const match of markdown.matchAll(linkPattern)) addLocalTarget(match[1]);
+  const inlinePathPattern = /`((?:(?:\.\.?\/)+)?(?:[A-Za-z0-9._-]+\/)*[A-Za-z0-9._-]+\.(?:md|mdx|json|ya?ml|[cm]?js|py|sh))`/g;
+  for (const match of markdown.matchAll(inlinePathPattern)) addLocalTarget(match[1]);
+  return [...new Set(targets)];
 }
 
 async function exists(file) {

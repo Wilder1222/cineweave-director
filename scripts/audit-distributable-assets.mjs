@@ -4,9 +4,11 @@ import { lstat, readFile, readdir, realpath } from "node:fs/promises";
 import { existsSync } from "node:fs";
 import { dirname, extname, isAbsolute, join, relative, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { inspectStaticSvg } from "./svg-safety.mjs";
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const binaryExtensions = new Set([".png", ".jpg", ".jpeg", ".gif", ".webp", ".mp4", ".mov", ".wav", ".mp3", ".ttf", ".otf"]);
+const mediaExtensions = new Set([...binaryExtensions, ".svg"]);
 const errors = [];
 
 async function walk(path) {
@@ -30,7 +32,7 @@ function inspectRights(value, pathLabel) {
   if (!value || typeof value !== "object") return;
   if (["unverified", "unknown"].includes(value.rightsStatus)) {
     for (const key of ["file", "path", "asset", "sourceFile"]) {
-      if (typeof value[key] === "string" && binaryExtensions.has(extname(value[key]).toLowerCase())) errors.push(`${pathLabel} binds ${value.rightsStatus} rights to distributable media ${value[key]}`);
+      if (typeof value[key] === "string" && mediaExtensions.has(extname(value[key]).toLowerCase())) errors.push(`${pathLabel} binds ${value.rightsStatus} rights to distributable media ${value[key]}`);
     }
   }
   for (const [key, child] of Object.entries(value)) inspectRights(child, `${pathLabel}.${key}`);
@@ -46,10 +48,14 @@ for (const path of paths) {
   if (!info.isFile()) continue;
   const extension = extname(path).toLowerCase();
   const local = relative(repoRoot, path).replaceAll("\\", "/");
-  if (binaryExtensions.has(extension)) {
+  if (mediaExtensions.has(extension)) {
     const allowed = local.startsWith("assets/") || /^skills\/[^/]+\/assets\//.test(local);
-    if (!allowed) errors.push(`Binary distributable asset must live under assets/: ${local}`);
-    if (/\/references\//.test(`/${local}`)) errors.push(`Binary media may not be bundled as a Skill reference: ${local}`);
+    if (!allowed) errors.push(`Distributable media asset must live under assets/: ${local}`);
+    if (/\/references\//.test(`/${local}`)) errors.push(`Media may not be bundled as a Skill reference: ${local}`);
+  }
+  if (extension === ".svg") {
+    const content = await readFile(path, "utf8");
+    for (const kind of inspectStaticSvg(content)) errors.push(`SVG contains forbidden active or external content (${kind}): ${local}`);
   }
   if (extension === ".json") {
     try { inspectRights(JSON.parse(await readFile(path, "utf8")), local); }

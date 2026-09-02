@@ -39,6 +39,30 @@ requirements and show every state-changing beat at least once unless the
 approved editorial design deliberately carries it through sound or off-screen
 action.
 
+## Contract closure
+
+Return a versioned Storyboard, not an unversioned shot list. The root artifact
+has a stable `storyboardId`, `version`, `coverageLedger`, execution boundary,
+validation record and provenance. Each shot carries an exact `shotSpecRef`,
+its sequence order and the IDs of the coverage rows it satisfies. A coverage
+row points back to the beats and shots it covers, so an importer can prove the
+links in both directions.
+
+When the board scopes an ActionSequenceSpec, its root
+`actionSequenceRef` and `actionBeatIds` define the selected slice. Every
+selected beat must be selected by at least one shot and represented by a
+coverage row. Carry a source coverage requirement unchanged when all of its
+beats are inside the selected slice; do not silently relabel or broaden it.
+If no ActionSequenceSpec is available, omit all action-beat fields and mark
+action coverage as not applicable instead of inventing beats.
+
+Production bindings are optional because a Director may plan before Production
+has created a board plan. When an exact `BoardAssemblyPlan` exists, bind its
+contract ref and map exactly one storyboard panel per shot to its recipe run,
+task, region and tile. A planned panel is not rendered evidence; rendered or
+accepted panels require the corresponding execution receipt, and accepted
+panels also require evidence. Do not manufacture those refs or statuses.
+
 ## Character continuity
 
 For each bound character, preserve or explicitly change:

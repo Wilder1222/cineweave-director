@@ -24,7 +24,7 @@
     "kind": { "const": "cineweave_skill_evaluation_run" },
     "contractVersion": { "const": "2.3.0" },
     "runId": { "$ref": "common.schema.json#/$defs/identifier" },
-    "runnerVersion": { "const": "1.0.0" },
+    "runnerVersion": { "enum": ["1.0.0", "1.1.0"] },
     "suiteVersion": { "type": "string", "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$" },
     "mode": { "enum": ["fixture_replay", "live_codex"] },
     "startedAt": { "type": "string", "format": "date-time" },

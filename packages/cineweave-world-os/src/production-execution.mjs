@@ -5,7 +5,7 @@ import {
   listArtifacts,
   putArtifact
 } from "../../cineweave-runtime/src/artifact-store.mjs";
-import { sha256Canonical } from "../../cineweave-runtime/src/canonical-json.mjs";
+import { canonicalize, parseJsonStrict, sha256Canonical } from "../../cineweave-runtime/src/canonical-json.mjs";
 import { ARTIFACT_KINDS, IDENTIFIER_PATTERN } from "./constants.mjs";
 import { exactRef, isExactRef, isPlainObject, sameRef } from "./json.mjs";
 import { verifyProductionSlice } from "./production.mjs";
@@ -76,7 +76,7 @@ function sourceRefFromSnapshot(snapshot) {
 
 function snapshotDocument(snapshot) {
   let document;
-  try { document = JSON.parse(snapshot.documentJson); } catch { throw new Error(`Production snapshot ${snapshot.snapshotId} contains invalid JSON`); }
+  try { document = parseJsonStrict(snapshot.documentJson); } catch { throw new Error(`Production snapshot ${snapshot.snapshotId} contains invalid JSON`); }
   if (!isPlainObject(document)) throw new Error(`Production snapshot ${snapshot.snapshotId} does not contain an object document`);
   return document;
 }
@@ -93,7 +93,7 @@ function uniqueRefs(refs) {
   const seen = new Set();
   const result = [];
   for (const ref of refs) {
-    const key = JSON.stringify(ref);
+    const key = canonicalize(ref);
     if (seen.has(key)) continue;
     seen.add(key);
     result.push(ref);
@@ -140,20 +140,22 @@ function validateSkillReceipt(value, label = "skillReceipt") {
 }
 
 function validateOutputRequest(input = {}) {
-  const mediaKind = input.mediaKind || "image";
+  if (!isPlainObject(input)) throw new TypeError("outputRequest must be an object");
+  const mediaKind = input.mediaKind === undefined ? "image" : input.mediaKind;
   if (!MEDIA_KINDS.has(mediaKind)) throw new TypeError("outputRequest.mediaKind is invalid");
-  const acceptedMimeTypes = input.acceptedMimeTypes || (mediaKind === "image" ? ["image/png"] : ["video/mp4"]);
+  const acceptedMimeTypes = input.acceptedMimeTypes === undefined ? (mediaKind === "image" ? ["image/png"] : ["video/mp4"]) : input.acceptedMimeTypes;
   if (!Array.isArray(acceptedMimeTypes) || !acceptedMimeTypes.length || acceptedMimeTypes.length > 12 || new Set(acceptedMimeTypes).size !== acceptedMimeTypes.length) {
     throw new TypeError("outputRequest.acceptedMimeTypes must be a unique non-empty array");
   }
   for (const mime of acceptedMimeTypes) if (typeof mime !== "string" || !/^[a-z0-9.+-]+\/[a-z0-9.+-]+$/.test(mime)) throw new TypeError(`Invalid output MIME type: ${mime}`);
   const variantCount = input.variantCount === undefined ? 1 : Number(input.variantCount);
-  if (!Number.isSafeInteger(variantCount) || variantCount < 1 || variantCount > 64) throw new TypeError("outputRequest.variantCount must be between 1 and 64");
+  if (!Number.isSafeInteger(variantCount) || variantCount < 1 || variantCount > 12) throw new TypeError("outputRequest.variantCount must be between 1 and 12 for a RenderPlan");
   return { mediaKind, acceptedMimeTypes: [...acceptedMimeTypes], variantCount, destinationPolicy: "project_execution_store" };
 }
 
 function validateBudget(input = {}) {
-  const currency = input.currency || "USD";
+  if (!isPlainObject(input)) throw new TypeError("budget must be an object");
+  const currency = input.currency === undefined ? "USD" : input.currency;
   if (!/^[A-Z]{3}$/.test(currency)) throw new TypeError("budget.currency must be an ISO-4217-style uppercase code");
   const maxAmount = input.maxAmount === undefined ? 0 : Number(input.maxAmount);
   const maxAttempts = input.maxAttempts === undefined ? 1 : Number(input.maxAttempts);
@@ -187,10 +189,11 @@ function capabilitySatisfies(capability, operation) {
   });
 }
 
-function operationSupports(descriptor, operationId, outputRequest, inputCount, executionMode) {
+function operationSupports(descriptor, operationId, outputRequest, inputCount, executionMode, renderMode) {
   const operation = descriptor?.operations?.find((item) => item.operationId === operationId);
   if (!operation) return { supported: false, operation: null };
   const supported = (descriptor.executionModes || []).includes(executionMode)
+    && (operation.requestModes || []).includes(renderMode)
     && (operation.mediaKinds || []).includes(outputRequest.mediaKind)
     && Number.isSafeInteger(operation.maxOutputs) && outputRequest.variantCount <= operation.maxOutputs
     && Number.isSafeInteger(operation.maxInputs) && inputCount <= operation.maxInputs
@@ -224,13 +227,13 @@ async function ensureSourceArtifact(projectRoot, snapshot, createdAt) {
   return stored.envelope.artifactRef;
 }
 
-function buildRenderPlan(slice, sliceRef, promptSnapshot, shotSnapshot, recipeSnapshot, promptRef, options, skillReceipt, rightsResolved, createdAt) {
+function buildRenderPlan(slice, sliceRef, promptSnapshot, shotSnapshot, promptRef, recipeRef, options, skillReceipt, rightsResolved, createdAt) {
   const outputRequest = options.outputRequest;
-  const renderMode = options.renderMode || "generate";
+  const renderMode = options.renderMode === undefined ? "generate" : options.renderMode;
   if (!RENDER_MODES.has(renderMode)) throw new TypeError("renderMode is invalid");
-  const qualityBudget = options.qualityBudget || "explore";
+  const qualityBudget = options.qualityBudget === undefined ? "explore" : options.qualityBudget;
   if (!QUALITY_BUDGETS.has(qualityBudget)) throw new TypeError("qualityBudget is invalid");
-  const canvasInput = options.canvas || { aspectRatio: "16:9", sizeClass: "wide", pixelDimensions: "1536x864" };
+  const canvasInput = options.canvas === undefined ? { aspectRatio: "16:9", sizeClass: "wide", pixelDimensions: "1536x864" } : options.canvas;
   if (!isPlainObject(canvasInput)
     || !/^[1-9][0-9]*:[1-9][0-9]*$/.test(canvasInput.aspectRatio || "")
     || !CANVAS_SIZE_CLASSES.has(canvasInput.sizeClass)
@@ -239,17 +242,17 @@ function buildRenderPlan(slice, sliceRef, promptSnapshot, shotSnapshot, recipeSn
   }
   const canvas = { aspectRatio: canvasInput.aspectRatio, sizeClass: canvasInput.sizeClass };
   if (canvasInput.pixelDimensions !== undefined) canvas.pixelDimensions = canvasInput.pixelDimensions;
-  const requiredCapabilities = options.requiredCapabilities || [];
+  const requiredCapabilities = options.requiredCapabilities === undefined ? [] : options.requiredCapabilities;
   if (!Array.isArray(requiredCapabilities) || requiredCapabilities.length > 8 || new Set(requiredCapabilities).size !== requiredCapabilities.length
     || requiredCapabilities.some((capability) => !RENDER_CAPABILITIES.has(capability))) throw new TypeError("requiredCapabilities contains an unsupported value");
   const sourceShotRef = sourceRefFromSnapshot(shotSnapshot);
-  const sourcePromptRef = sourceRefFromSnapshot(promptSnapshot);
-  const sourceRecipeRef = sourceRefFromSnapshot(recipeSnapshot);
   const observationId = `obs.production.${sliceRef.contentHash.slice(7, 19)}`;
   const renderPlanIdentity = {
+    contractVersion: "2.5.0",
     sliceRef,
     promptRef,
     shotRef: sourceShotRef,
+    assetRecipeRef: recipeRef,
     mode: renderMode,
     outputRequest,
     qualityBudget,
@@ -259,13 +262,15 @@ function buildRenderPlan(slice, sliceRef, promptSnapshot, shotSnapshot, recipeSn
   const status = rightsResolved ? "approved" : "planned";
   const plan = {
     kind: PRODUCTION_RENDER_PLAN_KIND,
-    contractVersion: "2.0.0",
+    contractVersion: "2.5.0",
+    renderPlanId,
+    version: 1,
     worldId: slice.worldId,
     shotId: sourceShotRef.id,
     proposalId: slice.sliceId,
     skillReceipt,
     mode: renderMode,
-    promptPayloadRef: `${sourcePromptRef.id}@${sourcePromptRef.version}`,
+    promptRef,
     canvas,
     qualityBudget,
     variantCount: outputRequest.variantCount,
@@ -290,18 +295,20 @@ function buildRenderPlan(slice, sliceRef, promptSnapshot, shotSnapshot, recipeSn
       importStatus: "draft"
     },
     notes: `Codex compiled this provider-neutral RenderPlan from ProductionSlice ${slice.sliceId}; it does not grant public release.`,
-    assetRecipeRef: {
-      id: sourceRecipeRef.id,
-      version: sourceRecipeRef.version,
-      contentHash: sourceRecipeRef.contentHash
-    },
+    assetRecipeRef: recipeRef,
     recipeTaskIds: [slice.episodeId],
-    capabilityProfileRef: options.capabilityProfileRef ? {
-      id: options.capabilityProfileRef.id,
-      version: options.capabilityProfileRef.version,
-      contentHash: options.capabilityProfileRef.contentHash
-    } : undefined,
-    licenseProfileRefs: (options.licenseProfileRefs || []).map((ref) => ({ id: ref.id, version: ref.version, contentHash: ref.contentHash }))
+    capabilityProfileRef: options.capabilityProfileRef,
+    licenseProfileRefs: options.licenseProfileRefs === undefined ? [] : options.licenseProfileRefs,
+    provenance: {
+      source: "codex_authored",
+      createdAt,
+      updatedAt: createdAt,
+      parentId: slice.sliceId,
+      changeLog: [
+        `Compiled from exact ProductionSlice ${sliceRef.id}@${sliceRef.version}.`,
+        "Preserves exact Prompt, AssetRecipe, CapabilityProfile and LicenseProfile references."
+      ]
+    }
   };
   if (plan.capabilityProfileRef === undefined) delete plan.capabilityProfileRef;
   return { renderPlanId, plan };
@@ -326,9 +333,11 @@ export async function compileProductionExecutionRequest(projectRoot, sliceRef, o
   const verified = await verifyProductionSlice(root, assertExactArtifactRef(sliceRef, "sliceRef"));
   const slice = verified.slice;
   const exactSliceRef = verified.sliceRef;
-  const executionMode = options.executionMode || "dry_run";
+  const executionMode = options.executionMode === undefined ? "dry_run" : options.executionMode;
   if (!EXECUTION_MODES.has(executionMode)) throw new TypeError("executionMode is invalid");
-  const createdAt = assertDate(options.createdAt || slice.updatedAt, "createdAt");
+  const renderMode = options.renderMode === undefined ? "generate" : options.renderMode;
+  if (!RENDER_MODES.has(renderMode)) throw new TypeError("renderMode is invalid");
+  const createdAt = assertDate(options.createdAt === undefined ? slice.updatedAt : options.createdAt, "createdAt");
   const adapterDescriptorRef = assertExactArtifactRef(options.adapterDescriptorRef, "adapterDescriptorRef");
   if (adapterDescriptorRef.kind !== "cineweave_adapter_descriptor") throw new TypeError("adapterDescriptorRef must target an AdapterDescriptor");
   const capabilityProfileRef = assertExactArtifactRef(options.capabilityProfileRef, "capabilityProfileRef");
@@ -341,9 +350,9 @@ export async function compileProductionExecutionRequest(projectRoot, sliceRef, o
   if (!sameRef(descriptor.capabilityProfileRef, capabilityProfileRef)) throw new Error("AdapterDescriptor does not bind the supplied CapabilityProfile");
   if (descriptor.adapterId !== capability.adapterId) throw new Error("AdapterDescriptor and CapabilityProfile adapter IDs differ");
 
-  const promptKind = options.promptKind || (sourceSnapshots(verified, "cineweave_codex_prompt_record").length
+  const promptKind = options.promptKind === undefined ? (sourceSnapshots(verified, "cineweave_codex_prompt_record").length
     ? "cineweave_codex_prompt_record"
-    : "cineweave_codex_image_prompt");
+    : "cineweave_codex_image_prompt") : options.promptKind;
   const promptSnapshot = chooseSnapshot(verified, promptKind, {
     index: options.promptIndex,
     ref: options.promptRef
@@ -354,24 +363,28 @@ export async function compileProductionExecutionRequest(projectRoot, sliceRef, o
   });
   const recipeSnapshot = chooseSnapshot(verified, "cineweave_codex_asset_recipe");
   const promptRef = await ensureSourceArtifact(root, promptSnapshot, createdAt);
-  const outputRequest = validateOutputRequest(options.outputRequest || options);
-  const budget = validateBudget(options.budget || options);
+  const recipeRef = await ensureSourceArtifact(root, recipeSnapshot, createdAt);
+  const outputRequest = validateOutputRequest(options.outputRequest === undefined ? options : options.outputRequest);
+  const budget = validateBudget(options.budget === undefined ? options : options.budget);
   const defaultParameters = [
     { name: "slice_id", value: slice.sliceId, sensitive: false },
     { name: "episode_id", value: slice.episodeId, sensitive: false },
     { name: "shot_id", value: sourceRefFromSnapshot(shotSnapshot).id, sensitive: false }
   ];
-  const parameters = validateParameters(options.parameters || defaultParameters);
+  const parameters = validateParameters(options.parameters === undefined ? defaultParameters : options.parameters);
   const inputArtifactRefs = uniqueRefs([exactSliceRef, ...allSnapshotRefs(slice)]);
   if (inputArtifactRefs.length > 64) throw new Error("ProductionSlice has too many exact inputs for an ExecutionRequest");
+  const operationId = options.operationId === undefined ? descriptor.operations?.[0]?.operationId : options.operationId;
+  assertIdentifier(operationId, "operationId");
   const rightsResolved = rightsGateApproved(slice);
   const stageAllowed = executionStageAllowed(slice, executionMode);
-  const renderPlanData = buildRenderPlan(slice, exactSliceRef, promptSnapshot, shotSnapshot, recipeSnapshot, promptRef, {
+  const renderPlanData = buildRenderPlan(slice, exactSliceRef, promptSnapshot, shotSnapshot, promptRef, recipeRef, {
     ...options,
+    renderMode,
     outputRequest,
     capabilityProfileRef,
-    licenseProfileRefs: options.licenseProfileRefs || descriptor.licenseProfileRefs || []
-  }, validateSkillReceipt(options.skillReceipt || descriptor.skillReceipt), rightsResolved && stageAllowed, createdAt);
+    licenseProfileRefs: options.licenseProfileRefs === undefined ? (descriptor.licenseProfileRefs || []) : options.licenseProfileRefs
+  }, validateSkillReceipt(options.skillReceipt === undefined ? descriptor.skillReceipt : options.skillReceipt), rightsResolved && stageAllowed, createdAt);
   const existingRenderPlan = await findArtifactByVersion(root, PRODUCTION_RENDER_PLAN_KIND, renderPlanData.renderPlanId, 1);
   const renderPlanArtifact = existingRenderPlan || await putArtifact(root, renderPlanData.plan, {
     kind: PRODUCTION_RENDER_PLAN_KIND,
@@ -383,9 +396,7 @@ export async function compileProductionExecutionRequest(projectRoot, sliceRef, o
   });
   const renderPlanRef = renderPlanArtifact.envelope.artifactRef;
 
-  const operationId = options.operationId || descriptor.operations?.[0]?.operationId;
-  assertIdentifier(operationId, "operationId");
-  const operationCheck = operationSupports(descriptor, operationId, outputRequest, inputArtifactRefs.length, executionMode);
+  const operationCheck = operationSupports(descriptor, operationId, outputRequest, inputArtifactRefs.length, executionMode, renderMode);
   const hardCapabilitiesSatisfied = capabilitySatisfies(capability, operationCheck.operation);
   const parameterSafe = parameters.every((item) => !SENSITIVE_PARAMETER_NAME.test(item.name) && !(typeof item.value === "string" && SAFE_PARAMETER_VALUE.test(item.value)));
   const exactRefsResolved = true;
@@ -424,7 +435,7 @@ export async function compileProductionExecutionRequest(projectRoot, sliceRef, o
     version: 1,
     status: ready ? "ready" : "blocked",
     createdAt,
-    skillReceipt: validateSkillReceipt(options.skillReceipt || descriptor.skillReceipt),
+    skillReceipt: validateSkillReceipt(options.skillReceipt === undefined ? descriptor.skillReceipt : options.skillReceipt),
     adapterDescriptorRef,
     capabilityProfileRef,
     renderPlanRef,
@@ -485,7 +496,7 @@ export async function verifyProductionExecutionRequest(projectRoot, requestRef, 
   const sliceRef = request.inputArtifactRefs?.find((ref) => ref.kind === ARTIFACT_KINDS.productionSlice);
   if (!sliceRef) throw new Error("ExecutionRequest is not bound to a ProductionSlice");
   const verified = await verifyProductionSlice(projectRoot, sliceRef);
-  if (!Array.isArray(request.inputArtifactRefs) || new Set(request.inputArtifactRefs.map((ref) => JSON.stringify(ref))).size !== request.inputArtifactRefs.length) {
+  if (!Array.isArray(request.inputArtifactRefs) || new Set(request.inputArtifactRefs.map((ref) => canonicalize(ref))).size !== request.inputArtifactRefs.length) {
     throw new Error("ExecutionRequest input refs must be unique");
   }
   const expectedInputs = uniqueRefs([sliceRef, ...allSnapshotRefs(verified.slice)]);

@@ -6,6 +6,7 @@ import { tmpdir } from "node:os";
 import { dirname, join, relative, resolve } from "node:path";
 import { spawnSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
+import { parseJsonStrict } from "../packages/cineweave-runtime/src/canonical-json.mjs";
 import { validateDocument } from "./validate-output.mjs";
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -29,7 +30,7 @@ async function walk(path) {
 async function checkJson() {
   const files = (await walk(repoRoot)).filter((path) => path.endsWith(".json"));
   for (const path of files) {
-    try { JSON.parse(await readFile(path, "utf8")); }
+    try { parseJsonStrict(await readFile(path, "utf8")); }
     catch (error) { fail(`invalid JSON ${relative(repoRoot, path)}: ${error.message}`); }
   }
   if (!failures.some((item) => item.startsWith("invalid JSON"))) pass(`${files.length} JSON files parse`);
@@ -54,9 +55,9 @@ async function checkNodeSyntax() {
 }
 
 async function checkManifestContracts() {
-  const manifest = JSON.parse(await readFile(manifestPath, "utf8"));
-  const plugin = JSON.parse(await readFile(join(repoRoot, ".codex-plugin", "plugin.json"), "utf8"));
-  const packageJson = JSON.parse(await readFile(join(repoRoot, "package.json"), "utf8"));
+  const manifest = parseJsonStrict(await readFile(manifestPath, "utf8"));
+  const plugin = parseJsonStrict(await readFile(join(repoRoot, ".codex-plugin", "plugin.json"), "utf8"));
+  const packageJson = parseJsonStrict(await readFile(join(repoRoot, "package.json"), "utf8"));
   if (manifest.version !== "2.5.1" || plugin.version !== manifest.version || packageJson.version !== manifest.version || plugin.name !== "cineweave-studio") fail("package, plugin and contract manifest versions must all be CineWeave Studio 2.5.1");
   else pass(`package, plugin and contract manifest are CineWeave Studio v${plugin.version}`);
 
@@ -111,7 +112,7 @@ async function checkManifestContracts() {
 
 async function checkRecipeCatalog() {
   const catalogPath = join(contractRoot, "recipes", "catalog.json");
-  const catalog = JSON.parse(await readFile(catalogPath, "utf8"));
+  const catalog = parseJsonStrict(await readFile(catalogPath, "utf8"));
   if (catalog.version !== "2.5.1") fail("recipe catalog version must be 2.5.1");
   const ids = new Set();
   for (const item of catalog.recipes || []) {
@@ -153,15 +154,15 @@ async function checkWorldOsTests() {
 async function checkMigration() {
   const temp = await mkdtemp(join(tmpdir(), "cineweave-v2-migrate-"));
   try {
-    const source = JSON.parse(await readFile(join(contractRoot, "examples", "character-appearance-state.json"), "utf8"));
+    const source = parseJsonStrict(await readFile(join(contractRoot, "examples", "character-appearance-state.json"), "utf8"));
     source.contractVersion = "1.1.0";
     const input = join(temp, "source-v11.json"); const out = join(temp, "migrated-v2.json"); const report = join(temp, "report.json");
     await writeFile(input, JSON.stringify(source, null, 2));
     const result = spawnSync(process.execPath, [join(repoRoot, "scripts/migrate-v1.1-to-v2.mjs"), input, "--out", out, "--report", report, "--schema", join(contractRoot, "schemas/character-appearance-state.schema.json")], { encoding: "utf8" });
     if (result.status !== 0) fail(`v1.1-to-v2 migration smoke test failed: ${(result.stderr || result.stdout).trim()}`);
     else {
-      const migrated = JSON.parse(await readFile(out, "utf8"));
-      const migrationReport = JSON.parse(await readFile(report, "utf8"));
+      const migrated = parseJsonStrict(await readFile(out, "utf8"));
+      const migrationReport = parseJsonStrict(await readFile(report, "utf8"));
       if (migrated.contractVersion !== "2.0.0" || migrationReport.targetVersion !== "2.0.0" || migrationReport.validation.targetSchemaChecked !== true) fail("migration did not produce a schema-checked V2 copy");
       else pass("v1.1-to-v2 migration creates a non-destructive schema-checked copy");
     }
@@ -200,8 +201,10 @@ async function main() {
   await runScript("contract semantic positive and negative tests", "scripts/validate-contract-semantics.mjs", ["--self-test"]);
   await runScript("ControlBench cross-contract tests", "scripts/validate-control-bench.mjs", ["--self-test"]);
   await runScript("source Skill link tests", "scripts/validate-skill-links.mjs", [join(repoRoot, "skills")]);
+  await runScript("Director reference lifecycle audit", "scripts/validate-reference-lifecycle.mjs", [join(repoRoot, "skills", "cineweave-director")]);
   await runScript("standalone Skill bundle tests", "scripts/build-skill-bundles.mjs", ["--check"]);
   await runScript("focused Skill package tests", "scripts/validate-skill-packages.mjs");
+  await runScript("Original Case Atlas tests", "scripts/validate-original-case-atlas.mjs");
   await runScript("distributable asset audit", "scripts/audit-distributable-assets.mjs");
   await runScript("behavior evaluation definition tests", "scripts/run-behavior-evals.mjs", ["--validate"]);
   await runScript("evaluation fixture definition tests", "scripts/validate-eval-fixtures.mjs");

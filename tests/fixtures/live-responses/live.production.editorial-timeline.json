@@ -1,0 +1,148 @@
+{
+  "caseId": "live.production.editorial-timeline",
+  "selectedSkill": "cineweave-production",
+  "route": "editorial_timeline",
+  "outcome": "answer",
+  "contractKinds": [
+    "cineweave_codex_editorial_timeline_plan"
+  ],
+  "payloads": [
+    {
+      "kind": "cineweave_codex_editorial_timeline_plan",
+      "payload": {
+        "kind": "cineweave_codex_editorial_timeline_plan",
+        "contractVersion": "2.5.0",
+        "editorialTimelinePlanId": "editorial-timeline.live-rain-courtyard-v1",
+        "version": 1,
+        "worldId": "world-live-rain-courtyard",
+        "storyboardRef": {
+          "kind": "cineweave_codex_storyboard_sequence",
+          "id": "storyboard.live-rain-courtyard-v1",
+          "version": 1,
+          "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "skillReceipt": {
+          "repository": "https://github.com/Wilder1222/cineweave-studio",
+          "ref": "v2.5.1",
+          "commit": "0123456789abcdef0123456789abcdef01234567",
+          "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+          "installedBy": "codex-environment",
+          "usedAt": "2026-09-02T09:20:00.000Z"
+        },
+        "timelineName": "雨后庭院回望：Production 剪辑计划",
+        "frameRate": {
+          "numerator": 24,
+          "denominator": 1,
+          "dropFrame": false
+        },
+        "timelineRange": {
+          "startFrame": 0,
+          "durationFrames": 24
+        },
+        "conformStatus": "partial",
+        "tracks": [
+          {
+            "trackId": "track.picture.main",
+            "trackType": "picture",
+            "order": 1,
+            "segments": [
+              {
+                "segmentId": "segment.look-back",
+                "segmentType": "media",
+                "timelineRange": {
+                  "startFrame": 0,
+                  "durationFrames": 12
+                },
+                "shotId": "shot.live-rain-look-back-v1",
+                "shotSpecRef": {
+                  "kind": "cineweave_codex_shot_spec",
+                  "id": "shot.live-rain-look-back-v1",
+                  "version": 1,
+                  "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+                },
+                "mediaImportRef": {
+                  "kind": "cineweave_codex_media_import",
+                  "id": "media-import.live-rain-look-back-v1",
+                  "version": 1,
+                  "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+                },
+                "mediaId": "media.live-rain-look-back-v1",
+                "sourceRange": {
+                  "startFrame": 0,
+                  "durationFrames": 12
+                }
+              },
+              {
+                "segmentId": "segment.stable-end",
+                "segmentType": "placeholder",
+                "timelineRange": {
+                  "startFrame": 12,
+                  "durationFrames": 12
+                },
+                "shotId": "shot.live-rain-stable-end-v1",
+                "shotSpecRef": {
+                  "kind": "cineweave_codex_shot_spec",
+                  "id": "shot.live-rain-stable-end-v1",
+                  "version": 1,
+                  "contentHash": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+                },
+                "temporalSpecRef": {
+                  "kind": "cineweave_codex_temporal_spec",
+                  "id": "temporal.live-rain-stable-end-v1",
+                  "version": 1,
+                  "contentHash": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+                }
+              }
+            ]
+          }
+        ],
+        "transitions": [
+          {
+            "transitionId": "transition.look-back-to-stable-end",
+            "trackId": "track.picture.main",
+            "fromSegmentId": "segment.look-back",
+            "toSegmentId": "segment.stable-end",
+            "type": "cut",
+            "atFrame": 12,
+            "durationFrames": 0,
+            "rationale": "在回望峰值切向稳定结束。"
+          }
+        ],
+        "otioExchange": {
+          "model": "otio-core",
+          "externalMediaOnly": true,
+          "serializationStatus": "not_exported",
+          "notes": "仅保存外部引用的 Timeline/Track/Clip/Gap/Transition 结构。"
+        },
+        "executionBoundary": {
+          "providerNeutral": true,
+          "embedsMedia": false,
+          "exportsTimeline": false,
+          "humanApprovalRequired": true,
+          "notes": "仍需人工审批与专用适配器后才能实际 conform 或导出。"
+        },
+        "validation": {
+          "rationalTimebase": true,
+          "trackRangesClosed": true,
+          "segmentsOrdered": true,
+          "transitionsAnchored": true,
+          "sourceRefsExact": true,
+          "plannedMediaHonest": true,
+          "providerNeutral": true
+        },
+        "provenance": {
+          "source": "suite_builtin",
+          "createdAt": "2026-09-02T09:20:00.000Z",
+          "updatedAt": "2026-09-02T09:20:00.000Z",
+          "changeLog": [
+            "Synthetic live replay fixture for the Production-owned editorial timeline route.",
+            "One verified Draft media segment is paired with one explicit placeholder."
+          ]
+        }
+      }
+    }
+  ],
+  "response": "已建立 24/1 有理帧率的 Storyboard 剪辑计划：已验证 Draft 片段以精确 MediaImport/mediaId 绑定，尚未导入的镜头保留为 placeholder；没有隐式空洞，gap 与 transition 都会被显式记录。该计划不嵌入媒体、不导出 OTIO 文件，也不执行 conform 或交付。",
+  "questions": [],
+  "unsupportedClaims": []
+}

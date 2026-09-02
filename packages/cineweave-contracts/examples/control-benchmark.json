@@ -25,6 +25,8 @@
     "SceneBench",
     "InteractionBench",
     "StoryboardBench",
+    "CinematographyBench",
+    "DirectorQualityBench",
     "RightsBench"
   ],
   "dimensions": [
@@ -114,6 +116,31 @@
       "metricIds": [
         "metric.continuity-rule",
         "metric.human-story"
+      ]
+    },
+    {
+      "dimensionId": "dimension.cinematography",
+      "scope": "cinematography",
+      "description": "镜头预演的机位轨迹、内外参、焦点、时间基准和稳定终帧保持与精确导演意图一致。",
+      "severity": "blocking",
+      "metricIds": [
+        "metric.camera-previs-rule",
+        "metric.camera-path-layout",
+        "metric.camera-motion-temporal",
+        "metric.human-cinematography"
+      ]
+    },
+    {
+      "dimensionId": "dimension.direction",
+      "scope": "direction",
+      "description": "导演镜头目的、动作覆盖、空间连续性和时间因果在观测媒体中的可读性。",
+      "severity": "blocking",
+      "metricIds": [
+        "metric.shot-purpose-readability",
+        "metric.action-coverage-rule",
+        "metric.spatial-continuity-rule",
+        "metric.temporal-causality-rule",
+        "metric.human-direction"
       ]
     },
     {
@@ -300,6 +327,73 @@
       "description": "行为因果和情绪变化是否合理。",
       "direction": "higher_is_better",
       "passThreshold": 0.82,
+      "range": "0..1"
+    },
+    {
+      "metricId": "metric.camera-previs-rule",
+      "type": "rule",
+      "description": "候选必须保留精确 CameraPrevisSpec 的 ShotSpec、SceneBinding、TemporalSpec、坐标系、镜头类型、固定焦段和声明的运动分量。",
+      "direction": "boolean",
+      "passThreshold": true
+    },
+    {
+      "metricId": "metric.camera-path-layout",
+      "type": "layout",
+      "description": "采样帧中的机位路径、主体/背景构图锚点和屏幕方向相对预演轨迹的归一化误差。",
+      "direction": "lower_is_better",
+      "passThreshold": 0.08,
+      "range": "0..1 normalized camera-path and framing-anchor error"
+    },
+    {
+      "metricId": "metric.camera-motion-temporal",
+      "type": "temporal",
+      "description": "摄影机位移、焦点拉动和稳定终帧必须发生在精确帧范围及声明时间关系内，不能以伪变焦替代 dolly。",
+      "direction": "boolean",
+      "passThreshold": true
+    },
+    {
+      "metricId": "metric.human-cinematography",
+      "type": "human",
+      "description": "人工确认构图压力、焦点转移和稳定终帧表达了预演的叙事动机；不以主观美感总分替代可审计判断。",
+      "direction": "higher_is_better",
+      "passThreshold": 0.85,
+      "range": "0..1"
+    },
+    {
+      "metricId": "metric.shot-purpose-readability",
+      "type": "human",
+      "description": "人工确认镜头的叙事目的、注意力引导和信息揭示在观测媒体中可读；不以美感总分代替目的判断。",
+      "direction": "higher_is_better",
+      "passThreshold": 0.8,
+      "range": "0..1"
+    },
+    {
+      "metricId": "metric.action-coverage-rule",
+      "type": "rule",
+      "description": "候选镜头覆盖声明的动作 beat、入口/变化/出口状态和 required coverage，不遗漏或伪造动作因果。",
+      "direction": "boolean",
+      "passThreshold": true
+    },
+    {
+      "metricId": "metric.spatial-continuity-rule",
+      "type": "layout",
+      "description": "主体、目标、屏幕方向、接触区和场景锚点跨镜头保持可追溯空间关系。",
+      "direction": "boolean",
+      "passThreshold": true
+    },
+    {
+      "metricId": "metric.temporal-causality-rule",
+      "type": "temporal",
+      "description": "动作触发、镜头运动、焦点变化和稳定终态遵守精确时间顺序与声明结束状态。",
+      "direction": "boolean",
+      "passThreshold": true
+    },
+    {
+      "metricId": "metric.human-direction",
+      "type": "human",
+      "description": "人工依据 exact Director contracts 和观测帧判断动作、空间、镜头与情绪信息是否共同可读；不记录吸引力或身份推断分数。",
+      "direction": "higher_is_better",
+      "passThreshold": 0.8,
       "range": "0..1"
     },
     {
@@ -505,6 +599,131 @@
       "humanReviewRequired": true
     },
     {
+      "caseId": "case.cinematography-camera-previs-rain-courtyard",
+      "category": "cinematography",
+      "recipeRef": {
+        "id": "recipe.storyboard-sequence-4up",
+        "version": 1,
+        "contentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+      },
+      "controlSetRef": {
+        "id": "controls.shen-expression-sheet",
+        "version": 1,
+        "contentHash": "sha256:8888888888888888888888888888888888888888888888888888888888888888"
+      },
+      "evidenceBundleRef": {
+        "id": "evidence.shen-production",
+        "version": 1,
+        "contentHash": "sha256:9999999999999999999999999999999999999999999999999999999999999999"
+      },
+      "cameraPrevisRef": {
+        "kind": "cineweave_codex_camera_previs_spec",
+        "id": "camera-previs.rain-courtyard-recognition-v1",
+        "version": 1,
+        "contentHash": "sha256:21fcd86e3c501a73b733bd3fa42577e39d8ba01e3741213c1532059cd38e5a3b"
+      },
+      "perturbation": "在精确雨庭相认 CameraPrevisSpec 下比较第 0、77 和 132 帧，以及 0–132 帧内的连续运动；不得改写镜头语义、场景坐标、24/1 时间基准或固定焦段。",
+      "expectedInvariants": [
+        "精确 ShotSpec、SceneBinding 和 TemporalSpec 依赖",
+        "scene_binding_local meter 坐标、24/1 帧率和 0–132 帧范围",
+        "50mm 固定焦段、眼睛焦点目标和右手坐标系",
+        "主体/故人的屏幕关系与稳定终帧"
+      ],
+      "expectedAllowedChanges": [
+        "已声明线性插值内的连续位置与焦点过渡",
+        "仅当 CapabilityProfile 明确支持时的可审计适配器近似"
+      ],
+      "failureLabels": [
+        "false_zoom",
+        "pose_track_drift",
+        "timebase_mismatch",
+        "focus_target_loss",
+        "axis_cross",
+        "unstable_end_frame"
+      ],
+      "repetitions": 3,
+      "humanReviewRequired": true
+    },
+    {
+      "caseId": "case.director-quality-rain-teahouse",
+      "category": "director_quality",
+      "recipeRef": {
+        "id": "recipe.storyboard-sequence-4up",
+        "version": 1,
+        "contentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+      },
+      "controlSetRef": {
+        "id": "controls.shen-expression-sheet",
+        "version": 1,
+        "contentHash": "sha256:8888888888888888888888888888888888888888888888888888888888888888"
+      },
+      "evidenceBundleRef": {
+        "id": "evidence.shen-production",
+        "version": 1,
+        "contentHash": "sha256:9999999999999999999999999999999999999999999999999999999999999999"
+      },
+      "directorArtifactRefs": [
+        {
+          "kind": "cineweave_codex_action_sequence_spec",
+          "id": "action-sequence.rain-teahouse-escape-v1",
+          "version": 1,
+          "contentHash": "sha256:1fd8ac8540bc4b7d3bee4ef148488b06ce9b8722b21b70b52098492ad83d95ff"
+        },
+        {
+          "kind": "cineweave_codex_shot_spec",
+          "id": "shot.rain-teahouse-table-turn-v1",
+          "version": 1,
+          "contentHash": "sha256:8bea208fad08a8b509eec05e3cd387cc4d872e3127beeaf17302bd07b5144546"
+        },
+        {
+          "kind": "cineweave_codex_shot_lighting_plan",
+          "id": "shot-light.rain-courtyard-recognition-v1",
+          "version": 1,
+          "contentHash": "sha256:78991316ef0418726c931b3a222c5b07b792cf7608bd4b173477b3437be6fbe1"
+        },
+        {
+          "kind": "cineweave_codex_temporal_spec",
+          "id": "temporal.rain-courtyard-recognition-v1",
+          "version": 1,
+          "contentHash": "sha256:4d1654ec389b9a574e3aa302efb2bf2471d8efec16bd135a7e6ef680fe2cb421"
+        },
+        {
+          "kind": "cineweave_codex_camera_previs_spec",
+          "id": "camera-previs.rain-courtyard-recognition-v1",
+          "version": 1,
+          "contentHash": "sha256:21fcd86e3c501a73b733bd3fa42577e39d8ba01e3741213c1532059cd38e5a3b"
+        },
+        {
+          "kind": "cineweave_codex_storyboard_sequence",
+          "id": "storyboard.rain-teahouse-table-turn-v1",
+          "version": 1,
+          "contentHash": "sha256:59e78bde7f12bfe463f3611026bd90dab76578101895c512690494e0f3471aee"
+        }
+      ],
+      "perturbation": "在同一组精确 Director 工件和固定动作/场景条件下比较候选媒体，逐维观察镜头目的、动作覆盖、空间连续性和时间因果。",
+      "expectedInvariants": [
+        "ActionSequenceSpec 的 beat 顺序、coverage 和入口/变化/出口状态",
+        "ShotSpec 的叙事目的、主体关系、轴线和 framing intent",
+        "ShotLightingPlan 的物理光源来源与 contact/occlusion 关系",
+        "TemporalSpec/CameraPrevisSpec 的时间顺序、焦点变化和稳定终态",
+        "Storyboard 的 shot order、coverage ledger 和 panel provenance"
+      ],
+      "expectedAllowedChanges": [
+        "仅允许候选适配器已声明且可观察的近似，不得改变 Director 工件或上游身份/地理事实",
+        "仅允许按 rubric 记录 pass、warn、fail 或 tie，不产生吸引力或通用质量总分"
+      ],
+      "failureLabels": [
+        "shot_purpose_unreadable",
+        "action_coverage_gap",
+        "screen_direction_break",
+        "temporal_causality_break",
+        "unstable_end_state",
+        "unmotivated_camera_or_light"
+      ],
+      "repetitions": 3,
+      "humanReviewRequired": true
+    },
+    {
       "caseId": "case.rights-gate",
       "category": "rights",
       "recipeRef": {
@@ -545,9 +764,104 @@
       "造型是否符合结构和材质设定",
       "人物是否真实接触场景与道具",
       "行为与情绪是否有前因后果",
+      "镜头路径、焦点和稳定终帧是否符合精确 CameraPrevisSpec",
+      "镜头目的、注意力引导和信息揭示是否在观测媒体中可读",
+      "ActionSequence beat、coverage 和入口/变化/出口状态是否闭合",
+      "主体、目标、轴线、遮挡和接触区是否保持空间连续",
+      "触发、动作、镜头/焦点变化和稳定终态是否保持时间因果",
       "所有权利是否明确"
     ],
-    "reviewerCount": 1
+    "reviewerCount": 2,
+    "calibration": {
+      "protocolId": "calibration.cinematography-camera-previs-v1",
+      "blindComparison": true,
+      "trainingRequired": true,
+      "minimumIndependentReviewers": 2,
+      "agreementMeasure": "percent_agreement",
+      "minimumAgreement": 0.8,
+      "disagreementResolution": "third_reviewer",
+      "anchors": [
+        {
+          "anchorId": "anchor.camera-previs-path",
+          "dimensionId": "dimension.cinematography",
+          "criterion": "摄影机必须在第 0、77、132 帧及连续区间中遵守精确 pose 路径和主体/背景构图锚点；推进不得由 zoom 冒充。",
+          "evidenceRequirement": "track_and_frame_evidence",
+          "passAnchor": "观察到的机位路径与屏幕关系在允许的适配器近似内保持一致，且焦段不变时存在可追溯的位置位移。",
+          "warnAnchor": "主要构图仍可读，但一个采样帧或局部过渡接近路径/构图误差阈值，需要复核轨迹或适配器近似。",
+          "failAnchor": "用焦距改变伪造推进、关键 pose 明显漂移，或主体/背景关系越轴导致相认原因不可读。"
+        },
+        {
+          "anchorId": "anchor.camera-previs-intrinsics",
+          "dimensionId": "dimension.cinematography",
+          "criterion": "固定 50mm 焦段、眼睛焦点目标与声明的 focus pull 必须同精确 CameraPrevisSpec 区分记录。",
+          "evidenceRequirement": "exact_contract_and_observed_media",
+          "passAnchor": "焦段保持 50mm，焦点从 3.2m 过渡到 2.85m，且注意力从背景保留转向她的眼睛。",
+          "warnAnchor": "焦点转移意图可见但到达时间或景深响应不稳定，需检查适配器是否只部分支持数值 focus。",
+          "failAnchor": "焦距被改变、焦点丢失主体眼睛，或无法把焦点变化与摄影机位移区分。"
+        },
+        {
+          "anchorId": "anchor.camera-previs-timebase",
+          "dimensionId": "dimension.cinematography",
+          "criterion": "运动、focus pull 与稳定收势必须保持 24/1、0–132 帧的精确时间关系。",
+          "evidenceRequirement": "track_and_frame_evidence",
+          "passAnchor": "第 91 帧后摄影机和焦点均稳定，并在第 132 帧保留声明的终态。",
+          "warnAnchor": "终态可读但稳定发生得过早或过晚，或局部插值需要一次可审计重试。",
+          "failAnchor": "时间基准不匹配、收势持续漂移，或关键动作与焦点变化的因果次序颠倒。"
+        },
+        {
+          "anchorId": "anchor.camera-previs-judgment-boundary",
+          "dimensionId": "dimension.cinematography",
+          "criterion": "评分只判断可观察的摄影机控制与叙事可读性，不以吸引力、演员生物特征、品牌偏好或 Provider 声称代替证据。",
+          "evidenceRequirement": "observed_media",
+          "passAnchor": "两位独立受训评审依据同一锚点和媒体观察作出可追溯判断，不记录个人身份信息。",
+          "warnAnchor": "证据足够但评审解释未充分锚定帧/轨道，需要补充观察说明后再比较。",
+          "failAnchor": "评分依赖美感总分、身份推断、Provider 声称或没有观察媒体的主观印象。"
+        },
+        {
+          "anchorId": "anchor.direction-shot-purpose",
+          "dimensionId": "dimension.direction",
+          "criterion": "镜头必须让观众在观测帧中读出声明的注意力引导、信息揭示和叙事目的。",
+          "evidenceRequirement": "exact_contract_and_observed_media",
+          "passAnchor": "主体、目标和关键揭示按 ShotSpec 的目的进入注意力路径，观者能说明镜头为何存在。",
+          "warnAnchor": "目的大致可读但注意力落点或揭示时机不稳定，需要补充帧级观察。",
+          "failAnchor": "画面仍可描述但无法从观测媒体辨认声明的镜头目的，或仅以美感偏好判定。"
+        },
+        {
+          "anchorId": "anchor.direction-action-coverage",
+          "dimensionId": "dimension.direction",
+          "criterion": "动作 beat、coverage 和入口/变化/出口状态必须在观测媒体中可追溯，不以漂亮单帧替代序列证据。",
+          "evidenceRequirement": "track_and_frame_evidence",
+          "passAnchor": "每个 required beat 都有对应帧/镜头证据，动作变化和结果状态顺序闭合。",
+          "warnAnchor": "主要 beat 可辨但局部覆盖或出口状态缺少足够帧证据，需要复核 storyboard ledger。",
+          "failAnchor": "遗漏关键 beat、打乱因果或用未观测的 prose 补足缺失动作。"
+        },
+        {
+          "anchorId": "anchor.direction-spatial-continuity",
+          "dimensionId": "dimension.direction",
+          "criterion": "主体、目标、轴线、遮挡、接触区和场景锚点必须维持跨镜头空间关系。",
+          "evidenceRequirement": "observed_media",
+          "passAnchor": "屏幕方向、相对距离和接触/遮挡关系在相邻镜头中可解释且没有无证据跳变。",
+          "warnAnchor": "空间关系大体成立但一个边界帧接近轴线或接触阈值，需要复核。",
+          "failAnchor": "越轴、漂浮、错误遮挡或场景锚点跳变使动作原因不可读。"
+        },
+        {
+          "anchorId": "anchor.direction-temporal-causality",
+          "dimensionId": "dimension.direction",
+          "criterion": "触发、动作、镜头/焦点变化和稳定终态必须遵守 TemporalSpec 与可选 CameraPrevisSpec 的顺序。",
+          "evidenceRequirement": "exact_contract_and_observed_media",
+          "passAnchor": "观测序列保留声明的触发—反应—结果关系，并在预期帧范围稳定收势。",
+          "warnAnchor": "因果仍可读但局部时序或收势接近阈值，需要一次可审计复核。",
+          "failAnchor": "因果倒置、焦点/运动早于动机、时间基准不符或终态持续漂移。"
+        }
+      ],
+      "observedMediaCalibration": {
+        "mode": "paired_observed_media",
+        "minimumPairs": 2,
+        "requiresObservedMedia": true,
+        "balancedPresentationOrder": true,
+        "decisionScale": "left_right_tie"
+      }
+    }
   },
   "acceptance": {
     "minimumCasePassRate": 0.85,
@@ -569,9 +883,12 @@
   "provenance": {
     "source": "codex_authored",
     "createdAt": "2026-08-20T18:00:00.000Z",
-    "updatedAt": "2026-08-20T18:00:00.000Z",
+    "updatedAt": "2026-09-02T04:00:00.000Z",
     "changeLog": [
-      "v1: establish Character, Morphology, Natural Human, Anime, Manga, Cross Representation, Scene, Interaction, Storyboard and Rights benches"
+      "v1: establish Character, Morphology, Natural Human, Anime, Manga, Cross Representation, Scene, Interaction, Storyboard and Rights benches",
+      "Add a CameraPrevisSpec-bound CinematographyBench case; the suite defines planned evaluation only and does not claim observed media.",
+      "Require a blinded, trained, independently reviewed calibration protocol with observable camera anchors and disagreement resolution for CinematographyBench.",
+      "Add DirectorQualityBench with exact Director artifact refs, dimension-specific pass/warn/fail anchors and a planned paired observed-media calibration design."
     ]
   }
 }

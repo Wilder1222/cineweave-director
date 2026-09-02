@@ -1,22 +1,28 @@
 {
   "contractPackage": "cineweave-contracts@2.5.1",
   "standalone": {
-    "accepts": ["NaturalLanguageBrief", "OptionalReferenceBindingSet"],
-    "produces": ["DirectorProposals", "ActionSequenceSpec", "ShotSpec", "ShotLightingPlan", "TemporalSpec", "Storyboard", "RenderPlan", "MediaImport"]
+    "accepts": ["NaturalLanguageBrief", "OptionalReferenceBindingSet", "CinematicSkillManifest", "OptionalAssetAliasRegistry"],
+    "produces": ["DirectorProposals", "ActionSequenceSpec", "CinematicSkillManifest", "ShotCompilerPlan", "ShotSpec", "ShotLightingPlan", "TemporalSpec", "CameraPrevisSpec", "HeroFrameAnchor", "Storyboard", "SequenceRhythmSpec", "RenderPlan", "MediaImport", "DirectorRepair"]
   },
   "composed": {
-    "consumes": ["CreativeBrief", "StoryBrief", "ScriptScene", "ReferenceObservation", "ReferenceReview", "ReferenceBindingSet", "CharacterBinding", "PerformanceTimeline", "RepresentationBinding", "SceneBinding", "SceneLightState", "InteractionConstraintSet", "ActionSequenceSpec", "StyleCompile", "StyleLightGrammar", "PromptRecord", "ImagePrompt", "ProductionContracts"],
-    "produces": ["DirectorProposals", "ActionSequenceSpec", "ShotSpec", "ShotLightingPlan", "TemporalSpec", "Storyboard", "RenderPlan", "MediaImport"]
+    "consumes": ["CreativeBrief", "StoryBrief", "ScriptScene", "ReferenceObservation", "ReferenceReview", "ReferenceBindingSet", "AssetAliasRegistry", "CharacterBinding", "PerformanceTimeline", "RepresentationBinding", "SceneBinding", "SceneLightState", "InteractionConstraintSet", "ActionSequenceSpec", "StyleCompile", "StyleLightGrammar", "PromptRecord", "ImagePrompt", "BoardAssemblyPlan", "Storyboard", "HeroFrameAnchor", "CinematicSkillManifest", "ControlBenchmarkReview", "ProductionContracts"],
+    "produces": ["DirectorProposals", "ActionSequenceSpec", "CinematicSkillManifest", "ShotCompilerPlan", "ShotSpec", "ShotLightingPlan", "TemporalSpec", "CameraPrevisSpec", "HeroFrameAnchor", "Storyboard", "SequenceRhythmSpec", "RenderPlan", "MediaImport", "DirectorRepair"]
   },
   "contractKinds": [
     "cineweave_codex_director_proposals",
     "cineweave_codex_action_sequence_spec",
+    "cineweave_codex_cinematic_skill_manifest",
+    "cineweave_codex_shot_compiler_plan",
     "cineweave_codex_shot_spec",
     "cineweave_codex_shot_lighting_plan",
     "cineweave_codex_temporal_spec",
+    "cineweave_codex_camera_previs_spec",
+    "cineweave_codex_hero_frame_anchor",
     "cineweave_codex_storyboard_sequence",
+    "cineweave_codex_sequence_rhythm_spec",
     "cineweave_codex_render_plan",
     "cineweave_codex_media_import",
+    "cineweave_codex_director_repair",
     "cineweave_codex_creative_brief",
     "cineweave_codex_story_brief",
     "cineweave_codex_script_scene",
@@ -31,12 +37,15 @@
     "cineweave_codex_prompt_record",
     "cineweave_codex_image_prompt",
     "cineweave_codex_asset_recipe",
+    "cineweave_codex_board_assembly_plan",
     "cineweave_codex_control_channel_set",
     "cineweave_codex_evidence_bundle",
     "cineweave_codex_capability_profile",
+    "cineweave_codex_control_benchmark_review",
     "cineweave_codex_license_profile",
     "cineweave_codex_reference_observation",
     "cineweave_codex_reference_review",
-    "cineweave_codex_reference_binding_set"
+    "cineweave_codex_reference_binding_set",
+    "cineweave_codex_asset_alias_registry"
   ]
 }

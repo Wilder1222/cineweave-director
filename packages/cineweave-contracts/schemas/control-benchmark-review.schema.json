@@ -146,12 +146,82 @@
         "status": { "enum": ["not_started", "planned", "in_progress", "completed"] },
         "reviewerCount": { "type": "integer", "minimum": 0, "maximum": 12 },
         "rubric": { "type": "array", "minItems": 1, "maxItems": 32, "items": { "type": "string", "minLength": 1, "maxLength": 1600 } },
+        "calibration": { "$ref": "#/$defs/reviewCalibration" },
         "completedAt": { "type": "string", "format": "date-time" }
       },
       "allOf": [{
         "if": { "properties": { "status": { "const": "completed" } } },
         "then": { "required": ["completedAt"], "properties": { "reviewerCount": { "minimum": 1 } } }
       }]
+    },
+    "reviewCalibration": {
+      "type": "object", "additionalProperties": false,
+      "required": ["protocolId", "status", "independentReviewerCount", "agreementScore", "adjudicationStatus"],
+      "properties": {
+        "protocolId": { "$ref": "#/$defs/stableId" },
+        "status": { "enum": ["not_started", "planned", "in_progress", "completed"] },
+        "independentReviewerCount": { "type": "integer", "minimum": 0, "maximum": 12 },
+        "agreementScore": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "adjudicationStatus": { "enum": ["not_started", "not_required", "required", "completed"] },
+        "adjudicationNotes": { "type": "string", "minLength": 1, "maxLength": 1600 },
+        "pairResults": {
+          "type": "array",
+          "maxItems": 128,
+          "items": { "$ref": "#/$defs/calibrationPairResult" }
+        }
+      },
+      "allOf": [
+        {
+          "if": { "properties": { "status": { "enum": ["not_started", "planned"] } }, "required": ["status"] },
+          "then": {
+            "properties": {
+              "independentReviewerCount": { "const": 0 },
+              "agreementScore": { "const": null },
+              "adjudicationStatus": { "const": "not_started" }
+            }
+          }
+        },
+        {
+          "if": { "properties": { "status": { "const": "completed" } }, "required": ["status"] },
+          "then": {
+            "properties": {
+              "independentReviewerCount": { "minimum": 2 },
+              "agreementScore": { "type": "number" },
+              "adjudicationStatus": { "enum": ["not_required", "completed"] }
+            }
+          }
+        }
+      ]
+    },
+    "calibrationPairResult": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "pairId",
+        "caseId",
+        "dimensionId",
+        "leftMediaId",
+        "rightMediaId",
+        "decision",
+        "presentationOrder",
+        "evidenceObservationIds"
+      ],
+      "properties": {
+        "pairId": { "$ref": "#/$defs/stableId" },
+        "caseId": { "$ref": "#/$defs/stableId" },
+        "dimensionId": { "$ref": "#/$defs/stableId" },
+        "leftMediaId": { "$ref": "#/$defs/stableId" },
+        "rightMediaId": { "$ref": "#/$defs/stableId" },
+        "decision": { "enum": ["left", "right", "tie", "not_applicable"] },
+        "presentationOrder": { "enum": ["left_first", "right_first"] },
+        "evidenceObservationIds": {
+          "type": "array",
+          "minItems": 1,
+          "maxItems": 48,
+          "uniqueItems": true,
+          "items": { "$ref": "#/$defs/observationId" }
+        }
+      }
     },
     "decision": {
       "type": "object", "additionalProperties": false,

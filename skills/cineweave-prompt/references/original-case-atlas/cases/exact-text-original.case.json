@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0.0",
+  "caseId": "case.atlas.exact-text-original",
+  "category": "exact-text",
+  "title": "Bilingual literal-copy card",
+  "summary": "An original exact-text fixture that binds three NFC strings to declared SVG text blocks and distinguishes codepoint verification from cross-platform font pixel rendering.",
+  "status": "worked_fixture",
+  "routing": {
+    "indexPath": "../index.json",
+    "categoryPath": "../categories/exact-text.md",
+    "triggers": ["exact text", "literal copy", "精确文字", "固定文案"],
+    "excludedCategories": ["portrait", "product", "food", "architecture", "editorial", "diagrams"]
+  },
+  "prompt": {
+    "contentHash": "sha256:0ade3365360868e8ac547e85cab38fff519ced3caf09a660b61940647ccf0d86",
+    "record": {
+      "kind": "cineweave_codex_prompt_record",
+      "contractVersion": "2.0.0",
+      "promptId": "atlas-exact-text-original",
+      "title": "Bilingual literal-copy card prompt",
+      "version": 1,
+      "status": "active",
+      "domain": "technical",
+      "generationMode": "generate",
+      "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-studio.git", "ref": "working-tree-v2.5.x", "commit": "6dd43cb645122f57b5c545803b374d831da454d9", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00.000Z" },
+      "purpose": "Provide a bounded exact-text worked example that verifies literal UTF-8/NFC copy without claiming pixel-identical system-font rendering.",
+      "sourceText": "Render three exact strings: 版本 1.0 / EXACT; Keep A/B · 2026; Line 01 — 字符逐字核对.",
+      "tags": ["atlas", "exact-text", "technical", "deterministic"],
+      "prompt": {
+        "language": "bilingual",
+        "positive": "A centered information card with three exact text lines: “版本 1.0 / EXACT”, “Keep A/B · 2026”, and “Line 01 — 字符逐字核对”; preserve UTF-8 NFC codepoints, punctuation, case and line order exactly.",
+        "negative": "No paraphrase, no translation, no omitted punctuation, no extra text, no logo, no watermark, no external typeface.",
+        "blocks": {
+          "subject": ["one bilingual literal-copy information card"],
+          "composition": ["three centered text blocks inside one rounded safe area"],
+          "technical": ["UTF-8 NFC text", "exact punctuation and line order", "system-font fallback only"],
+          "constraints": ["do not alter any declared codepoint", "do not claim cross-platform pixel identity"]
+        }
+      },
+      "variables": [],
+      "references": [],
+      "variants": [{ "variantId": "atlas-exact-text-original-baseline", "label": "Baseline literal copy", "change": "No variation; retain all checked codepoints and line order.", "positive": "Retain the three exact strings without translation or punctuation changes.", "status": "selected" }],
+      "evaluation": {
+        "criteria": [{ "criterion": "literal-copy", "check": "All three strings preserve NFC codepoints, punctuation, case and order.", "status": "pass", "evidence": "The deterministic SVG generator escapes and emits the exact visualSpec strings." }],
+        "knownRisks": ["System-font glyph metrics may vary by platform even when codepoints are identical."],
+        "nextExperiment": "A future pixel-pinned case would require a redistributable embedded font with separately verified rights."
+      },
+      "provenance": { "source": "codex_authored", "createdAt": "2026-09-02T00:00:00.000Z", "updatedAt": "2026-09-02T00:00:00.000Z", "changeLog": ["v1: create an original deterministic exact-text prompt fixture."] },
+      "validation": { "onePrimaryTarget": true, "providerNeutral": true, "variablesBound": true, "referencesScoped": true, "observationReady": true }
+    }
+  },
+  "adapterContext": { "adapterId": "adapter.atlas-svg.local", "adapterVersion": "1.0.0", "implementationPath": "skills/cineweave-prompt/scripts/generate-original-case-atlas.mjs", "implementationContentHash": "sha256:581fbf2a9209b062abc2c1a9dcc4c6aa1bd1aa572c9ee7e24cd242055b2b358a", "executionMode": "fixture", "runtime": "node>=22", "networkAccess": false, "externalEffects": false, "providerNeutral": true, "costAmount": 0, "currency": "USD" },
+  "visualSpec": {
+    "width": 1200,
+    "height": 900,
+    "seed": "atlas-exact-text-v1",
+    "palette": ["#FBFAF7", "#FFF2CC", "#C24A3A", "#546A7B", "#1B263B"],
+    "exactText": ["版本 1.0 / EXACT", "Keep A/B · 2026", "Line 01 — 字符逐字核对"],
+    "elements": ["safe-area", "title-block", "subtitle-block", "literal-copy"],
+    "composition": "Three exact NFC strings are centered in separate text blocks within one rounded safe area; punctuation, case and line order are fixed."
+  },
+  "candidate": { "path": "../../assets/original-case-atlas/exact-text-original.svg", "mimeType": "image/svg+xml", "byteLength": 1291, "contentHash": "sha256:9b6cb629665a89a53822e568f40d018dfc9486eb6ad327244c39e67f99f989ec", "width": 1200, "height": 900 },
+  "rights": { "profilePath": "../rights/license-profile.json", "profileContentHash": "sha256:1b01597f19ed1dad561fb3fae0907b6003869faf5e63e347a240c0c59a11eae8", "creatorOwned": true, "redistribution": "allowed", "publication": "allowed", "thirdPartyAssets": false, "identityRights": "not_applicable", "fontPolicy": "system-font-codepoints-not-pixel-pinned" },
+  "reviewEvidence": {
+    "status": "deterministic_checks_complete", "candidateContentHash": "sha256:9b6cb629665a89a53822e568f40d018dfc9486eb6ad327244c39e67f99f989ec", "reviewType": "machine", "checkedAt": "2026-09-02T00:00:00.000Z",
+    "criteria": [
+      { "criterionId": "rebuild.byte-identical", "status": "pass", "evidence": "The local generator must reproduce the committed candidate byte for byte." },
+      { "criterionId": "svg.active-content-absent", "status": "pass", "evidence": "The candidate uses static SVG primitives and system-font text only." },
+      { "criterionId": "rights.profile-verified", "status": "pass", "evidence": "The shared creator-owned rights profile is verified and hash-bound." },
+      { "criterionId": "text.codepoints-nfc", "status": "pass", "evidence": "Every declared exactText string is NFC and occurs exactly once in the rebuilt SVG source." }
+    ],
+    "humanReview": { "status": "not_performed", "reviewerCount": 0 }, "decision": "mechanical_fixture_pass",
+    "notAssessed": ["human aesthetic quality", "provider generation quality", "cross-platform font pixel equivalence"]
+  },
+  "reproduction": { "generatorPath": "skills/cineweave-prompt/scripts/generate-original-case-atlas.mjs", "generatorVersion": "1.0.0", "caseSelector": "exact-text", "expectedContentHash": "sha256:9b6cb629665a89a53822e568f40d018dfc9486eb6ad327244c39e67f99f989ec", "deterministic": true, "networkRequired": false, "externalInputs": [] },
+  "claimsBoundary": { "scope": "mechanical_fixture_only", "humanReview": "not_performed", "providerOutput": "not_generated", "providerQuality": "not_assessed", "photorealism": "not_assessed", "domainFitness": "not_assessed", "crossPlatformFontPixels": "not_guaranteed" }
+}

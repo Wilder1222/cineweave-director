@@ -331,6 +331,10 @@ test("successful image ExecutionReceipt binds to a verified draft MediaImport an
   assert.equal(executed.receipt.envelope.payload.status, "succeeded");
   const callback = await createProductionMediaImport(project, compiled.requestRef, executed.receipt.envelope.artifactRef);
   assert.equal(callback.mediaImport.status, "draft");
+  assert.equal(callback.mediaImport.contractVersion, "2.5.0");
+  assert.equal(callback.mediaImport.renderPlanRef.kind, "cineweave_codex_render_plan");
+  assert.deepEqual(callback.mediaImport.executionRequestRef, compiled.requestRef);
+  assert.deepEqual(callback.mediaImport.executionReceiptRef, executed.receipt.envelope.artifactRef);
   assert.equal(callback.mediaImport.media[0].format, "png");
   const verified = await verifyProductionMediaImport(project, callback.bindingRef);
   assert.deepEqual(verified.bindingRef, callback.bindingRef);

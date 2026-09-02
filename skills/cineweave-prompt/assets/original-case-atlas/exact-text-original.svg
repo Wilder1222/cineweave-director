@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" data-case-id="case.atlas.exact-text-original">
+  <title>Bilingual literal-copy card</title>
+  <desc>Original deterministic exact-text fixture; no external media or provider output.</desc>
+  <rect width="1200" height="900" fill="#FBFAF7"/>
+  <rect data-element="safe-area" x="95" y="95" width="1010" height="710" rx="24" fill="#FFF2CC" stroke="#1B263B" stroke-width="6"/>
+  <g data-element="title-block"><text x="600" y="330" fill="#1B263B" font-family="system-ui, sans-serif" font-size="74" font-weight="750" text-anchor="middle">版本 1.0 / EXACT</text></g>
+  <g data-element="subtitle-block"><text x="600" y="430" fill="#C24A3A" font-family="system-ui, sans-serif" font-size="34" font-weight="650" text-anchor="middle">Keep A/B · 2026</text></g>
+  <g data-element="literal-copy"><text x="600" y="535" fill="#546A7B" font-family="system-ui, sans-serif" font-size="28" font-weight="500" text-anchor="middle">Line 01 — 字符逐字核对</text></g>
+  <path d="M260 610 H940" stroke="#546A7B" stroke-width="3"/>
+  <text x="600" y="675" fill="#1B263B" font-family="system-ui, sans-serif" font-size="18" font-weight="500" text-anchor="middle">UTF-8 · NFC · CODEPOINT CHECKED</text>
+</svg>

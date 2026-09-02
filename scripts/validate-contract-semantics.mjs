@@ -2,7 +2,7 @@
 
 import { readFile } from "node:fs/promises";
 import { dirname, resolve } from "node:path";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { sha256Canonical } from "../packages/cineweave-runtime/src/canonical-json.mjs";
 
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
@@ -11,6 +11,29 @@ function isObject(value) { return value !== null && typeof value === "object" &&
 function nonEmpty(value) { return typeof value === "string" && value.trim().length > 0; }
 function push(errors, condition, message) { if (!condition) errors.push(message); }
 function unique(values) { return new Set(values).size === values.length; }
+function isExactContractRef(value, acceptedKinds = []) {
+  return isObject(value)
+    && nonEmpty(value.kind)
+    && nonEmpty(value.id)
+    && Number.isSafeInteger(value.version)
+    && value.version >= 1
+    && /^sha256:[0-9a-f]{64}$/.test(value.contentHash || "")
+    && (!acceptedKinds.length || acceptedKinds.includes(value.kind));
+}
+function sameExactRef(left, right) {
+  return isExactContractRef(left)
+    && isExactContractRef(right)
+    && left.kind === right.kind
+    && left.id === right.id
+    && left.version === right.version
+    && left.contentHash === right.contentHash;
+}
+function sameStrings(left, right) {
+  return Array.isArray(left) && Array.isArray(right)
+    && unique(left) && unique(right)
+    && left.length === right.length
+    && left.every((value) => right.includes(value));
+}
 function containsProviderWeightSyntax(value) {
   const pattern = /(?:<lora:[^>\r\n]+>|\([^()\r\n]{1,240}:\s*[-+]?(?:\d+\.\d+|\.\d+)\)|\b(?:prompt|token|style)[ _-]?weight\s*=|\b\d+(?:\.\d+)?\s*::)/i;
   if (typeof value === "string") return pattern.test(value);
@@ -428,6 +451,115 @@ function validateCapabilityProfile(payload, errors) {
   push(errors, payload?.matchingPolicy?.hardRequirementPolicy === "block", "Hard capability mismatch must block");
 }
 
+function validateCapabilityResolutionPlan(payload, errors, context = {}) {
+  if (payload?.contractVersion !== "2.5.0") return;
+  const request = payload?.request || {};
+  const candidates = payload?.candidates || [];
+  const requirements = request.requirements || [];
+  const candidateIds = candidates.map((candidate) => candidate?.candidateId);
+  const requirementIds = requirements.map((requirement) => requirement?.requirementId);
+  push(errors, nonEmpty(payload?.resolutionPlanId) && Number.isSafeInteger(payload?.version) && payload.version >= 1, "CapabilityResolutionPlan 2.5 requires a stable identity and version");
+  push(errors, unique(candidateIds), "CapabilityResolutionPlan candidate IDs must be unique");
+  push(errors, unique(requirementIds), "CapabilityResolutionPlan requirement IDs must be unique");
+  push(errors, candidateIds.every((id, index) => index === 0 || String(candidateIds[index - 1]).localeCompare(String(id)) <= 0), "CapabilityResolutionPlan candidates must be stably ordered by candidateId");
+  push(errors, requirements.length > 0 && requirements.every((requirement) => nonEmpty(requirement?.capabilityId) && ["hard", "soft", "advisory"].includes(requirement?.level)), "CapabilityResolutionPlan requirements must declare typed capability levels");
+  const knownCandidates = new Set(candidateIds);
+  for (const candidate of candidates) {
+    push(errors, isExactContractRef(candidate?.capabilityProfileRef, ["cineweave_codex_capability_profile"]), `${candidate?.candidateId}: capabilityProfileRef must be exact`);
+    push(errors, isExactContractRef(candidate?.adapterDescriptorRef, ["cineweave_adapter_descriptor"]), `${candidate?.candidateId}: adapterDescriptorRef must be exact`);
+    push(errors, nonEmpty(candidate?.adapterId), `${candidate?.candidateId}: adapterId is required for explanation`);
+    const operation = candidate?.operationSupport || {};
+    const operationChecks = ["executionMode", "renderMode", "mediaKind", "inputCapacity", "outputCapacity", "mimeTypes"];
+    push(errors, operation.status === (operationChecks.every((key) => operation[key] === true) ? "pass" : "fail"), `${candidate?.candidateId}: operation support status must match its checks`);
+    const resultIds = (candidate?.capabilityResults || []).map((item) => item?.requirementId);
+    push(errors, unique(resultIds), `${candidate?.candidateId}: capability result IDs must be unique`);
+    push(errors, (candidate?.capabilityResults || []).length > 0, `${candidate?.candidateId}: capability results are required`);
+    push(errors, typeof candidate?.score === "number" && candidate.score >= 0 && candidate.score <= 100, `${candidate?.candidateId}: capability score must be bounded`);
+    const hardFailures = candidate?.hardFailures || [];
+    const operationFailed = operation.status !== "pass";
+    const hardResultFailed = (candidate?.capabilityResults || []).some((item) => item?.level === "hard" && item?.status === "fail");
+    const hasReview = (candidate?.capabilityResults || []).some((item) => item?.status === "review");
+    const expectedStatus = operationFailed || hardResultFailed || hardFailures.length > 0 ? "blocked" : hasReview ? "needs_review" : candidate?.status === "selected" ? "selected" : "eligible";
+    push(errors, candidate?.status === expectedStatus, `${candidate?.candidateId}: candidate status must reflect operation and hard capability results`);
+    push(errors, candidate?.status === "blocked" ? hardFailures.length > 0 : true, `${candidate?.candidateId}: blocked candidate must expose a hard failure reason`);
+    if (context.candidates) {
+      const supplied = context.candidates.find((item) => item?.candidateId === candidate?.candidateId);
+      if (supplied?.capabilityProfile) {
+        push(errors, sameExactRef(candidate.capabilityProfileRef, {
+          kind: supplied.capabilityProfile.kind,
+          id: supplied.capabilityProfile.profileId,
+          version: supplied.capabilityProfile.version,
+          contentHash: sha256Canonical(supplied.capabilityProfile)
+        }), `${candidate?.candidateId}: CapabilityProfile ref must match supplied payload`);
+      }
+    }
+  }
+  const selectedCandidates = candidates.filter((candidate) => candidate?.status === "selected");
+  const selection = payload?.selection || {};
+  push(errors, selection.status === payload?.status, "CapabilityResolutionPlan selection status must match plan status");
+  if (payload?.status === "selected") {
+    push(errors, selectedCandidates.length === 1, "Selected CapabilityResolutionPlan must mark exactly one candidate selected");
+    push(errors, selectedCandidates[0]?.candidateId === selection.selectedCandidateId, "Selected CapabilityResolutionPlan must identify its selected candidate");
+    push(errors, isExactContractRef(selection.selectedCapabilityProfileRef, ["cineweave_codex_capability_profile"]) && isExactContractRef(selection.selectedAdapterDescriptorRef, ["cineweave_adapter_descriptor"]), "Selected CapabilityResolutionPlan must expose exact selected refs");
+    if (selectedCandidates.length === 1) {
+      push(errors, sameExactRef(selection.selectedCapabilityProfileRef, selectedCandidates[0].capabilityProfileRef), "CapabilityResolutionPlan selected CapabilityProfile ref must match the selected candidate");
+      push(errors, sameExactRef(selection.selectedAdapterDescriptorRef, selectedCandidates[0].adapterDescriptorRef), "CapabilityResolutionPlan selected AdapterDescriptor ref must match the selected candidate");
+    }
+  } else {
+    push(errors, selectedCandidates.length === 0 && selection.selectedCandidateId === null, "Unselected CapabilityResolutionPlan must not expose a selected candidate");
+    push(errors, selection.selectedCapabilityProfileRef === null && selection.selectedAdapterDescriptorRef === null, "Unselected CapabilityResolutionPlan must not expose selected refs");
+    if (payload?.status === "needs_review") push(errors, candidates.some((candidate) => candidate?.status === "needs_review"), "Review-needed CapabilityResolutionPlan must retain a review candidate");
+    if (payload?.status === "blocked") push(errors, candidates.every((candidate) => candidate?.status === "blocked"), "Blocked CapabilityResolutionPlan must have no eligible or review candidate");
+  }
+  push(errors, (payload?.explanation?.fallbackCandidateIds || []).every((id) => knownCandidates.has(id)), "CapabilityResolutionPlan fallback candidates must be declared candidates");
+  push(errors, nonEmpty(payload?.explanation?.primaryDecision) && nonEmpty(payload?.explanation?.rankingPolicy), "CapabilityResolutionPlan must explain the primary decision and ranking policy");
+  push(errors, containsProviderWeightSyntax(payload?.explanation) === false, "CapabilityResolutionPlan explanation must not contain provider weight syntax");
+  for (const [key, expected] of Object.entries({ providerNeutral: true, generatesMedia: false, executesAdapter: false, mutatesCanon: false, writesFiles: false, humanApprovalRequired: true })) {
+    push(errors, payload?.executionBoundary?.[key] === expected, `CapabilityResolutionPlan execution boundary.${key} is unsafe`);
+  }
+  for (const key of ["candidateRefsExact", "descriptorBindingsExact", "hardRequirementsBlock", "rankingDeterministic", "explanationPresent", "noProviderSelection", "noExecution"]) {
+    push(errors, payload?.validation?.[key] === true, `CapabilityResolutionPlan validation.${key} must be true`);
+  }
+}
+
+function validateExecutionPreview(payload, errors, context = {}) {
+  if (payload?.contractVersion !== "2.5.0") return;
+  push(errors, nonEmpty(payload?.previewId) && Number.isSafeInteger(payload?.version) && payload.version >= 1, "ExecutionPreview 2.5 requires a stable identity and version");
+  push(errors, isExactContractRef(payload?.executionRequestRef, ["cineweave_execution_request"]), "ExecutionPreview must bind an exact ExecutionRequest");
+  push(errors, isExactContractRef(payload?.capabilityResolutionPlanRef, ["cineweave_codex_capability_resolution_plan"]), "ExecutionPreview must bind an exact CapabilityResolutionPlan");
+  push(errors, isExactContractRef(payload?.adapterDescriptorRef, ["cineweave_adapter_descriptor"]), "ExecutionPreview must bind an exact AdapterDescriptor");
+  push(errors, isExactContractRef(payload?.capabilityProfileRef, ["cineweave_codex_capability_profile"]), "ExecutionPreview must bind an exact CapabilityProfile");
+  const risks = payload?.riskSummary || [];
+  push(errors, unique(risks.map((risk) => risk?.riskId)), "ExecutionPreview risk IDs must be unique");
+  const hasBlock = risks.some((risk) => risk?.status === "block");
+  const hasReview = risks.some((risk) => risk?.status === "review");
+  push(errors, payload?.status === (hasBlock ? "blocked" : hasReview ? "needs_review" : "ready"), "ExecutionPreview status must reflect its risk summary");
+  push(errors, payload?.approval?.required === true && payload?.approval?.status === "pending" && payload?.approval?.action === "approve_exact_request", "ExecutionPreview must leave exact-request approval pending");
+  push(errors, payload?.costEstimate?.unknownCostAction === "block", "ExecutionPreview unknown cost policy must block");
+  push(errors, payload?.costEstimate?.status === "unknown" ? payload?.costEstimate?.amount === null : typeof payload?.costEstimate?.amount === "number", "ExecutionPreview cost status must match its amount visibility");
+  push(errors, payload?.requestSummary?.currency === payload?.costEstimate?.currency, "ExecutionPreview request and cost currencies must match");
+  if (context.executionRequest) {
+    const request = context.executionRequest;
+    push(errors, sameExactRef(payload.executionRequestRef, { kind: request.kind, id: request.requestId, version: request.version, contentHash: sha256Canonical(request) }), "ExecutionPreview executionRequestRef must match the supplied request");
+    push(errors, sameExactRef(payload.adapterDescriptorRef, request.adapterDescriptorRef), "ExecutionPreview AdapterDescriptor ref must match the supplied request");
+    push(errors, sameExactRef(payload.capabilityProfileRef, request.capabilityProfileRef), "ExecutionPreview CapabilityProfile ref must match the supplied request");
+    push(errors, payload.approval.scope === (request.executionMode === "external" ? "exact_execution_request" : "none"), "ExecutionPreview approval scope must match the request execution mode");
+  }
+  if (context.capabilityResolutionPlan) {
+    const resolution = context.capabilityResolutionPlan;
+    push(errors, sameExactRef(payload.capabilityResolutionPlanRef, { kind: resolution.kind, id: resolution.resolutionPlanId, version: resolution.version, contentHash: sha256Canonical(resolution) }), "ExecutionPreview resolution ref must match the supplied plan");
+    if (resolution.selection.status === "selected") {
+      push(errors, sameExactRef(payload.adapterDescriptorRef, resolution.selection.selectedAdapterDescriptorRef) && sameExactRef(payload.capabilityProfileRef, resolution.selection.selectedCapabilityProfileRef), "ExecutionPreview selected refs must match the resolution plan");
+    }
+  }
+  for (const [key, expected] of Object.entries({ providerNeutral: true, generatesMedia: false, executesAdapter: false, mutatesCanon: false, writesFiles: false, humanApprovalRequired: true })) {
+    push(errors, payload?.executionBoundary?.[key] === expected, `ExecutionPreview execution boundary.${key} is unsafe`);
+  }
+  for (const key of ["exactRequestRef", "exactResolutionRef", "selectedAdapterMatches", "hardConstraintsVisible", "costVisible", "approvalPending", "noExecution"]) {
+    push(errors, payload?.validation?.[key] === true, `ExecutionPreview validation.${key} must be true`);
+  }
+}
+
 function validateLicenseProfile(payload, errors) {
   if (payload?.commercialUse === "allowed") {
     push(errors, payload?.status === "verified", "Commercial use allowed requires verified status");
@@ -441,6 +573,7 @@ function validateBenchmark(payload, errors) {
   const metricIds = metrics.map((item) => item?.metricId);
   const dimensions = payload?.dimensions || [];
   const cases = payload?.cases || [];
+  const scopes = payload?.scopes || [];
   push(errors, unique(metricIds), "Benchmark metric IDs must be unique");
   push(errors, unique(dimensions.map((item) => item?.dimensionId)), "Benchmark dimension IDs must be unique");
   push(errors, unique(cases.map((item) => item?.caseId)), "Benchmark case IDs must be unique");
@@ -451,12 +584,62 @@ function validateBenchmark(payload, errors) {
     ["HumanRealismBench", "surface_realism"],
     ["AnimeBench", "anime_representation"],
     ["MangaBench", "manga_representation"],
-    ["CrossRepresentationBench", "cross_representation"]
+    ["CrossRepresentationBench", "cross_representation"],
+    ["CinematographyBench", "cinematography"],
+    ["DirectorQualityBench", "director_quality"]
   ]);
   const categories = new Set(cases.map((item) => item?.category));
-  for (const scope of payload?.scopes || []) {
+  for (const scope of scopes) {
     const requiredCategory = requiredCategoryByScope.get(scope);
-    if (requiredCategory) push(errors, categories.has(requiredCategory), `${scope} requires a ${requiredCategory} case`);
+    if (requiredCategory) push(errors, categories.has(requiredCategory), scope + " requires a " + requiredCategory + " case");
+  }
+  if (scopes.includes("CinematographyBench")) {
+    const calibration = payload?.humanReview?.calibration;
+    const anchors = calibration?.anchors || [];
+    const knownDimensionIds = new Set(dimensions.map((item) => item?.dimensionId));
+    push(errors, isObject(calibration), "CinematographyBench requires a calibration protocol");
+    if (isObject(calibration)) {
+      push(errors, calibration?.blindComparison === true, "CinematographyBench calibration requires blind comparison");
+      push(errors, calibration?.trainingRequired === true, "CinematographyBench calibration requires reviewer training");
+      push(errors, Number.isSafeInteger(calibration?.minimumIndependentReviewers) && calibration.minimumIndependentReviewers >= 2, "CinematographyBench calibration requires at least two independent reviewers");
+      push(errors, typeof calibration?.minimumAgreement === "number" && calibration.minimumAgreement >= 0 && calibration.minimumAgreement <= 1, "CinematographyBench calibration requires a bounded agreement threshold");
+      push(errors, payload?.humanReview?.reviewerCount >= calibration?.minimumIndependentReviewers, "CinematographyBench reviewerCount must meet the independent-reviewer minimum");
+      push(errors, unique(anchors.map((item) => item?.anchorId)), "CinematographyBench calibration anchor IDs must be unique");
+      for (const anchor of anchors) push(errors, knownDimensionIds.has(anchor?.dimensionId), "CinematographyBench calibration references an unknown dimension");
+      push(errors, anchors.some((item) => item?.dimensionId === "dimension.cinematography"), "CinematographyBench calibration must anchor the cinematography dimension");
+    }
+  }
+  if (scopes.includes("DirectorQualityBench")) {
+    const calibration = payload?.humanReview?.calibration;
+    const anchors = calibration?.anchors || [];
+    const knownDimensionIds = new Set(dimensions.map((item) => item?.dimensionId));
+    const pairing = calibration?.observedMediaCalibration;
+    push(errors, isObject(calibration), "DirectorQualityBench requires a calibration protocol");
+    if (isObject(calibration)) {
+      push(errors, calibration?.blindComparison === true, "DirectorQualityBench calibration requires blind comparison");
+      push(errors, calibration?.trainingRequired === true, "DirectorQualityBench calibration requires reviewer training");
+      push(errors, Number.isSafeInteger(calibration?.minimumIndependentReviewers) && calibration.minimumIndependentReviewers >= 2, "DirectorQualityBench calibration requires at least two independent reviewers");
+      push(errors, typeof calibration?.minimumAgreement === "number" && calibration.minimumAgreement >= 0 && calibration.minimumAgreement <= 1, "DirectorQualityBench calibration requires a bounded agreement threshold");
+      push(errors, payload?.humanReview?.reviewerCount >= calibration?.minimumIndependentReviewers, "DirectorQualityBench reviewerCount must meet the independent-reviewer minimum");
+      push(errors, unique(anchors.map((item) => item?.anchorId)), "DirectorQualityBench calibration anchor IDs must be unique");
+      for (const anchor of anchors) push(errors, knownDimensionIds.has(anchor?.dimensionId), "DirectorQualityBench calibration references an unknown dimension");
+      push(errors, anchors.some((item) => item?.dimensionId === "dimension.direction"), "DirectorQualityBench calibration must anchor the direction dimension");
+      push(errors, isObject(pairing) && pairing?.mode === "paired_observed_media" && pairing?.requiresObservedMedia === true && pairing?.balancedPresentationOrder === true && pairing?.decisionScale === "left_right_tie" && Number.isSafeInteger(pairing?.minimumPairs) && pairing.minimumPairs >= 2, "DirectorQualityBench calibration requires paired observed-media design");
+    }
+    for (const testCase of cases.filter((item) => item?.category === "director_quality")) {
+      const refs = testCase?.directorArtifactRefs || [];
+      const kinds = new Set(refs.map((ref) => ref?.kind));
+      push(errors, refs.length >= 4 && refs.every((ref) => isExactContractRef(ref)), "DirectorQualityBench cases require exact Director artifact references");
+      push(errors, unique(refs.map((ref) => [ref?.kind, ref?.id, ref?.version, ref?.contentHash].join("@"))), "DirectorQualityBench artifact references must be unique");
+      for (const requiredKind of ["cineweave_codex_action_sequence_spec", "cineweave_codex_shot_spec", "cineweave_codex_temporal_spec", "cineweave_codex_storyboard_sequence"]) {
+        push(errors, kinds.has(requiredKind), "DirectorQualityBench cases require " + requiredKind);
+      }
+    }
+  }
+  for (const testCase of cases) {
+    if (testCase?.category === "cinematography") {
+      push(errors, isExactContractRef(testCase?.cameraPrevisRef, ["cineweave_codex_camera_previs_spec"]), "CinematographyBench requires an exact CameraPrevisSpec reference");
+    }
   }
   push(errors, cases.some((item) => item?.category === "rights"), "ControlBench must include a rights case");
   push(errors, payload?.acceptance?.blockingDimensionPassRate === 1, "Blocking dimensions require perfect pass rate");
@@ -468,7 +651,16 @@ function validateBenchmarkReview(payload, errors, benchmark) {
   push(errors, unique(results.map((item) => item?.caseId)), "ControlBenchmarkReview case IDs must be unique");
   push(errors, unique(media.map((item) => item?.mediaId)), "ControlBenchmarkReview media IDs must be unique");
   const knownMediaIds = new Set(media.map((item) => item?.mediaId));
-  const knownObservationIds = new Set(media.flatMap((item) => item?.candidateObservationIds || []));
+  const allObservationIds = media.flatMap((item) => item?.candidateObservationIds || []);
+  push(errors, unique(allObservationIds), "ControlBenchmarkReview candidate observation IDs must be unique across media");
+  const knownObservationIds = new Set(allObservationIds);
+  const observationMediaIds = new Map();
+  for (const item of media) {
+    for (const observationId of item?.candidateObservationIds || []) {
+      if (!observationMediaIds.has(observationId)) observationMediaIds.set(observationId, new Set());
+      observationMediaIds.get(observationId).add(item?.mediaId);
+    }
+  }
   const findingIds = [];
   for (const result of results) {
     push(errors, unique((result?.reviewedMediaIds || [])), `${result?.caseId}: reviewed media IDs must be unique`);
@@ -495,6 +687,64 @@ function validateBenchmarkReview(payload, errors, benchmark) {
     push(errors, JSON.stringify(actualCaseIds) === JSON.stringify(expectedCaseIds), "ControlBenchmarkReview must cover every bound benchmark case exactly once");
     push(errors, payload?.benchmarkRef?.id === benchmark?.suiteId && payload?.benchmarkRef?.version === benchmark?.version, "ControlBenchmarkReview benchmark ref must match the supplied ControlBenchmark");
     for (const result of results) for (const metric of result?.metricResults || []) push(errors, expectedMetricIds.has(metric?.metricId), `${result?.caseId}: unknown benchmark metric ${metric?.metricId}`);
+  }
+  const calibrationPlan = benchmark?.humanReview?.calibration;
+  if (calibrationPlan) {
+    const calibration = payload?.humanReview?.calibration;
+    push(errors, isObject(calibration), "ControlBenchmarkReview must bind the benchmark calibration protocol");
+    if (isObject(calibration)) {
+      push(errors, calibration?.protocolId === calibrationPlan?.protocolId, "ControlBenchmarkReview calibration protocol must match the benchmark");
+      if (payload?.status === "planned") {
+        const noClaimedResults = ["not_started", "planned"].includes(calibration?.status)
+          && calibration?.independentReviewerCount === 0
+          && calibration?.agreementScore === null
+          && calibration?.adjudicationStatus === "not_started";
+        push(errors, noClaimedResults, "Planned ControlBenchmarkReview must not claim calibration results");
+      }
+      const pairingPlan = calibrationPlan?.observedMediaCalibration;
+      const pairResults = Array.isArray(calibration?.pairResults) ? calibration.pairResults : [];
+      if (pairingPlan && payload?.status === "planned") {
+        push(errors, pairResults.length === 0, "Planned ControlBenchmarkReview must not claim observed-media calibration pairs");
+      }
+      if (payload?.status === "completed") {
+        const completedCalibration = calibration?.status === "completed"
+          && calibration?.independentReviewerCount >= calibrationPlan?.minimumIndependentReviewers
+          && payload?.humanReview?.reviewerCount >= calibration?.independentReviewerCount
+          && typeof calibration?.agreementScore === "number";
+        push(errors, completedCalibration, "Completed ControlBenchmarkReview requires calibrated independent review");
+        if (typeof calibration?.agreementScore === "number") {
+          if (calibration.agreementScore < calibrationPlan.minimumAgreement) {
+            push(errors, calibration?.adjudicationStatus === "completed" && nonEmpty(calibration?.adjudicationNotes), "Below-threshold calibration agreement requires completed adjudication notes");
+          } else {
+            push(errors, calibration?.adjudicationStatus === "not_required", "At-threshold calibration agreement must record adjudication as not required");
+          }
+        }
+        if (pairingPlan) {
+          const benchmarkCaseIds = new Set((benchmark?.cases || []).map((item) => item?.caseId));
+          const benchmarkDimensionIds = new Set((benchmark?.dimensions || []).map((item) => item?.dimensionId));
+          const directorQualityCaseIds = new Set((benchmark?.cases || []).filter((item) => item?.category === "director_quality").map((item) => item?.caseId));
+          const directorQualityDimensionIds = new Set((benchmark?.dimensions || []).filter((item) => item?.scope === "direction").map((item) => item?.dimensionId));
+          push(errors, pairResults.length >= pairingPlan.minimumPairs, "Completed ControlBenchmarkReview requires the configured observed-media calibration pairs");
+          push(errors, unique(pairResults.map((item) => item?.pairId)), "Calibration pair result IDs must be unique");
+          if (pairingPlan.balancedPresentationOrder === true) {
+            push(errors, pairResults.some((item) => item?.presentationOrder === "left_first") && pairResults.some((item) => item?.presentationOrder === "right_first"), "Completed ControlBenchmarkReview requires balanced observed-media presentation order");
+          }
+          if (benchmark?.scopes?.includes("DirectorQualityBench")) {
+            push(errors, pairResults.some((item) => directorQualityCaseIds.has(item?.caseId) && directorQualityDimensionIds.has(item?.dimensionId)), "Completed ControlBenchmarkReview requires a DirectorQualityBench calibration pair");
+          }
+          for (const pair of pairResults) {
+            const pairLabel = String(pair?.pairId || "unknown-pair");
+            push(errors, knownMediaIds.has(pair?.leftMediaId) && knownMediaIds.has(pair?.rightMediaId), pairLabel + ": calibration pair media must be bound to media evidence");
+            push(errors, pair?.leftMediaId !== pair?.rightMediaId, pairLabel + ": calibration pair must compare two distinct media items");
+            for (const observationId of pair?.evidenceObservationIds || []) push(errors, knownObservationIds.has(observationId), pairLabel + ": calibration pair evidence must be bound to candidate media");
+            const evidenceMediaIds = new Set((pair?.evidenceObservationIds || []).flatMap((observationId) => [...(observationMediaIds.get(observationId) || [])]));
+            push(errors, evidenceMediaIds.has(pair?.leftMediaId) && evidenceMediaIds.has(pair?.rightMediaId), pairLabel + ": calibration pair evidence must include observations bound to both media items");
+            push(errors, benchmarkCaseIds.has(pair?.caseId), pairLabel + ": calibration pair must target a known benchmark case");
+            push(errors, benchmarkDimensionIds.has(pair?.dimensionId), pairLabel + ": calibration pair must target a known benchmark dimension");
+          }
+        }
+      }
+    }
   }
   const blockingFailures = results.flatMap((result) => result?.findings || []).filter((finding) => finding?.severity === "blocking" && finding?.status === "fail").map((finding) => finding?.findingId).sort();
   const declaredBlockingFailures = [...(payload?.decision?.blockingFindingIds || [])].sort();
@@ -753,6 +1003,118 @@ function validateIntegratedStoryboard(payload, errors) {
       push(errors, nonEmpty(shot?.continuity?.interactionState), `${shot.shotId}: interaction constraints require continuity.interactionState`);
       push(errors, nonEmpty(shot?.continuity?.propState), `${shot.shotId}: interaction constraints require continuity.propState`);
     }
+  }
+}
+
+function validateStoryboardContract(payload, errors, context = {}) {
+  const shots = payload?.shots || [];
+  const coverageLedger = payload?.coverageLedger || [];
+  const shotIds = shots.map((shot) => shot?.shotId);
+  const coverageIds = coverageLedger.map((entry) => entry?.coverageId);
+  const shotIdSet = new Set(shotIds);
+  const coverageById = new Map(coverageLedger.map((entry) => [entry?.coverageId, entry]));
+
+  push(errors, unique(shotIds), "Storyboard shot IDs must be unique");
+  push(errors, unique(coverageIds), "Storyboard coverage IDs must be unique");
+  for (const [index, shot] of shots.entries()) {
+    const label = shot?.shotId || "<unknown shot>";
+    push(errors, shot?.order === index + 1, label + ": storyboard shot order must be contiguous and sequence-ordered");
+    push(errors, shot?.shotSpecRef?.kind === "cineweave_codex_shot_spec", label + ": storyboard shotSpecRef must target ShotSpec");
+    push(errors, Array.isArray(shot?.coverageLedgerIds) && shot.coverageLedgerIds.length > 0 && unique(shot.coverageLedgerIds), label + ": storyboard coverageLedgerIds must be a non-empty unique selection");
+    for (const coverageId of shot?.coverageLedgerIds || []) {
+      const entry = coverageById.get(coverageId);
+      push(errors, Boolean(entry), label + ": storyboard references unknown coverage " + coverageId);
+      if (entry) push(errors, (entry.shotIds || []).includes(shot.shotId), label + ": coverage " + coverageId + " must link back to the shot");
+    }
+  }
+  for (const entry of coverageLedger) {
+    const label = entry?.coverageId || "<unknown coverage>";
+    push(errors, unique(entry?.beatIds || []), label + ": coverage beat IDs must be unique");
+    push(errors, unique(entry?.shotIds || []), label + ": coverage shot IDs must be unique");
+    for (const shotId of entry?.shotIds || []) {
+      const shot = shots.find((candidate) => candidate?.shotId === shotId);
+      push(errors, shotIdSet.has(shotId), label + ": coverage references unknown shot " + shotId);
+      if (shot) push(errors, (shot.coverageLedgerIds || []).includes(entry.coverageId), label + ": shot " + shotId + " must link back to the coverage");
+    }
+  }
+
+  const actionSequenceRef = payload?.actionSequenceRef;
+  const selectedBeatIds = payload?.actionBeatIds || [];
+  if (actionSequenceRef) {
+    push(errors, actionSequenceRef.kind === "cineweave_codex_action_sequence_spec", "Storyboard actionSequenceRef must target ActionSequenceSpec");
+    push(errors, Array.isArray(selectedBeatIds) && selectedBeatIds.length > 0 && unique(selectedBeatIds), "Storyboard actionBeatIds must be a non-empty unique selection");
+    const selectedBeatSet = new Set(selectedBeatIds);
+    for (const shot of shots) {
+      const label = shot?.shotId || "<unknown shot>";
+      push(errors, Array.isArray(shot?.actionBeatIds) && shot.actionBeatIds.length > 0 && unique(shot.actionBeatIds), label + ": action-scoped storyboard shot must select ActionSequenceSpec beats");
+      for (const beatId of shot?.actionBeatIds || []) push(errors, selectedBeatSet.has(beatId), label + ": selects action beat outside the storyboard action scope: " + beatId);
+    }
+    for (const entry of coverageLedger) for (const beatId of entry?.beatIds || []) {
+      push(errors, selectedBeatSet.has(beatId), (entry?.coverageId || "<unknown coverage>") + ": coverage beat lies outside the storyboard action scope: " + beatId);
+    }
+    for (const beatId of selectedBeatIds) {
+      push(errors, shots.some((shot) => (shot?.actionBeatIds || []).includes(beatId)), "Storyboard action beat " + beatId + " is not selected by a shot");
+      push(errors, coverageLedger.some((entry) => (entry?.beatIds || []).includes(beatId)), "Storyboard action beat " + beatId + " is not covered by the ledger");
+    }
+    const actionSequenceSpec = context.actionSequenceSpec;
+    if (actionSequenceSpec) {
+      push(errors, actionSequenceRef.id === actionSequenceSpec.actionSequenceId && actionSequenceRef.version === actionSequenceSpec.version && actionSequenceRef.contentHash === sha256Canonical(actionSequenceSpec), "Storyboard must bind the supplied exact ActionSequenceSpec identity, version and canonical hash");
+      const knownBeatIds = new Set((actionSequenceSpec.beats || []).map((beat) => beat?.beatId));
+      for (const beatId of selectedBeatIds) push(errors, knownBeatIds.has(beatId), "Storyboard selects unknown action beat " + beatId);
+      for (const requirement of actionSequenceSpec.coverageRequirements || []) {
+        if (!(requirement?.beatIds || []).every((beatId) => selectedBeatSet.has(beatId))) continue;
+        const entry = coverageById.get(requirement.coverageId);
+        push(errors, Boolean(entry), "Storyboard must include fully scoped ActionSequenceSpec coverage " + requirement.coverageId);
+        if (entry) push(errors, sameStrings(entry.beatIds, requirement.beatIds), requirement.coverageId + ": storyboard coverage beats must match the ActionSequenceSpec requirement exactly");
+      }
+    }
+    push(errors, payload?.validation?.actionCoverageComplete === true, "Action-scoped Storyboard must declare action coverage complete");
+  } else {
+    push(errors, selectedBeatIds.length === 0, "Storyboard without ActionSequenceSpec must not declare actionBeatIds");
+    for (const shot of shots) push(errors, !Object.hasOwn(shot || {}, "actionBeatIds"), (shot?.shotId || "<unknown shot>") + ": actionBeatIds require a storyboard ActionSequenceSpec");
+    push(errors, payload?.validation?.actionCoverageComplete === false, "Storyboard without ActionSequenceSpec must declare action coverage not applicable");
+  }
+
+  const knownShotSpecs = context.shotSpecs || [];
+  if (knownShotSpecs.length > 0) {
+    const shotSpecsByKey = new Map(knownShotSpecs.map((shotSpec) => [String(shotSpec?.shotSpecId) + "@" + String(shotSpec?.version), shotSpec]));
+    for (const shot of shots) {
+      const key = String(shot?.shotSpecRef?.id) + "@" + String(shot?.shotSpecRef?.version);
+      const shotSpec = shotSpecsByKey.get(key);
+      push(errors, Boolean(shotSpec), (shot?.shotId || "<unknown shot>") + ": storyboard ShotSpec ref is outside supplied validation context");
+      if (shotSpec) push(errors, shot?.shotSpecRef?.contentHash === sha256Canonical(shotSpec), (shot?.shotId || "<unknown shot>") + ": storyboard ShotSpec ref must use the supplied canonical hash");
+    }
+  }
+
+  const productionBindings = payload?.productionBindings;
+  if (productionBindings) {
+    const panels = productionBindings?.panels || [];
+    const panelIds = panels.map((panel) => panel?.panelId);
+    const panelShotIds = panels.map((panel) => panel?.shotId);
+    const taskKeys = panels.map((panel) => String(panel?.recipeRunId) + "/" + String(panel?.taskId));
+    const tileKeys = panels.map((panel) => String(panel?.regionId) + "/" + String(panel?.tileId));
+    push(errors, productionBindings?.boardAssemblyPlanRef?.kind === "cineweave_codex_board_assembly_plan", "Storyboard production bindings must target BoardAssemblyPlan");
+    push(errors, panels.length === shots.length, "Storyboard must bind exactly one production panel for every shot");
+    push(errors, unique(panelIds), "Storyboard production panel IDs must be unique");
+    push(errors, unique(panelShotIds), "Storyboard production panel shot IDs must be unique");
+    push(errors, unique(taskKeys), "Storyboard production task bindings must be unique");
+    push(errors, unique(tileKeys), "Storyboard production tile bindings must be unique");
+    for (const panel of panels) {
+      const label = panel?.panelId || "<unknown panel>";
+      push(errors, shotIdSet.has(panel?.shotId), label + ": production panel references unknown storyboard shot");
+      if (panel?.status !== "planned") push(errors, Boolean(panel?.executionReceiptRef), label + ": executed production panel requires an execution receipt");
+      if (panel?.status === "accepted") push(errors, Boolean(panel?.evidenceBundleRef), label + ": accepted production panel requires evidence");
+    }
+    const boardAssemblyPlan = context.boardAssemblyPlan;
+    if (boardAssemblyPlan) {
+      const boardRef = productionBindings.boardAssemblyPlanRef;
+      push(errors, boardRef?.id === boardAssemblyPlan.boardPlanId && boardRef?.version === boardAssemblyPlan.version && boardRef?.contentHash === sha256Canonical(boardAssemblyPlan), "Storyboard must bind the supplied exact BoardAssemblyPlan identity, version and canonical hash");
+      const tilePlacements = new Set((boardAssemblyPlan.tilePlacements || []).map((placement) => String(placement?.recipeRunId) + "/" + String(placement?.taskId) + "/" + String(placement?.regionId) + "/" + String(placement?.tileId)));
+      for (const panel of panels) push(errors, tilePlacements.has(String(panel?.recipeRunId) + "/" + String(panel?.taskId) + "/" + String(panel?.regionId) + "/" + String(panel?.tileId)), (panel?.panelId || "<unknown panel>") + ": production panel does not match a BoardAssemblyPlan tile");
+    }
+    push(errors, payload?.validation?.productionBindingsExact === true, "Storyboard with production bindings must declare them exact");
+  } else {
+    push(errors, payload?.validation?.productionBindingsExact === false, "Storyboard without production bindings must declare them unavailable");
   }
 }
 
@@ -1171,7 +1533,7 @@ function validateShotSpec(payload, errors, actionSequenceSpec) {
     push(errors, payload.actionSequenceRef.kind === "cineweave_codex_action_sequence_spec", "ShotSpec actionSequenceRef must target ActionSequenceSpec");
     push(errors, Array.isArray(payload?.actionBeatIds) && payload.actionBeatIds.length > 0 && unique(payload.actionBeatIds), "ShotSpec actionBeatIds must be a non-empty unique selection");
     if (actionSequenceSpec) {
-      push(errors, payload.actionSequenceRef.id === actionSequenceSpec.actionSequenceId && payload.actionSequenceRef.version === actionSequenceSpec.version, "ShotSpec must bind the supplied exact ActionSequenceSpec identity and version");
+      push(errors, payload.actionSequenceRef.id === actionSequenceSpec.actionSequenceId && payload.actionSequenceRef.version === actionSequenceSpec.version && payload.actionSequenceRef.contentHash === sha256Canonical(actionSequenceSpec), "ShotSpec must bind the supplied exact ActionSequenceSpec identity, version and canonical hash");
       const knownActionBeats = new Set((actionSequenceSpec.beats || []).map((item) => item?.beatId));
       for (const beatId of payload?.actionBeatIds || []) push(errors, knownActionBeats.has(beatId), `ShotSpec selects unknown action beat ${beatId}`);
     }
@@ -1192,20 +1554,259 @@ function validateShotSpec(payload, errors, actionSequenceSpec) {
       }
     }
   }
+  push(errors, !Object.hasOwn(payload || {}, "lightingPlanRef"), "ShotSpec cannot back-reference downstream ShotLightingPlan");
+  push(errors, !Object.hasOwn(payload || {}, "temporalSpecRef"), "ShotSpec cannot back-reference downstream TemporalSpec");
   push(errors, nonEmpty(payload?.camera?.movementIntent), "ShotSpec needs a motivated movement intent, including static");
   push(errors, payload?.validation?.oneDominantCameraIdea === true, "ShotSpec requires one dominant camera idea");
   push(errors, payload?.validation?.axisCoherent === true, "ShotSpec must preserve axis coherence");
 }
 
-function validateShotLightingPlan(payload, errors, sceneLightState) {
+function validateShotDependency(ref, shotSpec, label, errors) {
+  push(errors, ref?.kind === "cineweave_codex_shot_spec", `${label} shotSpecRef must target ShotSpec`);
+  if (!shotSpec) return;
+  push(errors, ref?.id === shotSpec?.shotSpecId, `${label} must bind the supplied ShotSpec identity`);
+  push(errors, ref?.version === shotSpec?.version, `${label} must bind the supplied ShotSpec version`);
+  push(errors, ref?.contentHash === sha256Canonical(shotSpec), `${label} must bind the supplied ShotSpec content hash`);
+}
+
+function validateShotLightingPlan(payload, errors, sceneLightState, shotSpec) {
+  validateShotDependency(payload?.shotSpecRef, shotSpec, "ShotLightingPlan", errors);
   const known = new Set((sceneLightState?.sources || []).map((item) => item?.sourceId));
   const uses = [payload?.key, payload?.fill, payload?.rim, ...(payload?.practicals || [])].filter(Boolean);
-  if (known.size) for (const use of uses) push(errors, known.has(use?.sourceId), `ShotLightingPlan uses unknown source ${use?.sourceId}`);
+  if (known.size) for (const use of uses) push(errors, known.has(use?.sourceId), "ShotLightingPlan uses unknown source " + use?.sourceId);
+  if (payload?.contractVersion === "2.5.0") {
+    for (const use of uses) {
+      const transport = use?.transport;
+      push(errors, ["direct", "bounce", "transmitted"].includes(transport), "ShotLightingPlan 2.5 light use must declare direct, bounce or transmitted transport");
+      if (["bounce", "transmitted"].includes(transport)) {
+        push(errors, nonEmpty(use?.viaSurfaceAnchor), "ShotLightingPlan 2.5 bounced or transmitted light requires a physical viaSurfaceAnchor");
+      }
+      if (transport === "direct") {
+        push(errors, !Object.hasOwn(use || {}, "viaSurfaceAnchor"), "ShotLightingPlan 2.5 direct light must not invent a bounce surface");
+      }
+    }
+    push(errors, payload?.validation?.fillIntentional === true, "ShotLightingPlan 2.5 must make the fill or no-fill decision explicit");
+  }
   push(errors, payload?.validation?.stylePhysicalSeparated === true, "ShotLightingPlan must separate style from physical sources");
   push(errors, payload?.validation?.continuityBound === true, "ShotLightingPlan must bind continuity");
 }
 
-function validateTemporalSpec(payload, errors) {
+function validateHeroFrameAnchor(payload, errors, context = {}) {
+  const shotSpec = context?.shotSpec;
+  const heroFrameRef = payload?.heroFrameRef;
+  const sourceSelection = payload?.sourceSelection || {};
+  const bindingRefs = payload?.bindingRefs || {};
+  const camera = payload?.visualDna?.camera || {};
+  const inheritance = payload?.inheritancePolicy || {};
+  const lockedPaths = inheritance.lockedPaths || [];
+  const preserved = new Set(inheritance.preserve || []);
+  const allowedOverrides = inheritance.allowOverrides || [];
+
+  push(errors, isExactContractRef(heroFrameRef, ["cineweave_codex_reference_asset", "cineweave_codex_media_import"]), "HeroFrameAnchor heroFrameRef must be an exact ReferenceAsset or MediaImport");
+  if (heroFrameRef?.kind === "cineweave_codex_reference_asset") {
+    push(errors, sourceSelection.mode === "whole_asset", "HeroFrameAnchor ReferenceAsset must use whole_asset source selection");
+  }
+  if (heroFrameRef?.kind === "cineweave_codex_media_import") {
+    push(errors, ["frame_index", "time_seconds"].includes(sourceSelection.mode), "HeroFrameAnchor MediaImport must select one frame");
+  }
+
+  validateShotDependency(payload?.shotSpecRef, shotSpec, "HeroFrameAnchor", errors);
+  const characterRefs = bindingRefs.characterRefs || [];
+  push(errors, characterRefs.every((ref) => isExactContractRef(ref, ["character_binding"])), "HeroFrameAnchor character bindings must be exact CharacterBinding refs");
+  if (bindingRefs.sceneRef) push(errors, isExactContractRef(bindingRefs.sceneRef, ["scene_binding"]), "HeroFrameAnchor sceneRef must be an exact SceneBinding ref");
+  if (bindingRefs.appearanceStateRef) push(errors, isExactContractRef(bindingRefs.appearanceStateRef, ["cineweave_codex_character_appearance_state"]), "HeroFrameAnchor appearanceStateRef must be an exact CharacterAppearanceState ref");
+  if (bindingRefs.referenceBindingSetRef) push(errors, isExactContractRef(bindingRefs.referenceBindingSetRef, ["cineweave_codex_reference_binding_set"]), "HeroFrameAnchor referenceBindingSetRef must be an exact ReferenceBindingSet ref");
+
+  if (shotSpec) {
+    const expectedCharacters = shotSpec?.bindings?.characters || [];
+    const actualCharacterKeys = characterRefs.map(exactRefKey);
+    const expectedCharacterKeys = expectedCharacters.map(exactRefKey);
+    push(errors, actualCharacterKeys.length === expectedCharacterKeys.length && actualCharacterKeys.every((key) => expectedCharacterKeys.includes(key)), "HeroFrameAnchor character bindings must exactly match the ShotSpec");
+    if (shotSpec?.bindings?.scene) push(errors, sameExactRef(bindingRefs.sceneRef, shotSpec.bindings.scene), "HeroFrameAnchor sceneRef must exactly match the ShotSpec scene binding");
+    else push(errors, !Object.hasOwn(bindingRefs, "sceneRef"), "HeroFrameAnchor must not invent a scene binding absent from the ShotSpec");
+    push(errors, Math.abs(camera.focalLengthMm - shotSpec?.camera?.focalLengthMm) <= 1e-9, "HeroFrameAnchor focal length must match the ShotSpec");
+    push(errors, camera.focusTarget === shotSpec?.camera?.focusTarget, "HeroFrameAnchor focus target must match the ShotSpec");
+    push(errors, camera.axisSide === shotSpec?.camera?.axisSide, "HeroFrameAnchor axis side must match the ShotSpec");
+  }
+
+  if (payload?.cameraPrevisRef) push(errors, isExactContractRef(payload.cameraPrevisRef, ["cineweave_codex_camera_previs_spec"]), "HeroFrameAnchor cameraPrevisRef must be an exact CameraPrevisSpec ref");
+  if (payload?.shotLightingPlanRef) push(errors, isExactContractRef(payload.shotLightingPlanRef, ["cineweave_codex_shot_lighting_plan"]), "HeroFrameAnchor shotLightingPlanRef must be an exact ShotLightingPlan ref");
+  if (payload?.styleCompileRef) push(errors, isExactContractRef(payload.styleCompileRef, ["cineweave_codex_style_compile"]), "HeroFrameAnchor styleCompileRef must be an exact StyleCompile ref");
+  if (payload?.cameraPrevisRef && context?.cameraPrevisSpec) {
+    const cameraPrevis = context.cameraPrevisSpec;
+    push(errors, payload.cameraPrevisRef.id === cameraPrevis.cameraPrevisSpecId && payload.cameraPrevisRef.version === cameraPrevis.version && payload.cameraPrevisRef.contentHash === sha256Canonical(cameraPrevis), "HeroFrameAnchor must bind the supplied exact CameraPrevisSpec");
+    push(errors, sameExactRef(cameraPrevis.shotSpecRef, payload.shotSpecRef), "HeroFrameAnchor CameraPrevisSpec must share the exact ShotSpec dependency");
+  }
+  if (payload?.shotLightingPlanRef && context?.shotLightingPlan) {
+    const shotLightingPlan = context.shotLightingPlan;
+    push(errors, payload.shotLightingPlanRef.id === shotLightingPlan.lightingPlanId && payload.shotLightingPlanRef.version === shotLightingPlan.version && payload.shotLightingPlanRef.contentHash === sha256Canonical(shotLightingPlan), "HeroFrameAnchor must bind the supplied exact ShotLightingPlan");
+    push(errors, sameExactRef(shotLightingPlan.shotSpecRef, payload.shotSpecRef), "HeroFrameAnchor ShotLightingPlan must share the exact ShotSpec dependency");
+  }
+
+  push(errors, unique(allowedOverrides), "HeroFrameAnchor allowOverrides must be unique");
+  const forbiddenOverridePrefixes = ["character_identity", "scene_geography", "bindings.characters", "bindings.scene", "visualDna.appearance.identitySummary"];
+  for (const path of allowedOverrides) {
+    push(errors, !forbiddenOverridePrefixes.some((prefix) => path === prefix || path.startsWith(`${prefix}.`)), `HeroFrameAnchor cannot override locked identity or geography path ${path}`);
+  }
+  const lockedPathIds = lockedPaths.map((item) => item?.path);
+  push(errors, unique(lockedPathIds), "HeroFrameAnchor locked path IDs must be unique");
+  for (const requiredPath of ["character_identity", "scene_geography"]) {
+    const lock = lockedPaths.find((item) => item?.path === requiredPath);
+    push(errors, lock?.level === "hard", `HeroFrameAnchor must hard-lock ${requiredPath}`);
+  }
+  for (const requiredPreserved of ["character_identity", "scene_geography", "camera", "composition"]) {
+    push(errors, preserved.has(requiredPreserved), `HeroFrameAnchor inheritance must preserve ${requiredPreserved}`);
+  }
+  push(errors, containsProviderWeightSyntax(payload?.visualDna) === false, "HeroFrameAnchor visual DNA must not contain provider weight syntax");
+  for (const [key, expected] of Object.entries({
+    providerNeutral: true,
+    generatesMedia: false,
+    executesAdapter: false,
+    mutatesCanon: false,
+    humanApprovalRequired: true
+  })) push(errors, payload?.executionBoundary?.[key] === expected, `HeroFrameAnchor execution boundary.${key} is unsafe`);
+  for (const key of ["exactHeroFrameRef", "exactShotSpecRef", "visualDnaProviderNeutral", "inheritanceExplicit", "identityCannotBeOverridden", "geographyCannotBeOverridden", "cameraCompositionSeparated", "noMediaGeneration"]) {
+    push(errors, payload?.validation?.[key] === true, `HeroFrameAnchor validation.${key} must be true`);
+  }
+}
+
+function validateAssetAliasRegistry(payload, errors) {
+  const acceptedKinds = [
+    "cineweave_codex_reference_asset",
+    "cineweave_codex_reference_observation",
+    "cineweave_codex_reference_binding_set",
+    "character_binding",
+    "scene_binding",
+    "cineweave_codex_style_compile"
+  ];
+  const aliases = payload?.aliases || [];
+  const targetKinds = payload?.scope?.targetContractKinds || [];
+  const normalizedAliases = aliases.map((item) => item?.normalizedAlias);
+  const aliasText = JSON.stringify({ scope: payload?.scope, aliases });
+
+  push(errors, unique(normalizedAliases), "AssetAliasRegistry aliases must be unique after normalization");
+  push(errors, unique(targetKinds) && targetKinds.every((kind) => acceptedKinds.includes(kind)), "AssetAliasRegistry scope target kinds must be unique and supported");
+  for (const entry of aliases) {
+    const alias = entry?.alias;
+    push(errors, typeof alias === "string" && /^@[^\s@]{1,120}$/.test(alias), "AssetAliasRegistry aliases must use a bounded @alias form");
+    push(errors, typeof alias === "string" && alias !== "@latest", "AssetAliasRegistry must reserve @latest rather than treating it as an exact alias");
+    push(errors, typeof alias === "string" && typeof alias.normalize === "function" && alias.normalize("NFC") === alias, `AssetAliasRegistry alias ${alias || "<unknown>"} must be NFC-normalized`);
+    push(errors, entry?.normalizedAlias === alias, `AssetAliasRegistry alias ${alias || "<unknown>"} must equal its normalizedAlias`);
+    push(errors, entry?.status === "resolved", `AssetAliasRegistry alias ${alias || "<unknown>"} must have resolved status`);
+    push(errors, isExactContractRef(entry?.targetRef, acceptedKinds), `AssetAliasRegistry alias ${alias || "<unknown>"} must target one exact supported contract ref`);
+    if (entry?.targetRef?.kind) push(errors, targetKinds.includes(entry.targetRef.kind), `AssetAliasRegistry alias ${alias || "<unknown>"} targets a kind outside its scope`);
+  }
+  push(errors, !/(?:file:\/\/|https?:\/\/|[A-Za-z]:[\\/]|\\\\|localhost|signedUrl|presigned)/i.test(aliasText), "AssetAliasRegistry must not contain private locators or URLs");
+  push(errors, containsProviderWeightSyntax(aliases) === false, "AssetAliasRegistry must not contain provider weight syntax");
+
+  for (const [key, expected] of Object.entries({
+    mode: "declared_map_only",
+    exactRefsOnly: true,
+    allowLatest: false,
+    inferFromPrompt: false,
+    crossScopeResolution: false,
+    executesProvider: false
+  })) push(errors, payload?.resolutionPolicy?.[key] === expected, `AssetAliasRegistry resolutionPolicy.${key} is unsafe`);
+  for (const [key, expected] of Object.entries({
+    providerNeutral: true,
+    resolvesReferencesOnly: true,
+    generatesMedia: false,
+    executesAdapter: false,
+    mutatesCanon: false,
+    writesFiles: false,
+    humanApprovalRequired: true
+  })) push(errors, payload?.executionBoundary?.[key] === expected, `AssetAliasRegistry execution boundary.${key} is unsafe`);
+  for (const key of ["aliasesUnique", "aliasesNfcNormalized", "exactTargetRefs", "noLatestResolution", "noInference", "noProviderSyntax", "noPrivateLocators", "noCanonMutation", "noExecution"]) {
+    push(errors, payload?.validation?.[key] === true, `AssetAliasRegistry validation.${key} must be true`);
+  }
+}
+
+function validateSequenceRhythmSpec(payload, errors, context = {}) {
+  const storyboard = context?.storyboard;
+  const timebase = payload?.timebase || {};
+  const policy = payload?.shotDurationPolicy || {};
+  const windows = payload?.shotWindows || [];
+  const phases = payload?.tempoPhases || [];
+  const breathingPoints = payload?.breathingPoints || [];
+  const transitions = payload?.transitions || [];
+  const storyboardShotIds = (storyboard?.shots || []).map((shot) => shot?.shotId);
+  const windowShotIds = windows.map((window) => window?.shotId);
+
+  push(errors, isExactContractRef(payload?.storyboardRef, ["cineweave_codex_storyboard_sequence"]), "SequenceRhythmSpec storyboardRef must be an exact Storyboard ref");
+  if (storyboard) {
+    push(errors, payload.storyboardRef.id === storyboard.storyboardId && payload.storyboardRef.version === storyboard.version && payload.storyboardRef.contentHash === sha256Canonical(storyboard), "SequenceRhythmSpec must bind the supplied exact Storyboard");
+  }
+  push(errors, Number.isSafeInteger(timebase.numerator) && Number.isSafeInteger(timebase.denominator) && timebase.numerator > 0 && timebase.denominator > 0 && greatestCommonDivisor(timebase.numerator, timebase.denominator) === 1, "SequenceRhythmSpec timebase must be a positive reduced rational");
+  push(errors, timebase.unit === "frames" && timebase.frameIndexOrigin === 0, "SequenceRhythmSpec timebase must use zero-based integer frames");
+  push(errors, Number.isSafeInteger(policy.minimumFrames) && Number.isSafeInteger(policy.preferredFrames) && Number.isSafeInteger(policy.maximumFrames) && policy.minimumFrames <= policy.preferredFrames && policy.preferredFrames <= policy.maximumFrames, "SequenceRhythmSpec shot duration policy must be ordered");
+
+  push(errors, unique(windowShotIds), "SequenceRhythmSpec shot windows must contain each shot at most once");
+  let previousEnd = -1;
+  for (const [index, window] of windows.entries()) {
+    push(errors, window?.order === index + 1, `SequenceRhythmSpec shot window ${window?.shotId || "<unknown>"} order must be contiguous`);
+    push(errors, Number.isSafeInteger(window?.startFrame) && Number.isSafeInteger(window?.endFrame) && window.endFrame > window.startFrame, `SequenceRhythmSpec shot window ${window?.shotId || "<unknown>"} must have a positive inclusive range`);
+    if (index === 0) push(errors, window?.startFrame === 0, "SequenceRhythmSpec must start at frame zero");
+    else push(errors, window?.startFrame === previousEnd + 1, `SequenceRhythmSpec shot window ${window?.shotId || "<unknown>"} must be contiguous with the previous window`);
+    const duration = window?.endFrame - window?.startFrame + 1;
+    push(errors, duration >= policy.minimumFrames && duration <= policy.maximumFrames, `SequenceRhythmSpec shot window ${window?.shotId || "<unknown>"} must fit the duration policy`);
+    previousEnd = window?.endFrame;
+  }
+  if (storyboard) {
+    push(errors, unique(storyboardShotIds) && windowShotIds.length === storyboardShotIds.length && windowShotIds.every((shotId) => storyboardShotIds.includes(shotId)), "SequenceRhythmSpec shot windows must cover every Storyboard shot exactly once");
+  }
+
+  const phaseIds = phases.map((phase) => phase?.phaseId);
+  const phaseShotIds = phases.flatMap((phase) => phase?.shotIds || []);
+  push(errors, unique(phaseIds), "SequenceRhythmSpec phase IDs must be unique");
+  push(errors, unique(phaseShotIds), "SequenceRhythmSpec phases must assign each shot to one phase");
+  for (const [index, phase] of phases.entries()) {
+    push(errors, phase?.order === index + 1, `SequenceRhythmSpec phase ${phase?.phaseId || "<unknown>"} order must be contiguous`);
+    for (const shotId of phase?.shotIds || []) push(errors, windowShotIds.includes(shotId), `SequenceRhythmSpec phase references unknown shot ${shotId}`);
+  }
+  push(errors, phaseShotIds.length === windowShotIds.length && phaseShotIds.every((shotId) => windowShotIds.includes(shotId)), "SequenceRhythmSpec phase coverage must close over shot windows");
+
+  const windowByShotId = new Map(windows.map((window) => [window?.shotId, window]));
+  const breathingKeys = breathingPoints.map((point) => `${point?.shotId}@${point?.frame}`);
+  push(errors, unique(breathingKeys), "SequenceRhythmSpec breathing points must be unique");
+  for (const point of breathingPoints) {
+    const window = windowByShotId.get(point?.shotId);
+    push(errors, Boolean(window), `SequenceRhythmSpec breathing point references unknown shot ${point?.shotId}`);
+    if (window) push(errors, point.frame >= window.startFrame && point.frame <= window.endFrame, `SequenceRhythmSpec breathing point for ${point.shotId} must stay within its shot window`);
+  }
+
+  push(errors, transitions.length === Math.max(0, windows.length - 1), "SequenceRhythmSpec must declare one transition for every adjacent shot pair");
+  for (const [index, transition] of transitions.entries()) {
+    push(errors, transition?.fromShotId === windows[index]?.shotId && transition?.toShotId === windows[index + 1]?.shotId, "SequenceRhythmSpec transitions must follow adjacent shot windows");
+    push(errors, transition?.fromShotId !== transition?.toShotId, "SequenceRhythmSpec transitions cannot loop a shot onto itself");
+  }
+  for (const [key, expected] of Object.entries({
+    preserveScreenDirection: true,
+    stableEndStates: true,
+    shotOrderLocked: true
+  })) push(errors, payload?.continuity?.[key] === expected, `SequenceRhythmSpec continuity.${key} must be true`);
+  push(errors, containsProviderWeightSyntax(payload) === false, "SequenceRhythmSpec must not contain provider weight syntax");
+  for (const [key, expected] of Object.entries({
+    providerNeutral: true,
+    generatesMedia: false,
+    executesAdapter: false,
+    editsMedia: false,
+    humanApprovalRequired: true
+  })) push(errors, payload?.executionBoundary?.[key] === expected, `SequenceRhythmSpec execution boundary.${key} is unsafe`);
+  for (const key of ["exactStoryboardRef", "rationalTimebase", "shotWindowsOrdered", "storyboardShotsCovered", "phaseCoverageClosed", "transitionsAdjacent", "continuityExplicit", "providerNeutral", "noMediaGeneration"]) {
+    push(errors, payload?.validation?.[key] === true, `SequenceRhythmSpec validation.${key} must be true`);
+  }
+}
+
+function validateTemporalSpec(payload, errors, shotSpec, context = {}) {
+  validateShotDependency(payload?.shotSpecRef, shotSpec, "TemporalSpec", errors);
+  if (payload?.heroFrameAnchorRef) {
+    push(errors, isExactContractRef(payload.heroFrameAnchorRef, ["cineweave_codex_hero_frame_anchor"]), "TemporalSpec heroFrameAnchorRef must target HeroFrameAnchor");
+    if (context?.heroFrameAnchor) {
+      const anchor = context.heroFrameAnchor;
+      push(errors, payload.heroFrameAnchorRef.id === anchor.heroFrameAnchorId && payload.heroFrameAnchorRef.version === anchor.version && payload.heroFrameAnchorRef.contentHash === sha256Canonical(anchor), "TemporalSpec must bind the supplied exact HeroFrameAnchor");
+      push(errors, sameExactRef(anchor.shotSpecRef, payload.shotSpecRef), "TemporalSpec HeroFrameAnchor must share the exact ShotSpec dependency");
+    }
+  }
   for (const [label, events] of [["focus", payload?.focusTimeline || []], ["action", payload?.actionTimeline || []], ["dynamic light", payload?.dynamicLighting || []]]) {
     let last = -1;
     for (const event of events) {
@@ -1218,10 +1819,875 @@ function validateTemporalSpec(payload, errors) {
   push(errors, payload?.validation?.endStateStable === true, "TemporalSpec needs a stable end state");
 }
 
+const cinematicSkillOwnerRoutes = new Map([
+  ["cineweave_codex_shot_spec", ["cineweave-director", "shot_direction"]],
+  ["cineweave_codex_temporal_spec", ["cineweave-director", "temporal_direction"]],
+  ["cineweave_codex_performance_timeline", ["cineweave-character", "performance_timeline"]],
+  ["cineweave_codex_scene_binding", ["cineweave-scene", "scene_binding"]],
+  ["scene_binding", ["cineweave-scene", "scene_binding"]],
+  ["character_binding", ["cineweave-character", "character_design"]],
+  ["cineweave_codex_action_sequence_spec", ["cineweave-director", "action_sequence"]],
+  ["cineweave_codex_sequence_rhythm_spec", ["cineweave-director", "sequence_rhythm"]],
+  ["cineweave_codex_style_compile", ["cineweave-style", "style_compile"]]
+]);
+
+function validateCinematicSkillTarget(target, errors, label) {
+  const expected = cinematicSkillOwnerRoutes.get(target?.contractKind);
+  push(errors, Boolean(expected), `${label} targets an unsupported contract kind`);
+  if (!expected) return;
+  push(errors, target?.ownerSkill === expected[0], `${label} ownerSkill does not own ${target?.contractKind}`);
+  push(errors, target?.route === expected[1], `${label} route does not own ${target?.contractKind}`);
+  push(errors, nonEmpty(target?.fieldPath), `${label} must name a target field path`);
+}
+
+function validateCinematicSkillManifest(payload, errors) {
+  const skills = payload?.skills || [];
+  push(errors, payload?.contractVersion === "2.5.0", "CinematicSkillManifest must use contract version 2.5.0");
+  push(errors, nonEmpty(payload?.cinematicSkillManifestId) && Number.isSafeInteger(payload?.version) && payload.version >= 1, "CinematicSkillManifest requires a stable identity and version");
+  push(errors, unique(skills.map((skill) => skill?.skillId)), "CinematicSkillManifest skill IDs must be unique");
+
+  for (const skill of skills) {
+    const label = `CinematicSkillManifest ${skill?.skillId || "<unknown>"}`;
+    const slots = skill?.bindingSlots || [];
+    const parameters = skill?.parameters || [];
+    const program = skill?.program || [];
+    const outputs = skill?.outputContracts || [];
+    const groups = skill?.controlGroups || [];
+    const checks = skill?.qualityChecks || [];
+    const slotIds = slots.map((slot) => slot?.slotId);
+    const parameterIds = parameters.map((parameter) => parameter?.parameterId);
+    const outputKeys = outputs.map((output) => `${output?.contractKind}|${output?.route}`);
+    const groupIds = groups.map((group) => group?.groupId);
+    const checkIds = checks.map((check) => check?.checkId);
+    push(errors, Number.isSafeInteger(skill?.version) && skill.version >= 1, `${label} version must be positive`);
+    push(errors, unique(slotIds), `${label} binding slot IDs must be unique`);
+    push(errors, unique(parameterIds), `${label} parameter IDs must be unique`);
+    push(errors, unique(outputKeys), `${label} output contracts must be unique`);
+    push(errors, unique(groupIds), `${label} control group IDs must be unique`);
+    push(errors, unique(checkIds), `${label} quality check IDs must be unique`);
+    push(errors, unique(program.map((step) => step?.stepId)), `${label} program step IDs must be unique`);
+
+    const slotMap = new Map(slots.map((slot) => [slot?.slotId, slot]));
+    const parameterMap = new Map(parameters.map((parameter) => [parameter?.parameterId, parameter]));
+    const outputMap = new Map(outputs.map((output) => [`${output?.contractKind}|${output?.route}`, output]));
+    let previousOrder = 0;
+    for (const [index, step] of program.entries()) {
+      push(errors, step?.order === index + 1, `${label} program order must be contiguous`);
+      push(errors, step?.order > previousOrder, `${label} program steps must be ordered`);
+      previousOrder = step?.order;
+      validateCinematicSkillTarget(step?.target, errors, `${label} program step ${step?.stepId || index}`);
+      const source = step?.source || {};
+      if (source.type === "parameter") push(errors, parameterMap.has(source.id), `${label} program step ${step?.stepId || index} references an unknown parameter`);
+      if (source.type === "binding_slot") push(errors, slotMap.has(source.id), `${label} program step ${step?.stepId || index} references an unknown binding slot`);
+      if (["constant", "preserve", "upstream_ref"].includes(source.type)) push(errors, nonEmpty(source.id), `${label} program step ${step?.stepId || index} needs a named ${source.type} source`);
+      push(errors, outputMap.has(`${step?.target?.contractKind}|${step?.target?.route}`), `${label} program target must be declared as an output or handoff`);
+    }
+
+    for (const parameter of parameters) {
+      const parameterLabel = `${label} parameter ${parameter?.parameterId || "<unknown>"}`;
+      const targets = parameter?.targets || [];
+      push(errors, targets.length > 0, `${parameterLabel} must declare at least one canonical target`);
+      for (const target of targets) validateCinematicSkillTarget(target, errors, parameterLabel);
+      if (parameter?.valueType === "enum") push(errors, Array.isArray(parameter?.options) && parameter.options.length > 0, `${parameterLabel} enum parameters need options`);
+      if (["number", "frame_count"].includes(parameter?.valueType)) {
+        push(errors, typeof parameter?.defaultValue === "number" && Number.isFinite(parameter.defaultValue), `${parameterLabel} numeric parameters need a finite default`);
+        if (parameter?.range) push(errors, parameter.range.minimum <= parameter.range.maximum, `${parameterLabel} range must be ordered`);
+      }
+      if (parameter?.valueType === "frame_count") push(errors, Number.isSafeInteger(parameter?.defaultValue), `${parameterLabel} frame_count defaults must be integers`);
+    }
+
+    let previousGroupOrder = 0;
+    const groupedParameters = [];
+    for (const [index, group] of groups.entries()) {
+      push(errors, group?.order === index + 1 && group.order > previousGroupOrder, `${label} control group order must be contiguous`);
+      previousGroupOrder = group?.order;
+      for (const parameterId of group?.parameterIds || []) {
+        push(errors, parameterMap.has(parameterId), `${label} control group references unknown parameter ${parameterId}`);
+        groupedParameters.push(parameterId);
+      }
+    }
+    push(errors, unique(groupedParameters), `${label} control groups must not expose a parameter twice`);
+    push(errors, unique(groupedParameters) && groupedParameters.length === parameterIds.length && parameterIds.every((id) => groupedParameters.includes(id)), `${label} control groups must cover every parameter exactly once`);
+
+    for (const output of outputs) validateCinematicSkillTarget({ contractKind: output?.contractKind, ownerSkill: output?.ownerSkill, route: output?.route, fieldPath: output?.contractKind }, errors, `${label} output ${output?.contractKind || "<unknown>"}`);
+    const qualityInputKinds = slots.flatMap((slot) => slot?.acceptedContractKinds || []);
+    for (const check of checks) {
+      push(errors, outputs.some((output) => output?.contractKind === check?.targetContractKind) || qualityInputKinds.includes(check?.targetContractKind), `${label} quality check must target a declared output or exact input kind`);
+      push(errors, nonEmpty(check?.targetPath), `${label} quality check must name a target path`);
+    }
+    push(errors, containsProviderWeightSyntax(skill) === false, `${label} must not contain provider weight syntax`);
+  }
+
+  for (const [key, expected] of Object.entries({
+    providerNeutral: true,
+    generatesMedia: false,
+    executesAdapter: false,
+    mutatesCanon: false,
+    writesFiles: false,
+    humanApprovalRequired: true
+  })) push(errors, payload?.executionBoundary?.[key] === expected, `CinematicSkillManifest execution boundary.${key} is unsafe`);
+  for (const key of ["skillIdsUnique", "parametersUnique", "programOrdered", "targetOwnersDeclared", "controlSurfaceProjectionOnly", "noProviderSyntax", "noCanonMutation", "noExecution"]) {
+    push(errors, payload?.validation?.[key] === true, `CinematicSkillManifest validation.${key} must be true`);
+  }
+}
+
+function validateShotCompilerPlan(payload, errors, context = {}) {
+  const manifest = context?.cinematicSkillManifest;
+  const hasManifestContext = Boolean(manifest);
+  const manifestRef = payload?.cinematicSkillManifestRef;
+  const selection = payload?.skillSelection || {};
+  const skill = manifest?.skills?.find((item) => item?.skillId === selection.skillId && item?.version === selection.version);
+  const parameterValues = payload?.parameterValues || [];
+  const resolvedBindings = payload?.resolvedBindings || [];
+  const upstreamRefs = payload?.upstreamRefs || [];
+  const handoffs = payload?.handoffs || [];
+  const traceSteps = payload?.compileTrace?.steps || [];
+
+  push(errors, isExactContractRef(manifestRef, ["cineweave_codex_cinematic_skill_manifest"]), "ShotCompilerPlan must bind an exact CinematicSkillManifest");
+  if (manifest) {
+    push(errors, manifestRef?.id === manifest.cinematicSkillManifestId && manifestRef?.version === manifest.version && manifestRef?.contentHash === sha256Canonical(manifest), "ShotCompilerPlan must bind the supplied exact CinematicSkillManifest");
+    push(errors, Boolean(skill), "ShotCompilerPlan must select a declared skill and version");
+  }
+  if (skill) {
+    push(errors, payload?.intent?.storyFunction === skill.storyFunction, "ShotCompilerPlan intent must preserve the selected skill story function");
+    push(errors, payload?.intent?.targetLevel === skill.targetLevel, "ShotCompilerPlan intent must preserve the selected skill target level");
+  }
+
+  push(errors, unique(parameterValues.map((item) => item?.parameterId)), "ShotCompilerPlan parameter values must be unique");
+  const parameterMap = new Map((skill?.parameters || []).map((parameter) => [parameter?.parameterId, parameter]));
+  for (const item of parameterValues) {
+    const parameter = parameterMap.get(item?.parameterId);
+    if (hasManifestContext) {
+      push(errors, Boolean(parameter), `ShotCompilerPlan references unknown parameter ${item?.parameterId}`);
+      if (!parameter) continue;
+      if (parameter.valueType === "enum") push(errors, typeof item.value === "string" && parameter.options.includes(item.value), `ShotCompilerPlan enum ${item.parameterId} must use a declared option`);
+      if (parameter.valueType === "number") push(errors, typeof item.value === "number" && Number.isFinite(item.value), `ShotCompilerPlan number ${item.parameterId} must be finite`);
+      if (parameter.valueType === "frame_count") push(errors, Number.isSafeInteger(item.value) && item.value >= 0, `ShotCompilerPlan frame_count ${item.parameterId} must be a non-negative integer`);
+      if (parameter.range && typeof item.value === "number") push(errors, item.value >= parameter.range.minimum && item.value <= parameter.range.maximum, `ShotCompilerPlan ${item.parameterId} exceeds its declared range`);
+    }
+  }
+  push(errors, skill ? parameterValues.length === skill.parameters.length && skill.parameters.every((parameter) => parameterValues.some((item) => item.parameterId === parameter.parameterId)) : true, "ShotCompilerPlan must resolve every selected skill parameter");
+
+  const slotMap = new Map((skill?.bindingSlots || []).map((slot) => [slot?.slotId, slot]));
+  const bindingSlots = resolvedBindings.map((item) => item?.slotId);
+  push(errors, unique(bindingSlots), "ShotCompilerPlan binding slots must be unique");
+  for (const binding of resolvedBindings) {
+    const slot = slotMap.get(binding?.slotId);
+    if (hasManifestContext) {
+      push(errors, Boolean(slot), `ShotCompilerPlan references unknown binding slot ${binding?.slotId}`);
+      push(errors, Array.isArray(binding?.refs) && binding.refs.length >= 1 && binding.refs.length <= (slot?.maxBindings || 12), `ShotCompilerPlan binding ${binding?.slotId} exceeds its slot capacity`);
+      for (const ref of binding?.refs || []) push(errors, isExactContractRef(ref) && Boolean(slot?.acceptedContractKinds?.includes(ref.kind)), `ShotCompilerPlan binding ${binding?.slotId} must use an exact accepted ref`);
+    } else {
+      for (const ref of binding?.refs || []) push(errors, isExactContractRef(ref), `ShotCompilerPlan binding ${binding?.slotId} must use an exact ref`);
+    }
+    if (binding?.source === "asset_alias") {
+      push(errors, /^@[^\s@]{1,120}$/.test(binding?.alias || ""), `ShotCompilerPlan asset alias for ${binding?.slotId} must be bounded`);
+      push(errors, isExactContractRef(payload?.assetAliasRegistryRef, ["cineweave_codex_asset_alias_registry"]), "ShotCompilerPlan asset aliases require an exact AssetAliasRegistry");
+      const registry = context?.assetAliasRegistry;
+      if (registry && payload?.assetAliasRegistryRef) {
+        push(errors, payload.assetAliasRegistryRef.id === registry.assetAliasRegistryId && payload.assetAliasRegistryRef.version === registry.version && payload.assetAliasRegistryRef.contentHash === sha256Canonical(registry), "ShotCompilerPlan must bind the supplied exact AssetAliasRegistry");
+        const resolved = registry.aliases?.find((item) => item?.alias === binding.alias);
+        push(errors, resolved?.targetRef && (binding.refs || []).some((ref) => sameExactRef(ref, resolved.targetRef)), `ShotCompilerPlan alias ${binding.alias} must resolve to its registry target`);
+      }
+    } else push(errors, !Object.hasOwn(binding || {}, "alias"), `ShotCompilerPlan exact binding ${binding?.slotId} must not carry an alias`);
+  }
+  if (hasManifestContext) {
+    for (const slot of skill?.bindingSlots || []) if (slot.required) push(errors, bindingSlots.includes(slot.slotId), `ShotCompilerPlan must resolve required binding slot ${slot.slotId}`);
+  }
+
+  push(errors, unique(upstreamRefs.map(exactRefKey)), "ShotCompilerPlan upstream refs must be unique");
+  for (const ref of upstreamRefs) push(errors, isExactContractRef(ref), "ShotCompilerPlan upstreamRefs must be exact contract refs");
+
+  const controls = (payload?.controlSurface?.groups || []).flatMap((group) => group?.controls || []);
+  push(errors, unique(controls.map((control) => control?.controlId)), "ShotCompilerPlan control IDs must be unique");
+  push(errors, unique(controls.map((control) => control?.parameterId)) && controls.length === parameterValues.length, "ShotCompilerPlan must expose every parameter exactly once on the control surface");
+  const valueMap = new Map(parameterValues.map((item) => [item.parameterId, item.value]));
+  for (const control of controls) {
+    const parameter = parameterMap.get(control?.parameterId);
+    push(errors, Object.is(control.value, valueMap.get(control.parameterId)), `ShotCompilerPlan control ${control.controlId} must mirror its parameter value`);
+    if (hasManifestContext) {
+      push(errors, Boolean(parameter), `ShotCompilerPlan control references unknown parameter ${control?.parameterId}`);
+      if (!parameter) continue;
+      const target = parameter.targets?.find((item) => item.contractKind === control?.target?.contractKind && item.fieldPath === control?.target?.fieldPath);
+      push(errors, Boolean(target), `ShotCompilerPlan control ${control.controlId} must target one declared parameter target`);
+      if (target) {
+        push(errors, control.ownerSkill === target.ownerSkill && control.target.ownerSkill === target.ownerSkill && control.target.route === target.route, `ShotCompilerPlan control ${control.controlId} must preserve target ownership`);
+        push(errors, control.enforcement === parameter.controlLevel, `ShotCompilerPlan control ${control.controlId} must preserve enforcement level`);
+      }
+    }
+  }
+  for (const [index, group] of (payload?.controlSurface?.groups || []).entries()) push(errors, group?.order === index + 1, "ShotCompilerPlan control groups must be ordered");
+
+  const outputMap = new Map((skill?.outputContracts || []).map((output) => [`${output?.contractKind}|${output?.route}`, output]));
+  push(errors, unique(handoffs.map((handoff) => `${handoff?.contractKind}|${handoff?.route}`)), "ShotCompilerPlan handoffs must be unique");
+  for (const [index, handoff] of handoffs.entries()) {
+    const expected = outputMap.get(`${handoff?.contractKind}|${handoff?.route}`);
+    if (hasManifestContext) push(errors, Boolean(expected), `ShotCompilerPlan handoff ${handoff?.handoffId || index} is not declared by the selected skill`);
+    push(errors, handoff?.order === index + 1 && handoff?.status === "planned", `ShotCompilerPlan handoffs must be ordered planned records`);
+    if (expected) push(errors, handoff.ownerSkill === expected.ownerSkill && handoff.route === expected.route, `ShotCompilerPlan handoff ${handoff.handoffId} must preserve owner and route`);
+    for (const ref of handoff?.dependencyRefs || []) push(errors, isExactContractRef(ref), `ShotCompilerPlan handoff ${handoff?.handoffId || index} dependency refs must be exact`);
+    for (const assignment of handoff?.fieldAssignments || []) {
+      push(errors, nonEmpty(assignment?.targetPath) && nonEmpty(assignment?.sourceId), `ShotCompilerPlan handoff ${handoff?.handoffId || index} field assignment is incomplete`);
+      if (hasManifestContext && assignment?.sourceType === "parameter") push(errors, parameterMap.has(assignment.sourceId), `ShotCompilerPlan handoff ${handoff?.handoffId || index} references an unknown parameter source`);
+      if (hasManifestContext && assignment?.sourceType === "binding_slot") push(errors, slotMap.has(assignment.sourceId), `ShotCompilerPlan handoff ${handoff?.handoffId || index} references an unknown binding source`);
+    }
+  }
+  push(errors, skill ? handoffs.length === skill.outputContracts.length && skill.outputContracts.every((output) => handoffs.some((handoff) => handoff.contractKind === output.contractKind && handoff.route === output.route)) : true, "ShotCompilerPlan must close over the selected skill outputs");
+
+  const program = skill?.program || [];
+  if (hasManifestContext) push(errors, traceSteps.length === program.length, "ShotCompilerPlan compileTrace must preserve the selected program step count");
+  push(errors, unique(traceSteps.map((step) => step?.stepId)), "ShotCompilerPlan compileTrace step IDs must be unique");
+  for (const [index, step] of traceSteps.entries()) {
+    const expected = program[index];
+    push(errors, step?.order === index + 1, "ShotCompilerPlan compileTrace steps must be ordered");
+    if (expected) {
+      push(errors, step.stepId === expected.stepId && step.operation === expected.operation, `ShotCompilerPlan compileTrace step ${index + 1} must preserve the manifest operation`);
+      push(errors, JSON.stringify(step.target) === JSON.stringify(expected.target), `ShotCompilerPlan compileTrace step ${index + 1} must preserve its target`);
+      push(errors, JSON.stringify(step.source) === JSON.stringify(expected.source), `ShotCompilerPlan compileTrace step ${index + 1} must preserve its source`);
+    }
+  }
+  push(errors, containsProviderWeightSyntax(payload) === false, "ShotCompilerPlan must not contain provider weight syntax");
+  for (const [key, expected] of Object.entries({
+    providerNeutral: true,
+    generatesMedia: false,
+    executesAdapter: false,
+    mutatesCanon: false,
+    writesFiles: false,
+    humanApprovalRequired: true
+  })) push(errors, payload?.executionBoundary?.[key] === expected, `ShotCompilerPlan execution boundary.${key} is unsafe`);
+  for (const key of ["manifestRefExact", "skillSelectionExact", "parametersResolved", "bindingsResolved", "controlsProjectionOnly", "handoffsOwned", "programTraceOrdered", "noProviderSelection", "noCanonMutation", "noExecution"]) {
+    push(errors, payload?.validation?.[key] === true, `ShotCompilerPlan validation.${key} must be true`);
+  }
+}
+
+function greatestCommonDivisor(left, right) {
+  let a = Math.abs(left);
+  let b = Math.abs(right);
+  while (b) [a, b] = [b, a % b];
+  return a;
+}
+
+function sameVector3(left, right) {
+  return ["x", "y", "z"].every((axis) => Math.abs((left?.[axis] ?? NaN) - (right?.[axis] ?? NaN)) <= 1e-9);
+}
+
+function equivalentQuaternion(left, right) {
+  const dot = ["x", "y", "z", "w"].reduce((sum, axis) => sum + (left?.[axis] ?? NaN) * (right?.[axis] ?? NaN), 0);
+  return Math.abs(Math.abs(dot) - 1) <= 1e-6;
+}
+
+function hasFrameValueChange(track, equals) {
+  return (track || []).some((keyframe, index) => index > 0 && !equals(track[index - 1], keyframe));
+}
+
+function validateCameraFrameTrack(track, label, frameRange, errors, validateKeyframe) {
+  let previousFrame = -1;
+  for (const keyframe of track || []) {
+    const frame = keyframe?.frame;
+    push(errors, Number.isSafeInteger(frame), `CameraPrevisSpec ${label} frame must be an integer`);
+    push(errors, frame > previousFrame, `CameraPrevisSpec ${label} frames must be strictly ordered`);
+    push(errors, frame >= frameRange?.startFrame && frame <= frameRange?.endFrame, `CameraPrevisSpec ${label} frame must stay within frameRange`);
+    previousFrame = frame;
+    validateKeyframe(keyframe);
+  }
+  if ((track || []).length) {
+    push(errors, track[0]?.frame === frameRange?.startFrame, `CameraPrevisSpec ${label} track must begin at frameRange.startFrame`);
+    push(errors, track.at(-1)?.frame === frameRange?.endFrame, `CameraPrevisSpec ${label} track must end at frameRange.endFrame`);
+  }
+}
+
+function validateCameraPrevisSpec(payload, errors, context = {}) {
+  const frameRate = payload?.frameRate || {};
+  const frameRange = payload?.frameRange || {};
+  const shotSpec = context?.shotSpec;
+  const temporalSpec = context?.temporalSpec;
+  const components = payload?.motion?.components || [];
+  const poseTrack = payload?.tracks?.pose || [];
+  const intrinsicsTrack = payload?.tracks?.intrinsics || [];
+  const primaryBehavior = payload?.motion?.primaryBehavior;
+
+  validateShotDependency(payload?.shotSpecRef, shotSpec, "CameraPrevisSpec", errors);
+  push(errors, isExactContractRef(payload?.sceneBindingRef, ["scene_binding"]), "CameraPrevisSpec sceneBindingRef must target SceneBinding");
+  if (shotSpec) push(errors, sameExactRef(payload?.sceneBindingRef, shotSpec?.bindings?.scene), "CameraPrevisSpec sceneBindingRef must exactly match the ShotSpec scene binding");
+
+  if (payload?.temporalSpecRef) {
+    push(errors, isExactContractRef(payload.temporalSpecRef, ["cineweave_codex_temporal_spec"]), "CameraPrevisSpec temporalSpecRef must target TemporalSpec");
+    if (temporalSpec) {
+      push(errors, payload.temporalSpecRef.id === temporalSpec.temporalSpecId && payload.temporalSpecRef.version === temporalSpec.version, "CameraPrevisSpec must bind the supplied TemporalSpec identity and version");
+      push(errors, payload.temporalSpecRef.contentHash === sha256Canonical(temporalSpec), "CameraPrevisSpec must bind the supplied TemporalSpec content hash");
+      push(errors, sameExactRef(temporalSpec.shotSpecRef, payload.shotSpecRef), "CameraPrevisSpec and TemporalSpec must share the exact ShotSpec dependency");
+    }
+  }
+
+  push(errors, Number.isSafeInteger(frameRate.numerator) && Number.isSafeInteger(frameRate.denominator) && greatestCommonDivisor(frameRate.numerator || 0, frameRate.denominator || 0) === 1, "CameraPrevisSpec frameRate must be a reduced rational");
+  push(errors, Number.isSafeInteger(frameRange.startFrame) && Number.isSafeInteger(frameRange.endFrame) && frameRange.endFrame > frameRange.startFrame, "CameraPrevisSpec frameRange must have an end after its start");
+  push(errors, payload?.camera?.clippingRangeMeters?.far > payload?.camera?.clippingRangeMeters?.near, "CameraPrevisSpec clipping far distance must exceed near distance");
+  push(errors, payload?.camera?.shutter?.closeFrameOffset >= payload?.camera?.shutter?.openFrameOffset, "CameraPrevisSpec shutter close must not precede shutter open");
+
+  validateCameraFrameTrack(poseTrack, "pose", frameRange, errors, (keyframe) => {
+    const quaternion = keyframe?.orientationQuaternion;
+    const magnitude = Math.hypot(quaternion?.x ?? NaN, quaternion?.y ?? NaN, quaternion?.z ?? NaN, quaternion?.w ?? NaN);
+    push(errors, Math.abs(magnitude - 1) <= 1e-6, "CameraPrevisSpec pose keyframes must use a unit quaternion");
+  });
+  validateCameraFrameTrack(intrinsicsTrack, "intrinsics", frameRange, errors, () => {});
+
+  const hasTranslation = hasFrameValueChange(poseTrack, (left, right) => sameVector3(left?.positionMeters, right?.positionMeters));
+  const hasRotation = hasFrameValueChange(poseTrack, (left, right) => equivalentQuaternion(left?.orientationQuaternion, right?.orientationQuaternion));
+  const hasZoom = hasFrameValueChange(intrinsicsTrack, (left, right) => Math.abs((left?.focalLengthMm ?? NaN) - (right?.focalLengthMm ?? NaN)) <= 1e-9);
+  const hasFocusPull = hasFrameValueChange(intrinsicsTrack, (left, right) => Math.abs((left?.focusDistanceMeters ?? NaN) - (right?.focusDistanceMeters ?? NaN)) <= 1e-9);
+  const hasIris = hasFrameValueChange(intrinsicsTrack, (left, right) => Math.abs((left?.fStop ?? NaN) - (right?.fStop ?? NaN)) <= 1e-9);
+  const componentChecks = [
+    ["translation", hasTranslation, "CameraPrevisSpec translation requires a pose position change"],
+    ["rotation", hasRotation, "CameraPrevisSpec rotation requires an orientation change"],
+    ["zoom", hasZoom, "CameraPrevisSpec zoom requires a focal-length change"],
+    ["focus_pull", hasFocusPull, "CameraPrevisSpec focus_pull requires a focus-distance change"],
+    ["iris", hasIris, "CameraPrevisSpec iris requires an fStop change"]
+  ];
+  for (const [component, present, message] of componentChecks) {
+    if (components.includes(component)) push(errors, present, message);
+    if (present) push(errors, components.includes(component), `CameraPrevisSpec changed ${component} data without declaring that motion component`);
+  }
+  if (primaryBehavior === "static") push(errors, !components.some((component) => ["translation", "rotation", "zoom"].includes(component)), "CameraPrevisSpec static behavior cannot include spatial movement or zoom");
+  if (["dolly", "truck", "arc", "crane"].includes(primaryBehavior)) push(errors, components.includes("translation"), `CameraPrevisSpec ${primaryBehavior} behavior requires translation`);
+  if (["pan", "tilt"].includes(primaryBehavior)) push(errors, components.includes("rotation"), `CameraPrevisSpec ${primaryBehavior} behavior requires rotation`);
+  if (primaryBehavior === "zoom") push(errors, components.includes("zoom"), "CameraPrevisSpec zoom behavior requires the zoom component");
+  if (["handheld", "gimbal"].includes(primaryBehavior)) push(errors, components.some((component) => ["translation", "rotation", "shake"].includes(component)), `CameraPrevisSpec ${primaryBehavior} behavior requires a physical movement component`);
+  if (primaryBehavior === "compound") push(errors, components.filter((component) => !["focus_pull", "iris"].includes(component)).length >= 2, "CameraPrevisSpec compound behavior needs at least two physical components");
+
+  if (payload?.temporalSpecRef && temporalSpec && frameRate.numerator && frameRate.denominator && Number.isSafeInteger(frameRange.startFrame) && Number.isSafeInteger(frameRange.endFrame)) {
+    const durationSeconds = (frameRange.endFrame - frameRange.startFrame) * frameRate.denominator / frameRate.numerator;
+    push(errors, Math.abs(durationSeconds - temporalSpec.durationSeconds) <= 1e-6, "CameraPrevisSpec frameRange and frameRate must match the supplied TemporalSpec duration");
+  }
+  push(errors, payload?.executionBoundary?.providerNeutral === true && payload?.executionBoundary?.generatesMedia === false && payload?.executionBoundary?.executesAdapter === false, "CameraPrevisSpec must remain provider-neutral and non-executing");
+  push(errors, payload?.validation?.tracksSeparate === true, "CameraPrevisSpec must keep intrinsic and extrinsic tracks separate");
+  push(errors, payload?.validation?.keyframesOrdered === true, "CameraPrevisSpec must declare ordered keyframes");
+}
+
 function validatePromptRepair(payload, errors) {
   push(errors, Array.isArray(payload?.changeOnly) && payload.changeOnly.length === 1, "PromptRepair changes exactly one variable");
   push(errors, Array.isArray(payload?.evidenceObservationIds) && payload.evidenceObservationIds.length > 0, "PromptRepair requires observed evidence");
   push(errors, payload?.validation?.parentImmutable === true, "PromptRepair keeps its parent immutable");
+}
+
+function validateDirectorProposals(payload, errors) {
+  if (payload?.contractVersion !== "2.5.0") return;
+  const proposals = payload?.proposals || [];
+  const deltas = proposals.map((item) => item?.primaryDelta || {});
+  push(errors, nonEmpty(payload?.proposalSetId) && Number.isSafeInteger(payload?.version) && payload.version >= 1, "DirectorProposals 2.5 requires a stable proposal set identity and version");
+  push(errors, proposals.length >= 2 && proposals.length <= 5, "DirectorProposals requires two to five alternatives");
+  push(errors, unique(proposals.map((item) => item?.proposalId)), "DirectorProposals proposal IDs must be unique");
+  push(errors, unique(deltas.map((item) => String(item?.axis) + "|" + String(item?.direction) + "|" + String(item?.hypothesis))), "DirectorProposals primary deltas must be distinct");
+  const declaredAxes = new Set(payload?.explorationAxes || []);
+  push(errors, declaredAxes.size > 0 && deltas.every((item) => declaredAxes.has(item?.axis)), "DirectorProposals primary delta axes must be declared at set level");
+  for (const proposal of proposals) {
+    const capabilities = proposal?.capabilityRequirements || [];
+    push(errors, capabilities.length > 0 && unique(capabilities), String(proposal?.proposalId) + ": DirectorProposals capability requirements must be non-empty and unique");
+    push(errors, !Object.hasOwn(proposal || {}, "recommendedProvider"), String(proposal?.proposalId) + ": DirectorProposals must not choose a Provider");
+  }
+  push(errors, payload?.humanSelection?.required === true && payload?.humanSelection?.status === "pending", "DirectorProposals must leave human selection pending");
+  push(errors, payload?.executionBoundary?.providerNeutral === true, "DirectorProposals must remain Provider-neutral");
+  push(errors, payload?.executionBoundary?.generatesMedia === false && payload?.executionBoundary?.approvesAssets === false, "DirectorProposals must not claim media generation or asset approval");
+  push(errors, payload?.validation?.proposalSetVersioned === true && payload?.validation?.primaryDeltasDistinct === true, "DirectorProposals must declare versioned distinct alternatives");
+  push(errors, payload?.validation?.capabilityRequirementsDeclared === true && payload?.validation?.humanSelectionRequired === true, "DirectorProposals must declare capability and human-selection validation");
+}
+
+function validateRenderPlan(payload, errors) {
+  if (payload?.contractVersion !== "2.5.0") return;
+  push(errors, nonEmpty(payload?.renderPlanId) && Number.isSafeInteger(payload?.version) && payload.version >= 1, "RenderPlan 2.5 requires a stable render plan identity and version");
+  push(errors, isExactContractRef(payload?.promptRef, ["cineweave_codex_prompt_record", "cineweave_codex_image_prompt"]), "RenderPlan 2.5 promptRef must be an exact PromptRecord or ImagePrompt reference");
+  push(errors, !Object.hasOwn(payload || {}, "promptPayloadRef"), "RenderPlan 2.5 must not retain promptPayloadRef");
+  const optionalRefs = [
+    ["assetRecipeRef", ["cineweave_codex_asset_recipe"], "AssetRecipe"],
+    ["controlSetRef", ["cineweave_codex_control_channel_set"], "ControlChannelSet"],
+    ["evidenceBundleRef", ["cineweave_codex_evidence_bundle"], "EvidenceBundle"],
+    ["capabilityProfileRef", ["cineweave_codex_capability_profile"], "CapabilityProfile"]
+  ];
+  for (const [field, acceptedKinds, label] of optionalRefs) {
+    if (payload?.[field] !== undefined) push(errors, isExactContractRef(payload[field], acceptedKinds), "RenderPlan 2.5 " + field + " must be an exact " + label + " reference");
+  }
+  for (const ref of payload?.licenseProfileRefs || []) {
+    push(errors, isExactContractRef(ref, ["cineweave_codex_license_profile"]), "RenderPlan 2.5 licenseProfileRefs must contain exact LicenseProfile references");
+  }
+  push(errors, payload?.executionGate?.requiresHumanApproval === true, "RenderPlan 2.5 requires a human execution gate");
+  push(errors, payload?.postflight?.importStatus === "draft", "RenderPlan 2.5 must keep imports in Draft");
+}
+
+function validateMediaImport(payload, errors) {
+  if (payload?.contractVersion !== "2.5.0") return;
+  push(errors, nonEmpty(payload?.mediaImportId) && Number.isSafeInteger(payload?.version) && payload.version >= 1, "MediaImport 2.5 requires a stable import identity and version");
+  push(errors, isExactContractRef(payload?.renderPlanRef, ["cineweave_codex_render_plan"]), "MediaImport 2.5 renderPlanRef must be an exact RenderPlan reference");
+  const hasRequest = Object.hasOwn(payload || {}, "executionRequestRef");
+  const hasReceipt = Object.hasOwn(payload || {}, "executionReceiptRef");
+  push(errors, hasRequest === hasReceipt, "MediaImport 2.5 execution request and receipt references must be paired");
+  if (hasRequest) {
+    push(errors, isExactContractRef(payload?.executionRequestRef, ["cineweave_execution_request"]), "MediaImport 2.5 executionRequestRef must be an exact ExecutionRequest reference");
+    push(errors, isExactContractRef(payload?.executionReceiptRef, ["cineweave_execution_receipt"]), "MediaImport 2.5 executionReceiptRef must be an exact ExecutionReceipt reference");
+  }
+  const media = payload?.media || [];
+  push(errors, unique(media.map((item) => item?.mediaId)), "MediaImport 2.5 media IDs must be unique");
+  push(errors, unique(media.map((item) => item?.contentHash)), "MediaImport 2.5 media content hashes must be unique");
+  push(errors, payload?.status === "draft" && payload?.verification?.status === "verified" && payload?.importContract?.statusOnCreation === "draft", "MediaImport 2.5 must remain a verified Draft");
+  push(errors, nonEmpty(payload?.provenance?.source) && Array.isArray(payload?.provenance?.changeLog) && payload.provenance.changeLog.length > 0, "MediaImport 2.5 requires auditable provenance");
+}
+
+function validateEditorialTimelinePlan(payload, errors) {
+  const isFrameRange = (value) => Number.isSafeInteger(value?.startFrame) && value.startFrame >= 0
+    && Number.isSafeInteger(value?.durationFrames) && value.durationFrames >= 1;
+  const rangeEnd = (value) => value.startFrame + value.durationFrames;
+  const gcd = (left, right) => {
+    let a = Math.abs(left);
+    let b = Math.abs(right);
+    while (b) [a, b] = [b, a % b];
+    return a;
+  };
+  const timelineRange = payload?.timelineRange;
+  const rootRangeValid = isFrameRange(timelineRange);
+  const timelineEnd = rootRangeValid ? rangeEnd(timelineRange) : null;
+  const frameRate = payload?.frameRate || {};
+  const tracks = payload?.tracks || [];
+  const transitions = payload?.transitions || [];
+  const trackIds = tracks.map((track) => track?.trackId);
+  const transitionIds = transitions.map((transition) => transition?.transitionId);
+  const transitionKeys = new Set();
+  const tracksById = new Map();
+  let mediaCount = 0;
+  let placeholderCount = 0;
+
+  push(errors, nonEmpty(payload?.editorialTimelinePlanId) && Number.isSafeInteger(payload?.version) && payload.version >= 1, "EditorialTimelinePlan requires a stable identity and version");
+  push(errors, isExactContractRef(payload?.storyboardRef, ["cineweave_codex_storyboard_sequence"]), "EditorialTimelinePlan must bind an exact Storyboard");
+  push(errors, Number.isSafeInteger(frameRate?.numerator) && Number.isSafeInteger(frameRate?.denominator) && frameRate.numerator > 0 && frameRate.denominator > 0 && gcd(frameRate.numerator || 0, frameRate.denominator || 0) === 1, "EditorialTimelinePlan frame rate must be a reduced rational value");
+  push(errors, rootRangeValid, "EditorialTimelinePlan timelineRange must use positive integer frame duration");
+  push(errors, unique(trackIds), "EditorialTimelinePlan track IDs must be unique");
+  push(errors, unique(transitionIds), "EditorialTimelinePlan transition IDs must be unique");
+
+  for (const [trackIndex, track] of tracks.entries()) {
+    const label = track?.trackId || "Editorial timeline track";
+    const segments = track?.segments || [];
+    const segmentIds = segments.map((segment) => segment?.segmentId);
+    const segmentById = new Map(segments.map((segment, index) => [segment?.segmentId, { segment, index }]));
+    tracksById.set(track?.trackId, { track, segments, segmentById });
+    push(errors, track?.order === trackIndex + 1, label + ": track order must be contiguous");
+    push(errors, unique(segmentIds), label + ": segment IDs must be unique");
+    let cursor = rootRangeValid ? timelineRange.startFrame : null;
+    for (const segment of segments) {
+      const segmentLabel = label + "/" + (segment?.segmentId || "segment");
+      const range = segment?.timelineRange;
+      const rangeValid = isFrameRange(range);
+      push(errors, rangeValid, segmentLabel + ": timelineRange must use positive integer frame duration");
+      if (rangeValid && cursor !== null) {
+        push(errors, range.startFrame === cursor, segmentLabel + ": segments must be contiguous");
+        cursor = rangeEnd(range);
+        push(errors, cursor <= timelineEnd, segmentLabel + ": segment exceeds the timeline range");
+      }
+      const hasMediaBinding = Object.hasOwn(segment || {}, "mediaImportRef") || Object.hasOwn(segment || {}, "mediaId") || Object.hasOwn(segment || {}, "sourceRange");
+      if (segment?.segmentType === "media") {
+        mediaCount += 1;
+        push(errors, isExactContractRef(segment?.shotSpecRef, ["cineweave_codex_shot_spec"]), segmentLabel + ": media segment must bind an exact ShotSpec");
+        push(errors, isExactContractRef(segment?.mediaImportRef, ["cineweave_codex_media_import"]), segmentLabel + ": media segment must bind an exact MediaImport");
+        push(errors, nonEmpty(segment?.mediaId), segmentLabel + ": media segment must name a MediaImport media ID");
+        push(errors, isFrameRange(segment?.sourceRange), segmentLabel + ": media segment must declare an exact source frame range");
+        if (rangeValid && isFrameRange(segment?.sourceRange)) push(errors, segment.sourceRange.durationFrames === range.durationFrames, segmentLabel + ": retiming is not implicit; source and timeline durations must match");
+      } else if (segment?.segmentType === "placeholder") {
+        placeholderCount += 1;
+        push(errors, isExactContractRef(segment?.shotSpecRef, ["cineweave_codex_shot_spec"]), segmentLabel + ": placeholder must bind an exact ShotSpec");
+        push(errors, !hasMediaBinding, segmentLabel + ": placeholder cannot claim imported media");
+      } else if (segment?.segmentType === "gap") {
+        push(errors, !Object.hasOwn(segment || {}, "shotId") && !Object.hasOwn(segment || {}, "shotSpecRef") && !Object.hasOwn(segment || {}, "temporalSpecRef") && !hasMediaBinding, segmentLabel + ": gap cannot carry creative or media bindings");
+      }
+      if (segment?.temporalSpecRef !== undefined) push(errors, isExactContractRef(segment.temporalSpecRef, ["cineweave_codex_temporal_spec"]), segmentLabel + ": temporalSpecRef must be exact when supplied");
+    }
+    if (cursor !== null && timelineEnd !== null) push(errors, cursor === timelineEnd, label + ": segments must close the timeline range without implicit gaps");
+  }
+
+  for (const transition of transitions) {
+    const transitionLabel = transition?.transitionId || "Editorial timeline transition";
+    const owner = tracksById.get(transition?.trackId);
+    push(errors, owner !== undefined, transitionLabel + ": transition references an unknown track");
+    if (!owner) continue;
+    const from = owner.segmentById.get(transition?.fromSegmentId);
+    const to = owner.segmentById.get(transition?.toSegmentId);
+    push(errors, from !== undefined && to !== undefined, transitionLabel + ": transition must reference segments on its own track");
+    if (!from || !to) continue;
+    push(errors, from.index + 1 === to.index, transitionLabel + ": transition segments must be adjacent and ordered");
+    push(errors, from.segment?.segmentType !== "gap" && to.segment?.segmentType !== "gap", transitionLabel + ": transitions cannot attach to a gap");
+    const fromEnd = isFrameRange(from.segment?.timelineRange) ? rangeEnd(from.segment.timelineRange) : null;
+    const toStart = to.segment?.timelineRange?.startFrame;
+    push(errors, fromEnd !== null && fromEnd === toStart && transition?.atFrame === fromEnd, transitionLabel + ": transition must anchor at the shared segment boundary");
+    if (transition?.type === "cut") push(errors, transition?.durationFrames === 0, transitionLabel + ": cut duration must be zero");
+    else {
+      push(errors, Number.isSafeInteger(transition?.durationFrames) && transition.durationFrames >= 1, transitionLabel + ": non-cut transition needs positive frame duration");
+      const fromDuration = from.segment?.timelineRange?.durationFrames;
+      const toDuration = to.segment?.timelineRange?.durationFrames;
+      if (Number.isSafeInteger(fromDuration) && Number.isSafeInteger(toDuration) && Number.isSafeInteger(transition?.durationFrames)) {
+        push(errors, transition.durationFrames <= Math.min(fromDuration, toDuration), transitionLabel + ": transition duration exceeds an adjacent segment");
+      }
+    }
+    const key = String(transition?.trackId) + "|" + String(transition?.fromSegmentId) + "|" + String(transition?.toSegmentId);
+    push(errors, !transitionKeys.has(key), transitionLabel + ": duplicate transition boundary");
+    transitionKeys.add(key);
+  }
+
+  for (const [trackId, owner] of tracksById) {
+    for (let index = 0; index < owner.segments.length - 1; index += 1) {
+      const from = owner.segments[index];
+      const to = owner.segments[index + 1];
+      if (from?.segmentType === "gap" || to?.segmentType === "gap") continue;
+      const key = String(trackId) + "|" + String(from?.segmentId) + "|" + String(to?.segmentId);
+      push(errors, transitionKeys.has(key), String(trackId) + ": adjacent non-gap segments require an explicit transition");
+    }
+  }
+
+  if (payload?.conformStatus === "planned") {
+    push(errors, mediaCount === 0, "planned timeline cannot claim imported media segments");
+    push(errors, placeholderCount > 0, "planned timeline requires at least one placeholder segment");
+  } else if (payload?.conformStatus === "partial") {
+    push(errors, mediaCount > 0 && placeholderCount > 0, "partial timeline requires both imported media and placeholders");
+  } else if (payload?.conformStatus === "conformed") {
+    push(errors, placeholderCount === 0, "conformed timeline cannot retain placeholder segments");
+    push(errors, mediaCount > 0, "conformed timeline requires at least one imported media segment");
+  }
+
+  const markers = payload?.markers || [];
+  push(errors, unique(markers.map((marker) => marker?.markerId)), "EditorialTimelinePlan marker IDs must be unique");
+  if (rootRangeValid) for (const marker of markers) push(errors, Number.isSafeInteger(marker?.frame) && marker.frame >= timelineRange.startFrame && marker.frame <= timelineEnd, String(marker?.markerId || "marker") + ": marker lies outside the timeline range");
+  push(errors, payload?.otioExchange?.model === "otio-core" && payload?.otioExchange?.externalMediaOnly === true && payload?.otioExchange?.serializationStatus === "not_exported", "EditorialTimelinePlan must remain an OTIO-model-aligned, external-media-only unexported plan");
+  push(errors, payload?.executionBoundary?.providerNeutral === true && payload?.executionBoundary?.embedsMedia === false && payload?.executionBoundary?.exportsTimeline === false && payload?.executionBoundary?.humanApprovalRequired === true, "EditorialTimelinePlan must not embed media, export a timeline or claim execution");
+  for (const key of ["rationalTimebase", "trackRangesClosed", "segmentsOrdered", "transitionsAnchored", "sourceRefsExact", "plannedMediaHonest", "providerNeutral"]) push(errors, payload?.validation?.[key] === true, "EditorialTimelinePlan validation." + key + " must be true");
+}
+
+function validateColorPipelineProfile(payload, errors, context = {}) {
+  const sourceMedia = payload?.sourceMedia || [];
+  const outputTargets = payload?.outputTargets || [];
+  const metadataFields = ["primaries", "transfer", "matrix", "range"];
+  const sourceIds = sourceMedia.map((item) => item?.bindingId);
+  const sourceKeys = sourceMedia.map((item) => {
+    const ref = item?.mediaImportRef || {};
+    return [ref.kind, ref.id, ref.version, ref.contentHash, item?.mediaId].join("|");
+  });
+  const targetIds = outputTargets.map((item) => item?.targetId);
+  const targetPurposes = outputTargets.map((item) => item?.purpose);
+  const config = payload?.ocioConfig || {};
+
+  push(errors, nonEmpty(payload?.colorPipelineProfileId) && Number.isSafeInteger(payload?.version) && payload.version >= 1, "ColorPipelineProfile requires a stable identity and version");
+  push(errors, payload?.profileStatus === "planned", "ColorPipelineProfile must remain planned until an approved adapter records a separate execution result");
+  push(errors, nonEmpty(config?.configId) && nonEmpty(config?.configVersion) && /^sha256:[0-9a-f]{64}$/.test(config?.contentHash || ""), "ColorPipelineProfile must identify an exact OCIO config version and content hash");
+  push(errors, config?.referenceSpaceModel === "ocio-scene-and-display-reference" && config?.loadStatus === "not_loaded", "ColorPipelineProfile must model OCIO reference spaces without claiming the config was loaded");
+  push(errors, unique(sourceIds), "ColorPipelineProfile source binding IDs must be unique");
+  push(errors, unique(sourceKeys), "ColorPipelineProfile cannot bind one MediaImport media ID more than once");
+
+  for (const source of sourceMedia) {
+    const label = source?.bindingId || "ColorPipelineProfile source";
+    const assignment = source?.inputColorSpace || {};
+    const metadata = source?.metadata || {};
+    const metadataStatus = metadata?.status;
+    push(errors, isExactContractRef(source?.mediaImportRef, ["cineweave_codex_media_import"]), label + ": source media must bind an exact MediaImport");
+    push(errors, nonEmpty(source?.mediaId), label + ": source media must name a MediaImport media ID");
+    if (metadataStatus === "unknown") {
+      push(errors, metadataFields.every((field) => metadata?.[field] === "unknown"), label + ": unknown metadata must keep every signal field unknown");
+      push(errors, assignment?.assignmentStatus === "unknown" && assignment?.name === "unknown" && assignment?.basis === "unknown", label + ": unknown metadata cannot claim an input color space");
+      push(errors, !Object.hasOwn(metadata, "evidence"), label + ": unknown metadata cannot claim probe evidence");
+    } else if (metadataStatus === "declared") {
+      push(errors, metadataFields.every((field) => nonEmpty(metadata?.[field]) && metadata[field] !== "unknown"), label + ": declared metadata must name every signal field without claiming unknown");
+      push(errors, assignment?.assignmentStatus === "declared" && assignment?.name !== "unknown" && assignment?.basis !== "unknown", label + ": declared metadata requires a declared non-unknown input color space");
+      push(errors, !Object.hasOwn(metadata, "evidence"), label + ": declared metadata must not claim verified probe evidence");
+    } else if (metadataStatus === "verified") {
+      const evidence = metadata?.evidence || {};
+      push(errors, metadataFields.every((field) => nonEmpty(metadata?.[field]) && metadata[field] !== "unknown"), label + ": verified metadata must name every signal field");
+      push(errors, assignment?.assignmentStatus === "verified" && assignment?.name !== "unknown" && assignment?.basis !== "unknown", label + ": verified metadata requires a verified input color space");
+      push(errors, nonEmpty(evidence?.method) && nonEmpty(evidence?.tool) && nonEmpty(evidence?.toolVersion) && !Number.isNaN(Date.parse(evidence?.observedAt || "")), label + ": verified metadata requires dated probe evidence");
+      push(errors, isExactContractRef(source?.technicalProbeRef, ["cineweave_codex_media_technical_probe"]), label + ": verified metadata requires an exact MediaTechnicalProbe");
+      const probes = context?.mediaTechnicalProbes || [];
+      const probe = probes.find((candidate) => sameExactRef(source?.technicalProbeRef, candidate?.artifactRef));
+      if (Array.isArray(context?.mediaTechnicalProbes)) {
+        push(errors, Boolean(probe?.payload), label + ": verified metadata must resolve to supplied MediaTechnicalProbe evidence");
+      }
+      if (probe?.payload) {
+        push(errors, sameExactRef(source?.mediaImportRef, probe.payload.mediaImportRef) && source?.mediaId === probe.payload.mediaId, label + ": verified metadata probe must bind the same exact MediaImport media");
+      }
+    }
+  }
+
+  const policy = payload?.referenceSpacePolicy || {};
+  push(errors, policy?.sceneReferenceSpace === "scene_referred" && policy?.displayReferenceSpace === "display_referred" && policy?.workingRole === "scene_linear" && nonEmpty(policy?.workingColorSpace), "ColorPipelineProfile must keep scene and display reference spaces distinct with a scene_linear working role");
+  push(errors, unique(targetIds), "ColorPipelineProfile output target IDs must be unique");
+  push(errors, targetPurposes.filter((purpose) => purpose === "preview").length === 1 && targetPurposes.filter((purpose) => purpose === "delivery").length === 1, "ColorPipelineProfile requires exactly one preview and one delivery target");
+  for (const target of outputTargets) {
+    const label = target?.targetId || "ColorPipelineProfile output target";
+    const path = target?.path || {};
+    if (path?.mode === "colorspace") {
+      push(errors, nonEmpty(path?.colorspace) && !Object.hasOwn(path, "viewTransform") && !Object.hasOwn(path, "displayColorSpace"), label + ": colorspace path requires only a colorspace");
+      push(errors, target?.outputColorSpace === path?.colorspace, label + ": colorspace path outputColorSpace must match its colorspace");
+    } else if (path?.mode === "view_transform_and_display_colorspace") {
+      push(errors, nonEmpty(path?.viewTransform) && nonEmpty(path?.displayColorSpace) && !Object.hasOwn(path, "colorspace"), label + ": view_transform path requires both viewTransform and displayColorSpace");
+      push(errors, target?.outputColorSpace === path?.displayColorSpace, label + ": view_transform path outputColorSpace must match its displayColorSpace");
+    }
+  }
+
+  push(errors, payload?.creativeLookPolicy?.appliesCreativeLook === false && Array.isArray(payload?.creativeLookPolicy?.creativeLookTransformNames) && payload.creativeLookPolicy.creativeLookTransformNames.length === 0 && payload?.creativeLookPolicy?.ownerBoundary === "style-intent-separate", "ColorPipelineProfile must keep creative looks with Style intent rather than silently applying them");
+  push(errors, payload?.executionBoundary?.providerNeutral === true && payload?.executionBoundary?.loadsOcioConfig === false && payload?.executionBoundary?.appliesColorTransforms === false && payload?.executionBoundary?.writesMedia === false && payload?.executionBoundary?.exportsLut === false && payload?.executionBoundary?.humanApprovalRequired === true, "ColorPipelineProfile must not load an OCIO config, apply transforms, write media or export LUTs");
+  for (const key of ["configIdentityExact", "sourceBindingsExact", "metadataHonest", "referenceSpacesSeparated", "outputPathsDeclared", "previewDeliverySeparated", "providerNeutral"]) push(errors, payload?.validation?.[key] === true, "ColorPipelineProfile validation." + key + " must be true");
+}
+
+function validateMediaTechnicalProbe(payload, errors, context = {}) {
+  const container = payload?.container || {};
+  const streams = payload?.streams || {};
+  const probeTool = payload?.probeTool || {};
+  const videoStreams = streams?.video || [];
+  const audioStreams = streams?.audio || [];
+  const allStreams = [...videoStreams, ...audioStreams];
+  const isReported = (measurement) => measurement?.status === "reported" && Object.hasOwn(measurement, "value");
+  const isReportedRational = (measurement) => measurement?.status === "reported"
+    && Number.isSafeInteger(measurement?.numerator) && measurement.numerator > 0
+    && Number.isSafeInteger(measurement?.denominator) && measurement.denominator > 0
+    && measurement?.source !== "not_reported";
+
+  push(errors, nonEmpty(payload?.mediaTechnicalProbeId) && Number.isSafeInteger(payload?.version) && payload.version >= 1, "MediaTechnicalProbe requires a stable identity and version");
+  push(errors, isExactContractRef(payload?.mediaImportRef, ["cineweave_codex_media_import"]), "MediaTechnicalProbe must bind an exact MediaImport");
+  push(errors, nonEmpty(payload?.mediaId) && /^sha256:[0-9a-f]{64}$/.test(payload?.mediaContentHash || "") && Number.isSafeInteger(payload?.mediaByteSize) && payload.mediaByteSize > 0, "MediaTechnicalProbe must bind one exact media ID, byte hash and size");
+  push(errors, unique(allStreams.map((stream) => stream?.streamIndex)), "MediaTechnicalProbe stream indexes must be unique across video and audio streams");
+
+  if (context?.mediaImport) {
+    const sourceMedia = (context.mediaImport.media || []).find((item) => item?.mediaId === payload?.mediaId);
+    push(errors, payload?.mediaImportRef?.id === context.mediaImport.mediaImportId && payload?.mediaImportRef?.version === context.mediaImport.version, "MediaTechnicalProbe mediaImportRef must match the supplied MediaImport");
+    push(errors, Boolean(sourceMedia), "MediaTechnicalProbe mediaId must exist in the supplied MediaImport");
+    if (sourceMedia) {
+      push(errors, payload?.mediaContentHash === sourceMedia.contentHash, "MediaTechnicalProbe mediaContentHash must match the supplied MediaImport media bytes");
+      push(errors, payload?.mediaByteSize === sourceMedia.byteSize, "MediaTechnicalProbe mediaByteSize must match the supplied MediaImport media");
+    }
+  }
+
+  if (payload?.probeStatus === "planned") {
+    push(errors, probeTool?.executionState === "not_invoked", "planned MediaTechnicalProbe cannot claim ffprobe execution");
+    push(errors, container?.status === "not_probed" && (container?.formatNames || []).length === 0, "planned MediaTechnicalProbe cannot claim a container report");
+    push(errors, streams?.status === "not_probed" && videoStreams.length === 0 && audioStreams.length === 0 && streams?.otherStreamCount === 0, "planned MediaTechnicalProbe cannot claim stream findings");
+  } else if (payload?.probeStatus === "recorded") {
+    push(errors, probeTool?.executionState === "ffprobe_recorded" && probeTool?.toolId === "ffprobe" && nonEmpty(probeTool?.toolVersion) && probeTool?.commandProfile === "ffprobe_format_streams_json_v1" && /^sha256:[0-9a-f]{64}$/.test(probeTool?.sanitizedReportHash || "") && !Number.isNaN(Date.parse(probeTool?.observedAt || "")), "recorded MediaTechnicalProbe requires an immutable sanitized ffprobe report");
+    push(errors, container?.status === "probed" && Array.isArray(container?.formatNames) && container.formatNames.length > 0 && container?.metadataExcluded === true, "recorded MediaTechnicalProbe requires a sanitized container report");
+    push(errors, streams?.status === "probed" && allStreams.length + Number(streams?.otherStreamCount || 0) > 0, "recorded MediaTechnicalProbe requires at least one observed stream");
+    if (isReported(container?.reportedByteSize)) push(errors, container.reportedByteSize.value === payload?.mediaByteSize, "MediaTechnicalProbe reported container size must match the bound media size");
+    for (const stream of videoStreams) {
+      push(errors, Number.isSafeInteger(stream?.streamIndex) && stream.streamIndex >= 0 && nonEmpty(stream?.codecName) && Number.isSafeInteger(stream?.width) && stream.width > 0 && Number.isSafeInteger(stream?.height) && stream.height > 0, "MediaTechnicalProbe video streams require codec and dimensions");
+      for (const measurement of [stream?.sampleAspectRatio, stream?.displayAspectRatio, stream?.frameRate, stream?.timeBase]) {
+        if (measurement?.status === "reported") push(errors, isReportedRational(measurement), "MediaTechnicalProbe reported video rationals must be positive and explicit");
+      }
+      for (const measurement of [stream?.codecProfile, stream?.codecTag, stream?.pixelFormat, stream?.bitDepth, stream?.fieldOrder, stream?.durationSeconds, stream?.bitRate, stream?.colorSignals?.primaries, stream?.colorSignals?.transfer, stream?.colorSignals?.matrix, stream?.colorSignals?.range]) {
+        if (measurement?.status === "reported") push(errors, isReported(measurement), "MediaTechnicalProbe reported video fields must retain their value");
+      }
+    }
+    for (const stream of audioStreams) {
+      push(errors, Number.isSafeInteger(stream?.streamIndex) && stream.streamIndex >= 0 && nonEmpty(stream?.codecName), "MediaTechnicalProbe audio streams require a codec");
+      if (stream?.timeBase?.status === "reported") push(errors, isReportedRational(stream.timeBase), "MediaTechnicalProbe reported audio time bases must be positive and explicit");
+      for (const measurement of [stream?.codecProfile, stream?.codecTag, stream?.sampleRate, stream?.channels, stream?.channelLayout, stream?.durationSeconds, stream?.bitRate]) {
+        if (measurement?.status === "reported") push(errors, isReported(measurement), "MediaTechnicalProbe reported audio fields must retain their value");
+      }
+    }
+  }
+
+  push(errors, payload?.executionBoundary?.usesLocalProbeTool === true && payload?.executionBoundary?.callsNetwork === false && payload?.executionBoundary?.writesSourceMedia === false && payload?.executionBoundary?.writesDerivedMedia === false && payload?.executionBoundary?.storesRawFilePath === false && payload?.executionBoundary?.storesRawContainerTags === false && payload?.executionBoundary?.humanReviewRequired === true, "MediaTechnicalProbe must stay local, read-only and free of raw paths/tags");
+  for (const key of ["sourceBindingExact", "mediaHashExact", "probeStateConsistent", "missingFieldsExplicit", "sensitiveFieldsExcluded"]) push(errors, payload?.validation?.[key] === true, "MediaTechnicalProbe validation." + key + " must be true");
+}
+
+function validateContentCredentialInspection(payload, errors, context = {}) {
+  const checks = payload?.result?.checks || {};
+  const checkNames = ["assertions", "claimSignature", "hardBinding", "ingredients", "timestamp", "credentialRevocation", "assetContent"];
+  const result = payload?.result || {};
+  const validator = payload?.validator || {};
+  const manifestStore = payload?.manifestStore || {};
+  const successCodes = result?.successCodes || [];
+  const failureCodes = result?.failureCodes || [];
+  const allChecks = (value) => checkNames.every((name) => checks?.[name] === value);
+
+  push(errors, nonEmpty(payload?.contentCredentialInspectionId) && Number.isSafeInteger(payload?.version) && payload.version >= 1, "ContentCredentialInspection requires a stable identity and version");
+  push(errors, isExactContractRef(payload?.referenceAssetRef, ["cineweave_codex_reference_asset"]), "ContentCredentialInspection must bind an exact ReferenceAsset");
+  push(errors, /^sha256:[0-9a-f]{64}$/.test(payload?.assetByteHash || ""), "ContentCredentialInspection must bind an exact asset byte hash");
+  if (context?.referenceAsset) {
+    push(errors, payload?.referenceAssetRef?.id === context.referenceAsset.assetId && payload?.referenceAssetRef?.version === context.referenceAsset.version, "ContentCredentialInspection referenceAssetRef must match the supplied ReferenceAsset");
+    push(errors, payload?.assetByteHash === context.referenceAsset.media?.contentHash, "ContentCredentialInspection assetByteHash must match the supplied ReferenceAsset bytes");
+  }
+  push(errors, result?.rightsConclusion === "not_determined" && result?.truthConclusion === "not_determined", "ContentCredentialInspection must not make truth or rights conclusions");
+
+  if (payload?.inspectionStatus === "planned") {
+    push(errors, validator?.executionState === "not_invoked" && !Object.hasOwn(validator, "validatorId") && !Object.hasOwn(validator, "reportHash"), "planned inspection cannot claim a validator was invoked");
+    push(errors, manifestStore?.inspectionState === "not_inspected", "planned inspection cannot claim a manifest-store state");
+    push(errors, result?.validationState === "not_checked" && result?.signerTrust === "not_checked" && allChecks("not_checked") && successCodes.length === 0 && failureCodes.length === 0, "planned inspection cannot claim a manifest validation result");
+  } else if (payload?.inspectionStatus === "recorded") {
+    push(errors, validator?.executionState === "external_report_recorded" && nonEmpty(validator?.validatorId) && nonEmpty(validator?.validatorVersion) && /^sha256:[0-9a-f]{64}$/.test(validator?.reportHash || "") && !Number.isNaN(Date.parse(validator?.recordedAt || "")), "recorded inspection requires immutable external validator report evidence");
+    if (manifestStore?.inspectionState === "absent") {
+      push(errors, result?.validationState === "absent" && allChecks("not_applicable") && result?.signerTrust === "not_checked" && successCodes.length === 0 && failureCodes.length === 0, "recorded absent manifest inspection must remain not applicable");
+    } else if (manifestStore?.inspectionState === "present") {
+      push(errors, Number.isSafeInteger(manifestStore?.manifestCount) && manifestStore.manifestCount >= 1 && nonEmpty(manifestStore?.activeManifestLabel) && /^sha256:[0-9a-f]{64}$/.test(manifestStore?.activeManifestHash || "") && nonEmpty(manifestStore?.specVersion), "recorded present manifest inspection requires active manifest identity");
+      push(errors, !["not_checked", "absent"].includes(result?.validationState), "recorded present manifest inspection must report a validation state");
+      if (["valid", "trusted"].includes(result?.validationState)) {
+        push(errors, checks?.assertions === "pass" && checks?.claimSignature === "pass" && checks?.hardBinding === "pass" && checks?.assetContent === "pass" && failureCodes.length === 0, "valid or trusted C2PA result requires passing assertions, signature, hard binding and asset content");
+      }
+      if (result?.validationState === "valid") push(errors, ["valid_untrusted_signer", "trusted"].includes(result?.signerTrust), "valid C2PA result requires signer-trust classification");
+      if (result?.validationState === "trusted") push(errors, result?.signerTrust === "trusted", "trusted C2PA result requires a trusted signer");
+      if (result?.validationState === "invalid") push(errors, failureCodes.length > 0 || checkNames.some((name) => checks?.[name] === "fail"), "invalid C2PA result requires a failure code or failed validation check");
+    }
+  }
+
+  push(errors, payload?.executionBoundary?.providerNeutral === true && payload?.executionBoundary?.runsValidator === false && payload?.executionBoundary?.writesMedia === false && payload?.executionBoundary?.writesManifest === false && payload?.executionBoundary?.humanReviewRequired === true, "ContentCredentialInspection records evidence but does not execute a validator or write media/manifests");
+  for (const key of ["assetByteBindingExact", "statusConsistent", "c2paScopeOnly", "rightsSeparate", "truthSeparate", "noValidatorExecutionClaim"]) push(errors, payload?.validation?.[key] === true, "ContentCredentialInspection validation." + key + " must be true");
+}
+
+function validateContentCredentialHandoff(payload, errors, context = {}) {
+  push(errors, nonEmpty(payload?.contentCredentialHandoffId) && Number.isSafeInteger(payload?.version) && payload.version >= 1, "ContentCredentialHandoff requires a stable identity and version");
+  push(errors, isExactContractRef(payload?.referenceAssetRef, ["cineweave_codex_reference_asset"]), "ContentCredentialHandoff must bind an exact ReferenceAsset");
+  push(errors, isExactContractRef(payload?.contentCredentialInspectionRef, ["cineweave_codex_content_credential_inspection"]), "ContentCredentialHandoff must bind an exact ContentCredentialInspection");
+  if (context?.referenceAsset) push(errors, payload?.referenceAssetRef?.id === context.referenceAsset.assetId && payload?.referenceAssetRef?.version === context.referenceAsset.version, "ContentCredentialHandoff referenceAssetRef must match the supplied ReferenceAsset");
+  if (context?.contentCredentialInspection) {
+    push(errors, payload?.contentCredentialInspectionRef?.id === context.contentCredentialInspection.contentCredentialInspectionId && payload?.contentCredentialInspectionRef?.version === context.contentCredentialInspection.version, "ContentCredentialHandoff inspection ref must match the supplied ContentCredentialInspection");
+    push(errors, sameExactRef(payload?.referenceAssetRef, context.contentCredentialInspection.referenceAssetRef), "ContentCredentialHandoff and ContentCredentialInspection must bind the same exact ReferenceAsset");
+  }
+  push(errors, payload?.handoffStatus === "planned", "ContentCredentialHandoff must remain planned until an approved adapter records a separate execution result");
+  const requirement = payload?.inspectionRequirement || {};
+  push(errors, requirement?.requiresRecordedInspectionBeforeExternalTransfer === true && requirement?.requiresDerivedOutputRevalidation === true && requirement?.credentialPresenceIsNotRightsEvidence === true && requirement?.credentialValidityIsNotTruthEvidence === true, "ContentCredentialHandoff must require inspection and keep C2PA separate from rights and truth");
+  const plan = payload?.provenancePlan || {};
+  push(errors, plan?.sourceRelationship === "ingredient_planned" && plan?.manifestAction === "not_performed" && plan?.rawManifestEmbedded === false && plan?.manifestLocationStored === false, "ContentCredentialHandoff must not claim a manifest was embedded or written");
+  push(errors, payload?.executionBoundary?.providerNeutral === true && payload?.executionBoundary?.invokesAdapter === false && payload?.executionBoundary?.writesMedia === false && payload?.executionBoundary?.writesManifest === false && payload?.executionBoundary?.exportsAsset === false && payload?.executionBoundary?.humanApprovalRequired === true, "ContentCredentialHandoff must remain non-executing and non-writing");
+  for (const key of ["sourceRefsExact", "inspectionRequired", "ingredientOnlyPlanned", "rightsSeparate", "truthSeparate", "providerNeutral"]) push(errors, payload?.validation?.[key] === true, "ContentCredentialHandoff validation." + key + " must be true");
+}
+
+function validateDirectorRepair(payload, errors, context = {}) {
+  const observedFailure = payload?.observedFailure || {};
+  const change = payload?.change || {};
+  const targetKind = payload?.targetRef?.kind;
+  const allowedKinds = {
+    dramatic_purpose: ["cineweave_codex_shot_spec", "cineweave_codex_storyboard_sequence"],
+    action_blocking: ["cineweave_codex_action_sequence_spec", "cineweave_codex_shot_spec", "cineweave_codex_storyboard_sequence"],
+    camera: ["cineweave_codex_shot_spec", "cineweave_codex_storyboard_sequence", "cineweave_codex_camera_previs_spec"],
+    composition: ["cineweave_codex_shot_spec", "cineweave_codex_storyboard_sequence"],
+    shot_light_use: ["cineweave_codex_shot_lighting_plan"],
+    temporal_curve: ["cineweave_codex_temporal_spec"],
+    coverage: ["cineweave_codex_action_sequence_spec", "cineweave_codex_storyboard_sequence"],
+    render_intent: ["cineweave_codex_render_plan"]
+  };
+  if (payload?.disposition === "repair") {
+    push(errors, observedFailure?.owningDomain === "director", "DirectorRepair direct repair must retain Director ownership");
+    push(errors, observedFailure?.variable === change?.variable, "DirectorRepair change variable must match the observed failure variable");
+    const acceptedKinds = allowedKinds[change?.variable] || [];
+    if (change?.variable === "camera") push(errors, acceptedKinds.includes(targetKind), "DirectorRepair camera repair must target ShotSpec or Storyboard; CameraPrevisSpec is also permitted");
+    else push(errors, acceptedKinds.includes(targetKind), "DirectorRepair target contract is incompatible with its owning variable");
+    if (change?.variable === "camera") {
+      const targetPath = change?.targetPath || "";
+      push(errors, targetPath.startsWith("camera.") || targetPath.startsWith("motion.") || /^tracks\.(?:pose|intrinsics)(?:\[|\.)/.test(targetPath) || /^shots\[\d+\]\.(?:cameraAngle|cameraHeight|lens|movement)/.test(targetPath), "DirectorRepair camera repair must change a camera path");
+    }
+    if (change?.variable === "render_intent") {
+      const targetPath = change?.targetPath || "";
+      push(errors, /^(?:mode|canvas(?:\.|$)|qualityBudget|variantCount|requiredCapabilities(?:\[|\.|$))/.test(targetPath), "DirectorRepair render intent repair must change a render intent path");
+    }
+    const targetIdFields = {
+      cineweave_codex_action_sequence_spec: "actionSequenceId",
+      cineweave_codex_shot_spec: "shotSpecId",
+      cineweave_codex_shot_lighting_plan: "lightingPlanId",
+      cineweave_codex_temporal_spec: "temporalSpecId",
+      cineweave_codex_camera_previs_spec: "cameraPrevisSpecId",
+      cineweave_codex_storyboard_sequence: "storyboardId",
+      cineweave_codex_render_plan: "renderPlanId"
+    };
+    const targetIdField = targetIdFields[targetKind];
+    const suppliedTargets = context?.directorTargets || [];
+    if (targetIdField && suppliedTargets.length > 0) {
+      const target = suppliedTargets.find((candidate) => {
+        const artifactRef = candidate?.envelope?.artifactRef || candidate?.artifactRef;
+        if (artifactRef) {
+          return artifactRef?.kind === payload?.targetRef?.kind
+            && artifactRef?.id === payload?.targetRef?.id
+            && artifactRef?.version === payload?.targetRef?.version
+            && artifactRef?.contentHash === payload?.targetRef?.contentHash;
+        }
+        const targetPayload = candidate?.envelope?.payload || candidate;
+        return targetPayload?.kind === targetKind
+          && targetPayload?.[targetIdField] === payload?.targetRef?.id
+          && targetPayload?.version === payload?.targetRef?.version
+          && payload?.targetRef?.contentHash === sha256Canonical(targetPayload);
+      });
+      push(errors, Boolean(target), "DirectorRepair targetRef must match the supplied exact target artifact");
+    }
+  }
+  if (payload?.disposition === "delegate") {
+    push(errors, observedFailure?.owningDomain !== "director", "DirectorRepair delegation cannot retain Director ownership");
+    push(errors, payload?.delegation?.owner === observedFailure?.owningDomain, "DirectorRepair delegation must name the observed failure owner");
+    push(errors, !Object.hasOwn(payload || {}, "targetRef") && !Object.hasOwn(payload || {}, "change"), "DirectorRepair delegation must not carry a direct change");
+  }
+  push(errors, Array.isArray(observedFailure?.evidenceObservationIds) && observedFailure.evidenceObservationIds.length > 0 && unique(observedFailure.evidenceObservationIds), "DirectorRepair requires unique observed evidence");
+  push(errors, Array.isArray(payload?.acceptanceChecks) && payload.acceptanceChecks.length > 0 && payload.acceptanceChecks.every((check) => check?.status === "pending"), "DirectorRepair acceptance checks must remain pending");
+  push(errors, payload?.executionBoundary?.generatesMedia === false, "DirectorRepair must not claim media generation");
+  push(errors, payload?.executionBoundary?.approvesAssets === false, "DirectorRepair must not claim asset approval");
+  push(errors, payload?.validation?.singleVariable === true, "DirectorRepair must change one variable");
+  push(errors, payload?.validation?.parentImmutable === true, "DirectorRepair must keep parent artifacts immutable");
+  push(errors, payload?.validation?.evidenceBound === true, "DirectorRepair must bind observed evidence");
+  push(errors, payload?.validation?.ownershipResolved === true, "DirectorRepair must resolve ownership");
+  push(errors, payload?.validation?.noSuccessClaim === true, "DirectorRepair must not claim repair success");
+}
+
+function validateRepairRunReceipt(payload, errors) {
+  const repairKinds = [
+    "cineweave_codex_director_repair",
+    "cineweave_codex_character_repair",
+    "cineweave_codex_scene_repair",
+    "cineweave_codex_prompt_repair"
+  ];
+  push(errors, isExactContractRef(payload?.repairRef, repairKinds), "RepairRunReceipt must bind an exact repair plan");
+  push(errors, ["blocked", "failed", "awaiting_review"].includes(payload?.status), "RepairRunReceipt status is invalid");
+  push(errors, Array.isArray(payload?.preserve) && payload.preserve.length > 0 && unique(payload.preserve), "RepairRunReceipt must preserve explicit constraints");
+  const preserved = payload?.preservedInputRefs || [];
+  const preservedAreExact = Array.isArray(preserved) && preserved.every((ref) => isExactContractRef(ref));
+  push(errors, preservedAreExact, "RepairRunReceipt preserved input refs must be exact contract refs");
+  if (preservedAreExact) push(errors, unique(preserved.map(exactRefKey)), "RepairRunReceipt preserved input refs must be unique");
+  const before = payload?.before || {};
+  const after = payload?.after || {};
+  if (before.status === "captured") {
+    push(errors, isExactContractRef(before.artifactRef), "Captured before snapshot must bind an exact artifact");
+    push(errors, before.payloadHash === before.artifactRef?.contentHash, "Captured before snapshot hash must match its artifact ref");
+  } else {
+    push(errors, before.status === "not_captured" && before.artifactRef === null && before.payloadHash === null, "Uncaptured before snapshot must not claim an artifact or hash");
+  }
+  if (after.status === "captured") {
+    push(errors, isExactContractRef(after.artifactRef), "Captured after snapshot must bind an exact artifact");
+    push(errors, after.payloadHash === after.artifactRef?.contentHash, "Captured after snapshot hash must match its artifact ref");
+  } else {
+    push(errors, after.status === "not_captured" && after.artifactRef === null && after.payloadHash === null, "Uncaptured after snapshot must not claim an artifact or hash");
+  }
+  const change = payload?.changeEvidence || {};
+  push(errors, nonEmpty(change.variable) && nonEmpty(change.targetPath) && nonEmpty(change.requestedTargetState), "RepairRunReceipt must record the requested variable and path");
+  push(errors, Array.isArray(change.observedChangedPaths) && change.observedChangedPaths.length > 0 && unique(change.observedChangedPaths), "RepairRunReceipt must record observed changed paths");
+  const approval = payload?.approvalEvidence || {};
+  push(errors, approval.required === true, "RepairRunReceipt must require human approval");
+  if (approval.decision === "approved") {
+    push(errors, isExactContractRef(payload?.repairRef) && /^sha256:[0-9a-f]{64}$/.test(approval.approvalRecordHash || "") && approval.exactRepairHashMatched === true, "Approved repair run must bind an exact approval record");
+  } else {
+    push(errors, ["missing", "rejected"].includes(approval.decision) && approval.approvalRecordHash === null && approval.exactRepairHashMatched === false, "Unapproved repair run must not claim approval evidence");
+  }
+  if (payload?.adapter !== null) {
+    push(errors, isObject(payload.adapter) && nonEmpty(payload.adapter.adapterId) && /^sha256:[0-9a-f]{64}$/.test(payload.adapter.implementationContentHash || ""), "RepairRunReceipt adapter identity is invalid");
+    push(errors, payload.adapter.networkAccess === false && payload.adapter.writesMedia === false && payload.adapter.mutatesParent === false && payload.adapter.providerNeutral === true, "RepairRunReceipt adapter must be local, non-writing and provider-neutral");
+  }
+  const boundary = payload?.executionBoundary || {};
+  for (const [key, expected] of Object.entries({
+    providerNeutral: true,
+    callsNetwork: false,
+    writesSourceMedia: false,
+    writesDerivedMedia: false,
+    mutatesParentArtifact: false,
+    claimsApproval: false,
+    humanReviewRequired: true
+  })) push(errors, boundary[key] === expected, "RepairRunReceipt execution boundary." + key + " is unsafe");
+  push(errors, payload?.acceptance?.status === "pending" && payload?.acceptance?.humanReviewRequired === true, "RepairRunReceipt acceptance must remain pending for human review");
+  push(errors, Array.isArray(payload?.acceptance?.checkIds) && payload.acceptance.checkIds.length > 0 && unique(payload.acceptance.checkIds), "RepairRunReceipt acceptance check IDs must be unique");
+  push(errors, payload?.validation?.parentImmutable === true && payload?.validation?.noSuccessClaim === true, "RepairRunReceipt must preserve the parent and avoid a success claim");
+  if (payload?.status === "awaiting_review") {
+    push(errors, isExactContractRef(payload?.targetRef) && isExactContractRef(payload?.candidateRef), "Awaiting-review receipt must bind exact target and candidate artifacts");
+    push(errors, sameExactRef(payload?.before?.artifactRef, payload?.targetRef), "Awaiting-review before snapshot must match targetRef");
+    push(errors, sameExactRef(payload?.after?.artifactRef, payload?.candidateRef), "Awaiting-review after snapshot must match candidateRef");
+    push(errors, payload?.candidateRef?.kind === payload?.targetRef?.kind && payload?.candidateRef?.id === payload?.targetRef?.id && payload?.candidateRef?.version === payload?.targetRef?.version + 1, "Repair candidate must be the next immutable version of its target");
+    push(errors, payload?.failure === null, "Awaiting-review receipt must not carry a failure");
+    for (const key of ["repairPlanValid", "targetExact", "preservedInputRefsExact", "changedPathBounded", "candidateSchemaValid", "candidateSemanticValid"]) {
+      push(errors, payload?.validation?.[key] === true, "Awaiting-review receipt requires validation." + key);
+    }
+  } else {
+    push(errors, payload?.candidateRef === null && payload?.after?.status === "not_captured" && isObject(payload?.failure), "Blocked or failed repair run must not claim a candidate");
+  }
 }
 
 function exactRefKey(ref) {
@@ -1462,7 +2928,7 @@ function validateProjectBundleManifest(payload, errors) {
   if (payload?.bundleFormatVersion === "1.1.0") push(errors, payload?.contentPolicy?.containsReferenceMedia === entries.some((entry) => entry?.category === "reference_blob"), "ProjectBundleManifest reference-media policy must match its entries");
 }
 
-function validateByKind(payload, context = {}) {
+export function validateByKind(payload, context = {}) {
   const errors = [];
   switch (payload?.kind) {
     case "cineweave_codex_story_brief": validateStoryBrief(payload, errors); break;
@@ -1490,18 +2956,21 @@ function validateByKind(payload, context = {}) {
     case "cineweave_codex_asset_recipe": validateAssetRecipe(payload, errors, context.controlSet); break;
     case "cineweave_codex_board_assembly_plan": validateBoardAssemblyPlan(payload, errors); break;
     case "cineweave_codex_control_channel_set": validateControlSet(payload, errors); break;
-    case "cineweave_codex_evidence_bundle": validateEvidenceBundle(payload, errors); break;
-    case "cineweave_codex_capability_profile": validateCapabilityProfile(payload, errors); break;
-    case "cineweave_codex_license_profile": validateLicenseProfile(payload, errors); break;
+     case "cineweave_codex_evidence_bundle": validateEvidenceBundle(payload, errors); break;
+     case "cineweave_codex_capability_profile": validateCapabilityProfile(payload, errors); break;
+     case "cineweave_codex_capability_resolution_plan": validateCapabilityResolutionPlan(payload, errors, context); break;
+     case "cineweave_codex_license_profile": validateLicenseProfile(payload, errors); break;
     case "cineweave_codex_control_benchmark": validateBenchmark(payload, errors); break;
     case "cineweave_codex_control_benchmark_review": validateBenchmarkReview(payload, errors, context.benchmark); break;
+    case "cineweave_codex_repair_run_receipt": validateRepairRunReceipt(payload, errors); break;
     case "cineweave_adapter_descriptor": validateAdapterDescriptor(payload, errors, context.capabilityProfile); break;
-    case "cineweave_execution_request": validateExecutionRequest(payload, errors); break;
-    case "cineweave_execution_receipt": validateExecutionReceipt(payload, errors, context.executionRequest); break;
+     case "cineweave_execution_request": validateExecutionRequest(payload, errors); break;
+     case "cineweave_codex_execution_preview": validateExecutionPreview(payload, errors, context); break;
+     case "cineweave_execution_receipt": validateExecutionReceipt(payload, errors, context.executionRequest); break;
     case "cineweave_skill_evaluation_run": validateSkillEvaluationRun(payload, errors); break;
     case "cineweave_codex_image_prompt": validateIntegratedImage(payload, errors); break;
     case "cineweave_codex_prompt_record": validatePromptRecord(payload, errors); break;
-    case "cineweave_codex_storyboard_sequence": validateIntegratedStoryboard(payload, errors); break;
+    case "cineweave_codex_storyboard_sequence": validateIntegratedStoryboard(payload, errors); validateStoryboardContract(payload, errors, context); break;
     case "cineweave_codex_style_package": validateStylePackage(payload, errors); break;
     case "cineweave_codex_style_exploration_brief": validateStyleExplorationBrief(payload, errors); break;
     case "cineweave_codex_style_option_set": validateStyleOptionSet(payload, errors); break;
@@ -1511,11 +2980,26 @@ function validateByKind(payload, context = {}) {
     case "cineweave_codex_style_compile": validateStyleCompile(payload, errors); break;
     case "cineweave_codex_style_review": validateStyleReview(payload, errors); break;
     case "cineweave_codex_style_light_grammar": validateStyleLightGrammar(payload, errors); break;
-    case "cineweave_codex_action_sequence_spec": validateActionSequenceSpec(payload, errors); break;
-    case "cineweave_codex_shot_spec": validateShotSpec(payload, errors, context.actionSequenceSpec); break;
-    case "cineweave_codex_shot_lighting_plan": validateShotLightingPlan(payload, errors, context.sceneLightState); break;
-    case "cineweave_codex_temporal_spec": validateTemporalSpec(payload, errors); break;
+     case "cineweave_codex_action_sequence_spec": validateActionSequenceSpec(payload, errors); break;
+     case "cineweave_codex_shot_spec": validateShotSpec(payload, errors, context.actionSequenceSpec); break;
+     case "cineweave_codex_shot_lighting_plan": validateShotLightingPlan(payload, errors, context.sceneLightState, context.shotSpec); break;
+     case "cineweave_codex_temporal_spec": validateTemporalSpec(payload, errors, context.shotSpec, context); break;
+     case "cineweave_codex_camera_previs_spec": validateCameraPrevisSpec(payload, errors, context); break;
+     case "cineweave_codex_director_proposals": validateDirectorProposals(payload, errors); break;
+     case "cineweave_codex_cinematic_skill_manifest": validateCinematicSkillManifest(payload, errors); break;
+     case "cineweave_codex_shot_compiler_plan": validateShotCompilerPlan(payload, errors, context); break;
+     case "cineweave_codex_hero_frame_anchor": validateHeroFrameAnchor(payload, errors, context); break;
+     case "cineweave_codex_asset_alias_registry": validateAssetAliasRegistry(payload, errors); break;
+     case "cineweave_codex_sequence_rhythm_spec": validateSequenceRhythmSpec(payload, errors, context); break;
+     case "cineweave_codex_render_plan": validateRenderPlan(payload, errors); break;
+    case "cineweave_codex_media_import": validateMediaImport(payload, errors); break;
+    case "cineweave_codex_media_technical_probe": validateMediaTechnicalProbe(payload, errors, context); break;
+    case "cineweave_codex_editorial_timeline_plan": validateEditorialTimelinePlan(payload, errors); break;
+    case "cineweave_codex_color_pipeline_profile": validateColorPipelineProfile(payload, errors, context); break;
+    case "cineweave_codex_content_credential_inspection": validateContentCredentialInspection(payload, errors, context); break;
+    case "cineweave_codex_content_credential_handoff": validateContentCredentialHandoff(payload, errors, context); break;
     case "cineweave_codex_prompt_repair": validatePromptRepair(payload, errors); break;
+    case "cineweave_codex_director_repair": validateDirectorRepair(payload, errors, context); break;
     case "cineweave_codex_reference_asset": validateReferenceAsset(payload, errors); break;
     case "cineweave_codex_reference_observation": validateReferenceObservation(payload, errors, context.referenceAsset); break;
     case "cineweave_codex_reference_review": validateReferenceReview(payload, errors); break;
@@ -1540,9 +3024,33 @@ async function runSelfTest(mode = "all") {
   const referenceAsset = await readJson("examples/reference-asset.json");
   const referenceObservation = await readJson("examples/reference-observation.json");
   const referenceBindingSet = await readJson("examples/reference-binding-set.json");
+  const directorProposals = await readJson("examples/proposal-output.json");
+  const renderPlan = await readJson("examples/render-plan.json");
+  const mediaImport = await readJson("examples/media-import.json");
+  const mediaImportVideo = await readJson("examples/media-import-video.json");
+  const mediaTechnicalProbe = await readJson("examples/media-technical-probe.json");
+  const editorialTimelinePlan = await readJson("examples/editorial-timeline-plan.json");
+  const colorPipelineProfile = await readJson("examples/color-pipeline-profile.json");
+  const contentCredentialInspection = await readJson("examples/content-credential-inspection.json");
+  const contentCredentialHandoff = await readJson("examples/content-credential-handoff.json");
   const actionSequenceSpec = await readJson("examples/action-sequence-spec.json");
+  const shotSpec = await readJson("examples/shot-spec.json");
+   const actionShotSpec = await readJson("examples/shot-spec-action.json");
+   const temporalSpec = await readJson("examples/temporal-spec.json");
+    const cameraPrevisSpec = await readJson("examples/camera-previs-spec.json");
+    const heroFrameAnchor = await readJson("examples/hero-frame-anchor.json");
+    const assetAliasRegistry = await readJson("examples/asset-alias-registry.json");
+    const sequenceRhythmSpec = await readJson("examples/sequence-rhythm-spec.json");
+    const cinematicSkillManifest = await readJson("examples/cinematic-skill-manifest.json");
+    const shotCompilerPlan = await readJson("examples/shot-compiler-plan.json");
+   const storyboard = await readJson("examples/storyboard-action-sequence.json");
+   const directorRepair = await readJson("examples/director-repair.json");
+  const repairRunReceipt = await readJson("examples/repair-run-receipt.json");
+  const storyboardBoardAssemblyPlan = await readJson("examples/board-assembly-plan-storyboard-rain-teahouse.json");
   const benchmark = await readJson("examples/control-benchmark.json");
   const referenceObservations = [{ artifactRef: referenceBindingSet.bindings[0].observationRef, payload: referenceObservation }];
+   const storyboardContext = { actionSequenceSpec, shotSpecs: [actionShotSpec], boardAssemblyPlan: storyboardBoardAssemblyPlan, storyboard };
+  const directorRepairContext = { directorTargets: [shotSpec] };
   const cases = [
     ["examples/character-spec.json", {}], ["examples/character-morphology-spec.json", {}], ["examples/morphology-review.json", {}], ["examples/character-exploration-brief.json", {}], ["examples/character-option-set.json", {}], ["examples/character-preference-feedback.json", {}], ["examples/character-binding.json", {}], ["examples/character-reference-plan.json", {}], ["examples/character-appearance-state.json", {}], ["examples/character-review.json", {}], ["examples/character-repair.json", {}],
   ];
@@ -1551,15 +3059,16 @@ async function runSelfTest(mode = "all") {
     ["examples/performance-timeline.json", {}],
     ["examples/scene-spec.json", {}], ["examples/scene-state.json", { sceneSpec }], ["examples/scene-binding.json", { sceneSpec }], ["examples/scene-reference-plan.json", { sceneSpec }], ["examples/interaction-constraint-set.json", {}], ["examples/scene-review.json", { sceneSpec }], ["examples/scene-repair.json", { sceneSpec }],
     ["examples/scene-light-state.json", {}],
-    ["examples/asset-recipe.json", { controlSet }], ["recipes/character-morphology-neutral-3view.json", {}], ["recipes/character-identity-reference-sheet-3x3.json", {}], ["recipes/natural-human-fixtures-3up.json", {}], ["recipes/style-exploration-board-4up.json", {}], ["recipes/anime-character-fixtures-3up.json", {}], ["recipes/manga-character-fixtures-3up.json", {}], ["recipes/cross-representation-character-6up.json", {}], ["examples/board-assembly-plan.json", {}], ["examples/control-channel-set.json", {}], ["examples/evidence-bundle.json", {}], ["examples/capability-profile.json", {}], ["examples/license-profile.json", {}], ["examples/control-benchmark.json", {}], ["examples/control-benchmark-review.json", { benchmark }],
+    ["examples/asset-recipe.json", { controlSet }], ["recipes/character-morphology-neutral-3view.json", {}], ["recipes/character-identity-reference-sheet-3x3.json", {}], ["recipes/natural-human-fixtures-3up.json", {}], ["recipes/style-exploration-board-4up.json", {}], ["recipes/anime-character-fixtures-3up.json", {}], ["recipes/manga-character-fixtures-3up.json", {}], ["recipes/cross-representation-character-6up.json", {}], ["examples/board-assembly-plan.json", {}], ["examples/board-assembly-plan-storyboard-rain-teahouse.json", {}], ["examples/control-channel-set.json", {}], ["examples/evidence-bundle.json", {}], ["examples/capability-profile.json", {}], ["examples/license-profile.json", {}], ["examples/control-benchmark.json", {}], ["examples/control-benchmark-review.json", { benchmark }],
     ["examples/adapter-descriptor.json", {}], ["examples/execution-request.json", {}], ["examples/execution-receipt.json", {}], ["examples/execution-receipt-blocked.json", {}], ["examples/skill-evaluation-run.json", {}],
     ["examples/artifact-graph.json", {}], ["examples/project-bundle-manifest.json", {}],
-    ["examples/reference-asset.json", {}], ["examples/reference-observation.json", { referenceAsset }],
+    ["examples/reference-asset.json", {}], ["examples/content-credential-inspection.json", { referenceAsset }], ["examples/content-credential-handoff.json", { referenceAsset, contentCredentialInspection }], ["examples/reference-observation.json", { referenceAsset }],
     ["examples/reference-observation-portrait-face.json", { referenceAsset }], ["examples/reference-observation-portrait-skin.json", { referenceAsset }], ["examples/reference-observation-portrait-capture.json", { referenceAsset }],
-    ["examples/reference-review.json", {}], ["examples/reference-binding-set.json", { referenceObservations }],
-    ["examples/integrated-image-prompt.json", { sceneSpec }], ["examples/integrated-image-prompt-reference-reframe.json", {}], ["examples/integrated-storyboard.json", { sceneSpec }], ["examples/prompt-record.json", {}], ["examples/prompt-record-reference-reframe.json", {}], ["examples/prompt-record-cinematic-director-template.json", {}],
+     ["examples/reference-review.json", {}], ["examples/reference-binding-set.json", { referenceObservations }],
+     ["examples/asset-alias-registry.json", {}],
+    ["examples/integrated-image-prompt.json", { sceneSpec }], ["examples/integrated-image-prompt-reference-reframe.json", {}], ["examples/storyboard-action-sequence.json", storyboardContext], ["examples/prompt-record.json", {}], ["examples/prompt-record-reference-reframe.json", {}], ["examples/prompt-record-cinematic-director-template.json", {}],
     ["examples/style-package.json", {}], ["examples/style-package-anime.json", {}], ["examples/style-package-manga.json", {}], ["examples/style-exploration-brief.json", {}], ["examples/style-option-set.json", {}], ["examples/style-preference-feedback.json", {}], ["examples/representation-binding.json", {}], ["examples/style-reference-plan.json", {}], ["examples/style-compile.json", {}], ["examples/style-compile-anime.json", {}], ["examples/style-light-grammar.json", {}], ["examples/style-review.json", {}],
-    ["examples/action-sequence-spec.json", {}], ["examples/shot-spec.json", {}], ["examples/shot-spec-action.json", { actionSequenceSpec }], ["examples/shot-lighting-plan.json", { sceneLightState }], ["examples/temporal-spec.json", {}], ["examples/prompt-repair.json", {}],
+     ["examples/proposal-output.json", {}], ["examples/render-plan.json", {}], ["examples/character-render-plan.json", {}], ["examples/media-import.json", {}], ["examples/media-import-video.json", {}], ["examples/media-technical-probe.json", { mediaImport: mediaImportVideo }], ["examples/editorial-timeline-plan.json", {}], ["examples/color-pipeline-profile.json", {}], ["examples/action-sequence-spec.json", {}], ["examples/shot-spec.json", {}], ["examples/shot-spec-action.json", { actionSequenceSpec }], ["examples/shot-lighting-plan.json", { sceneLightState, shotSpec }], ["examples/temporal-spec.json", { shotSpec }], ["examples/camera-previs-spec.json", { shotSpec, temporalSpec }], ["examples/hero-frame-anchor.json", { shotSpec }], ["examples/sequence-rhythm-spec.json", { storyboard }], ["examples/cinematic-skill-manifest.json", {}], ["examples/shot-compiler-plan.json", { cinematicSkillManifest }], ["examples/director-repair.json", directorRepairContext], ["examples/prompt-repair.json", {}], ["examples/repair-run-receipt.json", {}],
     ["examples/creative-brief.json", {}], ["examples/creative-brief-zero-prompt.json", {}], ["examples/workflow-plan.json", {}], ["examples/workflow-plan-character-exploration.json", {}], ["examples/workflow-plan-character-morphology.json", {}], ["examples/workflow-plan-cross-representation.json", {}], ["examples/workflow-plan-reference-prompt.json", {}], ["examples/workflow-plan-portrait-reference.json", {}], ["examples/workflow-plan-action-sequence.json", {}],
   );
 
@@ -1586,6 +3095,11 @@ async function runSelfTest(mode = "all") {
   const badEvidence = await readJson("examples/evidence-bundle.json"); badEvidence.evidence = badEvidence.evidence.filter((item) => item.role !== "body_identity"); negative.push(["reject missing required evidence role", badEvidence, {}]);
   const badCapability = await readJson("examples/capability-profile.json"); badCapability.capabilities.push(structuredClone(badCapability.capabilities[0])); negative.push(["reject duplicate capability", badCapability, {}]);
   const badFamilyBench = await readJson("examples/control-benchmark.json"); badFamilyBench.cases = badFamilyBench.cases.filter((item) => item.category !== "manga_representation"); negative.push(["reject MangaBench without manga case", badFamilyBench, {}]);
+  const badCinematographyBench = await readJson("examples/control-benchmark.json"); delete badCinematographyBench.cases.find((item) => item.category === "cinematography").cameraPrevisRef; negative.push(["reject CinematographyBench without CameraPrevisSpec", badCinematographyBench, {}]);
+  const badDirectorQualityBench = await readJson("examples/control-benchmark.json"); delete badDirectorQualityBench.cases.find((item) => item.category === "director_quality").directorArtifactRefs; negative.push(["reject DirectorQualityBench without exact Director artifacts", badDirectorQualityBench, {}]);
+  const badCalibrationBench = await readJson("examples/control-benchmark.json"); delete badCalibrationBench.humanReview.calibration; negative.push(["reject CinematographyBench without calibration protocol", badCalibrationBench, {}]);
+  const badCalibrationReview = await readJson("examples/control-benchmark-review.json"); badCalibrationReview.humanReview.calibration.agreementScore = 0.95; negative.push(["reject planned ControlBenchmarkReview calibration result", badCalibrationReview, { benchmark }]);
+  const badPlannedCalibrationPair = await readJson("examples/control-benchmark-review.json"); badPlannedCalibrationPair.humanReview.calibration.pairResults = [{ pairId: "pair.planned", caseId: "case.director-quality-rain-teahouse", dimensionId: "dimension.direction", leftMediaId: "media.left", rightMediaId: "media.right", decision: "tie", evidenceObservationIds: ["obs.left", "obs.right"] }]; negative.push(["reject planned ControlBenchmarkReview calibration pairs", badPlannedCalibrationPair, { benchmark }]);
   const badBenchmarkReview = await readJson("examples/control-benchmark-review.json"); badBenchmarkReview.decision.mayAdvanceToApproval = true; negative.push(["reject planned ControlBenchmarkReview that advances", badBenchmarkReview, { benchmark }]);
   const badInteraction = await readJson("examples/interaction-constraint-set.json"); badInteraction.constraints.occlusions.push({ frontRef: badInteraction.constraints.occlusions[0].backRef, backRef: badInteraction.constraints.occlusions[0].frontRef, region: "reverse", ordering: "front_before_back" }); negative.push(["reject cyclic occlusion", badInteraction, {}]);
   const badStyle = await readJson("examples/style-package.json"); badStyle.recipe.atomRefs[0].atomId = "unknown.style.atom"; negative.push(["reject StylePackage unknown atom", badStyle, {}]);
@@ -1618,10 +3132,50 @@ async function runSelfTest(mode = "all") {
   const badActionRisk = await readJson("examples/action-sequence-spec.json"); badActionRisk.riskRegister[0].requiresQualifiedReview = false; negative.push(["reject unreviewed high-risk action", badActionRisk, {}]);
   const badActionContinuity = await readJson("examples/action-sequence-spec.json"); badActionContinuity.continuityTracks[0].exitState = "silently moved elsewhere"; negative.push(["reject open ActionSequenceSpec continuity", badActionContinuity, {}]);
   const badShot = await readJson("examples/shot-spec.json"); badShot.blocking[0].subjectRef = "binding.unknown"; negative.push(["reject ShotSpec unknown blocking subject", badShot, {}]);
+  const badShotBackref = await readJson("examples/shot-spec.json"); badShotBackref.temporalSpecRef = { kind: "cineweave_codex_temporal_spec", id: "temporal.legacy-cycle", version: 1, contentHash: "sha256:0000000000000000000000000000000000000000000000000000000000000000" }; negative.push(["reject ShotSpec downstream back-reference", badShotBackref, {}]);
   const badActionShot = await readJson("examples/shot-spec-action.json"); badActionShot.actionBeatIds[0] = "action-beat.unknown"; negative.push(["reject ShotSpec unknown action beat", badActionShot, { actionSequenceSpec }]);
+  const badActionShotHash = await readJson("examples/shot-spec-action.json"); badActionShotHash.actionSequenceRef.contentHash = "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"; negative.push(["reject ShotSpec stale ActionSequenceSpec hash", badActionShotHash, { actionSequenceSpec }]);
   const badActionShotWeapon = await readJson("examples/shot-spec-action.json"); badActionShotWeapon.promptHandoff.actionBreakdown.weaponDetails[0].weaponRef = "weapon.unknown"; negative.push(["reject ShotSpec unknown action breakdown weapon", badActionShotWeapon, { actionSequenceSpec }]);
-  const badShotLight = await readJson("examples/shot-lighting-plan.json"); badShotLight.key.sourceId = "light.unknown"; negative.push(["reject ShotLightingPlan unknown source", badShotLight, { sceneLightState }]);
-  const badTemporal = await readJson("examples/temporal-spec.json"); badTemporal.actionTimeline[1].timeSeconds = 0.1; negative.push(["reject unordered TemporalSpec", badTemporal, {}]);
+  const badStoryboardCoverage = await readJson("examples/storyboard-action-sequence.json"); badStoryboardCoverage.coverageLedger = []; negative.push(["reject Storyboard missing action coverage", badStoryboardCoverage, storyboardContext]);
+  const badStoryboardBeat = await readJson("examples/storyboard-action-sequence.json"); badStoryboardBeat.shots[0].actionBeatIds[0] = "action-beat.unknown"; negative.push(["reject Storyboard unknown action beat", badStoryboardBeat, storyboardContext]);
+  const badStoryboardShotHash = await readJson("examples/storyboard-action-sequence.json"); badStoryboardShotHash.shots[0].shotSpecRef.contentHash = "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"; negative.push(["reject Storyboard stale ShotSpec hash", badStoryboardShotHash, storyboardContext]);
+  const badStoryboardPanel = await readJson("examples/storyboard-action-sequence.json"); badStoryboardPanel.productionBindings.panels[0].tileId = "tile.unknown"; negative.push(["reject Storyboard panel not in BoardAssemblyPlan", badStoryboardPanel, storyboardContext]);
+  const badStoryboardOrder = await readJson("examples/storyboard-action-sequence.json"); badStoryboardOrder.shots[0].order = 2; negative.push(["reject Storyboard non-contiguous order", badStoryboardOrder, storyboardContext]);
+  const badShotLight = await readJson("examples/shot-lighting-plan.json"); badShotLight.key.sourceId = "light.unknown"; negative.push(["reject ShotLightingPlan unknown source", badShotLight, { sceneLightState, shotSpec }]);
+  const badShotLightHash = await readJson("examples/shot-lighting-plan.json"); badShotLightHash.shotSpecRef.contentHash = "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"; negative.push(["reject ShotLightingPlan stale ShotSpec hash", badShotLightHash, { sceneLightState, shotSpec }]);
+  const badShotLightBounce = await readJson("examples/shot-lighting-plan.json"); delete badShotLightBounce.fill.viaSurfaceAnchor; negative.push(["reject ShotLightingPlan bounce without physical surface", badShotLightBounce, { sceneLightState, shotSpec }]);
+  const badShotLightFill = await readJson("examples/shot-lighting-plan.json"); badShotLightFill.fill = null; delete badShotLightFill.validation.fillIntentional; negative.push(["reject ShotLightingPlan implicit no-fill decision", badShotLightFill, { sceneLightState, shotSpec }]);
+   const badTemporal = await readJson("examples/temporal-spec.json"); badTemporal.actionTimeline[1].timeSeconds = 0.1; negative.push(["reject unordered TemporalSpec", badTemporal, { shotSpec }]);
+   const badTemporalIdentity = await readJson("examples/temporal-spec.json"); badTemporalIdentity.shotSpecRef.id = "shot.wrong-identity"; negative.push(["reject TemporalSpec wrong ShotSpec identity", badTemporalIdentity, { shotSpec }]);
+   const badHeroFrameOverride = structuredClone(heroFrameAnchor); badHeroFrameOverride.inheritancePolicy.allowOverrides.push("character_identity.face"); negative.push(["reject HeroFrameAnchor identity override", badHeroFrameOverride, { shotSpec }]);
+    const badHeroFrameCamera = structuredClone(heroFrameAnchor); badHeroFrameCamera.visualDna.camera.focalLengthMm = 85; negative.push(["reject HeroFrameAnchor camera drift", badHeroFrameCamera, { shotSpec }]);
+    const badAssetAliasCollision = structuredClone(assetAliasRegistry); badAssetAliasCollision.aliases.push(structuredClone(badAssetAliasCollision.aliases[0])); negative.push(["reject AssetAliasRegistry alias collision", badAssetAliasCollision, {}]);
+    const badAssetAliasLatest = structuredClone(assetAliasRegistry); badAssetAliasLatest.resolutionPolicy.allowLatest = true; negative.push(["reject AssetAliasRegistry latest resolution", badAssetAliasLatest, {}]);
+    const badSequenceGap = structuredClone(sequenceRhythmSpec); badSequenceGap.shotWindows[0].startFrame = 2; negative.push(["reject SequenceRhythmSpec hidden opening gap", badSequenceGap, { storyboard }]);
+   const badSequencePhase = structuredClone(sequenceRhythmSpec); badSequencePhase.tempoPhases[0].shotIds = ["shot.unknown"]; negative.push(["reject SequenceRhythmSpec phase unknown shot", badSequencePhase, { storyboard }]);
+   const badSequenceTimebase = structuredClone(sequenceRhythmSpec); badSequenceTimebase.timebase.denominator = 2; negative.push(["reject SequenceRhythmSpec unreduced timebase", badSequenceTimebase, { storyboard }]);
+   const temporalWithHero = structuredClone(temporalSpec); temporalWithHero.heroFrameAnchorRef = { kind: heroFrameAnchor.kind, id: heroFrameAnchor.heroFrameAnchorId, version: heroFrameAnchor.version, contentHash: sha256Canonical(heroFrameAnchor) };
+   const badTemporalHeroFrame = structuredClone(temporalWithHero); badTemporalHeroFrame.heroFrameAnchorRef.id = "hero-frame.wrong-anchor"; negative.push(["reject TemporalSpec wrong HeroFrameAnchor identity", badTemporalHeroFrame, { shotSpec, heroFrameAnchor }]);
+   const badCinematicManifest = structuredClone(cinematicSkillManifest); badCinematicManifest.skills[1].skillId = badCinematicManifest.skills[0].skillId; negative.push(["reject duplicate Atomic Cinematic Skill ID", badCinematicManifest, {}]);
+   const badCompilerManifestRef = structuredClone(shotCompilerPlan); badCompilerManifestRef.cinematicSkillManifestRef.contentHash = "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"; negative.push(["reject ShotCompilerPlan stale manifest", badCompilerManifestRef, { cinematicSkillManifest }]);
+   const badCompilerControlOwner = structuredClone(shotCompilerPlan); badCompilerControlOwner.controlSurface.groups[0].controls[0].ownerSkill = "cineweave-production"; negative.push(["reject ShotCompilerPlan control ownership drift", badCompilerControlOwner, { cinematicSkillManifest }]);
+   const badCameraPrevisQuaternion = structuredClone(cameraPrevisSpec); badCameraPrevisQuaternion.tracks.pose[1].orientationQuaternion.w = 1.5; negative.push(["reject CameraPrevisSpec non-unit quaternion", badCameraPrevisQuaternion, { shotSpec, temporalSpec }]);
+  const badCameraPrevisZoom = structuredClone(cameraPrevisSpec); badCameraPrevisZoom.motion.primaryBehavior = "zoom"; badCameraPrevisZoom.motion.components = ["zoom"]; negative.push(["reject CameraPrevisSpec fixed-lens zoom", badCameraPrevisZoom, { shotSpec, temporalSpec }]);
+  const badCameraPrevisIris = structuredClone(cameraPrevisSpec); badCameraPrevisIris.tracks.intrinsics[1].fStop = 2.8; negative.push(["reject CameraPrevisSpec undeclared iris change", badCameraPrevisIris, { shotSpec, temporalSpec }]);
+  const badDirectorProposals = structuredClone(directorProposals); badDirectorProposals.proposals[1].primaryDelta = structuredClone(badDirectorProposals.proposals[0].primaryDelta); negative.push(["reject DirectorProposals duplicate primary delta", badDirectorProposals, {}]);
+  const badRenderPlan = structuredClone(renderPlan); badRenderPlan.promptPayloadRef = "image-prompt:scene-01-shot-04"; negative.push(["reject RenderPlan 2.5 legacy prompt string", badRenderPlan, {}]);
+  const badMediaImport = structuredClone(mediaImport); badMediaImport.renderPlanRef = "render-plan:legacy-string"; negative.push(["reject MediaImport 2.5 legacy RenderPlan string", badMediaImport, {}]);
+  const badMediaTechnicalProbe = structuredClone(mediaTechnicalProbe); badMediaTechnicalProbe.mediaContentHash = "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"; negative.push(["reject MediaTechnicalProbe stale media hash", badMediaTechnicalProbe, { mediaImport: mediaImportVideo }]);
+  const badEditorialConform = structuredClone(editorialTimelinePlan); badEditorialConform.conformStatus = "conformed"; negative.push(["reject conformed EditorialTimelinePlan with a placeholder", badEditorialConform, {}]);
+  const badEditorialTransition = structuredClone(editorialTimelinePlan); badEditorialTransition.transitions[0].atFrame += 1; negative.push(["reject EditorialTimelinePlan transition outside its cut boundary", badEditorialTransition, {}]);
+  const badColorMetadata = structuredClone(colorPipelineProfile); badColorMetadata.sourceMedia[0].metadata.status = "unknown"; negative.push(["reject ColorPipelineProfile dishonest unknown metadata", badColorMetadata, {}]);
+  const badColorPath = structuredClone(colorPipelineProfile); delete badColorPath.outputTargets[0].path.displayColorSpace; negative.push(["reject ColorPipelineProfile incomplete OCIO view path", badColorPath, {}]);
+  const badCredentialInspection = structuredClone(contentCredentialInspection); badCredentialInspection.result.validationState = "trusted"; negative.push(["reject planned ContentCredentialInspection trusted claim", badCredentialInspection, { referenceAsset }]);
+  const badCredentialHandoff = structuredClone(contentCredentialHandoff); badCredentialHandoff.provenancePlan.manifestAction = "written"; negative.push(["reject ContentCredentialHandoff manifest write claim", badCredentialHandoff, { referenceAsset, contentCredentialInspection }]);
+  const badDirectorRepairTarget = structuredClone(directorRepair); badDirectorRepairTarget.targetRef.kind = "cineweave_codex_temporal_spec"; negative.push(["reject DirectorRepair camera target outside ShotSpec, Storyboard or CameraPrevisSpec", badDirectorRepairTarget, {}]);
+  const badDirectorRepairHash = structuredClone(directorRepair); badDirectorRepairHash.targetRef.contentHash = "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"; negative.push(["reject DirectorRepair stale target hash", badDirectorRepairHash, directorRepairContext]);
+  const badRepairRunReceipt = structuredClone(repairRunReceipt); badRepairRunReceipt.status = "awaiting_review"; badRepairRunReceipt.candidateRef = null; negative.push(["reject awaiting RepairRunReceipt without a candidate", badRepairRunReceipt, {}]);
+  const badDirectorRepairDelegation = structuredClone(directorRepair); badDirectorRepairDelegation.disposition = "delegate"; badDirectorRepairDelegation.observedFailure.owningDomain = "character"; badDirectorRepairDelegation.observedFailure.variable = "identity"; delete badDirectorRepairDelegation.targetRef; delete badDirectorRepairDelegation.change; badDirectorRepairDelegation.delegation = { owner: "scene", reason: "The observation concerns a Character-owned identity anchor.", requiredInputKinds: ["cineweave_codex_character_binding"] }; negative.push(["reject DirectorRepair delegation to wrong owner", badDirectorRepairDelegation, {}]);
   const badPromptRepair = await readJson("examples/prompt-repair.json"); badPromptRepair.changeOnly.push("also change composition"); negative.push(["reject multi-variable PromptRepair", badPromptRepair, {}]);
   const badAdapter = await readJson("examples/adapter-descriptor.json"); badAdapter.executionModes.push("external"); negative.push(["reject network-free adapter exposing external mode", badAdapter, {}]);
   const badAdapterEmphasis = await readJson("examples/adapter-descriptor.json"); badAdapterEmphasis.semanticEmphasis.acceptedLevels.push("required"); negative.push(["reject unsupported adapter semantic emphasis", badAdapterEmphasis, {}]);
@@ -1659,4 +3213,6 @@ async function main() {
   console.log(JSON.stringify({ valid: true, payload: resolve(args[0]) }, null, 2));
 }
 
-main().catch((error) => { console.error(error instanceof Error ? error.stack || error.message : String(error)); process.exitCode = 2; });
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
+  main().catch((error) => { console.error(error instanceof Error ? error.stack || error.message : String(error)); process.exitCode = 2; });
+}

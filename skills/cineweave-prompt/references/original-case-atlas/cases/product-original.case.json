@@ -1,0 +1,114 @@
+{
+  "schemaVersion": "1.0.0",
+  "caseId": "case.atlas.product-original",
+  "category": "product",
+  "title": "Unbranded vessel packshot",
+  "summary": "An original geometric product fixture showing one unbranded vessel, a support plane and a bounded contact shadow with no commercial logo or imported asset.",
+  "status": "worked_fixture",
+  "routing": {
+    "indexPath": "../index.json",
+    "categoryPath": "../categories/product.md",
+    "triggers": ["product", "packshot", "产品图", "商品静物"],
+    "excludedCategories": ["portrait", "food", "architecture", "editorial", "diagrams", "exact-text"]
+  },
+  "prompt": {
+    "contentHash": "sha256:fe4ea46e37402af7fe526869436ccef1718d7750ed1719416e2abb74ee51d316",
+    "record": {
+      "kind": "cineweave_codex_prompt_record",
+      "contractVersion": "2.0.0",
+      "promptId": "atlas-product-original",
+      "title": "Unbranded vessel packshot prompt",
+      "version": 1,
+      "status": "active",
+      "domain": "product",
+      "generationMode": "generate",
+      "skillReceipt": {
+        "repository": "https://github.com/Wilder1222/cineweave-studio.git",
+        "ref": "working-tree-v2.5.x",
+        "commit": "6dd43cb645122f57b5c545803b374d831da454d9",
+        "installedBy": "codex-environment",
+        "usedAt": "2026-09-02T00:00:00.000Z"
+      },
+      "purpose": "Provide a bounded product worked example with observable body, label zone, support plane and contact shadow.",
+      "sourceText": "A single fictional unbranded vessel on a neutral support plane with a soft contact shadow.",
+      "tags": ["atlas", "product", "original", "deterministic"],
+      "prompt": {
+        "language": "en",
+        "positive": "One fictional unbranded vessel centered on a horizontal support plane, clearly separated body and blank label panel, one soft contact shadow, restrained neutral palette, no commercial identity.",
+        "negative": "No brand, no logo, no barcode, no watermark, no duplicate product, no external image reference.",
+        "blocks": {
+          "subject": ["one fictional unbranded vessel with a blank label panel"],
+          "composition": ["centered packshot above a single support plane"],
+          "lighting": ["simple shape-defining highlight and soft contact shadow"],
+          "materials": ["matte body with clearly separated label zone"],
+          "constraints": ["original vector primitives only", "no commercial marks"]
+        }
+      },
+      "variables": [],
+      "references": [],
+      "variants": [
+        {
+          "variantId": "atlas-product-original-baseline",
+          "label": "Baseline geometry",
+          "change": "No variation; retain the checked fixture geometry.",
+          "positive": "Retain one product body, one support plane and one contact shadow.",
+          "status": "selected"
+        }
+      ],
+      "evaluation": {
+        "criteria": [
+          { "criterion": "primary-target", "check": "The product body is the unambiguous primary target.", "status": "pass", "evidence": "The deterministic SVG contains one product-body element." }
+        ],
+        "knownRisks": ["A geometric fixture does not establish provider material realism."],
+        "nextExperiment": "Human review may compare label-panel proportions without changing any other element."
+      },
+      "provenance": {
+        "source": "codex_authored",
+        "createdAt": "2026-09-02T00:00:00.000Z",
+        "updatedAt": "2026-09-02T00:00:00.000Z",
+        "changeLog": ["v1: create an original deterministic product prompt fixture."]
+      },
+      "validation": { "onePrimaryTarget": true, "providerNeutral": true, "variablesBound": true, "referencesScoped": true, "observationReady": true }
+    }
+  },
+  "adapterContext": {
+    "adapterId": "adapter.atlas-svg.local",
+    "adapterVersion": "1.0.0",
+    "implementationPath": "skills/cineweave-prompt/scripts/generate-original-case-atlas.mjs",
+    "implementationContentHash": "sha256:581fbf2a9209b062abc2c1a9dcc4c6aa1bd1aa572c9ee7e24cd242055b2b358a",
+    "executionMode": "fixture",
+    "runtime": "node>=22",
+    "networkAccess": false,
+    "externalEffects": false,
+    "providerNeutral": true,
+    "costAmount": 0,
+    "currency": "USD"
+  },
+  "visualSpec": {
+    "width": 1200,
+    "height": 900,
+    "seed": "atlas-product-v1",
+    "palette": ["#F6F1E8", "#D7E1DF", "#D89B67", "#7E8F8C", "#20333B"],
+    "exactText": ["FORM / 01", "Original local fixture"],
+    "elements": ["product-body", "contact-shadow", "support-plane"],
+    "composition": "One centered vessel stands on a horizontal plane; a blank label zone and soft contact shadow make the product hierarchy explicit."
+  },
+  "candidate": { "path": "../../assets/original-case-atlas/product-original.svg", "mimeType": "image/svg+xml", "byteLength": 1283, "contentHash": "sha256:14ce7775fd7c4fb406a751a3295534f718e78be9b2b6daebee31ac395f71aabf", "width": 1200, "height": 900 },
+  "rights": { "profilePath": "../rights/license-profile.json", "profileContentHash": "sha256:1b01597f19ed1dad561fb3fae0907b6003869faf5e63e347a240c0c59a11eae8", "creatorOwned": true, "redistribution": "allowed", "publication": "allowed", "thirdPartyAssets": false, "identityRights": "not_applicable", "fontPolicy": "system-font-codepoints-not-pixel-pinned" },
+  "reviewEvidence": {
+    "status": "deterministic_checks_complete",
+    "candidateContentHash": "sha256:14ce7775fd7c4fb406a751a3295534f718e78be9b2b6daebee31ac395f71aabf",
+    "reviewType": "machine",
+    "checkedAt": "2026-09-02T00:00:00.000Z",
+    "criteria": [
+      { "criterionId": "rebuild.byte-identical", "status": "pass", "evidence": "The local generator must reproduce the committed candidate byte for byte." },
+      { "criterionId": "svg.active-content-absent", "status": "pass", "evidence": "The candidate uses static SVG primitives and system-font text only." },
+      { "criterionId": "rights.profile-verified", "status": "pass", "evidence": "The shared creator-owned rights profile is verified and hash-bound." }
+    ],
+    "humanReview": { "status": "not_performed", "reviewerCount": 0 },
+    "decision": "mechanical_fixture_pass",
+    "notAssessed": ["human aesthetic quality", "provider generation quality", "cross-platform font pixel equivalence"]
+  },
+  "reproduction": { "generatorPath": "skills/cineweave-prompt/scripts/generate-original-case-atlas.mjs", "generatorVersion": "1.0.0", "caseSelector": "product", "expectedContentHash": "sha256:14ce7775fd7c4fb406a751a3295534f718e78be9b2b6daebee31ac395f71aabf", "deterministic": true, "networkRequired": false, "externalInputs": [] },
+  "claimsBoundary": { "scope": "mechanical_fixture_only", "humanReview": "not_performed", "providerOutput": "not_generated", "providerQuality": "not_assessed", "photorealism": "not_assessed", "domainFitness": "not_assessed", "crossPlatformFontPixels": "not_guaranteed" }
+}

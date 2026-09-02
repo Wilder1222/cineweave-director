@@ -1,0 +1,84 @@
+{
+  "catalogVersion": "1.0.0",
+  "skill": "cineweave-director",
+  "references": [
+    { "path": "references/action-direction.md", "lifecycle": "routed", "loadContexts": ["action_sequence"] },
+    { "path": "references/aigc-control-stack.md", "lifecycle": "routed", "loadContexts": ["control_card"] },
+    { "path": "references/appearance-styling-direction.md", "lifecycle": "routed", "loadContexts": ["shot_direction", "appearance_continuity"] },
+    { "path": "references/camera-previsualization.md", "lifecycle": "routed", "loadContexts": ["shot_direction", "temporal_direction", "camera_previs"] },
+    { "path": "references/cinematic-skill-manifest.md", "lifecycle": "routed", "loadContexts": ["cinematic_skill", "shot_compile"] },
+    {
+      "path": "references/character-consistency.md",
+      "lifecycle": "archived",
+      "owner": "cineweave-character",
+      "successorPaths": ["../cineweave-character/references/character-consistency.md"],
+      "rationale": "Character owns reusable identity and continuity review; retain this prior Director copy only as an archived historical aid."
+    },
+    {
+      "path": "references/character-design.md",
+      "lifecycle": "archived",
+      "owner": "cineweave-character",
+      "successorPaths": ["../cineweave-character/references/character-design.md"],
+      "rationale": "Character owns identity design and the canonical CharacterSpec guidance."
+    },
+    {
+      "path": "references/character-performance.md",
+      "lifecycle": "archived",
+      "owner": "cineweave-character",
+      "successorPaths": ["../cineweave-character/references/character-performance.md"],
+      "rationale": "Character owns performance bindings; Director consumes their exact handoff without maintaining a second authority."
+    },
+    {
+      "path": "references/character-visual-development.md",
+      "lifecycle": "archived",
+      "owner": "cineweave",
+      "successorPaths": ["../cineweave/references/aigc-studio.md", "../cineweave-character/references/character-reference-planning.md"],
+      "rationale": "This cross-domain stage ladder is superseded by the studio orchestration path and Character's reference-planning authority."
+    },
+    {
+      "path": "references/cinematic-atlas.md",
+      "lifecycle": "archived",
+      "owner": "cineweave-director",
+      "successorPaths": ["references/directing.md", "references/cinematography.md", "references/portrait-reference-craft.md"],
+      "rationale": "Its broad category index is superseded by route-specific Director references and must not create a deep reference chain."
+    },
+    { "path": "references/cinematography.md", "lifecycle": "routed", "loadContexts": ["proposal", "shot_direction", "storyboard"] },
+    { "path": "references/comic-panel-direction.md", "lifecycle": "routed", "loadContexts": ["storyboard"] },
+    { "path": "references/directing.md", "lifecycle": "routed", "loadContexts": ["proposal", "action_sequence", "shot_direction", "storyboard"] },
+    { "path": "references/director-repair.md", "lifecycle": "routed", "loadContexts": ["repair"] },
+    { "path": "references/execution-adapter.md", "lifecycle": "routed", "loadContexts": ["render_plan", "media_import"] },
+    { "path": "references/fight-choreography.md", "lifecycle": "routed", "loadContexts": ["action_sequence"] },
+    { "path": "references/hero-frame.md", "lifecycle": "routed", "loadContexts": ["hero_frame", "temporal_direction"] },
+    {
+      "path": "references/gallery-portrait-character-design.md",
+      "lifecycle": "archived",
+      "owner": "cineweave-reference",
+      "successorPaths": ["../cineweave-reference/references/portrait-decomposition.md", "../cineweave-character/references/character-reference-planning.md"],
+      "rationale": "Runtime portrait evidence is decomposed and reviewed by Reference, while reusable character reference planning belongs to Character."
+    },
+    { "path": "references/natural-human-capture.md", "lifecycle": "routed", "loadContexts": ["shot_direction"] },
+    { "path": "references/opensource-adapter-patterns.md", "lifecycle": "routed", "loadContexts": ["render_plan"] },
+    { "path": "references/orchestration.md", "lifecycle": "routed", "loadContexts": ["action_sequence", "shot_direction", "storyboard", "render_plan", "repair"] },
+    { "path": "references/portrait-reference-craft.md", "lifecycle": "routed", "loadContexts": ["shot_direction"] },
+    {
+      "path": "references/prompt-gallery.md",
+      "lifecycle": "archived",
+      "owner": "cineweave-prompt",
+      "successorPaths": ["../cineweave-prompt/references/domain-recipes.md", "../cineweave-prompt/references/reference-transforms.md"],
+      "rationale": "Prompt owns prompt-domain routing and deliberate reference-to-target transforms."
+    },
+    {
+      "path": "references/reference-editing.md",
+      "lifecycle": "archived",
+      "owner": "cineweave-reference",
+      "successorPaths": ["../cineweave-reference/references/reference-lifecycle.md", "../cineweave-prompt/references/reference-transforms.md"],
+      "rationale": "Reference owns evidence roles and masks; Prompt owns target transforms, so this mixed historical guide has no Director route."
+    },
+    { "path": "references/shot-lighting.md", "lifecycle": "routed", "loadContexts": ["shot_lighting"] },
+    { "path": "references/sequence-rhythm.md", "lifecycle": "routed", "loadContexts": ["sequence_rhythm", "storyboard"] },
+    { "path": "references/shot-compiler.md", "lifecycle": "routed", "loadContexts": ["shot_compile"] },
+    { "path": "references/storyboard-coverage.md", "lifecycle": "routed", "loadContexts": ["storyboard"] },
+    { "path": "references/storyboarding.md", "lifecycle": "routed", "loadContexts": ["storyboard"] },
+    { "path": "references/temporal-direction.md", "lifecycle": "routed", "loadContexts": ["temporal_direction"] }
+  ]
+}

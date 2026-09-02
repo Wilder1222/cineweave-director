@@ -1,0 +1,114 @@
+{
+  "caseId": "live.production.media-technical-probe",
+  "selectedSkill": "cineweave-production",
+  "route": "media_technical_probe",
+  "outcome": "answer",
+  "contractKinds": [
+    "cineweave_codex_media_technical_probe"
+  ],
+  "payloads": [
+    {
+      "kind": "cineweave_codex_media_technical_probe",
+      "payload": {
+        "kind": "cineweave_codex_media_technical_probe",
+        "contractVersion": "2.5.0",
+        "mediaTechnicalProbeId": "media-technical-probe.live-courtyard-v1",
+        "version": 1,
+        "mediaImportRef": {
+          "kind": "cineweave_codex_media_import",
+          "id": "media-import.live-courtyard-v1",
+          "version": 1,
+          "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+        },
+        "mediaId": "media.live-courtyard-v1",
+        "mediaContentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "mediaByteSize": 1866,
+        "skillReceipt": {
+          "repository": "https://github.com/Wilder1222/cineweave-studio",
+          "ref": "v2.5.1",
+          "commit": "0123456789abcdef0123456789abcdef01234567",
+          "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+          "installedBy": "codex-environment",
+          "usedAt": "2026-09-02T13:45:00.000Z"
+        },
+        "probeStatus": "recorded",
+        "probeTool": {
+          "executionState": "ffprobe_recorded",
+          "toolId": "ffprobe",
+          "toolVersion": "8.1.1",
+          "commandProfile": "ffprobe_format_streams_json_v1",
+          "sanitizedReportHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+          "observedAt": "2026-09-02T13:45:00.000Z"
+        },
+        "container": {
+          "status": "probed",
+          "formatNames": ["mov", "mp4", "m4a", "3gp", "3g2", "mj2"],
+          "startTimeSeconds": { "status": "reported", "value": 0 },
+          "durationSeconds": { "status": "reported", "value": 0.5 },
+          "bitRate": { "status": "reported", "value": 29856 },
+          "reportedByteSize": { "status": "reported", "value": 1866 },
+          "metadataExcluded": true
+        },
+        "streams": {
+          "status": "probed",
+          "video": [
+            {
+              "streamIndex": 0,
+              "codecName": "h264",
+              "codecProfile": { "status": "reported", "value": "High" },
+              "codecTag": { "status": "reported", "value": "avc1" },
+              "width": 16,
+              "height": 16,
+              "pixelFormat": { "status": "reported", "value": "yuv420p" },
+              "bitDepth": { "status": "reported", "value": 8 },
+              "fieldOrder": { "status": "reported", "value": "progressive" },
+              "sampleAspectRatio": { "status": "reported", "numerator": 1, "denominator": 1, "source": "aspect_ratio" },
+              "displayAspectRatio": { "status": "reported", "numerator": 1, "denominator": 1, "source": "aspect_ratio" },
+              "frameRate": { "status": "reported", "numerator": 24, "denominator": 1, "source": "avg_frame_rate" },
+              "timeBase": { "status": "reported", "numerator": 1, "denominator": 12288, "source": "time_base" },
+              "durationSeconds": { "status": "reported", "value": 0.5 },
+              "bitRate": { "status": "reported", "value": 13712 },
+              "colorSignals": {
+                "primaries": { "status": "reported", "value": "bt709" },
+                "transfer": { "status": "reported", "value": "bt709" },
+                "matrix": { "status": "reported", "value": "bt709" },
+                "range": { "status": "reported", "value": "tv" }
+              }
+            }
+          ],
+          "audio": [],
+          "otherStreamCount": 0
+        },
+        "executionBoundary": {
+          "usesLocalProbeTool": true,
+          "callsNetwork": false,
+          "writesSourceMedia": false,
+          "writesDerivedMedia": false,
+          "storesRawFilePath": false,
+          "storesRawContainerTags": false,
+          "humanReviewRequired": true,
+          "notes": "Synthetic live replay stores selected ffprobe fields only and excludes paths, tags and extradata."
+        },
+        "validation": {
+          "sourceBindingExact": true,
+          "mediaHashExact": true,
+          "probeStateConsistent": true,
+          "missingFieldsExplicit": true,
+          "sensitiveFieldsExcluded": true
+        },
+        "provenance": {
+          "source": "suite_builtin",
+          "createdAt": "2026-09-02T13:45:00.000Z",
+          "updatedAt": "2026-09-02T13:45:00.000Z",
+          "changeLog": [
+            "Synthetic live replay fixture for the Production-owned media technical probe route.",
+            "Technical metadata is recorded separately from color interpretation and quality approval."
+          ]
+        }
+      }
+    }
+  ],
+  "response": "已记录 ffprobe 的 MediaImport 技术探测：包含 container、video、audio、codec、尺寸、像素格式、帧率和 time base；未返回的字段保持 not_reported。只保存脱敏报告 hash，不联网、不写媒体、不保存路径，也不把探测结果当成正确色彩解释或质量批准。",
+  "questions": [],
+  "unsupportedClaims": []
+}

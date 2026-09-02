@@ -1,0 +1,139 @@
+{
+  "caseId": "live.director.camera-previs",
+  "selectedSkill": "cineweave-director",
+  "route": "camera_previs",
+  "outcome": "answer",
+  "contractKinds": [
+    "cineweave_codex_camera_previs_spec"
+  ],
+  "payloads": [
+    {
+      "kind": "cineweave_codex_camera_previs_spec",
+      "payload": {
+        "kind": "cineweave_codex_camera_previs_spec",
+        "contractVersion": "2.5.0",
+        "cameraPrevisSpecId": "camera-previs.live-rain-courtyard-v1",
+        "version": 1,
+        "shotSpecRef": {
+          "kind": "cineweave_codex_shot_spec",
+          "id": "shot.rain-courtyard-recognition-v1",
+          "version": 1,
+          "contentHash": "sha256:47ecc379955cbfd7a44c43c6c37b781d10f2aef57f05b0173a4c41d4d199c95f"
+        },
+        "sceneBindingRef": {
+          "kind": "scene_binding",
+          "id": "binding.scene-rain-courtyard-01",
+          "version": 1,
+          "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+        },
+        "temporalSpecRef": {
+          "kind": "cineweave_codex_temporal_spec",
+          "id": "temporal.rain-courtyard-recognition-v1",
+          "version": 1,
+          "contentHash": "sha256:4d1654ec389b9a574e3aa302efb2bf2471d8efec16bd135a7e6ef680fe2cb421"
+        },
+        "skillReceipt": {
+          "repository": "https://github.com/Wilder1222/cineweave-studio",
+          "ref": "v2.5.1",
+          "commit": "0123456789abcdef0123456789abcdef01234567",
+          "installedBy": "codex-environment",
+          "usedAt": "2026-09-01T01:30:00.000Z"
+        },
+        "coordinateSystem": {
+          "space": "scene_binding_local",
+          "linearUnit": "meter",
+          "upAxis": "Y",
+          "handedness": "right",
+          "cameraForwardAxis": "-Z",
+          "origin": "SceneBinding courtyard origin."
+        },
+        "frameRate": {
+          "numerator": 24,
+          "denominator": 1
+        },
+        "frameRange": {
+          "startFrame": 0,
+          "endFrame": 132
+        },
+        "camera": {
+          "projection": "perspective",
+          "filmback": {
+            "horizontalApertureMm": 36,
+            "verticalApertureMm": 24
+          },
+          "clippingRangeMeters": {
+            "near": 0.1,
+            "far": 100
+          },
+          "shutter": {
+            "openFrameOffset": -0.25,
+            "closeFrameOffset": 0.25
+          },
+          "focusTarget": "The near eye stays primary while the threshold remains readable."
+        },
+        "motion": {
+          "primaryBehavior": "dolly",
+          "components": ["translation", "focus_pull"],
+          "motivation": "Move only as recognition turns observation into pressure.",
+          "framingChange": "A small dolly position change tightens the frame; focal length remains fixed, so this is not zoom."
+        },
+        "tracks": {
+          "poseInterpolation": "linear",
+          "intrinsicsInterpolation": "linear",
+          "pose": [
+            {
+              "frame": 0,
+              "positionMeters": { "x": 0, "y": 1.55, "z": 4.2 },
+              "orientationQuaternion": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            },
+            {
+              "frame": 132,
+              "positionMeters": { "x": 0, "y": 1.55, "z": 4 },
+              "orientationQuaternion": { "x": 0, "y": 0, "z": 0, "w": 1 }
+            }
+          ],
+          "intrinsics": [
+            {
+              "frame": 0,
+              "focalLengthMm": 50,
+              "focusDistanceMeters": 3.2,
+              "fStop": 4
+            },
+            {
+              "frame": 132,
+              "focalLengthMm": 50,
+              "focusDistanceMeters": 2.85,
+              "fStop": 4
+            }
+          ]
+        },
+        "endState": "At the final frame, camera pose and focus are stable while both people remain separated by the threshold.",
+        "executionBoundary": {
+          "providerNeutral": true,
+          "generatesMedia": false,
+          "executesAdapter": false
+        },
+        "validation": {
+          "exactDependencies": true,
+          "coordinateSystemExplicit": true,
+          "tracksSeparate": true,
+          "keyframesOrdered": true,
+          "motionComponentsExplicit": true,
+          "providerNeutral": true,
+          "noMediaGeneration": true
+        },
+        "provenance": {
+          "source": "suite_builtin",
+          "createdAt": "2026-09-01T01:30:00.000Z",
+          "updatedAt": "2026-09-01T01:30:00.000Z",
+          "changeLog": [
+            "Synthetic live replay payload for the provider-neutral camera_previs route."
+          ]
+        }
+      }
+    }
+  ],
+  "response": "CameraPrevisSpec uses scene-local meter coordinates and a reduced 24/1 timebase. The pose track performs a dolly translation while focal length remains fixed, so it is not zoom; the separate focal and focus intrinsic track protects that distinction. The result is provider-neutral and does not generate media or execute an adapter.",
+  "questions": [],
+  "unsupportedClaims": []
+}

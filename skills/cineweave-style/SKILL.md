@@ -77,12 +77,12 @@ Choose the smallest route and load only the relevant references.
 
 ## Reference loading guide
 
-- Load `style-taxonomy.md` when the user asks for fine-grained categories, inheritance, atoms or recipes.
-- Load `visual-representation-system.md` for style exploration, abstraction budgets, RepresentationBinding, cross-representation or hybrid style.
-- Load `natural-human-rendering.md` for photoreal/live-action surface, optics and NHR fixture semantics.
-- Load `reference-policy.md` when deciding whether a style needs image references, video references, runtime references or a validation set.
-- Load `style-compiler.md` when compiling for an image/video target or mixing style with exact Character/Scene/Shot bindings.
-- Load `style-review.md` when reviewing drift, contamination, identity preservation or temporal stability.
-- Load `lighting-grammar.md` when separating physical SceneLightState from contrast, rolloff, color treatment and post-process.
+- Load `references/style-taxonomy.md` when the user asks for fine-grained categories, inheritance, atoms or recipes.
+- Load `references/visual-representation-system.md` for style exploration, abstraction budgets, RepresentationBinding, cross-representation or hybrid style.
+- Load `references/natural-human-rendering.md` for photoreal/live-action surface, optics and NHR fixture semantics.
+- Load `references/reference-policy.md` when deciding whether a style needs image references, video references, runtime references or a validation set.
+- Load `references/style-compiler.md` when compiling for an image/video target or mixing style with exact Character/Scene/Shot bindings.
+- Load `references/style-review.md` when reviewing drift, contamination, identity preservation or temporal stability.
+- Load `references/lighting-grammar.md` when separating physical SceneLightState from contrast, rolloff, color treatment and post-process.
 
 Return only the matching schema object for an importable route. Use named payloads for a combined analysis/compile request and preserve every exact ref and receipt.

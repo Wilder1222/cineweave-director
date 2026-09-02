@@ -11,6 +11,13 @@
     "temporalSpecId": { "$ref": "common.schema.json#/$defs/identifier" },
     "version": { "type": "integer", "minimum": 1 },
     "shotSpecRef": { "$ref": "common.schema.json#/$defs/contractRef" },
+    "heroFrameAnchorRef": {
+      "allOf": [
+        { "$ref": "common.schema.json#/$defs/contractRef" },
+        { "properties": { "kind": { "const": "cineweave_codex_hero_frame_anchor" } } }
+      ],
+      "description": "Optional exact visual anchor for the first frame; it carries visual DNA into temporal direction without changing the shot dependency."
+    },
     "durationSeconds": { "type": "number", "exclusiveMinimum": 0, "maximum": 300 },
     "skillReceipt": { "$ref": "common.schema.json#/$defs/skillReceipt" },
     "cameraMotion": {

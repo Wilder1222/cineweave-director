@@ -14,6 +14,8 @@
     { "caseId": "case.cross-representation-character", "status": "planned", "reviewedMediaIds": [], "findings": [], "metricResults": [], "notes": "Compare semantic anchors rather than same-medium pixel similarity." },
     { "caseId": "case.expression-sheet", "status": "planned", "reviewedMediaIds": [], "findings": [], "metricResults": [], "notes": "Keep all non-expression anchors fixed." },
     { "caseId": "case.scene-interaction", "status": "planned", "reviewedMediaIds": [], "findings": [], "metricResults": [], "notes": "Review contact, occlusion, support and source-consistent shadows." },
+    { "caseId": "case.cinematography-camera-previs-rain-courtyard", "status": "planned", "reviewedMediaIds": [], "findings": [], "metricResults": [], "notes": "Collect observed candidate media and exact observations before comparing the CameraPrevisSpec path, focus pull and stable end frame; the plan itself is not media evidence." },
+    { "caseId": "case.director-quality-rain-teahouse", "status": "planned", "reviewedMediaIds": [], "findings": [], "metricResults": [], "notes": "Collect paired observed media and exact frame/track observations before judging shot purpose, action coverage, spatial continuity and temporal causality." },
     { "caseId": "case.rights-gate", "status": "planned", "reviewedMediaIds": [], "findings": [], "metricResults": [], "notes": "Unknown or restricted rights remain blocking." }
   ],
   "humanReview": {
@@ -23,8 +25,16 @@
     "rubric": [
       "Review photography and human plausibility, never attractiveness.",
       "Review surface response, optics, contact, motivated light and temporal continuity at the delivered scale.",
+      "Review shot purpose, action coverage, spatial continuity and temporal causality against the exact Director artifacts.",
       "Route each failed dimension to one owner while preserving passing dimensions."
-    ]
+    ],
+    "calibration": {
+      "protocolId": "calibration.cinematography-camera-previs-v1",
+      "status": "planned",
+      "independentReviewerCount": 0,
+      "agreementScore": null,
+      "adjudicationStatus": "not_started"
+    }
   },
   "decision": {
     "overallStatus": "planned",
@@ -38,7 +48,11 @@
   "provenance": {
     "source": "suite_builtin",
     "createdAt": "2026-08-26T10:00:00.000Z",
-    "updatedAt": "2026-08-26T10:00:00.000Z",
-    "changeLog": ["v1: planned ControlBench review receipt with complete case coverage and no claimed media output"]
+    "updatedAt": "2026-09-02T04:00:00.000Z",
+    "changeLog": [
+      "v1: planned ControlBench review receipt with complete case coverage and no claimed media output",
+      "Bind the planned review to the CinematographyBench calibration protocol without claiming reviewer results or observed media.",
+      "Add a planned DirectorQualityBench result and keep paired observed-media calibration results absent until real candidate media and human judgments exist."
+    ]
   }
 }

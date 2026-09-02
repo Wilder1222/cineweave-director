@@ -10,6 +10,9 @@ import { sha256Canonical } from "../src/canonical-json.mjs";
 import { fixtureSvgAdapter } from "../src/fixture-svg-adapter.mjs";
 import { exportProjectBundle, importProjectBundle, verifyProjectBundle } from "../src/project-bundle.mjs";
 import { ingestReferenceAsset, verifyReferenceAsset } from "../src/reference-assets.mjs";
+import { compileShotPlan, listAtomicCinematicSkills } from "../src/cinematic-skill-runtime.mjs";
+import { resolveCapabilityPlan } from "../src/capability-resolution-runtime.mjs";
+import { createExecutionPreview } from "../src/execution-preview-runtime.mjs";
 
 function parseArgs(values) {
   const positional = [];
@@ -42,6 +45,10 @@ function usage() {
     "cineweave-studio gate <project> <artifact-envelope> [--require-current] [--require-dependency-approvals]",
     "cineweave-studio reference-ingest <project> <media-file> [--source-class user_upload|local_file|generated_output|external_download] [--max-bytes <n>]",
     "cineweave-studio reference-verify <project> <reference-asset-envelope>",
+    "cineweave-studio cinematic-skills <manifest-json>",
+    "cineweave-studio shot-compile <manifest-json> <invocation-json> [--alias-registry <registry-json>]",
+    "cineweave-studio capability-resolve <request-json> <candidates-json>",
+    "cineweave-studio execution-preview <execution-request-json> <capability-resolution-plan-json> <adapter-descriptor-json> <capability-profile-json> --estimated-amount <n>",
     "cineweave-studio export <project> <bundle-directory>",
     "cineweave-studio import <bundle-directory> <project>",
     "cineweave-studio bundle-verify <bundle-directory>"
@@ -160,6 +167,61 @@ async function main() {
     if (!positional[0] || !positional[1]) throw new Error(usage());
     const artifactRef = await loadEnvelopeArtifactRef(positional[1]);
     console.log(JSON.stringify(await verifyReferenceAsset(resolve(positional[0]), artifactRef), null, 2));
+    return;
+  }
+  if (command === "cinematic-skills") {
+    if (!positional[0]) throw new Error(usage());
+    const manifest = await readStrictJson(resolve(positional[0]));
+    console.log(JSON.stringify(listAtomicCinematicSkills(manifest), null, 2));
+    return;
+  }
+  if (command === "shot-compile") {
+    if (!positional[0] || !positional[1]) throw new Error(usage());
+    const manifest = await readStrictJson(resolve(positional[0]));
+    const invocation = await readStrictJson(resolve(positional[1]));
+    const options = {};
+    if (flags["alias-registry"]) options.assetAliasRegistry = await readStrictJson(resolve(flags["alias-registry"]));
+    console.log(JSON.stringify(compileShotPlan(manifest, invocation, options), null, 2));
+    return;
+  }
+  if (command === "capability-resolve") {
+    if (!positional[0] || !positional[1]) throw new Error(usage());
+    const request = await readStrictJson(resolve(positional[0]));
+    const candidateDocument = await readStrictJson(resolve(positional[1]));
+    const candidates = Array.isArray(candidateDocument) ? candidateDocument : candidateDocument.candidates;
+    console.log(JSON.stringify(resolveCapabilityPlan(request, candidates, {
+      ...(flags["created-at"] ? { createdAt: flags["created-at"] } : {})
+    }), null, 2));
+    return;
+  }
+  if (command === "execution-preview") {
+    if (!positional[0] || !positional[1] || !positional[2] || !positional[3] || flags["estimated-amount"] === true) throw new Error(usage());
+    const request = await readStrictJson(resolve(positional[0]));
+    const resolutionPlan = await readStrictJson(resolve(positional[1]));
+    const adapterDescriptor = await readStrictJson(resolve(positional[2]));
+    const capabilityProfile = await readStrictJson(resolve(positional[3]));
+    const estimatedAmount = Number(flags["estimated-amount"]);
+    if (!Number.isFinite(estimatedAmount)) throw new Error("--estimated-amount must be a finite number");
+    const requestRef = {
+      kind: request.kind,
+      id: request.requestId,
+      version: request.version,
+      contentHash: sha256Canonical(request)
+    };
+    const resolutionRef = {
+      kind: resolutionPlan.kind,
+      id: resolutionPlan.resolutionPlanId,
+      version: resolutionPlan.version,
+      contentHash: sha256Canonical(resolutionPlan)
+    };
+    console.log(JSON.stringify(createExecutionPreview(request, resolutionPlan, {
+      executionRequestRef: requestRef,
+      capabilityResolutionPlanRef: resolutionRef,
+      adapterDescriptor,
+      capabilityProfile,
+      estimatedAmount,
+      ...(flags["created-at"] ? { createdAt: flags["created-at"] } : {})
+    }), null, 2));
     return;
   }
   if (command === "export") {

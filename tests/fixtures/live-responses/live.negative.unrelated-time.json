@@ -4,6 +4,7 @@
   "route": null,
   "outcome": "answer",
   "contractKinds": [],
+  "payloads": [],
   "response": "这个请求不属于 CineWeave 创作工作流，应由时间查询能力直接处理。",
   "questions": [],
   "unsupportedClaims": []

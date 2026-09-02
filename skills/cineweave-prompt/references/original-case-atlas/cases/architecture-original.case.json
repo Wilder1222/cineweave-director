@@ -1,0 +1,77 @@
+{
+  "schemaVersion": "1.0.0",
+  "caseId": "case.atlas.architecture-original",
+  "category": "architecture",
+  "title": "Courtyard massing study",
+  "summary": "An original geometric architecture fixture showing two joined masses, a bounded facade-bay rhythm and one abstract scale figure without referencing a real building.",
+  "status": "worked_fixture",
+  "routing": {
+    "indexPath": "../index.json",
+    "categoryPath": "../categories/architecture.md",
+    "triggers": ["architecture", "facade", "建筑", "空间设计"],
+    "excludedCategories": ["portrait", "product", "food", "editorial", "diagrams", "exact-text"]
+  },
+  "prompt": {
+    "contentHash": "sha256:a171cd246ee6df41942e4d2260b288e8a03dcd0f4ef507aec26e71160f7c5c5f",
+    "record": {
+      "kind": "cineweave_codex_prompt_record",
+      "contractVersion": "2.0.0",
+      "promptId": "atlas-architecture-original",
+      "title": "Courtyard massing study prompt",
+      "version": 1,
+      "status": "active",
+      "domain": "architecture",
+      "generationMode": "generate",
+      "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-studio.git", "ref": "working-tree-v2.5.x", "commit": "6dd43cb645122f57b5c545803b374d831da454d9", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00.000Z" },
+      "purpose": "Provide a bounded architecture worked example with observable massing, facade rhythm and scale cue.",
+      "sourceText": "A fictional two-volume courtyard building with four facade bays and one abstract scale figure.",
+      "tags": ["atlas", "architecture", "original", "deterministic"],
+      "prompt": {
+        "language": "en",
+        "positive": "One fictional two-volume courtyard building, clear roof and facade massing, four differently proportioned openings, one abstract human-scale marker, restrained mineral palette, orthographic-like graphic clarity.",
+        "negative": "No landmark likeness, no architect signature, no logo, no watermark, no external building reference.",
+        "blocks": {
+          "subject": ["one fictional joined two-volume building mass"],
+          "composition": ["facade elevation with a readable primary and secondary volume"],
+          "environment": ["plain ground datum and one abstract scale marker"],
+          "materials": ["flat mineral tones separated from window bays"],
+          "constraints": ["original vector primitives only", "no real-building likeness"]
+        }
+      },
+      "variables": [],
+      "references": [],
+      "variants": [{ "variantId": "atlas-architecture-original-baseline", "label": "Baseline geometry", "change": "No variation; retain the checked fixture geometry.", "positive": "Retain two joined masses, four facade bays and one scale marker.", "status": "selected" }],
+      "evaluation": {
+        "criteria": [{ "criterion": "massing-readability", "check": "Primary and secondary building masses remain distinguishable.", "status": "pass", "evidence": "The deterministic SVG contains one massing path with two joined volumes." }],
+        "knownRisks": ["A geometric fixture does not establish construction feasibility or material realism."],
+        "nextExperiment": "Human review may compare facade-bay rhythm without changing the overall massing."
+      },
+      "provenance": { "source": "codex_authored", "createdAt": "2026-09-02T00:00:00.000Z", "updatedAt": "2026-09-02T00:00:00.000Z", "changeLog": ["v1: create an original deterministic architecture prompt fixture."] },
+      "validation": { "onePrimaryTarget": true, "providerNeutral": true, "variablesBound": true, "referencesScoped": true, "observationReady": true }
+    }
+  },
+  "adapterContext": { "adapterId": "adapter.atlas-svg.local", "adapterVersion": "1.0.0", "implementationPath": "skills/cineweave-prompt/scripts/generate-original-case-atlas.mjs", "implementationContentHash": "sha256:581fbf2a9209b062abc2c1a9dcc4c6aa1bd1aa572c9ee7e24cd242055b2b358a", "executionMode": "fixture", "runtime": "node>=22", "networkAccess": false, "externalEffects": false, "providerNeutral": true, "costAmount": 0, "currency": "USD" },
+  "visualSpec": {
+    "width": 1200,
+    "height": 900,
+    "seed": "atlas-architecture-v1",
+    "palette": ["#EEF1EC", "#C8D3C5", "#D78B63", "#7D9482", "#263A36"],
+    "exactText": ["COURTYARD MASSING", "Facade rhythm study"],
+    "elements": ["massing", "bay-rhythm", "scale-figure"],
+    "composition": "Two joined building masses form a readable elevation; four bays establish rhythm and one abstract figure supplies scale."
+  },
+  "candidate": { "path": "../../assets/original-case-atlas/architecture-original.svg", "mimeType": "image/svg+xml", "byteLength": 1286, "contentHash": "sha256:d162ffc4c3a1f6a4bd15e5fa34f30059719b8ee77c757ce62a2f580e2a3a0c4c", "width": 1200, "height": 900 },
+  "rights": { "profilePath": "../rights/license-profile.json", "profileContentHash": "sha256:1b01597f19ed1dad561fb3fae0907b6003869faf5e63e347a240c0c59a11eae8", "creatorOwned": true, "redistribution": "allowed", "publication": "allowed", "thirdPartyAssets": false, "identityRights": "not_applicable", "fontPolicy": "system-font-codepoints-not-pixel-pinned" },
+  "reviewEvidence": {
+    "status": "deterministic_checks_complete", "candidateContentHash": "sha256:d162ffc4c3a1f6a4bd15e5fa34f30059719b8ee77c757ce62a2f580e2a3a0c4c", "reviewType": "machine", "checkedAt": "2026-09-02T00:00:00.000Z",
+    "criteria": [
+      { "criterionId": "rebuild.byte-identical", "status": "pass", "evidence": "The local generator must reproduce the committed candidate byte for byte." },
+      { "criterionId": "svg.active-content-absent", "status": "pass", "evidence": "The candidate uses static SVG primitives and system-font text only." },
+      { "criterionId": "rights.profile-verified", "status": "pass", "evidence": "The shared creator-owned rights profile is verified and hash-bound." }
+    ],
+    "humanReview": { "status": "not_performed", "reviewerCount": 0 }, "decision": "mechanical_fixture_pass",
+    "notAssessed": ["human aesthetic quality", "provider generation quality", "cross-platform font pixel equivalence"]
+  },
+  "reproduction": { "generatorPath": "skills/cineweave-prompt/scripts/generate-original-case-atlas.mjs", "generatorVersion": "1.0.0", "caseSelector": "architecture", "expectedContentHash": "sha256:d162ffc4c3a1f6a4bd15e5fa34f30059719b8ee77c757ce62a2f580e2a3a0c4c", "deterministic": true, "networkRequired": false, "externalInputs": [] },
+  "claimsBoundary": { "scope": "mechanical_fixture_only", "humanReview": "not_performed", "providerOutput": "not_generated", "providerQuality": "not_assessed", "photorealism": "not_assessed", "domainFitness": "not_assessed", "crossPlatformFontPixels": "not_guaranteed" }
+}

@@ -80,18 +80,6 @@
     "negativeSpace": "两人之间保留一段空门槛和湿石地",
     "visualHierarchy": "手指张力先于眼神，眼神先于故人身份，空门槛最后显出关系距离。"
   },
-  "lightingPlanRef": {
-    "kind": "cineweave_codex_shot_lighting_plan",
-    "id": "shot-light.rain-courtyard-recognition-v1",
-    "version": 1,
-    "contentHash": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
-  },
-  "temporalSpecRef": {
-    "kind": "cineweave_codex_temporal_spec",
-    "id": "temporal.rain-courtyard-recognition-v1",
-    "version": 1,
-    "contentHash": "sha256:9999999999999999999999999999999999999999999999999999999999999999"
-  },
   "performanceTimelineRefs": [
     {
       "kind": "cineweave_codex_performance_timeline",

@@ -1,0 +1,89 @@
+{
+  "kind": "cineweave_codex_board_assembly_plan",
+  "contractVersion": "2.0.0",
+  "worldId": "world-rain-teahouse",
+  "boardPlanId": "board.rain-teahouse-table-turn-v1",
+  "version": 1,
+  "status": "active",
+  "purpose": "把“长桌转向、楼梯追兵封路”的单个分镜作为独立任务生成，并由确定性装配器放入固定的单格审阅板。",
+  "canvas": {
+    "width": 1920,
+    "height": 1080,
+    "background": "#17120F",
+    "padding": 72,
+    "gap": 32,
+    "labelHeight": 64,
+    "labelFontSize": 28
+  },
+  "recipeRuns": [
+    {
+      "recipeRunId": "run.rain-teahouse-table-turn",
+      "recipeRef": {
+        "kind": "cineweave_codex_asset_recipe",
+        "id": "recipe.storyboard-sequence-4up",
+        "version": 1,
+        "contentHash": "sha256:fe7fe526c783e8c9837337ee392c3bd89ee627bd8a1fa1dd8e3999805761ef77"
+      },
+      "taskIds": ["task.story.shot-01"]
+    }
+  ],
+  "regions": [
+    {
+      "regionId": "region.storyboard",
+      "x": 0.08,
+      "y": 0.08,
+      "width": 0.84,
+      "height": 0.84,
+      "rows": 1,
+      "columns": 1,
+      "tileAspectRatio": "16:9",
+      "labelPolicy": "outside_tile"
+    }
+  ],
+  "tilePlacements": [
+    {
+      "tileId": "tile.rain-teahouse-table-turn",
+      "recipeRunId": "run.rain-teahouse-table-turn",
+      "taskId": "task.story.shot-01",
+      "regionId": "region.storyboard",
+      "row": 0,
+      "column": 0,
+      "label": "TABLE TURN · STAIR SEALED",
+      "required": true,
+      "fit": "contain",
+      "minimumPixelDimensions": "1600x900"
+    }
+  ],
+  "failurePolicy": {
+    "strategy": "retry_failed_tiles_only",
+    "preserveAcceptedOutputs": true,
+    "blockOnRequiredTileFailure": true
+  },
+  "executionBoundary": {
+    "providerNeutral": true,
+    "generatesMedia": false,
+    "humanApprovalRequired": true,
+    "notes": "该计划只声明独立任务和确定性装配位置；任何生成、重试或验收仍由 Production 显式执行。"
+  },
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-studio",
+    "ref": "v2.5.1",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-09-01T09:30:00.000Z"
+  },
+  "validation": {
+    "exactRecipeTasks": true,
+    "regionsNonOverlapping": true,
+    "perTileProvenance": true,
+    "heterogeneousLayoutsAllowed": true,
+    "deterministicAssembly": true
+  },
+  "provenance": {
+    "source": "suite_builtin",
+    "createdAt": "2026-09-01T09:30:00.000Z",
+    "updatedAt": "2026-09-01T09:30:00.000Z",
+    "changeLog": ["v1: one independently generated rain-teahouse storyboard tile with deterministic placement"]
+  }
+}

@@ -89,3 +89,14 @@ Before an active or locked binding is used for production, require:
 7. a human approves the exact binding set.
 
 Hash verification cannot substitute for these gates.
+
+## Scoped `@Asset` aliases
+
+An `AssetAliasRegistry` is a presentation-layer map for creator shorthand such
+as `@沈蘅`, `@临安.御街.雨夜` or `@青玉剑`. Each entry resolves to one exact
+existing contract reference; the alias does not create a new asset, merge
+roles, or change Canon. Keep the registry scoped to a project, sequence or
+shot, normalize aliases to Unicode NFC, reject collisions and reserve
+`@latest`. Unknown aliases remain blocked until the creator supplies an exact
+target. The registry never infers a target from surrounding prompt text,
+searches another scope, calls a provider or writes a file.

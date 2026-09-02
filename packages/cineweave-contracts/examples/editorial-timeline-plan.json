@@ -1,0 +1,148 @@
+{
+  "kind": "cineweave_codex_editorial_timeline_plan",
+  "contractVersion": "2.5.0",
+  "editorialTimelinePlanId": "editorial-timeline.rain-teahouse-escape-v1",
+  "version": 1,
+  "worldId": "world-rain-teahouse",
+  "storyboardRef": {
+    "kind": "cineweave_codex_storyboard_sequence",
+    "id": "storyboard.rain-teahouse-table-turn-v1",
+    "version": 1,
+    "contentHash": "sha256:8d49d4b82c16d6f1d72d447ff10a83393dd9261179bf5c0e8d0ce61d7269d86c"
+  },
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-studio",
+    "ref": "v2.5.1",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-09-02T09:00:00.000Z"
+  },
+  "timelineName": "雨夜茶楼撤离：桌体转向与退路封锁",
+  "frameRate": {
+    "numerator": 24,
+    "denominator": 1,
+    "dropFrame": false
+  },
+  "timelineRange": {
+    "startFrame": 0,
+    "durationFrames": 120
+  },
+  "conformStatus": "partial",
+  "tracks": [
+    {
+      "trackId": "track.picture.main",
+      "trackType": "picture",
+      "order": 1,
+      "name": "主画面剪辑轨",
+      "segments": [
+        {
+          "segmentId": "segment.table-turn",
+          "segmentType": "media",
+          "timelineRange": {
+            "startFrame": 0,
+            "durationFrames": 72
+          },
+          "shotId": "shot.rain-teahouse-table-turn-v1",
+          "shotSpecRef": {
+            "kind": "cineweave_codex_shot_spec",
+            "id": "shot.rain-teahouse-table-turn-v1",
+            "version": 1,
+            "contentHash": "sha256:8bea208fad08a8b509eec05e3cd387cc4d872e3127beeaf17302bd07b5144546"
+          },
+          "mediaImportRef": {
+            "kind": "cineweave_codex_media_import",
+            "id": "media-import.rain-teahouse-table-turn-v1",
+            "version": 1,
+            "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+          },
+          "mediaId": "media.rain-teahouse-table-turn-v1",
+          "sourceRange": {
+            "startFrame": 0,
+            "durationFrames": 72
+          }
+        },
+        {
+          "segmentId": "segment.exit-pressure",
+          "segmentType": "placeholder",
+          "timelineRange": {
+            "startFrame": 72,
+            "durationFrames": 48
+          },
+          "shotId": "shot.rain-teahouse-exit-pressure-v1",
+          "shotSpecRef": {
+            "kind": "cineweave_codex_shot_spec",
+            "id": "shot.rain-teahouse-exit-pressure-v1",
+            "version": 1,
+            "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+          },
+          "temporalSpecRef": {
+            "kind": "cineweave_codex_temporal_spec",
+            "id": "temporal.rain-teahouse-exit-pressure-v1",
+            "version": 1,
+            "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+          }
+        }
+      ]
+    }
+  ],
+  "transitions": [
+    {
+      "transitionId": "transition.table-turn-to-exit-pressure",
+      "trackId": "track.picture.main",
+      "fromSegmentId": "segment.table-turn",
+      "toSegmentId": "segment.exit-pressure",
+      "type": "cut",
+      "atFrame": 72,
+      "durationFrames": 0,
+      "rationale": "桌沿摩擦声先入，随后在楼梯落地声压入时切向仍待生成的退路封锁镜头。"
+    }
+  ],
+  "markers": [
+    {
+      "markerId": "marker.table-turn-entry",
+      "frame": 0,
+      "role": "entry",
+      "note": "从已验证的桌体横置媒资开始，保留正门—临河窗的既有轴线。",
+      "shotId": "shot.rain-teahouse-table-turn-v1"
+    },
+    {
+      "markerId": "marker.exit-pressure-cut",
+      "frame": 72,
+      "role": "transition",
+      "note": "楼梯落地声成为切点；目标镜头仍是 placeholder，不能被表述为已导出媒体。",
+      "shotId": "shot.rain-teahouse-exit-pressure-v1"
+    }
+  ],
+  "otioExchange": {
+    "model": "otio-core",
+    "externalMediaOnly": true,
+    "serializationStatus": "not_exported",
+    "notes": "采用 Timeline/Track/Clip/Gap/Transition 的可交换核心模型；本合同只保留精确制品引用，不嵌入媒体或生成 .otio 文件。"
+  },
+  "executionBoundary": {
+    "providerNeutral": true,
+    "embedsMedia": false,
+    "exportsTimeline": false,
+    "humanApprovalRequired": true,
+    "notes": "Production 编排已导入 Draft 与 placeholder；实际 conform、导出和交付仍需精确媒体、人工审批与专用适配器。"
+  },
+  "validation": {
+    "rationalTimebase": true,
+    "trackRangesClosed": true,
+    "segmentsOrdered": true,
+    "transitionsAnchored": true,
+    "sourceRefsExact": true,
+    "plannedMediaHonest": true,
+    "providerNeutral": true
+  },
+  "provenance": {
+    "source": "codex_authored",
+    "createdAt": "2026-09-02T09:00:00.000Z",
+    "updatedAt": "2026-09-02T09:00:00.000Z",
+    "changeLog": [
+      "v1: Production-owned, OTIO-model-aligned picture editorial plan with rational frames and exact external media references.",
+      "The second segment remains a placeholder until a verified MediaImport exists."
+    ]
+  }
+}

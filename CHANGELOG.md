@@ -2,6 +2,24 @@
 
 ## Unreleased
 
+- added a Prompt-owned Original Case Atlas with seven rights-cleared portrait,
+  product, food, architecture, editorial, diagram and exact-text worked cases;
+  a compact bilingual routing index plus executable planner exposes only one
+  matching category, while every case binds a versioned `PromptRecord`, local
+  adapter hash, creator-owned `LicenseProfile`, candidate byte hash and
+  structurally machine-only review evidence;
+- added deterministic, zero-network SVG reproduction plus release-gated checks
+  for canonical hashes, byte-identical rebuilds, executed category isolation,
+  exact-text NFC codepoints, conservative SVG element allowlisting, rights drift
+  and contradictory human/provider/pixel-quality claims, with positive and
+  adversarial runtime coverage;
+- completed the contract-aware repair conformance kit with bounded local
+  adapter timeout, caller cancellation, sanitized malformed-output and fault
+  receipts, asynchronous late-settlement isolation and same-host serialization;
+  every failure remains non-writing, provider-neutral and pending human review;
+- aligned the Execution Preview regression fixture with its 2.5 contract so an
+  absent estimate remains explicit `unknown`/`null` evidence with hard blocking
+  risks instead of being treated as an invalid preview;
 - added Director-owned `ActionSequenceSpec` and `action_sequence` routing for
   multi-beat choreography, exact Character/Scene bindings, physical-design
   checks, coverage requirements, closed continuity and visible qualified-review

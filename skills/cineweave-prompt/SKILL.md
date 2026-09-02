@@ -15,7 +15,7 @@ This Skill owns `PromptRecord`, `ImagePrompt`, `PromptHypothesis`, `DraftBrief`,
 - `$cineweave-character` owns reusable identity, appearance and performance facts.
 - `$cineweave-scene` owns reusable geography, architecture, materials and physical scene light state.
 - `$cineweave-style` owns representational style systems and style light grammar.
-- `$cineweave-director` owns shot purpose, blocking, camera, shot lighting and temporal direction.
+- `$cineweave-director` owns shot purpose, blocking, camera, shot lighting, temporal direction and optional numerical camera previs.
 - `$cineweave-reference` owns raw media ingestion, atomic visible observations, suitability review and exact reference bindings.
 - `$cineweave-production` owns execution recipes, evidence, capabilities and rights gates.
 
@@ -29,7 +29,7 @@ Use this Skill directly for portraits, products, food, architecture, interiors, 
 
 Choose the smallest route.
 
-- `prompt_design`: turn a natural-language intent into a reusable `PromptRecord`; read `references/prompt-architecture.md`, `references/prompt-lifecycle.md` and, when useful, `references/domain-recipes.md`. When the requested target intentionally differs from a reviewed reference, also read `references/reference-transforms.md` and bind an explicit `referenceTransform`. Read `references/surface-response.md` only when skin, limbs, hair, textile, metal, glass or liquid response is a primary acceptance target.
+- `prompt_design`: turn a natural-language intent into a reusable `PromptRecord`; read `references/prompt-architecture.md`, `references/prompt-lifecycle.md` and, when useful, `references/domain-recipes.md`. When the user requests a worked example, first read `references/original-case-atlas/index.json`, match exactly one category, then read only that category's `referencePath`; never load unmatched category pages. The bundled `scripts/route-original-case-atlas.mjs` provides an auditable index-first load plan and returns no category page for unmatched or ambiguous requests. When the requested target intentionally differs from a reviewed reference, also read `references/reference-transforms.md` and bind an explicit `referenceTransform`. Read `references/surface-response.md` only when skin, limbs, hair, textile, metal, glass or liquid response is a primary acceptance target.
 - `prompt_import`: preserve supplied source text, identify variables and contradictions, then normalize it without claiming improved generation quality; read `references/prompt-lifecycle.md`, and for short-drama/anime/manga templates with global settings, timed shots, lighting or sound read `references/cinematic-template-import.md`; return `PromptRecord`.
 - `prompt_compile`: compile one bounded image request. Consume an exact `ShotSpec` when directing decisions matter; otherwise state a minimal observable viewpoint. When the selected ShotSpec carries `actionSequenceRef`/`actionBeatIds` for a fight, compile its exact `promptHandoff.actionBreakdown` into the action block and preserve the selected beat order. When a source review is reframed, retain its exact `referenceTransform` in the output. Read `references/surface-response.md` only when a surface response is a primary acceptance target. Return `ImagePrompt`.
 - `prompt_compare`: produce controlled variants that change one declared hypothesis each; read `references/prompt-lifecycle.md` and store them in `PromptRecord.variants`.

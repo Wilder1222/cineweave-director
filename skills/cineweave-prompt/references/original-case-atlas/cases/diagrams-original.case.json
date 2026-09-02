@@ -1,0 +1,76 @@
+{
+  "schemaVersion": "1.0.0",
+  "caseId": "case.atlas.diagrams-original",
+  "category": "diagrams",
+  "title": "Three-node evidence flow",
+  "summary": "An original technical diagram fixture with exactly three labeled nodes and two directed edges, designed to verify topology and literal node copy without external iconography.",
+  "status": "worked_fixture",
+  "routing": {
+    "indexPath": "../index.json",
+    "categoryPath": "../categories/diagrams.md",
+    "triggers": ["diagram", "flowchart", "图解", "流程图"],
+    "excludedCategories": ["portrait", "product", "food", "architecture", "editorial", "exact-text"]
+  },
+  "prompt": {
+    "contentHash": "sha256:4a6d77a1b2f9f23beb8de89f2a74db91d99cf7122e9f818319e8ac97de2684da",
+    "record": {
+      "kind": "cineweave_codex_prompt_record",
+      "contractVersion": "2.0.0",
+      "promptId": "atlas-diagrams-original",
+      "title": "Three-node evidence flow prompt",
+      "version": 1,
+      "status": "active",
+      "domain": "technical",
+      "generationMode": "generate",
+      "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-studio.git", "ref": "working-tree-v2.5.x", "commit": "6dd43cb645122f57b5c545803b374d831da454d9", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00.000Z" },
+      "purpose": "Provide a bounded diagram worked example with observable node count, edge direction and literal labels.",
+      "sourceText": "A left-to-right three-node flow labeled INTENT, CONSTRAINT and EVIDENCE.",
+      "tags": ["atlas", "diagram", "technical", "deterministic"],
+      "prompt": {
+        "language": "en",
+        "positive": "A left-to-right technical flow with exactly three rounded rectangular nodes labeled INTENT, CONSTRAINT and EVIDENCE, exactly two directed connectors, one concise legend, high-contrast accessible palette.",
+        "negative": "No fourth node, no crossing edge, no icon, no logo, no watermark, no external diagram asset.",
+        "blocks": {
+          "subject": ["exactly three labeled technical nodes"],
+          "composition": ["single left-to-right row with exactly two directed connectors"],
+          "technical": ["literal labels INTENT, CONSTRAINT and EVIDENCE", "one legend below the node row"],
+          "constraints": ["original vector primitives only", "topology must remain three nodes and two edges"]
+        }
+      },
+      "variables": [],
+      "references": [],
+      "variants": [{ "variantId": "atlas-diagrams-original-baseline", "label": "Baseline topology", "change": "No variation; retain the checked three-node topology.", "positive": "Retain exactly three nodes, two edges and the three literal labels.", "status": "selected" }],
+      "evaluation": {
+        "criteria": [{ "criterion": "topology", "check": "Exactly three nodes and two directed edges are present in left-to-right order.", "status": "pass", "evidence": "The deterministic SVG exposes one nodes group and one edges group with the declared topology." }],
+        "knownRisks": ["A geometric fixture does not establish semantic correctness for another workflow."],
+        "nextExperiment": "Human review may compare connector spacing without changing topology or copy."
+      },
+      "provenance": { "source": "codex_authored", "createdAt": "2026-09-02T00:00:00.000Z", "updatedAt": "2026-09-02T00:00:00.000Z", "changeLog": ["v1: create an original deterministic diagram prompt fixture."] },
+      "validation": { "onePrimaryTarget": true, "providerNeutral": true, "variablesBound": true, "referencesScoped": true, "observationReady": true }
+    }
+  },
+  "adapterContext": { "adapterId": "adapter.atlas-svg.local", "adapterVersion": "1.0.0", "implementationPath": "skills/cineweave-prompt/scripts/generate-original-case-atlas.mjs", "implementationContentHash": "sha256:581fbf2a9209b062abc2c1a9dcc4c6aa1bd1aa572c9ee7e24cd242055b2b358a", "executionMode": "fixture", "runtime": "node>=22", "networkAccess": false, "externalEffects": false, "providerNeutral": true, "costAmount": 0, "currency": "USD" },
+  "visualSpec": {
+    "width": 1200,
+    "height": 900,
+    "seed": "atlas-diagrams-v1",
+    "palette": ["#F6F7FA", "#DDE8FF", "#FFDE8A", "#BFE7D1", "#273247"],
+    "exactText": ["INTENT", "CONSTRAINT", "EVIDENCE"],
+    "elements": ["edges", "nodes", "legend"],
+    "composition": "Exactly three rounded nodes form one left-to-right row joined by exactly two directed connectors; one legend sits below."
+  },
+  "candidate": { "path": "../../assets/original-case-atlas/diagrams-original.svg", "mimeType": "image/svg+xml", "byteLength": 1488, "contentHash": "sha256:072e63c70a445a26ab052076792c50309db7dec3a796b8e652a5d7a9c4728758", "width": 1200, "height": 900 },
+  "rights": { "profilePath": "../rights/license-profile.json", "profileContentHash": "sha256:1b01597f19ed1dad561fb3fae0907b6003869faf5e63e347a240c0c59a11eae8", "creatorOwned": true, "redistribution": "allowed", "publication": "allowed", "thirdPartyAssets": false, "identityRights": "not_applicable", "fontPolicy": "system-font-codepoints-not-pixel-pinned" },
+  "reviewEvidence": {
+    "status": "deterministic_checks_complete", "candidateContentHash": "sha256:072e63c70a445a26ab052076792c50309db7dec3a796b8e652a5d7a9c4728758", "reviewType": "machine", "checkedAt": "2026-09-02T00:00:00.000Z",
+    "criteria": [
+      { "criterionId": "rebuild.byte-identical", "status": "pass", "evidence": "The local generator must reproduce the committed candidate byte for byte." },
+      { "criterionId": "svg.active-content-absent", "status": "pass", "evidence": "The candidate uses static SVG primitives and system-font text only." },
+      { "criterionId": "rights.profile-verified", "status": "pass", "evidence": "The shared creator-owned rights profile is verified and hash-bound." }
+    ],
+    "humanReview": { "status": "not_performed", "reviewerCount": 0 }, "decision": "mechanical_fixture_pass",
+    "notAssessed": ["human aesthetic quality", "provider generation quality", "cross-platform font pixel equivalence"]
+  },
+  "reproduction": { "generatorPath": "skills/cineweave-prompt/scripts/generate-original-case-atlas.mjs", "generatorVersion": "1.0.0", "caseSelector": "diagrams", "expectedContentHash": "sha256:072e63c70a445a26ab052076792c50309db7dec3a796b8e652a5d7a9c4728758", "deterministic": true, "networkRequired": false, "externalInputs": [] },
+  "claimsBoundary": { "scope": "mechanical_fixture_only", "humanReview": "not_performed", "providerOutput": "not_generated", "providerQuality": "not_assessed", "photorealism": "not_assessed", "domainFitness": "not_assessed", "crossPlatformFontPixels": "not_guaranteed" }
+}

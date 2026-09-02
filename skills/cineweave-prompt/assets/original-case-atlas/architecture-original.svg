@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" data-case-id="case.atlas.architecture-original">
+  <title>Courtyard massing study</title>
+  <desc>Original deterministic architecture fixture; no external media or provider output.</desc>
+  <rect width="1200" height="900" fill="#EEF1EC"/>
+  <path data-element="massing" d="M210 690 V330 L435 210 L660 330 V690 Z M660 690 V285 L910 380 V690 Z" fill="#C8D3C5" stroke="#263A36" stroke-width="8"/>
+  <g data-element="bay-rhythm" fill="#EEF1EC" stroke="#7D9482" stroke-width="5"><rect x="285" y="405" width="90" height="150"/><rect x="465" y="365" width="90" height="190"/><rect x="710" y="410" width="70" height="145"/><rect x="820" y="450" width="55" height="105"/></g>
+  <g data-element="scale-figure" fill="#D78B63"><circle cx="965" cy="590" r="20"/><path d="M965 610 V690 M965 635 L930 665 M965 635 L995 670" stroke="#D78B63" stroke-width="12" stroke-linecap="round"/></g>
+  <text x="72" y="100" fill="#263A36" font-family="system-ui, sans-serif" font-size="46" font-weight="600" text-anchor="start">COURTYARD MASSING</text>
+  <text x="72" y="150" fill="#7D9482" font-family="system-ui, sans-serif" font-size="20" font-weight="500" text-anchor="start">Facade rhythm study</text>
+</svg>

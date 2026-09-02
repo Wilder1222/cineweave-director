@@ -1,9 +1,28 @@
 {
   "kind": "cineweave_codex_media_import",
-  "contractVersion": "2.0.0",
+  "contractVersion": "2.5.0",
+  "mediaImportId": "media-import.cloud-palace-scene-01-shot-04-take-001",
+  "version": 1,
   "worldId": "world-cloud-dynasty",
   "shotId": "scene-01-shot-04",
-  "renderPlanRef": "render-plan:scene-01-shot-04",
+  "renderPlanRef": {
+    "kind": "cineweave_codex_render_plan",
+    "id": "render.cloud-bridge-scene-01-shot-04",
+    "version": 1,
+    "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "executionRequestRef": {
+    "kind": "cineweave_execution_request",
+    "id": "execution-request.cloud-palace-scene-01-shot-04-take-001",
+    "version": 1,
+    "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+  },
+  "executionReceiptRef": {
+    "kind": "cineweave_execution_receipt",
+    "id": "execution-receipt.cloud-palace-scene-01-shot-04-take-001",
+    "version": 1,
+    "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+  },
   "skillReceipt": {
     "repository": "https://github.com/owner/repository",
     "ref": "v2.0.0",
@@ -39,5 +58,14 @@
     "source": "external_adapter",
     "statusOnCreation": "draft",
     "nextAction": "Bind the verified Draft video to candidate observations, review temporal continuity, then send it to the explicit QA gate."
+  },
+  "provenance": {
+    "source": "suite_builtin",
+    "createdAt": "2026-08-26T10:00:00.000Z",
+    "updatedAt": "2026-09-01T00:00:00.000Z",
+    "changeLog": [
+      "Migrated video MediaImport to the versioned 2.5 exact-reference shape.",
+      "Preserved Draft-only import status pending explicit QA."
+    ]
   }
 }

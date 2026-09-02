@@ -13,16 +13,21 @@ CreativeBrief → WorkflowPlan
 CharacterSpec → AppearanceState → CharacterBinding
 SceneSpec     → SceneState      → SceneBinding → InteractionConstraintSet
 StylePackage  → StyleCompile    → StyleReview
-Reference outputs: ReferenceAsset → ReferenceObservation → ReferenceReview
-                   → ReferenceBindingSet
+Reference outputs: ReferenceAsset → ContentCredentialInspection
+                   ReferenceAsset → ReferenceObservation → ReferenceReview
+                                    → ReferenceBindingSet → AssetAliasRegistry
 Story outputs: StoryBrief, BeatSheet, ScriptScene, ContinuityLedger
-Director outputs: ActionSequenceSpec → ShotSpec, ShotLightingPlan, TemporalSpec,
-                  Storyboard, RenderPlan
+Director outputs: ActionSequenceSpec → ShotSpec → HeroFrameAnchor,
+                  ShotLightingPlan, TemporalSpec,
+                  optional CameraPrevisSpec; Storyboard → SequenceRhythmSpec;
+                  RenderPlan
 Prompt outputs: PromptRecord, ImagePrompt, PromptHypothesis, DraftBrief,
                 PromptRepair
-Production outputs: AssetRecipe, ControlChannelSet, EvidenceBundle,
-                    CapabilityProfile, LicenseProfile, ControlBenchmark,
-                    AdapterDescriptor, ExecutionRequest, ExecutionReceipt
+Production outputs: AssetRecipe, BoardAssemblyPlan, EditorialTimelinePlan,
+                    MediaTechnicalProbe, ColorPipelineProfile, ContentCredentialHandoff, RepairRunReceipt, ControlChannelSet,
+                    EvidenceBundle, CapabilityProfile, LicenseProfile, ControlBenchmark, ControlBenchmarkReview,
+                    AdapterDescriptor,
+                    ExecutionRequest, ExecutionReceipt
 Suite evidence:     ArtifactGraph, ProjectBundleManifest, SkillEvaluationRun
 ```
 
@@ -44,11 +49,55 @@ contracts from other Skills.
 - A reference asset binds exact bytes; an observation binds one role and
   selector; a binding set resolves ordering, conflicts and rights for exact
   downstream targets. Byte integrity does not establish authorship or rights.
+- AssetAliasRegistry is only a scoped presentation map: every `@Asset` entry
+  resolves to one exact existing contract ref. It rejects collisions, `@latest`,
+  prompt inference and cross-scope lookup; it cannot create, merge or mutate a
+  Canon artifact and unknown aliases remain blocked.
 - Identity, appearance, geography, style representation and camera treatment
   remain separate ownership domains.
 - ActionSequenceSpec binds Story purpose, Character motion/performance and Scene
   constraints into beats, coverage and sequence continuity. It does not invent
   those upstream facts or imply stunt-safety approval.
+- HeroFrameAnchor binds one exact still source—either a whole ReferenceAsset or
+  one selected MediaImport frame—to one exact ShotSpec. Camera, composition,
+  appearance and scene DNA remain separated; identity and geography are hard
+  inheritance locks, and an override requires a new anchor. It is a visual
+  continuity plan, not a media-generation or Canon-mutation operation.
+- SequenceRhythmSpec binds one exact Storyboard to zero-based integer frame
+  windows, a reduced rational timebase, closed tempo phases and adjacent
+  transition grammar. It describes sequence rhythm and breathing points; it
+  does not replace Production-owned EditorialTimelinePlan or claim that media
+  exists.
+- EditorialTimelinePlan consumes exact Storyboard, ShotSpec and optional
+  TemporalSpec intent, then binds only external MediaImport evidence into
+  rational-frame tracks, gaps and transitions. It never embeds media, exports a
+  timeline or turns a placeholder into a conform claim.
+- MediaTechnicalProbe is Production-owned and binds one exact MediaImport/media
+  byte hash to a bounded local ffprobe record. It preserves selected container
+  and stream facts, makes omitted values explicit as not_reported, excludes
+  raw paths/tags/extradata and never implies color interpretation, quality
+  approval or media mutation.
+- ColorPipelineProfile consumes exact MediaImport/media bindings and identifies
+  a planned OCIO config by version/hash. For verified source metadata it also
+  requires an exact MediaTechnicalProbe. It separates scene- and
+  display-referred spaces plus preview/delivery view paths, but does not load a
+  config, apply a transform, write media, export a LUT or silently turn Style
+  color intent into a technical look.
+- ContentCredentialInspection is Reference-owned and binds one exact
+  ReferenceAsset plus byte hash. It either stays `not_checked` or records an
+  immutable external validator report with separately visible C2PA checks; it
+  never turns provenance evidence into a rights or truth conclusion.
+- ContentCredentialHandoff is Production-owned and binds exact reference and
+  inspection contracts. It requires a recorded inspection before external
+  transfer and revalidation for derived output, while leaving the ingredient
+  relationship planned and never embedding or writing a manifest.
+- ControlBenchmark is Production-owned evaluation design. Its
+  DirectorQualityBench scope binds exact Director artifacts and separates
+  shot-purpose, action-coverage, spatial-continuity, temporal-causality and
+  human-direction dimensions. When that scope is completed,
+  ControlBenchmarkReview must cite distinct observed media, balanced
+  left/right presentation and observations bound to both media; a planned
+  review remains evidence-free and makes no quality claim.
 - External execution requires approval of the exact stored request plus explicit
   caller enablement; generated media remains an observed candidate until review
   cites evidence.
@@ -70,7 +119,11 @@ owner.
 
 Review identifies expected-versus-observed failures. Repair changes one smallest
 variable, preserves passing criteria and produces a new candidate or asset
-version. A repair plan is not proof that the repair succeeded.
+version. A repair plan is not proof that the repair succeeded. Production's
+contract-aware runner accepts only an exact approved plan, invokes a registered
+local non-writing adapter, preserves the immutable parent and exact dependencies,
+and records a `RepairRunReceipt` with pending human acceptance. Delegations,
+missing approval and unbounded candidates remain blocked or failed.
 
 ## Execution boundary
 

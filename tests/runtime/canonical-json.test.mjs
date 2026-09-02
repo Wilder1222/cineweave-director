@@ -27,3 +27,17 @@ test("strict parser preserves prototype-named keys without prototype mutation", 
 test("canonicalization rejects non-I-JSON Unicode", () => {
   assert.throws(() => canonicalize({ value: "\ud800" }), /unpaired high surrogate/);
 });
+
+test("canonicalization rejects sparse and extended arrays without scanning their declared length", () => {
+  const sparse = [];
+  sparse.length = 2;
+  assert.throws(() => canonicalize(sparse), /sparse arrays/);
+
+  const extended = [1];
+  Object.defineProperty(extended, "metadata", { value: "ignored", enumerable: false });
+  assert.throws(() => canonicalize(extended), /non-index array property/);
+
+  const hugeSparse = [];
+  hugeSparse.length = 0xffffffff;
+  assert.throws(() => canonicalize(hugeSparse), /sparse arrays/);
+});

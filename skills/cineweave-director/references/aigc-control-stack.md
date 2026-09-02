@@ -14,7 +14,7 @@ Reference authority and rights are cross-cutting inputs to every layer. A downst
 | --- | --- | --- | --- |
 | Intent | Why does this image, beat or sequence exist? | Story + Director | purpose, audience attention, dramatic change |
 | Asset state | Who/what is present and what is its current look and condition? | Character + Scene + Style | exact bindings, versions, hashes, state transitions |
-| Shot/time state | Where are subjects, what is the camera doing, and when does the readable change happen? | Director | ShotSpec, ShotLightingPlan, TemporalSpec, Storyboard |
+| Shot/time state | Where are subjects, what is the camera doing, and when does the readable change happen? | Director | ShotSpec, ShotLightingPlan, TemporalSpec, optional CameraPrevisSpec, Storyboard |
 | Adapter controls | Which spatial, identity, appearance, mask, motion or style controls can enforce the brief? | Prompt + Production | PromptAsset, ControlChannelSet, CapabilityProfile, rights |
 | Review receipt | What observed Draft media passed, what failed and what remains unknown? | Production + human reviewer | exact execution/import/observation evidence, `ControlBenchmarkReview`, failure dimensions, next action |
 
@@ -49,7 +49,7 @@ The same semantic requirement may have different enforcement at different scopes
 | geography/contact | Scene | SceneBinding + InteractionConstraintSet | spatial/depth/contact | floating, broken support, wrong axis | Scene/Director |
 | action/performance | Character + Director | PerformanceTimeline + ActionSequenceSpec | pose/motion/action | unreadable causal beat, impossible contact | Character/Director |
 | framing/composition | Director | ShotSpec/Storyboard | camera/composition | attention split, wrong scale or depth | Director |
-| camera movement | Director | TemporalSpec | temporal/camera | multiple competing moves, no stable end | Director |
+| camera movement | Director | TemporalSpec + optional CameraPrevisSpec | temporal/camera | multiple competing moves, no stable end, false zoom or unstable pose track | Director |
 | physical light | Scene + Director | SceneLightState + ShotLightingPlan | source/shadow/exposure | style adjective replaces source logic | Scene/Director |
 | representation | Style | StyleCompile + RepresentationBinding | style/medium | style rewrites identity or light | Style |
 | execution | Production | CapabilityProfile + recipe/evidence | adapter/workflow | unknown dependency or unrepeatable output | Production |
@@ -92,7 +92,7 @@ For a one-off portrait, the Story and Scene layers may be minimal. For a multi-s
 | Garment construction is wrong | Character costume state or garment adapter | face, scene, shot purpose |
 | Body floats or hand misses support | Scene contact/interaction or Character pose | identity and camera unless proven causal |
 | Action reads but camera hides it | Director blocking/coverage/camera | approved Character and Scene states |
-| Camera move fights performance | Director TemporalSpec | Character-owned timing and action cause |
+| Camera move fights performance | Director TemporalSpec or CameraPrevisSpec | Character-owned timing and action cause |
 | Style changes face or source light | Style representation or light treatment | Character/Scene canonical facts |
 | One board tile fails | That tile's recipe task | all passing tile outputs and assembly regions |
 | Model cannot enforce a hard control | Production capability match | do not weaken the creative contract silently |

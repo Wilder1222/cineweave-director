@@ -7,7 +7,7 @@
   "required": ["kind", "contractVersion", "lightingPlanId", "version", "shotSpecRef", "sceneLightStateRef", "skillReceipt", "key", "fill", "practicals", "exposure", "subjectBackgroundRelation", "materialResponse", "continuity", "validation"],
   "properties": {
     "kind": { "const": "cineweave_codex_shot_lighting_plan" },
-    "contractVersion": { "const": "2.2.0" },
+    "contractVersion": { "enum": ["2.2.0", "2.5.0"] },
     "lightingPlanId": { "$ref": "common.schema.json#/$defs/identifier" },
     "version": { "type": "integer", "minimum": 1 },
     "shotSpecRef": { "$ref": "common.schema.json#/$defs/contractRef" },
@@ -15,7 +15,7 @@
     "styleLightGrammarRef": { "$ref": "common.schema.json#/$defs/contractRef" },
     "skillReceipt": { "$ref": "common.schema.json#/$defs/skillReceipt" },
     "key": { "$ref": "#/$defs/shotLightUse" },
-    "fill": { "$ref": "#/$defs/shotLightUse" },
+    "fill": { "$ref": "#/$defs/optionalShotLightUse" },
     "rim": { "$ref": "#/$defs/optionalShotLightUse" },
     "practicals": {
       "type": "array",
@@ -46,10 +46,55 @@
         "stylePhysicalSeparated": { "const": true },
         "geographyCoherent": { "const": true },
         "exposureIntentional": { "const": true },
-        "continuityBound": { "const": true }
+        "continuityBound": { "const": true },
+        "fillIntentional": { "const": true }
       }
     }
   },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "contractVersion": { "const": "2.2.0" }
+        }
+      },
+      "then": {
+        "properties": {
+          "key": { "$ref": "#/$defs/shotLightUse" },
+          "fill": { "$ref": "#/$defs/shotLightUse" },
+          "rim": { "$ref": "#/$defs/optionalShotLightUse" },
+          "practicals": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/shotLightUse" }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "contractVersion": { "const": "2.5.0" }
+        }
+      },
+      "then": {
+        "properties": {
+          "key": { "$ref": "#/$defs/modernShotLightUse" },
+          "fill": { "$ref": "#/$defs/optionalModernShotLightUse" },
+          "rim": { "$ref": "#/$defs/optionalModernShotLightUse" },
+          "practicals": {
+            "type": "array",
+            "items": { "$ref": "#/$defs/modernShotLightUse" }
+          },
+          "validation": {
+            "required": ["fillIntentional"],
+            "properties": {
+              "fillIntentional": { "const": true }
+            }
+          }
+        }
+      }
+    }
+  ],
   "$defs": {
     "shotLightUse": {
       "type": "object",
@@ -59,12 +104,54 @@
         "sourceId": { "$ref": "common.schema.json#/$defs/identifier" },
         "shotFunction": { "type": "string", "minLength": 1, "maxLength": 600 },
         "subjectEffect": { "type": "string", "minLength": 1, "maxLength": 800 },
-        "shadowEffect": { "type": "string", "minLength": 1, "maxLength": 800 }
+        "shadowEffect": { "type": "string", "minLength": 1, "maxLength": 800 },
+        "transport": { "enum": ["direct", "bounce", "transmitted"] },
+        "viaSurfaceAnchor": { "type": "string", "minLength": 1, "maxLength": 500 }
       }
+    },
+    "modernShotLightUse": {
+      "allOf": [
+        { "$ref": "#/$defs/shotLightUse" },
+        {
+          "required": ["transport"],
+          "allOf": [
+            {
+              "if": {
+                "required": ["transport"],
+                "properties": {
+                  "transport": { "enum": ["bounce", "transmitted"] }
+                }
+              },
+              "then": {
+                "required": ["viaSurfaceAnchor"]
+              }
+            },
+            {
+              "if": {
+                "required": ["transport"],
+                "properties": {
+                  "transport": { "const": "direct" }
+                }
+              },
+              "then": {
+                "not": {
+                  "required": ["viaSurfaceAnchor"]
+                }
+              }
+            }
+          ]
+        }
+      ]
     },
     "optionalShotLightUse": {
       "anyOf": [
         { "$ref": "#/$defs/shotLightUse" },
+        { "type": "null" }
+      ]
+    },
+    "optionalModernShotLightUse": {
+      "anyOf": [
+        { "$ref": "#/$defs/modernShotLightUse" },
         { "type": "null" }
       ]
     }

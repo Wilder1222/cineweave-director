@@ -1,0 +1,128 @@
+{
+  "kind": "cineweave_codex_hero_frame_anchor",
+  "contractVersion": "2.5.0",
+  "heroFrameAnchorId": "hero-frame.rain-courtyard-recognition-v1",
+  "version": 1,
+  "heroFrameRef": {
+    "kind": "cineweave_codex_reference_asset",
+    "id": "reference.user_upload.1111111111111111111111111111111111111111111111111111111111111111",
+    "version": 1,
+    "contentHash": "sha256:15913ff5b3dea17fdef3600ff177d025ea8cfcb52e4968223f30f9b9ded6ee74"
+  },
+  "sourceSelection": {
+    "mode": "whole_asset",
+    "description": "该 ReferenceAsset 本身就是已经选定的定帧，不从视频中重新猜测帧位置。"
+  },
+  "shotSpecRef": {
+    "kind": "cineweave_codex_shot_spec",
+    "id": "shot.rain-courtyard-recognition-v1",
+    "version": 1,
+    "contentHash": "sha256:47ecc379955cbfd7a44c43c6c37b781d10f2aef57f05b0173a4c41d4d199c95f"
+  },
+  "shotLightingPlanRef": {
+    "kind": "cineweave_codex_shot_lighting_plan",
+    "id": "shot-light.rain-courtyard-recognition-v1",
+    "version": 1,
+    "contentHash": "sha256:78991316ef0418726c931b3a222c5b07b792cf7608bd4b173477b3437be6fbe1"
+  },
+  "bindingRefs": {
+    "characterRefs": [
+      {
+        "kind": "character_binding",
+        "id": "binding.gu-yin-courtyard-01",
+        "version": 1,
+        "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      {
+        "kind": "character_binding",
+        "id": "binding.lu-cheng-courtyard-01",
+        "version": 1,
+        "contentHash": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+      }
+    ],
+    "sceneRef": {
+      "kind": "scene_binding",
+      "id": "binding.scene-rain-courtyard-01",
+      "version": 1,
+      "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    }
+  },
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-studio",
+    "ref": "v2.5.1",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-09-02T03:30:00.000Z"
+  },
+  "visualDna": {
+    "camera": {
+      "projection": "perspective",
+      "focalLengthMm": 50,
+      "focusTarget": "她靠近镜头的眼睛；回望完成后允许故人保持可识别的轻度虚化",
+      "apertureFStop": 4,
+      "axisSide": "始终位于两人关系轴南侧"
+    },
+    "composition": {
+      "layout": "东廊柱形成左侧窄框，她位于画面右中部，故人在左后方门槛外。",
+      "negativeSpace": "两人之间保留一段空门槛和湿石地，不能用裁切消除关系距离。",
+      "visualHierarchy": "手指张力先于眼神，眼神先于故人身份，空门槛最后显出关系距离。",
+      "frameOrientation": "横构图，人物与门槛关系保持可读。"
+    },
+    "appearance": {
+      "identitySummary": "沿用 ShotSpec 中两个 exact CharacterBinding 的身份锚点，不从定帧反推或替换 Canon。",
+      "costumeSummary": "保留她的既定衣装、耳饰数量和左右位置；雨水只作为当前状态。",
+      "performanceMoment": "她完成三分之四回望，确认身份但压住情绪，双脚不移动。"
+    },
+    "scene": {
+      "geographySummary": "她在东廊门槛内，故人在门槛外，湿石庭院位于两人之间。",
+      "lightingSummary": "北向天光为主，油灯在她右后方，湿地反射抬起廊内黑位。"
+    },
+    "captureIntent": "先锁定可读的手—眼—故人注意顺序，再把这一视觉状态交给后续时间方向。"
+  },
+  "inheritancePolicy": {
+    "preserve": [
+      "character_identity",
+      "scene_geography",
+      "camera",
+      "composition",
+      "lighting",
+      "style"
+    ],
+    "allowOverrides": [
+      "camera.motion",
+      "focus.timeline",
+      "secondary_motion",
+      "lighting.intensity"
+    ],
+    "lockedPaths": [
+      { "path": "character_identity", "level": "hard", "reason": "Hero Frame 只继承 exact CharacterBinding，不得把定帧观察升级为身份改写。" },
+      { "path": "scene_geography", "level": "hard", "reason": "门槛、人物位置和关系轴是 ShotSpec 的空间事实。" },
+      { "path": "heroFrameRef", "level": "hard", "reason": "后续延展必须知道使用的是哪一个不可变定帧。" }
+    ],
+    "overrideRequiresNewAnchor": true
+  },
+  "executionBoundary": {
+    "providerNeutral": true,
+    "generatesMedia": false,
+    "executesAdapter": false,
+    "mutatesCanon": false,
+    "humanApprovalRequired": true,
+    "notes": "该契约只记录 exact 定帧及其视觉 DNA；不调用模型、不生成视频、不批准素材。"
+  },
+  "validation": {
+    "exactHeroFrameRef": true,
+    "exactShotSpecRef": true,
+    "visualDnaProviderNeutral": true,
+    "inheritanceExplicit": true,
+    "identityCannotBeOverridden": true,
+    "geographyCannotBeOverridden": true,
+    "cameraCompositionSeparated": true,
+    "noMediaGeneration": true
+  },
+  "provenance": {
+    "source": "codex_authored",
+    "createdAt": "2026-09-02T03:30:00.000Z",
+    "updatedAt": "2026-09-02T03:30:00.000Z",
+    "changeLog": ["v1: exact hero frame anchor with separated camera, composition, appearance and scene inheritance policy"]
+  }
+}

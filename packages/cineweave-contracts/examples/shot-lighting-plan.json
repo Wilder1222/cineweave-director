@@ -1,13 +1,13 @@
 {
   "kind": "cineweave_codex_shot_lighting_plan",
-  "contractVersion": "2.2.0",
+  "contractVersion": "2.5.0",
   "lightingPlanId": "shot-light.rain-courtyard-recognition-v1",
   "version": 1,
   "shotSpecRef": {
     "kind": "cineweave_codex_shot_spec",
     "id": "shot.rain-courtyard-recognition-v1",
     "version": 1,
-    "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+    "contentHash": "sha256:47ecc379955cbfd7a44c43c6c37b781d10f2aef57f05b0173a4c41d4d199c95f"
   },
   "sceneLightStateRef": {
     "kind": "cineweave_codex_scene_light_state",
@@ -30,12 +30,15 @@
   },
   "key": {
     "sourceId": "light.north-sky",
+    "transport": "direct",
     "shotFunction": "保持她的回望可读，并让眼神变化先于故人身份被确认。",
     "subjectEffect": "从左前上方柔和塑造面部，靠镜头的眼睛获得清晰但不夸张的泪膜高光。",
     "shadowEffect": "面部右侧保留柔和层次，主阴影方向与廊柱一致。"
   },
   "fill": {
     "sourceId": "light.north-sky",
+    "transport": "bounce",
+    "viaSurfaceAnchor": "被雨水润湿的庭院石地与东廊浅色墙面",
     "shotFunction": "由湿石和浅墙的自然反射抬起廊内黑位。",
     "subjectEffect": "衣服暗部保留丝麻纹理，但不消除面部塑形。",
     "shadowEffect": "只降低阴影密度，不改变方向。"
@@ -44,6 +47,7 @@
   "practicals": [
     {
       "sourceId": "light.corridor-lamp",
+      "transport": "direct",
       "shotFunction": "说明廊内已入夜并把她与深廊局部分离。",
       "subjectEffect": "只在右后侧发丝、耳饰与衣领形成小面积暖反射。",
       "shadowEffect": "近处产生很弱的反向小影，不覆盖主阴影。"
@@ -64,6 +68,7 @@
     "stylePhysicalSeparated": true,
     "geographyCoherent": true,
     "exposureIntentional": true,
-    "continuityBound": true
+    "continuityBound": true,
+    "fillIntentional": true
   }
 }

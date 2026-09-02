@@ -6,12 +6,14 @@ import { tmpdir } from "node:os";
 import { delimiter, dirname, join, resolve } from "node:path";
 import { spawn, spawnSync } from "node:child_process";
 import { randomUUID } from "node:crypto";
-import { fileURLToPath } from "node:url";
+import { fileURLToPath, pathToFileURL } from "node:url";
 import { sha256Canonical } from "../packages/cineweave-runtime/src/canonical-json.mjs";
-import { validateDocument } from "./validate-output.mjs";
+import { validateByKind } from "./validate-contract-semantics.mjs";
+import { validateDocument, validatePayload } from "./validate-output.mjs";
 
-const RUNNER_VERSION = "1.0.0";
+const RUNNER_VERSION = "1.1.0";
 const repoRoot = resolve(dirname(fileURLToPath(import.meta.url)), "..");
+const contractRoot = join(repoRoot, "packages", "cineweave-contracts");
 const casesPath = join(repoRoot, "tests", "behavior", "live-cases.json");
 const responseSchemaPath = join(repoRoot, "tests", "behavior", "live-response.schema.json");
 const runSchemaPath = join(repoRoot, "packages", "cineweave-contracts", "schemas", "skill-evaluation-run.schema.json");
@@ -73,6 +75,18 @@ function add(errors, condition, message) {
   if (!condition) errors.push(message);
 }
 
+function isObject(value) {
+  return value !== null && typeof value === "object" && !Array.isArray(value);
+}
+
+function sameStrings(left, right) {
+  return Array.isArray(left) && Array.isArray(right) && left.length === right.length && left.every((value, index) => value === right[index]);
+}
+
+function uniqueStringsInOrder(values) {
+  return [...new Set(values)];
+}
+
 async function loadDefinitions() {
   return {
     suite: JSON.parse(await readFile(casesPath, "utf8")),
@@ -81,11 +95,13 @@ async function loadDefinitions() {
   };
 }
 
-function validateDefinitions(suite, manifest) {
+export function validateDefinitions(suite, manifest) {
   const errors = [];
   const knownSkills = new Set((manifest.skills || []).map((item) => item.name));
   const routeOwners = new Map();
+  const skillRoutes = new Map();
   for (const skill of manifest.skills || []) for (const route of skill.owns || []) routeOwners.set(route, skill.name);
+  for (const skill of manifest.skills || []) skillRoutes.set(skill.name, skill.owns || []);
   const contractOwners = new Map((manifest.contracts || []).map((item) => [item.kind, item.owner]));
   add(errors, suite.syntheticInputsOnly === true, "live suite must contain synthetic inputs only");
   add(errors, suite.suiteVersion === manifest.version, "live suite version must match contract manifest");
@@ -120,7 +136,56 @@ function validateDefinitions(suite, manifest) {
   }
   for (const skill of knownSkills) add(errors, (suite.cases || []).some((item) => item.expectedSkill === skill), `${skill} lacks a live positive case`);
   add(errors, (suite.cases || []).some((item) => item.expectedSkill === "none"), "live suite lacks a should-not-activate case");
+
+  const requiredRouteCoverage = suite.requiredRouteCoverage || {};
+  add(errors, isObject(requiredRouteCoverage), "requiredRouteCoverage must be an object when supplied");
+  if (isObject(requiredRouteCoverage)) {
+    for (const [skill, routes] of Object.entries(requiredRouteCoverage)) {
+      add(errors, knownSkills.has(skill), `requiredRouteCoverage names unknown Skill ${skill}`);
+      add(errors, Array.isArray(routes), `${skill} requiredRouteCoverage must be an array`);
+      if (!knownSkills.has(skill) || !Array.isArray(routes)) continue;
+      const ownedRoutes = skillRoutes.get(skill) || [];
+      add(errors, sameStrings(routes, ownedRoutes), `${skill} requiredRouteCoverage must exactly match manifest-owned routes`);
+      add(errors, new Set(routes).size === routes.length, `${skill} requiredRouteCoverage contains duplicate routes`);
+      for (const route of routes) {
+        add(errors, routeOwners.get(route) === skill, `${skill} required route ${route} is not owned by that Skill`);
+        add(errors, (suite.cases || []).some((item) => item.expectedSkill === skill && item.expectedRoute === route), `${skill} lacks required live route ${route}`);
+      }
+    }
+  }
   return errors;
+}
+
+export async function validatePayloadEvidence(response, manifest) {
+  const errors = [];
+  const payloads = Array.isArray(response?.payloads) ? response.payloads : [];
+  const contracts = new Map((manifest?.contracts || []).map((item) => [item.kind, item]));
+  const payloadKinds = payloads.map((entry) => entry?.kind);
+  const derivedKinds = uniqueStringsInOrder(payloadKinds);
+  add(errors, sameStrings(response?.contractKinds, derivedKinds), "contractKinds must exactly match unique payload kinds in first-seen order");
+
+  for (let index = 0; index < payloads.length; index += 1) {
+    const entry = payloads[index];
+    const label = `payloads[${index}]`;
+    if (!isObject(entry) || !isObject(entry.payload)) {
+      errors.push(`${label} must contain an inline contract payload object`);
+      continue;
+    }
+    add(errors, entry.payload.kind === entry.kind, `${label} wrapper kind must match payload.kind`);
+    const contract = contracts.get(entry.kind);
+    if (!contract) {
+      errors.push(`${label} references unknown contract kind ${entry.kind}`);
+      continue;
+    }
+    add(errors, contract.owner === response.selectedSkill || contract.owner === "suite", `${label} contract ${entry.kind} is owned by ${contract.owner}, not ${response.selectedSkill}`);
+    const schemaResult = await validatePayload(join(contractRoot, contract.schema), entry.payload);
+    for (const error of schemaResult.errors) errors.push(`${label} schema: ${error}`);
+    if (schemaResult.valid) {
+      for (const error of validateByKind(entry.payload)) errors.push(`${label} semantic: ${error}`);
+    }
+  }
+
+  return { valid: errors.length === 0, errors, contractKinds: derivedKinds };
 }
 
 function contains(text, value) {
@@ -233,18 +298,22 @@ function evaluationPrompt(item) {
     "Return only one JSON object matching the supplied response schema.",
     `Set caseId exactly to ${JSON.stringify(item.id)}.`,
     "selectedSkill must be the exact Skill name or none. route must be its exact route or null.",
-    "contractKinds lists only contracts actually represented by the response. unsupportedClaims lists any claim you could not support.",
+    "payloads must contain the complete inline JSON object for every emitted CineWeave contract; prose alone is not a contract.",
+    "contractKinds must exactly equal the unique payload kind values in first-seen order. Never list a contract kind without its schema-valid payload.",
+    "unsupportedClaims lists any claim you could not support.",
     "",
     "User request:",
     item.request
   ].join("\n");
 }
 
-async function readAndGrade(item, responsePath, transcriptRef = null) {
+async function readAndGrade(item, responsePath, manifest, transcriptRef = null) {
   const schemaResult = await validateDocument(responseSchemaPath, responsePath);
   if (!schemaResult.valid) throw new Error(`Response schema failed: ${schemaResult.errors.join("; ")}`);
   if (schemaResult.payload.caseId !== item.id) throw new Error(`Response caseId ${schemaResult.payload.caseId} does not match ${item.id}`);
-  return gradeResponse(item, schemaResult.payload, transcriptRef);
+  const evidence = await validatePayloadEvidence(schemaResult.payload, manifest);
+  if (!evidence.valid) throw new Error(`Response payload evidence failed: ${evidence.errors.join("; ")}`);
+  return gradeResponse(item, { ...schemaResult.payload, contractKinds: evidence.contractKinds }, transcriptRef);
 }
 
 function environmentInfo(plugin, mode, model, installedPlugin = null) {
@@ -308,14 +377,14 @@ async function validateRun(run, outputPath) {
   }
 }
 
-async function gradeDirectory({ suite, plugin, cases, directory, outputPath }) {
+async function gradeDirectory({ suite, manifest, plugin, cases, directory, outputPath }) {
   const startedAt = new Date().toISOString();
   const results = [];
   for (const item of cases) {
     const path = join(directory, `${item.id}.json`);
     try {
       if (!existsSync(path)) throw new Error(`Missing response: ${path}`);
-      results.push(await readAndGrade(item, path));
+      results.push(await readAndGrade(item, path, manifest));
     } catch (error) { results.push(errorResult(item, error)); }
   }
   const finishedAt = new Date().toISOString();
@@ -324,7 +393,7 @@ async function gradeDirectory({ suite, plugin, cases, directory, outputPath }) {
   return run;
 }
 
-async function runLive({ suite, plugin, cases, directory, model, timeoutSeconds }) {
+async function runLive({ suite, manifest, plugin, cases, directory, model, timeoutSeconds }) {
   const invocation = resolveCodexInvocation();
   const installedPlugin = installedPluginInfo(invocation, plugin.name);
   assertInstalledCandidate(plugin, installedPlugin);
@@ -359,7 +428,7 @@ async function runLive({ suite, plugin, cases, directory, model, timeoutSeconds 
         await writeFile(stderrPath, processResult.stderr, { encoding: "utf8", flag: "wx" });
         if (processResult.timedOut) throw new Error(`Codex timed out after ${timeoutSeconds} seconds`);
         if (processResult.code !== 0) throw new Error(`Codex exited ${processResult.code}: ${processResult.stderr.trim().slice(0, 800)}`);
-        results.push(await readAndGrade(item, responsePath, eventsName));
+        results.push(await readAndGrade(item, responsePath, manifest, eventsName));
       } catch (error) { results.push(errorResult(item, error, existsSync(eventsPath) ? eventsName : null)); }
     }
   } finally { await rm(work, { recursive: true, force: true }); }
@@ -371,14 +440,17 @@ async function runLive({ suite, plugin, cases, directory, model, timeoutSeconds 
   return { run, runPath };
 }
 
-async function validateCommittedFixtures(suite) {
+async function validateCommittedFixtures(suite, manifest) {
   const directory = join(repoRoot, "tests", "fixtures", "live-responses");
   const errors = [];
   for (const item of suite.cases || []) {
     const path = join(directory, `${item.id}.json`);
     if (!existsSync(path)) { errors.push(`${item.id}: missing committed replay response`); continue; }
     const result = await validateDocument(responseSchemaPath, path);
-    if (!result.valid) errors.push(`${item.id}: ${result.errors.join("; ")}`);
+    if (!result.valid) { errors.push(`${item.id}: ${result.errors.join("; ")}`); continue; }
+    if (result.payload.caseId !== item.id) { errors.push(`${item.id}: response caseId is ${result.payload.caseId}`); continue; }
+    const evidence = await validatePayloadEvidence(result.payload, manifest);
+    if (!evidence.valid) errors.push(`${item.id}: ${evidence.errors.join("; ")}`);
   }
   return errors;
 }
@@ -390,7 +462,7 @@ async function main() {
   const { suite, manifest, plugin } = await loadDefinitions();
   const definitionErrors = validateDefinitions(suite, manifest);
   if (definitionErrors.length) throw new Error(`Live evaluation definitions failed:\n${definitionErrors.map((item) => `- ${item}`).join("\n")}`);
-  const fixtureErrors = await validateCommittedFixtures(suite);
+  const fixtureErrors = await validateCommittedFixtures(suite, manifest);
   if (fixtureErrors.length) throw new Error(`Live replay fixtures failed:\n${fixtureErrors.map((item) => `- ${item}`).join("\n")}`);
   const cases = selectCases(suite, flags.case);
   if (flags.validate) {
@@ -408,7 +480,7 @@ async function main() {
   if (flags.grade) {
     if (flags.grade === true) throw new Error(usage());
     const outputPath = flags.out && flags.out !== true ? resolve(flags.out) : null;
-    const run = await gradeDirectory({ suite, plugin, cases, directory: resolve(flags.grade), outputPath });
+    const run = await gradeDirectory({ suite, manifest, plugin, cases, directory: resolve(flags.grade), outputPath });
     console.log(JSON.stringify(flags["summary-only"] === true ? run.summary : run, null, 2));
     if (!run.summary.releaseGatePassed) process.exitCode = 1;
     return;
@@ -417,13 +489,15 @@ async function main() {
     if (flags["acknowledge-model-costs"] !== true || !flags.model || flags.model === true || !flags["out-dir"] || flags["out-dir"] === true) throw new Error(usage());
     const timeoutSeconds = Number(flags["timeout-seconds"] || 180);
     if (!Number.isInteger(timeoutSeconds) || timeoutSeconds < 30 || timeoutSeconds > 900) throw new Error("timeout-seconds must be an integer from 30 to 900");
-    const { run, runPath } = await runLive({ suite, plugin, cases, directory: resolve(flags["out-dir"]), model: flags.model, timeoutSeconds });
+    const { run, runPath } = await runLive({ suite, manifest, plugin, cases, directory: resolve(flags["out-dir"]), model: flags.model, timeoutSeconds });
     console.log(JSON.stringify({ runPath, summary: run.summary }, null, 2));
     if (!run.summary.releaseGatePassed) process.exitCode = 1;
   }
 }
 
-main().catch((error) => {
-  console.error(error instanceof Error ? error.stack || error.message : String(error));
-  process.exitCode = 2;
-});
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
+  main().catch((error) => {
+    console.error(error instanceof Error ? error.stack || error.message : String(error));
+    process.exitCode = 2;
+  });
+}

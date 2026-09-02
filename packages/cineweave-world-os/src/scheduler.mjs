@@ -90,6 +90,10 @@ function stopReasonFor(status) {
 export async function advanceWorld(projectRoot, worldId, options = {}) {
   const maxSteps = Number(options.maxSteps ?? 1);
   if (!Number.isSafeInteger(maxSteps) || maxSteps < 1 || maxSteps > 100) throw new TypeError("maxSteps must be an integer from 1 to 100");
+  if (options.verifyHealth !== undefined && typeof options.verifyHealth !== "boolean") {
+    throw new TypeError("verifyHealth must be boolean when provided");
+  }
+  const verifyHealth = options.verifyHealth !== false;
   let runtime = await loadRuntime(projectRoot, worldId);
   const startStateRef = exactRef(ARTIFACT_KINDS.state, runtime.state.stateId, runtime.state.version, runtime.state);
   const startSequence = runtime.state.sequence;
@@ -169,6 +173,10 @@ export async function advanceWorld(projectRoot, worldId, options = {}) {
       result = await runEventProposalDocument(runtime.root, selectedProposal, {
         selectionRef: branchSetRef(branchSet),
         requireSelection: true,
+        // runEventProposalDocument validates the exact transition. The
+        // scheduler performs the authoritative project/graph verification
+        // once after the run, avoiding a duplicate full-store scan per step.
+        verifyHealth: false,
         beforeCommit: options.beforeCommit,
         afterCommit: options.afterCommit
       });
@@ -252,7 +260,7 @@ export async function advanceWorld(projectRoot, worldId, options = {}) {
     createdAt: receipt.endedAt,
     createdBy: "codex.root"
   });
-  const health = await verifyWorldOsProject(finalRuntime.root);
+  const health = verifyHealth ? await verifyWorldOsProject(finalRuntime.root) : null;
   return { ...receipt, receiptRef: storedReceipt.envelope.artifactRef, health };
 }
 

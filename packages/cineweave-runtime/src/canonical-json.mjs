@@ -31,9 +31,15 @@ export function canonicalize(value) {
     return JSON.stringify(value);
   }
   if (Array.isArray(value)) {
-    for (let index = 0; index < value.length; index += 1) {
-      if (!Object.hasOwn(value, index)) throw new TypeError("JCS does not accept sparse arrays");
+    if (Object.getOwnPropertySymbols(value).length) throw new TypeError("JCS does not accept symbol keys");
+    const keys = Object.getOwnPropertyNames(value).filter((key) => key !== "length");
+    for (const key of keys) {
+      const index = Number(key);
+      if (!Number.isSafeInteger(index) || index < 0 || index >= value.length || String(index) !== key) {
+        throw new TypeError("JCS does not accept non-index array property: " + key);
+      }
     }
+    if (keys.length !== value.length) throw new TypeError("JCS does not accept sparse arrays");
     return `[${value.map((item) => canonicalize(item)).join(",")}]`;
   }
   if (typeof value === "object") {

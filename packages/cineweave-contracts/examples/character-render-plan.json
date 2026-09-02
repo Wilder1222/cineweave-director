@@ -1,5 +1,8 @@
 {
   "kind": "cineweave_codex_render_plan",
+  "contractVersion": "2.5.0",
+  "renderPlanId": "render.character.shen-expression-sheet",
+  "version": 1,
   "worldId": "world-cloud-dynasty",
   "shotId": "scene-corridor-shot-03",
   "skillReceipt": {
@@ -11,7 +14,12 @@
     "usedAt": "2026-08-19T12:00:00.000Z"
   },
   "mode": "multi_reference",
-  "promptPayloadRef": "image-prompt:scene-corridor-shot-03",
+  "promptRef": {
+    "kind": "cineweave_codex_image_prompt",
+    "id": "image-prompt.scene-corridor-shot-03",
+    "version": 1,
+    "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
   "canvas": {
     "aspectRatio": "16:9",
     "sizeClass": "wide",
@@ -101,8 +109,8 @@
     "importStatus": "draft"
   },
   "notes": "Provider-neutral exploration plan; no generation is performed by this artifact.",
-  "contractVersion": "2.0.0",
   "assetRecipeRef": {
+    "kind": "cineweave_codex_asset_recipe",
     "id": "recipe.shen-expression-sheet-3x3",
     "version": 1,
     "contentHash": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
@@ -119,22 +127,26 @@
     "task.expression.determined"
   ],
   "controlSetRef": {
+    "kind": "cineweave_codex_control_channel_set",
     "id": "controls.shen-expression-sheet",
     "version": 1,
     "contentHash": "sha256:8888888888888888888888888888888888888888888888888888888888888888"
   },
   "evidenceBundleRef": {
+    "kind": "cineweave_codex_evidence_bundle",
     "id": "evidence.shen-production",
     "version": 1,
     "contentHash": "sha256:9999999999999999999999999999999999999999999999999999999999999999"
   },
   "capabilityProfileRef": {
+    "kind": "cineweave_codex_capability_profile",
     "id": "capability.reference-image-composite",
     "version": 1,
     "contentHash": "sha256:2222222222222222222222222222222222222222222222222222222222222222"
   },
   "licenseProfileRefs": [
     {
+      "kind": "cineweave_codex_license_profile",
       "id": "license.original-character-assets",
       "version": 1,
       "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
@@ -149,5 +161,14 @@
     ],
     "blockedCapabilities": [],
     "rightsResolved": true
+  },
+  "provenance": {
+    "source": "suite_builtin",
+    "createdAt": "2026-08-19T12:00:00.000Z",
+    "updatedAt": "2026-09-01T00:00:00.000Z",
+    "changeLog": [
+      "Migrated to the 2.5 versioned RenderPlan shape.",
+      "Replaced legacy references with exact contract references."
+    ]
   }
 }

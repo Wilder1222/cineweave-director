@@ -1,5 +1,8 @@
 {
   "kind": "cineweave_codex_render_plan",
+  "contractVersion": "2.5.0",
+  "renderPlanId": "render.cloud-bridge-scene-01-shot-04",
+  "version": 1,
   "worldId": "world-cloud-dynasty",
   "shotId": "scene-01-shot-04",
   "proposalId": "proposal-delayed-reveal",
@@ -12,7 +15,12 @@
     "usedAt": "2026-08-18T12:00:00.000Z"
   },
   "mode": "edit",
-  "promptPayloadRef": "image-prompt:scene-01-shot-04",
+  "promptRef": {
+    "kind": "cineweave_codex_image_prompt",
+    "id": "image-prompt.scene-01-shot-04",
+    "version": 1,
+    "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
   "canvas": {
     "aspectRatio": "16:9",
     "sizeClass": "landscape",
@@ -46,5 +54,26 @@
     "verify": ["file exists", "format is supported", "content hash is recorded", "no private URL is exported"],
     "importStatus": "draft"
   },
-  "notes": "The adapter may translate explore into its own quality setting; this plan contains no provider name or API parameter."
+  "notes": "The adapter may translate explore into its own quality setting; this plan contains no provider name or API parameter.",
+  "assetRecipeRef": {
+    "kind": "cineweave_codex_asset_recipe",
+    "id": "recipe.cloud-bridge-still",
+    "version": 1,
+    "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+  },
+  "capabilityProfileRef": {
+    "kind": "cineweave_codex_capability_profile",
+    "id": "capability.provider-neutral-image",
+    "version": 1,
+    "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+  },
+  "provenance": {
+    "source": "suite_builtin",
+    "createdAt": "2026-08-18T12:00:00.000Z",
+    "updatedAt": "2026-09-01T00:00:00.000Z",
+    "changeLog": [
+      "Migrated to the 2.5 versioned RenderPlan shape.",
+      "Replaced the legacy prompt string with an exact ImagePrompt reference."
+    ]
+  }
 }

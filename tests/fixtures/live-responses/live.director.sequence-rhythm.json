@@ -1,0 +1,108 @@
+{
+  "caseId": "live.director.sequence-rhythm",
+  "selectedSkill": "cineweave-director",
+  "route": "sequence_rhythm",
+  "outcome": "answer",
+  "contractKinds": ["cineweave_codex_sequence_rhythm_spec"],
+  "payloads": [
+    {
+      "kind": "cineweave_codex_sequence_rhythm_spec",
+      "payload": {
+        "kind": "cineweave_codex_sequence_rhythm_spec",
+        "contractVersion": "2.5.0",
+        "sequenceRhythmSpecId": "rhythm.rain-teahouse-table-turn-v1",
+        "version": 1,
+        "storyboardRef": {
+          "kind": "cineweave_codex_storyboard_sequence",
+          "id": "storyboard.rain-teahouse-table-turn-v1",
+          "version": 1,
+          "contentHash": "sha256:59e78bde7f12bfe463f3611026bd90dab76578101895c512690494e0f3471aee"
+        },
+        "skillReceipt": {
+          "repository": "https://github.com/Wilder1222/cineweave-studio",
+          "ref": "v2.5.1",
+          "commit": "0123456789abcdef0123456789abcdef01234567",
+          "installedBy": "codex-environment",
+          "usedAt": "2026-09-02T03:40:00.000Z"
+        },
+        "rhythmIntent": "从稳定读空间开始，在桌体改变追兵路径时形成受控加压，随后停在楼梯退路被封的新压力上。",
+        "timebase": {
+          "numerator": 24,
+          "denominator": 1,
+          "unit": "frames",
+          "frameIndexOrigin": 0,
+          "notes": "零基整数帧，24/1 约分帧率。"
+        },
+        "shotDurationPolicy": {
+          "minimumFrames": 72,
+          "preferredFrames": 100,
+          "maximumFrames": 144,
+          "rationale": "给因果动作留出可辨识时长。"
+        },
+        "tempoPhases": [
+          {
+            "phaseId": "phase.controlled-pressure",
+            "order": 1,
+            "tempo": "controlled",
+            "cutDensity": "low",
+            "shotIds": ["shot.rain-teahouse-table-turn-v1"],
+            "purpose": "一个连续覆盖读清保护线、桌体转向和楼梯威胁。"
+          }
+        ],
+        "shotWindows": [
+          {
+            "shotId": "shot.rain-teahouse-table-turn-v1",
+            "order": 1,
+            "startFrame": 0,
+            "endFrame": 100,
+            "purpose": "单一中远景承载准备、动作、后果和稳定结束。",
+            "breathing": true
+          }
+        ],
+        "breathingPoints": [
+          {
+            "shotId": "shot.rain-teahouse-table-turn-v1",
+            "frame": 88,
+            "rationale": "楼梯追兵落地后保留稳定，让新压力被看见。"
+          }
+        ],
+        "transitions": [],
+        "continuity": {
+          "preserveScreenDirection": true,
+          "axisPolicy": "保持正门—临河窗主轴南侧。",
+          "stableEndStates": true,
+          "shotOrderLocked": true,
+          "notes": "只做节奏方向，不取代 Production editorial conform。"
+        },
+        "executionBoundary": {
+          "providerNeutral": true,
+          "generatesMedia": false,
+          "executesAdapter": false,
+          "editsMedia": false,
+          "humanApprovalRequired": true,
+          "notes": "不剪辑媒体、不导出 OTIO。"
+        },
+        "validation": {
+          "exactStoryboardRef": true,
+          "rationalTimebase": true,
+          "shotWindowsOrdered": true,
+          "storyboardShotsCovered": true,
+          "phaseCoverageClosed": true,
+          "transitionsAdjacent": true,
+          "continuityExplicit": true,
+          "providerNeutral": true,
+          "noMediaGeneration": true
+        },
+        "provenance": {
+          "source": "codex_authored",
+          "createdAt": "2026-09-02T03:40:00.000Z",
+          "updatedAt": "2026-09-02T03:40:00.000Z",
+          "changeLog": ["v1: explicit frame rhythm with closed phase coverage"]
+        }
+      }
+    }
+  ],
+  "response": "SequenceRhythmSpec 已绑定精确 Storyboard，使用 24/1 有理帧率和连续镜头窗口，阶段、breathing point 与转场语法均显式闭合；它只表达节奏方向，不剪辑媒体、不导出、不选择模型。",
+  "questions": [],
+  "unsupportedClaims": []
+}

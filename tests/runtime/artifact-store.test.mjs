@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, readFile, rm, symlink, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { findArtifact, initProject, putArtifact, recordApproval, verifyProject } from "../../packages/cineweave-runtime/src/artifact-store.mjs";
@@ -104,5 +104,52 @@ test("V2.5 opens a V2.2 project non-destructively and preserves schema validity"
     const artifact = await putArtifact(root, { kind: "example_contract", value: "created-by-v24" }, { id: "artifact.v24-on-v22", version: 1 });
     assert.equal(artifact.envelope.contractVersion, "2.5.0");
     assert.equal((await verifyProject(root)).valid, true);
+  } finally { await rm(root, { recursive: true, force: true }); }
+});
+
+test("explicit empty metadata is rejected instead of silently defaulted", async () => {
+  const root = await mkdtemp(join(tmpdir(), "cineweave-runtime-explicit-values-"));
+  try {
+    await assert.rejects(
+      () => initProject(root, { projectId: "project.explicit-values", name: "" }),
+      /name must contain/,
+    );
+
+    await initProject(root, { projectId: "project.explicit-values", name: "Explicit Values" });
+    await assert.rejects(
+      () => putArtifact(root, { kind: "example_contract", value: 1 }, { id: "artifact.explicit", version: 0 }),
+      /version must be a positive safe integer/,
+    );
+    await assert.rejects(
+      () => putArtifact(root, { kind: "example_contract", value: 1 }, { id: "artifact.explicit", status: "" }),
+      /status is invalid/,
+    );
+
+    const artifact = await putArtifact(root, { kind: "example_contract", value: 1 }, { id: "artifact.explicit" });
+    await assert.rejects(
+      () => recordApproval(root, artifact.envelope.artifactRef, { decision: "approved", actor: "tester", rationale: "" }),
+      /rationale must contain/,
+    );
+  } finally { await rm(root, { recursive: true, force: true }); }
+});
+
+test("exact artifact reads reject symlinked records", async (t) => {
+  const root = await mkdtemp(join(tmpdir(), "cineweave-runtime-symlink-"));
+  try {
+    await initProject(root, { projectId: "project.symlink-read" });
+    const stored = await putArtifact(root, { kind: "example_contract", value: 1 }, { id: "artifact.symlink-read" });
+    const outside = join(root, "outside.json");
+    await writeFile(outside, await readFile(stored.path), "utf8");
+    await rm(stored.path);
+    try {
+      await symlink(outside, stored.path, "file");
+    } catch (error) {
+      if (["EPERM", "EACCES", "ENOTSUP"].includes(error?.code)) {
+        t.skip("platform does not permit an unprivileged symlink fixture");
+        return;
+      }
+      throw error;
+    }
+    await assert.rejects(() => findArtifact(root, stored.envelope.artifactRef), /regular non-link file/);
   } finally { await rm(root, { recursive: true, force: true }); }
 });

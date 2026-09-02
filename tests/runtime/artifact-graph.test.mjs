@@ -82,6 +82,36 @@ test("graph distinguishes missing refs from same-version hash mismatches and sco
   } finally { await rm(root, { recursive: true, force: true }); }
 });
 
+test("shot lighting and temporal plans form an acyclic downstream fan-out", async () => {
+  const root = await mkdtemp(join(tmpdir(), "cineweave-graph-shot-fanout-"));
+  try {
+    await initProject(root, { projectId: "project.graph-shot-fanout", createdAt: generatedAt });
+    const shot = await putArtifact(root, {
+      kind: "cineweave_codex_shot_spec",
+      shotSpecId: "shot.example",
+      purpose: "Stable upstream camera and blocking intent"
+    }, { id: "shot.example", version: 1, createdAt: generatedAt });
+    await putArtifact(root, {
+      kind: "cineweave_codex_shot_lighting_plan",
+      shotSpecRef: shot.envelope.artifactRef
+    }, { id: "shot-light.example", version: 1, createdAt: generatedAt });
+    await putArtifact(root, {
+      kind: "cineweave_codex_temporal_spec",
+      shotSpecRef: shot.envelope.artifactRef
+    }, { id: "temporal.example", version: 1, createdAt: generatedAt });
+
+    const graph = await buildArtifactGraph(root, { generatedAt });
+    assert.equal(graph.summary.artifactCount, 3);
+    assert.equal(graph.summary.resolvedReferenceCount, 2);
+    assert.equal(graph.summary.cycleCount, 0);
+    assert.deepEqual(new Set(graph.edges.map((edge) => edge.sourceArtifactRef.kind)), new Set([
+      "cineweave_codex_shot_lighting_plan",
+      "cineweave_codex_temporal_spec"
+    ]));
+    assert.ok(graph.edges.every((edge) => edge.targetArtifactRef.kind === "cineweave_codex_shot_spec"));
+  } finally { await rm(root, { recursive: true, force: true }); }
+});
+
 test("cycle detector returns deterministic strongly connected components", () => {
   const edges = [
     { sourceKey: "artifact.a", targetKey: "artifact.b", status: "resolved" },

@@ -136,10 +136,21 @@ entry; specialist Skills remain independently invocable.
 | `$cineweave-character` | identity exploration, semantic morphology, appearance, behavior and actor timing | exploration contracts, `CharacterMorphologySpec`, `MorphologyReview`, `CharacterSpec`, bindings and timelines |
 | `$cineweave-scene` | geography, architecture, materials, physical light and interaction | `SceneSpec`, `SceneState`, `SceneLightState`, bindings and reviews |
 | `$cineweave-style` | one-axis style exploration and visual/temporal representation grammar | style exploration contracts, `StylePackage`, `RepresentationBinding`, `StyleCompile`, `StyleLightGrammar` |
-| `$cineweave-reference` | content-addressed media, atomic observations, suitability and exact role bindings | `ReferenceAsset`, `ReferenceObservation`, `ReferenceReview`, `ReferenceBindingSet` |
-| `$cineweave-director` | action choreography, shot purpose, blocking, camera, shot light use and time | `ActionSequenceSpec`, `ShotSpec`, `ShotLightingPlan`, `TemporalSpec`, storyboard |
+| `$cineweave-reference` | content-addressed media, content-credential inspection, atomic observations, suitability, exact role bindings and scoped creator aliases | `ReferenceAsset`, `ContentCredentialInspection`, `ReferenceObservation`, `ReferenceReview`, `ReferenceBindingSet`, `AssetAliasRegistry` |
+| `$cineweave-director` | action choreography, shot purpose, blocking, camera, shot light use, time, visual anchoring, sequence rhythm and parameterized cinematic compilation | `ActionSequenceSpec`, `CinematicSkillManifest`, `ShotCompilerPlan`, `ShotSpec`, `HeroFrameAnchor`, `ShotLightingPlan`, `TemporalSpec`, `CameraPrevisSpec`, `Storyboard`, `SequenceRhythmSpec`, `RenderPlan` |
 | `$cineweave-prompt` | general text-to-image prompts plus Midjourney profiles, exploration packs/cases | `PromptRecord`, `ImagePrompt`, `MidjourneyAestheticProfile`, `MidjourneyPromptPack`, `MidjourneyExplorationCase`, explicit reference transforms, hypotheses and one-variable repairs |
-| `$cineweave-production` | recipes, deterministic board assembly, workflow-template provenance, controls, evidence, capabilities, rights, execution intent and QA | `AssetRecipe`, `BoardAssemblyPlan`, `WorkflowTemplateProfile`, capability/license profiles, `ControlBenchmarkReview`, `AdapterDescriptor`, `ExecutionRequest`, `ExecutionReceipt` |
+| `$cineweave-production` | recipes, deterministic board assembly, rational-frame editorial, local media-technical probing, technical color and content-credential handoffs, guarded contract-aware repairs, workflow-template provenance, controls, evidence, capabilities, rights, execution intent and QA | `AssetRecipe`, `BoardAssemblyPlan`, `EditorialTimelinePlan`, `MediaTechnicalProbe`, `ColorPipelineProfile`, `ContentCredentialHandoff`, `RepairRunReceipt`, `WorkflowTemplateProfile`, capability/license profiles, `ControlBenchmarkReview`, `AdapterDescriptor`, `ExecutionRequest`, `ExecutionReceipt` |
+
+The Director creator layer keeps the authoring surface legible while preserving
+exact downstream contracts: `AssetAliasRegistry` expands scoped `@Asset` names
+to exact existing refs; `HeroFrameAnchor` locks a selected still to an
+exact `ShotSpec` and separates visual DNA from inheritance policy;
+`SequenceRhythmSpec` maps a storyboard to rational, contiguous shot windows and
+tempo phases. `CinematicSkillManifest` and `ShotCompilerPlan` add a
+parameterized creator layer: the manifest describes reusable programs and the
+compiler resolves exact inputs into projection-only controls and planned owner
+handoffs. These artifacts are provider-neutral plans and cannot generate, edit
+or approve media.
 
 ### Start without prompt terminology
 
@@ -420,8 +431,9 @@ slice into a provider-neutral RenderPlan and generic `ExecutionRequest`;
 `production-execution-run` re-verifies the latest slice version and delegates to
 the generic adapter runtime for fixture/dry-run/external receipts. The local
 `production-media-import` callback can verify successful PNG/JPEG/WebP output
-bytes and bind a Draft MediaImport to exact QA evidence; it still cannot mark
-an ApprovedAsset or create a Release. The local post-media lifecycle now also
+bytes and bind a versioned Draft MediaImport to its exact RenderPlan and paired
+execution evidence; it still cannot mark an ApprovedAsset or create a Release.
+The local post-media lifecycle now also
 records a human QA checklist, a private ApprovedAsset binding and a private
 ReleaseReceipt after their respective Gates; `public` remains false until a
 separate successful non-authoritative platform receipt exists. A local fixture
@@ -493,11 +505,12 @@ feedback; they remain observation-only and never write State or Canon directly.
 
 ## Verification
 
-The current source gate validates 76 contracts, 74 uniquely owned routes and 15 built-in
+The current source gate validates 89 contracts, 86 uniquely owned routes and 15 built-in
 deterministic recipes. It also validates every schema/example pair, semantic
-positive and negative cases, 49 static behavior cases, validated modern and legacy
-evaluation fixtures, a 13-case deterministic live-evaluation replay set and 40 runtime
-tests plus 49 World OS tests, together with standalone Skill bundles, reference links, rights boundaries,
+positive and negative cases, 76 static behavior cases, validated modern and legacy
+evaluation fixtures, a 33-case deterministic live-evaluation replay set with
+inline contract-payload evidence, runtime and World OS test suites, together
+with standalone Skill bundles, reference links and lifecycle audit, rights boundaries,
 media-ingestion threats and distributable assets.
 
 ```bash

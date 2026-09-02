@@ -4,6 +4,200 @@
   "route": "representation_binding",
   "outcome": "answer",
   "contractKinds": ["cineweave_codex_representation_binding"],
+  "payloads": [
+    {
+      "kind": "cineweave_codex_representation_binding",
+      "payload": {
+        "kind": "cineweave_codex_representation_binding",
+        "contractVersion": "2.5.0",
+        "bindingId": "representation.jialing.soft-natural-anime",
+        "version": 1,
+        "status": "draft",
+        "characterSpecRef": {
+          "kind": "cineweave_codex_character_spec",
+          "id": "character.jialing",
+          "version": 3,
+          "contentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+        },
+        "morphologySpecRef": {
+          "kind": "cineweave_codex_character_morphology_spec",
+          "id": "morphology.jialing.v1",
+          "version": 1,
+          "contentHash": "sha256:2222222222222222222222222222222222222222222222222222222222222222"
+        },
+        "stylePackageRef": {
+          "kind": "cineweave_codex_style_package",
+          "id": "style.anime.soft-naturalistic",
+          "version": 1,
+          "contentHash": "sha256:3333333333333333333333333333333333333333333333333333333333333333"
+        },
+        "mapping": [
+          {
+            "mappingId": "mapping.face-geometry",
+            "scope": "face_geometry",
+            "sourceSemantics": [
+              "Mildly elongated soft oval",
+              "High but non-flaring cheek placement",
+              "Narrowing jaw without an extreme point"
+            ],
+            "representationRule": "Simplify interior facial planes moderately while preserving the outer oval, cheek placement and jaw transition.",
+            "abstractionLevel": "moderate",
+            "preserveAnchorIds": [
+              "anchor.face.shape",
+              "anchor.face.cheek-jaw"
+            ],
+            "allowedTransformations": [
+              "Reduce micro-plane detail",
+              "Clarify the outer contour"
+            ],
+            "forbiddenTransformations": [
+              "Round childlike face",
+              "Extreme pointed chin",
+              "Flatten cheek placement"
+            ],
+            "visibleAt": [
+              "closeup",
+              "medium",
+              "fullbody"
+            ]
+          },
+          {
+            "mappingId": "mapping.eyes",
+            "scope": "eyes",
+            "sourceSemantics": [
+              "Moderately long eye opening",
+              "Restrained vertical openness",
+              "Gentle upward outer canthus",
+              "Left eye subtly lower"
+            ],
+            "representationRule": "The iris may enlarge modestly, but the eye must remain long rather than round and preserve spacing, tilt and controlled asymmetry.",
+            "abstractionLevel": "moderate",
+            "preserveAnchorIds": [
+              "anchor.face.eye-shape",
+              "anchor.face.eye-asymmetry"
+            ],
+            "allowedTransformations": [
+              "Moderately enlarge the iris",
+              "Simplify tear-line texture"
+            ],
+            "forbiddenTransformations": [
+              "Oversized round eyes",
+              "Symmetrize both eyes",
+              "Reverse the canthal tilt"
+            ],
+            "visibleAt": [
+              "extreme_closeup",
+              "closeup",
+              "medium"
+            ]
+          },
+          {
+            "mappingId": "mapping.surface",
+            "scope": "surface",
+            "sourceSemantics": [
+              "Warm-neutral complexion",
+              "Natural regional color variation",
+              "Subtle under-eye texture"
+            ],
+            "representationRule": "Omit photographic pores while preserving warm/cool facial regions through restrained color grouping and soft edge changes.",
+            "abstractionLevel": "high",
+            "preserveAnchorIds": [
+              "anchor.surface.warm-neutral"
+            ],
+            "allowedTransformations": [
+              "Omit pore-scale texture",
+              "Convert regional variation into designed color groups"
+            ],
+            "forbiddenTransformations": [
+              "Uniform porcelain white",
+              "Photographic pore overlays",
+              "Glossy plastic skin"
+            ],
+            "visibleAt": [
+              "extreme_closeup",
+              "closeup",
+              "medium"
+            ]
+          },
+          {
+            "mappingId": "mapping.body-silhouette",
+            "scope": "body_proportion",
+            "sourceSemantics": [
+              "Narrow naturally dropped shoulders",
+              "Slightly long dancer legs",
+              "Stable low center of gravity"
+            ],
+            "representationRule": "Permit restrained leg elongation but preserve grounded weight, shoulder width and adult anatomy.",
+            "abstractionLevel": "restrained",
+            "preserveAnchorIds": [
+              "anchor.body.silhouette",
+              "anchor.motion.grounded-turn"
+            ],
+            "allowedTransformations": [
+              "Slightly lengthen leg rhythm for graphic clarity"
+            ],
+            "forbiddenTransformations": [
+              "Paper-thin torso",
+              "Weightless stance",
+              "Child proportions"
+            ],
+            "visibleAt": [
+              "medium",
+              "fullbody",
+              "wide"
+            ]
+          }
+        ],
+        "preserveSemanticAnchorIds": [
+          "anchor.face.shape",
+          "anchor.face.cheek-jaw",
+          "anchor.face.eye-shape",
+          "anchor.face.eye-asymmetry",
+          "anchor.surface.warm-neutral",
+          "anchor.body.silhouette",
+          "anchor.motion.grounded-turn"
+        ],
+        "allowedTransformations": [
+          "Simplify features according to the approved abstraction budget",
+          "Translate physical surface detail into medium-appropriate graphic cues"
+        ],
+        "forbiddenTransformations": [
+          "Mutate CharacterSpec",
+          "Replace identity anchors with generic style defaults",
+          "Copy identity from a style reference"
+        ],
+        "activationGate": {
+          "status": "pending",
+          "humanApprovalRequired": true,
+          "crossRepresentationReviewRequired": true,
+          "validationPassed": false
+        },
+        "executionBoundary": {
+          "providerNeutral": true,
+          "generatesMedia": false,
+          "containsProviderWeights": false,
+          "humanApprovalRequired": true
+        },
+        "validation": {
+          "exactRefsRequired": true,
+          "characterOwnsIdentity": true,
+          "styleDoesNotMutateCanon": true,
+          "scaleAware": true,
+          "noProviderWeights": true,
+          "noBiometricInference": true,
+          "noGenerationClaim": true
+        },
+        "skillReceipt": {
+          "repository": "https://github.com/Wilder1222/cineweave-studio",
+          "ref": "v2.5.0",
+          "commit": "0123456789abcdef0123456789abcdef01234567",
+          "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+          "installedBy": "codex-environment",
+          "usedAt": "2026-08-22T12:35:00.000Z"
+        }
+      }
+    }
+  ],
   "response": "该 RepresentationBinding 不修改 CharacterSpec，也不改写身份 Canon。眼睛允许适度放大虹膜和简化内部表面，但必须继续保持狭长、轻微上挑和原有眼距；禁止变成圆大眼。脸部轮廓、浅痣和稳定重心作为全局保留锚点，禁止被动画默认脸型或失重姿态覆盖。每项规则分别声明允许与禁止转换，并按近景、全身等可见尺度编译；Provider 控制留给 Production Adapter。",
   "questions": [],
   "unsupportedClaims": []

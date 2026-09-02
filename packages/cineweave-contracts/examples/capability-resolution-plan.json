@@ -1,0 +1,170 @@
+{
+  "kind": "cineweave_codex_capability_resolution_plan",
+  "contractVersion": "2.5.0",
+  "resolutionPlanId": "capability-resolution.fixture-svg-v1",
+  "version": 1,
+  "status": "selected",
+  "request": {
+    "operationId": "image.generate.fixture",
+    "renderMode": "generate",
+    "executionMode": "fixture",
+    "mediaKind": "image",
+    "inputCount": 0,
+    "outputCount": 1,
+    "acceptedMimeTypes": ["image/svg+xml"],
+    "requirements": [
+      {
+        "requirementId": "requirement.image-generation",
+        "capabilityId": "image_generation",
+        "level": "hard",
+        "scope": "image",
+        "reason": "The requested fixture operation must be able to generate an image."
+      }
+    ]
+  },
+  "candidates": [
+    {
+      "candidateId": "candidate.fixture-svg",
+      "capabilityProfileRef": {
+        "kind": "cineweave_codex_capability_profile",
+        "id": "capability.fixture-svg",
+        "version": 1,
+        "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      },
+      "adapterDescriptorRef": {
+        "kind": "cineweave_adapter_descriptor",
+        "id": "adapter.fixture-svg",
+        "version": 1,
+        "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "adapterId": "adapter.fixture-svg",
+      "operationSupport": {
+        "operationId": "image.generate.fixture",
+        "status": "pass",
+        "executionMode": true,
+        "renderMode": true,
+        "mediaKind": true,
+        "inputCapacity": true,
+        "outputCapacity": true,
+        "mimeTypes": true,
+        "reason": "Operation, mode, media, capacity and MIME constraints pass."
+      },
+      "capabilityResults": [
+        {
+          "requirementId": "requirement.image-generation",
+          "capabilityId": "image_generation",
+          "level": "hard",
+          "support": "strong",
+          "status": "pass",
+          "score": 1,
+          "reason": "The candidate declares strong support."
+        }
+      ],
+      "score": 100,
+      "status": "selected",
+      "hardFailures": [],
+      "warnings": [],
+      "rationale": "Eligible with a deterministic capability score of 100."
+    },
+    {
+      "candidateId": "candidate.partial-svg",
+      "capabilityProfileRef": {
+        "kind": "cineweave_codex_capability_profile",
+        "id": "capability.partial-svg",
+        "version": 1,
+        "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+      },
+      "adapterDescriptorRef": {
+        "kind": "cineweave_adapter_descriptor",
+        "id": "adapter.partial-svg",
+        "version": 1,
+        "contentHash": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+      },
+      "adapterId": "adapter.partial-svg",
+      "operationSupport": {
+        "operationId": "image.generate.fixture",
+        "status": "pass",
+        "executionMode": true,
+        "renderMode": true,
+        "mediaKind": true,
+        "inputCapacity": true,
+        "outputCapacity": true,
+        "mimeTypes": true,
+        "reason": "Operation, mode, media, capacity and MIME constraints pass."
+      },
+      "capabilityResults": [
+        {
+          "requirementId": "requirement.image-generation",
+          "capabilityId": "image_generation",
+          "level": "hard",
+          "support": "partial",
+          "status": "review",
+          "score": 0.6,
+          "reason": "The candidate declares partial support; human review is required before execution."
+        }
+      ],
+      "score": 60,
+      "status": "needs_review",
+      "hardFailures": [],
+      "warnings": ["requirement.image-generation: The candidate declares partial support; human review is required before execution."],
+      "rationale": "Review required because requirement.image-generation: partial support requires human review."
+    }
+  ],
+  "selection": {
+    "status": "selected",
+    "selectedCandidateId": "candidate.fixture-svg",
+    "selectedCapabilityProfileRef": {
+      "kind": "cineweave_codex_capability_profile",
+      "id": "capability.fixture-svg",
+      "version": 1,
+      "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+    },
+    "selectedAdapterDescriptorRef": {
+      "kind": "cineweave_adapter_descriptor",
+      "id": "adapter.fixture-svg",
+      "version": 1,
+      "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+    },
+    "rationale": "Selected adapter.fixture-svg through candidate.fixture-svg; it is the highest deterministic eligible candidate after hard requirements.",
+    "humanApprovalRequired": true
+  },
+  "explanation": {
+    "primaryDecision": "Selected adapter.fixture-svg through candidate.fixture-svg; it is the highest deterministic eligible candidate after hard requirements.",
+    "rankingPolicy": "Operation support is mandatory; capability support is weighted hard=5, soft=3, advisory=1, then tied by adapterId and candidateId. Partial, experimental and unknown support never silently becomes strong support.",
+    "hardConstraints": ["requirement.image-generation: The requested fixture operation must be able to generate an image."],
+    "tradeoffs": ["candidate.partial-svg scored 60 and is needs_review."],
+    "fallbackCandidateIds": ["candidate.partial-svg"]
+  },
+  "executionBoundary": {
+    "providerNeutral": true,
+    "generatesMedia": false,
+    "executesAdapter": false,
+    "mutatesCanon": false,
+    "writesFiles": false,
+    "humanApprovalRequired": true,
+    "notes": "Capability Resolver 只比较 exact CapabilityProfile/AdapterDescriptor，不选择 Provider、不执行 adapter，也不授予审批。"
+  },
+  "validation": {
+    "candidateRefsExact": true,
+    "descriptorBindingsExact": true,
+    "hardRequirementsBlock": true,
+    "rankingDeterministic": true,
+    "explanationPresent": true,
+    "noProviderSelection": true,
+    "noExecution": true
+  },
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-studio",
+    "ref": "v2.5.1",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-09-02T06:00:00.000Z"
+  },
+  "provenance": {
+    "source": "codex_authored",
+    "createdAt": "2026-09-02T06:00:00.000Z",
+    "updatedAt": "2026-09-02T06:00:00.000Z",
+    "changeLog": ["v1: record an explainable exact capability resolution without adapter execution"]
+  }
+}

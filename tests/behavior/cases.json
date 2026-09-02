@@ -285,6 +285,17 @@
       "behaviorAssertions": ["stages before choosing a lens", "uses one dominant camera idea"]
     },
     {
+      "id": "director.direct.shot-lighting",
+      "category": "direct",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to create a ShotLightingPlan for this exact ShotSpec from the supplied exact SceneLightState and optional StyleLightGrammar. Assign only existing physical sources to key, fill, rim or practical functions; specify exposure, material response and continuity. Keep style as treatment rather than source placement, do not move a window or lamp, generate media, approve an asset or choose a provider.",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "shot_lighting",
+      "mustProduce": ["cineweave_codex_shot_lighting_plan"],
+      "mustNotProduce": ["cineweave_codex_scene_light_state", "cineweave_codex_style_light_grammar", "cineweave_execution_request"],
+      "behaviorAssertions": ["binds only physical SceneLightState sources", "keeps StyleLightGrammar separate from source placement", "declares exposure material response and continuity", "does not claim adapter execution or asset approval"]
+    },
+    {
       "id": "director.direct.action-sequence",
       "category": "direct",
       "targetSkill": "cineweave-director",
@@ -318,6 +329,17 @@
       "behaviorAssertions": ["rejects unmotivated compound movement", "prefers static or smallest motivated move"]
     },
     {
+      "id": "director.direct.single-variable-repair",
+      "category": "direct",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to repair one observed Director failure. I supplied an exact ShotSpec and a ControlBenchmarkReview: the 85mm camera compresses the heroine, threshold and returning figure so the recognition beat's spatial cause is unreadable. Change only the camera variable, preserve identity, physical light, scene facts, action continuity and prompt binding, leave acceptance checks pending, and do not claim that media was regenerated or approved.",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "repair",
+      "mustProduce": ["cineweave_codex_director_repair"],
+      "mustNotProduce": ["cineweave_codex_shot_spec", "cineweave_codex_image_prompt", "cineweave_execution_request"],
+      "behaviorAssertions": ["binds exact observed evidence and an immutable target", "changes one Director-owned variable while preserving passing cross-domain constraints", "uses an allowed camera target path", "leaves checks pending and does not claim repair success or provider execution"]
+    },
+    {
       "id": "director.negative.general-prompt-library",
       "category": "negative",
       "targetSkill": "cineweave-director",
@@ -328,6 +350,90 @@
       "mustProduce": ["cineweave_codex_prompt_record"],
       "mustNotProduce": ["cineweave_codex_shot_spec"],
       "behaviorAssertions": ["routes general prompt assets to Prompt"]
+    },
+    {
+      "id": "director.negative.character-identity",
+      "category": "negative",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to make the locked heroine's eyes more almond-shaped, replace her canonical mole and relax the hard-locked jaw; keep the camera exactly as it is. This is a canonical identity and morphology change, not a shot-direction request.",
+      "expectedSkill": "cineweave-character",
+      "expectedRoute": "character_morphology",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduce": ["cineweave_codex_character_morphology_spec"],
+      "mustNotProduce": ["cineweave_codex_shot_spec", "cineweave_codex_director_repair"],
+      "behaviorAssertions": ["routes canonical identity and morphology changes to Character", "does not disguise an identity mutation as camera direction"]
+    },
+    {
+      "id": "director.negative.scene-physical-light",
+      "category": "negative",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to move the actual north skylight source to the east, change the physical sun direction and reposition the practical lantern so the courtyard casts different real shadows. This changes SceneLightState source placement, not the shot's use of existing sources.",
+      "expectedSkill": "cineweave-scene",
+      "expectedRoute": "scene_light_state",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduce": ["cineweave_codex_scene_light_state"],
+      "mustNotProduce": ["cineweave_codex_shot_lighting_plan"],
+      "behaviorAssertions": ["routes physical source placement and shadow direction to Scene", "does not let Director rewrite SceneLightState"]
+    },
+    {
+      "id": "director.negative.style-light-treatment",
+      "category": "negative",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to keep every physical window, lamp and shadow direction fixed but change the medium to ink-like shadows, lower highlight rolloff, visible grain and halation. This is a representational light-treatment request, not physical shot lighting.",
+      "expectedSkill": "cineweave-style",
+      "expectedRoute": "style_light_grammar",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduce": ["cineweave_codex_style_light_grammar"],
+      "mustNotProduce": ["cineweave_codex_shot_lighting_plan"],
+      "behaviorAssertions": ["routes representational light treatment to Style", "preserves Scene-owned physical sources and Director shot intent"]
+    },
+    {
+      "id": "director.negative.reference-ingest",
+      "category": "negative",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to ingest this uploaded PNG, hash its exact bytes, inspect it for reusable observations and preserve its unknown source and likeness rights. This is raw reference lifecycle work before any shot is directed.",
+      "expectedSkill": "cineweave-reference",
+      "expectedRoute": "reference_ingest",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduce": ["cineweave_codex_reference_asset"],
+      "mustNotProduce": ["cineweave_codex_shot_spec", "cineweave_codex_media_import"],
+      "behaviorAssertions": ["routes raw bytes provenance and observation preparation to Reference", "keeps unknown rights unresolved before direction"]
+    },
+    {
+      "id": "director.negative.provider-execution",
+      "category": "negative",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to choose an external image-to-video adapter, prepare the exact request and execute it against a provider. Preserve approval, budget and immutable request requirements; do not treat a director plan as execution authority.",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "execution_request",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduce": ["cineweave_execution_request"],
+      "mustNotProduce": ["cineweave_codex_render_plan", "cineweave_execution_receipt"],
+      "behaviorAssertions": ["routes adapter selection and execution authorization to Production", "keeps Director provider-neutral and non-executing"]
+    },
+    {
+      "id": "director.negative.editorial-timeline",
+      "category": "negative",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to conform the approved storyboard into a 24/1 edit timeline, bind verified MediaImport clips, insert gaps and transitions, and export an OTIO file for an editor.",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "editorial_timeline",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduce": ["cineweave_codex_editorial_timeline_plan"],
+      "mustNotProduce": ["cineweave_codex_shot_spec", "cineweave_execution_request"],
+      "behaviorAssertions": ["routes editable rational-frame timeline representation to Production", "preserves Director cut intent as an exact input rather than rewriting it", "keeps OTIO export as a later approved adapter action"]
+    },
+    {
+      "id": "director.negative.color-pipeline",
+      "category": "negative",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to load an OCIO config, infer each imported clip's colorspace, create preview and delivery transforms, bake a LUT and color-grade the media.",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "color_pipeline",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduce": ["cineweave_codex_color_pipeline_profile"],
+      "mustNotProduce": ["cineweave_codex_shot_spec", "cineweave_execution_request"],
+      "behaviorAssertions": ["routes technical OCIO planning to Production", "keeps Director color intent separate from technical color management", "does not claim config loading transforms LUT export or media grading"]
     },
     {
       "id": "prompt.direct.general-image",
@@ -500,12 +606,12 @@
       "id": "director.direct.camera-previsualization",
       "category": "direct",
       "targetSkill": "cineweave-director",
-      "request": "Use $cineweave-director to previsualize the approved reveal from sequence coverage through shot blocking, one motivated dolly behavior, camera pose/keyframes, focus target and stable end frame. Keep Character performance timing and Scene geography as exact upstream bindings.",
+      "request": "Use $cineweave-director to create a provider-neutral CameraPrevisSpec for the approved reveal. Bind the exact ShotSpec, SceneBinding and TemporalSpec; declare scene-local meter coordinates, rational frame rate, filmback, clipping and shutter, then keep pose/extrinsic and lens/focus intrinsic tracks separate. Make the dolly a real position change rather than a zoom, and do not choose an adapter or generate media.",
       "expectedSkill": "cineweave-director",
-      "expectedRoute": "temporal_direction",
-      "mustProduce": ["cineweave_codex_temporal_spec"],
+      "expectedRoute": "camera_previs",
+      "mustProduce": ["cineweave_codex_camera_previs_spec"],
       "mustNotProduce": ["cineweave_codex_image_prompt"],
-      "behaviorAssertions": ["resolves sequence-to-pose camera hierarchy", "uses one dominant motivated move with start peak and stable end", "does not rewrite Character performance or Scene geography", "keeps provider-specific controls at the adapter boundary"]
+      "behaviorAssertions": ["binds exact shot scene and optional temporal dependencies", "uses explicit meter coordinates and reduced rational frame timing", "keeps pose and intrinsic tracks separate and distinguishes dolly from zoom", "keeps provider-specific controls and execution at the adapter boundary"]
     },
     {
       "id": "director.direct.storyboard-coverage",
@@ -517,6 +623,107 @@
       "mustProduce": ["cineweave_codex_storyboard_sequence"],
       "mustNotProduce": ["cineweave_codex_image_prompt"],
       "behaviorAssertions": ["maintains a beat-to-panel coverage ledger", "uses independent panel tasks and fixed assembly regions", "retains continuity and provenance per panel", "does not ask one image model to draw a coherent grid"]
+    },
+    {
+      "id": "director.direct.hero-frame-anchor",
+      "category": "direct",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to anchor this exact selected hero frame to the exact ShotSpec. Carry forward the camera, composition, appearance moment and rainy-courtyard geography into temporal direction; preserve identity and scene bindings, allow only declared motion or bounded light response overrides, and never generate media or infer new Canon facts from the frame.",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "hero_frame",
+      "mustProduce": ["cineweave_codex_hero_frame_anchor"],
+      "mustNotProduce": ["cineweave_execution_request", "cineweave_execution_receipt", "cineweave_codex_character_spec"],
+      "behaviorAssertions": ["binds one exact still and ShotSpec", "separates camera composition appearance and scene visual DNA", "makes identity and geography inheritance hard-locked", "does not treat a selected frame as generated evidence or Canon mutation"]
+    },
+    {
+      "id": "director.direct.sequence-rhythm",
+      "category": "direct",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to plan the rhythm of this exact connected Storyboard. Express the pacing intent with a reduced rational frame timebase, contiguous shot windows, closed tempo phases, deliberate breathing points, adjacent transition grammar and preserved screen direction; do not conform media, export OTIO or choose a provider.",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "sequence_rhythm",
+      "mustProduce": ["cineweave_codex_sequence_rhythm_spec"],
+      "mustNotProduce": ["cineweave_execution_request", "cineweave_execution_receipt", "cineweave_codex_editorial_timeline_plan"],
+      "behaviorAssertions": ["binds an exact Storyboard", "uses explicit integer-frame windows and a reduced rational timebase", "closes phase and shot coverage with intentional breathing points", "keeps rhythm direction separate from Production editorial conform"]
+    },
+    {
+      "id": "director.direct.cinematic-skill",
+      "category": "direct",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to expose a versioned Atomic Cinematic Skill for a restrained reaction. Keep the story function, exact binding slots, typed parameter ranges, canonical owner targets, quality checks and provider-neutral execution boundary explicit; this is a reusable program, not a prompt preset or Canon mutation.",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "cinematic_skill",
+      "mustProduce": ["cineweave_codex_cinematic_skill_manifest"],
+      "mustNotProduce": ["cineweave_codex_shot_spec", "cineweave_codex_image_prompt", "cineweave_execution_request"],
+      "behaviorAssertions": ["keeps creator controls separate from canonical owner contracts", "declares typed bounded parameters and exact binding slots", "preserves one owner route per target", "does not turn an Atomic Skill into provider syntax or execution"]
+    },
+    {
+      "id": "director.direct.shot-compile",
+      "category": "direct",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to compile the selected slow-push-reaction skill with exact CharacterBinding, SceneBinding and StoryBrief refs. Resolve every parameter, project one control per parameter, preserve the ordered program trace and prepare planned handoffs to ShotSpec, PerformanceTimeline and TemporalSpec; do not fabricate downstream hashes, choose a model or execute.",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "shot_compile",
+      "mustProduce": ["cineweave_codex_shot_compiler_plan"],
+      "mustNotProduce": ["cineweave_execution_request", "cineweave_execution_receipt", "cineweave_codex_prompt_record"],
+      "behaviorAssertions": ["requires an exact CinematicSkillManifest ref", "resolves typed parameters and exact binding slots", "projects controls without taking Canon ownership", "emits ordered planned owner handoffs", "keeps provider selection and execution outside the compiler"]
+    },
+    {
+      "id": "director.direct.provider-neutral-proposals",
+      "category": "direct",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to explore two to five alternative directions for the same exact dramatic brief. Make each alternative differ through one named blocking, attention, camera, tempo or coverage delta; state the hypothesis, required capabilities, cost and risk class. Leave the comparison for a human to choose, and do not select a provider, model, adapter, generate media or approve an asset.",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "proposal",
+      "mustProduce": ["cineweave_codex_director_proposals"],
+      "mustNotProduce": ["cineweave_codex_render_plan", "cineweave_execution_request"],
+      "behaviorAssertions": ["varies one declared direction axis per proposal", "declares capabilities rather than choosing a Provider", "keeps human selection pending for comparison", "does not claim generated or approved media"]
+    },
+    {
+      "id": "director.direct.versioned-render-plan",
+      "category": "direct",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to prepare a provider-neutral draft RenderPlan from these exact approved Prompt, AssetRecipe, ControlChannelSet, EvidenceBundle, CapabilityProfile and LicenseProfile contracts. Preserve their kinds, IDs, versions and hashes; assign the new plan its own identity/version, retain a human execution gate and Draft-only import status. Do not choose a provider, call an adapter or claim output media.",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "render_plan",
+      "mustProduce": ["cineweave_codex_render_plan"],
+      "mustNotProduce": ["cineweave_execution_request", "cineweave_execution_receipt"],
+      "behaviorAssertions": ["uses an exact prompt reference instead of a legacy string", "preserves exact production-source contract references", "keeps provider selection and execution outside Director", "requires human approval and Draft-only import"]
+    },
+    {
+      "id": "director.direct.versioned-media-import",
+      "category": "direct",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to verify already-created local candidate media for this exact RenderPlan. Produce Draft-only import metadata with its own identity/version, preserve the RenderPlan kind, ID, version and hash, and preserve the exact ExecutionRequest and ExecutionReceipt as a paired trace when supplied. Do not generate media, approve an asset, pass QA or publish anything.",
+      "expectedSkill": "cineweave-director",
+      "expectedRoute": "media_import",
+      "mustProduce": ["cineweave_codex_media_import"],
+      "mustNotProduce": ["cineweave_execution_request", "cineweave_execution_receipt"],
+      "behaviorAssertions": ["uses an exact RenderPlan reference rather than collapsing it to a string", "keeps execution request and receipt references paired when present", "leaves verified media in Draft pending explicit QA", "does not claim media generation approval or publication"]
+    },
+    {
+      "id": "production.direct.editorial-timeline",
+      "category": "direct",
+      "targetSkill": "cineweave-production",
+      "request": "Use $cineweave-production to compile this exact Storyboard into a provider-neutral EditorialTimelinePlan. Use a reduced rational frame rate, preserve exact Storyboard and ShotSpec refs, bind only verified Draft candidates through exact MediaImport/media IDs, retain missing shots as honest placeholders, make gaps and transitions explicit, and do not embed media, export an OTIO file or claim a final conform.",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "editorial_timeline",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduce": ["cineweave_codex_editorial_timeline_plan"],
+      "mustNotProduce": ["cineweave_codex_shot_spec", "cineweave_execution_request"],
+      "behaviorAssertions": ["uses reduced rational frame ranges rather than decimal fps", "binds Storyboard ShotSpec and MediaImport references exactly", "keeps placeholders distinct from imported Draft media", "makes gaps and transitions explicit", "does not embed export or claim a completed conform"]
+    },
+    {
+      "id": "production.direct.color-pipeline",
+      "category": "direct",
+      "targetSkill": "cineweave-production",
+      "request": "Use $cineweave-production to prepare a provider-neutral technical color pipeline for exact Draft MediaImport candidates. Record an exact OCIO config ID/version/hash without loading it, distinguish declared from unknown or verified source metadata, use a scene_referred scene_linear working space, and declare one preview plus one delivery path through display/view/output colorspace. Do not apply a grade, write media, export a LUT or turn Style color intent into a technical transform.",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "color_pipeline",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduce": ["cineweave_codex_color_pipeline_profile"],
+      "mustNotProduce": ["cineweave_codex_shot_spec", "cineweave_execution_request"],
+      "behaviorAssertions": ["binds exact MediaImport media and immutable OCIO config identity", "keeps unknown declared and verified source metadata honest", "separates scene display preview and delivery paths", "keeps creative look ownership with Style", "does not load config apply transforms write media or export LUTs"]
     },
     {
       "id": "production.direct.opensource-adapter-capability",
@@ -541,6 +748,17 @@
       "behaviorAssertions": ["separates exact graph provenance from adapter capability", "records content hash and typed input/output slots", "keeps dependency and license uncertainty visible", "does not claim graph installation or provider execution"]
     },
     {
+      "id": "production.direct.cinematography-benchmark",
+      "category": "direct",
+      "targetSkill": "cineweave-production",
+      "request": "Use $cineweave-production to define a provider-neutral CinematographyBench case for an exact CameraPrevisSpec. Bind the exact camera plan, make its path, intrinsics, focus and rational timebase auditable, define trained blind independent reviewers with pass/warn/fail observation anchors, an agreement threshold and a third-reviewer adjudication path, then leave the review planned until observed candidate media is imported. Do not generate media, choose an adapter, approve an asset or claim a passing result.",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "control_benchmark",
+      "mustProduce": ["cineweave_codex_control_benchmark"],
+      "mustNotProduce": ["cineweave_execution_request", "cineweave_execution_receipt"],
+      "behaviorAssertions": ["binds an exact CameraPrevisSpec in cinematography cases", "separates camera path intrinsics focus and timebase checks", "defines blinded trained independent reviewer calibration with observable anchors and adjudication", "requires human review while keeping planned evidence empty", "does not claim generation approval or a passing result"]
+    },
+    {
       "id": "production.direct.control-benchmark-review",
       "category": "direct",
       "targetSkill": "cineweave-production",
@@ -550,6 +768,124 @@
       "mustProduce": ["cineweave_codex_control_benchmark_review"],
       "mustNotProduce": ["cineweave_execution_request", "cineweave_execution_receipt"],
       "behaviorAssertions": ["requires observed-media evidence for a completed review", "blocks advancement on failed blocking findings", "keeps human review and one-owner repair routing explicit", "does not claim generation approval or release"]
+    },
+    {
+      "id": "production.direct.director-quality-benchmark",
+      "category": "direct",
+      "targetSkill": "cineweave-production",
+      "request": "Use $cineweave-production to extend the existing ControlBenchmark with a provider-neutral DirectorQualityBench case. Bind exact ActionSequence, ShotSpec, ShotLightingPlan, TemporalSpec, CameraPrevisSpec and Storyboard artifacts; evaluate shot-purpose readability, action coverage, spatial continuity, temporal causality and human direction as separate pass/warn/fail dimensions. Define trained blind reviewers and paired observed-media calibration with balanced left/right presentation, then leave the review planned until real candidate media and human judgments are collected. Do not generate media, choose an adapter, approve an asset or claim a quality result.",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "control_benchmark",
+      "mustProduce": ["cineweave_codex_control_benchmark"],
+      "mustNotProduce": ["cineweave_codex_control_benchmark_review", "cineweave_execution_request", "cineweave_execution_receipt"],
+      "behaviorAssertions": ["binds exact Director artifacts in the quality case", "separates shot purpose action coverage spatial continuity temporal causality and human direction", "defines paired observed-media calibration with balanced presentation order", "keeps the review planned without media or human results", "does not claim generation approval or a universal quality score"]
+    },
+    {
+      "id": "director.negative.content-credentials",
+      "category": "negative",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to validate the C2PA content credentials of this exact uploaded reference, decide whether its claims are true and whether its license permits production use, then write the manifest back to the asset.",
+      "expectedSkill": "cineweave-reference",
+      "expectedRoute": "content_credentials",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduce": ["cineweave_codex_content_credential_inspection"],
+      "mustNotProduce": ["cineweave_codex_shot_spec", "cineweave_execution_request"],
+      "behaviorAssertions": ["routes exact reference-byte content credential inspection to Reference", "keeps C2PA validation separate from rights and truth conclusions", "does not execute a validator or write a manifest or media"]
+    },
+    {
+      "id": "reference.direct.content-credentials",
+      "category": "direct",
+      "targetSkill": "cineweave-reference",
+      "request": "Use $cineweave-reference to prepare a C2PA ContentCredentialInspection bound to one exact ReferenceAsset and byte hash. The local validator is unavailable, so keep the inspection planned/not_checked, retain all required check categories, and do not infer license ownership, truth, signer trust or manifest presence.",
+      "expectedSkill": "cineweave-reference",
+      "expectedRoute": "content_credentials",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduce": ["cineweave_codex_content_credential_inspection"],
+      "mustNotProduce": ["cineweave_codex_reference_observation", "cineweave_execution_request"],
+      "behaviorAssertions": ["binds an exact ReferenceAsset and byte hash", "keeps unavailable validation in planned not_checked state", "does not make rights truth or signer-trust conclusions"]
+    },
+    {
+      "id": "production.direct.content-credential-handoff",
+      "category": "direct",
+      "targetSkill": "cineweave-production",
+      "request": "Use $cineweave-production to prepare a provider-neutral ContentCredentialHandoff from one exact ReferenceAsset and its ContentCredentialInspection. Require a recorded inspection before external transfer and revalidation of every derived output; plan the source only as a C2PA ingredient. Do not invoke an adapter, export media, embed or write a manifest, or claim that C2PA proves rights or truth.",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "content_credential_handoff",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduce": ["cineweave_codex_content_credential_handoff"],
+      "mustNotProduce": ["cineweave_execution_request", "cineweave_execution_receipt"],
+      "behaviorAssertions": ["binds exact ReferenceAsset and ContentCredentialInspection contracts", "requires recorded inspection before external transfer and derived-output revalidation", "keeps the ingredient relationship planned without adapter media or manifest writes", "does not treat C2PA as rights or truth evidence"]
+    },
+    {
+      "id": "director.negative.media-technical-probe",
+      "category": "negative",
+      "targetSkill": "cineweave-director",
+      "request": "Use $cineweave-director to run ffprobe over this exact Draft MediaImport video, report its container, codec, audio/video streams, rational frame rate, time base and color tags, then decide whether the color transform and media quality are correct.",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "media_technical_probe",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduce": ["cineweave_codex_media_technical_probe"],
+      "mustNotProduce": ["cineweave_codex_shot_spec", "cineweave_execution_request"],
+      "behaviorAssertions": ["routes local media technical probing to Production", "binds exact MediaImport media bytes rather than a filename", "keeps reported technical fields distinct from color interpretation and quality approval", "excludes raw paths tags and media writes"]
+    },
+    {
+      "id": "production.direct.media-technical-probe",
+      "category": "direct",
+      "targetSkill": "cineweave-production",
+      "request": "Use $cineweave-production to record a local read-only MediaTechnicalProbe for one exact Draft MediaImport/media ID. When ffprobe is available, retain selected container, video and audio stream fields, explicit reported/not_reported measurements and a sanitized report hash; do not retain raw paths, tags or extradata. Do not write source or derived media, infer the correct color transform, approve quality or call a provider.",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "media_technical_probe",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduce": ["cineweave_codex_media_technical_probe"],
+      "mustNotProduce": ["cineweave_execution_request", "cineweave_execution_receipt"],
+      "behaviorAssertions": ["binds exact MediaImport media ID byte hash and byte size", "distinguishes planned/not_invoked from recorded ffprobe evidence", "records only selected container and stream fields with explicit missing values", "does not store paths tags extradata network activity media writes color approval or release"]
+    },
+    {
+      "id": "reference.direct.asset-alias",
+      "category": "direct",
+      "targetSkill": "cineweave-reference",
+      "request": "Use $cineweave-reference to create a scoped @Asset alias registry for an exact character binding, scene binding and prop reference. Normalize aliases to Unicode NFC, reject collisions and reserve @latest; do not infer from prompt text, search another scope, mutate Canon or execute a provider.",
+      "expectedSkill": "cineweave-reference",
+      "expectedRoute": "asset_alias",
+      "mustProduce": ["cineweave_codex_asset_alias_registry"],
+      "mustNotProduce": ["cineweave_codex_character_spec", "cineweave_execution_request"],
+      "behaviorAssertions": ["maps each @Asset alias to one exact immutable contract ref", "keeps alias resolution scoped and deterministic", "rejects latest lookup and prompt inference", "does not create Canon or provider execution effects"]
+    },
+    {
+      "id": "production.direct.repair-run",
+      "category": "direct",
+      "targetSkill": "cineweave-production",
+      "request": "Use $cineweave-production to run one exact approved DirectorRepair through a registered local adapter. Bind the exact ShotSpec parent, change only camera.focalLengthMm, preserve every exact dependency and immutable parent, create only the next candidate version, and return a RepairRunReceipt with acceptance pending. The adapter must not call the network, write source or derived media, mutate the parent or approve the candidate; missing approval or an unbounded candidate must remain blocked/failed.",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "repair_run",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduce": ["cineweave_codex_repair_run_receipt"],
+      "mustNotProduce": ["cineweave_execution_request", "cineweave_execution_receipt"],
+      "behaviorAssertions": ["requires exact repair-plan approval and a registered local adapter", "keeps the parent artifact immutable and preserves exact dependencies", "bounds candidate changes to one requested target path and the next version", "leaves candidate acceptance pending for human review", "does not call a network, write media or claim approval"]
+    },
+    {
+      "id": "production.direct.capability-resolution",
+      "category": "direct",
+      "targetSkill": "cineweave-production",
+      "request": "Use $cineweave-production to compare exact CapabilityProfile and AdapterDescriptor candidates for an image-to-video request. Check operation, execution mode, media kind, input/output limits and MIME types; score hard, soft and advisory requirements deterministically; explain the winner, hard failures and fallbacks. Keep partial or experimental support reviewable and do not select a provider, call an adapter or grant approval.",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "capability_resolve",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduce": ["cineweave_codex_capability_resolution_plan"],
+      "mustNotProduce": ["cineweave_execution_request", "cineweave_execution_receipt"],
+      "behaviorAssertions": ["compares exact CapabilityProfile and AdapterDescriptor pairs", "blocks operation mismatches and unresolved hard requirements", "scores hard soft and advisory support deterministically", "explains selection tradeoffs and exact fallbacks", "does not select a provider or execute an adapter"]
+    },
+    {
+      "id": "production.direct.execution-preview",
+      "category": "edge",
+      "targetSkill": "cineweave-production",
+      "request": "Use $cineweave-production to create an approval-before-spend preview for one exact ExecutionRequest and its exact CapabilityResolutionPlan. Show the selected adapter/profile, hard constraints, exact or bounded cost, retry budget, budget status and pending approval. Unknown cost, budget overflow, unresolved hard capability or stale refs must remain blocked; do not approve, execute, write media or mutate Canon.",
+      "expectedSkill": "cineweave-production",
+      "expectedRoute": "execution_preview",
+      "mustNotActivate": ["cineweave-director"],
+      "mustProduce": ["cineweave_codex_execution_preview"],
+      "mustNotProduce": ["cineweave_execution_receipt"],
+      "behaviorAssertions": ["binds exact ExecutionRequest CapabilityResolutionPlan AdapterDescriptor and CapabilityProfile refs", "makes hard constraints cost and retry budget visible", "blocks unknown cost budget overflow unresolved capability or stale refs", "keeps external approval pending and scoped to the exact request", "does not approve execute write media or mutate Canon"]
     }
   ]
 }

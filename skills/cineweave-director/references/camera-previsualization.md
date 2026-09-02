@@ -32,11 +32,43 @@ Specify the camera state at meaningful points:
 time → position → height → angle → orientation → focal intent → focus target → depth/occlusion
 ```
 
-Use exact `ShotSpec.camera` fields for the shot and `TemporalSpec.cameraMotion` plus keyframe-like events for time. Curve language such as “slow push, brief acceleration, settle” is incomplete until the start, peak and stable end are visible.
+Use exact `ShotSpec.camera` fields for the shot and `TemporalSpec.cameraMotion` plus keyframe-like events for time. Curve language such as “slow push, brief acceleration, settle” is incomplete until the start, peak and stable end are visible. When a 3D previs, trajectory interchange or capable adapter needs numerical state, emit the optional `CameraPrevisSpec` rather than adding engineering fields to ShotSpec or TemporalSpec.
 
 ### 5. Render frame or video adapter
 
 Only now choose a provider-neutral image, edit, depth/pose/mask, image-to-video or 3D-previs route. The adapter may approximate the camera plan, but it cannot redefine the dramatic purpose or hide an unsupported hard requirement.
+
+## Artifact dependency direction
+
+Hash the `ShotSpec` before deriving time or lighting. `TemporalSpec` and
+`ShotLightingPlan` each reference that exact upstream shot; the ShotSpec never
+references either downstream artifact. CameraPrevisSpec is another downstream
+node: it references the exact ShotSpec and SceneBinding, and can additionally
+reference the exact TemporalSpec. Consumers bind the sibling refs they need.
+This keeps the immutable artifact graph acyclic and makes every content hash
+independently computable.
+
+## CameraPrevisSpec boundary
+
+Create CameraPrevisSpec only for numerical camera work. It is not a replacement
+for dramatic blocking or a vendor workflow.
+
+- Use a scene-binding-local coordinate system with explicit meter units, up
+  axis, handedness, forward axis and origin.
+- Use a reduced rational frame rate and an explicit inclusive start/end frame
+  range. If a TemporalSpec is supplied, the range must describe the same
+  duration.
+- Declare projection, filmback, clipping range, shutter interval and focus
+  target separately from animated intrinsics.
+- Keep pose/extrinsic keyframes (position plus normalized orientation
+  quaternion) separate from intrinsic keyframes (focal length, focus distance
+  and f-stop). Both tracks start and end at the declared frame range.
+- Declare every real motion component. Camera translation is not zoom; a zoom
+  changes focal length, while a dolly changes pose. A focus pull changes focus
+  distance, and an iris change changes f-stop; neither by itself makes the
+  camera move.
+- Keep the contract provider-neutral and non-executing. Production decides
+  whether an adapter can actually honor it.
 
 ## Motivated movement matrix
 
@@ -85,7 +117,7 @@ If the camera move is used to hide an impossible hand contact, repair the contac
 - Depth/pose/mask workflow: treat each condition as a separate ControlChannel with scope and enforcement. A depth map constrains spatial layout; it does not guarantee identity or acting.
 - 3D or previs workflow: use explicit camera tracks, Bezier/keyframe curves and render checkpoints when the runtime supports them. A previs camera is evidence of camera intent, not proof of final material or identity quality.
 
-The hierarchy follows the camera-control logic described by [CinePreGen](https://arxiv.org/abs/2408.17424). In CineWeave, its output remains a Director `TemporalSpec`/`Storyboard` handoff and is evaluated against exact Character and Scene bindings.
+The hierarchy follows the camera-control logic described by [CinePreGen](https://arxiv.org/abs/2408.17424). In CineWeave, narrative camera intent remains in Director `ShotSpec`/`TemporalSpec`/`Storyboard`; CameraPrevisSpec is the optional numerical sibling handoff, evaluated against exact Scene and Shot bindings.
 
 ## Review and repair
 
