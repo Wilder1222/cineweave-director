@@ -264,8 +264,8 @@
   },
   "prompt": {
     "language": "bilingual",
-    "concise": "电影感写实中全景：沈砚秋在狭窄走廊中左脚后撤半步，用身体挡住身后的孩子，右手靠近剑柄但不拔剑；保持偏长方圆脸、水平细长眼型、左嘴角略高和 7.7 头身，50mm、克制侧光、真实承重与布料重量，恐惧通过下眼睑、下颌和脚尖泄漏，不夸张后仰。",
-    "expanded": "A provider-neutral cinematic realistic medium full shot of Shen Yanqiu in a narrow Cloud Dynasty corridor. The pursuer raises a weapon from the left foreground; she shifts her left foot back half a step and moves between the threat and a child without leaning her upper body away. Preserve her versioned face geometry, horizontal narrow eyes, subtle asymmetric mouth, 7.7-head body rhythm, high waist, slightly long forearms and right-hand dominance. Her fear remains concealed: gaze locks on the pursuer's hands, lower eyelids tighten, jaw firms, right hand approaches the sword hilt but does not draw. 50mm perspective, motivated cool side light, coherent contact shadows, distinct skin, silk, wood, stone and metal response, restrained Chinese fantasy realism, no action-poster exaggeration."
+    "concise": "50mm 平视中全景：沈砚秋保持偏长方圆脸、水平细长眼型、左嘴角略高和 7.7 头身；她在狭窄的朱红木柱、白玉地面走廊中左脚后撤半步，以直立上身挡住部分被遮蔽的孩子，双脚稳定承重，右手接近仍在鞘中的剑。追兵武器进入左前景，被封锁的出口位于后景；绷紧的下眼睑与下颌显露被隐藏的恐惧，西南低位暖边光与东北云海冷填充照亮人物。",
+    "expanded": "An eye-level 50mm medium full shot of Shen Yanqiu in a narrow Cloud Dynasty corridor of aged vermilion wood and wet white jade. She has a long rounded-rectangular face, narrow horizontal eyes, a subtly higher left mouth corner, 7.7-head proportions, a high waist, and slightly long forearms. An armed pursuer's weapon enters the left foreground as she shifts her left foot half a step back to shield the partly obscured child, her torso upright, weight grounded through both feet, and right hand near the sheathed sword. Concealed fear appears only in her tightened lower eyelids and jaw. The blocked exit remains behind her. Low warm rim light from the southwest and cool cloud fill from the northeast produce coherent contact shadows and separate skin, silk, aged lacquer, wet jade, and metal."
   },
   "negativePrompt": [
     "no identity drift or costume mutation",

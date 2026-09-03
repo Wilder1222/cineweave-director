@@ -65,7 +65,7 @@
       "claim": "A seed can hold short-session experiment noise but is not a style or identity bookmark."
     }
   ],
-  "promptBody": "restrained cinematic medium full shot of Shen Yanqiu shifting half a step between an armed pursuer and a child in a narrow stone-and-wood corridor, right hand near the sheathed sword without drawing, concealed fear visible only in tightened lower eyelids and jaw, stable weight through both feet, weapon edge in the left foreground, blocked exit behind, motivated cool side light, coherent contact shadows, distinct skin silk wood stone and metal response, restrained Chinese fantasy realism",
+  "promptBody": "eye-level 50mm medium full shot of Shen Yanqiu with a long rounded-rectangular face, narrow horizontal eyes, a subtly higher left mouth corner and 7.7-head proportions in a narrow vermilion-wood corridor, left foot half a step back as she shields a partly obscured child from an armed pursuer, torso upright and weight grounded through both feet on the wet white-jade floor with visible contact shadows, right hand near the sheathed sword, tightened lower eyelids and jaw showing concealed fear, pursuer's weapon entering the left foreground, blocked exit behind, low warm rim light from the southwest and cool cloud fill from the northeast",
   "referenceBindings": [
     {
       "bindingId": "binding.style.corridor-material",
@@ -141,9 +141,9 @@
     }
   ],
   "renderedPrompt": {
-    "body": "restrained cinematic medium full shot of Shen Yanqiu shifting half a step between an armed pursuer and a child in a narrow stone-and-wood corridor, right hand near the sheathed sword without drawing, concealed fear visible only in tightened lower eyelids and jaw, stable weight through both feet, weapon edge in the left foreground, blocked exit behind, motivated cool side light, coherent contact shadows, distinct skin silk wood stone and metal response, restrained Chinese fantasy realism",
+    "body": "eye-level 50mm medium full shot of Shen Yanqiu with a long rounded-rectangular face, narrow horizontal eyes, a subtly higher left mouth corner and 7.7-head proportions in a narrow vermilion-wood corridor, left foot half a step back as she shields a partly obscured child from an armed pursuer, torso upright and weight grounded through both feet on the wet white-jade floor with visible contact shadows, right hand near the sheathed sword, tightened lower eyelids and jaw showing concealed fear, pursuer's weapon entering the left foreground, blocked exit behind, low warm rim light from the southwest and cool cloud fill from the northeast",
     "parameterTail": "--v 8.2 --ar 16:9 --raw --s 100 --seed 1742",
-    "copyText": "restrained cinematic medium full shot of Shen Yanqiu shifting half a step between an armed pursuer and a child in a narrow stone-and-wood corridor, right hand near the sheathed sword without drawing, concealed fear visible only in tightened lower eyelids and jaw, stable weight through both feet, weapon edge in the left foreground, blocked exit behind, motivated cool side light, coherent contact shadows, distinct skin silk wood stone and metal response, restrained Chinese fantasy realism --v 8.2 --ar 16:9 --raw --s 100 --seed 1742",
+    "copyText": "eye-level 50mm medium full shot of Shen Yanqiu with a long rounded-rectangular face, narrow horizontal eyes, a subtly higher left mouth corner and 7.7-head proportions in a narrow vermilion-wood corridor, left foot half a step back as she shields a partly obscured child from an armed pursuer, torso upright and weight grounded through both feet on the wet white-jade floor with visible contact shadows, right hand near the sheathed sword, tightened lower eyelids and jaw showing concealed fear, pursuer's weapon entering the left foreground, blocked exit behind, low warm rim light from the southwest and cool cloud fill from the northeast --v 8.2 --ar 16:9 --raw --s 100 --seed 1742",
     "referencePlaceholders": [
       "REF_STYLE_CORRIDOR_MATERIAL_01"
     ],
@@ -167,7 +167,7 @@
         ],
         "expectedEffect": "Establish a restrained baseline with the documented stylize default.",
         "acceptanceCheck": "The protection beat reads first while identity, body weight, corridor pressure, light direction, and material separation remain reviewable.",
-        "renderedPrompt": "restrained cinematic medium full shot of Shen Yanqiu shifting half a step between an armed pursuer and a child in a narrow stone-and-wood corridor, right hand near the sheathed sword without drawing, concealed fear visible only in tightened lower eyelids and jaw, stable weight through both feet, weapon edge in the left foreground, blocked exit behind, motivated cool side light, coherent contact shadows, distinct skin silk wood stone and metal response, restrained Chinese fantasy realism --v 8.2 --ar 16:9 --raw --s 100 --seed 1742"
+        "renderedPrompt": "eye-level 50mm medium full shot of Shen Yanqiu with a long rounded-rectangular face, narrow horizontal eyes, a subtly higher left mouth corner and 7.7-head proportions in a narrow vermilion-wood corridor, left foot half a step back as she shields a partly obscured child from an armed pursuer, torso upright and weight grounded through both feet on the wet white-jade floor with visible contact shadows, right hand near the sheathed sword, tightened lower eyelids and jaw showing concealed fear, pursuer's weapon entering the left foreground, blocked exit behind, low warm rim light from the southwest and cool cloud fill from the northeast --v 8.2 --ar 16:9 --raw --s 100 --seed 1742"
       },
       {
         "variantId": "variant.stylize-s250",
@@ -183,7 +183,7 @@
         ],
         "expectedEffect": "Increase aesthetic interpretation without changing story, identity, blocking, camera, or reference inputs.",
         "acceptanceCheck": "Visual treatment may strengthen, but the protection beat and all hard continuity facts must remain as readable as the baseline.",
-        "renderedPrompt": "restrained cinematic medium full shot of Shen Yanqiu shifting half a step between an armed pursuer and a child in a narrow stone-and-wood corridor, right hand near the sheathed sword without drawing, concealed fear visible only in tightened lower eyelids and jaw, stable weight through both feet, weapon edge in the left foreground, blocked exit behind, motivated cool side light, coherent contact shadows, distinct skin silk wood stone and metal response, restrained Chinese fantasy realism --v 8.2 --ar 16:9 --raw --s 250 --seed 1742"
+        "renderedPrompt": "eye-level 50mm medium full shot of Shen Yanqiu with a long rounded-rectangular face, narrow horizontal eyes, a subtly higher left mouth corner and 7.7-head proportions in a narrow vermilion-wood corridor, left foot half a step back as she shields a partly obscured child from an armed pursuer, torso upright and weight grounded through both feet on the wet white-jade floor with visible contact shadows, right hand near the sheathed sword, tightened lower eyelids and jaw showing concealed fear, pursuer's weapon entering the left foreground, blocked exit behind, low warm rim light from the southwest and cool cloud fill from the northeast --v 8.2 --ar 16:9 --raw --s 250 --seed 1742"
       }
     ],
     "oneVariablePerVariant": true

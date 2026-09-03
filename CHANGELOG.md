@@ -23,6 +23,7 @@ All notable changes to CineWeave Director are documented here.
 
 ### Corrected
 
+- tightened provider-neutral and Midjourney prompt compilation with visual-proposition admission, semantic deduplication, reference-overlap removal, and a final deletion test; canonical prompt fixtures now replace generic or repeated style boosters with observable identity, blocking, light, and material facts;
 - made `PromptRecord` reference inputs bind exact `ReferenceObservation` versions and hashes;
 - expanded reference transforms to identity, appearance, composition, palette, and typography without collapsing source evidence into target Canon;
 - allowed targeted negative constraints to be empty and removed the forced photoreal/physical-light bias from general `ImagePrompt` validation;

@@ -35,9 +35,16 @@ Midjourney's [Prompt Basics](https://docs.midjourney.com/hc/en-us/articles/32023
 5. representation/style mechanisms;
 6. only the constraints needed to prevent likely failure.
 
-Use a salience budget: every phrase must either establish the primary read, preserve an approved invariant, distinguish a material/lighting relationship, or prevent a known failure. Remove duplicate adjectives, generic quality boosters, hidden production claims, and facts invisible at the requested scale.
+Apply the route-level prompt economy gate, then make a projection-specific working pass; this does not add a contract field:
 
-For image/reference use, describe what should be visible in the final result, not instructions such as “copy this” or “change the reference.” This follows the official [Image Prompts](https://docs.midjourney.com/hc/en-us/articles/32040250122381-Image-Prompts) and [Style Reference](https://docs.midjourney.com/hc/en-us/articles/32180011136653-Style-Reference) guidance.
+1. inventory the exact source's approved visual propositions before composing, and never shorten by dropping hard Canon;
+2. give each candidate clause one semantic job and admit it only when it changes the visible result, preserves an invariant, disambiguates a relationship, or prevents a named failure;
+3. collapse synonymous propositions to the most concrete wording—`restrained cinematic realism, cinematic lighting, highly detailed` does not pass merely because it is common; approved facts such as `eye-level 50mm medium full shot`, `low warm rim light`, or `wet white-jade contact reflection` do;
+4. compare the body with every reference binding: when a role-scoped style reference already carries soft palette, medium, texture, or treatment, remove synonymous body words, while retaining hard content, identity, action, camera, and exact light/material relationships;
+5. describe only the desired final result, never operations such as “copy this,” “use the same style,” or “change the reference”; this follows the official [Image Prompts](https://docs.midjourney.com/hc/en-us/articles/32040250122381-Image-Prompts) and [Style Reference](https://docs.midjourney.com/hc/en-us/articles/32180011136653-Style-Reference) guidance;
+6. run a final deletion test on every clause: if removing it changes no approved visible proposition or failure coverage, remove it.
+
+Do not use a global adjective blacklist or hard token ceiling. Shortness is a consequence of proposition admission, semantic deduplication, reference-overlap removal, and the deletion test; it must not erase Canon.
 
 ### 3. Separate body, references, and parameter tail
 

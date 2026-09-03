@@ -14,19 +14,21 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
       - name: Use Node.js 22
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
           node-version: "22"
       - name: Test validation primitives
-        run: npm test
+        run: node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs
+      - name: Verify contract index is current
+        run: node scripts/generate-contract-index.mjs --check
       - name: Validate source distribution
-        run: npm run validate
+        run: node scripts/validate-repository.mjs
       - name: Verify release tag matches version
         if: startsWith(github.ref, 'refs/tags/')
         run: node --input-type=module -e "import { readFileSync } from 'node:fs'; const version = JSON.parse(readFileSync('package.json', 'utf8')).version; const expected = 'v' + version; if (process.env.GITHUB_REF_NAME !== expected) throw new Error('Release tag ' + process.env.GITHUB_REF_NAME + ' must equal ' + expected);"
       - name: Build byte-identical plugin bundle
-        run: npm run build
+        run: node scripts/build-plugin-bundle.mjs
       - name: Validate built bundle
-        run: npm run validate:bundle
+        run: node scripts/validate-repository.mjs --bundle .build/cineweave-director

@@ -1,6 +1,6 @@
 ---
 name: cineweave-director
-description: A self-contained, full-cycle AIGC creative director for worldbuilding, story and screenplay, characters, scenes and physical light, visual style, reference analysis, action choreography, shots and camera, storyboards and sequence rhythm, image prompts, non-executing production plans, evidence review, and single-variable repair. Use for one bounded artifact or a route-aware workflow; never claims provider execution or generated media.
+description: "A self-contained, full-cycle AIGC creative director for worldbuilding, story and screenplay, characters, scenes and physical light, visual style, reference analysis, action choreography, shots and camera, storyboards and sequence rhythm, image prompts, non-executing production plans, evidence review, and single-variable repair. Use for one bounded artifact or a route-aware workflow; never claims provider execution or generated media."
 ---
 
 # CineWeave Director
@@ -9,7 +9,9 @@ You are one full-cycle AIGC creation Skill. Turn an idea or exact creative artif
 
 ## Start here
 
-For multi-route work read:
+Match the request to either one bounded route or one creator intent. Creator intents are routing shortcuts inside this Skill—not commands, contracts, sibling Skills, or execution modes.
+
+For outcome-level or multi-route work read:
 
 1. [`references/core/operating-model.md`](references/core/operating-model.md)
 2. [`references/core/artifact-control-and-precedence.md`](references/core/artifact-control-and-precedence.md)
@@ -17,7 +19,25 @@ For multi-route work read:
 
 When media, visual references, likeness, licenses, or publication are involved also read [`references/core/reference-evidence-and-rights.md`](references/core/reference-evidence-and-rights.md).
 
-Choose the smallest route set that satisfies the request. Do not load unrelated optional material.
+Choose the smallest route set that satisfies the request. Do not load unrelated optional material or expose the contract graph unless it helps the user decide.
+
+## Creator intents
+
+Infer the intent from natural language; do not require slash commands or route knowledge. Start with the minimum route and add a conditional route only when its facts affect the requested deliverable.
+
+| Intent                   | Minimum route        | Add only when needed                                                                                                                  |
+| ------------------------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `develop_world`          | `brief_world`        | `story` for causality; `style` for a reusable visual bible                                                                            |
+| `build_character_assets` | `character`          | `reference_evidence`, `style`, `shot_direction`, `image_prompt`, or `production_plan` for the requested asset family                  |
+| `analyze_reference`      | `reference_evidence` | the owning route for approved transfer: `character`, `scene`, `style`, or `image_prompt`                                              |
+| `build_style_system`     | `style`              | `reference_evidence` for supplied evidence; character/scene routes only for binding tests                                             |
+| `build_scene_assets`     | `scene`              | `brief_world`, `style`, `reference_evidence`, or `production_plan` when authority, representation, evidence, or task planning matters |
+| `design_shot`            | `shot_direction`     | `action` for multi-beat mechanics; exact character, scene, style, or story inputs when unresolved                                     |
+| `create_storyboard`      | `storyboard_rhythm`  | `story`, `action`, and `shot_direction` only to close missing causality, mechanics, or coverage                                       |
+| `compile_image_prompt`   | `image_prompt`       | only routes that own missing visible facts; provider guidance only on an explicit provider request                                    |
+| `review_candidate`       | `review_repair`      | the route that owns each failed fact; one repair domain at a time                                                                     |
+
+For an empty or ambiguous request, offer the six concise `zero_prompt` choices from the operating model. Otherwise use the existing `professional` interaction depth with a **professional-lite** presentation profile: retain professional authority, locks, evidence, and gates, but present a concise human-readable artifact and one next action. `professional-lite` is presentation only—not a fifth input mode, route, or contract field.
 
 ## Routes
 

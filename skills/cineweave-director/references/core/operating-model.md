@@ -24,6 +24,8 @@ Both paths must converge before shot work on an explicit dramatic beat and a suf
 - `guided`: ask at most three questions that change route, identity, rights, historical treatment, time structure, or deliverable.
 - `professional`: keep the complete artifact graph, locks, evidence, and review gates visible.
 
+Interaction depth and presentation are separate. Unless the user requests the full graph or canonical JSON, apply the existing `professional` depth with the **professional-lite** presentation profile: preserve all authority and gates while showing a concise human-readable artifact and one next action. `professional-lite` is not an `inputMode`, route, execution mode, or contract value.
+
 Ask one question at a time only when the answer changes a high-impact decision. Otherwise proceed with explicit assumptions.
 
 ## Stage discipline

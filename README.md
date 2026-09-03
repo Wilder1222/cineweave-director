@@ -38,6 +38,12 @@ It is deliberately **non-executing**. It does not call image/video providers, in
 
 The Skill loads only the routes needed by the request. Reusable identity, geography, rights, hard capability, and canon remain unresolved until supplied or approved; plausible prose never silently becomes authority.
 
+## Creator intents
+
+Creators do not need to know the 12 route IDs or 52 contract kinds. The Skill maps natural requests such as “build a complete character asset family”, “analyze only this costume reference”, “design this shot”, “create a storyboard”, “compile a Midjourney prompt”, or “review this candidate” to the smallest route set. These creator intents are thin routing shortcuts inside the same Skill—not commands, additional Skills, or execution endpoints.
+
+The default uses the existing `professional` interaction depth with a **professional-lite presentation profile**: retain exact authority, evidence, locks, and human gates, but present a concise human-readable artifact and one next action. `professional-lite` is not a fifth `inputMode`, route, or contract value. Canonical JSON is emitted only when requested or when an existing contract workflow requires it.
+
 ## Install in Codex
 
 Install an immutable release rather than a moving branch. This repository includes a single-entry [marketplace manifest](.agents/plugins/marketplace.json) following the [Codex plugin packaging guidance](https://developers.openai.com/codex/plugins/build/):
@@ -46,6 +52,8 @@ Install an immutable release rather than a moving branch. This repository includ
 codex plugin marketplace add Wilder1222/cineweave-director --ref v3.0.0
 codex plugin add cineweave-director@cineweave-director
 ```
+
+The manifest's `policy.authentication: ON_INSTALL` is the required Codex marketplace timing policy; it is not a claim that this Skill needs credentials. The plugin declares no MCP server, app integration, provider adapter, or external execution surface.
 
 Start a new task after installation so Codex discovers `$cineweave-director`.
 
@@ -90,31 +98,40 @@ Routes may be skipped, but dependencies do not run backward. World laws are not 
 
 ## Contracts and compatibility
 
-[`skills/cineweave-director/contracts.json`](skills/cineweave-director/contracts.json) is the route and root-kind authority. [`resources/contracts/index.json`](skills/cineweave-director/resources/contracts/index.json) binds every schema and example to its internal domain and raw-byte SHA-256. [`reference-lifecycle.json`](skills/cineweave-director/reference-lifecycle.json) is the complete knowledge allowlist.
+There are three non-competing machine authorities:
 
-The plugin/Skill distribution version is `3.0.0`. Individual artifact `contractVersion` values remain at compatible 2.x wire versions where no breaking wire change was required; plugin version and artifact wire version are intentionally independent.
+- [`contracts.json`](skills/cineweave-director/contracts.json) owns route IDs, route reference baselines, root kinds, and output ownership.
+- [`reference-lifecycle.json`](skills/cineweave-director/reference-lifecycle.json) owns the distributable knowledge allowlist and typed load contexts.
+- [`resources/contracts/index.json`](skills/cineweave-director/resources/contracts/index.json) owns the schema/example inventory, domains, and raw-byte SHA-256 values.
+
+JSON Schema defines the structural wire shape, including each artifact's `contractVersion`. `validate-output.mjs` additionally enforces release-local semantic truth for route ownership, dependency and deliverable closure, evidence-bound review decisions, and non-execution claims; WorkflowPlan validation resolves `contracts.json` from the same Skill directory rather than borrowing authority from another checkout, without equating the Skill release version to the artifact wire version.
+
+`SKILL.md` is the human activation and routing entry point; it does not redefine those machine inventories. The plugin/Skill distribution version is `3.0.0`. Individual artifact `contractVersion` values remain at compatible 2.x wire versions where no breaking wire change was required; plugin version and artifact wire version are intentionally independent.
 
 ## Development
 
-Node.js 22 or newer is required. The repository is a private, dependency-free development harness and has no install step.
+Node.js 22 or newer is required. The repository is a private, dependency-free development harness and has no install step. CI invokes the concrete entrypoints below rather than mutable package aliases:
 
 ```powershell
-npm test
-npm run validate
-npm run build
-npm run validate:bundle
+node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs
+node scripts/generate-contract-index.mjs --check
+node scripts/validate-repository.mjs
+node scripts/build-plugin-bundle.mjs
+node scripts/validate-repository.mjs --bundle .build/cineweave-director
 ```
 
-- `npm test` checks strict JSON/JCS and schema-validation primitives.
-- `npm run validate` checks plugin identity, routes, lifecycle closure, Markdown links, local `$ref` closure, raw-byte hashes, receipt identity, all 52 canonical examples, clean source boundaries, and the dynamically derived distribution inventory.
-- `npm run build` creates `.build/cineweave-director/` by copying only the lifecycle/index-derived allowlist. The current v3 inventory is 136 regular files; the builder does not hardcode that count.
-- `npm run validate:bundle` rejects missing, changed, linked, case-colliding, traversing, or extra bundle files and proves source/bundle byte equality.
+The equivalent `npm` scripts remain convenience aliases, and repository validation requires their commands to match these entrypoints exactly.
+
+- The tests check strict JSON/JCS and schema-validation primitives.
+- Source validation checks plugin identity, frontmatter/agent metadata, exact scripts and CI entrypoints, route/lifecycle authority, typed load contexts, fail-closed schema keywords and formats, confined local `$ref` closure, semantic workflow/review invariants, raw-byte hashes, receipt identity, all 52 canonical examples, clean source boundaries, and the dynamically derived distribution inventory.
+- The build creates `.build/cineweave-director/` by copying only the lifecycle/index-derived allowlist. The current v3 inventory is 136 regular files; the builder does not hardcode that count.
+- Bundle validation rejects missing, changed, linked, case-colliding, traversing, or extra files and proves source/bundle byte equality.
 
 Regenerate the contract index only after intentional contract changes:
 
 ```powershell
-npm run contracts:index
-npm run contracts:index:check
+node scripts/generate-contract-index.mjs
+node scripts/generate-contract-index.mjs --check
 ```
 
 ## Repository layout
@@ -122,9 +139,9 @@ npm run contracts:index:check
 ```text
 .codex-plugin/plugin.json           Codex plugin metadata
 skills/cineweave-director/          complete distributable Skill
-  SKILL.md                           routing and non-negotiable boundaries
+  SKILL.md                           creator-intent routing and hard boundaries
   contracts.json                    12 routes and 52 root kinds
-  reference-lifecycle.json          23-file knowledge allowlist
+  reference-lifecycle.json          typed 23-file knowledge allowlist
   references/                       core, routed and optional knowledge
   resources/contracts/              54 schemas, 52 examples and hash index
 scripts/                             dependency-free validation/build tooling

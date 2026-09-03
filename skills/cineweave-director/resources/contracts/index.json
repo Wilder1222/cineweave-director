@@ -19,7 +19,7 @@
       "schema": "schemas/workflow-plan.schema.json",
       "schemaSha256": "sha256:0402913751cab19ecf4ab7646a1b248466e52e90f75e6e17b390be1d236780bb",
       "example": "examples/workflow-plan.json",
-      "exampleSha256": "sha256:7c51ceaf86f033d080509c493f6c5b42ba4ece1e16685ed6187cd75fc8536d19"
+      "exampleSha256": "sha256:4fc5304f42b8163a833e38cccdb6085c4e5b63f2dd1c0b055a970cc3c7074344"
     },
     {
       "kind": "cineweave_codex_world_bible",
@@ -343,7 +343,7 @@
       "schema": "schemas/image-prompt-output.schema.json",
       "schemaSha256": "sha256:4543c5ddf3de1c8fb0f065e6c12765b281ea9156f226ae1631d33af008d78cd7",
       "example": "examples/image-prompt.json",
-      "exampleSha256": "sha256:1a09bb4760883fb59404e075d4fdf84e4e874f840c98cc1b116a369a410bf523"
+      "exampleSha256": "sha256:3164f1ae613acd0d47c13b4f2f7bce8369f6f6ef1048a8477d0c4d8270f2e273"
     },
     {
       "kind": "cineweave_codex_prompt_projection_plan",
@@ -352,7 +352,7 @@
       "schema": "schemas/prompt-projection-plan.schema.json",
       "schemaSha256": "sha256:09d9fc15754b005a812b0023bef24641e7a6e07b4edf2fa5f2a5d2c2946a5513",
       "example": "examples/prompt-projection-plan.json",
-      "exampleSha256": "sha256:0289f67f3d3e6ee0eb4c5db49752de98e26cd8d709f8d775b207387c3f8ed326"
+      "exampleSha256": "sha256:da57221c73cc82b78d721e7ca82f349780a2a02d9dfc0e3d5ce215b8d5e6b5b1"
     },
     {
       "kind": "cineweave_codex_asset_recipe",

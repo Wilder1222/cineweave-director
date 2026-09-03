@@ -20,7 +20,25 @@ Write observable language in this order when relevant:
 10. canvas, aspect, and delivery intent;
 11. targeted failure prevention.
 
-Facts outrank style adjectives. Include only detail visible at the target scale or needed for continuity. Replace empty quality words—“premium,” “cinematic,” “8K”—with observable structure, light, material, or composition.
+Facts outrank style adjectives. Include only detail visible at the target scale or needed for continuity.
+
+## Prompt economy gate
+
+Before drafting, reduce approved inputs to a visual-proposition inventory. One proposition is one observable fact or reviewable relationship at the requested scale—for example, who shields whom, where a weapon enters frame, or which light produces a contact shadow. Keep provenance in the artifact; do not narrate it inside the prompt.
+
+Admit a clause only when it does at least one of these jobs:
+
+- establishes the primary visible read;
+- preserves an approved identity, appearance, geography, action, or continuity invariant that can affect this frame;
+- disambiguates viewpoint, composition, depth, spatial relation, contact, or weight;
+- specifies a visible light/material relationship;
+- prevents an observed or named high-risk failure not already prevented by a positive clause.
+
+Reject or rewrite a clause when it only praises quality, repeats another clause's semantic proposition, describes workflow or reference manipulation instead of the final image, states metadata invisible at the requested scale, or echoes soft treatment already delegated to a role-scoped reference. Words such as “premium,” “cinematic,” “masterpiece,” and “8K” are warning signs rather than a global blacklist: retain one only when the project defines a distinct observable effect that the word contributes.
+
+Deduplicate by meaning, not exact wording. When two clauses encode the same proposition, keep the more observable, source-grounded, and compact one; do not concatenate synonyms. A reference binding never erases hard Canon: retain identity, content, action, camera, and exact light/material facts, but remove synonymous palette, medium, texture, or treatment adjectives already supplied by that reference role.
+
+Finally, delete each remaining clause in turn. If its removal changes neither the primary read, a required invariant, spatial/physical interpretation, a reviewable style distinction, nor known-failure coverage, leave it out. Do not impose a fixed word or token ceiling; concise output is the result of this gate, not permission to drop visible Canon.
 
 ## References and transforms
 

@@ -1,16 +1,17 @@
 #!/usr/bin/env node
 
 import { createHash } from "node:crypto";
-import { readFile, writeFile } from "node:fs/promises";
-import { dirname, join, relative } from "node:path";
+import { lstat, readFile, realpath, writeFile } from "node:fs/promises";
+import { dirname, isAbsolute, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
+import { parseJsonStrict } from "./canonical-json.mjs";
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const repositoryRoot = dirname(scriptDirectory);
-const skillRoot = join(repositoryRoot, "skills", "cineweave-director");
-const contractsPath = join(skillRoot, "contracts.json");
-const resourceRoot = join(skillRoot, "resources", "contracts");
-const indexPath = join(resourceRoot, "index.json");
+const skillRoot = resolve(repositoryRoot, "skills", "cineweave-director");
+const contractsPath = resolve(skillRoot, "contracts.json");
+const resourceRoot = resolve(skillRoot, "resources", "contracts");
+const indexPath = resolve(resourceRoot, "index.json");
 
 const filenameOverrides = new Map([
   ["cineweave_codex_image_prompt", ["image-prompt-output.schema.json", "image-prompt.json"]],
@@ -28,24 +29,51 @@ const supportSchemas = [
   },
 ];
 
+function assert(condition, message) {
+  if (!condition) throw new Error(message);
+}
+
+function isWithin(root, candidate) {
+  const rel = relative(root, candidate);
+  return rel === "" || (rel !== ".." && !rel.startsWith(`..${sep}`) && !isAbsolute(rel));
+}
+
+async function resolveResource(relativePath, label) {
+  assert(typeof relativePath === "string" && /^[a-z0-9][a-z0-9./-]*$/u.test(relativePath), `${label} contains an invalid resource path: ${relativePath}`);
+  assert(!relativePath.includes("//") && !relativePath.includes("..") && !relativePath.includes("\\"), `${label} is not a confined resource path: ${relativePath}`);
+  const segments = relativePath.split("/");
+  const absolute = resolve(resourceRoot, ...segments);
+  assert(isWithin(resourceRoot, absolute), `${label} escapes the contract resource root: ${relativePath}`);
+
+  let current = resourceRoot;
+  for (const [index, segment] of segments.entries()) {
+    current = resolve(current, segment);
+    const stat = await lstat(current);
+    assert(!stat.isSymbolicLink(), `${label} traverses a symbolic link or junction: ${relativePath}`);
+    if (index < segments.length - 1) assert(stat.isDirectory(), `${label} traverses a non-directory path: ${relativePath}`);
+    else assert(stat.isFile(), `${label} must resolve to a regular file: ${relativePath}`);
+  }
+  const [realRoot, realFile] = await Promise.all([realpath(resourceRoot), realpath(absolute)]);
+  assert(isWithin(realRoot, realFile), `${label} resolves outside the contract resource root: ${relativePath}`);
+  return absolute;
+}
+
 function sha256Bytes(bytes) {
   return `sha256:${createHash("sha256").update(bytes).digest("hex")}`;
 }
 
 function rootFilenames(kind) {
+  assert(typeof kind === "string" && /^[a-z][a-z0-9_]*$/u.test(kind), `Contract kind cannot derive a safe filename: ${kind}`);
   const override = filenameOverrides.get(kind);
   if (override) return override;
-  const stem = kind.replace(/^cineweave_codex_/, "").replaceAll("_", "-");
+  const stem = kind.replace(/^cineweave_codex_/u, "").replaceAll("_", "-");
+  assert(/^[a-z0-9][a-z0-9-]*$/u.test(stem), `Contract kind derives an invalid filename stem: ${kind}`);
   return [`${stem}.schema.json`, `${stem}.json`];
 }
 
 async function readJson(path) {
   const bytes = await readFile(path);
-  return { bytes, value: JSON.parse(bytes.toString("utf8")) };
-}
-
-function assert(condition, message) {
-  if (!condition) throw new Error(message);
+  return { bytes, value: parseJsonStrict(bytes.toString("utf8")) };
 }
 
 async function createIndex() {
@@ -79,8 +107,8 @@ async function createIndex() {
     seenSchemas.add(schema);
     seenExamples.add(example);
 
-    const schemaDocument = await readJson(join(resourceRoot, schema));
-    const exampleDocument = await readJson(join(resourceRoot, example));
+    const schemaDocument = await readJson(await resolveResource(schema, `Schema for ${kind}`));
+    const exampleDocument = await readJson(await resolveResource(example, `Example for ${kind}`));
     const schemaKind = schemaDocument.value?.properties?.kind?.const;
     assert(schemaKind === kind, `${schema} declares kind ${JSON.stringify(schemaKind)} instead of ${kind}`);
     assert(exampleDocument.value?.kind === kind, `${example} declares kind ${JSON.stringify(exampleDocument.value?.kind)} instead of ${kind}`);
@@ -99,7 +127,7 @@ async function createIndex() {
   const indexedSupportSchemas = [];
   for (const support of supportSchemas) {
     assert(!seenSchemas.has(support.schema), `Support schema is also registered as a root schema: ${support.schema}`);
-    const document = await readJson(join(resourceRoot, support.schema));
+    const document = await readJson(await resolveResource(support.schema, "Support schema"));
     indexedSupportSchemas.push({
       ...support,
       schemaSha256: sha256Bytes(document.bytes),

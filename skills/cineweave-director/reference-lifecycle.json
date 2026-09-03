@@ -1,7 +1,17 @@
 {
   "catalogVersion": "3.0.0",
   "skill": "cineweave-director",
-  "policy": "Only listed files are distributable knowledge. Core files load for cross-domain invariants, route files load on their route, and optional files load only on a direct match.",
+  "authority": {
+    "routeOwnership": "contracts.json#/routes",
+    "referenceDistribution": "reference-lifecycle.json#/references",
+    "contractInventory": "resources/contracts/index.json"
+  },
+  "contextCatalog": {
+    "route": ["brief_world", "story", "character", "scene", "style", "reference_evidence", "action", "shot_direction", "storyboard_rhythm", "image_prompt", "production_plan", "review_repair"],
+    "workflow": ["multi_route", "contract_output", "continuity"],
+    "condition": ["rights", "real_person", "semantic_morphology", "camera_previsualization", "portrait", "natural_human", "surface_response", "comic", "manga", "cinematic_pattern", "shot_compile", "editorial", "color", "midjourney"]
+  },
+  "policy": "contracts.json owns route IDs, route reference baselines, and output ownership. This file owns distribution and typed load contexts. SKILL.md is the human entry point and must not create a competing machine authority.",
   "references": [
     { "path": "references/core/operating-model.md", "lifecycle": "core", "loadContexts": ["multi_route", "brief_world"] },
     { "path": "references/core/artifact-control-and-precedence.md", "lifecycle": "core", "loadContexts": ["multi_route", "contract_output", "review_repair"] },
@@ -27,6 +37,6 @@
     { "path": "references/optional/comic-manga.md", "lifecycle": "optional", "loadContexts": ["comic", "manga"] },
     { "path": "references/optional/cinematic-patterns.md", "lifecycle": "optional", "loadContexts": ["cinematic_pattern", "shot_compile"] },
     { "path": "references/optional/editorial-color.md", "lifecycle": "optional", "loadContexts": ["editorial", "color"] },
-    { "path": "references/optional/midjourney-projection.md", "lifecycle": "optional", "loadContexts": ["midjourney", "provider_projection"] }
+    { "path": "references/optional/midjourney-projection.md", "lifecycle": "optional", "loadContexts": ["midjourney"] }
   ]
 }

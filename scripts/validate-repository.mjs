@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 
 import { lstat, readFile, readdir, realpath } from "node:fs/promises";
-import { basename, dirname, extname, isAbsolute, join, posix, relative, resolve, sep } from "node:path";
+import { dirname, extname, isAbsolute, join, posix, relative, resolve, sep } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
-import { parseJsonStrict, sha256Bytes } from "./canonical-json.mjs";
+import { canonicalize, parseJsonStrict, sha256Bytes } from "./canonical-json.mjs";
 import { validateDocument } from "./validate-output.mjs";
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
@@ -28,6 +28,40 @@ const EXPECTED_ROUTES = [
   "image_prompt",
   "production_plan",
   "review_repair",
+];
+const EXPECTED_PACKAGE_SCRIPTS = Object.freeze({
+  test: "node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs",
+  build: "node scripts/build-plugin-bundle.mjs",
+  "contracts:index": "node scripts/generate-contract-index.mjs",
+  "contracts:index:check": "node scripts/generate-contract-index.mjs --check",
+  validate: "node scripts/validate-repository.mjs",
+  "validate:bundle": "node scripts/validate-repository.mjs --bundle .build/cineweave-director",
+  "validate:output": "node scripts/validate-output.mjs",
+});
+const EXPECTED_CHECKOUT_ACTION = "actions/checkout@11d5960a326750d5838078e36cf38b85af677262";
+const EXPECTED_SETUP_NODE_ACTION = "actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020";
+const EXPECTED_RELEASE_TAG_COMMAND = `node --input-type=module -e "import { readFileSync } from 'node:fs'; const version = JSON.parse(readFileSync('package.json', 'utf8')).version; const expected = 'v' + version; if (process.env.GITHUB_REF_NAME !== expected) throw new Error('Release tag ' + process.env.GITHUB_REF_NAME + ' must equal ' + expected);"`;
+const EXPECTED_LIFECYCLE_AUTHORITY = Object.freeze({
+  routeOwnership: "contracts.json#/routes",
+  referenceDistribution: "reference-lifecycle.json#/references",
+  contractInventory: "resources/contracts/index.json",
+});
+const EXPECTED_WORKFLOW_CONTEXTS = ["multi_route", "contract_output", "continuity"];
+const EXPECTED_CONDITION_CONTEXTS = [
+  "rights",
+  "real_person",
+  "semantic_morphology",
+  "camera_previsualization",
+  "portrait",
+  "natural_human",
+  "surface_response",
+  "comic",
+  "manga",
+  "cinematic_pattern",
+  "shot_compile",
+  "editorial",
+  "color",
+  "midjourney",
 ];
 const EXPECTED_SUPPORT_SCHEMAS = new Set([
   "schemas/common.schema.json",
@@ -256,31 +290,35 @@ function collectRefs(value, refs = []) {
 }
 
 async function validateSchemaRefClosure(root, inventory, schemaDocuments) {
-  const schemaRoot = resolve(root, SKILL_PREFIX, "resources", "contracts", "schemas");
+  const resourceRoot = resolve(root, SKILL_PREFIX, "resources", "contracts");
+  const schemaRoot = resolve(resourceRoot, "schemas");
   const allowedFiles = new Set([
     ...inventory.index.contracts.map((entry) => entry.schema),
     ...inventory.index.supportSchemas.map((entry) => entry.schema),
-  ].map((value) => basename(value)));
+  ]);
   let refCount = 0;
 
-  for (const [schemaName, document] of schemaDocuments) {
+  for (const [schemaRelative, document] of schemaDocuments) {
+    const currentPath = resolve(resourceRoot, ...schemaRelative.split("/"));
+    assert(isWithin(schemaRoot, currentPath), `Indexed schema escapes the schema directory: ${schemaRelative}`);
     for (const refValue of collectRefs(document)) {
       refCount += 1;
-      assert(typeof refValue === "string" && refValue.length > 0, `${schemaName} contains an invalid $ref`);
+      assert(typeof refValue === "string" && refValue.length > 0, `${schemaRelative} contains an invalid $ref`);
       if (refValue.startsWith("#")) {
-        pointerGet(document, refValue.slice(1), schemaName);
+        pointerGet(document, refValue.slice(1), schemaRelative);
         continue;
       }
-      assert(!/^[A-Za-z][A-Za-z0-9+.-]*:/u.test(refValue) && !refValue.startsWith("//"), `${schemaName} contains a remote or absolute $ref: ${refValue}`);
-      assert(!refValue.includes("\\") && !refValue.includes("?"), `${schemaName} contains a non-local $ref: ${refValue}`);
+      assert(!/^[A-Za-z][A-Za-z0-9+.-]*:/u.test(refValue) && !refValue.startsWith("//"), `${schemaRelative} contains a remote or absolute $ref: ${refValue}`);
+      assert(!refValue.includes("\\") && !refValue.includes("?") && !refValue.includes("\0"), `${schemaRelative} contains a non-local $ref: ${refValue}`);
       const [filePart, fragment = ""] = refValue.split("#", 2);
-      const targetPath = resolve(schemaRoot, filePart);
-      assert(isWithin(schemaRoot, targetPath), `${schemaName} $ref escapes the schema directory: ${refValue}`);
-      const targetName = basename(targetPath);
-      assert(allowedFiles.has(targetName), `${schemaName} references an unindexed schema: ${refValue}`);
-      const targetDocument = schemaDocuments.get(targetName);
-      assert(targetDocument, `${schemaName} references a missing schema: ${refValue}`);
-      if (fragment) pointerGet(targetDocument, fragment, `${schemaName} -> ${refValue}`);
+      assert(filePart.length > 0 && posix.normalize(filePart) === filePart && filePart !== "." && !filePart.startsWith("../"), `${schemaRelative} contains a non-normalized $ref: ${refValue}`);
+      const targetPath = resolve(dirname(currentPath), filePart);
+      assert(isWithin(schemaRoot, targetPath), `${schemaRelative} $ref escapes the schema directory: ${refValue}`);
+      const targetRelative = toPosix(relative(resourceRoot, targetPath));
+      assert(allowedFiles.has(targetRelative), `${schemaRelative} references an unindexed schema: ${refValue}`);
+      const targetDocument = schemaDocuments.get(targetRelative);
+      assert(targetDocument, `${schemaRelative} references a missing schema: ${refValue}`);
+      if (fragment) pointerGet(targetDocument, fragment, `${schemaRelative} -> ${refValue}`);
     }
   }
   return refCount;
@@ -312,11 +350,49 @@ async function validateContracts(root, inventory) {
   compareFileSets(routeKinds, contracts.contractKinds, "Route-produced root inventory");
   assert(new Set(contracts.contractKinds).size === contracts.contractKinds.length, "contractKinds[] contains duplicates");
 
+  assert(canonicalize(lifecycle.authority) === canonicalize(EXPECTED_LIFECYCLE_AUTHORITY), "reference-lifecycle.json authority map is invalid");
+  assert(lifecycle.contextCatalog && typeof lifecycle.contextCatalog === "object" && !Array.isArray(lifecycle.contextCatalog), "reference-lifecycle.json must contain contextCatalog");
+  compareFileSets(lifecycle.contextCatalog.route ?? [], EXPECTED_ROUTES, "Lifecycle route contexts");
+  compareFileSets(lifecycle.contextCatalog.workflow ?? [], EXPECTED_WORKFLOW_CONTEXTS, "Lifecycle workflow contexts");
+  compareFileSets(lifecycle.contextCatalog.condition ?? [], EXPECTED_CONDITION_CONTEXTS, "Lifecycle condition contexts");
+  const allLoadContexts = [
+    ...(lifecycle.contextCatalog.route ?? []),
+    ...(lifecycle.contextCatalog.workflow ?? []),
+    ...(lifecycle.contextCatalog.condition ?? []),
+  ];
+  assert(new Set(allLoadContexts).size === allLoadContexts.length, "Lifecycle context categories overlap");
+  const knownLoadContexts = new Set(allLoadContexts);
+
   const lifecyclePaths = lifecycle.references.map((entry) => entry.path);
   assert(new Set(lifecyclePaths).size === lifecyclePaths.length, "reference-lifecycle.json contains duplicate paths");
+  const lifecycleByPath = new Map(lifecycle.references.map((entry) => [entry.path, entry]));
+  for (const [position, entry] of lifecycle.references.entries()) {
+    assert(typeof entry.path === "string", `Lifecycle entry ${position} must declare a path`);
+    const expectedLifecycle = entry.path.startsWith("references/core/")
+      ? "core"
+      : entry.path.startsWith("references/routes/")
+        ? "routed"
+        : entry.path.startsWith("references/optional/")
+          ? "optional"
+          : null;
+    assert(expectedLifecycle !== null && entry.lifecycle === expectedLifecycle, `Lifecycle entry ${entry.path} must be classified as ${expectedLifecycle}`);
+    assert(Array.isArray(entry.loadContexts) && entry.loadContexts.length > 0, `Lifecycle entry ${position} must declare loadContexts`);
+    assert(new Set(entry.loadContexts).size === entry.loadContexts.length, `Lifecycle entry ${position} contains duplicate loadContexts`);
+    for (const context of entry.loadContexts) assert(knownLoadContexts.has(context), `Lifecycle entry ${position} uses undeclared load context ${context}`);
+    if (entry.lifecycle === "routed") {
+      const owners = Object.entries(contracts.routes).filter(([, route]) => route.references?.includes(entry.path)).map(([routeId]) => routeId);
+      assert(owners.length === 1, `Routed reference must have exactly one route owner: ${entry.path}`);
+      assert(entry.loadContexts.length === 1 && entry.loadContexts[0] === owners[0], `Routed reference load context must equal its route owner: ${entry.path}`);
+    }
+  }
   for (const [routeId, route] of Object.entries(contracts.routes)) {
     assert(Array.isArray(route.references) && route.references.length > 0, `Route ${routeId} must list at least one reference`);
-    for (const referencePath of route.references) assert(lifecyclePaths.includes(referencePath), `Route ${routeId} references knowledge outside lifecycle: ${referencePath}`);
+    for (const referencePath of route.references) {
+      const lifecycleEntry = lifecycleByPath.get(referencePath);
+      assert(lifecycleEntry, `Route ${routeId} references knowledge outside lifecycle: ${referencePath}`);
+      assert(lifecycleEntry.lifecycle !== "optional", `Route ${routeId} cannot make optional knowledge a baseline: ${referencePath}`);
+      assert(lifecycleEntry.loadContexts.includes(routeId), `Route ${routeId} reference must declare its route load context: ${referencePath}`);
+    }
   }
 
   assert(index.contracts.length === contracts.contractKinds.length, "Contract index root count does not match contracts.json");
@@ -342,7 +418,7 @@ async function validateContracts(root, inventory) {
     assert(sha256Bytes(exampleBytes) === entry.exampleSha256, `Example hash mismatch: ${entry.example}`);
     const schema = parseJsonStrict(schemaBytes.toString("utf8"));
     const example = parseJsonStrict(exampleBytes.toString("utf8"));
-    schemaDocuments.set(basename(entry.schema), schema);
+    schemaDocuments.set(entry.schema, schema);
     assert(schema?.properties?.kind?.const === entry.kind, `Root schema kind mismatch: ${entry.schema}`);
     assert(example?.kind === entry.kind, `Canonical example kind mismatch: ${entry.example}`);
     visitSkillReceipts(example, (receipt, receiptPath) => {
@@ -351,7 +427,7 @@ async function validateContracts(root, inventory) {
       assert(receipt.repository === EXPECTED_REPOSITORY, `${entry.example} ${receiptPath}.repository must use the release repository`);
       assert(receipt.ref === "v3.0.0", `${entry.example} ${receiptPath}.ref must be v3.0.0`);
     });
-    const result = await validateDocument(resolve(root, ...schemaRelative.split("/")), resolve(root, ...exampleRelative.split("/")));
+    const result = await validateDocument(resolve(root, ...schemaRelative.split("/")), resolve(root, ...exampleRelative.split("/")), { contracts });
     if (!result.valid) failures.push({ kind: entry.kind, errors: result.errors });
   }
 
@@ -359,7 +435,7 @@ async function validateContracts(root, inventory) {
     const relativePath = `${SKILL_PREFIX}/resources/contracts/${entry.schema}`;
     const bytes = await readFile(resolve(root, ...relativePath.split("/")));
     assert(sha256Bytes(bytes) === entry.schemaSha256, `Support schema hash mismatch: ${entry.schema}`);
-    schemaDocuments.set(basename(entry.schema), parseJsonStrict(bytes.toString("utf8")));
+    schemaDocuments.set(entry.schema, parseJsonStrict(bytes.toString("utf8")));
   }
   assert(failures.length === 0, `Canonical example validation failed:\n${JSON.stringify(failures, null, 2)}`);
   const schemaRefs = await validateSchemaRefClosure(root, inventory, schemaDocuments);
@@ -454,8 +530,10 @@ function validatePluginAndPackage(plugin, contracts, packageJson = null) {
     for (const forbidden of ["bin", "main", "exports", "workspaces", "dependencies", "devDependencies", "optionalDependencies", "peerDependencies", "bundledDependencies"]) {
       assert(!Object.hasOwn(packageJson, forbidden), `package.json must not contain ${forbidden}`);
     }
-    for (const requiredScript of ["test", "build", "validate", "validate:bundle", "contracts:index", "contracts:index:check", "validate:output"]) {
-      assert(typeof packageJson.scripts?.[requiredScript] === "string", `package.json is missing script ${requiredScript}`);
+    assert(packageJson.scripts && typeof packageJson.scripts === "object" && !Array.isArray(packageJson.scripts), "package.json must contain scripts");
+    compareFileSets(Object.keys(packageJson.scripts), Object.keys(EXPECTED_PACKAGE_SCRIPTS), "package.json script inventory");
+    for (const [scriptName, command] of Object.entries(EXPECTED_PACKAGE_SCRIPTS)) {
+      assert(packageJson.scripts[scriptName] === command, `package.json script ${scriptName} must equal ${JSON.stringify(command)}`);
     }
   }
 }
@@ -471,6 +549,131 @@ function validateMarketplace(marketplace, plugin) {
   assert(entry.source?.ref === `v${EXPECTED_VERSION}`, "Marketplace ref must match the immutable release tag");
   assert(entry.policy?.installation === "AVAILABLE" && entry.policy?.authentication === "ON_INSTALL", "Marketplace policy mismatch");
   assert(entry.category === plugin.interface?.category, "Marketplace category must match plugin metadata");
+}
+
+function parseSkillFrontmatter(markdown) {
+  assert(markdown.startsWith("---\n"), "SKILL.md must start with YAML frontmatter");
+  const end = markdown.indexOf("\n---\n", 4);
+  assert(end >= 0, "SKILL.md frontmatter is not terminated");
+  const fields = Object.create(null);
+  for (const line of markdown.slice(4, end).split("\n")) {
+    const separator = line.indexOf(":");
+    assert(separator > 0, `SKILL.md contains unsupported frontmatter line: ${line}`);
+    const key = line.slice(0, separator).trim();
+    const rawValue = line.slice(separator + 1).trim();
+    assert(/^[a-z][a-z0-9_-]*$/u.test(key) && rawValue.length > 0, `SKILL.md contains invalid frontmatter field: ${line}`);
+    assert(!Object.hasOwn(fields, key), `SKILL.md repeats frontmatter field ${key}`);
+    if (rawValue.startsWith('"')) {
+      const value = parseJsonStrict(rawValue);
+      assert(typeof value === "string" && value.length > 0, `SKILL.md frontmatter field ${key} must be a string scalar`);
+      fields[key] = value;
+    } else {
+      assert(/^[a-z0-9][a-z0-9-]*$/u.test(rawValue), `SKILL.md frontmatter field ${key} must be a quoted string or safe slug`);
+      fields[key] = rawValue;
+    }
+  }
+  return fields;
+}
+
+function parseAgentYaml(yaml) {
+  assert(!yaml.includes("\r") && !yaml.includes("\t"), "agents/openai.yaml must use LF line endings and spaces");
+  const allowedFields = {
+    interface: new Set(["display_name", "short_description", "default_prompt"]),
+    policy: new Set(["allow_implicit_invocation"]),
+  };
+  const document = Object.create(null);
+  let section = null;
+
+  for (const [index, line] of yaml.trimEnd().split("\n").entries()) {
+    const sectionMatch = line.match(/^([a-z][a-z0-9_]*):$/u);
+    if (sectionMatch) {
+      section = sectionMatch[1];
+      assert(Object.hasOwn(allowedFields, section), `agents/openai.yaml contains unknown section ${section}`);
+      assert(!Object.hasOwn(document, section), `agents/openai.yaml repeats section ${section}`);
+      document[section] = Object.create(null);
+      continue;
+    }
+
+    const fieldMatch = line.match(/^  ([a-z][a-z0-9_]*):\s*(.+)$/u);
+    assert(fieldMatch && section, `agents/openai.yaml contains unsupported line ${index + 1}: ${line}`);
+    const [, key, rawValue] = fieldMatch;
+    assert(allowedFields[section].has(key), `agents/openai.yaml contains unknown ${section} field ${key}`);
+    assert(!Object.hasOwn(document[section], key), `agents/openai.yaml repeats ${section}.${key}`);
+    if (section === "policy") {
+      assert(key === "allow_implicit_invocation" && rawValue === "true", "agents/openai.yaml policy must enable only implicit invocation");
+      document[section][key] = true;
+    } else {
+      const value = parseJsonStrict(rawValue);
+      assert(typeof value === "string" && value.length > 0, `agents/openai.yaml ${section}.${key} must be a non-empty quoted string`);
+      document[section][key] = value;
+    }
+  }
+
+  compareFileSets(Object.keys(document), Object.keys(allowedFields), "agents/openai.yaml sections");
+  for (const [name, fields] of Object.entries(allowedFields)) {
+    compareFileSets(Object.keys(document[name]), [...fields], `agents/openai.yaml ${name} fields`);
+  }
+  return document;
+}
+
+async function validateSkillSurfaces(root, plugin) {
+  const skillMarkdown = await readFile(resolve(root, SKILL_PREFIX, "SKILL.md"), "utf8");
+  const frontmatter = parseSkillFrontmatter(skillMarkdown);
+  compareFileSets(Object.keys(frontmatter), ["name", "description"], "SKILL.md frontmatter fields");
+  assert(frontmatter.name === SKILL_NAME, "SKILL.md name must match the plugin identity");
+  assert(typeof frontmatter.description === "string" && frontmatter.description.length <= 1024, "SKILL.md description must be a non-empty Agent Skills description of at most 1024 characters");
+  assert(/\bUse (?:for|when)\b/u.test(frontmatter.description), "SKILL.md description must state when the Skill applies");
+  assert(skillMarkdown.split("\n").length <= 500, "SKILL.md must remain below the 500-line progressive-disclosure limit");
+
+  const agentYaml = await readFile(resolve(root, SKILL_PREFIX, "agents", "openai.yaml"), "utf8");
+  const agent = parseAgentYaml(agentYaml);
+  assert(Array.isArray(plugin.interface?.defaultPrompt) && plugin.interface.defaultPrompt.length === 1, "Plugin interface must expose exactly one default prompt");
+  assert(agent.interface.display_name === plugin.interface.displayName, "agents/openai.yaml display_name must match plugin.json");
+  assert(agent.interface.short_description === plugin.interface.shortDescription, "agents/openai.yaml short_description must match plugin.json");
+  assert(agent.interface.default_prompt === plugin.interface.defaultPrompt[0], "agents/openai.yaml default_prompt must match plugin.json");
+  assert(agent.policy.allow_implicit_invocation === true, "agents/openai.yaml must explicitly allow implicit invocation");
+}
+
+async function validateWorkflowEntrypoints(root) {
+  const workflow = await readFile(resolve(root, ".github", "workflows", "validate.yml"), "utf8");
+  const expectedWorkflow = [
+    "name: Validate",
+    "",
+    "on:",
+    "  push:",
+    "    branches: [main]",
+    "    tags: [\"v*\"]",
+    "  pull_request:",
+    "",
+    "permissions:",
+    "  contents: read",
+    "",
+    "jobs:",
+    "  validate:",
+    "    runs-on: ubuntu-latest",
+    "    steps:",
+    "      - name: Checkout",
+    `        uses: ${EXPECTED_CHECKOUT_ACTION} # v4`,
+    "      - name: Use Node.js 22",
+    `        uses: ${EXPECTED_SETUP_NODE_ACTION} # v4`,
+    "        with:",
+    "          node-version: \"22\"",
+    "      - name: Test validation primitives",
+    `        run: ${EXPECTED_PACKAGE_SCRIPTS.test}`,
+    "      - name: Verify contract index is current",
+    `        run: ${EXPECTED_PACKAGE_SCRIPTS["contracts:index:check"]}`,
+    "      - name: Validate source distribution",
+    `        run: ${EXPECTED_PACKAGE_SCRIPTS.validate}`,
+    "      - name: Verify release tag matches version",
+    "        if: startsWith(github.ref, 'refs/tags/')",
+    `        run: ${EXPECTED_RELEASE_TAG_COMMAND}`,
+    "      - name: Build byte-identical plugin bundle",
+    `        run: ${EXPECTED_PACKAGE_SCRIPTS.build}`,
+    "      - name: Validate built bundle",
+    `        run: ${EXPECTED_PACKAGE_SCRIPTS["validate:bundle"]}`,
+    "",
+  ].join("\n");
+  assert(workflow === expectedWorkflow, "CI workflow must match the reviewed, read-only release-gate template exactly");
 }
 
 async function validateSourceStructure(root) {
@@ -502,6 +705,8 @@ export async function validateRepository(root = repositoryRoot) {
   const marketplace = await readStrictJson(absoluteRoot, MARKETPLACE_PATH);
   validatePluginAndPackage(result.inventory.plugin, result.inventory.contracts, packageJson);
   validateMarketplace(marketplace, result.inventory.plugin);
+  await validateSkillSurfaces(absoluteRoot, result.inventory.plugin);
+  await validateWorkflowEntrypoints(absoluteRoot);
   return {
     valid: true,
     mode: "source",
