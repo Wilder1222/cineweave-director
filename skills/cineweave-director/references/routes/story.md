@@ -1,44 +1,44 @@
-# Route: story
+# 路由：story
 
-Use for premise development, dramatic structure, beat sheets, screenplay scenes, dialogue intent, and story continuity. Story owns causality, not camera direction.
+用于前提开发、戏剧结构、节拍表、剧本场景、对白意图和故事连续性。Story 拥有因果关系，而不拥有摄影机导演。
 
-## Story foundation
+## 故事基础
 
-Define one dramatic question and a protagonist with want, need, fear, contradiction, and stakes. State the ending direction early enough to test whether the premise can close.
+定义一个戏剧问题，以及具有欲望、需求、恐惧、矛盾和赌注的主角。足够早地说明结局方向，以检验前提是否能够收束。
 
-Every beat must contain:
+每个节拍都必须包含：
 
 `objective → conflict → tactic or choice → changed state → cause of next beat`
 
-A beat that changes no knowledge, possession, relationship, position, pressure, or commitment is not a causal beat. Remove decorative repetition.
+不改变知识、持有物、关系、位置、压力或承诺的节拍不是因果节拍。去除装饰性的重复。
 
-## Scene writing
+## 场景写作
 
-For each scene write:
+为每个场景写明：
 
-- entry state and who knows what;
-- objective and obstacle;
-- tactics that can be played by an actor;
-- turn or revelation;
-- costly choice;
-- exit state that causes the next scene.
+- 进入状态以及谁知道什么；
+- 目标和障碍；
+- 演员可演绎的策略；
+- 转折或揭示；
+- 有代价的选择；
+- 导致下一场景的退出状态。
 
-Dialogue is action: conceal, test, provoke, reassure, deflect, bargain, confess, or refuse. Convert internal statements into observable behavior or playable subtext. Do not insert lenses, shot sizes, camera moves, or provider language into `ScriptScene`.
+对白就是动作：隐瞒、试探、挑衅、安抚、回避、谈判、坦白或拒绝。将内心陈述转化为可观察行为或可演绎的潜台词。不要把镜头、镜头尺度、摄影机运动或提供商语言写入 `ScriptScene`。
 
-## Continuity
+## 连续性
 
-Track setup/payoff, knowledge, possession, location, relationship, promise, injury, and irreversible decisions. Bind the exact `WorldBible` and approved Character/Scene facts when they matter. If two sources conflict, expose both; do not choose the newest silently.
+追踪铺垫/回收、知识、持有物、地点、关系、承诺、伤势和不可逆决策。相关时绑定精确的 `WorldBible` 和已批准的 Character/Scene 事实。若两个来源冲突，展示两者；不要静默选择最新项。
 
-Use `changed` when a motivated event explains the transition. Use `broken` only when no valid cause exists.
+有动机事件能够解释转场时，使用 `changed`。仅在不存在有效原因时使用 `broken`。
 
-## Quality gate
+## 质量关卡
 
-- one dramatic question;
-- escalating stakes and active choices;
-- every beat causes the next;
-- scene entry and exit states differ;
-- dialogue has tactics and subtext;
-- world rules constrain action rather than decorate exposition;
-- no camera or prompt ownership drift.
+- 一个戏剧问题；
+- 不断升级的赌注和主动选择；
+- 每个节拍引起下一个节拍；
+- 场景进入和退出状态不同；
+- 对白包含策略和潜台词；
+- 世界规则约束行动，而非仅装点阐述；
+- 不出现摄影机或提示词所有权漂移。
 
-Outputs: `StoryBrief`, `BeatSheet`, `ScriptScene`, `ContinuityLedger`.
+输出：`StoryBrief`、`BeatSheet`、`ScriptScene`、`ContinuityLedger`。

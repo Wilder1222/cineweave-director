@@ -1,23 +1,23 @@
-# Optional: editorial and color handoff
+# 可选：剪辑与色彩交接
 
-Load when a production plan needs frame-accurate editorial structure or explicit creative/technical color separation.
+当制作计划需要精确到帧的剪辑结构，或需要明确区分创意色彩与技术色彩时加载。
 
-## Editorial
+## 剪辑
 
-Use a reduced rational frame rate and integer frame ranges. Declare clip/shot intent, source availability state, in/out boundaries, gaps, holds, transition duration, handles, audio intent, and unresolved media. Adjacent sequence windows must not overlap accidentally.
+使用约化后的有理帧率和整数帧范围。声明片段/镜头意图、源素材可用性状态、入点/出点边界、空隙、停留、转场时长、余量、音频意图和未解决媒体问题。相邻序列窗口不得意外重叠。
 
-A placeholder is visibly labeled and never impersonates generated media. A timing plan does not conform, render, or export a sequence. Preserve Storyboard and SequenceRhythm authority; technical timeline structure cannot invent beats.
+占位符必须有明显标记，且绝不冒充已生成媒体。时间规划并不使序列符合要求、渲染或导出。保留 Storyboard 和 SequenceRhythm 的权限；技术时间线结构不得虚构节拍。
 
-## Color
+## 色彩
 
-Separate:
+分离以下内容：
 
-- Scene physical source and material state;
-- Direction exposure and attention intent;
-- Style representational contrast, palette, and rolloff;
-- creative grade intent;
-- technical input/display/delivery assumptions.
+- Scene 的物理光源和材质状态；
+- Direction 的曝光与注意力意图；
+- Style 的表征性对比度、调色板和高光滚降；
+- 创意调色意图；
+- 技术输入/显示/交付假设。
 
-State working assumptions and unknowns without claiming a transform was applied. Preview intent and delivery intent are distinct. Do not bake a display look into canonical identity, material, or source-light facts.
+陈述工作假设和未知项，但不要声称已应用某项变换。预览意图与交付意图不同。不得将显示观感固化到规范身份、材质或光源事实中。
 
-Review for clipping, skin/material separation, neutral/reference handling, shot-to-shot continuity, and whether the creative grade still respects physical-light logic. Color profiles remain plans for an external color-managed workflow.
+审查裁切、肤色/材质分离、中性/参考处理、镜头间连续性，以及创意调色是否仍尊重物理光照逻辑。色彩配置文件仍只是外部色彩管理工作流的计划。

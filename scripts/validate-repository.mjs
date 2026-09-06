@@ -625,7 +625,7 @@ async function validateSkillSurfaces(root, plugin) {
   compareFileSets(Object.keys(frontmatter), ["name", "description"], "SKILL.md frontmatter fields");
   assert(frontmatter.name === SKILL_NAME, "SKILL.md name must match the plugin identity");
   assert(typeof frontmatter.description === "string" && frontmatter.description.length <= 1024, "SKILL.md description must be a non-empty Agent Skills description of at most 1024 characters");
-  assert(/\bUse (?:for|when)\b/u.test(frontmatter.description), "SKILL.md description must state when the Skill applies");
+  assert(/(?:\bUse (?:for|when)\b|适用于|可用于)/u.test(frontmatter.description), "SKILL.md description must state when the Skill applies");
   assert(skillMarkdown.split("\n").length <= 500, "SKILL.md must remain below the 500-line progressive-disclosure limit");
 
   const agentYaml = await readFile(resolve(root, SKILL_PREFIX, "agents", "openai.yaml"), "utf8");

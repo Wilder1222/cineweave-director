@@ -1,48 +1,48 @@
-# Route: review_repair
+# 路由：review_repair
 
-Use to define evidence-based benchmarks, review an actual creative artifact or candidate, classify failure, or plan the smallest correction. Load the relevant domain route as well.
+用于定义基于证据的基准、审查实际创意制品或候选项、分类失败，或规划最小修正。同时加载相关领域路由。
 
-## Benchmarks
+## 基准
 
-`ControlBenchmark` defines cases, dimensions, severity, required evidence, and pass criteria before observation. `ControlBenchmarkReview` records the results only when the required evidence is actually accessible. A planned benchmark with no observed evidence remains planned; unknown is never pass.
+`ControlBenchmark` 在观察前定义案例、维度、严重程度、所需证据和通过标准。只有在所需证据确实可访问时，`ControlBenchmarkReview` 才记录结果。没有观察证据的已规划基准仍只是计划；未知绝不等于通过。
 
-Prefer the unified `CreativeReview` when one actual candidate must be reviewed across multiple creative domains. Benchmarks and reviews do not execute production work or manufacture evidence.
+当必须跨多个创意领域审查一个实际候选项时，优先使用统一的 `CreativeReview`。基准和审查不执行制作工作，也不制造证据。
 
-## Review
+## 审查
 
-A completed review requires actual accessible evidence. A prompt, projection plan, copy-ready handoff, submission screen, description, or intended result is not observed media. For execution reproducibility or provider compliance claims, require exact returned job metadata, resolved prompt/parameters/codes, variant mapping, and original files. Missing metadata does not prevent bounded review of accessible pixels: complete only the declared visual scope and leave provenance, parameters, rights, and unobservable dimensions unknown. For each dimension record:
+完成审查需要实际可访问的证据。提示词、投射计划、可复制的交接、提交页面、描述或预期结果都不是已观察媒体。若声明执行可复现性或提供商合规性，须提供精确返回的任务元数据、已解析的提示词/参数/代码、变体映射和原始文件。缺失元数据不会阻止对可访问像素进行范围受限的审查：只完成已声明的视觉范围，并将来源、参数、权利和不可观察维度保留为未知。为每个维度记录：
 
-- exact target;
-- expected observable result;
-- observed result;
-- evidence basis and confidence;
-- status: pass, warn, fail, unknown, or not applicable;
-- severity: advisory, important, or blocking;
-- owning domain;
-- smallest repair variable for warn/fail.
+- 精确目标；
+- 预期可观察结果；
+- 已观察结果；
+- 证据基础和置信度；
+- 状态：pass、warn、fail、unknown 或 not applicable；
+- 严重程度：advisory、important 或 blocking；
+- 所属领域；
+- 对 warn / fail 而言最小的修复变量。
 
-`unknown` is not pass. A blocking failure cannot be averaged away by overall aesthetics. Separate policy/technical qualification from user preference. Do not score beauty, attractiveness, or biometric identity.
+`unknown` 不是通过。会阻断的失败不能被总体美学平均掉。将策略/技术资质与用户偏好分开。不要为美貌、吸引力或生物特征身份评分。
 
-Use one `CreativeReview` across domains. Relevant dimensions include world/canon, story causality, identity, appearance, performance, geography, contact, physical light, representation, action, camera, coverage, prompt contradiction, rights, and production feasibility.
+跨领域使用一个 `CreativeReview`。相关维度包括世界/正典、故事因果、身份、外观、表演、地理、接触、物理光照、表征、动作、摄影机、覆盖、提示词矛盾、权利和制作可行性。
 
-## Repair routing
+## 修复路由
 
-Choose the domain that owns the failed fact:
+选择拥有失败事实的领域：
 
-- world laws/history/geography baseline → world;
-- causality/dialogue/knowledge → story;
-- identity/appearance/performance → character;
-- topology/material/source light/contact → scene;
-- representation grammar → style;
-- evidence scope/transfer/rights claim → reference or rights;
-- action mechanics/coverage → action;
-- blocking/camera/shot light/time → direction;
-- panel sequence/rhythm → storyboard;
-- omission/contradiction/reference leakage → prompt;
-- task/control/evidence/feasibility → production.
+- 世界规则/历史/地理基线 → world；
+- 因果/对话/知识 → story；
+- 身份/外观/表演 → character；
+- 拓扑/材料/源光/接触 → scene；
+- 表征语法 → style；
+- 证据范围/转移/权利声明 → reference 或 rights；
+- 动作机制/覆盖 → action；
+- 调度/摄影机/镜头光照/时间 → direction；
+- 面板序列/节奏 → storyboard；
+- 遗漏/矛盾/参考泄漏 → prompt；
+- 任务/控制/证据/可行性 → production。
 
-A `RepairPlan` changes one root-cause variable in one domain, preserves every passing dimension, binds the exact target and source review, defines observable acceptance checks, and stops after one revised candidate. Multiple-domain failures become ordered separate plans according to dependency direction. A root-cause change may require several downstream recompilations; record these as consequences, not unrelated repair variables. Preservation is an acceptance requirement pending new evidence, never a guarantee from a true-valued field.
+`RepairPlan` 在一个领域中只改变一个根本原因变量，保留每个通过维度，绑定精确目标和源审查，定义可观察验收检查，并在产生一个修订候选项后停止。多领域失败应按依赖方向成为有序、独立的计划。根本原因变更可能需要多次下游重新编译；将这些记录为后果，而不是无关的修复变量。保留是等待新证据验证的验收要求，绝不是由真值字段给出的保证。
 
-The plan never mutates the target, invokes a tool, or claims success. New evidence and a new review are required before any check can pass.
+该计划绝不修改目标、调用工具或声称成功。任何检查通过之前，都需要新证据和一次新审查。
 
-Outputs: `ControlBenchmark`, `ControlBenchmarkReview`, `CreativeReview`, `RepairPlan`.
+输出：`ControlBenchmark`、`ControlBenchmarkReview`、`CreativeReview`、`RepairPlan`。

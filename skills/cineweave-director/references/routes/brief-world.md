@@ -1,43 +1,43 @@
-# Route: brief_world
+# 路由：brief_world
 
-Use for intake, route planning, worldbuilding, canon boundaries, or requests that span several creative domains.
+用于需求接收、路由规划、世界构建、正典边界，或跨越多个创意领域的请求。
 
-## Intake
+## 需求接收
 
-Extract purpose, intended audience experience, deliverables, medium, temporal need, references, rights, hard constraints, and unknowns. Ask at most three high-impact questions. Low-impact reversible defaults must be listed as assumptions.
+提取用途、预期受众体验、交付物、媒介、时间需求、参考、权利、硬约束和未知项。最多提出三个高影响问题。低影响、可逆的默认值必须列为假设。
 
-Create the smallest brief and, for multi-stage work, workflow plan. Use `CreativeBrief` / `WorkflowPlan` canonical output only when requested and required metadata exists; otherwise use a human-readable or explicitly non-canonical draft. The plan contains internal route steps, exact dependencies where supplied, gates, and one current next action. It does not invoke another Skill.
+创建最小简报；对于多阶段工作，还要创建工作流计划。仅当用户提出要求且具备所需元数据时，才使用 `CreativeBrief` / `WorkflowPlan` 规范输出；否则使用人类可读或明确标注为非规范的草案。该计划包含内部路由步骤、已提供时的精确依赖、关卡和一个当前下一步行动。它不会调用另一个 Skill。
 
-## World authority
+## 世界权威
 
-Choose one authority mode:
+选择一种权威模式：
 
-- supplied exact `WorldBible`;
-- new `WorldBible` required for reusable or multi-scene work;
-- bounded one-off context for a disposable asset with no implied reusable canon.
+- 已提供的精确 `WorldBible`；
+- 对可复用或多场景工作，需要新的 `WorldBible`；
+- 对不暗示可复用正典的一次性资产，使用范围受限的一次性上下文。
 
-A `WorldBible` should define:
+`WorldBible` 应定义：
 
-1. premise and scope;
-2. canonical, provisional, and forbidden claims;
-3. physical, metaphysical, technological, ecological, economic, or social systems with limits, costs, and exceptions;
-4. relational geography and scale;
-5. societies as playable values, power, everyday life, taboos, and conflicts;
-6. ordered history with present consequences;
-7. what is possible, impossible, and costly for stories;
-8. physical visual baseline—architecture, materials, technology, wardrobe logic, motifs, and source-light logic;
-9. continuity policy, locks, and unresolved questions.
+1. 前提和范围；
+2. 正典、暂定和禁止的声明；
+3. 带有边界、代价和例外的物理、形而上、技术、生态、经济或社会系统；
+4. 关系型地理和尺度；
+5. 可供角色行动的价值观、权力、日常生活、禁忌与冲突所构成的社会；
+6. 带有当下后果的有序历史；
+7. 故事中哪些事情可行、不可行，以及代价高昂；
+8. 物理视觉基线——建筑、材料、技术、服装逻辑、母题和源光逻辑；
+9. 连续性策略、锁定和未解决问题。
 
-World physical design is not Style representation. A world may specify weathered timber and oil lanterns; Style decides whether those facts are photoreal, inked, cel-shaded, or painterly.
+世界的物理设计不是 Style 的表征。一个世界可以指定风化木材和油灯；Style 决定这些事实是照片级写实、墨线、赛璐珞渲染还是绘画式呈现。
 
-## Quality gate
+## 质量关卡
 
-- every rule has a limit or cost;
-- geography states relationships, not just place names;
-- institutions affect choices and daily behavior;
-- history changes present action;
-- provisional claims remain visibly provisional;
-- no historical certainty is invented;
-- downstream Story, Character, and Scene artifacts bind or explicitly bound their world authority.
+- 每条规则都有边界或代价；
+- 地理描述关系，而不仅是地点名称；
+- 机构会影响选择和日常行为；
+- 历史改变当下行动；
+- 暂定声明仍清晰可见地保持暂定；
+- 不虚构历史确定性；
+- 下游 Story、Character 和 Scene 制品绑定其世界权威，或明确限定该权威。
 
-Outputs: `CreativeBrief`, `WorkflowPlan`, `WorldBible`.
+输出：`CreativeBrief`、`WorkflowPlan`、`WorldBible`。

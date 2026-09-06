@@ -1,48 +1,48 @@
-# Optional: creative workflow example and evaluation
+# 可选：创作工作流示例与评估
 
-Load for a worked multi-shot workflow or evaluation of the Skill. All story and candidate descriptions below are hypothetical test material, not generated media, evidence, or approved Canon.
+用于已完成的多镜头工作流，或对该 Skill 的评估时加载。以下所有故事和候选描述均为假设性测试材料，不是已生成媒体、证据或获批准的 Canon。
 
-## Worked three-shot draft
+## 已完成的三镜头草稿
 
-Request: "Develop an original 12-second silent short about a courier returning a lost key. Give me the character, three shots and prompts; choose the creative details for the draft."
+请求：“创作一部关于快递员归还遗失钥匙的原创 12 秒无声短片。给出角色、三个镜头和提示词；请为草稿选择创意细节。”
 
-Use brief_world, story, character, scene, shot_direction, storyboard_rhythm and image_prompt only as needed. Style may remain a declared naturalistic draft treatment until a reusable style system is requested. Do not create reference or provider records without source material or a named provider.
+仅在需要时使用 brief_world、story、character、scene、shot_direction、storyboard_rhythm 和 image_prompt。在请求可复用的风格系统前，Style 可保留为已声明的自然主义草稿处理。没有源材料或具名提供方时，不得创建参考或提供方记录。
 
-Draft authority: fictional adult courier with compact build and upright posture; red coat is appearance, not identity. A station attendant stands at a desk on screen right. Courier enters from screen left. A desk lamp is the proposed motivated source. The attendant needs the missing key to close the desk cabinet. Delegated scope includes creative choices for this draft; final selection remains open.
+草稿权限：虚构成年快递员，身材紧凑、站姿挺拔；红色外套是外观，不是身份。一名车站工作人员站在画面右侧的桌前。快递员从画面左侧进入。台灯是拟议的动机光源。工作人员需要这把遗失的钥匙来关闭桌柜。委托范围包含本草稿的创意选择；最终选择仍然开放。
 
-At 24/1 fps use half-open frame ranges:
+在 24/1 fps 下使用左闭右开的帧范围：
 
-| Shot | Range | Beat and staging | Draft visible-result prompt |
+| 镜头 | 范围 | 节拍与调度 | 草稿可见结果提示词 |
 | --- | --- | --- | --- |
-| S1 | [0,96) | Courier stops left of desk; attendant searches empty hook on right. Key remains in courier's right hand. | Wide view of a station desk, a compact adult courier in a red coat at left holding a brass key in the right hand, an attendant at right searching an empty hook, warm desk-lamp light on the wooden counter. |
-| S2 | [96,192) | Same axis, medium framing; courier places key at center counter and withdraws hand; attendant notices. | Medium view from the same side of the desk, red-coated courier placing a brass key at the center of the wooden counter, attendant looking down toward it, warm lamp light and visible hand-to-counter contact. |
-| S3 | [192,288) | Attendant picks up key and closes cabinet; courier relaxes. End on resolved possession and a stable frame. | Medium two-shot from the established desk side, attendant holding the brass key at the closed cabinet, courier with empty hands and relaxed shoulders, unchanged warm desk-lamp light. |
+| S1 | [0,96) | 快递员停在桌子左侧；工作人员在右侧寻找空挂钩。钥匙仍在快递员右手中。 | 车站服务台的远景，左侧一名身穿红色外套、身材紧凑的成年快递员右手拿着一把黄铜钥匙，右侧一名工作人员正在寻找空挂钩，温暖的台灯照亮木质柜台。 |
+| S2 | [96,192) | 同一轴线，中景构图；快递员将钥匙放在柜台中央并收回手，工作人员注意到它。 | 从桌子同一侧拍摄的中景，身穿红色外套的快递员将一把黄铜钥匙放在木质柜台中央，工作人员向下看着它，温暖的台灯光线，以及清晰可见的手与柜台接触。 |
+| S3 | [192,288) | 工作人员拿起钥匙并关上柜子；快递员放松。以已解决的持有关系和稳定画面结束。 | 从既定桌侧拍摄的中景双人镜头，工作人员在关上的柜子前拿着黄铜钥匙，快递员双手空着、肩膀放松，温暖的台灯光线保持不变。 |
 
-These are three image prompt anchors, not full video instructions. Temporal notes must specify S2 contact and hand withdrawal before S3 pickup. Do not infer that a single image proves this timing. The planning handoff requests visible evidence of key possession, contact, axis and appearance continuity.
+这些是三个图像提示词锚点，不是完整的视频指令。时间说明必须指定 S2 的接触和收手发生在 S3 拾取之前。不得从单张图像推断其证明了这一时序。规划交接要求提供钥匙持有、接触、轴线和外观连续性的可见证据。
 
-Hypothetical review exercise: if supplied S2 media actually shows a floating key, record the observed contact failure and its evidence; route one contact repair to Scene, preserve identity/framing/light as pending acceptance requirements, and request a new candidate. Without media, author only the review rubric and describe no observed result.
+假设性审查练习：如果提供的 S2 媒体实际显示一把悬浮钥匙，记录观察到的接触失败及其证据；将一项接触修复路由到 Scene，将身份/构图/光照保留为待验收要求，并请求一个新候选项。没有媒体时，仅编写审查量表，不描述任何观察到的结果。
 
-Revision exercise: user changes coat red to blue. Create an appearance revision, recompile S1–S3 prompt slices containing red, and mark dependent candidate reviews stale. Keep identity, desk topology, key-possession causality and frame windows unchanged unless the user also changes them. New evidence is required to validate updated media. For a face-only alternative shot with no coat visible, document why coat color is not consumed instead of regenerating it.
+修订练习：用户将外套从红色改为蓝色。创建一次外观修订，重新编译包含 red 的 S1–S3 提示词切片，并将依赖的候选审查标记为 stale。除非用户也修改它们，否则保持身份、桌面拓扑、钥匙持有因果关系和帧窗口不变。验证更新后的媒体需要新证据。对于未显示外套的仅面部替代镜头，应记录为何未消费外套颜色，而不是重新生成它。
 
-Checkpoint: requested 12-second draft; draft identity/appearance/scene/shot IDs with revisions; color change authorization; S1–S3 pending prompt revision or media review; missing original media and execution metadata; next step is the revised blue-coat handoff, not another identity questionnaire.
+检查点：已请求 12 秒草稿；带修订版本的草稿身份/外观/场景/镜头 ID；颜色变更授权；S1–S3 待提示词修订或媒体审查；缺少原始媒体和执行元数据；下一步是蓝色外套修订交接，而不是另一份身份问卷。
 
-## Fresh-task evaluation protocol
+## 新任务评估协议
 
-Run each request in a fresh task using only the Skill and stated inputs. Keep evaluator expectations separate from the task prompt. Use user-provided or rights-cleared accessible media for visual cases; when unavailable, mark the media case not run. Do not ask a model to invent observations to complete a score.
+在全新任务中，仅使用该 Skill 和已声明输入来运行每项请求。将评估者预期与任务提示词分开。对于视觉案例，使用用户提供或权利已清除的可访问媒体；不可用时，将媒体案例标记为未运行。不得要求模型为完成评分而虚构观察结果。
 
-| Case and input | Expected outcome | Typical failure |
+| 案例和输入 | 预期结果 | 常见失败 |
 | --- | --- | --- |
-| "Write a poster prompt for an original paper lantern festival; choose the details." | One useful draft prompt, no mandatory story bible or approval chain | Invented evidence, unnecessary questions, unrelated contracts |
-| "Design an original courier and front/side/full-body asset plan." | Identity separate from coat/representation; proposed views and acceptance checks | Claims views already exist or treats costume as sole identity |
-| Three labeled accessible refs: identity, clothing, style | Role-specific observations and transfer exclusions; unknown rights preserved | Leaks clothing-source identity into target |
-| The 12-second brief above | Causal possession, three windows totaling 288 frames, coherent axis and prompts | Key duplicates, timing gap, prompt contradicts shot |
-| Existing draft plus "change coat red to blue" | Field-specific impact and preserved unrelated facts | Rebuilds identity or leaves red in consumed prompts |
-| Accessible candidate image, no job metadata: "review composition only" | Bounded visible review; parameters/provenance unknown | Refuses all review or invents seed/model/rights |
-| "Return canonical JSON" with no exact receipt/upstream refs | Useful explicitly non-canonical draft plus promotion requirements | Fixture hashes or fake install receipt |
-| Video brief with narration, vertical delivery and two-candidate limit | Timed motion/sound worksheet, delivery constraints and bounded fallback | Sound omitted, unlimited retries, unsupported execution claim |
+| “为原创纸灯笼节写一条海报提示词；请自行选择细节。” | 一条有用的草稿提示词，无强制故事圣经或审批链 | 虚构证据、不必要的问题、无关契约 |
+| “设计一名原创快递员以及正面/侧面/全身资产计划。” | 身份与外套/表征分离；提出视图和验收检查 | 声称视图已存在，或将服装视为唯一身份 |
+| 三个带标签的可访问参考：身份、服装、风格 | 按角色的观察和转移排除项；保留未知权利 | 将服装来源的身份泄漏到目标 |
+| 上述 12 秒简介 | 因果持有关系、合计 288 帧的三个窗口、一致轴线和提示词 | 钥匙重复、时序空档、提示词与镜头矛盾 |
+| 现有草稿加上“将外套从红色改为蓝色” | 字段特定影响和保留的无关事实 | 重建身份，或在已消费提示词中留下 red |
+| 可访问候选图像、没有任务元数据：“仅审查构图” | 有边界的可见审查；参数/来源未知 | 拒绝全部审查，或虚构 seed/model/rights |
+| 没有精确回执/上游引用的“返回规范 JSON” | 有用且明确非规范的草稿，以及提升要求 | 测试夹具哈希或伪造安装回执 |
+| 包含旁白、竖版交付和两候选限制的视频简介 | 定时运动/声音工作表、交付约束和有边界的备选方案 | 遗漏声音、无限重试、不受支持的执行主张 |
 
-For each run record date, Skill checkout/ref, model if actually known, raw request/inputs, output location, elapsed time, clarification count, routes/artifacts used, unsupported claims, missed locks, and observed context usage if available. Unknown metrics remain unknown.
+对每次运行记录日期、Skill checkout/ref、实际已知时的模型、原始请求/输入、输出位置、耗时、澄清次数、所用路由/工件、不受支持的主张、遗漏的锁，以及可用时观察到的上下文用量。未知指标保持未知。
 
-Score route fit, usable deliverable, continuity/locks, evidence honesty, and revision scope from 0 (fails) to 2 (complete). Any fabricated evidence, silent hard-lock change, or execution claim is a blocking failure regardless of total. Suggested acceptance: at least 8/10 with no blocker; report each case and non-run cases, not only the average. Evaluate creative preference separately from technical consistency.
+将路由适配度、可用交付物、连续性/锁、证据诚实性和修订范围分别评为 0（失败）至 2（完整）。任何捏造证据、静默硬锁变更或执行主张，无论总分多少都是阻断性失败。建议验收标准：至少 8/10 且无阻断项；报告每个案例和未运行案例，而不只是平均值。将创作偏好与技术一致性分开评估。
 
-This document provides a worked reference and evaluation suite, not evidence that fresh-model or media evaluations have passed. Repository tests cover deterministic validation separately.
+本文件提供已完成的参考和评估套件，而非新模型或媒体评估已通过的证据。仓库测试另行覆盖确定性验证。

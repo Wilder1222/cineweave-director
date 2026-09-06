@@ -1,20 +1,20 @@
-# Optional: semantic morphology
+# 可选：语义形态
 
-Load only when the user needs an editable, reusable face/body design rather than a one-off likeness description.
+仅当用户需要可编辑、可复用的面部/身体设计，而非一次性相貌描述时加载。
 
-Describe relationships, not provider weights or biometric measurements. Useful axes include proportion, length/width relation, angularity/softness, prominence, spacing, curvature, tilt, mass distribution, asymmetry, and silhouette rhythm.
+描述关系，而不是提供方权重或生物测量数据。有用的轴包括比例、长宽关系、棱角/柔和度、突出度、间距、曲率、倾斜、质量分布、不对称和剪影节奏。
 
-Procedure:
+流程：
 
-1. bind stable narrative and identity intent;
-2. separate face, body, surface baseline, and mutable appearance;
-3. define 3–16 structural anchors;
-4. mark each axis hard, soft, free, or undefined;
-5. change one axis per nearby variant;
-6. keep all non-target axes fixed;
-7. review neutral front, three-quarter, profile, and full-body views only as needed;
-8. require explicit human identity approval.
+1. 绑定稳定的叙事和身份意图；
+2. 分离面部、身体、表面基线和可变外观；
+3. 定义 3–16 个结构锚点；
+4. 将每个轴标为硬、软、自由或未定义；
+5. 每个相邻变体只改变一个轴；
+6. 保持所有非目标轴不变；
+7. 仅在需要时审查中性正面、四分之三侧、侧面和全身视图；
+8. 要求明确的人类身份批准。
 
-Hard locks have zero intended change. Soft locks allow bounded tolerance. Undefined axes stay open; they are not filled with fashionable defaults.
+硬锁的预期变化为零。软锁允许有界容差。未定义轴保持开放；不得以流行默认值填补。
 
-Avoid attractiveness ranking, ethnicity inference from appearance alone, health diagnosis, personality claims from facial structure, or precision that the evidence cannot support. Morphology is a creative specification, not biometric identification.
+避免吸引力排名、仅从外观推断族裔、健康诊断、基于面部结构的人格主张，或证据无法支持的精确度。形态是创作规范，不是生物特征识别。

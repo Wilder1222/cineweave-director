@@ -1,60 +1,60 @@
-# Operating model
+# 运行模型
 
-CineWeave Director is one self-contained creative Skill. Story, Character, Scene, Style, Reference, Direction, Prompt, and Production are internal knowledge domains—not callable sibling Skills and not a hidden agent chain.
+CineWeave Director 是一个自包含的创意 Skill。Story、Character、Scene、Style、Reference、Direction、Prompt 和 Production 是内部知识领域，而不是可调用的同级 Skill，也不是隐藏的代理链。
 
-## Route graph
+## 路由图
 
-Use only the smallest routes needed by the request:
+仅使用请求所需的最小路由集合：
 
 `brief_world → story → character / scene / style / reference_evidence → action / shot_direction → storyboard_rhythm → image_prompt → production_plan → review_repair`
 
-Dependencies may be skipped when they do not matter. A product still may move from `brief_world` directly to `scene`, `style`, `shot_direction`, and `image_prompt`. A script rewrite may stop after `story`. Never invent skipped reusable facts.
+不重要的依赖可以跳过。一个产品静帧仍可从 `brief_world` 直接进入 `scene`、`style`、`shot_direction` 和 `image_prompt`。剧本改写可以在 `story` 后结束。绝不虚构被跳过的可复用事实。
 
-Two starting paths are valid:
+有两条有效的起始路径：
 
-- **story-led:** establish world authority and causal beats before visual development;
-- **look-led:** explore a bounded visual hypothesis before story convergence.
+- **故事驱动：**先建立世界权威和因果节拍，再进行视觉开发；
+- **视觉驱动：**在故事收敛前探索一个范围受限的视觉假设。
 
-For narrative shots, both paths converge on an explicit dramatic beat and a visual bible at matching maturity. Draft shots may use declared hypotheses; final compilation uses approved facts. Non-narrative stills need a communication goal and visible action or state, without invented story prerequisites.
+对于叙事镜头，两条路径都应收敛到明确的戏剧节拍，以及成熟度匹配的视觉圣经。草案镜头可以使用已声明的假设；最终编译使用已批准事实。非叙事静帧需要明确的传播目标和可见动作或状态，而不应虚构故事前提。
 
-## Interaction depth
+## 交互深度
 
-- `zero_prompt`: offer six concise cards—world/genre, protagonist, conflict, visual direction, intended deliverable, and non-negotiables.
-- `quick`: apply low-impact reversible defaults and expose them.
-- `guided`: ask at most three questions that change route, identity, rights, historical treatment, time structure, or deliverable.
-- `professional`: keep the complete artifact graph, locks, evidence, and review gates visible.
+- `zero_prompt`：提供六张简洁卡片——世界/类型、主角、冲突、视觉方向、预期交付物和不可妥协项。
+- `quick`：采用低影响、可逆的默认值，并将其显式列出。
+- `guided`：最多提出三个会改变路由、身份、权利、历史处理、时间结构或交付物的问题。
+- `professional`：使完整制品图、锁定、证据和审查关卡保持可见。
 
-Interaction depth and presentation are separate. Unless the user requests the full graph or canonical JSON, apply the existing `professional` depth with the **professional-lite** presentation profile: preserve all authority and gates while showing a concise human-readable artifact and one next action. `professional-lite` is not an `inputMode`, route, execution mode, or contract value.
+交互深度与呈现方式相互独立。除非用户要求完整图或规范 JSON，否则在既有 `professional` 深度下采用 **professional-lite** 呈现配置：保留所有权威和关卡，同时展示简洁的人类可读制品与一个下一步行动。`professional-lite` 不是 `inputMode`、路由、执行模式或契约值。
 
-Ask one question at a time only when the answer changes a high-impact decision. Otherwise proceed with explicit assumptions.
+仅当答案会改变高影响决策时，才一次问一个问题。否则带着明确假设继续推进。
 
-## Stage discipline
+## 阶段纪律
 
-For every stage state:
+每个阶段都应说明：
 
-1. exact inputs or bounded natural-language input;
-2. route and purpose;
-3. artifact to create or revise;
-4. unresolved decisions;
-5. human gate, if any;
-6. one next action.
+1. 精确输入或范围受限的自然语言输入；
+2. 路由和用途；
+3. 要创建或修订的制品；
+4. 未解决的决策；
+5. 人工关卡（如有）；
+6. 一个下一步行动。
 
-A gate that lacks required input blocks the dependent final commitment. Continue independent work and explicitly hypothetical drafts within the user’s scope. Do not compress the workflow into a mega-prompt.
+缺少所需输入的关卡会阻止依赖它的最终承诺。继续处理用户范围内的独立工作和明确标注为假设的草案。不要把工作流压缩成一个超级提示词。
 
-## Creative maturity and delegated decisions
+## 创意成熟度与委托决策
 
-Maturity is workflow guidance, not a new inputMode or a replacement for existing contract status enums.
+成熟度是工作流指导，而不是新的 inputMode，也不替代现有契约状态枚举。
 
-- Exploration: propose original hypotheses and compare directions. Multi-axis concepts are allowed when labeled; use one-axis variants for causal comparison.
-- Draft: carry declared assumptions into a complete reviewable deliverable. Do not describe provisional choices as approved Canon.
-- Final: compile only resolved authority and obtain any still-missing consequential selection.
+- 探索：提出原创假设并比较方向。带标注时允许多轴概念；因果比较使用单轴变体。
+- 草案：将已声明的假设带入完整、可审查的交付物。不得将暂定选择描述为已批准的正典（Canon）。
+- 最终：仅编译已解决的权威，并取得任何尚缺且会产生后果的选择。
 
-Record delegated scope, hard locks, decisions already supplied, and decisions still reserved to the user. A request to develop a complete concept authorizes reversible creative drafting; it does not approve rights or external execution. Do not ask again for an unchanged decision already authorized. Batch unresolved final choices after preparing the requested draft.
+记录委托范围、硬锁定、已提供的决策，以及仍保留给用户的决策。开发完整概念的请求授权可逆的创意草拟；它不批准权利或外部执行。对已获授权且未改变的决策，不要再次询问。在准备完所需草案后，成批提出未解决的最终选择。
 
-Use [draft and change guidance](../optional/drafts-and-change-impact.md) for working JSON, version promotion, or resuming a project.
+如需处理工作 JSON、版本晋升或恢复项目，请使用[草案与变更指南](../optional/drafts-and-change-impact.md)。
 
-## Planning boundary
+## 规划边界
 
-This Skill authors and reviews creative artifacts. It does not call providers, run adapters, install models, write generated media, approve rights, or claim that a planned result exists. `PromptProjectionPlan`, `RenderPlan`, capability resolution, board assembly, editorial, and color artifacts are plans for an external workflow.
+本 Skill 编写和审查创意制品。它不调用提供商、不运行适配器、不安装模型、不写入生成媒体、不批准权利，也不声称计划结果已经存在。`PromptProjectionPlan`、`RenderPlan`、能力解析、看板组装、剪辑和调色制品都是外部工作流的计划。
 
-A provider projection must bind exact prompt Canon and capability evidence, expose model/surface defaults and compatibility unknowns, and stop at a human handoff. Require exact returned metadata/files for execution-verification claims. Accessible media may enter a separately scoped visual or audible review with missing metadata explicitly unknown.
+提供商投射必须绑定精确的提示词正典（Prompt Canon）和能力证据，公开模型/调用界面（surface）默认值及兼容性未知项，并止于人工交接。凡声称完成执行验证，均须提供精确返回的元数据/文件。可访问媒体可以进入单独限定范围的视觉或听觉审查；缺失的元数据必须明确标为未知。

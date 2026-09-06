@@ -1,12 +1,12 @@
-# Optional: drafts and change impact
+# 可选：草稿与变更影响
 
-Load for unresolved working JSON, multi-turn revisions, or project recovery. These worksheets are editable creative documents, not root contracts, an automatic project store, or a runtime.
+用于未解决的工作 JSON、多轮修订或项目恢复时加载。这些工作表是可编辑的创作文件，而非根契约、自动项目存储或运行时。
 
-## Working drafts
+## 工作草稿
 
-An original proposal is not an unsupported claim about an existing asset. Create missing original design when requested; preserve unknown evidence, rights, and capabilities as unknown. Carry provisional assumptions into downstream drafts without calling them approved.
+原创提案不是关于现有资产的无支持主张。按请求创建缺失的原创设计；将未知的证据、权利和能力保持为未知。将暂定假设带入下游草稿，但不得称其已获批准。
 
-When canonical metadata is unavailable, return human-readable work or explicitly non-canonical JSON:
+当规范元数据不可用时，返回人类可读的工作成果或明确标为非规范的 JSON：
 
 ```json
 {
@@ -25,30 +25,30 @@ When canonical metadata is unavailable, return human-readable work or explicitly
 }
 ```
 
-Working IDs are authored local labels, not exact registry aliases. Never put placeholder hashes, nulls, or synthetic receipts into strict canonical fields. This format is a worksheet convention; it is not accepted by the root contract validator and cannot authorize final handoff.
+工作 ID 是作者定义的本地标签，而不是精确注册表别名。绝不将占位哈希、null 或合成回执放入严格规范字段。该格式是工作表约定；根契约验证器不接受它，且它不能授权最终交接。
 
-Promote only after required upstream choices resolve: select the existing root schema, map content into its actual fields, obtain real provenance/installation metadata, validate the document, and calculate hashes with available local tooling. A missing receipt blocks canonical promotion, not useful creative drafting. Preserve supplied hash algorithms; if unspecified, resolve the convention before exchange. The development validator's optional repair registry uses SHA-256 of JCS UTF-8; the distribution index uses raw file bytes. Do not substitute one for the other.
+仅在所需上游选择已解决后再提升：选择现有根 schema，将内容映射到其实际字段，取得真实的来源/安装元数据，验证文件，并使用可用的本地工具计算哈希。缺少回执会阻止规范提升，而非有用的创作草拟。保留已提供的哈希算法；若未指定，请在交换前确定约定。开发验证器的可选修复注册表使用 JCS UTF-8 的 SHA-256；分发索引使用原始文件字节。不得以一个替代另一个。
 
-## Revision worksheet and checkpoint
+## 修订工作表与检查点
 
-For each relevant artifact record working ID or exact ref, maturity, owner route, consumed input fields, revision, location if actually saved, and validity (`valid`, `stale`, `needs_review`, `unresolved`). These labels belong to the worksheet, not existing contract status enums.
+对每个相关工件，记录工作 ID 或精确引用、成熟度、所有者路由、已消费的输入字段、修订版本、实际保存的位置以及有效性（`valid`、`stale`、`needs_review`、`unresolved`）。这些标签属于工作表，而非现有契约状态枚举。
 
-Record each change with:
+将每项变更记录为：
 
-- source revision and changed field/value;
-- reason and user authorization or provisional assumption;
-- directly affected artifacts and why the field is consumed;
-- transitive dependents, required recompilation/review, and unaffected artifacts;
-- unresolved impact when field-level dependencies are unavailable.
+- 源修订版本和变更的字段/值；
+- 原因以及用户授权或暂定假设；
+- 直接受影响的工件以及该字段被消费的原因；
+- 传递依赖项、所需重新编译/审查和未受影响的工件；
+- 当字段级依赖关系不可用时的未解决影响。
 
-Propagate conservatively: direct consumers become stale; inspect descendants before marking them valid. Unknown dependency coverage becomes needs_review. A new upstream version never rewrites an already hashed parent. Final outputs must not consume stale authority. Recompile only affected slices, then record new exact refs and perform the relevant checks before restoring validity.
+保守地传播：直接消费者变为 stale；在将后代标为 valid 前先检查它们。未知的依赖覆盖范围变为 needs_review。新的上游版本绝不重写已有哈希的父项。最终输出不得消费 stale 权限。只重新编译受影响的切片，然后记录新的精确引用，并在恢复有效性前执行相关检查。
 
-At a pause, include current requested outcome, artifact index, locked decisions and their sources, provisional assumptions, outstanding changes, blocked uses, and next actionable step. On resume, read the supplied checkpoint and resolve conflicting sources before proceeding; never infer a newest version or claim unsaved files exist.
+暂停时，应包含当前请求的结果、工件索引、锁定决策及其来源、暂定假设、未完成变更、被阻止的用途和下一项可执行步骤。恢复时，阅读已提供的检查点，并在继续前解决冲突来源；绝不推断最新版本或声称未保存文件存在。
 
-## Example impact
+## 影响示例
 
-Changing the courier's coat from red to blue changes AppearanceState, not identity. A face-only close-up with no visible coat need not be regenerated. Shots showing the coat, their prompt projections, and dependent review comparisons become stale or need review. Story causality, scene topology, and unrelated sound cues remain valid if they do not consume coat color. If a story clue depends on red, surface that conflict before treating this as an appearance-only change.
+将快递员的外套从红色改为蓝色，会改变 AppearanceState，而不是身份。未显示外套的仅面部特写无需重新生成。显示外套的镜头、其提示词投影和依赖的审查对比会变为 stale 或需要审查。如果不消费外套颜色，故事因果、场景拓扑和无关的声音提示仍然有效。若某个故事线索依赖红色，请在将其视作仅外观变更前指出该冲突。
 
-## Validation scope
+## 验证范围
 
-Root schema validity proves wire structure. Repair-plan semantic checks also reject inconsistent gates and malformed target pointers. With a supplied exact ref/document registry the development validator checks content hashes, source finding ownership, and target-path existence. Missing bindings and media-level guarantees remain explicitly unverified. Registry bindings are caller-supplied authority; matching bytes do not establish rights, observed success, or preservation of passing dimensions.
+根 schema 有效性证明线缆结构。修复计划的语义检查还会拒绝不一致的门控和格式错误的目标指针。若提供精确引用/文件注册表，开发验证器会检查内容哈希、来源发现的所有权和目标路径存在性。缺失的绑定和媒体级保证仍明确未经验证。注册表绑定是调用方提供的权限；字节匹配并不能证明权利、已观察到的成功或已通过维度的保持。

@@ -1,40 +1,40 @@
-# Visual bible and continuity
+# 视觉圣经与连续性
 
-The visual bible is a set of independently versioned authorities, not one prose mood board.
+视觉圣经是一组可独立版本化的权威，而不是一份散文式情绪板。
 
-## Authority dimensions
+## 权威维度
 
-- **World:** laws, history, geography, societies, technology, and physical design baseline.
-- **Story:** causality, knowledge, setup/payoff, stakes, and changed states.
-- **Character:** stable identity, current appearance, performance causality, and timing.
-- **Scene:** topology, scale, materials, props, state, physical light, and interaction.
-- **Style:** medium, representation, abstraction, visual grammar, and temporal grammar.
-- **Direction:** shot purpose, attention, blocking, camera, shot-light use, time, and coverage.
-- **Reference:** evidence authority, transfer scope, and rights.
+- **世界：**规则、历史、地理、社会、技术和物理设计基线。
+- **故事：**因果关系、知识、铺垫/回收、赌注和已改变状态。
+- **角色：**稳定身份、当前外观、表演因果和时序。
+- **场景：**拓扑、尺度、材料、道具、状态、物理光照和交互。
+- **风格：**媒介、表征、抽象程度、视觉语法和时间语法。
+- **导演：**镜头用途、注意力、调度、摄影机、镜头光照运用、时间和覆盖。
+- **参考：**证据权威、转移范围和权利。
 
-Identity, appearance, and representation are separate spaces. Makeup, hair, costume, temporary skin condition, and weathering belong to appearance. Anime, manga, photoreal, illustration, and stylized 3D belong to representation. Neither rewrites stable identity.
+身份、外观和表征是彼此独立的空间。妆容、发型、服装、暂时性皮肤状态和风化属于外观。动漫、漫画、照片级写实、插画和风格化 3D 属于表征。二者都不能改写稳定身份。
 
-Light has four layers:
+光照有四个层面：
 
-1. Scene defines physical source, position, direction, size, falloff, and occlusion.
-2. Direction chooses shot function and exposure relationship.
-3. Style defines representational rolloff, contrast, bloom, line, cel, ink, or paint behavior.
-4. Prompt compiles only the visible consequences.
+1. 场景定义物理光源、位置、方向、尺寸、衰减和遮挡。
+2. 导演选择镜头功能和曝光关系。
+3. 风格定义表征层面的滚降、对比度、泛光、线条、赛璐珞、墨线或绘画行为。
+4. 提示词只编译可见后果。
 
-## Continuity ledger
+## 连续性台账
 
-Use one ledger with namespaces rather than duplicated checklists:
+使用带命名空间的一份台账，而不是重复的检查清单：
 
-- `world.*`: laws, geography, institutions, chronology;
-- `story.*`: knowledge, objectives, setup/payoff, possession, relationship;
-- `character.*`: identity, appearance, performance, injury, emotion trajectory;
-- `scene.*`: topology, prop location, material, weather, physical light;
-- `direction.*`: axis, eyeline, action phase, framing, time, coverage.
+- `world.*`：规则、地理、机构、编年；
+- `story.*`：知识、目标、铺垫/回收、持有物、关系；
+- `character.*`：身份、外观、表演、伤势、情绪轨迹；
+- `scene.*`：拓扑、道具位置、材料、天气、物理光照；
+- `direction.*`：轴线、视线、动作阶段、取景、时间、覆盖。
 
-A motivated transition is `changed`; an unmotivated contradiction is `broken`. Record cause, before state, after state, and affected artifacts. Do not classify every difference as drift.
+有动机的转场是 `changed`；无动机的矛盾是 `broken`。记录原因、之前状态、之后状态和受影响的制品。不要把每项差异都归类为漂移。
 
-## Down-projection
+## 向下投射
 
-Project only facts visible at the requested scale or necessary for continuity. A wide shot does not need every facial micro-detail; a close-up cannot omit the identity anchors and current appearance that are visible. Each shot and prompt should carry the smallest complete slice of the bible, not duplicate the whole project.
+只投射在请求尺度下可见或为连续性所必需的事实。广角镜头不需要每一项面部微细节；特写不得遗漏可见的身份锚点和当前外观。每个镜头和提示词都应携带圣经中最小而完整的切片，而不是复制整个项目。
 
-When evidence or canon conflicts, surface the competing exact sources and stop at the smallest human decision. Never let style preference, prompt fluency, or a provider limitation silently win.
+当证据或正典（Canon）冲突时，展示相互竞争的精确来源，并止于所需的最小人工决策。绝不让风格偏好、提示词流畅性或提供商限制悄然胜出。

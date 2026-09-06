@@ -1,43 +1,43 @@
-# Artifact control and precedence
+# 制品控制与优先级
 
-## Keep layers separate
+## 保持层次分离
 
 `intent → world/canon → character and scene state → representation → shot/time → prompt projection → production plan → observed evidence`
 
-A downstream layer may select or narrow an upstream fact, but it cannot silently redefine it. Prompt wording is never Canon. Style cannot rewrite identity or geography. Camera cannot rewrite actor performance. A review cannot turn inferred evidence into visible evidence.
+下游层可以选择或收窄上游事实，但不得静默重定义它。提示词措辞绝不是正典（Canon）。风格不能改写身份或地理事实。摄影机不能改写演员表演。审查不能把推断证据变成可见证据。
 
-## Exact references and versions
+## 精确引用与版本
 
-When a caller supplies kind, ID, version, and content hash, preserve them exactly. Never resolve `latest`, fabricate a hash, or reconstruct a repository receipt from memory. If an exact reference is unavailable, use a clearly labeled working reference or leave the dependency unresolved.
+当调用方提供 kind、ID、版本和内容哈希时，必须原样保留。绝不解析 `latest`、伪造哈希，或凭记忆重建仓库回执。精确引用不可用时，使用明确标注的工作引用，或让依赖保持未解析状态。
 
-Create a child version for a bounded correction to the same target. Fork when purpose, audience, rights basis, world authority, or a hard upstream constraint changes materially. Never overwrite an approved version in place.
+针对同一目标的有限修正，应创建子版本。当用途、受众、权利依据、世界权威，或上游硬约束发生实质变化时，创建分支。绝不原地覆盖已批准版本。
 
-Artifacts follow one-way dependencies within a version. Review may request a new upstream version, followed by selective downstream recompilation; this is a revision loop, not a back-reference into an immutable parent. For impact records and restart checkpoints load [drafts and change impact](../optional/drafts-and-change-impact.md). Typical order:
+制品在同一版本内遵循单向依赖。审查可以请求新的上游版本，随后选择性地重新编译下游；这是一条修订循环，而非指回不可变父版本的反向引用。有关影响记录和重启检查点，请加载[草案与变更影响](../optional/drafts-and-change-impact.md)。典型顺序如下：
 
-- `WorldBible → StoryBrief → BeatSheet → ScriptScene`;
-- `CharacterSpec → CharacterAppearanceState / CharacterBinding / PerformanceTimeline`;
-- `SceneSpec → SceneState / SceneLightState / SceneBinding`;
-- `ShotSpec → ShotLightingPlan / TemporalSpec / CameraPrevisSpec / HeroFrameAnchor`;
-- `Storyboard → SequenceRhythmSpec`;
-- approved facts → `PromptRecord` / `ImagePrompt`;
-- exact prompt Canon + exact capability evidence → optional `PromptProjectionPlan` → human external handoff;
-- prompt and projection artifacts → non-executing production plans.
+- `WorldBible → StoryBrief → BeatSheet → ScriptScene`；
+- `CharacterSpec → CharacterAppearanceState / CharacterBinding / PerformanceTimeline`；
+- `SceneSpec → SceneState / SceneLightState / SceneBinding`；
+- `ShotSpec → ShotLightingPlan / TemporalSpec / CameraPrevisSpec / HeroFrameAnchor`；
+- `Storyboard → SequenceRhythmSpec`；
+- 已批准事实 → `PromptRecord` / `ImagePrompt`；
+- 精确的提示词正典（Prompt Canon）+ 精确能力证据 → 可选的 `PromptProjectionPlan` → 人工外部交接；
+- 提示词和投射制品 → 非执行式制作计划。
 
-A provider projection is a versioned child of exact prompt Canon. Provider flags, reference slots, profile/style codes, surface defaults, and compatibility claims stay in `PromptProjectionPlan`; they never flow backward into world, character, scene, style, shot, `PromptRecord`, or `ImagePrompt`.
+提供商投射是精确提示词正典的版本化子项。提供商标志、参考槽位、配置文件/风格代码、调用界面（surface）默认值和兼容性声明都留在 `PromptProjectionPlan` 中；它们绝不能反向流入世界、角色、场景、风格、镜头、`PromptRecord` 或 `ImagePrompt`。
 
-Do not insert downstream references back into an already hashed parent.
+不得把下游引用插回已哈希的父项。
 
-## Three vocabularies that must not collapse
+## 不得混为一谈的三套词汇
 
-- creative mutability: `hard / soft / free / undefined`;
-- acceptance enforcement: `hard / soft / advisory`;
-- style emphasis: `required / strong / supporting`.
+- 创作可变性：`hard / soft / free / undefined`；
+- 验收执行力度：`hard / soft / advisory`；
+- 风格强调程度：`required / strong / supporting`。
 
-They answer different questions: whether a fact may change, whether failure blocks advancement, and how strongly a representational rule should appear. None is a numeric provider weight.
+它们回答的是不同问题：事实是否可变、更改失败是否阻止推进，以及表征规则应多强烈地呈现。它们都不是提供商的数值权重。
 
-## Control Card
+## 控制卡（Control Card）
 
-Write a compact Control Card for any requirement likely to be lost:
+为任何可能丢失的要求编写简洁的控制卡（Control Card）：
 
 ```text
 requirement: observable result
@@ -50,15 +50,15 @@ allowedDeviation: explicit tolerance or unknown
 reviewDimension: world | story | identity | appearance | geography | action | camera | light | style | prompt | rights
 ```
 
-## Conflict precedence
+## 冲突优先级
 
-Rights and evidence validity are gates. Within valid evidence, use:
+权利和证据有效性是准入门槛。在有效证据范围内，依次采用：
 
-1. explicit hard locks and approved canon/causality;
-2. identity, geography, interaction, and physical-light facts;
-3. current appearance, scene state, and exact bindings;
-4. blocking, time, coverage, and continuity;
-5. representation and style treatment;
-6. prompt wording and tool preference.
+1. 明确的硬锁定以及已批准的正典/因果关系；
+2. 身份、地理、交互和物理光照事实；
+3. 当前外观、场景状态和精确绑定；
+4. 调度、时间、覆盖与连续性；
+5. 表征与风格处理；
+6. 提示词措辞和工具偏好。
 
-Same-level conflicts require an explicit decision; “newest” and “prettiest” are not resolution policies.
+同一层级的冲突需要明确决策；“最新”和“最漂亮”不是解决策略。

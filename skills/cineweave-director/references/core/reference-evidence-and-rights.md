@@ -1,45 +1,45 @@
-# Reference evidence and rights
+# 参考证据与权利
 
-Only accessible image or video content is visual evidence. A filename, inaccessible URL, prose description, prompt, metadata claim, or model guess is not visible evidence.
+只有可访问的图像或视频内容才是视觉证据。文件名、不可访问的 URL、散文描述、提示词、元数据声明或模型猜测都不是可见证据。
 
-## Atomic observations
+## 原子化观察
 
-One observation has one primary role and one scope. If one image informs identity and lighting, create two observations. Record:
+一项观察只能有一个主要用途角色和一个范围。如果同一图像同时为身份和光照提供信息，应创建两项观察。记录：
 
-- exact source asset and selector;
-- role and scope;
-- evidence basis: `visible`, `declared`, `inferred`, or `unknown`;
-- confidence and contamination risks;
-- what to preserve, borrow, replace, and exclude;
-- allowed and forbidden uses;
-- rights gate.
+- 精确的源资产和选择器；
+- 用途角色和范围；
+- 证据基础：`visible`、`declared`、`inferred` 或 `unknown`；
+- 置信度和污染风险；
+- 要保留、借用、替换和排除的内容；
+- 允许和禁止的用途；
+- 权利关卡。
 
-Use roles according to the evidence being transferred, not the source subject: identity, morphology, appearance, performance, capture, composition, lighting, material, style, geography, motion, control, or validation.
+根据所转移的证据而非来源主体来使用角色：身份、形态、外观、表演、采集、构图、光照、材质、风格、地理、运动、控制或验证。
 
-A still cannot prove true focal length, aperture, camera movement, edit rhythm, or performance timing. Mark those as inferred or unknown.
+静帧无法证明真实焦距、光圈、摄影机运动、剪辑节奏或表演时序。将这些标为推断或未知。
 
-## Analysis before binding
+## 先分析，后绑定
 
-An observation may influence target design before a target exists. A formal `ReferenceBindingSet` must wait until the target artifact exists, then bind the exact target version and scope. This prevents a circular authority claim.
+目标尚不存在时，一项观察也可以影响目标设计。正式的 `ReferenceBindingSet` 必须等目标制品存在后再创建，并绑定精确的目标版本和范围。这可避免形成循环权威声明。
 
-`@Asset` aliases are convenience labels only. Resolve them through the supplied exact `AssetAliasRegistry`; never search another scope, guess a spelling, or infer a newest version.
+`@Asset` 别名仅是便捷标签。必须通过所提供的精确 `AssetAliasRegistry` 解析它们；绝不搜索其他范围、猜测拼写，或推断最新版本。
 
-## Transfer policy
+## 转移策略
 
-For each role declare:
+为每个角色声明：
 
-- **preserve:** source property must survive;
-- **borrow:** mechanism may influence the target;
-- **replace:** source content must become target-specific content;
-- **exclude:** source property must not transfer;
-- **unresolved:** a decision or evidence item is still missing.
+- **preserve：**源属性必须保留；
+- **borrow：**其机制可以影响目标；
+- **replace：**源内容必须变为目标专属内容；
+- **exclude：**源属性不得转移；
+- **unresolved：**仍缺少一项决策或证据。
 
-Reference authority order is not prompt sentence order. Authority determines conflict resolution; prompt order determines readable projection.
+参考权威顺序不等于提示词句子顺序。权威决定如何解决冲突；提示词顺序决定可读的投射。
 
-## Rights and privacy
+## 权利与隐私
 
-Track copyright/license, real-person likeness and consent, provider transfer, publication, redistribution, training use, and private metadata separately. `unknown` never means allowed. Exploration permission does not imply production or redistribution permission.
+分别追踪版权/许可、真实人物肖像与同意、提供商转移、发布、再分发、训练用途和私有元数据。`unknown` 绝不表示允许。探索许可不意味着拥有制作或再分发许可。
 
-A byte hash proves byte identity only. Provenance metadata or a content credential does not prove truth, authorship, copyright ownership, consent, or fitness for a specific use. Keep private paths, signed URLs, credentials, and personal metadata out of semantic artifacts.
+字节哈希只能证明字节身份。来源元数据或内容凭证无法证明真实性、作者身份、版权所有权、同意，或特定用途的适用性。将私有路径、签名 URL、凭据和个人元数据排除在语义制品之外。
 
-Suitability is purpose-specific. Never average a blocking identity, geography, or rights failure into an overall pass, and never use attractiveness or beauty scores.
+适用性取决于具体用途。绝不将会阻断的身份、地理或权利失败平均为总体通过，也绝不使用吸引力或美貌评分。
