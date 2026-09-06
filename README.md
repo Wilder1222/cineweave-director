@@ -36,7 +36,7 @@ It is deliberately **non-executing**. It does not call image/video providers, in
 | `production_plan` | assets, assembly, editorial/color intent, controls and feasibility | non-executing production-plan contracts |
 | `review_repair` | evidence-based benchmark/review and bounded single-variable repair | `ControlBenchmark`, `ControlBenchmarkReview`, `CreativeReview`, `RepairPlan` |
 
-The Skill loads only the routes needed by the request. Reusable identity, geography, rights, hard capability, and canon remain unresolved until supplied or approved; plausible prose never silently becomes authority.
+The Skill loads only the routes needed by the request. Original design may advance through labeled exploration and draft choices within delegated scope. Existing-asset facts, rights and hard capabilities stay unresolved until supported; proposals never silently become approved Canon.
 
 ## Creator intents
 
@@ -82,7 +82,7 @@ For canonical JSON, name the desired artifact or ask the Skill to select the sma
 
 Prompt Canon remains provider-neutral. When Midjourney is explicitly requested, the `image_prompt` route may create a separate `PromptProjectionPlan` that pins an exact source prompt, capability profile, model, surface, official compatibility evidence, structured parameter tail, typed reference slots, one-variable experiments, hidden-default checks, manual handoff, and exact return checklist.
 
-The time-bounded [Midjourney projection guide](skills/cineweave-director/references/optional/midjourney-projection.md) was verified on 2026-09-02 against official Midjourney documentation and selected GitHub implementations. It does not automate a browser or provider API. A copy-ready prompt is still only a plan; review starts after a human returns accessible original files and exact job metadata.
+The time-bounded [Midjourney projection guide](skills/cineweave-director/references/optional/midjourney-projection.md) was verified on 2026-09-02 against official Midjourney documentation and selected GitHub implementations. It does not automate a browser or provider API. A copy-ready prompt is still only a plan; execution verification requires accessible original files and exact job metadata. Bounded visual review can proceed from accessible images with missing metadata explicitly unknown.
 
 ## Creative-control model
 
@@ -108,6 +108,16 @@ JSON Schema defines the structural wire shape, including each artifact's `contra
 
 `SKILL.md` is the human activation and routing entry point; it does not redefine those machine inventories. The plugin/Skill distribution version is `3.0.0`. Individual artifact `contractVersion` values remain at compatible 2.x wire versions where no breaking wire change was required; plugin version and artifact wire version are intentionally independent.
 
+## Drafts, revisions, and evaluation
+
+The working tree adds explicit exploration, draft, and final maturity without changing contract status enums. A request to develop a concept authorizes reversible creative drafting; final authority and external actions keep their own boundaries. Non-canonical working JSON can preserve unresolved metadata without fabricated hashes or receipts.
+
+- [Draft and change impact](skills/cineweave-director/references/optional/drafts-and-change-impact.md): promotion, selective invalidation, and restart checkpoints.
+- [Video, sound and delivery](skills/cineweave-director/references/optional/video-sound-and-delivery.md): temporal handoff, cues, delivery variants and iteration limits.
+- [Worked workflow and evaluation](skills/cineweave-director/references/optional/creative-workflow-evaluation.md): three shots from character to repair, plus eight fresh-task cases and scoring. These are evaluation materials, not claims of completed model/media tests.
+
+These additions are unreleased; the immutable installation tag above remains the published version.
+
 ## Development
 
 Node.js 22 or newer is required. The repository is a private, dependency-free development harness and has no install step. CI invokes the concrete entrypoints below rather than mutable package aliases:
@@ -124,8 +134,16 @@ The equivalent `npm` scripts remain convenience aliases, and repository validati
 
 - The tests check strict JSON/JCS and schema-validation primitives.
 - Source validation checks plugin identity, frontmatter/agent metadata, exact scripts and CI entrypoints, route/lifecycle authority, typed load contexts, fail-closed schema keywords and formats, confined local `$ref` closure, semantic workflow/review invariants, raw-byte hashes, receipt identity, all 52 canonical examples, clean source boundaries, and the dynamically derived distribution inventory.
-- The build creates `.build/cineweave-director/` by copying only the lifecycle/index-derived allowlist. The current v3 inventory is 136 regular files; the builder does not hardcode that count.
+- The build creates `.build/cineweave-director/` by copying only the lifecycle/index-derived allowlist. The current working-tree inventory is 139 regular files; the builder does not hardcode that count.
 - Bundle validation rejects missing, changed, linked, case-colliding, traversing, or extra files and proves source/bundle byte equality.
+
+RepairPlan validation rejects contradictory approval, malformed target pointers and duplicate check IDs. For optional cross-artifact checks:
+
+```powershell
+node scripts/validate-output.mjs path/to/repair-plan.schema.json path/to/repair.json --artifacts path/to/registry.json
+```
+
+The supplied registry is an array of `{ "ref": { "kind", "id", "version", "contentHash" }, "document": { ... } }` bindings (notation only; fill real values). The validator checks exact binding equality, JCS UTF-8 SHA-256, source review ID/version and finding/domain, and target JSON-pointer existence. It never fetches media. Registry identity authority, upstream target relationships, and visual preservation may remain `unverified`. `valid: true` means the implemented checks passed, not that production or all evidence passed. Source/target documents should also be validated against their own schemas. Missing bindings remain unverified rather than being fabricated; the CLI returns these limitations explicitly. Distribution hashes continue to use raw bytes.
 
 Regenerate the contract index only after intentional contract changes:
 
@@ -141,7 +159,7 @@ node scripts/generate-contract-index.mjs --check
 skills/cineweave-director/          complete distributable Skill
   SKILL.md                           creator-intent routing and hard boundaries
   contracts.json                    12 routes and 52 root kinds
-  reference-lifecycle.json          typed 23-file knowledge allowlist
+  reference-lifecycle.json          typed 26-file knowledge allowlist
   references/                       core, routed and optional knowledge
   resources/contracts/              54 schemas, 52 examples and hash index
 scripts/                             dependency-free validation/build tooling

@@ -9,7 +9,7 @@
   "contextCatalog": {
     "route": ["brief_world", "story", "character", "scene", "style", "reference_evidence", "action", "shot_direction", "storyboard_rhythm", "image_prompt", "production_plan", "review_repair"],
     "workflow": ["multi_route", "contract_output", "continuity"],
-    "condition": ["rights", "real_person", "semantic_morphology", "camera_previsualization", "portrait", "natural_human", "surface_response", "comic", "manga", "cinematic_pattern", "shot_compile", "editorial", "color", "midjourney"]
+    "condition": ["rights", "real_person", "semantic_morphology", "camera_previsualization", "portrait", "natural_human", "surface_response", "comic", "manga", "cinematic_pattern", "shot_compile", "editorial", "color", "midjourney", "video_sound_delivery", "draft_revision", "skill_evaluation"]
   },
   "policy": "contracts.json owns route IDs, route reference baselines, and output ownership. This file owns distribution and typed load contexts. SKILL.md is the human entry point and must not create a competing machine authority.",
   "references": [
@@ -17,7 +17,6 @@
     { "path": "references/core/artifact-control-and-precedence.md", "lifecycle": "core", "loadContexts": ["multi_route", "contract_output", "review_repair"] },
     { "path": "references/core/reference-evidence-and-rights.md", "lifecycle": "core", "loadContexts": ["reference_evidence", "rights", "real_person", "production_plan"] },
     { "path": "references/core/visual-bible-and-continuity.md", "lifecycle": "core", "loadContexts": ["multi_route", "continuity", "storyboard_rhythm"] },
-
     { "path": "references/routes/brief-world.md", "lifecycle": "routed", "loadContexts": ["brief_world"] },
     { "path": "references/routes/story.md", "lifecycle": "routed", "loadContexts": ["story"] },
     { "path": "references/routes/character.md", "lifecycle": "routed", "loadContexts": ["character"] },
@@ -30,13 +29,15 @@
     { "path": "references/routes/image-prompt.md", "lifecycle": "routed", "loadContexts": ["image_prompt"] },
     { "path": "references/routes/production-plan.md", "lifecycle": "routed", "loadContexts": ["production_plan"] },
     { "path": "references/routes/review-repair.md", "lifecycle": "routed", "loadContexts": ["review_repair"] },
-
     { "path": "references/optional/semantic-morphology.md", "lifecycle": "optional", "loadContexts": ["semantic_morphology"] },
     { "path": "references/optional/camera-previsualization.md", "lifecycle": "optional", "loadContexts": ["camera_previsualization"] },
     { "path": "references/optional/portrait-natural-human.md", "lifecycle": "optional", "loadContexts": ["portrait", "natural_human", "surface_response"] },
     { "path": "references/optional/comic-manga.md", "lifecycle": "optional", "loadContexts": ["comic", "manga"] },
     { "path": "references/optional/cinematic-patterns.md", "lifecycle": "optional", "loadContexts": ["cinematic_pattern", "shot_compile"] },
     { "path": "references/optional/editorial-color.md", "lifecycle": "optional", "loadContexts": ["editorial", "color"] },
-    { "path": "references/optional/midjourney-projection.md", "lifecycle": "optional", "loadContexts": ["midjourney"] }
+    { "path": "references/optional/midjourney-projection.md", "lifecycle": "optional", "loadContexts": ["midjourney"] },
+    { "path": "references/optional/video-sound-and-delivery.md", "lifecycle": "optional", "loadContexts": ["video_sound_delivery"] },
+    { "path": "references/optional/drafts-and-change-impact.md", "lifecycle": "optional", "loadContexts": ["draft_revision"] },
+    { "path": "references/optional/creative-workflow-evaluation.md", "lifecycle": "optional", "loadContexts": ["skill_evaluation"] }
   ]
 }

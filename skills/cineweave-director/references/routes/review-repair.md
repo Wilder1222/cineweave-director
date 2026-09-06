@@ -10,7 +10,7 @@ Prefer the unified `CreativeReview` when one actual candidate must be reviewed a
 
 ## Review
 
-A completed review requires actual accessible evidence. A prompt, projection plan, copy-ready handoff, submission screen, description, or intended result is not observed media. For externally executed provider work, also require the exact returned job metadata, resolved prompt/parameters/codes, variant mapping, and original output files; unavailable fields remain unknown. For each dimension record:
+A completed review requires actual accessible evidence. A prompt, projection plan, copy-ready handoff, submission screen, description, or intended result is not observed media. For execution reproducibility or provider compliance claims, require exact returned job metadata, resolved prompt/parameters/codes, variant mapping, and original files. Missing metadata does not prevent bounded review of accessible pixels: complete only the declared visual scope and leave provenance, parameters, rights, and unobservable dimensions unknown. For each dimension record:
 
 - exact target;
 - expected observable result;
@@ -41,7 +41,7 @@ Choose the domain that owns the failed fact:
 - omission/contradiction/reference leakage → prompt;
 - task/control/evidence/feasibility → production.
 
-A `RepairPlan` changes one variable in one domain, preserves every passing dimension, binds the exact target and source review, defines observable acceptance checks, and stops after one revised candidate. Multiple-domain failures become ordered separate plans according to dependency direction.
+A `RepairPlan` changes one root-cause variable in one domain, preserves every passing dimension, binds the exact target and source review, defines observable acceptance checks, and stops after one revised candidate. Multiple-domain failures become ordered separate plans according to dependency direction. A root-cause change may require several downstream recompilations; record these as consequences, not unrelated repair variables. Preservation is an acceptance requirement pending new evidence, never a guarantee from a true-valued field.
 
 The plan never mutates the target, invokes a tool, or claims success. New evidence and a new review are required before any check can pass.
 

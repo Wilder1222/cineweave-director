@@ -22,7 +22,7 @@ A provider Style Reference, moodboard, profile, or style code is a projection me
 
 ## Controlled exploration
 
-Compare 2–6 options under one neutral fixture. Change one style axis per option while holding identity, appearance, scene, action, camera, and physical light constant. Technical qualification and user preference remain separate. Selection creates a new draft; it does not activate a package automatically.
+Compare 2–6 options under one neutral fixture. For controlled comparison change one style axis per option while holding identity, appearance, scene, action, camera, and physical light constant. Early concept exploration may compare multiple axes if each hypothesis is declared and no single-cause conclusion is claimed. Technical qualification and user preference remain separate. Selection creates a new draft; it does not activate a package automatically.
 
 ## Light ownership
 

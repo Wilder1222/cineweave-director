@@ -62,6 +62,9 @@ const EXPECTED_CONDITION_CONTEXTS = [
   "editorial",
   "color",
   "midjourney",
+  "video_sound_delivery",
+  "draft_revision",
+  "skill_evaluation",
 ];
 const EXPECTED_SUPPORT_SCHEMAS = new Set([
   "schemas/common.schema.json",

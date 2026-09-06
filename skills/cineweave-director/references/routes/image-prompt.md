@@ -2,7 +2,7 @@
 
 Use for reusable text-to-image prompt design, importing an existing prompt, compiling approved artifacts, variants, reference transforms, and prompt-owned repair.
 
-Prompt is a projection of approved facts—not Canon, evidence, or proof of generation.
+Final Prompt is a projection of approved facts—not Canon, evidence, or proof of generation. A draft prompt may project explicitly provisional design choices without promoting them to Canon.
 
 ## Compilation order
 
@@ -50,7 +50,7 @@ For portraits, keep stable identity, current skin/material state, makeup/hair/co
 
 Keep `PromptRecord` and `ImagePrompt` provider-neutral. When the user names a provider, create a separate `PromptProjectionPlan` bound to the exact source prompt and exact `CapabilityProfile`. Put model version, surface, provider flags, typed reference slots, profile/style codes, compatibility evidence, and hidden-default checks only in that projection.
 
-For Midjourney, load [`../optional/midjourney-projection.md`](../optional/midjourney-projection.md). Use concise-first visible-result language, a single parameter tail, explicit compatibility checks, and baseline plus one-variable variants. Stop at a copy-ready human handoff. Require exact returned job metadata, resolved codes/parameters, and original files before review; never infer execution from the plan.
+For Midjourney, load [`../optional/midjourney-projection.md`](../optional/midjourney-projection.md). Use concise-first visible-result language, a single parameter tail, explicit compatibility checks, and baseline plus one-variable variants. Stop at a copy-ready human handoff. Require exact returned job metadata, resolved codes/parameters, and original files before execution-verification review; allow separately scoped visible-image review with metadata unknown; never infer execution from the plan.
 
 ## Existing prompt import
 

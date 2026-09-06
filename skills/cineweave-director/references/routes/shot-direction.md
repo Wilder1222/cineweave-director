@@ -4,7 +4,7 @@ Use for visual proposals, reusable cinematic patterns, shot compilation, blockin
 
 ## Resolve the dramatic unit
 
-State one purpose, one audience-attention change, one readable action, and one stable end-state change. If several spatial or causal changes occur, use the `action` route first.
+For a narrative shot state one purpose, one audience-attention change, one readable action, and one stable end-state change. For a still or non-narrative study use a visible communication goal and stable visual state. If several spatial or causal changes occur, use the `action` route first.
 
 Order decisions:
 
@@ -18,7 +18,7 @@ Specify shot scale, camera position and height, angle, axis side, perspective in
 
 ## Shot light and time
 
-Use only sources in exact `SceneLightState`. Mark direct, bounce, or transmitted use; name the bounce/transmission surface. Style treatment cannot replace source logic.
+For final work use only sources in exact `SceneLightState`; draft work may propose source hypotheses under Scene ownership. Mark direct, bounce, or transmitted use; name the bounce/transmission surface. Style treatment cannot replace source logic.
 
 Keep actor performance, camera, focus, scene motion, dynamic light, and edit events on separate tracks. Synchronize them without rewriting Character-owned timing.
 

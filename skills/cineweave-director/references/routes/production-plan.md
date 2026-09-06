@@ -2,6 +2,8 @@
 
 Use for non-executing asset breakdown, board assembly, editorial rhythm, color intent, control design, evidence, rights, capability feasibility, and provider-neutral render planning.
 
+For video, sound, delivery profiles, or iteration limits load [video, sound and delivery](../optional/video-sound-and-delivery.md). These are creative planning worksheets owned by existing routes, not new contracts or execution surfaces.
+
 ## Asset decomposition
 
 State the deliverable and lock shared invariants. Each task has one primary delta and explicit acceptance criteria. Complex sheets and storyboards use independent tiles/panels; labels, exact text, borders, and grids are assembled later. Plan to retry only failed tasks and preserve passing outputs.
@@ -28,6 +30,6 @@ A provider-specific `PromptProjectionPlan` may bind one exact capability profile
 
 ## Boundary
 
-No CLI commands, adapter descriptors, request/receipt protocols, credentials, network policy, cost accounting, output hashes, or generated status belong here. The next action is always an explicit external human/tool step.
+No CLI commands, adapter descriptors, request/receipt protocols, credentials, network policy, actual spend accounting, output hashes, or generated status belong here. The next action is always an explicit external human/tool step.
 
 Outputs: `AssetRecipe`, `BoardAssemblyPlan`, `EditorialTimelinePlan`, `ColorPipelineProfile`, `RenderPlan`, `ControlChannelSet`, `EvidenceBundle`, `CapabilityProfile`, `CapabilityResolutionPlan`, `LicenseProfile`.

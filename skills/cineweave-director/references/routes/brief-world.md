@@ -6,7 +6,7 @@ Use for intake, route planning, worldbuilding, canon boundaries, or requests tha
 
 Extract purpose, intended audience experience, deliverables, medium, temporal need, references, rights, hard constraints, and unknowns. Ask at most three high-impact questions. Low-impact reversible defaults must be listed as assumptions.
 
-Create `CreativeBrief` and, for multi-stage work, `WorkflowPlan`. The plan contains internal route steps, exact dependencies where supplied, gates, and one current next action. It does not invoke another Skill.
+Create the smallest brief and, for multi-stage work, workflow plan. Use `CreativeBrief` / `WorkflowPlan` canonical output only when requested and required metadata exists; otherwise use a human-readable or explicitly non-canonical draft. The plan contains internal route steps, exact dependencies where supplied, gates, and one current next action. It does not invoke another Skill.
 
 ## World authority
 

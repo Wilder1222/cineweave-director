@@ -15,7 +15,7 @@ Two starting paths are valid:
 - **story-led:** establish world authority and causal beats before visual development;
 - **look-led:** explore a bounded visual hypothesis before story convergence.
 
-Both paths must converge before shot work on an explicit dramatic beat and a sufficiently approved visual bible. A look cannot replace causality; a script cannot silently define identity, geography, or representation.
+For narrative shots, both paths converge on an explicit dramatic beat and a visual bible at matching maturity. Draft shots may use declared hypotheses; final compilation uses approved facts. Non-narrative stills need a communication goal and visible action or state, without invented story prerequisites.
 
 ## Interaction depth
 
@@ -39,10 +39,22 @@ For every stage state:
 5. human gate, if any;
 6. one next action.
 
-A gate that lacks required input returns the missing input and next action. It does not trigger speculative downstream work. Do not compress the workflow into a mega-prompt.
+A gate that lacks required input blocks the dependent final commitment. Continue independent work and explicitly hypothetical drafts within the user’s scope. Do not compress the workflow into a mega-prompt.
+
+## Creative maturity and delegated decisions
+
+Maturity is workflow guidance, not a new inputMode or a replacement for existing contract status enums.
+
+- Exploration: propose original hypotheses and compare directions. Multi-axis concepts are allowed when labeled; use one-axis variants for causal comparison.
+- Draft: carry declared assumptions into a complete reviewable deliverable. Do not describe provisional choices as approved Canon.
+- Final: compile only resolved authority and obtain any still-missing consequential selection.
+
+Record delegated scope, hard locks, decisions already supplied, and decisions still reserved to the user. A request to develop a complete concept authorizes reversible creative drafting; it does not approve rights or external execution. Do not ask again for an unchanged decision already authorized. Batch unresolved final choices after preparing the requested draft.
+
+Use [draft and change guidance](../optional/drafts-and-change-impact.md) for working JSON, version promotion, or resuming a project.
 
 ## Planning boundary
 
 This Skill authors and reviews creative artifacts. It does not call providers, run adapters, install models, write generated media, approve rights, or claim that a planned result exists. `PromptProjectionPlan`, `RenderPlan`, capability resolution, board assembly, editorial, and color artifacts are plans for an external workflow.
 
-A provider projection must bind exact prompt Canon and capability evidence, expose model/surface defaults and compatibility unknowns, stop at a human handoff, and require exact returned metadata/files before any result can enter evidence or review.
+A provider projection must bind exact prompt Canon and capability evidence, expose model/surface defaults and compatibility unknowns, and stop at a human handoff. Require exact returned metadata/files for execution-verification claims. Accessible media may enter a separately scoped visual or audible review with missing metadata explicitly unknown.
