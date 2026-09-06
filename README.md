@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://github.com/Wilder1222/cineweave-director/actions/workflows/validate.yml"><img alt="Validation" src="https://img.shields.io/github/actions/workflow/status/Wilder1222/cineweave-director/validate.yml?branch=main&style=flat-square&label=validation"></a>
   <img alt="Codex plugin" src="https://img.shields.io/badge/Codex-Plugin-1D6FFF?style=flat-square">
-  <img alt="Version 3.0.0" src="https://img.shields.io/badge/version-3.0.0-14B8A6?style=flat-square">
+  <img alt="Version 3.1.0" src="https://img.shields.io/badge/version-3.1.0-14B8A6?style=flat-square">
   <img alt="License MIT" src="https://img.shields.io/badge/license-MIT-111827?style=flat-square">
 </p>
 
@@ -49,7 +49,7 @@ The default uses the existing `professional` interaction depth with a **professi
 Install an immutable release rather than a moving branch. This repository includes a single-entry [marketplace manifest](.agents/plugins/marketplace.json) following the [Codex plugin packaging guidance](https://developers.openai.com/codex/plugins/build/):
 
 ```bash
-codex plugin marketplace add Wilder1222/cineweave-director --ref v3.0.0
+codex plugin marketplace add Wilder1222/cineweave-director --ref v3.1.0
 codex plugin add cineweave-director@cineweave-director
 ```
 
@@ -106,7 +106,7 @@ There are three non-competing machine authorities:
 
 JSON Schema defines the structural wire shape, including each artifact's `contractVersion`. `validate-output.mjs` additionally enforces release-local semantic truth for route ownership, dependency and deliverable closure, evidence-bound review decisions, and non-execution claims; WorkflowPlan validation resolves `contracts.json` from the same Skill directory rather than borrowing authority from another checkout, without equating the Skill release version to the artifact wire version.
 
-`SKILL.md` is the human activation and routing entry point; it does not redefine those machine inventories. The plugin/Skill distribution version is `3.0.0`. Individual artifact `contractVersion` values remain at compatible 2.x wire versions where no breaking wire change was required; plugin version and artifact wire version are intentionally independent.
+`SKILL.md` is the human activation and routing entry point; it does not redefine those machine inventories. The plugin/Skill distribution version is `3.1.0`. Individual artifact `contractVersion` values remain at compatible 2.x wire versions where no breaking wire change was required; plugin version and artifact wire version are intentionally independent.
 
 ## Drafts, revisions, and evaluation
 
@@ -116,7 +116,7 @@ The working tree adds explicit exploration, draft, and final maturity without ch
 - [Video, sound and delivery](skills/cineweave-director/references/optional/video-sound-and-delivery.md): temporal handoff, cues, delivery variants and iteration limits.
 - [Worked workflow and evaluation](skills/cineweave-director/references/optional/creative-workflow-evaluation.md): three shots from character to repair, plus eight fresh-task cases and scoring. These are evaluation materials, not claims of completed model/media tests.
 
-These additions are unreleased; the immutable installation tag above remains the published version.
+These additions are included in the `v3.1.0` release.
 
 ## Development
 

@@ -18,6 +18,6 @@
   "decision": { "overallStatus": "fail", "nextAction": "repair", "mayAdvance": false, "blockingFindingIds": ["finding.hand-contact"], "summary": "Preserve the passing eyeline and identity; repair one Scene-owned contact variable." },
   "planningBoundary": { "providerNeutral": true, "generatesMedia": false, "approvesAssets": false, "observedEvidenceRequiredForCompletion": true },
   "validation": { "targetsExact": true, "unknownNeverPasses": true, "blockingFailuresBlockAdvancement": true, "noAttractivenessScore": true, "oneDomainPerRepair": true, "noSuccessClaim": true },
-  "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-director", "ref": "v3.0.0", "commit": "0000000000000000000000000000000000000000", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00Z" },
+  "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-director", "ref": "v3.1.0", "commit": "0000000000000000000000000000000000000000", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00Z" },
   "provenance": { "source": "suite_builtin", "createdAt": "2026-09-02T00:00:00Z", "updatedAt": "2026-09-02T00:10:00Z", "changeLog": ["Added one evidence-bound Scene failure while preserving the passing direction finding."] }
 }

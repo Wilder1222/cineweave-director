@@ -4,11 +4,13 @@ All notable changes to CineWeave Director are documented here.
 
 ## Unreleased
 
+## 3.1.0 — 2026-09-06
+
 - Added exploration/draft/final guidance, delegated decision scope, non-canonical working JSON, promotion checks, and revision impact/checkpoint worksheets.
 - Added video, sound, delivery and resource planning within existing routes, plus a worked three-shot workflow and eight fresh-task evaluation cases.
 - Allowed bounded visual review with missing execution metadata, while preserving separate reproducibility and rights gates.
 - Added RepairPlan gate/pointer/check-ID semantics and optional exact ref/document registry validation with explicit unverified results; added regression tests.
-- Expanded the lifecycle allowlist to 26 references and the current source bundle to 139 files. Root contracts and released version identifiers remain unchanged; behavioral/media evaluations are not claimed as completed.
+- Expanded the lifecycle allowlist to 26 references and the current source bundle to 139 files. Root contracts and artifact wire versions remain unchanged; behavioral/media evaluations are not claimed as completed.
 
 ## 3.0.0 — 2026-09-02
 

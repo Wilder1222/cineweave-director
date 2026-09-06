@@ -24,6 +24,6 @@
   "humanGate": { "required": true, "status": "pending", "decisionNote": "Approve the bounded repair before any external generation or edit." },
   "planningBoundary": { "providerNeutral": true, "generatesMedia": false, "invokesExternalTool": false, "mutatesTarget": false, "claimsSuccess": false },
   "validation": { "singleVariable": true, "singleDomain": true, "parentImmutable": true, "evidenceBound": true, "passingDimensionsPreserved": true, "checksPending": true, "noSuccessClaim": true },
-  "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-director", "ref": "v3.0.0", "commit": "0000000000000000000000000000000000000000", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00Z" },
+  "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-director", "ref": "v3.1.0", "commit": "0000000000000000000000000000000000000000", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00Z" },
   "provenance": { "source": "suite_builtin", "createdAt": "2026-09-02T00:00:00Z", "updatedAt": "2026-09-02T00:00:00Z", "changeLog": ["Created from finding.hand-contact as a one-variable Scene repair."] }
 }

@@ -53,6 +53,6 @@
     { "path": "visualBaseline.representation", "level": "free", "reason": "The world defines physical design, while Style owns representation." }
   ],
   "validation": { "canonStatusExplicit": true, "rulesHaveLimits": true, "geographyRelational": true, "societiesPlayable": true, "historyHasConsequences": true, "styleDoesNotRewriteWorld": true, "unknownsPreserved": true },
-  "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-director", "ref": "v3.0.0", "commit": "0000000000000000000000000000000000000000", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00Z" },
+  "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-director", "ref": "v3.1.0", "commit": "0000000000000000000000000000000000000000", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00Z" },
   "provenance": { "source": "suite_builtin", "createdAt": "2026-09-02T00:00:00Z", "updatedAt": "2026-09-02T00:00:00Z", "changeLog": ["Created as the canonical WorldBible example."] }
 }
