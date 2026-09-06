@@ -1,19 +1,19 @@
-# 可选：电影化模式
+# Optional: cinematic patterns
 
-当用户要求可复用的手法时加载，例如揭示、慢推反应、追逐升级、匹配剪辑、越界入场、延迟反打或平行动作。
+Load when a user asks for a reusable gesture such as reveal, slow-push reaction, pursuit escalation, match cut, threshold entrance, withheld reverse, or parallel action.
 
-电影化模式是参数化的创作程序，而不是提示词预设。定义以下内容：
+A cinematic pattern is a parameterized creative program, not a prompt preset. Define:
 
-- 稳定的模式 ID 和版本；
-- 叙事功能以及适用/禁止的情境；
-- 必需的绑定槽位；
-- 带边界和默认值的类型化参数；
-- 有序步骤，每个步骤由一个路由和一个目标工件负责；
-- 质量检查和未决决策；
-- 不包含提供方、模型、适配器或执行字段。
+- stable pattern ID and version;
+- story function and appropriate/forbidden contexts;
+- required binding slots;
+- typed parameters with bounds and defaults;
+- ordered steps, each owned by one route and one target artifact;
+- quality checks and unresolved decisions;
+- no provider, model, adapter, or execution fields.
 
-示例参数可包括注意力目标、揭示延迟、摄影机距离变化、反应停留、轴线策略、节奏阶段或匹配维度。参数改变的是已创作的控制项，而不是 Canon。
+Example parameters may include attention target, reveal delay, camera distance change, reaction hold, axis policy, tempo phase, or match dimension. A parameter changes an authored control, not Canon.
 
-`CinematicSkillManifest` 对模式进行编目。`ShotCompilerPlan` 选择一个版本，解析精确绑定和值，提供面向创作者的摄影机/表演/节奏控制界面，并输出计划交接。编译器不会创建最终的 ShotSpec 哈希、补齐缺失的故事事实、选择工具或声称已生成媒体。
+`CinematicSkillManifest` catalogs patterns. `ShotCompilerPlan` selects one version, resolves exact bindings and values, exposes a creator-facing camera/performance/pacing control surface, and emits planned handoffs. The compiler does not create final ShotSpec hashes, fill missing story facts, choose tools, or claim generated media.
 
-一个模式步骤只能有一个所有者。故事功能属于 Story/Direction；演员时序属于 Character；地理关系属于 Scene；表征属于 Style；面向模型的措辞属于 Prompt。跨领域便利性不得成为隐藏覆盖。
+One pattern step has one owner. Story function belongs to Story/Direction; actor timing to Character; geography to Scene; representation to Style; model-facing wording to Prompt. Cross-domain convenience cannot become a hidden override.

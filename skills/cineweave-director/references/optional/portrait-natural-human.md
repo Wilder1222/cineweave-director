@@ -1,31 +1,31 @@
-# 可选：肖像、自然人体与表面
+# Optional: portrait, natural human, and surfaces
 
-用于肖像重建、近距离人物设定、妆发/皮肤连续性，或逼真的表面响应时加载。
+Load for portrait reconstruction, close human fixtures, makeup/hair/skin continuity, or realistic surface response.
 
-## 层级分离
+## Layer separation
 
-- 稳定身份：面部/身体几何、比例、自然不对称、基础皮肤特征；
-- 当前外观：妆容、修饰、发型、服装、暂时性皮肤状态、水分、污渍、受伤；
-- 拍摄：视点、距离、焦点、曝光、镜头推断、传感器/渲染行为；
-- 表征：写实度、修图克制程度、线稿/绘画/赛璐璐行为；
-- 镜头：姿势、表情、构图、物理光照。
+- stable identity: face/body geometry, proportion, natural asymmetry, baseline skin features;
+- current appearance: makeup, grooming, hair, costume, temporary skin condition, moisture, dirt, injury;
+- capture: viewpoint, distance, focus, exposure, lens inference, sensor/render behavior;
+- representation: realism, retouch restraint, line/paint/cel behavior;
+- shot: pose, expression, composition, physical light.
 
-不得将妆容或磨皮转化为身份。不得从不确定的视觉线索推断族裔、健康状况、精确年龄、焦距或美感。
+Do not convert makeup or smoothing into identity. Do not infer ethnicity, health, age precision, focal length, or beauty from uncertain visual cues.
 
-## 细节预算
+## Detail budget
 
-- 特写：身份关系、眼睛/嘴唇表面、毛孔或与媒介相称的微观纹理、妆容边缘、发际线、材质/光照过渡；
-- 中景：面部锚点、头发体块、领口、服装构造、手部互动；
-- 全身：剪影、比例、姿态、服装层次、鞋履、接触；
-- 远景：剪影、色块、步态、场景关系；省略不可见的毛孔级细节。
+- close-up: identity relationships, eye/lip surface, pores or medium-appropriate microtexture, makeup edges, hairline, material/light transitions;
+- medium: facial anchors, hair mass, neckline, garment construction, hand interaction;
+- full body: silhouette, proportion, posture, costume layers, footwear, contact;
+- wide: silhouette, color block, gait, scene relation; omit invisible pore-level detail.
 
-## 表面语言
+## Surface language
 
-描述四个可观察部分：
+Describe four observable parts:
 
-1. 光源：哪种物理光到达表面；
-2. 反射：宽阔/镜面/柔和/各向异性的响应；
-3. 形体：响应如何揭示几何；
-4. 接触：交互处的遮蔽、压缩、水分、灰尘或阴影。
+1. source: which physical light reaches the surface;
+2. reflection: broad/specular/soft/anisotropic response;
+3. form: how response reveals geometry;
+4. contact: occlusion, compression, moisture, dust, or shadow at interaction.
 
-自然人物渲染保留合理的不对称、变化和材质差异。避免通用模糊、塑料光泽、夸张毛孔、美颜滤镜措辞，或相互矛盾的硬光/柔光主张。
+Natural human rendering preserves plausible asymmetry, variation, and material distinction. Avoid universal blur, plastic gloss, pore exaggeration, beauty-filter language, or contradictory hard/soft light claims.

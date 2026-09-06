@@ -1,33 +1,33 @@
-# 路由：style
+# Route: style
 
-用于视觉系统设计、受控表征探索、StylePackage、Character-to-Style 转换、编译规则和表征光照语法。
+Use for visual-system design, controlled representation exploration, StylePackage, Character-to-Style translation, compile rules, and representational light grammar.
 
-## 风格系统
+## Style system
 
-- **Category（类别）：**仅是发现标签。
-- **Atom（原子）：**一条可观察规则，包含范围、不变量、允许的变化和禁止行为。
-- **Recipe（配方）：**按优先级排序的兼容原子。
-- **StylePackage：**可复用的语义系统。
-- **StyleCompile：**面向图像、视频、角色、场景或页面的目标专属投射。
+- **Category:** discovery label only.
+- **Atom:** one observable rule with scope, invariants, allowed variation, and forbidden behavior.
+- **Recipe:** compatible atoms in precedence order.
+- **StylePackage:** reusable semantic system.
+- **StyleCompile:** target-specific projection for image, video, character, scene, or page.
 
-不要把具名创作者或作品当作可执行指令。将参考解析为可观察机制：几何、轮廓、线条、表面、阴影、色彩、景深、构图、运动和时间行为。
+Do not use a named creator or work as an executable instruction. Resolve references into observable mechanisms: geometry, silhouette, line, surface, shading, color, depth, composition, motion, and temporal behavior.
 
-## 表征（Representation）
+## Representation
 
-按尺度定义家族、几何模型、表面模型、光照模型、景深模型、视觉语法、时间语法、抽象预算和细节预算。独立编译每个表征家族。不要把照片级写实、动漫、漫画、插画和风格化 3D 平均成一个模糊载荷。
+Define family, geometry model, surface model, light model, depth model, visual grammar, temporal grammar, abstraction budget, and detail budget by scale. Compile each representation family independently. Do not average photoreal, anime, manga, illustration, and stylized 3D into one ambiguous payload.
 
-`RepresentationBinding` 将精确 CharacterSpec 映射到一个 StylePackage。它说明受保护锚点、允许的简化或夸张、尺度规则和禁止的转换。它绝不修改 Character 正典。
+`RepresentationBinding` maps an exact CharacterSpec into a StylePackage. It states protected anchors, allowed simplification or exaggeration, scale rules, and forbidden transformations. It never mutates Character canon.
 
-提供商的 Style Reference、情绪板、配置文件或风格代码是投射机制，而不是 `StylePackage`、风格原子或 Canon（正典）权威。将提供商句柄、代码、权重和兼容性规则保留在 `PromptProjectionPlan` 中；通过精确参考观察绑定任何源图像，并保留其排除项。
+A provider Style Reference, moodboard, profile, or style code is a projection mechanism, not a `StylePackage`, style atom, or Canon authority. Keep provider handles, codes, weights, and compatibility rules in `PromptProjectionPlan`; bind any source image through exact reference observations and preserve its exclusions.
 
-## 受控探索
+## Controlled exploration
 
-在同一个中性基准下比较 2–6 个选项。对于受控比较，每个选项只改变一个风格轴，同时保持身份、外观、场景、动作、摄影机和物理光照不变。早期概念探索可比较多个轴，但每项假设均须声明，且不得声称得到单一原因结论。技术资质和用户偏好保持分离。选择会创建新草案；它不会自动激活一个包。
+Compare 2–6 options under one neutral fixture. For controlled comparison change one style axis per option while holding identity, appearance, scene, action, camera, and physical light constant. Early concept exploration may compare multiple axes if each hypothesis is declared and no single-cause conclusion is claimed. Technical qualification and user preference remain separate. Selection creates a new draft; it does not activate a package automatically.
 
-## 光照所有权
+## Light ownership
 
-Scene 拥有物理光源。Direction 拥有镜头使用和曝光关系。`StyleLightGrammar` 只拥有表征响应，例如色调滚降、对比度、泛光、墨块、赛璐珞色带或绘画边缘行为。
+Scene owns physical sources. Direction owns shot use and exposure relationship. `StyleLightGrammar` owns only representational response such as tonal rolloff, contrast, bloom, ink mass, cel bands, or paint edge behavior.
 
-图像和视频需要独立的时间语法。静帧风格不能暗示运动一致性。
+Image and video need separate temporal grammar. A still style cannot imply motion consistency.
 
-输出：`StylePackage`、`RepresentationBinding`、`StyleCompile`、`StyleLightGrammar`。
+Outputs: `StylePackage`, `RepresentationBinding`, `StyleCompile`, `StyleLightGrammar`.

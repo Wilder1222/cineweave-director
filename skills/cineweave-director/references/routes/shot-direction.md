@@ -1,37 +1,37 @@
-# 路由：shot_direction
+# Route: shot_direction
 
-用于视觉提案、可复用电影化模式、镜头编译、调度、摄影机、构图、物理镜头光照、时序方向设计、数值预演或主帧锚点。
+Use for visual proposals, reusable cinematic patterns, shot compilation, blocking, camera, composition, physical shot lighting, temporal direction, numerical previs, or a hero-frame anchor.
 
-## 解析戏剧单元
+## Resolve the dramatic unit
 
-对于叙事镜头，说明一个用途、一次受众注意力变化、一个可读动作和一次稳定终态变化。对于静帧或非叙事研究，使用一个可见的传播目标和稳定的视觉状态。若包含多次空间或因果变化，先使用 `action` 路由。
+For a narrative shot state one purpose, one audience-attention change, one readable action, and one stable end-state change. For a still or non-narrative study use a visible communication goal and stable visual state. If several spatial or causal changes occur, use the `action` route first.
 
-决策顺序：
+Order decisions:
 
 `purpose → objective/obstacle/change → attention order → blocking and zones → observable performance → one dominant camera idea → physical shot light → temporal curve → stable end`
 
-先进行调度，再选择镜头。命名位置、视线、支撑、重量、遮挡、路径、前景/中景/背景，以及受众最先、其次、最后注意到的内容。
+Stage before choosing a lens. Name positions, eyelines, support, weight, occlusion, path, foreground/midground/background, and what the audience notices first, second, and last.
 
-## 摄影机与构图
+## Camera and composition
 
-指定镜头尺度、摄影机位置和高度、角度、轴线侧、透视意图、适用时的焦距、焦点目标、景深、运动动机、起始/峰值/稳定，以及稳定终态。“电影感”不是摄影机决策。复合运动仅在每个组成部分均有独立且可读的用途时允许使用。
+Specify shot scale, camera position and height, angle, axis side, perspective intent, focal length when useful, focus target, depth, movement motivation, start/peak/settle, and stable end. “Cinematic” is not a camera decision. A composite move is allowed only when each component has an independent readable purpose.
 
-## 镜头光照与时间
+## Shot light and time
 
-最终工作仅使用精确 `SceneLightState` 中的光源；草案工作可以在 Scene 所属范围内提出光源假设。标记直射、反射或透射的使用，并命名反射/透射表面。风格处理不能替代光源逻辑。
+For final work use only sources in exact `SceneLightState`; draft work may propose source hypotheses under Scene ownership. Mark direct, bounce, or transmitted use; name the bounce/transmission surface. Style treatment cannot replace source logic.
 
-将演员表演、摄影机、焦点、场景运动、动态光照和剪辑事件置于独立轨道上。同步它们，但不得改写 Character 所属时序。
+Keep actor performance, camera, focus, scene motion, dynamic light, and edit events on separate tracks. Synchronize them without rewriting Character-owned timing.
 
-## 电影化模式与编译
+## Cinematic patterns and compilation
 
-可复用的 `CinematicSkillManifest` 条目包含故事功能、带类型且范围受限的参数、必需绑定、所有者路由、目标制品和质量检查。它不是提供商预设。
+A reusable `CinematicSkillManifest` entry contains story function, typed bounded parameters, required bindings, owner routes, target artifacts, and quality checks. It is not a provider preset.
 
-`ShotCompilerPlan` 将一个选定模式、精确绑定和参数值解析为仅投射用途的控制与计划中的路由交接。只能通过精确注册表解析 `@Asset`。绝不生成虚假的输出哈希，也绝不执行该计划。
+`ShotCompilerPlan` resolves one selected pattern, exact bindings, and parameter values into projection-only controls and planned route handoffs. Resolve `@Asset` only through an exact registry. Never emit fake output hashes or execute the plan.
 
-## 下游制品
+## Downstream artifacts
 
-先创建 `ShotSpec`，再创建 `ShotLightingPlan`、`TemporalSpec`、可选的 `CameraPrevisSpec` 和 `HeroFrameAnchor`。HeroFrame 记录选定的视觉 DNA 和继承策略；它不创建身份、地理或权利事实。
+Create `ShotSpec` before `ShotLightingPlan`, `TemporalSpec`, optional `CameraPrevisSpec`, and `HeroFrameAnchor`. A HeroFrame records selected visual DNA and inheritance policy; it does not create identity, geography, or rights facts.
 
-仅当请求需要时，加载可选的摄影机、肖像或电影化模式参考。
+Load optional camera, portrait, or cinematic-pattern references only when the request needs them.
 
-输出：`CinematicSkillManifest`、`ShotCompilerPlan`、`ShotSpec`、`ShotLightingPlan`、`TemporalSpec`、可选的 `CameraPrevisSpec`、`HeroFrameAnchor`。
+Outputs: `CinematicSkillManifest`, `ShotCompilerPlan`, `ShotSpec`, `ShotLightingPlan`, `TemporalSpec`, optional `CameraPrevisSpec`, `HeroFrameAnchor`.

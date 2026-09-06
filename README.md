@@ -1,91 +1,92 @@
 <p align="center">
-  <img src="assets/cineweave-director-logo.png" alt="CineWeave Director 标志" width="160">
+  <img src="assets/cineweave-director-logo.png" alt="CineWeave Director logo" width="160">
 </p>
 
-<h1 align="center">CineWeave Director（中文版）</h1>
+<h1 align="center">CineWeave Director</h1>
 
 <p align="center">
-  一个自包含、全流程且具备证据感知能力的 AIGC 创意导演 Codex Skill。
+  One self-contained Codex Skill for full-cycle, evidence-aware AIGC creative direction.
 </p>
 
 <p align="center">
-  <a href="https://github.com/Wilder1222/cineweave-director/actions/workflows/validate.yml"><img alt="验证" src="https://img.shields.io/github/actions/workflow/status/Wilder1222/cineweave-director/validate.yml?branch=main&style=flat-square&label=validation"></a>
-  <img alt="Codex 插件" src="https://img.shields.io/badge/Codex-Plugin-1D6FFF?style=flat-square">
-  <img alt="版本 3.0.0" src="https://img.shields.io/badge/version-3.0.0-14B8A6?style=flat-square">
-  <img alt="MIT 许可证" src="https://img.shields.io/badge/license-MIT-111827?style=flat-square">
+  <a href="https://github.com/Wilder1222/cineweave-director/actions/workflows/validate.yml"><img alt="Validation" src="https://img.shields.io/github/actions/workflow/status/Wilder1222/cineweave-director/validate.yml?branch=main&style=flat-square&label=validation"></a>
+  <img alt="Codex plugin" src="https://img.shields.io/badge/Codex-Plugin-1D6FFF?style=flat-square">
+  <img alt="Version 3.0.0" src="https://img.shields.io/badge/version-3.0.0-14B8A6?style=flat-square">
+  <img alt="License MIT" src="https://img.shields.io/badge/license-MIT-111827?style=flat-square">
 </p>
 
-CineWeave Director 会将一个粗略想法、已有创意产物或精确视觉参考，转化为最小但足够实用的一组可编辑世界观、故事、角色、场景、风格、动作、镜头、分镜、提示词、投影、计划、审查和修复产物。它是一个带有内部路由的 Skill，而不是隐藏代理链、并列 Skill、产品 CLI 或运行时。
+CineWeave Director turns a rough idea, existing creative artifacts, or exact visual references into the smallest useful set of editable world, story, character, scene, style, action, shot, storyboard, prompt, projection, planning, review, and repair artifacts. It is one Skill with internal routes—not a chain of hidden agents, sibling Skills, a product CLI, or a runtime.
 
-它有意保持为**非执行式**。它不会调用图像/视频提供商、安装模型、运行适配器、摄取私有媒体、发布、批准或声称已生成媒体。提供商专属输出止于有证据支撑的投影与明确的人工交接；制作输出止于计划、控制项、权利关卡和审查要求。
+It is deliberately **non-executing**. It does not call image/video providers, install models, run adapters, ingest private media, publish, approve, or claim that media was generated. Provider-specific output stops at an evidence-backed projection and explicit human handoff; production output stops at plans, controls, rights gates, and review requirements.
 
-## 能力
+## Capabilities
 
-| 内部路由 | 用途 | 规范输出 |
+| Internal route | Use it for | Canonical outputs |
 | --- | --- | --- |
-| `brief_world` | 需求采集、工作流范围、世界规律和 Canon | `CreativeBrief`, `WorkflowPlan`, `WorldBible` |
-| `story` | 前提、因果节拍、剧本场景和连续性 | `StoryBrief`, `BeatSheet`, `ScriptScene`, `ContinuityLedger` |
-| `character` | 身份、形态、外观、行为和表演 | 角色规范、绑定和时间线 |
-| `scene` | 地理、建筑、材料、状态和物理光线 | 场景规范、约束和绑定 |
-| `style` | 视觉表征和跨媒介转换 | `StylePackage`、表征与光线语法 |
-| `reference_evidence` | 可见证据、权利、精确参考角色和别名 | 参考资产、观察结果、绑定和别名注册表 |
-| `action` | 打斗、追逐、逃脱和多节拍交互 | `ActionSequenceSpec` |
-| `shot_direction` | 调度、注意力、摄影机、镜头光线、时间和主视觉帧 | 镜头、时序、光线和预演合同 |
-| `storyboard_rhythm` | 覆盖、分格、序列时机和转场 | `Storyboard`, `SequenceRhythmSpec` |
-| `image_prompt` | Prompt Canon、参考转换和可选提供商投影 | `PromptRecord`, `ImagePrompt`, `PromptProjectionPlan` |
-| `production_plan` | 资产、组装、剪辑/调色意图、控制项和可行性 | 非执行式制作计划合同 |
-| `review_repair` | 基于证据的基准/审查与受限的单变量修复 | `ControlBenchmark`, `ControlBenchmarkReview`, `CreativeReview`, `RepairPlan` |
+| `brief_world` | intake, workflow scope, world laws and canon | `CreativeBrief`, `WorkflowPlan`, `WorldBible` |
+| `story` | premise, causal beats, screenplay scenes and continuity | `StoryBrief`, `BeatSheet`, `ScriptScene`, `ContinuityLedger` |
+| `character` | identity, morphology, appearance, behavior and performance | character specs, bindings and timelines |
+| `scene` | geography, architecture, materials, state and physical light | scene specs, constraints and bindings |
+| `style` | visual representation and cross-medium translation | `StylePackage`, representation and light grammar |
+| `reference_evidence` | visible evidence, rights, exact reference roles and aliases | reference assets, observations, bindings and alias registry |
+| `action` | fights, pursuits, escapes and multi-beat interaction | `ActionSequenceSpec` |
+| `shot_direction` | blocking, attention, camera, shot light, time and hero frames | shot, temporal, lighting and previs contracts |
+| `storyboard_rhythm` | coverage, panels, sequence timing and transitions | `Storyboard`, `SequenceRhythmSpec` |
+| `image_prompt` | Prompt Canon, reference transforms and optional provider projection | `PromptRecord`, `ImagePrompt`, `PromptProjectionPlan` |
+| `production_plan` | assets, assembly, editorial/color intent, controls and feasibility | non-executing production-plan contracts |
+| `review_repair` | evidence-based benchmark/review and bounded single-variable repair | `ControlBenchmark`, `ControlBenchmarkReview`, `CreativeReview`, `RepairPlan` |
 
-此 Skill 只加载请求所需的路由。原创设计可在授权范围内通过已标注的探索和草稿选择推进。有关现有资产、权利和硬能力的事实在获得支撑前保持未解决；提案绝不能静默变为已批准的 Canon。
+The Skill loads only the routes needed by the request. Original design may advance through labeled exploration and draft choices within delegated scope. Existing-asset facts, rights and hard capabilities stay unresolved until supported; proposals never silently become approved Canon.
 
-## 创作者意图
+## Creator intents
 
-创作者无需了解 12 个路由 ID 或 52 个合同 kind。此 Skill 会将“构建一套完整角色资产”“只分析这张服装参考”“设计这个镜头”“创建分镜”“编译 Midjourney 提示词”或“审查这个候选结果”等自然语言请求映射到最小路由集合。这些创作者意图只是同一 Skill 内轻量的路由快捷方式，而不是命令、额外 Skill 或执行端点。
+Creators do not need to know the 12 route IDs or 52 contract kinds. The Skill maps natural requests such as “build a complete character asset family”, “analyze only this costume reference”, “design this shot”, “create a storyboard”, “compile a Midjourney prompt”, or “review this candidate” to the smallest route set. These creator intents are thin routing shortcuts inside the same Skill—not commands, additional Skills, or execution endpoints.
 
-默认使用既有的 `professional` 交互深度与 **professional-lite 呈现配置**：保留精确授权、证据、锁定项和人工关卡，但给出一份简洁、可读的产物和一个下一步操作。`professional-lite` 不是第五种 `inputMode`、路由或合同值。只有在用户请求或现有合同工作流需要时，才输出规范 JSON。
+The default uses the existing `professional` interaction depth with a **professional-lite presentation profile**: retain exact authority, evidence, locks, and human gates, but present a concise human-readable artifact and one next action. `professional-lite` is not a fifth `inputMode`, route, or contract value. Canonical JSON is emitted only when requested or when an existing contract workflow requires it.
 
-## 在 Codex 中安装
+## Install in Codex
 
-请安装不可变的发布版本，而不是会持续变动的分支。本仓库包含一个单条目的 [marketplace manifest](.agents/plugins/marketplace.json)，遵循 [Codex 插件打包指南](https://developers.openai.com/codex/plugins/build/)：
+Install an immutable release rather than a moving branch. This repository includes a single-entry [marketplace manifest](.agents/plugins/marketplace.json) following the [Codex plugin packaging guidance](https://developers.openai.com/codex/plugins/build/):
 
 ```bash
 codex plugin marketplace add Wilder1222/cineweave-director --ref v3.0.0
 codex plugin add cineweave-director@cineweave-director
 ```
 
-清单中的 `policy.authentication: ON_INSTALL` 是 Codex marketplace 所需的时序策略；它并不表示此 Skill 需要凭据。该插件没有声明 MCP server、应用集成、提供商适配器或外部执行界面。
+The manifest's `policy.authentication: ON_INSTALL` is the required Codex marketplace timing policy; it is not a claim that this Skill needs credentials. The plugin declares no MCP server, app integration, provider adapter, or external execution surface.
 
-安装后请启动一个新任务，让 Codex 发现 `$cineweave-director`。
+Start a new task after installation so Codex discovers `$cineweave-director`.
 
-## 使用
+## Use
 
-多路由请求可以从宽泛目标开始，同时仍只生成必要产物：
-
-```text
-使用 $cineweave-director。将这个短片想法发展为最小且完整的一组世界观、故事、
-角色、场景、风格、动作、镜头、分镜和图像提示词产物。保留我给出的精确参考
-与未知权利，在人工批准关卡停止，不要声称已经调用提供商。
-```
-
-受限请求可以直接进入一个路由：
+A multi-route request can start broad while still producing only necessary artifacts:
 
 ```text
-仅将 $cineweave-director 用于 shot_direction。用调度、注意力顺序、镜头透视、
-动机化物理光线、稳定终态和连续性锁定项来设计这个已批准的识别节拍。返回
-ShotSpec，而不是图像提示词。
+Use $cineweave-director. Develop this short-film idea into the smallest complete
+set of world, story, character, scene, style, action, shot, storyboard and image-
+prompt artifacts. Preserve my exact references and unknown rights, stop at human
+approval gates, and do not claim that a provider was called.
 ```
 
-对于规范 JSON，请指定所需产物，或要求此 Skill 选择最小根 kind。该分发包包含 52 个根合同、54 个本地 schema 和 52 个规范 fixtures。fixtures 只用于展示结构：其中的 hashes、收据、IDs、权利和批准都不是真实世界证据。
+A bounded request can enter one route directly:
 
-## Midjourney 投影
+```text
+Use $cineweave-director for shot_direction only. Stage this approved recognition
+beat with blocking, attention order, lens perspective, motivated physical light,
+a stable end state and continuity locks. Return a ShotSpec, not an image prompt.
+```
 
-Prompt Canon 保持提供商中立。当用户明确请求 Midjourney 时，`image_prompt` 路由可创建一份独立的 `PromptProjectionPlan`，其中锁定精确源提示词、能力配置、模型、界面、官方兼容性证据、结构化参数尾部、类型化参考槽位、单变量实验、隐藏默认值检查、人工交接和精确的回传清单。
+For canonical JSON, name the desired artifact or ask the Skill to select the smallest root kind. The distribution contains 52 root contracts, 54 local schemas, and 52 canonical fixtures. Fixtures demonstrate structure only: their hashes, receipts, IDs, rights, and approvals are not real-world evidence.
 
-有时效范围的 [Midjourney 投影指南](skills/cineweave-director/references/optional/midjourney-projection.md) 已于 2026-09-02 依据 Midjourney 官方文档和选定的 GitHub 实现完成核验。它不会自动操作浏览器或提供商 API。可直接复制的提示词仍只是一份计划；执行核验需要可访问的原始文件和精确任务元数据。受限视觉审查可以基于可访问图片进行，同时将缺失元数据明确标为未知。
+## Midjourney projection
 
-## 创意控制模型
+Prompt Canon remains provider-neutral. When Midjourney is explicitly requested, the `image_prompt` route may create a separate `PromptProjectionPlan` that pins an exact source prompt, capability profile, model, surface, official compatibility evidence, structured parameter tail, typed reference slots, one-variable experiments, hidden-default checks, manual handoff, and exact return checklist.
 
-默认依赖方向为：
+The time-bounded [Midjourney projection guide](skills/cineweave-director/references/optional/midjourney-projection.md) was verified on 2026-09-02 against official Midjourney documentation and selected GitHub implementations. It does not automate a browser or provider API. A copy-ready prompt is still only a plan; execution verification requires accessible original files and exact job metadata. Bounded visual review can proceed from accessible images with missing metadata explicitly unknown.
+
+## Creative-control model
+
+The default dependency direction is:
 
 ```text
 World → Story → Character / Scene / Style / Reference
@@ -93,33 +94,33 @@ World → Story → Character / Scene / Style / Reference
       → optional Provider Projection → Production Plan → Review / Repair
 ```
 
-路由可以跳过，但依赖不能逆向运行。世界规律不是风格；故事因果不是摄影机导演；身份不是外观或表征；物理光线不是调色；提示词措辞不是 Canon；提供商参数不能改写 Prompt Canon；制作计划不是执行；审查需要实际证据；修复只改变一个拥有该事实的变量，同时保留已通过的维度。
+Routes may be skipped, but dependencies do not run backward. World laws are not style; story causality is not camera direction; identity is not appearance or representation; physical light is not color grading; prompt wording is not canon; provider flags cannot mutate Prompt Canon; a production plan is not execution; a review requires actual evidence; and a repair changes one owning variable while preserving passing dimensions.
 
-## 合同与兼容性
+## Contracts and compatibility
 
-存在三个彼此不竞争的机器可读权威来源：
+There are three non-competing machine authorities:
 
-- [`contracts.json`](skills/cineweave-director/contracts.json) 定义路由 IDs、路由参考基线、根 kinds 和输出归属。
-- [`reference-lifecycle.json`](skills/cineweave-director/reference-lifecycle.json) 定义可分发知识白名单和类型化加载上下文。
-- [`resources/contracts/index.json`](skills/cineweave-director/resources/contracts/index.json) 定义 schema/example 清单、领域和原始字节 SHA-256 值。
+- [`contracts.json`](skills/cineweave-director/contracts.json) owns route IDs, route reference baselines, root kinds, and output ownership.
+- [`reference-lifecycle.json`](skills/cineweave-director/reference-lifecycle.json) owns the distributable knowledge allowlist and typed load contexts.
+- [`resources/contracts/index.json`](skills/cineweave-director/resources/contracts/index.json) owns the schema/example inventory, domains, and raw-byte SHA-256 values.
 
-JSON Schema 定义结构化 wire shape，包括每个产物的 `contractVersion`。`validate-output.mjs` 还会在当前发布版本内强制校验路由归属、依赖和交付物闭合、以证据为边界的审查决策以及非执行声明的语义真实性；`WorkflowPlan` 校验会从同一 Skill 目录解析 `contracts.json`，而不会从另一个 checkout 借用权威，也不会将 Skill 发布版本等同于产物 wire 版本。
+JSON Schema defines the structural wire shape, including each artifact's `contractVersion`. `validate-output.mjs` additionally enforces release-local semantic truth for route ownership, dependency and deliverable closure, evidence-bound review decisions, and non-execution claims; WorkflowPlan validation resolves `contracts.json` from the same Skill directory rather than borrowing authority from another checkout, without equating the Skill release version to the artifact wire version.
 
-`SKILL.md` 是供人使用的激活与路由入口；它不会重新定义这些机器清单。plugin/Skill 分发版本为 `3.0.0`。当未发生破坏性 wire 变更时，各个产物的 `contractVersion` 会维持在兼容的 2.x wire 版本；plugin 版本和产物 wire 版本有意彼此独立。
+`SKILL.md` is the human activation and routing entry point; it does not redefine those machine inventories. The plugin/Skill distribution version is `3.0.0`. Individual artifact `contractVersion` values remain at compatible 2.x wire versions where no breaking wire change was required; plugin version and artifact wire version are intentionally independent.
 
-## 草稿、修订与评估
+## Drafts, revisions, and evaluation
 
-工作树在不改变合同状态 enums 的前提下，加入了明确的探索、草稿和最终成熟度。发展一个概念的请求授权进行可逆的创意起草；最终授权与外部操作保有各自边界。非规范工作 JSON 可以保留未解决元数据，无需伪造 hashes 或收据。
+The working tree adds explicit exploration, draft, and final maturity without changing contract status enums. A request to develop a concept authorizes reversible creative drafting; final authority and external actions keep their own boundaries. Non-canonical working JSON can preserve unresolved metadata without fabricated hashes or receipts.
 
-- [草稿与变更影响](skills/cineweave-director/references/optional/drafts-and-change-impact.md)：提升、选择性失效和重启检查点。
-- [视频、声音与交付](skills/cineweave-director/references/optional/video-sound-and-delivery.md)：时序交接、提示、交付变体和迭代限制。
-- [已完成的工作流与评估](skills/cineweave-director/references/optional/creative-workflow-evaluation.md)：从角色到修复的三个镜头，以及八个全新任务案例与评分。这些是评估材料，而不是已完成模型/媒体测试的声明。
+- [Draft and change impact](skills/cineweave-director/references/optional/drafts-and-change-impact.md): promotion, selective invalidation, and restart checkpoints.
+- [Video, sound and delivery](skills/cineweave-director/references/optional/video-sound-and-delivery.md): temporal handoff, cues, delivery variants and iteration limits.
+- [Worked workflow and evaluation](skills/cineweave-director/references/optional/creative-workflow-evaluation.md): three shots from character to repair, plus eight fresh-task cases and scoring. These are evaluation materials, not claims of completed model/media tests.
 
-这些新增内容尚未发布；上方不可变的安装标签仍对应已发布版本。
+These additions are unreleased; the immutable installation tag above remains the published version.
 
-## 开发
+## Development
 
-需要 Node.js 22 或更高版本。本仓库是私有、无依赖的开发验证框架，无需安装步骤。CI 调用下列具体入口，而非可变的 package aliases：
+Node.js 22 or newer is required. The repository is a private, dependency-free development harness and has no install step. CI invokes the concrete entrypoints below rather than mutable package aliases:
 
 ```powershell
 node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs
@@ -129,45 +130,45 @@ node scripts/build-plugin-bundle.mjs
 node scripts/validate-repository.mjs --bundle .build/cineweave-director
 ```
 
-等价的 `npm` scripts 仍是便捷别名，仓库校验要求它们的命令与这些入口完全一致。
+The equivalent `npm` scripts remain convenience aliases, and repository validation requires their commands to match these entrypoints exactly.
 
-- 测试检查严格 JSON/JCS 和 schema-validation 基元。
-- 源代码校验检查 plugin 身份、frontmatter/agent metadata、精确 scripts 和 CI 入口、路由/lifecycle 权威、类型化加载上下文、失败关闭的 schema keywords 与 formats、受限的本地 `$ref` 闭合、语义工作流/审查不变量、原始字节 hashes、收据身份、全部 52 个规范 examples、干净的源代码边界，以及动态推导的分发清单。
-- 构建只复制由 lifecycle/index 推导出的白名单，以此创建 `.build/cineweave-director/`。当前工作树清单包含 139 个常规文件；构建器不会硬编码该数量。
-- bundle 校验拒绝缺失、变更、链接、大小写冲突、穿越或额外文件，并证明 source/bundle 字节相等。
+- The tests check strict JSON/JCS and schema-validation primitives.
+- Source validation checks plugin identity, frontmatter/agent metadata, exact scripts and CI entrypoints, route/lifecycle authority, typed load contexts, fail-closed schema keywords and formats, confined local `$ref` closure, semantic workflow/review invariants, raw-byte hashes, receipt identity, all 52 canonical examples, clean source boundaries, and the dynamically derived distribution inventory.
+- The build creates `.build/cineweave-director/` by copying only the lifecycle/index-derived allowlist. The current working-tree inventory is 139 regular files; the builder does not hardcode that count.
+- Bundle validation rejects missing, changed, linked, case-colliding, traversing, or extra files and proves source/bundle byte equality.
 
-`RepairPlan` 校验会拒绝矛盾的批准、格式错误的目标指针和重复的检查 IDs。若要进行可选的跨产物检查：
+RepairPlan validation rejects contradictory approval, malformed target pointers and duplicate check IDs. For optional cross-artifact checks:
 
 ```powershell
 node scripts/validate-output.mjs path/to/repair-plan.schema.json path/to/repair.json --artifacts path/to/registry.json
 ```
 
-所提供的 registry 是一组 `{ "ref": { "kind", "id", "version", "contentHash" }, "document": { ... } }` bindings（仅为记法；应填入真实值）。校验器会检查精确 binding 一致性、JCS UTF-8 SHA-256、源审查 ID/version 和 finding/domain，以及目标 JSON-pointer 是否存在。它绝不获取媒体。registry 身份权威、上游目标关系和视觉保留可能仍为 `unverified`。`valid: true` 表示已实现的检查通过，并不表示制作或所有证据均通过。还应依据各自 schemas 校验源/目标文档。缺失 bindings 保持未验证而非被编造；CLI 会明确返回这些限制。分发 hashes 继续使用原始字节。
+The supplied registry is an array of `{ "ref": { "kind", "id", "version", "contentHash" }, "document": { ... } }` bindings (notation only; fill real values). The validator checks exact binding equality, JCS UTF-8 SHA-256, source review ID/version and finding/domain, and target JSON-pointer existence. It never fetches media. Registry identity authority, upstream target relationships, and visual preservation may remain `unverified`. `valid: true` means the implemented checks passed, not that production or all evidence passed. Source/target documents should also be validated against their own schemas. Missing bindings remain unverified rather than being fabricated; the CLI returns these limitations explicitly. Distribution hashes continue to use raw bytes.
 
-只有在有意修改合同后才重新生成合同索引：
+Regenerate the contract index only after intentional contract changes:
 
 ```powershell
 node scripts/generate-contract-index.mjs
 node scripts/generate-contract-index.mjs --check
 ```
 
-## 仓库结构
+## Repository layout
 
 ```text
-.codex-plugin/plugin.json           Codex plugin 元数据
-skills/cineweave-director/          完整可分发的 Skill
-  SKILL.md                          创作者意图路由与硬边界
-  contracts.json                    12 个路由与 52 个根 kinds
-  reference-lifecycle.json          类型化的 26 文件知识白名单
-  references/                       核心、路由和可选知识
-  resources/contracts/              54 个 schemas、52 个 examples 和 hash 索引
-scripts/                            无依赖的校验/构建工具
-tests/                              校验基元测试
-assets/                             仓库品牌资源；不随包分发
+.codex-plugin/plugin.json           Codex plugin metadata
+skills/cineweave-director/          complete distributable Skill
+  SKILL.md                           creator-intent routing and hard boundaries
+  contracts.json                    12 routes and 52 root kinds
+  reference-lifecycle.json          typed 26-file knowledge allowlist
+  references/                       core, routed and optional knowledge
+  resources/contracts/              54 schemas, 52 examples and hash index
+scripts/                             dependency-free validation/build tooling
+tests/                               validation primitive tests
+assets/                              repository branding; not bundled
 ```
 
-修改路由、合同、参考资料或提供商方言前，请参阅 [CONTRIBUTING.md](CONTRIBUTING.md)；有关报告方式和信任边界，请参阅 [SECURITY.md](SECURITY.md)。
+See [CONTRIBUTING.md](CONTRIBUTING.md) before changing routes, contracts, references, or provider dialects, and [SECURITY.md](SECURITY.md) for reporting and trust boundaries.
 
-## 许可证
+## License
 
 [MIT](LICENSE) © Wilder1222.

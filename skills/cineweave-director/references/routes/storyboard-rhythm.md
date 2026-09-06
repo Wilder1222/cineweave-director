@@ -1,41 +1,41 @@
-# 路由：storyboard_rhythm
+# Route: storyboard_rhythm
 
-用于镜头/面板序列设计、覆盖、漫画页面、动态分镜、序列节奏、转场或续接规划。
+Use for shot/panel sequence design, coverage, comic pages, animatics, sequence pacing, transitions, or continuation planning.
 
-## 故事板
+## Storyboard
 
-构建最小序列，使每个镜头或面板都改变信息、注意力、空间关系、压力或选择。覆盖角色——建立、准备、动作、反应、后果、转场——是一份检查清单，而不是强制的五镜头模板。当因果关系仍清晰可读时，一个镜头可以满足多个角色。
+Build the minimum sequence in which every shot or panel changes information, attention, spatial relation, pressure, or choice. Coverage roles—establish, prepare, action, reaction, consequence, transition—are a checklist, not a mandatory five-shot template. One shot may satisfy several roles when causality remains readable.
 
-每个条目绑定一个精确的 `ShotSpec`，并说明：
+Each entry binds one exact `ShotSpec` and states:
 
-- 故事/动作节拍和用途；
-- 新信息或已改变的关系；
-- 对先前条目的依赖；
-- 屏幕方向、视线和地理关系；
-- 可见动作阶段和稳定终态；
-- 它满足的覆盖台账行。
+- story/action beat and purpose;
+- new information or changed relation;
+- dependency on earlier entries;
+- screen direction, eyeline, and geography;
+- visible action phase and stable end;
+- coverage-ledger rows it satisfies.
 
-顶层台账必须闭合每个选定节拍。移除装饰性插入和重复反应。
+The top-level ledger must close every selected beat. Decorative inserts and duplicate reactions are removed.
 
-对于漫画，保留阅读顺序、翻页、面板层级、黑白或彩色块面、作为计划区域的气泡/说明文字，以及后续确定性层中的精确文本。独立生成/审查面板；不要要求一个图像模型发明完整网格和精确文本。
+For comics, preserve reading order, page turn, panel hierarchy, black/white or color mass, balloons/captions as planned regions, and exact text as a later deterministic layer. Generate/review panels independently; do not ask one image model to invent the full grid and exact text.
 
-## 序列节奏
+## Sequence rhythm
 
-在精确 Storyboard 下游创建 `SequenceRhythmSpec`。使用约化有理时间基和整数帧边界。定义有序且不重叠的镜头窗口、节奏阶段、呼吸点、相邻转场语法和屏幕方向策略。
+Create `SequenceRhythmSpec` downstream of the exact Storyboard. Use a reduced rational timebase and integer frame boundaries. Define ordered, non-overlapping shot windows, tempo phases, breathing points, adjacent transition grammar, and screen-direction policy.
 
-节奏跟随戏剧压力与信息释放，而非任意的音乐视频节拍。呼吸点必须具有叙事或感知功能。以支持续接的稳定状态结束每个镜头和整个序列。
+Pacing follows dramatic pressure and information release, not an arbitrary music-video cadence. A breathing point must have a narrative or perceptual function. Finish each shot and the sequence on stable states that support continuation.
 
-HeroFrame 可以锚定视觉继承，但不能覆盖精确的身份或场景地理事实。续接/扩展规划应说明继承的事实、允许的演变、新动作以及帧/时间边界。
+A HeroFrame may anchor visual inheritance, but it cannot override exact identity or scene geography. Continuation/extend planning states inherited facts, allowed evolution, new action, and the frame/time boundary.
 
-## 质量关卡
+## Quality gate
 
-- 精确的 ShotSpec 引用；
-- 闭合的节拍到镜头覆盖；
-- 因果性的面板依赖；
-- 连贯的轴线和视线；
-- 整数帧连续节奏；
-- 仅在相邻窗口之间转场；
-- 需要时，已规划独立面板任务和确定性组装；
-- 不声称故事板图像、剪辑媒体或组装好的看板已经存在。
+- exact ShotSpec refs;
+- closed beat-to-shot coverage;
+- causal panel dependencies;
+- coherent axis and eyelines;
+- integer-frame contiguous rhythm;
+- transitions only between adjacent windows;
+- independent panel tasks and deterministic assembly planned when needed;
+- no claim that storyboard images, edit media, or assembled boards already exist.
 
-输出：`Storyboard`、`SequenceRhythmSpec`。
+Outputs: `Storyboard`, `SequenceRhythmSpec`.

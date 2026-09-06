@@ -1,22 +1,22 @@
-# 可选：摄影机预演
+# Optional: camera previsualization
 
-仅当数值化 3D 交换、精确轨迹、可复现的虚拟摄影机状态，或下游实施交接需要超出语义化摄影机指令的细节时加载。
+Load only when numerical 3D exchange, an exact trajectory, repeatable virtual-camera state, or a downstream implementation handoff requires more than semantic camera direction.
 
-使用以下层级：
+Use the hierarchy:
 
 `sequence coverage → shot purpose and blocking → camera behavior → pose/intrinsic tracks → implementation`
 
-一个 `CameraPrevisSpec` 绑定精确的 `ShotSpec` 和 `SceneBinding`，以及可选的 `TemporalSpec`。声明以下内容：
+A `CameraPrevisSpec` binds exact `ShotSpec` and `SceneBinding`, plus optional `TemporalSpec`. Declare:
 
-- 场景局部坐标系、左右手系、原点、坐标轴和米制单位；
-- 约化后的有理帧率和整数帧边界；
-- 画幅/传感器、投影、裁剪面和快门约定；
-- 摄影机位置与单位四元数朝向轨道；
-- 焦距/视场角、对焦距离、光圈/虹膜轨道；
-- 插值与保持行为；
-- 将平移、旋转、变焦、对焦和虹膜作为独立组成部分；
-- 碰撞、地平线、目标和地理空间约束。
+- scene-local coordinate system, handedness, origin, axes, and meter units;
+- reduced rational frame rate and integer frame bounds;
+- filmback/sensor, projection, clipping, shutter convention;
+- camera position and unit-quaternion orientation tracks;
+- focal length/field-of-view, focus distance, aperture/iris tracks;
+- interpolation and hold behavior;
+- translation, rotation, zoom, focus, and iris as separate components;
+- collision, horizon, target, and geography constraints.
 
-平移不是变焦。推轨会改变透视；改变焦距会改变视场角。不得将其中一个标记为另一个。即使同步，姿态和内参也必须分离。
+Translation is not zoom. A dolly changes perspective; changing focal length changes field of view. Do not label one as the other. Pose and intrinsics must remain separate even when synchronized.
 
-关键帧包括开始、可清晰读取的峰值、稳定过程和稳定结尾。边界帧必须精确，相邻轨道在连接处一致。数值预演不授权选择提供方，不证明可行性，也不覆盖调度、表演、场景几何或镜头意图。
+Keyframes include start, readable peak, settle, and stable end. Boundary frames are exact and adjacent tracks agree at joins. Numerical previs does not authorize a provider, prove feasibility, or override blocking, performance, Scene geometry, or lens intent.

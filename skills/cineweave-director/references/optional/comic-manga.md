@@ -1,21 +1,21 @@
-# 可选：漫画与日漫
+# Optional: comic and manga
 
-用于漫画页面、日漫分格、图像叙事序列或精确阅读顺序规划时加载。
+Load for comic pages, manga panels, graphic sequences, or exact reading-order planning.
 
-每个分格都必须改变信息、压力、关系或选择。定义阅读顺序、分格层级、翻页揭示、分格间隙、视线路径、气球/文字区域，以及哪些分格可以共享或打破边框。
+Each panel must change information, pressure, relation, or choice. Define reading order, panel hierarchy, page-turn reveal, gutters, eye path, balloon/caption regions, and which panels may share or break borders.
 
-将视觉语法视作可观察的规则：
+Treat visual grammar as observable rules:
 
-- 剪影与形状语言；
-- 线条粗细、轮廓层级、排线和纹理密度；
-- 黑色块面与负空间的平衡；
-- 网点或色彩分组；
-- 景深压缩或夸张；
-- 具有因果方向的效果和运动标记；
-- 抽象化条件下的面部/身份转译。
+- silhouette and shape language;
+- line weight, contour hierarchy, hatching, and texture density;
+- black-mass and negative-space balance;
+- screentone or color grouping;
+- depth compression or exaggeration;
+- effects and motion marks with causal direction;
+- facial/identity translation under abstraction.
 
-不得让风格重写 Character 身份、Scene 地理关系、动作因果或身体接触。近景分格可承载身份细节；远景分格应优先呈现剪影和空间关系。
+Do not let style rewrite Character identity, Scene geography, action causality, or physical contact. A close panel may carry identity detail; a wide panel prioritizes silhouette and spatial relation.
 
-独立生成或审查每个分格。预留文字区域，但应在图像创建后以确定性方式添加精确对话、说明文字、标签、边框和页面布局。单一生成网格不能证明每个分格、每段文字或阅读顺序均已通过。
+Generate or review panels independently. Reserve text regions, but add exact dialogue, captions, labels, borders, and page layout deterministically after image creation. A single generated grid is not evidence that every panel, text string, or reading order passed.
 
-审查时，应按分格检查身份、地理关系、动作阶段、视线路径、气球碰撞、文字保真度和页面层级节奏。只重试失败的分格，同时保留已通过的分格版本和组装区域。
+For review, inspect per-panel identity, geography, action phase, eye path, balloon collision, text fidelity, and page-level rhythm. Retry only failed panels while preserving passing panel versions and assembly regions.

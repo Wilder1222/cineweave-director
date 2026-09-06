@@ -1,34 +1,34 @@
-# 可选：视频、声音与交付规划
+# Optional: video, sound and delivery planning
 
-用于动态图像创作、声音、交付版本或资源约束时加载。在现有路由和契约字段适用时使用它们；将额外细节保留在有标记的非规范工作表中。绝不向严格 schema 添加虚构字段，也不声称外部系统已运行。
+Load for moving-image creation, sound, delivery versions, or resource constraints. Use existing routes and contracts where their fields fit; keep additional detail in labeled non-canonical worksheets. Never add invented fields to strict schemas or claim an external system ran.
 
-## 视频意图
+## Video intent
 
-Shot Direction 负责运动和时间结构；Production 负责可行性和交接。选择文生视频、图生视频、首/末帧条件化、延续或有边界的编辑作为规划意图，而不假定任何提供方支持它。
+Shot Direction owns movement and temporal structure; Production owns feasibility and handoff. Choose text-to-video, image-to-video, first/last-frame conditioning, continuation, or bounded edit as a planning intent, without assuming any provider supports it.
 
-对每个片段，记录来源镜头/时间引用（或暂定草稿引用）、时长/时间基准、初始状态、可清晰读取的变化、最终状态、主体/摄影机/环境轨道、身份和地理关系不变量、允许演变以及可见失败检查。将演员运动与摄影机运动分开。陈述图像锚点及其角色；计划中的帧不是实际的条件化资产。
+For each clip record source shot/temporal references (or provisional draft refs), duration/timebase, initial state, readable change, final state, subject/camera/environment tracks, identity and geography invariants, allowed evolution, and visible failure checks. Separate actor motion from camera motion. State image anchors and their roles; a planned frame is not an actual conditioning asset.
 
-对于延续，如可用，记录精确的来源片段/帧、边界时间、继承状态、允许演变、新动作以及稳定/余量要求。未知的源媒体使延续可行性保持未解决。不得强迫单个静态图像提示词编码整个序列；请与视觉提示词一并提供有时间锚定的自然语言指令。提供方方言仍是独立、以证据为依据的投影；在适当契约存在前，不受支持的视频字段仍应留在工作表中。
+For continuation record exact source clip/frame if available, boundary time, inherited state, permitted evolution, new action, and settle/handle requirements. Unknown source media leaves continuation feasibility unresolved. Do not force a single still-image prompt to encode an entire sequence; provide time-anchored natural-language instructions alongside the visual prompt. Provider dialect remains a separate evidence-backed projection, and unsupported video fields remain a worksheet until an appropriate contract exists.
 
-## 声音所有权和提示表
+## Sound ownership and cue sheet
 
-- Story 负责对话和旁白内容及戏剧功能。
-- Character 负责虚构的声音/表演意图；真实人物的声音参考需要独立的同意和使用决定。
-- Direction 负责提示时序及其与可见动作的关系。
-- Production 负责声音交付物、同步检查和外部交接。
+- Story owns dialogue and narration content and dramatic function.
+- Character owns fictional voice/performance intent; real-person voice references need separate consent and use decisions.
+- Direction owns cue timing and relation to visible action.
+- Production owns sound deliverables, synchronization checks, and external handoff.
 
-对每个提示，记录 ID、对白/画外音/环境声/Foley/音乐角色、文本或可听意图、说话者/来源、时间线范围、同步锚点、视角、相对语音的优先级、权利状态和验收标准。标记声音是否在画面内，以及是否需要唇形同步。不得从静帧推断实际语音时序，也不得根据提示表声称音频存在。
+For each cue record ID, dialogue/voiceover/ambience/Foley/music role, text or audible intent, speaker/source, timeline range, sync anchor, perspective, priority relative to speech, rights status, and acceptance criterion. Mark whether a voice is on-screen and whether lip synchronization is required. Do not infer actual speech timing from a still or claim audio exists from a cue sheet.
 
-分别审查可懂度、可听到的转场、预期的静默、声明锚点的同步和连续性。技术混音目标是已提供的交付要求或未解决的假设；绝不虚构已测量的响度或提供方保证。
+Review intelligibility, audible transitions, intended silence, sync at declared anchors, and continuity separately. Technical mix targets are supplied delivery requirements or unresolved assumptions; never invent measured loudness or provider guarantees.
 
-## 交付和资源工作表
+## Delivery and resource worksheet
 
-记录时长、有理帧率、宽高比、预期分辨率、受众/平台、字幕语言和精确文本权限、安全区域、替代版本、所需原始文件和验收证据。区分请求的规范与已测量输出属性。竖版改编需要构图和文字审查；它并非自动裁切。
+Record duration, rational frame rate, aspect ratio, intended resolution, audience/platform, subtitle language and exact text authority, safe areas, alternate versions, required originals, and acceptance evidence. Distinguish requested specifications from measured output properties. A vertical adaptation requires framing and text review; it is not automatically a crop.
 
-记录用户提供的截止日期、预算上限（如有）、每个镜头的最大候选数、修订轮次和停止条件。估算仍是带有说明依据的估算；未知价格保持未知。本 Skill 不进行实际支出核算或自动重试。
+Record user-supplied deadline, budget ceiling if any, maximum candidates per shot, revision rounds, and stop condition. Estimates remain estimates with stated basis; unknown prices remain unknown. No actual-spend accounting or automatic retries occur in this Skill.
 
-当无法满足约束时，提供与同一目的相连的创意备选：拆分复杂运动、缩短片段、使用带剪辑运动的静帧，或简化背景活动。说明哪项创作品质会改变，并且仅当它超出已委托范围时才获取决定。不得静默降低硬性身份、权利或叙事要求。
+When constraints cannot be met, offer a creative fallback tied to the same purpose: split a complex move, shorten a clip, use a still with editorial motion, or simplify background activity. Explain which creative quality changes and obtain a decision only when it falls outside delegated scope. Never downgrade a hard identity, rights, or narrative requirement silently.
 
-## 外部返回清单
+## External return checklist
 
-请求实际可访问的媒体、片段/候选映射、返回的时序和尺寸、可用提示词/设置元数据以及相关权利声明。即使没有执行元数据，也应根据可用媒体审查可见/可听质量，并明确限制范围。可复现性和提供方合规性检查在其自身证据返回之前仍属未知。
+Request actual accessible media, clip/candidate mapping, returned timing and dimensions, available prompt/settings metadata, and relevant rights declarations. Review visible/audible quality from available media even when execution metadata is absent, explicitly limiting scope. Reproducibility and provider-compliance checks remain unknown until their own evidence is returned.

@@ -1,37 +1,37 @@
-# 路由：reference_evidence
+# Route: reference_evidence
 
-当用户提供图像/视频、要求参考分析、需要范围受限的转移规则，或使用 `@Asset` 别名时使用。始终加载 `../core/reference-evidence-and-rights.md`。
+Use when the user supplies images/video, asks for reference analysis, needs scoped transfer rules, or uses an `@Asset` alias. Always load `../core/reference-evidence-and-rights.md`.
 
-## 流程
+## Procedure
 
-1. 确认媒体确实可访问，并说明预期用途。
-2. 在不暴露私有定位符的前提下，创建或接受精确的 `ReferenceAsset` 身份。
-3. 仅将可见证据拆解为原子化观察。
-4. 为每项声明标记 `visible`、`declared`、`inferred` 或 `unknown`，并记录置信度。
-5. 识别污染：所描绘的身份、服装、徽标、文本、地点、构图、风格、裁剪、修饰或不确定的元数据。
-6. 审查其对请求目标和权利范围的适用性。
-7. 仅在精确目标制品存在后创建 `ReferenceBindingSet`。
+1. Confirm that the media is actually accessible and state the intended use.
+2. Create or accept an exact `ReferenceAsset` identity without exposing private locators.
+3. Decompose only visible evidence into atomic observations.
+4. Mark each claim `visible`, `declared`, `inferred`, or `unknown` with confidence.
+5. Identify contamination: depicted identity, costume, logos, text, location, composition, style, crop, retouching, or uncertain metadata.
+6. Review suitability for the requested target and rights scope.
+7. Create `ReferenceBindingSet` only after the exact target artifact exists.
 
-对于肖像，分离面部身份、身体身份、形态、当前皮肤/材质状态、妆容、发型、服装、表情、姿势、采集、光照、构图和表征。稳定身份可以供给 Character；当前造型供给 AppearanceState；表征供给 Style；视点供给 Direction。
+For portraits, separate face identity, body identity, morphology, current skin/material state, makeup, hair, costume, expression, pose, capture, lighting, composition, and representation. Stable identity may feed Character; current styling feeds AppearanceState; representation feeds Style; viewpoint feeds Direction.
 
-对于源到目标工作，记录 preserve、replace、exclude、允许的转换、未解决决策和验收证据。“使用这张图”不是转移策略。
+For source-to-target work record preserve, replace, exclude, allowed transforms, unresolved decisions, and acceptance evidence. “Use this image” is not a transfer policy.
 
-## 别名规则
+## Alias rules
 
-别名必须通过所提供的精确 `AssetAliasRegistry` 解析，包括其范围、版本和内容哈希。绝不推断全局别名、规范化到不同资产，或选择最新候选项。
+An alias must resolve through the exact supplied `AssetAliasRegistry`, including its scope, version, and content hash. Never infer a global alias, normalize to a different asset, or choose a newest candidate.
 
-## 提供商投射绑定
+## Provider projection bindings
 
-提供商投射只能通过精确的 `ReferenceObservation` 引用使用参考；该引用须具有一个带类型的角色、保留列表、排除列表和人工解析的外部定位符占位符。帐户配置文件、情绪板和提供商风格代码是投射状态，而不是视觉证据。已提交的提供商定位符或代码不能证明输出保留了预期角色。
+A provider projection may use a reference only through an exact `ReferenceObservation` ref with one typed role, preserve list, exclusion list, and human-resolved external locator placeholder. Account profiles, moodboards, and provider style codes are projection state rather than visual evidence. A submitted provider locator or code does not prove the output preserved the intended role.
 
-## 质量关卡
+## Quality gate
 
-- 每项观察只有一个主要角色；
-- 来源和选择器精确；
-- 可见事实与推断分离；
-- 转移与排除互不重叠；
-- 身份/地理污染被阻止；
-- 权利仍取决于具体用途；
-- 不把不可访问媒体描述为已观察到。
+- one primary role per observation;
+- source and selector exact;
+- visible facts separated from inference;
+- transfer and exclusions disjoint;
+- identity/geography contamination blocked;
+- rights remain purpose-specific;
+- no inaccessible media is described as observed.
 
-输出：`ReferenceAsset`、`ReferenceObservation`、`ReferenceBindingSet`、`AssetAliasRegistry`。
+Outputs: `ReferenceAsset`, `ReferenceObservation`, `ReferenceBindingSet`, `AssetAliasRegistry`.

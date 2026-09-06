@@ -1,35 +1,35 @@
-# 路由：action
+# Route: action
 
-用于打斗、追逐、逃脱、救援、复杂道具交互，或任何包含多次因果性空间变化的序列。应先解析 `ActionSequenceSpec`，再确定镜头焦段和单个镜头设计。
+Use for fights, pursuits, escapes, rescues, complex prop interaction, or any sequence with several causal spatial changes. Resolve `ActionSequenceSpec` before lenses and individual shots.
 
-## 节拍结构
+## Beat structure
 
-每个节拍都应闭合：
+Each beat closes:
 
 `trigger → objective → attack/action → defense/response → counter/choice → contact or miss → result → changed spatial state`
 
-记录进入、变化和退出状态；参与对象的精确 Character/Scene 绑定；命名区域和轨迹；表演意图；覆盖要求；连续性影响；以及可见风险。
+Record entry, change, and exit state; participating exact Character/Scene bindings; named zones and trajectories; performance intent; coverage requirement; continuity effects; and visible risk.
 
-一条轨迹应陈述起始锚点、路径、目标、接触逻辑和结束锚点。避免使用没有机制说明的“动态打斗”或“快速移动”。
+A trajectory states start anchor, path, target, contact logic, and end anchor. Avoid “dynamic fight” or “moves quickly” without mechanics.
 
-## 武器与技法
+## Weapons and techniques
 
-针对每个可见武器或工具，说明名称/类型、与可读性相关的尺寸或操控特性、当前持有者、起始/结束状态和交互约束。以可观察的机制和原因描述技法，而非装饰性标签。明确保持攻击—防御—反击的顺序。
+For every visible weapon or tool state name/type, dimensions or handling characteristics relevant to readability, current holder, start/end state, and interaction constraints. Describe techniques by observable mechanics and cause, not decorative labels. Keep attack–defense–counter order explicit.
 
-不得提供可执行的伤害指令，也不得提供装配、撞击、坠落、车辆、火、水、人群或武器方法。应将这些标记为需要合格的外部审查。创意动作计划不是特技或安全批准。
+Do not provide executable harm instructions, rigging, impact, fall, vehicle, fire, water, crowd, or weapon methods. Flag them for qualified external review. A creative action plan is not stunt or safety approval.
 
-## 覆盖
+## Coverage
 
-覆盖要求保护因果可读性，而非规定固定镜头数。说明哪些节拍需要地理、铺垫、接触、反应、后果或转场证据。后续的 `ShotSpec` 选择精确节拍 ID，但不能改写它们。
+Coverage requirements protect causal readability, not a fixed shot count. State which beats require geography, setup, contact, reaction, consequence, or transition evidence. A later `ShotSpec` selects exact beat IDs and cannot rewrite them.
 
-## 质量关卡
+## Quality gate
 
-- 可演绎的地理关系和接触；
-- 不出现瞬移的道具或身体状态；
-- 力量、重量和反应在因果上清晰可读；
-- 进入/变化/退出状态闭合；
-- 所选风险保持可见；
-- 所有硬绑定均精确，或已明确阻止；
-- 提示词交接仅包含所选节拍的可观察细节。
+- playable geography and contact;
+- no teleporting props or body states;
+- force, weight, and reaction are causally legible;
+- entry/change/exit states close;
+- selected risks remain visible;
+- all hard bindings exact or explicitly blocked;
+- prompt handoff contains only the selected beat's observable details.
 
-输出：`ActionSequenceSpec`。
+Output: `ActionSequenceSpec`.

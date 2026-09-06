@@ -1,6 +1,6 @@
 interface:
   display_name: "CineWeave Director"
-  short_description: "从世界观到制作计划的全流程 AIGC 创作"
-  default_prompt: "使用 $cineweave-director，将我的想法和参考资料转化为最小的、按路由组织的世界观、故事、角色、场景、风格、动作、镜头、分镜、Prompt Canon、可选提供商方言投影、计划和审查产物集合。保留精确事实并明确权利；绝不让提供商语法改写 Canon，也绝不声称已执行提供商操作。"
+  short_description: "Full-cycle AIGC creation from world bible to production plan"
+  default_prompt: "Use $cineweave-director to turn my idea and references into the smallest route-aware set of world, story, character, scene, style, action, shot, storyboard, Prompt Canon, optional provider-dialect projection, planning, and review artifacts. Keep exact facts and rights explicit; never mutate Canon with provider syntax or claim provider execution."
 policy:
   allow_implicit_invocation: true

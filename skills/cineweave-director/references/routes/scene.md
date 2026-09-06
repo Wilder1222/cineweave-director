@@ -1,33 +1,33 @@
-# 路由：scene
+# Route: scene
 
-用于可复用地点、制作设计、地理、状态、物理光照、道具、交互和镜头专属的场景绑定。场景是空间事实，而不是一份背景形容词清单。
+Use for reusable locations, production design, geography, state, physical light, props, interaction, and shot-specific scene binding. A scene is spatial fact, not a background adjective list.
 
-## 设计顺序
+## Design order
 
-1. 叙事功能和受众体验；
-2. 朝向、尺度和命名锚点；
-3. 区域和可通行连接；
-4. 建筑和材料逻辑；
-5. 道具位置和可供性；
-6. 摄影机拓扑——有效访问、轴线、遮挡和景深机会；
-7. 状态模型——时间、天气、占用、损坏和转场；
-8. 物理光源；
-9. 交互约束。
+1. narrative function and audience experience;
+2. orientation, scale, and named anchors;
+3. zones and traversable connections;
+4. architecture and material logic;
+5. prop locations and affordances;
+6. camera topology—valid access, axis, occlusion, and depth opportunities;
+7. state model—time, weather, occupancy, damage, and transitions;
+8. physical light sources;
+9. interaction constraints.
 
-`SceneSpec` 定义可复用空间。`SceneState` 记录版本化的当前状态。`SceneBinding` 只选择镜头中可见或对连续性至关重要的事实。
+`SceneSpec` defines reusable space. `SceneState` records a versioned current condition. `SceneBinding` selects only facts visible or continuity-critical for a shot.
 
-## 物理光照
+## Physical light
 
-记录光源类型、物理来源/锚点、方向、尺寸、强度关系、衰减、颜色依据、遮挡、阴影行为和反射面。没有命名表面的反射光不是物理光源。风格处理不能移动或创建 Scene 光源。
+Record source type, physical origin/anchor, direction, size, intensity relation, falloff, color basis, occlusion, shadow behavior, and bounce surface. A bounce without a named surface is not a physical source. Style treatment cannot move or create a Scene source.
 
-## 交互
+## Interaction
 
-对于接触和动作，指定支撑锚点、接触区域、重量转移、握持、碰撞限制、遮挡、阴影接触、道具归属和环境响应。没有命名墙面锚点和身体机制，“倚靠墙壁”就是不完整的。
+For contact and action specify support anchor, contact area, weight transfer, grip, collision limits, occlusion, shadow contact, prop ownership, and environmental response. “Leans on wall” is incomplete without the named wall anchor and body mechanics.
 
-镜头和裁剪无法修复不一致的地理关系。如果在已绑定拓扑下，手、脚、车辆或道具无法到达目标，应在 Prompt 之前修正 Scene 或调度。
+Lens and crop cannot repair inconsistent geography. If a hand, foot, vehicle, or prop cannot reach its target under the bound topology, fix Scene or blocking before Prompt.
 
-## 连续性与审查
+## Continuity and review
 
-追踪拓扑、道具位置、门/窗状态、材料状况、天气、源光、人群、损坏和污染。有意的变化需要原因和转场。
+Track topology, prop position, door/window state, material condition, weather, source light, crowd, damage, and contamination. Intentional changes need a cause and transition.
 
-输出：`SceneSpec`、`SceneState`、`SceneLightState`、`InteractionConstraintSet`、`SceneBinding`。
+Outputs: `SceneSpec`, `SceneState`, `SceneLightState`, `InteractionConstraintSet`, `SceneBinding`.
