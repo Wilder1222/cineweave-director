@@ -5,6 +5,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { validateDocument, validatePayload } from "../scripts/validate-output.mjs";
+import { canonicalize, sha256Bytes } from "../scripts/canonical-json.mjs";
 
 const contractRoot = fileURLToPath(new URL("../skills/cineweave-director/resources/contracts/", import.meta.url));
 
@@ -27,6 +28,60 @@ async function loadContractFixture(stem) {
     payload: JSON.parse(await readFile(join(contractRoot, "examples", `${stem}.json`), "utf8")),
   };
 }
+
+test("RepairPlan rejects contradictory approval, malformed paths and duplicate checks", async () => {
+  const { schemaPath, payload } = await loadContractFixture("repair-plan");
+  for (const mutate of [
+    (p) => { p.status = "approved"; p.humanGate.status = "rejected"; },
+    (p) => { p.status = "rejected"; p.humanGate.status = "approved"; },
+    (p) => { p.change.targetPath = "/bad~2escape"; },
+    (p) => { p.change.targetPath = "not-a-pointer"; },
+    (p) => { p.acceptanceChecks.push(p.acceptanceChecks[0]); },
+    (p) => { p.acceptanceChecks = {}; },
+  ]) {
+    const candidate = structuredClone(payload);
+    mutate(candidate);
+    assert.equal((await validatePayload(schemaPath, candidate)).valid, false);
+  }
+  const result = await validatePayload(schemaPath, payload);
+  assert.equal(result.valid, true);
+  assert.ok(result.unverified.some((value) => value.startsWith("sourceReviewRef:")));
+});
+
+test("RepairPlan checks exact registry hashes, findings, ownership and target pointers", async () => {
+  const { schemaPath, payload } = await loadContractFixture("repair-plan");
+  const { payload: review } = await loadContractFixture("creative-review");
+  const target = { kind: payload.targetRef.kind, constraints: { "left/hand": { "support~anchor": "threshold" } } };
+  payload.change.targetPath = "/constraints/left~1hand/support~0anchor";
+  payload.targetRef.contentHash = sha256Bytes(canonicalize(target));
+  review.targetRefs = [structuredClone(payload.targetRef)];
+  payload.sourceReviewRef.contentHash = sha256Bytes(canonicalize(review));
+  const artifacts = [
+    { ref: structuredClone(payload.sourceReviewRef), document: review },
+    { ref: structuredClone(payload.targetRef), document: target },
+  ];
+  assert.equal((await validatePayload(schemaPath, payload, { artifacts })).valid, true);
+  for (const [field, value, pattern] of [
+    ["findingId", "missing-finding", /findingId/],
+    ["domain", "character", /owner/],
+  ]) {
+    const result = await validatePayload(schemaPath, { ...payload, [field]: value }, { artifacts });
+    assert.equal(result.valid, false);
+    assert.match(result.errors.join("\n"), pattern);
+  }
+  const badPath = structuredClone(payload);
+  badPath.change.targetPath = "/constraints/missing";
+  assert.equal((await validatePayload(schemaPath, badPath, { artifacts })).valid, false);
+  const changed = structuredClone(artifacts);
+  changed[1].document.constraints["left/hand"]["support~anchor"] = "changed";
+  assert.match((await validatePayload(schemaPath, payload, { artifacts: changed })).errors.join("\n"), /hash/);
+  assert.equal((await validatePayload(schemaPath, payload, { artifacts: [...artifacts, artifacts[0]] })).valid, false);
+  const passed = structuredClone(artifacts);
+  passed[0].document.findings[1].status = "pass";
+  passed[0].ref.contentHash = sha256Bytes(canonicalize(passed[0].document));
+  const passedPlan = { ...payload, sourceReviewRef: passed[0].ref };
+  assert.match((await validatePayload(schemaPath, passedPlan, { artifacts: passed })).errors.join("\n"), /warn or fail/);
+});
 
 test("contract equality is independent of object key order", async () => {
   const result = await withDocuments(

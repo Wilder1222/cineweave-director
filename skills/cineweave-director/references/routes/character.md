@@ -32,7 +32,7 @@ For actor direction, subtext, listening, or restrained performance, read [direct
 - adult/minor status and likeness rights explicit when relevant;
 - identity, appearance, and performance are separately versioned;
 - anchors are observable and scale-aware;
-- variation is bounded and one-axis during exploration;
+- diagnostic variation is bounded and one-axis; broad concept exploration may compare explicitly labeled multi-axis directions;
 - behavior follows objective and pressure;
 - no beauty scoring or biometric inference;
 - unresolved identity evidence remains unresolved.

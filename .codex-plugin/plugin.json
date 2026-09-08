@@ -1,6 +1,6 @@
 {
   "name": "cineweave-director",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "A self-contained full-cycle AIGC creative-director Skill with evidence-aware Canon, provider-dialect prompt projection, and non-executing production plans.",
   "homepage": "https://github.com/Wilder1222/cineweave-director",
   "repository": "https://github.com/Wilder1222/cineweave-director",
@@ -38,6 +38,6 @@
     "defaultPrompt": [
       "Use $cineweave-director to turn my idea and references into the smallest route-aware set of world, story, character, scene, style, action, shot, storyboard, Prompt Canon, optional provider-dialect projection, planning, and review artifacts. Keep exact facts and rights explicit; never mutate Canon with provider syntax or claim provider execution."
     ],
-    "brandColor": "#1D6FFF"
+    "brandColor": "#000000"
   }
 }

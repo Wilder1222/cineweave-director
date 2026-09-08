@@ -1,7 +1,7 @@
 {
-  "schemaVersion": "3.0.0",
+  "schemaVersion": "3.1.0",
   "skill": "cineweave-director",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "contractIndex": "resources/contracts/index.json",
   "routes": {
     "brief_world": {

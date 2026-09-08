@@ -70,6 +70,9 @@ Load only on a direct match:
 - lens/perspective, motivated movement, difficult light, or shot matching → [`cinematography-craft.md`](references/optional/cinematography-craft.md)
 - creative cutting, pacing, listening perspective, or sound bridges → [`editing-sound-craft.md`](references/optional/editing-sound-craft.md)
 - craft research, course discovery, deliberate practice, or Skill evaluation → [`film-craft-study.md`](references/optional/film-craft-study.md)
+- video, sound, delivery, or iteration constraints → [`video-sound-and-delivery.md`](references/optional/video-sound-and-delivery.md)
+- project revisions, unresolved draft JSON, or resuming work → [`drafts-and-change-impact.md`](references/optional/drafts-and-change-impact.md)
+- a worked multi-shot workflow or skill evaluation → [`creative-workflow-evaluation.md`](references/optional/creative-workflow-evaluation.md)
 - frame-accurate editorial or color handoff → [`editorial-color.md`](references/optional/editorial-color.md)
 - explicit Midjourney dialect projection → [`midjourney-projection.md`](references/optional/midjourney-projection.md)
 
@@ -79,7 +82,7 @@ Load only on a direct match:
 
 State the user goal, deliverable, intended audience change, medium, exact supplied artifacts, references, rights status, hard locks, assumptions, and unknowns. For reusable or multi-scene work resolve a `WorldBible`; do not pretend `StoryBrief.worldContext` is a complete world authority.
 
-Use story-led or look-led intake as appropriate. Both must converge before shot work on an approved dramatic or perceptual unit and a sufficiently approved visual bible. Distinguish causal drama from observation, subjective experience, and essay/association; do not invent plot conflict for an explicitly non-causal brief.
+Use story-led or look-led intake as appropriate. Converge on a dramatic or perceptual unit and a visual bible at matching maturity: explicit hypotheses for drafts, approved facts for final compilation. Distinguish causal drama from observation, subjective experience, and essay/association; do not invent plot conflict for an explicitly non-causal brief. Non-narrative stills need a visible purpose, not invented story prerequisites.
 
 For consequential craft choices, connect the intended experience to a visible/audible mechanism, a tradeoff, and a check that could favor another treatment. Keep this rationale concise. Craft names, camera brands, numerical detail, and elaborate movement do not establish quality; preserve room for stillness, listening, and deliberate ambiguity.
 
@@ -91,7 +94,7 @@ Keep dependencies one-way:
 
 `World → Story → Character/Scene/Style/Reference → Action/Shot → Storyboard/Rhythm → Prompt → Production Plan → Review/Repair`
 
-A route may be skipped when its facts do not matter. Missing reusable identity, geography, rights, or hard capability remains unresolved; do not fill it with plausible prose.
+A route may be skipped when its facts do not matter. Create original identity and geography when requested, labeling them as proposals. Missing facts about existing assets, rights, or hard capability remain unresolved; do not invent evidence.
 
 ### 3. Preserve domain boundaries
 
@@ -104,9 +107,9 @@ A route may be skipped when its facts do not matter. Missing reusable identity, 
 - Production creates plans, controls, evidence requirements, and feasibility assessments; it never executes.
 - Review requires actual evidence; Repair changes one owning variable.
 
-### 4. Stop at human gates
+### 4. Apply scoped decision gates
 
-Pause when a decision would lock world canon, identity, representation, master reference role, story ending, risky action, final coverage, rights, or an external implementation choice. Return the decision, consequences, and one next action.
+Use exploration, draft, and final maturity from the operating model. Carry already authorized creative choices forward; develop a complete reviewable draft before asking to lock new Canon. Ask only for a missing consequential decision outside the user’s delegated scope. Rights approval and external execution remain separate. A blocked transfer or publication step does not block independent original drafting or bounded reference analysis.
 
 ## Non-negotiable rules
 
@@ -129,8 +132,9 @@ Default to a concise, human-readable artifact unless the user requests canonical
 - use its local schema under [`resources/contracts/schemas/`](resources/contracts/schemas/);
 - preserve exact refs and leave unavailable hashes/IDs unresolved rather than inventing them;
 - return one complete JSON document per artifact;
+- when exact metadata is unavailable, use the explicitly non-canonical working JSON format in `drafts-and-change-impact.md`; never fill canonical fields with placeholders;
 - treat files under [`resources/contracts/examples/`](resources/contracts/examples/) as fixtures, not real IDs, evidence, approvals, or hashes.
 
 [`resources/contracts/index.json`](resources/contracts/index.json) is the distribution inventory and hash manifest. It and every schema/example are bundled byte-for-byte with this Skill.
 
-Before completion verify: purpose and authority are explicit; route dependencies are acyclic; hard locks survive; causal story beats retain their causes while observational/associative intent is preserved; identity/geography/physical-light facts are not overwritten; action and coverage close; prompts contain observable facts; production remains non-executing; evidence claims match their basis; rights and hard capability unknowns block advancement; and no success is claimed without reviewable evidence.
+Before completion verify: purpose and authority are explicit; route dependencies are acyclic; hard locks survive; causal story beats retain their causes while observational/associative intent is preserved; identity/geography/physical-light facts are not overwritten; action and coverage close; prompts contain observable facts; production remains non-executing; evidence claims match their basis; rights and hard capability unknowns block only the uses that depend on them; and no success is claimed without reviewable evidence.

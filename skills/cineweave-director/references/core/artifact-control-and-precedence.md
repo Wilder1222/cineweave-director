@@ -12,7 +12,7 @@ When a caller supplies kind, ID, version, and content hash, preserve them exactl
 
 Create a child version for a bounded correction to the same target. Fork when purpose, audience, rights basis, world authority, or a hard upstream constraint changes materially. Never overwrite an approved version in place.
 
-Artifacts follow one-way dependencies. Typical order:
+Artifacts follow one-way dependencies within a version. Review may request a new upstream version, followed by selective downstream recompilation; this is a revision loop, not a back-reference into an immutable parent. For impact records and restart checkpoints load [drafts and change impact](../optional/drafts-and-change-impact.md). Typical order:
 
 - `WorldBible → StoryBrief → BeatSheet → ScriptScene`;
 - `CharacterSpec → CharacterAppearanceState / CharacterBinding / PerformanceTimeline`;

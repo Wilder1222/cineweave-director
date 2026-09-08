@@ -6,6 +6,7 @@ import { fileURLToPath, pathToFileURL } from "node:url";
 import {
   canonicalize,
   parseJsonStrict,
+  sha256Bytes,
 } from "./canonical-json.mjs";
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
@@ -29,7 +30,7 @@ const MAP_SUBSCHEMA_KEYWORDS = ["$defs", "properties", "patternProperties"];
 const contractsCache = new Map();
 
 function usage() {
-  console.error("Usage: node scripts/validate-output.mjs <schema.json> <payload.json>");
+  console.error("Usage: node scripts/validate-output.mjs <schema.json> <payload.json> [--artifacts registry.json]");
 }
 
 function isObject(value) {
@@ -890,6 +891,56 @@ function validateCreativeReviewSemantics(payload, errors) {
   }
 }
 
+function validateRepairPlanSemantics(payload, errors) {
+  const gate = payload.humanGate?.status;
+  if (payload.status === "approved" && gate !== "approved") errors.push("$.humanGate.status must be approved for an approved repair");
+  if (payload.status === "rejected" && gate !== "rejected") errors.push("$.humanGate.status must be rejected for a rejected repair");
+  if (gate === "rejected" && !["rejected", "superseded"].includes(payload.status)) errors.push("$.status must be rejected or superseded when the human gate is rejected");
+  const path = payload.change?.targetPath;
+  if (typeof path === "string" && (!path.startsWith("/") || /~(?:[^01]|$)/u.test(path))) errors.push("$.change.targetPath must be a non-root RFC6901 JSON pointer");
+  const ids = (Array.isArray(payload.acceptanceChecks) ? payload.acceptanceChecks : []).map((check) => check?.checkId);
+  if (new Set(ids).size !== ids.length) errors.push("$.acceptanceChecks must have unique checkId values");
+}
+
+// The supplied registry binds exact refs to documents; hashes use JCS UTF-8,
+// independently of the raw-byte distribution index. This does not prove media.
+function validateRepairContext(payload, artifacts, errors, unverified) {
+  const resolveRef = (ref, label) => {
+    const matches = artifacts.filter((entry) => isObject(entry) && isObject(entry.ref) && deepEqual(entry.ref, ref));
+    if (matches.length !== 1) {
+      unverified.push(`${label}: exact registry binding unavailable or ambiguous`);
+      if (matches.length > 1) errors.push(`${label}: ambiguous registry binding`);
+      return null;
+    }
+    const document = matches[0].document;
+    if (!isObject(document) || document.kind !== ref.kind || sha256Bytes(canonicalize(document)) !== ref.contentHash) {
+      errors.push(`${label}: document kind or JCS content hash does not match the exact reference`);
+      return null;
+    }
+    if (document.version !== undefined && document.version !== ref.version) errors.push(`${label}: document version mismatch`);
+    return document;
+  };
+  const review = resolveRef(payload.sourceReviewRef, "sourceReviewRef");
+  const target = resolveRef(payload.targetRef, "targetRef");
+  if (review) {
+    if (review.reviewId !== payload.sourceReviewRef.id) errors.push("sourceReviewRef: review ID mismatch");
+    if (review.status !== "completed") errors.push("sourceReviewRef: repair requires a completed source review");
+    const findings = (Array.isArray(review.findings) ? review.findings : []).filter((item) => item?.findingId === payload.findingId);
+    if (findings.length !== 1) errors.push("$.findingId must resolve to exactly one source review finding");
+    else {
+      const finding = findings[0];
+      if (!["warn", "fail"].includes(finding.status)) errors.push("$.findingId must identify a warn or fail finding");
+      if (finding.domain !== payload.domain) errors.push("$.domain must match the source finding owner");
+    }
+    if (!(Array.isArray(review.targetRefs) ? review.targetRefs : []).some((ref) => deepEqual(ref, payload.targetRef))) unverified.push("targetRef: upstream repair target relationship to reviewed targets needs domain review");
+  }
+  if (target) {
+    try { pointerGet(target, `#${payload.change.targetPath}`); }
+    catch { errors.push("$.change.targetPath does not resolve in the supplied target document"); }
+  }
+  unverified.push("Observed media, preservation of passing dimensions, registry identity authority, and repair success require evidence review");
+}
+
 function validateContractSemantics(payload, schema, errors, contracts) {
   const schemaKind = schema?.properties?.kind?.const;
   if (!isObject(payload) || payload.kind !== schemaKind) return;
@@ -898,6 +949,7 @@ function validateContractSemantics(payload, schema, errors, contracts) {
   if (schemaKind === "cineweave_codex_shot_compiler_plan") validateShotCompilerPlanSemantics(payload, errors, contracts);
   if (schemaKind === "cineweave_codex_workflow_plan") validateWorkflowPlanSemantics(payload, errors, contracts);
   if (schemaKind === "cineweave_codex_creative_review") validateCreativeReviewSemantics(payload, errors);
+  if (schemaKind === "cineweave_codex_repair_plan") validateRepairPlanSemantics(payload, errors);
 }
 
 async function loadMatchingContracts(schemaPath) {
@@ -946,7 +998,12 @@ export async function validatePayload(schemaPath, payload, options = {}) {
   const schemaKind = document?.properties?.kind?.const;
   const contracts = options.contracts ?? (["cineweave_codex_workflow_plan", "cineweave_codex_shot_compiler_plan"].includes(schemaKind) ? await loadMatchingContracts(absoluteSchema) : null);
   validateContractSemantics(payload, document, errors, contracts);
-  return { valid: errors.length === 0, errors, schema: document.$id || absoluteSchema, payload };
+  const unverified = [];
+  if (schemaKind === "cineweave_codex_repair_plan" && errors.length === 0) {
+    if (options.artifacts !== undefined && !Array.isArray(options.artifacts)) errors.push("artifacts must be an array of exact ref/document bindings");
+    else validateRepairContext(payload, options.artifacts ?? [], errors, unverified);
+  }
+  return { valid: errors.length === 0, errors, unverified, schema: document.$id || absoluteSchema, payload };
 }
 
 export async function validateDocument(schemaPath, payloadPath, options = {}) {
@@ -955,19 +1012,20 @@ export async function validateDocument(schemaPath, payloadPath, options = {}) {
 }
 
 async function main() {
-  const [, , schemaPath, payloadPath] = process.argv;
-  if (!schemaPath || !payloadPath) {
+  const [, , schemaPath, payloadPath, flag, registryPath, ...extra] = process.argv;
+  if (!schemaPath || !payloadPath || extra.length || (flag !== undefined && (flag !== "--artifacts" || !registryPath))) {
     usage();
     process.exitCode = 2;
     return;
   }
-  const result = await validateDocument(schemaPath, payloadPath);
+  const options = registryPath ? { artifacts: parseJsonStrict(await readFile(resolve(registryPath), "utf8")) } : {};
+  const result = await validateDocument(schemaPath, payloadPath, options);
   if (!result.valid) {
-    console.error(JSON.stringify({ valid: false, errors: result.errors }, null, 2));
+    console.error(JSON.stringify({ valid: false, errors: result.errors, unverified: result.unverified }, null, 2));
     process.exitCode = 2;
     return;
   }
-  console.log(JSON.stringify({ valid: true, schema: result.schema, payload: resolve(payloadPath) }, null, 2));
+  console.log(JSON.stringify({ valid: true, schema: result.schema, payload: resolve(payloadPath), unverified: result.unverified }, null, 2));
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {

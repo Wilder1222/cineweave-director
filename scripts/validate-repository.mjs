@@ -14,7 +14,7 @@ const SKILL_PREFIX = `skills/${SKILL_NAME}`;
 const PLUGIN_PATH = ".codex-plugin/plugin.json";
 const MARKETPLACE_PATH = ".agents/plugins/marketplace.json";
 const LICENSE_PATH = "LICENSE";
-const EXPECTED_VERSION = "3.0.0";
+const EXPECTED_VERSION = "3.1.0";
 const EXPECTED_ROUTES = [
   "brief_world",
   "story",
@@ -67,6 +67,9 @@ const EXPECTED_CONDITION_CONTEXTS = [
   "editorial",
   "color",
   "midjourney",
+  "video_sound_delivery",
+  "draft_revision",
+  "skill_evaluation",
 ];
 const EXPECTED_SUPPORT_SCHEMAS = new Set([
   "schemas/common.schema.json",
@@ -343,10 +346,10 @@ function visitSkillReceipts(value, callback, path = "$") {
 
 async function validateContracts(root, inventory) {
   const { contracts, lifecycle, index } = inventory;
-  assert(contracts.schemaVersion === EXPECTED_VERSION && contracts.version === EXPECTED_VERSION, "contracts.json must use Skill version 3.0.0");
+  assert(contracts.schemaVersion === EXPECTED_VERSION && contracts.version === EXPECTED_VERSION, `contracts.json must use Skill version ${EXPECTED_VERSION}`);
   assert(contracts.skill === SKILL_NAME && index.skill === SKILL_NAME && lifecycle.skill === SKILL_NAME, "Skill identity is inconsistent across manifests");
-  assert(index.schemaVersion === EXPECTED_VERSION && index.skillVersion === EXPECTED_VERSION, "Contract index must use Skill version 3.0.0");
-  assert(lifecycle.catalogVersion === EXPECTED_VERSION, "Reference lifecycle must use catalogVersion 3.0.0");
+  assert(index.schemaVersion === EXPECTED_VERSION && index.skillVersion === EXPECTED_VERSION, `Contract index must use Skill version ${EXPECTED_VERSION}`);
+  assert(lifecycle.catalogVersion === EXPECTED_VERSION, `Reference lifecycle must use catalogVersion ${EXPECTED_VERSION}`);
 
   const routeIds = Object.keys(contracts.routes ?? {});
   assert(JSON.stringify(routeIds) === JSON.stringify(EXPECTED_ROUTES), `Route inventory must be exactly: ${EXPECTED_ROUTES.join(", ")}`);
@@ -430,7 +433,7 @@ async function validateContracts(root, inventory) {
       receiptCount += 1;
       assert(receipt && typeof receipt === "object" && !Array.isArray(receipt), `${entry.example} ${receiptPath} must be an object`);
       assert(receipt.repository === EXPECTED_REPOSITORY, `${entry.example} ${receiptPath}.repository must use the release repository`);
-      assert(receipt.ref === "v3.0.0", `${entry.example} ${receiptPath}.ref must be v3.0.0`);
+      assert(receipt.ref === `v${EXPECTED_VERSION}`, `${entry.example} ${receiptPath}.ref must be v${EXPECTED_VERSION}`);
     });
     const result = await validateDocument(resolve(root, ...schemaRelative.split("/")), resolve(root, ...exampleRelative.split("/")), { contracts });
     if (!result.valid) failures.push({ kind: entry.kind, errors: result.errors });

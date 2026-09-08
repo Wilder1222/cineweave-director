@@ -135,7 +135,7 @@ async function createIndex() {
   }
 
   return {
-    schemaVersion: "3.0.0",
+    schemaVersion: manifest.version,
     skill: manifest.skill,
     skillVersion: manifest.version,
     contracts,

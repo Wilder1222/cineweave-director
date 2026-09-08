@@ -9,12 +9,20 @@ All notable changes to CineWeave Director are documented here.
 
 - add four optional craft references covering directing/performance/staging, cinematography/light, editing/sound, and a source-qualified international learning map with eight behavioral evaluation cases;
 - route craft guidance through typed lifecycle contexts and existing contracts, including tradeoff/failure checks and support for observational or associative intent without forced plot conflict;
-- expand the derived distribution to 141 files and 28 references; retain 52 root contracts and unchanged wire schemas, and distinguish packaging checks from unverified artistic outcomes;
+- expand the derived distribution to 144 files and 31 references; retain 52 root contracts and unchanged wire schemas, and distinguish packaging checks from unverified artistic outcomes;
 
 - reject capability candidates marked eligible despite unresolved hard requirements, failed candidates left reviewable, and nonexistent, selected, or blocked fallbacks;
 - validate ShotCompilerPlan parameter/control agreement, unique IDs, ordered traces and handoffs, output ownership from the matching release, exact input dependency retention, alias provenance declarations, and trace-to-handoff closure;
 - extend the cinematic-pattern guide with a creator-facing shot example and distinguish internal consistency checks from verification of supplied manifest/registry contents;
 - add mutation regressions for capability advancement and shot compilation without changing the v3 distribution or artifact wire shapes.
+
+## 3.1.0 — 2026-09-06
+
+- Added exploration/draft/final guidance, delegated decision scope, non-canonical working JSON, promotion checks, and revision impact/checkpoint worksheets.
+- Added video, sound, delivery and resource planning within existing routes, plus a worked three-shot workflow and eight fresh-task evaluation cases.
+- Allowed bounded visual review with missing execution metadata, while preserving separate reproducibility and rights gates.
+- Added RepairPlan gate/pointer/check-ID semantics and optional exact ref/document registry validation with explicit unverified results; added regression tests.
+- Expanded the lifecycle allowlist to 26 references and the current source bundle to 139 files. Root contracts and artifact wire versions remain unchanged; behavioral/media evaluations are not claimed as completed.
 
 ## 3.0.0 — 2026-09-02
 
