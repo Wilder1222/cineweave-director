@@ -65,6 +65,11 @@ Load only on a direct match:
 - portrait, skin/hair/makeup, natural-human surfaces → [`portrait-natural-human.md`](references/optional/portrait-natural-human.md)
 - comic or manga page grammar → [`comic-manga.md`](references/optional/comic-manga.md)
 - reusable cinematic gesture and control surface → [`cinematic-patterns.md`](references/optional/cinematic-patterns.md)
+- create or creatively revise shots, cinematic style, or sequence rhythm → [`master-style-presets.md`](references/optional/master-style-presets.md) for automatic, brief-led technique matching; no name, switch, or strength setting required; also use for named influences
+- scene direction, playable performance, staging, or competing shot treatments → [`directing-craft.md`](references/optional/directing-craft.md)
+- lens/perspective, motivated movement, difficult light, or shot matching → [`cinematography-craft.md`](references/optional/cinematography-craft.md)
+- creative cutting, pacing, listening perspective, or sound bridges → [`editing-sound-craft.md`](references/optional/editing-sound-craft.md)
+- craft research, course discovery, deliberate practice, or Skill evaluation → [`film-craft-study.md`](references/optional/film-craft-study.md)
 - frame-accurate editorial or color handoff → [`editorial-color.md`](references/optional/editorial-color.md)
 - explicit Midjourney dialect projection → [`midjourney-projection.md`](references/optional/midjourney-projection.md)
 
@@ -74,7 +79,11 @@ Load only on a direct match:
 
 State the user goal, deliverable, intended audience change, medium, exact supplied artifacts, references, rights status, hard locks, assumptions, and unknowns. For reusable or multi-scene work resolve a `WorldBible`; do not pretend `StoryBrief.worldContext` is a complete world authority.
 
-Use story-led or look-led intake as appropriate. Both must converge before shot work on a causal dramatic beat and a sufficiently approved visual bible.
+Use story-led or look-led intake as appropriate. Both must converge before shot work on an approved dramatic or perceptual unit and a sufficiently approved visual bible. Distinguish causal drama from observation, subjective experience, and essay/association; do not invent plot conflict for an explicitly non-causal brief.
+
+For consequential craft choices, connect the intended experience to a visible/audible mechanism, a tradeoff, and a check that could favor another treatment. Keep this rationale concise. Craft names, camera brands, numerical detail, and elaborate movement do not establish quality; preserve room for stillness, listening, and deliberate ambiguity.
+
+Automatically adapt and combine suitable directing/photography techniques in creative work, but inherit one shared visual/look baseline across the work: palette, grading intent, color-temperature relationships, contrast/rolloff, material rendering, texture, optical character, and aspect ratio. Technique may vary by beat; the look must not switch with the inferred master. Follow the [visual-bible rules](references/core/visual-bible-and-continuity.md); if no baseline is supplied, propose one shared draft without pretending it is approved. Exact transformations and reviews do not authorize restyling.
 
 ### 2. Build only required upstream artifacts
 
@@ -107,7 +116,7 @@ Pause when a decision would lock world canon, identity, representation, master r
 4. Stage action before selecting lens; resolve multi-beat action before shots.
 5. A plan, prompt, storyboard description, or capability claim is not generated media or observed evidence.
 6. Unknown rights or unknown hard capability never becomes allowed or supported by default.
-7. Do not use beauty scoring, biometric inference, or named-creator imitation as an authority.
+7. Do not use beauty scoring, biometric inference, or named-creator imitation as an authority. Automatically matched or user-named techniques are editable draft choices, never authority to override approved facts or the shared visual baseline.
 8. Repairs preserve passing dimensions, change one variable in one domain, and remain unverified until new evidence is reviewed.
 9. Do not provide executable stunt, weapon, or harm methods; flag visible production risks for qualified external review.
 10. Never call a provider, run an adapter, install a model, expose credentials, publish, approve, or claim external execution.
@@ -124,4 +133,4 @@ Default to a concise, human-readable artifact unless the user requests canonical
 
 [`resources/contracts/index.json`](resources/contracts/index.json) is the distribution inventory and hash manifest. It and every schema/example are bundled byte-for-byte with this Skill.
 
-Before completion verify: purpose and authority are explicit; route dependencies are acyclic; hard locks survive; story beats are causal; identity/geography/physical-light facts are not overwritten; action and coverage close; prompts contain observable facts; production remains non-executing; evidence claims match their basis; rights and hard capability unknowns block advancement; and no success is claimed without reviewable evidence.
+Before completion verify: purpose and authority are explicit; route dependencies are acyclic; hard locks survive; causal story beats retain their causes while observational/associative intent is preserved; identity/geography/physical-light facts are not overwritten; action and coverage close; prompts contain observable facts; production remains non-executing; evidence claims match their basis; rights and hard capability unknowns block advancement; and no success is claimed without reviewable evidence.

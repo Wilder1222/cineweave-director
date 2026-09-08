@@ -4,6 +4,8 @@ Use for premise development, dramatic structure, beat sheets, screenplay scenes,
 
 ## Story foundation
 
+The causal criteria below apply to dramatic story development. An explicitly observational or associative brief can instead enter shot/storyboard design around a perceptual unit; do not invent conflict or an ending to force that brief into a BeatSheet. For knowledge access, playable tactics, or staging handoff read [directing craft](../optional/directing-craft.md).
+
 Define one dramatic question and a protagonist with want, need, fear, contradiction, and stakes. State the ending direction early enough to test whether the premise can close.
 
 Every beat must contain:

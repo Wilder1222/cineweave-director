@@ -20,6 +20,8 @@ Use for reusable locations, production design, geography, state, physical light,
 
 Record source type, physical origin/anchor, direction, size, intensity relation, falloff, color basis, occlusion, shadow behavior, and bounce surface. A bounce without a named surface is not a physical source. Style treatment cannot move or create a Scene source.
 
+For difficult source geometry, material glare, contrast, or shot-to-shot light matching read [cinematography craft](../optional/cinematography-craft.md). New fixtures or bounce surfaces remain Scene proposals, not implicit additions by Direction.
+
 ## Interaction
 
 For contact and action specify support anchor, contact area, weight transfer, grip, collision limits, occlusion, shadow contact, prop ownership, and environmental response. “Leans on wall” is incomplete without the named wall anchor and body mechanics.

@@ -18,6 +18,10 @@ Map each hard or continuity-critical requirement to `ControlChannelSet`: source,
 
 `CapabilityProfile` records supplied or researched capability claims and their evidence status. `CapabilityResolutionPlan` compares exact profiles against hard/soft/advisory requirements. Unknown or partial hard support cannot pass silently. The plan may retain a candidate for human review, but it does not select a provider, invoke an external tool, install anything, or guarantee output.
 
+Use `eligible` or `selected` only when every hard requirement has strong, passing support. A failed hard result or a nonempty `hardFailures` list makes the candidate `blocked`; uncertain hard support stays `needs_review`. Evaluate every requested requirement once per candidate. A high aggregate score cannot compensate for a missing hard capability. Scores express the declared comparison policy, not measured output quality.
+
+Fallback IDs must identify other listed candidates that are eligible or need review. A review fallback carries its unresolved conditions into the human handoff. Do not include blocked candidates or the selected candidate as fallbacks. Present the deciding hard constraint, the meaningful tradeoff, and the evidence needed next; a full score table is useful only when the user is actually comparing alternatives.
+
 A provider-specific `PromptProjectionPlan` may bind one exact capability profile after a human has chosen the target dialect. It records compatibility evidence and a manual handoff; it is not a provider selection, request, adapter, or receipt.
 
 ## Render, editorial, and color plans

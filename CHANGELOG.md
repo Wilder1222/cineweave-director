@@ -2,6 +2,20 @@
 
 All notable changes to CineWeave Director are documented here.
 
+## Unreleased
+
+- add eight master-inspired method cards with automatic brief-led matching, dimension-scoped mixing, conservative no-match fallback, explicit override precedence, and twelve manual behavioral checks; no name, switch, or strength setting is required;
+- keep a shared work-level visual baseline across mixed techniques, including grading, palette, contrast/rolloff, material/optical texture, and aspect ratio; undefined looks become one provisional shared draft, never per-master shot grades;
+
+- add four optional craft references covering directing/performance/staging, cinematography/light, editing/sound, and a source-qualified international learning map with eight behavioral evaluation cases;
+- route craft guidance through typed lifecycle contexts and existing contracts, including tradeoff/failure checks and support for observational or associative intent without forced plot conflict;
+- expand the derived distribution to 141 files and 28 references; retain 52 root contracts and unchanged wire schemas, and distinguish packaging checks from unverified artistic outcomes;
+
+- reject capability candidates marked eligible despite unresolved hard requirements, failed candidates left reviewable, and nonexistent, selected, or blocked fallbacks;
+- validate ShotCompilerPlan parameter/control agreement, unique IDs, ordered traces and handoffs, output ownership from the matching release, exact input dependency retention, alias provenance declarations, and trace-to-handoff closure;
+- extend the cinematic-pattern guide with a creator-facing shot example and distinguish internal consistency checks from verification of supplied manifest/registry contents;
+- add mutation regressions for capability advancement and shot compilation without changing the v3 distribution or artifact wire shapes.
+
 ## 3.0.0 — 2026-09-02
 
 ### Breaking changes

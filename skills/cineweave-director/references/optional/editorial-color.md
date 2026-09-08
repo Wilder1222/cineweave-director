@@ -20,4 +20,6 @@ Separate:
 
 State working assumptions and unknowns without claiming a transform was applied. Preview intent and delivery intent are distinct. Do not bake a display look into canonical identity, material, or source-light facts.
 
+Inherit the same shared look and color-pipeline assumptions across shots even when directing techniques differ. Match palette, color-temperature relationships, saturation, contrast/rolloff, skin/material rendering, and texture against that baseline; do not attach a new master's grade to each shot. Physical day/night or source changes may affect exposure and illumination without replacing the shared grade intent. A look change requires an explicit scoped revision. Without actual comparable media, verify only planning consistency, not a finished color match.
+
 Review for clipping, skin/material separation, neutral/reference handling, shot-to-shot continuity, and whether the creative grade still respects physical-light logic. Color profiles remain plans for an external color-managed workflow.

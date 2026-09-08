@@ -4,7 +4,7 @@ Use for visual proposals, reusable cinematic patterns, shot compilation, blockin
 
 ## Resolve the dramatic unit
 
-State one purpose, one audience-attention change, one readable action, and one stable end-state change. If several spatial or causal changes occur, use the `action` route first.
+State one purpose, one audience-attention change, one readable action or sustained observation, and one defined end state. For observational/essay work, a perceptual change may carry the unit without a new plot event. If several spatial or causal changes occur, use the `action` route first.
 
 Order decisions:
 
@@ -24,6 +24,8 @@ Keep actor performance, camera, focus, scene motion, dynamic light, and edit eve
 
 ## Cinematic patterns and compilation
 
+For creative shot design or revision, read [adaptive master-style techniques](../optional/master-style-presets.md) even when no master is named. Infer suitable methods from the brief, combine compatible dimensions, and proceed without a preset-selection question. Preserve the shared look from the visual bible; technique changes never authorize per-shot grading or texture changes. Browsing, exact compilation, and review alone do not authorize adaptation.
+
 A reusable `CinematicSkillManifest` entry contains story function, typed bounded parameters, required bindings, owner routes, target artifacts, and quality checks. It is not a provider preset.
 
 `ShotCompilerPlan` resolves one selected pattern, exact bindings, and parameter values into projection-only controls and planned route handoffs. Resolve `@Asset` only through an exact registry. Never emit fake output hashes or execute the plan.
@@ -32,6 +34,6 @@ A reusable `CinematicSkillManifest` entry contains story function, typed bounded
 
 Create `ShotSpec` before `ShotLightingPlan`, `TemporalSpec`, optional `CameraPrevisSpec`, and `HeroFrameAnchor`. A HeroFrame records selected visual DNA and inheritance policy; it does not create identity, geography, or rights facts.
 
-Load optional camera, portrait, or cinematic-pattern references only when the request needs them.
+For staging, performance, or competing shot treatments read [directing craft](../optional/directing-craft.md). For lens/light/movement decisions read [cinematography craft](../optional/cinematography-craft.md). Use their conditional checks without importing every method into every shot. Load numerical camera, portrait, or cinematic-pattern references only when the request needs them.
 
 Outputs: `CinematicSkillManifest`, `ShotCompilerPlan`, `ShotSpec`, `ShotLightingPlan`, `TemporalSpec`, optional `CameraPrevisSpec`, `HeroFrameAnchor`.

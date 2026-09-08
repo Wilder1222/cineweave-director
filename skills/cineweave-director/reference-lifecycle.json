@@ -9,7 +9,7 @@
   "contextCatalog": {
     "route": ["brief_world", "story", "character", "scene", "style", "reference_evidence", "action", "shot_direction", "storyboard_rhythm", "image_prompt", "production_plan", "review_repair"],
     "workflow": ["multi_route", "contract_output", "continuity"],
-    "condition": ["rights", "real_person", "semantic_morphology", "camera_previsualization", "portrait", "natural_human", "surface_response", "comic", "manga", "cinematic_pattern", "shot_compile", "editorial", "color", "midjourney"]
+    "condition": ["rights", "real_person", "semantic_morphology", "camera_previsualization", "portrait", "natural_human", "surface_response", "comic", "manga", "cinematic_pattern", "shot_compile", "master_style_preset", "directing_craft", "cinematography_craft", "editing_sound_craft", "craft_study", "editorial", "color", "midjourney"]
   },
   "policy": "contracts.json owns route IDs, route reference baselines, and output ownership. This file owns distribution and typed load contexts. SKILL.md is the human entry point and must not create a competing machine authority.",
   "references": [
@@ -36,6 +36,11 @@
     { "path": "references/optional/portrait-natural-human.md", "lifecycle": "optional", "loadContexts": ["portrait", "natural_human", "surface_response"] },
     { "path": "references/optional/comic-manga.md", "lifecycle": "optional", "loadContexts": ["comic", "manga"] },
     { "path": "references/optional/cinematic-patterns.md", "lifecycle": "optional", "loadContexts": ["cinematic_pattern", "shot_compile"] },
+    { "path": "references/optional/master-style-presets.md", "lifecycle": "optional", "loadContexts": ["master_style_preset", "shot_direction", "storyboard_rhythm", "style"] },
+    { "path": "references/optional/directing-craft.md", "lifecycle": "optional", "loadContexts": ["directing_craft"] },
+    { "path": "references/optional/cinematography-craft.md", "lifecycle": "optional", "loadContexts": ["cinematography_craft"] },
+    { "path": "references/optional/editing-sound-craft.md", "lifecycle": "optional", "loadContexts": ["editing_sound_craft"] },
+    { "path": "references/optional/film-craft-study.md", "lifecycle": "optional", "loadContexts": ["craft_study"] },
     { "path": "references/optional/editorial-color.md", "lifecycle": "optional", "loadContexts": ["editorial", "color"] },
     { "path": "references/optional/midjourney-projection.md", "lifecycle": "optional", "loadContexts": ["midjourney"] }
   ]

@@ -44,6 +44,34 @@ Creators do not need to know the 12 route IDs or 52 contract kinds. The Skill ma
 
 The default uses the existing `professional` interaction depth with a **professional-lite presentation profile**: retain exact authority, evidence, locks, and human gates, but present a concise human-readable artifact and one next action. `professional-lite` is not a fifth `inputMode`, route, or contract value. Canonical JSON is emitted only when requested or when an existing contract workflow requires it.
 
+## Directing and cinematography craft
+
+The [film-craft learning map](skills/cineweave-director/references/optional/film-craft-study.md), researched on 2026-09-08, connects public AFI, NFTS, La Fémis, FTII, Weston, ARRI, and practitioner material to three optional decision guides:
+
+- [Directing](skills/cineweave-director/references/optional/directing-craft.md): audience knowledge, playable performance, relational blocking, held shots versus coverage, and purposeful omission.
+- [Cinematography](skills/cineweave-director/references/optional/cinematography-craft.md): viewpoint versus focal length, source geometry, contrast/material response, motivated motion, and shot matching.
+- [Editing and sound](skills/cineweave-director/references/optional/editing-sound-craft.md): cut motivation, perceptual rhythm, listening perspective, sound bridges, and selective layers.
+
+Each craft guide supplies conditions, tradeoffs, failure signals, and review checks. The learning map distinguishes consulted text from course previews and unavailable media, and includes eight behavioral evaluation cases. They have not been independently benchmarked; release validation proves packaging and contract consistency, not artistic mastery. No new contract kind, provider execution, or paid-course content is introduced.
+
+### Automatic technique adaptation, one consistent look
+
+The [master-inspired method library](skills/cineweave-director/references/optional/master-style-presets.md) covers Hitchcock, Kurosawa, Wong Kar-wai, Anderson/Yeoman, Cuarón/Lubezki, Deakins, Martel, and Varda. During creative shot/sequence design, the Skill automatically matches methods to dramatic purpose, audience knowledge, relationships, space, medium, and constraints. No creator name, preset switch, or strength setting is required. It selects compatible techniques by dimension, resolves competing inferred choices, and returns the actual direction with a brief rationale. No suitable match is valid; explicit user choices and exclusions take precedence.
+
+Techniques may mix; the visual treatment remains coherent. Every shot inherits [one shared look baseline](skills/cineweave-director/references/core/visual-bible-and-continuity.md): palette, grading intent, color-temperature relationships, contrast/rolloff, skin/material rendering, grain/optical texture, and aspect ratio. A new master influence never silently changes the grade. If no baseline is supplied, the Skill proposes one shared provisional draft rather than styling each shot independently. Exact translation/compilation, browsing, review, and single-variable repair retain their original scope. Twelve manual evaluation cases cover automatic matching, abstention, overrides, continuity, and visual consistency; they are not independently verified model benchmarks.
+
+```text
+用 $cineweave-director。三人告别，一人想挽留却只谈归还雨伞。
+按场景自动选择适合的调度、构图和节奏，手法可以混用，
+但全段沿用已有的统一调色、材质表现和画幅，不改变人物、服装或场景设定。
+```
+
+```text
+用 $cineweave-director。三人在桌旁谈事，最安静的人最后取得主导。
+不使用特写或低角度，也不改变房间布局。给出一个调度方案和一个有意义的备选，
+说明观众如何看出关系变化、各自代价，以及看样片时应检查什么。
+```
+
 ## Install in Codex
 
 Install an immutable release rather than a moving branch. This repository includes a single-entry [marketplace manifest](.agents/plugins/marketplace.json) following the [Codex plugin packaging guidance](https://developers.openai.com/codex/plugins/build/):
@@ -106,6 +134,8 @@ There are three non-competing machine authorities:
 
 JSON Schema defines the structural wire shape, including each artifact's `contractVersion`. `validate-output.mjs` additionally enforces release-local semantic truth for route ownership, dependency and deliverable closure, evidence-bound review decisions, and non-execution claims; WorkflowPlan validation resolves `contracts.json` from the same Skill directory rather than borrowing authority from another checkout, without equating the Skill release version to the artifact wire version.
 
+ShotCompilerPlan validation also resolves that local ownership authority and checks parameter/control agreement, declared exact dependencies, and trace-to-handoff consistency. Capability planning rejects unresolved hard requirements marked eligible and invalid fallback IDs. These checks validate the supplied document's consistency; verifying external manifest, registry, or capability evidence still requires the exact source artifacts.
+
 `SKILL.md` is the human activation and routing entry point; it does not redefine those machine inventories. The plugin/Skill distribution version is `3.0.0`. Individual artifact `contractVersion` values remain at compatible 2.x wire versions where no breaking wire change was required; plugin version and artifact wire version are intentionally independent.
 
 ## Development
@@ -124,7 +154,7 @@ The equivalent `npm` scripts remain convenience aliases, and repository validati
 
 - The tests check strict JSON/JCS and schema-validation primitives.
 - Source validation checks plugin identity, frontmatter/agent metadata, exact scripts and CI entrypoints, route/lifecycle authority, typed load contexts, fail-closed schema keywords and formats, confined local `$ref` closure, semantic workflow/review invariants, raw-byte hashes, receipt identity, all 52 canonical examples, clean source boundaries, and the dynamically derived distribution inventory.
-- The build creates `.build/cineweave-director/` by copying only the lifecycle/index-derived allowlist. The current v3 inventory is 136 regular files; the builder does not hardcode that count.
+- The build creates `.build/cineweave-director/` by copying only the lifecycle/index-derived allowlist. The current source inventory is 141 regular files; the builder does not hardcode that count.
 - Bundle validation rejects missing, changed, linked, case-colliding, traversing, or extra files and proves source/bundle byte equality.
 
 Regenerate the contract index only after intentional contract changes:
@@ -141,7 +171,7 @@ node scripts/generate-contract-index.mjs --check
 skills/cineweave-director/          complete distributable Skill
   SKILL.md                           creator-intent routing and hard boundaries
   contracts.json                    12 routes and 52 root kinds
-  reference-lifecycle.json          typed 23-file knowledge allowlist
+  reference-lifecycle.json          typed 28-file knowledge allowlist
   references/                       core, routed and optional knowledge
   resources/contracts/              54 schemas, 52 examples and hash index
 scripts/                             dependency-free validation/build tooling

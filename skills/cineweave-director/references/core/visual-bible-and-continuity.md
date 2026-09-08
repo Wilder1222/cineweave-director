@@ -21,6 +21,18 @@ Light has four layers:
 3. Style defines representational rolloff, contrast, bloom, line, cel, ink, or paint behavior.
 4. Prompt compiles only the visible consequences.
 
+## Shared look, variable techniques
+
+Use one work-level visual baseline and any explicitly approved scene variants. Preserve its representation family, palette/saturation relationships, white-balance/source-color relationships, contrast and tonal rolloff, skin/material rendering, grain/sharpness/bloom or other optical texture, and aspect ratio. These are coordinated facts across existing Style, Scene, Direction, and editorial/color authorities, not a new contract or a single LUT that overwrites them all.
+
+Automatically chosen craft methods may vary blocking, composition, camera movement, focus attention, coverage, edit rhythm, or listening perspective within the approved grammar. They may not import a different master's palette, contrast, lens rendering, film texture, or frame shape for each shot. Shot lighting may adapt to the action and real source geometry, but must remain inside the common exposure/contrast and color intent. Same look does not require identical camera positions, light screen-sides, or pixel values.
+
+When a baseline exists, inherit its exact available references; do not infer a new one from a master name or one attractive frame. When none exists, propose a concise shared look draft from the brief and carry that same draft across the sequence. Mark unresolved facts and approval status; do not manufacture StylePackage IDs/hashes or require the user to operate preset controls. High-impact look approval remains a human gate, separate from routine automatic technique choice.
+
+A day/night transition, new physical source, or subjective scene may change visible illumination for a stated cause while retaining the shared rendering/grade intent. Flashback does not automatically mean sepia, intimacy does not mean neon, and suspense does not mean a new teal/orange grade. Changing the baseline itself requires an explicit look revision with scope and approval, not automatic master matching.
+
+For handoff, pass the same baseline reference or clearly labeled provisional baseline to every shot/style/prompt/color plan, with only permitted shot-specific variations. Compare a representative wide, close-up, and relevant lighting state before extending the plan when the task warrants it. With returned media, check adjacent shots and the common reference under consistent viewing assumptions; with plans only, report instruction consistency, not verified visual matching.
+
 ## Continuity ledger
 
 Use one ledger with namespaces rather than duplicated checklists:

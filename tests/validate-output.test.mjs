@@ -208,3 +208,60 @@ test("CapabilityResolutionPlan joins requirements, results, and selection truthf
   selected.explanation.primaryDecision = "The exact capability profile satisfies every hard requirement.";
   assert.equal((await validatePayload(schemaPath, selected)).valid, true);
 });
+
+test("CapabilityResolutionPlan cannot advance failed candidates or invent fallbacks", async () => {
+  const { schemaPath, payload } = await loadContractFixture("capability-resolution-plan");
+  const mutations = [
+    ["partial hard support marked eligible", (p) => { p.candidates[0].status = "eligible"; }, /cannot be eligible/],
+    ["failed hard support marked review", (p) => { p.candidates[0].capabilityResults[0].status = "fail"; }, /must be blocked/],
+    ["explicit hard failure marked review", (p) => { p.candidates[0].hardFailures = ["Missing required input support"]; }, /must be blocked/],
+    ["nonexistent fallback", (p) => { p.explanation.fallbackCandidateIds = ["candidate.missing"]; }, /unknown candidate/],
+    ["blocked fallback", (p) => { p.candidates[0].status = "blocked"; p.explanation.fallbackCandidateIds = [p.candidates[0].candidateId]; }, /cannot include blocked/],
+  ];
+  for (const [label, mutate, expected] of mutations) {
+    const candidate = structuredClone(payload);
+    mutate(candidate);
+    const result = await validatePayload(schemaPath, candidate);
+    assert.equal(result.valid, false, label);
+    assert.match(result.errors.join("\n"), expected, label);
+  }
+  const reviewFallback = structuredClone(payload);
+  reviewFallback.explanation.fallbackCandidateIds = [payload.candidates[0].candidateId];
+  assert.equal((await validatePayload(schemaPath, reviewFallback)).valid, true);
+});
+
+test("ShotCompilerPlan keeps displayed controls and planned handoffs on the same exact inputs", async () => {
+  const { schemaPath, payload } = await loadContractFixture("shot-compiler-plan");
+  assert.equal((await validatePayload(schemaPath, payload)).valid, true);
+  const mutations = [
+    ["duplicate parameter", (p) => { p.parameterValues.push(structuredClone(p.parameterValues[0])); }, /parameterId duplicates/],
+    ["duplicate binding", (p) => { p.resolvedBindings.push(structuredClone(p.resolvedBindings[0])); }, /slotId duplicates/],
+    ["changed display value", (p) => { p.controlSurface.groups[0].controls[0].value = 0.99; }, /value must equal/],
+    ["unknown control parameter", (p) => { p.controlSurface.groups[0].controls[0].parameterId = "missing"; }, /unknown parameter/],
+    ["forged owner", (p) => { p.handoffs[1].ownerRoute = "scene"; }, /not owned by scene/],
+    ["control owner differs from target", (p) => { p.controlSurface.groups[0].controls[0].ownerRoute = "scene"; }, /ownerRoute must match/],
+    ["stale dependency", (p) => { p.handoffs[0].dependencyRefs[0].version += 1; }, /stale input ref/],
+    ["omitted binding dependency", (p) => { p.handoffs[0].dependencyRefs.shift(); }, /must retain exact source ref/],
+    ["alias without registry", (p) => { p.resolvedBindings[0].source = "asset_alias"; p.resolvedBindings[0].alias = "@hero"; }, /exact registry ref/],
+    ["duplicate target assignment", (p) => { p.handoffs[0].fieldAssignments.push(structuredClone(p.handoffs[0].fieldAssignments[0])); }, /duplicates target/],
+    ["trace order reversed", (p) => { p.compileTrace.steps.reverse(); }, /strictly increasing/],
+    ["unknown trace input", (p) => { p.compileTrace.steps[0].source.id = "missing"; }, /unknown binding slot/],
+    ["missing handoff", (p) => { p.handoffs.pop(); }, /matching planned field assignment/],
+    ["conflicting trace assignment", (p) => { p.compileTrace.steps[1].target.fieldPath = "camera.focalLengthMm"; }, /matching planned field assignment/],
+  ];
+  for (const [label, mutate, expected] of mutations) {
+    const candidate = structuredClone(payload);
+    mutate(candidate);
+    const result = await validatePayload(schemaPath, candidate);
+    assert.equal(result.valid, false, label);
+    assert.match(result.errors.join("\n"), expected, label);
+  }
+  const aliasPlan = structuredClone(payload);
+  aliasPlan.resolvedBindings[0].source = "asset_alias";
+  aliasPlan.resolvedBindings[0].alias = "@hero";
+  aliasPlan.assetAliasRegistryRef = {
+    kind: "cineweave_codex_asset_alias_registry", id: "registry.test", version: 1,
+    contentHash: `sha256:${"a".repeat(64)}`,
+  };
+  assert.equal((await validatePayload(schemaPath, aliasPlan)).valid, true);
+});

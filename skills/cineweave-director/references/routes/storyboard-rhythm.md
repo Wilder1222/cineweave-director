@@ -17,9 +17,13 @@ Each entry binds one exact `ShotSpec` and states:
 
 The top-level ledger must close every selected beat. Decorative inserts and duplicate reactions are removed.
 
+For creative sequence design, use [automatic technique adaptation](../optional/master-style-presets.md) to vary shot methods by beat while inheriting [one shared visual baseline](../core/visual-bible-and-continuity.md). Do not assign a different grade, grain, contrast treatment, or aspect ratio when the useful master influence changes. Track motivated physical-light transitions separately from look changes.
+
 For comics, preserve reading order, page turn, panel hierarchy, black/white or color mass, balloons/captions as planned regions, and exact text as a later deterministic layer. Generate/review panels independently; do not ask one image model to invent the full grid and exact text.
 
 ## Sequence rhythm
+
+For creative coverage/cut decisions, perceptual pacing, or sound bridges read [editing and sound craft](../optional/editing-sound-craft.md). Distinguish shot length from information density and performance tempo; a sustained observation may be the intended event, not a missing plot beat.
 
 Create `SequenceRhythmSpec` downstream of the exact Storyboard. Use a reduced rational timebase and integer frame boundaries. Define ordered, non-overlapping shot windows, tempo phases, breathing points, adjacent transition grammar, and screen-direction policy.
 

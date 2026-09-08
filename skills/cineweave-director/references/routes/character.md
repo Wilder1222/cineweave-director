@@ -27,6 +27,8 @@ Choose 3–16 anchors based on scale: facial relationships and asymmetry for clo
 
 ## Quality gate
 
+For actor direction, subtext, listening, or restrained performance, read [directing craft](../optional/directing-craft.md). Convert emotion requests into playable tasks and scale-readable choices; do not require a catalogue of physiological gestures or treat a gesture as proof of an actual person's emotion.
+
 - adult/minor status and likeness rights explicit when relevant;
 - identity, appearance, and performance are separately versioned;
 - anchors are observable and scale-aware;

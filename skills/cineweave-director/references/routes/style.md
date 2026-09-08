@@ -10,7 +10,7 @@ Use for visual-system design, controlled representation exploration, StylePackag
 - **StylePackage:** reusable semantic system.
 - **StyleCompile:** target-specific projection for image, video, character, scene, or page.
 
-Do not use a named creator or work as an executable instruction. Resolve references into observable mechanisms: geometry, silhouette, line, surface, shading, color, depth, composition, motion, and temporal behavior.
+Do not use a named creator or work as an executable instruction. Resolve references into observable mechanisms: geometry, silhouette, line, surface, shading, color, depth, composition, motion, and temporal behavior. For cinematic style creation or creative revision, read [the adaptive technique catalog](../optional/master-style-presets.md); infer useful techniques without requiring names or switches. Preserve one shared visual baseline across mixed techniques. Existing palette, grading, contrast, texture, representation, and frame shape are not per-master choices. If no baseline exists, propose one shared draft; automatic matching is not approval of a StylePackage. User-named influences remain optional overrides subject to locks.
 
 ## Representation
 

@@ -15,7 +15,7 @@ Two starting paths are valid:
 - **story-led:** establish world authority and causal beats before visual development;
 - **look-led:** explore a bounded visual hypothesis before story convergence.
 
-Both paths must converge before shot work on an explicit dramatic beat and a sufficiently approved visual bible. A look cannot replace causality; a script cannot silently define identity, geography, or representation.
+Both paths must converge before shot work on an explicit dramatic or perceptual unit and a sufficiently approved visual bible. A look cannot replace causality in causal drama; an observational or associative brief need not acquire an invented conflict. A script cannot silently define identity, geography, or representation.
 
 ## Interaction depth
 

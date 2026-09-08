@@ -531,13 +531,16 @@ function validateCapabilityResolutionPlanSemantics(payload, errors) {
         errors.push(`$.candidates[${candidateIndex}].capabilityResults is missing ${requirementId}`);
         continue;
       }
-      if (candidate.status === "selected" && requirement.level === "hard" && (result.support !== "strong" || result.status !== "pass")) {
-        errors.push(`$.candidates[${candidateIndex}] cannot be selected because hard requirement ${requirementId} is not strongly supported and passing`);
+      if (["eligible", "selected"].includes(candidate.status) && requirement.level === "hard" && (result.support !== "strong" || result.status !== "pass")) {
+        errors.push(`$.candidates[${candidateIndex}] cannot be ${candidate.status} because hard requirement ${requirementId} is not strongly supported and passing`);
+      }
+      if (requirement.level === "hard" && (result.support === "unsupported" || result.status === "fail") && candidate.status !== "blocked") {
+        errors.push(`$.candidates[${candidateIndex}] must be blocked for failed hard requirement ${requirementId}`);
       }
     }
 
-    if (candidate.status === "selected" && Array.isArray(candidate.hardFailures) && candidate.hardFailures.length > 0) {
-      errors.push(`$.candidates[${candidateIndex}].hardFailures must be empty for a selected candidate`);
+    if (Array.isArray(candidate.hardFailures) && candidate.hardFailures.length > 0 && candidate.status !== "blocked") {
+      errors.push(`$.candidates[${candidateIndex}] must be blocked when hardFailures is nonempty`);
     }
   }
 
@@ -560,6 +563,93 @@ function validateCapabilityResolutionPlanSemantics(payload, errors) {
     if (selectedCandidates.length > 0) errors.push("$.candidates cannot mark a candidate selected unless the plan is selected");
     if (selection.selectedCandidateId !== null) errors.push("$.selection.selectedCandidateId must be null unless the plan is selected");
     if (selection.selectedCapabilityProfileRef !== null) errors.push("$.selection.selectedCapabilityProfileRef must be null unless the plan is selected");
+  }
+  for (const id of Array.isArray(payload.explanation?.fallbackCandidateIds) ? payload.explanation.fallbackCandidateIds : []) {
+    const fallback = candidateById.get(id);
+    if (!fallback) errors.push(`$.explanation.fallbackCandidateIds references unknown candidate ${id}`);
+    else if (["blocked", "selected"].includes(fallback.status)) errors.push(`$.explanation.fallbackCandidateIds cannot include ${fallback.status} candidate ${id}`);
+  }
+}
+
+function validateShotCompilerPlanSemantics(payload, errors, contracts) {
+  if (!isObject(contracts?.routes) || contracts.skill !== "cineweave-director") {
+    errors.push("$ ShotCompilerPlan semantic validation requires the matching contracts.json route authority");
+    return;
+  }
+  const objects = (value) => Array.isArray(value) ? value.filter(isObject) : [];
+  const indexBy = (items, key, path, ordered = false) => {
+    const result = new Map();
+    let previous = 0;
+    for (const [index, item] of items.entries()) {
+      if (result.has(item[key])) errors.push(`${path}[${index}].${key} duplicates ${item[key]}`);
+      result.set(item[key], item);
+      if (ordered && (!Number.isInteger(item.order) || item.order <= previous)) errors.push(`${path}[${index}].order must be strictly increasing`);
+      previous = item.order;
+    }
+    return result;
+  };
+  const parameters = indexBy(objects(payload.parameterValues), "parameterId", "$.parameterValues");
+  const bindings = indexBy(objects(payload.resolvedBindings), "slotId", "$.resolvedBindings");
+  const upstream = objects(payload.upstreamRefs);
+  const availableRefs = [...upstream, ...[...bindings.values()].flatMap((binding) => objects(binding.refs))];
+  const handoffs = objects(payload.handoffs);
+  indexBy(handoffs, "handoffId", "$.handoffs", true);
+  const owns = (target, owner, path) => {
+    if (!isObject(target)) return;
+    if (target.ownerRoute !== owner) errors.push(`${path}.ownerRoute must match its enclosing owner`);
+    if (!contracts.routes[owner]?.produces?.includes(target.contractKind)) errors.push(`${path}.contractKind is not owned by ${owner}`);
+  };
+  const sourceExists = (type, id, path) => {
+    if (type === "parameter" && !parameters.has(id)) errors.push(`${path} references unknown parameter ${id}`);
+    if (type === "binding_slot" && !bindings.has(id)) errors.push(`${path} references unknown binding slot ${id}`);
+    if (type === "upstream_ref" && upstream.filter((ref) => ref.id === id).length !== 1) errors.push(`${path} must identify one unambiguous upstream ref ${id}`);
+  };
+  const assignmentMatches = (target, type, id) => handoffs.some((handoff) =>
+    handoff.contractKind === target?.contractKind && handoff.ownerRoute === target?.ownerRoute && handoff.route === target?.route
+    && objects(handoff.fieldAssignments).some((assignment) => assignment.targetPath === target?.fieldPath && assignment.sourceType === type && assignment.sourceId === id));
+
+  for (const [index, binding] of objects(payload.resolvedBindings).entries()) {
+    if (binding.source === "asset_alias" && (!binding.alias || !isObject(payload.assetAliasRegistryRef))) errors.push(`$.resolvedBindings[${index}] alias resolution requires an alias and exact registry ref`);
+    if (binding.source === "exact_ref" && binding.alias !== undefined) errors.push(`$.resolvedBindings[${index}] exact_ref cannot claim an alias source`);
+  }
+  for (const [index, handoff] of handoffs.entries()) {
+    const path = `$.handoffs[${index}]`;
+    owns(handoff, handoff.ownerRoute, path);
+    const dependencies = objects(handoff.dependencyRefs);
+    for (const ref of dependencies) {
+      if (!availableRefs.some((available) => deepEqual(available, ref))) errors.push(`${path}.dependencyRefs contains an undeclared or stale input ref ${ref.id}`);
+    }
+    const assignedPaths = new Set();
+    for (const assignment of objects(handoff.fieldAssignments)) {
+      if (assignedPaths.has(assignment.targetPath)) errors.push(`${path}.fieldAssignments duplicates target ${assignment.targetPath}`);
+      assignedPaths.add(assignment.targetPath);
+      sourceExists(assignment.sourceType, assignment.sourceId, `${path}.fieldAssignments`);
+      const sourceRefs = assignment.sourceType === "binding_slot" ? objects(bindings.get(assignment.sourceId)?.refs)
+        : assignment.sourceType === "upstream_ref" ? upstream.filter((ref) => ref.id === assignment.sourceId) : [];
+      for (const ref of sourceRefs) {
+        if (!dependencies.some((dependency) => deepEqual(dependency, ref))) errors.push(`${path}.dependencyRefs must retain exact source ref ${ref.id}`);
+      }
+    }
+  }
+  const groups = objects(payload.controlSurface?.groups);
+  indexBy(groups, "groupId", "$.controlSurface.groups", true);
+  const controls = groups.flatMap((group) => objects(group.controls));
+  indexBy(controls, "controlId", "$.controlSurface.controls");
+  for (const group of groups) for (const control of objects(group.controls)) {
+    const path = `$.controlSurface.controls[${control.controlId}]`;
+    owns(control.target, control.ownerRoute, path);
+    sourceExists("parameter", control.parameterId, path);
+    if (parameters.has(control.parameterId) && !deepEqual(control.value, parameters.get(control.parameterId).value)) errors.push(`${path}.value must equal its resolved parameter value`);
+    if (control.domain !== group.domain) errors.push(`${path}.domain must match its group`);
+    if (!assignmentMatches(control.target, "parameter", control.parameterId)) errors.push(`${path} requires a matching planned field assignment`);
+  }
+  const steps = objects(payload.compileTrace?.steps);
+  indexBy(steps, "stepId", "$.compileTrace.steps", true);
+  for (const [index, step] of steps.entries()) {
+    const path = `$.compileTrace.steps[${index}]`;
+    owns(step.target, step.ownerRoute, path);
+    sourceExists(step.source?.type, step.source?.id, path);
+    if (step.operation !== "validate" && !assignmentMatches(step.target, step.source?.type, step.source?.id)) errors.push(`${path} requires a matching planned field assignment`);
   }
 }
 
@@ -805,6 +895,7 @@ function validateContractSemantics(payload, schema, errors, contracts) {
   if (!isObject(payload) || payload.kind !== schemaKind) return;
   if (schemaKind === "cineweave_codex_prompt_projection_plan") validatePromptProjectionPlanSemantics(payload, errors);
   if (schemaKind === "cineweave_codex_capability_resolution_plan") validateCapabilityResolutionPlanSemantics(payload, errors);
+  if (schemaKind === "cineweave_codex_shot_compiler_plan") validateShotCompilerPlanSemantics(payload, errors, contracts);
   if (schemaKind === "cineweave_codex_workflow_plan") validateWorkflowPlanSemantics(payload, errors, contracts);
   if (schemaKind === "cineweave_codex_creative_review") validateCreativeReviewSemantics(payload, errors);
 }
@@ -853,7 +944,7 @@ export async function validatePayload(schemaPath, payload, options = {}) {
     activeReferences: new Set(),
   }, "$", errors);
   const schemaKind = document?.properties?.kind?.const;
-  const contracts = options.contracts ?? (schemaKind === "cineweave_codex_workflow_plan" ? await loadMatchingContracts(absoluteSchema) : null);
+  const contracts = options.contracts ?? (["cineweave_codex_workflow_plan", "cineweave_codex_shot_compiler_plan"].includes(schemaKind) ? await loadMatchingContracts(absoluteSchema) : null);
   validateContractSemantics(payload, document, errors, contracts);
   return { valid: errors.length === 0, errors, schema: document.$id || absoluteSchema, payload };
 }

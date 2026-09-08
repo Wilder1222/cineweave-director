@@ -27,6 +27,8 @@ Use one `CreativeReview` across domains. Relevant dimensions include world/canon
 
 ## Repair routing
 
+For evaluating directing choices or designing practice exercises read [film-craft study and evaluation](../optional/film-craft-study.md). Separate planning coherence from realized media quality. Its behavioral rubric is not a beauty score, automatic pass, or proof of mastery; apply only relevant dimensions and keep blocking failures separate.
+
 Choose the domain that owns the failed fact:
 
 - world laws/history/geography baseline → world;
