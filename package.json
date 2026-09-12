@@ -8,7 +8,7 @@
     "node": ">=22"
   },
   "scripts": {
-    "test": "node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs",
+    "test": "node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs tests/check-delivery.test.mjs",
     "build": "node scripts/build-plugin-bundle.mjs",
     "contracts:index": "node scripts/generate-contract-index.mjs",
     "contracts:index:check": "node scripts/generate-contract-index.mjs --check",

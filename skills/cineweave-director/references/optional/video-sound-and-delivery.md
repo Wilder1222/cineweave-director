@@ -21,6 +21,33 @@ For each cue record ID, dialogue/voiceover/ambience/Foley/music role, text or au
 
 Review intelligibility, audible transitions, intended silence, sync at declared anchors, and continuity separately. Technical mix targets are supplied delivery requirements or unresolved assumptions; never invent measured loudness or provider guarantees.
 
+## Exact copy and timing checks
+
+Preserve supplied narration/subtitle text verbatim. If a count matters, distinguish Han characters, Unicode code points, and visible grapheme clusters; punctuation is not a Han character. Avoid adding an unverified count to prose. Character count alone does not establish spoken duration: estimate timing explicitly, then verify against returned audio before final synchronization.
+
+Use the bundled read-only [delivery checker](../../scripts/check-delivery.mjs) with Node.js 22+ when exact counts, cut coverage, or SRT timestamps are required. Resolve its path from this Skill's directory, including in an installed plugin; no repository checkout or dependencies are needed. Run `node <skill-root>/scripts/check-delivery.mjs --text "值得专程回来"` to get six Han characters. Without Node, use equivalent available arithmetic tools and disclose checks that were not run; do not block a useful draft.
+
+For a simple cut-only timeline, save the following worksheet with the actual shot boundaries and exact copy, then run `node <skill-root>/scripts/check-delivery.mjs <worksheet.json>`. This is an optional calculation input, not a canonical root contract:
+
+```json
+{
+  "frameRate": { "numerator": 24, "denominator": 1 },
+  "totalFrames": 288,
+  "shots": [
+    { "id": "S1", "startFrame": 0, "endFrame": 96 },
+    { "id": "S2", "startFrame": 96, "endFrame": 192 },
+    { "id": "S3", "startFrame": 192, "endFrame": 288 }
+  ],
+  "subtitles": [
+    { "id": "VO1", "startFrame": 192, "endFrame": 264, "text": "值得专程回来", "expectedHanCharacters": 6 }
+  ]
+}
+```
+
+Ranges are half-open `[startFrame, endFrame)`. Shots must cover `[0, totalFrames)` without gaps or overlap; intentional blank time needs its own shot entry. Subtitles may have gaps but belong to one non-overlapping track. `subtitles` and `expectedHanCharacters` are optional. Correct invalid input before using the returned SRT; failed checks return `srt: null` and a nonzero exit code. The helper writes nothing and never changes copy.
+
+Use rational rates (for example `30000/1001`, not rounded `29.97`). Convert each absolute frame boundary to seconds using the exact ratio and round once to SRT milliseconds; do not accumulate rounded per-shot durations. SRT timestamps are elapsed time, not SMPTE drop-frame labels. Crossfades, speed ramps, multiple overlapping tracks, or drop-frame conform need the [editorial guide](editorial-color.md) and appropriate external timeline checks. Arithmetic passing does not verify speech speed, subtitle readability, delivered media, or synchronization.
+
 ## Delivery and resource worksheet
 
 Record duration, rational frame rate, aspect ratio, intended resolution, audience/platform, subtitle language and exact text authority, safe areas, alternate versions, required originals, and acceptance evidence. Distinguish requested specifications from measured output properties. A vertical adaptation requires framing and text review; it is not automatically a crop.

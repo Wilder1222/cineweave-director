@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: "22"
       - name: Test validation primitives
-        run: node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs
+        run: node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs tests/check-delivery.test.mjs
       - name: Verify contract index is current
         run: node scripts/generate-contract-index.mjs --check
       - name: Validate source distribution

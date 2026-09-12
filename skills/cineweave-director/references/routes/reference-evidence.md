@@ -16,6 +16,8 @@ For portraits, separate face identity, body identity, morphology, current skin/m
 
 For source-to-target work record preserve, replace, exclude, allowed transforms, unresolved decisions, and acceptance evidence. “Use this image” is not a transfer policy.
 
+For multiple references, keep a compact source/role/transfer/exclusion map before combining observations. User-assigned identity, clothing, and style roles authorize those transfers only: clothing-source face/body and style-source costume are excluded unless separately requested. Multiple roles from one image need separate scoped observations. Resolve a conflict using the user-assigned role and existing target locks; surface only consequential ambiguity that those authorities cannot resolve. If only descriptions are available, label them as declarations and deliver a provisional transfer plan without claiming to have seen the images. Test the final prompt for leaked excluded traits; the plan alone does not prove generated identity consistency.
+
 ## Alias rules
 
 An alias must resolve through the exact supplied `AssetAliasRegistry`, including its scope, version, and content hash. Never infer a global alias, normalize to a different asset, or choose a newest candidate.

@@ -30,7 +30,7 @@ const EXPECTED_ROUTES = [
   "review_repair",
 ];
 const EXPECTED_PACKAGE_SCRIPTS = Object.freeze({
-  test: "node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs",
+  test: "node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs tests/check-delivery.test.mjs",
   build: "node scripts/build-plugin-bundle.mjs",
   "contracts:index": "node scripts/generate-contract-index.mjs",
   "contracts:index:check": "node scripts/generate-contract-index.mjs --check",
@@ -83,6 +83,7 @@ const DISTRIBUTION_BASE_FILES = [
   `${SKILL_PREFIX}/contracts.json`,
   `${SKILL_PREFIX}/reference-lifecycle.json`,
   `${SKILL_PREFIX}/resources/contracts/index.json`,
+  `${SKILL_PREFIX}/scripts/check-delivery.mjs`,
 ];
 const SOURCE_TOP_LEVEL = new Set([
   ".agents",
@@ -117,7 +118,7 @@ const EXPECTED_SOURCE_DIRECTORIES = new Map([
     "validate-output.mjs",
     "validate-repository.mjs",
   ]],
-  ["tests", ["build-plugin-bundle.test.mjs", "canonical-json.test.mjs", "validate-output.test.mjs"]],
+  ["tests", ["build-plugin-bundle.test.mjs", "canonical-json.test.mjs", "validate-output.test.mjs", "check-delivery.test.mjs", "evaluations/2026-09-08.md"]],
 ]);
 const EXPECTED_REPOSITORY = "https://github.com/Wilder1222/cineweave-director";
 const TEXT_EXTENSIONS = new Set([".json", ".md", ".yaml", ".yml"]);

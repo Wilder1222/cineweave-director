@@ -153,7 +153,7 @@ These additions are included in the `v3.1.0` release.
 Node.js 22 or newer is required. The repository is a private, dependency-free development harness and has no install step. CI invokes the concrete entrypoints below rather than mutable package aliases:
 
 ```powershell
-node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs
+node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs tests/check-delivery.test.mjs
 node scripts/generate-contract-index.mjs --check
 node scripts/validate-repository.mjs
 node scripts/build-plugin-bundle.mjs
@@ -162,9 +162,9 @@ node scripts/validate-repository.mjs --bundle .build/cineweave-director
 
 The equivalent `npm` scripts remain convenience aliases, and repository validation requires their commands to match these entrypoints exactly.
 
-- The tests check strict JSON/JCS and schema-validation primitives.
+- The tests check strict JSON/JCS, schema-validation primitives, full-schema target/review/repair roundtrips, immutable hash revisions, and delivery arithmetic.
 - Source validation checks plugin identity, frontmatter/agent metadata, exact scripts and CI entrypoints, route/lifecycle authority, typed load contexts, fail-closed schema keywords and formats, confined local `$ref` closure, semantic workflow/review invariants, raw-byte hashes, receipt identity, all 52 canonical examples, clean source boundaries, and the dynamically derived distribution inventory.
-- The build creates `.build/cineweave-director/` by copying only the lifecycle/index-derived allowlist. The current source inventory is 144 regular files; the builder does not hardcode that count.
+- The build creates `.build/cineweave-director/` by copying the declared base resources (including the read-only delivery helper) and the lifecycle/index-derived allowlist. The current source inventory is 145 regular files; the builder does not hardcode that count.
 - Bundle validation rejects missing, changed, linked, case-colliding, traversing, or extra files and proves source/bundle byte equality.
 
 RepairPlan validation rejects contradictory approval, malformed target pointers and duplicate check IDs. For optional cross-artifact checks:
@@ -182,6 +182,10 @@ node scripts/generate-contract-index.mjs
 node scripts/generate-contract-index.mjs --check
 ```
 
+The Unreleased working tree includes a self-contained planning helper at `skills/cineweave-director/scripts/check-delivery.mjs`. It requires Node.js 22+ only when used, accepts a local worksheet or `--text`, and writes nothing. See the [video/sound guide](skills/cineweave-director/references/optional/video-sound-and-delivery.md) for its input, rational-timebase conventions and limits. It does not execute production or inspect media. The released `v3.1.0` tag remains unchanged; these additions are not in that installed release.
+
+See the [review-driven optimization and validation record](tests/evaluations/2026-09-08.md) for implemented changes, behavioral checks and untested media scenarios.
+
 ## Repository layout
 
 ```text
@@ -192,6 +196,7 @@ skills/cineweave-director/          complete distributable Skill
   reference-lifecycle.json          typed 31-file knowledge allowlist
   references/                       core, routed and optional knowledge
   resources/contracts/              54 schemas, 52 examples and hash index
+  scripts/check-delivery.mjs         optional read-only planning arithmetic (Node 22+)
 scripts/                             dependency-free validation/build tooling
 tests/                               validation primitive tests
 assets/                              repository branding; not bundled

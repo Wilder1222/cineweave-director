@@ -52,6 +52,12 @@ Keep `PromptRecord` and `ImagePrompt` provider-neutral. When the user names a pr
 
 For Midjourney, load [`../optional/midjourney-projection.md`](../optional/midjourney-projection.md). Use concise-first visible-result language, a single parameter tail, explicit compatibility checks, and baseline plus one-variable variants. Stop at a copy-ready human handoff. Require exact returned job metadata, resolved codes/parameters, and original files before execution-verification review; allow separately scoped visible-image review with metadata unknown; never infer execution from the plan.
 
+## Exact text and typography
+
+When the requested image contains a title, label, logo, or subtitle, preserve the supplied copy exactly and distinguish visual placement from spelling/layout acceptance. For a prompt-only request, deliver the prompt directly; include the desired text when requested without promising exact rendering or adding a mandatory production workflow.
+
+For final posters, packaging, or other deliverables requiring exact copy, include a separate text/layout handoff: authoritative strings, language, line-break policy, placement/safe area, hierarchy, and supplied font/brand constraints. Plan a text-free or reserved-area visual plate plus deterministic typesetting/compositing when needed. If in-image lettering is part of the chosen design, require visual proof of every character, punctuation mark, line break, clipping and legibility at delivery size; re-typeset failed text while preserving the approved image. OCR may assist checking but is not proof of typography quality. Keep this handoff in a labeled worksheet or Production plan, not invented ImagePrompt fields. A planned overlay is not an exported poster.
+
 ## Existing prompt import
 
 Preserve source text unchanged, then create a normalized, reviewable interpretation. Separate global baseline, per-shot facts, style, light, timing, delivery claims, and unknown capabilities. Do not treat imported prose as an already approved ShotSpec or production fact.

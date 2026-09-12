@@ -1,6 +1,6 @@
 ---
 name: cineweave-director
-description: "A self-contained, full-cycle AIGC creative director for worldbuilding, story and screenplay, characters, scenes and physical light, visual style, reference analysis, action choreography, shots and camera, storyboards and sequence rhythm, image prompts, non-executing production plans, evidence review, and single-variable repair. Use for one bounded artifact or a route-aware workflow; never claims provider execution or generated media."
+description: "Develop and revise AIGC stories, characters, visual worlds, shots, storyboards, image prompts, and production handoffs. Use for a bounded creative artifact, a multi-stage creative workflow, reference analysis, or evidence-based review and repair. Produces plans and creative direction; does not generate media or execute providers."
 ---
 
 # CineWeave Director

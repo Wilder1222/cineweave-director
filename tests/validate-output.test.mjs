@@ -2,10 +2,11 @@ import test from "node:test";
 import assert from "node:assert/strict";
 import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
-import { join } from "node:path";
+import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { execFileSync } from "node:child_process";
 import { validateDocument, validatePayload } from "../scripts/validate-output.mjs";
-import { canonicalize, sha256Bytes } from "../scripts/canonical-json.mjs";
+import { canonicalize, parseJsonStrict, sha256Bytes, sha256Canonical } from "../scripts/canonical-json.mjs";
 
 const contractRoot = fileURLToPath(new URL("../skills/cineweave-director/resources/contracts/", import.meta.url));
 
@@ -81,6 +82,90 @@ test("RepairPlan checks exact registry hashes, findings, ownership and target po
   passed[0].ref.contentHash = sha256Bytes(canonicalize(passed[0].document));
   const passedPlan = { ...payload, sourceReviewRef: passed[0].ref };
   assert.match((await validatePayload(schemaPath, passedPlan, { artifacts: passed })).errors.join("\n"), /warn or fail/);
+});
+
+test("schema-valid target, review and repair survive file/CLI roundtrip and immutable revision", async () => {
+  // Synthetic fixtures verify exchange mechanics, never real media or receipt authenticity.
+  const targetFixture = await loadContractFixture("interaction-constraint-set");
+  const reviewFixture = await loadContractFixture("creative-review");
+  const repairFixture = await loadContractFixture("repair-plan");
+  const target = targetFixture.payload;
+  const review = reviewFixture.payload;
+  const repair = repairFixture.payload;
+  const bind = (document, id, version) => ({ kind: document.kind, id, version, contentHash: sha256Canonical(document) });
+  repair.targetRef = bind(target, target.interactionSetId, 1);
+  repair.change.targetPath = "/constraints/contacts/0/targetRef";
+  review.targetRefs = [structuredClone(repair.targetRef)];
+  repair.sourceReviewRef = bind(review, review.reviewId, review.version);
+  const sourceHash = sha256Canonical({ target, review, repair });
+
+  await withDocuments("{}", JSON.stringify({ target, review, repair }, null, 2), async (_, payloadPath) => {
+    const loaded = parseJsonStrict(await readFile(payloadPath, "utf8"));
+    assert.equal(sha256Canonical(loaded), sourceHash);
+    for (const [key, schemaPath] of [
+      ["target", targetFixture.schemaPath], ["review", reviewFixture.schemaPath], ["repair", repairFixture.schemaPath],
+    ]) {
+      const result = await validatePayload(schemaPath, loaded[key]);
+      assert.equal(result.valid, true, result.errors.join("\n"));
+    }
+    const registry = [
+      { ref: loaded.repair.targetRef, document: loaded.target },
+      { ref: loaded.repair.sourceReviewRef, document: loaded.review },
+    ];
+    const planPath = join(dirname(payloadPath), "repair.json");
+    const registryPath = join(dirname(payloadPath), "registry.json");
+    await writeFile(planPath, canonicalize(loaded.repair));
+    await writeFile(registryPath, JSON.stringify(registry, null, 2));
+    const cli = fileURLToPath(new URL("../scripts/validate-output.mjs", import.meta.url));
+    const output = execFileSync(process.execPath, [cli, repairFixture.schemaPath, planPath, "--artifacts", registryPath], { encoding: "utf8" });
+    const result = parseJsonStrict(output);
+    assert.equal(result.valid, true);
+    assert.ok(result.unverified.some((item) => item.includes("Observed media")));
+    assert.ok(!result.unverified.some((item) => item.includes("binding unavailable") || item.includes("upstream repair")));
+
+    const missing = await validatePayload(repairFixture.schemaPath, loaded.repair, { artifacts: registry.slice(1) });
+    assert.equal(missing.valid, true);
+    assert.ok(missing.unverified.some((item) => item.startsWith("targetRef:")));
+
+    const tampered = structuredClone(registry);
+    tampered[0].document.constraints.contacts[0].targetRef = "anchor.revised-floor";
+    await writeFile(registryPath, JSON.stringify(tampered));
+    assert.throws(() => execFileSync(process.execPath, [cli, repairFixture.schemaPath, planPath, "--artifacts", registryPath], { encoding: "utf8", stdio: "pipe" }), (error) => {
+      assert.equal(error.status, 2);
+      assert.match(parseJsonStrict(error.stderr).errors.join("\n"), /hash/);
+      return true;
+    });
+
+    // Promote a new external target revision and a new review without modifying old hashes.
+    const next = structuredClone(loaded);
+    next.target.constraints.contacts[0].targetRef = "anchor.revised-floor";
+    next.repair.version += 1;
+    next.repair.targetRef = bind(next.target, next.target.interactionSetId, 2);
+    next.review.version += 1;
+    next.review.targetRefs = [structuredClone(next.repair.targetRef)];
+    next.repair.sourceReviewRef = bind(next.review, next.review.reviewId, next.review.version);
+    const revisedRegistry = [
+      { ref: next.repair.targetRef, document: next.target },
+      { ref: next.repair.sourceReviewRef, document: next.review },
+    ];
+    for (const [key, fixture] of [["target", targetFixture], ["review", reviewFixture], ["repair", repairFixture]]) {
+      const revised = await validatePayload(fixture.schemaPath, next[key], { artifacts: revisedRegistry });
+      assert.equal(revised.valid, true, revised.errors.join("\n"));
+    }
+    assert.notEqual(next.repair.targetRef.contentHash, loaded.repair.targetRef.contentHash);
+    assert.notEqual(next.repair.sourceReviewRef.contentHash, loaded.repair.sourceReviewRef.contentHash);
+    assert.equal(sha256Canonical(loaded), sourceHash);
+    const old = await validatePayload(repairFixture.schemaPath, loaded.repair, { artifacts: registry });
+    assert.equal(old.valid, true);
+    const stale = await validatePayload(repairFixture.schemaPath, loaded.repair, { artifacts: revisedRegistry });
+    assert.ok(stale.unverified.some((item) => item.startsWith("sourceReviewRef:")));
+    const wrongReviewVersion = structuredClone(next.repair);
+    wrongReviewVersion.sourceReviewRef.version = 1;
+    const mismatched = await validatePayload(repairFixture.schemaPath, wrongReviewVersion, { artifacts: [
+      revisedRegistry[0], { ref: wrongReviewVersion.sourceReviewRef, document: next.review },
+    ] });
+    assert.match(mismatched.errors.join("\n"), /version mismatch/);
+  });
 });
 
 test("contract equality is independent of object key order", async () => {

@@ -9,12 +9,17 @@ All notable changes to CineWeave Director are documented here.
 
 - add four optional craft references covering directing/performance/staging, cinematography/light, editing/sound, and a source-qualified international learning map with eight behavioral evaluation cases;
 - route craft guidance through typed lifecycle contexts and existing contracts, including tradeoff/failure checks and support for observational or associative intent without forced plot conflict;
-- expand the derived distribution to 144 files and 31 references; retain 52 root contracts and unchanged wire schemas, and distinguish packaging checks from unverified artistic outcomes;
+- expand the derived distribution to 145 files and 31 references, including the delivery checker; retain 52 root contracts and unchanged wire schemas, and distinguish packaging checks from unverified artistic outcomes;
 
 - reject capability candidates marked eligible despite unresolved hard requirements, failed candidates left reviewable, and nonexistent, selected, or blocked fallbacks;
 - validate ShotCompilerPlan parameter/control agreement, unique IDs, ordered traces and handoffs, output ownership from the matching release, exact input dependency retention, alias provenance declarations, and trace-to-handoff closure;
 - extend the cinematic-pattern guide with a creator-facing shot example and distinguish internal consistency checks from verification of supplied manifest/registry contents;
 - add mutation regressions for capability advancement and shot compilation without changing the v3 distribution or artifact wire shapes.
+
+- Added a self-contained, read-only delivery checker for exact text counts, cut coverage, rational frame rates and SRT boundaries; no provider execution or media inspection.
+- Added final-poster typography handoff and scoped multi-reference transfer guidance; shortened Skill discovery text.
+- Added full-schema target/review/repair file and CLI roundtrip tests with computed content hashes, tamper rejection, missing-reference reporting and immutable revisions.
+- Recorded the review-driven optimization plan and verification boundaries in `tests/evaluations/2026-09-08.md`.
 
 ## 3.1.0 — 2026-09-06
 

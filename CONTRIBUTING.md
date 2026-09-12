@@ -48,6 +48,8 @@ npm run validate:bundle
 
 The build allowlist is derived from `reference-lifecycle.json` and `resources/contracts/index.json`; never hardcode a file count. The build must remain a byte-identical copy with no transforms, schema flattening, path rewriting, generated prompts, or hidden dependencies. A passing schema check does not replace representative fresh-task review in Codex.
 
+The fixed base-resource allowlist also includes the optional read-only `skills/cineweave-director/scripts/check-delivery.mjs` planning helper. Keep it self-contained and free of provider calls, media generation, configuration changes, or writes. Changes to its calculation input must update the video/sound guide and regression tests together. Run it from the built bundle to verify installation independence. Evaluation records under `tests/evaluations/` are development evidence and are not distributed with the Skill.
+
 ## Changes and releases
 
 - Keep commits focused and use an explanatory subject.
