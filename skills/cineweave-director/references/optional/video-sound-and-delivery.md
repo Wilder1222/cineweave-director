@@ -1,33 +1,49 @@
-# Optional: video, sound and delivery planning
+<a id="optional-video-sound-and-delivery-planning"></a>
+# 可选参考：视频、声音与交付规划
 
-Load for moving-image creation, sound, delivery versions, or resource constraints. Use existing routes and contracts where their fields fit; keep additional detail in labeled non-canonical worksheets. Never add invented fields to strict schemas or claim an external system ran.
+涉及动态影像、声音、交付版本或资源限制时加载。已有契约能表达的内容使用其真实字段，额外内容放入明确标注的非规范工作表。不要给严格 schema 添加虚构字段，也不宣称外部系统已经运行。
 
-## Video intent
+<a id="video-intent"></a>
+## 视频意图
 
-Shot Direction owns movement and temporal structure; Production owns feasibility and handoff. Choose text-to-video, image-to-video, first/last-frame conditioning, continuation, or bounded edit as a planning intent, without assuming any provider supports it.
+镜头导演负责运动与时间结构；制作规划负责可行性和交接。文生视频、图生视频、首尾帧条件、续写和有界编辑只是规划意图，不能默认任何平台都支持。
 
-For each clip record source shot/temporal references (or provisional draft refs), duration/timebase, initial state, readable change, final state, subject/camera/environment tracks, identity and geography invariants, allowed evolution, and visible failure checks. Separate actor motion from camera motion. State image anchors and their roles; a planned frame is not an actual conditioning asset.
+每个片段记录镜头／时间引用或暂定工作引用、时长与时基、初态、可读变化、终态、人物／摄影机／环境轨道、身份和空间不变量、允许变化及可见失败检查。人物运动和摄影机运动分开。注明图像锚点的职责；计划中的图并不是真实条件素材。
 
-For continuation record exact source clip/frame if available, boundary time, inherited state, permitted evolution, new action, and settle/handle requirements. Unknown source media leaves continuation feasibility unresolved. Do not force a single still-image prompt to encode an entire sequence; provide time-anchored natural-language instructions alongside the visual prompt. Provider dialect remains a separate evidence-backed projection, and unsupported video fields remain a worksheet until an appropriate contract exists.
+续写应记录准确来源片段／帧、边界时间、继承状态、允许演化、新动作和停稳／余量要求。来源媒体未知则续写可行性未决。不要让一条静态图像提示词承担整段时间变化；另给有时间定位的自然语言指令。平台语法属于单独的证据支持适配，暂不被契约覆盖的视频字段仍保留在工作表。
 
-## Sound ownership and cue sheet
+需要判断输入状态、参考条件冲突或失败风险时，按节读取[生成诊断](generation-diagnostics.md)。先检查真实锚点准备度，再规划依赖它的交接；保留图像已经确定的外观，文字重点描述时间变化。时长和重试上限是给定约束或草稿估计，不是平台保证，也不说明任务已提交。
 
-- Story owns dialogue and narration content and dramatic function.
-- Character owns fictional voice/performance intent; real-person voice references need separate consent and use decisions.
-- Direction owns cue timing and relation to visible action.
-- Production owns sound deliverables, synchronization checks, and external handoff.
+按当前需要加载：
 
-For each cue record ID, dialogue/voiceover/ambience/Foley/music role, text or audible intent, speaker/source, timeline range, sync anchor, perspective, priority relative to speech, rights status, and acceptance criterion. Mark whether a voice is on-screen and whether lip synchronization is required. Do not infer actual speech timing from a still or claim audio exists from a cue sheet.
+- [视频平台适配](video-platform-adaptation.md)：区分平台、模型、界面、模式与官方证据。
+- [类型化节点标签](tagged-video-nodes.md)：中文创作母稿及不同节点的必要字段。
+- [视频表演与镜头](video-performance-direction.md)：台词、语气、情绪、表情、特效和运镜分工。
+- [视频时长与剪辑余量](video-timing-and-handles.md)：生成窗口、有效区间、首尾状态和返回时长。
 
-Review intelligibility, audible transitions, intended silence, sync at declared anchors, and continuity separately. Technical mix targets are supplied delivery requirements or unresolved assumptions; never invent measured loudness or provider guarantees.
+可选只读工具 `scripts/check-video-plan.mjs` 检查视频工作表声明的一致性；下面的 `scripts/check-delivery.mjs` 检查最终剪辑覆盖与 SRT。两者不会生成媒体、检查真实像素或声音，也不能互相代替。
 
-## Exact copy and timing checks
+<a id="sound-ownership-and-cue-sheet"></a>
+## 声音职责与提示表
 
-Preserve supplied narration/subtitle text verbatim. If a count matters, distinguish Han characters, Unicode code points, and visible grapheme clusters; punctuation is not a Han character. Avoid adding an unverified count to prose. Character count alone does not establish spoken duration: estimate timing explicitly, then verify against returned audio before final synchronization.
+角色声线与逐句配音的组织规则见[完整短片的声音与剪辑](short-film-creation.md#配音声音与剪辑)。声线、准确口播、表演指令和后期空间处理分开；台词时间须以实际音频复核。
 
-Use the bundled read-only [delivery checker](../../scripts/check-delivery.mjs) with Node.js 22+ when exact counts, cut coverage, or SRT timestamps are required. Resolve its path from this Skill's directory, including in an installed plugin; no repository checkout or dependencies are needed. Run `node <skill-root>/scripts/check-delivery.mjs --text "值得专程回来"` to get six Han characters. Without Node, use equivalent available arithmetic tools and disclose checks that were not run; do not block a useful draft.
+现场拾音、声音空间与画面部门协调，按[收音与声音空间](prompt-detail-standard.md#收音与声音空间)展开；完整场次使用[交付模板](prompt-detail-standard.md#场次与逐镜交付模板)。本节维护声音时间表与交付规则，避免复制另一份参数权威。
 
-For a simple cut-only timeline, save the following worksheet with the actual shot boundaries and exact copy, then run `node <skill-root>/scripts/check-delivery.mjs <worksheet.json>`. This is an optional calculation input, not a canonical root contract:
+故事负责对白、旁白内容及戏剧功能；人物负责虚构声线和表演意图，真实人声参考另需同意及用途决定；镜头导演负责提示时刻与可见动作的关系；制作规划负责声音交付、同步检查和外部交接。
+
+每条声音提示记录 ID、对白／画外音／环境／拟音／音乐角色、准确文本或听觉意图、说话人／声源、时间区间、同步锚点、聆听视点、相对语音的优先级、权利状态和验收标准。注明说话人是否在画面内、是否需要口型同步。不能从静帧推断真实语音时长，也不能把提示表当作已存在音频。
+
+分别评审可懂度、听觉转场、所需安静、同步锚点和连续性。技术混音目标应是用户给定要求或未决假设，不能虚构已测响度和供应商保证。
+
+<a id="exact-copy-and-timing-checks"></a>
+## 精确文案与时间检查
+
+原样保留旁白和字幕。涉及字数时区分汉字、Unicode 码点和可见字素簇；标点不是汉字。不要在说明中写未经验证的字数。字数不能证明口播长度：先明确估算，再根据返回音频核实最终同步。
+
+需要精确字数、剪辑覆盖或 SRT 时间戳时，使用随 Skill 分发的只读[交付检查器](../../scripts/check-delivery.mjs)，需要 Node.js 22+。从实际 Skill 目录定位脚本，安装后的插件不依赖仓库 checkout 或额外依赖。运行 `node <skill-root>/scripts/check-delivery.mjs --text "值得专程回来"` 可得到六个汉字。没有 Node 时使用等价算术工具，说明未运行检查，不阻止有用草稿。
+
+简单硬切时间线可把实际边界及准确文案写入以下工作表，运行 `node <skill-root>/scripts/check-delivery.mjs <worksheet.json>`。这是可选计算输入，不是新的根契约：
 
 ```json
 {
@@ -44,18 +60,39 @@ For a simple cut-only timeline, save the following worksheet with the actual sho
 }
 ```
 
-Ranges are half-open `[startFrame, endFrame)`. Shots must cover `[0, totalFrames)` without gaps or overlap; intentional blank time needs its own shot entry. Subtitles may have gaps but belong to one non-overlapping track. `subtitles` and `expectedHanCharacters` are optional. Correct invalid input before using the returned SRT; failed checks return `srt: null` and a nonzero exit code. The helper writes nothing and never changes copy.
+区间为左闭右开 `[startFrame, endFrame)`。镜头必须无缺口、无重叠地覆盖 `[0, totalFrames)`；有意空白也要自己的镜头条目。字幕可有间隙，但属于单一、不重叠轨道。`subtitles`、`expectedHanCharacters` 可省略。无效输入须先纠正，失败时返回 `srt: null` 和非零退出码。工具不写文件、不改文案。
 
-Use rational rates (for example `30000/1001`, not rounded `29.97`). Convert each absolute frame boundary to seconds using the exact ratio and round once to SRT milliseconds; do not accumulate rounded per-shot durations. SRT timestamps are elapsed time, not SMPTE drop-frame labels. Crossfades, speed ramps, multiple overlapping tracks, or drop-frame conform need the [editorial guide](editorial-color.md) and appropriate external timeline checks. Arithmetic passing does not verify speech speed, subtitle readability, delivered media, or synchronization.
+帧率使用精确有理数，例如 `30000/1001`，不用近似 `29.97`。每个绝对帧边界按精确比例换算秒，只在 SRT 毫秒处舍入一次，不累计每镜的舍入误差。SRT 是经过时间，不是 SMPTE 丢帧标签。叠化、变速、多重叠轨道或丢帧套底，需要本文的[剪辑交接](#editorial)和适当的外部时间线检查。算术通过不代表语速、字幕可读性、实际交付媒体或同步已验证。
 
-## Delivery and resource worksheet
+<a id="delivery-and-resource-worksheet"></a>
+## 交付与资源工作表
 
-Record duration, rational frame rate, aspect ratio, intended resolution, audience/platform, subtitle language and exact text authority, safe areas, alternate versions, required originals, and acceptance evidence. Distinguish requested specifications from measured output properties. A vertical adaptation requires framing and text review; it is not automatically a crop.
+记录时长、有理数帧率、画幅、目标分辨率、受众／平台、字幕语言和准确文本来源、安全区、备选版本、必要原片和验收证据。请求规格与实际测量分开；竖版适配需要重查构图与文字，不等于自动裁切。
 
-Record user-supplied deadline, budget ceiling if any, maximum candidates per shot, revision rounds, and stop condition. Estimates remain estimates with stated basis; unknown prices remain unknown. No actual-spend accounting or automatic retries occur in this Skill.
+记录用户给定期限、预算上限、每镜最大候选数、修订轮次及停止条件。估算须说明依据；价格未知保持未知。本 Skill 不进行实际费用记账或自动重试。
 
-When constraints cannot be met, offer a creative fallback tied to the same purpose: split a complex move, shorten a clip, use a still with editorial motion, or simplify background activity. Explain which creative quality changes and obtain a decision only when it falls outside delegated scope. Never downgrade a hard identity, rights, or narrative requirement silently.
+约束无法满足时，给出服务相同目的的创作替代，例如拆分复杂运动、缩短片段、静帧配剪辑运动或减少背景活动。说明改变了什么创作质量，仅在超出授权时寻求决定。不能悄悄降低硬性身份、权利或叙事要求。
 
-## External return checklist
+<a id="external-return-checklist"></a>
+## 外部结果返回清单
 
-Request actual accessible media, clip/candidate mapping, returned timing and dimensions, available prompt/settings metadata, and relevant rights declarations. Review visible/audible quality from available media even when execution metadata is absent, explicitly limiting scope. Reproducibility and provider-compliance checks remain unknown until their own evidence is returned.
+要求提供实际可访问媒体、片段与候选对应关系、返回时长和尺寸、可用的准确提示词／设置元数据及相关权利声明。执行元数据缺失时，仍可限定范围评审可访问画面和声音，明确剩余未知。可复现性和平台合规性需各自证据，不能由画面评审代替。
+
+<a id="optional-editorial-and-color-handoff"></a>
+<a id="editorial"></a>
+## 剪辑
+
+使用约分有理数帧率和整数帧区间。声明素材／镜头意图、源素材可用状态、入出点、空白、停留、转场长度、剪辑余量、音频意图和未知媒体。相邻序列窗口不能意外重叠。
+
+占位必须明确标注，不得冒充已生成媒体。时间计划不执行套底、渲染或导出。保留分镜与序列节奏的权威，技术时间线不能发明节拍。
+
+<a id="color"></a>
+## 调色
+
+分开场景物理光源与材质状态、导演曝光与注意力意图、风格的反差／色板／滚降、创意调色意图，以及技术输入／显示／交付假设。
+
+说明工作假设和未知项，不声称已经应用变换。预览意图和交付意图不同。显示风格不能烘焙进规范身份、材质或源光事实。
+
+导演手法不同，镜头仍继承同一视觉和色彩流程假设。对照基线匹配色板、色温关系、饱和度、反差／滚降、肤质／材质和纹理，不逐镜附加新的名导调色。昼夜或光源变化可改变曝光和照明，但不替换共同调色意图。修改视觉需明确限定范围的修订。没有实际可比较媒体，只验证规划一致性，不宣称完成色彩匹配。
+
+评审检查高光／暗部裁切、肤质与材质分离、中性／参考处理、镜头间连续性，以及创意调色是否仍尊重物理光照。色彩档案始终是交给外部色彩管理工作流的计划。

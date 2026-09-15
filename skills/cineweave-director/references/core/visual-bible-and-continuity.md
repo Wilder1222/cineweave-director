@@ -1,52 +1,67 @@
-# Visual bible and continuity
+<a id="visual-bible-and-continuity"></a>
+# 视觉规范与连续性
 
-The visual bible is a set of independently versioned authorities, not one prose mood board.
+普通多镜头创作先用简短设定表记录人物、外观、空间、光源和视觉基线。需要版本管理或系统交接时，再映射到各自独立版本化的权威产物；不为短片草稿强制建立整套契约。
 
-## Authority dimensions
+## 表现媒介与共享设定
 
-- **World:** laws, history, geography, societies, technology, and physical design baseline.
-- **Story:** causality, knowledge, setup/payoff, stakes, and changed states.
-- **Character:** stable identity, current appearance, performance causality, and timing.
-- **Scene:** topology, scale, materials, props, state, physical light, and interaction.
-- **Style:** medium, representation, abstraction, visual grammar, and temporal grammar.
-- **Direction:** shot purpose, attention, blocking, camera, shot-light use, time, and coverage.
-- **Reference:** evidence authority, transfer scope, and rights.
+作品形式与表现媒介分别决定：短片、长片、短剧或观察片影响叙事组织；写实影像、二维绘制、三维渲染或混合表现影响造型、光影、材质和动作语法。画幅、时长与生成模式又是独立选择，不能由“短剧”自动推断竖屏，也不能由“三维”自动要求写实皮肤。
 
-Identity, appearance, and representation are separate spaces. Makeup, hair, costume, temporary skin condition, and weathering belong to appearance. Anime, manga, photoreal, illustration, and stylized 3D belong to representation. Neither rewrites stable identity.
+| 表现选择 | 基线需明确的内容 | 编译与复查重点 |
+| --- | --- | --- |
+| 写实影像 | 物体尺度、皮肤／材料响应、照明来源、透视与运动重量 | 位置、遮挡、接触、受光和相机路径自洽，摄影术语描述可见结果 |
+| 二维绘制 | 轮廓线、造型简化、色块／阴影分区、夸张幅度与动作节奏 | 保留设计语言，不把毛孔、体积散射和摄影缺陷作为通用质量要求 |
+| 三维渲染 | 几何比例、材质处理、毛发或表面风格、阴影与镜头运动方式 | 明确写实或风格化程度，三渲二以最终线面与色阶判断，不因制作方式强加真实材质 |
+| 混合表现 | 各元素的职责、共同空间、合成边界和允许变化 | 对齐遮挡、接触、光色与运动节奏；有意切换媒介时记录切点与叙事原因 |
 
-Light has four layers:
+开始跨镜头设计时，用一份简短共享设定汇总：作品形式与媒介、核心观众体验、人物／服化道锚点、场景与通路、色彩材料和光影规则、摄影与声音基线、允许变化及来源状态。已存在的母稿直接引用，未知项可在授权范围内补为暂定设计；无须复制一份新的世界设定或先完成大部头手册。单图只取相关内容。
 
-1. Scene defines physical source, position, direction, size, falloff, and occlusion.
-2. Direction chooses shot function and exposure relationship.
-3. Style defines representational rolloff, contrast, bloom, line, cel, ink, or paint behavior.
-4. Prompt compiles only the visible consequences.
+先让代表性的近景、空间镜头和关键动作在文字上使用同一基线；已有媒体时再比较实际结果。光影或动作的非写实处理可作为美术决定，但应清楚且跨镜一致，不用虚构平台参数表达。媒介变化更新对应基线和消费者，不自动改写故事、身份或准确台词。
 
-## Shared look, variable techniques
+<a id="authority-dimensions"></a>
+## 权威维度
 
-Use one work-level visual baseline and any explicitly approved scene variants. Preserve its representation family, palette/saturation relationships, white-balance/source-color relationships, contrast and tonal rolloff, skin/material rendering, grain/sharpness/bloom or other optical texture, and aspect ratio. These are coordinated facts across existing Style, Scene, Direction, and editorial/color authorities, not a new contract or a single LUT that overwrites them all.
+- **世界：**法则、历史、地理、社会、技术与物理设计基线。
+- **故事：**因果、人物所知、铺垫／回收、风险代价与状态改变。
+- **人物：**稳定身份、当前外观、表演因果和时序。
+- **场景：**拓扑、尺度、材质、道具、状态、物理光照和互动。
+- **风格：**媒介、表现方式、抽象程度、视觉语法和时间语法。
+- **导演：**镜头目的、注意力、走位调度、摄影机、镜头光照使用、时间和覆盖。
+- **参考：**证据权威、迁移范围与权利。
 
-Automatically chosen craft methods may vary blocking, composition, camera movement, focus attention, coverage, edit rhythm, or listening perspective within the approved grammar. They may not import a different master's palette, contrast, lens rendering, film texture, or frame shape for each shot. Shot lighting may adapt to the action and real source geometry, but must remain inside the common exposure/contrast and color intent. Same look does not require identical camera positions, light screen-sides, or pixel values.
+身份、外观和表现方式必须分开。妆容、发型、服装、暂时肤况和风化属于外观；动画、漫画、写实、插画、风格化三维属于表现方式。两者都不能改写稳定身份。
 
-When a baseline exists, inherit its exact available references; do not infer a new one from a master name or one attractive frame. When none exists, propose a concise shared look draft from the brief and carry that same draft across the sequence. Mark unresolved facts and approval status; do not manufacture StylePackage IDs/hashes or require the user to operate preset controls. High-impact look approval remains a human gate, separate from routine automatic technique choice.
+光照分四层：场景定义物理光源及其位置、方向、大小、衰减与遮挡；导演选择镜头用途与曝光关系；风格规定明暗过渡、反差、泛光、线条、赛璐璐、墨色或笔触表现；提示词只编译可见后果。
 
-A day/night transition, new physical source, or subjective scene may change visible illumination for a stated cause while retaining the shared rendering/grade intent. Flashback does not automatically mean sepia, intimacy does not mean neon, and suspense does not mean a new teal/orange grade. Changing the baseline itself requires an explicit look revision with scope and approval, not automatic master matching.
+<a id="shared-look-variable-techniques"></a>
+## 统一视觉，允许手法变化
 
-For handoff, pass the same baseline reference or clearly labeled provisional baseline to every shot/style/prompt/color plan, with only permitted shot-specific variations. Compare a representative wide, close-up, and relevant lighting state before extending the plan when the task warrants it. With returned media, check adjacent shots and the common reference under consistent viewing assumptions; with plans only, report instruction consistency, not verified visual matching.
+整部作品使用一套视觉基线，以及明确获批的场景变体。保留表现体系、色板／饱和度关系、白平衡／光源色关系、反差及明暗滚降、肤质／材质表现、颗粒／锐度／泛光等光学纹理，以及画幅。它们由既有风格、场景、导演和剪辑／调色权威协同管理，不是新契约，也不是覆盖所有内容的一张 LUT。
 
-## Continuity ledger
+自动选用的创作手法，可以在已批准语法内改变调度、构图、运镜、焦点注意力、覆盖、剪辑节奏或听觉视点；不能每个镜头换一位导演的色板、反差、镜头成像、胶片纹理或画幅。灯光可以适应动作和真实光源几何，但必须符合共同曝光／反差与色彩意图。统一视觉不等于机位、光源在屏幕中的左右位置或像素值都完全相同。
 
-Use one ledger with namespaces rather than duplicated checklists:
+已有基线时，继承可用的精确引用，不凭名导名字或一张好看的图片重新推断。没有基线时，根据简报提出一份简洁的共享视觉草稿，全段沿用，并注明未知项和审批状态。不编造 `StylePackage` ID／哈希，也不要求用户先操作预设控制。重大视觉确认仍需人工关卡，与日常自动选择手法分开。
 
-- `world.*`: laws, geography, institutions, chronology;
-- `story.*`: knowledge, objectives, setup/payoff, possession, relationship;
-- `character.*`: identity, appearance, performance, injury, emotion trajectory;
-- `scene.*`: topology, prop location, material, weather, physical light;
-- `direction.*`: axis, eyeline, action phase, framing, time, coverage.
+昼夜转场、新物理光源或主观场景可以因明确原因改变照明，同时保留共同材质表现／调色意图。回忆不自动等于褐色滤镜，亲密不等于霓虹，悬念也不等于改成青橙色。要修改基线，必须明确修订范围并取得相应确认，而不是通过自动匹配名导完成。
 
-A motivated transition is `changed`; an unmotivated contradiction is `broken`. Record cause, before state, after state, and affected artifacts. Do not classify every difference as drift.
+交接时，每个镜头、风格、提示词、调色计划都引用同一基线或同一明确标注的暂定基线，只附允许的镜头差异。任务需要时，先比较代表性的远景、近景和相关照明状态，再扩展计划。有实际媒体时，在一致观看条件下比较相邻镜头及共同参考；只有计划时，只能报告指令一致性，不能声称视觉匹配已验证。
 
-## Down-projection
+<a id="continuity-ledger"></a>
+## 连续性台账
 
-Project only facts visible at the requested scale or necessary for continuity. A wide shot does not need every facial micro-detail; a close-up cannot omit the identity anchors and current appearance that are visible. Each shot and prompt should carry the smallest complete slice of the bible, not duplicate the whole project.
+使用同一台账下的命名空间，不重复维护多份检查表：
 
-When evidence or canon conflicts, surface the competing exact sources and stop at the smallest human decision. Never let style preference, prompt fluency, or a provider limitation silently win.
+- `world.*`：法则、地理、制度、年表；
+- `story.*`：认知、目标、铺垫／回收、持有物、关系；
+- `character.*`：身份、外观、表演、伤情、情绪轨迹；
+- `scene.*`：拓扑、道具位置、材质、天气、物理光照；
+- `direction.*`：轴线、视线、动作阶段、取景、时间、覆盖。
+
+有动机的变化为 `changed`；无动机的矛盾为 `broken`。记录原因、变化前后状态和受影响产物。不能把所有差异都认定为漂移。
+
+<a id="down-projection"></a>
+## 向下游精简映射
+
+只映射目标景别中可见或连续性必需的事实。远景不必包含每个面部微细节；近景不能遗漏可见身份锚点和当前外观。每个镜头与提示词携带最小而完整的规范切片，不复制整个项目。
+
+证据或正式设定冲突时，展示竞争的精确来源，并停在最小必要人工决定处。不能让风格偏好、流畅措辞或供应商限制悄悄成为最高优先级。

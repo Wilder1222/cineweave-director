@@ -124,7 +124,7 @@
       "aspectRatio": "1:1",
       "sizeClass": "square",
       "pixelDimensions": "3072x3072",
-      "background": "neutral gray"
+      "background": "中性灰"
     },
     "tileAspectRatio": "1:1",
     "margin": 0.04,
@@ -135,10 +135,10 @@
     "lightingPolicy": "locked"
   },
   "sharedInvariants": [
-    "CharacterSpec v1 identity anchors",
-    "AppearanceState v1 makeup, hair, wardrobe and accessories",
-    "same camera angle, focal character and crop",
-    "same neutral gray background and soft neutral light"
+    "CharacterSpec v1 身份锚点",
+    "AppearanceState v1 妆容、发型、服装与配饰",
+    "保持相同机位、焦点人物与裁切",
+    "保持相同中性灰背景与中性柔光"
   ],
   "tasks": [
     {
@@ -495,7 +495,7 @@
     "createdAt": "2026-08-20T18:00:00.000Z",
     "updatedAt": "2026-08-20T18:00:00.000Z",
     "changeLog": [
-      "v1: compile a nine-tile expression identity recipe"
+      "v1：编译保持身份的九宫格表情资产方案"
     ]
   }
 }

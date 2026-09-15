@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/performance-timeline.schema.json",
-  "title": "CineWeave Character Performance Timeline",
+  "title": "CineWeave 人物表演时间线",
   "type": "object",
   "additionalProperties": false,
   "required": [

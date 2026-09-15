@@ -83,7 +83,7 @@
     "writesMedia": false,
     "exportsLut": false,
     "humanApprovalRequired": true,
-    "notes": "This is an immutable plan. A separately approved production application must load the exact config and apply any transform."
+    "notes": "这是不可变的计划。独立获批的制作应用须加载精确配置后才能应用变换。"
   },
   "validation": {
     "configIdentityExact": true,
@@ -99,8 +99,8 @@
     "createdAt": "2026-09-02T08:00:00.000Z",
     "updatedAt": "2026-09-02T08:00:00.000Z",
     "changeLog": [
-      "Created a planned OCIO-model-aligned color pipeline without loading a config or changing media.",
-      "Separated declared source metadata, scene working space, preview path and delivery path."
+      "创建与 OCIO 模型对齐的调色管线计划，未加载配置或修改媒体。",
+      "区分声明的源元数据、场景工作空间、预览路径与交付路径。"
     ]
   }
 }

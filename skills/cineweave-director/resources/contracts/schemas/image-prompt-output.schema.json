@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/image-prompt-output.schema.json",
-  "title": "CineWeave Codex Cinematic Text-to-Image Prompt Package",
+  "title": "CineWeave 文生图镜头提示词包",
   "type": "object",
   "additionalProperties": false,
   "required": [

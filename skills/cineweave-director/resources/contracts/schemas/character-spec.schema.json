@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/character-spec.schema.json",
-  "title": "CineWeave Codex Character Specification",
+  "title": "CineWeave Codex 人物规范",
   "type": "object",
   "additionalProperties": false,
   "required": [

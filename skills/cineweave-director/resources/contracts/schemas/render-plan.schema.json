@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/render-plan.schema.json",
-  "title": "CineWeave Codex Provider-neutral Image Render Plan",
+  "title": "CineWeave Codex 平台无关图像生成计划",
   "type": "object",
   "additionalProperties": false,
   "required": [

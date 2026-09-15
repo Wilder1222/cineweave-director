@@ -1,45 +1,47 @@
-# Route: storyboard_rhythm
+<a id="route-storyboard_rhythm"></a>
+# 路由：分镜与节奏（storyboard_rhythm）
 
-Use for shot/panel sequence design, coverage, comic pages, animatics, sequence pacing, transitions, or continuation planning.
+提示词的适用维度与完整性标准见[细节与专业表达](../optional/prompt-detail-standard.md#镜头与分镜)对应章节。
 
-## Storyboard
+用于镜头／画格序列、覆盖、漫画页面、动态分镜、段落节奏、转场和续写规划。
 
-Build the minimum sequence in which every shot or panel changes information, attention, spatial relation, pressure, or choice. Coverage roles—establish, prepare, action, reaction, consequence, transition—are a checklist, not a mandatory five-shot template. One shot may satisfy several roles when causality remains readable.
+<a id="storyboard"></a>
+## 分镜
 
-Each entry binds one exact `ShotSpec` and states:
+构建最小序列，每个镜头或画格都改变信息、注意力、空间关系、压力或选择。建立、准备、动作、反应、结果、转场是覆盖检查项，不是强制五镜头模板。因果可读时，一个镜头可以承担多种功能。
 
-- story/action beat and purpose;
-- new information or changed relation;
-- dependency on earlier entries;
-- screen direction, eyeline, and geography;
-- visible action phase and stable end;
-- coverage-ledger rows it satisfies.
+每项对应明确镜头卡；规范交接时绑定精确 `ShotSpec`。说明故事／动作节拍与目的、新信息或关系变化、对前项的依赖、画面运动方向／视线／地理、可见动作阶段／稳定终态，以及满足的覆盖台账行。
 
-The top-level ledger must close every selected beat. Decorative inserts and duplicate reactions are removed.
+顶层台账必须覆盖所有选中节拍。删除装饰性插入镜头和重复反应。
 
-For creative sequence design, use [automatic technique adaptation](../optional/master-style-presets.md) to vary shot methods by beat while inheriting [one shared visual baseline](../core/visual-bible-and-continuity.md). Do not assign a different grade, grain, contrast treatment, or aspect ratio when the useful master influence changes. Track motivated physical-light transitions separately from look changes.
+创意序列需要手法备选时查阅[手法适配](../optional/master-style-presets.md)，根据节拍变化方法，同时继承[共享视觉基线](../core/visual-bible-and-continuity.md)。有用的导演影响改变时，不另换调色、颗粒、反差或画幅。物理光照的有因变化与视觉基线修改分开跟踪。
 
-For comics, preserve reading order, page turn, panel hierarchy, black/white or color mass, balloons/captions as planned regions, and exact text as a later deterministic layer. Generate/review panels independently; do not ask one image model to invent the full grid and exact text.
+漫画需保留阅读顺序、翻页、画格层级、黑白／色块关系、对白框／字幕的计划区域，并将准确文字留给后续确定性排版层。各画格独立生成和评审，不要求一个图像模型同时发明全网格并准确排字。
 
-## Sequence rhythm
+## 分镜参考图到视频
 
-For creative coverage/cut decisions, perceptual pacing, or sound bridges read [editing and sound craft](../optional/editing-sound-craft.md). Distinguish shot length from information density and performance tempo; a sustained observation may be the intended event, not a missing plot beat.
+分镜可以交付为文字时间线、独立画格、条带、九宫格、其他网格或动态预演。分镜参考板按[参考板视频路径](../optional/video-platform-adaptation.md#分镜参考板驱动视频)制作，区别于人物转面板、表情板与风格情绪板；先说明每格是独立镜头还是同镜动作阶段，再给顺序与镜号映射。
 
-Create `SequenceRhythmSpec` downstream of the exact Storyboard. Use a reduced rational timebase and integer frame boundaries. Define ordered, non-overlapping shot windows, tempo phases, breathing points, adjacent transition grammar, and screen-direction policy.
+需要完整参考板时可直接设计整板生成稿，也可独立生成画格后装配；版式、编号准确性、人物一致性及用途决定选择，不强制全部拆格。视频可用整板作为顺序／构图参考，也可采用必要裁切格作为多参考或单图输入。输入方案、镜头时序和视频提示词一起交付，不能只给九张静图就宣称视频方案完整。
 
-Pacing follows dramatic pressure and information release, not an arbitrary music-video cadence. A breathing point must have a narrative or perceptual function. Finish each shot and the sequence on stable states that support continuation.
+<a id="sequence-rhythm"></a>
+## 序列节奏
 
-A HeroFrame may anchor visual inheritance, but it cannot override exact identity or scene geography. Continuation/extend planning states inherited facts, allowed evolution, new action, and the frame/time boundary.
+创意覆盖、剪辑决定、感知节奏和声音桥参见[剪辑与声音方法](../optional/editing-sound-craft.md)。镜头长度、信息密度和表演速度不是同一个量；持续观察可能正是意图，而非缺少剧情节拍。
 
-## Quality gate
+普通草稿直接提供分镜与时间表；规范交接时基于精确分镜创建下游 `SequenceRhythmSpec`。使用约分后的有理数时基和整数帧边界，明确有序且不重叠的镜头窗口、节奏阶段、呼吸点、相邻转场语法与画面方向规则。
 
-- exact ShotSpec refs;
-- closed beat-to-shot coverage;
-- causal panel dependencies;
-- coherent axis and eyelines;
-- integer-frame contiguous rhythm;
-- transitions only between adjacent windows;
-- independent panel tasks and deterministic assembly planned when needed;
-- no claim that storyboard images, edit media, or assembled boards already exist.
+节奏遵循戏剧压力和信息释放，而不是任意 MV 拍点。呼吸点必须具有叙事或感知作用。每镜明确采用出点状态及下一镜接口。动作匹配可以在运动中切出，按速度、方向、接触与动作相位衔接；只有剧情停顿或端点条件需要时才停稳，不给所有镜头强加静止结尾。
 
-Outputs: `Storyboard`, `SequenceRhythmSpec`.
+主视觉关键帧可锚定视觉继承，不能覆盖精确身份或场景地理。续写／延长规划写明继承事实、允许变化、新动作和帧／时间边界。
+
+<a id="quality-gate"></a>
+## 质量关卡
+
+镜头卡对应清楚，规范交接使用精确 `ShotSpec` 引用；节拍到镜头覆盖闭合；画格依赖有因果；轴线和视线一致；整数帧节奏连续；转场只发生在相邻窗口；需要时规划独立画格任务与确定性装配；不声称分镜图片、剪辑媒体或装配画布已存在。
+
+可选规范输出（仅在请求结构化交接时）：`Storyboard`、`SequenceRhythmSpec`。
+
+涉及场次与连续镜头时，使用[拍摄系统与部门协同](../optional/prompt-detail-standard.md#拍摄系统与部门协同)的共享基线和逐镜交付模板，核对空间、构图、光位、收音与场记连续性。
+
+完整短片的跨领域交付与逐项完成标准见[全套创作流程](../optional/short-film-creation.md)，各阶段应沿用同一故事、资产与镜头清单。

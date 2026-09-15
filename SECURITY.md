@@ -1,31 +1,33 @@
-# Security Policy
+# 安全策略
 
-## Supported versions
+## 支持版本
 
-Security fixes are applied to the latest released CineWeave Director version. Older development snapshots and the retired CineWeave Studio/runtime line are not supported after a replacement release is available.
+安全修复应用于最新已发布的 CineWeave 导演。替代发布可用后，旧开发快照和已退役的 Studio／运行时产品线不再支持。未发布中文工作树不是一个已经发布的新版本。
 
-## Reporting
+## 报告问题
 
-Report suspected credential exposure, path traversal, unsafe plugin packaging, rights-gate bypasses, prompt-projection boundary violations, or artifact-integrity failures privately to wangwilder1222@gmail.com. Do not include private media, API keys, signed URLs, personal data, provider job data, or proprietary prompts in a public issue.
+疑似凭据泄露、路径穿越、不安全插件打包、权利关卡绕过、提示词适配越界或产物完整性问题，请私下报告至 wangwilder1222@gmail.com。公开 issue 不要包含私密媒体、接口密钥、签名 URL、个人数据、供应商任务数据或专有提示词。
 
-Include the affected version, reproduction steps, expected boundary, and the smallest non-sensitive fixture that demonstrates the problem. The maintainer will confirm receipt, assess severity, and coordinate disclosure before a public fix note is published.
+提供受影响版本、复现步骤、预期边界及最小非敏感夹具。维护者确认接收、评估严重性并协调披露后再发布公开修复说明。
 
-## Execution boundary
+## 执行边界
 
-CineWeave Director produces text and JSON creative artifacts. It does not call providers, install or load models, run adapters, ingest media bytes, execute production plans, publish, approve, or grant credentials. Any external implementation is a separate, explicitly authorized human/tool workflow and must not be inferred from a projection, plan, capability profile, or submission screen.
+CineWeave 导演 产出文本和 JSON 创作产物，不调用生成平台、不安装或加载模型、不运行生成适配器、不执行制作计划、不发布、不批准、不授予凭据。外部执行必须是另行明确授权的人／工具流程，不能从适配稿、计划、能力档案或提交页面推导已经执行。
 
-Never place secrets, private locators, expiring URLs, or credential values in a contract, prompt, reference note, issue, or projection. `PromptProjectionPlan` uses human-resolved locator placeholders and requests exact returned metadata only after external execution. Unknown provider capability, compatibility, license scope, likeness consent, or publication rights remains blocking rather than defaulting to allowed.
+附带检查器只读取本地文本／JSON 进行声明和算术检查，不解码媒体、不接触生成凭据、不写媒体；它们不构成生成运行时。
 
-## Reference and rights boundary
+契约、提示词、参考说明、issue 和适配稿中不得放秘密、私密定位地址、过期链接或凭据值。`PromptProjectionPlan` 使用人工解析的定位占位，并在外部执行后要求准确返回元数据。未知能力、兼容性、许可、肖像同意和发布权利仍阻断依赖用途，不默认允许。
 
-A `ReferenceAsset` or content hash records declared identity and provenance state; it is not a malware scan, authorship proof, license grant, likeness consent, or content-safety decision. Visible observations, user declarations, inference, and unknowns must remain distinguishable. Review untrusted media and metadata with separately maintained security tools before external transfer or decoding.
+## 参考与权利边界
 
-SHA-256 establishes byte identity only. Content Credentials/C2PA validation, signer trust, copyright, license scope, training permission, publication, and redistribution are separate decisions requiring their own evidence and approval.
+`ReferenceAsset` 或内容哈希只记录声明的身份和来源状态，不是恶意文件扫描、作者证明、许可授予、肖像同意或内容安全决定。可见观察、声明、推断、未知保持可区分。外部传输或解码前，用独立维护的安全工具审查不可信媒体与元数据。
 
-## Distribution integrity
+SHA-256 只建立字节身份。内容凭证／C2PA 验证、签名者信任、版权、许可范围、训练、发布、再分发各需独立证据和批准。
 
-The release inventory is derived from the plugin metadata, `reference-lifecycle.json`, and `resources/contracts/index.json`. The current v3 closure contains 136 regular files: plugin metadata, `LICENSE`, and the self-contained Skill inventory. Validation rejects symbolic links, junctions, traversal, case collisions, unresolved/local-escape schema refs, stale hashes, missing files, unexpected files, and source/bundle byte differences.
+## 分发完整性
 
-The bundle intentionally excludes development scripts, tests, repository documentation, marketplace metadata, branding assets, local state, credentials, and generated media. The builder may replace only one guarded direct child directory of the real `.build` directory; it refuses linked output paths and nested output paths.
+清单由插件元数据、基础资源白名单、`reference-lifecycle.json` 与 `resources/contracts/index.json` 派生；不以过期的静态文件数代替真实闭合检查。校验拒绝符号链接、junction、越界、大小写冲突、schema 引用未解析或越界、过期哈希、缺失／额外文件和源／包字节差异。
 
-A valid bundle hash proves only that its bytes match this source checkout. It does not authenticate the repository owner or release signer; use an immutable release tag and a separate trusted signature channel when sender authenticity is required.
+Skill 包排除仓库开发脚本、测试、仓库说明、市场清单、品牌图、本地状态、凭据和生成媒体；明确登记的 Skill 内只读检查器除外。构建器只允许替换真实 `.build` 目录的一个受保护直接子目录，拒绝链接和嵌套输出路径。
+
+包哈希正确只说明与当前源码字节匹配，不认证仓库所有者或发布签名者。需要发送者真实性时，使用不可变版本和独立可信签名渠道。中文摘要不能替代原始诊断、证据或安全判断。

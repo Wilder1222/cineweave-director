@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/cinematic-skill-manifest.schema.json",
-  "title": "CineWeave Atomic Cinematic Skill Manifest",
-  "description": "A provider-neutral, parameterized cinematic program catalog. It describes creator-facing controls and department handoffs without becoming Canon or executing a provider.",
+  "title": "CineWeave 原子镜头技法清单",
+  "description": "平台无关的参数化镜头方案目录，描述创作者控制与领域交接，不成为正式设定或执行供应商。",
   "type": "object",
   "additionalProperties": false,
   "required": [

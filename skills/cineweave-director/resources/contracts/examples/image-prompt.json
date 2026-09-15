@@ -18,34 +18,34 @@
   },
   "shotDesign": {
     "primaryTarget": "沈砚秋的保护性重心移动",
-    "shotScale": "medium full shot",
-    "cameraAngle": "eye-level with restrained frontal three-quarter view",
-    "cameraHeight": "slightly below chest height",
+    "shotScale": "中全景",
+    "cameraAngle": "平视，以克制的正面三分之四角度观察",
+    "cameraHeight": "略低于胸口高度",
     "lens": {
       "focalLengthMm": 50,
-      "character": "natural body proportion with contained corridor compression"
+      "character": "自然身体比例与适度的走廊空间压缩感"
     },
     "depth": [
-      "foreground pursuer weapon edge",
-      "midground Shen Yanqiu and child",
-      "background blocked exit"
+      "前景追兵武器的边缘",
+      "中景沈砚秋与孩子",
+      "后景被封锁的出口"
     ],
     "movementCue": {
       "type": "static",
-      "direction": "locked along the corridor axis",
-      "speedCurve": "no camera translation; actor action carries the beat",
-      "startState": "the pursuer raises a weapon",
-      "peakState": "the character shifts between the child and the threat",
-      "endState": "the frame holds before the sword is drawn"
+      "direction": "沿走廊轴线保持固定机位",
+      "speedCurve": "摄影机不平移，由人物动作承载节拍",
+      "startState": "追兵抬起武器",
+      "peakState": "人物移动到孩子与威胁之间",
+      "endState": "画面停留在尚未拔剑的状态"
     },
     "focusTarget": "沈砚秋的眼神、右手与挡位关系",
     "composition": {
       "primaryTarget": "沈砚秋",
       "layout": "她位于中央偏右，孩子被她的身体部分遮挡，追兵武器从左前景进入。",
       "depthLayers": [
-        "weapon foreground",
-        "character and child",
-        "blocked corridor exit"
+        "前景武器",
+        "人物与孩子",
+        "被封锁的走廊出口"
       ],
       "subjectScale": "人物约占画面高度六成",
       "negativeSpace": "右后方保留一小段被切断的退路"
@@ -54,15 +54,15 @@
     "endState": "她保持稳定挡位，威胁尚未转化为正式攻击。",
     "styleStack": [
       {
-        "label": "restrained Chinese fantasy realism",
+        "label": "克制的中式幻想写实",
         "importance": "required"
       },
       {
-        "label": "performance-led tension",
+        "label": "由表演带动的紧张感",
         "importance": "strong"
       },
       {
-        "label": "natural material response",
+        "label": "自然材质响应",
         "importance": "supporting"
       }
     ]
@@ -81,18 +81,18 @@
     },
     "visualTemporalSeparated": true,
     "preserve": [
-      "restrained visual density",
-      "natural material response",
-      "identity and scene facts"
+      "克制的视觉密度",
+      "自然材质响应",
+      "人物身份与场景事实"
     ],
     "allowedVariation": [
-      "warm/cool balance within package bounds",
-      "minor atmosphere density"
+      "风格包允许范围内的冷暖平衡",
+      "轻微的氛围浓度变化"
     ],
     "forbidden": [
-      "style-driven identity drift",
-      "plastic game-render surfaces",
-      "unmotivated temporal claims"
+      "风格引起的人物身份漂移",
+      "塑料感的游戏渲染表面",
+      "缺乏依据的时序声明"
     ]
   },
   "characterBindings": [
@@ -112,7 +112,7 @@
       ],
       "performanceState": {
         "stateId": "threatened",
-        "emotion": "fear",
+        "emotion": "恐惧",
         "intensity": 0.38,
         "concealment": 0.82,
         "objective": "保护身后的孩子且不暴露自己的恐惧。",
@@ -163,7 +163,7 @@
   "promptBlocks": {
     "world": [
       "云上王朝世界中的狭窄石木走廊",
-      "不新增未提供的 Canon 事实"
+      "不新增未提供的正式设定事实"
     ],
     "story": [
       "追兵抬起武器",
@@ -201,7 +201,7 @@
       "被封锁的走廊出口位于后景"
     ],
     "camera": [
-      "medium full shot",
+      "中全景",
       "50mm",
       "略低于胸口高度",
       "固定机位捕捉动作峰值"
@@ -224,8 +224,8 @@
     ],
     "technical": [
       "单张关键帧候选",
-      "provider-neutral",
-      "16:9 framing intent"
+      "不依赖特定供应商",
+      "16:9 横幅构图意图"
     ],
     "sceneGeography": [
       "云宫东侧玉廊沿西南至东北单轴延伸",
@@ -263,37 +263,37 @@
     ]
   },
   "prompt": {
-    "language": "bilingual",
+    "language": "zh-CN",
     "concise": "50mm 平视中全景：沈砚秋保持偏长方圆脸、水平细长眼型、左嘴角略高和 7.7 头身；她在狭窄的朱红木柱、白玉地面走廊中左脚后撤半步，以直立上身挡住部分被遮蔽的孩子，双脚稳定承重，右手接近仍在鞘中的剑。追兵武器进入左前景，被封锁的出口位于后景；绷紧的下眼睑与下颌显露被隐藏的恐惧，西南低位暖边光与东北云海冷填充照亮人物。",
-    "expanded": "An eye-level 50mm medium full shot of Shen Yanqiu in a narrow Cloud Dynasty corridor of aged vermilion wood and wet white jade. She has a long rounded-rectangular face, narrow horizontal eyes, a subtly higher left mouth corner, 7.7-head proportions, a high waist, and slightly long forearms. An armed pursuer's weapon enters the left foreground as she shifts her left foot half a step back to shield the partly obscured child, her torso upright, weight grounded through both feet, and right hand near the sheathed sword. Concealed fear appears only in her tightened lower eyelids and jaw. The blocked exit remains behind her. Low warm rim light from the southwest and cool cloud fill from the northeast produce coherent contact shadows and separate skin, silk, aged lacquer, wet jade, and metal."
+    "expanded": "平视 50mm 中全景：沈砚秋站在云上王朝狭窄的走廊中，周围是老化的朱红木构与湿润白玉。她保持偏长方圆脸、水平细长眼型、左嘴角略高、7.7 头身、高腰与略长前臂。持械追兵的武器进入左前景；她左脚后撤半步，保护部分被遮蔽的孩子，上身直立，双脚承重稳定，右手靠近仍在鞘中的剑。隐藏的恐惧只体现为下眼睑与下颌收紧。被封锁的出口始终位于身后。西南低位暖轮廓光与东北云海冷填充形成一致的接触阴影，并区分皮肤、丝绸、老化漆面、湿润白玉与金属的材质响应。"
   },
   "negativePrompt": [
-    "no identity drift or costume mutation",
-    "no large round eyes or pointed chin",
-    "no exaggerated fear, backward fall or premature sword draw",
-    "no duplicated limbs, floating feet or impossible weapon grip",
-    "no conflicting light direction or plastic global glow"
+    "不得改变人物身份或服装",
+    "不要大圆眼或尖下巴",
+    "不要夸张恐惧、向后倒下或提前拔剑",
+    "不要重复肢体、悬空双脚或不可能成立的武器握持",
+    "不要互相矛盾的光向或塑料感的全局辉光"
   ],
   "preserve": [
-    "CharacterSpec char.shen-yanqiu version 1 identity anchors",
-    "right-hand dominance",
-    "controlled performance baseline",
-    "child remains behind the character"
+    "保留人物规范 char.shen-yanqiu 第 1 版的身份锚点",
+    "右手惯用侧",
+    "受控表演基线",
+    "孩子始终位于人物身后"
   ],
   "allowedChanges": [
-    "foreground weapon crop",
-    "corridor haze density",
-    "minor hair and hem response"
+    "前景武器的裁切范围",
+    "走廊薄雾浓度",
+    "轻微的发丝与衣摆响应"
   ],
   "validation": {
     "onePrimaryTarget": true,
     "physicalLight": true,
     "cameraCoherent": true,
     "realismAnchors": [
-      "motivated side light",
-      "contact feet and believable weight",
-      "distinct material response",
-      "coherent 50mm body proportion"
+      "有来源依据的侧光",
+      "双脚接地与可信承重",
+      "可区分的材质响应",
+      "符合 50mm 镜头意图的身体比例"
     ],
     "providerNeutral": true,
     "characterBindingsResolved": true,
@@ -427,8 +427,8 @@
           "subjectBindingId": "binding.char-shot-12-shen",
           "supportTargetRef": "anchor.floor-stone",
           "supportedParts": [
-            "right foot carries most weight",
-            "left foot stabilizes the retreat"
+            "右脚承担主要重量",
+            "左脚稳定后撤动作"
           ],
           "weightDistribution": "约六成重量在右脚，四成在后撤的左脚。",
           "centerOfGravity": "骨盆下沉但保持在双脚支撑多边形内。"

@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/reference-transform.schema.json",
-  "title": "CineWeave Reference-to-Target Transform",
-  "description": "An explicit, provider-neutral delta between observed reference evidence and a requested target image.",
+  "title": "CineWeave 参考到目标变换",
+  "description": "从参考观察证据到请求目标图像的明确变化量，与平台无关。",
   "type": "object",
   "additionalProperties": false,
   "required": [

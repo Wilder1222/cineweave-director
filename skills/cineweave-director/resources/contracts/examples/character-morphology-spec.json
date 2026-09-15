@@ -24,8 +24,8 @@
       "region": "face",
       "featurePath": "face.overall.length",
       "value": 0.28,
-      "semanticLabel": "slightly elongated",
-      "observableMeaning": "The facial oval is mildly longer than wide without an exaggerated lower face.",
+      "semanticLabel": "略微修长",
+      "observableMeaning": "脸型呈柔和椭圆，长度略大于宽度，下半脸不过分拉长。",
       "lock": "soft",
       "variationRadius": 0.12
     },
@@ -34,8 +34,8 @@
       "region": "face",
       "featurePath": "face.cheekbone.prominence",
       "value": 0.18,
-      "semanticLabel": "subtly defined",
-      "observableMeaning": "Cheekbones sit slightly high but do not flare beyond the facial oval.",
+      "semanticLabel": "轮廓轻微清晰",
+      "observableMeaning": "颧骨位置略高，但不向椭圆脸轮廓外侧扩张。",
       "lock": "soft",
       "variationRadius": 0.1
     },
@@ -44,8 +44,8 @@
       "region": "face",
       "featurePath": "face.eyes.length",
       "value": 0.42,
-      "semanticLabel": "moderately long",
-      "observableMeaning": "The palpebral fissure reads long relative to its vertical openness.",
+      "semanticLabel": "适度修长",
+      "observableMeaning": "睑裂相对于垂直开度显得修长。",
       "lock": "hard",
       "variationRadius": 0
     },
@@ -54,8 +54,8 @@
       "region": "face",
       "featurePath": "face.eyes.openness",
       "value": -0.24,
-      "semanticLabel": "restrained openness",
-      "observableMeaning": "The eyes remain narrow rather than round or doll-like.",
+      "semanticLabel": "开度克制",
+      "observableMeaning": "眼形保持狭长，不变成圆眼或娃娃眼。",
       "lock": "hard",
       "variationRadius": 0
     },
@@ -64,8 +64,8 @@
       "region": "face",
       "featurePath": "face.eyes.canthal_tilt",
       "value": 0.22,
-      "semanticLabel": "gently upturned",
-      "observableMeaning": "The outer eye corner rises only slightly above the inner corner.",
+      "semanticLabel": "轻微上挑",
+      "observableMeaning": "外眼角仅略高于内眼角。",
       "lock": "hard",
       "variationRadius": 0
     },
@@ -74,8 +74,8 @@
       "region": "face",
       "featurePath": "face.nose.bridge_shape",
       "value": 0.08,
-      "semanticLabel": "naturally straight",
-      "observableMeaning": "The bridge is straight with a soft radix and no exaggerated height.",
+      "semanticLabel": "自然平直",
+      "observableMeaning": "鼻梁平直，鼻根柔和，高度不夸张。",
       "lock": "soft",
       "variationRadius": 0.08
     },
@@ -84,8 +84,8 @@
       "region": "face",
       "featurePath": "face.mouth.corner_angle",
       "value": -0.08,
-      "semanticLabel": "slightly downturned at rest",
-      "observableMeaning": "The resting mouth has mild downward corner tension independent of expression.",
+      "semanticLabel": "静息时轻微下垂",
+      "observableMeaning": "静息嘴角有轻微向下张力，与表情分开记录。",
       "lock": "soft",
       "variationRadius": 0.08
     },
@@ -94,8 +94,8 @@
       "region": "face",
       "featurePath": "face.asymmetry.left_eye_height",
       "value": -0.06,
-      "semanticLabel": "subtle natural asymmetry",
-      "observableMeaning": "The left eye sits imperceptibly lower than the right without anatomical error.",
+      "semanticLabel": "细微自然不对称",
+      "observableMeaning": "左眼略低于右眼，差异细微且没有解剖错误。",
       "lock": "hard",
       "variationRadius": 0
     },
@@ -104,8 +104,8 @@
       "region": "body",
       "featurePath": "body.shoulder.width",
       "value": -0.22,
-      "semanticLabel": "narrow shoulders",
-      "observableMeaning": "The shoulder line is narrow and naturally dropped rather than fragile.",
+      "semanticLabel": "肩幅偏窄",
+      "observableMeaning": "肩线偏窄、自然下落，不显脆弱。",
       "lock": "soft",
       "variationRadius": 0.1
     },
@@ -114,8 +114,8 @@
       "region": "body",
       "featurePath": "body.leg.proportion",
       "value": 0.24,
-      "semanticLabel": "slightly long legs",
-      "observableMeaning": "Leg length is mildly above neutral while retaining plausible adult anatomy.",
+      "semanticLabel": "双腿略长",
+      "observableMeaning": "腿长略高于中性比例，仍符合可信的成人解剖。",
       "lock": "soft",
       "variationRadius": 0.1
     }
@@ -128,7 +128,7 @@
         "axis.face.eyes.length",
         "axis.face.eyes.openness"
       ],
-      "semanticConstraint": "Eyes must remain recognizably long and restrained, never round after any nearby mutation.",
+      "semanticConstraint": "修改相邻特征后，眼睛仍须保持可辨认的修长与克制开度，不能变圆。",
       "priority": "blocking"
     },
     {
@@ -138,7 +138,7 @@
         "axis.face.overall.length",
         "axis.face.cheekbone.prominence"
       ],
-      "semanticConstraint": "High cheek placement must transition into a soft elongated oval without lateral flare.",
+      "semanticConstraint": "高位颧骨应过渡到柔和修长的椭圆脸，不向两侧外扩。",
       "priority": "important"
     },
     {
@@ -148,16 +148,16 @@
         "axis.face.eyes.canthal_tilt",
         "axis.face.asymmetry.left_eye_height"
       ],
-      "semanticConstraint": "Preserve subtle left-right difference while avoiding misalignment artifacts.",
+      "semanticConstraint": "保留细微左右差异，避免错位瑕疵。",
       "priority": "important"
     }
   ],
   "constraintPolicy": {
     "anatomical": [
-      "Preserve plausible adult orbital, nasal, jaw and limb transitions."
+      "保留可信的成人眼眶、鼻部、下颌及肢体过渡。"
     ],
     "relational": [
-      "Structural relations outrank isolated adjective intensity."
+      "结构关系优先于孤立形容词的强度。"
     ],
     "lockRules": {
       "hardBlocksMutation": true,
@@ -181,7 +181,7 @@
       "scope": "face_morphology",
       "transfer": "borrow_observable_semantics",
       "excludedUses": [
-        "Do not copy the source person's identity, hairstyle, makeup or expression."
+        "不复制源人物的身份、发型、妆容或表情。"
       ]
     }
   ],
@@ -191,12 +191,12 @@
       "three_quarter_left",
       "profile_left"
     ],
-    "expression": "Neutral face, relaxed mouth, gaze level.",
-    "grooming": "Hair pulled away from the face with no contour-changing ornament.",
-    "wardrobe": "Simple neutral crew-neck base layer.",
-    "camera": "Consistent eye-level perspective and working distance across views.",
-    "lighting": "Broad neutral soft light that preserves facial planes.",
-    "background": "Uniform neutral gray.",
+    "expression": "中性表情，嘴部放松，视线平齐。",
+    "grooming": "头发收离面部，不佩戴改变轮廓的饰物。",
+    "wardrobe": "简单中性圆领打底衣。",
+    "camera": "各视图保持一致的眼平透视与拍摄距离。",
+    "lighting": "宽面积中性柔光，保留面部体面。",
+    "background": "均匀中性灰。",
     "fixedAcrossViews": true
   },
   "identityLockGate": {
@@ -208,10 +208,10 @@
       "profile_left"
     ],
     "requiredChecks": [
-      "Axis preservation",
-      "Structural relation coherence",
-      "Anatomical plausibility",
-      "Identity stability across neutral views"
+      "语义轴保留",
+      "结构关系连贯",
+      "解剖可信度",
+      "中性多视图间的身份稳定性"
     ],
     "noAutoLock": true
   },
@@ -220,7 +220,7 @@
     "generatesMedia": false,
     "containsProviderWeights": false,
     "humanApprovalRequired": true,
-    "notes": "Provider landmarks, embeddings, mesh morph targets and generation parameters are adapter concerns."
+    "notes": "供应商关键点、嵌入向量、网格形变目标和生成参数由适配层处理。"
   },
   "validation": {
     "semanticAxesProviderNeutral": true,
@@ -244,7 +244,7 @@
     "createdAt": "2026-08-22T12:00:00.000Z",
     "updatedAt": "2026-08-22T12:00:00.000Z",
     "changeLog": [
-      "v1: semantic face and body morphology checkpoint before identity lock"
+      "v1：身份锁定前的面部与身体语义形态检查点"
     ]
   }
 }

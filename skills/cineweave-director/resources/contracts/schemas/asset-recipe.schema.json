@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/asset-recipe.schema.json",
-  "title": "CineWeave Production Asset Recipe",
+  "title": "CineWeave 制作资产方案",
   "type": "object",
   "additionalProperties": false,
   "required": [

@@ -97,22 +97,44 @@ export function checkDelivery(plan) {
 
 async function main(args) {
   if (args.length === 1 && args[0] === "--help") {
-    console.log("Usage: node check-delivery.mjs worksheet.json | --text <exact text>\nRead-only planning helper; see references/optional/video-sound-and-delivery.md.");
+    console.log("用法：node check-delivery.mjs worksheet.json | --text <准确文本>\n只读交付算术工具；参见 references/optional/video-sound-and-delivery.md。");
     return;
   }
   if (args.length === 2 && args[0] === "--text") {
-    console.log(JSON.stringify(countText(args[1]), null, 2));
+    const counts = countText(args[1]);
+    console.log(JSON.stringify({ ...counts, localization: { locale: "zh-CN", hanCharacters: "汉字", codePoints: "Unicode 码点", graphemes: "可见字素簇", summary: "文字计数不是实际语音时长。" } }, null, 2));
     return;
   }
   if (args.length !== 1 || args[0].startsWith("--")) throw new Error("Usage: node check-delivery.mjs worksheet.json | --text <exact text>");
   const result = checkDelivery(JSON.parse(await readFile(args[0], "utf8")));
-  console.log(JSON.stringify(result, null, 2));
+  console.log(JSON.stringify(withChineseDeliverySummary(result), null, 2));
   if (!result.valid) process.exitCode = 1;
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   main(process.argv.slice(2)).catch((error) => {
-    console.error(error.message);
+    console.error("无法完成交付检查，请核对参数、文件和 JSON 内容。原始原因：" + error.message);
     process.exitCode = 1;
   });
+}
+
+
+/** 中文命令行摘要只作展示，原始字段与错误字符串保持兼容。 */
+export function withChineseDeliverySummary(result) {
+  const explain = (message) => {
+    if (message.includes("Han characters")) return "台词汉字数量与预期不一致；原始数量见 detail。";
+    if (/gap|overlap|out-of-order/.test(message)) return "存在时间缺口、重叠或顺序错误；检查镜头／字幕边界。";
+    if (/duplicate id/.test(message)) return "条目标识符重复。";
+    if (/positive duration/.test(message)) return "时间区间必须有正时长。";
+    if (/exceeds totalFrames/.test(message)) return "区间超出成片总帧数。";
+    if (/cover/.test(message)) return "镜头必须完整且连续覆盖成片区间。";
+    if (/millisecond precision/.test(message)) return "字幕时间在毫秒舍入后塌缩为零。";
+    return "交付工作表检查失败，请核对原始细节。";
+  };
+  return { ...result, localization: {
+    locale: "zh-CN",
+    summary: result.valid ? "剪辑覆盖与字幕算术检查通过，实际声音及画面同步仍未核验。" : "检查未通过，不应使用当前 SRT。",
+    errors: result.errors.map((detail) => ({ message: explain(detail), detail })),
+    scope: "仅检查硬切镜头覆盖、单字幕轨和文字计数；字数不等于口播时长，不证明可读性、同步、权利或媒体质量。",
+  } };
 }

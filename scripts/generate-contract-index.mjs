@@ -21,11 +21,11 @@ const filenameOverrides = new Map([
 const supportSchemas = [
   {
     schema: "schemas/common.schema.json",
-    purpose: "Shared identifiers, references, provenance, and receipt definitions.",
+    purpose: "共享标识、引用、来源与回执定义。",
   },
   {
     schema: "schemas/reference-transform.schema.json",
-    purpose: "Shared provider-neutral reference-observation transform definitions.",
+    purpose: "不依赖特定供应商的共享参考观察转换定义。",
   },
 ];
 

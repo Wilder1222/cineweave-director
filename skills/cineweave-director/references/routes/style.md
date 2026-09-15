@@ -1,33 +1,44 @@
-# Route: style
+<a id="route-style"></a>
+# 路由：风格（style）
 
-Use for visual-system design, controlled representation exploration, StylePackage, Character-to-Style translation, compile rules, and representational light grammar.
+用于视觉系统设计、受控表现探索、风格包、人物到风格的转换、编译规则和表现性光照语法。
 
-## Style system
+<a id="style-system"></a>
+## 风格系统
 
-- **Category:** discovery label only.
-- **Atom:** one observable rule with scope, invariants, allowed variation, and forbidden behavior.
-- **Recipe:** compatible atoms in precedence order.
-- **StylePackage:** reusable semantic system.
-- **StyleCompile:** target-specific projection for image, video, character, scene, or page.
+- **Category（类别）：**只用于发现和检索。
+- **Atom（原子规则）：**一条可观察规则，含范围、不变量、允许变化和禁止行为。
+- **Recipe（配方）：**按优先级组合的兼容原子规则。
+- **StylePackage（风格包）：**可复用的语义系统。
+- **StyleCompile（风格编译）：**面向图像、视频、人物、场景或页面的目标化映射。
 
-Do not use a named creator or work as an executable instruction. Resolve references into observable mechanisms: geometry, silhouette, line, surface, shading, color, depth, composition, motion, and temporal behavior. For cinematic style creation or creative revision, read [the adaptive technique catalog](../optional/master-style-presets.md); infer useful techniques without requiring names or switches. Preserve one shared visual baseline across mixed techniques. Existing palette, grading, contrast, texture, representation, and frame shape are not per-master choices. If no baseline exists, propose one shared draft; automatic matching is not approval of a StylePackage. User-named influences remain optional overrides subject to locks.
+不要把创作者或作品名称当成可执行指令。将参考拆为可观察机制：几何、轮廓、线条、表面、明暗、色彩、纵深、构图、运动和时间行为。需要手法比较或具体参考时，阅读[自适应手法库](../optional/master-style-presets.md)相关小节；已有清晰视觉要求时直接编写方案，无需遍历预设。
 
-## Representation
+混合手法仍须继承同一视觉基线。已有色板、调色、反差、纹理、表现体系和画幅不能随名导变化。没有基线时，提出一份共享草稿；自动匹配不等于批准 `StylePackage`。用户指定的影响来源是可选覆盖项，仍服从锁定条件。
 
-Define family, geometry model, surface model, light model, depth model, visual grammar, temporal grammar, abstraction budget, and detail budget by scale. Compile each representation family independently. Do not average photoreal, anime, manga, illustration, and stylized 3D into one ambiguous payload.
+<a id="representation"></a>
+## 表现方式
 
-`RepresentationBinding` maps an exact CharacterSpec into a StylePackage. It states protected anchors, allowed simplification or exaggeration, scale rules, and forbidden transformations. It never mutates Character canon.
+定义表现体系、几何模型、表面模型、光照模型、纵深模型、视觉语法、时间语法，以及各景别的抽象和细节预算。每种体系独立编译，不将写实、动画、漫画、插画和风格化三维平均成含混载荷。
 
-A provider Style Reference, moodboard, profile, or style code is a projection mechanism, not a `StylePackage`, style atom, or Canon authority. Keep provider handles, codes, weights, and compatibility rules in `PromptProjectionPlan`; bind any source image through exact reference observations and preserve its exclusions.
+`RepresentationBinding` 将精确 `CharacterSpec` 映射到 `StylePackage`，明确受保护锚点、允许简化或夸张、景别规则和禁止变形，不改写人物正式设定。
 
-## Controlled exploration
+供应商的风格参考、情绪板、个性化档案或风格码是适配机制，不是 `StylePackage`、风格原子或正式设定权威。平台句柄、代码、权重和兼容规则属于 `PromptProjectionPlan`；源图片通过精确参考观察绑定，并保留排除项。
 
-Compare 2–6 options under one neutral fixture. For controlled comparison change one style axis per option while holding identity, appearance, scene, action, camera, and physical light constant. Early concept exploration may compare multiple axes if each hypothesis is declared and no single-cause conclusion is claimed. Technical qualification and user preference remain separate. Selection creates a new draft; it does not activate a package automatically.
+<a id="controlled-exploration"></a>
+## 受控探索
 
-## Light ownership
+使用同一中性测试条件比较 2–6 个方案。受控比较中，每个方案只改变一个风格维度，保持身份、外观、场景、动作、摄影机和物理光照不变。早期概念可探索多个维度，但要声明各假设，且不得得出单一原因结论。
 
-Scene owns physical sources. Direction owns shot use and exposure relationship. `StyleLightGrammar` owns only representational response such as tonal rolloff, contrast, bloom, ink mass, cel bands, or paint edge behavior.
+技术合格性与用户偏好分开。选中方案只创建新草稿，不自动激活风格包。
 
-Image and video need separate temporal grammar. A still style cannot imply motion consistency.
+<a id="light-ownership"></a>
+## 光照职责
 
-Outputs: `StylePackage`, `RepresentationBinding`, `StyleCompile`, `StyleLightGrammar`.
+场景负责物理光源；导演负责镜头使用方式和曝光关系；`StyleLightGrammar` 仅负责表现响应，例如明暗滚降、反差、泛光、墨色块面、赛璐璐明暗分区或笔触边缘。
+
+图像和视频需要独立时间语法。静帧风格不能证明动态一致性。
+
+可选规范输出（仅在请求结构化交接时）：`StylePackage`、`RepresentationBinding`、`StyleCompile`、`StyleLightGrammar`。
+
+需要比较候选、表情／姿态研究、多视图或资产收敛时，使用[视觉开发](../optional/visual-development.md)；详细维度沿用共同提示词规范。

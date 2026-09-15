@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/scene-state.schema.json",
-  "title": "CineWeave Scene Environmental State",
+  "title": "CineWeave 场景环境状态",
   "type": "object",
   "additionalProperties": false,
   "required": [

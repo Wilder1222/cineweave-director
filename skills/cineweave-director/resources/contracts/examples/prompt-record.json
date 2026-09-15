@@ -16,13 +16,13 @@
     "usedAt": "2026-08-18T12:00:00.000Z"
   },
   "collection": "personal-visual-prompts",
-  "purpose": "管理一个可复用的暖金自然光人物肖像 Prompt，后续只改变人物身份或花园背景，不丢失光线和材质逻辑。",
+  "purpose": "管理一个可复用的暖金自然光人物肖像提示词，后续只改变人物身份或花园背景，不丢失光线和材质逻辑。",
   "sourceText": "一位身穿浅色薄纱服装的女性站在花园中，金色阳光穿过树叶照在她的脸和肩膀上，旁边有白色玫瑰，真实摄影感，浅景深。",
   "tags": [
-    "portrait",
-    "garden",
-    "golden-hour",
-    "reference-ready"
+    "人像",
+    "花园",
+    "黄金时段",
+    "可绑定参考"
   ],
   "styleBinding": {
     "mode": "inline_atoms",
@@ -33,19 +33,19 @@
     ],
     "visualTemporalSeparated": true,
     "preserve": [
-      "natural skin response",
-      "golden leaf-shadow pattern",
-      "soft textile translucency"
+      "自然皮肤材质响应",
+      "金色光线形成的叶影图案",
+      "轻薄织物的半透明表现"
     ],
     "allowedVariation": [
-      "garden density",
-      "light softness",
-      "flower placement"
+      "花园植物密度",
+      "光线柔和程度",
+      "花朵位置"
     ],
     "forbidden": [
-      "plastic skin",
-      "identity replacement by the style reference",
-      "global neon saturation"
+      "塑料皮肤",
+      "风格参考替换人物身份",
+      "全局霓虹式高饱和"
     ]
   },
   "prompt": {
@@ -237,7 +237,7 @@
     "createdAt": "2026-08-18T12:00:00.000Z",
     "updatedAt": "2026-08-18T12:00:00.000Z",
     "changeLog": [
-      "创建通用人物肖像 Prompt 管理记录；电影镜头语言不是必填条件。"
+      "创建通用人物肖像提示词 管理记录；电影镜头语言不是必填条件。"
     ]
   },
   "validation": {

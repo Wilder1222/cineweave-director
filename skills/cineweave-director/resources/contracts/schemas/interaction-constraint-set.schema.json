@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/interaction-constraint-set.schema.json",
-  "title": "CineWeave Shot Interaction Constraint Set",
+  "title": "CineWeave 镜头交互约束集",
   "type": "object",
   "additionalProperties": false,
   "required": [

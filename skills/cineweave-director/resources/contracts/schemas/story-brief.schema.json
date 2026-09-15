@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/story-brief.schema.json",
-  "title": "CineWeave Story Brief",
+  "title": "CineWeave 故事简报",
   "type": "object",
   "additionalProperties": false,
   "required": [

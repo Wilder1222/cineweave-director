@@ -127,25 +127,25 @@
     },
     "surfaceProfile": {
       "baselineComplexion": {
-        "toneRange": "light warm-neutral human complexion",
-        "undertone": "neutral peach with restrained warmth"
+        "toneRange": "浅暖中性的人类肤色",
+        "undertone": "中性桃色，暖感克制"
       },
       "regionalVariation": [
         {
           "region": "eyelids",
-          "behavior": "Slightly warmer than the outer cheeks."
+          "behavior": "比外侧脸颊略暖。"
         },
         {
           "region": "nose",
-          "behavior": "Subtle natural warmth around the nose tip and alar region."
+          "behavior": "鼻尖及鼻翼附近有细微自然暖色。"
         },
         {
           "region": "under_eye",
-          "behavior": "Age-appropriate tonal transition remains visible."
+          "behavior": "保留符合年龄的色调过渡。"
         },
         {
           "region": "neck",
-          "behavior": "Naturally a little cooler and darker than central facial planes."
+          "behavior": "比面部中央体面自然略冷、略暗。"
         }
       ],
       "microTexture": {
@@ -155,20 +155,20 @@
         "fineLines": "age_appropriate"
       },
       "eyes": {
-        "scleraTone": "natural off-white rather than pure white",
+        "scleraTone": "自然灰白，非纯白",
         "tearLineMoisture": "natural"
       },
       "lips": {
         "naturalLines": true,
-        "edgeCharacter": "Soft natural edge with mild left-right asymmetry."
+        "edgeCharacter": "边缘自然柔和，有轻微左右不对称。"
       },
       "persistentMarks": [
-        "Very faint freckles near the nasal bridge."
+        "鼻梁附近有极淡雀斑。"
       ],
       "forbidden": [
-        "Porcelain uniformity",
-        "Beauty-filter smoothing",
-        "Lighting or makeup encoded as identity"
+        "瓷器般均匀肤色",
+        "美颜滤镜磨皮",
+        "将光照或妆容编码为身份"
       ],
       "calibration": {
         "providerNeutral": true,
@@ -367,7 +367,7 @@
     "createdAt": "2026-08-19T12:00:00.000Z",
     "updatedAt": "2026-08-19T12:00:00.000Z",
     "changeLog": [
-      "v1: establish narrative core, identity anchors, body rhythm, motion fingerprint and behavior states"
+      "v1：建立叙事核心、身份锚点、身体比例节奏、动作特征与行为状态"
     ]
   },
   "contractVersion": "2.0.0"

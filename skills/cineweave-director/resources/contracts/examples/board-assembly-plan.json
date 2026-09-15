@@ -83,7 +83,7 @@
       "regionId": "turnaround",
       "row": 0,
       "column": 0,
-      "label": "FRONT VIEW",
+      "label": "正面视图",
       "required": true,
       "fit": "contain",
       "minimumPixelDimensions": "1600x2400"
@@ -95,7 +95,7 @@
       "regionId": "turnaround",
       "row": 0,
       "column": 1,
-      "label": "SIDE VIEW",
+      "label": "侧面视图",
       "required": true,
       "fit": "contain",
       "minimumPixelDimensions": "1600x2400"
@@ -107,7 +107,7 @@
       "regionId": "turnaround",
       "row": 0,
       "column": 2,
-      "label": "BACK VIEW",
+      "label": "背面视图",
       "required": true,
       "fit": "contain",
       "minimumPixelDimensions": "1600x2400"
@@ -119,7 +119,7 @@
       "regionId": "details",
       "row": 0,
       "column": 0,
-      "label": "FACE · FRONT",
+      "label": "面部 · 正面",
       "required": true,
       "fit": "contain",
       "minimumPixelDimensions": "1600x1600"
@@ -131,7 +131,7 @@
       "regionId": "details",
       "row": 0,
       "column": 1,
-      "label": "FACE · 3/4",
+      "label": "面部 · 四分之三侧面",
       "required": true,
       "fit": "contain",
       "minimumPixelDimensions": "1600x1600"
@@ -143,7 +143,7 @@
       "regionId": "details",
       "row": 0,
       "column": 2,
-      "label": "FACE · PROFILE",
+      "label": "面部 · 侧面",
       "required": true,
       "fit": "contain",
       "minimumPixelDimensions": "1600x1600"
@@ -155,7 +155,7 @@
       "regionId": "details",
       "row": 1,
       "column": 0,
-      "label": "HAIR & HEADWEAR",
+      "label": "头发与头饰",
       "required": true,
       "fit": "contain",
       "minimumPixelDimensions": "1600x1600"
@@ -167,7 +167,7 @@
       "regionId": "details",
       "row": 1,
       "column": 1,
-      "label": "SHOULDER & BODICE",
+      "label": "肩部与上衣",
       "required": true,
       "fit": "contain",
       "minimumPixelDimensions": "1600x1600"
@@ -179,7 +179,7 @@
       "regionId": "details",
       "row": 1,
       "column": 2,
-      "label": "HAND & MATERIAL",
+      "label": "手部与材质",
       "required": true,
       "fit": "contain",
       "minimumPixelDimensions": "1600x1600"
@@ -191,7 +191,7 @@
       "regionId": "details",
       "row": 2,
       "column": 0,
-      "label": "FULL BODY",
+      "label": "全身",
       "required": true,
       "fit": "contain",
       "minimumPixelDimensions": "1600x1600"
@@ -203,7 +203,7 @@
       "regionId": "details",
       "row": 2,
       "column": 1,
-      "label": "COSTUME MOTION",
+      "label": "服装动态",
       "required": true,
       "fit": "contain",
       "minimumPixelDimensions": "1600x1600"
@@ -215,7 +215,7 @@
       "regionId": "details",
       "row": 2,
       "column": 2,
-      "label": "MOOD PORTRAIT",
+      "label": "情绪肖像",
       "required": true,
       "fit": "contain",
       "minimumPixelDimensions": "1600x1600"
@@ -252,7 +252,7 @@
     "createdAt": "2026-08-22T13:00:00.000Z",
     "updatedAt": "2026-08-22T13:00:00.000Z",
     "changeLog": [
-      "v1: deterministic top turnaround plus 3x3 character/costume detail board"
+      "v1：确定性拼版，顶部三视图配合 3×3 人物与服装细节板"
     ]
   }
 }

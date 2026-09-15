@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/camera-previs-spec.schema.json",
-  "title": "CineWeave Director Camera Previsualization Specification",
-  "description": "Optional provider-neutral camera geometry and optics handoff derived from an exact directed shot.",
+  "title": "CineWeave 导演摄影机预演规范",
+  "description": "由精确导演镜头派生的可选平台无关摄影机几何与光学交接。",
   "type": "object",
   "additionalProperties": false,
   "required": [

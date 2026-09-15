@@ -1,7 +1,7 @@
 {
   "$id": "https://cineweave.dev/contracts/world-bible.schema.json",
-  "title": "CineWeave World Bible",
-  "description": "Versioned authority for world laws, geography, societies, history, narrative constraints and physical visual baseline.",
+  "title": "CineWeave 世界设定",
+  "description": "世界规律、地理、社会、历史、叙事约束及物理视觉基线的版本化依据。",
   "type": "object",
   "additionalProperties": false,
   "required": ["kind", "contractVersion", "worldId", "title", "version", "status", "premise", "canon", "systems", "geography", "societies", "history", "narrativeConstraints", "visualBaseline", "continuityPolicy", "unknowns", "locks", "validation", "skillReceipt", "provenance"],

@@ -81,12 +81,12 @@
   },
   "inheritancePolicy": {
     "preserve": [
-      "character_identity",
-      "scene_geography",
-      "camera",
-      "composition",
-      "lighting",
-      "style"
+      "人物身份",
+      "场景地理",
+      "摄影机",
+      "构图",
+      "光照",
+      "风格"
     ],
     "allowOverrides": [
       "camera.motion",
@@ -136,7 +136,7 @@
     "createdAt": "2026-09-02T03:30:00.000Z",
     "updatedAt": "2026-09-02T03:30:00.000Z",
     "changeLog": [
-      "v1: exact hero frame anchor with separated camera, composition, appearance and scene inheritance policy"
+      "v1：精确主视觉帧锚点，分别定义摄影机、构图、外观和场景继承规则"
     ]
   }
 }

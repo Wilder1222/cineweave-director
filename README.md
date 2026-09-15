@@ -1,209 +1,94 @@
-<p align="center">
-  <img src="assets/cineweave-director-logo.png" alt="CineWeave Director logo" width="160">
-</p>
+<p align="center"><img src="assets/cineweave-director-logo.png" alt="CineWeave 导演标志" width="160"></p>
+<h1 align="center">CineWeave 导演</h1>
+<p align="center">从想法到故事、角色资产、分镜与提示词的中文 AIGC 创作 Skill。</p>
 
-<h1 align="center">CineWeave Director</h1>
+输入一句创意、一段剧本或参考素材，得到当前需要的可编辑创作稿。可以只写一条生图提示词，也可以开发完整短片；复杂资料随任务读取，创作者无需理解数据契约。
 
-<p align="center">
-  One self-contained Codex Skill for full-cycle, evidence-aware AIGC creative direction.
-</p>
+## 开始创作
 
-<p align="center">
-  <a href="https://github.com/Wilder1222/cineweave-director/actions/workflows/validate.yml"><img alt="Validation" src="https://img.shields.io/github/actions/workflow/status/Wilder1222/cineweave-director/validate.yml?branch=main&style=flat-square&label=validation"></a>
-  <img alt="Codex plugin" src="https://img.shields.io/badge/Codex-Plugin-1D6FFF?style=flat-square">
-  <img alt="Version 3.1.0" src="https://img.shields.io/badge/version-3.1.0-14B8A6?style=flat-square">
-  <img alt="License MIT" src="https://img.shields.io/badge/license-MIT-111827?style=flat-square">
-</p>
+要完整交付，可直接提出“开发一部短片并生成全套提示词”。[短片创作流程](skills/cineweave-director/references/optional/short-film-creation.md)统一叙事、视觉开发、导演摄影、配音和剪辑；[完整样例《留一盏灯》](skills/cineweave-director/references/optional/short-film-example.md)展示每项可复制稿，不用自行补齐被省略的镜头。
 
-CineWeave Director turns a rough idea, existing creative artifacts, or exact visual references into the smallest useful set of editable world, story, character, scene, style, action, shot, storyboard, prompt, projection, planning, review, and repair artifacts. It is one Skill with internal routes—not a chain of hidden agents, sibling Skills, a product CLI, or a runtime.
+支持文字驱动单镜／多镜视频、单首帧、首尾帧、全能参考，以及九宫格或其他分镜参考板的视频规划。先按任务选择输入条件和镜头组织，再交付对应稿件；不要求每条路径先生成首尾帧。实际模型和界面支持分别核验。多镜头任务按依赖安排试片、候选筛选、局部修复和剪辑验收；普通创作直接交付中文稿，JSON 契约与节点标签按需要启用。
 
-It is deliberately **non-executing**. It does not call image/video providers, install models, run adapters, ingest private media, publish, approve, or claim that media was generated. Provider-specific output stops at an evidence-backed projection and explicit human handoff; production output stops at plans, controls, rights gates, and review requirements.
-
-## Capabilities
-
-| Internal route | Use it for | Canonical outputs |
-| --- | --- | --- |
-| `brief_world` | intake, workflow scope, world laws and canon | `CreativeBrief`, `WorkflowPlan`, `WorldBible` |
-| `story` | premise, causal beats, screenplay scenes and continuity | `StoryBrief`, `BeatSheet`, `ScriptScene`, `ContinuityLedger` |
-| `character` | identity, morphology, appearance, behavior and performance | character specs, bindings and timelines |
-| `scene` | geography, architecture, materials, state and physical light | scene specs, constraints and bindings |
-| `style` | visual representation and cross-medium translation | `StylePackage`, representation and light grammar |
-| `reference_evidence` | visible evidence, rights, exact reference roles and aliases | reference assets, observations, bindings and alias registry |
-| `action` | fights, pursuits, escapes and multi-beat interaction | `ActionSequenceSpec` |
-| `shot_direction` | blocking, attention, camera, shot light, time and hero frames | shot, temporal, lighting and previs contracts |
-| `storyboard_rhythm` | coverage, panels, sequence timing and transitions | `Storyboard`, `SequenceRhythmSpec` |
-| `image_prompt` | Prompt Canon, reference transforms and optional provider projection | `PromptRecord`, `ImagePrompt`, `PromptProjectionPlan` |
-| `production_plan` | assets, assembly, editorial/color intent, controls and feasibility | non-executing production-plan contracts |
-| `review_repair` | evidence-based benchmark/review and bounded single-variable repair | `ControlBenchmark`, `ControlBenchmarkReview`, `CreativeReview`, `RepairPlan` |
-
-The Skill loads only the routes needed by the request. Original design may advance through labeled exploration and draft choices within delegated scope. Existing-asset facts, rights and hard capabilities stay unresolved until supported; proposals never silently become approved Canon.
-
-## Creator intents
-
-Creators do not need to know the 12 route IDs or 52 contract kinds. The Skill maps natural requests such as “build a complete character asset family”, “analyze only this costume reference”, “design this shot”, “create a storyboard”, “compile a Midjourney prompt”, or “review this candidate” to the smallest route set. These creator intents are thin routing shortcuts inside the same Skill—not commands, additional Skills, or execution endpoints.
-
-The default uses the existing `professional` interaction depth with a **professional-lite presentation profile**: retain exact authority, evidence, locks, and human gates, but present a concise human-readable artifact and one next action. `professional-lite` is not a fifth `inputMode`, route, or contract value. Canonical JSON is emitted only when requested or when an existing contract workflow requires it.
-
-## Directing and cinematography craft
-
-The [film-craft learning map](skills/cineweave-director/references/optional/film-craft-study.md), researched on 2026-09-08, connects public AFI, NFTS, La Fémis, FTII, Weston, ARRI, and practitioner material to three optional decision guides:
-
-- [Directing](skills/cineweave-director/references/optional/directing-craft.md): audience knowledge, playable performance, relational blocking, held shots versus coverage, and purposeful omission.
-- [Cinematography](skills/cineweave-director/references/optional/cinematography-craft.md): viewpoint versus focal length, source geometry, contrast/material response, motivated motion, and shot matching.
-- [Editing and sound](skills/cineweave-director/references/optional/editing-sound-craft.md): cut motivation, perceptual rhythm, listening perspective, sound bridges, and selective layers.
-
-Each craft guide supplies conditions, tradeoffs, failure signals, and review checks. The learning map distinguishes consulted text from course previews and unavailable media, and includes eight behavioral evaluation cases. They have not been independently benchmarked; release validation proves packaging and contract consistency, not artistic mastery. No new contract kind, provider execution, or paid-course content is introduced.
-
-### Automatic technique adaptation, one consistent look
-
-The [master-inspired method library](skills/cineweave-director/references/optional/master-style-presets.md) covers Hitchcock, Kurosawa, Wong Kar-wai, Anderson/Yeoman, Cuarón/Lubezki, Deakins, Martel, and Varda. During creative shot/sequence design, the Skill automatically matches methods to dramatic purpose, audience knowledge, relationships, space, medium, and constraints. No creator name, preset switch, or strength setting is required. It selects compatible techniques by dimension, resolves competing inferred choices, and returns the actual direction with a brief rationale. No suitable match is valid; explicit user choices and exclusions take precedence.
-
-Techniques may mix; the visual treatment remains coherent. Every shot inherits [one shared look baseline](skills/cineweave-director/references/core/visual-bible-and-continuity.md): palette, grading intent, color-temperature relationships, contrast/rolloff, skin/material rendering, grain/optical texture, and aspect ratio. A new master influence never silently changes the grade. If no baseline is supplied, the Skill proposes one shared provisional draft rather than styling each shot independently. Exact translation/compilation, browsing, review, and single-variable repair retain their original scope. Twelve manual evaluation cases cover automatic matching, abstention, overrides, continuity, and visual consistency; they are not independently verified model benchmarks.
+完整影像方案按真实拍摄逻辑统一空间与轴线、构图、摄影、灯光、收音、场记和剪辑；输出场次基线、逐镜卡、图像／视频／声音稿及验收点。详细方法见[拍摄系统与部门协同](skills/cineweave-director/references/optional/prompt-detail-standard.md#拍摄系统与部门协同)。
 
 ```text
-用 $cineweave-director。三人告别，一人想挽留却只谈归还雨伞。
-按场景自动选择适合的调度、构图和节奏，手法可以混用，
-但全段沿用已有的统一调色、材质表现和画幅，不改变人物、服装或场景设定。
+使用 $cineweave-director。为原创纸灯节写一条海报提示词，
+竖版，画面中央留出标题区域，细节由你设计。
 ```
 
 ```text
-用 $cineweave-director。三人在桌旁谈事，最安静的人最后取得主导。
-不使用特写或低角度，也不改变房间布局。给出一个调度方案和一个有意义的备选，
-说明观众如何看出关系变化、各自代价，以及看样片时应检查什么。
+使用 $cineweave-director。把“信使归还一把钥匙”写成 12 秒无声短片。
+给出角色资产、三个镜头、每镜首帧与视频运动提示词，保持空间连续。
 ```
-
-## Install in Codex
-
-Install an immutable release rather than a moving branch. This repository includes a single-entry [marketplace manifest](.agents/plugins/marketplace.json) following the [Codex plugin packaging guidance](https://developers.openai.com/codex/plugins/build/):
-
-```bash
-codex plugin marketplace add Wilder1222/cineweave-director --ref v3.1.0
-codex plugin add cineweave-director@cineweave-director
-```
-
-The manifest's `policy.authentication: ON_INSTALL` is the required Codex marketplace timing policy; it is not a claim that this Skill needs credentials. The plugin declares no MCP server, app integration, provider adapter, or external execution surface.
-
-Start a new task after installation so Codex discovers `$cineweave-director`.
-
-## Use
-
-A multi-route request can start broad while still producing only necessary artifacts:
 
 ```text
-Use $cineweave-director. Develop this short-film idea into the smallest complete
-set of world, story, character, scene, style, action, shot, storyboard and image-
-prompt artifacts. Preserve my exact references and unknown rights, stop at human
-approval gates, and do not claim that a provider was called.
+使用 $cineweave-director。先设计一张九宫格分镜参考图，再写整板参考的视频提示词。
+明确每格对应镜头或动作阶段、阅读顺序和时长；整板参考，不必逐镜制作首尾帧。
 ```
-
-A bounded request can enter one route directly:
 
 ```text
-Use $cineweave-director for shot_direction only. Stage this approved recognition
-beat with blocking, attention order, lens perspective, motivated physical light,
-a stable end state and continuity locks. Return a ShotSpec, not an image prompt.
+使用 $cineweave-director。保留这张角色图的脸与服装，
+设计她把灯笼递向镜头的图生视频提示词，包含表情、运镜和剪辑余量。
 ```
 
-For canonical JSON, name the desired artifact or ask the Skill to select the smallest root kind. The distribution contains 52 root contracts, 54 local schemas, and 52 canonical fixtures. Fixtures demonstrate structure only: their hashes, receipts, IDs, rights, and approvals are not real-world evidence.
+默认充分展开人物表情、动作、妆发服饰、肌肤与仪态，场景类型、结构、材质和色调，以及镜头与视频动作时序。采用专业术语并说明具体可见结果；完整清单和连贯示例见[提示词细节规范](skills/cineweave-director/references/optional/prompt-detail-standard.md)。精简的是重复内容，创作稿不以短为目标。
 
-## Midjourney projection
+默认简体中文。准确台词、字幕、标题和专有名称按用户原文保留；只有明确要求时提供其他语言稿。普通提示词直接给可复制正文，需要节点化交付时才添加适用的中文标签。
 
-Prompt Canon remains provider-neutral. When Midjourney is explicitly requested, the `image_prompt` route may create a separate `PromptProjectionPlan` that pins an exact source prompt, capability profile, model, surface, official compatibility evidence, structured parameter tail, typed reference slots, one-variable experiments, hidden-default checks, manual handoff, and exact return checklist.
+## 能做什么
 
-The time-bounded [Midjourney projection guide](skills/cineweave-director/references/optional/midjourney-projection.md) was verified on 2026-09-02 against official Midjourney documentation and selected GitHub implementations. It does not automate a browser or provider API. A copy-ready prompt is still only a plan; execution verification requires accessible original files and exact job metadata. Bounded visual review can proceed from accessible images with missing metadata explicitly unknown.
+| 创作任务 | 交付内容 |
+| --- | --- |
+| 故事与短剧 | 世界背景、梗概、因果节拍、场次、台词及连续性 |
+| 人物／场景／道具资产 | 稳定身份、当前外观、空间与材质、视图计划、提示词 |
+| 单图与视觉开发 | 主体、动作瞬间、取景、光线、质感及针对性负向约束 |
+| 分镜与图生视频 | 逐镜初态、动作、终态、运镜、表演、声音及剪辑余量 |
+| 参考与修复 | 参考职责分工、可见问题、保留项、最小修改及复查点 |
 
-## Creative-control model
+创作时保留同一人物、服装、空间和视觉基线。每句提示词应有可见作用，避免堆叠空泛修饰；首帧画面与视频过程分开，不用一张静帧证明整段动作完成。完整演示见[三镜头创作示例](skills/cineweave-director/references/optional/creative-workflow-evaluation.md#worked-three-shot-draft)。
 
-The default dependency direction is:
+这是创作与规划 Skill，不调用生成平台，也不把计划当作媒体结果。模型参数、参考槽位和时长档位按实际界面核验；没有素材时可以提供方案，不能虚构观察。
 
-```text
-World → Story → Character / Scene / Style / Reference
-      → Action / Shot → Storyboard / Rhythm → Prompt Canon
-      → optional Provider Projection → Production Plan → Review / Repair
-```
+## 按需使用的指南
 
-Routes may be skipped, but dependencies do not run backward. World laws are not style; story causality is not camera direction; identity is not appearance or representation; physical light is not color grading; prompt wording is not canon; provider flags cannot mutate Prompt Canon; a production plan is not execution; a review requires actual evidence; and a repair changes one owning variable while preserving passing dimensions.
+- [Skill 入口](skills/cineweave-director/SKILL.md)：交付规模、创作顺序与领域路由。
+- [镜头工作台](skills/cineweave-director/references/optional/shot-design-workbench.md)：注意力、动作瞬间与关键帧准备度。
+- [节点标签](skills/cineweave-director/references/optional/tagged-video-nodes.md)：各类型只填写适用内容。
+- [表演与运镜](skills/cineweave-director/references/optional/video-performance-direction.md)：台词、情绪、表情、动作与特效。
+- [平台适配](skills/cineweave-director/references/optional/video-platform-adaptation.md)与[剪辑余量](skills/cineweave-director/references/optional/video-timing-and-handles.md)：参考、时长与人工交接。
+- [连续性](skills/cineweave-director/references/core/visual-bible-and-continuity.md)与[诊断](skills/cineweave-director/references/optional/generation-diagnostics.md)：保留已通过部分，修复明确问题。
 
-## Contracts and compatibility
+## 使用当前源码
 
-There are three non-competing machine authorities:
+当前中文与创作增强尚未发布，版本号仍为 `3.1.0`；旧 `v3.1.0` 标签不包含本工作树改动。将当前仓库的 `skills/cineweave-director/` 完整目录放入宿主的技能目录，或按宿主支持方式加载当前源码。不要只复制 `SKILL.md`，它需要相邻参考与脚本。
 
-- [`contracts.json`](skills/cineweave-director/contracts.json) owns route IDs, route reference baselines, root kinds, and output ownership.
-- [`reference-lifecycle.json`](skills/cineweave-director/reference-lifecycle.json) owns the distributable knowledge allowlist and typed load contexts.
-- [`resources/contracts/index.json`](skills/cineweave-director/resources/contracts/index.json) owns the schema/example inventory, domains, and raw-byte SHA-256 values.
+仓库维护者可先构建 `.build/cineweave-director`，该目录包含完整插件分发内容。旧版安装说明与版本发布约定见[贡献指南](CONTRIBUTING.md)。
 
-JSON Schema defines the structural wire shape, including each artifact's `contractVersion`. `validate-output.mjs` additionally enforces release-local semantic truth for route ownership, dependency and deliverable closure, evidence-bound review decisions, and non-execution claims; WorkflowPlan validation resolves `contracts.json` from the same Skill directory rather than borrowing authority from another checkout, without equating the Skill release version to the artifact wire version.
+## 可选检查与结构化交付
 
-ShotCompilerPlan validation also resolves that local ownership authority and checks parameter/control agreement, declared exact dependencies, and trace-to-handoff consistency. Capability planning rejects unresolved hard requirements marked eligible and invalid fallback IDs. These checks validate the supplied document's consistency; verifying external manifest, registry, or capability evidence still requires the exact source artifacts.
-
-`SKILL.md` is the human activation and routing entry point; it does not redefine those machine inventories. The plugin/Skill distribution version is `3.1.0`. Individual artifact `contractVersion` values remain at compatible 2.x wire versions where no breaking wire change was required; plugin version and artifact wire version are intentionally independent.
-
-## Drafts, revisions, and evaluation
-
-The working tree adds explicit exploration, draft, and final maturity without changing contract status enums. A request to develop a concept authorizes reversible creative drafting; final authority and external actions keep their own boundaries. Non-canonical working JSON can preserve unresolved metadata without fabricated hashes or receipts.
-
-- [Draft and change impact](skills/cineweave-director/references/optional/drafts-and-change-impact.md): promotion, selective invalidation, and restart checkpoints.
-- [Video, sound and delivery](skills/cineweave-director/references/optional/video-sound-and-delivery.md): temporal handoff, cues, delivery variants and iteration limits.
-- [Worked workflow and evaluation](skills/cineweave-director/references/optional/creative-workflow-evaluation.md): three shots from character to repair, plus eight fresh-task cases and scoring. These are evaluation materials, not claims of completed model/media tests.
-
-These additions are included in the `v3.1.0` release.
-
-## Development
-
-Node.js 22 or newer is required. The repository is a private, dependency-free development harness and has no install step. CI invokes the concrete entrypoints below rather than mutable package aliases:
+只读检查器需要 Node.js 22+，普通创作不需要运行脚本：
 
 ```powershell
-node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs tests/check-delivery.test.mjs
-node scripts/generate-contract-index.mjs --check
-node scripts/validate-repository.mjs
-node scripts/build-plugin-bundle.mjs
-node scripts/validate-repository.mjs --bundle .build/cineweave-director
+node skills/cineweave-director/scripts/check-delivery.mjs --text "值得专程回来"
+node skills/cineweave-director/scripts/check-delivery.mjs worksheet.json
+node skills/cineweave-director/scripts/check-video-plan.mjs workbook.json
 ```
 
-The equivalent `npm` scripts remain convenience aliases, and repository validation requires their commands to match these entrypoints exactly.
+前者检查字数、成片时间线与字幕，后者检查节点、参考声明和生成余量。它们不验证真实媒体效果或平台能力。
 
-- The tests check strict JSON/JCS, schema-validation primitives, full-schema target/review/repair roundtrips, immutable hash revisions, and delivery arithmetic.
-- Source validation checks plugin identity, frontmatter/agent metadata, exact scripts and CI entrypoints, route/lifecycle authority, typed load contexts, fail-closed schema keywords and formats, confined local `$ref` closure, semantic workflow/review invariants, raw-byte hashes, receipt identity, all 52 canonical examples, clean source boundaries, and the dynamically derived distribution inventory.
-- The build creates `.build/cineweave-director/` by copying the declared base resources (including the read-only delivery helper) and the lifecycle/index-derived allowlist. The current source inventory is 145 regular files; the builder does not hardcode that count.
-- Bundle validation rejects missing, changed, linked, case-colliding, traversing, or extra files and proves source/bundle byte equality.
+系统集成需要规范 JSON 时，按[契约索引](skills/cineweave-director/resources/contracts/index.json)读取对应 schema 与示例；工作稿不必填写整套协议。机器字段、枚举、参数及哈希保持兼容，说明与创作文本使用中文。示例中的许可、引用和回执是模拟数据。
 
-RepairPlan validation rejects contradictory approval, malformed target pointers and duplicate check IDs. For optional cross-artifact checks:
+## 维护与验证
 
 ```powershell
-node scripts/validate-output.mjs path/to/repair-plan.schema.json path/to/repair.json --artifacts path/to/registry.json
+npm test
+npm run contracts:index:check
+npm run validate
+npm run build
+npm run validate:bundle
 ```
 
-The supplied registry is an array of `{ "ref": { "kind", "id", "version", "contentHash" }, "document": { ... } }` bindings (notation only; fill real values). The validator checks exact binding equality, JCS UTF-8 SHA-256, source review ID/version and finding/domain, and target JSON-pointer existence. It never fetches media. Registry identity authority, upstream target relationships, and visual preservation may remain `unverified`. `valid: true` means the implemented checks passed, not that production or all evidence passed. Source/target documents should also be validated against their own schemas. Missing bindings remain unverified rather than being fabricated; the CLI returns these limitations explicitly. Distribution hashes continue to use raw bytes.
+修改 schema 或规范示例后先执行 `npm run contracts:index` 重建字节索引。Skill 知识按[加载清单](skills/cineweave-director/reference-lifecycle.json)分发，开发评测留在 `tests/evaluations/`。结构校验、中文审阅和真实创作效果分别验收。
 
-Regenerate the contract index only after intentional contract changes:
-
-```powershell
-node scripts/generate-contract-index.mjs
-node scripts/generate-contract-index.mjs --check
-```
-
-The Unreleased working tree includes a self-contained planning helper at `skills/cineweave-director/scripts/check-delivery.mjs`. It requires Node.js 22+ only when used, accepts a local worksheet or `--text`, and writes nothing. See the [video/sound guide](skills/cineweave-director/references/optional/video-sound-and-delivery.md) for its input, rational-timebase conventions and limits. It does not execute production or inspect media. The released `v3.1.0` tag remains unchanged; these additions are not in that installed release.
-
-See the [review-driven optimization and validation record](tests/evaluations/2026-09-08.md) for implemented changes, behavioral checks and untested media scenarios.
-
-## Repository layout
-
-```text
-.codex-plugin/plugin.json           Codex plugin metadata
-skills/cineweave-director/          complete distributable Skill
-  SKILL.md                           creator-intent routing and hard boundaries
-  contracts.json                    12 routes and 52 root kinds
-  reference-lifecycle.json          typed 31-file knowledge allowlist
-  references/                       core, routed and optional knowledge
-  resources/contracts/              54 schemas, 52 examples and hash index
-  scripts/check-delivery.mjs         optional read-only planning arithmetic (Node 22+)
-scripts/                             dependency-free validation/build tooling
-tests/                               validation primitive tests
-assets/                              repository branding; not bundled
-```
-
-See [CONTRIBUTING.md](CONTRIBUTING.md) before changing routes, contracts, references, or provider dialects, and [SECURITY.md](SECURITY.md) for reporting and trust boundaries.
-
-## License
-
-[MIT](LICENSE) © Wilder1222.
+实现取舍与来源见[贡献指南](CONTRIBUTING.md#创作-skill-设计依据)。安全说明见[SECURITY.md](SECURITY.md)，许可证为 [MIT](LICENSE)。

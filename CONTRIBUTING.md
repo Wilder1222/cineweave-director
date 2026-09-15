@@ -1,43 +1,40 @@
-# Contributing to CineWeave Director
+# CineWeave 导演贡献指南
 
-Contributions must preserve the central invariant: this repository distributes one self-contained, non-executing AIGC creative-director Skill. Story, character, scene, style, reference, direction, prompt, production, and review are internal routes, not sibling Skills or hidden agents.
+保持核心不变量：仓库只分发一个自包含、非执行型 AIGC 导演 Skill。故事、人物、场景、风格、参考、导演、提示词、制作及评审都是内部路由，不是兄弟 Skill 或隐藏智能体。
 
-## Before changing behavior
+## 修改行为之前
 
-1. Identify the user goal and the smallest owning internal route.
-2. Preserve one-way dependencies and domain authority; do not move facts into a downstream prompt or shot merely for convenience.
-3. Keep `SKILL.md` focused on routing, boundaries, and the essential operating sequence.
-4. Put durable detail in the matching `references/core`, `references/routes`, or `references/optional` document, then update `reference-lifecycle.json`.
-5. When an exchange format changes, update its local schema, canonical example, `contracts.json` when applicable, and regenerate the contract index.
-6. Keep Prompt Canon provider-neutral. Provider model/surface syntax is allowed only in a separate `PromptProjectionPlan` with dated official evidence, explicit compatibility checks, and a human handoff.
-7. Do not add provider calls, browser automation, adapters, runtime state, product CLI commands, executable production methods, credentials, or claims of generated media.
+先确定用户目标及最小所属路由，保持单向依赖与领域权威。不要为了方便把事实挪进下游提示词。`SKILL.md` 聚焦路由、边界和必要顺序，长期细节放在匹配的 core／routes／optional 文档并登记生命周期。
 
-## Contracts
+交换格式变化时，修改本地 schema、规范示例、必要的 `contracts.json`，然后重建索引。提示词母稿保持平台中立；模型／界面语法只进入有日期官方证据、兼容检查和人工交接的 `PromptProjectionPlan`。
 
-- Every root kind is owned by exactly one of the 12 routes in `skills/cineweave-director/contracts.json`.
-- A root schema and canonical example must agree on `kind` and `contractVersion`.
-- `$ref` values must resolve within `resources/contracts/schemas`; network, absolute, and escaping refs are not allowed.
-- Examples are structural fixtures. Every `skillReceipt` uses the release repository and Skill ref, but fixture IDs, hashes, rights, jobs, outputs, and approvals are never observed facts.
-- Skill/plugin version and artifact wire version are independent. Do not mass-change compatible 2.x `contractVersion` values merely to match a 3.x release.
-- Run `npm run contracts:index` only after contract and example bytes are final, then commit the resulting hash index with those files.
+不加入平台调用、浏览器自动化、生成适配器、运行时状态、产品 CLI、生产执行方法、凭据或已生成媒体声明。
 
-## Provider projection
+## 中文与协议兼容
 
-A provider dialect is a replaceable projection of exact Prompt Canon—not a source of Canon. Keep model version, surface, flags, parameter ranges, reference slots, provider handles/codes, hidden defaults, and compatibility evidence in `PromptProjectionPlan`.
+创作者可见说明、Skill 知识、正负向提示词、展开稿、平台复制稿、规范与非规范示例中的自然语言值以及帮助默认简体中文。英文机器 ID、路径、JSON 键、枚举、真实引用、版本和哈希保持不变。既有精确台词／字幕不因中文默认而被改写。专业术语以中文为主，必要时附英文对照。
 
-Time-sensitive provider guidance belongs in `references/optional` with a visible `verifiedAt`, inline links to primary sources, a revalidation condition, and clear unsupported/unknown cases. Community projects may inform structure and experiment design only; respect their licenses and do not copy unlicensed prompt corpora or media.
+中文标题保留被引用的旧锚点；逐项检查相对链接。新增 UI 文案要同步插件清单、市场清单和 agent 元数据。不能把整个 schema 或规范夹具目录豁免：其自然语言注释、标题和提示词要检查，类型、枚举、引用和标识不改。修改字节后同步索引，并测试机器结构与非字符串值未变。保留许可证授权原文；不得以未经注明的译文替代它。不使用无作用域的全局字符串替换处理协议。命令行可以增加中文摘要，但原始程序字段和诊断需保持可用；测试必须覆盖实际执行的中文呈现代码。
 
-Projection output must stop at a copy-ready manual handoff and request exact returned metadata/files. A submission screen, prompt, seed, provider code, or capability claim is not evidence that an image exists or passed review.
+## 数据契约
 
-## References and media
+每种根 kind 只属于 12 路由中的一个；schema 和示例的 `kind`、`contractVersion` 一致。`$ref` 必须位于本地 schema 目录内，拒绝网络、绝对和越界引用。示例只是结构夹具，安装回执格式虽须匹配发布仓库和 Skill，但示例 ID、哈希、权利、任务及批准不是观察事实。
 
-Only files listed in `reference-lifecycle.json` are distributable knowledge. Add a reference only when it has a clear load condition and does not duplicate an existing invariant.
+插件／Skill 版本与产物线版本独立，不为匹配 3.x 发布或中文化而批量改兼容的 2.x 契约。契约和示例最终确定后才运行 `npm run contracts:index`，索引与文件一起提交。
 
-Do not add user uploads, production stills, private documents, signed URLs, or media with unknown redistribution rights. Public binary assets require documented provenance and rights. Reference analysis must separate visible evidence, inference, user declarations, and unknowns; likeness and license decisions remain explicit human gates.
+## 平台适配
 
-## Validation
+平台方言只是准确母稿的可替换适配，不是正式设定来源。模型、界面、参数、范围、槽位、代码、账号默认值和兼容证据放 `PromptProjectionPlan`。时效性指南放 optional，保留 `verifiedAt`、原始来源链接、重查条件和不支持／未知情况。社区项目只借结构和试验设计，遵守许可，不复制权利不明提示词库或媒体。
 
-Use Node.js 22 or newer. No dependency installation is required.
+适配止于可复制的人工交接，并索取准确返回元数据和文件。提交页面、seed、代码、能力说明或提示词不证明图片存在或合格。中文化旧研究不会刷新它的核验日期。
+
+## 参考与媒体
+
+只有 `reference-lifecycle.json` 登记的资料属于可分发知识；新增须有明确加载条件，不重复不变量。不加入用户上传、生产剧照、私密文档、签名 URL 或权利不明媒体。公开二进制也需来源和权利说明。可见证据、推断、用户声明和未知分开，肖像与许可保留人工关卡。
+
+## 验证
+
+Node.js 22+，无需安装依赖：
 
 ```powershell
 npm test
@@ -46,13 +43,43 @@ npm run build
 npm run validate:bundle
 ```
 
-The build allowlist is derived from `reference-lifecycle.json` and `resources/contracts/index.json`; never hardcode a file count. The build must remain a byte-identical copy with no transforms, schema flattening, path rewriting, generated prompts, or hidden dependencies. A passing schema check does not replace representative fresh-task review in Codex.
+分发清单由声明的基础资源、生命周期和契约索引派生，不硬编码文件数。构建必须字节相同，不转换、扁平化 schema、改路径、生成提示词或引入隐藏依赖。schema 通过不能代替代表性新任务评审。
 
-The fixed base-resource allowlist also includes the optional read-only `skills/cineweave-director/scripts/check-delivery.mjs` planning helper. Keep it self-contained and free of provider calls, media generation, configuration changes, or writes. Changes to its calculation input must update the video/sound guide and regression tests together. Run it from the built bundle to verify installation independence. Evaluation records under `tests/evaluations/` are development evidence and are not distributed with the Skill.
+基础白名单包含只读 `skills/cineweave-director/scripts/check-delivery.mjs` 和本轮新增的 `check-video-plan.mjs`。保持自包含，不调用平台、生成媒体、改配置或写文件。计算输入变化时同步视频指南与回归测试；从完整构建包运行工具验证安装独立性。`tests/evaluations/` 是开发证据，不分发到 Skill。
 
-## Changes and releases
+## 变更和发布
 
-- Keep commits focused and use an explanatory subject.
-- Do not rewrite another contributor's work or public history without explicit coordination.
-- Update `CHANGELOG.md` for user-visible behavior, contract, knowledge, or distribution changes.
-- Treat release tags as immutable; installation documentation must pin a tag or exact commit, never a moving branch.
+提交保持聚焦、说明清楚。未经协调不改写他人工作或公开历史。用户可见行为、契约、知识、分发变化记录到 `CHANGELOG.md`。标签不可变，安装文档固定标签或准确提交，不指向移动分支。本中文工作树未发布，不能移动旧 `v3.1.0` 标签来伪装新版。
+
+## 冗余清理与内容审计
+
+同一规则只保留一个权威来源：入口负责路由，细则放入按条件加载的指南，类型归属继续由 `contracts.json` 管理。只有交付目标和加载时机一致的指南才合并；合并时保留独有规则与原章节锚点，同时更新引用和生命周期清单。不能为减少文件数而删除必需的 schema、规范示例、回归测试或许可证。
+
+删除前列出精确路径、源哈希、保留目标和理由。重复资源需要逐字节相等；合并文档需要检查内容迁移；两者均应检查计划应用后的所有受跟踪文本和新增文件，不留下失效引用。实际写入前再验证工作区；失败时恢复本次已修改或删除的文件。
+
+测试从唯一覆盖稿与必要固定输入临时组装，不提交永久的整套测试源码副本。保留能解释结果的当前证据，旧报告留在版本历史或原交付包。中文审计检查正文、嵌套提示词和 schema 自然语言注释；缺失资源、重复键和未处理候选不能记为完成。测试通过、翻译覆盖和媒体验收分别报告。
+
+## 创作 Skill 设计依据
+
+2026-09-14 对照以下固定版本源码，独立改写适用方法，不复制外部完整提示词库或强制审美：
+
+| 来源 | 采用的方法 | 在本项目中的落点 |
+| --- | --- | --- |
+| [小优视觉导演](https://github.com/wubo0927/xiaoyou-aigc-cinematic-director/blob/13686c146c98b3e2af3b44423472e1e59af4ae92/cinematic-director/SKILL.md) | 先选择注意力、动作瞬间和摄影关系，再组织提示词 | 镜头工作台和入口的可见内容选择；不继承必须模拟会议、人物总是比例尺或固定英文输出 |
+| [DirectorSKILL](https://github.com/wuwangzhang1216/DirectorSKILL/blob/c65ae0d14457053efb1e354c7e7f7e120d97fad1/SKILL.md) | 按交付物路由、限制输出规模、按小节加载 | 单图可直接交付，完整项目分阶段展开；专项知识不以一般路由自动触发 |
+| [关键帧模板](https://github.com/wuwangzhang1216/DirectorSKILL/blob/c65ae0d14457053efb1e354c7e7f7e120d97fad1/assets/keyframe-prompt-template.md) | 静帧姿态、身份不变量、场景光源与逐镜取景分开 | 三镜头中文示例分别给首帧、运动、终态与剪辑窗口，不把连续动作写成一张图 |
+
+创作入口保留决定下一步所需的信息。测试数据移入 `tests/evaluations/`；维护审计不进入日常创作指令。机器契约保留为可选结构化交付，不继续扩张为运行时或生成平台。清理的目标是减少创作上下文负担，而非单纯降低文件数。
+
+中文复查需区分自然语言与协议值：schema 的 `enum`、`const`、字段路径、能力名称、单位和 OCIO 配置中的准确视图名称保留。自由描述（包括单词形式的材料、情绪、保留项）应译成中文；仅检测长英文段落不能证明已完成。现有规范示例内的版本、许可与模拟回执含义不随翻译改变。
+
+发布前运行完整验证并实际审阅代表性创作任务；当前仓库的静态检查不证明真实模型创作效果。旧版插件安装固定 `v3.1.0`：
+
+```bash
+codex plugin marketplace add Wilder1222/cineweave-director --ref v3.1.0
+codex plugin add cineweave-director@cineweave-director
+```
+
+该旧标签不包含当前未发布中文改动。新的发布应使用新的不可变版本，不能移动旧标签。
+
+完整短片与视觉开发的后续调研、固定源码依据、方法取舍及实现落点见[研究报告](tests/evaluations/aigc-creation-research-2026-09-14.md)。报告保存在开发证据中，不随日常 Skill 加载。

@@ -100,7 +100,7 @@
     "createdAt": "2026-09-02T04:10:00.000Z",
     "updatedAt": "2026-09-02T04:10:00.000Z",
     "changeLog": [
-      "v1: scoped @Asset aliases resolve only to exact immutable contract refs"
+      "v1：限定作用域的 @Asset 别名只解析到精确且不可变的契约引用"
     ]
   }
 }

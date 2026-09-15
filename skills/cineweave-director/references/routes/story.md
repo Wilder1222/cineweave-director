@@ -1,46 +1,44 @@
-# Route: story
+<a id="route-story"></a>
+# 路由：故事（story）
 
-Use for premise development, dramatic structure, beat sheets, screenplay scenes, dialogue intent, and story continuity. Story owns causality, not camera direction.
+用于前提开发、戏剧结构、节拍表、剧本场景、对白意图和故事连续性。故事负责因果，不负责摄影机设计。
 
-## Story foundation
+<a id="story-foundation"></a>
+## 故事基础
 
-The causal criteria below apply to dramatic story development. An explicitly observational or associative brief can instead enter shot/storyboard design around a perceptual unit; do not invent conflict or an ending to force that brief into a BeatSheet. For knowledge access, playable tactics, or staging handoff read [directing craft](../optional/directing-craft.md).
+完整短片先给可读梗概、因果节拍及可表演剧本，再交导演与分镜展开。说明观众何时知道什么以及结尾留下的变化；短时长不强制三幕比例或反转，既有故事不为套模板而改变。
 
-Define one dramatic question and a protagonist with want, need, fear, contradiction, and stakes. State the ending direction early enough to test whether the premise can close.
+以下因果标准适用于戏剧性故事开发。明确的观察式或联想式简报，可以围绕感知单元直接进入镜头／分镜设计，不要为了套入 `BeatSheet` 而编造冲突或结局。涉及人物所知、可表演策略或调度交接时，阅读[导演方法](../optional/directing-craft.md)。
 
-Every beat must contain:
+定义一个核心戏剧问题，以及主角的欲望、需要、恐惧、矛盾和风险代价。及早明确结局方向，以检验故事前提是否能够闭合。
 
-`objective → conflict → tactic or choice → changed state → cause of next beat`
+每个节拍应包含：
 
-A beat that changes no knowledge, possession, relationship, position, pressure, or commitment is not a causal beat. Remove decorative repetition.
+`目标 → 冲突 → 策略或选择 → 状态改变 → 下一节拍的原因`
 
-## Scene writing
+若没有改变认知、持有物、关系、位置、压力或承诺，就不是因果节拍。删除装饰性重复。
 
-For each scene write:
+<a id="scene-writing"></a>
+## 场景写作
 
-- entry state and who knows what;
-- objective and obstacle;
-- tactics that can be played by an actor;
-- turn or revelation;
-- costly choice;
-- exit state that causes the next scene.
+每场戏写明进入状态及各人所知、目标与阻碍、演员可执行的策略、转折或揭示、有代价的选择，以及引发下一场戏的退出状态。
 
-Dialogue is action: conceal, test, provoke, reassure, deflect, bargain, confess, or refuse. Convert internal statements into observable behavior or playable subtext. Do not insert lenses, shot sizes, camera moves, or provider language into `ScriptScene`.
+对白是行动，可以用于隐瞒、试探、挑衅、安抚、转移、讨价还价、坦白或拒绝。将内心陈述转换为可观察行为或可表演的潜台词。`ScriptScene` 中不要写焦距、景别、运镜或供应商语法。
 
-## Continuity
+中文是默认创作语言，不是改写既定台词的授权。已指定对白、字幕和人物名逐字保留；语气与表演说明单独标注。
 
-Track setup/payoff, knowledge, possession, location, relationship, promise, injury, and irreversible decisions. Bind the exact `WorldBible` and approved Character/Scene facts when they matter. If two sources conflict, expose both; do not choose the newest silently.
+<a id="continuity"></a>
+## 连续性
 
-Use `changed` when a motivated event explains the transition. Use `broken` only when no valid cause exists.
+跟踪铺垫／回收、认知、持有物、位置、关系、承诺、伤情和不可逆选择。相关时绑定精确 `WorldBible` 及已批准人物／场景事实。两个来源矛盾时同时指出，不默选较新版本。
 
-## Quality gate
+有事件动机解释的变化使用 `changed`；只有不存在有效原因时才使用 `broken`。
 
-- one dramatic question;
-- escalating stakes and active choices;
-- every beat causes the next;
-- scene entry and exit states differ;
-- dialogue has tactics and subtext;
-- world rules constrain action rather than decorate exposition;
-- no camera or prompt ownership drift.
+<a id="quality-gate"></a>
+## 质量关卡
 
-Outputs: `StoryBrief`, `BeatSheet`, `ScriptScene`, `ContinuityLedger`.
+一个核心戏剧问题；递增的代价与主动选择；节拍之间有因果；场景进入和退出状态不同；对白含策略与潜台词；世界规则约束行动而非装饰说明；故事职责不漂移到摄影机或提示词。
+
+可选规范输出（仅在请求结构化交接时）：`StoryBrief`、`BeatSheet`、`ScriptScene`、`ContinuityLedger`。
+
+完整短片的跨领域交付与逐项完成标准见[全套创作流程](../optional/short-film-creation.md)，各阶段应沿用同一故事、资产与镜头清单。

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/reference-observation.schema.json",
-  "title": "CineWeave Role-scoped Reference Observation",
+  "title": "CineWeave 限定职责的参考观察",
   "type": "object",
   "additionalProperties": false,
   "required": [

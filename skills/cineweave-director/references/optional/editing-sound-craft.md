@@ -1,59 +1,55 @@
-# Optional: editing and sound craft — attention through time
+<a id="optional-editing-and-sound-craft--attention-through-time"></a>
+# 可选参考：剪辑与声音方法，组织时间中的注意力
 
-Load for coverage choices, pacing, suspense, transitions, sound bridges, or a sequence that feels ineffective despite attractive shots. Use [editorial-color.md](editorial-color.md) for technical handoff. This guide designs an edit; it does not claim to assemble, listen to, or screen unavailable media.
+用于覆盖、节奏、悬念、转场、声音桥，或镜头漂亮但整段失效的情况。技术交接参见[剪辑与调色](video-sound-and-delivery.md#editorial)。本指南设计剪辑，不声称装配、听过或放映了不可访问媒体。
 
-## Decide why the image changes
+<a id="decide-why-the-image-changes"></a>
+## 明确为什么切换画面
 
-For each proposed cut, name its work: redirect attention, expose or withhold information, change alignment, omit time, contrast two ideas, or deliberately disrupt orientation. A cut on every spoken line often misses the listener's decisive action. A cut on every musical beat can erase dramatic differences. Either pattern may still be an intentional choice.
+每个切点需有工作：转移注意力、披露／暂缓信息、改变立场、省略时间、对照思想或有意打破方向感。每句对白都切镜，可能漏掉倾听者关键动作；每个音乐拍点都切，可能抹平戏剧差异。但两者也可以是有意选择。
 
-Compare the outgoing and incoming shot at the boundary:
+比较切点前后：注意力从哪里交给哪里？动作阶段、视线、方向、声音或图形特征中，哪项承载连接？什么改变、什么连续？有意断裂是否读得懂？早切是否失去期待，晚切是保留反应还是重复？
 
-- Where is attention just before the cut, and what receives it afterward?
-- What action phase, gaze, direction, sound, or graphic feature carries the connection?
-- What is new, and what remains continuous? Is the intended discontinuity intelligible?
-- Would cutting earlier remove anticipation? Would cutting later preserve a useful reaction or merely repeat it?
+轴线匹配不是绝对审美定律。故意越轴时，保留最低必要方向信息并说明代价／收益。匹配剪辑除形状相似，还需语义关系，否则只是装饰。
 
-Do not turn conventional axis matching into an absolute aesthetic law. If crossing is intentional, preserve the minimum orientation the scene still needs and identify the expressive cost/benefit. A match cut needs a semantic relationship as well as a similar shape; otherwise it is just decoration.
+<a id="choose-coverage-from-the-cut-backward"></a>
+## 从剪辑需要反推覆盖
 
-## Choose coverage from the cut backward
+索要更多镜头前，先判断缺少方向、铺垫、决定、反应、结果还是时间桥。一个共享镜头可承担多项功能，不要求每场对白都用主镜头加两个单人镜头。
 
-Before asking for more shots, identify missing editorial functions: orientation, setup, decision, reaction, consequence, or a needed temporal bridge. One shared shot can cover multiple functions. Do not require a master plus two singles for every dialogue scene.
+每个不可缺少的转场需规划出镜状态、入镜状态及足够动作／停留，以支持切点。实际源素材余量不可访问时仍未知，文字续写不能创造余量。序列按声明的整数帧边界连续；源素材余量与时间线占用分开。
 
-For each indispensable transition, plan the outgoing state, incoming state, and sufficient action/hold to permit the intended cut. Unavailable source handles remain unknown; a written continuation does not create them. Sequence windows stay contiguous at their declared integer-frame boundaries; source handles are separate from timeline occupancy.
+省略时间需保留足够因果，让观众理解省略。平行剪辑需建立空间关系，明确同时性是已知、暗示还是有意含混。不得添加故事未提供的期限或因果连接。
 
-For ellipsis, retain enough cause and consequence to make the omitted time understandable. For parallel editing, establish the relation between spaces and clarify whether simultaneity is known, suggested, or intentionally ambiguous. Do not invent a deadline or causal link absent from Story.
+<a id="rhythm-is-not-average-shot-length"></a>
+## 节奏不等于平均镜头长度
 
-## Rhythm is not average shot length
+分开镜头时长、新信息速度、表演速度、摄影机速度、视觉复杂度和声音密度。长镜头可能急促，短静帧也可能沉思。呼吸点围绕感知、后果、倾听或联想设计，不按类型固定秒数。
 
-Distinguish shot duration, rate of new information, performance tempo, camera speed, visual complexity, and sound density. A long shot may be frantic; short still images may feel contemplative. Plan breathing points around perception, aftermath, listening, or association—not a fixed number of seconds per genre.
+马特尔通过时间和声音空间谈节奏，而非节拍器式排列。应据此测试持续注意，不将其变成“拉美式缓慢”的预设。[BFI《扎马》访谈](https://www.bfi.org.uk/interviews/lucrecia-martel-time-zama)
 
-Martel discusses rhythm through time and sonic space rather than treating cinema as a sequence of metronomic beats. Use that as a reason to test sustained attention, not a preset for “Latin American slowness.” [BFI: Lucrecia Martel and Zama](https://www.bfi.org.uk/interviews/lucrecia-martel-time-zama)
+锁定 `SequenceRhythmSpec` 前先选有理数帧率，窗口、阶段和转场以实际 schema 为准。动态分镜或实返素材支持之前，时间保持暂定。稳定终态是明确、可续接的状态，不是覆盖已批准节奏的强制定格。
 
-Choose a rational frame rate before locking `SequenceRhythmSpec`; use the actual schema for windows, phases, and transitions. Make timing provisional until an animatic or returned takes support it. A stable end is a defined, continuable state, not a mandatory freeze that overrides the approved rhythm.
+<a id="listening-perspective-and-offscreen-space"></a>
+## 听觉视点与画外空间
 
-## Listening perspective and offscreen space
+把声音当成信息和视点，不自动当背景气氛。
 
-Treat sound as information and point of view, not automatic atmosphere:
+命名声源，或明确标为主观／联想声音；说明谁能听到、观众是否知道位置、何时显出来源或始终不显出。画面切换前先出现的声音可预告新空间，延续声音可让旧场景覆盖新画面；写清时间／空间关系，避免误示同时性。
 
-- Name the source or explicitly mark subjective/associative sound. Specify who can hear it, whether the viewer knows its location, and when the source becomes visible if ever.
-- An incoming sound before a picture change can prepare a new space; a carried sound can sustain the prior scene over a new image. State the intended time/space relation so the bridge does not imply accidental simultaneity.
-- For tension, test a changed familiar sound or an absent expected sound before adding a score cue. Silence may mean reduced ambience, lost source, subjective withdrawal, or near-total silence; say which.
-- Choose foreground, secondary, and background priorities for the current beat. If dialogue, rain, footsteps, music, and object cues all compete, decide what may recede.
+制造紧张前，先测试熟悉声音发生变化、或预期声音缺席，再考虑配乐。沉默可能是环境减弱、声源消失、主观抽离或近乎无声，需说明是哪一种。
 
-Murch's own essay explores image/sound reassociation and the loss of intelligibility when justified layers compete. CineWeave uses this to motivate selective listening and subtraction; it does not adopt a fixed maximum number of sound tracks or universal psychological law. [Walter Murch: Womb Tone / Dense Clarity – Clear Density](https://transom.org/2005/walter-murch/)
+为当前节拍选前景、次要和背景优先级。对白、雨、脚步、音乐、物件线索竞争时，决定哪些退后。
 
-Sound notes are human-readable planning notes until mapped to supported fields in `TemporalSpec` and editorial planning contracts. Do not invent a new sound contract or encode unheard audio as visible evidence.
+Murch 的文章讨论声画重新关联，以及合理声层相互竞争导致可懂度下降。本项目据此选择听觉和做减法，不采用固定最大音轨数或普遍心理定律。[Walter Murch 文章](https://transom.org/2005/walter-murch/)
 
-## Review and minimal repair
+声音说明先是可读规划笔记，映射后才进入 `TemporalSpec` 及剪辑规划契约支持的字段。不自造声音契约，也不把没听到的音频标为可见证据。
 
-When accessible media exists, compare: image with sound; image without sound; sound without image. These passes diagnose different contributions, not a demand that each isolated pass communicate the whole film. Record the exact file/version and time range; the proposed split does not mean it was performed.
+<a id="review-and-minimal-repair"></a>
+## 评审与最小修复
 
-Classify the failure before repairing:
+媒体可访问时，比较声画一起、无声画面、只有声音三个版本。它们诊断不同贡献，不要求每种孤立版本都讲完整部片。记录精确文件／版本和时间范围；提出该检查不等于实际完成。
 
-- Missing setup or consequence → Story/coverage, not a faster cut.
-- Wrong audience knowledge at the boundary → selected shot/reveal order.
-- Listener's turn lost → coverage or cut timing, not louder music.
-- Clear image but drowned cue → sound priority in planning; actual mix repair remains external.
-- Temporal jitter/contact failure → owning motion/action dimension, not concealment by a stylish transition.
+先分类再修复：缺铺垫或结果归故事／覆盖，不是加快切镜；切点的观众认知错误归镜头选择／揭示顺序；倾听者转折丢失归覆盖／切点，不是调响音乐；画面清楚但关键声音被盖住归声音优先级，实际混音修复仍属外部；时间抖动／接触失败归运动／动作，而非用漂亮转场遮盖。
 
-Keep passing dimensions fixed. A prose sequence can be reviewed for planning logic; emotional effect, audio intelligibility, and actual continuity remain unverified until viewed/heard. Never infer audience response solely from a numerical rhythm plan.
+保持通过维度不变。文字序列可评规划逻辑；情感效果、声音可懂度和真实连续性，需看／听后才验证。不能单凭数字节奏计划推断观众反应。

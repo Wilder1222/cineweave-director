@@ -1,133 +1,178 @@
-# Optional: adaptive master-inspired treatments / 大师风格自动适配
+<a id="optional-adaptive-master-inspired-treatments--大师风格自动适配"></a>
+# 可选参考：导演手法自动适配
 
-Load when creating or creatively revising shots, scene direction, cinematic style, or sequence rhythm, even when no creator is named. **Automatically match useful mechanisms to the brief; no preset switch, name, or strength setting is required.** Also load for explicit requests to browse, name, combine, adjust, or remove an influence. Adaptation creates an editable draft treatment, not a new identity, location, story, approval, provider setting, or guarantee of fidelity to a creator.
+需要比较镜头、调度、风格或节奏手法，或用户明确指定、组合、调整影响来源时加载相关小节。先按简报选择可用机制，不要求填写导演名字或强度设置；已有明确方案时不必加载。本库提供可编辑手法草稿，不改变人物、地点、故事或平台设置，也不保证复现某位创作者。
 
-Catalog revision: 2; source research snapshot 2026-09-08. These are original CineWeave interpretations of selected craft ideas, not official artist presets, endorsements, exhaustive career summaries, or copies of film scenes. Credits include collaborators where relevant. Source notes distinguish testimony from our proposed implementation.
+目录修订：2；来源研究快照：2026-09-08。这些是 CineWeave 对部分创作思想的原创解释，不是官方艺术家预设、背书、完整生涯总结或电影场景复制。相关时注明合作者，并区分来源证言与本项目提出的实现方法。
 
-## Recognize and adapt
+<a id="recognize-and-adapt"></a>
+## 识别与适配
 
-Start from the scene, not a request for configuration. The names and IDs below organize a method library; they are optional user overrides, not required inputs, executable commands, or canonical artifact refs.
+从场景出发，不先索要配置。下列名字和 ID 用于组织方法库，是可选覆盖项，不是必填输入、可执行命令或规范产物引用。
 
-| ID | 可选名称 | 适合的创作目标 |
+| ID | 可选名称 | 适合目标 |
 | --- | --- | --- |
-| `hitchcock-suspense` | 希区柯克 / Alfred Hitchcock：受控悬念 | 知情差、危险预告、延迟揭示 |
-| `kurosawa-ensemble` | 黑泽明 / Akira Kurosawa：群像与行动选择 | 多人关系变化、行动因果、去除装饰镜头 |
-| `wong-withheld-intimacy` | 王家卫 / Wong Kar-wai：含蓄亲密与错过 | 未说出口的关系、遮挡、重复中的变化 |
-| `anderson-tableau` | 韦斯·安德森 / Wes Anderson，Robert Yeoman：精密画面 | 正面构图、群体秩序、空间喜剧 |
-| `cuaron-lubezki-immersion` | 阿方索·卡隆 / Alfonso Cuarón，Emmanuel Lubezki：沉浸长镜头 | 连续空间中的发现、同行视角、现场感 |
-| `deakins-source-led` | 罗杰·狄金斯 / Roger Deakins：光源驱动的克制摄影 | 用已有光源组织人物、环境和注意力 |
-| `martel-sonic-space` | 卢奎西亚·马特尔 / Lucrecia Martel：声音空间 | 画外事件、主观聆听、悬而未决的时间 |
-| `varda-essay-observation` | 阿涅斯·瓦尔达 / Agnès Varda：散文式观察 | 日常物件、个人视角、观察与联想 |
+| `hitchcock-suspense` | 希区柯克：受控悬念 | 知情差、危险预告、延迟揭示 |
+| `kurosawa-ensemble` | 黑泽明：群像与行动选择 | 多人关系变化、行动因果、删去装饰镜头 |
+| `wong-withheld-intimacy` | 王家卫：含蓄亲密与错过 | 未说出口的关系、遮挡、重复中的变化 |
+| `anderson-tableau` | 韦斯·安德森／罗伯特·耶曼：精密画面 | 正面构图、群体秩序、空间喜剧 |
+| `cuaron-lubezki-immersion` | 阿方索·卡隆／艾曼努尔·卢贝兹基：沉浸连续性 | 连续空间中的发现、同行视角、现场感 |
+| `deakins-source-led` | 罗杰·狄金斯：光源驱动 | 用已有光源组织人物、环境、注意力 |
+| `martel-sonic-space` | 卢奎西亚·马特尔：声音空间 | 画外事件、主观聆听、悬而未决的时间 |
+| `varda-essay-observation` | 阿涅斯·瓦尔达：散文式观察 | 日常物件、个人视角、观察与联想 |
 
-1. **Extract the creative problem:** intended audience experience; who knows what and when; relationship/pressure and observable behavior; usable space/light; medium/duration; existing sequence grammar; and protected facts. Use supplied evidence, not nationality, genre, or the word “cinematic” alone. Do not infer real people's emotions or user tastes from identity.
-2. **Find a mechanism, not a personality match:** use the menu to shortlist relevant cards, then inspect their treatment and avoidance checks. For example, privileged audience knowledge may justify controlled disclosure; an unfinished exchange may justify withheld framing; a change of group alignment may justify ensemble blocking. A cue suggests a candidate, not an automatic whole-card assignment.
-3. **Filter before adopting:** reject mechanisms that conflict with the approved story, topology, source light, representation, performance locks, medium, or known capability. Missing capability is not support. A still image cannot realize sound or temporal effects. Never invent a reference or source to improve the apparent match.
-4. **Compose the smallest coherent treatment:** choose the most useful mechanism for each relevant dimension. Compare contribution to the brief, compatibility with the ongoing sequence, readability, and feasibility. Resolve competing inferred candidates yourself using those criteria; prefer the simpler, less intrusive option when equally suitable. Do not ask the user to choose among inferred presets as a routine step.
-5. **Draft and explain briefly:** deliver the requested shot/sequence directly, with a short rationale for consequential choices, e.g. “让观众先发现跟随者，保留人物不回头的动作，因此采用延迟确认与克制的镜头变化。” Mention creator names only if requested or useful; never substitute a list of names for actual direction.
+1. **提取创作问题：**观众体验、谁何时知道什么、关系／压力与可见行为、可用空间／光源、媒介／时长、既有序列语法及保护事实。依据已提供证据，不单凭国籍、类型或“电影感”。不从身份推断真人情绪或用户品味。
+2. **找机制，而非人格匹配：**先筛相关卡，再查看方法和禁用检查。观众先知可能适合控制披露，未完成交流可能适合暂缓展示，群体站队改变可能适合群像调度。线索只提示候选，不自动整卡采用。
+3. **先过滤再采用：**排除与已批准故事、拓扑、源光、表现方式、表演锁、媒介或已知能力冲突的机制。缺少能力证据不是支持。静帧不能实现声音或时间效果，也不能为提高匹配度编造参考或来源。
+4. **组合最小一致方案：**每个相关维度选最有用机制，比较其对简报的贡献、与当前段落的兼容性、可读性和可行性。自行解决推断候选之间的竞争，同等适合时优先简单、侵入小的方案。不把让用户选择推断预设作为固定步骤。
+5. **直接交付，简述理由：**输出所需镜头／序列，只解释重大决定。例如“让观众先发现跟随者，保留人物不回头的动作，因此采用延迟确认与克制的镜头变化。”只有有用或用户要求时才提导演名字，不用名字列表替代实际导演设计。
 
-Use only relevant craft dimensions: staging, performance, composition, camera, shot lighting, rhythm, sound. Inherit palette/representation and grading from the shared visual baseline; they are not automatically mixed from the cards. The cards' default dimensions are candidate areas, not an indivisible bundle. Adapt intensity to the scene: small cues for restrained intent; more pronounced geometry, duration, or sonic contrast only when the brief supports it. Natural instructions such as “更克制” or “再夸张一点” suffice; do not present required toggles, numeric weights, or a light/medium/strong questionnaire.
+只使用相关维度：调度、表演、构图、摄影机、镜头光照、节奏、声音。色板、表现方式和调色继承共享基线，不从不同卡片自动拼接。默认维度只是候选范围，不是不可拆套餐。克制意图采用小线索；更明显的几何、时长或声音反差需简报支持。“更克制”“再夸张一点”足够，不强制数字权重、开关或轻／中／强问卷。
 
-If useful for revision, keep compact human-readable notes: brief cue → chosen mechanism and dimension → card ID/revision if used → preserved facts → rejected conflict or unknown → next check. These are **not additional JSON fields**, computed confidence scores, or provider weights. No synthetic affinity percentage is needed.
+修订需要时保留简短记录：简报线索 → 选中机制及维度 → 卡 ID／修订号 → 保留事实 → 排除冲突或未知项 → 下一项检查。这不是新增 JSON 字段、计算置信度或平台权重，不需要虚构匹配百分比。
 
-## Boundaries and continuity
+<a id="boundaries-and-continuity"></a>
+## 边界与连续性
 
-- **No suitable match is valid.** If evidence is weak or all mechanisms conflict, use neutral craft reasoning and a conservative draft within scope. State the assumption when it matters; do not force a famous name onto every scene or ask a preference question merely to classify it. Ask only when an unresolved hard fact or contradictory explicit requirements prevent a useful safe draft.
-- **Explicit instructions still win.** Precedence is approved facts/hard locks → explicit user choices or exclusions → compatible established sequence grammar → automatic per-dimension choices → generic defaults. A named influence may guide the draft, but cannot overrule a locked fact. Conflicting explicit requirements need a focused clarification or separate labeled alternatives; do not silently pick one.
-- **Blend by dimension, not by averaging.** Automatically combine different cards when they solve different aspects of the same brief, with one coherent choice per dimension. Resolve inferred camera/tempo conflicts before drafting. Do not stack references to demonstrate breadth.
-- **Preserve sequence coherence.** Reassess when a beat, constraint, or medium changes, but do not restyle each shot independently. Keep accepted palette, source logic, camera grammar, and performance continuity unless the story motivates a change. Draft adaptation does not approve a new project-wide StylePackage or silently revise Canon.
-- **Mix techniques; keep one look.** Follow [the shared visual baseline](../core/visual-bible-and-continuity.md). Across masters and shots, preserve grading, color-temperature relationships, saturation, contrast/rolloff, material rendering, optical texture, and aspect ratio. A lighting technique must fit that baseline and the actual source geometry. If no look is supplied, establish one provisional shared draft; do not invent a new look per shot. A story-motivated physical change is not permission to silently replace the common grade.
-- **Respect request type.** Browsing, explanations, reviews, exact prompt compilation/translation, and validation are not authorization to restyle an existing artifact. Recommend only when that is what was requested. In a single-variable repair, preserve all other passing dimensions.
-- **Respect exclusions without a switch UI.** “不要大师风格” means use neutral craft for that scope; “只改构图” limits automatic selection to composition. Removing an earlier treatment preserves subsequent explicit edits. Restore only a known baseline; if none exists, offer a neutral draft without claiming to restore history. Never delete approved artifacts.
+- **没有合适匹配也是有效结果。**证据弱或机制均冲突时，用中性创作方法提供保守草稿。重要假设要说明，不必给每场戏贴名导，也不为分类而询问偏好。只有未解决硬事实或矛盾显式要求阻止有用草稿时才聚焦询问。
+- **显式指令优先。**已批准事实／硬锁 → 用户选择或排除 → 兼容的既有序列语法 → 自动维度选择 → 通用默认。点名影响不能推翻硬锁。显式要求冲突时提出聚焦问题或分别标注替代方案，不默选。
+- **按维度融合，不做平均。**不同卡解决同一简报不同方面时可自动组合，每个维度保持一个一致选择。先解决推断的摄影机／节奏冲突，不为展示知识面堆参考。
+- **保留段落一致性。**节拍、约束或媒介变化时复评，不逐镜重新风格化。除有故事动机外，保留色板、光源逻辑、摄影机语法和表演连续性。草稿适配不批准新全局风格包，也不暗改正式设定。
+- **手法可混合，视觉保持统一。**遵循[共享视觉基线](../core/visual-bible-and-continuity.md)，保留调色、色温关系、饱和度、反差／滚降、材质、光学纹理和画幅。用光手法必须符合基线及实际光源几何。无基线时建立一份共享草稿；故事引发的照明变化不授权更换共同调色。
+- **尊重任务类型。**浏览、解释、评审、精确编译／翻译和验证，不授权重做既有产物风格。只在请求需要时推荐；单变量修复保留所有已通过维度。
+- **无需开关也要尊重排除。**“不要大师风格”即该范围采用中性方法；“只改构图”就限制到构图。移除旧处理时保留后续显式编辑。仅恢复已知基线；没有则提出中性草稿，不伪称恢复历史，更不能删除已批准产物。
 
-## 1. Hitchcock — controlled suspense
+<a id="1-hitchcock--controlled-suspense"></a>
+## 1. 希区柯克：受控悬念
 
-- **Default dimensions:** staging, composition, rhythm; camera only when a reveal needs changed access.
-- **Draft treatment:** distinguish audience knowledge from character knowledge; establish the consequential object or offscreen cue, then retain access to the unaware person's action. Move or cut on a change of knowledge, not simply to add energy. Use a reaction only when it changes interpretation.
-- **Adjust:** before/with/after-character disclosure; how much of the decisive object is initially visible; duration of anticipation; static observation versus motivated reveal.
-- **Avoid / check:** not useful when the brief prohibits threat or privileged audience knowledge. Verify that no insert reveals the answer too early and that waiting has a readable object. Do not add a crime, weapon, or surprise ending to fit the preset.
-- **Basis:** Hitchcock's [ASC interview](https://theasc.com/article/flashback-hitchcock-talks-about-lights-camera-action/) supports integrated dramatic/technical planning and motivated source light. This suspense configuration is CineWeave synthesis, not a transcription of that interview or a claim about every Hitchcock film.
+**默认维度：**调度、构图、节奏；只有揭示需要改变信息可见性时才调整摄影机。
 
-## 2. Kurosawa — ensemble relations and decisive action
+**处理：**区分观众与人物所知。先交代关键物件或画外线索，再持续展示不知情人物的行动。移动或切镜以认知变化为动机，不仅为增加活力。反应只有改变理解时才使用。
 
-- **Default dimensions:** staging, composition, rhythm.
-- **Draft treatment:** separate initiator, witness, and responder across readable planes; let the decisive movement change their alignment. Preserve the cause and consequence of an action, then remove redundant views. Use group gaze, spacing, and a clear pause before a change rather than automatic close-ups.
-- **Adjust:** simultaneous versus selective access to reactions; degree of depth layering; pause before commitment; minimum coverage needed for the consequence.
-- **Avoid / check:** do not add rain, wind, battle, or new geography as compulsory signatures. If depth hides the key response, simplify the arrangement. The viewer should identify whose action reorganizes the group.
-- **Basis:** Donald Richie's firsthand [Throne of Blood account](https://www.criterion.com/current/posts/938-throne-of-blood) describes discarding attractive material that weakened the dramatic effect. The ensemble layout above is an original proposed treatment, not a universal Kurosawa formula.
+**可调项：**观众先于／同时／晚于人物获知；关键物最初可见多少；等待长度；固定观察或有动机揭示。
 
-## 3. Wong Kar-wai — withheld intimacy
+**禁用／检查：**简报禁止威胁或观众先知时不适合。插入镜头不能过早揭底，等待应有可读对象。不得为套预设添加犯罪、武器或惊奇结局。
 
-- **Default dimensions:** composition, performance, rhythm. Camera effects require their own justification within the common optical/temporal grammar; inherit the palette rather than importing it from the name.
-- **Draft treatment:** let an approved doorway, frame edge, or foreground object partially separate two people; make an ordinary shared task carry an unfinished exchange. Repeat an allowed gesture or framing with one changed response. Hold after an interrupted action rather than explain the feeling in dialogue.
-- **Adjust:** unobstructed versus partially withheld view; physical separation within the fixed scene; repetition versus progression; length of the unsaid response. Preserve the shared palette, source and costume colors.
-- **Avoid / check:** no compulsory neon, rain, slow motion, blur, voiceover, romance, or infidelity. Do not obscure required hand contact or identifying anchors. A change in relationship must remain legible even without color effects.
-- **Basis:** the indexed excerpt of Wong's [Cannes 2001 interview](https://kinimatografiko.gr/wp-content/uploads/2010/10/in-the-mood-interview-cannes-2001.pdf) discusses suspense and rhythm in *In the Mood for Love*. The full PDF text was not extractable in this research; this card is a creative interpretation, not an audited reproduction of his method. Do not infer lens, exposure, or effect settings from it.
+**依据：**[ASC 访谈](https://theasc.com/article/flashback-hitchcock-talks-about-lights-camera-action/)支持戏剧与技术统筹、动机化源光。本悬念配置是项目综合，不是访谈逐字转录，也不代表全部希区柯克电影。
 
-## 4. Anderson / Yeoman — precise tableau
+<a id="2-kurosawa--ensemble-relations-and-decisive-action"></a>
+## 2. 黑泽明：群像关系与决定性行动
 
-- **Default dimensions:** composition, staging, camera. Rhythm requires its own narrative justification; palette remains inherited from the shared look.
-- **Draft treatment:** build a legible frontal arrangement around an existing axis; give each actor a distinct place or entrance. Prefer a hold, a clear lateral move, or a deliberate redirection to an unmotivated orbit. Use a disruption of the arrangement to carry humor or a change of status.
-- **Adjust:** strict versus relaxed symmetry; frontal versus slightly oblique view; static versus lateral movement; regular versus interrupted entrances. Keep the shared palette and material colors even in a highly graphic arrangement.
-- **Avoid / check:** do not move fixed walls/doors to manufacture symmetry, force a pastel grade, or change the aspect ratio. If expressive asymmetry or free actor movement is locked, relax or disable the relevant dimension. Check that the arrangement clarifies relationships rather than merely looking tidy.
-- **Basis:** Yeoman's [first-person interview with The Credits](https://www.motionpictures.org/2014/12/2014-in-review-dp-robert-yeoman-on-the-grand-budapest-hotel/) describes camera/prop collaboration, color tests, location preparation, and animatics. The card's adjustable defaults are CineWeave's proposed interpretation.
+**默认维度：**调度、构图、节奏。
 
-## 5. Cuarón / Lubezki — immersive continuity
+**处理：**将发起者、见证者、回应者分置可读空间层次，以决定性动作改变关系排列。保留动作原因与后果，删去重复角度。使用群体视线、距离和变化前的停顿，而非自动特写。
 
-- **Default dimensions:** staging, camera, rhythm.
-- **Draft treatment:** follow one situated viewpoint through a traversable space, letting foreground events and background consequences coexist. Allow a move to discover a new relation and settle at a defined end state. Keep actor timing and camera/focus tracks separate but synchronized.
-- **Adjust:** camera-subject distance; how much environmental action stays visible; duration of uninterrupted access; number of motivated attention transfers. A longer take is not automatically a stronger application.
-- **Avoid / check:** a locked cut or unsupported path/duration takes precedence. Offer a cut-based equivalent when a continuous plan is infeasible; never assert model support. Check travel, occlusion, focus, and the critical reaction through the entire plan, not just its hero frame.
-- **Basis:** the practitioners' [Children of Men account](https://theasc.com/article/children-of-men-humanitys-last-hope/) discusses immersion, designed lighting, and shortening long takes for rhythm. The preset does not require unlit scenes or unbroken takes at any cost.
+**可调项：**同时或选择性展示反应；纵深分层程度；作出决定前停顿；交代结果的最小覆盖。
 
-## 6. Deakins — source-led restraint
+**禁用／检查：**雨、风、战斗、新地理不是必选签名。纵深遮住关键反应时简化排列。观众应能辨明谁的行动重组了群体。
 
-- **Default dimensions:** lighting and composition. This card alone supplies no reason to change camera or palette.
-- **Draft treatment:** organize the image around an approved practical or environmental source; protect the most important face, silhouette, or object cue. Let selected background areas recede instead of adding a separate light to every object. Adjust shot use of the source, subject orientation, and background value only within permitted ownership.
-- **Adjust:** source prominence; face versus silhouette emphasis; background separation; amount of readable shadow information. Do not equate restraint with globally dark exposure.
-- **Avoid / check:** no mandatory rim, teal/orange look, invented fixture, or body/skin recoloring. If the approved source cannot reveal the required object, flag the conflict. Check that the source explains the illumination and the intended cue remains readable.
-- **Basis:** [Team Deakins episode 4](https://www.rogerdeakins.com/episode-4/) has a public description about practical-lamp choices and room context. Audio was not audited here. These defaults are our source-led interpretation, not a claim that Deakins uses one look across his work.
+**依据：**Donald Richie 的[《蜘蛛巢城》亲历记录](https://www.criterion.com/current/posts/938-throne-of-blood)谈及删除削弱戏剧效果的漂亮素材。这里的群像布局是原创提案，不是黑泽明通用公式。
 
-## 7. Martel — sonic space and suspended attention
+<a id="3-wong-kar-wai--withheld-intimacy"></a>
+## 3. 王家卫：含蓄亲密
 
-- **Default dimensions:** sound and rhythm. Composition is optional.
-- **Draft treatment:** establish a listening perspective; use an offscreen sound to make an unseen relation felt without immediately showing its source. Distinguish environmental sound from subjective association. Let duration change how the same visible activity is understood.
-- **Adjust:** known versus uncertain sound location; foreground/background priority; reveal versus continued withholding; length of the listening interval.
-- **Avoid / check:** no invented dialogue, threat, or subjective diagnosis. A silent/still-image deliverable cannot realize the sound dimension; leave it out and mark partial application. Check whether the key sound survives competing layers and whether its intended time/space relation is clear.
-- **Basis:** Martel's [BFI interview about Zama](https://www.bfi.org.uk/interviews/lucrecia-martel-time-zama) discusses time and sonic space. The proposed controls are not a national style or a fixed slow-tempo prescription.
+**默认维度：**构图、表演、节奏。摄影机效果需在共同光学／时间语法中另行论证；色板继承基线，不从名字导入。
 
-## 8. Varda — essay observation
+**处理：**用已批准门洞、画框边缘或前景物部分隔开两人，让普通共同任务承载未完成交流。重复允许的动作或取景，只改变一次回应。中断动作后停留，不用对白解释情绪。
 
-- **Default dimensions:** composition, staging, rhythm; consider sound when the brief and medium support an associative listening perspective.
-- **Draft treatment:** attend to a person's ordinary activity and an object or place that gains meaning through association. Make the offered viewpoint explicit. For a sequence, connect two observations through a declared relation rather than inventing a dramatic confrontation.
-- **Adjust:** person/object emphasis; observed duration; direct versus associative connection; distance of the observer. New commentary or a narrator requires Story/user approval.
-- **Avoid / check:** do not rewrite a locked causal narrative, fabricate documentary encounters, or imply consent from a subject's presence. Distinguish staged illustration from actual observation. Check that the association comes from supplied facts or a clearly labeled proposal.
-- **Basis:** Varda's [BFI interview](https://www.bfi.org.uk/sight-and-sound/interviews/home-away-with-agnes-varda) discusses personal, documentary, and constructed representation. Our preset proposes an essay grammar, not a replacement for research or ethical access.
+**可调项：**无遮挡或部分暂缓展示；固定空间内的人物距离；重复或推进；未说出口的回应时长。保留共享色板、源光和服装颜色。
 
-## Handoff and example
+**禁用／检查：**不强制霓虹、雨、慢动作、模糊、旁白、恋爱或不忠。不要遮住必要手部接触或身份锚点。没有色彩效果时，关系变化仍应读得懂。
 
-Names remain in selection/provenance notes. Compile the **selected mechanisms**, not “shot by [name]”, into the appropriate existing artifacts: representation/palette → Style; actor behavior → Character; source changes → Scene proposal; blocking/composition/camera/shot-light → Direction; sequence timing → Storyboard/Rhythm; sound/edit intent → supported temporal/editorial planning fields. Read each schema before emitting canonical JSON.
+**依据：**[2001 年戛纳访谈](https://kinimatografiko.gr/wp-content/uploads/2010/10/in-the-mood-interview-cannes-2001.pdf)的索引摘录讨论《花样年华》的悬念与节奏。原研究未提取到完整 PDF，本卡为创作解释，不是经审计的方法复现，也不能据此推断焦距、曝光或效果参数。
 
-Representation/palette handoff inherits the shared Style authority; it does not synthesize a new look from a technique card. Only an explicitly requested look revision may propose that change. Include the same look basis across adjacent shots even when their craft influences differ.
+<a id="4-anderson--yeoman--precise-tableau"></a>
+## 4. 安德森／耶曼：精密画面
 
-Do not force a sequence-level preset into `CinematicSkillManifest` when its owner/target enums cannot express the chosen handoffs. Use a human-readable draft or a correctly owned `WorkflowPlan`. A card is not an exact manifest binding; never fabricate IDs, hashes, or receipts to pretend it was compiled.
+**默认维度：**构图、调度、摄影机；节奏需叙事理由，色板仍继承共享视觉。
 
-Example request: “门厅里三名接待员整齐站着，中间的人一本正经地把钥匙递错了，气氛有点荒诞。已有正面通道和桌旁台灯，人物走位、服装和房间不改，帮我设计这个镜头。”
+**处理：**围绕既有轴线建立清晰正面排列，每位演员有不同位置或入场方式。优先停留、明确横移或有意转向，而非无动机环绕。打破排列来表现幽默或地位变化。
 
-Expected adaptation: orderly staging and dry spatial humor can motivate frontal composition from Anderson/Yeoman; an existing practical can motivate source-led lighting from the Deakins card if it can reveal the key. Draft those mechanisms without asking the user to enable either preset. Preserve positions, color facts, and source placement; do not add a light or assume the lamp reaches the key. If that light relationship is unknown, mark it for checking and keep the composition proposal useful. Explain the visible choice: “用正面秩序衬托递错钥匙的动作，光线优先保证钥匙和接手关系可读。” Other coherent choices may also satisfy the brief; the named pairing is illustrative, not a required classifier output.
+**可调项：**严格／放松对称；正面／略斜；固定／横移；规律／打断入场。即使高度图形化，也保留共享色板和材质色。
 
-## Behavioral checks
+**禁用／检查：**不移动固定门墙来造对称，不强上粉彩调色，不改画幅。锁定不对称或自由表演时，放松或关闭相应维度。排列应澄清关系，而不只是整齐。
 
-These are manual evaluation cases, not previously passed automated tests. Assess actual choices rather than matching wording:
+**依据：**耶曼的[第一人称访谈](https://www.motionpictures.org/2014/12/2014-in-review-dp-robert-yeoman-on-the-grand-budapest-hotel/)描述摄影机／道具协作、色彩测试、实景准备和动态分镜。可调默认值是本项目提出的解释。
 
-- “观众先发现跟随者，人物最后才确认，不回头，设计8秒镜头。” → useful disclosure/staging proposal with no preset-selection or strength question; preserves the knowledge order and action lock.
-- “两人都想挽留对方，却只谈归还雨伞，帮我拍得含蓄。” → translate subtext into a playable exchange and restrained access; no automatic rain, neon, or invented affair.
-- “三名接待员站得整齐，有人一本正经递错钥匙，已有台灯，固定布局，设计镜头。” → coherent per-dimension treatment with source uncertainty preserved; no required creator pairing or new source.
-- “做一张无文字静态海报，表现等待，不用声音。” → use only realizable visual choices; no compulsory rhythm/sound mechanism, no fabricated audible output.
-- “这个镜头更电影感，但不要改现有构图和运镜。” → do not classify from the adjective alone or change locked dimensions; a conservative remaining-dimension proposal or no suitable preset is valid.
-- “原样把这份锁定镜头提示词翻译成英文。” → preserve semantic content; no automatic creative adaptation in exact transformation work.
-- “只改构图，不要大师风格，不改服装、走位、光源。” → neutral composition proposal only; explicit exclusion overrides automatic matching.
-- “同一镜头必须固定正面机位，同时必须持续跟拍人物绕到背面。” → identify conflicting explicit camera constraints; no silent auto-resolution of the user's hard conflict.
-- “上一镜的冷静固定机位已锁定，下一镜只是继续等车，不增加剧情。” → preserve established grammar; no forced new master, threat, or dramatic camera movement.
-- “只列可参考的预设，别改方案；然后说明若撤销此前风格，如何保留我后来修改的机位。” → browsing/explanation only; retain explicit edits and acknowledge missing baseline, no artifact mutation or guessed restoration.
-- “同一场戏第一镜悬念、第二镜群像、第三镜含蓄告别，调色与视觉统一。” → vary technique by dramatic function, keep a shared look throughout; no per-master palette, grain, contrast, or aspect-ratio switches.
-- “还没有视觉设定，帮我设计三个连贯镜头，技巧可混用。” → propose one shared provisional look and reuse it; no invented approval/refs, no preset questionnaire or three unrelated looks.
+<a id="5-cuaron--lubezki--immersive-continuity"></a>
+## 5. 卡隆／卢贝兹基：沉浸连续性
+
+**默认维度：**调度、摄影机、节奏。
+
+**处理：**沿可通行空间跟随一个有位置的视点，让前景事件与背景后果共存。运动发现新关系，并停在明确终态。演员与摄影机／焦点轨分开但同步。
+
+**可调项：**摄影机与主体距离；保留多少环境动作；连续观看时长；有动机的注意力转移次数。更长不自动更强。
+
+**禁用／检查：**已锁定切镜及不支持的路径／时长优先。连续方案不可行时给剪辑等价方案，不声称模型支持。检查整条路径、遮挡、焦点和关键反应，而不只看主视觉帧。
+
+**依据：**[《人类之子》创作者记录](https://theasc.com/article/children-of-men-humanitys-last-hope/)讨论沉浸、设计照明及为节奏缩短长镜头。此方法不要求完全不打光，也不要求不惜代价保持一镜到底。
+
+<a id="6-deakins--source-led-restraint"></a>
+## 6. 狄金斯：光源驱动的克制
+
+**默认维度：**灯光与构图；本卡本身不提供改变摄影机或色板的理由。
+
+**处理：**围绕已批准实景灯或环境光组织画面，保护关键脸部、轮廓或物件线索。允许背景局部退后，而不是每个物件单独补光。源光使用、人物朝向、背景明度只能在允许职责内调整。
+
+**可调项：**光源存在感；面部／轮廓强调；背景分离；暗部可读量。克制不等于全局曝光很暗。
+
+**禁用／检查：**不强制轮廓光、青橙调色、虚构灯具或身体／肤色重染。已批准光源不能显出必需物体时指出冲突。光源应解释照明，目标线索仍可读。
+
+**依据：**[Team Deakins 第 4 集](https://www.rogerdeakins.com/episode-4/)公开简介谈及实景灯和房间环境，原研究未审听音频。默认值是光源驱动解释，不是狄金斯全部作品采用同一视觉的声明。
+
+<a id="7-martel--sonic-space-and-suspended-attention"></a>
+## 7. 马特尔：声音空间与悬置注意力
+
+**默认维度：**声音与节奏，构图可选。
+
+**处理：**建立听觉视点，用画外声音让观众感到未见关系，不立即交代来源。区分环境声音和主观联想。时长改变对同一可见活动的理解。
+
+**可调项：**已知／未知声音方位；前后景优先级；揭示／继续隐藏；倾听区间长度。
+
+**禁用／检查：**不编造对白、威胁或心理诊断。无声／静图不能实现声音维度，应省略并标为部分应用。关键声音不被其他层掩盖，其时间／空间关系清楚。
+
+**依据：**[BFI《扎马》访谈](https://www.bfi.org.uk/interviews/lucrecia-martel-time-zama)讨论时间与声音空间。所提控制不是国别风格，也不是固定慢节奏处方。
+
+<a id="8-varda--essay-observation"></a>
+## 8. 瓦尔达：散文式观察
+
+**默认维度：**构图、调度、节奏；简报和媒介支持联想听觉时再考虑声音。
+
+**处理：**关注人物日常活动，以及通过联想获得意义的物件或地点。明确所提供的视点。序列通过声明关系连接两次观察，而不是编造戏剧对抗。
+
+**可调项：**人物／物体强调；观察时长；直接／联想连接；观察距离。新增评论或旁白者需故事／用户批准。
+
+**禁用／检查：**不改写锁定因果故事，不伪造纪录片相遇，不从主体在场推断同意。区分摆拍示意与真实观察。联想应来自给定事实或明确标注提案。
+
+**依据：**[BFI 访谈](https://www.bfi.org.uk/sight-and-sound/interviews/home-away-with-agnes-varda)讨论个人、纪录与构造性表现。这里提出散文语法，不能替代研究或合乎伦理的拍摄许可。
+
+<a id="handoff-and-example"></a>
+## 交接与示例
+
+名字留在选择／来源记录中。将**选中的机制**而不是“由某某拍摄”编入既有产物：表现／色板归风格；演员行为归人物；光源变化归场景提案；调度／构图／摄影机／镜头光归导演；序列时序归分镜／节奏；声音／剪辑意图进入支持的时间／剪辑字段。规范 JSON 输出前阅读实际 schema。
+
+表现／色板继承共享风格权威，不从手法卡合成新视觉。只有明确要求修改视觉时才能提出变更。相邻镜头即使创作影响不同，也保留相同视觉依据。
+
+模式的归属／目标枚举无法表达所选交接时，不强塞进 `CinematicSkillManifest`，改用中文可读草稿或正确归属的 `WorkflowPlan`。卡片不是精确清单绑定，不造 ID、哈希、回执伪装编译。
+
+**示例请求：**“门厅里三名接待员整齐站着，中间的人一本正经地把钥匙递错了，气氛有点荒诞。已有正面通道和桌旁台灯，人物走位、服装和房间不改，帮我设计这个镜头。”
+
+**预期适配：**秩序和冷幽默可支持安德森／耶曼的正面构图；已有台灯若能照到钥匙，可支持狄金斯卡的源光方法。无需询问开关。保留位置、色彩事实和光源摆放，不加灯、不假定灯一定照得到钥匙。光照关系未知就标记待检查，同时继续交付有用构图。理由可写：“用正面秩序衬托递错钥匙的动作，光线优先保证钥匙和接手关系可读。”其他一致方案也可满足简报，组合只是示例，不是必须的分类结果。
+
+<a id="behavioral-checks"></a>
+## 行为检查
+
+以下是人工评测案例，不是已经通过的自动测试。检查实际选择，不做字面匹配：
+
+1. “观众先发现跟随者，人物最后才确认，不回头，设计8秒镜头。”应提供披露／调度方案，不问预设强度，保留认知顺序和动作锁。
+2. “两人都想挽留，却只谈归还雨伞，拍得含蓄。”潜台词变成可表演交流与克制展示，不自动加雨、霓虹或婚外情。
+3. “三名接待员整齐站着，有人递错钥匙，已有台灯，布局固定。”按维度形成一致方案，保留源光未知，不强制名导组合或新灯。
+4. “无文字静态海报，表现等待，不用声音。”只采用能实现的视觉选择，不强制时间／声音机制，不编造声音结果。
+5. “更电影感，但不改构图和运镜。”不凭形容词分类或修改锁定维度；保守的其他维度提案或无匹配均有效。
+6. “原样翻译锁定镜头提示词为英文。”保留语义，精确变换不触发创意适配。
+7. “只改构图，不要大师风格，不改服装、走位、光源。”只给中性构图，显式排除优先。
+8. “必须固定正面，又必须持续跟到背面。”指出显式摄影机约束冲突，不默选。
+9. “上镜固定机位已锁定，下镜继续等车，不增剧情。”继承语法，不强造名导、威胁或戏剧运镜。
+10. “只列预设；说明撤销旧风格后如何保留后改机位。”仅浏览／解释；保留显式修改，承认缺失基线，不改产物或猜历史。
+11. “同一场戏先悬念、再群像、后含蓄告别，统一视觉。”手法随功能变化，色板、颗粒、反差、画幅不随名导切换。
+12. “没有视觉设定，设计三个连贯镜头，技巧可混用。”只提一份共享暂定视觉并复用；不造批准／引用，不发预设问卷，不做三套无关视觉。

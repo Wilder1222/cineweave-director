@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/control-channel-set.schema.json",
-  "title": "CineWeave Production Control Channel Set",
+  "title": "CineWeave 制作控制通道集",
   "type": "object",
   "additionalProperties": false,
   "required": [

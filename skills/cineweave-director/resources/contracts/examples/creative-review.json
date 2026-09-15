@@ -8,16 +8,16 @@
     { "kind": "cineweave_codex_shot_spec", "id": "shot.courtyard-recognition", "version": 1, "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb" }
   ],
   "evidence": [
-    { "evidenceId": "evidence.frame-001", "observationRef": { "kind": "cineweave_codex_reference_observation", "id": "observation.frame-001", "version": 1, "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" }, "basis": "visible", "statement": "The eyeline and face are visible, but the support hand does not meet the stone threshold.", "confidence": 0.94 }
+    { "evidenceId": "evidence.frame-001", "observationRef": { "kind": "cineweave_codex_reference_observation", "id": "observation.frame-001", "version": 1, "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc" }, "basis": "visible", "statement": "视线和面部清晰，但支撑手没有接触石门槛。", "confidence": 0.94 }
   ],
   "findings": [
-    { "findingId": "finding.eyeline", "domain": "direction", "dimension": "audience_attention", "expected": "The physician's eyeline should lead the audience to the returning character.", "observed": "The eyeline is clear and unopposed.", "status": "pass", "severity": "important", "evidenceIds": ["evidence.frame-001"] },
-    { "findingId": "finding.hand-contact", "domain": "scene", "dimension": "contact_support", "expected": "The left hand bears weight against the wet stone threshold.", "observed": "A visible gap separates the palm from the threshold.", "status": "fail", "severity": "blocking", "evidenceIds": ["evidence.frame-001"], "smallestRepairVariable": "left-hand contact point" }
+    { "findingId": "finding.eyeline", "domain": "direction", "dimension": "audience_attention", "expected": "医者的视线应引导观众注意归来的人物。", "observed": "视线明确，没有相反线索。", "status": "pass", "severity": "important", "evidenceIds": ["evidence.frame-001"] },
+    { "findingId": "finding.hand-contact", "domain": "scene", "dimension": "contact_support", "expected": "左手抵住湿石门槛承重。", "observed": "手掌与门槛之间存在可见间隙。", "status": "fail", "severity": "blocking", "evidenceIds": ["evidence.frame-001"], "smallestRepairVariable": "左手接触点" }
   ],
-  "humanReview": { "requiredForBlockingFindings": true, "status": "completed", "rubric": ["Judge only observable contact and weight transfer.", "Do not trade identity or eyeline continuity for the repair."], "completedAt": "2026-09-02T00:10:00Z" },
-  "decision": { "overallStatus": "fail", "nextAction": "repair", "mayAdvance": false, "blockingFindingIds": ["finding.hand-contact"], "summary": "Preserve the passing eyeline and identity; repair one Scene-owned contact variable." },
+  "humanReview": { "requiredForBlockingFindings": true, "status": "completed", "rubric": ["只判断可观察的接触与重心转移。", "不能为修复牺牲身份或视线连续性。"], "completedAt": "2026-09-02T00:10:00Z" },
+  "decision": { "overallStatus": "fail", "nextAction": "repair", "mayAdvance": false, "blockingFindingIds": ["finding.hand-contact"], "summary": "保留已通过的视线和身份，只修复一个由场景领域负责的接触变量。" },
   "planningBoundary": { "providerNeutral": true, "generatesMedia": false, "approvesAssets": false, "observedEvidenceRequiredForCompletion": true },
   "validation": { "targetsExact": true, "unknownNeverPasses": true, "blockingFailuresBlockAdvancement": true, "noAttractivenessScore": true, "oneDomainPerRepair": true, "noSuccessClaim": true },
   "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-director", "ref": "v3.1.0", "commit": "0000000000000000000000000000000000000000", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00Z" },
-  "provenance": { "source": "suite_builtin", "createdAt": "2026-09-02T00:00:00Z", "updatedAt": "2026-09-02T00:10:00Z", "changeLog": ["Added one evidence-bound Scene failure while preserving the passing direction finding."] }
+  "provenance": { "source": "suite_builtin", "createdAt": "2026-09-02T00:00:00Z", "updatedAt": "2026-09-02T00:10:00Z", "changeLog": ["新增有证据绑定的场景失败项，同时保留已通过的导演发现。"] }
 }

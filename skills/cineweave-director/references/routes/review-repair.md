@@ -1,50 +1,41 @@
-# Route: review_repair
+<a id="route-review_repair"></a>
+# 路由：评审与修复（review_repair）
 
-Use to define evidence-based benchmarks, review an actual creative artifact or candidate, classify failure, or plan the smallest correction. Load the relevant domain route as well.
+用于定义有证据依据的基准、评审实际创作产物／候选、归类失败或规划最小修正。还需加载相关领域路由。
 
-## Benchmarks
+<a id="benchmarks"></a>
+## 基准
 
-`ControlBenchmark` defines cases, dimensions, severity, required evidence, and pass criteria before observation. `ControlBenchmarkReview` records the results only when the required evidence is actually accessible. A planned benchmark with no observed evidence remains planned; unknown is never pass.
+`ControlBenchmark` 在观察前定义案例、维度、严重性、必要证据和通过标准。`ControlBenchmarkReview` 只有在必要证据可访问时才记录结果。没有实际证据的基准仍是计划，未知永远不是通过。
 
-Prefer the unified `CreativeReview` when one actual candidate must be reviewed across multiple creative domains. Benchmarks and reviews do not execute production work or manufacture evidence.
+一个实际候选需要跨创作领域评审时，优先使用统一 `CreativeReview`。基准和评审不执行制作，也不制造证据。
 
-## Review
+<a id="review"></a>
+## 评审
 
-A completed review requires actual accessible evidence. A prompt, projection plan, copy-ready handoff, submission screen, description, or intended result is not observed media. For execution reproducibility or provider compliance claims, require exact returned job metadata, resolved prompt/parameters/codes, variant mapping, and original files. Missing metadata does not prevent bounded review of accessible pixels: complete only the declared visual scope and leave provenance, parameters, rights, and unobservable dimensions unknown. For each dimension record:
+先确定评审对象：实际文稿可以直接检查完整性、矛盾和可执行性，并给出修订稿；实际图像、视频或声音才能支持对应媒体验收。完成评审需要与声明范围匹配的真实、可访问证据。提示词、适配计划、可复制交接、提交界面、文字描述或预期结果都不是已观察媒体。宣称执行可复现或符合平台规范时，需要准确返回任务元数据、解析后的提示词／参数／代码、变体映射和原始文件。
 
-- exact target;
-- expected observable result;
-- observed result;
-- evidence basis and confidence;
-- status: pass, warn, fail, unknown, or not applicable;
-- severity: advisory, important, or blocking;
-- owning domain;
-- smallest repair variable for warn/fail.
+元数据缺失不阻止有限的画面评审：只完成声明范围内的视觉检查，来源、参数、权利和不可观察维度保持未知。每个维度记录精确目标、预期可观察结果、实际观察结果、证据依据与置信度、状态、严重性、归属领域，以及警告／失败时的最小修复变量。
 
-`unknown` is not pass. A blocking failure cannot be averaged away by overall aesthetics. Separate policy/technical qualification from user preference. Do not score beauty, attractiveness, or biometric identity.
+状态保留 `pass`、`warn`、`fail`、`unknown`、`not applicable` 的既有语义，规范输出以实际 schema 枚举为准；严重性为 `advisory`、`important`、`blocking`。中文展示不能向 schema 添加新枚举。
 
-Use one `CreativeReview` across domains. Relevant dimensions include world/canon, story causality, identity, appearance, performance, geography, contact, physical light, representation, action, camera, coverage, prompt contradiction, rights, and production feasibility.
+阻断性失败不能被整体美感平均掉。政策／技术合格性与用户偏好分开，不评颜值、吸引力或生物识别身份。
 
-## Repair routing
+同一 `CreativeReview` 可以覆盖世界／正式设定、故事因果、身份、外观、表演、地理、接触、物理光照、表现方式、动作、摄影机、覆盖、提示词矛盾、对白可懂度、声音同步与声场、权利和制作可行性。
 
-For evaluating directing choices or designing practice exercises read [film-craft study and evaluation](../optional/film-craft-study.md). Separate planning coherence from realized media quality. Its behavioral rubric is not a beauty score, automatic pass, or proof of mastery; apply only relevant dimensions and keep blocking failures separate.
+生成失败参见[诊断索引与对应修复小节](../optional/generation-diagnostics.md#diagnostic-index)。工作表标签区分症状与候选归属，不代替本路由职责，也不扩展契约枚举。分开计划、关键帧、片段和序列证据。没有媒体只能条件诊断，不能编造观察；多个症状不必然需要多个镜头。
 
-Choose the domain that owns the failed fact:
+标签化视频工作表可用[只读检查器](../../scripts/check-video-plan.mjs)检查声明角色、标签结构、时长／提示点运算和准确台词。它不能证明平台支持、表情正确、真实同步或媒体成功。终态应检查是否在剪辑出点之前可用，而不只是存在于生成片段最后一帧。
 
-- world laws/history/geography baseline → world;
-- causality/dialogue/knowledge → story;
-- identity/appearance/performance → character;
-- topology/material/source light/contact → scene;
-- representation grammar → style;
-- evidence scope/transfer/rights claim → reference or rights;
-- action mechanics/coverage → action;
-- blocking/camera/shot light/time → direction;
-- panel sequence/rhythm → storyboard;
-- omission/contradiction/reference leakage → prompt;
-- task/control/evidence/feasibility → production.
+<a id="repair-routing"></a>
+## 修复归属
 
-A `RepairPlan` changes one root-cause variable in one domain, preserves every passing dimension, binds the exact target and source review, defines observable acceptance checks, and stops after one revised candidate. Multiple-domain failures become ordered separate plans according to dependency direction. A root-cause change may require several downstream recompilations; record these as consequences, not unrelated repair variables. Preservation is an acceptance requirement pending new evidence, never a guarantee from a true-valued field.
+评估导演决定或设计练习时，阅读[电影方法学习与评测](../optional/film-craft-study.md)。规划一致性与实际媒体质量分开；行为量表不是颜值评分、自动通过或精通证明。只使用相关维度，阻断失败单独列出。
 
-The plan never mutates the target, invokes a tool, or claims success. New evidence and a new review are required before any check can pass.
+按失败事实的归属选择领域：世界法则／历史／地理基线归世界；因果／对白／认知归故事；身份／外观／表演归人物；拓扑／材质／源光／接触归场景；表现语法归风格；证据范围／迁移／权利声明归参考或权利；动作机制／动作覆盖归动作；走位／摄影机／镜头用光／时间归导演；画格序列／节奏归分镜；遗漏／矛盾／参考泄漏归提示词；任务／控制／证据／可行性归制作。
 
-Outputs: `ControlBenchmark`, `ControlBenchmarkReview`, `CreativeReview`, `RepairPlan`.
+一个 `RepairPlan` 只改变一个领域内的一个根因变量，保留所有已通过维度，绑定精确目标和源评审，定义可观察验收检查，并在一个修订候选后停止。多领域失败按依赖方向拆成有序计划。根因改变可能导致多个下游重编译，应记录为后果，而不是无关修复变量。
+
+保留通过项是等待新证据的验收要求，不是某个布尔值提供的保证。计划不修改目标、不调用工具、不宣称成功。任何检查通过前，都需要新证据和新评审。
+
+可选规范输出（仅在请求结构化交接时）：`ControlBenchmark`、`ControlBenchmarkReview`、`CreativeReview`、`RepairPlan`。

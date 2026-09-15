@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/hero-frame-anchor.schema.json",
-  "title": "CineWeave Director Hero Frame Anchor",
-  "description": "A provider-neutral visual anchor that carries one exact hero frame and its shot-level visual DNA into later temporal direction without generating media or mutating Canon.",
+  "title": "CineWeave 导演主视觉帧锚点",
+  "description": "平台无关视觉锚点，将精确主视觉帧及镜头视觉特征带入后续时间导演，不生成媒体或修改正式设定。",
   "type": "object",
   "additionalProperties": false,
   "required": [

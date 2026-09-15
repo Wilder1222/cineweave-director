@@ -1,7 +1,7 @@
 {
   "$id": "https://cineweave.dev/contracts/creative-review.schema.json",
-  "title": "CineWeave Creative Review",
-  "description": "Cross-domain review of actual creative evidence. Unknown evidence never passes and a plan never counts as generated media.",
+  "title": "CineWeave 创作评审",
+  "description": "跨领域评审实际创作证据；未知证据不能通过，计划不能视为已生成媒体。",
   "type": "object",
   "additionalProperties": false,
   "required": ["kind", "contractVersion", "reviewId", "version", "status", "targetRefs", "evidence", "findings", "humanReview", "decision", "planningBoundary", "validation", "skillReceipt", "provenance"],

@@ -1,84 +1,89 @@
-# Optional: directing craft — intention, performance, staging
+<a id="optional-directing-craft--intention-performance-staging"></a>
+# 可选参考：导演方法，意图、表演与调度
 
-Load for scene direction, actor notes, competing coverage choices, suspense, ensemble blocking, or a request for stronger directing. For optical/light decisions load [cinematography-craft.md](cinematography-craft.md); for cuts and listening perspective load [editing-sound-craft.md](editing-sound-craft.md). Sources and exercises are in [film-craft-study.md](film-craft-study.md).
+用于场景导演、演员说明、覆盖方案比较、悬念、群像调度或加强导演设计。光学／灯光决策参见[摄影方法](cinematography-craft.md)，剪辑与听觉视点参见[剪辑与声音方法](editing-sound-craft.md)，来源与练习见[电影方法学习](film-craft-study.md)。
 
-These are CineWeave decision aids, not universal laws. A filmmaker's stated method is evidence of that practice, not proof that it suits this scene. During creative drafting, use [automatic technique adaptation](master-style-presets.md) to infer useful mechanisms without a preset questionnaire; analysis/review alone does not authorize restyling. Preserve the approved story, representation, identity, and shared visual baseline. Use the user's language; technical terms should clarify an observable choice.
+这些是决策辅助，不是普遍定律。电影人的自述证明其创作实践，不证明该方法适合当前场景。创意起草时用[自动手法适配](master-style-presets.md)，不要求预设问卷；仅分析／评审不授权重新风格化。保留已批准故事、表现方式、身份和共同视觉基线。使用用户语言，技术词应澄清可观察选择。
 
-## Decide what the audience experiences
+<a id="decide-what-the-audience-experiences"></a>
+## 先决定观众体验
 
-Before specifying equipment, identify the scene's organizing mode: dramatic causality, observation, subjective experience, essay/association, or an explicit mixture. In dramatic work, track objective, resistance, tactic, and turn. In observational or essay work, track a change in attention, duration, relation, or association; do not invent a confrontation merely to fill the template.
+选择设备前，明确场景组织方式：戏剧因果、观察、主观体验、散文／联想或明确混合。戏剧创作跟踪目标、阻力、策略、转折；观察或随笔创作跟踪注意力、时长、关系或联想变化，不为填模板而编造对抗。
 
-For a consequential decision, retain a compact rationale in human-readable notes:
+重大决定保留简短理由：
 
-`intended experience → visible/audible mechanism → chosen treatment → cost or risk → alternative → evidence that would favor the alternative`
+`预期体验 → 可见／可听机制 → 所选处理 → 代价或风险 → 备选方案 → 哪些证据会支持备选`
 
-One meaningful alternative is usually enough. Do not force a long analysis on a simple shot request. A valid alternative changes viewpoint, staging, reveal timing, or duration—not just lens-brand adjectives. If the user already locked the choice, diagnose and improve inside it.
+通常一个有意义备选即可。简单镜头不需要长分析。有效备选改变视点、调度、揭示时机或时长，不只是更换镜头品牌形容词。用户已锁定选择时，在锁定范围内诊断和改善。
 
-## Information and point of view
+<a id="information-and-point-of-view"></a>
+## 信息与视点
 
-Use when the scene depends on discovery, concealment, uncertainty, or a shifting alliance.
+场景依赖发现、隐瞒、不确定性或阵营变化时使用。
 
-- Separate what each character knows from what the audience sees/hears. Identify the precise cue that changes each knowledge state.
-- Decide whether the viewer learns before, with, or after the focal character. Earlier disclosure can create anticipation; withheld disclosure can create surprise. Neither is intrinsically better.
-- Choose access deliberately: shared space, aligned view, literal optical POV, or detached observation. An eyeline shot is not automatically literal POV; do not grant the camera knowledge the chosen treatment withholds.
-- Describe the reveal mechanism: an actor clears an occluder, a new sound is localized, a focus change resolves an existing object, or a cut changes access. Include what remains withheld.
-- **Failure signal:** an insert or camera move reveals the answer before the intended turn, or uncertainty becomes unreadable geography.
-- **Check:** write the audience's plausible interpretation immediately before and after the cue. If they are identical, the proposed reveal needs a different purpose or should be removed.
+分开各人物所知与观众所见／所闻，找出改变每一认知状态的具体线索。决定观众先于、同时或晚于焦点人物获知；提前披露可以形成期待，暂缓披露可以产生惊讶，没有哪种天生更好。
 
-## Playable performance, not prescribed emotion
+有意选择信息可见性：共享空间、对齐视角、字面光学 POV 或旁观。视线匹配镜头不自动等于第一视角，摄影机不能偷知该处理故意隐藏的内容。
 
-Judith Weston's public teaching description emphasizes script analysis, subtext, playable discoveries, rehearsal, and critique. The following conversion is CineWeave's application, not a reproduction of her course. [Judith Weston: teaching background](https://judithweston.com/web/bio/longform-bio)
+写明揭示机制：演员移开遮挡，声音来源被定位，焦点切换显出已有物体，或切镜改变可见范围；同时注明仍隐藏什么。
 
-- Translate “more anxious” into a partner-directed task: get the visitor to leave without revealing that the letter has been read. Identify what the partner does that forces a change of tactic.
-- Distinguish intention, playable action, and visible consequence. “Convince her to stay” is an actor task; moving the untouched cup toward her is one possible manifestation, not the only correct performance.
-- Give a physical task and a listening opportunity. Let a reply, silence, or interrupted action affect the next beat. Do not stack jaw tension, swallowing, trembling, and tears as mandatory emotion tokens.
-- For human actors, prefer rehearsal alternatives over micro-managing involuntary physiology. For AIGC, choose a few legible actions at the requested shot scale, with causal timing and a stable end.
-- **Failure signal:** the performance illustrates the adjective but ignores the partner, or the cue is too small for a wide shot.
-- **Check:** remove the emotion label. Can another reader describe the tactic and the moment it changes? Do not infer a real person's inner state from a gesture.
+**失败信号：**插入镜头或运动早于预期转折揭底，或不确定性变成难以辨认的地理。
 
-Performance timing belongs to `PerformanceTimeline`; camera/focus synchronization belongs to `TemporalSpec`. A proposal is not a completed rehearsal or actor approval.
+**检查：**写出线索前后观众可能的解释。如果完全相同，应给揭示另一个目的或删除它。
 
-## Blocking as relationship
+<a id="playable-performance-not-prescribed-emotion"></a>
+## 可表演任务，而非规定情绪
 
-Use staging to change access, authority, intimacy, exclusion, or alignment within the approved space.
+Judith Weston 的公开教学简介强调剧本分析、潜台词、可表演发现、排练与评议。以下是项目应用，不是课程复刻。[教学背景](https://judithweston.com/web/bio/longform-bio)
 
-- Name the anchors, travel path, facing, eyelines, and the third point of attention (door, object, absent person) where relevant.
-- A status shift need not be a low angle: one person can retain the doorway, make the other cross the room, stop a shared task, or become the person everyone looks toward.
-- For ensembles, determine who initiates, who witnesses, and whose response changes the group. Use depth, gaps, and occlusion to establish readable relationships before adding singles.
-- Motivate crossings by action or relationship. If the axis changes, plan a visible crossing, neutral orientation, or re-establishing view; if disorientation is intentional, state what the viewer must still understand.
-- **Failure signal:** actors move only to justify the camera, or an elegant composition hides the handoff/response carrying the beat.
-- **Check:** sketch a top-down arrangement and describe it without camera vocabulary. Then verify that the intended frame makes the relationship readable. No invented scene topology.
+将“更焦虑”转换为面向对手的任务，例如“让访客离开，但不暴露自己已读过信”。找出对手的哪一行为迫使人物换策略。
 
-## Holding versus cutting
+区分意图、可表演行动和可见后果。“说服她留下”是演员任务；把无人碰过的杯子推向她只是其中一种表现，不是唯一正确演法。
 
-An uninterrupted view can preserve simultaneous relationships and the uncertainty of waiting. Cutting can control access, omit time, or let a listener displace the speaker as the scene's center. Choose based on the experience, not a ranking of “advanced” techniques.
+给身体任务，也给倾听机会，让回应、沉默或中断动作影响下一节拍。不把咬牙、吞咽、颤抖、眼泪同时堆成必需情绪词。真人演员优先尝试不同排练选择，不微控非自主生理；AIGC 则挑少量符合景别的清楚动作，有因果时序与稳定终点。
 
-Lubezki's account of *Children of Men* describes an immersive approach while acknowledging that long takes were also shortened for the film's rhythm. Naturalistic appearance and an unbroken-shot plan are not purity tests. [ASC: Children of Men](https://theasc.com/article/children-of-men-humanitys-last-hope/)
+**失败信号：**表演只图解形容词却忽略对手，或线索小到远景看不见。
 
-Compare the held shot with minimum coverage at the same story outcome:
+**检查：**删掉情绪标签后，读者能否描述人物策略和策略改变时刻？不要从动作推断真人内心。
 
-- What relation survives only if both actions remain visible together?
-- What information needs selective access or a temporal omission?
-- Can performance, focus, geography, and the intended end survive the whole shot? Unsupported generation capability stays unknown.
-- What is the cost of losing the reaction, ambiguity, or duration if a cut is added?
+表演时序属于 `PerformanceTimeline`，摄影机／焦点同步属于 `TemporalSpec`。提案不等于已完成排练或演员批准。
 
-Do not insist every held moment introduces plot. Martel's discussion of *Zama* makes time and sound central to how experience is constructed; a sustained listening interval may be the event. It still needs an articulated perceptual function. [BFI: Lucrecia Martel on time](https://www.bfi.org.uk/interviews/lucrecia-martel-time-zama)
+<a id="blocking-as-relationship"></a>
+## 用调度表达关系
 
-## Selection and restraint
+在批准空间内，通过调度改变可见性、权威、亲密、排斥或立场。
 
-Donald Richie's firsthand account of Kurosawa describes attractive footage being discarded when it delayed action or weakened the dramatic effect. Use this as a counterexample to equating beautiful frames with good direction, not as an instruction that all films must move quickly. [Criterion: Throne of Blood](https://www.criterion.com/current/posts/938-throne-of-blood)
+命名锚点、路径、朝向、视线，相关时加入第三注意点，例如门、物件或缺席的人。地位改变不一定需要低角度：人物可以占住门口、让对方穿过房间、中断共同任务，或成为所有人看向的对象。
 
-For a proposed flourish, ask what disappears if it is removed. If only the opportunity to display the technique disappears, simplify it. Preserve an expressive image when atmosphere, ambiguity, association, or sustained attention is its approved function.
+群像先确定发起者、见证者及谁的回应改变群体，利用纵深、间距、遮挡建立关系，再考虑单人镜头。跨越轴线应有动作／关系动机，并计划可见跨越、中性方向或重新建立地理的视图。若故意使人迷失方向，要明确观众仍必须理解什么。
 
-## Contract handoff
+**失败信号：**演员移动只为给运镜找理由，或优美构图遮住推动节拍的交接／反应。
 
-These notes are not new schema fields. Read the selected schema before canonical output.
+**检查：**先画／描述俯视布置，不用摄影机词汇，再确认取景能读出关系。不编造场景拓扑。
 
-- Story knowledge/tactics/turns → `ScriptScene` or `BeatSheet`, without camera instructions.
-- Actor actions and timing → `PerformanceTimeline` through `character`.
-- Chosen purpose, dramatic beat, attention, zones, camera, composition, end → existing `ShotSpec` fields.
-- Shot timing and synchronization → `TemporalSpec`; shot-use of approved sources → `ShotLightingPlan`.
-- Coverage and sequence durations → `Storyboard`, then `SequenceRhythmSpec`.
-- Reject/repair criteria → a planned `ControlBenchmark`; observed findings only after accessible evidence.
+<a id="holding-versus-cutting"></a>
+## 连续观察还是切镜
 
-Keep alternatives outside the selected canonical artifact. Do not silently change an approved story event to make a preferred technique work.
+连续画面能保留同时关系和等待的不确定性；剪辑可以控制可见信息、省略时间，或让倾听者代替说话人成为中心。按体验选择，不给技术排“高级程度”。
+
+卢贝兹基对《人类之子》的说明既谈沉浸，也承认长镜头会因电影节奏而缩短。自然外观与一镜到底不是纯粹性测试。[ASC 创作记录](https://theasc.com/article/children-of-men-humanitys-last-hope/)
+
+在相同故事结果下，比较持续镜头与最小覆盖：哪种关系只有两个动作同时可见才成立？哪些信息需要选择性展示或时间省略？表演、焦点、地理和终态能否贯穿全镜？缺少生成能力证据时继续标未知。加入切镜会损失什么反应、歧义或时长？
+
+不要求每个停留都增加剧情。马特尔讨论《扎马》时把时间和声音视为体验构造核心，持续倾听本身可以是事件，但仍需明确感知功能。[BFI 访谈](https://www.bfi.org.uk/interviews/lucrecia-martel-time-zama)
+
+<a id="selection-and-restraint"></a>
+## 选择与克制
+
+Donald Richie 对黑泽明的亲历记录提到：漂亮素材如果拖延行动或削弱戏剧效果，也会被舍弃。这反驳“漂亮帧就是好导演”，不意味着所有电影都必须快。[Criterion 记录](https://www.criterion.com/current/posts/938-throne-of-blood)
+
+对炫技设计问：删掉会失去什么？若只失去展示技巧的机会，就简化。氛围、歧义、联想或持续注意本就是已批准功能时，应保留有表现力画面。
+
+<a id="contract-handoff"></a>
+## 契约交接
+
+这些说明不是新 schema 字段。规范输出前阅读选定 schema。
+
+故事认知／策略／转折进入 `ScriptScene` 或 `BeatSheet`，不带摄影机指令；演员动作与时间通过 `character` 进入 `PerformanceTimeline`；目的、戏剧节拍、注意力、区域、摄影机、构图、终态进入已有 `ShotSpec` 字段；时间和同步进入 `TemporalSpec`，已批准光源的镜头使用进入 `ShotLightingPlan`；覆盖和序列时长先进入 `Storyboard`，再进入 `SequenceRhythmSpec`；否决／修复标准进入计划中的 `ControlBenchmark`，真实发现需等证据可访问后记录。
+
+备选留在已选规范产物之外。不得为偏爱的技术暗改已批准故事事件。

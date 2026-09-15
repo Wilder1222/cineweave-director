@@ -1,7 +1,7 @@
 {
   "$id": "https://cineweave.dev/contracts/workflow-plan.schema.json",
-  "title": "CineWeave Route Workflow Plan",
-  "description": "Acyclic route plan for the single CineWeave Director skill; it never executes tools or generates media.",
+  "title": "CineWeave 路由工作流计划",
+  "description": "单一 CineWeave 导演 Skill 的无环路由计划，不执行工具或生成媒体。",
   "type": "object",
   "additionalProperties": false,
   "required": ["kind", "contractVersion", "workflowId", "version", "status", "creativeBriefRef", "steps", "deliverables", "currentGate", "planningBoundary", "validation", "skillReceipt", "provenance"],

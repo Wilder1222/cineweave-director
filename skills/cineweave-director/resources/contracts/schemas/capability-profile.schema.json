@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/capability-profile.schema.json",
-  "title": "CineWeave Adapter Capability Profile",
+  "title": "CineWeave 适配器能力档案",
   "type": "object",
   "additionalProperties": false,
   "required": [
