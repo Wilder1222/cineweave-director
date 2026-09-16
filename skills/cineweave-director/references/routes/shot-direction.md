@@ -12,6 +12,8 @@ Order decisions:
 
 Stage before choosing a lens. Name positions, eyelines, support, weight, occlusion, path, foreground/midground/background, and what the audience notices first, second, and last.
 
+For supporting-character activity or joint directing review, read [ensemble direction and shot review](../optional/ensemble-direction-and-review.md). Give legible background figures their own task and attention, coordinate reactions with available cues, and retain these decisions through `blocking`, composition and `promptHandoff`. Do not add crowds to an intentionally empty scene.
+
 ## Camera and composition
 
 Specify shot scale, camera position and height, angle, axis side, perspective intent, focal length when useful, focus target, depth, movement motivation, start/peak/settle, and stable end. “Cinematic” is not a camera decision. A composite move is allowed only when each component has an independent readable purpose.

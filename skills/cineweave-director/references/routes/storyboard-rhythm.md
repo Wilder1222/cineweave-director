@@ -17,6 +17,8 @@ Each entry binds one exact `ShotSpec` and states:
 
 The top-level ledger must close every selected beat. Decorative inserts and duplicate reactions are removed.
 
+For a complete narrative sequence or multi-person staging, apply [ensemble direction and shot review](../optional/ensemble-direction-and-review.md) automatically. Preserve the source shot IDs and revision through the handoff; compare each outgoing state with the next incoming state, including supporting tasks and cue order. Use the sequence's actual shot inventory for review rather than inventing a second numbered list. A prompt perspective is not applicable when no prompt is requested or supplied; do not create prompts just to populate a review row.
+
 For creative sequence design, use [automatic technique adaptation](../optional/master-style-presets.md) to vary shot methods by beat while inheriting [one shared visual baseline](../core/visual-bible-and-continuity.md). Do not assign a different grade, grain, contrast treatment, or aspect ratio when the useful master influence changes. Track motivated physical-light transitions separately from look changes.
 
 For comics, preserve reading order, page turn, panel hierarchy, black/white or color mass, balloons/captions as planned regions, and exact text as a later deterministic layer. Generate/review panels independently; do not ask one image model to invent the full grid and exact text.

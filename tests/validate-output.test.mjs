@@ -30,6 +30,25 @@ async function loadContractFixture(stem) {
   };
 }
 
+test("PerformanceTimeline enforces its declared phase timing invariants", async () => {
+  const { schemaPath, payload } = await loadContractFixture("performance-timeline");
+  assert.equal((await validatePayload(schemaPath, payload)).valid, true);
+  for (const [mutate, pattern] of [
+    [(p) => { p.phases[1].phaseId = p.phases[0].phaseId; }, /unique/],
+    [(p) => { p.phases[1].startSeconds = p.phases[1].endSeconds; }, /positive duration/],
+    [(p) => { p.phases[1].startSeconds = 0; }, /non-overlapping/],
+    [(p) => { p.phases.reverse(); }, /ordered/],
+    [(p) => { p.phases.at(-1).endSeconds += 1; }, /exceeds durationSeconds/],
+  ]) {
+    const candidate = structuredClone(payload); mutate(candidate);
+    const result = await validatePayload(schemaPath, candidate);
+    assert.equal(result.valid, false);
+    assert.match(result.errors.join("\n"), pattern);
+  }
+  payload.phases[1].startSeconds += 0.2;
+  assert.equal((await validatePayload(schemaPath, payload)).valid, true, "A gap may hold the preceding state; full coverage is not required.");
+});
+
 test("RepairPlan rejects contradictory approval, malformed paths and duplicate checks", async () => {
   const { schemaPath, payload } = await loadContractFixture("repair-plan");
   for (const mutate of [

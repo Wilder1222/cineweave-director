@@ -107,7 +107,7 @@
       "role": "root",
       "domain": "character",
       "schema": "schemas/performance-timeline.schema.json",
-      "schemaSha256": "sha256:0540dd79c47edad58c05abf1b30a5e107b6e07221df85c448ef6613f17631066",
+      "schemaSha256": "sha256:c3ea546024776e0ecbf7018d51cac1cacd2cdd83adef401b6b11e8ad7f7b48b8",
       "example": "examples/performance-timeline.json",
       "exampleSha256": "sha256:a1c2a539c32d1fe52441e345c322159ae26d0bf003ad49dbbd2ae1ed4c1533cd"
     },

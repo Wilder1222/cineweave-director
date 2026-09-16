@@ -35,6 +35,7 @@ Infer the intent from natural language; do not require slash commands or route k
 | `design_shot`            | `shot_direction`     | `action` for multi-beat mechanics; exact character, scene, style, or story inputs when unresolved                                     |
 | `create_storyboard`      | `storyboard_rhythm`  | `story`, `action`, and `shot_direction` only to close missing causality, mechanics, or coverage                                       |
 | `compile_image_prompt`   | `image_prompt`       | only routes that own missing visible facts; provider guidance only on an explicit provider request                                    |
+| `prepare_video_handoff` | `shot_direction`    | `character` for performance, `storyboard_rhythm` for multiple shots, `production_plan` for feasibility; use the video guide for a non-canonical temporal prompt worksheet |
 | `review_candidate`       | `review_repair`      | the route that owns each failed fact; one repair domain at a time                                                                     |
 
 For an empty or ambiguous request, offer the six concise `zero_prompt` choices from the operating model. Otherwise use the existing `professional` interaction depth with a **professional-lite** presentation profile: retain professional authority, locks, evidence, and gates, but present a concise human-readable artifact and one next action. `professional-lite` is presentation only—not a fifth input mode, route, or contract field.
@@ -67,6 +68,7 @@ Load only on a direct match:
 - reusable cinematic gesture and control surface → [`cinematic-patterns.md`](references/optional/cinematic-patterns.md)
 - create or creatively revise shots, cinematic style, or sequence rhythm → [`master-style-presets.md`](references/optional/master-style-presets.md) for automatic, brief-led technique matching; no name, switch, or strength setting required; also use for named influences
 - scene direction, playable performance, staging, or competing shot treatments → [`directing-craft.md`](references/optional/directing-craft.md)
+- supporting-character tasks, ensemble activity, multiple directing perspectives, or shot-by-shot design/prompt review → [`ensemble-direction-and-review.md`](references/optional/ensemble-direction-and-review.md)
 - lens/perspective, motivated movement, difficult light, or shot matching → [`cinematography-craft.md`](references/optional/cinematography-craft.md)
 - creative cutting, pacing, listening perspective, or sound bridges → [`editing-sound-craft.md`](references/optional/editing-sound-craft.md)
 - craft research, course discovery, deliberate practice, or Skill evaluation → [`film-craft-study.md`](references/optional/film-craft-study.md)
@@ -110,6 +112,12 @@ A route may be skipped when its facts do not matter. Create original identity an
 ### 4. Apply scoped decision gates
 
 Use exploration, draft, and final maturity from the operating model. Carry already authorized creative choices forward; develop a complete reviewable draft before asking to lock new Canon. Ask only for a missing consequential decision outside the user’s delegated scope. Rights approval and external execution remain separate. A blocked transfer or publication step does not block independent original drafting or bounded reference analysis.
+
+### 5. Close the relevant shot handoff
+
+For multi-person narrative staging or a complete narrative shot/video-prompt package, automatically apply [ensemble direction and shot review](references/optional/ensemble-direction-and-review.md); the user need not name a department or enable a mode. Carry the shared scene, actor cues, supporting tasks and outgoing states through the selected shots into the requested prompts. Check the actual shot inventory before delivery. Complete scene/sequence handoffs use the six perspectives; bounded camera, performance or wording requests use only the relevant perspectives. A standalone still, exact translation or reference analysis does not acquire an unrelated review workflow.
+
+If the task includes a complete design/prompt review, use the bundled checker when Node is available. Resolve `revise` rows within delegated scope, review the changed version and affected continuity, and keep missing evidence `unknown`. Present a concise result unless the user requests the full matrix; never turn a complete planning worksheet into a media approval. See the optional guide for the single maintained worksheet format.
 
 ## Non-negotiable rules
 

@@ -38,6 +38,16 @@ Judith Weston's public teaching description emphasizes script analysis, subtext,
 
 Performance timing belongs to `PerformanceTimeline`; camera/focus synchronization belongs to `TemporalSpec`. A proposal is not a completed rehearsal or actor approval.
 
+### Dialogue as an action toward a listener
+
+For a difficult line, identify its recipient, what response the speaker is trying to obtain, the word or event that changes the tactic, and the physical task continuing underneath. Let a pause contain listening, withholding or a decision instead of prescribing an empty delay. Place emphasis where meaning changes; do not automatically stress every sentence ending or add a nod to every reply.
+
+Example proposal: a clerk begins “You can leave it…” while holding a receipt out. The visitor keeps the parcel; only then does the clerk lower the receipt and leave the sentence unfinished. The withheld parcel motivates the change. Whether this needs a hand detail or a shared view depends on what the selected framing can show.
+
+If delivery feels mechanical, compare the proposed action without the line, then the line with a different recipient-directed tactic. For supplied performance references, separate the actual observed behavior from the intended adaptation; reference availability does not establish rights or model support. Keep exact locked dialogue intact and put voice/timing notes in the appropriate handoff.
+
+Design input: [Leos performance guidance, reviewed snapshot](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/performance-direction.md). This is an independently written decision aid, not a reproduced lesson or verified model guarantee.
+
 ## Blocking as relationship
 
 Use staging to change access, authority, intimacy, exclusion, or alignment within the approved space.

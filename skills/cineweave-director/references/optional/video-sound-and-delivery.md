@@ -10,6 +10,14 @@ For each clip record source shot/temporal references (or provisional draft refs)
 
 For continuation record exact source clip/frame if available, boundary time, inherited state, permitted evolution, new action, and settle/handle requirements. Unknown source media leaves continuation feasibility unresolved. Do not force a single still-image prompt to encode an entire sequence; provide time-anchored natural-language instructions alongside the visual prompt. Provider dialect remains a separate evidence-backed projection, and unsupported video fields remain a worksheet until an appropriate contract exists.
 
+For an explicit video-prompt request, deliver a reviewable temporal draft within delegated scope; do not require a second authorization merely to write the requested text. Use [ensemble direction and shot review](ensemble-direction-and-review.md) for cue-to-response compilation, supporting-character activity, per-shot critique, prompt budgets and separate revision/Take records. A project length limit is optional, never a universal 5000-character rule. Keep unspecified technical values unresolved or label them as proposed design choices.
+
+### Continuation and generation-block boundaries
+
+When planning separate clips, group actions around a coherent place and causal passage rather than a fixed number of shots. For each join name the outgoing selected state, proposed incoming state, shared anchor, sound/action phase and any overlap or hold needed for editorial choice. A new location or mutually exclusive story branch may need its own block; this is a planning choice, not a universal provider limit.
+
+For example, a courier lowering a bag in one clip and a clerk lifting it in another need an intervening supported state: the bag rests on the counter, the courier releases it, then the clerk takes it. Propose overlap around that state only when useful. Returned clips must be checked for the actual available interval; do not invent handles or double-count overlap as final timeline duration. This adapts the boundary-planning idea in [Leos generation control](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/generation-control.md) without inheriting fixed format or model assumptions.
+
 ## Sound ownership and cue sheet
 
 - Story owns dialogue and narration content and dramatic function.

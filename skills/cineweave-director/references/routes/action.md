@@ -12,6 +12,10 @@ Record entry, change, and exit state; participating exact Character/Scene bindin
 
 A trajectory states start anchor, path, target, contact logic, and end anchor. Avoid “dynamic fight” or “moves quickly” without mechanics.
 
+For a consequential prop or mechanism, track what the viewer must see change: initial configuration, trigger, necessary intermediate state, resulting possession/configuration, and residual motion. A closed case cannot become empty without a supported opening or deliberate intelligible ellipsis. Divergent story choices need separate action branches when they change positions, resistance or outcomes; do not combine incompatible alternatives into one ambiguous sequence.
+
+When perceived danger depends on distance or scale, include a legible spatial reference and the consequence the character anticipates. Preserve the selected story stakes; these are visual storytelling requirements, not instructions for performing a dangerous act. Adapted as conditional guidance from [Leos directing grammar](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/directing-grammar.md).
+
 ## Weapons and techniques
 
 For every visible weapon or tool state name/type, dimensions or handling characteristics relevant to readability, current holder, start/end state, and interaction constraints. Describe techniques by observable mechanics and cause, not decorative labels. Keep attack–defense–counter order explicit.

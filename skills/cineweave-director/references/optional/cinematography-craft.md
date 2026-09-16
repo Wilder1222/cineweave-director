@@ -52,6 +52,16 @@ Choose a movement for an information or relationship change:
 
 Specify cue, start, speed change, arrival, and settling behavior only as precisely as the task needs. Do not start actor, camera, focus, weather, and light changes simultaneously unless their collision is the point. Test whether a simpler move preserves the purpose. Fixed camera does not mean emotionally static.
 
+## Optical treatment tied to a visible event
+
+For flare, diffusion bloom, a foreground blur, focus breathing or motion smear, state the intended visible effect, the source/occluder/movement associated with it, when it enters or leaves, and which story detail must remain readable. A representation effect may be deliberately stylized; label that treatment instead of inventing physical capture metadata. An optical effect should not silently become a new scene light or a new shared grade.
+
+Example proposal: an existing corridor lamp briefly veils the edge of frame as the viewpoint passes a doorway; the envelope exchange remains clear. If the veil hides the exchange, first change the proposed angle or effect strength within approved constraints. Do not repair it by adding an unrelated light or replacing the whole look.
+
+When a performer changes light zones, compare source visibility and material response at entry, turn and exit. A face locked to the same brightness despite an occluder may warrant investigation; it is not by itself proof of a particular rendering failure. In adjacent shots, check the effect's event timing as well as its appearance. Still evidence cannot prove those transitions.
+
+Design input: [Leos cinematography guidance, reviewed snapshot](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/cinematography-direction.md); independently integrated as conditional choices, not fixed equipment or effect presets.
+
 ## Shot matching and AIGC evidence
 
 Match world-relative source direction, eyelines, screen travel, prop placement, appearance, and material response; do not blindly keep the key on the same screen side in reverse angles. A mismatch may belong to Scene, Character, Direction, or Style—route it to the owner.

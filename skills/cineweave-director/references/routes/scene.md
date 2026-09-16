@@ -16,6 +16,14 @@ Use for reusable locations, production design, geography, state, physical light,
 
 `SceneSpec` defines reusable space. `SceneState` records a versioned current condition. `SceneBinding` selects only facts visible or continuity-critical for a shot.
 
+## Shared spatial checks
+
+Before refining coverage, establish a compact relation map for the relevant space: uniquely named anchors, connected zones, actor facing, important sightlines and permitted camera access. A written map or supplied plan may suffice; a new establishing shot is not mandatory. Separate world-relative position from screen-left/right, which changes with viewpoint.
+
+Check crucial proportions using declared dimensions or explicit reference relationships: whether a subject fits a doorway, can reach a shelf, or can pass between fixtures. Perspective alone cannot establish real measurements. Keep inferred dimensions provisional. If a locked scene makes the action impossible, revise blocking or propose the smallest Scene change; a tight crop cannot make the physical contradiction valid.
+
+Design input: [Leos spatial guidance, reviewed snapshot](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/spatial-and-assets.md); adapted to CineWeave's Scene authority and evidence rules.
+
 ## Physical light
 
 Record source type, physical origin/anchor, direction, size, intensity relation, falloff, color basis, occlusion, shadow behavior, and bounce surface. A bounce without a named surface is not a physical source. Style treatment cannot move or create a Scene source.

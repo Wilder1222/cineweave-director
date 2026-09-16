@@ -1,0 +1,37 @@
+{
+  "worksheet": {
+    "source": { "type": "prompt", "id": "draft.repair-shop", "version": 1 },
+    "mode": "full",
+    "shotIds": ["S1", "S2", "S3"],
+    "prompt": {
+      "text": "原创草案。全段保持同一修理铺、柜台和门口的位置关系，沿用同一暖灰色与木材质感；时长、画幅和模型能力待定。\nS1：柜台两侧的双人中景，摄影机始终在关系轴南侧。学徒手持维修单说：‘能再留一会儿吗？’店主继续把手中的钥匙挂回钩上。门边快递员低头核对送货单，不看柜台。维修单仍在学徒手中，店主没有拿起下一把钥匙。\nS2：同轴近一些，保留双方的手与柜台。维修单落下以前，店主的视线已经转向柜台上的单据。学徒将维修单放到店主一侧，收回手。店主不拿下一把钥匙，手停在空钩旁。快递员继续读送货单，不穿过柜台视线。镜尾维修单平放在店主一侧，学徒双手空着。\nS3：回到同轴关系中景。店主的视线从柜台维修单移到门口。快递员接收到店主的目光后才折起送货单，停在门旁；店主把手从空钩旁放下。学徒不追问，留在柜台外侧。维修单留在柜台，下一把钥匙仍未拿起。摄影机静止，背景无新增人物或动作。"
+    },
+    "reviews": [
+      { "role": "direction", "shotId": "S1", "status": "pass", "criterion": "建立请求与未被回应的关系。", "observation": "学徒发问，店主仍执行挂钥匙任务，关系中景同时保留两人的行为。", "sourceLocator": "draft.repair-shop v1 / S1" },
+      { "role": "direction", "shotId": "S2", "status": "pass", "criterion": "维修单改变场面注意中心。", "observation": "维修单进入双方的共同可见区域，下一把钥匙未被拿起；具体反应先后由表演视角另行指出。", "sourceLocator": "draft.repair-shop v1 / S2" },
+      { "role": "direction", "shotId": "S3", "status": "pass", "criterion": "店主的注意从日常任务转向留下来的人。", "observation": "店主放下手并看门口，学徒不补台词，结尾保留等待。", "sourceLocator": "draft.repair-shop v1 / S3" },
+      { "role": "performance", "shotId": "S1", "status": "pass", "criterion": "台词没有令所有人的动作同步中断。", "observation": "店主完成当前钥匙任务，快递员继续核对送货单。", "sourceLocator": "draft.repair-shop v1 / S1" },
+      { "role": "performance", "shotId": "S2", "status": "revise", "criterion": "已选表演意图要求维修单放下后，店主才转移视线。", "observation": "v1 写成维修单落下以前就看向柜台上的单据，提前响应了尚未发生的刺激。", "sourceLocator": "draft.repair-shop v1 / S2 / reaction", "repair": { "domain": "prompt", "variable": "S2 cue-to-gaze order", "acceptance": "仅将视线转移改为单据落下之后；保留人物、空间、道具出口状态与其他镜头。" } },
+      { "role": "performance", "shotId": "S3", "status": "pass", "criterion": "快递员的反应有明确可接收的刺激。", "observation": "快递员先接收到店主的目光，再折起送货单。", "sourceLocator": "draft.repair-shop v1 / S3" },
+      { "role": "staging", "shotId": "S1", "status": "pass", "criterion": "第三人具有独立任务和清楚位置。", "observation": "快递员在门边核对送货单，注意不在学徒身上。", "sourceLocator": "draft.repair-shop v1 / S1" },
+      { "role": "staging", "shotId": "S2", "status": "pass", "criterion": "背景活动不遮住维修单交接。", "observation": "快递员持续读单，并明确不穿过柜台视线。", "sourceLocator": "draft.repair-shop v1 / S2" },
+      { "role": "staging", "shotId": "S3", "status": "pass", "criterion": "背景回应有错峰且不增加无关事件。", "observation": "快递员在目光到达后折单，始终停在门旁，未引入新人物。", "sourceLocator": "draft.repair-shop v1 / S3" },
+      { "role": "cinematography", "shotId": "S1", "status": "pass", "criterion": "摄影位置能表达关系且轴侧清楚。", "observation": "双人中景位于关系轴南侧，保留学徒与店主。", "sourceLocator": "draft.repair-shop v1 / S1" },
+      { "role": "cinematography", "shotId": "S2", "status": "pass", "criterion": "细节镜保留关键物件和行动区域。", "observation": "同轴靠近，明确保留双方的手与柜台。", "sourceLocator": "draft.repair-shop v1 / S2" },
+      { "role": "cinematography", "shotId": "S3", "status": "pass", "criterion": "镜头回到关系且不无故增加运动。", "observation": "同轴中景、摄影机静止，人物任务变化承担结尾。", "sourceLocator": "draft.repair-shop v1 / S3" },
+      { "role": "prompt", "shotId": "S1", "status": "pass", "criterion": "发言者、听者与第三人的动作主体分明。", "observation": "三人分别以学徒、店主、快递员标记，没有指代不清的集体动作。", "sourceLocator": "draft.repair-shop v1 / S1" },
+      { "role": "prompt", "shotId": "S2", "status": "pass", "criterion": "物件位置与镜尾状态没有在编译中丢失。", "observation": "明确写出维修单在店主一侧、学徒双手空着；表演行发现的时序错误归 Prompt 修复，不被此局部通过抵消。", "sourceLocator": "draft.repair-shop v1 / S2" },
+      { "role": "prompt", "shotId": "S3", "status": "pass", "criterion": "结束指令有可见结果而非抽象情绪词。", "observation": "写出放下手、折单和维持道具位置，没有以‘更有戏’替代动作。", "sourceLocator": "draft.repair-shop v1 / S3" },
+      { "role": "continuity", "shotId": "S1", "status": "pass", "criterion": "S1 物件出口可供 S2 继承。", "observation": "维修单留在学徒手中，店主完成当前钥匙后没有拿下一把，S2 可从该状态展开。", "sourceLocator": "draft.repair-shop v1 / S1 -> S2" },
+      { "role": "continuity", "shotId": "S2", "status": "pass", "criterion": "S2 交接出口与 S3 入口一致。", "observation": "维修单位于柜台店主一侧，学徒空手，店主的手留在空钩旁，S3 分别继承。", "sourceLocator": "draft.repair-shop v1 / S2 -> S3" },
+      { "role": "continuity", "shotId": "S3", "status": "pass", "criterion": "结束时道具持有和未完成任务保持明确。", "observation": "维修单没有消失或换手，下一把钥匙仍未被拿起，快递员仍在门旁。", "sourceLocator": "draft.repair-shop v1 / S3" }
+    ]
+  },
+  "correction": {
+    "role": "performance",
+    "shotId": "S2",
+    "before": "维修单落下以前，店主的视线已经转向柜台上的单据。",
+    "after": "维修单落到柜台后，店主才把视线转向单据。",
+    "observation": "修订文本先发生单据落下，再发生店主视线转移；其余动作与镜尾状态保留。"
+  }
+}

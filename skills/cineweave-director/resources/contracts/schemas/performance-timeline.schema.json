@@ -2,6 +2,7 @@
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/performance-timeline.schema.json",
   "title": "CineWeave Character Performance Timeline",
+  "description": "Character-owned causal phases. Semantic validation enforces unique phase IDs, positive durations, ordered non-overlapping intervals and the declared duration bound. Gaps may hold the preceding state; timing arithmetic does not verify realized performance.",
   "type": "object",
   "additionalProperties": false,
   "required": [

@@ -25,6 +25,8 @@ Choose 3–16 anchors based on scale: facial relationships and asymmetry for clo
 
 `CharacterBinding` selects the exact identity and appearance state needed by a scene or shot. `PerformanceTimeline` owns actor timing; Direction aligns camera and focus to it but cannot rewrite the actor's causal phases.
 
+For listener reactions or ensemble performance, use [ensemble direction and shot review](../optional/ensemble-direction-and-review.md). Connect a received cue to a changed task and residual state; do not make every physiological channel move at once. Timeline validation checks unique phase IDs, positive durations, order, non-overlap and duration bounds. Gaps may hold the prior state; passing arithmetic does not prove causal acting or realized media timing.
+
 ## Quality gate
 
 For actor direction, subtext, listening, or restrained performance, read [directing craft](../optional/directing-craft.md). Convert emotion requests into playable tasks and scale-readable choices; do not require a catalogue of physiological gestures or treat a gesture as proof of an actual person's emotion.

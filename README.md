@@ -72,6 +72,20 @@ Techniques may mix; the visual treatment remains coherent. Every shot inherits [
 说明观众如何看出关系变化、各自代价，以及看样片时应检查什么。
 ```
 
+## Ensemble direction and shot review (Unreleased)
+
+The [ensemble direction and review guide](skills/cineweave-director/references/optional/ensemble-direction-and-review.md) applies automatically to multi-person narrative staging and complete narrative shot/video-prompt handoffs. It carries supporting-character tasks, cue-to-response performance and outgoing states through shots, storyboards and prompts, then closes the relevant review. Complete scene/sequence handoffs use six perspectives; a focused request stays focused. An explicit video-prompt request produces a temporal draft worksheet without a redundant permission step.
+
+The bundled [shot-review checker](skills/cineweave-director/scripts/check-shot-review.mjs) checks declared shot coverage, nonblank findings, unresolved items, repair ownership and optional Unicode prompt budgets. It distinguishes a complete design/prompt worksheet from actual media review. `PerformanceTimeline` validation also checks numeric phase timing rather than trusting its invariant flags. The [source review and integration record](tests/evaluations/2026-09-16-leos-review.md) documents the upstream snapshot, reproduced gaps and independent implementation. These changes are in the working tree, not the existing `v3.1.0` release.
+
+The reference-level integration also deepens the existing directing, cinematography, Scene, Reference, Action, video, review and revision guides. It covers dialogue/listening, spatial and scale checks, motivated optical treatment, contamination control, prop-state causality, clip joins and evidence-qualified lessons. The review record maps all eleven upstream references to their maintained destination and explains which constraints were adapted or left out.
+
+```text
+用 $cineweave-director。修理铺打烊前，学徒请求店主留下，快递员在门边等候。
+直接给出三镜视频提示词草案，说明每个人在做什么、先听见什么再如何反应，
+然后做六视角逐镜审稿。已有空间与画面基调保持不变；未知参数注明待定。
+```
+
 ## Install in Codex
 
 Install an immutable release rather than a moving branch. This repository includes a single-entry [marketplace manifest](.agents/plugins/marketplace.json) following the [Codex plugin packaging guidance](https://developers.openai.com/codex/plugins/build/):
@@ -153,7 +167,7 @@ These additions are included in the `v3.1.0` release.
 Node.js 22 or newer is required. The repository is a private, dependency-free development harness and has no install step. CI invokes the concrete entrypoints below rather than mutable package aliases:
 
 ```powershell
-node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs tests/check-delivery.test.mjs
+node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs tests/check-delivery.test.mjs tests/check-shot-review.test.mjs
 node scripts/generate-contract-index.mjs --check
 node scripts/validate-repository.mjs
 node scripts/build-plugin-bundle.mjs
@@ -164,7 +178,7 @@ The equivalent `npm` scripts remain convenience aliases, and repository validati
 
 - The tests check strict JSON/JCS, schema-validation primitives, full-schema target/review/repair roundtrips, immutable hash revisions, and delivery arithmetic.
 - Source validation checks plugin identity, frontmatter/agent metadata, exact scripts and CI entrypoints, route/lifecycle authority, typed load contexts, fail-closed schema keywords and formats, confined local `$ref` closure, semantic workflow/review invariants, raw-byte hashes, receipt identity, all 52 canonical examples, clean source boundaries, and the dynamically derived distribution inventory.
-- The build creates `.build/cineweave-director/` by copying the declared base resources (including the read-only delivery helper) and the lifecycle/index-derived allowlist. The current source inventory is 145 regular files; the builder does not hardcode that count.
+- The build creates `.build/cineweave-director/` by copying the declared base resources (including the read-only delivery and shot-review helpers) and the lifecycle/index-derived allowlist. The current source inventory is 147 regular files; the builder does not hardcode that count.
 - Bundle validation rejects missing, changed, linked, case-colliding, traversing, or extra files and proves source/bundle byte equality.
 
 RepairPlan validation rejects contradictory approval, malformed target pointers and duplicate check IDs. For optional cross-artifact checks:
@@ -182,7 +196,7 @@ node scripts/generate-contract-index.mjs
 node scripts/generate-contract-index.mjs --check
 ```
 
-The Unreleased working tree includes a self-contained planning helper at `skills/cineweave-director/scripts/check-delivery.mjs`. It requires Node.js 22+ only when used, accepts a local worksheet or `--text`, and writes nothing. See the [video/sound guide](skills/cineweave-director/references/optional/video-sound-and-delivery.md) for its input, rational-timebase conventions and limits. It does not execute production or inspect media. The released `v3.1.0` tag remains unchanged; these additions are not in that installed release.
+The Unreleased working tree includes two self-contained planning helpers requiring Node.js 22+ only when used. `check-delivery.mjs` accepts a local worksheet or `--text`; see the [video/sound guide](skills/cineweave-director/references/optional/video-sound-and-delivery.md) for timing and copy checks. `check-shot-review.mjs` accepts a design/prompt review worksheet; see the [ensemble guide](skills/cineweave-director/references/optional/ensemble-direction-and-review.md) for its fields, optional prompt budget and completion states. Both write nothing and neither executes production nor inspects media. The released `v3.1.0` tag remains unchanged; these additions are not in that installed release.
 
 See the [review-driven optimization and validation record](tests/evaluations/2026-09-08.md) for implemented changes, behavioral checks and untested media scenarios.
 
@@ -193,10 +207,11 @@ See the [review-driven optimization and validation record](tests/evaluations/202
 skills/cineweave-director/          complete distributable Skill
   SKILL.md                           creator-intent routing and hard boundaries
   contracts.json                    12 routes and 52 root kinds
-  reference-lifecycle.json          typed 31-file knowledge allowlist
+  reference-lifecycle.json          typed 32-file knowledge allowlist
   references/                       core, routed and optional knowledge
   resources/contracts/              54 schemas, 52 examples and hash index
   scripts/check-delivery.mjs         optional read-only planning arithmetic (Node 22+)
+  scripts/check-shot-review.mjs      optional read-only design/prompt review checks
 scripts/                             dependency-free validation/build tooling
 tests/                               validation primitive tests
 assets/                              repository branding; not bundled

@@ -791,6 +791,24 @@ function validateWorkflowPlanSemantics(payload, errors, contracts) {
   }
 }
 
+function validatePerformanceTimelineSemantics(payload, errors) {
+  const phases = Array.isArray(payload.phases) ? payload.phases : [];
+  const ids = new Set();
+  let previousEnd = 0;
+  for (const [index, phase] of phases.entries()) {
+    if (!isObject(phase)) continue;
+    const label = `$.phases[${index}]`;
+    if (ids.has(phase.phaseId)) errors.push(`${label}.phaseId must be unique`);
+    ids.add(phase.phaseId);
+    const { startSeconds, endSeconds } = phase;
+    if (typeof startSeconds !== "number" || typeof endSeconds !== "number") continue;
+    if (startSeconds >= endSeconds) errors.push(`${label} must have positive duration`);
+    if (startSeconds < previousEnd) errors.push(`${label} must be ordered and non-overlapping`);
+    if (endSeconds > payload.durationSeconds) errors.push(`${label} exceeds durationSeconds`);
+    previousEnd = endSeconds;
+  }
+}
+
 function validateCreativeReviewSemantics(payload, errors) {
   if (!isObject(payload)) return;
   const evidence = Array.isArray(payload.evidence) ? payload.evidence.filter(isObject) : [];
@@ -948,6 +966,7 @@ function validateContractSemantics(payload, schema, errors, contracts) {
   if (schemaKind === "cineweave_codex_capability_resolution_plan") validateCapabilityResolutionPlanSemantics(payload, errors);
   if (schemaKind === "cineweave_codex_shot_compiler_plan") validateShotCompilerPlanSemantics(payload, errors, contracts);
   if (schemaKind === "cineweave_codex_workflow_plan") validateWorkflowPlanSemantics(payload, errors, contracts);
+  if (schemaKind === "cineweave_codex_performance_timeline") validatePerformanceTimelineSemantics(payload, errors);
   if (schemaKind === "cineweave_codex_creative_review") validateCreativeReviewSemantics(payload, errors);
   if (schemaKind === "cineweave_codex_repair_plan") validateRepairPlanSemantics(payload, errors);
 }

@@ -4,12 +4,21 @@ All notable changes to CineWeave Director are documented here.
 
 ## Unreleased
 
+- map all eleven Leos reference documents to existing CineWeave owners; deepen dialogue/listening, spatial checks, optical treatment, reference control, prop-state causality, clip joins, diagnosis and scoped learning notes without duplicating templates or importing provider claims;
+
+- wire ensemble checks into the default narrative handoff from shots through storyboards and prompts, with automatic scope selection, domain-owned correction and re-review of changed transitions; exercise a three-shot, eighteen-row prompt revision through the real checker CLI;
+
+- integrate independently authored ensemble direction and six-perspective shot review, based on a commit-pinned analysis of Leos's directing Skill; preserve proportional scope, existing authorization, route ownership and the shared look;
+- add a bundled read-only design/prompt review checker with exact role-shot coverage, nonblank findings, unresolved/revision handling, domain-owned repair notes and optional Unicode prompt budgets; a worksheet pass never proves media quality;
+- enforce PerformanceTimeline phase IDs, positive durations, ordered non-overlapping intervals and duration bounds; retain the wire format and regenerate the schema hash index;
+- document source strengths, reproduced validator limitations, integration choices and validation boundaries in `tests/evaluations/2026-09-16-leos-review.md`; no upstream code or templates are vendored and no release tag is changed.
+
 - add eight master-inspired method cards with automatic brief-led matching, dimension-scoped mixing, conservative no-match fallback, explicit override precedence, and twelve manual behavioral checks; no name, switch, or strength setting is required;
 - keep a shared work-level visual baseline across mixed techniques, including grading, palette, contrast/rolloff, material/optical texture, and aspect ratio; undefined looks become one provisional shared draft, never per-master shot grades;
 
 - add four optional craft references covering directing/performance/staging, cinematography/light, editing/sound, and a source-qualified international learning map with eight behavioral evaluation cases;
 - route craft guidance through typed lifecycle contexts and existing contracts, including tradeoff/failure checks and support for observational or associative intent without forced plot conflict;
-- expand the derived distribution to 145 files and 31 references, including the delivery checker; retain 52 root contracts and unchanged wire schemas, and distinguish packaging checks from unverified artistic outcomes;
+- expand the derived distribution to 147 files and 32 references, including both planning checkers; retain 52 root contracts and unchanged wire shapes, and distinguish packaging checks from unverified artistic outcomes;
 
 - reject capability candidates marked eligible despite unresolved hard requirements, failed candidates left reviewable, and nonexistent, selected, or blocked fallbacks;
 - validate ShotCompilerPlan parameter/control agreement, unique IDs, ordered traces and handoffs, output ownership from the matching release, exact input dependency retention, alias provenance declarations, and trace-to-handoff closure;

@@ -49,6 +49,14 @@ At a pause, include current requested outcome, artifact index, locked decisions 
 
 Changing the courier's coat from red to blue changes AppearanceState, not identity. A face-only close-up with no visible coat need not be regenerated. Shots showing the coat, their prompt projections, and dependent review comparisons become stale or need review. Story causality, scene topology, and unrelated sound cues remain valid if they do not consume coat color. If a story clue depends on red, surface that conflict before treating this as an appearance-only change.
 
+## Lessons from returned work
+
+When the user requests a retrospective or maintenance update, record the claim, relevant task conditions, exact available source/candidate revisions, observation range, changed variable, counterexamples, confidence and review date. Keep an observation separate from the proposed explanation. Missing raw output leaves a reported result declared, not observed.
+
+Route the lesson by meaning: a user's chosen taste becomes a scoped project decision; model/version behavior becomes a dated capability note; a reusable craft idea remains a conditional heuristic with failure signals and exceptions. User preference does not prove a model effect, and repeated random candidates from the same shot are not independent evidence of a universal rule. Combined changes prevent attributing the result to one word or parameter.
+
+This independently adapts [Leos knowledge provenance](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/knowledge-and-provenance.md) and [continuity/learning](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/continuity-and-learning.md). It introduces no automatic store, fixed sample-count proof threshold or new contract. Keep rejected explanations traceable; edit Skill files or persistent memory only within an explicit maintenance request.
+
 ## Validation scope
 
 Root schema validity proves wire structure. Repair-plan semantic checks also reject inconsistent gates and malformed target pointers. With a supplied exact ref/document registry the development validator checks content hashes, source finding ownership, and target-path existence. Missing bindings and media-level guarantees remain explicitly unverified. Registry bindings are caller-supplied authority; matching bytes do not establish rights, observed success, or preservation of passing dimensions.

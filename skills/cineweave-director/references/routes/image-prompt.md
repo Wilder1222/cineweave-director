@@ -22,6 +22,8 @@ Write observable language in this order when relevant:
 
 Facts outrank style adjectives. Include only detail visible at the target scale or needed for continuity.
 
+When compiling a narrative shot sequence, inherit its reviewed staging and continuity through [ensemble direction and shot review](../optional/ensemble-direction-and-review.md). Check each prompt against the actual source shot: actor task, gaze target, supporting activity, spatial anchors and selected action state must survive where visible. Route an omitted fact to Prompt; route a contradictory upstream fact to its owner. A standalone image prompt or exact translation stays within its bounded request. For moving-image instructions use the [video handoff guide](../optional/video-sound-and-delivery.md), preserving cue order outside the still-image canonical fields.
+
 ## Prompt economy gate
 
 Before drafting, reduce approved inputs to a visual-proposition inventory. One proposition is one observable fact or reviewable relationship at the requested scale—for example, who shields whom, where a weapon enters frame, or which light produces a contact shadow. Keep provenance in the artifact; do not narrate it inside the prompt.
