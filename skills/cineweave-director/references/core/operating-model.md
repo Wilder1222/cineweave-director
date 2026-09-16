@@ -1,60 +1,79 @@
-# Operating model
+<a id="operating-model"></a>
+# 工作模型
 
-CineWeave Director is one self-contained creative Skill. Story, Character, Scene, Style, Reference, Direction, Prompt, and Production are internal knowledge domains—not callable sibling Skills and not a hidden agent chain.
+CineWeave 导演 是一个自包含的创作 Skill。故事、人物、场景、风格、参考、导演、提示词和制作规划都是内部知识领域，不是可单独调用的兄弟 Skill，也不是隐藏的多智能体调用链。
 
-## Route graph
+## 中文工作约定
 
-Use only the smallest routes needed by the request:
+语言、准确文案和提示词交付规则统一见 [Skill 入口](../../SKILL.md#non-negotiable-rules)。本指南只补充跨阶段的依赖与成熟度管理。
 
-`brief_world → story → character / scene / style / reference_evidence → action / shot_direction → storyboard_rhythm → image_prompt → production_plan → review_repair`
+## 架构与职责
 
-Dependencies may be skipped when they do not matter. A product still may move from `brief_world` directly to `scene`, `style`, `shot_direction`, and `image_prompt`. A script rewrite may stop after `story`. Never invent skipped reusable facts.
+系统由任务入口、共享设定、专业设计、提示词编译和证据评审协作完成创作。它们是同一 Skill 的职责层，不是五个运行中的代理。创作方法与平台限制分开维护：前者说明如何选择和表达，后者必须有模型、界面、模式与查阅时间，不将暂时限制提升为电影规律。
 
-Two starting paths are valid:
+| 职责层 | 读取与产生 | 权威位置 |
+| --- | --- | --- |
+| 任务入口 | 识别交付、已有材料、用户锁定及起始阶段，选择必要路由 | [Skill 入口](../../SKILL.md)、本工作模型 |
+| 共享设定 | 保存故事事实、人物身份／外观、场景空间、表现媒介及光色基线 | [视觉规范与连续性](visual-bible-and-continuity.md)及各领域母稿 |
+| 专业设计 | 将意图变成节拍、表演、调度、摄影、声音与剪辑决定，引用共享设定并记录本镜变化 | 既有故事、人物、场景、动作、导演、分镜与制作路由 |
+| 提示词编译 | 将设计展开成资产、静帧、运动、配音及声音稿；按实际平台能力另作适配 | [图像提示词](../routes/image-prompt.md)、[全套创作](../optional/short-film-creation.md)、[平台适配](../optional/video-platform-adaptation.md) |
+| 证据评审 | 分别检查文字一致性、已返回媒体与采用边界，确定缺陷归属和受影响范围 | [评审与修复](../routes/review-repair.md)、[修订工作表](../optional/drafts-and-change-impact.md#revision-worksheet-and-checkpoint) |
 
-- **story-led:** establish world authority and causal beats before visual development;
-- **look-led:** explore a bounded visual hypothesis before story convergence.
+每项决定只有一个维护来源，复制稿是该来源在具体镜头中的展开。编译层遇到“脚够不到台阶”“说话与紧闭嘴唇冲突”时，将问题交回场景或表演设计处理，不能偷偷重写上游；反馈后同步消费者。用户授权原创时可在对应领域作可撤销设计，不必把每次回流变成确认问题。
 
-Both paths converge on an explicit dramatic or perceptual unit and a visual bible at matching maturity. Draft shots may use declared hypotheses; final compilation uses approved facts. A look cannot replace causality in causal drama; observational or associative work need not acquire an invented conflict. Non-narrative stills need a communication goal and visible action or state, without invented story prerequisites. A script cannot silently define identity, geography, or representation.
+文件分工保持明确：`contracts.json` 管路由及产物归属，`reference-lifecycle.json` 管知识分发和加载条件，生成的契约索引管 schema／示例清单。工作流表只导航，不另建相同 ID 清单或新契约。跨阶段使用[全套创作的阶段交接](../optional/short-film-creation.md#阶段交接)，单项任务可以直接从有充分输入的职责层开始并在完成后结束。
 
-## Interaction depth
+<a id="route-graph"></a>
+## 路由图
 
-- `zero_prompt`: offer six concise cards—world/genre, protagonist, conflict, visual direction, intended deliverable, and non-negotiables.
-- `quick`: apply low-impact reversible defaults and expose them.
-- `guided`: ask at most three questions that change route, identity, rights, historical treatment, time structure, or deliverable.
-- `professional`: keep the complete artifact graph, locks, evidence, and review gates visible.
+仅使用完成请求所需的最小路由集合：
 
-Interaction depth and presentation are separate. Unless the user requests the full graph or canonical JSON, apply the existing `professional` depth with the **professional-lite** presentation profile: preserve all authority and gates while showing a concise human-readable artifact and one next action. `professional-lite` is not an `inputMode`, route, execution mode, or contract value.
+`简报与世界 → 故事 → 人物／场景／风格／参考证据 → 动作／镜头 → 分镜节奏 → 图像提示词 → 制作计划 → 评审修复`
 
-Ask one question at a time only when the answer changes a high-impact decision. Otherwise proceed with explicit assumptions.
+无关依赖可以跳过。例如，产品静帧可从 `brief_world` 直接进入 `scene`、`style`、`shot_direction`、`image_prompt`；剧本改写可以在 `story` 结束。不能编造跳过环节中缺失的可复用事实。
 
-## Stage discipline
+允许两种起点：
 
-For every stage state:
+- **故事驱动：**先明确世界设定的权威来源与因果节拍，再进行视觉开发。
+- **视觉驱动：**先探索限定范围内的视觉假设，再收敛故事。
 
-1. exact inputs or bounded natural-language input;
-2. route and purpose;
-3. artifact to create or revise;
-4. unresolved decisions;
-5. human gate, if any;
-6. one next action.
+两条路径都应收敛到明确的戏剧或感知单元，以及成熟度匹配的视觉规范。草稿镜头可以使用已经声明的假设；精确编译沿用已有确定事实；用户已委托的原创设计可以完整交付并注明假设，无需为每项日常创作选择另设批准。在因果叙事中，视觉风格不能替代故事因果；观察式或联想式创作不必被强塞冲突。非叙事静帧只需明确传播目标及可见动作或状态，不要凭空添加故事前提。剧本不能无声地定义人物身份、空间地理或表现媒介。
 
-A gate that lacks required input blocks the dependent final commitment. Continue independent work and explicitly hypothetical drafts within the user’s scope. Do not compress the workflow into a mega-prompt.
+<a id="interaction-depth"></a>
+## 交互深度
 
-## Creative maturity and delegated decisions
+- `zero_prompt`：根据空白请求提供少量可开始创作的方向，选定后展开；不预先要求填写完整表格。
+- `quick`：采用低影响、可撤销的默认选择，并明确说明。
+- `guided`：最多提出三个会改变路由、身份、权利、历史处理、时间结构或交付物的问题。
+- `professional`：保留完整的产物关系、锁定条件、证据和评审关卡。
 
-Maturity is workflow guidance, not a new inputMode or a replacement for existing contract status enums.
+交互深度与呈现形式分开。除非用户要求完整关系图或规范 JSON，默认采用 `professional` 深度与 **professional-lite** 呈现方式：保留相关约束、充分的创作细节和必要检查，完成当前授权交付；只有确有后续工作时才列下一步，不在每个内部阶段停下来等确认。`professional-lite` 不是新的 `inputMode`、路由、执行模式或契约值。
 
-- Exploration: propose original hypotheses and compare directions. Multi-axis concepts are allowed when labeled; use one-axis variants for causal comparison.
-- Draft: carry declared assumptions into a complete reviewable deliverable. Do not describe provisional choices as approved Canon.
-- Final: compile only resolved authority and obtain any still-missing consequential selection.
+只有答案会改变高影响决策时才逐个提问，否则基于明确声明的假设继续。
 
-Record delegated scope, hard locks, decisions already supplied, and decisions still reserved to the user. A request to develop a complete concept authorizes reversible creative drafting; it does not approve rights or external execution. Do not ask again for an unchanged decision already authorized. Batch unresolved final choices after preparing the requested draft.
+<a id="stage-discipline"></a>
+## 阶段纪律
 
-Use [draft and change guidance](../optional/drafts-and-change-impact.md) for working JSON, version promotion, or resuming a project.
+每个阶段明确：精确输入或有界自然语言输入、路由与目的、要创建或修改的产物、待决事项、必要的人工确认关卡，以及一个下一步。
 
-## Planning boundary
+关卡缺少必要输入时，只阻止依赖该输入的最终确认。用户授权范围内的独立工作和明确标注假设的草稿可以继续。不要把整个工作流压成一条巨型提示词。
 
-This Skill authors and reviews creative artifacts. It does not call providers, run adapters, install models, write generated media, approve rights, or claim that a planned result exists. `PromptProjectionPlan`, `RenderPlan`, capability resolution, board assembly, editorial, and color artifacts are plans for an external workflow.
+<a id="creative-maturity-and-delegated-decisions"></a>
+## 创作成熟度与授权决策
 
-A provider projection must bind exact prompt Canon and capability evidence, expose model/surface defaults and compatibility unknowns, and stop at a human handoff. Require exact returned metadata/files for execution-verification claims. Accessible media may enter a separately scoped visual or audible review with missing metadata explicitly unknown.
+成熟度属于工作流指导，不是新的 `inputMode`，也不替代现有契约状态枚举。
+
+- **探索：**提出原创假设、比较方向。标注清楚后可以比较多维概念；要做因果对比时使用单变量变体。
+- **草稿：**将已声明假设带入完整、可审阅的交付物。暂定选择不能表述为已批准的正式设定。
+- **定稿：**保持用户事实与已委托决定一致；只对未授权且会使交付失效的重大选择取得确认，不重复确认已明确的创作授权。
+
+记录用户授权范围、硬性锁定、已给出的决定及仍由用户保留的决定。要求开发完整概念，意味着允许可撤销的创作草拟，不等于批准素材权利或外部执行。已经授权且未变化的决定不要重复询问。先完成所需草稿，再集中列出待确认的定稿选择。
+
+需要非规范工作稿 JSON、版本提升或恢复项目时，阅读[草稿与变更影响](../optional/drafts-and-change-impact.md)。
+
+<a id="planning-boundary"></a>
+## 规划边界
+
+本 Skill 编写和评审创作产物，不调用供应商、不运行适配器、不安装模型、不写入生成媒体、不批准素材权利，也不宣称计划结果已经存在。`PromptProjectionPlan`、`RenderPlan`、能力匹配、画布装配、剪辑和调色产物都只是供外部工作流使用的计划。
+
+平台适配方案必须绑定精确的提示词母稿和能力证据，列出模型／界面默认值及兼容性未知项，并止于人工交接。宣称执行已核验时，必须有实际返回的准确元数据和文件。即使元数据缺失，也可以对可访问媒体开展限定范围的视觉或听觉评审，但缺失内容必须标为未知。

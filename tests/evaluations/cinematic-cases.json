@@ -1,0 +1,776 @@
+[
+  {
+    "id": "CD-E01",
+    "request": "正面半身定妆资产：看镜头、头身正对、自然肤感，保留参考妆发。",
+    "routes": [
+      "character",
+      "shot_direction",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-ATTENTION"
+    ],
+    "must": [
+      "资产验收决定视线和构图",
+      "保留已批准相貌和妆容"
+    ],
+    "mustNot": [
+      "强制不看镜头或变成环境中的极小人物"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E02",
+    "request": "古街第一视角，她看向镜头并递出灯笼；保留中性日光。",
+    "routes": [
+      "shot_direction",
+      "production_plan"
+    ],
+    "diagnostics": [
+      "CW-ATTENTION",
+      "CW-START-END"
+    ],
+    "must": [
+      "允许有动机的直视互动",
+      "定义可用起点和稳定终点"
+    ],
+    "mustNot": [
+      "把暖逆光或雾作为电影感默认"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E03",
+    "request": "壮阔宫殿远景，人物很小，但要能读到衣料反光。",
+    "routes": [
+      "scene",
+      "shot_direction",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-ATTENTION"
+    ],
+    "must": [
+      "明确尺度与可见材质读法",
+      "明示几何假设"
+    ],
+    "mustNot": [
+      "声称能看见面部毛孔或虚构精确机距"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E04",
+    "request": "把已批准提示词翻成英文，不改构图、服装和光线。",
+    "routes": [
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-PROMPT"
+    ],
+    "must": [
+      "精确转换保持原范围"
+    ],
+    "mustNot": [
+      "发起导演会议或重新调度"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E05",
+    "request": "I2V 首帧里灯笼已经递到最远处，但提示词要求从腰间递出。",
+    "routes": [
+      "shot_direction",
+      "production_plan"
+    ],
+    "diagnostics": [
+      "CW-START-END"
+    ],
+    "must": [
+      "指出初态不匹配",
+      "将锚点或动作修改作为草稿提出"
+    ],
+    "mustNot": [
+      "声称增加运动形容词即可修好初态"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E06",
+    "request": "要求首尾帧锁定，但未给模型版本，也不知道当前接口支持什么。",
+    "routes": [
+      "production_plan"
+    ],
+    "diagnostics": [
+      "CW-CAPABILITY"
+    ],
+    "must": [
+      "精确界面支持标为未知",
+      "继续独立规划"
+    ],
+    "mustNot": [
+      "虚构尾帧参数或声称已导入提交"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E07",
+    "request": "用户说视频像 PPT，但没有上传视频。",
+    "routes": [
+      "review_repair"
+    ],
+    "diagnostics": [
+      "CW-MOTION"
+    ],
+    "must": [
+      "给出有条件的原因假设和所需证据"
+    ],
+    "mustNot": [
+      "虚构时间戳、测量缺陷或已完成评审"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E08",
+    "request": "已上传可看的视频，没有 任务标识；只检查动作是否完成。",
+    "routes": [
+      "review_repair"
+    ],
+    "diagnostics": [
+      "CW-START-END"
+    ],
+    "must": [
+      "允许限定可见评审",
+      "执行元数据保持未知"
+    ],
+    "mustNot": [
+      "阻断全部评审或宣称可复现"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E09",
+    "request": "同一镜头服装与道具都变了，先定位共同原因，不整体重做。",
+    "routes": [
+      "review_repair",
+      "reference_evidence",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-APPEARANCE",
+      "CW-CONTACT"
+    ],
+    "must": [
+      "检查来源绑定及最早可证实的偏离",
+      "修复一个有证据归属的变量"
+    ],
+    "mustNot": [
+      "仅因两个标签就拆镜"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E10",
+    "request": "混合适合的悬念和调度手法，但整段维持同一调色、肤感、画幅。",
+    "routes": [
+      "shot_direction",
+      "style"
+    ],
+    "diagnostics": [
+      "CW-LOOK"
+    ],
+    "must": [
+      "允许按维度组合兼容手法",
+      "继承同一视觉基线"
+    ],
+    "mustNot": [
+      "强制一个名导或每镜换调色"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E11",
+    "request": "几个单镜头都好看，剪在一起却站位跳变；只检查衔接。",
+    "routes": [
+      "storyboard_rhythm",
+      "review_repair"
+    ],
+    "diagnostics": [
+      "CW-CONTINUITY"
+    ],
+    "must": [
+      "检查有序序列与边界状态"
+    ],
+    "mustNot": [
+      "因为单片段通过就宣布成片通过"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E12",
+    "request": "只允许再做一个候选，必须保留远景全身与人物身份。",
+    "routes": [
+      "production_plan",
+      "review_repair"
+    ],
+    "diagnostics": [
+      "CW-CAPABILITY"
+    ],
+    "must": [
+      "遵守给定上限及硬锁",
+      "说明替代方案的取舍"
+    ],
+    "mustNot": [
+      "自动重试或悄悄把必要远景替为特写"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E13",
+    "request": "请直接设计一个原创成年女信使，给一条包含表情、仪态、肌肤、妆发服饰和镜头细节的中文全身提示词，不要备选方案。",
+    "routes": [
+      "character",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-PROMPT",
+      "CW-APPEARANCE"
+    ],
+    "must": [
+      "直接完成一条原创详细稿，明确可撤销的设计假设",
+      "覆盖用户维度并采用可见的专业描述"
+    ],
+    "mustNot": [
+      "先强制四选一或要求规范 JSON",
+      "只给抽象审美标签"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E14",
+    "request": "没有参考图，写一段六秒文生视频：雨后长廊的纸灯随微风轻摆，无人物。",
+    "routes": [
+      "scene",
+      "shot_direction",
+      "production_plan"
+    ],
+    "diagnostics": [
+      "CW-MOTION",
+      "CW-PROMPT"
+    ],
+    "must": [
+      "完整设计初态、光色、环境运动和时长",
+      "使用文生视频路径且不虚构媒体绑定"
+    ],
+    "mustNot": [
+      "要求不存在的首帧文件",
+      "新增人物或假称已生成"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E15",
+    "request": "两镜动作匹配：第一镜手伸向门把手时切出，第二镜接着握住并转动；不许先停下来。",
+    "routes": [
+      "shot_direction",
+      "storyboard_rhythm"
+    ],
+    "diagnostics": [
+      "CW-CONTINUITY",
+      "CW-CONTACT"
+    ],
+    "must": [
+      "明确出入点动作相位、方向、握持和轴线",
+      "允许运动中切镜与延续运动余量"
+    ],
+    "mustNot": [
+      "每镜结束强制静止一秒"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E16",
+    "request": "为雨后木廊人物递灯镜头补声音稿，无对白；保留固定机位与站姿。",
+    "routes": [
+      "production_plan",
+      "shot_direction"
+    ],
+    "diagnostics": [
+      "CW-PROMPT",
+      "CW-CONTINUITY"
+    ],
+    "must": [
+      "分开环境、衣料、道具声及同步时段",
+      "实拍拾音说明与合成听感分开"
+    ],
+    "mustNot": [
+      "加入脚步对白或让话筒成为画面主体",
+      "声称已录音或已测响度"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E17",
+    "request": "把这条中文海报稿适配到我指定的平台，只给中文正文和已核验的必要参数，不要 JSON。",
+    "routes": [
+      "image_prompt",
+      "production_plan"
+    ],
+    "diagnostics": [
+      "CW-PROMPT"
+    ],
+    "must": [
+      "普通适配不依赖规范产物 ID 或哈希",
+      "兼容未知时给通用稿并标待核验项"
+    ],
+    "mustNot": [
+      "强制创建 PromptProjectionPlan 才开始写",
+      "自动改成英文"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E18",
+    "request": "审阅并修好这条文字提示词：固定机位，同时绕人物转一圈。目标是保持固定机位拍她抬手。",
+    "routes": [
+      "review_repair",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-CAMERA",
+      "CW-PROMPT"
+    ],
+    "must": [
+      "直接指出相机指令冲突并交付修订正文",
+      "保留固定机位与抬手目标"
+    ],
+    "mustNot": [
+      "因没有视频拒绝文稿审阅",
+      "声称观察到生成视频的问题"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E19",
+    "request": "身份图、服装图和场景图分别已有，只修改角色的蓝色袖口为米白，其他保留。",
+    "routes": [
+      "reference_evidence",
+      "image_prompt",
+      "review_repair"
+    ],
+    "diagnostics": [
+      "CW-APPEARANCE",
+      "CW-PROMPT"
+    ],
+    "must": [
+      "保留角色限定的参考职责与局部修改范围",
+      "使消费袖口颜色的下游内容待更新"
+    ],
+    "mustNot": [
+      "迁移服装图模特的脸",
+      "无差别重做全项目"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E20",
+    "request": "为八镜短片做制作计划，先测试最难的双人交接，单镜最多两候选，失败先诊断。",
+    "routes": [
+      "production_plan",
+      "review_repair"
+    ],
+    "diagnostics": [
+      "CW-CONTACT",
+      "CW-PROMPT"
+    ],
+    "must": [
+      "先检查资产及高风险交接，再计划批量制作",
+      "保留候选上限并定义采用、修复与停止条件"
+    ],
+    "mustNot": [
+      "先生成全部素材再看关键动作",
+      "无限重试或虚构点数花费"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E21",
+    "request": "完成一部24秒、四镜的原创短片，给故事、视觉探索、人物场景资产、全部镜头的首帧和视频提示词、配音与剪辑。",
+    "routes": [
+      "story",
+      "character",
+      "scene",
+      "shot_direction",
+      "storyboard_rhythm",
+      "image_prompt",
+      "production_plan"
+    ],
+    "diagnostics": [
+      "CW-PROMPT",
+      "CW-CONTINUITY"
+    ],
+    "must": [
+      "所有选中镜头和必需资产都有具体可复制稿",
+      "台词、声音与剪辑窗口对应且总时长闭合"
+    ],
+    "mustNot": [
+      "只给一个镜头示范然后要求继续",
+      "把尚未生成素材标为交付完成"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E22",
+    "request": "为同一成年人物探索服装、发饰、迟疑与放松的表情，保持相貌，完整描述肌肤妆容仪态；委托你选主方案并交付。",
+    "routes": [
+      "character",
+      "style",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-APPEARANCE",
+      "CW-PROMPT"
+    ],
+    "must": [
+      "主方案明确，备选不污染后续",
+      "身份固定，表情变化可见且服化道细节完整"
+    ],
+    "mustNot": [
+      "每个表情换一张脸或改变光线来掩盖差异",
+      "强制停在方案选择而不完成授权交付"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E23",
+    "request": "给两句对白的独立TTS正文、声线设计、语气指导与字幕时间，不得改字。",
+    "routes": [
+      "story",
+      "production_plan"
+    ],
+    "diagnostics": [
+      "CW-PROMPT"
+    ],
+    "must": [
+      "纯口播文本与角色名、时间及表演说明分开",
+      "准确台词跨配音与字幕一致"
+    ],
+    "mustNot": [
+      "把控制标签、时间码或角色名混入口播",
+      "用字数宣称已验证实际语音时长"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E24",
+    "request": "开发一部二维赛璐璐风格短片，人物场景细节完整，但不要写实毛孔和PBR质感。",
+    "routes": [
+      "style",
+      "character",
+      "scene",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-LOOK",
+      "CW-PROMPT"
+    ],
+    "must": [
+      "以线条、色块、明暗分区与动作语法展开细节",
+      "保留二维媒介硬约束"
+    ],
+    "mustNot": [
+      "因详细规范强加写实摄影皮肤或PBR材质"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E25",
+    "request": "为成年男子写一条静态人物近景提示词，他因好友归来而含蓄高兴，闭唇不露齿，妆发服饰与摄影也要完整。",
+    "routes": [
+      "character",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-PROMPT"
+    ],
+    "must": [
+      "明确核心情绪、轻度强度、目光对象、面部细节、身体反应和触发语境，并交付完整中文稿",
+      "静帧只描述见到好友后的一个瞬间，闭唇与牙齿可见性一致"
+    ],
+    "mustNot": [
+      "只输出情绪词块或只写开心",
+      "同时要求完全闭唇和露齿，或把先回头再招手塞进单帧"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E26",
+    "request": "人物情绪模板写着双唇紧闭但露上齿、看朋友或镜头、先平静再大笑。请改成一条确定的静帧稿，采用闭唇浅笑并看画外右侧朋友。",
+    "routes": [
+      "image_prompt",
+      "review_repair"
+    ],
+    "diagnostics": [
+      "CW-PROMPT"
+    ],
+    "must": [
+      "按已指定选择消除嘴部、视线和时间冲突",
+      "保留克制喜悦，眼睑与面颊有对应表现"
+    ],
+    "mustNot": [
+      "把互斥选项原样复制出去",
+      "只列问题而不交付修订稿"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E27",
+    "request": "已有首帧是女子闭唇浅笑、杯子在胸前。给6秒图生视频：回应准确台词谢谢你。后再伸杯；不改人物与场景。",
+    "routes": [
+      "shot_direction",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-PROMPT",
+      "CW-CONTINUITY"
+    ],
+    "must": [
+      "起点匹配实际首帧，时间段内明确语音、句后表情和递杯顺序",
+      "发音时允许唇形下颌变化，准确台词与表演说明分离，注明语音时长待验证"
+    ],
+    "mustNot": [
+      "全程紧闭嘴唇却说话",
+      "悄悄改成无参考文生视频或先伸杯再说话"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E28",
+    "request": "只给一张中性身份图和一张全身背影造型图的中文提示词，人物是成年女子，不要添加节日剧情或笑容。",
+    "routes": [
+      "character",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-PROMPT",
+      "CW-APPEARANCE"
+    ],
+    "must": [
+      "中性身份图写明平静面部和视线状态",
+      "背影以肩颈、重心和手势表达状态，身份与衣饰设定保持"
+    ],
+    "mustNot": [
+      "机械套用节庆喜悦或编造面向镜头的背影双眼",
+      "把全身远景写成可看清全部毛孔的特写"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E29",
+    "request": "五人宴席群像，女主听左侧好友说话而笑，另两人交谈，第五人看杯子。详细写情绪、表情和空间，不让大家看镜头。",
+    "routes": [
+      "character",
+      "shot_direction",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-PROMPT",
+      "CW-CONTINUITY"
+    ],
+    "must": [
+      "每组视线有明确对象、反应有触发原因，五人保持可辨服饰与身份",
+      "桌面与手杯归属清楚，主角表情有具体强度和面部依据"
+    ],
+    "mustNot": [
+      "所有人同步广告笑或一起直视镜头",
+      "复制女主五官到全部配角"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E30",
+    "request": "现有角色母稿、首帧、视频和平台复制稿都已确定。仅将人物从闭唇浅笑改为更明亮的露少量上齿笑容，别改衣服发饰和台词。",
+    "routes": [
+      "image_prompt",
+      "review_repair"
+    ],
+    "diagnostics": [
+      "CW-PROMPT",
+      "CW-APPEARANCE"
+    ],
+    "must": [
+      "更新实际消费表情的各份稿件并保持唇部定义一致",
+      "保留身份、发饰佩戴侧、服装、空间、摄影与准确台词，区分修改文本与实际媒体"
+    ],
+    "mustNot": [
+      "只修改母稿后宣称全套同步",
+      "因增加情绪而换脸换妆或报告未生成素材已通过"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E31",
+    "request": "已有批准的三镜分镜、人物和场景，只需补齐逐镜中文图像与视频提示词，不重写故事。",
+    "routes": [
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-PROMPT"
+    ],
+    "must": [
+      "从编译阶段进入并完整交付三镜",
+      "检查现有输入及起止状态，沿用批准事实"
+    ],
+    "mustNot": [
+      "强制重做立项或美术探索",
+      "因阶段表而每一步等待批准"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E32",
+    "request": "设计横版二维短剧和竖版写实观察短片，各用适合的视觉语言，不要把媒介与画幅绑定。",
+    "routes": [
+      "style",
+      "storyboard_rhythm"
+    ],
+    "diagnostics": [
+      "CW-LOOK"
+    ],
+    "must": [
+      "分别记录作品形式、表现媒介和指定画幅",
+      "二维用线面色阶，写实用材料受光；以叙事需要选择节奏"
+    ],
+    "mustNot": [
+      "默认所有短剧为竖屏或三维必须有毛孔",
+      "强制同一镜数、时长或配乐规则"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E33",
+    "request": "继续已完成前两场的六场短片，沿用提供的基线和第二场出点；完成其余四场的全套提示词。",
+    "routes": [
+      "production_plan",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-CONTINUITY",
+      "CW-PROMPT"
+    ],
+    "must": [
+      "恢复已完成范围、基线与出点，维护唯一剩余清单",
+      "继续全部已授权场次并逐项提供正文，长输出可分文件"
+    ],
+    "mustNot": [
+      "重复设计前两场或逐场询问是否继续",
+      "把未写场次或待生成素材标为完成"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E34",
+    "request": "推灯镜头的台灯现在改为固定式壁灯，用户仍希望保留有人主动帮忙照亮地图的故事意图。请调整方案和所有受影响的稿件。",
+    "routes": [
+      "scene",
+      "shot_direction",
+      "image_prompt",
+      "review_repair"
+    ],
+    "diagnostics": [
+      "CW-CONTINUITY",
+      "CW-PROMPT"
+    ],
+    "must": [
+      "识别可移动性变更，返回道具与导演设计形成可达的新动作",
+      "同步相关首帧视频声音和边界，保留无关身份与准确台词"
+    ],
+    "mustNot": [
+      "只替换提示词中的台灯名称仍写沿桌推动",
+      "重置全部世界设定或宣称新媒体已通过"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E35",
+    "request": "用人物、场景和动作视频做全能参考，直接给三个镜头的视频提示词，不制作首尾帧。",
+    "routes": [
+      "production_plan",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-PROMPT"
+    ],
+    "must": [
+      "分别绑定身份、空间和表演职责，以提示词安排三镜构图、时间和切点",
+      "交付全部正文，能力未知时说明待核验但不漏写方案"
+    ],
+    "mustNot": [
+      "强制提供首尾帧或把动作参考的脸当角色身份"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E36",
+    "request": "先设计3×3九宫格分镜参考图，然后给整板驱动的视频提示词；其中第4至6格是同一个开门镜头的三个动作阶段。",
+    "routes": [
+      "storyboard_rhythm",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-CONTINUITY",
+      "CW-PROMPT"
+    ],
+    "must": [
+      "交付整板稿、九格顺序与镜号映射、完整视频稿",
+      "区分镜头与动作阶段，4至6格连续运动；输出全画幅而非九格分屏"
+    ],
+    "mustNot": [
+      "自动切成九个镜头",
+      "只有分镜图片提示词没有视频正文",
+      "默认拆格并改走首尾帧"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E37",
+    "request": "不用图片，直接用提示词生成三个有明确切点的镜头，保持同一人物、道具和声场。",
+    "routes": [
+      "storyboard_rhythm",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-PROMPT",
+      "CW-CONTINUITY"
+    ],
+    "must": [
+      "写清共同初态、逐镜时间、动作表情、剪切和声音",
+      "无图无需伪造绑定或首帧文件"
+    ],
+    "mustNot": [
+      "只给一条长运镜替代三镜",
+      "把九秒导演计划说成模型支持证明"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E38",
+    "request": "已经有2×2分镜图，目标界面只允许单张首帧。按原四镜设计给出可用拆格方案。",
+    "routes": [
+      "production_plan",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-PROMPT"
+    ],
+    "must": [
+      "明确替代路径、格位来源、去除边框的裁切说明与逐镜视频稿",
+      "保留角色空间和镜头顺序，参考关系不等同已完成裁切"
+    ],
+    "mustNot": [
+      "把整张网格直接当首帧而不说明风险",
+      "未经操作宣称图已经裁好或已上传"
+    ],
+    "status": "not_run"
+  }
+]

@@ -3,7 +3,7 @@
   "version": "3.1.0",
   "private": true,
   "type": "module",
-  "description": "Private dependency-free development harness for the CineWeave Director Codex plugin.",
+  "description": "CineWeave 导演创作 Skill 的无依赖开发、校验与打包工具。",
   "engines": {
     "node": ">=22"
   },

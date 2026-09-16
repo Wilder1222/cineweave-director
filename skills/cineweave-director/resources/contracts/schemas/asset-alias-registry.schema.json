@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/asset-alias-registry.schema.json",
-  "title": "CineWeave Exact Asset Alias Registry",
+  "title": "CineWeave 精确资产别名注册表",
   "type": "object",
   "additionalProperties": false,
   "required": [

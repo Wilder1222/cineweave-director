@@ -9,21 +9,21 @@
   "domain": "scene",
   "targetRef": { "kind": "cineweave_codex_interaction_constraint_set", "id": "interaction.courtyard-threshold", "version": 1, "contentHash": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee" },
   "change": {
-    "variable": "left-hand contact point",
+    "variable": "左手接触点",
     "targetPath": "/constraints/left_hand/supportAnchor",
-    "currentState": "The intended palm support is not spatially closed against the threshold.",
-    "targetState": "The palm visibly compresses against the named threshold anchor with plausible wrist and shoulder weight transfer.",
-    "rationale": "This is the smallest Scene-owned change that addresses the blocking observation."
+    "currentState": "预期的手掌支撑与门槛在空间上未闭合。",
+    "targetState": "手掌明显压住指定门槛锚点，手腕和肩部的重量传递可信。",
+    "rationale": "这是场景领域解决该阻断观察的最小修改。"
   },
-  "preserve": ["character identity", "wardrobe state", "eyeline", "camera position", "physical light direction", "approved background geometry"],
+  "preserve": ["人物身份", "服装状态", "视线", "摄影机位置", "物理光线方向", "已批准背景几何"],
   "acceptanceChecks": [
-    { "checkId": "check.contact", "criterion": "No visible gap remains between palm and threshold at the support moment.", "expectedEvidence": "A new visible observation of the contact region.", "status": "pending" },
-    { "checkId": "check.preserve", "criterion": "Identity, eyeline, framing, and light still match the passing review evidence.", "expectedEvidence": "Side-by-side observations for each preserved dimension.", "status": "pending" }
+    { "checkId": "check.contact", "criterion": "支撑时刻，手掌与门槛之间不再有可见间隙。", "expectedEvidence": "接触区域的一条新可见观察。", "status": "pending" },
+    { "checkId": "check.preserve", "criterion": "身份、视线、取景及光线仍与已通过的评审证据一致。", "expectedEvidence": "各保留维度的并排观察。", "status": "pending" }
   ],
-  "stopCondition": "Stop after one revised candidate; if contact still fails, review the new evidence before changing any second variable.",
-  "humanGate": { "required": true, "status": "pending", "decisionNote": "Approve the bounded repair before any external generation or edit." },
+  "stopCondition": "得到一个修订候选后停止；若接触仍失败，先评审新证据，再改变第二个变量。",
+  "humanGate": { "required": true, "status": "pending", "decisionNote": "任何外部生成或编辑前，先批准本次有界修复。" },
   "planningBoundary": { "providerNeutral": true, "generatesMedia": false, "invokesExternalTool": false, "mutatesTarget": false, "claimsSuccess": false },
   "validation": { "singleVariable": true, "singleDomain": true, "parentImmutable": true, "evidenceBound": true, "passingDimensionsPreserved": true, "checksPending": true, "noSuccessClaim": true },
   "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-director", "ref": "v3.1.0", "commit": "0000000000000000000000000000000000000000", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00Z" },
-  "provenance": { "source": "suite_builtin", "createdAt": "2026-09-02T00:00:00Z", "updatedAt": "2026-09-02T00:00:00Z", "changeLog": ["Created from finding.hand-contact as a one-variable Scene repair."] }
+  "provenance": { "source": "suite_builtin", "createdAt": "2026-09-02T00:00:00Z", "updatedAt": "2026-09-02T00:00:00Z", "changeLog": ["由 finding.hand-contact 创建的单变量场景修复。"] }
 }

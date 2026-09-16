@@ -1,7 +1,7 @@
 {
   "name": "cineweave-director",
   "version": "3.1.0",
-  "description": "A self-contained full-cycle AIGC creative-director Skill with evidence-aware Canon, provider-dialect prompt projection, and non-executing production plans.",
+  "description": "中文 AIGC 创作 Skill，面向故事、角色资产、分镜、图像与视频提示词及生成结果修复。",
   "homepage": "https://github.com/Wilder1222/cineweave-director",
   "repository": "https://github.com/Wilder1222/cineweave-director",
   "license": "MIT",
@@ -29,14 +29,14 @@
   },
   "skills": "./skills/",
   "interface": {
-    "displayName": "CineWeave Director",
-    "shortDescription": "Full-cycle AIGC creation from world bible to production plan",
-    "longDescription": "One self-contained Codex Skill with internal routes for world, story, character, scene, style, reference evidence, action, shots, storyboards, provider-neutral Prompt Canon, optional provider-dialect projection, non-executing production plans, review, and repair. It preserves exact facts, rights, compatibility evidence, and human gates; it never calls providers, runs adapters, or claims generated media.",
+    "displayName": "CineWeave 导演",
+    "shortDescription": "中文短片叙事、视觉开发、分镜表演、配音剪辑与全套提示词",
+    "longDescription": "按请求交付单条提示词、可复用角色与场景资产、故事剧本或完整短片方案。以可见动作、空间、光线和材质组织画面，分开首尾帧、运动、台词与剪辑余量，并保持多镜头连续性。默认中文，资料按需读取；支持只读检查和有依据的修复，不执行媒体生成。",
     "developerName": "CineWeave",
     "category": "Productivity",
     "capabilities": [],
     "defaultPrompt": [
-      "Use $cineweave-director to turn my idea and references into the smallest route-aware set of world, story, character, scene, style, action, shot, storyboard, Prompt Canon, optional provider-dialect projection, planning, and review artifacts. Keep exact facts and rights explicit; never mutate Canon with provider syntax or claim provider execution."
+      "使用 $cineweave-director，将我的想法或参考发展成中文短片创作稿，按需求完成叙事、视觉探索、分镜表演、逐镜图像与视频提示词、配音和剪辑方案。"
     ],
     "brandColor": "#000000"
   }

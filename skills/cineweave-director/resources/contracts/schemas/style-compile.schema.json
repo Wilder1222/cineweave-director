@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/style-compile.schema.json",
-  "title": "CineWeave Compiled Style Directives",
+  "title": "CineWeave 编译风格指令",
   "type": "object",
   "additionalProperties": false,
   "required": [

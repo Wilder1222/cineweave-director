@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/control-benchmark-review.schema.json",
-  "title": "CineWeave Control Benchmark Review",
-  "description": "Provider-neutral review of observed candidate evidence. It records evaluation only and never claims generation, approval, or release.",
+  "title": "CineWeave 控制基准评审",
+  "description": "对实际候选证据进行平台无关评审，只记录评估，不宣称生成、批准或发布。",
   "type": "object",
   "additionalProperties": false,
   "required": [

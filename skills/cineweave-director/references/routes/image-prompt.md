@@ -1,71 +1,74 @@
-# Route: image_prompt
+<a id="route-image_prompt"></a>
+# 路由：图像提示词（image_prompt）
 
-Use for reusable text-to-image prompt design, importing an existing prompt, compiling approved artifacts, variants, reference transforms, and prompt-owned repair.
+提示词的适用维度与完整性标准见[细节与专业表达](../optional/prompt-detail-standard.md#表达原则)对应章节。
 
-Final Prompt is a projection of approved facts—not Canon, evidence, or proof of generation. A draft prompt may project explicitly provisional design choices without promoting them to Canon.
+用于可复用文生图提示词设计、既有提示词导入、已批准产物编译、变体、参考变换和提示词领域修复。
 
-## Compilation order
+精确编译时提示词映射已确定事实；原创请求可以完整设计并交付，不要求用户先提供正式设定。提示词本身不是证据或生成证明。草稿可以映射明确标为暂定的设计选择，但不能将其提升为正式设定。默认中文；平台语言限制先说明，用户明确要求相应语言时再生成适配稿。
 
-Write observable language in this order when relevant:
+<a id="compilation-order"></a>
+## 编译顺序
 
-1. purpose and primary visible target;
-2. identity and structure;
-3. current appearance or object state;
-4. action and performance;
-5. environment and spatial relation;
-6. viewpoint, framing, composition, and depth;
-7. physical light and visible shadow;
-8. material/surface response;
-9. representation and style treatment;
-10. canvas, aspect, and delivery intent;
-11. targeted failure prevention.
+相关时依次使用可观察语言描述：目的与主要可见目标；身份与结构；当前外观或物体状态；动作与表演；环境和空间关系；视点、取景、构图和纵深；物理光照和可见阴影；材质／表面响应；表现方式和风格处理；画布、画幅与交付意图；针对性失败预防。
 
-Facts outrank style adjectives. Include only detail visible at the target scale or needed for continuity.
+事实优先于风格形容词。只包含目标景别可见或连续性必需的细节。
 
-When compiling a narrative shot sequence, inherit its reviewed staging and continuity through [ensemble direction and shot review](../optional/ensemble-direction-and-review.md). Check each prompt against the actual source shot: actor task, gaze target, supporting activity, spatial anchors and selected action state must survive where visible. Route an omitted fact to Prompt; route a contradictory upstream fact to its owner. A standalone image prompt or exact translation stays within its bounded request. For moving-image instructions use the [video handoff guide](../optional/video-sound-and-delivery.md), preserving cue order outside the still-image canonical fields.
+人物主体在当前外观之后展开[情绪与表情](../optional/prompt-detail-standard.md#人物情绪与表情生成)：情绪核心、表达强度、明确视线、面部表现、身体反应与触发语境。该要求进入实际复制稿，不仅留在分析或资产表；中性身份图明确中性状态。静帧中的唇部、视线与姿态选择一个确定状态，不输出“闭唇或露齿”“看同伴或镜头”等未决选项。修改情绪时同步展开稿、复制稿与实际使用的变体，保留其他已锁事实。
 
-## Prompt economy gate
+编译叙事镜头序列时，通过[群像调度与逐镜评审](../optional/ensemble-direction-and-review.md)继承已评审调度和连续性。逐条对照真实源镜头，保留可见的演员任务、视线目标、配角活动、空间锚点与选定动作状态。遗漏归提示词，源事实矛盾返回其责任领域。单图提示词和精确翻译保持原有范围；动态指令使用[视频交接指南](../optional/video-sound-and-delivery.md)，触发顺序不塞入静帧规范字段。
 
-Before drafting, reduce approved inputs to a visual-proposition inventory. One proposition is one observable fact or reviewable relationship at the requested scale—for example, who shields whom, where a weapon enters frame, or which light produces a contact shadow. Keep provenance in the artifact; do not narrate it inside the prompt.
+<a id="prompt-economy-gate"></a>
+## 提示词精简关卡
 
-Admit a clause only when it does at least one of these jobs:
+起草前，将已批准输入压缩为可见命题清单。一条命题是目标景别中的一个可观察事实或可评审关系，例如谁挡住谁、工具从哪里进入画面、哪一束光形成接触阴影。来源记录留在产物中，不要在提示词正文讲述工作过程。
 
-- establishes the primary visible read;
-- preserves an approved identity, appearance, geography, action, or continuity invariant that can affect this frame;
-- disambiguates viewpoint, composition, depth, spatial relation, contact, or weight;
-- specifies a visible light/material relationship;
-- prevents an observed or named high-risk failure not already prevented by a positive clause.
+一句话至少应完成一项工作：建立主要画面读法；保留会影响本帧的已批准身份、外观、地理、动作或连续性不变量；澄清视点、构图、纵深、空间、接触或重量；指定可见光照与材质关系；预防已观察或已命名的高风险失败，且该风险尚未被正向描述覆盖。
 
-Reject or rewrite a clause when it only praises quality, repeats another clause's semantic proposition, describes workflow or reference manipulation instead of the final image, states metadata invisible at the requested scale, or echoes soft treatment already delegated to a role-scoped reference. Words such as “premium,” “cinematic,” “masterpiece,” and “8K” are warning signs rather than a global blacklist: retain one only when the project defines a distinct observable effect that the word contributes.
+仅赞美质量、重复同一含义、描述工作流程／参考操作而不是结果、陈述当前景别不可见元数据，或重复已由角色限定参考承担的软风格处理时，应删除或改写。“高级”“电影感”“杰作”“8K”是检查信号，不是全局禁词；只有项目为其定义了独立可见效果时才保留。
 
-Deduplicate by meaning, not exact wording. When two clauses encode the same proposition, keep the more observable, source-grounded, and compact one; do not concatenate synonyms. A reference binding never erases hard Canon: retain identity, content, action, camera, and exact light/material facts, but remove synonymous palette, medium, texture, or treatment adjectives already supplied by that reference role.
+按语义去重，而不只比较相同字词。重复命题只保留更可观察、更有来源依据、更精练的一句，不串联同义词。参考绑定不能抹去硬性正式设定：身份、内容、动作、摄影机和精确灯光／材质事实仍需保留；但已由对应参考角色提供的色板、媒介、纹理或处理形容词应去重。
 
-Finally, delete each remaining clause in turn. If its removal changes neither the primary read, a required invariant, spatial/physical interpretation, a reviewable style distinction, nor known-failure coverage, leave it out. Do not impose a fixed word or token ceiling; concise output is the result of this gate, not permission to drop visible Canon.
+最后逐句做删除试验：删除后若不影响主要读法、必要不变量、空间／物理解释、可评审风格差异或已知失败覆盖，就保持删除。不设固定字数或 token 上限；精简是关卡结果，不是遗漏可见正式设定的理由。
 
-## References and transforms
+<a id="references-and-transforms"></a>
+## 参考与变换
 
-Compile only approved observation roles and bindings. A source-to-target transform declares preserve, replace, exclude, and unresolved fields. Never transfer a source person's identity, logo, text, place, or rights by implication.
+只编译已批准的观察角色和绑定。源到目标变换应声明保留、替换、排除和待解决字段。不隐式迁移源人物身份、标志、文字、地点或权利。
 
-For portraits, keep stable identity, current skin/material state, makeup/hair/costume, capture, light, and representation separate. For action, include only the selected beat's weapon/tool, mechanics, start-to-end trajectory, response, contact, and result.
+人物提示词分开稳定身份、当前皮肤／材质状态、妆发服装、拍摄、光照和表现方式。动作提示词只包含选定节拍的武器／工具、动作机制、起止轨迹、反应、接触和结果。
 
-## Provider projection
+<a id="keyframe-readiness"></a>
+## 关键帧准备度
 
-Keep `PromptRecord` and `ImagePrompt` provider-neutral. When the user names a provider, create a separate `PromptProjectionPlan` bound to the exact source prompt and exact `CapabilityProfile`. Put model version, surface, provider flags, typed reference slots, profile/style codes, compatibility evidence, and hidden-default checks only in that projection.
+图片将用于视频条件输入时，对实际可访问资产运行[关键帧关卡](../optional/shot-design-workbench.md#keyframe-gate)；没有图片只能给计划检查表。漂亮的终态未必是可用起点。技术性身份／服装资产必须清楚可辨，保留已批准事实；精确翻译或编译不授权重新调度。
 
-For Midjourney, load [`../optional/midjourney-projection.md`](../optional/midjourney-projection.md). Use concise-first visible-result language, a single parameter tail, explicit compatibility checks, and baseline plus one-variable variants. Stop at a copy-ready human handoff. Require exact returned job metadata, resolved codes/parameters, and original files before execution-verification review; allow separately scoped visible-image review with metadata unknown; never infer execution from the plan.
+时间指令使用[运动交接工作表](../optional/generation-diagnostics.md#motion-handoff)，不能向 `ImagePrompt` 塞入自造字段。首／尾帧图像提示词与运动提示词分开；仅在需要节点稿时按[类型化标签](../optional/tagged-video-nodes.md)组织，普通请求直接给可复制正文。指定视频平台时使用[平台适配指南](../optional/video-platform-adaptation.md)；上传参考、命名别名和原生端点槽位不等价。
 
-## Exact text and typography
+<a id="provider-projection"></a>
+## 平台适配
 
-When the requested image contains a title, label, logo, or subtitle, preserve the supplied copy exactly and distinguish visual placement from spelling/layout acceptance. For a prompt-only request, deliver the prompt directly; include the desired text when requested without promising exact rendering or adding a mandatory production workflow.
+`PromptRecord` 和 `ImagePrompt` 保持供应商中立。用户指定平台时，先交付适配正文和必要参数说明；仅在要求规范 JSON 时创建单独 `PromptProjectionPlan`，绑定精确源提示词及 `CapabilityProfile`。模型版本、界面、参数、参考槽位、个性化／风格代码、兼容证据和隐藏默认检查只写在适配方案中。
 
-For final posters, packaging, or other deliverables requiring exact copy, include a separate text/layout handoff: authoritative strings, language, line-break policy, placement/safe area, hierarchy, and supplied font/brand constraints. Plan a text-free or reserved-area visual plate plus deterministic typesetting/compositing when needed. If in-image lettering is part of the chosen design, require visual proof of every character, punctuation mark, line break, clipping and legibility at delivery size; re-typeset failed text while preserving the approved image. OCR may assist checking but is not proof of typography quality. Keep this handoff in a labeled worksheet or Production plan, not invented ImagePrompt fields. A planned overlay is not an exported poster.
+Midjourney 适配加载[对应指南](../optional/midjourney-projection.md)。优先精练地描述可见结果，使用单一参数尾、明确兼容检查，以及基线加单变量变体。止于可复制的人工交接。执行核验需要准确任务元数据、解析后的代码／参数和原始文件；元数据未知时可单独评审可见图像。不能从计划推断实际执行。
 
-## Existing prompt import
+<a id="exact-text-and-typography"></a>
+## 准确文字与排版
 
-Preserve source text unchanged, then create a normalized, reviewable interpretation. Separate global baseline, per-shot facts, style, light, timing, delivery claims, and unknown capabilities. Do not treat imported prose as an already approved ShotSpec or production fact.
+图像含标题、标签、标志或字幕时，逐字保留给定文案，区分视觉位置与拼写／布局验收。只要求提示词时直接交付提示词，按需包含目标文字，不承诺准确渲染，也不强制附加制作流程。
 
-## Variants and negatives
+最终海报、包装等需要准确文案的交付，应附单独文字／布局交接：权威字符串、语言、换行策略、位置／安全区、层级、已给出的字体／品牌约束。需要时规划无字或预留区域底图，再确定性排字／合成。设计采用图内生成文字时，要求验证每个字、标点、换行、裁切及交付尺寸可读性；失败文字重新排版，保留已批准图像。OCR 可协助检查，不是排版质量证明。
 
-Each variant changes one named hypothesis. Negative constraints target observed or high-risk failures; they do not replace a positive specification. Keep vendor syntax, model flags, checkpoints, numeric weights, and hidden account defaults outside canonical PromptRecord and ImagePrompt.
+该交接放在明确标注的工作表或制作计划中，不增加 `ImagePrompt` 字段。计划叠字不等于海报已经导出。
 
-Outputs: `PromptRecord`, `ImagePrompt`, optional `PromptProjectionPlan`.
+<a id="existing-prompt-import"></a>
+## 导入既有提示词
+
+原文不变地保存，再建立规范化、可评审解释。分开全局基线、逐镜事实、风格、光照、时间、交付声明和未知能力。导入文字不自动成为已批准 `ShotSpec` 或制作事实。
+
+<a id="variants-and-negatives"></a>
+## 变体与负向约束
+
+用于诊断和因果比较的变体每次只改变一个命名假设；创意探索可以比较多维方向，但须交代差异，不将结果归因于单一变量。负向约束针对已观察或高风险失败，不能代替正向说明。供应商语法、模型参数、checkpoint、数值权重和隐藏账号默认值不得进入规范 `PromptRecord` / `ImagePrompt`。
+
+可选规范输出（仅在请求结构化交接时）：`PromptRecord`、`ImagePrompt`、可选 `PromptProjectionPlan`。

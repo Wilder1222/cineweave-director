@@ -1,7 +1,7 @@
 {
   "$id": "https://cineweave.dev/contracts/repair-plan.schema.json",
-  "title": "CineWeave Single-variable Repair Plan",
-  "description": "One evidence-bound, domain-owned repair that preserves every passing dimension and never claims success before new review.",
+  "title": "CineWeave 单变量修复计划",
+  "description": "绑定证据、明确领域归属的单项修复，保留所有通过维度，新评审前不宣称成功。",
   "type": "object",
   "additionalProperties": false,
   "required": ["kind", "contractVersion", "repairId", "version", "status", "sourceReviewRef", "findingId", "domain", "targetRef", "change", "preserve", "acceptanceChecks", "stopCondition", "humanGate", "planningBoundary", "validation", "skillReceipt", "provenance"],

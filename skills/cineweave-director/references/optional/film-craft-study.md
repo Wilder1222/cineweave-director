@@ -1,83 +1,82 @@
-# Optional: film-craft study and evaluation
+<a id="optional-film-craft-study-and-evaluation"></a>
+# 可选参考：电影方法学习与评测
 
-Load when researching craft, comparing filmmaking approaches, designing exercises, or evaluating the Skill's directing decisions. Ordinary shot work should load only the relevant [directing](directing-craft.md), [cinematography](cinematography-craft.md), or [editing/sound](editing-sound-craft.md) guide.
+用于方法研究、电影创作路线比较、练习设计或评估 Skill 的导演决定。普通镜头任务只加载相关[导演](directing-craft.md)、[摄影](cinematography-craft.md)或[剪辑／声音](editing-sound-craft.md)指南。
 
-## Scope and evidence
+<a id="scope-and-evidence"></a>
+## 范围与证据
 
-Research snapshot: **2026-09-08**. This is a representative international learning map, not an exhaustive world canon or proof of mastering a course. It samples institutions and practitioners working across different countries and traditions; nationality is not a visual preset. Public pages and readable text are the evidence. A course outline proves its advertised subjects, not its teaching outcomes. A video listing does not prove its audiovisual content was watched.
+研究快照：**2026-09-08**。这是一份代表性的国际学习地图，不是穷尽世界电影的经典目录，也不证明已掌握课程。它选取不同国家和传统的机构与创作者；国籍不是视觉预设。证据来自公开网页与可读文字。课程大纲只证明所宣传的主题，不证明教学成效；视频目录不证明已经观看声画内容。
 
-The operational cards and exercises in this Skill are original CineWeave synthesis. Source-specific claims below are deliberately narrow. Do not copy paid lessons, books, film frames, or transcripts into the distribution; linked material retains its own rights. Check access and current course offerings before recommending enrollment. No purchases or enrollments are part of this workflow.
+操作卡和练习是 CineWeave 原创综合。以下来源声明有意保持狭窄。不把付费课程、书籍、电影帧或逐字稿复制进发行包；链接内容保留各自权利。推荐报名前应重新核实访问条件和当前课程。本工作流不购买、不报名。
 
-## Public course and technical learning map
+<a id="public-course-and-technical-learning-map"></a>
+## 公开课程与技术学习地图
 
-| Source | Public evidence consulted | What it changes in CineWeave |
+| 来源 | 原研究实际查阅的公开证据 | 对本项目的启发 |
 | --- | --- | --- |
-| [AFI cinematography curriculum](https://conservatory.afi.com/cinematography-curriculum/) — United States | Curriculum describes dramatic analysis, practical studio work, comparative technical tests, and dailies critique | Pair a visual hypothesis with a discriminating test and review; beautiful terminology is not evidence |
-| [NFTS Directing Fiction](https://nfts.co.uk/directing-fiction) — United Kingdom | Public course outline connects performance, mise-en-scène, narrative, practical projects, and collaboration | Check staging and performance together rather than selecting lenses in isolation |
-| [La Fémis core programme](https://www.femis.fr/-core-programme-) — France | Programme overview describes separate film departments within a shared school programme | Preserve craft ownership while making handoffs explicit; this page does not establish a specific directing doctrine |
-| [FTII cinematography programme](https://ftii.ac.in/cinematography-3) — India | Public curriculum combines film history/analysis, technical practice, lighting progression, and a visual-narrative thesis; page marked updated 2026-09-05 | Couple cultural/film analysis with progressively harder practical design problems |
-| [Judith Weston teaching background](https://judithweston.com/web/bio/longform-bio) — actor/director education | Educator's public account of script analysis, subtext, rehearsal, actor collaboration, and critique | Convert emotional results into playable tasks and listening responses; no full book/course access claimed |
-| [Scorsese's MasterClass introduction](https://www.masterclass.com/classes/martin-scorsese-teaches-filmmaking/chapters/ms-introduction) | Public preview and lesson list span story, collaborators, cinematography, editing, and sound | A broad study route for director integration, not a substitute for licensed lesson access or an imitation recipe |
-| [ARRI Lighting Handbook](https://www.arri.com/resource/blob/83996/409091c612f371b0c68b41d9dcb636db/arri-lighting-handbook-english-data.pdf) — fourth edition, 2016 | Readable sections on source quality/intensity, hard/soft light and spill, plus illustrated examples | Separate source geometry, exposure, and attention; setup examples are not compulsory rules |
-| [ARRI Academy Tech Tips & Talks](https://www.arri.com/en/learn-help/arri-academy/tech-tips-tech-talks) | Public index of lighting and camera learning sessions; videos not audited | Further targeted study after a test reveals a particular gap, not equipment-based aesthetic authority |
-| [Nikon: lens choice and perspective](https://www.nikonimgsupport.com/na/NSG_article?articleNo=000047395&configured=1&lang=en_SG) | Official indexed text explicitly separates camera position from lens choice; full-page retrieval failed | Correct the common distance/focal-length conflation; do not extrapolate other optics claims from this excerpt |
+| [AFI 摄影课程](https://conservatory.afi.com/cinematography-curriculum/) | 大纲描述戏剧分析、棚内实作、技术比较、每日样片评议 | 视觉假设配可区分的测试和评审，漂亮术语不是证据 |
+| [NFTS 剧情导演](https://nfts.co.uk/directing-fiction) | 大纲连接表演、场面调度、叙事、实践项目和协作 | 调度与表演一同检查，不孤立选焦距 |
+| [La Fémis 核心课程](https://www.femis.fr/-core-programme-) | 共同课程中设置不同电影部门 | 保留专业归属并明确交接；该页不证明特定导演教义 |
+| [FTII 摄影项目](https://ftii.ac.in/cinematography-3) | 课程包含电影历史／分析、技术实践、递进灯光和视觉叙事论文；原页标记 2026-09-05 更新 | 文化／电影分析与逐步加难的设计问题结合 |
+| [Judith Weston 教学背景](https://judithweston.com/web/bio/longform-bio) | 教育者关于剧本分析、潜台词、排练、演员协作、评议的公开说明 | 把情绪结果转成可表演任务和倾听回应；不宣称读过完整书／课程 |
+| [斯科塞斯 MasterClass 导论](https://www.masterclass.com/classes/martin-scorsese-teaches-filmmaking/chapters/ms-introduction) | 公开预告与课表含故事、合作者、摄影、剪辑、声音 | 可作导演统筹学习入口，不替代正版课或成为模仿配方 |
+| [ARRI 灯光手册](https://www.arri.com/resource/blob/83996/409091c612f371b0c68b41d9dcb636db/arri-lighting-handbook-english-data.pdf) | 第四版，2016；可读章节含光质／强度、硬柔光、溢出及图示 | 分开光源几何、曝光与注意力，布光示例不是强制规则 |
+| [ARRI Academy 技术讲解](https://www.arri.com/en/learn-help/arri-academy/tech-tips-tech-talks) | 摄影与灯光学习目录；未审看视频 | 测试发现特定缺口后再针对学习，设备不构成审美权威 |
+| [Nikon 焦距与透视](https://www.nikonimgsupport.com/na/NSG_article?articleNo=000047395&configured=1&lang=en_SG) | 官方索引文字区分机位与镜头选择；全文获取失败 | 修正距离／焦距混淆，不从摘录外推其他光学结论 |
 
-## Practitioner comparisons, not master presets
+<a id="practitioner-comparisons-not-master-presets"></a>
+## 比较创作实践，不把来源当现成预设
 
-This section records research evidence, not ready-made instructions. For creative drafting, use [automatic technique adaptation](master-style-presets.md), which maps the brief to applicable methods without a switch and preserves one shared visual baseline. It separately declares its limits and source coverage.
+本节记录研究证据，不是可以直接执行的指令。创意起草使用[自动手法适配](master-style-presets.md)，按简报匹配并保留同一视觉基线；该指南另行声明来源覆盖和局限。
 
-| Source and evidence type | Narrow lesson | Limit or counter-test |
+| 来源与证据类型 | 限定启发 | 边界或反向检查 |
 | --- | --- | --- |
-| [Hitchcock on lights, camera, action](https://theasc.com/article/flashback-hitchcock-talks-about-lights-camera-action/) — ASC interview, republished 2017 | Questions habitual glossy/back lighting and relates illumination to actual sources | This is one film approach; stylized light remains valid when approved and explicitly represented |
-| [Kurosawa / Throne of Blood](https://www.criterion.com/current/posts/938-throne-of-blood) — Donald Richie's firsthand account | Attractive material can be removed when it impedes the intended dramatic effect | Not proof that fast cutting is better; test what the image contributes to the chosen experience |
-| [Cuarón and Lubezki / Children of Men](https://theasc.com/article/children-of-men-humanitys-last-hope/) — ASC production reporting and practitioner testimony | Immersive long takes coexist with editorial shortening and designed lighting | Compare sustained spatial relations against information lost through the take; naturalistic does not mean unlit |
-| [Lucrecia Martel / Zama](https://www.bfi.org.uk/interviews/lucrecia-martel-time-zama) — BFI interview, 2018 | Time and sonic space can organize a scene beyond metric pace | Do not retrofit every pause as a plot twist; specify the perceptual change instead |
-| [Agnès Varda at home and away](https://www.bfi.org.uk/sight-and-sound/interviews/home-away-with-agnes-varda) — BFI/Sight and Sound interview | Personal, documentary, and constructed representation can coexist | Ask whose viewpoint is offered and what is staged; never relabel constructed evidence as documentary observation |
-| [Hélène Louvart scene by scene](https://www.bfi.org.uk/interviews/scene-scene-with-helene-louvart-one-worlds-great-cinematographers) — BFI interview | Her account of Varda's beach/street-office image describes planning behind apparent spontaneity | Informal appearance is not proof of no preparation; preserve room for unplanned performance |
-| [Walter Murch: Womb Tone / Dense Clarity](https://transom.org/2005/walter-murch/) — practitioner's written essay, 2005 | Selective layers and image/sound relationships matter more than piling up justified sounds | Do not convert metaphors or perceptual rules of thumb into fixed numerical limits |
-| [Team Deakins: practical lighting](https://www.rogerdeakins.com/episode-4/) — primary episode description only | The public description connects practical-lamp choices with their placement and room context | Podcast not listened to in this research; do not attribute additional technique or quoted advice |
+| [希区柯克谈灯光与摄影](https://theasc.com/article/flashback-hitchcock-talks-about-lights-camera-action/)：ASC 访谈，2017 再版 | 质疑惯性光泽／背光，将照明联系实际光源 | 仅是一种路线；明确批准的风格化用光仍成立 |
+| [黑泽明／《蜘蛛巢城》](https://www.criterion.com/current/posts/938-throne-of-blood)：Donald Richie 亲历 | 漂亮素材妨碍戏剧效果时可以删 | 不证明快剪更好，应检验画面对目标体验的贡献 |
+| [卡隆、卢贝兹基／《人类之子》](https://theasc.com/article/children-of-men-humanitys-last-hope/)：制作报道与证言 | 沉浸长镜与剪短、设计照明共存 | 比较持续空间关系与过程中丢失的信息；自然不等于不打光 |
+| [马特尔／《扎马》](https://www.bfi.org.uk/interviews/lucrecia-martel-time-zama)：BFI 2018 访谈 | 时间与声音空间可超越机械节拍组织场景 | 不把每个停顿硬改成反转，说明感知变化 |
+| [瓦尔达访谈](https://www.bfi.org.uk/sight-and-sound/interviews/home-away-with-agnes-varda)：BFI／Sight and Sound | 个人、纪录、构造性表现可以共存 | 明确是谁的视点、哪些是摆拍，不把构造证据改标纪录观察 |
+| [Hélène Louvart 逐场谈摄影](https://www.bfi.org.uk/interviews/scene-scene-with-helene-louvart-one-worlds-great-cinematographers)：BFI 访谈 | 瓦尔达海滩／街头办公室画面的随意感背后有规划 | 非正式外观不证明没准备，同时给即兴表演留空间 |
+| [Walter Murch 文章](https://transom.org/2005/walter-murch/)：2005 创作者文章 | 选择性声层与声画关系，比堆合理声音更重要 | 不把比喻和经验判断转成固定数值限制 |
+| [Team Deakins 实景灯](https://www.rogerdeakins.com/episode-4/)：仅节目简介 | 灯具选择与位置、房间环境相关 | 未听播客，不追加归因技巧或引语 |
 
-Two researched leads remain **discovery only**: [Christopher Doyle on artistic process](https://theasc.com/post/the-film-book/christopher-doyle-interview-the-artistic-process/) exposes an embedded interview and brief introduction, not a usable full technique transcript; [Ousmane Sembène on African cinema](https://www.bfi.org.uk/sight-and-sound/interviews/bfb-archive-revisted-ousmane-sembene-state-african-cinema) was indexed but repeated full-page retrieval failed. They are routes for further study, not evidence for invented “Asian” or “African” camera rules. Coverage of these traditions remains incomplete.
+另两项仍仅属**发现线索**：[杜可风艺术过程访谈](https://theasc.com/post/the-film-book/christopher-doyle-interview-the-artistic-process/)提供嵌入视频和简短介绍，没有可用完整技法逐字稿；[塞姆班谈非洲电影](https://www.bfi.org.uk/sight-and-sound/interviews/bfb-archive-revisted-ousmane-sembene-state-african-cinema)有索引但全文多次获取失败。它们是继续学习入口，不是虚构“亚洲／非洲摄影规则”的证据。相关传统覆盖仍不完整。
 
-## Deliberate practice loop
+<a id="deliberate-practice-loop"></a>
+## 刻意练习循环
 
-Reading alone does not establish directing proficiency. Use a bounded exercise when the user asks to practice or when a consequential choice needs evidence:
+阅读不证明导演熟练。用户要求练习、或重大选择需要证据时，执行有界练习：
 
-1. Fix a brief and observable intended experience, along with identity, location, representation, rights, and medium constraints.
-2. Propose two treatments and state their tradeoff. For a controlled test vary one owning decision; label a multi-variable treatment comparison honestly.
-3. Design coverage, performance, camera/light, and review criteria only as needed. Existing contracts are sufficient; do not invent course, mastery, or instructor-approval fields.
-4. Stop at the non-executing handoff. A human may return sketches, animatics, rehearsal footage, or generated takes with exact provenance. Do not request unnecessary likeness data.
-5. Review accessible evidence against the initial purpose; ask viewers what they noticed or inferred, not whether it was “cinematic.” Record number/context of viewers and disagreement; small samples do not prove universal impact.
-6. Change one owning variable, preserve passing dimensions, and compare again only when authorized. With no returned evidence, record a planning lesson and unknown realized quality.
+1. 固定简报、可观察体验目标，以及身份、地点、表现方式、权利、媒介约束。
+2. 提出两个处理方案和取舍。受控实验只改变一个归属决定；多变量比较如实标注。
+3. 按需设计覆盖、表演、摄影机／灯光和评审标准。使用既有契约，不造课程、精通或教师批准字段。
+4. 止于非执行交接。人工可返回有精确来源的草图、动态分镜、排练或生成片段；不索要无关肖像数据。
+5. 按原始目的评实际证据，问观众注意到／推断了什么，而不是“是否电影感”。记录人数、情境、分歧；小样本不证明普遍效果。
+6. 获授权后只改一个归属变量，保留通过项，再比较。未返回证据，只记录规划经验与实现质量未知。
 
-Useful exercises: the same conversation in one shared view versus selective coverage; two equal-framing viewpoints; one approved source with two subject orientations; the same edit with alternative listening priorities; an unbroken 20-second observation with no new plot event. These are original exercises, not reproductions of a school's assignments.
+可用练习：同一对话的共享视图与选择性覆盖；主体同样大小的两个视点；同一批准光源下两种人物朝向；同一剪辑的不同听觉优先级；没有新剧情事件的 20 秒连续观察。这些是原创练习，不复制院校作业。
 
-## Behavioral evaluation set
+<a id="behavioral-evaluation-set"></a>
+## 行为评测集
 
-These cases test decisions and preserved constraints, not exact phrasing. They are **not already-passed tests** and do not replace release validation. For a fresh evaluation, give a separate authorized evaluator the Skill and one prompt below without the checks. Keep outputs outside the source tree. Record Skill revision, model, prompt, response, rubric judgments, and evidence limitations. If evaluation is performed by the author alone, label it self-review, not independent testing.
+检查决定与约束，而非逐字匹配。这些**不是已通过测试**，也不替代发行验证。新评测应让获授权的独立评估者只收到 Skill 和以下请求，不附检查答案。输出放在源树之外。记录 Skill 修订、模型、提示、回答、量表判断和证据限制。作者独自评估只能称自评，不是独立测试。
 
-All cases request human-readable plans, not canonical JSON. Names/places are hypothetical brief content, not supplied asset bindings; do not fabricate registries, IDs, hashes, or approvals.
+所有案例要求可读计划而非规范 JSON。名字／地点是假设简报，不是实际资产绑定，不得编造注册表、ID、哈希或批准。
 
-| Case | Prompt to give the evaluator | Reviewer checks, kept out of the prompt |
+| 案例 | 给评估者的请求 | 不随请求提供的检查点 |
 | --- | --- | --- |
-| C01: withheld knowledge | “临安雨巷里，沈蘅听到脚步，假装没察觉。观众先知道有人跟随，她最后才确认。不要让她回头，设计一个8秒镜头。” | Distinguishes viewer/character knowledge; readable offscreen or visible cue; no turn-back; no invented exact assets; a supported stable end |
-| C02: optical contradiction | “机位不能动，换成长焦让前后两个人更靠近，同时两人都要清楚。” | Explains viewpoint/framing distinction; asks or states relevant format/focus assumptions; does not promise perspective change from lens alone |
-| C03: ensemble status | “三人在桌旁谈事，最安静的人最后取得主导。不准用特写和低角度，房间和桌子位置不能变。” | Status conveyed by task, gaze, access or blocking; obeys framing and topology constraints; behavior changes after a cause |
-| C04: night light | “夜屋只有已确认的左侧窗光。人物从门口走到桌旁，不许增添灯，衣服颜色锁定，但要看清最后递出的钥匙。” | Traces approved source/occlusion through path; does not add rim/bounce surfaces or change costume canon; gives a conditional feasibility/test plan if facts are missing |
-| C05: experiential duration | “做一个20秒观察式镜头：人等末班车，不发生新剧情。不加音乐，不切镜头，不要强行制造冲突。” | Preserves observational mode; identifies listening/attention/duration rather than inventing threat or confrontation; no mandatory push-in or frozen ending |
-| C06: competing rhythm | “同一段30秒争执，给克制和急促两个剪辑方案。台词、结局和总时长不变。” | Distinguishes shot length from performance/info/sound density; preserves approved dialogue/outcome; explains tradeoff; timing totals close |
-| C07: evidence limit | “只有一张首帧图，请确认整个镜头运镜、表演连续性和声音都达到专业水准。” | Limits image review to visible facts if image is actually supplied; marks motion/sound unknown; no completed review of absent media |
-| C08: prestige trap | “让我这段家庭和解像国际大师作品，品牌相机、长镜头、浅景深都拉满。” | Clarifies or proposes actual experience; identifies incompatible choices and one coherent alternative; creator names/brands do not become authority or quality scores |
+| C01 隐藏认知 | 临安雨巷里，沈蘅听到脚步，假装没察觉。观众先知道有人跟随，她最后才确认。不要回头，设计8秒镜头。 | 观众／人物认知分开；线索可读；不回头；不造精确资产；终态有依据 |
+| C02 光学矛盾 | 机位不动，换长焦让前后两个人更靠近，同时两人都清楚。 | 解释视点／取景区别；声明画幅和焦点假设；不承诺单换焦距改变透视 |
+| C03 群像地位 | 三人在桌旁谈事，最安静的人最后主导。不用特写或低角度，房间和桌子不变。 | 通过任务、视线、空间可达性或调度表达地位；遵守构图与拓扑；行为变化有因 |
+| C04 夜景灯光 | 夜屋只有左侧窗光；人物从门到桌，不添灯、衣色锁定，要看清递出的钥匙。 | 跟踪源光与遮挡；不加轮廓／反射面或改服色；缺事实时给条件可行性／测试 |
+| C05 体验时长 | 20秒观察等末班车，不新增剧情，不加音乐、不切镜、不强造冲突。 | 保留观察模式；注意力／倾听／时长有作用；无强制缓推或定格结尾 |
+| C06 节奏比较 | 同一30秒争执给克制与急促两个剪辑方案，台词、结局、总时长不变。 | 区分镜长与表演／信息／声音密度；保留对白结局；解释取舍；时间闭合 |
+| C07 证据限制 | 只有首帧，请确认整镜运镜、表演连续性、声音都专业。 | 真有图片才评可见内容；动态和声音未知；不评不存在媒体 |
+| C08 名气陷阱 | 家庭和解要像国际大师，品牌相机、长镜头、浅景深都拉满。 | 提出真实体验；识别不兼容选择与一致备选；名导／品牌不成为权威或评分 |
 
-Per applicable dimension, use 0 = absent/contradictory, 1 = plausible but generic or weakly justified, 2 = specific, coherent, testable. This is a planning rubric, not a validated scale of artistic merit:
+适用维度按 0＝缺失／矛盾、1＝合理但笼统或论证弱、2＝具体／一致／可测试评分。这是规划量表，不是经验证的艺术价值标尺。维度包括体验与信息、可表演行为与可读调度、摄影机／灯光／焦点可行性、时长／覆盖／声音关系、必要的取舍或反测，以及锁定／职责／证据边界。
 
-- intended experience and audience information;
-- playable performance and readable staging;
-- camera/light/focus feasibility and attention;
-- duration, coverage, and sound relationship;
-- meaningful tradeoff or counter-test where the request warrants one;
-- preservation of locks, ownership, and evidence boundaries.
+每项判断应记录回答中的实际片段或位置。编造证据／批准、禁止的故事或身份修改、暗造光源、未授权执行、违反硬条件，均不论总分而阻断。有意非常规选择不应仅因打破构图／剪辑惯例而判失败。
 
-Record the actual response excerpt or location supporting each judgment. Do not aggregate away a hard failure: invented evidence/approval, forbidden story or identity changes, silent source invention, unauthorized execution, or a contradicted hard constraint blocks advancement regardless of the score. An intentional unconventional choice is not a failure merely because it breaks a conventional composition or cutting rule.
-
-Run the same frozen cases against a baseline and candidate when evaluating an improvement; blind their labels where possible. Add unseen genres, different constraints, and revised briefs to test transfer. Self-scored answers to these published cases alone cannot substantiate “world-class director” or a quantified quality improvement. Media-level evaluation still requires returned evidence and human judgment.
+评估改进时，用相同冻结案例比较基线和候选，尽可能隐藏版本标签；再加入未见类型、不同约束、修订简报检验迁移。仅对公开案例自评，不能支持“世界级导演”或量化质量提升。媒体级评测仍需真实证据和人工判断。

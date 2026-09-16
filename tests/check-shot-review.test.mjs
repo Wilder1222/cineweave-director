@@ -129,9 +129,33 @@ test("CLI distinguishes completed, unresolved and invalid worksheets without wri
       const result = spawnSync(process.execPath, [cli, file], { encoding: "utf8" });
       assert.equal(result.status, expected, result.stderr);
       assert.equal(await readFile(file, "utf8"), bytes);
-      assert.equal(JSON.parse(result.stdout || result.stderr).scope, "plan_only");
+      const output = JSON.parse(result.stdout || result.stderr);
+      assert.equal(output.scope, "plan_only");
+      if (expected === 1) {
+        assert.match(output.error, /必须/);
+        assert.match(output.messageZh, /无法完成逐镜评审/);
+      } else {
+        assert.equal(output.localization.locale, "zh-CN");
+        assert.match(output.localization.summary, expected === 0 ? /评审已完成/ : /未决项/);
+        assert.match(output.limitation, /不核验/);
+      }
     }
   } finally { await rm(root, { recursive: true, force: true }); }
+});
+
+test("逐镜检查器提供中文帮助，并拒绝错误参数而不读取文件", () => {
+  const cli = fileURLToPath(new URL("../skills/cineweave-director/scripts/check-shot-review.mjs", import.meta.url));
+  const help = spawnSync(process.execPath, [cli, "--help"], { encoding: "utf8" });
+  assert.equal(help.status, 0);
+  assert.match(help.stdout, /用法/);
+  assert.match(help.stdout, /只读/);
+  for (const args of [[], ["--unsupported"]]) {
+    const result = spawnSync(process.execPath, [cli, ...args], { encoding: "utf8" });
+    assert.equal(result.status, 1);
+    const output = JSON.parse(result.stderr);
+    assert.equal(output.scope, "plan_only");
+    assert.match(output.error, /用法/);
+  }
 });
 
 test("three-shot narrative handoff survives draft review, one-variable revision and CLI readback", async () => {

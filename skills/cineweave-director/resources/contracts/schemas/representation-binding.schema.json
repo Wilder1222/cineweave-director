@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/representation-binding.schema.json",
-  "title": "CineWeave Representation Binding",
+  "title": "CineWeave 表现绑定",
   "type": "object",
   "additionalProperties": false,
   "required": [

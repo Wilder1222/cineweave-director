@@ -1,31 +1,37 @@
-# Optional: portrait, natural human, and surfaces
+<a id="optional-portrait-natural-human-and-surfaces"></a>
 
-Load for portrait reconstruction, close human fixtures, makeup/hair/skin continuity, or realistic surface response.
+详细创作稿遵循[细节与专业表达](prompt-detail-standard.md#人物)；此处专项规则与机制示例不能替代完整人物、场景和镜头描述。
+# 可选参考：肖像、自然人物与表面质感
 
-## Layer separation
+用于肖像重建、近距离人物测试、妆发肤质连续性或真实表面响应。
 
-- stable identity: face/body geometry, proportion, natural asymmetry, baseline skin features;
-- current appearance: makeup, grooming, hair, costume, temporary skin condition, moisture, dirt, injury;
-- capture: viewpoint, distance, focus, exposure, lens inference, sensor/render behavior;
-- representation: realism, retouch restraint, line/paint/cel behavior;
-- shot: pose, expression, composition, physical light.
+<a id="layer-separation"></a>
+## 分层
 
-Do not convert makeup or smoothing into identity. Do not infer ethnicity, health, age precision, focal length, or beauty from uncertain visual cues.
+- 稳定身份：脸部／身体几何、比例、自然不对称、基础皮肤特征。
+- 当前外观：妆容、修饰、头发、服装、临时肤况、水润程度、污渍和伤情。
+- 拍摄：视点、距离、焦点、曝光、推断焦距、传感器／渲染行为。
+- 表现方式：写实程度、修图克制、线条／笔触／赛璐璐表现。
+- 镜头：姿势、表情、构图、物理光照。
 
-## Detail budget
+妆容或磨皮不能变成人物身份。不从不确定视觉线索推断族裔、健康、精确年龄、真实焦距或颜值。
 
-- close-up: identity relationships, eye/lip surface, pores or medium-appropriate microtexture, makeup edges, hairline, material/light transitions;
-- medium: facial anchors, hair mass, neckline, garment construction, hand interaction;
-- full body: silhouette, proportion, posture, costume layers, footwear, contact;
-- wide: silhouette, color block, gait, scene relation; omit invisible pore-level detail.
+<a id="detail-budget"></a>
+## 细节预算
 
-## Surface language
+- 特写：身份关系、眼唇表面、毛孔或符合媒介的微纹理、妆容边界、发际线、材质与光的过渡。
+- 中景：脸部锚点、发型体量、领口、服装结构、手部互动。
+- 全身：轮廓、比例、姿势、服装层次、鞋履和接触。
+- 远景：轮廓、色块、步态及场景关系；省略看不见的毛孔细节。
 
-Describe four observable parts:
+<a id="surface-language"></a>
+## 表面语言
 
-1. source: which physical light reaches the surface;
-2. reflection: broad/specular/soft/anisotropic response;
-3. form: how response reveals geometry;
-4. contact: occlusion, compression, moisture, dust, or shadow at interaction.
+描述四项可观察内容：
 
-Natural human rendering preserves plausible asymmetry, variation, and material distinction. Avoid universal blur, plastic gloss, pore exaggeration, beauty-filter language, or contradictory hard/soft light claims.
+1. **光源：**哪一物理光源照到该表面。
+2. **反射：**宽泛、镜面、柔和或各向异性响应。
+3. **形体：**这些响应如何显出几何结构。
+4. **接触：**互动位置的遮挡、压缩、湿润、灰尘或阴影。
+
+自然人物表现保留合理的不对称、变化和材质差异。避免全局模糊、塑料光泽、夸张毛孔、美颜滤镜措辞，以及相互矛盾的硬光／柔光描述。

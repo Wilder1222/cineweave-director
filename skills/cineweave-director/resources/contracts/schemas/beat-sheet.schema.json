@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/beat-sheet.schema.json",
-  "title": "CineWeave Beat Sheet",
+  "title": "CineWeave 故事节拍表",
   "type": "object",
   "additionalProperties": false,
   "required": [

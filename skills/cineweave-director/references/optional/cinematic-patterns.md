@@ -1,37 +1,32 @@
-# Optional: cinematic patterns
+<a id="optional-cinematic-patterns"></a>
+# 可选参考：电影模式
 
-Load when a user asks for a reusable gesture such as reveal, slow-push reaction, pursuit escalation, match cut, threshold entrance, withheld reverse, or parallel action.
+用户要求可复用的揭示、缓推反应、追逐升级、匹配剪辑、门槛入场、暂缓反打或平行动作时加载。
 
-A cinematic pattern is a parameterized creative program, not a prompt preset. Define:
+电影模式是参数化的创作程序，不是提示词预设。定义稳定模式 ID 与版本、故事功能及适用／禁用情境、必要绑定槽位、有类型且有范围和默认值的参数、有序步骤、质量检查与待决事项。每一步只属于一个路由和一个目标产物。不得包含供应商、模型、适配器或执行字段。
 
-- stable pattern ID and version;
-- story function and appropriate/forbidden contexts;
-- required binding slots;
-- typed parameters with bounds and defaults;
-- ordered steps, each owned by one route and one target artifact;
-- quality checks and unresolved decisions;
-- no provider, model, adapter, or execution fields.
+参数可以是注意力目标、揭示延迟、机位距离变化、反应停留、轴线规则、节奏阶段或匹配维度。参数改变的是创作控制，不是正式设定。
 
-Example parameters may include attention target, reveal delay, camera distance change, reaction hold, axis policy, tempo phase, or match dimension. A parameter changes an authored control, not Canon.
+`CinematicSkillManifest` 收录模式。`ShotCompilerPlan` 选择一个版本、解析精确绑定和值，向创作者展示摄影机／表演／节奏控制，并输出计划交接。编译器不生成最终 `ShotSpec` 哈希、不补造故事事实、不选工具、不宣称已生成媒体。
 
-`CinematicSkillManifest` catalogs patterns. `ShotCompilerPlan` selects one version, resolves exact bindings and values, exposes a creator-facing camera/performance/pacing control surface, and emits planned handoffs. The compiler does not create final ShotSpec hashes, fill missing story facts, choose tools, or claim generated media.
+一个模式步骤只有一个归属。故事功能属于故事／导演，演员时序属于人物，地理属于场景，表现方式属于风格，模型措辞属于提示词。跨领域便利不能成为隐藏覆盖。
 
-One pattern step has one owner. Story function belongs to Story/Direction; actor timing to Character; geography to Scene; representation to Style; model-facing wording to Prompt. Cross-domain convenience cannot become a hidden override.
+创意选择或适配模式时，使用[自动导演手法匹配](master-style-presets.md)，无需名字或开关。该目录是简报驱动的决策辅助，不是已经实例化的 `CinematicSkillManifest`；保留共享视觉，只在确实需要规范输出时形式化兼容机制。
 
-When creatively selecting or adapting a pattern, use [automatic master-inspired technique matching](master-style-presets.md). No creator name or switch is required. The catalog is a brief-led decision aid, not an already-instantiated `CinematicSkillManifest`; preserve the shared look and only formalize compatible mechanisms when canonical output is actually requested.
+模式目的和取舍参见[导演方法](directing-craft.md)，摄影机／用光可行性参见[摄影方法](cinematography-craft.md)，转场参见[剪辑与声音方法](editing-sound-craft.md)。只加载相关指南。将影响来源展开为可观察选择；创作者名字不是控制值或质量保证。
 
-When selecting or improving a pattern, use [directing craft](directing-craft.md) for its purpose and tradeoffs, [cinematography craft](cinematography-craft.md) for camera/light feasibility, or [editing/sound craft](editing-sound-craft.md) for transitions. Load only the relevant guide. Expand a named influence into observable choices; the creator's name is not a control value or quality guarantee.
+<a id="from-creator-language-to-a-reviewable-shot"></a>
+## 从创作者语言到可评审镜头
 
-## From creator language to a reviewable shot
+对于“她听到脚步，继续走，掩饰慌张，同时摄影机靠近”，先解析人物和场景绑定。提出最小且有动机的模式，例如缓推反应；把摄影机运动、克制表演、反应时长作为独立控制。除非用户或已批准产物已固定时长，否则数值只是建议。人物领域把克制转为可见行为，导演把摄影机和时间与其对齐。
 
-For “she hears footsteps, keeps walking, and hides her alarm while the camera moves closer”, resolve the character and scene bindings first. Offer the smallest motivated pattern: a slow-push reaction, with camera movement, restrained performance, and reaction duration exposed as separate controls. Describe the duration as a proposed value until the user or an approved artifact fixes it. Character translates restraint into observable behavior; Direction aligns the camera and timing with that behavior.
+展示简短导演卡：戏剧变化、精确资产绑定、镜头意图、可观察表演、时序、保留事实和下一个未知决定。“克制程度 80%”只是创作输入，不是心理测量或平台权重。只调整用户点名的控制，保留其余已接受值。摄影机变化需要新走位或时序时，先说明依赖，再将受影响选择视为确定。
 
-Show a compact direction card: dramatic change, exact bound assets, camera intent, observable performance, timing, preserved facts, and the next unresolved decision. A value such as 80% restraint is a creative input, not a psychological measurement or a provider weight. Adjust one requested control and preserve the other accepted values. If a camera change requires new blocking or timing, state that dependency before treating the affected choice as settled.
+<a id="compiler-consistency"></a>
+## 编译一致性
 
-## Compiler consistency
+`ShotCompilerPlan` 中每个参数和绑定槽位的 ID 唯一。每项控制映射已解析值，并命名对应计划字段赋值。交接与追踪目标保持相同契约类型、归属与操作标签；输出归属来自当前发行版 `contracts.json`。`temporal_direction`、`performance_timeline` 等兼容协议标签表示归属路由中的操作，不是新 v3 路由。
 
-Within `ShotCompilerPlan`, each parameter and binding slot has a unique ID. Each control projects the resolved parameter value and names a matching planned field assignment. Every handoff and trace target retains the same contract kind, owner, and operation label; output ownership comes from the release's `contracts.json`. Compatible wire labels such as `temporal_direction` and `performance_timeline` describe operations within their owner route, not additional v3 routes.
+交接依赖来自声明的精确绑定或上游引用，并保留绑定／上游赋值实际消耗的所有引用。别名绑定同时指明别名和精确注册表。分组、交接和追踪步骤严格递增，交接内部不重复赋值同一目标。每个非验证追踪步骤指向匹配交接赋值。
 
-Handoff dependencies must come from the declared exact binding or upstream refs and retain every ref actually consumed by a binding/upstream assignment. Alias-derived bindings name both the alias and exact registry. Keep groups, handoffs, and trace steps in strictly increasing order, and avoid duplicate target assignments inside a handoff. Every non-validation trace step points to a matching handoff assignment.
-
-These local consistency checks do not verify the contents of an unavailable manifest or registry. Inspect the supplied exact artifacts to check pattern version, parameter types/bounds, slot requirements, and alias mappings. If those inputs are missing, return the direction card with unresolved decisions rather than inventing a canonical compiled plan.
+这些局部检查不能验证不可访问清单或注册表的内容。需要查看实际精确产物，核对模式版本、参数类型／范围、槽位要求和别名映射。缺少输入时，返回带未知决定的导演卡，不编造规范编译计划。

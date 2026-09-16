@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/prompt-record.schema.json",
-  "title": "CineWeave Codex General Text-to-Image Prompt Record",
+  "title": "CineWeave Codex 通用文生图提示词记录",
   "type": "object",
   "additionalProperties": false,
   "required": [

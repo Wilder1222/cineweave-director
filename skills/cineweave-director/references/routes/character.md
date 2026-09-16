@@ -1,42 +1,46 @@
-# Route: character
+<a id="route-character"></a>
+# 路由：人物（character）
 
-Use for identity development, controlled exploration, semantic morphology, appearance, behavior, performance timing, bindings, and continuity.
+提示词的适用维度与完整性标准见[细节与专业表达](../optional/prompt-detail-standard.md#人物)对应章节。
 
-## Separate four layers
+用于身份开发、受控探索、语义形态、外观、行为、表演时序、绑定及连续性。
 
-1. **Narrative core:** role, desire, contradiction, pressure behavior.
-2. **Identity:** stable face/body structure, proportions, silhouette, natural asymmetry, surface baseline, and motion fingerprint.
-3. **Appearance:** hair, grooming, makeup, costume, accessories, temporary skin/material state, condition, and weather response.
-4. **Performance:** objective, tactic, emotion trajectory, gesture causality, micro-expression, body mechanics, and timing.
+<a id="separate-four-layers"></a>
+## 分开四层
 
-Appearance and representation never rewrite identity. A hero look and a motion-safe look are separate appearance versions when detail or movement requirements differ.
+1. **叙事核心：**角色作用、欲望、矛盾、压力下的行为。
+2. **身份：**稳定脸部／身体结构、比例、轮廓、自然不对称、表面基线和运动特征。
+3. **外观：**发型、修饰、妆容、服装、配饰、临时皮肤／材质状态、状态变化和天气响应。
+4. **表演：**目标、策略、情绪轨迹、动作因果、微表情、身体力学和时序。
 
-## Exploration and convergence
+外观与表现方式都不能改写身份。精细展示造型与适合运动的造型，若细节或运动需求不同，应作为不同外观版本管理。
 
-For an undefined character, produce 2–6 comparable directions, default 4. Hold pose, expression, light, framing, clothing complexity, and background neutral; change one high-impact axis per option. Do not rank beauty or lock identity automatically.
+<a id="exploration-and-convergence"></a>
+## 探索与收敛
 
-Separate technical qualification from `CharacterPreferenceFeedback`. User preference is not an objective score or a hidden attractiveness profile. After explicit selection, converge into a draft identity and request neutral front, three-quarter, profile, and full-body evidence only when those views are needed.
+用户要求探索或比较时，给出与选择问题匹配的少量方向；已委托直接设计时，完成一个有细节的原创草稿，不先强制四选一。保持姿态、表情、光照、取景、服装复杂度和背景中性；每个方案改变一个高影响维度。不得按颜值排序或自动锁定身份。
 
-## Identity anchors
+技术合格性与 `CharacterPreferenceFeedback` 分开。用户偏好不是客观分数，也不能构成隐藏的吸引力档案。明确选择后收敛为身份草稿，仅在需要时请求中性正面、四分之三侧面、侧面和全身证据。
 
-Choose 3–16 anchors based on scale: facial relationships and asymmetry for close views; silhouette, proportion, gait, and posture for wider views. Avoid mutable costume or hairstyle as the only identity proof. The character should remain recognizable when appearance and representation change within approved bounds.
+<a id="identity-anchors"></a>
+## 身份锚点
 
-## Binding and performance
+依景别选择 3–16 个锚点：近景用五官关系和不对称；远景用轮廓、比例、步态和姿势。不要只用可变服装或发型证明身份。外观与表现方式在批准范围内变化后，人物仍应可辨识。
 
-`CharacterBinding` selects the exact identity and appearance state needed by a scene or shot. `PerformanceTimeline` owns actor timing; Direction aligns camera and focus to it but cannot rewrite the actor's causal phases.
+<a id="binding-and-performance"></a>
+## 绑定与表演
 
-For listener reactions or ensemble performance, use [ensemble direction and shot review](../optional/ensemble-direction-and-review.md). Connect a received cue to a changed task and residual state; do not make every physiological channel move at once. Timeline validation checks unique phase IDs, positive durations, order, non-overlap and duration bounds. Gaps may hold the prior state; passing arithmetic does not prove causal acting or realized media timing.
+`CharacterBinding` 选择场景或镜头所需的精确身份和外观状态。演员时序由 `PerformanceTimeline` 负责；导演可以对齐摄影机与焦点，但不能改写演员的因果阶段。
 
-## Quality gate
+倾听者反应或群像表演使用[群像调度与逐镜评审](../optional/ensemble-direction-and-review.md)，将收到的触发连接到任务变化和残留状态，不让全部生理通道同时变化。时间线校验检查阶段 ID 唯一、正时长、顺序、不重叠及总时长边界。间隙可维持前态；算术通过不能证明表演因果或真实媒体时间。
 
-For actor direction, subtext, listening, or restrained performance, read [directing craft](../optional/directing-craft.md). Convert emotion requests into playable tasks and scale-readable choices; do not require a catalogue of physiological gestures or treat a gesture as proof of an actual person's emotion.
+<a id="quality-gate"></a>
+## 质量关卡
 
-- adult/minor status and likeness rights explicit when relevant;
-- identity, appearance, and performance are separately versioned;
-- anchors are observable and scale-aware;
-- diagnostic variation is bounded and one-axis; broad concept exploration may compare explicitly labeled multi-axis directions;
-- behavior follows objective and pressure;
-- no beauty scoring or biometric inference;
-- unresolved identity evidence remains unresolved.
+涉及演员指导、潜台词、倾听或克制表演时，阅读[导演方法](../optional/directing-craft.md)。将情绪要求转换为可表演任务和对应景别可读的选择，不强制罗列生理动作，也不将某个动作当成真实人物情绪的证明。
 
-Outputs: `CharacterMorphologySpec`, `CharacterSpec`, `CharacterAppearanceState`, `CharacterBinding`, `PerformanceTimeline`.
+相关时明确成年／未成年状态及肖像权；身份、外观、表演分别版本化；锚点可观察且适合景别；诊断性变体有界且单变量，广泛概念探索可比较明确标注的多维方向；行为遵循目标与压力；不做颜值评分或生物识别推断；未解决身份依据继续保持未知。
+
+可选规范输出（仅在请求结构化交接时）：`CharacterMorphologySpec`、`CharacterSpec`、`CharacterAppearanceState`、`CharacterBinding`、`PerformanceTimeline`。
+
+需要比较候选、表情／姿态研究、多视图或资产收敛时，使用[视觉开发](../optional/visual-development.md)；详细维度沿用共同提示词规范。

@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/performance-timeline.schema.json",
-  "title": "CineWeave Character Performance Timeline",
-  "description": "Character-owned causal phases. Semantic validation enforces unique phase IDs, positive durations, ordered non-overlapping intervals and the declared duration bound. Gaps may hold the preceding state; timing arithmetic does not verify realized performance.",
+  "title": "CineWeave 人物表演时间线",
+  "description": "表演阶段 ID 必须唯一；各区间时长为正，按时间排序且不重叠，并位于声明总时长内。允许间隙维持前态；这些数值检查不证明动作因果或实际媒体时序。",
   "type": "object",
   "additionalProperties": false,
   "required": [

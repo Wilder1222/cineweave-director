@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/character-morphology-spec.schema.json",
-  "title": "CineWeave Character Morphology Specification",
+  "title": "CineWeave 人物形态规范",
   "type": "object",
   "additionalProperties": false,
   "required": [

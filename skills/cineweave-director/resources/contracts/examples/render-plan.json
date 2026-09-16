@@ -38,7 +38,7 @@
         "eyes.horizontal",
         "mouth.asymmetry"
       ],
-      "transformation": "adapt lighting and restrained threatened expression only"
+      "transformation": "仅调整光线与克制的受威胁表情"
     },
     {
       "observationId": "OBS_BODY_NEUTRAL_01",
@@ -46,11 +46,11 @@
       "scope": "body",
       "characterSpecRef": "char.shen-yanqiu@1",
       "preserve": [
-        "7.7 ratio",
-        "shoulder-to-hip relation",
-        "right-hand dominance"
+        "7.7 比例",
+        "肩髋关系",
+        "右手惯用侧"
       ],
-      "transformation": "apply current wardrobe and action while preserving proportion"
+      "transformation": "应用当前服装与动作，保留比例"
     },
     {
       "observationId": "OBS_POSE_THREATENED_01",
@@ -58,11 +58,11 @@
       "scope": "pose",
       "characterSpecRef": "char.shen-yanqiu@1",
       "preserve": [
-        "left-foot shift",
-        "protective blocking",
-        "right hand near hilt"
+        "左脚移动",
+        "保护性调度",
+        "右手靠近剑柄"
       ],
-      "transformation": "fit the pose into the current corridor composition"
+      "transformation": "将姿态放入当前走廊构图"
     }
   ],
   "requiredCapabilities": [
@@ -79,36 +79,36 @@
       {
         "code": "character-spec-hash",
         "status": "pending",
-        "message": "Confirm char.shen-yanqiu@1 content hash matches the approved World record."
+        "message": "确认 char.shen-yanqiu@1 的内容哈希与获批世界记录一致。"
       },
       {
         "code": "reference-role-conflicts",
         "status": "pending",
-        "message": "Confirm face, body and pose inputs cannot overwrite one another."
+        "message": "确认面部、身体与姿态输入不能互相覆盖。"
       },
       {
         "code": "rights",
         "status": "pending",
-        "message": "Confirm all supplied observations are permitted for this draft."
+        "message": "确认所有提供的观察都允许用于此草稿。"
       }
     ]
   },
   "postflight": {
     "requiredArtifacts": [
-      "three candidate stills",
-      "generation metadata",
-      "candidate observation records"
+      "三张候选静帧",
+      "生成元数据",
+      "候选观察记录"
     ],
     "verify": [
-      "identity anchors",
-      "body proportion",
-      "dominant side",
-      "performance binding",
-      "light direction"
+      "身份锚点",
+      "身体比例",
+      "惯用侧",
+      "表演绑定",
+      "光线方向"
     ],
     "importStatus": "draft"
   },
-  "notes": "Provider-neutral exploration plan; no generation is performed by this artifact.",
+  "notes": "平台无关探索计划；本产物不执行生成。",
   "assetRecipeRef": {
     "kind": "cineweave_codex_asset_recipe",
     "id": "recipe.shen-expression-sheet-3x3",
@@ -167,8 +167,8 @@
     "createdAt": "2026-08-19T12:00:00.000Z",
     "updatedAt": "2026-09-01T00:00:00.000Z",
     "changeLog": [
-      "Migrated to the 2.5 versioned RenderPlan shape.",
-      "Replaced legacy references with exact contract references."
+      "迁移至 2.5 版本化 RenderPlan 结构。",
+      "将旧引用替换为精确契约引用。"
     ]
   }
 }

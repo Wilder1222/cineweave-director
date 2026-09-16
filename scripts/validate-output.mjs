@@ -30,7 +30,7 @@ const MAP_SUBSCHEMA_KEYWORDS = ["$defs", "properties", "patternProperties"];
 const contractsCache = new Map();
 
 function usage() {
-  console.error("Usage: node scripts/validate-output.mjs <schema.json> <payload.json> [--artifacts registry.json]");
+  console.error("用法：node scripts/validate-output.mjs <schema.json> <payload.json> [--artifacts registry.json]");
 }
 
 function isObject(value) {
@@ -1040,16 +1040,16 @@ async function main() {
   const options = registryPath ? { artifacts: parseJsonStrict(await readFile(resolve(registryPath), "utf8")) } : {};
   const result = await validateDocument(schemaPath, payloadPath, options);
   if (!result.valid) {
-    console.error(JSON.stringify({ valid: false, errors: result.errors, unverified: result.unverified }, null, 2));
+    console.error(JSON.stringify({ valid: false, messageZh: "契约校验未通过，请按 errors 中的字段位置修正；原始诊断保留。", errors: result.errors, unverified: result.unverified }, null, 2));
     process.exitCode = 2;
     return;
   }
-  console.log(JSON.stringify({ valid: true, schema: result.schema, payload: resolve(payloadPath), unverified: result.unverified }, null, 2));
+  console.log(JSON.stringify({ valid: true, messageZh: result.unverified.length ? "契约校验通过，仍有未核验事项；不能据此认定媒体或权利通过。" : "契约校验通过；不代表媒体、权利或执行成功。", schema: result.schema, payload: resolve(payloadPath), unverified: result.unverified }, null, 2));
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   main().catch((error) => {
-    console.error(error instanceof Error ? error.stack || error.message : String(error));
+    console.error("无法完成契约校验，原始诊断：\n" + (error instanceof Error ? error.stack || error.message : String(error)));
     process.exitCode = 2;
   });
 }

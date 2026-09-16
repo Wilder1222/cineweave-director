@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/style-light-grammar.schema.json",
-  "title": "CineWeave Style Light Grammar",
+  "title": "CineWeave 风格光线规则",
   "type": "object",
   "additionalProperties": false,
   "required": [

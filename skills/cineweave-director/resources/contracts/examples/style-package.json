@@ -7,7 +7,7 @@
   "status": "draft",
   "displayName": {
     "zh": "宋韵诗意历史电视剧",
-    "en": "Poetic Song-Inspired Period Drama"
+    "en": "诗意宋式古装剧"
   },
   "purpose": "为人物、场景和镜头提供可继承的宋韵文化、美术、摄影和表演表达规则；不定义角色身份或场景地理。",
   "semanticSpec": {
@@ -40,20 +40,20 @@
   },
   "representationModel": {
     "family": "photoreal",
-    "geometryModel": "Literal adult human anatomy with restrained aesthetic idealization and preserved natural asymmetry.",
-    "surfaceModel": "Observable skin, hair, textile and environmental response remain differentiated without beauty-filter smoothing.",
-    "lightModel": "SceneLightState remains physically motivated while style controls tonal rolloff, contrast and color separation.",
-    "depthModel": "Optical perspective and selective focus may be used, but depth cannot overwrite Scene geography.",
+    "geometryModel": "保留真实成人解剖，以克制的审美理想化保留自然不对称。",
+    "surfaceModel": "皮肤、头发、织物及环境响应保持可观察的差异，不使用美颜磨皮。",
+    "lightModel": "SceneLightState 保持物理来源，风格控制色调过渡、反差与色彩分离。",
+    "depthModel": "可使用光学透视和选择性对焦，但景深不能覆盖场景地理。",
     "visualGrammar": [
-      "Natural human anatomy",
-      "Regional skin variation",
-      "Real textile weight",
-      "Restrained cinematic contrast"
+      "自然人体解剖",
+      "局部肤色变化",
+      "真实织物重量",
+      "克制的电影反差"
     ],
     "temporalGrammar": [
-      "Grounded body weight",
-      "Low-amplitude facial acting",
-      "Continuous hair and cloth inertia"
+      "有落地感的身体重量",
+      "小幅度面部表演",
+      "连续的头发与衣料惯性"
     ]
   },
   "abstractionBudget": {
@@ -61,98 +61,98 @@
       {
         "dimension": "geometry",
         "level": "literal",
-        "rationale": "Facial and body structures remain anatomically plausible."
+        "rationale": "面部与身体结构保持解剖可信。"
       },
       {
         "dimension": "proportion",
         "level": "literal",
-        "rationale": "CharacterSpec proportions must not be stylized by this package."
+        "rationale": "本风格包不得改变 CharacterSpec 身体比例。"
       },
       {
         "dimension": "feature_abstraction",
         "level": "restrained",
-        "rationale": "Only minor cinematic idealization is allowed."
+        "rationale": "仅允许轻微电影化理想处理。"
       },
       {
         "dimension": "surface",
         "level": "restrained",
-        "rationale": "Microtexture remains visible according to shot scale."
+        "rationale": "按镜头尺度保留可见微纹理。"
       },
       {
         "dimension": "material",
         "level": "literal",
-        "rationale": "Skin, silk, wood and metal require distinct responses."
+        "rationale": "皮肤、丝绸、木材及金属需要不同表面响应。"
       },
       {
         "dimension": "color",
         "level": "restrained",
-        "rationale": "The palette is designed but preserves natural skin separation."
+        "rationale": "设计色板时保留自然肤色分离。"
       },
       {
         "dimension": "light",
         "level": "restrained",
-        "rationale": "Tonal treatment is poetic while sources remain motivated."
+        "rationale": "色调处理可以诗意，光源仍须有依据。"
       },
       {
         "dimension": "depth",
         "level": "literal",
-        "rationale": "Perspective and focus follow photographic capture logic."
+        "rationale": "透视与对焦遵循摄影捕捉逻辑。"
       },
       {
         "dimension": "motion",
         "level": "literal",
-        "rationale": "Performance and secondary motion preserve weight and inertia."
+        "rationale": "表演和次级运动保留重量与惯性。"
       },
       {
         "dimension": "expression",
         "level": "restrained",
-        "rationale": "Microexpression is preferred over graphic exaggeration."
+        "rationale": "优先使用微表情，避免图形化夸张。"
       }
     ],
     "providerNeutral": true
   },
   "detailBudgetByScale": {
     "closeup": [
-      "Regional skin color",
-      "Age-appropriate microtexture",
-      "Eye and lip moisture",
-      "Individual flyaway hairs"
+      "局部皮肤色彩",
+      "符合年龄的微纹理",
+      "眼睛与嘴唇湿润感",
+      "零散飞发"
     ],
     "medium": [
-      "Facial volume",
-      "Hair grouping",
-      "Hands",
-      "Textile material separation"
+      "面部体积",
+      "头发分组",
+      "手部",
+      "织物材质区分"
     ],
     "fullbody": [
-      "Body proportion",
-      "Weight bearing",
-      "Hand and foot anatomy",
-      "Cloth-body contact"
+      "身体比例",
+      "承重",
+      "手足解剖",
+      "衣料与身体接触"
     ],
     "wide": [
-      "Silhouette",
-      "Action readability",
-      "Environment integration",
-      "Source-consistent light"
+      "轮廓",
+      "动作可读性",
+      "环境融合",
+      "符合光源的照明"
     ]
   },
   "identityTranslationPolicy": {
     "requiresRepresentationBinding": true,
     "preserve": [
-      "CharacterSpec facial relations",
-      "Body silhouette",
-      "Signature marks",
-      "Motion fingerprint"
+      "CharacterSpec 面部关系",
+      "身体轮廓",
+      "标志性记号",
+      "动作特征"
     ],
     "allow": [
-      "Shot-scale-aware omission of invisible microdetail",
-      "Restrained cinematic idealization"
+      "按镜头尺度省略不可见微细节",
+      "克制的电影化理想处理"
     ],
     "forbid": [
-      "Generic beauty-template replacement",
-      "Style-reference identity transfer",
-      "CharacterSpec mutation"
+      "用通用美貌模板替换",
+      "迁移风格参考身份",
+      "修改 CharacterSpec"
     ]
   },
   "atoms": [
@@ -401,19 +401,19 @@
       "temporal"
     ],
     "invariants": [
-      "identity is supplied by CharacterSpec",
-      "geography is supplied by SceneSpec",
-      "style remains low priority to locked facts"
+      "身份由 CharacterSpec 提供",
+      "地理由 SceneSpec 提供",
+      "风格优先级低于锁定事实"
     ],
     "allowedVariation": [
-      "warm or cool natural light",
-      "indoor or outdoor lived-in period space",
-      "medium or close portrait crop"
+      "冷或暖的自然光",
+      "有生活痕迹的室内或室外古代空间",
+      "中景或近景肖像裁切"
     ],
     "forbidden": [
-      "style atom silently changing identity",
-      "camera movement without a shot purpose",
-      "unscoped reference blending"
+      "风格单元暗中改变身份",
+      "没有镜头目的的摄影机运动",
+      "未限定范围的参考混合"
     ]
   },
   "referencePlanRef": {
@@ -455,33 +455,33 @@
     {
       "target": "image",
       "directives": [
-        "observer-first composition",
-        "natural skin and textile response",
-        "muted jade and moon-white palette"
+        "以观察者为先的构图",
+        "自然皮肤与织物响应",
+        "低饱和玉色与月白色板"
       ],
       "negativeDirectives": [
-        "plastic skin",
-        "modern glamour makeup",
-        "random ornate accessories"
+        "塑料皮肤",
+        "现代华丽妆容",
+        "随机繁复配饰"
       ],
       "temporalRules": [
-        "freeze the motivated observation moment"
+        "凝固有动机的观察瞬间"
       ]
     },
     {
       "target": "video",
       "directives": [
-        "smooth motivated camera movement",
-        "subtle gaze-to-head delay",
-        "low-frequency cloth and hair inertia"
+        "平滑且有动机的摄影机运动",
+        "视线到头部转动的轻微延迟",
+        "衣料与头发的低频惯性"
       ],
       "negativeDirectives": [
-        "teleporting ornaments",
-        "frame-to-frame line or costume drift"
+        "饰物瞬移",
+        "逐帧线条或服装漂移"
       ],
       "temporalRules": [
-        "preserve shot axis",
-        "preserve performance onset and release"
+        "保留镜头轴线",
+        "保留表演起始与收势"
       ]
     }
   ],
@@ -531,14 +531,14 @@
     "createdAt": "2026-08-20T12:00:00.000Z",
     "updatedAt": "2026-08-20T12:00:00.000Z",
     "changeLog": [
-      "initial provider-neutral style package"
+      "初始平台无关风格包"
     ]
   },
   "planningBoundary": {
     "providerNeutral": true,
     "generatesMedia": false,
     "humanApprovalRequired": true,
-    "notes": "StylePackage defines semantic style, references and validation; it does not invoke an image or video Provider."
+    "notes": "StylePackage 定义语义风格、参考与验证，不调用图像或视频供应商。"
   },
   "skillReceipt": {
     "repository": "https://github.com/Wilder1222/cineweave-director",

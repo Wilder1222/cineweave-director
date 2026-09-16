@@ -1,7 +1,7 @@
 {
   "$id": "https://cineweave.dev/contracts/creative-brief.schema.json",
-  "title": "CineWeave Creative Brief",
-  "description": "Route-aware intake for one self-contained AIGC creation skill.",
+  "title": "CineWeave 创作简报",
+  "description": "面向单一自包含 AIGC 创作技能、能够明确内部路由的需求接入结构。",
   "type": "object",
   "additionalProperties": false,
   "required": ["kind", "contractVersion", "briefId", "version", "status", "inputMode", "purpose", "task", "intent", "world", "referenceInputs", "locks", "constraints", "unknowns", "stagePlan", "humanGates", "planningBoundary", "validation", "skillReceipt", "provenance"],

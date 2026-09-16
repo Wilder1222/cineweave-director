@@ -1,87 +1,87 @@
-# Optional: ensemble direction and shot review
+# 可选参考：群像调度与逐镜评审
 
-Load automatically for multi-person narrative staging or a complete narrative shot/video-prompt handoff; also load for explicit background-activity or directing-review requests. These are perspectives used by this one Skill, not additional routes, agents, or authorities. A complete scene/sequence handoff or comprehensive review uses all six perspectives. A bounded request uses focused perspectives. Do not expand a simple portrait, exact translation or camera question into a six-part ceremony.
+多人叙事调度、完整叙事镜头／视频提示词交付时自动加载；用户明确要求背景活动或导演评审时也适用。六个视角由同一个 Skill 使用，不增加路由、代理或权威来源。完整场次／序列交付与综合评审使用全部六个视角，局部请求只选相关视角；普通肖像、精确翻译或摄影问题保持原有范围。
 
-## Apply within the existing workflow
+## 融入现有流程
 
-1. Identify the actual source revision, shot inventory, authority and look once. Do not create six competing scene packages.
-2. Develop missing actor cues and supporting tasks in their owning routes. Keep each readable outgoing state available to the next shot.
-3. Carry selected decisions into the storyboard and requested visual/temporal prompt. Compare the compiled text with its source; missing behavior is a prompt correction, while an impossible source action goes back to its owner.
-4. Review the selected perspectives against every actual shot. For a requested complete review, run the worksheet checker when available. `valid` alone is not completion: inspect `coverageComplete`, `reviewComplete` and `openItems`.
-5. Correct findings inside delegated scope, increment the source revision, and re-review changed content and adjacent transitions. Preserve other decisions. If the needed fact is unavailable, deliver the useful draft with the precise unresolved item rather than inventing a pass or repeating an unchanged check.
+1. 统一实际来源版本、镜头清单、权威设定和视觉基线，不建立六份相互竞争的场景包。
+2. 在各自责任路由补齐演员触发和配角任务，为下一镜保留可读的出镜状态。
+3. 将所选决定传入分镜和所需图像／时间提示词。对照来源检查编译结果：遗漏行为属于提示词修正，源动作本身不成立则返回原责任领域。
+4. 对每个实际镜头完成所选视角的评审。完整评审在工具可用时运行工作表检查器；`valid` 不代表完成，还需检查 `coverageComplete`、`reviewComplete` 和 `openItems`。
+5. 在授权范围内修正问题，递增来源版本，复查变化内容与相邻转场，保留其余决定。缺少必要事实时交付有用草稿并列明未决项，不伪造通过，也不反复运行没有变化的检查。
 
-Keep the displayed result proportionate: for a complete creative package, a short review conclusion is sufficient unless the user wants the matrix. Do not write project records unless file output is requested or already part of the workflow. This Skill remains a document-driven creative workflow, not an autonomous generation loop.
+展示内容与请求相称：完整创作包通常只需简短评审结论，用户需要时再展开矩阵。只有请求文件输出或已有流程包含保存时才写项目记录。本 Skill 仍是文档驱动的创作流程，不执行自动生成循环。
 
-## One shared scene, several checks
+## 同一场景，多个检查视角
 
-Start from the same scene purpose, shot inventory, exact supplied artifact revisions, shared look, spatial anchors, incoming state, and user locks. Mark original design choices as proposals. If the source changes, identify affected rows and review them against the new revision; never carry a pass across changed content silently. Preserve already delegated decisions and authorization: asking for a prompt authorizes drafting it. Only a consequential decision outside that scope needs a question.
+共同输入包括场景目的、镜头清单、已提供的精确产物版本、统一视觉、空间锚点、入镜状态及用户锁定项。原创决定标为提案。来源变化后识别受影响行并依据新版本复审，不能悄悄沿用旧的通过结论。继承已授权决定；要求写提示词已经授权起草，只有超出范围的重要决定才需询问。
 
-| Perspective | Check | Existing owner of a correction |
+| 视角 | 检查内容 | 修正的现有责任领域 |
 | --- | --- | --- |
-| `direction` | audience access, scene turn, readable relationships and coverage | Story for causality; Direction for staging/viewpoint |
-| `performance` | partner-directed task, stimulus, listening and changed action | Character / `PerformanceTimeline` |
-| `staging` | supporting tasks, paths, attention, occlusion and reaction offsets | Direction for placement; Character for behavior; Scene for topology |
-| `cinematography` | camera access, motivated movement, focus and source use | Direction; Scene for physical sources; Style for representation |
-| `prompt` | faithful compilation, missing visible facts and contradictory instructions | Prompt wording; upstream owner when the design itself is wrong |
-| `continuity` | outgoing/incoming state, axis, prop possession and revision trace | The domain that owns the mismatched fact |
+| 导演 `direction` | 观众获知范围、场景转折、关系可读性与镜头覆盖 | 故事负责因果；导演负责调度和视点 |
+| 表演 `performance` | 面向对手的任务、刺激、倾听与动作变化 | 人物／`PerformanceTimeline` |
+| 调度 `staging` | 配角任务、路径、注意力、遮挡及反应错落 | 导演负责位置；人物负责行为；场景负责拓扑 |
+| 摄影 `cinematography` | 机位可达性、运动动机、焦点及光源使用 | 导演；场景负责物理光源；风格负责表现方式 |
+| 提示词 `prompt` | 编译忠实度、可见事实遗漏及指令矛盾 | 提示词措辞；设计本身有误则返回上游责任领域 |
+| 连续性 `continuity` | 出入镜状态、轴线、道具持有与版本追溯 | 拥有失配事实的领域 |
 
-The perspective discovering a problem is not automatically its repair owner. Resolve conflicts by user locks, upstream authority and scene purpose. A camera choice cannot move a wall or change a character's objective. Do not average conflicting choices or let a majority vote override a hard lock.
+发现问题的视角不自动成为修复归属。按用户锁定、上游权威和场景目的解决冲突；摄影选择不能移动墙壁或改变人物目标。不能折中平均相互矛盾的选择，也不能以多数意见覆盖硬锁。
 
-## Performance and background activity
+## 表演与背景活动
 
-For a consequential acting beat, connect the character's task to an observable cue, reception of that cue, a changed action, and an outgoing state. Give the listener time to receive the cue; avoid a reaction that presupposes an unheard line. Select only changes legible at this shot scale. Stable face, breath or posture can remain stable even when the schema requires those fields.
+关键表演节拍应串起人物任务、可观察触发、接收触发、变化后的动作和出镜状态。给倾听者接收信息的时间，避免尚未听到台词就作出依赖该台词的反应。只挑当前景别可读的变化；即使 schema 要求填写脸部、呼吸或姿态字段，也可以明确保持稳定。
 
-For identifiable supporting figures, record their ongoing task, attention target, available cue, path/zone, reaction order and final state. An indistinct crowd may be organized into readable groups; do not invent individual biographies for every distant silhouette. Stillness, indifference and an empty space can be intentional. Do not add a crowd merely to demonstrate this guide.
+可辨认配角记录持续任务、注意目标、可接收线索、路径／区域、反应顺序及终态。远处人群可以组织成可读的组，不为每个剪影编传记。静止、冷淡和空场均可有意安排，不为展示本指南而强加人群。
 
-Keep background action physically compatible with the scene and subordinate to the focal beat. Test whether its crossing obscures the important handoff, whether its sound masks a line, and whether everyone inexplicably turns together. Change timing or density before adding more activity.
+背景动作须符合空间，服从焦点节拍。检查穿行是否挡住交接、声音是否掩盖台词、众人是否无由同步转头。增加活动前先调整时机或密度。
 
-### Worked draft: closing-time repair shop
+### 工作稿示例：打烊前的修理铺
 
-User premise: an apprentice asks the owner to keep the shop open; the owner keeps sorting keys. A courier is already waiting by the door. No timing, lens or aspect ratio is supplied. The following is a proposed staging treatment, not approved Canon or generated footage.
+用户前提：学徒请求店主继续营业，店主仍在分拣钥匙，一名快递员已在门口等候。未给时长、焦距和画幅。以下是调度提案，不是获批正式设定或已生成影像。
 
-| Subject | Ongoing task and attention | Cue and changed action | Outgoing state |
+| 人物 | 持续任务与注意力 | 触发与动作变化 | 出镜状态 |
 | --- | --- | --- | --- |
-| Apprentice | hold the repair ticket beside the counter; watch the owner's hand | after the owner says the shop is closing, lay the ticket beside the unsorted keys and wait | empty hand on the counter; ticket remains on the owner's side |
-| Owner | sort keys into their existing hooks, looking at labels | finish the key already in hand; then stop before taking the next one and look at the ticket | next key untouched; gaze on the ticket |
-| Courier | check the delivery slip at the door | respond only when the owner looks toward the doorway; fold the slip and leave the counter sightline clear | remain by the door; no crossing during the pause |
+| 学徒 | 在柜台边拿维修单，注视店主的手 | 店主说要打烊后，把维修单放在未分拣钥匙旁，等待 | 空手留在柜台上；维修单在店主一侧 |
+| 店主 | 按已有标签将钥匙挂回原挂钩 | 挂好手中的钥匙，取下一把前停住，看向维修单 | 下一把钥匙未动，视线落在单据上 |
+| 快递员 | 在门口查看送货单 | 店主看向门口后才回应，折好单据，让开柜台视线 | 留在门边，停顿期间不横穿 |
 
-The focal change is the owner's interrupted routine. A shared view must show ticket, hand and both faces clearly enough to read the pause. If that is impossible in the approved space, propose a detail/reaction pair with the same cue order; do not invent a wider counter. Carry the ticket's location and the unfinished key task into the next shot. Camera movement is optional; matching the look remains mandatory.
+焦点变化是店主日常动作被打断。共同画面须让单据、手和双方的脸足够清楚，才能读出停顿。批准空间无法满足时，可提出细节／反应镜头组合，保持触发顺序，不凭空加宽柜台。下一镜继承单据位置及尚未完成的钥匙任务。运镜可选，统一视觉必须保留。
 
-### Existing contract handoff
+### 现有契约交接
 
-| Decision | Field that carries it |
+| 决定 | 承载字段 |
 | --- | --- |
-| Stimulus, task and response | `PerformanceTimeline.phases[].trigger/objective/action/gaze/residualState`; use face/breath/posture to describe change or deliberate stability |
-| Supporting placement and tasks | `ShotSpec.blocking[]` with a source-bound subject, zones, action, eyeline and contact |
-| Background hierarchy | `ShotSpec.composition.background/visualHierarchy` and `audienceAttention` |
-| Synchronization | `TemporalSpec` actor/camera/environment tracks referencing the upstream shot; do not add a reverse reference to `ShotSpec` |
-| Important behavior surviving compilation | `ShotSpec.promptHandoff.mustPreserve`, then the relevant visual/temporal handoff |
-| Story-state transition | `ContinuityLedger.entries` for the owning story facts; shot continuity/end state for the staged transition |
+| 触发、任务与回应 | `PerformanceTimeline.phases[].trigger/objective/action/gaze/residualState`；脸部、呼吸、姿态描述变化或有意稳定 |
+| 配角位置与任务 | `ShotSpec.blocking[]` 中绑定来源的主体、区域、动作、视线及接触 |
+| 背景层级 | `ShotSpec.composition.background/visualHierarchy` 与 `audienceAttention` |
+| 同步 | `TemporalSpec` 的人物／摄影机／环境轨道引用上游镜头，不向 `ShotSpec` 添加反向引用 |
+| 编译后仍保留的关键行为 | `ShotSpec.promptHandoff.mustPreserve`，再进入相关图像／时间交接稿 |
+| 故事状态变化 | 故事事实进入 `ContinuityLedger.entries`；调度变化进入镜头连续性／终态 |
 
-Read each actual schema before emitting JSON. Extra cue tables and the worksheet below are non-canonical working material. A missing exact ref or duration does not justify fabricating canonical metadata; keep a draft. `PerformanceTimeline` interval checks prove only numeric ordering, not the causal meaning of its text or the timing of a real performance.
+输出 JSON 前阅读真实 schema。额外触发表和下面的评审表都是非规范工作材料。精确引用或时长缺失时保留草稿，不编造规范元数据。`PerformanceTimeline` 区间检查只证明数值顺序，不能证明文字因果或实际表演时序。
 
-## Review every shot in the selected scope
+## 覆盖范围内的每一镜
 
-Declare the actual shot IDs and source revision before reviewing. Full review has exactly one row for each of the six perspectives and each shot. Focused review names only the requested perspectives and still covers every declared shot. IDs need not be consecutive numbers. Obtain the inventory from the supplied source; a checker cannot detect a shot omitted from both the source declaration and the rows.
+评审前声明真实镜号和来源版本。完整评审要求六个视角与每一镜各有且仅有一行；聚焦评审只列所需视角，仍覆盖全部声明镜号。镜号不必连续。清单来自真实输入；同时漏出清单和评审表的镜头，检查器无法发现。
 
-Each row needs a criterion, a concrete observation, and one status:
+每行包括标准、具体观察和一种状态：
 
-- `pass`: name the design fact and where it is written; a bare approval is insufficient.
-- `revise`: locate the mismatch and name one owning domain, smallest variable and acceptance check.
-- `unknown`: state the missing information; coverage is recorded but the review remains unresolved.
-- `not_applicable`: explain why this perspective has no applicable requirement for this shot. Missing evidence is `unknown`, not an exemption.
+- `pass`：指出设计事实及其位置，不能只有“通过”。
+- `revise`：定位不一致，写明一个责任领域、最小变量与验收检查。
+- `unknown`：说明缺失信息；计入覆盖，但评审仍未解决。
+- `not_applicable`：解释该视角为何对本镜无适用要求。缺证据应为 `unknown`，不能豁免。
 
-Keep different failures as separate notes inside the observation or separate domain repair plans; one worksheet row summarizes that perspective/shot. Apply dependency order when fixes interact. After a revision, invalidate changed rows and adjacent continuity rows; preserve unaffected findings with explicit carry-forward rationale.
+不同失败分别写在观察说明或各领域修复计划中；一行汇总该视角／镜头。修复相互影响时按依赖顺序处理。修订后将变化行及相邻连续性行标为待审，未变化结论明确说明沿用理由。
 
-### Read-only worksheet checker
+### 只读评审表检查器
 
-Use [check-shot-review.mjs](../../scripts/check-shot-review.mjs) with Node.js 22+:
+使用随包分发的 [check-shot-review.mjs](../../scripts/check-shot-review.mjs)，需要 Node.js 22+，无需仓库或依赖：
 
 ```text
 node <skill-root>/scripts/check-shot-review.mjs <worksheet.json>
 ```
 
-It is bundled with the Skill and needs no checkout or dependencies. This optional worksheet is not a canonical root contract. Example of a **focused prompt review** using fictional draft data:
+本表不是规范根契约。下面用虚构草稿展示**针对提示词的表演视角评审**：
 
 ```json
 {
@@ -94,39 +94,39 @@ It is bundled with the Skill and needs no checkout or dependencies. This optiona
       "role": "performance",
       "shotId": "S1",
       "status": "pass",
-      "criterion": "The owner completes the current task before responding to the ticket.",
-      "observation": "The text places hanging the key before looking at the ticket.",
-      "sourceLocator": "prompt v1 / S1 / action"
+      "criterion": "店主完成当前任务后才回应维修单。",
+      "observation": "文字明确先挂好钥匙，再看向维修单。",
+      "sourceLocator": "提示词 v1 / S1 / 动作"
     }
   ],
   "prompt": { "text": "店主挂好手中的钥匙，再看向柜台上的维修单。" }
 }
 ```
 
-`source.type` is `design` or `prompt`, never media. `mode: full` uses all six roles; omit `roles` in full mode. Focused roles must be a non-empty unique subset of the table above. `reviews` can initially be empty to report missing pairs. All rows require nonblank `criterion` and `observation`; pass/revise also require `sourceLocator`. Revise rows require `repair: { "domain": "character", "variable": "response onset", "acceptance": "The response follows the cue." }`; domain values match the existing CreativeReview domain vocabulary. Other statuses omit `repair`.
+`source.type` 只能是 `design` 或 `prompt`，不能是媒体。`mode: full` 使用全部六个视角，并省略 `roles`；聚焦模式的角色是上表枚举的非空、不重复子集。`reviews` 初始可为空，以报告缺失配对。所有行的 `criterion` 和 `observation` 必须非空；通过／修订行还要有 `sourceLocator`。修订行需要 `repair: { "domain": "character", "variable": "回应起点", "acceptance": "回应发生在触发之后。" }`；领域枚举沿用 `CreativeReview`。其他状态省略 `repair`。
 
-Optional `prompt` belongs only to a prompt source. It counts the exact supplied text; set `maxNonWhitespaceCodePoints` only to a user/project limit. There is no universal 5000-character cap. Counting uses Unicode code points after excluding Unicode `White_Space`; punctuation and emoji count, combining characters remain separate, and fences are not stripped. Over-budget text is reported, never truncated or rewritten. The checker does not parse prompt fields or compare cited text with observations.
+可选 `prompt` 仅属于提示词来源，统计实际输入文本。仅在用户／项目有限额时设置 `maxNonWhitespaceCodePoints`，不存在统一的 5000 字上限。计数排除 Unicode `White_Space` 后按码点计算；标点和表情计数，组合字符分别计算，不剥除代码围栏。超额只报告，不截断或改写。检查器不解析提示词字段，也不核对引用原文与观察是否吻合。
 
-Output separates `valid` (input consistency), `coverageComplete` (selected role × shot coverage), and `reviewComplete` (valid, full coverage, at least one applicable pass, no revise/unknown rows). An all-exempt worksheet does not claim completion. CLI exit codes are 0 complete, 1 invalid, 2 valid but unresolved. Without Node, do the same review manually and disclose the unchecked arithmetic; a useful draft need not stop.
+结果区分 `valid`（输入一致性）、`coverageComplete`（所选视角 × 镜头覆盖）和 `reviewComplete`（输入有效、覆盖完整、至少一项适用检查通过、没有修订／未知行）。全部豁免不能称为完成。CLI 退出码：0 完成，1 无效，2 有效但未解决。没有 Node 时手工完成同样的评审并注明未检查算术，不阻断有用草稿。
 
-The result always has `scope: plan_only`. A complete worksheet is not artistic approval, rights clearance, proof of accessible sources, or successful media generation. Use `CreativeReview` or `ControlBenchmarkReview` with accessible observations for actual candidate review; do not translate a plan pass into a media pass.
+结果始终为 `scope: plan_only`。完整表格不等于艺术批准、权利放行、来源可访问或媒体生成成功。实际候选需基于可访问观察形成 `CreativeReview` 或 `ControlBenchmarkReview`，不能把计划通过变成媒体通过。
 
-## Video compilation and continuity
+## 视频编译与连续性
 
-For video work also load [video, sound and delivery](video-sound-and-delivery.md). Compile the selected design into concise time-ordered language: incoming state, triggering cue, subject action, camera/environment response and outgoing state. Preserve speakers and exact dialogue when supplied. A still-image reference supplies visible state, not proof of motion or audio. Do not force temporal instructions into the still-image `PromptRecord` or `ImagePrompt` schemas.
+视频任务同时读取[视频、声音与交付](video-sound-and-delivery.md)。按时间顺序编写入镜状态、触发、主体动作、摄影机／环境反应和出镜状态。保留给定说话人及准确台词。静帧参考只提供可见状态，不证明运动或声音；时间指令不能硬塞进静态 `PromptRecord` 或 `ImagePrompt`。
 
-Plain text is a useful handoff when requested; it is not the only allowed output format. A provider dialect needs its own verified compatibility evidence. Unknown duration, aspect ratio and capability remain explicit; a creative proposal may suggest them without claiming user approval or provider support. Under a length constraint, remove repeated appearance/style language before removing cue order, spatial anchors or outgoing state; split at a stable state if needed and within scope.
+纯文本是可用交接形式之一。平台语法需单独核验兼容性；未知时长、画幅和能力明确保留，创作建议可提出取值，但不能宣称已获用户批准或平台支持。有字数限制时，先删重复外观／风格，再考虑触发顺序、空间锚点或终态；必要且在范围内时沿稳定状态拆分。
 
-Keep three linked records in the user's project when requested:
+用户要求保存时，在项目中关联三类记录：
 
-1. **Design/prompt revision:** exact upstream versions, full text or durable file reference, actual count if required, changed variable, review notes and unresolved choices.
-2. **Returned candidate:** supplied candidate/Take ID, source prompt revision, accessible file, observed usable interval and failed interval, evidence basis and missing metadata. Do not create a Take entry from a prompt alone.
-3. **Continuity comparison:** previous selected interval's outgoing state versus next selected interval's incoming state, mismatch owner and intended transition. Compare the selected edit boundaries, not automatically the source clip's first/last frame.
+1. **设计／提示词修订：**准确上游版本、全文或持久文件引用、所需真实字数、变更变量、评审说明和未决选择。
+2. **返回候选：**已提供的候选／Take ID、来源提示词版本、可访问文件、实际可用与失败区间、证据依据和缺失元数据。单凭提示词不能创建真实 Take 记录。
+3. **连续性比较：**上一采用区间的出态与下一采用区间的入态、失配归属和预期转场。比较实际剪辑边界，不自动使用源片首尾帧。
 
-Preserve valuable performance intervals when proposing edits or inserts, but do not conceal a blocking identity, action or geography error as a stylistic choice. Existing footage can support an editorial repair plan; regenerated media still needs new evidence before passing. Separate observed symptoms from root-cause hypotheses and change one owning variable per repair.
+剪辑或插入镜头应保留有价值的表演区间，但不能以风格为由掩盖阻断性的身份、动作或地理错误。已有素材可支持剪辑修复计划；重新生成的媒体仍需新证据才能通过。区分已观察症状与根因假设，每次修复一个责任变量。
 
-Project taste belongs in project authority; dated provider behavior belongs in capability notes. A promising result is a hypothesis with its source and counterexamples, not a universal rule. Revising this Skill or persistent memory requires an explicit maintenance request. No automatic learning writes occur.
+项目审美属于项目权威；特定日期的平台行为属于能力说明。有效结果应保留来源、条件和反例，不能提升为普遍规律。修改 Skill 或持久记忆须有明确维护请求，不自动写入学习结果。
 
-## Design provenance
+## 设计来源
 
-This independent CineWeave implementation was informed by review of [Leos Six-Department Directing Team Skill v1 at 2ed50ed](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/tree/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4) on 2026-09-16. That snapshot has no LICENSE file. No upstream source, templates, prompt corpus or media are vendored. Its role-based critique and revision-trace ideas are adapted to CineWeave's existing ownership, progressive loading and evidence boundaries; its private case claims are not independently verified here.
+本实现于 2026-09-16 参考了 [Leos 六部门导演团队 Skill v1 的 2ed50ed 快照](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/tree/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4)，以 CineWeave 既有职责、渐进加载和证据边界独立改写。该快照未包含 LICENSE，本项目未引入其源码、模板、提示词语料或媒体；其私人案例结论未在此独立验证。

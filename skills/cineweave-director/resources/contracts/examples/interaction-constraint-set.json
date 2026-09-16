@@ -52,8 +52,8 @@
         "subjectBindingId": "binding.char-shot-12-shen",
         "supportTargetRef": "anchor.floor-stone",
         "supportedParts": [
-          "right foot carries most weight",
-          "left foot stabilizes the retreat"
+          "右脚承担大部分重量",
+          "左脚稳定后退"
         ],
         "weightDistribution": "约六成重量在右脚，四成在后撤的左脚。",
         "centerOfGravity": "骨盆下沉但保持在双脚支撑多边形内。"
@@ -134,7 +134,7 @@
     "createdAt": "2026-08-20T18:00:00.000Z",
     "updatedAt": "2026-08-20T18:00:00.000Z",
     "changeLog": [
-      "v1: bind character contacts, occlusion, light and environment response"
+      "v1：绑定人物接触、遮挡、光线及环境响应"
     ]
   }
 }

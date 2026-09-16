@@ -1,71 +1,79 @@
-# Optional: cinematography craft — space, light, movement
+<a id="optional-cinematography-craft--space-light-movement"></a>
+# 可选参考：摄影方法，空间、光与运动
 
-Load for lens/perspective choices, difficult lighting, motivated movement, shot matching, or a request for stronger cinematography. This is a visual-design guide, not equipment operation or a claim that camera metadata controls an image/video model. For numerical paths read [camera-previsualization.md](camera-previsualization.md); for color pipeline handoff read [editorial-color.md](editorial-color.md).
+用于焦距／透视选择、复杂照明、有动机运镜、镜头匹配或加强摄影设计。本指南是视觉设计，不是设备操作，也不保证摄影元数据可控制图像／视频模型。数值路径参见[摄影机预演](camera-previsualization.md)，色彩流程交接参见[剪辑与调色](video-sound-and-delivery.md#editorial)。
 
-## Camera distance before lens prestige
+<a id="camera-distance-before-lens-prestige"></a>
+## 先定距离与关系，再选焦距
 
-Select the viewer's relationship to the subject, camera access, framing, and focus needs before choosing a focal length.
+先决定观众与主体的关系、可达机位、取景和对焦需要，再选择焦距。
 
-- Perspective relationships depend on viewpoint. At a fixed viewpoint, changing focal length primarily changes framing; moving the camera to recover the same subject size changes near/far relationships. Do not describe a distant “compressed” view while placing the camera close to the subject. [Nikon: choosing lenses and perspective](https://www.nikonimgsupport.com/na/NSG_article?articleNo=000047395&configured=1&lang=en_SG)
-- State sensor/image-area and crop assumptions if millimeters matter. A focal length alone does not establish a shot size. If the format is unknown, prioritize position, subject/background relationship, field of view intent, and crop over false numerical precision.
-- Treat depth of field as a coupled design choice involving aperture, focus distance, focal length, format/framing, and viewing tolerance. Do not promise “both actors sharp at f/1.4” without their distances and a test. A shallow plane can hide the second action the scene needs.
-- Separate perspective, lens distortion, focus breathing, optical character, and representational stylization. None is an identity correction.
-- **Paired check:** compare viewpoints with the subject similarly framed; then compare focal lengths from one viewpoint with matching crops. Label these as different experiments, not a one-variable test.
+透视关系依赖视点。固定视点改变焦距主要改变取景；为维持相同主体大小而移动机位，会改变近远关系。不要一边要求远距压缩感，一边把摄影机放在主体身旁。[Nikon 透视说明](https://www.nikonimgsupport.com/na/NSG_article?articleNo=000047395&configured=1&lang=en_SG)
 
-For AIGC handoff, write the resulting visible relationship—“near hand larger than the face; doorway recedes behind”—and retain numerical camera intent separately. Do not claim a model obeyed real optics without reviewing its output.
+毫米数有意义时要说明传感器／有效画面和裁切假设。焦距本身不能决定景别；格式未知时，优先机位、人物与背景关系、视场意图及裁切，而非虚假精度。
 
-## Composition as attention, not a grid rule
+景深涉及光圈、对焦距离、焦距、画幅／取景和观看容差。没有两人距离及测试，不承诺“f/1.4 下两人都清楚”。浅景深可能藏掉场景必需的第二动作。
 
-Choose one primary attention target and any essential competing target. Use scale, contrast, focus, movement, negative space, occlusion, and looking room in service of their relationship. A centered, asymmetrical, cramped, or deep composition is valid when its purpose is clear.
+分开透视、镜头畸变、呼吸效应、光学特性和风格化表现，它们都不是身份修正。
 
-Check the frame at the intended delivery size and at the action's turning point, not only in the opening hero frame. A bright lamp, reflection, moving extra, or subtitle region may compete with the intended cue. Preserve required hands, contact points, and exits. Cropping away contradictory geography is not a repair.
+**成对检查：**先比较主体大小近似相同的不同视点；再比较同一视点下不同焦距和匹配裁切。这是不同实验，不是单变量测试。
 
-## Source → modification → surface → readable result
+AIGC 交接写出可见关系，例如“近处手比脸更大，门洞向后退远”，数值摄影意图另存。未经输出评审，不能声称模型遵守真实光学。
 
-For each important light decision identify the exact scene source, any approved bounce/transmission surface, subject orientation, source-to-subject relation, occlusion, and resulting highlight/shadow behavior. New fixtures, bounce surfaces, or altered windows require a Scene proposal; a `ShotLightingPlan` cannot manufacture them.
+<a id="composition-as-attention-not-a-grid-rule"></a>
+## 构图组织注意力，不是套网格
 
-ARRI's handbook distinguishes light quality from intensity and discusses the difficulty of containing soft-source spill. Its illustrated setups are examples, not mandatory three-point recipes. [ARRI Lighting Handbook, fourth edition, sections 1–2](https://www.arri.com/resource/blob/83996/409091c612f371b0c68b41d9dcb636db/arri-lighting-handbook-english-data.pdf)
+选择一个主要注意力目标及必要竞争目标。用尺度、反差、焦点、运动、负空间、遮挡和视线留白服务关系。居中、不对称、拥挤或深空间构图，只要目的明确都可以成立。
 
-- **Softness:** describe the apparent emitting area from the subject and expected shadow edge. Dimming alone does not make a hard source soft. A diffusion surface must actually become an illuminated source of useful size.
-- **Contrast:** distinguish adding fill from reducing environmental bounce. Negative fill is removal of returned light, not a black light source. Keep the proposed intervention within approved scene facts.
-- **Separation:** try background value/color, blocking, or focus as well as edge light. Do not add an unmotivated rim automatically. Hitchcock's interview explicitly questions habitual object/back lighting and asks where illumination originates. [ASC: Hitchcock on lighting](https://theasc.com/article/flashback-hitchcock-talks-about-lights-camera-action/)
-- **Exposure intent:** identify highlights and shadow information that must survive. Darkness can preserve readable silhouettes or selective detail; “underexpose everything” is not a complete night plan. Actual clipping/noise claims require accessible media and suitable technical evidence, not prose or a display screenshot alone.
-- **Materials:** distinguish diffuse body color from specular source reflections. Check glossy cloth, wet stone, glass, and metal from the camera's actual angle; a source that models the face may obscure a critical object in glare.
-- **Color:** keep source color, white-balance intent, surface color, and later grade separate. Do not make a supposedly neutral object change canon color to express warmth.
+在交付尺寸和动作转折点检查，不只看首张主视觉帧。亮灯、反光、移动群演或字幕区域可能抢走注意力。保留必要手部、接触点和出口，不能靠裁掉空间矛盾来修复。
 
-**Failure check:** draw or describe one consistent source map across reverse angles and the actor's path. Test the entrance, turn, and end state. If an added “cinematic” light has no approved source, return to Scene or remove it.
+<a id="source--modification--surface--readable-result"></a>
+## 光源 → 调整 → 表面 → 可读结果
 
-## Movement and focus as changing access
+每项重要灯光决定都明确精确场景光源、已批准反射／透射表面、人物朝向、源与主体关系、遮挡及高光／阴影结果。新灯具、反射面或窗户改变须由场景提案负责，`ShotLightingPlan` 不能自行制造。
 
-Choose a movement for an information or relationship change:
+ARRI 手册区分光质与强度，并讨论控制柔光溢出的困难。示例布光不是强制三点光配方。[ARRI 灯光手册第四版，第 1–2 节](https://www.arri.com/resource/blob/83996/409091c612f371b0c68b41d9dcb636db/arri-lighting-handbook-english-data.pdf)
 
-| Choice | Useful effect to test | Failure signal |
+- **柔硬：**描述从主体看见的有效发光面积和阴影边缘。调暗不等于变软；柔光面必须真正被照亮并形成有效面积。
+- **反差：**分开补光和减少环境反射。负补光是减少回返光，不是“黑色光源”。干预符合已批准场景事实。
+- **分离：**除轮廓光，还比较背景明度／颜色、走位、焦点，不自动加无动机边缘光。希区柯克访谈也质疑习惯性物体／背光，追问光从哪来。[ASC 访谈](https://theasc.com/article/flashback-hitchcock-talks-about-lights-camera-action/)
+- **曝光意图：**确定必须保留的高光和暗部信息。黑暗仍可保留轮廓或选择性细节；“全部欠曝”不是完整夜景方案。裁切／噪点实测声明需要媒体和合适技术证据，仅凭文字或显示截图不足。
+- **材质：**区分漫反射本色与光源镜面反射。从实际机位检查亮面衣料、湿石、玻璃、金属；显出脸部结构的光也可能在关键物上形成遮挡信息的眩光。
+- **色彩：**分开光源色、白平衡意图、表面色和后期调色。不为表现暖意而改变中性物体的正式设定颜色。
+
+**失败检查：**为反打和人物路径建立一致光源图，检查入场、转身、终态。新增“电影感”光没有批准来源时，回到场景或移除。
+
+<a id="movement-and-focus-as-changing-access"></a>
+## 运镜与焦点改变信息可见性
+
+| 选择 | 值得测试的作用 | 失败信号 |
 | --- | --- | --- |
-| Hold | lets simultaneous action or listening develop | critical cue never becomes legible |
-| Pan/tilt | redirects view from one anchor to another | reveals the destination before its dramatic cue |
-| Track with subject | preserves a relation while geography changes | route or support becomes physically inconsistent |
-| Move closer | changes proximity and relative spatial relationships | approach has no turn, or obscures necessary context |
-| Zoom | changes framing from a fixed viewpoint | described as a spatial move with parallax |
-| Orbit | changes which side, background, or relation is visible | axis/geography shifts without readable orientation |
-| Handheld drift | gives a situated, unstable viewpoint if appropriate | micro-motion hides a small performance cue |
-| Focus transfer | changes which existing plane is readable | invents an object, or shifts before attention is motivated |
+| 固定停留 | 同时动作或倾听得以展开 | 关键线索始终不可读 |
+| 摇／俯仰 | 从一个锚点转向另一个 | 戏剧线索前过早揭示终点 |
+| 跟拍 | 地理变化中保持关系 | 路径或支撑不成立 |
+| 靠近 | 改变亲近程度和空间相对关系 | 没有转折，或遮掉必要环境 |
+| 变焦 | 固定视点改变取景 | 错写成带视差的空间移动 |
+| 环绕 | 改变可见侧面、背景或关系 | 轴线／地理改变却无方向依据 |
+| 手持漂移 | 适合时产生有位置的不稳定观察 | 微动遮盖小表演线索 |
+| 焦点转移 | 改变已有平面的可读性 | 凭空造物，或没有注意力动机就切焦 |
 
-Specify cue, start, speed change, arrival, and settling behavior only as precisely as the task needs. Do not start actor, camera, focus, weather, and light changes simultaneously unless their collision is the point. Test whether a simpler move preserves the purpose. Fixed camera does not mean emotionally static.
+触发点、起点、速度变化、到达、停稳只需达到任务必要精度。除非多轨碰撞正是目的，否则不要让演员、摄影机、焦点、天气、灯光同时变化。检验简单运动是否保留目的。固定摄影机不等于情感静止。
 
-## Optical treatment tied to a visible event
+## 光学处理绑定可见事件
 
-For flare, diffusion bloom, a foreground blur, focus breathing or motion smear, state the intended visible effect, the source/occluder/movement associated with it, when it enters or leaves, and which story detail must remain readable. A representation effect may be deliberately stylized; label that treatment instead of inventing physical capture metadata. An optical effect should not silently become a new scene light or a new shared grade.
+眩光、柔化光晕、前景虚化、呼吸效应或运动拖影，应说明可见结果、相关光源／遮挡物／运动、进入与退出时刻，以及必须保持可读的故事细节。刻意风格化可以成立，但要标明处理，不能编造实拍元数据；光学效果不能悄悄变成新光源或新调色基线。
 
-Example proposal: an existing corridor lamp briefly veils the edge of frame as the viewpoint passes a doorway; the envelope exchange remains clear. If the veil hides the exchange, first change the proposed angle or effect strength within approved constraints. Do not repair it by adding an unrelated light or replacing the whole look.
+提案例：视点经过门口时，已有走廊灯短暂在画面边缘形成薄雾状光晕，信封交接仍清楚。若遮住交接，先在批准范围内调整角度或效果强度，不通过增加无关灯光或替换整体视觉来修复。
 
-When a performer changes light zones, compare source visibility and material response at entry, turn and exit. A face locked to the same brightness despite an occluder may warrant investigation; it is not by itself proof of a particular rendering failure. In adjacent shots, check the effect's event timing as well as its appearance. Still evidence cannot prove those transitions.
+人物穿过不同光区时，比较入场、转身、出场的光源可见性与材质响应。遮挡变化却脸部亮度始终不变可能值得调查，但不能单凭此断定某种渲染失败。相邻镜头同时检查效果外观与事件时机；静帧不能证明时间变化。
 
-Design input: [Leos cinematography guidance, reviewed snapshot](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/cinematography-direction.md); independently integrated as conditional choices, not fixed equipment or effect presets.
+设计参考：[Leos 摄影指南的已审阅快照](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/cinematography-direction.md)，独立转化为条件性选择，不设固定设备或效果预设。
 
-## Shot matching and AIGC evidence
+<a id="shot-matching-and-aigc-evidence"></a>
+## 镜头匹配与 AIGC 证据
 
-Match world-relative source direction, eyelines, screen travel, prop placement, appearance, and material response; do not blindly keep the key on the same screen side in reverse angles. A mismatch may belong to Scene, Character, Direction, or Style—route it to the owner.
+匹配世界坐标中的光源方向、视线、画面移动、道具位置、外观和材质响应。反打时不能盲目保持主光位于相同屏幕侧。失配可能属于场景、人物、导演或风格，应按归属修复。
 
-AFI's curriculum includes comparative lens/exposure/lighting tests and review of dailies. CineWeave adapts this as a test-plan discipline: hold the approved brief and locks constant, state what varies, and name the visible result that would justify the choice. [AFI cinematography curriculum](https://conservatory.afi.com/cinematography-curriculum/)
+AFI 课程包含镜头／曝光／灯光比较和每日样片评审。本项目将其转为测试计划纪律：固定已批准简报和锁定，说明变量，并指定能支持选择的可见结果。[AFI 摄影课程](https://conservatory.afi.com/cinematography-curriculum/)
 
-Without returned media, report a reasoned proposal and unknown realization. With still evidence, review framing and visible light only; motion, focus continuity, flicker, and edit timing remain unknown. Do not grade cinematography by camera-brand mentions or a blanket “film look.”
+没有媒体时报告有依据提案与实现未知；只有静帧时只评取景和可见光照，运动、焦点连续、闪烁、剪辑时序保持未知。不按摄影机品牌次数或笼统“胶片感”评摄影。

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/common.schema.json",
-  "title": "CineWeave Shared Contract Definitions",
+  "title": "CineWeave 共享契约定义",
   "$defs": {
     "contentHash": {
       "type": "string",

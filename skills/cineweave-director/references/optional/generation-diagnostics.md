@@ -1,0 +1,171 @@
+# 可选参考：生成诊断与交接检查
+
+涉及生成准备度、时间交接、失败报告或 Skill 评测时加载。先读索引与相关小节。诊断标签和评测夹具属于工作表词汇，不是新增契约枚举、机器权威或自动媒体评委；本指南不执行生成。
+
+<a id="index"></a>
+## 索引
+
+[证据阶段](#evidence-stages) · [风险工作表](#risk-worksheet) · [运动交接](#motion-handoff) · [诊断索引](#diagnostic-index) · [修复决策](#repair-decision) · [评测案例](#evaluation-cases)
+
+<a id="evidence-stages"></a>
+## 证据阶段
+
+| 阶段 | 实际可用证据 | 可以判断 | 必须另行核验 |
+| --- | --- | --- | --- |
+| 计划 | 简报、绑定、镜头／提示词／时间文档 | 内部一致性、缺失依赖、矛盾指令 | 视觉保真、运动成功、权利批准、生成结果 |
+| 关键帧 | 实际可访问图像／帧 | 该视图内的裁切、调度、接触、身份／服装、视觉处理 | 隐藏细节、未来动作、平台支持、执行元数据 |
+| 片段 | 实际动态画面及可用音频 | 可见时段的动作、终态、连续性、运镜和实际声音 | 未见帧、未听轨、缺失任务元数据、来源或权利 |
+| 序列 | 实际有序剪辑及相关声音 | 剪辑连续性、地理、节奏、声音桥及传达信息 | 不能从单张图或单片段通过推导整体成功 |
+
+沿用现有评审状态和严重程度。硬失败不能靠平均分抵消，没有通用分数自动授权。计划检查尚未通过，缺失证据仍为未知。用户报告可以引导条件分诊，不能代替实际媒体。时间戳只能来自报告或实际媒体测量，不得编造。
+
+<a id="risk-worksheet"></a>
+## 风险工作表
+
+在昂贵的依赖性交接前只记录活跃风险：当前景别中关键身份、精细接触、遮挡与物体持续性、同时动作、机位变化、边界差异、动态光、必要语音同步和所需控制界面。每项说明证据、失败后果、建议简化，以及简化会牺牲的硬要求。
+
+定性风险分层也须理由：给定证据下常规、需要针对性试验、缺少硬能力或证据而阻断。模型支持未知不代表低风险；共同首帧、seed、参考或平台名均不保证身份或物理正确。
+
+主要人物动作加有动机的摄影机行为是有用起点，不是所有模型的固定上限；环境运动可省略。复杂调度与并发变化可以成立，须区分艺术意图和已证明控制。不根据症状数量推断成功率、安全时长或必须拆镜。预算、迭代限制和阈值由用户给定或明确提议；实际价格与花费无证据则未知。
+
+<a id="motion-handoff"></a>
+## 运动交接
+
+使用最小合适的**非规范时间工作表**，在可用时关联镜头／时间／制作产物：
+
+| 意图 | 继承 | 当前描述 | 准备度依赖 |
+| --- | --- | --- | --- |
+| 文字驱动视频 | 已批准可见事实与共同视觉 | 调度、初态、可见动作、运镜、终点、时序及可选声音 | 请求平台交接时需精确界面和必要控制 |
+| 首图驱动 I2V | 绑定的可见身份、服装、场景、构图、视觉 | 变化、方向、摄影机行为、动作停稳位置 | 实际适用首帧、角色／权利状态、图像条件支持 |
+| 首尾帧 | 实际初终态及不变量 | 连贯转换、允许变化、中间空间逻辑、停稳 | 两份实际图与已核验尾帧控制；不保证插值结果 |
+| 续写或有界编辑 | 精确来源片段／帧与不改的维度 | 边界状态、允许修改、匹配及余量 | 精确来源及界面能力，否则仍是计划 |
+
+参考角色、平台参数和接口语法属于有证据的适配方案，不在此处虚构。不能宣称导出、导入、提交、收费、重试或生成已经发生。
+
+<a id="diagnostic-index"></a>
+## 诊断索引
+
+以下 JSON 是用于检查词汇一致性的文档数据，不是根产物或 schema 扩展。`ownerCandidates` 只列候选路由，不是实际发现；必须从证据选出失败变量。标签可出现在人类评审说明，不能加成严格 schema 不支持的字段。
+
+<!-- diagnostic-index:start -->
+```json
+[
+  {
+    "id": "CW-ATTENTION",
+    "ownerCandidates": [
+      "shot_direction"
+    ],
+    "distinguish": "目标读法与可见显著性、遮挡、视线或焦点不一致。"
+  },
+  {
+    "id": "CW-START-END",
+    "ownerCandidates": [
+      "shot_direction",
+      "action",
+      "character"
+    ],
+    "distinguish": "初态不能开始所需动作，或者必要终态缺失、互相矛盾。"
+  },
+  {
+    "id": "CW-MOTION",
+    "ownerCandidates": [
+      "shot_direction",
+      "image_prompt",
+      "production_plan"
+    ],
+    "distinguish": "所需人物变化未发生；区分有意静止与只剩视差的失败。"
+  },
+  {
+    "id": "CW-CAMERA",
+    "ownerCandidates": [
+      "shot_direction",
+      "production_plan"
+    ],
+    "distinguish": "出现未要求的摄影机或焦点变化；区分文本矛盾与不支持的控制。"
+  },
+  {
+    "id": "CW-APPEARANCE",
+    "ownerCandidates": [
+      "character",
+      "scene",
+      "reference_evidence",
+      "image_prompt"
+    ],
+    "distinguish": "可见相貌、头发、服装或道具绑定不匹配；比较实际精确参考，不做生物识别评分。"
+  },
+  {
+    "id": "CW-CONTACT",
+    "ownerCandidates": [
+      "scene",
+      "action",
+      "character"
+    ],
+    "distinguish": "支撑、接触、遮挡、解剖或物体状态出现可见矛盾。"
+  },
+  {
+    "id": "CW-CONTINUITY",
+    "ownerCandidates": [
+      "storyboard_rhythm",
+      "shot_direction",
+      "scene"
+    ],
+    "distinguish": "相邻状态、画面运动方向、视线或物体位置与预期剪辑矛盾。"
+  },
+  {
+    "id": "CW-LOOK",
+    "ownerCandidates": [
+      "style",
+      "scene",
+      "shot_direction",
+      "production_plan"
+    ],
+    "distinguish": "区分物理光源变化、表现／调色变化以及界面隐藏默认值。"
+  },
+  {
+    "id": "CW-PROMPT",
+    "ownerCandidates": [
+      "image_prompt"
+    ],
+    "distinguish": "语句虚构、违背、重复或遗漏已批准的可见命题。"
+  },
+  {
+    "id": "CW-CAPABILITY",
+    "ownerCandidates": [
+      "production_plan"
+    ],
+    "distinguish": "硬性交接控制、证据依赖或精确界面能力不支持或未知。"
+  }
+]
+```
+<!-- diagnostic-index:end -->
+
+症状不等于原因。“脸不对”可能来自原本不匹配的锚点、未批准提示词改动，也可能是输入正确仍生成失败。记录备选假设和可区分证据，不能为迎合失败图而改正确的 `CharacterSpec`。“不像我的作品”要定位在光、表现、构图或故事中，不自动授权整体换风格。
+
+<a id="repair-decision"></a>
+## 修复决策
+
+1. 对照预期与实际，记录证据范围及最早确知的偏离。无产物则结论标为有条件。
+2. 收集相关症状，找最小且受支持的共同原因。两个症状不自动要求两个片段，一个症状也可能需要回到上游调度。
+3. 保留明确硬锁及通过维度，只选一个所属变量：补提示词遗漏、改已核验的公开参数、提议新锚点、调整一个调度／动作决定，或规划有依据的剪辑。下游重编译是后果，不是附加独立变量。
+4. 选足够有效且干扰最小的方法，不机械从最便宜的一阶开始。局部晚发缺陷可能适合剪辑遮盖，错误首帧却不能靠华丽运动提示词修复。裁切、缩短、插镜仍需保护覆盖与叙事信息。
+5. 遵守候选及重试上限。同一设计多次失败说明应复查诊断，不证明模型确定性。到限停止，不无声牺牲身份、必要远景全身或权利。
+6. 精确元数据齐备才返回有界 `RepairPlan`；否则用有标记的修复工作表。请求新证据验收，评审前不能保证修好、身份不变或其余维度保留。
+
+领域归属和单变量规则见[评审修复](../routes/review-repair.md)；锚点检查见[镜头工作台](shot-design-workbench.md#keyframe-gate)；交接边界见[视频规划](video-sound-and-delivery.md)。
+
+<a id="evaluation-cases"></a>
+## 评测案例
+
+以下为**人工行为场景，不是已观察成功**。在新任务中用相同输入、参考、可用模型设置和明确评审人比较基线与改版。记录输入输出、评审证据、阻断失败和限制。文档／打包测试不等于艺术验证，单个好看样本不应被提升为通用提示词法则。
+
+JSON 是非规范评测夹具，`status` 是评测状态而非制作状态，`mustNot` 是要抓出的反例，不是平台负向词。
+
+案例数据保存在源码仓库的 `tests/evaluations/cinematic-cases.json`，不随创作 Skill 分发。执行方法见[创作流程评测](creative-workflow-evaluation.md#新任务评测协议)。
+
+
+<a id="research-provenance"></a>
+## 研究来源
+
+研究时间：2026-09-13。[DirectorSKILL 失败手册固定版本](https://github.com/wuwangzhang1216/DirectorSKILL/blob/c65ae0d14457053efb1e354c7e7f7e120d97fad1/references/failure-modes.md)、[QC 指南](https://github.com/wuwangzhang1216/DirectorSKILL/blob/c65ae0d14457053efb1e354c7e7f7e120d97fad1/assets/qc-checklist.md)、[能力优先指南](https://github.com/wuwangzhang1216/DirectorSKILL/blob/c65ae0d14457053efb1e354c7e7f7e120d97fad1/references/ai-video-tool-adapters.md)启发了症状、关卡与交接形态的分离。本指南使用独立编写的标签、示例和措辞，不再分发其提示词库或媒体。
+
+不把源项目的分数、时限、重试次数、概率／因果声明或平台支持当作事实。这项研究未核验当前供应商能力；CineWeave 的证据、权威及非执行边界仍有效。

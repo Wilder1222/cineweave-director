@@ -1,39 +1,65 @@
-# Route: production_plan
+<a id="route-production_plan"></a>
+# 路由：制作规划（production_plan）
 
-Use for non-executing asset breakdown, board assembly, editorial rhythm, color intent, control design, evidence, rights, capability feasibility, and provider-neutral render planning.
+用于非执行型资产拆解、画布装配、剪辑节奏、调色意图、控制设计、证据、权利、能力可行性及供应商中立渲染规划。
 
-For video, sound, delivery profiles, or iteration limits load [video, sound and delivery](../optional/video-sound-and-delivery.md). These are creative planning worksheets owned by existing routes, not new contracts or execution surfaces.
+涉及视频、声音、交付规格或迭代限制时，加载[视频、声音与交付](../optional/video-sound-and-delivery.md)。这些是既有路由持有的创作工作表，不是新增契约或执行入口。
 
-## Asset decomposition
+<a id="asset-decomposition"></a>
+## 资产拆解
 
-State the deliverable and lock shared invariants. Each task has one primary delta and explicit acceptance criteria. Complex sheets and storyboards use independent tiles/panels; labels, exact text, borders, and grids are assembled later. Plan to retry only failed tasks and preserve passing outputs.
+普通 AIGC 创作按下面的依赖顺序完成交接，已有合格素材直接复用。说明可执行的下一步，但本 Skill 不替外部生成工具执行。
 
-`AssetRecipe` describes tasks and invariants. `BoardAssemblyPlan` describes deterministic regions and layout. Neither proves that a task ran or a board exists.
+### 从设计到候选验收
 
-## Control and evidence
+1. **确定交付与锁定。** 明确单图、资产组或片段／序列，保存用户硬要求、目标画幅与用途；原创补充只需明确假设，不增加无必要的审批阶段。
+2. **建立必要资产。** 多镜头复用人物、服装、场景和道具基线；只为实际镜头制作所需视图。已有图先检查角色、姿态和裁切能否服务目标，避免先生成全套无用资产。
+3. **先验证高风险依赖。** 在全量制作前，计划代表性外观、关键接触、转身遮挡、复杂运镜或口型的有限试片。区分待验证假设与已观察结果；没有媒体时交付测试设计，不打成功分。
+4. **选择生成路径。** 分别选择输入素材与镜头组织，按[路径与分镜板指南](../optional/video-platform-adaptation.md#mode-selection-with-deliberate-fallbacks)规划文字多镜、全能参考、整板／拆格参考、单首帧或首尾帧；不同段落可以混用。需要精确图像初态才先制首帧，已有参考板也可直接设计参考驱动视频。检查该路径输入的身份、空间、接触与画格顺序，再编排动作；实际支持待目标模型和界面核验，不因此省略通用创作稿。
+5. **交付独立可用的稿件。** 图像稿写单一瞬间，视频稿写变化，声音稿写可听事件；附实际参考分工、必要平台控制、采用区间与验收项。未取得素材与平台信息时保留通用稿，依赖项明确待定。
+6. **按证据挑选与修复。** 候选先查用户硬要求，再比较叙事可读性和审美偏好；记录采用、局部修复、重新规划的理由。可用局部编辑时保留通过区域；不能据“局部”二字保证其他区域完全不变。相关判断交给[评审与修复](review-repair.md)。
+7. **按真实边界装配。** 相邻镜头比对动作相位、人物与道具状态、轴线、光色和声音，不从单镜通过推断整片通过。修订共享资产后，仅使消费该变化的下游稿件及候选验收过期，保留无关结果。
 
-Map each hard or continuity-critical requirement to `ControlChannelSet`: source, scope, semantic control class, preservation rule, tolerance, and review dimension. A mask only scopes a change; it does not prove success.
+候选数量和迭代上限采用用户限制；未指定时可提出小规模试片计划，不能据此花费点数或无限重试。同一失败反复出现时先定位输入、约束冲突或模式限制，再选择局部修复、拆镜、重做锚点或换已核验路径；不要用持续加形容词替代诊断。
 
-`EvidenceBundle` states what evidence would be needed to review each claim. `LicenseProfile` keeps copyright, likeness, transfer, publication, redistribution, training, and privacy decisions separate.
+按实际存在的材料记录：镜号／资产名、输入来源与版本、生成稿版本、候选位置、采用区间、问题、保留项与下一步。纯文字草稿不填虚构任务 ID、seed、哈希或生成回执。一次交付已经满足请求时即可结束，不强行追加完整制作包。
 
-## Capability planning
+说明交付物并锁定共享不变量。每项任务只有一个主要变化和明确验收标准。复杂资产板和分镜采用独立格／画格；标签、准确文字、边框和网格随后装配。计划只重试失败任务，保留已通过结果。
 
-`CapabilityProfile` records supplied or researched capability claims and their evidence status. `CapabilityResolutionPlan` compares exact profiles against hard/soft/advisory requirements. Unknown or partial hard support cannot pass silently. The plan may retain a candidate for human review, but it does not select a provider, invoke an external tool, install anything, or guarantee output.
+`AssetRecipe` 描述任务与不变量；`BoardAssemblyPlan` 描述确定性区域和布局。两者都不能证明任务执行过或画布已经存在。
 
-Use `eligible` or `selected` only when every hard requirement has strong, passing support. A failed hard result or a nonempty `hardFailures` list makes the candidate `blocked`; uncertain hard support stays `needs_review`. Evaluate every requested requirement once per candidate. A high aggregate score cannot compensate for a missing hard capability. Scores express the declared comparison policy, not measured output quality.
+<a id="control-and-evidence"></a>
+## 控制与证据
 
-Fallback IDs must identify other listed candidates that are eligible or need review. A review fallback carries its unresolved conditions into the human handoff. Do not include blocked candidates or the selected candidate as fallbacks. Present the deciding hard constraint, the meaningful tradeoff, and the evidence needed next; a full score table is useful only when the user is actually comparing alternatives.
+将每条硬约束或连续性关键要求映射到 `ControlChannelSet`：来源、范围、语义控制类别、保留规则、容差、评审维度。蒙版只限定修改范围，不证明成功。
 
-A provider-specific `PromptProjectionPlan` may bind one exact capability profile after a human has chosen the target dialect. It records compatibility evidence and a manual handoff; it is not a provider selection, request, adapter, or receipt.
+`EvidenceBundle` 定义每项声明需要哪些评审证据。`LicenseProfile` 分开版权、肖像、传输、发布、再分发、训练和隐私决定。
 
-## Render, editorial, and color plans
+<a id="capability-planning"></a>
+## 能力规划
 
-`RenderPlan` binds exact prompt and creative inputs, variants, controls, evidence, rights, and pre/postflight criteria. It is implementation intent only.
+`CapabilityProfile` 记录已提供或已研究的能力声明及证据状态。`CapabilityResolutionPlan` 将精确档案与硬／软／建议要求比较。未知或部分支持的硬要求不能默认为通过。计划可保留待人工评审候选，用户要求比较平台时可以依据当前证据给出推荐与取舍，但不替换已指定平台、不调用外部生成工具、不安装模型，也不保证生成结果。
 
-`EditorialTimelinePlan` uses rational frame rates, explicit ranges, gaps, and transitions. Placeholders never impersonate media. `ColorPipelineProfile` separates creative grade intent from technical transforms and preview/delivery assumptions.
+所有硬要求都有强且通过的支持证据时，才可使用 `eligible` 或 `selected`。硬要求失败或 `hardFailures` 非空时，候选为 `blocked`；硬支持不确定则为 `needs_review`。每个候选对每项要求评估一次。高总分不能补偿缺失硬能力；分数表达既定比较规则，不是实测输出质量。
 
-## Boundary
+备选 ID 必须指向列表中的其他 `eligible` 或 `needs_review` 候选。待评审备选需把未知条件带入人工交接。不能把阻断候选或已选候选列为备选。说明决定性的硬约束、有意义的取舍及下一步证据；只有用户确实比较方案时才展示完整评分表。
 
-No CLI commands, adapter descriptors, request/receipt protocols, credentials, network policy, actual spend accounting, output hashes, or generated status belong here. The next action is always an explicit external human/tool step.
+人工选择目标平台方言后，`PromptProjectionPlan` 可以绑定一个精确能力档案，记录兼容证据和手动交接；它不是供应商选择器、请求、适配器或回执。
 
-Outputs: `AssetRecipe`, `BoardAssemblyPlan`, `EditorialTimelinePlan`, `ColorPipelineProfile`, `RenderPlan`, `ControlChannelSet`, `EvidenceBundle`, `CapabilityProfile`, `CapabilityResolutionPlan`, `LicenseProfile`.
+<a id="render-editorial-and-color-plans"></a>
+## 渲染、剪辑和调色计划
+
+`RenderPlan` 绑定精确提示词与创作输入、变体、控制、证据、权利、前后检查标准，只表达实施意图。
+
+`EditorialTimelinePlan` 使用有理数帧率、明确区间、间隙和转场。占位不得冒充媒体。`ColorPipelineProfile` 分开创意调色意图、技术变换，以及预览／交付假设。
+
+<a id="boundary"></a>
+## 边界
+
+不在此处添加执行型 CLI 命令、适配器描述、请求／回执协议、凭据、网络策略、实际支出账目、输出哈希或已生成状态。下一步必须是明确的外部人工／工具步骤。已有只读检查器只验证工作表，不构成制作执行。
+
+可选规范输出（仅在请求结构化交接时）：`AssetRecipe`、`BoardAssemblyPlan`、`EditorialTimelinePlan`、`ColorPipelineProfile`、`RenderPlan`、`ControlChannelSet`、`EvidenceBundle`、`CapabilityProfile`、`CapabilityResolutionPlan`、`LicenseProfile`。
+
+涉及场次与连续镜头时，使用[拍摄系统与部门协同](../optional/prompt-detail-standard.md#拍摄系统与部门协同)的共享基线和逐镜交付模板，核对空间、构图、光位、收音与场记连续性。
+
+完整短片的跨领域交付与逐项完成标准见[全套创作流程](../optional/short-film-creation.md)，各阶段应沿用同一故事、资产与镜头清单。

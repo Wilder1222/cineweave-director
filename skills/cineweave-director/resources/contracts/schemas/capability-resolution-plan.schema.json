@@ -1,7 +1,7 @@
 {
   "$id": "https://cineweave.dev/contracts/capability-resolution-plan.schema.json",
-  "title": "CineWeave Capability Resolution Plan",
-  "description": "Provider-neutral comparison of exact capability profiles for creative feasibility planning. It never selects a provider or invokes an external tool.",
+  "title": "CineWeave 能力匹配计划",
+  "description": "比较精确能力档案的创作可行性，保持平台无关；不选择供应商或调用外部工具。",
   "type": "object",
   "additionalProperties": false,
   "required": ["kind", "contractVersion", "resolutionPlanId", "version", "status", "request", "candidates", "selection", "explanation", "planningBoundary", "validation", "skillReceipt", "provenance"],

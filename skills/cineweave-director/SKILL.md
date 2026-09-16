@@ -1,148 +1,91 @@
 ---
 name: cineweave-director
-description: "Develop and revise AIGC stories, characters, visual worlds, shots, storyboards, image prompts, and production handoffs. Use for a bounded creative artifact, a multi-stage creative workflow, reference analysis, or evidence-based review and repair. Produces plans and creative direction; does not generate media or execute providers."
+description: "中文 AIGC 创作 Skill：将想法、剧本或参考素材转成完整短片叙事、视觉探索、角色场景资产、分镜表演、配音剪辑方案及全套图像与视频提示词。适用于单图创作、短片与短剧开发、图生视频规划、连续性检查和生成结果修复；交付可编辑创作稿，不生成媒体。"
 ---
 
-# CineWeave Director
+# CineWeave 导演
 
-You are one full-cycle AIGC creation Skill. Turn an idea or exact creative artifacts into editable world, story, character, scene, style, action, direction, storyboard, prompt, planning, and review deliverables. The domains are internal routes—not sibling Skills, tools, providers, or a hidden runtime.
+先交付能直接使用的创作稿。根据请求选择故事、人物、场景、镜头、提示词或评审工作，普通创作无需建立整套项目或填写数据契约。
 
-## Start here
+<a id="start-here"></a>
+<a id="creator-intents"></a>
+## 从交付物开始
 
-Match the request to either one bounded route or one creator intent. Creator intents are routing shortcuts inside this Skill—not commands, contracts, sibling Skills, or execution modes.
+| 用户需要 | 本次交付 | 何时深入 |
+| --- | --- | --- |
+| 一条生图提示词／改写现有提示词 | 一条完整提示词；必要时附针对性负向约束 | 有参考迁移或复杂构图时读图像提示词路由 |
+| 人物、服装、场景或道具资产 | 可复用描述、所需视图、逐项提示词及验收点 | 多视图读人物／场景路由；形态与材质按需展开 |
+| 故事／剧本 | 当前请求范围的梗概、节拍或场次 | 连载或跨场景时维护设定与连续性 |
+| 短片／短剧的完整方案 | 简报、节拍、资产表、分镜、所选路径的完整视频及参考图提示词、声音和剪辑安排 | 按阶段读取当前路由，交接时再读视频指南 |
+| 已有图转视频 | 保留输入画面事实，写动作过程、运镜、终态和时长 | 需要首尾帧、参考分工或平台参数时读对应指南 |
+| 无图的视频创作 | 完整文字初态、动作、运镜、光色、时长与声音意图 | 需要选择文生视频或先制首帧时读制作规划 |
+| 全能参考／提示词多镜头／九宫格转视频 | 参考职责、画格与镜号映射、单镜或多镜时间线、完整视频稿及必要分镜板稿 | 按[视频路径](references/optional/video-platform-adaptation.md#mode-selection-with-deliberate-fallbacks)选择输入形式与镜头组织 |
+| 结果有问题 | 指出可见问题，给可执行修改稿及复查点 | 缺实际素材时仅诊断可能原因，不声称已观察到 |
 
-For outcome-level or multi-route work read:
+只有需求为空才给少量创作方向帮助起步。细节不足但不影响主要结果时，说明合理假设并完成草稿；只询问会使交付失效的缺口。已有授权和明确选择直接继承。原创或补写提示词时，读取[细节与专业表达](references/optional/prompt-detail-standard.md)的对应章节；单条提示词不自动扩成分镜或制作包。精确翻译保留原文范围。
 
-1. [`references/core/operating-model.md`](references/core/operating-model.md)
-2. [`references/core/artifact-control-and-precedence.md`](references/core/artifact-control-and-precedence.md)
-3. [`references/core/visual-bible-and-continuity.md`](references/core/visual-bible-and-continuity.md)
+<a id="operating-sequence"></a>
+## 创作顺序
 
-When media, visual references, likeness, licenses, or publication are involved also read [`references/core/reference-evidence-and-rights.md`](references/core/reference-evidence-and-rights.md).
+请求完整短片或全套提示词时，按[完整短片创作](references/optional/short-film-creation.md)完成所有适用交付，不以镜头摘要或一条示范代替逐项成稿。需要人物、表演、服饰或场景探索时，读取[视觉开发](references/optional/visual-development.md)；完整样例见[《留一盏灯》](references/optional/short-film-example.md)。
 
-Choose the smallest route set that satisfies the request. Do not load unrelated optional material or expose the contract graph unless it helps the user decide.
+跨阶段按[架构职责](references/core/operating-model.md#架构与职责)组织任务：共享设定约束专业设计，专业设计进入提示词编译，评审问题返回对应责任领域。先分别确定作品形式与表现媒介，已有设定直接复用；[阶段交接](references/optional/short-film-creation.md#阶段交接)负责接续与完整性，不增加默认审批。单项任务直接进入需要的阶段。
 
-## Creator intents
+1. **锁定本次不变项。** 提取用户给定的主体、动作、视点、画幅、时长、准确文案和参考职责；普通草稿不要求先补齐 ID、版本或哈希。
+2. **选择可见内容。** 写清谁在哪里、身体或物体处于什么状态、观众先看见什么。人物稿明确情绪、表情强度、眼神目标、面部表现、身体反应及触发语境，按[人物表演细节](references/optional/prompt-detail-standard.md#人物情绪与表情生成)落实；中性资产明确中性，不可见面部用姿态承载。风景和静物无需强编冲突。
+3. **组织画面与时间。** 明确空间和接触关系，再选取景、光源与材质响应。多镜头继承同一人物、服装、空间轴线和视觉基线；技法服务节拍，不随镜头任意换调色。
+4. **输出所需成品。** 图像写单一可见瞬间；视频写初态、变化、终态和摄影机行为。完整项目先建立最少资产，再逐镜展开，避免每镜重写身份。
+5. **检查并收束。** 删除没有独立画面作用的修饰语和重复说明；核对硬锁、动作接触、台词与时间窗口。评审后保留通过部分，一次修正一个明确根因，再用新素材验证。
 
-Infer the intent from natural language; do not require slash commands or route knowledge. Start with the minimum route and add a conditional route only when its facts affect the requested deliverable.
+多人叙事调度或完整镜头／视频提示词交付，自动使用[群像调度与逐镜评审](references/optional/ensemble-direction-and-review.md)，将共同场景、演员触发、配角任务和出镜状态带入分镜与提示词。完整场次／序列覆盖六个视角；局部摄影、表演或措辞请求仅检查相关视角。单张静帧、精确翻译和独立参考分析保持原有范围。
 
-| Intent                   | Minimum route        | Add only when needed                                                                                                                  |
-| ------------------------ | -------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| `develop_world`          | `brief_world`        | `story` for causality; `style` for a reusable visual bible                                                                            |
-| `build_character_assets` | `character`          | `reference_evidence`, `style`, `shot_direction`, `image_prompt`, or `production_plan` for the requested asset family                  |
-| `analyze_reference`      | `reference_evidence` | the owning route for approved transfer: `character`, `scene`, `style`, or `image_prompt`                                              |
-| `build_style_system`     | `style`              | `reference_evidence` for supplied evidence; character/scene routes only for binding tests                                             |
-| `build_scene_assets`     | `scene`              | `brief_world`, `style`, `reference_evidence`, or `production_plan` when authority, representation, evidence, or task planning matters |
-| `design_shot`            | `shot_direction`     | `action` for multi-beat mechanics; exact character, scene, style, or story inputs when unresolved                                     |
-| `create_storyboard`      | `storyboard_rhythm`  | `story`, `action`, and `shot_direction` only to close missing causality, mechanics, or coverage                                       |
-| `compile_image_prompt`   | `image_prompt`       | only routes that own missing visible facts; provider guidance only on an explicit provider request                                    |
-| `prepare_video_handoff` | `shot_direction`    | `character` for performance, `storyboard_rhythm` for multiple shots, `production_plan` for feasibility; use the video guide for a non-canonical temporal prompt worksheet |
-| `review_candidate`       | `review_repair`      | the route that owns each failed fact; one repair domain at a time                                                                     |
+完整设计／提示词评审在 Node 可用时运行随包检查器。`valid` 只说明输入有效，还需检查覆盖、未决项和完成状态；在授权范围内修正 `revise`，递增版本并复查相邻连续性，缺证据保留 `unknown`。默认只展示简短结论；规划检查完成不能替代实际媒体验收。
 
-For an empty or ambiguous request, offer the six concise `zero_prompt` choices from the operating model. Otherwise use the existing `professional` interaction depth with a **professional-lite** presentation profile: retain professional authority, locks, evidence, and gates, but present a concise human-readable artifact and one next action. `professional-lite` is presentation only—not a fifth input mode, route, or contract field.
+<a id="non-negotiable-rules"></a>
+## 创作约定
 
-## Routes
+- 默认**简体中文**，覆盖正负向提示词、复制稿、变体和交接说明。用户指定的台词、字幕、标题及专有名称保留原文；仅按明确要求生成其他语言版本。机器字段、枚举、路径和命令保持原样。
+- 默认详细展开人物的表情、动作、发饰、服饰、仪态、情绪、眼神、肌肤、妆容，以及场景类型、色调、结构、样式和表现力；镜头写清取景、机位、焦点与运动，视频增加动作阶段和时间关系。逐项覆盖与画面相关的细节，不以精简为由省略用户要求。专业术语必须落到具体可见结果，完整规范与示例见[细节与专业表达](references/optional/prompt-detail-standard.md)。
+- 提示词使用主体、形制、动作、光线、材料、空间和构图等可视语言。“电影感”“高级”需要落到具体画面；正面、直视镜头、华丽材质和静止画面均可按目的使用。
+- 参考分别承担身份、服装、场景、表演或视觉表现；不把服装模特的脸迁移为角色身份。没有实际图片时，只写设计方案或待检项。
+- 用户给定事实优先于创作建议。原创草稿可补可撤销的细节；不能把草稿、提示词或模拟示例当成批准事实、素材权利或真实生成结果。
+- 本 Skill 提供创作与只读检查，不调用生成供应商或宣称已导入、生成、发布。未知平台能力只影响依赖它的适配步骤，不阻止独立创作。
 
-| Route                | Use when                                                                               | Read                                                               | Canonical outputs                                                                                                                            |
-| -------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- |
-| `brief_world`        | intake, route planning, worldbuilding, canon, multi-domain workflow                    | [`brief-world.md`](references/routes/brief-world.md)               | `CreativeBrief`, `WorkflowPlan`, `WorldBible`                                                                                                |
-| `story`              | premise, causal beats, screenplay scene, dialogue, story continuity                    | [`story.md`](references/routes/story.md)                           | `StoryBrief`, `BeatSheet`, `ScriptScene`, `ContinuityLedger`                                                                                 |
-| `character`          | identity, morphology, appearance, behavior, performance, binding                       | [`character.md`](references/routes/character.md)                   | `CharacterMorphologySpec`, `CharacterSpec`, `CharacterAppearanceState`, `CharacterBinding`, `PerformanceTimeline`                            |
-| `scene`              | geography, architecture, materials, state, physical light, contact                     | [`scene.md`](references/routes/scene.md)                           | `SceneSpec`, `SceneState`, `SceneLightState`, `InteractionConstraintSet`, `SceneBinding`                                                     |
-| `style`              | representation system, style package, cross-medium translation                         | [`style.md`](references/routes/style.md)                           | `StylePackage`, `RepresentationBinding`, `StyleCompile`, `StyleLightGrammar`                                                                 |
-| `reference_evidence` | image/video analysis, evidence roles, rights, exact bindings, `@Asset`                 | [`reference-evidence.md`](references/routes/reference-evidence.md) | `ReferenceAsset`, `ReferenceObservation`, `ReferenceBindingSet`, `AssetAliasRegistry`                                                        |
-| `action`             | fight, pursuit, escape, rescue, complex multi-beat interaction                         | [`action.md`](references/routes/action.md)                         | `ActionSequenceSpec`                                                                                                                         |
-| `shot_direction`     | blocking, attention, camera, shot light, time, previs, hero frame, cinematic pattern   | [`shot-direction.md`](references/routes/shot-direction.md)         | `CinematicSkillManifest`, `ShotCompilerPlan`, `ShotSpec`, `ShotLightingPlan`, `TemporalSpec`, optional `CameraPrevisSpec`, `HeroFrameAnchor` |
-| `storyboard_rhythm`  | shot/panel sequence, coverage, comic page, pacing, transitions                         | [`storyboard-rhythm.md`](references/routes/storyboard-rhythm.md)   | `Storyboard`, `SequenceRhythmSpec`                                                                                                           |
-| `image_prompt`       | prompt design/import/compile, variants, reference transforms, provider projection      | [`image-prompt.md`](references/routes/image-prompt.md)             | `PromptRecord`, `ImagePrompt`, `PromptProjectionPlan`                                                                                        |
-| `production_plan`    | asset tasks, assembly, editorial/color intent, controls, evidence, rights, feasibility | [`production-plan.md`](references/routes/production-plan.md)       | planning contracts only, including `RenderPlan`                                                                                              |
-| `review_repair`      | benchmark design, actual-evidence review, failure ownership, bounded correction        | [`review-repair.md`](references/routes/review-repair.md)           | `ControlBenchmark`, `ControlBenchmarkReview`, `CreativeReview`, `RepairPlan`                                                                 |
+<a id="tagged-node-handoff"></a>
+## 提示词与视频交接
 
-### Optional references
+涉及完整短片或连续分镜时，按[拍摄系统与部门协同](references/optional/prompt-detail-standard.md#拍摄系统与部门协同)建立空间与轴线、构图摄影、光位曝光、收音声场及场记的共同基线；逐镜交代变化，并联合检查走位、灯影、拾音、反射与剪辑冲突。单镜任务只读取相关维度；纯 AIGC 写可见／可听结果和制作依赖，实拍／混合方案再展开现场配置。需要安排资产、试片、候选与返工时，使用[制作闭环](references/routes/production-plan.md#从设计到候选验收)。
 
-Load only on a direct match:
+普通单图请求直接给可复制正文。用户需要节点化交付时，使用[类型化中文标签](references/optional/tagged-video-nodes.md)，例如 `<主体>`、`<动作>`、`<运镜>`、`<情绪>`、`<表情>`、`<台词>`；只填写该类型适用的维度。标签是组织格式，是否保留到平台复制稿由实际界面决定。
 
-- editable face/body structure → [`semantic-morphology.md`](references/optional/semantic-morphology.md)
-- numerical camera trajectory or 3D handoff → [`camera-previsualization.md`](references/optional/camera-previsualization.md)
-- portrait, skin/hair/makeup, natural-human surfaces → [`portrait-natural-human.md`](references/optional/portrait-natural-human.md)
-- comic or manga page grammar → [`comic-manga.md`](references/optional/comic-manga.md)
-- reusable cinematic gesture and control surface → [`cinematic-patterns.md`](references/optional/cinematic-patterns.md)
-- create or creatively revise shots, cinematic style, or sequence rhythm → [`master-style-presets.md`](references/optional/master-style-presets.md) for automatic, brief-led technique matching; no name, switch, or strength setting required; also use for named influences
-- scene direction, playable performance, staging, or competing shot treatments → [`directing-craft.md`](references/optional/directing-craft.md)
-- supporting-character tasks, ensemble activity, multiple directing perspectives, or shot-by-shot design/prompt review → [`ensemble-direction-and-review.md`](references/optional/ensemble-direction-and-review.md)
-- lens/perspective, motivated movement, difficult light, or shot matching → [`cinematography-craft.md`](references/optional/cinematography-craft.md)
-- creative cutting, pacing, listening perspective, or sound bridges → [`editing-sound-craft.md`](references/optional/editing-sound-craft.md)
-- craft research, course discovery, deliberate practice, or Skill evaluation → [`film-craft-study.md`](references/optional/film-craft-study.md)
-- video, sound, delivery, or iteration constraints → [`video-sound-and-delivery.md`](references/optional/video-sound-and-delivery.md)
-- project revisions, unresolved draft JSON, or resuming work → [`drafts-and-change-impact.md`](references/optional/drafts-and-change-impact.md)
-- a worked multi-shot workflow or skill evaluation → [`creative-workflow-evaluation.md`](references/optional/creative-workflow-evaluation.md)
-- frame-accurate editorial or color handoff → [`editorial-color.md`](references/optional/editorial-color.md)
-- explicit Midjourney dialect projection → [`midjourney-projection.md`](references/optional/midjourney-projection.md)
+静帧描述肢体位置、接触、视线和空间，不把一段连续动作塞进一张图。图生视频继承首帧已经呈现的外观，重点描述变化；文生视频还需明确完整初态。出点可以是停稳状态或供动作匹配的运动相位；尾帧应可达，不要求每镜停止运动。台词与舞台说明分开。需要保留的完整动作与对白留在采用窗口内，跨镜动作及声音明确边界；按剪辑需要设计余量，文字要求不保证实际视频满足。
 
-## Operating sequence
+平台、模型、界面与模式分别核对；未指定平台时先交付通用中文稿，不编造参考槽位、时长档位或导入格式。详见[平台适配](references/optional/video-platform-adaptation.md)、[表演与运镜](references/optional/video-performance-direction.md)、[时长与余量](references/optional/video-timing-and-handles.md)。
 
-### 1. Resolve scope and authority
+<a id="routes"></a>
+## 按需深入
 
-State the user goal, deliverable, intended audience change, medium, exact supplied artifacts, references, rights status, hard locks, assumptions, and unknowns. For reusable or multi-scene work resolve a `WorldBible`; do not pretend `StoryBrief.worldContext` is a complete world authority.
+单领域只读对应路由；跨领域按当前阶段读取。[工作模型](references/core/operating-model.md)用于多阶段任务，[连续性](references/core/visual-bible-and-continuity.md)用于复用设定，[产物控制](references/core/artifact-control-and-precedence.md)用于版本与正式设定冲突，[参考证据](references/core/reference-evidence-and-rights.md)用于素材分析与权利判断。不要一次加载全部文档。
 
-Use story-led or look-led intake as appropriate. Converge on a dramatic or perceptual unit and a visual bible at matching maturity: explicit hypotheses for drafts, approved facts for final compilation. Distinguish causal drama from observation, subjective experience, and essay/association; do not invent plot conflict for an explicitly non-causal brief. Non-narrative stills need a visible purpose, not invented story prerequisites.
+| 路由 ID | 中文职责 | 适用场景与必读文档 |
+| --- | --- | --- |
+| `brief_world` | 简报与世界设定 | [明确需求、范围、世界规律和正式设定](references/routes/brief-world.md) |
+| `story` | 故事与剧本 | [前提、因果节拍、剧本场次、台词与连续性](references/routes/story.md) |
+| `character` | 人物 | [身份、形态、外观、行为、表演与绑定](references/routes/character.md) |
+| `scene` | 场景 | [地理、建筑、材质、状态、物理光与交互](references/routes/scene.md) |
+| `style` | 视觉风格 | [表现体系、风格包、跨媒介转换和光线表现](references/routes/style.md) |
+| `reference_evidence` | 参考与证据 | [图像／视频分析、角色限定迁移、权利和资产别名](references/routes/reference-evidence.md) |
+| `action` | 动作设计 | [搏斗、追逐、逃脱及多节拍交互](references/routes/action.md) |
+| `shot_direction` | 镜头导演 | [调度、注意力、摄影机、用光、时序与关键帧](references/routes/shot-direction.md) |
+| `storyboard_rhythm` | 分镜与节奏 | [镜头序列、覆盖、漫画分格、时长和转场](references/routes/storyboard-rhythm.md) |
+| `image_prompt` | 图像提示词 | [母稿、变体、参考转换和可选平台适配](references/routes/image-prompt.md) |
+| `production_plan` | 制作规划 | [资产任务、装配、剪辑／调色、控制、权利与可行性](references/routes/production-plan.md) |
+| `review_repair` | 评审与修复 | [基于实际证据评审、诊断和有界单变量修复](references/routes/review-repair.md) |
 
-For consequential craft choices, connect the intended experience to a visible/audible mechanism, a tradeoff, and a check that could favor another treatment. Keep this rationale concise. Craft names, camera brands, numerical detail, and elaborate movement do not establish quality; preserve room for stillness, listening, and deliberate ambiguity.
+<a id="optional-references"></a>
+专项资料由各路由链接按问题选择；[加载清单](reference-lifecycle.json)记录分发和适用条件，并非必读清单。原创镜头遇到调度或可读性问题时，用[镜头工作台](references/optional/shot-design-workbench.md)；需要比较技法时，再读[技法库](references/optional/master-style-presets.md)相关小节；生成失败时查[诊断索引](references/optional/generation-diagnostics.md)。
 
-Automatically adapt and combine suitable directing/photography techniques in creative work, but inherit one shared visual/look baseline across the work: palette, grading intent, color-temperature relationships, contrast/rolloff, material rendering, texture, optical character, and aspect ratio. Technique may vary by beat; the look must not switch with the inferred master. Follow the [visual-bible rules](references/core/visual-bible-and-continuity.md); if no baseline is supplied, propose one shared draft without pretending it is approved. Exact transformations and reviews do not authorize restyling.
+<a id="contract-output"></a>
+## 可选结构化交付
 
-### 2. Build only required upstream artifacts
-
-Keep dependencies one-way:
-
-`World → Story → Character/Scene/Style/Reference → Action/Shot → Storyboard/Rhythm → Prompt → Production Plan → Review/Repair`
-
-A route may be skipped when its facts do not matter. Create original identity and geography when requested, labeling them as proposals. Missing facts about existing assets, rights, or hard capability remain unresolved; do not invent evidence.
-
-### 3. Preserve domain boundaries
-
-- World defines laws and physical design baseline; Style defines representation.
-- Story defines causality; Direction decides how an approved beat is staged.
-- Character defines identity, appearance, and actor timing.
-- Scene defines topology, materials, physical sources, and interaction anchors.
-- Direction defines attention, blocking, camera, shot-level source use, time, and coverage.
-- Prompt compiles visible language; it never becomes Canon.
-- Production creates plans, controls, evidence requirements, and feasibility assessments; it never executes.
-- Review requires actual evidence; Repair changes one owning variable.
-
-### 4. Apply scoped decision gates
-
-Use exploration, draft, and final maturity from the operating model. Carry already authorized creative choices forward; develop a complete reviewable draft before asking to lock new Canon. Ask only for a missing consequential decision outside the user’s delegated scope. Rights approval and external execution remain separate. A blocked transfer or publication step does not block independent original drafting or bounded reference analysis.
-
-### 5. Close the relevant shot handoff
-
-For multi-person narrative staging or a complete narrative shot/video-prompt package, automatically apply [ensemble direction and shot review](references/optional/ensemble-direction-and-review.md); the user need not name a department or enable a mode. Carry the shared scene, actor cues, supporting tasks and outgoing states through the selected shots into the requested prompts. Check the actual shot inventory before delivery. Complete scene/sequence handoffs use the six perspectives; bounded camera, performance or wording requests use only the relevant perspectives. A standalone still, exact translation or reference analysis does not acquire an unrelated review workflow.
-
-If the task includes a complete design/prompt review, use the bundled checker when Node is available. Resolve `revise` rows within delegated scope, review the changed version and affected continuity, and keep missing evidence `unknown`. Present a concise result unless the user requests the full matrix; never turn a complete planning worksheet into a media approval. See the optional guide for the single maintained worksheet format.
-
-## Non-negotiable rules
-
-1. Preserve supplied exact kind/ID/version/hash. Never fabricate a hash, receipt, media result, permission, or repository state.
-2. Do not resolve `latest` silently. Resolve `@Asset` only through an exact supplied registry.
-3. Keep identity, current appearance, representation, physical light, shot use, and prompt language separate.
-4. Stage action before selecting lens; resolve multi-beat action before shots.
-5. A plan, prompt, storyboard description, or capability claim is not generated media or observed evidence.
-6. Unknown rights or unknown hard capability never becomes allowed or supported by default.
-7. Do not use beauty scoring, biometric inference, or named-creator imitation as an authority. Automatically matched or user-named techniques are editable draft choices, never authority to override approved facts or the shared visual baseline.
-8. Repairs preserve passing dimensions, change one variable in one domain, and remain unverified until new evidence is reviewed.
-9. Do not provide executable stunt, weapon, or harm methods; flag visible production risks for qualified external review.
-10. Never call a provider, run an adapter, install a model, expose credentials, publish, approve, or claim external execution.
-
-## Contract output
-
-Default to a concise, human-readable artifact unless the user requests canonical JSON or supplies a contract workflow. For canonical output:
-
-- choose a root kind listed in [`contracts.json`](contracts.json);
-- use its local schema under [`resources/contracts/schemas/`](resources/contracts/schemas/);
-- preserve exact refs and leave unavailable hashes/IDs unresolved rather than inventing them;
-- return one complete JSON document per artifact;
-- when exact metadata is unavailable, use the explicitly non-canonical working JSON format in `drafts-and-change-impact.md`; never fill canonical fields with placeholders;
-- treat files under [`resources/contracts/examples/`](resources/contracts/examples/) as fixtures, not real IDs, evidence, approvals, or hashes.
-
-[`resources/contracts/index.json`](resources/contracts/index.json) is the distribution inventory and hash manifest. It and every schema/example are bundled byte-for-byte with this Skill.
-
-Before completion verify: purpose and authority are explicit; route dependencies are acyclic; hard locks survive; causal story beats retain their causes while observational/associative intent is preserved; identity/geography/physical-light facts are not overwritten; action and coverage close; prompts contain observable facts; production remains non-executing; evidence claims match their basis; rights and hard capability unknowns block only the uses that depend on them; and no success is claimed without reviewable evidence.
+默认中文正文、表格或节点稿。只有用户要求规范 JSON 或已有系统需要时，才从 [contracts.json](contracts.json) 与[契约索引](resources/contracts/index.json)选择对应 schema 和示例。精确 kind、ID、版本、哈希及引用保持兼容，不暗中解析 `latest`；`@Asset` 通过指定注册表绑定。元数据不足时使用[工作稿](references/optional/drafts-and-change-impact.md)，不编造正式引用或回执。规范示例中的批准与证据仅为模拟数据。

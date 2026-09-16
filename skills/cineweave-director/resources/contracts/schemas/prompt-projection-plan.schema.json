@@ -1,7 +1,7 @@
 {
   "$id": "https://cineweave.dev/contracts/prompt-projection-plan.schema.json",
-  "title": "CineWeave Prompt Projection Plan",
-  "description": "A non-executing projection of an exact provider-neutral prompt artifact into one versioned provider dialect and manual handoff.",
+  "title": "CineWeave 提示词平台适配方案",
+  "description": "将精确的平台无关提示词产物投射到某一版本的平台语法，并给出人工交接，不执行生成。",
   "type": "object",
   "additionalProperties": false,
   "required": [

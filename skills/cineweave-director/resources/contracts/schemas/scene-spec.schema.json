@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/scene-spec.schema.json",
-  "title": "CineWeave Scene Specification",
+  "title": "CineWeave 场景规范",
   "type": "object",
   "additionalProperties": false,
   "required": [

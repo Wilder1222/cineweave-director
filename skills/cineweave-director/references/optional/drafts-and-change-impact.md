@@ -1,12 +1,14 @@
-# Optional: drafts and change impact
+<a id="optional-drafts-and-change-impact"></a>
+# 可选参考：草稿与变更影响
 
-Load for unresolved working JSON, multi-turn revisions, or project recovery. These worksheets are editable creative documents, not root contracts, an automatic project store, or a runtime.
+在需要保留未决事项的工作稿 JSON、多轮修订或项目恢复时加载。这些工作表是可编辑创作文档，不是根契约、自动项目存储或运行时。
 
-## Working drafts
+<a id="working-drafts"></a>
+## 工作草稿
 
-An original proposal is not an unsupported claim about an existing asset. Create missing original design when requested; preserve unknown evidence, rights, and capabilities as unknown. Carry provisional assumptions into downstream drafts without calling them approved.
+原创提案不等于对现有资产作出无证据断言。用户要求原创设计时，可以补充设计；证据、权利和能力的未知项仍保持未知。允许将暂定假设传递到下游草稿，但不能称其已经批准。
 
-When canonical metadata is unavailable, return human-readable work or explicitly non-canonical JSON:
+规范元数据尚不齐全时，返回人类可读内容，或明确标记为非规范的 JSON：
 
 ```json
 {
@@ -16,47 +18,44 @@ When canonical metadata is unavailable, return human-readable work or explicitly
   "workingId": "character.courier",
   "intendedContract": "CharacterSpec",
   "revision": 1,
-  "assumptions": ["Original fictional adult courier proposed for this story"],
-  "delegatedDecisions": ["Develop character and three-shot draft"],
-  "reservedDecisions": ["Final identity selection"],
+  "assumptions": ["为本故事提出一名原创虚构成年信使"],
+  "delegatedDecisions": ["开发人物与三个镜头的草稿"],
+  "reservedDecisions": ["人物身份的最终选择"],
   "workingRefs": [{"workingId": "world.station", "revision": 1, "resolution": "provisional"}],
-  "unresolved": ["No installation receipt supplied"],
-  "content": {"silhouette": "compact build, upright posture", "wardrobe": "red coat"}
+  "unresolved": ["尚未提供安装回执"],
+  "content": {"silhouette": "身形紧凑，站姿挺拔", "wardrobe": "红色外套"}
 }
 ```
 
-Working IDs are authored local labels, not exact registry aliases. Never put placeholder hashes, nulls, or synthetic receipts into strict canonical fields. This format is a worksheet convention; it is not accepted by the root contract validator and cannot authorize final handoff.
+工作 ID 是自行编写的局部标签，不是精确资产注册表别名。严格规范字段中不能填占位哈希、`null` 或虚构回执。本格式只是工作表约定，不会被根契约验证器接受，也不能授权最终交接。
 
-Promote only after required upstream choices resolve: select the existing root schema, map content into its actual fields, obtain real provenance/installation metadata, validate the document, and calculate hashes with available local tooling. A missing receipt blocks canonical promotion, not useful creative drafting. Preserve supplied hash algorithms; if unspecified, resolve the convention before exchange. The development validator's optional repair registry uses SHA-256 of JCS UTF-8; the distribution index uses raw file bytes. Do not substitute one for the other.
+只有上游必要选择已解决，才进行规范化提升：选择已有根 schema，把内容映射到真实字段，取得真实来源和安装元数据，校验文档，再使用可用本地工具计算哈希。缺少回执阻止规范化提升，不阻止有用的草拟。沿用输入中指定的哈希算法；未指定时，先明确交换约定。开发验证器的可选修复注册表使用 JCS UTF-8 的 SHA-256，分发索引使用原始文件字节；二者不能混用。
 
-## Revision worksheet and checkpoint
+<a id="revision-worksheet-and-checkpoint"></a>
+## 修订工作表与恢复检查点
 
-For each relevant artifact record working ID or exact ref, maturity, owner route, consumed input fields, revision, location if actually saved, and validity (`valid`, `stale`, `needs_review`, `unresolved`). These labels belong to the worksheet, not existing contract status enums.
+为相关产物记录工作 ID 或精确引用、成熟度、所属路由、实际消费的输入字段、修订号、真实保存位置，以及有效性（`valid`、`stale`、`needs_review`、`unresolved`）。这些标签属于工作表，不是新增契约状态。
 
-Record each change with:
+每次变更记录来源修订及变化字段／值、原因与用户授权或暂定假设、直接受影响产物及其消费关系、传递影响与所需重编译／复核、未受影响产物，以及字段依赖不完整造成的未知影响。
 
-- source revision and changed field/value;
-- reason and user authorization or provisional assumption;
-- directly affected artifacts and why the field is consumed;
-- transitive dependents, required recompilation/review, and unaffected artifacts;
-- unresolved impact when field-level dependencies are unavailable.
+保守传播影响：直接消费者标为过期，检查后代后才能恢复有效；依赖覆盖未知则标为待审。新上游版本不回写已经哈希化的父版本，最终产物不能消费过期权威来源。只重编译受影响部分，记录新精确引用，并完成相关检查后再恢复有效状态。
 
-Propagate conservatively: direct consumers become stale; inspect descendants before marking them valid. Unknown dependency coverage becomes needs_review. A new upstream version never rewrites an already hashed parent. Final outputs must not consume stale authority. Recompile only affected slices, then record new exact refs and perform the relevant checks before restoring validity.
+暂停时留下当前目标、产物索引、锁定决定及来源、暂定假设、未完成变更、被阻断用途和下一步。恢复时先读取用户提供的检查点并解决来源冲突，不自行选择“最新版本”，也不声称未保存文件已经存在。
 
-At a pause, include current requested outcome, artifact index, locked decisions and their sources, provisional assumptions, outstanding changes, blocked uses, and next actionable step. On resume, read the supplied checkpoint and resolve conflicting sources before proceeding; never infer a newest version or claim unsaved files exist.
+<a id="example-impact"></a>
+## 变更影响示例
 
-## Example impact
+信使外套由红变蓝，修改的是外观状态，而不是身份。不显示外套的纯面部特写不一定需要重新生成；显示外套的镜头、提示词适配稿及依赖它们的评审应标为过期或待审。未消费衣色的故事因果、场景拓扑及声音提示保持有效。如果红色本身是故事线索，先提出冲突，不能把它当作纯外观修改。
 
-Changing the courier's coat from red to blue changes AppearanceState, not identity. A face-only close-up with no visible coat need not be regenerated. Shots showing the coat, their prompt projections, and dependent review comparisons become stale or need review. Story causality, scene topology, and unrelated sound cues remain valid if they do not consume coat color. If a story clue depends on red, surface that conflict before treating this as an appearance-only change.
+## 从返回结果提炼经验
 
-## Lessons from returned work
+用户要求复盘或维护时，记录结论、适用任务条件、实际可得的来源／候选版本、观察区间、变更变量、反例、置信度和复核日期。观察与原因解释分开；没有原始输出的结果只能标为声明，不能标为已观察。
 
-When the user requests a retrospective or maintenance update, record the claim, relevant task conditions, exact available source/candidate revisions, observation range, changed variable, counterexamples, confidence and review date. Keep an observation separate from the proposed explanation. Missing raw output leaves a reported result declared, not observed.
+按含义归档：用户选择的审美成为有范围的项目决定；模型／版本行为成为带日期的能力说明；可复用创作方法保留为包含失败信号和例外的条件性经验。用户偏好不能证明模型效果，同一镜头的重复随机候选也不构成普遍规律的独立证据。组合修改不能将效果归因于某个词或参数。
 
-Route the lesson by meaning: a user's chosen taste becomes a scoped project decision; model/version behavior becomes a dated capability note; a reusable craft idea remains a conditional heuristic with failure signals and exceptions. User preference does not prove a model effect, and repeated random candidates from the same shot are not independent evidence of a universal rule. Combined changes prevent attributing the result to one word or parameter.
+本节独立参考 [Leos 知识来源](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/knowledge-and-provenance.md)与[连续性及学习](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/continuity-and-learning.md)，不引入自动存储、固定样本数证明门槛或新契约。保留被否定解释的追溯；仅在明确维护请求范围内修改 Skill 或持久记忆。
 
-This independently adapts [Leos knowledge provenance](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/knowledge-and-provenance.md) and [continuity/learning](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/continuity-and-learning.md). It introduces no automatic store, fixed sample-count proof threshold or new contract. Keep rejected explanations traceable; edit Skill files or persistent memory only within an explicit maintenance request.
+<a id="validation-scope"></a>
+## 校验范围
 
-## Validation scope
-
-Root schema validity proves wire structure. Repair-plan semantic checks also reject inconsistent gates and malformed target pointers. With a supplied exact ref/document registry the development validator checks content hashes, source finding ownership, and target-path existence. Missing bindings and media-level guarantees remain explicitly unverified. Registry bindings are caller-supplied authority; matching bytes do not establish rights, observed success, or preservation of passing dimensions.
+根 schema 校验通过只说明交换结构正确。修复计划语义检查还会拒绝矛盾关卡和非法目标指针。提供精确引用／文档注册表后，开发验证器可以检查内容哈希、来源发现的归属和目标路径存在性。缺失绑定和媒体层面的保证仍为未核验。调用方提供的注册表是声明的身份依据；字节匹配不能证明权利、实际成功或其他维度得到保留。

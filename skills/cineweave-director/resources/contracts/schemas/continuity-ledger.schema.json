@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/continuity-ledger.schema.json",
-  "title": "CineWeave Story Continuity Ledger",
+  "title": "CineWeave 故事连续性账本",
   "type": "object",
   "additionalProperties": false,
   "required": [

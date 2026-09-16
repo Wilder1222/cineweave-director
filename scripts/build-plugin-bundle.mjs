@@ -39,7 +39,7 @@ export async function assertSafeBuildRoot(buildRoot, outputRoot) {
 function parseOutputArgument(args) {
   if (args.length === 0) return resolve(repositoryRoot, ".build", "cineweave-director");
   if (args.length === 2 && args[0] === "--output") return resolve(repositoryRoot, args[1]);
-  throw new Error("Usage: node scripts/build-plugin-bundle.mjs [--output <direct-child-path-under-.build>]");
+  throw new Error("用法：node scripts/build-plugin-bundle.mjs [--output <.build 下的直接子目录>]");
 }
 
 export async function buildPluginBundle(outputArgument) {
@@ -82,12 +82,13 @@ export async function buildPluginBundle(outputArgument) {
 
 async function main() {
   const outputRoot = parseOutputArgument(process.argv.slice(2));
-  console.log(JSON.stringify(await buildPluginBundle(outputRoot), null, 2));
+  const result = await buildPluginBundle(outputRoot);
+  console.log(JSON.stringify({ ...result, messageZh: "插件构建完成，与已校验源码逐字节一致。" }, null, 2));
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   main().catch((error) => {
-    console.error(error instanceof Error ? error.stack || error.message : String(error));
+    console.error("插件构建失败，原始诊断：\n" + (error instanceof Error ? error.stack || error.message : String(error)));
     process.exitCode = 1;
   });
 }

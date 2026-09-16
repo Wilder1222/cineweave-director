@@ -38,34 +38,34 @@
   "officialEvidence": [
     {
       "evidenceId": "mj.version.2026-09-02",
-      "title": "Version",
+      "title": "版本",
       "url": "https://docs.midjourney.com/hc/en-us/articles/32199405667853-Version",
       "checkedAt": "2026-09-02",
-      "claim": "V8.2 is the current default and uses the Edit Model instead of Omni Reference."
+      "claim": "该记录核查时，V8.2 为默认版本，使用编辑模型而非全能参考。"
     },
     {
       "evidenceId": "mj.parameters.2026-09-02",
-      "title": "Parameter List",
+      "title": "参数列表",
       "url": "https://docs.midjourney.com/hc/en-us/articles/32859204029709-Parameter-List",
       "checkedAt": "2026-09-02",
-      "claim": "Parameters follow prompt text, use one preceding space, and contain no punctuation in the parameter section."
+      "claim": "参数放在提示词正文之后，前置一个空格，参数区不夹杂标点。"
     },
     {
       "evidenceId": "mj.style-reference.2026-09-02",
-      "title": "Style Reference",
+      "title": "风格参考",
       "url": "https://docs.midjourney.com/hc/en-us/articles/32180011136653-Style-Reference",
       "checkedAt": "2026-09-02",
-      "claim": "Style Reference is supported in V6 and later; text should describe target content without conflicting style instructions."
+      "claim": "V6 及后续版本支持风格参考；正文描述目标内容，避免互相冲突的风格指令。"
     },
     {
       "evidenceId": "mj.seed.2026-09-02",
-      "title": "Seeds",
+      "title": "随机种子",
       "url": "https://docs.midjourney.com/hc/en-us/articles/32604356340877-Seeds",
       "checkedAt": "2026-09-02",
-      "claim": "A seed can hold short-session experiment noise but is not a style or identity bookmark."
+      "claim": "随机种子可用于短会话实验的噪声控制，但不是风格或身份书签。"
     }
   ],
-  "promptBody": "eye-level 50mm medium full shot of Shen Yanqiu with a long rounded-rectangular face, narrow horizontal eyes, a subtly higher left mouth corner and 7.7-head proportions in a narrow vermilion-wood corridor, left foot half a step back as she shields a partly obscured child from an armed pursuer, torso upright and weight grounded through both feet on the wet white-jade floor with visible contact shadows, right hand near the sheathed sword, tightened lower eyelids and jaw showing concealed fear, pursuer's weapon entering the left foreground, blocked exit behind, low warm rim light from the southwest and cool cloud fill from the northeast",
+  "promptBody": "平视 50mm 中全景：沈砚秋位于狭窄的朱红木构走廊，保持偏长方圆脸、水平细长眼型、左嘴角略高与 7.7 头身。她左脚后撤半步，挡在部分被遮蔽的孩子与持械追兵之间；上身直立，双脚在湿润白玉地面稳定承重，接触阴影清晰，右手靠近仍在鞘中的剑。收紧的下眼睑与下颌显露被隐藏的恐惧。追兵武器进入左前景，被封锁的出口位于身后；西南低位暖轮廓光与东北云海冷填充形成一致照明。",
   "referenceBindings": [
     {
       "bindingId": "binding.style.corridor-material",
@@ -80,14 +80,14 @@
       "surfaceSlot": "web.style_reference",
       "externalLocatorPlaceholder": "REF_STYLE_CORRIDOR_MATERIAL_01",
       "preserve": [
-        "restrained palette",
-        "natural material separation",
-        "low-gloss stone and aged lacquer response"
+        "克制的色板",
+        "自然的材质区分",
+        "低光泽石材与老化漆面的材质响应"
       ],
       "exclude": [
-        "depicted identity",
-        "source costume",
-        "source architecture layout"
+        "来源画面中的人物身份",
+        "来源服装",
+        "来源建筑布局"
       ],
       "locatorPolicy": "human_resolved_no_private_locator"
     }
@@ -101,7 +101,7 @@
       "value": "8.2",
       "rendered": "--v 8.2",
       "source": "compatibility_evidence",
-      "rationale": "Pin the verified model instead of relying on the account default."
+      "rationale": "固定已核查的模型版本，不依赖账号默认值。"
     },
     {
       "parameterId": "parameter.aspect-ratio",
@@ -110,7 +110,7 @@
       "value": "16:9",
       "rendered": "--ar 16:9",
       "source": "canon",
-      "rationale": "Preserve the approved widescreen framing intent."
+      "rationale": "保留已批准的横幅构图意图。"
     },
     {
       "parameterId": "parameter.raw",
@@ -119,7 +119,7 @@
       "value": true,
       "rendered": "--raw",
       "source": "projection_policy",
-      "rationale": "Test stronger adherence to explicit performance, material, and lighting language."
+      "rationale": "测试对明确表演、材质与光线描述的遵循程度。"
     },
     {
       "parameterId": "parameter.stylize",
@@ -128,7 +128,7 @@
       "value": 100,
       "rendered": "--s 100",
       "source": "projection_policy",
-      "rationale": "Use the documented neutral default as the experiment baseline."
+      "rationale": "以文档记录的中性默认值作为实验基线。"
     },
     {
       "parameterId": "parameter.seed",
@@ -137,13 +137,13 @@
       "value": 1742,
       "rendered": "--seed 1742",
       "source": "human_choice",
-      "rationale": "Hold short-session noise while testing stylize only; do not treat the seed as continuity evidence."
+      "rationale": "只测试风格化参数时控制短会话噪声，不把随机种子当作连续性证据。"
     }
   ],
   "renderedPrompt": {
-    "body": "eye-level 50mm medium full shot of Shen Yanqiu with a long rounded-rectangular face, narrow horizontal eyes, a subtly higher left mouth corner and 7.7-head proportions in a narrow vermilion-wood corridor, left foot half a step back as she shields a partly obscured child from an armed pursuer, torso upright and weight grounded through both feet on the wet white-jade floor with visible contact shadows, right hand near the sheathed sword, tightened lower eyelids and jaw showing concealed fear, pursuer's weapon entering the left foreground, blocked exit behind, low warm rim light from the southwest and cool cloud fill from the northeast",
+    "body": "平视 50mm 中全景：沈砚秋位于狭窄的朱红木构走廊，保持偏长方圆脸、水平细长眼型、左嘴角略高与 7.7 头身。她左脚后撤半步，挡在部分被遮蔽的孩子与持械追兵之间；上身直立，双脚在湿润白玉地面稳定承重，接触阴影清晰，右手靠近仍在鞘中的剑。收紧的下眼睑与下颌显露被隐藏的恐惧。追兵武器进入左前景，被封锁的出口位于身后；西南低位暖轮廓光与东北云海冷填充形成一致照明。",
     "parameterTail": "--v 8.2 --ar 16:9 --raw --s 100 --seed 1742",
-    "copyText": "eye-level 50mm medium full shot of Shen Yanqiu with a long rounded-rectangular face, narrow horizontal eyes, a subtly higher left mouth corner and 7.7-head proportions in a narrow vermilion-wood corridor, left foot half a step back as she shields a partly obscured child from an armed pursuer, torso upright and weight grounded through both feet on the wet white-jade floor with visible contact shadows, right hand near the sheathed sword, tightened lower eyelids and jaw showing concealed fear, pursuer's weapon entering the left foreground, blocked exit behind, low warm rim light from the southwest and cool cloud fill from the northeast --v 8.2 --ar 16:9 --raw --s 100 --seed 1742",
+    "copyText": "平视 50mm 中全景：沈砚秋位于狭窄的朱红木构走廊，保持偏长方圆脸、水平细长眼型、左嘴角略高与 7.7 头身。她左脚后撤半步，挡在部分被遮蔽的孩子与持械追兵之间；上身直立，双脚在湿润白玉地面稳定承重，接触阴影清晰，右手靠近仍在鞘中的剑。收紧的下眼睑与下颌显露被隐藏的恐惧。追兵武器进入左前景，被封锁的出口位于身后；西南低位暖轮廓光与东北云海冷填充形成一致照明。 --v 8.2 --ar 16:9 --raw --s 100 --seed 1742",
     "referencePlaceholders": [
       "REF_STYLE_CORRIDOR_MATERIAL_01"
     ],
@@ -158,32 +158,32 @@
         "role": "baseline",
         "changedVariable": null,
         "heldConstants": [
-          "prompt body",
-          "V8.2 web surface",
-          "16:9 aspect ratio",
-          "Raw mode",
-          "style reference binding",
-          "seed 1742"
+          "提示词正文",
+          "V8.2 网页界面",
+          "16:9 画幅比例",
+          "原始模式",
+          "风格参考绑定",
+          "随机种子 1742"
         ],
-        "expectedEffect": "Establish a restrained baseline with the documented stylize default.",
-        "acceptanceCheck": "The protection beat reads first while identity, body weight, corridor pressure, light direction, and material separation remain reviewable.",
-        "renderedPrompt": "eye-level 50mm medium full shot of Shen Yanqiu with a long rounded-rectangular face, narrow horizontal eyes, a subtly higher left mouth corner and 7.7-head proportions in a narrow vermilion-wood corridor, left foot half a step back as she shields a partly obscured child from an armed pursuer, torso upright and weight grounded through both feet on the wet white-jade floor with visible contact shadows, right hand near the sheathed sword, tightened lower eyelids and jaw showing concealed fear, pursuer's weapon entering the left foreground, blocked exit behind, low warm rim light from the southwest and cool cloud fill from the northeast --v 8.2 --ar 16:9 --raw --s 100 --seed 1742"
+        "expectedEffect": "用文档记录的风格化默认值建立克制的基线。",
+        "acceptanceCheck": "先读到保护孩子的节拍，同时能够检查身份、承重、走廊压力、光向和材质区分。",
+        "renderedPrompt": "平视 50mm 中全景：沈砚秋位于狭窄的朱红木构走廊，保持偏长方圆脸、水平细长眼型、左嘴角略高与 7.7 头身。她左脚后撤半步，挡在部分被遮蔽的孩子与持械追兵之间；上身直立，双脚在湿润白玉地面稳定承重，接触阴影清晰，右手靠近仍在鞘中的剑。收紧的下眼睑与下颌显露被隐藏的恐惧。追兵武器进入左前景，被封锁的出口位于身后；西南低位暖轮廓光与东北云海冷填充形成一致照明。 --v 8.2 --ar 16:9 --raw --s 100 --seed 1742"
       },
       {
         "variantId": "variant.stylize-s250",
         "role": "single_variable_test",
-        "changedVariable": "stylize: 100 -> 250",
+        "changedVariable": "风格化参数 stylize：100 → 250",
         "heldConstants": [
-          "prompt body",
-          "V8.2 web surface",
-          "16:9 aspect ratio",
-          "Raw mode",
-          "style reference binding",
-          "seed 1742"
+          "提示词正文",
+          "V8.2 网页界面",
+          "16:9 画幅比例",
+          "原始模式",
+          "风格参考绑定",
+          "随机种子 1742"
         ],
-        "expectedEffect": "Increase aesthetic interpretation without changing story, identity, blocking, camera, or reference inputs.",
-        "acceptanceCheck": "Visual treatment may strengthen, but the protection beat and all hard continuity facts must remain as readable as the baseline.",
-        "renderedPrompt": "eye-level 50mm medium full shot of Shen Yanqiu with a long rounded-rectangular face, narrow horizontal eyes, a subtly higher left mouth corner and 7.7-head proportions in a narrow vermilion-wood corridor, left foot half a step back as she shields a partly obscured child from an armed pursuer, torso upright and weight grounded through both feet on the wet white-jade floor with visible contact shadows, right hand near the sheathed sword, tightened lower eyelids and jaw showing concealed fear, pursuer's weapon entering the left foreground, blocked exit behind, low warm rim light from the southwest and cool cloud fill from the northeast --v 8.2 --ar 16:9 --raw --s 250 --seed 1742"
+        "expectedEffect": "增强审美演绎，但不改变故事、身份、调度、摄影机或参考输入。",
+        "acceptanceCheck": "视觉处理可以增强，但保护节拍与所有硬性连续性事实必须保持基线的可读性。",
+        "renderedPrompt": "平视 50mm 中全景：沈砚秋位于狭窄的朱红木构走廊，保持偏长方圆脸、水平细长眼型、左嘴角略高与 7.7 头身。她左脚后撤半步，挡在部分被遮蔽的孩子与持械追兵之间；上身直立，双脚在湿润白玉地面稳定承重，接触阴影清晰，右手靠近仍在鞘中的剑。收紧的下眼睑与下颌显露被隐藏的恐惧。追兵武器进入左前景，被封锁的出口位于身后；西南低位暖轮廓光与东北云海冷填充形成一致照明。 --v 8.2 --ar 16:9 --raw --s 250 --seed 1742"
       }
     ],
     "oneVariablePerVariant": true
@@ -192,13 +192,13 @@
     {
       "checkId": "check.rights-licensing",
       "status": "pass",
-      "message": "The exact LicenseProfile reference records a resolved external-use rights gate for this structure-only fixture.",
+      "message": "准确引用的许可档案在此结构测试夹具中记录了已解决的外部使用权利关卡；不代表真实授权。",
       "evidenceIds": []
     },
     {
       "checkId": "check.model-surface",
       "status": "pass",
-      "message": "The plan pins V8.2 on the web surface.",
+      "message": "该计划固定使用网页界面的 V8.2。",
       "evidenceIds": [
         "mj.version.2026-09-02"
       ]
@@ -206,7 +206,7 @@
     {
       "checkId": "check.parameter-tail",
       "status": "pass",
-      "message": "Every parameter is structured once and rendered after the prompt body without punctuation.",
+      "message": "每个参数只结构化一次，在正文之后串接，参数区不夹杂标点。",
       "evidenceIds": [
         "mj.parameters.2026-09-02"
       ]
@@ -214,7 +214,7 @@
     {
       "checkId": "check.reference-mode",
       "status": "pass",
-      "message": "The binding uses a V6+ Style Reference and does not use V7-only Omni Reference.",
+      "message": "绑定使用 V6 及后续版本的风格参考，不使用仅限 V7 的全能参考。",
       "evidenceIds": [
         "mj.version.2026-09-02",
         "mj.style-reference.2026-09-02"
@@ -223,7 +223,7 @@
     {
       "checkId": "check.multi-prompt",
       "status": "pass",
-      "message": "The V8.2 prompt contains no unsupported multi-prompt separator or numeric text weight.",
+      "message": "V8.2 提示词不包含不受支持的多段提示词分隔符或文字数值权重。",
       "evidenceIds": [
         "mj.version.2026-09-02"
       ]
@@ -231,7 +231,7 @@
     {
       "checkId": "check.seed-scope",
       "status": "pass",
-      "message": "The seed is limited to a short-session one-variable comparison and is not treated as identity or style evidence.",
+      "message": "随机种子只用于短会话的单变量比较，不作为身份或风格证据。",
       "evidenceIds": [
         "mj.seed.2026-09-02"
       ]
@@ -242,13 +242,13 @@
     "executionOwner": "human_external",
     "requiresHumanApproval": true,
     "steps": [
-      "Select V8.2 on the Midjourney web surface.",
-      "Confirm every hidden default below before submission.",
-      "Attach REF_STYLE_CORRIDOR_MATERIAL_01 only in the Style Reference slot.",
-      "Verify that the exact referenced LicenseProfile remains approved for this external use.",
-      "Paste the baseline copyText exactly and submit manually.",
-      "Run the stylize-250 variant only after preserving the baseline result and metadata.",
-      "Return original files and exact metadata; do not report a planned or submitted job as a successful image."
+      "在 Midjourney 网页界面选择 V8.2。",
+      "提交前逐项确认下列隐藏默认值。",
+      "仅在风格参考槽位附加 REF_STYLE_CORRIDOR_MATERIAL_01。",
+      "核对准确引用的许可档案仍允许此次外部使用。",
+      "原样粘贴基线 copyText，由人工提交。",
+      "保存基线结果与元数据后，再执行风格化值为 250 的变体。",
+      "返回原始文件和准确元数据，不把计划或已提交任务描述为成功生成图像。"
     ],
     "hiddenDefaultChecks": [
       {
@@ -258,22 +258,22 @@
       },
       {
         "setting": "personalization",
-        "expectedState": "off unless a separately recorded profile binding is approved",
+        "expectedState": "关闭，除非另行记录并批准了个性化档案绑定",
         "status": "human_must_confirm"
       },
       {
         "setting": "moodboards",
-        "expectedState": "none",
+        "expectedState": "不使用情绪板",
         "status": "human_must_confirm"
       },
       {
         "setting": "variety",
-        "expectedState": "0 unless explicitly added as the one changed variable",
+        "expectedState": "设为 0，除非明确将其作为唯一变化变量",
         "status": "human_must_confirm"
       },
       {
-        "setting": "pinned references",
-        "expectedState": "only REF_STYLE_CORRIDOR_MATERIAL_01",
+        "setting": "固定版本参考",
+        "expectedState": "仅保留 REF_STYLE_CORRIDOR_MATERIAL_01",
         "status": "human_must_confirm"
       }
     ]
@@ -283,42 +283,42 @@
       {
         "fieldId": "external-job-id",
         "required": true,
-        "description": "The exact Midjourney job/task identifier and creation timestamp."
+        "description": "准确的 Midjourney 作业／任务标识与创建时间戳。"
       },
       {
         "fieldId": "actual-model-surface",
         "required": true,
-        "description": "The model version and surface shown for the completed external job."
+        "description": "已完成外部任务实际显示的模型版本和界面。"
       },
       {
         "fieldId": "submitted-and-resolved-prompt",
         "required": true,
-        "description": "The exact submitted text plus any provider-resolved prompt or code form."
+        "description": "准确提交的正文，以及供应商解析后的提示词或代码形式。"
       },
       {
         "fieldId": "resolved-parameters",
         "required": true,
-        "description": "Actual parameters, automatic rewrites, aspect ratio, dimensions, Raw state, stylize, variety, quality, weird, and seed when present."
+        "description": "实际参数、自动改写、画幅比例、尺寸、原始模式状态、风格化、变化程度、质量、怪异程度及存在时的随机种子。"
       },
       {
         "fieldId": "reference-slot-record",
         "required": true,
-        "description": "The type, count, and stable user-side identifier of each attached reference without credentials or expiring private URLs."
+        "description": "每份附加参考的类型、数量和用户侧稳定标识，不包含凭据或会过期的私有链接。"
       },
       {
         "fieldId": "original-output-files",
         "required": true,
-        "description": "Original downloaded files, filenames, and hashes computed only after the files are locally available."
+        "description": "下载的原始文件、文件名，以及文件实际可访问后才计算的哈希。"
       },
       {
         "fieldId": "warnings-and-failures",
         "required": true,
-        "description": "Any moderation block, incompatibility, provider warning, failed variant, or automatic rewrite."
+        "description": "任何审核阻断、不兼容、供应商警告、失败变体或自动改写。"
       },
       {
         "fieldId": "variant-mapping",
         "required": true,
-        "description": "The exact baseline or one-variable variant associated with each returned output."
+        "description": "与每份返回结果对应的准确基线或单变量变体。"
       }
     ],
     "unknownPolicy": "record_unknown_never_infer"
@@ -349,7 +349,7 @@
     "createdAt": "2026-09-02T00:00:00Z",
     "updatedAt": "2026-09-02T00:00:00Z",
     "changeLog": [
-      "Created a non-executing Midjourney V8.2 projection fixture with exact source/capability references and manual return requirements."
+      "建立不执行生成的 Midjourney V8.2 平台适配结构夹具，包含准确来源／能力引用及人工回传要求。"
     ]
   }
 }

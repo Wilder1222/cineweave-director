@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/style-package.schema.json",
-  "title": "CineWeave Style Package",
+  "title": "CineWeave 风格包",
   "type": "object",
   "additionalProperties": false,
   "required": [

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/scene-binding.schema.json",
-  "title": "CineWeave Shot Scene Binding",
+  "title": "CineWeave 镜头场景绑定",
   "type": "object",
   "additionalProperties": false,
   "required": [

@@ -2,7 +2,7 @@
   "kind": "cineweave_codex_capability_profile",
   "contractVersion": "2.0.0",
   "profileId": "capability.reference-image-composite",
-  "title": "Reference-image composite adapter capability profile",
+  "title": "参考图合成适配器能力档案",
   "version": 1,
   "status": "active",
   "adapterId": "adapter.reference-image-composite",
@@ -26,7 +26,7 @@
         "scene"
       ],
       "constraints": [
-        "Provider execution remains outside the Skill."
+        "供应商执行仍由 Skill 之外的工作流负责。"
       ]
     },
     {
@@ -42,7 +42,7 @@
         "scene_geography"
       ],
       "constraints": [
-        "Every reference requires one semantic role."
+        "每份参考必须指定一种语义职责。"
       ]
     },
     {
@@ -55,7 +55,7 @@
         "body_morphology"
       ],
       "constraints": [
-        "Semantic axes compile to descriptive controls; they are not provider weights or measured anatomy."
+        "语义轴编译为描述性控制，不是供应商权重或实测解剖数值。"
       ]
     },
     {
@@ -70,7 +70,7 @@
         "surface_style"
       ],
       "constraints": [
-        "Each style reference remains role-scoped and cannot supply identity."
+        "每份风格参考保持限定职责，不能提供身份。"
       ]
     },
     {
@@ -83,7 +83,7 @@
         "representation"
       ],
       "constraints": [
-        "The binding is compiled before provider execution and never mutates CharacterSpec."
+        "绑定在供应商执行前编译，不能修改 CharacterSpec。"
       ]
     },
     {
@@ -96,7 +96,7 @@
         "representation"
       ],
       "constraints": [
-        "Cross-family identity requires semantic-anchor review rather than a single pixel similarity score."
+        "跨表现体系的身份需要语义锚点评审，不能只看单一像素相似度。"
       ]
     },
     {
@@ -106,7 +106,7 @@
       "maxSubjects": 0,
       "supportedScopes": [],
       "constraints": [
-        "This adapter exposes no landmark control; hard landmark requirements must block or select another adapter."
+        "此适配器不提供关键点控制；硬性关键点要求必须阻断或选择其他适配器。"
       ]
     },
     {
@@ -116,7 +116,7 @@
       "maxSubjects": 0,
       "supportedScopes": [],
       "constraints": [
-        "A 3D-looking image is not a mesh asset or morph-target result."
+        "具有三维观感的图像不是网格资产或形变目标结果。"
       ]
     },
     {
@@ -128,7 +128,7 @@
         "face"
       ],
       "constraints": [
-        "Extreme profiles require multiple views and human review."
+        "极端轮廓需要多视图与人工评审。"
       ]
     },
     {
@@ -141,7 +141,7 @@
         "full_character"
       ],
       "constraints": [
-        "Body proportion requires full-body evidence and pose guidance."
+        "身体比例需要全身证据和姿态指导。"
       ]
     },
     {
@@ -153,7 +153,7 @@
         "expression"
       ],
       "constraints": [
-        "Emotion must be translated into observable cues."
+        "情绪必须转成可观察的表现线索。"
       ]
     },
     {
@@ -165,7 +165,7 @@
         "pose"
       ],
       "constraints": [
-        "Hand-object contact remains review-gated."
+        "手与物体的接触仍须经过评审。"
       ]
     },
     {
@@ -178,7 +178,7 @@
         "composition"
       ],
       "constraints": [
-        "Complex multi-object interactions may require regional repair."
+        "复杂多物体交互可能需要局部修复。"
       ]
     },
     {
@@ -190,7 +190,7 @@
         "lighting"
       ],
       "constraints": [
-        "Motivated source direction must be supplied."
+        "必须提供有明确来源的光线方向。"
       ]
     },
     {
@@ -203,7 +203,7 @@
         "character"
       ],
       "constraints": [
-        "A declared capability remains unverified until returned sequence evidence is reviewed."
+        "只有评审实际返回的序列证据后，声明能力才能视为已验证。"
       ]
     }
   ],
@@ -253,9 +253,9 @@
     }
   ],
   "knownLimits": [
-    "Extreme perspective can distort body rhythm.",
-    "Complex layered garments may require local repair.",
-    "Precise hand-object contact is not guaranteed in one pass."
+    "极端透视可能扭曲身体比例节奏。",
+    "复杂多层服装可能需要局部修复。",
+    "无法保证一次生成就实现精确的手与物体接触。"
   ],
   "licenseProfileRefs": [
     {
@@ -280,7 +280,7 @@
     "createdAt": "2026-08-20T18:00:00.000Z",
     "updatedAt": "2026-08-20T18:00:00.000Z",
     "changeLog": [
-      "v1: declare provider-neutral composite adapter capabilities"
+      "v1：声明平台无关的合成适配器能力"
     ]
   }
 }

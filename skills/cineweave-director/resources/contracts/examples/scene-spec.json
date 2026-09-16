@@ -244,7 +244,7 @@
         "purpose": "建立人物与长廊深度",
         "allowedMovements": [
           "static",
-          "slow dolly forward"
+          "缓慢向前推轨"
         ]
       },
       {
@@ -255,7 +255,7 @@
         "purpose": "屏风遮挡后的反应与追兵关系",
         "allowedMovements": [
           "static",
-          "short truck"
+          "短距离横移"
         ]
       }
     ],
@@ -347,7 +347,7 @@
     "createdAt": "2026-08-20T12:00:00.000Z",
     "updatedAt": "2026-08-20T12:00:00.000Z",
     "changeLog": [
-      "v1: establish geography, architecture, material, prop and camera topology"
+      "v1：建立地理、建筑、材质、道具及摄影机拓扑"
     ]
   }
 }

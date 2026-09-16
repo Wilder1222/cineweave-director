@@ -21,11 +21,11 @@ const filenameOverrides = new Map([
 const supportSchemas = [
   {
     schema: "schemas/common.schema.json",
-    purpose: "Shared identifiers, references, provenance, and receipt definitions.",
+    purpose: "共享标识、引用、来源与回执定义。",
   },
   {
     schema: "schemas/reference-transform.schema.json",
-    purpose: "Shared provider-neutral reference-observation transform definitions.",
+    purpose: "不依赖特定供应商的共享参考观察转换定义。",
   },
 ];
 
@@ -157,6 +157,7 @@ async function main() {
 
   console.log(JSON.stringify({
     valid: true,
+    messageZh: check ? "契约索引与当前文件一致。" : "契约索引已按当前文件字节重建。",
     mode: check ? "check" : "write",
     roots: index.contracts.length,
     supportSchemas: index.supportSchemas.length,
@@ -165,6 +166,6 @@ async function main() {
 }
 
 main().catch((error) => {
-  console.error(error instanceof Error ? error.stack || error.message : String(error));
+  console.error("契约索引检查或重建失败，原始诊断：\n" + (error instanceof Error ? error.stack || error.message : String(error)));
   process.exitCode = 1;
 });

@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/shot-compiler-plan.schema.json",
-  "title": "CineWeave Director Shot Compiler Plan",
-  "description": "A deterministic handoff plan compiled from one Atomic Cinematic Skill invocation. It projects creator controls and routes canonical contracts through the Skill's internal domains without executing a provider.",
+  "title": "CineWeave 导演镜头编译计划",
+  "description": "从一次原子镜头技法调用编译的确定性交接计划，将创作者控制和正式契约映射到 Skill 内部领域，不执行供应商。",
   "type": "object",
   "additionalProperties": false,
   "required": [

@@ -1,43 +1,48 @@
-# Route: scene
+<a id="route-scene"></a>
+# 路由：场景（scene）
 
-Use for reusable locations, production design, geography, state, physical light, props, interaction, and shot-specific scene binding. A scene is spatial fact, not a background adjective list.
+提示词的适用维度与完整性标准见[细节与专业表达](../optional/prompt-detail-standard.md#场景)对应章节。
 
-## Design order
+用于可复用地点、美术设计、空间地理、状态、物理光照、道具、互动，以及镜头专用场景绑定。场景是空间事实，不是一串背景形容词。
 
-1. narrative function and audience experience;
-2. orientation, scale, and named anchors;
-3. zones and traversable connections;
-4. architecture and material logic;
-5. prop locations and affordances;
-6. camera topology—valid access, axis, occlusion, and depth opportunities;
-7. state model—time, weather, occupancy, damage, and transitions;
-8. physical light sources;
-9. interaction constraints.
+<a id="design-order"></a>
+## 设计顺序
 
-`SceneSpec` defines reusable space. `SceneState` records a versioned current condition. `SceneBinding` selects only facts visible or continuity-critical for a shot.
+依次定义叙事功能与观众体验、方位／尺度／命名锚点、区域及可通行连接、建筑和材质逻辑、道具位置及可交互用途、摄影机空间条件、状态模型、物理光源和互动约束。
 
-## Shared spatial checks
+摄影机空间条件包括可达机位、轴线、遮挡和纵深机会；状态模型包括时间、天气、在场者、损坏和转变。
 
-Before refining coverage, establish a compact relation map for the relevant space: uniquely named anchors, connected zones, actor facing, important sightlines and permitted camera access. A written map or supplied plan may suffice; a new establishing shot is not mandatory. Separate world-relative position from screen-left/right, which changes with viewpoint.
+`SceneSpec` 定义可复用空间；`SceneState` 记录版本化的当前状态；`SceneBinding` 只选择镜头可见或连续性关键的事实。
 
-Check crucial proportions using declared dimensions or explicit reference relationships: whether a subject fits a doorway, can reach a shelf, or can pass between fixtures. Perspective alone cannot establish real measurements. Keep inferred dimensions provisional. If a locked scene makes the action impossible, revise blocking or propose the smallest Scene change; a tight crop cannot make the physical contradiction valid.
+## 共享空间检查
 
-Design input: [Leos spatial guidance, reviewed snapshot](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/spatial-and-assets.md); adapted to CineWeave's Scene authority and evidence rules.
+细化覆盖前，建立相关空间的简短关系图：唯一命名锚点、相连区域、人物朝向、关键视线与允许机位。文字图或已有平面图即可，不强制新增建立镜头。世界坐标位置与随视点改变的画面左右分开。
 
-## Physical light
+关键比例使用已声明尺寸或明确参考关系检查：能否通过门洞、够到架子、穿过设施间隙。透视不能独自证明真实尺寸，推断尺寸保持暂定。锁定空间使动作不成立时，修改走位或提出最小场景变更；紧裁切不能让物理矛盾成立。
 
-Record source type, physical origin/anchor, direction, size, intensity relation, falloff, color basis, occlusion, shadow behavior, and bounce surface. A bounce without a named surface is not a physical source. Style treatment cannot move or create a Scene source.
+设计参考：[Leos 空间指南的已审阅快照](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/spatial-and-assets.md)，独立融入既有场景权威与证据规则。
 
-For difficult source geometry, material glare, contrast, or shot-to-shot light matching read [cinematography craft](../optional/cinematography-craft.md). New fixtures or bounce surfaces remain Scene proposals, not implicit additions by Direction.
+<a id="physical-light"></a>
+## 物理光照
 
-## Interaction
+记录光源类型、物理来源／锚点、方向、大小、强度关系、衰减、色彩依据、遮挡、阴影行为和反射表面。没有命名反射表面的反射光，不是完整物理光源。风格处理不能移动或创造场景光源。
 
-For contact and action specify support anchor, contact area, weight transfer, grip, collision limits, occlusion, shadow contact, prop ownership, and environmental response. “Leans on wall” is incomplete without the named wall anchor and body mechanics.
+涉及复杂光源几何、材质眩光、反差或镜头间光照匹配时，阅读[摄影方法](../optional/cinematography-craft.md)。新增灯具或反射表面仍须作为场景提案，不能由导演隐式添加。
 
-Lens and crop cannot repair inconsistent geography. If a hand, foot, vehicle, or prop cannot reach its target under the bound topology, fix Scene or blocking before Prompt.
+<a id="interaction"></a>
+## 互动
 
-## Continuity and review
+接触和动作需要说明支撑锚点、接触面积、重心转移、握持、碰撞边界、遮挡、接触阴影、道具持有人与环境响应。“倚墙”如果缺少具体墙面锚点和身体力学，仍是不完整的说明。
 
-Track topology, prop position, door/window state, material condition, weather, source light, crowd, damage, and contamination. Intentional changes need a cause and transition.
+镜头或裁切不能修复矛盾的地理关系。手、脚、车辆或道具在绑定空间中无法到达目标时，应先修正场景或走位，再改提示词。
 
-Outputs: `SceneSpec`, `SceneState`, `SceneLightState`, `InteractionConstraintSet`, `SceneBinding`.
+<a id="continuity-and-review"></a>
+## 连续性与评审
+
+跟踪拓扑、道具位置、门窗状态、材质状况、天气、光源、人群、损坏和污染。主动变化需要原因与过渡。
+
+可选规范输出（仅在请求结构化交接时）：`SceneSpec`、`SceneState`、`SceneLightState`、`InteractionConstraintSet`、`SceneBinding`。
+
+涉及场次与连续镜头时，使用[拍摄系统与部门协同](../optional/prompt-detail-standard.md#拍摄系统与部门协同)的共享基线和逐镜交付模板，核对空间、构图、光位、收音与场记连续性。
+
+需要比较候选、表情／姿态研究、多视图或资产收敛时，使用[视觉开发](../optional/visual-development.md)；详细维度沿用共同提示词规范。

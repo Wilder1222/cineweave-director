@@ -2,7 +2,7 @@
   "kind": "cineweave_codex_control_benchmark",
   "contractVersion": "2.0.0",
   "suiteId": "benchmark.cineweave-controlbench",
-  "title": "CineWeave ControlBench",
+  "title": "CineWeave 控制基准",
   "version": 1,
   "status": "active",
   "skillReceipt": {
@@ -289,7 +289,7 @@
       "description": "场景锚点和人物位置相对误差。",
       "direction": "lower_is_better",
       "passThreshold": 0.12,
-      "range": "0..1 normalized error"
+      "range": "0..1 归一化误差"
     },
     {
       "metricId": "metric.light-rule",
@@ -357,7 +357,7 @@
       "description": "采样帧中的机位路径、主体/背景构图锚点和屏幕方向相对预演轨迹的归一化误差。",
       "direction": "lower_is_better",
       "passThreshold": 0.08,
-      "range": "0..1 normalized camera-path and framing-anchor error"
+      "range": "0..1 归一化摄影机路径与构图锚点误差"
     },
     {
       "metricId": "metric.camera-motion-temporal",
@@ -438,15 +438,15 @@
         "version": 1,
         "contentHash": "sha256:9999999999999999999999999999999999999999999999999999999999999999"
       },
-      "perturbation": "Only camera view changes across front, three-quarter and profile tasks.",
+      "perturbation": "正面、四分之三侧面及侧面任务仅改变摄影机视角。",
       "expectedInvariants": [
-        "Hard morphology axes",
-        "Structural relations",
-        "Neutral expression",
-        "Grooming, wardrobe, camera family and light"
+        "硬性形态轴",
+        "结构关系",
+        "中性表情",
+        "妆发、服装、摄影机类型与光线"
       ],
       "expectedAllowedChanges": [
-        "View angle only"
+        "仅视角"
       ],
       "failureLabels": [
         "locked_axis_drift",
@@ -475,15 +475,15 @@
         "version": 1,
         "contentHash": "sha256:9999999999999999999999999999999999999999999999999999999999999999"
       },
-      "perturbation": "Run neutral close, warm backlight and natural full-body fixtures against one locked character and appearance.",
+      "perturbation": "用同一锁定人物与外观运行中性近景、暖逆光和自然全身测试。",
       "expectedInvariants": [
-        "Identity",
-        "Stable surface profile",
-        "Appearance construction",
-        "Source-consistent skin and material response"
+        "身份",
+        "稳定表面特征",
+        "外观构造",
+        "符合光源的皮肤与材质响应"
       ],
       "expectedAllowedChanges": [
-        "Fixture-specific framing and light use only"
+        "仅测试项指定的取景与用光"
       ],
       "failureLabels": [
         "plastic_skin",
@@ -514,15 +514,15 @@
         "version": 1,
         "contentHash": "sha256:9999999999999999999999999999999999999999999999999999999999999999"
       },
-      "perturbation": "Run neutral-close, expression-medium and action-fullbody fixtures through one exact anime RepresentationBinding and StyleCompile.",
+      "perturbation": "通过精确的动画 RepresentationBinding 与 StyleCompile，运行中性近景、表情中景及动作全身测试。",
       "expectedInvariants": [
-        "Canonical identity anchors",
-        "Appearance construction",
-        "Anime abstraction budget",
-        "Line, cel-shadow and palette grammar"
+        "正式身份锚点",
+        "外观构造",
+        "动画抽象化幅度",
+        "线条、赛璐璐阴影与色板规则"
       ],
       "expectedAllowedChanges": [
-        "Fixture-specific framing, expression and pose only"
+        "仅测试项指定的取景、表情与姿态"
       ],
       "failureLabels": [
         "anime_identity_drift",
@@ -553,15 +553,15 @@
         "version": 1,
         "contentHash": "sha256:9999999999999999999999999999999999999999999999999999999999999999"
       },
-      "perturbation": "Run neutral-ink, dramatic-medium and action-panel fixtures through one exact manga RepresentationBinding and StyleCompile.",
+      "perturbation": "通过精确的漫画 RepresentationBinding 与 StyleCompile，运行中性墨线、戏剧中景及动作画格测试。",
       "expectedInvariants": [
-        "Canonical identity anchors",
-        "Appearance silhouette",
-        "Ink hierarchy",
-        "Black-mass, screentone and negative-space grammar"
+        "正式身份锚点",
+        "外观轮廓",
+        "墨线层级",
+        "黑块、网点与留白规则"
       ],
       "expectedAllowedChanges": [
-        "Fixture-specific framing, expression, pose and motivated motion effects only"
+        "仅测试项指定的取景、表情、姿态及有动机的运动效果"
       ],
       "failureLabels": [
         "manga_identity_drift",
@@ -592,18 +592,18 @@
         "version": 1,
         "contentHash": "sha256:9999999999999999999999999999999999999999999999999999999999999999"
       },
-      "perturbation": "Change only the selected representation family across photoreal, anime, manga, illustration, stylized-3D and hybrid tiles.",
+      "perturbation": "写实、动画、漫画、插画、风格化三维及混合画格之间只改变选定表现体系。",
       "expectedInvariants": [
-        "Semantic facial relations",
-        "Signature silhouette",
-        "Distinctive marks",
-        "Hair identity",
-        "Body rhythm",
-        "Gesture fingerprint",
-        "Shared neutral fixture"
+        "语义面部关系",
+        "标志性轮廓",
+        "独特标记",
+        "身份发型",
+        "身体比例节奏",
+        "姿势特征",
+        "共用中性测试场景"
       ],
       "expectedAllowedChanges": [
-        "Only transformations explicitly allowed by each exact RepresentationBinding"
+        "仅允许各精确 RepresentationBinding 明确许可的变换"
       ],
       "failureLabels": [
         "cross_style_identity_collapse",
@@ -971,10 +971,10 @@
     "createdAt": "2026-08-20T18:00:00.000Z",
     "updatedAt": "2026-09-02T04:00:00.000Z",
     "changeLog": [
-      "v1: establish Character, Morphology, Natural Human, Anime, Manga, Cross Representation, Scene, Interaction, Storyboard and Rights benches",
-      "Add a CameraPrevisSpec-bound CinematographyBench case; the suite defines planned evaluation only and does not claim observed media.",
-      "Require a blinded, trained, independently reviewed calibration protocol with observable camera anchors and disagreement resolution for CinematographyBench.",
-      "Add DirectorQualityBench with exact Director artifact refs, dimension-specific pass/warn/fail anchors and a planned paired observed-media calibration design."
+      "v1：建立人物、形态、自然人体、动画、漫画、跨表现、场景、交互、分镜及权利基准",
+      "新增绑定 CameraPrevisSpec 的摄影基准案例；套件只定义计划评估，不宣称已有实测媒体。",
+      "CinematographyBench 要求盲评、评审员训练和独立评审的校准协议，包含可观察摄影机锚点及分歧处理。",
+      "新增 DirectorQualityBench，包含精确导演产物引用、各维度通过／警告／失败锚点及计划中的成对实测媒体校准方案。"
     ]
   }
 }

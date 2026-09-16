@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/reference-asset.schema.json",
-  "title": "CineWeave Content-addressed Reference Asset",
+  "title": "CineWeave 内容寻址参考资产",
   "type": "object",
   "additionalProperties": false,
   "required": [

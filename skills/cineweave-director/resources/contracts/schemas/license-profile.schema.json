@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/license-profile.schema.json",
-  "title": "CineWeave Production License and Rights Profile",
+  "title": "CineWeave 制作许可与权利档案",
   "type": "object",
   "additionalProperties": false,
   "required": [

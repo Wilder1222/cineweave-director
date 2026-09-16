@@ -91,7 +91,7 @@
     "createdAt": "2026-08-20T12:00:00.000Z",
     "updatedAt": "2026-08-20T12:00:00.000Z",
     "changeLog": [
-      "v1: define default duty appearance state"
+      "v1：定义默认值守外观状态"
     ]
   },
   "styling": {
@@ -173,7 +173,7 @@
       "materials": [
         {
           "materialId": "material.moon-silk",
-          "baseType": "silk",
+          "baseType": "丝绸",
           "weaveOrSurface": "细密平纹，近看可见轻微织纹。",
           "roughness": 0.34,
           "sheen": 0.58,
@@ -184,7 +184,7 @@
         },
         {
           "materialId": "material.waist-brocade",
-          "baseType": "brocade",
+          "baseType": "织锦",
           "weaveOrSurface": "细小暗纹，不形成高对比图案。",
           "roughness": 0.48,
           "sheen": 0.28,

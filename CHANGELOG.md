@@ -1,78 +1,98 @@
-# Changelog
+# 更新记录
 
-All notable changes to CineWeave Director are documented here.
+记录 CineWeave Director 的重要变化。版本、日期和历史边界保留，说明改用中文。
 
-## Unreleased
+<a id="unreleased"></a>
+## 未发布
 
-- map all eleven Leos reference documents to existing CineWeave owners; deepen dialogue/listening, spatial checks, optical treatment, reference control, prop-state causality, clip joins, diagnosis and scoped learning notes without duplicating templates or importing provider claims;
+### 主分支中文化与六视角融合
 
-- wire ensemble checks into the default narrative handoff from shots through storyboards and prompts, with automatic scope selection, domain-owned correction and re-review of changed transitions; exercise a three-shot, eighteen-row prompt revision through the real checker CLI;
+- 合并 `codex/zh-cn-audit-cleanup-20260914` 的中文创作架构、多路径视频指南、完整短片示例与视频工作表检查器。
+- 独立融入 Leos 的群像调度、表演触发、光学事件、空间检查、道具中间态、生成边界、区间修复和经验来源方法，保留来源快照与证据边界。
+- 完整镜头／视频交付自动启用六视角评审，局部任务按需聚焦；新增随包只读检查器，区分输入有效、覆盖完整与评审完成，不将规划通过等同于媒体验收。
+- 增加三镜十八行评审、单变量修订及命令行回读回归；`PerformanceTimeline` 校验阶段 ID、区间顺序、不重叠及总时长边界。
+- 同步中文入口、参考、示例和维护说明，保留机器字段、枚举、命令、旧链接锚点与 MIT 法律文本；重建契约字节索引。
 
-- integrate independently authored ensemble direction and six-perspective shot review, based on a commit-pinned analysis of Leos's directing Skill; preserve proportional scope, existing authorization, route ownership and the shared look;
-- add a bundled read-only design/prompt review checker with exact role-shot coverage, nonblank findings, unresolved/revision handling, domain-owned repair notes and optional Unicode prompt budgets; a worksheet pass never proves media quality;
-- enforce PerformanceTimeline phase IDs, positive durations, ordered non-overlapping intervals and duration bounds; retain the wire format and regenerate the schema hash index;
-- document source strengths, reproduced validator limitations, integration choices and validation boundaries in `tests/evaluations/2026-09-16-leos-review.md`; no upstream code or templates are vendored and no release tag is changed.
+- 基于五个公开创作／视频项目及专业文档，补充完整短片交付、视觉探索与资产收敛、声线和逐句配音规则；新增 24 秒四镜《留一盏灯》全套原创示例，覆盖资产、表情、逐镜图像／视频／声音、准确对白及剪辑时间。
 
-- add eight master-inspired method cards with automatic brief-led matching, dimension-scoped mixing, conservative no-match fallback, explicit override precedence, and twelve manual behavioral checks; no name, switch, or strength setting is required;
-- keep a shared work-level visual baseline across mixed techniques, including grading, palette, contrast/rolloff, material/optical texture, and aspect ratio; undefined looks become one provisional shared draft, never per-master shot grades;
+- 审阅并统一普通创作与可选契约边界，修复强制标签、四选一探索和每镜停稳规则；补充资产—试片—候选—局部修复—剪辑的制作流程。
+- 视频工作表新增无媒体条件的文生视频节点及回归检查，保留图生视频参考约束；开发评测案例扩展到 20 项，未运行模型评测的状态保持明确。
 
-- add four optional craft references covering directing/performance/staging, cinematography/light, editing/sound, and a source-qualified international learning map with eight behavioral evaluation cases;
-- route craft guidance through typed lifecycle contexts and existing contracts, including tradeoff/failure checks and support for observational or associative intent without forced plot conflict;
-- expand the derived distribution to 147 files and 32 references, including both planning checkers; retain 52 root contracts and unchanged wire shapes, and distinguish packaging checks from unverified artistic outcomes;
+- 将真实拍摄因素纳入共同细节规范：空间轴线、构图摄影、灯光曝光、收音声场、场记覆盖、制作条件及部门冲突检查；补齐逐镜模板和纸灯镜头的声画补充卡。
 
-- reject capability candidates marked eligible despite unresolved hard requirements, failed candidates left reviewable, and nonexistent, selected, or blocked fallbacks;
-- validate ShotCompilerPlan parameter/control agreement, unique IDs, ordered traces and handoffs, output ownership from the matching release, exact input dependency retention, alias provenance declarations, and trace-to-handoff closure;
-- extend the cinematic-pattern guide with a creator-facing shot example and distinguish internal consistency checks from verification of supplied manifest/registry contents;
-- add mutation regressions for capability advancement and shot compilation without changing the v3 distribution or artifact wire shapes.
+- 补充统一的中文提示词细节规范，覆盖人物、场景、分镜和图生视频；加入专业术语边界、可复制连贯示例和逐项完整性检查，相关路由按章节加载。
 
-- Added a self-contained, read-only delivery checker for exact text counts, cut coverage, rational frame rates and SRT boundaries; no provider execution or media inspection.
-- Added final-poster typography handoff and scoped multi-reference transfer guidance; shortened Skill discovery text.
-- Added full-schema target/review/repair file and CLI roundtrip tests with computed content hashes, tamper rejection, missing-reference reporting and immutable revisions.
-- Recorded the review-driven optimization plan and verification boundaries in `tests/evaluations/2026-09-08.md`.
+### 聚焦 AIGC 创作
 
-## 3.1.0 — 2026-09-06
+- 将入口改为按交付物开始：单图、角色与场景资产、故事、短片、图生视频及修复。简短请求不要求完整项目、契约或节点工作簿。
+- 精简重复语言、治理与专项资料清单；缩小专项加载条件，技法库只在需要比较时读取。
+- 将十二项开发评测案例移入测试目录，保留完整案例及一致性回归；精简 README，安装与维护说明集中管理。
+- 完善三镜头中文示例，分别给出静态首帧与视频运动、可衔接终态和剪辑余量。
+- 中文化剩余 schema 标题／说明、规范示例中的创作描述、约束及交接；保留协议、枚举与参数，重建契约索引。
+- 合并剪辑／调色交接并移除重复图标；保留既有 52 种根契约。
 
-- Added exploration/draft/final guidance, delegated decision scope, non-canonical working JSON, promotion checks, and revision impact/checkpoint worksheets.
-- Added video, sound, delivery and resource planning within existing routes, plus a worked three-shot workflow and eight fresh-task evaluation cases.
-- Allowed bounded visual review with missing execution metadata, while preserving separate reproducibility and rights gates.
-- Added RepairPlan gate/pointer/check-ID semantics and optional exact ref/document registry validation with explicit unverified results; added regression tests.
-- Expanded the lifecycle allowlist to 26 references and the current source bundle to 139 files. Root contracts and artifact wire versions remain unchanged; behavioral/media evaluations are not claimed as completed.
+### 中文工作语言与视频整合
 
-## 3.0.0 — 2026-09-02
+- 将 Skill 入口、36 份知识指南、根目录使用／贡献／安全／更新说明及插件展示信息改为简体中文，调用名和机器协议不变。
+- 默认中文产物和节点提示词，保留指定台词／字幕／标题原文；需要时单独生成外语平台稿。
+- 保留旧章节锚点、路由 ID、契约字段、枚举、不可变版本、示例结构与机器标识，以及 MIT 法律文本；内容改变后重新计算对应分发哈希。
+- 用途简介校验接受中文“适用于”等说明，保留原英语语法支持；不移除用途检查。
+- 整合镜头工作台和生成诊断：区分三种注意力、动作阶段、实际关键帧、四阶段证据及单变量修复。十二项行为反例保持未运行。
+- 整合四份视频指南：有日期的平台证据、17 类中文标签、表演／特效／运镜职责和时长／余量／端点检查。
+- 新增自包含只读视频检查器及其回归测试；原交付检查器继续负责成片覆盖和 SRT。中文命令行帮助与摘要保留原始机器诊断。
+- 分发清单由知识清单与契约索引派生；新增检查不证明媒体、权利或模型能力通过。
 
-### Breaking changes
+### 此前已在工作树的改进
 
-- collapsed the former multi-Skill CineWeave Studio into one independently distributable `cineweave-director` Skill with 12 internal routes;
-- removed the product CLI, local runtime, adapter/execution layer, World OS, project store, marketplace shell, recipes, live evaluation harness, and sibling Skill packages;
-- changed installation and plugin identity from `cineweave-studio` to `cineweave-director`;
-- made the Skill source itself the distribution authority instead of injecting schemas, examples, or rewritten paths during a build.
+- 八组大师启发方法卡按简报自动匹配、按维度组合，支持无匹配和明确覆盖，提供十二项人工行为检查；不要求名字、开关或强度。
+- 混合技法仍共享调色、色板、反差／高光过渡、材质／光学纹理和画幅；未定义时提出一个共同暂定稿，不每镜换名导调色。
+- 四份技法指南涵盖导演／表演／调度、摄影／光、剪辑／声音、带来源限制的国际学习地图及八项行为案例，支持观察和联想而不强造冲突。
+- 原工作树扩至 31 份知识、145 个分发文件并包含交付检查器，保留 52 种根契约和线格式；本轮在此基础上整合增量。
+- 拒绝未解决硬要求却标为可用的候选、失败后仍可审的候选，以及不存在、已选中或阻断的备选。
+- 检查 `ShotCompilerPlan` 参数／控制一致性、唯一 ID、有序轨迹和交接、同版本归属、准确依赖保留、别名来源及闭合；不改变现有线格式。
+- 镜头模式新增创作者示例，区分内部一致性与缺失外部清单／注册表核验。
+- 加入只读文案计数、硬切覆盖、有理数帧率及 SRT 检查，不执行平台或媒体探测。
+- 加入最终海报排字交接、多参考有界迁移；精简 Skill 激活描述。
+- 加入完整 schema 的目标／评审／修复文件和 CLI 回合测试，计算真实哈希、拒绝篡改、报告缺失引用并维护不可变修订。
+- 优化计划和验证边界记录在 `tests/evaluations/2026-09-08.md`。
 
-### Added
+<a id="310--2026-09-06"></a>
+## 3.1.0 · 2026-09-06
 
-- full-cycle coverage for worldbuilding, story and screenplay, character, scene, visual style, reference evidence and rights, action, shot direction, storyboard rhythm, image prompting, non-executing production plans, review, and repair;
-- versioned `WorldBible`, unified `CreativeReview`, bounded `RepairPlan`, and generic non-executing `PromptProjectionPlan` root contracts;
-- time-bounded Midjourney projection guidance verified on 2026-09-02 against official documentation, including model/surface compatibility, reference roles, structured parameter tails, hidden-default checks, one-variable experiments, manual execution, and exact result-return requirements;
-- a self-contained contract inventory with 52 root kinds, 54 local schemas, 52 canonical examples, and raw-byte SHA-256 hashes;
-- a 23-file knowledge tree split into core invariants, 12 route guides, and 7 optional specialist references;
-- exact `ReferenceAsset`/`ReferenceObservation` bindings, `ReferenceTransform`, `AssetAliasRegistry`, `HeroFrameAnchor`, `SequenceRhythmSpec`, provider-neutral capability resolution, and production-planning contracts;
-- dependency-free repository validation and a lifecycle/index-derived 136-file bundle with byte-for-byte source equivalence.
+- 加入探索／草稿／定稿、授权范围、非规范工作稿、提升检查和变更影响／检查点。
+- 在已有路由内加入视频、声音、交付和资源规划，以及三镜头示例与八项新任务评测。
+- 缺少执行元数据时允许限定视觉评审，保留独立可复现性和权利关卡。
+- 加入 `RepairPlan` 关卡、指针、检查 ID 语义及可选精确引用／文档注册表验证，明确未核验项并增加回归测试。
+- 当时生命周期增至 26 份参考、139 个分发文件。根契约及线版本不变，不宣称行为／媒体评测已完成。
 
-### Corrected
+<a id="300--2026-09-02"></a>
+## 3.0.0 · 2026-09-02
 
-- tightened provider-neutral and Midjourney prompt compilation with visual-proposition admission, semantic deduplication, reference-overlap removal, and a final deletion test; canonical prompt fixtures now replace generic or repeated style boosters with observable identity, blocking, light, and material facts;
-- made `PromptRecord` reference inputs bind exact `ReferenceObservation` versions and hashes;
-- expanded reference transforms to identity, appearance, composition, palette, and typography without collapsing source evidence into target Canon;
-- allowed targeted negative constraints to be empty and removed the forced photoreal/physical-light bias from general `ImagePrompt` validation;
-- opened formatted capability IDs so exact researched capabilities and resolution requirements share one vocabulary;
-- hardened schema validation so `$ref` siblings and `patternProperties` cannot be skipped and direct JavaScript payloads must be plain JSON values.
+### 破坏性变化
 
-### Boundaries
+将原多 Skill Studio 收敛成一个可独立分发的 `cineweave-director`，有 12 条内部路由。移除产品 CLI、本地运行时、生成适配／执行层、World OS、项目存储、市场外壳、配方、在线评测运行器和兄弟 Skill 包。安装和插件身份由原产品名迁移到 `cineweave-director`。Skill 源码成为分发权威，不在构建时注入 schema、示例或重写路径。
 
-- provider syntax and account state live only in a projection child of exact provider-neutral Prompt Canon;
-- production artifacts stop at plans, controls, compatibility evidence, rights gates, human handoffs, and feasibility assessments;
-- adapter descriptors, execution requests/previews/receipts, media import/probe, credential handoff, repair-run receipts, and workflow-template platform contracts are explicitly excluded;
-- plugin version `3.0.0` remains independent from compatible 2.x artifact wire versions carried by unchanged contracts.
+### 新增
 
-## Legacy CineWeave Studio history
+覆盖世界、故事剧本、人物、场景、风格、参考与权利、动作、镜头、分镜节奏、图像提示词、非执行制作、评审修复完整周期。新增版本化 `WorldBible`、统一 `CreativeReview`、有界 `RepairPlan` 和通用非执行 `PromptProjectionPlan`。
 
-Versions 0.5.0 through 2.5.1 described the former multi-Skill Studio, runtime, and World OS architecture. Their full release history remains available in corresponding immutable Git tags; those components are not part of the 3.0.0 distribution.
+加入 2026-09-02 核验的 Midjourney 适配指南，涵盖模型／界面、参考角色、参数尾部、隐藏默认值、单变量试验、人工执行及准确返回要求；该日期是历史记录，不随翻译刷新。
+
+分发包括 52 种根 kind、54 个本地 schema、52 个规范示例及原始字节 SHA-256；知识树为 23 份，含核心规则、12 路由、7 专项参考；加入精确参考绑定、迁移、别名、主视觉锚点、序列节奏、平台中立能力匹配与制作契约。无依赖验证及派生构建当时输出 136 文件，与源码字节一致。
+
+### 修正
+
+- 提示词编译增加可见命题准入、语义去重、参考重叠删除及逐句删除检查，用可见身份、调度、光和材质替换泛化赞美。
+- `PromptRecord` 引用绑定准确 `ReferenceObservation` 版本和哈希。
+- 参考迁移覆盖身份、外观、构图、色板与排字，不把来源证据混同目标正式设定。
+- 允许空的针对性负向约束，去掉通用图像校验中强制写实／物理光偏置。
+- 能力 ID 放开为格式化词汇，研究能力和匹配要求统一。
+- schema 检查不再跳过 `$ref` 同级键和 `patternProperties`，直接 JavaScript 输入必须是纯 JSON 值。
+
+### 边界
+
+平台语法和账号状态只在精确母稿的适配子产物中；制作止于计划、控制、兼容证据、权利、人工交接与可行性。明确排除适配器描述、执行请求／预览／回执、媒体导入／探测、凭据交接、修复运行回执及平台工作流模板契约。插件 3.0.0 与保持兼容的 2.x 产物线版本独立。
+
+## 旧产品历史
+
+0.5.0 至 2.5.1 记录原多 Skill Studio、运行时和 World OS 架构；完整历史保留在相应不可变 Git 标签中，这些组件不属于 3.0.0 及当前 Skill 分发。

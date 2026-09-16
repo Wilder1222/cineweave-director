@@ -1,8 +1,8 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/sequence-rhythm-spec.schema.json",
-  "title": "CineWeave Director Sequence Rhythm Specification",
-  "description": "A provider-neutral, sequence-level rhythm plan that allocates exact integer-frame windows and explicit transition grammar without becoming an editorial conform or media executor.",
+  "title": "CineWeave 导演序列节奏规范",
+  "description": "平台无关的序列节奏计划，分配精确整数帧窗口并明确转场规则，不充当剪辑套底或媒体执行器。",
   "type": "object",
   "additionalProperties": false,
   "required": [

@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/scene-light-state.schema.json",
-  "title": "CineWeave Physical Scene Light State",
+  "title": "CineWeave 物理场景光照状态",
   "type": "object",
   "additionalProperties": false,
   "required": [

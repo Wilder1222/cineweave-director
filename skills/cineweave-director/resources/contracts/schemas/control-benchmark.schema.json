@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/control-benchmark.schema.json",
-  "title": "CineWeave ControlBench Suite",
+  "title": "CineWeave 控制基准套件",
   "type": "object",
   "additionalProperties": false,
   "required": [

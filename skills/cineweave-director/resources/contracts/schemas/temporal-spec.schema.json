@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/temporal-spec.schema.json",
-  "title": "CineWeave Director Temporal Specification",
+  "title": "CineWeave 导演时间规范",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -52,7 +52,7 @@
           }
         }
       ],
-      "description": "Optional exact visual anchor for the first frame; it carries visual DNA into temporal direction without changing the shot dependency."
+      "description": "可选的精确首帧视觉锚点，将视觉特征带入时间导演，不改变镜头依赖。"
     },
     "durationSeconds": {
       "type": "number",

@@ -85,6 +85,7 @@ const DISTRIBUTION_BASE_FILES = [
   `${SKILL_PREFIX}/reference-lifecycle.json`,
   `${SKILL_PREFIX}/resources/contracts/index.json`,
   `${SKILL_PREFIX}/scripts/check-delivery.mjs`,
+  `${SKILL_PREFIX}/scripts/check-video-plan.mjs`,
   `${SKILL_PREFIX}/scripts/check-shot-review.mjs`,
 ];
 const SOURCE_TOP_LEVEL = new Set([
@@ -112,7 +113,7 @@ const EXPECTED_SOURCE_DIRECTORIES = new Map([
   [".agents", ["plugins/marketplace.json"]],
   [".codex-plugin", ["plugin.json"]],
   [".github", ["workflows/validate.yml"]],
-  ["assets", ["cineweave-director-logo.png", "cineweave-director-plugin-icon.png"]],
+  ["assets", ["cineweave-director-logo.png"]],
   ["scripts", [
     "build-plugin-bundle.mjs",
     "canonical-json.mjs",
@@ -120,7 +121,7 @@ const EXPECTED_SOURCE_DIRECTORIES = new Map([
     "validate-output.mjs",
     "validate-repository.mjs",
   ]],
-  ["tests", ["build-plugin-bundle.test.mjs", "canonical-json.test.mjs", "validate-output.test.mjs", "check-delivery.test.mjs", "check-shot-review.test.mjs", "fixtures/ensemble-handoff.json", "evaluations/2026-09-08.md", "evaluations/2026-09-16-leos-review.md"]],
+  ["tests", ["build-plugin-bundle.test.mjs", "canonical-json.test.mjs", "validate-output.test.mjs", "check-delivery.test.mjs", "check-shot-review.test.mjs", "fixtures/ensemble-handoff.json", "evaluations/2026-09-16-leos-review.md", "evaluations/2026-09-08.md", "evaluations/cinematic-cases.json", "evaluations/2026-09-14.md", "evaluations/aigc-creation-research-2026-09-14.md"]],
 ]);
 const EXPECTED_REPOSITORY = "https://github.com/Wilder1222/cineweave-director";
 const TEXT_EXTENSIONS = new Set([".json", ".md", ".yaml", ".yml", ".mjs"]);
@@ -633,7 +634,7 @@ async function validateSkillSurfaces(root, plugin) {
   compareFileSets(Object.keys(frontmatter), ["name", "description"], "SKILL.md frontmatter fields");
   assert(frontmatter.name === SKILL_NAME, "SKILL.md name must match the plugin identity");
   assert(typeof frontmatter.description === "string" && frontmatter.description.length <= 1024, "SKILL.md description must be a non-empty Agent Skills description of at most 1024 characters");
-  assert(/\bUse (?:for|when)\b/u.test(frontmatter.description), "SKILL.md description must state when the Skill applies");
+  assert(/(?:\bUse (?:for|when)\b|适用于|在.+时使用)/u.test(frontmatter.description), "SKILL.md description must state when the Skill applies");
   assert(skillMarkdown.split("\n").length <= 500, "SKILL.md must remain below the 500-line progressive-disclosure limit");
 
   const agentYaml = await readFile(resolve(root, SKILL_PREFIX, "agents", "openai.yaml"), "utf8");
@@ -648,7 +649,7 @@ async function validateSkillSurfaces(root, plugin) {
 async function validateWorkflowEntrypoints(root) {
   const workflow = await readFile(resolve(root, ".github", "workflows", "validate.yml"), "utf8");
   const expectedWorkflow = [
-    "name: Validate",
+    "name: 项目校验",
     "",
     "on:",
     "  push:",
@@ -663,24 +664,24 @@ async function validateWorkflowEntrypoints(root) {
     "  validate:",
     "    runs-on: ubuntu-latest",
     "    steps:",
-    "      - name: Checkout",
+    "      - name: 检出源码",
     `        uses: ${EXPECTED_CHECKOUT_ACTION} # v4`,
-    "      - name: Use Node.js 22",
+    "      - name: 配置 Node.js 22",
     `        uses: ${EXPECTED_SETUP_NODE_ACTION} # v4`,
     "        with:",
     "          node-version: \"22\"",
-    "      - name: Test validation primitives",
+    "      - name: 运行校验回归测试",
     `        run: ${EXPECTED_PACKAGE_SCRIPTS.test}`,
-    "      - name: Verify contract index is current",
+    "      - name: 检查契约索引",
     `        run: ${EXPECTED_PACKAGE_SCRIPTS["contracts:index:check"]}`,
-    "      - name: Validate source distribution",
+    "      - name: 校验源分发",
     `        run: ${EXPECTED_PACKAGE_SCRIPTS.validate}`,
-    "      - name: Verify release tag matches version",
+    "      - name: 核对发布标签与版本",
     "        if: startsWith(github.ref, 'refs/tags/')",
     `        run: ${EXPECTED_RELEASE_TAG_COMMAND}`,
-    "      - name: Build byte-identical plugin bundle",
+    "      - name: 构建字节一致的插件包",
     `        run: ${EXPECTED_PACKAGE_SCRIPTS.build}`,
-    "      - name: Validate built bundle",
+    "      - name: 校验构建包",
     `        run: ${EXPECTED_PACKAGE_SCRIPTS["validate:bundle"]}`,
     "",
   ].join("\n");
@@ -758,7 +759,7 @@ export async function validateBundle(bundleRoot, sourceRoot = repositoryRoot) {
 }
 
 function usage() {
-  console.error("Usage: node scripts/validate-repository.mjs [--bundle <bundle-directory>]");
+  console.error("用法：node scripts/validate-repository.mjs [--bundle <构建包目录>]");
 }
 
 async function main() {
@@ -771,12 +772,12 @@ async function main() {
     process.exitCode = 2;
     return;
   }
-  console.log(JSON.stringify(result, null, 2));
+  console.log(JSON.stringify({ ...result, messageZh: result.mode === "bundle" ? "构建包校验通过，分发内容与源码一致。" : "源码、契约、引用和分发边界校验通过。" }, null, 2));
 }
 
 if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) {
   main().catch((error) => {
-    console.error(error instanceof Error ? error.stack || error.message : String(error));
+    console.error("项目校验失败，原始诊断：\n" + (error instanceof Error ? error.stack || error.message : String(error)));
     process.exitCode = 1;
   });
 }

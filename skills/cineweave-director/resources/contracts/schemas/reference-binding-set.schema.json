@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/reference-binding-set.schema.json",
-  "title": "CineWeave Exact Reference Binding Set",
+  "title": "CineWeave 精确参考绑定集",
   "type": "object",
   "additionalProperties": false,
   "required": [

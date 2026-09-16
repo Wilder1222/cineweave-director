@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/character-binding.schema.json",
-  "title": "CineWeave Shot Character Performance Binding",
+  "title": "CineWeave 镜头人物表演绑定",
   "type": "object",
   "additionalProperties": false,
   "required": [

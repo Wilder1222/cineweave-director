@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/shot-lighting-plan.schema.json",
-  "title": "CineWeave Shot Lighting Plan",
+  "title": "CineWeave 镜头用光计划",
   "type": "object",
   "additionalProperties": false,
   "required": [

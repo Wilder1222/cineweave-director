@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/color-pipeline-profile.schema.json",
-  "title": "CineWeave Production Color Pipeline Profile",
+  "title": "CineWeave 制作调色管线档案",
   "type": "object",
   "additionalProperties": false,
   "required": [

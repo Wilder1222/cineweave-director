@@ -1,7 +1,7 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
   "$id": "https://cineweave.dev/contracts/shot-spec.schema.json",
-  "title": "CineWeave Director Shot Specification",
+  "title": "CineWeave 导演镜头规范",
   "type": "object",
   "additionalProperties": false,
   "required": [
@@ -268,12 +268,12 @@
     "lightingPlanRef": {
       "$ref": "common.schema.json#/$defs/contractRef",
       "deprecated": true,
-      "description": "Forbidden legacy back-reference. ShotLightingPlan is downstream and must reference this ShotSpec instead."
+      "description": "禁止使用旧式反向引用。ShotLightingPlan 属于下游，应由它引用此 ShotSpec。"
     },
     "temporalSpecRef": {
       "$ref": "common.schema.json#/$defs/contractRef",
       "deprecated": true,
-      "description": "Forbidden legacy back-reference. TemporalSpec is downstream and must reference this ShotSpec instead."
+      "description": "禁止使用旧式反向引用。TemporalSpec 属于下游，应由它引用此 ShotSpec。"
     },
     "performanceTimelineRefs": {
       "type": "array",

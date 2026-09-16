@@ -1,39 +1,38 @@
-# Route: action
+<a id="route-action"></a>
+# 路由：动作（action）
 
-Use for fights, pursuits, escapes, rescues, complex prop interaction, or any sequence with several causal spatial changes. Resolve `ActionSequenceSpec` before lenses and individual shots.
+用于打斗、追逐、逃离、救援、复杂道具互动，或具有多次因果性空间变化的段落。先明确动作节拍与空间因果，再选择镜头和焦段；规范交接时才映射为 `ActionSequenceSpec`。
 
-## Beat structure
+<a id="beat-structure"></a>
+## 节拍结构
 
-Each beat closes:
+每个节拍形成闭环：
 
-`trigger → objective → attack/action → defense/response → counter/choice → contact or miss → result → changed spatial state`
+`触发 → 目标 → 进攻／行动 → 防御／回应 → 反制／选择 → 接触或落空 → 结果 → 空间状态改变`
 
-Record entry, change, and exit state; participating exact Character/Scene bindings; named zones and trajectories; performance intent; coverage requirement; continuity effects; and visible risk.
+记录进入、变化、退出状态，参与者的精确人物／场景绑定，命名区域和运动轨迹，表演意图，覆盖要求，连续性影响和可见风险。
 
-A trajectory states start anchor, path, target, contact logic, and end anchor. Avoid “dynamic fight” or “moves quickly” without mechanics.
+轨迹包含起点锚点、路径、目标、接触逻辑和终点锚点。不要只写“动感打斗”“快速移动”而没有可见动作机制。
 
-For a consequential prop or mechanism, track what the viewer must see change: initial configuration, trigger, necessary intermediate state, resulting possession/configuration, and residual motion. A closed case cannot become empty without a supported opening or deliberate intelligible ellipsis. Divergent story choices need separate action branches when they change positions, resistance or outcomes; do not combine incompatible alternatives into one ambiguous sequence.
+关键道具或机关需要追踪观众应看见的变化：初始结构、触发、必要中间状态、结果中的持有／配置与残余运动。闭合箱子不能无故变空，除非展示打开或有意采用可理解的省略。不同故事选择若改变位置、阻力或结果，分别建立动作分支，不将互斥方案混为含糊序列。
 
-When perceived danger depends on distance or scale, include a legible spatial reference and the consequence the character anticipates. Preserve the selected story stakes; these are visual storytelling requirements, not instructions for performing a dangerous act. Adapted as conditional guidance from [Leos directing grammar](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/directing-grammar.md).
+危险感依赖距离或尺度时，给可辨认的空间参照与人物预期后果，保留既定故事代价；这是视觉叙事要求，不是实际危险行为的操作说明。独立参考 [Leos 导演语法](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/directing-grammar.md)形成条件性指导。
 
-## Weapons and techniques
+<a id="weapons-and-techniques"></a>
+## 武器与技法的画面表达
 
-For every visible weapon or tool state name/type, dimensions or handling characteristics relevant to readability, current holder, start/end state, and interaction constraints. Describe techniques by observable mechanics and cause, not decorative labels. Keep attack–defense–counter order explicit.
+对可见武器或工具，写明名称／类型、影响画面可读性的尺寸或持握特点、当前持有人、起止状态和互动约束。用可观察动作机制与因果描述技法，不只写装饰名称。明确行动、防御、反制顺序。
 
-Do not provide executable harm instructions, rigging, impact, fall, vehicle, fire, water, crowd, or weapon methods. Flag them for qualified external review. A creative action plan is not stunt or safety approval.
+不提供可执行伤害方法，也不提供实际吊挂、冲击、跌落、车辆、火、水、人群或武器实施方案。相应风险交由外部合格人员评审。创作动作计划不等于特技或安全批准。
 
-## Coverage
+<a id="coverage"></a>
+## 镜头覆盖
 
-Coverage requirements protect causal readability, not a fixed shot count. State which beats require geography, setup, contact, reaction, consequence, or transition evidence. A later `ShotSpec` selects exact beat IDs and cannot rewrite them.
+覆盖要求服务因果可读性，不服务固定镜头数量。说明哪些节拍需要地理、准备、接触、反应、结果或转场证据。下游 `ShotSpec` 选择精确节拍 ID，不能改写节拍本身。
 
-## Quality gate
+<a id="quality-gate"></a>
+## 质量关卡
 
-- playable geography and contact;
-- no teleporting props or body states;
-- force, weight, and reaction are causally legible;
-- entry/change/exit states close;
-- selected risks remain visible;
-- all hard bindings exact or explicitly blocked;
-- prompt handoff contains only the selected beat's observable details.
+空间与接触可表演；道具和身体状态不瞬移；力量、重量和反应因果清楚；进入／变化／退出闭合；风险持续可见；硬绑定精确或明确阻断；提示词交接只包含选中节拍的可观察细节。
 
-Output: `ActionSequenceSpec`.
+可选规范输出（仅在请求结构化交接时）：`ActionSequenceSpec`。
