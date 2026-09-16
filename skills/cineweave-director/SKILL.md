@@ -7,8 +7,6 @@ description: "中文 AIGC 创作 Skill：将想法、剧本或参考素材转成
 
 先交付能直接使用的创作稿。根据请求选择故事、人物、场景、镜头、提示词或评审工作，普通创作无需建立整套项目或填写数据契约。
 
-<a id="start-here"></a>
-<a id="creator-intents"></a>
 ## 从交付物开始
 
 | 用户需要 | 本次交付 | 何时深入 |
@@ -19,12 +17,11 @@ description: "中文 AIGC 创作 Skill：将想法、剧本或参考素材转成
 | 短片／短剧的完整方案 | 简报、节拍、资产表、分镜、所选路径的完整视频及参考图提示词、声音和剪辑安排 | 按阶段读取当前路由，交接时再读视频指南 |
 | 已有图转视频 | 保留输入画面事实，写动作过程、运镜、终态和时长 | 需要首尾帧、参考分工或平台参数时读对应指南 |
 | 无图的视频创作 | 完整文字初态、动作、运镜、光色、时长与声音意图 | 需要选择文生视频或先制首帧时读制作规划 |
-| 全能参考／提示词多镜头／九宫格转视频 | 参考职责、画格与镜号映射、单镜或多镜时间线、完整视频稿及必要分镜板稿 | 按[视频路径](references/optional/video-platform-adaptation.md#mode-selection-with-deliberate-fallbacks)选择输入形式与镜头组织 |
+| 全能参考／提示词多镜头／九宫格转视频 | 参考职责、画格与镜号映射、单镜或多镜时间线、完整视频稿及必要分镜板稿 | 按[视频路径](references/optional/video-platform-adaptation.md#模式选择与明确替代)选择输入形式与镜头组织 |
 | 结果有问题 | 指出可见问题，给可执行修改稿及复查点 | 缺实际素材时仅诊断可能原因，不声称已观察到 |
 
 只有需求为空才给少量创作方向帮助起步。细节不足但不影响主要结果时，说明合理假设并完成草稿；只询问会使交付失效的缺口。已有授权和明确选择直接继承。原创或补写提示词时，读取[细节与专业表达](references/optional/prompt-detail-standard.md)的对应章节；单条提示词不自动扩成分镜或制作包。精确翻译保留原文范围。
 
-<a id="operating-sequence"></a>
 ## 创作顺序
 
 请求完整短片或全套提示词时，按[完整短片创作](references/optional/short-film-creation.md)完成所有适用交付，不以镜头摘要或一条示范代替逐项成稿。需要人物、表演、服饰或场景探索时，读取[视觉开发](references/optional/visual-development.md)；完整样例见[《留一盏灯》](references/optional/short-film-example.md)。
@@ -41,7 +38,6 @@ description: "中文 AIGC 创作 Skill：将想法、剧本或参考素材转成
 
 完整设计／提示词评审在 Node 可用时运行随包检查器。`valid` 只说明输入有效，还需检查覆盖、未决项和完成状态；在授权范围内修正 `revise`，递增版本并复查相邻连续性，缺证据保留 `unknown`。默认只展示简短结论；规划检查完成不能替代实际媒体验收。
 
-<a id="non-negotiable-rules"></a>
 ## 创作约定
 
 - 默认**简体中文**，覆盖正负向提示词、复制稿、变体和交接说明。用户指定的台词、字幕、标题及专有名称保留原文；仅按明确要求生成其他语言版本。机器字段、枚举、路径和命令保持原样。
@@ -51,7 +47,6 @@ description: "中文 AIGC 创作 Skill：将想法、剧本或参考素材转成
 - 用户给定事实优先于创作建议。原创草稿可补可撤销的细节；不能把草稿、提示词或模拟示例当成批准事实、素材权利或真实生成结果。
 - 本 Skill 提供创作与只读检查，不调用生成供应商或宣称已导入、生成、发布。未知平台能力只影响依赖它的适配步骤，不阻止独立创作。
 
-<a id="tagged-node-handoff"></a>
 ## 提示词与视频交接
 
 涉及完整短片或连续分镜时，按[拍摄系统与部门协同](references/optional/prompt-detail-standard.md#拍摄系统与部门协同)建立空间与轴线、构图摄影、光位曝光、收音声场及场记的共同基线；逐镜交代变化，并联合检查走位、灯影、拾音、反射与剪辑冲突。单镜任务只读取相关维度；纯 AIGC 写可见／可听结果和制作依赖，实拍／混合方案再展开现场配置。需要安排资产、试片、候选与返工时，使用[制作闭环](references/routes/production-plan.md#从设计到候选验收)。
@@ -62,7 +57,6 @@ description: "中文 AIGC 创作 Skill：将想法、剧本或参考素材转成
 
 平台、模型、界面与模式分别核对；未指定平台时先交付通用中文稿，不编造参考槽位、时长档位或导入格式。详见[平台适配](references/optional/video-platform-adaptation.md)、[表演与运镜](references/optional/video-performance-direction.md)、[时长与余量](references/optional/video-timing-and-handles.md)。
 
-<a id="routes"></a>
 ## 按需深入
 
 单领域只读对应路由；跨领域按当前阶段读取。[工作模型](references/core/operating-model.md)用于多阶段任务，[连续性](references/core/visual-bible-and-continuity.md)用于复用设定，[产物控制](references/core/artifact-control-and-precedence.md)用于版本与正式设定冲突，[参考证据](references/core/reference-evidence-and-rights.md)用于素材分析与权利判断。不要一次加载全部文档。
@@ -82,10 +76,8 @@ description: "中文 AIGC 创作 Skill：将想法、剧本或参考素材转成
 | `production_plan` | 制作规划 | [资产任务、装配、剪辑／调色、控制、权利与可行性](references/routes/production-plan.md) |
 | `review_repair` | 评审与修复 | [基于实际证据评审、诊断和有界单变量修复](references/routes/review-repair.md) |
 
-<a id="optional-references"></a>
 专项资料由各路由链接按问题选择；[加载清单](reference-lifecycle.json)记录分发和适用条件，并非必读清单。原创镜头遇到调度或可读性问题时，用[镜头工作台](references/optional/shot-design-workbench.md)；需要比较技法时，再读[技法库](references/optional/master-style-presets.md)相关小节；生成失败时查[诊断索引](references/optional/generation-diagnostics.md)。
 
-<a id="contract-output"></a>
 ## 可选结构化交付
 
 默认中文正文、表格或节点稿。只有用户要求规范 JSON 或已有系统需要时，才从 [contracts.json](contracts.json) 与[契约索引](resources/contracts/index.json)选择对应 schema 和示例。精确 kind、ID、版本、哈希及引用保持兼容，不暗中解析 `latest`；`@Asset` 通过指定注册表绑定。元数据不足时使用[工作稿](references/optional/drafts-and-change-impact.md)，不编造正式引用或回执。规范示例中的批准与证据仅为模拟数据。

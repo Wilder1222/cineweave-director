@@ -1,9 +1,7 @@
-<a id="optional-cinematography-craft--space-light-movement"></a>
 # 可选参考：摄影方法，空间、光与运动
 
-用于焦距／透视选择、复杂照明、有动机运镜、镜头匹配或加强摄影设计。本指南是视觉设计，不是设备操作，也不保证摄影元数据可控制图像／视频模型。数值路径参见[摄影机预演](camera-previsualization.md)，色彩流程交接参见[剪辑与调色](video-sound-and-delivery.md#editorial)。
+用于焦距／透视选择、复杂照明、有动机运镜、镜头匹配或加强摄影设计。本指南是视觉设计，不是设备操作，也不保证摄影元数据可控制图像／视频模型。数值路径参见[摄影机预演](camera-previsualization.md)，色彩流程交接参见[剪辑与调色](video-sound-and-delivery.md#剪辑)。
 
-<a id="camera-distance-before-lens-prestige"></a>
 ## 先定距离与关系，再选焦距
 
 先决定观众与主体的关系、可达机位、取景和对焦需要，再选择焦距。
@@ -20,14 +18,12 @@
 
 AIGC 交接写出可见关系，例如“近处手比脸更大，门洞向后退远”，数值摄影意图另存。未经输出评审，不能声称模型遵守真实光学。
 
-<a id="composition-as-attention-not-a-grid-rule"></a>
 ## 构图组织注意力，不是套网格
 
 选择一个主要注意力目标及必要竞争目标。用尺度、反差、焦点、运动、负空间、遮挡和视线留白服务关系。居中、不对称、拥挤或深空间构图，只要目的明确都可以成立。
 
 在交付尺寸和动作转折点检查，不只看首张主视觉帧。亮灯、反光、移动群演或字幕区域可能抢走注意力。保留必要手部、接触点和出口，不能靠裁掉空间矛盾来修复。
 
-<a id="source--modification--surface--readable-result"></a>
 ## 光源 → 调整 → 表面 → 可读结果
 
 每项重要灯光决定都明确精确场景光源、已批准反射／透射表面、人物朝向、源与主体关系、遮挡及高光／阴影结果。新灯具、反射面或窗户改变须由场景提案负责，`ShotLightingPlan` 不能自行制造。
@@ -43,7 +39,6 @@ ARRI 手册区分光质与强度，并讨论控制柔光溢出的困难。示例
 
 **失败检查：**为反打和人物路径建立一致光源图，检查入场、转身、终态。新增“电影感”光没有批准来源时，回到场景或移除。
 
-<a id="movement-and-focus-as-changing-access"></a>
 ## 运镜与焦点改变信息可见性
 
 | 选择 | 值得测试的作用 | 失败信号 |
@@ -69,7 +64,6 @@ ARRI 手册区分光质与强度，并讨论控制柔光溢出的困难。示例
 
 设计参考：[Leos 摄影指南的已审阅快照](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/cinematography-direction.md)，独立转化为条件性选择，不设固定设备或效果预设。
 
-<a id="shot-matching-and-aigc-evidence"></a>
 ## 镜头匹配与 AIGC 证据
 
 匹配世界坐标中的光源方向、视线、画面移动、道具位置、外观和材质响应。反打时不能盲目保持主光位于相同屏幕侧。失配可能属于场景、人物、导演或风格，应按归属修复。

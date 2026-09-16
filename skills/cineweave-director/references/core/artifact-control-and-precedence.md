@@ -1,14 +1,11 @@
-<a id="artifact-control-and-precedence"></a>
 # 创作产物控制与优先级
 
-<a id="keep-layers-separate"></a>
 ## 保持分层
 
 `创作意图 → 世界／正式设定 → 人物与场景状态 → 表现方式 → 镜头／时间 → 提示词适配 → 制作计划 → 实际观察证据`
 
 下游可以选择或收窄上游事实，但不能悄悄重新定义它。提示词措辞不是正式设定。风格不能改写身份或地理；摄影机不能改写演员表演；评审不能把推断当成实际可见证据。
 
-<a id="exact-references-and-versions"></a>
 ## 精确引用与版本
 
 调用者给出 `kind`、ID、版本、内容哈希时，必须逐字保留。不要自行解析 `latest`、编造哈希，或凭记忆重建仓库回执。拿不到精确引用时，应明确标注工作引用，或将依赖保留为待解决。
@@ -30,7 +27,6 @@
 
 不得把下游引用重新插入已经计算哈希的父产物。
 
-<a id="three-vocabularies-that-must-not-collapse"></a>
 ## 三套不可混用的词汇
 
 - 创作可变性：`hard / soft / free / undefined`。
@@ -39,7 +35,6 @@
 
 它们分别回答“事实能否改变”“失败是否阻止推进”“表现规则应有多明显”。这些值都不是平台数值权重。中文说明不能改写这些机器枚举。
 
-<a id="control-card"></a>
 ## 控制卡
 
 对容易丢失的要求，编写简短控制卡：
@@ -55,7 +50,6 @@ allowedDeviation: 明确容差，或未知
 reviewDimension: world | story | identity | appearance | geography | action | camera | light | style | prompt | rights
 ```
 
-<a id="conflict-precedence"></a>
 ## 冲突优先级
 
 权利与证据有效性首先构成关卡。在证据有效的前提下，依次采用：

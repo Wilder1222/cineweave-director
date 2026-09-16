@@ -1,9 +1,7 @@
-<a id="route-reference_evidence"></a>
 # 路由：参考证据（reference_evidence）
 
 用于用户提供图像／视频、要求参考分析、需要有范围的迁移规则，或使用 `@Asset` 别名的情况。始终加载[参考证据与权利](../core/reference-evidence-and-rights.md)。
 
-<a id="procedure"></a>
 ## 流程
 
 1. 确认媒体真实可访问，并说明用途。
@@ -26,17 +24,14 @@
 
 连续候选出现劣化时，先与原始参考比较，再判断是否由迭代导致。保留来源链，指出实际变化，建议返回最干净且相关的权威来源，不把有缺陷的派生结果提升为正式设定。本节对 [Leos 参考控制讨论](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/spatial-and-assets.md)作条件性改写，不保证更强控制或转换参考必然改善模型输出。
 
-<a id="alias-rules"></a>
 ## 别名规则
 
 别名通过已提供的精确 `AssetAliasRegistry` 解析，包含范围、版本及内容哈希。不能推断全局别名、归一化成另一个资产或选择最新候选。
 
-<a id="provider-projection-bindings"></a>
 ## 平台适配绑定
 
 平台适配只能通过精确 `ReferenceObservation` 引用使用参考，包含一个有类型的角色、保留清单、排除清单和由人工确定的外部定位占位。账号个性化、情绪板和平台风格码属于适配状态，不是视觉证据。提交过定位地址或代码，并不证明输出保留了预期角色。
 
-<a id="quality-gate"></a>
 ## 质量关卡
 
 每条观察一个主角色；源和选择器精确；可见事实与推断分离；迁移与排除项不重叠；阻止身份／地理污染；权利按用途判断；不可访问媒体不能描述为已经观察。

@@ -1,11 +1,9 @@
-<a id="optional-directing-craft--intention-performance-staging"></a>
 # 可选参考：导演方法，意图、表演与调度
 
 用于场景导演、演员说明、覆盖方案比较、悬念、群像调度或加强导演设计。光学／灯光决策参见[摄影方法](cinematography-craft.md)，剪辑与听觉视点参见[剪辑与声音方法](editing-sound-craft.md)，来源与练习见[电影方法学习](film-craft-study.md)。
 
 这些是决策辅助，不是普遍定律。电影人的自述证明其创作实践，不证明该方法适合当前场景。创意起草时用[自动手法适配](master-style-presets.md)，不要求预设问卷；仅分析／评审不授权重新风格化。保留已批准故事、表现方式、身份和共同视觉基线。使用用户语言，技术词应澄清可观察选择。
 
-<a id="decide-what-the-audience-experiences"></a>
 ## 先决定观众体验
 
 选择设备前，明确场景组织方式：戏剧因果、观察、主观体验、散文／联想或明确混合。戏剧创作跟踪目标、阻力、策略、转折；观察或随笔创作跟踪注意力、时长、关系或联想变化，不为填模板而编造对抗。
@@ -16,7 +14,6 @@
 
 通常一个有意义备选即可。简单镜头不需要长分析。有效备选改变视点、调度、揭示时机或时长，不只是更换镜头品牌形容词。用户已锁定选择时，在锁定范围内诊断和改善。
 
-<a id="information-and-point-of-view"></a>
 ## 信息与视点
 
 场景依赖发现、隐瞒、不确定性或阵营变化时使用。
@@ -31,7 +28,6 @@
 
 **检查：**写出线索前后观众可能的解释。如果完全相同，应给揭示另一个目的或删除它。
 
-<a id="playable-performance-not-prescribed-emotion"></a>
 ## 可表演任务，而非规定情绪
 
 Judith Weston 的公开教学简介强调剧本分析、潜台词、可表演发现、排练与评议。以下是项目应用，不是课程复刻。[教学背景](https://judithweston.com/web/bio/longform-bio)
@@ -58,7 +54,6 @@ Judith Weston 的公开教学简介强调剧本分析、潜台词、可表演发
 
 设计参考：[Leos 表演指南的已审阅快照](https://github.com/MasterLeos/leos-six-department-directing-team-skill-v1/blob/2ed50edb3c7838fc9ffb68e50824e0ebff59c7d4/references/performance-direction.md)。本节为独立编写的决策辅助，不是课程复刻或模型效果保证。
 
-<a id="blocking-as-relationship"></a>
 ## 用调度表达关系
 
 在批准空间内，通过调度改变可见性、权威、亲密、排斥或立场。
@@ -71,7 +66,6 @@ Judith Weston 的公开教学简介强调剧本分析、潜台词、可表演发
 
 **检查：**先画／描述俯视布置，不用摄影机词汇，再确认取景能读出关系。不编造场景拓扑。
 
-<a id="holding-versus-cutting"></a>
 ## 连续观察还是切镜
 
 连续画面能保留同时关系和等待的不确定性；剪辑可以控制可见信息、省略时间，或让倾听者代替说话人成为中心。按体验选择，不给技术排“高级程度”。
@@ -82,14 +76,12 @@ Judith Weston 的公开教学简介强调剧本分析、潜台词、可表演发
 
 不要求每个停留都增加剧情。马特尔讨论《扎马》时把时间和声音视为体验构造核心，持续倾听本身可以是事件，但仍需明确感知功能。[BFI 访谈](https://www.bfi.org.uk/interviews/lucrecia-martel-time-zama)
 
-<a id="selection-and-restraint"></a>
 ## 选择与克制
 
 Donald Richie 对黑泽明的亲历记录提到：漂亮素材如果拖延行动或削弱戏剧效果，也会被舍弃。这反驳“漂亮帧就是好导演”，不意味着所有电影都必须快。[Criterion 记录](https://www.criterion.com/current/posts/938-throne-of-blood)
 
 对炫技设计问：删掉会失去什么？若只失去展示技巧的机会，就简化。氛围、歧义、联想或持续注意本就是已批准功能时，应保留有表现力画面。
 
-<a id="contract-handoff"></a>
 ## 契约交接
 
 这些说明不是新 schema 字段。规范输出前阅读选定 schema。

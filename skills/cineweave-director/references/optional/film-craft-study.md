@@ -1,16 +1,13 @@
-<a id="optional-film-craft-study-and-evaluation"></a>
 # 可选参考：电影方法学习与评测
 
 用于方法研究、电影创作路线比较、练习设计或评估 Skill 的导演决定。普通镜头任务只加载相关[导演](directing-craft.md)、[摄影](cinematography-craft.md)或[剪辑／声音](editing-sound-craft.md)指南。
 
-<a id="scope-and-evidence"></a>
 ## 范围与证据
 
 研究快照：**2026-09-08**。这是一份代表性的国际学习地图，不是穷尽世界电影的经典目录，也不证明已掌握课程。它选取不同国家和传统的机构与创作者；国籍不是视觉预设。证据来自公开网页与可读文字。课程大纲只证明所宣传的主题，不证明教学成效；视频目录不证明已经观看声画内容。
 
 操作卡和练习是 CineWeave 原创综合。以下来源声明有意保持狭窄。不把付费课程、书籍、电影帧或逐字稿复制进发行包；链接内容保留各自权利。推荐报名前应重新核实访问条件和当前课程。本工作流不购买、不报名。
 
-<a id="public-course-and-technical-learning-map"></a>
 ## 公开课程与技术学习地图
 
 | 来源 | 原研究实际查阅的公开证据 | 对本项目的启发 |
@@ -25,7 +22,6 @@
 | [ARRI Academy 技术讲解](https://www.arri.com/en/learn-help/arri-academy/tech-tips-tech-talks) | 摄影与灯光学习目录；未审看视频 | 测试发现特定缺口后再针对学习，设备不构成审美权威 |
 | [Nikon 焦距与透视](https://www.nikonimgsupport.com/na/NSG_article?articleNo=000047395&configured=1&lang=en_SG) | 官方索引文字区分机位与镜头选择；全文获取失败 | 修正距离／焦距混淆，不从摘录外推其他光学结论 |
 
-<a id="practitioner-comparisons-not-master-presets"></a>
 ## 比较创作实践，不把来源当现成预设
 
 本节记录研究证据，不是可以直接执行的指令。创意起草使用[自动手法适配](master-style-presets.md)，按简报匹配并保留同一视觉基线；该指南另行声明来源覆盖和局限。
@@ -43,7 +39,6 @@
 
 另两项仍仅属**发现线索**：[杜可风艺术过程访谈](https://theasc.com/post/the-film-book/christopher-doyle-interview-the-artistic-process/)提供嵌入视频和简短介绍，没有可用完整技法逐字稿；[塞姆班谈非洲电影](https://www.bfi.org.uk/sight-and-sound/interviews/bfb-archive-revisted-ousmane-sembene-state-african-cinema)有索引但全文多次获取失败。它们是继续学习入口，不是虚构“亚洲／非洲摄影规则”的证据。相关传统覆盖仍不完整。
 
-<a id="deliberate-practice-loop"></a>
 ## 刻意练习循环
 
 阅读不证明导演熟练。用户要求练习、或重大选择需要证据时，执行有界练习：
@@ -57,7 +52,6 @@
 
 可用练习：同一对话的共享视图与选择性覆盖；主体同样大小的两个视点；同一批准光源下两种人物朝向；同一剪辑的不同听觉优先级；没有新剧情事件的 20 秒连续观察。这些是原创练习，不复制院校作业。
 
-<a id="behavioral-evaluation-set"></a>
 ## 行为评测集
 
 检查决定与约束，而非逐字匹配。这些**不是已通过测试**，也不替代发行验证。新评测应让获授权的独立评估者只收到 Skill 和以下请求，不附检查答案。输出放在源树之外。记录 Skill 修订、模型、提示、回答、量表判断和证据限制。作者独自评估只能称自评，不是独立测试。

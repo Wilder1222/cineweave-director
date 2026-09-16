@@ -1,11 +1,9 @@
-<a id="optional-midjourney-prompt-projection"></a>
 # 可选参考：Midjourney 提示词适配
 
 `verifiedAt: 2026-09-02`
 
 仅在用户明确要求为 Midjourney 准备提示词时加载。本文件是有时效的方言适配，不是规范创作事实，也不是执行适配器。中文化不代表重新核验以下平台能力；保留原核验日期，使用前按下列触发条件复核。
 
-<a id="boundary-and-authority"></a>
 ## 边界与权威
 
 单向链：
@@ -18,15 +16,12 @@
 
 默认模型变化、请求界面不同、参数未明确覆盖，或距 `verifiedAt` 超过 30 天时重新核验。未知兼容性阻断依赖它的制作交接，不能用猜测默认补齐。
 
-<a id="stable-projection-method"></a>
 ## 稳定适配方法
 
-<a id="1-resolve-the-exact-source"></a>
 ### 1. 解析精确源
 
 普通请求以完整中文母稿为输入，输出可复制适配稿及当前核验的必要参数，不要求先建 JSON。仅在规范交接时按类型、ID、版本、内容哈希绑定一个精确 `PromptRecord` 或 `ImagePrompt`，并绑定用于可行性声明的精确 `CapabilityProfile`。不把无版本散文提示词当成规范母稿，也不暗推当前能力。
 
-<a id="2-write-the-visible-result-first"></a>
 ### 2. 先写可见结果
 
 [官方提示词基础](https://docs.midjourney.com/hc/en-us/articles/32023408776205-Prompt-Basics)建议简洁清楚地描述目标图，而非长指令清单。第一稿围绕主要主体及关键状态／动作、环境与空间关系、读懂节拍所需构图／视点、有动机光照与材质响应、表现／风格机制，以及必要失败预防。
@@ -42,7 +37,6 @@
 
 不设全局形容词黑名单或硬 token 上限。简短来自准入、语义去重、参考去重和删除测试，不能抹除正式设定。母稿默认中文，用户需要英文时单独提供英文适配，不修改内容决定。
 
-<a id="3-separate-body-references-and-parameter-tail"></a>
 ### 3. 分开正文、参考和参数尾
 
 [官方参数列表](https://docs.midjourney.com/hc/en-us/articles/32859204029709-Parameter-List)要求参数位于正文后，`--` 前有空格，参数区域不插入无关标点。
@@ -51,26 +45,22 @@
 
 不能隐藏账号／界面默认。记录模型、界面、Raw、个性化状态、默认画幅、默认 stylize／variety 和固定参考图。不能检查则标 `unknown`，要求执行者提交前确认。
 
-<a id="4-bind-references-by-role"></a>
 ### 4. 按角色绑定参考
 
 使用模型和界面支持的最窄机制：`image_prompt` 提供内容／构图／色彩参考，不证明身份；`style_reference` 提供色彩／媒介／纹理／灯光处理／视觉语法，不迁移身份内容；`edit_reference` 是 V8 Edit Model 修改或参考创作来源；`omni_reference` 是 V7 人／物形态参考；`personalization_profile` 是账号审美偏好；`moodboard` 是宽泛项目审美范围。以上是原核验快照，不能跨版本外推。
 
 每个绑定保留源观察角色和排除项。私有路径、签名链接、凭据或未批准肖像不进入适配。真实上传／URL 在产物外时使用人工解析定位占位。
 
-<a id="5-build-one-variable-experiments"></a>
 ### 5. 单变量实验
 
 创建基线及回答命名问题所需的变体。每个变体声明一个变化变量、精确固定项、预期可见效果、验收检查，以及是否在短会话内固定 seed。
 
 不同时改文字、参考、模型、画幅、stylize、chaos、seed。seed 是实验控制，不是风格／身份书签。[Seeds 文档](https://docs.midjourney.com/hc/en-us/articles/32604356340877-Seeds)在原快照中给出 0–4294967295，提醒跨会话复现不保证，Turbo 中锁种子不可靠。
 
-<a id="6-validate-compatibility-before-handoff"></a>
 ### 6. 交接前检查兼容
 
 明确记录 `pass`、`warn`、`block` 或 `unknown`。语法有效不证明与模型、参考模式、界面、账号状态或其他参数兼容。
 
-<a id="verified-midjourney-matrix"></a>
 ## 原核验快照中的 Midjourney 能力表
 
 2026-09-14 仅复查了下方版本页：V8.2 默认版本及 V8.1／V8.2 不支持 Quality 参数、Omni Reference 和多提示词的比较表已核对。其他专页仍保留原日期，不能据此宣称整张表重新核验。
@@ -99,26 +89,22 @@
 
 至少检查：模型／界面已知、参数顺序、模型支持、参考模式、参考数量、参考／参数冲突、账号默认、权利，以及官方文档歧义。
 
-<a id="promptprojectionplan-design"></a>
 ## PromptProjectionPlan 设计
 
 根契约包含：精确产物身份／状态／版本／`skillReceipt`／来源；限定到 `PromptRecord` 或 `ImagePrompt` 的 `sourcePromptRef`；精确 `capabilityProfileRef`、必需 `licenseProfileRef`、可选 `capabilityResolutionPlanRef`；`dialectId`、显式 `modelVersion`、`surface`、`verifiedAt`；含标题／URL／检查日期／限定声明的官方证据；`promptBody`、有序 `parameterTokens`、类型化 `referenceBindings`、最终 `renderedPrompt`；基线与单变量变体／固定项；有阻断语义的兼容检查，其中恰有一个绑定精确许可档案的 `check.rights-licensing`；包含默认检查与人工批准的手动交接；准确返回清单；常量 `projectionOnly` 为 `true`，`mutatesCanon`、`generatesMedia`、`invokesExternalTool` 均为 `false`。
 
 平台代码与定位地址仅属于适配，不反向流入母稿。人工报告真实提交后，返回码可以进入证据／评审或适配子版本。
 
-<a id="manual-handoff"></a>
 ## 人工交接
 
 所有阻断检查通过才给可直接提交提示词。交接说明：选择所记录模型／界面；检查并关闭或记录隐藏默认；将获批参考放入对应槽位；粘贴正文和唯一参数尾；权利和人工关卡通过后手动提交；不从提交界面报告成功；返回下列准确文件和元数据。
 
-<a id="exact-return-checklist"></a>
 ### 准确返回清单
 
 不经重建地返回：外部任务ID／创建时间；界面和实际模型版本；准确提交与最终解析提示词；有序提交参数及返回参数；实际画幅、尺寸、模式、质量、风格化、变化程度、怪异程度、原始模式及可用的随机种子；提交的个性化／情绪板／风格ID及解析码；输入参考槽位类型、数量、稳定用户侧资产ID，不含凭据或短期私链；原始下载文件、文件名，文件本地可用后才算哈希；警告、审核阻断、不兼容、自动改参、失败变体；每份输出对应哪个基线／单变量变体。
 
 缺项标未知，不造任务ID、代码、seed、哈希、路径或成功声明。
 
-<a id="community-patterns-adoptedand-rejected"></a>
 ## 社区方法的采纳与拒绝
 
 社区是次级来源，不能证明当前平台行为：

@@ -1,4 +1,3 @@
-<a id="optional-semantic-morphology"></a>
 # 可选参考：语义形态
 
 只在用户需要可编辑、可复用的脸部／身体设计，而非一次性相貌描述时加载。

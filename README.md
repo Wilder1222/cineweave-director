@@ -46,7 +46,7 @@
 | 分镜与图生视频 | 逐镜初态、动作、终态、运镜、表演、声音及剪辑余量 |
 | 参考与修复 | 参考职责分工、可见问题、保留项、最小修改及复查点 |
 
-创作时保留同一人物、服装、空间和视觉基线。每句提示词应有可见作用，避免堆叠空泛修饰；首帧画面与视频过程分开，不用一张静帧证明整段动作完成。完整演示见[三镜头创作示例](skills/cineweave-director/references/optional/creative-workflow-evaluation.md#worked-three-shot-draft)。
+创作时保留同一人物、服装、空间和视觉基线。每句提示词应有可见作用，避免堆叠空泛修饰；首帧画面与视频过程分开，不用一张静帧证明整段动作完成。完整演示见[三镜头创作示例](skills/cineweave-director/references/optional/creative-workflow-evaluation.md#三镜头衔接示例)。
 
 这是创作与规划 Skill，不调用生成平台，也不把计划当作媒体结果。模型参数、参考槽位和时长档位按实际界面核验；没有素材时可以提供方案，不能虚构观察。
 
