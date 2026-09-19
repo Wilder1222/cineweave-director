@@ -47,6 +47,8 @@ npm run validate:bundle
 
 基础白名单包含只读 `skills/cineweave-director/scripts/check-delivery.mjs`、`check-video-plan.mjs` 和 `check-shot-review.mjs`。保持自包含，不调用平台、生成媒体、改配置或写文件。计算输入变化时同步对应指南与回归测试；从完整构建包运行工具验证安装独立性。逐镜评审的 `valid`、`coverageComplete`、`reviewComplete` 分别验收，规划通过不等于媒体通过。`tests/evaluations/` 是开发证据，不分发到 Skill。
 
+交付检查器的可选旁白轨仅检查声明的声画对应，支持跨切点和无旁白镜头，不测量语音，也不要求字幕切分等同于旁白切分。
+
 ## 变更和发布
 
 提交保持聚焦、说明清楚。未经协调不改写他人工作或公开历史。用户可见行为、契约、知识、分发变化记录到 `CHANGELOG.md`。标签不可变，安装文档固定标签或准确提交，不指向移动分支。本中文工作树未发布，不能移动旧 `v3.1.0` 标签来伪装新版。

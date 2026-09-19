@@ -60,6 +60,24 @@
 - [平台适配](skills/cineweave-director/references/optional/video-platform-adaptation.md)与[剪辑余量](skills/cineweave-director/references/optional/video-timing-and-handles.md)：参考、时长与人工交接。
 - [连续性](skills/cineweave-director/references/core/visual-bible-and-continuity.md)与[诊断](skills/cineweave-director/references/optional/generation-diagnostics.md)：保留已通过部分，修复明确问题。
 
+## 产品概念与旁白序列
+
+- [视觉概念](skills/cineweave-director/references/optional/visual-concept-development.md)：从简报确定可画出的机制，再按用途展开产品图、准确封面与关联资产；分开概念备选、受控变体和修复。
+- [旁白序列](skills/cineweave-director/references/optional/narrated-sequence-planning.md)：将主题、事实或虚构节拍对应到完整旁白、变长镜头、声音、字幕与装配；支持跨切点旁白和结尾留白。
+
+```text
+使用 $cineweave-director。为这个原创产品策划主图、使用场景、横幅三张关联图片。
+保留现有包装和文字，不重做品牌系统；说明各图机制与共享规则，给完整提示词。
+```
+
+```text
+使用 $cineweave-director。把这篇文章写成 45 秒中文旁白说明片策划。
+给完整旁白、变长镜头、声音和字幕；旁白可以跨切点，结尾留白。
+分开事实、示意和待核实内容。
+```
+
+本次方法来自对 Higgsfield 公开 Skill 的源码研究，独立适配进既有路由；来源、取舍和验证范围见[研究记录](tests/evaluations/2026-09-19-higgsfield.md)。仍为一个非执行 Skill、12 路由、52 根契约，属于未发布源码增强。
+
 ## 使用当前源码
 
 当前中文与创作增强尚未发布，版本号仍为 `3.1.0`；旧 `v3.1.0` 标签不包含本工作树改动。将当前仓库的 `skills/cineweave-director/` 完整目录放入宿主的技能目录，或按宿主支持方式加载当前源码。不要只复制 `SKILL.md`，它需要相邻参考与脚本。
@@ -77,7 +95,7 @@ node skills/cineweave-director/scripts/check-video-plan.mjs workbook.json
 node skills/cineweave-director/scripts/check-shot-review.mjs review.json
 ```
 
-交付检查器检查字数、成片时间线与字幕；视频检查器检查节点、参考声明和生成余量；逐镜检查器检查所选视角的覆盖、结论与未决项。它们不验证真实媒体效果或平台能力。
+交付检查器检查字数、成片时间线、字幕及可选旁白与镜头对应；视频检查器检查节点、参考声明和生成余量；逐镜检查器检查所选视角的覆盖、结论与未决项。它们不验证真实媒体效果或平台能力。
 
 系统集成需要规范 JSON 时，按[契约索引](skills/cineweave-director/resources/contracts/index.json)读取对应 schema 与示例；工作稿不必填写整套协议。机器字段、枚举、参数及哈希保持兼容，说明与创作文本使用中文。示例中的许可、引用和回执是模拟数据。
 

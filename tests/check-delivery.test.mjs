@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { checkDelivery, countText, frameToSrt } from "../skills/cineweave-director/scripts/check-delivery.mjs";
+import { checkDelivery, countText, frameToSrt, withChineseDeliverySummary } from "../skills/cineweave-director/scripts/check-delivery.mjs";
 
 function worksheet() {
   return {
@@ -361,4 +361,96 @@ videoTest("分镜板不冒充图生视频首帧或绕过模式参考要求", () 
   videoAssert.ok(cwCodes(cwCheck(b)).includes("MISSING_REFERENCE_ROLE"));
   const c = cwBoardVideo(); c.nodes[0].references = [];
   videoAssert.ok(cwCodes(cwCheck(c)).includes("MISSING_REFERENCE"));
+});
+
+test("narration can bridge a cut while subtitles split differently and other shots remain silent", () => {
+  const plan = worksheet();
+  plan.narration = [{ id: "N1", startFrame: 48, endFrame: 168, text: "The seam is visible.\nLook at the repair.", shotIds: ["S1", "S2"] }];
+  plan.subtitles = [
+    { id: "C1", startFrame: 48, endFrame: 90, text: "The seam is visible." },
+    { id: "C2", startFrame: 100, endFrame: 168, text: "Look at the repair." },
+  ];
+  const before = structuredClone(plan);
+  const result = checkDelivery(plan);
+  assert.equal(result.valid, true);
+  assert.deepEqual(result.narration[0].shotIds, ["S1", "S2"]);
+  assert.equal(result.narration[0].start, "00:00:02,000");
+  assert.equal(result.narration[0].end, "00:00:07,000");
+  assert.equal(result.narration[0].text, before.narration[0].text);
+  assert.equal(result.subtitles.length, 2);
+  assert.deepEqual(plan, before);
+  const localized = withChineseDeliverySummary(result);
+  assert.match(localized.localization.summary, /旁白对应检查通过/u);
+  assert.match(localized.localization.scope, /声明时窗不等于实测口播时长/u);
+  assert.deepEqual(localized.narration, result.narration);
+  assert.equal(localized.srt, result.srt);
+  result.narration[0].shotIds.push("S3");
+  assert.deepEqual(plan, before);
+});
+
+test("narration ownership uses half-open boundaries and permits adjacent cues or an empty track", () => {
+  const plan = worksheet();
+  plan.narration = [
+    { id: "N1", startFrame: 0, endFrame: 96, text: "First.", shotIds: ["S1"] },
+    { id: "N2", startFrame: 96, endFrame: 192, text: "Second.", shotIds: ["S2"] },
+  ];
+  assert.equal(checkDelivery(plan).valid, true);
+  plan.narration[0].shotIds.push("S2");
+  assert.equal(checkDelivery(plan).valid, false);
+  plan.narration = [];
+  assert.equal(checkDelivery(plan).valid, true);
+  assert.deepEqual(checkDelivery(plan).narration, []);
+});
+
+test("narration rejects missing, extra, duplicate, reordered and nonexistent shot pairings", () => {
+  for (const shotIds of [["S1"], ["S2"], ["S1", "S2", "S3"], ["S1", "S1"], ["S2", "S1"], ["S1", "absent"]]) {
+    const plan = worksheet();
+    plan.narration = [{ id: "N1", startFrame: 48, endFrame: 168, text: "Cross-cut narration.", shotIds }];
+    const result = checkDelivery(plan);
+    assert.equal(result.valid, false, JSON.stringify(shotIds));
+    assert.match(result.errors.join("\n"), /shotIds must match intersecting shots/);
+    assert.equal(result.srt, null);
+    const localized = withChineseDeliverySummary(result);
+    assert.match(localized.localization.errors[0].message, /全部相交镜头/u);
+    assert.equal(localized.localization.errors[0].detail, result.errors[0]);
+    assert.equal(localized.srt, null);
+  }
+});
+
+test("narration shares range and ID checks and rejects overlapping or reversed cue order", () => {
+  for (const mutate of [
+    (p) => { p.narration[0].id = "S1"; },
+    (p) => { p.narration[0].id = "VO1"; },
+    (p) => { p.narration[0].endFrame = 289; },
+    (p) => { p.narration[0].endFrame = 48; },
+    (p) => { p.narration[0].endFrame = 47; },
+    (p) => { p.narration.push({ ...p.narration[0], id: "N2" }); },
+    (p) => { p.narration.push({ id: "N2", startFrame: 0, endFrame: 24, text: "Earlier.", shotIds: ["S1"] }); },
+  ]) {
+    const plan = worksheet();
+    plan.narration = [{ id: "N1", startFrame: 48, endFrame: 168, text: "Cross-cut narration.", shotIds: ["S1", "S2"] }];
+    mutate(plan);
+    assert.equal(checkDelivery(plan).valid, false);
+    assert.equal(checkDelivery(plan).srt, null);
+  }
+});
+
+test("malformed narration never bypasses planning checks", () => {
+  for (const mutate of [
+    (p) => { p.narration = {}; },
+    (p) => { p.narration[0].shotIds = []; },
+    (p) => { p.narration[0].shotIds = "S1"; },
+    (p) => { p.narration[0].shotIds = [null]; },
+    (p) => { p.narration[0].shotIds = [" "]; },
+    (p) => { delete p.narration[0].shotIds; },
+    (p) => { p.narration[0].shotIDs = ["S1", "S2"]; },
+    (p) => { p.narration[0].text = " "; },
+    (p) => { p.narration[0].startFrame = -1; },
+    (p) => { p.narration[0].startFrame = 48.5; },
+  ]) {
+    const plan = worksheet();
+    plan.narration = [{ id: "N1", startFrame: 48, endFrame: 168, text: "Cross-cut narration.", shotIds: ["S1", "S2"] }];
+    mutate(plan);
+    assert.throws(() => checkDelivery(plan));
+  }
 });

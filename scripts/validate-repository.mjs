@@ -71,6 +71,8 @@ const EXPECTED_CONDITION_CONTEXTS = [
   "video_sound_delivery",
   "draft_revision",
   "skill_evaluation",
+  "visual_concept",
+  "narrated_sequence",
 ];
 const EXPECTED_SUPPORT_SCHEMAS = new Set([
   "schemas/common.schema.json",
@@ -121,7 +123,7 @@ const EXPECTED_SOURCE_DIRECTORIES = new Map([
     "validate-output.mjs",
     "validate-repository.mjs",
   ]],
-  ["tests", ["build-plugin-bundle.test.mjs", "canonical-json.test.mjs", "validate-output.test.mjs", "check-delivery.test.mjs", "check-shot-review.test.mjs", "fixtures/ensemble-handoff.json", "evaluations/2026-09-16-leos-review.md", "evaluations/2026-09-08.md", "evaluations/cinematic-cases.json", "evaluations/2026-09-14.md", "evaluations/aigc-creation-research-2026-09-14.md"]],
+  ["tests", ["build-plugin-bundle.test.mjs", "canonical-json.test.mjs", "validate-output.test.mjs", "check-delivery.test.mjs", "check-shot-review.test.mjs", "fixtures/ensemble-handoff.json", "evaluations/2026-09-16-leos-review.md", "evaluations/2026-09-08.md", "evaluations/cinematic-cases.json", "evaluations/2026-09-14.md", "evaluations/aigc-creation-research-2026-09-14.md", "evaluations/2026-09-19-higgsfield.md"]],
 ]);
 const EXPECTED_REPOSITORY = "https://github.com/Wilder1222/cineweave-director";
 const TEXT_EXTENSIONS = new Set([".json", ".md", ".yaml", ".yml", ".mjs"]);

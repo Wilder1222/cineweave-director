@@ -49,7 +49,9 @@
       "midjourney",
       "video_sound_delivery",
       "draft_revision",
-      "skill_evaluation"
+      "skill_evaluation",
+      "visual_concept",
+      "narrated_sequence"
     ]
   },
   "policy": "contracts.json 负责路由 ID、路由基线参考和产物归属；本文件负责分发与类型化加载条件；SKILL.md 是人类入口，不建立竞争的机器权威。",
@@ -368,6 +370,20 @@
       "lifecycle": "optional",
       "loadContexts": [
         "ensemble_review"
+      ]
+    },
+    {
+      "path": "references/optional/visual-concept-development.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "visual_concept"
+      ]
+    },
+    {
+      "path": "references/optional/narrated-sequence-planning.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "narrated_sequence"
       ]
     }
   ]
