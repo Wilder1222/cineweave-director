@@ -26,7 +26,7 @@ description: "中文 AIGC 创作 Skill：将想法、剧本或参考素材转成
 
 请求完整短片或全套提示词时，按[完整短片创作](references/optional/short-film-creation.md)完成所有适用交付，不以镜头摘要或一条示范代替逐项成稿。需要人物、表演、服饰或场景探索时，读取[视觉开发](references/optional/visual-development.md)；完整样例见[《留一盏灯》](references/optional/short-film-example.md)。
 
-跨阶段按[架构职责](references/core/operating-model.md#架构与职责)组织任务：共享设定约束专业设计，专业设计进入提示词编译，评审问题返回对应责任领域。先分别确定作品形式与表现媒介，已有设定直接复用；[阶段交接](references/optional/short-film-creation.md#阶段交接)负责接续与完整性，不增加默认审批。单项任务直接进入需要的阶段。
+跨阶段按[架构职责](references/core/operating-model.md#架构与职责)和[阶段交接](references/optional/short-film-creation.md#阶段交接)复用共享设定、区分作品形式与表现媒介，将评审问题返回责任领域；单项任务直接进入所需阶段。
 
 1. **锁定本次不变项。** 提取用户给定的主体、动作、视点、画幅、时长、准确文案和参考职责；普通草稿不要求先补齐 ID、版本或哈希。
 2. **选择可见内容。** 写清谁在哪里、身体或物体处于什么状态、观众先看见什么。人物稿明确情绪、表情强度、眼神目标、面部表现、身体反应及触发语境，按[人物表演细节](references/optional/prompt-detail-standard.md#人物情绪与表情生成)落实；中性资产明确中性，不可见面部用姿态承载。风景和静物无需强编冲突。
@@ -36,22 +36,21 @@ description: "中文 AIGC 创作 Skill：将想法、剧本或参考素材转成
 
 多人叙事调度或完整镜头／视频提示词交付，自动使用[群像调度与逐镜评审](references/optional/ensemble-direction-and-review.md)，将共同场景、演员触发、配角任务和出镜状态带入分镜与提示词。完整场次／序列覆盖六个视角；局部摄影、表演或措辞请求仅检查相关视角。单张静帧、精确翻译和独立参考分析保持原有范围。
 
-完整设计／提示词评审在 Node 可用时运行随包检查器。`valid` 只说明输入有效，还需检查覆盖、未决项和完成状态；在授权范围内修正 `revise`，递增版本并复查相邻连续性，缺证据保留 `unknown`。默认只展示简短结论；规划检查完成不能替代实际媒体验收。
+交付完整叙事镜头组或完成设计／提示词评审时，若 Node 可用，将逐镜结论整理为临时工作表，实际运行随包 [check-shot-review.mjs](scripts/check-shot-review.mjs)；工作表格式见上述逐镜评审指南。`valid` 只说明输入有效，还需检查覆盖、未决项和完成状态；在授权范围内修正 `revise`，递增版本并复查相邻连续性，缺证据保留 `unknown`。默认只展示简短结论；未运行脚本不报告脚本通过，规划检查完成不能替代实际媒体验收。
 
 ## 创作约定
 
 - 默认**简体中文**，覆盖正负向提示词、复制稿、变体和交接说明。用户指定的台词、字幕、标题及专有名称保留原文；仅按明确要求生成其他语言版本。机器字段、枚举、路径和命令保持原样。
-- 默认详细展开人物的表情、动作、发饰、服饰、仪态、情绪、眼神、肌肤、妆容，以及场景类型、色调、结构、样式和表现力；镜头写清取景、机位、焦点与运动，视频增加动作阶段和时间关系。逐项覆盖与画面相关的细节，不以精简为由省略用户要求。专业术语必须落到具体可见结果，完整规范与示例见[细节与专业表达](references/optional/prompt-detail-standard.md)。
-- 提示词使用主体、形制、动作、光线、材料、空间和构图等可视语言。“电影感”“高级”需要落到具体画面；正面、直视镜头、华丽材质和静止画面均可按目的使用。
+- 按[细节与专业表达](references/optional/prompt-detail-standard.md)充分展开当前画面的人物、表演、妆造、场景、摄影和时序，不省略用户要求。专业术语与“电影感”等审美要求落实到可见结果；正面、直视镜头、华丽材质和静止画面均可按目的使用。
 - 参考分别承担身份、服装、场景、表演或视觉表现；不把服装模特的脸迁移为角色身份。没有实际图片时，只写设计方案或待检项。
 - 用户给定事实优先于创作建议。原创草稿可补可撤销的细节；不能把草稿、提示词或模拟示例当成批准事实、素材权利或真实生成结果。
 - 本 Skill 提供创作与只读检查，不调用生成供应商或宣称已导入、生成、发布。未知平台能力只影响依赖它的适配步骤，不阻止独立创作。
 
 ## 提示词与视频交接
 
-涉及完整短片或连续分镜时，按[拍摄系统与部门协同](references/optional/prompt-detail-standard.md#拍摄系统与部门协同)建立空间与轴线、构图摄影、光位曝光、收音声场及场记的共同基线；逐镜交代变化，并联合检查走位、灯影、拾音、反射与剪辑冲突。单镜任务只读取相关维度；纯 AIGC 写可见／可听结果和制作依赖，实拍／混合方案再展开现场配置。需要安排资产、试片、候选与返工时，使用[制作闭环](references/routes/production-plan.md#从设计到候选验收)。
+完整短片或连续分镜按[拍摄系统与部门协同](references/optional/prompt-detail-standard.md#拍摄系统与部门协同)统一空间、摄影、光声和场记，逐镜说明变化；纯 AIGC 写可见／可听结果，实拍／混合方案再展开现场配置。资产、试片、候选与返工按[制作闭环](references/routes/production-plan.md#从设计到候选验收)安排；单镜只读相关维度。
 
-普通单图请求直接给可复制正文。用户需要节点化交付时，使用[类型化中文标签](references/optional/tagged-video-nodes.md)，例如 `<主体>`、`<动作>`、`<运镜>`、`<情绪>`、`<表情>`、`<台词>`；只填写该类型适用的维度。标签是组织格式，是否保留到平台复制稿由实际界面决定。
+普通单图直接给可复制正文。需要节点化交付时使用[类型化中文标签](references/optional/tagged-video-nodes.md)，只填写适用维度；平台复制稿是否保留标签由实际界面决定。
 
 静帧描述肢体位置、接触、视线和空间，不把一段连续动作塞进一张图。图生视频继承首帧已经呈现的外观，重点描述变化；文生视频还需明确完整初态。出点可以是停稳状态或供动作匹配的运动相位；尾帧应可达，不要求每镜停止运动。台词与舞台说明分开。需要保留的完整动作与对白留在采用窗口内，跨镜动作及声音明确边界；按剪辑需要设计余量，文字要求不保证实际视频满足。
 
@@ -78,6 +77,10 @@ description: "中文 AIGC 创作 Skill：将想法、剧本或参考素材转成
 
 专项资料由各路由链接按问题选择；[加载清单](reference-lifecycle.json)记录分发和适用条件，并非必读清单。原创镜头遇到调度或可读性问题时，用[镜头工作台](references/optional/shot-design-workbench.md)；需要比较技法时，再读[技法库](references/optional/master-style-presets.md)相关小节；生成失败时查[诊断索引](references/optional/generation-diagnostics.md)。
 
+专业制作按问题深入：镜头透视、焦点、曝光和运动表现读[摄影方法](references/optional/cinematography-craft.md)；真人肖像与表演读[自然人物](references/optional/portrait-natural-human.md)和[视频表演](references/optional/video-performance-direction.md)；画风规则、画质、Unreal／Blender 预演与色管读[画质与引擎流程](references/optional/rendering-quality-workflows.md)；结构／身份／风格控制、局部编辑和试片比较读[AIGC 控制与评审](references/optional/aigc-control-and-evaluation.md)。只加载影响当前交付的资料，将技法写成可见／可听结果；器材、引擎、模型名称和高分辨率不代替实际验收。
+
 ## 可选结构化交付
 
 默认中文正文、表格或节点稿。只有用户要求规范 JSON 或已有系统需要时，才从 [contracts.json](contracts.json) 与[契约索引](resources/contracts/index.json)选择对应 schema 和示例。精确 kind、ID、版本、哈希及引用保持兼容，不暗中解析 `latest`；`@Asset` 通过指定注册表绑定。元数据不足时使用[工作稿](references/optional/drafts-and-change-impact.md)，不编造正式引用或回执。规范示例中的批准与证据仅为模拟数据。
+
+规范检查通过后仍核对 `unverified`：例如序列节奏未提供精确分镜正文时，只能完成本地时间与引用闭合，不能宣称完整分镜覆盖已经核验。事件／帧算术通过也不证明表演因果、艺术节奏或实际连续性。需要比较导演方案如何进入复制稿时，读取[同场覆盖对照](references/optional/shot-design-workbench.md#同一场次的覆盖对照)，普通单项请求保持原交付范围。

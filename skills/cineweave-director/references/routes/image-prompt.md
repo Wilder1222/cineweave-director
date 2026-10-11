@@ -42,6 +42,8 @@
 
 ## 平台适配
 
+结构／身份／风格条件的选择、局部编辑保留和对照试验，按[AIGC 控制与评审](../optional/aigc-control-and-evaluation.md)处理。纯视觉母稿与模型控制分开；针对画质或引擎来源图的问题，按[画质与引擎流程](../optional/rendering-quality-workflows.md)检查表现规则、细节、时序和交付，不靠质量词补齐控制。
+
 `PromptRecord` 和 `ImagePrompt` 保持供应商中立。用户指定平台时，先交付适配正文和必要参数说明；仅在要求规范 JSON 时创建单独 `PromptProjectionPlan`，绑定精确源提示词及 `CapabilityProfile`。模型版本、界面、参数、参考槽位、个性化／风格代码、兼容证据和隐藏默认检查只写在适配方案中。
 
 Midjourney 适配加载[对应指南](../optional/midjourney-projection.md)。优先精练地描述可见结果，使用单一参数尾、明确兼容检查，以及基线加单变量变体。止于可复制的人工交接。执行核验需要准确任务元数据、解析后的代码／参数和原始文件；元数据未知时可单独评审可见图像。不能从计划推断实际执行。

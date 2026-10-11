@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 // Pure planning checks; no provider calls, media probing, or file writes.
+import { parseJsonStrict } from "./parse-json.mjs";
 import { readFile } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
 
@@ -106,7 +107,7 @@ async function main(args) {
     return;
   }
   if (args.length !== 1 || args[0].startsWith("--")) throw new Error("Usage: node check-delivery.mjs worksheet.json | --text <exact text>");
-  const result = checkDelivery(JSON.parse(await readFile(args[0], "utf8")));
+  const result = checkDelivery(parseJsonStrict(await readFile(args[0], "utf8")));
   console.log(JSON.stringify(withChineseDeliverySummary(result), null, 2));
   if (!result.valid) process.exitCode = 1;
 }

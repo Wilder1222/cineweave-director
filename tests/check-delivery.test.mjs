@@ -206,11 +206,12 @@ cwMutation("reject canonical-contract impersonation", (b) => { b.kind = "cinewea
 videoTest("unknown platform surface remains pending rather than failing independent draft arithmetic", () => {
   const b = cwWorkbook(); delete b.nodes[0].capability; const r = cwCheck(b); videoAssert.equal(r.valid, true); videoAssert.ok(r.pending.some((e) => e.code === "CAPABILITY_SCOPE"));
 });
-videoTest("video helper CLI works from a standalone copied module and writes no worksheet", () => {
+videoTest("video helper CLI works with its bundled parser and writes no worksheet", () => {
   const dir = cwVideoTemp(cwVideoJoin(cwVideoTmpdir(), "cw-video-"));
   try {
     const cli = cwVideoJoin(dir, "check-video-plan.mjs"), input = cwVideoJoin(dir, "input.json");
     cwVideoWrite(cli, cwVideoRead(cwVideoPath(new URL("../skills/cineweave-director/scripts/check-video-plan.mjs", import.meta.url))));
+    cwVideoWrite(cwVideoJoin(dir, "parse-json.mjs"), cwVideoRead(cwVideoPath(new URL("../skills/cineweave-director/scripts/parse-json.mjs", import.meta.url))));
     const before = JSON.stringify(cwWorkbook()); cwVideoWrite(input, before);
     const p = cwVideoSpawn(process.execPath, [cli, input], { encoding: "utf8" });
     videoAssert.equal(p.status, 0, p.stderr); videoAssert.equal(JSON.parse(p.stdout).valid, true); videoAssert.equal(cwVideoRead(input, "utf8"), before);

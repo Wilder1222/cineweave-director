@@ -11,16 +11,22 @@ permissions:
 
 jobs:
   validate:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        node: ["22", "24"]
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 10
     steps:
       - name: 检出源码
         uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
-      - name: 配置 Node.js 22
+      - name: 配置 Node.js ${{ matrix.node }}
         uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
         with:
-          node-version: "22"
+          node-version: ${{ matrix.node }}
       - name: 运行校验回归测试
-        run: node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs tests/check-delivery.test.mjs tests/check-shot-review.test.mjs
+        run: node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs tests/check-delivery.test.mjs tests/check-shot-review.test.mjs tests/reliability.test.mjs
       - name: 检查契约索引
         run: node scripts/generate-contract-index.mjs --check
       - name: 校验源分发
@@ -32,3 +38,5 @@ jobs:
         run: node scripts/build-plugin-bundle.mjs
       - name: 校验构建包
         run: node scripts/validate-repository.mjs --bundle .build/cineweave-director
+      - name: 验证安装后的只读工具
+        run: node --test tests/bundle-smoke.test.mjs

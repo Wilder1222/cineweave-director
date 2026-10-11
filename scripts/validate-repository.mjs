@@ -5,6 +5,7 @@ import { dirname, extname, isAbsolute, join, posix, relative, resolve, sep } fro
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { canonicalize, parseJsonStrict, sha256Bytes } from "./canonical-json.mjs";
 import { validateDocument } from "./validate-output.mjs";
+import { validateMarkdownFiles } from "./markdown-links.mjs";
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 export const repositoryRoot = dirname(scriptDirectory);
@@ -30,7 +31,8 @@ const EXPECTED_ROUTES = [
   "review_repair",
 ];
 const EXPECTED_PACKAGE_SCRIPTS = Object.freeze({
-  test: "node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs tests/check-delivery.test.mjs tests/check-shot-review.test.mjs",
+  test: "node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs tests/check-delivery.test.mjs tests/check-shot-review.test.mjs tests/reliability.test.mjs",
+  "test:bundle": "node --test tests/bundle-smoke.test.mjs",
   build: "node scripts/build-plugin-bundle.mjs",
   "contracts:index": "node scripts/generate-contract-index.mjs",
   "contracts:index:check": "node scripts/generate-contract-index.mjs --check",
@@ -87,6 +89,7 @@ const DISTRIBUTION_BASE_FILES = [
   `${SKILL_PREFIX}/scripts/check-delivery.mjs`,
   `${SKILL_PREFIX}/scripts/check-video-plan.mjs`,
   `${SKILL_PREFIX}/scripts/check-shot-review.mjs`,
+  `${SKILL_PREFIX}/scripts/parse-json.mjs`,
 ];
 const SOURCE_TOP_LEVEL = new Set([
   ".agents",
@@ -117,11 +120,43 @@ const EXPECTED_SOURCE_DIRECTORIES = new Map([
   ["scripts", [
     "build-plugin-bundle.mjs",
     "canonical-json.mjs",
+    "markdown-links.mjs",
     "generate-contract-index.mjs",
     "validate-output.mjs",
     "validate-repository.mjs",
   ]],
-  ["tests", ["build-plugin-bundle.test.mjs", "canonical-json.test.mjs", "validate-output.test.mjs", "check-delivery.test.mjs", "check-shot-review.test.mjs", "fixtures/ensemble-handoff.json", "evaluations/2026-09-16-leos-review.md", "evaluations/2026-09-08.md", "evaluations/cinematic-cases.json", "evaluations/2026-09-14.md", "evaluations/aigc-creation-research-2026-09-14.md"]],
+  ["tests", [
+    "build-plugin-bundle.test.mjs",
+    "bundle-smoke.test.mjs",
+    "canonical-json.test.mjs",
+    "check-delivery.test.mjs",
+    "check-shot-review.test.mjs",
+    "reliability.test.mjs",
+    "validate-output.test.mjs",
+    "fixtures/ensemble-handoff.json",
+    "evaluations/aigc-creation-research-2026-09-14.md",
+    "evaluations/cinematic-cases.json",
+    "evaluations/project-review-2026-09-23.md",
+    "evaluations/professional-craft-research-2026-10-10.md",
+    "evaluations/director-methods-optimization-plan-2026-10-10.md",
+    "evaluations/director-optimization-2026-10-11.md",
+    "evaluations/2026-10-11/director-run-a.md",
+    "evaluations/2026-10-11/director-run-b.md",
+    "evaluations/2026-10-11/director-run-c.md",
+    "evaluations/2026-10-11/director-targeted-rerun.md",
+    "evaluations/2026-10-11/director-review.md",
+    "evaluations/2026-10-11/evidence.json",
+    "evaluations/2026-10-10/forward-control.md",
+    "evaluations/2026-10-10/forward-production.md",
+    "evaluations/2026-10-10/independent-review.md",
+    "evaluations/2026-10-10/evidence.json",
+    "evaluations/2026-09-23/short-film-v1.md",
+    "evaluations/2026-09-23/short-film-v2.md",
+    "evaluations/2026-09-23/short-film-change-review.md",
+    "evaluations/2026-09-23/revision.md",
+    "evaluations/2026-09-23/spatial.md",
+    "evaluations/2026-09-23/evidence.json",
+  ]],
 ]);
 const EXPECTED_REPOSITORY = "https://github.com/Wilder1222/cineweave-director";
 const TEXT_EXTENSIONS = new Set([".json", ".md", ".yaml", ".yml", ".mjs"]);
@@ -470,40 +505,13 @@ async function validateDistributionClosure(root, inventory, requireWholeRoot) {
   }
 }
 
-function extractLinkTargets(markdown) {
-  const targets = [];
-  const markdownLink = /!?\[[^\]]*\]\(([^)\s]+)(?:\s+["'][^"']*["'])?\)/gu;
-  const htmlLink = /\b(?:href|src)=["']([^"']+)["']/giu;
-  for (const match of markdown.matchAll(markdownLink)) targets.push(match[1]);
-  for (const match of markdown.matchAll(htmlLink)) targets.push(match[1]);
-  return targets;
-}
-
 async function validateMarkdownLinks(root, inventory, sourceMode) {
   const markdownFiles = inventory.files.filter((value) => extname(value) === ".md");
-  if (sourceMode) markdownFiles.push("README.md", "CHANGELOG.md", "CONTRIBUTING.md", "SECURITY.md");
-  let linkCount = 0;
-  for (const markdownPath of sortedUnique(markdownFiles, "Markdown validation paths")) {
-    const content = await readFile(resolve(root, ...markdownPath.split("/")), "utf8");
-    for (let target of extractLinkTargets(content)) {
-      linkCount += 1;
-      target = target.replace(/^<|>$/gu, "");
-      if (target.startsWith("#") || /^(?:https?:|mailto:|data:)/iu.test(target)) {
-        if (/^https?:/iu.test(target)) new URL(target);
-        continue;
-      }
-      const withoutFragment = target.split("#", 1)[0].split("?", 1)[0];
-      if (!withoutFragment) continue;
-      let decoded;
-      try { decoded = decodeURIComponent(withoutFragment); } catch { fail(`${markdownPath} contains an invalid encoded link: ${target}`); }
-      assert(!decoded.includes("\\") && !isAbsolute(decoded), `${markdownPath} contains an absolute or backslash link: ${target}`);
-      const resolvedTarget = resolve(root, dirname(markdownPath), decoded);
-      assert(isWithin(root, resolvedTarget), `${markdownPath} link escapes the validation root: ${target}`);
-      const stat = await lstat(resolvedTarget).catch(() => null);
-      assert(stat && !stat.isSymbolicLink() && (stat.isFile() || stat.isDirectory()), `${markdownPath} contains a broken local link: ${target}`);
-    }
+  if (sourceMode) {
+    markdownFiles.push("README.md", "CHANGELOG.md", "CONTRIBUTING.md", "SECURITY.md");
+    markdownFiles.push(...(await walkRegularFiles(root, "tests")).filter((value) => extname(value) === ".md"));
   }
-  return { markdownFiles: markdownFiles.length, links: linkCount };
+  return validateMarkdownFiles(root, sortedUnique(markdownFiles, "Markdown validation paths"));
 }
 
 async function validateTextBoundaries(root, inventory) {
@@ -662,14 +670,20 @@ async function validateWorkflowEntrypoints(root) {
     "",
     "jobs:",
     "  validate:",
-    "    runs-on: ubuntu-latest",
+    "    strategy:",
+    "      fail-fast: false",
+    "      matrix:",
+    "        os: [ubuntu-latest, windows-latest]",
+    '        node: ["22", "24"]',
+    "    runs-on: ${{ matrix.os }}",
+    "    timeout-minutes: 10",
     "    steps:",
     "      - name: 检出源码",
     `        uses: ${EXPECTED_CHECKOUT_ACTION} # v4`,
-    "      - name: 配置 Node.js 22",
+    "      - name: 配置 Node.js ${{ matrix.node }}",
     `        uses: ${EXPECTED_SETUP_NODE_ACTION} # v4`,
     "        with:",
-    "          node-version: \"22\"",
+    "          node-version: ${{ matrix.node }}",
     "      - name: 运行校验回归测试",
     `        run: ${EXPECTED_PACKAGE_SCRIPTS.test}`,
     "      - name: 检查契约索引",
@@ -683,6 +697,8 @@ async function validateWorkflowEntrypoints(root) {
     `        run: ${EXPECTED_PACKAGE_SCRIPTS.build}`,
     "      - name: 校验构建包",
     `        run: ${EXPECTED_PACKAGE_SCRIPTS["validate:bundle"]}`,
+    "      - name: 验证安装后的只读工具",
+    `        run: ${EXPECTED_PACKAGE_SCRIPTS["test:bundle"]}`,
     "",
   ].join("\n");
   assert(workflow === expectedWorkflow, "CI workflow must match the reviewed, read-only release-gate template exactly");

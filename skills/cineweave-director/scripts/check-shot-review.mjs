@@ -3,6 +3,7 @@
 // 只读检查已编写的设计／提示词工作表，不检查生成媒体。
 import { readFile } from "node:fs/promises";
 import { pathToFileURL } from "node:url";
+import { parseJsonStrict } from "./parse-json.mjs";
 
 export const REVIEW_ROLES = Object.freeze(["direction", "performance", "staging", "cinematography", "prompt", "continuity"]);
 const DOMAINS = ["world", "story", "character", "scene", "style", "reference", "action", "direction", "storyboard", "prompt", "production", "rights"];
@@ -113,7 +114,7 @@ async function main() {
     return;
   }
   if (args.length !== 1 || args[0].startsWith("--")) throw new TypeError("用法：node check-shot-review.mjs <worksheet.json>，或使用 --help");
-  const worksheet = JSON.parse(await readFile(args[0], "utf8"));
+  const worksheet = parseJsonStrict(await readFile(args[0], "utf8"));
   const result = checkShotReview(worksheet);
   console.log(JSON.stringify({ ...result, localization: {
     locale: "zh-CN",

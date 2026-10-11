@@ -1,0 +1,1314 @@
+{
+  "date": "2026-10-11",
+  "phase": "complete_for_authorized_scope",
+  "baselineCommit": "c9d3817467a7adf05d1aeb95e41c39b70e95f744",
+  "caseDefinitions": {
+    "path": "tests/evaluations/cinematic-cases.json",
+    "sha256": "0f93c09f05332190622e7a86a9940bd3e2131afa48c5cd2ae50dbecab9655870"
+  },
+  "sourceSnapshot": [
+    {
+      "path": "skills/cineweave-director/SKILL.md",
+      "sha256": "6d83c553b4a1ccedd55a84a06df5582739c0bc258c50de85e998cc7e61224524"
+    },
+    {
+      "path": "skills/cineweave-director/reference-lifecycle.json",
+      "sha256": "d9537b7f0afab013243899048afe282181cc253e4d2983607818a1898617d233"
+    },
+    {
+      "path": "skills/cineweave-director/contracts.json",
+      "sha256": "d69f53b084489f788d51061435257025b225a7979ddd00f72cc2db30d1ecd61b"
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/index.json",
+      "sha256": "9d83e3858b0376db618d0ee380ef0bcde2b44a4d6f4f46f14a9f0cef03bc3176"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/short-film-creation.md",
+      "sha256": "38126f516861ca06300daf37d18b4e31c1f66e729c7566333a8ed4e32bdcf7a4"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/visual-development.md",
+      "sha256": "33b72413f85574c8b44b7e8820cfdf65a1b816545aa6d629f2fd3b88432619fd"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/short-film-example.md",
+      "sha256": "503d5b72c16e7df89e6c228f2dccb62a36b477d26e78504f80bf67e312ca2414"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/prompt-detail-standard.md",
+      "sha256": "0de944dffd30d69bc05a52ef4bceaf0a90dce40564e2f1a288c68e7dd1e88e59"
+    },
+    {
+      "path": "skills/cineweave-director/references/core/operating-model.md",
+      "sha256": "d01a0a0221394aac5a31fb7538078c786adfd1b45441973418be4db7019b31bb"
+    },
+    {
+      "path": "skills/cineweave-director/references/core/artifact-control-and-precedence.md",
+      "sha256": "5e4cc12e6ecb24e51025202e1a74de5c6cd9406b0a5bf7fbbb8d557ab16cfe22"
+    },
+    {
+      "path": "skills/cineweave-director/references/core/reference-evidence-and-rights.md",
+      "sha256": "55332bfbab84d121328260c56f971586658dff692a526cac318e2b435a522393"
+    },
+    {
+      "path": "skills/cineweave-director/references/core/visual-bible-and-continuity.md",
+      "sha256": "ba8e5894516ac66b1396a24dab5fabdc25cd3db8fa5d1beddd12be24f0a1139e"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/brief-world.md",
+      "sha256": "de1072b66d907d76cd47c6d7e02878b2c75c7904d2b521018443e727e7b983d6"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/story.md",
+      "sha256": "09862af8560baed3f75a31a3b3ae24135908195aa3f3c260698f553f12d9cc59"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/character.md",
+      "sha256": "511f7b9bb512821f57f7676eab9989161b8f6542fc1f54713138846a60a41e23"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/scene.md",
+      "sha256": "ef10535a31d8aeacf7465957ad995c47b1389f5b3b5fe9096e77682f151ea6e4"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/style.md",
+      "sha256": "f325d045a23a416b3ebf8c19fea942c79580a4be053ed78a3368a7fa3b801231"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/reference-evidence.md",
+      "sha256": "6a27133185302f529f936edf6315f618876d1363ab9d08ccc45cda233804cd48"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/action.md",
+      "sha256": "99e4dce0898e242af9803259ef9af7c44d8d81fa6e7cd52c9c5ffa04496834e4"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/shot-direction.md",
+      "sha256": "8ac6fd68d2f3c51d66a6dbbdd7a60d3604721497f3717a54ce08b15f49e2c82f"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/storyboard-rhythm.md",
+      "sha256": "f71bf9c0aadea9a05d24043e76e3241f3594aa3dcc681b078537c8b5c76af9fd"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/image-prompt.md",
+      "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/production-plan.md",
+      "sha256": "f0fd1a1ad40a235ea9817a699d6a0d3cfaa78ec88291bc3f7b5991963858d3e5"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/review-repair.md",
+      "sha256": "5c12254507bae0e4cb084b2b62eb87374fd775043c6be8071b3c21e758d258e0"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/semantic-morphology.md",
+      "sha256": "9f571c5f00f7313d8a09ede9b4f6518737376fd5b21ad5315e660d55dd4f08ab"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/camera-previsualization.md",
+      "sha256": "dde1e7e5db24ba047ff2bdd1b8aac4fcf414aa29cf45b3327df6bf4226ed0669"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/portrait-natural-human.md",
+      "sha256": "a370c4ca4e05a31576d99e262dd52924667f199d205c9087a6104d709b8d1d43"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/comic-manga.md",
+      "sha256": "6f7c0562b2f2485e99c06abc0bff0d8d512416613df37507d2dabbf578efe589"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/cinematic-patterns.md",
+      "sha256": "2bf2010db3000c25e67b8eccd51564d35ed84fb926e71a843596499bfcb9c3d7"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/shot-design-workbench.md",
+      "sha256": "f3b00c7d257a55dcae7e715747e1b218b3edeb71627a7735b5a7ef482e2ba3c0"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/generation-diagnostics.md",
+      "sha256": "da8614aa42c5fcabddbf754e0529223fd59c7af042fba1cf1ad987a2a3425f69"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-platform-adaptation.md",
+      "sha256": "2286fab2c6aee8a5fda778218469bb522289cab665b441656eee8eddf4c19ac8"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/tagged-video-nodes.md",
+      "sha256": "08e5c326a9e073791e16c6c7c939c5f6fc8d6dd13ec6061d34c635a3411e5d35"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-performance-direction.md",
+      "sha256": "561ef041a31693d8607e16eed361597ab258a519709855d3e85ec1154969088d"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-timing-and-handles.md",
+      "sha256": "d687fb586e766bd670598fae00813f2d80ad1fc522dda39ee0311e21ee2afee5"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/master-style-presets.md",
+      "sha256": "23d6460910bd81534afc77c1ac72b82308edb22749cc27eab41243d07d6d553f"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/directing-craft.md",
+      "sha256": "82524260f2823fe2d779e367a8a17802c050368c29d8e084cea1b741dd1bcf03"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/cinematography-craft.md",
+      "sha256": "915545176b1a1719956fd72d7d757159aca947578d2fb01dbd00aab6036597e9"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/editing-sound-craft.md",
+      "sha256": "184f2fc8e8d638aab40b294d266badecc6ee37c99e1d097c8e3ec847e45a4da4"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/film-craft-study.md",
+      "sha256": "c609d58d38e926395af0e867e15d2996d3ae03b5046f13856438b50621a57388"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/midjourney-projection.md",
+      "sha256": "3ad60bf6550c16093daf14984713692839feeea0ba98e802764bfa84f93a8c1f"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-sound-and-delivery.md",
+      "sha256": "4a60146d81fc2092fb7bb6e18d9b1cd4e8ac8cdf09b11994f5a98b86fab2a715"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/drafts-and-change-impact.md",
+      "sha256": "56670baace865f7294780112cf50d79f31ba4c45a7c6c6f843133289acf5fb5c"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/ensemble-direction-and-review.md",
+      "sha256": "a3f41e181a4382ed4a23835c696797837fac9cfc939fc3f86203443cab680bae"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/rendering-quality-workflows.md",
+      "sha256": "5495ab7203adbd38be111c3e4b59172ac60e616b19a3418a071aacfe96c12588"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/aigc-control-and-evaluation.md",
+      "sha256": "1087161d1435a87e6b9de891c3b8d0976693645a5484df59ee146b9e5425b771"
+    },
+    {
+      "path": "skills/cineweave-director/scripts/check-shot-review.mjs",
+      "sha256": "bb69f60d8794f3329bc4b7af772d05ad01a28c001c7345f1de63bfa1e3d7d1c2"
+    },
+    {
+      "path": "skills/cineweave-director/scripts/check-video-plan.mjs",
+      "sha256": "167eeabce565591639248aed635dbd27ec1cad87ecfb30a402aad134d755031d"
+    },
+    {
+      "path": "skills/cineweave-director/scripts/check-delivery.mjs",
+      "sha256": "3147c6f5fad4d4d32682a05f34eca15337c6ca2b8c73c69ea96331a209f2e4a5"
+    },
+    {
+      "path": "skills/cineweave-director/scripts/parse-json.mjs",
+      "sha256": "9c15621d8304bf6114cc4cb322409c8e59433409ac17950311725cdcbebecf11"
+    },
+    {
+      "path": "scripts/validate-output.mjs",
+      "sha256": "7c501608201f250e5477d694748a5bd8d6843f91961c63906820b185db1b8057"
+    }
+  ],
+  "caseIds": [
+    "CD-E51",
+    "CD-E52",
+    "CD-E53",
+    "CD-E54",
+    "CD-E55",
+    "CD-E56",
+    "CD-E57",
+    "CD-E58",
+    "CD-E59",
+    "CD-E60",
+    "CD-E61"
+  ],
+  "methodology": "Fresh independent authors received exact original requests and current Skill only, without case expectations or old outputs. Initial runs and their feedback used source snapshot 1; after one visibility-guide revision, two new-context reruns used snapshot 2. Independent whole-text review is separate from reproducible plan-only worksheets and actual media. The duration clarification and missing original self-revision bodies are preserved explicitly.",
+  "mediaGenerated": false,
+  "mediaQualityVerified": false,
+  "checks": {
+    "targetedTemporalTests": {
+      "total": 23,
+      "passed": 23,
+      "exitCode": 0
+    },
+    "unitTests": {
+      "total": 138,
+      "passed": 138,
+      "failed": 0,
+      "skipped": 0,
+      "exitCode": 0
+    },
+    "contractIndex": {
+      "exitCode": 0,
+      "roots": 52
+    },
+    "skillValidator": {
+      "exitCode": 0
+    },
+    "guideLinks": {
+      "exitCode": 0,
+      "markdownFiles": 43,
+      "links": 425,
+      "fragments": 102
+    },
+    "repository": {
+      "exitCode": 0,
+      "result": {
+        "valid": true,
+        "mode": "source",
+        "root": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director",
+        "files": 159,
+        "references": 42,
+        "roots": 52,
+        "schemas": 54,
+        "examples": 52,
+        "receipts": 48,
+        "schemaRefs": 1357,
+        "markdownFiles": 65,
+        "links": 699,
+        "fragments": 108,
+        "textFiles": 158,
+        "messageZh": "源码、契约、引用和分发边界校验通过。"
+      }
+    },
+    "build": {
+      "exitCode": 0,
+      "distributedFiles": 159,
+      "result": {
+        "valid": true,
+        "source": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director",
+        "bundle": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\cineweave-director",
+        "files": 159,
+        "roots": 52,
+        "schemas": 54,
+        "examples": 52,
+        "references": 42,
+        "byteIdentical": true,
+        "messageZh": "插件构建完成，与已校验源码逐字节一致。"
+      }
+    },
+    "bundleValidation": {
+      "exitCode": 0,
+      "result": {
+        "valid": true,
+        "mode": "bundle",
+        "root": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\cineweave-director",
+        "sourceRoot": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director",
+        "files": 159,
+        "references": 42,
+        "roots": 52,
+        "schemas": 54,
+        "examples": 52,
+        "receipts": 48,
+        "schemaRefs": 1357,
+        "markdownFiles": 43,
+        "links": 425,
+        "fragments": 102,
+        "textFiles": 158,
+        "sourceFilesValidated": 159,
+        "messageZh": "构建包校验通过，分发内容与源码一致。"
+      }
+    },
+    "bundleSmoke": {
+      "exitCode": 0,
+      "total": 1,
+      "passed": 1
+    },
+    "gitDiffWhitespace": {
+      "exitCode": 0
+    },
+    "independentCodeReview": {
+      "importantFindings": [],
+      "mediaReviewed": false,
+      "checked": [
+        "simultaneous events",
+        "cross-track IDs",
+        "inclusive endpoints",
+        "single frame",
+        "missing upstream unverified",
+        "hash-matching fake summary rejected",
+        "immutable inputs and registry",
+        "Repair baseline valid"
+      ]
+    }
+  },
+  "caseDefinitionsInitial": {
+    "path": "tests/evaluations/cinematic-cases.json",
+    "sha256": "10455c29e9b40c25abc71fa58170bc92dbb1758e8a8d2c7760afb58be7f6554c"
+  },
+  "inputRevisions": [
+    {
+      "caseId": "CD-E59",
+      "fromRequest": "同一傍晚书店三段十二秒：先看出信被藏在书下，再看三人的不同回应，最后甲乙告别。角色服装、书店空间、北窗自然光和低饱和木色固定，台词只有“明天见”。给全套逐镜视频稿，方法可随功能变化，视觉一致。",
+      "toRequest": "同一傍晚书店三段合计十二秒：先看出信被藏在书下，再看三人的不同回应，最后甲乙告别。角色服装、书店空间、北窗自然光和低饱和木色固定，台词只有“明天见”。给全套逐镜视频稿，方法可随功能变化，视觉一致。",
+      "reason": "根代理原输入未明确三段的合计时长，作者将其理解为三段各十二秒；补充合计，未提供内容期待或参考答案。",
+      "clarificationCount": 1,
+      "firstAttemptWithoutClarification": false
+    }
+  ],
+  "mediaScope": {
+    "userChoice": "先完成代码、指南与文字试跑，媒体阶段准备试片方案",
+    "scope": "prepare_only",
+    "actualMediaRun": "not_requested_for_this_run",
+    "trialCases": [
+      "CD-E51",
+      "CD-E54",
+      "CD-E55",
+      "CD-E61"
+    ]
+  },
+  "exampleReviews": {
+    "coverageComparison": {
+      "scope": "plan_only",
+      "reviewedFiles": [
+        "skills/cineweave-director/references/optional/shot-design-workbench.md",
+        "skills/cineweave-director/references/optional/directing-craft.md",
+        "skills/cineweave-director/references/optional/editing-sound-craft.md",
+        "skills/cineweave-director/references/optional/short-film-creation.md"
+      ],
+      "sourceHashes": {
+        "skills/cineweave-director/references/optional/shot-design-workbench.md": "b2e182a4907a235d0044b500d70d57fdde3b6ec9a7c9a99546583907632543c2",
+        "skills/cineweave-director/references/optional/directing-craft.md": "82524260f2823fe2d779e367a8a17802c050368c29d8e084cea1b741dd1bcf03",
+        "skills/cineweave-director/references/optional/editing-sound-craft.md": "184f2fc8e8d638aab40b294d266badecc6ee37c99e1d097c8e3ec847e45a4da4",
+        "skills/cineweave-director/references/optional/short-film-creation.md": "38126f516861ca06300daf37d18b4e31c1f66e729c7566333a8ed4e32bdcf7a4"
+      },
+      "links": {
+        "markdownFiles": 4,
+        "links": 56,
+        "fragments": 30
+      },
+      "finalReview": {
+        "valid": true,
+        "scope": "plan_only",
+        "coverageComplete": true,
+        "reviewComplete": true,
+        "expectedRows": 36,
+        "missing": [],
+        "openItems": [],
+        "prompt": {
+          "nonWhitespaceCodePoints": 4496,
+          "limit": null
+        },
+        "errors": [],
+        "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。"
+      },
+      "independentReview": {
+        "finding": "乙二收手出画与全程双方手入画的措辞矛盾。",
+        "repair": "限定握持至松手完成阶段保持双方手入画，随后许姨可退出；不改动作、对白或覆盖。",
+        "mediaReviewed": false
+      },
+      "firstAndLastUnchanged": true,
+      "mediaGenerated": false,
+      "audioRecorded": false,
+      "audienceObserved": false
+    },
+    "constructedFailure": {
+      "source": {
+        "type": "prompt",
+        "id": "library-counter-coverage-comparison",
+        "version": 1
+      },
+      "mode": "focused",
+      "roles": [
+        "performance"
+      ],
+      "shotIds": [
+        "乙二"
+      ],
+      "reviews": [
+        {
+          "role": "performance",
+          "shotId": "乙二",
+          "status": "revise",
+          "criterion": "林遥完整听到许姨句尾之后才伸手。",
+          "observation": "构造性失败分句写“许姨开口前，林遥就伸手拿书”，与固定简报冲突；未观察生成媒体。",
+          "sourceLocator": "skills/cineweave-director/references/optional/shot-design-workbench.md / 有界修订与复查 / 构造性失败分句",
+          "repair": {
+            "domain": "character",
+            "variable": "林遥伸手起点",
+            "acceptance": "改为全场八点二秒、完整句尾之后；乙一未伸手、乙三右手已独持而左手尚未托底。"
+          }
+        }
+      ],
+      "prompt": {
+        "text": "许姨开口前，林遥就伸手拿书。"
+      }
+    },
+    "platformProjection": [
+      {
+        "worksheet": {
+          "source": {
+            "type": "prompt",
+            "id": "platform-direction-t2v",
+            "version": 1
+          },
+          "mode": "full",
+          "shotIds": [
+            "S1"
+          ],
+          "reviews": [
+            {
+              "role": "direction",
+              "shotId": "S1",
+              "status": "pass",
+              "criterion": "挽留意图通过递伞后等待是否接取承载。",
+              "observation": "女子说你拿走吧却保持握柄，男子仅触柄未接取，出点保留未决关系。",
+              "sourceLocator": "skills/cineweave-director/references/optional/video-platform-adaptation.md / 导演方案到复制稿 / T2V通用稿"
+            },
+            {
+              "role": "performance",
+              "shotId": "S1",
+              "status": "pass",
+              "criterion": "回应在对方触柄后发生，发音与等待状态兼容。",
+              "observation": "正文先递伞并说准确台词，男子接触后女子停住等待；T2V允许唇与下颌自然发音。",
+              "sourceLocator": "skills/cineweave-director/references/optional/video-platform-adaptation.md / 导演方案到复制稿 / T2V通用稿"
+            },
+            {
+              "role": "staging",
+              "shotId": "S1",
+              "status": "pass",
+              "criterion": "持手、重量、伞尖与可达交接关系明确。",
+              "observation": "女子右手持伞，男子左手仅触另一侧，伞尖触地、重量未交给男子。",
+              "sourceLocator": "skills/cineweave-director/references/optional/video-platform-adaptation.md / 导演方案到复制稿 / T2V通用稿"
+            },
+            {
+              "role": "cinematography",
+              "shotId": "S1",
+              "status": "pass",
+              "criterion": "固定机位保留主要交互，取景与伞尖目标一致。",
+              "observation": "T2V使用双人全景保留头脚与伞尖，I2V条件先要求源图对应姿态和可见接触；两稿摄影机固定。",
+              "sourceLocator": "skills/cineweave-director/references/optional/video-platform-adaptation.md / 导演方案到复制稿 / T2V通用稿"
+            },
+            {
+              "role": "prompt",
+              "shotId": "S1",
+              "status": "pass",
+              "criterion": "文字与图像路径保留同一必要动作和准确对白。",
+              "observation": "T2V定义完整人物/门位/光线初态，I2V只描述继承后变化，台词均为你拿走吧。",
+              "sourceLocator": "skills/cineweave-director/references/optional/video-platform-adaptation.md / 导演方案到复制稿 / T2V通用稿"
+            },
+            {
+              "role": "continuity",
+              "shotId": "S1",
+              "status": "pass",
+              "criterion": "初态、握持与出点一致，未伪称真实素材验收。",
+              "observation": "全段伞由女子右手持有，男子未接过；门厅和无雨天气为原创设定，实际图像尚待绑定。",
+              "sourceLocator": "skills/cineweave-director/references/optional/video-platform-adaptation.md / 导演方案到复制稿 / T2V通用稿"
+            }
+          ],
+          "prompt": {
+            "text": "八秒单镜，16:9横向写实。白天的安静门厅，关闭的门位于画面右后方，门边地面干燥。一名穿深灰棉衬衫的成年女子站在画面左侧，右手握住收拢黑伞的弯柄，伞尖触地；一名穿浅灰外套的成年男子站在她右侧，两人相隔一个自然递物距离。他的左手空着，停在身前，身体略朝向右后方的门。固定眼平双人全景保留两人从头到脚、完整伞柄和伞尖，手部交互在画面中足以辨认；左侧日光有柔和方向，脸与深色衣料仍可读，光色和焦点保持一致。\n女子看向男子，右手把伞柄向他缓慢送出一小段，伞尖沿地面轻滑，不悬空。她对他说：“你拿走吧”，唇与下颌随准确发音自然运动。说完，她仍握着柄，等待对方；男子先看伞柄，再伸出左手，用指尖触到柄的另一侧。他没有接过重量或拉走伞。女子察觉他没有拿走，手部动作停在当前递出位置，目光仍在他脸上。男子指尖留在伞柄上，两人的停顿持续到出点，伞仍由女子持有、伞尖仍触地。摄影机全段固定，接触不被衣袖遮住，不增加笑、泪、雨、回忆或额外人物。连续室内底声、伞尖轻擦地面的声音与准确对白为声音意图，男子没有额外台词。"
+          }
+        },
+        "result": {
+          "valid": true,
+          "scope": "plan_only",
+          "coverageComplete": true,
+          "reviewComplete": true,
+          "expectedRows": 6,
+          "missing": [],
+          "openItems": [],
+          "prompt": {
+            "nonWhitespaceCodePoints": 446,
+            "limit": null
+          },
+          "errors": [],
+          "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。"
+        }
+      },
+      {
+        "worksheet": {
+          "source": {
+            "type": "prompt",
+            "id": "platform-direction-i2v",
+            "version": 1
+          },
+          "mode": "full",
+          "shotIds": [
+            "S1"
+          ],
+          "reviews": [
+            {
+              "role": "direction",
+              "shotId": "S1",
+              "status": "pass",
+              "criterion": "挽留意图通过递伞后等待是否接取承载。",
+              "observation": "女子说你拿走吧却保持握柄，男子仅触柄未接取，出点保留未决关系。",
+              "sourceLocator": "skills/cineweave-director/references/optional/video-platform-adaptation.md / 导演方案到复制稿 / I2V待绑定运动稿"
+            },
+            {
+              "role": "performance",
+              "shotId": "S1",
+              "status": "pass",
+              "criterion": "回应在对方触柄后发生，发音与等待状态兼容。",
+              "observation": "正文先递伞并说准确台词，男子接触后女子停住等待；T2V允许唇与下颌自然发音。",
+              "sourceLocator": "skills/cineweave-director/references/optional/video-platform-adaptation.md / 导演方案到复制稿 / I2V待绑定运动稿"
+            },
+            {
+              "role": "staging",
+              "shotId": "S1",
+              "status": "pass",
+              "criterion": "持手、重量、伞尖与可达交接关系明确。",
+              "observation": "女子右手持伞，男子左手仅触另一侧，伞尖触地、重量未交给男子。",
+              "sourceLocator": "skills/cineweave-director/references/optional/video-platform-adaptation.md / 导演方案到复制稿 / I2V待绑定运动稿"
+            },
+            {
+              "role": "cinematography",
+              "shotId": "S1",
+              "status": "pass",
+              "criterion": "固定机位保留主要交互，取景与伞尖目标一致。",
+              "observation": "T2V使用双人全景保留头脚与伞尖，I2V条件先要求源图对应姿态和可见接触；两稿摄影机固定。",
+              "sourceLocator": "skills/cineweave-director/references/optional/video-platform-adaptation.md / 导演方案到复制稿 / I2V待绑定运动稿"
+            },
+            {
+              "role": "prompt",
+              "shotId": "S1",
+              "status": "pass",
+              "criterion": "文字与图像路径保留同一必要动作和准确对白。",
+              "observation": "T2V定义完整人物/门位/光线初态，I2V只描述继承后变化，台词均为你拿走吧。",
+              "sourceLocator": "skills/cineweave-director/references/optional/video-platform-adaptation.md / 导演方案到复制稿 / I2V待绑定运动稿"
+            },
+            {
+              "role": "continuity",
+              "shotId": "S1",
+              "status": "pass",
+              "criterion": "初态、握持与出点一致，未伪称真实素材验收。",
+              "observation": "全段伞由女子右手持有，男子未接过；门厅和无雨天气为原创设定，实际图像尚待绑定。",
+              "sourceLocator": "skills/cineweave-director/references/optional/video-platform-adaptation.md / 导演方案到复制稿 / I2V待绑定运动稿"
+            }
+          ],
+          "prompt": {
+            "text": "左侧女子看向右侧男子，保持右手握住黑伞弯柄，把伞柄缓慢送向对方，伞尖沿地面轻滑。她对男子说：“你拿走吧”，说完仍握着伞等待。男子先看伞柄，再伸出空闲左手，指尖触到柄的另一侧；他不接过重量，也不拉走伞。女子的手停在递出位置，继续看向他的脸；男子指尖保持接触，伞仍由女子持有，伞尖仍触地，停顿持续到采用出点。摄影机固定，焦点保护脸和接触点。室内底声、轻微擦地声与准确对白为声音意图，男子无额外台词。"
+          }
+        },
+        "result": {
+          "valid": true,
+          "scope": "plan_only",
+          "coverageComplete": true,
+          "reviewComplete": true,
+          "expectedRows": 6,
+          "missing": [],
+          "openItems": [],
+          "prompt": {
+            "nonWhitespaceCodePoints": 197,
+            "limit": null
+          },
+          "errors": [],
+          "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。"
+        }
+      }
+    ]
+  },
+  "temporalCounterexamples": [
+    {
+      "contract": "temporal-spec",
+      "probe": "baseline",
+      "valid": true,
+      "errors": [],
+      "unverified": []
+    },
+    {
+      "contract": "temporal-spec",
+      "probe": "action_outside_duration",
+      "valid": false,
+      "errors": [
+        "$.actionTimeline[0].timeSeconds must be within 0..durationSeconds inclusive",
+        "$.actionTimeline[1].timeSeconds must be non-decreasing within actionTimeline"
+      ],
+      "unverified": []
+    },
+    {
+      "contract": "temporal-spec",
+      "probe": "focus_reverse_order",
+      "valid": false,
+      "errors": [
+        "$.focusTimeline[1].timeSeconds must be non-decreasing within focusTimeline",
+        "$.focusTimeline[2].timeSeconds must be non-decreasing within focusTimeline"
+      ],
+      "unverified": []
+    },
+    {
+      "contract": "temporal-spec",
+      "probe": "duplicate_action_id",
+      "valid": false,
+      "errors": [
+        "$.actionTimeline[1].eventId must be unique within actionTimeline"
+      ],
+      "unverified": []
+    },
+    {
+      "contract": "sequence-rhythm-spec",
+      "probe": "baseline",
+      "valid": true,
+      "errors": [],
+      "unverified": [
+        "$.validation.storyboardShotsCovered: exact storyboard registry binding unavailable or ambiguous; only local phase/window closure was checked"
+      ]
+    },
+    {
+      "contract": "sequence-rhythm-spec",
+      "probe": "window_start_after_end",
+      "valid": false,
+      "errors": [
+        "$.shotWindows[0].startFrame must not exceed endFrame (inclusive window)",
+        "$.shotWindows[0].startFrame must begin at zero",
+        "$.breathingPoints[0].frame must be within its shotWindow inclusive bounds"
+      ],
+      "unverified": []
+    },
+    {
+      "contract": "sequence-rhythm-spec",
+      "probe": "breathing_outside_window",
+      "valid": false,
+      "errors": [
+        "$.breathingPoints[0].frame must be within its shotWindow inclusive bounds"
+      ],
+      "unverified": []
+    },
+    {
+      "contract": "sequence-rhythm-spec",
+      "probe": "phase_missing_shot",
+      "valid": false,
+      "errors": [
+        "$.tempoPhases[0].shotIds[0] references a missing shotWindow shot.missing",
+        "$.shotWindows[0].shotId must be covered by a tempoPhase"
+      ],
+      "unverified": []
+    },
+    {
+      "contract": "sequence-rhythm-spec",
+      "probe": "unreduced_timebase",
+      "valid": false,
+      "errors": [
+        "$.timebase numerator/denominator must be reduced to lowest terms"
+      ],
+      "unverified": []
+    },
+    {
+      "contract": "sequence-rhythm-spec",
+      "probe": "duration_min_greater_than_max",
+      "valid": false,
+      "errors": [
+        "$.shotDurationPolicy must satisfy minimumFrames <= preferredFrames <= maximumFrames",
+        "$.shotWindows[0] inclusive duration must be within shotDurationPolicy minimumFrames..maximumFrames"
+      ],
+      "unverified": []
+    },
+    {
+      "contract": "sequence-rhythm-spec",
+      "probe": "single_shot_self_transition",
+      "valid": false,
+      "errors": [
+        "$.transitions[0] must connect distinct, forward-adjacent shotWindows"
+      ],
+      "unverified": []
+    }
+  ],
+  "sourceSnapshotInitial": [
+    {
+      "path": "skills/cineweave-director/SKILL.md",
+      "sha256": "6d83c553b4a1ccedd55a84a06df5582739c0bc258c50de85e998cc7e61224524"
+    },
+    {
+      "path": "skills/cineweave-director/reference-lifecycle.json",
+      "sha256": "d9537b7f0afab013243899048afe282181cc253e4d2983607818a1898617d233"
+    },
+    {
+      "path": "skills/cineweave-director/contracts.json",
+      "sha256": "d69f53b084489f788d51061435257025b225a7979ddd00f72cc2db30d1ecd61b"
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/index.json",
+      "sha256": "9d83e3858b0376db618d0ee380ef0bcde2b44a4d6f4f46f14a9f0cef03bc3176"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/short-film-creation.md",
+      "sha256": "38126f516861ca06300daf37d18b4e31c1f66e729c7566333a8ed4e32bdcf7a4"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/visual-development.md",
+      "sha256": "33b72413f85574c8b44b7e8820cfdf65a1b816545aa6d629f2fd3b88432619fd"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/short-film-example.md",
+      "sha256": "503d5b72c16e7df89e6c228f2dccb62a36b477d26e78504f80bf67e312ca2414"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/prompt-detail-standard.md",
+      "sha256": "0de944dffd30d69bc05a52ef4bceaf0a90dce40564e2f1a288c68e7dd1e88e59"
+    },
+    {
+      "path": "skills/cineweave-director/references/core/operating-model.md",
+      "sha256": "d01a0a0221394aac5a31fb7538078c786adfd1b45441973418be4db7019b31bb"
+    },
+    {
+      "path": "skills/cineweave-director/references/core/artifact-control-and-precedence.md",
+      "sha256": "5e4cc12e6ecb24e51025202e1a74de5c6cd9406b0a5bf7fbbb8d557ab16cfe22"
+    },
+    {
+      "path": "skills/cineweave-director/references/core/reference-evidence-and-rights.md",
+      "sha256": "55332bfbab84d121328260c56f971586658dff692a526cac318e2b435a522393"
+    },
+    {
+      "path": "skills/cineweave-director/references/core/visual-bible-and-continuity.md",
+      "sha256": "ba8e5894516ac66b1396a24dab5fabdc25cd3db8fa5d1beddd12be24f0a1139e"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/brief-world.md",
+      "sha256": "de1072b66d907d76cd47c6d7e02878b2c75c7904d2b521018443e727e7b983d6"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/story.md",
+      "sha256": "09862af8560baed3f75a31a3b3ae24135908195aa3f3c260698f553f12d9cc59"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/character.md",
+      "sha256": "511f7b9bb512821f57f7676eab9989161b8f6542fc1f54713138846a60a41e23"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/scene.md",
+      "sha256": "ef10535a31d8aeacf7465957ad995c47b1389f5b3b5fe9096e77682f151ea6e4"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/style.md",
+      "sha256": "f325d045a23a416b3ebf8c19fea942c79580a4be053ed78a3368a7fa3b801231"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/reference-evidence.md",
+      "sha256": "6a27133185302f529f936edf6315f618876d1363ab9d08ccc45cda233804cd48"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/action.md",
+      "sha256": "99e4dce0898e242af9803259ef9af7c44d8d81fa6e7cd52c9c5ffa04496834e4"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/shot-direction.md",
+      "sha256": "8ac6fd68d2f3c51d66a6dbbdd7a60d3604721497f3717a54ce08b15f49e2c82f"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/storyboard-rhythm.md",
+      "sha256": "f71bf9c0aadea9a05d24043e76e3241f3594aa3dcc681b078537c8b5c76af9fd"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/image-prompt.md",
+      "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/production-plan.md",
+      "sha256": "f0fd1a1ad40a235ea9817a699d6a0d3cfaa78ec88291bc3f7b5991963858d3e5"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/review-repair.md",
+      "sha256": "5c12254507bae0e4cb084b2b62eb87374fd775043c6be8071b3c21e758d258e0"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/semantic-morphology.md",
+      "sha256": "9f571c5f00f7313d8a09ede9b4f6518737376fd5b21ad5315e660d55dd4f08ab"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/camera-previsualization.md",
+      "sha256": "dde1e7e5db24ba047ff2bdd1b8aac4fcf414aa29cf45b3327df6bf4226ed0669"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/portrait-natural-human.md",
+      "sha256": "a370c4ca4e05a31576d99e262dd52924667f199d205c9087a6104d709b8d1d43"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/comic-manga.md",
+      "sha256": "6f7c0562b2f2485e99c06abc0bff0d8d512416613df37507d2dabbf578efe589"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/cinematic-patterns.md",
+      "sha256": "2bf2010db3000c25e67b8eccd51564d35ed84fb926e71a843596499bfcb9c3d7"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/shot-design-workbench.md",
+      "sha256": "b2e182a4907a235d0044b500d70d57fdde3b6ec9a7c9a99546583907632543c2"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/generation-diagnostics.md",
+      "sha256": "da8614aa42c5fcabddbf754e0529223fd59c7af042fba1cf1ad987a2a3425f69"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-platform-adaptation.md",
+      "sha256": "2286fab2c6aee8a5fda778218469bb522289cab665b441656eee8eddf4c19ac8"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/tagged-video-nodes.md",
+      "sha256": "08e5c326a9e073791e16c6c7c939c5f6fc8d6dd13ec6061d34c635a3411e5d35"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-performance-direction.md",
+      "sha256": "561ef041a31693d8607e16eed361597ab258a519709855d3e85ec1154969088d"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-timing-and-handles.md",
+      "sha256": "d687fb586e766bd670598fae00813f2d80ad1fc522dda39ee0311e21ee2afee5"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/master-style-presets.md",
+      "sha256": "23d6460910bd81534afc77c1ac72b82308edb22749cc27eab41243d07d6d553f"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/directing-craft.md",
+      "sha256": "82524260f2823fe2d779e367a8a17802c050368c29d8e084cea1b741dd1bcf03"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/cinematography-craft.md",
+      "sha256": "915545176b1a1719956fd72d7d757159aca947578d2fb01dbd00aab6036597e9"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/editing-sound-craft.md",
+      "sha256": "184f2fc8e8d638aab40b294d266badecc6ee37c99e1d097c8e3ec847e45a4da4"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/film-craft-study.md",
+      "sha256": "c609d58d38e926395af0e867e15d2996d3ae03b5046f13856438b50621a57388"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/midjourney-projection.md",
+      "sha256": "3ad60bf6550c16093daf14984713692839feeea0ba98e802764bfa84f93a8c1f"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-sound-and-delivery.md",
+      "sha256": "4a60146d81fc2092fb7bb6e18d9b1cd4e8ac8cdf09b11994f5a98b86fab2a715"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/drafts-and-change-impact.md",
+      "sha256": "56670baace865f7294780112cf50d79f31ba4c45a7c6c6f843133289acf5fb5c"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/ensemble-direction-and-review.md",
+      "sha256": "a3f41e181a4382ed4a23835c696797837fac9cfc939fc3f86203443cab680bae"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/rendering-quality-workflows.md",
+      "sha256": "5495ab7203adbd38be111c3e4b59172ac60e616b19a3418a071aacfe96c12588"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/aigc-control-and-evaluation.md",
+      "sha256": "1087161d1435a87e6b9de891c3b8d0976693645a5484df59ee146b9e5425b771"
+    },
+    {
+      "path": "skills/cineweave-director/scripts/check-shot-review.mjs",
+      "sha256": "bb69f60d8794f3329bc4b7af772d05ad01a28c001c7345f1de63bfa1e3d7d1c2"
+    },
+    {
+      "path": "skills/cineweave-director/scripts/check-video-plan.mjs",
+      "sha256": "167eeabce565591639248aed635dbd27ec1cad87ecfb30a402aad134d755031d"
+    },
+    {
+      "path": "skills/cineweave-director/scripts/check-delivery.mjs",
+      "sha256": "3147c6f5fad4d4d32682a05f34eca15337c6ca2b8c73c69ea96331a209f2e4a5"
+    },
+    {
+      "path": "skills/cineweave-director/scripts/parse-json.mjs",
+      "sha256": "9c15621d8304bf6114cc4cb322409c8e59433409ac17950311725cdcbebecf11"
+    },
+    {
+      "path": "scripts/validate-output.mjs",
+      "sha256": "7c501608201f250e5477d694748a5bd8d6843f91961c63906820b185db1b8057"
+    }
+  ],
+  "sourceRevision": {
+    "version": 2,
+    "changedFiles": [
+      "skills/cineweave-director/references/optional/shot-design-workbench.md"
+    ],
+    "reason": "首轮文字审阅暴露反射确认与远侧持书的可见性说明不足；新增条件性空间检查，不改变硬事实或引入通用近侧姿势。",
+    "initialRunsSourceVersion": 1,
+    "targetedRerunCases": [
+      "CD-E51",
+      "CD-E61"
+    ],
+    "targetedRerunSourceVersion": 2,
+    "initialSnapshotChangedFiles": [
+      "skills/cineweave-director/references/optional/shot-design-workbench.md"
+    ]
+  },
+  "authorizedScopeComplete": true,
+  "reports": [
+    {
+      "path": "tests/evaluations/2026-10-11/director-run-a.md",
+      "bytes": 122191,
+      "sha256": "d548f6a0dfa0f8f7cb431758d31fc66f5511f6e1bfb844ba157d3b0c7de8f883",
+      "sourceVersion": 1
+    },
+    {
+      "path": "tests/evaluations/2026-10-11/director-run-b.md",
+      "bytes": 32076,
+      "sha256": "2503b49c915d10c8442f602b914d07af4974b30d5264ac4e62adf7eb566ccc0b",
+      "sourceVersion": 1
+    },
+    {
+      "path": "tests/evaluations/2026-10-11/director-run-c.md",
+      "bytes": 81144,
+      "sha256": "cc85bd68bdc3347671f218cae62c23f6988686802361143a183f66bce0317b31",
+      "sourceVersion": 1
+    },
+    {
+      "path": "tests/evaluations/2026-10-11/director-targeted-rerun.md",
+      "bytes": 57133,
+      "sha256": "4fdad0dfc6710497c8fb1dc0c0a4a10b32cb603d9049100f57059d3d0367e984",
+      "sourceVersion": 2
+    },
+    {
+      "path": "tests/evaluations/2026-10-11/director-review.md",
+      "bytes": 27406,
+      "sha256": "6677166977af102c496eddbd5a2301e10549cbad76a0ee484addbc8b25ae76bc",
+      "sourceVersion": "review_of_1_and_2"
+    }
+  ],
+  "requestBindingChecks": [
+    {
+      "path": "tests/evaluations/2026-10-11/director-run-a.md",
+      "caseId": "CD-E51",
+      "matchesExactInput": true
+    },
+    {
+      "path": "tests/evaluations/2026-10-11/director-run-a.md",
+      "caseId": "CD-E52",
+      "matchesExactInput": true
+    },
+    {
+      "path": "tests/evaluations/2026-10-11/director-run-a.md",
+      "caseId": "CD-E53",
+      "matchesExactInput": true
+    },
+    {
+      "path": "tests/evaluations/2026-10-11/director-run-a.md",
+      "caseId": "CD-E54",
+      "matchesExactInput": true
+    },
+    {
+      "path": "tests/evaluations/2026-10-11/director-run-b.md",
+      "caseId": "CD-E55",
+      "matchesExactInput": true
+    },
+    {
+      "path": "tests/evaluations/2026-10-11/director-run-b.md",
+      "caseId": "CD-E56",
+      "matchesExactInput": true
+    },
+    {
+      "path": "tests/evaluations/2026-10-11/director-run-b.md",
+      "caseId": "CD-E57",
+      "matchesExactInput": true
+    },
+    {
+      "path": "tests/evaluations/2026-10-11/director-run-b.md",
+      "caseId": "CD-E58",
+      "matchesExactInput": true
+    },
+    {
+      "path": "tests/evaluations/2026-10-11/director-run-c.md",
+      "caseId": "CD-E59",
+      "matchesExactInput": true
+    },
+    {
+      "path": "tests/evaluations/2026-10-11/director-run-c.md",
+      "caseId": "CD-E60",
+      "matchesExactInput": true
+    },
+    {
+      "path": "tests/evaluations/2026-10-11/director-run-c.md",
+      "caseId": "CD-E61",
+      "matchesExactInput": true
+    },
+    {
+      "path": "tests/evaluations/2026-10-11/director-targeted-rerun.md",
+      "caseId": "CD-E51",
+      "matchesExactInput": true
+    },
+    {
+      "path": "tests/evaluations/2026-10-11/director-targeted-rerun.md",
+      "caseId": "CD-E61",
+      "matchesExactInput": true
+    }
+  ],
+  "initialRunPreservation": [
+    {
+      "path": "tests/evaluations/2026-10-11/director-run-a.md",
+      "initialBytes": 103661,
+      "initialSha256": "3e4d47fdbe13794d1199c703ecc0f8c67315eea301346390e0efe2718a140c4e",
+      "prefixSha256": "3e4d47fdbe13794d1199c703ecc0f8c67315eea301346390e0efe2718a140c4e",
+      "preserved": true
+    },
+    {
+      "path": "tests/evaluations/2026-10-11/director-run-c.md",
+      "initialBytes": 58721,
+      "initialSha256": "ce219759171834ae2528d48967e7528ca4575e332006a55214e58d975840b747",
+      "prefixSha256": "ce219759171834ae2528d48967e7528ca4575e332006a55214e58d975840b747",
+      "preserved": true
+    }
+  ],
+  "caseResults": [
+    {
+      "caseId": "CD-E51",
+      "sourceVersion": 1,
+      "finalTextJudgment": "pass",
+      "judgmentScope": "textual_hard_constraints_and_mechanism_only",
+      "mediaJudgment": "unknown",
+      "clarificationCount": 0,
+      "externalFeedbackRevisionCount": 1,
+      "initialTextJudgment": "warn",
+      "finalVersion": 2,
+      "rootVariable": "reflecting_plane_orientation",
+      "initialAndFeedbackFullBodiesPreserved": true
+    },
+    {
+      "caseId": "CD-E52",
+      "sourceVersion": 1,
+      "finalTextJudgment": "pass",
+      "judgmentScope": "textual_hard_constraints_and_mechanism_only",
+      "mediaJudgment": "unknown",
+      "clarificationCount": 0,
+      "externalFeedbackRevisionCount": 0,
+      "finalVersion": 2,
+      "selfRevisionRecorded": true,
+      "initialFullBody": "unknown_not_preserved",
+      "exactSelfRevisionScope": "unknown"
+    },
+    {
+      "caseId": "CD-E53",
+      "sourceVersion": 1,
+      "finalTextJudgment": "pass",
+      "judgmentScope": "textual_hard_constraints_and_mechanism_only",
+      "mediaJudgment": "unknown",
+      "clarificationCount": 0,
+      "externalFeedbackRevisionCount": 0,
+      "finalVersion": 2,
+      "selfRevisionRecorded": true,
+      "initialFullBody": "unknown_not_preserved",
+      "exactSelfRevisionScope": "unknown"
+    },
+    {
+      "caseId": "CD-E54",
+      "sourceVersion": 1,
+      "finalTextJudgment": "pass",
+      "judgmentScope": "textual_hard_constraints_and_mechanism_only",
+      "mediaJudgment": "unknown",
+      "clarificationCount": 0,
+      "externalFeedbackRevisionCount": 0,
+      "finalVersion": 2,
+      "selfRevisionRecorded": true,
+      "initialFullBody": "unknown_not_preserved",
+      "exactSelfRevisionScope": "unknown"
+    },
+    {
+      "caseId": "CD-E55",
+      "sourceVersion": 1,
+      "finalTextJudgment": "pass",
+      "judgmentScope": "textual_hard_constraints_and_mechanism_only",
+      "mediaJudgment": "unknown",
+      "clarificationCount": 0,
+      "externalFeedbackRevisionCount": 0,
+      "finalVersion": 1,
+      "originalSceneBinding": "unknown_missing_material",
+      "recordedWorksheetExitCode": 2
+    },
+    {
+      "caseId": "CD-E56",
+      "sourceVersion": 1,
+      "finalTextJudgment": "pass",
+      "judgmentScope": "textual_hard_constraints_and_mechanism_only",
+      "mediaJudgment": "unknown",
+      "clarificationCount": 0,
+      "externalFeedbackRevisionCount": 0,
+      "finalVersion": 1,
+      "originalSceneBinding": "unknown_missing_material",
+      "recordedWorksheetExitCode": 2
+    },
+    {
+      "caseId": "CD-E57",
+      "sourceVersion": 1,
+      "finalTextJudgment": "pass",
+      "judgmentScope": "textual_hard_constraints_and_mechanism_only",
+      "mediaJudgment": "unknown",
+      "clarificationCount": 0,
+      "externalFeedbackRevisionCount": 0,
+      "finalVersion": 1,
+      "artifactScope": "one_static_prompt"
+    },
+    {
+      "caseId": "CD-E58",
+      "sourceVersion": 1,
+      "finalTextJudgment": "pass",
+      "judgmentScope": "textual_hard_constraints_and_mechanism_only",
+      "mediaJudgment": "unknown",
+      "clarificationCount": 0,
+      "externalFeedbackRevisionCount": 0,
+      "finalVersion": 1,
+      "artifactScope": "framing_only_revision"
+    },
+    {
+      "caseId": "CD-E59",
+      "sourceVersion": 1,
+      "finalTextJudgment": "pass",
+      "judgmentScope": "textual_hard_constraints_and_mechanism_only",
+      "mediaJudgment": "unknown",
+      "clarificationCount": 1,
+      "externalFeedbackRevisionCount": 0,
+      "finalVersion": 2,
+      "inputAmbiguity": "total_duration_clarified_without_expected_answer",
+      "firstAttemptWithoutClarification": false
+    },
+    {
+      "caseId": "CD-E60",
+      "sourceVersion": 1,
+      "finalTextJudgment": "pass",
+      "judgmentScope": "textual_hard_constraints_and_mechanism_only",
+      "mediaJudgment": "unknown",
+      "clarificationCount": 0,
+      "externalFeedbackRevisionCount": 0,
+      "finalVersion": 1
+    },
+    {
+      "caseId": "CD-E61",
+      "sourceVersion": 1,
+      "finalTextJudgment": "pass",
+      "judgmentScope": "textual_hard_constraints_and_mechanism_only",
+      "mediaJudgment": "unknown",
+      "clarificationCount": 0,
+      "externalFeedbackRevisionCount": 1,
+      "initialTextJudgment": "warn",
+      "finalVersion": 2,
+      "rootVariable": "held_book_position_relative_to_torso",
+      "initialAndFeedbackFullBodiesPreserved": true
+    }
+  ],
+  "targetedRerun": {
+    "sourceVersion": 2,
+    "freshContext": true,
+    "oldAnswersOrExpectationsProvided": false,
+    "caseIds": [
+      "CD-E51",
+      "CD-E61"
+    ],
+    "fullBodiesPreserved": true,
+    "independentTextJudgments": {
+      "CD-E51": "pass",
+      "CD-E61": "pass"
+    },
+    "worksheetExpectedRows": [
+      6,
+      12
+    ],
+    "worksheetExitCodes": [
+      0,
+      0
+    ],
+    "deliveryFrames": [
+      192,
+      192
+    ],
+    "deliverySeconds": [
+      8,
+      8
+    ],
+    "mediaJudgment": "unknown",
+    "scope": "plan_only",
+    "independentVerification": {
+      "exactRequests": 2,
+      "promptTextMatchesFullAnswers": true,
+      "nonWhitespaceCodePoints": [
+        2882,
+        3588
+      ],
+      "rawToolResultsReproduced": 4,
+      "currentSourceHashesMatched": 11,
+      "reviewReport": "tests/evaluations/2026-10-11/director-review.md"
+    }
+  },
+  "sourceVerification": {
+    "currentSnapshotFiles": 51,
+    "mismatches": [],
+    "exactOriginalRequests": 13,
+    "caseDefinitionsInitialStatusRetained": true,
+    "initialRunSourcesRemainVersion1": true
+  },
+  "publication": {
+    "recordedAtStage": "optimization_completion_before_user_git_request",
+    "committed": false,
+    "pushed": false,
+    "installed": false,
+    "versionChanged": false
+  },
+  "publicationPreparation": {
+    "date": "2026-10-11",
+    "scope": "user_authorized_git_commit_and_push",
+    "hashScopes": "reports and initialRunPreservation retain original execution byte hashes; artifacts below bind publishable Git LF bytes",
+    "originalTextContentAndReviewJudgmentsChanged": false,
+    "originalRuntimeSourceHashesChanged": false,
+    "runtimeSourceFilesMatchGitLfSnapshot": 51,
+    "originalByteBackupsPreservedLocally": true,
+    "artifacts": [
+      {
+        "path": "tests/evaluations/2026-10-11/director-run-a.md",
+        "originalExecutionBytes": 122191,
+        "originalExecutionSha256": "d548f6a0dfa0f8f7cb431758d31fc66f5511f6e1bfb844ba157d3b0c7de8f883",
+        "gitLfBytes": 120497,
+        "gitLfSha256": "8c816a85c82080609727d4f6d0cae2dcb8826341fed976ba9289a449fd4c5825",
+        "transformations": [
+          "Git_text_auto_eol_lf_converts_CRLF_to_LF"
+        ],
+        "initialPrefixGitLfBytes": 101967,
+        "initialPrefixGitLfSha256": "2af2da4b80e2c900b7d2582dea96c4072696ce10ac10cf83a014a398249c96cc",
+        "restoreOriginal": "convert_each_LF_in_first_101967_Git_blob_bytes_to_CRLF; leave_remaining_suffix_unchanged"
+      },
+      {
+        "path": "tests/evaluations/2026-10-11/director-run-b.md",
+        "originalExecutionBytes": 32076,
+        "originalExecutionSha256": "2503b49c915d10c8442f602b914d07af4974b30d5264ac4e62adf7eb566ccc0b",
+        "gitLfBytes": 31663,
+        "gitLfSha256": "9e2bafdd711b4fca9a1a8c6668317f6cebbf3bb9a0dbe76ef663495e9b9c1837",
+        "transformations": [
+          "Git_text_auto_eol_lf_converts_CRLF_to_LF"
+        ],
+        "restoreOriginal": "convert_each_LF_in_Git_blob_to_CRLF"
+      },
+      {
+        "path": "tests/evaluations/2026-10-11/director-run-c.md",
+        "originalExecutionBytes": 81144,
+        "originalExecutionSha256": "cc85bd68bdc3347671f218cae62c23f6988686802361143a183f66bce0317b31",
+        "gitLfBytes": 81144,
+        "gitLfSha256": "cc85bd68bdc3347671f218cae62c23f6988686802361143a183f66bce0317b31",
+        "transformations": []
+      },
+      {
+        "path": "tests/evaluations/2026-10-11/director-targeted-rerun.md",
+        "originalExecutionBytes": 57133,
+        "originalExecutionSha256": "4fdad0dfc6710497c8fb1dc0c0a4a10b32cb603d9049100f57059d3d0367e984",
+        "gitLfBytes": 57132,
+        "gitLfSha256": "c6b3d41c7ad8273a2143830ca7d8544e848abba86226ccde0fb40d75be4ab87e",
+        "transformations": [
+          "remove_one_extra_final_LF; append_one_LF_to_restore_original_execution_bytes"
+        ]
+      },
+      {
+        "path": "tests/evaluations/2026-10-11/director-review.md",
+        "originalExecutionBytes": 27406,
+        "originalExecutionSha256": "6677166977af102c496eddbd5a2301e10549cbad76a0ee484addbc8b25ae76bc",
+        "gitLfBytes": 27406,
+        "gitLfSha256": "6677166977af102c496eddbd5a2301e10549cbad76a0ee484addbc8b25ae76bc",
+        "transformations": []
+      },
+      {
+        "path": "tests/evaluations/2026-09-23/revision.md",
+        "originalExecutionBytes": 1858,
+        "originalExecutionSha256": "36d1c973575b11ddcb1334e27580c65a197dfe0708a7772e52c1d3afe991c2de",
+        "gitLfBytes": 1857,
+        "gitLfSha256": "6b09a3288a2705385d1892ad0d30afc1a787114af8440f56b3410e4c1e74b6b6",
+        "transformations": [
+          "remove_one_extra_final_LF; append_one_LF_to_restore_original_execution_bytes"
+        ]
+      }
+    ],
+    "mediaGenerated": false,
+    "mediaQualityVerified": false,
+    "newVersionOrTag": false
+  }
+}

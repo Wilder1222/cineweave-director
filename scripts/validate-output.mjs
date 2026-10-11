@@ -809,6 +809,172 @@ function validatePerformanceTimelineSemantics(payload, errors) {
   }
 }
 
+function validateTemporalSpecSemantics(payload, errors) {
+  // Tracks may overlap or associate the same event ID across different arrays.
+  // Only each track's own event IDs, order and inclusive time bounds are checked.
+  for (const field of ["focusTimeline", "actionTimeline", "dynamicLighting"]) {
+    const events = Array.isArray(payload[field]) ? payload[field] : [];
+    const ids = new Set();
+    let previousTime = 0;
+    for (const [index, event] of events.entries()) {
+      if (!isObject(event)) continue;
+      const label = `$.${field}[${index}]`;
+      if (typeof event.eventId === "string") {
+        if (ids.has(event.eventId)) errors.push(`${label}.eventId must be unique within ${field}`);
+        ids.add(event.eventId);
+      }
+      if (!Number.isFinite(event.timeSeconds)) continue;
+      if (event.timeSeconds < previousTime) errors.push(`${label}.timeSeconds must be non-decreasing within ${field}`);
+      if (event.timeSeconds < 0 || event.timeSeconds > payload.durationSeconds) {
+        errors.push(`${label}.timeSeconds must be within 0..durationSeconds inclusive`);
+      }
+      previousTime = event.timeSeconds;
+    }
+  }
+}
+
+function validateSequenceRhythmSpecSemantics(payload, errors) {
+  const timebase = payload.timebase ?? {};
+  if (Number.isSafeInteger(timebase.numerator) && timebase.numerator > 0
+      && Number.isSafeInteger(timebase.denominator) && timebase.denominator > 0) {
+    let a = timebase.numerator;
+    let b = timebase.denominator;
+    while (b !== 0) [a, b] = [b, a % b];
+    if (a !== 1) errors.push("$.timebase numerator/denominator must be reduced to lowest terms");
+  }
+
+  const policy = payload.shotDurationPolicy ?? {};
+  if (Number.isSafeInteger(policy.minimumFrames) && Number.isSafeInteger(policy.preferredFrames)
+      && Number.isSafeInteger(policy.maximumFrames)
+      && !(policy.minimumFrames <= policy.preferredFrames && policy.preferredFrames <= policy.maximumFrames)) {
+    errors.push("$.shotDurationPolicy must satisfy minimumFrames <= preferredFrames <= maximumFrames");
+  }
+
+  const windows = Array.isArray(payload.shotWindows) ? payload.shotWindows : [];
+  const windowById = new Map();
+  let previousOrder = 0;
+  let previousEnd = -1;
+  for (const [index, window] of windows.entries()) {
+    if (!isObject(window)) continue;
+    const label = `$.shotWindows[${index}]`;
+    if (typeof window.shotId === "string") {
+      if (windowById.has(window.shotId)) errors.push(`${label}.shotId must be unique`);
+      else windowById.set(window.shotId, { window, index });
+    }
+    if (Number.isSafeInteger(window.order)) {
+      if (window.order <= previousOrder) errors.push(`${label}.order must be strictly increasing`);
+      previousOrder = window.order;
+    }
+    if (!Number.isSafeInteger(window.startFrame) || !Number.isSafeInteger(window.endFrame)) continue;
+    if (window.startFrame > window.endFrame) errors.push(`${label}.startFrame must not exceed endFrame (inclusive window)`);
+    if (index === 0 && window.startFrame !== 0) errors.push(`${label}.startFrame must begin at zero`);
+    if (index > 0 && window.startFrame <= previousEnd) errors.push(`${label}.startFrame must follow ordered, non-overlapping windows`);
+    else if (index > 0 && window.startFrame !== previousEnd + 1) errors.push(`${label}.startFrame must equal the preceding endFrame + 1 for continuous inclusive windows`);
+    // Preferred length expresses a choice; only the declared minimum and maximum
+    // constrain a window. Inclusive indexing makes start === end one valid frame.
+    const length = window.endFrame - window.startFrame + 1;
+    if (length > 0 && Number.isSafeInteger(policy.minimumFrames) && Number.isSafeInteger(policy.maximumFrames)
+        && (length < policy.minimumFrames || length > policy.maximumFrames)) {
+      errors.push(`${label} inclusive duration must be within shotDurationPolicy minimumFrames..maximumFrames`);
+    }
+    previousEnd = window.endFrame;
+  }
+
+  const phases = Array.isArray(payload.tempoPhases) ? payload.tempoPhases : [];
+  const phaseIds = new Set();
+  const coveredShotIds = new Set();
+  previousOrder = 0;
+  for (const [index, phase] of phases.entries()) {
+    if (!isObject(phase)) continue;
+    const label = `$.tempoPhases[${index}]`;
+    if (typeof phase.phaseId === "string") {
+      if (phaseIds.has(phase.phaseId)) errors.push(`${label}.phaseId must be unique`);
+      phaseIds.add(phase.phaseId);
+    }
+    if (Number.isSafeInteger(phase.order)) {
+      if (phase.order <= previousOrder) errors.push(`${label}.order must be strictly increasing`);
+      previousOrder = phase.order;
+    }
+    for (const [shotIndex, shotId] of (Array.isArray(phase.shotIds) ? phase.shotIds : []).entries()) {
+      if (!windowById.has(shotId)) errors.push(`${label}.shotIds[${shotIndex}] references a missing shotWindow ${shotId}`);
+      else coveredShotIds.add(shotId);
+    }
+  }
+  for (const [shotId, { index }] of windowById) {
+    if (!coveredShotIds.has(shotId)) errors.push(`$.shotWindows[${index}].shotId must be covered by a tempoPhase`);
+  }
+
+  for (const [index, point] of (Array.isArray(payload.breathingPoints) ? payload.breathingPoints : []).entries()) {
+    if (!isObject(point)) continue;
+    const label = `$.breathingPoints[${index}]`;
+    const entry = windowById.get(point.shotId);
+    if (!entry) errors.push(`${label}.shotId references a missing shotWindow ${point.shotId}`);
+    else if (Number.isSafeInteger(point.frame)
+        && (point.frame < entry.window.startFrame || point.frame > entry.window.endFrame)) {
+      errors.push(`${label}.frame must be within its shotWindow inclusive bounds`);
+    }
+  }
+
+  for (const [index, transition] of (Array.isArray(payload.transitions) ? payload.transitions : []).entries()) {
+    if (!isObject(transition)) continue;
+    const label = `$.transitions[${index}]`;
+    const from = windowById.get(transition.fromShotId);
+    const to = windowById.get(transition.toShotId);
+    if (!from) errors.push(`${label}.fromShotId references a missing shotWindow ${transition.fromShotId}`);
+    if (!to) errors.push(`${label}.toShotId references a missing shotWindow ${transition.toShotId}`);
+    if (from && to && to.index !== from.index + 1) errors.push(`${label} must connect distinct, forward-adjacent shotWindows`);
+  }
+}
+
+async function validateSequenceRhythmContext(payload, artifacts, loader, errors, unverified) {
+  const ref = payload.storyboardRef;
+  const coverageLabel = "$.validation.storyboardShotsCovered";
+  const unavailable = (reason) => unverified.push(`${coverageLabel}: ${reason}`);
+  const matches = artifacts.filter((entry) => isObject(entry) && isObject(entry.ref) && deepEqual(entry.ref, ref));
+  if (matches.length !== 1) {
+    unavailable("exact storyboard registry binding unavailable or ambiguous; only local phase/window closure was checked");
+    if (matches.length > 1) errors.push("$.storyboardRef: ambiguous registry binding");
+    return;
+  }
+  const document = matches[0].document;
+  if (!isObject(document) || document.kind !== ref.kind || sha256Bytes(canonicalize(document)) !== ref.contentHash) {
+    errors.push("$.storyboardRef: document kind or JCS content hash does not match the exact reference");
+    unavailable("the supplied storyboard identity/hash could not be verified");
+    return;
+  }
+  if (document.storyboardId !== ref.id || document.version !== ref.version) {
+    errors.push("$.storyboardRef: document storyboardId or version does not match the exact reference");
+    unavailable("the supplied storyboard identity/version could not be verified");
+    return;
+  }
+
+  // Require the actual contract body, rather than trusting a matching-hash summary
+  // or its validation booleans. RepairPlan retains its existing context behavior.
+  const schemaPath = resolve(dirname(loader.rootSchemaPath), "storyboard-output.schema.json");
+  const schema = await loader.load(schemaPath);
+  await loader.assertRefClosure(schema, schema, schemaPath);
+  const upstreamErrors = [];
+  await validateNode(document, schema, { loader, document: schema, schemaPath, activeReferences: new Set() }, "$", upstreamErrors);
+  if (upstreamErrors.length) {
+    errors.push(...upstreamErrors.map((error) => `$.storyboardRef: upstream document ${error}`));
+    unavailable("the supplied storyboard contract body is invalid");
+    return;
+  }
+
+  const shotIds = document.shots.map((shot) => shot.shotId);
+  if (new Set(shotIds).size !== shotIds.length || document.shots.some((shot, index) => shot.order !== index + 1)) {
+    errors.push("$.storyboardRef: upstream shots must have unique shotId values and contiguous ordered entries");
+    unavailable("the supplied storyboard shot list is ambiguous or unordered");
+    return;
+  }
+  const windowIds = payload.shotWindows.map((window) => window.shotId);
+  if (!sameStringSet(windowIds, shotIds)) {
+    errors.push("$.shotWindows must cover every exact storyboard shot once, with no missing or extra shots");
+  } else if (windowIds.some((shotId, index) => shotId !== shotIds[index])) {
+    errors.push("$.shotWindows order must match the exact storyboard shot order");
+  }
+}
+
 function validateCreativeReviewSemantics(payload, errors) {
   if (!isObject(payload)) return;
   const evidence = Array.isArray(payload.evidence) ? payload.evidence.filter(isObject) : [];
@@ -967,6 +1133,8 @@ function validateContractSemantics(payload, schema, errors, contracts) {
   if (schemaKind === "cineweave_codex_shot_compiler_plan") validateShotCompilerPlanSemantics(payload, errors, contracts);
   if (schemaKind === "cineweave_codex_workflow_plan") validateWorkflowPlanSemantics(payload, errors, contracts);
   if (schemaKind === "cineweave_codex_performance_timeline") validatePerformanceTimelineSemantics(payload, errors);
+  if (schemaKind === "cineweave_codex_temporal_spec") validateTemporalSpecSemantics(payload, errors);
+  if (schemaKind === "cineweave_codex_sequence_rhythm_spec") validateSequenceRhythmSpecSemantics(payload, errors);
   if (schemaKind === "cineweave_codex_creative_review") validateCreativeReviewSemantics(payload, errors);
   if (schemaKind === "cineweave_codex_repair_plan") validateRepairPlanSemantics(payload, errors);
 }
@@ -1021,6 +1189,10 @@ export async function validatePayload(schemaPath, payload, options = {}) {
   if (schemaKind === "cineweave_codex_repair_plan" && errors.length === 0) {
     if (options.artifacts !== undefined && !Array.isArray(options.artifacts)) errors.push("artifacts must be an array of exact ref/document bindings");
     else validateRepairContext(payload, options.artifacts ?? [], errors, unverified);
+  }
+  if (schemaKind === "cineweave_codex_sequence_rhythm_spec" && errors.length === 0) {
+    if (options.artifacts !== undefined && !Array.isArray(options.artifacts)) errors.push("artifacts must be an array of exact ref/document bindings");
+    else await validateSequenceRhythmContext(payload, options.artifacts ?? [], loader, errors, unverified);
   }
   return { valid: errors.length === 0, errors, unverified, schema: document.$id || absoluteSchema, payload };
 }

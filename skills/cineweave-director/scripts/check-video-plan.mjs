@@ -3,6 +3,7 @@
 import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { parseJsonStrict } from "./parse-json.mjs";
 
 export const FORMAT = "cineweave-video-workbook/v1";
 export const NODE_TAGS = Object.freeze({
@@ -40,6 +41,14 @@ const own = (x, k) => Object.hasOwn(x, k);
 const plain = (x) => x !== null && typeof x === "object" && !Array.isArray(x);
 const text = (x) => typeof x === "string" && x.trim().length > 0;
 const integer = (x, positive = false) => Number.isSafeInteger(x) && (positive ? x > 0 : x >= 0);
+// Calendar validity only; a well-formed declaration is not external evidence.
+function calendarDate(value) {
+  if (typeof value !== "string" || !/^\d{4}-\d{2}-\d{2}$/u.test(value)) return false;
+  const [year, month, day] = value.split("-").map(Number);
+  const leap = year % 4 === 0 && (year % 100 !== 0 || year % 400 === 0);
+  const days = [31, leap ? 29 : 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
+  return year > 0 && month >= 1 && month <= 12 && day >= 1 && day <= days[month - 1];
+}
 const sumSafe = (numbers) => numbers.reduce((a, b) => a + BigInt(b), 0n);
 function safeNumber(n) {
   if (n > BigInt(Number.MAX_SAFE_INTEGER) || n < 0n) throw new Error("Arithmetic result is outside the safe integer range");
@@ -98,7 +107,7 @@ export function planTiming(timing, frameRate, durationPolicy = null) {
     if (!plain(durationPolicy) || !["documented", "user_supplied", "fixture"].includes(durationPolicy.status)) {
       errors.push(issue("DURATION_POLICY", "Invalid duration-policy declaration")); return { ...result, valid: false };
     }
-    if (!text(durationPolicy.source) || !/^\d{4}-\d{2}-\d{2}$/u.test(durationPolicy.checkedAt ?? "")) {
+    if (!text(durationPolicy.source) || !calendarDate(durationPolicy.checkedAt)) {
       errors.push(issue("DURATION_EVIDENCE", "A source and dated check declaration are required")); return { ...result, valid: false };
     }
     const hasList = own(durationPolicy, "allowedMs"), hasRange = own(durationPolicy, "rangeMs");
@@ -194,7 +203,7 @@ export function validateVideoWorkbook(book) {
         if (Array.isArray(refs) && refs.filter((r) => Array.isArray(r?.roles) && r.roles.includes(role)).length > 1) add(errors, "CONFLICTING_ANCHORS", `More than one ${role} assignment`, id);
       }
       const capability = node.capability;
-      if (!plain(capability) || !["platform", "model", "surface", "evidence", "checkedAt"].every((k) => text(capability[k])) || capability.mode !== VIDEO_MODES[node.type])
+      if (!plain(capability) || !["platform", "model", "surface", "evidence"].every((k) => text(capability[k])) || !calendarDate(capability.checkedAt) || capability.mode !== VIDEO_MODES[node.type])
         add(pending, "CAPABILITY_SCOPE", "Resolve platform/model/surface/mode and dated evidence separately", id);
       if (capability?.status === "unsupported") add(errors, "UNSUPPORTED_MODE", "Selected surface explicitly does not support this mode", id);
       else if (capability?.status !== "documented") add(pending, "MODE_UNKNOWN", "Mode support remains unresolved or a fixture", id);
@@ -209,7 +218,7 @@ export function validateVideoWorkbook(book) {
       }
       if (node.referenceLimits && node.referenceLimits.status !== "unknown") {
         const limit = node.referenceLimits;
-        if (!plain(limit) || !["documented", "user_supplied", "fixture"].includes(limit.status) || !text(limit.source) || !text(limit.checkedAt) || !plain(limit.caps) ||
+        if (!plain(limit) || !["documented", "user_supplied", "fixture"].includes(limit.status) || !text(limit.source) || !calendarDate(limit.checkedAt) || !plain(limit.caps) ||
             !Object.keys(limit.caps).length || Object.entries(limit.caps).some(([k, v]) => !["image", "video", "audio", "total"].includes(k) || !integer(v)))
           add(errors, "REFERENCE_LIMITS", "Reference limits need dated evidence and nonnegative integer media/total caps", id);
         else if (Array.isArray(refs)) {
@@ -366,7 +375,7 @@ export function withChineseVideoSummary(result) {
 function main(args) {
   if (args.length === 1 && args[0] === "--help") { console.log(`用法：node check-video-plan.mjs worksheet.json\n只读检查 ${FORMAT} 工作表；向标准输出返回 JSON 和中文摘要，不调用平台、不写文件。`); return; }
   if (args.length !== 1 || args[0].startsWith("--")) throw new Error("Provide one worksheet path or --help");
-  const result = validateVideoWorkbook(JSON.parse(readFileSync(args[0], "utf8")));
+  const result = validateVideoWorkbook(parseJsonStrict(readFileSync(args[0], "utf8")));
   console.log(JSON.stringify(withChineseVideoSummary(result), null, 2));
   if (!result.valid) process.exitCode = 1;
 }

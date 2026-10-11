@@ -12,15 +12,17 @@
 
 ## 中文与协议兼容
 
-创作者可见说明、Skill 知识、正负向提示词、展开稿、平台复制稿、规范与非规范示例中的自然语言值以及帮助默认简体中文。英文机器 ID、路径、JSON 键、枚举、真实引用、版本和哈希保持不变。既有精确台词／字幕不因中文默认而被改写。专业术语以中文为主，必要时附英文对照。
+说明、提示词、示例自然语言值与帮助默认简体中文；指定台词／字幕保留原文。机器 ID、路径、JSON 键、枚举、单位、准确配置名称、引用、版本和哈希保持兼容。检查 schema 注释和短词描述，不能只扫长英文段落或整目录豁免；避免无作用域的全局替换。修改后同步索引并验证机器结构与非字符串值，CLI 回归覆盖实际中文输出。MIT 法律文本保留原文。
 
-章节链接优先使用中文标题生成的默认锚点，不为每个标题重复添加 HTML 锚点。删除或更名时同步迁移现有链接，并核对目标章节；确有外部兼容需求时才保留显式锚点。新增 UI 文案要同步插件清单、市场清单和 agent 元数据。不能把整个 schema 或规范夹具目录豁免：其自然语言注释、标题和提示词要检查，类型、枚举、引用和标识不改。修改字节后同步索引，并测试机器结构与非字符串值未变。保留许可证授权原文；不得以未经注明的译文替代它。不使用无作用域的全局字符串替换处理协议。命令行可以增加中文摘要，但原始程序字段和诊断需保持可用；测试必须覆盖实际执行的中文呈现代码。
+章节链接优先使用标题默认锚点，删除或更名时迁移引用；只为明确的外部兼容需求保留显式锚点。UI 文案同步插件清单、市场清单和 agent 元数据。
 
 ## 数据契约
 
 每种根 kind 只属于 12 路由中的一个；schema 和示例的 `kind`、`contractVersion` 一致。`$ref` 必须位于本地 schema 目录内，拒绝网络、绝对和越界引用。示例只是结构夹具，安装回执格式虽须匹配发布仓库和 Skill，但示例 ID、哈希、权利、任务及批准不是观察事实。
 
 插件／Skill 版本与产物线版本独立，不为匹配 3.x 发布或中文化而批量改兼容的 2.x 契约。契约和示例最终确定后才运行 `npm run contracts:index`，索引与文件一起提交。
+
+`TemporalSpec` 校验各事件数组内的 ID 唯一、非递减时间与包含端点的时长边界；不同轨可并行及关联同名事件。`SequenceRhythmSpec` 使用零基、端点包含窗口，检查约分时基、显式时长政策、窗口／阶段／呼吸点和相邻转场。默认只检查本文件闭合，返回的 `unverified` 会指出精确分镜正文缺失；使用既有 `--artifacts` 或 `options.artifacts` 提供准确引用与完整正文后，才能核对实际分镜镜号和顺序。`valid: true` 不消除 `unverified`，也不证明文字因果、艺术节奏或真实媒体验收。
 
 ## 平台适配
 
@@ -41,11 +43,24 @@ npm test
 npm run validate
 npm run build
 npm run validate:bundle
+npm run test:bundle
 ```
 
 分发清单由声明的基础资源、生命周期和契约索引派生，不硬编码文件数。构建必须字节相同，不转换、扁平化 schema、改路径、生成提示词或引入隐藏依赖。schema 通过不能代替代表性新任务评审。
 
-基础白名单包含只读 `skills/cineweave-director/scripts/check-delivery.mjs`、`check-video-plan.mjs` 和 `check-shot-review.mjs`。保持自包含，不调用平台、生成媒体、改配置或写文件。计算输入变化时同步对应指南与回归测试；从完整构建包运行工具验证安装独立性。逐镜评审的 `valid`、`coverageComplete`、`reviewComplete` 分别验收，规划通过不等于媒体通过。`tests/evaluations/` 是开发证据，不分发到 Skill。
+三个随包工具 `check-delivery.mjs`、`check-video-plan.mjs`、`check-shot-review.mjs` 保持只读、自包含，通过同目录 `parse-json.mjs` 与正式契约共享严格解析。安装须保留完整脚本目录；输入变化同步指南与回归，拒绝重复键、无效 Unicode 标量和非有限数。视频声明的 `checkedAt` 使用有效公历 `YYYY-MM-DD`，不证明来源真实性、新鲜度或账号适用性。逐镜评审分别检查 `valid`、`coverageComplete`、`reviewComplete`。
+
+本地 Markdown 验证覆盖分发知识、入口和开发报告中的文件与章节链接。CI 配置 Windows/Linux、Node 22/24 矩阵，`test:bundle` 从仓库外副本调用工具并检查退出状态与只读行为；本地通过不代表远端矩阵已运行。
+
+### 创作行为评测
+
+案例输入、期待和反例维护在 [cinematic-cases.json](tests/evaluations/cinematic-cases.json)，不随 Skill 分发；`status` 是评测状态，`mustNot` 不是平台负向词。新任务只提供 Skill、原始请求和必要素材，不暴露答案或旧输出。素材不可用的项目保留未运行；明确反馈后的修订与首次独立任务分别记录。
+
+案例库中的 `status: not_run` 是可复用测试定义的初始状态，不是覆盖所有历史执行的总状态。实际 run 单独绑定案例 ID、源码／输入哈希、完整输出、实际工具结果、独立判断、修订及未知项；一次试跑不得将整个案例库标成完成。不能因原始请求与案例相似就自动计入覆盖，运行使用的请求应与所绑定定义逐字核对。独立上下文只能收到原始请求、入口与必要素材，不读 `must`／`mustNot`、历史回答或研究结论。
+
+保存源码快照、原始请求与输入、完整输出、实际工具结果、澄清次数和可知的模型／用量；未知指标保持未知。按任务核对路由、交付完整性、连续性与硬约束、证据诚实性和修订范围，并给出原文依据；虚构证据、无声改变硬锁或冒称执行均为阻断问题。逐项报告失败与未运行项，不用静态检查、少量样例或自拟分数代替艺术质量和稳定成功率。
+
+当前证据保存到受跟踪的 `tests/evaluations/`；仅在 `.build` 的输出不能充当新 checkout 的可复核材料。保留解释当前结论的原稿和反例，已被取代的阶段报告由 Git 历史追溯。当前实际试跑见[项目审阅记录](tests/evaluations/project-review-2026-09-23.md#创作任务复核)。
 
 ## 变更和发布
 
@@ -67,19 +82,15 @@ npm run validate:bundle
 | --- | --- | --- |
 | [小优视觉导演](https://github.com/wubo0927/xiaoyou-aigc-cinematic-director/blob/13686c146c98b3e2af3b44423472e1e59af4ae92/cinematic-director/SKILL.md) | 先选择注意力、动作瞬间和摄影关系，再组织提示词 | 镜头工作台和入口的可见内容选择；不继承必须模拟会议、人物总是比例尺或固定英文输出 |
 | [DirectorSKILL](https://github.com/wuwangzhang1216/DirectorSKILL/blob/c65ae0d14457053efb1e354c7e7f7e120d97fad1/SKILL.md) | 按交付物路由、限制输出规模、按小节加载 | 单图可直接交付，完整项目分阶段展开；专项知识不以一般路由自动触发 |
-| [关键帧模板](https://github.com/wuwangzhang1216/DirectorSKILL/blob/c65ae0d14457053efb1e354c7e7f7e120d97fad1/assets/keyframe-prompt-template.md) | 静帧姿态、身份不变量、场景光源与逐镜取景分开 | 三镜头中文示例分别给首帧、运动、终态与剪辑窗口，不把连续动作写成一张图 |
+| [关键帧模板](https://github.com/wuwangzhang1216/DirectorSKILL/blob/c65ae0d14457053efb1e354c7e7f7e120d97fad1/assets/keyframe-prompt-template.md) | 静帧姿态、身份不变量、场景光源与逐镜取景分开 | 完整短片示例分别给首帧、运动、终态与剪辑窗口，不把连续动作写成一张图 |
 
 创作入口保留决定下一步所需的信息。测试数据移入 `tests/evaluations/`；维护审计不进入日常创作指令。机器契约保留为可选结构化交付，不继续扩张为运行时或生成平台。清理的目标是减少创作上下文负担，而非单纯降低文件数。
 
-中文复查需区分自然语言与协议值：schema 的 `enum`、`const`、字段路径、能力名称、单位和 OCIO 配置中的准确视图名称保留。自由描述（包括单词形式的材料、情绪、保留项）应译成中文；仅检测长英文段落不能证明已完成。现有规范示例内的版本、许可与模拟回执含义不随翻译改变。
-
-发布前运行完整验证并实际审阅代表性创作任务；当前仓库的静态检查不证明真实模型创作效果。旧版插件安装固定 `v3.1.0`：
+旧版插件安装固定 `v3.1.0`：
 
 ```bash
 codex plugin marketplace add Wilder1222/cineweave-director --ref v3.1.0
 codex plugin add cineweave-director@cineweave-director
 ```
 
-该旧标签不包含当前未发布中文改动。新的发布应使用新的不可变版本，不能移动旧标签。
-
-完整短片与视觉开发的后续调研、固定源码依据、方法取舍及实现落点见[研究报告](tests/evaluations/aigc-creation-research-2026-09-14.md)。报告保存在开发证据中，不随日常 Skill 加载。
+完整短片、视觉开发与六视角评审的固定来源及取舍见[研究报告](tests/evaluations/aigc-creation-research-2026-09-14.md)，不随日常 Skill 加载。

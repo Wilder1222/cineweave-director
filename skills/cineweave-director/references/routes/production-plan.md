@@ -44,6 +44,8 @@
 
 ## 渲染、剪辑和调色计划
 
+需要比较纯生成、三维预演、引擎最终渲染或混合制作时，使用[画质与引擎流程](../optional/rendering-quality-workflows.md)说明选择依据、相机／坐标／时间／光色交接和实际输出检查；需要结构条件、参考编辑或小规模试片时，使用[AIGC 控制与评审](../optional/aigc-control-and-evaluation.md)。预演帧、控制图和最终媒体分别记录用途，不能因存在引擎画面而宣称生成接触、身份或时序已通过。
+
 `RenderPlan` 绑定精确提示词与创作输入、变体、控制、证据、权利、前后检查标准，只表达实施意图。
 
 `EditorialTimelinePlan` 使用有理数帧率、明确区间、间隙和转场。占位不得冒充媒体。`ColorPipelineProfile` 分开创意调色意图、技术变换，以及预览／交付假设。

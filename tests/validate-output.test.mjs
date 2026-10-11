@@ -30,6 +30,220 @@ async function loadContractFixture(stem) {
   };
 }
 
+function rhythmWithShots(payload, count = 3) {
+  const candidate = structuredClone(payload);
+  const first = candidate.shotWindows[0];
+  const length = first.endFrame - first.startFrame + 1;
+  candidate.shotWindows = Array.from({ length: count }, (_, index) => ({
+    ...first,
+    shotId: index === 0 ? first.shotId : `shot.rhythm-test-${index + 1}`,
+    order: index + 1,
+    startFrame: index * length,
+    endFrame: (index + 1) * length - 1,
+  }));
+  candidate.tempoPhases[0].shotIds = candidate.shotWindows.map((window) => window.shotId);
+  candidate.transitions = [];
+  return candidate;
+}
+
+async function rhythmContextFixture(count = 3) {
+  const fixture = await loadContractFixture("sequence-rhythm-spec");
+  const payload = rhythmWithShots(fixture.payload, count);
+  const { payload: storyboard } = await loadContractFixture("storyboard");
+  const firstShot = storyboard.shots[0];
+  storyboard.shots = payload.shotWindows.map((window) => ({
+    ...structuredClone(firstShot),
+    shotId: window.shotId,
+    order: window.order,
+    shotSpecRef: { ...firstShot.shotSpecRef, id: window.shotId },
+  }));
+  storyboard.coverageLedger[0].shotIds = payload.shotWindows.map((window) => window.shotId);
+  const firstPanel = storyboard.productionBindings.panels[0];
+  storyboard.productionBindings.panels = payload.shotWindows.map((window) => ({ ...firstPanel, shotId: window.shotId }));
+  payload.storyboardRef = {
+    kind: storyboard.kind, id: storyboard.storyboardId, version: storyboard.version,
+    contentHash: sha256Canonical(storyboard),
+  };
+  return { schemaPath: fixture.schemaPath, payload, artifacts: [{ ref: structuredClone(payload.storyboardRef), document: storyboard }] };
+}
+
+test("TemporalSpec rejects out-of-duration, reversed and duplicate events on each independent track", async () => {
+  const { schemaPath, payload } = await loadContractFixture("temporal-spec");
+  assert.equal((await validatePayload(schemaPath, payload)).valid, true);
+  for (const field of ["focusTimeline", "actionTimeline", "dynamicLighting"]) {
+    const twoEvents = structuredClone(payload);
+    twoEvents[field] = [
+      { ...payload[field][0], timeSeconds: 0 },
+      { ...payload[field][0], eventId: `${field.toLowerCase()}.second`, timeSeconds: payload.durationSeconds },
+    ];
+    assert.equal((await validatePayload(schemaPath, twoEvents)).valid, true, field);
+    for (const [mutate, pattern] of [
+      [(p) => { p[field][1].timeSeconds += 1; }, /within 0\.\.durationSeconds inclusive/],
+      [(p) => { p[field][0].timeSeconds = -0.1; }, /timeSeconds/],
+      [(p) => { p[field].reverse(); }, /non-decreasing/],
+      [(p) => { p[field][1].eventId = p[field][0].eventId; }, /unique within/],
+    ]) {
+      const candidate = structuredClone(twoEvents); mutate(candidate);
+      const result = await validatePayload(schemaPath, candidate);
+      assert.equal(result.valid, false, field);
+      assert.match(result.errors.join("\n"), pattern, field);
+      assert.ok(result.errors.some((error) => error.includes(`$.${field}[`)), field);
+    }
+  }
+});
+
+test("TemporalSpec preserves inclusive endpoints, simultaneous events and cross-track associations", async () => {
+  const { schemaPath, payload } = await loadContractFixture("temporal-spec");
+  for (const field of ["focusTimeline", "actionTimeline", "dynamicLighting"]) {
+    payload[field] = [
+      { ...payload[field][0], eventId: "event.shared-start", timeSeconds: 0 },
+      { ...payload[field][0], eventId: "event.shared-end", timeSeconds: payload.durationSeconds },
+      { ...payload[field][0], eventId: `${field.toLowerCase()}.simultaneous`, timeSeconds: payload.durationSeconds },
+    ];
+  }
+  const snapshot = canonicalize(payload);
+  const result = await validatePayload(schemaPath, payload);
+  assert.equal(result.valid, true, result.errors.join("\n"));
+  assert.equal(canonicalize(payload), snapshot, "Validation must leave input events unchanged.");
+  payload.dynamicLighting = [];
+  assert.equal((await validatePayload(schemaPath, payload)).valid, true);
+});
+
+test("SequenceRhythmSpec rejects the research counterexamples and single-shot self-transitions", async () => {
+  const { schemaPath, payload } = await loadContractFixture("sequence-rhythm-spec");
+  const baseline = await validatePayload(schemaPath, payload);
+  assert.equal(baseline.valid, true, baseline.errors.join("\n"));
+  assert.ok(baseline.unverified.some((item) => item.startsWith("$.validation.storyboardShotsCovered:")));
+  for (const [mutate, pattern] of [
+    [(p) => { p.shotWindows[0].startFrame = p.shotWindows[0].endFrame + 1; }, /startFrame must not exceed endFrame/],
+    [(p) => { p.breathingPoints[0].frame = p.shotWindows[0].endFrame + 1; }, /breathingPoints\[0\]\.frame/],
+    [(p) => { p.tempoPhases[0].shotIds[0] = "shot.missing"; }, /tempoPhases\[0\]\.shotIds\[0\]/],
+    [(p) => { p.timebase.numerator = 48; p.timebase.denominator = 2; }, /timebase.*reduced/],
+    [(p) => { p.shotDurationPolicy.minimumFrames = p.shotDurationPolicy.maximumFrames + 1; }, /minimumFrames <= preferredFrames <= maximumFrames/],
+    [(p) => { p.transitions = [{ fromShotId: p.shotWindows[0].shotId, toShotId: p.shotWindows[0].shotId, grammar: "hold", rationale: "Synthetic invalid self-transition" }]; }, /distinct, forward-adjacent/],
+  ]) {
+    const candidate = structuredClone(payload); mutate(candidate);
+    const result = await validatePayload(schemaPath, candidate);
+    assert.equal(result.valid, false);
+    assert.match(result.errors.join("\n"), pattern);
+  }
+});
+
+test("SequenceRhythmSpec enforces continuous inclusive windows and declared duration bounds", async () => {
+  const { schemaPath, payload } = await loadContractFixture("sequence-rhythm-spec");
+  const threeShots = rhythmWithShots(payload);
+  for (const [mutate, pattern] of [
+    [(p) => { p.shotWindows[0].startFrame = 1; }, /startFrame must begin at zero/],
+    [(p) => { p.shotWindows[1].startFrame = p.shotWindows[0].endFrame; }, /ordered, non-overlapping/],
+    [(p) => { p.shotWindows[1].startFrame += 1; }, /preceding endFrame \+ 1/],
+    [(p) => { p.shotWindows.reverse(); }, /ordered, non-overlapping/],
+    [(p) => { p.shotWindows[1].order = p.shotWindows[0].order; }, /order must be strictly increasing/],
+    [(p) => { p.shotWindows[1].shotId = p.shotWindows[0].shotId; }, /shotId must be unique/],
+    [(p) => { p.shotDurationPolicy.minimumFrames = 102; p.shotDurationPolicy.preferredFrames = 102; }, /inclusive duration must be within/],
+    [(p) => { p.shotDurationPolicy.maximumFrames = 100; }, /inclusive duration must be within/],
+    [(p) => { p.shotDurationPolicy.preferredFrames = p.shotDurationPolicy.minimumFrames - 1; }, /minimumFrames <= preferredFrames <= maximumFrames/],
+    [(p) => { p.shotDurationPolicy.preferredFrames = p.shotDurationPolicy.maximumFrames + 1; }, /minimumFrames <= preferredFrames <= maximumFrames/],
+  ]) {
+    const candidate = structuredClone(threeShots); mutate(candidate);
+    const result = await validatePayload(schemaPath, candidate);
+    assert.equal(result.valid, false);
+    assert.match(result.errors.join("\n"), pattern);
+  }
+  threeShots.shotDurationPolicy = { minimumFrames: 101, preferredFrames: 101, maximumFrames: 101 };
+  assert.equal((await validatePayload(schemaPath, threeShots)).valid, true, "0..100 is exactly 101 frames.");
+});
+
+test("SequenceRhythmSpec closes phases and requires real forward-adjacent transitions", async () => {
+  const { schemaPath, payload } = await loadContractFixture("sequence-rhythm-spec");
+  const threeShots = rhythmWithShots(payload);
+  threeShots.tempoPhases.push({ ...threeShots.tempoPhases[0], phaseId: "phase.second", order: 2 });
+  const [first, second, third] = threeShots.shotWindows;
+  threeShots.transitions = [{ fromShotId: first.shotId, toShotId: second.shotId, grammar: "action_match", rationale: "Continue the selected movement phase." }];
+  assert.equal((await validatePayload(schemaPath, threeShots)).valid, true, "A shot may contribute to more than one phase; adjacency does not require every cut to be listed.");
+  for (const [mutate, pattern] of [
+    [(p) => { p.tempoPhases[1].phaseId = p.tempoPhases[0].phaseId; }, /phaseId must be unique/],
+    [(p) => { p.tempoPhases[1].order = p.tempoPhases[0].order; }, /tempoPhases\[1\]\.order/],
+    [(p) => { p.tempoPhases.reverse(); }, /order must be strictly increasing/],
+    [(p) => { for (const phase of p.tempoPhases) phase.shotIds.pop(); }, /must be covered by a tempoPhase/],
+    [(p) => { p.breathingPoints[0].shotId = "shot.missing"; }, /breathingPoints\[0\]\.shotId/],
+    [(p) => { p.breathingPoints.push({ shotId: second.shotId, frame: second.startFrame - 1, rationale: "Before its window" }); }, /breathingPoints\[1\]\.frame/],
+    [(p) => { p.transitions[0].fromShotId = "shot.missing"; }, /transitions\[0\]\.fromShotId/],
+    [(p) => { p.transitions[0].toShotId = "shot.missing"; }, /transitions\[0\]\.toShotId/],
+    [(p) => { p.transitions[0].toShotId = third.shotId; }, /distinct, forward-adjacent/],
+    [(p) => { p.transitions[0].fromShotId = second.shotId; p.transitions[0].toShotId = first.shotId; }, /distinct, forward-adjacent/],
+  ]) {
+    const candidate = structuredClone(threeShots); mutate(candidate);
+    const result = await validatePayload(schemaPath, candidate);
+    assert.equal(result.valid, false);
+    assert.match(result.errors.join("\n"), pattern);
+  }
+});
+
+test("SequenceRhythmSpec allows one frame, rational broadcast rates and boundary breathing points", async () => {
+  const { schemaPath, payload } = await loadContractFixture("sequence-rhythm-spec");
+  payload.shotWindows[0].endFrame = 0;
+  payload.shotDurationPolicy = { minimumFrames: 1, preferredFrames: 1, maximumFrames: 1 };
+  payload.breathingPoints[0].frame = 0;
+  payload.timebase = { ...payload.timebase, numerator: 24000, denominator: 1001 };
+  assert.equal((await validatePayload(schemaPath, payload)).valid, true);
+  const threeShots = rhythmWithShots(payload);
+  threeShots.breathingPoints = threeShots.shotWindows.map((window) => ({ shotId: window.shotId, frame: window.startFrame, rationale: "Inclusive single-frame boundary" }));
+  threeShots.transitions = [{ fromShotId: threeShots.shotWindows[0].shotId, toShotId: threeShots.shotWindows[1].shotId, grammar: "hard_cut", rationale: "Valid adjacent single-frame windows" }];
+  assert.equal((await validatePayload(schemaPath, threeShots)).valid, true);
+  threeShots.shotWindows[2].endFrame = 4;
+  threeShots.shotDurationPolicy.maximumFrames = 3;
+  threeShots.breathingPoints[2].frame = 4;
+  assert.equal((await validatePayload(schemaPath, threeShots)).valid, true, "A breathing point can equal a multi-frame window's final inclusive frame.");
+});
+
+test("SequenceRhythmSpec verifies upstream coverage only with the exact full storyboard body", async () => {
+  const { schemaPath, payload, artifacts } = await rhythmContextFixture();
+  const snapshot = canonicalize({ payload, artifacts });
+  const result = await validatePayload(schemaPath, payload, { artifacts });
+  assert.equal(result.valid, true, result.errors.join("\n"));
+  assert.deepEqual(result.unverified, []);
+  assert.equal(canonicalize({ payload, artifacts }), snapshot, "Registry and payload remain read-only.");
+  for (const candidateArtifacts of [undefined, [], [{ ref: { ...artifacts[0].ref, version: 2 }, document: artifacts[0].document }]]) {
+    const missing = await validatePayload(schemaPath, payload, { artifacts: candidateArtifacts });
+    assert.equal(missing.valid, true);
+    assert.ok(missing.unverified.some((item) => item.includes("exact storyboard registry binding unavailable")));
+  }
+  assert.equal((await validatePayload(schemaPath, payload, { artifacts: {} })).valid, false);
+  assert.equal((await validatePayload(schemaPath, payload, { artifacts: [...artifacts, artifacts[0]] })).valid, false);
+
+  for (const [mutate, pattern] of [
+    [(a) => { a.document.sequenceTitle += "changed without hash update"; }, /JCS content hash/],
+    [(a) => { a.document.kind = "cineweave_codex_shot_spec"; a.ref.contentHash = sha256Canonical(a.document); }, /document kind/],
+    [(a) => { a.document.storyboardId = "storyboard.wrong"; a.ref.contentHash = sha256Canonical(a.document); }, /storyboardId or version/],
+    [(a) => { a.document.version += 1; a.ref.contentHash = sha256Canonical(a.document); }, /storyboardId or version/],
+    [(a) => { delete a.document.version; a.ref.contentHash = sha256Canonical(a.document); }, /storyboardId or version/],
+    [(a) => { a.document = { kind: a.document.kind, storyboardId: a.document.storyboardId, version: a.document.version, shots: a.document.shots }; a.ref.contentHash = sha256Canonical(a.document); }, /upstream document.*is required/],
+    [(a) => { a.document.shots[1].shotId = a.document.shots[0].shotId; a.ref.contentHash = sha256Canonical(a.document); }, /upstream shots.*unique shotId/],
+    [(a) => { a.document.shots.reverse(); a.ref.contentHash = sha256Canonical(a.document); }, /upstream shots.*contiguous ordered/],
+  ]) {
+    const candidateArtifacts = structuredClone(artifacts); mutate(candidateArtifacts[0]);
+    const candidate = { ...payload, storyboardRef: candidateArtifacts[0].ref };
+    const invalid = await validatePayload(schemaPath, candidate, { artifacts: candidateArtifacts });
+    assert.equal(invalid.valid, false);
+    assert.match(invalid.errors.join("\n"), pattern);
+    assert.ok(invalid.unverified.some((item) => item.startsWith("$.validation.storyboardShotsCovered:")));
+  }
+});
+
+test("SequenceRhythmSpec rejects missing, extra or reordered shots against exact upstream context", async () => {
+  const { schemaPath, payload, artifacts } = await rhythmContextFixture();
+  for (const [mutate, pattern] of [
+    [(p) => { p.shotWindows.pop(); p.tempoPhases[0].shotIds.pop(); }, /every exact storyboard shot once/],
+    [(p) => { p.shotWindows[2].shotId = "shot.unlisted"; p.tempoPhases[0].shotIds[2] = "shot.unlisted"; }, /no missing or extra shots/],
+    [(p) => { [p.shotWindows[0].shotId, p.shotWindows[1].shotId] = [p.shotWindows[1].shotId, p.shotWindows[0].shotId]; p.breathingPoints = []; }, /order must match the exact storyboard/],
+  ]) {
+    const candidate = structuredClone(payload); mutate(candidate);
+    const result = await validatePayload(schemaPath, candidate, { artifacts });
+    assert.equal(result.valid, false);
+    assert.match(result.errors.join("\n"), pattern);
+  }
+});
+
 test("PerformanceTimeline enforces its declared phase timing invariants", async () => {
   const { schemaPath, payload } = await loadContractFixture("performance-timeline");
   assert.equal((await validatePayload(schemaPath, payload)).valid, true);

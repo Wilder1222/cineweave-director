@@ -93,7 +93,7 @@ test("cinematic diagnostic vocabulary has unique IDs and real route candidates",
   }
 });
 
-test("cinematic evaluation scenarios have concrete counterexamples and remain unrun", async () => {
+test("cinematic evaluation definitions have concrete counterexamples and retain their initial state", async () => {
   const { cases } = await cwDiagnosticFixture();
   assert.ok(Array.isArray(cases) && cases.length >= 12);
   assert.equal(new Set(cases.map((entry) => entry.id)).size, cases.length);

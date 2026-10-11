@@ -772,5 +772,488 @@
       "未经操作宣称图已经裁好或已上传"
     ],
     "status": "not_run"
+  },
+  {
+    "id": "CD-E39",
+    "request": "给同一人物设计广角近拍与远机位长焦的半身比较：保留人物画面大小，解释透视和背景关系。",
+    "routes": [
+      "shot_direction",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-CAMERA"
+    ],
+    "must": [
+      "区分机位距离造成的透视与焦距造成的取景",
+      "描述主体和背景的可见差异，并将数字标为设计假设"
+    ],
+    "mustNot": [
+      "仅换焦距就声称鼻脸透视改变",
+      "把器材字符串当实际相机控制"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E40",
+    "request": "夜景要暗而可读，窗边人物与黑外套仍须分开。给纯AIGC方案，并说明实拍曝光与后期压暗如何区别。",
+    "routes": [
+      "scene",
+      "shot_direction",
+      "production_plan"
+    ],
+    "diagnostics": [
+      "CW-LOOK"
+    ],
+    "must": [
+      "用光源方向、亮度层级和服装轮廓承载读法",
+      "区分采集信息、生成意图与显示变换"
+    ],
+    "mustNot": [
+      "以全画面欠曝代替夜景设计",
+      "宣称后期必能恢复截断高光或黑位"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E41",
+    "request": "把已批准的人物与街景改成平涂水粉，保持身份和空间，不要追求照片毛孔。给风格基线。",
+    "routes": [
+      "style",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-LOOK",
+      "CW-APPEARANCE"
+    ],
+    "must": [
+      "分解造型、边缘、材质、色光和时间表现中适用项",
+      "保留内容与身份，按媒介定义细节"
+    ],
+    "mustNot": [
+      "堆写实/8K/UE5等质量词覆盖水粉规则",
+      "把所有材质变成同一种颗粒"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E42",
+    "request": "UE镜头中头发与细栏杆闪烁，想直接套用64倍时间采样。没有视频和项目，只给定位与试片方案。",
+    "routes": [
+      "production_plan",
+      "review_repair"
+    ],
+    "diagnostics": [
+      "CW-LOOK",
+      "CW-CAPABILITY"
+    ],
+    "must": [
+      "区分时序采样、曝光、预热、几何细节和编码的候选原因",
+      "比较实际版本与单变量试片，保留未观察状态"
+    ],
+    "mustNot": [
+      "确认已观察到闪烁根因",
+      "给永久万能采样数或宣称采样越大越好"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E43",
+    "request": "Blender AgX预览好看，输出EXR到UE和剪辑后肤色偏了。给色管交接，最终要求SDR，不要自动变HDR。",
+    "routes": [
+      "production_plan",
+      "style"
+    ],
+    "diagnostics": [
+      "CW-LOOK"
+    ],
+    "must": [
+      "区分场景线性与显示参考、输入解释和输出变换",
+      "追踪AgX/OCIO/LUT及是否已经烘焙，按目标显示核验"
+    ],
+    "mustNot": [
+      "将AgX等同完整ACES流程",
+      "重复套LUT或以EXR文件名证明色域/HDR"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E44",
+    "request": "真人演员听见画外关门后说“你还是来了”，把钥匙放到对手掌心。给八秒单镜表演稿。",
+    "routes": [
+      "character",
+      "shot_direction"
+    ],
+    "diagnostics": [
+      "CW-START-END",
+      "CW-CONTACT"
+    ],
+    "must": [
+      "明确刺激先于反应、说话对象、眼线、呼吸、承重及交接接触",
+      "对白区间允许嘴唇/下颌运动，保留准确台词"
+    ],
+    "mustNot": [
+      "用伤心/电影级演技代替可演动作",
+      "全程闭唇或无触发提前反应"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E45",
+    "request": "我准备用Act-Two角色视频输入，同时希望完整复制表演者手势。给交接前的适配判断，无实际附件。",
+    "routes": [
+      "character",
+      "production_plan"
+    ],
+    "diagnostics": [
+      "CW-CAPABILITY"
+    ],
+    "must": [
+      "按官方图像/视频输入职责与手势控制判断",
+      "保留缺少附件/版本核验与必要替代"
+    ],
+    "mustNot": [
+      "把视频输入当作自动具有图像输入的手势通道",
+      "宣称已看过表演视频或已迁移成功"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E46",
+    "request": "只改角色图上的围巾颜色，要求脸/手/背景不变。没有给原图，能否靠蒙版保证像素完全保持？",
+    "routes": [
+      "image_prompt",
+      "review_repair"
+    ],
+    "diagnostics": [
+      "CW-APPEARANCE",
+      "CW-CAPABILITY"
+    ],
+    "must": [
+      "给编辑设计并明确原图依赖",
+      "核验区域内、邻接光影与区域外，不保证生成蒙版精确遵循"
+    ],
+    "mustNot": [
+      "伪称已观察原图",
+      "把保留要求写成已经保留或像素保证"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E47",
+    "request": "正面身份图加姿态骨架与深度图，做侧身递杯。如何检查ControlNet/IP-Adapter分工？",
+    "routes": [
+      "image_prompt",
+      "production_plan"
+    ],
+    "diagnostics": [
+      "CW-CONTACT",
+      "CW-APPEARANCE"
+    ],
+    "must": [
+      "核对预处理图、目标取景与参考裁切",
+      "区分身份、结构和接触，说明基础模型/控制兼容性"
+    ],
+    "mustNot": [
+      "声称骨架控制必然保证手指/杯口接触",
+      "套用SD1.5数值到任意模型"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E48",
+    "request": "同seed生成的一张人物静帧通过了，能否判定转身视频和全场连续性稳定？给验收计划。",
+    "routes": [
+      "review_repair",
+      "production_plan"
+    ],
+    "diagnostics": [
+      "CW-CONTINUITY"
+    ],
+    "must": [
+      "分开静帧、片段与序列，检查遮挡后复现和切点",
+      "seed仅是条件记录，实际媒体才能验证相应维度"
+    ],
+    "mustNot": [
+      "从单张图推断时间稳定",
+      "拿种子一致替代视觉证据"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E49",
+    "request": "供应商把720p视频放大到4K，人物手和细节仍不对。请评估质量声明，无实际文件。",
+    "routes": [
+      "review_repair",
+      "production_plan"
+    ],
+    "diagnostics": [
+      "CW-CONTACT",
+      "CW-CAPABILITY"
+    ],
+    "must": [
+      "分开内容正确、感知细节、时序及编码",
+      "原生/放大尺寸与身份/接触验收分开，缺媒体只条件诊断"
+    ],
+    "mustNot": [
+      "将像素数量当真实细节或修复证据",
+      "编造实际帧/指标"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E50",
+    "request": "今天2026-10-10，请按旧Sora2 Cookbook作为当前可执行API候选，交接20秒视频。",
+    "routes": [
+      "production_plan",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-CAPABILITY"
+    ],
+    "must": [
+      "核对官方停用页和教程归档状态",
+      "保留通用创作方案并标明当前执行能力缺口"
+    ],
+    "mustNot": [
+      "仍把旧端点/时长列为可提交能力",
+      "替用户无声换供应商或伪造执行回执"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E51",
+    "request": "白天安静人行道，观众先发现有人跟随；前方人物只在结尾通过橱窗倒影确认，不回头，也不新增袭击或追逐。给完整八秒单镜视频稿。",
+    "routes": [
+      "shot_direction",
+      "storyboard_rhythm"
+    ],
+    "diagnostics": [
+      "CW-ATTENTION",
+      "CW-CONTINUITY"
+    ],
+    "must": [
+      "区分观众与人物的线索和知情时点",
+      "保持不回头与八秒单镜硬锁，写实际可见确认机制"
+    ],
+    "mustNot": [
+      "提前让人物知道跟随者",
+      "新增犯罪、袭击、追逐或反转"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E52",
+    "request": "甲把信封交给乙，乙握稳甲才松手；两人在同侧短柜台边，台词只有甲说“先还给你”。给两版同样十二秒的完整三镜视频稿，只改变中镜覆盖：共同画面与手部细节。身份、空间、台词、光色、结果和前后镜保持一致。",
+    "routes": [
+      "shot_direction",
+      "storyboard_rhythm",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-CONTACT",
+      "CW-CONTINUITY"
+    ],
+    "must": [
+      "独立展开两版全稿，明确唯一覆盖差异及其代价",
+      "保持握稳后松手、持有与前后镜接口"
+    ],
+    "mustNot": [
+      "只换景别名称不给正文",
+      "换身份、光色、事件结果或把多维改变称单变量"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E53",
+    "request": "十秒逃离暴雨的三镜片段：摄影机主要陪着两人找屋檐；中镜可暂时离开同行视点，只解释前方唯一通路被落枝挡住，随后回到同行，不增受伤或新人物。给逐镜稿和这次视点例外的理由。",
+    "routes": [
+      "shot_direction",
+      "storyboard_rhythm"
+    ],
+    "diagnostics": [
+      "CW-ATTENTION",
+      "CW-CONTINUITY"
+    ],
+    "must": [
+      "限定例外新增的信息及其对下一动作的必要性",
+      "保持两人、通路和回归视点的衔接"
+    ],
+    "mustNot": [
+      "把参与者视点解释成永久第一视角",
+      "借全知镜头新增剧情或没有回归"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E54",
+    "request": "同一饭后收杯活动出现两次，总十二秒：第一次甲乙各收自己的杯，第二次乙先离开，甲随后收起乙的杯。给两段完整视频稿，同机位、身份、桌位和光色，仅让关系回应变化可见，不加对白或回忆。",
+    "routes": [
+      "shot_direction",
+      "storyboard_rhythm",
+      "character"
+    ],
+    "diagnostics": [
+      "CW-CONTINUITY",
+      "CW-LOOK"
+    ],
+    "must": [
+      "保留可比较条件和唯一关系差异",
+      "表现甲发现空位后收杯的顺序"
+    ],
+    "mustNot": [
+      "通过服装或调色变化制造差异",
+      "新增闪回、对白或心理事实"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E55",
+    "request": "六秒固定镜头看甲修补纸盒，乙只在左侧画外说“别急，我还在”。甲不说话，不出现乙的脸。给完整视频稿与声音分工，不改变纸盒和门位。",
+    "routes": [
+      "shot_direction",
+      "character",
+      "production_plan"
+    ],
+    "diagnostics": [
+      "CW-ATTENTION",
+      "CW-CONTINUITY"
+    ],
+    "must": [
+      "画面注意甲、听觉主层乙并保留来源与台词归属",
+      "声音后甲才有对应回应，甲发音状态不与乙对白混淆"
+    ],
+    "mustNot": [
+      "让甲说乙的台词",
+      "提前露出乙或把画外声写成旁白"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E56",
+    "request": "八秒固定观察老人折好一块布再放在空椅边，原有安静房间，零对白、零新人物、零反转。给完整视频稿并说明停留让观众注意什么，不增加剧情。",
+    "routes": [
+      "shot_direction",
+      "storyboard_rhythm"
+    ],
+    "diagnostics": [
+      "CW-ATTENTION",
+      "CW-PROMPT"
+    ],
+    "must": [
+      "保持观察目的与可见小变化",
+      "区分放映经过和注意发现，不强造因果冲突"
+    ],
+    "mustNot": [
+      "增加病情、死亡、来人等剧情解释",
+      "把八秒一律填成慢动作"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E57",
+    "request": "一张无字静态海报表现等候：候车亭、空位、人物看向路口。不要声音、动作过程或时间说明，给一条完整中文生图提示词。",
+    "routes": [
+      "image_prompt",
+      "shot_direction"
+    ],
+    "diagnostics": [
+      "CW-PROMPT",
+      "CW-ATTENTION"
+    ],
+    "must": [
+      "只写当前瞬间与可见关系",
+      "给完整可复制中文正文并按画面说明等候读法"
+    ],
+    "mustNot": [
+      "声称静帧呈现声音和等待秒数",
+      "扩成视频或添加文字标语"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E58",
+    "request": "只改已有镜头稿的构图，不要大师风格。原稿：两人在门厅同框，甲穿深蓝外套、乙穿米白衬衫，各站门两侧不移动，甲左手握红伞，右窗中性日光，固定机位。让伞更容易看到，其余事实不改，直接给改后完整稿。",
+    "routes": [
+      "shot_direction",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-PROMPT",
+      "CW-LOOK"
+    ],
+    "must": [
+      "只改变允许取景/画面安排，保持人物位置、持手、服装和光源",
+      "明确排除大师风格，给完整结果"
+    ],
+    "mustNot": [
+      "为构图改走位、道具颜色、持手或运镜",
+      "加导演名、情绪事件或光色风格"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E59",
+    "request": "同一傍晚书店三段合计十二秒：先看出信被藏在书下，再看三人的不同回应，最后甲乙告别。角色服装、书店空间、北窗自然光和低饱和木色固定，台词只有“明天见”。给全套逐镜视频稿，方法可随功能变化，视觉一致。",
+    "routes": [
+      "storyboard_rhythm",
+      "shot_direction",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-CONTINUITY",
+      "CW-LOOK"
+    ],
+    "must": [
+      "三段功能和信息顺序各自成立",
+      "共享视觉、身份、道具和准确台词持续"
+    ],
+    "mustNot": [
+      "每段换导演对应的滤镜、色温或画幅",
+      "新增不可追踪的地点、人物和台词"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E60",
+    "request": "两镜各四秒：第一镜桌上旋转的纸圆盘，第二镜窗边圆形光斑，按形态联想相接，没有共同事件、没有回忆事实。给完整两镜稿，说明是构造联想，不把它写成真实纪录相遇，不增加因果。",
+    "routes": [
+      "shot_direction",
+      "storyboard_rhythm"
+    ],
+    "diagnostics": [
+      "CW-ATTENTION",
+      "CW-PROMPT"
+    ],
+    "must": [
+      "区分联想关系和事实因果",
+      "完整展开两镜，保留各自来源和观看关系"
+    ],
+    "mustNot": [
+      "把第二镜称作第一镜造成的结果",
+      "伪称已经拍摄真实纪录或观察人物内心"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E61",
+    "request": "两个连续镜头共八秒跟拍同一人向右走，红书一直在其左手，经过同一扇绿门；第一镜在匀速迈步时切，第二镜承接相位继续走，不停步、不重起。给完整两镜视频稿和出入点。",
+    "routes": [
+      "shot_direction",
+      "storyboard_rhythm",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-CONTINUITY",
+      "CW-CAMERA"
+    ],
+    "must": [
+      "第一镜出点保持匀速，第二镜承接动作相位",
+      "方向、持书手、门位及空间连续"
+    ],
+    "mustNot": [
+      "额外减速停稳、重新起手或从另一侧重新迈步",
+      "换手、换门颜色或无说明越轴"
+    ],
+    "status": "not_run"
   }
 ]

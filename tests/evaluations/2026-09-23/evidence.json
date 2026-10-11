@@ -1,0 +1,1926 @@
+{
+  "date": "2026-09-23",
+  "baselineCommit": "c9d3817467a7adf05d1aeb95e41c39b70e95f744",
+  "methodology": "Independent contexts received task and Skill only, with no root history or expected answers. The short-film revision received explicit reviewer feedback. Runs used the working tree, not a frozen runtime. Exact model IDs, timing, token usage, and statistical performance are not established.",
+  "baselineProbes": [
+    {
+      "probe": "duplicate_totalFrames",
+      "baseline": {
+        "exitCode": 0,
+        "valid": true,
+        "reviewComplete": null,
+        "declarationComplete": null,
+        "error": ""
+      },
+      "current": {
+        "exitCode": 1,
+        "valid": null,
+        "reviewComplete": null,
+        "declarationComplete": null,
+        "error": "无法完成交付检查，请核对参数、文件和 JSON 内容。原始原因：Duplicate object key \"totalFrames\" at offset 75"
+      }
+    },
+    {
+      "probe": "duplicate_status",
+      "baseline": {
+        "exitCode": 0,
+        "valid": true,
+        "reviewComplete": true,
+        "declarationComplete": null,
+        "error": ""
+      },
+      "current": {
+        "exitCode": 1,
+        "valid": null,
+        "reviewComplete": null,
+        "declarationComplete": null,
+        "error": "{\"valid\":false,\"scope\":\"plan_only\",\"error\":\"Duplicate object key \\\"status\\\" at offset 180\",\"messageZh\":\"无法完成逐镜评审，请核对参数、文件和工作表内容。\"}"
+      }
+    },
+    {
+      "probe": "duplicate_editFrames",
+      "baseline": {
+        "exitCode": 0,
+        "valid": true,
+        "reviewComplete": null,
+        "declarationComplete": true,
+        "error": ""
+      },
+      "current": {
+        "exitCode": 1,
+        "valid": null,
+        "reviewComplete": null,
+        "declarationComplete": null,
+        "error": "{\"valid\":false,\"error\":\"Duplicate object key \\\"editFrames\\\" at offset 293\",\"messageZh\":\"无法读取或检查工作表，请核对路径、JSON 格式和参数；原始原因见 error。\"}"
+      }
+    },
+    {
+      "probe": "impossible_calendar_date",
+      "baseline": {
+        "exitCode": 0,
+        "valid": true,
+        "reviewComplete": null,
+        "declarationComplete": true,
+        "error": ""
+      },
+      "current": {
+        "exitCode": 1,
+        "valid": false,
+        "reviewComplete": null,
+        "declarationComplete": false,
+        "error": ""
+      }
+    }
+  ],
+  "instructionSnapshots": {
+    "baselineCommit": "c9d3817467a7adf05d1aeb95e41c39b70e95f744",
+    "scope": "Instruction snapshots, not a claim of isolated runtime or model reproducibility",
+    "files": [
+      {
+        "path": "skills/cineweave-director/SKILL.md",
+        "baselineSha256": "98b45654a6bc0709d3d05aa2a004435284693c1f18d18f56e7b48ac26f1ef91f",
+        "currentSha256": "98b45654a6bc0709d3d05aa2a004435284693c1f18d18f56e7b48ac26f1ef91f"
+      },
+      {
+        "path": "skills/cineweave-director/references/routes/scene.md",
+        "baselineSha256": "368c41fff104bfeefa617cafbc6ae0acb553bfa0ac8573283a1f3dc465e9b327",
+        "currentSha256": "ef10535a31d8aeacf7465957ad995c47b1389f5b3b5fe9096e77682f151ea6e4"
+      },
+      {
+        "path": "skills/cineweave-director/references/optional/prompt-detail-standard.md",
+        "baselineSha256": "7990ef0c789de8e5571144b8461080f738457e354c0dfd69a18035d8a163bc7c",
+        "currentSha256": "0de944dffd30d69bc05a52ef4bceaf0a90dce40564e2f1a288c68e7dd1e88e59"
+      },
+      {
+        "path": "skills/cineweave-director/references/optional/ensemble-direction-and-review.md",
+        "baselineSha256": "2d40cb2c312ab07d82b5d2de7d170eb2140221f9382a59da298f5a27759e6d92",
+        "currentSha256": "a3f41e181a4382ed4a23835c696797837fac9cfc939fc3f86203443cab680bae"
+      }
+    ]
+  },
+  "runs": [
+    {
+      "id": "short-film-v1",
+      "mode": "independent_first_run",
+      "request": "使用 $cineweave-director，为原创 12 秒无声横屏短片《归还的罗盘》给完整创作稿和全部图像、视频提示词。24fps、3镜各4秒；夜间维修铺，成年女信使从画面左侧进入，右侧老修表师坐在木工作台后。铜罗盘起初在信使右手，结尾在修表师手中，全片仅一个罗盘。信使靛蓝短外套、修表师灰围裙、桌灯暖光不变。无声是没有任何音轨。无参考图，无指定平台，使用文字视频路径。其余细节由你设计，不需提问。仅规划，不生成媒体。",
+      "output": "short-film-v1.md",
+      "outputSha256": "a52c365774ef6e1dc534d41a13ced742749d3caa7494d3952e309dce78942383",
+      "execution": {
+        "task": "独立创作首轮试跑：《归还的罗盘》12秒无声横屏短片完整创作稿及图像、文字视频提示词",
+        "status": "completed_plan_only",
+        "output_file": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/output.md",
+        "output_sha256": "A52C365774EF6E1DC534D41A13CED742749D3CAA7494D3952E309DCE78942383",
+        "first_round_output_preserved": true,
+        "actual_read_resources": [
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md",
+            "access": "read",
+            "purpose": "skill entry or task-needed reference"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/short-film-creation.md",
+            "access": "read",
+            "purpose": "skill entry or task-needed reference"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/prompt-detail-standard.md",
+            "access": "read",
+            "purpose": "skill entry or task-needed reference"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/ensemble-direction-and-review.md",
+            "access": "read",
+            "purpose": "skill entry or task-needed reference"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/production-plan.md",
+            "access": "read",
+            "purpose": "skill entry or task-needed reference"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/visual-development.md",
+            "access": "read",
+            "purpose": "skill entry or task-needed reference"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-sound-and-delivery.md",
+            "access": "read",
+            "purpose": "skill entry or task-needed reference"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-platform-adaptation.md",
+            "access": "read",
+            "purpose": "skill entry or task-needed reference"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/core/operating-model.md",
+            "access": "read",
+            "purpose": "skill entry or task-needed reference"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/core/visual-bible-and-continuity.md",
+            "access": "read",
+            "purpose": "skill entry or task-needed reference"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-timing-and-handles.md",
+            "access": "read",
+            "purpose": "skill entry or task-needed reference"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-performance-direction.md",
+            "access": "read",
+            "purpose": "skill entry or task-needed reference"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/story.md",
+            "access": "read",
+            "purpose": "skill entry or task-needed reference"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/character.md",
+            "access": "read",
+            "purpose": "skill entry or task-needed reference"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/scene.md",
+            "access": "read",
+            "purpose": "skill entry or task-needed reference"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/shot-direction.md",
+            "access": "read",
+            "purpose": "skill entry or task-needed reference"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/image-prompt.md",
+            "access": "read",
+            "purpose": "skill entry or task-needed reference"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/directing-craft.md",
+            "access": "read",
+            "purpose": "skill entry or task-needed reference"
+          }
+        ],
+        "actual_execution_resources": [
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/scripts/check-shot-review.mjs",
+            "access": "execute_read_only_checker"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/scripts/check-delivery.mjs",
+            "access": "execute_read_only_checker"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/review.json",
+            "access": "read_by_checker",
+            "origin": "created_in_this_run"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/delivery.json",
+            "access": "read_by_checker",
+            "origin": "created_in_this_run"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/output.md",
+            "access": "read_bytes_for_sha256",
+            "origin": "created_in_this_run"
+          }
+        ],
+        "resource_access_notes": [
+          "未读取 tests、开发研究报告、MEMORY、其他代理输出。",
+          "两次批量读取的工具显示发生截断；为任务需要的细节章节以及视觉开发、声音文档进行了补读。",
+          "未打开文档中的外部网页或浏览器；未执行生成工具。",
+          "首轮 output.md 写入后没有修改。"
+        ],
+        "actual_commands": [
+          {
+            "order": 1,
+            "tool": "exec_command",
+            "command": "Get-Content -LiteralPath 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\SKILL.md' -Raw",
+            "exit_code": 0
+          },
+          {
+            "order": 2,
+            "tool": "exec_command",
+            "command": "$paths = @('references/optional/short-film-creation.md','references/optional/prompt-detail-standard.md','references/optional/ensemble-direction-and-review.md','references/routes/production-plan.md'); foreach ($relative in $paths) { Write-Output ('RESOURCE: ' + $relative); Get-Content -LiteralPath (Join-Path 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director' $relative) -Raw }",
+            "exit_code": 0
+          },
+          {
+            "order": 3,
+            "tool": "exec_command",
+            "command": "Get-Content -LiteralPath 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md' | Select-Object -Skip 93 -First 150",
+            "exit_code": 0
+          },
+          {
+            "order": 4,
+            "tool": "exec_command",
+            "command": "$paths = @('references/optional/visual-development.md','references/optional/video-sound-and-delivery.md','references/optional/video-platform-adaptation.md'); foreach ($relative in $paths) { Write-Output ('RESOURCE: ' + $relative); Get-Content -LiteralPath (Join-Path 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director' $relative) -Raw }",
+            "exit_code": 0
+          },
+          {
+            "order": 5,
+            "tool": "exec_command",
+            "command": "$paths = @('references/optional/visual-development.md','references/optional/video-sound-and-delivery.md','references/core/operating-model.md','references/core/visual-bible-and-continuity.md','references/optional/video-timing-and-handles.md','references/optional/video-performance-direction.md'); foreach ($relative in $paths) { Write-Output ('RESOURCE: ' + $relative); Get-Content -LiteralPath (Join-Path 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director' $relative) -Raw }",
+            "exit_code": 0
+          },
+          {
+            "order": 6,
+            "tool": "exec_command",
+            "command": "$paths = @('references/routes/story.md','references/routes/character.md','references/routes/scene.md','references/routes/shot-direction.md','references/routes/image-prompt.md'); foreach ($relative in $paths) { Write-Output ('RESOURCE: ' + $relative); Get-Content -LiteralPath (Join-Path 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director' $relative) -Raw }; Write-Output 'RESOURCE: references/optional/prompt-detail-standard.md lines 67-94'; Get-Content -LiteralPath 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md' | Select-Object -Skip 66 -First 28; node --version",
+            "exit_code": 0
+          },
+          {
+            "order": 7,
+            "tool": "exec_command",
+            "command": "Get-Content -LiteralPath 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\directing-craft.md' -Raw",
+            "exit_code": 0
+          },
+          {
+            "order": 8,
+            "tool": "exec_command",
+            "command": "New-Item -ItemType Directory -Path 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\forward-test-short-film' -Force | Select-Object -ExpandProperty FullName",
+            "exit_code": 0
+          },
+          {
+            "order": 9,
+            "tool": "exec_command",
+            "command": "node 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\scripts\\check-shot-review.mjs' 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\forward-test-short-film\\review.json'",
+            "exit_code": 0
+          },
+          {
+            "order": 10,
+            "tool": "exec_command",
+            "command": "node 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\scripts\\check-delivery.mjs' 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\forward-test-short-film\\delivery.json'",
+            "exit_code": 0
+          },
+          {
+            "order": 11,
+            "tool": "exec_command",
+            "command": "Get-FileHash -LiteralPath 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\forward-test-short-film\\output.md' -Algorithm SHA256 | ConvertTo-Json",
+            "exit_code": 0
+          }
+        ],
+        "other_file_operations": [
+          {
+            "tool": "apply_patch",
+            "operation": "create",
+            "paths": [
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/output.md"
+            ]
+          },
+          {
+            "tool": "apply_patch",
+            "operation": "create",
+            "paths": [
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/review.json",
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/delivery.json"
+            ]
+          },
+          {
+            "tool": "apply_patch",
+            "operation": "create",
+            "paths": [
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/execution.json",
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/review-result.json",
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/delivery-result.json"
+            ]
+          }
+        ],
+        "clarification_count": 0,
+        "model_information": {
+          "declared_agent_family": "GPT-6",
+          "exact_runtime_model": null,
+          "model_version": null,
+          "reasoning_effort": null,
+          "media_generation_platform": null,
+          "media_generation_model": null
+        },
+        "environment_observed": {
+          "shell": "PowerShell",
+          "node_version": "v22.15.0"
+        },
+        "observed_outputs": {
+          "image_prompt_count": 5,
+          "video_prompt_count": 3,
+          "planned_shot_count": 3,
+          "planned_total_frames": 288,
+          "planned_frame_rate": {
+            "numerator": 24,
+            "denominator": 1
+          },
+          "planned_duration_seconds": 12,
+          "planned_audio_stream_count": 0,
+          "generated_image_count": 0,
+          "generated_video_count": 0,
+          "generated_audio_count": 0
+        },
+        "checker_results": {
+          "shot_review": {
+            "exit_code": 0,
+            "result_file": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/review-result.json",
+            "valid": true,
+            "coverageComplete": true,
+            "reviewComplete": true,
+            "expectedRows": 18,
+            "openItems": [],
+            "scope": "plan_only"
+          },
+          "delivery": {
+            "exit_code": 0,
+            "result_file": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/delivery-result.json",
+            "valid": true,
+            "endTimecode": "00:00:12,000",
+            "scope": "planning_arithmetic_only"
+          }
+        },
+        "unobserved_metrics": {
+          "task_elapsed_seconds": null,
+          "input_tokens": null,
+          "output_tokens": null,
+          "total_tokens": null,
+          "cost": null,
+          "media_identity_consistency": null,
+          "media_contact_correctness": null,
+          "media_compass_uniqueness": null,
+          "media_performance_quality": null,
+          "actual_media_frame_rate": null,
+          "actual_media_duration_seconds": null,
+          "actual_media_audio_stream_count": null,
+          "benchmark_score": null,
+          "artistic_score": null
+        },
+        "evaluation_boundary": "工作表 pass 仅记录文本设计与提示词检查；只读工具验证表结构、覆盖和时间算术，不构成媒体证据或独立基准评分。本代理未自行打分。",
+        "writes_confined_to": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film"
+      },
+      "worksheets": {
+        "delivery.json": {
+          "frameRate": {
+            "numerator": 24,
+            "denominator": 1
+          },
+          "totalFrames": 288,
+          "shots": [
+            {
+              "id": "S01",
+              "startFrame": 0,
+              "endFrame": 96
+            },
+            {
+              "id": "S02",
+              "startFrame": 96,
+              "endFrame": 192
+            },
+            {
+              "id": "S03",
+              "startFrame": 192,
+              "endFrame": 288
+            }
+          ],
+          "subtitles": []
+        },
+        "delivery-result.json": {
+          "valid": true,
+          "errors": [],
+          "duration": {
+            "numerator": "288",
+            "denominator": "24"
+          },
+          "endTimecode": "00:00:12,000",
+          "subtitles": [],
+          "srt": "",
+          "scope": "Planning arithmetic only: cut-only shot coverage and one subtitle track. Text counts do not establish speech duration, readability, synchronization, rights, or media quality.",
+          "localization": {
+            "locale": "zh-CN",
+            "summary": "剪辑覆盖与字幕算术检查通过，实际声音及画面同步仍未核验。",
+            "errors": [],
+            "scope": "仅检查硬切镜头覆盖、单字幕轨和文字计数；字数不等于口播时长，不证明可读性、同步、权利或媒体质量。"
+          }
+        },
+        "review.json": {
+          "source": {
+            "type": "prompt",
+            "id": "returned-compass-creative-draft",
+            "version": 1
+          },
+          "mode": "full",
+          "shotIds": [
+            "S01",
+            "S02",
+            "S03"
+          ],
+          "reviews": [
+            {
+              "role": "direction",
+              "shotId": "S01",
+              "status": "pass",
+              "criterion": "来人、物件与接收者在建立镜中可辨。",
+              "observation": "V01写明信使从左进入、右手平托罗盘，右侧老人看见后放下工具。",
+              "sourceLocator": "output.md / V01 / 0至3.25秒"
+            },
+            {
+              "role": "direction",
+              "shotId": "S02",
+              "status": "pass",
+              "criterion": "归还必须包含真实可见的持有者改变。",
+              "observation": "V02完整写出老人托底、共同承重、信使松手和老人单独持物。",
+              "sourceLocator": "output.md / V02 / 1至4秒"
+            },
+            {
+              "role": "direction",
+              "shotId": "S03",
+              "status": "pass",
+              "criterion": "情绪收束由相互回应承载，罗盘终态明确。",
+              "observation": "V03老人先看物再点头，信使之后才松肩浅笑，罗盘仍在老人右掌。",
+              "sourceLocator": "output.md / V03 / 0至4秒"
+            },
+            {
+              "role": "performance",
+              "shotId": "S01",
+              "status": "pass",
+              "criterion": "老人须获得视觉触发后才放下工具。",
+              "observation": "V01先让罗盘进入光池，老人移视到罗盘，再于2.5至3.25秒放下工具。",
+              "sourceLocator": "output.md / V01 / 1.5至3.25秒"
+            },
+            {
+              "role": "performance",
+              "shotId": "S02",
+              "status": "pass",
+              "criterion": "谨慎通过延后松手体现，不能提前完成交接。",
+              "observation": "V02在1至2秒保留共同支撑，2秒后信使才松开拇指和支撑指腹。",
+              "sourceLocator": "output.md / V02 / 1至2.75秒"
+            },
+            {
+              "role": "performance",
+              "shotId": "S03",
+              "status": "pass",
+              "criterion": "信使的回应发生于老人点头之后。",
+              "observation": "V03老人2至2.5秒点头，信使2.5至3.5秒回应；各自目光指向对方眼睛。",
+              "sourceLocator": "output.md / V03 / 2至3.5秒"
+            },
+            {
+              "role": "staging",
+              "shotId": "S01",
+              "status": "pass",
+              "criterion": "人物路线、道具归属与其他手的位置明确。",
+              "observation": "V01入口和桌西端通路清空，信使右手持罗盘，双方左手均不参与。",
+              "sourceLocator": "output.md / V01 / 初态及0至1.5秒"
+            },
+            {
+              "role": "staging",
+              "shotId": "S02",
+              "status": "pass",
+              "criterion": "接触位置可达，交接过程没有完全遮挡。",
+              "observation": "共享空间将接触点设在桌西南角上方8厘米，V02让两人前臂从左右进入、分区支撑，桌沿不挡手。",
+              "sourceLocator": "output.md / 共享视觉与空间；V02 / 空间与初态"
+            },
+            {
+              "role": "staging",
+              "shotId": "S03",
+              "status": "pass",
+              "criterion": "保持座位、人物左右与可见道具终态。",
+              "observation": "V03老人保持右侧坐姿，信使站在左侧，右下方整只罗盘可辨且由老人右手持有。",
+              "sourceLocator": "output.md / V03 / 构图与初态"
+            },
+            {
+              "role": "cinematography",
+              "shotId": "S01",
+              "status": "pass",
+              "criterion": "建立镜包含入口、人物与手持物，摄影指令自洽。",
+              "observation": "V01固定35mm视角、中全景和较深景深，明确不变焦摇移，照明来源固定。",
+              "sourceLocator": "output.md / V01 / 摄影机段落"
+            },
+            {
+              "role": "cinematography",
+              "shotId": "S02",
+              "status": "pass",
+              "criterion": "摄影使支撑与释放持续可读。",
+              "observation": "V02同轴线侧俯拍手部，整只罗盘和接触同时清楚，无焦点转移或镜内切换。",
+              "sourceLocator": "output.md / V02 / 首段"
+            },
+            {
+              "role": "cinematography",
+              "shotId": "S03",
+              "status": "pass",
+              "criterion": "双人回应和罗盘持有关系可以同框阅读。",
+              "observation": "V03固定50mm双人中景，景深兼顾两脸，桌沿不挡右下方罗盘。",
+              "sourceLocator": "output.md / V03 / 首段"
+            },
+            {
+              "role": "prompt",
+              "shotId": "S01",
+              "status": "pass",
+              "criterion": "无图路径需完整人物外观、空间初态、时序及声音指令。",
+              "observation": "V01独立展开两人外观、店内结构、初态、分段动作与无任何音轨要求，不引用未绑定图片。",
+              "sourceLocator": "output.md / V01 / 全文"
+            },
+            {
+              "role": "prompt",
+              "shotId": "S02",
+              "status": "pass",
+              "criterion": "关键交接不能只留镜头摘要，必须有可复制的全过程。",
+              "observation": "V02独立定义可见袖口、手、唯一罗盘、支撑与释放阶段、四秒终态和无音轨。",
+              "sourceLocator": "output.md / V02 / 全文"
+            },
+            {
+              "role": "prompt",
+              "shotId": "S03",
+              "status": "pass",
+              "criterion": "独立稿须继承服装身份、持物状态和全静音要求。",
+              "observation": "V03完整重述两人可见身份服装与环境，禁止重新交接，保留老人持罗盘与零音轨。",
+              "sourceLocator": "output.md / V03 / 全文"
+            },
+            {
+              "role": "continuity",
+              "shotId": "S01",
+              "status": "pass",
+              "criterion": "S01出态必须与S02入态相容。",
+              "observation": "两段均声明信使右手独自托水平罗盘于桌上方8厘米，老人空右手在桌面尚未触物。",
+              "sourceLocator": "output.md / S01至S02边界；V01终态；V02初态"
+            },
+            {
+              "role": "continuity",
+              "shotId": "S02",
+              "status": "pass",
+              "criterion": "道具从一人右手到另一人右手，S03继承完整终态。",
+              "observation": "V02结束时老人右手收物8厘米、信使空右手回腰侧；V03从相同状态开始，没有换手或复制。",
+              "sourceLocator": "output.md / V02终态；V03初态"
+            },
+            {
+              "role": "continuity",
+              "shotId": "S03",
+              "status": "pass",
+              "criterion": "结尾满足唯一罗盘在修表师手中，服装与暖灯未变。",
+              "observation": "V03保持老人右掌托唯一罗盘、靛蓝短外套、灰围裙及东北端桌灯暖光至结束；所有镜头无音轨。",
+              "sourceLocator": "output.md / V03 / 3.5至4秒及约束"
+            }
+          ]
+        },
+        "review-result.json": {
+          "valid": true,
+          "scope": "plan_only",
+          "coverageComplete": true,
+          "reviewComplete": true,
+          "expectedRows": 18,
+          "missing": [],
+          "openItems": [],
+          "prompt": null,
+          "errors": [],
+          "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。",
+          "localization": {
+            "locale": "zh-CN",
+            "summary": "规划评审已完成；实际媒体仍未核验。"
+          }
+        }
+      },
+      "requestType": "task_text"
+    },
+    {
+      "id": "revision",
+      "mode": "independent_first_run",
+      "request": "只改写下面的一条图生视频提示词，保持中文，直接交付可复制稿，不扩展分镜。我的文字描述是：首帧中虚构成年女店员穿深蓝交领衫，站在木柜台后，右手举着白瓷杯、手臂已伸直到柜台前沿，视线看向镜头；中性日光，固定机位。旧提示词：“她从腰间举起白瓷杯递到镜头前，微笑说‘Take your time.’”。新要求：6秒，镜头和服装不变，准确英文台词不改；让动作与我描述的首帧接上。没有图片或视频附件。我还想知道原视频里嘴形有没有同步。平台和型号没定。允许你对新稿做合理设计，不需提问。仅规划，不生成媒体。",
+      "output": "revision.md",
+      "outputSha256": "36d1c973575b11ddcb1334e27580c65a197dfe0708a7772e52c1d3afe991c2de",
+      "execution": {
+        "task": "independent_forward_test_revision",
+        "scope": "plan_only",
+        "actual_read_resources": [
+          "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md",
+          "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/prompt-detail-standard.md",
+          "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/ensemble-direction-and-review.md",
+          "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-performance-direction.md",
+          "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-timing-and-handles.md",
+          "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-sound-and-delivery.md"
+        ],
+        "actual_commands": [
+          {
+            "index": 1,
+            "tool": "exec_command",
+            "shell": "powershell",
+            "command": "Get-Content -LiteralPath 'D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md' -Raw",
+            "exit_code": 0
+          },
+          {
+            "index": 2,
+            "tool": "exec_command",
+            "shell": "powershell",
+            "command": "Get-Content -LiteralPath 'D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/prompt-detail-standard.md' -Raw",
+            "exit_code": 0
+          },
+          {
+            "index": 3,
+            "tool": "exec_command",
+            "shell": "powershell",
+            "command": "Get-Content -LiteralPath 'D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/ensemble-direction-and-review.md' -Raw",
+            "exit_code": 0
+          },
+          {
+            "index": 4,
+            "tool": "exec_command",
+            "shell": "powershell",
+            "command": "Get-Content -LiteralPath 'D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-performance-direction.md' -Raw",
+            "exit_code": 0
+          },
+          {
+            "index": 5,
+            "tool": "exec_command",
+            "shell": "powershell",
+            "command": "Get-Content -LiteralPath 'D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-timing-and-handles.md' -Raw",
+            "exit_code": 0
+          },
+          {
+            "index": 6,
+            "tool": "exec_command",
+            "shell": "powershell",
+            "command": "Get-Content -LiteralPath 'D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/ensemble-direction-and-review.md' -Raw",
+            "exit_code": 0
+          },
+          {
+            "index": 7,
+            "tool": "exec_command",
+            "shell": "powershell",
+            "command": "$detailLines = Get-Content -LiteralPath 'D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/prompt-detail-standard.md'; $inVideoSection = $false; foreach ($detailLine in $detailLines) { if ($detailLine -eq '## 图生视频') { $inVideoSection = $true }; if ($inVideoSection) { $detailLine }; if ($inVideoSection -and $detailLine -eq '## 连贯示例') { break } }",
+            "exit_code": 0
+          },
+          {
+            "index": 8,
+            "tool": "exec_command",
+            "shell": "powershell",
+            "command": "Get-Content -LiteralPath 'D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-sound-and-delivery.md' -Raw",
+            "exit_code": 0
+          }
+        ],
+        "resource_read_notes": [
+          "第二次工具编排批次的合并输出发生截断；之后单独读取群像调度文档与图生视频章节。",
+          "未读取 tests、研究报告、MEMORY 或其他 agent 输出。"
+        ],
+        "clarification_count": 0,
+        "known_model_information": {
+          "assistant_exact_model_id": null,
+          "media_generation_platform": null,
+          "media_generation_model": null,
+          "media_generation_interface": null,
+          "native_audio_support": null,
+          "lip_sync_support": null
+        },
+        "inputs": {
+          "actual_image_provided": false,
+          "actual_video_provided": false,
+          "first_frame_source": "user_text_description",
+          "requested_duration_seconds": 6,
+          "exact_dialogue": "Take your time."
+        },
+        "media_generated": false,
+        "original_video_lip_sync_status": "unknown",
+        "output_files": [
+          "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-revision/output.md",
+          "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-revision/execution.json"
+        ],
+        "file_write_tool": "apply_patch",
+        "self_score": null
+      },
+      "worksheets": {},
+      "requestType": "task_text"
+    },
+    {
+      "id": "short-film-v2",
+      "mode": "feedback_guided_revision",
+      "request": "沿用首轮全部硬约束，仅修正长桌上人物与交接点的空间可达性，并同步位置图、母图、镜头卡、独立复制稿和逐镜评审；补充的设计坐标不作为实测或通用臂长。保留首轮输出，修订稿另存。",
+      "output": "short-film-v2.md",
+      "outputSha256": "02f0a9668891c733b06dbb44d957bdbfb3bdbc26884841198298f4c92f49bf40",
+      "execution": {
+        "task": "《归还的罗盘》明确空间反馈后的修订复测",
+        "test_mode": "feedback_guided_revision",
+        "blind_test": false,
+        "version": 2,
+        "status": "completed_plan_only",
+        "scope": "仅修空间布局及场景图、I05、镜头卡、独立视频稿、边界与评审等直接下游",
+        "feedback_received": "1.4米长桌、老人北边偏东、交接点西南角缺少可信可达布局；将坐姿老人和左侧信使集中到相邻交接区域，并同步消费者。",
+        "output_file": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/output-v2.md",
+        "output_sha256": "02F0A9668891C733B06DBB44D957BDBFB3BDBC26884841198298F4C92F49BF40",
+        "change_review_file": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/change-review.md",
+        "first_round_preserved": {
+          "files": [
+            "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/output.md",
+            "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/execution.json",
+            "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/review.json",
+            "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/delivery.json",
+            "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/review-result.json",
+            "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/delivery-result.json"
+          ],
+          "sha256_before_equals_after": true,
+          "evidence_file": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/originals-preservation-v2.json"
+        },
+        "actual_read_resources": [
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/scene.md",
+            "access": "read_full",
+            "purpose": "已更新的共享空间检查"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/prompt-detail-standard.md",
+            "access": "read_lines_91_to_138",
+            "purpose": "已更新的空间关系与调度及相关摄影光位规则"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/ensemble-direction-and-review.md",
+            "access": "read_full",
+            "purpose": "调度中的可达性与六视角复审要求"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/output.md",
+            "access": "read_contents_and_hash_bytes",
+            "origin": "own_first_round_output"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/execution.json",
+            "access": "read_bytes_for_preservation_hash",
+            "origin": "own_first_round_output"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/review.json",
+            "access": "read_contents_and_hash_bytes",
+            "origin": "own_first_round_output"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/delivery.json",
+            "access": "read_contents_and_hash_bytes",
+            "origin": "own_first_round_output"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/review-result.json",
+            "access": "read_bytes_for_preservation_hash",
+            "origin": "own_first_round_output"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/delivery-result.json",
+            "access": "read_bytes_for_preservation_hash",
+            "origin": "own_first_round_output"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/output-v2.md",
+            "access": "read_lines_40_to_117_and_hash_bytes",
+            "origin": "created_in_this_revision"
+          }
+        ],
+        "actual_execution_resources": [
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/revise-v2.mjs",
+            "access": "execute",
+            "purpose": "仅读取首轮材料，建立V2稿件、几何复核与原文件保留证据"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/scripts/check-shot-review.mjs",
+            "access": "execute_read_only_checker"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/scripts/check-delivery.mjs",
+            "access": "execute_read_only_checker"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/review-v2.json",
+            "access": "read_by_checker"
+          },
+          {
+            "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/delivery-v2.json",
+            "access": "read_by_checker"
+          }
+        ],
+        "actual_commands": [
+          {
+            "order": 1,
+            "tool": "exec_command",
+            "command": "Get-Content -LiteralPath 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\scene.md' -Raw",
+            "exit_code": 0
+          },
+          {
+            "order": 2,
+            "tool": "exec_command",
+            "command": "Get-Content -LiteralPath 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md' | Select-Object -Skip 90 -First 48",
+            "exit_code": 0
+          },
+          {
+            "order": 3,
+            "tool": "exec_command",
+            "command": "Get-Content -LiteralPath 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\ensemble-direction-and-review.md' -Raw",
+            "exit_code": 0
+          },
+          {
+            "order": 4,
+            "tool": "exec_command",
+            "command": "rg -n '西南|偏东|北侧|东北|1\\.15|20厘米|右侧后方|右后方|轴线|双方各|西端|西侧' 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\forward-test-short-film\\output.md'",
+            "exit_code": 0
+          },
+          {
+            "order": 5,
+            "tool": "exec_command",
+            "command": "node 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\forward-test-short-film\\revise-v2.mjs'",
+            "exit_code": 0
+          },
+          {
+            "order": 6,
+            "tool": "exec_command",
+            "command": "node 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\scripts\\check-shot-review.mjs' 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\forward-test-short-film\\review-v2.json'",
+            "exit_code": 0
+          },
+          {
+            "order": 7,
+            "tool": "exec_command",
+            "command": "node 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\scripts\\check-delivery.mjs' 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\forward-test-short-film\\delivery-v2.json'",
+            "exit_code": 0
+          },
+          {
+            "order": 8,
+            "tool": "exec_command",
+            "command": "Get-Content -LiteralPath 'D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\forward-test-short-film\\output-v2.md' | Select-Object -Skip 39 -First 78",
+            "exit_code": 0
+          }
+        ],
+        "other_file_operations": [
+          {
+            "tool": "apply_patch",
+            "operation": "create_and_edit_before_execution",
+            "paths": [
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/revise-v2.mjs"
+            ]
+          },
+          {
+            "tool": "exec_command",
+            "operation": "helper_creates_new_files_only",
+            "paths": [
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/output-v2.md",
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/review-v2.json",
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/delivery-v2.json",
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/spatial-plan-v2.json",
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/revision-audit-v2.json",
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/originals-preservation-v2.json"
+            ]
+          },
+          {
+            "tool": "apply_patch",
+            "operation": "create",
+            "paths": [
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/execution-v2.json",
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/change-review.md",
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/review-result-v2.json",
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/delivery-result-v2.json"
+            ]
+          }
+        ],
+        "orchestration_errors": [
+          {
+            "tool": "functions.exec",
+            "message": "SyntaxError: Unexpected token ')'",
+            "nested_commands_executed": 0,
+            "recovered": true,
+            "remedy": "修正调用编排括号后执行原定并行检查，无源文件或首轮文件受到影响。"
+          }
+        ],
+        "clarification_count": 0,
+        "model_information": {
+          "declared_agent_family": "GPT-6",
+          "exact_runtime_model": null,
+          "model_version": null,
+          "reasoning_effort": null,
+          "media_generation_platform": null,
+          "media_generation_model": null
+        },
+        "observed_changes": {
+          "layout": "老人改坐桌北边靠西端；信使停在西端靠北，交接位于西北角近旁；工具移到老人近身区。",
+          "calculated_design_geometry": {
+            "courierToContactHorizontal": 0.37054014627297804,
+            "seatToContactHorizontal": 0.4294182110716778,
+            "personCenterSeparationHorizontal": 0.6963476143421474,
+            "initialHandToContact3D": 0.2193171219946131,
+            "compassPull3D": 0.08000000000000002,
+            "contactToWestEdge": 0.12,
+            "contactToNorthEdge": 0.18,
+            "compassCenterAboveTable": 0.07999999999999996,
+            "camera2Horizontal": 1.02,
+            "camera2PitchDegrees": 30.046435246810503,
+            "axisCrossProducts": [
+              -1.9100000000000001,
+              -0.7180000000000001,
+              -1.9240000000000002
+            ]
+          },
+          "manuscript_sections_verified_identical": [
+            {
+              "name": "I01",
+              "identical": true
+            },
+            {
+              "name": "I02",
+              "identical": true
+            },
+            {
+              "name": "I04",
+              "identical": true
+            },
+            {
+              "name": "声音及剪辑",
+              "identical": true
+            }
+          ],
+          "image_prompt_count": 5,
+          "video_prompt_count": 3,
+          "planned_shot_count": 3,
+          "planned_frame_rate": {
+            "numerator": 24,
+            "denominator": 1
+          },
+          "planned_total_frames": 288,
+          "planned_duration_seconds": 12,
+          "planned_audio_stream_count": 0,
+          "generated_image_count": 0,
+          "generated_video_count": 0,
+          "generated_audio_count": 0
+        },
+        "checker_results": {
+          "shot_review": {
+            "exit_code": 0,
+            "result_file": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/review-result-v2.json",
+            "valid": true,
+            "scope": "plan_only",
+            "coverageComplete": true,
+            "reviewComplete": true,
+            "expectedRows": 18,
+            "missing": [],
+            "openItems": [],
+            "prompt": null,
+            "errors": [],
+            "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。",
+            "localization": {
+              "locale": "zh-CN",
+              "summary": "规划评审已完成；实际媒体仍未核验。"
+            }
+          },
+          "delivery": {
+            "exit_code": 0,
+            "result_file": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film/delivery-result-v2.json",
+            "valid": true,
+            "errors": [],
+            "duration": {
+              "numerator": "288",
+              "denominator": "24"
+            },
+            "endTimecode": "00:00:12,000",
+            "subtitles": [],
+            "srt": "",
+            "scope": "Planning arithmetic only: cut-only shot coverage and one subtitle track. Text counts do not establish speech duration, readability, synchronization, rights, or media quality.",
+            "localization": {
+              "locale": "zh-CN",
+              "summary": "剪辑覆盖与字幕算术检查通过，实际声音及画面同步仍未核验。",
+              "errors": [],
+              "scope": "仅检查硬切镜头覆盖、单字幕轨和文字计数；字数不等于口播时长，不证明可读性、同步、权利或媒体质量。"
+            }
+          }
+        },
+        "unobserved_metrics": {
+          "task_elapsed_seconds": null,
+          "input_tokens": null,
+          "output_tokens": null,
+          "total_tokens": null,
+          "cost": null,
+          "actual_body_reach_or_rehearsal": null,
+          "media_identity_consistency": null,
+          "media_contact_correctness": null,
+          "media_compass_uniqueness": null,
+          "media_performance_quality": null,
+          "actual_media_frame_rate": null,
+          "actual_media_duration_seconds": null,
+          "actual_media_audio_stream_count": null,
+          "benchmark_score": null,
+          "artistic_score": null
+        },
+        "resource_boundary": "未读取开发评测、其他代理结果、MEMORY或tests；未调用生成平台；未修改源码。",
+        "evaluation_boundary": "位置距离均为原创设计坐标的算术；工作表检查不验证媒体、通用臂长或艺术评分。本轮不称盲测，未自行打分。",
+        "writes_confined_to": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-short-film"
+      },
+      "worksheets": {
+        "delivery-v2.json": {
+          "frameRate": {
+            "numerator": 24,
+            "denominator": 1
+          },
+          "totalFrames": 288,
+          "shots": [
+            {
+              "id": "S01",
+              "startFrame": 0,
+              "endFrame": 96
+            },
+            {
+              "id": "S02",
+              "startFrame": 96,
+              "endFrame": 192
+            },
+            {
+              "id": "S03",
+              "startFrame": 192,
+              "endFrame": 288
+            }
+          ],
+          "subtitles": []
+        },
+        "delivery-result-v2.json": {
+          "valid": true,
+          "errors": [],
+          "duration": {
+            "numerator": "288",
+            "denominator": "24"
+          },
+          "endTimecode": "00:00:12,000",
+          "subtitles": [],
+          "srt": "",
+          "scope": "Planning arithmetic only: cut-only shot coverage and one subtitle track. Text counts do not establish speech duration, readability, synchronization, rights, or media quality.",
+          "localization": {
+            "locale": "zh-CN",
+            "summary": "剪辑覆盖与字幕算术检查通过，实际声音及画面同步仍未核验。",
+            "errors": [],
+            "scope": "仅检查硬切镜头覆盖、单字幕轨和文字计数；字数不等于口播时长，不证明可读性、同步、权利或媒体质量。"
+          }
+        },
+        "review-v2.json": {
+          "source": {
+            "type": "prompt",
+            "id": "returned-compass-creative-draft",
+            "version": 2
+          },
+          "mode": "full",
+          "shotIds": [
+            "S01",
+            "S02",
+            "S03"
+          ],
+          "reviews": [
+            {
+              "role": "direction",
+              "shotId": "S01",
+              "status": "pass",
+              "criterion": "来人、物件与接收者在建立镜中可辨。",
+              "observation": "V01写明信使从左进入、右手平托罗盘，右侧老人看见后放下工具。 V2仅调整空间，故事目标、触发顺序与秒数未改；已对照本版，原判定理由沿用。",
+              "sourceLocator": "output-v2.md / V01 / 0至3.25秒"
+            },
+            {
+              "role": "direction",
+              "shotId": "S02",
+              "status": "pass",
+              "criterion": "归还必须包含真实可见的持有者改变。",
+              "observation": "V02完整写出老人托底、共同承重、信使松手和老人单独持物。 V2仅调整空间，故事目标、触发顺序与秒数未改；已对照本版，原判定理由沿用。",
+              "sourceLocator": "output-v2.md / V02 / 1至4秒"
+            },
+            {
+              "role": "direction",
+              "shotId": "S03",
+              "status": "pass",
+              "criterion": "情绪收束由相互回应承载，罗盘终态明确。",
+              "observation": "V03老人先看物再点头，信使之后才松肩浅笑，罗盘仍在老人右掌。 V2仅调整空间，故事目标、触发顺序与秒数未改；已对照本版，原判定理由沿用。",
+              "sourceLocator": "output-v2.md / V03 / 0至4秒"
+            },
+            {
+              "role": "performance",
+              "shotId": "S01",
+              "status": "pass",
+              "criterion": "老人须获得视觉触发后才放下工具。",
+              "observation": "V01先让罗盘进入光池，老人移视到罗盘，再于2.5至3.25秒放下工具。 V2仅调整空间，故事目标、触发顺序与秒数未改；已对照本版，原判定理由沿用。",
+              "sourceLocator": "output-v2.md / V01 / 1.5至3.25秒"
+            },
+            {
+              "role": "performance",
+              "shotId": "S02",
+              "status": "pass",
+              "criterion": "谨慎通过延后松手体现，不能提前完成交接。",
+              "observation": "V02在1至2秒保留共同支撑，2秒后信使才松开拇指和支撑指腹。 V2仅调整空间，故事目标、触发顺序与秒数未改；已对照本版，原判定理由沿用。",
+              "sourceLocator": "output-v2.md / V02 / 1至2.75秒"
+            },
+            {
+              "role": "performance",
+              "shotId": "S03",
+              "status": "pass",
+              "criterion": "信使的回应发生于老人点头之后。",
+              "observation": "V03老人2至2.5秒点头，信使2.5至3.5秒回应；各自目光指向对方眼睛。 V2仅调整空间，故事目标、触发顺序与秒数未改；已对照本版，原判定理由沿用。",
+              "sourceLocator": "output-v2.md / V03 / 2至3.5秒"
+            },
+            {
+              "role": "staging",
+              "shotId": "S01",
+              "status": "pass",
+              "criterion": "站座位和接触点必须在同一桌角，不依赖跨长桌伸手。",
+              "observation": "V2将信使地面中心定为A=(-0.25,0.40)，老人座位定为B=(0.32,0.80)，交接点Q=(0.12,0.42,0.83)；两人中心约0.696米，老人保持坐姿，零件盘移至其近身处。",
+              "sourceLocator": "output-v2.md / 共享视觉与空间坐标表；V01"
+            },
+            {
+              "role": "staging",
+              "shotId": "S02",
+              "status": "pass",
+              "criterion": "手部近景继承同一可说明的座位和交接点。",
+              "observation": "V02独立重述A、B、Q与H；H至Q三维位移约0.219米，两手在西北角近旁共同承重，桌面不要求手臂跨越1.4米长度。空间工作表只核对设计位置，不冒充人体实测。",
+              "sourceLocator": "output-v2.md / V02；spatial-plan-v2.json"
+            },
+            {
+              "role": "staging",
+              "shotId": "S03",
+              "status": "pass",
+              "criterion": "终态继承接回位置与稳定座位，不在切镜时暗移人物。",
+              "observation": "V03保留A、B与轻微前倾坐姿，罗盘中心为Q2约(0.157,0.491,0.83)，只有老人右掌持物，未让老人站起或信使换侧。",
+              "sourceLocator": "output-v2.md / V03 / 初态"
+            },
+            {
+              "role": "cinematography",
+              "shotId": "S01",
+              "status": "pass",
+              "criterion": "新站座位可在同轴线侧建立镜中辨认。",
+              "observation": "V01固定机位(0.25,-2.60,1.25)，35mm中全景保留从西门进入的左侧信使与桌北边靠西端的右侧老人；灯仍在东北端。",
+              "sourceLocator": "output-v2.md / 空间坐标表；S01镜头卡；V01"
+            },
+            {
+              "role": "cinematography",
+              "shotId": "S02",
+              "status": "pass",
+              "criterion": "手部俯角和机位与真实设计接触点一致。",
+              "observation": "C2=(0.12,-0.60,1.42)瞄准Q，下俯计算约30.05度；机位在桌体外，I05、S02卡和V02均同步此高度，整只罗盘与两手接触清楚。",
+              "sourceLocator": "output-v2.md / I05；S02镜头卡；V02；spatial-plan-v2.json"
+            },
+            {
+              "role": "cinematography",
+              "shotId": "S03",
+              "status": "pass",
+              "criterion": "反应镜不暗改轴线或持物位置。",
+              "observation": "S03机位(0,-2.80,1.35)与另外两机位相对A→B轴线叉积同为负，保留信使左、老人右、罗盘在右掌；无反打越轴。",
+              "sourceLocator": "output-v2.md / 空间坐标表；S03镜头卡；V03"
+            },
+            {
+              "role": "prompt",
+              "shotId": "S01",
+              "status": "pass",
+              "criterion": "独立文字稿必须展开新版空间与近身工具位置。",
+              "observation": "V01重述桌面范围、老人B座位、信使A0至A路线、Q交接点及H空手位置，工具在老人近身区；沿用完整外观、四秒阶段及无音轨要求。",
+              "sourceLocator": "output-v2.md / V01 / 全文"
+            },
+            {
+              "role": "prompt",
+              "shotId": "S02",
+              "status": "pass",
+              "criterion": "静帧、手部镜和视频稿应消费同一位置权威。",
+              "observation": "I05、S02卡与V02均使用西北角近旁Q及C2高1.42米；视频另写H至Q、接稳后松手、Q至Q2，未把静帧改成连续动作图。",
+              "sourceLocator": "output-v2.md / I05；S02镜头卡；V02"
+            },
+            {
+              "role": "prompt",
+              "shotId": "S03",
+              "status": "pass",
+              "criterion": "终态复制稿不能沿用旧东侧座位或旧交接点。",
+              "observation": "V03完整重述桌北边靠西端B座位、信使A位置和Q2持物位置，保持原表演时间、服装、灯色、唯一罗盘与无音轨。",
+              "sourceLocator": "output-v2.md / V03 / 全文"
+            },
+            {
+              "role": "continuity",
+              "shotId": "S01",
+              "status": "pass",
+              "criterion": "S01出态和S02入态在新版空间相容。",
+              "observation": "两段均为信使A右手独自托Q处水平罗盘、老人B处坐姿且空右手在H；桌灯仍在东北端，工具位置相同。",
+              "sourceLocator": "output-v2.md / S01→S02边界；V01终态；V02初态"
+            },
+            {
+              "role": "continuity",
+              "shotId": "S02",
+              "status": "pass",
+              "criterion": "交接后八厘米收物必须传播到下一镜。",
+              "observation": "V02从Q沿朝B方向收物0.08米至Q2，V03从Q2开始；A、B不变，信使空右手回腰侧，双方左手均不参与。",
+              "sourceLocator": "output-v2.md / S02→S03边界；V02终态；V03初态"
+            },
+            {
+              "role": "continuity",
+              "shotId": "S03",
+              "status": "pass",
+              "criterion": "最后持有人及场景硬锁保持。",
+              "observation": "V03结束时老人仍坐B处、右掌在Q2托唯一罗盘，信使两手空着；靛蓝外套、灰围裙、东北端桌灯暖光、12秒288帧及无任何音轨全部沿用。",
+              "sourceLocator": "output-v2.md / V03终态；声音与剪辑交接"
+            }
+          ]
+        },
+        "review-result-v2.json": {
+          "valid": true,
+          "scope": "plan_only",
+          "coverageComplete": true,
+          "reviewComplete": true,
+          "expectedRows": 18,
+          "missing": [],
+          "openItems": [],
+          "prompt": null,
+          "errors": [],
+          "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。",
+          "localization": {
+            "locale": "zh-CN",
+            "summary": "规划评审已完成；实际媒体仍未核验。"
+          }
+        },
+        "spatial-plan-v2.json": {
+          "scope": "plan_only_design_geometry",
+          "source": "output-v2.md",
+          "version": 2,
+          "origin": "木桌西南角正下方地面",
+          "axes": {
+            "x": "east",
+            "y": "north",
+            "z": "up"
+          },
+          "unit": "meter",
+          "table": {
+            "x": [
+              0,
+              1.4
+            ],
+            "y": [
+              0,
+              0.6
+            ],
+            "surfaceZ": 0.75
+          },
+          "anchors": {
+            "courierFeetCenter": [
+              -0.25,
+              0.4,
+              0
+            ],
+            "repairerSeatCenter": [
+              0.32,
+              0.8,
+              0
+            ],
+            "handoffCenter": [
+              0.12,
+              0.42,
+              0.83
+            ],
+            "repairerInitialRightHand": [
+              0.3,
+              0.53,
+              0.77
+            ],
+            "receivedCompassCenter": [
+              0.1572597146266098,
+              0.4907934577905586,
+              0.83
+            ],
+            "cameras": [
+              [
+                0.25,
+                -2.6,
+                1.25
+              ],
+              [
+                0.12,
+                -0.6,
+                1.42
+              ],
+              [
+                0,
+                -2.8,
+                1.35
+              ]
+            ]
+          },
+          "calculated": {
+            "courierToContactHorizontal": 0.37054014627297804,
+            "seatToContactHorizontal": 0.4294182110716778,
+            "personCenterSeparationHorizontal": 0.6963476143421474,
+            "initialHandToContact3D": 0.2193171219946131,
+            "compassPull3D": 0.08000000000000002,
+            "contactToWestEdge": 0.12,
+            "contactToNorthEdge": 0.18,
+            "compassCenterAboveTable": 0.07999999999999996,
+            "camera2Horizontal": 1.02,
+            "camera2PitchDegrees": 30.046435246810503,
+            "axisCrossProducts": [
+              -1.9100000000000001,
+              -0.7180000000000001,
+              -1.9240000000000002
+            ]
+          },
+          "qualification": "只是设计点位、净空及方向的算术复核；没有使用通用臂长，未证明实际人体或生成媒体的可达性。",
+          "observedMediaReach": null
+        },
+        "originals-preservation-v2.json": {
+          "scope": "file_bytes",
+          "originalHashes": {
+            "output.md": "A52C365774EF6E1DC534D41A13CED742749D3CAA7494D3952E309DCE78942383",
+            "execution.json": "9117F99EEFAE8209CDBE86AA9A6CC3005BC147E4E787AF54B447CFF2DF8BA399",
+            "review.json": "61383609E7CE67B72AFC88AF30E7332A41AC47C07A1457EA25070BD57EB6F393",
+            "delivery.json": "0D40F6FAAAD6824C16E386B2660B1D405984FB51BC635B0047418D6E599CE468",
+            "review-result.json": "57657BC90F0F736806B5FEB652634FDDE04962BF4DE9F9B6CFED038106259739",
+            "delivery-result.json": "26F8C6F2C3C0A644CAD8D2B53A164DE40969534617DB94AA9FB9179E1EFE60F9"
+          },
+          "beforeEqualsAfter": true,
+          "afterHashes": {
+            "output.md": "A52C365774EF6E1DC534D41A13CED742749D3CAA7494D3952E309DCE78942383",
+            "execution.json": "9117F99EEFAE8209CDBE86AA9A6CC3005BC147E4E787AF54B447CFF2DF8BA399",
+            "review.json": "61383609E7CE67B72AFC88AF30E7332A41AC47C07A1457EA25070BD57EB6F393",
+            "delivery.json": "0D40F6FAAAD6824C16E386B2660B1D405984FB51BC635B0047418D6E599CE468",
+            "review-result.json": "57657BC90F0F736806B5FEB652634FDDE04962BF4DE9F9B6CFED038106259739",
+            "delivery-result.json": "26F8C6F2C3C0A644CAD8D2B53A164DE40969534617DB94AA9FB9179E1EFE60F9"
+          },
+          "outputV2Sha256": "02F0A9668891C733B06DBB44D957BDBFB3BDBC26884841198298F4C92F49BF40"
+        },
+        "revision-audit-v2.json": {
+          "version": 2,
+          "scope": "manuscript_and_design_geometry_only",
+          "preservedSections": [
+            {
+              "name": "I01",
+              "identical": true
+            },
+            {
+              "name": "I02",
+              "identical": true
+            },
+            {
+              "name": "I04",
+              "identical": true
+            },
+            {
+              "name": "声音及剪辑",
+              "identical": true
+            }
+          ],
+          "obsoleteSpatialPhrasesAbsent": true,
+          "operations": [
+            {
+              "from": "# 《归还的罗盘》完整创作稿",
+              "to": "# 《归还的罗盘》完整创作稿 · V2 空间修订\n\n本版是在明确反馈后的修订复测，不是独立盲测。仅修正交接空间及其直接下游；首轮 output.md 和执行记录原样保留。",
+              "count": 1
+            },
+            {
+              "from": "桌北边偏东",
+              "to": "桌北边靠西端",
+              "count": 4
+            },
+            {
+              "from": "北侧偏东",
+              "to": "北侧靠西端",
+              "count": 1
+            },
+            {
+              "from": "西南角",
+              "to": "西北角近旁",
+              "count": 9
+            },
+            {
+              "from": "1.15",
+              "to": "1.42",
+              "count": 3
+            },
+            {
+              "from": "左端交接区域清空。右侧后方一个长方形零件盘、一支小螺丝刀",
+              "to": "西北角近旁的交接区域清空；木凳位于北边靠西端，信使停在西端靠北的位置。老人近身前方、交接区右侧有一个长方形零件盘和一支小螺丝刀",
+              "count": 1
+            },
+            {
+              "from": "停在木桌西端",
+              "to": "停在木桌西端靠北的位置",
+              "count": 1
+            },
+            {
+              "from": "她在木工作台西端停步",
+              "to": "她在木工作台西端靠北的位置停步",
+              "count": 1
+            },
+            {
+              "from": "老修表师坐在桌后右侧，灰围裙覆在膝前。",
+              "to": "老修表师坐在桌北边靠西端，仍在信使的画面右侧；坐骨留在凳上，双脚着地，躯干从开场起便轻微前倾，灰围裙覆在膝前。",
+              "count": 1
+            },
+            {
+              "section": "位置与轴线、平面图、同原点距离复核",
+              "operation": "replace_section"
+            },
+            {
+              "from": "台面右后方有长方形零件盘，旁边平放一支细小螺丝刀",
+              "to": "老人座位的近身前方、交接区右侧有长方形零件盘，旁边平放一支细小螺丝刀",
+              "count": 1
+            },
+            {
+              "from": "右后方放长方形零件盘",
+              "to": "老人近身前方、交接区右侧放长方形零件盘",
+              "count": 1
+            },
+            {
+              "from": "右后方长方形零件盘及旁边平放的细小螺丝刀不动",
+              "to": "老人近身前方、交接区右侧的长方形零件盘及旁边平放的细小螺丝刀不动",
+              "count": 1
+            },
+            {
+              "from": "北侧靠西端放一把空的无靠背木凳。",
+              "to": "北侧靠西端放一把空的无靠背木凳，凳中心在西桌边以东32厘米、北桌边以北20厘米处。",
+              "count": 1
+            },
+            {
+              "from": "工具架以细长工具为主，不出现圆形铜盘。",
+              "to": "工具架以细长工具为主，不出现圆形铜盘。以木桌西南角正下方地面为原点、向东为x正、向北为y正，单位米；桌面范围x=0至1.40、y=0至0.60。西侧通路中预留信使停步区(-0.25,0.40)，西北角近旁的空交接区位于(0.12,0.42)，零件盘中心位于(0.50,0.46)，台面高度0.75米；这张空场图不添加人物或罗盘。",
+              "count": 1
+            },
+            {
+              "from": "1.5–2.5：她停步并前送右手至交接点",
+              "to": "1.5–2.5：她在 A=(-0.25,0.40) 停步并前送右手至 Q=(0.12,0.42,0.83)",
+              "count": 1
+            },
+            {
+              "from": "右侧老人坐姿、台面与桌灯同框",
+              "to": "右侧老人坐在 B=(0.32,0.80) 的桌北边靠西端位置、台面与桌灯同框",
+              "count": 1
+            },
+            {
+              "from": "从南侧约 1.42 米高向交接点俯拍约 30°",
+              "to": "从 C2=(0.12,-0.60,1.42) 向 Q 俯拍约 30°",
+              "count": 1
+            },
+            {
+              "from": "0–1：老人右手自桌面抬起",
+              "to": "0–1：老人保持 B 处坐姿，右手从 H=(0.30,0.53,0.77) 自桌面抬起",
+              "count": 1
+            },
+            {
+              "from": "老人单手托罗盘向自己收近约 8 厘米",
+              "to": "老人单手托罗盘从 Q 向自己收近约 8 厘米至 Q2",
+              "count": 1
+            },
+            {
+              "from": "南侧约 1.35 米高，固定；焦点与景深兼顾两张脸",
+              "to": "南侧 (0,-2.80,1.35) 机位，固定；A、B 站座位及 Q2 持物位置承接前镜，焦点与景深兼顾两张脸",
+              "count": 1
+            },
+            {
+              "from": "S01→S02 的匹配：罗盘盘面朝上",
+              "to": "S01→S02 的匹配：A、B 位置不变，罗盘中心在 Q=(0.12,0.42,0.83)，老人右手从 H 起；罗盘盘面朝上",
+              "count": 1
+            },
+            {
+              "from": "S02→S03 的匹配：罗盘已向老人方向收近约 8 厘米",
+              "to": "S02→S03 的匹配：A、B 位置不变，罗盘中心在 Q2≈(0.157,0.491,0.83)，已向老人方向收近约 8 厘米",
+              "count": 1
+            },
+            {
+              "from": "两人处在同一个静止接触瞬间，没有前后动作分格；不见脸，不描绘画外表情。",
+              "to": "两人处在同一个静止接触瞬间，没有前后动作分格；不见脸，不描绘画外表情。桌面仍为1.4米宽、0.6米深、高0.75米；以木桌西南角正下方地面为原点、东为x正、北为y正、上为z正，单位米，信使站位中心为(-0.25,0.40,0)，老人座位中心为(0.32,0.80,0)，罗盘中心为(0.12,0.42,0.83)，老人仍坐在桌北边靠西端并轻微前倾；两人靠同一西北桌角。相机在(0.12,-0.60,1.42)，向罗盘下俯约30度。",
+              "count": 1
+            },
+            {
+              "from": "神情专注，双唇轻合。",
+              "to": "神情专注，双唇轻合。统一以木桌西南角正下方地面为原点，东为x正、北为y正、上为z正，单位米。桌面范围x=0至1.40、y=0至0.60、高0.75。老人座位中心在(0.32,0.80,0)，位于北桌边外20厘米、靠西端；从开场起坐骨留在凳上、双脚着地，躯干轻微前倾。零件盘中心在(0.50,0.46,0.75)，放下螺丝刀的位置在(0.43,0.51,0.75)，都在近身区，交接路径不被工具占用。",
+              "count": 1
+            },
+            {
+              "from": "两小步走到工作台西端，面朝东偏北、朝向老人。",
+              "to": "沿桌外西侧通路从(-0.90,0.40,0)走两小步至(-0.25,0.40,0)，停在工作台西端靠北的位置，面朝东偏北、朝向老人。",
+              "count": 1
+            },
+            {
+              "from": "她站稳在桌西端，将右前臂向画面右侧前送，让罗盘停在台面西北角近旁上方约8厘米",
+              "to": "她站稳在(-0.25,0.40,0)，将右前臂从西桌边上方向东稍偏北送出，让罗盘停在台面西北角近旁的(0.12,0.42,0.83)，即距西桌边12厘米、距北桌边18厘米、离台面约8厘米",
+              "count": 1
+            },
+            {
+              "from": "再让空的右手停在近处桌面。",
+              "to": "再让空的右手停在近身桌面(0.30,0.53,0.77)，与罗盘之间是约22厘米的短路径。",
+              "count": 1
+            },
+            {
+              "from": "摄影机在桌南侧约1.25米高，轻俯，35毫米全画幅等效视角",
+              "to": "摄影机在桌南侧(0.25,-2.60,1.25)，轻俯，35毫米全画幅等效视角",
+              "count": 1
+            },
+            {
+              "from": "空间与初态：女信使站在桌西端、画面左边",
+              "to": "空间与初态：统一以木桌西南角正下方地面为原点，东为x正、北为y正、上为z正，单位米。桌面范围x=0至1.40、y=0至0.60、高0.75。女信使站在(-0.25,0.40,0)，即桌西端靠北的位置、画面左边",
+              "count": 1
+            },
+            {
+              "from": "右侧老修表师坐在桌北边靠西端，灰褐棉衬衫",
+              "to": "右侧老修表师坐在桌北边靠西端，座位中心为(0.32,0.80,0)，坐骨不离凳、双脚着地，躯干沿用前镜的轻微前倾；灰褐棉衬衫",
+              "count": 1
+            },
+            {
+              "from": "老人右手初始空着放在桌面，距罗盘约20厘米",
+              "to": "老人右手初始空着放在近身桌面(0.30,0.53,0.77)，与罗盘之间的三维位移约22厘米",
+              "count": 1
+            },
+            {
+              "from": "罗盘位于台面西北角近旁上方约8厘米，盘面水平朝上",
+              "to": "罗盘中心位于(0.12,0.42,0.83)，即台面西北角近旁、距西边12厘米、距北边18厘米、离台面约8厘米，盘面水平朝上",
+              "count": 1
+            },
+            {
+              "from": "镜头从木工作台南侧约1.42米高向西北角近旁俯拍约30度",
+              "to": "镜头从木工作台南侧(0.12,-0.60,1.42)向交接点(0.12,0.42,0.83)俯拍约30度",
+              "count": 1
+            },
+            {
+              "from": "将其向自己收近约8厘米。右腕平稳",
+              "to": "将其向自身座位方向收近约8厘米，中心到达约(0.157,0.491,0.83)。右腕平稳",
+              "count": 1
+            },
+            {
+              "from": "摄影机始终位于桌南侧约1.35米高",
+              "to": "摄影机始终位于桌南侧(0,-2.80,1.35)",
+              "count": 1
+            },
+            {
+              "from": "她站在工作台西端朝东偏北，重心稳",
+              "to": "她站在工作台西端靠北的位置，双脚间中心(-0.25,0.40,0)，朝东偏北，重心稳",
+              "count": 1
+            },
+            {
+              "from": "他始终坐在桌北边靠西端的木凳上，面朝西南，左手空着放在近身桌面。",
+              "to": "他始终坐在桌北边靠西端的木凳上，面朝西南，左手空着放在近身桌面。统一以木桌西南角正下方地面为原点，东为x正、北为y正、上为z正，单位米。桌面范围x=0至1.40、y=0至0.60、高0.75。座位中心为(0.32,0.80,0)，坐骨不离凳、双脚着地，躯干沿用前镜的轻微前倾；零件盘在(0.50,0.46,0.75)，没有挤进交接路径。",
+              "count": 1
+            },
+            {
+              "from": "位置比交接点向自身收近约8厘米；不再伸手索取",
+              "to": "中心为约(0.157,0.491,0.83)，比原交接点(0.12,0.42,0.83)向自身收近约8厘米；不再伸手索取",
+              "count": 1
+            },
+            {
+              "from": "六视角工作表覆盖三镜的导演、表演、调度、摄影、提示词和连续性，检查范围仅是本文设计与复制稿。",
+              "to": "V2六视角工作表重新覆盖三镜的导演、表演、调度、摄影、提示词和连续性，空间、摄影及相邻连续性按本版重新核对，未改变的情绪与时序说明沿用理由；检查范围仅是本文设计与复制稿。",
+              "count": 1
+            }
+          ]
+        }
+      },
+      "requestType": "feedback_summary"
+    },
+    {
+      "id": "spatial",
+      "mode": "independent_new_task",
+      "request": "使用 $cineweave-director，为原创8秒无声短片写两镜各4秒的完整文字视频提示词，外加一段共用空间说明。修复工作室内有一张东西长2米、南北深0.8米的木桌。成年女修复师坐在桌后，画面左；成年男客人站在桌前，画面右，右手持唯一一个小木盒。客人把盒子交到她手中，她接稳后点头。两人保持坐姿和站位，不增加走动；具体座位、交接点和机位由你设计。固定机位、同侧硬切、中性日光、灰工作服与棕夹克保持连续；无任何音轨、无参考图、不指定模型。不要生成媒体或提问。",
+      "output": "spatial.md",
+      "outputSha256": "81fce12fd358bd2c9cbe9a0c4c82d8de9ee3c7f5cf9b320a61fb268fdfeaed2f",
+      "execution": {
+        "task": "forward-test-spatial",
+        "scope": "Independent creative trial: two complete four-second silent video prompts and one shared spatial description.",
+        "outputFile": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-spatial/output.md",
+        "clarificationCount": 0,
+        "model": null,
+        "targetVideoModel": null,
+        "targetPlatform": null,
+        "referenceImages": [],
+        "mediaGenerated": false,
+        "selfScored": false,
+        "sourceModified": false,
+        "readFiles": [
+          "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md",
+          "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/prompt-detail-standard.md",
+          "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/ensemble-direction-and-review.md",
+          "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/shot-direction.md",
+          "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-timing-and-handles.md",
+          "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/scene.md",
+          "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-performance-direction.md",
+          "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-sound-and-delivery.md"
+        ],
+        "commands": [
+          "Get-Content -Raw -LiteralPath 'D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md'",
+          "Get-Content -Raw -LiteralPath 'skills/cineweave-director/references/optional/prompt-detail-standard.md'",
+          "Get-Content -Raw -LiteralPath 'skills/cineweave-director/references/optional/ensemble-direction-and-review.md'",
+          "Get-Content -Raw -LiteralPath 'skills/cineweave-director/references/routes/shot-direction.md'",
+          "Get-Content -Raw -LiteralPath 'skills/cineweave-director/references/optional/video-timing-and-handles.md'",
+          "Get-Content -Raw -LiteralPath 'skills/cineweave-director/references/optional/ensemble-direction-and-review.md'",
+          "Get-Content -Raw -LiteralPath 'skills/cineweave-director/references/routes/scene.md'",
+          "Get-Content -Raw -LiteralPath 'skills/cineweave-director/references/optional/video-performance-direction.md'",
+          "Get-Content -Raw -LiteralPath 'skills/cineweave-director/references/optional/video-sound-and-delivery.md'"
+        ],
+        "commandWorkingDirectory": "D:/study/projects/cineweave-codex-skills/cineweave-director",
+        "writeOperations": [
+          {
+            "tool": "apply_patch",
+            "operation": "add",
+            "files": [
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-spatial/output.md",
+              "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-spatial/execution.json"
+            ]
+          }
+        ],
+        "readNotes": "The first batched tool response was truncated; ensemble-direction-and-review.md was read again individually. Relevant spatial and filming sections of prompt-detail-standard.md were visible. No tests, memory, development reports, or other agent outputs were read.",
+        "checkerRuns": [],
+        "checkerNote": "No self-scoring or review worksheet was created, as instructed. No supplier capabilities or model parameters were inferred."
+      },
+      "worksheets": {
+        "review.json": {
+          "source": {
+            "type": "prompt",
+            "id": "forward-test-spatial-output",
+            "version": 1
+          },
+          "mode": "full",
+          "shotIds": [
+            "S1",
+            "S2"
+          ],
+          "reviews": [
+            {
+              "role": "direction",
+              "shotId": "S1",
+              "status": "pass",
+              "criterion": "第一镜以可读的递交过程改变道具归属，并在四秒出点给出明确结果。",
+              "observation": "0.4—1.7 秒送盒，1.7—2.3 秒共同承重，2.3—2.9 秒客人松手，3.5—4 秒女方独自持稳。目的、过程与出点在文字中完整对应。此结论只针对规划。",
+              "sourceLocator": "output.md / 镜头 1 / 动作时间段与出点"
+            },
+            {
+              "role": "direction",
+              "shotId": "S2",
+              "status": "pass",
+              "criterion": "第二镜承接交接结果，通过接稳后的点头完成回应，不重演递交。",
+              "observation": "入镜明确木盒已完全属于女方；本镜 0—1.1 秒先看盒再与客人目光接触，1.1—2 秒点头一次，余下时间保留回应结果。两镜时间为 0—4 秒及 4—8 秒。",
+              "sourceLocator": "output.md / 镜头 2 / 入镜状态与本镜时间段"
+            },
+            {
+              "role": "performance",
+              "shotId": "S1",
+              "status": "pass",
+              "criterion": "接触和回应具有先后触发，递出者待接收者承重稳定后才松手。",
+              "observation": "女方看见盒子靠近才抬手；共同支撑阶段后男方才移除拇指并抽手。男方看盒转看女方面部，女方出点仍看盒且尚未点头，双方注意力分别明确。",
+              "sourceLocator": "output.md / 镜头 1 / 0.4—4 秒动作与视线"
+            },
+            {
+              "role": "performance",
+              "shotId": "S2",
+              "status": "pass",
+              "criterion": "点头发生在接稳之后，表情、视线和身体动作不互相冲突。",
+              "observation": "女方以持稳状态入镜，先建立目光接触再以头颈完成一次小幅点头，肩腕与盒子保持稳定；男方接收到点头后才放松下颌，未安排同步点头或对白。",
+              "sourceLocator": "output.md / 镜头 2 / 本镜 0—4 秒表演"
+            },
+            {
+              "role": "staging",
+              "shotId": "S1",
+              "status": "pass",
+              "criterion": "交接点与座位、站位和桌面尺寸属于同一空间，接触不依靠跨越长桌或切换裁切掩盖。",
+              "observation": "桌面 x 范围为 −1 至 1，y 范围为 −0.4 至 0.4；两人都在 x＝−0.55，分别位于 y＝±0.55，盒底交接点为（−0.55，0，0.88）。双方从南北桌沿向中线交接，身体中心至该点的水平距离各约 0.55 米，而非跨越 2 米长边；允许自然略前倾，坐位和脚位不变。女方托北半部、扶西侧，男方托南半部，接触区域已分开。该设计没有给出或声称通用臂长上限。",
+              "sourceLocator": "output.md / 共用空间说明；镜头 1 / 身体位置与接触过程"
+            },
+            {
+              "role": "staging",
+              "shotId": "S2",
+              "status": "pass",
+              "criterion": "第二镜维持人物位置和盒子支撑关系，反应不依赖新增走位或道具转移。",
+              "observation": "女方臀部留在椅面，男方双脚原位；女方左掌托北半盒底、右手扶西侧，男方已离盒，盒底仍为原交接点和高度。点头限定在头颈，场内没有第三人或背景穿行任务。",
+              "sourceLocator": "output.md / 镜头 2 / 入镜状态、点头过程与结束状态"
+            },
+            {
+              "role": "cinematography",
+              "shotId": "S1",
+              "status": "pass",
+              "criterion": "固定机位、画面方向、光源和可见交接内容在文字设计中成立。",
+              "observation": "C1 在（−3，0，1.30），位于 x＝−0.55 人物轴线西侧，由西向东使北侧女方在画面左、南侧男方在右；中景要求保留脸、前臂、手和盒子，足够景深和清空交接区支持观察接触。北墙高窗与浅灰墙反射给出具体光源，不使用运动摄影。",
+              "sourceLocator": "output.md / 共用空间说明 / C1 与光源；镜头 1 / 摄影与构图首段"
+            },
+            {
+              "role": "cinematography",
+              "shotId": "S2",
+              "status": "pass",
+              "criterion": "第二机位保留同侧方向，收紧构图服务点头，同时要求接收后的盒子可见。",
+              "observation": "C2 的 x＝−2.25，仍小于人物轴线 x＝−0.55，位于西南方；该视角维持北侧女方在左、南侧男方在右。提示词保留女方面部、双手和盒子，男方以右前景斜背轮廓入画并明确不得遮住重点；机位、焦点、窗光和白平衡均不变。这里确认的是构图意图，未宣称实际像素或遮挡已验收。",
+              "sourceLocator": "output.md / 共用空间说明 / C2；镜头 2 / 摄影构图与光线段"
+            },
+            {
+              "role": "prompt",
+              "shotId": "S1",
+              "status": "pass",
+              "criterion": "第一镜复制稿包含无图视频所需初态、动作、终态及用户硬锁，不借用模型假设。",
+              "observation": "正文独立写明两名成年人、女左坐男右站、灰工作服和棕夹克、唯一盒子由男方右手初持、木桌尺寸、交接点、四秒动作、固定机位、中性日光和完全无音轨；没有参考图槽位、供应商参数或模型名称。",
+              "sourceLocator": "output.md / 镜头 1 / 全文"
+            },
+            {
+              "role": "prompt",
+              "shotId": "S2",
+              "status": "pass",
+              "criterion": "第二镜复制稿完整编译接稳后点头的要求，外观、地理、声音与时序明确。",
+              "observation": "正文重述两人外观与衣服、桌面尺寸和相对位置、盒子唯一性及精确入态，分阶段写抬眼和一次点头，说明四秒固定摄影与完全无音轨。未以同上替代必要信息，也没有新增模型或音频能力声明。",
+              "sourceLocator": "output.md / 镜头 2 / 全文"
+            },
+            {
+              "role": "continuity",
+              "shotId": "S1",
+              "status": "pass",
+              "criterion": "第一镜出点保存下一镜所需的道具归属、接触、位置和视线状态。",
+              "observation": "3.5—4 秒及出点段明确女方双手持盒、盒底距地 0.88 米、男方已离盒且右手在南桌沿外、女方尚看盒未点头。第二镜以相同状态开始，未把松手移到切点后。",
+              "sourceLocator": "output.md / 镜头 1 / 3.5—4 秒及出点；镜头 2 / 入镜状态"
+            },
+            {
+              "role": "continuity",
+              "shotId": "S2",
+              "status": "pass",
+              "criterion": "第 4 秒同侧硬切保持时间、轴线、身份服装、道具和光线连续。",
+              "observation": "两机位都在人物轴线西侧，第二镜明确无时间跳跃，不重复递交；木盒大小、朝向、高度与支撑手继承第一镜，女方低髻灰服与男方短发棕夹克重复锁定，北窗日光、背景与完全无声保持一致。",
+              "sourceLocator": "output.md / 共用空间说明；镜头 1 / 出点；镜头 2 / 摄影、外观及入镜状态"
+            }
+          ]
+        },
+        "review-result.json": {
+          "valid": true,
+          "scope": "plan_only",
+          "coverageComplete": true,
+          "reviewComplete": true,
+          "expectedRows": 12,
+          "missing": [],
+          "openItems": [],
+          "prompt": null,
+          "errors": [],
+          "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。",
+          "localization": {
+            "locale": "zh-CN",
+            "summary": "规划评审已完成；实际媒体仍未核验。"
+          }
+        },
+        "followup-execution.json": {
+          "task": "forward-test-spatial-followup-review",
+          "source": {
+            "type": "prompt",
+            "id": "forward-test-spatial-output",
+            "version": 1,
+            "file": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-spatial/output.md"
+          },
+          "scope": "plan_only",
+          "clarificationCount": 0,
+          "model": null,
+          "targetVideoModel": null,
+          "originalArtifactsModified": false,
+          "originalArtifacts": [
+            "output.md",
+            "execution.json"
+          ],
+          "readFiles": [
+            "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/forward-test-spatial/output.md"
+          ],
+          "inheritedGuidance": "Used the skill and referenced review instructions already read during the original trial. No tests, memory, development reports, or other agent outputs were read.",
+          "nodeVersion": "v22.15.0",
+          "commands": [
+            "Get-Content -Raw -LiteralPath '.build/forward-test-spatial/output.md'",
+            "node --version",
+            "$reviewResult = & node 'skills/cineweave-director/scripts/check-shot-review.mjs' '.build/forward-test-spatial/review.json'\n$reviewExitCode = $LASTEXITCODE\n$reviewResult | Set-Content -LiteralPath '.build/forward-test-spatial/review-result.json' -Encoding utf8\n[pscustomobject]@{ exitCode = $reviewExitCode; stdout = ($reviewResult -join [Environment]::NewLine) } | ConvertTo-Json -Depth 12"
+          ],
+          "commandWorkingDirectory": "D:/study/projects/cineweave-codex-skills/cineweave-director",
+          "checker": {
+            "script": "skills/cineweave-director/scripts/check-shot-review.mjs",
+            "input": ".build/forward-test-spatial/review.json",
+            "stdoutFile": ".build/forward-test-spatial/review-result.json",
+            "runs": 1,
+            "exitCode": 0,
+            "valid": true,
+            "coverageComplete": true,
+            "reviewComplete": true,
+            "expectedRows": 12,
+            "missing": [],
+            "openItems": [],
+            "errors": [],
+            "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。"
+          },
+          "review": {
+            "mode": "full",
+            "shotIds": [
+              "S1",
+              "S2"
+            ],
+            "roles": [
+              "direction",
+              "performance",
+              "staging",
+              "cinematography",
+              "prompt",
+              "continuity"
+            ],
+            "rows": 12,
+            "passRows": 12,
+            "reviseRows": 0,
+            "unknownRows": 0,
+            "notApplicableRows": 0,
+            "statusChangesAfterChecker": 0,
+            "mediaClaims": false,
+            "notes": "Each row was assessed against the author's original prompt. No statuses or source text were changed to obtain checker completion. Prompt text counting was omitted because it is optional and no length limit was requested."
+          },
+          "writeOperations": [
+            {
+              "tool": "apply_patch",
+              "operation": "add",
+              "file": ".build/forward-test-spatial/review.json"
+            },
+            {
+              "tool": "exec_command/Set-Content",
+              "operation": "write-checker-stdout",
+              "file": ".build/forward-test-spatial/review-result.json"
+            },
+            {
+              "tool": "apply_patch",
+              "operation": "add",
+              "file": ".build/forward-test-spatial/followup-execution.json"
+            }
+          ],
+          "mediaGenerated": false,
+          "sourceCodeModified": false
+        }
+      },
+      "requestType": "task_text"
+    }
+  ],
+  "finalInstructionHashes": {
+    "skills/cineweave-director/SKILL.md": "bb289dee9b436f8cac8edbdcfe283b8ad3bbc9221606ef6257d4153822883042",
+    "skills/cineweave-director/references/routes/scene.md": "ef10535a31d8aeacf7465957ad995c47b1389f5b3b5fe9096e77682f151ea6e4",
+    "skills/cineweave-director/references/optional/prompt-detail-standard.md": "0de944dffd30d69bc05a52ef4bceaf0a90dce40564e2f1a288c68e7dd1e88e59",
+    "skills/cineweave-director/references/optional/ensemble-direction-and-review.md": "a3f41e181a4382ed4a23835c696797837fac9cfc939fc3f86203443cab680bae"
+  },
+  "entrypointClarification": "After the spatial first run omitted the default worksheet check, the entrypoint was clarified and the same unchanged output received a follow-up worksheet check. This was guided process verification, not a fresh independent success.",
+  "parentVerification": {
+    "outputHashesMatched": 4,
+    "unchangedSections": [
+      "**I01｜",
+      "**I02｜",
+      "**I04｜",
+      "## 声音、剪辑与外部制作交接"
+    ],
+    "deliveryUnchanged": true,
+    "reviewV2": {
+      "valid": true,
+      "scope": "plan_only",
+      "coverageComplete": true,
+      "reviewComplete": true,
+      "expectedRows": 18,
+      "missing": [],
+      "openItems": [],
+      "prompt": null,
+      "errors": [],
+      "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。"
+    },
+    "reviewSpatial": {
+      "valid": true,
+      "scope": "plan_only",
+      "coverageComplete": true,
+      "reviewComplete": true,
+      "expectedRows": 12,
+      "missing": [],
+      "openItems": [],
+      "prompt": null,
+      "errors": [],
+      "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。"
+    },
+    "delivery": {
+      "valid": true,
+      "errors": [],
+      "duration": {
+        "numerator": "288",
+        "denominator": "24"
+      },
+      "endTimecode": "00:00:12,000",
+      "subtitles": [],
+      "srt": "",
+      "scope": "Planning arithmetic only: cut-only shot coverage and one subtitle track. Text counts do not establish speech duration, readability, synchronization, rights, or media quality."
+    },
+    "courierToContactHorizontal": 0.37054014627297804,
+    "seatToContactHorizontal": 0.4294182110716778,
+    "cameraAxisCrossProducts": [
+      -1.9100000000000001,
+      -0.7180000000000001,
+      -1.9240000000000002
+    ],
+    "scope": "Manuscript review and declared geometry/timing only; not real media or anatomical measurement."
+  }
+}

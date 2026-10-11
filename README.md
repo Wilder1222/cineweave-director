@@ -8,9 +8,7 @@
 
 要完整交付，可直接提出“开发一部短片并生成全套提示词”。[短片创作流程](skills/cineweave-director/references/optional/short-film-creation.md)统一叙事、视觉开发、导演摄影、配音和剪辑；[完整样例《留一盏灯》](skills/cineweave-director/references/optional/short-film-example.md)展示每项可复制稿，不用自行补齐被省略的镜头。
 
-支持文字驱动单镜／多镜视频、单首帧、首尾帧、全能参考，以及九宫格或其他分镜参考板的视频规划。先按任务选择输入条件和镜头组织，再交付对应稿件；不要求每条路径先生成首尾帧。实际模型和界面支持分别核验。多镜头任务按依赖安排试片、候选筛选、局部修复和剪辑验收；普通创作直接交付中文稿，JSON 契约与节点标签按需要启用。
-
-完整影像方案按真实拍摄逻辑统一空间与轴线、构图、摄影、灯光、收音、场记和剪辑；输出场次基线、逐镜卡、图像／视频／声音稿及验收点。详细方法见[拍摄系统与部门协同](skills/cineweave-director/references/optional/prompt-detail-standard.md#拍摄系统与部门协同)。
+支持文字单镜／多镜、单首帧、首尾帧、全能参考及分镜板视频规划；按任务选择路径，不要求所有任务先制首尾帧。完整方案统一空间、摄影、灯光、声音与剪辑，模型和界面支持另行核验。
 
 ```text
 使用 $cineweave-director。为原创纸灯节写一条海报提示词，
@@ -32,9 +30,7 @@
 设计她把灯笼递向镜头的图生视频提示词，包含表情、运镜和剪辑余量。
 ```
 
-默认充分展开人物表情、动作、妆发服饰、肌肤与仪态，场景类型、结构、材质和色调，以及镜头与视频动作时序。采用专业术语并说明具体可见结果；完整清单和连贯示例见[提示词细节规范](skills/cineweave-director/references/optional/prompt-detail-standard.md)。精简的是重复内容，创作稿不以短为目标。
-
-默认简体中文。准确台词、字幕、标题和专有名称按用户原文保留；只有明确要求时提供其他语言稿。普通提示词直接给可复制正文，需要节点化交付时才添加适用的中文标签。
+默认简体中文，指定台词、字幕、标题和专有名称保留原文。提示词充分展开与画面有关的人物、场景、摄影及动作细节，使用专业术语并落实到可见结果；完整规范见[提示词细节规范](skills/cineweave-director/references/optional/prompt-detail-standard.md)。JSON 契约与节点标签按需使用。
 
 ## 能做什么
 
@@ -46,18 +42,16 @@
 | 分镜与图生视频 | 逐镜初态、动作、终态、运镜、表演、声音及剪辑余量 |
 | 参考与修复 | 参考职责分工、可见问题、保留项、最小修改及复查点 |
 
-创作时保留同一人物、服装、空间和视觉基线。每句提示词应有可见作用，避免堆叠空泛修饰；首帧画面与视频过程分开，不用一张静帧证明整段动作完成。完整演示见[三镜头创作示例](skills/cineweave-director/references/optional/creative-workflow-evaluation.md#三镜头衔接示例)。
-
 这是创作与规划 Skill，不调用生成平台，也不把计划当作媒体结果。模型参数、参考槽位和时长档位按实际界面核验；没有素材时可以提供方案，不能虚构观察。
 
 ## 按需使用的指南
 
 - [Skill 入口](skills/cineweave-director/SKILL.md)：交付规模、创作顺序与领域路由。
 - [镜头工作台](skills/cineweave-director/references/optional/shot-design-workbench.md)：注意力、动作瞬间与关键帧准备度。
-- [节点标签](skills/cineweave-director/references/optional/tagged-video-nodes.md)：各类型只填写适用内容。
-- [表演与运镜](skills/cineweave-director/references/optional/video-performance-direction.md)：台词、情绪、表情、动作与特效。
 - [群像调度与逐镜评审](skills/cineweave-director/references/optional/ensemble-direction-and-review.md)：演员触发、配角任务、六视角检查与单变量修订。
 - [平台适配](skills/cineweave-director/references/optional/video-platform-adaptation.md)与[剪辑余量](skills/cineweave-director/references/optional/video-timing-and-handles.md)：参考、时长与人工交接。
+- [画质与引擎流程](skills/cineweave-director/references/optional/rendering-quality-workflows.md)：画风规则、Unreal／Blender 预演与渲染、采样、色管和交付验收。
+- [AIGC 控制与评审](skills/cineweave-director/references/optional/aigc-control-and-evaluation.md)：结构／身份／风格参考分工、局部编辑保留及对照试片。
 - [连续性](skills/cineweave-director/references/core/visual-bible-and-continuity.md)与[诊断](skills/cineweave-director/references/optional/generation-diagnostics.md)：保留已通过部分，修复明确问题。
 
 ## 使用当前源码
@@ -68,7 +62,7 @@
 
 ## 可选检查与结构化交付
 
-只读检查器需要 Node.js 22+，普通创作不需要运行脚本：
+只读检查器需要 Node.js 22+；完整叙事镜头组按 Skill 要求执行逐镜检查，其他任务按需使用：
 
 ```powershell
 node skills/cineweave-director/scripts/check-delivery.mjs --text "值得专程回来"
@@ -89,8 +83,15 @@ npm run contracts:index:check
 npm run validate
 npm run build
 npm run validate:bundle
+npm run test:bundle
 ```
 
-修改 schema 或规范示例后先执行 `npm run contracts:index` 重建字节索引。Skill 知识按[加载清单](skills/cineweave-director/reference-lifecycle.json)分发，开发评测留在 `tests/evaluations/`。结构校验、中文审阅和真实创作效果分别验收。
+修改 schema 或规范示例后先执行 `npm run contracts:index`。校验同时覆盖本地章节链接和隔离包内工具。开发评测留在 `tests/evaluations/`，不随 Skill 分发。
 
-实现取舍与来源见[贡献指南](CONTRIBUTING.md#创作-skill-设计依据)；外部导演 Skill 的拆解与独立融入记录见[六部门评审报告](tests/evaluations/2026-09-16-leos-review.md)。安全说明见[SECURITY.md](SECURITY.md)，许可证为 [MIT](LICENSE)，保留原始法律文本。
+本轮项目审阅、最佳实践取舍、实施计划和实际验证见[2026-09-23 改进记录](tests/evaluations/project-review-2026-09-23.md)。
+
+电影摄影、画风画质、引擎与真人表演的新增来源、实施落点和文字试跑见[2026-10-10 专业制作调研](tests/evaluations/professional-craft-research-2026-10-10.md)。实际媒体质量须依据生成或拍摄结果另行验收。
+
+[专业导演优化计划](tests/evaluations/director-methods-optimization-plan-2026-10-10.md)的分阶段实施见[2026-10-11 执行记录](tests/evaluations/director-optimization-2026-10-11.md)。时间契约检查区分本地有效与精确上游覆盖；完整覆盖缺证据时查看 `unverified`。导演方法与复制稿的关系可参照[同场覆盖对照](skills/cineweave-director/references/optional/shot-design-workbench.md#同一场次的覆盖对照)。
+
+维护约定与来源见[贡献指南](CONTRIBUTING.md)，安全说明见 [SECURITY.md](SECURITY.md)，许可证为 [MIT](LICENSE)。
