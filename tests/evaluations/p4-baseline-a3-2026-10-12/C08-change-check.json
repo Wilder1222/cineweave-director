@@ -1,0 +1,33 @@
+{
+  "scope": "text_only",
+  "cameraBefore": "桌南侧偏西略俯",
+  "cameraAfter": "桌南侧偏东略俯",
+  "verification": [
+    {
+      "id": "REV-G",
+      "fromRevision": 1,
+      "toRevision": 2,
+      "s01Unchanged": true,
+      "onlyAuthorizedCameraChange": true,
+      "sha256Utf8": "e84cdb84d3b5d4e77d4ef2a34e6309422fb40e2fd701da0f73f1edac201addaf"
+    },
+    {
+      "id": "REV-M",
+      "fromRevision": 1,
+      "toRevision": 2,
+      "s01Unchanged": true,
+      "onlyAuthorizedCameraChange": true,
+      "sha256Utf8": "85378cca4daee4f735de17b6f3e49a6c3fa286d14474ff7a074d646be4f1d773"
+    },
+    {
+      "id": "REV-P",
+      "fromRevision": 1,
+      "toRevision": 2,
+      "s01Unchanged": true,
+      "onlyAuthorizedCameraChange": true,
+      "sha256Utf8": "31af63156c4a5099bef90af945a8620ddd15011e8b731f207afb869914c0a9d9"
+    }
+  ],
+  "mediaVerified": false,
+  "approved": false
+}

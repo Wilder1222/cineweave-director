@@ -1,0 +1,194 @@
+"""Bounded local skill discovery only; never starts a thread or calls a model.
+
+All process state is isolated below D:/Temp. JSON output only contains copied
+CineWeave skills and their associated parser errors, never a full skill catalog.
+Repeat --skill-dir for a future four-leaf layout; repeat --extra-scan-root for
+additional local discovery roots (e.g. a separately prepared old-cache fixture).
+"""
+from __future__ import annotations
+
+import argparse
+import hashlib
+import json
+import os
+from pathlib import Path
+import queue
+import re
+import shutil
+import subprocess
+import tempfile
+import threading
+import time
+
+
+TEMP_PARENT = Path(r"D:\Temp\cineweave-host-discovery-20261012")
+DEFAULT_REPO = Path(r"D:\study\projects\cineweave-codex-skills\cineweave-director")
+DEFAULT_CODEX = Path(r"C:\Users\ww\AppData\Roaming\npm\codex.cmd")
+
+
+def under(path: Path, boundary: Path) -> bool:
+    try:
+        path.resolve().relative_to(boundary.resolve())
+        return True
+    except ValueError:
+        return False
+
+
+def tree_digest(path: Path) -> tuple[int, str]:
+    rows = []
+    for leaf in sorted(path.rglob("*")):
+        if leaf.is_symlink() or leaf.is_junction() or not under(leaf, path):
+            raise ValueError("Links or paths escaping the source fixture are not allowed")
+        if leaf.is_file():
+            rows.append(leaf.relative_to(path).as_posix() + "\0" + hashlib.sha256(leaf.read_bytes()).hexdigest())
+    return len(rows), hashlib.sha256("\n".join(rows).encode()).hexdigest()
+
+
+def skill_name(path: Path) -> str:
+    body = (path / "SKILL.md").read_text(encoding="utf-8-sig")
+    match = re.search(r"(?m)^name:\s*[\"']?([^\r\n\"']+)[\"']?\s*$", body.split("---", 2)[1])
+    if not match or not match.group(1).strip().startswith("cineweave-"):
+        raise ValueError("Fixture must have a CineWeave name in SKILL.md frontmatter")
+    return match.group(1).strip()
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--repo", type=Path, default=DEFAULT_REPO)
+    parser.add_argument("--codex", type=Path, default=DEFAULT_CODEX)
+    parser.add_argument("--skill-dir", type=Path, action="append")
+    parser.add_argument("--extra-scan-root", type=Path, action="append", default=[])
+    parser.add_argument("--timeout", type=float, default=25.0)
+    args = parser.parse_args()
+    repo = args.repo.resolve(strict=True)
+    codex = args.codex.resolve(strict=True)
+    sources = args.skill_dir or [repo / "skills" / "cineweave-director", repo / "skills" / "cineweave-platform"]
+    sources = [p.resolve(strict=True) for p in sources]
+    # Source and optional roots are read only; fixture copies are the only writes.
+    if not all(under(p, repo) for p in sources):
+        raise ValueError("Every source skill must be inside the explicitly supplied repository")
+    for root in args.extra_scan_root:
+        if not under(root, TEMP_PARENT):
+            raise ValueError("Extra scan roots must be fixtures under the dedicated temp boundary")
+    TEMP_PARENT.mkdir(parents=True, exist_ok=True)
+    run = Path(tempfile.mkdtemp(prefix="run-", dir=TEMP_PARENT)).resolve()
+    if not under(run, TEMP_PARENT):
+        raise ValueError("Resolved output escaped the dedicated temp boundary")
+    workspace = run / "workspace"
+    skill_root = workspace / ".agents" / "skills"
+    skill_root.mkdir(parents=True)
+    task_home = run / "codex-home"
+    task_home.mkdir()
+    copied = []
+    expected = set()
+    for src in sources:
+        name = skill_name(src)
+        if name in expected:
+            raise ValueError("Duplicate source skill names")
+        expected.add(name)
+        destination = skill_root / src.name
+        source_count, source_digest = tree_digest(src)
+        shutil.copytree(src, destination)
+        copy_count, copy_digest = tree_digest(destination)
+        if (source_count, source_digest) != (copy_count, copy_digest):
+            raise ValueError("Fixture copy is not byte complete")
+        copied.append({"name": name, "path": str(destination / "SKILL.md"), "fileCount": copy_count, "treeSha256": copy_digest, "byteComplete": True})
+    task_env = dict(os.environ)
+    task_env["CODEX_HOME"] = str(task_home)
+    task_env["OTEL_SDK_DISABLED"] = "true"
+    for credential_key in ("OPENAI_API_KEY", "CODEX_API_KEY", "OPENAI_ACCESS_TOKEN", "CHATGPT_TOKEN"):
+        task_env.pop(credential_key, None)
+    # No inherited authentication is read, copied, or required. There is no model
+    # or account RPC, and only the two read-only requests below are allowed.
+    packets: queue.Queue = queue.Queue()
+    stderr_lines = [0]
+    proc = subprocess.Popen([str(codex), "app-server"], cwd=workspace,
+                            env=task_env, shell=False, stdin=subprocess.PIPE,
+                            stdout=subprocess.PIPE, stderr=subprocess.PIPE,
+                            text=True, encoding="utf-8", errors="replace")
+
+    def read_stdout():
+        for raw in proc.stdout:
+            try:
+                packets.put(json.loads(raw))
+            except json.JSONDecodeError:
+                packets.put({"localTransportError": "non-JSON stdout line (content omitted)"})
+        packets.put({"localTransportError": "stdout closed"})
+
+    def drain_stderr():
+        for _ in proc.stderr:
+            stderr_lines[0] += 1  # Deliberately never retain stderr content.
+
+    threading.Thread(target=read_stdout, daemon=True).start()
+    threading.Thread(target=drain_stderr, daemon=True).start()
+    allowed_methods = {"initialize", "initialized", "skills/list"}
+    sent_methods = []
+
+    def send(method, params=None, request_id=None):
+        if method not in allowed_methods:
+            raise ValueError("RPC method outside read-only discovery scope")
+        packet = {"method": method}
+        if params is not None:
+            packet["params"] = params
+        if request_id is not None:
+            packet["id"] = request_id
+        proc.stdin.write(json.dumps(packet, ensure_ascii=False) + "\n")
+        proc.stdin.flush()
+        sent_methods.append(method)
+
+    def response(request_id):
+        deadline = time.monotonic() + args.timeout
+        while time.monotonic() < deadline:
+            packet = packets.get(timeout=max(0.01, deadline - time.monotonic()))
+            if "localTransportError" in packet:
+                raise RuntimeError(packet["localTransportError"])
+            if packet.get("id") == request_id:
+                if "error" in packet:
+                    raise RuntimeError("RPC error code " + str(packet["error"].get("code", "unknown")))
+                return packet["result"]
+        raise TimeoutError("RPC response timed out")
+
+    output = {"runPath": str(run), "cwd": str(workspace), "copied": copied,
+              "isolatedCodexHome": str(task_home), "sentMethods": sent_methods,
+              "skills": [], "parseErrors": [], "status": "failed"}
+    try:
+        version = subprocess.run([str(codex), "--version"], env=task_env,
+                                 cwd=workspace, shell=False, capture_output=True,
+                                 text=True, timeout=10)
+        output["cliVersion"] = version.stdout.strip() if re.fullmatch(r"codex-cli\s+[\w.\-+]+\s*", version.stdout) else "not retained"
+        send("initialize", {"clientInfo": {"name": "cineweave_discovery_check", "version": "0.1.0"}, "capabilities": {"experimentalApi": False}}, 1)
+        response(1)  # Ignore initialize metadata; it is not written to disk.
+        send("initialized")
+        roots = [str(workspace)] + [str(p.resolve(strict=True)) for p in args.extra_scan_root]
+        send("skills/list", {"cwds": roots, "forceReload": True}, 2)
+        listing = response(2)
+        for entry in listing.get("data", []):
+            for skill in entry.get("skills", []):
+                skill_path = Path(skill.get("path", ""))
+                if skill.get("name") in expected and under(skill_path, TEMP_PARENT):
+                    output["skills"].append({"cwd": entry.get("cwd"), **{k: skill.get(k) for k in ("name", "path", "enabled", "scope")}})
+            for error in entry.get("errors", []):
+                error_path = Path(error.get("path", ""))
+                if under(error_path, TEMP_PARENT):
+                    output["parseErrors"].append({"cwd": entry.get("cwd"), "path": str(error_path), "message": error.get("message")})
+        actual = {(s["name"], str(Path(s["path"]).resolve())) for s in output["skills"] if s["cwd"] == str(workspace) and s["enabled"] and s["scope"] == "repo"}
+        wanted = {(c["name"], str(Path(c["path"]).resolve())) for c in copied}
+        output["status"] = "passed" if wanted <= actual and not output["parseErrors"] else "failed"
+        output["expectedCount"] = len(wanted)
+        output["verifiedExpectedCount"] = len(wanted & actual)
+    except (Exception, ) as exc:
+        output["failure"] = type(exc).__name__ + ": " + str(exc)
+    finally:
+        try:
+            proc.stdin.close()
+            proc.wait(timeout=4)
+        except (BrokenPipeError, subprocess.TimeoutExpired):
+            subprocess.run(["taskkill", "/PID", str(proc.pid), "/T", "/F"], capture_output=True, timeout=10)
+        output["stderrLineCountOmitted"] = stderr_lines[0]
+        (run / "filtered-result.json").write_text(json.dumps(output, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(json.dumps(output, ensure_ascii=False, indent=2))
+    return 0 if output["status"] == "passed" else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

@@ -1,0 +1,15 @@
+{
+  "configuration": "B current four skills; one agent loads on demand",
+  "inputPath": "D:/Temp/cineweave-split-p4-all-raw-inputs-20261012.json",
+  "actualModel": null,
+  "tokens": null,
+  "reasoning": null,
+  "caseLatency": null,
+  "independence": "Independent batch fork; each case facts treated independently, while cases execute in the same agent context and can retain skill instructions. No per-case fresh-context isolation or performance claim.",
+  "sourceFreeze": "Parent reports product source frozen.",
+  "firstVersionsPreserved": true,
+  "inputSha256": "b8a0299ac405b83131145424254721ba4c9a3391885d1b5513082679aef450ee",
+  "casesCompleted": 32,
+  "providerCalls": 0,
+  "mediaGenerated": false
+}

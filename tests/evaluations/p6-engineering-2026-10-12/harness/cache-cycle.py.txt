@@ -1,0 +1,499 @@
+"""Verify local plugin 3.1.0 -> 3.2.0 -> 3.1.0 in a fresh temporary home.
+
+The only copied source entries are .codex-plugin/plugin.json, LICENSE, skills/,
+and explicitly selected assets/ paths. No user profile is installed or changed.
+This harness never requests a thread, model response, or remote marketplace.
+"""
+
+import argparse
+import hashlib
+import json
+import os
+import pathlib
+import queue
+import re
+import shutil
+import stat
+import subprocess
+import tempfile
+import threading
+import time
+
+
+TEMP_ANCHOR = pathlib.Path("D:/Temp")
+OUTPUT_ROOT = TEMP_ANCHOR / "cineweave-cache-upgrade-20261012"
+PLUGIN_NAME = "cineweave-director"
+MARKETPLACE_ID = "cw-cache-isolation-check"
+OLD_VERSION = "3.1.0"
+NEW_VERSION = "3.2.0"
+FORBIDDEN_DIRS = {".git", "config", "auth", "private"}
+CREDENTIAL_NAME = re.compile(
+    r"TOKEN|SECRET|PASSWORD|CREDENTIAL|API[_-]?KEY|ACCESS[_-]?KEY|PRIVATE[_-]?KEY",
+    re.IGNORECASE,
+)
+
+
+def no_links(path):
+    """Reject linked paths before resolve() can hide a junction or symlink."""
+    path = pathlib.Path(path)
+    if not path.is_absolute():
+        raise ValueError("absolute path required: " + str(path))
+    for candidate in reversed([path, *path.parents]):
+        if not candidate.exists() and not candidate.is_symlink():
+            continue
+        info = candidate.lstat()
+        attributes = getattr(info, "st_file_attributes", 0)
+        if candidate.is_symlink() or attributes & stat.FILE_ATTRIBUTE_REPARSE_POINT:
+            raise ValueError("symlink/junction/reparse point rejected: " + str(candidate))
+    return path
+
+
+def absolute_source(value):
+    return no_links(pathlib.Path(value)).resolve(strict=True)
+
+
+def output_target(path):
+    """Every harness write and process-owned directory stays in this fixed root."""
+    path = no_links(pathlib.Path(path))
+    canonical = path.resolve(strict=False)
+    boundary = no_links(OUTPUT_ROOT).resolve(strict=False)
+    anchor = no_links(TEMP_ANCHOR).resolve(strict=False)
+    if boundary == anchor or not boundary.is_relative_to(anchor):
+        raise ValueError("output boundary is not a dedicated Temp child")
+    if not canonical.is_relative_to(boundary):
+        raise ValueError("output target escaped dedicated Temp root: " + str(path))
+    return canonical
+
+
+def mkdir(path):
+    path = output_target(path)
+    path.mkdir(parents=True, exist_ok=True)
+    no_links(path)
+    return path
+
+
+def write_json(path, value):
+    path = output_target(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf8")
+
+
+def walk_public(path):
+    """Walk only a previously allowed public path; never enter forbidden dirs."""
+    no_links(path)
+    if path.is_file():
+        yield path
+        return
+    if not path.is_dir():
+        raise ValueError("public entry is not a file/directory: " + str(path))
+    for child in sorted(path.iterdir(), key=lambda item: item.name.casefold()):
+        no_links(child)
+        if child.is_dir() and child.name.casefold() in FORBIDDEN_DIRS:
+            raise ValueError("forbidden directory in public copy: " + str(child))
+        if child.is_dir():
+            yield from walk_public(child)
+        elif child.is_file():
+            yield child
+        else:
+            raise ValueError("non-regular public file rejected: " + str(child))
+
+
+def asset_relative(value):
+    relative = pathlib.PurePosixPath(value.replace("\\", "/").removeprefix("./"))
+    if relative.is_absolute() or ".." in relative.parts or relative.parts[:1] != ("assets",):
+        raise ValueError("asset must be an explicit assets/ relative path: " + value)
+    if any(part.casefold() in FORBIDDEN_DIRS for part in relative.parts):
+        raise ValueError("forbidden asset path: " + value)
+    return relative.as_posix()
+
+
+def manifest_assets(value):
+    if isinstance(value, dict):
+        for child in value.values():
+            yield from manifest_assets(child)
+    elif isinstance(value, list):
+        for child in value:
+            yield from manifest_assets(child)
+    elif isinstance(value, str):
+        normalized = value.replace("\\", "/").removeprefix("./")
+        if normalized.startswith("assets/"):
+            yield asset_relative(normalized)
+
+
+def public_package(source, requested_assets):
+    manifest_path = no_links(source / ".codex-plugin" / "plugin.json")
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8-sig"))
+    if manifest.get("name") != PLUGIN_NAME or manifest.get("skills") not in ("./skills/", "./skills", "skills/", "skills"):
+        raise ValueError("unexpected plugin name or non-public skills location")
+    if any(manifest.get(key) for key in ("mcpServers", "mcp_servers", "hooks", "commands")):
+        raise ValueError("only a skills-only plugin can be used for this no-provider harness")
+    selected = [".codex-plugin/plugin.json", "LICENSE", "skills"]
+    selected += sorted(set(asset_relative(item) for item in requested_assets) | set(manifest_assets(manifest)))
+    files = {}
+    directories = set()
+    for relative in selected:
+        allowed = no_links(source / relative)
+        if not allowed.exists():
+            raise ValueError("missing required public entry: " + str(allowed))
+        for file in walk_public(allowed):
+            rel = file.relative_to(source).as_posix()
+            files[rel] = file
+            directories.update(parent.as_posix() for parent in pathlib.PurePosixPath(rel).parents if str(parent) != ".")
+    skill_root = no_links(source / "skills")
+    names = []
+    for entry in sorted(skill_root.iterdir(), key=lambda item: item.name):
+        no_links(entry)
+        if entry.is_dir():
+            if not no_links(entry / "SKILL.md").is_file():
+                raise ValueError("skill directory has no SKILL.md: " + str(entry))
+            names.append(entry.name)
+    if not names:
+        raise ValueError("plugin has no public skills")
+    return {"source": source, "manifest": manifest, "selected": selected,
+            "files": files, "directories": sorted(directories), "skills": names}
+
+
+def public_digest(package):
+    refreshed = public_package(package["source"], [item for item in package["selected"] if item.startswith("assets/")])
+    rows = ["D\0" + name for name in refreshed["directories"]]
+    for name, file in sorted(refreshed["files"].items()):
+        rows.append("F\0" + name + "\0" + hashlib.sha256(file.read_bytes()).hexdigest())
+    return {"scope": "permitted-public-entries", "selectedEntries": refreshed["selected"],
+            "files": len(refreshed["files"]), "sha256": hashlib.sha256("\n".join(rows).encode("utf8")).hexdigest()}
+
+
+def tree_digest(root):
+    root = output_target(root)
+    rows = []
+    files = list(walk_public(root))
+    for file in sorted(files):
+        relative = file.relative_to(root).as_posix()
+        rows.append(relative + "\0" + hashlib.sha256(file.read_bytes()).hexdigest())
+    return {"scope": "isolated-installed-cache-tree", "files": len(files),
+            "sha256": hashlib.sha256("\n".join(rows).encode("utf8")).hexdigest()}
+
+
+def copy_public(package, target):
+    target = mkdir(target)
+    for relative in package["directories"]:
+        mkdir(target / relative)
+    for relative, source in sorted(package["files"].items()):
+        destination = output_target(target / relative)
+        destination.parent.mkdir(parents=True, exist_ok=True)
+        no_links(source)
+        shutil.copyfile(source, destination)
+    copied = public_package(target, [item for item in package["selected"] if item.startswith("assets/")])
+    if public_digest(package) != public_digest(copied):
+        raise RuntimeError("public copy byte comparison failed")
+    return copied
+
+
+def child_environment(run, home):
+    env = {}
+    removed = []
+    for key, value in os.environ.items():
+        upper = key.upper()
+        if (CREDENTIAL_NAME.search(key) or upper.endswith("_PROXY") or upper in {"ALL_PROXY", "HTTP_PROXY", "HTTPS_PROXY"}
+                or upper.startswith(("CODEX_", "OPENAI_", "CHATGPT_", "ANTHROPIC_", "AZURE_", "AWS_",
+                                     "GIT_", "GH_", "GITHUB_", "HF_", "HUGGING_FACE_", "GOOGLE_", "OTEL_"))):
+            removed.append(key)
+        else:
+            env[key] = value
+    profile = mkdir(run / "child-profile")
+    env.update({"CODEX_HOME": str(home), "HOME": str(profile), "USERPROFILE": str(profile),
+                "APPDATA": str(mkdir(profile / "appdata")), "LOCALAPPDATA": str(mkdir(profile / "localappdata")),
+                "XDG_CONFIG_HOME": str(mkdir(profile / "config")), "XDG_CACHE_HOME": str(mkdir(profile / "cache")),
+                "XDG_DATA_HOME": str(mkdir(profile / "data")), "OTEL_SDK_DISABLED": "true"})
+    return env, sorted(removed)
+
+
+def normalized_rpc_path(value):
+    raw = value or ""
+    if raw.startswith("\\\\?\\UNC\\"):
+        raw = "\\\\" + raw[8:]
+    elif raw.startswith("\\\\?\\"):
+        raw = raw[4:]
+    return no_links(pathlib.Path(raw)).resolve(strict=True)
+
+
+def discover(codex, workspace, home, env, expected_cache, names, observation):
+    """Fresh app-server each phase; the RPC allowlist is initialize/initialized/skills/list."""
+    argv = [codex, "app-server"]
+    proc = subprocess.Popen(argv, cwd=workspace, env=env, stdin=subprocess.PIPE,
+                            stdout=subprocess.PIPE, stderr=subprocess.PIPE, text=True,
+                            encoding="utf8", errors="replace")
+    packets = queue.Queue()
+    stderr_lines = []
+    methods = []
+    observation.update({"qualifiedSkills": [], "parseErrors": [], "rpcMethods": methods,
+                        "discoveryValidationErrors": []})
+
+    def stdout_reader():
+        for line in proc.stdout:
+            try:
+                packets.put(json.loads(line))
+            except ValueError:
+                packets.put({"transportFailure": True})
+        packets.put({"transportClosed": True})
+
+    def stderr_reader():
+        for line in proc.stderr:
+            stderr_lines.append(line)
+
+    threading.Thread(target=stdout_reader, daemon=True).start()
+    threading.Thread(target=stderr_reader, daemon=True).start()
+
+    def rpc(method, params=None, request_id=None):
+        if method not in {"initialize", "initialized", "skills/list"}:
+            raise ValueError("RPC method not permitted")
+        methods.append(method)
+        request = {"method": method}
+        if params is not None:
+            request["params"] = params
+        if request_id is not None:
+            request["id"] = request_id
+        proc.stdin.write(json.dumps(request) + "\n")
+        proc.stdin.flush()
+        if request_id is None:
+            return None
+        deadline = time.monotonic() + 25
+        while time.monotonic() < deadline:
+            packet = packets.get(timeout=max(0.01, deadline - time.monotonic()))
+            if packet.get("transportFailure") or packet.get("transportClosed"):
+                raise RuntimeError("app-server transport failed/closed")
+            if packet.get("id") == request_id:
+                if "error" in packet:
+                    raise RuntimeError("RPC error: " + json.dumps(packet["error"]))
+                return packet["result"]
+        raise TimeoutError("app-server RPC timed out")
+
+    try:
+        rpc("initialize", {"clientInfo": {"name": "cw_cache_isolation_check", "version": "0.1.0"}}, 1)
+        rpc("initialized")
+        listing = rpc("skills/list", {"cwds": [str(workspace)], "forceReload": True}, 2)
+        plugin_cache_root = home / "plugins" / "cache" / MARKETPLACE_ID / PLUGIN_NAME
+        qualified = observation["qualifiedSkills"]
+        errors = observation["parseErrors"]
+        validation_errors = observation["discoveryValidationErrors"]
+        for entry in listing.get("data", []):
+            errors.extend(entry.get("errors", []))
+            for skill in entry.get("skills", []):
+                raw_path = skill.get("path", "")
+                raw_name = skill.get("name", "")
+                local_name = raw_name.rsplit(":", 1)[-1]
+                raw_normalized = raw_path
+                if raw_normalized.startswith("\\\\?\\UNC\\"):
+                    raw_normalized = "\\\\" + raw_normalized[8:]
+                elif raw_normalized.startswith("\\\\?\\"):
+                    raw_normalized = raw_normalized[4:]
+                lexical_path = pathlib.Path(raw_normalized)
+                candidate = lexical_path.is_absolute() and lexical_path.is_relative_to(plugin_cache_root)
+                if candidate or local_name in names:
+                    # Never inspect an unexpected user/global path returned by discovery.
+                    if not candidate:
+                        path = lexical_path
+                        validation_errors.append("plugin skill was returned outside its isolated cache root")
+                    else:
+                        path = normalized_rpc_path(raw_path)
+                    qualified.append({"rawName": raw_name, "rawPath": raw_path, "localName": local_name,
+                                      "normalizedPath": str(path), "enabled": skill.get("enabled"),
+                                      "scope": skill.get("scope"), "expectedCacheVersionPath": str(expected_cache),
+                                      "fromExpectedVersion": path.is_relative_to(expected_cache)})
+        active = [skill for skill in qualified if skill["enabled"]]
+        if errors:
+            validation_errors.append("skills/list returned parse errors")
+        if len(active) != len(names) or {skill["localName"] for skill in active} != set(names):
+            validation_errors.append("active skills differ from expected exact skill set")
+        for skill in active:
+            exact = expected_cache / "skills" / skill["localName"] / "SKILL.md"
+            if pathlib.Path(skill["normalizedPath"]) != exact:
+                validation_errors.append("skill read a different cache version or entry path")
+        return {"qualifiedSkills": qualified, "parseErrors": errors, "rpcMethods": methods,
+                "discoveryValidationErrors": validation_errors}
+    finally:
+        if proc.stdin:
+            proc.stdin.close()
+        try:
+            proc.wait(timeout=4)
+        except subprocess.TimeoutExpired:
+            proc.terminate()
+            try:
+                proc.wait(timeout=4)
+            except subprocess.TimeoutExpired:
+                proc.kill()
+                proc.wait(timeout=4)
+        observation["appServerStderr"] = "".join(stderr_lines)
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--old-source", required=True, help="absolute path to read-only public 3.1.0 cache/source")
+    parser.add_argument("--new-bundle", help="absolute path to actual 3.2.0 four-entry build; required for the real cycle")
+    parser.add_argument("--old-asset", action="append", default=[], help="explicit needed assets/ path, repeatable")
+    parser.add_argument("--new-asset", action="append", default=[], help="explicit needed assets/ path, repeatable")
+    parser.add_argument("--preflight-only", action="store_true", help="copy/check old public files only; no CLI/RPC/install")
+    parser.add_argument("--codex", default=shutil.which("codex.cmd") or shutil.which("codex"), help="Codex CLI executable")
+    args = parser.parse_args()
+    if not args.preflight_only and not args.new_bundle:
+        parser.error("--new-bundle is required unless --preflight-only is used")
+
+    mkdir(OUTPUT_ROOT)
+    run = output_target(pathlib.Path(tempfile.mkdtemp(prefix="run-", dir=OUTPUT_ROOT)))
+    result = {"status": "failed", "mode": "old-public-preflight" if args.preflight_only else "actual-install-upgrade-rollback",
+              "run": str(run), "outputBoundary": str(OUTPUT_ROOT.resolve()), "cliVersion": None,
+              "marketplaceId": MARKETPLACE_ID, "phases": [], "commands": [], "parseErrors": [],
+              "threadCreated": False, "modelCalled": False, "remoteMarketplaceRequested": False,
+              "networkRequestsIssuedByHarness": False, "networkEgressObserved": None,
+              "userProfileChanged": False, "globalInstallPerformed": False, "cacheDeletionOrMovePerformed": False,
+              "cacheDeletionOrMovePerformedByHarness": False,
+              "rpcAllowlist": ["initialize", "initialized", "skills/list"], "sourceChecks": {}}
+    old = new = None
+    old_copy = new_copy = None
+    old_before = new_before = None
+    old_cache = new_cache = None
+    old_cache_before = new_cache_before = None
+    try:
+        old_source = absolute_source(args.old_source)
+        old = public_package(old_source, args.old_asset)
+        old_before = public_digest(old)
+        result["oldSource"] = str(old_source)
+        result["oldManifestVersion"] = old["manifest"].get("version")
+        result["oldExpectedSkills"] = old["skills"]
+        if old["manifest"].get("version") != OLD_VERSION or old["skills"] != [PLUGIN_NAME]:
+            raise ValueError("old package must be genuine 3.1.0 with the one director entry")
+        workspace = mkdir(run / "workspace")
+        old_copy = copy_public(old, workspace / "plugins" / "old")
+        result["oldPublicCopy"] = {"path": str(old_copy["source"]), "digest": public_digest(old_copy)}
+        if args.preflight_only:
+            result["status"] = "preflight-old-passed"
+        else:
+            if not args.codex:
+                raise ValueError("Codex CLI was not found")
+            new_source = absolute_source(args.new_bundle)
+            new = public_package(new_source, args.new_asset)
+            new_before = public_digest(new)
+            result["newBundle"] = str(new_source)
+            result["newManifestVersion"] = new["manifest"].get("version")
+            result["newExpectedSkills"] = new["skills"]
+            if new["manifest"].get("version") != NEW_VERSION or len(new["skills"]) != 4 or PLUGIN_NAME not in new["skills"]:
+                raise ValueError("new bundle must be actual 3.2.0 with four skills; unchanged 3.1.0 is not an upgrade")
+            new_copy = copy_public(new, workspace / "plugins" / "new")
+            result["newPublicCopy"] = {"path": str(new_copy["source"]), "digest": public_digest(new_copy)}
+            home = mkdir(run / "codex-home")
+            env, removed = child_environment(run, home)
+            result["isolatedCodexHome"] = str(home)
+            result["removedCredentialAndProviderEnvironmentNames"] = removed
+            market = output_target(workspace / ".agents" / "plugins" / "marketplace.json")
+
+            def cli(argv):
+                completed = subprocess.run([args.codex, *argv], env=env, cwd=workspace,
+                                           stdin=subprocess.DEVNULL, capture_output=True, text=True,
+                                           encoding="utf8", errors="replace", timeout=30)
+                result["commands"].append({"argv": argv, "exitCode": completed.returncode,
+                                           "stdout": completed.stdout, "stderr": completed.stderr})
+                if completed.returncode:
+                    raise RuntimeError("local CLI command failed: " + str(completed.returncode))
+                return completed.stdout
+
+            def point_source(relative):
+                write_json(market, {"name": MARKETPLACE_ID, "plugins": [{"name": PLUGIN_NAME,
+                    "source": {"source": "local", "path": relative},
+                    "policy": {"installation": "AVAILABLE", "authentication": "ON_INSTALL"}, "category": "Productivity"}]})
+
+            result["cliVersion"] = cli(["--version"]).strip()
+            point_source("./plugins/old")
+            cli(["plugin", "marketplace", "add", str(workspace), "--json"])
+            for label, package, relative in [("old", old, "./plugins/old"),
+                                               ("upgrade", new, "./plugins/new"),
+                                               ("rollback", old, "./plugins/old")]:
+                point_source(relative)
+                version = package["manifest"]["version"]
+                expected_cache = output_target(home / "plugins" / "cache" / MARKETPLACE_ID / PLUGIN_NAME / version)
+                phase = {"label": label, "status": "failed", "sourcePath": relative,
+                         "expectedVersion": version, "expectedSkills": package["skills"],
+                         "expectedCacheVersionPath": str(expected_cache), "parseErrors": []}
+                result["phases"].append(phase)
+                phase["installResponseRaw"] = cli(["plugin", "add", PLUGIN_NAME + "@" + MARKETPLACE_ID, "--json"])
+                cache_manifest = no_links(expected_cache / ".codex-plugin" / "plugin.json")
+                installed_manifest = json.loads(cache_manifest.read_text(encoding="utf-8-sig"))
+                phase["installedVersion"] = installed_manifest.get("version")
+                phase["installedPath"] = str(expected_cache)
+                phase["installedVersionEvidence"] = "cache manifest plus exact RPC skill paths after CLI add"
+                if installed_manifest.get("version") != version:
+                    raise RuntimeError("installed cache manifest version differs from requested source")
+                phase.update(discover(args.codex, workspace, home, env, expected_cache, package["skills"], phase))
+                result["parseErrors"].extend(phase["parseErrors"])
+                if phase["discoveryValidationErrors"]:
+                    raise RuntimeError("; ".join(phase["discoveryValidationErrors"]))
+                if label == "old":
+                    old_cache = expected_cache
+                    old_cache_before = tree_digest(old_cache)
+                if label == "upgrade":
+                    new_cache = expected_cache
+                    new_cache_before = tree_digest(new_cache)
+                phase["cacheStates"] = {}
+                for cache_label, cache, before in [("old", old_cache, old_cache_before),
+                                                   ("new", new_cache, new_cache_before)]:
+                    if cache is None:
+                        continue
+                    present = cache.exists()
+                    state = {"path": str(cache), "present": present,
+                             "active": cache == expected_cache, "bytesEqualFirstInstall": None}
+                    if present:
+                        state["bytesEqualFirstInstall"] = before == tree_digest(cache)
+                        if not state["bytesEqualFirstInstall"]:
+                            raise RuntimeError(cache_label + " isolated cache tree bytes changed")
+                    elif state["active"]:
+                        raise RuntimeError("active isolated cache tree missing")
+                    else:
+                        state["observation"] = "inactive version cache absent after native CLI add"
+                    phase["cacheStates"][cache_label] = state
+                phase["status"] = "passed"
+            result["status"] = "passed"
+    except Exception as error:
+        result["failure"] = type(error).__name__ + ": " + str(error)
+        result["status"] = "failed"
+    finally:
+        for label, package, before in [("old", old, old_before), ("new", new, new_before)]:
+            if package is not None and before is not None:
+                try:
+                    after = public_digest(package)
+                    unchanged = before == after
+                    result["sourceChecks"][label] = {"before": before, "after": after, "unchanged": unchanged}
+                    if not unchanged:
+                        result["status"] = "failed"
+                        result["failure"] = "source public tree bytes changed"
+                except Exception as error:
+                    result["status"] = "failed"
+                    result["sourceChecks"][label] = {"unchanged": False, "failure": type(error).__name__ + ": " + str(error)}
+        for label, copied, before in [("old", old_copy, old_before), ("new", new_copy, new_before)]:
+            if copied is not None and before is not None:
+                try:
+                    result[label + "PublicCopyUnchanged"] = before == public_digest(copied)
+                    if not result[label + "PublicCopyUnchanged"]:
+                        result["status"] = "failed"
+                except Exception as error:
+                    result["status"] = "failed"
+                    result[label + "PublicCopyCheckFailure"] = type(error).__name__ + ": " + str(error)
+        for label, cache, before in [("old", old_cache, old_cache_before), ("new", new_cache, new_cache_before)]:
+            if cache is not None and before is not None:
+                try:
+                    present = cache.exists()
+                    result[label + "IsolatedCachePresentAtEnd"] = present
+                    result[label + "IsolatedCacheUnchanged"] = before == tree_digest(cache) if present else None
+                    if present and not result[label + "IsolatedCacheUnchanged"]:
+                        result["status"] = "failed"
+                    if not present:
+                        result[label + "IsolatedCacheObservation"] = "inactive version cache absent after native CLI add"
+                except Exception as error:
+                    result["status"] = "failed"
+                    result[label + "IsolatedCacheCheckFailure"] = type(error).__name__ + ": " + str(error)
+        output = output_target(run / "result.json")
+        write_json(output, result)
+        print(json.dumps({"status": result["status"], "mode": result["mode"], "result": str(output),
+                          "phaseCount": len(result["phases"]), "failure": result.get("failure")}, ensure_ascii=False))
+    return 0 if result["status"] in {"passed", "preflight-old-passed"} else 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

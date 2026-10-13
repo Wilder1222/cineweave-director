@@ -1,0 +1,8 @@
+{
+  "frameRate": { "numerator": 24, "denominator": 1 },
+  "totalFrames": 240,
+  "shots": [
+    { "id": "S01", "startFrame": 0, "endFrame": 120 },
+    { "id": "S02", "startFrame": 120, "endFrame": 240 }
+  ]
+}

@@ -1,0 +1,358 @@
+{
+  "status": "passed",
+  "mode": "actual-install-upgrade-rollback",
+  "run": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0",
+  "outputBoundary": "D:\\Temp\\cineweave-cache-upgrade-20261012",
+  "cliVersion": "codex-cli 0.147.0",
+  "marketplaceId": "cw-cache-isolation-check",
+  "phases": [
+    {
+      "label": "old",
+      "status": "passed",
+      "sourcePath": "./plugins/old",
+      "expectedVersion": "3.1.0",
+      "expectedSkills": [
+        "cineweave-director"
+      ],
+      "expectedCacheVersionPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.1.0",
+      "parseErrors": [],
+      "installResponseRaw": "{\n  \"pluginId\": \"cineweave-director@cw-cache-isolation-check\",\n  \"name\": \"cineweave-director\",\n  \"marketplaceName\": \"cw-cache-isolation-check\",\n  \"version\": \"3.1.0\",\n  \"installedPath\": \"D:\\\\Temp\\\\cineweave-cache-upgrade-20261012\\\\run-ptheg2t0\\\\codex-home\\\\plugins\\\\cache\\\\cw-cache-isolation-check\\\\cineweave-director\\\\3.1.0\",\n  \"authPolicy\": \"ON_INSTALL\"\n}\n",
+      "installedVersion": "3.1.0",
+      "installedPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.1.0",
+      "installedVersionEvidence": "cache manifest plus exact RPC skill paths after CLI add",
+      "qualifiedSkills": [
+        {
+          "rawName": "cineweave-director:cineweave-director",
+          "rawPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.1.0\\skills\\cineweave-director\\SKILL.md",
+          "localName": "cineweave-director",
+          "normalizedPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.1.0\\skills\\cineweave-director\\SKILL.md",
+          "enabled": true,
+          "scope": "user",
+          "expectedCacheVersionPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.1.0",
+          "fromExpectedVersion": true
+        }
+      ],
+      "rpcMethods": [
+        "initialize",
+        "initialized",
+        "skills/list"
+      ],
+      "discoveryValidationErrors": [],
+      "appServerStderr": "WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir \"D:\\\\Temp\\\\\" (codex_home: AbsolutePathBuf(\"D:\\\\Temp\\\\cineweave-cache-upgrade-20261012\\\\run-ptheg2t0\\\\codex-home\"))\n",
+      "cacheStates": {
+        "old": {
+          "path": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.1.0",
+          "present": true,
+          "active": true,
+          "bytesEqualFirstInstall": true
+        }
+      }
+    },
+    {
+      "label": "upgrade",
+      "status": "passed",
+      "sourcePath": "./plugins/new",
+      "expectedVersion": "3.2.0",
+      "expectedSkills": [
+        "cineweave-director",
+        "cineweave-platform",
+        "cineweave-reference",
+        "cineweave-review"
+      ],
+      "expectedCacheVersionPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.2.0",
+      "parseErrors": [],
+      "installResponseRaw": "{\n  \"pluginId\": \"cineweave-director@cw-cache-isolation-check\",\n  \"name\": \"cineweave-director\",\n  \"marketplaceName\": \"cw-cache-isolation-check\",\n  \"version\": \"3.2.0\",\n  \"installedPath\": \"D:\\\\Temp\\\\cineweave-cache-upgrade-20261012\\\\run-ptheg2t0\\\\codex-home\\\\plugins\\\\cache\\\\cw-cache-isolation-check\\\\cineweave-director\\\\3.2.0\",\n  \"authPolicy\": \"ON_INSTALL\"\n}\n",
+      "installedVersion": "3.2.0",
+      "installedPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.2.0",
+      "installedVersionEvidence": "cache manifest plus exact RPC skill paths after CLI add",
+      "qualifiedSkills": [
+        {
+          "rawName": "cineweave-director:cineweave-director",
+          "rawPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.2.0\\skills\\cineweave-director\\SKILL.md",
+          "localName": "cineweave-director",
+          "normalizedPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.2.0\\skills\\cineweave-director\\SKILL.md",
+          "enabled": true,
+          "scope": "user",
+          "expectedCacheVersionPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.2.0",
+          "fromExpectedVersion": true
+        },
+        {
+          "rawName": "cineweave-director:cineweave-platform",
+          "rawPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.2.0\\skills\\cineweave-platform\\SKILL.md",
+          "localName": "cineweave-platform",
+          "normalizedPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.2.0\\skills\\cineweave-platform\\SKILL.md",
+          "enabled": true,
+          "scope": "user",
+          "expectedCacheVersionPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.2.0",
+          "fromExpectedVersion": true
+        },
+        {
+          "rawName": "cineweave-director:cineweave-reference",
+          "rawPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.2.0\\skills\\cineweave-reference\\SKILL.md",
+          "localName": "cineweave-reference",
+          "normalizedPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.2.0\\skills\\cineweave-reference\\SKILL.md",
+          "enabled": true,
+          "scope": "user",
+          "expectedCacheVersionPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.2.0",
+          "fromExpectedVersion": true
+        },
+        {
+          "rawName": "cineweave-director:cineweave-review",
+          "rawPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.2.0\\skills\\cineweave-review\\SKILL.md",
+          "localName": "cineweave-review",
+          "normalizedPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.2.0\\skills\\cineweave-review\\SKILL.md",
+          "enabled": true,
+          "scope": "user",
+          "expectedCacheVersionPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.2.0",
+          "fromExpectedVersion": true
+        }
+      ],
+      "rpcMethods": [
+        "initialize",
+        "initialized",
+        "skills/list"
+      ],
+      "discoveryValidationErrors": [],
+      "appServerStderr": "WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir \"D:\\\\Temp\\\\\" (codex_home: AbsolutePathBuf(\"D:\\\\Temp\\\\cineweave-cache-upgrade-20261012\\\\run-ptheg2t0\\\\codex-home\"))\n",
+      "cacheStates": {
+        "old": {
+          "path": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.1.0",
+          "present": false,
+          "active": false,
+          "bytesEqualFirstInstall": null,
+          "observation": "inactive version cache absent after native CLI add"
+        },
+        "new": {
+          "path": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.2.0",
+          "present": true,
+          "active": true,
+          "bytesEqualFirstInstall": true
+        }
+      }
+    },
+    {
+      "label": "rollback",
+      "status": "passed",
+      "sourcePath": "./plugins/old",
+      "expectedVersion": "3.1.0",
+      "expectedSkills": [
+        "cineweave-director"
+      ],
+      "expectedCacheVersionPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.1.0",
+      "parseErrors": [],
+      "installResponseRaw": "{\n  \"pluginId\": \"cineweave-director@cw-cache-isolation-check\",\n  \"name\": \"cineweave-director\",\n  \"marketplaceName\": \"cw-cache-isolation-check\",\n  \"version\": \"3.1.0\",\n  \"installedPath\": \"D:\\\\Temp\\\\cineweave-cache-upgrade-20261012\\\\run-ptheg2t0\\\\codex-home\\\\plugins\\\\cache\\\\cw-cache-isolation-check\\\\cineweave-director\\\\3.1.0\",\n  \"authPolicy\": \"ON_INSTALL\"\n}\n",
+      "installedVersion": "3.1.0",
+      "installedPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.1.0",
+      "installedVersionEvidence": "cache manifest plus exact RPC skill paths after CLI add",
+      "qualifiedSkills": [
+        {
+          "rawName": "cineweave-director:cineweave-director",
+          "rawPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.1.0\\skills\\cineweave-director\\SKILL.md",
+          "localName": "cineweave-director",
+          "normalizedPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.1.0\\skills\\cineweave-director\\SKILL.md",
+          "enabled": true,
+          "scope": "user",
+          "expectedCacheVersionPath": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.1.0",
+          "fromExpectedVersion": true
+        }
+      ],
+      "rpcMethods": [
+        "initialize",
+        "initialized",
+        "skills/list"
+      ],
+      "discoveryValidationErrors": [],
+      "appServerStderr": "WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir \"D:\\\\Temp\\\\\" (codex_home: AbsolutePathBuf(\"D:\\\\Temp\\\\cineweave-cache-upgrade-20261012\\\\run-ptheg2t0\\\\codex-home\"))\n",
+      "cacheStates": {
+        "old": {
+          "path": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.1.0",
+          "present": true,
+          "active": true,
+          "bytesEqualFirstInstall": true
+        },
+        "new": {
+          "path": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home\\plugins\\cache\\cw-cache-isolation-check\\cineweave-director\\3.2.0",
+          "present": false,
+          "active": false,
+          "bytesEqualFirstInstall": null,
+          "observation": "inactive version cache absent after native CLI add"
+        }
+      }
+    }
+  ],
+  "commands": [
+    {
+      "argv": [
+        "--version"
+      ],
+      "exitCode": 0,
+      "stdout": "codex-cli 0.147.0\n",
+      "stderr": "WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir \"D:\\\\Temp\\\\\" (codex_home: AbsolutePathBuf(\"D:\\\\Temp\\\\cineweave-cache-upgrade-20261012\\\\run-ptheg2t0\\\\codex-home\"))\n"
+    },
+    {
+      "argv": [
+        "plugin",
+        "marketplace",
+        "add",
+        "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\workspace",
+        "--json"
+      ],
+      "exitCode": 0,
+      "stdout": "{\n  \"marketplaceName\": \"cw-cache-isolation-check\",\n  \"installedRoot\": \"D:\\\\Temp\\\\cineweave-cache-upgrade-20261012\\\\run-ptheg2t0\\\\workspace\",\n  \"alreadyAdded\": false\n}\n",
+      "stderr": "WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir \"D:\\\\Temp\\\\\" (codex_home: AbsolutePathBuf(\"D:\\\\Temp\\\\cineweave-cache-upgrade-20261012\\\\run-ptheg2t0\\\\codex-home\"))\n"
+    },
+    {
+      "argv": [
+        "plugin",
+        "add",
+        "cineweave-director@cw-cache-isolation-check",
+        "--json"
+      ],
+      "exitCode": 0,
+      "stdout": "{\n  \"pluginId\": \"cineweave-director@cw-cache-isolation-check\",\n  \"name\": \"cineweave-director\",\n  \"marketplaceName\": \"cw-cache-isolation-check\",\n  \"version\": \"3.1.0\",\n  \"installedPath\": \"D:\\\\Temp\\\\cineweave-cache-upgrade-20261012\\\\run-ptheg2t0\\\\codex-home\\\\plugins\\\\cache\\\\cw-cache-isolation-check\\\\cineweave-director\\\\3.1.0\",\n  \"authPolicy\": \"ON_INSTALL\"\n}\n",
+      "stderr": "WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir \"D:\\\\Temp\\\\\" (codex_home: AbsolutePathBuf(\"D:\\\\Temp\\\\cineweave-cache-upgrade-20261012\\\\run-ptheg2t0\\\\codex-home\"))\n"
+    },
+    {
+      "argv": [
+        "plugin",
+        "add",
+        "cineweave-director@cw-cache-isolation-check",
+        "--json"
+      ],
+      "exitCode": 0,
+      "stdout": "{\n  \"pluginId\": \"cineweave-director@cw-cache-isolation-check\",\n  \"name\": \"cineweave-director\",\n  \"marketplaceName\": \"cw-cache-isolation-check\",\n  \"version\": \"3.2.0\",\n  \"installedPath\": \"D:\\\\Temp\\\\cineweave-cache-upgrade-20261012\\\\run-ptheg2t0\\\\codex-home\\\\plugins\\\\cache\\\\cw-cache-isolation-check\\\\cineweave-director\\\\3.2.0\",\n  \"authPolicy\": \"ON_INSTALL\"\n}\n",
+      "stderr": "WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir \"D:\\\\Temp\\\\\" (codex_home: AbsolutePathBuf(\"D:\\\\Temp\\\\cineweave-cache-upgrade-20261012\\\\run-ptheg2t0\\\\codex-home\"))\n"
+    },
+    {
+      "argv": [
+        "plugin",
+        "add",
+        "cineweave-director@cw-cache-isolation-check",
+        "--json"
+      ],
+      "exitCode": 0,
+      "stdout": "{\n  \"pluginId\": \"cineweave-director@cw-cache-isolation-check\",\n  \"name\": \"cineweave-director\",\n  \"marketplaceName\": \"cw-cache-isolation-check\",\n  \"version\": \"3.1.0\",\n  \"installedPath\": \"D:\\\\Temp\\\\cineweave-cache-upgrade-20261012\\\\run-ptheg2t0\\\\codex-home\\\\plugins\\\\cache\\\\cw-cache-isolation-check\\\\cineweave-director\\\\3.1.0\",\n  \"authPolicy\": \"ON_INSTALL\"\n}\n",
+      "stderr": "WARNING: proceeding, even though we could not create PATH aliases: Refusing to create helper binaries under temporary dir \"D:\\\\Temp\\\\\" (codex_home: AbsolutePathBuf(\"D:\\\\Temp\\\\cineweave-cache-upgrade-20261012\\\\run-ptheg2t0\\\\codex-home\"))\n"
+    }
+  ],
+  "parseErrors": [],
+  "threadCreated": false,
+  "modelCalled": false,
+  "remoteMarketplaceRequested": false,
+  "networkRequestsIssuedByHarness": false,
+  "networkEgressObserved": null,
+  "userProfileChanged": false,
+  "globalInstallPerformed": false,
+  "cacheDeletionOrMovePerformed": false,
+  "cacheDeletionOrMovePerformedByHarness": false,
+  "rpcAllowlist": [
+    "initialize",
+    "initialized",
+    "skills/list"
+  ],
+  "sourceChecks": {
+    "old": {
+      "before": {
+        "scope": "permitted-public-entries",
+        "selectedEntries": [
+          ".codex-plugin/plugin.json",
+          "LICENSE",
+          "skills"
+        ],
+        "files": 139,
+        "sha256": "38184d3f48fc4d35b7a5d2a012be00a3fe0e1474f06e46870b11257e8a18ffa6"
+      },
+      "after": {
+        "scope": "permitted-public-entries",
+        "selectedEntries": [
+          ".codex-plugin/plugin.json",
+          "LICENSE",
+          "skills"
+        ],
+        "files": 139,
+        "sha256": "38184d3f48fc4d35b7a5d2a012be00a3fe0e1474f06e46870b11257e8a18ffa6"
+      },
+      "unchanged": true
+    },
+    "new": {
+      "before": {
+        "scope": "permitted-public-entries",
+        "selectedEntries": [
+          ".codex-plugin/plugin.json",
+          "LICENSE",
+          "skills"
+        ],
+        "files": 638,
+        "sha256": "31cda2aed3e706150fced87d29dc3006abf27acb7cebc264f1d30727ec6de0c2"
+      },
+      "after": {
+        "scope": "permitted-public-entries",
+        "selectedEntries": [
+          ".codex-plugin/plugin.json",
+          "LICENSE",
+          "skills"
+        ],
+        "files": 638,
+        "sha256": "31cda2aed3e706150fced87d29dc3006abf27acb7cebc264f1d30727ec6de0c2"
+      },
+      "unchanged": true
+    }
+  },
+  "oldSource": "C:\\Users\\ww\\.codex\\plugins\\cache\\cineweave-director\\cineweave-director\\3.1.0",
+  "oldManifestVersion": "3.1.0",
+  "oldExpectedSkills": [
+    "cineweave-director"
+  ],
+  "oldPublicCopy": {
+    "path": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\workspace\\plugins\\old",
+    "digest": {
+      "scope": "permitted-public-entries",
+      "selectedEntries": [
+        ".codex-plugin/plugin.json",
+        "LICENSE",
+        "skills"
+      ],
+      "files": 139,
+      "sha256": "38184d3f48fc4d35b7a5d2a012be00a3fe0e1474f06e46870b11257e8a18ffa6"
+    }
+  },
+  "newBundle": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\cineweave-director",
+  "newManifestVersion": "3.2.0",
+  "newExpectedSkills": [
+    "cineweave-director",
+    "cineweave-platform",
+    "cineweave-reference",
+    "cineweave-review"
+  ],
+  "newPublicCopy": {
+    "path": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\workspace\\plugins\\new",
+    "digest": {
+      "scope": "permitted-public-entries",
+      "selectedEntries": [
+        ".codex-plugin/plugin.json",
+        "LICENSE",
+        "skills"
+      ],
+      "files": 638,
+      "sha256": "31cda2aed3e706150fced87d29dc3006abf27acb7cebc264f1d30727ec6de0c2"
+    }
+  },
+  "isolatedCodexHome": "D:\\Temp\\cineweave-cache-upgrade-20261012\\run-ptheg2t0\\codex-home",
+  "removedCredentialAndProviderEnvironmentNames": [
+    "CODEX_APPLY_PATCH_PRESERVE_LINE_ENDINGS",
+    "CODEX_CI",
+    "CODEX_PERMISSION_PROFILE",
+    "CODEX_SESSION_ID",
+    "CODEX_THREAD_ID",
+    "CODEX_VERSION",
+    "GH_PAGER",
+    "GIT_PAGER"
+  ],
+  "oldPublicCopyUnchanged": true,
+  "newPublicCopyUnchanged": true,
+  "oldIsolatedCachePresentAtEnd": true,
+  "oldIsolatedCacheUnchanged": true,
+  "newIsolatedCachePresentAtEnd": false,
+  "newIsolatedCacheUnchanged": null,
+  "newIsolatedCacheObservation": "inactive version cache absent after native CLI add"
+}

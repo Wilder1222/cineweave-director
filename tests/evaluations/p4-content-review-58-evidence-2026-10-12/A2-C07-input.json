@@ -1,0 +1,103 @@
+{
+  "source": { "type": "design", "id": "FG-01", "version": 1 },
+  "mode": "full",
+  "shotIds": ["FG-S01", "FG-S02"],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "FG-S01",
+      "status": "pass",
+      "criterion": "放信的意图与由手到桌的状态变化须通过一镜可读。",
+      "observation": "文字先让女子看合拢信纸，再缓慢放到前方桌中央，纸接触桌面后才松开；中景同时容纳人物和台面交互，出点保留信纸合拢及双手空闲，足以提供下一镜的因果起点。",
+      "sourceLocator": "FG-01 v1 / FG-S01 / 她看着信纸至出点"
+    },
+    {
+      "role": "direction",
+      "shotId": "FG-S02",
+      "status": "pass",
+      "criterion": "第二镜应增加展开信息，连续承接而不重演放信。",
+      "observation": "直接连续硬切后，信纸已在桌中央；本镜左手压下半部、右手沿原折痕展开，终点为完整平放，且纸无字，未重演 FG-S01 的放下动作或增加回信内容。",
+      "sourceLocator": "FG-01 v1 / FG-S02 / 入点至结束"
+    },
+    {
+      "role": "performance",
+      "shotId": "FG-S01",
+      "status": "pass",
+      "criterion": "注意对象、执行顺序与放手条件应一致；不得虚增表演。",
+      "observation": "目光落在信纸，右手执行缓慢放下，接触桌面才放开，双手退回桌缘且目光仍留在纸上；没有台词触发、额外笑哭或未获授权的身体反应。",
+      "sourceLocator": "FG-01 v1 / FG-S01 / 她看着信纸、接触后放开、目光仍落在信纸"
+    },
+    {
+      "role": "performance",
+      "shotId": "FG-S02",
+      "status": "pass",
+      "criterion": "双手应各有明确任务并保留展开后的残留状态。",
+      "observation": "左手按下半部维持纸的支撑，右手握上半部纸边沿折痕展开；结束左手仍按下缘，右手松开停在纸右侧。手部任务连续，手部近景不要求画外面部追加表情。",
+      "sourceLocator": "FG-01 v1 / FG-S02 / 女子左手按住至结束"
+    },
+    {
+      "role": "staging",
+      "shotId": "FG-S01",
+      "status": "pass",
+      "criterion": "人物、纸和杯的相对布局应支持放下，不引入额外人物与障碍。",
+      "observation": "女子在桌北侧，信纸放在自己前方桌中央；杯在东端，与双手相距30厘米且未移动，主接触区只有纸与右手。文本范围内不存在跨桌交给他人或人物穿越障碍。实际画面遮挡尚需素材验证。",
+      "sourceLocator": "FG-01 v1 / 房间与硬锁；FG-S01 / 陶杯位置及放纸路径"
+    },
+    {
+      "role": "staging",
+      "shotId": "FG-S02",
+      "status": "pass",
+      "criterion": "展开应围绕同一纸张和同一接触区完成，杯不得干扰。",
+      "observation": "女子仍在桌北侧，双手从桌缘进入同一纸的上、下半部，杯仍在东端且不进入主要接触区；展开不复制纸、不移动杯，终点的左手和纸下缘关系明确。",
+      "sourceLocator": "FG-01 v1 / FG-S02 / 入点、展开过程及结束"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "FG-S01",
+      "status": "pass",
+      "criterion": "机位、景别与光源描述不相互冲突，需承载放信信息。",
+      "observation": "16:9、4秒、桌南侧眼平中景与固定机位一致；女子在北侧，西窗柔和日光是唯一主光，干燥桌面没有新湿反射。文本没有同时要求固定与运动；实际取景、景深和手指可读性未由文字证明。",
+      "sourceLocator": "FG-01 v1 / 房间；FG-S01 / 首句与放信动作"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "FG-S02",
+      "status": "pass",
+      "criterion": "近景机位应仍在同侧，固定摄影与原西窗光相容。",
+      "observation": "16:9、4秒、桌南侧偏西略俯手部近景、固定机位；仍在桌南侧，没有越轴或移动西窗。低角度变化未混入额外运镜，取景意图与手部展开吻合；实际接触遮挡和焦点需图像或视频核验。",
+      "sourceLocator": "FG-01 v1 / 用户硬锁；FG-S02 / 首句及入点"
+    },
+    {
+      "role": "prompt",
+      "shotId": "FG-S01",
+      "status": "not_applicable",
+      "criterion": "独立提示词应忠实编译源设计。",
+      "observation": "本次只提供 FG-01 设计文本，没有另行提供或要求生成提示词产物，因此无法也无需比较设计与独立提示词的编译忠实度；设计原文的指令一致性已在其他适用视角检查。",
+      "sourceLocator": "FG-01 v1 / 文档类型为用户镜头组设计文本；FG-S01"
+    },
+    {
+      "role": "prompt",
+      "shotId": "FG-S02",
+      "status": "not_applicable",
+      "criterion": "独立提示词应保留折纸、持手与终态。",
+      "observation": "没有独立提示词或平台复制稿作为比较对象；不能为填表另造提示词，也不能宣布未提供的下游稿件通过。当前视角对单一源设计的编译检查不适用。",
+      "sourceLocator": "FG-01 v1 / 文档类型为用户镜头组设计文本；FG-S02"
+    },
+    {
+      "role": "continuity",
+      "shotId": "FG-S01",
+      "status": "pass",
+      "criterion": "本镜出态应与下一镜入态逐项相容，来源版本精确。",
+      "observation": "FG-S01 出点为同一合拢信纸在桌中央、双手空着在桌缘、杯在桌东端未动；FG-S02 入点重复这些状态。两镜均来自 FG-01 v1，人物始终北侧、机位始终南侧，底声可连续，未加入时间省略。",
+      "sourceLocator": "FG-01 v1 / FG-S01 出点；FG-S02 入点；用户硬锁"
+    },
+    {
+      "role": "continuity",
+      "shotId": "FG-S02",
+      "status": "pass",
+      "criterion": "承接上一镜并维持数量、方向、衣着、光与声音意图。",
+      "observation": "开始保留上一镜的合拢纸、空手与杯位；展开明确为同一张纸，纸上无字，杯不动，结束左手压下缘、右手空着停纸右侧。短黑发、米白衬衫、西窗唯一主光与无对白旁白音乐硬锁仍适用；底声连续，纸触桌声转为纸摩擦声，没有已有音轨声明。",
+      "sourceLocator": "FG-01 v1 / 用户硬锁；FG-S01 出点；FG-S02 全段与声音说明"
+    }
+  ]
+}

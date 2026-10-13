@@ -1,0 +1,65 @@
+{
+  "kind": "cineweave_codex_reference_asset",
+  "contractVersion": "2.4.0",
+  "assetId": "reference.user_upload.1111111111111111111111111111111111111111111111111111111111111111",
+  "version": 1,
+  "status": "ingested",
+  "label": "image-reference-111111111111",
+  "media": {
+    "mediaKind": "image",
+    "mediaType": "image/png",
+    "format": "png",
+    "sourceExtension": ".png",
+    "byteLength": 2048,
+    "contentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111",
+    "technical": {
+      "probeLevel": "signature_and_dimensions",
+      "width": 1536,
+      "height": 2048
+    }
+  },
+  "blob": {
+    "storageMode": "project_content_addressed",
+    "relativePath": "reference-blobs/sha256/11/1111111111111111111111111111111111111111111111111111111111111111.blob",
+    "byteLength": 2048,
+    "contentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+  },
+  "source": {
+    "sourceClass": "user_upload",
+    "sourceLocatorStored": false,
+    "originalFilenameStored": false,
+    "importCreatesRights": false
+  },
+  "provenance": {
+    "byteBinding": "sha256_full_asset",
+    "contentCredentials": {
+      "status": "not_checked",
+      "trust": "unknown"
+    },
+    "digitalSourceType": "unknown"
+  },
+  "rights": {
+    "status": "unknown",
+    "assetOwnership": "unknown",
+    "generationUse": "unknown",
+    "redistribution": "unknown",
+    "trainingUse": "unknown",
+    "likenessConsent": "unknown",
+    "requiresSeparateLicenseProfile": true
+  },
+  "privacy": {
+    "originalBytesRetained": true,
+    "embeddedMetadata": "preserved_uninspected",
+    "locationMetadata": "not_inspected",
+    "sourcePathStored": false,
+    "reviewRequired": true
+  },
+  "safety": {
+    "extensionAllowlisted": true,
+    "signatureMatched": true,
+    "decoderInvoked": false,
+    "activeContentExecuted": false,
+    "malwareScan": "not_run",
+    "handlingStatus": "stored_non_executable"
+  }
+}

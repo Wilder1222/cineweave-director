@@ -1,0 +1,890 @@
+{
+  "scope": "independent_read_only_text_review",
+  "rawSha256": "aaf18a7b9c32ff397cc990535d284c98147d58fee589bf1393976ca3ac066f09",
+  "rubricSha256": "065280014d477f7e116acd95d6ed0c8cb0e69fe372fabd6caaf38b497997091b",
+  "c07": [
+    {
+      "run": "A1",
+      "source": "D:\\Temp\\cineweave-split-p4-baseline-a1-remaining-20261012\\CW-SPLIT-C07.source.json",
+      "sourceSameAsRaw": true,
+      "workbook": "D:\\Temp\\cineweave-split-p4-baseline-a1-remaining-20261012\\CW-SPLIT-C07-shot-review.json",
+      "sha256": "87724d65361789c81a6de006757be251a83955ec19f86683d5c6756ae9c5b8b5",
+      "copySha256": "87724d65361789c81a6de006757be251a83955ec19f86683d5c6756ae9c5b8b5",
+      "command": [
+        "node",
+        "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\scripts\\check-shot-review.mjs",
+        "D:\\Temp\\cineweave-split-p4-content-review-58-evidence-20261012\\A1-C07-input.json"
+      ],
+      "exitCode": 2,
+      "stderr": "",
+      "native": {
+        "valid": true,
+        "scope": "plan_only",
+        "coverageComplete": true,
+        "reviewComplete": false,
+        "expectedRows": 12,
+        "missing": [],
+        "openItems": [
+          {
+            "role": "cinematography",
+            "shotId": "FG-S02",
+            "status": "unknown"
+          }
+        ],
+        "prompt": null,
+        "errors": [],
+        "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。",
+        "localization": {
+          "locale": "zh-CN",
+          "summary": "输入有效，评审仍有未决项或没有适用的通过项。"
+        }
+      },
+      "sameAsSavedNative": true,
+      "rows": 12,
+      "rowPairs": 12,
+      "sourceMetadata": {
+        "type": "design",
+        "id": "FG-01",
+        "version": 1
+      },
+      "statuses": [
+        {
+          "shotId": "FG-S01",
+          "role": "direction",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "direction",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "performance",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "performance",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "staging",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "staging",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "cinematography",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "cinematography",
+          "status": "unknown"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "prompt",
+          "status": "not_applicable"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "prompt",
+          "status": "not_applicable"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "continuity",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "continuity",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "run": "A2",
+      "source": "D:\\Temp\\cineweave-split-p4-baseline-a2-20261012\\C07-source-FG-01-v1.txt",
+      "sourceSameAsRaw": true,
+      "workbook": "D:\\Temp\\cineweave-split-p4-baseline-a2-20261012\\C07-shot-review.json",
+      "sha256": "a8222aa750b1a3ddc037b709e11aa2e4835b6cfe5e34ddd239c432bfa10db3ec",
+      "copySha256": "a8222aa750b1a3ddc037b709e11aa2e4835b6cfe5e34ddd239c432bfa10db3ec",
+      "command": [
+        "node",
+        "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\scripts\\check-shot-review.mjs",
+        "D:\\Temp\\cineweave-split-p4-content-review-58-evidence-20261012\\A2-C07-input.json"
+      ],
+      "exitCode": 0,
+      "stderr": "",
+      "native": {
+        "valid": true,
+        "scope": "plan_only",
+        "coverageComplete": true,
+        "reviewComplete": true,
+        "expectedRows": 12,
+        "missing": [],
+        "openItems": [],
+        "prompt": null,
+        "errors": [],
+        "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。",
+        "localization": {
+          "locale": "zh-CN",
+          "summary": "规划评审已完成；实际媒体仍未核验。"
+        }
+      },
+      "sameAsSavedNative": true,
+      "rows": 12,
+      "rowPairs": 12,
+      "sourceMetadata": {
+        "type": "design",
+        "id": "FG-01",
+        "version": 1
+      },
+      "statuses": [
+        {
+          "shotId": "FG-S01",
+          "role": "direction",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "direction",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "performance",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "performance",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "staging",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "staging",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "cinematography",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "cinematography",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "prompt",
+          "status": "not_applicable"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "prompt",
+          "status": "not_applicable"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "continuity",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "continuity",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "run": "A3",
+      "source": "D:\\Temp\\cineweave-split-p4-baseline-a3-20261012\\C07-source-FG-01-r1.txt",
+      "sourceSameAsRaw": true,
+      "workbook": "D:\\Temp\\cineweave-split-p4-baseline-a3-20261012\\C07-review.json",
+      "sha256": "21efd46a49556e8487ef6341d50823db981af8246de76344e1684bf8f13682fd",
+      "copySha256": "21efd46a49556e8487ef6341d50823db981af8246de76344e1684bf8f13682fd",
+      "command": [
+        "node",
+        "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\scripts\\check-shot-review.mjs",
+        "D:\\Temp\\cineweave-split-p4-content-review-58-evidence-20261012\\A3-C07-input.json"
+      ],
+      "exitCode": 2,
+      "stderr": "",
+      "native": {
+        "valid": true,
+        "scope": "plan_only",
+        "coverageComplete": true,
+        "reviewComplete": false,
+        "expectedRows": 12,
+        "missing": [],
+        "openItems": [
+          {
+            "role": "staging",
+            "shotId": "FG-S02",
+            "status": "unknown"
+          },
+          {
+            "role": "cinematography",
+            "shotId": "FG-S01",
+            "status": "unknown"
+          },
+          {
+            "role": "cinematography",
+            "shotId": "FG-S02",
+            "status": "unknown"
+          }
+        ],
+        "prompt": null,
+        "errors": [],
+        "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。",
+        "localization": {
+          "locale": "zh-CN",
+          "summary": "输入有效，评审仍有未决项或没有适用的通过项。"
+        }
+      },
+      "sameAsSavedNative": true,
+      "rows": 12,
+      "rowPairs": 12,
+      "sourceMetadata": {
+        "type": "design",
+        "id": "FG-01",
+        "version": 1
+      },
+      "statuses": [
+        {
+          "shotId": "FG-S01",
+          "role": "direction",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "direction",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "performance",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "performance",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "staging",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "staging",
+          "status": "unknown"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "cinematography",
+          "status": "unknown"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "cinematography",
+          "status": "unknown"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "prompt",
+          "status": "not_applicable"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "prompt",
+          "status": "not_applicable"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "continuity",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "continuity",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "run": "B1",
+      "source": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-C07-source-FG-01-v1.txt",
+      "sourceSameAsRaw": true,
+      "workbook": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-C07-shot-review-v1.json",
+      "sha256": "b0a5d473af18b5bca5f1f0ca7d0e0492a975eb93fd1b75deecc8417237b12d23",
+      "copySha256": "b0a5d473af18b5bca5f1f0ca7d0e0492a975eb93fd1b75deecc8417237b12d23",
+      "command": [
+        "node",
+        "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\scripts\\check-shot-review.mjs",
+        "D:\\Temp\\cineweave-split-p4-content-review-58-evidence-20261012\\B1-C07-input.json"
+      ],
+      "exitCode": 2,
+      "stderr": "",
+      "native": {
+        "valid": true,
+        "scope": "plan_only",
+        "coverageComplete": true,
+        "reviewComplete": false,
+        "expectedRows": 12,
+        "missing": [],
+        "openItems": [
+          {
+            "role": "cinematography",
+            "shotId": "FG-S01",
+            "status": "unknown"
+          },
+          {
+            "role": "cinematography",
+            "shotId": "FG-S02",
+            "status": "unknown"
+          }
+        ],
+        "prompt": null,
+        "errors": [],
+        "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。",
+        "localization": {
+          "locale": "zh-CN",
+          "summary": "输入有效，评审仍有未决项或没有适用的通过项。"
+        }
+      },
+      "sameAsSavedNative": true,
+      "rows": 12,
+      "rowPairs": 12,
+      "sourceMetadata": {
+        "type": "design",
+        "id": "FG-01",
+        "version": 1
+      },
+      "statuses": [
+        {
+          "shotId": "FG-S01",
+          "role": "direction",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "direction",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "performance",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "performance",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "staging",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "staging",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "cinematography",
+          "status": "unknown"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "cinematography",
+          "status": "unknown"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "prompt",
+          "status": "not_applicable"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "prompt",
+          "status": "not_applicable"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "continuity",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "continuity",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "run": "B2",
+      "source": "D:\\Temp\\cineweave-split-p4-multiskill-b2-20261012\\CW-SPLIT-C07-source-v1.txt",
+      "sourceSameAsRaw": true,
+      "workbook": "D:\\Temp\\cineweave-split-p4-multiskill-b2-20261012\\CW-SPLIT-C07-review-workbook.json",
+      "sha256": "9e5d1689d44fd662efe10db43bdf8a3c9da7205b905aaff124c1fbfd84b8e058",
+      "copySha256": "9e5d1689d44fd662efe10db43bdf8a3c9da7205b905aaff124c1fbfd84b8e058",
+      "command": [
+        "node",
+        "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\scripts\\check-shot-review.mjs",
+        "D:\\Temp\\cineweave-split-p4-content-review-58-evidence-20261012\\B2-C07-input.json"
+      ],
+      "exitCode": 2,
+      "stderr": "",
+      "native": {
+        "valid": true,
+        "scope": "plan_only",
+        "coverageComplete": true,
+        "reviewComplete": false,
+        "expectedRows": 12,
+        "missing": [],
+        "openItems": [
+          {
+            "role": "staging",
+            "shotId": "FG-S02",
+            "status": "unknown"
+          },
+          {
+            "role": "cinematography",
+            "shotId": "FG-S01",
+            "status": "unknown"
+          },
+          {
+            "role": "cinematography",
+            "shotId": "FG-S02",
+            "status": "unknown"
+          }
+        ],
+        "prompt": null,
+        "errors": [],
+        "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。",
+        "localization": {
+          "locale": "zh-CN",
+          "summary": "输入有效，评审仍有未决项或没有适用的通过项。"
+        }
+      },
+      "sameAsSavedNative": true,
+      "rows": 12,
+      "rowPairs": 12,
+      "sourceMetadata": {
+        "type": "design",
+        "id": "FG-01",
+        "version": 1
+      },
+      "statuses": [
+        {
+          "shotId": "FG-S01",
+          "role": "direction",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "direction",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "performance",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "performance",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "staging",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "staging",
+          "status": "unknown"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "cinematography",
+          "status": "unknown"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "cinematography",
+          "status": "unknown"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "prompt",
+          "status": "not_applicable"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "prompt",
+          "status": "not_applicable"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "continuity",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "continuity",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "run": "B3",
+      "source": "D:\\Temp\\cineweave-split-p4-multiskill-b3-20261012\\C07-source.json",
+      "sourceSameAsRaw": true,
+      "workbook": "D:\\Temp\\cineweave-split-p4-multiskill-b3-20261012\\C07-review-input.json",
+      "sha256": "19e0761a4754871732a1d77ee1e78d1eaea1224725102a6500415023cd3fd00f",
+      "copySha256": "19e0761a4754871732a1d77ee1e78d1eaea1224725102a6500415023cd3fd00f",
+      "command": [
+        "node",
+        "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\scripts\\check-shot-review.mjs",
+        "D:\\Temp\\cineweave-split-p4-content-review-58-evidence-20261012\\B3-C07-input.json"
+      ],
+      "exitCode": 2,
+      "stderr": "",
+      "native": {
+        "valid": true,
+        "scope": "plan_only",
+        "coverageComplete": true,
+        "reviewComplete": false,
+        "expectedRows": 12,
+        "missing": [],
+        "openItems": [
+          {
+            "role": "staging",
+            "shotId": "FG-S01",
+            "status": "unknown"
+          },
+          {
+            "role": "cinematography",
+            "shotId": "FG-S01",
+            "status": "unknown"
+          },
+          {
+            "role": "staging",
+            "shotId": "FG-S02",
+            "status": "unknown"
+          },
+          {
+            "role": "cinematography",
+            "shotId": "FG-S02",
+            "status": "unknown"
+          }
+        ],
+        "prompt": null,
+        "errors": [],
+        "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。",
+        "localization": {
+          "locale": "zh-CN",
+          "summary": "输入有效，评审仍有未决项或没有适用的通过项。"
+        }
+      },
+      "sameAsSavedNative": true,
+      "rows": 12,
+      "rowPairs": 12,
+      "sourceMetadata": {
+        "type": "design",
+        "id": "FG-01",
+        "version": 1
+      },
+      "statuses": [
+        {
+          "shotId": "FG-S01",
+          "role": "direction",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "performance",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "staging",
+          "status": "unknown"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "cinematography",
+          "status": "unknown"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "prompt",
+          "status": "not_applicable"
+        },
+        {
+          "shotId": "FG-S01",
+          "role": "continuity",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "direction",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "performance",
+          "status": "pass"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "staging",
+          "status": "unknown"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "cinematography",
+          "status": "unknown"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "prompt",
+          "status": "not_applicable"
+        },
+        {
+          "shotId": "FG-S02",
+          "role": "continuity",
+          "status": "pass"
+        }
+      ]
+    }
+  ],
+  "c08": [
+    {
+      "run": "A2",
+      "documentId": "REV-G",
+      "path": "D:\\Temp\\cineweave-split-p4-baseline-a2-20261012\\C08-REV-G-v2.txt",
+      "exactExpected": true,
+      "s01Exact": true,
+      "oldCameraCount": 0,
+      "newCameraCount": 1,
+      "sha256": "e84cdb84d3b5d4e77d4ef2a34e6309422fb40e2fd701da0f73f1edac201addaf"
+    },
+    {
+      "run": "A2",
+      "documentId": "REV-M",
+      "path": "D:\\Temp\\cineweave-split-p4-baseline-a2-20261012\\C08-REV-M-v2.txt",
+      "exactExpected": true,
+      "s01Exact": true,
+      "oldCameraCount": 0,
+      "newCameraCount": 1,
+      "sha256": "85378cca4daee4f735de17b6f3e49a6c3fa286d14474ff7a074d646be4f1d773"
+    },
+    {
+      "run": "A2",
+      "documentId": "REV-P",
+      "path": "D:\\Temp\\cineweave-split-p4-baseline-a2-20261012\\C08-REV-P-v2.txt",
+      "exactExpected": true,
+      "s01Exact": true,
+      "oldCameraCount": 0,
+      "newCameraCount": 1,
+      "sha256": "31af63156c4a5099bef90af945a8620ddd15011e8b731f207afb869914c0a9d9"
+    },
+    {
+      "run": "A3",
+      "documentId": "REV-G",
+      "path": "D:\\Temp\\cineweave-split-p4-baseline-a3-20261012\\C08-REV-G-r2.txt",
+      "exactExpected": true,
+      "s01Exact": true,
+      "oldCameraCount": 0,
+      "newCameraCount": 1,
+      "sha256": "e84cdb84d3b5d4e77d4ef2a34e6309422fb40e2fd701da0f73f1edac201addaf"
+    },
+    {
+      "run": "A3",
+      "documentId": "REV-M",
+      "path": "D:\\Temp\\cineweave-split-p4-baseline-a3-20261012\\C08-REV-M-r2.txt",
+      "exactExpected": true,
+      "s01Exact": true,
+      "oldCameraCount": 0,
+      "newCameraCount": 1,
+      "sha256": "85378cca4daee4f735de17b6f3e49a6c3fa286d14474ff7a074d646be4f1d773"
+    },
+    {
+      "run": "A3",
+      "documentId": "REV-P",
+      "path": "D:\\Temp\\cineweave-split-p4-baseline-a3-20261012\\C08-REV-P-r2.txt",
+      "exactExpected": true,
+      "s01Exact": true,
+      "oldCameraCount": 0,
+      "newCameraCount": 1,
+      "sha256": "31af63156c4a5099bef90af945a8620ddd15011e8b731f207afb869914c0a9d9"
+    },
+    {
+      "run": "B1",
+      "documentId": "REV-G",
+      "path": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-C08-REV-G-v2.txt",
+      "exactExpected": true,
+      "s01Exact": true,
+      "oldCameraCount": 0,
+      "newCameraCount": 1,
+      "sha256": "aebe20c26802a37c2eb1ba999841f9416de8ad5c7d291add49a4f3bf046ed325"
+    },
+    {
+      "run": "B1",
+      "documentId": "REV-M",
+      "path": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-C08-REV-M-v2.txt",
+      "exactExpected": true,
+      "s01Exact": true,
+      "oldCameraCount": 0,
+      "newCameraCount": 1,
+      "sha256": "f5f9e31b7156e45105c1976912c1c978b8dbe6d2bc82dc14e5347992af7a6f92"
+    },
+    {
+      "run": "B1",
+      "documentId": "REV-P",
+      "path": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-C08-REV-P-v2.txt",
+      "exactExpected": true,
+      "s01Exact": true,
+      "oldCameraCount": 0,
+      "newCameraCount": 1,
+      "sha256": "bcb1356f06df2b838c32f4267aa9763b84c34f17eabd32cfa2a17c788360faa0"
+    },
+    {
+      "run": "B2",
+      "documentId": "REV-G",
+      "path": "D:\\Temp\\cineweave-split-p4-multiskill-b2-20261012\\CW-SPLIT-C08-REV-G-v2.txt",
+      "exactExpected": true,
+      "s01Exact": true,
+      "oldCameraCount": 0,
+      "newCameraCount": 1,
+      "sha256": "e84cdb84d3b5d4e77d4ef2a34e6309422fb40e2fd701da0f73f1edac201addaf"
+    },
+    {
+      "run": "B2",
+      "documentId": "REV-M",
+      "path": "D:\\Temp\\cineweave-split-p4-multiskill-b2-20261012\\CW-SPLIT-C08-REV-M-v2.txt",
+      "exactExpected": true,
+      "s01Exact": true,
+      "oldCameraCount": 0,
+      "newCameraCount": 1,
+      "sha256": "85378cca4daee4f735de17b6f3e49a6c3fa286d14474ff7a074d646be4f1d773"
+    },
+    {
+      "run": "B2",
+      "documentId": "REV-P",
+      "path": "D:\\Temp\\cineweave-split-p4-multiskill-b2-20261012\\CW-SPLIT-C08-REV-P-v2.txt",
+      "exactExpected": true,
+      "s01Exact": true,
+      "oldCameraCount": 0,
+      "newCameraCount": 1,
+      "sha256": "31af63156c4a5099bef90af945a8620ddd15011e8b731f207afb869914c0a9d9"
+    },
+    {
+      "run": "B3",
+      "documentId": "REV-G",
+      "path": "D:\\Temp\\cineweave-split-p4-multiskill-b3-20261012\\C08-revised-documents.json",
+      "exactExpected": true,
+      "revision": 2,
+      "oldCameraCount": 0,
+      "newCameraCount": 1
+    },
+    {
+      "run": "B3",
+      "documentId": "REV-M",
+      "path": "D:\\Temp\\cineweave-split-p4-multiskill-b3-20261012\\C08-revised-documents.json",
+      "exactExpected": true,
+      "revision": 2,
+      "oldCameraCount": 0,
+      "newCameraCount": 1
+    },
+    {
+      "run": "B3",
+      "documentId": "REV-P",
+      "path": "D:\\Temp\\cineweave-split-p4-multiskill-b3-20261012\\C08-revised-documents.json",
+      "exactExpected": true,
+      "revision": 2,
+      "oldCameraCount": 0,
+      "newCameraCount": 1
+    },
+    {
+      "run": "A1",
+      "path": "D:\\Temp\\cineweave-split-p2-baseline-a-20261012\\case-CW-SPLIT-C08.md",
+      "textBlocks": 4,
+      "s01Exact": true,
+      "gExact": true,
+      "mExact": true,
+      "newCameraInStandaloneS02": true,
+      "identityExpandedInStandaloneS02": true
+    }
+  ],
+  "mediaVerified": false,
+  "implicitAutomaticHostSelection": "unknown",
+  "telemetry": "unknown",
+  "c08Impact": {
+    "command": [
+      "node",
+      "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\scripts\\check-change-impact.mjs",
+      "D:\\Temp\\cineweave-split-p4-content-review-58-evidence-20261012\\B2-C08-impact-input.json"
+    ],
+    "exitCode": 2,
+    "stderr": "",
+    "native": {
+      "valid": true,
+      "affected": [
+        "REV-G",
+        "REV-M",
+        "REV-P",
+        "REV-S01-to-REV-S02.continuity"
+      ],
+      "unaffected": [
+        "REV-S01.locked",
+        "REV.sound-intent"
+      ],
+      "needsReview": [
+        "REV-S01-to-REV-S02.continuity"
+      ],
+      "errors": [],
+      "scope": "plan_only",
+      "changedSources": [
+        "REV-S02.direction"
+      ],
+      "noOpChanges": [],
+      "changeEvidence": [
+        {
+          "source": "REV-S02.direction",
+          "fromRevision": 1,
+          "toRevision": 2,
+          "paths": [
+            "/cameraPosition"
+          ],
+          "status": "supplied_difference"
+        }
+      ],
+      "sourceAuthorityVerified": false,
+      "measurementVerified": false
+    },
+    "sameAsSavedNative": true
+  }
+}

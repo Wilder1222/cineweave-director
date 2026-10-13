@@ -1,0 +1,16 @@
+{
+  "valid": true,
+  "scope": "plan_only",
+  "coverageComplete": true,
+  "reviewComplete": true,
+  "expectedRows": 12,
+  "missing": [],
+  "openItems": [],
+  "prompt": null,
+  "errors": [],
+  "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。",
+  "localization": {
+    "locale": "zh-CN",
+    "summary": "规划评审已完成；实际媒体仍未核验。"
+  }
+}

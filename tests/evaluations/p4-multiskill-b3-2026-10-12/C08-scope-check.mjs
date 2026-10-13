@@ -1,0 +1,24 @@
+import fs from 'node:fs';
+const out = 'D:/Temp/cineweave-split-p4-multiskill-b3-20261012';
+const raw = JSON.parse(fs.readFileSync('D:/Temp/cineweave-split-p4-contents-raw-inputs-20261012.json','utf8'));
+const sourceCase = raw.cases.find(c => c.id === 'CW-SPLIT-C08');
+const input = {caseId:sourceCase.id, request:sourceCase.request, sourceDocuments:sourceCase.rawData.sourceDocuments, capabilityMaterial:sourceCase.rawData.capabilityMaterial};
+fs.writeFileSync(out+'/C08-revision-input.json',JSON.stringify(input,null,2)+'\n',{flag:'wx'});
+const original=input.sourceDocuments;
+const oldCamera='桌南侧偏西略俯';
+const newCamera='桌南侧偏东略俯';
+const revised=original.map(d=>({...d,revision:2,text:d.text.replace(oldCamera,newCamera).replace('设计文本版本1','设计文本版本2').replace('REV-P，版本1','REV-P，版本2')}));
+fs.writeFileSync(out+'/C08-revised-documents.json',JSON.stringify(revised,null,2)+'\n',{flag:'wx'});
+const section=(text,tag,endTag)=>{const start=text.indexOf(tag);const end=text.indexOf(endTag,start);return text.slice(start,end<0?undefined:end);};
+const g1=section(original[0].text,'REV-S01：','\nREV-S02：');
+const g2=section(revised[0].text,'REV-S01：','\nREV-S02：');
+const m1=section(original[1].text,'0至4秒REV-S01，','\n4至8秒REV-S02，');
+const m2=section(revised[1].text,'0至4秒REV-S01，','\n4至8秒REV-S02，');
+const p1=section(original[2].text,'REV-S01复制正文：','\nREV-S02复制正文：');
+const p2=section(revised[2].text,'REV-S01复制正文：','\nREV-S02复制正文：');
+const checks=original.map((d,i)=>({documentId:d.documentId,oldCameraOccurrences:d.text.split(oldCamera).length-1,newCameraOccurrences:revised[i].text.split(newCamera).length-1,onlyCameraAndVersionChanged:revised[i].text.replace(newCamera,oldCamera).replace('设计文本版本2','设计文本版本1').replace('REV-P，版本2','REV-P，版本1')===d.text}));
+const result={scope:'text_only',caseId:input.caseId,versions:revised.map(d=>({id:d.documentId,revision:d.revision})),s01Unchanged:{design:g1===g2,master:m1===m2,projection:p1===p2},checks,mediaVerified:false};
+fs.writeFileSync(out+'/C08-scope-stdout.json',JSON.stringify(result,null,2)+'\n',{flag:'wx'});
+fs.writeFileSync(out+'/C08-scope-exit.txt','0\n',{flag:'wx'});
+console.log(JSON.stringify({result,revised},null,2));
+

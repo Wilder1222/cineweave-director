@@ -1,0 +1,564 @@
+{
+  "format": "cineweave-higgsfield-phased-refactor-evidence",
+  "executionDate": "2026-10-12",
+  "baselineCommit": "0e476a7e96e43980bbfe8388c446c3f78fd06019",
+  "branch": "codex/higgsfield-phased-refactor",
+  "sourceHashAlgorithm": "SHA256 raw file bytes, not JCS contract hashes",
+  "sourceFiles": [
+    {
+      "path": "package.json",
+      "sha256": "dabdc7799d514187a8ab389de27337f3a76f5a9e5fba2889b324da2fd34e2ebe"
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "sha256": "812848aa0d2f33661f75f51fffc2ca26f4a9e1255422ae0a2d57136365a0d16c"
+    },
+    {
+      "path": "scripts/validate-output.mjs",
+      "sha256": "b0821059e41f1d4e4c09885d7f1477685d6409edb32e139993e47287198da19f"
+    },
+    {
+      "path": "scripts/contract-context.mjs",
+      "sha256": "a72c92513935aa907033f502ed840bec0304fa5c8655f752dff50ec6f1405f74"
+    },
+    {
+      "path": "scripts/validate-prompt-projection.mjs",
+      "sha256": "a15e656970dd03594395a197815cd5cc185f57de73c6c480656da19ff7735a92"
+    },
+    {
+      "path": "scripts/validate-shot-compiler.mjs",
+      "sha256": "8ba13366cc104ba8ec0936ab6dd845a379c8e6e4f84ca6dbb69a43ad2c9c90e5"
+    },
+    {
+      "path": "scripts/validate-repository.mjs",
+      "sha256": "82e325db185a1de7dfa78527fcda92987478adf991a03037f334d8e59ff615d6"
+    },
+    {
+      "path": "skills/cineweave-director/SKILL.md",
+      "sha256": "121f5ac583118c32f339f10da430aff0d6adc687e1b0a36fa821e5ced342f034"
+    },
+    {
+      "path": "skills/cineweave-director/contracts.json",
+      "sha256": "d69f53b084489f788d51061435257025b225a7979ddd00f72cc2db30d1ecd61b"
+    },
+    {
+      "path": "skills/cineweave-director/reference-lifecycle.json",
+      "sha256": "d9537b7f0afab013243899048afe282181cc253e4d2983607818a1898617d233"
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/index.json",
+      "sha256": "9d83e3858b0376db618d0ee380ef0bcde2b44a4d6f4f46f14a9f0cef03bc3176"
+    },
+    {
+      "path": "skills/cineweave-director/scripts/check-change-impact.mjs",
+      "sha256": "9e4192ac7b4722834f38293291601621305f90b414ab52e02d4d944c6096ae85"
+    },
+    {
+      "path": "skills/cineweave-director/scripts/check-audio-returns.mjs",
+      "sha256": "523722ef0e3200e02cb47174c1b26bed39e14e296c7e508796ff19501bba80b1"
+    },
+    {
+      "path": "skills/cineweave-director/scripts/check-video-plan.mjs",
+      "sha256": "c8d3dae44543e85a494238a4953904e513094a16091b0385f69e9938b6e7000b"
+    },
+    {
+      "path": "skills/cineweave-director/scripts/check-shot-review.mjs",
+      "sha256": "bb69f60d8794f3329bc4b7af772d05ad01a28c001c7345f1de63bfa1e3d7d1c2"
+    },
+    {
+      "path": "skills/cineweave-director/scripts/parse-json.mjs",
+      "sha256": "9c15621d8304bf6114cc4cb322409c8e59433409ac17950311725cdcbebecf11"
+    },
+    {
+      "path": "skills/cineweave-director/references/core/operating-model.md",
+      "sha256": "93983bee477b216b53543556ab2523ee6d7e8b1d56e2721810d2fb359e8e204f"
+    },
+    {
+      "path": "skills/cineweave-director/references/core/artifact-control-and-precedence.md",
+      "sha256": "378b9f8d7ab60d8ab19b2f2ab3ccb7eccbbd609aac42ced477c4139e6765e786"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/drafts-and-change-impact.md",
+      "sha256": "84670321b3cb5a42b34120fb0ead60b790e9db05c923e87f04265392c9b4d94b"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-platform-adaptation.md",
+      "sha256": "9b5a4e163a6482704b43333547d16ffc0ed3542d9526599e49455460971bd7f9"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-sound-and-delivery.md",
+      "sha256": "454f689eb1c229552c520647a0ec9829295f748d5cf5d866f80ca5fbcf7ec15f"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-timing-and-handles.md",
+      "sha256": "e61680f79223554f3aef05c21d18510b9c80e044bffc594dd264721fe6cc737a"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-performance-direction.md",
+      "sha256": "8a156479c8ae94c55a1c6b433fef9193733fc64867eaae2a17e17e404614a11d"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/generation-diagnostics.md",
+      "sha256": "9f8b6be9c021d97a9cecaf79a4f93f75810ed3c299670300e4c48c29e0a8460b"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/production-plan.md",
+      "sha256": "2daf3977bb9ed78859899c9b0fc6b1ddbbb0d81f32a2897920e76df045a962a5"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/review-repair.md",
+      "sha256": "50bcea9fe3d1b371572a3b5f18e1142d0666734f72c584e28eb71ea5b2ecfb3e"
+    },
+    {
+      "path": "tests/evaluations/cinematic-cases.json",
+      "sha256": "40cb8afcc046a164e0eef9ee841f5b7fdaa1bbe2630ddd13555efa39b87e040a"
+    }
+  ],
+  "engineering": {
+    "fullTests": {
+      "command": "npm test",
+      "exitCode": 0,
+      "tests": 374,
+      "pass": 374,
+      "fail": 0
+    },
+    "index": {
+      "command": "npm run contracts:index:check",
+      "exitCode": 0,
+      "roots": 52,
+      "supportSchemas": 2
+    },
+    "finalDistribution": {
+      "sourceValidation": true,
+      "bundleValidation": true,
+      "buildByteIdentical": true,
+      "installedDirectorySmoke": true,
+      "files": 161,
+      "references": 42,
+      "roots": 52,
+      "schemas": 54,
+      "examples": 52,
+      "localRuntime": "Node.js v22.15.0 on Windows",
+      "actualInstallationPerformed": false
+    },
+    "finalChecks": [
+      {
+        "command": "npm test",
+        "exitCode": 0,
+        "tests": 374,
+        "pass": 374,
+        "fail": 0
+      },
+      {
+        "command": "npm run contracts:index:check",
+        "exitCode": 0
+      },
+      {
+        "command": "npm run validate",
+        "exitCode": 0
+      },
+      {
+        "command": "npm run build",
+        "exitCode": 0
+      },
+      {
+        "command": "npm run validate:bundle",
+        "exitCode": 0
+      },
+      {
+        "command": "npm run test:bundle",
+        "exitCode": 0,
+        "tests": 1,
+        "pass": 1
+      },
+      {
+        "command": "git diff --check",
+        "exitCode": 0
+      },
+      {
+        "command": "targeted entry/catalog/case checks after context-source update",
+        "exitCode": 0,
+        "tests": 4,
+        "pass": 4
+      }
+    ]
+  },
+  "postImplementationAudit": {
+    "script": "tests/evaluations/higgsfield-counterexamples-2026-10-11.mjs",
+    "scriptSha256": "b94bbfbb01b463835876b2fa264a70bda50229f30c92fc30af36587483c7296b",
+    "originalResearchDate": "2026-10-11",
+    "results": [
+      {
+        "stem": "temporal-spec",
+        "label": "baseline",
+        "change": "规范模拟夹具未修改",
+        "fixtureHash": "sha256:bc5c645a91611694828b71a472774382184c6948df4f985fdf22fccd80c39885",
+        "valid": true,
+        "errors": [],
+        "unverified": [],
+        "inputUnchanged": true,
+        "expectedAfterRefactor": "valid"
+      },
+      {
+        "stem": "sequence-rhythm-spec",
+        "label": "baseline",
+        "change": "规范模拟夹具未修改",
+        "fixtureHash": "sha256:59eece57cd6b760ab60aca9f268f83876e8aab8925f86b0ca954cf3e48b65887",
+        "valid": true,
+        "errors": [],
+        "unverified": [
+          "$.validation.storyboardShotsCovered: exact storyboard registry binding unavailable or ambiguous; only local phase/window closure was checked"
+        ],
+        "inputUnchanged": true,
+        "expectedAfterRefactor": "valid"
+      },
+      {
+        "stem": "prompt-projection-plan",
+        "label": "baseline",
+        "change": "规范模拟夹具未修改",
+        "fixtureHash": "sha256:681401df08ebfdf4f66614ccbba35ef46ed9c53e23c52249097106c9ef057641",
+        "valid": true,
+        "errors": [],
+        "unverified": [
+          "$.experimentPlan.variants[1] single-variable heldConstants and expectedEffect are free-text claims requiring review against the baseline and actual returned media",
+          "$.sourcePromptRef: exact registry binding unavailable",
+          "$.capabilityProfileRef: exact registry binding unavailable",
+          "$.licenseProfileRef: exact registry binding unavailable",
+          "$.referenceBindings[0].sourceObservationRef: exact registry binding unavailable",
+          "Source registry authority, current provider/account support, actual rights and preservation of adapted creative intent require evidence review"
+        ],
+        "inputUnchanged": true,
+        "expectedAfterRefactor": "valid"
+      },
+      {
+        "stem": "capability-profile",
+        "label": "baseline",
+        "change": "规范模拟夹具未修改",
+        "fixtureHash": "sha256:a67876037cafc4e795ded41b1d0f346dbe1336e6ebd41a40db956bee050ef9f9",
+        "valid": true,
+        "errors": [],
+        "unverified": [],
+        "inputUnchanged": true,
+        "expectedAfterRefactor": "valid"
+      },
+      {
+        "stem": "capability-resolution-plan",
+        "label": "baseline",
+        "change": "规范模拟夹具未修改",
+        "fixtureHash": "sha256:a84acb3b4126ac0ac92b4a9aa0b86d6cbbcbf11bfda46b47ea36639ba1b9428d",
+        "valid": true,
+        "errors": [],
+        "unverified": [
+          "$.candidates[0].capabilityProfileRef: exact registry binding unavailable",
+          "Exact source declarations and hashes do not verify actual provider support, current account capabilities, rights or generated media; those require external evidence review"
+        ],
+        "inputUnchanged": true,
+        "expectedAfterRefactor": "valid"
+      },
+      {
+        "stem": "temporal-spec",
+        "label": "old_out_of_duration",
+        "change": "动作事件超出镜头时长",
+        "fixtureHash": "sha256:bc5c645a91611694828b71a472774382184c6948df4f985fdf22fccd80c39885",
+        "valid": false,
+        "errors": [
+          "$.actionTimeline[0].timeSeconds must be within 0..durationSeconds inclusive",
+          "$.actionTimeline[1].timeSeconds must be non-decreasing within actionTimeline"
+        ],
+        "unverified": [],
+        "inputUnchanged": true,
+        "expectedAfterRefactor": "invalid"
+      },
+      {
+        "stem": "sequence-rhythm-spec",
+        "label": "old_reversed_window",
+        "change": "窗口起帧大于止帧",
+        "fixtureHash": "sha256:59eece57cd6b760ab60aca9f268f83876e8aab8925f86b0ca954cf3e48b65887",
+        "valid": false,
+        "errors": [
+          "$.shotWindows[0].startFrame must not exceed endFrame (inclusive window)",
+          "$.shotWindows[0].startFrame must begin at zero",
+          "$.breathingPoints[0].frame must be within its shotWindow inclusive bounds"
+        ],
+        "unverified": [],
+        "inputUnchanged": true,
+        "expectedAfterRefactor": "invalid"
+      },
+      {
+        "stem": "prompt-projection-plan",
+        "label": "copy_text_diverges",
+        "change": "仅把 copyText 改成另一人物和场景",
+        "fixtureHash": "sha256:681401df08ebfdf4f66614ccbba35ef46ed9c53e23c52249097106c9ef057641",
+        "valid": false,
+        "errors": [
+          "$.renderedPrompt.copyText must equal body plus one ASCII space and parameterTail, or body alone when the tail is empty"
+        ],
+        "unverified": [
+          "$.experimentPlan.variants[1] single-variable heldConstants and expectedEffect are free-text claims requiring review against the baseline and actual returned media"
+        ],
+        "inputUnchanged": true,
+        "expectedAfterRefactor": "invalid"
+      },
+      {
+        "stem": "prompt-projection-plan",
+        "label": "token_value_diverges",
+        "change": "--ar 的 value 保持 16:9，rendered 改成 --ar 1:1",
+        "fixtureHash": "sha256:681401df08ebfdf4f66614ccbba35ef46ed9c53e23c52249097106c9ef057641",
+        "valid": false,
+        "errors": [
+          "$.parameterTokens[1].rendered must equal \"--ar 16:9\" from its name and value",
+          "$.renderedPrompt.parameterTail must equal parameterTokens rendered in unique order joined by one ASCII space"
+        ],
+        "unverified": [
+          "$.experimentPlan.variants[1] single-variable heldConstants and expectedEffect are free-text claims requiring review against the baseline and actual returned media"
+        ],
+        "inputUnchanged": true,
+        "expectedAfterRefactor": "invalid"
+      },
+      {
+        "stem": "prompt-projection-plan",
+        "label": "duplicate_parameter",
+        "change": "追加相同参数对象，重复 ID、order 和 name",
+        "fixtureHash": "sha256:681401df08ebfdf4f66614ccbba35ef46ed9c53e23c52249097106c9ef057641",
+        "valid": false,
+        "errors": [
+          "$.parameterTokens[5].parameterId duplicates \"parameter.aspect-ratio\"",
+          "$.parameterTokens[5].order duplicates 2",
+          "$.parameterTokens[5].name repeats a singleton Midjourney parameter --ar; supported multi-values belong in one token",
+          "$.renderedPrompt.parameterTail must equal parameterTokens rendered in unique order joined by one ASCII space"
+        ],
+        "unverified": [
+          "$.experimentPlan.variants[1] single-variable heldConstants and expectedEffect are free-text claims requiring review against the baseline and actual returned media"
+        ],
+        "inputUnchanged": true,
+        "expectedAfterRefactor": "invalid"
+      },
+      {
+        "stem": "prompt-projection-plan",
+        "label": "undeclared_placeholder",
+        "change": "renderedPrompt 声明未绑定的占位符",
+        "fixtureHash": "sha256:681401df08ebfdf4f66614ccbba35ef46ed9c53e23c52249097106c9ef057641",
+        "valid": false,
+        "errors": [
+          "$.renderedPrompt.referencePlaceholders[0] has no declared reference binding for \"REF_UNDECLARED_ASSET\"",
+          "$.renderedPrompt.referencePlaceholders is missing declared binding \"REF_STYLE_CORRIDOR_MATERIAL_01\""
+        ],
+        "unverified": [
+          "$.experimentPlan.variants[1] single-variable heldConstants and expectedEffect are free-text claims requiring review against the baseline and actual returned media"
+        ],
+        "inputUnchanged": true,
+        "expectedAfterRefactor": "invalid"
+      },
+      {
+        "stem": "prompt-projection-plan",
+        "label": "unbound_source_hash",
+        "change": "sourcePromptRef 使用未绑定的全零哈希",
+        "fixtureHash": "sha256:681401df08ebfdf4f66614ccbba35ef46ed9c53e23c52249097106c9ef057641",
+        "valid": true,
+        "errors": [],
+        "unverified": [
+          "$.experimentPlan.variants[1] single-variable heldConstants and expectedEffect are free-text claims requiring review against the baseline and actual returned media",
+          "$.sourcePromptRef: exact registry binding unavailable",
+          "$.capabilityProfileRef: exact registry binding unavailable",
+          "$.licenseProfileRef: exact registry binding unavailable",
+          "$.referenceBindings[0].sourceObservationRef: exact registry binding unavailable",
+          "Source registry authority, current provider/account support, actual rights and preservation of adapted creative intent require evidence review"
+        ],
+        "inputUnchanged": true,
+        "expectedAfterRefactor": "valid_with_unverified_context"
+      },
+      {
+        "stem": "prompt-projection-plan",
+        "label": "malformed_context",
+        "change": "artifacts 传入字符串",
+        "fixtureHash": "sha256:681401df08ebfdf4f66614ccbba35ef46ed9c53e23c52249097106c9ef057641",
+        "valid": false,
+        "errors": [
+          "$.sourcePromptRef: artifacts must be an array of exact ref/document bindings",
+          "$.capabilityProfileRef: artifacts must be an array of exact ref/document bindings",
+          "$.licenseProfileRef: artifacts must be an array of exact ref/document bindings",
+          "$.referenceBindings[0].sourceObservationRef: artifacts must be an array of exact ref/document bindings"
+        ],
+        "unverified": [
+          "$.experimentPlan.variants[1] single-variable heldConstants and expectedEffect are free-text claims requiring review against the baseline and actual returned media",
+          "$.sourcePromptRef: supplied source evidence could not be verified",
+          "$.capabilityProfileRef: supplied source evidence could not be verified",
+          "$.licenseProfileRef: supplied source evidence could not be verified",
+          "$.referenceBindings[0].sourceObservationRef: supplied source evidence could not be verified",
+          "Source registry authority, current provider/account support, actual rights and preservation of adapted creative intent require evidence review"
+        ],
+        "inputUnchanged": true,
+        "expectedAfterRefactor": "invalid"
+      },
+      {
+        "stem": "capability-resolution-plan",
+        "label": "exact_profile_partial_but_selected_strong",
+        "change": "精确档案 identity_consistency=partial，选择结果改成 strong/pass/selected",
+        "fixtureHash": "sha256:a84acb3b4126ac0ac92b4a9aa0b86d6cbbcbf11bfda46b47ea36639ba1b9428d",
+        "valid": false,
+        "errors": [
+          "$.candidates[0].capabilityResults[0].support must match exact profile support partial for the requested capability and scope",
+          "$.candidates[0] cannot be selected because hard requirement requirement.identity is not strongly supported and passing in the exact profile",
+          "$.candidates[0].capabilityResults[1].support must match exact profile support unknown for the requested capability and scope",
+          "$.candidates[0].capabilityResults[1] cannot pass unknown source profile support"
+        ],
+        "unverified": [
+          "$.candidates[0].capabilityResults[0]: per-capability input attribution is unavailable; total request.inputCount cannot verify this maxInputs limit",
+          "$.candidates[0].capabilityResults[0]: subject count is not declared by the request; maxSubjects remains unverified and outputCount is not subjectCount",
+          "$.candidates[0].capabilityResults[1]: capability independent_tile_generation is not declared by the exact profile; support is unknown",
+          "Exact source declarations and hashes do not verify actual provider support, current account capabilities, rights or generated media; those require external evidence review"
+        ],
+        "inputUnchanged": true,
+        "expectedAfterRefactor": "invalid",
+        "profileSupport": "partial"
+      },
+      {
+        "stem": "cinematic-skill-manifest",
+        "label": "baseline",
+        "change": "规范模拟夹具未修改",
+        "fixtureHash": "sha256:f3ee41e249445aa15fa1d06b668a92a077424b33d0d6906348dc46e5ff7d577e",
+        "valid": true,
+        "errors": [],
+        "unverified": [],
+        "inputUnchanged": true,
+        "expectedAfterRefactor": "valid"
+      },
+      {
+        "stem": "shot-compiler-plan",
+        "label": "baseline",
+        "change": "规范模拟夹具未修改",
+        "fixtureHash": "sha256:9cbe3c207b2d87fed9728d961bda502b9ab8bb3eb7f78ff0b5ac7f4d3c61a5de",
+        "valid": true,
+        "errors": [],
+        "unverified": [
+          "$.cinematicSkillManifestRef: exact registry binding unavailable",
+          "Resolved asset refs, upstream content and explicit caller design remain planning declarations; exact manifest and alias hashes do not verify source asset content, generated media quality or external execution"
+        ],
+        "inputUnchanged": true,
+        "expectedAfterRefactor": "valid"
+      },
+      {
+        "stem": "shot-compiler-plan",
+        "label": "unknown_manifest_skill",
+        "change": "精确 manifest 上下文中不存在所选 skillId",
+        "fixtureHash": "sha256:9cbe3c207b2d87fed9728d961bda502b9ab8bb3eb7f78ff0b5ac7f4d3c61a5de",
+        "valid": false,
+        "errors": [
+          "$.skillSelection.skillId is not declared in the exact manifest"
+        ],
+        "unverified": [
+          "Resolved asset refs, upstream content and explicit caller design remain planning declarations; exact manifest and alias hashes do not verify source asset content, generated media quality or external execution"
+        ],
+        "inputUnchanged": true,
+        "expectedAfterRefactor": "invalid"
+      },
+      {
+        "stem": "shot-compiler-plan",
+        "label": "manifest_parameter_out_of_range",
+        "change": "参数和控制面同改为 900；manifest 范围仍为 0..1",
+        "fixtureHash": "sha256:9cbe3c207b2d87fed9728d961bda502b9ab8bb3eb7f78ff0b5ac7f4d3c61a5de",
+        "valid": false,
+        "errors": [
+          "$.parameterValues[0].value exceeds manifest range maximum 1"
+        ],
+        "unverified": [
+          "$.handoffs[2].fieldAssignments[1]: explicit caller constant design is preserved; its authority is not declared by the selected manifest",
+          "Resolved asset refs, upstream content and explicit caller design remain planning declarations; exact manifest and alias hashes do not verify source asset content, generated media quality or external execution"
+        ],
+        "inputUnchanged": true,
+        "expectedAfterRefactor": "invalid"
+      }
+    ]
+  },
+  "behavior": {
+    "caseIds": [
+      "CD-E62",
+      "CD-E63",
+      "CD-E64",
+      "CD-E65",
+      "CD-E66",
+      "CD-E67",
+      "CD-E68"
+    ],
+    "scope": "text and declared worksheets only",
+    "review": {
+      "initialCases": [
+        "CD-E62",
+        "CD-E63",
+        "CD-E64",
+        "CD-E65",
+        "CD-E66",
+        "CD-E67"
+      ],
+      "initialTextVerdict": "pass",
+      "originalE68": "revise: unmarked prior-case assumptions",
+      "revisedE68": "pass_for_text",
+      "freshSourceIsolationRerun": "pass_for_text",
+      "allActualMedia": "unknown"
+    },
+    "preservedOriginalPrefixes": [
+      {
+        "path": "tests/evaluations/higgsfield-behavior-b-2026-10-12.md",
+        "bytes": 50054,
+        "sha256": "44b974710150fdfb672c606b8e166eba33f25b7ed1cbf519319d51d3ea2eff81",
+        "verifiedUnchanged": true
+      },
+      {
+        "path": "tests/evaluations/higgsfield-behavior-c-2026-10-12.md",
+        "bytes": 44656,
+        "sha256": "8236c6894aff65813c24a8e661b51945205e3d58ad2dcc2dc5956d25d5e26835",
+        "verifiedUnchanged": true
+      }
+    ],
+    "artifacts": [
+      {
+        "path": "tests/evaluations/higgsfield-behavior-a-2026-10-12.md",
+        "bytes": 19531,
+        "sha256": "ce6b46f5d4c07ccd330a2800fabf138e81234670a307d80ab487e09c0b6d1f3e"
+      },
+      {
+        "path": "tests/evaluations/higgsfield-behavior-b-2026-10-12.md",
+        "bytes": 53942,
+        "sha256": "ba6bc8f42102f4efaed84dcabf4f6649c42a631e495225a5fa2f4a47e8de834b"
+      },
+      {
+        "path": "tests/evaluations/higgsfield-behavior-c-2026-10-12.md",
+        "bytes": 62394,
+        "sha256": "42136d83fd9547c3cb3dae075a920768b11769f6d828e0d29d8056f3b182a677"
+      },
+      {
+        "path": "tests/evaluations/higgsfield-behavior-review-2026-10-12.md",
+        "bytes": 20026,
+        "sha256": "157a7c85c866f5bcfb492fa2a2be1620362eee1e4523f7da87b5c20c8274d054"
+      },
+      {
+        "path": "tests/evaluations/higgsfield-isolation-rerun-2026-10-12.md",
+        "bytes": 21121,
+        "sha256": "3899987611dd95b69e9e6178313770dd84e240865cbb168ae1b1931c2eaf23c4"
+      }
+    ],
+    "evidenceCorrections": [
+      "B outer shell/tool exit 1 is distinct from native Node exit 2; original log prefix preserved",
+      "C temp path corrected to existing D:/Temp worksheet, exact embedded input and native rerun confirmed; original prefix preserved"
+    ]
+  },
+  "guideRevision": {
+    "reason": "Independent E68 trial copy imported preceding case assumptions; source authority clarified and fresh rerun requested",
+    "oldSkillSha256": "3fee202fc872876ac998c1caee010730df8f409db0a6fa39b5cd3cf7ef7b3fd4",
+    "oldOperatingModelSha256": "d01a0a0221394aac5a31fb7538078c786adfd1b45441973418be4db7019b31bb",
+    "newSkillSha256": "121f5ac583118c32f339f10da430aff0d6adc687e1b0a36fa821e5ced342f034",
+    "newOperatingModelSha256": "93983bee477b216b53543556ab2523ee6d7e8b1d56e2721810d2fb359e8e204f",
+    "policy": "Explicit independent cases isolate facts; same-project continuation inherits applicable authorization. Original runs retain pre-fix source hashes, corrected original response and fresh rerun are separately recorded."
+  },
+  "media": {
+    "generated": false,
+    "observed": false,
+    "qualityVerified": false
+  },
+  "publication": {
+    "committed": false,
+    "pushed": false,
+    "installed": false
+  },
+  "externalExecution": false
+}

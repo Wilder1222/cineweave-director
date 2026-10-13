@@ -1,0 +1,19 @@
+{
+  "totalFrames": 240,
+  "shots": [
+    {
+      "endFrame": 120,
+      "startFrame": 0,
+      "id": "S01"
+    },
+    {
+      "endFrame": 240,
+      "startFrame": 120,
+      "id": "S02"
+    }
+  ],
+  "frameRate": {
+    "numerator": 24,
+    "denominator": 1
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "frameRate": {"numerator": 24, "denominator": 1},
+  "totalFrames": 192,
+  "shots": [
+    {"id":"FG-S01","startFrame":0,"endFrame":96},
+    {"id":"FG-S02","startFrame":96,"endFrame":192}
+  ]
+}

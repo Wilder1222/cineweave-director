@@ -212,6 +212,7 @@ videoTest("video helper CLI works with its bundled parser and writes no workshee
     const cli = cwVideoJoin(dir, "check-video-plan.mjs"), input = cwVideoJoin(dir, "input.json");
     cwVideoWrite(cli, cwVideoRead(cwVideoPath(new URL("../skills/cineweave-director/scripts/check-video-plan.mjs", import.meta.url))));
     cwVideoWrite(cwVideoJoin(dir, "parse-json.mjs"), cwVideoRead(cwVideoPath(new URL("../skills/cineweave-director/scripts/parse-json.mjs", import.meta.url))));
+    cwVideoWrite(cwVideoJoin(dir, "check-audio-returns.mjs"), cwVideoRead(cwVideoPath(new URL("../skills/cineweave-director/scripts/check-audio-returns.mjs", import.meta.url))));
     const before = JSON.stringify(cwWorkbook()); cwVideoWrite(input, before);
     const p = cwVideoSpawn(process.execPath, [cli, input], { encoding: "utf8" });
     videoAssert.equal(p.status, 0, p.stderr); videoAssert.equal(JSON.parse(p.stdout).valid, true); videoAssert.equal(cwVideoRead(input, "utf8"), before);

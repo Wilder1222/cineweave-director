@@ -1,0 +1,47 @@
+{
+  "valid": true,
+  "cases": [
+    {
+      "id": "CW-SPLIT-C01",
+      "hashMatches": true,
+      "fullFirstAnswerEmbedded": true
+    },
+    {
+      "id": "CW-SPLIT-C02",
+      "hashMatches": true,
+      "fullFirstAnswerEmbedded": true
+    },
+    {
+      "id": "CW-SPLIT-C03",
+      "hashMatches": true,
+      "fullFirstAnswerEmbedded": true
+    },
+    {
+      "id": "CW-SPLIT-C04",
+      "hashMatches": true,
+      "fullFirstAnswerEmbedded": true
+    },
+    {
+      "id": "CW-SPLIT-C05",
+      "hashMatches": true,
+      "fullFirstAnswerEmbedded": true
+    },
+    {
+      "id": "CW-SPLIT-C06",
+      "hashMatches": true,
+      "fullFirstAnswerEmbedded": true
+    },
+    {
+      "id": "CW-SPLIT-C07",
+      "hashMatches": true,
+      "fullFirstAnswerEmbedded": true
+    },
+    {
+      "id": "CW-SPLIT-C08",
+      "hashMatches": true,
+      "fullFirstAnswerEmbedded": true
+    }
+  ],
+  "sharedContext": true,
+  "hiddenFieldsAllNull": true
+}

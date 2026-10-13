@@ -1,0 +1,95 @@
+归档说明：绝对证据链接改为路径文字；原报告字节在 `cineweave-split-p4-content-review-58-2026-10-12.md.original.txt`，审阅结论未改。
+
+# P4 独立内容评审 58：C05–C08，A/B 各三次首版
+
+日期：2026-10-12。范围为 C05、C06、C07、C08 的 A1/A2/A3 与 B1/B2/B3，共24份首版答案；不评触发、打包、安装、工程总门禁、其他四个内容案或媒体质量。只读项目与首版，未修改仓库、原始输入、工作表或任何首版文件，未向案例执行者反馈期待答案。
+
+结论：没有发现这24份首版中的硬锁变更、虚构素材观察、传闻升级为能力事实、未经授权定稿或实际媒体通过的明确失败。保留两个具体 warning：C06 的能力证据日期交接在 A1/A2/A3 和 B2 中缺少明文；C08 的独立单镜复制上下文缺口由源 REV-P v1 带入，在 A2/A3/B1/B3 中仍未消除。不能写成全部内容无警告通过，也不能写成 B 的三次 C06 都落实了 P3 日期提醒。
+
+A1 C07 已在完成通知后读取全文、源稿、工作表与原生输出，已解除最初的 pending。本报告没有以作者的“通过”判断代替 rubric，也没有把退出码0或2直接等同于内容或媒体成功。
+
+## 来源与方法
+
+唯一案例输入为 原始8内容（实际路径：`D:/Temp/cineweave-split-p4-contents-raw-inputs-20261012.json`），当前SHA-256：`aaf18a7b9c32ff397cc990535d284c98147d58fee589bf1393976ca3ac066f09`。独立判据为仓库 rubric-v2（实际路径：`D:/study/projects/cineweave-codex-skills/cineweave-director/tests/evaluations/cineweave-split-case-rubric-v2-2026-10-12.json`），精确当前哈希保存在下述独立证据文件。
+
+已逐份阅读24份首版正文；已阅读6份 C07 全部12行工作表，逐行对照 FG-01 v1 原文；已阅读 C08 保存正文及有实际 helper 的输入/输出。额外证据来自只读重跑及文本比较，未修改首版。独立检查脚本为 verify-58（实际路径：`D:/Temp/cineweave-split-p4-content-review-58-verify-20261012.py`），输出为 verification-summary.json（实际路径：`D:/Temp/cineweave-split-p4-content-review-58-evidence-20261012/verification-summary.json`）。该脚本把6份 C07 工作表按原字节复制到评审者自己的 Temp，分别运行原冻结 A 包或当前 B 评审包的原生 Node helper，保存新的 stdout/stderr；原输入与复制输入哈希一致。
+
+“pass”仅表示本份文字任务的要求得到满足。“warning”表示有用主交付已完成且硬锁守住，但具体交接缺口仍在。C07 的源设计未知不等同于答案失败：本案恰要求如实评审和交回未决责任。所有媒体状态均未获证据。
+
+## 24份首版逐案结论
+
+| 案例 | 重复 | 内容判断 | 原始首版与具体证据 |
+| --- | --- | --- | --- |
+| C05 | A1 | pass | P3 baseline A（实际路径：`D:/study/projects/cineweave-codex-skills/cineweave-director/tests/evaluations/cineweave-split-p3-baseline-a-2026-10-12.md:178`）：先列职责/排除/冲突，再给完整全身水彩人物稿；新增五官、体态、鞋、构图和光照明确为暂定。 |
+| C05 | A2 | pass | 首版（实际路径：`D:/Temp/cineweave-split-p4-baseline-a2-20261012/CW-SPLIT-C05.md`）：A身份/B服装/C布局/D质感，排除模特脸/长发/身体与D服装；完整2:3全身站姿稿；素材标识/哈希/权利未知。 |
+| C05 | A3 | pass | 首版（实际路径：`D:/Temp/cineweave-split-p4-baseline-a3-20261012/C05.md`）：职责与冲突在人物稿前交代；保留方圆脸、短黑发、红翻领长袖棉外套、黑直筒裤；实际绑定和身份质量未证实。 |
+| C05 | B1 | pass | 首版（实际路径：`D:/Temp/cineweave-split-p4-multiskill-b1-20261012/CW-SPLIT-C05-v1.md`）：四职责有迁移/排除及后续核对；完整4:5人物稿；导演收口，reference仅承担整理。 |
+| C05 | B2 | pass | 首版（实际路径：`D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C05.md`）：明确A–D只是工作标签；人物稿完整且独立；红固有色/暗红色层分开，未导入D服装或B模特身份。 |
+| C05 | B3 | pass | 首版（实际路径：`D:/Temp/cineweave-split-p4-multiskill-b3-20261012/C05-first.md`）：迁移计划与暂定细节清楚；全文包含站姿、空手、布局、窗光和纸颗粒；真实身份一致、权利和商用保持未知。 |
+| C06 | A1 | warning W06 | P2 baseline A（实际路径：`D:/study/projects/cineweave-codex-skills/cineweave-director/tests/evaluations/cineweave-split-p2-baseline-a-2026-10-12.md:453`）：完整母稿、候选适配与独立声音稿均在；不确认传闻；待核对表缺能力证据来源/查阅日期的明确登记要求。 |
+| C06 | A2 | warning W06 | 首版（实际路径：`D:/Temp/cineweave-split-p4-baseline-a2-20261012/CW-SPLIT-C06.md`）：6秒/16:9、左稳右开及终态扶盖完整；准确网页和界面说明待补，未明确资料/核对日期。 |
+| C06 | A3 | warning W06 | 首版（实际路径：`D:/Temp/cineweave-split-p4-baseline-a3-20261012/C06.md`）：完整母稿/工作稿/独立拟音，传闻未升格；准确技术ID/版本/网页/模式有核对，但未明确来源证据日期。 |
+| C06 | B1 | pass | 首版（实际路径：`D:/Temp/cineweave-split-p4-multiskill-b1-20261012/CW-SPLIT-C06-v1.md:22`）：明确“能力核对须有对应官方资料／目标控件和日期”；不把8参考、6秒或原生声音写成已支持。 |
+| C06 | B2 | warning W06 | 首版（实际路径：`D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C06.md:25`）：完整双稿与独立声音交接；待核对表列文档/界面证据，仍未列能力资料日期或查阅日期。 |
+| C06 | B3 | pass | 首版（实际路径：`D:/Temp/cineweave-split-p4-multiskill-b3-20261012/C06-first.md:41`）：后续证据明确“准确文档/界面与查阅日期”；适配候选不冒称T2V已支持，声音继续独立待制。 |
+| C07 | A1 | pass，设计未决保留 | 首版（实际路径：`D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-C07.first-response.md`）：完整六视角；S02摄影覆盖unknown；修复责任为镜头取景/方向依据，原稿不改不批；原生 exit2。 |
+| C07 | A2 | pass，限文字相容 | 首版（实际路径：`D:/Temp/cineweave-split-p4-baseline-a2-20261012/CW-SPLIT-C07.md`）：12行依据完整；摄影pass仅针对机位/景别/光源相容，同行明写实际裁切/景深/接触未证实；原生 exit0。 |
+| C07 | A3 | pass，设计未决保留 | 首版（实际路径：`D:/Temp/cineweave-split-p4-baseline-a3-20261012/C07.md`）：S02纸朝向/折线unknown及两镜摄影unknown，责任回到场景道具/镜头取景；原生 exit2。 |
+| C07 | B1 | pass，设计未决保留 | 首版（实际路径：`D:/Temp/cineweave-split-p4-multiskill-b1-20261012/CW-SPLIT-C07-v1.md`）：两镜摄影unknown，标准指向焦点/景深与纸边覆盖；逐镜来源/最小责任完整；原生 exit2。 |
+| C07 | B2 | pass，设计未决保留 | 首版（实际路径：`D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C07.md`）：S02展开净空及两镜摄影unknown；未称潜在风险为已发生错误；原生 exit2。 |
+| C07 | B3 | pass，设计未决保留 | 首版（实际路径：`D:/Temp/cineweave-split-p4-multiskill-b3-20261012/C07-first.md`）：两镜调度可达/净空和摄影unknown；先补几何/可读范围依据，不擅改动作/机位；原生 exit2。 |
+| C08 | A1 | pass | P2 baseline A（实际路径：`D:/study/projects/cineweave-codex-skills/cineweave-director/tests/evaluations/cineweave-split-p2-baseline-a-2026-10-12.md:559`）：三稿版本2完整；S01各段逐字保留；S02独立复制稿把源中锁定身份/衣装展开；机位确入母稿/复制稿。 |
+| C08 | A2 | warning W08，局部修订pass | 首版（实际路径：`D:/Temp/cineweave-split-p4-baseline-a2-20261012/CW-SPLIT-C08.md:27`）：三稿唯一机位替换/版本更新正确，S01不变；REV-P S02仍依赖“相同男子、衣袖”的上镜上下文。 |
+| C08 | A3 | warning W08，局部修订pass | 首版（实际路径：`D:/Temp/cineweave-split-p4-baseline-a3-20261012/C08.md:27`）：完整三稿正确同步；相邻连续性与物理西窗光复查清楚；源REV-P上下文缺口原样带入。 |
+| C08 | B1 | warning W08，局部修订pass | 首版（实际路径：`D:/Temp/cineweave-split-p4-multiskill-b1-20261012/CW-SPLIT-C08-v1.md:25`）：三稿机位同步/S01不变；REV-P首句“现有”→“修订”为包装元数据；S02独立上下文仍缺。 |
+| C08 | B2 | pass | 首版（实际路径：`D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C08.md`）：另存机位最小diff三稿，并交完整独立S02复制稿；展开源锁定身份/衣装/左侧扶盒/雕刻小鸟，未新增故事事实。 |
+| C08 | B3 | warning W08，局部修订pass | 首版（实际路径：`D:/Temp/cineweave-split-p4-multiskill-b3-20261012/C08-first.md:34`）：三稿唯一机位+版本替换已核；每镜4秒/16:9、夹具无音频控件正确；S02仍引用上镜相同男子/衣袖。 |
+
+## W06：能力来源/日期交接没有在每份首版落实
+
+rubric-v2要求准确平台/模型/界面/模式/日期与来源，未获新证据时传闻保持未知。六份C06均确实保留了Seedance意向、6秒/16:9、左手按稳、右手沿北侧铰链开盖、结束仍扶盖和唯一木铰链声意图；均有完整母稿及可审阅适配稿，未替换模型、时长或删声效。不同重复所作服装、人物站位、窗光及机位补全均由本案未锁定的创作空间允许，没有借用C08硬锁。
+
+A1的P2共同 warning 必须原样计入A1结果。A2/A3同样没有能力日期明文。当前platform入口 SKILL.md（实际路径：`D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/SKILL.md:14`）已要求能力证据与查阅日期，步骤4也要求能力清单列来源/日期且缺失标未知（第23行）。B1与B3体现了这一提醒，B2首版未体现，不能以读取过入口或事后source已修来补判B2答案。
+
+严重性为交接 warning，当前能力仍未知且答案未声称可执行，未形成传闻能力虚构。若将来允许修复答案，最小修复只需在待核对清单增加能力证据来源、适用日期/查阅日期及当前unknown，不改创作母稿；本评审没有修改任何首版。
+
+## C07：原生检查与真实文字判断分别成立
+
+全部source元数据实际为`type:design,id:FG-01,version:1`，`mode:full`，镜号恰为FG-S01/FG-S02。全部workbook均有12条独特视角×镜号配对，正文有具体标准、来源定位和基于输入的解释。source保存内容经读取编码及文件终止换行规范化后，与原始FG-01文本完全相同；不是重新创作的同题稿。6份原文未改且无定稿批准。
+
+| 重复 | Node原生exit | valid | coverageComplete | reviewComplete | openItems |
+| --- | --- | --- | --- | --- | --- |
+| A1 | 2 | true | true | false | FG-S02 cinematography unknown：纸幅/展开方向/画框覆盖未决 |
+| A2 | 0 | true | true | true | 无；行标准止于文字相容，实际取景/景深/接触仍在正文列未知 |
+| A3 | 2 | true | true | false | FG-S02 staging；FG-S01/FG-S02 cinematography unknown |
+| B1 | 2 | true | true | false | FG-S01/FG-S02 cinematography unknown |
+| B2 | 2 | true | true | false | FG-S02 staging；FG-S01/FG-S02 cinematography unknown |
+| B3 | 2 | true | true | false | FG-S01/FG-S02 staging及cinematography unknown |
+
+6次独立重跑与各自保存的原生stdout JSON逐字段一致，stderr均空。重跑输入和结果保存于评审者自己的 证据目录（实际路径：`D:/Temp/cineweave-split-p4-content-review-58-evidence-20261012/verification-summary.json`），不是改写原结果。随包helper源码明确exit0表示工作表状态完成、exit1表示输入无效、exit2表示有效但未解决；它只验证行覆盖、枚举、定位字段及已填状态一致性，不核验引文真假或构图充分性。
+
+提示词两行均经过适用性判断：实际输入是设计文本，无独立复制提示词可比，因此`not_applicable`合理，未为凑表另造提示词。其他视角已检查设计文本的动作/指令一致性，未用N/A跳过持手、纸数量或连续性。
+
+各份unknown深浅不同，不是新的剧情或互相竞争的镜头方案。原文确实没有纸张尺寸、展开平面方向、桌宽、裁切范围或焦点/景深，较保守评审保留unknown有依据；也没有证据证明实际出框、碰杯或不可达，所以没有必要强迫全部答案判revise。A2没有冒称这些未知已被像素或媒体证实；其reviewComplete只在自己填写的文字相容标准中成立，不足以宣布正式摄影交接充分。缺canonical JSON没有被补造为根schema验证通过。六份答案均把实际视频动作、身份、时长、声轨和同步留为未决。
+
+## C08：唯一机位变更正确，独立复制缺口需单列
+
+独立文本比较已经确认：A2/A3/B2/B3保存三稿恰为原文中的“桌南侧偏西略俯”各一次改“桌南侧偏东略俯”，加必要版本说明递增。B1另有REV-P包装首词“现有”→“修订”；其余全文匹配。这不改变任何故事、动作、服装或制作能力事实。A1镜头组/母稿正文同样匹配预期替换，S01复制正文逐字原样。全部S01设计段、母稿段及适配复制正文逐字保持，未将“锁定”仅当语义近似。
+
+六份正文均交完整镜头组、视频母稿和两镜离线适配（A1/B2按文本框分别呈现），新偏东机位确实进入下游；两镜各4秒/16:9，未误用8秒合并一次T2V。北侧铰链、闭盖入点、左手稳盒、右手开盖/终态扶盖、西窗世界光向、无对白和独立声音意图保持。相邻连续性复查都包含S01出态→S02入态、同属桌南侧、手部/盒盖/木鸟的遮挡、新视点不镜像世界方位和光源不移位。未继承未提供的旧review或批准。
+
+W08由源稿已有事实造成：原始REV-P v1的S02复制正文写“承接上一镜。相同男子、衣袖、盒子”，没有在本镜独立写出短黑发、成年男子、浅灰衬衫、深蓝围裙，也将木鳥缩写为浅木色小鸟。FrameForge夹具规定每次文本框一个镜头、无参考槽位或分镜导入，两次独立输入没有证据能解析前一次文字上下文。“相同”不能承担未随本次输入提供的身份/衣装约束，也不构成绑定。
+
+A2/A3/B1/B3忠实执行了最小机位替换，因此这不是其新增的事实回归；但它们仍不能被写成已交付无缺口的独立S02复制稿。A1与B2实际展开源中锁定事实并完整交回独立正文，在不动S01、故事和动作的范围内解决了此缺口。不能把机械diff通过提升成所有下游可独立执行。
+
+B2的变更影响workbook实质为人工声明的非canonical逻辑字段；独立重跑保存输入后，原生exit2、valid:true、scope:plan_only与已保存stdout完全一致：REV-G/REV-M/REV-P/相邻连续性受影响，锁定S01及声音意图不受影响，相邻连续性仍needsReview，sourceAuthorityVerified:false、measurementVerified:false。它不验证实际修订正文或生成可读性，后者已由独立文本比较承担。
+
+B3的C08“native”结果来自Temp自写字符串比较脚本，不是随包`check-change-impact.mjs`；其退出码0仅为`text_only`唯一替换/S01锁定检查。报告未伪称为根契约或媒体批准。本评审另外对其JSON三份全文做独立预期值比较，不借用其自证结论。所有真实遮挡、跨镜身份/木纹、4+4秒节奏和声音同步仍未知。
+
+## 最小source修正与限制
+
+没有证据要求改动canon、schema或helper行为，也没有这24份首版能证明的新硬锁回归。W06当前source已经明文约束，不需要再用等价句覆盖同一规则；需保留B2首版未落实的记录，不能刷新首版后替换结果。
+
+W08若决定作一处最小source加强，最有价值的是将platform已有“完整独立复制稿”总则明确接入导演的局部修订出口：当消费者是分别输入的单镜文本框，保留源稿最小diff供审查，同时展开当前源已锁定的必要共同事实；“上一镜/相同/同上”不能代替本次输入的硬锁，并须把源稿已有缺口与新变更分开说明。此建议不授权重写首版，也不要求改动已锁定S01。它是有收益的交接提醒，不是发现了helper或canonical契约缺陷。
+
+本报告只描述这次有限样本的观察，三次重复不能推算普遍成功率、自动宿主选择可靠性或媒体通过率。隐式自动宿主选择/遥测均unknown。原始素材、正式绑定、版权/肖像/传输/发布/商用权利、live平台能力、真实图片/视频/音频/生成返回均未提供或未验证；任何构图、接触、身份、节奏和同步结论仍受这一证据层级限制。

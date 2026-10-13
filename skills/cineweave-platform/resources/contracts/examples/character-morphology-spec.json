@@ -1,0 +1,250 @@
+{
+  "kind": "cineweave_codex_character_morphology_spec",
+  "contractVersion": "2.5.0",
+  "worldId": "world.silk-road-sky",
+  "morphologyId": "morphology.jialing.v1",
+  "version": 1,
+  "status": "reviewing",
+  "characterExplorationBriefRef": {
+    "kind": "cineweave_codex_character_exploration_brief",
+    "id": "explore.jialing.identity",
+    "version": 1,
+    "contentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+  },
+  "identitySource": "fictional_original",
+  "inputModes": [
+    "natural_language",
+    "visual_cards",
+    "semantic_sliders",
+    "a_b_preference"
+  ],
+  "axes": [
+    {
+      "axisId": "axis.face.overall.length",
+      "region": "face",
+      "featurePath": "face.overall.length",
+      "value": 0.28,
+      "semanticLabel": "略微修长",
+      "observableMeaning": "脸型呈柔和椭圆，长度略大于宽度，下半脸不过分拉长。",
+      "lock": "soft",
+      "variationRadius": 0.12
+    },
+    {
+      "axisId": "axis.face.cheekbone.prominence",
+      "region": "face",
+      "featurePath": "face.cheekbone.prominence",
+      "value": 0.18,
+      "semanticLabel": "轮廓轻微清晰",
+      "observableMeaning": "颧骨位置略高，但不向椭圆脸轮廓外侧扩张。",
+      "lock": "soft",
+      "variationRadius": 0.1
+    },
+    {
+      "axisId": "axis.face.eyes.length",
+      "region": "face",
+      "featurePath": "face.eyes.length",
+      "value": 0.42,
+      "semanticLabel": "适度修长",
+      "observableMeaning": "睑裂相对于垂直开度显得修长。",
+      "lock": "hard",
+      "variationRadius": 0
+    },
+    {
+      "axisId": "axis.face.eyes.openness",
+      "region": "face",
+      "featurePath": "face.eyes.openness",
+      "value": -0.24,
+      "semanticLabel": "开度克制",
+      "observableMeaning": "眼形保持狭长，不变成圆眼或娃娃眼。",
+      "lock": "hard",
+      "variationRadius": 0
+    },
+    {
+      "axisId": "axis.face.eyes.canthal_tilt",
+      "region": "face",
+      "featurePath": "face.eyes.canthal_tilt",
+      "value": 0.22,
+      "semanticLabel": "轻微上挑",
+      "observableMeaning": "外眼角仅略高于内眼角。",
+      "lock": "hard",
+      "variationRadius": 0
+    },
+    {
+      "axisId": "axis.face.nose.bridge_shape",
+      "region": "face",
+      "featurePath": "face.nose.bridge_shape",
+      "value": 0.08,
+      "semanticLabel": "自然平直",
+      "observableMeaning": "鼻梁平直，鼻根柔和，高度不夸张。",
+      "lock": "soft",
+      "variationRadius": 0.08
+    },
+    {
+      "axisId": "axis.face.mouth.corner_angle",
+      "region": "face",
+      "featurePath": "face.mouth.corner_angle",
+      "value": -0.08,
+      "semanticLabel": "静息时轻微下垂",
+      "observableMeaning": "静息嘴角有轻微向下张力，与表情分开记录。",
+      "lock": "soft",
+      "variationRadius": 0.08
+    },
+    {
+      "axisId": "axis.face.asymmetry.left_eye_height",
+      "region": "face",
+      "featurePath": "face.asymmetry.left_eye_height",
+      "value": -0.06,
+      "semanticLabel": "细微自然不对称",
+      "observableMeaning": "左眼略低于右眼，差异细微且没有解剖错误。",
+      "lock": "hard",
+      "variationRadius": 0
+    },
+    {
+      "axisId": "axis.body.shoulder.width",
+      "region": "body",
+      "featurePath": "body.shoulder.width",
+      "value": -0.22,
+      "semanticLabel": "肩幅偏窄",
+      "observableMeaning": "肩线偏窄、自然下落，不显脆弱。",
+      "lock": "soft",
+      "variationRadius": 0.1
+    },
+    {
+      "axisId": "axis.body.leg.proportion",
+      "region": "body",
+      "featurePath": "body.leg.proportion",
+      "value": 0.24,
+      "semanticLabel": "双腿略长",
+      "observableMeaning": "腿长略高于中性比例，仍符合可信的成人解剖。",
+      "lock": "soft",
+      "variationRadius": 0.1
+    }
+  ],
+  "relations": [
+    {
+      "relationId": "relation.eye.length_to_openness",
+      "type": "ratio",
+      "memberAxisIds": [
+        "axis.face.eyes.length",
+        "axis.face.eyes.openness"
+      ],
+      "semanticConstraint": "修改相邻特征后，眼睛仍须保持可辨认的修长与克制开度，不能变圆。",
+      "priority": "blocking"
+    },
+    {
+      "relationId": "relation.face.cheek_to_length",
+      "type": "transition",
+      "memberAxisIds": [
+        "axis.face.overall.length",
+        "axis.face.cheekbone.prominence"
+      ],
+      "semanticConstraint": "高位颧骨应过渡到柔和修长的椭圆脸，不向两侧外扩。",
+      "priority": "important"
+    },
+    {
+      "relationId": "relation.eye.asymmetry",
+      "type": "asymmetry",
+      "memberAxisIds": [
+        "axis.face.eyes.canthal_tilt",
+        "axis.face.asymmetry.left_eye_height"
+      ],
+      "semanticConstraint": "保留细微左右差异，避免错位瑕疵。",
+      "priority": "important"
+    }
+  ],
+  "constraintPolicy": {
+    "anatomical": [
+      "保留可信的成人眼眶、鼻部、下颌及肢体过渡。"
+    ],
+    "relational": [
+      "结构关系优先于孤立形容词的强度。"
+    ],
+    "lockRules": {
+      "hardBlocksMutation": true,
+      "softRequiresReview": true,
+      "freeMayExplore": true
+    },
+    "samplingRules": {
+      "nearbyOnly": true,
+      "onePrimaryAxisPerRound": true,
+      "respectVariationRadius": true
+    }
+  },
+  "referenceEvidence": [
+    {
+      "observationRef": {
+        "kind": "cineweave_codex_reference_observation",
+        "id": "observation.eye-shape-semantics",
+        "version": 1,
+        "contentHash": "sha256:2222222222222222222222222222222222222222222222222222222222222222"
+      },
+      "scope": "face_morphology",
+      "transfer": "borrow_observable_semantics",
+      "excludedUses": [
+        "不复制源人物的身份、发型、妆容或表情。"
+      ]
+    }
+  ],
+  "neutralFixture": {
+    "views": [
+      "front",
+      "three_quarter_left",
+      "profile_left"
+    ],
+    "expression": "中性表情，嘴部放松，视线平齐。",
+    "grooming": "头发收离面部，不佩戴改变轮廓的饰物。",
+    "wardrobe": "简单中性圆领打底衣。",
+    "camera": "各视图保持一致的眼平透视与拍摄距离。",
+    "lighting": "宽面积中性柔光，保留面部体面。",
+    "background": "均匀中性灰。",
+    "fixedAcrossViews": true
+  },
+  "identityLockGate": {
+    "status": "pending",
+    "requiresHumanApproval": true,
+    "requiredViews": [
+      "front",
+      "three_quarter_left",
+      "profile_left"
+    ],
+    "requiredChecks": [
+      "语义轴保留",
+      "结构关系连贯",
+      "解剖可信度",
+      "中性多视图间的身份稳定性"
+    ],
+    "noAutoLock": true
+  },
+  "planningBoundary": {
+    "providerNeutral": true,
+    "generatesMedia": false,
+    "containsProviderWeights": false,
+    "humanApprovalRequired": true,
+    "notes": "供应商关键点、嵌入向量、网格形变目标和生成参数由适配层处理。"
+  },
+  "validation": {
+    "semanticAxesProviderNeutral": true,
+    "relationsPreferredOverRawMeasures": true,
+    "noBiometricInference": true,
+    "noUniversalBeautyScore": true,
+    "noRealPersonPartMashup": true,
+    "identityNotAutoLocked": true,
+    "noGenerationClaim": true
+  },
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.1.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-22T12:00:00.000Z"
+  },
+  "provenance": {
+    "source": "codex_authored",
+    "createdAt": "2026-08-22T12:00:00.000Z",
+    "updatedAt": "2026-08-22T12:00:00.000Z",
+    "changeLog": [
+      "v1：身份锁定前的面部与身体语义形态检查点"
+    ]
+  }
+}

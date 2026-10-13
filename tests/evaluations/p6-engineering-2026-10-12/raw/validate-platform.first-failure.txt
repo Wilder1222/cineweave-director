@@ -1,0 +1,8 @@
+项目校验失败，原始诊断：
+Error: Unexpected directory in Bundle distribution file set: agents
+    at fail (file:///D:/study/projects/cineweave-codex-skills/cineweave-director/scripts/validate-repository.mjs:609:9)
+    at assert (file:///D:/study/projects/cineweave-codex-skills/cineweave-director/scripts/validate-repository.mjs:613:19)
+    at visit (file:///D:/study/projects/cineweave-codex-skills/cineweave-director/scripts/validate-repository.mjs:976:9)
+    at async validateTree (file:///D:/study/projects/cineweave-codex-skills/cineweave-director/scripts/validate-repository.mjs:981:3)
+    at async validateBundle (file:///D:/study/projects/cineweave-codex-skills/cineweave-director/scripts/validate-repository.mjs:1330:3)
+    at async main (file:///D:/study/projects/cineweave-codex-skills/cineweave-director/scripts/validate-repository.mjs:1365:14)

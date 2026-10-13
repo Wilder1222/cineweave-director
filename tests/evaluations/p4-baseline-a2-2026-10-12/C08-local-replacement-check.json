@@ -1,0 +1,35 @@
+{
+  "scope": "text_only",
+  "source": "CW-SPLIT-C08 raw input",
+  "method": "Exact string replacement plus version-label update and unchanged S01 segment comparison",
+  "mediaVerified": false,
+  "records": [
+    {
+      "documentId": "REV-G",
+      "fromRevision": 1,
+      "toRevision": 2,
+      "cameraReplacementCount": 1,
+      "exactExpectedReplacement": true,
+      "s01ExtractEqual": true,
+      "remainingOldPosition": 0
+    },
+    {
+      "documentId": "REV-M",
+      "fromRevision": 1,
+      "toRevision": 2,
+      "cameraReplacementCount": 1,
+      "exactExpectedReplacement": true,
+      "s01ExtractEqual": true,
+      "remainingOldPosition": 0
+    },
+    {
+      "documentId": "REV-P",
+      "fromRevision": 1,
+      "toRevision": 2,
+      "cameraReplacementCount": 1,
+      "exactExpectedReplacement": true,
+      "s01ExtractEqual": true,
+      "remainingOldPosition": 0
+    }
+  ]
+}

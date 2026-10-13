@@ -1,7 +1,7 @@
 {
-  "schemaVersion": "3.1.0",
+  "schemaVersion": "3.2.0",
   "skill": "cineweave-director",
-  "skillVersion": "3.1.0",
+  "skillVersion": "3.2.0",
   "contracts": [
     {
       "kind": "cineweave_codex_creative_brief",

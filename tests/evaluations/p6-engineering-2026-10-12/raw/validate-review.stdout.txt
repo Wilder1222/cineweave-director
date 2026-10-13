@@ -1,0 +1,67 @@
+{
+  "valid": true,
+  "mode": "bundle",
+  "target": {
+    "type": "skill",
+    "name": "cineweave-review"
+  },
+  "root": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\p6-review",
+  "sourceRoot": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director",
+  "files": 160,
+  "exports": 160,
+  "sourceFiles": 160,
+  "skills": [
+    {
+      "name": "cineweave-review",
+      "root": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\p6-review",
+      "files": 159,
+      "actualKinds": [
+        "cineweave_codex_control_benchmark",
+        "cineweave_codex_control_benchmark_review",
+        "cineweave_codex_creative_review",
+        "cineweave_codex_repair_plan"
+      ],
+      "targetKinds": [
+        "cineweave_codex_control_benchmark",
+        "cineweave_codex_control_benchmark_review",
+        "cineweave_codex_creative_review",
+        "cineweave_codex_repair_plan"
+      ],
+      "references": 42,
+      "roots": 52,
+      "schemas": 54,
+      "examples": 52,
+      "receipts": 48,
+      "schemaRefs": 1357,
+      "markdownFiles": 43,
+      "links": 414,
+      "fragments": 116,
+      "textFiles": 159
+    }
+  ],
+  "roots": 52,
+  "schemas": 54,
+  "examples": 52,
+  "references": 42,
+  "receipts": 48,
+  "schemaRefs": 1357,
+  "markdownFiles": 43,
+  "links": 414,
+  "fragments": 116,
+  "textFiles": 159,
+  "totals": {
+    "roots": 52,
+    "schemas": 54,
+    "examples": 52,
+    "references": 42,
+    "receipts": 48,
+    "schemaRefs": 1357,
+    "markdownFiles": 43,
+    "links": 414,
+    "fragments": 116,
+    "textFiles": 159
+  },
+  "sourceFilesValidated": 638,
+  "byteIdentical": true,
+  "messageZh": "构建包校验通过，分发内容与源码一致。"
+}

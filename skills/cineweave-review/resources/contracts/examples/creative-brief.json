@@ -1,0 +1,51 @@
+{
+  "kind": "cineweave_codex_creative_brief",
+  "contractVersion": "3.0.0",
+  "briefId": "brief.rain-courtyard",
+  "version": 1,
+  "status": "ready",
+  "inputMode": "guided",
+  "purpose": "从世界规律出发，设计短片镜头序列、分镜和图像提示词，并交付不执行生成的制作计划。",
+  "sourcePrompt": "一位女医在雨水洗过的庭院中，遇见曾被她亲手推开的故人。",
+  "task": {
+    "routes": ["brief_world", "story", "character", "scene", "style", "shot_direction", "storyboard_rhythm", "image_prompt", "production_plan"],
+    "deliverables": ["world_bible", "story", "character", "scene", "style_system", "shot", "storyboard", "image_prompt", "production_plan"],
+    "medium": "live_action",
+    "temporalRequired": true,
+    "aspectRatio": "16:9",
+    "durationIntent": "45 至 60 秒"
+  },
+  "intent": {
+    "narrative": "相认迫使两人选择：是否仍让旧日伤害左右当下。",
+    "visual": "雨后深色石面、克制的古装、场景内灯笼与阴天天光，以及表现亲密关系的人物调度。",
+    "audienceExperience": "从戒备的疏离转向彼此相认，但关系尚未和解。",
+    "delivery": "可供审阅的剧本场次、镜头序列、分镜、图像提示词组和可行性计划。"
+  },
+  "world": {
+    "summary": "一座具有历史生活依据的河城，医业行会义务与家族声誉制约私人选择。",
+    "authority": "new_world_bible_required"
+  },
+  "referenceInputs": [],
+  "locks": [
+    { "path": "intent.narrative", "level": "hard", "reason": "相遇必须围绕一次需要付出代价的相认选择发生转折。" },
+    { "path": "task.medium", "level": "soft", "reason": "优先采用真人影视表现，但可在视觉风格批准前修订。" },
+    { "path": "intent.visual", "level": "undefined", "reason": "尚未提供准确的人物身份、建筑或风格证据。" }
+  ],
+  "constraints": ["没有研究依据时，不宣称历史考据已得到证实。", "不能把计划或提示词当作已经生成的媒体。"],
+  "assumptions": ["在用户批准世界设定前，初稿可使用范围明确的虚构城池。"],
+  "unknowns": [
+    { "path": "world.period", "impact": "high", "question": "场景保持架空古代世界，还是定位到有研究依据的历史时期？", "safeDefault": "采用架空古代世界，并将与历史相似的部分明确标为创作参考。" }
+  ],
+  "stagePlan": [
+    { "stageId": "stage.world", "route": "brief_world", "status": "ready", "purpose": "明确世界设定依据与不可变约束。", "requires": ["NaturalLanguageBrief"], "produces": ["cineweave_codex_world_bible"], "dependsOn": [], "gate": "由用户批准世界前提及硬性正式设定。" },
+    { "stageId": "stage.story", "route": "story", "status": "pending", "purpose": "建立因果节拍与可供表演的剧本场次。", "requires": ["cineweave_codex_world_bible"], "produces": ["cineweave_codex_story_brief", "cineweave_codex_beat_sheet", "cineweave_codex_script_scene"], "dependsOn": ["stage.world"], "gate": "明确一个戏剧问题，以及场次前后发生的状态变化。" },
+    { "stageId": "stage.direction", "route": "shot_direction", "status": "pending", "purpose": "先调度已批准节拍，再选择镜头与时序。", "requires": ["cineweave_codex_script_scene", "character_binding", "scene_binding"], "produces": ["cineweave_codex_shot_spec", "cineweave_codex_temporal_spec"], "dependsOn": ["stage.story"], "gate": "人物调度、注意力顺序、物理光照和稳定终态均可检查。" }
+  ],
+  "humanGates": [
+    { "gateId": "gate.world", "afterStage": "stage.world", "decision": "在据此推导故事正式设定前，批准、修订或限定世界设定范围。", "status": "pending" }
+  ],
+  "planningBoundary": { "singleSkill": true, "providerNeutral": true, "generatesMedia": false, "invokesExternalTool": false, "requiresHumanApproval": true },
+  "validation": { "intentParsed": true, "worldAuthorityExplicit": true, "routesAcyclic": true, "referencesRoleScoped": true, "questionsPrioritized": true, "noProviderClaim": true },
+  "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-director", "ref": "v3.1.0", "commit": "0000000000000000000000000000000000000000", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00Z" },
+  "provenance": { "source": "suite_builtin", "createdAt": "2026-09-02T00:00:00Z", "updatedAt": "2026-09-02T00:00:00Z", "changeLog": ["建立单一技能需求接入的规范结构示例。"] }
+}

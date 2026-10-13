@@ -1,0 +1,125 @@
+{
+  "id": "CW-SPLIT-C04",
+  "primarySkill": "cineweave-platform",
+  "auxiliarySkills": [],
+  "entryPaths": [
+    "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/SKILL.md"
+  ],
+  "selectionReason": "已有完整锁定图像母稿，仅请求指定夹具界面适配。",
+  "response": "适配来源为POSTER-MASTER-01，版本1；仅依据fixture-mosaiclabs-canvas-image-1-web-t2i，版本1，日期2026-10-12。MosaicLabs／Canvas-Image 1.0／网页T2I均为虚构测试夹具，本稿只在给定夹具条件下成立，没有在线服务或账号能力核验。\n\n完整中文复制正文：\n\n```text\n4:5竖版摄影写实海报。成年女子，短黑发，穿无图案的深蓝棉外套，独自站在海边旧灯塔入口前，右手提一盏点亮的黄铜提灯，左手空着。人物全身可见，灯塔门在她左后方，干燥石阶向画面下缘延伸。蓝调暮色，海面在背景右侧，海平线水平；提灯暖光照亮右手和外套近处，暮色环境光保持脸部可读。风很轻，衣摆略向画面右侧偏。上方保留约五分之一干净天空排中文片名“归潮”，下方留窄幅署名区；标题只出现一次，不增加其他正文、角色、闪电或火焰。低饱和冷蓝与克制暖黄，真实材料纹理。\n```\n\n界面设置：\n\n| 项目 | 本次填写 |\n| --- | --- |\n| 文本提示词框 | 完整粘贴上方正文 |\n| 画幅下拉框 | 4:5 |\n| 参考图 | 夹具无上传入口；本次也无实际参考 |\n| 负向提示词、seed、风格码、参考权重、个性化 | 夹具没有这些设置，不填写、不补造 |\n| 命令行参数尾 | 不使用 |\n\n母稿没有发生内容取舍；身份、服装、持手、标题、灯光来由和画幅逐项保留。待核对事项：测试输出中的人物全身、右手提灯／空左手、灯塔门与海面关系、局部暖光及暮色冷光；中文片名逐字准确且只出现一次，上方与下方留白没有多余文字。夹具资料不证明真实平台文字渲染效果；当前没有图片可验收，也没有提交生成。",
+  "status": "first_delivery_saved",
+  "firstVersionImmutable": true,
+  "model": null,
+  "tokens": null,
+  "latencyMs": null,
+  "sourceReads": [
+    {
+      "path": "D:/Temp/cineweave-split-p4-contents-raw-inputs-20261012.json",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C01",
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C04",
+        "CW-SPLIT-C05",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C07",
+        "CW-SPLIT-C08"
+      ],
+      "kind": "raw_input",
+      "readRecord": 1,
+      "sha256": "AAF18A7B9C32FF397CC990535D284C98147D58FEE589BF1393976CA3AC066F09"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md",
+      "sections": [
+        "frontmatter"
+      ],
+      "cases": [
+        "all"
+      ],
+      "kind": "selection",
+      "readRecord": 2,
+      "sha256": "C2A481FF773E157EC7A018CF3893720748014657F4543D3D0F4800F4B0925DEB"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/SKILL.md",
+      "sections": [
+        "frontmatter"
+      ],
+      "cases": [
+        "all"
+      ],
+      "kind": "selection",
+      "readRecord": 3,
+      "sha256": "B4A67BD86EF0CEDDF84679AFEE2B09FCA2F73234D815EAE654BE0534793BAA56"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-reference/SKILL.md",
+      "sections": [
+        "frontmatter"
+      ],
+      "cases": [
+        "all"
+      ],
+      "kind": "selection",
+      "readRecord": 4,
+      "sha256": "931B1F173FCD94B5E409E8CB44983662F6BA8885D216D9D5E819360AECE3159D"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/SKILL.md",
+      "sections": [
+        "frontmatter"
+      ],
+      "cases": [
+        "all"
+      ],
+      "kind": "selection",
+      "readRecord": 5,
+      "sha256": "2F67E7CE86F8FDCB7B38CECDC9AE00E37F5CBDA5F15B36CFA24DB0EE3FE3965D"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/SKILL.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C04",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C08"
+      ],
+      "kind": "active_entry",
+      "readRecord": 15,
+      "sha256": "B4A67BD86EF0CEDDF84679AFEE2B09FCA2F73234D815EAE654BE0534793BAA56"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/references/routes/image-prompt.md",
+      "sections": [
+        "平台适配",
+        "准确文字与排版"
+      ],
+      "cases": [
+        "CW-SPLIT-C04"
+      ],
+      "kind": "targeted_read",
+      "readRecord": 16,
+      "sha256": "8875D78177EDCE7AB4AAEA763BF0F6D3BDC6216EE1ACF3C215AAB661B96E5C08"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/references/optional/prompt-detail-standard.md",
+      "sections": [
+        "场次与逐镜交付模板"
+      ],
+      "cases": [
+        "CW-SPLIT-C04",
+        "CW-SPLIT-C08",
+        "CW-SPLIT-C07"
+      ],
+      "kind": "targeted_read",
+      "readRecord": 17,
+      "sha256": "0DE944DFFD30D69BC05A52EF4BCEAF0A90DCE40564E2F1A288C68E7DD1E88E59"
+    }
+  ]
+}

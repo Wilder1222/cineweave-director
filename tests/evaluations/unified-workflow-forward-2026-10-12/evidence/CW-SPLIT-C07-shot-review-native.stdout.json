@@ -1,0 +1,37 @@
+{
+  "valid": true,
+  "scope": "plan_only",
+  "coverageComplete": true,
+  "reviewComplete": false,
+  "expectedRows": 12,
+  "missing": [],
+  "openItems": [
+    {
+      "role": "staging",
+      "shotId": "FG-S01",
+      "status": "unknown"
+    },
+    {
+      "role": "staging",
+      "shotId": "FG-S02",
+      "status": "unknown"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "FG-S01",
+      "status": "revise"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "FG-S02",
+      "status": "revise"
+    }
+  ],
+  "prompt": null,
+  "errors": [],
+  "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。",
+  "localization": {
+    "locale": "zh-CN",
+    "summary": "输入有效，评审仍有未决项或没有适用的通过项。"
+  }
+}

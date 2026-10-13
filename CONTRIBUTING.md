@@ -1,6 +1,8 @@
 # CineWeave 导演贡献指南
 
-保持核心不变量：仓库只分发一个自包含、非执行型 AIGC 导演 Skill。故事、人物、场景、风格、参考、导演、提示词、制作及评审都是内部路由，不是兄弟 Skill 或隐藏智能体。
+保持核心不变量：一个非执行型 CineWeave 插件是统一入口工作流；导演接收所有请求，按需显式执行内部 Skill 并统一交付。只有导演允许隐式选用，内部三个 Skill 的 `allow_implicit_invocation` 为 false，由入口准确交接；可独立打包不等于推荐独立用户入口。领域／产物实现归属与最终工作流负责人分别维护，启用集合由 `skill-catalog.json` 登记。规范契约、共享知识和检查器只有一个维护源。
+
+专业入口的作者源在 `skill-sources/`；`skills/` 中的专业副本由 `npm run skills:sync` 派生，禁止手工维护。改作者源或公共资料后先同步再校验；`skills:sync:check` 只读核对。构建也从作者源读取，不传播派生副本漂移。未知文件／目录拒绝，不用清空目录来解决不一致。
 
 ## 修改行为之前
 
@@ -39,6 +41,8 @@
 Node.js 22+，无需安装依赖：
 
 ```powershell
+npm run skills:sync
+npm run skills:sync:check
 npm test
 npm run validate
 npm run build
@@ -48,7 +52,9 @@ npm run test:bundle
 
 分发清单由声明的基础资源、生命周期和契约索引派生，不硬编码文件数。构建必须字节相同，不转换、扁平化 schema、改路径、生成提示词或引入隐藏依赖。schema 通过不能代替代表性新任务评审。
 
-三个随包工具 `check-delivery.mjs`、`check-video-plan.mjs`、`check-shot-review.mjs` 保持只读、自包含，通过同目录 `parse-json.mjs` 与正式契约共享严格解析。安装须保留完整脚本目录；输入变化同步指南与回归，拒绝重复键、无效 Unicode 标量和非有限数。视频声明的 `checkedAt` 使用有效公历 `YYYY-MM-DD`，不证明来源真实性、新鲜度或账号适用性。逐镜评审分别检查 `valid`、`coverageComplete`、`reviewComplete`。
+四个随包 CLI `check-delivery.mjs`、`check-video-plan.mjs`、`check-shot-review.mjs`、`check-change-impact.mjs` 保持只读、自包含；`parse-json.mjs` 与 `check-audio-returns.mjs` 是同目录依赖，安装须保留完整六文件脚本目录。输入变化同步指南与回归，拒绝重复键、无效 Unicode 标量和非有限数。视频声明的 `checkedAt` 使用有效公历 `YYYY-MM-DD`，不证明来源真实性、新鲜度或账号适用性。逐镜评审分别检查 `valid`、`coverageComplete`、`reviewComplete`。
+
+回归测试路径只在 `package.json` 的 `test` 命令维护，CI 先直接运行源码检查器再使用 `npm test`；仓库检查器从既有测试文件白名单核对精确集合，拒绝遗漏、重复、未登记文件、额外命令及 `pretest`／`posttest` 等生命周期脚本。其他脚本、固定 action SHA、只读权限及发布标签命令仍按准确配置校验。
 
 本地 Markdown 验证覆盖分发知识、入口和开发报告中的文件与章节链接。CI 配置 Windows/Linux、Node 22/24 矩阵，`test:bundle` 从仓库外副本调用工具并检查退出状态与只读行为；本地通过不代表远端矩阵已运行。
 
@@ -64,7 +70,9 @@ npm run test:bundle
 
 ## 变更和发布
 
-提交保持聚焦、说明清楚。未经协调不改写他人工作或公开历史。用户可见行为、契约、知识、分发变化记录到 `CHANGELOG.md`。标签不可变，安装文档固定标签或准确提交，不指向移动分支。本中文工作树未发布，不能移动旧 `v3.1.0` 标签来伪装新版。
+提交保持聚焦、说明清楚。未经协调不改写他人工作或公开历史。用户可见行为、契约、知识、分发变化记录到 `CHANGELOG.md`。标签不可变，安装文档固定标签或准确提交，不指向移动分支。当前 `3.2.0` 是本地准备，远程标签尚不可用；不得移动旧 `v3.1.0` 标签来伪装新版。
+
+包／Skill目录版本与正式产物各自既有版本（2.x与3.0.0）分别维护。版本准备先改作者metadata，再由 `contracts:index` 重建索引、`skills:sync` 物化专业副本。52份规范示例及其模拟 `v3.1.0` 回执字节固定，不因包升级改造历史fixture；校验器分别约束当前发布身份与固定fixture来源，不放宽真实产物的来源／哈希检查。完整旧版本和P0实际未提交源快照是不同恢复对象，不用旧HEAD冒充本轮基线。
 
 ## 冗余清理与内容审计
 

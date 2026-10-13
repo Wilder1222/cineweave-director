@@ -1,0 +1,308 @@
+{
+  "sourceCount": 32,
+  "sourceHashMatchCount": 32,
+  "headingsExistCount": 32,
+  "caseCount": 10,
+  "caseHashMatchCount": 10,
+  "completeBodyEmbeddedCount": 10,
+  "reportedContext": {
+    "runMode": "newfork_none",
+    "sharedContextBatch": true,
+    "perCaseFreshContext": false,
+    "automaticHostSelectionObserved": false,
+    "subagentsUsed": false,
+    "model": null,
+    "tokenUsage": null,
+    "reasoningEffort": null,
+    "latencyMs": null
+  },
+  "reportedToolCount": null,
+  "sources": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\image-prompt.md",
+      "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\scene.md",
+      "sha256": "ef10535a31d8aeacf7465957ad995c47b1389f5b3b5fe9096e77682f151ea6e4",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+      "sha256": "17adaf6034d97879f14fcdeff40850fc7a0c890099254241f1cae96a0c217914",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\shot-direction.md",
+      "sha256": "c04957137f3f99cb3bba46f0c9046a653df490686867d8c0cad57ede90087388",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\storyboard-rhythm.md",
+      "sha256": "10ce342b7e5beb342f16942d653c3316c9fbe3758e6942c687c37e2560a2c601",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\video-sound-and-delivery.md",
+      "sha256": "cfd0a201805ab58f05ebe5eda1025359776eb78534cfb849472f728594da6a16",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\core\\visual-bible-and-continuity.md",
+      "sha256": "ba8e5894516ac66b1396a24dab5fabdc25cd3db8fa5d1beddd12be24f0a1139e",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\video-performance-direction.md",
+      "sha256": "8a156479c8ae94c55a1c6b433fef9193733fc64867eaae2a17e17e404614a11d",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\video-timing-and-handles.md",
+      "sha256": "0856cc9f67c10259a54755a470ae338e93a25df3d031b0d1730e5429aeb55fa8",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\action.md",
+      "sha256": "99e4dce0898e242af9803259ef9af7c44d8d81fa6e7cd52c9c5ffa04496834e4",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\SKILL.md",
+      "sha256": "75a509be51d387d326bc3c6d493f35e6085f29eaa2e1c4a8ce14e72829a37268",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\references\\routes\\image-prompt.md",
+      "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\SKILL.md",
+      "sha256": "33d06365a2b861f431e66ff4960ae2ad9a26457f8fe7e4b2b20a7b110f71c155",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\character.md",
+      "sha256": "6527df3210d32a9fb03f4e33c9f2d4f2bd52d34f84ea88d60950f1fee637abf8",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\core\\operating-model.md",
+      "sha256": "8a8b9d1d4cd29f80f572aa688406809c7e4792c37e379a250b5acf5daddbd22e",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\references\\routes\\reference-evidence.md",
+      "sha256": "6a27133185302f529f936edf6315f618876d1363ab9d08ccc45cda233804cd48",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\references\\core\\reference-evidence-and-rights.md",
+      "sha256": "55332bfbab84d121328260c56f971586658dff692a526cac318e2b435a522393",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\references\\optional\\video-platform-adaptation.md",
+      "sha256": "9b5a4e163a6482704b43333547d16ffc0ed3542d9526599e49455460971bd7f9",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\SKILL.md",
+      "sha256": "84c84692bf5f1d1a9bad8558ab3e7bddacfe605269649e7d72cc8e01bed2569e",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\review-repair.md",
+      "sha256": "9befe4fe6ecc4711e9aeb33121de3aa3912d5a5122ccea047793829b06481834",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\optional\\ensemble-direction-and-review.md",
+      "sha256": "54d9406901ae0b42cd8bb2b2cb4bda5e89aaff625dd4e255dc7377452d735e75",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\scene.md",
+      "sha256": "ef10535a31d8aeacf7465957ad995c47b1389f5b3b5fe9096e77682f151ea6e4",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\shot-direction.md",
+      "sha256": "c04957137f3f99cb3bba46f0c9046a653df490686867d8c0cad57ede90087388",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\storyboard-rhythm.md",
+      "sha256": "10ce342b7e5beb342f16942d653c3316c9fbe3758e6942c687c37e2560a2c601",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\optional\\video-sound-and-delivery.md",
+      "sha256": "cfd0a201805ab58f05ebe5eda1025359776eb78534cfb849472f728594da6a16",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\scripts\\check-shot-review.mjs",
+      "sha256": "bb69f60d8794f3329bc4b7af772d05ad01a28c001c7345f1de63bfa1e3d7d1c2",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\scripts\\check-delivery.mjs",
+      "sha256": "3147c6f5fad4d4d32682a05f34eca15337c6ca2b8c73c69ea96331a209f2e4a5",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\drafts-and-change-impact.md",
+      "sha256": "84670321b3cb5a42b34120fb0ead60b790e9db05c923e87f04265392c9b4d94b",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\SKILL.md",
+      "sha256": "ed028f57348cf23187165e227bc17ff03841b39cf7357e7c2b45bdbc44828a89",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\Temp\\cineweave-unified-workflow-raw-inputs-20261012.json",
+      "sha256": "76b204ce9a21ed4f6832d4b82d2afc0a8c5313a35673aa436b8adb7ba419b36d",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\Temp\\cineweave-unified-workflow-forward-20261012\\evidence\\prepare-c08.mjs",
+      "sha256": "1e80308c601e154dbedd752d5ff4b0d1136dd9811e259f7a1d4a9fbfa1fe635c",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    },
+    {
+      "path": "D:\\Temp\\cineweave-unified-workflow-forward-20261012\\evidence\\build-report.mjs",
+      "sha256": "22db7346ccfd72ffc6db01e8f00cedee6ebbdd5e369f08f44c8a2d38d3f28767",
+      "hashMatches": true,
+      "recordedCurrentMatches": true,
+      "headingsExist": true
+    }
+  ],
+  "cases": [
+    {
+      "id": "CW-SPLIT-C01",
+      "sha256": "a08f79e0e43b8b5c0418341f171ec954fd6429d209887856f1566efa835923af",
+      "hashMatches": true,
+      "completeBodyEmbedded": true
+    },
+    {
+      "id": "CW-SPLIT-C02",
+      "sha256": "c810c853e5c225d374d9e8907be5a7b039858ffc90c135740de15f16d9865db9",
+      "hashMatches": true,
+      "completeBodyEmbedded": true
+    },
+    {
+      "id": "CW-SPLIT-C03",
+      "sha256": "cbebb9b1fd254056a8918f385960ae76e7577d8fb27a407f00d3718a8a2a413e",
+      "hashMatches": true,
+      "completeBodyEmbedded": true
+    },
+    {
+      "id": "CW-SPLIT-C04",
+      "sha256": "dc648b0cff203eae649f64ad999c204a2d8396a2e60283e9301ef40edd03343a",
+      "hashMatches": true,
+      "completeBodyEmbedded": true
+    },
+    {
+      "id": "CW-SPLIT-C05",
+      "sha256": "1363f93fb97619e39b1c628edb03ef00e5a769ae5f60f2d4258a098e10702b9f",
+      "hashMatches": true,
+      "completeBodyEmbedded": true
+    },
+    {
+      "id": "CW-SPLIT-C06",
+      "sha256": "2e9607a70baab80c6b7f8c3a19a628517f3104332972e6b8484727c7e09effb8",
+      "hashMatches": true,
+      "completeBodyEmbedded": true
+    },
+    {
+      "id": "CW-SPLIT-C07",
+      "sha256": "26fd1f6e0b07a81a8c576e823b067edc01058ea166f9c34d8a41a7cfdfae534f",
+      "hashMatches": true,
+      "completeBodyEmbedded": true
+    },
+    {
+      "id": "CW-SPLIT-C08",
+      "sha256": "afc71b5bde4c28ad5ff8f30b02fb71e5ca9a0fd8b03891ab529b0a6b535d419f",
+      "hashMatches": true,
+      "completeBodyEmbedded": true
+    },
+    {
+      "id": "CW-SPLIT-T23",
+      "sha256": "c291d001bdba73217319900457ee67a735f7fd18f9b812d2c661687065b5a26a",
+      "hashMatches": true,
+      "completeBodyEmbedded": true
+    },
+    {
+      "id": "CW-SPLIT-T24",
+      "sha256": "80f1f089334ffca6482683a5b0726c338d2aee31dae287ededac831218c76683",
+      "hashMatches": true,
+      "completeBodyEmbedded": true
+    }
+  ]
+}

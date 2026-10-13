@@ -1,0 +1,562 @@
+{
+  "format": "cineweave-split-execution-evidence",
+  "date": "2026-10-12",
+  "userRequestedStageReviews": true,
+  "stages": {
+    "P0": {
+      "date": "2026-10-12",
+      "stage": "P0",
+      "implementation": "complete",
+      "review": {
+        "status": "passed",
+        "initialFindings": 3,
+        "closedFindings": 3,
+        "report": "tests/evaluations/cineweave-split-p0-review-2026-10-12.md",
+        "sha256": "c55535f37658596771661a46b3077b9a48026941019e2da48476901c3d465cd2"
+      },
+      "manifestPath": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\manifest.json",
+      "archivePath": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\baseline.zip",
+      "archiveSha256": "f4211f1c893e1ae606366f7708d44acddccf7e9f1de480f14e8065893daed8e4",
+      "restoredRoot": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored",
+      "sourceFiles": 239,
+      "restoreByteIdentical": true,
+      "checks": [
+        {
+          "command": "npm run validate",
+          "exitCode": 0,
+          "files": 161,
+          "roots": 52
+        },
+        {
+          "command": "npm run contracts:index:check",
+          "exitCode": 0
+        },
+        {
+          "command": "npm test",
+          "exitCode": 0,
+          "tests": 392,
+          "pass": 392,
+          "fail": 0,
+          "skipped": 0,
+          "durationMs": 37632.0595
+        },
+        {
+          "command": "npm run build",
+          "exitCode": 0,
+          "byteIdentical": true,
+          "files": 161
+        },
+        {
+          "command": "npm run validate:bundle",
+          "exitCode": 0
+        },
+        {
+          "command": "npm run test:bundle",
+          "exitCode": 0,
+          "tests": 1,
+          "pass": 1
+        }
+      ],
+      "testLogSha256": "9520dc6f9f3cb41a9b3be85f223192ec4005b3ab1503141afa813f083f0cd6f2",
+      "sourceHashesUnchangedAfterChecks": true,
+      "providerExecuted": false,
+      "mediaGenerated": false,
+      "caseArtifacts": [
+        {
+          "role": "inputs",
+          "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\case-inputs.json",
+          "bytes": 31887,
+          "sha256": "e92cd1a5a5815891426b715159675b070d5bdedccb7a691441ab09f65d61f892"
+        },
+        {
+          "role": "rubric",
+          "revision": 2,
+          "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\case-rubric-v2.json",
+          "bytes": 43421,
+          "sha256": "065280014d477f7e116acd95d6ed0c8cb0e69fe372fabd6caaf38b497997091b"
+        }
+      ],
+      "inputFreeze": "complete_not_executed",
+      "originalRubricPreserved": {
+        "role": "rubric",
+        "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\case-rubric.json",
+        "bytes": 41873,
+        "sha256": "b598804eabfd56d16b049fd70be89a26ab631df169da4599196667cdee0fe41e"
+      },
+      "reviewCorrections": [
+        "T04 right-hand umbrella holder",
+        "T16 do not infer motion reversal from screen entry/exit alone",
+        "C03 preserve scripted left-to-right hand transfer"
+      ]
+    },
+    "P1": {
+      "implementation": "complete",
+      "review": {
+        "status": "passed",
+        "initialNotes": 3,
+        "closedNotes": 3,
+        "report": "tests/evaluations/cineweave-split-p1-review-2026-10-12.md",
+        "sha256": "4101d78a34b1808f537e8957d8e4153668e92ffd655cefca8245ba52a6164e96"
+      },
+      "enabledSkills": [
+        "cineweave-director"
+      ],
+      "actualKindOwners": {
+        "cineweave-director": 52
+      },
+      "pluginFiles": 161,
+      "directorStandaloneFiles": 160,
+      "canonicalRoots": 52,
+      "schemas": 54,
+      "examples": 52,
+      "references": 42,
+      "checks": [
+        {
+          "command": "npm test",
+          "exitCode": 0,
+          "tests": 500,
+          "pass": 500,
+          "fail": 0,
+          "skipped": 0,
+          "durationMs": 571419.7441,
+          "logSHA256": "6919977bb4847c41f292c7420495546059d2b659e6d0c88ae9c7d10de3e20727"
+        },
+        {
+          "command": "npm run validate",
+          "exitCode": 0
+        },
+        {
+          "command": "npm run skills:sync:check",
+          "exitCode": 0,
+          "childCount": 0,
+          "filesUpdated": 0
+        },
+        {
+          "command": "npm run contracts:index:check",
+          "exitCode": 0
+        },
+        {
+          "command": "npm run build",
+          "exitCode": 0,
+          "byteIdentical": true
+        },
+        {
+          "command": "npm run validate:bundle",
+          "exitCode": 0,
+          "byteIdentical": true
+        },
+        {
+          "command": "npm run test:bundle",
+          "exitCode": 0,
+          "tests": 3,
+          "pass": 3,
+          "layouts": [
+            "director full plugin",
+            "director standalone extracted from built plugin"
+          ]
+        },
+        {
+          "command": "node --test tests/reliability.test.mjs after CI budget/matrix followups",
+          "exitCode": 0,
+          "tests": 22,
+          "pass": 22,
+          "fail": 0
+        }
+      ],
+      "implementationTestCorrections": [
+        "standalone LICENSE directory closure",
+        "synthetic child shared guide backlink anchor",
+        "temporary empty directory cleanup",
+        "phase fixtures independent of production stage"
+      ],
+      "reviewFollowups": [
+        "actual enabled installation matrix implemented",
+        "CI timeout budget raised to20; fixed Actions permissions and release gate preserved"
+      ],
+      "sourceFiles": [
+        {
+          "path": "skill-catalog.json",
+          "sha256": "b3d2252be1797e7a99cc8573d6c712cd5f4b03c75873efe29ca01b4c1b2d0e3c"
+        },
+        {
+          "path": "scripts/skill-catalog.mjs",
+          "sha256": "55876b80e0d286f1ce31d2bab6fdc00aaeb06afef4cd8841dd0b9a365ff8735d"
+        },
+        {
+          "path": "scripts/sync-skill-exports.mjs",
+          "sha256": "65abd853a649eaa61222df36f3ec2b2d5f900859cb5b9f4240b2a54fe5a8e309"
+        },
+        {
+          "path": "scripts/validate-repository.mjs",
+          "sha256": "9b952edb342e774216d60b900ba2168a732e6cb33a63ceed497ff5a331eb70ee"
+        },
+        {
+          "path": "scripts/build-plugin-bundle.mjs",
+          "sha256": "8db834444da11396e767141b51684bae9f2d277c9c19e3ed9a5d2d59899942f9"
+        },
+        {
+          "path": "tests/skill-catalog.test.mjs",
+          "sha256": "f88c0ab16e83c6f0b09d1a5a05d5f3fe7e2defc0324076e5672bcbc78d14fce0"
+        },
+        {
+          "path": "tests/skill-bundles.test.mjs",
+          "sha256": "ec9e6fc60d0b12307797c1c4a2889eb6c330f048ef7130108b77a8b3abbb9078"
+        },
+        {
+          "path": "tests/bundle-smoke.test.mjs",
+          "sha256": "9dc7078482b08be01b07f60f0e097094d1d80544285e19d3537fe5c5eaf07346"
+        },
+        {
+          "path": "package.json",
+          "sha256": "59b44dc1f329280f989c6a58cb62903663ac0bd62961adec6648c3bbda849201"
+        },
+        {
+          "path": ".github/workflows/validate.yml",
+          "sha256": "e55fa068619f69ad213832e89ab058ad667510d17f7147b56c328fec3bb6d59e"
+        },
+        {
+          "path": "skills/cineweave-director/references/core/operating-model.md",
+          "sha256": "726ce79a6364284ba8adcf413c93ad533852c1b22f89e59dd86a0796a06e2afe"
+        }
+      ]
+    },
+    "P2": {
+      "implementation": "complete",
+      "review": {
+        "status": "passed_with_advisory",
+        "engineering": "tests/evaluations/cineweave-split-p2-stage-review-2026-10-12.md",
+        "behavior": "tests/evaluations/cineweave-split-p2-behavior-review-2026-10-12.md",
+        "behaviorSha256": "b44919b13087806d860a2ca8e1cb5599d68913239c21cdd7d295338d3726f203",
+        "blockingRegressions": 0,
+        "firstFindings": [
+          "A C08 expanded unaffected text; B preserved scope",
+          "A/B C06 omitted capability source/check-date table entries",
+          "B report directory typo; original audit and corrected copy preserved"
+        ],
+        "closedFindings": [
+          "B report directory typo and batch isolation/telemetry limitations clarified"
+        ],
+        "followup": "strengthen source/date handoff reminder and inspect future cold-run C06 repeats",
+        "automaticHostSelectionVerified": false,
+        "perCaseContextIsolationVerified": false
+      },
+      "enabledSkills": [
+        "cineweave-director",
+        "cineweave-platform"
+      ],
+      "actualOwnerCounts": {
+        "cineweave-director": 51,
+        "cineweave-platform": 1
+      },
+      "canonical": {
+        "routes": 12,
+        "rootKinds": 52,
+        "schemas": 54,
+        "examples": 52,
+        "references": 42
+      },
+      "checks": [
+        {
+          "command": "targeted catalog/projection/context tests",
+          "tests": 169,
+          "pass": 169,
+          "fail": 0,
+          "exitCode": 0
+        },
+        {
+          "command": "build full plugin",
+          "files": 320,
+          "byteIdentical": true,
+          "exitCode": 0
+        },
+        {
+          "command": "build and validate platform leaf",
+          "files": 160,
+          "byteIdentical": true,
+          "exitCode": 0
+        },
+        {
+          "command": "npm run test:bundle",
+          "tests": 5,
+          "pass": 5,
+          "fail": 0,
+          "actualLayouts": 4,
+          "exitCode": 0
+        },
+        {
+          "command": "skills:sync:check and contracts:index:check",
+          "exitCode": 0
+        }
+      ],
+      "providerExecuted": false,
+      "mediaGenerated": false,
+      "behaviorRuns": {
+        "cases": 9,
+        "A": "tests/evaluations/cineweave-split-p2-baseline-a-2026-10-12.md",
+        "B": "tests/evaluations/p2-multiskill-b-2026-10-12/report.md",
+        "contentFirstVersionsPreserved": true,
+        "inputTokens": null,
+        "outputTokens": null,
+        "mediaVerified": false
+      }
+    },
+    "P3": {
+      "implementation": "complete",
+      "review": {
+        "status": "passed_with_evidence_limits",
+        "report": "tests/evaluations/cineweave-split-p3-review-2026-10-12.md",
+        "sha256": "a24e586a11871370e3041c5a2daa7fa999107c6b42eebd75e970db94ede117ca",
+        "blockingRegressions": 0,
+        "cases": 6,
+        "advisory": "B shared references not individually hashed; raw shell read stdout/stderr not fully embedded",
+        "scope": "engineering and manual-load text behavior; automatic selection/per-case context/media unknown"
+      },
+      "enabledSkills": [
+        "cineweave-director",
+        "cineweave-platform",
+        "cineweave-reference"
+      ],
+      "actualOwnerCounts": {
+        "cineweave-director": 47,
+        "cineweave-platform": 1,
+        "cineweave-reference": 4
+      },
+      "checks": [
+        {
+          "command": "catalog/context/validate-output targeted tests",
+          "tests": 135,
+          "pass": 135,
+          "fail": 0,
+          "exitCode": 0
+        },
+        {
+          "command": "source and full plugin validation/build",
+          "files": 479,
+          "byteIdentical": true,
+          "exitCode": 0
+        },
+        {
+          "command": "build and validate reference leaf",
+          "files": 160,
+          "byteIdentical": true,
+          "exitCode": 0
+        },
+        {
+          "command": "actual enabled installation matrix",
+          "tests": 7,
+          "pass": 7,
+          "actualLayouts": 6,
+          "exitCode": 0
+        }
+      ],
+      "P2Followup": {
+        "sourceDateReminderAdded": true,
+        "contentRerun": "pending P4 cold-run C06 repeats"
+      },
+      "behaviorRuns": {
+        "A": "tests/evaluations/cineweave-split-p3-baseline-a-2026-10-12.md",
+        "B": "tests/evaluations/cineweave-split-p3-multiskill-b-2026-10-12.md",
+        "firstVersionsPreserved": true
+      }
+    },
+    "P4": {
+      "implementation": "complete",
+      "review": {
+        "status": "passed_with_advisory",
+        "engineeringTriggers": "tests/evaluations/cineweave-split-p4-stage-trigger-review-2026-10-12.md",
+        "content14": "tests/evaluations/cineweave-split-p4-content-review-14-2026-10-12.md",
+        "content58": "tests/evaluations/cineweave-split-p4-content-review-58-2026-10-12.md",
+        "initialFindings": [
+          "C01 A1/B1 narrowed no-fire lock",
+          "C03 A2/B1/B2/B3 sequence complete but no independently closed per-shot copy",
+          "C02 A1/B2 dialogue delivered outside motion copy block",
+          "C06 dates/source checklist omission remains in B2",
+          "C08 original projection context incomplete; lock-preserving revision must expose that source gap",
+          "C04 B3 mode versus actual controls ambiguous"
+        ],
+        "sourceCorrections": [
+          "preserve exclusion scope",
+          "per-shot independent copies when requested; sequence-only request remains valid",
+          "required dialogue in the relevant copy block",
+          "explicit source/date unknowns and distinguish mode from controls",
+          "local repair preserves non-target wording and reports existing context gap separately"
+        ],
+        "preCorrectionSnapshot": "D:/Temp/cineweave-split-p4-before-content-fixes-20261012/manifest.json",
+        "preCorrectionSnapshotSha256": "562481390b91e084c18d9827acd7ac565cfa3fd2e25f60ddccafbb0d2c74f17c",
+        "rerun": "three independent current-source runs of C01 C02 C03 C06 C08 pending",
+        "finalReport": "tests/evaluations/cineweave-split-p4-current-review-2026-10-12.md",
+        "finalSha256": "75c831689875d70eb37cfd1888e7efa1635e68ec21d3c48a55ca27df86836e57",
+        "currentRuns": 3,
+        "currentCaseExecutions": 15,
+        "remainingAdvisories": [
+          "W08 original single-shot projection context needs separately authorized repair; not ready",
+          "current run1 C08 source-note first-version warning, separate correction preserved"
+        ]
+      },
+      "entryPreReview": {
+        "firstFindings": 3,
+        "closed": 3,
+        "report": "tests/evaluations/cineweave-split-p4-entry-pre-review-2026-10-12.md"
+      },
+      "enabledSkills": [
+        "cineweave-director",
+        "cineweave-platform",
+        "cineweave-reference",
+        "cineweave-review"
+      ],
+      "actualOwnerCounts": {
+        "cineweave-director": 43,
+        "cineweave-platform": 1,
+        "cineweave-reference": 4,
+        "cineweave-review": 4
+      },
+      "canonical": {
+        "routes": 12,
+        "rootKinds": 52,
+        "schemas": 54,
+        "examples": 52,
+        "references": 42
+      },
+      "checks": [
+        {
+          "command": "catalog/shot-review/shot-compiler/video-return targeted tests",
+          "tests": 228,
+          "pass": 228,
+          "fail": 0,
+          "exitCode": 0
+        },
+        {
+          "command": "source validation",
+          "files": 638,
+          "byteIdentical": true,
+          "exitCode": 0
+        },
+        {
+          "command": "full plugin build",
+          "files": 638,
+          "byteIdentical": true,
+          "exitCode": 0
+        },
+        {
+          "command": "review leaf build/validation",
+          "files": 160,
+          "byteIdentical": true,
+          "exitCode": 0
+        },
+        {
+          "command": "actual4 Skill layout smoke",
+          "tests": 9,
+          "pass": 9,
+          "layouts": 8,
+          "exitCode": 0
+        }
+      ],
+      "behaviorProtocol": {
+        "ARepeat1": "P2 nine and P3 six frozen-baseline outputs plus17 missing definitions",
+        "ARepeats2And3": "independent fork_none eight content cases each",
+        "BRepeat1": "all24 trigger requests and eight content cases",
+        "BRepeats2And3": "independent fork_none eight content cases each",
+        "sharedBatchContextDisclosed": true,
+        "inputTokens": null,
+        "outputTokens": null
+      },
+      "hostDiscovery": {
+        "cliVersion": "0.147.0",
+        "standaloneLayout": "D:\\Temp\\cineweave-host-discovery-20261012\\run-8t3r6rzb\\filtered-result.json",
+        "standaloneDiscovered": 4,
+        "localPluginLayout": "D:/Temp/cineweave-plugin-host-20261012/run-7k99cpct/result.json",
+        "localPluginDiscovered": 4,
+        "qualifiedNamesReturned": true,
+        "parseErrors": 0,
+        "isolatedTemporaryHome": true,
+        "userProfileChanged": false,
+        "automaticSelectionVerified": false,
+        "firstHarnessFailure": "filtered exact unqualified names, omitted actual plugin-qualified names",
+        "firstHarnessResult": "D:/Temp/cineweave-plugin-host-20261012/run-lzzp6dgq/result.json",
+        "harnessCorrected": true
+      }
+    },
+    "P5": {
+      "implementation": "complete",
+      "review": {
+        "status": "passed_with_audit_limits",
+        "report": "tests/evaluations/cineweave-unified-workflow-review-2026-10-12.md",
+        "forward": "tests/evaluations/unified-workflow-forward-2026-10-12/report.md",
+        "cases": 10,
+        "sourceHashesMatched": 32,
+        "responseHashesMatched": 10,
+        "toolCallCount": null,
+        "runtimeDependencyHashSupplemented": true,
+        "automaticHostSelectionVerified": false
+      },
+      "userClarification": "One workflow: director entry -> necessary Skills -> director final delivery",
+      "previousOptionalDelegationTrial": "not_run; queued agents interrupted before initialization after user clarification",
+      "entryPolicy": {
+        "cineweave-director": true,
+        "cineweave-platform": false,
+        "cineweave-reference": false,
+        "cineweave-review": false
+      },
+      "schemaKindOwnerCountsUnchanged": {
+        "cineweave-director": 43,
+        "cineweave-platform": 1,
+        "cineweave-reference": 4,
+        "cineweave-review": 4
+      },
+      "finalWorkflowOwner": "cineweave-director",
+      "runtimeSDKAdded": false
+    },
+    "P6": {
+      "implementation": "complete",
+      "review": {
+        "status": "passed_with_evidence_limits",
+        "report": "cineweave-split-p6-review-2026-10-12.md",
+        "originalReport": "cineweave-split-p6-review-2026-10-12.md.original.txt",
+        "originalSha256": "c918977eaab79bf8bdfd56622fcc199cac6bf2e65b96ed0e9a0d1586e9559c27",
+        "openProductBlockers": 0,
+        "firstFindingsAndInvocationFailuresPreserved": true
+      },
+      "candidateVersion": "3.2.0",
+      "published": false,
+      "engineeringEvidence": "tests/evaluations/cineweave-split-p6-engineering-evidence-2026-10-12.json",
+      "fullTests": {
+        "tests": 502,
+        "pass": 502,
+        "fail": 0,
+        "skipped": 0
+      },
+      "pluginFiles": 638,
+      "independentSkillFiles": 160,
+      "independentSkills": 4,
+      "bundleSmoke": {
+        "tests": 9,
+        "layouts": 8,
+        "fail": 0
+      },
+      "nativeSkillCycle": [
+        1,
+        4,
+        1
+      ],
+      "nativeStandaloneSkills": 4,
+      "contractFilesByteIdentical": 106,
+      "oldTagUnchanged": true,
+      "userProfileChanged": false,
+      "postReviewChecks": {
+        "status": "passed",
+        "checks": [
+          "source",
+          "index",
+          "sync",
+          "git diff --check"
+        ],
+        "evidence": "tests/evaluations/cineweave-split-p6-engineering-evidence-2026-10-12.json"
+      }
+    }
+  },
+  "providerExecuted": false,
+  "mediaGenerated": false,
+  "committed": false,
+  "pushed": false,
+  "installedInUserProfile": false
+}

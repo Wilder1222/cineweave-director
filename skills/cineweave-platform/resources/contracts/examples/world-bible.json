@@ -1,0 +1,58 @@
+{
+  "kind": "cineweave_codex_world_bible",
+  "contractVersion": "3.0.0",
+  "worldId": "world.river-lanterns",
+  "title": "河灯城",
+  "version": 1,
+  "status": "draft",
+  "premise": "一座稠密河城依靠行会管理的医药、水道和公共记忆仪式应对季节性洪水；日常空间中可见的社会义务制约着私人选择。",
+  "scope": "一座城池、上游农耕流域，以及戏剧短片所需的社会系统。",
+  "canon": [
+    { "claimId": "canon.flood-cycle", "namespace": "ecology", "statement": "每年夏末，低洼街区都会按可预见的周期遭遇洪水。", "status": "canonical", "rationale": "这一压力影响建筑、交通、劳动和故事的时间期限。" },
+    { "claimId": "canon.memory-ritual", "namespace": "culture", "statement": "每笔公开承认的人情债，都由当事住户放流一盏带标记的河灯。", "status": "provisional", "rationale": "仪式让声誉具象化，但这一设定仍需用户批准。" },
+    { "claimId": "canon.instant-cure", "namespace": "technology", "statement": "没有治疗能瞬间治愈重病，或完全不付出代价。", "status": "forbidden", "rationale": "医疗选择必须保留戏剧代价。" }
+  ],
+  "systems": [
+    { "systemId": "system.guild-medicine", "name": "行会医业", "rules": ["持照医户共同承担汛期分诊义务。", "病案既记录诊疗经过，也形成社会义务。"], "limits": ["各街区的知识与物资水平不同。"], "costs": ["违背行会义务可能损害执照、家计和公众信任。"], "exceptions": ["急救可以先于身份登记。"] }
+  ],
+  "geography": [
+    { "regionId": "region.lower-ward", "name": "下城坊", "scale": "由六个相连街坊组成、可步行通达的运河街区。", "orientation": "医业会馆位于北侧高地；渡口台阶和院落住宅沿南侧坡地向河岸下降。", "relationships": ["三座窄桥连接下城坊与集市主街。", "洪水最先从南侧渡口巷进入。"], "climate": ["夏季湿热", "降雨频繁", "夏末存在洪水风险"], "materials": ["深色石铺地", "石灰抹面", "陈旧木材", "无釉屋瓦"] }
+  ],
+  "societies": [
+    { "societyId": "society.medical-guild", "name": "医业行会住户", "values": ["医术胜任", "互助义务", "在公共场合保持克制"], "powerStructure": ["资深持照者分配物资与学徒名额。"], "everydayLife": ["诊疗早于集市开张，汛期持续到入夜后。"], "taboos": ["当众抛弃已登记病人"], "conflicts": ["家族忠诚可能与跨街区平等诊疗相冲突。"] }
+  ],
+  "history": [
+    { "eraId": "era.great-flood", "name": "大洪水一代", "order": 0, "events": ["一次堤防决口摧毁了旧南坊。"], "lastingConsequences": ["建筑保留上层逃生门。", "以公开的人情债记录约束行会义务。"] },
+    { "eraId": "era.present", "name": "当下汛期", "order": 1, "events": ["新一轮暴雨到来时，修缮尚未完成。"], "lastingConsequences": ["私人和解与紧急公共义务争夺时间。"] }
+  ],
+  "narrativeConstraints": {
+    "possible": ["人物可步行、乘小舟或过桥往来街区。"],
+    "impossible": ["人物不可能在无人察觉的情况下抹去一笔公开人情债。"],
+    "costly": ["违抗行会命令可能同时危及生计与接诊资格。"],
+    "centralTensions": ["私人关怀与公共义务的冲突", "旧日伤害与当下需要的冲突"],
+    "storyHooks": ["曾经亲密的两人在为受洪水威胁的住户分诊时重逢。"]
+  },
+  "visualBaseline": {
+    "architecture": ["抬高的门槛", "狭窄有顶廊道", "上层逃生门"],
+    "materials": ["雨水浸深的石面", "风化木材", "石灰抹面", "纸灯与油布灯笼"],
+    "technology": ["手工具", "草药医术", "小舟", "油灯"],
+    "wardrobeLogic": ["分层实用服装表现职业、职责与湿雨天气适应。"],
+    "recurringMotifs": ["带标记的灯笼", "水位痕迹", "药包扎绳"],
+    "physicalLightLogic": ["白天以阴天天光为主", "夜间由油焰及水面反射提供有来源的光照"],
+    "representationRemainsStyleOwned": true
+  },
+  "continuityPolicy": {
+    "immutableFacts": ["会馆至河岸的北高南低坡向", "夏末洪水周期", "公开人情债仪式"],
+    "allowedVariation": ["小范围住户装饰", "不属于正式设定的背景摊贩"],
+    "changeRequiresCause": true,
+    "conflictResolution": "同一设定领域出现冲突时交由人工决定，不自动采用最新说法。"
+  },
+  "unknowns": ["刻意不指定准确的历史对应物。"],
+  "locks": [
+    { "path": "geography.region.lower-ward.orientation", "level": "hard", "reason": "场景地理与银幕方向依赖北侧地势较高的关系。" },
+    { "path": "visualBaseline.representation", "level": "free", "reason": "世界定义物理设计，视觉风格负责表现方式。" }
+  ],
+  "validation": { "canonStatusExplicit": true, "rulesHaveLimits": true, "geographyRelational": true, "societiesPlayable": true, "historyHasConsequences": true, "styleDoesNotRewriteWorld": true, "unknownsPreserved": true },
+  "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-director", "ref": "v3.1.0", "commit": "0000000000000000000000000000000000000000", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00Z" },
+  "provenance": { "source": "suite_builtin", "createdAt": "2026-09-02T00:00:00Z", "updatedAt": "2026-09-02T00:00:00Z", "changeLog": ["建立世界设定的规范结构示例。"] }
+}

@@ -1,0 +1,9 @@
+{
+  "nodeVersion": "v22.15.0",
+  "command": "node D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/scripts/check-shot-review.mjs D:/Temp/cineweave-split-p4-baseline-a3-20261012/C07-review.json",
+  "exitCode": 2,
+  "signal": null,
+  "error": null,
+  "sourceTextSha256": "73f403fcf70c65612ab10ac96553997a5d1ef6d72b8f784f967b645fa9586245",
+  "scope": "plan_only"
+}

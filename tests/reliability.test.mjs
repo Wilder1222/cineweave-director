@@ -1,11 +1,12 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
-import { join } from "node:path";
+import { cp, mkdtemp, readFile, readdir, rm, writeFile } from "node:fs/promises";
+import { join, relative, sep } from "node:path";
 import { tmpdir } from "node:os";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 import { validateMarkdownFiles } from "../scripts/markdown-links.mjs";
+import { repositoryRoot, validateRepository } from "../scripts/validate-repository.mjs";
 import { FORMAT, NODE_TAGS, validateVideoWorkbook } from "../skills/cineweave-director/scripts/check-video-plan.mjs";
 
 function videoBook() {
@@ -91,5 +92,119 @@ test("local links resolve Chinese, repeated, encoded and explicit anchors, exclu
     await writeFile(source, '[重命名前](guide.md#人物情绪)');
     await writeFile(target, '# 新标题\n');
     await assert.rejects(validateMarkdownFiles(directory, ["index.md"]), /broken local fragment/u);
+  } finally { await rm(directory, { recursive: true, force: true }); }
+});
+
+test("repository regression command ownership preserves release and source boundaries", async (t) => {
+  const directory = await mkdtemp(join(tmpdir(), "cw-repository-gates-"));
+  const root = join(directory, "repository");
+  const ignored = new Set([".git", ".build", "node_modules"]);
+  try {
+    await cp(repositoryRoot, root, {
+      recursive: true,
+      filter: (source) => !ignored.has(relative(repositoryRoot, source).split(sep)[0]),
+    });
+    const packagePath = join(root, "package.json");
+    const workflowPath = join(root, ".github", "workflows", "validate.yml");
+    const originalPackage = await readFile(packagePath, "utf8");
+    const packageJson = JSON.parse(originalPackage);
+    const regressionPaths = packageJson.scripts.test.slice("node --test ".length).split(" ");
+    const originalWorkflow = await readFile(workflowPath, "utf8");
+    const workflow = originalWorkflow.replace(`        run: ${packageJson.scripts.test}\n`, "        run: npm test\n");
+    assert.match(workflow, /^        run: npm test$/mu);
+    await writeFile(workflowPath, workflow);
+
+    async function snapshot(path, prefix = "") {
+      const files = {};
+      for (const entry of await readdir(path, { withFileTypes: true })) {
+        const key = `${prefix}${entry.name}`;
+        const child = join(path, entry.name);
+        if (entry.isDirectory()) Object.assign(files, await snapshot(child, `${key}/`));
+        else files[key] = await readFile(child);
+      }
+      return files;
+    }
+    const before = await snapshot(root);
+    await t.test("CI runs the package-owned regression command", async () => {
+      await assert.doesNotReject(validateRepository(root));
+    });
+    await t.test("reviewed regression paths can be reordered without changing coverage", async () => {
+      const changed = structuredClone(packageJson);
+      changed.scripts.test = `node --test ${[...regressionPaths].reverse().join(" ")}`;
+      const candidate = JSON.stringify(changed);
+      try {
+        await writeFile(packagePath, candidate);
+        await assert.doesNotReject(validateRepository(root));
+        assert.equal(await readFile(packagePath, "utf8"), candidate);
+      } finally { await writeFile(packagePath, originalPackage); }
+    });
+
+    for (const lifecycle of ["pretest", "posttest"]) {
+      await t.test(`rejects unregistered ${lifecycle} before npm execution`, async () => {
+        const changed = structuredClone(packageJson);
+        changed.scripts[lifecycle] = "node scripts/build-plugin-bundle.mjs";
+        const candidate = JSON.stringify(changed);
+        try {
+          await writeFile(packagePath, candidate);
+          await assert.rejects(validateRepository(root), /package\.json script inventory/u);
+          assert.equal(await readFile(packagePath, "utf8"), candidate);
+        } finally { await writeFile(packagePath, originalPackage); }
+      });
+    }
+
+    const invalidCommands = [
+      ["omitted regression", `node --test ${regressionPaths.slice(1).join(" ")}`],
+      ["unregistered regression", `${packageJson.scripts.test} tests/unregistered.test.mjs`],
+      ["duplicate regression", `${packageJson.scripts.test} ${regressionPaths[0]}`],
+      ["bundle smoke in ordinary regressions", `${packageJson.scripts.test} tests/bundle-smoke.test.mjs`],
+      ["shell suffix", `${packageJson.scripts.test} && node scripts/build-plugin-bundle.mjs`],
+      ["extra spacing", packageJson.scripts.test.replace("node --test ", "node --test  ")],
+      ["non-test Node command", packageJson.scripts.test.replace("node --test", "node --inspect --test")],
+    ];
+    for (const [label, command] of invalidCommands) {
+      await t.test(`rejects ${label}`, async () => {
+        const changed = structuredClone(packageJson);
+        changed.scripts.test = command;
+        const candidate = JSON.stringify(changed);
+        try {
+          await writeFile(packagePath, candidate);
+          await assert.rejects(validateRepository(root), /package\.json (?:script test|test command|regression)/u);
+          assert.equal(await readFile(packagePath, "utf8"), candidate);
+        } finally { await writeFile(packagePath, originalPackage); }
+      });
+    }
+    const invalidWorkflows = [
+      ["unpinned checkout", /actions\/checkout@[a-f0-9]{40}/u, "actions/checkout@v4"],
+      ["unpinned Node setup", /actions\/setup-node@[a-f0-9]{40}/u, "actions/setup-node@v4"],
+      ["write permissions", "contents: read", "contents: write"],
+      ["release tag bypass", "process.env.GITHUB_REF_NAME !== expected", "false"],
+      ["source gate after npm lifecycle execution", "      - name: 校验源分发\n        run: node scripts/validate-repository.mjs\n      - name: 运行校验回归测试\n        run: npm test\n", "      - name: 运行校验回归测试\n        run: npm test\n      - name: 校验源分发\n        run: node scripts/validate-repository.mjs\n"],
+    ];
+    for (const [label, pattern, replacement] of invalidWorkflows) {
+      await t.test(`rejects ${label}`, async () => {
+        const candidate = workflow.replace(pattern, replacement);
+        assert.notEqual(candidate, workflow);
+        try {
+          await writeFile(workflowPath, candidate);
+          await assert.rejects(validateRepository(root), /read-only release-gate template/u);
+          assert.equal(await readFile(workflowPath, "utf8"), candidate);
+        } finally { await writeFile(workflowPath, workflow); }
+      });
+    }
+    await t.test("unregistered executable cannot join regressions through filesystem discovery", async () => {
+      const extra = join(root, "tests", "unregistered.test.mjs");
+      const changed = structuredClone(packageJson);
+      changed.scripts.test += " tests/unregistered.test.mjs";
+      try {
+        await writeFile(extra, "throw new Error('must not execute');\n");
+        await writeFile(packagePath, JSON.stringify(changed));
+        await assert.rejects(validateRepository(root), /tests source file set mismatch.*unregistered\.test\.mjs/u);
+        assert.equal(await readFile(extra, "utf8"), "throw new Error('must not execute');\n");
+      } finally {
+        await rm(extra, { force: true });
+        await writeFile(packagePath, originalPackage);
+      }
+    });
+    assert.deepEqual(await snapshot(root), before, "repository validation must remain read-only");
   } finally { await rm(directory, { recursive: true, force: true }); }
 });

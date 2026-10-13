@@ -1,0 +1,541 @@
+# 冻结单入口基线 A 首轮余下17案
+
+本报告是首版任务执行文本，不含自评分。唯一任务输入为17案原请求文件；只读冻结单入口及其相邻资源。没有读取当前仓库、rubric、研究、计划、历史或其他输出；未安装、调用供应商、生成媒体或批准定稿。
+
+本批17案在同一子代理上下文内依次处理；不是17次逐案fresh-session。独立案例只继承各自原请求，不复用前案原创设定。
+
+运行元数据：hidden_model=null；hidden_tokens=null；hidden_reasoning=null；hidden_latency=null。
+
+原始输入：[完整JSON](D:/Temp/cineweave-split-p4-a1-remaining-raw-inputs-20261012.json)；逐案完整rawData保存在各案.source.json。
+
+## 已读取源文件与章节
+
+| 文件绝对路径 | SHA256 | 已读章节/范围 |
+| --- | --- | --- |
+| [D:/Temp/cineweave-split-p4-a1-remaining-raw-inputs-20261012.json](D:/Temp/cineweave-split-p4-a1-remaining-raw-inputs-20261012.json) | e0642bc088527a2b406a81d7b5c201d4935ff0bb6429d021eb4fe3beeb6f75ec | 全文17案原请求及rawData；唯一任务输入 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/SKILL.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/SKILL.md) | 18d40408575640d65220b0d4527d356ec4509dc7856e8f0c35dc15142c2af426 | 全文：从交付物开始、创作顺序、创作约定、提示词与视频交接、按需深入、可选结构化交付 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/image-prompt.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/image-prompt.md) | 8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08 | 全文：编译顺序、精简关卡、参考与变换、关键帧准备度、平台适配、准确文字与排版、导入、变体与负向约束 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/story.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/story.md) | 09862af8560baed3f75a31a3b3ae24135908195aa3f3c260698f553f12d9cc59 | 全文：故事基础、场景写作、连续性、质量关卡 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/review-repair.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/review-repair.md) | 9befe4fe6ecc4711e9aeb33121de3aa3912d5a5122ccea047793829b06481834 | 全文：基准、评审、修复归属、返回结果与新证据 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/storyboard-rhythm.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/storyboard-rhythm.md) | 10ce342b7e5beb342f16942d653c3316c9fbe3758e6942c687c37e2560a2c601 | 全文：分镜、分镜参考图到视频、序列节奏、相邻剪辑接口、质量关卡 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/production-plan.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/production-plan.md) | efbde14fb9810d392a696a0ee4e6aaca3b2f64998c291f4ab9936f5c6e41273a | 全文：资产拆解、控制与证据、能力规划、渲染剪辑调色计划、边界 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/scene.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/scene.md) | ef10535a31d8aeacf7465957ad995c47b1389f5b3b5fe9096e77682f151ea6e4 | 全文：设计顺序、共享空间检查、物理光照、互动、连续性与评审 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/character.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/character.md) | 6527df3210d32a9fb03f4e33c9f2d4f2bd52d34f84ea88d60950f1fee637abf8 | 全文：四层、探索与收敛、身份锚点、绑定与表演、质量关卡 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/shot-direction.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/shot-direction.md) | c04957137f3f99cb3bba46f0c9046a653df490686867d8c0cad57ede90087388 | 全文：戏剧单元、摄影机与构图、光照与时间、电影模式与编译、下游产物 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/prompt-detail-standard.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/prompt-detail-standard.md) | 0de944dffd30d69bc05a52ef4bceaf0a90dce40564e2f1a288c68e7dd1e88e59 | 表达原则、人物、人物情绪与表情生成、场景、镜头与分镜、拍摄系统与部门协同、图生视频；初次全文读取被显示截断后，重读第1至198行；示例尾部和交付前检查在初次尾段中可见 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/video-sound-and-delivery.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/video-sound-and-delivery.md) | cfd0a201805ab58f05ebe5eda1025359776eb78534cfb849472f728594da6a16 | 视频意图、续写与生成段落边界、声音职责与提示表、精确文案与时间检查、交付与资源工作表（第1至79行）；初次全文读请求有显示截断，尾部声音回流、剪辑与调色可见 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/ensemble-direction-and-review.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/ensemble-direction-and-review.md) | 54d9406901ae0b42cd8bb2b2cb4bda5e89aaff625dd4e255dc7377452d735e75 | 全文：融入流程、六视角、表演背景活动、覆盖每一镜、只读检查器、视频编译连续性、设计来源 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/core/operating-model.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/core/operating-model.md) | 932bdfa72eb114b93673cb0e2a4490a293c1302fc3822f4d832a749164da101e | 第1至85行：中文约定、任务范围与上下文、架构职责、路由图、交互深度、阶段纪律、创作成熟度与授权、规划边界 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/directing-craft.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/directing-craft.md) | 82524260f2823fe2d779e367a8a17802c050368c29d8e084cea1b741dd1bcf03 | 第1至110行：观众体验、信息视点、可表演任务、台词行动、调度、覆盖、倾听反应、连续观察与切镜；仅标题检索末段 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/generation-diagnostics.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/generation-diagnostics.md) | 2ad6fd129d28d5b97853db37b36a3e81582605ddf37ae6139376d671ebf40b9b | 第1至165行：索引、证据阶段、风险工作表、运动交接、外部分诊、诊断索引、修复决策；研究来源仅标题未读内容 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/portrait-natural-human.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/portrait-natural-human.md) | a370c4ca4e05a31576d99e262dd52924667f199d205c9087a6104d709b8d1d43 | 第1至80行：分层、先分清肖像任务、细节预算、表面语言、肤质妆造光线、示例、评审与局部修复 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/aigc-control-and-evaluation.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/aigc-control-and-evaluation.md) | 1087161d1435a87e6b9de891c3b8d0976693645a5484df59ee146b9e5425b771 | 标题检索与第53行起：最小有意义的对照 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/video-performance-direction.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/video-performance-direction.md) | 8a156479c8ae94c55a1c6b433fef9193733fc64867eaae2a17e17e404614a11d | 标题检索与第1至130行：编写顺序、任务、情绪、迁移职责、采集、面部、台词、摄影机焦点、特效、时间与验收 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/video-timing-and-handles.md](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/video-timing-and-handles.md) | 0856cc9f67c10259a54755a470ae338e93a25df3d031b0d1730e5429aeb55fa8 | 标题检索与第1至63行：三种时长、时长政策、精确算术、音频窗口、尾帧陷阱、语音特效续写开头 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/scripts/check-shot-review.mjs](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/scripts/check-shot-review.mjs) | bb69f60d8794f3329bc4b7af772d05ad01a28c001c7345f1de63bfa1e3d7d1c2 | 全文，含review角色、字段校验、覆盖/openItems、CLI退出码；C07实际执行 |
+| [D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/scripts/parse-json.mjs](D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/scripts/parse-json.mjs) | 9c15621d8304bf6114cc4cb322409c8e59433409ac17950311725cdcbebecf11 | 全文；check-shot-review.mjs运行时依赖 |
+
+## 实际工具结果
+
+读取工具：PowerShell Get-Content、rg标题检索；读取调用均返回exit_code=0。两次大批读取有显示截断，随后分别重读需要的正文段，范围如上。保存工具：apply_patch创建本目录落盘脚本，Python写入首版与来源索引。未将读取日志或任何检查结果伪装为媒体。
+
+命令：`node --version`
+
+退出码：0；原生stdout：[文件](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/node-version.stdout.txt)；原生stderr：[文件](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/node-version.stderr.txt)。
+
+```text
+v22.15.0
+```
+
+命令：`node D:\Temp\cineweave-split-baseline-20261012-23e5cb0865\restored\skills\cineweave-director\scripts\check-shot-review.mjs D:\Temp\cineweave-split-p4-baseline-a1-remaining-20261012\CW-SPLIT-C07-shot-review.json`
+
+退出码：2；原生stdout：[文件](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-C07-shot-review.stdout.txt)；原生stderr：[文件](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-C07-shot-review.stderr.txt)。
+
+```text
+{
+  "valid": true,
+  "scope": "plan_only",
+  "coverageComplete": true,
+  "reviewComplete": false,
+  "expectedRows": 12,
+  "missing": [],
+  "openItems": [
+    {
+      "role": "cinematography",
+      "shotId": "FG-S02",
+      "status": "unknown"
+    }
+  ],
+  "prompt": null,
+  "errors": [],
+  "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。",
+  "localization": {
+    "locale": "zh-CN",
+    "summary": "输入有效，评审仍有未决项或没有适用的通过项。"
+  }
+}
+```
+
+完整检查表：[CW-SPLIT-C07-shot-review.json](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-C07-shot-review.json)；结构/覆盖及openItems为实际Node输出，scope=plan_only。
+
+## 逐案首版全文
+
+### CW-SPLIT-T01
+
+原请求：
+
+$cineweave-director 帮我写一张电影海报的完整中文生图提示词：一个成年女邮差站在黎明的空车站，手里拿封未拆的信，片名准确写“下一班”。没有参考图，其他视觉细节你来设计，4:5竖版。
+
+主责：image_prompt。
+
+完整输入侧文件：[CW-SPLIT-T01.source.json](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T01.source.json)；首版侧文件：[CW-SPLIT-T01.first-response.md](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T01.first-response.md)。
+
+首版正文：
+
+```text
+4:5竖版电影海报，写实摄影与克制的印刷颗粒。黎明的空车站，一名约三十五岁的成年女邮差独自站在站台中景，人物从头顶到鞋底完整入画，位于画面下半部偏右。她有略方的脸形、平直眉、窄长深棕眼，鼻梁自然，薄唇轻合；肌肤保留细微纹理，无明显装饰性彩妆。黑发收成低马尾，穿灰绿色棉质邮差外套、深灰长裤和磨旧的黑色平底鞋，一只无标识的深褐帆布邮包斜挎在左侧腰间。
+她右手捏着一封未拆的米白信封下缘，完整封口朝向观众，信封表面没有地址或文字；左手自然垂在身侧。身体朝向站台尽头，重心落在左脚，肩颈略紧，下颌轻收，目光望向画面左后方空荡的铁轨，眉间微收、嘴角平直，以停住的姿态表现迟疑的等待，不看镜头。
+摄影机位于站台内侧、人物胸口高度，平视，自然透视。暗色站棚柱列与铁轨向左后方收束，空长椅退在背景，站内没有其他人，也没有列车。灰蓝黎明天光从站棚敞口柔和进入，右后方低处的初阳在露天轨道和人物右肩边缘留下淡暖亮度；人物脚下有贴地接触阴影，信封是清楚可读的浅色视觉点。棉布呈低光泽，帆布包保留织纹与受力褶皱，金属轨道仅有细窄反光。
+画面顶部保留约五分之一的平静灰蓝天空，片名“下一班”准确写一次，采用疏朗的米白色中文黑体，单行居中，四周留安全边距。其余画面不出现标语、署名、广告、站名或乱码文字。低饱和灰蓝、灰绿与小面积暖光，暗部保留结构，不加浓雾、闪电或夸张光晕。避免信封拆开、手指穿信封、邮包增殖、额外人物和标题错字。
+```
+
+邮差外观、车站材质与构图是本次原创设计。片名拼写须在实际成图中逐字核对，提示词不能保证文字准确渲染。
+
+### CW-SPLIT-T02
+
+原请求：
+
+$cineweave-director 帮我把“修理工发现旧收音机里传来自己童年的声音”写成一段可以拍的短场景。只要剧本正文，保留现实世界，没有魔法，也没有现成角色设定。
+
+主责：story。
+
+完整输入侧文件：[CW-SPLIT-T02.source.json](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T02.source.json)；首版侧文件：[CW-SPLIT-T02.first-response.md](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T02.first-response.md)。
+
+首版正文：
+
+内景　街角修理铺　傍晚
+
+卷帘门落下一半。成年修理工周岑把一台旧收音机放到工作台上，拨动开关。只有沙沙声。
+
+他旋转调谐钮。杂音中，一声稚嫩的喊叫冒出来。
+
+童声（收音机里）
+爸，你听见没有？我今天会骑了！
+
+周岑的手停在旋钮上。他贴近扬声器。
+
+童声（收音机里）
+别扶后面，真的别扶。
+
+周岑猛地把音量调低，又调高。声音还在，接着是车铃、鞋底擦地和一个男人的笑声。
+
+他拔下墙上的电源插头。声音立刻断了。
+
+周岑翻过收音机。后盖少了一颗螺丝。他卸下另外两颗，打开盖板：原来的电路旁，多出一块用胶带固定的小播放器，细线接到扬声器上。播放器里插着一张存储卡。
+
+他重新接上电源。车铃响起。
+
+男人的声音（收音机里）
+摔了也不丢人，再来一次。
+
+周岑从抽屉拿出读卡器，把存储卡插入电脑。屏幕上出现文件夹“旧录像转存”，其中一个文件名是“岑岑学车”。他点开。
+
+画面里，一个孩子骑着小自行车，父亲跟在后面。孩子回头，伸出缺了一块皮的门牙，朝镜头喊。
+
+屏幕中的孩子
+妈，你拍到没有？
+
+周岑下意识摸了一下自己的门牙，随即收回手。
+
+他翻出收音机下面的维修单。送修人一栏写着母亲的名字，故障说明只有一句：“按开关就没声音，想让他再听听。”
+
+周岑拿起手机，停在“妈”的联系人上。收音机里的父亲又说了一遍“再来一次”。
+
+他拨出电话，伸手把半落的卷帘门拉上。
+
+周岑
+妈，是我。收音机我拆开了。
+
+他看着桌上的播放器，声音放轻。
+
+周岑
+里面的东西没坏。我把开关修好，明天带回去。
+
+他把播放器上的胶带重新压牢，留下存储卡，没有删文件。
+
+### CW-SPLIT-T07
+
+原请求：
+
+$cineweave-review 帮我检查这段提示词有没有内部矛盾，只给问题和最小修订建议，不直接重写：摄影机全程固定，随后绕人物转180度；白天只用西窗日光，所有阴影朝向西窗；成年女子左手一直空着，同时左手紧握杯子。
+
+主责：review_repair。
+
+$cineweave-review 在可读冻结入口中无独立实现；由单入口review_repair内联恢复。
+
+完整输入侧文件：[CW-SPLIT-T07.source.json](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T07.source.json)；首版侧文件：[CW-SPLIT-T07.first-response.md](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T07.first-response.md)。
+
+首版正文：
+
+1. “摄影机全程固定”与“随后绕人物转180度”矛盾。最小修订：保留固定机位，删除环绕指令；若环绕才是意图，则只改“全程固定”，不要两者并存。
+2. 唯一光源是西窗日光，却让所有投影朝向西窗，方向与光源关系相反。最小修订：把“所有阴影朝向西窗”改为“由西窗日光形成的桌面／地面投影向东侧延伸，边缘柔和”。面部阴影仍随身体朝向形成，别把所有阴影写成同一箭头。
+3. “左手一直空着”与“左手紧握杯子”矛盾。最小修订：若杯子必须在左手，只删“左手一直空着”；无需新增换手动作。
+
+### CW-SPLIT-T08
+
+原请求：
+
+$cineweave-review 我说“视频里递杯像穿模”，但目前没有提供视频、截图或生成设置。请先列排查顺序和需要补的证据，现阶段能查的是这句动作稿：乙左手触到杯身后，甲立刻松开右手，杯子由乙左手接住。
+
+主责：review_repair。
+
+$cineweave-review 在可读冻结入口中无独立实现；由单入口review_repair内联恢复。
+
+完整输入侧文件：[CW-SPLIT-T08.source.json](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T08.source.json)；首版侧文件：[CW-SPLIT-T08.first-response.md](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T08.first-response.md)。
+
+首版正文：
+
+目前只能检查动作文字，“像穿模”是你的症状报告，还不能据此认定实际穿插位置或根因。
+
+排查顺序：
+
+1. 先核对真实初态：杯子是不是由甲右手握住，乙左手是否空着，两手与杯身是否各有清楚的轮廓。补原始视频、实际首图，以及异常的大致时段；保留完整片段，不只截最坏的一帧。
+2. 正常速度看交接，再逐帧看接触前、接触中、甲松手后。分别跟踪甲右手、乙左手和杯子，标出最早偏离的一帧；区分遮挡造成的误读、手穿杯壁、杯子自行跳位和失去支撑。
+3. 对照动作稿检查承重顺序。现句只写“触到杯身”，并未明确乙已建立能承重的握持，甲却立刻松手。这是文本中的支撑缺口，但不是实际穿模根因的证明。最小修订建议只动释放条件：乙左手指腹接触杯身并合拢形成稳定握持后，甲才松开右手。
+4. 若握持文字成立而画面失败，再查双方距离、杯子尺度、手指遮挡和首图是否允许这段交接。补能看清双手与杯口的画面及空间说明，不能靠紧裁切解释不可能的接触。
+5. 最后核对实际提交的完整提示词、平台／模型／模式、时长与生成设置，以及有没有参考图绑定或后期裁切。设置只能解释条件，不能替代视频观察。
+
+当前已能定位的是“触到”到“接住重量”之间缺少稳定握持条件；实际手部穿插、发生时间、责任是否还涉及首图或模型，均待视频证据。
+
+### CW-SPLIT-T09
+
+原请求：
+
+想做一张低饱和的书店宣传图：雨停后，成年店员在窗边扶正一本书，窗外没有人。请给我完整中文生图提示词，画面不放文字，没有参考素材，没定平台。
+
+主责：image_prompt。
+
+完整输入侧文件：[CW-SPLIT-T09.source.json](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T09.source.json)；首版侧文件：[CW-SPLIT-T09.first-response.md](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T09.first-response.md)。
+
+首版正文：
+
+```text
+16:9横向书店宣传图，写实摄影，低饱和灰绿、温和木色与米白纸色。雨刚停的小书店，画面中只有一名约三十岁的成年店员，站在窗边陈列台旁，身体朝向画面右侧四分之一转。她有圆润的长方脸、自然弧眉、深棕杏眼与较宽的下唇，黑发在后颈扎成简洁低髻；无装饰性彩妆，肤色自然，脸颊保留柔和纹理。穿浅灰无图案棉衬衫和深绿围裙，袖口整齐，面料低光泽，围裙腰带受力处有小褶皱。
+选定她扶正书本的一个静止瞬间：一本无字米白封面的书已直立在窗边木质陈列架上，底边完整抵住台面；她右手指腹轻贴书脊上部，左手扶住封面下侧，书本仍由台面与陈列架支撑。她微微低头看书本的上缘，眉间放松、双唇自然轻合，肩颈松弛，专注于把陈列整理齐，不望镜头、不夸张微笑。
+摄影机位于店内走道、店员胸口高度，平视中景，人物从头顶至腰下入画，双手和整本书完整可见。窗在画面右侧，窗外空街没有行人，湿路面和残留在玻璃外侧的少量水滴说明雨后状态；室内木地板与陈列台保持干燥。前景一角旧木书架作轻微框景，后景书架有少量整齐排列的素色无字书脊，通道留空。
+阴天雨后日光由右侧大窗柔和进入，在右侧面颊、手背和书封形成宽而柔的亮面；店内米白墙面提供较弱反射，手指与书本、书本与台面都有自然接触阴影，不加无来源轮廓光。焦点覆盖脸、双手与书本，背景适度柔化；玻璃水滴、纸封和木纹各自保持不同表面质感。画面无片名、广告语、招牌、字幕、标志、署名或其他可读文字；无额外人物，无正在下雨的室内效果，避免多出书本、手穿封面和漂浮书底。
+```
+
+画幅与店员造型为本次设计选择；平台未定，正文采用通用中文描述。
+
+### CW-SPLIT-T10
+
+原请求：
+
+这段情节帮我变成连续两镜：姐姐把钥匙放进弟弟摊开的手掌，弟弟收好后才转身走向门。都是成年人，两镜里钥匙别换手，别凭空多一把；没有图和视频，只写分镜与视频母稿。
+
+主责：storyboard_rhythm。
+
+完整输入侧文件：[CW-SPLIT-T10.source.json](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T10.source.json)；首版侧文件：[CW-SPLIT-T10.first-response.md](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T10.first-response.md)。
+
+首版正文：
+
+设计假设：16:9，两镜各5秒；姐姐用右手递一枚黄铜钥匙，弟弟左手接收并收在左裤袋。室内门厅，门在画面右后方，两名成年人；两镜都从人物互动轴线的同一侧拍摄。没有实际首图或片段。
+
+S1｜5秒｜固定双人中景，头顶至胯部入画，双手在画面中央清楚可见。姐姐在画面左侧，弟弟在右侧，彼此相向。起点钥匙仅在姐姐右手，弟弟左掌朝上摊开。0—1秒姐姐看向空掌；1—3秒她右手缓慢前送，把钥匙平放在弟弟左掌。钥匙接触掌心、有了掌面支撑后，姐姐才松开右手；3—5秒弟弟左指合拢，姐姐空右手退回身前。出点：弟弟左手握住同一枚钥匙，尚未转身，姐姐右手空着。
+
+S2｜5秒｜同侧固定中全景，从头顶至小腿入画，左裤袋与右后方门都能看到。直接延续S1，不重复交接。起点弟弟仍以左手握那一枚钥匙。0—2秒左手移到自己左裤袋，把钥匙送进袋内；钥匙完全入袋后才松开并抽出空左手。2—3秒弟弟转身面向右后方门，3—5秒走向门；姐姐留在原位。出点钥匙始终在弟弟左裤袋内，未换手，未多出另一枚。
+
+视频母稿：
+
+```text
+16:9，连续两镜，设计总长10秒。安静的干燥门厅，成年姐姐在画面左侧、成年弟弟在右侧，右后方有门；两镜始终位于互动轴线同侧。柔和窗光与服装外观跨镜保持一致。道具只有一枚黄铜钥匙。
+第一镜5秒，固定双人中景，头顶至胯部入画，焦点与景深同时保护双方的手。姐姐右手握钥匙，弟弟左掌空着朝上摊开。姐姐先看掌心，再用右手把钥匙缓慢放到左掌；钥匙完全得到掌面支撑后，姐姐才松开右手，弟弟左指合拢握住。姐姐空右手退回身前，弟弟尚未转身。
+连续硬切到第二镜5秒，同侧固定中全景，从头顶至小腿入画，弟弟左裤袋与右后方门同时可见。弟弟左手已经握着同一枚钥匙，不重新接取、不重演第一镜；左手将钥匙放进自己左裤袋，钥匙完全入袋后左手松开、空手抽出，然后他才转身走向右后方门。姐姐保持原站位。末态钥匙在左裤袋内，弟弟向门行进，不额外开门或添加新的剧情动作。
+摄影机两镜均固定，不环绕、不越轴。交接和入袋时手与道具轮廓可读，不用遮挡或运动模糊掩盖接触。室内底声连续，钥匙接触掌心和入袋只有轻微细响，步行时有对应脚步与衣料声，无对白、旁白或音乐。保持一枚钥匙、左右手定义、人物位置、光源及衣着；不换手，不瞬移，不在钥匙入袋前转身。
+```
+
+### CW-SPLIT-T15
+
+原请求：
+
+我已有一段镜头稿，你先挑问题，别重新创作：男子在镜头左侧拿杯，女子在右侧；下一句写同一时刻女子在左侧伸手，男子已经离场但继续与她对视。画面没有切镜。
+
+主责：review_repair。
+
+完整输入侧文件：[CW-SPLIT-T15.source.json](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T15.source.json)；首版侧文件：[CW-SPLIT-T15.first-response.md](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T15.first-response.md)。
+
+首版正文：
+
+两处文本问题：
+
+1. 同一时刻、没有切镜，女子从画面右侧变成左侧，却没有走位或可解释的摄影机运动。问题归属为镜头调度／画面位置连续性。最小建议：保留初始站位，把下一句“女子在左侧伸手”中的“左侧”改为“右侧”。
+2. 男子“已经离场”却“继续与她对视”，没有说明仍在画外可见的对视位置。“离场”若指离开这个空间，双方持续对视缺少成立条件。问题归属为在场状态与视线调度。最小建议：若要保留对视，把“已经离场”改为“仍在镜头左侧”；若只是出了画框，则需明确他仍在同一空间的画外位置。
+
+这里只定位问题并给局部建议，未重写原稿。
+
+### CW-SPLIT-T16
+
+原请求：
+
+这两镜文字是不是接不上？S1结束女孩把包提在右手，走向画面右侧；S2开头同一时刻包在左手，她从画面左侧走来。她是成年人，没有中间动作和省略时间。请给出问题归属和一处最小修复建议，不改其他剧情。
+
+主责：review_repair。
+
+完整输入侧文件：[CW-SPLIT-T16.source.json](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T16.source.json)；首版侧文件：[CW-SPLIT-T16.first-response.md](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T16.first-response.md)。
+
+首版正文：
+
+持手确实接不上：S1出点包在右手，S2在同一时刻变为左手，且没有换手过程。归属为道具持有连续性，修复责任在S2入镜状态。
+
+“从画面左侧走来”本身不一定反向：人物可以从左边入画继续向右走。原稿没有S2机位与前进方向，方向关系还不能定为错误；也不能自行补一段省略时间来解释。
+
+只改一处：将S2的“包在左手”改为“包仍提在右手”。保留其他剧情与原有行走描述。
+
+### CW-SPLIT-T19
+
+原请求：
+
+先检查并修好下面的两镜，直接交完整修订稿。唯一可改的是S2的入镜持手，S1和剧情都锁定：S1中成年男子用右手把信递给成年女子左手，结束时信在女子左手；S2连续硬切，开头却写信在女子右手，然后她把信放进左侧抽屉。没有素材。
+
+主责：review_repair。
+
+完整输入侧文件：[CW-SPLIT-T19.source.json](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T19.source.json)；首版侧文件：[CW-SPLIT-T19.first-response.md](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T19.first-response.md)。
+
+首版正文：
+
+检查发现唯一失配在S2入点：连续硬切前后，信未经换手就由女子左手变成右手。以下只将S2入镜持手改为左手，其他内容保持。
+
+S1中成年男子用右手把信递给成年女子左手，结束时信在女子左手。
+
+S2连续硬切，开头信在女子左手，然后她把信放进左侧抽屉。
+
+### CW-SPLIT-T21
+
+原请求：
+
+你能判断我这张新海报里的人物有没有变脸吗？我没有上传海报或身份原图，只有一句描述“好像眼睛变大了”。先给我可以实际对照的检查办法，不重做海报。
+
+主责：review_repair。
+
+完整输入侧文件：[CW-SPLIT-T21.source.json](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T21.source.json)；首版侧文件：[CW-SPLIT-T21.first-response.md](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T21.first-response.md)。
+
+首版正文：
+
+现在不能判断是否变脸：只有“好像眼睛变大了”的描述，没有新海报或身份原图可对照。
+
+可以按这套办法实际检查：
+
+1. 准备新海报原尺寸文件和你认定的角色身份原图，标明准确版本；优先选择头部角度、表情接近的一张，不用不同人物或仅服装参考替代身份来源。
+2. 并排看完整画面，再取未经拉伸的面部局部。先比较头部俯仰、侧转、拍摄透视、光线和睁眼程度；这些变化会让眼睛显得更大，不能直接算身份漂移。
+3. 若角度相近，只等比例缩放，以鼻根、鼻尖和嘴角等稳定位置辅助对齐。比较眼裂宽度与脸宽的关系、眼间距与鼻宽、内外眼角位置、鼻唇间距、下颌轮廓和原有不对称。眼睑张开幅度与结构比例分开记录，不只盯一只眼。
+4. 做三列记录：原图可见锚点／海报对应位置／差异及可能解释。被阴影、发丝或角度遮住的部位记“无法判断”。不设一个数值阈值自动宣布是同一人或变脸，也不做生物识别匹配。
+5. 若多个稳定几何关系都改变，再定位最早改变的版本，并对照实际提示词、身份参考绑定和编辑前后图；先确认是源图、编译还是生成／修图造成，再提出一个局部修复变量。
+
+当前结论只保留“身份一致性未知”；上述检查不需要重做海报。
+
+### CW-SPLIT-T22
+
+原请求：
+
+$cineweave-story 帮我写一个成年修表匠与旧闹钟的短故事提纲，现实题材，无神怪。我只是按名字试着叫这个入口，不知道有没有装；请把故事任务继续完成。
+
+主责：story。
+
+$cineweave-story 在可读冻结入口中无独立实现；由单入口story内联恢复。
+
+完整输入侧文件：[CW-SPLIT-T22.source.json](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T22.source.json)；首版侧文件：[CW-SPLIT-T22.first-response.md](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T22.first-response.md)。
+
+首版正文：
+
+当前可读取的是CineWeave导演的冻结单入口，没有可用的独立 `$cineweave-story` 实现；我用其中的故事路由继续完成。
+
+故事提纲：《迟到的七点》
+
+成年修表匠陈岚准备结束小店营业，搬去外地工作。她的父亲去世后留下的旧闹钟始终停在七点，她一直以“零件难找”为由不修。清空抽屉时，一名成年邻居来取寄放的修表工具，提醒她父亲过去每天七点开门，从不误点。
+
+陈岚想在搬走前证明自己能修好它。她拆开机芯，发现只是发条卡住，零件并没有缺。过去的借口失效了：真正让她不愿动手的，是她曾答应父亲接手这间店，却早已拿到外地的工作合同。
+
+她清洁、校正机芯，让闹钟重新走动。试铃时，清脆的声音打断收箱。邻居听见，问她明天是否照常开门。她没有再含糊应付，拿出已经写好的停业通知，承认自己要走，也承认父亲从没要求她一辈子留在这里。
+
+邻居归还工具时带来一张旧工单：父亲在背面记着陈岚第一次独立修好一只表的日期。她把工单夹进维修笔记，决定保留手艺，而不是把店址当作承诺的全部。
+
+第二天七点，旧闹钟准时响。陈岚关掉铃声，最后一次打开店门，给来取表的顾客交还修好的表、结清订单。随后她挂好停业通知，提起行李，把闹钟装进随身包。她赴约去新工作，带走会继续使用的工具和闹钟。
+
+核心变化：她从用故障拖延离开，转为修复物件、说明决定并承担交接；声音来自真实机芯，没有神怪、时间倒流或亡者回应。
+
+### CW-SPLIT-T23
+
+原请求：
+
+只把这句话翻成中文，保持一句话：The shop closes at six.
+
+主责：无适用；按原请求直接回答，不激活CineWeave。
+
+完整输入侧文件：[CW-SPLIT-T23.source.json](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T23.source.json)；首版侧文件：[CW-SPLIT-T23.first-response.md](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T23.first-response.md)。
+
+首版正文：
+
+商店六点关门。
+
+### CW-SPLIT-T24
+
+原请求：
+
+帮我算一下36乘以24，再加18，直接给结果。
+
+主责：无适用；按原请求直接回答，不激活CineWeave。
+
+完整输入侧文件：[CW-SPLIT-T24.source.json](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T24.source.json)；首版侧文件：[CW-SPLIT-T24.first-response.md](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-T24.first-response.md)。
+
+首版正文：
+
+882
+
+### CW-SPLIT-C01
+
+原请求：
+
+我需要一张《归潮》电影海报的完整中文生图提示词，可直接复制。4:5竖版，成年人女主，短黑发、深蓝无图案棉外套，独自站在海边旧灯塔门口，右手提点亮的黄铜提灯。蓝调暮色，提灯暖光和环境冷光都要有物理来由。片名准确写“归潮”，只出现一次，上方留字，下方留署名空间；不加闪电、火焰、额外人物或旁白文字。没有参考图、正式人物设定或指定模型，其他构图与可见细节由你设计。只交付我能用的完整提示词和确实需要说明的未决项，不做图片。
+
+主责：image_prompt。
+
+完整输入侧文件：[CW-SPLIT-C01.source.json](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-C01.source.json)；首版侧文件：[CW-SPLIT-C01.first-response.md](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-C01.first-response.md)。
+
+首版正文：
+
+```text
+4:5竖版电影海报，写实摄影，低饱和蓝灰暮色与局部暖黄提灯光。海边旧灯塔的入口，一名约三十二岁的成年女主独自站在木门前偏右的位置，从头顶至鞋底完整入画。她短黑发齐耳、侧分，发尾贴近耳后，无发饰；略长的椭圆脸，平直眉、深棕窄杏眼、自然鼻梁与清楚但柔和的下颌，双唇轻合。肤色自然，脸颊保留细小纹理，妆容仅作薄透的肤色修饰，无夸张眼线与亮片。
+她穿深蓝无图案棉外套，直身、翻领、前襟纽扣闭合，袖口到腕，棉布低光泽、有沿肘部弯折的自然褶皱；深灰长裤和深褐平底鞋。右手环握点亮的黄铜提灯上方弧形提柄，灯体垂在右大腿外侧，指节与提柄接触清楚，灯体不碰衣摆；左手自然垂下。重心落在左脚，肩线平稳、下颌略收，目光停在画面左侧海岸线上，眉头轻收、嘴角不抬，用克制的停留姿态表达等待，不看镜头。
+灯塔为旧灰白石砌圆塔，入口木门微有盐蚀和局部漆层剥落，门楣与石阶保持完整。塔身在画面右后方上升，左侧露出低处海面与平直地平线，岸边只有岩石和窄石路，没有船只、其他人物或文字标牌。摄影机位于入口前方、女主胸口高度，平视，自然透视；石阶引导至人物，门洞暗部与深蓝外套仍有可辨层次，双脚落在同一实在石阶上并有接触阴影。
+日落后的蓝灰天空提供宽而柔的冷环境光，主要由左侧敞开的海岸与上方天空照到塔壁、人物左侧脸颊和外套；冷色来自暮色环境，不加隐藏聚光灯。黄铜提灯内可见小型暖黄灯芯火光，经玻璃透出，只在右手指腹、右袖口、邻近外套边缘及脚边一小片石面形成衰减明显的暖光，不照亮整座灯塔或远处海面；火光只在封闭灯体内部，不出现外溢火焰。黄铜有磨旧表面与窄暖反光，灯玻璃映出微弱天空亮面，棉布保持漫反射，石壁粗糙而无镜面油亮。焦点保护脸、右手和提灯，海面略柔化；不以深黑吞没眼睛与握持。
+上方约五分之一保留干净的蓝灰天空作为标题区，片名“归潮”准确出现一次，米白中文宋体、单行居中、左右留足安全边距。下方约七分之一以平静的暗石面留出署名空间，此处保持无字，等待后续署名排版。画面只有指定片名，不添加旁白文字、宣传语、额外标识或署名占位字符。无闪电、无灯体之外的火焰、无额外人物，避免标题错字重复、右手换手、提灯增殖、手柄穿指、悬浮站姿及无来源的强轮廓光。
+```
+
+未决项：模型尚未指定；实际成图需核对片名每个字与出现次数，署名文案尚未提供，下方先留空。
+
+### CW-SPLIT-C02
+
+原请求：
+
+我想做6秒、16:9的图生视频，单镜固定机位：成年女子在干燥的门厅左侧，右手握收拢黑伞，伞尖触地；成年男子在右侧，左手空着。女子看向他，把伞柄慢慢送过去，说准确台词“你拿走吧”。男子先看伞柄，再伸左手用指尖触到柄，但不接过重量；女子没有松手，停顿到结束。两人的接触要看得清。没有首图、没有任何实际素材，也没选平台。请把首图所需的完整中文画面稿和基于该起点的完整运动稿写好，说明现阶段还缺什么；别把文字说成已绑定图片，也别替我生成媒体。
+
+主责：production_plan。
+
+完整输入侧文件：[CW-SPLIT-C02.source.json](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-C02.source.json)；首版侧文件：[CW-SPLIT-C02.first-response.md](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-C02.first-response.md)。
+
+首版正文：
+
+以下为待制作、待绑定的首图与6秒运动设计。服装、门厅材质、人物间距与灯光为本次可撤销设计；没有实际图片或声音。
+
+首图画面稿：
+
+```text
+16:9横向写实画面，干燥的门厅，成年女子在画面左侧，成年男子在右侧，两人相距约七十厘米并彼此相向。固定机位在两人互动轴线的同一侧、胸口高度，平视中全景，头顶至鞋底和伞尖触地点均入画，双手之间留清楚的负空间；自然透视，不用广角夸张手部。女子短栗色直发齐下颌，长椭圆脸、平直眉与深棕眼，穿米白棉衬衫、深灰长裤、黑色平底鞋；男子短黑发、略方脸，穿浅灰无图案衬衫、深色长裤与棕色平底鞋。两人肤质自然，无夸张妆造。
+女子身体朝向男子，右手握着唯一一把收拢黑伞的弯柄根部，伞杆近于竖直，伞尖抵在她右脚前方的干燥灰色地砖上，伞布完整收紧且无水滴；弯柄外侧末端露出，供稍后指尖接触。她左手空着自然垂在身侧，重心稳定，目光看男子的脸，眉间轻收、双唇轻合，神情克制。男子左手空着，放松地停在腹部前方，尚未伸手；右手空着垂在身侧，目光看女子的脸，双唇闭合，无提前的握持或承重。
+背景为浅灰墙面和闭合的木门，地面、衣服和伞布干燥，没有额外人物、箱包或第二把伞。画面左前方门厅窗的柔和白天日光照亮人物、弯柄及双手，浅色墙面提供弱反射，阴影柔和并与窗位置一致；伞尖贴地阴影清楚。焦点和景深同时保留双方脸部、右手握持和外露弯柄，手臂不互相遮住，起点两人的手尚未相触。无文字、字幕或可见录音器材。
+```
+
+运动稿：
+
+```text
+设计采用段6秒，16:9，单镜，全程固定机位、不推拉、不变焦、不环绕、不切镜。实际首图尚未提供：未来只绑定与上述起点一致的图片，先核对女子左侧、男子右侧、女子右手握黑伞、伞尖触地、男子左手空着和双手可读性。
+0—1秒，两人保持起点。女子注视男子的脸，右手持续握住弯柄根部；男子尚未伸手，嘴唇保持闭合。
+1—3秒，女子右肩与肘部小幅前送，将伞柄缓慢送向画面右侧的男子。伞尖继续以原触地点为支点，伞杆随上端移动略倾斜，伞布保持收拢；她持续承担和控制伞的重量，没有松手、换手或让伞自行漂移。弯柄外露末端移动到男子左手可触及的位置，两人的身体不换边、不跨步。女子朝男子说出唯一一句准确台词，唇形与下颌允许随发音变化；语气低而清楚，克制，无哭腔。男子先把目光从女子脸移到正在靠近的弯柄，确认目标，仍未伸手。
+3—4.2秒，女子右手减速并稳住伞柄。男子保持目光落在外露弯柄末端，随后抬起左前臂，左手食指与中指指尖缓慢靠近，直到轻触弯柄外侧；指尖停在可见表面，不穿过握柄，不包围握柄，不托举，不接过重量。他的右手保持垂落，女子仍以右手握牢根部。
+4.2—6秒，两人保持这个接触状态。男子只有左手指尖轻触，女子持续握持并承重，伞尖仍贴地，伞布收拢；双方停顿到结束，不发生接伞、松手或换手。女子说完后双唇自然合拢，目光仍看男子，男子注视触碰处。接触点位于两人身体之间的清楚空隙，双手轮廓持续可辨，不用遮挡、景深漂移或运动模糊掩盖接触。
+衣袖只随手臂形成小幅受力褶皱，头发和伞布没有无来源飘动；场景、日光方向、人物身份和服装稳定。结束时女子右手握伞，男子左指尖触柄但未承重，其他双手空着。时间分段为调度意图，实际时序需在返回片段中复核。
+```
+
+准确台词（女子，普通话，画内）：
+
+```text
+你拿走吧
+```
+
+声音意图：约1—3秒完整说出台词，真实语音长度与口型尚待音频核对；男子全程无台词。0—6秒持续轻微门厅底声，送柄时只有细小衣料声，指尖触柄没有夸张撞击声。不加旁白、音乐或雨声，当前无实际声轨。
+
+还缺实际首图、平台／模型／界面与I2V及音频能力、实际生成设置和返回片段；若平台不能联合生成准确对白，需要另做准确配音与口型同步。首图到位后先查可达性与接触显露，再检查实际视频的承重、指尖接触、逐字台词、句尾和口型。6秒是采用段设计，提交时长档位及额外剪辑余量待平台确定。
+
+### CW-SPLIT-C03
+
+原请求：
+
+按下面同一场景的已写动作，交付连续两镜的完整中文分镜与视频母稿，各5秒，总10秒，16:9。可以完善构图和节奏，但钥匙只有一枚、持手与接触顺序、人物所在柜台一侧和西窗光不变。第二镜是直接动作延续，不省略时间，不重演第一镜，不增加对白、人物或动作。没有图、视频、音频和指定平台，不生成媒体。
+
+主责：storyboard_rhythm。
+
+完整输入侧文件：[CW-SPLIT-C03.source.json](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-C03.source.json)；首版侧文件：[CW-SPLIT-C03.first-response.md](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-C03.first-response.md)。
+
+首版正文：
+
+共享基线：继承用户“钥匙归还”文本草稿版本1，仅交付文字分镜与视频母稿。16:9，总长10秒，S01与S02各5秒。柜台沿东西方向；店主始终在北侧，学徒始终在南侧；东墙门向外开，地面干燥。成年店主穿深灰衬衫，成年学徒穿浅灰无图案外套。西窗是中性柔光来源。只有一枚黄铜钥匙，无额外人物与对白。皮质钥匙袋位于柜台南缘，开口朝上，袋口可供既有插入动作使用；此为不改变原动作的摆放细化。
+
+S01｜0—5秒｜双人中景
+
+机位固定在柜台南侧、眼平，沿南北关系偏斜看两人的三分之四侧面，使店主北侧与学徒南侧在同一画面中可读；头顶至腰部入画，完整覆盖两手和掌心交接，不让学徒肩背挡住接触。自然透视，景深保护两人视线与交接处。店主面向南，学徒面向北。
+
+起点：钥匙在店主右手，学徒左掌空着，朝上摊在柜台上。0—1秒店主看学徒空掌；1—3秒店主右手缓慢送下钥匙，钥匙平放接触学徒左掌后，店主才放开；3—5秒学徒左指轻合握住钥匙，店主空右手退回自己身前，学徒保持南侧原位。两人的注意力围绕掌心交接，没有额外表情或动作。西窗光在手背与黄铜上形成柔和亮面，投影依世界西窗方向保持。环境底声持续，接触时只有轻微金属碰掌声。出点：学徒左手持有唯一钥匙，店主右手已空并退回身前。
+
+S02｜5—10秒｜手部近景
+
+柜台南侧偏东的固定机位，与S01在同一轴线侧；略俯拍，以学徒双手、完整钥匙和柜台南缘钥匙袋为主要画面，保留袋口与手退出的空间。焦点覆盖交接位置与袋口；不新增镜头或重演递钥匙。
+
+入点精确承接S01：学徒左手已握同一枚钥匙，店主右手空着，学徒仍在柜台南侧。0—1.5秒学徒右手指腹夹住钥匙露出的部分，右手形成稳定握持后，左指才松开；1.5—4秒右手取出钥匙并送到南缘钥匙袋，插入袋口，直到钥匙完全进入袋内；4—5秒才抽开空右手，左手已空，袋不移动。西窗光方向与固有色不变，环境底声连续，皮革摩擦声轻微。出点：钥匙在袋内，学徒双手空着，袋留在柜台南缘。
+
+切点为直接动作延续：S01左手握钥匙的完成状态接到S02同一持有状态，既不省略换手，也不重复店主递钥匙。
+
+S01视频母稿：
+
+```text
+16:9，5秒，单间修理铺，柜台沿东西方向，东墙门向外开，地面干燥。成年店主穿深灰衬衫站柜台北侧面向南，成年学徒穿浅灰无图案外套站南侧面向北，人物不换侧。摄影机位于柜台南侧、眼平，固定双人中景，斜向看清双方三分之四侧面与台上的手；头顶至腰部入画，交接点在画面中央，肩背不遮掌心，焦点与景深保持双方手部可读。
+只有一枚黄铜钥匙，起点由店主右手持有，学徒左掌空着朝上摊在柜台上。店主先看空掌，再将右手中的钥匙缓慢放入；钥匙与左掌建立支撑后店主才松开右手，学徒左指轻合握住。店主空右手退回自己身前，学徒仍站南侧，左手持有同一枚钥匙。柜台南缘的皮质钥匙袋留在原处，不引入其他取放动作。
+西窗中性柔光持续照入，黄铜只有有来源的小面积反光，接触阴影与手的位置相容。室内底声持续，钥匙碰掌只有轻微金属声，无对白、旁白或音乐。无第二把钥匙、额外人物、提前松手、手穿道具或持有跳变。采用出点为学徒左手已经握钥匙、店主空右手已经退回，不要求这一镜发生右手取钥匙。
+```
+
+S02视频母稿：
+
+```text
+16:9，5秒，直接连续硬切承接上一镜，不省略时间、不重演交接。单间修理铺柜台沿东西方向，地面干燥；成年店主深灰衬衫仍在北侧，成年学徒浅灰无图案外套仍在南侧，东墙门向外开，人物所在柜台一侧保持。摄影机固定在柜台南侧偏东，与前镜同侧，略俯的手部近景，完整覆盖学徒双手、唯一黄铜钥匙、南缘皮质钥匙袋开口与右手退出空间。焦点覆盖手部与袋口，不环绕、不换轴线侧。
+起点钥匙已经在学徒左手，店主右手为空。学徒右手先夹住钥匙露出部分，形成稳定握持后左指松开，右手从左手取出同一枚钥匙；左手不另握第二把钥匙。右手把钥匙送入位于柜台南缘、开口朝上的皮质钥匙袋，钥匙完全进入袋内后，右手才松开并抽出。末态钥匙在袋内，双手空着，袋仍留在柜台南缘，不增加合袋、收袋或离开动作。
+西窗透入中性柔光，世界光源方向、服装和材质与前镜相同。底声贯穿硬切，插入时只有轻微皮革摩擦声，无对白、旁白或音乐。接触、松手、插入与退出清楚可见，不以遮挡掩盖支撑，不让钥匙穿过袋壁或瞬移。每个阶段按自然动作速度完成，设计5秒不是平台档位保证。
+```
+
+没有素材，现阶段只能核对文字与接点；平台提交长度、真实手部接触、光色与声音连续性均待实际返回。
+
+### CW-SPLIT-C07
+
+原请求：
+
+对下面现有的两镜文本做定稿前完整六视角评审与规范检查，覆盖每一镜。六个视角都要看，但不要把它们写成六套相互竞争的镜头方案。保留原稿，交付有来源定位的问题、最小修复责任和未决项；本次不授权改动正文或批准定稿。只要短结论也可以，但检查依据要完整，若使用随包工作表且本机具备Node，请实际运行对应检查并记录原生结果。没有实际媒体，不能把文字检查当成视频、声音或身份验收。
+
+主责：review_repair。
+
+完整输入侧文件：[CW-SPLIT-C07.source.json](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-C07.source.json)；首版侧文件：[CW-SPLIT-C07.first-response.md](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/CW-SPLIT-C07.first-response.md)。
+
+首版正文：
+
+结论：这两镜文本没有发现确定的持手、信纸数量、杯子位置、轴线侧或西窗光矛盾；放信接触后才释放、展开后仍只有一张纸，接点可承接。原稿保留，未改动正文，未批准定稿。
+
+六视角检查依据（全部针对FG-01版本1的设计文本）：
+
+| 视角 | FG-S01 | FG-S02 |
+| --- | --- | --- |
+| 导演 | pass：右手持信→放至桌中央→空手退回，一个可读事件；杯子不参与。定位：S01动作与出点。 | pass：继承已放桌的信，只新增展开事件，不重演放下。定位：S02入点与展开。 |
+| 表演 | pass：目光在信，纸接触桌面后才松右手，双手退回；没有虚构心情。定位：S01视线、接触与退手。 | pass：左按、右展开，左仍按下缘、右松开至纸右侧，任务与终态明确。定位：S02动作与结束。 |
+| 调度 | pass：女子桌北、机位桌南，信落在她前方中央；杯在东端距双手30厘米且未动。定位：房间硬锁与S01道具位置。 | pass：同一桌中央接触区，杯不进入主要接触区；只有同一张信展开。定位：房间硬锁与S02入点、动作。 |
+| 摄影 | pass：桌南眼平固定中景与西窗唯一主光相容，无相反机位运动。定位：房间光源与S01机位。 | unknown：桌南偏西略俯的近景成立，但纸张尺寸、展开方向和画框范围不足，尚不能确认整张展开后的纸及双手全程都在画内。定位：S02“手部近景”“沿原折痕缓慢展开”。 |
+| 提示词 | not_applicable：未提供或请求独立提示词，来源为设计文本；不为填表额外创作。 | not_applicable：同一范围，未有待核对的ImagePrompt或视频复制稿；设计措辞一致性已在其他视角检查。 |
+| 连续性 | pass：出点合拢信在中央、两手空在桌缘、杯未动，逐项对应S02入点。定位：S01出点与S02入点。 | pass：连续硬切承接原状态，展开有动作原因，无第二张纸，杯、人物所在侧、西窗与底声不变。定位：S02入点、展开、结束与声音。 |
+
+最小修复责任与未决项：
+
+1. 唯一尚待确认的设计项是S02展开覆盖，责任在镜头导演／取景。建议先在原稿外补纸张尺寸、以桌面方位表述的展开方向，以及画框须容纳的完整展开范围；验收是两手接触与纸张四边在全过程都能读到。若原计划已容纳，不需改正文；若不能容纳，只调整S02取景范围。这是待核对条件，不能写成已发现出框或直接修改原稿。
+2. 本次没有canonical JSON及其精确绑定，所以完成的是文字硬锁、动作、六视角与非规范工作表检查，未宣称正式根契约验证通过。用户文本FG-01版本1是来源，不编造正式产物ID或批准版本。
+3. 没有实际图像、视频、音轨或生成记录。角色外观、接触形变、真实剪辑节奏、声音质量与同步、跨帧身份稳定均未知；上述文字检查不是媒体或身份验收。
+
+Node工作表已实际运行。原生结果摘要：valid=true，scope=plan_only，coverageComplete=true，reviewComplete=false，expectedRows=12，openItems只有cinematography × FG-S02的unknown；CLI退出码2，表示输入有效但仍有未决项。原生stdout、stderr与退出码文件在本案侧文件中保留。工作表只检查覆盖与一致性，不核验引用内容、艺术质量、媒体、权利或批准。
+
+## 文件索引
+
+[运行索引](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/run-index.json) · [全部已读来源](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/read-sources.json) · [实际Node工具记录](D:/Temp/cineweave-split-p4-baseline-a1-remaining-20261012/tool-results.json)

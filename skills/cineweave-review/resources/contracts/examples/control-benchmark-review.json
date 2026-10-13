@@ -1,0 +1,151 @@
+{
+  "kind": "cineweave_codex_control_benchmark_review",
+  "contractVersion": "2.0.0",
+  "reviewId": "review.controlbench.shen.production-v1",
+  "benchmarkRef": {
+    "kind": "cineweave_codex_control_benchmark",
+    "id": "benchmark.cineweave-controlbench",
+    "version": 1,
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "capabilityProfileRef": {
+    "kind": "cineweave_codex_capability_profile",
+    "id": "capability.reference-image-composite",
+    "version": 1,
+    "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "status": "planned",
+  "mediaEvidence": [],
+  "caseResults": [
+    {
+      "caseId": "case.morphology-neutral-3view",
+      "status": "planned",
+      "reviewedMediaIds": [],
+      "findings": [],
+      "metricResults": [],
+      "notes": "先收集已导入候选的精确观察。"
+    },
+    {
+      "caseId": "case.natural-human-fixtures",
+      "status": "planned",
+      "reviewedMediaIds": [],
+      "findings": [],
+      "metricResults": [],
+      "notes": "在交付尺度评审中性近景、暖逆光及全身测试素材。"
+    },
+    {
+      "caseId": "case.anime-character-fixtures",
+      "status": "planned",
+      "reviewedMediaIds": [],
+      "findings": [],
+      "metricResults": [],
+      "notes": "仅在选中精确的动画表现绑定时运行。"
+    },
+    {
+      "caseId": "case.manga-character-fixtures",
+      "status": "planned",
+      "reviewedMediaIds": [],
+      "findings": [],
+      "metricResults": [],
+      "notes": "仅在选中精确的漫画表现绑定时运行。"
+    },
+    {
+      "caseId": "case.cross-representation-character",
+      "status": "planned",
+      "reviewedMediaIds": [],
+      "findings": [],
+      "metricResults": [],
+      "notes": "比较语义锚点，不以同媒介像素相似度代替。"
+    },
+    {
+      "caseId": "case.expression-sheet",
+      "status": "planned",
+      "reviewedMediaIds": [],
+      "findings": [],
+      "metricResults": [],
+      "notes": "固定所有非表情锚点。"
+    },
+    {
+      "caseId": "case.scene-interaction",
+      "status": "planned",
+      "reviewedMediaIds": [],
+      "findings": [],
+      "metricResults": [],
+      "notes": "评审接触、遮挡、支撑及符合光源的阴影。"
+    },
+    {
+      "caseId": "case.cinematography-camera-previs-rain-courtyard",
+      "status": "planned",
+      "reviewedMediaIds": [],
+      "findings": [],
+      "metricResults": [],
+      "notes": "先收集实际候选媒体与精确观察，再比较 CameraPrevisSpec 的路径、拉焦和稳定尾帧；计划本身不是媒体证据。"
+    },
+    {
+      "caseId": "case.director-quality-rain-teahouse",
+      "status": "planned",
+      "reviewedMediaIds": [],
+      "findings": [],
+      "metricResults": [],
+      "notes": "先收集成对实测媒体及精确帧／轨道观察，再判断镜头目的、动作覆盖、空间连续性和时间因果。"
+    },
+    {
+      "caseId": "case.rights-gate",
+      "status": "planned",
+      "reviewedMediaIds": [],
+      "findings": [],
+      "metricResults": [],
+      "notes": "权利未知或受限时仍须阻断。"
+    }
+  ],
+  "humanReview": {
+    "requiredForBlockingFindings": true,
+    "status": "planned",
+    "reviewerCount": 0,
+    "rubric": [
+      "评审摄影表现及人体可信度，不评美貌。",
+      "按交付尺度评审表面响应、光学、接触、有来源的光线及时间连续性。",
+      "对照精确导演产物，评审镜头目的、动作覆盖、空间连续性和时间因果。",
+      "每个失败维度归到一个负责领域，同时保留通过维度。"
+    ],
+    "calibration": {
+      "protocolId": "calibration.cinematography-camera-previs-v1",
+      "status": "planned",
+      "independentReviewerCount": 0,
+      "agreementScore": null,
+      "adjudicationStatus": "not_started"
+    }
+  },
+  "decision": {
+    "overallStatus": "planned",
+    "nextAction": "collect_observed_media",
+    "mayAdvanceToApproval": false,
+    "blockingFindingIds": [],
+    "summary": "这是评审计划，不能证明媒体已经生成、导入或获批。"
+  },
+  "planningBoundary": {
+    "providerNeutral": true,
+    "generatesMedia": false,
+    "approvesAssets": false,
+    "observedMediaRequiredForCompletion": true
+  },
+  "validation": {
+    "benchmarkBound": true,
+    "casesComplete": true,
+    "exactMediaEvidence": true,
+    "blockingFailuresBlockAdvancement": true,
+    "noAttractivenessScore": true,
+    "noBiometricInference": true,
+    "oneOwnerPerRepair": true
+  },
+  "provenance": {
+    "source": "suite_builtin",
+    "createdAt": "2026-08-26T10:00:00.000Z",
+    "updatedAt": "2026-09-02T04:00:00.000Z",
+    "changeLog": [
+      "v1：覆盖全部案例的 ControlBench 评审回执计划，不宣称媒体已输出",
+      "将计划评审绑定到 CinematographyBench 校准协议，不宣称已有评审结果或实测媒体。",
+      "新增计划中的 DirectorQualityBench 结果；真实候选媒体与人工判断出现前，不填写成对实测媒体的校准结果。"
+    ]
+  }
+}

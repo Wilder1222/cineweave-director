@@ -1,0 +1,221 @@
+{
+  "format": "cineweave-higgsfield-source-audit",
+  "researchDate": "2026-10-11",
+  "baselineCommit": "0e476a7e96e43980bbfe8388c446c3f78fd06019",
+  "externalSkillsCommit": "f83af0bc1d937c8119099a11f8ebbf5e6fb99819",
+  "externalCliCommit": "dc7e2d2eac0b1fdad255de24d87552d1ba479037",
+  "scope": "结构与声明一致性的内存反例；夹具中的模型、批准、回执和能力不是当前真实平台证据。",
+  "providerInvoked": false,
+  "mediaGenerated": false,
+  "externalCodeExecuted": false,
+  "results": [
+    {
+      "stem": "temporal-spec",
+      "label": "baseline",
+      "change": "规范模拟夹具未修改",
+      "fixtureHash": "sha256:bc5c645a91611694828b71a472774382184c6948df4f985fdf22fccd80c39885",
+      "valid": true,
+      "errors": [],
+      "unverified": [],
+      "inputUnchanged": true,
+      "expectedAfterRefactor": "valid"
+    },
+    {
+      "stem": "sequence-rhythm-spec",
+      "label": "baseline",
+      "change": "规范模拟夹具未修改",
+      "fixtureHash": "sha256:59eece57cd6b760ab60aca9f268f83876e8aab8925f86b0ca954cf3e48b65887",
+      "valid": true,
+      "errors": [],
+      "unverified": [
+        "$.validation.storyboardShotsCovered: exact storyboard registry binding unavailable or ambiguous; only local phase/window closure was checked"
+      ],
+      "inputUnchanged": true,
+      "expectedAfterRefactor": "valid"
+    },
+    {
+      "stem": "prompt-projection-plan",
+      "label": "baseline",
+      "change": "规范模拟夹具未修改",
+      "fixtureHash": "sha256:681401df08ebfdf4f66614ccbba35ef46ed9c53e23c52249097106c9ef057641",
+      "valid": true,
+      "errors": [],
+      "unverified": [],
+      "inputUnchanged": true,
+      "expectedAfterRefactor": "valid"
+    },
+    {
+      "stem": "capability-profile",
+      "label": "baseline",
+      "change": "规范模拟夹具未修改",
+      "fixtureHash": "sha256:a67876037cafc4e795ded41b1d0f346dbe1336e6ebd41a40db956bee050ef9f9",
+      "valid": true,
+      "errors": [],
+      "unverified": [],
+      "inputUnchanged": true,
+      "expectedAfterRefactor": "valid"
+    },
+    {
+      "stem": "capability-resolution-plan",
+      "label": "baseline",
+      "change": "规范模拟夹具未修改",
+      "fixtureHash": "sha256:a84acb3b4126ac0ac92b4a9aa0b86d6cbbcbf11bfda46b47ea36639ba1b9428d",
+      "valid": true,
+      "errors": [],
+      "unverified": [],
+      "inputUnchanged": true,
+      "expectedAfterRefactor": "valid"
+    },
+    {
+      "stem": "temporal-spec",
+      "label": "old_out_of_duration",
+      "change": "动作事件超出镜头时长",
+      "fixtureHash": "sha256:bc5c645a91611694828b71a472774382184c6948df4f985fdf22fccd80c39885",
+      "valid": false,
+      "errors": [
+        "$.actionTimeline[0].timeSeconds must be within 0..durationSeconds inclusive",
+        "$.actionTimeline[1].timeSeconds must be non-decreasing within actionTimeline"
+      ],
+      "unverified": [],
+      "inputUnchanged": true,
+      "expectedAfterRefactor": "invalid"
+    },
+    {
+      "stem": "sequence-rhythm-spec",
+      "label": "old_reversed_window",
+      "change": "窗口起帧大于止帧",
+      "fixtureHash": "sha256:59eece57cd6b760ab60aca9f268f83876e8aab8925f86b0ca954cf3e48b65887",
+      "valid": false,
+      "errors": [
+        "$.shotWindows[0].startFrame must not exceed endFrame (inclusive window)",
+        "$.shotWindows[0].startFrame must begin at zero",
+        "$.breathingPoints[0].frame must be within its shotWindow inclusive bounds"
+      ],
+      "unverified": [],
+      "inputUnchanged": true,
+      "expectedAfterRefactor": "invalid"
+    },
+    {
+      "stem": "prompt-projection-plan",
+      "label": "copy_text_diverges",
+      "change": "仅把 copyText 改成另一人物和场景",
+      "fixtureHash": "sha256:681401df08ebfdf4f66614ccbba35ef46ed9c53e23c52249097106c9ef057641",
+      "valid": true,
+      "errors": [],
+      "unverified": [],
+      "inputUnchanged": true,
+      "expectedAfterRefactor": "invalid"
+    },
+    {
+      "stem": "prompt-projection-plan",
+      "label": "token_value_diverges",
+      "change": "--ar 的 value 保持 16:9，rendered 改成 --ar 1:1",
+      "fixtureHash": "sha256:681401df08ebfdf4f66614ccbba35ef46ed9c53e23c52249097106c9ef057641",
+      "valid": true,
+      "errors": [],
+      "unverified": [],
+      "inputUnchanged": true,
+      "expectedAfterRefactor": "invalid"
+    },
+    {
+      "stem": "prompt-projection-plan",
+      "label": "duplicate_parameter",
+      "change": "追加相同参数对象，重复 ID、order 和 name",
+      "fixtureHash": "sha256:681401df08ebfdf4f66614ccbba35ef46ed9c53e23c52249097106c9ef057641",
+      "valid": true,
+      "errors": [],
+      "unverified": [],
+      "inputUnchanged": true,
+      "expectedAfterRefactor": "invalid"
+    },
+    {
+      "stem": "prompt-projection-plan",
+      "label": "undeclared_placeholder",
+      "change": "renderedPrompt 声明未绑定的占位符",
+      "fixtureHash": "sha256:681401df08ebfdf4f66614ccbba35ef46ed9c53e23c52249097106c9ef057641",
+      "valid": true,
+      "errors": [],
+      "unverified": [],
+      "inputUnchanged": true,
+      "expectedAfterRefactor": "invalid"
+    },
+    {
+      "stem": "prompt-projection-plan",
+      "label": "unbound_source_hash",
+      "change": "sourcePromptRef 使用未绑定的全零哈希",
+      "fixtureHash": "sha256:681401df08ebfdf4f66614ccbba35ef46ed9c53e23c52249097106c9ef057641",
+      "valid": true,
+      "errors": [],
+      "unverified": [],
+      "inputUnchanged": true,
+      "expectedAfterRefactor": "valid_with_unverified_context"
+    },
+    {
+      "stem": "prompt-projection-plan",
+      "label": "malformed_context",
+      "change": "artifacts 传入字符串",
+      "fixtureHash": "sha256:681401df08ebfdf4f66614ccbba35ef46ed9c53e23c52249097106c9ef057641",
+      "valid": true,
+      "errors": [],
+      "unverified": [],
+      "inputUnchanged": true,
+      "expectedAfterRefactor": "invalid"
+    },
+    {
+      "stem": "capability-resolution-plan",
+      "label": "exact_profile_partial_but_selected_strong",
+      "change": "精确档案 identity_consistency=partial，选择结果改成 strong/pass/selected",
+      "fixtureHash": "sha256:a84acb3b4126ac0ac92b4a9aa0b86d6cbbcbf11bfda46b47ea36639ba1b9428d",
+      "valid": true,
+      "errors": [],
+      "unverified": [],
+      "inputUnchanged": true,
+      "expectedAfterRefactor": "invalid",
+      "profileSupport": "partial"
+    },
+    {
+      "stem": "cinematic-skill-manifest",
+      "label": "baseline",
+      "change": "规范模拟夹具未修改",
+      "fixtureHash": "sha256:f3ee41e249445aa15fa1d06b668a92a077424b33d0d6906348dc46e5ff7d577e",
+      "valid": true,
+      "errors": [],
+      "unverified": [],
+      "inputUnchanged": true,
+      "expectedAfterRefactor": "valid"
+    },
+    {
+      "stem": "shot-compiler-plan",
+      "label": "baseline",
+      "change": "规范模拟夹具未修改",
+      "fixtureHash": "sha256:9cbe3c207b2d87fed9728d961bda502b9ab8bb3eb7f78ff0b5ac7f4d3c61a5de",
+      "valid": true,
+      "errors": [],
+      "unverified": [],
+      "inputUnchanged": true,
+      "expectedAfterRefactor": "valid"
+    },
+    {
+      "stem": "shot-compiler-plan",
+      "label": "unknown_manifest_skill",
+      "change": "精确 manifest 上下文中不存在所选 skillId",
+      "fixtureHash": "sha256:9cbe3c207b2d87fed9728d961bda502b9ab8bb3eb7f78ff0b5ac7f4d3c61a5de",
+      "valid": true,
+      "errors": [],
+      "unverified": [],
+      "inputUnchanged": true,
+      "expectedAfterRefactor": "invalid"
+    },
+    {
+      "stem": "shot-compiler-plan",
+      "label": "manifest_parameter_out_of_range",
+      "change": "参数和控制面同改为 900；manifest 范围仍为 0..1",
+      "fixtureHash": "sha256:9cbe3c207b2d87fed9728d961bda502b9ab8bb3eb7f78ff0b5ac7f4d3c61a5de",
+      "valid": true,
+      "errors": [],
+      "unverified": [],
+      "inputUnchanged": true,
+      "expectedAfterRefactor": "invalid"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+interface:
+  display_name: "CineWeave参考分析"
+  short_description: "分析实际参考素材，分离观察、迁移、排除与权利，精确绑定目标和别名"
+  default_prompt: "使用 $cineweave-reference，分析我提供的参考素材，区分身份、服装、场景和风格职责，交付有来源的观察、迁移与排除范围、准确绑定及未决项。"
+policy:
+  allow_implicit_invocation: false

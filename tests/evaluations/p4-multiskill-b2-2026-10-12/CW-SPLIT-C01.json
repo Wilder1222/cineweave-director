@@ -1,0 +1,134 @@
+{
+  "id": "CW-SPLIT-C01",
+  "primarySkill": "cineweave-director",
+  "auxiliarySkills": [],
+  "entryPaths": [
+    "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md"
+  ],
+  "selectionReason": "新创作单图中文完整提示词；没有既有稿的平台投射、实际参考分析或已有结果评审。",
+  "response": "```text\n4:5竖版摄影写实电影海报。一位约三十岁的成年女子独自站在海边旧灯塔的入口石阶上，全身从头顶到鞋底完整入画，位于画面下方中央，头顶上方保留约五分之一的干净暮色天空。她身形匀称，短黑发贴近耳侧，发尾略被海风吹向画面右侧；面部轮廓自然，淡淡的眼下细纹与皮肤纹理可见，无浓妆和装饰性发饰。她穿一件无图案、无标志的深蓝棉外套，翻领、直袖、素色纽扣，下摆到大腿中部；内搭灰白素色棉衣，深灰直筒裤和磨旧的黑色平底鞋。棉布低光泽，肩肘与握持一侧的袖口保留受力褶皱。\n\n她身体朝向镜头，双脚踏稳石阶，左脚略承重，肩膀平稳，左手空着自然垂于身侧。人物自身右手在右腿外侧握住黄铜提灯的弧形提柄，拇指稳住柄侧，灯体垂直悬于膝上位置，与衣摆留出清楚间隙；灯柄与手指的接触明确，没有穿插。提灯已点亮，灯罩内的暖黄光源可见，黄铜表面有克制的氧化斑和窄小高光。她在暮色中停下来望向画面右侧远处海平线，表情沉静而带轻微疲惫：眉间略收，眼睑自然放松，双唇轻合，下颌不紧咬，既不微笑也不张嘴；头部仅小幅转向海面。\n\n旧灯塔粗糙的浅灰石墙和深色木门在她身后形成入口框景，石阶向画面下缘延伸，阶面干燥，接缝和边角磨损可辨。右侧背景留出低缓海面和水平海平线，远处没有船只或人物。蓝调暮色来自太阳落下后的开阔天空，冷蓝的漫射天光从海面一侧照亮她的脸部与外套受光面，阴影保留细节；提灯的暖光仅照亮握柄的右手、近处袖口、外套下缘和一小块邻近石阶，随距离减弱，不凭空照亮整个灯塔或全脸。墙面与脚下有方向合理的柔和接触阴影。海风轻微，外套下摆略偏向画面右侧，身体和提灯保持稳定。\n\n摄影机在人物腰胸之间的高度水平观看，自然透视，中等景深使脸、握灯手、灯体和入口结构清楚可读；灯塔与海面在背景形成有层次的低反差空间。整体低饱和冷蓝，暖黄只占提灯及附近反光的小面积，保留棉布、木门、石材和黄铜的不同表面响应。上方干净天空区域居中排中文片名“归潮”，两个字横排、准确清晰、只出现一次，使用克制的米白色细宋体；不添加副标题或其他正文。下方留出窄幅干净署名空间，当前保持空白。无额外人物、无闪电、无火焰、无旁白文字，人物、提灯和标题均不裁切。\n```\n\n未决项：尚未选定生图模型，以上为平台中立创作稿；最终候选须核对片名的两个字、唯一出现次数和排版可读性。",
+  "status": "first_delivery_saved",
+  "firstVersionImmutable": true,
+  "model": null,
+  "tokens": null,
+  "latencyMs": null,
+  "sourceReads": [
+    {
+      "path": "D:/Temp/cineweave-split-p4-contents-raw-inputs-20261012.json",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C01",
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C04",
+        "CW-SPLIT-C05",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C07",
+        "CW-SPLIT-C08"
+      ],
+      "kind": "raw_input",
+      "readRecord": 1,
+      "sha256": "AAF18A7B9C32FF397CC990535D284C98147D58FEE589BF1393976CA3AC066F09"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md",
+      "sections": [
+        "frontmatter"
+      ],
+      "cases": [
+        "all"
+      ],
+      "kind": "selection",
+      "readRecord": 2,
+      "sha256": "C2A481FF773E157EC7A018CF3893720748014657F4543D3D0F4800F4B0925DEB"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/SKILL.md",
+      "sections": [
+        "frontmatter"
+      ],
+      "cases": [
+        "all"
+      ],
+      "kind": "selection",
+      "readRecord": 3,
+      "sha256": "B4A67BD86EF0CEDDF84679AFEE2B09FCA2F73234D815EAE654BE0534793BAA56"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-reference/SKILL.md",
+      "sections": [
+        "frontmatter"
+      ],
+      "cases": [
+        "all"
+      ],
+      "kind": "selection",
+      "readRecord": 4,
+      "sha256": "931B1F173FCD94B5E409E8CB44983662F6BA8885D216D9D5E819360AECE3159D"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/SKILL.md",
+      "sections": [
+        "frontmatter"
+      ],
+      "cases": [
+        "all"
+      ],
+      "kind": "selection",
+      "readRecord": 5,
+      "sha256": "2F67E7CE86F8FDCB7B38CECDC9AE00E37F5CBDA5F15B36CFA24DB0EE3FE3965D"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C01",
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C05",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C08"
+      ],
+      "kind": "active_entry",
+      "readRecord": 6,
+      "sha256": "C2A481FF773E157EC7A018CF3893720748014657F4543D3D0F4800F4B0925DEB"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/image-prompt.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C01",
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C05"
+      ],
+      "kind": "route",
+      "readRecord": 7,
+      "sha256": "8875D78177EDCE7AB4AAEA763BF0F6D3BDC6216EE1ACF3C215AAB661B96E5C08"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/prompt-detail-standard.md",
+      "sections": [
+        "全文读取请求；返回中部截断",
+        "已读：表达原则、人物、人物情绪与表情生成、场景、图生视频、交付前检查；跨案按需复用"
+      ],
+      "cases": [
+        "CW-SPLIT-C01",
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C05",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C08",
+        "CW-SPLIT-C07"
+      ],
+      "kind": "craft",
+      "readRecord": 8,
+      "sha256": "0DE944DFFD30D69BC05A52EF4BCEAF0A90DCE40564E2F1A288C68E7DD1E88E59"
+    }
+  ]
+}

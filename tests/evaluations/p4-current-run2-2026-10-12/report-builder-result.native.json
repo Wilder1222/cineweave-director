@@ -1,0 +1,58 @@
+{
+  "reportPath": "D:\\Temp\\cineweave-split-p4-current-run2-20261012\\report.md",
+  "jsonReportPath": "D:\\Temp\\cineweave-split-p4-current-run2-20261012\\report.json",
+  "caseCount": 5,
+  "firstVersionsSaved": [
+    "D:/Temp/cineweave-split-p4-current-run2-20261012/CW-SPLIT-C01-first-v1.md",
+    "D:/Temp/cineweave-split-p4-current-run2-20261012/CW-SPLIT-C02-first-v1.md",
+    "D:/Temp/cineweave-split-p4-current-run2-20261012/CW-SPLIT-C03-first-v1.md",
+    "D:/Temp/cineweave-split-p4-current-run2-20261012/CW-SPLIT-C06-first-v1.md",
+    "D:/Temp/cineweave-split-p4-current-run2-20261012/CW-SPLIT-C08-first-v1.md"
+  ],
+  "nodeResults": [
+    {
+      "case": "CW-SPLIT-C02",
+      "exitCode": 0,
+      "nativeResult": "D:/Temp/cineweave-split-p4-current-run2-20261012/CW-SPLIT-C02-delivery-result.native.json"
+    },
+    {
+      "case": "CW-SPLIT-C03",
+      "exitCode": 0,
+      "nativeResult": "D:/Temp/cineweave-split-p4-current-run2-20261012/CW-SPLIT-C03-delivery-result.native.json"
+    },
+    {
+      "case": "CW-SPLIT-C06",
+      "exitCode": 0,
+      "nativeResult": "D:/Temp/cineweave-split-p4-current-run2-20261012/CW-SPLIT-C06-delivery-result.native.json"
+    },
+    {
+      "case": "CW-SPLIT-C08",
+      "exitCode": 0,
+      "nativeResult": "D:/Temp/cineweave-split-p4-current-run2-20261012/CW-SPLIT-C08-delivery-result.native.json"
+    },
+    {
+      "case": "CW-SPLIT-C08",
+      "exitCode": 2,
+      "nativeResult": "D:/Temp/cineweave-split-p4-current-run2-20261012/CW-SPLIT-C08-impact-result.native.json"
+    }
+  ],
+  "scopePreservation": [
+    {
+      "documentId": "REV-G",
+      "actualMatchesOnlyAuthorizedTransformation": true
+    },
+    {
+      "documentId": "REV-M",
+      "actualMatchesOnlyAuthorizedTransformation": true
+    },
+    {
+      "documentId": "REV-P",
+      "actualMatchesOnlyAuthorizedTransformation": true
+    }
+  ],
+  "sourceCount": 17,
+  "model": null,
+  "tokenUsage": null,
+  "reasoningEffort": null,
+  "latency": null
+}

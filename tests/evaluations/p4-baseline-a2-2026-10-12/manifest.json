@@ -1,0 +1,135 @@
+{
+  "format": "cineweave-content-retest-evidence",
+  "runId": "p4-baseline-a2-20261012",
+  "configuration": "A",
+  "repetition": 2,
+  "caseCount": 8,
+  "sourceScope": "frozen baseline Skill and adjacent resources; sole raw8 input",
+  "isolation": {
+    "batch": "independent fork_none task as dispatched",
+    "perCase": "facts separately scoped; shared context within this batch",
+    "separatePerCaseContext": false
+  },
+  "hiddenTelemetry": {
+    "model": null,
+    "tokenUsage": null,
+    "latency": null,
+    "hiddenReasoning": null
+  },
+  "selfScore": null,
+  "mediaGenerated": false,
+  "providerCalled": false,
+  "installationPerformed": false,
+  "approvalGranted": false,
+  "sources": [
+    {
+      "path": "D:/Temp/cineweave-split-p4-contents-raw-inputs-20261012.json",
+      "sha256": "aaf18a7b9c32ff397cc990535d284c98147d58fee589bf1393976ca3ac066f09",
+      "role": "sole_case_input"
+    },
+    {
+      "path": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/SKILL.md",
+      "sha256": "18d40408575640d65220b0d4527d356ec4509dc7856e8f0c35dc15142c2af426",
+      "role": "frozen_skill_resource"
+    },
+    {
+      "path": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/image-prompt.md",
+      "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08",
+      "role": "frozen_skill_resource"
+    },
+    {
+      "path": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/production-plan.md",
+      "sha256": "efbde14fb9810d392a696a0ee4e6aaca3b2f64998c291f4ab9936f5c6e41273a",
+      "role": "frozen_skill_resource"
+    },
+    {
+      "path": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/storyboard-rhythm.md",
+      "sha256": "10ce342b7e5beb342f16942d653c3316c9fbe3758e6942c687c37e2560a2c601",
+      "role": "frozen_skill_resource"
+    },
+    {
+      "path": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/character.md",
+      "sha256": "6527df3210d32a9fb03f4e33c9f2d4f2bd52d34f84ea88d60950f1fee637abf8",
+      "role": "frozen_skill_resource"
+    },
+    {
+      "path": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/reference-evidence.md",
+      "sha256": "6a27133185302f529f936edf6315f618876d1363ab9d08ccc45cda233804cd48",
+      "role": "frozen_skill_resource"
+    },
+    {
+      "path": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/review-repair.md",
+      "sha256": "9befe4fe6ecc4711e9aeb33121de3aa3912d5a5122ccea047793829b06481834",
+      "role": "frozen_skill_resource"
+    },
+    {
+      "path": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/shot-direction.md",
+      "sha256": "c04957137f3f99cb3bba46f0c9046a653df490686867d8c0cad57ede90087388",
+      "role": "frozen_skill_resource"
+    },
+    {
+      "path": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/prompt-detail-standard.md",
+      "sha256": "0de944dffd30d69bc05a52ef4bceaf0a90dce40564e2f1a288c68e7dd1e88e59",
+      "role": "frozen_skill_resource"
+    },
+    {
+      "path": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/video-sound-and-delivery.md",
+      "sha256": "cfd0a201805ab58f05ebe5eda1025359776eb78534cfb849472f728594da6a16",
+      "role": "frozen_skill_resource"
+    },
+    {
+      "path": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/video-platform-adaptation.md",
+      "sha256": "9b5a4e163a6482704b43333547d16ffc0ed3542d9526599e49455460971bd7f9",
+      "role": "frozen_skill_resource"
+    },
+    {
+      "path": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/ensemble-direction-and-review.md",
+      "sha256": "54d9406901ae0b42cd8bb2b2cb4bda5e89aaff625dd4e255dc7377452d735e75",
+      "role": "frozen_skill_resource"
+    },
+    {
+      "path": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/drafts-and-change-impact.md",
+      "sha256": "84670321b3cb5a42b34120fb0ead60b790e9db05c923e87f04265392c9b4d94b",
+      "role": "frozen_skill_resource"
+    },
+    {
+      "path": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/core/reference-evidence-and-rights.md",
+      "sha256": "55332bfbab84d121328260c56f971586658dff692a526cac318e2b435a522393",
+      "role": "frozen_skill_resource"
+    },
+    {
+      "path": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/scripts/check-shot-review.mjs",
+      "sha256": "bb69f60d8794f3329bc4b7af772d05ad01a28c001c7345f1de63bfa1e3d7d1c2",
+      "role": "frozen_skill_resource"
+    },
+    {
+      "path": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/scripts/parse-json.mjs",
+      "sha256": "9c15621d8304bf6114cc4cb322409c8e59433409ac17950311725cdcbebecf11",
+      "role": "runtime_dependency"
+    }
+  ],
+  "toolResults": [
+    {
+      "tool": "node --version",
+      "output": "v22.15.0",
+      "exitCode": 0
+    },
+    {
+      "tool": "check-shot-review.mjs",
+      "input": "D:/Temp/cineweave-split-p4-baseline-a2-20261012/C07-shot-review.json",
+      "nativeOutput": "D:/Temp/cineweave-split-p4-baseline-a2-20261012/C07-check-shot-review.native.json",
+      "exitCode": 0,
+      "valid": true,
+      "coverageComplete": true,
+      "reviewComplete": true,
+      "expectedRows": 12,
+      "scope": "plan_only"
+    },
+    {
+      "tool": "PowerShell exact text replacement comparison",
+      "nativeOutput": "D:/Temp/cineweave-split-p4-baseline-a2-20261012/C08-local-replacement-check.json",
+      "result": "Three expected single camera replacements; all S01 segments unchanged",
+      "scope": "text_only"
+    }
+  ]
+}

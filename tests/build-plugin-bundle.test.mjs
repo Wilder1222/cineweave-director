@@ -181,8 +181,8 @@ test("插件、市场和 agent 中文展示信息一致，协议标识保留", (
   const p=JSON.parse(cwZhReadText(".codex-plugin/plugin.json"));
   const m=JSON.parse(cwZhReadText(".agents/plugins/marketplace.json"));
   const a=cwZhReadText("skills/cineweave-director/agents/openai.yaml");
-  assert.equal(p.name,"cineweave-director");assert.equal(p.version,"3.1.0");assert.equal(p.interface.displayName,"CineWeave 导演");
-  assert.equal(m.interface.displayName,p.interface.displayName);assert.equal(m.plugins[0].source.ref,"v3.1.0");
+  assert.equal(p.name,"cineweave-director");assert.equal(p.version,"3.2.0");assert.equal(p.interface.displayName,"CineWeave 导演");
+  assert.equal(m.interface.displayName,p.interface.displayName);assert.equal(m.plugins[0].source.ref,"v3.2.0");
   assert.ok(a.includes(JSON.stringify(p.interface.defaultPrompt[0])));assert.ok(a.includes(JSON.stringify(p.interface.shortDescription)));
 });
 test("视频中文摘要保留原始诊断并不修改输入", () => {

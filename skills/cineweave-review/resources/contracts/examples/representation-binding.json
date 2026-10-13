@@ -1,0 +1,189 @@
+{
+  "kind": "cineweave_codex_representation_binding",
+  "contractVersion": "2.5.0",
+  "bindingId": "representation.jialing.soft-natural-anime",
+  "version": 1,
+  "status": "draft",
+  "characterSpecRef": {
+    "kind": "cineweave_codex_character_spec",
+    "id": "character.jialing",
+    "version": 3,
+    "contentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+  },
+  "morphologySpecRef": {
+    "kind": "cineweave_codex_character_morphology_spec",
+    "id": "morphology.jialing.v1",
+    "version": 1,
+    "contentHash": "sha256:2222222222222222222222222222222222222222222222222222222222222222"
+  },
+  "stylePackageRef": {
+    "kind": "cineweave_codex_style_package",
+    "id": "style.anime.soft-naturalistic",
+    "version": 1,
+    "contentHash": "sha256:3333333333333333333333333333333333333333333333333333333333333333"
+  },
+  "mapping": [
+    {
+      "mappingId": "mapping.face-geometry",
+      "scope": "face_geometry",
+      "sourceSemantics": [
+        "略修长的柔和椭圆脸",
+        "位置偏高但不外扩的颧骨",
+        "逐渐收窄而不过尖的下颌"
+      ],
+      "representationRule": "适度简化面部内部体面，保留外侧椭圆轮廓、颧骨位置与下颌过渡。",
+      "abstractionLevel": "moderate",
+      "preserveAnchorIds": [
+        "anchor.face.shape",
+        "anchor.face.cheek-jaw"
+      ],
+      "allowedTransformations": [
+        "减少细小体面细节",
+        "明确外轮廓"
+      ],
+      "forbiddenTransformations": [
+        "圆润幼态脸",
+        "极尖下巴",
+        "压平颧骨位置"
+      ],
+      "visibleAt": [
+        "closeup",
+        "medium",
+        "fullbody"
+      ]
+    },
+    {
+      "mappingId": "mapping.eyes",
+      "scope": "eyes",
+      "sourceSemantics": [
+        "适度修长的眼裂",
+        "克制的垂直开度",
+        "轻微上挑的外眼角",
+        "左眼略低"
+      ],
+      "representationRule": "虹膜可适度放大，但眼形须保持修长而非圆形，并保留间距、倾斜和受控不对称。",
+      "abstractionLevel": "moderate",
+      "preserveAnchorIds": [
+        "anchor.face.eye-shape",
+        "anchor.face.eye-asymmetry"
+      ],
+      "allowedTransformations": [
+        "适度放大虹膜",
+        "简化泪线纹理"
+      ],
+      "forbiddenTransformations": [
+        "过大的圆眼",
+        "将双眼完全对称化",
+        "反转眼角倾斜"
+      ],
+      "visibleAt": [
+        "extreme_closeup",
+        "closeup",
+        "medium"
+      ]
+    },
+    {
+      "mappingId": "mapping.surface",
+      "scope": "surface",
+      "sourceSemantics": [
+        "暖中性肤色",
+        "自然局部色差",
+        "细微眼下纹理"
+      ],
+      "representationRule": "省略摄影级毛孔，以克制的色块分组和柔和边缘变化保留面部冷暖区域。",
+      "abstractionLevel": "high",
+      "preserveAnchorIds": [
+        "anchor.surface.warm-neutral"
+      ],
+      "allowedTransformations": [
+        "省略毛孔尺度纹理",
+        "将局部色差转成设计色块"
+      ],
+      "forbiddenTransformations": [
+        "均匀瓷白",
+        "叠加摄影级毛孔",
+        "油亮塑料皮肤"
+      ],
+      "visibleAt": [
+        "extreme_closeup",
+        "closeup",
+        "medium"
+      ]
+    },
+    {
+      "mappingId": "mapping.body-silhouette",
+      "scope": "body_proportion",
+      "sourceSemantics": [
+        "偏窄且自然下落的肩线",
+        "略长的舞者双腿",
+        "稳定的低重心"
+      ],
+      "representationRule": "允许克制地拉长腿部，但保留落地承重、肩宽及成人解剖。",
+      "abstractionLevel": "restrained",
+      "preserveAnchorIds": [
+        "anchor.body.silhouette",
+        "anchor.motion.grounded-turn"
+      ],
+      "allowedTransformations": [
+        "略延长腿部比例以提高图形可读性"
+      ],
+      "forbiddenTransformations": [
+        "纸片般单薄的躯干",
+        "失重站姿",
+        "儿童比例"
+      ],
+      "visibleAt": [
+        "medium",
+        "fullbody",
+        "wide"
+      ]
+    }
+  ],
+  "preserveSemanticAnchorIds": [
+    "anchor.face.shape",
+    "anchor.face.cheek-jaw",
+    "anchor.face.eye-shape",
+    "anchor.face.eye-asymmetry",
+    "anchor.surface.warm-neutral",
+    "anchor.body.silhouette",
+    "anchor.motion.grounded-turn"
+  ],
+  "allowedTransformations": [
+    "按获批抽象化幅度简化特征",
+    "将物理表面细节转成适合媒介的图形线索"
+  ],
+  "forbiddenTransformations": [
+    "修改 CharacterSpec",
+    "用通用风格默认值替换身份锚点",
+    "从风格参考复制身份"
+  ],
+  "activationGate": {
+    "status": "pending",
+    "humanApprovalRequired": true,
+    "crossRepresentationReviewRequired": true,
+    "validationPassed": false
+  },
+  "planningBoundary": {
+    "providerNeutral": true,
+    "generatesMedia": false,
+    "containsProviderWeights": false,
+    "humanApprovalRequired": true
+  },
+  "validation": {
+    "exactRefsRequired": true,
+    "characterOwnsIdentity": true,
+    "styleDoesNotMutateCanon": true,
+    "scaleAware": true,
+    "noProviderWeights": true,
+    "noBiometricInference": true,
+    "noGenerationClaim": true
+  },
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.1.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-22T12:35:00.000Z"
+  }
+}

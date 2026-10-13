@@ -1,0 +1,9 @@
+{
+  "command": "node D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/scripts/check-delivery.mjs D:\\Temp\\cineweave-split-p4-current-run3-20261012\\C03-delivery-worksheet.json",
+  "nodeVersion": "v22.15.0",
+  "exitCode": 0,
+  "stdoutFile": "C03-check-delivery.stdout.json",
+  "stderrFile": "C03-check-delivery.stderr.txt",
+  "worksheet": "C03-delivery-worksheet.json",
+  "scope": "24 fps is a calculation basis only; checks two 120-frame windows cover 240 frames; no provider or media verification"
+}

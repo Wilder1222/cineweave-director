@@ -1,0 +1,31 @@
+{
+  "valid": true,
+  "scope": "text_only",
+  "checks": [
+    {
+      "documentId": "REV-G",
+      "fromRevision": 1,
+      "toRevision": 2,
+      "cameraChangedOnce": true,
+      "s01Unchanged": true,
+      "onlyCameraAndVersionChanged": true
+    },
+    {
+      "documentId": "REV-M",
+      "fromRevision": 1,
+      "toRevision": 2,
+      "cameraChangedOnce": true,
+      "s01Unchanged": true,
+      "onlyCameraAndVersionChanged": true
+    },
+    {
+      "documentId": "REV-P",
+      "fromRevision": 1,
+      "toRevision": 2,
+      "cameraChangedOnce": true,
+      "s01Unchanged": true,
+      "onlyCameraAndVersionChanged": true
+    }
+  ],
+  "mediaVerified": false
+}

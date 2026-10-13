@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
-import { lstat, mkdir, readFile, rm, writeFile } from "node:fs/promises";
-import { dirname, isAbsolute, relative, resolve, sep } from "node:path";
+import { lstat, mkdir, readFile, realpath, rm, writeFile } from "node:fs/promises";
+import { dirname, isAbsolute, join, relative, resolve, sep } from "node:path";
 import { pathToFileURL } from "node:url";
 import {
   createDistributionInventory,
@@ -34,44 +34,75 @@ export async function assertSafeBuildRoot(buildRoot, outputRoot) {
   });
   assert(!outputStat?.isSymbolicLink(), "Refusing to replace a symbolic-link bundle output");
   if (outputStat) assert(outputStat.isDirectory(), "Bundle output must be a directory when it already exists");
+  if (outputStat) assert(isWithin(await realpath(buildRoot), await realpath(outputRoot)), "Resolved bundle output escapes .build");
 }
 
-function parseOutputArgument(args) {
-  if (args.length === 0) return resolve(repositoryRoot, ".build", "cineweave-director");
-  if (args.length === 2 && args[0] === "--output") return resolve(repositoryRoot, args[1]);
-  throw new Error("用法：node scripts/build-plugin-bundle.mjs [--output <.build 下的直接子目录>]");
+function parseArguments(args) {
+  const values = {};
+  for (let index = 0; index < args.length; index += 2) {
+    const flag = args[index], value = args[index + 1];
+    assert(["--output", "--skill"].includes(flag) && !Object.hasOwn(values, flag) && value && !value.startsWith("--"),
+      "用法：node scripts/build-plugin-bundle.mjs [--skill <已启用 Skill 名称>] [--output <.build 下的直接子目录>]");
+    values[flag] = value;
+  }
+  return { output: values["--output"], target: values["--skill"] ? { type: "skill", name: values["--skill"] } : { type: "plugin" } };
 }
 
-export async function buildPluginBundle(outputArgument) {
-  const sourceRoot = resolve(repositoryRoot);
+async function readRegularSource(root, relativePath) {
+  const rootStat = await lstat(root);
+  assert(rootStat.isDirectory() && !rootStat.isSymbolicLink(), "Source root must be a real directory");
+  let path = root;
+  const segments = relativePath.split("/");
+  for (const [index, segment] of segments.entries()) {
+    path = join(path, segment);
+    const stat = await lstat(path);
+    assert(!stat.isSymbolicLink(), `Source path contains a symbolic link or junction: ${relativePath}`);
+    assert(index === segments.length - 1 ? stat.isFile() : stat.isDirectory(), `Source is not a regular file path: ${relativePath}`);
+  }
+  assert(isWithin(await realpath(root), await realpath(path)), `Resolved source escapes repository: ${relativePath}`);
+  return readFile(path);
+}
+
+export async function buildPluginBundle(outputArgument, { sourceRoot: sourceArgument = repositoryRoot, target = { type: "plugin" } } = {}) {
+  const sourceRoot = resolve(sourceArgument);
   const buildRoot = resolve(sourceRoot, ".build");
-  const outputRoot = resolve(outputArgument ?? resolve(buildRoot, "cineweave-director"));
+  const outputRoot = resolve(sourceRoot, outputArgument ?? join(".build", target.type === "skill" ? `${target.name}-skill` : "cineweave-director"));
+  const sourceStat = await lstat(sourceRoot);
+  assert(sourceStat.isDirectory() && !sourceStat.isSymbolicLink(), "Source root must be a real directory");
   await assertSafeBuildRoot(buildRoot, outputRoot);
 
-  const sourceValidation = await validateRepository(sourceRoot);
-  const inventory = await createDistributionInventory(sourceRoot);
-  assert(sourceValidation.files === inventory.files.length, "Source validation and inventory file counts disagree");
+  await validateRepository(sourceRoot);
+  const inventory = await createDistributionInventory(sourceRoot, { target });
+  const copies = [];
+  for (const entry of inventory.exports) {
+    const sourcePath = resolve(sourceRoot, ...entry.source.split("/"));
+    const destinationPath = resolve(outputRoot, ...entry.destination.split("/"));
+    assert(isWithin(sourceRoot, sourcePath), `Source path escapes repository: ${entry.source}`);
+    assert(isWithin(outputRoot, destinationPath), `Destination path escapes bundle: ${entry.destination}`);
+    copies.push({ destinationPath, bytes: await readRegularSource(sourceRoot, entry.source) });
+  }
 
+  // Verify every source before replacing the existing, explicitly checked output.
+  await assertSafeBuildRoot(buildRoot, outputRoot);
   await rm(outputRoot, { recursive: true, force: true });
   await mkdir(outputRoot, { recursive: true });
 
-  for (const relativePath of inventory.files) {
-    const sourcePath = resolve(sourceRoot, ...relativePath.split("/"));
-    const destinationPath = resolve(outputRoot, ...relativePath.split("/"));
-    assert(isWithin(sourceRoot, sourcePath), `Source path escapes repository: ${relativePath}`);
-    assert(isWithin(outputRoot, destinationPath), `Destination path escapes bundle: ${relativePath}`);
-    const sourceStat = await lstat(sourcePath);
-    assert(sourceStat.isFile() && !sourceStat.isSymbolicLink(), `Source is not a regular file: ${relativePath}`);
+  for (const { destinationPath, bytes } of copies) {
     await mkdir(dirname(destinationPath), { recursive: true });
-    await writeFile(destinationPath, await readFile(sourcePath));
+    await writeFile(destinationPath, bytes);
   }
 
-  const validation = await validateBundle(outputRoot, sourceRoot);
+  const validation = await validateBundle(outputRoot, sourceRoot, { target });
   return {
     valid: true,
     source: sourceRoot,
     bundle: outputRoot,
+    target: inventory.target,
     files: inventory.files.length,
+    exports: inventory.exports.length,
+    sourceFiles: inventory.sourceFiles.length,
+    skills: validation.skills,
+    totals: validation.totals,
     roots: validation.roots,
     schemas: validation.schemas,
     examples: validation.examples,
@@ -81,8 +112,8 @@ export async function buildPluginBundle(outputArgument) {
 }
 
 async function main() {
-  const outputRoot = parseOutputArgument(process.argv.slice(2));
-  const result = await buildPluginBundle(outputRoot);
+  const args = parseArguments(process.argv.slice(2));
+  const result = await buildPluginBundle(args.output, { target: args.target });
   console.log(JSON.stringify({ ...result, messageZh: "插件构建完成，与已校验源码逐字节一致。" }, null, 2));
 }
 

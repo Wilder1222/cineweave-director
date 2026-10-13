@@ -1,4 +1,6 @@
 * text=auto eol=lf
+# Preserve frozen evaluation inputs, raw outputs, and their recorded byte hashes.
+tests/evaluations/** -text whitespace=-blank-at-eol,-blank-at-eof
 *.png binary
 *.jpg binary
 *.jpeg binary

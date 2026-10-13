@@ -1,6 +1,6 @@
 interface:
   display_name: "CineWeave 导演"
-  short_description: "中文短片叙事、视觉开发、分镜表演、配音剪辑与全套提示词"
-  default_prompt: "使用 $cineweave-director，将我的想法或参考发展成中文短片创作稿，按需求完成叙事、视觉探索、分镜表演、逐镜图像与视频提示词、配音和剪辑方案。"
+  short_description: "统一入口按需组织参考、创作、平台适配和评审，交付完整中文结果"
+  default_prompt: "使用 $cineweave-director，从我的需求开始，按需完成参考分析、创作、平台适配或评审修订，并由入口统一交付完整中文结果。"
 policy:
   allow_implicit_invocation: true

@@ -1,0 +1,685 @@
+{
+  "batchId": "cineweave-split-p4-multiskill-b2-20261012",
+  "configuration": "B: 当前4Skills同一代理按需",
+  "repetition": 2,
+  "runContext": "new fork_none; 8 cases in the same agent context",
+  "rawInputPath": "D:/Temp/cineweave-split-p4-contents-raw-inputs-20261012.json",
+  "rawInputSha256": "AAF18A7B9C32FF397CC990535D284C98147D58FEE589BF1393976CA3AC066F09",
+  "outputDirectory": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012",
+  "model": null,
+  "modelId": null,
+  "reasoningEffort": null,
+  "tokens": null,
+  "latencyMs": null,
+  "cost": null,
+  "efficiencyConclusion": null,
+  "sourceFiles": [
+    {
+      "path": "D:/Temp/cineweave-split-p4-contents-raw-inputs-20261012.json",
+      "sha256": "AAF18A7B9C32FF397CC990535D284C98147D58FEE589BF1393976CA3AC066F09",
+      "bytes": 17705
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md",
+      "sha256": "C2A481FF773E157EC7A018CF3893720748014657F4543D3D0F4800F4B0925DEB",
+      "bytes": 9021
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/SKILL.md",
+      "sha256": "B4A67BD86EF0CEDDF84679AFEE2B09FCA2F73234D815EAE654BE0534793BAA56",
+      "bytes": 8682
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-reference/SKILL.md",
+      "sha256": "931B1F173FCD94B5E409E8CB44983662F6BA8885D216D9D5E819360AECE3159D",
+      "bytes": 6181
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/SKILL.md",
+      "sha256": "2F67E7CE86F8FDCB7B38CECDC9AE00E37F5CBDA5F15B36CFA24DB0EE3FE3965D",
+      "bytes": 6157
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/image-prompt.md",
+      "sha256": "8875D78177EDCE7AB4AAEA763BF0F6D3BDC6216EE1ACF3C215AAB661B96E5C08",
+      "bytes": 8011
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/prompt-detail-standard.md",
+      "sha256": "0DE944DFFD30D69BC05A52EF4BCEAF0A90DCE40564E2F1A288C68E7DD1E88E59",
+      "bytes": 32973
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/shot-direction.md",
+      "sha256": "C04957137F3F99CB3BBA46F0C9046A653DF490686867D8C0CAD57EDE90087388",
+      "bytes": 6517
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-sound-and-delivery.md",
+      "sha256": "CFD0A201805AB58F05EBE5EDA1025359776EB78534CFB849472F728594DA6A16",
+      "bytes": 14114
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/storyboard-rhythm.md",
+      "sha256": "10CE342B7E5BEB342F16942D653C3316C9FBE3758E6942C687C37E2560A2C601",
+      "bytes": 8015
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/core/visual-bible-and-continuity.md",
+      "sha256": "BA8E5894516AC66B1396A24DAB5FABDC25CD3DB8FA5D1BEDDD12BE24F0A1139E",
+      "bytes": 6402
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/scene.md",
+      "sha256": "EF10535A31D8AEACF7465957AD995C47B1389F5B3B5FE9096E77682F151EA6E4",
+      "bytes": 3794
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/references/routes/image-prompt.md",
+      "sha256": "8875D78177EDCE7AB4AAEA763BF0F6D3BDC6216EE1ACF3C215AAB661B96E5C08",
+      "bytes": 8011
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/references/optional/prompt-detail-standard.md",
+      "sha256": "0DE944DFFD30D69BC05A52EF4BCEAF0A90DCE40564E2F1A288C68E7DD1E88E59",
+      "bytes": 32973
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-reference/references/routes/reference-evidence.md",
+      "sha256": "6A27133185302F529F936EDF6315F618876D1363AB9D08CCC45CDA233804CD48",
+      "bytes": 3616
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-reference/references/core/reference-evidence-and-rights.md",
+      "sha256": "55332BFBAB84D121328260C56F971586658DFF692A526CAC318E2B435A522393",
+      "bytes": 2459
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/character.md",
+      "sha256": "6527DF3210D32A9FB03F4E33C9F2D4F2BD52D34F84EA88D60950F1FEE637ABF8",
+      "bytes": 5020
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/references/optional/video-platform-adaptation.md",
+      "sha256": "9B5A4E163A6482704B43333547D16FFC0ED3542D9526599E49455460971BD7F9",
+      "bytes": 29370
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/references/routes/review-repair.md",
+      "sha256": "9BEFE4FE6ECC4711E9AEB33121DE3AA3912D5A5122CCEA047793829B06481834",
+      "bytes": 7790
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/references/optional/ensemble-direction-and-review.md",
+      "sha256": "54D9406901AE0B42CD8BB2B2CB4BDA5E89AAFF625DD4E255DC7377452D735E75",
+      "bytes": 12420
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/scripts/check-shot-review.mjs",
+      "sha256": "BB69F60D8794F3329BC4B7AF772D05AD01A28C001C7345F1DE63BFA1E3D7D1C2",
+      "bytes": 7826
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/scripts/parse-json.mjs",
+      "sha256": "9C15621D8304BF6114CC4CB322409C8E59433409AC17950311725CDCBEBECF11",
+      "bytes": 3750
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/drafts-and-change-impact.md",
+      "sha256": "84670321B3CB5A42B34120FB0EAD60B790E9DB05C923E87F04265392C9B4D94B",
+      "bytes": 10810
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/scripts/check-change-impact.mjs",
+      "sha256": "9E4192AC7B4722834F38293291601621305F90B414AB52E02D4D944C6096AE85",
+      "bytes": 16625
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/scripts/parse-json.mjs",
+      "sha256": "9C15621D8304BF6114CC4CB322409C8E59433409AC17950311725CDCBEBECF11",
+      "bytes": 3750
+    }
+  ],
+  "sourceReads": [
+    {
+      "path": "D:/Temp/cineweave-split-p4-contents-raw-inputs-20261012.json",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C01",
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C04",
+        "CW-SPLIT-C05",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C07",
+        "CW-SPLIT-C08"
+      ],
+      "kind": "raw_input",
+      "readRecord": 1,
+      "sha256": "AAF18A7B9C32FF397CC990535D284C98147D58FEE589BF1393976CA3AC066F09"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md",
+      "sections": [
+        "frontmatter"
+      ],
+      "cases": [
+        "all"
+      ],
+      "kind": "selection",
+      "readRecord": 2,
+      "sha256": "C2A481FF773E157EC7A018CF3893720748014657F4543D3D0F4800F4B0925DEB"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/SKILL.md",
+      "sections": [
+        "frontmatter"
+      ],
+      "cases": [
+        "all"
+      ],
+      "kind": "selection",
+      "readRecord": 3,
+      "sha256": "B4A67BD86EF0CEDDF84679AFEE2B09FCA2F73234D815EAE654BE0534793BAA56"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-reference/SKILL.md",
+      "sections": [
+        "frontmatter"
+      ],
+      "cases": [
+        "all"
+      ],
+      "kind": "selection",
+      "readRecord": 4,
+      "sha256": "931B1F173FCD94B5E409E8CB44983662F6BA8885D216D9D5E819360AECE3159D"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/SKILL.md",
+      "sections": [
+        "frontmatter"
+      ],
+      "cases": [
+        "all"
+      ],
+      "kind": "selection",
+      "readRecord": 5,
+      "sha256": "2F67E7CE86F8FDCB7B38CECDC9AE00E37F5CBDA5F15B36CFA24DB0EE3FE3965D"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C01",
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C05",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C08"
+      ],
+      "kind": "active_entry",
+      "readRecord": 6,
+      "sha256": "C2A481FF773E157EC7A018CF3893720748014657F4543D3D0F4800F4B0925DEB"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/image-prompt.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C01",
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C05"
+      ],
+      "kind": "route",
+      "readRecord": 7,
+      "sha256": "8875D78177EDCE7AB4AAEA763BF0F6D3BDC6216EE1ACF3C215AAB661B96E5C08"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/prompt-detail-standard.md",
+      "sections": [
+        "全文读取请求；返回中部截断",
+        "已读：表达原则、人物、人物情绪与表情生成、场景、图生视频、交付前检查；跨案按需复用"
+      ],
+      "cases": [
+        "CW-SPLIT-C01",
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C05",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C08",
+        "CW-SPLIT-C07"
+      ],
+      "kind": "craft",
+      "readRecord": 8,
+      "sha256": "0DE944DFFD30D69BC05A52EF4BCEAF0A90DCE40564E2F1A288C68E7DD1E88E59"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/shot-direction.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C08",
+        "CW-SPLIT-C07"
+      ],
+      "kind": "route",
+      "readRecord": 9,
+      "sha256": "C04957137F3F99CB3BBA46F0C9046A653DF490686867D8C0CAD57EDE90087388"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-sound-and-delivery.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C08",
+        "CW-SPLIT-C07"
+      ],
+      "kind": "craft",
+      "readRecord": 10,
+      "sha256": "CFD0A201805AB58F05EBE5EDA1025359776EB78534CFB849472F728594DA6A16"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/storyboard-rhythm.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C08"
+      ],
+      "kind": "route",
+      "readRecord": 11,
+      "sha256": "10CE342B7E5BEB342F16942D653C3316C9FBE3758E6942C687C37E2560A2C601"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/core/visual-bible-and-continuity.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C08",
+        "CW-SPLIT-C07"
+      ],
+      "kind": "continuity",
+      "readRecord": 12,
+      "sha256": "BA8E5894516AC66B1396A24DAB5FABDC25CD3DB8FA5D1BEDDD12BE24F0A1139E"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/prompt-detail-standard.md",
+      "sections": [
+        "镜头与分镜",
+        "拍摄系统与部门协同/空间关系与调度"
+      ],
+      "cases": [
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C08",
+        "CW-SPLIT-C07"
+      ],
+      "kind": "targeted_re_read",
+      "readRecord": 13,
+      "sha256": "0DE944DFFD30D69BC05A52EF4BCEAF0A90DCE40564E2F1A288C68E7DD1E88E59"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/scene.md",
+      "sections": [
+        "共享空间检查"
+      ],
+      "cases": [
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C07"
+      ],
+      "kind": "targeted_read",
+      "readRecord": 14,
+      "sha256": "EF10535A31D8AEACF7465957AD995C47B1389F5B3B5FE9096E77682F151EA6E4"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/SKILL.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C04",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C08"
+      ],
+      "kind": "active_entry",
+      "readRecord": 15,
+      "sha256": "B4A67BD86EF0CEDDF84679AFEE2B09FCA2F73234D815EAE654BE0534793BAA56"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/references/routes/image-prompt.md",
+      "sections": [
+        "平台适配",
+        "准确文字与排版"
+      ],
+      "cases": [
+        "CW-SPLIT-C04"
+      ],
+      "kind": "targeted_read",
+      "readRecord": 16,
+      "sha256": "8875D78177EDCE7AB4AAEA763BF0F6D3BDC6216EE1ACF3C215AAB661B96E5C08"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/references/optional/prompt-detail-standard.md",
+      "sections": [
+        "场次与逐镜交付模板"
+      ],
+      "cases": [
+        "CW-SPLIT-C04",
+        "CW-SPLIT-C08",
+        "CW-SPLIT-C07"
+      ],
+      "kind": "targeted_read",
+      "readRecord": 17,
+      "sha256": "0DE944DFFD30D69BC05A52EF4BCEAF0A90DCE40564E2F1A288C68E7DD1E88E59"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-reference/SKILL.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C05"
+      ],
+      "kind": "active_entry",
+      "readRecord": 18,
+      "sha256": "931B1F173FCD94B5E409E8CB44983662F6BA8885D216D9D5E819360AECE3159D"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-reference/references/routes/reference-evidence.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C05"
+      ],
+      "kind": "route",
+      "readRecord": 19,
+      "sha256": "6A27133185302F529F936EDF6315F618876D1363AB9D08CCC45CDA233804CD48"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-reference/references/core/reference-evidence-and-rights.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C05"
+      ],
+      "kind": "required",
+      "readRecord": 20,
+      "sha256": "55332BFBAB84D121328260C56F971586658DFF692A526CAC318E2B435A522393"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/character.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C05"
+      ],
+      "kind": "route",
+      "readRecord": 21,
+      "sha256": "6527DF3210D32A9FB03F4E33C9F2D4F2BD52D34F84EA88D60950F1FEE637ABF8"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/references/optional/video-platform-adaptation.md",
+      "sections": [
+        "标题目录",
+        "第1–90行：使用正确的权威来源、能力证据层次、官方来源登记、先定参考职责、模式选择、导演方案到复制稿；同一决定文字与图像路径开头"
+      ],
+      "cases": [
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C08"
+      ],
+      "kind": "targeted_read",
+      "readRecord": 22,
+      "sha256": "9B5A4E163A6482704B43333547D16FFC0ED3542D9526599E49455460971BD7F9"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/SKILL.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C07"
+      ],
+      "kind": "active_entry",
+      "readRecord": 23,
+      "sha256": "2F67E7CE86F8FDCB7B38CECDC9AE00E37F5CBDA5F15B36CFA24DB0EE3FE3965D"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/references/routes/review-repair.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C07"
+      ],
+      "kind": "route",
+      "readRecord": 24,
+      "sha256": "9BEFE4FE6ECC4711E9AEB33121DE3AA3912D5A5122CCEA047793829B06481834"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/references/optional/ensemble-direction-and-review.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C07"
+      ],
+      "kind": "required",
+      "readRecord": 25,
+      "sha256": "54D9406901AE0B42CD8BB2B2CB4BDA5E89AAFF625DD4E255DC7377452D735E75"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/scripts/check-shot-review.mjs",
+      "sections": [
+        "import行",
+        "完整程序实际执行"
+      ],
+      "cases": [
+        "CW-SPLIT-C07"
+      ],
+      "kind": "executed_tool",
+      "readRecord": 26,
+      "sha256": "BB69F60D8794F3329BC4B7AF772D05AD01A28C001C7345F1DE63BFA1E3D7D1C2"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/scripts/parse-json.mjs",
+      "sections": [
+        "由check-shot-review.mjs实际加载执行"
+      ],
+      "cases": [
+        "CW-SPLIT-C07"
+      ],
+      "kind": "runtime_dependency",
+      "readRecord": 27,
+      "sha256": "9C15621D8304BF6114CC4CB322409C8E59433409AC17950311725CDCBEBECF11"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/drafts-and-change-impact.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C08"
+      ],
+      "kind": "revision",
+      "readRecord": 28,
+      "sha256": "84670321B3CB5A42B34120FB0EAD60B790E9DB05C923E87F04265392C9B4D94B"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/scripts/check-change-impact.mjs",
+      "sections": [
+        "import行",
+        "完整程序实际执行"
+      ],
+      "cases": [
+        "CW-SPLIT-C08"
+      ],
+      "kind": "executed_tool",
+      "readRecord": 29,
+      "sha256": "9E4192AC7B4722834F38293291601621305F90B414AB52E02D4D944C6096AE85"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/scripts/parse-json.mjs",
+      "sections": [
+        "由check-change-impact.mjs实际加载执行"
+      ],
+      "cases": [
+        "CW-SPLIT-C08"
+      ],
+      "kind": "runtime_dependency",
+      "readRecord": 30,
+      "sha256": "9C15621D8304BF6114CC4CB322409C8E59433409AC17950311725CDCBEBECF11"
+    }
+  ],
+  "cases": [
+    {
+      "id": "CW-SPLIT-C01",
+      "primarySkill": "cineweave-director",
+      "auxiliarySkills": [],
+      "entryPaths": [
+        "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md"
+      ],
+      "selectionReason": "新创作单图中文完整提示词；没有既有稿的平台投射、实际参考分析或已有结果评审。",
+      "deliveryPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C01.md",
+      "jsonPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C01.json",
+      "toolRuns": []
+    },
+    {
+      "id": "CW-SPLIT-C02",
+      "primarySkill": "cineweave-director",
+      "auxiliarySkills": [],
+      "entryPaths": [
+        "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md"
+      ],
+      "selectionReason": "从零创作首图与6秒运动母稿，未指定平台，无适用的平台投射入口。",
+      "deliveryPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C02.md",
+      "jsonPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C02.json",
+      "toolRuns": []
+    },
+    {
+      "id": "CW-SPLIT-C03",
+      "primarySkill": "cineweave-director",
+      "auxiliarySkills": [],
+      "entryPaths": [
+        "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md"
+      ],
+      "selectionReason": "在用户动作硬锁下完善两镜分镜与完整视频母稿，属于导演的连续创作交付。",
+      "deliveryPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C03.md",
+      "jsonPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C03.json",
+      "toolRuns": []
+    },
+    {
+      "id": "CW-SPLIT-C04",
+      "primarySkill": "cineweave-platform",
+      "auxiliarySkills": [],
+      "entryPaths": [
+        "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/SKILL.md"
+      ],
+      "selectionReason": "已有完整锁定图像母稿，仅请求指定夹具界面适配。",
+      "deliveryPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C04.md",
+      "jsonPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C04.json",
+      "toolRuns": []
+    },
+    {
+      "id": "CW-SPLIT-C05",
+      "primarySkill": "cineweave-director",
+      "auxiliarySkills": [
+        "cineweave-reference"
+      ],
+      "entryPaths": [
+        "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md",
+        "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-reference/SKILL.md"
+      ],
+      "selectionReason": "组合任务需要参考职责与冲突整理，并继续从零创作最终全身人物稿；导演负责收口。",
+      "deliveryPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C05.md",
+      "jsonPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C05.json",
+      "toolRuns": []
+    },
+    {
+      "id": "CW-SPLIT-C06",
+      "primarySkill": "cineweave-director",
+      "auxiliarySkills": [
+        "cineweave-platform"
+      ],
+      "entryPaths": [
+        "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md",
+        "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/SKILL.md"
+      ],
+      "selectionReason": "从零完成中文创作母稿，并在保留Seedance意向和未知能力的条件下准备平台工作稿。",
+      "deliveryPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C06.md",
+      "jsonPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C06.json",
+      "toolRuns": []
+    },
+    {
+      "id": "CW-SPLIT-C07",
+      "primarySkill": "cineweave-review",
+      "auxiliarySkills": [],
+      "entryPaths": [
+        "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/SKILL.md"
+      ],
+      "selectionReason": "已有完整两镜设计文本，明确要求六视角评审与规范检查，未授权改正文。",
+      "deliveryPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C07.md",
+      "jsonPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C07.json",
+      "toolRuns": [
+        {
+          "command": "node D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/scripts/check-shot-review.mjs D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C07-review-workbook.json",
+          "worksheetPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C07-review-workbook.json",
+          "stdoutPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C07-check.stdout.json",
+          "stderrPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C07-check.stderr.txt",
+          "exitPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C07-check.exit.txt",
+          "nativeExitCode": 2,
+          "scope": "plan_only"
+        }
+      ]
+    },
+    {
+      "id": "CW-SPLIT-C08",
+      "primarySkill": "cineweave-director",
+      "auxiliarySkills": [
+        "cineweave-platform"
+      ],
+      "entryPaths": [
+        "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md",
+        "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/SKILL.md"
+      ],
+      "selectionReason": "跨镜头正文、视频母稿与平台稿的单变量局部修订，由导演统筹并由平台能力刷新两镜离线适配。",
+      "deliveryPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C08.md",
+      "jsonPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C08.json",
+      "toolRuns": [
+        {
+          "command": "node D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/scripts/check-change-impact.mjs D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C08-impact-workbook.json",
+          "worksheetPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C08-impact-workbook.json",
+          "stdoutPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C08-check.stdout.json",
+          "stderrPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C08-check.stderr.txt",
+          "exitPath": "D:/Temp/cineweave-split-p4-multiskill-b2-20261012/CW-SPLIT-C08-check.exit.txt",
+          "nativeExitCode": 2,
+          "scope": "plan_only"
+        }
+      ]
+    }
+  ],
+  "mediaGenerated": false,
+  "providerCalled": false,
+  "installationPerformed": false,
+  "approvalGranted": false,
+  "sourceRepositoryEdited": false,
+  "priorOutputsRead": false
+}

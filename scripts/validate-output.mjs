@@ -8,6 +8,9 @@ import {
   parseJsonStrict,
   sha256Bytes,
 } from "./canonical-json.mjs";
+import { findExactRegistryMatches, resolveExactArtifact, validateCapabilityResolutionContext } from "./contract-context.mjs";
+import { validateProjectionIntegrity } from "./validate-prompt-projection.mjs";
+import { validateShotCompilerContext } from "./validate-shot-compiler.mjs";
 
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const SUPPORTED_DIALECT = "https://json-schema.org/draft/2020-12/schema";
@@ -930,7 +933,7 @@ async function validateSequenceRhythmContext(payload, artifacts, loader, errors,
   const ref = payload.storyboardRef;
   const coverageLabel = "$.validation.storyboardShotsCovered";
   const unavailable = (reason) => unverified.push(`${coverageLabel}: ${reason}`);
-  const matches = artifacts.filter((entry) => isObject(entry) && isObject(entry.ref) && deepEqual(entry.ref, ref));
+  const matches = findExactRegistryMatches(ref, artifacts);
   if (matches.length !== 1) {
     unavailable("exact storyboard registry binding unavailable or ambiguous; only local phase/window closure was checked");
     if (matches.length > 1) errors.push("$.storyboardRef: ambiguous registry binding");
@@ -1090,7 +1093,7 @@ function validateRepairPlanSemantics(payload, errors) {
 // independently of the raw-byte distribution index. This does not prove media.
 function validateRepairContext(payload, artifacts, errors, unverified) {
   const resolveRef = (ref, label) => {
-    const matches = artifacts.filter((entry) => isObject(entry) && isObject(entry.ref) && deepEqual(entry.ref, ref));
+    const matches = findExactRegistryMatches(ref, artifacts);
     if (matches.length !== 1) {
       unverified.push(`${label}: exact registry binding unavailable or ambiguous`);
       if (matches.length > 1) errors.push(`${label}: ambiguous registry binding`);
@@ -1169,6 +1172,59 @@ async function loadMatchingContracts(schemaPath) {
   return contractsCache.get(realContracts);
 }
 
+// Source schemas come from the existing release index. Validate structure only:
+// recursively validating contexts would require an unbounded registry graph.
+async function validateContextStructure(ref, source, loader) {
+  const indexPath = resolve(dirname(loader.rootSchemaPath), "..", "index.json");
+  const errors = [];
+  try {
+    const stat = await lstat(indexPath);
+    if (!stat.isFile() || stat.isSymbolicLink()) return { valid: false, errors: ["matching contract index must be a regular non-link file"] };
+    const index = parseJsonStrict(await readFile(indexPath, "utf8"));
+    const entries = Array.isArray(index.contracts) ? index.contracts.filter((entry) => entry.kind === ref.kind) : [];
+    if (index.skill !== "cineweave-director" || entries.length !== 1) return { valid: false, errors: ["source kind must resolve uniquely in the matching contract index"] };
+    const schemaPath = resolve(dirname(indexPath), entries[0].schema);
+    const schema = await loader.load(schemaPath);
+    await loader.assertRefClosure(schema, schema, schemaPath);
+    if (schema.properties?.kind?.const !== ref.kind) return { valid: false, errors: ["source schema kind does not match the exact reference"] };
+    await validateNode(source, schema, { loader, document: schema, schemaPath, activeReferences: new Set() }, "$", errors);
+  } catch (error) {
+    errors.push(`source contract structure could not be verified: ${error.message}`);
+  }
+  return { valid: errors.length === 0, errors };
+}
+
+async function validateProjectionContext(payload, artifacts, validateStructure) {
+  const errors = [], unverified = [];
+  const claimsReadyRights = payload.status === "ready_for_human" || payload.manualHandoff.status === "ready"
+    || payload.compatibilityChecks.some((check) => check.checkId === "check.rights-licensing" && check.status === "pass");
+  const sources = [
+    [payload.sourcePromptRef, "$.sourcePromptRef"],
+    [payload.capabilityProfileRef, "$.capabilityProfileRef"],
+    [payload.licenseProfileRef, "$.licenseProfileRef"],
+  ];
+  if (payload.capabilityResolutionPlanRef) sources.push([payload.capabilityResolutionPlanRef, "$.capabilityResolutionPlanRef", "resolutionPlanId"]);
+  for (const [ref, label, idField] of sources) {
+    const result = await resolveExactArtifact(ref, { artifacts, validateStructure, label, ...(idField ? { idField } : {}) });
+    errors.push(...result.errors); unverified.push(...result.unverified);
+    if (label === "$.licenseProfileRef" && result.status === "resolved" && claimsReadyRights
+        && (["blocked", "expired"].includes(result.document.status) || result.document.assetRights.generationUse === "prohibited")) {
+      errors.push(`${label}: blocked/expired source license or assetRights.generationUse=prohibited cannot support a ready handoff or a passing rights check`);
+    }
+  }
+  for (const [index, binding] of payload.referenceBindings.entries()) {
+    const label = `$.referenceBindings[${index}].sourceObservationRef`;
+    const result = await resolveExactArtifact(binding.sourceObservationRef, { artifacts, validateStructure, label });
+    errors.push(...result.errors); unverified.push(...result.unverified);
+    if (result.status === "resolved" && result.document.role !== binding.role) errors.push(`$.referenceBindings[${index}].role must match the exact source observation role`);
+    if (result.status === "resolved" && result.document.rightsGate.status === "blocked" && claimsReadyRights) {
+      errors.push(`${label}: source rightsGate is blocked and cannot support a ready handoff or a passing rights check`);
+    }
+  }
+  unverified.push("Source registry authority, current provider/account support, actual rights and preservation of adapted creative intent require evidence review");
+  return { errors, unverified };
+}
+
 export async function validatePayload(schemaPath, payload, options = {}) {
   canonicalize(payload);
   const absoluteSchema = resolve(schemaPath);
@@ -1186,6 +1242,19 @@ export async function validatePayload(schemaPath, payload, options = {}) {
   const contracts = options.contracts ?? (["cineweave_codex_workflow_plan", "cineweave_codex_shot_compiler_plan"].includes(schemaKind) ? await loadMatchingContracts(absoluteSchema) : null);
   validateContractSemantics(payload, document, errors, contracts);
   const unverified = [];
+  if (schemaKind === "cineweave_codex_prompt_projection_plan" && errors.length === 0) {
+    const integrity = validateProjectionIntegrity(payload);
+    errors.push(...integrity.errors); unverified.push(...integrity.unverified);
+  }
+  if (["cineweave_codex_prompt_projection_plan", "cineweave_codex_capability_resolution_plan", "cineweave_codex_shot_compiler_plan"].includes(schemaKind) && errors.length === 0) {
+    const validateStructure = (ref, source) => validateContextStructure(ref, source, loader);
+    const result = schemaKind === "cineweave_codex_prompt_projection_plan"
+      ? await validateProjectionContext(payload, options.artifacts, validateStructure)
+      : schemaKind === "cineweave_codex_capability_resolution_plan"
+        ? await validateCapabilityResolutionContext(payload, { artifacts: options.artifacts, validateStructure })
+        : await validateShotCompilerContext(payload, { artifacts: options.artifacts, validateStructure });
+    errors.push(...result.errors); unverified.push(...result.unverified);
+  }
   if (schemaKind === "cineweave_codex_repair_plan" && errors.length === 0) {
     if (options.artifacts !== undefined && !Array.isArray(options.artifacts)) errors.push("artifacts must be an array of exact ref/document bindings");
     else validateRepairContext(payload, options.artifacts ?? [], errors, unverified);

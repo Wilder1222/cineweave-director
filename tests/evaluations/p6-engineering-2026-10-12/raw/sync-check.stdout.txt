@@ -1,0 +1,12 @@
+
+> cineweave-director@3.2.0 skills:sync:check
+> node scripts/sync-skill-exports.mjs --check
+
+{
+  "valid": true,
+  "mode": "check",
+  "childCount": 3,
+  "filesChecked": 477,
+  "filesUpdated": 0,
+  "messageZh": "专业 Skill 派生副本与作者源一致。"
+}

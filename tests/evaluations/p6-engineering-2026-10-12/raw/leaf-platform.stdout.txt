@@ -1,0 +1,53 @@
+{
+  "valid": true,
+  "source": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director",
+  "bundle": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\cineweave-platform-skill",
+  "target": {
+    "type": "skill",
+    "name": "cineweave-platform"
+  },
+  "files": 160,
+  "exports": 160,
+  "sourceFiles": 160,
+  "skills": [
+    {
+      "name": "cineweave-platform",
+      "root": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\cineweave-platform-skill",
+      "files": 159,
+      "actualKinds": [
+        "cineweave_codex_prompt_projection_plan"
+      ],
+      "targetKinds": [
+        "cineweave_codex_prompt_projection_plan"
+      ],
+      "references": 42,
+      "roots": 52,
+      "schemas": 54,
+      "examples": 52,
+      "receipts": 48,
+      "schemaRefs": 1357,
+      "markdownFiles": 43,
+      "links": 420,
+      "fragments": 119,
+      "textFiles": 159
+    }
+  ],
+  "totals": {
+    "roots": 52,
+    "schemas": 54,
+    "examples": 52,
+    "references": 42,
+    "receipts": 48,
+    "schemaRefs": 1357,
+    "markdownFiles": 43,
+    "links": 420,
+    "fragments": 119,
+    "textFiles": 159
+  },
+  "roots": 52,
+  "schemas": 54,
+  "examples": 52,
+  "references": 42,
+  "byteIdentical": true,
+  "messageZh": "插件构建完成，与已校验源码逐字节一致。"
+}

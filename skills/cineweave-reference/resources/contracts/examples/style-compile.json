@@ -1,0 +1,202 @@
+{
+  "kind": "cineweave_codex_style_compile",
+  "contractVersion": "2.0.0",
+  "compileId": "compile.song-poetic-portrait-image-01",
+  "stylePackageRef": {
+    "id": "song-poetic-period-drama",
+    "version": 1,
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "representationBindingRef": {
+    "id": "representation.jialing.song-photoreal",
+    "version": 1,
+    "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+  },
+  "representationVariant": {
+    "variantId": "variant.song-poetic-photoreal",
+    "family": "photoreal",
+    "separateCompileArtifact": true,
+    "identityTranslationBound": true,
+    "protectedDomains": [
+      "character_identity",
+      "character_appearance",
+      "scene_geography",
+      "physical_light"
+    ]
+  },
+  "target": {
+    "medium": "image",
+    "output": "shot",
+    "stage": "appearance",
+    "aspectRatio": "3:4"
+  },
+  "blocks": [
+    {
+      "channel": "medium",
+      "importance": "required",
+      "directives": [
+        "实拍图像表现",
+        "自然人体解剖与物理材质"
+      ]
+    },
+    {
+      "channel": "geometry",
+      "importance": "required",
+      "directives": [
+        "保留正式面部关系与成人身体比例",
+        "保留受控的自然不对称"
+      ]
+    },
+    {
+      "channel": "surface",
+      "importance": "strong",
+      "directives": [
+        "人体皮肤的局部色差",
+        "适合镜头尺度的微纹理",
+        "克制且不均匀的镜面响应"
+      ],
+      "negativeDirectives": [
+        "瓷器般均匀肤色",
+        "美颜滤镜磨皮",
+        "过度锐利的毛孔"
+      ]
+    },
+    {
+      "channel": "depth",
+      "importance": "strong",
+      "directives": [
+        "一致的摄影透视",
+        "具有可信光学衰减的选择性对焦"
+      ]
+    },
+    {
+      "channel": "costume",
+      "importance": "strong",
+      "directives": [
+        "克制的宋式叠穿",
+        "低饱和玉色与月白织物色板",
+        "真实褶皱、重量与接触"
+      ]
+    },
+    {
+      "channel": "lighting",
+      "importance": "strong",
+      "directives": [
+        "柔和且有明确来源的窗光或阴天天井光",
+        "受控的光线衰减与接触阴影"
+      ]
+    },
+    {
+      "channel": "performance",
+      "importance": "supporting",
+      "directives": [
+        "小幅面部表演",
+        "以眼神承载情绪",
+        "头部稍迟于视线转动"
+      ]
+    },
+    {
+      "channel": "palette",
+      "importance": "supporting",
+      "directives": [
+        "低饱和玉色、月白、茶褐与旧木色",
+        "暖色皮肤高光映衬冷色环境"
+      ],
+      "negativeDirectives": [
+        "霓虹饱和度",
+        "塑料般镜面泛光"
+      ]
+    },
+    {
+      "channel": "postprocess",
+      "importance": "supporting",
+      "directives": [
+        "细微颗粒、低锐化、克制的高光过渡"
+      ]
+    }
+  ],
+  "preserve": [
+    "精确 CharacterSpec 身份锚点",
+    "精确 AppearanceState 构造",
+    "导演的摄影机与裁切决定",
+    "已提供时继承 SceneBinding 地理"
+  ],
+  "allowedVariation": [
+    "AppearanceState 未锁定时可探索小型配饰",
+    "风格包范围内的冷暖光",
+    "SceneSpec 范围内的背景细节"
+  ],
+  "forbidden": [
+    "改变面部几何",
+    "改变身体比例",
+    "未经许可复制源人物相貌",
+    "借风格移动锁定地理"
+  ],
+  "realismProfile": {
+    "representationalRealism": 0.9,
+    "anatomyFidelity": 0.95,
+    "surfaceMicrodetailVisibility": 0.55,
+    "materialDifferentiation": 0.92,
+    "naturalAsymmetryRetention": 0.82,
+    "opticalImperfection": 0.28,
+    "idealization": 0.4,
+    "beautyRetouch": 0.52,
+    "calibration": {
+      "scale": "normalized_creative_intent",
+      "providerNeutral": true,
+      "notQualityScore": true,
+      "identityProtected": true,
+      "materialStateProtected": true,
+      "doesNotPromiseOutput": true
+    }
+  },
+  "referenceInputs": [
+    {
+      "referenceId": "ref-costume-song",
+      "role": "costume",
+      "required": true,
+      "preserve": [
+        "叠穿层次",
+        "织物重量",
+        "低饱和色板"
+      ],
+      "ignore": [
+        "源人物面部",
+        "源人物姿态"
+      ]
+    },
+    {
+      "referenceId": "ref-light-song",
+      "role": "lighting",
+      "required": false,
+      "preserve": [
+        "柔和的定向响应"
+      ],
+      "ignore": [
+        "精确布景布局",
+        "身份"
+      ]
+    }
+  ],
+  "validation": {
+    "packageResolved": true,
+    "identityNotOverwritten": true,
+    "sceneNotOverwritten": true,
+    "temporalSeparated": true,
+    "providerNeutral": true
+  },
+  "planningBoundary": {
+    "providerNeutral": true,
+    "generatesMedia": false,
+    "humanApprovalRequired": true,
+    "notes": "编译指令交给提示词组装，可使用精确导演 ShotSpec；不调用供应商。"
+  },
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.1.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-20T12:00:00.000Z"
+  }
+}

@@ -1,0 +1,645 @@
+[
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\SKILL.md",
+    "sha256": "c2a481ff773e157ec7a018cf3893720748014657f4543d3d0f4800f4b0925deb",
+    "sections": [
+      "frontmatter",
+      "body: all"
+    ],
+    "cases": [
+      "routing inventory"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\SKILL.md",
+    "sha256": "b4a67bd86ef0ceddf84679afee2b09fca2f73234d815eae654be0534793baa56",
+    "sections": [
+      "frontmatter"
+    ],
+    "cases": [
+      "routing inventory"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\SKILL.md",
+    "sha256": "931b1f173fcd94b5e409e8cb44983662f6ba8885d216d9d5e819360aece3159d",
+    "sections": [
+      "frontmatter"
+    ],
+    "cases": [
+      "routing inventory"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\SKILL.md",
+    "sha256": "2f67e7ce86f8fdcb7b38cecdc9ae00e37f5cbda5f15b36cfa24db0ee3fe3965d",
+    "sections": [
+      "frontmatter"
+    ],
+    "cases": [
+      "routing inventory"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\image-prompt.md",
+    "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08",
+    "sections": [
+      "all"
+    ],
+    "cases": [
+      "CW-SPLIT-T01"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+    "sha256": "0de944dffd30d69bc05a52ef4bceaf0a90dce40564e2f1a288c68e7dd1e88e59",
+    "sections": [
+      "表达原则;人物;人物情绪与表情生成;场景"
+    ],
+    "lineRange": [
+      5,
+      76
+    ],
+    "cases": [
+      "CW-SPLIT-T01"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\story.md",
+    "sha256": "09862af8560baed3f75a31a3b3ae24135908195aa3f3c260698f553f12d9cc59",
+    "sections": [
+      "all"
+    ],
+    "lineRange": null,
+    "cases": [
+      "CW-SPLIT-T02"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\SKILL.md",
+    "sha256": "b4a67bd86ef0ceddf84679afee2b09fca2f73234d815eae654be0534793baa56",
+    "sections": [
+      "body: all"
+    ],
+    "lineRange": null,
+    "cases": [
+      "CW-SPLIT-T03"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\references\\routes\\image-prompt.md",
+    "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08",
+    "sections": [
+      "平台适配 tail;准确文字与排版;导入既有提示词;变体与负向约束"
+    ],
+    "lineRange": [
+      49,
+      72
+    ],
+    "cases": [
+      "CW-SPLIT-T03"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\references\\routes\\image-prompt.md",
+    "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08",
+    "sections": [
+      "平台适配"
+    ],
+    "lineRange": [
+      43,
+      50
+    ],
+    "cases": [
+      "CW-SPLIT-T03"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\references\\optional\\video-platform-adaptation.md",
+    "sha256": "9b5a4e163a6482704b43333547d16ffc0ed3542d9526599e49455460971bd7f9",
+    "sections": [
+      "使用正确的权威来源;能力证据的层次与评估日期"
+    ],
+    "lineRange": [
+      5,
+      29
+    ],
+    "cases": [
+      "CW-SPLIT-T04"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\references\\optional\\video-platform-adaptation.md",
+    "sha256": "9b5a4e163a6482704b43333547d16ffc0ed3542d9526599e49455460971bd7f9",
+    "sections": [
+      "先定参考职责，再写提示词;模式选择与明确替代;导演方案到复制稿;同一决定的文字与图像路径"
+    ],
+    "lineRange": [
+      49,
+      110
+    ],
+    "cases": [
+      "CW-SPLIT-T04"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\SKILL.md",
+    "sha256": "931b1f173fcd94b5e409e8cb44983662f6ba8885d216d9d5e819360aece3159d",
+    "sections": [
+      "body: all"
+    ],
+    "lineRange": null,
+    "cases": [
+      "CW-SPLIT-T05"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\references\\routes\\reference-evidence.md",
+    "sha256": "6a27133185302f529f936edf6315f618876d1363ab9d08ccc45cda233804cd48",
+    "sections": [
+      "all"
+    ],
+    "lineRange": null,
+    "cases": [
+      "CW-SPLIT-T05"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\references\\core\\reference-evidence-and-rights.md",
+    "sha256": "55332bfbab84d121328260c56f971586658dff692a526cac318e2b435a522393",
+    "sections": [
+      "all"
+    ],
+    "lineRange": null,
+    "cases": [
+      "CW-SPLIT-T05"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\SKILL.md",
+    "sha256": "2f67e7ce86f8fdcb7b38cecdc9ae00e37f5cbda5f15b36cfa24db0ee3fe3965d",
+    "sections": [
+      "body: all"
+    ],
+    "lineRange": null,
+    "cases": [
+      "CW-SPLIT-T07"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\review-repair.md",
+    "sha256": "9befe4fe6ecc4711e9aeb33121de3aa3912d5a5122ccea047793829b06481834",
+    "sections": [
+      "all"
+    ],
+    "lineRange": null,
+    "cases": [
+      "CW-SPLIT-T07"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\scene.md",
+    "sha256": "ef10535a31d8aeacf7465957ad995c47b1389f5b3b5fe9096e77682f151ea6e4",
+    "sections": [
+      "all"
+    ],
+    "lineRange": null,
+    "cases": [
+      "CW-SPLIT-T07"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\shot-direction.md",
+    "sha256": "c04957137f3f99cb3bba46f0c9046a653df490686867d8c0cad57ede90087388",
+    "sections": [
+      "all"
+    ],
+    "lineRange": null,
+    "cases": [
+      "CW-SPLIT-T07"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\optional\\generation-diagnostics.md",
+    "sha256": "2ad6fd129d28d5b97853db37b36a3e81582605ddf37ae6139376d671ebf40b9b",
+    "sections": [
+      "证据阶段;风险工作表;运动交接"
+    ],
+    "lineRange": [
+      9,
+      40
+    ],
+    "cases": [
+      "CW-SPLIT-T08"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\optional\\generation-diagnostics.md",
+    "sha256": "2ad6fd129d28d5b97853db37b36a3e81582605ddf37ae6139376d671ebf40b9b",
+    "sections": [
+      "诊断索引: introductory text, CW-ATTENTION, CW-START-END, start of CW-MOTION"
+    ],
+    "lineRange": [
+      59,
+      86
+    ],
+    "cases": [
+      "CW-SPLIT-T08"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\optional\\generation-diagnostics.md",
+    "sha256": "2ad6fd129d28d5b97853db37b36a3e81582605ddf37ae6139376d671ebf40b9b",
+    "sections": [
+      "诊断索引: continuation of CW-MOTION, CW-CAMERA, CW-APPEARANCE, CW-CONTACT, CW-CONTINUITY, start of CW-LOOK"
+    ],
+    "lineRange": [
+      84,
+      129
+    ],
+    "cases": [
+      "CW-SPLIT-T08"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\storyboard-rhythm.md",
+    "sha256": "10ce342b7e5beb342f16942d653c3316c9fbe3758e6942c687c37e2560a2c601",
+    "sections": [
+      "all"
+    ],
+    "lineRange": null,
+    "cases": [
+      "CW-SPLIT-T10"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+    "sha256": "0de944dffd30d69bc05a52ef4bceaf0a90dce40564e2f1a288c68e7dd1e88e59",
+    "sections": [
+      "镜头与分镜;拍摄系统与部门协同;场次与逐镜交付模板"
+    ],
+    "lineRange": [
+      77,
+      151
+    ],
+    "cases": [
+      "CW-SPLIT-T10"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\video-sound-and-delivery.md",
+    "sha256": "cfd0a201805ab58f05ebe5eda1025359776eb78534cfb849472f728594da6a16",
+    "sections": [
+      "视频意图;续写与生成段落边界;声音职责与提示表;精确文案与时间检查"
+    ],
+    "lineRange": [
+      5,
+      70
+    ],
+    "cases": [
+      "CW-SPLIT-T10"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\storyboard-rhythm.md",
+    "sha256": "10ce342b7e5beb342f16942d653c3316c9fbe3758e6942c687c37e2560a2c601",
+    "sections": [
+      "相邻剪辑接口;质量关卡"
+    ],
+    "lineRange": [
+      41,
+      71
+    ],
+    "cases": [
+      "CW-SPLIT-T16"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\character.md",
+    "sha256": "6527df3210d32a9fb03f4e33c9f2d4f2bd52d34f84ea88d60950f1fee637abf8",
+    "sections": [
+      "all"
+    ],
+    "lineRange": null,
+    "cases": [
+      "CW-SPLIT-T18"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+    "sha256": "0de944dffd30d69bc05a52ef4bceaf0a90dce40564e2f1a288c68e7dd1e88e59",
+    "sections": [
+      "图生视频"
+    ],
+    "lineRange": [
+      151,
+      162
+    ],
+    "cases": [
+      "CW-SPLIT-C02"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\production-plan.md",
+    "sha256": "efbde14fb9810d392a696a0ee4e6aaca3b2f64998c291f4ab9936f5c6e41273a",
+    "sections": [
+      "all"
+    ],
+    "lineRange": null,
+    "cases": [
+      "CW-SPLIT-C02"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\video-performance-direction.md",
+    "sha256": "8a156479c8ae94c55a1c6b433fef9193733fc64867eaae2a17e17e404614a11d",
+    "sections": [
+      "台词与声音表达;摄影机与焦点"
+    ],
+    "lineRange": [
+      89,
+      110
+    ],
+    "cases": [
+      "CW-SPLIT-C02"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\video-performance-direction.md",
+    "sha256": "8a156479c8ae94c55a1c6b433fef9193733fc64867eaae2a17e17e404614a11d",
+    "sections": [
+      "时间工作表与验收"
+    ],
+    "lineRange": [
+      119,
+      130
+    ],
+    "cases": [
+      "CW-SPLIT-C02"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\optional\\ensemble-direction-and-review.md",
+    "sha256": "54d9406901ae0b42cd8bb2b2cb4bda5e89aaff625dd4e255dc7377452d735e75",
+    "sections": [
+      "融入现有流程;同一场景，多个检查视角;表演与背景活动"
+    ],
+    "lineRange": [
+      5,
+      37
+    ],
+    "cases": [
+      "CW-SPLIT-C07"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\optional\\ensemble-direction-and-review.md",
+    "sha256": "54d9406901ae0b42cd8bb2b2cb4bda5e89aaff625dd4e255dc7377452d735e75",
+    "sections": [
+      "覆盖范围内的每一镜;只读评审表检查器;视频编译与连续性"
+    ],
+    "lineRange": [
+      63,
+      129
+    ],
+    "cases": [
+      "CW-SPLIT-C07"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\scripts\\check-shot-review.mjs",
+    "sha256": "bb69f60d8794f3329bc4b7af772d05ad01a28c001c7345f1de63bfa1e3d7d1c2",
+    "sections": [
+      "imports;REVIEW_ROLES;countPrompt;checkShotReview"
+    ],
+    "lineRange": [
+      1,
+      108
+    ],
+    "cases": [
+      "CW-SPLIT-C07"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\optional\\video-sound-and-delivery.md",
+    "sha256": "cfd0a201805ab58f05ebe5eda1025359776eb78534cfb849472f728594da6a16",
+    "sections": [
+      "视频意图;续写与生成段落边界;声音职责与提示表"
+    ],
+    "lineRange": [
+      5,
+      43
+    ],
+    "cases": [
+      "CW-SPLIT-C07"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\drafts-and-change-impact.md",
+    "sha256": "84670321b3cb5a42b34120fb0ead60b790e9db05c923e87f04265392c9b4d94b",
+    "sections": [
+      "工作草稿;修订工作表与恢复检查点"
+    ],
+    "lineRange": [
+      5,
+      41
+    ],
+    "cases": [
+      "CW-SPLIT-C08"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\core\\operating-model.md",
+    "sha256": "51c07e850350f2721c8ce89886c455465a0bc8ca29463a3ef2cb1b9ae63af3b9",
+    "sections": [
+      "工作模型;中文工作约定;任务范围与上下文;架构与职责;路由图;交互深度;阶段纪律;创作成熟度与授权决策 heading"
+    ],
+    "lineRange": [
+      1,
+      65
+    ],
+    "cases": [
+      "CW-SPLIT-C08"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\core\\operating-model.md",
+    "sha256": "51c07e850350f2721c8ce89886c455465a0bc8ca29463a3ef2cb1b9ae63af3b9",
+    "sections": [
+      "创作成熟度与授权决策;能力交接与迁移"
+    ],
+    "lineRange": [
+      65,
+      86
+    ],
+    "cases": [
+      "CW-SPLIT-C08"
+    ]
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+    "sha256": "0de944dffd30d69bc05a52ef4bceaf0a90dce40564e2f1a288c68e7dd1e88e59",
+    "sections": [
+      "heading inventory only (rg)"
+    ],
+    "cases": [
+      "on-demand source navigation"
+    ],
+    "lineRange": null
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\references\\routes\\image-prompt.md",
+    "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08",
+    "sections": [
+      "heading inventory only (rg)"
+    ],
+    "cases": [
+      "on-demand source navigation"
+    ],
+    "lineRange": null
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\references\\optional\\video-platform-adaptation.md",
+    "sha256": "9b5a4e163a6482704b43333547d16ffc0ed3542d9526599e49455460971bd7f9",
+    "sections": [
+      "heading inventory only (rg)"
+    ],
+    "cases": [
+      "on-demand source navigation"
+    ],
+    "lineRange": null
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\references\\optional\\video-sound-and-delivery.md",
+    "sha256": "cfd0a201805ab58f05ebe5eda1025359776eb78534cfb849472f728594da6a16",
+    "sections": [
+      "heading inventory only (rg)"
+    ],
+    "cases": [
+      "on-demand source navigation"
+    ],
+    "lineRange": null
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\optional\\generation-diagnostics.md",
+    "sha256": "2ad6fd129d28d5b97853db37b36a3e81582605ddf37ae6139376d671ebf40b9b",
+    "sections": [
+      "heading inventory only (rg)"
+    ],
+    "cases": [
+      "on-demand source navigation"
+    ],
+    "lineRange": null
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\shot-direction.md",
+    "sha256": "c04957137f3f99cb3bba46f0c9046a653df490686867d8c0cad57ede90087388",
+    "sections": [
+      "heading inventory only (rg)"
+    ],
+    "cases": [
+      "on-demand source navigation"
+    ],
+    "lineRange": null
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\scene.md",
+    "sha256": "ef10535a31d8aeacf7465957ad995c47b1389f5b3b5fe9096e77682f151ea6e4",
+    "sections": [
+      "heading inventory only (rg)"
+    ],
+    "cases": [
+      "on-demand source navigation"
+    ],
+    "lineRange": null
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\storyboard-rhythm.md",
+    "sha256": "10ce342b7e5beb342f16942d653c3316c9fbe3758e6942c687c37e2560a2c601",
+    "sections": [
+      "heading inventory only (rg)"
+    ],
+    "cases": [
+      "on-demand source navigation"
+    ],
+    "lineRange": null
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\drafts-and-change-impact.md",
+    "sha256": "84670321b3cb5a42b34120fb0ead60b790e9db05c923e87f04265392c9b4d94b",
+    "sections": [
+      "heading inventory only (rg)"
+    ],
+    "cases": [
+      "on-demand source navigation"
+    ],
+    "lineRange": null
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\character.md",
+    "sha256": "6527df3210d32a9fb03f4e33c9f2d4f2bd52d34f84ea88d60950f1fee637abf8",
+    "sections": [
+      "heading inventory only (rg)"
+    ],
+    "cases": [
+      "on-demand source navigation"
+    ],
+    "lineRange": null
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\video-performance-direction.md",
+    "sha256": "8a156479c8ae94c55a1c6b433fef9193733fc64867eaae2a17e17e404614a11d",
+    "sections": [
+      "heading inventory only (rg)"
+    ],
+    "cases": [
+      "on-demand source navigation"
+    ],
+    "lineRange": null
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\optional\\ensemble-direction-and-review.md",
+    "sha256": "54d9406901ae0b42cd8bb2b2cb4bda5e89aaff625dd4e255dc7377452d735e75",
+    "sections": [
+      "heading inventory only (rg)"
+    ],
+    "cases": [
+      "on-demand source navigation"
+    ],
+    "lineRange": null
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\core\\operating-model.md",
+    "sha256": "51c07e850350f2721c8ce89886c455465a0bc8ca29463a3ef2cb1b9ae63af3b9",
+    "sections": [
+      "heading inventory only (rg)"
+    ],
+    "cases": [
+      "on-demand source navigation"
+    ],
+    "lineRange": null
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\scripts\\check-shot-review.mjs",
+    "sha256": "bb69f60d8794f3329bc4b7af772d05ad01a28c001c7345f1de63bfa1e3d7d1c2",
+    "sections": [
+      "code locator inventory (rg)",
+      "CLI executed against actual worksheet; native stdout/exit recorded"
+    ],
+    "cases": [
+      "CW-SPLIT-C07"
+    ],
+    "lineRange": null
+  },
+  {
+    "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\scripts\\parse-json.mjs",
+    "sha256": "9c15621d8304bf6114cc4cb322409c8e59433409ac17950311725cdcbebecf11",
+    "sections": [
+      "runtime import by check-shot-review.mjs; not semantically read by agent"
+    ],
+    "cases": [
+      "CW-SPLIT-C07"
+    ],
+    "lineRange": null
+  }
+]

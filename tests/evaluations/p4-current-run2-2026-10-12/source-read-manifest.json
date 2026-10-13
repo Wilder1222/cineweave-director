@@ -1,0 +1,166 @@
+[
+  {
+    "key": "input",
+    "path": "D:/Temp/cineweave-split-p4-correction-raw-inputs-20261012.json",
+    "chapters": [
+      "cases: 原请求与本次rawData"
+    ],
+    "kind": "raw_input",
+    "sha256": "FC7AE52E6ABC32563D06A36335176054142B56E5A3364FB9492AB21DDA1CDA0C"
+  },
+  {
+    "key": "director-entry",
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md",
+    "chapters": [
+      "frontmatter",
+      "正文全部：从交付物开始、创作顺序、创作约定、提示词与视频交接、专业能力交接、按需深入、可选结构化交付"
+    ],
+    "kind": "skill",
+    "sha256": "EC0BE9BA64C300B486068EAC5C8AC4474406F2D2BAEA0BD6117A25DCFFD70372"
+  },
+  {
+    "key": "platform-entry",
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/SKILL.md",
+    "chapters": [
+      "frontmatter",
+      "正文全部：从实际输入开始、忠实适配与交付、创作约定、按需读取、可选规范交接"
+    ],
+    "kind": "skill",
+    "sha256": "15ADBF7AF710BE30173AF4A6BAF5E5CA5B7CD30C404D6F553E0432E243077E2A"
+  },
+  {
+    "key": "reference-frontmatter",
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-reference/SKILL.md",
+    "chapters": [
+      "仅frontmatter；无实际参考素材，未加载正文"
+    ],
+    "kind": "routing_only",
+    "sha256": "931B1F173FCD94B5E409E8CB44983662F6BA8885D216D9D5E819360AECE3159D"
+  },
+  {
+    "key": "review-frontmatter",
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/SKILL.md",
+    "chapters": [
+      "仅frontmatter；本次为创作与授权局修，未启动独立评审流程，未加载正文"
+    ],
+    "kind": "routing_only",
+    "sha256": "2F67E7CE86F8FDCB7B38CECDC9AE00E37F5CBDA5F15B36CFA24DB0EE3FE3965D"
+  },
+  {
+    "key": "image-route",
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/image-prompt.md",
+    "chapters": [
+      "全文：编译顺序、提示词精简关卡、参考与变换、关键帧准备度、平台适配、准确文字与排版、导入既有提示词、变体与负向约束"
+    ],
+    "kind": "reference",
+    "sha256": "8875D78177EDCE7AB4AAEA763BF0F6D3BDC6216EE1ACF3C215AAB661B96E5C08"
+  },
+  {
+    "key": "shot-route",
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/shot-direction.md",
+    "chapters": [
+      "全文：明确戏剧单元、摄影机与构图、镜头光照与时间、电影模式与编译、下游产物"
+    ],
+    "kind": "reference",
+    "sha256": "C04957137F3F99CB3BBA46F0C9046A653DF490686867D8C0CAD57EDE90087388"
+  },
+  {
+    "key": "storyboard-route",
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/storyboard-rhythm.md",
+    "chapters": [
+      "全文；第一次合批回传有截断，随后定向补读31至69行及相邻剪辑接口"
+    ],
+    "kind": "reference",
+    "sha256": "10CE342B7E5BEB342F16942D653C3316C9FBE3758E6942C687C37E2560A2C601"
+  },
+  {
+    "key": "repair-route",
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/review-repair.md",
+    "chapters": [
+      "全文：基准、评审、修复归属、返回结果与新证据；仅用于局修边界，未作自评分"
+    ],
+    "kind": "reference",
+    "sha256": "9BEFE4FE6ECC4711E9AEB33121DE3AA3912D5A5122CCEA047793829B06481834"
+  },
+  {
+    "key": "prompt-detail",
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/prompt-detail-standard.md",
+    "chapters": [
+      "标题索引",
+      "1至96行：表达原则、人物、人物情绪与表情生成、场景、镜头与分镜",
+      "100至162行：空间关系与调度、构图与摄影实现、灯光与曝光连续性、收音与声音空间、场记、场次与逐镜交付模板、图生视频",
+      "216至223行：交付前检查"
+    ],
+    "kind": "reference",
+    "sha256": "17ADAF6034D97879F14FCDEFF40850FC7A0C890099254241F1CAE96A0C217914"
+  },
+  {
+    "key": "video-sound",
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-sound-and-delivery.md",
+    "chapters": [
+      "标题索引",
+      "1至78行：视频意图、续写与生成段落边界、声音职责与提示表、精确文案与时间检查、交付与资源工作表"
+    ],
+    "kind": "reference",
+    "sha256": "CFD0A201805AB58F05EBE5EDA1025359776EB78534CFB849472F728594DA6A16"
+  },
+  {
+    "key": "motion-handoff",
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/generation-diagnostics.md",
+    "chapters": [
+      "标题索引",
+      "9至40行：证据阶段、风险工作表、运动交接"
+    ],
+    "kind": "reference",
+    "sha256": "2AD6FD129D28D5B97853DB37B36A3E81582605DDF37AE6139376D671EBF40B9B"
+  },
+  {
+    "key": "change-impact-guide",
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/drafts-and-change-impact.md",
+    "chapters": [
+      "标题索引",
+      "1至111行：工作草稿、修订工作表与恢复检查点、变更影响示例、只读变更影响查询及输入规则；第一次合批回传有截断，随后定向补读"
+    ],
+    "kind": "reference",
+    "sha256": "84670321B3CB5A42B34120FB0EAD60B790E9DB05C923E87F04265392C9B4D94B"
+  },
+  {
+    "key": "platform-adaptation",
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/references/optional/video-platform-adaptation.md",
+    "chapters": [
+      "标题索引",
+      "1至29行：使用正确的权威来源、能力证据层次与日期",
+      "49至110行：先定参考职责、模式选择、导演方案到复制稿、同一决定的文字与图像路径",
+      "154至173行：分平台交接、适配不是盲目拼接、外部人工交接与返回"
+    ],
+    "kind": "reference",
+    "sha256": "9B5A4E163A6482704B43333547D16FFC0ED3542D9526599E49455460971BD7F9"
+  },
+  {
+    "key": "delivery-checker",
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/scripts/check-delivery.mjs",
+    "chapters": [
+      "实际CLI执行；哈希及import行定位，未全量预读源码"
+    ],
+    "kind": "runtime",
+    "sha256": "3147C6F5FAD4D4D32682A05F34ECA15337C6CA2B8C73C69EA96331A209F2E4A5"
+  },
+  {
+    "key": "impact-checker",
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/scripts/check-change-impact.mjs",
+    "chapters": [
+      "实际CLI执行；哈希及export/CLI/import行定位，未全量预读源码"
+    ],
+    "kind": "runtime",
+    "sha256": "9E4192AC7B4722834F38293291601621305F90B414AB52E02D4D944C6096AE85"
+  },
+  {
+    "key": "strict-json-runtime",
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/scripts/parse-json.mjs",
+    "chapters": [
+      "上述两个检查器实际导入执行；只读取哈希与import定位，无其他本地导入"
+    ],
+    "kind": "runtime",
+    "sha256": "9C15621D8304BF6114CC4CB322409C8E59433409AC17950311725CDCBEBECF11"
+  }
+]

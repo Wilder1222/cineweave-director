@@ -1,0 +1,1103 @@
+[
+  {
+    "id": "CW-SPLIT-T01",
+    "lead": "cineweave-director",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T01-v1.md",
+    "sources": [
+      {
+        "sourceId": "S01",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S05",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\image-prompt.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S06",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "fd025996fb4c91f88d5d96ec4b3fb75e6d60e675cc4fc4557872ae1469cf00eb",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T02",
+    "lead": "cineweave-director",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T02-v1.md",
+    "sources": [
+      {
+        "sourceId": "S01",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S07",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\story.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "60254cd0397f62252dc2872d9b76b44c049eba55024a9339dc749453ca060da1",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T03",
+    "lead": "cineweave-platform",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T03-v1.md",
+    "sources": [
+      {
+        "sourceId": "S02",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S08",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\references\\routes\\image-prompt.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "5f8999daa064138ef5a33aeba3a29f42c69f237d61c5bc67e3cc768358f663ca",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T04",
+    "lead": "cineweave-platform",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T04-v1.md",
+    "sources": [
+      {
+        "sourceId": "S02",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S09",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\references\\optional\\video-platform-adaptation.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "d76594d0f770dabe4abbfff046addbba41ce106397e59cfb7f1084ff32550c47",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T05",
+    "lead": "cineweave-reference",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T05-v1.md",
+    "sources": [
+      {
+        "sourceId": "S03",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S10",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\references\\routes\\reference-evidence.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S11",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\references\\core\\reference-evidence-and-rights.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "b043d4c8a26e05959ff53307a86988e5bb539b3a797a37985ff0af1e4a5c27d0",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T06",
+    "lead": "cineweave-reference",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T06-v1.md",
+    "sources": [
+      {
+        "sourceId": "S03",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S10",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\references\\routes\\reference-evidence.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S11",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\references\\core\\reference-evidence-and-rights.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "967848d19b005739a70514fb6474a5a35eeae018bfeab8ca6870806f2afee6c4",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T07",
+    "lead": "cineweave-review",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T07-v1.md",
+    "sources": [
+      {
+        "sourceId": "S04",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S12",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\review-repair.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S13",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\scene.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S14",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\shot-direction.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "b19f10540d61be806966bf96f6158ca87ad8c2f380f78570784506325e49af56",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T08",
+    "lead": "cineweave-review",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T08-v1.md",
+    "sources": [
+      {
+        "sourceId": "S04",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S12",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\review-repair.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S13",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\scene.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S14",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\shot-direction.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S15",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\optional\\generation-diagnostics.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "c680682f62dc3c05c2b6130de6f44698efb6472607e42fc689cd1d9af25a1406",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T09",
+    "lead": "cineweave-director",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T09-v1.md",
+    "sources": [
+      {
+        "sourceId": "S01",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S05",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\image-prompt.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S06",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "3b28e7aa87117ed1058e8346ad6119d4fcff9a8771d6f3fb0bb279d27877deda",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T10",
+    "lead": "cineweave-director",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T10-v1.md",
+    "sources": [
+      {
+        "sourceId": "S01",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S16",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\storyboard-rhythm.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S06",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S17",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\video-sound-and-delivery.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "e311ce03659122046303c9a6e02e29981b0cd303af969ec7f8ab864a6ce4c7a0",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T11",
+    "lead": "cineweave-platform",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T11-v1.md",
+    "sources": [
+      {
+        "sourceId": "S02",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S08",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\references\\routes\\image-prompt.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "2e8cbf26a0cf0589f78c6eb8b1dc1cac5374e04c9b6af062e2a26906cb5ba2b3",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T12",
+    "lead": "cineweave-platform",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T12-v1.md",
+    "sources": [
+      {
+        "sourceId": "S02",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S08",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\references\\routes\\image-prompt.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "00ba04f98549c5d5265357585a5b7d741ff74ccbcca5a92cff021af43568f7e5",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T13",
+    "lead": "cineweave-reference",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T13-v1.md",
+    "sources": [
+      {
+        "sourceId": "S03",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S10",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\references\\routes\\reference-evidence.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S11",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\references\\core\\reference-evidence-and-rights.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "61f06c3e9c21c86ca58e567583fc2cb19068c677961c1570bd04b8d592b48342",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T14",
+    "lead": "cineweave-reference",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T14-v1.md",
+    "sources": [
+      {
+        "sourceId": "S03",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S10",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\references\\routes\\reference-evidence.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S11",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\references\\core\\reference-evidence-and-rights.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "04d7fe1a1f5e9c63ea9f75af0db475afe973fb7aea4c353a87cb65cb39cf41d9",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T15",
+    "lead": "cineweave-review",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T15-v1.md",
+    "sources": [
+      {
+        "sourceId": "S04",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S12",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\review-repair.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S13",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\scene.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S14",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\shot-direction.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "47a07f3750e3cc69edb6b6f982c51dc7ba4394ee46be561b889845c62ceefc06",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T16",
+    "lead": "cineweave-review",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T16-v1.md",
+    "sources": [
+      {
+        "sourceId": "S04",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S12",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\review-repair.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S18",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\storyboard-rhythm.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "b688730801c19d1d30e17ac9f919e9170ecaf023c1b13c75d3f250adf712869b",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T17",
+    "lead": "cineweave-director",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T17-v1.md",
+    "sources": [
+      {
+        "sourceId": "S01",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S05",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\image-prompt.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S06",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "6a2837acc5b4e08eace475c9f910e4fbb23e856626dadf775ee3f58ed2dc742c",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T18",
+    "lead": "cineweave-director",
+    "assists": [
+      "cineweave-reference"
+    ],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T18-v1.md",
+    "sources": [
+      {
+        "sourceId": "S01",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S05",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\image-prompt.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S06",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S19",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\character.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S03",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S10",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\references\\routes\\reference-evidence.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S11",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\references\\core\\reference-evidence-and-rights.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "fd79ac272b14c5b2b0c3d6bc5bb01814e1f108434ce048ff3bfc6a5cadfb8aac",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T19",
+    "lead": "cineweave-director",
+    "assists": [
+      "cineweave-review"
+    ],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T19-v1.md",
+    "sources": [
+      {
+        "sourceId": "S01",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S04",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S12",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\review-repair.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "16c022b8939f4ed0a9f8f01eabe9bd3ef7db32324bfb10d292774eb2adf9ca09",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T20",
+    "lead": "cineweave-platform",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T20-v1.md",
+    "sources": [
+      {
+        "sourceId": "S02",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S08",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\references\\routes\\image-prompt.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "e473f13da0befc4aad3fcbcbdd0d661b9babadcffb8b143ba5bad1a606560a64",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T21",
+    "lead": "cineweave-review",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T21-v1.md",
+    "sources": [
+      {
+        "sourceId": "S04",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S12",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\review-repair.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S15",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\optional\\generation-diagnostics.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "77f7cb80685f350ba28923143cd6abc467c6153bf61b72149cd9973caa38b457",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T22",
+    "lead": "cineweave-director",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T22-v1.md",
+    "sources": [
+      {
+        "sourceId": "S01",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S07",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\story.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "ede17d7c6159391ef77de2636e7ca30ac55ba14d6c4b27ffffd28ec15f7d44f8",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T23",
+    "lead": "none",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T23-v1.md",
+    "sources": [],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "cc2eb73aec944057dde5521bcda279e848fd2e8422655265ce164767580506fe",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-T24",
+    "lead": "none",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-T24-v1.md",
+    "sources": [],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "315dac3fd0e2de7d8fca38137eb6c0bc0e119132ba902e207745fb886c620ddd",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-C01",
+    "lead": "cineweave-director",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-C01-v1.md",
+    "sources": [
+      {
+        "sourceId": "S01",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S05",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\image-prompt.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S06",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "9d1933b5f7de5354312abfd2a78a11e8a919d5bc5e265352fe546c1705532aad",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-C02",
+    "lead": "cineweave-director",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-C02-v1.md",
+    "sources": [
+      {
+        "sourceId": "S01",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S05",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\image-prompt.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S06",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S20",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\production-plan.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S17",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\video-sound-and-delivery.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S21",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\video-performance-direction.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "701f4dc354b9c71f3436ef6062b36a8c6b36b711cf33543f5ca0eb4c7becb39e",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-C03",
+    "lead": "cineweave-director",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-C03-v1.md",
+    "sources": [
+      {
+        "sourceId": "S01",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S16",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\storyboard-rhythm.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S06",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S17",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\video-sound-and-delivery.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "318ff335bbe04c9023831c2cc097853b0959076e87a27b1a32cea9ac3ce94136",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-C04",
+    "lead": "cineweave-platform",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-C04-v1.md",
+    "sources": [
+      {
+        "sourceId": "S02",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S08",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\references\\routes\\image-prompt.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "a9337a58eb6faf9aad0fd36cd895cd9457591156e2c24d75d17d12ddc9f8adac",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-C05",
+    "lead": "cineweave-director",
+    "assists": [
+      "cineweave-reference"
+    ],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-C05-v1.md",
+    "sources": [
+      {
+        "sourceId": "S01",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S05",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\image-prompt.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S06",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S19",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\character.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S03",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S10",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\references\\routes\\reference-evidence.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S11",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\references\\core\\reference-evidence-and-rights.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "8b8ff683130840c8f7446130a901cc05843907a79820fb015965784a727651ae",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-C06",
+    "lead": "cineweave-director",
+    "assists": [
+      "cineweave-platform"
+    ],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-C06-v1.md",
+    "sources": [
+      {
+        "sourceId": "S01",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S06",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S17",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\video-sound-and-delivery.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S20",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\production-plan.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S02",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S09",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\references\\optional\\video-platform-adaptation.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "6376dca2874d04efe1922a00a222abbc4ab7df1dfa0d210c8438c49a365326a3",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-C07",
+    "lead": "cineweave-review",
+    "assists": [],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-C07-v1.md",
+    "sources": [
+      {
+        "sourceId": "S04",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S12",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\review-repair.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S13",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\scene.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S14",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\shot-direction.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S18",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\storyboard-rhythm.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S22",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\optional\\ensemble-direction-and-review.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S24",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\optional\\video-sound-and-delivery.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S23",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\scripts\\check-shot-review.mjs",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S28",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\scripts\\parse-json.mjs",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "997ae9f953cc056be268fdac9b1e8c2e953c125b2c97b81a359fb45c4d080f28",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  },
+  {
+    "id": "CW-SPLIT-C08",
+    "lead": "cineweave-director",
+    "assists": [
+      "cineweave-platform",
+      "cineweave-review"
+    ],
+    "version": 1,
+    "answerFile": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-C08-v1.md",
+    "sources": [
+      {
+        "sourceId": "S01",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S16",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\storyboard-rhythm.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S06",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S17",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\video-sound-and-delivery.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S26",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\core\\operating-model.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S25",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\drafts-and-change-impact.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S04",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S12",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\review-repair.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S18",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\storyboard-rhythm.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S02",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\SKILL.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      },
+      {
+        "sourceId": "S09",
+        "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\references\\optional\\video-platform-adaptation.md",
+        "readMode": "actual source section previously read or loaded for this case; retained skill context"
+      }
+    ],
+    "model": null,
+    "tokens": null,
+    "reasoning": null,
+    "latency": null,
+    "answerSha256": "360d2be372bb670f821998028cc0414c4e7fb6b9ea0ecee67b0c98c2b7032645",
+    "entryAccess": "same agent, on-demand source reading; previously loaded instructions reused where applicable",
+    "inputKind": "original request and this case rawData only"
+  }
+]

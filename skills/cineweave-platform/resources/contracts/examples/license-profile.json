@@ -1,0 +1,67 @@
+{
+  "kind": "cineweave_codex_license_profile",
+  "contractVersion": "2.0.0",
+  "profileId": "license.original-character-assets",
+  "title": "原创人物与参考资产权利",
+  "version": 1,
+  "status": "verified",
+  "subjectType": "reference_asset",
+  "subjectRef": "bundle.shen-production-evidence",
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.1.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-20T18:00:00.000Z"
+  },
+  "licenseId": "creator-owned-project-assets",
+  "licenseTextHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+  "commercialUse": "allowed",
+  "redistribution": "restricted",
+  "derivativeUse": "allowed",
+  "attribution": {
+    "required": false,
+    "instructions": "项目元数据应保留创作者归属及来源记录。"
+  },
+  "identityRights": {
+    "likenessConsent": "not_applicable",
+    "identityUse": "allowed",
+    "publication": "allowed",
+    "notes": "该人物为虚构原创。"
+  },
+  "assetRights": {
+    "ownership": "creator_owned",
+    "generationUse": "allowed",
+    "publication": "allowed",
+    "notes": "参考资产归项目创作者所有。"
+  },
+  "dataHandling": {
+    "retention": "project_scoped",
+    "trainingUse": "prohibited",
+    "privateAssetPolicy": "approved_service_only"
+  },
+  "dependencies": [],
+  "evidence": [
+    {
+      "sourceLabel": "CineWeave 世界权利记录",
+      "checkedAt": "2026-08-20T18:00:00.000Z",
+      "status": "verified",
+      "notes": "已明确记录归属与发布许可。"
+    }
+  ],
+  "validation": {
+    "checked": true,
+    "noAssumedCommercialUse": true,
+    "dependenciesReviewed": true,
+    "identityRightsReviewed": true
+  },
+  "provenance": {
+    "source": "codex_authored",
+    "createdAt": "2026-08-20T18:00:00.000Z",
+    "updatedAt": "2026-08-20T18:00:00.000Z",
+    "changeLog": [
+      "v1：记录原创人物及项目参考权利"
+    ]
+  }
+}

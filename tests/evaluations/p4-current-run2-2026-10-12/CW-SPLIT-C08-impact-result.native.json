@@ -1,0 +1,34 @@
+{
+  "valid": true,
+  "affected": [
+    "REV-M",
+    "REV-P",
+    "REV-adjacent-continuity"
+  ],
+  "unaffected": [
+    "REV-S01-locked",
+    "REV-sound-intent"
+  ],
+  "needsReview": [
+    "REV-adjacent-continuity"
+  ],
+  "errors": [],
+  "scope": "plan_only",
+  "changedSources": [
+    "REV-G"
+  ],
+  "noOpChanges": [],
+  "changeEvidence": [
+    {
+      "source": "REV-G",
+      "fromRevision": 1,
+      "toRevision": 2,
+      "paths": [
+        "/shots/REV-S02/camera"
+      ],
+      "status": "supplied_difference"
+    }
+  ],
+  "sourceAuthorityVerified": false,
+  "measurementVerified": false
+}

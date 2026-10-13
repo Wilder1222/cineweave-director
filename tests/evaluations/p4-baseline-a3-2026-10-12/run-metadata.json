@@ -1,0 +1,27 @@
+{
+  "runId": "cineweave-split-p4-baseline-a3-20261012",
+  "configuration": "A",
+  "repetition": 3,
+  "caseIds": [
+    "CW-SPLIT-C01",
+    "CW-SPLIT-C02",
+    "CW-SPLIT-C03",
+    "CW-SPLIT-C04",
+    "CW-SPLIT-C05",
+    "CW-SPLIT-C06",
+    "CW-SPLIT-C07",
+    "CW-SPLIT-C08"
+  ],
+  "context": "本batch在一个新的fork_none上下文完成；各案事实独立，但不是每案分别fork_none。",
+  "model": null,
+  "tokens": {
+    "input": null,
+    "output": null,
+    "total": null
+  },
+  "latencyMs": null,
+  "generatedMedia": false,
+  "providerAccess": false,
+  "installedAnything": false,
+  "selfScore": null
+}

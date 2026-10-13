@@ -1,0 +1,551 @@
+{
+  "kind": "cineweave_codex_style_package",
+  "contractVersion": "2.0.0",
+  "worldId": "world-cloud-dynasty",
+  "stylePackageId": "song-poetic-period-drama",
+  "version": 1,
+  "status": "draft",
+  "displayName": {
+    "zh": "宋韵诗意历史电视剧",
+    "en": "诗意宋式古装剧"
+  },
+  "purpose": "为人物、场景和镜头提供可继承的宋韵文化、美术、摄影和表演表达规则；不定义角色身份或场景地理。",
+  "semanticSpec": {
+    "medium": "live_action",
+    "representation": "naturalistic_stylized",
+    "culture": "南宋江南文人生活的架空诗意影视化",
+    "historicalTreatment": "poetic_adaptation",
+    "visualDna": [
+      "低饱和青瓷、月白、茶褐与旧木色",
+      "自然皮肤和真实织物响应",
+      "留白与前中后景层次",
+      "社会礼仪约束下的微表演"
+    ],
+    "temporalDna": [
+      "缓慢但有动机的摄影机运动",
+      "眼神先于头部的细微反应",
+      "衣袖、发丝和雨雾有低频惯性"
+    ],
+    "invariants": [
+      "文化与服装轮廓保持宋韵语义",
+      "人物身份由 CharacterSpec 保持",
+      "摄影机运动必须有叙事动机"
+    ],
+    "forbidden": [
+      "现代网红妆",
+      "塑料皮肤",
+      "霓虹高饱和",
+      "无动机的音乐视频式运镜"
+    ]
+  },
+  "representationModel": {
+    "family": "photoreal",
+    "geometryModel": "保留真实成人解剖，以克制的审美理想化保留自然不对称。",
+    "surfaceModel": "皮肤、头发、织物及环境响应保持可观察的差异，不使用美颜磨皮。",
+    "lightModel": "SceneLightState 保持物理来源，风格控制色调过渡、反差与色彩分离。",
+    "depthModel": "可使用光学透视和选择性对焦，但景深不能覆盖场景地理。",
+    "visualGrammar": [
+      "自然人体解剖",
+      "局部肤色变化",
+      "真实织物重量",
+      "克制的电影反差"
+    ],
+    "temporalGrammar": [
+      "有落地感的身体重量",
+      "小幅度面部表演",
+      "连续的头发与衣料惯性"
+    ]
+  },
+  "abstractionBudget": {
+    "dimensions": [
+      {
+        "dimension": "geometry",
+        "level": "literal",
+        "rationale": "面部与身体结构保持解剖可信。"
+      },
+      {
+        "dimension": "proportion",
+        "level": "literal",
+        "rationale": "本风格包不得改变 CharacterSpec 身体比例。"
+      },
+      {
+        "dimension": "feature_abstraction",
+        "level": "restrained",
+        "rationale": "仅允许轻微电影化理想处理。"
+      },
+      {
+        "dimension": "surface",
+        "level": "restrained",
+        "rationale": "按镜头尺度保留可见微纹理。"
+      },
+      {
+        "dimension": "material",
+        "level": "literal",
+        "rationale": "皮肤、丝绸、木材及金属需要不同表面响应。"
+      },
+      {
+        "dimension": "color",
+        "level": "restrained",
+        "rationale": "设计色板时保留自然肤色分离。"
+      },
+      {
+        "dimension": "light",
+        "level": "restrained",
+        "rationale": "色调处理可以诗意，光源仍须有依据。"
+      },
+      {
+        "dimension": "depth",
+        "level": "literal",
+        "rationale": "透视与对焦遵循摄影捕捉逻辑。"
+      },
+      {
+        "dimension": "motion",
+        "level": "literal",
+        "rationale": "表演和次级运动保留重量与惯性。"
+      },
+      {
+        "dimension": "expression",
+        "level": "restrained",
+        "rationale": "优先使用微表情，避免图形化夸张。"
+      }
+    ],
+    "providerNeutral": true
+  },
+  "detailBudgetByScale": {
+    "closeup": [
+      "局部皮肤色彩",
+      "符合年龄的微纹理",
+      "眼睛与嘴唇湿润感",
+      "零散飞发"
+    ],
+    "medium": [
+      "面部体积",
+      "头发分组",
+      "手部",
+      "织物材质区分"
+    ],
+    "fullbody": [
+      "身体比例",
+      "承重",
+      "手足解剖",
+      "衣料与身体接触"
+    ],
+    "wide": [
+      "轮廓",
+      "动作可读性",
+      "环境融合",
+      "符合光源的照明"
+    ]
+  },
+  "identityTranslationPolicy": {
+    "requiresRepresentationBinding": true,
+    "preserve": [
+      "CharacterSpec 面部关系",
+      "身体轮廓",
+      "标志性记号",
+      "动作特征"
+    ],
+    "allow": [
+      "按镜头尺度省略不可见微细节",
+      "克制的电影化理想处理"
+    ],
+    "forbid": [
+      "用通用美貌模板替换",
+      "迁移风格参考身份",
+      "修改 CharacterSpec"
+    ]
+  },
+  "atoms": [
+    {
+      "atomId": "medium.live_action",
+      "domain": "medium",
+      "level": "family",
+      "version": 1,
+      "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "summary": "真人影像，保留人体、服装和环境的物理关系。",
+      "invariants": [
+        "natural_anatomy",
+        "physical_material_response"
+      ],
+      "forbidden": [
+        "flat_cel_shading",
+        "glossy_game_cg"
+      ],
+      "appliesTo": [
+        "image",
+        "video"
+      ]
+    },
+    {
+      "atomId": "surface.natural_human",
+      "domain": "surface",
+      "level": "family",
+      "version": 1,
+      "contentHash": "sha256:1212121212121212121212121212121212121212121212121212121212121212",
+      "summary": "以区域性色差、适度微纹理和克制高光表达自然人体表面。",
+      "invariants": [
+        "regional_tonal_variation",
+        "scale_appropriate_microtexture",
+        "natural_specular_breakup"
+      ],
+      "forbidden": [
+        "porcelain_uniformity",
+        "hdr_skin",
+        "razor_sharp_pores"
+      ],
+      "appliesTo": [
+        "character",
+        "image",
+        "video",
+        "representation"
+      ]
+    },
+    {
+      "atomId": "depth.photographic_selective",
+      "domain": "depth",
+      "level": "family",
+      "version": 1,
+      "contentHash": "sha256:3434343434343434343434343434343434343434343434343434343434343434",
+      "summary": "以真实透视、选择性焦点和渐进光学衰减组织深度。",
+      "invariants": [
+        "perspective_consistency",
+        "focus_falloff",
+        "scene_geography_preserved"
+      ],
+      "forbidden": [
+        "uniform_sharpness",
+        "synthetic_depth_mask_edges"
+      ],
+      "appliesTo": [
+        "image",
+        "video",
+        "camera",
+        "representation"
+      ]
+    },
+    {
+      "atomId": "culture.china.song.southern_song_literati",
+      "domain": "culture",
+      "level": "subclass",
+      "version": 1,
+      "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+      "summary": "南宋江南文人语境的服装、器物、礼仪和空间审美。",
+      "invariants": [
+        "song_inspired_silhouette",
+        "socially_legible_material_culture"
+      ],
+      "forbidden": [
+        "unmotivated_modern_objects"
+      ],
+      "appliesTo": [
+        "character",
+        "costume",
+        "scene",
+        "image",
+        "video"
+      ]
+    },
+    {
+      "atomId": "costume.song.restrained_literati",
+      "domain": "costume",
+      "level": "subclass",
+      "version": 1,
+      "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+      "summary": "简洁、层次清晰、低装饰度但有真实织物重量的宋韵服装。",
+      "invariants": [
+        "clear_layering",
+        "natural_fold_and_weight"
+      ],
+      "forbidden": [
+        "random_accessory_accumulation",
+        "fantasy_armor"
+      ],
+      "appliesTo": [
+        "costume",
+        "image",
+        "video"
+      ]
+    },
+    {
+      "atomId": "lighting.soft_motivated_window",
+      "domain": "lighting",
+      "level": "micro_style",
+      "version": 1,
+      "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+      "summary": "由窗、阴天或庭院反射光动机驱动的柔和光线。",
+      "invariants": [
+        "motivated_source",
+        "soft_falloff",
+        "contact_shadow"
+      ],
+      "forbidden": [
+        "unmotivated_global_glow"
+      ],
+      "appliesTo": [
+        "image",
+        "video",
+        "scene"
+      ]
+    },
+    {
+      "atomId": "performance.restrained_microexpression",
+      "domain": "performance",
+      "level": "micro_style",
+      "version": 1,
+      "contentHash": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+      "summary": "礼仪和社会距离约束下的低幅度微表情。",
+      "invariants": [
+        "eyes_carry_information",
+        "delayed_head_response",
+        "residual_tension"
+      ],
+      "forbidden": [
+        "simultaneous_exaggerated_expression"
+      ],
+      "appliesTo": [
+        "character",
+        "performance",
+        "video"
+      ]
+    },
+    {
+      "atomId": "cinematography.reaction_first_progressive_reveal",
+      "domain": "cinematography",
+      "level": "subclass",
+      "version": 1,
+      "contentHash": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "summary": "先让观众读到人物反应，再逐步揭示环境或信息。",
+      "invariants": [
+        "character_driven_camera",
+        "layered_depth",
+        "motivated_reveal"
+      ],
+      "forbidden": [
+        "spectacle_without_reaction"
+      ],
+      "appliesTo": [
+        "camera",
+        "image",
+        "video"
+      ]
+    }
+  ],
+  "recipe": {
+    "recipeId": "recipe.song-poetic-period-drama",
+    "atomRefs": [
+      {
+        "atomId": "medium.live_action",
+        "role": "medium",
+        "version": 1,
+        "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "priority": 900
+      },
+      {
+        "atomId": "surface.natural_human",
+        "role": "surface",
+        "version": 1,
+        "contentHash": "sha256:1212121212121212121212121212121212121212121212121212121212121212",
+        "priority": 890
+      },
+      {
+        "atomId": "depth.photographic_selective",
+        "role": "depth",
+        "version": 1,
+        "contentHash": "sha256:3434343434343434343434343434343434343434343434343434343434343434",
+        "priority": 880
+      },
+      {
+        "atomId": "culture.china.song.southern_song_literati",
+        "role": "culture",
+        "version": 1,
+        "contentHash": "sha256:bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+        "priority": 850
+      },
+      {
+        "atomId": "costume.song.restrained_literati",
+        "role": "costume",
+        "version": 1,
+        "contentHash": "sha256:cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc",
+        "priority": 800
+      },
+      {
+        "atomId": "lighting.soft_motivated_window",
+        "role": "lighting",
+        "version": 1,
+        "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd",
+        "priority": 700
+      },
+      {
+        "atomId": "performance.restrained_microexpression",
+        "role": "performance",
+        "version": 1,
+        "contentHash": "sha256:eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "priority": 700
+      },
+      {
+        "atomId": "cinematography.reaction_first_progressive_reveal",
+        "role": "cinematography",
+        "version": 1,
+        "contentHash": "sha256:ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+        "priority": 650
+      }
+    ],
+    "scopeBindings": [
+      "character",
+      "costume",
+      "scene",
+      "camera",
+      "performance",
+      "image",
+      "video",
+      "temporal"
+    ],
+    "invariants": [
+      "身份由 CharacterSpec 提供",
+      "地理由 SceneSpec 提供",
+      "风格优先级低于锁定事实"
+    ],
+    "allowedVariation": [
+      "冷或暖的自然光",
+      "有生活痕迹的室内或室外古代空间",
+      "中景或近景肖像裁切"
+    ],
+    "forbidden": [
+      "风格单元暗中改变身份",
+      "没有镜头目的的摄影机运动",
+      "未限定范围的参考混合"
+    ]
+  },
+  "referencePlanRef": {
+    "id": "style-ref-plan-song-poetic-01",
+    "version": 1,
+    "contentHash": "sha256:1111111111111111111111111111111111111111111111111111111111111111"
+  },
+  "referencePolicy": {
+    "mode": "adaptive",
+    "designTime": {
+      "visual": "required",
+      "temporal": "recommended",
+      "maxVisual": 12,
+      "maxTemporal": 6,
+      "requiredWhen": [
+        "new_package",
+        "historical_treatment",
+        "project_style"
+      ]
+    },
+    "application": {
+      "visual": "conditional",
+      "temporal": "conditional",
+      "maxVisual": 3,
+      "maxTemporal": 2,
+      "requiredWhen": [
+        "style_drift",
+        "signature_camera_motion",
+        "video_continuity"
+      ]
+    },
+    "fallback": {
+      "useSemanticSpec": true,
+      "useCompilerProfile": true,
+      "blockOnMissingTemporalEvidence": true
+    }
+  },
+  "compilerProfiles": [
+    {
+      "target": "image",
+      "directives": [
+        "以观察者为先的构图",
+        "自然皮肤与织物响应",
+        "低饱和玉色与月白色板"
+      ],
+      "negativeDirectives": [
+        "塑料皮肤",
+        "现代华丽妆容",
+        "随机繁复配饰"
+      ],
+      "temporalRules": [
+        "凝固有动机的观察瞬间"
+      ]
+    },
+    {
+      "target": "video",
+      "directives": [
+        "平滑且有动机的摄影机运动",
+        "视线到头部转动的轻微延迟",
+        "衣料与头发的低频惯性"
+      ],
+      "negativeDirectives": [
+        "饰物瞬移",
+        "逐帧线条或服装漂移"
+      ],
+      "temporalRules": [
+        "保留镜头轴线",
+        "保留表演起始与收势"
+      ]
+    }
+  ],
+  "validationSuite": {
+    "cases": [
+      {
+        "caseId": "song-character-day-portrait",
+        "kind": "positive",
+        "purpose": "验证宋韵人物、自然皮肤和克制表演在近景中成立。"
+      },
+      {
+        "caseId": "song-interior-dialogue",
+        "kind": "positive",
+        "purpose": "验证人物与生活化室内空间的材质、光线和社会距离。"
+      },
+      {
+        "caseId": "song-modern-glamour-boundary",
+        "kind": "negative",
+        "purpose": "验证风格不会滑向现代网红妆和高饱和商业影像。"
+      },
+      {
+        "caseId": "song-slow-camera-temporal",
+        "kind": "temporal",
+        "purpose": "验证视频中运镜、微表情和服装惯性保持低频连续。"
+      }
+    ],
+    "dimensions": [
+      "medium",
+      "culture_costume",
+      "palette",
+      "lighting",
+      "character_identity",
+      "performance",
+      "temporal",
+      "reference_contamination"
+    ],
+    "requiresHumanReview": true
+  },
+  "activationGate": {
+    "humanApprovalRequired": true,
+    "status": "planned",
+    "rightsResolved": false,
+    "validationPassed": true
+  },
+  "provenance": {
+    "source": "codex_authored",
+    "createdAt": "2026-08-20T12:00:00.000Z",
+    "updatedAt": "2026-08-20T12:00:00.000Z",
+    "changeLog": [
+      "初始平台无关风格包"
+    ]
+  },
+  "planningBoundary": {
+    "providerNeutral": true,
+    "generatesMedia": false,
+    "humanApprovalRequired": true,
+    "notes": "StylePackage 定义语义风格、参考与验证，不调用图像或视频供应商。"
+  },
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.1.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-20T12:00:00.000Z"
+  }
+}

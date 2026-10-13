@@ -1,0 +1,6 @@
+interface:
+  display_name: "CineWeave评审修复"
+  short_description: "评审创作稿或真实媒体，定位证据与根因并交付单变量修订和复查"
+  default_prompt: "使用 $cineweave-review，评审我提供的创作稿或实际媒体，区分已观察与未知，保留通过部分，定位一个根因变量并给出最小修订和复查方法。"
+policy:
+  allow_implicit_invocation: false

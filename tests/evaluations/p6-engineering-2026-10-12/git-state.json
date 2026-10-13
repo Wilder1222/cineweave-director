@@ -1,0 +1,10 @@
+{
+  "head": "0e476a7e96e43980bbfe8388c446c3f78fd06019",
+  "oldTagV310": "089124950c527cfc0c10b0065da2ef057f4ead7b",
+  "localV320": "",
+  "remoteV320": {
+    "command": "git ls-remote --tags origin refs/tags/v3.2.0",
+    "exitCode": 0,
+    "stdout": ""
+  }
+}

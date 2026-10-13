@@ -1,0 +1,292 @@
+{
+  "entry": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/SKILL.md",
+  "rawInput": {
+    "sourcePath": "D:/Temp/cineweave-split-p4-contents-raw-inputs-20261012.json",
+    "sha256RawBytes": "aaf18a7b9c32ff397cc990535d284c98147d58fee589bf1393976ca3ac066f09",
+    "readSections": [
+      "cases[0..7].request",
+      "cases[0..7].rawData"
+    ]
+  },
+  "sources": [
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/SKILL.md",
+      "relativePath": "SKILL.md",
+      "sha256RawBytes": "18d40408575640d65220b0d4527d356ec4509dc7856e8f0c35dc15142c2af426",
+      "readSections": [
+        "全文"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/image-prompt.md",
+      "relativePath": "references/routes/image-prompt.md",
+      "sha256RawBytes": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08",
+      "readSections": [
+        "全文"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/shot-direction.md",
+      "relativePath": "references/routes/shot-direction.md",
+      "sha256RawBytes": "c04957137f3f99cb3bba46f0c9046a653df490686867d8c0cad57ede90087388",
+      "readSections": [
+        "全文"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/storyboard-rhythm.md",
+      "relativePath": "references/routes/storyboard-rhythm.md",
+      "sha256RawBytes": "10ce342b7e5beb342f16942d653c3316c9fbe3758e6942c687c37e2560a2c601",
+      "readSections": [
+        "分镜",
+        "分镜参考图到视频",
+        "序列节奏",
+        "相邻剪辑接口",
+        "质量关卡"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/production-plan.md",
+      "relativePath": "references/routes/production-plan.md",
+      "sha256RawBytes": "efbde14fb9810d392a696a0ee4e6aaca3b2f64998c291f4ab9936f5c6e41273a",
+      "readSections": [
+        "资产拆解",
+        "从设计到候选验收",
+        "控制与证据",
+        "能力规划",
+        "边界"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/reference-evidence.md",
+      "relativePath": "references/routes/reference-evidence.md",
+      "sha256RawBytes": "6a27133185302f529f936edf6315f618876d1363ab9d08ccc45cda233804cd48",
+      "readSections": [
+        "全文"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/character.md",
+      "relativePath": "references/routes/character.md",
+      "sha256RawBytes": "6527df3210d32a9fb03f4e33c9f2d4f2bd52d34f84ea88d60950f1fee637abf8",
+      "readSections": [
+        "全文"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/review-repair.md",
+      "relativePath": "references/routes/review-repair.md",
+      "sha256RawBytes": "9befe4fe6ecc4711e9aeb33121de3aa3912d5a5122ccea047793829b06481834",
+      "readSections": [
+        "全文"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/core/operating-model.md",
+      "relativePath": "references/core/operating-model.md",
+      "sha256RawBytes": "932bdfa72eb114b93673cb0e2a4490a293c1302fc3822f4d832a749164da101e",
+      "readSections": [
+        "全文"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/prompt-detail-standard.md",
+      "relativePath": "references/optional/prompt-detail-standard.md",
+      "sha256RawBytes": "0de944dffd30d69bc05a52ef4bceaf0a90dce40564e2f1a288c68e7dd1e88e59",
+      "readSections": [
+        "表达原则",
+        "人物",
+        "人物情绪与表情生成",
+        "场景",
+        "镜头与分镜",
+        "拍摄系统与部门协同及其六个子节",
+        "图生视频",
+        "交付前检查"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/video-sound-and-delivery.md",
+      "relativePath": "references/optional/video-sound-and-delivery.md",
+      "sha256RawBytes": "cfd0a201805ab58f05ebe5eda1025359776eb78534cfb849472f728594da6a16",
+      "readSections": [
+        "视频意图",
+        "声音职责与提示表",
+        "精确文案与时间检查",
+        "剪辑"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/video-platform-adaptation.md",
+      "relativePath": "references/optional/video-platform-adaptation.md",
+      "sha256RawBytes": "9b5a4e163a6482704b43333547d16ffc0ed3542d9526599e49455460971bd7f9",
+      "readSections": [
+        "使用正确的权威来源",
+        "能力证据的层次与评估日期",
+        "先定参考职责，再写提示词",
+        "模式选择与明确替代",
+        "导演方案到复制稿",
+        "适配不是盲目拼接",
+        "复制稿的内部闭合"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/ensemble-direction-and-review.md",
+      "relativePath": "references/optional/ensemble-direction-and-review.md",
+      "sha256RawBytes": "54d9406901ae0b42cd8bb2b2cb4bda5e89aaff625dd4e255dc7377452d735e75",
+      "readSections": [
+        "全文"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/core/reference-evidence-and-rights.md",
+      "relativePath": "references/core/reference-evidence-and-rights.md",
+      "sha256RawBytes": "55332bfbab84d121328260c56f971586658dff692a526cac318e2b435a522393",
+      "readSections": [
+        "全文"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/drafts-and-change-impact.md",
+      "relativePath": "references/optional/drafts-and-change-impact.md",
+      "sha256RawBytes": "84670321b3cb5a42b34120fb0ead60b790e9db05c923e87f04265392c9b4d94b",
+      "readSections": [
+        "全文"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/video-performance-direction.md",
+      "relativePath": "references/optional/video-performance-direction.md",
+      "sha256RawBytes": "8a156479c8ae94c55a1c6b433fef9193733fc64867eaae2a17e17e404614a11d",
+      "readSections": [
+        "编写顺序",
+        "把角色处境转成可表演任务",
+        "情绪不等于面部几何",
+        "台词与声音表达",
+        "摄影机与焦点",
+        "时间工作表与验收"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/video-timing-and-handles.md",
+      "relativePath": "references/optional/video-timing-and-handles.md",
+      "sha256RawBytes": "0856cc9f67c10259a54755a470ae338e93a25df3d031b0d1730e5429aeb55fa8",
+      "readSections": [
+        "三种时长，不混为一种",
+        "按实际时长政策选择",
+        "尾帧陷阱"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/shot-design-workbench.md",
+      "relativePath": "references/optional/shot-design-workbench.md",
+      "sha256RawBytes": "bc1f476dd6548d0bc9772d02be7c895746101f5855985b89c0d1bfb111ec3d96",
+      "readSections": [
+        "交付范围",
+        "注意力",
+        "受限视点下的可见性",
+        "瞬间选择",
+        "关键帧关卡",
+        "提示词迁移"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/core/visual-bible-and-continuity.md",
+      "relativePath": "references/core/visual-bible-and-continuity.md",
+      "sha256RawBytes": "ba8e5894516ac66b1396a24dab5fabdc25cd3db8fa5d1beddd12be24f0a1139e",
+      "readSections": [
+        "全文"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/routes/scene.md",
+      "relativePath": "references/routes/scene.md",
+      "sha256RawBytes": "ef10535a31d8aeacf7465957ad995c47b1389f5b3b5fe9096e77682f151ea6e4",
+      "readSections": [
+        "全文"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/scripts/check-shot-review.mjs",
+      "relativePath": "scripts/check-shot-review.mjs",
+      "sha256RawBytes": "bb69f60d8794f3329bc4b7af772d05ad01a28c001c7345f1de63bfa1e3d7d1c2",
+      "readSections": [
+        "全文；C07实际运行"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/scripts/parse-json.mjs",
+      "relativePath": "scripts/parse-json.mjs",
+      "sha256RawBytes": "9c15621d8304bf6114cc4cb322409c8e59433409ac17950311725cdcbebecf11",
+      "readSections": [
+        "全文；检查器运行依赖"
+      ]
+    },
+    {
+      "sourcePath": "D:/Temp/cineweave-split-baseline-20261012-23e5cb0865/restored/skills/cineweave-director/references/optional/directing-craft.md",
+      "relativePath": "references/optional/directing-craft.md",
+      "sha256RawBytes": "82524260f2823fe2d779e367a8a17802c050368c29d8e084cea1b741dd1bcf03",
+      "readSections": [
+        "目录",
+        "可表演任务，而非规定情绪",
+        "台词是面向倾听者的行动",
+        "用调度表达关系",
+        "倾听、反应与剪辑视点",
+        "选择与克制"
+      ]
+    }
+  ],
+  "caseReadingScope": {
+    "CW-SPLIT-C01": [
+      "image_prompt",
+      "scene",
+      "prompt-detail-standard：静帧人物、光照与排版"
+    ],
+    "CW-SPLIT-C02": [
+      "image_prompt",
+      "shot_direction",
+      "production_plan",
+      "video-sound-and-delivery",
+      "video-performance-direction",
+      "shot-design-workbench：关键帧关卡"
+    ],
+    "CW-SPLIT-C03": [
+      "storyboard_rhythm",
+      "shot_direction",
+      "scene",
+      "visual-bible-and-continuity",
+      "video-sound-and-delivery",
+      "prompt-detail-standard：逐镜交付"
+    ],
+    "CW-SPLIT-C04": [
+      "image_prompt：平台适配",
+      "video-platform-adaptation：权威来源与离线复制稿"
+    ],
+    "CW-SPLIT-C05": [
+      "reference_evidence",
+      "character",
+      "reference-evidence-and-rights",
+      "prompt-detail-standard：人物资产"
+    ],
+    "CW-SPLIT-C06": [
+      "production_plan",
+      "shot_direction",
+      "scene",
+      "video-platform-adaptation：能力证据与模式",
+      "video-sound-and-delivery"
+    ],
+    "CW-SPLIT-C07": [
+      "review_repair",
+      "storyboard_rhythm",
+      "ensemble-direction-and-review：全六视角与检查器",
+      "scripts/check-shot-review.mjs",
+      "scripts/parse-json.mjs"
+    ],
+    "CW-SPLIT-C08": [
+      "review_repair",
+      "drafts-and-change-impact：版本与影响",
+      "storyboard_rhythm：相邻接口",
+      "video-platform-adaptation：离线单镜适配"
+    ]
+  },
+  "note": "章节记录列明本次使用内容；目录或整文件读取可能显示相邻段落。没有读取当前产品、研究、评分材料、计划或先前回答。"
+}

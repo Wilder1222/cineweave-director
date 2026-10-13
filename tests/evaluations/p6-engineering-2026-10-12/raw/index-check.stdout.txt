@@ -1,0 +1,12 @@
+
+> cineweave-director@3.2.0 contracts:index:check
+> node scripts/generate-contract-index.mjs --check
+
+{
+  "valid": true,
+  "messageZh": "契约索引与当前文件一致。",
+  "mode": "check",
+  "roots": 52,
+  "supportSchemas": 2,
+  "index": "skills/cineweave-director/resources/contracts/index.json"
+}

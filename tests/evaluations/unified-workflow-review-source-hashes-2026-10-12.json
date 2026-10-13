@@ -1,0 +1,97 @@
+[
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md",
+    "sha256": "ed028f57348cf23187165e227bc17ff03841b39cf7357e7c2b45bdbc44828a89",
+    "bytes": 10312
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/agents/openai.yaml",
+    "sha256": "3e15cd9a4b276a5548058862dce1955c18f8bfdb0cb0f67d28e4bcc281dece5d",
+    "bytes": 411
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/core/operating-model.md",
+    "sha256": "8a8b9d1d4cd29f80f572aa688406809c7e4792c37e379a250b5acf5daddbd22e",
+    "bytes": 9094
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skill-sources/cineweave-platform/SKILL.md",
+    "sha256": "75a509be51d387d326bc3c6d493f35e6085f29eaa2e1c4a8ce14e72829a37268",
+    "bytes": 9508
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skill-sources/cineweave-platform/agents/openai.yaml",
+    "sha256": "7a88dd09b41d5b4fca378365aef54ec077d5a662a92c70f563cf61fba986a264",
+    "bytes": 438
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skill-sources/cineweave-reference/SKILL.md",
+    "sha256": "33d06365a2b861f431e66ff4960ae2ad9a26457f8fe7e4b2b20a7b110f71c155",
+    "bytes": 6489
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skill-sources/cineweave-reference/agents/openai.yaml",
+    "sha256": "946c50319521da5e89790e986b03719eebf753a1114e1b5ceb1ddb4d8b3225d3",
+    "bytes": 424
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skill-sources/cineweave-review/SKILL.md",
+    "sha256": "84c84692bf5f1d1a9bad8558ab3e7bddacfe605269649e7d72cc8e01bed2569e",
+    "bytes": 6465
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skill-sources/cineweave-review/agents/openai.yaml",
+    "sha256": "1ed4672268fbb34bb857067c9742991b8d4827c9432535bf29c233d0dbb53e4f",
+    "bytes": 409
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/scripts/validate-repository.mjs",
+    "sha256": "9ef58a637d90b67e7935a032b00dcf7ea3212839784433eaecabe0c6920488ce",
+    "bytes": 76865
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/scripts/skill-catalog.mjs",
+    "sha256": "55876b80e0d286f1ce31d2bab6fdc00aaeb06afef4cd8841dd0b9a365ff8735d",
+    "bytes": 16073
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skill-catalog.json",
+    "sha256": "6e6c7a52f7b6e6139a16ce036a15061d2d2d6113d29ed204f7c8a803dbb113ae",
+    "bytes": 3555
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/tests/skill-bundles.test.mjs",
+    "sha256": "aea8e54aea580fb2d2435d540a9405d705360050dca0d544bfa0cec8ebd343e7",
+    "bytes": 23360
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/tests/skill-catalog.test.mjs",
+    "sha256": "f88c0ab16e83c6f0b09d1a5a05d5f3fe7e2defc0324076e5672bcbc78d14fce0",
+    "bytes": 24179
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/README.md",
+    "sha256": "032e068dad5a94168f5dd68ef5cf300c7acff1cc98bbece4545255a0df2a6e83",
+    "bytes": 10299
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/CONTRIBUTING.md",
+    "sha256": "d53e0dbdbff63a80a562759ae8a6b14add80777090598b7858e25b19b2e186a3",
+    "bytes": 11193
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.codex-plugin/plugin.json",
+    "sha256": "8ee4074df4c7efa348a30262b400bded4011910b4b6f5b6111a580420319cba9",
+    "bytes": 1721
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/references/optional/ensemble-direction-and-review.md",
+    "sha256": "54d9406901ae0b42cd8bb2b2cb4bda5e89aaff625dd4e255dc7377452d735e75",
+    "bytes": 12420
+  },
+  {
+    "path": "D:/Temp/cineweave-unified-workflow-raw-inputs-20261012.json",
+    "sha256": "76b204ce9a21ed4f6832d4b82d2afc0a8c5313a35673aa436b8adb7ba419b36d",
+    "bytes": 17855
+  }
+]

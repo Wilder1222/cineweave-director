@@ -1,0 +1,487 @@
+{
+  "schemaVersion": "3.2.0",
+  "skill": "cineweave-director",
+  "skillVersion": "3.2.0",
+  "contracts": [
+    {
+      "kind": "cineweave_codex_creative_brief",
+      "role": "root",
+      "domain": "brief_world",
+      "schema": "schemas/creative-brief.schema.json",
+      "schemaSha256": "sha256:35471cb7cf0cb9e7b2a92a507a8ae1a60e7790d4ee5b1fb9294c676152b3b48d",
+      "example": "examples/creative-brief.json",
+      "exampleSha256": "sha256:98153f31953297b26258331846bb81bdc8e2617ace4a36f59d188d1bb2e2549b"
+    },
+    {
+      "kind": "cineweave_codex_workflow_plan",
+      "role": "root",
+      "domain": "brief_world",
+      "schema": "schemas/workflow-plan.schema.json",
+      "schemaSha256": "sha256:da683f9de7df7edaa210f54fa600cb0324b1ecff14822d7d5a8d6e3202b082f8",
+      "example": "examples/workflow-plan.json",
+      "exampleSha256": "sha256:98eac32f42ed06161f5eef6659ea807af872cdecec70eb8f8a836ea9e5b402e0"
+    },
+    {
+      "kind": "cineweave_codex_world_bible",
+      "role": "root",
+      "domain": "brief_world",
+      "schema": "schemas/world-bible.schema.json",
+      "schemaSha256": "sha256:20154dd9479eb27143907aa2579ddfc322f65a899ef21300f3527600c2bb1e89",
+      "example": "examples/world-bible.json",
+      "exampleSha256": "sha256:5f625ea3e0d5dc43644208ba62108ce03485884361ef9346be50a7724c4bb63b"
+    },
+    {
+      "kind": "cineweave_codex_story_brief",
+      "role": "root",
+      "domain": "story",
+      "schema": "schemas/story-brief.schema.json",
+      "schemaSha256": "sha256:8e2f29da8af8166ad97ab74c7179c8ad7f1068ff7bc3a01e08049a27cf8d01c8",
+      "example": "examples/story-brief.json",
+      "exampleSha256": "sha256:ad91882c4e7b448f871c7e5e48e0f5a9e48f8ff2fd0afb09630bb663252b9659"
+    },
+    {
+      "kind": "cineweave_codex_beat_sheet",
+      "role": "root",
+      "domain": "story",
+      "schema": "schemas/beat-sheet.schema.json",
+      "schemaSha256": "sha256:83379f1587b89c210f4fe9982a7a4e063d1063b1efd19cb157f22a0d94fa0803",
+      "example": "examples/beat-sheet.json",
+      "exampleSha256": "sha256:97b08d71fa74cfd3d11365ea6f91dc0f157f83b0c4e8267d41eb24d730f09d1a"
+    },
+    {
+      "kind": "cineweave_codex_script_scene",
+      "role": "root",
+      "domain": "story",
+      "schema": "schemas/script-scene.schema.json",
+      "schemaSha256": "sha256:eec20afc7ffa9bc151472b9937e512406000a8cf676f3c7b80f4ee47d9676002",
+      "example": "examples/script-scene.json",
+      "exampleSha256": "sha256:53c73266217190c0129ee2cde49061691fd546eda872a7e7dad97bc0144f6b37"
+    },
+    {
+      "kind": "cineweave_codex_continuity_ledger",
+      "role": "root",
+      "domain": "story",
+      "schema": "schemas/continuity-ledger.schema.json",
+      "schemaSha256": "sha256:6244549f5e3073c5ace4d7222066e73d77365cf8957340611cba24180a9ae1d6",
+      "example": "examples/continuity-ledger.json",
+      "exampleSha256": "sha256:2661a86b7fd64b99ba451b16d9777b621cbeb36576d9e385a68c6d7a223305de"
+    },
+    {
+      "kind": "cineweave_codex_character_morphology_spec",
+      "role": "root",
+      "domain": "character",
+      "schema": "schemas/character-morphology-spec.schema.json",
+      "schemaSha256": "sha256:02cac4530eea8ef9d218fddb510523660f5fd95fb95c9b2d9a1350d6c416bb3e",
+      "example": "examples/character-morphology-spec.json",
+      "exampleSha256": "sha256:43af97a7b2ca0fb06325a2bfbd2a87773e09bca4cdc8c9ffec7696d8cc0d0f23"
+    },
+    {
+      "kind": "cineweave_codex_character_spec",
+      "role": "root",
+      "domain": "character",
+      "schema": "schemas/character-spec.schema.json",
+      "schemaSha256": "sha256:4e768b0e28bd3f6f2c2eedadc71d0f0047229fda5c7335c0d52e4f2457d12dec",
+      "example": "examples/character-spec.json",
+      "exampleSha256": "sha256:6fdbab10a6c894db65d43aa062c5d3007c071c7763565533a6ba7f38a010eb2b"
+    },
+    {
+      "kind": "cineweave_codex_character_appearance_state",
+      "role": "root",
+      "domain": "character",
+      "schema": "schemas/character-appearance-state.schema.json",
+      "schemaSha256": "sha256:8bbfe45d3cc49ec0c07afcdf46c382f974c21bd8eb15edd022d3a6c0ddf3c8d7",
+      "example": "examples/character-appearance-state.json",
+      "exampleSha256": "sha256:4c0e5e0c197cdd97d1da1599df06bed5fc795f081c3bfe3ec06f63096b5e06cd"
+    },
+    {
+      "kind": "character_binding",
+      "role": "root",
+      "domain": "character",
+      "schema": "schemas/character-binding.schema.json",
+      "schemaSha256": "sha256:1e2eada22faa3607018e40dcaa7069c5d2a1f21c4f90c69481ec85d5cef51954",
+      "example": "examples/character-binding.json",
+      "exampleSha256": "sha256:aaf450b5bf73caa45f752709a6249dc46ae505097f02723b2ab38dab82e8cf96"
+    },
+    {
+      "kind": "cineweave_codex_performance_timeline",
+      "role": "root",
+      "domain": "character",
+      "schema": "schemas/performance-timeline.schema.json",
+      "schemaSha256": "sha256:981f3256460f0d9f171a40713fc88b6dbdc7bd5f4db4cd16479b46631cee94a0",
+      "example": "examples/performance-timeline.json",
+      "exampleSha256": "sha256:a1c2a539c32d1fe52441e345c322159ae26d0bf003ad49dbbd2ae1ed4c1533cd"
+    },
+    {
+      "kind": "cineweave_codex_scene_spec",
+      "role": "root",
+      "domain": "scene",
+      "schema": "schemas/scene-spec.schema.json",
+      "schemaSha256": "sha256:3999c432101b000ffbe85bd247ae940c43d68ad309585b4bb11c72286c6801ea",
+      "example": "examples/scene-spec.json",
+      "exampleSha256": "sha256:317a33c5850a6091308a41584f6001e60691cde235ffb71008e17b864f18774d"
+    },
+    {
+      "kind": "cineweave_codex_scene_state",
+      "role": "root",
+      "domain": "scene",
+      "schema": "schemas/scene-state.schema.json",
+      "schemaSha256": "sha256:afc628e95596f69fd53b5e982b63dc15ad6ad6bb9113df2c17f17c60f55b2424",
+      "example": "examples/scene-state.json",
+      "exampleSha256": "sha256:8fca18991159f86a7cacea288e1ab2837576b298f668cfb2c2db8d23ed02ea88"
+    },
+    {
+      "kind": "cineweave_codex_scene_light_state",
+      "role": "root",
+      "domain": "scene",
+      "schema": "schemas/scene-light-state.schema.json",
+      "schemaSha256": "sha256:1d36eb040a754acd71989b5db788c8cc51c112eacb787e4ed8f09e0d791a513c",
+      "example": "examples/scene-light-state.json",
+      "exampleSha256": "sha256:861d6dc8e57fa7ddf9448b44234dc76cd8ae9ab35d07ab16425ce889586756db"
+    },
+    {
+      "kind": "cineweave_codex_interaction_constraint_set",
+      "role": "root",
+      "domain": "scene",
+      "schema": "schemas/interaction-constraint-set.schema.json",
+      "schemaSha256": "sha256:51e329e907494f114a15d7e9a56afaac4d340783e3850c06684258c361a80e45",
+      "example": "examples/interaction-constraint-set.json",
+      "exampleSha256": "sha256:0699b2f0aa83f1f3c685d663599feec61468df6ac9ef1bd006fe2017213e5f02"
+    },
+    {
+      "kind": "scene_binding",
+      "role": "root",
+      "domain": "scene",
+      "schema": "schemas/scene-binding.schema.json",
+      "schemaSha256": "sha256:8253ed37fbb4a9c3abbc86326cf7ed9d5a75d9f92cd83f037e0095a2fa3da292",
+      "example": "examples/scene-binding.json",
+      "exampleSha256": "sha256:42698971433dce6eef6e96c4a7041828b8810ff3881ceba9674e472f86bb3f9f"
+    },
+    {
+      "kind": "cineweave_codex_style_package",
+      "role": "root",
+      "domain": "style",
+      "schema": "schemas/style-package.schema.json",
+      "schemaSha256": "sha256:964e09a5101db585bc6b88c47b939e68b7e68fc9ca036b9436e91f7d9a1523d4",
+      "example": "examples/style-package.json",
+      "exampleSha256": "sha256:752670cc6cd1c4b6344e76f26c462d692faec4b136ed5825f6523caa3c9d821a"
+    },
+    {
+      "kind": "cineweave_codex_representation_binding",
+      "role": "root",
+      "domain": "style",
+      "schema": "schemas/representation-binding.schema.json",
+      "schemaSha256": "sha256:17c558c8b16373277f16fd7fb7c9b00fafcabb0d6a79595fc575ac39349a4f28",
+      "example": "examples/representation-binding.json",
+      "exampleSha256": "sha256:a06c540414ec704647f95b5fa7e3011f4977e72aa2157fe298a584f84906cb5c"
+    },
+    {
+      "kind": "cineweave_codex_style_compile",
+      "role": "root",
+      "domain": "style",
+      "schema": "schemas/style-compile.schema.json",
+      "schemaSha256": "sha256:0e2097183827735c18f9d907bb2c564777ac3644b7f651b152ba09a5887c7107",
+      "example": "examples/style-compile.json",
+      "exampleSha256": "sha256:1a50ac3a43223058013dcfdb36f73325d59d0cf41c57c1b9791dd3db39e4b579"
+    },
+    {
+      "kind": "cineweave_codex_style_light_grammar",
+      "role": "root",
+      "domain": "style",
+      "schema": "schemas/style-light-grammar.schema.json",
+      "schemaSha256": "sha256:3ef2466ecadb20e3c43f14330f9006f8d37e0c3db5a5eb6cf53c796123b8ac77",
+      "example": "examples/style-light-grammar.json",
+      "exampleSha256": "sha256:b896d606f0fc535977def6e1c55103689c6ad5386c1184692e543c422798a5aa"
+    },
+    {
+      "kind": "cineweave_codex_reference_asset",
+      "role": "root",
+      "domain": "reference_evidence",
+      "schema": "schemas/reference-asset.schema.json",
+      "schemaSha256": "sha256:1f3cfa34f482964ef68966adb6a4e1fce329b5237eb4d9620c95afc53c860823",
+      "example": "examples/reference-asset.json",
+      "exampleSha256": "sha256:318c7297a3b23e157b6517fcd8c593a4ebe24d09c94c73735ed62dee9f9af53a"
+    },
+    {
+      "kind": "cineweave_codex_reference_observation",
+      "role": "root",
+      "domain": "reference_evidence",
+      "schema": "schemas/reference-observation.schema.json",
+      "schemaSha256": "sha256:63608ed7bc8cb4e74f063b0b8b0aae2d5c9a38b95ff42373c6893a3d2ebe5af1",
+      "example": "examples/reference-observation.json",
+      "exampleSha256": "sha256:6b43f56ca5e8335a0398fd7ec5d963812c2a6d3fdf314c1ebfb91e7da78e3d47"
+    },
+    {
+      "kind": "cineweave_codex_reference_binding_set",
+      "role": "root",
+      "domain": "reference_evidence",
+      "schema": "schemas/reference-binding-set.schema.json",
+      "schemaSha256": "sha256:0a5ffb5d6e4a816d904916a48da726194fe75f3b6efb532c6ae0f3c175bb3f3d",
+      "example": "examples/reference-binding-set.json",
+      "exampleSha256": "sha256:8a76357e7cf7762d3b3d6747b68aa1fd6819acb631632465e46bb74b2df9ba18"
+    },
+    {
+      "kind": "cineweave_codex_asset_alias_registry",
+      "role": "root",
+      "domain": "reference_evidence",
+      "schema": "schemas/asset-alias-registry.schema.json",
+      "schemaSha256": "sha256:0ba95f7d2f3dc5162bae8f0a02eb6784d9152560df7e58d5c3ad3aa1d634f257",
+      "example": "examples/asset-alias-registry.json",
+      "exampleSha256": "sha256:288ba399191183a705e0a50747b06533444724b3d29e39d87b10a66a549bf3f2"
+    },
+    {
+      "kind": "cineweave_codex_action_sequence_spec",
+      "role": "root",
+      "domain": "action",
+      "schema": "schemas/action-sequence-spec.schema.json",
+      "schemaSha256": "sha256:809991375d5eda4c1328ceed88823dcdbff4b5b972c787733d9762ef47aba02a",
+      "example": "examples/action-sequence-spec.json",
+      "exampleSha256": "sha256:2fceea2409c67d169cf1d37ea323e6e12582672b07b5b653fe8fc82529224798"
+    },
+    {
+      "kind": "cineweave_codex_cinematic_skill_manifest",
+      "role": "root",
+      "domain": "shot_direction",
+      "schema": "schemas/cinematic-skill-manifest.schema.json",
+      "schemaSha256": "sha256:f9330fddbe59492672b15230ae9f16e5822fde8f1162bb7bcf89cf9218ecb9d3",
+      "example": "examples/cinematic-skill-manifest.json",
+      "exampleSha256": "sha256:b3ca5d54a6954cc5a53d98da785b05e9b391081bbb8e423a2107c99425747666"
+    },
+    {
+      "kind": "cineweave_codex_shot_compiler_plan",
+      "role": "root",
+      "domain": "shot_direction",
+      "schema": "schemas/shot-compiler-plan.schema.json",
+      "schemaSha256": "sha256:4b27b3a8e3192027fa33ee36da7107da1bed7ea6d6c6baef218b496f68e7d06b",
+      "example": "examples/shot-compiler-plan.json",
+      "exampleSha256": "sha256:ee5cd2f776c72661ad36c2d854343b162a7d3782be52d2a56ecfc9d9902cbe4d"
+    },
+    {
+      "kind": "cineweave_codex_shot_spec",
+      "role": "root",
+      "domain": "shot_direction",
+      "schema": "schemas/shot-spec.schema.json",
+      "schemaSha256": "sha256:efa88d1dbaf5820ddfa81b7c36bbd1b4b77ee1803815dff08f90f2f56c56a354",
+      "example": "examples/shot-spec.json",
+      "exampleSha256": "sha256:5b6483b406cf2b797b9eb6065beb611fd5ada358d75c146216064975eb22f377"
+    },
+    {
+      "kind": "cineweave_codex_shot_lighting_plan",
+      "role": "root",
+      "domain": "shot_direction",
+      "schema": "schemas/shot-lighting-plan.schema.json",
+      "schemaSha256": "sha256:933159f7d5fc626b6c874215d40230bb81e3d491b066dc5e0d60e73eec3b84ab",
+      "example": "examples/shot-lighting-plan.json",
+      "exampleSha256": "sha256:e8ff48c7ec1f4f02b98260ad0da66104c8e03d0ad07b28a28e37c17b0e7770bc"
+    },
+    {
+      "kind": "cineweave_codex_temporal_spec",
+      "role": "root",
+      "domain": "shot_direction",
+      "schema": "schemas/temporal-spec.schema.json",
+      "schemaSha256": "sha256:b8e5f5eb756821544759662936debe8a52d25c2aeaf1b72c059dfbc20047d5fa",
+      "example": "examples/temporal-spec.json",
+      "exampleSha256": "sha256:8213b3e58b738d67a5a9b4c954634dbd2e0f4e16f9864667b1ac66efdff83e24"
+    },
+    {
+      "kind": "cineweave_codex_camera_previs_spec",
+      "role": "root",
+      "domain": "shot_direction",
+      "schema": "schemas/camera-previs-spec.schema.json",
+      "schemaSha256": "sha256:898aac32c5a0c097d18d384b23159b258cf0e67f76a6611b9e159d3411890d22",
+      "example": "examples/camera-previs-spec.json",
+      "exampleSha256": "sha256:77f2fc862071ab73a58718d3a3f5b1a4c95a57879a045862207978f66d85c152"
+    },
+    {
+      "kind": "cineweave_codex_hero_frame_anchor",
+      "role": "root",
+      "domain": "shot_direction",
+      "schema": "schemas/hero-frame-anchor.schema.json",
+      "schemaSha256": "sha256:8ca78206720e4011da8e5f669f9280ae26e81994205563e237ec8a5cc8da734f",
+      "example": "examples/hero-frame-anchor.json",
+      "exampleSha256": "sha256:87df06ceb4db93286efedbaaf6045166cb218eba96f9db7f6dbd0dc83faa24ae"
+    },
+    {
+      "kind": "cineweave_codex_storyboard_sequence",
+      "role": "root",
+      "domain": "storyboard_rhythm",
+      "schema": "schemas/storyboard-output.schema.json",
+      "schemaSha256": "sha256:3aab6fc19eed484b6119e50fd5eff74b48b9bc0e9009daa7ddd4500a3633fc58",
+      "example": "examples/storyboard.json",
+      "exampleSha256": "sha256:79d972aaf3cf0288d703636bb24ad3ee8bee6f76caf5958dfa5d3ff70abb751d"
+    },
+    {
+      "kind": "cineweave_codex_sequence_rhythm_spec",
+      "role": "root",
+      "domain": "storyboard_rhythm",
+      "schema": "schemas/sequence-rhythm-spec.schema.json",
+      "schemaSha256": "sha256:f2ae994855f3cddf8be1df50b898fb832e0e9bb5e8e0743aa404b3d4e78914be",
+      "example": "examples/sequence-rhythm-spec.json",
+      "exampleSha256": "sha256:222f0ee6c1ce507537cf0b3020365398752e007bcf4946b83a909143fcc93578"
+    },
+    {
+      "kind": "cineweave_codex_render_plan",
+      "role": "root",
+      "domain": "production_plan",
+      "schema": "schemas/render-plan.schema.json",
+      "schemaSha256": "sha256:eab0cf2904c5431ed568238f56d357bd07a370289adbd9f50070e57f5dd4c39a",
+      "example": "examples/render-plan.json",
+      "exampleSha256": "sha256:dce34414c5a14e177e5eeb5cccbcd059a8ef2788b5918843dec5a7fd1d41aec2"
+    },
+    {
+      "kind": "cineweave_codex_prompt_record",
+      "role": "root",
+      "domain": "image_prompt",
+      "schema": "schemas/prompt-record.schema.json",
+      "schemaSha256": "sha256:73c8603d053cedbc7c8a35d59d60a236ec91faa6d4bb3e00e1bc30d251c0c1d8",
+      "example": "examples/prompt-record.json",
+      "exampleSha256": "sha256:d86cfd77abb8101bdf5eb31cc8bb96480575547c327be683fe5af54ef7a02a28"
+    },
+    {
+      "kind": "cineweave_codex_image_prompt",
+      "role": "root",
+      "domain": "image_prompt",
+      "schema": "schemas/image-prompt-output.schema.json",
+      "schemaSha256": "sha256:73d68d1922ace3c3419f617d1c119535ebeb832ed1e2ef5e4c237df1370bf730",
+      "example": "examples/image-prompt.json",
+      "exampleSha256": "sha256:700967cf8e7a2af10f52705cc0807476be07acdf1710460a7343bb617b839baa"
+    },
+    {
+      "kind": "cineweave_codex_prompt_projection_plan",
+      "role": "root",
+      "domain": "image_prompt",
+      "schema": "schemas/prompt-projection-plan.schema.json",
+      "schemaSha256": "sha256:250e9322a5fe23273c506869e532f6e1098cb16240a4aff6a01fce601cd14a6c",
+      "example": "examples/prompt-projection-plan.json",
+      "exampleSha256": "sha256:5f5516600822f33a6e1d8131a0e862e2fe43870fbd7a975891c96a2f18672300"
+    },
+    {
+      "kind": "cineweave_codex_asset_recipe",
+      "role": "root",
+      "domain": "production_plan",
+      "schema": "schemas/asset-recipe.schema.json",
+      "schemaSha256": "sha256:aa6a8c8e5ea46caded6dacdc83edea631ab7a978f5e84610faedc7f52d3bfbcd",
+      "example": "examples/asset-recipe.json",
+      "exampleSha256": "sha256:71d029c6803f94b4cbdc4cd7d638dfc3d4a15dfb008300d73592cf10c761585a"
+    },
+    {
+      "kind": "cineweave_codex_board_assembly_plan",
+      "role": "root",
+      "domain": "production_plan",
+      "schema": "schemas/board-assembly-plan.schema.json",
+      "schemaSha256": "sha256:32897b364a8defec6dde1141daeebe8872bcc47c24f2e7f5c1e0031452cad86a",
+      "example": "examples/board-assembly-plan.json",
+      "exampleSha256": "sha256:3b840b0d94a30681bc4e06995ec7f3e8e2ddfea96198c771229061c8d9972ca6"
+    },
+    {
+      "kind": "cineweave_codex_editorial_timeline_plan",
+      "role": "root",
+      "domain": "production_plan",
+      "schema": "schemas/editorial-timeline-plan.schema.json",
+      "schemaSha256": "sha256:fe8d7ce83470ec71bf0178ecb6f3bb986c638dc982eaf2c30c8e5359f918999a",
+      "example": "examples/editorial-timeline-plan.json",
+      "exampleSha256": "sha256:3bc9489ea4d1a68ab205405c6288e18aa9f398ff822055edb2a0eed5100a95b9"
+    },
+    {
+      "kind": "cineweave_codex_color_pipeline_profile",
+      "role": "root",
+      "domain": "production_plan",
+      "schema": "schemas/color-pipeline-profile.schema.json",
+      "schemaSha256": "sha256:0b709706ae1af1c277a6358971b45bba726365f10af3b38bffb0cb7c17ac1f85",
+      "example": "examples/color-pipeline-profile.json",
+      "exampleSha256": "sha256:e39ca39ae693a29e0d5d62cf909ef4702bded798f4e0d3382e9b607b0a3c2328"
+    },
+    {
+      "kind": "cineweave_codex_control_channel_set",
+      "role": "root",
+      "domain": "production_plan",
+      "schema": "schemas/control-channel-set.schema.json",
+      "schemaSha256": "sha256:cd7e6e36781125c3f9f7c4c5535d5b17c4621d7884d035a1ef68836486f4b8dc",
+      "example": "examples/control-channel-set.json",
+      "exampleSha256": "sha256:8916b9c2bc2363870ae314e4ebab2c635f15fa463bd81fdf0be128011c12f273"
+    },
+    {
+      "kind": "cineweave_codex_evidence_bundle",
+      "role": "root",
+      "domain": "production_plan",
+      "schema": "schemas/evidence-bundle.schema.json",
+      "schemaSha256": "sha256:cb01989bb35de3747860d49b4acba11186621e72250406b24e8f6ca05fd1a3aa",
+      "example": "examples/evidence-bundle.json",
+      "exampleSha256": "sha256:1f448284b5c08788289d7ed4517fcfe5096947bcc2b8fe6a3cdcf80d3b39c608"
+    },
+    {
+      "kind": "cineweave_codex_capability_profile",
+      "role": "root",
+      "domain": "production_plan",
+      "schema": "schemas/capability-profile.schema.json",
+      "schemaSha256": "sha256:829fde864a1414dbbec4c42b8d46f08b3efca6efffec47738b3c908196b049f2",
+      "example": "examples/capability-profile.json",
+      "exampleSha256": "sha256:cc7d10e98215751ab4bd747139b765c85cc8b9e9ff6a40f9696796b9a7864e70"
+    },
+    {
+      "kind": "cineweave_codex_capability_resolution_plan",
+      "role": "root",
+      "domain": "production_plan",
+      "schema": "schemas/capability-resolution-plan.schema.json",
+      "schemaSha256": "sha256:e4e908e22a16e55e715dffb8effd99990fa408ced54abcde36c7aea6bd687a52",
+      "example": "examples/capability-resolution-plan.json",
+      "exampleSha256": "sha256:3d234561dd7bf6495e7766a8f861ab02a234488f401cd95c3e151f40182a0a8a"
+    },
+    {
+      "kind": "cineweave_codex_license_profile",
+      "role": "root",
+      "domain": "production_plan",
+      "schema": "schemas/license-profile.schema.json",
+      "schemaSha256": "sha256:2ceaa42f11a0044de6ea8ff7c9e506c881238ad34ae857e175e98c320e1a1a4c",
+      "example": "examples/license-profile.json",
+      "exampleSha256": "sha256:32f9f1e655c6fc6d99204c1388ccf0102615b08767bf6a17406ef30b2a4f3785"
+    },
+    {
+      "kind": "cineweave_codex_control_benchmark",
+      "role": "root",
+      "domain": "review_repair",
+      "schema": "schemas/control-benchmark.schema.json",
+      "schemaSha256": "sha256:ee7f6b4f6cfe679ee0647fa90a9c4c8fd76ddeb89837a6510494b3e6fb9013a3",
+      "example": "examples/control-benchmark.json",
+      "exampleSha256": "sha256:a45b639bf37cb1cca78188c51ad7656381f95960d30dabe52ef10fac9e2f1363"
+    },
+    {
+      "kind": "cineweave_codex_control_benchmark_review",
+      "role": "root",
+      "domain": "review_repair",
+      "schema": "schemas/control-benchmark-review.schema.json",
+      "schemaSha256": "sha256:0b4f9ee71ec817db469e29c433b97107f22482f6d2af1fafd8d8548bb53d3545",
+      "example": "examples/control-benchmark-review.json",
+      "exampleSha256": "sha256:ad16666aef448a3dc5289c482755cc2b06736c019325618816f05a46102e2509"
+    },
+    {
+      "kind": "cineweave_codex_creative_review",
+      "role": "root",
+      "domain": "review_repair",
+      "schema": "schemas/creative-review.schema.json",
+      "schemaSha256": "sha256:66b4c4321b446f3c2c09240a6e17961acd5d2f37ef75207acb60cb878d11f48c",
+      "example": "examples/creative-review.json",
+      "exampleSha256": "sha256:038d4861ece2cff958f4c269feed5300f446ba8afacd3ac0d1b1d983aa9699d6"
+    },
+    {
+      "kind": "cineweave_codex_repair_plan",
+      "role": "root",
+      "domain": "review_repair",
+      "schema": "schemas/repair-plan.schema.json",
+      "schemaSha256": "sha256:49fcdc8c15583bb0f95ca89b31b4608c2464c171f0d5d217c9c366489afe5f26",
+      "example": "examples/repair-plan.json",
+      "exampleSha256": "sha256:58e11182ce4b71a2f6fa98b3ba8d1b08d8de6ec61fa260c2cd554dcc9a14c5cc"
+    }
+  ],
+  "supportSchemas": [
+    {
+      "schema": "schemas/common.schema.json",
+      "purpose": "共享标识、引用、来源与回执定义。",
+      "schemaSha256": "sha256:f11cafddd9a3251871ec127993cac7f455a45c21002a8c4952a38a15b0738754"
+    },
+    {
+      "schema": "schemas/reference-transform.schema.json",
+      "purpose": "不依赖特定供应商的共享参考观察转换定义。",
+      "schemaSha256": "sha256:934647250e31f5038b7f315a1106f5538fa24f40b33d6c415a6d65ec39a0a1ff"
+    }
+  ]
+}

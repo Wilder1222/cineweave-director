@@ -1,0 +1,18 @@
+{
+  "valid": true,
+  "errors": [],
+  "duration": {
+    "numerator": "192",
+    "denominator": "24"
+  },
+  "endTimecode": "00:00:08,000",
+  "subtitles": [],
+  "srt": "",
+  "scope": "Planning arithmetic only: cut-only shot coverage and one subtitle track. Text counts do not establish speech duration, readability, synchronization, rights, or media quality.",
+  "localization": {
+    "locale": "zh-CN",
+    "summary": "剪辑覆盖与字幕算术检查通过，实际声音及画面同步仍未核验。",
+    "errors": [],
+    "scope": "仅检查硬切镜头覆盖、单字幕轨和文字计数；字数不等于口播时长，不证明可读性、同步、权利或媒体质量。"
+  }
+}

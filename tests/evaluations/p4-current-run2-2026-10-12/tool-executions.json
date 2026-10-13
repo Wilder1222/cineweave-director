@@ -1,0 +1,32 @@
+[
+  {
+    "case": "CW-SPLIT-C02",
+    "command": "node skills/cineweave-director/scripts/check-delivery.mjs D:\\Temp\\cineweave-split-p4-current-run2-20261012\\CW-SPLIT-C02-delivery-workbook.json",
+    "exitCode": 0,
+    "nativeResult": "D:\\Temp\\cineweave-split-p4-current-run2-20261012\\CW-SPLIT-C02-delivery-result.native.json"
+  },
+  {
+    "case": "CW-SPLIT-C03",
+    "command": "node skills/cineweave-director/scripts/check-delivery.mjs D:\\Temp\\cineweave-split-p4-current-run2-20261012\\CW-SPLIT-C03-delivery-workbook.json",
+    "exitCode": 0,
+    "nativeResult": "D:\\Temp\\cineweave-split-p4-current-run2-20261012\\CW-SPLIT-C03-delivery-result.native.json"
+  },
+  {
+    "case": "CW-SPLIT-C06",
+    "command": "node skills/cineweave-director/scripts/check-delivery.mjs D:\\Temp\\cineweave-split-p4-current-run2-20261012\\CW-SPLIT-C06-delivery-workbook.json",
+    "exitCode": 0,
+    "nativeResult": "D:\\Temp\\cineweave-split-p4-current-run2-20261012\\CW-SPLIT-C06-delivery-result.native.json"
+  },
+  {
+    "case": "CW-SPLIT-C08",
+    "command": "node skills/cineweave-director/scripts/check-delivery.mjs D:\\Temp\\cineweave-split-p4-current-run2-20261012\\CW-SPLIT-C08-delivery-workbook.json",
+    "exitCode": 0,
+    "nativeResult": "D:\\Temp\\cineweave-split-p4-current-run2-20261012\\CW-SPLIT-C08-delivery-result.native.json"
+  },
+  {
+    "case": "CW-SPLIT-C08",
+    "command": "node skills/cineweave-director/scripts/check-change-impact.mjs D:\\Temp\\cineweave-split-p4-current-run2-20261012\\CW-SPLIT-C08-impact-workbook.json",
+    "exitCode": 2,
+    "nativeResult": "D:\\Temp\\cineweave-split-p4-current-run2-20261012\\CW-SPLIT-C08-impact-result.native.json"
+  }
+]

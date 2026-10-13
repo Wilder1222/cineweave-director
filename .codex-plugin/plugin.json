@@ -1,7 +1,7 @@
 {
   "name": "cineweave-director",
-  "version": "3.1.0",
-  "description": "中文 AIGC 创作 Skill，面向故事、角色资产、分镜、图像与视频提示词及生成结果修复。",
+  "version": "3.2.0",
+  "description": "中文 AIGC 创作工作流：从统一导演入口进入，按需执行参考、创作、平台适配与评审，交付完整结果。",
   "homepage": "https://github.com/Wilder1222/cineweave-director",
   "repository": "https://github.com/Wilder1222/cineweave-director",
   "license": "MIT",
@@ -30,13 +30,13 @@
   "skills": "./skills/",
   "interface": {
     "displayName": "CineWeave 导演",
-    "shortDescription": "中文短片叙事、视觉开发、分镜表演、配音剪辑与全套提示词",
-    "longDescription": "按请求交付单条提示词、可复用角色与场景资产、故事剧本或完整短片方案。以可见动作、空间、光线和材质组织画面，分开首尾帧、运动、台词与剪辑余量，并保持多镜头连续性。默认中文，资料按需读取；支持只读检查和有依据的修复，不执行媒体生成。",
+    "shortDescription": "统一入口按需组织参考、创作、平台适配和评审，交付完整中文结果",
+    "longDescription": "从同一导演入口接收需求，按需分析参考、完成故事和人物场景资产、编写分镜与完整提示词、适配已有母稿或评审修订结果。内部能力返回完整子结果，由入口检查原请求、硬锁与未决项后统一交付。默认中文与同一代理，资料按需读取；不执行媒体生成。",
     "developerName": "CineWeave",
     "category": "Productivity",
     "capabilities": [],
     "defaultPrompt": [
-      "使用 $cineweave-director，将我的想法或参考发展成中文短片创作稿，按需求完成叙事、视觉探索、分镜表演、逐镜图像与视频提示词、配音和剪辑方案。"
+      "使用 $cineweave-director，从我的需求开始，按需完成参考分析、创作、平台适配或评审修订，并由入口统一交付完整中文结果。"
     ],
     "brandColor": "#000000"
   }

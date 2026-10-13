@@ -1,0 +1,15 @@
+[
+  {
+    "command": [
+      "node",
+      "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\scripts\\check-shot-review.mjs",
+      "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-C07-shot-review-v1.json"
+    ],
+    "exitCode": 2,
+    "stdoutPath": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-C07-shot-review-v1.stdout.json",
+    "stderrPath": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-C07-shot-review-v1.stderr.txt",
+    "nodeVersion": "v22.15.0",
+    "nodeVersionExitCode": 0,
+    "sourceInput": "D:\\Temp\\cineweave-split-p4-multiskill-b1-20261012\\CW-SPLIT-C07-shot-review-v1.json"
+  }
+]

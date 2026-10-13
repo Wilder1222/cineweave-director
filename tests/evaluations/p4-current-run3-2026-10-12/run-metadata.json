@@ -1,0 +1,16 @@
+{
+  "run": "current-run3",
+  "date": "2026-10-12",
+  "batch_mode": "newfork_none",
+  "case_context": "五案在同一代理、同一批次共享上下文；不是五个逐案独立新fork",
+  "context_limit": "该批次从父任务newfork_none启动；案例间仍共享当前批次原输入与按需加载的Skill知识。独立项目不复用前案原创人物、服装、场景、光源、素材或批准状态。",
+  "model": null,
+  "token_usage": null,
+  "reasoning": null,
+  "latency": null,
+  "input_path": "D:/Temp/cineweave-split-p4-correction-raw-inputs-20261012.json",
+  "input_sha256": "fc7ae52e6abc32563d06a36335176054142b56e5a3364fb9492ab21dda1cda0c",
+  "media_execution": "none",
+  "first_version_policy": "逐案v1创建后不覆写",
+  "source_scope": "只读指定raw-inputs与当前四Skill包；未读其他run、旧答案、rubric、计划、研究、期待、skill-sources或devtests"
+}

@@ -1,0 +1,3043 @@
+
+> cineweave-director@3.2.0 test
+> node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs tests/check-delivery.test.mjs tests/check-shot-review.test.mjs tests/reliability.test.mjs tests/contract-context.test.mjs tests/projection-integrity.test.mjs tests/shot-compiler-context.test.mjs tests/change-impact.test.mjs tests/video-return.test.mjs tests/skill-catalog.test.mjs tests/skill-bundles.test.mjs
+
+TAP version 13
+# Subtest: bundle output cannot traverse an intermediate symlink or junction
+ok 1 - bundle output cannot traverse an intermediate symlink or junction
+  ---
+  duration_ms: 17.7607
+  type: 'test'
+  ...
+# Subtest: cinematic guides are registered once using existing typed contexts
+ok 2 - cinematic guides are registered once using existing typed contexts
+  ---
+  duration_ms: 4.8092
+  type: 'test'
+  ...
+# Subtest: cinematic diagnostic vocabulary has unique IDs and real route candidates
+ok 3 - cinematic diagnostic vocabulary has unique IDs and real route candidates
+  ---
+  duration_ms: 3.9934
+  type: 'test'
+  ...
+# Subtest: cinematic evaluation definitions have concrete counterexamples and retain their initial state
+ok 4 - cinematic evaluation definitions have concrete counterexamples and retain their initial state
+  ---
+  duration_ms: 2.7768
+  type: 'test'
+  ...
+# Subtest: cinematic evaluation routes and diagnostic references resolve
+ok 5 - cinematic evaluation routes and diagnostic references resolve
+  ---
+  duration_ms: 4.529
+  type: 'test'
+  ...
+# Subtest: cinematic research links pin revisions instead of moving branches
+ok 6 - cinematic research links pin revisions instead of moving branches
+  ---
+  duration_ms: 2.6973
+  type: 'test'
+  ...
+# Subtest: video guides are distributed once with known typed load contexts
+ok 7 - video guides are distributed once with known typed load contexts
+  ---
+  duration_ms: 6.2199
+  type: 'test'
+  ...
+# Subtest: node guide documents every helper type and links to the bundled read-only helper
+ok 8 - node guide documents every helper type and links to the bundled read-only helper
+  ---
+  duration_ms: 1.7922
+  type: 'test'
+  ...
+# Subtest: 中文入口保留激活标识并声明语言和精确文案规则
+ok 9 - 中文入口保留激活标识并声明语言和精确文案规则
+  ---
+  duration_ms: 0.9335
+  type: 'test'
+  ...
+# Subtest: 知识清单与中文标题一致，合并指南已去重
+ok 10 - 知识清单与中文标题一致，合并指南已去重
+  ---
+  duration_ms: 22.1469
+  type: 'test'
+  ...
+# Subtest: 中文化不重命名 12 条机器路由与 52 种根契约
+ok 11 - 中文化不重命名 12 条机器路由与 52 种根契约
+  ---
+  duration_ms: 0.7958
+  type: 'test'
+  ...
+# Subtest: 插件、市场和 agent 中文展示信息一致，协议标识保留
+ok 12 - 插件、市场和 agent 中文展示信息一致，协议标识保留
+  ---
+  duration_ms: 1.2174
+  type: 'test'
+  ...
+# Subtest: 视频中文摘要保留原始诊断并不修改输入
+ok 13 - 视频中文摘要保留原始诊断并不修改输入
+  ---
+  duration_ms: 0.4974
+  type: 'test'
+  ...
+# Subtest: 动态政策作用域诊断有中文对应而非静默漏译
+ok 14 - 动态政策作用域诊断有中文对应而非静默漏译
+  ---
+  duration_ms: 0.2214
+  type: 'test'
+  ...
+# Subtest: 未知诊断保留原始代码和细节，不虚构具体原因
+ok 15 - 未知诊断保留原始代码和细节，不虚构具体原因
+  ---
+  duration_ms: 0.1103
+  type: 'test'
+  ...
+# Subtest: 视频检查未核验媒体和能力的标志在中文展示中不变化
+ok 16 - 视频检查未核验媒体和能力的标志在中文展示中不变化
+  ---
+  duration_ms: 2.342
+  type: 'test'
+  ...
+# Subtest: 交付中文摘要不改时间、SRT 或准确台词
+ok 17 - 交付中文摘要不改时间、SRT 或准确台词
+  ---
+  duration_ms: 1.808
+  type: 'test'
+  ...
+# Subtest: 交付失败仍返回空 SRT 并给中文解释
+ok 18 - 交付失败仍返回空 SRT 并给中文解释
+  ---
+  duration_ms: 0.4597
+  type: 'test'
+  ...
+# Subtest: Unicode 文案不因中文默认而被规范化改写
+ok 19 - Unicode 文案不因中文默认而被规范化改写
+  ---
+  duration_ms: 0.2809
+  type: 'test'
+  ...
+# Subtest: check-video-plan.mjs 的真实 CLI 显示中文帮助
+ok 20 - check-video-plan.mjs 的真实 CLI 显示中文帮助
+  ---
+  duration_ms: 163.2834
+  type: 'test'
+  ...
+# Subtest: check-delivery.mjs 的真实 CLI 显示中文帮助
+ok 21 - check-delivery.mjs 的真实 CLI 显示中文帮助
+  ---
+  duration_ms: 205.274
+  type: 'test'
+  ...
+# Subtest: 真实字数 CLI 保留机器计数并附中文说明
+ok 22 - 真实字数 CLI 保留机器计数并附中文说明
+  ---
+  duration_ms: 206.4474
+  type: 'test'
+  ...
+# Subtest: 所有契约说明与示例长文本使用中文
+ok 23 - 所有契约说明与示例长文本使用中文
+  ---
+  duration_ms: 145.2867
+  type: 'test'
+  ...
+# Subtest: canonicalization ignores object insertion order
+ok 24 - canonicalization ignores object insertion order
+  ---
+  duration_ms: 2.4835
+  type: 'test'
+  ...
+# Subtest: strict parser rejects duplicate object keys
+ok 25 - strict parser rejects duplicate object keys
+  ---
+  duration_ms: 0.7327
+  type: 'test'
+  ...
+# Subtest: strict parser accepts only JSON whitespace
+ok 26 - strict parser accepts only JSON whitespace
+  ---
+  duration_ms: 0.1823
+  type: 'test'
+  ...
+# Subtest: strict parser preserves prototype-named keys without prototype mutation
+ok 27 - strict parser preserves prototype-named keys without prototype mutation
+  ---
+  duration_ms: 0.5221
+  type: 'test'
+  ...
+# Subtest: canonicalization rejects non-I-JSON Unicode
+ok 28 - canonicalization rejects non-I-JSON Unicode
+  ---
+  duration_ms: 0.1582
+  type: 'test'
+  ...
+# Subtest: canonicalization rejects sparse and extended arrays without scanning their declared length
+ok 29 - canonicalization rejects sparse and extended arrays without scanning their declared length
+  ---
+  duration_ms: 0.2444
+  type: 'test'
+  ...
+# Subtest: change impact narrows direct fields and conservatively propagates descendants
+ok 30 - change impact narrows direct fields and conservatively propagates descendants
+  ---
+  duration_ms: 5.6373
+  type: 'test'
+  ...
+# Subtest: change impact does not mutate deeply frozen worksheet, revisions or evidence
+ok 31 - change impact does not mutate deeply frozen worksheet, revisions or evidence
+  ---
+  duration_ms: 0.9398
+  type: 'test'
+  ...
+# Subtest: change impact treats complete empty query and no declared changes as valid
+ok 32 - change impact treats complete empty query and no declared changes as valid
+  ---
+  duration_ms: 1.2141
+  type: 'test'
+  ...
+# Subtest: change impact compares decoded pointer tokens including slash, tilde and empty tokens
+ok 33 - change impact compares decoded pointer tokens including slash, tilde and empty tokens
+  ---
+  duration_ms: 1.2322
+  type: 'test'
+  ...
+# Subtest: change impact matches ancestor and descendant paths without lexical prefix matches
+ok 34 - change impact matches ancestor and descendant paths without lexical prefix matches
+  ---
+  duration_ms: 1.3267
+  type: 'test'
+  ...
+# Subtest: change impact allows explicit whole-document pointer and rejects absent path arrays
+ok 35 - change impact allows explicit whole-document pointer and rejects absent path arrays
+  ---
+  duration_ms: 0.7428
+  type: 'test'
+  ...
+# Subtest: change impact rejects malformed and duplicate JSON pointers
+ok 36 - change impact rejects malformed and duplicate JSON pointers
+  ---
+  duration_ms: 1.6504
+  type: 'test'
+  ...
+# Subtest: change impact keeps every isolated partial or unknown artifact under review
+ok 37 - change impact keeps every isolated partial or unknown artifact under review
+  ---
+  duration_ms: 0.5166
+  type: 'test'
+  ...
+# Subtest: change impact propagates review uncertainty to declared descendants
+ok 38 - change impact propagates review uncertainty to declared descendants
+  ---
+  duration_ms: 0.5423
+  type: 'test'
+  ...
+# Subtest: change impact propagates explicitly stale ancestors even without changes
+ok 39 - change impact propagates explicitly stale ancestors even without changes
+  ---
+  duration_ms: 0.951
+  type: 'test'
+  ...
+# Subtest: change impact requires exact declared IDs and revisions
+ok 40 - change impact requires exact declared IDs and revisions
+  ---
+  duration_ms: 0.681
+  type: 'test'
+  ...
+# Subtest: change impact rejects unsafe or incompatible revisions
+ok 41 - change impact rejects unsafe or incompatible revisions
+  ---
+  duration_ms: 1.6676
+  type: 'test'
+  ...
+# Subtest: change impact allows compatible multiple field changes and rejects duplicate edges or artifacts
+ok 42 - change impact allows compatible multiple field changes and rejects duplicate edges or artifacts
+  ---
+  duration_ms: 0.9571
+  type: 'test'
+  ...
+# Subtest: change impact rejects self cycles and longer cycles
+ok 43 - change impact rejects self cycles and longer cycles
+  ---
+  duration_ms: 0.6913
+  type: 'test'
+  ...
+# Subtest: change impact recognizes no-op only from both supplied JSON values
+ok 44 - change impact recognizes no-op only from both supplied JSON values
+  ---
+  duration_ms: 1.0528
+  type: 'test'
+  ...
+# Subtest: change impact does not equate absent evidence with null or ignore contradictory changes
+ok 45 - change impact does not equate absent evidence with null or ignore contradictory changes
+  ---
+  duration_ms: 0.675
+  type: 'test'
+  ...
+# Subtest: change impact JSON preflight rejects accessor evidence without invoking its getter
+ok 46 - change impact JSON preflight rejects accessor evidence without invoking its getter
+  ---
+  duration_ms: 0.3388
+  type: 'test'
+  ...
+# Subtest: change impact JSON preflight rejects hidden evidence fields instead of inferring no-op
+ok 47 - change impact JSON preflight rejects hidden evidence fields instead of inferring no-op
+  ---
+  duration_ms: 0.2766
+  type: 'test'
+  ...
+# Subtest: change impact JSON preflight inspects descriptors throughout the worksheet before reading values
+ok 48 - change impact JSON preflight inspects descriptors throughout the worksheet before reading values
+  ---
+  duration_ms: 0.4728
+  type: 'test'
+  ...
+# Subtest: change impact JSON preflight rejects symbols, hidden fields, cycles and non-JSON data
+ok 49 - change impact JSON preflight rejects symbols, hidden fields, cycles and non-JSON data
+  ---
+  duration_ms: 1.5576
+  type: 'test'
+  ...
+# Subtest: change impact JSON preflight accepts deeply frozen real JSON evidence for no-op
+ok 50 - change impact JSON preflight accepts deeply frozen real JSON evidence for no-op
+  ---
+  duration_ms: 0.3288
+  type: 'test'
+  ...
+# Subtest: change impact rejects unsupported fields and malformed worksheet values
+ok 51 - change impact rejects unsupported fields and malformed worksheet values
+  ---
+  duration_ms: 1.3612
+  type: 'test'
+  ...
+# Subtest: change impact CLI returns stdout JSON with exit 0 for complete declarations
+ok 52 - change impact CLI returns stdout JSON with exit 0 for complete declarations
+  ---
+  duration_ms: 164.5272
+  type: 'test'
+  ...
+# Subtest: change impact CLI returns exit 2 for valid unresolved coverage
+ok 53 - change impact CLI returns exit 2 for valid unresolved coverage
+  ---
+  duration_ms: 204.3916
+  type: 'test'
+  ...
+# Subtest: change impact CLI returns exit 1 and stdout diagnostics for invalid worksheets
+ok 54 - change impact CLI returns exit 1 and stdout diagnostics for invalid worksheets
+  ---
+  duration_ms: 214.4399
+  type: 'test'
+  ...
+# Subtest: change impact CLI rejects duplicate JSON members and malformed JSON
+ok 55 - change impact CLI rejects duplicate JSON members and malformed JSON
+  ---
+  duration_ms: 377.6068
+  type: 'test'
+  ...
+# Subtest: change impact CLI gives JSON help and JSON argument or file errors
+ok 56 - change impact CLI gives JSON help and JSON argument or file errors
+  ---
+  duration_ms: 565.8264
+  type: 'test'
+  ...
+# Subtest: delivery preserves exact copy and checks six-character narration with frame-derived SRT
+ok 57 - delivery preserves exact copy and checks six-character narration with frame-derived SRT
+  ---
+  duration_ms: 3.3284
+  type: 'test'
+  ...
+# Subtest: text counts distinguish Han characters, code points and graphemes without normalizing copy
+ok 58 - text counts distinguish Han characters, code points and graphemes without normalizing copy
+  ---
+  duration_ms: 0.1881
+  type: 'test'
+  ...
+# Subtest: absolute rational-frame boundaries avoid fractional-rate drift and carry milliseconds
+ok 59 - absolute rational-frame boundaries avoid fractional-rate drift and carry milliseconds
+  ---
+  duration_ms: 0.4337
+  type: 'test'
+  ...
+# Subtest: delivery rejects gaps, overlaps, invalid ranges, duplicate IDs and wrong copy counts
+ok 60 - delivery rejects gaps, overlaps, invalid ranges, duplicate IDs and wrong copy counts
+  ---
+  duration_ms: 0.667
+  type: 'test'
+  ...
+# Subtest: delivery rejects unsupported worksheets instead of silently skipping checks
+ok 61 - delivery rejects unsupported worksheets instead of silently skipping checks
+  ---
+  duration_ms: 1.2778
+  type: 'test'
+  ...
+# Subtest: video timing selects the smallest fitting discrete duration and preserves cut window
+ok 62 - video timing selects the smallest fitting discrete duration and preserves cut window
+  ---
+  duration_ms: 0.6915
+  type: 'test'
+  ...
+# Subtest: video timing does not lengthen an exactly fitting clip
+ok 63 - video timing does not lengthen an exactly fitting clip
+  ---
+  duration_ms: 0.5506
+  type: 'test'
+  ...
+# Subtest: video timing refuses a duration ceiling rather than clipping action
+ok 64 - video timing refuses a duration ceiling rather than clipping action
+  ---
+  duration_ms: 0.3225
+  type: 'test'
+  ...
+# Subtest: video timing keeps unknown duration policy unresolved
+ok 65 - video timing keeps unknown duration policy unresolved
+  ---
+  duration_ms: 0.3792
+  type: 'test'
+  ...
+# Subtest: video timing handles a stepped range without assuming continuous support
+ok 66 - video timing handles a stepped range without assuming continuous support
+  ---
+  duration_ms: 0.3725
+  type: 'test'
+  ...
+# Subtest: video timing uses exact 30000/1001 arithmetic instead of rounded fps
+ok 67 - video timing uses exact 30000/1001 arithmetic instead of rounded fps
+  ---
+  duration_ms: 0.2391
+  type: 'test'
+  ...
+# Subtest: video timing flags excessive rounding residue
+ok 68 - video timing flags excessive rounding residue
+  ---
+  duration_ms: 0.1359
+  type: 'test'
+  ...
+# Subtest: video timing rejects negative handle
+ok 69 - video timing rejects negative handle
+  ---
+  duration_ms: 0.0762
+  type: 'test'
+  ...
+# Subtest: video timing rejects zero effective duration
+ok 70 - video timing rejects zero effective duration
+  ---
+  duration_ms: 0.0489
+  type: 'test'
+  ...
+# Subtest: video timing rejects fractional frames
+ok 71 - video timing rejects fractional frames
+  ---
+  duration_ms: 0.0409
+  type: 'test'
+  ...
+# Subtest: video timing rejects rounded floating frame rate
+ok 72 - video timing rejects rounded floating frame rate
+  ---
+  duration_ms: 0.0331
+  type: 'test'
+  ...
+# Subtest: video timing rejects duplicate duration choices
+ok 73 - video timing rejects duplicate duration choices
+  ---
+  duration_ms: 0.0563
+  type: 'test'
+  ...
+# Subtest: video timing rejects conflicting duration definitions
+ok 74 - video timing rejects conflicting duration definitions
+  ---
+  duration_ms: 0.0438
+  type: 'test'
+  ...
+# Subtest: video timing rejects missing evidence declaration
+ok 75 - video timing rejects missing evidence declaration
+  ---
+  duration_ms: 0.1202
+  type: 'test'
+  ...
+# Subtest: video timing rejects unsafe arithmetic output
+ok 76 - video timing rejects unsafe arithmetic output
+  ---
+  duration_ms: 0.0854
+  type: 'test'
+  ...
+# Subtest: tag parser preserves exact spoken punctuation and escaped literal tag characters
+ok 77 - tag parser preserves exact spoken punctuation and escaped literal tag characters
+  ---
+  duration_ms: 0.4193
+  type: 'test'
+  ...
+# Subtest: tag parser rejects missing closing tag
+ok 78 - tag parser rejects missing closing tag
+  ---
+  duration_ms: 0.092
+  type: 'test'
+  ...
+# Subtest: tag parser rejects unwrapped prose
+ok 79 - tag parser rejects unwrapped prose
+  ---
+  duration_ms: 0.0737
+  type: 'test'
+  ...
+# Subtest: tag parser rejects mismatched tags
+ok 80 - tag parser rejects mismatched tags
+  ---
+  duration_ms: 0.037
+  type: 'test'
+  ...
+# Subtest: tag parser rejects nested tags
+ok 81 - tag parser rejects nested tags
+  ---
+  duration_ms: 0.0405
+  type: 'test'
+  ...
+# Subtest: tag parser rejects duplicate tags
+ok 82 - tag parser rejects duplicate tags
+  ---
+  duration_ms: 0.1425
+  type: 'test'
+  ...
+# Subtest: tag parser rejects unknown label
+ok 83 - tag parser rejects unknown label
+  ---
+  duration_ms: 0.1216
+  type: 'test'
+  ...
+# Subtest: tag parser rejects empty tag
+ok 84 - tag parser rejects empty tag
+  ---
+  duration_ms: 0.0473
+  type: 'test'
+  ...
+# Subtest: tag parser rejects unescaped ampersand
+ok 85 - tag parser rejects unescaped ampersand
+  ---
+  duration_ms: 0.0338
+  type: 'test'
+  ...
+# Subtest: plain text preview retains all labels and never claims to be a provider payload
+ok 86 - plain text preview retains all labels and never claims to be a provider payload
+  ---
+  duration_ms: 0.1246
+  type: 'test'
+  ...
+# Subtest: all 18 node types have explicit tag requirements
+ok 87 - all 18 node types have explicit tag requirements
+  ---
+  duration_ms: 0.0717
+  type: 'test'
+  ...
+# Subtest: fixture workbook validates structure while remaining unverified
+ok 88 - fixture workbook validates structure while remaining unverified
+  ---
+  duration_ms: 1.9579
+  type: 'test'
+  ...
+# Subtest: checking a workbook does not mutate it
+ok 89 - checking a workbook does not mutate it
+  ---
+  duration_ms: 0.2522
+  type: 'test'
+  ...
+# Subtest: reject missing type-specific tag
+ok 90 - reject missing type-specific tag
+  ---
+  duration_ms: 0.6808
+  type: 'test'
+  ...
+# Subtest: reject mismatched visible node id
+ok 91 - reject mismatched visible node id
+  ---
+  duration_ms: 0.2494
+  type: 'test'
+  ...
+# Subtest: reject duplicate node ids
+ok 92 - reject duplicate node ids
+  ---
+  duration_ms: 0.3206
+  type: 'test'
+  ...
+# Subtest: reject nonexistent dependency
+ok 93 - reject nonexistent dependency
+  ---
+  duration_ms: 0.3472
+  type: 'test'
+  ...
+# Subtest: reject dependency cycles
+ok 94 - reject dependency cycles
+  ---
+  duration_ms: 0.3256
+  type: 'test'
+  ...
+# Subtest: reject absent last-frame role
+ok 95 - reject absent last-frame role
+  ---
+  duration_ms: 0.5501
+  type: 'test'
+  ...
+# Subtest: reject duplicate reference alias
+ok 96 - reject duplicate reference alias
+  ---
+  duration_ms: 0.618
+  type: 'test'
+  ...
+# Subtest: reject two competing first-frame bindings
+ok 97 - reject two competing first-frame bindings
+  ---
+  duration_ms: 0.4167
+  type: 'test'
+  ...
+# Subtest: reject a video in a first-frame image slot
+ok 98 - reject a video in a first-frame image slot
+  ---
+  duration_ms: 0.3084
+  type: 'test'
+  ...
+# Subtest: voice role requires audio or an explicitly scoped video audio track, not an image
+ok 99 - voice role requires audio or an explicitly scoped video audio track, not an image
+  ---
+  duration_ms: 0.6958
+  type: 'test'
+  ...
+# Subtest: reject omitted reference transfer exclusions
+ok 100 - reject omitted reference transfer exclusions
+  ---
+  duration_ms: 0.44
+  type: 'test'
+  ...
+# Subtest: reject explicitly unsupported mode
+ok 101 - reject explicitly unsupported mode
+  ---
+  duration_ms: 0.3185
+  type: 'test'
+  ...
+# Subtest: reject opposing camera control channels
+ok 102 - reject opposing camera control channels
+  ---
+  duration_ms: 0.2984
+  type: 'test'
+  ...
+# Subtest: reject a terminal-only last frame with a disposable tail
+ok 103 - reject a terminal-only last frame with a disposable tail
+  ---
+  duration_ms: 0.2841
+  type: 'test'
+  ...
+# Subtest: reject critical action outside the usable edit
+ok 104 - reject critical action outside the usable edit
+  ---
+  duration_ms: 0.2732
+  type: 'test'
+  ...
+# Subtest: reject a cue extending beyond the generated capacity
+ok 105 - reject a cue extending beyond the generated capacity
+  ---
+  duration_ms: 0.3678
+  type: 'test'
+  ...
+# Subtest: exact dialogue is accepted without pretending its duration was measured
+ok 106 - exact dialogue is accepted without pretending its duration was measured
+  ---
+  duration_ms: 0.4588
+  type: 'test'
+  ...
+# Subtest: reject silently rewritten dialogue
+ok 107 - reject silently rewritten dialogue
+  ---
+  duration_ms: 0.2859
+  type: 'test'
+  ...
+# Subtest: reject dialogue that is absent from its tagged master
+ok 108 - reject dialogue that is absent from its tagged master
+  ---
+  duration_ms: 0.3978
+  type: 'test'
+  ...
+# Subtest: reject overlapping turns from the same speaker without declared permission
+ok 109 - reject overlapping turns from the same speaker without declared permission
+  ---
+  duration_ms: 0.3076
+  type: 'test'
+  ...
+# Subtest: reject canonical-contract impersonation
+ok 110 - reject canonical-contract impersonation
+  ---
+  duration_ms: 0.2598
+  type: 'test'
+  ...
+# Subtest: unknown platform surface remains pending rather than failing independent draft arithmetic
+ok 111 - unknown platform surface remains pending rather than failing independent draft arithmetic
+  ---
+  duration_ms: 0.5788
+  type: 'test'
+  ...
+# Subtest: video helper CLI works with its bundled parser and writes no worksheet
+ok 112 - video helper CLI works with its bundled parser and writes no worksheet
+  ---
+  duration_ms: 606.5915
+  type: 'test'
+  ...
+# Subtest: reject a duration policy retained from a different model
+ok 113 - reject a duration policy retained from a different model
+  ---
+  duration_ms: 0.5492
+  type: 'test'
+  ...
+# Subtest: reject reference limits copied from a different generation mode
+ok 114 - reject reference limits copied from a different generation mode
+  ---
+  duration_ms: 0.4774
+  type: 'test'
+  ...
+# Subtest: reject reference count above the selected declaration
+ok 115 - reject reference count above the selected declaration
+  ---
+  duration_ms: 0.3744
+  type: 'test'
+  ...
+# Subtest: reject malformed negative reference caps
+ok 116 - reject malformed negative reference caps
+  ---
+  duration_ms: 0.3246
+  type: 'test'
+  ...
+# Subtest: a missing duration-policy scope stays pending
+ok 117 - a missing duration-policy scope stays pending
+  ---
+  duration_ms: 0.2967
+  type: 'test'
+  ...
+# Subtest: matching policy scopes and sufficient caps do not claim external verification
+ok 118 - matching policy scopes and sufficient caps do not claim external verification
+  ---
+  duration_ms: 0.3019
+  type: 'test'
+  ...
+# Subtest: 详细创作示例可解析并在纯文本预览中完整保留每项内容
+ok 119 - 详细创作示例可解析并在纯文本预览中完整保留每项内容
+  ---
+  duration_ms: 1.8827
+  type: 'test'
+  ...
+# Subtest: 文生视频无需伪造参考图且保留时长与未核验能力状态
+ok 120 - 文生视频无需伪造参考图且保留时长与未核验能力状态
+  ---
+  duration_ms: 0.4382
+  type: 'test'
+  ...
+# Subtest: 文生视频仍拒绝缺失时长和越界动作
+ok 121 - 文生视频仍拒绝缺失时长和越界动作
+  ---
+  duration_ms: 0.4559
+  type: 'test'
+  ...
+# Subtest: 文生视频不能隐含媒体绑定或绕过摄影机控制冲突
+ok 122 - 文生视频不能隐含媒体绑定或绕过摄影机控制冲突
+  ---
+  duration_ms: 0.3745
+  type: 'test'
+  ...
+# Subtest: 无参考图的放宽不影响图生视频的首帧要求
+ok 123 - 无参考图的放宽不影响图生视频的首帧要求
+  ---
+  duration_ms: 0.2614
+  type: 'test'
+  ...
+# Subtest: 完整短片的每项资产和镜头都能找到独立正文
+ok 124 - 完整短片的每项资产和镜头都能找到独立正文
+  ---
+  duration_ms: 2.1419
+  type: 'test'
+  ...
+# Subtest: 完整短片的源对白、准确文本、字幕和成片时轴相互对应
+ok 125 - 完整短片的源对白、准确文本、字幕和成片时轴相互对应
+  ---
+  duration_ms: 2.2491
+  type: 'test'
+  ...
+# Subtest: 整板参考视频无需首尾帧且不冒充平台与媒体已核验
+ok 126 - 整板参考视频无需首尾帧且不冒充平台与媒体已核验
+  ---
+  duration_ms: 0.6496
+  type: 'test'
+  ...
+# Subtest: 分镜参考板角色拒绝非图像媒体
+ok 127 - 分镜参考板角色拒绝非图像媒体
+  ---
+  duration_ms: 0.5599
+  type: 'test'
+  ...
+# Subtest: 分镜板不冒充图生视频首帧或绕过模式参考要求
+ok 128 - 分镜板不冒充图生视频首帧或绕过模式参考要求
+  ---
+  duration_ms: 1.3539
+  type: 'test'
+  ...
+# Subtest: full review closes every role-shot pair without claiming media verification or mutating input
+ok 129 - full review closes every role-shot pair without claiming media verification or mutating input
+  ---
+  duration_ms: 3.879
+  type: 'test'
+  ...
+# Subtest: coverage rejects missing, duplicate, extra pairs and duplicate inventory IDs
+ok 130 - coverage rejects missing, duplicate, extra pairs and duplicate inventory IDs
+  ---
+  duration_ms: 1.6198
+  type: 'test'
+  ...
+# Subtest: focused review covers only explicitly selected perspectives and all shots
+ok 131 - focused review covers only explicitly selected perspectives and all shots
+  ---
+  duration_ms: 0.4595
+  type: 'test'
+  ...
+# Subtest: unknowns and revisions remain open even with complete coverage
+ok 132 - unknowns and revisions remain open even with complete coverage
+  ---
+  duration_ms: 1.7431
+  type: 'test'
+  ...
+# Subtest: not-applicable rows need an explanation and cannot yield an all-exempt pass
+ok 133 - not-applicable rows need an explanation and cannot yield an all-exempt pass
+  ---
+  duration_ms: 0.9177
+  type: 'test'
+  ...
+# Subtest: blank verdicts, unsupported fields and media claims fail instead of passing a marker check
+ok 134 - blank verdicts, unsupported fields and media claims fail instead of passing a marker check
+  ---
+  duration_ms: 1.1927
+  type: 'test'
+  ...
+# Subtest: prompt budget counts Unicode code points, has no universal cap and never changes copy
+ok 135 - prompt budget counts Unicode code points, has no universal cap and never changes copy
+  ---
+  duration_ms: 3.5289
+  type: 'test'
+  ...
+# Subtest: CLI distinguishes completed, unresolved and invalid worksheets without writes
+ok 136 - CLI distinguishes completed, unresolved and invalid worksheets without writes
+  ---
+  duration_ms: 567.3819
+  type: 'test'
+  ...
+# Subtest: 逐镜检查器提供中文帮助，并拒绝错误参数而不读取文件
+ok 137 - 逐镜检查器提供中文帮助，并拒绝错误参数而不读取文件
+  ---
+  duration_ms: 492.7561
+  type: 'test'
+  ...
+# Subtest: three-shot narrative handoff survives draft review, one-variable revision and CLI readback
+ok 138 - three-shot narrative handoff survives draft review, one-variable revision and CLI readback
+  ---
+  duration_ms: 322.1662
+  type: 'test'
+  ...
+# Subtest: CapabilityResolutionPlan rejects handfilled strong/pass/selected claims against a partial exact profile
+ok 139 - CapabilityResolutionPlan rejects handfilled strong/pass/selected claims against a partial exact profile
+  ---
+  duration_ms: 91.5812
+  type: 'test'
+  ...
+# Subtest: CapabilityResolutionPlan without exact source bodies passes local closure with explicit unresolved evidence
+ok 140 - CapabilityResolutionPlan without exact source bodies passes local closure with explicit unresolved evidence
+  ---
+  duration_ms: 39.8811
+  type: 'test'
+  ...
+# Subtest: CapabilityResolutionPlan public API rejects malformed registries and matching-hash profile summaries
+ok 141 - CapabilityResolutionPlan public API rejects malformed registries and matching-hash profile summaries
+  ---
+  duration_ms: 180.1839
+  type: 'test'
+  ...
+# Subtest: resolveExactArtifact verifies complete source body, stable JCS key order and leaves inputs unchanged
+ok 142 - resolveExactArtifact verifies complete source body, stable JCS key order and leaves inputs unchanged
+  ---
+  duration_ms: 41.1113
+  type: 'test'
+  ...
+# Subtest: resolveExactArtifact rejects document kind, ID, version and hash mismatches independently
+ok 143 - resolveExactArtifact rejects document kind, ID, version and hash mismatches independently
+  ---
+  duration_ms: 7.7509
+  type: 'test'
+  ...
+# Subtest: resolveExactArtifact treats absent exact binding as unavailable without asserting invalidity
+ok 144 - resolveExactArtifact treats absent exact binding as unavailable without asserting invalidity
+  ---
+  duration_ms: 2.1374
+  type: 'test'
+  ...
+# Subtest: resolveExactArtifact rejects malformed and nonarray registries, including unrelated malformed entries
+ok 145 - resolveExactArtifact rejects malformed and nonarray registries, including unrelated malformed entries
+  ---
+  duration_ms: 3.2529
+  type: 'test'
+  ...
+# Subtest: resolveExactArtifact rejects ambiguous duplicate registry bindings
+ok 146 - resolveExactArtifact rejects ambiguous duplicate registry bindings
+  ---
+  duration_ms: 3.9037
+  type: 'test'
+  ...
+# Subtest: resolveExactArtifact never accepts matching-hash summaries or missing source-schema validators
+ok 147 - resolveExactArtifact never accepts matching-hash summaries or missing source-schema validators
+  ---
+  duration_ms: 17.4428
+  type: 'test'
+  ...
+# Subtest: resolveExactArtifact catches failing and malformed source-schema callback results
+ok 148 - resolveExactArtifact catches failing and malformed source-schema callback results
+  ---
+  duration_ms: 13.8099
+  type: 'test'
+  ...
+# Subtest: resolveExactArtifact rejects malformed refs and never calls supplied object accessors
+ok 149 - resolveExactArtifact rejects malformed refs and never calls supplied object accessors
+  ---
+  duration_ms: 4.3589
+  type: 'test'
+  ...
+# Subtest: resolveExactArtifact requires own identity fields and rejects non-JSON documents without throwing
+ok 150 - resolveExactArtifact requires own identity fields and rejects non-JSON documents without throwing
+  ---
+  duration_ms: 4.8775
+  type: 'test'
+  ...
+# Subtest: supported source-kind IDs are explicit and ImagePrompt does not invent registry identity from shotId
+ok 151 - supported source-kind IDs are explicit and ImagePrompt does not invent registry identity from shotId
+  ---
+  duration_ms: 40.8836
+  type: 'test'
+  ...
+# Subtest: CapabilityResolution context rejects promoted partial support but preserves aligned review claims
+ok 152 - CapabilityResolution context rejects promoted partial support but preserves aligned review claims
+  ---
+  duration_ms: 77.6481
+  type: 'test'
+  ...
+# Subtest: CapabilityResolution context leaves absent profiles unverified and rejects supplied summaries
+ok 153 - CapabilityResolution context leaves absent profiles unverified and rejects supplied summaries
+  ---
+  duration_ms: 34.8971
+  type: 'test'
+  ...
+# Subtest: CapabilityResolution context treats undeclared capabilities and requested scopes as unknown
+ok 154 - CapabilityResolution context treats undeclared capabilities and requested scopes as unknown
+  ---
+  duration_ms: 49.5231
+  type: 'test'
+  ...
+# Subtest: CapabilityResolution context rejects duplicate source capability IDs rather than choosing one
+ok 155 - CapabilityResolution context rejects duplicate source capability IDs rather than choosing one
+  ---
+  duration_ms: 39.3708
+  type: 'test'
+  ...
+# Subtest: operation-wide input limits reject pass claims while bounded failed outcomes remain valid
+ok 156 - operation-wide input limits reject pass claims while bounded failed outcomes remain valid
+  ---
+  duration_ms: 31.6204
+  type: 'test'
+  ...
+# Subtest: total input count is not applied to every capability and output count is not subject count
+ok 157 - total input count is not applied to every capability and output count is not subject count
+  ---
+  duration_ms: 16.695
+  type: 'test'
+  ...
+# Subtest: omitted source capacities remain unknown without manufacturing a limit
+ok 158 - omitted source capacities remain unknown without manufacturing a limit
+  ---
+  duration_ms: 16.2207
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan keeps the existing complete baseline and single variable experiment
+ok 159 - PromptProjectionPlan keeps the existing complete baseline and single variable experiment
+  ---
+  duration_ms: 125.3579
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects copy text must come from its declared body and parameter tail
+ok 160 - PromptProjectionPlan rejects copy text must come from its declared body and parameter tail
+  ---
+  duration_ms: 100.4635
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects parameter rendering must preserve its structured value
+ok 161 - PromptProjectionPlan rejects parameter rendering must preserve its structured value
+  ---
+  duration_ms: 108.289
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects parameter ids cannot be duplicated
+ok 162 - PromptProjectionPlan rejects parameter ids cannot be duplicated
+  ---
+  duration_ms: 121.5189
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects rendered reference placeholders must belong to a binding
+ok 163 - PromptProjectionPlan rejects rendered reference placeholders must belong to a binding
+  ---
+  duration_ms: 94.0042
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects the rendered body must equal the declared adapted body
+ok 164 - PromptProjectionPlan rejects the rendered body must equal the declared adapted body
+  ---
+  duration_ms: 95.9698
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects parameter tail must come from ordered tokens
+ok 165 - PromptProjectionPlan rejects parameter tail must come from ordered tokens
+  ---
+  duration_ms: 82.7258
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects parameter order must be unique
+ok 166 - PromptProjectionPlan rejects parameter order must be unique
+  ---
+  duration_ms: 74.8983
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects known flag parameters cannot serialize false
+ok 167 - PromptProjectionPlan rejects known flag parameters cannot serialize false
+  ---
+  duration_ms: 66.1136
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects known flag parameters cannot serialize null
+ok 168 - PromptProjectionPlan rejects known flag parameters cannot serialize null
+  ---
+  duration_ms: 67.8173
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects known flags cannot serialize a number
+ok 169 - PromptProjectionPlan rejects known flags cannot serialize a number
+  ---
+  duration_ms: 65.0325
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects a known singleton parameter cannot be repeated
+ok 170 - PromptProjectionPlan rejects a known singleton parameter cannot be repeated
+  ---
+  duration_ms: 72.172
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects the copy separator must be one ASCII space
+ok 171 - PromptProjectionPlan rejects the copy separator must be one ASCII space
+  ---
+  duration_ms: 63.1506
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects reference bindings cannot duplicate ids
+ok 172 - PromptProjectionPlan rejects reference bindings cannot duplicate ids
+  ---
+  duration_ms: 64.1899
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects reference bindings cannot duplicate placeholders
+ok 173 - PromptProjectionPlan rejects reference bindings cannot duplicate placeholders
+  ---
+  duration_ms: 61.1795
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects rendered placeholder list cannot repeat a binding
+ok 174 - PromptProjectionPlan rejects rendered placeholder list cannot repeat a binding
+  ---
+  duration_ms: 56.5533
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects a declared binding must have a rendered placeholder
+ok 175 - PromptProjectionPlan rejects a declared binding must have a rendered placeholder
+  ---
+  duration_ms: 57.4482
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects reference-looking text cannot name an undeclared input
+ok 176 - PromptProjectionPlan rejects reference-looking text cannot name an undeclared input
+  ---
+  duration_ms: 60.7042
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects a returned profile code must be present
+ok 177 - PromptProjectionPlan rejects a returned profile code must be present
+  ---
+  duration_ms: 51.5323
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects a pending profile cannot claim a returned code
+ok 178 - PromptProjectionPlan rejects a pending profile cannot claim a returned code
+  ---
+  duration_ms: 56.5919
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects a profile with no applicable code cannot claim one
+ok 179 - PromptProjectionPlan rejects a profile with no applicable code cannot claim one
+  ---
+  duration_ms: 54.655
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects the experiment baseline id must resolve
+ok 180 - PromptProjectionPlan rejects the experiment baseline id must resolve
+  ---
+  duration_ms: 59.9283
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects experiment ids must be unique
+ok 181 - PromptProjectionPlan rejects experiment ids must be unique
+  ---
+  duration_ms: 57.6838
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects exactly one experiment baseline must exist
+ok 182 - PromptProjectionPlan rejects exactly one experiment baseline must exist
+  ---
+  duration_ms: 53.4496
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects a baseline cannot declare a changed variable
+ok 183 - PromptProjectionPlan rejects a baseline cannot declare a changed variable
+  ---
+  duration_ms: 53.9182
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects a test must name its changed variable
+ok 184 - PromptProjectionPlan rejects a test must name its changed variable
+  ---
+  duration_ms: 51.9266
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects a test cannot name a blank variable
+ok 185 - PromptProjectionPlan rejects a test cannot name a blank variable
+  ---
+  duration_ms: 49.2616
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects private local paths cannot enter adapted copy
+ok 186 - PromptProjectionPlan rejects private local paths cannot enter adapted copy
+  ---
+  duration_ms: 52.8495
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan rejects signed locators cannot enter adapted copy
+ok 187 - PromptProjectionPlan rejects signed locators cannot enter adapted copy
+  ---
+  duration_ms: 54.5076
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan preserves Chinese punctuation and Unicode code points
+ok 188 - PromptProjectionPlan preserves Chinese punctuation and Unicode code points
+  ---
+  duration_ms: 58.503
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan needs no trailing separator when there are no parameters
+ok 189 - PromptProjectionPlan needs no trailing separator when there are no parameters
+  ---
+  duration_ms: 57.4226
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan sorts tokens by order without changing input array order
+ok 190 - PromptProjectionPlan sorts tokens by order without changing input array order
+  ---
+  duration_ms: 56.4401
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan accepts a multi-value Midjourney string in one documented style reference token
+ok 191 - PromptProjectionPlan accepts a multi-value Midjourney string in one documented style reference token
+  ---
+  duration_ms: 50.6827
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan keeps unknown dialect repetition unverified without guessing its syntax
+ok 192 - PromptProjectionPlan keeps unknown dialect repetition unverified without guessing its syntax
+  ---
+  duration_ms: 53.7976
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan reports free-text single variable effect claims as unverified
+ok 193 - PromptProjectionPlan reports free-text single variable effect claims as unverified
+  ---
+  duration_ms: 56.8999
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan permits ordinary public URLs in visible-result prose
+ok 194 - PromptProjectionPlan permits ordinary public URLs in visible-result prose
+  ---
+  duration_ms: 55.2633
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan permits a returned exact profile code
+ok 195 - PromptProjectionPlan permits a returned exact profile code
+  ---
+  duration_ms: 57.9142
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan treats repeated opaque reference categories as unverified cardinality
+ok 196 - PromptProjectionPlan treats repeated opaque reference categories as unverified cardinality
+  ---
+  duration_ms: 53.6063
+  type: 'test'
+  ...
+# Subtest: the standalone projection check accepts deeply frozen input and only returns diagnostics
+ok 197 - the standalone projection check accepts deeply frozen input and only returns diagnostics
+  ---
+  duration_ms: 1.0875
+  type: 'test'
+  ...
+# Subtest: the standalone projection check guards provider handle HTTPS://private.example/a
+ok 198 - the standalone projection check guards provider handle HTTPS://private.example/a
+  ---
+  duration_ms: 0.4197
+  type: 'test'
+  ...
+# Subtest: the standalone projection check guards provider handle FILE:/private
+ok 199 - the standalone projection check guards provider handle FILE:/private
+  ---
+  duration_ms: 0.3022
+  type: 'test'
+  ...
+# Subtest: the standalone projection check guards provider handle C:\\Users\\ww\\portrait.png
+ok 200 - the standalone projection check guards provider handle C:\\Users\\ww\\portrait.png
+  ---
+  duration_ms: 0.2491
+  type: 'test'
+  ...
+# Subtest: the standalone projection check guards provider handle profile?id=123
+ok 201 - the standalone projection check guards provider handle profile?id=123
+  ---
+  duration_ms: 0.2325
+  type: 'test'
+  ...
+# Subtest: the standalone projection check guards provider handle profile\#123
+ok 202 - the standalone projection check guards provider handle profile\#123
+  ---
+  duration_ms: 0.2393
+  type: 'test'
+  ...
+# Subtest: unknown parameter names in a known dialect do not acquire guessed rendering or repetition rules
+ok 203 - unknown parameter names in a known dialect do not acquire guessed rendering or repetition rules
+  ---
+  duration_ms: 51.884
+  type: 'test'
+  ...
+# Subtest: a recognized parameter value cannot embed another flag in "16:9 --seed 99"
+ok 204 - a recognized parameter value cannot embed another flag in "16:9 --seed 99"
+  ---
+  duration_ms: 56.1899
+  type: 'test'
+  ...
+# Subtest: a recognized parameter value cannot embed another flag in "16:9\\t--future-shift 99"
+ok 205 - a recognized parameter value cannot embed another flag in "16:9\\t--future-shift 99"
+  ---
+  duration_ms: 43.8976
+  type: 'test'
+  ...
+# Subtest: experiment variant 0 cannot use an undeclared reference placeholder
+ok 206 - experiment variant 0 cannot use an undeclared reference placeholder
+  ---
+  duration_ms: 46.2566
+  type: 'test'
+  ...
+# Subtest: experiment variant 1 cannot use an undeclared reference placeholder
+ok 207 - experiment variant 1 cannot use an undeclared reference placeholder
+  ---
+  duration_ms: 48.5716
+  type: 'test'
+  ...
+# Subtest: plain multi-value exclusions remain one legitimate parameter string
+ok 208 - plain multi-value exclusions remain one legitimate parameter string
+  ---
+  duration_ms: 52.8926
+  type: 'test'
+  ...
+# Subtest: file URI scheme cannot enter adapter copy: file:/Users/ww/private/portrait.png
+ok 209 - file URI scheme cannot enter adapter copy: file:/Users/ww/private/portrait.png
+  ---
+  duration_ms: 62.4164
+  type: 'test'
+  ...
+# Subtest: file URI scheme cannot enter adapter variant: file:/Users/ww/private/portrait.png
+ok 210 - file URI scheme cannot enter adapter variant: file:/Users/ww/private/portrait.png
+  ---
+  duration_ms: 60.4826
+  type: 'test'
+  ...
+# Subtest: file URI scheme cannot enter adapter provider-code: file:/Users/ww/private/portrait.png
+ok 211 - file URI scheme cannot enter adapter provider-code: file:/Users/ww/private/portrait.png
+  ---
+  duration_ms: 60.9597
+  type: 'test'
+  ...
+# Subtest: file URI scheme cannot enter adapter copy: file:relative/private/portrait.png
+ok 212 - file URI scheme cannot enter adapter copy: file:relative/private/portrait.png
+  ---
+  duration_ms: 61.1454
+  type: 'test'
+  ...
+# Subtest: file URI scheme cannot enter adapter variant: file:relative/private/portrait.png
+ok 213 - file URI scheme cannot enter adapter variant: file:relative/private/portrait.png
+  ---
+  duration_ms: 56.9306
+  type: 'test'
+  ...
+# Subtest: file URI scheme cannot enter adapter provider-code: file:relative/private/portrait.png
+ok 214 - file URI scheme cannot enter adapter provider-code: file:relative/private/portrait.png
+  ---
+  duration_ms: 59.7697
+  type: 'test'
+  ...
+# Subtest: file URI scheme cannot enter adapter copy: FILE:relative/private/portrait.png
+ok 215 - file URI scheme cannot enter adapter copy: FILE:relative/private/portrait.png
+  ---
+  duration_ms: 60.3269
+  type: 'test'
+  ...
+# Subtest: file URI scheme cannot enter adapter variant: FILE:relative/private/portrait.png
+ok 216 - file URI scheme cannot enter adapter variant: FILE:relative/private/portrait.png
+  ---
+  duration_ms: 55.4099
+  type: 'test'
+  ...
+# Subtest: file URI scheme cannot enter adapter provider-code: FILE:relative/private/portrait.png
+ok 217 - file URI scheme cannot enter adapter provider-code: FILE:relative/private/portrait.png
+  ---
+  duration_ms: 73.7186
+  type: 'test'
+  ...
+# Subtest: invalid calendar declarations never produce a completed video declaration
+ok 218 - invalid calendar declarations never produce a completed video declaration
+  ---
+  duration_ms: 16.095
+  type: 'test'
+  ...
+# Subtest: valid leap dates and ordinary dates preserve declaration-only semantics
+ok 219 - valid leap dates and ordinary dates preserve declaration-only semantics
+  ---
+  duration_ms: 3.1035
+  type: 'test'
+  ...
+# Subtest: all worksheet CLIs reject duplicate keys and malformed scalar strings before validation
+ok 220 - all worksheet CLIs reject duplicate keys and malformed scalar strings before validation
+  ---
+  duration_ms: 1497.8029
+  type: 'test'
+  ...
+# Subtest: local links resolve Chinese, repeated, encoded and explicit anchors, excluding code and footnote prose
+ok 221 - local links resolve Chinese, repeated, encoded and explicit anchors, excluding code and footnote prose
+  ---
+  duration_ms: 35.453
+  type: 'test'
+  ...
+# Subtest: repository regression command ownership preserves release and source boundaries
+    # Subtest: CI runs the package-owned regression command
+    ok 1 - CI runs the package-owned regression command
+      ---
+      duration_ms: 14954.2052
+      type: 'test'
+      ...
+    # Subtest: reviewed regression paths can be reordered without changing coverage
+    ok 2 - reviewed regression paths can be reordered without changing coverage
+      ---
+      duration_ms: 15695.7829
+      type: 'test'
+      ...
+    # Subtest: rejects unregistered pretest before npm execution
+    ok 3 - rejects unregistered pretest before npm execution
+      ---
+      duration_ms: 1053.0074
+      type: 'test'
+      ...
+    # Subtest: rejects unregistered posttest before npm execution
+    ok 4 - rejects unregistered posttest before npm execution
+      ---
+      duration_ms: 1061.8295
+      type: 'test'
+      ...
+    # Subtest: rejects omitted regression
+    ok 5 - rejects omitted regression
+      ---
+      duration_ms: 1024.3975
+      type: 'test'
+      ...
+    # Subtest: rejects unregistered regression
+    ok 6 - rejects unregistered regression
+      ---
+      duration_ms: 1026.5002
+      type: 'test'
+      ...
+    # Subtest: rejects duplicate regression
+    ok 7 - rejects duplicate regression
+      ---
+      duration_ms: 1050.7993
+      type: 'test'
+      ...
+    # Subtest: rejects bundle smoke in ordinary regressions
+    ok 8 - rejects bundle smoke in ordinary regressions
+      ---
+      duration_ms: 987.9665
+      type: 'test'
+      ...
+    # Subtest: rejects shell suffix
+    ok 9 - rejects shell suffix
+      ---
+      duration_ms: 1007.9739
+      type: 'test'
+      ...
+    # Subtest: rejects extra spacing
+    ok 10 - rejects extra spacing
+      ---
+      duration_ms: 1038.0937
+      type: 'test'
+      ...
+    # Subtest: rejects non-test Node command
+    ok 11 - rejects non-test Node command
+      ---
+      duration_ms: 1004.1774
+      type: 'test'
+      ...
+    # Subtest: rejects unpinned checkout
+    ok 12 - rejects unpinned checkout
+      ---
+      duration_ms: 1052.2994
+      type: 'test'
+      ...
+    # Subtest: rejects unpinned Node setup
+    ok 13 - rejects unpinned Node setup
+      ---
+      duration_ms: 1032.1824
+      type: 'test'
+      ...
+    # Subtest: rejects write permissions
+    ok 14 - rejects write permissions
+      ---
+      duration_ms: 1039.8991
+      type: 'test'
+      ...
+    # Subtest: rejects release tag bypass
+    ok 15 - rejects release tag bypass
+      ---
+      duration_ms: 1057.9801
+      type: 'test'
+      ...
+    # Subtest: rejects source gate after npm lifecycle execution
+    ok 16 - rejects source gate after npm lifecycle execution
+      ---
+      duration_ms: 1075.5407
+      type: 'test'
+      ...
+    # Subtest: unregistered executable cannot join regressions through filesystem discovery
+    ok 17 - unregistered executable cannot join regressions through filesystem discovery
+      ---
+      duration_ms: 287.6051
+      type: 'test'
+      ...
+    1..17
+ok 222 - repository regression command ownership preserves release and source boundaries
+  ---
+  duration_ms: 51070.6401
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan accepts an exact manifest and preserves explicit caller motivation and Chinese detail
+ok 223 - ShotCompilerPlan accepts an exact manifest and preserves explicit caller motivation and Chinese detail
+  ---
+  duration_ms: 795.2279
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan rejects an unknown selected skill even with the exact JCS manifest supplied
+ok 224 - ShotCompilerPlan rejects an unknown selected skill even with the exact JCS manifest supplied
+  ---
+  duration_ms: 495.5943
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan rejects 900 beyond the exact manifest range despite matching displayed controls
+ok 225 - ShotCompilerPlan rejects 900 beyond the exact manifest range despite matching displayed controls
+  ---
+  duration_ms: 420.22
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan requires the selected skill version in the exact manifest
+ok 226 - ShotCompilerPlan requires the selected skill version in the exact manifest
+  ---
+  duration_ms: 425.9292
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan accepts inclusive numeric range endpoints without inventing step snapping
+    # Subtest: 0
+    ok 1 - 0
+      ---
+      duration_ms: 419.011
+      type: 'test'
+      ...
+    # Subtest: 1
+    ok 2 - 1
+      ---
+      duration_ms: 393.3589
+      type: 'test'
+      ...
+    # Subtest: 0.62
+    ok 3 - 0.62
+      ---
+      duration_ms: 470.0569
+      type: 'test'
+      ...
+    1..3
+ok 227 - ShotCompilerPlan accepts inclusive numeric range endpoints without inventing step snapping
+  ---
+  duration_ms: 1283.4611
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan rejects a value below the exact manifest minimum
+ok 228 - ShotCompilerPlan rejects a value below the exact manifest minimum
+  ---
+  duration_ms: 419.9567
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan consumes the declared parameter value types
+    # Subtest: number
+    ok 1 - number
+      ---
+      duration_ms: 829.6602
+      type: 'test'
+      ...
+    # Subtest: text
+    ok 2 - text
+      ---
+      duration_ms: 784.4702
+      type: 'test'
+      ...
+    # Subtest: boolean
+    ok 3 - boolean
+      ---
+      duration_ms: 780.0652
+      type: 'test'
+      ...
+    # Subtest: frame_count
+    ok 4 - frame_count
+      ---
+      duration_ms: 777.0217
+      type: 'test'
+      ...
+    # Subtest: enum
+    ok 5 - enum
+      ---
+      duration_ms: 778.1306
+      type: 'test'
+      ...
+    1..5
+ok 229 - ShotCompilerPlan consumes the declared parameter value types
+  ---
+  duration_ms: 3951.0779
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan rejects an undeclared parameter that is internally consistent
+ok 230 - ShotCompilerPlan rejects an undeclared parameter that is internally consistent
+  ---
+  duration_ms: 396.2891
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan requires an explicit resolved value for each declared parameter
+ok 231 - ShotCompilerPlan requires an explicit resolved value for each declared parameter
+  ---
+  duration_ms: 404.6978
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan keeps manifest_default values equal to their exact declared default
+ok 232 - ShotCompilerPlan keeps manifest_default values equal to their exact declared default
+  ---
+  duration_ms: 383.1875
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan accepts an explicit exact manifest default
+ok 233 - ShotCompilerPlan accepts an explicit exact manifest default
+  ---
+  duration_ms: 396.0005
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan enforces required binding slots
+ok 234 - ShotCompilerPlan enforces required binding slots
+  ---
+  duration_ms: 407.0135
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan rejects undeclared binding slots
+ok 235 - ShotCompilerPlan rejects undeclared binding slots
+  ---
+  duration_ms: 399.4595
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan enforces slot accepted contract kinds
+ok 236 - ShotCompilerPlan enforces slot accepted contract kinds
+  ---
+  duration_ms: 396.3514
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan enforces slot cardinality while preserving all local dependencies
+ok 237 - ShotCompilerPlan enforces slot cardinality while preserving all local dependencies
+  ---
+  duration_ms: 400.2756
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan accepts a declared multi-binding slot at its exact maximum
+ok 238 - ShotCompilerPlan accepts a declared multi-binding slot at its exact maximum
+  ---
+  duration_ms: 392.0842
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan resolves an alias only through the exact declared registry
+ok 239 - ShotCompilerPlan resolves an alias only through the exact declared registry
+  ---
+  duration_ms: 401.8644
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan rejects an alias absent from a supplied exact registry
+ok 240 - ShotCompilerPlan rejects an alias absent from a supplied exact registry
+  ---
+  duration_ms: 385.5867
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan rejects an alias whose exact target differs from resolved binding refs
+ok 241 - ShotCompilerPlan rejects an alias whose exact target differs from resolved binding refs
+  ---
+  duration_ms: 404.4696
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan rejects an alias whose declared role differs from its manifest slot
+ok 242 - ShotCompilerPlan rejects an alias whose declared role differs from its manifest slot
+  ---
+  duration_ms: 397.826
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan does not infer aliases by case folding
+ok 243 - ShotCompilerPlan does not infer aliases by case folding
+  ---
+  duration_ms: 410.0002
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan rejects duplicate source definitions even when object bodies differ
+    # Subtest: skillId
+    ok 1 - skillId
+      ---
+      duration_ms: 430.321
+      type: 'test'
+      ...
+    # Subtest: parameterId
+    ok 2 - parameterId
+      ---
+      duration_ms: 404.9076
+      type: 'test'
+      ...
+    # Subtest: slotId
+    ok 3 - slotId
+      ---
+      duration_ms: 393.6834
+      type: 'test'
+      ...
+    # Subtest: stepId
+    ok 4 - stepId
+      ---
+      duration_ms: 394.4697
+      type: 'test'
+      ...
+    # Subtest: groupId
+    ok 5 - groupId
+      ---
+      duration_ms: 355.4254
+      type: 'test'
+      ...
+    # Subtest: checkId
+    ok 6 - checkId
+      ---
+      duration_ms: 399.5605
+      type: 'test'
+      ...
+    1..6
+ok 244 - ShotCompilerPlan rejects duplicate source definitions even when object bodies differ
+  ---
+  duration_ms: 2380.4246
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan rejects duplicate source alias identities
+ok 245 - ShotCompilerPlan rejects duplicate source alias identities
+  ---
+  duration_ms: 416.525
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan keeps displayed control metadata on the selected manifest parameter
+    # Subtest: enforcement
+    ok 1 - enforcement
+      ---
+      duration_ms: 397.8413
+      type: 'test'
+      ...
+    # Subtest: target
+    ok 2 - target
+      ---
+      duration_ms: 395.4706
+      type: 'test'
+      ...
+    # Subtest: domain
+    ok 3 - domain
+      ---
+      duration_ms: 385.7479
+      type: 'test'
+      ...
+    1..3
+ok 246 - ShotCompilerPlan keeps displayed control metadata on the selected manifest parameter
+  ---
+  duration_ms: 1180.1016
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan requires each selected program step in its exact compile trace
+ok 247 - ShotCompilerPlan requires each selected program step in its exact compile trace
+  ---
+  duration_ms: 392.7829
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan rejects a locally consistent trace operation changed from the selected program
+ok 248 - ShotCompilerPlan rejects a locally consistent trace operation changed from the selected program
+  ---
+  duration_ms: 385.3767
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan rejects an extra parameter handoff outside the declared targets
+ok 249 - ShotCompilerPlan rejects an extra parameter handoff outside the declared targets
+  ---
+  duration_ms: 404.9042
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan rejects an undeclared handoff output even when its fields are caller constants
+ok 250 - ShotCompilerPlan rejects an undeclared handoff output even when its fields are caller constants
+  ---
+  duration_ms: 443.7585
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan reports unavailable manifest context without pretending it is verified
+ok 251 - ShotCompilerPlan reports unavailable manifest context without pretending it is verified
+  ---
+  duration_ms: 65.8581
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan reports unavailable exact alias registry context
+ok 252 - ShotCompilerPlan reports unavailable exact alias registry context
+  ---
+  duration_ms: 427.2282
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan rejects a supplied manifest body with the wrong JCS hash
+ok 253 - ShotCompilerPlan rejects a supplied manifest body with the wrong JCS hash
+  ---
+  duration_ms: 66.713
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan validates the full supplied source schema
+ok 254 - ShotCompilerPlan validates the full supplied source schema
+  ---
+  duration_ms: 423.648
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan rejects malformed or duplicate exact source registry bindings
+    # Subtest: malformed
+    ok 1 - malformed
+      ---
+      duration_ms: 69.1177
+      type: 'test'
+      ...
+    # Subtest: duplicate
+    ok 2 - duplicate
+      ---
+      duration_ms: 61.1131
+      type: 'test'
+      ...
+    1..2
+ok 255 - ShotCompilerPlan rejects malformed or duplicate exact source registry bindings
+  ---
+  duration_ms: 130.9195
+  type: 'test'
+  ...
+# Subtest: validateShotCompilerContext rejects contradictory complete source parameter definitions
+    # Subtest: default type
+    ok 1 - default type
+      ---
+      duration_ms: 326.4522
+      type: 'test'
+      ...
+    # Subtest: default range
+    ok 2 - default range
+      ---
+      duration_ms: 345.2717
+      type: 'test'
+      ...
+    # Subtest: reversed range
+    ok 3 - reversed range
+      ---
+      duration_ms: 373.5099
+      type: 'test'
+      ...
+    # Subtest: enum options
+    ok 4 - enum options
+      ---
+      duration_ms: 388.7074
+      type: 'test'
+      ...
+    # Subtest: program source
+    ok 5 - program source
+      ---
+      duration_ms: 352.9237
+      type: 'test'
+      ...
+    # Subtest: group source
+    ok 6 - group source
+      ---
+      duration_ms: 366.8239
+      type: 'test'
+      ...
+    # Subtest: output identity
+    ok 7 - output identity
+      ---
+      duration_ms: 366.2999
+      type: 'test'
+      ...
+    1..7
+ok 256 - validateShotCompilerContext rejects contradictory complete source parameter definitions
+  ---
+  duration_ms: 2524.1748
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan allows multiple declared parameter targets and preserves all handoff mappings
+ok 257 - ShotCompilerPlan allows multiple declared parameter targets and preserves all handoff mappings
+  ---
+  duration_ms: 438.7225
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan allows a manifest group to gather controls from a different parameter domain
+ok 258 - ShotCompilerPlan allows a manifest group to gather controls from a different parameter domain
+  ---
+  duration_ms: 437.5593
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan allows an omitted optional manifest binding slot
+ok 259 - ShotCompilerPlan allows an omitted optional manifest binding slot
+  ---
+  duration_ms: 491.1176
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan resolves NFC-equivalent aliases without modifying the hashed source or input
+ok 260 - ShotCompilerPlan resolves NFC-equivalent aliases without modifying the hashed source or input
+  ---
+  duration_ms: 466.8984
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan rejects contradictory alias declarations in an exact source registry
+    # Subtest: normalization
+    ok 1 - normalization
+      ---
+      duration_ms: 409.8594
+      type: 'test'
+      ...
+    # Subtest: NFC collision
+    ok 2 - NFC collision
+      ---
+      duration_ms: 427.2232
+      type: 'test'
+      ...
+    # Subtest: target kind scope
+    ok 3 - target kind scope
+      ---
+      duration_ms: 432.1639
+      type: 'test'
+      ...
+    # Subtest: extra binding ref
+    ok 4 - extra binding ref
+      ---
+      duration_ms: 455.1085
+      type: 'test'
+      ...
+    1..4
+ok 261 - ShotCompilerPlan rejects contradictory alias declarations in an exact source registry
+  ---
+  duration_ms: 1725.9186
+  type: 'test'
+  ...
+# Subtest: P1 sync is a zero-child no-op and plugin/leaf preserve the canonical profile
+ok 262 - P1 sync is a zero-child no-op and plugin/leaf preserve the canonical profile
+  ---
+  duration_ms: 50875.7525
+  type: 'test'
+  ...
+# Subtest: synthetic P2 sync, full plugin and professional leaf share one canonical authority
+    # Subtest: sibling dependency
+    ok 1 - sibling dependency
+      ---
+      duration_ms: 12982.7188
+      type: 'test'
+      ...
+    # Subtest: broken local fragment
+    ok 2 - broken local fragment
+      ---
+      duration_ms: 13171.8425
+      type: 'test'
+      ...
+    # Subtest: wrong identity
+    ok 3 - wrong identity
+      ---
+      duration_ms: 12691.4257
+      type: 'test'
+      ...
+    # Subtest: wrong default caller
+    ok 4 - wrong default caller
+      ---
+      duration_ms: 11171.6955
+      type: 'test'
+      ...
+    # Subtest: shared reference drift
+    ok 5 - shared reference drift
+      ---
+      duration_ms: 14749.8747
+      type: 'test'
+      ...
+    # Subtest: helper drift
+    ok 6 - helper drift
+      ---
+      duration_ms: 15667.503
+      type: 'test'
+      ...
+    # Subtest: schema hash drift
+    ok 7 - schema hash drift
+      ---
+      duration_ms: 13593.9601
+      type: 'test'
+      ...
+    # Subtest: index hash lie
+    ok 8 - index hash lie
+      ---
+      duration_ms: 11630.8138
+      type: 'test'
+      ...
+    # Subtest: internal capability cannot silently become an implicit user entry
+    ok 9 - internal capability cannot silently become an implicit user entry
+      ---
+      duration_ms: 3120.3536
+      type: 'test'
+      ...
+    # Subtest: the unified workflow entry must remain implicitly available
+    ok 10 - the unified workflow entry must remain implicitly available
+      ---
+      duration_ms: 1223.5208
+      type: 'test'
+      ...
+    # Subtest: missing schema, extra file and extra empty directory are rejected
+    ok 11 - missing schema, extra file and extra empty directory are rejected
+      ---
+      duration_ms: 24486.0158
+      type: 'test'
+      ...
+    # Subtest: a bundle cannot expand its whitelist with a catalog or unknown Skill
+    ok 12 - a bundle cannot expand its whitelist with a catalog or unknown Skill
+      ---
+      duration_ms: 16161.6375
+      type: 'test'
+      ...
+    # Subtest: stale child requires explicit sync and build keeps prior output on source failure
+    ok 13 - stale child requires explicit sync and build keeps prior output on source failure
+      ---
+      duration_ms: 23044.9301
+      type: 'test'
+      ...
+    # Subtest: sync refuses unknown file or empty directory before any write or deletion
+    ok 14 - sync refuses unknown file or empty directory before any write or deletion
+      ---
+      duration_ms: 6035.8503
+      type: 'test'
+      ...
+    # Subtest: authoring whitelist rejects extras, inactive roots and symbolic source entries
+    ok 15 - authoring whitelist rejects extras, inactive roots and symbolic source entries
+      ---
+      duration_ms: 9286.4426
+      type: 'test'
+      ...
+    # Subtest: author metadata cannot silently take the director identity
+    ok 16 - author metadata cannot silently take the director identity
+      ---
+      duration_ms: 6110.797
+      type: 'test'
+      ...
+    1..16
+ok 263 - synthetic P2 sync, full plugin and professional leaf share one canonical authority
+  ---
+  duration_ms: 274995.0055
+  type: 'test'
+  ...
+# Subtest: build and validate CLI reject duplicate, incomplete and unknown flags
+ok 264 - build and validate CLI reject duplicate, incomplete and unknown flags
+  ---
+  duration_ms: 722.9035
+  type: 'test'
+  ...
+# Subtest: a materialized synthetic P4 source resets to explicit P1/P2 fixture stages
+ok 265 - a materialized synthetic P4 source resets to explicit P1/P2 fixture stages
+  ---
+  duration_ms: 35593.3631
+  type: 'test'
+  ...
+# Subtest: production catalog preserves canonical authorities and derives its actual enabled owners
+ok 266 - production catalog preserves canonical authorities and derives its actual enabled owners
+  ---
+  duration_ms: 86.7274
+  type: 'test'
+  ...
+# Subtest: legal stages derive enabled target owners without registering another current owner table
+    # Subtest: stage 1
+    ok 1 - stage 1
+      ---
+      duration_ms: 50.8374
+      type: 'test'
+      ...
+    # Subtest: stage 2
+    ok 2 - stage 2
+      ---
+      duration_ms: 49.3265
+      type: 'test'
+      ...
+    # Subtest: stage 3
+    ok 3 - stage 3
+      ---
+      duration_ms: 52.1391
+      type: 'test'
+      ...
+    # Subtest: stage 4
+    ok 4 - stage 4
+      ---
+      duration_ms: 35.9275
+      type: 'test'
+      ...
+    1..4
+ok 267 - legal stages derive enabled target owners without registering another current owner table
+  ---
+  duration_ms: 214.8806
+  type: 'test'
+  ...
+# Subtest: catalog rejects unknown fields, identities, owner changes, and skipped stages
+    # Subtest: unknown catalog field
+    ok 1 - unknown catalog field
+      ---
+      duration_ms: 1.707
+      type: 'test'
+      ...
+    # Subtest: wrong format
+    ok 2 - wrong format
+      ---
+      duration_ms: 1.0527
+      type: 'test'
+      ...
+    # Subtest: unknown identity
+    ok 3 - unknown identity
+      ---
+      duration_ms: 1.1437
+      type: 'test'
+      ...
+    # Subtest: missing identity
+    ok 4 - missing identity
+      ---
+      duration_ms: 1.3097
+      type: 'test'
+      ...
+    # Subtest: unknown skill field
+    ok 5 - unknown skill field
+      ---
+      duration_ms: 1.1683
+      type: 'test'
+      ...
+    # Subtest: non boolean
+    ok 6 - non boolean
+      ---
+      duration_ms: 1.0123
+      type: 'test'
+      ...
+    # Subtest: disabled director
+    ok 7 - disabled director
+      ---
+      duration_ms: 0.6212
+      type: 'test'
+      ...
+    # Subtest: reference before platform
+    ok 8 - reference before platform
+      ---
+      duration_ms: 1.0013
+      type: 'test'
+      ...
+    # Subtest: review before reference
+    ok 9 - review before reference
+      ---
+      duration_ms: 1.2118
+      type: 'test'
+      ...
+    # Subtest: review before platform
+    ok 10 - review before platform
+      ---
+      duration_ms: 0.8388
+      type: 'test'
+      ...
+    # Subtest: missing kind
+    ok 11 - missing kind
+      ---
+      duration_ms: 2.0581
+      type: 'test'
+      ...
+    # Subtest: unknown kind
+    ok 12 - unknown kind
+      ---
+      duration_ms: 1.7539
+      type: 'test'
+      ...
+    # Subtest: unknown owner
+    ok 13 - unknown owner
+      ---
+      duration_ms: 1.4569
+      type: 'test'
+      ...
+    # Subtest: wrong projection owner
+    ok 14 - wrong projection owner
+      ---
+      duration_ms: 2.2627
+      type: 'test'
+      ...
+    # Subtest: wrong prompt owner
+    ok 15 - wrong prompt owner
+      ---
+      duration_ms: 1.5701
+      type: 'test'
+      ...
+    # Subtest: wrong production owner
+    ok 16 - wrong production owner
+      ---
+      duration_ms: 1.5587
+      type: 'test'
+      ...
+    # Subtest: wrong reference owner
+    ok 17 - wrong reference owner
+      ---
+      duration_ms: 1.5536
+      type: 'test'
+      ...
+    # Subtest: wrong review owner
+    ok 18 - wrong review owner
+      ---
+      duration_ms: 1.5417
+      type: 'test'
+      ...
+    1..18
+ok 268 - catalog rejects unknown fields, identities, owner changes, and skipped stages
+  ---
+  duration_ms: 29.187
+  type: 'test'
+  ...
+# Subtest: catalog requires unique and consistent roots across canonical routes and index
+    # Subtest: wrong namespace
+    ok 1 - wrong namespace
+      ---
+      duration_ms: 1.6019
+      type: 'test'
+      ...
+    # Subtest: missing root
+    ok 2 - missing root
+      ---
+      duration_ms: 0.9759
+      type: 'test'
+      ...
+    # Subtest: duplicate root
+    ok 3 - duplicate root
+      ---
+      duration_ms: 0.9977
+      type: 'test'
+      ...
+    # Subtest: unknown route
+    ok 4 - unknown route
+      ---
+      duration_ms: 1.2113
+      type: 'test'
+      ...
+    # Subtest: duplicate route owner
+    ok 5 - duplicate route owner
+      ---
+      duration_ms: 0.774
+      type: 'test'
+      ...
+    # Subtest: unrouted kind
+    ok 6 - unrouted kind
+      ---
+      duration_ms: 0.7778
+      type: 'test'
+      ...
+    # Subtest: unknown produced kind
+    ok 7 - unknown produced kind
+      ---
+      duration_ms: 0.7283
+      type: 'test'
+      ...
+    # Subtest: wrong lifecycle route
+    ok 8 - wrong lifecycle route
+      ---
+      duration_ms: 0.7242
+      type: 'test'
+      ...
+    # Subtest: duplicate index kind
+    ok 9 - duplicate index kind
+      ---
+      duration_ms: 1.6316
+      type: 'test'
+      ...
+    # Subtest: missing index kind
+    ok 10 - missing index kind
+      ---
+      duration_ms: 1.1195
+      type: 'test'
+      ...
+    # Subtest: unknown index kind
+    ok 11 - unknown index kind
+      ---
+      duration_ms: 0.7959
+      type: 'test'
+      ...
+    # Subtest: wrong index domain
+    ok 12 - wrong index domain
+      ---
+      duration_ms: 0.7151
+      type: 'test'
+      ...
+    # Subtest: support role as root
+    ok 13 - support role as root
+      ---
+      duration_ms: 0.7307
+      type: 'test'
+      ...
+    1..13
+ok 269 - catalog requires unique and consistent roots across canonical routes and index
+  ---
+  duration_ms: 15.0166
+  type: 'test'
+  ...
+# Subtest: strict catalog loading rejects duplicate JSON keys at every catalog level
+    # Subtest: top level
+    ok 1 - top level
+      ---
+      duration_ms: 48.4028
+      type: 'test'
+      ...
+    # Subtest: skill identity
+    ok 2 - skill identity
+      ---
+      duration_ms: 6.3572
+      type: 'test'
+      ...
+    # Subtest: enabled flag
+    ok 3 - enabled flag
+      ---
+      duration_ms: 8.8245
+      type: 'test'
+      ...
+    # Subtest: kind owner
+    ok 4 - kind owner
+      ---
+      duration_ms: 8.5856
+      type: 'test'
+      ...
+    1..4
+ok 270 - strict catalog loading rejects duplicate JSON keys at every catalog level
+  ---
+  duration_ms: 73.4993
+  type: 'test'
+  ...
+# Subtest: temporary catalogs load exact identities and reject filesystem-controlled catalog fields
+ok 271 - temporary catalogs load exact identities and reject filesystem-controlled catalog fields
+  ---
+  duration_ms: 13.0076
+  type: 'test'
+  ...
+# Subtest: P1 plugin remains 161 files with the original paths; director leaf contains 160 files
+ok 272 - P1 plugin remains 161 files with the original paths; director leaf contains 160 files
+  ---
+  duration_ms: 35.9356
+  type: 'test'
+  ...
+# Subtest: enabled specialists reuse all 159 core files and replace only their two authoring surfaces
+    # Subtest: stage 2
+    ok 1 - stage 2
+      ---
+      duration_ms: 47.0886
+      type: 'test'
+      ...
+    # Subtest: stage 3
+    ok 2 - stage 3
+      ---
+      duration_ms: 62.8274
+      type: 'test'
+      ...
+    # Subtest: stage 4
+    ok 3 - stage 4
+      ---
+      duration_ms: 69.6173
+      type: 'test'
+      ...
+    1..3
+ok 273 - enabled specialists reuse all 159 core files and replace only their two authoring surfaces
+  ---
+  duration_ms: 180.7958
+  type: 'test'
+  ...
+# Subtest: export plan does not discover or create authoring roots from disk
+ok 274 - export plan does not discover or create authoring roots from disk
+  ---
+  duration_ms: 30.5868
+  type: 'test'
+  ...
+# Subtest: export targets are explicit and disabled leaves cannot be built
+    # Subtest: disabled platform
+    ok 1 - disabled platform
+      ---
+      duration_ms: 6.3182
+      type: 'test'
+      ...
+    # Subtest: disabled reference
+    ok 2 - disabled reference
+      ---
+      duration_ms: 6.1768
+      type: 'test'
+      ...
+    # Subtest: disabled review
+    ok 3 - disabled review
+      ---
+      duration_ms: 6.5443
+      type: 'test'
+      ...
+    # Subtest: unknown name
+    ok 4 - unknown name
+      ---
+      duration_ms: 6.0524
+      type: 'test'
+      ...
+    # Subtest: missing leaf name
+    ok 5 - missing leaf name
+      ---
+      duration_ms: 6.0186
+      type: 'test'
+      ...
+    # Subtest: unknown target type
+    ok 6 - unknown target type
+      ---
+      duration_ms: 4.8115
+      type: 'test'
+      ...
+    # Subtest: extra plugin root
+    ok 7 - extra plugin root
+      ---
+      duration_ms: 4.9635
+      type: 'test'
+      ...
+    # Subtest: extra leaf root
+    ok 8 - extra leaf root
+      ---
+      duration_ms: 5.4568
+      type: 'test'
+      ...
+    1..8
+ok 275 - export targets are explicit and disabled leaves cannot be built
+  ---
+  duration_ms: 48.0246
+  type: 'test'
+  ...
+# Subtest: unreviewed, missing, duplicate, and colliding canonical inventory paths fail before export
+    # Subtest: extra file
+    ok 1 - extra file
+      ---
+      duration_ms: 6.6831
+      type: 'test'
+      ...
+    # Subtest: missing helper
+    ok 2 - missing helper
+      ---
+      duration_ms: 5.7078
+      type: 'test'
+      ...
+    # Subtest: duplicate destination
+    ok 3 - duplicate destination
+      ---
+      duration_ms: 3.4325
+      type: 'test'
+      ...
+    # Subtest: file case collision
+    ok 4 - file case collision
+      ---
+      duration_ms: 3.978
+      type: 'test'
+      ...
+    # Subtest: directory case collision
+    ok 5 - directory case collision
+      ---
+      duration_ms: 4.9215
+      type: 'test'
+      ...
+    # Subtest: file directory collision
+    ok 6 - file directory collision
+      ---
+      duration_ms: 6.2795
+      type: 'test'
+      ...
+    # Subtest: absolute path
+    ok 7 - absolute path
+      ---
+      duration_ms: 3.5936
+      type: 'test'
+      ...
+    # Subtest: parent escape
+    ok 8 - parent escape
+      ---
+      duration_ms: 4.3113
+      type: 'test'
+      ...
+    # Subtest: non normalized path
+    ok 9 - non normalized path
+      ---
+      duration_ms: 4.3701
+      type: 'test'
+      ...
+    # Subtest: Windows separators
+    ok 10 - Windows separators
+      ---
+      duration_ms: 4.4198
+      type: 'test'
+      ...
+    # Subtest: Windows drive
+    ok 11 - Windows drive
+      ---
+      duration_ms: 3.9621
+      type: 'test'
+      ...
+    # Subtest: Windows reserved name
+    ok 12 - Windows reserved name
+      ---
+      duration_ms: 4.4846
+      type: 'test'
+      ...
+    # Subtest: trailing dot
+    ok 13 - trailing dot
+      ---
+      duration_ms: 4.5193
+      type: 'test'
+      ...
+    # Subtest: alternate stream
+    ok 14 - alternate stream
+      ---
+      duration_ms: 4.9347
+      type: 'test'
+      ...
+    1..14
+ok 276 - unreviewed, missing, duplicate, and colliding canonical inventory paths fail before export
+  ---
+  duration_ms: 68.8695
+  type: 'test'
+  ...
+# Subtest: manifest paths and resource counts cannot silently expand or shrink the shared profile
+    # Subtest: missing reference
+    ok 1 - missing reference
+      ---
+      duration_ms: 6.7794
+      type: 'test'
+      ...
+    # Subtest: extra reference
+    ok 2 - extra reference
+      ---
+      duration_ms: 4.4002
+      type: 'test'
+      ...
+    # Subtest: missing support schema
+    ok 3 - missing support schema
+      ---
+      duration_ms: 4.1566
+      type: 'test'
+      ...
+    # Subtest: duplicate reference
+    ok 4 - duplicate reference
+      ---
+      duration_ms: 4.7632
+      type: 'test'
+      ...
+    # Subtest: duplicate schema
+    ok 5 - duplicate schema
+      ---
+      duration_ms: 5.5701
+      type: 'test'
+      ...
+    # Subtest: duplicate example
+    ok 6 - duplicate example
+      ---
+      duration_ms: 5.1146
+      type: 'test'
+      ...
+    # Subtest: reference escape
+    ok 7 - reference escape
+      ---
+      duration_ms: 4.8087
+      type: 'test'
+      ...
+    # Subtest: schema escape
+    ok 8 - schema escape
+      ---
+      duration_ms: 4.5957
+      type: 'test'
+      ...
+    # Subtest: example escape
+    ok 9 - example escape
+      ---
+      duration_ms: 5.2715
+      type: 'test'
+      ...
+    # Subtest: reference extension
+    ok 10 - reference extension
+      ---
+      duration_ms: 4.3154
+      type: 'test'
+      ...
+    # Subtest: schema directory
+    ok 11 - schema directory
+      ---
+      duration_ms: 4.8798
+      type: 'test'
+      ...
+    # Subtest: example directory
+    ok 12 - example directory
+      ---
+      duration_ms: 3.4228
+      type: 'test'
+      ...
+    # Subtest: reference case collision
+    ok 13 - reference case collision
+      ---
+      duration_ms: 3.9475
+      type: 'test'
+      ...
+    1..13
+ok 277 - manifest paths and resource counts cannot silently expand or shrink the shared profile
+  ---
+  duration_ms: 64.6176
+  type: 'test'
+  ...
+# Subtest: owner resolution and plans reject forged derived maps or a second canonical authority
+ok 278 - owner resolution and plans reject forged derived maps or a second canonical authority
+  ---
+  duration_ms: 11.8408
+  type: 'test'
+  ...
+# Subtest: TemporalSpec rejects out-of-duration, reversed and duplicate events on each independent track
+ok 279 - TemporalSpec rejects out-of-duration, reversed and duplicate events on each independent track
+  ---
+  duration_ms: 493.2658
+  type: 'test'
+  ...
+# Subtest: TemporalSpec preserves inclusive endpoints, simultaneous events and cross-track associations
+ok 280 - TemporalSpec preserves inclusive endpoints, simultaneous events and cross-track associations
+  ---
+  duration_ms: 50.1023
+  type: 'test'
+  ...
+# Subtest: SequenceRhythmSpec rejects the research counterexamples and single-shot self-transitions
+ok 281 - SequenceRhythmSpec rejects the research counterexamples and single-shot self-transitions
+  ---
+  duration_ms: 155.3383
+  type: 'test'
+  ...
+# Subtest: SequenceRhythmSpec enforces continuous inclusive windows and declared duration bounds
+ok 282 - SequenceRhythmSpec enforces continuous inclusive windows and declared duration bounds
+  ---
+  duration_ms: 259.4842
+  type: 'test'
+  ...
+# Subtest: SequenceRhythmSpec closes phases and requires real forward-adjacent transitions
+ok 283 - SequenceRhythmSpec closes phases and requires real forward-adjacent transitions
+  ---
+  duration_ms: 278.5812
+  type: 'test'
+  ...
+# Subtest: SequenceRhythmSpec allows one frame, rational broadcast rates and boundary breathing points
+ok 284 - SequenceRhythmSpec allows one frame, rational broadcast rates and boundary breathing points
+  ---
+  duration_ms: 61.145
+  type: 'test'
+  ...
+# Subtest: SequenceRhythmSpec verifies upstream coverage only with the exact full storyboard body
+ok 285 - SequenceRhythmSpec verifies upstream coverage only with the exact full storyboard body
+  ---
+  duration_ms: 517.8054
+  type: 'test'
+  ...
+# Subtest: SequenceRhythmSpec rejects missing, extra or reordered shots against exact upstream context
+ok 286 - SequenceRhythmSpec rejects missing, extra or reordered shots against exact upstream context
+  ---
+  duration_ms: 240.252
+  type: 'test'
+  ...
+# Subtest: PerformanceTimeline enforces its declared phase timing invariants
+ok 287 - PerformanceTimeline enforces its declared phase timing invariants
+  ---
+  duration_ms: 94.4007
+  type: 'test'
+  ...
+# Subtest: RepairPlan rejects contradictory approval, malformed paths and duplicate checks
+ok 288 - RepairPlan rejects contradictory approval, malformed paths and duplicate checks
+  ---
+  duration_ms: 116.7162
+  type: 'test'
+  ...
+# Subtest: RepairPlan checks exact registry hashes, findings, ownership and target pointers
+ok 289 - RepairPlan checks exact registry hashes, findings, ownership and target pointers
+  ---
+  duration_ms: 108.3831
+  type: 'test'
+  ...
+# Subtest: schema-valid target, review and repair survive file/CLI roundtrip and immutable revision
+ok 290 - schema-valid target, review and repair survive file/CLI roundtrip and immutable revision
+  ---
+  duration_ms: 478.8767
+  type: 'test'
+  ...
+# Subtest: contract equality is independent of object key order
+ok 291 - contract equality is independent of object key order
+  ---
+  duration_ms: 7.8851
+  type: 'test'
+  ...
+# Subtest: uniqueItems treats structurally equal objects as duplicates
+ok 292 - uniqueItems treats structurally equal objects as duplicates
+  ---
+  duration_ms: 8.9449
+  type: 'test'
+  ...
+# Subtest: required and additionalProperties use own JSON properties
+ok 293 - required and additionalProperties use own JSON properties
+  ---
+  duration_ms: 29.6813
+  type: 'test'
+  ...
+# Subtest: contract documents reject duplicate JSON object keys
+ok 294 - contract documents reject duplicate JSON object keys
+  ---
+  duration_ms: 5.5344
+  type: 'test'
+  ...
+# Subtest: contract formats count Unicode code points and require RFC3339 date-times
+ok 295 - contract formats count Unicode code points and require RFC3339 date-times
+  ---
+  duration_ms: 14.6381
+  type: 'test'
+  ...
+# Subtest: contract array items support false schemas and tuple tails
+ok 296 - contract array items support false schemas and tuple tails
+  ---
+  duration_ms: 15.1437
+  type: 'test'
+  ...
+# Subtest: not rejects forbidden required-property branches
+ok 297 - not rejects forbidden required-property branches
+  ---
+  duration_ms: 14.2008
+  type: 'test'
+  ...
+# Subtest: PromptProjectionPlan readiness requires truthful compatibility and rights gates
+ok 298 - PromptProjectionPlan readiness requires truthful compatibility and rights gates
+  ---
+  duration_ms: 341.8974
+  type: 'test'
+  ...
+# Subtest: exact projection license context rejects ready handoff against a blocked or expired source
+ok 299 - exact projection license context rejects ready handoff against a blocked or expired source
+  ---
+  duration_ms: 132.322
+  type: 'test'
+  ...
+# Subtest: exact projection context rejects explicit generation and reference rights blocks
+ok 300 - exact projection context rejects explicit generation and reference rights blocks
+  ---
+  duration_ms: 138.7413
+  type: 'test'
+  ...
+# Subtest: CapabilityResolutionPlan joins requirements, results, and selection truthfully
+ok 301 - CapabilityResolutionPlan joins requirements, results, and selection truthfully
+  ---
+  duration_ms: 144.8163
+  type: 'test'
+  ...
+# Subtest: CapabilityResolutionPlan cannot advance failed candidates or invent fallbacks
+ok 302 - CapabilityResolutionPlan cannot advance failed candidates or invent fallbacks
+  ---
+  duration_ms: 156.2532
+  type: 'test'
+  ...
+# Subtest: ShotCompilerPlan keeps displayed controls and planned handoffs on the same exact inputs
+ok 303 - ShotCompilerPlan keeps displayed controls and planned handoffs on the same exact inputs
+  ---
+  duration_ms: 955.1599
+  type: 'test'
+  ...
+# Subtest: invalid optional evaluation contexts produce diagnostics instead of throwing
+ok 304 - invalid optional evaluation contexts produce diagnostics instead of throwing
+  ---
+  duration_ms: 10.2854
+  type: 'test'
+  ...
+# Subtest: the pure returned-audio helper rejects invalid workbook inputs without throwing
+ok 305 - the pure returned-audio helper rejects invalid workbook inputs without throwing
+  ---
+  duration_ms: 0.6021
+  type: 'test'
+  ...
+# Subtest: the pure returned-audio helper rejects malformed node results without throwing
+ok 306 - the pure returned-audio helper rejects malformed node results without throwing
+  ---
+  duration_ms: 0.5908
+  type: 'test'
+  ...
+# Subtest: an omitted evaluation date warns without changing the legacy completed declaration
+ok 307 - an omitted evaluation date warns without changing the legacy completed declaration
+  ---
+  duration_ms: 1.082
+  type: 'test'
+  ...
+# Subtest: explicit invalid evaluation calendar dates are rejected
+ok 308 - explicit invalid evaluation calendar dates are rejected
+  ---
+  duration_ms: 4.8524
+  type: 'test'
+  ...
+# Subtest: each checkedAt declaration is compared against the caller's evaluation date
+ok 309 - each checkedAt declaration is compared against the caller's evaluation date
+  ---
+  duration_ms: 0.408
+  type: 'test'
+  ...
+# Subtest: old declarations never autoexpire and explicit equality is allowed
+ok 310 - old declarations never autoexpire and explicit equality is allowed
+  ---
+  duration_ms: 0.5811
+  type: 'test'
+  ...
+# Subtest: explicit model-version mismatches cannot reuse a policy from another version
+ok 311 - explicit model-version mismatches cannot reuse a policy from another version
+  ---
+  duration_ms: 0.9453
+  type: 'test'
+  ...
+# Subtest: matching explicit model versions remain declarations and preserve completed fixtures
+ok 312 - matching explicit model versions remain declarations and preserve completed fixtures
+  ---
+  duration_ms: 2.6016
+  type: 'test'
+  ...
+# Subtest: one-sided model versions warn without inferring the missing version or adding pending
+ok 313 - one-sided model versions warn without inferring the missing version or adding pending
+  ---
+  duration_ms: 1.5577
+  type: 'test'
+  ...
+# Subtest: malformed supplied model versions produce structured diagnostics
+ok 314 - malformed supplied model versions produce structured diagnostics
+  ---
+  duration_ms: 1.3994
+  type: 'test'
+  ...
+# Subtest: a missing evaluation date never compares against a hidden system clock
+ok 315 - a missing evaluation date never compares against a hidden system clock
+  ---
+  duration_ms: 0.395
+  type: 'test'
+  ...
+# Subtest: the video CLI accepts an explicit evaluation date while preserving its input
+ok 316 - the video CLI accepts an explicit evaluation date while preserving its input
+  ---
+  duration_ms: 243.0408
+  type: 'test'
+  ...
+# Subtest: declared returned duration yields frame guidance without verifying the measurement or media
+ok 317 - declared returned duration yields frame guidance without verifying the measurement or media
+  ---
+  duration_ms: 2.5573
+  type: 'test'
+  ...
+# Subtest: a spoken take longer than its adopted cue is rejected instead of sped up
+ok 318 - a spoken take longer than its adopted cue is rejected instead of sped up
+  ---
+  duration_ms: 0.6267
+  type: 'test'
+  ...
+# Subtest: an overlong declared take proposes the minimum frame count without changing the cue or text
+ok 319 - an overlong declared take proposes the minimum frame count without changing the cue or text
+  ---
+  duration_ms: 0.8542
+  type: 'test'
+  ...
+# Subtest: returned duration fit uses exact rational fps at the one-millisecond boundary
+ok 320 - returned duration fit uses exact rational fps at the one-millisecond boundary
+  ---
+  duration_ms: 0.638
+  type: 'test'
+  ...
+# Subtest: a planned cue window cannot masquerade as a measured returned duration
+ok 321 - a planned cue window cannot masquerade as a measured returned duration
+  ---
+  duration_ms: 1.2294
+  type: 'test'
+  ...
+# Subtest: a returned duration needs declared measurement provenance
+ok 322 - a returned duration needs declared measurement provenance
+  ---
+  duration_ms: 0.4596
+  type: 'test'
+  ...
+# Subtest: provider, local probe and user duration declarations all remain measurement-unverified
+ok 323 - provider, local probe and user duration declarations all remain measurement-unverified
+  ---
+  duration_ms: 0.6705
+  type: 'test'
+  ...
+# Subtest: an output video needs an explicit usable audio-track declaration
+ok 324 - an output video needs an explicit usable audio-track declaration
+  ---
+  duration_ms: 0.3121
+  type: 'test'
+  ...
+# Subtest: an explicitly scoped returned video audio track is a permitted declaration
+ok 325 - an explicitly scoped returned video audio track is a permitted declaration
+  ---
+  duration_ms: 0.3321
+  type: 'test'
+  ...
+# Subtest: returned sources need source, version and candidate identity
+ok 326 - returned sources need source, version and candidate identity
+  ---
+  duration_ms: 0.2872
+  type: 'test'
+  ...
+# Subtest: returned duration declarations require positive safe integer milliseconds
+ok 327 - returned duration declarations require positive safe integer milliseconds
+  ---
+  duration_ms: 0.8041
+  type: 'test'
+  ...
+# Subtest: full use cannot silently narrow the selected source interval
+ok 328 - full use cannot silently narrow the selected source interval
+  ---
+  duration_ms: 0.3277
+  type: 'test'
+  ...
+# Subtest: a returned source interval cannot exceed its declared duration
+ok 329 - a returned source interval cannot exceed its declared duration
+  ---
+  duration_ms: 0.286
+  type: 'test'
+  ...
+# Subtest: a returned source interval is half-open and must have positive length
+ok 330 - a returned source interval is half-open and must have positive length
+  ---
+  duration_ms: 0.2717
+  type: 'test'
+  ...
+# Subtest: returned bindings must resolve an existing node
+ok 331 - returned bindings must resolve an existing node
+  ---
+  duration_ms: 0.2648
+  type: 'test'
+  ...
+# Subtest: returned bindings must resolve the cue within that exact node
+ok 332 - returned bindings must resolve the cue within that exact node
+  ---
+  duration_ms: 0.3282
+  type: 'test'
+  ...
+# Subtest: returned audio cannot bind to a picture action cue
+ok 333 - returned audio cannot bind to a picture action cue
+  ---
+  duration_ms: 0.4384
+  type: 'test'
+  ...
+# Subtest: sync source anchors cannot lie at the excluded source end
+ok 334 - sync source anchors cannot lie at the excluded source end
+  ---
+  duration_ms: 0.3198
+  type: 'test'
+  ...
+# Subtest: sync target anchors cannot lie at the excluded cue end
+ok 335 - sync target anchors cannot lie at the excluded cue end
+  ---
+  duration_ms: 0.2792
+  type: 'test'
+  ...
+# Subtest: sync anchor placement cannot move the returned selection outside the cue
+ok 336 - sync anchor placement cannot move the returned selection outside the cue
+  ---
+  duration_ms: 0.3432
+  type: 'test'
+  ...
+# Subtest: matching interior sync anchors retain the exact full source placement
+ok 337 - matching interior sync anchors retain the exact full source placement
+  ---
+  duration_ms: 0.3162
+  type: 'test'
+  ...
+# Subtest: an explicitly scoped sound bridge can use declared generation handles
+ok 338 - an explicitly scoped sound bridge can use declared generation handles
+  ---
+  duration_ms: 0.3465
+  type: 'test'
+  ...
+# Subtest: return IDs are unique across declared returned sources
+ok 339 - return IDs are unique across declared returned sources
+  ---
+  duration_ms: 0.437
+  type: 'test'
+  ...
+# Subtest: binding IDs are unique across adopted source mappings
+ok 340 - binding IDs are unique across adopted source mappings
+  ---
+  duration_ms: 0.364
+  type: 'test'
+  ...
+# Subtest: an identical adopted mapping cannot be repeated under a different binding ID
+ok 341 - an identical adopted mapping cannot be repeated under a different binding ID
+  ---
+  duration_ms: 0.3488
+  type: 'test'
+  ...
+# Subtest: new return and binding IDs cannot disguise an identical adopted source mapping
+ok 342 - new return and binding IDs cannot disguise an identical adopted source mapping
+  ---
+  duration_ms: 0.3838
+  type: 'test'
+  ...
+# Subtest: spoken excerpts require explicit scoped authorization
+ok 343 - spoken excerpts require explicit scoped authorization
+  ---
+  duration_ms: 0.3032
+  type: 'test'
+  ...
+# Subtest: a declared authorized spoken excerpt stays metadata-only and preserves exact dialogue
+ok 344 - a declared authorized spoken excerpt stays metadata-only and preserves exact dialogue
+  ---
+  duration_ms: 0.6806
+  type: 'test'
+  ...
+# Subtest: spoken dialogue cannot be looped to fill its cue
+ok 345 - spoken dialogue cannot be looped to fill its cue
+  ---
+  duration_ms: 0.3291
+  type: 'test'
+  ...
+# Subtest: ambient excerpts and explicit loops are allowed without speech-cropping authority
+ok 346 - ambient excerpts and explicit loops are allowed without speech-cropping authority
+  ---
+  duration_ms: 0.5283
+  type: 'test'
+  ...
+# Subtest: an explicit ambient loop may begin at an interior declared source phase
+ok 347 - an explicit ambient loop may begin at an interior declared source phase
+  ---
+  duration_ms: 0.727
+  type: 'test'
+  ...
+# Subtest: optional returned-audio data must be an array when supplied
+ok 348 - optional returned-audio data must be an array when supplied
+  ---
+  duration_ms: 0.4012
+  type: 'test'
+  ...
+# Subtest: a shared returned clip can explicitly map to multiple cues without a universal asset ban
+ok 349 - a shared returned clip can explicitly map to multiple cues without a universal asset ban
+  ---
+  duration_ms: 0.7994
+  type: 'test'
+  ...
+# Subtest: the same immutable returned source cannot claim conflicting total durations
+ok 350 - the same immutable returned source cannot claim conflicting total durations
+  ---
+  duration_ms: 0.6922
+  type: 'test'
+  ...
+# Subtest: consistent metadata may repeat an immutable source identity for explicit distinct cues
+ok 351 - consistent metadata may repeat an immutable source identity for explicit distinct cues
+  ---
+  duration_ms: 0.7792
+  type: 'test'
+  ...
+# Subtest: ordinary workbooks do not require an audio return for every video node
+ok 352 - ordinary workbooks do not require an audio return for every video node
+  ---
+  duration_ms: 0.4949
+  type: 'test'
+  ...
+# Subtest: input audio reference declarations never imply that output audio was returned
+ok 353 - input audio reference declarations never imply that output audio was returned
+  ---
+  duration_ms: 0.7355
+  type: 'test'
+  ...
+# Subtest: explicit block pairing enforces ordered completeness inside its declared scope
+ok 354 - explicit block pairing enforces ordered completeness inside its declared scope
+  ---
+  duration_ms: 0.8712
+  type: 'test'
+  ...
+# Subtest: explicit block pairing rejects a binding assigned to the wrong declared block
+ok 355 - explicit block pairing rejects a binding assigned to the wrong declared block
+  ---
+  duration_ms: 0.5171
+  type: 'test'
+  ...
+# Subtest: declared pairing scope order is authoritative and independent of ordinary node array order
+ok 356 - declared pairing scope order is authoritative and independent of ordinary node array order
+  ---
+  duration_ms: 0.4542
+  type: 'test'
+  ...
+# Subtest: explicit block pairing cannot reuse a binding ID twice
+ok 357 - explicit block pairing cannot reuse a binding ID twice
+  ---
+  duration_ms: 0.4161
+  type: 'test'
+  ...
+# Subtest: explicit block pairing cannot name an absent adopted binding
+ok 358 - explicit block pairing cannot name an absent adopted binding
+  ---
+  duration_ms: 0.5965
+  type: 'test'
+  ...
+# Subtest: explicit block pairing cannot repeat or invent a scope node
+ok 359 - explicit block pairing cannot repeat or invent a scope node
+  ---
+  duration_ms: 0.7688
+  type: 'test'
+  ...
+# Subtest: explicit narration block pairing rejects an ambient binding as its narration
+ok 360 - explicit narration block pairing rejects an ambient binding as its narration
+  ---
+  duration_ms: 0.4662
+  type: 'test'
+  ...
+# Subtest: explicit narration block scope cannot hide a second adopted spoken binding
+ok 361 - explicit narration block scope cannot hide a second adopted spoken binding
+  ---
+  duration_ms: 0.5178
+  type: 'test'
+  ...
+# Subtest: explicit narration block pairing still allows a shared ambient layer
+ok 362 - explicit narration block pairing still allows a shared ambient layer
+  ---
+  duration_ms: 0.636
+  type: 'test'
+  ...
+1..362
+# tests 502
+# suites 0
+# pass 502
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 362694.8523

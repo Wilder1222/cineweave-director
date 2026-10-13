@@ -1,0 +1,19 @@
+{
+  "totalFrames": 192,
+  "shots": [
+    {
+      "endFrame": 96,
+      "startFrame": 0,
+      "id": "REV-S01"
+    },
+    {
+      "endFrame": 192,
+      "startFrame": 96,
+      "id": "REV-S02"
+    }
+  ],
+  "frameRate": {
+    "numerator": 24,
+    "denominator": 1
+  }
+}

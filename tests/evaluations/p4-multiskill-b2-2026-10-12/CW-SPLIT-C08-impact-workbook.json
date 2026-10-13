@@ -1,0 +1,89 @@
+{
+  "format": "cineweave-change-impact",
+  "canonical": false,
+  "artifacts": [
+    {
+      "id": "REV-S02.direction",
+      "revision": 1,
+      "dependencyCoverage": "complete"
+    },
+    {
+      "id": "REV-G",
+      "revision": 1,
+      "dependencyCoverage": "complete"
+    },
+    {
+      "id": "REV-M",
+      "revision": 1,
+      "dependencyCoverage": "complete"
+    },
+    {
+      "id": "REV-P",
+      "revision": 1,
+      "dependencyCoverage": "complete"
+    },
+    {
+      "id": "REV-S01.locked",
+      "revision": 1,
+      "dependencyCoverage": "complete"
+    },
+    {
+      "id": "REV-S01-to-REV-S02.continuity",
+      "revision": 1,
+      "dependencyCoverage": "complete",
+      "validity": "needs_review"
+    },
+    {
+      "id": "REV.sound-intent",
+      "revision": 1,
+      "dependencyCoverage": "complete"
+    }
+  ],
+  "dependencies": [
+    {
+      "consumer": "REV-G",
+      "source": "REV-S02.direction",
+      "sourceRevision": 1,
+      "paths": [
+        "/cameraPosition"
+      ]
+    },
+    {
+      "consumer": "REV-M",
+      "source": "REV-S02.direction",
+      "sourceRevision": 1,
+      "paths": [
+        "/cameraPosition"
+      ]
+    },
+    {
+      "consumer": "REV-P",
+      "source": "REV-M",
+      "sourceRevision": 1,
+      "paths": [
+        "/REV-S02"
+      ]
+    },
+    {
+      "consumer": "REV-S01-to-REV-S02.continuity",
+      "source": "REV-S02.direction",
+      "sourceRevision": 1,
+      "paths": [
+        "/cameraPosition"
+      ]
+    }
+  ],
+  "changes": [
+    {
+      "source": "REV-S02.direction",
+      "fromRevision": 1,
+      "toRevision": 2,
+      "paths": [
+        "/cameraPosition"
+      ],
+      "reason": "用户明确授权仅把REV-S02桌南侧偏西略俯改为桌南侧偏东略俯；其他创作事实锁定，复查相邻连续性。",
+      "before": "桌南侧偏西略俯",
+      "after": "桌南侧偏东略俯"
+    }
+  ]
+}

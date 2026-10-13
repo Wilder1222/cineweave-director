@@ -4,6 +4,7 @@ import { readFileSync } from "node:fs";
 import { resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { parseJsonStrict } from "./parse-json.mjs";
+import { validateAudioReturns } from "./check-audio-returns.mjs";
 
 export const FORMAT = "cineweave-video-workbook/v1";
 export const NODE_TAGS = Object.freeze({
@@ -39,6 +40,7 @@ const TRACKS = new Set(["subject", "camera", "focus", "environment", "light", "v
 const issue = (code, message, nodeId = null) => ({ code, message, nodeId });
 const own = (x, k) => Object.hasOwn(x, k);
 const plain = (x) => x !== null && typeof x === "object" && !Array.isArray(x);
+const record = (x) => plain(x) && [Object.prototype, null].includes(Object.getPrototypeOf(x));
 const text = (x) => typeof x === "string" && x.trim().length > 0;
 const integer = (x, positive = false) => Number.isSafeInteger(x) && (positive ? x > 0 : x >= 0);
 // Calendar validity only; a well-formed declaration is not external evidence.
@@ -145,11 +147,20 @@ export function planTiming(timing, frameRate, durationPolicy = null) {
   } catch (error) { return { valid: false, errors: [issue("ARITHMETIC_RANGE", error.message)], warnings }; }
 }
 
-export function validateVideoWorkbook(book) {
+export function validateVideoWorkbook(book, options = {}) {
   const errors = [], warnings = [], pending = [], nodeResults = [];
   const add = (list, code, message, id = null) => list.push(issue(code, message, id));
-  if (!plain(book) || book.format !== FORMAT || !Array.isArray(book.nodes) || !book.nodes.length)
-    return { valid: false, errors: [issue("WORKBOOK", `Use ${FORMAT} with a nonempty nodes array`)], warnings, pending, nodes: [], mediaVerified: false, providerExecution: false };
+  const validOptions = record(options), evaluationDate = validOptions ? options.evaluationDate : undefined;
+  if (!validOptions) add(errors, "EVALUATION_OPTIONS", "Optional evaluation context must be a record with an optional evaluationDate");
+  if (!plain(book) || book.format !== FORMAT || !Array.isArray(book.nodes) || !book.nodes.length) {
+    add(errors, "WORKBOOK", `Use ${FORMAT} with a nonempty nodes array`);
+    return { valid: false, errors, warnings, pending, nodes: [], audioReturnChecks: [],
+      capabilityVerified: false, measurementVerified: false, mediaVerified: false, providerExecution: false };
+  }
+  const hasEvaluationDate = evaluationDate !== undefined;
+  const validEvaluationDate = hasEvaluationDate && calendarDate(evaluationDate);
+  if (validOptions && !hasEvaluationDate) add(warnings, "DATE_COMPARISON_UNVERIFIED", "Supply an explicit evaluationDate to compare checkedAt declarations; no system clock was read");
+  else if (hasEvaluationDate && !validEvaluationDate) add(errors, "EVALUATION_DATE", "evaluationDate must be a valid calendar date YYYY-MM-DD");
   if (own(book, "kind") || own(book, "contractVersion")) add(errors, "NONCANONICAL", "This worksheet is not a canonical root contract");
   const ids = new Set();
   for (const node of book.nodes) {
@@ -161,6 +172,11 @@ export function validateVideoWorkbook(book) {
   for (const node of book.nodes) {
     if (!plain(node) || !text(node.id)) continue;
     const id = node.id;
+    if (validEvaluationDate) for (const field of ["capability", "durationPolicy", "referenceLimits"]) {
+      const declaration = node[field];
+      if (plain(declaration) && calendarDate(declaration.checkedAt) && declaration.checkedAt > evaluationDate)
+        add(errors, "FUTURE_CHECK_DATE", `${field}.checkedAt ${declaration.checkedAt} is after evaluationDate ${evaluationDate}`, id);
+    }
     if (!own(NODE_TAGS, node.type ?? "")) { add(errors, "NODE_TYPE", "Unknown node type", id); continue; }
     const parsed = parseTaggedPrompt(node.prompt);
     errors.push(...parsed.errors.map((e) => ({ ...e, nodeId: id })));
@@ -203,12 +219,23 @@ export function validateVideoWorkbook(book) {
         if (Array.isArray(refs) && refs.filter((r) => Array.isArray(r?.roles) && r.roles.includes(role)).length > 1) add(errors, "CONFLICTING_ANCHORS", `More than one ${role} assignment`, id);
       }
       const capability = node.capability;
+      const capabilityVersionSupplied = plain(capability) && own(capability, "modelVersion");
+      const capabilityVersionValid = capabilityVersionSupplied && text(capability.modelVersion);
+      if (capabilityVersionSupplied && !capabilityVersionValid) add(errors, "MODEL_VERSION_INVALID", "capability.modelVersion must be a nonempty string when supplied", id);
       if (!plain(capability) || !["platform", "model", "surface", "evidence"].every((k) => text(capability[k])) || !calendarDate(capability.checkedAt) || capability.mode !== VIDEO_MODES[node.type])
         add(pending, "CAPABILITY_SCOPE", "Resolve platform/model/surface/mode and dated evidence separately", id);
       if (capability?.status === "unsupported") add(errors, "UNSUPPORTED_MODE", "Selected surface explicitly does not support this mode", id);
       else if (capability?.status !== "documented") add(pending, "MODE_UNKNOWN", "Mode support remains unresolved or a fixture", id);
       // Keep duration/reference declarations tied to the selected model and surface.
       for (const [label, declaration] of [["DURATION", node.durationPolicy], ["REFERENCE", node.referenceLimits]]) {
+        const versionScope = plain(declaration) ? declaration.scope : undefined;
+        const scopeVersionSupplied = plain(versionScope) && own(versionScope, "modelVersion");
+        const scopeVersionValid = scopeVersionSupplied && text(versionScope.modelVersion);
+        if (scopeVersionSupplied && !scopeVersionValid) add(errors, "MODEL_VERSION_INVALID", `${label.toLowerCase()} scope.modelVersion must be a nonempty string when supplied`, id);
+        if (capabilityVersionValid && scopeVersionValid) {
+          if (capability.modelVersion !== versionScope.modelVersion) add(errors, `${label}_VERSION_MISMATCH`, "Policy modelVersion differs from the selected capability declaration", id);
+        } else if (capabilityVersionValid || scopeVersionValid)
+          add(warnings, "VERSION_COMPARISON_UNVERIFIED", `${label.toLowerCase()} modelVersion comparison is one-sided; supply both exact versions without inferring the missing value`, id);
         if (!declaration || declaration.status === "unknown") continue;
         const scope = declaration.scope;
         if (!plain(scope) || !["platform", "model", "surface", "mode"].every((k) => text(scope[k])))
@@ -284,10 +311,12 @@ export function validateVideoWorkbook(book) {
     visiting.delete(id); visited.add(id);
   }
   for (const id of ids) visit(id);
-  return { valid: errors.length === 0, errors, warnings, pending, nodes: nodeResults,
+  const audio = validateAudioReturns(book, nodeResults);
+  errors.push(...audio.errors); warnings.push(...audio.warnings);
+  return { valid: errors.length === 0, errors, warnings, pending, nodes: nodeResults, audioReturnChecks: audio.checks,
     declarationComplete: errors.length === 0 && pending.length === 0,
-    capabilityVerified: false, mediaVerified: false, providerExecution: false,
-    scope: "Worksheet syntax, declared bindings and exact timing arithmetic only. No capability, rights, semantic, media or platform-import verification." };
+    capabilityVerified: false, measurementVerified: false, mediaVerified: false, providerExecution: false,
+    scope: "Worksheet syntax, declared bindings, caller-supplied date comparisons and exact timing arithmetic only. Returned duration, provenance and authorization are declarations. No capability, consent, measurement, semantic, media or platform-import verification." };
 }
 
 /** 中文 CLI 展示层：保留原始返回值和稳定错误码，不修改输入结果。 */
@@ -357,7 +386,47 @@ export function withChineseVideoSummary(result) {
     "SPEECH_TIMING_UNVERIFIED": "帧窗口是计划，不是对实际语音时长的测量。",
     "SPEAKER_OVERLAP": "同一说话人的台词区间重叠且未明确授权。",
     "DURATION_SCOPE_MISMATCH": "时长政策属于其他模型、界面或模式，不能无声沿用。",
-    "REFERENCE_SCOPE_MISMATCH": "参考数量政策属于其他模型、界面或模式，不能无声沿用。"
+    "REFERENCE_SCOPE_MISMATCH": "参考数量政策属于其他模型、界面或模式，不能无声沿用。",
+    "DATE_COMPARISON_UNVERIFIED": "未提供评估日期，只检查日期格式与历法，不读取系统今天或推断过期。",
+    "EVALUATION_DATE": "评估日期须为有效公历日期 YYYY-MM-DD。",
+    "EVALUATION_OPTIONS": "可选评估上下文须为包含可选 evaluationDate 的记录对象。",
+    "FUTURE_CHECK_DATE": "声明检查日期晚于显式评估日期，请核对来源或评估上下文。",
+    "MODEL_VERSION_INVALID": "明确提供的模型版本须为非空字符串。",
+    "DURATION_VERSION_MISMATCH": "时长政策的模型版本与选定能力声明不同。",
+    "REFERENCE_VERSION_MISMATCH": "参考政策的模型版本与选定能力声明不同。",
+    "VERSION_COMPARISON_UNVERIFIED": "只提供了一侧模型版本，保持比较未核验，不推断缺失版本。",
+    "AUDIO_RETURNS": "提供 audioReturns 时须使用数组。",
+    "AUDIO_RETURN_ID": "返回素材 ID 缺失或重复。",
+    "AUDIO_RETURN_MEDIA": "返回素材须为音频，或明确使用音轨的视频。",
+    "AUDIO_RETURN_SOURCE": "返回素材需准确来源、版本和候选 ID。",
+    "AUDIO_RETURN_DURATION": "返回时长须为正的安全整数毫秒。",
+    "AUDIO_RETURN_CONFLICT": "同一准确来源、版本与候选的总时长声明相互冲突。",
+    "AUDIO_NODE_RESULTS": "内部节点结果须为包含节点 ID 的记录数组。",
+    "AUDIO_MEASUREMENT": "需声明提供方元数据、本地探测或用户提供的测量来源；计划提示长度不是实测。",
+    "AUDIO_MEASUREMENT_UNVERIFIED": "时长、来源及授权只完成声明，不证明音频、同意或同步已验证。",
+    "AUDIO_FRAME_RATE": "返回音频换算需合法的有理数帧率。",
+    "AUDIO_BINDINGS": "返回音频需明确采用到哪些节点和声音提示。",
+    "AUDIO_BINDING_ID": "采用绑定 ID 缺失或重复。",
+    "AUDIO_NODE_BINDING": "采用绑定未准确解析到一个节点。",
+    "AUDIO_CUE_BINDING": "采用绑定未解析到该节点内一个合法提示区间。",
+    "AUDIO_CUE_TRACK": "返回音频只能绑定对白或声音提示轨。",
+    "AUDIO_SOURCE_RANGE": "来源采用区间须为正长度的左闭右开区间，且在声明返回时长内。",
+    "AUDIO_USAGE": "采用方式须明确为完整、摘录或循环。",
+    "AUDIO_FULL_RANGE": "完整采用不能暗中缩短来源区间；摘录须单独声明。",
+    "AUDIO_DIALOGUE_EXCERPT": "对白摘录需对当前提示的明确授权声明。",
+    "AUDIO_DIALOGUE_LOOP": "不能循环对白来填满时窗。",
+    "AUDIO_SYNC": "同步锚点须位于所选来源和目标提示的左闭右开区间内。",
+    "AUDIO_DUPLICATE_BINDING": "相同来源到提示的采用映射重复，换 ID 不会改变映射。",
+    "AUDIO_DURATION_FIT": "返回音频采用长度超过提示时窗；应调整方案，不自动加速或截台词。",
+    "AUDIO_SYNC_WINDOW": "同步锚点映射使声音越过采用区间，请调整或明确声音桥。",
+    "AUDIO_ARITHMETIC": "返回音频换算超出安全整数范围。",
+    "AUDIO_PAIRING": "仅在明确声明逐块旁白模板时使用有序配对。",
+    "AUDIO_PAIRING_SCOPE": "配对范围须明确命名不重复的真实视频节点。",
+    "AUDIO_PAIRING_COMPLETENESS": "显式块范围内的旁白采用需完整且每块一条。",
+    "AUDIO_PAIRING_DUPLICATE": "显式配对不能重复采用绑定 ID。",
+    "AUDIO_PAIRING_BINDING": "显式配对引用了未登记的采用绑定。",
+    "AUDIO_PAIRING_ORDER": "配对绑定不属于声明顺序中的对应视频块。",
+    "AUDIO_PAIRING_TRACK": "逐块旁白配对须绑定对白轨，环境声层不能冒充旁白。"
 };
   const convert = (items) => (items ?? []).map((item) => ({
     code: item.code, nodeId: item.nodeId ?? null,
@@ -368,14 +437,22 @@ export function withChineseVideoSummary(result) {
     locale: "zh-CN",
     summary: result.valid ? "结构与算术检查通过；仍需核验未决声明和实际媒体。" : "检查未通过，请先修正错误。",
     errors: convert(result.errors), warnings: convert(result.warnings), pending: convert(result.pending),
-    scope: "仅检查工作表语法、声明的绑定和精确时间算术；不核验平台能力、权利、语义、媒体或导入。",
+    scope: "仅检查工作表语法、声明绑定、显式评估日期和精确时间算术；返回时长及授权仍是声明，不核验平台能力、同意、实测、语义、媒体或导入。",
   } };
 }
 
 function main(args) {
-  if (args.length === 1 && args[0] === "--help") { console.log(`用法：node check-video-plan.mjs worksheet.json\n只读检查 ${FORMAT} 工作表；向标准输出返回 JSON 和中文摘要，不调用平台、不写文件。`); return; }
-  if (args.length !== 1 || args[0].startsWith("--")) throw new Error("Provide one worksheet path or --help");
-  const result = validateVideoWorkbook(parseJsonStrict(readFileSync(args[0], "utf8")));
+  if (args.length === 1 && args[0] === "--help") { console.log(`用法：node check-video-plan.mjs worksheet.json [--evaluation-date YYYY-MM-DD]\n只读检查 ${FORMAT} 工作表与可选返回音频声明；省略评估日期时不读取系统今天。向标准输出返回 JSON 和中文摘要，不调用平台、不写文件。`); return; }
+  let path, evaluationDate;
+  for (let index = 0; index < args.length; index++) {
+    if (args[index] === "--evaluation-date") {
+      if (evaluationDate !== undefined || !args[index + 1] || args[index + 1].startsWith("--")) throw new Error("Provide one --evaluation-date YYYY-MM-DD value");
+      evaluationDate = args[++index];
+    } else if (args[index].startsWith("--") || path !== undefined) throw new Error("Provide one worksheet path and optional --evaluation-date YYYY-MM-DD, or --help");
+    else path = args[index];
+  }
+  if (path === undefined) throw new Error("Provide one worksheet path or --help");
+  const result = validateVideoWorkbook(parseJsonStrict(readFileSync(path, "utf8")), { evaluationDate });
   console.log(JSON.stringify(withChineseVideoSummary(result), null, 2));
   if (!result.valid) process.exitCode = 1;
 }

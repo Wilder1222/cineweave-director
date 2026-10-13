@@ -1,0 +1,38 @@
+{
+  "scope": "text_diff_only",
+  "records": [
+    {
+      "documentId": "REV-G",
+      "fromRevision": 1,
+      "toRevision": 2,
+      "originalSha256": "4be41dfbd11fbee107ddc3ec3eee6a57a03776637b975f5c1dafa91a79bd82ca",
+      "revisedSha256": "e84cdb84d3b5d4e77d4ef2a34e6309422fb40e2fd701da0f73f1edac201addaf",
+      "cameraReplacementCount": 1,
+      "versionTextReplacementCount": 1,
+      "s01Unchanged": true,
+      "exactAuthorizedDifferenceOnly": true
+    },
+    {
+      "documentId": "REV-M",
+      "fromRevision": 1,
+      "toRevision": 2,
+      "originalSha256": "9c0a92bcd78c9c60ef545a2b18f20ef891214eda22dbc1fe33083a159d357feb",
+      "revisedSha256": "85378cca4daee4f735de17b6f3e49a6c3fa286d14474ff7a074d646be4f1d773",
+      "cameraReplacementCount": 1,
+      "versionTextReplacementCount": 0,
+      "s01Unchanged": true,
+      "exactAuthorizedDifferenceOnly": true
+    },
+    {
+      "documentId": "REV-P",
+      "fromRevision": 1,
+      "toRevision": 2,
+      "originalSha256": "ed90252477e1df8a8e91b56817689f3cd62680da67473b1382c077aaa7ee8b29",
+      "revisedSha256": "31af63156c4a5099bef90af945a8620ddd15011e8b731f207afb869914c0a9d9",
+      "cameraReplacementCount": 1,
+      "versionTextReplacementCount": 1,
+      "s01Unchanged": true,
+      "exactAuthorizedDifferenceOnly": true
+    }
+  ]
+}

@@ -78,7 +78,57 @@
 
 ## 外部结果返回清单
 
-要求提供实际可访问媒体、片段与候选对应关系、返回时长和尺寸、可用的准确提示词／设置元数据及相关权利声明。执行元数据缺失时，仍可限定范围评审可访问画面和声音，明确剩余未知。可复现性和平台合规性需各自证据，不能由画面评审代替。
+实际媒体、候选、返回规格与设置按[人工交接与返回](video-platform-adaptation.md#外部人工交接与返回)记录，并附相关权利声明。元数据缺失时按[评审范围](../routes/review-repair.md#评审)限定可访问画面和声音；可复现性及平台合规性分别取证。
+
+### 可选返回音频回流
+
+已有 `cineweave-video-workbook/v1` 可选择添加 `audioReturns`，把已采用音频的来源声明映射回具体节点和声音提示；不把未选备选放入采用列表。没有返回音频时省略该字段，不用计划提示长度填虚构实测值。输入 `references` 中的声线或音频时序参考不表示输出音轨已经存在。
+
+下例只是追加到已有工作表的数值夹具片段，不代表真实录音。已有 `V1` 的对白提示 `D1` 为 24 fps 下的 `[0,96)`，实际使用时替换为返回来源和确有依据的测量声明：
+
+```json
+{
+  "audioReturns": [
+    {
+      "id": "AR1",
+      "mediaType": "audio",
+      "source": "fixture:narration.wav",
+      "version": "v1",
+      "candidateId": "take-A",
+      "durationMs": 4000,
+      "measurement": {
+        "basis": "user_supplied",
+        "source": "fixture:数值试算，非实际录音"
+      },
+      "bindings": [
+        {
+          "id": "AB1",
+          "nodeId": "V1",
+          "cueId": "D1",
+          "sourceRangeMs": { "start": 0, "end": 4000 },
+          "usage": "full",
+          "sync": { "sourceMs": 0, "targetFrame": 0 }
+        }
+      ]
+    }
+  ]
+}
+```
+
+| 字段 | 使用规则 |
+| --- | --- |
+| 来源与候选 | `source`、`version`、`candidateId` 声明准确采用来源；返回 `id` 与各 `bindings[].id` 分别唯一。来源不会被工具打开或上传。 |
+| 音轨类型 | `mediaType` 为 `audio`；采用视频音轨时为 `video` 并明确 `useAudioTrack: true`。不从视频扩展名推断有可用声音。 |
+| 时长与测量 | `durationMs` 为正的安全整数毫秒；`measurement.basis` 为 `provider_metadata`、`local_probe` 或 `user_supplied`，`source` 指明该测量声明的依据。工具不调用探测器、不核验原报告或波形。 |
+| 采用与同步 | `nodeId`、`cueId` 定位该节点内的 `dialogue` 或 `sound` 提示；`sourceRangeMs` 是来源左闭右开区间；`sync` 把区间内一个来源毫秒锚点对到提示内的整数帧。 |
+
+`usage: full` 必须保留完整 `[0,durationMs)`；`excerpt` 明确选择非空来源子区间。对白摘录还需在该绑定内填写 `dialogueExcerptAuthorization: {"approvedBy":"声明的批准者","reason":"当前提示的摘录依据"}`。这两个字符串只记录授权声明，不能证明真实同意或所选区间包含准确台词；未经授权不截断或改写对白，采用后仍须逐字听审。`loop` 只用于环境／音乐等 `sound` 提示：按锚点确定循环相位并填充声明的提示窗口，可以从选段内部开始，包含首尾部分循环；不循环对白，也不执行真实循环或混音。
+
+同一来源可以明确绑定到不同提示、跨镜声音桥或多个环境声层；同一来源、版本、候选、媒介类型及音轨选择的总时长声明必须一致，相同完整采用映射不得通过换 ID 重复登记。不同 ID 仍可在一致元数据下复用准确来源。声音桥须在对应提示明确 `allowHandle: true` 并另行复核相邻时间线，不能靠回流字段掩盖越窗。
+
+仅在明确采用“每个视频块一条旁白”的模板时，追加 `audioPairing: {"mode":"one_audio_per_video_block","nodeIds":["V1","V2"],"bindingIds":["AB1","AB2"]}`。`nodeIds` 是调用者明确指定的有序范围，普通 `nodes` 数组顺序不替代它；逐位 `bindingIds` 必须属于对应视频节点的对白提示。范围内所有已采用对白绑定都须列入，缺失、额外、重复或错序要修正。额外环境声层可以并存；没有该模板时不强制每镜一条音频。
+
+用现有 `check-video-plan.mjs` 检查即可，无独立音频 CLI。`audioReturnChecks` 给出所选来源一次播放的 `requiredFrames`、提示的 `availableFrames` 及 `fitsDeclaredWindow`；循环样本的 `requiredFrames` 不代表循环后的成片时长。这些值只按声明与[精确时长算术](video-timing-and-handles.md#返回音频与采用窗口)计算，不修改工作表。所有结果保留 `measurementVerified: false`、`mediaVerified: false`、`capabilityVerified: false`；`SPEECH_TIMING_UNVERIFIED` 不因填了测量来源而解除，声明齐全也不等于声音、授权、口型或同步验收通过。
 
 ## 剪辑
 

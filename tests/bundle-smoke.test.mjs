@@ -6,6 +6,7 @@ import { tmpdir } from "node:os";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 import { createHash } from "node:crypto";
+import { createDistributionInventory } from "../scripts/validate-repository.mjs";
 
 async function snapshot(directory, prefix = "") {
   const hashes = {};
@@ -19,14 +20,17 @@ async function snapshot(directory, prefix = "") {
   return hashes;
 }
 
-test("installed bundle tools run outside the repository, retain exit states and never mutate inputs or the bundle", async () => {
-  const repository = fileURLToPath(new URL("../", import.meta.url));
+async function checkInstalledLayout(repository, skillName, standalone) {
   const directory = await mkdtemp(join(tmpdir(), "cw-installed-"));
   try {
     const bundle = join(directory, "plugin");
-    // Copy only the generated distribution: no repository scripts or node_modules.
-    await cp(resolve(repository, ".build/cineweave-director"), bundle, { recursive: true });
-    const helpers = join(bundle, "skills/cineweave-director/scripts");
+    // Both layouts consume only the generated distribution, never author sources.
+    const built = resolve(repository, ".build/cineweave-director");
+    if (standalone) {
+      await cp(join(built, "skills", skillName), bundle, { recursive: true });
+      await cp(join(built, "LICENSE"), join(bundle, "LICENSE"));
+    } else await cp(built, bundle, { recursive: true });
+    const helpers = standalone ? join(bundle, "scripts") : join(bundle, "skills", skillName, "scripts");
     const run = (name, args) => {
       const result = spawnSync(process.execPath, [join(helpers, `${name}.mjs`), ...args], {
         cwd: directory, encoding: "utf8", timeout: 10000,
@@ -50,6 +54,12 @@ test("installed bundle tools run outside the repository, retain exit states and 
       review: {
         source: { type: "design", id: "fixture", version: 1 }, mode: "focused", roles: ["direction"], shotIds: ["S1"],
         reviews: [{ role: "direction", shotId: "S1", status: "pass", criterion: "检查杯子位置", observation: "规划文字保持杯子在木台中央", sourceLocator: "fixture / S1" }],
+      },
+      impact: {
+        format: "cineweave-change-impact", canonical: false,
+        artifacts: [{ id: "appearance", revision: 1, dependencyCoverage: "complete" }, { id: "shot", revision: 1, dependencyCoverage: "complete" }],
+        dependencies: [{ consumer: "shot", source: "appearance", sourceRevision: 1, paths: ["/color"] }],
+        changes: [{ source: "appearance", fromRevision: 1, toRevision: 2, paths: ["/color"], reason: "用户修改衣色" }],
       },
     };
     const paths = {};
@@ -75,6 +85,10 @@ test("installed bundle tools run outside the repository, retain exit states and 
     const review = run("check-shot-review", [paths.review]);
     assert.equal(review.status, 0, review.stderr);
     assert.equal(JSON.parse(review.stdout).reviewComplete, true);
+    const impact = run("check-change-impact", [paths.impact]);
+    assert.equal(impact.status, 0, impact.stderr);
+    assert.equal(JSON.parse(impact.stdout).scope, "plan_only");
+    assert.deepEqual(JSON.parse(impact.stdout).affected, ["shot"]);
     assert.deepEqual(await snapshot(directory), inputBefore);
 
     fixtures.review.reviews[0].status = "unknown";
@@ -84,14 +98,37 @@ test("installed bundle tools run outside the repository, retain exit states and 
     assert.equal(unresolved.status, 2, unresolved.stderr);
     assert.equal(JSON.parse(unresolved.stdout).reviewComplete, false);
     assert.deepEqual(await snapshot(directory), unknownBefore);
-    for (const name of ["check-delivery", "check-video-plan", "check-shot-review"]) {
+    fixtures.impact.artifacts[1].dependencyCoverage = "unknown";
+    await writeFile(paths.impact, JSON.stringify(fixtures.impact));
+    const impactBefore = await snapshot(directory);
+    const impactUnknown = run("check-change-impact", [paths.impact]);
+    assert.equal(impactUnknown.status, 2, impactUnknown.stderr);
+    assert.ok(JSON.parse(impactUnknown.stdout).needsReview.includes("shot"));
+    assert.deepEqual(await snapshot(directory), impactBefore);
+    for (const name of ["check-delivery", "check-video-plan", "check-shot-review", "check-change-impact"]) {
       await writeFile(paths.review, '{"status":"revise","status":"pass"}');
       const invalidBefore = await snapshot(directory);
       const invalid = run(name, [paths.review]);
       assert.equal(invalid.status, 1);
-      assert.match(invalid.stderr, /Duplicate object key/u);
+      if (name === "check-change-impact") {
+        assert.equal(invalid.stderr, "");
+        assert.equal(JSON.parse(invalid.stdout).valid, false);
+        assert.match(JSON.parse(invalid.stdout).errors.map((error) => error.message).join("\n"), /Duplicate object key/u);
+      } else assert.match(invalid.stderr, /Duplicate object key/u);
       assert.deepEqual(await snapshot(directory), invalidBefore);
     }
     assert.deepEqual(await snapshot(bundle), bundleBefore);
   } finally { await rm(directory, { recursive: true, force: true }); }
+}
+
+test("actual enabled Skill installation matrix runs outside the repository without mutation", async (t) => {
+  const repository = fileURLToPath(new URL("../", import.meta.url));
+  const inventory = await createDistributionInventory(repository);
+  for (const descriptor of inventory.skills) {
+    for (const standalone of [false, true]) {
+      await t.test(`${descriptor.name}: ${standalone ? "standalone Skill" : "full plugin"}`, async () => {
+        await checkInstalledLayout(repository, descriptor.name, standalone);
+      });
+    }
+  }
 });

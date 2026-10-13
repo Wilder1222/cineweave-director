@@ -1,0 +1,34 @@
+{
+  "kind": "cineweave_codex_workflow_plan",
+  "contractVersion": "3.0.0",
+  "workflowId": "workflow.rain-courtyard",
+  "version": 1,
+  "status": "ready",
+  "creativeBriefRef": { "kind": "cineweave_codex_creative_brief", "id": "brief.rain-courtyard", "version": 1, "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa" },
+  "steps": [
+    { "stepId": "step.world", "route": "brief_world", "status": "ready", "purpose": "创建并批准世界设定。", "inputKinds": ["cineweave_codex_creative_brief"], "outputKinds": ["cineweave_codex_world_bible"], "dependsOn": [], "humanGate": "approve" },
+    { "stepId": "step.story", "route": "story", "status": "pending", "purpose": "创建因果故事产物，不加入摄影机决策。", "inputKinds": ["cineweave_codex_world_bible"], "outputKinds": ["cineweave_codex_story_brief", "cineweave_codex_beat_sheet", "cineweave_codex_script_scene"], "dependsOn": ["step.world"], "humanGate": "approve" },
+    { "stepId": "step.assets", "route": "reference_evidence", "status": "pending", "purpose": "按角色、范围、迁移及权利分离可见证据。", "inputKinds": ["cineweave_codex_creative_brief"], "outputKinds": ["cineweave_codex_reference_asset", "cineweave_codex_reference_observation", "cineweave_codex_reference_binding_set"], "dependsOn": [], "humanGate": "select" },
+    { "stepId": "step.character", "route": "character", "status": "pending", "purpose": "明确可复用身份、当前外观、表演及精确表现绑定。", "inputKinds": ["cineweave_codex_reference_binding_set"], "outputKinds": ["cineweave_codex_character_spec", "cineweave_codex_character_appearance_state", "character_binding"], "dependsOn": ["step.assets"], "humanGate": "approve" },
+    { "stepId": "step.scene", "route": "scene", "status": "pending", "purpose": "明确地理、材质、物理光源、状态及接触锚点。", "inputKinds": ["cineweave_codex_world_bible", "cineweave_codex_reference_binding_set"], "outputKinds": ["cineweave_codex_scene_spec", "cineweave_codex_scene_state", "scene_binding"], "dependsOn": ["step.world", "step.assets"], "humanGate": "approve" },
+    { "stepId": "step.style", "route": "style", "status": "pending", "purpose": "编译获批表现体系，不覆盖物理事实。", "inputKinds": ["cineweave_codex_world_bible", "cineweave_codex_reference_observation"], "outputKinds": ["cineweave_codex_style_package", "cineweave_codex_representation_binding", "cineweave_codex_style_compile"], "dependsOn": ["step.world", "step.assets"], "humanGate": "approve" },
+    { "stepId": "step.direction", "route": "shot_direction", "status": "pending", "purpose": "从精确上游产物明确调度、摄影机、实际镜头用光和时间。", "inputKinds": ["cineweave_codex_script_scene", "character_binding", "scene_binding", "cineweave_codex_style_compile"], "outputKinds": ["cineweave_codex_shot_spec", "cineweave_codex_shot_lighting_plan", "cineweave_codex_temporal_spec"], "dependsOn": ["step.story", "step.character", "step.scene", "step.style"], "humanGate": "approve" },
+    { "stepId": "step.storyboard", "route": "storyboard_rhythm", "status": "pending", "purpose": "根据获批镜头来源闭合覆盖、画格顺序、节奏与转场。", "inputKinds": ["cineweave_codex_shot_spec", "cineweave_codex_shot_lighting_plan", "cineweave_codex_temporal_spec"], "outputKinds": ["cineweave_codex_storyboard_sequence", "cineweave_codex_sequence_rhythm_spec"], "dependsOn": ["step.direction"], "humanGate": "approve" },
+    { "stepId": "step.prompt", "route": "image_prompt", "status": "pending", "purpose": "从获批正式设定编译可观察提示词，不将提示词变成权威来源。", "inputKinds": ["cineweave_codex_storyboard_sequence", "character_binding", "scene_binding", "cineweave_codex_style_compile"], "outputKinds": ["cineweave_codex_image_prompt"], "dependsOn": ["step.storyboard"], "humanGate": "approve" },
+    { "stepId": "step.delivery", "route": "production_plan", "status": "pending", "purpose": "规划控制、证据、权利、可行性与验收，不调用供应商。", "inputKinds": ["cineweave_codex_storyboard_sequence", "cineweave_codex_image_prompt"], "outputKinds": ["cineweave_codex_render_plan", "cineweave_codex_control_channel_set", "cineweave_codex_evidence_bundle"], "dependsOn": ["step.prompt"], "humanGate": "approve" }
+  ],
+  "deliverables": [
+    { "kind": "cineweave_codex_world_bible", "route": "brief_world", "required": true },
+    { "kind": "cineweave_codex_script_scene", "route": "story", "required": true },
+    { "kind": "cineweave_codex_storyboard_sequence", "route": "storyboard_rhythm", "required": true },
+    { "kind": "cineweave_codex_image_prompt", "route": "image_prompt", "required": true },
+    { "kind": "cineweave_codex_render_plan", "route": "production_plan", "required": true }
+  ],
+  "currentGate": { "type": "approval", "status": "open", "nextAction": "派生故事正式设定前，批准或修订世界设定。" },
+  "questions": ["世界应面向有研究依据的历史，还是保持明确架空？"],
+  "warnings": ["能力规划不选择或调用供应商。"],
+  "planningBoundary": { "singleSkill": true, "providerNeutral": true, "generatesMedia": false, "invokesExternalTool": false, "mutatesSourceArtifacts": false },
+  "validation": { "stepsUnique": true, "dependenciesAcyclic": true, "routesKnown": true, "outputsOwned": true, "gatesExplicit": true, "noExecutionClaim": true },
+  "skillReceipt": { "repository": "https://github.com/Wilder1222/cineweave-director", "ref": "v3.1.0", "commit": "0000000000000000000000000000000000000000", "installedBy": "codex-environment", "usedAt": "2026-09-02T00:00:00Z" },
+  "provenance": { "source": "suite_builtin", "createdAt": "2026-09-02T00:00:00Z", "updatedAt": "2026-09-02T00:00:00Z", "changeLog": ["在非执行工作流计划中闭合路由归属、依赖祖先与交付物产出。"] }
+}

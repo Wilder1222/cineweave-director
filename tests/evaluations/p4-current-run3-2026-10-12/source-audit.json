@@ -1,0 +1,128 @@
+[
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md",
+    "sha256": "ec0be9ba64c300b486068eac5c8ac4474406f2d2baea0bd6117a25dcffd70372",
+    "sections": "frontmatter 1-4；从交付物开始、创作顺序、创作约定、提示词与视频交接、专业能力交接、按需深入 6-71",
+    "cases": "C01,C02,C03,C06,C08"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/SKILL.md",
+    "sha256": "15adbf7af710be30173af4a6baf5e5ca5b7cd30c404d6f553e0432e243077e2a",
+    "sections": "frontmatter 1-4；从实际输入开始、忠实适配与交付、创作约定、按需读取 6-48",
+    "cases": "C06,C08"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-reference/SKILL.md",
+    "sha256": "931b1f173fcd94b5e409e8cb44983662f6ba8885d216d9d5e819360aece3159d",
+    "sections": "仅frontmatter 1-4，未加载正文",
+    "cases": "入口选择；无参考素材分析"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/SKILL.md",
+    "sha256": "2f67e7ce86f8fdcb7b38cecdc9ae00e37f5cbda5f15b36cfa24db0ee3fe3965d",
+    "sections": "frontmatter 1-4；先确定可观察范围、按范围检查与修订、创作约定、交付与责任回流 6-43",
+    "cases": "C08"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/image-prompt.md",
+    "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08",
+    "sections": "编译顺序、精简关卡 1-29；准确文字与排版 51-57；变体与负向约束 63-67；另读取标题目录",
+    "cases": "C01,C02"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/shot-direction.md",
+    "sha256": "c04957137f3f99cb3bba46f0c9046a653df490686867d8c0cad57ede90087388",
+    "sections": "明确戏剧单元、摄影机与构图、镜头光照与时间、电影模式与编译 7-48；另读取标题目录",
+    "cases": "C02,C03,C06,C08"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/storyboard-rhythm.md",
+    "sha256": "10ce342b7e5beb342f16942d653c3316c9fbe3758e6942c687c37e2560a2c601",
+    "sections": "分镜 7-21；序列节奏、相邻剪辑接口、质量关卡 29-67；另读取标题目录",
+    "cases": "C03,C08"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/production-plan.md",
+    "sha256": "efbde14fb9810d392a696a0ee4e6aaca3b2f64998c291f4ab9936f5c6e41273a",
+    "sections": "能力规划 41-51；边界 61-69；另读取标题目录",
+    "cases": "C06"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/review-repair.md",
+    "sha256": "9befe4fe6ecc4711e9aeb33121de3aa3912d5a5122ccea047793829b06481834",
+    "sections": "仅标题目录，正文未加载；实际评审辅助读review包对应路径",
+    "cases": "导航"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/prompt-detail-standard.md",
+    "sha256": "17adaf6034d97879f14fcdeff40850fc7a0c890099254241f1cae96a0c217914",
+    "sections": "表达原则、人物、人物情绪与表情 5-62；场景、镜头与分镜 64-94；空间、构图、灯光、声音 100-128；逐镜交付模板与图生视频 138-161；交付前检查 216-223；另读取标题目录",
+    "cases": "C01,C02,C03,C06；C08仅边界核对不扩写"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-sound-and-delivery.md",
+    "sha256": "cfd0a201805ab58f05ebe5eda1025359776eb78534cfb849472f728594da6a16",
+    "sections": "视频意图、声音职责、精确文案与时间检查 5-69；另读取标题目录",
+    "cases": "C02,C03,C06,C08"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/core/operating-model.md",
+    "sha256": "51c07e850350f2721c8ce89886c455465a0bc8ca29463a3ef2cb1b9ae63af3b9",
+    "sections": "任务范围与上下文、架构与职责 9-31；阶段纪律、创作成熟度与授权决策 59-75；另读取标题目录",
+    "cases": "五案隔离与草稿边界"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/drafts-and-change-impact.md",
+    "sha256": "84670321b3cb5a42b34120fb0ead60b790e9db05c923e87f04265392c9b4d94b",
+    "sections": "工作草稿、修订工作表与恢复检查点 5-40；校验范围 120-122；另读取标题目录",
+    "cases": "C08"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/core/visual-bible-and-continuity.md",
+    "sha256": "ba8e5894516ac66b1396a24dab5fabdc25cd3db8fa5d1beddd12be24f0a1139e",
+    "sections": "连续性台账、向下游精简映射 46-62；另读取标题目录",
+    "cases": "C03,C08"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/references/optional/video-platform-adaptation.md",
+    "sha256": "9b5a4e163a6482704b43333547d16ffc0ed3542d9526599e49455460971bd7f9",
+    "sections": "权威来源与证据层次 5-28；参考职责、模式选择、导演方案到复制稿 49-109；分平台交接、适配边界与内部闭合 154-186；另读取标题目录",
+    "cases": "C06,C08"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/references/optional/video-sound-and-delivery.md",
+    "sha256": "cfd0a201805ab58f05ebe5eda1025359776eb78534cfb849472f728594da6a16",
+    "sections": "仅标题目录，正文未加载；声音正文使用director包对应路径",
+    "cases": "导航"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/references/routes/review-repair.md",
+    "sha256": "9befe4fe6ecc4711e9aeb33121de3aa3912d5a5122ccea047793829b06481834",
+    "sections": "评审、修复归属、返回结果与新证据 13-55",
+    "cases": "C08"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-performance-direction.md",
+    "sha256": "8a156479c8ae94c55a1c6b433fef9193733fc64867eaae2a17e17e404614a11d",
+    "sections": "编写顺序、角色处境与情绪 9-48；台词与声音、摄影机与焦点 89-109；时间工作表与验收 119-129；另读取标题目录",
+    "cases": "C02,C03,C06"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-timing-and-handles.md",
+    "sha256": "0856cc9f67c10259a54755a470ae338e93a25df3d031b0d1730e5429aeb55fa8",
+    "sections": "三种时长、实际政策、精确算术 5-40；尾帧陷阱、语音与续写、可选检查器 52-74；另读取标题目录",
+    "cases": "C02,C03,C06,C08"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/scene.md",
+    "sha256": "ef10535a31d8aeacf7465957ad995c47b1389f5b3b5fe9096e77682f151ea6e4",
+    "sections": "共享空间检查、物理光照、互动、连续性 15-39；另读取标题目录",
+    "cases": "C01,C02,C03,C06"
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/scripts/check-delivery.mjs",
+    "sha256": "3147c6f5fad4d4d32682a05f34eca15337c6ca2b8c73c69ea96331a209f2e4a5",
+    "sections": "实际执行随包检查器；未向模型加载源码正文",
+    "cases": "C03"
+  }
+]

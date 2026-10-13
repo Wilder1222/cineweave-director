@@ -1,0 +1,44 @@
+{
+  "scope": "text_only",
+  "caseId": "CW-SPLIT-C08",
+  "versions": [
+    {
+      "id": "REV-G",
+      "revision": 2
+    },
+    {
+      "id": "REV-M",
+      "revision": 2
+    },
+    {
+      "id": "REV-P",
+      "revision": 2
+    }
+  ],
+  "s01Unchanged": {
+    "design": true,
+    "master": true,
+    "projection": true
+  },
+  "checks": [
+    {
+      "documentId": "REV-G",
+      "oldCameraOccurrences": 1,
+      "newCameraOccurrences": 1,
+      "onlyCameraAndVersionChanged": true
+    },
+    {
+      "documentId": "REV-M",
+      "oldCameraOccurrences": 1,
+      "newCameraOccurrences": 1,
+      "onlyCameraAndVersionChanged": true
+    },
+    {
+      "documentId": "REV-P",
+      "oldCameraOccurrences": 1,
+      "newCameraOccurrences": 1,
+      "onlyCameraAndVersionChanged": true
+    }
+  ],
+  "mediaVerified": false
+}

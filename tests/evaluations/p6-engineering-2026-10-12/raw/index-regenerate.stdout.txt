@@ -1,0 +1,12 @@
+
+> cineweave-director@3.2.0 contracts:index
+> node scripts/generate-contract-index.mjs
+
+{
+  "valid": true,
+  "messageZh": "契约索引已按当前文件字节重建。",
+  "mode": "write",
+  "roots": 52,
+  "supportSchemas": 2,
+  "index": "skills/cineweave-director/resources/contracts/index.json"
+}

@@ -1,0 +1,286 @@
+{
+  "kind": "cineweave_codex_capability_profile",
+  "contractVersion": "2.0.0",
+  "profileId": "capability.reference-image-composite",
+  "title": "参考图合成适配器能力档案",
+  "version": 1,
+  "status": "active",
+  "adapterId": "adapter.reference-image-composite",
+  "adapterClass": "composite",
+  "skillReceipt": {
+    "repository": "https://github.com/Wilder1222/cineweave-director",
+    "ref": "v3.1.0",
+    "commit": "0123456789abcdef0123456789abcdef01234567",
+    "contentHash": "sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "installedBy": "codex-environment",
+    "usedAt": "2026-08-20T18:00:00.000Z"
+  },
+  "capabilities": [
+    {
+      "capabilityId": "image_generation",
+      "support": "strong",
+      "maxInputs": 8,
+      "maxSubjects": 3,
+      "supportedScopes": [
+        "character",
+        "scene"
+      ],
+      "constraints": [
+        "供应商执行仍由 Skill 之外的工作流负责。"
+      ]
+    },
+    {
+      "capabilityId": "multi_reference",
+      "support": "strong",
+      "maxInputs": 8,
+      "maxSubjects": 3,
+      "supportedScopes": [
+        "face",
+        "body",
+        "costume",
+        "pose",
+        "scene_geography"
+      ],
+      "constraints": [
+        "每份参考必须指定一种语义职责。"
+      ]
+    },
+    {
+      "capabilityId": "semantic_morphology",
+      "support": "partial",
+      "maxInputs": 1,
+      "maxSubjects": 1,
+      "supportedScopes": [
+        "face_morphology",
+        "body_morphology"
+      ],
+      "constraints": [
+        "语义轴编译为描述性控制，不是供应商权重或实测解剖数值。"
+      ]
+    },
+    {
+      "capabilityId": "style_reference",
+      "support": "partial",
+      "maxInputs": 3,
+      "maxSubjects": 3,
+      "supportedScopes": [
+        "linework",
+        "shading",
+        "color_system",
+        "surface_style"
+      ],
+      "constraints": [
+        "每份风格参考保持限定职责，不能提供身份。"
+      ]
+    },
+    {
+      "capabilityId": "representation_binding",
+      "support": "strong",
+      "maxInputs": 1,
+      "maxSubjects": 3,
+      "supportedScopes": [
+        "character",
+        "representation"
+      ],
+      "constraints": [
+        "绑定在供应商执行前编译，不能修改 CharacterSpec。"
+      ]
+    },
+    {
+      "capabilityId": "cross_representation",
+      "support": "partial",
+      "maxInputs": 6,
+      "maxSubjects": 1,
+      "supportedScopes": [
+        "full_character",
+        "representation"
+      ],
+      "constraints": [
+        "跨表现体系的身份需要语义锚点评审，不能只看单一像素相似度。"
+      ]
+    },
+    {
+      "capabilityId": "face_landmarks",
+      "support": "unsupported",
+      "maxInputs": 0,
+      "maxSubjects": 0,
+      "supportedScopes": [],
+      "constraints": [
+        "此适配器不提供关键点控制；硬性关键点要求必须阻断或选择其他适配器。"
+      ]
+    },
+    {
+      "capabilityId": "mesh_morph",
+      "support": "unsupported",
+      "maxInputs": 0,
+      "maxSubjects": 0,
+      "supportedScopes": [],
+      "constraints": [
+        "具有三维观感的图像不是网格资产或形变目标结果。"
+      ]
+    },
+    {
+      "capabilityId": "face_identity",
+      "support": "strong",
+      "maxInputs": 3,
+      "maxSubjects": 2,
+      "supportedScopes": [
+        "face"
+      ],
+      "constraints": [
+        "极端轮廓需要多视图与人工评审。"
+      ]
+    },
+    {
+      "capabilityId": "full_body_identity",
+      "support": "partial",
+      "maxInputs": 4,
+      "maxSubjects": 1,
+      "supportedScopes": [
+        "body",
+        "full_character"
+      ],
+      "constraints": [
+        "身体比例需要全身证据和姿态指导。"
+      ]
+    },
+    {
+      "capabilityId": "expression_control",
+      "support": "partial",
+      "maxInputs": 2,
+      "maxSubjects": 1,
+      "supportedScopes": [
+        "expression"
+      ],
+      "constraints": [
+        "情绪必须转成可观察的表现线索。"
+      ]
+    },
+    {
+      "capabilityId": "pose_guidance",
+      "support": "strong",
+      "maxInputs": 2,
+      "maxSubjects": 3,
+      "supportedScopes": [
+        "pose"
+      ],
+      "constraints": [
+        "手与物体的接触仍须经过评审。"
+      ]
+    },
+    {
+      "capabilityId": "scene_layout",
+      "support": "partial",
+      "maxInputs": 4,
+      "maxSubjects": 4,
+      "supportedScopes": [
+        "geography",
+        "composition"
+      ],
+      "constraints": [
+        "复杂多物体交互可能需要局部修复。"
+      ]
+    },
+    {
+      "capabilityId": "relighting",
+      "support": "partial",
+      "maxInputs": 2,
+      "maxSubjects": 2,
+      "supportedScopes": [
+        "lighting"
+      ],
+      "constraints": [
+        "必须提供有明确来源的光线方向。"
+      ]
+    },
+    {
+      "capabilityId": "identity_consistency",
+      "support": "partial",
+      "maxInputs": 4,
+      "maxSubjects": 2,
+      "supportedScopes": [
+        "sequence",
+        "character"
+      ],
+      "constraints": [
+        "只有评审实际返回的序列证据后，声明能力才能视为已验证。"
+      ]
+    }
+  ],
+  "evidenceRequirements": [
+    {
+      "capabilityId": "face_identity",
+      "requiredRoles": [
+        "face_identity"
+      ],
+      "minimumConfidence": 0.8
+    },
+    {
+      "capabilityId": "semantic_morphology",
+      "requiredRoles": [
+        "face_morphology",
+        "body_morphology"
+      ],
+      "minimumConfidence": 0.75
+    },
+    {
+      "capabilityId": "style_reference",
+      "requiredRoles": [
+        "linework"
+      ],
+      "minimumConfidence": 0.7
+    },
+    {
+      "capabilityId": "full_body_identity",
+      "requiredRoles": [
+        "body_identity"
+      ],
+      "minimumConfidence": 0.75
+    },
+    {
+      "capabilityId": "pose_guidance",
+      "requiredRoles": [
+        "pose"
+      ],
+      "minimumConfidence": 0.7
+    },
+    {
+      "capabilityId": "scene_layout",
+      "requiredRoles": [
+        "scene_geography"
+      ],
+      "minimumConfidence": 0.75
+    }
+  ],
+  "knownLimits": [
+    "极端透视可能扭曲身体比例节奏。",
+    "复杂多层服装可能需要局部修复。",
+    "无法保证一次生成就实现精确的手与物体接触。"
+  ],
+  "licenseProfileRefs": [
+    {
+      "id": "license.original-character-assets",
+      "version": 1,
+      "contentHash": "sha256:dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+    }
+  ],
+  "matchingPolicy": {
+    "hardRequirementPolicy": "block",
+    "partialSupportPolicy": "allow_with_review",
+    "unknownCapabilityPolicy": "block"
+  },
+  "validation": {
+    "noEndpoint": true,
+    "noCredentials": true,
+    "capabilityIdsUnique": true,
+    "licensesLinked": true
+  },
+  "provenance": {
+    "source": "codex_authored",
+    "createdAt": "2026-08-20T18:00:00.000Z",
+    "updatedAt": "2026-08-20T18:00:00.000Z",
+    "changeLog": [
+      "v1：声明平台无关的合成适配器能力"
+    ]
+  }
+}

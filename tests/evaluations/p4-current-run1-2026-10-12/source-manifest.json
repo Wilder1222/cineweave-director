@@ -1,0 +1,362 @@
+{
+  "batch": "cineweave-split-p4-current-run1-20261012",
+  "context": "One fork_none batch; five cases share this agent context and selected Skill reads",
+  "loadedPriorRuns": false,
+  "loadedRubric": false,
+  "loadedResearchOrPlans": false,
+  "memoryUsed": false,
+  "productModified": false,
+  "providerAccessed": false,
+  "mediaGenerated": false,
+  "installedAnything": false,
+  "approvalClaimed": false,
+  "selfScore": null,
+  "hiddenTelemetry": {
+    "perCaseWallTime": null,
+    "perCasePromptTokens": null,
+    "perCaseCompletionTokens": null,
+    "efficiencyImprovement": null,
+    "providerCalls": null,
+    "loadingSavings": null
+  },
+  "completedAtUtc": "2026-10-12T11:48:15.1986736Z",
+  "sources": [
+    {
+      "id": "INPUT",
+      "path": "D:\\Temp\\cineweave-split-p4-correction-raw-inputs-20261012.json",
+      "sha256": "fc7ae52e6abc32563d06a36335176054142b56e5a3364fb9492ab21dda1cda0c",
+      "sections": [
+        "cases[].request",
+        "cases[].rawData"
+      ],
+      "usage": "唯一原始请求与材料，未复抄rawData"
+    },
+    {
+      "id": "D-ENTRY",
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\SKILL.md",
+      "sha256": "ec0be9ba64c300b486068eac5c8ac4474406f2d2baea0bd6117a25dcffd70372",
+      "sections": [
+        "frontmatter",
+        "从交付物开始",
+        "创作顺序",
+        "创作约定",
+        "提示词与视频交接",
+        "专业能力交接",
+        "按需深入",
+        "可选结构化交付"
+      ],
+      "usage": "最终主责与任务路由"
+    },
+    {
+      "id": "P-ENTRY",
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\SKILL.md",
+      "sha256": "15adbf7af710be30173af4a6baf5e5ca5b7cd30c404d6f553e0432e243077e2a",
+      "sections": [
+        "frontmatter",
+        "从实际输入开始",
+        "忠实适配与交付",
+        "创作约定",
+        "按需读取",
+        "可选规范交接"
+      ],
+      "usage": "C06与C08按需平台辅助"
+    },
+    {
+      "id": "R-ENTRY",
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-reference\\SKILL.md",
+      "sha256": "931b1f173fcd94b5e409e8cb44983662f6ba8885d216d9d5e819360aece3159d",
+      "sections": [
+        "frontmatter only"
+      ],
+      "usage": "入口选择；无实际素材，不加载正文"
+    },
+    {
+      "id": "V-ENTRY",
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\SKILL.md",
+      "sha256": "2f67e7ce86f8fdcb7b38cecdc9ae00e37f5cbda5f15b36cfa24db0ee3fe3965d",
+      "sections": [
+        "frontmatter",
+        "先确定可观察范围",
+        "按范围检查与修订",
+        "创作约定",
+        "交付与责任回流",
+        "可选规范交接"
+      ],
+      "usage": "C08局部文本及相邻连续性复查"
+    },
+    {
+      "id": "D-IMAGE",
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\image-prompt.md",
+      "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08",
+      "sections": [
+        "全路由：编译顺序、精简关卡、参考与变换、关键帧准备度、平台适配、准确文字与排版、导入、变体与负向约束"
+      ],
+      "usage": "C01与C02静帧稿"
+    },
+    {
+      "id": "D-SHOT",
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\shot-direction.md",
+      "sha256": "c04957137f3f99cb3bba46f0c9046a653df490686867d8c0cad57ede90087388",
+      "sections": [
+        "全路由：戏剧单元、摄影机与构图、光照与时间、电影模式、下游产物"
+      ],
+      "usage": "C02、C03、C06镜头及C08机位变量"
+    },
+    {
+      "id": "D-BOARD",
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\routes\\storyboard-rhythm.md",
+      "sha256": "10ce342b7e5beb342f16942d653c3316c9fbe3758e6942c687c37e2560a2c601",
+      "sections": [
+        "全路由：分镜、分镜参考图到视频、序列节奏、相邻剪辑接口、质量关卡"
+      ],
+      "usage": "C03连续两镜"
+    },
+    {
+      "id": "V-ROUTE",
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-review\\references\\routes\\review-repair.md",
+      "sha256": "9befe4fe6ecc4711e9aeb33121de3aa3912d5a5122ccea047793829b06481834",
+      "sections": [
+        "全路由：基准、评审、修复归属、返回与新证据"
+      ],
+      "usage": "C08局部修订检查边界"
+    },
+    {
+      "id": "D-DETAIL",
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+      "sha256": "17adaf6034d97879f14fcdeff40850fc7a0c890099254241f1cae96a0c217914",
+      "sections": [
+        "L5-L162：表达原则、人物及情绪、场景、镜头与分镜、拍摄系统各节、逐镜模板、图生视频"
+      ],
+      "usage": "对应稿件的可见细节与完整正文；截断处已补读L138-L162"
+    },
+    {
+      "id": "D-SOUND",
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\video-sound-and-delivery.md",
+      "sha256": "cfd0a201805ab58f05ebe5eda1025359776eb78534cfb849472f728594da6a16",
+      "sections": [
+        "L5-L78：视频意图、段落边界、声音职责、精确文案与时间检查、交付工作表"
+      ],
+      "usage": "C02、C03、C06、C08声音与规划算术；截断后补读"
+    },
+    {
+      "id": "D-CHANGE",
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\drafts-and-change-impact.md",
+      "sha256": "84670321b3cb5a42b34120fb0ead60b790e9db05c923e87f04265392c9b4d94b",
+      "sections": [
+        "L5-L45：工作草稿、修订与恢复检查点、变更影响示例"
+      ],
+      "usage": "C08跨稿局部传播；截断后补读L5-L41"
+    },
+    {
+      "id": "P-VIDEO",
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-platform\\references\\optional\\video-platform-adaptation.md",
+      "sha256": "9b5a4e163a6482704b43333547d16ffc0ed3542d9526599e49455460971bd7f9",
+      "sections": [
+        "L5-L29：权威来源与能力证据",
+        "L49-L110：参考职责、模式、导演复制稿与文字／图像路径",
+        "L154-L173：分平台交接、适配、外部返回"
+      ],
+      "usage": "C06能力未知条件稿与C08夹具控件边界"
+    },
+    {
+      "id": "D-CONTINUITY",
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\core\\visual-bible-and-continuity.md",
+      "sha256": "ba8e5894516ac66b1396a24dab5fabdc25cd3db8fa5d1beddd12be24f0a1139e",
+      "sections": [
+        "L46-L57：连续性台账"
+      ],
+      "usage": "C03及C08相邻状态"
+    },
+    {
+      "id": "D-PERFORMANCE",
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\video-performance-direction.md",
+      "sha256": "8a156479c8ae94c55a1c6b433fef9193733fc64867eaae2a17e17e404614a11d",
+      "sections": [
+        "L9-L49：编写顺序、可表演任务、情绪",
+        "L89-L130：台词声音、摄影机焦点、特效、时间验收"
+      ],
+      "usage": "C02精确台词与接触、其他视频镜头与证据边界"
+    },
+    {
+      "id": "D-TIMING",
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\references\\optional\\video-timing-and-handles.md",
+      "sha256": "0856cc9f67c10259a54755a470ae338e93a25df3d031b0d1730e5429aeb55fa8",
+      "sections": [
+        "L5-L41：三种时长、政策、算术",
+        "L52至文件末：尾帧陷阱、语音／续写、可选检查器"
+      ],
+      "usage": "请求时长与未知档位、采用边界"
+    },
+    {
+      "id": "D-DELIVERY-CLI",
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\skills\\cineweave-director\\scripts\\check-delivery.mjs",
+      "sha256": "3147c6f5fad4d4d32682a05f34eca15337c6ca2b8c73c69ea96331a209f2e4a5",
+      "sections": [
+        "CLI实际执行；未为使用而全量加载脚本正文"
+      ],
+      "usage": "C03与C08硬切覆盖工作表"
+    }
+  ],
+  "sourceDocumentTextHashes": [
+    {
+      "caseId": "CW-SPLIT-C08",
+      "documentId": "REV-G",
+      "revision": 1,
+      "sourcePath": "D:/Temp/cineweave-split-p4-correction-raw-inputs-20261012.json",
+      "selector": "cases[id=CW-SPLIT-C08].rawData.sourceDocuments[documentId=REV-G].text",
+      "textHashMethod": "SHA-256 of decoded text as UTF-8 without BOM; not canonical contract hash",
+      "textSha256": "4be41dfbd11fbee107ddc3ec3eee6a57a03776637b975f5c1dafa91a79bd82ca"
+    },
+    {
+      "caseId": "CW-SPLIT-C08",
+      "documentId": "REV-M",
+      "revision": 1,
+      "sourcePath": "D:/Temp/cineweave-split-p4-correction-raw-inputs-20261012.json",
+      "selector": "cases[id=CW-SPLIT-C08].rawData.sourceDocuments[documentId=REV-M].text",
+      "textHashMethod": "SHA-256 of decoded text as UTF-8 without BOM; not canonical contract hash",
+      "textSha256": "9c0a92bcd78c9c60ef545a2b18f20ef891214eda22dbc1fe33083a159d357feb"
+    },
+    {
+      "caseId": "CW-SPLIT-C08",
+      "documentId": "REV-P",
+      "revision": 1,
+      "sourcePath": "D:/Temp/cineweave-split-p4-correction-raw-inputs-20261012.json",
+      "selector": "cases[id=CW-SPLIT-C08].rawData.sourceDocuments[documentId=REV-P].text",
+      "textHashMethod": "SHA-256 of decoded text as UTF-8 without BOM; not canonical contract hash",
+      "textSha256": "ed90252477e1df8a8e91b56817689f3cd62680da67473b1382c077aaa7ee8b29"
+    }
+  ],
+  "cases": [
+    {
+      "id": "CW-SPLIT-C01",
+      "primarySkill": "cineweave-director",
+      "necessaryAuxiliarySkills": [],
+      "inputSelector": "cases[id=CW-SPLIT-C01]",
+      "sourceIds": [
+        "INPUT",
+        "D-ENTRY",
+        "D-IMAGE",
+        "D-DETAIL"
+      ],
+      "firstEditionPath": "D:\\Temp\\cineweave-split-p4-current-run1-20261012\\CW-SPLIT-C01.md",
+      "firstEditionSha256": "dab09ea70d362c028bbee90dd5d0cb9f6dffd761de1284884e2d896f2e9b4415",
+      "completeTextSaved": true
+    },
+    {
+      "id": "CW-SPLIT-C02",
+      "primarySkill": "cineweave-director",
+      "necessaryAuxiliarySkills": [],
+      "inputSelector": "cases[id=CW-SPLIT-C02]",
+      "sourceIds": [
+        "INPUT",
+        "D-ENTRY",
+        "D-IMAGE",
+        "D-SHOT",
+        "D-DETAIL",
+        "D-SOUND",
+        "D-PERFORMANCE",
+        "D-TIMING"
+      ],
+      "firstEditionPath": "D:\\Temp\\cineweave-split-p4-current-run1-20261012\\CW-SPLIT-C02.md",
+      "firstEditionSha256": "c936137eb1be892c1f5233619a2577196c4c49ef099148ebfe949bbaf88dfc41",
+      "completeTextSaved": true
+    },
+    {
+      "id": "CW-SPLIT-C03",
+      "primarySkill": "cineweave-director",
+      "necessaryAuxiliarySkills": [],
+      "inputSelector": "cases[id=CW-SPLIT-C03]",
+      "sourceIds": [
+        "INPUT",
+        "D-ENTRY",
+        "D-SHOT",
+        "D-BOARD",
+        "D-DETAIL",
+        "D-SOUND",
+        "D-CONTINUITY",
+        "D-PERFORMANCE",
+        "D-TIMING",
+        "D-DELIVERY-CLI"
+      ],
+      "firstEditionPath": "D:\\Temp\\cineweave-split-p4-current-run1-20261012\\CW-SPLIT-C03.md",
+      "firstEditionSha256": "aeade9351052c7a349ab515540352e4a4a8725a53952115c8b80afb463b6c08c",
+      "completeTextSaved": true
+    },
+    {
+      "id": "CW-SPLIT-C06",
+      "primarySkill": "cineweave-director",
+      "necessaryAuxiliarySkills": [
+        "cineweave-platform"
+      ],
+      "inputSelector": "cases[id=CW-SPLIT-C06]",
+      "sourceIds": [
+        "INPUT",
+        "D-ENTRY",
+        "P-ENTRY",
+        "D-SHOT",
+        "D-DETAIL",
+        "D-SOUND",
+        "D-PERFORMANCE",
+        "D-TIMING",
+        "P-VIDEO"
+      ],
+      "firstEditionPath": "D:\\Temp\\cineweave-split-p4-current-run1-20261012\\CW-SPLIT-C06.md",
+      "firstEditionSha256": "1b5aac4a5dcab7dd317afe7b79c2899618899f27d71c2cd1765a4b8aa5b368c4",
+      "completeTextSaved": true
+    },
+    {
+      "id": "CW-SPLIT-C08",
+      "primarySkill": "cineweave-director",
+      "necessaryAuxiliarySkills": [
+        "cineweave-platform",
+        "cineweave-review"
+      ],
+      "inputSelector": "cases[id=CW-SPLIT-C08]",
+      "sourceIds": [
+        "INPUT",
+        "D-ENTRY",
+        "P-ENTRY",
+        "V-ENTRY",
+        "V-ROUTE",
+        "D-SHOT",
+        "D-CHANGE",
+        "D-CONTINUITY",
+        "P-VIDEO",
+        "D-DELIVERY-CLI"
+      ],
+      "firstEditionPath": "D:\\Temp\\cineweave-split-p4-current-run1-20261012\\CW-SPLIT-C08.md",
+      "firstEditionSha256": "2547e29607890591afa410e4d40b2257fa3dd1d7521d70c9150ae903988e1c00",
+      "completeTextSaved": true
+    }
+  ],
+  "toolEvidence": [
+    {
+      "name": "node --version",
+      "stdoutPath": "D:\\Temp\\cineweave-split-p4-current-run1-20261012\\tool-results\\node-version.stdout.txt",
+      "exitPath": "D:\\Temp\\cineweave-split-p4-current-run1-20261012\\tool-results\\node-version.exit.txt"
+    },
+    {
+      "stdoutPath": "D:\\Temp\\cineweave-split-p4-current-run1-20261012\\tool-results\\C03-delivery.stdout.txt",
+      "name": "check-delivery C03",
+      "scope": "Planning arithmetic only; 24fps is an explicit calculation convention",
+      "worksheetPath": "D:\\Temp\\cineweave-split-p4-current-run1-20261012\\tool-results\\C03-delivery-worksheet.json",
+      "exitPath": "D:\\Temp\\cineweave-split-p4-current-run1-20261012\\tool-results\\C03-delivery.exit.txt"
+    },
+    {
+      "stdoutPath": "D:\\Temp\\cineweave-split-p4-current-run1-20261012\\tool-results\\C08-delivery.stdout.txt",
+      "name": "check-delivery C08",
+      "scope": "Planning arithmetic only; 24fps is an explicit calculation convention",
+      "worksheetPath": "D:\\Temp\\cineweave-split-p4-current-run1-20261012\\tool-results\\C08-delivery-worksheet.json",
+      "exitPath": "D:\\Temp\\cineweave-split-p4-current-run1-20261012\\tool-results\\C08-delivery.exit.txt"
+    },
+    {
+      "name": "C08 exact authorized text replacements",
+      "resultPath": "D:\\Temp\\cineweave-split-p4-current-run1-20261012\\tool-results\\C08-scope-check.json",
+      "scope": "Three decoded prompt blocks compared ordinally; no media"
+    },
+    {
+      "name": "C02 first write orchestration",
+      "result": "functions.exec returned SyntaxError before shell execution; corrected call saved first edition without overwrite"
+    }
+  ]
+}

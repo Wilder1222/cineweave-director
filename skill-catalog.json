@@ -1,0 +1,71 @@
+{
+  "format": "cineweave-skill-catalog/v1",
+  "skills": {
+    "cineweave-director": {
+      "enabled": true
+    },
+    "cineweave-platform": {
+      "enabled": true
+    },
+    "cineweave-reference": {
+      "enabled": true
+    },
+    "cineweave-review": {
+      "enabled": true
+    }
+  },
+  "targetKindOwners": {
+    "cineweave_codex_creative_brief": "cineweave-director",
+    "cineweave_codex_workflow_plan": "cineweave-director",
+    "cineweave_codex_world_bible": "cineweave-director",
+    "cineweave_codex_story_brief": "cineweave-director",
+    "cineweave_codex_beat_sheet": "cineweave-director",
+    "cineweave_codex_script_scene": "cineweave-director",
+    "cineweave_codex_continuity_ledger": "cineweave-director",
+    "cineweave_codex_character_morphology_spec": "cineweave-director",
+    "cineweave_codex_character_spec": "cineweave-director",
+    "cineweave_codex_character_appearance_state": "cineweave-director",
+    "character_binding": "cineweave-director",
+    "cineweave_codex_performance_timeline": "cineweave-director",
+    "cineweave_codex_scene_spec": "cineweave-director",
+    "cineweave_codex_scene_state": "cineweave-director",
+    "cineweave_codex_scene_light_state": "cineweave-director",
+    "cineweave_codex_interaction_constraint_set": "cineweave-director",
+    "scene_binding": "cineweave-director",
+    "cineweave_codex_style_package": "cineweave-director",
+    "cineweave_codex_representation_binding": "cineweave-director",
+    "cineweave_codex_style_compile": "cineweave-director",
+    "cineweave_codex_style_light_grammar": "cineweave-director",
+    "cineweave_codex_reference_asset": "cineweave-reference",
+    "cineweave_codex_reference_observation": "cineweave-reference",
+    "cineweave_codex_reference_binding_set": "cineweave-reference",
+    "cineweave_codex_asset_alias_registry": "cineweave-reference",
+    "cineweave_codex_action_sequence_spec": "cineweave-director",
+    "cineweave_codex_cinematic_skill_manifest": "cineweave-director",
+    "cineweave_codex_shot_compiler_plan": "cineweave-director",
+    "cineweave_codex_shot_spec": "cineweave-director",
+    "cineweave_codex_shot_lighting_plan": "cineweave-director",
+    "cineweave_codex_temporal_spec": "cineweave-director",
+    "cineweave_codex_camera_previs_spec": "cineweave-director",
+    "cineweave_codex_hero_frame_anchor": "cineweave-director",
+    "cineweave_codex_storyboard_sequence": "cineweave-director",
+    "cineweave_codex_sequence_rhythm_spec": "cineweave-director",
+    "cineweave_codex_render_plan": "cineweave-director",
+    "cineweave_codex_prompt_record": "cineweave-director",
+    "cineweave_codex_image_prompt": "cineweave-director",
+    "cineweave_codex_prompt_projection_plan": "cineweave-platform",
+    "cineweave_codex_asset_recipe": "cineweave-director",
+    "cineweave_codex_board_assembly_plan": "cineweave-director",
+    "cineweave_codex_editorial_timeline_plan": "cineweave-director",
+    "cineweave_codex_color_pipeline_profile": "cineweave-director",
+    "cineweave_codex_control_channel_set": "cineweave-director",
+    "cineweave_codex_evidence_bundle": "cineweave-director",
+    "cineweave_codex_capability_profile": "cineweave-director",
+    "cineweave_codex_capability_resolution_plan": "cineweave-director",
+    "cineweave_codex_license_profile": "cineweave-director",
+    "cineweave_codex_control_benchmark": "cineweave-review",
+    "cineweave_codex_control_benchmark_review": "cineweave-review",
+    "cineweave_codex_creative_review": "cineweave-review",
+    "cineweave_codex_repair_plan": "cineweave-review"
+  }
+}

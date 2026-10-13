@@ -1,0 +1,59 @@
+{
+  "valid": true,
+  "source": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director",
+  "bundle": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\p6-reference",
+  "target": {
+    "type": "skill",
+    "name": "cineweave-reference"
+  },
+  "files": 160,
+  "exports": 160,
+  "sourceFiles": 160,
+  "skills": [
+    {
+      "name": "cineweave-reference",
+      "root": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\p6-reference",
+      "files": 159,
+      "actualKinds": [
+        "cineweave_codex_reference_asset",
+        "cineweave_codex_reference_observation",
+        "cineweave_codex_reference_binding_set",
+        "cineweave_codex_asset_alias_registry"
+      ],
+      "targetKinds": [
+        "cineweave_codex_reference_asset",
+        "cineweave_codex_reference_observation",
+        "cineweave_codex_reference_binding_set",
+        "cineweave_codex_asset_alias_registry"
+      ],
+      "references": 42,
+      "roots": 52,
+      "schemas": 54,
+      "examples": 52,
+      "receipts": 48,
+      "schemaRefs": 1357,
+      "markdownFiles": 43,
+      "links": 410,
+      "fragments": 115,
+      "textFiles": 159
+    }
+  ],
+  "totals": {
+    "roots": 52,
+    "schemas": 54,
+    "examples": 52,
+    "references": 42,
+    "receipts": 48,
+    "schemaRefs": 1357,
+    "markdownFiles": 43,
+    "links": 410,
+    "fragments": 115,
+    "textFiles": 159
+  },
+  "roots": 52,
+  "schemas": 54,
+  "examples": 52,
+  "references": 42,
+  "byteIdentical": true,
+  "messageZh": "插件构建完成，与已校验源码逐字节一致。"
+}

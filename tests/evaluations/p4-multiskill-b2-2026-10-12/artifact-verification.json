@@ -1,0 +1,65 @@
+[
+  {
+    "id": "CW-SPLIT-C01",
+    "responseEqualsSavedMarkdown": true,
+    "firstDeliveryExists": true
+  },
+  {
+    "id": "CW-SPLIT-C02",
+    "responseEqualsSavedMarkdown": true,
+    "firstDeliveryExists": true
+  },
+  {
+    "id": "CW-SPLIT-C03",
+    "responseEqualsSavedMarkdown": true,
+    "firstDeliveryExists": true
+  },
+  {
+    "id": "CW-SPLIT-C04",
+    "responseEqualsSavedMarkdown": true,
+    "firstDeliveryExists": true
+  },
+  {
+    "id": "CW-SPLIT-C05",
+    "responseEqualsSavedMarkdown": true,
+    "firstDeliveryExists": true
+  },
+  {
+    "id": "CW-SPLIT-C06",
+    "responseEqualsSavedMarkdown": true,
+    "firstDeliveryExists": true
+  },
+  {
+    "id": "CW-SPLIT-C07",
+    "responseEqualsSavedMarkdown": true,
+    "firstDeliveryExists": true
+  },
+  {
+    "id": "CW-SPLIT-C08",
+    "responseEqualsSavedMarkdown": true,
+    "firstDeliveryExists": true
+  },
+  {
+    "id": "CW-SPLIT-C08/REV-G",
+    "originalV1EqualsSupplied": true,
+    "lockedS01Preserved": true,
+    "onlyExpectedPositionAndRevisionReplacement": true
+  },
+  {
+    "id": "CW-SPLIT-C08/REV-M",
+    "originalV1EqualsSupplied": true,
+    "lockedS01Preserved": true,
+    "onlyExpectedPositionAndRevisionReplacement": true
+  },
+  {
+    "id": "CW-SPLIT-C08/REV-P",
+    "originalV1EqualsSupplied": true,
+    "lockedS01Preserved": true,
+    "onlyExpectedPositionAndRevisionReplacement": true
+  },
+  {
+    "id": "CW-SPLIT-C08/independent-platform-copy",
+    "lockedS01CopyBodyPreserved": true,
+    "twoRevisedMasterBlocksEqualSaved": true
+  }
+]

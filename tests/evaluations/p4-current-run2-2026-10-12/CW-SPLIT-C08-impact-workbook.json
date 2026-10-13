@@ -1,0 +1,30 @@
+{
+  "format": "cineweave-change-impact",
+  "canonical": false,
+  "artifacts": [
+    { "id": "REV-G", "revision": 1, "dependencyCoverage": "complete" },
+    { "id": "REV-M", "revision": 1, "dependencyCoverage": "complete" },
+    { "id": "REV-P", "revision": 1, "dependencyCoverage": "complete" },
+    { "id": "REV-S01-locked", "revision": 1, "dependencyCoverage": "complete" },
+    { "id": "REV-sound-intent", "revision": 1, "dependencyCoverage": "complete" },
+    { "id": "REV-adjacent-continuity", "revision": 1, "dependencyCoverage": "partial" }
+  ],
+  "dependencies": [
+    { "consumer": "REV-M", "source": "REV-G", "sourceRevision": 1, "paths": ["/shots/REV-S02/camera"] },
+    { "consumer": "REV-P", "source": "REV-M", "sourceRevision": 1, "paths": ["/shots/REV-S02"] },
+    { "consumer": "REV-S01-locked", "source": "REV-G", "sourceRevision": 1, "paths": ["/shots/REV-S01"] },
+    { "consumer": "REV-sound-intent", "source": "REV-G", "sourceRevision": 1, "paths": ["/sound"] },
+    { "consumer": "REV-adjacent-continuity", "source": "REV-G", "sourceRevision": 1, "paths": ["/shots/REV-S02/camera", "/shots/REV-S01/exitState"] }
+  ],
+  "changes": [
+    {
+      "source": "REV-G",
+      "fromRevision": 1,
+      "toRevision": 2,
+      "paths": ["/shots/REV-S02/camera"],
+      "before": "桌南侧偏西略俯",
+      "after": "桌南侧偏东略俯",
+      "reason": "用户只授权REV-S02固定手部特写机位由桌南侧偏西略俯改到桌南侧偏东略俯；其他内容与REV-S01锁定。"
+    }
+  ]
+}

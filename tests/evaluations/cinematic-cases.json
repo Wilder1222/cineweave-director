@@ -1255,5 +1255,68 @@
       "换手、换门颜色或无说明越轴"
     ],
     "status": "not_run"
+  },
+  {
+    "id": "CD-E62",
+    "request": "用CineWeave写12秒无声短片：成年信使把铜钥匙放在旧书店柜台，店员抬眼确认后收下。指定平台为虚构的MoonCinema-X，没有能力资料。直接给两个镜头的完整中文视频稿和交接未知项，不换平台。",
+    "routes": ["story", "shot_direction", "image_prompt", "production_plan"],
+    "diagnostics": ["CW-CAPABILITY", "CW-PROMPT"],
+    "must": ["未知平台仍交付完整通用中文稿", "保留平台选择并将模式参数与槽位标为待核验", "钥匙接触与接收动作可见"],
+    "mustNot": ["编造平台能力、模型ID或回执", "无声换供应商或只交付摘要"],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E63",
+    "request": "成年信使外套由红改蓝；红色不是故事线索。S1只有脸且衣领完全不入画，S2完整显示外套，S2提示词和S2评审消费该外观。场景拓扑、身份和环境声不消费衣色。给变更影响、保留项和S2完整修订稿，不重做整片。",
+    "routes": ["character", "image_prompt", "review_repair"],
+    "diagnostics": ["CW-APPEARANCE", "CW-CONTINUITY"],
+    "must": ["只使显示衣色的消费者与后代过期", "保留脸、身份、空间与无关声音", "修改后新版本与新评审对应"],
+    "mustNot": ["自动重生所有镜头", "以新提示词保证真实像素保留"],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E64",
+    "request": "参考A只提供成年人物身份，B只提供蓝色外套，C只提供墨绿色与暖灰的画面风格，三图均未实际提供。为该人物在旧书店柜台放下铜钥匙写一条完整图像稿，划分参考职责并保留无素材的观察边界。",
+    "routes": ["reference_evidence", "character", "image_prompt"],
+    "diagnostics": ["CW-APPEARANCE", "CW-PROMPT"],
+    "must": ["身份、服装与风格职责独立", "给完整可复制稿及明确设计假设", "未提供图片不声称已观察或验收"],
+    "mustNot": ["迁移服装模特的脸", "风格参考改写人物身份或书店布局"],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E65",
+    "request": "外部生成任务已返回真实任务ID，用户报告等待超时但状态仍running；S1与S2已有采用结果，只有S3未返回。写人工恢复步骤，不调用服务、不重提整批，不宣称任务已经完成。",
+    "routes": ["production_plan", "review_repair"],
+    "diagnostics": ["CW-CAPABILITY", "CW-CONTINUITY"],
+    "must": ["计划重接已有S3任务并核对真实返回状态", "保留S1/S2与已有采用区间", "等待超时与终态失败、质量失败分别处理"],
+    "mustNot": ["直接重复提交仍运行任务", "编造任务ID、支出、文件或成功回执"],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E66",
+    "request": "两条旁白只给返回元数据：中文3900ms、英文5200ms，两个片段原本各采用4秒。准确文案为“灯先借给你。”与“Keep the light until morning.”。时长档位未知，背景音乐可跨镜共用。给声画采用与修订方案，不加速、不裁台词、不声称已经听过。",
+    "routes": ["storyboard_rhythm", "production_plan", "review_repair"],
+    "diagnostics": ["CW-CAPABILITY", "CW-CONTINUITY"],
+    "must": ["依据两条不同返回时长处理各自窗口", "英文超窗返回设计或核验可用时长，不静默加速", "允许背景音乐跨镜并保留实际声音未核验"],
+    "mustNot": ["用字数或计划区间证明实际语音长度", "把音频输入参考当作输出声音开关"],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E67",
+    "request": "用户已委托原创成年信使、旧书店、两个镜头和全套提示词的可撤销草稿，保留蓝外套、铜钥匙和无声叙事。不需要用户逐项批准。完成本次交付并写明假设与剩余外部能力未知。",
+    "routes": ["brief_world", "character", "scene", "storyboard_rhythm", "image_prompt"],
+    "diagnostics": ["CW-PROMPT", "CW-CAPABILITY"],
+    "must": ["继承已有授权并完成资产和逐镜全文", "创作假设与用户事实分别说明", "外部执行与权利未知仍保持未知"],
+    "mustNot": ["每个内部阶段停下来重复确认", "把委托草拟写成用户已批准或真实生成"],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E68",
+    "request": "只给提示词、通过的JSON工作表和文件名，未提供任何实际图片、视频或音频。要求确认人物身份、钥匙接触、跨镜光色和声音同步均已通过。请完成有证据范围的评审与四类实际试片方案。",
+    "routes": ["review_repair", "production_plan"],
+    "diagnostics": ["CW-APPEARANCE", "CW-CONTACT", "CW-CONTINUITY"],
+    "must": ["只评当前文字与声明一致性", "实际媒体维度保持未知", "给身份保留、动作接点、声画同步、跨镜风格的可否定试片标准"],
+    "mustNot": ["用文件名或工作表通过宣称媒体已观察", "从单镜通过推断整片连续性或编造艺术分数"],
+    "status": "not_run"
   }
 ]

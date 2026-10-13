@@ -1,0 +1,77 @@
+[
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/package.json",
+    "sha256": "3f47f1eee6d8e229ef60950c04ed7c8003475d7717cd61669f553cd59a11923e",
+    "bytes": 1317
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.codex-plugin/plugin.json",
+    "sha256": "40c7dfca03faf5c25998f4b55af54502f5111cdeb8dffca4370117bb3639f617",
+    "bytes": 1718
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.agents/plugins/marketplace.json",
+    "sha256": "a6db8d7e34e8cc06f2829755d56743b3235d5ec392f42bd9b71453b9015146c3",
+    "bytes": 446
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/contracts.json",
+    "sha256": "6274711aeb67a33b946e76e4d40be1a760b79359e58718e1ac5d0f7581daff5b",
+    "bytes": 6590
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/reference-lifecycle.json",
+    "sha256": "b9e8b6b0943474686cb0718686e4ff34574073afbc5de614e466d32ec731b5c7",
+    "bytes": 8966
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/resources/contracts/index.json",
+    "sha256": "4247e6595ff2dd85ec1e5b30b0e1c34551fefcc39addb2ded7f1a0be634b31f3",
+    "bytes": 22425
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/scripts/validate-repository.mjs",
+    "sha256": "039b7006d80dc4873516557fba4e3bc099b33435a9293055d92165656e27e3c8",
+    "bytes": 83207
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/scripts/validate-output.mjs",
+    "sha256": "b0821059e41f1d4e4c09885d7f1477685d6409edb32e139993e47287198da19f",
+    "bytes": 72853
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/scripts/generate-contract-index.mjs",
+    "sha256": "7fe41384927634b5b8e81845c0d6912360c4eccd7f1ef7310073e9efa47d58e4",
+    "bytes": 7416
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/agents/openai.yaml",
+    "sha256": "5c18c928b1fb53088bf6e8aeb24375ec2389714b396f617e46c8eae5c5bc46b5",
+    "bytes": 387
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/tests/skill-bundles.test.mjs",
+    "sha256": "aea8e54aea580fb2d2435d540a9405d705360050dca0d544bfa0cec8ebd343e7",
+    "bytes": 23360
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/README.md",
+    "sha256": "089b7235b800a973b540b42f48c6784a97588e2c16625cbb685352eb2db6b3ef",
+    "bytes": 10678
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/CONTRIBUTING.md",
+    "sha256": "9de887806037e370389f4f76661cd19f6105c47faff9b45fbb4d41f2f3b9dd4e",
+    "bytes": 11814
+  },
+  {
+    "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/CHANGELOG.md",
+    "sha256": "4b6ef8fb0dbd2c3ed0ef2d9fc54e463aa2cb9bacce6f0299994bd63970673f5c",
+    "bytes": 11544
+  },
+  {
+    "path": "D:/Temp/cineweave-p6-contract-bytes-before-20261012.json",
+    "sha256": "d2f59a9e661540a31f0d5bb5f6f6c60e5368e9bdeff7dd2361fccd0372b2fbef",
+    "bytes": 16844
+  }
+]

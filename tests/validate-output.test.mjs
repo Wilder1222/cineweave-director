@@ -542,6 +542,42 @@ test("PromptProjectionPlan readiness requires truthful compatibility and rights 
   assert.equal((await validatePayload(schemaPath, splitReadiness)).valid, false);
 });
 
+test("exact projection license context rejects ready handoff against a blocked or expired source", async () => {
+  const { schemaPath, payload } = await loadContractFixture("prompt-projection-plan");
+  const { payload: original } = await loadContractFixture("license-profile");
+  for (const status of ["blocked", "expired"]) {
+    const license = { ...structuredClone(original), status };
+    const candidate = structuredClone(payload);
+    const ref = { kind: license.kind, id: license.profileId, version: license.version, contentHash: sha256Canonical(license) };
+    candidate.licenseProfileRef = ref;
+    const result = await validatePayload(schemaPath, candidate, { artifacts: [{ ref, document: license }] });
+    assert.equal(result.valid, false, status);
+    assert.match(result.errors.join("\n"), /license.*(blocked|expired)|licenseProfileRef/iu);
+  }
+});
+
+test("exact projection context rejects explicit generation and reference rights blocks", async () => {
+  const { schemaPath, payload } = await loadContractFixture("prompt-projection-plan");
+  const { payload: license } = await loadContractFixture("license-profile");
+  license.status = "verified";
+  license.assetRights.generationUse = "prohibited";
+  const licenseRef = { kind: license.kind, id: license.profileId, version: license.version, contentHash: sha256Canonical(license) };
+  const deniedGeneration = structuredClone(payload);
+  deniedGeneration.licenseProfileRef = licenseRef;
+  const generation = await validatePayload(schemaPath, deniedGeneration, { artifacts: [{ ref: licenseRef, document: license }] });
+  assert.equal(generation.valid, false);
+  assert.match(generation.errors.join("\n"), /generationUse|licenseProfileRef/iu);
+
+  const { payload: observation } = await loadContractFixture("reference-observation");
+  observation.rightsGate.status = "blocked";
+  const observationRef = { kind: observation.kind, id: observation.observationId, version: observation.version, contentHash: sha256Canonical(observation) };
+  const deniedReference = structuredClone(payload);
+  deniedReference.referenceBindings[0].sourceObservationRef = observationRef;
+  const reference = await validatePayload(schemaPath, deniedReference, { artifacts: [{ ref: observationRef, document: observation }] });
+  assert.equal(reference.valid, false);
+  assert.match(reference.errors.join("\n"), /rightsGate|sourceObservationRef/iu);
+});
+
 test("CapabilityResolutionPlan joins requirements, results, and selection truthfully", async () => {
   const { schemaPath, payload } = await loadContractFixture("capability-resolution-plan");
   assert.equal((await validatePayload(schemaPath, payload)).valid, true);

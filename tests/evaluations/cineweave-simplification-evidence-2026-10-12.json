@@ -1,0 +1,453 @@
+{
+  "format": "cineweave-simplification-evidence",
+  "date": "2026-10-12",
+  "scope": "development-only instructions and maintenance simplification",
+  "branch": "codex/higgsfield-phased-refactor",
+  "head": "0e476a7e96e43980bbfe8388c446c3f78fd06019",
+  "baseline": "working tree after prior Higgsfield refactor, before this simplification; not the older Git HEAD",
+  "externalSource": {
+    "repository": "https://github.com/higgsfield-ai/skills",
+    "commit": "f83af0bc1d937c8119099a11f8ebbf5e6fb99819",
+    "file": "CLAUDE.md",
+    "adopted": [
+      "decision-focused entry",
+      "conditional reference discovery",
+      "self-contained skill"
+    ],
+    "excluded": [
+      "provider execution CLI",
+      "universal token cap",
+      "fixed model or shot counts",
+      "skipping generated-media review"
+    ]
+  },
+  "capturedBaseline": [
+    {
+      "path": "skills/cineweave-director/SKILL.md",
+      "bytes": 12966,
+      "lines": 89,
+      "sha256": "121f5ac583118c32f339f10da430aff0d6adc687e1b0a36fa821e5ced342f034"
+    },
+    {
+      "path": "skills/cineweave-director/references/core/operating-model.md",
+      "bytes": 8181,
+      "lines": 81,
+      "sha256": "93983bee477b216b53543556ab2523ee6d7e8b1d56e2721810d2fb359e8e204f"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/ensemble-direction-and-review.md",
+      "bytes": 12122,
+      "lines": 132,
+      "sha256": "a3f41e181a4382ed4a23835c696797837fac9cfc939fc3f86203443cab680bae"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/short-film-creation.md",
+      "bytes": 12895,
+      "lines": 96,
+      "sha256": "38126f516861ca06300daf37d18b4e31c1f66e729c7566333a8ed4e32bdcf7a4"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/shot-design-workbench.md",
+      "bytes": 33732,
+      "lines": 229,
+      "sha256": "f3b00c7d257a55dcae7e715747e1b218b3edeb71627a7735b5a7ef482e2ba3c0"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-timing-and-handles.md",
+      "bytes": 7980,
+      "lines": 74,
+      "sha256": "e61680f79223554f3aef05c21d18510b9c80e044bffc594dd264721fe6cc737a"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-sound-and-delivery.md",
+      "bytes": 14134,
+      "lines": 147,
+      "sha256": "454f689eb1c229552c520647a0ec9829295f748d5cf5d866f80ca5fbcf7ec15f"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/production-plan.md",
+      "bytes": 8635,
+      "lines": 69,
+      "sha256": "2daf3977bb9ed78859899c9b0fc6b1ddbbb0d81f32a2897920e76df045a962a5"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/review-repair.md",
+      "bytes": 7823,
+      "lines": 57,
+      "sha256": "50bcea9fe3d1b371572a3b5f18e1142d0666734f72c584e28eb71ea5b2ecfb3e"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/generation-diagnostics.md",
+      "bytes": 11070,
+      "lines": 172,
+      "sha256": "9f8b6be9c021d97a9cecaf79a4f93f75810ed3c299670300e4c48c29e0a8460b"
+    },
+    {
+      "path": "scripts/validate-repository.mjs",
+      "bytes": 42961,
+      "lines": 819,
+      "sha256": "82e325db185a1de7dfa78527fcda92987478adf991a03037f334d8e59ff615d6"
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "bytes": 1923,
+      "lines": 42,
+      "sha256": "812848aa0d2f33661f75f51fffc2ca26f4a9e1255422ae0a2d57136365a0d16c"
+    },
+    {
+      "path": "tests/reliability.test.mjs",
+      "bytes": 6465,
+      "lines": 95,
+      "sha256": "923a75869fb77115d9d74693d157e25e62a6d779b609103ee7ed0efeafbeed48"
+    }
+  ],
+  "documentMetrics": {
+    "baselineOrigin": "prior byte-identical bundle from the earlier Higgsfield refactor; all ten captured document hashes matched",
+    "capturedBaselineCheck": [
+      {
+        "path": "skills/cineweave-director/SKILL.md",
+        "matchesCapturedBaseline": true
+      },
+      {
+        "path": "skills/cineweave-director/references/core/operating-model.md",
+        "matchesCapturedBaseline": true
+      },
+      {
+        "path": "skills/cineweave-director/references/optional/ensemble-direction-and-review.md",
+        "matchesCapturedBaseline": true
+      },
+      {
+        "path": "skills/cineweave-director/references/optional/short-film-creation.md",
+        "matchesCapturedBaseline": true
+      },
+      {
+        "path": "skills/cineweave-director/references/optional/shot-design-workbench.md",
+        "matchesCapturedBaseline": true
+      },
+      {
+        "path": "skills/cineweave-director/references/optional/video-timing-and-handles.md",
+        "matchesCapturedBaseline": true
+      },
+      {
+        "path": "skills/cineweave-director/references/optional/video-sound-and-delivery.md",
+        "matchesCapturedBaseline": true
+      },
+      {
+        "path": "skills/cineweave-director/references/routes/production-plan.md",
+        "matchesCapturedBaseline": true
+      },
+      {
+        "path": "skills/cineweave-director/references/routes/review-repair.md",
+        "matchesCapturedBaseline": true
+      },
+      {
+        "path": "skills/cineweave-director/references/optional/generation-diagnostics.md",
+        "matchesCapturedBaseline": true
+      }
+    ],
+    "changedShippedDocuments": [
+      {
+        "path": "skills/cineweave-director/SKILL.md",
+        "beforeBytes": 12966,
+        "afterBytes": 6879,
+        "beforeLines": 89,
+        "afterLines": 59,
+        "beforeSHA256": "121f5ac583118c32f339f10da430aff0d6adc687e1b0a36fa821e5ced342f034",
+        "afterSHA256": "18d40408575640d65220b0d4527d356ec4509dc7856e8f0c35dc15142c2af426"
+      },
+      {
+        "path": "skills/cineweave-director/references/core/operating-model.md",
+        "beforeBytes": 8181,
+        "afterBytes": 7241,
+        "beforeLines": 81,
+        "afterLines": 81,
+        "beforeSHA256": "93983bee477b216b53543556ab2523ee6d7e8b1d56e2721810d2fb359e8e204f",
+        "afterSHA256": "932bdfa72eb114b93673cb0e2a4490a293c1302fc3822f4d832a749164da101e"
+      },
+      {
+        "path": "skills/cineweave-director/references/optional/ensemble-direction-and-review.md",
+        "beforeBytes": 12122,
+        "afterBytes": 12420,
+        "beforeLines": 132,
+        "afterLines": 132,
+        "beforeSHA256": "a3f41e181a4382ed4a23835c696797837fac9cfc939fc3f86203443cab680bae",
+        "afterSHA256": "54d9406901ae0b42cd8bb2b2cb4bda5e89aaff625dd4e255dc7377452d735e75"
+      },
+      {
+        "path": "skills/cineweave-director/references/optional/generation-diagnostics.md",
+        "beforeBytes": 11070,
+        "afterBytes": 10528,
+        "beforeLines": 172,
+        "afterLines": 169,
+        "beforeSHA256": "9f8b6be9c021d97a9cecaf79a4f93f75810ed3c299670300e4c48c29e0a8460b",
+        "afterSHA256": "2ad6fd129d28d5b97853db37b36a3e81582605ddf37ae6139376d671ebf40b9b"
+      },
+      {
+        "path": "skills/cineweave-director/references/optional/short-film-creation.md",
+        "beforeBytes": 12895,
+        "afterBytes": 13057,
+        "beforeLines": 96,
+        "afterLines": 96,
+        "beforeSHA256": "38126f516861ca06300daf37d18b4e31c1f66e729c7566333a8ed4e32bdcf7a4",
+        "afterSHA256": "917480543ea26ec01bf86983034561d8cdbc881adb0a757b6b76e9cb359e3165"
+      },
+      {
+        "path": "skills/cineweave-director/references/optional/shot-design-workbench.md",
+        "beforeBytes": 33732,
+        "afterBytes": 33891,
+        "beforeLines": 229,
+        "afterLines": 229,
+        "beforeSHA256": "f3b00c7d257a55dcae7e715747e1b218b3edeb71627a7735b5a7ef482e2ba3c0",
+        "afterSHA256": "bc1f476dd6548d0bc9772d02be7c895746101f5855985b89c0d1bfb111ec3d96"
+      },
+      {
+        "path": "skills/cineweave-director/references/optional/video-sound-and-delivery.md",
+        "beforeBytes": 14134,
+        "afterBytes": 14114,
+        "beforeLines": 147,
+        "afterLines": 147,
+        "beforeSHA256": "454f689eb1c229552c520647a0ec9829295f748d5cf5d866f80ca5fbcf7ec15f",
+        "afterSHA256": "cfd0a201805ab58f05ebe5eda1025359776eb78534cfb849472f728594da6a16"
+      },
+      {
+        "path": "skills/cineweave-director/references/optional/video-timing-and-handles.md",
+        "beforeBytes": 7980,
+        "afterBytes": 7813,
+        "beforeLines": 74,
+        "afterLines": 74,
+        "beforeSHA256": "e61680f79223554f3aef05c21d18510b9c80e044bffc594dd264721fe6cc737a",
+        "afterSHA256": "0856cc9f67c10259a54755a470ae338e93a25df3d031b0d1730e5429aeb55fa8"
+      },
+      {
+        "path": "skills/cineweave-director/references/routes/character.md",
+        "beforeBytes": 4857,
+        "afterBytes": 5020,
+        "beforeLines": 46,
+        "afterLines": 48,
+        "beforeSHA256": "511f7b9bb512821f57f7676eab9989161b8f6542fc1f54713138846a60a41e23",
+        "afterSHA256": "6527df3210d32a9fb03f4e33c9f2d4f2bd52d34f84ea88d60950f1fee637abf8"
+      },
+      {
+        "path": "skills/cineweave-director/references/routes/production-plan.md",
+        "beforeBytes": 8635,
+        "afterBytes": 8303,
+        "beforeLines": 69,
+        "afterLines": 69,
+        "beforeSHA256": "2daf3977bb9ed78859899c9b0fc6b1ddbbb0d81f32a2897920e76df045a962a5",
+        "afterSHA256": "efbde14fb9810d392a696a0ee4e6aaca3b2f64998c291f4ab9936f5c6e41273a"
+      },
+      {
+        "path": "skills/cineweave-director/references/routes/review-repair.md",
+        "beforeBytes": 7823,
+        "afterBytes": 7790,
+        "beforeLines": 57,
+        "afterLines": 57,
+        "beforeSHA256": "50bcea9fe3d1b371572a3b5f18e1142d0666734f72c584e28eb71ea5b2ecfb3e",
+        "afterSHA256": "9befe4fe6ecc4711e9aeb33121de3aa3912d5a5122ccea047793829b06481834"
+      },
+      {
+        "path": "skills/cineweave-director/references/routes/shot-direction.md",
+        "beforeBytes": 6373,
+        "afterBytes": 6517,
+        "beforeLines": 55,
+        "afterLines": 57,
+        "beforeSHA256": "8ac6fd68d2f3c51d66a6dbbdd7a60d3604721497f3717a54ce08b15f49e2c82f",
+        "afterSHA256": "c04957137f3f99cb3bba46f0c9046a653df490686867d8c0cad57ede90087388"
+      },
+      {
+        "path": "skills/cineweave-director/references/routes/storyboard-rhythm.md",
+        "beforeBytes": 7671,
+        "afterBytes": 8015,
+        "beforeLines": 65,
+        "afterLines": 67,
+        "beforeSHA256": "f71bf9c0aadea9a05d24043e76e3241f3594aa3dcc681b078537c8b5c76af9fd",
+        "afterSHA256": "10ce342b7e5beb342f16942d653c3316c9fbe3758e6942c687c37e2560a2c601"
+      }
+    ],
+    "allSkillMarkdown": {
+      "files": 43,
+      "beforeBytes": 476341,
+      "afterBytes": 469490
+    },
+    "markdownLinkReachableReferences": {
+      "before": 39,
+      "after": 42
+    }
+  },
+  "priorEvidencePreserved": [
+    {
+      "path": "tests/evaluations/higgsfield-behavior-a-2026-10-12.md",
+      "sha256": "ce6b46f5d4c07ccd330a2800fabf138e81234670a307d80ab487e09c0b6d1f3e",
+      "byteUnchanged": true
+    },
+    {
+      "path": "tests/evaluations/higgsfield-behavior-b-2026-10-12.md",
+      "sha256": "ba6bc8f42102f4efaed84dcabf4f6649c42a631e495225a5fa2f4a47e8de834b",
+      "byteUnchanged": true
+    },
+    {
+      "path": "tests/evaluations/higgsfield-behavior-c-2026-10-12.md",
+      "sha256": "42136d83fd9547c3cb3dae075a920768b11769f6d828e0d29d8056f3b182a677",
+      "byteUnchanged": true
+    },
+    {
+      "path": "tests/evaluations/higgsfield-behavior-review-2026-10-12.md",
+      "sha256": "157a7c85c866f5bcfb492fa2a2be1620362eee1e4523f7da87b5c20c8274d054",
+      "byteUnchanged": true
+    },
+    {
+      "path": "tests/evaluations/higgsfield-counterexamples-2026-10-11.json",
+      "sha256": "6c744ea88c1504bf297c69a44e86d90ce2de8b33a36f92603a24705885371f59",
+      "byteUnchanged": true
+    },
+    {
+      "path": "tests/evaluations/higgsfield-counterexamples-2026-10-11.mjs",
+      "sha256": "b94bbfbb01b463835876b2fa264a70bda50229f30c92fc30af36587483c7296b",
+      "byteUnchanged": true
+    },
+    {
+      "path": "tests/evaluations/higgsfield-isolation-rerun-2026-10-12.md",
+      "sha256": "3899987611dd95b69e9e6178313770dd84e240865cbb168ae1b1931c2eaf23c4",
+      "byteUnchanged": true
+    },
+    {
+      "path": "tests/evaluations/higgsfield-refactor-evidence-2026-10-12.json",
+      "sha256": "b1fc9b6764b1d73b303f8bc062123299dc3ac4b579b9a84a298e871a1b31b4f3",
+      "byteUnchanged": true
+    },
+    {
+      "path": "tests/evaluations/higgsfield-refactor-execution-2026-10-12.md",
+      "sha256": "e9209abd4bf1691386fd3e32ff478e14d41d2a0c963c16d95dbf6eea8a38445d",
+      "byteUnchanged": true
+    },
+    {
+      "path": "tests/evaluations/higgsfield-skills-refactor-plan-2026-10-11.md",
+      "sha256": "5fd9d12e5767f4710dd4f2b0474c4452f43308157c46d9d612063cecaf45476b",
+      "byteUnchanged": true
+    }
+  ],
+  "checks": [
+    {
+      "command": "npm run validate",
+      "phase": "after finalized reports",
+      "chunk_id": "13d8ae",
+      "wall_time_seconds": 3.9618295999999997,
+      "exit_code": 0,
+      "original_token_count": 118,
+      "output": "\n> cineweave-director@3.1.0 validate\n> node scripts/validate-repository.mjs\n\n{\n  \"valid\": true,\n  \"mode\": \"source\",\n  \"root\": \"D:\\\\study\\\\projects\\\\cineweave-codex-skills\\\\cineweave-director\",\n  \"files\": 161,\n  \"references\": 42,\n  \"roots\": 52,\n  \"schemas\": 54,\n  \"examples\": 52,\n  \"receipts\": 48,\n  \"schemaRefs\": 1357,\n  \"markdownFiles\": 77,\n  \"links\": 759,\n  \"fragments\": 122,\n  \"textFiles\": 160,\n  \"messageZh\": \"源码、契约、引用和分发边界校验通过。\"\n}\n"
+    },
+    {
+      "command": "npm run contracts:index:check",
+      "chunk_id": "52852e",
+      "wall_time_seconds": 2.7758744,
+      "exit_code": 0,
+      "original_token_count": 77,
+      "output": "\n> cineweave-director@3.1.0 contracts:index:check\n> node scripts/generate-contract-index.mjs --check\n\n{\n  \"valid\": true,\n  \"messageZh\": \"契约索引与当前文件一致。\",\n  \"mode\": \"check\",\n  \"roots\": 52,\n  \"supportSchemas\": 2,\n  \"index\": \"skills/cineweave-director/resources/contracts/index.json\"\n}\n"
+    },
+    {
+      "command": "skill-creator quick_validate",
+      "chunk_id": "d4f43b",
+      "wall_time_seconds": 1.4197891999999999,
+      "exit_code": 0,
+      "original_token_count": 5,
+      "output": "Skill is valid!\r\n"
+    },
+    {
+      "command": "npm run build",
+      "chunk_id": "f07de1",
+      "wall_time_seconds": 1.89e-05,
+      "exit_code": 0,
+      "original_token_count": 99,
+      "output": "{\n  \"valid\": true,\n  \"source\": \"D:\\\\study\\\\projects\\\\cineweave-codex-skills\\\\cineweave-director\",\n  \"bundle\": \"D:\\\\study\\\\projects\\\\cineweave-codex-skills\\\\cineweave-director\\\\.build\\\\cineweave-director\",\n  \"files\": 161,\n  \"roots\": 52,\n  \"schemas\": 54,\n  \"examples\": 52,\n  \"references\": 42,\n  \"byteIdentical\": true,\n  \"messageZh\": \"插件构建完成，与已校验源码逐字节一致。\"\n}\n"
+    },
+    {
+      "command": "npm run validate:bundle",
+      "chunk_id": "79f57b",
+      "wall_time_seconds": 7.364969,
+      "exit_code": 0,
+      "original_token_count": 164,
+      "output": "\n> cineweave-director@3.1.0 validate:bundle\n> node scripts/validate-repository.mjs --bundle .build/cineweave-director\n\n{\n  \"valid\": true,\n  \"mode\": \"bundle\",\n  \"root\": \"D:\\\\study\\\\projects\\\\cineweave-codex-skills\\\\cineweave-director\\\\.build\\\\cineweave-director\",\n  \"sourceRoot\": \"D:\\\\study\\\\projects\\\\cineweave-codex-skills\\\\cineweave-director\",\n  \"files\": 161,\n  \"references\": 42,\n  \"roots\": 52,\n  \"schemas\": 54,\n  \"examples\": 52,\n  \"receipts\": 48,\n  \"schemaRefs\": 1357,\n  \"markdownFiles\": 43,\n  \"links\": 431,\n  \"fragments\": 115,\n  \"textFiles\": 160,\n  \"sourceFilesValidated\": 161,\n  \"messageZh\": \"构建包校验通过，分发内容与源码一致。\"\n}\n"
+    },
+    {
+      "command": "npm run test:bundle",
+      "chunk_id": "3e43c0",
+      "wall_time_seconds": 6.4629491,
+      "exit_code": 0,
+      "original_token_count": 122,
+      "output": "\n> cineweave-director@3.1.0 test:bundle\n> node --test tests/bundle-smoke.test.mjs\n\nTAP version 13\n# Subtest: installed bundle tools run outside the repository, retain exit states and never mutate inputs or the bundle\nok 1 - installed bundle tools run outside the repository, retain exit states and never mutate inputs or the bundle\n  ---\n  duration_ms: 3775.4638\n  type: 'test'\n  ...\n1..1\n# tests 1\n# suites 0\n# pass 1\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 3939.2147\n"
+    },
+    {
+      "command": "npm test",
+      "exit_code": 0,
+      "tests": 392,
+      "pass": 392,
+      "fail": 0,
+      "skipped": 0,
+      "outputTail": "ok 345 - explicit narration block pairing still allows a shared ambient layer\n  ---\n  duration_ms: 0.9623\n  type: 'test'\n  ...\n1..345\n# tests 392\n# suites 0\n# pass 392\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 49870.7311",
+      "fullLogSHA256": "7cae568e60f66f053c1f212953fb0dd822e5c4622ebec9def491fe4447046251"
+    }
+  ],
+  "forwardEvidence": [
+    {
+      "path": "tests/evaluations/cineweave-simplification-forward-a-2026-10-12.md",
+      "bytes": 21266,
+      "sha256": "88225eee55f0b4b26b7c412290496c2bcac89a8319f256ddd2265ffc05158840"
+    },
+    {
+      "path": "tests/evaluations/cineweave-simplification-forward-b-2026-10-12.md",
+      "bytes": 89193,
+      "sha256": "039a7e4cbcb3165e2d15015ac0ede9215a4d9365a933ff9717e2819354a5a7d3"
+    },
+    {
+      "path": "tests/evaluations/cineweave-simplification-review-2026-10-12.md",
+      "bytes": 8645,
+      "sha256": "46cb74370f771dd35161fd9ed4188e767958ef2689515c43b9b015d34cf95c43"
+    },
+    {
+      "path": "tests/evaluations/cineweave-simplification-behavior-review-2026-10-12.md",
+      "bytes": 12394,
+      "sha256": "8a4801665a8ac21c59a4adbdbb1641ed38c01929f6f748f5ac1d6646a224215b"
+    }
+  ],
+  "evidenceBoundary": {
+    "providerExecuted": false,
+    "mediaGenerated": false,
+    "mediaReviewed": false,
+    "capabilityVerified": false,
+    "measurementVerified": false,
+    "tokenCost": null,
+    "latency": null,
+    "stableSuccessRate": null,
+    "gitCommitted": false,
+    "pushed": false,
+    "published": false
+  },
+  "currentMaintenanceFiles": [
+    {
+      "path": "scripts/validate-repository.mjs",
+      "bytes": 43734,
+      "sha256": "7c448bd603d0c4f4e2f3d52e52511d6cea5a2a115112e07fd072d0bdbafadd3a"
+    },
+    {
+      "path": ".github/workflows/validate.yml",
+      "bytes": 1572,
+      "sha256": "1e9aa0c4fdc17dfe003cce9384974f6aaadee5cd3b4c44ae56de062e6086a4a1"
+    },
+    {
+      "path": "tests/reliability.test.mjs",
+      "bytes": 12978,
+      "sha256": "e53d725f1f1c99a1cb1c6424cfdb842793a37208da8fce74310b341cca087676"
+    }
+  ],
+  "textReview": {
+    "cases": 4,
+    "finalKnownHardLockFailures": 0,
+    "firstDraftIssueRetained": "B2 shirt collar state ambiguity; single-variable revision preserved",
+    "reminders": [
+      "A2 first-frame orientation interpretation is unverified"
+    ],
+    "sixViewFinalRows": 12,
+    "planOnly": true,
+    "generalSuccessRate": null
+  }
+}

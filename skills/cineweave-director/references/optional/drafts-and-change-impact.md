@@ -43,6 +43,72 @@
 
 信使外套由红变蓝，修改的是外观状态，而不是身份。不显示外套的纯面部特写不一定需要重新生成；显示外套的镜头、提示词适配稿及依赖它们的评审应标为过期或待审。未消费衣色的故事因果、场景拓扑及声音提示保持有效。如果红色本身是故事线索，先提出冲突，不能把它当作纯外观修改。
 
+## 只读变更影响查询
+
+随包工具 [`check-change-impact.mjs`](../../scripts/check-change-impact.mjs) 接受下面的非规范工作表。不新增根契约、不替代精确来源校验，也不写入项目存储。普通单条提示词无需建立依赖图。
+
+```json
+{
+  "format": "cineweave-change-impact",
+  "canonical": false,
+  "artifacts": [
+    { "id": "appearance.courier", "revision": 1, "dependencyCoverage": "complete" },
+    { "id": "shot.coat", "revision": 1, "dependencyCoverage": "complete" },
+    { "id": "shot.face", "revision": 1, "dependencyCoverage": "complete" },
+    { "id": "prompt.coat", "revision": 1, "dependencyCoverage": "complete" },
+    { "id": "audio.ambience", "revision": 1, "dependencyCoverage": "complete" }
+  ],
+  "dependencies": [
+    { "consumer": "shot.coat", "source": "appearance.courier", "sourceRevision": 1, "paths": ["/wardrobe/color"] },
+    { "consumer": "shot.face", "source": "appearance.courier", "sourceRevision": 1, "paths": ["/face"] },
+    { "consumer": "prompt.coat", "source": "shot.coat", "sourceRevision": 1, "paths": ["/promptHandoff"] }
+  ],
+  "changes": [
+    { "source": "appearance.courier", "fromRevision": 1, "toRevision": 2, "paths": ["/wardrobe/color"], "reason": "用户将外套改为蓝色" }
+  ]
+}
+```
+
+将输入保存为 `impact.json` 后运行：
+
+```powershell
+node skills/cineweave-director/scripts/check-change-impact.mjs impact.json
+node --test tests/change-impact.test.mjs
+```
+
+安装后的工具也可独立运行：`node <skill目录>/scripts/check-change-impact.mjs impact.json`。CLI 的结果和读取／语法错误均以 JSON 写到 stdout；不写文件、不联网、不批准产物、不发起重生成。退出码 `0` 表示输入有效且没有待审依赖，`1` 表示输入非法，`2` 表示输入有效但依赖范围仍需复核。`--help` 也返回 JSON。
+
+导出函数 `checkChangeImpact(worksheet)` 返回 `{valid, affected, unaffected, needsReview, errors, scope:"plan_only"}`，前三个影响数组使用工作表中的产物 ID，顺序沿用 `artifacts`。上例的核心结果为：
+
+```json
+{
+  "valid": true,
+  "changedSources": ["appearance.courier"],
+  "affected": ["shot.coat", "prompt.coat"],
+  "unaffected": ["shot.face", "audio.ambience"],
+  "needsReview": [],
+  "errors": [],
+  "scope": "plan_only",
+  "sourceAuthorityVerified": false,
+  "measurementVerified": false
+}
+```
+
+`changedSources` 单独报告发生声明变更的来源，避免把来源误列为未受影响。`affected` 表示已声明过期或发现直接／传递影响的产物；`needsReview` 表示依赖覆盖或有效性仍未解决，同一产物可以同时出现在两个数组中。`unaffected` 仅表示本工作表声明的关系中没有发现影响；范围外产物、漏报边和领域因果均不在保证范围内。
+
+输入规则：
+
+- `artifacts` 明确本次查询范围，ID 唯一且逐字匹配；`revision` 是正安全整数。ID 只是工作标签，不能当作根契约的精确引用、内容哈希或已注册别名。可选 `validity` 仅接受 `valid / stale / needs_review / unresolved`。
+- 每条依赖的来源与消费者都须存在；`sourceRevision` 必须等于声明来源的旧修订。每个来源／消费者只写一条边，把消费字段合并到 `paths`，全图须无循环。
+- 变更的 `fromRevision` 必须等于来源旧修订，`toRevision` 通常必须更大。同一来源的不同字段可以拆成多条变更，但必须使用相同的修订对；拒绝重复记录、矛盾证据和不兼容修订。未知字段会报错，不能靠被忽略的额外字段收窄影响。
+- `paths` 是非空 RFC 6901 JSON Pointer 数组；`[""]` 明确表示整份文档，不能以空数组代替。工具先解码 `~0` 与 `~1`，再比较 token 的祖先／后代关系，因而 `/face` 不匹配 `/faceColor`，`/a~1b` 也不等同于 `/a/b`。指针语法检查不证明实际正文存在该字段。
+- 直接消费者的字段与变化路径相交时标为受影响，之后保守传播到全部声明后代。此版本没有输出字段映射，不能因后代的消费路径不同而跳过传递影响。显式 `stale` 的祖先即使没有新变更也必须传播。
+- 查询范围内所有 `dependencyCoverage: partial / unknown` 的产物均进入 `needsReview`，包括图中没有可达边的孤立产物；其声明后代也需复核。`needs_review / unresolved` 同样保留并传播待审，不能被 `complete` 或一次查询自动清除。`complete` 本身仍是调用方声明。
+
+可选 `before` 和 `after` 是调用方为同一变化范围提供的 JSON 值。只有两者都显式存在且内容相等，工具才报告 `noOpChanges` 和 `changeEvidence.status: "no_op"`；对象成员顺序不影响相等判断，数组顺序影响判断。这是声明值比较，复用 JSON 语义而不复制规范哈希实现。缺一项、只写路径或只写 `null` 不能证明无变化：它们仍按声明变更传播，`changeEvidence.status` 为 `declared_change`。两项均提供且不相等时是 `supplied_difference`，仍未核验真实来源或测量。
+
+显式 no-op 可以保持 `toRevision === fromRevision`。即使输入提出更大修订，工具也只报告 no-op，不虚增版本、不修改上游状态。需要真正修订时，由调用方确认真实 diff 和授权，创建新不可变版本，选择性重编译受影响产物并完成相关复核。`reason` 应记录用户授权、已委托决定或暂定假设的准确范围；填写它不会自动取得批准，也不会把观察或推断提升为用户事实。
+
 ## 从返回结果提炼经验
 
 用户要求复盘或维护时，记录结论、适用任务条件、实际可得的来源／候选版本、观察区间、变更变量、反例、置信度和复核日期。观察与原因解释分开；没有原始输出的结果只能标为声明，不能标为已观察。

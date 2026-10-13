@@ -1,0 +1,8 @@
+{
+  "frameRate": { "numerator": 24, "denominator": 1 },
+  "totalFrames": 192,
+  "shots": [
+    { "id": "REV-S01", "startFrame": 0, "endFrame": 96 },
+    { "id": "REV-S02", "startFrame": 96, "endFrame": 192 }
+  ]
+}

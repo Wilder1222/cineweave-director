@@ -1,0 +1,112 @@
+[
+  {
+    "path": "D:\\Temp\\cineweave-split-p4-a1-remaining-raw-inputs-20261012.json",
+    "sha256": "e0642bc088527a2b406a81d7b5c201d4935ff0bb6429d021eb4fe3beeb6f75ec",
+    "sections": "全文17案原请求及rawData；唯一任务输入"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\SKILL.md",
+    "sha256": "18d40408575640d65220b0d4527d356ec4509dc7856e8f0c35dc15142c2af426",
+    "sections": "全文：从交付物开始、创作顺序、创作约定、提示词与视频交接、按需深入、可选结构化交付"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\references\\routes\\image-prompt.md",
+    "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08",
+    "sections": "全文：编译顺序、精简关卡、参考与变换、关键帧准备度、平台适配、准确文字与排版、导入、变体与负向约束"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\references\\routes\\story.md",
+    "sha256": "09862af8560baed3f75a31a3b3ae24135908195aa3f3c260698f553f12d9cc59",
+    "sections": "全文：故事基础、场景写作、连续性、质量关卡"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\references\\routes\\review-repair.md",
+    "sha256": "9befe4fe6ecc4711e9aeb33121de3aa3912d5a5122ccea047793829b06481834",
+    "sections": "全文：基准、评审、修复归属、返回结果与新证据"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\references\\routes\\storyboard-rhythm.md",
+    "sha256": "10ce342b7e5beb342f16942d653c3316c9fbe3758e6942c687c37e2560a2c601",
+    "sections": "全文：分镜、分镜参考图到视频、序列节奏、相邻剪辑接口、质量关卡"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\references\\routes\\production-plan.md",
+    "sha256": "efbde14fb9810d392a696a0ee4e6aaca3b2f64998c291f4ab9936f5c6e41273a",
+    "sections": "全文：资产拆解、控制与证据、能力规划、渲染剪辑调色计划、边界"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\references\\routes\\scene.md",
+    "sha256": "ef10535a31d8aeacf7465957ad995c47b1389f5b3b5fe9096e77682f151ea6e4",
+    "sections": "全文：设计顺序、共享空间检查、物理光照、互动、连续性与评审"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\references\\routes\\character.md",
+    "sha256": "6527df3210d32a9fb03f4e33c9f2d4f2bd52d34f84ea88d60950f1fee637abf8",
+    "sections": "全文：四层、探索与收敛、身份锚点、绑定与表演、质量关卡"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\references\\routes\\shot-direction.md",
+    "sha256": "c04957137f3f99cb3bba46f0c9046a653df490686867d8c0cad57ede90087388",
+    "sections": "全文：戏剧单元、摄影机与构图、光照与时间、电影模式与编译、下游产物"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+    "sha256": "0de944dffd30d69bc05a52ef4bceaf0a90dce40564e2f1a288c68e7dd1e88e59",
+    "sections": "表达原则、人物、人物情绪与表情生成、场景、镜头与分镜、拍摄系统与部门协同、图生视频；初次全文读取被显示截断后，重读第1至198行；示例尾部和交付前检查在初次尾段中可见"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\references\\optional\\video-sound-and-delivery.md",
+    "sha256": "cfd0a201805ab58f05ebe5eda1025359776eb78534cfb849472f728594da6a16",
+    "sections": "视频意图、续写与生成段落边界、声音职责与提示表、精确文案与时间检查、交付与资源工作表（第1至79行）；初次全文读请求有显示截断，尾部声音回流、剪辑与调色可见"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\references\\optional\\ensemble-direction-and-review.md",
+    "sha256": "54d9406901ae0b42cd8bb2b2cb4bda5e89aaff625dd4e255dc7377452d735e75",
+    "sections": "全文：融入流程、六视角、表演背景活动、覆盖每一镜、只读检查器、视频编译连续性、设计来源"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\references\\core\\operating-model.md",
+    "sha256": "932bdfa72eb114b93673cb0e2a4490a293c1302fc3822f4d832a749164da101e",
+    "sections": "第1至85行：中文约定、任务范围与上下文、架构职责、路由图、交互深度、阶段纪律、创作成熟度与授权、规划边界"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\references\\optional\\directing-craft.md",
+    "sha256": "82524260f2823fe2d779e367a8a17802c050368c29d8e084cea1b741dd1bcf03",
+    "sections": "第1至110行：观众体验、信息视点、可表演任务、台词行动、调度、覆盖、倾听反应、连续观察与切镜；仅标题检索末段"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\references\\optional\\generation-diagnostics.md",
+    "sha256": "2ad6fd129d28d5b97853db37b36a3e81582605ddf37ae6139376d671ebf40b9b",
+    "sections": "第1至165行：索引、证据阶段、风险工作表、运动交接、外部分诊、诊断索引、修复决策；研究来源仅标题未读内容"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\references\\optional\\portrait-natural-human.md",
+    "sha256": "a370c4ca4e05a31576d99e262dd52924667f199d205c9087a6104d709b8d1d43",
+    "sections": "第1至80行：分层、先分清肖像任务、细节预算、表面语言、肤质妆造光线、示例、评审与局部修复"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\references\\optional\\aigc-control-and-evaluation.md",
+    "sha256": "1087161d1435a87e6b9de891c3b8d0976693645a5484df59ee146b9e5425b771",
+    "sections": "标题检索与第53行起：最小有意义的对照"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\references\\optional\\video-performance-direction.md",
+    "sha256": "8a156479c8ae94c55a1c6b433fef9193733fc64867eaae2a17e17e404614a11d",
+    "sections": "标题检索与第1至130行：编写顺序、任务、情绪、迁移职责、采集、面部、台词、摄影机焦点、特效、时间与验收"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\references\\optional\\video-timing-and-handles.md",
+    "sha256": "0856cc9f67c10259a54755a470ae338e93a25df3d031b0d1730e5429aeb55fa8",
+    "sections": "标题检索与第1至63行：三种时长、时长政策、精确算术、音频窗口、尾帧陷阱、语音特效续写开头"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\scripts\\check-shot-review.mjs",
+    "sha256": "bb69f60d8794f3329bc4b7af772d05ad01a28c001c7345f1de63bfa1e3d7d1c2",
+    "sections": "全文，含review角色、字段校验、覆盖/openItems、CLI退出码；C07实际执行"
+  },
+  {
+    "path": "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\scripts\\parse-json.mjs",
+    "sha256": "9c15621d8304bf6114cc4cb322409c8e59433409ac17950311725cdcbebecf11",
+    "sections": "全文；check-shot-review.mjs运行时依赖"
+  }
+]

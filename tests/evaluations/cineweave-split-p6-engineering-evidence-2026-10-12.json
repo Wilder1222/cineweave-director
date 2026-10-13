@@ -1,0 +1,265 @@
+{
+  "format": "cineweave-split-p6-engineering-evidence",
+  "date": "2026-10-12",
+  "status": "passed_with_evidence_limits",
+  "candidateVersion": "3.2.0",
+  "published": false,
+  "source": {
+    "status": "passed",
+    "artifact": "p6-engineering-2026-10-12/raw/source.stdout.txt",
+    "files": 638,
+    "exports": 638,
+    "roots": 52,
+    "schemas": 54,
+    "examples": 52,
+    "references": 42,
+    "byteIdentical": true
+  },
+  "contractIndex": {
+    "status": "passed",
+    "artifact": "p6-engineering-2026-10-12/raw/index-check.stdout.txt",
+    "roots": 52
+  },
+  "derivedSkillSync": {
+    "status": "passed",
+    "artifact": "p6-engineering-2026-10-12/raw/sync-check.stdout.txt"
+  },
+  "fullTests": {
+    "status": "passed",
+    "artifact": "p6-engineering-2026-10-12/raw/full-tests.stdout.txt",
+    "tests": 502,
+    "pass": 502,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0
+  },
+  "pluginBuild": {
+    "status": "passed",
+    "artifact": "p6-engineering-2026-10-12/raw/build.stdout.txt",
+    "files": 638,
+    "exports": 638,
+    "roots": 52,
+    "schemas": 54,
+    "examples": 52,
+    "references": 42,
+    "byteIdentical": true
+  },
+  "independentSkillBuilds": {
+    "director": {
+      "status": "passed",
+      "artifact": "p6-engineering-2026-10-12/raw/leaf-director.stdout.txt",
+      "files": 160,
+      "exports": 160,
+      "roots": 52,
+      "schemas": 54,
+      "examples": 52,
+      "references": 42,
+      "byteIdentical": true
+    },
+    "platform": {
+      "status": "passed",
+      "artifact": "p6-engineering-2026-10-12/raw/leaf-platform.stdout.txt",
+      "files": 160,
+      "exports": 160,
+      "roots": 52,
+      "schemas": 54,
+      "examples": 52,
+      "references": 42,
+      "byteIdentical": true
+    },
+    "reference": {
+      "status": "passed",
+      "artifact": "p6-engineering-2026-10-12/raw/leaf-reference.stdout.txt",
+      "files": 160,
+      "exports": 160,
+      "roots": 52,
+      "schemas": 54,
+      "examples": 52,
+      "references": 42,
+      "byteIdentical": true
+    },
+    "review": {
+      "status": "passed",
+      "artifact": "p6-engineering-2026-10-12/raw/leaf-review.stdout.txt",
+      "files": 160,
+      "exports": 160,
+      "roots": 52,
+      "schemas": 54,
+      "examples": 52,
+      "references": 42,
+      "byteIdentical": true
+    }
+  },
+  "independentSkillValidations": {
+    "director": {
+      "status": "passed",
+      "artifact": "p6-engineering-2026-10-12/raw/validate-director.stdout.txt",
+      "files": 160,
+      "exports": 160,
+      "roots": 52,
+      "schemas": 54,
+      "examples": 52,
+      "references": 42,
+      "byteIdentical": true
+    },
+    "platform": {
+      "status": "passed",
+      "artifact": "p6-engineering-2026-10-12/raw/validate-platform.stdout.txt",
+      "files": 160,
+      "exports": 160,
+      "roots": 52,
+      "schemas": 54,
+      "examples": 52,
+      "references": 42,
+      "byteIdentical": true
+    },
+    "reference": {
+      "status": "passed",
+      "artifact": "p6-engineering-2026-10-12/raw/validate-reference.stdout.txt",
+      "files": 160,
+      "exports": 160,
+      "roots": 52,
+      "schemas": 54,
+      "examples": 52,
+      "references": 42,
+      "byteIdentical": true
+    },
+    "review": {
+      "status": "passed",
+      "artifact": "p6-engineering-2026-10-12/raw/validate-review.stdout.txt",
+      "files": 160,
+      "exports": 160,
+      "roots": 52,
+      "schemas": 54,
+      "examples": 52,
+      "references": 42,
+      "byteIdentical": true
+    }
+  },
+  "bundleSmoke": {
+    "status": "passed",
+    "artifact": "p6-engineering-2026-10-12/raw/bundle-smoke.stdout.txt",
+    "tests": 9,
+    "pass": 9,
+    "fail": 0,
+    "cancelled": 0,
+    "skipped": 0,
+    "todo": 0,
+    "layouts": 8
+  },
+  "skillCreator": {
+    "status": "passed",
+    "skills": 4,
+    "artifact": "p6-engineering-2026-10-12/raw/creator-validation.stdout.txt"
+  },
+  "contracts": {
+    "status": "passed",
+    "files": 106,
+    "schemas": 54,
+    "examples": 52,
+    "byteIdentical": true,
+    "formalContractVersionsUnchanged": true,
+    "simulatedReceiptReleaseRefUnchanged": "v3.1.0"
+  },
+  "nativeStandaloneDiscovery": {
+    "status": "passed",
+    "skills": 4,
+    "parseErrors": 0,
+    "cliVersion": "codex-cli 0.147.0",
+    "artifact": "p6-engineering-2026-10-12/native/standalone-four-skills.json"
+  },
+  "nativeInstallUpgradeRollback": {
+    "status": "passed",
+    "cliVersion": "codex-cli 0.147.0",
+    "versions": [
+      "3.1.0",
+      "3.2.0",
+      "3.1.0"
+    ],
+    "discoveredSkills": [
+      1,
+      4,
+      1
+    ],
+    "parseErrors": 0,
+    "rollbackBytesEqualFirstInstall": true,
+    "oldUserPublicSourceUnchanged": true,
+    "newBundleUnchanged": true,
+    "publicCopiesUnchanged": true,
+    "inactiveIsolatedVersionCacheRetained": false,
+    "inactiveCacheObservation": "Native CLI removes inactive version caches; old cache recreated byte-identically on rollback",
+    "artifact": "p6-engineering-2026-10-12/native/cache-cycle-final.json",
+    "firstFailuresPreserved": [
+      "p6-engineering-2026-10-12/native/cache-cycle-first-failure.json",
+      "p6-engineering-2026-10-12/native/cache-cycle-second-failure.json"
+    ]
+  },
+  "firstInvocationErrors": [
+    "relative --new-bundle rejected before any install",
+    "cache harness incorrectly required inactive cache retention; fixed and actual 1->4->1 rerun passed",
+    "four supplemental leaf CLI checks omitted --skill; first failures preserved, explicit target reruns passed"
+  ],
+  "git": {
+    "head": "0e476a7e96e43980bbfe8388c446c3f78fd06019",
+    "oldTagV310": "089124950c527cfc0c10b0065da2ef057f4ead7b",
+    "newTagV320Created": false,
+    "remoteTagV320Exists": false
+  },
+  "boundaries": {
+    "committed": false,
+    "pushed": false,
+    "installedInUserProfile": false,
+    "remoteCIRun": false,
+    "automaticHostSelectionVerified": false,
+    "providerExecuted": false,
+    "mediaGenerated": false,
+    "modelPerformanceMeasured": false,
+    "nativeHarnessCreatedThread": false,
+    "nativeHarnessCalledModel": false
+  },
+  "archiveManifest": "p6-engineering-2026-10-12/manifest.json",
+  "review": {
+    "status": "passed_with_evidence_limits",
+    "report": "cineweave-split-p6-review-2026-10-12.md",
+    "originalReport": "cineweave-split-p6-review-2026-10-12.md.original.txt",
+    "originalSha256": "c918977eaab79bf8bdfd56622fcc199cac6bf2e65b96ed0e9a0d1586e9559c27",
+    "openProductBlockers": 0,
+    "firstFindingsAndInvocationFailuresPreserved": true
+  },
+  "frozenInputsAndRubric": {
+    "status": "passed",
+    "byteIdentical": true,
+    "artifact": "p6-engineering-2026-10-12/frozen-input-comparison.json"
+  },
+  "postReviewChecks": {
+    "source": {
+      "status": "passed",
+      "exitCode": 0,
+      "logPath": "D:\\Temp\\cineweave-p6-source-final-20261012.log",
+      "sha256": "465e05e92bf8d7048c8af47c45e503e8f383ae1a0c34567b5ec40dddbec3511d",
+      "rawStdout": "\r\n> cineweave-director@3.2.0 validate\r\n> node scripts/validate-repository.mjs\r\n\r\n{\r\n  \"valid\": true,\r\n  \"mode\": \"source\",\r\n  \"root\": \"D:\\\\study\\\\projects\\\\cineweave-codex-skills\\\\cineweave-director\",\r\n  \"files\": 638,\r\n  \"exports\": 638,\r\n  \"sourceFiles\": 167,\r\n  \"enabledSkills\": [\r\n    \"cineweave-director\",\r\n    \"cineweave-platform\",\r\n    \"cineweave-reference\",\r\n    \"cineweave-review\"\r\n  ],\r\n  \"skills\": [\r\n    {\r\n      \"name\": \"cineweave-director\",\r\n      \"root\": \"D:\\\\study\\\\projects\\\\cineweave-codex-skills\\\\cineweave-director\\\\skills\\\\cineweave-director\",\r\n      \"files\": 159,\r\n      \"actualKinds\": [\r\n        \"cineweave_codex_creative_brief\",\r\n        \"cineweave_codex_workflow_plan\",\r\n        \"cineweave_codex_world_bible\",\r\n        \"cineweave_codex_story_brief\",\r\n        \"cineweave_codex_beat_sheet\",\r\n        \"cineweave_codex_script_scene\",\r\n        \"cineweave_codex_continuity_ledger\",\r\n        \"cineweave_codex_character_morphology_spec\",\r\n        \"cineweave_codex_character_spec\",\r\n        \"cineweave_codex_character_appearance_state\",\r\n        \"character_binding\",\r\n        \"cineweave_codex_performance_timeline\",\r\n        \"cineweave_codex_scene_spec\",\r\n        \"cineweave_codex_scene_state\",\r\n        \"cineweave_codex_scene_light_state\",\r\n        \"cineweave_codex_interaction_constraint_set\",\r\n        \"scene_binding\",\r\n        \"cineweave_codex_style_package\",\r\n        \"cineweave_codex_representation_binding\",\r\n        \"cineweave_codex_style_compile\",\r\n        \"cineweave_codex_style_light_grammar\",\r\n        \"cineweave_codex_action_sequence_spec\",\r\n        \"cineweave_codex_cinematic_skill_manifest\",\r\n        \"cineweave_codex_shot_compiler_plan\",\r\n        \"cineweave_codex_shot_spec\",\r\n        \"cineweave_codex_shot_lighting_plan\",\r\n        \"cineweave_codex_temporal_spec\",\r\n        \"cineweave_codex_camera_previs_spec\",\r\n        \"cineweave_codex_hero_frame_anchor\",\r\n        \"cineweave_codex_storyboard_sequence\",\r\n        \"cineweave_codex_sequence_rhythm_spec\",\r\n        \"cineweave_codex_render_plan\",\r\n        \"cineweave_codex_prompt_record\",\r\n        \"cineweave_codex_image_prompt\",\r\n        \"cineweave_codex_asset_recipe\",\r\n        \"cineweave_codex_board_assembly_plan\",\r\n        \"cineweave_codex_editorial_timeline_plan\",\r\n        \"cineweave_codex_color_pipeline_profile\",\r\n        \"cineweave_codex_control_channel_set\",\r\n        \"cineweave_codex_evidence_bundle\",\r\n        \"cineweave_codex_capability_profile\",\r\n        \"cineweave_codex_capability_resolution_plan\",\r\n        \"cineweave_codex_license_profile\"\r\n      ],\r\n      \"targetKinds\": [\r\n        \"cineweave_codex_creative_brief\",\r\n        \"cineweave_codex_workflow_plan\",\r\n        \"cineweave_codex_world_bible\",\r\n        \"cineweave_codex_story_brief\",\r\n        \"cineweave_codex_beat_sheet\",\r\n        \"cineweave_codex_script_scene\",\r\n        \"cineweave_codex_continuity_ledger\",\r\n        \"cineweave_codex_character_morphology_spec\",\r\n        \"cineweave_codex_character_spec\",\r\n        \"cineweave_codex_character_appearance_state\",\r\n        \"character_binding\",\r\n        \"cineweave_codex_performance_timeline\",\r\n        \"cineweave_codex_scene_spec\",\r\n        \"cineweave_codex_scene_state\",\r\n        \"cineweave_codex_scene_light_state\",\r\n        \"cineweave_codex_interaction_constraint_set\",\r\n        \"scene_binding\",\r\n        \"cineweave_codex_style_package\",\r\n        \"cineweave_codex_representation_binding\",\r\n        \"cineweave_codex_style_compile\",\r\n        \"cineweave_codex_style_light_grammar\",\r\n        \"cineweave_codex_action_sequence_spec\",\r\n        \"cineweave_codex_cinematic_skill_manifest\",\r\n        \"cineweave_codex_shot_compiler_plan\",\r\n        \"cineweave_codex_shot_spec\",\r\n        \"cineweave_codex_shot_lighting_plan\",\r\n        \"cineweave_codex_temporal_spec\",\r\n        \"cineweave_codex_camera_previs_spec\",\r\n        \"cineweave_codex_hero_frame_anchor\",\r\n        \"cineweave_codex_storyboard_sequence\",\r\n        \"cineweave_codex_sequence_rhythm_spec\",\r\n        \"cineweave_codex_render_plan\",\r\n        \"cineweave_codex_prompt_record\",\r\n        \"cineweave_codex_image_prompt\",\r\n        \"cineweave_codex_asset_recipe\",\r\n        \"cineweave_codex_board_assembly_plan\",\r\n        \"cineweave_codex_editorial_timeline_plan\",\r\n        \"cineweave_codex_color_pipeline_profile\",\r\n        \"cineweave_codex_control_channel_set\",\r\n        \"cineweave_codex_evidence_bundle\",\r\n        \"cineweave_codex_capability_profile\",\r\n        \"cineweave_codex_capability_resolution_plan\",\r\n        \"cineweave_codex_license_profile\"\r\n      ],\r\n      \"references\": 42,\r\n      \"roots\": 52,\r\n      \"schemas\": 54,\r\n      \"examples\": 52,\r\n      \"receipts\": 48,\r\n      \"schemaRefs\": 1357,\r\n      \"markdownFiles\": 43,\r\n      \"links\": 434,\r\n      \"fragments\": 115,\r\n      \"textFiles\": 159\r\n    },\r\n    {\r\n      \"name\": \"cineweave-platform\",\r\n      \"root\": \"D:\\\\study\\\\projects\\\\cineweave-codex-skills\\\\cineweave-director\\\\skills\\\\cineweave-platform\",\r\n      \"files\": 159,\r\n      \"actualKinds\": [\r\n        \"cineweave_codex_prompt_projection_plan\"\r\n      ],\r\n      \"targetKinds\": [\r\n        \"cineweave_codex_prompt_projection_plan\"\r\n      ],\r\n      \"references\": 42,\r\n      \"roots\": 52,\r\n      \"schemas\": 54,\r\n      \"examples\": 52,\r\n      \"receipts\": 48,\r\n      \"schemaRefs\": 1357,\r\n      \"markdownFiles\": 43,\r\n      \"links\": 420,\r\n      \"fragments\": 119,\r\n      \"textFiles\": 159\r\n    },\r\n    {\r\n      \"name\": \"cineweave-reference\",\r\n      \"root\": \"D:\\\\study\\\\projects\\\\cineweave-codex-skills\\\\cineweave-director\\\\skills\\\\cineweave-reference\",\r\n      \"files\": 159,\r\n      \"actualKinds\": [\r\n        \"cineweave_codex_reference_asset\",\r\n        \"cineweave_codex_reference_observation\",\r\n        \"cineweave_codex_reference_binding_set\",\r\n        \"cineweave_codex_asset_alias_registry\"\r\n      ],\r\n      \"targetKinds\": [\r\n        \"cineweave_codex_reference_asset\",\r\n        \"cineweave_codex_reference_observation\",\r\n        \"cineweave_codex_reference_binding_set\",\r\n        \"cineweave_codex_asset_alias_registry\"\r\n      ],\r\n      \"references\": 42,\r\n      \"roots\": 52,\r\n      \"schemas\": 54,\r\n      \"examples\": 52,\r\n      \"receipts\": 48,\r\n      \"schemaRefs\": 1357,\r\n      \"markdownFiles\": 43,\r\n      \"links\": 410,\r\n      \"fragments\": 115,\r\n      \"textFiles\": 159\r\n    },\r\n    {\r\n      \"name\": \"cineweave-review\",\r\n      \"root\": \"D:\\\\study\\\\projects\\\\cineweave-codex-skills\\\\cineweave-director\\\\skills\\\\cineweave-review\",\r\n      \"files\": 159,\r\n      \"actualKinds\": [\r\n        \"cineweave_codex_control_benchmark\",\r\n        \"cineweave_codex_control_benchmark_review\",\r\n        \"cineweave_codex_creative_review\",\r\n        \"cineweave_codex_repair_plan\"\r\n      ],\r\n      \"targetKinds\": [\r\n        \"cineweave_codex_control_benchmark\",\r\n        \"cineweave_codex_control_benchmark_review\",\r\n        \"cineweave_codex_creative_review\",\r\n        \"cineweave_codex_repair_plan\"\r\n      ],\r\n      \"references\": 42,\r\n      \"roots\": 52,\r\n      \"schemas\": 54,\r\n      \"examples\": 52,\r\n      \"receipts\": 48,\r\n      \"schemaRefs\": 1357,\r\n      \"markdownFiles\": 43,\r\n      \"links\": 414,\r\n      \"fragments\": 116,\r\n      \"textFiles\": 159\r\n    }\r\n  ],\r\n  \"roots\": 52,\r\n  \"schemas\": 54,\r\n  \"examples\": 52,\r\n  \"references\": 42,\r\n  \"receipts\": 48,\r\n  \"schemaRefs\": 1357,\r\n  \"markdownFiles\": 226,\r\n  \"links\": 1033,\r\n  \"fragments\": 125,\r\n  \"textFiles\": 160,\r\n  \"totals\": {\r\n    \"roots\": 208,\r\n    \"schemas\": 216,\r\n    \"examples\": 208,\r\n    \"references\": 168,\r\n    \"receipts\": 192,\r\n    \"schemaRefs\": 5428,\r\n    \"markdownFiles\": 172,\r\n    \"links\": 1678,\r\n    \"fragments\": 465,\r\n    \"textFiles\": 636\r\n  },\r\n  \"byteIdentical\": true,\r\n  \"messageZh\": \"源码、契约、引用和分发边界校验通过。\"\r\n}\r\n",
+      "afterReviewArchive": true
+    },
+    "index": {
+      "status": "passed",
+      "exitCode": 0,
+      "logPath": "D:\\Temp\\cineweave-p6-index-final-20261012.log",
+      "sha256": "b29d7e010499aae39d9d0338e04c4e1733d3ad84b925aa37325e738fb4ec6d7d",
+      "rawStdout": "\r\n> cineweave-director@3.2.0 contracts:index:check\r\n> node scripts/generate-contract-index.mjs --check\r\n\r\n{\r\n  \"valid\": true,\r\n  \"messageZh\": \"契约索引与当前文件一致。\",\r\n  \"mode\": \"check\",\r\n  \"roots\": 52,\r\n  \"supportSchemas\": 2,\r\n  \"index\": \"skills/cineweave-director/resources/contracts/index.json\"\r\n}\r\n",
+      "afterReviewArchive": true
+    },
+    "sync": {
+      "status": "passed",
+      "exitCode": 0,
+      "logPath": "D:\\Temp\\cineweave-p6-sync-final-20261012.log",
+      "sha256": "c64dec470d388d67154110394a7ce2e158bfe37121b3406b7a1fc57156075c1d",
+      "rawStdout": "\r\n> cineweave-director@3.2.0 skills:sync:check\r\n> node scripts/sync-skill-exports.mjs --check\r\n\r\n{\r\n  \"valid\": true,\r\n  \"mode\": \"check\",\r\n  \"childCount\": 3,\r\n  \"filesChecked\": 477,\r\n  \"filesUpdated\": 0,\r\n  \"messageZh\": \"专业 Skill 派生副本与作者源一致。\"\r\n}\r\n",
+      "afterReviewArchive": true
+    }
+  },
+  "postReviewGitDiffCheck": {
+    "status": "passed",
+    "exitCode": 0
+  }
+}

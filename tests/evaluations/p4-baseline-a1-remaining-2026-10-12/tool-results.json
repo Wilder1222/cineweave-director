@@ -1,0 +1,25 @@
+[
+  {
+    "command": [
+      "node",
+      "--version"
+    ],
+    "exit_code": 0,
+    "stdout_path": "D:\\Temp\\cineweave-split-p4-baseline-a1-remaining-20261012\\node-version.stdout.txt",
+    "stderr_path": "D:\\Temp\\cineweave-split-p4-baseline-a1-remaining-20261012\\node-version.stderr.txt",
+    "native_stdout": "v22.15.0\r\n",
+    "native_stderr": ""
+  },
+  {
+    "command": [
+      "node",
+      "D:\\Temp\\cineweave-split-baseline-20261012-23e5cb0865\\restored\\skills\\cineweave-director\\scripts\\check-shot-review.mjs",
+      "D:\\Temp\\cineweave-split-p4-baseline-a1-remaining-20261012\\CW-SPLIT-C07-shot-review.json"
+    ],
+    "exit_code": 2,
+    "stdout_path": "D:\\Temp\\cineweave-split-p4-baseline-a1-remaining-20261012\\CW-SPLIT-C07-shot-review.stdout.txt",
+    "stderr_path": "D:\\Temp\\cineweave-split-p4-baseline-a1-remaining-20261012\\CW-SPLIT-C07-shot-review.stderr.txt",
+    "native_stdout": "{\n  \"valid\": true,\n  \"scope\": \"plan_only\",\n  \"coverageComplete\": true,\n  \"reviewComplete\": false,\n  \"expectedRows\": 12,\n  \"missing\": [],\n  \"openItems\": [\n    {\n      \"role\": \"cinematography\",\n      \"shotId\": \"FG-S02\",\n      \"status\": \"unknown\"\n    }\n  ],\n  \"prompt\": null,\n  \"errors\": [],\n  \"limitation\": \"仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。\",\n  \"localization\": {\n    \"locale\": \"zh-CN\",\n    \"summary\": \"输入有效，评审仍有未决项或没有适用的通过项。\"\n  }\n}\n",
+    "native_stderr": ""
+  }
+]

@@ -1,0 +1,76 @@
+{
+  "runPath": "D:\\Temp\\cineweave-host-discovery-20261012\\run-k_qatbf6",
+  "cwd": "D:\\Temp\\cineweave-host-discovery-20261012\\run-k_qatbf6\\workspace",
+  "copied": [
+    {
+      "name": "cineweave-director",
+      "path": "D:\\Temp\\cineweave-host-discovery-20261012\\run-k_qatbf6\\workspace\\.agents\\skills\\cineweave-director\\SKILL.md",
+      "fileCount": 159,
+      "treeSha256": "a039d49852c984e2a530a7d3038a94503f67c15cb7e05f5f36884fb9db7149d9",
+      "byteComplete": true
+    },
+    {
+      "name": "cineweave-platform",
+      "path": "D:\\Temp\\cineweave-host-discovery-20261012\\run-k_qatbf6\\workspace\\.agents\\skills\\cineweave-platform\\SKILL.md",
+      "fileCount": 159,
+      "treeSha256": "1143ff789264f85e8e7bd6d0e1bc5cd9df42197308dc36b14b403cd6251038c0",
+      "byteComplete": true
+    },
+    {
+      "name": "cineweave-reference",
+      "path": "D:\\Temp\\cineweave-host-discovery-20261012\\run-k_qatbf6\\workspace\\.agents\\skills\\cineweave-reference\\SKILL.md",
+      "fileCount": 159,
+      "treeSha256": "4c183ec42457b8687c7df5ed36268209582829cd981edc2860f893e8f7f41f7e",
+      "byteComplete": true
+    },
+    {
+      "name": "cineweave-review",
+      "path": "D:\\Temp\\cineweave-host-discovery-20261012\\run-k_qatbf6\\workspace\\.agents\\skills\\cineweave-review\\SKILL.md",
+      "fileCount": 159,
+      "treeSha256": "7594d6f4a8e94fedb23e29ffdd5a7b297c3be380aebb373d71f776f7e139bbe2",
+      "byteComplete": true
+    }
+  ],
+  "isolatedCodexHome": "D:\\Temp\\cineweave-host-discovery-20261012\\run-k_qatbf6\\codex-home",
+  "sentMethods": [
+    "initialize",
+    "initialized",
+    "skills/list"
+  ],
+  "skills": [
+    {
+      "cwd": "D:\\Temp\\cineweave-host-discovery-20261012\\run-k_qatbf6\\workspace",
+      "name": "cineweave-director",
+      "path": "D:\\Temp\\cineweave-host-discovery-20261012\\run-k_qatbf6\\workspace\\.agents\\skills\\cineweave-director\\SKILL.md",
+      "enabled": true,
+      "scope": "repo"
+    },
+    {
+      "cwd": "D:\\Temp\\cineweave-host-discovery-20261012\\run-k_qatbf6\\workspace",
+      "name": "cineweave-platform",
+      "path": "D:\\Temp\\cineweave-host-discovery-20261012\\run-k_qatbf6\\workspace\\.agents\\skills\\cineweave-platform\\SKILL.md",
+      "enabled": true,
+      "scope": "repo"
+    },
+    {
+      "cwd": "D:\\Temp\\cineweave-host-discovery-20261012\\run-k_qatbf6\\workspace",
+      "name": "cineweave-reference",
+      "path": "D:\\Temp\\cineweave-host-discovery-20261012\\run-k_qatbf6\\workspace\\.agents\\skills\\cineweave-reference\\SKILL.md",
+      "enabled": true,
+      "scope": "repo"
+    },
+    {
+      "cwd": "D:\\Temp\\cineweave-host-discovery-20261012\\run-k_qatbf6\\workspace",
+      "name": "cineweave-review",
+      "path": "D:\\Temp\\cineweave-host-discovery-20261012\\run-k_qatbf6\\workspace\\.agents\\skills\\cineweave-review\\SKILL.md",
+      "enabled": true,
+      "scope": "repo"
+    }
+  ],
+  "parseErrors": [],
+  "status": "passed",
+  "cliVersion": "codex-cli 0.147.0",
+  "expectedCount": 4,
+  "verifiedExpectedCount": 4,
+  "stderrLineCountOmitted": 1
+}

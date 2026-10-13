@@ -1,0 +1,183 @@
+{
+  "id": "CW-SPLIT-C06",
+  "primarySkill": "cineweave-director",
+  "auxiliarySkills": [
+    "cineweave-platform"
+  ],
+  "entryPaths": [
+    "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md",
+    "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/SKILL.md"
+  ],
+  "selectionReason": "从零完成中文创作母稿，并在保留Seedance意向和未知能力的条件下准备平台工作稿。",
+  "response": "平台意向保留为**Seedance某网页界面**；准确模型版本和界面未知。“8张参考、原生发声、支持6秒”均为用户传闻，不能作为设置依据。以下先完成创作，再给待核验的适配工作稿，不连接服务。\n\n完整中文创作母稿：\n\n```text\n6秒，横向16:9，摄影写实，单镜固定机位。空旷的修理工作间中，一名约四十岁的成年修理工穿无图案的灰褐棉衬衫，袖口收好，站在工作桌北侧面向南；只有他一人。桌中央放一只浅木色长方木盒，盒盖通过世界北侧的铰链连接盒身，盒内只有一只不活动的浅木色雕刻木鸟。开始时盒盖完全闭合，木鸟被盖遮住，不提前显露。\n\n摄影机在桌南侧略偏东，胸口高度略俯拍，固定中近景，把修理工的头部、上身、两手和完整盒子放入画面。自然透视，中等偏深景深让两手的接触、盒身、北侧铰链和最终盒内木鸟同时可读；不开镜内推移、变焦或切镜。西侧窗透入中性柔光，木盒、衣袖与皮肤保持各自纹理，桌面干燥，盒底有接触阴影，不增添烟、雨或魔法光。\n\n0至0.8秒，修理工看向木盒，左手持续按稳盒身左侧，右手已握盒盖南侧前沿；眉间放松、双唇轻合，没有对白。0.8至4.5秒，右手保持接触南侧前沿，前臂缓慢抬起，使盒盖绕固定北侧铰链向上旋转，盖与盒身不分离；左掌始终按稳盒身，不换手、不滑移盒子。盒盖抬起过程中逐渐露出内部空间，约4.5秒到达接近竖直的打开状态，右手控制减速并继续扶盖。木鸟保持同一件、同一位置，不变成活鸟，不自行移动。\n\n4.5至6秒，修理工视线落入盒内木鸟，眉头轻微抬起，嘴唇仍自然合拢，用短暂停留表达看见它的反应，不增加伸手取鸟或关盒动作。左手仍按稳盒身，右手仍扶住接近竖直的盒盖，镜头保持原构图至结束。只有开盖时细小、干涩的木铰链摩擦声，无对白、旁白、音乐或其他显著声音。\n```\n\n适配工作稿：由于没有图片，当前准备的是**文字驱动单镜方案**，能否在所意向的Seedance网页界面执行仍待核验。以下正文没有虚构槽位、参数尾或原生声音开关。\n\n```text\n6秒，16:9摄影写实单镜，固定机位。成年修理工穿素色灰褐棉衬衫站在干燥工作桌北侧，面对桌中央一只浅木色长方木盒。盒盖闭合，北侧铰链固定连接盒盖与盒身；盒内的一只浅木色雕刻木鸟起初被盖遮住。摄影机在桌南侧略偏东、胸口高度略俯，中近景同时看清面部、双手、木盒与打开后的盒内空间，中等偏深景深。西侧窗的中性柔光方向始终不变。\n\n开始时左手按稳盒身左侧，右手已握盒盖南侧前沿，目光看向木盒。短暂停留后，右手沿固定北侧铰链缓慢向上掀盖，左手持续按稳盒身；盒盖只绕铰链旋转，不脱离、不穿透、不带动盒身滑动。开盖过程中逐渐显露盒内同一只静止木鸟，4.5秒左右盖到达接近竖直，右手减速并继续扶盖。修理工随后看向木鸟，眉头仅轻微抬起，双唇自然合拢。保持至6秒结束：左手仍按盒身、右手仍扶盖，木鸟仍在盒内；不取鸟、不关盖、不换手、不切镜，不增加人物或对白。\n```\n\n独立声音工作稿：仅在开盖动作约0.8至4.5秒有细小、干涩的木铰链摩擦，随旋转开始、随停盖收住；不添加对白、旁白、音乐或额外效果声。声音生成、拟音和同步均未完成。若精确界面确有原生声音入口再适配其用法；当前不能称这份声音稿已启用原生音频。\n\n| 待核对项目 | 当前状态与后续证据 |\n| --- | --- |\n| 准确入口 | 未提供网页链接、承载平台、模型技术ID／版本和所用模式；应取得对应文档或界面资料 |\n| 文字驱动模式 | 未核实；没有首图，不拟造I2V绑定。若该入口只支持I2V，需另准备并核对首图，属于新增素材依赖 |\n| 6秒、16:9 | 创作要求已完整保留；精确控件与档位未知，不把6秒写成已确认下拉值 |\n| 8张参考 | 仅传闻；须核对模式、图片种类与总数限制。本案没有实际参考，不需要占满任何槽位 |\n| 原生声音 | 仅传闻；须核对生成音轨／上传声音／自动配乐的区别，能否只生成所需铰链声 |\n| 摄影机控制 | 固定机位是正文意图；是否有原生控制未知 |\n| 实际输入与返回 | 图片、声音、绑定、任务参数及媒体均不存在；真实接触、持续扶盖、时序与声音同步尚未验收 |\n\n完成范围是两份完整文字稿与声音意图。未确定的能力不回写人物、动作或6秒／16:9母稿，也没有把平台意向改为其他服务。",
+  "status": "first_delivery_saved",
+  "firstVersionImmutable": true,
+  "model": null,
+  "tokens": null,
+  "latencyMs": null,
+  "sourceReads": [
+    {
+      "path": "D:/Temp/cineweave-split-p4-contents-raw-inputs-20261012.json",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C01",
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C04",
+        "CW-SPLIT-C05",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C07",
+        "CW-SPLIT-C08"
+      ],
+      "kind": "raw_input",
+      "readRecord": 1,
+      "sha256": "AAF18A7B9C32FF397CC990535D284C98147D58FEE589BF1393976CA3AC066F09"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md",
+      "sections": [
+        "frontmatter"
+      ],
+      "cases": [
+        "all"
+      ],
+      "kind": "selection",
+      "readRecord": 2,
+      "sha256": "C2A481FF773E157EC7A018CF3893720748014657F4543D3D0F4800F4B0925DEB"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/SKILL.md",
+      "sections": [
+        "frontmatter"
+      ],
+      "cases": [
+        "all"
+      ],
+      "kind": "selection",
+      "readRecord": 3,
+      "sha256": "B4A67BD86EF0CEDDF84679AFEE2B09FCA2F73234D815EAE654BE0534793BAA56"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-reference/SKILL.md",
+      "sections": [
+        "frontmatter"
+      ],
+      "cases": [
+        "all"
+      ],
+      "kind": "selection",
+      "readRecord": 4,
+      "sha256": "931B1F173FCD94B5E409E8CB44983662F6BA8885D216D9D5E819360AECE3159D"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-review/SKILL.md",
+      "sections": [
+        "frontmatter"
+      ],
+      "cases": [
+        "all"
+      ],
+      "kind": "selection",
+      "readRecord": 5,
+      "sha256": "2F67E7CE86F8FDCB7B38CECDC9AE00E37F5CBDA5F15B36CFA24DB0EE3FE3965D"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/SKILL.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C01",
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C05",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C08"
+      ],
+      "kind": "active_entry",
+      "readRecord": 6,
+      "sha256": "C2A481FF773E157EC7A018CF3893720748014657F4543D3D0F4800F4B0925DEB"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/prompt-detail-standard.md",
+      "sections": [
+        "全文读取请求；返回中部截断",
+        "已读：表达原则、人物、人物情绪与表情生成、场景、图生视频、交付前检查；跨案按需复用"
+      ],
+      "cases": [
+        "CW-SPLIT-C01",
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C05",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C08",
+        "CW-SPLIT-C07"
+      ],
+      "kind": "craft",
+      "readRecord": 8,
+      "sha256": "0DE944DFFD30D69BC05A52EF4BCEAF0A90DCE40564E2F1A288C68E7DD1E88E59"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/routes/shot-direction.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C08",
+        "CW-SPLIT-C07"
+      ],
+      "kind": "route",
+      "readRecord": 9,
+      "sha256": "C04957137F3F99CB3BBA46F0C9046A653DF490686867D8C0CAD57EDE90087388"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-director/references/optional/video-sound-and-delivery.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C08",
+        "CW-SPLIT-C07"
+      ],
+      "kind": "craft",
+      "readRecord": 10,
+      "sha256": "CFD0A201805AB58F05EBE5EDA1025359776EB78534CFB849472F728594DA6A16"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/SKILL.md",
+      "sections": [
+        "全文"
+      ],
+      "cases": [
+        "CW-SPLIT-C04",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C08"
+      ],
+      "kind": "active_entry",
+      "readRecord": 15,
+      "sha256": "B4A67BD86EF0CEDDF84679AFEE2B09FCA2F73234D815EAE654BE0534793BAA56"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/skills/cineweave-platform/references/optional/video-platform-adaptation.md",
+      "sections": [
+        "标题目录",
+        "第1–90行：使用正确的权威来源、能力证据层次、官方来源登记、先定参考职责、模式选择、导演方案到复制稿；同一决定文字与图像路径开头"
+      ],
+      "cases": [
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C08"
+      ],
+      "kind": "targeted_read",
+      "readRecord": 22,
+      "sha256": "9B5A4E163A6482704B43333547D16FFC0ED3542D9526599E49455460971BD7F9"
+    }
+  ]
+}

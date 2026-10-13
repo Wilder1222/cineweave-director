@@ -1,0 +1,44 @@
+[
+  {
+    "documentId": "REV-G",
+    "sourceRevision": 1,
+    "targetRevision": 2,
+    "allowedContentReplacement": {
+      "before": "桌南侧偏西略俯",
+      "after": "桌南侧偏东略俯"
+    },
+    "necessaryVersionReplacement": "设计文本版本1 -> 设计文本版本2",
+    "actualMatchesOnlyAuthorizedTransformation": true,
+    "sourceCameraPhraseOccurrences": 1,
+    "targetOldCameraPhraseOccurrences": 0,
+    "note": "仅比较本次给定原文与正文字符，不使用rubric或评分；不证明媒体连续性"
+  },
+  {
+    "documentId": "REV-M",
+    "sourceRevision": 1,
+    "targetRevision": 2,
+    "allowedContentReplacement": {
+      "before": "桌南侧偏西略俯",
+      "after": "桌南侧偏东略俯"
+    },
+    "necessaryVersionReplacement": "文外版本标识",
+    "actualMatchesOnlyAuthorizedTransformation": true,
+    "sourceCameraPhraseOccurrences": 1,
+    "targetOldCameraPhraseOccurrences": 0,
+    "note": "仅比较本次给定原文与正文字符，不使用rubric或评分；不证明媒体连续性"
+  },
+  {
+    "documentId": "REV-P",
+    "sourceRevision": 1,
+    "targetRevision": 2,
+    "allowedContentReplacement": {
+      "before": "桌南侧偏西略俯",
+      "after": "桌南侧偏东略俯"
+    },
+    "necessaryVersionReplacement": "REV-P，版本1 -> REV-P，版本2",
+    "actualMatchesOnlyAuthorizedTransformation": true,
+    "sourceCameraPhraseOccurrences": 1,
+    "targetOldCameraPhraseOccurrences": 0,
+    "note": "仅比较本次给定原文与正文字符，不使用rubric或评分；不证明媒体连续性"
+  }
+]

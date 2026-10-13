@@ -1,0 +1,1200 @@
+{
+  "schemaVersion": "1.0.0",
+  "datasetId": "cineweave-skill-split-p0-rubric-20261012",
+  "inputDatasetId": "cineweave-skill-split-p0-inputs-20261012",
+  "frozenDate": "2026-10-12",
+  "audience": "执行结束后的独立审阅者；本文件不提供给案例执行者。",
+  "status": "not_run",
+  "statusDefinition": "not_run表示尚未进行触发、内容或媒体对照；输入/标准冻结、结构核对和哈希校验均不构成案例执行。",
+  "counts": {
+    "triggerQueries": 24,
+    "explicitSingle": 8,
+    "implicitIntent": 8,
+    "adjacentCombinationNegative": 8,
+    "contentRequests": 8,
+    "totalCases": 32
+  },
+  "configurations": [
+    {
+      "id": "A",
+      "status": "not_run",
+      "description": "P0冻结后的当前单Skill；只有cineweave-director入口，使用保留内联能力。"
+    },
+    {
+      "id": "P2",
+      "status": "not_run",
+      "description": "仅平台适配试点；实际启用director与platform，参考/评审在director恢复。"
+    },
+    {
+      "id": "P3",
+      "status": "not_run",
+      "description": "参考提取试点；实际启用director/platform/reference，评审在director恢复。"
+    },
+    {
+      "id": "B",
+      "status": "not_run",
+      "description": "P4完成后的四Skill同一代理路径；与A使用完全相同原始请求和原材料。"
+    },
+    {
+      "id": "C",
+      "status": "not_run",
+      "description": "P5可选宿主委派，与B保持同一四Skill；只对独立读任务委派，宿主无能力或无收益可以不运行。"
+    }
+  ],
+  "availabilityPolicy": {
+    "status": "not_run",
+    "rules": [
+      "每案单次运行仅一个最终主负责人；辅助能力可由多个实际入口承担，数量本身不是失败。",
+      "professional入口未安装/未发现时，使用director内联恢复并记录真实路径；不得伪称激活，不自动安装。",
+      "不存在的cineweave-story可按原请求由director完成故事，不给不存在的入口owner。",
+      "翻译和算术负例的主负责人为null，不激活CineWeave。"
+    ],
+    "capabilityToTargetSkill": {
+      "platform_projection": "cineweave-platform",
+      "platform_boundary": "cineweave-platform",
+      "projection_consistency": "cineweave-platform",
+      "reference_roles": "cineweave-reference",
+      "reference_identity_and_alias": "cineweave-reference",
+      "text_review": "cineweave-review",
+      "conditional_media_diagnosis": "cineweave-review",
+      "continuity_review": "cineweave-review",
+      "six_view_text_review": "cineweave-review",
+      "read_only_worksheet_check": "cineweave-review",
+      "image_start_state_design": "cineweave-director",
+      "temporal_action_design": "cineweave-director",
+      "continuity_design": "cineweave-director",
+      "capability_resolution": "cineweave-director",
+      "change_impact": "cineweave-director"
+    }
+  },
+  "phaseSubsets": [
+    {
+      "phase": "P0",
+      "status": "not_run",
+      "triggerIds": [],
+      "contentIds": [],
+      "scope": "只冻结与核对，不执行任何案例。"
+    },
+    {
+      "phase": "P2",
+      "status": "not_run",
+      "triggerIds": [
+        "CW-SPLIT-T03",
+        "CW-SPLIT-T04",
+        "CW-SPLIT-T11",
+        "CW-SPLIT-T12",
+        "CW-SPLIT-T17",
+        "CW-SPLIT-T20"
+      ],
+      "contentIds": [
+        "CW-SPLIT-C04",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C08"
+      ],
+      "scope": "只运行适配、适配相邻与含适配回流的子集；不得宣称全32案通过。"
+    },
+    {
+      "phase": "P3",
+      "status": "not_run",
+      "triggerIds": [
+        "CW-SPLIT-T05",
+        "CW-SPLIT-T06",
+        "CW-SPLIT-T13",
+        "CW-SPLIT-T14",
+        "CW-SPLIT-T18"
+      ],
+      "contentIds": [
+        "CW-SPLIT-C05"
+      ],
+      "scope": "运行参考职责/别名/组合子集；这些输入无真实图像，不构成实际看图证据。"
+    },
+    {
+      "phase": "P4",
+      "status": "not_run",
+      "triggerIds": [
+        "CW-SPLIT-T01",
+        "CW-SPLIT-T02",
+        "CW-SPLIT-T03",
+        "CW-SPLIT-T04",
+        "CW-SPLIT-T05",
+        "CW-SPLIT-T06",
+        "CW-SPLIT-T07",
+        "CW-SPLIT-T08",
+        "CW-SPLIT-T09",
+        "CW-SPLIT-T10",
+        "CW-SPLIT-T11",
+        "CW-SPLIT-T12",
+        "CW-SPLIT-T13",
+        "CW-SPLIT-T14",
+        "CW-SPLIT-T15",
+        "CW-SPLIT-T16",
+        "CW-SPLIT-T17",
+        "CW-SPLIT-T18",
+        "CW-SPLIT-T19",
+        "CW-SPLIT-T20",
+        "CW-SPLIT-T21",
+        "CW-SPLIT-T22",
+        "CW-SPLIT-T23",
+        "CW-SPLIT-T24"
+      ],
+      "contentIds": [
+        "CW-SPLIT-C01",
+        "CW-SPLIT-C02",
+        "CW-SPLIT-C03",
+        "CW-SPLIT-C04",
+        "CW-SPLIT-C05",
+        "CW-SPLIT-C06",
+        "CW-SPLIT-C07",
+        "CW-SPLIT-C08"
+      ],
+      "scope": "覆盖全部24触发＋8内容原请求；A与B内容对照至少3次独立重复，完整保存首版与修订，不推导普遍成功率。"
+    }
+  ],
+  "comparisonControls": {
+    "status": "not_run",
+    "executionInputVisibility": "只给实际版本源Skill、相应原始请求及rawData；不给rubric、期待路由、must/mustNot、历史答案或研究结论。",
+    "sourceIdentity": "记录实际源入口路径、版本和读取文件哈希；A用冻结当前工作树，不用较早HEAD替代。",
+    "configurationConsistency": "A/B尽量保持同一模型、推理设置、可用工具和长度设置。此冻结集不臆造模型ID、不加统一字数/镜数上限；执行时记录真实值，差异逐项记录。",
+    "runtimeFields": {
+      "modelId": null,
+      "reasoningSetting": null,
+      "contextIsolation": null,
+      "outputLengthSetting": null,
+      "availableTools": null,
+      "inputTokens": null,
+      "outputTokens": null,
+      "latencyMs": null,
+      "loadedFileBytes": null
+    },
+    "measurementPolicy": "不可获知token填null，不按文件字节或字符数估算成实测；入口存在和包验证不代替宿主实际读取。",
+    "requiredEvidence": [
+      "原请求与原数据原样副本",
+      "真实加载路径/文件哈希与编排模式",
+      "完整首版回答及所有修订",
+      "producer与consumer交接正文",
+      "实际工具命令/原生退出码/stdout/stderr",
+      "澄清次数与未决项",
+      "独立审阅全文与逐案失败",
+      "可知模型设置/时延/工作量"
+    ],
+    "mediaPolicy": "全部输入无实际媒体。输出只可证明文本/规划行为；实际图像、动作时序、身份、连续性、声音同步另设真实素材评测，不由本集提升。",
+    "executionPolicy": "不安装或调用供应商、不提交生成、不编造上传/任务ID/返回媒体；只在所到阶段运行登记子集。"
+  },
+  "globalAcceptance": {
+    "status": "not_run",
+    "blocking": [
+      "硬锁被改写或遗漏",
+      "虚构素材观察、能力来源、生成、测量、权利或批准",
+      "不存在/未安装入口被伪称调用",
+      "适配反写上游故事或事实",
+      "消费者未使用实际生产者结果",
+      "明确禁止的供应商执行或自动安装",
+      "正式六视角范围退化或实际检查结果虚构"
+    ],
+    "nonBlockingAssessment": [
+      "中文稿完整可用且与范围相称",
+      "主负责人明确且辅助能力按需使用",
+      "事实/声明/推断/未知分开",
+      "局部修订有来源版本和有限影响",
+      "单项任务无不必要全流程/模板/字数限制",
+      "所有未决项与运行限制诚实记录"
+    ],
+    "decisionRule": "逐案展示阻断问题；不能以汇总分数、美感、包闭包或coverageComplete掩盖。只在实际输出结束后使用本标准审阅。"
+  },
+  "triggerCases": [
+    {
+      "id": "CW-SPLIT-T01",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-director",
+        "C": "cineweave-director"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [],
+      "constraints": [
+        "4:5、片名“下一班”、成年女邮差、未拆信、无参考图是原请求事实。"
+      ],
+      "acceptance": [
+        "主交付为完整中文原创海报提示词；设计选择可暂定。",
+        "平台转换、参考观察或全面六视角不是这条单项请求的必需步骤。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T02",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-director",
+        "C": "cineweave-director"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [],
+      "constraints": [
+        "现实世界、无魔法、只要剧本正文。"
+      ],
+      "acceptance": [
+        "完成可拍短场景并维持现实因果；不强迫用户先建立正式人物或世界产物。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T03",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-platform",
+        "P3": "cineweave-platform",
+        "B": "cineweave-platform",
+        "C": "cineweave-platform"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [
+        "platform_projection"
+      ],
+      "constraints": [
+        "使用已给完整母稿与合成界面资料；不得重新设计海报。",
+        "夹具不是live能力证据，不连接供应商。"
+      ],
+      "acceptance": [
+        "复制正文与界面设置对应夹具；保留母稿硬锁。",
+        "在A中由导演内联完成；专业入口不可用时如实记录恢复路径。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T04",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-platform",
+        "P3": "cineweave-platform",
+        "B": "cineweave-platform",
+        "C": "cineweave-platform"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [
+        "platform_projection"
+      ],
+      "constraints": [
+        "目标意向为Seedance网页I2V；无首图、准确界面或能力资料。",
+        "6秒、16:9、持手、触柄不承重、女子不松手、无对白保持。"
+      ],
+      "acceptance": [
+        "给出有用条件适配工作稿和依赖项；不宣称附件绑定、参数支持或已核验。",
+        "不能用未安装入口的名字伪称成功调用。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T05",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-reference",
+        "B": "cineweave-reference",
+        "C": "cineweave-reference"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [
+        "reference_roles"
+      ],
+      "constraints": [
+        "没有上传图片；用户只要求参考分工与取舍。"
+      ],
+      "acceptance": [
+        "将用途说明作为用户声明，区分身份、衣服和气氛。",
+        "不给虚构可见观察，也不抢先交最终人物提示词。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T06",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-reference",
+        "B": "cineweave-reference",
+        "C": "cineweave-reference"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [
+        "reference_identity_and_alias"
+      ],
+      "constraints": [
+        "别名登记表与图片缺失。"
+      ],
+      "acceptance": [
+        "不能解析到猜测资产或latest；整理可补信息并保持未核验。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T07",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-review",
+        "C": "cineweave-review"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [
+        "text_review"
+      ],
+      "constraints": [
+        "不直接重写；只检查已给文字。"
+      ],
+      "acceptance": [
+        "定位固定/绕拍、唯一光源/阴影、空手/握杯矛盾并提出有限修复。",
+        "不把文字检查提升成媒体验收或强制全六视角。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T08",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-review",
+        "C": "cineweave-review"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [
+        "conditional_media_diagnosis"
+      ],
+      "constraints": [
+        "没有视频、截图、生成设置；只存在动作文字和用户症状声明。"
+      ],
+      "acceptance": [
+        "将穿模保持为用户声明与候选问题，列证据与排查顺序。",
+        "不能编造实际观察、根因已证实或修复媒体成功。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T09",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-director",
+        "C": "cineweave-director"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [],
+      "constraints": [
+        "未定平台、无参考、画面无文字与窗外无人。"
+      ],
+      "acceptance": [
+        "给完整中文原创生图稿；不把原创任务交给适配或参考入口主导。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T10",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-director",
+        "C": "cineweave-director"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [
+        "continuity_design"
+      ],
+      "constraints": [
+        "都是成年人；钥匙单一、持手连续；无媒体。"
+      ],
+      "acceptance": [
+        "形成连续两镜、可读交接和完整视频母稿；不以运镜掩盖持有状态。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T11",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-platform",
+        "P3": "cineweave-platform",
+        "B": "cineweave-platform",
+        "C": "cineweave-platform"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [
+        "platform_projection"
+      ],
+      "constraints": [
+        "内容已有、夹具界面已给。"
+      ],
+      "acceptance": [
+        "以适配为主交付并分清文本框与设置；不重新创作。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T12",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-platform",
+        "P3": "cineweave-platform",
+        "B": "cineweave-platform",
+        "C": "cineweave-platform"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [
+        "platform_projection",
+        "projection_consistency"
+      ],
+      "constraints": [
+        "只修适配；源画幅4:5；夹具无参数尾或seed。"
+      ],
+      "acceptance": [
+        "修复制交接和界面设置，使两者按夹具闭合；保留母稿内容。",
+        "可以用局部核查辅助，不由评审入口接管重新设计。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T13",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-reference",
+        "B": "cineweave-reference",
+        "C": "cineweave-reference"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [
+        "reference_roles"
+      ],
+      "constraints": [
+        "只有文字用途说明，未附图。"
+      ],
+      "acceptance": [
+        "整理A身份/B服装/C质感的迁移与排除；无已观察结论。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T14",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-reference",
+        "B": "cineweave-reference",
+        "C": "cineweave-reference"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [
+        "reference_identity_and_alias"
+      ],
+      "constraints": [
+        "没有别名登记表、图片；不推断所指素材。"
+      ],
+      "acceptance": [
+        "区分已有声明与缺失身份/绑定资料；不造资产和观察。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T15",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-review",
+        "C": "cineweave-review"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [
+        "text_review"
+      ],
+      "constraints": [
+        "只有已写单镜文本；用户只要求挑问题。"
+      ],
+      "acceptance": [
+        "定位空间/在场/对视矛盾；不默默加入切镜或新剧情来掩盖。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T16",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-review",
+        "C": "cineweave-review"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [
+        "continuity_review"
+      ],
+      "constraints": [
+        "成年人；同一时刻、无中间动作或时间省略；只给一处最小建议。"
+      ],
+      "acceptance": [
+        "定位持手与运动方向不连续并归属事实责任；不全面重写剧情。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T17",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-director",
+        "C": "cineweave-director"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [],
+      "constraints": [
+        "原创封面先写；参数晚核对；无母稿/能力资料。"
+      ],
+      "acceptance": [
+        "导演完成创作母稿；Midjourney字样不会使适配入口接管原创。",
+        "不把模型能力或参数写成已核实事实。"
+      ],
+      "optionalAuxiliaryCapabilities": [
+        "platform_boundary"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [
+          "cineweave-platform"
+        ],
+        "P3": [
+          "cineweave-platform"
+        ],
+        "B": [
+          "cineweave-platform"
+        ],
+        "C": [
+          "cineweave-platform"
+        ]
+      }
+    },
+    {
+      "id": "CW-SPLIT-T18",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-director",
+        "C": "cineweave-director"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [
+        "reference_roles"
+      ],
+      "constraints": [
+        "最终交付为完整人物提示词；A身份/B外套/C质感；只有用户文字说明。"
+      ],
+      "acceptance": [
+        "导演唯一收口，参考能力只提供职责与取舍；最终稿不串入非对应内容。",
+        "允许多个Skill按需使用，不允许多人分别重造同一身份事实。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [
+          "cineweave-reference"
+        ],
+        "B": [
+          "cineweave-reference"
+        ],
+        "C": [
+          "cineweave-reference"
+        ]
+      }
+    },
+    {
+      "id": "CW-SPLIT-T19",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-director",
+        "C": "cineweave-director"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [
+        "text_review",
+        "continuity_review"
+      ],
+      "constraints": [
+        "完整修订是最终交付；只可改S2入镜持手；S1与剧情硬锁。"
+      ],
+      "acceptance": [
+        "先定位问题再完成授权范围内修订；S2承接女子左手持信。",
+        "评审可辅助，导演负责整合；无无关剧情或持有更改。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [
+          "cineweave-review"
+        ],
+        "C": [
+          "cineweave-review"
+        ]
+      }
+    },
+    {
+      "id": "CW-SPLIT-T20",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-platform",
+        "P3": "cineweave-platform",
+        "B": "cineweave-platform",
+        "C": "cineweave-platform"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [
+        "platform_projection"
+      ],
+      "constraints": [
+        "已有母稿；只做给定夹具的复制稿/设置。"
+      ],
+      "acceptance": [
+        "适配主导；不启动不需要的故事/人物/正式评审流程。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T21",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-review",
+        "C": "cineweave-review"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [
+        "conditional_media_diagnosis"
+      ],
+      "constraints": [
+        "无海报与身份原图；用户只说好像眼睛变大；不重做。"
+      ],
+      "acceptance": [
+        "给可执行的对照检查办法并保留视觉结论未知。",
+        "不生成脸部观察或身份一致/不一致的验收。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T22",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-director",
+        "C": "cineweave-director"
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [],
+      "constraints": [
+        "cineweave-story不是迁移计划中的存在入口；用户要求继续完成故事。"
+      ],
+      "acceptance": [
+        "如实说明实际可用入口，并由导演完成现实故事提纲。",
+        "不得安装、发明或伪称成功调用cineweave-story。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T23",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": null,
+        "P2": null,
+        "P3": null,
+        "B": null,
+        "C": null
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [],
+      "constraints": [
+        "一句翻译，无创作工作流请求。"
+      ],
+      "acceptance": [
+        "直接准确翻译一句；不激活CineWeave、不给创作模板或评审。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-T24",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": null,
+        "P2": null,
+        "P3": null,
+        "B": null,
+        "C": null
+      },
+      "primaryRule": "一次实际运行只能记录一个最终主负责人；null表示不激活CineWeave入口。",
+      "necessaryAuxiliaryCapabilities": [],
+      "constraints": [
+        "单步算术，无创作请求。"
+      ],
+      "acceptance": [
+        "直接给算术结果；不激活CineWeave入口。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    }
+  ],
+  "contentCases": [
+    {
+      "id": "CW-SPLIT-C01",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-director",
+        "C": "cineweave-director"
+      },
+      "necessaryAuxiliaryCapabilities": [],
+      "hardLocks": [
+        "4:5；片名“归潮”准确且仅一次；成年人女子；短黑发；深蓝无图案棉外套；右手持点亮黄铜提灯；灯塔门口；蓝调暮色。",
+        "上方标题与下方署名空间；不加闪电、火焰、额外人物或旁白文字。"
+      ],
+      "acceptance": [
+        "交付完整可复制中文生图提示词，有构图、可读主体和有来由的冷热光。",
+        "无平台能力、参考观察或正式设定批准的虚构；设计补全为创作提案。",
+        "与普通单图范围相称，不要求固定模板、字数或正式全六视角工作表。"
+      ],
+      "blockedClaims": [
+        "图片已经生成/审阅/通过；身份保持已验证；未提供的模型能力已核验。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-C02",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-director",
+        "C": "cineweave-director"
+      },
+      "necessaryAuxiliaryCapabilities": [
+        "image_start_state_design",
+        "temporal_action_design"
+      ],
+      "hardLocks": [
+        "6秒、16:9、固定单镜；左女右男；女子右手持伞、伞尖触地；男子左手空闲。",
+        "台词逐字为“你拿走吧”；女子不松手；男子仅指尖触柄且不承重；接触可见、停顿到结束。"
+      ],
+      "acceptance": [
+        "交付完整首图设计与基于明确起点的运动稿；事件遵循看/递/准确对白/男子接收刺激/触柄/停顿的因果链。",
+        "没有实际首图时，I2V附件与初态核验保持未完成；6秒是创作设计，不被当成平台档位。",
+        "声音是准确对白与声效意图，不冒充已有音轨或原生控制。"
+      ],
+      "blockedClaims": [
+        "已绑定或看过首图；图生视频已可提交/成功；实际接触、表演、同步已通过。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-C03",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-director",
+        "C": "cineweave-director"
+      },
+      "necessaryAuxiliaryCapabilities": [
+        "continuity_design",
+        "temporal_action_design"
+      ],
+      "hardLocks": [
+        "两镜各5秒，总10秒；16:9；一枚钥匙；店主柜台北侧、学徒南侧；西窗光不变。",
+        "店主右手→学徒左掌→学徒左手持有→学徒右手取出→柜台南缘钥匙袋；每次放手在接触/承重成立之后。",
+        "S02直接动作延续，非重演/省略；无对白、额外人物或动作。"
+      ],
+      "acceptance": [
+        "每镜完整分镜及可用视频母稿；空间锚点、身体/道具接触、触发、结果和出态可读。",
+        "S01出态准确进入S02；S02既不从空手重启递钥匙，也不换手/增钥匙。",
+        "独立可提交镜头稿展开必要共同事实；无模型语法或媒体成功的虚构。"
+      ],
+      "blockedClaims": [
+        "两镜已经生成且连续；时序/音画同步已通过；仅检查文本就证明物理接触。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-C04",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-platform",
+        "P3": "cineweave-platform",
+        "B": "cineweave-platform",
+        "C": "cineweave-platform"
+      },
+      "necessaryAuxiliaryCapabilities": [
+        "platform_projection"
+      ],
+      "hardLocks": [
+        "严格保持POSTER-MASTER-01版本1中的身份、服装、持手、标题一次、灯光来由与4:5；用户只授权平台适配。",
+        "能力资料是fixture-mosaiclabs-canvas-image-1-web-t2i版本1合成夹具；不得提升为live证据。"
+      ],
+      "acceptance": [
+        "完整复制正文与下拉设置分别交付；夹具支持中文和4:5，没有文本参数尾、参考上传或seed等控制。",
+        "合理去重或转换包装语法可接受，不能删除未被真实输入承担的硬锁或无声改母稿。",
+        "不在复制正文中混入内部ID、能力说明或不存在的参考占位符；来源和待核对范围可追溯。"
+      ],
+      "blockedClaims": [
+        "在线平台已核验/已成功接收；已绑定参考/执行生成；虚构许可批准。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-C05",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-director",
+        "C": "cineweave-director"
+      },
+      "necessaryAuxiliaryCapabilities": [
+        "reference_roles"
+      ],
+      "hardLocks": [
+        "A身份/B服装/C布局/D质感；成年女子、短黑发方圆脸、红色无标志棉外套与黑直筒裤。",
+        "B的假定模特长发/脸、D服装不迁入身份或人物造型；没有任何真实图像。"
+      ],
+      "acceptance": [
+        "先完成简短来源/角色/迁移/排除说明，再给完整中文全身人物稿；导演唯一收口。",
+        "所有取材信息标为用户声明或暂定设计；没有可见观察；条件绑定与正式精准绑定区分。",
+        "权利、真实图像特征、身份一致性与素材身份/哈希缺失仍未核验，不阻止有用稿件。"
+      ],
+      "blockedClaims": [
+        "已经看过A/B/C/D；已形成可见观察；正式素材绑定已闭合；商用权利/身份一致已通过。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [
+          "cineweave-reference"
+        ],
+        "B": [
+          "cineweave-reference"
+        ],
+        "C": [
+          "cineweave-reference"
+        ]
+      }
+    },
+    {
+      "id": "CW-SPLIT-C06",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-director",
+        "C": "cineweave-director"
+      },
+      "necessaryAuxiliaryCapabilities": [
+        "platform_projection",
+        "capability_resolution"
+      ],
+      "hardLocks": [
+        "6秒、16:9、指定Seedance意向；左手按稳盒身、右手沿北侧铰链开盖、最终仍扶盖；木鸟与无对白。",
+        "8参考/原生声音/6秒是用户传闻，缺准确模型/界面/来源；无媒体。"
+      ],
+      "acceptance": [
+        "完整创作母稿与可用条件适配工作稿并存；未知能力只阻断依赖该能力的最终确认。",
+        "能力核对需准确平台/模型/界面/模式/日期及来源；未获新证据时传闻不能转为支持事实。",
+        "无声换模型、时长、画幅或删掉动作/声音意图判失败；未支持声音可保留独立声音交接。"
+      ],
+      "blockedClaims": [
+        "传闻已经验证；8参考/6秒/原生声轨可直接使用；实际媒体或同步成功；自动安装/执行供应商。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [
+          "cineweave-platform"
+        ],
+        "P3": [
+          "cineweave-platform"
+        ],
+        "B": [
+          "cineweave-platform"
+        ],
+        "C": [
+          "cineweave-platform"
+        ]
+      }
+    },
+    {
+      "id": "CW-SPLIT-C07",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-review",
+        "C": "cineweave-review"
+      },
+      "necessaryAuxiliaryCapabilities": [
+        "six_view_text_review",
+        "read_only_worksheet_check"
+      ],
+      "hardLocks": [
+        "评审FG-01版本1，覆盖FG-S01和FG-S02；保留原稿，不修改正文或批准定稿。",
+        "六视角为direction、performance、staging、cinematography、prompt、continuity；共同来源唯一。"
+      ],
+      "acceptance": [
+        "六视角×两镜完整覆盖，每行有具体标准与基于来源文本的说明；通过/修订定位准确，不用空泛通过。",
+        "问题的修复责任回到拥有事实的领域；缺失正式JSON和实际媒体不得通过文字结论补造。",
+        "使用full工作表且Node可用时实际运行随包check-shot-review.mjs，保存真实命令、stdout/stderr、退出码；无Node则同范围手工审查并记录限制。",
+        "valid、coverageComplete、reviewComplete、openItems分开；未知或修订不能用覆盖完成掩盖；短用户结论可以与完整审查依据分开保存。"
+      ],
+      "blockedClaims": [
+        "未经授权正文已改/已批准；六个代理必需；工作表通过就是媒体/声音/艺术批准；未运行工具却说通过。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [],
+        "P3": [],
+        "B": [],
+        "C": []
+      }
+    },
+    {
+      "id": "CW-SPLIT-C08",
+      "status": "not_run",
+      "acceptablePrimaryByConfiguration": {
+        "A": "cineweave-director",
+        "P2": "cineweave-director",
+        "P3": "cineweave-director",
+        "B": "cineweave-director",
+        "C": "cineweave-director"
+      },
+      "necessaryAuxiliaryCapabilities": [
+        "text_review",
+        "continuity_review",
+        "platform_projection",
+        "change_impact"
+      ],
+      "hardLocks": [
+        "只改REV-S02机位南偏西→南偏东，保持略俯、固定、手部特写；REV-S01整镜锁定。",
+        "人物/衣服/盒子/北侧铰链/接触步骤/每镜4秒/16:9/西窗光/无对白不变；不重造故事。"
+      ],
+      "acceptance": [
+        "从REV-G、REV-M、REV-P版本1完整正文修改相应段落，明确新版本和变更范围。",
+        "机位改变确实进入母稿及消费者适配复制稿；不能只在修订说明改字而保留旧下游正文。",
+        "复查S01→S02轴侧、视线/接触可见性、道具与出入态；西窗光的物理来源不随摄影机移位改变。",
+        "按FrameForge合成夹具将两镜分别4秒/16:9适配，保持无原生声音控制，独立声音意图保留。",
+        "仅受影响行和必要相邻连续性回流，不沿用未提供的旧评审、不扩为全面故事重写。"
+      ],
+      "blockedClaims": [
+        "已修媒体/生成成功；所有旧评审继续有效；夹具是live证据；未授权修改S01或其他硬锁。"
+      ],
+      "acceptableAuxiliarySkillsByConfiguration": {
+        "A": [],
+        "P2": [
+          "cineweave-platform"
+        ],
+        "P3": [
+          "cineweave-platform"
+        ],
+        "B": [
+          "cineweave-review",
+          "cineweave-platform"
+        ],
+        "C": [
+          "cineweave-review",
+          "cineweave-platform"
+        ]
+      }
+    }
+  ]
+}
