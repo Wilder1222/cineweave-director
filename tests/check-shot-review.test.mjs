@@ -320,3 +320,46 @@ test("camera-language CLI validates complete narrative plans and reports omissio
     }
   } finally { await rm(root, { recursive: true, force: true }); }
 });
+
+
+test("camera gate accepts motivated rear-to-front arcs and bounded compound movement without inventing media success", () => {
+  const arc = cameraPlan();
+  const row = arc.decisions[0];
+  row.decision.primaryTechniqueId = "K04";
+  row.decision.cameraMode = "moving";
+  delete row.decision.noMotionReason;
+  row.decision.narrativeReason = "由背影转到正面，以新表情揭示角色选择";
+  row.decision.audiencePayoff = "观众在人物正面首次看到坚决神情";
+  row.decision.trigger = "追兵在画外呼喝之后才开始绕行";
+  row.camera.movementIntent = "从人物背后沿右侧绕至近正面，背景门柱保留真实视差";
+  row.temporal.cameraMotion.type = "arc";
+  row.temporal.cameraMotion.path = "人物右侧有通行空间的弧线，不穿过山门";
+  row.temporal.cameraMotion.framingChange = "由背面到三分之四正面，门柱位置有视差";
+  assert.equal(checkCameraLanguageDecisions(arc).valid, true);
+
+  const compound = structuredClone(arc);
+  compound.decisions[0].decision.primaryTechniqueId = "M09";
+  compound.decisions[0].decision.cameraMode = "compound";
+  compound.decisions[0].decision.narrativeReason = "认知骤变，通过位移和反向变焦保持主体大小";
+  compound.decisions[0].temporal.cameraMotion.type = "compound";
+  compound.decisions[0].temporal.cameraMotion.path = "机身后移，镜头反向变焦，主体近似等大";
+  assert.equal(checkCameraLanguageDecisions(compound).valid, true);
+  assert.match(checkCameraLanguageDecisions(compound).limitation, /不能核验/);
+});
+
+test("camera gate blocks incomplete focus chronology, copied primary ID and camera inconsistency", () => {
+  const plan = cameraPlan();
+  const variations = [
+    (p) => { p.decisions[0].decision.supportingTechniqueIds = ["M11"]; },
+    (p) => { p.decisions[0].decision.primaryTechniqueId = "neutral_static"; p.decisions[0].decision.supportingTechniqueIds = ["C04"]; },
+    (p) => { p.decisions[0].temporal.focusTimeline[0].timeSeconds = -1; },
+    (p) => { p.decisions[0].camera.position = ""; },
+    (p) => { p.decisions[0].camera.axisSide = ""; },
+    (p) => { p.decisions[0].temporal.edit.exit = ""; },
+  ];
+  for (const change of variations) {
+    const item = structuredClone(plan);
+    change(item);
+    assert.equal(checkCameraLanguageDecisions(item).valid, false);
+  }
+});
