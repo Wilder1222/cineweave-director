@@ -260,7 +260,7 @@
       "role": "root",
       "domain": "shot_direction",
       "schema": "schemas/shot-spec.schema.json",
-      "schemaSha256": "sha256:efa88d1dbaf5820ddfa81b7c36bbd1b4b77ee1803815dff08f90f2f56c56a354",
+      "schemaSha256": "sha256:1f8f89676fa445af435f2b9f436a1bb2eac51e580ae9b140f7f60f58f88759d0",
       "example": "examples/shot-spec.json",
       "exampleSha256": "sha256:5b6483b406cf2b797b9eb6065beb611fd5ada358d75c146216064975eb22f377"
     },
