@@ -249,7 +249,11 @@
       "lifecycle": "optional",
       "loadContexts": [
         "cinematic_pattern",
-        "shot_compile"
+        "shot_compile",
+        "shot_direction",
+        "storyboard_rhythm",
+        "action",
+        "production_plan"
       ]
     },
     {

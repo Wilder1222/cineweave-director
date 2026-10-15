@@ -19,6 +19,9 @@ description: "CineWeave 统一入口工作流的内部能力。评审已有创�
 
 使用既有 `pass`、`warn`、`fail`、`unknown`、`not applicable` 展示语义；规范枚举以实际 schema 为准。严重性为 `advisory`、`important`、`blocking`。阻断问题单独列出，不能被整体美感平均；用户偏好与技术／权利合格性分别判断，不评颜值或生物识别身份。
 
+## 摄影语言专项审查
+
+新创作的正式叙事镜头组必须在 `cinematography` 检查景别／机位／构图、固定或运动、焦点、触发、预期可见变化和出点。新规范工作表声明 `source.cameraLanguageScope` 和 `cameraDecisions` 并校验逐镜覆盖；历史工作表、静态资产和翻译保留原有范围。真实运动效果需另看媒体。
 ## 按范围检查与修订
 
 综合设计／提示词评审、完整场次定稿或镜头组正式制作／规范交接，读取[群像与逐镜评审](references/optional/ensemble-direction-and-review.md)，覆盖六视角 × 本次声明镜头。完整六视角评审在 Node 可用时整理工作表并实际运行本包的[逐镜检查器](scripts/check-shot-review.mjs)；没有 Node 时完成手工评审并记录限制。局部请求只检查所选维度，采用工作表且 Node 可用时也必须实际运行。分别检查 `valid`、`coverageComplete`、`reviewComplete` 与未决项，记录真实结果，不以计划运行代替执行。

@@ -59,6 +59,7 @@
 
 - [Skill 入口](skills/cineweave-director/SKILL.md)：交付规模、创作顺序与领域路由。
 - [镜头工作台](skills/cineweave-director/references/optional/shot-design-workbench.md)：注意力、动作瞬间与关键帧准备度。
+- [镜头语言与叙事作用词典](skills/cineweave-director/references/optional/cinematic-patterns.md#镜头语言与叙事作用词典)：7 种核心技法、28 种扩展、中文镜头示例及 AIGC 分镜交接；影视叙事必经逐镜选镜。
 - [群像调度与逐镜评审](skills/cineweave-director/references/optional/ensemble-direction-and-review.md)：演员触发、配角任务、六视角检查与单变量修订。
 - [平台适配](skills/cineweave-director/references/optional/video-platform-adaptation.md)与[剪辑余量](skills/cineweave-director/references/optional/video-timing-and-handles.md)：参考、时长与人工交接。
 - [画质与引擎流程](skills/cineweave-director/references/optional/rendering-quality-workflows.md)：画风规则、Unreal／Blender 预演与渲染、采样、色管和交付验收。
@@ -81,6 +82,7 @@ node skills/cineweave-director/scripts/check-delivery.mjs worksheet.json
 node skills/cineweave-director/scripts/check-video-plan.mjs workbook.json
 node skills/cineweave-director/scripts/check-video-plan.mjs workbook.json --evaluation-date 2026-10-12
 node skills/cineweave-director/scripts/check-shot-review.mjs review.json
+node skills/cineweave-director/scripts/check-shot-review.mjs --camera-language camera-workbook.json
 node skills/cineweave-director/scripts/check-change-impact.mjs impact.json
 ```
 
