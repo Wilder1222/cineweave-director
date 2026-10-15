@@ -5,7 +5,7 @@ import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
-import { checkShotReview, countPrompt, REVIEW_ROLES } from "../skills/cineweave-director/scripts/check-shot-review.mjs";
+import { checkShotReview, checkCameraLanguageDecisions, countPrompt, REVIEW_ROLES } from "../skills/cineweave-director/scripts/check-shot-review.mjs";
 
 function worksheet() {
   const shotIds = ["shot.arrival", "shot.response"];
@@ -200,6 +200,123 @@ test("three-shot narrative handoff survives draft review, one-variable revision 
       assert.equal(readback.scope, "plan_only");
       assert.equal(readback.reviewComplete, expectedExit === 0);
       assert.deepEqual(JSON.parse(await readFile(path, "utf8")), document);
+    }
+  } finally { await rm(root, { recursive: true, force: true }); }
+});
+
+
+function cameraDecisionRow(shotId) {
+  return {
+    shotId,
+    decision: {
+      primaryTechniqueId: "M11", supportingTechniqueIds: [], narrativeReason: "持续倾听比移动机位更能展示人物微妙反应",
+      audiencePayoff: "同时读清两人的距离与手中信封", trigger: "听者收到说话人的准确台词后停留观察",
+      cameraMode: "static", focusMode: "hold", noMotionReason: "让人物活动承担画面变化", exitMatch: "持物状态和目光留给下镜"
+    },
+    camera: {
+      shotScale: "双人中景", position: "桌南侧靠门，镜头朝北", height: "人物眼平",
+      angle: "平视", perspectiveIntent: "保留两人之间真实距离", focusTarget: "交接双方的手部与脸",
+      depthOfField: "中等景深，必要接触清楚", axisSide: "位于两人对话轴南侧",
+      movementIntent: "摄影机全程固定，观察人物行为"
+    },
+    composition: {
+      layout: "两人分居画面两侧", foreground: "靠镜头的一人肩部", midground: "桌上信封与双手",
+      background: "原有门与木架", negativeSpace: "信封上方保留空隙", visualHierarchy: "先看信封，后看倾听者脸"
+    },
+    temporal: {
+      durationSeconds: 5,
+      cameraMotion: {
+        type: "static", motivation: "保持双人关系", path: "固定在桌南侧不移动",
+        start: "0 秒起构图稳定", acceleration: "不加速", peak: "无机位位移", deceleration: "不减速",
+        end: "5 秒仍保持同一构图", framingChange: "仅角色变化、机位不变"
+      },
+      focusTimeline: [{ eventId: "focus.one", timeSeconds: 0, description: "双手与面部共同可读" }],
+      edit: { entry: "承接之前的动作", exit: "右手握住信封后切出", preferredTransition: "cut", soundBridge: "保留室内底声" }
+    }
+  };
+}
+function cameraPlan() {
+  const shotIds = ["shot.arrival", "shot.response"];
+  return { scope: "narrative_video", shotIds, decisions: shotIds.map(cameraDecisionRow) };
+}
+
+test("camera gate enforces one motivated selection per narrative shot, including legitimate static shots", () => {
+  const plan = cameraPlan();
+  const before = structuredClone(plan);
+  const result = checkCameraLanguageDecisions(plan);
+  assert.equal(result.valid, true);
+  assert.equal(result.coverageComplete, true);
+  assert.deepEqual(plan, before);
+  const incomplete = structuredClone(plan);
+  incomplete.decisions.pop();
+  assert.equal(checkCameraLanguageDecisions(incomplete).valid, false);
+  assert.deepEqual(checkCameraLanguageDecisions(incomplete).missing, ["shot.response"]);
+  const duplicate = structuredClone(plan);
+  duplicate.decisions.push(duplicate.decisions[0]);
+  assert.equal(checkCameraLanguageDecisions(duplicate).valid, false);
+});
+
+test("new narrative review requires Camera Language while historical worksheets still validate unchanged", () => {
+  const w = worksheet();
+  assert.equal(checkShotReview(w).reviewComplete, true);
+  w.source.cameraLanguageScope = "narrative_video";
+  assert.equal(checkShotReview(w).reviewComplete, false);
+  assert.match(checkShotReview(w).errors.join(" "), /cameraDecisions/);
+  w.cameraDecisions = cameraPlan().decisions;
+  assert.equal(checkShotReview(w).reviewComplete, true);
+  w.cameraDecisions[0].decision.narrativeReason = "";
+  assert.equal(checkShotReview(w).reviewComplete, false);
+  assert.match(checkShotReview(w).errors.join(" "), /narrativeReason/);
+});
+
+test("camera gate rejects motion/focus misclassification and unmotivated dynamic-technique labels", () => {
+  const base = cameraPlan();
+  const invalid = [
+    (x) => { x.decisions[0].decision.primaryTechniqueId = "K06"; },
+    (x) => { x.decisions[0].decision.cameraMode = "moving"; },
+    (x) => { x.decisions[0].decision.noMotionReason = ""; },
+    (x) => { x.decisions[0].decision.primaryTechniqueId = "unknown"; },
+    (x) => { x.decisions[0].storyboardMovementType = "rack-focus"; },
+    (x) => { x.decisions[0].temporal.cameraMotion.type = "arc"; },
+    (x) => { x.decisions[0].decision.focusMode = "rack"; x.decisions[0].decision.focusTargetEnd = "后景纹章"; },
+  ];
+  for (const mutate of invalid) {
+    const c = structuredClone(base); mutate(c);
+    assert.equal(checkCameraLanguageDecisions(c).valid, false);
+  }
+  const rack = structuredClone(base);
+  rack.decisions[0].decision.primaryTechniqueId = "K07";
+  rack.decisions[0].decision.focusMode = "rack";
+  rack.decisions[0].decision.focusTargetEnd = "后景窗框上的纹章";
+  rack.decisions[0].temporal.focusTimeline.push({ eventId: "focus.reveal", timeSeconds: 2, description: "由双手切焦到已经存在的后景纹章" });
+  assert.equal(checkCameraLanguageDecisions(rack).valid, true, "Rack focus is valid with a static camera and an independent focus track.");
+});
+
+test("narrative keyframes require camera grammar without inventing a video trajectory", () => {
+  const plan = cameraPlan();
+  plan.scope = "narrative_keyframe";
+  for (const row of plan.decisions) delete row.temporal;
+  assert.equal(checkCameraLanguageDecisions(plan).valid, true);
+  const missingComposition = structuredClone(plan);
+  missingComposition.decisions[0].composition.visualHierarchy = "";
+  assert.equal(checkCameraLanguageDecisions(missingComposition).valid, false);
+});
+
+test("camera-language CLI validates complete narrative plans and reports omissions, without writes", async () => {
+  const root = await mkdtemp(join(tmpdir(), "cineweave-camera-language-"));
+  const file = join(root, "camera.json");
+  const cli = fileURLToPath(new URL("../skills/cineweave-director/scripts/check-shot-review.mjs", import.meta.url));
+  try {
+    for (const fail of [false, true]) {
+      const p = cameraPlan();
+      if (fail) p.decisions.pop();
+      const bytes = JSON.stringify(p);
+      await writeFile(file, bytes);
+      const run = spawnSync(process.execPath, [cli, "--camera-language", file], { encoding: "utf8" });
+      assert.equal(run.status, fail ? 1 : 0, run.stderr);
+      const result = JSON.parse(run.stdout);
+      assert.equal(result.valid, !fail);
+      assert.equal(await readFile(file, "utf8"), bytes);
     }
   } finally { await rm(root, { recursive: true, force: true }); }
 });

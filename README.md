@@ -82,6 +82,7 @@ node skills/cineweave-director/scripts/check-delivery.mjs worksheet.json
 node skills/cineweave-director/scripts/check-video-plan.mjs workbook.json
 node skills/cineweave-director/scripts/check-video-plan.mjs workbook.json --evaluation-date 2026-10-12
 node skills/cineweave-director/scripts/check-shot-review.mjs review.json
+node skills/cineweave-director/scripts/check-shot-review.mjs --camera-language camera-workbook.json
 node skills/cineweave-director/scripts/check-change-impact.mjs impact.json
 ```
 
