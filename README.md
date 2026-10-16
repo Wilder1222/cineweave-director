@@ -57,6 +57,9 @@
 
 ## 按需使用的指南
 
+- [场次级导演生产关卡](skills/cineweave-director/references/optional/scene-directing-pipeline.md)：八阶段从戏剧任务、场景地理、Blocking、覆盖、声音剪辑到小样和修复；完整短片／正式连续镜头才加载，不影响普通单图。
+- [《玄奘》双段重要实践案例](skills/cineweave-director/references/optional/xuanzang-director-case-study.md)：约 11:47＋10:59 两段课程的可采纳导演方法、反例与 CineWeave 迁移，明确作者口播与案例推论边界。
+
 - [Skill 入口](skills/cineweave-director/SKILL.md)：交付规模、创作顺序与领域路由。
 - [镜头工作台](skills/cineweave-director/references/optional/shot-design-workbench.md)：注意力、动作瞬间与关键帧准备度。
 - [镜头语言与叙事作用词典](skills/cineweave-director/references/optional/cinematic-patterns.md#镜头语言与叙事作用词典)：7 种核心技法、28 种扩展、中文镜头示例及 AIGC 分镜交接；影视叙事必经逐镜选镜。

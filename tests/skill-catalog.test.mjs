@@ -213,16 +213,16 @@ test("temporary catalogs load exact identities and reject filesystem-controlled 
   await assert.rejects(() => loadSkillCatalog(source), /fields mismatch/);
 });
 
-test("P1 plugin remains 161 files with the original paths; director leaf contains 160 files", () => {
+test("P1 plugin remains 163 files with the original paths; director leaf contains 162 files", () => {
   const value = fixture();
   const plugin = plan(value);
-  assert.equal(plugin.files.length, 161);
-  assert.equal(plugin.sourceFiles.length, 161);
+  assert.equal(plugin.files.length, 163);
+  assert.equal(plugin.sourceFiles.length, 163);
   assert.deepEqual(plugin.files, value.files);
   assert.deepEqual(plugin.exports.map((entry) => entry.source), value.files);
   assert.ok(plugin.exports.every((entry) => entry.source === entry.destination));
   assert.deepEqual(plugin.skills.map((skill) => skill.name), [DIRECTOR]);
-  assert.equal(plugin.skills[0].files.length, 159);
+  assert.equal(plugin.skills[0].files.length, 161);
   assert.equal(plugin.skills[0].root, CORE);
   assert.equal(plugin.skills[0].sourceRoot, CORE);
   assert.equal(plugin.skills[0].destinationRoot, CORE);
@@ -230,8 +230,8 @@ test("P1 plugin remains 161 files with the original paths; director leaf contain
   assert.equal(plugin.skills[0].targetKinds.length, 43);
 
   const leaf = plan(value, { type: "skill", name: DIRECTOR });
-  assert.equal(leaf.files.length, 160);
-  assert.equal(leaf.sourceFiles.length, 160);
+  assert.equal(leaf.files.length, 162);
+  assert.equal(leaf.sourceFiles.length, 162);
   assert.equal(leaf.skills[0].root, ".");
   assert.equal(leaf.skills[0].destinationRoot, ".");
   assert.ok(leaf.files.includes("SKILL.md") && leaf.files.includes("LICENSE"));
@@ -240,18 +240,18 @@ test("P1 plugin remains 161 files with the original paths; director leaf contain
   assert.deepEqual(leaf.skills[0].files, sort(value.files.filter((path) => path.startsWith(`${CORE}/`)).map((path) => path.slice(CORE.length + 1))));
 });
 
-test("enabled specialists reuse all 159 core files and replace only their two authoring surfaces", async (t) => {
+test("enabled specialists reuse all 161 core files and replace only their two authoring surfaces", async (t) => {
   for (let stage = 2; stage <= 4; stage += 1) {
     await t.test(`stage ${stage}`, () => {
       const value = fixture(stage);
       const exported = plan(value);
-      assert.equal(exported.files.length, 2 + 159 * stage);
-      assert.equal(exported.sourceFiles.length, 161 + 2 * (stage - 1));
+      assert.equal(exported.files.length, 2 + 161 * stage);
+      assert.equal(exported.sourceFiles.length, 163 + 2 * (stage - 1));
       assert.equal(exported.exports.length, exported.files.length, "one source may have several destinations");
       assert.deepEqual(exported.skills.map((skill) => skill.name), NAMES.slice(0, stage));
       for (const skill of exported.skills) {
-        assert.equal(skill.files.length, 159);
-        assert.equal(skill.exports.length, 159);
+        assert.equal(skill.files.length, 161);
+        assert.equal(skill.exports.length, 161);
         assert.equal(skill.sourceRoot, skill.name === DIRECTOR ? CORE : `skill-sources/${skill.name}`);
         for (const key of ["contracts", "lifecycle", "index"]) assert.equal(skill[key], value[key]);
         assert.deepEqual(skill.actualKinds, contracts.contractKinds.filter((kind) => {
@@ -265,7 +265,7 @@ test("enabled specialists reuse all 159 core files and replace only their two au
           assert.equal(entry.source, `${ownEntry ? skill.sourceRoot : CORE}/${local}`);
         }
         const leaf = plan(value, { type: "skill", name: skill.name });
-        assert.equal(leaf.files.length, 160);
+        assert.equal(leaf.files.length, 162);
         assert.deepEqual(leaf.exports, sort([...skill.exports.map((entry) => entry.destination.slice(skill.destinationRoot.length + 1)), "LICENSE"]).map((destination) => ({
           source: destination === "LICENSE" ? "LICENSE" : skill.exports.find((entry) => entry.destination === `${skill.destinationRoot}/${destination}`).source,
           destination,
@@ -282,7 +282,7 @@ test("export plan does not discover or create authoring roots from disk", async 
   await writeFile(join(source, "skills", "cineweave-extra", "rogue.md"), "must not export", "utf8");
   const model = validateSkillCatalog(await loadSkillCatalog(source), value);
   const exported = createSkillExportPlan(source, model, value);
-  assert.equal(exported.files.length, 320);
+  assert.equal(exported.files.length, 324);
   assert.ok(exported.sourceFiles.includes(`skill-sources/${PLATFORM}/SKILL.md`));
   assert.ok(!exported.files.some((path) => path.includes("cineweave-extra")));
   assert.deepEqual(sort(await readdir(source)), ["skill-catalog.json", "skills"]);
@@ -331,8 +331,8 @@ test("unreviewed, missing, duplicate, and colliding canonical inventory paths fa
 
 test("manifest paths and resource counts cannot silently expand or shrink the shared profile", async (t) => {
   const cases = [
-    ["missing reference", (value) => { value.lifecycle.references.pop(); }, /exactly 42 references/],
-    ["extra reference", (value) => { value.lifecycle.references.push({ path: "references/extra.md" }); }, /exactly 42 references/],
+    ["missing reference", (value) => { value.lifecycle.references.pop(); }, /exactly 44 references/],
+    ["extra reference", (value) => { value.lifecycle.references.push({ path: "references/extra.md" }); }, /exactly 44 references/],
     ["missing support schema", (value) => { value.index.supportSchemas.pop(); }, /exactly 2 support schemas/],
     ["duplicate reference", (value) => { value.lifecycle.references[0].path = value.lifecycle.references[1].path; }, /contains duplicate paths/],
     ["duplicate schema", (value) => { value.index.contracts[0].schema = value.index.contracts[1].schema; }, /contains duplicate paths/],

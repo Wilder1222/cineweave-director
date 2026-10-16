@@ -388,6 +388,27 @@
         "production_plan",
         "review_repair"
       ]
+    },
+    {
+      "path": "references/optional/scene-directing-pipeline.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "multi_route",
+        "scene",
+        "shot_direction",
+        "storyboard_rhythm",
+        "production_plan",
+        "review_repair"
+      ]
+    },
+    {
+      "path": "references/optional/xuanzang-director-case-study.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "skill_evaluation",
+        "shot_direction",
+        "storyboard_rhythm"
+      ]
     }
   ]
 }
