@@ -582,7 +582,12 @@
           "startOffsetFrame": 49,
           "endOffsetFrame": 114,
           "exactText": "还是青梅味？",
-          "speaker": "C-L"
+          "speaker": "C-L",
+          "subtitleText": "还是青梅味？",
+          "to": "C-T",
+          "delivery": "看到绿瓶后轻声问朋友，熟悉而自然，末尾略扬",
+          "voiceDurationEvidence": "planned_unmeasured",
+          "track": "diegetic_dialogue"
         },
         {
           "lineId": "B-L2",
@@ -590,7 +595,12 @@
           "startOffsetFrame": 90,
           "endOffsetFrame": 155,
           "exactText": "换了新配方。",
-          "speaker": "C-T"
+          "speaker": "C-T",
+          "subtitleText": "换了新配方。",
+          "to": "C-L",
+          "delivery": "回答时自然微笑，重心在‘新配方’，不明显广告式介绍",
+          "voiceDurationEvidence": "planned_unmeasured",
+          "track": "diegetic_dialogue"
         },
         {
           "lineId": "B-L3",
@@ -598,7 +608,12 @@
           "startOffsetFrame": 122,
           "endOffsetFrame": 174,
           "exactText": "雨停了。",
-          "speaker": "C-Q"
+          "speaker": "C-Q",
+          "subtitleText": "雨停了。",
+          "to": "C-L",
+          "delivery": "先望真实玻璃门外，安静观察后轻声说‘雨停了’，没有反转感",
+          "voiceDurationEvidence": "planned_unmeasured",
+          "track": "diegetic_dialogue"
         },
         {
           "lineId": "B-L4",
@@ -606,11 +621,35 @@
           "startOffsetFrame": 35,
           "endOffsetFrame": 115,
           "exactText": "走吧，慢慢走。",
-          "speaker": "C-L"
+          "speaker": "C-L",
+          "subtitleText": "走吧，慢慢走。",
+          "to": "C-T",
+          "delivery": "像顺口邀请大家一起走，末句放慢，不催促",
+          "voiceDurationEvidence": "planned_unmeasured",
+          "track": "diegetic_dialogue"
         }
       ],
       "subtitlePlan": "只收四句日常对白，真实音轨回来后按句停顿设置字幕，平台生成画面不写准确中文。",
-      "editPlan": "24fps，头尾保留剪辑把手。B-S05 至 B-S06 是同一个南门动作的连续剪辑，乔宁左手不突然更换；跨切点门铃是同一次声音，不复制新铃。"
+      "editPlan": "24fps，头尾保留剪辑把手。B-S05 至 B-S06 是同一个南门动作的连续剪辑，乔宁左手不突然更换；跨切点门铃是同一次声音，不复制新铃。",
+      "voiceProfiles": [
+        {
+          "characterId": "C-L",
+          "perceivedVoice": "21岁成年中国女性轻中音，日常口语、咬字清楚但不播音腔，音色柔和",
+          "performanceRange": "对朋友亲近，问口味与提议走路时语气随意，允许轻笑"
+        },
+        {
+          "characterId": "C-T",
+          "perceivedVoice": "22岁成年中国女性清亮中音，语速自然，句尾稍上扬",
+          "performanceRange": "提到口味调整时轻松回应，没有夸张卖萌或装可爱口吻"
+        },
+        {
+          "characterId": "C-Q",
+          "perceivedVoice": "23岁成年中国女性中低音偏柔，呼吸从容，语音自然",
+          "performanceRange": "看见雨停后低声分享发现，不制造悬疑或惊喜式叫喊"
+        }
+      ],
+      "mixPlan": "东窗座位对白与南门附近声音保持同一空间感；离店后减少室内冰柜底噪，保留一次门铃余音和屋檐水滴，音乐全无。",
+      "colorPlan": "内景中性顶灯与雨后冷色环境光平衡；经过南门走到屋檐的自然天光变化可见，人物肤色和衣服色彩保持一致。"
     },
     "G6": {
       "generationPath": "i2v_plan_unbound",
@@ -643,7 +682,12 @@
       "candidatePolicy": "先测试最多2个候选的高风险片段组，失败区间须记录，不建议无限重试；脚本只是规划未消费额度。",
       "renderDelivery": "生成任务、输入图的真实 ID、模型参数、候选音画、实际采用窗口和试剪链接必须回流后才能声称可剪。",
       "providerSupport": "unverified",
-      "editingStatus": "not_attempted_without_video"
+      "editingStatus": "not_attempted_without_video",
+      "plannedHandles": {
+        "headFrames": 12,
+        "tailFrames": 24,
+        "source": "creative_estimate_provider_unverified"
+      }
     },
     "G7": {
       "evidenceScope": "plan_only",
