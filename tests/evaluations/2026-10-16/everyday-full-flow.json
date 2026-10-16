@@ -1379,7 +1379,48 @@
         }
       ],
       "mixPlan": "东窗座位对白与南门附近声音保持同一空间感；离店后减少室内冰柜底噪，保留一次门铃余音和屋檐水滴，音乐全无。",
-      "colorPlan": "内景中性顶灯与雨后冷色环境光平衡；经过南门走到屋檐的自然天光变化可见，人物肤色和衣服色彩保持一致。"
+      "colorPlan": "内景中性顶灯与雨后冷色环境光平衡；经过南门走到屋檐的自然天光变化可见，人物肤色和衣服色彩保持一致。",
+      "lookPaletteRef": "PAL-B",
+      "lightingTransitions": [
+        {
+          "setupId": "B-LS1",
+          "shotIds": [
+            "B-S01",
+            "B-S02",
+            "B-S03",
+            "B-S04"
+          ],
+          "worldSourceIds": [
+            "L-CEIL",
+            "L-DUSK"
+          ],
+          "reason": "三人店内东窗坐席",
+          "lookContinuity": "从窗台到南门接近自然天光时亮度平缓变化"
+        },
+        {
+          "setupId": "B-LS2",
+          "shotIds": [
+            "B-S05"
+          ],
+          "worldSourceIds": [
+            "L-CEIL",
+            "L-DUSK"
+          ],
+          "reason": "离座到南门的过渡",
+          "lookContinuity": "靠近南门时天光相对增强，室内顶灯仍可在人物背部有残余影响"
+        },
+        {
+          "setupId": "B-LS3",
+          "shotIds": [
+            "B-S06"
+          ],
+          "worldSourceIds": [
+            "L-DUSK"
+          ],
+          "reason": "屋檐下雨后天光",
+          "lookContinuity": "环境光均匀，室内顶灯只有透过开门玻璃的微弱背景影响"
+        }
+      ]
     },
     "G6": {
       "generationPath": "i2v_plan_unbound",
@@ -1417,7 +1458,14 @@
         "headFrames": 12,
         "tailFrames": 24,
         "source": "creative_estimate_provider_unverified"
-      }
+      },
+      "lookdevTestIds": [
+        "B-T1",
+        "B-T2",
+        "B-T3",
+        "B-T4"
+      ],
+      "lookdevStatus": "planned_not_generated_or_color_approved"
     },
     "G7": {
       "evidenceScope": "plan_only",
@@ -1435,7 +1483,8 @@
         "三位角色尚无生产用的已确认身份图和资产绑定",
         "平台是否支持选定单镜持续秒数及多角色均未核验",
         "准确对白尚未录制，没有真实口型和时间测量",
-        "缺视频和试剪，观众体验、镜头衔接和声音桥只能计划验证"
+        "缺视频和试剪，观众体验、镜头衔接和声音桥只能计划验证",
+        "视觉开发色卡目前为可复制的 sRGB 设计值，尚未生成与核对色卡板、材质样片及光位对照图；调色、肤色与灯光落地效果均未验收。"
       ],
       "paperReviews": [
         {
