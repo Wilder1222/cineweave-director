@@ -1292,7 +1292,38 @@
         }
       ],
       "mixPlan": "同一室内统一近距离对白混响，声像跟随人物南北位置，室内底噪跨镜连续，衣料与木匣拟音按真实动作重合，音乐全无。",
-      "colorPlan": "延续西窗冷光＋东油灯暖色相对关系；镜头近景允许曝光适配但不把世界光源镜像，暗部保留官袍与木匣纹理。"
+      "colorPlan": "延续西窗冷光＋东油灯暖色相对关系；镜头近景允许曝光适配但不把世界光源镜像，暗部保留官袍与木匣纹理。",
+      "lookPaletteRef": "PAL-A",
+      "lightingTransitions": [
+        {
+          "setupId": "A-LS1",
+          "shotIds": [
+            "A-S01",
+            "A-S02",
+            "A-S03"
+          ],
+          "worldSourceIds": [
+            "L-W",
+            "L-E"
+          ],
+          "reason": "北案桌对话空间",
+          "lookContinuity": "角色远离油灯则暖色明显减弱，西窗冷光相对增加"
+        },
+        {
+          "setupId": "A-LS2",
+          "shotIds": [
+            "A-S04",
+            "A-S05",
+            "A-S06"
+          ],
+          "worldSourceIds": [
+            "L-W",
+            "L-E"
+          ],
+          "reason": "蜡封证据与决定",
+          "lookContinuity": "油灯的暖边响应只跟物件的位置和朝向变化，不能随机换边"
+        }
+      ]
     },
     "G6": {
       "generationPath": "i2v_plan_unbound",
@@ -1330,7 +1361,14 @@
         "headFrames": 12,
         "tailFrames": 24,
         "source": "creative_estimate_provider_unverified"
-      }
+      },
+      "lookdevTestIds": [
+        "A-T1",
+        "A-T2",
+        "A-T3",
+        "A-T4"
+      ],
+      "lookdevStatus": "planned_not_generated_or_color_approved"
     },
     "G7": {
       "evidenceScope": "plan_only",
@@ -1348,7 +1386,8 @@
         "人物真实身份图与可调用媒体资产尚未生成",
         "实际声线和台词时长未测量",
         "平台 I2V 可用时长与首帧绑定未核验",
-        "无实际视频与试剪，无法核实质量或叙事效果"
+        "无实际视频与试剪，无法核实质量或叙事效果",
+        "视觉开发色卡目前为可复制的 sRGB 设计值，尚未生成与核对色卡板、材质样片及光位对照图；调色、肤色与灯光落地效果均未验收。"
       ],
       "paperReviews": [
         {
