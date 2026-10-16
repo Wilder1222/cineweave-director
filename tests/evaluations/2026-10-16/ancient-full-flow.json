@@ -1045,7 +1045,298 @@
         "实际声线和台词时长未测量",
         "平台 I2V 可用时长与首帧绑定未核验",
         "无实际视频与试剪，无法核实质量或叙事效果"
-      ]
+      ],
+      "paperReviews": [
+        {
+          "role": "direction",
+          "shotId": "A-S01",
+          "status": "pass",
+          "criterion": "镜头的必要剧情或观察节拍与观众信息变化必须明确，不能只凭画面美观。",
+          "observation": "书面镜表定义的任务是「先见顾从远的工作，脚步进入才触发其注意；不提前揭示来客脸。」；本镜覆盖节拍 A-B1，节拍的观众收益为「先看到制度中的工作者，再察觉来人」。这只是导演计划，不意味着观众测试已通过。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B1 / G4.A-S01 / G5.cut.0"
+        },
+        {
+          "role": "direction",
+          "shotId": "A-S02",
+          "status": "pass",
+          "criterion": "镜头的必要剧情或观察节拍与观众信息变化必须明确，不能只凭画面美观。",
+          "observation": "书面镜表定义的任务是「建立南北两人的实际距离和对话轴，并让水位信息进入。」；本镜覆盖节拍 A-B2，节拍的观众收益为「来客的紧急任务可理解」。这只是导演计划，不意味着观众测试已通过。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B2 / G4.A-S02 / G5.cut.1"
+        },
+        {
+          "role": "direction",
+          "shotId": "A-S03",
+          "status": "pass",
+          "criterion": "镜头的必要剧情或观察节拍与观众信息变化必须明确，不能只凭画面美观。",
+          "observation": "书面镜表定义的任务是「通过官员的拒绝，将制度与汛情的分歧具体化；保留听者反应。」；本镜覆盖节拍 A-B3，节拍的观众收益为「制度障碍与个人立场明确」。这只是导演计划，不意味着观众测试已通过。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B3 / G4.A-S03 / G5.cut.2"
+        },
+        {
+          "role": "direction",
+          "shotId": "A-S04",
+          "status": "pass",
+          "criterion": "镜头的必要剧情或观察节拍与观众信息变化必须明确，不能只凭画面美观。",
+          "observation": "书面镜表定义的任务是「只在有说服需要时展示木匣与封口，作为证据被放置到桌中央。」；本镜覆盖节拍 A-B4，节拍的观众收益为「汛情有物证，并非口说」。这只是导演计划，不意味着观众测试已通过。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B4 / G4.A-S04 / G5.cut.3"
+        },
+        {
+          "role": "direction",
+          "shotId": "A-S05",
+          "status": "pass",
+          "criterion": "镜头的必要剧情或观察节拍与观众信息变化必须明确，不能只凭画面美观。",
+          "observation": "书面镜表定义的任务是「让官员审视账册转向证据，焦点变化有明确触发；态度开始松动。」；本镜覆盖节拍 A-B5，节拍的观众收益为「态度开始松动，不等于最终批准」。这只是导演计划，不意味着观众测试已通过。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B5 / G4.A-S05 / G5.cut.4"
+        },
+        {
+          "role": "direction",
+          "shotId": "A-S06",
+          "status": "pass",
+          "criterion": "镜头的必要剧情或观察节拍与观众信息变化必须明确，不能只凭画面美观。",
+          "observation": "书面镜表定义的任务是「用实际接近证据的行动而非宣告批准收束戏剧变化。」；本镜覆盖节拍 A-B6，节拍的观众收益为「决定由真实行为落地」。这只是导演计划，不意味着观众测试已通过。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B6 / G4.A-S06 / G5.cut.5"
+        },
+        {
+          "role": "performance",
+          "shotId": "A-S01",
+          "status": "pass",
+          "criterion": "角色的刺激、视线、可观察行动与人物任务顺序必须完整。",
+          "observation": "纸面规定刺激为「南门传来真实脚步后，顾从远停止写字并抬头。」。入态「顾坐北侧，右手握笔，账册在木桌北半部；匣与沈尚在南门外。」，出态「顾停笔望向南门；门外脚步停止；桌、灯和账册原位。」；演员动机、对手与必要硬锁由 G3 记录。未观察实际演员视频。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B1 / G4.A-S01 / G5.cut.0"
+        },
+        {
+          "role": "performance",
+          "shotId": "A-S02",
+          "status": "pass",
+          "criterion": "角色的刺激、视线、可观察行动与人物任务顺序必须完整。",
+          "observation": "纸面规定刺激为「沈砚走到桌南侧停下后开口。」。入态「顾仍坐北、手与笔在桌面；沈由南门进入，右手握匣在腰侧。」，出态「沈站桌南，右手持匣不放；顾在桌北看向她，右手已将毛笔搁到仍摊开的账册上。」；演员动机、对手与必要硬锁由 G3 记录。未观察实际演员视频。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B2 / G4.A-S02 / G5.cut.1"
+        },
+        {
+          "role": "performance",
+          "shotId": "A-S03",
+          "status": "pass",
+          "criterion": "角色的刺激、视线、可观察行动与人物任务顺序必须完整。",
+          "observation": "纸面规定刺激为「听见沈砚报水位后才回应。」。入态「顾坐北，笔搁在账册上，双眼朝向桌南的沈；沈在桌南右手持匣。」，出态「顾说完拒绝，笔仍在账册上，目光停留在沈身上；沈右手仍持唯一蜡封木匣。」；演员动机、对手与必要硬锁由 G3 记录。未观察实际演员视频。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B3 / G4.A-S03 / G5.cut.2"
+        },
+        {
+          "role": "performance",
+          "shotId": "A-S04",
+          "status": "pass",
+          "criterion": "角色的刺激、视线、可观察行动与人物任务顺序必须完整。",
+          "observation": "纸面规定刺激为「顾的拒绝促使沈改用物证而不继续空口争辩。」。入态「匣在沈右手腰侧；顾仍坐在桌北，笔搁在账册上。」，出态「匣放于桌面靠南中央且右手松开收回；顾尚未接触匣。」；演员动机、对手与必要硬锁由 G3 记录。未观察实际演员视频。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B4 / G4.A-S04 / G5.cut.3"
+        },
+        {
+          "role": "performance",
+          "shotId": "A-S05",
+          "status": "pass",
+          "criterion": "角色的刺激、视线、可观察行动与人物任务顺序必须完整。",
+          "observation": "纸面规定刺激为「沈砚右手离开匣后，顾听见记录内容，眼线由账册转向桌南木匣。」。入态「唯一木匣在桌面靠南中央，沈手已撤；顾未触匣，账册与笔北侧不动。」，出态「顾朝木匣伸出但没有拿起，停在匣前，决定亲自查看。」；演员动机、对手与必要硬锁由 G3 记录。未观察实际演员视频。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B5 / G4.A-S05 / G5.cut.4"
+        },
+        {
+          "role": "performance",
+          "shotId": "A-S06",
+          "status": "pass",
+          "criterion": "角色的刺激、视线、可观察行动与人物任务顺序必须完整。",
+          "observation": "纸面规定刺激为「官员已说出‘我看’，行动落实为检查木匣。」。入态「顾右手悬在桌上木匣前，沈站南侧右手已撤，匣在靠南中央。」，出态「顾右手从桌上取起唯一木匣靠近自己，沈仍在南侧等候，账册和灯原位。」；演员动机、对手与必要硬锁由 G3 记录。未观察实际演员视频。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B6 / G4.A-S06 / G5.cut.5"
+        },
+        {
+          "role": "staging",
+          "shotId": "A-S01",
+          "status": "pass",
+          "criterion": "场面地理与道具可达性清楚，实际的世界锚点不随构图改变。",
+          "observation": "本镜在 档房东侧靠北朝西偏南，南门被画框排除，继承场景世界锚点 north_desk、south_door、west_window、east_lamp；道具与人体起止位置分别为「顾坐北侧，右手握笔，账册在木桌北半部；匣与沈尚在南门外。」和「顾停笔望向南门；门外脚步停止；桌、灯和账册原位。」。空间尺寸和碰撞仍需实际候选验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B1 / G4.A-S01 / G5.cut.0"
+        },
+        {
+          "role": "staging",
+          "shotId": "A-S02",
+          "status": "pass",
+          "criterion": "场面地理与道具可达性清楚，实际的世界锚点不随构图改变。",
+          "observation": "本镜在 东侧两人连线侧面朝西，保持北官员和南驿使的距离，继承场景世界锚点 north_desk、south_door、west_window、east_lamp；道具与人体起止位置分别为「顾仍坐北、手与笔在桌面；沈由南门进入，右手握匣在腰侧。」和「沈站桌南，右手持匣不放；顾在桌北看向她，右手已将毛笔搁到仍摊开的账册上。」。空间尺寸和碰撞仍需实际候选验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B2 / G4.A-S02 / G5.cut.1"
+        },
+        {
+          "role": "staging",
+          "shotId": "A-S03",
+          "status": "pass",
+          "criterion": "场面地理与道具可达性清楚，实际的世界锚点不随构图改变。",
+          "observation": "本镜在 对话轴东侧，从沈肩后斜看桌北的顾，继承场景世界锚点 north_desk、south_door、west_window、east_lamp；道具与人体起止位置分别为「顾坐北，笔搁在账册上，双眼朝向桌南的沈；沈在桌南右手持匣。」和「顾说完拒绝，笔仍在账册上，目光停留在沈身上；沈右手仍持唯一蜡封木匣。」。空间尺寸和碰撞仍需实际候选验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B3 / G4.A-S03 / G5.cut.2"
+        },
+        {
+          "role": "staging",
+          "shotId": "A-S04",
+          "status": "pass",
+          "criterion": "场面地理与道具可达性清楚，实际的世界锚点不随构图改变。",
+          "observation": "本镜在 对话轴东侧从顾的后腰越过桌沿看沈与蜡封匣，继承场景世界锚点 north_desk、south_door、west_window、east_lamp；道具与人体起止位置分别为「匣在沈右手腰侧；顾仍坐在桌北，笔搁在账册上。」和「匣放于桌面靠南中央且右手松开收回；顾尚未接触匣。」。空间尺寸和碰撞仍需实际候选验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B4 / G4.A-S04 / G5.cut.3"
+        },
+        {
+          "role": "staging",
+          "shotId": "A-S05",
+          "status": "pass",
+          "criterion": "场面地理与道具可达性清楚，实际的世界锚点不随构图改变。",
+          "observation": "本镜在 木桌东侧平视顾，账册与蜡封匣分布于两个可识别深度平面，继承场景世界锚点 north_desk、south_door、west_window、east_lamp；道具与人体起止位置分别为「唯一木匣在桌面靠南中央，沈手已撤；顾未触匣，账册与笔北侧不动。」和「顾朝木匣伸出但没有拿起，停在匣前，决定亲自查看。」。空间尺寸和碰撞仍需实际候选验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B5 / G4.A-S05 / G5.cut.4"
+        },
+        {
+          "role": "staging",
+          "shotId": "A-S06",
+          "status": "pass",
+          "criterion": "场面地理与道具可达性清楚，实际的世界锚点不随构图改变。",
+          "observation": "本镜在 档房东侧双人关系机位朝西，顾坐北沈站南，继承场景世界锚点 north_desk、south_door、west_window、east_lamp；道具与人体起止位置分别为「顾右手悬在桌上木匣前，沈站南侧右手已撤，匣在靠南中央。」和「顾右手从桌上取起唯一木匣靠近自己，沈仍在南侧等候，账册和灯原位。」。空间尺寸和碰撞仍需实际候选验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B6 / G4.A-S06 / G5.cut.5"
+        },
+        {
+          "role": "cinematography",
+          "shotId": "A-S01",
+          "status": "pass",
+          "criterion": "景别、机位、静止／运镜理由、焦点顺序及切点有真实叙事意图。",
+          "observation": "已填写 M11 / static / hold；场景构图「顾偏画面北侧，南门不进入画面」；运动或静止理由「先见顾从远的工作，脚步进入才触发其注意；不提前揭示来客脸。」；采用出点标记 A-ST1。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B1 / G4.A-S01 / G5.cut.0"
+        },
+        {
+          "role": "cinematography",
+          "shotId": "A-S02",
+          "status": "pass",
+          "criterion": "景别、机位、静止／运镜理由、焦点顺序及切点有真实叙事意图。",
+          "observation": "已填写 M11 / static / hold；场景构图「沈位于画面南方一侧、顾在北方一侧，不借镜像交换」；运动或静止理由「建立南北两人的实际距离和对话轴，并让水位信息进入。」；采用出点标记 A-ST2。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B2 / G4.A-S02 / G5.cut.1"
+        },
+        {
+          "role": "cinematography",
+          "shotId": "A-S03",
+          "status": "pass",
+          "criterion": "景别、机位、静止／运镜理由、焦点顺序及切点有真实叙事意图。",
+          "observation": "已填写 K03 / static / hold；场景构图「官员占主要视觉中心，前景只保留有限肩缘」；运动或静止理由「通过官员的拒绝，将制度与汛情的分歧具体化；保留听者反应。」；采用出点标记 A-ST3。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B3 / G4.A-S03 / G5.cut.2"
+        },
+        {
+          "role": "cinematography",
+          "shotId": "A-S04",
+          "status": "pass",
+          "criterion": "景别、机位、静止／运镜理由、焦点顺序及切点有真实叙事意图。",
+          "observation": "已填写 K02 / static / hold；场景构图「腰侧构成关系前景，不遮木匣接触」；运动或静止理由「只在有说服需要时展示木匣与封口，作为证据被放置到桌中央。」；采用出点标记 A-ST4。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B4 / G4.A-S04 / G5.cut.3"
+        },
+        {
+          "role": "cinematography",
+          "shotId": "A-S05",
+          "status": "pass",
+          "criterion": "景别、机位、静止／运镜理由、焦点顺序及切点有真实叙事意图。",
+          "observation": "已填写 K07 / static / rack；场景构图「三层纵深清楚且物件原先均已存在」；运动或静止理由「让官员审视账册转向证据，焦点变化有明确触发；态度开始松动。」；采用出点标记 A-ST5。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B5 / G4.A-S05 / G5.cut.4"
+        },
+        {
+          "role": "cinematography",
+          "shotId": "A-S06",
+          "status": "pass",
+          "criterion": "景别、机位、静止／运镜理由、焦点顺序及切点有真实叙事意图。",
+          "observation": "已填写 M11 / static / hold；场景构图「两人和唯一匣同镜可读，不遮住顾前倾」；运动或静止理由「用实际接近证据的行动而非宣告批准收束戏剧变化。」；采用出点标记 A-ST6。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B6 / G4.A-S06 / G5.cut.5"
+        },
+        {
+          "role": "prompt",
+          "shotId": "A-S01",
+          "status": "pass",
+          "criterion": "此镜依选定 I2V 方案提交可独立复制的首帧和运动文本，而非只给文件名。",
+          "observation": "已提供镜号 A-S01 的首帧稿 348 字、运动稿 537 字；引用了本镜环境、角色外观、动作阶段和终态，未声称图像已经上传或视频已生成。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B1 / G4.A-S01 / G5.cut.0"
+        },
+        {
+          "role": "prompt",
+          "shotId": "A-S02",
+          "status": "pass",
+          "criterion": "此镜依选定 I2V 方案提交可独立复制的首帧和运动文本，而非只给文件名。",
+          "observation": "已提供镜号 A-S02 的首帧稿 378 字、运动稿 594 字；引用了本镜环境、角色外观、动作阶段和终态，未声称图像已经上传或视频已生成。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B2 / G4.A-S02 / G5.cut.1"
+        },
+        {
+          "role": "prompt",
+          "shotId": "A-S03",
+          "status": "pass",
+          "criterion": "此镜依选定 I2V 方案提交可独立复制的首帧和运动文本，而非只给文件名。",
+          "observation": "已提供镜号 A-S03 的首帧稿 375 字、运动稿 580 字；引用了本镜环境、角色外观、动作阶段和终态，未声称图像已经上传或视频已生成。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B3 / G4.A-S03 / G5.cut.2"
+        },
+        {
+          "role": "prompt",
+          "shotId": "A-S04",
+          "status": "pass",
+          "criterion": "此镜依选定 I2V 方案提交可独立复制的首帧和运动文本，而非只给文件名。",
+          "observation": "已提供镜号 A-S04 的首帧稿 373 字、运动稿 576 字；引用了本镜环境、角色外观、动作阶段和终态，未声称图像已经上传或视频已生成。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B4 / G4.A-S04 / G5.cut.3"
+        },
+        {
+          "role": "prompt",
+          "shotId": "A-S05",
+          "status": "pass",
+          "criterion": "此镜依选定 I2V 方案提交可独立复制的首帧和运动文本，而非只给文件名。",
+          "observation": "已提供镜号 A-S05 的首帧稿 373 字、运动稿 621 字；引用了本镜环境、角色外观、动作阶段和终态，未声称图像已经上传或视频已生成。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B5 / G4.A-S05 / G5.cut.4"
+        },
+        {
+          "role": "prompt",
+          "shotId": "A-S06",
+          "status": "pass",
+          "criterion": "此镜依选定 I2V 方案提交可独立复制的首帧和运动文本，而非只给文件名。",
+          "observation": "已提供镜号 A-S06 的首帧稿 373 字、运动稿 595 字；引用了本镜环境、角色外观、动作阶段和终态，未声称图像已经上传或视频已生成。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B6 / G4.A-S06 / G5.cut.5"
+        },
+        {
+          "role": "continuity",
+          "shotId": "A-S01",
+          "status": "pass",
+          "criterion": "本镜出态必须被下一镜入态解释，所需声桥和关键道具保持一致。",
+          "observation": "本镜出态 A-ST1：「顾停笔望向南门；门外脚步停止；桌、灯和账册原位。」；下镜 A-S02 入态 A-ST1：「顾仍坐北、手与笔在桌面；沈由南门进入，右手握匣在腰侧。」。对应接口已注明「同一官署室内低环境声连续，台词切点不截断，声音不凭空换空间」。这是文本匹配，不是实际剪辑验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B1 / G4.A-S01 / G5.cut.0"
+        },
+        {
+          "role": "continuity",
+          "shotId": "A-S02",
+          "status": "pass",
+          "criterion": "本镜出态必须被下一镜入态解释，所需声桥和关键道具保持一致。",
+          "observation": "本镜出态 A-ST2：「沈站桌南，右手持匣不放；顾在桌北看向她，右手已将毛笔搁到仍摊开的账册上。」；下镜 A-S03 入态 A-ST2：「顾坐北，笔搁在账册上，双眼朝向桌南的沈；沈在桌南右手持匣。」。对应接口已注明「同一官署室内低环境声连续，台词切点不截断，声音不凭空换空间」。这是文本匹配，不是实际剪辑验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B2 / G4.A-S02 / G5.cut.1"
+        },
+        {
+          "role": "continuity",
+          "shotId": "A-S03",
+          "status": "pass",
+          "criterion": "本镜出态必须被下一镜入态解释，所需声桥和关键道具保持一致。",
+          "observation": "本镜出态 A-ST3：「顾说完拒绝，笔仍在账册上，目光停留在沈身上；沈右手仍持唯一蜡封木匣。」；下镜 A-S04 入态 A-ST3：「匣在沈右手腰侧；顾仍坐在桌北，笔搁在账册上。」。对应接口已注明「同一官署室内低环境声连续，台词切点不截断，声音不凭空换空间」。这是文本匹配，不是实际剪辑验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B3 / G4.A-S03 / G5.cut.2"
+        },
+        {
+          "role": "continuity",
+          "shotId": "A-S04",
+          "status": "pass",
+          "criterion": "本镜出态必须被下一镜入态解释，所需声桥和关键道具保持一致。",
+          "observation": "本镜出态 A-ST4：「匣放于桌面靠南中央且右手松开收回；顾尚未接触匣。」；下镜 A-S05 入态 A-ST4：「唯一木匣在桌面靠南中央，沈手已撤；顾未触匣，账册与笔北侧不动。」。对应接口已注明「同一官署室内低环境声连续，台词切点不截断，声音不凭空换空间」。这是文本匹配，不是实际剪辑验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B4 / G4.A-S04 / G5.cut.3"
+        },
+        {
+          "role": "continuity",
+          "shotId": "A-S05",
+          "status": "pass",
+          "criterion": "本镜出态必须被下一镜入态解释，所需声桥和关键道具保持一致。",
+          "observation": "本镜出态 A-ST5：「顾朝木匣伸出但没有拿起，停在匣前，决定亲自查看。」；下镜 A-S06 入态 A-ST5：「顾右手悬在桌上木匣前，沈站南侧右手已撤，匣在靠南中央。」。对应接口已注明「同一官署室内低环境声连续，台词切点不截断，声音不凭空换空间」。这是文本匹配，不是实际剪辑验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B5 / G4.A-S05 / G5.cut.4"
+        },
+        {
+          "role": "continuity",
+          "shotId": "A-S06",
+          "status": "pass",
+          "criterion": "本镜出态必须被下一镜入态解释，所需声桥和关键道具保持一致。",
+          "observation": "本镜作为收束镜，终态 A-ST6：「顾右手从桌上取起唯一木匣靠近自己，沈仍在南侧等候，账册和灯原位。」；已声明准确结束的观众可见结果，没有后镜需要强行接续。无实际媒体证据。",
+          "sourceLocator": "tests/evaluations/2026-10-16/ancient-full-flow.json # G0.A-B6 / G4.A-S06 / G5.cut.5"
+        }
+      ],
+      "paperReviewScope": "authored_planning_text_only_not_independent"
     }
   }
 }
