@@ -8,7 +8,7 @@ import { spawnSync } from "node:child_process";
 import { validateMarkdownFiles } from "../scripts/markdown-links.mjs";
 import { repositoryRoot, validateRepository } from "../scripts/validate-repository.mjs";
 import { FORMAT, NODE_TAGS, validateVideoWorkbook } from "../skills/cineweave-director/scripts/check-video-plan.mjs";
-import { checkCameraLanguageDecisions } from "../skills/cineweave-director/scripts/check-shot-review.mjs";
+import { checkCameraLanguageDecisions, checkShotReview } from "../skills/cineweave-director/scripts/check-shot-review.mjs";
 
 function videoBook() {
   const scope = { platform: "fixture", model: "fixture", surface: "fixture", mode: "t2v" };
@@ -337,6 +337,19 @@ function auditSceneForward(caseFile) {
   check(Array.isArray(G6.testGroups) && G6.testGroups.length >= 2 && G6.testGroups.every((x) => Array.isArray(x.shots) && x.shots.length >= 2 && x.shots.every((id) => shotIds.includes(id)) && nonblank(x.risk) && nonblank(x.rejectIf)), "G6_BENCHMARKS");
   check(G7.evidenceScope === "plan_only" && G7.mediaVerified === false && nonblank(G7.stageSummary, 30), "G7_EVIDENCE_BOUNDARY");
   check(Array.isArray(G7.formalAcceptance) && G7.formalAcceptance.length >= 4 && Array.isArray(G7.openItems) && G7.openItems.length >= 3, "G7_ACCEPTANCE_GAPS");
+  check(G7.paperReviewScope === "authored_planning_text_only_not_independent" && Array.isArray(G7.paperReviews) && G7.paperReviews.length === shots.length * 6, "G7_PAPER_INVENTORY");
+  if (Array.isArray(G7.paperReviews) && shots.every((shot) => shot.cameraReviewRow)) {
+    try {
+      const paper = checkShotReview({
+        source: { type: "design", id: caseFile.id, version: 1, cameraLanguageScope: "narrative_video" },
+        mode: "full", shotIds, reviews: G7.paperReviews,
+        cameraDecisions: shots.map((shot) => shot.cameraReviewRow)
+      });
+      check(paper.valid && paper.coverageComplete && paper.reviewComplete &&
+        paper.expectedRows === shots.length * 6 && paper.scope === "plan_only",
+        "G7_SIX_PERSPECTIVE_PAPER_REVIEW");
+    } catch { errors.push("G7_SIX_PERSPECTIVE_PAPER_REVIEW"); }
+  } else errors.push("G7_SIX_PERSPECTIVE_PAPER_REVIEW");
   return errors;
 }
 
@@ -375,6 +388,8 @@ test("stage-level delivery audit detects missing owners, orphaned beats, inconsi
     ["G6_HANDLES_AND_SCOPE", (x) => { x.stages.G6.plannedHandles.source = "verified_platform"; }],
     ["G5_DIALOGUE_DURATION:A-L4", (x) => { x.stages.G5.dialogueCues[3].endOffsetFrame = 2000; }],
     ["G6_NO_FALSE_EXECUTION", (x) => { x.stages.G6.mediaAvailable = true; }],
+    ["G7_PAPER_INVENTORY", (x) => { x.stages.G7.paperReviews.pop(); }],
+    ["G7_SIX_PERSPECTIVE_PAPER_REVIEW", (x) => { x.stages.G7.paperReviews[0].observation = ""; }],
     ["G7_EVIDENCE_BOUNDARY", (x) => { x.stages.G7.mediaVerified = true; }],
   ];
   for (const [expected, mutate] of defects) {
