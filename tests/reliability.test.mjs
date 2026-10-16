@@ -234,6 +234,8 @@ function auditSceneForward(caseFile) {
   check(nonblank(caseFile.scope?.title) && nonblank(caseFile.scope?.medium) && nonblank(caseFile.scope?.aspectRatio), "SCOPE_BRIEF");
   check(nonblank(G0.directorStatement, 40) && nonblank(G0.viewerExperience, 20) && nonblank(G0.visualPointOfView, 15), "G0_DIRECTOR_BRIEF");
   const script = Array.isArray(G0.script) ? G0.script : [];
+  check(nonblank(G0.sceneScript, 300), "G0_SCENE_SCRIPT");
+  for (const line of script) check(nonblank(line.text) && G0.sceneScript?.includes(line.text), `G0_SCRIPT_SCENE_MATCH:${line.id}`);
   const beats = Array.isArray(G0.beats) ? G0.beats : [];
   check(script.length > 0 && script.every((x) => nonblank(x.id) && nonblank(x.speaker) && nonblank(x.text)), "G0_SCRIPT");
   check(beats.length > 0 && beats.every((x) => nonblank(x.id) && nonblank(x.before) && nonblank(x.stimulus) && nonblank(x.action) && nonblank(x.after) && nonblank(x.audienceGain) && Array.isArray(x.coverage) && x.coverage.length > 0), "G0_BEATS");
@@ -333,6 +335,8 @@ test("stage-level delivery audit detects missing owners, orphaned beats, inconsi
   const fixture = JSON.parse(await readFile(fixtureFile, "utf8"));
   const defects = [
     ["MISSING_STAGE:G2", (x) => { delete x.stages.G2; }],
+    ["G0_SCENE_SCRIPT", (x) => { x.stages.G0.sceneScript = "只有对白清单，没有一场可演的剧本"; }],
+    ["G0_SCRIPT_SCENE_MATCH:A-L1", (x) => { x.stages.G0.sceneScript = x.stages.G0.sceneScript.replace("上游的水位，比今晨又高了一尺。", "水上涨了"); }],
     ["G1_ASSET_PROMPTS", (x) => { x.stages.G1.assets[0].prompt = ""; }],
     ["G4:A-S04_GEO_BINDING", (x) => { x.stages.G4.shots[3].worldAnchorIds[0] = "fake_window"; }],
     ["G0_G4_BEAT_COVERAGE", (x) => { x.stages.G0.beats[0].coverage[0] = "absent"; }],
