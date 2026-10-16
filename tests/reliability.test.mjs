@@ -290,20 +290,27 @@ function auditSceneForward(caseFile) {
     const earlier = shots[i - 1];
     const cut = cuts[i - 1] ?? {};
     check(cut.from === earlier.id && cut.to === shot.id && cut.matchedStateId === earlier.endStateId && cut.matchedStateId === shot.startStateId, `G5_CUT_STATE:${earlier.id}->${shot.id}`);
+    check(cut.propContinuity === `${earlier.endState} → ${shot.startState}`, `G5_CUT_PROP_STATE:${earlier.id}->${shot.id}`);
     check(["continue","revisit","ellipsis"].includes(cut.mode) && nonblank(cut.screenDirection, 10) && nonblank(cut.propContinuity, 20) && nonblank(cut.soundBridge, 15) && nonblank(cut.exception), `G5_CUT_DETAIL:${earlier.id}->${shot.id}`);
   }
   check(frame === caseFile.scope.durationFrames, "G5_TOTAL_FRAMES");
   check(nonblank(G5.ambient, 30) && nonblank(G5.foley, 30) && nonblank(G5.music) && nonblank(G5.editPlan, 30) && nonblank(G5.subtitlePlan, 25), "G5_SOUND_EDIT");
+  const profiles = Array.isArray(G5.voiceProfiles) ? G5.voiceProfiles : [];
+  check(profiles.length === castIds.length && unique(profiles.map((x) => x.characterId)) && profiles.every((x) => castIds.includes(x.characterId) && nonblank(x.perceivedVoice, 20) && nonblank(x.performanceRange, 15)), "G5_VOICE_PROFILES");
+  check(nonblank(G5.mixPlan, 30) && nonblank(G5.colorPlan, 30), "G5_MIX_AND_GRADE");
   const cues = Array.isArray(G5.dialogueCues) ? G5.dialogueCues : [];
   check(cues.length === script.length && unique(cues.map((c) => c.lineId)), "G5_DIALOGUE_CUE_INVENTORY");
   for (const line of script) {
     const cue = cues.find((c) => c.lineId === line.id);
     const shot = shots.find((s) => s.id === cue?.shotId);
     check(cue && cue.exactText === line.text && cue.speaker === line.speaker && shot && shot.castIds.includes(line.speaker) && shot.videoPrompt.includes(line.text), `G5_DIALOGUE_IDENTITY:${line.id}`);
+    check(cue && cue.subtitleText === line.text && castIds.includes(cue.to) && nonblank(cue.delivery, 20) && cue.voiceDurationEvidence === "planned_unmeasured" && cue.track === "diegetic_dialogue", `G5_VOICE_DIRECTION:${line.id}`);
     check(cue && Number.isInteger(cue.startOffsetFrame) && Number.isInteger(cue.endOffsetFrame) && cue.startOffsetFrame >= 0 && cue.endOffsetFrame > cue.startOffsetFrame && cue.endOffsetFrame <= shot?.durationFrames, `G5_DIALOGUE_DURATION:${line.id}`);
   }
   check(G6.generationPath === caseFile.scope.generationPath && G6.mediaAvailable === false && G6.providerSupport === "unverified" && G6.editingStatus === "not_attempted_without_video", "G6_NO_FALSE_EXECUTION");
   check(Array.isArray(G6.requiredBeforeExecution) && G6.requiredBeforeExecution.length >= 3 && nonblank(G6.candidatePolicy, 20) && nonblank(G6.renderDelivery, 20), "G6_PRODUCTION_TASKS");
+  const handles = G6.plannedHandles ?? {};
+  check(Number.isSafeInteger(handles.headFrames) && handles.headFrames >= 0 && Number.isSafeInteger(handles.tailFrames) && handles.tailFrames >= 0 && handles.source === "creative_estimate_provider_unverified", "G6_HANDLES_AND_SCOPE");
   check(Array.isArray(G6.testGroups) && G6.testGroups.length >= 2 && G6.testGroups.every((x) => Array.isArray(x.shots) && x.shots.length >= 2 && x.shots.every((id) => shotIds.includes(id)) && nonblank(x.risk) && nonblank(x.rejectIf)), "G6_BENCHMARKS");
   check(G7.evidenceScope === "plan_only" && G7.mediaVerified === false && nonblank(G7.stageSummary, 30), "G7_EVIDENCE_BOUNDARY");
   check(Array.isArray(G7.formalAcceptance) && G7.formalAcceptance.length >= 4 && Array.isArray(G7.openItems) && G7.openItems.length >= 3, "G7_ACCEPTANCE_GAPS");
@@ -335,6 +342,10 @@ test("stage-level delivery audit detects missing owners, orphaned beats, inconsi
     ["G5_CUT_STATE:A-S04->A-S05", (x) => { x.stages.G5.cuts[3].matchedStateId = "changed_during_cut"; }],
     ["G5_WINDOW:A-S02", (x) => { x.stages.G5.shotWindows[1].startFrame += 1; }],
     ["G5_DIALOGUE_IDENTITY:A-L1", (x) => { x.stages.G5.dialogueCues[0].exactText = "不是原台词"; }],
+    ["G5_VOICE_DIRECTION:A-L1", (x) => { x.stages.G5.dialogueCues[0].subtitleText = "错误字幕"; }],
+    ["G5_VOICE_PROFILES", (x) => { x.stages.G5.voiceProfiles.pop(); }],
+    ["G5_CUT_PROP_STATE:A-S01->A-S02", (x) => { x.stages.G5.cuts[0].propContinuity = "unverified"; }],
+    ["G6_HANDLES_AND_SCOPE", (x) => { x.stages.G6.plannedHandles.source = "verified_platform"; }],
     ["G5_DIALOGUE_DURATION:A-L4", (x) => { x.stages.G5.dialogueCues[3].endOffsetFrame = 2000; }],
     ["G6_NO_FALSE_EXECUTION", (x) => { x.stages.G6.mediaAvailable = true; }],
     ["G7_EVIDENCE_BOUNDARY", (x) => { x.stages.G7.mediaVerified = true; }],
