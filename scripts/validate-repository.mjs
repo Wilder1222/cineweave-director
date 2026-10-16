@@ -162,6 +162,7 @@ const EXPECTED_SOURCE_DIRECTORIES = new Map([
     "evaluations/2026-10-16/everyday-full-flow.json",
     "evaluations/2026-10-16/scene-pipeline-audit-report.md",
     "evaluations/2026-10-16/stage-artifacts-v1.json",
+    "evaluations/2026-10-16/stage-results-v1.md",
     "evaluations/2026-10-16/artifacts/ancient/g0-director-beat-card.svg",
     "evaluations/2026-10-16/artifacts/ancient/g1-style-card.svg",
     "evaluations/2026-10-16/artifacts/ancient/g1-palette-card.svg",
