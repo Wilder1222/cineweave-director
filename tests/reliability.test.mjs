@@ -8,6 +8,7 @@ import { spawnSync } from "node:child_process";
 import { validateMarkdownFiles } from "../scripts/markdown-links.mjs";
 import { repositoryRoot, validateRepository } from "../scripts/validate-repository.mjs";
 import { FORMAT, NODE_TAGS, validateVideoWorkbook } from "../skills/cineweave-director/scripts/check-video-plan.mjs";
+import { checkCameraLanguageDecisions } from "../skills/cineweave-director/scripts/check-shot-review.mjs";
 
 function videoBook() {
   const scope = { platform: "fixture", model: "fixture", surface: "fixture", mode: "t2v" };
@@ -279,7 +280,27 @@ function auditSceneForward(caseFile) {
     if (camera.cameraMode === "moving") check(camera.noMotionReason == null && /(移动|跟随|绕行|轨道|路径)/u.test(shot.videoPrompt ?? ""), `${prefix}_MOTION_PATH`);
     if (caseFile.scope.generationPath.startsWith("i2v_")) check(nonblank(shot.keyframePrompt, 160), `${prefix}_KEYFRAME_PROMPT`);
     check(nonblank(shot.videoPrompt, 320) && shot.videoPrompt.includes(shot.id), `${prefix}_VIDEO_COPY`);
+    const cameraRow = shot.cameraReviewRow ?? {};
+    check(cameraRow.shotId === shot.id &&
+      cameraRow.decision?.primaryTechniqueId === camera.primaryTechnique &&
+      cameraRow.decision?.cameraMode === camera.cameraMode &&
+      cameraRow.decision?.narrativeReason === camera.narrativeReason &&
+      cameraRow.decision?.trigger === camera.trigger &&
+      cameraRow.camera?.axisSide === shot.axisSide &&
+      cameraRow.temporal?.durationSeconds * fps === shot.durationFrames &&
+      cameraRow.decision?.exitMatch?.includes(shot.endStateId),
+      `${prefix}_CAMERA_HANDOFF`);
   }
+  if (shots.every((shot) => shot.cameraReviewRow && typeof shot.cameraReviewRow === "object")) {
+    try {
+      const cameraResult = checkCameraLanguageDecisions({
+        scope: "narrative_video", shotIds, decisions: shots.map((shot) => shot.cameraReviewRow)
+      });
+      check(cameraResult.valid && cameraResult.coverageComplete && cameraResult.expectedShots === shots.length, "G4_CAMERA_CANONICAL");
+    } catch {
+      errors.push("G4_CAMERA_CANONICAL");
+    }
+  } else errors.push("G4_CAMERA_CANONICAL");
   const windows = Array.isArray(G5.shotWindows) ? G5.shotWindows : [];
   const cuts = Array.isArray(G5.cuts) ? G5.cuts : [];
   check(windows.length === shots.length && cuts.length === shots.length - 1, "G5_WINDOW_AND_CUT_COUNT");
@@ -343,6 +364,8 @@ test("stage-level delivery audit detects missing owners, orphaned beats, inconsi
     ["G3_ACTING_LOGIC", (x) => { x.stages.G3.actorTracks[0].objective = ""; }],
     ["G4:A-S01_KEYFRAME_PROMPT", (x) => { x.stages.G4.shots[0].keyframePrompt = ""; }],
     ["G4:A-S01_STATIC_REASON", (x) => { x.stages.G4.shots[0].cameraDecision.noMotionReason = ""; }],
+    ["G4:A-S05_CAMERA_HANDOFF", (x) => { x.stages.G4.shots[4].cameraReviewRow.decision.primaryTechniqueId = "M11"; }],
+    ["G4_CAMERA_CANONICAL", (x) => { x.stages.G4.shots[4].cameraReviewRow.decision.focusMode = "hold"; }],
     ["G5_CUT_STATE:A-S04->A-S05", (x) => { x.stages.G5.cuts[3].matchedStateId = "changed_during_cut"; }],
     ["G5_WINDOW:A-S02", (x) => { x.stages.G5.shotWindows[1].startFrame += 1; }],
     ["G5_DIALOGUE_IDENTITY:A-L1", (x) => { x.stages.G5.dialogueCues[0].exactText = "不是原台词"; }],
