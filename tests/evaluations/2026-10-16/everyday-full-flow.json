@@ -1072,7 +1072,298 @@
         "平台是否支持选定单镜持续秒数及多角色均未核验",
         "准确对白尚未录制，没有真实口型和时间测量",
         "缺视频和试剪，观众体验、镜头衔接和声音桥只能计划验证"
-      ]
+      ],
+      "paperReviews": [
+        {
+          "role": "direction",
+          "shotId": "B-S01",
+          "status": "pass",
+          "criterion": "镜头的必要剧情或观察节拍与观众信息变化必须明确，不能只凭画面美观。",
+          "observation": "书面镜表定义的任务是「从共同空间与三人相处建立温柔观察，不用冲突驱动」；本镜覆盖节拍 B-B1，节拍的观众收益为「理解三人相熟与连续空间」。这只是导演计划，不意味着观众测试已通过。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B1 / G4.B-S01 / G5.cut.0"
+        },
+        {
+          "role": "direction",
+          "shotId": "B-S02",
+          "status": "pass",
+          "criterion": "镜头的必要剧情或观察节拍与观众信息变化必须明确，不能只凭画面美观。",
+          "observation": "书面镜表定义的任务是「好友熟悉口味的随意提问，看到听者反应」；本镜覆盖节拍 B-B2，节拍的观众收益为「熟悉对方小习惯的亲近」。这只是导演计划，不意味着观众测试已通过。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B2 / G4.B-S02 / G5.cut.1"
+        },
+        {
+          "role": "direction",
+          "shotId": "B-S03",
+          "status": "pass",
+          "criterion": "镜头的必要剧情或观察节拍与观众信息变化必须明确，不能只凭画面美观。",
+          "observation": "书面镜表定义的任务是「绿瓶被唐栀拿起，答话同时出现自然动作」；本镜覆盖节拍 B-B3，节拍的观众收益为「人物通过动作和一句话被辨认」。这只是导演计划，不意味着观众测试已通过。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B3 / G4.B-S03 / G5.cut.2"
+        },
+        {
+          "role": "direction",
+          "shotId": "B-S04",
+          "status": "pass",
+          "criterion": "镜头的必要剧情或观察节拍与观众信息变化必须明确，不能只凭画面美观。",
+          "observation": "书面镜表定义的任务是「乔宁先注意真实雨停，再由视线与已有窗口引导观众看向室外」；本镜覆盖节拍 B-B4，节拍的观众收益为「从店内亲密观察转向外部天气」。这只是导演计划，不意味着观众测试已通过。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B4 / G4.B-S04 / G5.cut.3"
+        },
+        {
+          "role": "direction",
+          "shotId": "B-S05",
+          "status": "pass",
+          "criterion": "镜头的必要剧情或观察节拍与观众信息变化必须明确，不能只凭画面美观。",
+          "observation": "书面镜表定义的任务是「一起收拾已付款的饮料走向门口，动作本身完成场次时间转换」；本镜覆盖节拍 B-B5，节拍的观众收益为「决定不是冲突解决，而是活动自然继续」。这只是导演计划，不意味着观众测试已通过。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B5 / G4.B-S05 / G5.cut.4"
+        },
+        {
+          "role": "direction",
+          "shotId": "B-S06",
+          "status": "pass",
+          "criterion": "镜头的必要剧情或观察节拍与观众信息变化必须明确，不能只凭画面美观。",
+          "observation": "书面镜表定义的任务是「完成真实跨门动作，安静共享雨后光线；不用新冲突做结尾」；本镜覆盖节拍 B-B6，节拍的观众收益为「以陪伴和感知完成短片」。这只是导演计划，不意味着观众测试已通过。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B6 / G4.B-S06 / G5.cut.5"
+        },
+        {
+          "role": "performance",
+          "shotId": "B-S01",
+          "status": "pass",
+          "criterion": "角色的刺激、视线、可观察行动与人物任务顺序必须完整。",
+          "observation": "纸面规定刺激为「坐姿自然微动、窗外水滴声使注意留在三人的共同时间」。入态「三人已坐东窗木台边，三瓶带盖饮料按黄/绿/透明顺序分别在各人前方」，出态「三人仍坐着，林夏看向唐栀的绿瓶，三瓶原位」；演员动机、对手与必要硬锁由 G3 记录。未观察实际演员视频。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B1 / G4.B-S01 / G5.cut.0"
+        },
+        {
+          "role": "performance",
+          "shotId": "B-S02",
+          "status": "pass",
+          "criterion": "角色的刺激、视线、可观察行动与人物任务顺序必须完整。",
+          "observation": "纸面规定刺激为「林夏看见唐栀的绿瓶才提问」。入态「三人仍坐东窗台边，黄/绿/透明瓶原位，林夏视线落到绿瓶」，出态「林夏已问完，唐栀转向她倾听，绿瓶仍在桌上」；演员动机、对手与必要硬锁由 G3 记录。未观察实际演员视频。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B2 / G4.B-S02 / G5.cut.1"
+        },
+        {
+          "role": "performance",
+          "shotId": "B-S03",
+          "status": "pass",
+          "criterion": "角色的刺激、视线、可观察行动与人物任务顺序必须完整。",
+          "observation": "纸面规定刺激为「林夏问完后，唐栀才拿起自己的饮料回答」。入态「绿瓶仍在唐栀面前桌上，她双手暂未触瓶，其他二人的瓶也在桌上」，出态「唐栀右手稳稳拿着绿瓶，黄瓶和透明瓶仍各自原位」；演员动机、对手与必要硬锁由 G3 记录。未观察实际演员视频。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B3 / G4.B-S03 / G5.cut.2"
+        },
+        {
+          "role": "performance",
+          "shotId": "B-S04",
+          "status": "pass",
+          "criterion": "角色的刺激、视线、可观察行动与人物任务顺序必须完整。",
+          "observation": "纸面规定刺激为「外头雨滴声变稀、乔宁察觉天空变亮并将视线移向南门」。入态「乔宁仍坐南端，透明瓶在桌上；唐栀仍右手持绿瓶，林夏黄瓶在桌上」，出态「乔宁转头看南玻璃门，透明瓶依然在桌上，门仍关着；唐栀右手继续持绿瓶，林夏的黄瓶仍在桌上。」；演员动机、对手与必要硬锁由 G3 记录。未观察实际演员视频。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B4 / G4.B-S04 / G5.cut.3"
+        },
+        {
+          "role": "performance",
+          "shotId": "B-S05",
+          "status": "pass",
+          "criterion": "角色的刺激、视线、可观察行动与人物任务顺序必须完整。",
+          "observation": "纸面规定刺激为「乔宁说雨停，林夏回应以后三人决定一起起身」。入态「唐栀右手持绿瓶，林夏黄瓶与乔宁透明瓶仍在桌上，三人坐着，南门关闭」，出态「乔宁左手拉开南玻璃门、右手持透明瓶站门内；林夏右手持黄瓶、唐栀右手持绿瓶跟在门后；门铃已响」；演员动机、对手与必要硬锁由 G3 记录。未观察实际演员视频。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B5 / G4.B-S05 / G5.cut.4"
+        },
+        {
+          "role": "performance",
+          "shotId": "B-S06",
+          "status": "pass",
+          "criterion": "角色的刺激、视线、可观察行动与人物任务顺序必须完整。",
+          "observation": "纸面规定刺激为「上一镜开门与铃声使三人经过门槛，然后停在雨后屋檐下」。入态「南门半开，乔宁左手扶门右手透明瓶，林夏右手黄瓶与唐栀右手绿瓶跟在门内，铃声刚响」，出态「三人站在同一店门外屋檐下，手里分别仍是透明/黄/绿瓶，门自然缓闭，天空微亮」；演员动机、对手与必要硬锁由 G3 记录。未观察实际演员视频。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B6 / G4.B-S06 / G5.cut.5"
+        },
+        {
+          "role": "staging",
+          "shotId": "B-S01",
+          "status": "pass",
+          "criterion": "场面地理与道具可达性清楚，实际的世界锚点不随构图改变。",
+          "observation": "本镜在 店内西侧朝东窗台平视，南玻璃门与北冷柜地理不变，继承场景世界锚点 east_window_bar、south_door、north_fridge、west_checkout；道具与人体起止位置分别为「三人已坐东窗木台边，三瓶带盖饮料按黄/绿/透明顺序分别在各人前方」和「三人仍坐着，林夏看向唐栀的绿瓶，三瓶原位」。空间尺寸和碰撞仍需实际候选验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B1 / G4.B-S01 / G5.cut.0"
+        },
+        {
+          "role": "staging",
+          "shotId": "B-S02",
+          "status": "pass",
+          "criterion": "场面地理与道具可达性清楚，实际的世界锚点不随构图改变。",
+          "observation": "本镜在 从林夏肩后朝唐栀的静态过肩机位，继承场景世界锚点 east_window_bar、south_door、north_fridge、west_checkout；道具与人体起止位置分别为「三人仍坐东窗台边，黄/绿/透明瓶原位，林夏视线落到绿瓶」和「林夏已问完，唐栀转向她倾听，绿瓶仍在桌上」。空间尺寸和碰撞仍需实际候选验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B2 / G4.B-S02 / G5.cut.1"
+        },
+        {
+          "role": "staging",
+          "shotId": "B-S03",
+          "status": "pass",
+          "criterion": "场面地理与道具可达性清楚，实际的世界锚点不随构图改变。",
+          "observation": "本镜在 东窗旁与唐栀眼平，手和瓶都在中近景内，继承场景世界锚点 east_window_bar、south_door、north_fridge、west_checkout；道具与人体起止位置分别为「绿瓶仍在唐栀面前桌上，她双手暂未触瓶，其他二人的瓶也在桌上」和「唐栀右手稳稳拿着绿瓶，黄瓶和透明瓶仍各自原位」。空间尺寸和碰撞仍需实际候选验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B3 / G4.B-S03 / G5.cut.2"
+        },
+        {
+          "role": "staging",
+          "shotId": "B-S04",
+          "status": "pass",
+          "criterion": "场面地理与道具可达性清楚，实际的世界锚点不随构图改变。",
+          "observation": "本镜在 店内东窗南端斜向南门，乔宁与门外雨后街景在同镜两层，继承场景世界锚点 east_window_bar、south_door、north_fridge、west_checkout；道具与人体起止位置分别为「乔宁仍坐南端，透明瓶在桌上；唐栀仍右手持绿瓶，林夏黄瓶在桌上」和「乔宁转头看南玻璃门，透明瓶依然在桌上，门仍关着；唐栀右手继续持绿瓶，林夏的黄瓶仍在桌上。」。空间尺寸和碰撞仍需实际候选验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B4 / G4.B-S04 / G5.cut.3"
+        },
+        {
+          "role": "staging",
+          "shotId": "B-S05",
+          "status": "pass",
+          "criterion": "场面地理与道具可达性清楚，实际的世界锚点不随构图改变。",
+          "observation": "本镜在 沿便利店东侧可通行的座位→南门通道，摄影机缓缓侧向跟随，继承场景世界锚点 east_window_bar、south_door、north_fridge、west_checkout；道具与人体起止位置分别为「唐栀右手持绿瓶，林夏黄瓶与乔宁透明瓶仍在桌上，三人坐着，南门关闭」和「乔宁左手拉开南玻璃门、右手持透明瓶站门内；林夏右手持黄瓶、唐栀右手持绿瓶跟在门后；门铃已响」。空间尺寸和碰撞仍需实际候选验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B5 / G4.B-S05 / G5.cut.4"
+        },
+        {
+          "role": "staging",
+          "shotId": "B-S06",
+          "status": "pass",
+          "criterion": "场面地理与道具可达性清楚，实际的世界锚点不随构图改变。",
+          "observation": "本镜在 南侧屋檐外朝北拍玻璃门，静态等待三人过槛，继承场景世界锚点 east_window_bar、south_door、north_fridge、west_checkout；道具与人体起止位置分别为「南门半开，乔宁左手扶门右手透明瓶，林夏右手黄瓶与唐栀右手绿瓶跟在门内，铃声刚响」和「三人站在同一店门外屋檐下，手里分别仍是透明/黄/绿瓶，门自然缓闭，天空微亮」。空间尺寸和碰撞仍需实际候选验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B6 / G4.B-S06 / G5.cut.5"
+        },
+        {
+          "role": "cinematography",
+          "shotId": "B-S01",
+          "status": "pass",
+          "criterion": "景别、机位、静止／运镜理由、焦点顺序及切点有真实叙事意图。",
+          "observation": "已填写 M11 / static / hold；场景构图「三人由北到南固定顺序，分别与一瓶对应」；运动或静止理由「从共同空间与三人相处建立温柔观察，不用冲突驱动」；采用出点标记 B-ST1。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B1 / G4.B-S01 / G5.cut.0"
+        },
+        {
+          "role": "cinematography",
+          "shotId": "B-S02",
+          "status": "pass",
+          "criterion": "景别、机位、静止／运镜理由、焦点顺序及切点有真实叙事意图。",
+          "observation": "已填写 K03 / static / hold；场景构图「听者唐栀为主体，前景林夏真实存在」；运动或静止理由「好友熟悉口味的随意提问，看到听者反应」；采用出点标记 B-ST2。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B2 / G4.B-S02 / G5.cut.1"
+        },
+        {
+          "role": "cinematography",
+          "shotId": "B-S03",
+          "status": "pass",
+          "criterion": "景别、机位、静止／运镜理由、焦点顺序及切点有真实叙事意图。",
+          "observation": "已填写 neutral_static / static / hold；场景构图「面部与拿瓶动作同镜可读，不切掉瓶底」；运动或静止理由「绿瓶被唐栀拿起，答话同时出现自然动作」；采用出点标记 B-ST3。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B3 / G4.B-S03 / G5.cut.2"
+        },
+        {
+          "role": "cinematography",
+          "shotId": "B-S04",
+          "status": "pass",
+          "criterion": "景别、机位、静止／运镜理由、焦点顺序及切点有真实叙事意图。",
+          "observation": "已填写 K07 / static / rack；场景构图「乔宁保持前景，门外街景已经存在」；运动或静止理由「乔宁先注意真实雨停，再由视线与已有窗口引导观众看向室外」；采用出点标记 B-ST4。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B4 / G4.B-S04 / G5.cut.3"
+        },
+        {
+          "role": "cinematography",
+          "shotId": "B-S05",
+          "status": "pass",
+          "criterion": "景别、机位、静止／运镜理由、焦点顺序及切点有真实叙事意图。",
+          "observation": "已填写 M03 / moving / hold；场景构图「沿可行通道跟随群体前行，不穿越人物或门扇」；运动或静止理由「一起收拾已付款的饮料走向门口，动作本身完成场次时间转换」；采用出点标记 B-ST5。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B5 / G4.B-S05 / G5.cut.4"
+        },
+        {
+          "role": "cinematography",
+          "shotId": "B-S06",
+          "status": "pass",
+          "criterion": "景别、机位、静止／运镜理由、焦点顺序及切点有真实叙事意图。",
+          "observation": "已填写 M11 / static / hold；场景构图「门与屋檐同一现实空间，无镜像或瞬间传送」；运动或静止理由「完成真实跨门动作，安静共享雨后光线；不用新冲突做结尾」；采用出点标记 B-ST6。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B6 / G4.B-S06 / G5.cut.5"
+        },
+        {
+          "role": "prompt",
+          "shotId": "B-S01",
+          "status": "pass",
+          "criterion": "此镜依选定 I2V 方案提交可独立复制的首帧和运动文本，而非只给文件名。",
+          "observation": "已提供镜号 B-S01 的首帧稿 387 字、运动稿 553 字；引用了本镜环境、角色外观、动作阶段和终态，未声称图像已经上传或视频已生成。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B1 / G4.B-S01 / G5.cut.0"
+        },
+        {
+          "role": "prompt",
+          "shotId": "B-S02",
+          "status": "pass",
+          "criterion": "此镜依选定 I2V 方案提交可独立复制的首帧和运动文本，而非只给文件名。",
+          "observation": "已提供镜号 B-S02 的首帧稿 386 字、运动稿 535 字；引用了本镜环境、角色外观、动作阶段和终态，未声称图像已经上传或视频已生成。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B2 / G4.B-S02 / G5.cut.1"
+        },
+        {
+          "role": "prompt",
+          "shotId": "B-S03",
+          "status": "pass",
+          "criterion": "此镜依选定 I2V 方案提交可独立复制的首帧和运动文本，而非只给文件名。",
+          "observation": "已提供镜号 B-S03 的首帧稿 383 字、运动稿 553 字；引用了本镜环境、角色外观、动作阶段和终态，未声称图像已经上传或视频已生成。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B3 / G4.B-S03 / G5.cut.2"
+        },
+        {
+          "role": "prompt",
+          "shotId": "B-S04",
+          "status": "pass",
+          "criterion": "此镜依选定 I2V 方案提交可独立复制的首帧和运动文本，而非只给文件名。",
+          "observation": "已提供镜号 B-S04 的首帧稿 384 字、运动稿 630 字；引用了本镜环境、角色外观、动作阶段和终态，未声称图像已经上传或视频已生成。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B4 / G4.B-S04 / G5.cut.3"
+        },
+        {
+          "role": "prompt",
+          "shotId": "B-S05",
+          "status": "pass",
+          "criterion": "此镜依选定 I2V 方案提交可独立复制的首帧和运动文本，而非只给文件名。",
+          "observation": "已提供镜号 B-S05 的首帧稿 386 字、运动稿 669 字；引用了本镜环境、角色外观、动作阶段和终态，未声称图像已经上传或视频已生成。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B5 / G4.B-S05 / G5.cut.4"
+        },
+        {
+          "role": "prompt",
+          "shotId": "B-S06",
+          "status": "pass",
+          "criterion": "此镜依选定 I2V 方案提交可独立复制的首帧和运动文本，而非只给文件名。",
+          "observation": "已提供镜号 B-S06 的首帧稿 402 字、运动稿 660 字；引用了本镜环境、角色外观、动作阶段和终态，未声称图像已经上传或视频已生成。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B6 / G4.B-S06 / G5.cut.5"
+        },
+        {
+          "role": "continuity",
+          "shotId": "B-S01",
+          "status": "pass",
+          "criterion": "本镜出态必须被下一镜入态解释，所需声桥和关键道具保持一致。",
+          "observation": "本镜出态 B-ST1：「三人仍坐着，林夏看向唐栀的绿瓶，三瓶原位」；下镜 B-S02 入态 B-ST1：「三人仍坐东窗台边，黄/绿/透明瓶原位，林夏视线落到绿瓶」。对应接口已注明「室内冰箱底声保持，雨滴声随既有窗外环境缓变，剪切不凭空换音场」。这是文本匹配，不是实际剪辑验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B1 / G4.B-S01 / G5.cut.0"
+        },
+        {
+          "role": "continuity",
+          "shotId": "B-S02",
+          "status": "pass",
+          "criterion": "本镜出态必须被下一镜入态解释，所需声桥和关键道具保持一致。",
+          "observation": "本镜出态 B-ST2：「林夏已问完，唐栀转向她倾听，绿瓶仍在桌上」；下镜 B-S03 入态 B-ST2：「绿瓶仍在唐栀面前桌上，她双手暂未触瓶，其他二人的瓶也在桌上」。对应接口已注明「室内冰箱底声保持，雨滴声随既有窗外环境缓变，剪切不凭空换音场」。这是文本匹配，不是实际剪辑验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B2 / G4.B-S02 / G5.cut.1"
+        },
+        {
+          "role": "continuity",
+          "shotId": "B-S03",
+          "status": "pass",
+          "criterion": "本镜出态必须被下一镜入态解释，所需声桥和关键道具保持一致。",
+          "observation": "本镜出态 B-ST3：「唐栀右手稳稳拿着绿瓶，黄瓶和透明瓶仍各自原位」；下镜 B-S04 入态 B-ST3：「乔宁仍坐南端，透明瓶在桌上；唐栀仍右手持绿瓶，林夏黄瓶在桌上」。对应接口已注明「室内冰箱底声保持，雨滴声随既有窗外环境缓变，剪切不凭空换音场」。这是文本匹配，不是实际剪辑验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B3 / G4.B-S03 / G5.cut.2"
+        },
+        {
+          "role": "continuity",
+          "shotId": "B-S04",
+          "status": "pass",
+          "criterion": "本镜出态必须被下一镜入态解释，所需声桥和关键道具保持一致。",
+          "observation": "本镜出态 B-ST4：「乔宁转头看南玻璃门，透明瓶依然在桌上，门仍关着；唐栀右手继续持绿瓶，林夏的黄瓶仍在桌上。」；下镜 B-S05 入态 B-ST4：「唐栀右手持绿瓶，林夏黄瓶与乔宁透明瓶仍在桌上，三人坐着，南门关闭」。对应接口已注明「室内冰箱底声保持，雨滴声随既有窗外环境缓变，剪切不凭空换音场」。这是文本匹配，不是实际剪辑验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B4 / G4.B-S04 / G5.cut.3"
+        },
+        {
+          "role": "continuity",
+          "shotId": "B-S05",
+          "status": "pass",
+          "criterion": "本镜出态必须被下一镜入态解释，所需声桥和关键道具保持一致。",
+          "observation": "本镜出态 B-ST5：「乔宁左手拉开南玻璃门、右手持透明瓶站门内；林夏右手持黄瓶、唐栀右手持绿瓶跟在门后；门铃已响」；下镜 B-S06 入态 B-ST5：「南门半开，乔宁左手扶门右手透明瓶，林夏右手黄瓶与唐栀右手绿瓶跟在门内，铃声刚响」。对应接口已注明「B-S05门铃声先在开门时出现，跨剪切在B-S06只保留尾音；不重复触发门铃」。这是文本匹配，不是实际剪辑验证。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B5 / G4.B-S05 / G5.cut.4"
+        },
+        {
+          "role": "continuity",
+          "shotId": "B-S06",
+          "status": "pass",
+          "criterion": "本镜出态必须被下一镜入态解释，所需声桥和关键道具保持一致。",
+          "observation": "本镜作为收束镜，终态 B-ST6：「三人站在同一店门外屋檐下，手里分别仍是透明/黄/绿瓶，门自然缓闭，天空微亮」；已声明准确结束的观众可见结果，没有后镜需要强行接续。无实际媒体证据。",
+          "sourceLocator": "tests/evaluations/2026-10-16/everyday-full-flow.json # G0.B-B6 / G4.B-S06 / G5.cut.5"
+        }
+      ],
+      "paperReviewScope": "authored_planning_text_only_not_independent"
     }
   }
 }
