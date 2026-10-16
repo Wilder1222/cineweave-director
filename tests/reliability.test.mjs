@@ -255,6 +255,87 @@ function auditSceneForward(caseFile) {
   check(anchors.length >= 3 && anchors.every((a) => nonblank(a.id) && nonblank(a.location)) && unique(anchorIds), "G2_ANCHORS");
   check(Array.isArray(G2.sources) && G2.sources.length > 0 && G2.sources.every((s) => nonblank(s.id) && anchorIds.includes(s.anchorId) && nonblank(s.behavior)), "G2_LIGHT_SOURCES");
   check(Array.isArray(G2.interactionConstraints) && G2.interactionConstraints.length >= 2, "G2_INTERACTION");
+
+  // G1 LookDev completeness is more than an adjective-only styleBible.
+  // Color chips are sRGB design references, NOT measured scene colors or LUTs.
+  const look = G1.lookDevelopment ?? {};
+  const palette = look.palette ?? {};
+  const swatches = Array.isArray(palette.swatches) ? palette.swatches : [];
+  const swatchIds = swatches.map((x) => x.id);
+  const swatchIdSet = new Set(swatchIds);
+  check(look.status === "proposed_color_and_material_specs_no_generated_lookdev_media" &&
+    look.provenance === "authored_design_tokens_only_no_images_or_measured_lighting" &&
+    look.mediaEvidence === "none" && nonblank(look.id),
+    "G1_LOOKDEV_EVIDENCE");
+  check(nonblank(palette.id) && nonblank(palette.name) &&
+    palette.colorSpace === "sRGB_hex_preview_not_measured_or_final_LUT" &&
+    nonblank(palette.hierarchy, 30) && nonblank(palette.gradeIntent, 30) &&
+    Array.isArray(palette.allowedSceneTransitions) && palette.allowedSceneTransitions.length > 0,
+    "G1_COLOR_SCRIPT");
+  check(swatches.length >= 6 && unique(swatchIds) &&
+    swatches.every((x) => nonblank(x.id) && /^#[0-9A-Fa-f]{6}$/u.test(x.hex) &&
+      nonblank(x.role, 6) && nonblank(x.usage, 15)),
+    "G1_COLOR_SWATCHES");
+  const mat = Array.isArray(look.materials) ? look.materials : [];
+  const matIds = mat.map((x) => x.id);
+  check(mat.length >= 5 && unique(matIds) &&
+    mat.every((x) => assetIds.includes(x.assetId) &&
+      swatchIdSet.has(x.swatchId) &&
+      ["id","assetId","part","structure","surface","wear","cold","warm"].every((p) => nonblank(x[p], p==="id"?1:10))),
+    "G1_MATERIAL_BIBLE");
+  const sourceIds = (Array.isArray(G2.sources) ? G2.sources : []).map((x) => x.id);
+  const rigs = Array.isArray(look.lightingSetups) ? look.lightingSetups : [];
+  const rigIds = rigs.map((x) => x.id);
+  const allShotIds = Array.isArray(G4.shots) ? G4.shots.map((x) => x.id) : [];
+  check(rigs.length >= 2 && unique(rigIds) && rigs.every((x) =>
+    ["id","name","key","fill","rim","shadow","falloff","whiteBalance","ratios","plot"].every((p) => nonblank(x[p],p==="id"?1:12)) &&
+    Array.isArray(x.sourceIds) && x.sourceIds.length>0 && unique(x.sourceIds) &&
+    x.sourceIds.every((id) => sourceIds.includes(id)) &&
+    Array.isArray(x.usedBy) && x.usedBy.length>0 && x.usedBy.every((id) => allShotIds.includes(id))),
+    "G1_LIGHT_PLOTS");
+  check(allShotIds.length > 0 &&
+    allShotIds.every((id) => rigs.filter((x) => x.usedBy?.includes(id)).length === 1),
+    "G1_LIGHT_SHOT_COVERAGE");
+  const boards = Array.isArray(look.comparisonBoards) ? look.comparisonBoards : [];
+  const boardIds = boards.map((b) => b.id);
+  check(boards.length >= 4 && unique(boardIds) &&
+    boards.some((b) => b.kind === "color_palette") &&
+    boards.some((b) => b.kind === "material_board") &&
+    boards.some((b) => b.kind === "lighting_variants") &&
+    boards.every((b) => nonblank(b.id) && nonblank(b.kind) &&
+      nonblank(b.purpose, 12) && nonblank(b.prompt, 70) &&
+      nonblank(b.acceptance, 20) && b.status === "planned_not_generated"),
+    "G1_LOOK_COMPARISONS");
+  for (const shot of allShotIds.map(id => G4.shots.find(s => s.id === id))) {
+    const lk = shot?.lookBinding ?? {};
+    const expectedMatIds = mat.filter(m =>
+      [shot.sceneId,...(shot.castIds ?? []),...(shot.propIds ?? [])].includes(m.assetId)).map(m => m.id);
+    const rig = rigs.find(x => x.id === lk.lightingSetupId);
+    const stable = lk.paletteId === palette.id && lk.sourceId === look.id &&
+      rig && rig.usedBy.includes(shot.id) &&
+      Array.isArray(lk.materialIds) && unique(lk.materialIds) &&
+      lk.materialIds.length === expectedMatIds.length &&
+      expectedMatIds.every(id => lk.materialIds.includes(id));
+    check(stable, `G1_G4_LOOK_BINDING:${shot.id}`);
+    const independentlyDescribed = shot.keyframePrompt?.includes("本镜视觉开发基线") &&
+      shot.videoPrompt?.includes("本镜视觉开发基线") &&
+      shot.videoPrompt?.includes(rig?.key ?? "<<<unknown source>>>") &&
+      expectedMatIds.every(id => shot.videoPrompt.includes(mat.find(m => m.id===id)?.part ?? "<<<unknown material>>>"));
+    check(independentlyDescribed, `G1_G4_LOOK_COPY:${shot.id}`);
+  }
+  check(G5.lookPaletteRef === palette.id &&
+    Array.isArray(G5.lightingTransitions) &&
+    G5.lightingTransitions.length === rigs.length &&
+    G5.lightingTransitions.every(x =>
+      rigIds.includes(x.setupId) &&
+      Array.isArray(x.shotIds) && x.shotIds.join(",") === rigs.find(r=>r.id===x.setupId).usedBy.join(",") &&
+      Array.isArray(x.worldSourceIds) && x.worldSourceIds.join(",") === rigs.find(r=>r.id===x.setupId).sourceIds.join(",")),
+    "G1_G5_COLOR_LIGHT_HANDOFF");
+  check(Array.isArray(G6.lookdevTestIds) && G6.lookdevTestIds.length === boards.length &&
+    unique(G6.lookdevTestIds) && boardIds.every(id=>G6.lookdevTestIds.includes(id)) &&
+    G6.lookdevStatus === "planned_not_generated_or_color_approved",
+    "G1_G6_LOOKDEV_PRODUCTION_STATUS");
+
   const actors = Array.isArray(G3.actorTracks) ? G3.actorTracks : [];
   check(actors.length === castIds.length && unique(actors.map((a) => a.characterId)), "G3_CAST_TRACKS");
   check(actors.every((a) => castIds.includes(a.characterId) && ["objective","obstacle","tactic","subtext","cue","observableAction","eyeline"].every((key) => nonblank(a[key]))), "G3_ACTING_LOGIC");
@@ -372,6 +453,18 @@ test("stage-level delivery audit detects missing owners, orphaned beats, inconsi
     ["G0_SCENE_SCRIPT", (x) => { x.stages.G0.sceneScript = "只有对白清单，没有一场可演的剧本"; }],
     ["G0_SCRIPT_SCENE_MATCH:A-L1", (x) => { x.stages.G0.sceneScript = x.stages.G0.sceneScript.replace("上游的水位，比今晨又高了一尺。", "水上涨了"); }],
     ["G1_ASSET_PROMPTS", (x) => { x.stages.G1.assets[0].prompt = ""; }],
+    ["G1_LOOKDEV_EVIDENCE", (x) => { x.stages.G1.lookDevelopment.mediaEvidence = "completed_without_video"; }],
+    ["G1_COLOR_SCRIPT", (x) => { x.stages.G1.lookDevelopment.palette.colorSpace = "final_rec709_LUT"; }],
+    ["G1_COLOR_SWATCHES", (x) => { x.stages.G1.lookDevelopment.palette.swatches[0].hex = "#0KGGGG"; }],
+    ["G1_MATERIAL_BIBLE", (x) => { x.stages.G1.lookDevelopment.materials[0].assetId = "P-UNKNOWN"; }],
+    ["G1_LIGHT_PLOTS", (x) => { x.stages.G1.lookDevelopment.lightingSetups[0].sourceIds[0] = "imaginary_sun"; }],
+    ["G1_LIGHT_SHOT_COVERAGE", (x) => { x.stages.G1.lookDevelopment.lightingSetups[0].usedBy.pop(); }],
+    ["G1_LOOK_COMPARISONS", (x) => { x.stages.G1.lookDevelopment.comparisonBoards[0].status = "media_verified"; }],
+    ["G1_G4_LOOK_BINDING:A-S01", (x) => { x.stages.G4.shots[0].lookBinding.materialIds.pop(); }],
+    ["G1_G4_LOOK_COPY:A-S01", (x) => { x.stages.G4.shots[0].videoPrompt = x.stages.G4.shots[0].videoPrompt.split("本镜视觉开发基线")[0]; }],
+    ["G1_G5_COLOR_LIGHT_HANDOFF", (x) => { x.stages.G5.lookPaletteRef = "wrong_palette"; }],
+    ["G1_G6_LOOKDEV_PRODUCTION_STATUS", (x) => { x.stages.G6.lookdevTestIds.pop(); }],
+
     ["G4:A-S04_GEO_BINDING", (x) => { x.stages.G4.shots[3].worldAnchorIds[0] = "fake_window"; }],
     ["G0_G4_BEAT_COVERAGE", (x) => { x.stages.G0.beats[0].coverage[0] = "absent"; }],
     ["G3_ACTING_LOGIC", (x) => { x.stages.G3.actorTracks[0].objective = ""; }],
