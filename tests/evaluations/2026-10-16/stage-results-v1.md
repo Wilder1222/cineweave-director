@@ -2,6 +2,8 @@
 
 **版本：**2026-10-16｜**运行范围：**G0–G7 完整场次设计包。两案例均为已实际写出的原创文字方案、矢量设计卡及待生成任务，不是已生成电影媒体。
 
+**空白可复制交接模板：**[阶段产物清单模板 v1](stage-result-template-v1.md)，列出每个阶段的准确文件名、填写要求、验收条件与未完成边界。
+
 **可执行机器清单：**[stage-artifacts-v1.json](stage-artifacts-v1.json)；运行 `npm run stage:check`（也可执行 `node scripts/check-stage-artifacts.mjs tests/evaluations/2026-10-16/stage-artifacts-v1.json`）。
 
 **验收区分：**`design_ready` 表示能打开的设计成果和完整正文都存在，且已通过只读结构校验；`production_ready` 必须另有真实生成图、材质／光线测试视频、配音和可剪辑成片的媒体证据。本包 **production_ready = false**。
