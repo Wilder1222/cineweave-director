@@ -331,8 +331,8 @@ test("unreviewed, missing, duplicate, and colliding canonical inventory paths fa
 
 test("manifest paths and resource counts cannot silently expand or shrink the shared profile", async (t) => {
   const cases = [
-    ["missing reference", (value) => { value.lifecycle.references.pop(); }, /exactly 42 references/],
-    ["extra reference", (value) => { value.lifecycle.references.push({ path: "references/extra.md" }); }, /exactly 42 references/],
+    ["missing reference", (value) => { value.lifecycle.references.pop(); }, /exactly 44 references/],
+    ["extra reference", (value) => { value.lifecycle.references.push({ path: "references/extra.md" }); }, /exactly 44 references/],
     ["missing support schema", (value) => { value.index.supportSchemas.pop(); }, /exactly 2 support schemas/],
     ["duplicate reference", (value) => { value.lifecycle.references[0].path = value.lifecycle.references[1].path; }, /contains duplicate paths/],
     ["duplicate schema", (value) => { value.index.contracts[0].schema = value.index.contracts[1].schema; }, /contains duplicate paths/],
