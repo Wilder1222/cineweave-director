@@ -157,7 +157,7 @@ export async function checkStageArtifacts(manifest, { root = ROOT } = {}) {
       if (!block) { push("MISSING_STAGE:"+stage); continue; }
       if (block.designStatus !== "design_ready" || block.evidenceScope !== "authored_design_only" ||
           block.productionStatus !== (stage==="G0"?"not_applicable":"pending_media")) {
-        push("STAGE_STATUS_OVERCLAIM:"+stage); stageErrors.push("STATUS");
+        push(stage+":STAGE_STATUS_OVERCLAIM"); stageErrors.push("STATUS");
       }
       const arts = Array.isArray(block.artifacts) ? block.artifacts : [];
       const kinds = arts.map(x => x.kind), expected = new Set(required);
