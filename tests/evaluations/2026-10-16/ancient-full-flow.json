@@ -554,7 +554,12 @@
           "startOffsetFrame": 54,
           "endOffsetFrame": 171,
           "exactText": "上游的水位，比今晨又高了一尺。",
-          "speaker": "C-A"
+          "speaker": "C-A",
+          "subtitleText": "上游的水位，比今晨又高了一尺。",
+          "to": "C-B",
+          "delivery": "先稳住呼吸，报告客观水位；重心在‘又高了一尺’，尾句不带哭腔",
+          "voiceDurationEvidence": "planned_unmeasured",
+          "track": "diegetic_dialogue"
         },
         {
           "lineId": "A-L2",
@@ -562,7 +567,12 @@
           "startOffsetFrame": 48,
           "endOffsetFrame": 169,
           "exactText": "没有签令，谁也不能开闸。",
-          "speaker": "C-B"
+          "speaker": "C-B",
+          "subtitleText": "没有签令，谁也不能开闸。",
+          "to": "C-A",
+          "delivery": "放低速度、按制度说明，‘没有签令’为信息重心；不是愤怒恐吓",
+          "voiceDurationEvidence": "planned_unmeasured",
+          "track": "diegetic_dialogue"
         },
         {
           "lineId": "A-L3",
@@ -570,7 +580,12 @@
           "startOffsetFrame": 82,
           "endOffsetFrame": 183,
           "exactText": "匣里是三处堤口的记录。",
-          "speaker": "C-A"
+          "speaker": "C-A",
+          "subtitleText": "匣里是三处堤口的记录。",
+          "to": "C-B",
+          "delivery": "从争取许可转为递交可验证事实，重心在‘三处堤口’，说话时右手持匣动作自然",
+          "voiceDurationEvidence": "planned_unmeasured",
+          "track": "diegetic_dialogue"
         },
         {
           "lineId": "A-L4",
@@ -578,11 +593,30 @@
           "startOffsetFrame": 183,
           "endOffsetFrame": 222,
           "exactText": "我看。",
-          "speaker": "C-B"
+          "speaker": "C-B",
+          "subtitleText": "我看。",
+          "to": "C-A",
+          "delivery": "简短且克制，短停后才伸手，不把‘我看’演成正式批准",
+          "voiceDurationEvidence": "planned_unmeasured",
+          "track": "diegetic_dialogue"
         }
       ],
       "subtitlePlan": "仅使用四句准确对白，按真实配音回流微调字幕；不让生成模型在画面直接绘制字。",
-      "editPlan": "24fps，镜间以直切为主，人物动作相位与右手木匣归属逐切核对；A-S04→A-S05 不是道具瞬移，A-S05→A-S06 手伸向匣的动作延续。"
+      "editPlan": "24fps，镜间以直切为主，人物动作相位与右手木匣归属逐切核对；A-S04→A-S05 不是道具瞬移，A-S05→A-S06 手伸向匣的动作延续。",
+      "voiceProfiles": [
+        {
+          "characterId": "C-A",
+          "perceivedVoice": "成年中国女性中音略清，发声贴近、字头自然，句尾留少量呼吸，非戏曲唱腔",
+          "performanceRange": "先报汛情时清楚坚定，遭拒之后控制着急迫，不尖叫；每句单独保持受话对象和句间停顿"
+        },
+        {
+          "characterId": "C-B",
+          "perceivedVoice": "成年中国男性中低音，少量沙哑自然纹理，靠气息与停顿表达权威，不故意压成怪声",
+          "performanceRange": "拒绝时规矩克制，最后‘我看。’低声短句，态度变化由留白和动作完成"
+        }
+      ],
+      "mixPlan": "同一室内统一近距离对白混响，声像跟随人物南北位置，室内底噪跨镜连续，衣料与木匣拟音按真实动作重合，音乐全无。",
+      "colorPlan": "延续西窗冷光＋东油灯暖色相对关系；镜头近景允许曝光适配但不把世界光源镜像，暗部保留官袍与木匣纹理。"
     },
     "G6": {
       "generationPath": "i2v_plan_unbound",
@@ -615,7 +649,12 @@
       "candidatePolicy": "每个高风险镜头先拟最多2个候选，失败先定位权威根因；不实际消耗点数。",
       "renderDelivery": "素材候选、准确参考绑定、生成任务/模型/版本、真实片段与采用区间须回流后才能进 G7 媒体验收。",
       "providerSupport": "unverified",
-      "editingStatus": "not_attempted_without_video"
+      "editingStatus": "not_attempted_without_video",
+      "plannedHandles": {
+        "headFrames": 12,
+        "tailFrames": 24,
+        "source": "creative_estimate_provider_unverified"
+      }
     },
     "G7": {
       "evidenceScope": "plan_only",
