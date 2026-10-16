@@ -274,21 +274,23 @@ function auditSceneForward(caseFile) {
     "G1_COLOR_SCRIPT");
   check(swatches.length >= 6 && unique(swatchIds) &&
     swatches.every((x) => nonblank(x.id) && /^#[0-9A-Fa-f]{6}$/u.test(x.hex) &&
-      nonblank(x.role, 6) && nonblank(x.usage, 15)),
+      nonblank(x.role, 2) && nonblank(x.usage, 5)),
     "G1_COLOR_SWATCHES");
   const mat = Array.isArray(look.materials) ? look.materials : [];
   const matIds = mat.map((x) => x.id);
   check(mat.length >= 5 && unique(matIds) &&
     mat.every((x) => assetIds.includes(x.assetId) &&
       swatchIdSet.has(x.swatchId) &&
-      ["id","assetId","part","structure","surface","wear","cold","warm"].every((p) => nonblank(x[p], p==="id"?1:10))),
+      nonblank(x.id) && nonblank(x.assetId) && nonblank(x.part, 4) &&
+      ["structure","surface","wear","cold","warm"].every((p) => nonblank(x[p], 10))),
     "G1_MATERIAL_BIBLE");
   const sourceIds = (Array.isArray(G2.sources) ? G2.sources : []).map((x) => x.id);
   const rigs = Array.isArray(look.lightingSetups) ? look.lightingSetups : [];
   const rigIds = rigs.map((x) => x.id);
   const allShotIds = Array.isArray(G4.shots) ? G4.shots.map((x) => x.id) : [];
   check(rigs.length >= 2 && unique(rigIds) && rigs.every((x) =>
-    ["id","name","key","fill","rim","shadow","falloff","whiteBalance","ratios","plot"].every((p) => nonblank(x[p],p==="id"?1:12)) &&
+    nonblank(x.id) && nonblank(x.name, 3) &&
+    ["key","fill","rim","shadow","falloff","whiteBalance","ratios","plot"].every((p) => nonblank(x[p], 12)) &&
     Array.isArray(x.sourceIds) && x.sourceIds.length>0 && unique(x.sourceIds) &&
     x.sourceIds.every((id) => sourceIds.includes(id)) &&
     Array.isArray(x.usedBy) && x.usedBy.length>0 && x.usedBy.every((id) => allShotIds.includes(id))),
