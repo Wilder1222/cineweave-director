@@ -9,6 +9,7 @@ import { validateMarkdownFiles } from "../scripts/markdown-links.mjs";
 import { repositoryRoot, validateRepository } from "../scripts/validate-repository.mjs";
 import { FORMAT, NODE_TAGS, validateVideoWorkbook } from "../skills/cineweave-director/scripts/check-video-plan.mjs";
 import { checkCameraLanguageDecisions, checkShotReview } from "../skills/cineweave-director/scripts/check-shot-review.mjs";
+import { checkStageArtifacts, FORMAT as STAGE_ARTIFACT_FORMAT } from "../scripts/check-stage-artifacts.mjs";
 
 function videoBook() {
   const scope = { platform: "fixture", model: "fixture", surface: "fixture", mode: "t2v" };
@@ -492,4 +493,63 @@ test("stage-level delivery audit detects missing owners, orphaned beats, inconsi
     mutate(x);
     assert.ok(auditSceneForward(x).includes(expected), `Missing defect ${expected}`);
   }
+});
+
+
+test("G0–G7 result gate proves 26 real SVG boards and 50 artifacts across two productions", async () => {
+  const manifestPath = new URL("./evaluations/2026-10-16/stage-artifacts-v1.json", import.meta.url);
+  const manifest = JSON.parse(await readFile(manifestPath,"utf8"));
+  const before = structuredClone(manifest);
+  assert.equal(manifest.format, STAGE_ARTIFACT_FORMAT);
+  const preview = await readFile(new URL("./evaluations/2026-10-16/artifacts/ancient/g1-palette-card.svg",import.meta.url),"utf8");
+  const checked = await checkStageArtifacts(manifest);
+  assert.equal(checked.valid,true,JSON.stringify(checked.errors));
+  assert.equal(checked.designComplete,true,JSON.stringify(checked.errors));
+  assert.equal(checked.productionReady,false,"Design boards must never imply generated, playable media.");
+  assert.equal(checked.totalArtifacts,50);
+  assert.equal(checked.cases.length,2);
+  for (const one of checked.cases) {
+    assert.equal(Object.keys(one.stages).length,8);
+    for (const stage of Object.values(one.stages)) assert.equal(stage.designComplete,true);
+  }
+  assert.deepEqual(manifest,before,"The checker must not mutate the user's manifest.");
+  assert.equal(await readFile(new URL("./evaluations/2026-10-16/artifacts/ancient/g1-palette-card.svg",import.meta.url),"utf8"),preview);
+});
+
+test("required visual outputs block stages when missing, mislabeled, fabricated or overclaimed", async () => {
+  const manifest = JSON.parse(await readFile(new URL("./evaluations/2026-10-16/stage-artifacts-v1.json",import.meta.url),"utf8"));
+  const cases = [
+    ["G1:MISSING_KINDS:style_card", m => {m.cases[0].stages.G1.artifacts = m.cases[0].stages.G1.artifacts.filter(a=>a.kind!=="style_card");}],
+    ["G1:FILE_NOT_FOUND", m => {m.cases[0].stages.G1.artifacts[1].path="tests/evaluations/2026-10-16/artifacts/ancient/missing-palette.svg";}],
+    ["G1:VISUAL_PROVENANCE", m => {m.cases[0].stages.G1.artifacts[0].artifactId="FORGED-STYLE-ID";}],
+    ["G1:ARTIFACT_METADATA", m => {m.cases[0].stages.G1.artifacts[0].sourcePointer="/stages/G2/worldGeometry";}],
+    ["G1:DUPLICATE_VISUAL_PATH", m => {m.cases[0].stages.G1.artifacts[1].path=m.cases[0].stages.G1.artifacts[0].path;}],
+    ["G1:EXTRA_OR_DUPLICATE_KIND", m => {m.cases[0].stages.G1.artifacts.push(structuredClone(m.cases[0].stages.G1.artifacts[0]));}],
+    ["G1:ARTIFACT_METADATA", m => {m.cases[0].stages.G1.artifacts[2].type="json_section";}],
+    ["G1:STAGE_STATUS_OVERCLAIM", m => {m.cases[0].stages.G1.productionStatus="production_ready";}],
+    ["MEDIA_STATUS_OVERCLAIM", m => {m.cases[0].overallProductionStatus="production_ready";}],
+    ["STAGE_INVENTORY", m => {delete m.cases[0].stages.G6;}],
+    ["G7:ARTIFACT_METADATA", m => {m.cases[0].stages.G7.artifacts[1].sourcePointer="/stages/G7/openItems";}],
+    ["G0:ARTIFACT_PATH", m => {m.cases[0].stages.G0.artifacts[1].path="../outside.json";}]
+  ];
+  for(const [expected,change] of cases){
+    const modified=structuredClone(manifest);change(modified);
+    const report=await checkStageArtifacts(modified);
+    assert.equal(report.designComplete,false,expected);
+    assert.match(report.errors.join(" | "),new RegExp(expected.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")),expected);
+    assert.equal(report.productionReady,false);
+  }
+});
+
+test("stage result CLI is read-only and preserves truth boundaries in its serialized report", async () => {
+  const cli=fileURLToPath(new URL("../scripts/check-stage-artifacts.mjs",import.meta.url));
+  const input=fileURLToPath(new URL("./evaluations/2026-10-16/stage-artifacts-v1.json",import.meta.url));
+  const help=spawnSync(process.execPath,[cli,"--help"],{encoding:"utf8",timeout:10000});
+  assert.equal(help.status,0,help.stderr);assert.match(help.stdout,/只读/);
+  const result=spawnSync(process.execPath,[cli,input],{encoding:"utf8",timeout:15000});
+  assert.equal(result.status,0,result.stderr);
+  const report=JSON.parse(result.stdout);
+  assert.equal(report.designComplete,true);
+  assert.equal(report.productionReady,false);
+  assert.match(report.limitation,/媒体证据/);
 });
