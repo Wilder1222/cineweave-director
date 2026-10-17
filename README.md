@@ -15,6 +15,10 @@
 
 只执行当前请求需要的步骤。内部结果返回导演入口后检查原请求、硬锁和完整性，再合并成一个最终结果；有上游问题则回到负责能力修订。默认同一代理执行，不需要后台调度服务。
 
+## 阶段结果产物验收（完整短片）
+
+对于完整制作，CineWeave 现在要求**每阶段都有真实可查看的结果**：导演卡与完整剧本、视觉六卡（风格／配色／材质／灯光／光位／LookDev）、空间图、走位表、分镜板、剪辑时间线、试片单和审阅报告。设计卡已经出图 ≠ 真实生成视频和材质样片已经通过。[查看 G0–G7 两条完整案例的 26 份图板](tests/evaluations/2026-10-16/stage-results-v1.md)。仓库开发检查：`npm run stage:check`（只读，不执行生成，也不认证实际媒体质量）。
+
 ## 开始创作
 
 要完整交付，可直接提出“开发一部短片并生成全套提示词”。[短片创作流程](skills/cineweave-director/references/optional/short-film-creation.md)统一叙事、视觉开发、导演摄影、配音和剪辑；[完整样例《留一盏灯》](skills/cineweave-director/references/optional/short-film-example.md)展示每项可复制稿，不用自行补齐被省略的镜头。

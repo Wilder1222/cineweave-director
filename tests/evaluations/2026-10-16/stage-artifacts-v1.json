@@ -1,0 +1,586 @@
+{
+  "format": "cineweave-stage-artifacts/v1",
+  "date": "2026-10-16",
+  "authority": "formal multi-shot production packet artifact gate; not an alternate Canon or root schema",
+  "statusScope": "actual renderable design boards and full source sections, no generated video or measured media",
+  "cases": [
+    {
+      "caseId": "CW-SF-A",
+      "sourcePath": "tests/evaluations/2026-10-16/ancient-full-flow.json",
+      "stages": {
+        "G0": {
+          "designStatus": "design_ready",
+          "productionStatus": "not_applicable",
+          "evidenceScope": "authored_design_only",
+          "artifacts": [
+            {
+              "artifactId": "CW-SF-A-G0-DIRECTOR",
+              "kind": "director_card",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/ancient/g0-director-beat-card.svg",
+              "sourcePointer": "/stages/G0/directorStatement",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-A-G0-SCRIPT",
+              "kind": "scene_script",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/ancient-full-flow.json",
+              "sourcePointer": "/stages/G0/sceneScript",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            },
+            {
+              "artifactId": "CW-SF-A-G0-BEATS",
+              "kind": "beat_sheet",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/ancient-full-flow.json",
+              "sourcePointer": "/stages/G0/beats",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            }
+          ]
+        },
+        "G1": {
+          "designStatus": "design_ready",
+          "productionStatus": "pending_media",
+          "evidenceScope": "authored_design_only",
+          "artifacts": [
+            {
+              "artifactId": "CW-SF-A-G1-STYLE",
+              "kind": "style_card",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/ancient/g1-style-card.svg",
+              "sourcePointer": "/stages/G1/styleBible",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-A-G1-PALETTE",
+              "kind": "palette_card",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/ancient/g1-palette-card.svg",
+              "sourcePointer": "/stages/G1/lookDevelopment/palette",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-A-G1-MATERIAL",
+              "kind": "material_card",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/ancient/g1-material-card.svg",
+              "sourcePointer": "/stages/G1/lookDevelopment/materials",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-A-G1-LIGHTING",
+              "kind": "lighting_card",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/ancient/g1-lighting-card.svg",
+              "sourcePointer": "/stages/G1/lookDevelopment/lightingSetups",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-A-G1-LIGHTPLOT",
+              "kind": "light_plot",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/ancient/g1-light-plot.svg",
+              "sourcePointer": "/stages/G2/sources",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-A-G1-LOOKTEST",
+              "kind": "lookdev_test_board",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/ancient/g1-looktest-board.svg",
+              "sourcePointer": "/stages/G1/lookDevelopment/comparisonBoards",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-A-G1-ASSETS",
+              "kind": "asset_cards",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/ancient-full-flow.json",
+              "sourcePointer": "/stages/G1/assets",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            }
+          ]
+        },
+        "G2": {
+          "designStatus": "design_ready",
+          "productionStatus": "pending_media",
+          "evidenceScope": "authored_design_only",
+          "artifacts": [
+            {
+              "artifactId": "CW-SF-A-G2-SCENE",
+              "kind": "scene_map",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/ancient/g2-scene-map.svg",
+              "sourcePointer": "/stages/G2/anchors",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-A-G2-GEO",
+              "kind": "geography_sheet",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/ancient-full-flow.json",
+              "sourcePointer": "/stages/G2/worldGeometry",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            },
+            {
+              "artifactId": "CW-SF-A-G2-SOURCES",
+              "kind": "light_source_sheet",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/ancient-full-flow.json",
+              "sourcePointer": "/stages/G2/sources",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            }
+          ]
+        },
+        "G3": {
+          "designStatus": "design_ready",
+          "productionStatus": "pending_media",
+          "evidenceScope": "authored_design_only",
+          "artifacts": [
+            {
+              "artifactId": "CW-SF-A-G3-BLOCKING",
+              "kind": "blocking_board",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/ancient/g3-blocking-board.svg",
+              "sourcePointer": "/stages/G3/actorTracks",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-A-G3-PERFORMANCE",
+              "kind": "performance_cards",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/ancient-full-flow.json",
+              "sourcePointer": "/stages/G3/actorTracks",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            },
+            {
+              "artifactId": "CW-SF-A-G3-LOCKS",
+              "kind": "hard_lock_sheet",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/ancient-full-flow.json",
+              "sourcePointer": "/stages/G3/hardLocks",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            }
+          ]
+        },
+        "G4": {
+          "designStatus": "design_ready",
+          "productionStatus": "pending_media",
+          "evidenceScope": "authored_design_only",
+          "artifacts": [
+            {
+              "artifactId": "CW-SF-A-G4-STORYBOARD",
+              "kind": "storyboard_board",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/ancient/g4-storyboard-board.svg",
+              "sourcePointer": "/stages/G4/shots",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-A-G4-SHOTS",
+              "kind": "shot_cards",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/ancient-full-flow.json",
+              "sourcePointer": "/stages/G4/shots",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            }
+          ]
+        },
+        "G5": {
+          "designStatus": "design_ready",
+          "productionStatus": "pending_media",
+          "evidenceScope": "authored_design_only",
+          "artifacts": [
+            {
+              "artifactId": "CW-SF-A-G5-TIMELINE",
+              "kind": "edit_timeline",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/ancient/g5-edit-timeline.svg",
+              "sourcePointer": "/stages/G5/shotWindows",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-A-G5-DIALOGUE",
+              "kind": "dialogue_cues",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/ancient-full-flow.json",
+              "sourcePointer": "/stages/G5/dialogueCues",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            },
+            {
+              "artifactId": "CW-SF-A-G5-GRADE",
+              "kind": "color_grade_plan",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/ancient-full-flow.json",
+              "sourcePointer": "/stages/G5/colorPlan",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            }
+          ]
+        },
+        "G6": {
+          "designStatus": "design_ready",
+          "productionStatus": "pending_media",
+          "evidenceScope": "authored_design_only",
+          "artifacts": [
+            {
+              "artifactId": "CW-SF-A-G6-TESTPLAN",
+              "kind": "test_plan",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/ancient/g6-test-plan.svg",
+              "sourcePointer": "/stages/G6/testGroups",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-A-G6-HANDOFF",
+              "kind": "generation_handoff",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/ancient-full-flow.json",
+              "sourcePointer": "/stages/G6/requiredBeforeExecution",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            }
+          ]
+        },
+        "G7": {
+          "designStatus": "design_ready",
+          "productionStatus": "pending_media",
+          "evidenceScope": "authored_design_only",
+          "artifacts": [
+            {
+              "artifactId": "CW-SF-A-G7-REVIEW",
+              "kind": "design_review",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/ancient/g7-review-card.svg",
+              "sourcePointer": "/stages/G7/paperReviews",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-A-G7-ACCEPT",
+              "kind": "acceptance_plan",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/ancient-full-flow.json",
+              "sourcePointer": "/stages/G7/formalAcceptance",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            }
+          ]
+        }
+      },
+      "mediaStatus": "not_generated",
+      "overallProductionStatus": "pending_media"
+    },
+    {
+      "caseId": "CW-SF-B",
+      "sourcePath": "tests/evaluations/2026-10-16/everyday-full-flow.json",
+      "stages": {
+        "G0": {
+          "designStatus": "design_ready",
+          "productionStatus": "not_applicable",
+          "evidenceScope": "authored_design_only",
+          "artifacts": [
+            {
+              "artifactId": "CW-SF-B-G0-DIRECTOR",
+              "kind": "director_card",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/modern/g0-director-beat-card.svg",
+              "sourcePointer": "/stages/G0/directorStatement",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-B-G0-SCRIPT",
+              "kind": "scene_script",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/everyday-full-flow.json",
+              "sourcePointer": "/stages/G0/sceneScript",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            },
+            {
+              "artifactId": "CW-SF-B-G0-BEATS",
+              "kind": "beat_sheet",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/everyday-full-flow.json",
+              "sourcePointer": "/stages/G0/beats",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            }
+          ]
+        },
+        "G1": {
+          "designStatus": "design_ready",
+          "productionStatus": "pending_media",
+          "evidenceScope": "authored_design_only",
+          "artifacts": [
+            {
+              "artifactId": "CW-SF-B-G1-STYLE",
+              "kind": "style_card",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/modern/g1-style-card.svg",
+              "sourcePointer": "/stages/G1/styleBible",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-B-G1-PALETTE",
+              "kind": "palette_card",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/modern/g1-palette-card.svg",
+              "sourcePointer": "/stages/G1/lookDevelopment/palette",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-B-G1-MATERIAL",
+              "kind": "material_card",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/modern/g1-material-card.svg",
+              "sourcePointer": "/stages/G1/lookDevelopment/materials",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-B-G1-LIGHTING",
+              "kind": "lighting_card",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/modern/g1-lighting-card.svg",
+              "sourcePointer": "/stages/G1/lookDevelopment/lightingSetups",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-B-G1-LIGHTPLOT",
+              "kind": "light_plot",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/modern/g1-light-plot.svg",
+              "sourcePointer": "/stages/G2/sources",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-B-G1-LOOKTEST",
+              "kind": "lookdev_test_board",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/modern/g1-looktest-board.svg",
+              "sourcePointer": "/stages/G1/lookDevelopment/comparisonBoards",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-B-G1-ASSETS",
+              "kind": "asset_cards",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/everyday-full-flow.json",
+              "sourcePointer": "/stages/G1/assets",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            }
+          ]
+        },
+        "G2": {
+          "designStatus": "design_ready",
+          "productionStatus": "pending_media",
+          "evidenceScope": "authored_design_only",
+          "artifacts": [
+            {
+              "artifactId": "CW-SF-B-G2-SCENE",
+              "kind": "scene_map",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/modern/g2-scene-map.svg",
+              "sourcePointer": "/stages/G2/anchors",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-B-G2-GEO",
+              "kind": "geography_sheet",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/everyday-full-flow.json",
+              "sourcePointer": "/stages/G2/worldGeometry",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            },
+            {
+              "artifactId": "CW-SF-B-G2-SOURCES",
+              "kind": "light_source_sheet",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/everyday-full-flow.json",
+              "sourcePointer": "/stages/G2/sources",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            }
+          ]
+        },
+        "G3": {
+          "designStatus": "design_ready",
+          "productionStatus": "pending_media",
+          "evidenceScope": "authored_design_only",
+          "artifacts": [
+            {
+              "artifactId": "CW-SF-B-G3-BLOCKING",
+              "kind": "blocking_board",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/modern/g3-blocking-board.svg",
+              "sourcePointer": "/stages/G3/actorTracks",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-B-G3-PERFORMANCE",
+              "kind": "performance_cards",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/everyday-full-flow.json",
+              "sourcePointer": "/stages/G3/actorTracks",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            },
+            {
+              "artifactId": "CW-SF-B-G3-LOCKS",
+              "kind": "hard_lock_sheet",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/everyday-full-flow.json",
+              "sourcePointer": "/stages/G3/hardLocks",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            }
+          ]
+        },
+        "G4": {
+          "designStatus": "design_ready",
+          "productionStatus": "pending_media",
+          "evidenceScope": "authored_design_only",
+          "artifacts": [
+            {
+              "artifactId": "CW-SF-B-G4-STORYBOARD",
+              "kind": "storyboard_board",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/modern/g4-storyboard-board.svg",
+              "sourcePointer": "/stages/G4/shots",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-B-G4-SHOTS",
+              "kind": "shot_cards",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/everyday-full-flow.json",
+              "sourcePointer": "/stages/G4/shots",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            }
+          ]
+        },
+        "G5": {
+          "designStatus": "design_ready",
+          "productionStatus": "pending_media",
+          "evidenceScope": "authored_design_only",
+          "artifacts": [
+            {
+              "artifactId": "CW-SF-B-G5-TIMELINE",
+              "kind": "edit_timeline",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/modern/g5-edit-timeline.svg",
+              "sourcePointer": "/stages/G5/shotWindows",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-B-G5-DIALOGUE",
+              "kind": "dialogue_cues",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/everyday-full-flow.json",
+              "sourcePointer": "/stages/G5/dialogueCues",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            },
+            {
+              "artifactId": "CW-SF-B-G5-GRADE",
+              "kind": "color_grade_plan",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/everyday-full-flow.json",
+              "sourcePointer": "/stages/G5/colorPlan",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            }
+          ]
+        },
+        "G6": {
+          "designStatus": "design_ready",
+          "productionStatus": "pending_media",
+          "evidenceScope": "authored_design_only",
+          "artifacts": [
+            {
+              "artifactId": "CW-SF-B-G6-TESTPLAN",
+              "kind": "test_plan",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/modern/g6-test-plan.svg",
+              "sourcePointer": "/stages/G6/testGroups",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-B-G6-HANDOFF",
+              "kind": "generation_handoff",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/everyday-full-flow.json",
+              "sourcePointer": "/stages/G6/requiredBeforeExecution",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            }
+          ]
+        },
+        "G7": {
+          "designStatus": "design_ready",
+          "productionStatus": "pending_media",
+          "evidenceScope": "authored_design_only",
+          "artifacts": [
+            {
+              "artifactId": "CW-SF-B-G7-REVIEW",
+              "kind": "design_review",
+              "type": "svg",
+              "path": "tests/evaluations/2026-10-16/artifacts/modern/g7-review-card.svg",
+              "sourcePointer": "/stages/G7/paperReviews",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "rendered_vector_design_not_generated_media"
+            },
+            {
+              "artifactId": "CW-SF-B-G7-ACCEPT",
+              "kind": "acceptance_plan",
+              "type": "json_section",
+              "path": "tests/evaluations/2026-10-16/everyday-full-flow.json",
+              "sourcePointer": "/stages/G7/formalAcceptance",
+              "reviewStatus": "authored_plan_checked",
+              "evidence": "full_authored_source_text"
+            }
+          ]
+        }
+      },
+      "mediaStatus": "not_generated",
+      "overallProductionStatus": "pending_media"
+    }
+  ]
+}

@@ -17,7 +17,8 @@
     "validate:bundle": "node scripts/validate-repository.mjs --bundle .build/cineweave-director",
     "validate:output": "node scripts/validate-output.mjs",
     "skills:sync": "node scripts/sync-skill-exports.mjs",
-    "skills:sync:check": "node scripts/sync-skill-exports.mjs --check"
+    "skills:sync:check": "node scripts/sync-skill-exports.mjs --check",
+    "stage:check": "node scripts/check-stage-artifacts.mjs tests/evaluations/2026-10-16/stage-artifacts-v1.json"
   },
   "license": "MIT"
 }
