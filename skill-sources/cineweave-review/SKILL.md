@@ -17,12 +17,16 @@ description: "CineWeave 统一入口工作流的内部能力。评审已有创�
 
 元数据缺失仍可完成有限画面评审；来源、参数、许可及不可观察维度保持未知。单帧不证明运动或声音同步，单镜不证明整场连续。给精确对象／版本／区间、期望、实际观察、依据、状态与严重性；没有准确引用时使用工作引用，不造 ID、哈希、任务回执或旧批准。
 
+按[人物外观与观察条件](references/optional/generation-diagnostics.md#人物外观与观察条件)记录直接观察、用户反馈、文本冲突和候选根因；注明动态播放、抽帧或单帧覆盖。音轨提取、播放器展示、波形或转写不等于听审，按[声音证据与听审](references/optional/video-sound-and-delivery.md#声音证据与听审)限制音色、语气与同步结论。起始不匹配、动作后偏移和摄影干扰分别诊断，不能把栏目完整提升为实际执行通过。
+
 使用既有 `pass`、`warn`、`fail`、`unknown`、`not applicable` 展示语义；规范枚举以实际 schema 为准。严重性为 `advisory`、`important`、`blocking`。阻断问题单独列出，不能被整体美感平均；用户偏好与技术／权利合格性分别判断，不评颜值或生物识别身份。
 
 ## 摄影语言专项审查
 
 新创作的正式叙事镜头组必须在 `cinematography` 检查景别／机位／构图、固定或运动、焦点、触发、预期可见变化和出点。新规范工作表声明 `source.cameraLanguageScope` 和 `cameraDecisions` 并校验逐镜覆盖；历史工作表、静态资产和翻译保留原有范围。真实运动效果需另看媒体。
 ## 按范围检查与修订
+
+审阅人物视频提示词时，按[逐节拍完整性](references/optional/video-performance-direction.md#逐节拍完整性)检查情绪、微表情／眼神、语气、动作／微动作、运镜／焦点与声音是否进入实际复制稿，并核对触发、承接及时间预算。区分内容缺失、描述偏概括、明确保持和证据未核实；给出具体原文位置，不把每句增加全套面部动作作为补齐标准。
 
 综合设计／提示词评审、完整场次定稿或镜头组正式制作／规范交接，读取[群像与逐镜评审](references/optional/ensemble-direction-and-review.md)，覆盖六视角 × 本次声明镜头。完整六视角评审在 Node 可用时整理工作表并实际运行本包的[逐镜检查器](scripts/check-shot-review.mjs)；没有 Node 时完成手工评审并记录限制。局部请求只检查所选维度，采用工作表且 Node 可用时也必须实际运行。分别检查 `valid`、`coverageComplete`、`reviewComplete` 与未决项，记录真实结果，不以计划运行代替执行。
 

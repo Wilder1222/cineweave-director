@@ -158,6 +158,7 @@ const EXPECTED_SOURCE_DIRECTORIES = new Map([
     "fixtures/ensemble-handoff.json",
     "evaluations/aigc-creation-research-2026-09-14.md",
     "evaluations/cinematic-cases.json",
+    "evaluations/pov-generated-video-review-2026-10-18.md",
     "evaluations/2026-10-16/ancient-full-flow.json",
     "evaluations/2026-10-16/everyday-full-flow.json",
     "evaluations/2026-10-16/scene-pipeline-audit-report.md",
