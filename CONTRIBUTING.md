@@ -70,7 +70,7 @@ npm run test:bundle
 
 ## 变更和发布
 
-提交保持聚焦、说明清楚。未经协调不改写他人工作或公开历史。用户可见行为、契约、知识、分发变化记录到 `CHANGELOG.md`。标签不可变，安装文档固定标签或准确提交，不指向移动分支。当前 `3.2.0` 是本地准备，远程标签尚不可用；不得移动旧 `v3.1.0` 标签来伪装新版。
+提交保持聚焦、说明清楚。未经协调不改写他人工作或公开历史。用户可见行为、契约、知识、分发变化记录到 `CHANGELOG.md`。标签不可变，安装文档固定标签或准确提交，不指向移动分支。新标签须指向已合并并通过检查的提交，标签检查通过后再更新安装；不得移动已发布标签来伪装新版。
 
 包／Skill目录版本与正式产物各自既有版本（2.x与3.0.0）分别维护。版本准备先改作者metadata，再由 `contracts:index` 重建索引、`skills:sync` 物化专业副本。52份规范示例及其模拟 `v3.1.0` 回执字节固定，不因包升级改造历史fixture；校验器分别约束当前发布身份与固定fixture来源，不放宽真实产物的来源／哈希检查。完整旧版本和P0实际未提交源快照是不同恢复对象，不用旧HEAD冒充本轮基线。
 
@@ -94,10 +94,10 @@ npm run test:bundle
 
 创作入口保留决定下一步所需的信息。测试数据移入 `tests/evaluations/`；维护审计不进入日常创作指令。机器契约保留为可选结构化交付，不继续扩张为运行时或生成平台。清理的目标是减少创作上下文负担，而非单纯降低文件数。
 
-旧版插件安装固定 `v3.1.0`：
+插件安装固定 `v3.2.0`；历史 `v3.1.0` 继续保留：
 
 ```bash
-codex plugin marketplace add Wilder1222/cineweave-director --ref v3.1.0
+codex plugin marketplace add Wilder1222/cineweave-director --ref v3.2.0
 codex plugin add cineweave-director@cineweave-director
 ```
 
