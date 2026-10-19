@@ -73,9 +73,16 @@
 - [AIGC 控制与评审](skills/cineweave-director/references/optional/aigc-control-and-evaluation.md)：结构／身份／风格参考分工、局部编辑保留及对照试片。
 - [连续性](skills/cineweave-director/references/core/visual-bible-and-continuity.md)与[诊断](skills/cineweave-director/references/optional/generation-diagnostics.md)：保留已通过部分，修复明确问题。
 
-## 使用当前源码
+## 安装与使用
 
-当前源码为 `3.2.0` 候选版本，已完成重构与本地验证，正式版本标签尚未发布；旧 `v3.1.0` 标签不包含本次改动，远程 `v3.2.0` 尚不可作为安装来源。完整工作流将当前仓库的四个 `skills/` 目录全部按宿主支持方式加载，再从 `$cineweave-director` 开始。内部三个 Skill 由入口明确交接，不自动作为独立用户入口。不要只复制 `SKILL.md`，各目录都需要相邻参考与脚本。
+本版为 `3.2.0`，安装使用固定版本标签 `v3.2.0`；旧 `v3.1.0` 不包含本版的统一入口和影视参考库。完整工作流包含四个 `skills/` 目录，从 `$cineweave-director` 开始。内部三个 Skill 由入口明确交接，不自动作为独立用户入口。不要只复制 `SKILL.md`，各目录都需要相邻参考与脚本。
+
+```bash
+codex plugin marketplace add Wilder1222/cineweave-director --ref v3.2.0
+codex plugin add cineweave-director@cineweave-director
+```
+
+已配置该版本来源时，可先运行 `codex plugin marketplace upgrade cineweave-director`，再运行安装命令。安装后核对宿主显示的版本与实际参考文件；宿主尚未重新加载时，在新会话中使用新版。源码合并与本地构建不会自动更新已有安装。
 
 仓库维护者先执行 `npm run skills:sync` 再构建 `.build/cineweave-director`，该目录包含完整工作流。可用 `node scripts/build-plugin-bundle.mjs --skill cineweave-review` 构建自包含单叶包；这用于独立分发和兼容检查。只装导演时，同一入口用本包资料恢复缺失内部能力。宿主可能显示带插件前缀的名字，例如 `cineweave-director:cineweave-review`，入口按实际发现的准确路径交接。用户现有插件缓存不会由构建自动更新。旧版安装说明与版本发布约定见[贡献指南](CONTRIBUTING.md)。
 

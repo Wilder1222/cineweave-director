@@ -409,6 +409,36 @@
         "shot_direction",
         "storyboard_rhythm"
       ]
+    },
+    {
+      "path": "references/optional/film-television-reference-library.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "style",
+        "reference_evidence",
+        "character",
+        "scene"
+      ]
+    },
+    {
+      "path": "references/optional/live-action-reference-directions.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "style",
+        "reference_evidence",
+        "character",
+        "scene"
+      ]
+    },
+    {
+      "path": "references/optional/animation-reference-directions.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "style",
+        "reference_evidence",
+        "character",
+        "scene"
+      ]
     }
   ]
 }
