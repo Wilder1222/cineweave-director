@@ -2,7 +2,7 @@
 
 - 日期：2026-10-26；来源范围：公开 Higgsfield 帮助／博客全文、Academy 目录、公开视频文字描述及章节索引
 - 所有权：`Wilder1222/cineweave-director` v3.2.0；补充已有一个 Director 入口＋三个专业 Skill 的按需知识，不增加新路由、契约、独立平台执行器或外部费用。
-- 交付：`skills/cineweave-director/references/optional/higgsfield-film-workflow.md`（同步给专业 Skill 的可选参考），Director 与 Platform 入口添加条件加载指针。
+- 交付：`skills/cineweave-director/references/optional/video-platform-adaptation.md#higgsfield-电影短片工作流`（同步给专业 Skill 的可选章节），Director 与 Platform 入口添加条件加载指针。
 - 重要限制：公开第三方课程与官方视频索引未逐帧观摩，不能声称视频字幕准确、现场 UI 可用、已测试 30s 生成、版权可自由再分发或已下载教学视频。精确案例、官方功能与 CineWeave 推论已在指南中分别标注。
 
 ## 可采纳 / 暂不采纳
@@ -32,7 +32,7 @@
 
 **N4 将官方上限当返回证明**：页面写最高 30 秒、1080p 与最多 50 参考，却没有账号设置或真实视频。预期：能力状态保留未知／待查；`production_ready` 不成立。
 
-**状态**：以上是规则层文字用例（`design_only`），不是已执行的真实生成／剪辑／端到端媒体基准；不把 PR CI 通过写成画面通过。详见指南 [Higgsfield Film Workflow](../../skills/cineweave-director/references/optional/higgsfield-film-workflow.md)。
+**状态**：以上是规则层文字用例（`design_only`），不是已执行的真实生成／剪辑／端到端媒体基准；不把 PR CI 通过写成画面通过。详见指南 [Higgsfield Film Workflow](../../skills/cineweave-director/references/optional/video-platform-adaptation.md#higgsfield-电影短片工作流)。
 
 ## 公开来源
 

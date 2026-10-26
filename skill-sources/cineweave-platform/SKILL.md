@@ -45,7 +45,7 @@ description: "CineWeave 统一入口工作流的内部能力。将已有中文�
 | --- | --- |
 | 图像母稿的忠实编译、参考去重与文字交付 | [图像提示词](references/routes/image-prompt.md#平台适配)、[细节与复制稿](references/optional/prompt-detail-standard.md#场次与逐镜交付模板)；不借此接管从零创作 |
 | 视频模式、输入职责、多镜／分镜板或人工返回 | [视频平台适配](references/optional/video-platform-adaptation.md)对应路径；时间问题再读[时长与余量](references/optional/video-timing-and-handles.md)，声音问题再读[声音与交付](references/optional/video-sound-and-delivery.md) |
-| Higgsfield / Cinema Studio 指定版本与界面的视频母稿忠实投射 | [Higgsfield 电影短片工作流](references/optional/higgsfield-film-workflow.md)的 Controls／Elements 映射；同时遵守[平台证据规则](references/optional/video-platform-adaptation.md)，核对真实模型、账号模式、别名、上限与编辑入口；无需载入全部镜头教学 |
+| Higgsfield / Cinema Studio 指定版本与界面的视频母稿忠实投射 | [Higgsfield 电影短片工作流](references/optional/video-platform-adaptation.md#higgsfield-电影短片工作流)的 Controls／Elements 映射；同时遵守[平台证据规则](references/optional/video-platform-adaptation.md)，核对真实模型、账号模式、别名、上限与编辑入口；无需载入全部镜头教学 |
 | Midjourney 模型、参数尾、参考及默认 | [Midjourney 适配](references/optional/midjourney-projection.md)；保留原证据日期并按触发条件复核 |
 | 正式引用、权威冲突或来源版本变更 | [产物控制](references/core/artifact-control-and-precedence.md)、[工作模型](references/core/operating-model.md)相关章节；修订影响再读[草稿与变更影响](references/optional/drafts-and-change-impact.md) |
 | 用户要求受控比较或已有外部失败 | [AIGC 控制](references/optional/aigc-control-and-evaluation.md)、[失败分诊](references/optional/generation-diagnostics.md#外部失败分诊与恢复交接)相关章节；返回命名变量与条件，不伪称已完成试验或修复媒体 |

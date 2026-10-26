@@ -439,13 +439,6 @@
         "character",
         "scene"
       ]
-    },
-    {
-      "path": "references/optional/higgsfield-film-workflow.md",
-      "lifecycle": "optional",
-      "loadContexts": [
-        "craft_study"
-      ]
     }
   ]
 }
