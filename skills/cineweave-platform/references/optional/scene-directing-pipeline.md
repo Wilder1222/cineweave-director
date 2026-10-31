@@ -130,3 +130,24 @@ G2 继续唯一持有现实空间里的门窗、油灯和反光表面；G1 引�
 完整短片读取[全套创作流程](short-film-creation.md)后按 G0–G7 决策；具体任务依序调用已有 `story/character/scene/style/action/shot_direction/storyboard_rhythm/production_plan/review_repair` 路由。摄影专项读[镜头导演](../routes/shot-direction.md)与[叙事镜头词典](cinematic-patterns.md)，表演读[视频表演](video-performance-direction.md)，实际复查读[评审修复](../routes/review-repair.md)。这是渐进加载，不应把整本案例附到单张海报任务。
 
 证据案例：[《玄奘》两段实践的可采纳与不可照搬部分](xuanzang-director-case-study.md)。案例反映本次用户提供的教学视频，不替代 CineWeave 的既有契约或已验证模型能力。
+
+## Studio 制作交接的结构化入口
+
+收到 `cineweave.director-input/v1` 时，先运行随 Skill 分发的只读入口：
+
+```sh
+node scripts/adapt-studio-input.mjs studio-input.json <明确的作品ID> <任务ID> [已规划镜头ID...]
+```
+
+这里的路径相对于当前 Skill 目录。仓库开发入口为 `skills/cineweave-director/scripts/adapt-studio-input.mjs`。作品 ID 必须来自当前任务上下文，不从包内自动推断授权。不访问网络、不读 Cookie、不执行模型，不向 Studio 写入。
+
+1. Studio 的 v1 兼容扩展 `provenance` 提供原始 manifest JSON、完整场次/角色/选角来源、Lookbook 原始快照。逐项复算 UTF-8 SHA256，绑定项目、版本和角色实例，缺正文、摘要不符、外来项目、旧版本或不支持的 schema 均拒绝。旧版不含扩展的导出需要重新通过官方接口导出，不补造证明。
+2. 输出 `cineweave.studio-shot-task/v1` 是**导演待创作任务**，登记在契约索引的 supportSchemas；原来的 52 类导演创作契约保持不变。角色、演员身份、造型、素材精确引用保留，不能拿 Studio 角色节点冒充 `characterSpecRef`。
+3. 根据任务里的完整场次和锁定引用，继续本页导演通案和调度流程，再由人物路由补全角色规格、造型状态和 `character_binding`，由镜头导演补表演、动作弧线、摄影机、构图、连续性和声音意图，最后进入逐镜分镜。所有新增设计注明导演创作；不能说这些是 Studio 已确认的表演或运镜。
+4. `traceShotEdit` 以镜头预期修订和当前重新取得的 Studio 输入做 CAS 与来源校验，保留旧设计、旧摘要和源指纹；不自动改绑演员或造型。不提供当前输入时不能把历史快照标为仍然有效。新交接或来源版本变化返回 `SOURCE_STALE`，人工/导演流程明确比较并创建新任务，不自动重绑。
+5. 仓库 `scripts/validate-output.mjs` 导出 `validateStudioShotDesign`：传入完整的导演人物规格、造型状态、表演绑定及其明确 Studio 实例关联，实际校验现有 schema 和引用摘要。仅保存镜头 JSON 的追踪功能不会自动等于校验通过。验证返回精确来源绑定，但不会批准生产。
+6. SHA256 只能证明包内完整性，不是来源认证或真实字节访问证明。只接受从已认证官方 Studio 会话取得的包；适配器始终返回 `sourceAuthorityVerified:false`、`mediaBytesVerifiedByConsumer:false`。Studio 创建/导出时校验过原件不等于消费者已读过原件，也不证明视觉一致性、媒体质量、权利、或视频已生成。`productionReady:false`、`generationStatus:NOT_EXECUTED` 不可提升。
+
+自动化测试使用显式 `[FIXTURE]` 来源，不是用户作品或真实媒体验收。可运行 `node --test tests/studio-input.test.mjs`；跨库夹具由 Studio 本地隔离数据库的正式 `directorInput` 服务产生。
+
+验证回执消费：使用 `isStudioShotValidationCurrent(task, result, {currentInput})`，重新提供认证取得的当前 Studio 导出，匹配 task ID/修订、来源指纹、镜头修订与设计 SHA256。没有当前输入、来源失效或镜头修改后旧回执均不可复用。此回执仅证明结构校验范围，不是用户审阅、视觉一致性或媒体生成证明。

@@ -97,3 +97,5 @@ description: "CineWeave 创作工作流的统一入口，将需求转为中文�
 ## 可选结构化交付
 
 仅在用户要求规范 JSON 或已有系统需要时，从 [contracts.json](contracts.json) 与[契约索引](resources/contracts/index.json)选择 schema 和示例。保持精确 kind、ID、版本、哈希及引用，不暗中解析 `latest`；`@Asset` 通过指定注册表绑定。元数据不足用工作稿，不编造正式引用或回执。规范检查通过仍保留 `unverified`；示例的批准与证据是模拟数据。
+
+收到 Studio 的 `cineweave.director-input/v1` 时，读取[Studio 制作交接的结构化入口](references/optional/scene-directing-pipeline.md#studio-制作交接的结构化入口)，运行只读适配与来源校验，再补导演设计。它不是已完成的 `character_binding`、镜头规范或视频。

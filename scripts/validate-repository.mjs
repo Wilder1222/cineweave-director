@@ -80,6 +80,8 @@ const EXPECTED_CONDITION_CONTEXTS = [
   "skill_evaluation",
 ];
 const EXPECTED_SUPPORT_SCHEMAS = new Set([
+  "schemas/studio-director-input.schema.json",
+  "schemas/studio-shot-task.schema.json",
   "schemas/common.schema.json",
   "schemas/reference-transform.schema.json",
 ]);
@@ -91,6 +93,7 @@ const DISTRIBUTION_BASE_FILES = [
   `${SKILL_PREFIX}/contracts.json`,
   `${SKILL_PREFIX}/reference-lifecycle.json`,
   `${SKILL_PREFIX}/resources/contracts/index.json`,
+  `${SKILL_PREFIX}/scripts/adapt-studio-input.mjs`,
   `${SKILL_PREFIX}/scripts/check-delivery.mjs`,
   `${SKILL_PREFIX}/scripts/check-video-plan.mjs`,
   `${SKILL_PREFIX}/scripts/check-audio-returns.mjs`,
@@ -147,6 +150,9 @@ const EXPECTED_SOURCE_DIRECTORIES = new Map([
     "contract-context.test.mjs",
     "check-delivery.test.mjs",
     "change-impact.test.mjs",
+    "studio-input.test.mjs",
+    "fixtures/studio-director-input.json",
+    "fixtures/studio-director-input-multi.json",
     "check-shot-review.test.mjs",
     "reliability.test.mjs",
     "projection-integrity.test.mjs",

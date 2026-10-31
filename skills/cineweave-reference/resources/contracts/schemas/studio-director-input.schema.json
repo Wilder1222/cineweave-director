@@ -1,0 +1,316 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cineweave.dev/contracts/studio-director-input.schema.json",
+  "title": "Studio director-input v1：外部只读来源包，不是已创作的镜头规范",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "project_id",
+    "handoff",
+    "scene",
+    "title",
+    "cast",
+    "media",
+    "media_live_verified",
+    "generation_status",
+    "provenance"
+  ],
+  "properties": {
+    "schema": {
+      "const": "cineweave.director-input/v1"
+    },
+    "project_id": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,159}$"
+    },
+    "handoff": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "sha256"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,159}$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "scene": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "version",
+        "sha256"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,159}$"
+        },
+        "version": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        }
+      }
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cast": {
+      "type": "array",
+      "maxItems": 128,
+      "items": {
+        "type": "object"
+      }
+    },
+    "media": {
+      "type": "array",
+      "maxItems": 128,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "asset_id",
+          "sha256",
+          "bytes",
+          "verification",
+          "verified_at"
+        ],
+        "properties": {
+          "asset_id": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "bytes": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "verification": {
+            "const": "authenticated-original-sha256"
+          },
+          "verified_at": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    },
+    "media_live_verified": {
+      "const": true
+    },
+    "generation_status": {
+      "const": "NOT_EXECUTED"
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema",
+        "manifest_json",
+        "story_sources",
+        "lookbook_sources",
+        "source_status",
+        "checked_at",
+        "hash_algorithm",
+        "authority",
+        "look_sources",
+        "identity_sources"
+      ],
+      "properties": {
+        "schema": {
+          "const": "cineweave.director-provenance/v1"
+        },
+        "manifest_json": {
+          "type": "string",
+          "minLength": 1
+        },
+        "story_sources": {
+          "type": "array",
+          "maxItems": 160,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "project_id",
+              "id",
+              "version",
+              "sha256",
+              "kind",
+              "content"
+            ],
+            "properties": {
+              "project_id": {
+                "type": "string",
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,159}$"
+              },
+              "id": {
+                "type": "string",
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,159}$"
+              },
+              "version": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "sha256": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "kind": {
+                "type": "string",
+                "minLength": 1
+              },
+              "content": {
+                "type": "object"
+              }
+            }
+          }
+        },
+        "lookbook_sources": {
+          "type": "array",
+          "maxItems": 128,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "revision",
+              "json"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,159}$"
+              },
+              "revision": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "json": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "source_status": {
+          "const": "version_matched"
+        },
+        "checked_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "hash_algorithm": {
+          "const": "sha256-utf8-json-stringify"
+        },
+        "authority": {
+          "const": "authenticated-studio-export"
+        },
+        "look_sources": {
+          "type": "array",
+          "maxItems": 128,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "id",
+              "revision",
+              "lookbook_id",
+              "json"
+            ],
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,159}$"
+              },
+              "revision": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "lookbook_id": {
+                "type": "string",
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,159}$"
+              },
+              "json": {
+                "type": "string",
+                "minLength": 1
+              }
+            }
+          }
+        },
+        "identity_sources": {
+          "type": "array",
+          "maxItems": 128,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": [
+              "character_id",
+              "identity_revision",
+              "face_asset_id",
+              "body_asset_id",
+              "constraints",
+              "confirmed_by",
+              "confirmed_at",
+              "confirmation_digest"
+            ],
+            "properties": {
+              "character_id": {
+                "type": "string",
+                "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,159}$"
+              },
+              "identity_revision": {
+                "type": "integer",
+                "minimum": 1
+              },
+              "face_asset_id": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              "body_asset_id": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "constraints": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "confirmed_by": {
+                "type": "string",
+                "minLength": 1
+              },
+              "confirmed_at": {
+                "type": "string",
+                "minLength": 1
+              },
+              "confirmation_digest": {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
