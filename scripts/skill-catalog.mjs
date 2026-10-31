@@ -15,6 +15,7 @@ const ROUTE_NAMES = Object.freeze([
   "action", "shot_direction", "storyboard_rhythm", "image_prompt", "production_plan", "review_repair",
 ]);
 const HELPERS = Object.freeze([
+  "adapt-studio-input.mjs",
   "check-delivery.mjs", "check-video-plan.mjs", "check-audio-returns.mjs",
   "check-shot-review.mjs", "check-change-impact.mjs", "parse-json.mjs",
 ]);
@@ -217,7 +218,7 @@ function canonicalProfileFiles({ lifecycle, index }) {
     files.push(`${CANONICAL_ROOT}/resources/contracts/${schema}`, `${CANONICAL_ROOT}/resources/contracts/${example}`);
   }
   assert(Array.isArray(index.supportSchemas), "index.supportSchemas must be an array");
-  assert(index.supportSchemas.length === 2, "Canonical profile must contain exactly 2 support schemas");
+  assert(index.supportSchemas.length === 4, "Canonical profile must contain exactly 4 support schemas");
   for (const [position, entry] of index.supportSchemas.entries()) {
     assertObject(entry, `index.supportSchemas[${position}]`);
     const schema = normalizePath(entry.schema, `Support schema ${position}`);

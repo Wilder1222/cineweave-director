@@ -474,6 +474,16 @@
   ],
   "supportSchemas": [
     {
+      "schema": "schemas/studio-director-input.schema.json",
+      "purpose": "cineweave.director-input/v1 外部来源输入；须由适配器验证来源完整性。",
+      "schemaSha256": "sha256:b9ee02e0c687cc158f4b8bf7bd48068fae032d11b2bb8f996fd8b54ce93215d9"
+    },
+    {
+      "schema": "schemas/studio-shot-task.schema.json",
+      "purpose": "cineweave.studio-shot-task/v1 导演待创作任务与逐镜引用追踪。",
+      "schemaSha256": "sha256:d4d9ca7c7fa970162853cf22b8c4af1d95731ffaf3ed9ed716ba2b9019e5dd4f"
+    },
+    {
       "schema": "schemas/common.schema.json",
       "purpose": "共享标识、引用、来源与回执定义。",
       "schemaSha256": "sha256:f11cafddd9a3251871ec127993cac7f455a45c21002a8c4952a38a15b0738754"
