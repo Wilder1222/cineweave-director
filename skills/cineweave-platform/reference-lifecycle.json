@@ -280,6 +280,13 @@
       ]
     },
     {
+      "path": "references/optional/video-model-practices-2026-10.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "video_sound_delivery"
+      ]
+    },
+    {
       "path": "references/optional/tagged-video-nodes.md",
       "lifecycle": "optional",
       "loadContexts": [

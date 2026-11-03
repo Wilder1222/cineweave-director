@@ -1,0 +1,20 @@
+{
+  "pid": 17696,
+  "exit": 0,
+  "exit_observation": "retrieved by recovery process",
+  "timeout": "not asserted after wrapper failure",
+  "turn_completed": true,
+  "turn_failed": false,
+  "event_count": 26,
+  "redacted_memory_outputs": 0,
+  "stderr_classification": [
+    "HTTP 403 observed; response omitted",
+    "MCP OAuth warning observed; details omitted"
+  ],
+  "raw_cleanup": [
+    "events.raw: cleared but locked",
+    "stderr.raw: cleared but locked"
+  ],
+  "recovered_after_wrapper_failure": true,
+  "end_utc": "2026-11-02T16:27:22.727420+00:00"
+}

@@ -262,7 +262,7 @@
       "schema": "schemas/shot-spec.schema.json",
       "schemaSha256": "sha256:1f8f89676fa445af435f2b9f436a1bb2eac51e580ae9b140f7f60f58f88759d0",
       "example": "examples/shot-spec.json",
-      "exampleSha256": "sha256:5b6483b406cf2b797b9eb6065beb611fd5ada358d75c146216064975eb22f377"
+      "exampleSha256": "sha256:7a9ba11be59be8fb2f9950517960a7cf35b65edb421446c8233e7bf4c3ae7d2a"
     },
     {
       "kind": "cineweave_codex_shot_lighting_plan",
@@ -271,7 +271,7 @@
       "schema": "schemas/shot-lighting-plan.schema.json",
       "schemaSha256": "sha256:933159f7d5fc626b6c874215d40230bb81e3d491b066dc5e0d60e73eec3b84ab",
       "example": "examples/shot-lighting-plan.json",
-      "exampleSha256": "sha256:e8ff48c7ec1f4f02b98260ad0da66104c8e03d0ad07b28a28e37c17b0e7770bc"
+      "exampleSha256": "sha256:8c74872bba6bfbb05c3e0df45d391025f82c7b1c91b32ae63183d208e0fce164"
     },
     {
       "kind": "cineweave_codex_temporal_spec",
@@ -280,7 +280,7 @@
       "schema": "schemas/temporal-spec.schema.json",
       "schemaSha256": "sha256:b8e5f5eb756821544759662936debe8a52d25c2aeaf1b72c059dfbc20047d5fa",
       "example": "examples/temporal-spec.json",
-      "exampleSha256": "sha256:8213b3e58b738d67a5a9b4c954634dbd2e0f4e16f9864667b1ac66efdff83e24"
+      "exampleSha256": "sha256:a6b67417c0dcb83a3ddf20b89cfc6d422cb9a6fff8a8fb0e2c96f39ab0892efd"
     },
     {
       "kind": "cineweave_codex_camera_previs_spec",
@@ -289,7 +289,7 @@
       "schema": "schemas/camera-previs-spec.schema.json",
       "schemaSha256": "sha256:898aac32c5a0c097d18d384b23159b258cf0e67f76a6611b9e159d3411890d22",
       "example": "examples/camera-previs-spec.json",
-      "exampleSha256": "sha256:77f2fc862071ab73a58718d3a3f5b1a4c95a57879a045862207978f66d85c152"
+      "exampleSha256": "sha256:6fe87a453531bf8fe6f1d09f9c7f2abd9d88aee4067d5e5eed98a93d5d7eb373"
     },
     {
       "kind": "cineweave_codex_hero_frame_anchor",
@@ -298,7 +298,7 @@
       "schema": "schemas/hero-frame-anchor.schema.json",
       "schemaSha256": "sha256:8ca78206720e4011da8e5f669f9280ae26e81994205563e237ec8a5cc8da734f",
       "example": "examples/hero-frame-anchor.json",
-      "exampleSha256": "sha256:87df06ceb4db93286efedbaaf6045166cb218eba96f9db7f6dbd0dc83faa24ae"
+      "exampleSha256": "sha256:8948a4a0e81f329a415b477acdda1ff6644f158e6b98902c9ff96f68ab07b2c6"
     },
     {
       "kind": "cineweave_codex_storyboard_sequence",
@@ -442,7 +442,7 @@
       "schema": "schemas/control-benchmark.schema.json",
       "schemaSha256": "sha256:ee7f6b4f6cfe679ee0647fa90a9c4c8fd76ddeb89837a6510494b3e6fb9013a3",
       "example": "examples/control-benchmark.json",
-      "exampleSha256": "sha256:a45b639bf37cb1cca78188c51ad7656381f95960d30dabe52ef10fac9e2f1363"
+      "exampleSha256": "sha256:820482cf0d29d7be765aed470d6e9bb2b0e4c052e2be85705a2a61740c8ab768"
     },
     {
       "kind": "cineweave_codex_control_benchmark_review",

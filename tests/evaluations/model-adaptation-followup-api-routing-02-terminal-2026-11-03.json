@@ -1,0 +1,12 @@
+{
+  "pid": 70144,
+  "exit": 1,
+  "timeout": false,
+  "end_utc": "2026-11-03T00:21:36.460326+00:00",
+  "stderr_classification": [
+    "MCP OAuth warning observed; details omitted"
+  ],
+  "turn_completed": false,
+  "turn_failed": true,
+  "redacted_memory_outputs": 0
+}

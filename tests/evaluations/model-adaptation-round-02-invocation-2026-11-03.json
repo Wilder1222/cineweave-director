@@ -1,0 +1,18 @@
+{
+  "args": [
+    "LOCAL_USER_HOME\\AppData\\Local\\OpenAI\\Codex\\bin\\896a0166b774037a\\codex.exe",
+    "exec",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--json",
+    "-m",
+    "gpt-6.1-sol",
+    "-"
+  ],
+  "cwd": "LOCAL_TEMP\\cineweave-ten-round-02-nov03-dlc1v5mj\\workspace",
+  "start_utc": "2026-11-02T18:09:52.355814+00:00",
+  "file_count": 692,
+  "timeout_seconds": 720
+}

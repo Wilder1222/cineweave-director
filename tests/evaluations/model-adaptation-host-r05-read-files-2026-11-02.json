@@ -1,0 +1,46 @@
+[
+  {
+    "path": "cineweave-director/SKILL.md",
+    "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+  },
+  {
+    "path": "cineweave-director/references/routes/reference-evidence.md",
+    "sha256": "8f2833929f5d6df0fa3cbbdf540cdd5f2f10688b381f85eb6fe26b81c8c0b697"
+  },
+  {
+    "path": "cineweave-director/references/routes/shot-direction.md",
+    "sha256": "489709101da4dde48d01fbd4181382ef48e578183d5c6b735dc36227cdbf9667"
+  },
+  {
+    "path": "cineweave-director/references/optional/video-platform-adaptation.md",
+    "sha256": "d78ae24f884c453249435417e8703213a6fa7e5efbcb5973c6b78a95ac54db1c"
+  },
+  {
+    "path": "cineweave-director/references/optional/video-performance-direction.md",
+    "sha256": "080817e75161a966a35d3170c686850e5280d2dbc905a1e52ba1bab807b32018"
+  },
+  {
+    "path": "cineweave-director/references/optional/video-sound-and-delivery.md",
+    "sha256": "cd69734394c0ad6e0cea741d5c467e6d7b01dfd544280391b3b2db6fc97c99a8"
+  },
+  {
+    "path": "cineweave-reference/SKILL.md",
+    "sha256": "33d06365a2b861f431e66ff4960ae2ad9a26457f8fe7e4b2b20a7b110f71c155"
+  },
+  {
+    "path": "cineweave-platform/SKILL.md",
+    "sha256": "97dfad8a79a11ca8ca919548461d3e40f5f23a245422380af713e95b794e755b"
+  },
+  {
+    "path": "cineweave-reference/references/core/reference-evidence-and-rights.md",
+    "sha256": "55332bfbab84d121328260c56f971586658dff692a526cac318e2b435a522393"
+  },
+  {
+    "path": "cineweave-platform/references/optional/video-model-practices-2026-10.md",
+    "sha256": "a90f61a0254a3375e9efc1f8a1d5791b6896832ae363826bd2699918ddb138a6"
+  },
+  {
+    "path": "cineweave-platform/references/optional/video-platform-adaptation.md",
+    "sha256": "d78ae24f884c453249435417e8703213a6fa7e5efbcb5973c6b78a95ac54db1c"
+  }
+]
