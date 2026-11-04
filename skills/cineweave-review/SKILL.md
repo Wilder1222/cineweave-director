@@ -26,6 +26,8 @@ description: "CineWeave 统一入口工作流的内部能力。评审已有创�
 新创作的正式叙事镜头组必须在 `cinematography` 检查景别／机位／构图、固定或运动、焦点、触发、预期可见变化和出点。新规范工作表声明 `source.cameraLanguageScope` 和 `cameraDecisions` 并校验逐镜覆盖；历史工作表、静态资产和翻译保留原有范围。真实运动效果需另看媒体。
 ## 按范围检查与修订
 
+小说／剧本正文按[故事的文字评审](references/routes/story.md#文字自身的评审)核对全文覆盖、场景空间、知情时序、人物自主性和对白行动承接，并保留准确台词。纯文字评审不需要镜号，不用六视角镜头表代替逐场阅读；日常作品依原简报判断，不强加冲突或反转。
+
 审阅人物视频提示词时，按[逐节拍完整性](references/optional/video-performance-direction.md#逐节拍完整性)检查情绪、微表情／眼神、语气、动作／微动作、运镜／焦点与声音是否进入实际复制稿，并核对触发、承接及时间预算。区分内容缺失、描述偏概括、明确保持和证据未核实；给出具体原文位置，不把每句增加全套面部动作作为补齐标准。
 
 综合设计／提示词评审、完整场次定稿或镜头组正式制作／规范交接，读取[群像与逐镜评审](references/optional/ensemble-direction-and-review.md)，覆盖六视角 × 本次声明镜头。完整六视角评审在 Node 可用时整理工作表并实际运行本包的[逐镜检查器](scripts/check-shot-review.mjs)；没有 Node 时完成手工评审并记录限制。局部请求只检查所选维度，采用工作表且 Node 可用时也必须实际运行。分别检查 `valid`、`coverageComplete`、`reviewComplete` 与未决项，记录真实结果，不以计划运行代替执行。

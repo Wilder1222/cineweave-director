@@ -18,7 +18,7 @@ description: "CineWeave 创作工作流的统一入口，将需求转为中文�
 | 用户需要 | 路由与本次交付 |
 | --- | --- |
 | 明确需求与世界规律 | `brief_world`：[简报与世界](references/routes/brief-world.md)，范围、硬锁与设定 |
-| 故事／剧本 | `story`：[故事](references/routes/story.md)，梗概、因果节拍或场次 |
+| 故事／剧本 | `story`：[故事](references/routes/story.md)，梗概、节拍、完整场景正文或小说改编；含空间、人物和文字评审 |
 | 人物、服装与表演资产 | `character`：[人物](references/routes/character.md)，母稿、所需视图与逐项提示词 |
 | 场景、道具与物理光 | `scene`：[场景](references/routes/scene.md)，空间、材质和交互基线 |
 | 视觉风格或媒介转换 | `style`：[风格](references/routes/style.md)，共享表现规则与可见差异 |

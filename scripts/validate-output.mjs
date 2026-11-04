@@ -1130,9 +1130,75 @@ function validateRepairContext(payload, artifacts, errors, unverified) {
   unverified.push("Observed media, preservation of passing dimensions, registry identity authority, and repair success require evidence review");
 }
 
-function validateContractSemantics(payload, schema, errors, contracts) {
+// Beat order describes the supplied presentation order, not story chronology.
+// Keep gaps and flashbacks legal; never reorder or infer missing material.
+function validateWritingBeatOrder(beats, errors) {
+  if (!Array.isArray(beats)) return;
+  let previousOrder;
+  beats.forEach((beat, index) => {
+    if (!isObject(beat) || !Number.isInteger(beat.order)) return;
+    if (previousOrder !== undefined && beat.order <= previousOrder) {
+      errors.push(`$.beats[${index}].order must be strictly increasing in presentation order; gaps are allowed`);
+    }
+    previousOrder = beat.order;
+  });
+}
+
+function validateScriptSceneSemantics(payload, errors, unverified) {
+  const participantIds = new Set();
+  for (const [index, participant] of (Array.isArray(payload.participants) ? payload.participants : []).entries()) {
+    if (!isObject(participant) || typeof participant.participantId !== "string") continue;
+    if (participantIds.has(participant.participantId)) errors.push(`$.participants[${index}].participantId must be unique within participants`);
+    participantIds.add(participant.participantId);
+  }
+  const beatRefs = new Set();
+  for (const [index, ref] of (Array.isArray(payload.beatRefs) ? payload.beatRefs : []).entries()) {
+    if (beatRefs.has(ref)) errors.push(`$.beatRefs[${index}] must be unique within beatRefs`);
+    beatRefs.add(ref);
+  }
+  validateWritingBeatOrder(payload.beats, errors);
+  for (const [index, beat] of (Array.isArray(payload.beats) ? payload.beats : []).entries()) {
+    if (!isObject(beat)) continue;
+    const hasDialogue = typeof beat.dialogue === "string" && beat.dialogue.trim().length > 0;
+    const hasSpeaker = typeof beat.speakerId === "string" && beat.speakerId.trim().length > 0;
+    if (beat.speakerId !== undefined && !participantIds.has(beat.speakerId)) {
+      errors.push(`$.beats[${index}].speakerId must identify a declared participant`);
+    }
+    if (beat.type === "dialogue") {
+      if (!hasDialogue) errors.push(`$.beats[${index}].dialogue must contain nonblank text for a dialogue beat`);
+      if (!hasSpeaker) errors.push(`$.beats[${index}].speakerId is required for a dialogue beat`);
+    } else if (hasDialogue && beat.speakerId === undefined) {
+      // Legacy mixed action/decision beats may contain dialogue without a speaker.
+      // Preserve compatibility while making the unresolved attribution explicit.
+      unverified.push(`$.beats[${index}].speakerId: dialogue in a non-dialogue beat has no declared speaker; attribution requires source review and was not inferred`);
+    }
+  }
+}
+
+function validateBeatSheetSemantics(payload, errors) {
+  const beatIds = new Set();
+  validateWritingBeatOrder(payload.beats, errors);
+  for (const [index, beat] of (Array.isArray(payload.beats) ? payload.beats : []).entries()) {
+    if (!isObject(beat) || typeof beat.beatId !== "string") continue;
+    if (beatIds.has(beat.beatId)) errors.push(`$.beats[${index}].beatId must be unique within beats`);
+    beatIds.add(beat.beatId);
+  }
+  for (const [index, item] of (Array.isArray(payload.setupPayoffs) ? payload.setupPayoffs : []).entries()) {
+    if (!isObject(item)) continue;
+    for (const field of ["setupBeatId", "payoffBeatId"]) {
+      if (!beatIds.has(item[field])) errors.push(`$.setupPayoffs[${index}].${field} must identify an existing beat`);
+    }
+  }
+}
+
+function validateContractSemantics(payload, schema, errors, contracts, unverified) {
   const schemaKind = schema?.properties?.kind?.const;
   if (!isObject(payload) || payload.kind !== schemaKind) return;
+  if (schemaKind === "cineweave_codex_script_scene") validateScriptSceneSemantics(payload, errors, unverified);
+  if (schemaKind === "cineweave_codex_beat_sheet") validateBeatSheetSemantics(payload, errors);
+  if (["cineweave_codex_script_scene", "cineweave_codex_beat_sheet"].includes(schemaKind)) {
+    unverified.push("Literary quality, character knowledge, causal logic, spatial coherence, and preservation of locked wording require reading the full text and authoritative sources; local structural checks do not verify them");
+  }
   if (schemaKind === "cineweave_codex_prompt_projection_plan") validatePromptProjectionPlanSemantics(payload, errors);
   if (schemaKind === "cineweave_codex_capability_resolution_plan") validateCapabilityResolutionPlanSemantics(payload, errors);
   if (schemaKind === "cineweave_codex_shot_compiler_plan") validateShotCompilerPlanSemantics(payload, errors, contracts);
@@ -1244,8 +1310,8 @@ export async function validatePayload(schemaPath, payload, options = {}) {
   if(errors.length===0 && document.$id==='https://cineweave.dev/contracts/studio-shot-task.schema.json') { try { validateStudioTask(payload); } catch(e) { errors.push(e.code??e.message); } }
   const schemaKind = document?.properties?.kind?.const;
   const contracts = options.contracts ?? (["cineweave_codex_workflow_plan", "cineweave_codex_shot_compiler_plan"].includes(schemaKind) ? await loadMatchingContracts(absoluteSchema) : null);
-  validateContractSemantics(payload, document, errors, contracts);
   const unverified = [];
+  validateContractSemantics(payload, document, errors, contracts, unverified);
   if (schemaKind === "cineweave_codex_prompt_projection_plan" && errors.length === 0) {
     const integrity = validateProjectionIntegrity(payload);
     errors.push(...integrity.errors); unverified.push(...integrity.unverified);
