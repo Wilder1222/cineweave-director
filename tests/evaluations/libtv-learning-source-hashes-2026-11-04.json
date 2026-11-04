@@ -1,0 +1,60 @@
+{
+  "initialFourProject": [
+    {
+      "path": "skills/cineweave-director/SKILL.md",
+      "sha256": "2d0094b2347c7588de1b8a2a27fbdf41f54990b152d0227f5b2d7c7858a1cb15"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/film-craft-study.md",
+      "sha256": "c91d3710c1e4f13b088edd14eed48141e3224a11c80058eaa9dc2dc216559273"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/reference-evidence.md",
+      "sha256": "91164ed788211068e642b8d3fa574498eb4df568178b7b8511d729aa36c5cf38"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/production-plan.md",
+      "sha256": "0f7349903569355d363376ca2175a222ecbc3c04d24155b10faa2c96fc97c16e"
+    }
+  ],
+  "expandedTenProject": [
+    {
+      "path": "skills/cineweave-director/SKILL.md",
+      "sha256": "2d0094b2347c7588de1b8a2a27fbdf41f54990b152d0227f5b2d7c7858a1cb15"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/film-craft-study.md",
+      "sha256": "2473d5dc328ba59697b743c24556175a325d328658251658a78f7b021c5c94d4"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/reference-evidence.md",
+      "sha256": "41ef9866afb6c3f7df3929df509a0638a81a96ef1a960fdc0992aee39c831d83"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/production-plan.md",
+      "sha256": "f7188f8f191bc197dda93b388905ead792a91ba232677e1e337f6ee1863ef725"
+    }
+  ],
+  "publicationIntegration": {
+    "baseCommit": "c0db9a44e211874b67279a2d5bc5a1dee2f44c69",
+    "hashBasis": "SHA-256 of exact submission source file bytes; independent of historical trial bindings",
+    "files": [
+      {
+        "path": "skills/cineweave-director/SKILL.md",
+        "sha256": "455f5bf24a2355b5462605a8cc7966787d2e96d796942738afa6d22e6fed7bf3"
+      },
+      {
+        "path": "skills/cineweave-director/references/optional/film-craft-study.md",
+        "sha256": "2473d5dc328ba59697b743c24556175a325d328658251658a78f7b021c5c94d4"
+      },
+      {
+        "path": "skills/cineweave-director/references/routes/reference-evidence.md",
+        "sha256": "db050a0a6066d926a10dae7e42398db2ee648e79b97d02ee6a77e2e79bf29f11"
+      },
+      {
+        "path": "skills/cineweave-director/references/routes/production-plan.md",
+        "sha256": "f7188f8f191bc197dda93b388905ead792a91ba232677e1e337f6ee1863ef725"
+      }
+    ]
+  }
+}
