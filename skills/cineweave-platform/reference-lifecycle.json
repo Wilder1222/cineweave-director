@@ -1,5 +1,5 @@
 {
-  "catalogVersion": "3.2.0",
+  "catalogVersion": "3.3.0",
   "skill": "cineweave-director",
   "authority": {
     "routeOwnership": "contracts.json#/routes",
@@ -62,6 +62,19 @@
         "story",
         "storyboard_rhythm",
         "production_plan"
+      ]
+    },
+    {
+      "path": "references/optional/project-workflow.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "multi_route",
+        "continuity",
+        "story",
+        "character",
+        "storyboard_rhythm",
+        "production_plan",
+        "review_repair"
       ]
     },
     {

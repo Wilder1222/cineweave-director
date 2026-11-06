@@ -94,10 +94,10 @@ npm run test:bundle
 
 创作入口保留决定下一步所需的信息。测试数据移入 `tests/evaluations/`；维护审计不进入日常创作指令。机器契约保留为可选结构化交付，不继续扩张为运行时或生成平台。清理的目标是减少创作上下文负担，而非单纯降低文件数。
 
-插件安装固定 `v3.2.0`；历史 `v3.1.0` 继续保留：
+插件安装固定 `v3.3.0`；历史 `v3.1.0` 继续保留：
 
 ```bash
-codex plugin marketplace add Wilder1222/cineweave-director --ref v3.2.0
+codex plugin marketplace add Wilder1222/cineweave-director --ref v3.3.0
 codex plugin add cineweave-director@cineweave-director
 ```
 

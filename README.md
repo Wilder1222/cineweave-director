@@ -76,10 +76,10 @@
 
 ## 安装与使用
 
-本版为 `3.2.0`，安装使用固定版本标签 `v3.2.0`；旧 `v3.1.0` 不包含本版的统一入口和影视参考库。完整工作流包含四个 `skills/` 目录，从 `$cineweave-director` 开始。内部三个 Skill 由入口明确交接，不自动作为独立用户入口。不要只复制 `SKILL.md`，各目录都需要相邻参考与脚本。
+本版为 `3.3.0`，新增跨集项目、资产消费与镜头回流的按需工作流，保留最新主线的写作、平台适配和 Studio 输入能力。安装使用固定版本标签 `v3.3.0`；旧 `v3.1.0` 不包含本版的统一入口和影视参考库。完整工作流包含四个 `skills/` 目录，从 `$cineweave-director` 开始。内部三个 Skill 由入口明确交接，不自动作为独立用户入口。不要只复制 `SKILL.md`，各目录都需要相邻参考与脚本。
 
 ```bash
-codex plugin marketplace add Wilder1222/cineweave-director --ref v3.2.0
+codex plugin marketplace add Wilder1222/cineweave-director --ref v3.3.0
 codex plugin add cineweave-director@cineweave-director
 ```
 
@@ -120,7 +120,7 @@ npm run validate:bundle
 npm run test:bundle
 ```
 
-修改 schema 或规范示例后先执行 `npm run contracts:index`。校验同时覆盖本地章节链接和隔离包内工具。开发评测留在 `tests/evaluations/`，不随 Skill 分发。
+修改 schema 或规范示例后先执行 `npm run contracts:index`。校验同时覆盖本地章节链接和隔离包内工具。开发评测留在 `tests/evaluations/`，不随 Skill 分发。跨集项目与镜头回流的范围、合成案例和验收边界见[本次工程记录](tests/evaluations/jimeng-workflow-release-2026-11-06.md)。
 
 多 Skill 的目标边界、共享契约与编排验证见[拆分和编排计划](tests/evaluations/cineweave-skill-split-orchestration-plan-2026-10-12.md)，实际启用与逐阶段审阅见[执行记录](tests/evaluations/cineweave-split-execution-2026-10-12.md)。当前目录已启用导演、平台适配、参考分析与评审修复；以 `skill-catalog.json` 的启用集合为准。
 

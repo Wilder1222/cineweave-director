@@ -16,7 +16,7 @@ const SKILL_PREFIX = `skills/${SKILL_NAME}`;
 const PLUGIN_PATH = ".codex-plugin/plugin.json";
 const MARKETPLACE_PATH = ".agents/plugins/marketplace.json";
 const LICENSE_PATH = "LICENSE";
-const EXPECTED_VERSION = "3.2.0";
+const EXPECTED_VERSION = "3.3.0";
 // Canonical examples retain their immutable simulated receipt provenance.
 const EXPECTED_FIXTURE_RELEASE_REF = "v3.1.0";
 const EXPECTED_ROUTES = [
@@ -162,6 +162,8 @@ const EXPECTED_SOURCE_DIRECTORIES = new Map([
     "skill-catalog.test.mjs",
     "skill-bundles.test.mjs",
     "fixtures/ensemble-handoff.json",
+    "evaluations/jimeng-workflow-release-2026-11-06.md",
+    "evaluations/jimeng-workflow-workbook-2026-11-05.json",
     "evaluations/libtv-learning-2026-11-04.md",
     "evaluations/libtv-learning-2026-11-04.json",
     "evaluations/libtv-learning-source-hashes-2026-11-04.json",

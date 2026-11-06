@@ -203,7 +203,7 @@ function canonicalProfileFiles({ lifecycle, index }) {
     ...HELPERS.map((name) => `${CANONICAL_ROOT}/scripts/${name}`),
   ];
   assert(Array.isArray(lifecycle.references), "lifecycle.references must be an array");
-  assert(lifecycle.references.length === 48, "Canonical profile must contain exactly 48 references");
+  assert(lifecycle.references.length === 49, "Canonical profile must contain exactly 49 references");
   for (const [position, entry] of lifecycle.references.entries()) {
     assertObject(entry, `lifecycle.references[${position}]`);
     const path = normalizePath(entry.path, `Lifecycle reference ${position}`);

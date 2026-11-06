@@ -116,6 +116,7 @@ description: "CineWeave 创作工作流的统一入口，将需求转为中文�
 - 寻找电影／电视剧参考、宋明题材、自然仙侠，或比较真人与动漫时，先读[影视作品参考库](references/optional/film-television-reference-library.md)，再加载真人12方向或动漫分册的相关卡。它与8张导演手法卡、镜头技巧词典分别使用；参考名称不替代具体方案，也不改写已有身份、时代与视觉锁定。
 - 当用户指定 Higgsfield、Cinema Studio 或要求学习其 AI 短片教程时，按需读[Higgsfield 电影短片工作流](references/optional/video-platform-adaptation.md#higgsfield-电影短片工作流)；先完成中立导演母稿，再交平台能力映射真实 Elements／References／面板设置。教程视频章节与官方功能要区分，不能把公布的上限当目标账号已验证能力。
 - 多阶段任务读[工作模型](references/core/operating-model.md)及当前阶段路由；人物、服饰或场景探索读[视觉开发](references/optional/visual-development.md)。
+- 多集短剧、跨时期／多造型人物、共享资产反查或恢复制作项目时读[跨集项目与镜头回流](references/optional/project-workflow.md)，用同一集／场／镜索引串联已有母稿、资产、预演与候选；单项创作不要求填写整表。
 - 复用设定读[连续性](references/core/visual-bible-and-continuity.md)；版本或正式设定冲突读[产物控制](references/core/artifact-control-and-precedence.md)；素材分析与权利判断读[参考证据](references/core/reference-evidence-and-rights.md)。
 - 跨产物修订或恢复项目读[草稿与变更影响](references/optional/drafts-and-change-impact.md)，保留无关结果，单项创作无需依赖图。
 - 技法、诊断和专业制作资料沿对应路由按问题读取；[加载清单](reference-lifecycle.json)记录分发及适用条件，并非必读清单。不要一次加载全部资料。
