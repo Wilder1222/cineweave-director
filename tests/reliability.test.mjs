@@ -6,7 +6,7 @@ import { tmpdir } from "node:os";
 import { fileURLToPath } from "node:url";
 import { spawnSync } from "node:child_process";
 import { validateMarkdownFiles } from "../scripts/markdown-links.mjs";
-import { repositoryRoot, validateRepository } from "../scripts/validate-repository.mjs";
+import { repositoryRoot, validateRepository, validateRepositoryArtifacts } from "../scripts/validate-repository.mjs";
 import { FORMAT, NODE_TAGS, validateVideoWorkbook } from "../skills/cineweave-director/scripts/check-video-plan.mjs";
 import { checkCameraLanguageDecisions, checkShotReview } from "../skills/cineweave-director/scripts/check-shot-review.mjs";
 import { checkStageArtifacts, FORMAT as STAGE_ARTIFACT_FORMAT } from "../scripts/check-stage-artifacts.mjs";
@@ -102,10 +102,24 @@ test("repository regression command ownership preserves release and source bound
   const root = join(directory, "repository");
   const ignored = new Set([".git", ".build", "node_modules"]);
   try {
+    const artifacts = validateRepositoryArtifacts(JSON.parse(await readFile(join(repositoryRoot, "repository-artifacts.json"), "utf8")));
+    const artifactRoots = Object.keys(artifacts.directories);
     await cp(repositoryRoot, root, {
       recursive: true,
-      filter: (source) => !ignored.has(relative(repositoryRoot, source).split(sep)[0]),
+      filter: (source) => {
+        const local = relative(repositoryRoot, source).split(sep).join("/");
+        return !ignored.has(local.split("/")[0]) &&
+          !artifactRoots.some((artifactRoot) => local === artifactRoot || local.startsWith(`${artifactRoot}/`));
+      },
     });
+    await writeFile(join(root, "repository-artifacts.json"), JSON.stringify({ format: "cineweave-repository-artifacts/v1", directories: {} }) + "\n");
+    // These two development documents navigate the omitted production archive.
+    // Keep their prose and all other links under validation in the fixture only.
+    for (const name of ["baby-family-short-video-topics.md", "pixar-family-animation-feasibility-2026-11-06.md"]) {
+      const path = join(root, "tests", "evaluations", name);
+      const text = await readFile(path, "utf8");
+      await writeFile(path, text.replace(/\[([^\]\n]+)\]\(baby-animation-production\/[^)\n]+\)/gu, "$1"));
+    }
     const packagePath = join(root, "package.json");
     const workflowPath = join(root, ".github", "workflows", "validate.yml");
     const originalPackage = await readFile(packagePath, "utf8");

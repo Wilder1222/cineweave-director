@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { mkdir, mkdtemp, readFile, readdir, rm, writeFile } from "node:fs/promises";
+import { mkdir, mkdtemp, readFile, readdir, rm, symlink, writeFile } from "node:fs/promises";
 import { tmpdir } from "node:os";
 import { dirname, join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -8,6 +8,7 @@ import { parseJsonStrict } from "../scripts/canonical-json.mjs";
 import {
   createSkillExportPlan, loadSkillCatalog, resolveImplementationOwner, validateSkillCatalog,
 } from "../scripts/skill-catalog.mjs";
+import { validateRepositoryArtifacts, validateRepositoryArtifactTrees } from "../scripts/validate-repository.mjs";
 
 const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const NAMES = ["cineweave-director", "cineweave-platform", "cineweave-reference", "cineweave-review"];
@@ -15,6 +16,7 @@ const [DIRECTOR, PLATFORM, REFERENCE, REVIEW] = NAMES;
 const CORE = `skills/${DIRECTOR}`;
 const PROJECTION = "cineweave_codex_prompt_projection_plan";
 const HELPERS = [
+  "adapt-studio-input.mjs",
   "check-delivery.mjs", "check-video-plan.mjs", "check-audio-returns.mjs",
   "check-shot-review.mjs", "check-change-impact.mjs", "parse-json.mjs", "read-style-card.mjs",
 ];
@@ -254,16 +256,16 @@ test("temporary catalogs load exact identities and reject filesystem-controlled 
   await assert.rejects(() => loadSkillCatalog(source), /fields mismatch/);
 });
 
-test("P1 plugin contains the registered 176 files; director leaf contains 175 files", () => {
+test("P1 plugin contains the registered 179 files; director leaf contains 178 files", () => {
   const value = fixture();
   const plugin = plan(value);
-  assert.equal(plugin.files.length, 176);
-  assert.equal(plugin.sourceFiles.length, 176);
+  assert.equal(plugin.files.length, 179);
+  assert.equal(plugin.sourceFiles.length, 179);
   assert.deepEqual(plugin.files, value.files);
   assert.deepEqual(plugin.exports.map((entry) => entry.source), value.files);
   assert.ok(plugin.exports.every((entry) => entry.source === entry.destination));
   assert.deepEqual(plugin.skills.map((skill) => skill.name), [DIRECTOR]);
-  assert.equal(plugin.skills[0].files.length, 174);
+  assert.equal(plugin.skills[0].files.length, 177);
   assert.equal(plugin.skills[0].root, CORE);
   assert.equal(plugin.skills[0].sourceRoot, CORE);
   assert.equal(plugin.skills[0].destinationRoot, CORE);
@@ -271,8 +273,8 @@ test("P1 plugin contains the registered 176 files; director leaf contains 175 fi
   assert.equal(plugin.skills[0].targetKinds.length, 43);
 
   const leaf = plan(value, { type: "skill", name: DIRECTOR });
-  assert.equal(leaf.files.length, 175);
-  assert.equal(leaf.sourceFiles.length, 175);
+  assert.equal(leaf.files.length, 178);
+  assert.equal(leaf.sourceFiles.length, 178);
   assert.equal(leaf.skills[0].root, ".");
   assert.equal(leaf.skills[0].destinationRoot, ".");
   assert.ok(leaf.files.includes("SKILL.md") && leaf.files.includes("LICENSE"));
@@ -281,18 +283,18 @@ test("P1 plugin contains the registered 176 files; director leaf contains 175 fi
   assert.deepEqual(leaf.skills[0].files, sort(value.files.filter((path) => path.startsWith(`${CORE}/`)).map((path) => path.slice(CORE.length + 1))));
 });
 
-test("enabled specialists reuse all 174 core files and replace only their two authoring surfaces", async (t) => {
+test("enabled specialists reuse all 177 core files and replace only their two authoring surfaces", async (t) => {
   for (let stage = 2; stage <= 4; stage += 1) {
     await t.test(`stage ${stage}`, () => {
       const value = fixture(stage);
       const exported = plan(value);
-      assert.equal(exported.files.length, 2 + 174 * stage);
-      assert.equal(exported.sourceFiles.length, 176 + 2 * (stage - 1));
+      assert.equal(exported.files.length, 2 + 177 * stage);
+      assert.equal(exported.sourceFiles.length, 179 + 2 * (stage - 1));
       assert.equal(exported.exports.length, exported.files.length, "one source may have several destinations");
       assert.deepEqual(exported.skills.map((skill) => skill.name), NAMES.slice(0, stage));
       for (const skill of exported.skills) {
-        assert.equal(skill.files.length, 174);
-        assert.equal(skill.exports.length, 174);
+        assert.equal(skill.files.length, 177);
+        assert.equal(skill.exports.length, 177);
         assert.equal(skill.sourceRoot, skill.name === DIRECTOR ? CORE : `skill-sources/${skill.name}`);
         for (const key of ["contracts", "lifecycle", "index"]) assert.equal(skill[key], value[key]);
         assert.deepEqual(skill.actualKinds, contracts.contractKinds.filter((kind) => {
@@ -306,7 +308,7 @@ test("enabled specialists reuse all 174 core files and replace only their two au
           assert.equal(entry.source, `${ownEntry ? skill.sourceRoot : CORE}/${local}`);
         }
         const leaf = plan(value, { type: "skill", name: skill.name });
-        assert.equal(leaf.files.length, 175);
+        assert.equal(leaf.files.length, 178);
         assert.deepEqual(leaf.exports, sort([...skill.exports.map((entry) => entry.destination.slice(skill.destinationRoot.length + 1)), "LICENSE"]).map((destination) => ({
           source: destination === "LICENSE" ? "LICENSE" : skill.exports.find((entry) => entry.destination === `${skill.destinationRoot}/${destination}`).source,
           destination,
@@ -323,7 +325,7 @@ test("export plan does not discover or create authoring roots from disk", async 
   await writeFile(join(source, "skills", "cineweave-extra", "rogue.md"), "must not export", "utf8");
   const model = validateSkillCatalog(await loadSkillCatalog(source), value);
   const exported = createSkillExportPlan(source, model, value);
-  assert.equal(exported.files.length, 350);
+  assert.equal(exported.files.length, 356);
   assert.ok(exported.sourceFiles.includes(`skill-sources/${PLATFORM}/SKILL.md`));
   assert.ok(!exported.files.some((path) => path.includes("cineweave-extra")));
   assert.deepEqual(sort(await readdir(source)), ["skill-catalog.json", "skills"]);
@@ -374,7 +376,7 @@ test("manifest paths and resource counts cannot silently expand or shrink the sh
   const cases = [
     ["missing reference", (value) => { value.lifecycle.references.pop(); }, /exactly 55 references/],
     ["extra reference", (value) => { value.lifecycle.references.push({ path: "references/extra.md" }); }, /exactly 55 references/],
-    ["missing support schema", (value) => { value.index.supportSchemas.pop(); }, /exactly 2 support schemas/],
+    ["missing support schema", (value) => { value.index.supportSchemas.pop(); }, /exactly 4 support schemas/],
     ["duplicate reference", (value) => { value.lifecycle.references[0].path = value.lifecycle.references[1].path; }, /contains duplicate paths/],
     ["duplicate schema", (value) => { value.index.contracts[0].schema = value.index.contracts[1].schema; }, /contains duplicate paths/],
     ["duplicate example", (value) => { value.index.contracts[0].example = value.index.contracts[1].example; }, /contains duplicate paths/],
@@ -414,4 +416,67 @@ test("owner resolution and plans reject forged derived maps or a second canonica
     conflicting[key].skillVersion = "conflicting-authority";
     assert.throws(() => createSkillExportPlan(ROOT, model, conflicting), /does not match catalog authority/);
   }
+});
+
+const artifactManifest = (directories = {}) => ({ format: "cineweave-repository-artifacts/v1", directories });
+
+test("repository record declarations remain explicit and do not mutate their source", () => {
+  const document = artifactManifest({
+    ".codex": ["hooks.json"],
+    "studio-review": ["nested/review.json", "summary.md"],
+    "tests/evaluations/baby-animation-production": ["README.md"],
+  });
+  const before = clone(document);
+  const checked = validateRepositoryArtifacts(document);
+  assert.deepEqual(new Set(checked.directories["studio-review"]), new Set(document.directories["studio-review"]));
+  assert.deepEqual(document, before);
+  assert.deepEqual(validateRepositoryArtifacts(artifactManifest()).directories, {});
+});
+
+test("repository record declarations reject widened roots, escapes, duplicates and environment configuration", async (t) => {
+  const cases = [
+    ["unsupported root", artifactManifest({ research: ["notes.md"] }), /Unsupported repository artifact root/u],
+    ["parent escape", artifactManifest({ "studio-review": ["../outside.md"] }), /not normalized or escapes/u],
+    ["absolute path", artifactManifest({ "studio-review": ["/outside.md"] }), /must be relative/u],
+    ["backslash path", artifactManifest({ "studio-review": ["nested\\review.md"] }), /must use forward slashes/u],
+    ["dot segment", artifactManifest({ "studio-review": ["nested/./review.md"] }), /not normalized or escapes/u],
+    ["duplicate path", artifactManifest({ "studio-review": ["review.md", "review.md"] }), /duplicate paths/u],
+    ["case collision", artifactManifest({ "studio-review": ["Review.md", "review.md"] }), /case-colliding path/u],
+    ["environment-specific MCP config", artifactManifest({ ".codex": ["config.toml"] }), /hooks\.json|inventory|mismatch/u],
+    ["undeclared top-level field", { ...artifactManifest(), discover: true }, /fields mismatch/u],
+  ];
+  for (const [label, document, error] of cases) {
+    await t.test(label, () => assert.throws(() => validateRepositoryArtifacts(document), error));
+  }
+});
+
+test("repository record trees reject unlisted files, missing files, empty directories and junctions", async (t) => {
+  const source = await temporarySource(t);
+  const empty = artifactManifest();
+  await assert.doesNotReject(validateRepositoryArtifactTrees(source, empty));
+  const records = join(source, "studio-review");
+  await mkdir(records);
+  await writeFile(join(records, "review.md"), "# Explicit authored record\n");
+  await assert.rejects(validateRepositoryArtifactTrees(source, empty), /Unregistered repository artifact root/u);
+  const declared = artifactManifest({ "studio-review": ["review.md"] });
+  await assert.doesNotReject(validateRepositoryArtifactTrees(source, declared));
+  await writeFile(join(records, "unlisted.md"), "unlisted\n");
+  await assert.rejects(validateRepositoryArtifactTrees(source, declared), /mismatch.*extra:.*unlisted\.md/u);
+  await rm(join(records, "unlisted.md"));
+  await assert.rejects(validateRepositoryArtifactTrees(source, artifactManifest({ "studio-review": ["review.md", "missing.md"] })), /mismatch.*missing:.*missing\.md/u);
+  await mkdir(join(records, "undeclared-empty"));
+  await assert.rejects(validateRepositoryArtifactTrees(source, declared), /Unexpected directory/u);
+  await rm(join(records, "undeclared-empty"), { recursive: true });
+  const outside = join(source, "outside");
+  await mkdir(outside);
+  await writeFile(join(outside, "secret.md"), "must not follow a link\n");
+  await symlink(outside, join(records, "redirect"), process.platform === "win32" ? "junction" : "dir");
+  await assert.rejects(validateRepositoryArtifactTrees(source, artifactManifest({ "studio-review": ["review.md", "redirect/secret.md"] })), /Symbolic links and junctions are not allowed/u);
+  assert.equal(await readFile(join(outside, "secret.md"), "utf8"), "must not follow a link\n");
+});
+
+test("repository record manifest loading rejects duplicate JSON keys before tree validation", async (t) => {
+  const source = await temporarySource(t);
+  await writeFile(join(source, "repository-artifacts.json"), '{"format":"cineweave-repository-artifacts/v1","directories":{},"directories":{}}');
+  await assert.rejects(validateRepositoryArtifactTrees(source), /Duplicate object key/u);
 });

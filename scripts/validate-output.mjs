@@ -12,6 +12,8 @@ import { findExactRegistryMatches, resolveExactArtifact, validateCapabilityResol
 import { validateProjectionIntegrity } from "./validate-prompt-projection.mjs";
 import { validateShotCompilerContext } from "./validate-shot-compiler.mjs";
 
+import { validateStudioInput, validateStudioTask, checkTaskFreshness } from '../skills/cineweave-director/scripts/adapt-studio-input.mjs';
+
 const scriptDirectory = dirname(fileURLToPath(import.meta.url));
 const SUPPORTED_DIALECT = "https://json-schema.org/draft/2020-12/schema";
 const SUPPORTED_FORMATS = new Set(["date", "date-time", "uri"]);
@@ -1304,6 +1306,8 @@ export async function validatePayload(schemaPath, payload, options = {}) {
     schemaPath: absoluteSchema,
     activeReferences: new Set(),
   }, "$", errors);
+  if(errors.length===0 && document.$id==='https://cineweave.dev/contracts/studio-director-input.schema.json') { try { validateStudioInput(payload,{projectId:options.projectId??payload.project_id}); } catch(e) { errors.push(e.code??e.message); } }
+  if(errors.length===0 && document.$id==='https://cineweave.dev/contracts/studio-shot-task.schema.json') { try { validateStudioTask(payload); } catch(e) { errors.push(e.code??e.message); } }
   const schemaKind = document?.properties?.kind?.const;
   const contracts = options.contracts ?? (["cineweave_codex_workflow_plan", "cineweave_codex_shot_compiler_plan"].includes(schemaKind) ? await loadMatchingContracts(absoluteSchema) : null);
   const unverified = [];
@@ -1359,4 +1363,47 @@ if (process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href) 
     console.error("无法完成契约校验，原始诊断：\n" + (error instanceof Error ? error.stack || error.message : String(error)));
     process.exitCode = 2;
   });
+}
+
+/** Validate director-authored design against existing contracts and explicit
+ * Studio-instance links. This does not infer performance or inspect media. */
+export async function validateStudioShotDesign(task, {shotId,currentInput,bindings=[]}={}) {
+ const errors=[],unverified=['Source authenticity requires authenticated Studio retrieval.','Identity and costume visual adherence require media inspection.','No image, video or audio has been generated.'];
+ try{
+  validateStudioTask(task);
+  if(!checkTaskFreshness(task,currentInput).valid)throw Error('SOURCE_STALE');
+  const shot=task.shots.find(x=>x.shotId===shotId);
+  if(!shot?.design)throw Error('SHOT_DESIGN_REQUIRED');
+  const root=resolve(scriptDirectory,'../skills/cineweave-director/resources/contracts/schemas');
+  const checks=[['shot-spec',shot.design]];const seen=new Set(),linked=[];
+  for(const entry of bindings){
+   const cast=task.sourceRefs.cast.find(x=>x.instance.id===entry.studioInstanceId);
+   if(!cast||seen.has(entry.studioInstanceId))throw Error('CAST_BINDING_SCOPE_MISMATCH');seen.add(entry.studioInstanceId);
+   const {document,characterSpec,appearanceState,revision}=entry;
+   if(!Number.isSafeInteger(revision)||revision<1)throw Error('BINDING_REVISION_REQUIRED');
+   checks.push(['character-binding',document],['character-spec',characterSpec],['character-appearance-state',appearanceState]);
+   const ch={characterId:characterSpec.characterId,version:characterSpec.version,contentHash:sha256Bytes(canonicalize(characterSpec))};
+   const ap={appearanceStateId:appearanceState.appearanceStateId,version:appearanceState.version,contentHash:sha256Bytes(canonicalize(appearanceState))};
+   if(!deepEqual(document.characterSpecRef,ch)||!deepEqual(appearanceState.characterSpecRef,ch)||!deepEqual(document.appearanceStateRef,ap))throw Error('DIRECTOR_REFERENCE_MISMATCH');
+   const anchors=new Set(characterSpec.identityCore.immutableAnchors.map(x=>x.anchorId));
+   if(document.activeAnchorIds.some(x=>!anchors.has(x)))throw Error('IDENTITY_ANCHOR_MISMATCH');
+   const ref={kind:'character_binding',id:document.bindingId,version:revision,contentHash:sha256Bytes(canonicalize(document))};
+   if(!shot.design.bindings.characters.some(x=>deepEqual(x,ref)))throw Error('SHOT_BINDING_REFERENCE_MISMATCH');
+   linked.push({studioInstanceId:entry.studioInstanceId,sourceFingerprint:task.sourceFingerprint,studio:structuredClone(cast),director:ref,characterSpecRef:ch,appearanceStateRef:ap});
+  }
+  if(bindings.length!==shot.design.bindings.characters.length)throw Error('UNRESOLVED_SHOT_CHARACTER_BINDINGS');
+  for(const [name,payload] of checks){const r=await validatePayload(resolve(root,name+'.schema.json'),payload);errors.push(...r.errors.map(e=>name+': '+e));unverified.push(...r.unverified);}
+  return {valid:errors.length===0,errors,unverified,sourceBindings:linked,taskId:task.taskId,taskRevision:task.revision,sourceFingerprint:task.sourceFingerprint,shotId,shotRevision:shot.revision,designSha256:shot.designSha256,generationStatus:'NOT_EXECUTED',productionReady:false};
+ }catch(e){return {valid:false,errors:[...errors,e.code??e.message],unverified,sourceBindings:[],generationStatus:'NOT_EXECUTED',productionReady:false};}
+}
+
+/** A previous structural validation is scoped to one exact task/shot revision.
+ * It never upgrades approval or establishes transport authority. */
+export function isStudioShotValidationCurrent(task, result, {currentInput}={}) {
+ try {
+  validateStudioTask(task);
+  if(!checkTaskFreshness(task,currentInput).valid)return false;
+  const shot=task.shots.find(x=>x.shotId===result?.shotId);
+  return result?.valid===true && result.taskId===task.taskId && result.taskRevision===task.revision && Boolean(shot) && result.sourceFingerprint===task.sourceFingerprint && result.shotRevision===shot.revision && result.designSha256===shot.designSha256;
+ } catch { return false; }
 }

@@ -52,11 +52,19 @@ npm run test:bundle
 
 分发清单由声明的基础资源、生命周期和契约索引派生，不硬编码文件数。构建必须字节相同，不转换、扁平化 schema、改路径、生成提示词或引入隐藏依赖。schema 通过不能代替代表性新任务评审。
 
-四个随包 CLI `check-delivery.mjs`、`check-video-plan.mjs`、`check-shot-review.mjs`、`check-change-impact.mjs` 保持只读、自包含；`parse-json.mjs` 与 `check-audio-returns.mjs` 是同目录依赖，安装须保留完整六文件脚本目录。输入变化同步指南与回归，拒绝重复键、无效 Unicode 标量和非有限数。视频声明的 `checkedAt` 使用有效公历 `YYYY-MM-DD`，不证明来源真实性、新鲜度或账号适用性。逐镜评审分别检查 `valid`、`coverageComplete`、`reviewComplete`。
+随包 CLI 及其同目录依赖保持只读、自包含，安装须保留分发清单登记的完整脚本目录，包括 Studio 输入适配和风格卡读取工具。输入变化同步指南与回归，拒绝重复键、无效 Unicode 标量和非有限数。视频声明的 `checkedAt` 使用有效公历 `YYYY-MM-DD`，不证明来源真实性、新鲜度或账号适用性。逐镜评审分别检查 `valid`、`coverageComplete`、`reviewComplete`。
 
 回归测试路径只在 `package.json` 的 `test` 命令维护，CI 先直接运行源码检查器再使用 `npm test`；仓库检查器从既有测试文件白名单核对精确集合，拒绝遗漏、重复、未登记文件、额外命令及 `pretest`／`posttest` 等生命周期脚本。其他脚本、固定 action SHA、只读权限及发布标签命令仍按准确配置校验。
 
 本地 Markdown 验证覆盖分发知识、入口和开发报告中的文件与章节链接。CI 配置 Windows/Linux、Node 22/24 矩阵，`test:bundle` 从仓库外副本调用工具并检查退出状态与只读行为；本地通过不代表远端矩阵已运行。
+
+### 开发资料的精确登记
+
+[repository-artifacts.json](repository-artifacts.json) 单独登记 `.codex/hooks.json`、`studio-review/` 和 `tests/evaluations/baby-animation-production/` 的开发资料，使用固定根目录下的准确相对文件路径。它不声明运行资源、领域契约或分发范围；Skill 仍只从原有目录、生命周期与契约索引派生。新增资料须更新清单；未知根、重复或越界路径、大小写冲突、缺失文件、额外文件、空子目录和符号链接均被拒绝。空的 `research/` 可有可无，加入实际资料前需先制定准确登记范围。
+
+清单只核对路径，不重写原始资料；`tests/evaluations/` 与 `studio-review/` 的冻结正文按 `.gitattributes` 保留原字节及已有哈希。唯一可选的本地依赖缓存是 `studio-review/2026-11-06/luigi-adaptation/production/tools/node_modules/`：校验器只在该准确路径确认其为真实目录后跳过内容，它不进入 Git 资料清单或运行包；其他路径的依赖目录照常拒绝。隔离测试可移除已声明的资料根并提供合法空清单，再用小型临时资料验证登记规则，无需复制整套生产档案。
+
+清单逐文件声明的冻结档案保留历史正文与链接，不参与活跃开发 Markdown 的链接检查；资料树仍须满足完整的精确文件集合校验。此规则只排除清单中的准确文件路径，未声明的 Markdown 不因此豁免；入口、分发知识及其他开发报告继续检查文件与章节链接。
 
 ### 创作行为评测
 
@@ -94,10 +102,10 @@ npm run test:bundle
 
 创作入口保留决定下一步所需的信息。测试数据移入 `tests/evaluations/`；维护审计不进入日常创作指令。机器契约保留为可选结构化交付，不继续扩张为运行时或生成平台。清理的目标是减少创作上下文负担，而非单纯降低文件数。
 
-插件安装固定 `v3.2.0`；历史 `v3.1.0` 继续保留：
+插件安装固定 `v3.3.0`；历史 `v3.1.0` 继续保留：
 
 ```bash
-codex plugin marketplace add Wilder1222/cineweave-director --ref v3.2.0
+codex plugin marketplace add Wilder1222/cineweave-director --ref v3.3.0
 codex plugin add cineweave-director@cineweave-director
 ```
 

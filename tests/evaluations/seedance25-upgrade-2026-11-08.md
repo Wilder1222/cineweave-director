@@ -1,5 +1,7 @@
 # Seedance 2.5 设计与输出优化 · 2026-11-08
 
+本记录分两个阶段：原始创作与工程试跑使用原工作区含历史未提交内容的3.2.2草稿（55份参考、698个分发文件）；提交阶段仅移植本轮精确增量到远端3.3.0（49份参考、678个分发文件）。597项回归属于原始草稿快照，主线集成的实际检查另记于文末；两组数量不互相替代。
+
 ## 研究依据与范围
 
 本轮依据用户指定的[官方提示词指南](https://docs.volcengine.com/docs/ark/seedance-2-5-prompt-guide?lang=zh)，主站读取超时后读取同一内容的[官方文档镜像](https://console.volcengine.com/ark/region%3Acn-beijing/docs/seedance-2-5-prompt-guide)，页面标注更新于 2026-11-03。结合[模型教程](https://docs.volcengine.com/docs/ark/seedance-2-5?lang=zh)及[任务 API](https://docs.volcengine.com/docs/ark/create-video-generation-task-api?lang=zh)区分写作建议和接口约束。指南链接的[飞书模板](https://bytedance.larkoffice.com/docx/OsiUdR1OxoDqvnxsK8LczYx7nPd)需要登录，本轮未读取，不声称采用其内容。
@@ -73,3 +75,19 @@
 | 空白检查 | `git diff --check` 对本轮受影响的受跟踪文件通过。新增文本采用UTF-8并单独核对。 |
 
 完整回归与首次包内工具测试之后，末轮只调整延长起态条件、最少交接文案及评测登记／记录；没有修改契约或工具算法。最终指引另做源码／构建／包闭包校验和对应文字复测。测试副本保留当前未提交源码，没有用旧HEAD替代本轮状态；这不是用户现有安装更新、Git发布或真实视频生成结果。
+
+## 主线提交集成验证
+
+提交底座为远端 `d3d89a76e2a86fa413b0fc28e7209364f4d67c67`（3.3.0）。按修改前哈希反向重建五份作者原稿，全部SHA256与初始记录一致，再提取本轮增量；没有以旧HEAD或远端全文差异冒充本轮范围。平台段落与CHANGELOG上下文有差异，仅迁移本轮新增句和11月8日小节，保留3.3.0、Higgsfield、Studio、阶段关卡与Kling／Wan内容。
+
+隔离工作树分支为 `codex/seedance25-guide-20261108`，提交范围共15文件：五份作者正文、七份同步副本、校验器中的两行评测登记及两份评测记录。版本和标签保持现状；本次是主线提交，不重新发布3.3.0标签。原工作区不参与暂存、分支切换或合并，另保存4541条路径的内容／缺失状态及index基线供推送后核对。
+
+| 当前3.3.0集成检查 | 实际结果 |
+| --- | --- |
+| 源码、契约及引用校验 | `npm run validate`通过；49份参考、52根契约、678个分发文件。 |
+| 专业副本同步 | `skills:sync`更新本轮7项，`skills:sync:check`比较507项全部同源。 |
+| 构建及包校验 | `npm run build`、`npm run validate:bundle`通过；678个文件与作者源字节一致。 |
+| 安装后工具矩阵 | `npm run test:bundle`通过，9项通过、0失败、0跳过，约82秒。 |
+| 归属与空白审阅 | 独立只读审阅确认未混入历史改动，`git diff --check`通过。 |
+
+597项完整回归是上一阶段证据；本提交的完整远端矩阵由推送触发，提交前不预记成功。真实视频和声音验收仍未执行。

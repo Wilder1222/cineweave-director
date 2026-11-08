@@ -93,7 +93,7 @@
     "skills/cineweave-director/references/optional/video-platform-adaptation.md": "4286ffb73ad0337197310b3a95c5280e2273547795a7ac91bd5cf295e76b751b"
   },
   "engineering": {
-    "scope": "当前登记开发清单及完整Skill作者源／派生副本的隔离副本；原工作区无关资料白名单阻断保持。",
+    "scope": "原工作区含历史未提交内容的3.2.2草稿清单及完整Skill作者源／派生副本的隔离副本；不是远端3.3.0集成测试。",
     "fullRegression": {
       "tests": 597,
       "pass": 597,
@@ -139,5 +139,68 @@
         "sha256": "b6b931c0de1bcb77c193d4c915403b427642c11690749d68a12314e40eeda422"
       }
     ]
+  },
+  "mainlineIntegration": {
+    "baseCommit": "d3d89a76e2a86fa413b0fc28e7209364f4d67c67",
+    "baseVersion": "3.3.0",
+    "method": "按修改前SHA256重建五份原稿，移植本轮精确增量；保留远端既有内容，平台上下文冲突仅迁移本轮新增句。",
+    "originalAuthorBaseline": [
+      {
+        "path": "skills/cineweave-director/SKILL.md",
+        "sha256": "CC6B8575DB752A54170A2292EEFD871D319C80508C7342B7E5F1F32C306FB0EC",
+        "bytes": 22777
+      },
+      {
+        "path": "skill-sources/cineweave-platform/SKILL.md",
+        "sha256": "D90A0E764E084E1F3A6E96F82155CE299EA6443FF1F6AD392291FBD147310BD4",
+        "bytes": 11747
+      },
+      {
+        "path": "skills/cineweave-director/references/optional/video-model-practices-2026-10.md",
+        "sha256": "53DAF1D498CE18A97D64D85DD70DB4A00F4A3FBC83E154B5E93FD28831D0F570",
+        "bytes": 35123
+      },
+      {
+        "path": "skills/cineweave-director/references/optional/video-platform-adaptation.md",
+        "sha256": "234ED9F51033927BBE5D198BE3E81C95FA663882A5D7EF2AF3E237F081967033",
+        "bytes": 36516
+      },
+      {
+        "path": "CHANGELOG.md",
+        "sha256": "FC104F49BBE12C6B8DABA9A431353C66A1251612A5C5C5F0B5EF6CB238C9AECC",
+        "bytes": 16041
+      }
+    ],
+    "sourceSha256": {
+      "skills/cineweave-director/SKILL.md": "7e851eb50f2adefba759c81567780a34fcdae6d181b71008d828a857d0944334",
+      "skill-sources/cineweave-platform/SKILL.md": "b817d8dbb679aebf6ca877925d26c5fd42cdf8bc5112a2907cbbfb4f8668b515",
+      "skills/cineweave-director/references/optional/video-model-practices-2026-10.md": "390fba0afc3a2e7df4acdb820181a11e4a892cf49e2744b3dffddd6b7bec7710",
+      "skills/cineweave-director/references/optional/video-platform-adaptation.md": "021db77c57c08f81f8af2aea4de0acd3878b4e1aa62b3979aea0391fe645a3a7"
+    },
+    "sourceValidation": true,
+    "derivedFilesCompared": 507,
+    "references": 49,
+    "rootContracts": 52,
+    "gates": {
+      "sourceValidation": true,
+      "syncCheck": {
+        "files": 507,
+        "byteIdentical": true
+      },
+      "build": {
+        "files": 678,
+        "byteIdentical": true
+      },
+      "bundleValidation": true,
+      "bundleSmoke": {
+        "tests": 9,
+        "pass": 9,
+        "fail": 0,
+        "skipped": 0,
+        "durationMs": 81618.6001
+      },
+      "fullRemoteMatrix": "由本次推送触发，提交前未预记成功",
+      "scopeReview": "独立只读审阅通过，15文件均属本轮范围"
+    }
   }
 }

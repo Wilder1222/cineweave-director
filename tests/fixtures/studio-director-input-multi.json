@@ -1,0 +1,660 @@
+{
+  "schema": "cineweave.director-input/v1",
+  "project_id": "ca68a550-15f6-4b1f-902c-b012c296c386",
+  "handoff": {
+    "id": "7b3e9e35855e3c74198d5f4ffb44b01932be63330f9b11b0f25019657c1e5071",
+    "sha256": "cb588d7cea0de1bda13de0962dbf96f3a6c189369cb1a70f5f9c3f9d1c7c7bcf"
+  },
+  "scene": {
+    "id": "4eab0b9909ce68be29560d81f7f5607404e0d037f39ae718ee172b2f7d3619ec",
+    "version": 1,
+    "sha256": "f84d92402b82ed1ca2c9dba1f790bfda94d0f2a63a2be468afac775e7795bcb4"
+  },
+  "title": "[FIXTURE] two-role scene",
+  "cast": [
+    {
+      "instance": {
+        "id": "2ba196c7939ec7d4710745e2d9eda4b4dd238a6aa9fe24da9c3aa95a39fe6491",
+        "version": 1,
+        "sha256": "734de6145ac9019ff419dcd04bcbbc27fb7c7cfc32965f2552be642b48769d63"
+      },
+      "role": {
+        "id": "3d99b29a378cdf0c77c8f016a524f3271ca148234ba421af1eb17a47341e9fc7",
+        "version": 1,
+        "sha256": "41d846f60b3a2e8adb20e594714fd197fef27d78e3bdf144d247e84623fa39fe",
+        "title": "Role"
+      },
+      "casting": {
+        "id": "e6130a47f1c63f5f84fdeba260858fb24744a555d325809ffa6d2a6b349ebec2",
+        "version": 1,
+        "sha256": "e47402540ddf7256ff29f6131eec5c7875b5713b824178f4f181c78a67108fa0"
+      },
+      "actor": {
+        "id": "99fc1894-2b3d-49fd-9426-6980068581df",
+        "name": "[FIXTURE] IP",
+        "profile_version": "ac595c7b679187e02b3b8459368aadae41d2b7b1cd954e01e75bee0d5888a874",
+        "identity_revision": 2,
+        "profile_sha256": "ac595c7b679187e02b3b8459368aadae41d2b7b1cd954e01e75bee0d5888a874"
+      },
+      "identity": {
+        "face_asset_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "body_asset_id": null,
+        "constraints": [],
+        "confirmed_by": "creator-01",
+        "confirmed_at": "2026-10-31T21:47:12.041Z"
+      },
+      "appearance": {
+        "id": "e73e544280a634af2782e0a11d8bd0bf5b94b21e45ad4ea8e6cfd70f113c06f7",
+        "version": 1,
+        "sha256": "25b87c0fb8af164b7041e5f04db33e0c1f8eec471bd3c6a0440fba0ef64ef07c"
+      },
+      "look": {
+        "id": "77c9b77f9086a81b397794255842064a4159e1a019de13b62cd8a9295e993dc7",
+        "revision": 1,
+        "sha256": "7d49ffb5a36ad56bf21c92318eafcc136c04f78a4ff114ce4e682f4c43e27bbd",
+        "snapshot": {
+          "title": "[FIXTURE] look",
+          "items": [
+            {
+              "asset_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "slot": "outfit_set",
+              "note": ""
+            }
+          ],
+          "hair": {
+            "mode": "auto_adapt",
+            "instruction": ""
+          },
+          "makeup": {
+            "mode": "auto_adapt",
+            "instruction": ""
+          },
+          "pose_rule": "",
+          "background_rule": "",
+          "layering_note": "",
+          "outputs": [
+            "front_full_body"
+          ]
+        }
+      },
+      "lookbook": {
+        "id": "ec457712921f0207f3d58b77bfdccae717bbf3a6466087c55cd363d46c1dc2b6",
+        "revision": 2,
+        "sha256": "69808439e242a9f50b13c17671d295795086b67f593cbe34eaddde5cc6366a8a"
+      },
+      "review_receipts": [
+        {
+          "item_id": "e6130a47f1c63f5f84fdeba260858fb24744a555d325809ffa6d2a6b349ebec2",
+          "id": "d096b4cb-c9de-4eba-8ae0-701903e9dcab",
+          "version": 1,
+          "actor_id": "automatic-casting-review:creator-01",
+          "created_at": "2026-10-31T21:47:12.050Z",
+          "mode": "automatic",
+          "policy": "casting-p0-auto-v1",
+          "requested_by": "creator-01"
+        },
+        {
+          "item_id": "e73e544280a634af2782e0a11d8bd0bf5b94b21e45ad4ea8e6cfd70f113c06f7",
+          "id": "be78974d-ab73-488a-8f1a-1c45b7bcbf21",
+          "version": 1,
+          "actor_id": "automatic-casting-review:creator-01",
+          "created_at": "2026-10-31T21:47:12.109Z",
+          "mode": "automatic",
+          "policy": "casting-p0-auto-v1",
+          "requested_by": "creator-01"
+        }
+      ],
+      "extensions": {
+        "voice_binding": null,
+        "recommendation": null
+      }
+    },
+    {
+      "instance": {
+        "id": "e06ac39a3b0a5002b369e954dc764fcd42895877f62abb1bf7e0d1dce7b59b99",
+        "version": 1,
+        "sha256": "b1e5a995b04c6cac28fd7c665258c09392cfd1aec43fb835d54f1f545c4463c4"
+      },
+      "role": {
+        "id": "db60ba142dbafe6413083973dc7f2306e335e4557ff14668ca0bc604e390eb36",
+        "version": 1,
+        "sha256": "1c0199f69d4a509b6528941392e42a04653e0f4db0745206f6925655767763e2",
+        "title": "Second Role"
+      },
+      "casting": {
+        "id": "067ed6ede69832404a165762236be01022a51b0021a73679eaac5d27a96f45ca",
+        "version": 1,
+        "sha256": "ffcc564764ba4510ec0db59dfa0820d20a82e0b4773361b6259e633cfd9e6eb2"
+      },
+      "actor": {
+        "id": "99fc1894-2b3d-49fd-9426-6980068581df",
+        "name": "[FIXTURE] IP",
+        "profile_version": "ac595c7b679187e02b3b8459368aadae41d2b7b1cd954e01e75bee0d5888a874",
+        "identity_revision": 2,
+        "profile_sha256": "ac595c7b679187e02b3b8459368aadae41d2b7b1cd954e01e75bee0d5888a874"
+      },
+      "identity": {
+        "face_asset_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "body_asset_id": null,
+        "constraints": [],
+        "confirmed_by": "creator-01",
+        "confirmed_at": "2026-10-31T21:47:12.041Z"
+      },
+      "appearance": {
+        "id": "07da240c16e394e9fbea3845bb697912000833ca19bf7016385ecd360f68f658",
+        "version": 1,
+        "sha256": "332b20d52545caf8af44783157af504babed35daa17ede8baf5dd634cc8ded3c"
+      },
+      "look": {
+        "id": "77c9b77f9086a81b397794255842064a4159e1a019de13b62cd8a9295e993dc7",
+        "revision": 1,
+        "sha256": "7d49ffb5a36ad56bf21c92318eafcc136c04f78a4ff114ce4e682f4c43e27bbd",
+        "snapshot": {
+          "title": "[FIXTURE] look",
+          "items": [
+            {
+              "asset_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+              "slot": "outfit_set",
+              "note": ""
+            }
+          ],
+          "hair": {
+            "mode": "auto_adapt",
+            "instruction": ""
+          },
+          "makeup": {
+            "mode": "auto_adapt",
+            "instruction": ""
+          },
+          "pose_rule": "",
+          "background_rule": "",
+          "layering_note": "",
+          "outputs": [
+            "front_full_body"
+          ]
+        }
+      },
+      "lookbook": {
+        "id": "ec457712921f0207f3d58b77bfdccae717bbf3a6466087c55cd363d46c1dc2b6",
+        "revision": 2,
+        "sha256": "69808439e242a9f50b13c17671d295795086b67f593cbe34eaddde5cc6366a8a"
+      },
+      "review_receipts": [
+        {
+          "item_id": "067ed6ede69832404a165762236be01022a51b0021a73679eaac5d27a96f45ca",
+          "id": "0d8820b9-25ef-46d0-b90b-e1b682241cab",
+          "version": 1,
+          "actor_id": "automatic-casting-review:creator-01",
+          "created_at": "2026-10-31T21:47:12.096Z",
+          "mode": "automatic",
+          "policy": "casting-p0-auto-v1",
+          "requested_by": "creator-01"
+        },
+        {
+          "item_id": "07da240c16e394e9fbea3845bb697912000833ca19bf7016385ecd360f68f658",
+          "id": "78e90ad0-3347-47f6-b7f3-6f7a1b93d2b8",
+          "version": 1,
+          "actor_id": "automatic-casting-review:creator-01",
+          "created_at": "2026-10-31T21:47:12.114Z",
+          "mode": "automatic",
+          "policy": "casting-p0-auto-v1",
+          "requested_by": "creator-01"
+        }
+      ],
+      "extensions": {
+        "voice_binding": null,
+        "recommendation": null
+      }
+    }
+  ],
+  "provenance": {
+    "schema": "cineweave.director-provenance/v1",
+    "manifest_json": "{\"format\":\"cineweave-production-handoff\",\"schema_version\":2,\"target_platform\":\"libtv\",\"project\":{\"id\":\"ca68a550-15f6-4b1f-902c-b012c296c386\",\"title\":\"[FIXTURE] project\",\"kind\":\"film\",\"revision\":1},\"script\":{\"id\":\"d75d1a59-6d78-4354-894f-22838e2dc6bf\",\"kind\":\"script\",\"name\":\"[FIXTURE] script\",\"revision\":2,\"sha256\":\"a509b9b7228ac2257f561a9404ada0b1e9964af2ce2639bbe2b441e5a35c6089\",\"body\":\"[FIXTURE] approved script\"},\"characters\":[],\"prompt_documents\":[],\"production\":{\"schema\":\"cineweave.casting-handoff/v1\",\"project_id\":\"ca68a550-15f6-4b1f-902c-b012c296c386\",\"branch\":\"main\",\"timeline\":\"main\",\"canon_revision\":12,\"scene_refs\":[{\"id\":\"4eab0b9909ce68be29560d81f7f5607404e0d037f39ae718ee172b2f7d3619ec\",\"version\":1,\"sha256\":\"f84d92402b82ed1ca2c9dba1f790bfda94d0f2a63a2be468afac775e7795bcb4\"}],\"scenes\":[{\"scene\":{\"id\":\"4eab0b9909ce68be29560d81f7f5607404e0d037f39ae718ee172b2f7d3619ec\",\"version\":1,\"sha256\":\"f84d92402b82ed1ca2c9dba1f790bfda94d0f2a63a2be468afac775e7795bcb4\"},\"title\":\"[FIXTURE] two-role scene\",\"cast\":[{\"instance\":{\"id\":\"2ba196c7939ec7d4710745e2d9eda4b4dd238a6aa9fe24da9c3aa95a39fe6491\",\"version\":1,\"sha256\":\"734de6145ac9019ff419dcd04bcbbc27fb7c7cfc32965f2552be642b48769d63\"},\"role\":{\"id\":\"3d99b29a378cdf0c77c8f016a524f3271ca148234ba421af1eb17a47341e9fc7\",\"version\":1,\"sha256\":\"41d846f60b3a2e8adb20e594714fd197fef27d78e3bdf144d247e84623fa39fe\",\"title\":\"Role\"},\"casting\":{\"id\":\"e6130a47f1c63f5f84fdeba260858fb24744a555d325809ffa6d2a6b349ebec2\",\"version\":1,\"sha256\":\"e47402540ddf7256ff29f6131eec5c7875b5713b824178f4f181c78a67108fa0\"},\"actor\":{\"id\":\"99fc1894-2b3d-49fd-9426-6980068581df\",\"name\":\"[FIXTURE] IP\",\"profile_version\":\"ac595c7b679187e02b3b8459368aadae41d2b7b1cd954e01e75bee0d5888a874\",\"identity_revision\":2,\"profile_sha256\":\"ac595c7b679187e02b3b8459368aadae41d2b7b1cd954e01e75bee0d5888a874\"},\"identity\":{\"face_asset_id\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"body_asset_id\":null,\"constraints\":[],\"confirmed_by\":\"creator-01\",\"confirmed_at\":\"2026-10-31T21:47:12.041Z\"},\"appearance\":{\"id\":\"e73e544280a634af2782e0a11d8bd0bf5b94b21e45ad4ea8e6cfd70f113c06f7\",\"version\":1,\"sha256\":\"25b87c0fb8af164b7041e5f04db33e0c1f8eec471bd3c6a0440fba0ef64ef07c\"},\"look\":{\"id\":\"77c9b77f9086a81b397794255842064a4159e1a019de13b62cd8a9295e993dc7\",\"revision\":1,\"sha256\":\"7d49ffb5a36ad56bf21c92318eafcc136c04f78a4ff114ce4e682f4c43e27bbd\",\"snapshot\":{\"title\":\"[FIXTURE] look\",\"items\":[{\"asset_id\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"slot\":\"outfit_set\",\"note\":\"\"}],\"hair\":{\"mode\":\"auto_adapt\",\"instruction\":\"\"},\"makeup\":{\"mode\":\"auto_adapt\",\"instruction\":\"\"},\"pose_rule\":\"\",\"background_rule\":\"\",\"layering_note\":\"\",\"outputs\":[\"front_full_body\"]}},\"lookbook\":{\"id\":\"ec457712921f0207f3d58b77bfdccae717bbf3a6466087c55cd363d46c1dc2b6\",\"revision\":2,\"sha256\":\"69808439e242a9f50b13c17671d295795086b67f593cbe34eaddde5cc6366a8a\"},\"review_receipts\":[{\"item_id\":\"e6130a47f1c63f5f84fdeba260858fb24744a555d325809ffa6d2a6b349ebec2\",\"id\":\"d096b4cb-c9de-4eba-8ae0-701903e9dcab\",\"version\":1,\"actor_id\":\"automatic-casting-review:creator-01\",\"created_at\":\"2026-10-31T21:47:12.050Z\",\"mode\":\"automatic\",\"policy\":\"casting-p0-auto-v1\",\"requested_by\":\"creator-01\"},{\"item_id\":\"e73e544280a634af2782e0a11d8bd0bf5b94b21e45ad4ea8e6cfd70f113c06f7\",\"id\":\"be78974d-ab73-488a-8f1a-1c45b7bcbf21\",\"version\":1,\"actor_id\":\"automatic-casting-review:creator-01\",\"created_at\":\"2026-10-31T21:47:12.109Z\",\"mode\":\"automatic\",\"policy\":\"casting-p0-auto-v1\",\"requested_by\":\"creator-01\"}],\"extensions\":{\"voice_binding\":null,\"recommendation\":null}},{\"instance\":{\"id\":\"e06ac39a3b0a5002b369e954dc764fcd42895877f62abb1bf7e0d1dce7b59b99\",\"version\":1,\"sha256\":\"b1e5a995b04c6cac28fd7c665258c09392cfd1aec43fb835d54f1f545c4463c4\"},\"role\":{\"id\":\"db60ba142dbafe6413083973dc7f2306e335e4557ff14668ca0bc604e390eb36\",\"version\":1,\"sha256\":\"1c0199f69d4a509b6528941392e42a04653e0f4db0745206f6925655767763e2\",\"title\":\"Second Role\"},\"casting\":{\"id\":\"067ed6ede69832404a165762236be01022a51b0021a73679eaac5d27a96f45ca\",\"version\":1,\"sha256\":\"ffcc564764ba4510ec0db59dfa0820d20a82e0b4773361b6259e633cfd9e6eb2\"},\"actor\":{\"id\":\"99fc1894-2b3d-49fd-9426-6980068581df\",\"name\":\"[FIXTURE] IP\",\"profile_version\":\"ac595c7b679187e02b3b8459368aadae41d2b7b1cd954e01e75bee0d5888a874\",\"identity_revision\":2,\"profile_sha256\":\"ac595c7b679187e02b3b8459368aadae41d2b7b1cd954e01e75bee0d5888a874\"},\"identity\":{\"face_asset_id\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"body_asset_id\":null,\"constraints\":[],\"confirmed_by\":\"creator-01\",\"confirmed_at\":\"2026-10-31T21:47:12.041Z\"},\"appearance\":{\"id\":\"07da240c16e394e9fbea3845bb697912000833ca19bf7016385ecd360f68f658\",\"version\":1,\"sha256\":\"332b20d52545caf8af44783157af504babed35daa17ede8baf5dd634cc8ded3c\"},\"look\":{\"id\":\"77c9b77f9086a81b397794255842064a4159e1a019de13b62cd8a9295e993dc7\",\"revision\":1,\"sha256\":\"7d49ffb5a36ad56bf21c92318eafcc136c04f78a4ff114ce4e682f4c43e27bbd\",\"snapshot\":{\"title\":\"[FIXTURE] look\",\"items\":[{\"asset_id\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"slot\":\"outfit_set\",\"note\":\"\"}],\"hair\":{\"mode\":\"auto_adapt\",\"instruction\":\"\"},\"makeup\":{\"mode\":\"auto_adapt\",\"instruction\":\"\"},\"pose_rule\":\"\",\"background_rule\":\"\",\"layering_note\":\"\",\"outputs\":[\"front_full_body\"]}},\"lookbook\":{\"id\":\"ec457712921f0207f3d58b77bfdccae717bbf3a6466087c55cd363d46c1dc2b6\",\"revision\":2,\"sha256\":\"69808439e242a9f50b13c17671d295795086b67f593cbe34eaddde5cc6366a8a\"},\"review_receipts\":[{\"item_id\":\"067ed6ede69832404a165762236be01022a51b0021a73679eaac5d27a96f45ca\",\"id\":\"0d8820b9-25ef-46d0-b90b-e1b682241cab\",\"version\":1,\"actor_id\":\"automatic-casting-review:creator-01\",\"created_at\":\"2026-10-31T21:47:12.096Z\",\"mode\":\"automatic\",\"policy\":\"casting-p0-auto-v1\",\"requested_by\":\"creator-01\"},{\"item_id\":\"07da240c16e394e9fbea3845bb697912000833ca19bf7016385ecd360f68f658\",\"id\":\"78e90ad0-3347-47f6-b7f3-6f7a1b93d2b8\",\"version\":1,\"actor_id\":\"automatic-casting-review:creator-01\",\"created_at\":\"2026-10-31T21:47:12.114Z\",\"mode\":\"automatic\",\"policy\":\"casting-p0-auto-v1\",\"requested_by\":\"creator-01\"}],\"extensions\":{\"voice_binding\":null,\"recommendation\":null}}]}],\"sources\":[{\"id\":\"4eab0b9909ce68be29560d81f7f5607404e0d037f39ae718ee172b2f7d3619ec\",\"version\":1,\"sha256\":\"f84d92402b82ed1ca2c9dba1f790bfda94d0f2a63a2be468afac775e7795bcb4\"},{\"id\":\"2ba196c7939ec7d4710745e2d9eda4b4dd238a6aa9fe24da9c3aa95a39fe6491\",\"version\":1,\"sha256\":\"734de6145ac9019ff419dcd04bcbbc27fb7c7cfc32965f2552be642b48769d63\"},{\"id\":\"3d99b29a378cdf0c77c8f016a524f3271ca148234ba421af1eb17a47341e9fc7\",\"version\":1,\"sha256\":\"41d846f60b3a2e8adb20e594714fd197fef27d78e3bdf144d247e84623fa39fe\"},{\"id\":\"e6130a47f1c63f5f84fdeba260858fb24744a555d325809ffa6d2a6b349ebec2\",\"version\":1,\"sha256\":\"e47402540ddf7256ff29f6131eec5c7875b5713b824178f4f181c78a67108fa0\"},{\"id\":\"e73e544280a634af2782e0a11d8bd0bf5b94b21e45ad4ea8e6cfd70f113c06f7\",\"version\":1,\"sha256\":\"25b87c0fb8af164b7041e5f04db33e0c1f8eec471bd3c6a0440fba0ef64ef07c\"},{\"id\":\"e06ac39a3b0a5002b369e954dc764fcd42895877f62abb1bf7e0d1dce7b59b99\",\"version\":1,\"sha256\":\"b1e5a995b04c6cac28fd7c665258c09392cfd1aec43fb835d54f1f545c4463c4\"},{\"id\":\"db60ba142dbafe6413083973dc7f2306e335e4557ff14668ca0bc604e390eb36\",\"version\":1,\"sha256\":\"1c0199f69d4a509b6528941392e42a04653e0f4db0745206f6925655767763e2\"},{\"id\":\"067ed6ede69832404a165762236be01022a51b0021a73679eaac5d27a96f45ca\",\"version\":1,\"sha256\":\"ffcc564764ba4510ec0db59dfa0820d20a82e0b4773361b6259e633cfd9e6eb2\"},{\"id\":\"07da240c16e394e9fbea3845bb697912000833ca19bf7016385ecd360f68f658\",\"version\":1,\"sha256\":\"332b20d52545caf8af44783157af504babed35daa17ede8baf5dd634cc8ded3c\"},{\"id\":\"27a5ee79c2e7e093f605b47cfdbbeccf4d9f7aa57651de6f6e03ffa544b141f4\",\"version\":1,\"sha256\":\"06c2b4fa3f4a1609bf88333d11a6332bad541d1aca014a102bf2ac12ccbf26de\"}],\"assets\":[\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\"],\"extensions\":{\"voice_binding\":null,\"recommendation\":null}},\"source_verification\":{\"media\":[{\"asset_id\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"sha256\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"bytes\":100,\"verification\":\"authenticated-original-sha256\",\"verified_at\":\"2026-10-31T21:47:12.138Z\"}],\"verified_at\":\"2026-10-31T21:47:12.138Z\",\"scope\":\"creation-time-only\"},\"director\":{\"schema\":\"cineweave.director-input/v1\",\"scene_refs\":[{\"id\":\"4eab0b9909ce68be29560d81f7f5607404e0d037f39ae718ee172b2f7d3619ec\",\"version\":1,\"sha256\":\"f84d92402b82ed1ca2c9dba1f790bfda94d0f2a63a2be468afac775e7795bcb4\"}],\"reuse\":\"production.scenes[].cast\",\"generation_status\":\"NOT_EXECUTED\"},\"assets\":[],\"created_at\":\"2026-10-31T21:47:12.138Z\",\"source\":\"approved-studio-snapshot\",\"video_editing_location\":\"external-libtv-or-xiaoyunque\"}",
+    "story_sources": [
+      {
+        "project_id": "ca68a550-15f6-4b1f-902c-b012c296c386",
+        "id": "4eab0b9909ce68be29560d81f7f5607404e0d037f39ae718ee172b2f7d3619ec",
+        "version": 1,
+        "sha256": "f84d92402b82ed1ca2c9dba1f790bfda94d0f2a63a2be468afac775e7795bcb4",
+        "kind": "scene",
+        "content": {
+          "title": "[FIXTURE] two-role scene",
+          "body": "[FIXTURE] scene action",
+          "aliases": [],
+          "fields": {},
+          "sources": [
+            {
+              "kind": "story",
+              "item_id": "27a5ee79c2e7e093f605b47cfdbbeccf4d9f7aa57651de6f6e03ffa544b141f4",
+              "version": 1,
+              "paragraph": 1,
+              "quote": "[FIXTURE] scene action"
+            }
+          ],
+          "audience": "author",
+          "known_by": [],
+          "known_from": null,
+          "reader_from": null,
+          "story_order": null,
+          "valid_from": null,
+          "valid_to": null,
+          "spec": {
+            "cast": [
+              "2ba196c7939ec7d4710745e2d9eda4b4dd238a6aa9fe24da9c3aa95a39fe6491",
+              "e06ac39a3b0a5002b369e954dc764fcd42895877f62abb1bf7e0d1dce7b59b99"
+            ]
+          }
+        }
+      },
+      {
+        "project_id": "ca68a550-15f6-4b1f-902c-b012c296c386",
+        "id": "2ba196c7939ec7d4710745e2d9eda4b4dd238a6aa9fe24da9c3aa95a39fe6491",
+        "version": 1,
+        "sha256": "734de6145ac9019ff419dcd04bcbbc27fb7c7cfc32965f2552be642b48769d63",
+        "kind": "instance",
+        "content": {
+          "title": "Instance",
+          "body": "[FIXTURE] scene action",
+          "aliases": [],
+          "fields": {
+            "character_id": "3d99b29a378cdf0c77c8f016a524f3271ca148234ba421af1eb17a47341e9fc7"
+          },
+          "sources": [
+            {
+              "kind": "note",
+              "text": "[FIXTURE] explicit test input",
+              "origin": "user",
+              "url": ""
+            },
+            {
+              "kind": "item",
+              "item_id": "3d99b29a378cdf0c77c8f016a524f3271ca148234ba421af1eb17a47341e9fc7",
+              "version": 1,
+              "sha256": "41d846f60b3a2e8adb20e594714fd197fef27d78e3bdf144d247e84623fa39fe"
+            }
+          ],
+          "audience": "author",
+          "known_by": [],
+          "known_from": null,
+          "reader_from": null,
+          "story_order": null,
+          "valid_from": null,
+          "valid_to": null,
+          "spec": {}
+        }
+      },
+      {
+        "project_id": "ca68a550-15f6-4b1f-902c-b012c296c386",
+        "id": "3d99b29a378cdf0c77c8f016a524f3271ca148234ba421af1eb17a47341e9fc7",
+        "version": 1,
+        "sha256": "41d846f60b3a2e8adb20e594714fd197fef27d78e3bdf144d247e84623fa39fe",
+        "kind": "character",
+        "content": {
+          "title": "Role",
+          "body": "[FIXTURE] scene action",
+          "aliases": [],
+          "fields": {},
+          "sources": [
+            {
+              "kind": "note",
+              "text": "[FIXTURE] explicit test input",
+              "origin": "user",
+              "url": ""
+            }
+          ],
+          "audience": "author",
+          "known_by": [],
+          "known_from": null,
+          "reader_from": null,
+          "story_order": null,
+          "valid_from": null,
+          "valid_to": null,
+          "spec": {}
+        }
+      },
+      {
+        "project_id": "ca68a550-15f6-4b1f-902c-b012c296c386",
+        "id": "e6130a47f1c63f5f84fdeba260858fb24744a555d325809ffa6d2a6b349ebec2",
+        "version": 1,
+        "sha256": "e47402540ddf7256ff29f6131eec5c7875b5713b824178f4f181c78a67108fa0",
+        "kind": "casting",
+        "content": {
+          "title": "Cast",
+          "body": "[FIXTURE] scene action",
+          "aliases": [],
+          "fields": {},
+          "sources": [
+            {
+              "kind": "note",
+              "text": "[FIXTURE] explicit test input",
+              "origin": "user",
+              "url": ""
+            },
+            {
+              "kind": "item",
+              "item_id": "3d99b29a378cdf0c77c8f016a524f3271ca148234ba421af1eb17a47341e9fc7",
+              "version": 1,
+              "sha256": "41d846f60b3a2e8adb20e594714fd197fef27d78e3bdf144d247e84623fa39fe"
+            }
+          ],
+          "audience": "author",
+          "known_by": [],
+          "known_from": null,
+          "reader_from": null,
+          "story_order": null,
+          "valid_from": null,
+          "valid_to": null,
+          "spec": {
+            "character_id": "3d99b29a378cdf0c77c8f016a524f3271ca148234ba421af1eb17a47341e9fc7",
+            "ip_id": "99fc1894-2b3d-49fd-9426-6980068581df",
+            "profile_version": "ac595c7b679187e02b3b8459368aadae41d2b7b1cd954e01e75bee0d5888a874",
+            "identity_revision": 2
+          }
+        }
+      },
+      {
+        "project_id": "ca68a550-15f6-4b1f-902c-b012c296c386",
+        "id": "e73e544280a634af2782e0a11d8bd0bf5b94b21e45ad4ea8e6cfd70f113c06f7",
+        "version": 1,
+        "sha256": "25b87c0fb8af164b7041e5f04db33e0c1f8eec471bd3c6a0440fba0ef64ef07c",
+        "kind": "appearance",
+        "content": {
+          "title": "Scene Look",
+          "body": "[FIXTURE] two-character scene",
+          "aliases": [],
+          "fields": {},
+          "sources": [
+            {
+              "kind": "note",
+              "text": "[FIXTURE] explicit test input",
+              "origin": "user",
+              "url": ""
+            },
+            {
+              "kind": "item",
+              "item_id": "e6130a47f1c63f5f84fdeba260858fb24744a555d325809ffa6d2a6b349ebec2",
+              "version": 1,
+              "sha256": "e47402540ddf7256ff29f6131eec5c7875b5713b824178f4f181c78a67108fa0"
+            },
+            {
+              "kind": "item",
+              "item_id": "4eab0b9909ce68be29560d81f7f5607404e0d037f39ae718ee172b2f7d3619ec",
+              "version": 1,
+              "sha256": "f84d92402b82ed1ca2c9dba1f790bfda94d0f2a63a2be468afac775e7795bcb4"
+            },
+            {
+              "kind": "item",
+              "item_id": "2ba196c7939ec7d4710745e2d9eda4b4dd238a6aa9fe24da9c3aa95a39fe6491",
+              "version": 1,
+              "sha256": "734de6145ac9019ff419dcd04bcbbc27fb7c7cfc32965f2552be642b48769d63"
+            },
+            {
+              "kind": "item",
+              "item_id": "e06ac39a3b0a5002b369e954dc764fcd42895877f62abb1bf7e0d1dce7b59b99",
+              "version": 1,
+              "sha256": "b1e5a995b04c6cac28fd7c665258c09392cfd1aec43fb835d54f1f545c4463c4"
+            }
+          ],
+          "audience": "author",
+          "known_by": [],
+          "known_from": null,
+          "reader_from": null,
+          "story_order": null,
+          "valid_from": null,
+          "valid_to": null,
+          "spec": {
+            "casting_id": "e6130a47f1c63f5f84fdeba260858fb24744a555d325809ffa6d2a6b349ebec2",
+            "target_id": "4eab0b9909ce68be29560d81f7f5607404e0d037f39ae718ee172b2f7d3619ec",
+            "ip_id": "99fc1894-2b3d-49fd-9426-6980068581df",
+            "profile_version": "ac595c7b679187e02b3b8459368aadae41d2b7b1cd954e01e75bee0d5888a874",
+            "identity_revision": 2,
+            "look_id": "77c9b77f9086a81b397794255842064a4159e1a019de13b62cd8a9295e993dc7",
+            "look_revision": 1,
+            "lookbook_id": "ec457712921f0207f3d58b77bfdccae717bbf3a6466087c55cd363d46c1dc2b6",
+            "lookbook_revision": 2
+          }
+        }
+      },
+      {
+        "project_id": "ca68a550-15f6-4b1f-902c-b012c296c386",
+        "id": "e06ac39a3b0a5002b369e954dc764fcd42895877f62abb1bf7e0d1dce7b59b99",
+        "version": 1,
+        "sha256": "b1e5a995b04c6cac28fd7c665258c09392cfd1aec43fb835d54f1f545c4463c4",
+        "kind": "instance",
+        "content": {
+          "title": "Second Instance",
+          "body": "[FIXTURE] two-character scene",
+          "aliases": [],
+          "fields": {
+            "character_id": "db60ba142dbafe6413083973dc7f2306e335e4557ff14668ca0bc604e390eb36"
+          },
+          "sources": [
+            {
+              "kind": "note",
+              "text": "[FIXTURE] explicit test input",
+              "origin": "user",
+              "url": ""
+            },
+            {
+              "kind": "item",
+              "item_id": "db60ba142dbafe6413083973dc7f2306e335e4557ff14668ca0bc604e390eb36",
+              "version": 1,
+              "sha256": "1c0199f69d4a509b6528941392e42a04653e0f4db0745206f6925655767763e2"
+            }
+          ],
+          "audience": "author",
+          "known_by": [],
+          "known_from": null,
+          "reader_from": null,
+          "story_order": null,
+          "valid_from": null,
+          "valid_to": null,
+          "spec": {}
+        }
+      },
+      {
+        "project_id": "ca68a550-15f6-4b1f-902c-b012c296c386",
+        "id": "db60ba142dbafe6413083973dc7f2306e335e4557ff14668ca0bc604e390eb36",
+        "version": 1,
+        "sha256": "1c0199f69d4a509b6528941392e42a04653e0f4db0745206f6925655767763e2",
+        "kind": "character",
+        "content": {
+          "title": "Second Role",
+          "body": "[FIXTURE] two-character scene",
+          "aliases": [],
+          "fields": {},
+          "sources": [
+            {
+              "kind": "note",
+              "text": "[FIXTURE] explicit test input",
+              "origin": "user",
+              "url": ""
+            }
+          ],
+          "audience": "author",
+          "known_by": [],
+          "known_from": null,
+          "reader_from": null,
+          "story_order": null,
+          "valid_from": null,
+          "valid_to": null,
+          "spec": {}
+        }
+      },
+      {
+        "project_id": "ca68a550-15f6-4b1f-902c-b012c296c386",
+        "id": "067ed6ede69832404a165762236be01022a51b0021a73679eaac5d27a96f45ca",
+        "version": 1,
+        "sha256": "ffcc564764ba4510ec0db59dfa0820d20a82e0b4773361b6259e633cfd9e6eb2",
+        "kind": "casting",
+        "content": {
+          "title": "Second Cast",
+          "body": "[FIXTURE] two-character scene",
+          "aliases": [],
+          "fields": {},
+          "sources": [
+            {
+              "kind": "note",
+              "text": "[FIXTURE] explicit test input",
+              "origin": "user",
+              "url": ""
+            },
+            {
+              "kind": "item",
+              "item_id": "db60ba142dbafe6413083973dc7f2306e335e4557ff14668ca0bc604e390eb36",
+              "version": 1,
+              "sha256": "1c0199f69d4a509b6528941392e42a04653e0f4db0745206f6925655767763e2"
+            }
+          ],
+          "audience": "author",
+          "known_by": [],
+          "known_from": null,
+          "reader_from": null,
+          "story_order": null,
+          "valid_from": null,
+          "valid_to": null,
+          "spec": {
+            "character_id": "db60ba142dbafe6413083973dc7f2306e335e4557ff14668ca0bc604e390eb36",
+            "ip_id": "99fc1894-2b3d-49fd-9426-6980068581df",
+            "profile_version": "ac595c7b679187e02b3b8459368aadae41d2b7b1cd954e01e75bee0d5888a874",
+            "identity_revision": 2
+          }
+        }
+      },
+      {
+        "project_id": "ca68a550-15f6-4b1f-902c-b012c296c386",
+        "id": "07da240c16e394e9fbea3845bb697912000833ca19bf7016385ecd360f68f658",
+        "version": 1,
+        "sha256": "332b20d52545caf8af44783157af504babed35daa17ede8baf5dd634cc8ded3c",
+        "kind": "appearance",
+        "content": {
+          "title": "Scene Look",
+          "body": "[FIXTURE] two-character scene",
+          "aliases": [],
+          "fields": {},
+          "sources": [
+            {
+              "kind": "note",
+              "text": "[FIXTURE] explicit test input",
+              "origin": "user",
+              "url": ""
+            },
+            {
+              "kind": "item",
+              "item_id": "067ed6ede69832404a165762236be01022a51b0021a73679eaac5d27a96f45ca",
+              "version": 1,
+              "sha256": "ffcc564764ba4510ec0db59dfa0820d20a82e0b4773361b6259e633cfd9e6eb2"
+            },
+            {
+              "kind": "item",
+              "item_id": "4eab0b9909ce68be29560d81f7f5607404e0d037f39ae718ee172b2f7d3619ec",
+              "version": 1,
+              "sha256": "f84d92402b82ed1ca2c9dba1f790bfda94d0f2a63a2be468afac775e7795bcb4"
+            },
+            {
+              "kind": "item",
+              "item_id": "2ba196c7939ec7d4710745e2d9eda4b4dd238a6aa9fe24da9c3aa95a39fe6491",
+              "version": 1,
+              "sha256": "734de6145ac9019ff419dcd04bcbbc27fb7c7cfc32965f2552be642b48769d63"
+            },
+            {
+              "kind": "item",
+              "item_id": "e06ac39a3b0a5002b369e954dc764fcd42895877f62abb1bf7e0d1dce7b59b99",
+              "version": 1,
+              "sha256": "b1e5a995b04c6cac28fd7c665258c09392cfd1aec43fb835d54f1f545c4463c4"
+            }
+          ],
+          "audience": "author",
+          "known_by": [],
+          "known_from": null,
+          "reader_from": null,
+          "story_order": null,
+          "valid_from": null,
+          "valid_to": null,
+          "spec": {
+            "casting_id": "067ed6ede69832404a165762236be01022a51b0021a73679eaac5d27a96f45ca",
+            "target_id": "4eab0b9909ce68be29560d81f7f5607404e0d037f39ae718ee172b2f7d3619ec",
+            "ip_id": "99fc1894-2b3d-49fd-9426-6980068581df",
+            "profile_version": "ac595c7b679187e02b3b8459368aadae41d2b7b1cd954e01e75bee0d5888a874",
+            "identity_revision": 2,
+            "look_id": "77c9b77f9086a81b397794255842064a4159e1a019de13b62cd8a9295e993dc7",
+            "look_revision": 1,
+            "lookbook_id": "ec457712921f0207f3d58b77bfdccae717bbf3a6466087c55cd363d46c1dc2b6",
+            "lookbook_revision": 2
+          }
+        }
+      },
+      {
+        "project_id": "ca68a550-15f6-4b1f-902c-b012c296c386",
+        "id": "27a5ee79c2e7e093f605b47cfdbbeccf4d9f7aa57651de6f6e03ffa544b141f4",
+        "version": 1,
+        "sha256": "06c2b4fa3f4a1609bf88333d11a6332bad541d1aca014a102bf2ac12ccbf26de",
+        "kind": "chapter",
+        "content": {
+          "title": "Chapter",
+          "body": "[FIXTURE] scene action",
+          "aliases": [],
+          "fields": {},
+          "sources": [
+            {
+              "kind": "note",
+              "text": "[FIXTURE] explicit test input",
+              "origin": "user",
+              "url": ""
+            }
+          ],
+          "audience": "author",
+          "known_by": [],
+          "known_from": null,
+          "reader_from": null,
+          "story_order": null,
+          "valid_from": null,
+          "valid_to": null,
+          "spec": {}
+        }
+      }
+    ],
+    "lookbook_sources": [
+      {
+        "id": "ec457712921f0207f3d58b77bfdccae717bbf3a6466087c55cd363d46c1dc2b6",
+        "revision": 2,
+        "json": "{\"title\":\"[FIXTURE] book\",\"character_id\":\"99fc1894-2b3d-49fd-9426-6980068581df\",\"identity_revision\":2}"
+      }
+    ],
+    "look_sources": [
+      {
+        "id": "77c9b77f9086a81b397794255842064a4159e1a019de13b62cd8a9295e993dc7",
+        "revision": 1,
+        "lookbook_id": "ec457712921f0207f3d58b77bfdccae717bbf3a6466087c55cd363d46c1dc2b6",
+        "json": "{\"title\":\"[FIXTURE] look\",\"items\":[{\"asset_id\":\"aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"slot\":\"outfit_set\",\"note\":\"\"}],\"hair\":{\"mode\":\"auto_adapt\",\"instruction\":\"\"},\"makeup\":{\"mode\":\"auto_adapt\",\"instruction\":\"\"},\"pose_rule\":\"\",\"background_rule\":\"\",\"layering_note\":\"\",\"outputs\":[\"front_full_body\"]}"
+      }
+    ],
+    "identity_sources": [
+      {
+        "character_id": "99fc1894-2b3d-49fd-9426-6980068581df",
+        "identity_revision": 2,
+        "face_asset_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "body_asset_id": null,
+        "constraints": [],
+        "confirmed_by": "creator-01",
+        "confirmed_at": "2026-10-31T21:47:12.041Z",
+        "confirmation_digest": "7ce84646ba52e824e8ec2ceb6ec1c96e45c48598e023822d0b0d170d22d4ddd9"
+      }
+    ],
+    "source_status": "version_matched",
+    "checked_at": "2026-10-31T21:47:12.216Z",
+    "hash_algorithm": "sha256-utf8-json-stringify",
+    "authority": "authenticated-studio-export"
+  },
+  "media": [
+    {
+      "asset_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+      "bytes": 100,
+      "verification": "authenticated-original-sha256",
+      "verified_at": "2026-10-31T21:47:12.214Z"
+    }
+  ],
+  "media_live_verified": true,
+  "generation_status": "NOT_EXECUTED"
+}

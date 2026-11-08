@@ -1,7 +1,7 @@
 {
-  "schemaVersion": "3.2.2",
+  "schemaVersion": "3.3.0",
   "skill": "cineweave-director",
-  "skillVersion": "3.2.2",
+  "skillVersion": "3.3.0",
   "contracts": [
     {
       "kind": "cineweave_codex_creative_brief",
@@ -298,7 +298,7 @@
       "schema": "schemas/hero-frame-anchor.schema.json",
       "schemaSha256": "sha256:8ca78206720e4011da8e5f669f9280ae26e81994205563e237ec8a5cc8da734f",
       "example": "examples/hero-frame-anchor.json",
-      "exampleSha256": "sha256:df76dc5c8d1a7a7050d131d399d8715dc5f7b8565010236c6deb3c8bf623b97f"
+      "exampleSha256": "sha256:8948a4a0e81f329a415b477acdda1ff6644f158e6b98902c9ff96f68ab07b2c6"
     },
     {
       "kind": "cineweave_codex_storyboard_sequence",
@@ -442,7 +442,7 @@
       "schema": "schemas/control-benchmark.schema.json",
       "schemaSha256": "sha256:ee7f6b4f6cfe679ee0647fa90a9c4c8fd76ddeb89837a6510494b3e6fb9013a3",
       "example": "examples/control-benchmark.json",
-      "exampleSha256": "sha256:be3af1d293763de1f851f4cfdfc872240919bd93f85e8e58dd4196e78539723f"
+      "exampleSha256": "sha256:820482cf0d29d7be765aed470d6e9bb2b0e4c052e2be85705a2a61740c8ab768"
     },
     {
       "kind": "cineweave_codex_control_benchmark_review",
@@ -473,6 +473,16 @@
     }
   ],
   "supportSchemas": [
+    {
+      "schema": "schemas/studio-director-input.schema.json",
+      "purpose": "cineweave.director-input/v1 外部来源输入；须由适配器验证来源完整性。",
+      "schemaSha256": "sha256:b9ee02e0c687cc158f4b8bf7bd48068fae032d11b2bb8f996fd8b54ce93215d9"
+    },
+    {
+      "schema": "schemas/studio-shot-task.schema.json",
+      "purpose": "cineweave.studio-shot-task/v1 导演待创作任务与逐镜引用追踪。",
+      "schemaSha256": "sha256:d4d9ca7c7fa970162853cf22b8c4af1d95731ffaf3ed9ed716ba2b9019e5dd4f"
+    },
     {
       "schema": "schemas/common.schema.json",
       "purpose": "共享标识、引用、来源与回执定义。",

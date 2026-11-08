@@ -21,7 +21,7 @@
 
 ## 开始创作
 
-本地候选版本 `3.2.1` 统一已安装的摄影语言、场次流程、影视参考库和工作区色彩／妆容增量。[优化报告与14案首版](tests/evaluations/skill-optimization-2026-10-21/REPORT.md)记录当前验证范围。未打标签或推送；本地安装以本轮验证的构建包为准。
+当前发布版本为 `3.3.0`，包含统一入口、跨集项目与镜头回流、平台适配及 Studio 输入能力。当前源码继续整合色彩／妆容／动画画法、完整阶段图卡与 Seedance 2.5 提示词设计；各项文字与设计验证范围见[优化报告与14案首版](tests/evaluations/skill-optimization-2026-10-21/REPORT.md)和[Seedance 2.5 验证记录](tests/evaluations/seedance25-upgrade-2026-11-08.md)。源码更新不代表已有安装已重新加载，也不代表实际媒体或作者采纳通过。
 
 要完整交付，可直接提出“开发一部短片并生成全套提示词”。[短片创作流程](skills/cineweave-director/references/optional/short-film-creation.md)统一叙事、视觉开发、导演摄影、配音和剪辑；[完整样例《图尽》](skills/cineweave-director/references/optional/adaptation-example.md)展示每项可复制稿，不用自行补齐被省略的镜头。
 
@@ -66,6 +66,7 @@
 - [场次级导演生产关卡](skills/cineweave-director/references/optional/scene-directing-pipeline.md)：八阶段从戏剧任务、场景地理、Blocking、覆盖、声音剪辑到小样和修复；完整短片／正式连续镜头才加载，不影响普通单图。
 - [《玄奘》双段重要实践案例](skills/cineweave-director/references/optional/xuanzang-director-case-study.md)：约 11:47＋10:59 两段课程的可采纳导演方法、反例与 CineWeave 迁移，明确作者口播与案例推论边界。
 
+- [Higgsfield 电影短片教程研究与 CineWeave 工作流映射（2026-10-26）](skills/cineweave-director/references/optional/video-platform-adaptation.md#higgsfield-电影短片工作流)：区分官方功能、公开视频课程章节和可迁移的导演原则；不依赖 Higgsfield 才能使用本 Skill。
 - [Skill 入口](skills/cineweave-director/SKILL.md)：交付规模、创作顺序与领域路由。
 - [镜头工作台](skills/cineweave-director/references/optional/shot-design-workbench.md)：注意力、动作瞬间与关键帧准备度。
 - [镜头语言与叙事作用词典](skills/cineweave-director/references/optional/cinematic-patterns.md#镜头语言与叙事作用词典)：7 种核心技法、28 种扩展、中文镜头示例及 AIGC 分镜交接；影视叙事必经逐镜选镜。
@@ -77,10 +78,10 @@
 
 ## 安装与使用
 
-本版为 `3.2.0`，安装使用固定版本标签 `v3.2.0`；旧 `v3.1.0` 不包含本版的统一入口和影视参考库。完整工作流包含四个 `skills/` 目录，从 `$cineweave-director` 开始。内部三个 Skill 由入口明确交接，不自动作为独立用户入口。不要只复制 `SKILL.md`，各目录都需要相邻参考与脚本。
+本版为 `3.3.0`，新增跨集项目、资产消费与镜头回流的按需工作流，保留最新主线的写作、平台适配和 Studio 输入能力。安装使用固定版本标签 `v3.3.0`；旧 `v3.1.0` 不包含本版的统一入口和影视参考库。完整工作流包含四个 `skills/` 目录，从 `$cineweave-director` 开始。内部三个 Skill 由入口明确交接，不自动作为独立用户入口。不要只复制 `SKILL.md`，各目录都需要相邻参考与脚本。
 
 ```bash
-codex plugin marketplace add Wilder1222/cineweave-director --ref v3.2.0
+codex plugin marketplace add Wilder1222/cineweave-director --ref v3.3.0
 codex plugin add cineweave-director@cineweave-director
 ```
 
@@ -124,7 +125,7 @@ npm run validate:bundle
 npm run test:bundle
 ```
 
-修改 schema 或规范示例后先执行 `npm run contracts:index`。校验同时覆盖本地章节链接和隔离包内工具。开发评测留在 `tests/evaluations/`，不随 Skill 分发。
+修改 schema 或规范示例后先执行 `npm run contracts:index`。校验同时覆盖本地章节链接和隔离包内工具。开发评测留在 `tests/evaluations/`，不随 Skill 分发。跨集项目与镜头回流的范围、合成案例和验收边界见[本次工程记录](tests/evaluations/jimeng-workflow-release-2026-11-06.md)。
 
 多 Skill 的目标边界、共享契约与编排验证见[拆分和编排计划](tests/evaluations/cineweave-skill-split-orchestration-plan-2026-10-12.md)，实际启用与逐阶段审阅见[执行记录](tests/evaluations/cineweave-split-execution-2026-10-12.md)。当前目录已启用导演、平台适配、参考分析与评审修复；以 `skill-catalog.json` 的启用集合为准。
 

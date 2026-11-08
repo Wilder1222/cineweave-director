@@ -1,0 +1,218 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://cineweave.dev/contracts/studio-shot-task.schema.json",
+  "title": "Studio 来源驱动的导演创作任务：待设计，不冒充人物绑定或成片",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema",
+    "taskId",
+    "revision",
+    "projectId",
+    "sourceFingerprint",
+    "sourceRefs",
+    "sourceInput",
+    "sceneContent",
+    "route",
+    "nextRoutes",
+    "targetContracts",
+    "authoringRequired",
+    "shots",
+    "status",
+    "generationStatus",
+    "productionReady",
+    "sourceAuthorityVerified",
+    "freshness",
+    "mediaBytesVerifiedByConsumer"
+  ],
+  "properties": {
+    "schema": {
+      "const": "cineweave.studio-shot-task/v1"
+    },
+    "taskId": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,159}$"
+    },
+    "revision": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "projectId": {
+      "type": "string",
+      "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,159}$"
+    },
+    "sourceFingerprint": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "sourceRefs": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "project_id",
+        "handoff",
+        "scene",
+        "cast"
+      ],
+      "properties": {
+        "project_id": {
+          "type": "string",
+          "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,159}$"
+        },
+        "handoff": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "sha256"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,159}$"
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          }
+        },
+        "scene": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "version",
+            "sha256"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,159}$"
+            },
+            "version": {
+              "type": "integer",
+              "minimum": 1
+            },
+            "sha256": {
+              "type": "string",
+              "pattern": "^[a-f0-9]{64}$"
+            }
+          }
+        },
+        "cast": {
+          "type": "array",
+          "items": {
+            "type": "object"
+          }
+        }
+      }
+    },
+    "sourceInput": {
+      "$ref": "studio-director-input.schema.json"
+    },
+    "sceneContent": {
+      "type": "object"
+    },
+    "route": {
+      "const": "shot_direction"
+    },
+    "nextRoutes": {
+      "const": [
+        "character",
+        "scene",
+        "shot_direction",
+        "storyboard_rhythm"
+      ]
+    },
+    "targetContracts": {
+      "const": [
+        "character_binding",
+        "cineweave_codex_shot_spec",
+        "cineweave_codex_storyboard_sequence"
+      ]
+    },
+    "authoringRequired": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "shots": {
+      "type": "array",
+      "maxItems": 200,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "shotId",
+          "revision",
+          "sourceFingerprint",
+          "design",
+          "designSha256",
+          "history"
+        ],
+        "properties": {
+          "shotId": {
+            "type": "string",
+            "pattern": "^[a-zA-Z0-9][a-zA-Z0-9._-]{0,159}$"
+          },
+          "revision": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "sourceFingerprint": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "design": {
+            "type": [
+              "object",
+              "null"
+            ]
+          },
+          "designSha256": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[a-f0-9]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          },
+          "history": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "status": {
+      "enum": [
+        "authoring_required",
+        "design_requires_validation"
+      ]
+    },
+    "generationStatus": {
+      "const": "NOT_EXECUTED"
+    },
+    "productionReady": {
+      "const": false
+    },
+    "sourceAuthorityVerified": {
+      "const": false
+    },
+    "freshness": {
+      "const": "snapshot_only"
+    },
+    "mediaBytesVerifiedByConsumer": {
+      "const": false
+    }
+  }
+}

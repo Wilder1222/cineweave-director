@@ -7,7 +7,7 @@ import { spawnSync } from "node:child_process";
 import { createHash } from "node:crypto";
 import { pathToFileURL } from "node:url";
 import { buildPluginBundle } from "../scripts/build-plugin-bundle.mjs";
-import { createDistributionInventory, repositoryRoot, validateAuthoringSources, validateBundle, validateRepository } from "../scripts/validate-repository.mjs";
+import { createDistributionInventory, repositoryRoot, validateAuthoringSources, validateBundle, validateRepository, validateRepositoryArtifacts } from "../scripts/validate-repository.mjs";
 import { syncSkillExports } from "../scripts/sync-skill-exports.mjs";
 import { validatePayload } from "../scripts/validate-output.mjs";
 import { sha256Canonical } from "../scripts/canonical-json.mjs";
@@ -59,10 +59,24 @@ async function fixture(action) {
   const directory = await mkdtemp(join(tmpdir(), "cw-skill-bundles-"));
   const source = join(directory, "source");
   try {
+    // Production review archives are validated in the real repository, not
+    // copied into each synthetic catalog stage. Only declared roots are omitted.
+    const artifacts = validateRepositoryArtifacts(JSON.parse(await readFile(join(repositoryRoot, "repository-artifacts.json"), "utf8")));
+    const artifactRoots = Object.keys(artifacts.directories);
     await cp(repositoryRoot, source, { recursive: true, filter: (path) => {
-      const first = relative(repositoryRoot, path).split(sep)[0];
-      return ![".git", ".build", "node_modules"].includes(first);
+      const local = relative(repositoryRoot, path).split(sep).join("/");
+      const first = local.split("/")[0];
+      return ![".git", ".build", "node_modules"].includes(first) &&
+        !artifactRoots.some((root) => local === root || local.startsWith(`${root}/`));
     } });
+    await writeFile(join(source, "repository-artifacts.json"), JSON.stringify({ format: "cineweave-repository-artifacts/v1", directories: {} }) + "\n");
+    // These two development documents navigate the omitted production archive.
+    // Keep their prose and all other links under validation in the fixture only.
+    for (const name of ["baby-family-short-video-topics.md", "pixar-family-animation-feasibility-2026-11-06.md"]) {
+      const path = join(source, "tests", "evaluations", name);
+      const text = await readFile(path, "utf8");
+      await writeFile(path, text.replace(/\[([^\]\n]+)\]\(baby-animation-production\/[^)\n]+\)/gu, "$1"));
+    }
     await resetFixtureStage(source);
     await action({ directory, source });
   } finally {
@@ -114,16 +128,16 @@ test("P1 sync is a zero-child no-op and plugin/leaf preserve the canonical profi
     assert.deepEqual(await snapshot(source), before);
     await assert.rejects(lstat(join(source, "skill-sources")), { code: "ENOENT" });
     const inventory = await createDistributionInventory(source);
-    assert.equal(inventory.files.length, 176);
+    assert.equal(inventory.files.length, 179);
     assert.equal(inventory.skills.length, 1);
-    assert.equal(inventory.skills[0].files.length, 174);
+    assert.equal(inventory.skills[0].files.length, 177);
     assert.ok(inventory.exports.every((entry) => entry.source === entry.destination));
     const plugin = await buildPluginBundle(undefined, { sourceRoot: source });
-    assert.equal(plugin.files, 176);
+    assert.equal(plugin.files, 179);
     const leaf = await buildPluginBundle(undefined, { sourceRoot: source, target: leafTarget(director) });
-    assert.equal(leaf.files, 175);
+    assert.equal(leaf.files, 178);
     assert.equal(leaf.bundle, join(source, ".build", `${director}-skill`));
-    assert.equal(leaf.roots, 52); assert.equal(leaf.schemas, 54);
+    assert.equal(leaf.roots, 52); assert.equal(leaf.schemas, 56);
     assert.equal(leaf.examples, 52); assert.equal(leaf.references, 55);
     assert.equal(leaf.skills.length, 1); assert.equal(leaf.byteIdentical, true);
     await assert.rejects(lstat(join(leaf.bundle, ".codex-plugin")), { code: "ENOENT" });
@@ -144,10 +158,10 @@ test("synthetic P2 sync, full plugin and professional leaf share one canonical a
     assert.deepEqual(preflight.catalogModel.enabledSkills, [director, platform]);
     await assert.rejects(validateRepository(source), /skills\/ Skill directory set mismatch.*missing/u);
     const synced = await syncSkillExports({ sourceRoot: source });
-    assert.equal(synced.childCount, 1); assert.equal(synced.filesUpdated, 174);
-    assert.equal((await syncSkillExports({ sourceRoot: source, check: true })).filesChecked, 174);
+    assert.equal(synced.childCount, 1); assert.equal(synced.filesUpdated, 177);
+    assert.equal((await syncSkillExports({ sourceRoot: source, check: true })).filesChecked, 177);
     const checked = await validateRepository(source);
-    assert.equal(checked.files, 350); assert.equal(checked.skills.length, 2);
+    assert.equal(checked.files, 356); assert.equal(checked.skills.length, 2);
     assert.equal(checked.skills.find((skill) => skill.name === platform).actualKinds.length, 1);
     const inventory = await createDistributionInventory(source);
     const child = inventory.skills.find((skill) => skill.name === platform);
@@ -155,8 +169,8 @@ test("synthetic P2 sync, full plugin and professional leaf share one canonical a
     assert.equal(child.exports.find((entry) => entry.destination.endsWith("/contracts.json")).source, `skills/${director}/contracts.json`);
     const plugin = await buildPluginBundle(undefined, { sourceRoot: source });
     const leaf = await buildPluginBundle(undefined, { sourceRoot: source, target: leafTarget(platform) });
-    assert.equal(plugin.files, 350); assert.equal(plugin.totals.roots, 104);
-    assert.equal(leaf.files, 175); assert.equal(leaf.skills[0].name, platform);
+    assert.equal(plugin.files, 356); assert.equal(plugin.totals.roots, 104);
+    assert.equal(leaf.files, 178); assert.equal(leaf.skills[0].name, platform);
     assert.equal(leaf.skills[0].roots, 52);
     assert.ok((await readFile(join(leaf.bundle, "SKILL.md"))).equals(await readFile(join(author, "SKILL.md"))));
     assert.ok((await readFile(join(leaf.bundle, "contracts.json"))).equals(await readFile(join(source, "skills", director, "contracts.json"))));
@@ -256,16 +270,16 @@ test("a materialized synthetic P4 source resets to explicit P1/P2 fixture stages
     for (const name of specialistNames) await enableSpecialist(source, name);
     const readme = join(source, "README.md");
     await writeFile(readme, `${await readFile(readme, "utf8")}\n[平台](skills/${platform}/SKILL.md)\n[审核](skills/cineweave-review/SKILL.md)\n[参考作者](skill-sources/cineweave-reference/agents/openai.yaml)\n`);
-    assert.equal((await syncSkillExports({ sourceRoot: source })).filesUpdated, 522);
+    assert.equal((await syncSkillExports({ sourceRoot: source })).filesUpdated, 531);
     const p4 = await validateRepository(source);
-    assert.equal(p4.files, 698); assert.equal(p4.skills.length, 4);
+    assert.equal(p4.files, 710); assert.equal(p4.skills.length, 4);
     await resetFixtureStage(source);
     const p1 = await validateRepository(source);
-    assert.equal(p1.files, 176); assert.deepEqual(p1.enabledSkills, [director]);
+    assert.equal(p1.files, 179); assert.deepEqual(p1.enabledSkills, [director]);
     await assert.rejects(lstat(join(source, "skill-sources")), { code: "ENOENT" });
     await enableSpecialist(source);
-    assert.equal((await syncSkillExports({ sourceRoot: source })).filesUpdated, 174);
-    assert.equal((await validateRepository(source)).files, 350);
+    assert.equal((await syncSkillExports({ sourceRoot: source })).filesUpdated, 177);
+    assert.equal((await validateRepository(source)).files, 356);
   });
 });
 

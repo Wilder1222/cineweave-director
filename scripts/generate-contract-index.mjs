@@ -19,6 +19,8 @@ const filenameOverrides = new Map([
 ]);
 
 const supportSchemas = [
+  { schema: "schemas/studio-director-input.schema.json", purpose: "cineweave.director-input/v1 外部来源输入；须由适配器验证来源完整性。" },
+  { schema: "schemas/studio-shot-task.schema.json", purpose: "cineweave.studio-shot-task/v1 导演待创作任务与逐镜引用追踪。" },
   {
     schema: "schemas/common.schema.json",
     purpose: "共享标识、引用、来源与回执定义。",

@@ -1,5 +1,5 @@
 {
-  "catalogVersion": "3.2.2",
+  "catalogVersion": "3.3.0",
   "skill": "cineweave-director",
   "authority": {
     "routeOwnership": "contracts.json#/routes",
@@ -60,7 +60,12 @@
       "loadContexts": [
         "multi_route",
         "continuity",
-        "draft_revision"
+        "draft_revision",
+        "story",
+        "character",
+        "storyboard_rhythm",
+        "production_plan",
+        "review_repair"
       ]
     },
     {
