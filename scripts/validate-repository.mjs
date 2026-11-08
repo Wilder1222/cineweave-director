@@ -851,6 +851,8 @@ const EXPECTED_SOURCE_DIRECTORIES = new Map([
     "evaluations/aigc-creation-research-2026-09-14.md",
     "evaluations/cinematic-cases.json",
     "evaluations/writing-upgrade-2026-11-04.md",
+    "evaluations/seedance25-upgrade-2026-11-08.md",
+    "evaluations/seedance25-forward-2026-11-08.json",
     "evaluations/pov-generated-video-review-2026-10-18.md",
     "evaluations/2026-10-16/ancient-full-flow.json",
     "evaluations/2026-10-16/everyday-full-flow.json",
