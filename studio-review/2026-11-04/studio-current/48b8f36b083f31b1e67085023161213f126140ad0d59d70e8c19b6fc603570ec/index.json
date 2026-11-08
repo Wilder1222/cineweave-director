@@ -1,0 +1,68 @@
+{
+  "topicId": "U007",
+  "projectId": "48b8f36b083f31b1e67085023161213f126140ad0d59d70e8c19b6fc603570ec",
+  "projectTitle": "丹修住在楼下",
+  "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=48b8f36b083f31b1e67085023161213f126140ad0d59d70e8c19b6fc603570ec#scripts",
+  "transport": "authorized_browser_ui_dom",
+  "currentRevision": null,
+  "exportComplete": true,
+  "documents": [
+    {
+      "documentId": "f55712221d48d302646c7ece447a2b89f0779a6e71a2ccdbc1621e16bb6b9c9d",
+      "metadata": "提示词",
+      "title": "U007 丹修住在楼下｜审阅与来源｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "d5139629ec00c58513774cccbd83de2b4974c2e83564a03c9ab61b27bde14f3b",
+      "bodyLength": 817,
+      "readAt": "2026-11-04T06:42:36.570Z",
+      "file": "f55712221d48d302646c7ece447a2b89f0779a6e71a2ccdbc1621e16bb6b9c9d.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=48b8f36b083f31b1e67085023161213f126140ad0d59d70e8c19b6fc603570ec#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "ce588ac715455c78e72c0632700bb5866d6c3be10805f7953e8b65527d0bbe37",
+      "metadata": "提示词",
+      "title": "U007 丹修住在楼下｜分镜与视频提示｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "eb89b95c111248a9c2304e81c98d4eb441fac0fba31a39c82fe9277cac4b4ea0",
+      "bodyLength": 1947,
+      "readAt": "2026-11-04T06:42:44.345Z",
+      "file": "ce588ac715455c78e72c0632700bb5866d6c3be10805f7953e8b65527d0bbe37.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=48b8f36b083f31b1e67085023161213f126140ad0d59d70e8c19b6fc603570ec#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "c04051a6a170f5082be29372cd26664faa533295106522702d2f3d736395bb86",
+      "metadata": "剧本",
+      "title": "U007 丹修住在楼下｜剧本｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "1d79de83506cf6d06a14e02f21b0d4621055ea9b246507b68d8e4daad621ee87",
+      "bodyLength": 619,
+      "readAt": "2026-11-04T06:42:51.423Z",
+      "file": "c04051a6a170f5082be29372cd26664faa533295106522702d2f3d736395bb86.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=48b8f36b083f31b1e67085023161213f126140ad0d59d70e8c19b6fc603570ec#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "db72107054e6c60a7780a25ef3788ea384c334873e3ffa380ced0bebe424a126",
+      "metadata": "提示词",
+      "title": "U007 丹修住在楼下｜分镜与视频提示词候选",
+      "currentRevision": null,
+      "sha256": "700a1f6a824417c8c5be53723351fd9b3c19a60ea81e256dca58bd9c9479aee2",
+      "bodyLength": 1240,
+      "readAt": "2026-11-04T06:43:02.815Z",
+      "file": "db72107054e6c60a7780a25ef3788ea384c334873e3ffa380ced0bebe424a126.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=48b8f36b083f31b1e67085023161213f126140ad0d59d70e8c19b6fc603570ec#scripts",
+      "proposals": [
+        {
+          "proposalId": "45a9fbc1ed14ccfad0f2165dc27e8617eee132b1a1c4a86686a5569ceab3916f",
+          "file": "db72107054e6c60a7780a25ef3788ea384c334873e3ffa380ced0bebe424a126.proposal-1.md",
+          "sha256": "700a1f6a824417c8c5be53723351fd9b3c19a60ea81e256dca58bd9c9479aee2",
+          "cardText": "创作者提交的内容审阅提案2026/10/28 14:14待审阅# U007《丹修住在楼下》｜逐镜分镜与视频提示词候选\n\n依据 U007-小说.md、U007-剧本.md。设计审阅：七年药引并非救命丹药而是送姐姐的旧树气味；她最终不再添加并撤离，小盒留下，警报原因未知。场景消防按照既有剧本执行，不拍真实火灾或刺激烟雾。普通候选未经作者采纳及严格隔离排练；未生成媒体。\n\n通案：100 秒，住宅厨房一景，物业唐程、药师苏晚两人。锅在台面、蓝雾和锅底青光虚构，苏晚平板已登录住户群，门与撤离路线固定。01 投诉、02 留香的代价、03 合盒报警撤离、04 稍后群消息与小盒。空厨房镜头不推定楼内所有人已撤离。\n\n## 01｜0—22 秒｜第三次投诉\n**视频提示词：**日间住宅厨房入口，台面苏晚平板登录物业住户群，陶锅盖下浅蓝雾与锅底青光为后期虚构效果。门开，物业唐程出示工作证，手机显示楼上第三次气味投诉；苏晚让他停在厨房入口。平视固定中景，前景门框，中景两人，后景蓝雾锅；唐问“楼上闻到刺鼻味。屋里有人不舒服吗？”苏答“就我一个，没有。锅不要碰。我是药师，上次还问过你药草袋怎么分类。”唐给值班室发消息“请确认投诉住户情况，提醒避开气味。”焦点由工作证和手机转向锅，室内安静、通知声轻响，出点无人碰锅。\n\n## 02｜22—47 秒｜留住树的气味\n**视频提示词：**同一厨房，苏晚拿起打开小盒，内有一片干叶，卡片写“给姐姐，冬至”，她看过后合上；前景干叶卡片、中景她的手、后景陶锅。俯角固定中近景，她说“最后一片。炉火不能熄，断了七年的药引就废了。”唐问“给人吃的？”苏答“不能吃。我想把家里旧树的味道留给姐姐。以前在山里做，我以为关窗就不会影响别人。”唐说“楼上有人闻到了。成分和风险没弄清，先别再加东西，请专业人员看。”焦点从卡片到她与锅，盒盖与室内声清楚；出点盒在她手中。\n\n## 03｜47—75 秒｜不加了，离开\n**视频提示词：**同一厨房，前景小盒，中景苏晚与唐程及门口撤离路线，后景仍有虚构蓝雾的锅。苏打开盒，手停叶上，说“她今晚会问我做成没有。”唐说“楼上已经第三次投诉了。现在不能再加东西。”她合盒放桌面说“我不加了。”唐向值班室发物料不明、需按应急流程核查的消息；屋内突然火警响，原因未知。唐喊“先离开！”苏看炉光伸手要拿盒又停住，唐让出门口，两人立即离开画面，不碰锅、不关警报、不取物。固定双人中景，焦点从盒到报警后撤离，警报先于撤离，出点厨房空置。\n\n## 04｜75—100 秒｜留下的小盒\n**视频提示词：**时间跳切至稍后的空厨房，前景台面平板，中景桌上小盒，后景陶锅和门。固定近景，已登录住户群的平板收到唐程从安全处发出的群消息“已报 119；物料不明，人员核查中。请根据现场应急指引避险。”焦点从消息转到没有带走的小盒，锅盖下蓝雾仍是虚构效果；声音保留必要室内底声，不声称火熄、成品完成、所有住户安全或撤离完成，切黑。\n\n试拍：平板群消息发送与时序、小盒停手及撤离，蓝雾须后期合成，100 秒待验证。\n采纳提案拒绝",
+          "readAt": "2026-11-04T06:43:03.540Z"
+        }
+      ]
+    }
+  ],
+  "exportedAt": "2026-11-04T06:43:04.477Z"
+}

@@ -1,0 +1,425 @@
+{
+  "checkedAtUtc": "2026-11-08T02:48:12.100548+00:00",
+  "scope": "static_root_html_only",
+  "status": "pass",
+  "browserUsed": false,
+  "serverStarted": false,
+  "mediaVerified": false,
+  "summary": {
+    "expectedRootHtmlFiles": 28,
+    "rootHtmlFiles": 28,
+    "htmlIds": 477,
+    "duplicateIdGroups": 0,
+    "localHrefSrcReferences": 1317,
+    "localHrefFragmentReferences": 476,
+    "missingLocalPaths": 0,
+    "expectedPendingLocalPaths": 0,
+    "invalidFragmentReferences": 0,
+    "unsupportedFragmentTargets": 0,
+    "inlineScripts": 27,
+    "scriptSyntaxErrors": 0,
+    "externalOrNonFileReferencesSkipped": 4
+  },
+  "duplicateIds": [],
+  "missingLocalPaths": [],
+  "expectedPendingLocalPaths": [],
+  "invalidFragmentReferences": [],
+  "unsupportedFragmentTargets": [],
+  "scriptSyntax": {
+    "engine": "v22.15.0",
+    "method": "new Function(code), compilation only; no script execution",
+    "results": [
+      {
+        "source": "asset-inventory.html",
+        "index": 1,
+        "line": 9,
+        "ok": true
+      },
+      {
+        "source": "E01.html",
+        "index": 1,
+        "line": 513,
+        "ok": true
+      },
+      {
+        "source": "E02.html",
+        "index": 1,
+        "line": 497,
+        "ok": true
+      },
+      {
+        "source": "E03.html",
+        "index": 1,
+        "line": 459,
+        "ok": true
+      },
+      {
+        "source": "E04.html",
+        "index": 1,
+        "line": 310,
+        "ok": true
+      },
+      {
+        "source": "E05.html",
+        "index": 1,
+        "line": 587,
+        "ok": true
+      },
+      {
+        "source": "E06.html",
+        "index": 1,
+        "line": 518,
+        "ok": true
+      },
+      {
+        "source": "E07.html",
+        "index": 1,
+        "line": 517,
+        "ok": true
+      },
+      {
+        "source": "E08.html",
+        "index": 1,
+        "line": 449,
+        "ok": true
+      },
+      {
+        "source": "E09.html",
+        "index": 1,
+        "line": 609,
+        "ok": true
+      },
+      {
+        "source": "E10.html",
+        "index": 1,
+        "line": 769,
+        "ok": true
+      },
+      {
+        "source": "E11.html",
+        "index": 1,
+        "line": 879,
+        "ok": true
+      },
+      {
+        "source": "E12.html",
+        "index": 1,
+        "line": 502,
+        "ok": true
+      },
+      {
+        "source": "E13.html",
+        "index": 1,
+        "line": 666,
+        "ok": true
+      },
+      {
+        "source": "E14.html",
+        "index": 1,
+        "line": 642,
+        "ok": true
+      },
+      {
+        "source": "E15.html",
+        "index": 1,
+        "line": 473,
+        "ok": true
+      },
+      {
+        "source": "E16.html",
+        "index": 1,
+        "line": 597,
+        "ok": true
+      },
+      {
+        "source": "E17.html",
+        "index": 1,
+        "line": 392,
+        "ok": true
+      },
+      {
+        "source": "E18.html",
+        "index": 1,
+        "line": 506,
+        "ok": true
+      },
+      {
+        "source": "E19.html",
+        "index": 1,
+        "line": 397,
+        "ok": true
+      },
+      {
+        "source": "E20.html",
+        "index": 1,
+        "line": 425,
+        "ok": true
+      },
+      {
+        "source": "E21.html",
+        "index": 1,
+        "line": 580,
+        "ok": true
+      },
+      {
+        "source": "E22.html",
+        "index": 1,
+        "line": 368,
+        "ok": true
+      },
+      {
+        "source": "E23.html",
+        "index": 1,
+        "line": 376,
+        "ok": true
+      },
+      {
+        "source": "E24.html",
+        "index": 1,
+        "line": 491,
+        "ok": true
+      },
+      {
+        "source": "index.html",
+        "index": 1,
+        "line": 1,
+        "ok": true
+      },
+      {
+        "source": "storyboard.html",
+        "index": 1,
+        "line": 74,
+        "ok": true
+      }
+    ]
+  },
+  "pages": [
+    {
+      "file": "asset-inventory.html",
+      "sha256": "6edd5f02ce2dbeb541adc1fbf6ace931fd0e6bb4df60d072a06eacbf4c90f691",
+      "idCount": 4,
+      "localReferenceCount": 7,
+      "fragmentReferenceCount": 0,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E01.html",
+      "sha256": "a2566cd411124359c2feeba537f6b80104e6f435e60fb9b22ce1e80611af55fc",
+      "idCount": 14,
+      "localReferenceCount": 13,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E02.html",
+      "sha256": "f17d69e2e3df1a65768a2de38e4e100023d404435ceebdde9e1cbd0e080ea723",
+      "idCount": 10,
+      "localReferenceCount": 12,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E03.html",
+      "sha256": "c9266d28f4fb904252aef994fbe0550fc870de3649144dcaa07692a35ea19ccb",
+      "idCount": 10,
+      "localReferenceCount": 12,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E04.html",
+      "sha256": "d87cd765340fbfe58b96616caa9855cad4e60f2754277f799d4423c0d83d8717",
+      "idCount": 5,
+      "localReferenceCount": 11,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E05.html",
+      "sha256": "45865729ba2bc8ea6f903f9c61f44a9c5fc7dfb45fbbb2f8174b7161231b0e31",
+      "idCount": 10,
+      "localReferenceCount": 12,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E06.html",
+      "sha256": "e6bc9da507589757a662d710f4b7d7cc5df06a516baef1e2188ac6bab8a9c0f8",
+      "idCount": 14,
+      "localReferenceCount": 13,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E07.html",
+      "sha256": "a607d37805422ec7611e8f9d9c577b47a3d8a434ba86784b46b25bc35a7c7bd0",
+      "idCount": 10,
+      "localReferenceCount": 12,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E08.html",
+      "sha256": "b1be238f6e6c49b9d83dbe3171feec696f1dabff9823c5050b4890f42047d858",
+      "idCount": 10,
+      "localReferenceCount": 12,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E09.html",
+      "sha256": "7c5206b4eb09fa228f13a5008d8a3ee3529b9ea1476f91d455723c1fcf72227a",
+      "idCount": 11,
+      "localReferenceCount": 12,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E10.html",
+      "sha256": "9f401569f68fa5ea761eb082c15046edb8f58ed64a5edd9f90b228d2288c461b",
+      "idCount": 12,
+      "localReferenceCount": 12,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E11.html",
+      "sha256": "8c44cdda091cb35e1d2eeb9dda93fc90abb3a9c0e0d328e2170d017e1226a6d4",
+      "idCount": 13,
+      "localReferenceCount": 13,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E12.html",
+      "sha256": "d0cd1cf962c4131cc87fd94dd8ac84cae43746835a917ba9d7e615e7f3a9eb5a",
+      "idCount": 9,
+      "localReferenceCount": 12,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E13.html",
+      "sha256": "82264e942e78714a2fa4274d8d34dcf67d820219d67c5185628f0fa8d095f396",
+      "idCount": 11,
+      "localReferenceCount": 12,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E14.html",
+      "sha256": "5d99c87895ff60f9aa48bef334e440dc1d0591df4f4325152414d6275eb0095b",
+      "idCount": 11,
+      "localReferenceCount": 12,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E15.html",
+      "sha256": "41f6761cb997d57651f3f7ba33f642cdec9fa79a17256a82ae5b23c2cec24ca3",
+      "idCount": 8,
+      "localReferenceCount": 12,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E16.html",
+      "sha256": "456430a6df67cc1baa50185b679fd4e764cf4af5d333aec0c8b9ec3bbecb9d26",
+      "idCount": 10,
+      "localReferenceCount": 12,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E17.html",
+      "sha256": "c38e0983c8d45097d289475d6b7239278a73ee093658a5457d9257996b000218",
+      "idCount": 7,
+      "localReferenceCount": 12,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E18.html",
+      "sha256": "07dca766ca6b976f559e272d9aa7646e8aadefb2fae1cff5d6991217ca765687",
+      "idCount": 7,
+      "localReferenceCount": 12,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E19.html",
+      "sha256": "4d707343669d47d0e602b8b72976b8216c33657f38fed7a728398f8b2cb64918",
+      "idCount": 6,
+      "localReferenceCount": 11,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E20.html",
+      "sha256": "ba2978053695f08d4117456217e3226ee2a1366962cc9e7222039e651ae54fbe",
+      "idCount": 6,
+      "localReferenceCount": 11,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E21.html",
+      "sha256": "e0bff45584176fbdca8db9654f8cbf1dd0062b001fe8a6652e7cbe743f49e29e",
+      "idCount": 9,
+      "localReferenceCount": 12,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E22.html",
+      "sha256": "ce7fa892ea015f42306a5a4713b1e03cbf3c409f1e8cc751b31829a88e757032",
+      "idCount": 6,
+      "localReferenceCount": 11,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E23.html",
+      "sha256": "8ba1a7659c30283274e64f082d867ec0639121049323aa638bac2bdfcd27a2d4",
+      "idCount": 5,
+      "localReferenceCount": 11,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "E24.html",
+      "sha256": "5429c727a0379e8b54194d5e2166f4a914f57b27e0b4f134c6c1193f39289df4",
+      "idCount": 9,
+      "localReferenceCount": 12,
+      "fragmentReferenceCount": 1,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "index.html",
+      "sha256": "9b7b9360b290cbe1a4671206325820239138ab03d8a2b3601b6c632534268c32",
+      "idCount": 0,
+      "localReferenceCount": 66,
+      "fragmentReferenceCount": 0,
+      "inlineScriptCount": 1
+    },
+    {
+      "file": "reference-and-style.html",
+      "sha256": "d71d691f22d762ecd08023c4dfa2b715aa499795480353b24a1c90f5521e999e",
+      "idCount": 0,
+      "localReferenceCount": 32,
+      "fragmentReferenceCount": 6,
+      "inlineScriptCount": 0
+    },
+    {
+      "file": "storyboard.html",
+      "sha256": "bc54bfcdd7cc96d758fdc83456750924ae186d26350ec6daf8c8ea91660c8746",
+      "idCount": 250,
+      "localReferenceCount": 926,
+      "fragmentReferenceCount": 446,
+      "inlineScriptCount": 1
+    }
+  ],
+  "limitations": [
+    "Static HTML/path/anchor and JavaScript syntax checks only; no browser behavior, layout, media, or rendering acceptance."
+  ]
+}

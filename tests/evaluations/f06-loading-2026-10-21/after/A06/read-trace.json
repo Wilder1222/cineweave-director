@@ -1,0 +1,165 @@
+[
+  {
+    "index": 1,
+    "mode": "file",
+    "args": [
+      "SKILL.md"
+    ],
+    "sources": [
+      {
+        "path": "SKILL.md",
+        "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c",
+        "fileBytesRead": 14711,
+        "startLine": 1,
+        "endLine": 103
+      }
+    ],
+    "payloadFile": "read-01.txt",
+    "payloadSha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c",
+    "emittedUtf8Bytes": 14711,
+    "emittedCodePoints": 6651,
+    "localReadAndRenderMs": 1.7344000000000008,
+    "tokenUsage": null,
+    "toolEnvelopeIncluded": false
+  },
+  {
+    "index": 2,
+    "mode": "file",
+    "args": [
+      "references/routes/style.md",
+      "按风格名称调用与独立组合"
+    ],
+    "sources": [
+      {
+        "path": "references/routes/style.md",
+        "sha256": "f91ad104a3dbae5d2d82a5ac62b9e0a14b0d3df926424ee136be6979290fcec1",
+        "fileBytesRead": 10414,
+        "startLine": 5,
+        "endLine": 20
+      }
+    ],
+    "payloadFile": "read-02.txt",
+    "payloadSha256": "fe02482403a1b99eb97814e98f2035356fcc24b27f99e551ca5724b60da0bb76",
+    "emittedUtf8Bytes": 2759,
+    "emittedCodePoints": 1150,
+    "localReadAndRenderMs": 3.765100000000004,
+    "tokenUsage": null,
+    "toolEnvelopeIncluded": false
+  },
+  {
+    "index": 3,
+    "mode": "card",
+    "args": [
+      "宋韵清雅·古偶柔光",
+      "杏露薄妆·清雅日常"
+    ],
+    "sources": [
+      {
+        "path": "references/optional/color-grading-presets.md",
+        "sha256": "cbe652ec6887da11d73914dd4fc9ae6728a933c820e476a3bd3246b54a79fbf0",
+        "startLine": 187,
+        "endLine": 227,
+        "id": "CG11",
+        "revision": 2
+      },
+      {
+        "path": "references/optional/makeup-style-presets.md",
+        "sha256": "a2e4efa2134d2362a54efea433b802480a810c9a9c3b9e9cc4fadc6799992a8a",
+        "startLine": 271,
+        "endLine": 289,
+        "id": "MU14",
+        "revision": 3
+      },
+      {
+        "path": "references/optional/color-grading-presets.md",
+        "sha256": "cbe652ec6887da11d73914dd4fc9ae6728a933c820e476a3bd3246b54a79fbf0",
+        "fileBytesRead": 69266,
+        "role": "lookup scan; not emitted in full"
+      },
+      {
+        "path": "references/optional/makeup-style-presets.md",
+        "sha256": "a2e4efa2134d2362a54efea433b802480a810c9a9c3b9e9cc4fadc6799992a8a",
+        "fileBytesRead": 79613,
+        "role": "lookup scan; not emitted in full"
+      }
+    ],
+    "payloadFile": "read-03.txt",
+    "payloadSha256": "bfa2cb44779ee9f903dc9a7822fbb16c991a16bd9cc0592b41a012a411c47bc7",
+    "emittedUtf8Bytes": 9736,
+    "emittedCodePoints": 3887,
+    "localReadAndRenderMs": 17.2036,
+    "tokenUsage": null,
+    "toolEnvelopeIncluded": false
+  },
+  {
+    "index": 4,
+    "mode": "file",
+    "args": [
+      "references/routes/character.md"
+    ],
+    "sources": [
+      {
+        "path": "references/routes/character.md",
+        "sha256": "4bcf89282d209975511866ec6c8153d242d25585d6a14bb09cf6ff966978cc88",
+        "fileBytesRead": 5352,
+        "startLine": 1,
+        "endLine": 50
+      }
+    ],
+    "payloadFile": "read-04.txt",
+    "payloadSha256": "4bcf89282d209975511866ec6c8153d242d25585d6a14bb09cf6ff966978cc88",
+    "emittedUtf8Bytes": 5352,
+    "emittedCodePoints": 2292,
+    "localReadAndRenderMs": 3.810200000000002,
+    "tokenUsage": null,
+    "toolEnvelopeIncluded": false
+  },
+  {
+    "index": 5,
+    "mode": "file",
+    "args": [
+      "references/optional/prompt-detail-standard.md",
+      "人物"
+    ],
+    "sources": [
+      {
+        "path": "references/optional/prompt-detail-standard.md",
+        "sha256": "0880a163be9679d32807688a0c434c0fa936c0fb00a5c4aae24e381d0dd92c25",
+        "fileBytesRead": 34113,
+        "startLine": 13,
+        "endLine": 63
+      }
+    ],
+    "payloadFile": "read-05.txt",
+    "payloadSha256": "0e9e4a7dabc58cbbbf248bc9d99a11cb21efc468476e6d913163b993d997221d",
+    "emittedUtf8Bytes": 7578,
+    "emittedCodePoints": 2722,
+    "localReadAndRenderMs": 2.293700000000001,
+    "tokenUsage": null,
+    "toolEnvelopeIncluded": false
+  },
+  {
+    "index": 6,
+    "mode": "file",
+    "args": [
+      "references/optional/portrait-natural-human.md",
+      "先分清肖像任务"
+    ],
+    "sources": [
+      {
+        "path": "references/optional/portrait-natural-human.md",
+        "sha256": "a370c4ca4e05a31576d99e262dd52924667f199d205c9087a6104d709b8d1d43",
+        "fileBytesRead": 8734,
+        "startLine": 18,
+        "endLine": 31
+      }
+    ],
+    "payloadFile": "read-06.txt",
+    "payloadSha256": "5655111fdecbc52ddfdb2c36fe53ec97cd321a393e2b35fd79e3237ac0fec858",
+    "emittedUtf8Bytes": 1610,
+    "emittedCodePoints": 648,
+    "localReadAndRenderMs": 3.181199999999997,
+    "tokenUsage": null,
+    "toolEnvelopeIncluded": false
+  }
+]

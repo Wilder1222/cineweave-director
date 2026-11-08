@@ -1,0 +1,68 @@
+{
+  "topicId": "V003",
+  "projectId": "a3078e0eed2139ba4023a60802cd2ec01851e1588f4b6b6a9f060251b24d440c",
+  "projectTitle": "镜中长安",
+  "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=a3078e0eed2139ba4023a60802cd2ec01851e1588f4b6b6a9f060251b24d440c#scripts",
+  "transport": "authorized_browser_ui_dom",
+  "currentRevision": null,
+  "exportComplete": true,
+  "documents": [
+    {
+      "documentId": "c4e04452e91fcee34a2ecda7379b1014d84bfd00c4f1b7ccc2ca0bef7ae954d6",
+      "metadata": "提示词",
+      "title": "V003 镜中长安｜审阅与来源｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "246015d1e0c33dc690925744aa2d73e7f4c21571bf5c7847661764f330a9c2b7",
+      "bodyLength": 847,
+      "readAt": "2026-11-04T06:47:59.136Z",
+      "file": "c4e04452e91fcee34a2ecda7379b1014d84bfd00c4f1b7ccc2ca0bef7ae954d6.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=a3078e0eed2139ba4023a60802cd2ec01851e1588f4b6b6a9f060251b24d440c#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "897feac6836449f35da793d6cd636a3afd1879806033fe06a225940a62a2ce63",
+      "metadata": "提示词",
+      "title": "V003 镜中长安｜分镜与视频提示｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "06d66ea4f00d76e701e55375adcdd4e9847bb5b5fa51c06f2503e8d123c22239",
+      "bodyLength": 12805,
+      "readAt": "2026-11-04T06:48:09.380Z",
+      "file": "897feac6836449f35da793d6cd636a3afd1879806033fe06a225940a62a2ce63.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=a3078e0eed2139ba4023a60802cd2ec01851e1588f4b6b6a9f060251b24d440c#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "4bb14dbc2c370e8488270dc7e9f44ea81e82df1648a528809032c5cc4424768b",
+      "metadata": "剧本",
+      "title": "V003 镜中长安｜剧本｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "301d7b0bef7def992c1a40fb0a61095893e4b849537cfbe9793fc3efcf42fbb6",
+      "bodyLength": 1121,
+      "readAt": "2026-11-04T06:48:19.537Z",
+      "file": "4bb14dbc2c370e8488270dc7e9f44ea81e82df1648a528809032c5cc4424768b.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=a3078e0eed2139ba4023a60802cd2ec01851e1588f4b6b6a9f060251b24d440c#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "651906b683b6dc19645e9c6b2ceb2deb5faca32e3454d41b6d16d4f8f0b56ed7",
+      "metadata": "提示词",
+      "title": "V003 镜中长安｜分镜与视频提示词候选",
+      "currentRevision": null,
+      "sha256": "2a863d5d9b1fe72961edac34b6bf4436b97c4b048d4ba19ded29f7f2c8e735e5",
+      "bodyLength": 1501,
+      "readAt": "2026-11-04T06:48:28.551Z",
+      "file": "651906b683b6dc19645e9c6b2ceb2deb5faca32e3454d41b6d16d4f8f0b56ed7.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=a3078e0eed2139ba4023a60802cd2ec01851e1588f4b6b6a9f060251b24d440c#scripts",
+      "proposals": [
+        {
+          "proposalId": "9fe87b1bd828c9af48c3b3fe57c212b7a13a62c0d86fe1be14c073e730b8638a",
+          "file": "651906b683b6dc19645e9c6b2ceb2deb5faca32e3454d41b6d16d4f8f0b56ed7.proposal-1.md",
+          "sha256": "2a863d5d9b1fe72961edac34b6bf4436b97c4b048d4ba19ded29f7f2c8e735e5",
+          "cardText": "创作者提交的内容审阅提案2026/10/28 14:18待审阅# V003《镜中长安》｜逐镜分镜与视频提示词候选\n\n依据 V003-小说.md、V003-剧本.md。设计审阅：现代人读到古籍中女道士次日不知去向，却不能替她决定；她主动弃旧名带名单，修复师留守维持光。两时空不能互相听见，照镜灯、名单与假纸不得混淆。原创设定未经作者采纳及严格隔离排练；未生成媒体，非文物修复操作方案。\n\n通案：145 秒，现代修复室与唐代古室交叉剪辑，季衡与明真两演员。铜镜现代固定托架、冷白灯照，古室同镜暖黄灯照，门外人影仅非人形；两个时空声音各自独立，短字镜向要可辨，字幕后期排版。01 建立听不见；02 日期与记载；03 出口及舍名；04 换灯、下阶与清晨交接。\n\n## 01｜0—35 秒｜敲镜却听不见\n**视频提示词：**夜间现代文物修复室，古籍修复师季衡完成镜盒纸质衬料更换记录，铜镜固定托架、冷白工作灯照向镜面；镜中映出暖黄古室，女道士明真急促敲镜回望同室门。两时空以镜面交叉剪辑，现代中近景以前镜、中季衡、后工作灯；古室平视中景以镜、明真、门对应，各自固定。季稍挪灯，镜中人影变暗；明真抬手示意，他将灯移回。季开口询问，明真没反应、指耳摇头；季举便笺“聽？”，她写“不”，两人点头。焦点随灯手与镜中字变化；现代只听布纸与灯，古室独有敲击及门外声音，绝无跨时空传声；铜镜不被移动。\n\n## 02｜35—65 秒｜记载并非死讯\n**视频提示词：**同夜两个时空由铜镜联系：现代季衡位于固定托架旁，古室明真面对镜及身后门。明真举纸“門外有人。”门板下影移动，她把写满名字的纸包藏入衣襟，向镜画门外手并画叉；季写“不交？”，她点头。季查看电脑上虚构抄本图像“大曆十三年九月二十七，女冠明真不知所之。”写“明真？”，她指自己另写“九月二十六”。季写“明日不知所之。”停顿加“未必全對”，她看字不将其当死讯。交叉固定近景，前纸条或屏幕、中人物、后各自门；焦点随短字与日期切换，古室门声只在古室听见；字符以后期确定性排版，出点名单仍藏她衣内。\n\n## 03｜65—105 秒｜由她选择\n**视频提示词：**同一两时空通信，现代铜镜不离托架，古室明真与门、短凳、窗下木板同室。季衡把残图可辨门窗画给她，缺损处标问号；她摇头画窗下木板并指给他，搬开短凳揭板，烛光只照见两级台阶，下面是否通畅未知。门外撞击后她摊看名单，重新贴身藏好；脱外袍，将弄湿的空白纸塞袖下留屋内。她举纸“若尋我真名，會累名單中人；走後不能留名。”指外袍假纸再按住真实名单。季停笔写“你自己選。”古室固定中景间切现代纸图近景，焦点从短凳到木板、假纸和名单；声音各归本时空，出点假纸留袍、名单随她。\n\n## 04｜105—145 秒｜维持光直到交班\n**视频提示词：**同一夜，现代修复室铜镜固定托架，古室明真持真实名单、小灯照镜，外袍与假纸留屋。季用手机拍镜，屏幕只有平静铜面；工作灯电量下降，古室镜像变暗。他放手机，用备用灯照镜再给原灯接电，不触碰移动古镜。明真把小灯留镜前，带另一支细烛走台阶，在镜边敲一下、再一下、停顿、又一下；季仅从画面看到，纸上画三短线，她点头指台阶。她下暗口，烛光向下，木板慢落，古室门外再撞；镜中留小灯、外袍与湿纸。季留守，在个人笔记写“所见尚未验证”，工作记录仅登记衬料和灯具切换，不改虚构抄本。时间跳至清晨，时钟与窗外天色变化，手机显示早班收到留守、衬料与换灯交接；他望托架上铜镜不再敲。现代固定中近景、古室小幅跟随烛光，焦点由灯切换到她入暗口再回交接；敲声仅古室听见，结果未知。\n\n试拍：镜中反向文字、独立声音、两灯衔接、名单与假纸、40 秒密集动作；真实保护工序需专业审核。\n采纳提案拒绝",
+          "readAt": "2026-11-04T06:48:32.052Z"
+        }
+      ]
+    }
+  ],
+  "exportedAt": "2026-11-04T06:48:33.263Z"
+}

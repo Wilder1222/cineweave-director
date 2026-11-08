@@ -31,9 +31,107 @@ export function countPrompt(textValue) {
   return [...textValue].filter((character) => !/\p{White_Space}/u.test(character)).length;
 }
 
+
+const CAMERA_TECHNIQUE_RE = /^(?:K0[1-7]|C0[1-9]|M(?:0[1-9]|1[0-2])|F0[1-3]|E0[1-4]|neutral_static)$/u;
+const CAMERA_MOTION_TECHNIQUES = new Set(["K04", "K06", "M01", "M02", "M03", "M04", "M05", "M06", "M07", "M08", "M09", "M12"]);
+const CAMERA_MOTION_TYPES = ["static", "dolly", "truck", "pan", "tilt", "arc", "crane", "handheld", "gimbal", "compound"];
+const CAMERA_VIEW_FIELDS = ["shotScale", "position", "height", "angle", "perspectiveIntent", "focusTarget", "depthOfField", "axisSide", "movementIntent"];
+const CAMERA_COMPOSITION_FIELDS = ["layout", "foreground", "midground", "background", "negativeSpace", "visualHierarchy"];
+const CAMERA_MOTION_FIELDS = ["motivation", "path", "start", "acceleration", "peak", "deceleration", "end", "framingChange"];
+
+function requiredCameraText(value, label, errors) {
+  if (typeof value !== "string" || !value.trim()) errors.push(`${label} 缺少明确、非空的摄影语言设计`);
+}
+
+/** Check an authored camera decision worksheet, never rendering or verifying media. */
+export function checkCameraLanguageDecisions(plan) {
+  object(plan, "cameraLanguage", ["scope", "shotIds", "decisions"]);
+  choice(plan.scope, ["narrative_video", "narrative_keyframe"], "cameraLanguage.scope");
+  list(plan.shotIds, "cameraLanguage.shotIds");
+  if (!Array.isArray(plan.decisions)) throw new TypeError("cameraLanguage.decisions 必须是数组");
+  const errors = [], missing = [], seen = new Set(), expected = new Set(plan.shotIds);
+  if (expected.size !== plan.shotIds.length) errors.push("cameraLanguage.shotIds 含重复镜号");
+  for (const id of plan.shotIds) text(id, "cameraLanguage.shotId");
+
+  for (const [index, row] of plan.decisions.entries()) {
+    const loc = `cameraLanguage.decisions[${index}]`;
+    object(row, loc, ["shotId", "decision", "camera", "composition", "temporal", "storyboardMovementType"]);
+    text(row.shotId, `${loc}.shotId`);
+    if (!expected.has(row.shotId)) errors.push(`${loc}.shotId 不属于已声明的镜号`);
+    if (seen.has(row.shotId)) errors.push(`${loc}.shotId 决策重复`);
+    seen.add(row.shotId);
+    object(row.decision, `${loc}.decision`, [
+      "primaryTechniqueId", "supportingTechniqueIds", "narrativeReason", "audiencePayoff",
+      "trigger", "cameraMode", "focusMode", "noMotionReason", "focusTargetEnd", "exitMatch"
+    ]);
+    const d = row.decision;
+    requiredCameraText(d.primaryTechniqueId, `${loc}.primaryTechniqueId`, errors);
+    if (typeof d.primaryTechniqueId === "string" && !CAMERA_TECHNIQUE_RE.test(d.primaryTechniqueId)) errors.push(`${loc}.primaryTechniqueId 不是已登记的 35 种技法或 neutral_static`);
+    if (!Array.isArray(d.supportingTechniqueIds)) errors.push(`${loc}.supportingTechniqueIds 必须是数组，可为空`);
+    else {
+      if (d.supportingTechniqueIds.length > 8 || new Set(d.supportingTechniqueIds).size !== d.supportingTechniqueIds.length) errors.push(`${loc}.supportingTechniqueIds 超限或重复`);
+      for (const id of d.supportingTechniqueIds) if (typeof id !== "string" || !CAMERA_TECHNIQUE_RE.test(id) || id === "neutral_static" || id === d.primaryTechniqueId) errors.push(`${loc}.supportingTechniqueIds 含非法、自身重复或中性占位 ID`);
+    }
+    for (const field of ["narrativeReason", "audiencePayoff", "trigger", "exitMatch"]) requiredCameraText(d[field], `${loc}.${field}`, errors);
+    choice(d.cameraMode, ["static", "moving", "compound"], `${loc}.cameraMode`);
+    choice(d.focusMode, ["hold", "follow", "rack"], `${loc}.focusMode`);
+    if (d.cameraMode === "static") requiredCameraText(d.noMotionReason, `${loc}.noMotionReason`, errors);
+    if (d.focusMode === "rack") requiredCameraText(d.focusTargetEnd, `${loc}.focusTargetEnd`, errors);
+    if (d.primaryTechniqueId === "neutral_static" && (d.cameraMode !== "static" || d.supportingTechniqueIds?.length)) errors.push(`${loc}：neutral_static 仅用于无其他技法的固定机位`);
+    if (d.cameraMode === "static" && CAMERA_MOTION_TECHNIQUES.has(d.primaryTechniqueId)) errors.push(`${loc}：所选主技法要求摄影机运动，但 cameraMode 声明 static`);
+    if (d.cameraMode !== "static" && d.primaryTechniqueId === "M11") errors.push(`${loc}：固定长镜头主技法与相机运动模式冲突`);
+    if (d.primaryTechniqueId === "K07" && d.focusMode !== "rack") errors.push(`${loc}：K07 应记录实际的焦点转移`);
+
+    object(row.camera, `${loc}.camera`, [...CAMERA_VIEW_FIELDS, "focalLengthMm"]);
+    for (const field of CAMERA_VIEW_FIELDS) requiredCameraText(row.camera[field], `${loc}.camera.${field}`, errors);
+    if (row.camera.focalLengthMm !== undefined && (!Number.isFinite(row.camera.focalLengthMm) || row.camera.focalLengthMm < 8 || row.camera.focalLengthMm > 1200))
+      errors.push(`${loc}：数值焦距不合法；普通中文工作稿允许不填数值`);
+    object(row.composition, `${loc}.composition`, CAMERA_COMPOSITION_FIELDS);
+    for (const field of CAMERA_COMPOSITION_FIELDS) requiredCameraText(row.composition[field], `${loc}.composition.${field}`, errors);
+    if (d.focusMode === "rack" && d.focusTargetEnd === row.camera.focusTarget) errors.push(`${loc}：移焦起止对象不能完全相同`);
+    if (row.storyboardMovementType !== undefined && row.storyboardMovementType === "rack-focus")
+      errors.push(`${loc}：新稿不得把 rack-focus 放入相机运动字段，改用相机真实状态及 focusTimeline`);
+
+    if (plan.scope === "narrative_video" && row.temporal === undefined) errors.push(`${loc}：叙事视频缺少运镜、焦点及剪辑时间轨`);
+    if (row.temporal !== undefined) {
+      object(row.temporal, `${loc}.temporal`, ["durationSeconds", "cameraMotion", "focusTimeline", "edit"]);
+      const motion = row.temporal.cameraMotion;
+      object(motion, `${loc}.temporal.cameraMotion`, ["type", ...CAMERA_MOTION_FIELDS]);
+      choice(motion.type, CAMERA_MOTION_TYPES, `${loc}.temporal.cameraMotion.type`);
+      for (const field of CAMERA_MOTION_FIELDS) requiredCameraText(motion[field], `${loc}.temporal.cameraMotion.${field}`, errors);
+      if (d.cameraMode === "static" && motion.type !== "static") errors.push(`${loc}：固定机位与实际运动轨不一致`);
+      if (d.cameraMode === "moving" && ["static", "compound"].includes(motion.type)) errors.push(`${loc}：移动机位与运动轨不一致`);
+      if (d.cameraMode === "compound" && motion.type !== "compound") errors.push(`${loc}：复合运镜必须由 compound 轨承载`);
+      if (!Array.isArray(row.temporal.focusTimeline) || !row.temporal.focusTimeline.length) errors.push(`${loc}：至少声明一个焦点时序事件`);
+      else {
+        let last = -1;
+        for (const [fi, event] of row.temporal.focusTimeline.entries()) {
+          object(event, `${loc}.temporal.focusTimeline[${fi}]`, ["eventId", "timeSeconds", "description"]);
+          requiredCameraText(event.eventId, `${loc}.focusTimeline.eventId`, errors);
+          requiredCameraText(event.description, `${loc}.focusTimeline.description`, errors);
+          if (typeof event.timeSeconds !== "number" || !Number.isFinite(event.timeSeconds) || event.timeSeconds < 0 || event.timeSeconds <= last)
+            errors.push(`${loc}：焦点事件时序必须严格递增且非负`);
+          if (typeof row.temporal.durationSeconds === "number" && event.timeSeconds > row.temporal.durationSeconds) errors.push(`${loc}：焦点事件超出镜头时长`);
+          last = event.timeSeconds;
+        }
+        if (d.focusMode === "rack" && row.temporal.focusTimeline.length < 2) errors.push(`${loc}：焦点切换至少需要起点和转移事件`);
+      }
+      object(row.temporal.edit, `${loc}.temporal.edit`, ["entry", "exit", "preferredTransition", "soundBridge"]);
+      for (const field of ["entry", "exit", "preferredTransition", "soundBridge"]) requiredCameraText(row.temporal.edit[field], `${loc}.temporal.edit.${field}`, errors);
+    }
+  }
+  for (const shotId of plan.shotIds) if (!seen.has(shotId)) missing.push(shotId);
+  if (missing.length) errors.push(`缺少 ${missing.length} 个真实镜号的镜头语言决定：${missing.join(", ")}`);
+  const coverageComplete = !missing.length && !errors.some(x => /重复镜号|决策重复|不属于已声明的镜号/u.test(x));
+  return {
+    valid: errors.length === 0, coverageComplete, scope: "plan_only", expectedShots: plan.shotIds.length,
+    missing, errors, limitation: "只读文本与声明一致性检查；不能核验实际相机轨迹、光学焦点、观众反应或模型实现。"
+  };
+}
+
 export function checkShotReview(worksheet) {
-  object(worksheet, "worksheet", ["source", "mode", "roles", "shotIds", "reviews", "prompt"]);
-  object(worksheet.source, "source", ["type", "id", "version"]);
+  object(worksheet, "worksheet", ["source", "mode", "roles", "shotIds", "reviews", "prompt", "cameraDecisions"]);
+  object(worksheet.source, "source", ["type", "id", "version", "cameraLanguageScope"]);
   choice(worksheet.source.type, ["design", "prompt"], "source.type");
   text(worksheet.source.id, "source.id");
   if (!Number.isSafeInteger(worksheet.source.version) || worksheet.source.version < 1) throw new TypeError("source.version 必须是安全范围内的正整数");
@@ -47,6 +145,16 @@ export function checkShotReview(worksheet) {
   if (!Array.isArray(worksheet.reviews)) throw new TypeError("reviews 必须是数组");
 
   const errors = [];
+  const cameraScope = worksheet.source.cameraLanguageScope;
+  let cameraLanguage = null;
+  if (cameraScope !== undefined) {
+    choice(cameraScope, ["narrative_video", "narrative_keyframe"], "source.cameraLanguageScope");
+    if (worksheet.cameraDecisions === undefined) errors.push("新叙事镜头正式评审必须提供 cameraDecisions");
+    else {
+      cameraLanguage = checkCameraLanguageDecisions({ scope: cameraScope, shotIds: worksheet.shotIds, decisions: worksheet.cameraDecisions });
+      errors.push(...cameraLanguage.errors.map((problem) => `镜头语言：${problem}`));
+    }
+  } else if (worksheet.cameraDecisions !== undefined) errors.push("提供 cameraDecisions 必须同时声明 source.cameraLanguageScope");
   if (new Set(roles).size !== roles.length) errors.push("roles 不能重复");
   if (new Set(worksheet.shotIds).size !== worksheet.shotIds.length) errors.push("shotIds 不能重复");
   const pairKey = (role, shotId) => JSON.stringify([role, shotId]);
@@ -97,20 +205,27 @@ export function checkShotReview(worksheet) {
     if (limit !== undefined && count > limit) errors.push(`提示词有 ${count} 个非空白码点，超过上限 ${limit}`);
     prompt = { nonWhitespaceCodePoints: count, limit: limit ?? null };
   }
-  const coverageComplete = !pairErrors && !missing.length && new Set(roles).size === roles.length && new Set(worksheet.shotIds).size === worksheet.shotIds.length;
+  const coverageComplete = !pairErrors && !missing.length && new Set(roles).size === roles.length && new Set(worksheet.shotIds).size === worksheet.shotIds.length && (cameraScope === undefined || Boolean(cameraLanguage?.coverageComplete));
   const valid = errors.length === 0;
   return {
     valid, scope: "plan_only", coverageComplete,
     reviewComplete: valid && coverageComplete && !openItems.length && hasApplicablePass,
-    expectedRows: expected.size, missing, openItems, prompt, errors,
+    expectedRows: expected.size, missing, openItems, prompt, errors, ...(cameraLanguage ? { cameraLanguage } : {}),
     limitation: "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。",
   };
 }
 
 async function main() {
   const args = process.argv.slice(2);
+  if (args.length === 2 && args[0] === "--camera-language") {
+    const input = parseJsonStrict(await readFile(args[1], "utf8"));
+    const result = checkCameraLanguageDecisions(input);
+    console.log(JSON.stringify(result, null, 2));
+    process.exitCode = result.valid ? 0 : 1;
+    return;
+  }
   if (args.length === 1 && args[0] === "--help") {
-    console.log("用法：node check-shot-review.mjs <worksheet.json>\n只读逐镜评审：退出码 0 表示完成，1 表示输入无效，2 表示有效但未解决；不核验媒体。");
+    console.log("用法：node check-shot-review.mjs <worksheet.json>，或 --camera-language <camera-workbook.json>\n只读逐镜评审：退出码 0 表示完成，1 表示输入无效，2 表示有效但未解决；不核验媒体。");
     return;
   }
   if (args.length !== 1 || args[0].startsWith("--")) throw new TypeError("用法：node check-shot-review.mjs <worksheet.json>，或使用 --help");

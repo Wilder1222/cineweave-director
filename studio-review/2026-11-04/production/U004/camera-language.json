@@ -1,0 +1,324 @@
+{
+  "scope": "narrative_video",
+  "shotIds": [
+    "U004-01",
+    "U004-02",
+    "U004-03",
+    "U004-04",
+    "U004-05"
+  ],
+  "decisions": [
+    {
+      "shotId": "U004-01",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "及时发现仍在天台操作的人",
+        "audiencePayoff": "及时发现仍在天台操作的人",
+        "trigger": "及时发现仍在天台操作的人",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "focusTargetEnd": "天台远处沈霁与木盒",
+        "exitMatch": "她持盒走门口"
+      },
+      "camera": {
+        "shotScale": "中远景",
+        "position": "天台门内安全区",
+        "height": "二人胸口",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "及时发现仍在天台操作的人",
+        "focusTarget": "门内近处手机预警",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "天台门侧与值班室墙边各自保持二人轴线，不以跨场复用屏幕左右替代世界关系",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "手机预警、七环/石片、木盒",
+        "midground": "梁峥与沈霁",
+        "background": "天台为七环/门及对面楼窗，室内仅门/椅/桌/墙，无新增窗",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "及时发现仍在天台操作的人"
+      },
+      "temporal": {
+        "durationSeconds": 24,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "及时发现仍在天台操作的人",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：天台门内安全区",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：天台门内安全区",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U004-01-F1",
+            "timeSeconds": 0,
+            "description": "门内近处手机预警"
+          },
+          {
+            "eventId": "U004-01-F2",
+            "timeSeconds": 5,
+            "description": "天台远处沈霁与木盒"
+          }
+        ],
+        "edit": {
+          "entry": "天台门通楼内无窗值班室。门侧可见对面楼的住户窗，不从屋顶视线穿透同楼外墙。室内桌椅及地面空区连成一条视线。七环与石片留天台，只有无电源木盒入室；雷效只棚拍合成。",
+          "exit": "她持盒走门口",
+          "preferredTransition": "从本片真实初态开始，建立空间后继续",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；天台只有风门脚步，不出雷声；室内第一次闷雷后远雷持续，白影退回不代表天气停止"
+        }
+      }
+    },
+    {
+      "shotId": "U004-02",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她听到住户风险后决定先撤",
+        "audiencePayoff": "她听到住户风险后决定先撤",
+        "trigger": "她听到住户风险后决定先撤",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "二人入楼关门，七环未收"
+      },
+      "camera": {
+        "shotScale": "中近景",
+        "position": "天台门侧安全内区",
+        "height": "持盒手略上方",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "她听到住户风险后决定先撤",
+        "focusTarget": "背包带/木盒与两人撤入门的工作区域",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "天台门侧与值班室墙边各自保持二人轴线，不以跨场复用屏幕左右替代世界关系",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "背包带/木盒、天台门",
+        "midground": "梁峥与沈霁",
+        "background": "天台为七环/门及对面楼窗，室内仅门/椅/桌/墙，无新增窗",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "她听到住户风险后决定先撤"
+      },
+      "temporal": {
+        "durationSeconds": 24,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她听到住户风险后决定先撤",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：天台门侧安全内区",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：天台门侧安全内区",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U004-02-F1",
+            "timeSeconds": 0,
+            "description": "背包带/木盒与两人撤入门的工作区域"
+          }
+        ],
+        "edit": {
+          "entry": "她持盒走门口",
+          "exit": "二人入楼关门，七环未收",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；天台只有风门脚步，不出雷声；室内第一次闷雷后远雷持续，白影退回不代表天气停止"
+        }
+      }
+    },
+    {
+      "shotId": "U004-03",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "从撤离转为核查住户与阵的偏向",
+        "audiencePayoff": "从撤离转为核查住户与阵的偏向",
+        "trigger": "从撤离转为核查住户与阵的偏向",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "focusTargetEnd": "沈膝下延向地面的白影",
+        "exitMatch": "盒在沈膝，消息联系中"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "无窗值班室墙边",
+        "height": "坐姿胸口含地面",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "从撤离转为核查住户与阵的偏向",
+        "focusTarget": "梁手中近处手机消息",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "天台门侧与值班室墙边各自保持二人轴线，不以跨场复用屏幕左右替代世界关系",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "手机联系中、膝上盒/白影",
+        "midground": "梁峥与沈霁",
+        "background": "天台为七环/门及对面楼窗，室内仅门/椅/桌/墙，无新增窗",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "从撤离转为核查住户与阵的偏向"
+      },
+      "temporal": {
+        "durationSeconds": 36,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "从撤离转为核查住户与阵的偏向",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：无窗值班室墙边",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：无窗值班室墙边",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U004-03-F1",
+            "timeSeconds": 0,
+            "description": "梁手中近处手机消息"
+          },
+          {
+            "eventId": "U004-03-F2",
+            "timeSeconds": 20,
+            "description": "沈膝下延向地面的白影"
+          }
+        ],
+        "edit": {
+          "entry": "两人已下楼来到无窗值班室，沈霁坐下木盒在膝、包在椅边；梁峥持手机站另一侧；室内尚未响第一雷。",
+          "exit": "盒在沈膝，消息联系中",
+          "preferredTransition": "02后明确省略下楼路程，建立无窗值班室人物与物件本地状态",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；天台只有风门脚步，不出雷声；室内第一次闷雷后远雷持续，白影退回不代表天气停止"
+        }
+      }
+    },
+    {
+      "shotId": "U004-04",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "明确代价后由她主动撤阵",
+        "audiencePayoff": "明确代价后由她主动撤阵",
+        "trigger": "明确代价后由她主动撤阵",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "盒在地盖合，白影收回"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "值班室墙边全高度机位",
+        "height": "沈坐姿胸口含脚下",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "明确代价后由她主动撤阵",
+        "focusTarget": "双手承重和回撤白影的实际工作区域",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "天台门侧与值班室墙边各自保持二人轴线，不以跨场复用屏幕左右替代世界关系",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "梁放手机的桌边/木盒",
+        "midground": "沈/梁接盒手与地面空区",
+        "background": "室内门，不加外窗",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "明确代价后由她主动撤阵"
+      },
+      "temporal": {
+        "durationSeconds": 56,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "明确代价后由她主动撤阵",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：值班室墙边全高度机位",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：值班室墙边全高度机位",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U004-04-F1",
+            "timeSeconds": 0,
+            "description": "双手承重和回撤白影的实际工作区域"
+          }
+        ],
+        "edit": {
+          "entry": "盒在沈膝，消息联系中",
+          "exit": "盒在地盖合，白影收回",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；天台只有风门脚步，不出雷声；室内第一次闷雷后远雷持续，白影退回不代表天气停止"
+        }
+      }
+    },
+    {
+      "shotId": "U004-05",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "照护并保留后续责任而非胜利收场",
+        "audiencePayoff": "照护并保留后续责任而非胜利收场",
+        "trigger": "照护并保留后续责任而非胜利收场",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "盒入包，七环位置写明，二人在室内等候"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "值班室桌侧",
+        "height": "桌面略上方含地空区",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "照护并保留后续责任而非胜利收场",
+        "focusTarget": "桌角毛巾、工单与取盒回包的工作区域",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "天台门侧与值班室墙边各自保持二人轴线，不以跨场复用屏幕左右替代世界关系",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "毛巾/工单、地盒→背包",
+        "midground": "梁峥与沈霁",
+        "background": "天台为七环/门及对面楼窗，室内仅门/椅/桌/墙，无新增窗",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "照护并保留后续责任而非胜利收场"
+      },
+      "temporal": {
+        "durationSeconds": 34,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "照护并保留后续责任而非胜利收场",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：值班室桌侧",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：值班室桌侧",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U004-05-F1",
+            "timeSeconds": 0,
+            "description": "桌角毛巾、工单与取盒回包的工作区域"
+          }
+        ],
+        "edit": {
+          "entry": "盒在地盖合，白影收回",
+          "exit": "盒入包，七环位置写明，二人在室内等候",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；天台只有风门脚步，不出雷声；室内第一次闷雷后远雷持续，白影退回不代表天气停止"
+        }
+      }
+    }
+  ]
+}

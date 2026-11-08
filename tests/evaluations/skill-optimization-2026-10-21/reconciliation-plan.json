@@ -1,0 +1,302 @@
+{
+  "base": "aa3571d81dd74af9756cb826eaefd22e5c76f2f5",
+  "upstream": "70ee47666c234be9038d03df9b315c16ca47fdbf",
+  "paths": [
+    {
+      "path": "CHANGELOG.md",
+      "method": "upstream"
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "method": "upstream"
+    },
+    {
+      "path": "README.md",
+      "method": "upstream"
+    },
+    {
+      "path": "package.json",
+      "method": "upstream"
+    },
+    {
+      "path": "scripts/check-stage-artifacts.mjs",
+      "method": "upstream"
+    },
+    {
+      "path": "scripts/skill-catalog.mjs",
+      "method": "conflict"
+    },
+    {
+      "path": "scripts/validate-repository.mjs",
+      "method": "merged"
+    },
+    {
+      "path": "skill-sources/cineweave-platform/SKILL.md",
+      "method": "upstream"
+    },
+    {
+      "path": "skill-sources/cineweave-review/SKILL.md",
+      "method": "merged"
+    },
+    {
+      "path": "skills/cineweave-director/SKILL.md",
+      "method": "conflict"
+    },
+    {
+      "path": "skills/cineweave-director/reference-lifecycle.json",
+      "method": "merged"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/animation-reference-directions.md",
+      "method": "upstream"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/cinematic-patterns.md",
+      "method": "upstream"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/ensemble-direction-and-review.md",
+      "method": "upstream"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/film-television-reference-library.md",
+      "method": "upstream"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/generation-diagnostics.md",
+      "method": "upstream"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/live-action-reference-directions.md",
+      "method": "upstream"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/master-style-presets.md",
+      "method": "conflict"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/prompt-detail-standard.md",
+      "method": "merged"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/scene-directing-pipeline.md",
+      "method": "upstream"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/short-film-creation.md",
+      "method": "merged"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/tagged-video-nodes.md",
+      "method": "upstream"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-performance-direction.md",
+      "method": "conflict"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-sound-and-delivery.md",
+      "method": "merged"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/visual-development.md",
+      "method": "conflict"
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/xuanzang-director-case-study.md",
+      "method": "upstream"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/action.md",
+      "method": "upstream"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/production-plan.md",
+      "method": "upstream"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/reference-evidence.md",
+      "method": "merged"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/review-repair.md",
+      "method": "merged"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/scene.md",
+      "method": "upstream"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/shot-direction.md",
+      "method": "upstream"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/storyboard-rhythm.md",
+      "method": "upstream"
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/style.md",
+      "method": "merged"
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/shot-spec.schema.json",
+      "method": "upstream"
+    },
+    {
+      "path": "skills/cineweave-director/scripts/check-shot-review.mjs",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/check-shot-review.test.mjs",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/ancient-full-flow.json",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/ancient/g0-director-beat-card.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/ancient/g1-light-plot.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/ancient/g1-lighting-card.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/ancient/g1-looktest-board.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/ancient/g1-material-card.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/ancient/g1-palette-card.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/ancient/g1-style-card.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/ancient/g2-scene-map.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/ancient/g3-blocking-board.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/ancient/g4-storyboard-board.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/ancient/g5-edit-timeline.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/ancient/g6-test-plan.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/ancient/g7-review-card.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/modern/g0-director-beat-card.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/modern/g1-light-plot.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/modern/g1-lighting-card.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/modern/g1-looktest-board.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/modern/g1-material-card.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/modern/g1-palette-card.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/modern/g1-style-card.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/modern/g2-scene-map.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/modern/g3-blocking-board.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/modern/g4-storyboard-board.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/modern/g5-edit-timeline.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/modern/g6-test-plan.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/artifacts/modern/g7-review-card.svg",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/everyday-full-flow.json",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/scene-pipeline-audit-report.md",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/stage-artifacts-v1.json",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/stage-result-template-v1.md",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/2026-10-16/stage-results-v1.md",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/cinematic-cases.json",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/evaluations/pov-generated-video-review-2026-10-18.md",
+      "method": "add-add-conflict"
+    },
+    {
+      "path": "tests/reliability.test.mjs",
+      "method": "upstream"
+    },
+    {
+      "path": "tests/skill-bundles.test.mjs",
+      "method": "conflict"
+    },
+    {
+      "path": "tests/skill-catalog.test.mjs",
+      "method": "conflict"
+    }
+  ]
+}

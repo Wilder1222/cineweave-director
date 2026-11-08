@@ -1,0 +1,49 @@
+{
+  "topicId": "U002",
+  "projectId": "a3d761494b052639a2b3e370c20fe3ad6e2ebb63a6b780e29471ee561db0a5ae",
+  "transport": "authorized_browser_ui_dom",
+  "currentRevision": null,
+  "sourcePins": [
+    {
+      "documentId": "6c00d428854d71b26b6b89ae8899bfb75c0ff7ff1c0c312466581feb30d0f124",
+      "title": "U002 狐狸小姐的身份证｜剧本｜20261031审阅版",
+      "sha256": "e5166bfa69766d910737fc8917d48e82204596dbfd8312e8e8d7aef017107d5c",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:38:41.033Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=a3d761494b052639a2b3e370c20fe3ad6e2ebb63a6b780e29471ee561db0a5ae#scripts"
+    },
+    {
+      "documentId": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785",
+      "title": "U002 狐狸小姐的身份证｜分镜与视频提示｜20261031审阅版",
+      "sha256": "484f2d1abfc7d9491903d8b1c29c5f4f8661c108653a759401e825d5b546d25c",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:38:33.476Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=a3d761494b052639a2b3e370c20fe3ad6e2ebb63a6b780e29471ee561db0a5ae#scripts"
+    },
+    {
+      "documentId": "f0629ee457a56cf7b95f78375fbf63438a2e963b2eba95503ff146957080569d",
+      "title": "U002 狐狸小姐的身份证｜审阅与来源｜20261031审阅版",
+      "sha256": "2d563e689a59e2e6dd6094bd82bcc9822faa7dd161d4df96bbb7ed6bd168541d",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:38:25.621Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=a3d761494b052639a2b3e370c20fe3ad6e2ebb63a6b780e29471ee561db0a5ae#scripts"
+    }
+  ],
+  "patches": [
+    {
+      "documentId": "6c00d428854d71b26b6b89ae8899bfb75c0ff7ff1c0c312466581feb30d0f124",
+      "before": "她将断帽放窗口边，打开盒取出旧照片。",
+      "after": "她将断帽放窗口边，把旧笔本体放回外侧固定笔位，再打开盒取出旧照片。",
+      "reason": "02腾手取照片并为04再次拿旧笔建立落点。"
+    },
+    {
+      "documentId": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785",
+      "before": "她将断帽放窗口边，打开盒取出旧照片。",
+      "after": "她将断帽放窗口边，把旧笔本体放回外侧固定笔位，再打开盒取出旧照片。",
+      "reason": "02腾手取照片并为04再次拿旧笔建立落点。"
+    }
+  ],
+  "candidate": true,
+  "authorApproved": false,
+  "rawSourceUnchanged": true
+}

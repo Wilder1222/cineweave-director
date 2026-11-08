@@ -1,0 +1,451 @@
+{
+  "source": {
+    "type": "design",
+    "id": "HP01_SC01_r1",
+    "version": 1,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "S1",
+    "S2",
+    "S3",
+    "S4"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "S1",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "顺声音建立偷看者，北向视线交给S2。",
+      "sourceLocator": "output.md / G4 / S1；G5边界表"
+    },
+    {
+      "role": "performance",
+      "shotId": "S1",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "刮笔声先于眼神和前倾。",
+      "sourceLocator": "output.md / G4 / S1；G5边界表"
+    },
+    {
+      "role": "staging",
+      "shotId": "S1",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "右手贴框、脚在窗外，没有开窗。",
+      "sourceLocator": "output.md / G4 / S1；G5边界表"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "S1",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "C1固定近景，眼焦保持，视线空间留右。",
+      "sourceLocator": "output.md / G4 / S1；G5边界表"
+    },
+    {
+      "role": "prompt",
+      "shotId": "S1",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "S1三条独立复制稿包含衣光声与边界。",
+      "sourceLocator": "output.md / G4 / S1；G5边界表"
+    },
+    {
+      "role": "continuity",
+      "shotId": "S1",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "王生留窗外，右手未离框，S2沿北向切入。",
+      "sourceLocator": "output.md / G4 / S1；G5边界表"
+    },
+    {
+      "role": "direction",
+      "shotId": "S2",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "显露薄皮脸形与描画机制。",
+      "sourceLocator": "output.md / G4 / S2；G5边界表"
+    },
+    {
+      "role": "performance",
+      "shotId": "S2",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "两笔完成后才抬笔，左手稳定压皮。",
+      "sourceLocator": "output.md / G4 / S2；G5边界表"
+    },
+    {
+      "role": "staging",
+      "shotId": "S2",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "双手皮笔同框，世界西侧竹碟可达。",
+      "sourceLocator": "output.md / G4 / S2；G5边界表"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "S2",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "南窗朝北固定，较深可读范围保护皮与脸。",
+      "sourceLocator": "output.md / G4 / S2；G5边界表"
+    },
+    {
+      "role": "prompt",
+      "shotId": "S2",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "图稿是接笔瞬间，视频写完整两笔并离皮。",
+      "sourceLocator": "output.md / G4 / S2；G5边界表"
+    },
+    {
+      "role": "continuity",
+      "shotId": "S2",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "出态悬笔且左手压皮，S3继承。",
+      "sourceLocator": "output.md / G4 / S2；G5边界表"
+    },
+    {
+      "role": "direction",
+      "shotId": "S3",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "8秒完整保留提抖披，不靠闪白遮挡。",
+      "sourceLocator": "output.md / G4 / S3；G5边界表"
+    },
+    {
+      "role": "performance",
+      "shotId": "S3",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "先放笔松手再抓皮，眼神随工作对象。",
+      "sourceLocator": "output.md / G4 / S3；G5边界表"
+    },
+    {
+      "role": "staging",
+      "shotId": "S3",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "坐骨和脚有支撑，皮举高空间留足。",
+      "sourceLocator": "output.md / G4 / S3；G5边界表"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "S3",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "固定中景，无切焦遮手或皮接触。",
+      "sourceLocator": "output.md / G4 / S3；G5边界表"
+    },
+    {
+      "role": "prompt",
+      "shotId": "S3",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "视频包含一次抖、披落及无裸露血伤约束。",
+      "sourceLocator": "output.md / G4 / S3；G5边界表"
+    },
+    {
+      "role": "continuity",
+      "shotId": "S3",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "已触额肩出点，S4不重演举皮。",
+      "sourceLocator": "output.md / G4 / S3；G5边界表"
+    },
+    {
+      "role": "direction",
+      "shotId": "S4",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "稳定女子终态后才听到王生新增句。",
+      "sourceLocator": "output.md / G4 / S4；G5边界表"
+    },
+    {
+      "role": "performance",
+      "shotId": "S4",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "女子垂眼落手，无口型或听见反应。",
+      "sourceLocator": "output.md / G4 / S4；G5边界表"
+    },
+    {
+      "role": "staging",
+      "shotId": "S4",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "同一坐位肩宽，世界西侧笔碟不移。",
+      "sourceLocator": "output.md / G4 / S4；G5边界表"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "S4",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "南窗同轴固定中近景，焦点保护额肩双手。",
+      "sourceLocator": "output.md / G4 / S4；G5边界表"
+    },
+    {
+      "role": "prompt",
+      "shotId": "S4",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "准确新句进入视频及声音复制稿。",
+      "sourceLocator": "output.md / G4 / S4；G5边界表"
+    },
+    {
+      "role": "continuity",
+      "shotId": "S4",
+      "status": "pass",
+      "criterion": "检查本镜设计正文在该视角的完整性与内部一致性；不判断真实媒体。",
+      "observation": "从已披未合继续至合边，终态留足辨认。",
+      "sourceLocator": "output.md / G4 / S4；G5边界表"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "S1",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "顺声音建立偷看者，北向视线交给S2。",
+        "audiencePayoff": "顺声音建立偷看者，北向视线交给S2。",
+        "trigger": "北榻刮笔声",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "避免镜头移动遮蔽观察与关键接触",
+        "exitMatch": "王生留窗外，右手未离框，S2沿北向切入。"
+      },
+      "camera": {
+        "shotScale": "胸口以上近景",
+        "position": "南窗外偏东朝西北",
+        "height": "眼高",
+        "angle": "侧向平视",
+        "perspectiveIntent": "前景窗框确立观察边界，身体与道具保持可读",
+        "focusTarget": "王生近侧眼",
+        "depthOfField": "眼部清楚，背景柔化",
+        "axisSide": "南北观察轴东侧或贴轴，始终南窗朝北",
+        "movementIntent": "保持固定，让人物与道具动作承担揭示"
+      },
+      "composition": {
+        "layout": "窗缘框定观察，主体和手皮保持无遮挡",
+        "foreground": "南木窗细边",
+        "midground": "王生",
+        "background": "暗室暖点",
+        "negativeSpace": "朝北的视线空间",
+        "visualHierarchy": "眼神"
+      },
+      "temporal": {
+        "durationSeconds": 5,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "让可见动作承担信息",
+          "path": "固定原位",
+          "start": "固定",
+          "acceleration": "无加速",
+          "peak": "无移动",
+          "deceleration": "无减速",
+          "end": "原位固定",
+          "framingChange": "无片内变焦或裁切变化"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "S1_F0",
+            "timeSeconds": 0,
+            "description": "保持指定焦点及所需可读范围至本镜出点"
+          }
+        ],
+        "edit": {
+          "entry": "右手贴框、脚在窗外，没有开窗。",
+          "exit": "王生留窗外，右手未离框，S2沿北向切入。",
+          "preferredTransition": "硬切",
+          "soundBridge": "同场环境连续，S3皮声可后出0.3秒"
+        }
+      }
+    },
+    {
+      "shotId": "S2",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "显露薄皮脸形与描画机制。",
+        "audiencePayoff": "显露薄皮脸形与描画机制。",
+        "trigger": "王生眼线锁定后切入",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "避免镜头移动遮蔽观察与关键接触",
+        "exitMatch": "出态悬笔且左手压皮，S3继承。"
+      },
+      "camera": {
+        "shotScale": "腰部以上含膝前榻面中近景",
+        "position": "南窗开口朝北",
+        "height": "眼高",
+        "angle": "略俯视",
+        "perspectiveIntent": "前景窗框确立观察边界，身体与道具保持可读",
+        "focusTarget": "手、皮、头肩共同活动范围",
+        "depthOfField": "较深可读范围",
+        "axisSide": "南北观察轴东侧或贴轴，始终南窗朝北",
+        "movementIntent": "保持固定，让人物与道具动作承担揭示"
+      },
+      "composition": {
+        "layout": "窗缘框定观察，主体和手皮保持无遮挡",
+        "foreground": "南木窗细边",
+        "midground": "主体与皮壳双手",
+        "background": "北墙与榻缘",
+        "negativeSpace": "举皮与落手需要的动作空间",
+        "visualHierarchy": "皮与手的接触优先，其次脸和榻"
+      },
+      "temporal": {
+        "durationSeconds": 6,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "让可见动作承担信息",
+          "path": "固定原位",
+          "start": "固定",
+          "acceleration": "无加速",
+          "peak": "无移动",
+          "deceleration": "无减速",
+          "end": "原位固定",
+          "framingChange": "无片内变焦或裁切变化"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "S2_F0",
+            "timeSeconds": 0,
+            "description": "保持指定焦点及所需可读范围至本镜出点"
+          }
+        ],
+        "edit": {
+          "entry": "双手皮笔同框，世界西侧竹碟可达。",
+          "exit": "出态悬笔且左手压皮，S3继承。",
+          "preferredTransition": "硬切",
+          "soundBridge": "同场环境连续，S3皮声可后出0.3秒"
+        }
+      }
+    },
+    {
+      "shotId": "S3",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "8秒完整保留提抖披，不靠闪白遮挡。",
+        "audiencePayoff": "8秒完整保留提抖披，不靠闪白遮挡。",
+        "trigger": "描画完成笔离皮",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "避免镜头移动遮蔽观察与关键接触",
+        "exitMatch": "已触额肩出点，S4不重演举皮。"
+      },
+      "camera": {
+        "shotScale": "含举皮最高点的中景",
+        "position": "南窗开口朝北",
+        "height": "眼高",
+        "angle": "略俯视",
+        "perspectiveIntent": "前景窗框确立观察边界，身体与道具保持可读",
+        "focusTarget": "手、皮、头肩共同活动范围",
+        "depthOfField": "较深可读范围",
+        "axisSide": "南北观察轴东侧或贴轴，始终南窗朝北",
+        "movementIntent": "保持固定，让人物与道具动作承担揭示"
+      },
+      "composition": {
+        "layout": "窗缘框定观察，主体和手皮保持无遮挡",
+        "foreground": "南木窗细边",
+        "midground": "主体与皮壳双手",
+        "background": "北墙与榻缘",
+        "negativeSpace": "举皮与落手需要的动作空间",
+        "visualHierarchy": "皮与手的接触优先，其次脸和榻"
+      },
+      "temporal": {
+        "durationSeconds": 8,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "让可见动作承担信息",
+          "path": "固定原位",
+          "start": "固定",
+          "acceleration": "无加速",
+          "peak": "无移动",
+          "deceleration": "无减速",
+          "end": "原位固定",
+          "framingChange": "无片内变焦或裁切变化"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "S3_F0",
+            "timeSeconds": 0,
+            "description": "保持指定焦点及所需可读范围至本镜出点"
+          }
+        ],
+        "edit": {
+          "entry": "坐骨和脚有支撑，皮举高空间留足。",
+          "exit": "已触额肩出点，S4不重演举皮。",
+          "preferredTransition": "硬切",
+          "soundBridge": "同场环境连续，S3皮声可后出0.3秒"
+        }
+      }
+    },
+    {
+      "shotId": "S4",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "稳定女子终态后才听到王生新增句。",
+        "audiencePayoff": "稳定女子终态后才听到王生新增句。",
+        "trigger": "皮已接触额肩",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "避免镜头移动遮蔽观察与关键接触",
+        "exitMatch": "从已披未合继续至合边，终态留足辨认。"
+      },
+      "camera": {
+        "shotScale": "胸口至膝上中近景",
+        "position": "南窗开口朝北",
+        "height": "眼高",
+        "angle": "略俯视",
+        "perspectiveIntent": "前景窗框确立观察边界，身体与道具保持可读",
+        "focusTarget": "手、皮、头肩共同活动范围",
+        "depthOfField": "较深可读范围",
+        "axisSide": "南北观察轴东侧或贴轴，始终南窗朝北",
+        "movementIntent": "保持固定，让人物与道具动作承担揭示"
+      },
+      "composition": {
+        "layout": "窗缘框定观察，主体和手皮保持无遮挡",
+        "foreground": "南木窗细边",
+        "midground": "主体与皮壳双手",
+        "background": "北墙与榻缘",
+        "negativeSpace": "举皮与落手需要的动作空间",
+        "visualHierarchy": "皮与手的接触优先，其次脸和榻"
+      },
+      "temporal": {
+        "durationSeconds": 5,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "让可见动作承担信息",
+          "path": "固定原位",
+          "start": "固定",
+          "acceleration": "无加速",
+          "peak": "无移动",
+          "deceleration": "无减速",
+          "end": "原位固定",
+          "framingChange": "无片内变焦或裁切变化"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "S4_F0",
+            "timeSeconds": 0,
+            "description": "保持指定焦点及所需可读范围至本镜出点"
+          }
+        ],
+        "edit": {
+          "entry": "同一坐位肩宽，世界西侧笔碟不移。",
+          "exit": "从已披未合继续至合边，终态留足辨认。",
+          "preferredTransition": "硬切",
+          "soundBridge": "同场环境连续，S3皮声可后出0.3秒"
+        }
+      }
+    }
+  ]
+}

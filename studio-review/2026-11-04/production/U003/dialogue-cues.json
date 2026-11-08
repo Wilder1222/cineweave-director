@@ -1,0 +1,207 @@
+{
+  "fps": 24,
+  "timingVerified": false,
+  "lipSyncVerified": false,
+  "cues": [
+    {
+      "shotId": "U003-01",
+      "speaker": "阿照",
+      "text": "你终于把灯打开了。",
+      "addressee": "陆闻舟",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 86,
+      "endFrameExclusive": 227,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-01",
+      "speaker": "陆闻舟",
+      "text": "你是谁？",
+      "addressee": "阿照",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 227,
+      "endFrameExclusive": 290,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-01",
+      "speaker": "阿照",
+      "text": "我叫阿照。你把我封进剑里，答应回来。你忘了？",
+      "addressee": "陆闻舟",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 290,
+      "endFrameExclusive": 634,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-02",
+      "speaker": "陆闻舟",
+      "text": "我不记得。它现在不能再受碰撞。",
+      "addressee": "阿照",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 812,
+      "endFrameExclusive": 1016,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-02",
+      "speaker": "阿照",
+      "text": "我想杀你，叫你为这些年偿命。可你死了，我可能永远出不去。",
+      "addressee": "陆闻舟",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 1016,
+      "endFrameExclusive": 1396,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-03",
+      "speaker": "阿照",
+      "text": "不要把我封进去。我不愿意。",
+      "addressee": "陆闻舟",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 1580,
+      "endFrameExclusive": 1690,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-03",
+      "speaker": "陆闻舟",
+      "text": "等外面安静，我来开。",
+      "addressee": "阿照",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 1690,
+      "endFrameExclusive": 1775,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-03",
+      "speaker": "陆闻舟",
+      "text": "我记得你说不愿意。我还是封了你。",
+      "addressee": "阿照",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 1775,
+      "endFrameExclusive": 1910,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-03",
+      "speaker": "阿照",
+      "text": "门外的人，后来怎么样了？",
+      "addressee": "陆闻舟",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 1910,
+      "endFrameExclusive": 2012,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-03",
+      "speaker": "陆闻舟",
+      "text": "我不知道。我连为什么没回来都不记得。",
+      "addressee": "阿照",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 2012,
+      "endFrameExclusive": 2164,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-04",
+      "speaker": "阿照",
+      "text": "另一头在你身上。你试着松开，我也许能出去，也许会散。",
+      "addressee": "陆闻舟",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 2412,
+      "endFrameExclusive": 2794,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-04",
+      "speaker": "陆闻舟",
+      "text": "你想试？",
+      "addressee": "阿照",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 2794,
+      "endFrameExclusive": 2853,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-04",
+      "speaker": "阿照",
+      "text": "我想先到门外看一眼。这次让我自己选。",
+      "addressee": "陆闻舟",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 2853,
+      "endFrameExclusive": 3117,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-04",
+      "speaker": "阿照",
+      "text": "不是一定能出去。我愿意试，但也许会散。",
+      "addressee": "陆闻舟",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 3117,
+      "endFrameExclusive": 3396,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-05",
+      "speaker": "陆闻舟",
+      "text": "那间屋子的画面，我留不住了。",
+      "addressee": "阿照",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 3696,
+      "endFrameExclusive": 3980,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-05",
+      "speaker": "阿照",
+      "text": "你可以先停。",
+      "addressee": "陆闻舟",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 3980,
+      "endFrameExclusive": 4101,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-05",
+      "speaker": "阿照",
+      "text": "你还记得那间屋子吗？",
+      "addressee": "陆闻舟",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 4101,
+      "endFrameExclusive": 4304,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-05",
+      "speaker": "陆闻舟",
+      "text": "画面没了。我记得刚才写下的话。",
+      "addressee": "阿照",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 4304,
+      "endFrameExclusive": 4608,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-06",
+      "speaker": "阿照",
+      "text": "我没有原谅你。",
+      "addressee": "陆闻舟",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 4821,
+      "endFrameExclusive": 5100,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U003-06",
+      "speaker": "陆闻舟",
+      "text": "我知道。",
+      "addressee": "阿照",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 5100,
+      "endFrameExclusive": 5259,
+      "timingStatus": "authored_window_pending_measurement"
+    }
+  ]
+}

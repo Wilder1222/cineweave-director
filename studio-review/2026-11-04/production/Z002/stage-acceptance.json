@@ -1,0 +1,37 @@
+{
+  "topicId": "Z002",
+  "candidate": true,
+  "authorApproved": false,
+  "designReady": true,
+  "production_ready": false,
+  "media_verified": false,
+  "rough_cut_verified": false,
+  "capability_verified": false,
+  "mediaStatus": "pending_media",
+  "designChecks": {
+    "sourceHashes": true,
+    "actualShotCount": 6,
+    "integerFrameWindows": true,
+    "plannedFrames": 5016,
+    "fps": 24,
+    "fullShotReview": true
+  },
+  "gaps": [],
+  "artifactFiles": [
+    "production-package.md",
+    "script.md",
+    "storyboard-master.md",
+    "design-cards.html",
+    "space-board.html",
+    "blocking-board.html",
+    "storyboard-board.html",
+    "edit-timeline.html",
+    "test-plan.html",
+    "shot-review.json",
+    "shot-review-result.json",
+    "camera-language.json",
+    "dialogue-cues.json",
+    "source-manifest.json"
+  ],
+  "limitation": "实际图像/动态/声音/试剪/平台账户与生成能力均未验证；文字及矢量设计不等于生产成果。"
+}

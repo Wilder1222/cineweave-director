@@ -1,0 +1,147 @@
+{
+  "fps": 24,
+  "timingVerified": false,
+  "lipSyncVerified": false,
+  "cues": [
+    {
+      "shotId": "01",
+      "speaker": "韩凭",
+      "text": "雨，水，日出……",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 0,
+      "endFrameExclusive": 480,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "02",
+      "speaker": "苏贺",
+      "text": "碗里藏了什么？给我。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 480,
+      "endFrameExclusive": 1080,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "02",
+      "speaker": "韩凭",
+      "text": "让我看完。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 480,
+      "endFrameExclusive": 1080,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "02",
+      "speaker": "韩凭",
+      "text": "你见过她？",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 480,
+      "endFrameExclusive": 1080,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "02",
+      "speaker": "苏贺",
+      "text": "没有。我得把信呈给王。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 480,
+      "endFrameExclusive": 1080,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "03",
+      "speaker": "苏贺",
+      "text": "王看过信，问我意思。我说，雨是愁思，水是不得往来……最后一句，她可能有死志。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1080,
+      "endFrameExclusive": 1920,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "03",
+      "speaker": "韩凭",
+      "text": "你凭什么替她说？",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1080,
+      "endFrameExclusive": 1920,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "03",
+      "speaker": "苏贺",
+      "text": "我照自己读懂的说，也保住了自己的差事。我不知王会怎么待她。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1080,
+      "endFrameExclusive": 1920,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "04",
+      "speaker": "韩凭",
+      "text": "替我问她，还愿不愿意见我。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1920,
+      "endFrameExclusive": 2640,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "04",
+      "speaker": "苏贺",
+      "text": "我去问，但不能答应见得着。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1920,
+      "endFrameExclusive": 2640,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "04",
+      "speaker": "韩凭",
+      "text": "若她能回家，告诉她，种子罐在灶后。回不去，别为这件事再求人。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1920,
+      "endFrameExclusive": 2640,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "06",
+      "speaker": "苏贺",
+      "text": "我没见到她。钥匙托人带去，也不知道她有没有收到。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 2928,
+      "endFrameExclusive": 3768,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "06",
+      "speaker": "苏贺",
+      "text": "韩凭先死。守台的人说，后来她自己投了台。她留了话，求与他合葬……王没有答应。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 2928,
+      "endFrameExclusive": 3768,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "07-A",
+      "speaker": "何氏",
+      "text": "请把我和韩凭葬在一起。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 3768,
+      "endFrameExclusive": 4200,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    }
+  ]
+}

@@ -1,0 +1,713 @@
+﻿episode,shot,id,speaker,listener,text,translationZh,tone,start,end,episodeStart,episodeEnd,plannedWordsPerSecond
+E01,E01-SH001,E01-D001,现场记者,路易吉,Luigi! Here! Look up!,路易吉！这里！抬头！,从西侧抢着喊，喊声穿过旋翼,0.6,2.85,0.6,2.85,1.78
+E01,E01-SH002,E01-D002,警员甲,路易吉,Need a second?,要停一下吗？,贴近问，手先托住上臂,0.6,2.38,9.6,11.379999999999999,1.69
+E01,E01-SH002,E01-D103,路易吉,警员甲,Just room.,给我点空就行。,压低声音，等呼气后才答,2.73,4.13,11.73,13.129999999999999,1.43
+E01,E01-SH003,E01-D003,路易吉,警员甲,Watch the chain.,留意一下链子。,对近旁警员说，不朝媒体喊,0.6,2.38,17.6,19.38,1.69
+E01,E02-SH001,E02-D001,互助帖患者录音,互助群成员,They want the form again. I already sent it. I've got the receipt.,又要那张表。我早发过了，回执都在。,疲倦的成年女声，急着证明没有遗漏,0.6,7.14,26.6,33.14,1.99
+E01,E02-SH002,E02-D002,路易吉,互助帖患者,Keep that receipt. Ask the clinic for a list of the attachments. And cover your address before you post.,回执留好。问诊所要一份附件清单。还有，发出去前把地址遮住。,熟练给出步骤，末句因看到附件截图而补上,0.6,10.0,39.6,49.0,2.02
+E01,E02-SH003,E02-D003,路易吉,未发送的家人语音,I know you've been calling. I'm—,我知道你一直在打电话。我——,想交代又停止，第二句没能说下去,0.6,3.81,54.6,57.81,1.87
+E01,E02-SH003,E02-D201,路易吉,未发送的家人语音,I'm all right. I'll call you when I can.,我没事。能打电话的时候就打。,第二次换成完整、听起来正常的答复，仍无法发送,12,15.83,66,69.83,2.35
+E01,E02-SH004,E02-D004,旅馆清洁员画外声,路易吉,Housekeeping. Towels?,客房清洁。要毛巾吗？,在门外等答复,0.6,2.0,76.6,78.0,1.43
+E01,E02-SH004,E02-D105,路易吉,旅馆清洁员画外声,"No, thanks.",不用了，谢谢。,压住急促，隔门答复,2.35,3.75,78.35,79.75,1.43
+E01,E02-SH005,E02-D005,运营主管电话声,沃德,"We can still make the number if we freeze hiring. Reviews will take longer, though. I need you to sign off.",冻结招聘，季度指标还能达成。不过复核会拖更久。这得你签字。,把数字收益与等待代价一起交给决策人,2,10.94,91,99.94,2.35
+E01,E02-SH005,E02-D202,沃德,运营主管电话声,And if we don't freeze it?,不冻结呢？,问有没有另一条能保住季度指标的路,15,17.55,104,106.55,2.35
+E01,E02-SH005,E02-D203,运营主管电话声,沃德,We miss the quarter. Those are the choices I've got.,这个季度就达不了标。我手上就这两条路。,把实际取舍交还给签字人,24,28.26,113,117.26,2.35
+E01,E02-SH005,E02-D006,沃德,运营主管电话声,Then freeze hiring till the end of the quarter.,那就冻结到这个季度结束。,作出决定，不向对方寻求安慰,31,34.83,120,123.83,2.35
+E01,E02-SH005,E02-D108,沃德,运营主管电话声,"Monday, send me the wait times. In days.",周一把等待时长给我。按天算。,追加管理要求,37,40.4,126,129.4,2.35
+E01,E02-SH007,E02-D007,沃德,电话中的儿子,Saturday's fine. What time did your mom say?,周六可以。你妈说几点？,把家庭约定排进日程,0.6,4.76,134.6,138.76,1.92
+E01,E02-SH007,E02-D110,沃德,电话中的儿子,"No, don't put her on. Text me.",不用，别让她接。发消息给我。,太快回绝，随后放缓,5.59,9.27,139.59,143.27,1.9
+E01,E02-SH008,E02-D008,沃德,电话中的儿子,Tell me about the plane. I'm heading out.,跟我说说飞机模型。我正往外走。,用熟悉的小事续住电话,0.6,4.76,153.6,157.76,1.92
+E01,E02-SH009,E02-D009,行李员,旅客,"Not that one. Just wait by the door, please.",不是那辆。先在门边等，好吗？,纠正旅客，注意在行李而非青年,1,4.83,170,173.83,2.35
+E01,E02-SH009,E01-D010,沃德,电话中的儿子,Saturday. I said Saturday. What happened to the wing?,周六，我说了周六。翅膀又怎么了？,先不耐烦重复约定，听到模型后改变话题,10,13.83,179,182.83,2.35
+E01,E02-SH010,E02-D010,沃德,电话中的儿子,Leave it on my desk. Not the kitchen table. We can fix it Saturday.,放我书桌上，别放厨房桌。周六我们一起修。,先纠正模型放置位置，最后一句对儿子放软；此承诺全剧只完整听到一次,0.6,7.62,193.6,200.62,1.99
+E01,E02-SH012,E02-D011,警员甲,警员乙与酒店值班人员,"Get the footage from before the shots, too. I want to see him coming in.",枪响以前的监控也拿来。我得看他怎么来的。,把调查倒回主动到场,0.6,8.09,220.6,228.09,2.0
+E02,E03-SH001,E03-D001,车站广播声,车站旅客,Last connection delayed. Please check the departure board.,末班接驳延误，请查看发车牌。,普通广播,0.6,4.76,0.6,4.76,1.92
+E02,E03-SH002,E03-D002,路易吉,车站工作人员,Anywhere still open? I just need somewhere to sit. I'm waiting for—,还有哪儿开着？能坐一会儿就行。我在等——,想给正常理由，说到一半放弃,0.6,6.66,12.6,18.66,1.98
+E02,E03-SH003,E03-D003,车站工作人员,路易吉,Try your hotel. There are a few places down the road. Don't know what's open.,问问你住的旅馆吧。那头有几家吃饭的，哪家开着就不知道了。,想结束班次，只说普通建议,0.6,8.09,26.6,34.09,2.0
+E02,E03-SH004,E03-D004,母亲语音留言,路易吉,Just tell me you're somewhere warm. You don't have to explain. Your sister's still up.,就告诉我你待的地方暖不暖。不用解释。你姐姐也还没睡。,不追问，留一个能回答的小要求,0.6,8.09,45.6,53.09,2.0
+E02,E03-SH006,E03-D006,旅馆前台电话声,路易吉,Kitchen's closed. I can bring you some water.,厨房关了。要不我给你送点水？,普通回电,0.6,4.76,80.6,84.76,1.92
+E02,E03-SH006,E03-D106,路易吉,旅馆前台电话声,No. I'll go out.,不用。我出去。,不想让人进房间，结束通话,5.11,7.37,85.11,87.37,1.77
+E02,E03-SH007,E03-D007,艾莉,玛拉,You said you weren't working. We haven't done the bridge. Jo made the river go uphill.,你说今天不上班的。桥还没画呢。乔姨把河都画到山上去了。,要母亲兑现约定，还在争地图的规则,1,7.81,101,107.81,2.35
+E02,E03-SH007,E03-D201,乔,艾莉,You asked for a waterfall. That's the waterfall.,你要瀑布啊。这就是瀑布。,认真为自己那一笔辩解，不逗观众,12,15.4,112,115.4,2.35
+E02,E03-SH007,E03-D202,艾莉,乔,It goes the other way. See? That's our house.,流反了。你看，这是咱们家。,拿地图讲自己的道理,21,24.83,121,124.83,2.35
+E02,E03-SH007,E03-D203,乔,玛拉,Mara. She was showing you something.,玛拉。她在给你看呢。,替孩子争取一次真正被看见,29,31.55,129,131.55,2.35
+E02,E03-SH008,E03-D008,玛拉,艾莉,Put your socks on. Please. Just do that for me.,把袜子穿上。行吗？这点事别让我操心。,忙着系鞋带，第二句说重了，听见孩子卷纸才收住,1,5.26,141,145.26,2.35
+E02,E03-SH008,E03-D109,玛拉,艾莉,"I'm sorry. Save me the bridge, okay? We'll do it together.",对不起。桥给我留着，好吗？咱俩一起画。,给具体补偿，不要求立即原谅,12,16.68,152,156.68,2.35
+E02,E03-SH008,E03-D204,艾莉,玛拉,When? You said that yesterday.,什么时候？你昨天也这么说。,要具体答案，非成熟责备,22,24.13,162,164.13,2.35
+E02,E03-SH008,E03-D205,玛拉,艾莉,After my shift. If you're still up for it.,等我下班。你还想画的话。,降低刚才随口许诺的声势,27,30.83,167,170.82999999999998,2.35
+E02,E03-SH008,E03-D206,艾莉,玛拉,Don't put a road through it.,别在这儿画条公路。,给合作加自己的规则,33,35.55,173,175.55,2.35
+E02,E03-SH009,E03-D009,乔,玛拉,I have to leave at noon. Don't sign up for another shift.,我中午得走。你别又加一班。,妹妹也有自己的时间限制,1,6.11,181,186.11,2.35
+E02,E03-SH009,E03-D111,玛拉,乔,It covers Friday's deposit. That's all I'm doing.,这班够交周五的预付款了。我就上这一班。,想把不停加班说成最后一次,8,11.4,188,191.4,2.35
+E02,E03-SH009,E03-D207,乔,玛拉,"I have work, too. I can't call out again.",我也得上班。不能又临时请假。,让姐姐承认她也在承担工时损失,21,24.83,201,204.82999999999998,2.35
+E02,E03-SH009,E03-D208,玛拉,乔,I'll ask to leave early. I'll call before I leave.,我去说一声，早点走。走之前给你打电话。,能保证的是沟通，不能保证排班批准,27,31.26,207,211.26,2.35
+E02,E03-SH009,E03-D209,乔,玛拉,Before noon. Not from the bus.,中午之前。别都上公交车了才打。,熟悉姐姐的拖延，划清可执行边界,34,36.55,214,216.55,2.35
+E02,E03-SH010,E03-D010,医生电话声,玛拉,I've still got her down for Friday. Call billing when you get off. The renewal's still denied.,周五还给她留着。下班打给账务。续批还是没过。,交代状态与下一步，不宣布拒绝医疗,1,8.23,221,228.23,2.35
+E02,E03-SH010,E03-D113,玛拉,医生电话声,I'll call at noon. Can you put that in the notes?,我中午打。能帮我在记录里写上吗？,锁定唯一能保证的时间,11,15.68,231,235.68,2.35
+E02,E03-SH010,E03-D210,艾莉,玛拉,Are we still going on Friday?,周五还去吗？,只问自己的日程，不承担成人观点,22,24.55,242,244.55,2.35
+E02,E03-SH010,E03-D211,玛拉,艾莉,That's what I'm trying to sort out.,我就是在弄这个。,这次不先承诺能去,27,29.98,247,249.98,2.35
+E02,E03-SH010,E03-D212,乔,艾莉,Come on. Show me which way the water goes.,来，给我看看水该往哪儿流。,接回孩子任务而非继续追问账务,33,36.83,253,256.83,2.35
+E03,E03-SH011,E03-D011,路易吉,玛拉,"Coffee, please. Whatever's hot. Thank you.",请给我咖啡。热的就行，谢谢。,疲倦却客气，供后来亲眼记忆,1.8,5.01,1.8,5.01,1.87
+E03,E03-SH011,E03-D115,玛拉,路易吉,Here you go. You can take that table.,给你，坐那张桌吧。,忙着开班，普通照顾,5.36,9.52,5.36,9.52,1.92
+E03,E03-SH011,E03-D213,玛拉,路易吉,"Lid's loose. Hold the cup, not the top.",盖子没扣牢。拿杯身，别提盖子。,职业习惯，注意热饮而非认脸,12,15.4,12,15.4,2.35
+E03,E03-SH012,E03-D012,玛拉,同事,"If the clinic calls, come get me. Doesn't matter how busy we are.",诊所打来就叫我。再忙也得叫我。,把救急联系托给同事,0.6,7.14,24.6,31.14,1.99
+E03,E04-SH001,E04-D001,老顾客,玛拉,Back there. Isn't that the guy on the news? Don't point.,后边那个。是不是新闻上那个人？别指。,怕被听见，把不确定藏在催促里,3,7.68,43,47.68,2.35
+E03,E04-SH001,E04-D201,玛拉,老顾客,You know him?,你认识他？,先分辨认识一个人与觉得脸像,12,13.28,52,53.28,2.34
+E03,E04-SH001,E04-D202,老顾客,玛拉,No. The picture. On the TV.,不认识。电视上那张照片。,自己的把握没有刚才那么足,20,22.55,60,62.55,2.35
+E03,E04-SH001,E04-D203,玛拉,老顾客,Okay. Let me look. Just stay here a minute.,好，我看看。先在这儿待一会儿。,不向别人广播自己的判断,26,29.83,66,69.83,2.35
+E03,E04-SH002,E04-D002,玛拉,带孩子的顾客,Would you mind moving over there? I need to clear this section. I'll get your tray.,能挪到那边吗？这片得空出来。托盘我来拿。,把安全转移藏在工作安排里,1,7.81,79,85.81,2.35
+E03,E04-SH002,E04-D204,玛拉,带孩子的女顾客及孩子,You don't have to finish. I'll bring it all over. Careful with that one.,不用急着吃完。我给你们端过去。那个杯子拿稳。,努力保持平常服务口气，眼睛先看杯子,18,23.96,96,101.96000000000001,2.35
+E03,E04-SH003,E04-D003,玛拉,报警接线员,I'm at the restaurant on Oak Street. A customer looks like the man you're looking for. I don't know if he's armed.,我在橡树街的餐厅。有个客人像你们要找的人。我不知道他有没有武器。,压低声报自己观察到的程度,4,13.36,114,123.36,2.35
+E03,E04-SH101,E04-D205,玛拉,老顾客,"You wanted the receipt, right? Here.",你要收据，对吧？给。,用最普通的工作把自己稳住,3,5.55,136,138.55,2.35
+E03,E04-SH004,E04-D004,警员甲,路易吉,"Morning. Hands on the table, please. Got any ID?",早上好。请把手放桌上。带证件了吗？,观察两只手，短句给明确指令,0.6,5.24,153.6,158.24,1.94
+E03,E04-SH005,E04-D005,警员甲,路易吉,Take the mask off. Slowly. Then tell me where your ID is.,把口罩摘了，慢点。然后告诉我证件在哪儿。,先要看清脸，再限定取物步骤,0.6,6.66,169.6,175.66,1.98
+E03,E04-SH005,E04-D006,路易吉,警员甲,Left jacket pocket.,夹克左口袋。,短答，避免突然伸手,9.6,11.38,178.6,180.38,1.69
+E03,E04-SH006,E04-D007,警员乙,路易吉,This isn't checking out. Keep your hands there.,这证件对不上。手放那儿别动。,发现身份核查疑点，停止闲聊,14,17.4,201,204.4,2.35
+E03,E04-SH007,E04-D206,警员甲,路易吉,Take a second. Keep your hands in front.,缓一下。手放前面。,允许停步但维持控制,13,16.4,224,227.4,2.35
+E03,E04-SH007,E04-D008,路易吉,警员甲,"Wait, let me get my balance. The bag's over there.",等一下，先让我站稳。包在那边呢。,争取身体位置，同时指出自己够不到包,23,27.26,234,238.26,2.35
+E04,E04-SH008,E04-D009,警员甲,路易吉,Need a medic?,要叫医护吗？,例行确认当前需要，不替对方作答,0.6,2.38,0.6,2.38,1.69
+E04,E04-SH009,E04-D010,路易吉,警员甲,I want a lawyer before I answer anything.,我要先见律师，再回答问题。,先保住回答的边界,0.6,4.76,14.6,18.759999999999998,1.92
+E04,E04-SH009,E04-D111,路易吉,警员甲,My back hurts. Can I move the chair?,我的背疼，能挪一下椅子吗？,确定问询暂停才提出身体需要,5.11,9.27,19.11,23.27,1.92
+E04,E04-SH010,E04-D011,警员乙,警员甲,"You moved the bag, right? I need your name here too.",包是你挪的，对吧？这儿也得填你的名字。,让移包同事补齐署名，自己核对开包一栏,0.6,6.19,28.6,34.19,1.97
+E04,E04-SH011,E04-D207,玛拉,乔,I'm sorry. They kept asking me the same thing.,对不起。他们翻来覆去问那些事。,先解释迟到而非索取夸奖,2,5.83,44,47.83,2.35
+E04,E04-SH011,E04-D208,乔,玛拉,I know. I called work.,知道。我给单位打过电话了。,已经替姐姐承担后果，没有立刻原谅,9,11.13,51,53.13,2.35
+E04,E04-SH011,E04-D209,艾莉,门外的玛拉和乔,I'm okay. It was the box.,我没事。盒子掉了。,从北屋画外先解决成人担心，不出来表演恐惧,21,23.55,63,65.55,2.35
+E04,E04-SH011,E04-D012,乔,玛拉,Did they pay you?,他们给你钱了吗？,自己也先问出了外面正在问的话,30,31.7,72,73.7,2.35
+E04,E04-SH011,E04-D114,玛拉,乔,They took my number.,他们记了我的号码。,只答眼前发生的事，疲惫里带一点刺,34,35.7,76,77.7,2.35
+E04,E04-SH011,E04-D210,乔,玛拉,A number for what?,留号码干什么？,要弄清妹妹实际能得到什么,39,40.7,81,82.7,2.35
+E04,E04-SH011,E04-D211,玛拉,乔,They didn't say. I had to ask who to call.,没说。我还得自己问该找谁。,没有把登记说成奖励获批,44,48.26,86,90.25999999999999,2.35
+E04,E04-SH012,E04-D212,乔,玛拉,Who sent you that?,谁发给你的？,先找这段影像实际从哪来,9,10.7,106,107.7,2.35
+E04,E04-SH012,E04-D213,玛拉,乔,Someone from work. It's already everywhere.,店里的人。已经传开了。,刚理解自己不是镜头外的人,14,16.55,111,113.55,2.35
+E04,E04-SH012,E04-D013,玛拉,乔,I should've been home. I'm the one who asked for that shift.,我本来该在家的。是我自己要加那一班。,第一次把偶然相遇接回自己的选择,23,28.11,120,125.11,2.35
+E04,E04-SH012,E04-D116,玛拉,乔,Will you call billing with me? I can't go through it all again on my own.,陪我打给账务，行吗？我一个人实在讲不下去了。,不再为报警辩护，要求实际帮助,38,44.81,135,141.81,2.35
+E04,E04-SH012,E04-D214,玛拉,乔,Can you start? Just say it's about the renewal.,你先说，行吗？就说是续批的事。,把开口这一步也交给妹妹，接受具体帮助,52,55.83,149,152.82999999999998,2.35
+E05,E05-SH001,E05-D001,海伦,路易吉,I'm Helen Kane. I'm your lawyer. What name did you give the police?,我是海伦·凯恩，你的律师。你跟警察报的什么名字？,介绍完立即要求可核事实,1,6.53,1,6.53,2.35
+E05,E05-SH001,E05-D102,路易吉,海伦,The one on the card.,卡上的那个。,先给最窄的答案,10,12.13,10,12.13,2.35
+E05,E05-SH001,E05-D201,海伦,路易吉,I need you to say it. Not point.,你得说出来。别只指给我看。,建立必须能复述而非靠猜的工作方式,14,17.4,14,17.4,2.35
+E05,E05-SH001,E05-D002,路易吉,海伦,There are patient records in my bag. Those people didn't agree to any of this.,我包里有患者的记录。他们可没答应卷进这些事。,试图重排会见议程,22,28.38,22,28.38,2.35
+E05,E05-SH001,E05-D104,路易吉,海伦,Please. Keep their names out of this.,拜托，别把他们的名字说出去。,终于把请求缩成具体保护,32,34.98,32,34.98,2.35
+E05,E05-SH001,E05-D202,海伦,路易吉,I can ask to protect their names. I can't make the records disappear. First I need to know what's in there.,我可以申请保护姓名。记录不会凭空消失。我得先知道里面有什么。,接受具体任务，同时撤掉他以为能一把取回材料的期待,41,49.94,41,49.94,2.35
+E05,E05-SH001,E05-D203,路易吉,海伦,I don't want them paying for this.,我不想让他们替我付代价。,无法改变自己的处境，先试图控制别人是否被牵连,53,55.98,53,55.98,2.35
+E05,E05-SH003,E05-D003,海伦,路易吉,We'll deal with the names. Where was the bag when they grabbed you?,名字的事我们会处理。他们抓住你的时候，包在哪儿？,先接下保护姓名的请求，随即把话题拉回逮捕时的位置,1,6.53,61,66.53,2.35
+E05,E05-SH003,E05-D106,海伦,路易吉,"By your foot, or in the aisle?",你脚边，还是过道里？,把抽象解释压到一个位置,10,12.98,70,72.98,2.35
+E05,E05-SH003,E05-D004,路易吉,海伦,They moved it away from my foot. I got up. Then they cuffed me.,他们把包从我脚边挪开。我站起来，他们才上铐。,把自己记忆拆成步骤,15,20.96,75,80.96000000000001,2.35
+E05,E05-SH003,E05-D108,海伦,路易吉,And the bag?,包呢？,截住要跳过的距离,27,28.28,87,88.28,2.34
+E05,E05-SH003,E05-D109,路易吉,海伦,Over there. They'd already moved me when he opened it.,那边。他打开的时候，他们已经把我带开了。,双手合拢示意受控，再指向桌外,30,34.26,90,94.25999999999999,2.35
+E05,E05-SH003,E05-D204,海伦,路易吉,Could you reach it?,你够得着吗？,限定能亲身确定的距离而非法律结论,41,42.7,101,102.7,2.35
+E05,E05-SH003,E05-D205,路易吉,海伦,No. He had my arm. I couldn't even turn.,够不着。他抓着我胳膊，转身都不行。,回到自己的身体位置,45,48.83,105,108.83,2.35
+E05,E05-SH005,E05-D206,路易吉,海伦,So they can't use it?,那他们就不能用了？,抓住一项有利事实急于把全部案件推出去,1,3.13,116,118.13,2.35
+E05,E05-SH005,E05-D207,海伦,路易吉,I haven't seen the video. Don't get ahead of me.,录像我还没看。先别跳那么远。,拒绝把初次会见变成保证,5,9.26,120,124.26,2.35
+E05,E05-SH005,E05-D005,海伦,路易吉,What else did you tell them?,你还跟他们说了什么？,要求完整而非漂亮版本,12,14.55,127,129.55,2.35
+E05,E05-SH005,E05-D111,海伦,路易吉,Even the bad stuff. I can't hear it for the first time in court.,对你不利的也得说。我不能等到上了法庭才知道。,察觉他又想用搜查问题挡住不利陈述,20,25.96,135,140.96,2.35
+E05,E05-SH006,E05-D006,路易吉,海伦,I got those samples through mutual aid. That person had no idea what I was going to do.,那些样本是互助群给我的。那个人根本不知道我要干什么。,赶在会见结束前要求保护来源,1,8.66,151,158.66,2.35
+E05,E05-SH006,E05-D007,海伦,路易吉,Did they tell you that? Or did you just never tell them?,是对方这么说的，还是你压根没告诉人家？,区分能够证明的知情来源,11,16.11,161,166.11,2.35
+E05,E05-SH006,E05-D114,路易吉,海伦,I never told them.,我从没告诉对方。,放弃替别人概括内心,21,22.7,171,172.7,2.35
+E05,E05-SH006,E05-D208,海伦,路易吉,Then that's what we can say. What they knew is a separate question.,那我们能说的就是这个。对方知道多少，是另一回事。,限定陈述范围，没有把他逼成认罪演说,25,30.53,175,180.53,2.35
+E05,E05-SH006,E05-D209,路易吉,海伦,Okay. Write it that way.,好，就这么写。,放弃那个更好听、却超出自己所知的版本,33,35.13,183,185.13,2.35
+E05,E05-SH007,E05-D008,丹尼尔,海伦,Three networks called. This one wants you to read from the notebook. On camera.,三家电视台来过电话。这家要你念笔记，还得当着镜头念。,知道曝光能帮案件，也知道这个条件越线,0.6,7.62,190.6,197.62,1.99
+E05,E05-SH008,E05-D009,海伦,丹尼尔,From when they arrived to when they drove off. Not just the bit with the cuffs.,从到场到把人带走，整段都要。别只给我上铐那点儿。,明确取证范围,0.6,8.57,205.6,213.57,2.01
+E05,E05-SH008,E05-D117,海伦,丹尼尔,"Send them the statement. His rights, that's it. Nothing from the notebook.",把声明发过去。只谈他的程序权利，笔记里的话一句都别放。,保留传播机会，控制具体内容,8.92,14.98,213.92,219.98,1.98
+E05,E05-SH009,E05-D010,丹尼尔,海伦,This is his first dated entry. He hadn't even booked New York yet.,这是他最早标了日期的一条。那时候纽约行程都还没订。,提出自己查出的不利信息,0.6,7.14,223.6,230.14,1.99
+E05,E05-SH009,E05-D119,海伦,丹尼尔,"I want the pages on either side of it, too.",前后两页我也要。,继续要完整内容，即使不好用,7.49,12.6,230.49,235.6,1.96
+E05,E05-SH009,E05-D210,丹尼尔,海伦,I'll get the full scan. This copy cuts off at the margin.,我去要完整扫描。这份页边被截了。,助理独立指出副本限制，未宣告日期失真,15,20.11,238,243.11,2.35
+E05,E05-SH011,E05-D011,路易吉,看管员画外声,It's a call to my mom. Her number's on there. Any chance I can call tonight?,想打给我妈，号码在上面。今晚能让我打吗？,努力把恳求说成一个具体安排,0.6,8.57,260.6,268.57,2.01
+E05,E05-SH012,E05-D012,看管员画外声,路易吉,You're on the morning list. Can't say what time.,排在明早那批了。几点可说不准。,工作答复，不额外安抚,0.6,5.24,274.6,279.24,1.94
+E06,E06-SH005,E06-D003,现场记者,路易吉,What about Brian Ward? Luigi! Answer that!,布莱恩·沃德呢？路易吉！回答这个！,从外貌争抢转向事件，但没等到答复,0.6,4.28,18.6,22.28,1.9
+E06,E06-SH006,E06-D004,编辑托马斯,诺拉,Everyone's using that shot. What can we actually stand behind?,都在用那张画面。咱们有什么是能负责的？,想赶上热度，又需要记者替标题兜底,0.6,5.71,30.6,35.71,1.96
+E06,E06-SH007,E06-D005,诺拉,编辑托马斯,"She's saying the transfer isn't a verdict. That's the lawyer talking, not him.",律师说了，转押不等于定罪。这是她说的，可不是他的解释。,要求留下说话者和范围,0.6,7.14,43.6,50.14,1.99
+E06,E06-SH007,E06-D108,编辑托马斯,诺拉,Fine. Use that.,行，就用这句。,得到可用句便停止讨论上下文,7.49,9.27,50.49,52.269999999999996,1.69
+E06,E06-SH008,E06-D006,编辑托马斯,诺拉,"The link's right there. If they want to read it, they can.",链接就在那儿。想看的人点进去就行。,用已经完成的动作结束争论,0.6,6.66,57.6,63.66,1.98
+E06,E06-SH009,E06-D007,人事经理黛安,维克多,"We've got three events, plus escorts this weekend. Security wants a deposit today.",咱们有三场活动，周末还得安排护送。安保今天就要预付款。,明确可执行时限，等他选,1,6.53,71,76.53,2.35
+E06,E06-SH009,E06-D008,维克多,人事经理黛安,Pay them. The review hires can wait.,钱先付。复核那边招人再等等。,把有限预算排出顺序,13,15.98,83,85.98,2.35
+E06,E06-SH009,E06-D112,人事经理黛安,维克多,We're behind already. Who's supposed to get through these?,都积压成这样了。这些活儿让谁干？,把隐藏代价摊到桌面,22,25.83,92,95.83,2.35
+E06,E06-SH009,E06-D201,人事经理黛安,维克多,These aren't new positions. I'm replacing people who left.,这不是增编。我是在补离职的人。,改变他将这笔钱归类成扩张开支的说法,30,33.83,100,103.83,2.35
+E06,E06-SH009,E06-D202,维克多,黛安,Not today.,今天不批。,听懂区别仍拒绝，把决策归到时间上,37,38.2,107,108.2,1.67
+E06,E06-SH011,E06-D009,维克多,人事经理黛安,Bring me the oldest cases on Monday.,周一把积压最久的案子给我。,用另一个报告要求替代今天的人手决定,0.6,4.28,112.6,116.28,1.9
+E06,E06-SH011,E06-D010,人事经理黛安,维克多,"I'll bring the vacancy list, too.",空缺岗位那张表我也一块儿带来。,不再争辩，却不接受只报案件数,4.63,7.84,116.63,119.84,1.87
+E06,E01-SH004,E01-D004,艾莉,玛拉,"When its wings get tired, it can run. Look at the feet.",翅膀累了，它就能跑。你看它的脚。,认真争取看画的注意力,0.6,6.66,130.6,136.66,1.98
+E06,E01-SH005,E01-D005,玛拉,艾莉,I did. Four feet. Just let me deal with this.,看了，四只脚。先让我弄完这个。,仓促交差，最后一句已经对着手机,0.6,5.71,144.6,149.71,1.96
+E06,E01-SH006,E01-D006,玛拉,客服电话声,"No, the renewal. The clinic sent everything again.",不是，我问的是续批。诊所都重新发过了。,抢在客服照稿念前限定问题,0.6,4.76,156.6,160.76,1.92
+E06,E01-SH006,E01-D108,客服电话声,玛拉,It's still showing 'documentation incomplete.',这里还是显示“材料不完整”。,核对屏幕后平直读出,6.06,8.79,162.06,164.79,1.83
+E06,E01-SH007,E01-D007,玛拉,医生,Can you keep Friday open? Until they call me back?,周五能先给我们留着吗？等他们回我电话。,一边站起一边压低声音求延长,0.6,5.71,172.6,177.71,1.96
+E06,E01-SH007,E01-D110,医生,玛拉,I can see her today. But billing needs a payment plan for Friday. Come in when you're done.,今天我能看她。但周五怎么付款，账务那边得先说好。忙完就进来。,不许诺账务结果，给她留下进入诊室的路,6.06,14.98,178.06,186.98,2.02
+E06,E01-SH008,E01-D008,客服电话声,玛拉,Someone from review will call the number we have on file.,复核那边会打您留下的号码。,准备结束这一通,0.6,6.19,190.6,196.19,1.97
+E06,E01-SH008,E01-D112,玛拉,客服电话声,"What number will they call from? Wait, I'm getting all these—",他们用什么号码打？等等，我这儿一直有人——,急追实际联系办法，被转接声截断,6.54,12.13,196.54,202.13,1.97
+E06,E01-SH009,E01-D009,玛拉,客服电话声,Did anyone even open it? Can you just tell me that?,到底有没有人打开过？就告诉我这个，行吗？,不再重述故事，只压住一个问题,0.6,6.19,204.6,210.19,1.97
+E06,E06-SH012,E06-D011,玛拉,乔,They put my name up. And the store.,他们把我名字发出去了。还有门店。,先确认眼前已发生的事,2,5.4,222,225.4,2.35
+E06,E06-SH012,E06-D116,玛拉,乔,Can you stay? Just till I've called them.,你能先别走吗？等我打完这通电话。,不敢再把害怕包装成安排,8,11.4,228,231.4,2.35
+E06,E06-SH012,E06-D203,乔,玛拉,Okay. Lock up. I'll call my ride.,好。门锁上，我跟接我的人说一声。,承诺留在现场，同时处理自己已经安排的离开,16,18.98,236,238.98,2.35
+E07,E07-SH001,E07-D001,布莱克,玛拉,Mara! How much did they pay you? Don't walk off. They're paying for an answer.,玛拉！他们给了你多少钱？别走啊。这些人可是付了钱等你回答的。,拿观众当理由，先给她安上收钱的故事,0.6,8.09,0.6,8.09,2.0
+E07,E07-SH002,E07-D002,玛拉,布莱克,Move it. I have to clock in.,挪开，我要打卡。,不用采访语言，先争通道,0.6,4.28,14.6,18.28,1.9
+E07,E07-SH002,E07-D103,布莱克,玛拉,Then say you didn't take the money.,那就说你没拿钱。,用回答作离开条件,4.63,8.32,18.63,22.32,1.9
+E07,E07-SH003,E07-D003,诺拉,玛拉,"Nora Chen. If you've got letters, bills, anything you want me to see, call me.",诺拉·陈。有信、账单，什么想给我看的，都可以打给我。,抓住她护住文件夹的动作提出具体价值,0.6,8.09,28.6,36.09,2.0
+E07,E07-SH003,E07-D105,玛拉,诺拉,I've got plenty of those.,这些我倒是多得很。,疲惫里透出愿意联系,8.44,11.17,36.44,39.17,1.83
+E07,E07-SH004,E07-D004,玛拉,诺拉,"If I tell you what happened, are they going to leave us alone?",我把事情跟你说清楚，他们就能放过我们吗？,要的不是出名，是停止骚扰,2,7.53,44,49.53,2.35
+E07,E07-SH004,E07-D201,诺拉,玛拉,I can't promise that.,这个我保证不了。,不拿采访换停止骚扰的保证,10,11.7,52,53.7,2.35
+E07,E07-SH004,E07-D202,玛拉,诺拉,They know what I did. They keep making up the rest.,我做了什么，他们都知道。别的全在瞎编。,将闭嘴和解释两种选择的困境说给眼前人,15,19.68,57,61.68,2.35
+E07,E07-SH004,E07-D203,诺拉,玛拉,Then tell me your part. We can stop if you need to.,那就从你这边讲。你需要停，我们就停。,给实际可控制的采访节奏，不许诺传播结果,25,30.11,67,72.11,2.35
+E07,E07-SH004,E07-D204,玛拉,诺拉,Is it on?,已经开始了吗？,最后确认自己还有选择,33,34.28,75,76.28,2.34
+E07,E07-SH004,E07-D205,诺拉,玛拉,No.,还没有。,指屏幕实答,35,36.2,77,78.2,0.83
+E07,E07-SH004,E07-D107,玛拉,诺拉,All right. Ask.,行，问吧。,在没有保证时仍选择公开,38,39.28,80,81.28,2.34
+E07,E07-SH005,E07-D005,诺拉,玛拉,Did you know about the reward?,你知道有悬赏吗？,先问最容易被认为回避的事实,1,3.55,88,90.55,2.35
+E07,E07-SH005,E07-D006,玛拉,诺拉,Yes. He said please and thank you.,知道。他当时又是请，又是谢谢的。,承认看见悬赏，接着脱口说出当时听见的客气话,6,8.98,93,95.98,2.35
+E07,E07-SH005,E07-D206,诺拉,玛拉,I'm asking about the money.,我问的是那笔钱。,把模糊的联想拉回难听但必要的问题,12,14.13,99,101.13,2.35
+E07,E07-SH005,E07-D207,玛拉,诺拉,I saw the amount. I thought about Friday's deposit. That's in there too.,数额我看见了。我想到了周五那笔预付款。这也是一个原因。,不再把金钱从动机里删干净,19,24.53,106,111.53,2.35
+E07,E07-SH005,E07-D110,玛拉,诺拉,Kids were right there. I didn't know if he had a gun.,孩子就在旁边。我哪知道他带没带枪。,拒绝让礼貌变成自己应当知情的证明,27,32.11,114,119.11,2.35
+E07,E07-SH006,E07-D007,玛拉,诺拉,UnionCare turned down her renewal. I needed the extra shift to cover it.,合众健康把她续批拒了。我得多上这一班才付得起。,用单据争取别人理解自己的选择,2,7.53,125,130.53,2.35
+E07,E07-SH006,E07-D112,玛拉,诺拉,You can show them that part. Not all my bills.,这一段可以给他们看。别把我的账单全拍进去。,主动设一道仍不够完整的隐私边界,11,15.26,134,138.26,2.35
+E07,E07-SH006,E07-D208,诺拉,玛拉,This page?,就这一页？,在眼前边界上确认，尚未检查整幅画面,17,18.2,140,141.2,1.67
+E07,E07-SH006,E07-D209,玛拉,诺拉,The denial. And the shift I asked for. Leave the rest here.,拒赔那段。还有我申请加班这事。别的留在这儿。,希望控制给出去的材料量,24,29.11,147,152.11,2.35
+E07,E07-SH007,E07-D008,艾莉,玛拉,Can I have the green one? Don't show them the bridge. It's not ready.,绿的那支给我好吗？别给他们看桥，还没画好。,只来取自己的东西，并拒绝展示未完成的作品,0.6,7.62,165.6,172.62,1.99
+E07,E07-SH007,E07-D009,玛拉,艾莉,"Ellie, no one's taking your map.",艾莉，没人要拿走你的地图。,安抚孩子，却把名字留进原声,7.97,11.18,172.97,176.18,1.87
+E07,E07-SH008,E07-D010,诺拉,玛拉,I can cut her voice out.,孩子的声音可以剪掉。,提出一个可做的删减，却没有说全可识别细节,5,7.55,194,196.55,2.35
+E07,E07-SH008,E07-D116,玛拉,诺拉,"No, leave it. Maybe if they hear her, they'll get why I was there.",不用，留着吧。也许听见她的声音，他们就懂我为什么在那儿了。,把更多暴露当作让骚扰停止的方法,12,17.96,201,206.96,2.35
+E07,E07-SH008,E07-D210,玛拉,诺拉,Do you have what you need?,这样够了吗？,把继续暴露当成完成一项能换来安静的任务,25,27.55,214,216.55,2.35
+E07,E07-SH008,E07-D211,诺拉,玛拉,"For this part, yes. I'll send you the link.",这部分够了。出来后我把链接发你。,结束取材，没有许诺效果,30,33.83,219,222.82999999999998,2.35
+E07,E07-SH009,E07-D011,玛拉,艾莉,Stay in there. I'll get your pencils. Don't open the front door.,先待里面。我把笔拿来。别开大门。,想压低慌乱，却把家变得更紧,6.0,12.06,238.0,244.06,1.98
+E07,E07-SH010,E07-D012,医生语音留言,玛拉,"Mara, it's the clinic. That was me on the other line. We found the submission record. Call the main desk.",玛拉，是诊所。刚才换号码打的是我。提交记录找到了，打总机找我们。,普通回电，正是她需要等的消息,0.6,10.47,247.6,257.47,2.03
+E08,E08-SH001,E08-D001,玛拉,医生,Another form? I thought you found it.,怎么又是表？你不是说找着了吗？,怕帮助再次被程序推后,1,3.98,1,3.98,2.35
+E08,E08-SH001,E08-D102,医生,玛拉,We did. This lets her sit in with you.,找到了。这张是让她陪你一起看。,将自己的记录与记者观看授权分开,6,9.83,6,9.83,2.35
+E08,E08-SH001,E08-D201,诺拉,玛拉,I can wait outside.,我可以到外面等。,让陪同变成可撤回的选择,11,12.7,11,12.7,2.35
+E08,E08-SH001,E08-D202,玛拉,诺拉,No. Stay. I don't want to do this twice.,不用，留下吧。我不想再讲一遍。,需要帮手，仍对前次采访有戒心,16,19.83,16,19.83,2.35
+E08,E08-SH001,E08-D002,医生,玛拉,They got it two days before the shooting. See? Your report's on the list.,枪击前两天，他们就收到了。你看，报告就在清单上。,只核对回执本身,25,30.96,25,30.96,2.35
+E08,E08-SH001,E08-D203,玛拉,医生,Then why does this say it's missing?,那这上面为什么还写缺材料？,把两张互相冲突的纸推给能说话的人,34,36.98,34,36.98,2.35
+E08,E08-SH001,E08-D204,医生,玛拉,That's what we're asking them to explain.,这正是我们要让他们解释的。,承认问题，未假装看到保险内部流程,40,42.98,40,42.98,2.35
+E08,E08-SH003,E08-D003,玛拉,医生,Send them both. Can they sort it out while we're here?,两张都发过去。我们在这儿等，能给弄好吗？,把证据当成立刻生效的按钮,1,5.68,49,53.68,2.35
+E08,E08-SH003,E08-D105,玛拉,医生,I took time off for this.,我是请假来的。,拿工时换一个确定答复,11,13.55,59,61.55,2.35
+E08,E08-SH003,E08-D205,医生,玛拉,"If you need to leave, we can finish this by phone.",你要赶回去的话，后面我们可以电话说。,提供实际省工时的办法，不能承诺改付款,16,20.68,64,68.68,2.35
+E08,E08-SH003,E08-D206,玛拉,医生,I can't keep leaving work every time you find another page.,不能每找着一张纸，我就再请一次假。,怒气指向眼前人，要求停止这种消耗,26,30.68,74,78.68,2.35
+E08,E08-SH003,E08-D004,医生,玛拉,I'll send them with the appeal. I can't fix their system from here.,我会跟申诉一起发过去。他们的系统，我这里改不了。,只说自己能做的事,33,38.53,81,86.53,2.35
+E08,E08-SH003,E08-D107,医生,玛拉,This tells us they got it. I can't tell you who read it.,这说明他们收到了。谁看过，我说不了。,不猜内部路径,44,49.53,92,97.53,2.35
+E08,E08-SH005,E08-D005,诺拉,玛拉与医生,Can I use the receipt and the dates? Just those.,回执和日期能用吗？就这两样。,缩小取材范围,1,5.26,99,103.26,2.35
+E08,E08-SH005,E08-D109,玛拉,诺拉,Without her name this time.,这次别带她名字。,点出已发生的伤害，不作原谅表态,8,10.13,106,108.13,2.35
+E08,E08-SH005,E08-D207,诺拉,玛拉,No name. No voice. Just the receipt and dates.,不带名字，不带声音。只用回执和日期。,复述这一次明确缩小的授权范围,12,15.83,110,113.83,2.35
+E08,E08-SH006,E08-D006,诺拉,医生,This says the report's missing. You know the doctor who signed it?,这上面说报告没到。签字的这个医生，你认识吗？,开始把矛盾收窄到签认者,0.6,6.66,120.6,126.66,1.98
+E08,E08-SH006,E08-D111,医生,诺拉,No. Ask them.,不认识，问对方。,不替陌生人解释,7.49,9.27,127.49,129.27,1.69
+E08,E08-SH007,E08-D007,受访患者电话声,诺拉,You can use the letter. Leave my name off. I still need them to cover next month.,信你可以用。别写我名字。我下个月还得靠他们报呢。,愿意帮忙，仍被下一次支付限制,0.6,9.05,140.6,149.05,2.01
+E08,E08-SH008,E08-D008,诺拉,编辑托马斯,"Three clinics, same wording, same mark. What if someone just copied those signatures?",三家诊所，措辞、标记都一样。会不会有人直接把签名复制过来了？,模式让她兴奋，先走向吸引人的解释,0.6,7.14,155.6,162.14,1.99
+E08,E08-SH008,E08-D114,编辑托马斯,诺拉,You can't fix that by adding a question mark.,加个问号也不能这么写。,直接压住标题的写法，暂不否定继续调查,7.49,12.13,162.49,167.13,1.94
+E08,E08-SH009,E08-D009,编辑托马斯,诺拉,"Have you called the doctor? The actual doctor, not PR.",打给那个医生了吗？我说医生本人，别光找公关。,要求直接采访被怀疑的人,0.6,5.71,173.6,178.71,1.96
+E08,E08-SH009,E08-D116,诺拉,编辑托马斯,Both. Still waiting.,都找了。还在等。,想赶稿，但手里只有自动回复,6.06,7.84,179.06,180.84,1.69
+E08,E08-SH012,E08-D010,诺拉,编辑托马斯,Wait. I've got someone saying those signatures are real.,等等。有人说那些签名是真的。,新信息截住预设解释,0.6,5.24,234.6,239.24,1.94
+E08,E08-SH012,E08-D118,编辑托马斯,诺拉,Can they back that up?,拿得出证据吗？,不让匿名说法自动成为新结论,5.59,8.32,239.59,242.32,1.83
+E09,E09-SH001,E09-D001,路易吉,海伦,Can you get that page into the record?,能把那一页写进庭审记录吗？,催她做一件事,1,5.3,1,5.3,1.86
+E09,E09-SH001,E09-D002,海伦,路易吉,After your plea. The names stay covered.,先答辩。名字得遮住。,边让路边交代,5.6,9.4,5.6,9.4,1.84
+E09,E09-SH002,E09-D003,海伦,路易吉,How's your back?,背怎么样？,走动中低声问,10,11.8,23,24.8,1.67
+E09,E09-SH002,E09-D004,路易吉,海伦,I'll be okay. Just don't lose that page.,我没事。那页可别弄丢。,搪塞背痛，马上盯回蓝夹,12.1,15.4,25.1,28.4,2.42
+E09,E09-SH004,E09-D005,州法官,路易吉,"Mr. Mangione, can you hear me clearly?",曼吉奥内先生，你能听清我的话吗？,例行明确,1.1,5.1,32.1,36.1,1.75
+E09,E09-SH004,E09-D006,路易吉,州法官,"Yes, Your Honor.",能，法官阁下。,清楚平稳,5.5,7.5,36.5,38.5,1.5
+E09,E09-SH004,E09-D007,州法官,路易吉,How do you plead to the charges before this court?,对本庭所列指控，你如何答辩？,程序提问,12.1,17.7,43.1,48.7,1.79
+E09,E09-SH004,E09-D008,路易吉,州法官,"Not guilty, Your Honor.",不认罪，法官阁下。,停半拍后明确,18,20.5,49,51.5,1.6
+E09,E09-SH006,E09-D009,海伦,州法官,"We request the full arrest recordings, including the period before the backpack was opened.",我们申请完整逮捕记录，包括背包打开以前的部分。,争取具体材料,1,8.2,54,61.2,1.94
+E09,E09-SH006,E09-D201,州检察官,州法官,The defense has the inventory. What else are you asking for?,辩方已经拿到物品清单，还要什么？,把请求缩成重复索取,13,17.31,66,70.31,2.55
+E09,E09-SH006,E09-D202,海伦,州法官,"The recordings. A list tells us what was logged, not what happened before that.",录像。清单记的是登记了什么，不是那之前发生了什么。,不接受把两种材料混为一谈,17.61,23.1,70.61,76.1,2.55
+E09,E09-SH006,E09-D203,州法官,控辩双方,Put the missing material in your request.,缺哪些，列进申请。,把争执转成可处理的书面范围,23.4,26.15,76.4,79.15,2.55
+E09,E09-SH007,E09-D010,海伦,州法官,Some entries copy patient records. We need to distinguish those from his own statements.,部分内容抄自患者记录，需要与他自己的陈述分开。,区分材料原文和本人陈述，不把亲笔抄录当作作者身份,1,7.7,86,92.7,2.09
+E09,E09-SH007,E09-D011,州检察官,州法官,That requires a written motion.,那需要书面申请。,抓程序缺口,8,10.8,93,95.8,1.79
+E09,E09-SH007,E09-D012,州法官,海伦,File it in writing. Redact the patients' names. Today we're setting the schedule.,书面提交，遮去患者姓名。今天先安排日程。,截断扩展,15,21.7,100,106.7,1.94
+E09,E09-SH010,E09-D013,布莱克,直播观众,That color's back in stock. Link below. It'll ship before the next hearing.,这个颜色补货了，链接在下面。下次开庭前发货。,眼睛看评论，熟练接着卖,1.1,8.7,119.1,126.7,1.71
+E09,E09-SH010,E09-D014,诺拉,布莱克,Were you inside?,你刚才在庭里吗？,普通询问,9.1,11.1,127.1,129.1,1.5
+E09,E09-SH010,E09-D015,诺拉,布莱克,Can you move?,让一下行吗？,绕设备时问，不停下来争吵,14,16.3,132,134.3,1.3
+E09,E09-SH010,E09-D016,布莱克,直播观众,"Hang on, the lawyer's coming out. Size chart's down below.",等下，律师出来了。尺码表在下面。,先应付身旁的人，立刻转回直播,16.6,21.3,134.6,139.3,2.13
+E09,E09-SH012,E09-D018,诺拉,海伦,Anything thrown out today?,今天排除什么了吗？,抢一句可用答复,1,3.3,142,144.3,1.74
+E09,E09-SH012,E09-D019,海伦,诺拉,Nothing. We've asked for the arrest recordings. We don't have them yet.,没有。我们申请了逮捕录像，还没拿到。,脚步不停，堵住胜利标题,3.6,9.3,144.6,150.3,2.11
+E09,E09-SH014,E09-D020,值班编辑,诺拉,Can we run this?,这能发吗？,手已伸向纸，要当天能用的东西,1,3.3,162,164.3,1.74
+E09,E09-SH014,E09-D021,诺拉,值班编辑,Not yet. This box is blank. I don't know what should be in it.,还不能。这格空着，我还不知道该填什么。,看着空栏，拒绝先给结论,3.6,10.3,164.6,171.3,2.09
+E09,E09-SH014,E09-D022,值班编辑,诺拉,Get the sweater clip done first. Then follow this up.,先把毛衣那条剪完，再查这个。,把付钱的工作推到她面前,13,17.7,174,178.7,2.13
+E09,E09-SH014,E09-D023,诺拉,值班编辑,Send me the clean audio.,把干净音轨发我。,接受交换,18,20.8,179,181.8,1.79
+E09,E09-SH014,E09-D204,值班编辑,诺拉,The clip's due in ten.,短片十分钟后要。,说排期，不评价调查,24,25.96,185,186.96,2.55
+E09,E09-SH014,E09-D205,诺拉,莉娜,You'll have it. I'm not running the documents tonight.,会交的。那些材料今晚不发。,先承担手头工作，不承诺没查清的报道,26.26,29.79,187.26,190.79,2.55
+E09,E09-SH016,E09-D024,诺拉,匿名来源,I won't use your name. Someone could still figure it out. Do you want to meet?,我不会用你的名字，可别人还是可能猜出来。你还想见面吗？,电话接通后停下工作，把决定留给对方,1.1,10.8,195.1,204.8,1.65
+E10,E10-SH001,E10-D001,莉娜,诺拉,I've got twenty minutes before I'm due back.,我二十分钟后就得回去。,先限制时间，手压住信封,1,4.3,1,4.3,2.42
+E10,E10-SH001,E10-D002,诺拉,莉娜,Okay. What have you got?,好，带了什么？,顺着她的时限，直接看材料,4.6,7.4,4.6,7.4,1.79
+E10,E10-SH001,E10-D003,莉娜,诺拉,Three cases. That's all I can give you.,三个案子，我只能给你这些。,只抽出约定三页,12,16.3,12,16.3,1.86
+E10,E10-SH001,E10-D004,诺拉,莉娜,"Receipt here, missing paperwork here. Same code on all three.",这里是回执，这里又说缺材料。三个代码都一样。,对着两栏核对，不替医生下结论,16.6,21.8,16.6,21.8,1.92
+E10,E10-SH003,E10-D201,诺拉,莉娜,How many more look like this?,还有多少是这样的？,想扩大样本,1,3.35,24,26.35,2.55
+E10,E10-SH003,E10-D202,莉娜,诺拉,I checked these three. I'm not giving you a number I don't have.,我核过的就是这三个。没数过的，我不会给你编个数。,截住扩张，不撤回已核部分,3.65,8.75,26.65,31.75,2.55
+E10,E10-SH003,E10-D203,诺拉,莉娜,Can I talk to the doctors who signed them?,能找签字的医生谈谈吗？,改找可核实的人,9.05,12.58,32.05,35.58,2.55
+E10,E10-SH003,E10-D204,莉娜,诺拉,You'll have to ask them.,那得你自己去问。,不替医生授权,12.88,14.84,35.88,37.84,2.55
+E10,E10-SH003,E10-D005,莉娜,诺拉,I reported it. Got a ticket number. Never heard back.,我报过，给了个处理编号，就再没消息了。,压低声抱怨一件做过却没结果的工作,19,25.2,42,48.2,1.61
+E10,E10-SH004,E10-D007,诺拉,莉娜,Signed off without opening the files?,没打开文件就签了？,想从她嘴里拿到一句肯定,1,3.8,51,53.8,2.14
+E10,E10-SH004,E10-D008,莉娜,诺拉,I haven't seen the viewing logs. Don't say I told you that.,我没看过访问记录。别说是我告诉你的。,打断推断，压住原件不让带走,4.1,10.8,54.1,60.8,1.79
+E10,E10-SH004,E10-D205,诺拉,莉娜,Then how does a file get signed off with the paperwork missing?,那缺着材料，怎么还能签？,试图让来源补上因果,13,17.71,63,67.71000000000001,2.55
+E10,E10-SH004,E10-D206,莉娜,诺拉,That's what I asked in the report. It isn't an answer.,报告里我问的就是这个。那是问题，不是答案。,把自己的质检问题与结论分开,18.01,22.32,68.01,72.32,2.55
+E10,E10-SH004,E10-D207,诺拉,莉娜,Okay. You haven't seen them. I've got it.,好，你没看过。我记了。,写下限定，心里仍不满意,22.62,25.76,72.62,75.76,2.55
+E10,E10-SH005,E10-D009,莉娜,诺拉,You can trace that right to me.,顺着这个就能查到我。,餐巾先盖编号，再提醒,1,3.8,81,83.8,2.5
+E10,E10-SH005,E10-D010,诺拉,莉娜,Okay. Dates only?,好，只拍日期？,手机先放低，等明确范围,4.1,6.9,84.1,86.9,1.07
+E10,E10-SH005,E10-D801,莉娜,诺拉,And the report number.,还有报告编号。,给出有限同意,7.2,9.5,87.2,89.5,1.74
+E10,E10-SH005,E10-D011,诺拉,莉娜,This number gets us the report?,凭这个编号能找着报告？,逐位核完后问下一步,12,14.8,92,94.8,2.14
+E10,E10-SH005,E10-D012,莉娜,诺拉,It should. They never sent me a response.,应该能。他们一直没给我回复。,给线索，不保证结果,15.1,19.4,95.1,99.4,1.86
+E10,E10-SH007,E10-D013,诺拉,莉娜,Luigi had this page.,路易吉拿过这一页。,陈述核对结果,1,3.3,104,106.3,1.74
+E10,E10-SH007,E10-D014,莉娜,诺拉,I sent it to the appeal group. He offered to help.,我发到申诉互助组，他说可以帮忙。,先交代当时为什么发,3.6,9.3,106.6,112.3,1.93
+E10,E10-SH007,E10-D208,诺拉,莉娜,Did you meet him?,见过他本人吗？,先核联系形式,13,14.57,116,117.57,2.55
+E10,E10-SH007,E10-D209,莉娜,诺拉,No. Messages. Mostly people asking where to send an appeal.,没见过。就是发消息，大多问申诉往哪儿寄。,只答亲历,14.87,18.79,117.87,121.78999999999999,2.55
+E10,E10-SH007,E10-D210,诺拉,莉娜,Can you show me those?,能让我看看吗？,争取通信,19.09,21.05,122.09,124.05,2.55
+E10,E10-SH007,E10-D211,莉娜,诺拉,Not here. Not before I talk to someone.,这里不行。我得先找人问清楚。,拒绝交出完整通信,21.35,24.49,124.35,127.49,2.55
+E10,E10-SH008,E10-D015,莉娜,诺拉,Don't put me in a story about him.,别把我扯进他的报道里。,收信封时顾不上压稳声音,1,4.8,135,138.8,2.11
+E10,E10-SH008,E10-D802,诺拉,莉娜,I won't name you. But I have to mention the group.,我不写你名字，但互助组得写。,不拦她，说明自己能答应到哪,5.1,10.3,139.1,144.3,2.12
+E10,E10-SH008,E10-D803,莉娜,诺拉,I didn't know anything about a gun.,枪的事，我什么都不知道。,离开前补得更响，急于划开责任,10.6,13.9,144.6,147.9,2.12
+E10,E10-SH009,E10-D016,值班编辑,诺拉,Did anyone actually see a doctor skip a file?,有人真见过医生跳过一份病历吗？,只追问最强断言有没有直接依据,1,6.7,150,155.7,1.58
+E10,E10-SH009,E10-D017,诺拉,值班编辑,"No. Three receipts, three denials. Nobody will explain it.",没有。三份回执，三份拒赔，没人肯解释。,承认缺口后仍把材料推回编辑,7,12.2,156,161.2,1.73
+E10,E10-SH009,E10-D212,值班编辑,诺拉,Three families sent records. The insurer says they were missing. We can prove that much.,三家交过材料，保险方却说缺材料。至少这些能证实。,给出可发的版本,14,19.88,163,168.88,2.55
+E10,E10-SH009,E10-D213,诺拉,值班编辑,That's the letter they already got. We need to say what happened to them.,那不就是他们收到的那封信吗。我们得写清他们到底遇到了什么。,嫌限定写法没有揭穿原因,20.18,25.67,169.18,174.67000000000002,2.55
+E10,E10-SH010,E10-D018,值班编辑,诺拉,They say clinicians reviewed them.,他们说临床人员复核过。,读回复,1,3.8,183,185.8,1.79
+E10,E10-SH010,E10-D019,诺拉,值班编辑,Use it. They still haven't sent the logs.,加进去。他们还是没给日志。,接受引用，仍想保住自己的开头,4.1,8.4,186.1,190.4,1.86
+E10,E10-SH010,E10-D214,值班编辑,诺拉,Not sending us a log isn't the same as nobody opening a file.,不给我们日志，不等于没人打开过文件。,说具体缺口,11,16.1,193,198.1,2.55
+E10,E10-SH010,E10-D215,诺拉,值班编辑,Then they can show us one. We've asked twice.,那就拿一份给我们看。已经问两次了。,把举证负担推回公司,16.4,19.93,198.4,201.93,2.55
+E10,E10-SH010,E10-D216,值班编辑,诺拉,I'm asking what you can show me.,我问的是你能拿什么给我看。,不让她换问题,20.23,22.97,202.23,204.97,2.55
+E10,E10-SH011,E10-D217,诺拉,值班编辑,Three times. Same missing-materials code. I'm keeping the line.,三次，同样的缺材料代码。那句我要留着。,以重复模式替代尚无的访问证明,1,4.53,213,216.53,2.55
+E10,E10-SH011,E10-D218,值班编辑,诺拉,Keep their response beside it. Don't bury it.,公司回复紧挨着放。别藏到下面。,让步，但坚持回应位置,4.83,7.97,216.83,219.97,2.55
+E10,E10-SH011,E10-D219,诺拉,值班编辑,Fine.,行。,接受位置，不改断言,8.27,9.37,220.27,221.37,0.91
+E10,E10-SH011,E10-D020,值班编辑,诺拉,Your call.,你决定。,不替她担,18,19.3,230,231.3,1.54
+E10,E10-SH011,E10-D021,诺拉,值班编辑,Leave my name on it.,留我的署名。,承担也争机会,19.6,22.4,231.6,234.4,1.79
+E10,E10-SH012,E10-D022,值班编辑,诺拉,National desk. They want a meeting.,全国版，要跟你谈谈。,好消息的口吻,1,4.3,241,244.3,1.82
+E10,E10-SH012,E10-D023,诺拉,值班编辑,Tomorrow? I can do tomorrow.,明天？明天我行。,比核实时快答,4.6,7.4,244.6,247.4,1.79
+E10,E10-SH013,E10-D024,维克多,公司内部法务（电话）,Find out who handled these cases. Preserve the access records.,查清这几例是谁处理的。访问记录保留下来。,给法务两件具体工作，不做威胁宣言,1,6.7,250,255.7,1.75
+E10,E10-SH014,E10-D025,莉娜,公司法务（电话）,I'm still here. Should I bring someone?,我还在。要不要找个人陪我？,先确认自己的处境,1,5.7,260,264.7,1.49
+E10,E10-SH014,E10-D220,莉娜,维克多（电话）,Am I supposed to keep working tonight?,今晚还要我接着干吗？,先问眼前能做什么,10,12.75,269,271.75,2.55
+E10,E10-SH014,E10-D221,维克多,同场对话者,Save what you're doing. We'll arrange a time with counsel.,手头先保存。我们会约律师在场的时候谈。,不逼当晚答复资料流转,13.05,16.97,272.05,275.97,2.55
+E10,E10-SH014,E10-D222,莉娜,维克多（电话）,Email me the request. I want to know what I'm answering.,要求发我邮箱。我得知道要答哪些问题。,争取书面范围,17.27,21.58,276.27,280.58,2.55
+E10,E10-SH014,E10-D026,维克多,莉娜（电话）,We need to know where the documents went. You can speak to a lawyer first.,我们得弄清文件传到哪儿了。你可以先跟律师谈谈。,把要求说清，不替她提供保证,30,37.2,289,296.2,2.08
+E11,E11-SH001,E11-D001,维克多,公司公告观众,We've arranged a priority review for the Reed family's request and are contacting their treatment provider today.,我们已为里德家的申请安排优先复核，今天正联系治疗机构。,平稳公告,1.1,10.3,1.1,10.3,1.85
+E11,E11-SH002,E11-D002,传播职员,维克多,They're calling it approved.,他们在说已经批了。,想顺势采用,1,3.3,13,15.3,1.74
+E11,E11-SH002,E11-D003,维克多,传播职员,Payment isn't approved. Take 'approved' out of our caption.,付款还没批。咱们配文里的“获批”删掉。,指平板上的待发配文，改发布用词，不改已录承诺,3.6,7.4,15.6,19.4,2.37
+E11,E11-SH002,E11-D201,传播职员,维克多,Can we say the family can book treatment?,能说这家人可以预约治疗了吗？,想要公众可理解的结果,11,14.14,23,26.14,2.55
+E11,E11-SH002,E11-D202,维克多,同场对话者,Not until payment's approved. Use the review date.,付款批下来才行。写复核日期。,不承诺尚未办成的事,14.44,17.57,26.439999999999998,29.57,2.56
+E11,E11-SH003,E11-D004,玛拉,医生,They approved it. Can we have Thursday back?,他们批了，周四那个位置能还给我们吗？,举手机，先要回预约,1,5.3,36,40.3,1.86
+E11,E11-SH003,E11-D005,医生,玛拉,"It says review, Mara. I still need them to authorize payment.",这上面说的是复核，玛拉。付款还得他们批准。,看着通知答，不把她当学生,5.6,11.3,40.6,46.3,1.93
+E11,E11-SH003,E11-D801,诺拉,玛拉,I shared that headline.,我也转了那个标题。,承认自己在场的份,11.6,13.9,46.6,48.9,1.74
+E11,E11-SH003,E11-D203,玛拉,同场对话者,I swapped my shift. I told her we were coming.,我已经换班了，也跟她说好要来。,第一次意识到白高兴了,16,19.92,51,54.92,2.55
+E11,E11-SH003,E11-D204,医生,玛拉,Keep the shift for now. Let me call billing again.,先别换回去。我再找收费那边问。,给可做的一步，不承诺付款,20.22,24.14,55.22,59.14,2.55
+E11,E11-SH003,E11-D205,玛拉,同场对话者,Please don't tell me it's sorted until it is.,没办好，就别说已经好了。,对着医生，话也落到旁边记者身上,24.44,27.97,59.44,62.97,2.55
+E11,E11-SH004,E11-D006,医生,诺拉,We reopened this two days before the shooting. Here.,枪击前两天就重启了。你看。,把回执递到眼前再停,1,7.2,71,77.2,1.45
+E11,E11-SH004,E11-D007,玛拉,医生,You called me on my break.,你那时打给我，我在午休。,想起当时的事,7.5,10.8,77.5,80.8,1.82
+E11,E11-SH004,E11-D008,诺拉,医生,But my story got them to move faster.,可我的报道还是让他们快了点。,试着保住自己原先判断的一部分,14,17.8,84,87.8,2.11
+E11,E11-SH004,E11-D009,医生,诺拉,Yes. We'd already started.,是，但之前就开始了。,简短纠正，已经要回治疗区,18.1,21.9,88.1,91.9,1.05
+E11,E11-SH006,E11-D010,艾莉,玛拉,I saved you the window seat.,靠窗那个给你留了。,孩子只关心画里母亲坐哪,1,4.8,96,99.8,1.58
+E11,E11-SH006,E11-D011,玛拉,艾莉,Okay. Give me a minute.,好，给我一分钟。,还陷在付款问题,5.1,7.9,100.1,102.9,1.79
+E11,E11-SH006,E11-D012,医生,玛拉,Thursday's yours till noon tomorrow. Call that number. I'll send them my note.,周四给你留到明天中午。打这个号码，我把说明发过去。,边写卡边交代，不另起安慰演说,11,18.7,106,113.7,1.69
+E11,E11-SH006,E11-D013,玛拉,医生,Noon. Okay.,中午，好。,记下真正期限,19,20.3,114,115.3,1.54
+E11,E12-SH001,E12-D001,玛拉,维克多,Will the clinic have it today?,诊所今天能收到吗？,压住金额，只等到账时间,1,4.3,120,123.3,1.82
+E11,E12-SH001,E12-D002,维克多,玛拉,This covers the current treatment. We send it once you've signed.,这笔付眼下的疗程。你签完，我们就放款。,先把付款条件摆在桌上,4.6,10.3,123.6,129.3,1.93
+E11,E12-SH001,E12-D003,维克多,玛拉,"Once this claim's settled, no more interviews about it.",这起申请结了，就不能再就这事接受采访。,说限制时仍把纸推向签字处,15,20.7,134,139.7,1.58
+E11,E12-SH001,E12-D004,玛拉,维克多,I take the money and stop talking. That's the deal?,钱拿了，就不许再说了。是这个意思？,看采访条款，当面核对代价,21,26.2,140,145.2,1.92
+E11,E12-SH003,E12-D201,玛拉,维克多,And if I don't sign?,不签呢？,要求说出退路,1,2.96,147,148.96,2.55
+E11,E12-SH003,E12-D202,维克多,同场对话者,The claim stays disputed. You can keep appealing.,这起申请仍有争议，你可以继续申诉。,说流程，没有承诺位置,3.26,6.4,149.26,152.4,2.55
+E11,E12-SH003,E12-D005,玛拉,维克多,Then put the next round in here.,那把下个疗程也写进去。,把笔递过去，试一次能否多争,12,14.8,158,160.8,2.5
+E11,E12-SH003,E12-D006,维克多,玛拉,I can't promise they'll approve the next one.,下次批不批，我保证不了。,把笔推回，不绕开拒绝,15.1,18.4,161.1,164.4,2.42
+E11,E12-SH004,E12-D007,玛拉,维克多,I'm taking this to my lawyer. Don't call the store.,我拿给律师看。别往店里打电话。,合夹起身，先结束这次谈判,1,5.7,169,173.7,2.13
+E11,E12-SH004,E12-D008,维克多,玛拉,Have him call me.,让他打给我。,继续争速度,6,8.3,174,176.3,1.74
+E11,E11-SH008,E11-D014,值班编辑,诺拉,We can call it an update.,可以叫更新。,替她和栏目留余地,1,4.3,179,182.3,1.82
+E11,E11-SH008,E11-D015,诺拉,值班编辑,We got it wrong. Put a correction on the original.,我们写错了。在原文上更正。,把鼠标拉回原链接,4.6,9.8,182.6,187.8,1.92
+E11,E11-SH008,E11-D016,值班编辑,诺拉,"Pull it, and we lose that slot.",撤了，那个推荐位就没了。,让她看清要失去哪块位置,13,16.8,191,194.8,1.84
+E11,E11-SH008,E11-D017,诺拉,值班编辑,Pull it.,撤。,短促不解释,17.1,18.4,195.1,196.4,1.54
+E11,E11-SH010,E11-D206,值班编辑,诺拉,And the original story?,最初那篇呢？,问是否还要处理别处,1,2.57,201,202.57,2.55
+E11,E11-SH010,E11-D207,诺拉,值班编辑,The treatment headline was wrong. I'm still chasing the records.,治疗标题错了。记录我还在追。,把问题限在本次转发,2.87,6.79,202.87,206.79,2.55
+E11,E11-SH010,E11-D018,值班编辑,诺拉,What's next? Pick one thing.,接着查什么？选一件。,把栏目排期压到清单边,12,15.8,212,215.8,1.32
+E11,E11-SH010,E11-D019,诺拉,值班编辑,The doctors' access records.,医生的访问记录。,改为可核任务,16.1,18.4,216.1,218.4,1.74
+E11,E11-SH011,E11-D020,路易吉,海伦,All of these. Not just Ellie.,这些都发，不只艾莉那份。,想夺回广度,1,4.3,222,225.3,1.82
+E11,E11-SH011,E11-D021,海伦,路易吉,Pick one. What's the last page you got?,选一份。你最后收到的是哪页？,从整叠里抽一份，让问题落到具体时间,4.6,8.4,225.6,229.4,2.11
+E11,E11-SH011,E11-D022,路易吉,海伦,This one. Nothing after that.,这页。后面就没了。,指自己的收件末页，不替对方解释,11.1,15.7,232.1,236.7,1.09
+E11,E11-SH011,E11-D023,海伦,路易吉,This notice came later. Did you ask them for an update?,这份通知是后来才有的。你问过进展吗？,把通知放在旁边，等他答,16,22.6,237,243.6,1.67
+E11,E11-SH013,E11-D208,路易吉,海伦,They send another letter. Then another. People run out of time.,一封接一封地发信，人哪有那么多时间。,把问题推回程序拖延,1,5.31,246,250.31,2.55
+E11,E11-SH013,E11-D209,海伦,路易吉,Did you ask this family what happened next?,这家后来怎么样了，你问过吗？,坚持具体到这个人,5.61,8.75,250.61,253.75,2.55
+E11,E11-SH013,E11-D210,路易吉,海伦,They'd already been turned down.,他们已经被拒过了。,继续用旧结论挡后续,9.05,11.01,254.05,256.01,2.55
+E11,E11-SH013,E11-D211,海伦,路易吉,I can see that. Did you ask?,我看见了。你问了吗？,不替他把没问说出来,11.31,14.06,256.31,259.06,2.55
+E11,E11-SH013,E11-D024,路易吉,海伦,No. I thought I knew what the answer would be.,没问。我以为不用问也知道他们怎么答。,先说没有，理由说完也收不回去,22,27.2,267,272.2,1.92
+E11,E11-SH013,E11-D025,海伦,路易吉,Put the date here.,日期写这儿。,直接点空白处，不安慰也不训人,27.5,29.8,272.5,274.8,1.74
+E11,E11-SH014,E11-D026,路易吉,海伦,Do we have to put that in?,这句一定得写吗？,手压着遗漏那行，试探能否不写,1,3.8,277,279.8,2.5
+E11,E11-SH014,E11-D027,海伦,路易吉,Yes. I need it all.,得写。你得把前后都告诉我。,明确要求完整经过，不允许自己先挑掉不利段,4.1,6.4,280.1,282.4,2.17
+E11,E11-SH014,E11-D212,路易吉,海伦,It makes it sound like I didn't care.,这么写，好像我根本不在乎。,担心自己失去道德立足点,11,14.14,287,290.14,2.55
+E11,E11-SH014,E11-D213,海伦,路易吉,Then tell me what you did. Don't fix how it sounds.,那就告诉我你做了什么。别先想着怎么写好听。,要求行为而非表态,14.44,18.75,290.44,294.75,2.55
+E11,E11-SH014,E11-D214,路易吉,海伦,I stopped asking. I kept the first answer.,我没再问。我一直用最初那个答复。,把遗漏说完整,19.05,22.19,295.05,298.19,2.55
+E11,E11-SH014,E11-D028,路易吉,海伦,Get the later pages.,把后面的页也找来。,把要求从公布改成查完,32,34.3,308,310.3,1.74
+E12,E12-SH005,E12-D009,凯文,玛拉,This bit has to change. You can still answer regulators or testify.,这段得改。监管来问、法院叫你作证，你还得能配合。,划出条款，解释她能做什么,1,7.2,1,7.2,1.94
+E12,E12-SH005,E12-D010,玛拉,凯文,I'm back on shift soon. They want an answer.,我快上班了，他们等着答复。,把时限卡推到他笔边,7.5,11.8,7.5,11.8,2.09
+E12,E12-SH005,E12-D011,凯文,玛拉,"Regulators ask for records, or a court calls you, you can answer. I want it in writing.",监管要材料，或者法院叫你，你都能配合。这得白纸黑字写进去。,指拟加页，让口头承诺落实到签字版,15,23.6,15,23.6,1.98
+E12,E12-SH007,E12-D203,玛拉,凯文,"If Nora calls about the same denial, I still can't talk?",诺拉再问这次拒赔，我还是不能讲？,核对自己到底放弃什么,1,5.31,27,31.31,2.55
+E12,E12-SH007,E12-D204,凯文,玛拉,Not an interview. A formal records request or testimony is different.,采访不行。正式索取记录和作证是另外的事。,不把例外说成全面解禁,5.61,9.93,31.61,35.93,2.55
+E12,E12-SH007,E12-D205,玛拉,凯文,I don't want to find that out after I've spent the money.,我不想钱花了才知道这些。,要求先说透再签,10.23,14.93,36.230000000000004,40.93,2.55
+E12,E12-SH007,E12-D012,玛拉,凯文,Then we do this again?,那之后还得再来一遍？,看账单而问,21,23.8,47,49.8,1.79
+E12,E12-SH007,E12-D013,凯文,玛拉,Yes. This settles this denial. It doesn't cover the next round.,是。这回只解决这次拒赔，下个疗程不在里面。,另外拿续批表，不假装已替她争到,24.1,29.3,50.1,55.3,2.12
+E12,E12-SH008,E12-D014,玛拉,凯文,Today. Noon. Get that changed and I'll sign.,今天中午。把那儿改好，我就签。,作决定时指卡，不把选择说成胜利,1,5.7,60,64.7,1.7
+E12,E12-SH008,E12-D015,凯文,玛拉,I'm sending it now.,我现在发。,拿手机开始做事,6,8.8,65,67.8,1.43
+E12,E12-SH009,E12-D016,凯文,维克多,Wrong version. The exception's missing.,版本错了，例外没加。,立即阻止,1,3.8,72,74.8,1.79
+E12,E12-SH009,E12-D017,维克多,凯文,They approved it. The email's here.,已经批了。邮件在这儿。,核邮件后立刻收回旧版,4.1,7.4,75.1,78.4,1.82
+E12,E12-SH009,E12-D801,玛拉,维克多,Both copies.,两份都重打。,自己盯住落实,7.7,9,78.7,80,1.54
+E12,E12-SH101,E12-D206,维克多,同场对话者,The approval's here. We can get the payment moving.,批准邮件在这儿，可以先办付款。,试着让流程先走,1,4.53,87,90.53,2.55
+E12,E12-SH101,E12-D207,玛拉,维克多,"Can I answer a request with your email, or with what I sign?",以后真来问，我凭你这封邮件，还是凭我签的东西？,要求承诺进入有效文本,4.83,9.93,90.83,95.93,2.55
+E12,E12-SH101,E12-D208,凯文,玛拉,We need both copies to match the approval. Then she can sign.,两份都得和批准的修改一致，她才能签。,把客户要求变成可执行条件,10.23,14.94,96.23,100.94,2.55
+E12,E12-SH010,E12-D018,凯文,玛拉,It's in both. Go ahead.,两份都有，可以了。,确认后才让签,1,3.8,108,110.8,1.79
+E12,E12-SH010,E12-D019,玛拉,维克多,Send the confirmation to the clinic. Now.,把确认发给诊所，现在就发。,签完仍盯下一步，不等对方祝贺,4.1,7.4,111.1,114.4,2.12
+E12,E12-SH011,E12-D209,维克多,同场对话者,It's sent. They'll have the payment reference.,发了，付款编号也发过去了。,给具体执行结果,1,3.75,123,125.75,2.55
+E12,E12-SH011,E12-D210,玛拉,维克多,Copy me. The last time I had to explain it at the desk.,也抄送我。上次到柜台，还得我自己解释。,要一份能拿到现场用的记录,4.05,9.14,126.05,131.14,2.55
+E12,E12-SH011,E12-D211,维克多,同场对话者,I've added you.,已经抄送。,完成，不寻求感谢,9.44,10.62,131.44,132.62,2.54
+E12,E12-SH011,E12-D020,维克多,玛拉,We'll put out a statement saying it's resolved.,我们会发个说明，说这事解决了。,在人到门口时补充公司的安排,22,25.3,144,147.3,2.42
+E12,E12-SH011,E12-D021,玛拉,维克多,No pictures of Ellie.,别用艾莉照片。,最后一道边界,25.6,27.9,147.6,149.9,1.74
+E12,E12-SH012,E12-D022,艾莉,玛拉,So we're going Thursday?,那周四能去了？,只要确定这周安排,1,3.3,154,156.3,1.74
+E12,E12-SH012,E12-D023,玛拉,艾莉,Yes. It's paid.,能，已经付了。,看完支付确认再答,3.6,5.9,156.6,158.9,1.3
+E12,E12-SH012,E12-D802,艾莉,玛拉,Can we take the bus?,能坐公交去吗？,继续她画里的计划,6.2,9,159.2,162,1.79
+E12,E12-SH012,E12-D212,玛拉,艾莉,The bus? We can get a ride.,坐公交？可以找人开车送。,先按省事的办法安排,17,19.75,170,172.75,2.55
+E12,E12-SH012,E12-D213,艾莉,玛拉,I can see everything from the bus. Can we go early?,公交上什么都能看见。能早点去吗？,讲自己的愿望，不问病情,20.05,24.36,173.05,177.36,2.55
+E12,E12-SH012,E12-D214,玛拉,艾莉,Yeah. We'll leave early.,好，早点走。,终于接孩子的话,24.66,26.23,177.66,179.23,2.55
+E12,E12-SH013,E12-D024,艾莉,玛拉,I saved you this one.,这个给你留的。,指着座位,1,3.8,185,187.8,1.79
+E12,E12-SH013,E12-D025,玛拉,艾莉,Okay. I'll sit there.,好，我坐那儿。,终于看着孩子指出的座位,4.1,6.4,188.1,190.4,1.74
+E12,E12-SH013,E12-D026,艾莉,玛拉,That's not your hair.,你的头发又不是这样。,认真挑母亲画错的地方,11,12.8,195,196.8,2.22
+E12,E12-SH013,E12-D027,玛拉,艾莉,"You do it, then.",那你来画。,把笔交还，带一点被挑错后的笑意,13.1,15.4,197.1,199.4,1.74
+E13,E13-SH001,E13-D001,艾莉,玛拉,This is the corner.,角在这儿。,催母亲一起做,1,3.3,1,3.3,1.74
+E13,E13-SH001,E13-D002,玛拉,艾莉,Hang on. That's our name.,等会儿，那是咱们的名字。,接拼图的手停住，读自己的姓,3.6,6.4,3.6,6.4,1.79
+E13,E13-SH001,E13-D003,艾莉,玛拉,I said not that one.,我说了别用那张。,不想再讲一次,11,13.8,11,13.8,1.79
+E13,E13-SH001,E13-D004,玛拉,艾莉,Okay. I won't send it.,好，我不发。,看见孩子在等，取消照片,14.1,17.4,14.1,17.4,1.52
+E13,E13-SH003,E13-D201,玛拉,艾莉,People think I kept the money.,他们以为钱让我自己拿了。,向孩子解释自己刚才的冲动,1,3.35,22,24.35,2.55
+E13,E13-SH003,E13-D202,艾莉,玛拉,That's me in the picture.,可照片里是我。,只认自己不愿公开的身体,3.65,5.61,24.65,26.61,2.55
+E13,E13-SH003,E13-D203,玛拉,艾莉,I know. I won't use it.,我知道。不发这张。,不让孩子承担替她证明的任务,5.91,8.27,26.91,29.27,2.54
+E13,E13-SH003,E13-D204,艾莉,玛拉,Not the other one either.,另外那张也不行。,把边界说完整,8.57,10.53,29.57,31.53,2.55
+E13,E13-SH003,E13-D005,玛拉,艾莉,"All right, you carry yours. I'll take this.",好，你拿你的。我拿这个。,松开孩子的本子，转拿自己的蓝夹,19,23.3,40,44.3,1.86
+E13,E13-SH003,E13-D006,艾莉,玛拉,Don't look in it.,不许偷看。,抱住画本，把自己的条件说清,23.6,25.4,44.6,46.4,2.22
+E13,E13-SH004,E13-D007,布莱克,玛拉,"How much did they pay you, Mara?",他们到底给了你多少，玛拉？,已经开播，逼她给一句数字,1,4.8,49,52.8,1.84
+E13,E13-SH004,E13-D008,玛拉,布莱克,Let us through. We have an appointment.,让我们过去，有预约。,只争门前那条路,5.1,7.9,53.1,55.9,2.5
+E13,E13-SH004,E13-D009,布莱克,玛拉,Just give us the number.,说个数就行。,把对方拒绝压成简单问题,13,16.3,61,64.3,1.52
+E13,E13-SH004,E13-D010,玛拉,布莱克,Not here. She's nine.,别在这儿，她才九岁。,压住吵给孩子听的冲动,16.6,18.9,64.6,66.9,1.74
+E13,E13-SH006,E13-D011,保安,玛拉,This way. Use the side door.,这边，走侧门。,给出可走路线，先带人离开设备,1,3.8,72,74.8,2.14
+E13,E13-SH006,E13-D012,艾莉,玛拉,Don't let him see my book.,别让他看我的本子。,把画本抱紧，仍在保护自己的东西,4.1,6.9,75.1,77.9,2.14
+E13,E13-SH006,E13-D013,布莱克,保安,We're live.,我们在直播。,试图让对方顾忌,12,13.3,83,84.3,1.54
+E13,E13-SH006,E13-D014,保安,布莱克,You can't film in here.,里面不能拍。,站住门线，不跟主播争直播权威,13.6,16.4,84.6,87.4,1.79
+E13,E13-SH008,E13-D015,艾莉,玛拉,I don't want to go back out.,我不想再出去了。,门合上才说，脚不再往前走,1,4.8,95,98.8,1.84
+E13,E13-SH008,E13-D016,玛拉,艾莉,Okay. We'll stay here for a bit.,好，咱们先在这儿待会儿。,蹲下来等，不催她牵手,5.1,8.4,99.1,102.4,2.12
+E13,E13-SH008,E13-D205,艾莉,玛拉,Does he know which room?,他知道我们进哪间吗？,怕门只是暂时挡住人,13,14.96,107,108.96000000000001,2.55
+E13,E13-SH008,E13-D206,玛拉,艾莉,No. He can't come through that door.,不知道，他过不来。,指身后的受控门给孩子确认,15.26,18.01,109.26,112.01,2.55
+E13,E13-SH008,E13-D207,艾莉,玛拉,Can we leave a different way?,走的时候能换个出口吗？,先争取离开的办法,18.31,20.66,112.31,114.66,2.55
+E13,E13-SH008,E13-D208,玛拉,艾莉,I'll ask. We don't have to go past him.,我去问。用不着从他旁边走。,给实际安排，不命令她别怕,20.96,24.49,114.96000000000001,118.49,2.55
+E13,E13-SH009,E13-D017,诺拉,值班编辑,We gave them the clinic's name. And her voice. I left that in.,诊所名字是我们给出去的。还有她的声音，是我留下来的。,对着自己的原片核，后半句不推给团队,1,7.7,131,137.7,1.94
+E13,E13-SH009,E13-D018,值班编辑,诺拉,Pull the original.,撤原片。,落实动作,8,9.9,138,139.9,1.58
+E13,E13-SH010,E13-D019,值班编辑,诺拉,We lose the whole feature if we do.,这么撤，整条推荐都没了。,指着待清空的位置，让她最后确认,1,4.3,142,145.3,2.42
+E13,E13-SH010,E13-D020,诺拉,值班编辑,Do it.,撤。,不补原则演讲,4.6,5.9,145.6,146.9,1.54
+E13,E13-SH010,E13-D209,值班编辑,诺拉,They've already copied it. We can't take those down ourselves.,别人都存了。那些我们自己删不了。,交代本站操作的边界,13,16.92,154,157.92000000000002,2.55
+E13,E13-SH010,E13-D210,诺拉,值班编辑,I know. Take ours down. I'll tell her what we did.,我知道。先撤我们的。我告诉她已经做了什么。,不许诺全网消失,17.22,21.54,158.22,162.54,2.55
+E13,E13-SH011,E13-D021,诺拉,玛拉（语音留言）,Our video's down. The photos too. I'm sorry. You don't have to call me back.,我们的视频撤了，照片也是。对不起。你不用给我回电话。,留言只交代已做的事，不索取回应,1,8.8,172,179.8,1.92
+E13,E13-SH012,E13-D022,海伦,路易吉,All of it?,整页？,等他确定发布范围,1,2.8,182,183.8,1.67
+E13,E13-SH012,E13-D023,路易吉,海伦,Not the first paragraph.,第一段不要。,折掉自己用来解释的背景,3.1,5.9,184.1,186.9,1.43
+E13,E13-SH012,E13-D211,海伦,路易吉,You wrote this part. Why take it out now?,这段是你写的，现在为什么删？,确认是他的决定,12,15.53,193,196.53,2.55
+E13,E13-SH012,E13-D212,路易吉,海伦,It's her daughter. She didn't ask to be in my statement.,那是她女儿，她没答应让我拿来说。,停止替她安排角色,15.83,20.14,196.83,201.14,2.55
+E13,E13-SH012,E13-D213,海伦,路易吉,Then we leave her out.,那就不写她。,执行明确边界,20.44,22.4,201.44,203.4,2.55
+E13,E13-SH013,E13-D024,海伦,路易吉,Some of your fundraisers won't like this.,有些替你筹款的人不会喜欢这段。,只说会失去谁的支持,1,4.8,208,211.8,1.84
+E13,E13-SH013,E13-D025,路易吉,海伦,Post that part. Put my name on it.,就发这段，署我的名字。,签字，不另加一段自我说明,5.1,9.4,212.1,216.4,1.86
+E13,E13-SH013,E13-D214,路易吉,海伦,Even the ones raising money for me.,替我筹款的也一样。,把禁骚扰范围说到自己人,15,17.75,222,224.75,2.55
+E13,E13-SH013,E13-D215,海伦,路易吉,I'll post exactly what you signed. No introduction.,我就发你签的这段，不另加开场白。,不替他恢复道德辩解,18.05,21.18,225.05,228.18,2.56
+E13,E13-SH013,E13-D216,路易吉,海伦,Okay.,好。,接受可能损失支持,21.48,22.58,228.48,229.57999999999998,0.91
+E14,E14-SH001,E14-D001,莉娜,IT咨询员（电话）,Nine tonight? Just the event logs? Not the charts?,今晚九点？只是事件日志？病历不动？,对着政策页逐项核清,1,5.3,1,5.3,2.09
+E14,E14-SH001,E14-D002,IT咨询员,莉娜（电话）,Charts stay. Those logs get overwritten unless we put a hold on them.,病历留着。那类日志不办保全，就会覆盖。,当作普通保留政策解释，语速不演危险,5.6,11.3,5.6,11.3,2.28
+E14,E14-SH001,E14-D003,莉娜,凯文（电话）,My access ends at five. They overwrite the logs at nine. What do you need?,我五点停权，日志九点覆盖。你要什么？,把两个时限给清楚，等能做的任务,16,24.2,16,24.2,1.83
+E14,E14-SH003,E14-D201,莉娜,凯文（电话）,I can't promise which files those logs will explain.,那些日志能解释哪些文件，我保证不了。,不把保全当答案,1,4.53,27,30.53,2.55
+E14,E14-SH003,E14-D202,凯文,莉娜（电话）,I need to know what might disappear. We can ask for the contents later.,先告诉我哪些可能消失。内容之后再申请。,把今晚的目标缩到保留,4.83,10.32,30.83,36.32,2.55
+E14,E14-SH003,E14-D203,莉娜,凯文（电话）,All right. I'll send the policy.,好。我发政策。,接受不越权寻找证明,10.62,12.97,36.62,38.97,2.55
+E14,E14-SH003,E14-D004,凯文,莉娜（电话）,Send the log category and the policy. Only what you're allowed to see. I'll handle the rest.,发日志类别和保留政策，只发你有权限看的，剩下我办。,接过后续责任，明确不让她越过访问权限,19,26.2,45,52.2,2.36
+E14,E14-SH004,E14-D005,玛拉,凯文,Am I back in the case?,我又要打官司了？,拿回和解原件，怕重新卷进去,1,3.8,58,60.8,2.14
+E14,E14-SH004,E14-D801,凯文,玛拉,No. Three other patients are filing. You're just authorizing us to use the receipt.,不是，另外三位患者申请。你只授权我们用这张回执。,指有限授权范围，不把她变成申请人,4.1,10.8,61.1,67.8,2.09
+E14,E14-SH004,E14-D006,玛拉,凯文,No pictures of Ellie.,不交艾莉的照片。,把个人条件带到公事,13,15.3,70,72.3,1.74
+E14,E14-SH004,E14-D007,凯文,玛拉,No photos. Just the receipt. You keep the original.,不交照片，只要回执。原件你拿着。,明确重复她的条件，原件推回去,15.6,19.4,72.6,76.4,2.37
+E14,E14-SH101,E14-D204,玛拉,诺拉与凯文,Is this going in another story?,这也要写进新报道吗？,先向记者划界,1,3.35,82,84.35,2.55
+E14,E14-SH101,E14-D205,诺拉,莉娜,"I'm asking about the records, not for an interview.",我来问记录，不是采访你。,接受被拒绝，而不转问孩子,3.65,7.18,84.65,88.18,2.55
+E14,E14-SH101,E14-D206,凯文,玛拉,This goes with the formal request. Just the receipt you've authorized.,这张随正式申请提交，只用你授权的回执。,限定使用去向,7.48,11.8,88.48,92.8,2.55
+E14,E14-SH101,E14-D207,玛拉,诺拉与凯文,Then use that. Nothing from her folder.,那就用这张，别动她其他材料。,保留自己的原件与其余资料,12.1,14.84,93.1,95.84,2.55
+E14,E14-SH006,E14-D008,诺拉,医生,Did they have it when they reviewed her case?,复核她的申请时，他们手里有吗？,想把发送成功往内部复核再推一步,1,5.3,104,108.3,2.09
+E14,E14-SH006,E14-D009,医生,诺拉,I sent it. They sent this receipt back. That's all I can sign off on.,我发了，他们回了这张回执。我能签字确认的就这些。,只在自己能证实的两行签字,5.6,13.3,108.6,116.3,1.95
+E14,E14-SH006,E14-D010,诺拉,凯文,Did we get them?,拿到那些记录了？,手机举起来，先把受理当成果,16,18.3,119,121.3,1.74
+E14,E14-SH006,E14-D011,凯文,诺拉,No. That's the filing receipt.,没有，这是申请受理回执。,纠正对象，同时收文件,18.6,21.9,121.6,124.9,1.52
+E14,E14-SH008,E14-D012,凯文,维克多,You've been served. The logs we need preserved are listed here.,已经送达了。要保全的日志列在这里。,把正式裁定附件展开到对方面前,1,7.7,130,136.7,1.64
+E14,E14-SH008,E14-D013,维克多,技术员,Pause the job. Let me check what it covers.,先暂停。我看一下范围。,先止住覆盖，再核裁定,8,12.3,137,141.3,2.09
+E14,E14-SH008,E14-D014,维克多,技术员,Only these logs.,只保这几类日志。,指确定范围,15,16.8,144,145.8,1.67
+E14,E14-SH008,E14-D802,凯文,维克多,The index too. Right there.,还有索引，就这行。,顺着对方手指往下一行补,17.1,19.9,146.1,148.9,1.79
+E14,E14-SH008,E14-D803,维克多,技术员,That too.,那个也保留。,看清后确认，不另争一句,20.2,21.5,149.2,150.5,1.54
+E14,E14-SH010,E14-D208,维克多,同场对话者,Can the rest of the job run?,其他部分能照常跑吗？,要恢复不受裁定影响的业务,1,3.75,156,158.75,2.55
+E14,E14-SH010,E14-D209,技术员,维克多与凯文,Yes. Once these exclusions are saved.,可以，把排除项保存好就行。,说实际操作顺序,4.05,6.4,159.05,161.4,2.55
+E14,E14-SH010,E14-D210,凯文,玛拉,Put both categories on the confirmation.,确认单把两类都列上。,不要求当场展示内容,6.7,9.05,161.7,164.05,2.55
+E14,E14-SH010,E14-D015,技术员,维克多、凯文,The hold's in. The nine o'clock job will skip them. I'll print your confirmation.,保全设好了，九点的任务会跳过这些。我给你打确认单。,核状态后才宣布完成，手不打开内容,19,25.7,174,180.7,2.09
+E14,E14-SH011,E14-D016,凯文,维克多,Who handles the records?,记录找谁调？,确认单已经核好，问下一步,1,2.8,187,188.8,2.22
+E14,E14-SH011,E14-D017,维克多,凯文,Our lawyers. This just confirms the hold.,找我们律师。这张只确认保全。,不把保全当作已向对方交出数据,3.1,6.4,189.1,192.4,2.12
+E14,E14-SH012,E14-D018,莉娜,维克多,They saved the logs?,日志留住了？,收自己的杯子前先确认,1,3.3,197,199.3,1.74
+E14,E14-SH012,E14-D019,维克多,莉娜,They're on hold. Take a look at this.,保全了。你看看这个。,把流转清单放在她杯垫上,3.6,7.4,199.6,203.4,2.11
+E14,E14-SH012,E14-D020,莉娜,维克多,He wanted examples for appeals. That's all I knew.,他要申诉样本，我知道的就这些。,不签宽泛概括，只说当时目的,12,17.2,208,213.2,1.73
+E14,E14-SH012,E14-D021,维克多,莉娜,They'll want every message. Let your lawyer handle it.,他们会要全部消息。交给你律师处理。,给出下一步压力，不替她认定知情,17.5,22.2,213.5,218.2,1.91
+E14,E14-SH102,E14-D211,莉娜,维克多,I need my pay records. The portal uses this phone.,工资记录我还得查，登录要用这部手机。,提出下班之后的实际困难,1,4.92,221,224.92,2.55
+E14,E14-SH102,E14-D212,维克多,莉娜,Payroll can send them to your personal address.,工资那边能发到你的私人邮箱。,只答能处理的事,5.22,8.36,225.22,228.36,2.55
+E14,E14-SH102,E14-D213,莉娜,维克多,Put that in the email too. And send the questions to my lawyer.,这个也写进邮件，问题发给我律师。,不再靠口头安排,8.66,13.76,228.66,233.76,2.55
+E14,E14-SH102,E14-D214,维克多,莉娜,I will.,好。,结束行政交接，不承诺免于调查,14.06,15.16,234.06,235.16,1.82
+E14,E14-SH014,E14-D022,莉娜,自己的律师语音信箱,I've got the list. I'll send it. Please call before I talk to them.,名单我拿到了，会发你。跟他们谈之前，先给我回个电话。,对语音信箱说实际请求，结束后才发照片,3,10.2,248,255.2,1.94
+E15,E15-SH001,E15-D001,州检察官,州法官,He targeted the industry. His own writing explains why. Now its workers are getting threats.,他针对这个行业，自己的文字写了原因。现在行业里的员工收到了威胁。,仍试图把本人文字与他人案后行为连成意图,9,17.2,9,17.2,1.83
+E15,E15-SH003,E15-D002,海伦,州法官,These were sent after his arrest. Did he send any of them? Use his words. They're here.,这些都在他被捕后才发。哪封是他发的？要看他的文字，在这儿。,分开两叠，用具体出处拆控方连接,1,9.6,22,30.6,1.98
+E15,E15-SH003,E15-D201,州检察官,州法官,The writing is ours too. We're not relying only on the emails.,我们也依据他的文字，不只靠这些邮件。,回到本人材料,14,18.71,35,39.71,2.55
+E15,E15-SH003,E15-D202,海伦,路易吉,Then address the charge. A public audience doesn't settle the intent question.,那就针对这项控罪。想让公众看见，还没有回答意图的问题。,承认传播对象，追究具体要件,19.01,23.71,40.010000000000005,44.71,2.55
+E15,E15-SH003,E15-D003,州检察官,州法官,He meant to reach the public.,他本来就想让公众看到。,转守青年自己的传播意图,32,34.3,53,55.3,2.61
+E15,E15-SH003,E15-D004,海伦,州法官,You still have to prove the intent this charge requires.,这项控罪要求的意图，你们还是得证明。,把讨论收回缺失要件,34.6,39.3,55.6,60.3,2.13
+E15,E15-SH005,E15-D005,州法官,控辩双方,The terrorism-related counts are dismissed on this record. This ruling does not dismiss the ordinary murder charge or determine the defendant's guilt.,依现有记录撤销恐怖主义相关指控。本裁定不撤销普通谋杀指控，也不判断被告有罪与否。,按庭审与关系自然说，不高声煽情,1.1,12.8,66.1,77.8,1.88
+E15,E15-SH006,E15-D006,路易吉,海伦,Can I take this?,这张能给我吗？,想先拿走胜利那页,1,3.3,80,82.3,1.74
+E15,E15-SH006,E15-D007,海伦,路易吉,Both pages.,两页一起留。,让限制跟着结果,3.6,4.9,82.6,83.9,1.54
+E15,E15-SH007,E15-D008,维克多,传播职员,"All verified. The login, page access, doctor's signature. Send the redacted copies.",都核实了。登录、页面访问、医生签名。发去掉身份信息的副本。,逐项点可证实记录，同时撤下身份页,1,7.2,89,95.2,1.94
+E15,E15-SH007,E15-D009,传播职员,维克多,'Fully reviewed'?,写‘完整复核’？,寻求强一句,14,15.3,102,103.3,1.54
+E15,E15-SH007,E15-D010,维克多,传播职员,No. We can prove that sentence wrong.,不写那个。我们能证明她这句不对。,只圈那句公开断言，不帮自己扩大胜利,15.6,19.9,103.6,107.9,1.63
+E15,E15-SH009,E15-D203,传播职员,维克多,So the investigation was false?,那就说整个调查是假的？,仍想扩大胜利范围,1,2.96,112,113.96,2.55
+E15,E15-SH009,E15-D204,维克多,同场对话者,That sentence was false. Quote it. Attach what proves it.,错的是那一句。原句引出来，证明附上。,让真实证据做有限反击,3.26,7.18,114.26,118.18,2.55
+E15,E15-SH009,E15-D011,维克多,传播职员,Send her the records. Tell her we want a correction.,把记录发她，告诉她我们要求更正。,先送对方可核的附件，再施压,17,22.2,128,133.2,1.92
+E15,E15-SH010,E15-D012,值班编辑,诺拉,Real?,是真的？,只要核验结果,1,1.8,137,137.8,1.25
+E15,E15-SH010,E15-D013,诺拉,值班编辑,Yeah. The signatures and the login sessions.,真的，签名和登录会话都是真的。,看着核过的记录承认，不先找解释,2.1,5.4,138.1,141.4,2.12
+E15,E15-SH010,E15-D205,诺拉,值班编辑,The receipts still don't match the denials.,回执和拒赔理由还是对不上。,想保留值得继续调查的问题,13,15.75,149,151.75,2.55
+E15,E15-SH010,E15-D206,值班编辑,诺拉,Then that's another question. This says someone opened the page.,那是另一个问题。这里证明有人打开过页面。,不让未解问题抵消现有反证,16.05,19.97,152.05,155.97,2.55
+E15,E15-SH010,E15-D207,诺拉,值班编辑,It doesn't say what they read.,没证明他们读了什么。,争取最后的限定,20.27,22.62,156.27,158.62,2.55
+E15,E15-SH010,E15-D208,值班编辑,诺拉,No. It doesn't make your sentence true either.,对，也没让你那句话变成真的。,要求她先处理已经错的部分,22.92,26.06,158.92000000000002,162.06,2.55
+E15,E15-SH011,E15-D014,值班编辑,诺拉,You've got until six. Then the follow-up stays down.,给你到六点，过了续稿就不发。,把稿件拖出队列，让时限有实物后果,1,5.3,173,177.3,2.09
+E15,E15-SH011,E15-D015,诺拉,值班编辑,Let me call her.,让我给她打个电话。,争最后一点时间,5.6,7.9,177.6,179.9,1.74
+E16,E15-SH012,E15-D016,诺拉,莉娜,Could that be automatic? Like the screen just opens?,会不会是自动的？比如页面自己打开？,先找一个能保住旧说法的解释,1,5.7,1,5.7,1.91
+E16,E15-SH012,E15-D017,莉娜,诺拉,You want me to say yes. I can't prove that.,你想让我说是，可我证明不了。,把文件推还，不交给她新的断言,6,11.7,6,11.7,1.75
+E16,E15-SH012,E15-D209,诺拉,莉娜,I'm not asking you to prove it. Could it happen?,我没让你证明，就问有没有可能。,降低请求口气，仍想得到可引用解释,14,17.92,14,17.92,2.55
+E16,E15-SH012,E15-D210,莉娜,诺拉,And then you write that I said it could.,然后你就写我说有可能。,识破用途,18.22,21.75,18.22,21.75,2.55
+E16,E15-SH012,E15-D211,诺拉,莉娜,I'd check it.,我会再核实。,争取一次信任,22.05,23.23,22.05,23.23,2.54
+E16,E15-SH012,E15-D212,莉娜,诺拉,You were going to check last time.,上次你也是要核实。,不接受未来承诺替代旧记录,23.53,26.27,23.53,26.27,2.55
+E16,E15-SH013,E15-D018,莉娜,诺拉,I told you I hadn't seen the logs. You wrote it down.,我说过，我没看过访问记录。你自己都记下来了。,回到第一次实际说过的限制，不把没看过偷换成没持有,1,6.7,36,41.7,2.11
+E16,E15-SH013,E15-D801,诺拉,莉娜,I thought three cases was enough.,我以为三个案子就够了。,承认自己的推断，不把责任推回来源,7,10.3,42,45.3,1.82
+E16,E15-SH013,E15-D213,莉娜,诺拉,Enough for what? I gave you three cases to check.,够说明什么？我给三个案子，是让你查。,要求她说清推论跨度,13,16.92,48,51.92,2.55
+E16,E15-SH013,E15-D214,诺拉,莉娜,The same thing kept happening.,同样的事一直在发生。,仍想依靠模式辩护,17.22,19.18,52.22,54.18,2.55
+E16,E15-SH013,E15-D215,莉娜,诺拉,Then write that. You didn't need to make me say the rest.,那就写那个。不用把后面的也算我说的。,拒绝被用作确定性来源,19.48,24.19,54.480000000000004,59.19,2.55
+E16,E15-SH014,E15-D019,诺拉,莉娜,They pulled the follow-up.,续稿被撤了。,想让对方看到自己也有损失,1,3.3,70,72.3,1.74
+E16,E15-SH014,E15-D020,莉娜,诺拉,I have to answer this in the morning.,我明早得答复这个。,把自己的正式通知放到桌边,3.6,7.4,72.6,76.4,2.11
+E16,E15-SH014,E15-D216,诺拉,莉娜,I can explain that you warned me.,我可以说明你提醒过我。,第一次提出自己承担记录,13,15.75,82,84.75,2.55
+E16,E15-SH014,E15-D217,莉娜,诺拉,To who? Your editor? The people asking me for every message?,跟谁说明？你编辑，还是那些要我交全部消息的人？,两个世界的代价不相等,16.05,20.36,85.05,89.36,2.55
+E16,E15-SH014,E15-D218,诺拉,莉娜,In the correction.,写进更正。,不再讨一条解释公司的引语,20.66,21.84,89.66,90.84,2.54
+E16,E15-SH014,E15-D219,莉娜,诺拉,Then write it. Don't ask me to fix it first.,那就写，别先来找我替你补。,将纠错责任退回作者,22.14,26.06,91.14,95.06,2.55
+E16,E15-SH015,E15-D021,诺拉,莉娜,What can I use?,那我能用什么？,人已经要走，仍追一条可用答复,1,3.3,104,106.3,1.74
+E16,E15-SH015,E15-D022,莉娜,诺拉,Use what I actually told you.,就用我当时真跟你说的。,指第一次笔记，没回座也没给新结论,3.6,6.9,106.6,109.9,1.82
+E16,E18-SH001,E18-D001,编辑托马斯电话声音,诺拉,Cut 'was misunderstood.' What did you get wrong?,把“被误解”删掉。你到底错在哪儿？,不接被动说法，等她自己回答,1.3,6.35,113.3,118.35,1.58
+E16,E18-SH001,E18-D002,诺拉,编辑托马斯电话声音,"I wrote, 'Nobody opened the files.' I can't back that up.",我写了“没人打开过文件”。我拿不出证据。,直接读出自己发表过的断言,6.9,12.45,118.9,124.45,1.98
+E16,E18-SH001,E18-D401,诺拉,编辑托马斯（电话）,We still don't know whether they read everything.,我们还是不知道他们有没有读完所有材料。,怕更正会把调查一起抹去,17,20.14,129,132.14,2.55
+E16,E18-SH001,E18-D402,编辑托马斯电话声音,诺拉,Say that after the correction. Don't use it to get around what we do know.,放在更正后面。别拿它绕开已经知道的事。,保留调查空间，拒绝转移,20.44,26.32,132.44,138.32,2.55
+E16,E18-SH001,E18-D403,诺拉,编辑托马斯（电话）,Okay. Someone accessed the page. My sentence was wrong.,好，有人访问过页面。我那句写错了。,先承担已证实的错误,26.62,30.15,138.62,142.15,2.55
+E16,E18-SH002,E18-D003,编辑托马斯电话声音,诺拉,We're holding your next assignment. Legal needs your notes and source files tonight.,你下一篇先停了。法务今晚就要你的笔记和原始采访资料。,工作安排说完便停，不安慰,1.3,8.85,151.3,158.85,1.72
+E16,E18-SH002,E18-D004,诺拉,编辑托马斯电话声音,My name stays on the correction?,更正还署我的名字？,先确认自己要承担的署名,9.4,13.45,159.4,163.45,1.48
+E16,E18-SH002,E18-D005,编辑托马斯电话声音,诺拉,Yes. Are you ready?,对。可以发了吗？,把发布决定留给她,17.3,20.85,167.3,170.85,1.13
+E16,E18-SH002,E18-D006,诺拉,编辑托马斯电话声音,Send it. Leave my name on.,发吧。名字留下。,决定,21.4,24.95,171.4,174.95,1.69
+E16,E18-SH004,E18-D007,诺拉,莉娜的语音信箱,"Lena, it's Nora. The correction's up. I've still got questions about your report. Call me when you can.",莉娜，是诺拉。更正发了。你的报告还有几处我想问问。方便的话，给我回个电话。,留言只留来意，不抢先解释自己,3.0,13.0,183.0,193.0,1.8
+E16,E18-SH009,E18-D015,诺拉,莉娜,You didn't say that. I put it in the story. I'm sorry.,那些话不是你说的，是我写进报道的。对不起。,不要求对方接住这句道歉,1.3,6.35,195.3,200.35,2.38
+E16,E18-SH009,E18-D016,莉娜,诺拉,My lawyer said you'd come back for another quote.,我的律师说，你还会来找我要一句话。,信封仍压着，先说出防备,6.9,11.45,200.9,205.45,1.98
+E16,E18-SH009,E18-D017,莉娜,诺拉,I've got an interview Monday. I need to get back to work. I'm not doing this again.,我周一有面试。我得回去工作。我不想再来一次。,有求职安排，不再承担记者的取材风险,15.3,25.85,209.3,219.85,1.61
+E16,E18-SH011,E18-D018,诺拉,莉娜,We can keep this off the record. What did I miss?,这次可以不写进报道。我到底漏了什么？,只放下问题便签，不打开录音,1.3,9.35,223.3,231.35,1.37
+E16,E18-SH011,E18-D404,莉娜,诺拉,Nothing from today goes in a story unless we agree later.,今天说的，以后另说之前都不能写。,限定本次谈话,17,21.31,239,243.31,2.55
+E16,E18-SH011,E18-D405,诺拉,莉娜,Agreed. No recording. I'll ask before I use anything.,同意。不录，用之前先问你。,接受具体规则,21.61,25.14,243.61,247.14,2.55
+E16,E18-SH011,E18-D406,莉娜,诺拉,Don't contact the places I'm applying to.,也别去联系我投简历的地方。,把自己生活留在自己手里,25.44,29.36,247.44,251.36,1.79
+E16,E18-SH011,E18-D407,诺拉,莉娜,I understand.,明白。,不索取新交换条件,29.66,30.76,251.66,252.76,1.82
+E16,E18-SH012,E18-D019,莉娜,诺拉,You copied the date. What about 'attachments: see list'? It's right there in the photo I let you take.,日期你抄了。“附件：见清单”呢？我让你拍的那张照片里就有。,指着已有照片能核到的那一行,1.3,10.85,260.3,269.85,1.99
+E16,E18-SH012,E18-D020,诺拉,莉娜,I see it.,我看到了。,核对到旧照片里的那行,11.4,13.45,270.4,272.45,1.46
+E17,E16-SH001,E16-D001,联邦检察官,联邦法官,The stalking resulting in death supports the firearm counts.,跟踪致死足以支持枪械相关指控。,坚持自己的法律连接,0.8,5.76,0.8,5.76,1.81
+E17,E16-SH001,E16-D801,联邦法官,海伦,Are you asking me to call this shooting nonviolent?,你要我说这次枪击不暴力吗？,要律师把问题说准,6.41,11.37,6.41,11.37,1.81
+E17,E16-SH001,E16-D002,海伦,联邦法官,No. The act was violent. The question is whether the charged stalking statutes satisfy the legal predicate for these firearm counts.,不是，行为是暴力的。问题是所控跟踪罪条文是否满足这些枪械指控所需的法律前提。,先承认事实，再收窄,19.8,31.05,19.8,31.05,1.87
+E17,E16-SH004,E16-D003,联邦法官,控辩双方,The two firearm counts are dismissed. The two stalking-resulting-in-death counts remain. The death penalty is no longer available in this federal case.,两项枪械相关指控撤销，两项跟踪致死指控继续。本联邦案不再适用死刑。,压住情绪，按具体问题自然说,0.8,14.15,38.8,52.15,1.65
+E17,E16-SH005,E16-D004,路易吉,海伦,Can I call my mom? Tell her myself?,我能给我妈打电话吗？我自己告诉她。,先找一件私人的事，不发表胜利感言,0.8,5.23,55.8,60.230000000000004,1.81
+E17,E16-SH005,E16-D005,海伦,路易吉,When you get back. I'll send her the order.,回去再打。我把裁定发给她。,答能怎么做，不在此时再讲风险,5.88,10.84,60.88,65.84,1.81
+E17,E16-SH005,E16-D006,路易吉,海伦,Tomorrow?,明天再说？,只要短暂歇口气,11.49,12.55,66.49,67.55,0.94
+E17,E16-SH005,E16-D007,海伦,路易吉,Tomorrow. But read the whole thing.,明天。可要全部看完。,答应推迟，不替他省掉内容,13.2,16.58,68.2,71.58,1.78
+E17,E16-SH007,E16-D008,海伦,路易吉,Her lawyer wants all the messages. You don't have to agree.,她律师想要全部消息。你可以不答应。,先留选择，授权页仍在自己这一侧,0.8,6.8,80.8,86.8,1.83
+E17,E16-SH007,E16-D802,路易吉,海伦,This one should help her.,这条应该就能帮到她。,只抽出有利回复，试探能否停在这里,7.45,10.31,87.45,90.31,1.75
+E17,E16-SH007,E16-D009,海伦,路易吉,Your message is right above it.,你那条就在上面。,只点被他挡住的位置，等他自己放开,10.96,14.34,90.96000000000001,94.34,1.78
+E17,E16-SH007,E16-D010,路易吉,海伦,I know.,我知道。,看见自己想遮的东西,14.99,16.27,94.99,96.27,1.56
+E17,E16-SH007,E16-D201,路易吉,海伦,Can you send her reply first?,能不能先只发她的回复？,试着缩小当前决定,16.92,20.3,96.92,100.3,1.78
+E17,E16-SH007,E16-D202,海伦,路易吉,Not as the complete exchange. Her lawyer asked for the whole thread.,那不能算完整通信。她律师要的是整段。,不拿删节件冒充整段,25.8,32.33,105.8,112.33,1.84
+E17,E16-SH007,E16-D203,路易吉,海伦,And if I say no?,我要是不同意呢？,确认拒绝不是假选项,32.98,35.84,112.97999999999999,115.84,1.75
+E17,E16-SH007,E16-D204,海伦,路易吉,I tell her lawyer no. We keep preparing your case.,我就回她律师说不同意。你的案子，我们继续准备。,不以停止辩护换交付,36.49,41.97,116.49000000000001,121.97,1.82
+E17,E16-SH009,E16-D011,海伦,路易吉,"Once we send it, they can use all of it. This says you'd decided earlier. Not just the lines that help her.",一旦交出去，他们整段都能用。这里说你更早就做了决定，不会只用帮她的那些话。,对着时间线讲风险，笔还留自己这边,0.8,12.57,130.8,142.57,1.87
+E17,E16-SH009,E16-D012,路易吉,海伦,Will they leave her alone?,他们会放过她吗？,问行动价值,16.8,19.66,146.8,149.66,1.75
+E17,E16-SH009,E16-D013,海伦,路易吉,I can't promise that. They can still question her about leaking records. And you can still say no.,不能保证。泄露资料的事，他们仍然可以问她。你也仍然可以不交。,不把她的安全当筹码，明确他还可拒绝,20.31,29.99,150.31,159.99,1.86
+E17,E16-SH011,E16-D014,路易吉,海伦,Leave mine in.,我那条留着。,两页一起向中间推，放弃单摘回复,0.8,2.61,162.8,164.61,1.66
+E17,E16-SH011,E16-D803,海伦,路易吉,Date and all?,日期也留？,再确认一次最不利的部分,3.26,5.07,165.26,167.07,1.66
+E17,E16-SH011,E16-D804,路易吉,海伦,Yes.,对。,没有宣言,5.72,6.78,167.72,168.78,0.94
+E17,E16-SH011,E16-D015,路易吉,海伦,All of it. To her lawyer.,全部。交给她的律师。,确认当前收件人和完整范围，不把后续调取混进这一步,17.3,20.68,179.3,182.68,1.78
+E17,E16-SH011,E16-D016,海伦,路易吉,That's what I'll send.,我会按这个发。,不承诺能撤回,21.33,23.66,183.32999999999998,185.66,1.72
+E18,E17-SH001,E17-D001,海伦,警员A,You'd moved the bag away. He was cuffed. Could he reach it while you were holding him?,你已经把包挪开，他也戴着铐。你控制着他，他还能碰到包吗？,把证人的回答限定在当时的位置,0.8,9.95,0.8,9.95,1.86
+E18,E17-SH001,E17-D002,警员A,海伦,No.,不能。,据实短答,10.6,11.66,10.6,11.66,0.94
+E18,E17-SH001,E17-D003,警员A,海伦,We were getting ready to move him. I didn't know what was in that bag.,我们正准备把他带走。我不知道那个包里有什么。,把理由说完整，等她是否接受,21.8,29.9,21.8,29.9,1.85
+E18,E17-SH001,E17-D004,海伦,警员A,Did he move toward it before your partner opened it?,你搭档打开包以前，他朝包移动过吗？,不接泛泛解释,30.55,36.03,30.55,36.03,1.82
+E18,E17-SH001,E17-D005,警员A,海伦,He didn't move.,他没动。,看过画面后回答,36.68,38.49,36.68,38.49,1.66
+E18,E17-SH003,E17-D006,州检察官,警员A,Had your partner checked his ID before opening the bag?,开包之前，你搭档已经查过他的证件了吗？,确认先查证件后开包,0.8,6.28,41.8,47.28,1.82
+E18,E17-SH003,E17-D007,警员A,州检察官,Yes. We had grounds to arrest him before we opened it.,是。开包之前，我们就有理由逮捕他。,把逮捕依据与包里的东西分开,6.93,12.93,47.93,53.93,1.83
+E18,E17-SH003,E17-D008,警员A,州检察官,We logged his property back at the station. That's when we took out the gun and the notebook.,回到警局后，我们登记了他的随身物品。枪和笔记本是那时拿出来的。,按财物登记说明，不争辩,17.8,27.48,58.8,68.48,1.86
+E18,E17-SH005,E17-D009,州法官,法庭各方,The restaurant search was not justified by an immediate threat. The items recovered in that search are excluded.,餐厅搜查不存在足以支持它的即时威胁。该次搜查取得的物品予以排除。,宣读范围,0.8,10.48,75.8,85.48,1.86
+E18,E17-SH005,E17-D010,州法官,法庭各方,Certain unwarned answers after custody are excluded as well. The remaining evidence requires a separate ruling.,进入羁押后未经告知取得的部分答复也予排除。其余证据须另行判断。,继续裁定,19.8,28.43,94.8,103.43,1.85
+E18,E17-SH005,E17-D011,州法官,法庭各方,The station inventory was lawful. The gun and the notebook remain admissible.,警局清点合法，枪与笔记本仍可采纳。,明确保留,37.8,44.33,112.8,119.33,1.84
+E18,E17-SH005,E17-D012,路易吉,海伦,That includes these pages?,这些页也在里面？,指向清单,44.98,47.31,119.97999999999999,122.31,1.72
+E18,E17-SH005,E17-D013,海伦,路易吉,Yes. Those were recovered legally. Don't cross them out.,是。那些页是合法取得的，不能划掉。,压低声音，止住他划线的动作,47.96,52.92,122.96000000000001,127.92,1.81
+E18,E17-SH009,E17-D014,海伦,路易吉,Look at these dates. You'd already decided before Lena sent that message. They'll use that.,看这几个日期。莉娜发那条消息之前，你就已经决定了。检方会用这一点。,指着时间先后，等他看清再继续,0.8,8.9,130.8,138.9,1.85
+E18,E17-SH009,E17-D015,路易吉,海伦,She offered an appeal form. She didn't send me there. Don't blame her.,她只是提出给我申诉表。不是她让我去的，别怪到她头上。,急着纠正归责，说完把手移开,18.8,25.85,148.8,155.85,1.84
+E18,E17-SH011,E17-D016,海伦,路易吉,I won't. But these are still evidence. You need to read them.,我不会。可这些还是证据，你得把它们读完。,不跟他争，话回到留下的文件,0.8,7.33,165.8,172.33,1.84
+E18,E17-SH011,E17-D017,路易吉,海伦,Leave me the copy.,副本留下给我。,作出小决定,7.98,10.31,172.98,175.31,1.72
+E18,E17-SH011,E17-D201,路易吉,海伦,The copy stays here?,副本能留在这里？,确认确实能自己读,10.96,13.29,175.96,178.29,1.72
+E18,E17-SH011,E17-D202,海伦,路易吉,Yes. Mark what you want to ask me. Don't rewrite what you sent.,能。想问我的地方标出来，别改你原来发过的话。,把阅读和重写过去分开,13.94,20.99,178.94,185.99,1.84
+E18,E17-SH011,E17-D018,路易吉,海伦,My mom took today off. Can you call her before she sees the news?,我妈今天特意请了假。能在她看到新闻之前，先给她打个电话吗？,临走才想起，声音放轻,23.8,31.38,188.8,196.38,1.85
+E18,E17-SH011,E17-D019,海伦,路易吉,I will. Take your time with it.,我会。你慢慢读。,不催交答案,32.03,35.94,197.03,200.94,1.79
+E18,E18-SH005,E18-D008,海伦,路易吉,Put the document's words here. Your own notes on that side.,文件原话写这边，你自己的批注写另一边。,把纸分好后交给他自己写,0.8,6.8,210.8,216.8,1.83
+E18,E18-SH005,E18-D009,路易吉,海伦,I've mixed them up.,我把它们混到一起了。,看着旧批注，笔还没落下,7.45,9.78,217.45,219.78,1.72
+E18,E18-SH005,E18-D010,路易吉,海伦,The file says the appeal was incomplete. 'No one read it.' That's my line. I added that.,文件只说申诉材料不全。“没人读过”是我说的，是我自己加上去的。,读一句核一句，承认那句属于自己,20.8,29.95,230.8,239.95,1.86
+E18,E18-SH007,E18-D011,路易吉,海伦,The clinic lists a file that's missing here. Maybe these are different versions. Can Kevin check?,诊所这边有个文件，这份上没有。也许版本不同。能让凯文查一下吗？,先提出另一种可能，不往下断言,0.8,9.43,250.8,259.43,1.85
+E18,E18-SH007,E18-D012,海伦,路易吉,He can ask for the records. We don't know yet.,他可以申请调记录。现在还不知道。,把能做的和不知道的分开,10.08,15.56,260.08,265.56,1.82
+E18,E18-SH007,E18-D201,路易吉,海伦,If he finds it was sent?,如果他查到确实发过去了呢？,停在尚未验证的可能性,16.21,19.59,266.21,269.59,1.78
+E18,E18-SH007,E18-D202,海伦,路易吉,Then that's what the records say. It still won't tell us who saw it.,那记录就说明发过。可还不能说明谁看过。,把到件与实际阅看分开，不提前揭队列结论,23.8,31.38,273.8,281.38,1.85
+E18,E18-SH007,E18-D013,海伦,路易吉,Can I send him this? Without the patient names.,我把这个问题发给他？患者姓名去掉。,给他看便签，等明确答复,32.03,36.99,282.03,286.99,1.81
+E18,E18-SH007,E18-D014,路易吉,海伦,Yes. Leave my theory out of it.,行。别把我的猜测也带过去。,确认转交，只留下待查问题,37.64,41.55,287.64,291.55,1.79
+E19,E19-SH001,E19-D001,维克多,瑞秋,We need your okay by noon. The kitchen clip's the only part that feels personal.,中午前得有你的答复。只有厨房那段，还有点他在家里的样子。,把催签说得像在帮她保留丈夫,0.8,8.9,0.8,8.9,1.85
+E19,E19-SH001,E19-D002,瑞秋,维克多,Why is it on the investigation page?,为什么放在回应调查的页面？,抓用途,9.55,13.46,9.55,13.46,1.79
+E19,E19-SH001,E19-D201,维克多,瑞秋,It's below the response. Same page.,就在回应下面，同一页。,把用途争议缩成页面位置,18.8,22.18,18.8,22.18,1.78
+E19,E19-SH001,E19-D202,瑞秋,维克多,Then people won't know where one stops.,那别人就分不清哪一段是哪一段了。,指出家庭影像被并入公司回应,22.83,26.74,22.83,26.74,1.79
+E19,E19-SH001,E19-D003,维克多,瑞秋,People need to remember him.,大家需要记住他。,试图安抚,35.8,38.66,35.8,38.66,1.75
+E19,E19-SH001,E19-D004,瑞秋,维克多,The company statement can stay. Take our video out. I'm not signing this.,公司声明可以留。把我们家的视频拿掉，这份我不签。,把未签页推回去，语气不加重,39.31,46.36,39.31,46.36,1.84
+E19,E19-SH004,E19-D005,维克多,瑞秋,Okay. We'll take it out. I'll send you a new version.,好，我们拿掉。改好再发你。,收回方案，不再劝她签眼前这份,0.8,6.8,52.8,58.8,1.83
+E19,E19-SH004,E19-D006,瑞秋,维克多,No footage of the children. And send it to my lawyer.,孩子的镜头都不要。还有，发给我的律师。,起身前补清两个条件,7.45,13.45,59.45,65.45,1.83
+E19,E19-SH005,E19-D007,瑞秋,玛拉,You called him polite.,你说他很客气。,突兀地问,0.8,3.13,70.8,73.13,1.72
+E19,E19-SH005,E19-D008,玛拉,瑞秋,When he ordered. That's what I was asked.,点餐时是。别人问的就是那个。,只答所见,3.78,8.21,73.78,78.21000000000001,1.81
+E19,E19-SH005,E19-D009,瑞秋,玛拉,That clip's been on all week. Did anyone ask what Brian was like at home?,那段播了一整周。有人问过布莱恩在家里是什么样吗？,问出来才察觉自己说多了,20.8,28.9,90.8,98.9,1.85
+E19,E19-SH005,E19-D010,玛拉,瑞秋,I didn't know your husband. They asked me about that morning.,我不认识你丈夫。他们问的是那天早上的事。,不拿自己的遭遇回击，只答亲眼所见,29.55,35.55,99.55,105.55,1.83
+E19,E19-SH008,E19-D011,玛拉,医生,Can you say that again? Thursday at ten?,能再说一遍吗？周四十点？,听不清电话,0.8,5.23,112.8,117.23,1.81
+E19,E19-SH008,E19-D013,瑞秋,玛拉,By the window. It's quieter.,到窗边，那里安静。,给位置不劝解,5.88,8.74,117.88,120.74,1.75
+E19,E19-SH008,E19-D012,医生,玛拉,Thursday at ten. Bring the medication list.,周四十点，带上用药清单。,普通确认,9.39,13.3,121.39,125.3,1.79
+E19,E19-SH008,E19-D203,玛拉,医生,"I can't take calls at work. If it changes, leave a message.",我上班时接不了电话。有变动的话，给我留语音。,在终于听清后安排自己的工作限制,13.95,20.48,125.95,132.48,1.84
+E19,E19-SH009,E19-D014,儿子电话声音,瑞秋,School wants a photo for the memorial thing. Do I have to?,学校为那个纪念活动要照片。我必须给吗？,不想配合,0.8,7.33,137.8,144.33,1.84
+E19,E19-SH009,E19-D015,瑞秋,儿子电话声音,No. I'll answer. You don't have to send them anything.,不用。我来回复，你不必发给他们。,先护住选择,7.98,13.46,144.98,150.46,1.82
+E19,E19-SH009,E19-D204,儿子电话声音,瑞秋,They said everyone else's parents already sent one.,他们说，别人家长都已经交了。,担心自己被单独问,14.11,18.54,151.11,155.54,1.81
+E19,E19-SH009,E19-D205,瑞秋,儿子电话声音,I'll email them. You don't need to explain it at school.,我给他们发邮件。你在学校不用解释。,承担成年人该处理的请求,20.8,26.8,157.8,163.8,1.83
+E19,E19-SH009,E19-D016,儿子电话声音,瑞秋,I found the plane. The wing's still off.,我找到那架飞机了，翅膀还掉着。,记起未完的事,27.45,31.88,164.45,168.88,1.81
+E19,E19-SH009,E19-D017,瑞秋,儿子电话声音,"He said Saturday, didn't he?",他说过周六，对吧？,听出回收,32.53,35.39,169.53,172.39,1.75
+E19,E19-SH009,E19-D018,儿子电话声音,瑞秋,He kept saying Saturday. I thought he was putting me off.,他总说周六。我以为他在敷衍我。,带一点怒气,40.8,46.8,177.8,183.8,1.83
+E19,E19-SH009,E19-D019,瑞秋,儿子电话声音,I know. You were waiting for him to fix it. I'd be mad too.,我知道。你一直等着他修好呢。换我也会生气。,听完孩子的气话，不急着劝他原谅,47.45,55.03,184.45,192.03,1.85
+E19,E19-SH012,E19-D020,瑞秋,儿子电话声音，挂断前,Leave it there. I'll be home before dinner. We can look at it together.,先放那儿。我晚饭前到家，我们一起看看。,只答应回家一起看，不许诺修好,0.8,8.38,197.8,205.38,1.85
+E20,E20-SH001,E20-D001,海伦,联邦检察官电话声音,"Before I talk to him, are we agreeing on a sentence? Anything from New York?",我跟他谈之前先问清楚：刑期谈定了吗？纽约那边呢？,停笔等两件事分别得到答复,0.8,8.9,0.8,8.9,1.85
+E20,E20-SH001,E20-D002,联邦检察官电话声音,海伦,No cap on the sentence. No deal with New York. He pleads to what's left; sentencing is up to the judge.,刑期没有上限，跟纽约也没有协议。他认剩下的罪，怎么判由法官决定。,逐项说清没有承诺的地方,9.55,20.8,9.55,20.8,1.87
+E20,E20-SH001,E20-D003,海伦,联邦检察官电话声音,Put that in writing. All of it.,请全部写下来。,要求书面,24.8,28.71,24.8,28.71,1.79
+E20,E20-SH001,E20-D201,海伦,联邦检察官电话声音,"Send it to my work address, please. I need him to read the same thing I have.",发我工作邮箱。他得能读到和我一样的内容。,确认交付渠道与当事人知情,29.36,38.51,29.36,38.51,1.86
+E20,E20-SH004,E20-D004,海伦,家人语音信箱,"I can't make Sunday lunch. If the boiler guy comes, get the invoice before you pay. Call me back.",周日午饭我去不了了。修锅炉的人来了，先拿到账单再付钱。给我回个电话。,家常语气，边拆筷子边叮嘱,0.8,11.0,48.8,59.0,1.86
+E20,E20-SH005,E20-D005,海伦,路易吉,You plead guilty to the federal charges. Then we ask New York to drop its case.,你先对联邦指控认罪。然后，我们申请让纽约撤案。,先把联邦说明放下，再指另一份文件,0.8,9.43,70.8,79.43,1.85
+E20,E20-SH005,E20-D006,路易吉,海伦,Ask? You can't make them?,申请？不能让他们必须撤？,盯住申请一词追问,10.08,12.94,80.08,82.94,1.75
+E20,E20-SH005,E20-D007,海伦,路易吉,No. They'll argue an exception applies. The judge could agree with them.,不能。他们会说这案子符合例外，法官可能支持他们。,翻页的手收回，回答最要紧的部分,18.8,24.8,88.8,94.8,2.0
+E20,E20-SH005,E20-D202,路易吉,海伦,Then why do this first?,那为什么先做这一步？,不接受仅按顺序办的理由,25.45,28.08,95.45,98.08,1.9
+E20,E20-SH005,E20-D203,海伦,路易吉,Because that's the sequence for this motion. Not because we know it'll work.,因为这份申请要按这个顺序提，不是因为我们知道一定能成。,说明程序路径与结果的不确定,28.73,35.21,98.73,105.21000000000001,2.01
+E20,E20-SH005,E20-D204,路易吉,海伦,And if I don't plead?,我要是不认呢？,确认另一条路确实还在,36.8,39.66,106.8,109.66,1.75
+E20,E20-SH005,E20-D205,海伦,路易吉,We prepare for trial. I'm not asking you to decide in this room.,那我们就准备审判。我没要求你在这间屋里决定。,把签字页收回自己一侧,40.31,47.36,110.31,117.36,1.84
+E20,E20-SH007,E20-D008,路易吉,海伦,So they could use my answers against me.,那他们能拿我说的话来对付我。,找到那一行后才抬头确认,0.8,5.23,123.8,128.23,1.81
+E20,E20-SH007,E20-D009,海伦,路易吉,"Yes. And even if New York drops the case, the federal judge could still give you life.",能。就算纽约撤了，联邦法官仍可能判你终身监禁。,直接说最坏结果，不替他作决定,5.88,15.03,128.88,138.03,1.86
+E20,E20-SH007,E20-D206,路易吉,海伦,I thought the paper said something else.,我以为纸上不是这个意思。,承认先前自己看成了保证,18.8,22.71,141.8,145.71,1.79
+E20,E20-SH007,E20-D207,海伦,路易吉,Show me.,指给我看。,让他找到误读处，不替他回答,23.36,24.64,146.36,147.64,1.56
+E20,E20-SH007,E20-D208,路易吉,海伦,No. I read 'request' as 'agreement.',不是。我把“申请”看成“协议”了。,读到那个词后自己改口,25.29,28.67,148.29,151.67000000000002,1.78
+E20,E20-SH007,E20-D010,路易吉,海伦,Leave this with me. I'm not signing yet.,这份留给我。我现在不签。,抽走说明，把签字页推回去,35.8,40.23,158.8,163.23,1.81
+E20,E20-SH007,E20-D011,海伦,路易吉,"Fine. Tomorrow, same time.",好，明天还是这个时间。,尊重考虑,40.88,43.21,163.88,166.21,1.72
+E20,E20-SH009,E20-D012,路易吉,海伦,I read it twice. I want to plead guilty. Both federal counts.,我读了两遍。我想认罪，两项联邦指控都认。,等她坐好后先开口，不等她再劝,0.8,7.33,175.8,182.33,1.84
+E20,E20-SH009,E20-D013,海伦,路易吉,Okay. What haven't we been promised?,好。哪些事还没有保证？,先确认理解，不立刻递笔,7.98,11.36,182.98,186.36,1.78
+E20,E20-SH009,E20-D014,路易吉,海伦,My sentence. New York dropping its case. Getting out.,判多久，纽约撤案，还有能不能出去。,看着说明逐项回答，不背法条,12.01,16.97,187.01,191.97,1.81
+E20,E20-SH009,E20-D209,海伦,路易吉,Do you want me to ask for another meeting before I notify them?,要不要我通知他们之前，再安排一次会见？,留一次实际可撤回的机会,25.8,32.85,200.8,207.85,1.84
+E20,E20-SH009,E20-D210,路易吉,海伦,No. Tell them I want to plead. I know the judge still has to ask me.,不用。告诉他们我想认罪。我知道法官还得亲自问我。,自己区分给律师指示与庭上认罪,33.5,42.13,208.5,217.13,1.85
+E20,E20-SH011,E20-D015,路易吉,海伦,"It's my decision. When you talk to the press, don't call it a win.",这是我自己决定的。你跟媒体说的时候，别说成赢了。,签完才交代，不抬头作宣告,5.5,12.8,230.5,237.8,1.92
+E20,E20-SH011,E20-D016,海伦,路易吉,You can read it before it goes out.,发出去之前，先给你看。,把回看措辞记在签页后,13.45,17.8,238.45,242.8,1.84
+E20,E20-SH011,E20-D017,路易吉,海伦,Can I call my mom before the hearing? I need to tell her myself.,开庭前能让我给我妈打个电话吗？我得亲口跟她说。,扶住夹边，终于问到家里,20.8,28.3,245.8,253.3,1.87
+E20,E20-SH011,E20-D018,海伦,路易吉,I'll request the call.,我来申请通话。,不许诺控制之外,28.95,31.0,253.95,256.0,1.95
+E21,E21-SH001,E21-D001,凯文,诺拉与莉娜,Start with the attachment numbers. The clinic receipt matches the intake log they recovered. The whole file got in.,先看附件编号。诊所回执跟恢复出来的收件日志对得上，整份材料都收到了。,把她的手引回编号再解释,0.8,11.0,0.8,11.0,1.86
+E21,E21-SH001,E21-D201,诺拉,凯文,This receipt says complete.,回执上写着完整。,想先确定一个能写进报道的事实,16.8,19.13,16.8,19.13,1.72
+E21,E21-SH001,E21-D202,凯文,诺拉,Complete at intake. Check the numbers before you write that.,是收件完整。先对编号，再写。,将她的笔留在核对任务上,19.78,25.26,19.78,25.26,1.82
+E21,E21-SH001,E21-D002,诺拉,莉娜,So someone just ignored it?,所以就是有人没管？,笔先往旧判断移，话快了一步,25.91,28.77,25.91,28.77,1.75
+E21,E21-SH002,E21-D203,莉娜,诺拉,Which list are you looking at?,你现在看的哪份清单？,先问她据什么得出结论,0.8,4.18,32.8,36.18,1.78
+E21,E21-SH002,E21-D204,诺拉,莉娜,The one they received.,他们收件的那份。,还把到件当作进入审核,4.83,7.16,36.83,39.16,1.72
+E21,E21-SH002,E21-D205,莉娜,诺拉,That's the customer intake list. Put it beside this one.,那是客服收件清单。把它跟这份并排放。,抽出医学审核清单但不替她直接跳过比较,7.81,13.29,39.81,45.29,1.82
+E21,E21-SH002,E21-D003,莉娜,诺拉与凯文,Wait. This is what the doctor saw. The attachment never reached the medical review queue. He opened the page and signed. It wasn't there.,等等，医生看到的是这份。附件没进医学复核队列。他打开页面，也签了名，可那页上没有附件。,把医生可见清单放到旁边让她自己比,16.8,29.62,48.8,61.620000000000005,1.87
+E21,E21-SH002,E21-D004,诺拉,莉娜,So neither record was fake.,所以，两份记录都没造假。,对过两份纸后，才划掉旧句子,32.8,35.66,64.8,67.66,1.75
+E21,E21-SH002,E21-D206,诺拉,凯文,Could this just be a later copy?,会不会只是后来补的一份？,试一个仍可能推翻比较的解释,36.31,40.22,68.31,72.22,1.79
+E21,E21-SH002,E21-D207,凯文,诺拉,"Check the date and case number. Same case, same review.",核日期和案号。同一案，同一次审核。,让核验排除版本差异,40.87,46.35,72.87,78.35,1.82
+E21,E21-SH003,E21-D005,凯文,诺拉与莉娜,Here's their reply to her quality report. Months earlier. They'd been told about the gap. But these later denial letters still say they considered everything.,这是他们给她质检报告的回复，早了好几个月。这处缺口，他们早已接到报告。可后来的拒赔信还在说，材料全都考虑过。,一页一页摆出时间关系，不替文件多加结论,0.8,12.05,80.8,92.05,2.22
+E21,E21-SH003,E21-D208,诺拉,莉娜,Did they say they'd fix it?,他们说过会改吗？,不把收悉自动写成承诺整改,12.7,16.08,92.7,96.08,1.78
+E21,E21-SH003,E21-D209,莉娜,诺拉,They said they'd received my report. That's what that reply proves.,他们说报告收到了。那封回复只能证明这个。,守住自己可证实的边界,23.8,29.8,103.8,109.8,1.83
+E21,E21-SH003,E21-D006,莉娜,凯文,I wrote the report. I also signed those later forms. You need both.,报告是我写的，后来的表我也签了。两样你都得留。,按住她要遗漏的签表，不只交有利的一页,30.45,37.5,110.45,117.5,1.84
+E21,E21-SH003,E21-D210,诺拉,莉娜,After that reply?,那封回复之后，你还签了？,让不利时间关系当面得到确认,38.15,39.96,118.15,119.96000000000001,1.66
+E21,E21-SH003,E21-D211,莉娜,诺拉,Yes.,对。,不往举报功劳上转移,40.61,41.67,120.61,121.67,0.94
+E21,E21-SH004,E21-D007,布莱克直播声音,直播观众,Tomorrow: Ellie's files. The originals. No edits. You need to see what they put this family through.,明天，艾莉的档案。原件，一点不删。你们得看看，这一家到底被折腾成什么样。,对直播观众招徕，语速利落,0.8,9.95,125.8,134.95,1.86
+E21,E21-SH004,E21-D008,艾莉,玛拉,Is he talking about me?,他在说我吗？,画到一半停住,10.6,13.46,135.6,138.46,1.75
+E21,E21-SH004,E21-D009,玛拉,艾莉,Yes. I'll tell them to stop. Should I put it away?,是。我会让他们停下。要我先收起来吗？,蹲下来问，等孩子自己选,17.8,23.8,142.8,148.8,1.83
+E21,E21-SH004,E21-D010,艾莉,玛拉,After you tell them. And don't show my whale.,你说完再收。也别把我的鲸给他们看。,自己把画转回去,24.45,29.41,149.45,154.41,1.81
+E21,E21-SH006,E21-D011,玛拉,诺拉电话声音,"Use what you've checked. Keep her name out. No treatment photos. I agreed to a review, not this.",查清楚的你可以写。别写她的名字，治疗照片也别放。我答应的是复核，不是这个。,扣紧资料夹，把范围一项项说清,0.8,10.48,159.8,169.48,1.86
+E21,E21-SH007,E21-D012,海伦,路易吉,Mara wants the records taken down. Kevin's working on it.,玛拉要他们把档案撤掉。凯文已经在处理了。,只转述她的要求，不带来患者原件,0.8,6.28,175.8,181.28,1.82
+E21,E21-SH007,E21-D013,路易吉,海伦,Which ones post for me?,这里面哪些是替我发东西的？,不翻遮住的姓名，只问自己能管的账号,6.93,9.79,181.93,184.79,1.75
+E21,E21-SH007,E21-D014,路易吉,海伦,These two handle my posts. Tell them to take her records down. Don't send them any more copies.,这两个替我发东西。告诉他们，把她的档案撤掉。别再发任何副本过去。,圈出熟悉的两个，第三个不圈,20.8,29.98,195.8,204.98,1.96
+E21,E21-SH007,E21-D212,路易吉,海伦,The third one isn't mine.,第三个不是我的。,圈两个之后停住自己控制范围,30.63,33.34,205.63,208.34,1.85
+E21,E21-SH007,E21-D213,海伦,路易吉,Then don't mark it. Kevin can send a separate request.,那就别圈。凯文可以另行发请求。,不把陌生支持者当成能命令的下属,33.99,39.19,208.99,214.19,1.92
+E21,E21-SH009,E21-D015,海伦,路易吉,I'll ask. But the copies are out there. And Blake may just say no.,我会去问。可副本已经传开了，布莱克也可能根本不答应。,说清做得到的范围，不保证全网撤回,0.8,8.38,215.8,223.38,1.85
+E21,E21-SH009,E21-D016,路易吉,海伦,Ask anyway. And put that away. She doesn't need a statement from me.,还是问。那张也收起来。她不需要我再发一份声明。,把空白声明页推回去，不往上添话,9.03,16.08,224.03,231.07999999999998,1.84
+E21,E21-SH010,E21-D017,诺拉,莉娜,These are your quotes. Check the last line too.,这是引用你的话，最后一句也看看。,只递引语页，等她读完,0.8,5.76,235.8,240.76,1.81
+E21,E21-SH010,E21-D018,莉娜,诺拉,It's accurate. You can use my name.,准确。可以写我的名字。,读过后确认，自己选择本次署名,8.0,12.0,243.0,247.0,1.75
+E21,E21-SH010,E21-D019,莉娜,诺拉,My lawyer wants that line about signing cut. Leave it in. Just take the patient numbers off.,律师想把我继续签表那句删掉。留着吧，只把患者编号去掉。,给那句画线后主动交回,15.8,24.95,250.8,259.95,1.86
+E21,E21-SH012,E21-D020,诺拉,莉娜,The patient files stay with Kevin. The download is just the redacted findings.,患者档案仍由凯文保管，公开下载只放去身份的调查说明。,确认清单和预览，不向她要新的文件,0.8,7.85,264.8,271.85,1.84
+E21,E21-SH012,E21-D021,莉娜,诺拉,Send me the link. Interview's tomorrow. I'll have to explain this.,链接发我。明天面试，这事我得自己跟他们解释。,抱起信封准备走，语气回到明天的麻烦,8.5,14.5,272.5,278.5,1.83
+E21,E21-SH012,E21-D214,诺拉,莉娜,Do you want me to hold the link until after?,要等面试完再把链接发你吗？,问交付时间，不交出稿件决定权,18.8,24.28,282.8,288.28,1.82
+E21,E21-SH012,E21-D215,莉娜,诺拉,No. Send it when it's up. I don't want to walk in pretending they haven't read it.,不用，发出来就给我。我不想走进去，还假装他们没看过。,带着后果去处理自己的面试,24.93,34.08,288.93,298.08,1.86
+E22,E22-SH001,E22-D001,海伦,路易吉,Did you get through to your mother?,和你母亲通上话了？,等他喝完再问,0.8,4.71,0.8,4.71,1.79
+E22,E22-SH001,E22-D002,路易吉,海伦,Yes. She made me promise to eat after this.,通了。她让我答应结束后吃点东西。,把杯沿转半圈,5.36,10.32,5.36,10.32,1.81
+E22,E22-SH001,E22-D003,海伦,路易吉,"If you need more time, we can talk in private.",还想再谈谈的话，我们可以找个没人的地方。,给他让出一步，不催着进门,10.97,16.45,10.97,16.45,1.82
+E22,E22-SH001,E22-D004,路易吉,海伦,No. You keep those. I'll answer.,不用。那些你留着，我自己答。,交回准备纸，不重复解释决定,22.8,26.18,22.8,26.18,1.78
+E22,E22-SH001,E22-D005,海伦,路易吉,"Let her finish the question. If you don't understand, ask.",让她把问题说完。不明白就问。,入门前作最后一次实际提醒,26.83,32.31,26.83,32.31,1.82
+E22,E22-SH001,E22-D006,路易吉,海伦,Okay.,好。,先看门再答,32.96,34.02,32.96,34.02,0.94
+E22,E22-SH004,E22-D007,书记员,路易吉,Do you swear that your answers to the court will be truthful?,你是否宣誓向法院如实回答？,正式清楚,0.8,7.33,44.8,51.33,1.84
+E22,E22-SH004,E22-D008,路易吉,书记员,I do.,我宣誓。,举右手后答,7.98,9.26,51.980000000000004,53.26,1.56
+E22,E22-SH004,E22-D009,联邦法官,路易吉,"If you don't understand a question, tell me.",若不理解问题，请告诉我。,不给提示答案,9.91,14.34,53.91,58.34,1.81
+E22,E22-SH004,E22-D010,联邦法官,路易吉,"These charges permit a life sentence. Has anyone promised a sentence, or promised that New York will dismiss its case?",这些罪名容许判终身监禁。有人承诺过刑期，或承诺纽约会撤案吗？,确认不利风险,18.8,29.52,62.8,73.52,1.87
+E22,E22-SH004,E22-D011,路易吉,联邦法官,No. I understand. Nobody's promised me either of those.,没有。我明白。那两件事，没人向我保证过。,听完整问句才回答，不看律师,30.17,35.13,74.17,79.13,1.81
+E22,E22-SH006,E22-D012,联邦法官,路易吉,"How do you plead to interstate stalking resulting in death, and cyberstalking resulting in death?",对于跨州跟踪致死与网络跟踪致死两项指控，你如何答辩？,逐项念完,0.8,8.9,80.8,88.9,1.85
+E22,E22-SH006,E22-D013,路易吉,联邦法官,Guilty on both counts.,两项均认罪。,清楚不看律师,9.55,11.88,89.55,91.88,1.72
+E22,E22-SH006,E22-D014,路易吉,联邦法官,I went online to find out where Brian Ward would be. I traveled from another state to New York to follow him. I intended to kill him.,我上网查布莱恩·沃德会去哪里。我从另一州来到纽约跟踪他。我当时就是打算杀死他。,逐句讲清自己做的事，最后一句不回避,18.8,33.2,98.8,113.2,1.87
+E22,E22-SH008,E22-D015,联邦法官,路易吉,Did you understand your conduct would place him in fear of death or serious injury?,你是否明白自己的行为会令他害怕死亡或严重伤害？,确认具体后果,0.8,8.9,116.8,124.9,1.85
+E22,E22-SH008,E22-D016,路易吉,联邦法官,Yes. I shot him. He died because I shot him.,明白。我向他开了枪，他因为我开枪而死。,不补辩解,9.55,15.03,125.55,131.03,1.82
+E22,E22-SH009,E22-D017,路易吉,联邦法官,I still object to what the industry does. That doesn't change my answers.,我仍反对这个行业的一些做法，但这不改变我刚才的回答。,不转向旁听席,0.8,7.85,136.8,143.85,1.84
+E22,E22-SH009,E22-D018,联邦法官,法庭各方,The pleas are accepted. Sentencing will be set separately.,法院接受认罪。量刑另行安排。,正式,8.5,13.46,144.5,149.46,1.81
+E22,E22-SH010,E22-D019,诺拉,海伦,Was this his decision?,这是他自己的决定？,停在栏杆内问清由谁选择,0.8,3.13,155.8,158.13,1.72
+E22,E22-SH010,E22-D020,海伦,诺拉,Yes. He wanted to speak for himself. We've filed in state court. This is the receipt.,是。他想自己说。州法院那边已经递交了，这是回执。,回答后只展示公开可看的纸,3.78,12.41,158.78,167.41,1.85
+E22,E22-SH010,E22-D021,诺拉,海伦,"The state says these are different harms, so they can prosecute. Could the plea still stop them?",州检方说危害不同，还能继续起诉。那这次认罪还能挡住他们吗？,翻开已准备的异议页，问实际后果,13.06,22.21,168.06,177.21,1.86
+E22,E22-SH010,E22-D022,海伦,诺拉,That's for the judge. We haven't had a ruling.,这得由法官决定。裁定还没下来。,不给胜算，只说当前进度,25.8,30.76,180.8,185.76,1.81
+E22,E22-SH010,E22-D023,海伦,诺拉,Get the date in too. It's a filing receipt. Nobody's ordered his release.,日期也拍进去。这是递交回执，没人下令释放他。,挪开挡日期的拇指，让她拍全,31.41,38.46,186.41,193.46,1.84
+E23,E23-SH001,E23-D001,州检察官,州法官,The federal counts punish interstate and online stalking. New York's murder charge punishes an intentional killing here. Our law allows an exception for different harms.,联邦两项惩处跨州和网络跟踪，纽约谋杀罪惩处在这里故意杀人。本州法律对不同危害设有例外。,把两页分开摆,0.8,14.15,0.8,14.15,1.87
+E23,E23-SH001,E23-D002,海伦,州法官,His federal plea covers Brian Ward's intentional killing too. The stalking led to the shooting. It's one course of conduct.,他的联邦认罪也包括故意杀害布莱恩·沃德。跟踪之后就是这次枪击，是同一组连续行为。,把两页对应到具体行为，听法官是否追问,18.8,29.52,18.8,29.52,1.87
+E23,E23-SH003,E23-D003,州法官,海伦,"You're relying on New York's protection for the same criminal transaction, not a blanket federal ban?",你依据的是纽约对同一犯罪交易的保护，不是一条一概禁止州起诉的联邦规则？,限定本案适用范围,0.8,9.43,35.8,44.43,1.85
+E23,E23-SH003,E23-D004,海伦,州法官,Correct.,对。,不多补一句,10.08,11.14,45.08,46.14,0.94
+E23,E23-SH003,E23-D005,州检察官,州法官,The same death appears in both. That doesn't make the harms identical.,两案都有同一死亡，不代表危害就相同。,坚持例外而非否认纸上内容,16.8,23.33,51.8,58.33,1.84
+E23,E23-SH003,E23-D006,海伦,州法官,The exception still has to fit this conduct.,例外仍须适用于这些具体行为。,手停在对应段落,23.98,28.41,58.980000000000004,63.41,1.81
+E23,E23-SH005,E23-D007,州法官,法庭各方,"On this record, the federal convictions addressed the same death in the same criminal transaction. Under our state law, the claimed exception does not apply.",依据本案记录，联邦定罪已处理同一犯罪交易中的同一死亡。依本州法律，所主张的例外不适用。,宣读书面裁定,0.8,14.15,66.8,80.15,1.87
+E23,E23-SH005,E23-D008,州法官,法庭各方,The listed murder and duplicative firearm counts are dismissed. The federal convictions remain. The defendant is not being released.,列明的谋杀和重复枪械指控撤销。联邦定罪仍然有效，被告不会因此获释。,把范围说完,17.8,28.0,83.8,94.0,1.86
+E23,E23-SH007,E23-D009,州法官,路易吉,"For knowingly possessing a forged identification document in New York, how do you plead?",对于明知是虚假身份证明文件仍在纽约持有这一项，你如何答辩？,转入独立事项,0.8,8.14,99.8,107.14,1.91
+E23,E23-SH007,E23-D010,路易吉,州法官,Guilty. I had the ID in New York. I knew it was forged. I understand the rights I'm giving up. No one's forced me.,认罪。我在纽约持有那张证件，也知道它是假的。我明白自己放弃哪些权利，没有人强迫我。,按问题逐项回答，不急着坐下,8.79,21.2,107.78999999999999,120.2,1.93
+E23,E23-SH007,E23-D011,州法官,法庭各方,The plea is accepted. The agreed sentence on this count is time served. It adds no custody.,法院接受认罪。此项协定刑罚为已羁押时间，不追加监禁。,仅对纽约该项裁判,22.8,31.95,121.8,130.95,1.86
+E23,E23-SH007,E23-D012,路易吉,州法官,I understand.,我明白。,坐下前答,32.6,33.88,131.6,132.88,1.56
+E23,E23-SH009,E23-D013,路易吉,海伦,"On the way back, someone yelled I was going home. They really think I'm getting out.",回来的路上，有人喊我能回家了。他们真以为我要出去了。,回想刚听见的话，没跟着高兴,0.8,9.43,142.8,151.43,1.85
+E23,E23-SH009,E23-D014,海伦,路易吉,No. We're done in New York. Pennsylvania's own order says time served. No more custody there. This one's your federal sentencing notice.,没有。纽约这边结了。宾州自己的命令写的是已羁押时间，不再追加。剩下这张，是联邦量刑通知。,三份纸分别指清，不把它们叠成一件事,10.08,21.85,152.08,163.85,1.87
+E23,E23-SH009,E23-D015,海伦,路易吉,That's your sentencing date. We haven't agreed on a sentence.,这是量刑日期。判多久，还没谈定。,让他先记日期，不领胜诉的功劳,23.8,29.28,165.8,171.28,1.82
+E23,E23-SH009,E23-D016,路易吉,海伦,My sister's taken two days off. Can you confirm a visit before she pays for the tickets?,我姐已经请了两天假。她买票之前，能先确认让不让她来探视吗？,压住空的会见栏，问能不能安排,29.93,39.08,171.93,181.07999999999998,1.86
+E23,E23-SH009,E23-D017,海伦,路易吉,I'll check tomorrow. Don't fill that in yet.,我明天问。那一栏先别填。,翻日历但不报没确认的日子,46.8,51.23,188.8,193.23,1.81
+E23,E23-SH009,E23-D018,路易吉,海伦,Tell her to wait on the tickets. And make sure she knows it's a visit. I'm not getting out.,让她先别买票。也跟她说清楚，是来探视，我还出不去。,把家人的安排说实，笔离开空行,51.88,62.08,193.88,204.07999999999998,1.86
+E23,E23-SH009,E23-D019,海伦,路易吉,I'll tell her.,我会告诉她。,明确承接家属安排,62.73,64.54,204.73,206.54000000000002,1.66
+E24,E24-SH001,E24-D001,瑞秋,联邦法官,Brian and I were separated. We still had things to work out. The kids had questions for him. Now they can't ask. I want you to understand that.,布莱恩和我已经分居，还有事情没说清楚。孩子们也有话想问他。现在没机会了。我想让你们明白这一点。,拿着自己写的纸，说到孩子时才放慢,0.8,15.72,0.8,15.72,1.88
+E24,E24-SH002,E24-D002,联邦法官,路易吉,"On each count, thirty years, to run concurrently. The total prison term is thirty years. Your remaining rights are set out in the judgment.",每项三十年，并行执行，总监禁期三十年。你保留的相应权利载于判决书。,清楚不停顿制造悬念,0.8,13.62,24.8,37.62,1.87
+E24,E24-SH002,E24-D003,路易吉,海伦,Could you sit with my mom till her ride gets here?,能陪我妈坐一会儿吗？等接她的人到了再走。,庭后压低声音，只问眼前安排,18.8,24.8,42.8,48.8,1.83
+E24,E24-SH002,E24-D004,海伦,路易吉,Of course. I'll find her before I go.,当然。我走之前会去找她。,收夹前答应下来，不加安慰话,25.45,29.88,49.45,53.879999999999995,1.81
+E24,E24-SH004,E24-D005,凯文,玛拉,"The settlement covered winter. This approval is for the next course, under the policy. Different bills. I checked.",和解款付的是冬季那一轮。这次批的是保单下的下一疗程。两笔账，我核过了。,顺着日期逐张指，让她自己对上,0.8,10.48,60.8,70.48,1.86
+E24,E24-SH005,E24-D006,医生,玛拉与艾莉,"Tuesday, ten o'clock. Same room. Bring the medication list again.",周二十点，还是那个房间，再带上用药清单。,把预约单交给母亲,0.8,6.28,82.8,88.28,1.82
+E24,E24-SH005,E24-D201,玛拉,医生,Tuesday. I need to switch my shift.,周二。我得换个班。,把批准落实到真实时间安排,6.93,10.84,88.93,92.84,1.79
+E24,E24-SH005,E24-D202,医生,玛拉,Do you need a minute?,要先留点时间给你吗？,等她处理眼前安排,17.8,20.66,99.8,102.66,1.75
+E24,E24-SH005,E24-D203,玛拉,医生,No. Keep the appointment. I'll work it out.,不用，预约留着。我来安排。,不再为工作先放弃已拿到的治疗时间,21.31,25.74,103.31,107.74,1.81
+E24,E24-SH005,E24-D007,艾莉,医生,Can I bring my whale?,能带我的鲸吗？,自己向医生问,26.39,29.25,108.39,111.25,1.75
+E24,E24-SH005,E24-D008,医生,艾莉,Please do.,当然带来。,弯身看孩子但不拿画,29.9,31.18,111.9,113.18,1.56
+E24,E24-SH006,E24-D009,凯文,玛拉,"For the course after that, you'll need to apply again. I'll send the checklist early.",再下一个疗程，你还得申请。我会提前把清单发你。,取出未来清单，察觉她已准备走,0.8,8.9,116.8,124.9,1.85
+E24,E24-SH006,E24-D010,玛拉,凯文,But not today?,但不是今天吧？,已经开始合夹,9.55,11.36,125.55,127.36,1.66
+E24,E24-SH006,E24-D011,凯文,玛拉,Not today.,不是今天。,让她合上,12.01,13.29,128.01,129.29,1.56
+E24,E24-SH007,E24-D012,诺拉,莉娜,Did you sign?,签了吗？,等她整理文件的手停住再问,0.8,2.61,135.8,137.61,1.66
+E24,E24-SH007,E24-D013,莉娜,诺拉,"Yes. I've accepted the findings. I'm out of a job, and I owe a fine. I reported it, but I kept signing.",签了，结论我认。工作没了，还得交罚款。我是举报了，可后来那些表，我也照样签了。,按住自己的信封，直说代价,3.26,15.03,138.26,150.03,1.87
+E24,E24-SH007,E24-D204,诺拉,莉娜,How did the interview go?,面试怎么样？,先看对方是否愿意说私事,15.68,18.54,150.68,153.54,1.75
+E24,E24-SH007,E24-D205,莉娜,诺拉,They asked why I left.,他们问我为什么离职。,把自己最不想答的问话说出来,20.8,23.66,155.8,158.66,1.75
+E24,E24-SH007,E24-D206,诺拉,莉娜,What did you tell them?,你怎么说的？,问本人处理方式，不替她解释,24.31,27.17,159.31,162.17000000000002,1.75
+E24,E24-SH007,E24-D207,莉娜,诺拉,That there's a finding against me. I sent the link. They haven't called.,说调查认定我也有责任。我把链接发了，他们还没回电话。,承认后果仍未收束,27.82,34.87,162.82,169.87,1.84
+E24,E24-SH008,E24-D014,莉娜,诺拉,Still on the front page?,还在首页吗？,看向诺拉带来的单页,0.8,3.66,174.8,177.66,1.75
+E24,E24-SH008,E24-D015,诺拉,莉娜,No. The regulator ordered those files reviewed again. I'm checking who's actually had a call.,不在了。监管要求那些档案重审。我在查，到底谁真接到了回访电话。,推过公开命令，翻到没填完的回访表,4.31,12.41,178.31,186.41,1.85
+E24,E24-SH009,E24-D016,电视主播声音,电视观众,The sentencing closes the final major chapter in the case.,量刑为这起案件的最后一个主要阶段画上句号。,电视平直播报,0.8,6.28,195.8,201.28,1.82
+E24,E24-SH009,E24-D017,艾莉,玛拉,Mom. I changed the wings.,妈妈，我把翅膀改了。,等母亲把手机放下,6.93,9.79,201.93,204.79,1.75
+E24,E24-SH009,E24-D018,玛拉,艾莉,Show me. Why are they so big now?,给我看看。怎么变得这么大了？,坐到孩子身边,10.44,14.87,205.44,209.87,1.81
+E24,E24-SH009,E24-D019,艾莉,玛拉,The little ones couldn't lift him. He kept landing in the soup.,小翅膀托不动他，他总掉进汤里。,把画本挪给母亲一半,24.8,31.33,219.8,226.32999999999998,1.84
+E24,E24-SH009,E24-D208,艾莉,玛拉,Not there. That's the soup.,不是那里，那是汤。,纠正母亲下笔的位置,31.98,34.84,226.98,229.84,1.75
+E24,E24-SH009,E24-D209,玛拉,艾莉,Right. Where can I put this?,好，那我涂哪儿？,把决定交还给画画的人,35.49,38.87,230.49,233.87,1.78
+E24,E24-SH009,E24-D210,艾莉,玛拉,Here. You can do the bubbles.,这里。泡泡给你涂。,用绿笔指出母亲可以涂的位置，不重复交笔,39.52,42.9,234.52,237.9,1.78
+E24,E24-SH011,E24-D020,路易吉,玛拉，私人信草稿低声核读,"Mara, I don't know how things are at home. I hope Ellie is still getting treatment. You don't have to send me any news.",玛拉，不知道你们家最近怎么样。我希望艾莉还在接受治疗。你不用告诉我近况。,低头核读已有信稿，不向镜头讲话,4.0,16.82,247.0,259.82,1.87
+E24,E24-SH011,E24-D021,路易吉,玛拉，私人信草稿低声核读,You don't have to write back. I won't speak for you. Luigi.,你不用回信。我不会再替你发言。路易吉。,读到自己的名字后才签名,22.8,29.33,265.8,272.33,1.84

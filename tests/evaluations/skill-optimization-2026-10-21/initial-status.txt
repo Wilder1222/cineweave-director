@@ -1,0 +1,81 @@
+ M scripts/skill-catalog.mjs
+ M scripts/validate-repository.mjs
+ M skill-sources/cineweave-review/SKILL.md
+ M skills/cineweave-director/SKILL.md
+ M skills/cineweave-director/reference-lifecycle.json
+ M skills/cineweave-director/references/core/operating-model.md
+ M skills/cineweave-director/references/optional/master-style-presets.md
+ M skills/cineweave-director/references/optional/prompt-detail-standard.md
+ M skills/cineweave-director/references/optional/short-film-creation.md
+ M skills/cineweave-director/references/optional/video-performance-direction.md
+ M skills/cineweave-director/references/optional/video-sound-and-delivery.md
+ M skills/cineweave-director/references/optional/visual-development.md
+ M skills/cineweave-director/references/routes/character.md
+ M skills/cineweave-director/references/routes/reference-evidence.md
+ M skills/cineweave-director/references/routes/review-repair.md
+ M skills/cineweave-director/references/routes/style.md
+ M skills/cineweave-platform/reference-lifecycle.json
+ M skills/cineweave-platform/references/core/operating-model.md
+ M skills/cineweave-platform/references/optional/master-style-presets.md
+ M skills/cineweave-platform/references/optional/prompt-detail-standard.md
+ M skills/cineweave-platform/references/optional/short-film-creation.md
+ M skills/cineweave-platform/references/optional/video-performance-direction.md
+ M skills/cineweave-platform/references/optional/video-sound-and-delivery.md
+ M skills/cineweave-platform/references/optional/visual-development.md
+ M skills/cineweave-platform/references/routes/character.md
+ M skills/cineweave-platform/references/routes/reference-evidence.md
+ M skills/cineweave-platform/references/routes/review-repair.md
+ M skills/cineweave-platform/references/routes/style.md
+ M skills/cineweave-reference/reference-lifecycle.json
+ M skills/cineweave-reference/references/core/operating-model.md
+ M skills/cineweave-reference/references/optional/master-style-presets.md
+ M skills/cineweave-reference/references/optional/prompt-detail-standard.md
+ M skills/cineweave-reference/references/optional/short-film-creation.md
+ M skills/cineweave-reference/references/optional/video-performance-direction.md
+ M skills/cineweave-reference/references/optional/video-sound-and-delivery.md
+ M skills/cineweave-reference/references/optional/visual-development.md
+ M skills/cineweave-reference/references/routes/character.md
+ M skills/cineweave-reference/references/routes/reference-evidence.md
+ M skills/cineweave-reference/references/routes/review-repair.md
+ M skills/cineweave-reference/references/routes/style.md
+ M skills/cineweave-review/SKILL.md
+ M skills/cineweave-review/reference-lifecycle.json
+ M skills/cineweave-review/references/core/operating-model.md
+ M skills/cineweave-review/references/optional/master-style-presets.md
+ M skills/cineweave-review/references/optional/prompt-detail-standard.md
+ M skills/cineweave-review/references/optional/short-film-creation.md
+ M skills/cineweave-review/references/optional/video-performance-direction.md
+ M skills/cineweave-review/references/optional/video-sound-and-delivery.md
+ M skills/cineweave-review/references/optional/visual-development.md
+ M skills/cineweave-review/references/routes/character.md
+ M skills/cineweave-review/references/routes/reference-evidence.md
+ M skills/cineweave-review/references/routes/review-repair.md
+ M skills/cineweave-review/references/routes/style.md
+ M tests/skill-bundles.test.mjs
+ M tests/skill-catalog.test.mjs
+?? skills/cineweave-director/references/optional/color-grading-presets.md
+?? skills/cineweave-director/references/optional/color-grading-research.md
+?? skills/cineweave-director/references/optional/lookdev-delivery-example.md
+?? skills/cineweave-director/references/optional/makeup-style-presets.md
+?? skills/cineweave-director/references/optional/stage-deliverables.md
+?? skills/cineweave-director/references/optional/style-still-references.md
+?? skills/cineweave-platform/references/optional/color-grading-presets.md
+?? skills/cineweave-platform/references/optional/color-grading-research.md
+?? skills/cineweave-platform/references/optional/lookdev-delivery-example.md
+?? skills/cineweave-platform/references/optional/makeup-style-presets.md
+?? skills/cineweave-platform/references/optional/stage-deliverables.md
+?? skills/cineweave-platform/references/optional/style-still-references.md
+?? skills/cineweave-reference/references/optional/color-grading-presets.md
+?? skills/cineweave-reference/references/optional/color-grading-research.md
+?? skills/cineweave-reference/references/optional/lookdev-delivery-example.md
+?? skills/cineweave-reference/references/optional/makeup-style-presets.md
+?? skills/cineweave-reference/references/optional/stage-deliverables.md
+?? skills/cineweave-reference/references/optional/style-still-references.md
+?? skills/cineweave-review/references/optional/color-grading-presets.md
+?? skills/cineweave-review/references/optional/color-grading-research.md
+?? skills/cineweave-review/references/optional/lookdev-delivery-example.md
+?? skills/cineweave-review/references/optional/makeup-style-presets.md
+?? skills/cineweave-review/references/optional/stage-deliverables.md
+?? skills/cineweave-review/references/optional/style-still-references.md
+?? tests/evaluations/pov-generated-video-review-2026-10-18.md
+?? tests/evaluations/stage-color-audit-2026-10-18.md

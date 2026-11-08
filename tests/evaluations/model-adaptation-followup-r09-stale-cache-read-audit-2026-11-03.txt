@@ -1,0 +1,16 @@
+# R09 宿主 Skill 实际读取审计
+
+对象：`D:/Temp/cineweave-scope-fix-r09-pevldn56/events.jsonl`，按 JSONL 一行为一条事件计数。结论：**本次输出未能验证当前冻结 Skill；已看到宿主回退读取旧安装缓存。** 不能把 R09 内容缺口直接归因于当前 Skill 指引。
+
+| 目标 | 日志证据 | 结论 |
+| --- | --- | --- |
+| 冻结目录相对路径的导演 `SKILL.md` | 第 10–11 行 item_5，`Get-Content .agents/skills/cineweave-director/SKILL.md`，进程创建失败 `CreateProcessWithLogonW failed: 267`、exit -1 | 命令未成功运行，未读取内容。 |
+| 工作目录探测 | 第 12–13 行 item_6，`pwd` 成功返回 `C:\` | 可观察到进程工作目录为 C 盘根；此现象与预期的冻结 workspace 有偏差，但仅凭本日志不推断完整根因。 |
+| 冻结目录绝对路径的导演 `SKILL.md` | 第 17、19 行 item_9，路径为冻结 workspace 内 `.agents/skills/.../SKILL.md`；进程运行后报 `Access to the path ... is denied`，exit 1 | 文件并非成功读入。审阅方在宿主之外确认文件存在；不能由此认定宿主具备读取权限。 |
+| 已安装缓存导演入口 | 第 23、25 行 item_12，成功读取 `C:/Users/ww/.codex/plugins/cache/cineweave-director/cineweave-director/3.2.0/skills/cineweave-director/SKILL.md`，exit 0 | 实际读的是旧缓存入口而非冻结当前入口。 |
+| 已安装缓存平台适配 | 第 29–30 行 item_15，成功读取上述缓存路径下 `references/optional/video-platform-adaptation.md`，exit 0 | 实际读的是旧缓存平台参考。日志没有命令成功读取冻结目录内该参考。 |
+| 三模型实践参考 | 完整事件中无成功读取 `video-model-practices-2026-10.md` 的命令 | 未有日志证据表明关键实践参考被加载；当前旧缓存中该文件也不存在。 |
+
+审阅时 SHA-256：冻结导演入口 `8a47dd98af2dd4bdf3ea391863334de755762286b1f620c4338b86d275863f66`，旧缓存入口 `4ac999b35cd66e8c1c55d05d610f8e60f7929b303606308ae9068b10b6c36cbc`；冻结平台适配 `ceef1601c3d7e64672b46b7cff5adc0e2393fbfb36f5996ce9e1bf320753d47f`，旧缓存平台适配 `9b5a4e163a6482704b43333547d16ffc0ed3542d9526599e49455460971bd7f9`；冻结三模型实践 `10535ab888fbaae503df53e2291c7763d1fee1ea46ffea9c45811b76f16996cf5`。两组入口和平台参考均不相同。
+
+`terminal.json` 和第 39 行证明该 turn 已正常结束，先前 692 项冻结文件与当前文件哈希相同证明快照一致；这些均不能证明宿主读取当前 Skill。日志有对全局记忆的读取且相关输出被脱敏，不应称完全盲测。实际的拒绝访问与 cwd 偏差说明存在宿主运行/路由障碍；根因未证实。先确保工作目录、sandbox 与冻结目录可读，确认事件中入口和关键参考实际成功读入，再用原题复测，才能以输出评估当前 Skill 是否仍需修改。

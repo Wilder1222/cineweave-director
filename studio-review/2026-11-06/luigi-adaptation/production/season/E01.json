@@ -1,0 +1,787 @@
+{
+  "number": 1,
+  "title": "橙色",
+  "logline": "两个早晨里的工作与家庭选择，最终被青年主动转向并开枪的行为截断。",
+  "dramaturgy": {
+    "openingQuestion": "码头镜头争抢的这个人，在案发当天做了什么？",
+    "pursuit": "一个被镜头争抢的青年如何走到这里；两个家庭在枪响前仍各自处理日常。",
+    "reversal": "两个早晨里的工作与家庭选择，最终被青年主动转向并开枪的行为截断。",
+    "cost": "一个父亲死亡，电话另一端未收到告别；没有第二枪手或替主角免罪的悬念。",
+    "cliffhanger": "沃德倒下，青年离场，警方调取监控；下一集追问这次行动把青年带到了哪里。",
+    "nextEpisodeBridge": "青年还能找到停留的地方吗；玛拉能否把照顾孩子和额外班次接起来？"
+  },
+  "movements": [
+    {
+      "title": "冷开：被争抢的抬眼",
+      "startScene": "E01-SC01",
+      "question": "让观众先看见被拘束的人处理链条与踏板，再经历他造成的后果。",
+      "turn": "抬眼只为找门口，却同时成为媒体的猎物。"
+    },
+    {
+      "title": "没发出的回复",
+      "startScene": "E02-SC01",
+      "question": "先见青年能帮互助患者处理具体材料，再见他不能给家人发送一句正常回复。",
+      "turn": "两次家庭回复都被自己删掉，帮助陌生人与切断家人联系同时发生。"
+    },
+    {
+      "title": "早餐桌上的签字",
+      "startScene": "E02-SC02",
+      "question": "让沃德在工作和家庭里都必须作选择，建立制度后果与会失去的具体生活。",
+      "turn": "他问过另一种方案仍签冻结；对儿子想控制通话对象，却不得不听完并改日程。"
+    },
+    {
+      "title": "未兑现的周六",
+      "startScene": "E02-SC03",
+      "question": "让枪击成为路易吉可见、主动、不可逆的选择，同时终止沃德刚作出的家庭约定。",
+      "turn": "路过的青年停步转向沃德，枪声与倒下保持同一空间因果。"
+    }
+  ],
+  "continuityNote": "当前播出编号为24集短剧；E01–E24场号/制作镜号只作稳定资产定位。各集以完整场景为边界，英语对白与中文对照同步。青年还能找到停留的地方吗；玛拉能否把照顾孩子和额外班次接起来？",
+  "scenes": [
+    {
+      "id": "E01-SC01",
+      "location": "DOCK",
+      "time": "日·押送当天",
+      "entry": "北向南队列已走到通道中段，右脚落地，身前铐连腰链，无背包。",
+      "exit": "到踏板前尚未上车；腰链仍在",
+      "script": "纽约冬日河岸，北面的直升机仍在转，南边押送车侧门开着。媒体被西栏杆挡住，东侧留给警员；橙衣路易吉由北向南夹在两名警员之间，身前手铐连着腰链。\n\n南边警员抬掌拦住横穿通道的人，队列忽然收短。路易吉的右脚已落下，上身被步幅扯住，腕链撞在橙色布料上。西边立刻有人举高手机。\n现场记者（英语）：Luigi! Here! Look up!\n中文对照：路易吉！这里！抬头！\n他没有看喊声，把下一步缩小。\n\n警员甲握一下他的上臂，给他停住的空间。\n警员甲（英语）：Need a second?\n中文对照：要停一下吗？\n路易吉呼气，肩膀落下，没有向喊声转头。\n路易吉（英语）：Just room.\n中文对照：给我点空就行。\n甲松到只扶不拽，青年重新迈步。\n\n踏板近了，路易吉收起双手，目光落在脚下。前面的警员让到一旁，他抬眼看清车门，西侧快门顿时密起来。\n路易吉（英语）：Watch the chain.\n中文对照：留意一下链子。\n他把右脚移到踏板前，尚未抬起。深色大衣的市政官员在西后方挤入取景范围。",
+      "dramaticFunction": "让观众先看见被拘束的人处理链条与踏板，再经历他造成的后果。",
+      "turn": "抬眼只为找门口，却同时成为媒体的猎物。",
+      "exitCost": "他不能控制照片将替他表达什么；上车还没完成。",
+      "sceneRhythm": "26秒冷开在受阻、得到一点空间、看清踏板三处切；不以橙衣和旋翼延长声势。"
+    },
+    {
+      "id": "E02-SC01",
+      "location": "HOTEL-ROOM",
+      "time": "清晨·案发当天·枪响前",
+      "entry": "青年坐东床沿，左手将撑床起身；手机北桌，黑包桌脚，无口罩。",
+      "exit": "手机笔记都进包，包双肩；离开南门，无口罩。",
+      "script": "临时旅馆房间，南门关着，东边窄床被坐出凹陷，西窗透冷光，北桌上放着笔记本、手机和黑背包。深炭灰夹克的路易吉坐在床边，手扶腰后，先等一阵疼痛过去。\n\n路易吉想从东床边站起，腰背绷住，改用左手撑床沿。北桌手机自动播出互助帖语音。\n互助帖患者录音（英语）：They want the form again. I already sent it. I've got the receipt.\n中文对照：又要那张表。我早发过了，回执都在。\n录音结束，他仍站着，等手能松开才去拿手机。\n\n他按住录音键，从笔记里翻出自己列的项目。\n路易吉（英语）：Keep that receipt. Ask the clinic for a list of the attachments. And cover your address before you post.\n中文对照：回执留好。问诊所要一份附件清单。还有，发出去前把地址遮住。\n松开键后回听开头，只把这条语音发回互助帖。手机再次震动，家人的姓名盖住发送成功。\n\n他点开家人的对话，录下开头。\n路易吉（英语）：I know you've been calling. I'm—\n中文对照：我知道你一直在打电话。我——\n走廊有推车轮声，他看向南门，拇指一直压着。录音多出一段房间空声。他听见自己的开头，按下删除。重新按住录音键，这次把话说完整。\n\n路易吉（英语）：I'm all right. I'll call you when I can.\n中文对照：我没事。能打电话的时候就打。\n\n回听时他看着发送键，仍删除，最后把手机扣到桌上。\n\n敲门响了两下。\n旅馆清洁员画外声（英语）：Housekeeping. Towels?\n中文对照：客房清洁。要毛巾吗？\n他看一眼门，把笔记合上放进黑包。\n路易吉（英语）：No, thanks.\n中文对照：不用了，谢谢。\n推车继续走。他把手机放进包内，拉好拉链；等轮声远开，背起包，转动门把。",
+      "dramaticFunction": "先见青年能帮互助患者处理具体材料，再见他不能给家人发送一句正常回复。",
+      "turn": "两次家庭回复都被自己删掉，帮助陌生人与切断家人联系同时发生。",
+      "exitCost": "家人仍不知他在哪，手机和笔记被他带走；没有把疼痛当作免责。",
+      "sceneRhythm": "材料帮助短镜结束于发送；家庭回复留二十二秒给两次不同尝试，敲门才切到收包离开。"
+    },
+    {
+      "id": "E02-SC02",
+      "location": "HOTEL-BREAKFAST",
+      "time": "清晨·同日",
+      "entry": "沃德右手业务电话、左手咖啡，会议资料在盘下。",
+      "exit": "薄公文袋夹左腋，电话右耳，笔收袋边笔环，离早餐厅。",
+      "script": "酒店早餐小厅，入口在南，西窗照着东侧双人桌，北墙靠着取餐台。沃德独坐东桌，灰蓝西装扣子敞着，右手手机、左手咖啡杯，会议资料压在盘子下面。\n\n服务员要收盘，沃德用左掌挡住，把杯子压到人力表翘起的角上。\n\n运营主管电话声（英语）：We can still make the number if we freeze hiring. Reviews will take longer, though. I need you to sign off.\n中文对照：冻结招聘，季度指标还能达成。不过复核会拖更久。这得你签字。\n\n他左手从纸边拿笔，笔尖停在冻结栏外，没有落下。\n\n沃德（英语）：And if we don't freeze it?\n中文对照：不冻结呢？\n\n电话那头翻页，他把咖啡挪开，杯底湿印留在空缺岗位旁。\n\n运营主管电话声（英语）：We miss the quarter. Those are the choices I've got.\n中文对照：这个季度就达不了标。我手上就这两条路。\n\n沃德（英语）：Then freeze hiring till the end of the quarter.\n中文对照：那就冻结到这个季度结束。\n\n沃德在延期框签名，把笔放下，却没立刻挂电话。\n\n沃德（英语）：Monday, send me the wait times. In days.\n中文对照：周一把等待时长给我。按天算。\n\n他把签字页压回公文袋上，儿子来电亮起。业务电话还在说，他先结束这一通。\n\n他接儿子电话，用纸巾擦掉指尖咖啡。\n\n沃德（英语）：Saturday's fine. What time did your mom say?\n中文对照：周六可以。你妈说几点？\n\n他在干净餐巾上写时间。电话那端孩子似乎把手机递给另一人，他立刻压低声音。\n\n沃德（英语）：No, don't put her on. Text me.\n中文对照：不用，别让她接。发消息给我。\n\n没人给他解围，他只好听完，自己把餐巾上写错的时间划掉重写。\n\n服务员终于端走盘子，沃德把薄公文袋夹到左腋。\n\n沃德（英语）：Tell me about the plane. I'm heading out.\n中文对照：跟我说说飞机模型。我正往外走。\n\n他走到南门，回头发现笔留着，返一步用左手拿走插进袋边笔环。那张改过时间的餐巾也被他折好收进左袋。电话一直没挂。",
+      "dramaticFunction": "让沃德在工作和家庭里都必须作选择，建立制度后果与会失去的具体生活。",
+      "turn": "他问过另一种方案仍签冻结；对儿子想控制通话对象，却不得不听完并改日程。",
+      "exitCost": "复核排队继续；周六约定被写下，几分钟后不可能兑现。",
+      "sceneRhythm": "业务冲突用四十五秒完整决策镜，换家庭关系才换角度；返身取笔和餐巾是疏漏后的实际补救。"
+    },
+    {
+      "id": "E02-SC03",
+      "location": "HOTEL",
+      "time": "清晨·枪响时",
+      "entry": "沃德北门外右耳电话、薄公文袋夹左腋；东行李员收箱，青年将入西缘。",
+      "exit": "乙和酒店人员北门内，甲南路缘，影像调取开始。",
+      "script": "酒店外北边旋转门缓缓转动，东侧是上客位，南边车道有车停靠，西边人行道通向街角。沃德从北门出来，路易吉还未走入门前区域；行李员站在门口东侧。\n\n沃德从北旋转门出来，电话仍贴右耳，薄公文袋夹左腋。东上客位车辆往前挪，行李员拉住准备跟车走的箱子。\n\n行李员（英语）：Not that one. Just wait by the door, please.\n中文对照：不是那辆。先在门边等，好吗？\n\n沃德让过拖箱旅客，摸出会议卡，听见儿子重问时间。\n\n沃德（英语）：Saturday. I said Saturday. What happened to the wing?\n中文对照：周六，我说了周六。翅膀又怎么了？\n\n他把会议卡放回左袋，西侧人行道出现深炭灰夹克。\n\n沃德空出的左手比划松掉的翅膀，终于能插话。\n\n沃德（英语）：Leave it on my desk. Not the kitchen table. We can fix it Saturday.\n中文对照：放我书桌上，别放厨房桌。周六我们一起修。\n\n路易吉由西向东走，认出沃德后停住。车流有一个空隙，他没有继续朝东，把肩膀转向沃德。沃德放低手机，仍在听儿子。\n\n路易吉朝沃德迈一步，手臂在身前抬起，操作细节不显露。两声枪响，沃德跌出下方，手机掉地，门边杯子滚向路缘。行李员蹲到柱后。路易吉看见沃德倒下，停一瞬，转身从西侧离开。\n\n稍后南路缘拉起封锁线，纸杯仍停路边。警员甲问行李员，指酒店门口摄像机。\n\n警员甲（英语）：Get the footage from before the shots, too. I want to see him coming in.\n中文对照：枪响以前的监控也拿来。我得看他怎么来的。\n\n行李员指西边来路，手还在抖。乙带值班人员进北门，甲看一眼杯子，又抬头看摄像机。",
+      "dramaticFunction": "让枪击成为路易吉可见、主动、不可逆的选择，同时终止沃德刚作出的家庭约定。",
+      "turn": "路过的青年停步转向沃德，枪声与倒下保持同一空间因果。",
+      "exitCost": "一个父亲死亡，电话另一端未收到告别；没有第二枪手或替主角免罪的悬念。",
+      "sceneRhythm": "北门出入的生活阻碍完整保留，青年转向才切；枪击不重播，事后物件与行李员反应让暴力后果留在现场。"
+    }
+  ],
+  "shots": [
+    {
+      "id": "E01-SH001",
+      "sceneId": "E01-SC01",
+      "duration": 9,
+      "characters": [
+        "LUIGI-ESCORT",
+        "OFFICER-A/B"
+      ],
+      "purpose": "南行突然受阻，镜头却把疼痛动作当作可争抢的表情。",
+      "framing": "中全景，西南向东北，轴西侧；从鞋至头顶完整容纳青年和两侧警员。",
+      "composition": "前景西栏杆和举起的手机边缘；中景橙衣青年夹在两警员间；北直升机在后景，南行通道向画面右下延伸。",
+      "camera": "固定在西南栏杆内许可区；不追人脸，让队列急停和手机举起在同一画面内发生。",
+      "focus": "保持三人及脚步同一可读范围，不切焦追闪光。",
+      "start": "北向南队列已走到通道中段，右脚落地，身前铐连腰链，无背包。",
+      "action": "南边警员抬掌拦住横穿通道的人，队列忽然收短。路易吉的右脚已落下，上身被步幅扯住，腕链撞在橙色布料上。西边立刻有人举高手机。现场记者对路易吉说本镜第1句英语对白，从西侧抢着喊，喊声穿过旋翼。他没有看喊声，把下一步缩小。",
+      "end": "青年第二步缩短，两警员仍在两侧，前方道路开始腾出。",
+      "sound": "北侧旋翼、西侧快门与记者声",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E01-D001",
+          "speaker": "现场记者",
+          "listener": "路易吉",
+          "text": "Luigi! Here! Look up!",
+          "translationZh": "路易吉！这里！抬头！",
+          "tone": "从西侧抢着喊，喊声穿过旋翼",
+          "start": 0.6,
+          "end": 2.85
+        }
+      ],
+      "overlay": [],
+      "next": "同场保持轴西侧，接上臂扶持和青年要空间，不先拍不到的腰链特写。",
+      "viewerEntry": "只见橙色身体处在警员与栏杆之间。",
+      "viewerExit": "南行突然受阻，镜头却把疼痛动作当作可争抢的表情。",
+      "cutTrigger": "缩短的第二步尚未落地，切近看警员怎样接住这次停顿。",
+      "extraRoleIds": [
+        "REPORTER-DOCK"
+      ],
+      "broadcastEpisode": 1,
+      "displayId": "EP01-001"
+    },
+    {
+      "id": "E01-SH002",
+      "sceneId": "E01-SC01",
+      "duration": 8,
+      "characters": [
+        "LUIGI-ESCORT",
+        "OFFICER-A/B"
+      ],
+      "purpose": "他在争取身体空间，警员配合后才继续走。",
+      "framing": "中景，西侧向东南，容纳青年头至腰链及警员接触上臂。",
+      "composition": "青年居中，警员肩臂在两边",
+      "camera": "西侧与队列同速向南平移约一步；停步触发停机，恢复步伐再随行，不超过人。",
+      "focus": "保持脸、上臂接触和身前手铐都在中近景可读范围，不做手到脸的大幅切焦。",
+      "start": "右脚已落、第二步缩短，身体暂被前方停步扯住；双腕身前、甲在上臂旁。",
+      "action": "警员甲握一下他的上臂，给他停住的空间。警员甲对路易吉说本镜第1句英语对白，贴近问，手先托住上臂。路易吉呼气，肩膀落下，没有向喊声转头。路易吉对警员甲说本镜第2句英语对白，压低声音，等呼气后才答。甲松到只扶不拽，青年重新迈步。",
+      "end": "青年继续南行，甲轻扶上臂，双腕在身前连腰链。",
+      "sound": "链子短响、鞋底摩擦、持续旋翼",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E01-D002",
+          "speaker": "警员甲",
+          "listener": "路易吉",
+          "text": "Need a second?",
+          "translationZh": "要停一下吗？",
+          "tone": "贴近问，手先托住上臂",
+          "start": 0.6,
+          "end": 2.38
+        },
+        {
+          "id": "E01-D103",
+          "speaker": "路易吉",
+          "listener": "警员甲",
+          "text": "Just room.",
+          "translationZh": "给我点空就行。",
+          "tone": "压低声音，等呼气后才答",
+          "start": 2.73,
+          "end": 4.13
+        }
+      ],
+      "overlay": [],
+      "next": "切南端斜看，轴线不变",
+      "viewerEntry": "他突然停了半步，原因还可能被误读。",
+      "viewerExit": "他在争取身体空间，警员配合后才继续走。",
+      "cutTrigger": "甲的握力放松，青年的肩线随下一步恢复向南。",
+      "extraRoleIds": [],
+      "broadcastEpisode": 1,
+      "displayId": "EP01-002"
+    },
+    {
+      "id": "E01-SH003",
+      "sceneId": "E01-SC01",
+      "duration": 9,
+      "characters": [
+        "LUIGI-ESCORT",
+        "OFFICER-A/B"
+      ],
+      "purpose": "一次寻找踏板的抬眼已被数十部手机截取。",
+      "framing": "中全景，南车门西侧朝北偏东，容纳青年头至脚、踏板和门框。",
+      "composition": "南车门框在右前景，青年两步外中景，西媒体与官员后景。",
+      "camera": "固定南车门西侧朝北偏东，车门边缘给出终点；不后退把青年拍成巡游。",
+      "focus": "保持青年及车门踏板，不追后方官员。",
+      "start": "距南车门两步，前铐低垂",
+      "action": "踏板近了，路易吉收起双手，目光落在脚下。前面的警员让到一旁，他抬眼看清车门，西侧快门顿时密起来。路易吉对警员甲说本镜第1句英语对白，对近旁警员说，不朝媒体喊。他把右脚移到踏板前，尚未抬起。深色大衣的市政官员在西后方挤入取景范围。",
+      "end": "到踏板前尚未上车；腰链仍在",
+      "sound": "连拍、衣料擦动，旋翼不断",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E01-D003",
+          "speaker": "路易吉",
+          "listener": "警员甲",
+          "text": "Watch the chain.",
+          "translationZh": "留意一下链子。",
+          "tone": "对近旁警员说，不朝媒体喊",
+          "start": 0.6,
+          "end": 2.38
+        }
+      ],
+      "overlay": [
+        {
+          "text": "NEW YORK / 纽约",
+          "start": 1,
+          "end": 4,
+          "position": "左下地名字卡"
+        }
+      ],
+      "next": "踏板前的抬眼已经被镜头抢走；冷开到此，回到案发当天清晨的酒店房间，以时间字卡、电话与室内空间重新定向。旋翼声结束，不假接成电话声。",
+      "viewerEntry": "他重新走动，前方仍由警员挡着。",
+      "viewerExit": "一次寻找踏板的抬眼已被数十部手机截取。",
+      "cutTrigger": "右脚停在踏板前，快门声切到诊所手机的短震。",
+      "extraRoleIds": [
+        "OFFICIAL-DOCK"
+      ],
+      "broadcastEpisode": 1,
+      "displayId": "EP01-003"
+    },
+    {
+      "id": "E02-SH001",
+      "sceneId": "E02-SC01",
+      "duration": 13,
+      "characters": [
+        "LUIGI-STREET"
+      ],
+      "purpose": "疼痛妨碍起身，他仍能处理别人的具体求助。",
+      "framing": "全景，南门内朝北，轴西侧",
+      "composition": "东床、西窗、北桌同见",
+      "camera": "固定南门内中全景，东床和北桌相距两步同时可见；不把起身拍成倒地。",
+      "focus": "床沿支撑与身体同层可读，走向北桌时跟随人物对焦。",
+      "start": "青年坐东床沿，左手将撑床起身；手机北桌，黑包桌脚，无口罩。",
+      "action": "路易吉想从东床边站起，腰背绷住，改用左手撑床沿。北桌手机自动播出互助帖语音。互助帖患者录音对互助群成员说本镜第1句英语对白，疲倦的成年女声，急着证明没有遗漏。录音结束，他仍站着，等手能松开才去拿手机。",
+      "end": "他在桌边停下，右手拿手机",
+      "sound": "床架轻响、西窗外清运车、手机录音",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E02-D001",
+          "speaker": "互助帖患者录音",
+          "listener": "互助群成员",
+          "text": "They want the form again. I already sent it. I've got the receipt.",
+          "translationZh": "又要那张表。我早发过了，回执都在。",
+          "tone": "疲倦的成年女声，急着证明没有遗漏",
+          "start": 0.6,
+          "end": 7.14
+        }
+      ],
+      "overlay": [
+        {
+          "text": "BEFORE THE SHOOTING / 枪击前",
+          "start": 1,
+          "end": 4,
+          "position": "左下时间字卡"
+        }
+      ],
+      "next": "同场桌边看他的回复",
+      "viewerEntry": "已见青年被押送，还不知道他在案发当天清晨作了哪些选择。",
+      "viewerExit": "疼痛妨碍起身，他仍能处理别人的具体求助。",
+      "cutTrigger": "手机停止播放，他伸手把它拿起。",
+      "extraRoleIds": [
+        "PATIENT-POST-VOICE"
+      ],
+      "broadcastEpisode": 1,
+      "displayId": "EP01-004"
+    },
+    {
+      "id": "E02-SH002",
+      "sceneId": "E02-SC01",
+      "duration": 15,
+      "characters": [
+        "LUIGI-STREET"
+      ],
+      "purpose": "他懂得保留证据、遮住隐私，却仍不回应家人。",
+      "framing": "中景，桌西侧朝东北",
+      "composition": "手机右手，笔记摊在北桌",
+      "camera": "固定北桌西侧中景，纸和录音手在下沿；保留录音—回听—发送的动作。",
+      "focus": "保持脸与手机，不要求读私人病历。",
+      "start": "他按住录音键，左手压页角",
+      "action": "他按住录音键，从笔记里翻出自己列的项目。路易吉对互助帖患者说本镜第1句英语对白，熟练给出步骤，末句因看到附件截图而补上。松开键后回听开头，只把这条语音发回互助帖。手机再次震动，家人的姓名盖住发送成功。",
+      "end": "互助语音发出；手机右手，左手压笔记，家人来信覆盖屏幕。",
+      "sound": "手指轻敲屏、短发送音、窗外车声",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E02-D002",
+          "speaker": "路易吉",
+          "listener": "互助帖患者",
+          "text": "Keep that receipt. Ask the clinic for a list of the attachments. And cover your address before you post.",
+          "translationZh": "回执留好。问诊所要一份附件清单。还有，发出去前把地址遮住。",
+          "tone": "熟练给出步骤，末句因看到附件截图而补上",
+          "start": 0.6,
+          "end": 10.0
+        }
+      ],
+      "overlay": [],
+      "next": "接家人消息与未回复",
+      "viewerEntry": "他接下了陌生人的问题。",
+      "viewerExit": "他懂得保留证据、遮住隐私，却仍不回应家人。",
+      "cutTrigger": "家人姓名盖住发送成功，拇指停住。",
+      "extraRoleIds": [],
+      "broadcastEpisode": 1,
+      "displayId": "EP01-005"
+    },
+    {
+      "id": "E02-SH003",
+      "sceneId": "E02-SC01",
+      "duration": 22,
+      "characters": [
+        "LUIGI-STREET"
+      ],
+      "purpose": "回复被他主动删掉；家人只能继续等。",
+      "framing": "近景，北桌西南看手与脸",
+      "composition": "手机上方，纸本下方，包靠桌脚",
+      "camera": "固定桌西南近景，门在画外；先听推车再见眼线转移，不给预先惊吓反打。",
+      "focus": "保持脸和按住的拇指，电话界面后期处理。",
+      "start": "手机右手停家人对话，左手离开笔记，纸本仍摊北桌。",
+      "action": "他录下原有开头“I know you've been calling. I'm—”，走廊轮声使他停住。放开录音键，听见空白后删掉；重新按键说“I'm all right. I'll call you when I can.”，回听时看着发送键，仍删除，最后扣下手机。",
+      "end": "两条家人回复都删除，手机扣桌，互助帖语音已经单独发送。",
+      "sound": "手机录音提示、走廊推车轮声先来；家人没有新增回答。",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E02-D003",
+          "speaker": "路易吉",
+          "listener": "未发送的家人语音",
+          "text": "I know you've been calling. I'm—",
+          "translationZh": "我知道你一直在打电话。我——",
+          "tone": "想交代又停止，第二句没能说下去",
+          "start": 0.6,
+          "end": 3.81
+        },
+        {
+          "id": "E02-D201",
+          "speaker": "路易吉",
+          "text": "I'm all right. I'll call you when I can.",
+          "translationZh": "我没事。能打电话的时候就打。",
+          "listener": "未发送的家人语音",
+          "tone": "第二次换成完整、听起来正常的答复，仍无法发送",
+          "start": 12,
+          "end": 15.83
+        }
+      ],
+      "overlay": [
+        {
+          "text": "MOM: Please call me. / 妈妈：给我打个电话。",
+          "start": 1,
+          "end": 6,
+          "position": "后期手机消息"
+        }
+      ],
+      "next": "同场准备离开",
+      "viewerEntry": "他对陌生人说话清楚，对家人的话还没发出。",
+      "viewerExit": "回复被他主动删掉；家人只能继续等。",
+      "cutTrigger": "手机扣到桌上，南门敲响。",
+      "extraRoleIds": [],
+      "broadcastEpisode": 1,
+      "displayId": "EP01-006"
+    },
+    {
+      "id": "E02-SH004",
+      "sceneId": "E02-SC01",
+      "duration": 13,
+      "characters": [
+        "LUIGI-STREET"
+      ],
+      "purpose": "他把笔记带走，自己决定离开房间。",
+      "framing": "中全景，西侧朝南门",
+      "composition": "北桌在左后，南门在右前",
+      "camera": "固定西侧中全景，北桌到南门完整可见；不跳过收手机、收本、背包三个动作。",
+      "focus": "随人从桌到门，装包动作保持可见。",
+      "start": "手机桌面，笔记摊开，背包桌脚",
+      "action": "敲门响了两下。旅馆清洁员画外声对路易吉说本镜第1句英语对白，在门外等答复。他看一眼门，把笔记合上放进黑包。路易吉对旅馆清洁员画外声说本镜第2句英语对白，压住急促，隔门答复。推车继续走。他把手机放进包内，拉好拉链；等轮声远开，背起包，转动门把。",
+      "end": "手机笔记都进包，包双肩；离开南门，无口罩。",
+      "sound": "门外推车轮、门扣；无配乐",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E02-D004",
+          "speaker": "旅馆清洁员画外声",
+          "listener": "路易吉",
+          "text": "Housekeeping. Towels?",
+          "translationZh": "客房清洁。要毛巾吗？",
+          "tone": "在门外等答复",
+          "start": 0.6,
+          "end": 2.0
+        },
+        {
+          "id": "E02-D105",
+          "speaker": "路易吉",
+          "listener": "旅馆清洁员画外声",
+          "text": "No, thanks.",
+          "translationZh": "不用了，谢谢。",
+          "tone": "压住急促，隔门答复",
+          "start": 2.35,
+          "end": 3.75
+        }
+      ],
+      "overlay": [],
+      "next": "本场结果成立后切入 E02-SC02（HOTEL-BREAKFAST，清晨·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "viewerEntry": "他刚选择不联系家人，普通工作来敲门。",
+      "viewerExit": "他把笔记带走，自己决定离开房间。",
+      "cutTrigger": "门把转下，切到另一人的早餐选择。",
+      "extraRoleIds": [
+        "CLEANER-VOICE"
+      ],
+      "broadcastEpisode": 1,
+      "displayId": "EP01-007"
+    },
+    {
+      "id": "E02-SH005",
+      "sceneId": "E02-SC02",
+      "duration": 45,
+      "characters": [
+        "WARD"
+      ],
+      "purpose": "冻结招聘来自一个有现实商业压力但主动签字的选择；不以家庭温情抹去责任。",
+      "framing": "东桌西南侧单人中景，桌面只占下缘",
+      "composition": "杯、签字页、薄公文袋均在沃德左手可达处；服务员立西侧边缘，不与电话里的主管混成现场角色。",
+      "camera": "固定中景以一次连续签字选择承受两条后果，不切成文件宣读；儿子来电才换关系角度。",
+      "focus": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "start": "沃德右手业务电话、左手咖啡，会议资料在盘下。",
+      "action": "服务员要收盘，沃德用左掌挡住，把杯子压到人力表翘起的角上。运营主管电话声对沃德说英语“We can still make the number if we freeze hiring. Reviews will take longer, though. I need you to sign off.”；把数字收益与等待代价一起交给决策人。他左手从纸边拿笔，笔尖停在冻结栏外，没有落下。沃德对运营主管电话声说英语“And if we don't freeze it?”；问有没有另一条能保住季度指标的路。电话那头翻页，他把咖啡挪开，杯底湿印留在空缺岗位旁。运营主管电话声对沃德说英语“We miss the quarter. Those are the choices I've got.”；把实际取舍交还给签字人。沃德对运营主管电话声说英语“Then freeze hiring till the end of the quarter.”；作出决定，不向对方寻求安慰。沃德在延期框签名，把笔放下，却没立刻挂电话。沃德对运营主管电话声说英语“Monday, send me the wait times. In days.”；追加管理要求。他把签字页压回公文袋上，儿子来电亮起。业务电话还在说，他先结束这一通。",
+      "end": "冻结已获沃德签字，业务电话结束，儿子来电待接；服务员的盘子仍未收。",
+      "sound": "同场环境声与所列英语；不补额外可辨台词",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E02-D005",
+          "speaker": "运营主管电话声",
+          "listener": "沃德",
+          "text": "We can still make the number if we freeze hiring. Reviews will take longer, though. I need you to sign off.",
+          "translationZh": "冻结招聘，季度指标还能达成。不过复核会拖更久。这得你签字。",
+          "tone": "把数字收益与等待代价一起交给决策人",
+          "start": 2,
+          "end": 10.94
+        },
+        {
+          "id": "E02-D202",
+          "speaker": "沃德",
+          "text": "And if we don't freeze it?",
+          "translationZh": "不冻结呢？",
+          "listener": "运营主管电话声",
+          "tone": "问有没有另一条能保住季度指标的路",
+          "start": 15,
+          "end": 17.55
+        },
+        {
+          "id": "E02-D203",
+          "speaker": "运营主管电话声",
+          "text": "We miss the quarter. Those are the choices I've got.",
+          "translationZh": "这个季度就达不了标。我手上就这两条路。",
+          "listener": "沃德",
+          "tone": "把实际取舍交还给签字人",
+          "start": 24,
+          "end": 28.26
+        },
+        {
+          "id": "E02-D006",
+          "speaker": "沃德",
+          "listener": "运营主管电话声",
+          "text": "Then freeze hiring till the end of the quarter.",
+          "translationZh": "那就冻结到这个季度结束。",
+          "tone": "作出决定，不向对方寻求安慰",
+          "start": 31,
+          "end": 34.83
+        },
+        {
+          "id": "E02-D108",
+          "speaker": "沃德",
+          "listener": "运营主管电话声",
+          "text": "Monday, send me the wait times. In days.",
+          "translationZh": "周一把等待时长给我。按天算。",
+          "tone": "追加管理要求",
+          "start": 37,
+          "end": 40.4
+        }
+      ],
+      "overlay": [],
+      "next": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "viewerEntry": "沃德右手业务电话、左手咖啡，会议资料在盘下。",
+      "viewerExit": "冻结已获沃德签字；他结束业务电话接儿子，服务员的盘子仍未收。",
+      "cutTrigger": "冻结已获沃德签字；他结束业务电话接儿子，服务员的盘子仍未收。",
+      "extraRoleIds": [
+        "OPERATIONS-VOICE",
+        "WAITER-HOTEL"
+      ],
+      "generationSegments": [
+        {
+          "duration": 22,
+          "start": "业务电话接通，盘子仍在桌上。",
+          "action": "主管报冻结与排队代价，沃德挡服务员收盘、问不冻结会怎样，拿笔等待。",
+          "end": "笔悬在签字栏外，尚未签。"
+        },
+        {
+          "duration": 23,
+          "start": "咖啡移到桌边，空缺岗位露出。",
+          "action": "主管回答季度会失标，沃德决定冻结、签名并要求按天统计等待；儿子来电。",
+          "end": "业务页已签并收起，家庭来电待接。"
+        }
+      ],
+      "sourceShotIds": [
+        "E02-SH005",
+        "E02-SH006"
+      ],
+      "broadcastEpisode": 1,
+      "displayId": "EP01-008"
+    },
+    {
+      "id": "E02-SH007",
+      "sceneId": "E02-SC02",
+      "duration": 19,
+      "characters": [
+        "WARD"
+      ],
+      "purpose": "周六约定需要绕开分居伴侣，家庭并未统一等待他。",
+      "framing": "中景，西侧朝东桌",
+      "composition": "手机右手，窗光照半边脸",
+      "camera": "固定西侧中景，让擦手、记时间和突然回绝构成关系，不补家人画面。",
+      "focus": "保持脸和餐巾所在桌沿，儿子不出镜。",
+      "start": "沃德挂业务电话，另一个电话进来",
+      "action": "看见儿子来电，他结束业务电话，接通后用纸巾擦手。沃德对电话中的儿子说本镜第1句英语对白，把家庭约定排进日程。他把纸巾放桌边，左手重新拿笔，在一张干净餐巾上写时间。孩子似乎要把电话递给别人，他把笔放回桌面，立刻压低声音。沃德对电话中的儿子说本镜第2句英语对白，太快回绝，随后放缓。 对面没有立刻结束这个话题，他听完才把餐巾上写错的时间划掉重写。",
+      "end": "未写完的时间留餐巾、笔已桌面；电话右耳，左手收资料。",
+      "sound": "手机人声不可辨、餐厅低语",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E02-D007",
+          "speaker": "沃德",
+          "listener": "电话中的儿子",
+          "text": "Saturday's fine. What time did your mom say?",
+          "translationZh": "周六可以。你妈说几点？",
+          "tone": "把家庭约定排进日程",
+          "start": 0.6,
+          "end": 4.76
+        },
+        {
+          "id": "E02-D110",
+          "speaker": "沃德",
+          "listener": "电话中的儿子",
+          "text": "No, don't put her on. Text me.",
+          "translationZh": "不用，别让她接。发消息给我。",
+          "tone": "太快回绝，随后放缓",
+          "start": 5.59,
+          "end": 9.27
+        }
+      ],
+      "overlay": [],
+      "next": "同场离开早餐厅",
+      "viewerEntry": "他把工作问题留到周一。",
+      "viewerExit": "周六约定需要绕开分居伴侣，家庭并未统一等待他。",
+      "cutTrigger": "未写完的时间停在餐巾上，服务员再次来收盘。",
+      "extraRoleIds": [
+        "WARD-CHILD-VOICE"
+      ],
+      "broadcastEpisode": 1,
+      "displayId": "EP01-009"
+    },
+    {
+      "id": "E02-SH008",
+      "sceneId": "E02-SC02",
+      "duration": 16,
+      "characters": [
+        "WARD"
+      ],
+      "purpose": "私人通话延续到案发门前。",
+      "framing": "中全景，东桌西侧向南门",
+      "composition": "桌前景，南出口后景",
+      "camera": "固定东桌西侧向南门中全景，允许为忘拿的笔折返；不跟出门增加无效路程。",
+      "focus": "人及桌面取笔动作同层，离场才跟焦。",
+      "start": "资料叠起，手机右耳",
+      "action": "服务员终于端走盘子。沃德抽回资料塞进公文袋，把薄袋夹在左腋。沃德对电话中的儿子说本镜第1句英语对白，用熟悉的小事续住电话。他离开椅子，经过南门前回看桌面，发现笔还在，返一步用左手拿走笔，插进袋边笔环，电话一直没挂。 他把改过时间的餐巾折好收进左袋，再走出南门，电话一直未断。",
+      "end": "薄公文袋夹左腋，电话右耳，笔收袋边笔环，离早餐厅。",
+      "sound": "椅脚、收盘、袋边笔环轻碰，儿子仅不可辨听筒底声。",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E02-D008",
+          "speaker": "沃德",
+          "listener": "电话中的儿子",
+          "text": "Tell me about the plane. I'm heading out.",
+          "translationZh": "跟我说说飞机模型。我正往外走。",
+          "tone": "用熟悉的小事续住电话",
+          "start": 0.6,
+          "end": 4.76
+        }
+      ],
+      "overlay": [],
+      "next": "本场结果成立后切入 E02-SC03（HOTEL，清晨·枪响时）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "viewerEntry": "孩子仍在电话上，早餐时间已经用完。",
+      "viewerExit": "私人通话延续到案发门前。",
+      "cutTrigger": "他拿笔再次出南门，街道倒车提示进入。",
+      "extraRoleIds": [
+        "WAITER-HOTEL",
+        "WARD-CHILD-VOICE"
+      ],
+      "broadcastEpisode": 1,
+      "displayId": "EP01-010"
+    },
+    {
+      "id": "E02-SH009",
+      "sceneId": "E02-SC03",
+      "duration": 24,
+      "characters": [
+        "WARD",
+        "LUIGI-STREET"
+      ],
+      "purpose": "普通人各忙自己的事，西边来者还可以继续经过。",
+      "framing": "全景，酒店西南朝东北",
+      "composition": "北旋转门，东行李员，南车道",
+      "camera": "固定西南全景，北门南车道东上客位同框；青年从西缘进入。",
+      "focus": "门前三层关系保持可读，不选武器为焦点。",
+      "start": "沃德北门外右耳电话、薄公文袋夹左腋；东行李员收箱，青年将入西缘。",
+      "action": "沃德从北旋转门出来，薄袋夹左腋电话贴右耳；行李员对旅客说原有提醒，沃德让箱、取会议卡后回答儿子周六与机翼问题。卡收回左袋；青年在西人行道出现。",
+      "end": "沃德卡已回左袋，电话右耳；路易吉从西人行道进入视线，行李员仍东门边。",
+      "sound": "旋转门、箱轮、南侧车流",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E02-D009",
+          "speaker": "行李员",
+          "listener": "旅客",
+          "text": "Not that one. Just wait by the door, please.",
+          "translationZh": "不是那辆。先在门边等，好吗？",
+          "tone": "纠正旅客，注意在行李而非青年",
+          "start": 1,
+          "end": 4.83
+        },
+        {
+          "id": "E01-D010",
+          "speaker": "沃德",
+          "listener": "电话中的儿子",
+          "text": "Saturday. I said Saturday. What happened to the wing?",
+          "translationZh": "周六，我说了周六。翅膀又怎么了？",
+          "tone": "先不耐烦重复约定，听到模型后改变话题",
+          "start": 10,
+          "end": 13.83
+        }
+      ],
+      "overlay": [],
+      "next": "同场中景，电话与西侧来人",
+      "viewerEntry": "电话没挂，地点回到已见过的案发酒店。",
+      "viewerExit": "普通人各忙自己的事，西边来者还可以继续经过。",
+      "cutTrigger": "灰夹克进入西侧空隙，沃德仍朝南。",
+      "sourceShotIds": [
+        "E02-SH009",
+        "E01-SH010"
+      ],
+      "extraRoleIds": [
+        "BELLHOP",
+        "WARD-CHILD-VOICE"
+      ],
+      "broadcastEpisode": 1,
+      "displayId": "EP01-011"
+    },
+    {
+      "id": "E02-SH010",
+      "sceneId": "E02-SC03",
+      "duration": 17,
+      "characters": [
+        "WARD",
+        "LUIGI-STREET"
+      ],
+      "purpose": "路易吉主动放弃路过，转向目标。",
+      "framing": "中全景，西南向东北，轴西侧；沃德中右，青年中左，能见步伐和上身。",
+      "composition": "沃德北门南沿中右，路易吉西人行道中左，南车道留出现实出口。",
+      "camera": "固定西南中全景，两个人的选择同框，不只拍沃德脸。",
+      "focus": "二人保持可读景深，不切焦把青年变成突然出现的幻影。",
+      "start": "沃德手机右耳、会议卡回左袋；青年由西向东行。",
+      "action": "沃德左手比划机翼，说完桌上放置与周六一起修的承诺。路易吉由西向东认出他，停步后主动转肩面向沃德，未继续路过。沃德放低手机仍听儿子。",
+      "end": "青年转向沃德；沃德手机开始离耳，无其他持械者。",
+      "sound": "电话、垃圾车倒车提示，脚步短停",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E02-D010",
+          "speaker": "沃德",
+          "listener": "电话中的儿子",
+          "text": "Leave it on my desk. Not the kitchen table. We can fix it Saturday.",
+          "translationZh": "放我书桌上，别放厨房桌。周六我们一起修。",
+          "tone": "先纠正模型放置位置，最后一句对儿子放软；此承诺全剧只完整听到一次",
+          "start": 0.6,
+          "end": 7.62
+        }
+      ],
+      "overlay": [],
+      "next": "保持方向，以声响呈现枪击",
+      "viewerEntry": "青年从西来路进入，沃德不知道自己被认出。",
+      "viewerExit": "路易吉主动放弃路过，转向目标。",
+      "cutTrigger": "青年肩膀转定、重心向沃德移动。",
+      "sourceShotIds": [
+        "E02-SH010",
+        "E01-SH011"
+      ],
+      "extraRoleIds": [
+        "WARD-CHILD-VOICE"
+      ],
+      "broadcastEpisode": 1,
+      "displayId": "EP01-012"
+    },
+    {
+      "id": "E02-SH011",
+      "sceneId": "E02-SC03",
+      "duration": 10,
+      "characters": [
+        "WARD",
+        "LUIGI-STREET"
+      ],
+      "purpose": "迈步、枪响与倒下是路易吉主动行为的连续后果。",
+      "framing": "中全景，西南侧，轴西侧",
+      "composition": "沃德近北门；青年西侧；路缘南",
+      "camera": "固定西南中全景保留空间因果；不摇追逃路，不给操作与伤口细节。",
+      "focus": "保持迈步与倒下的关系，地面仅见衣角和手机。",
+      "start": "路易吉注视沃德，手臂在身体前低处",
+      "action": "路易吉朝沃德迈一步，手臂在身前抬起，操作细节不显露。两声枪响，手机掉地，门边杯子滚向路缘。行李员蹲到柱后。路易吉看见沃德倒下，停一瞬，转身从西侧离开。",
+      "end": "沃德地面仅露衣角，手机仍亮；青年离西侧，无第二枪手。",
+      "sound": "两下枪声、碎裂杯盖、现场惊呼不可辨",
+      "music": "无背景音乐",
+      "dialogue": [],
+      "overlay": [],
+      "next": "枪声后留物件，再切警方回报",
+      "viewerEntry": "青年已经选择改变行进方向。",
+      "viewerExit": "迈步、枪响与倒下是路易吉主动行为的连续后果。",
+      "cutTrigger": "青年离开后，行李员才探出一点视线。",
+      "sourceShotIds": [
+        "E02-SH011",
+        "E01-SH012"
+      ],
+      "extraRoleIds": [
+        "BELLHOP",
+        "WARD-CHILD-VOICE"
+      ],
+      "broadcastEpisode": 1,
+      "displayId": "EP01-013"
+    },
+    {
+      "id": "E02-SH012",
+      "sceneId": "E02-SC03",
+      "duration": 13,
+      "characters": [
+        "OFFICER-HOTEL-A/B"
+      ],
+      "purpose": "离开画面不能撤销案发前到场的影像。",
+      "framing": "全景，南侧封锁线向北酒店",
+      "composition": "前景警员，北门旁监控机罩可见",
+      "camera": "固定南封锁线外全景，以原杯子接回时间省略；不新增杜撰监控内容。",
+      "focus": "警方走向北门可读，摄像机是后景物，不读屏。",
+      "start": "时间跳至警方到场；青年不在，杯子位置保持。",
+      "action": "稍后南路缘拉起封锁线，那只纸杯还停在路边。警员甲问行李员，指向酒店门口摄像机。警员甲对警员乙与酒店值班人员说本镜第1句英语对白，把调查倒回主动到场。行李员指西边来路，手还在抖。乙带值班人员进北门，甲看一眼杯子，又抬头看摄像机。",
+      "end": "乙和酒店人员北门内，甲南路缘，影像调取开始。",
+      "sound": "无线电压缩声、封锁带拍风、远处警笛",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E02-D011",
+          "speaker": "警员甲",
+          "listener": "警员乙与酒店值班人员",
+          "text": "Get the footage from before the shots, too. I want to see him coming in.",
+          "translationZh": "枪响以前的监控也拿来。我得看他怎么来的。",
+          "tone": "把调查倒回主动到场",
+          "start": 0.6,
+          "end": 8.09
+        }
+      ],
+      "overlay": [],
+      "next": "本集结束。沃德倒下，青年离场，警方调取监控；下一集追问这次行动把青年带到了哪里。 下集从STATION展开：青年还能找到停留的地方吗；玛拉能否把照顾孩子和额外班次接起来？",
+      "viewerEntry": "行凶者离开，但现场有独立目击者和固定记录。",
+      "viewerExit": "离开画面不能撤销案发前到场的影像。",
+      "cutTrigger": "酒店人员带警员进入北门，摄像机留在门上方。",
+      "extraRoleIds": [
+        "BELLHOP",
+        "OFFICER-HOTEL-A/B"
+      ],
+      "broadcastEpisode": 1,
+      "displayId": "EP01-014"
+    }
+  ]
+}

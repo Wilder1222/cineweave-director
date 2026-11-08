@@ -1,0 +1,170 @@
+{
+  "version": "3.2.2",
+  "method": "5 warmups + 30 measured samples per mode and query, alternating order; same current source; read and render only",
+  "node": "v22.15.0",
+  "platform": "win32",
+  "results": [
+    {
+      "id": "pair",
+      "queries": [
+        "CG11",
+        "MU14"
+      ],
+      "cardIds": [
+        "CG11@r2",
+        "MU14@r3"
+      ],
+      "fullCatalogUtf8Bytes": 148880,
+      "selectedPayloadUtf8Bytes": 9736,
+      "payloadReduction": 0.9346050510478238,
+      "fullCatalogLocalMs": {
+        "samples": 30,
+        "min": 1.6287999999999556,
+        "median": 1.8752000000000635,
+        "p95": 4.0791000000000395
+      },
+      "selectedLocalMs": {
+        "samples": 30,
+        "min": 3.425799999999981,
+        "median": 4.3600999999999885,
+        "p95": 5.522699999999986
+      },
+      "selectedRulesByteIdentical": true
+    },
+    {
+      "id": "names",
+      "queries": [
+        "宋韵清雅古偶柔光",
+        "杏露薄妆清雅日常"
+      ],
+      "cardIds": [
+        "CG11@r2",
+        "MU14@r3"
+      ],
+      "fullCatalogUtf8Bytes": 148880,
+      "selectedPayloadUtf8Bytes": 9736,
+      "payloadReduction": 0.9346050510478238,
+      "fullCatalogLocalMs": {
+        "samples": 30,
+        "min": 1.4769000000000005,
+        "median": 2.0715000000000146,
+        "p95": 4.184500000000071
+      },
+      "selectedLocalMs": {
+        "samples": 30,
+        "min": 3.344000000000051,
+        "median": 4.6218000000000075,
+        "p95": 7.546500000000037
+      },
+      "selectedRulesByteIdentical": true
+    },
+    {
+      "id": "color_only",
+      "queries": [
+        "CG11"
+      ],
+      "cardIds": [
+        "CG11@r2"
+      ],
+      "fullCatalogUtf8Bytes": 148880,
+      "selectedPayloadUtf8Bytes": 6871,
+      "payloadReduction": 0.9538487372380441,
+      "fullCatalogLocalMs": {
+        "samples": 30,
+        "min": 1.4686000000001513,
+        "median": 1.7737999999999374,
+        "p95": 2.4023000000001957
+      },
+      "selectedLocalMs": {
+        "samples": 30,
+        "min": 3.461999999999989,
+        "median": 3.904899999999998,
+        "p95": 4.901200000000017
+      },
+      "selectedRulesByteIdentical": true
+    },
+    {
+      "id": "makeup_only",
+      "queries": [
+        "MU14"
+      ],
+      "cardIds": [
+        "MU14@r3"
+      ],
+      "fullCatalogUtf8Bytes": 148880,
+      "selectedPayloadUtf8Bytes": 2864,
+      "payloadReduction": 0.9807630306286943,
+      "fullCatalogLocalMs": {
+        "samples": 30,
+        "min": 1.4658999999999196,
+        "median": 1.8836999999998625,
+        "p95": 2.8017999999999574
+      },
+      "selectedLocalMs": {
+        "samples": 30,
+        "min": 3.3987999999999374,
+        "median": 4.177899999999909,
+        "p95": 4.811200000000099
+      },
+      "selectedRulesByteIdentical": true
+    },
+    {
+      "id": "local_lips",
+      "queries": [
+        "MU28"
+      ],
+      "cardIds": [
+        "MU28@r1"
+      ],
+      "fullCatalogUtf8Bytes": 148880,
+      "selectedPayloadUtf8Bytes": 3247,
+      "payloadReduction": 0.978190488984417,
+      "fullCatalogLocalMs": {
+        "samples": 30,
+        "min": 1.5518999999999323,
+        "median": 1.8243999999999687,
+        "p95": 2.1734999999998763
+      },
+      "selectedLocalMs": {
+        "samples": 30,
+        "min": 3.466699999999946,
+        "median": 4.020000000000209,
+        "p95": 4.886300000000119
+      },
+      "selectedRulesByteIdentical": true
+    },
+    {
+      "id": "animation",
+      "queries": [
+        "CG31",
+        "MU37"
+      ],
+      "cardIds": [
+        "CG31@r1",
+        "MU37@r1"
+      ],
+      "fullCatalogUtf8Bytes": 148880,
+      "selectedPayloadUtf8Bytes": 3023,
+      "payloadReduction": 0.9796950564212789,
+      "fullCatalogLocalMs": {
+        "samples": 30,
+        "min": 1.4202000000000226,
+        "median": 1.7835999999999785,
+        "p95": 2.2696999999998297
+      },
+      "selectedLocalMs": {
+        "samples": 30,
+        "min": 3.405899999999974,
+        "median": 3.9939999999999145,
+        "p95": 4.662699999999859
+      },
+      "selectedRulesByteIdentical": true
+    }
+  ],
+  "limitations": [
+    "Both modes read both full local documents; disk I/O is not reduced.",
+    "Targeted parsing may take longer locally; returned context size is a separate metric.",
+    "No inference tokens, end-to-end model latency or media quality is measured.",
+    "Full catalog mode is a controlled reference, not a claim about historical behavior."
+  ]
+}

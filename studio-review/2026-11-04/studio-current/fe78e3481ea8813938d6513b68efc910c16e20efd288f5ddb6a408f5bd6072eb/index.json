@@ -1,0 +1,48 @@
+{
+  "topicId": "V010",
+  "projectId": "fe78e3481ea8813938d6513b68efc910c16e20efd288f5ddb6a408f5bd6072eb",
+  "projectTitle": "凌晨三点的订单",
+  "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=fe78e3481ea8813938d6513b68efc910c16e20efd288f5ddb6a408f5bd6072eb#scripts",
+  "transport": "authorized_browser_ui_dom",
+  "currentRevision": null,
+  "exportComplete": true,
+  "documents": [
+    {
+      "documentId": "7b6dda84f6370f1ce682deccb223b09589817df6e3d1f88760acaeb23d4fd2da",
+      "metadata": "提示词",
+      "title": "V010 凌晨三点的订单｜审阅与来源｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "2db33ee9b7a1327fda904b145a2ec6b6c041d33ef80b28c36e8e819b473fdb7b",
+      "bodyLength": 800,
+      "readAt": "2026-11-04T06:52:58.663Z",
+      "file": "7b6dda84f6370f1ce682deccb223b09589817df6e3d1f88760acaeb23d4fd2da.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=fe78e3481ea8813938d6513b68efc910c16e20efd288f5ddb6a408f5bd6072eb#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "e06fe095ac4b24200fdb48366439dc1af43eb1d3fcd2c9669240df8f58f24438",
+      "metadata": "提示词",
+      "title": "V010 凌晨三点的订单｜分镜与视频提示｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "2bce1d1e1e7f60523f4042f03513af77a18aa7309f42f608875b0335090cd807",
+      "bodyLength": 12449,
+      "readAt": "2026-11-04T06:53:06.723Z",
+      "file": "e06fe095ac4b24200fdb48366439dc1af43eb1d3fcd2c9669240df8f58f24438.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=fe78e3481ea8813938d6513b68efc910c16e20efd288f5ddb6a408f5bd6072eb#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "e926ff7be25cdd2fe7eb6e8ba5868fbd648cd2257ed95810cb9bc2e46d62e4cd",
+      "metadata": "剧本",
+      "title": "V010 凌晨三点的订单｜剧本｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "d06a6d728bcd761bcbdb4bd35a0a6d4019c65fc8ad47aab4c70056fc9dec7c50",
+      "bodyLength": 844,
+      "readAt": "2026-11-04T06:53:14.985Z",
+      "file": "e926ff7be25cdd2fe7eb6e8ba5868fbd648cd2257ed95810cb9bc2e46d62e4cd.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=fe78e3481ea8813938d6513b68efc910c16e20efd288f5ddb6a408f5bd6072eb#scripts",
+      "proposals": []
+    }
+  ],
+  "exportedAt": "2026-11-04T06:53:19.624Z"
+}

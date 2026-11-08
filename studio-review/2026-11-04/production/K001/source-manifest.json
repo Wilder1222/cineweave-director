@@ -1,0 +1,48 @@
+{
+  "topicId": "K001",
+  "projectId": "145484a0b528d0f98580d83dffe30dfc8bd1707bae9290267cdc67d6b5d0d173",
+  "currentRevision": null,
+  "sourcePins": [
+    {
+      "documentId": "cab9d88ee28c1cca461d4db8aaf08c57c29f39a370d15d2b5020780e4525d844",
+      "title": "K001 隔壁的机甲驾驶员｜剧本｜20261031审阅版",
+      "sha256": "0992a2e04a007b3b26bf5ae911fc8bc73d5d46af893d831d422f499f36617d22",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:38:34.204Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts"
+    },
+    {
+      "documentId": "a88d870ba6032789f38d0ba73713ada4d1cdb9c47bd370985280f1ac473ce0a8",
+      "title": "K001 隔壁的机甲驾驶员｜分镜与视频提示｜20261031审阅版",
+      "sha256": "9ed79ec164068610bdd25ae7e72958f8cac77c904160d08712c0d7f724f194c6",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:38:27.640Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts"
+    },
+    {
+      "documentId": "eb380d3ec00a76ef4071719b0b48faff87c5012d8b1b453e824384ce45aa22fd",
+      "title": "K001 隔壁的机甲驾驶员｜审阅与来源｜20261031审阅版",
+      "sha256": "a63e58855d4e5bf8977f7f279debe99fa24e84987740bcb660217b5e051eb611",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:38:17.794Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts"
+    }
+  ],
+  "patches": [
+    {
+      "documentId": "cab9d88ee28c1cca461d4db8aaf08c57c29f39a370d15d2b5020780e4525d844",
+      "before": "周野退墙边拨物业值班，说明大型机械不稳，请通知车道住户暂离并联系应急人员：“我已经报了位置。”",
+      "after": "周野退墙边拨物业值班，只听见他单侧说：“车库大型机械不稳，请通知车道住户暂离，并联系应急人员。”他结束通话对林岑说：“我已经报了位置。”",
+      "reason": "把已存在报位置行为落实成可录制准确电话台词，不新增对端声音或已处理结论。"
+    },
+    {
+      "documentId": "a88d870ba6032789f38d0ba73713ada4d1cdb9c47bd370985280f1ac473ce0a8",
+      "before": "周野退墙边拨物业值班，说明大型机械不稳，请通知车道住户暂离并联系应急人员：“我已经报了位置。”",
+      "after": "周野退墙边拨物业值班，只听见他单侧说：“车库大型机械不稳，请通知车道住户暂离，并联系应急人员。”他结束通话对林岑说：“我已经报了位置。”",
+      "reason": "把已存在报位置行为落实成可录制准确电话台词，不新增对端声音或已处理结论。"
+    }
+  ],
+  "candidate": true,
+  "authorApproved": false,
+  "rawSourceUnchanged": true
+}

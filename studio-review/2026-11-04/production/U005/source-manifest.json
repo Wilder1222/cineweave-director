@@ -1,0 +1,36 @@
+{
+  "topicId": "U005",
+  "projectId": "c820c2201081d0b5c85c09997e601e7df4c0763b764b57a835da0fd5cebac16a",
+  "transport": "authorized_browser_ui_dom",
+  "currentRevision": null,
+  "sourcePins": [
+    {
+      "documentId": "1992c1fdb21d83f40bda61f7676de808b20fa5a2f7572ce0ed7735bd8b2f5bc8",
+      "title": "U005 女仙的面试｜剧本｜20261031审阅版",
+      "sha256": "14bd7478472b6854a47ef0429d3811b5d5eca56eaa78002a46df5145782f14de",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:41:25.258Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=c820c2201081d0b5c85c09997e601e7df4c0763b764b57a835da0fd5cebac16a#scripts"
+    },
+    {
+      "documentId": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb",
+      "title": "U005 女仙的面试｜分镜与视频提示｜20261031审阅版",
+      "sha256": "c5896cd92f91ad0d13086621b7c0a94e93a95bf06f5041f7541a424cd56f3644",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:41:17.870Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=c820c2201081d0b5c85c09997e601e7df4c0763b764b57a835da0fd5cebac16a#scripts"
+    },
+    {
+      "documentId": "d7ff4501b918726d00e890fb73cdbaecb444957e532a4e09eb12cd714d78de58",
+      "title": "U005 女仙的面试｜审阅与来源｜20261031审阅版",
+      "sha256": "30e279021f8fff224b1722412e1ab91b3fa1d15c2a8bab88b427777436fdf6bf",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:41:10.260Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=c820c2201081d0b5c85c09997e601e7df4c0763b764b57a835da0fd5cebac16a#scripts"
+    }
+  ],
+  "patches": [],
+  "candidate": true,
+  "authorApproved": false,
+  "rawSourceUnchanged": true
+}

@@ -1,0 +1,33 @@
+{
+  "checkedAt": "2026-11-08",
+  "cases": 29,
+  "sourcePages": 26,
+  "sourceProcessFactsMatchMarkdownAndHtml": true,
+  "caseAnchors": 29,
+  "ageFilters": {
+    "infant": 13,
+    "unknown": 1,
+    "toddler": 15
+  },
+  "localLinksChecked": 11,
+  "inlineJavaScriptSyntax": "passed",
+  "existingStorySourceHashesUnchanged": true,
+  "existingStorySourceHashes": {
+    "B": "6516b70e0bc07200f57e7eea19dbbb056dbf6d0dd806dd37276a70fc9b5431e0",
+    "F": "f3a88e509acbd802077e4872fdf0bbdc88a9971b15ba76d105e6f5704dcde8b8",
+    "G": "38d362be3a4db205b7e3c441f3047b0690fbdad5e8374323b5934f2982aea367"
+  },
+  "crossReadCases": [
+    "RT01",
+    "RT03",
+    "RT07",
+    "ZH01",
+    "ZH06",
+    "TD07"
+  ],
+  "crossReadCorrection": "Removed inferred reason for getting contact lenses from RT07 reported adult action.",
+  "browserInteractions": "not tested; file URL observation was blocked in an earlier turn and restricted route not retried",
+  "independentEventVerification": false,
+  "videoObserved": false,
+  "errors": []
+}

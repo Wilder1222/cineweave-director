@@ -1,0 +1,177 @@
+{
+  "fps": 24,
+  "timingVerified": false,
+  "lipSyncVerified": false,
+  "cues": [
+    {
+      "shotId": "U002-01",
+      "speaker": "周砚",
+      "text": "这里填公历。",
+      "addressee": "小满",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 52,
+      "endFrameExclusive": 271,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U002-01",
+      "speaker": "小满",
+      "text": "这样？",
+      "addressee": "周砚",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 271,
+      "endFrameExclusive": 380,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U002-02",
+      "speaker": "周砚",
+      "text": "您以前的户口或证件呢？",
+      "addressee": "小满",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 490,
+      "endFrameExclusive": 657,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U002-02",
+      "speaker": "小满",
+      "text": "没有。我来，就是想办一个。",
+      "addressee": "周砚",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 657,
+      "endFrameExclusive": 854,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U002-03",
+      "speaker": "小满",
+      "text": "这是我和徐阿婆。她现在住院了，我想去做她的联系人，人家让我带证件。",
+      "addressee": "周砚",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 993,
+      "endFrameExclusive": 1299,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U002-03",
+      "speaker": "小满",
+      "text": "藏得不太稳。",
+      "addressee": "周砚",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 1299,
+      "endFrameExclusive": 1355,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U002-03",
+      "speaker": "周砚",
+      "text": "这张照片，暂时不能证明您的身份。",
+      "addressee": "小满",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 1355,
+      "endFrameExclusive": 1503,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U002-04",
+      "speaker": "小满",
+      "text": "那我改年轻一点？你说填哪年。",
+      "addressee": "周砚",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 1653,
+      "endFrameExclusive": 1740,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U002-04",
+      "speaker": "周砚",
+      "text": "不能填假的。",
+      "addressee": "小满",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 1740,
+      "endFrameExclusive": 1776,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U002-04",
+      "speaker": "小满",
+      "text": "真的也不行，假的也不行。那我怎么办？",
+      "addressee": "周砚",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 1776,
+      "endFrameExclusive": 1887,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U002-04",
+      "speaker": "周砚",
+      "text": "我不能现在给您办证。先把住过哪里、认识谁写下来，我帮您问核查途径。",
+      "addressee": "小满",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 1887,
+      "endFrameExclusive": 2091,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U002-05",
+      "speaker": "小满",
+      "text": "河沿巷，徐家后院。还有补鞋钱家的女儿，她认识我。",
+      "addressee": "周砚",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 2241,
+      "endFrameExclusive": 2468,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U002-05",
+      "speaker": "周砚",
+      "text": "下午按这个地址去咨询。后面需要什么，以核查的人告诉您的为准。",
+      "addressee": "小满",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 2468,
+      "endFrameExclusive": 2751,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U002-06",
+      "speaker": "小满",
+      "text": "赔你的笔帽。",
+      "addressee": "周砚",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 2924,
+      "endFrameExclusive": 3004,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U002-06",
+      "speaker": "周砚",
+      "text": "我以为你没带笔。",
+      "addressee": "小满",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 3004,
+      "endFrameExclusive": 3110,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U002-06",
+      "speaker": "小满",
+      "text": "带了。没想到要撬盒子。",
+      "addressee": "周砚",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 3110,
+      "endFrameExclusive": 3256,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U002-06",
+      "speaker": "小满",
+      "text": "晓英？我是小满。徐阿婆家后院那个小满。",
+      "addressee": "周砚",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 3256,
+      "endFrameExclusive": 3508,
+      "timingStatus": "authored_window_pending_measurement"
+    }
+  ]
+}

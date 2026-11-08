@@ -7,7 +7,7 @@
     "kind": "cineweave_codex_shot_spec",
     "id": "shot.rain-courtyard-recognition-v1",
     "version": 1,
-    "contentHash": "sha256:47ecc379955cbfd7a44c43c6c37b781d10f2aef57f05b0173a4c41d4d199c95f"
+    "contentHash": "sha256:7b54e956abf0f67c42f5b92abde465a37389d44b8f9a373882fe360d0b554229"
   },
   "sceneBindingRef": {
     "kind": "scene_binding",
@@ -19,7 +19,7 @@
     "kind": "cineweave_codex_temporal_spec",
     "id": "temporal.rain-courtyard-recognition-v1",
     "version": 1,
-    "contentHash": "sha256:4d1654ec389b9a574e3aa302efb2bf2471d8efec16bd135a7e6ef680fe2cb421"
+    "contentHash": "sha256:187f392d1a385aa786541682d6e846d045f34f26f28c211af0357f2b31f3b4a0"
   },
   "skillReceipt": {
     "repository": "https://github.com/Wilder1222/cineweave-director",

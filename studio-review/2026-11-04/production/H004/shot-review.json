@@ -1,0 +1,996 @@
+{
+  "source": {
+    "type": "design",
+    "id": "H004-production-r1",
+    "version": 1,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "H004-01A",
+    "H004-01B",
+    "H004-02A",
+    "H004-02B",
+    "H004-03A",
+    "H004-03B",
+    "H004-03C",
+    "H004-04A",
+    "H004-04B"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "H004-01A",
+      "status": "pass",
+      "criterion": "米后沙落盘首先让实物反驳袋数",
+      "observation": "米后沙落盘首先让实物反驳袋数",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L7–L26"
+    },
+    {
+      "role": "performance",
+      "shotId": "H004-01A",
+      "status": "pass",
+      "criterion": "倒完才落斗，闻绢按袋不假装看到账外真数",
+      "observation": "倒完才落斗，闻绢按袋不假装看到账外真数",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L7–L26"
+    },
+    {
+      "role": "staging",
+      "shotId": "H004-01A",
+      "status": "pass",
+      "criterion": "斗入态已舀好，盘接米沙、斗停盘旁，袋口仍薄米",
+      "observation": "斗入态已舀好，盘接米沙、斗停盘旁，袋口仍薄米",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L7–L26"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H004-01A",
+      "status": "pass",
+      "criterion": "斜俯近景使粒径和两手可辨，焦点斗口与盘同面",
+      "observation": "斜俯近景使粒径和两手可辨，焦点斗口与盘同面",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L7–L26"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H004-01A",
+      "status": "pass",
+      "criterion": "12秒只倒斗呈证据，不新增切开全袋的镜头",
+      "observation": "12秒只倒斗呈证据，不新增切开全袋的镜头",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L7–L26"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H004-01A",
+      "status": "pass",
+      "criterion": "下镜盘米沙混杂、斗盘旁、袋薄米不复满",
+      "observation": "下镜盘米沙混杂、斗盘旁、袋薄米不复满",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L7–L26"
+    },
+    {
+      "role": "direction",
+      "shotId": "H004-01B",
+      "status": "pass",
+      "criterion": "昨夜八袋与今晚待核分开，袋数不等粮量",
+      "observation": "昨夜八袋与今晚待核分开，袋数不等粮量",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L27–L46"
+    },
+    {
+      "role": "performance",
+      "shotId": "H004-01B",
+      "status": "pass",
+      "criterion": "程简看盘才问，闻绢说明后两人听无词唱筹",
+      "observation": "程简看盘才问，闻绢说明后两人听无词唱筹",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L27–L46"
+    },
+    {
+      "role": "staging",
+      "shotId": "H004-01B",
+      "status": "pass",
+      "criterion": "二人不移动米沙，外帐缝不出可辨人影",
+      "observation": "二人不移动米沙，外帐缝不出可辨人影",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L27–L46"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H004-01B",
+      "status": "pass",
+      "criterion": "桌侧近中景含盘与袋口，注意按台词从实物到脸",
+      "observation": "桌侧近中景含盘与袋口，注意按台词从实物到脸",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L27–L46"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H004-01B",
+      "status": "pass",
+      "criterion": "20秒保今晚待再核限定，不自动报精确吨数",
+      "observation": "20秒保今晚待再核限定，不自动报精确吨数",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L27–L46"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H004-01B",
+      "status": "pass",
+      "criterion": "02A转账桌时双方空手，斗仍盘旁",
+      "observation": "02A转账桌时双方空手，斗仍盘旁",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L27–L46"
+    },
+    {
+      "role": "direction",
+      "shotId": "H004-02A",
+      "status": "pass",
+      "criterion": "程简承认核袋未核粮，责任不是抽象反腐议论",
+      "observation": "程简承认核袋未核粮，责任不是抽象反腐议论",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L47–L66"
+    },
+    {
+      "role": "performance",
+      "shotId": "H004-02A",
+      "status": "pass",
+      "criterion": "翻到昨夜页才承认承诺，闻绢指出真数给分粮者",
+      "observation": "翻到昨夜页才承认承诺，闻绢指出真数给分粮者",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L47–L66"
+    },
+    {
+      "role": "staging",
+      "shotId": "H004-02A",
+      "status": "pass",
+      "criterion": "程简空手回桌翻账，锅与两牍桌后可取",
+      "observation": "程简空手回桌翻账，锅与两牍桌后可取",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L47–L66"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H004-02A",
+      "status": "pass",
+      "criterion": "桌前中景轻俯账册但不遮二人回应",
+      "observation": "桌前中景轻俯账册但不遮二人回应",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L47–L66"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H004-02A",
+      "status": "pass",
+      "criterion": "22秒不写外账已分粮，真数仍需核",
+      "observation": "22秒不写外账已分粮，真数仍需核",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L47–L66"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H004-02A",
+      "status": "pass",
+      "criterion": "账页展开，下镜闻绢才取第一片",
+      "observation": "账页展开，下镜闻绢才取第一片",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L47–L66"
+    },
+    {
+      "role": "direction",
+      "shotId": "H004-02B",
+      "status": "pass",
+      "criterion": "需扶人数与米量分片，限定需再核而非伪装精确",
+      "observation": "需扶人数与米量分片，限定需再核而非伪装精确",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L67–L86"
+    },
+    {
+      "role": "performance",
+      "shotId": "H004-02B",
+      "status": "pass",
+      "criterion": "递人数片后程简写另一片，写完笔落桌",
+      "observation": "递人数片后程简写另一片，写完笔落桌",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L67–L86"
+    },
+    {
+      "role": "staging",
+      "shotId": "H004-02B",
+      "status": "pass",
+      "criterion": "两片并桌，笔留，双手释放为后续扫米",
+      "observation": "两片并桌，笔留，双手释放为后续扫米",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L67–L86"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H004-02B",
+      "status": "pass",
+      "criterion": "纸面斜俯近景保两片同时可辨，未读字由后期排",
+      "observation": "纸面斜俯近景保两片同时可辨，未读字由后期排",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L67–L86"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H004-02B",
+      "status": "pass",
+      "criterion": "17秒一片写米沙混杂需再核，不让两牍熔成账册",
+      "observation": "17秒一片写米沙混杂需再核，不让两牍熔成账册",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L67–L86"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H004-02B",
+      "status": "pass",
+      "criterion": "03A两牍仍桌、碗旁待用，笔未跟到袋边",
+      "observation": "03A两牍仍桌、碗旁待用，笔未跟到袋边",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L67–L86"
+    },
+    {
+      "role": "direction",
+      "shotId": "H004-03A",
+      "status": "pass",
+      "criterion": "上肩米层裂口威胁伪装，护米出自真实食物价值",
+      "observation": "上肩米层裂口威胁伪装，护米出自真实食物价值",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L87–L106"
+    },
+    {
+      "role": "performance",
+      "shotId": "H004-03A",
+      "status": "pass",
+      "criterion": "米先落他才问再扫进碗，闻绢不替外人下结论",
+      "observation": "米先落他才问再扫进碗，闻绢不替外人下结论",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L87–L106"
+    },
+    {
+      "role": "staging",
+      "shotId": "H004-03A",
+      "status": "pass",
+      "criterion": "候选裂口定位上肩米层",
+      "observation": "候选裂口定位上肩米层；碗扫地米有灰不混净米",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L87–L106"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H004-03A",
+      "status": "pass",
+      "criterion": "袋侧低机位同时含裂口与地碗，上肩不能被画成底角",
+      "observation": "袋侧低机位同时含裂口与地碗，上肩不能被画成底角",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L87–L106"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H004-03A",
+      "status": "pass",
+      "criterion": "23秒不露割袋者/刀手，保持外人身份未知",
+      "observation": "23秒不露割袋者/刀手，保持外人身份未知",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L87–L106"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H004-03A",
+      "status": "pass",
+      "criterion": "程简护灰米碗，闻绢下镜掀缝才露沙",
+      "observation": "程简护灰米碗，闻绢下镜掀缝才露沙",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L87–L106"
+    },
+    {
+      "role": "direction",
+      "shotId": "H004-03B",
+      "status": "pass",
+      "criterion": "近脚步才触发借米，决定付出食物不是炫计",
+      "observation": "近脚步才触发借米，决定付出食物不是炫计",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L107–L126"
+    },
+    {
+      "role": "performance",
+      "shotId": "H004-03B",
+      "status": "pass",
+      "criterion": "闻绢掀灰沙→听脚步近→伸手请求→程简犹豫交",
+      "observation": "闻绢掀灰沙→听脚步近→伸手请求→程简犹豫交",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L107–L126"
+    },
+    {
+      "role": "staging",
+      "shotId": "H004-03B",
+      "status": "pass",
+      "criterion": "他送碗，她双手接稳后他才松，碗无无主相位",
+      "observation": "他送碗，她双手接稳后他才松，碗无无主相位",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L107–L126"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H004-03B",
+      "status": "pass",
+      "criterion": "原轴近中景兼见灰沙与两人托碗，焦点不只孤立脸",
+      "observation": "原轴近中景兼见灰沙与两人托碗，焦点不只孤立脸",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L107–L126"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H004-03B",
+      "status": "pass",
+      "criterion": "17秒保接受—松手修复，不额外生成外人影",
+      "observation": "17秒保接受—松手修复，不额外生成外人影",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L107–L126"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H004-03B",
+      "status": "pass",
+      "criterion": "碗闻绢持、程简手空、沙破口可见",
+      "observation": "碗闻绢持、程简手空、沙破口可见",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L107–L126"
+    },
+    {
+      "role": "direction",
+      "shotId": "H004-03C",
+      "status": "pass",
+      "criterion": "大半米用来重新遮沙，实数证据另带走",
+      "observation": "大半米用来重新遮沙，实数证据另带走",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L127–L146"
+    },
+    {
+      "role": "performance",
+      "shotId": "H004-03C",
+      "status": "pass",
+      "criterion": "闻绢倒米后落碗塞布，程简并行包牍，非一个人多手",
+      "observation": "闻绢倒米后落碗塞布，程简并行包牍，非一个人多手",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L127–L146"
+    },
+    {
+      "role": "staging",
+      "shotId": "H004-03C",
+      "status": "pass",
+      "criterion": "塞口布留袋，包牍布随人",
+      "observation": "塞口布留袋，包牍布随人；余灰米碗桌角，净米帐角独立",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L127–L146"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H004-03C",
+      "status": "pass",
+      "criterion": "腰高中全景同含袋地碗与近桌角，两人并行可读",
+      "observation": "腰高中全景同含袋地碗与近桌角，两人并行可读",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L127–L146"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H004-03C",
+      "status": "pass",
+      "criterion": "25秒全过程待实演，不静默切成多个细节镜",
+      "observation": "25秒全过程待实演，不静默切成多个细节镜",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L127–L146"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H004-03C",
+      "status": "pass",
+      "criterion": "出态大半回袋、碗桌角、两牍衣内，后镜不复现桌牍",
+      "observation": "出态大半回袋、碗桌角、两牍衣内，后镜不复现桌牍",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L127–L146"
+    },
+    {
+      "role": "direction",
+      "shotId": "H004-04A",
+      "status": "pass",
+      "criterion": "程简要交数也要向被承诺者承责，未把遮沙当胜利",
+      "observation": "程简要交数也要向被承诺者承责，未把遮沙当胜利",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L147–L166"
+    },
+    {
+      "role": "performance",
+      "shotId": "H004-04A",
+      "status": "pass",
+      "criterion": "他先说明自己没看清，闻绢补谁走不动，再出左门",
+      "observation": "他先说明自己没看清，闻绢补谁走不动，再出左门",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L147–L166"
+    },
+    {
+      "role": "staging",
+      "shotId": "H004-04A",
+      "status": "pass",
+      "criterion": "双手空、两牍系内衣，米碗外账不被带走",
+      "observation": "双手空、两牍系内衣，米碗外账不被带走",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L147–L166"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H004-04A",
+      "status": "pass",
+      "criterion": "账桌侧朝左门中景，出路留白有真实用途",
+      "observation": "账桌侧朝左门中景，出路留白有真实用途",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L147–L166"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H004-04A",
+      "status": "pass",
+      "criterion": "20秒对白完整保交实数/告诉带队者两对象",
+      "observation": "20秒对白完整保交实数/告诉带队者两对象",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L147–L166"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H004-04A",
+      "status": "pass",
+      "criterion": "闻绢留桌独自，程简携两牍不返镜",
+      "observation": "闻绢留桌独自，程简携两牍不返镜",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L147–L166"
+    },
+    {
+      "role": "direction",
+      "shotId": "H004-04B",
+      "status": "pass",
+      "criterion": "旧账不擦且今夜待核，结尾只等确认",
+      "observation": "旧账不擦且今夜待核，结尾只等确认",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L167–L186"
+    },
+    {
+      "role": "performance",
+      "shotId": "H004-04B",
+      "status": "pass",
+      "criterion": "闻绢取笔写注，笔落桌再合册，不先合再写",
+      "observation": "闻绢取笔写注，笔落桌再合册，不先合再写",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L167–L186"
+    },
+    {
+      "role": "staging",
+      "shotId": "H004-04B",
+      "status": "pass",
+      "criterion": "一人双手可完成，桌无两牍，右袋布塞仍留",
+      "observation": "一人双手可完成，桌无两牍，右袋布塞仍留",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L167–L186"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H004-04B",
+      "status": "pass",
+      "criterion": "坐姿轻俯近中景兼账与她，空门说明人已走",
+      "observation": "坐姿轻俯近中景兼账与她，空门说明人已走",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L167–L186"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H004-04B",
+      "status": "pass",
+      "criterion": "15秒后期文字精确排，未核史料不作事实片尾",
+      "observation": "15秒后期文字精确排，未核史料不作事实片尾",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L167–L186"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H004-04B",
+      "status": "pass",
+      "criterion": "合册等待，无帐外成功回音，灰米碗与塞布残留",
+      "observation": "合册等待，无帐外成功回音，灰米碗与塞布残留",
+      "sourceLocator": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931.md:L167–L186"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "H004-01A",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "眼见实物而非只听两人说空粮。",
+        "audiencePayoff": "米后沙落盘首先让实物反驳袋数",
+        "trigger": "倒完才落斗，闻绢按袋不假装看到账外真数",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在账桌侧斜俯木盘和袋口，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持眼见实物而非只听两人说空粮的空间参照。理由：让观众读出眼见实物而非只听两人说空粮；不改变人物既定行动。",
+        "exitMatch": "盘内米沙混杂，袋口薄米仍在。"
+      },
+      "camera": {
+        "shotScale": "近景",
+        "position": "账桌侧斜俯木盘和袋口。",
+        "height": "高于木盘边，斜俯接触面",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "米后沙落盘首先让实物反驳袋数",
+        "focusTarget": "起焦斗口与木盘",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "左门—中央账桌—右粮袋地理恒定，摄影在帐内南侧不穿粮袋",
+        "movementIntent": "固定在账桌侧斜俯木盘和袋口，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持眼见实物而非只听两人说空粮的空间参照。理由：让观众读出眼见实物而非只听两人说空粮；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "近景；账桌侧斜俯木盘和袋口。高度：高于木盘边，斜俯接触面。前景木盘；中景程简倒斗与闻绢按袋手；后景右粮袋。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "近景；账桌侧斜俯木盘和袋口。高度：高于木盘边，斜俯接触面。前景木盘；中景程简倒斗与闻绢按袋手；后景右粮袋。保留行动方向的余地，不增加演员或道具。",
+        "midground": "斗入态已舀好，盘接米沙、斗停盘旁，袋口仍薄米",
+        "background": "帐缝只声音无身体/影子，账桌后锅与牍；程简离开后只闻绢一人",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "米后沙落盘首先让实物反驳袋数"
+      },
+      "temporal": {
+        "durationSeconds": 12,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "眼见实物而非只听两人说空粮。",
+          "path": "固定在账桌侧斜俯木盘和袋口，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持眼见实物而非只听两人说空粮的空间参照。理由：让观众读出眼见实物而非只听两人说空粮；不改变人物既定行动。",
+          "start": "机位固定于：账桌侧斜俯木盘和袋口。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：账桌侧斜俯木盘和袋口。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H004-01A-F1",
+            "timeSeconds": 0,
+            "description": "起焦斗口与木盘"
+          }
+        ],
+        "edit": {
+          "entry": "程简斗中已有从袋里舀出的物料，闻绢按袋。",
+          "exit": "盘内米沙混杂，袋口薄米仍在。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "米粒与沙落木盘区分颗粒，帐外唱筹仅不可辨词节奏，脚步变近才刺激借米；不辨外人身份，不用人声回答确认受骗。"
+        }
+      }
+    },
+    {
+      "shotId": "H004-01B",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "袋数与粮量、过去核数与今夜未知分开。",
+        "audiencePayoff": "昨夜八袋与今晚待核分开，袋数不等粮量",
+        "trigger": "程简看盘才问，闻绢说明后两人听无词唱筹",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在桌侧朝二人及袋口，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持袋数与粮量、过去核数与今夜未知分开的空间参照。理由：让观众读出袋数与粮量、过去核数与今夜未知分开；不改变人物既定行动。",
+        "exitMatch": "昨夜核八袋但今晚待再核，帐外唱筹持续。"
+      },
+      "camera": {
+        "shotScale": "近中景",
+        "position": "桌侧朝二人及袋口。",
+        "height": "二人胸口高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "昨夜八袋与今晚待核分开，袋数不等粮量",
+        "focusTarget": "起焦程简看盘发问的脸",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "左门—中央账桌—右粮袋地理恒定，摄影在帐内南侧不穿粮袋",
+        "movementIntent": "固定在桌侧朝二人及袋口，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持袋数与粮量、过去核数与今夜未知分开的空间参照。理由：让观众读出袋数与粮量、过去核数与今夜未知分开；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "近中景；桌侧朝二人及袋口。高度：二人胸口高度。前景米沙盘与覆米袋口；中景程简闻绢；后景帐缝。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "近中景；桌侧朝二人及袋口。高度：二人胸口高度。前景米沙盘与覆米袋口；中景程简闻绢；后景帐缝。保留行动方向的余地，不增加演员或道具。",
+        "midground": "二人不移动米沙，外帐缝不出可辨人影",
+        "background": "帐缝只声音无身体/影子，账桌后锅与牍；程简离开后只闻绢一人",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "昨夜八袋与今晚待核分开，袋数不等粮量"
+      },
+      "temporal": {
+        "durationSeconds": 20,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "袋数与粮量、过去核数与今夜未知分开。",
+          "path": "固定在桌侧朝二人及袋口，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持袋数与粮量、过去核数与今夜未知分开的空间参照。理由：让观众读出袋数与粮量、过去核数与今夜未知分开；不改变人物既定行动。",
+          "start": "机位固定于：桌侧朝二人及袋口。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：桌侧朝二人及袋口。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H004-01B-F1",
+            "timeSeconds": 0,
+            "description": "起焦程简看盘发问的脸"
+          }
+        ],
+        "edit": {
+          "entry": "米沙已倒盘，斗放盘旁。",
+          "exit": "昨夜核八袋但今晚待再核，帐外唱筹持续。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "米粒与沙落木盘区分颗粒，帐外唱筹仅不可辨词节奏，脚步变近才刺激借米；不辨外人身份，不用人声回答确认受骗。"
+        }
+      }
+    },
+    {
+      "shotId": "H004-02A",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "承认核袋没核粮，不能虚记已经发粮。",
+        "audiencePayoff": "程简承认核袋未核粮，责任不是抽象反腐议论",
+        "trigger": "翻到昨夜页才承认承诺，闻绢指出真数给分粮者",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在桌前同侧朝打开账册，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持承认核袋没核粮，不能虚记已经发粮的空间参照。理由：让观众读出承认核袋没核粮，不能虚记已经发粮；不改变人物既定行动。",
+        "exitMatch": "核记页展开，闻绢准备取人数牍。"
+      },
+      "camera": {
+        "shotScale": "双人中景",
+        "position": "桌前同侧朝打开账册。",
+        "height": "二人胸口高度，轻俯账册",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "程简承认核袋未核粮，责任不是抽象反腐议论",
+        "focusTarget": "起焦程简翻昨夜账页",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "左门—中央账桌—右粮袋地理恒定，摄影在帐内南侧不穿粮袋",
+        "movementIntent": "固定在桌前同侧朝打开账册，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持承认核袋没核粮，不能虚记已经发粮的空间参照。理由：让观众读出承认核袋没核粮，不能虚记已经发粮；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "双人中景；桌前同侧朝打开账册。高度：二人胸口高度，轻俯账册。前景外账；中景二人；后景锅和木牍。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "双人中景；桌前同侧朝打开账册。高度：二人胸口高度，轻俯账册。前景外账；中景二人；后景锅和木牍。保留行动方向的余地，不增加演员或道具。",
+        "midground": "程简空手回桌翻账，锅与两牍桌后可取",
+        "background": "帐缝只声音无身体/影子，账桌后锅与牍；程简离开后只闻绢一人",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "程简承认核袋未核粮，责任不是抽象反腐议论"
+      },
+      "temporal": {
+        "durationSeconds": 22,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "承认核袋没核粮，不能虚记已经发粮。",
+          "path": "固定在桌前同侧朝打开账册，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持承认核袋没核粮，不能虚记已经发粮的空间参照。理由：让观众读出承认核袋没核粮，不能虚记已经发粮；不改变人物既定行动。",
+          "start": "机位固定于：桌前同侧朝打开账册。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：桌前同侧朝打开账册。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H004-02A-F1",
+            "timeSeconds": 0,
+            "description": "起焦程简翻昨夜账页"
+          }
+        ],
+        "edit": {
+          "entry": "程简空手回账桌，账未翻核记页。",
+          "exit": "核记页展开，闻绢准备取人数牍。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "米粒与沙落木盘区分颗粒，帐外唱筹仅不可辨词节奏，脚步变近才刺激借米；不辨外人身份，不用人声回答确认受骗。"
+        }
+      }
+    },
+    {
+      "shotId": "H004-02B",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "把需扶人数和不确定米量分别记而非混成总账。",
+        "audiencePayoff": "需扶人数与米量分片，限定需再核而非伪装精确",
+        "trigger": "递人数片后程简写另一片，写完笔落桌",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在桌边斜俯看递牍和书写，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持把需扶人数和不确定米量分别记而非混成总账的空间参照。理由：让观众读出把需扶人数和不确定米量分别记而非混成总账；不改变人物既定行动。",
+        "exitMatch": "两牍并桌，笔留桌，人数与米量分片。"
+      },
+      "camera": {
+        "shotScale": "近景",
+        "position": "桌边斜俯看递牍和书写。",
+        "height": "高于桌面，斜俯两片牍",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "需扶人数与米量分片，限定需再核而非伪装精确",
+        "focusTarget": "起焦人数牍从桌后取来的手",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "左门—中央账桌—右粮袋地理恒定，摄影在帐内南侧不穿粮袋",
+        "movementIntent": "固定在桌边斜俯看递牍和书写，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持把需扶人数和不确定米量分别记而非混成总账的空间参照。理由：让观众读出把需扶人数和不确定米量分别记而非混成总账；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "近景；桌边斜俯看递牍和书写。高度：高于桌面，斜俯两片牍。前景人数牍及空白第二片；中景交接手与书写手；后景展开外账边缘。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "近景；桌边斜俯看递牍和书写。高度：高于桌面，斜俯两片牍。前景人数牍及空白第二片；中景交接手与书写手；后景展开外账边缘。保留行动方向的余地，不增加演员或道具。",
+        "midground": "两片并桌，笔留，双手释放为后续扫米",
+        "background": "帐缝只声音无身体/影子，账桌后锅与牍；程简离开后只闻绢一人",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "需扶人数与米量分片，限定需再核而非伪装精确"
+      },
+      "temporal": {
+        "durationSeconds": 17,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "把需扶人数和不确定米量分别记而非混成总账。",
+          "path": "固定在桌边斜俯看递牍和书写，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持把需扶人数和不确定米量分别记而非混成总账的空间参照。理由：让观众读出把需扶人数和不确定米量分别记而非混成总账；不改变人物既定行动。",
+          "start": "机位固定于：桌边斜俯看递牍和书写。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：桌边斜俯看递牍和书写。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H004-02B-F1",
+            "timeSeconds": 0,
+            "description": "起焦人数牍从桌后取来的手"
+          }
+        ],
+        "edit": {
+          "entry": "闻绢准备取第一片，第二片待写，程简空手。",
+          "exit": "两牍并桌，笔留桌，人数与米量分片。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "米粒与沙落木盘区分颗粒，帐外唱筹仅不可辨词节奏，脚步变近才刺激借米；不辨外人身份，不用人声回答确认受骗。"
+        }
+      }
+    },
+    {
+      "shotId": "H004-03A",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "来者身份未知，护米的动机先于借米要求。",
+        "audiencePayoff": "上肩米层裂口威胁伪装，护米出自真实食物价值",
+        "trigger": "米先落他才问再扫进碗，闻绢不替外人下结论",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在袋侧较低固定含裂口和地面，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持来者身份未知，护米的动机先于借米要求的空间参照。理由：让观众读出来者身份未知，护米的动机先于借米要求；不改变人物既定行动。",
+        "exitMatch": "裂口米落，程简把落米收入碗并护住。"
+      },
+      "camera": {
+        "shotScale": "中近景",
+        "position": "袋侧较低固定含裂口和地面。",
+        "height": "蹲姿程简胸口高度，斜俯袋角地面",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "上肩米层裂口威胁伪装，护米出自真实食物价值",
+        "focusTarget": "起焦尚完整的最外袋角",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "左门—中央账桌—右粮袋地理恒定，摄影在帐内南侧不穿粮袋",
+        "movementIntent": "固定在袋侧较低固定含裂口和地面，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持来者身份未知，护米的动机先于借米要求的空间参照。理由：让观众读出来者身份未知，护米的动机先于借米要求；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "中近景；袋侧较低固定含裂口和地面。高度：蹲姿程简胸口高度，斜俯袋角地面。前景将裂的袋角及空碗；中景程简落米手与闻绢；后景帐缝。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中近景；袋侧较低固定含裂口和地面。高度：蹲姿程简胸口高度，斜俯袋角地面。前景将裂的袋角及空碗；中景程简落米手与闻绢；后景帐缝。保留行动方向的余地，不增加演员或道具。",
+        "midground": "候选裂口定位上肩米层；碗扫地米有灰不混净米",
+        "background": "帐缝只声音无身体/影子，账桌后锅与牍；程简离开后只闻绢一人",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "上肩米层裂口威胁伪装，护米出自真实食物价值"
+      },
+      "temporal": {
+        "durationSeconds": 23,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "来者身份未知，护米的动机先于借米要求。",
+          "path": "固定在袋侧较低固定含裂口和地面，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持来者身份未知，护米的动机先于借米要求的空间参照。理由：让观众读出来者身份未知，护米的动机先于借米要求；不改变人物既定行动。",
+          "start": "机位固定于：袋侧较低固定含裂口和地面。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：袋侧较低固定含裂口和地面。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H004-03A-F1",
+            "timeSeconds": 0,
+            "description": "起焦尚完整的最外袋角"
+          }
+        ],
+        "edit": {
+          "entry": "两牍桌上，二人转到最外袋边，碗旁待用。",
+          "exit": "裂口米落，程简把落米收入碗并护住。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "米粒与沙落木盘区分颗粒，帐外唱筹仅不可辨词节奏，脚步变近才刺激借米；不辨外人身份，不用人声回答确认受骗。"
+        }
+      }
+    },
+    {
+      "shotId": "H004-03B",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "脚步变近后才决定借米遮沙。",
+        "audiencePayoff": "近脚步才触发借米，决定付出食物不是炫计",
+        "trigger": "闻绢掀灰沙→听脚步近→伸手请求→程简犹豫交",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在袋侧原轴朝灰沙和交碗，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持脚步变近后才决定借米遮沙的空间参照。理由：让观众读出脚步变近后才决定借米遮沙；不改变人物既定行动。",
+        "exitMatch": "碗归闻绢，程简双手空。"
+      },
+      "camera": {
+        "shotScale": "近中景",
+        "position": "袋侧原轴朝灰沙和交碗。",
+        "height": "蹲姿闻绢胸口高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "近脚步才触发借米，决定付出食物不是炫计",
+        "focusTarget": "起焦闻绢掀缝的手",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "左门—中央账桌—右粮袋地理恒定，摄影在帐内南侧不穿粮袋",
+        "movementIntent": "固定在袋侧原轴朝灰沙和交碗，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持脚步变近后才决定借米遮沙的空间参照。理由：让观众读出脚步变近后才决定借米遮沙；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "近中景；袋侧原轴朝灰沙和交碗。高度：蹲姿闻绢胸口高度。前景袋缝与碗；中景闻绢程简双手；后景帐缝。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "近中景；袋侧原轴朝灰沙和交碗。高度：蹲姿闻绢胸口高度。前景袋缝与碗；中景闻绢程简双手；后景帐缝。保留行动方向的余地，不增加演员或道具。",
+        "midground": "他送碗，她双手接稳后他才松，碗无无主相位",
+        "background": "帐缝只声音无身体/影子，账桌后锅与牍；程简离开后只闻绢一人",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "近脚步才触发借米，决定付出食物不是炫计"
+      },
+      "temporal": {
+        "durationSeconds": 17,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "脚步变近后才决定借米遮沙。",
+          "path": "固定在袋侧原轴朝灰沙和交碗，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持脚步变近后才决定借米遮沙的空间参照。理由：让观众读出脚步变近后才决定借米遮沙；不改变人物既定行动。",
+          "start": "机位固定于：袋侧原轴朝灰沙和交碗。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：袋侧原轴朝灰沙和交碗。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H004-03B-F1",
+            "timeSeconds": 0,
+            "description": "起焦闻绢掀缝的手"
+          }
+        ],
+        "edit": {
+          "entry": "程简双手护落米碗，袋缝尚覆米。",
+          "exit": "碗归闻绢，程简双手空。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "米粒与沙落木盘区分颗粒，帐外唱筹仅不可辨词节奏，脚步变近才刺激借米；不辨外人身份，不用人声回答确认受骗。"
+        }
+      }
+    },
+    {
+      "shotId": "H004-03C",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "伪装恢复要真实牺牲可食米，并保留实数证据。",
+        "audiencePayoff": "大半米用来重新遮沙，实数证据另带走",
+        "trigger": "闻绢倒米后落碗塞布，程简并行包牍，非一个人多手",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在帐内原侧同时含袋角地面与近账桌，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持伪装恢复要真实牺牲可食米，并保留实数证据的空间参照。理由：让观众读出伪装恢复要真实牺牲可食米，并保留实数证据；不改变人物既定行动。",
+        "exitMatch": "大半米回袋、布塞压留位；余灰米碗桌角，与净米分开；两牍系程简衣内。"
+      },
+      "camera": {
+        "shotScale": "中全景",
+        "position": "帐内原侧同时含袋角地面与近账桌。",
+        "height": "站立闻绢腰部高度，轻俯袋边与桌角",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "大半米用来重新遮沙，实数证据另带走",
+        "focusTarget": "起焦闻绢持碗向袋缝的手",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "左门—中央账桌—右粮袋地理恒定，摄影在帐内南侧不穿粮袋",
+        "movementIntent": "固定在帐内原侧同时含袋角地面与近账桌，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持伪装恢复要真实牺牲可食米，并保留实数证据的空间参照。理由：让观众读出伪装恢复要真实牺牲可食米，并保留实数证据；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "中全景；帐内原侧同时含袋角地面与近账桌。高度：站立闻绢腰部高度，轻俯袋边与桌角。前景碗、破袋与布；中景闻绢动作及程简包牍；后景账桌。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中全景；帐内原侧同时含袋角地面与近账桌。高度：站立闻绢腰部高度，轻俯袋边与桌角。前景碗、破袋与布；中景闻绢动作及程简包牍；后景账桌。保留行动方向的余地，不增加演员或道具。",
+        "midground": "塞口布留袋，包牍布随人；余灰米碗桌角，净米帐角独立",
+        "background": "帐缝只声音无身体/影子，账桌后锅与牍；程简离开后只闻绢一人",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "大半米用来重新遮沙，实数证据另带走"
+      },
+      "temporal": {
+        "durationSeconds": 25,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "伪装恢复要真实牺牲可食米，并保留实数证据。",
+          "path": "固定在帐内原侧同时含袋角地面与近账桌，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持伪装恢复要真实牺牲可食米，并保留实数证据的空间参照。理由：让观众读出伪装恢复要真实牺牲可食米，并保留实数证据；不改变人物既定行动。",
+          "start": "机位固定于：帐内原侧同时含袋角地面与近账桌。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：帐内原侧同时含袋角地面与近账桌。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H004-03C-F1",
+            "timeSeconds": 0,
+            "description": "起焦闻绢持碗向袋缝的手"
+          }
+        ],
+        "edit": {
+          "entry": "碗闻绢持、沙在破口可见；两牍仍桌上。",
+          "exit": "大半米回袋、布塞压留位；余灰米碗桌角，与净米分开；两牍系程简衣内。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "米粒与沙落木盘区分颗粒，帐外唱筹仅不可辨词节奏，脚步变近才刺激借米；不辨外人身份，不用人声回答确认受骗。"
+        }
+      }
+    },
+    {
+      "shotId": "H004-04A",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "交数字之外还要承认本人没看清的承诺。",
+        "audiencePayoff": "程简要交数也要向被承诺者承责，未把遮沙当胜利",
+        "trigger": "他先说明自己没看清，闻绢补谁走不动，再出左门",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在账桌侧朝左门，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持交数字之外还要承认本人没看清的承诺的空间参照。理由：让观众读出交数字之外还要承认本人没看清的承诺；不改变人物既定行动。",
+        "exitMatch": "程简携两牍出帐，闻绢留账桌。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "账桌侧朝左门。",
+        "height": "程简胸口高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "程简要交数也要向被承诺者承责，未把遮沙当胜利",
+        "focusTarget": "起焦程简承认责任的脸",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "左门—中央账桌—右粮袋地理恒定，摄影在帐内南侧不穿粮袋",
+        "movementIntent": "固定在账桌侧朝左门，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持交数字之外还要承认本人没看清的承诺的空间参照。理由：让观众读出交数字之外还要承认本人没看清的承诺；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "中景；账桌侧朝左门。高度：程简胸口高度。前景外账与米碗；中景二人；后景左侧门帘。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；账桌侧朝左门。高度：程简胸口高度。前景外账与米碗；中景二人；后景左侧门帘。保留行动方向的余地，不增加演员或道具。",
+        "midground": "双手空、两牍系内衣，米碗外账不被带走",
+        "background": "帐缝只声音无身体/影子，账桌后锅与牍；程简离开后只闻绢一人",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "程简要交数也要向被承诺者承责，未把遮沙当胜利"
+      },
+      "temporal": {
+        "durationSeconds": 20,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "交数字之外还要承认本人没看清的承诺。",
+          "path": "固定在账桌侧朝左门，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持交数字之外还要承认本人没看清的承诺的空间参照。理由：让观众读出交数字之外还要承认本人没看清的承诺；不改变人物既定行动。",
+          "start": "机位固定于：账桌侧朝左门。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：账桌侧朝左门。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H004-04A-F1",
+            "timeSeconds": 0,
+            "description": "起焦程简承认责任的脸"
+          }
+        ],
+        "edit": {
+          "entry": "两牍程简衣内，布留袋口，两人双手空。",
+          "exit": "程简携两牍出帐，闻绢留账桌。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "米粒与沙落木盘区分颗粒，帐外唱筹仅不可辨词节奏，脚步变近才刺激借米；不辨外人身份，不用人声回答确认受骗。"
+        }
+      }
+    },
+    {
+      "shotId": "H004-04B",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "不擦旧账、不把未分粮写成已分，责任有痕迹。",
+        "audiencePayoff": "旧账不擦且今夜待核，结尾只等确认",
+        "trigger": "闻绢取笔写注，笔落桌再合册，不先合再写",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在桌侧轻俯看外账和闻绢，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持不擦旧账、不把未分粮写成已分，责任有痕迹的空间参照。理由：让观众读出不擦旧账、不把未分粮写成已分，责任有痕迹；不改变人物既定行动。",
+        "exitMatch": "旧记录保留，今夜待核另报注已添，合册等待。"
+      },
+      "camera": {
+        "shotScale": "近中景",
+        "position": "桌侧轻俯看外账和闻绢。",
+        "height": "坐姿闻绢胸口高度，斜俯账页",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "旧账不擦且今夜待核，结尾只等确认",
+        "focusTarget": "起焦未加今夜注的旧账页",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "左门—中央账桌—右粮袋地理恒定，摄影在帐内南侧不穿粮袋",
+        "movementIntent": "固定在桌侧轻俯看外账和闻绢，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持不擦旧账、不把未分粮写成已分，责任有痕迹的空间参照。理由：让观众读出不擦旧账、不把未分粮写成已分，责任有痕迹；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "近中景；桌侧轻俯看外账和闻绢。高度：坐姿闻绢胸口高度，斜俯账页。前景昨夜袋数原记录；中景闻绢落笔与合册；后景右袋和空门。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "近中景；桌侧轻俯看外账和闻绢。高度：坐姿闻绢胸口高度，斜俯账页。前景昨夜袋数原记录；中景闻绢落笔与合册；后景右袋和空门。保留行动方向的余地，不增加演员或道具。",
+        "midground": "一人双手可完成，桌无两牍，右袋布塞仍留",
+        "background": "帐缝只声音无身体/影子，账桌后锅与牍；程简离开后只闻绢一人",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "旧账不擦且今夜待核，结尾只等确认"
+      },
+      "temporal": {
+        "durationSeconds": 15,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "不擦旧账、不把未分粮写成已分，责任有痕迹。",
+          "path": "固定在桌侧轻俯看外账和闻绢，让本镜真实落米/脚步/语言先于对应反应触发人物而非相机移动，保持不擦旧账、不把未分粮写成已分，责任有痕迹的空间参照。理由：让观众读出不擦旧账、不把未分粮写成已分，责任有痕迹；不改变人物既定行动。",
+          "start": "机位固定于：桌侧轻俯看外账和闻绢。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：桌侧轻俯看外账和闻绢。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H004-04B-F1",
+            "timeSeconds": 0,
+            "description": "起焦未加今夜注的旧账页"
+          }
+        ],
+        "edit": {
+          "entry": "程简已离帐；外账仍摊，笔桌上，闻绢双手空。",
+          "exit": "旧记录保留，今夜待核另报注已添，合册等待。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "米粒与沙落木盘区分颗粒，帐外唱筹仅不可辨词节奏，脚步变近才刺激借米；不辨外人身份，不用人声回答确认受骗。"
+        }
+      }
+    }
+  ]
+}

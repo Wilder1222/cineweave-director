@@ -1,0 +1,51 @@
+{
+  "model": null,
+  "token_usage": null,
+  "timing": null,
+  "source_files_read": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C01\\request.txt",
+      "sha256": "1f0daddd00f10330fe2163c42a06efde6f4e0a92f5cb1d7c85448c45f86ee490"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\SKILL.md",
+      "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\image-prompt.md",
+      "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+      "sha256": "0880a163be9679d32807688a0c434c0fa936c0fb00a5c4aae24e381d0dd92c25"
+    }
+  ],
+  "skills_applied": [
+    "cineweave-director; image_prompt route"
+  ],
+  "checks_performed": [
+    {
+      "type": "manual_content_review",
+      "description": "Compared the prompt with requested title, Chinese language, 16:9, late Warring States palace, adult envoy, closed beige map, no visible dagger, impending ritual breakdown, original face and costume, and no image generation."
+    },
+    {
+      "type": "file_encoding",
+      "description": "Decoded output.md as UTF-8 and checked that it contains no CR bytes and is one prompt paragraph followed by an LF newline."
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C01\\output.md",
+      "type": "text/markdown",
+      "sha256": "9f01aa0442566ee52ad130b031eba240cc6d2f871b9c8c9d890d2ee2aaa6e4ad"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C01\\execution.json",
+      "type": "application/json"
+    }
+  ],
+  "limitations": [
+    "No image was generated or visually reviewed; title rendering and final image fidelity remain unverified.",
+    "No historical source verification or archaeological reconstruction was performed."
+  ]
+}

@@ -1,0 +1,831 @@
+{
+  "number": 18,
+  "title": "完整的笔记",
+  "logline": "现场搜查与独立清点被分开，部分排证不排掉核心证物；完整通信又使青年承认自己的行为与推断早于来源支持。",
+  "dramaturgy": {
+    "openingQuestion": "现场开包是否合法，能否决定枪、笔记和整起案件一起消失？",
+    "pursuit": "律师质询搜包顺序，青年要把自己添加的推论和原始资料分开。",
+    "reversal": "现场搜查与独立清点被分开，部分排证不排掉核心证物；完整通信又使青年承认自己的行为与推断早于来源支持。",
+    "cost": "只授权去身份待查问题，不能占有诺拉或凯文已在进行的调查。",
+    "cliffhanger": "他将来源原文和自己的判断分栏，只把附件缺项作为疑问交独立程序核验；调查方向不能替他撤回自己的决定。",
+    "nextEpisodeBridge": "谁能替瑞秋和儿子决定，一个不完美的父亲应该怎样被记住？"
+  },
+  "movements": [
+    {
+      "title": "谁移动了包",
+      "startScene": "E17-SC01",
+      "question": "争取排除无法以即时威胁辩护的现场搜查。",
+      "turn": "控方转向开包前逮捕理由和警局独立清点。"
+    },
+    {
+      "title": "两列证据",
+      "startScene": "E17-SC02",
+      "question": "把排除裁定的准确范围交给青年承受。",
+      "turn": "左列能划掉，右列听完不得划。"
+    },
+    {
+      "title": "自己的那一句",
+      "startScene": "E17-SC03",
+      "question": "要求他亲读自己行为先于来源消息的记录。",
+      "turn": "他护住莉娜却留下完整副本，开始标自己的问题。"
+    },
+    {
+      "title": "待查问题不是答案",
+      "startScene": "E18-SC02",
+      "question": "将青年自己的推断与来源原文分栏。",
+      "turn": "他提出附件版本疑问，却不把到件当作实际阅看。"
+    }
+  ],
+  "continuityNote": "当前播出编号为24集短剧；E01–E24场号/制作镜号只作稳定资产定位。各集以完整场景为边界，英语对白与中文对照同步。谁能替瑞秋和儿子决定，一个不完美的父亲应该怎样被记住？",
+  "scenes": [
+    {
+      "id": "E17-SC01",
+      "location": "COURT-STATE",
+      "time": "日·案发近一年后·听证上午",
+      "script": "州法庭西侧辩方桌上，两张空白清单并排。海伦坐南手边，路易吉在她北侧；东面的检察官正在翻证物登记。警员坐在东北证人位。证人台上已有餐厅执法记录画面的另一份副本。海伦在西桌翻到相同页，手指停在已移远的包与受控青年之间；警员将自己面前那份拉正。\n海伦（使用英语，把证人的回答限定在当时的位置）：You'd moved the bag away. He was cuffed. Could he reach it while you were holding him?\n中文对照：你已经把包挪开，他也戴着铐。你控制着他，他还能碰到包吗？\n警员A（使用英语，据实短答）：No.\n中文对照：不能。\n证人把自己的照片往回推了一点，海伦没有收起西桌那份。\n警员A（使用英语，把理由说完整，等她是否接受）：We were getting ready to move him. I didn't know what was in that bag.\n中文对照：我们正准备把他带走。我不知道那个包里有什么。\n海伦（使用英语，不接泛泛解释）：Did he move toward it before your partner opened it?\n中文对照：你搭档打开包以前，他朝包移动过吗？\n警员A（使用英语，看过画面后回答）：He didn't move.\n中文对照：他没动。\n她将自己那份照片放入左边那一列。检察官起身，把证件核验记录单独递给证人。\n州检察官（使用英语，确认先查证件后开包）：Had your partner checked his ID before opening the bag?\n中文对照：开包之前，你搭档已经查过他的证件了吗？\n警员A（使用英语，把逮捕依据与包里的东西分开）：Yes. We had grounds to arrest him before we opened it.\n中文对照：是。开包之前，我们就有理由逮捕他。\n证人翻到警局财物表，沿登记顺序移下去。路易吉看见海伦在右列写下两个项目。\n警员A（使用英语，按财物登记说明，不争辩）：We logged his property back at the station. That's when we took out the gun and the notebook.\n中文对照：回到警局后，我们登记了他的随身物品。枪和笔记本是那时拿出来的。\n海伦核对记录后把笔放平，左列写得密，右列只有枪与笔记。",
+      "entry": "警员已宣誓，青年双腕自由；海伦争取排除现场证据。",
+      "exit": "现场搜查与独立逮捕/警局清点被分开，第二列尚未裁定。",
+      "dramaticFunction": "争取排除无法以即时威胁辩护的现场搜查。",
+      "turn": "控方转向开包前逮捕理由和警局独立清点。",
+      "exitCost": "枪与笔记仍有独立可用来源。",
+      "sceneRhythm": "先跟同一证人的问答，再让新来源把律师注意拉向右列。",
+      "plannedDuration": 75
+    },
+    {
+      "id": "E17-SC02",
+      "location": "COURT-STATE",
+      "time": "日·同日休庭后",
+      "script": "休庭回来，法官在北席翻开裁定。海伦将那两列清单摆回原处，路易吉盯着她手中的笔。\n州法官（使用英语，宣读范围）：The restaurant search was not justified by an immediate threat. The items recovered in that search are excluded.\n中文对照：餐厅搜查不存在足以支持它的即时威胁。该次搜查取得的物品予以排除。\n海伦划掉左列第一组。路易吉原本缩在桌下的手慢慢伸到桌沿。\n州法官（使用英语，继续裁定）：Certain unwarned answers after custody are excluded as well. The remaining evidence requires a separate ruling.\n中文对照：进入羁押后未经告知取得的部分答复也予排除。其余证据须另行判断。\n笔又划过几行。海伦没有翻页，也没抬头看旁听席。法官换到后一段。\n州法官（使用英语，明确保留）：The station inventory was lawful. The gun and the notebook remain admissible.\n中文对照：警局清点合法，枪与笔记本仍可采纳。\n海伦的笔停住。右列的枪与笔记没有划痕。路易吉指向其中一项，声音只够西桌听见。\n路易吉（使用英语，指向清单）：That includes these pages?\n中文对照：这些页也在里面？\n海伦（使用英语，压低声音，止住他划线的动作）：Yes. Those were recovered legally. Don't cross them out.\n中文对照：是。那些页是合法取得的，不能划掉。\n他的手退开，海伦在那一列下面画了一条线，留下整组项目。",
+      "entry": "法官裁定现场搜包和讯问部分，辩方清单仍分两列。",
+      "exit": "部分排证成立，核心证物保留；青年不能把划去的项目当成整个案子消失。",
+      "dramaticFunction": "把排除裁定的准确范围交给青年承受。",
+      "turn": "左列能划掉，右列听完不得划。",
+      "exitCost": "能减掉一部分，不能擦去核心证据。",
+      "sceneRhythm": "整场留在西桌两个听者，法官声持续，不每条结论各切一镜。",
+      "plannedDuration": 55
+    },
+    {
+      "id": "E17-SC03",
+      "location": "VISIT",
+      "time": "傍晚·同日",
+      "script": "傍晚会见室，路易吉已经换回浅灰囚服，坐在桌北侧。海伦从南侧蓝夹取出笔记副本和依法交付的通信页，压在那份保留证据清单旁；东窄窗已经暗了。\n海伦（使用英语，指着时间先后，等他看清再继续）：Look at these dates. You'd already decided before Lena sent that message. They'll use that.\n中文对照：看这几个日期。莉娜发那条消息之前，你就已经决定了。检方会用这一点。\n路易吉把自己的消息与莉娜提出申诉表的消息放在一起，没有遮住任何一句。\n路易吉（使用英语，急着纠正归责，说完把手移开）：She offered an appeal form. She didn't send me there. Don't blame her.\n中文对照：她只是提出给我申诉表。不是她让我去的，别怪到她头上。\n海伦停下原本准备收页的手。\n海伦（使用英语，不跟他争，话回到留下的文件）：I won't. But these are still evidence. You need to read them.\n中文对照：我不会。可这些还是证据，你得把它们读完。\n路易吉（使用英语，作出小决定）：Leave me the copy.\n中文对照：副本留下给我。\n青年看向南门，再看手边空出的页边。\n路易吉（使用英语，确认确实能自己读）：The copy stays here?\n中文对照：副本能留在这里？\n海伦（使用英语，把阅读和重写过去分开）：Yes. Mark what you want to ask me. Don't rewrite what you sent.\n中文对照：能。想问我的地方标出来，别改你原来发过的话。\n他在空白页边做一个待问记号，原消息一字没改。\n她将笔记副本留在桌北边，只把裁定收回蓝夹。门外钥匙响起，路易吉扶住副本，抬眼看她。\n路易吉（使用英语，临走才想起，声音放轻）：My mom took today off. Can you call her before she sees the news?\n中文对照：我妈今天特意请了假。能在她看到新闻之前，先给她打个电话吗？\n海伦（使用英语，不催交答案）：I will. Take your time with it.\n中文对照：我会。你慢慢读。\n海伦起身时，他已经翻到第一页。南门关上，他没有跟着抬头。",
+      "entry": "E16通信已授权交付；本场只处理其不利结果。",
+      "exit": "青年保留副本阅读，律师先通知家属，未取得进一步辩护承诺。",
+      "dramaticFunction": "要求他亲读自己行为先于来源消息的记录。",
+      "turn": "他护住莉娜却留下完整副本，开始标自己的问题。",
+      "exitCost": "失去把决定外包给来源的说法，家属仍要先被通知。",
+      "sceneRhythm": "从解释日期转成他自己读；律师离开后只留正在进行的阅读动作。",
+      "plannedDuration": 80
+    },
+    {
+      "id": "E18-SC02",
+      "location": "VISIT",
+      "time": "日·州取证听证次日；诺拉的更正与咖啡会面已发生",
+      "script": "州取证听证次日，会见室东窗透入受控日光。海伦坐南，给北侧的路易吉一张中间划线的空白纸。他的笔记副本在右，获准查看的去身份原资料在左，蓝夹靠桌西。\n海伦（使用英语，把纸分好后交给他自己写）：Put the document's words here. Your own notes on that side.\n中文对照：文件原话写这边，你自己的批注写另一边。\n路易吉将空白纸转了个方向，看了一眼自己原有的批注。\n路易吉（使用英语，看着旧批注，笔还没落下）：I've mixed them up.\n中文对照：我把它们混到一起了。\n他从笔记里找出那句话，把它抄到属于自己的那一边。海伦没有帮他改词。\n路易吉（使用英语，读一句核一句，承认那句属于自己）：The file says the appeal was incomplete. 'No one read it.' That's my line. I added that.\n中文对照：文件只说申诉材料不全。“没人读过”是我说的，是我自己加上去的。\n路易吉将两份附件清单逐项对着看，笔尖停在一个空处。他没有继续写结论，而是把两页推向海伦。\n路易吉（使用英语，先提出另一种可能，不往下断言）：The clinic lists a file that's missing here. Maybe these are different versions. Can Kevin check?\n中文对照：诊所这边有个文件，这份上没有。也许版本不同。能让凯文查一下吗？\n海伦（使用英语，把能做的和不知道的分开）：He can ask for the records. We don't know yet.\n中文对照：他可以申请调记录。现在还不知道。\n他重新指到诊所清单的文件名，海伦把便签留空，先听他问完。\n路易吉（使用英语，停在尚未验证的可能性）：If he finds it was sent?\n中文对照：如果他查到确实发过去了呢？\n海伦（使用英语，把到件与实际阅看分开，不提前揭队列结论）：Then that's what the records say. It still won't tell us who saw it.\n中文对照：那记录就说明发过。可还不能说明谁看过。\n他不再补上“所以”，把笔移离原资料。\n海伦取便签，只写他独立核对后留下的问题。便签只列两份清单和待核项目，没有记者姓名；写完给他看。\n海伦（使用英语，给他看便签，等明确答复）：Can I send him this? Without the patient names.\n中文对照：我把这个问题发给他？患者姓名去掉。\n路易吉（使用英语，确认转交，只留下待查问题）：Yes. Leave my theory out of it.\n中文对照：行。别把我的猜测也带过去。\n她收起便签。他将属于自己的那页留在北侧，原资料放回蓝夹，没有把两者重新叠成一份。",
+      "entry": "只能使用去身份资料与他自己的副本；完整链仍不在二人手中。",
+      "exit": "只形成缺项疑问并授权交独立患者程序，不推断两队列断层。",
+      "dramaticFunction": "将青年自己的推断与来源原文分栏。",
+      "turn": "他提出附件版本疑问，却不把到件当作实际阅看。",
+      "exitCost": "只授权去身份待查问题，不能占有诺拉或凯文已在进行的调查。",
+      "sceneRhythm": "一段完成误读归属，一段完成有限核查请求，旧集尾悬念不再强切。",
+      "plannedDuration": 85
+    }
+  ],
+  "shots": [
+    {
+      "id": "E17-SH001",
+      "sceneId": "E17-SC01",
+      "duration": 41,
+      "characters": [
+        "HELEN",
+        "OFFICER-A",
+        "LUIGI-FORMAL"
+      ],
+      "purpose": "第一条搜查理由受挫，但尚未裁掉其他来源证据。",
+      "framing": "南侧朝东北固定证人中景",
+      "composition": "州法庭北法官席、西辩方、东控方、南旁听；机位西南朝东北。本成片镜按如下连续机位与人物动作执行：南侧朝东北固定证人中景，证人照片可见，海伦只从西桌同场画外发问；不把证人移到律师桌。 警员把照片拉正，沿包与受控青年的距离看完，承认无法触及；他解释转移需要，听海伦追问后再看画面，承认青年并未移动。",
+      "camera": "南侧朝东北固定证人中景，证人照片可见，海伦只从西桌同场画外发问；不把证人移到律师桌。",
+      "focus": "按人物当前任务保持共享画面可读；第一条搜查理由受挫，但尚未裁掉其他来源证据。 不按每句说话人自动反打；细字由后期证据页必要叠加，不要求景深同时清楚全部正文。",
+      "start": "证人台上已有照片副本；海伦西桌同页副本摊开。",
+      "action": "警员把照片拉正，沿包与受控青年的距离看完，承认无法触及；他解释转移需要，听海伦追问后再看画面，承认青年并未移动。",
+      "end": "第一条搜查理由受挫，但尚未裁掉其他来源证据。；具体动作终态：警员解释转移后再核开包前动作，回答青年没动；照片仍归证人台。",
+      "sound": "纸在木桌转动后对白，空调低响。；照片短擦声；证人麦克风，无附加压迫音。；只保留本镜对白表所列可辨英语，原场内画外、电话、直播声源关系保持；不增配解释旁白。",
+      "music": "无背景音乐；先以表演、对白、真实环境声成立，禁止在技术段接缝加音乐遮掩。",
+      "dialogue": [
+        {
+          "id": "E17-D001",
+          "speaker": "海伦",
+          "listener": "警员A",
+          "text": "You'd moved the bag away. He was cuffed. Could he reach it while you were holding him?",
+          "translationZh": "你已经把包挪开，他也戴着铐。你控制着他，他还能碰到包吗？",
+          "tone": "把证人的回答限定在当时的位置",
+          "start": 0.8,
+          "end": 9.95
+        },
+        {
+          "id": "E17-D002",
+          "speaker": "警员A",
+          "listener": "海伦",
+          "text": "No.",
+          "translationZh": "不能。",
+          "tone": "据实短答",
+          "start": 10.6,
+          "end": 11.66
+        },
+        {
+          "id": "E17-D003",
+          "speaker": "警员A",
+          "listener": "海伦",
+          "text": "We were getting ready to move him. I didn't know what was in that bag.",
+          "translationZh": "我们正准备把他带走。我不知道那个包里有什么。",
+          "tone": "把理由说完整，等她是否接受",
+          "start": 21.8,
+          "end": 29.9
+        },
+        {
+          "id": "E17-D004",
+          "speaker": "海伦",
+          "listener": "警员A",
+          "text": "Did he move toward it before your partner opened it?",
+          "translationZh": "你搭档打开包以前，他朝包移动过吗？",
+          "tone": "不接泛泛解释",
+          "start": 30.55,
+          "end": 36.03
+        },
+        {
+          "id": "E17-D005",
+          "speaker": "警员A",
+          "listener": "海伦",
+          "text": "He didn't move.",
+          "translationZh": "他没动。",
+          "tone": "看过画面后回答",
+          "start": 36.68,
+          "end": 38.49
+        }
+      ],
+      "overlay": [],
+      "next": "下一成片镜 E17-SH003。同场时承接本镜已完成动作，不重复表演；跨场依剧本时间和空间建立。",
+      "viewerEntry": "搜包可能排掉整包证据。",
+      "viewerExit": "第一条搜查理由受挫，但尚未裁掉其他来源证据。",
+      "cutTrigger": "成片剪点由本镜结束后注意与任务发生变化决定：第一条搜查理由受挫，但尚未裁掉其他来源证据。 技术生成段边界不触发剪辑。",
+      "sourceShotIds": [
+        "E17-SH001",
+        "E17-SH002"
+      ],
+      "generationSegments": [
+        {
+          "duration": 21,
+          "start": "证人台上已有照片副本；海伦西桌同页副本摊开。",
+          "action": "证人看清照片后答无法触及，海伦问题来自西侧画外。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "证人看清照片后答无法触及，海伦问题来自西侧画外。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E17-D001",
+            "E17-D002"
+          ]
+        },
+        {
+          "duration": 20,
+          "start": "证人看清照片后答无法触及，海伦问题来自西侧画外。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "action": "警员解释转移后再核开包前动作，回答青年没动；照片仍归证人台。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "警员解释转移后再核开包前动作，回答青年没动；照片仍归证人台。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E17-D003",
+            "E17-D004",
+            "E17-D005"
+          ]
+        }
+      ],
+      "continuousTakeGroup": "E17-SH001",
+      "mediaContinuityStatus": "pending_media",
+      "editorialContinuity": "一个成片观察位置和完整表演；技术段只为生成与衔接试片计划，非新增剪点。实际连贯性待媒体测试。",
+      "offscreenRoleIds": [
+        "HELEN",
+        "LUIGI-FORMAL"
+      ],
+      "broadcastEpisode": 18,
+      "displayId": "EP18-001"
+    },
+    {
+      "id": "E17-SH003",
+      "sceneId": "E17-SC01",
+      "duration": 34,
+      "characters": [
+        "PROSECUTOR-STATE",
+        "OFFICER-A",
+        "HELEN",
+        "LUIGI-FORMAL"
+      ],
+      "purpose": "警局清点建立独立证据来源，防止把餐厅争点听成全部案证失效。",
+      "framing": "南侧略偏西固定中全景",
+      "composition": "州法庭北法官席、西辩方、东控方、南旁听；北窗冷光、顶灯中性，机位不越南/西南许可区。本成片镜按如下连续机位与人物动作执行：南侧略偏西固定中全景，东检察官递证件记录、东北证人台、西桌倾听者分开；不靠跨轴拼接让纸瞬移。 控方另递证件核验记录，证人说明开包前已有逮捕理由。继而从自己的财物表读警局清点，海伦在西桌另一份清单右侧写枪与笔记，青年看见笔未划掉它们。",
+      "camera": "南侧略偏西固定中全景，东检察官递证件记录、东北证人台、西桌倾听者分开；不靠跨轴拼接让纸瞬移。",
+      "focus": "按人物当前任务保持共享画面可读；警局清点建立独立证据来源，防止把餐厅争点听成全部案证失效。 不按每句说话人自动反打；细字由后期证据页必要叠加，不要求景深同时清楚全部正文。",
+      "start": "检察官从东桌站起，拿独立核验页。",
+      "action": "控方另递证件核验记录，证人说明开包前已有逮捕理由。继而从自己的财物表读警局清点，海伦在西桌另一份清单右侧写枪与笔记，青年看见笔未划掉它们。",
+      "end": "警局清点建立独立证据来源，防止把餐厅争点听成全部案证失效。；具体动作终态：证人翻警局财物表读登记；海伦在西桌写下两项并将笔放平。",
+      "sound": "椅脚、递纸声先于回答。；证人东北同场声音，笔尖写纸，远处记录键声。；只保留本镜对白表所列可辨英语，原场内画外、电话、直播声源关系保持；不增配解释旁白。",
+      "music": "无背景音乐；先以表演、对白、真实环境声成立，禁止在技术段接缝加音乐遮掩。",
+      "dialogue": [
+        {
+          "id": "E17-D006",
+          "speaker": "州检察官",
+          "listener": "警员A",
+          "text": "Had your partner checked his ID before opening the bag?",
+          "translationZh": "开包之前，你搭档已经查过他的证件了吗？",
+          "tone": "确认先查证件后开包",
+          "start": 0.8,
+          "end": 6.28
+        },
+        {
+          "id": "E17-D007",
+          "speaker": "警员A",
+          "listener": "州检察官",
+          "text": "Yes. We had grounds to arrest him before we opened it.",
+          "translationZh": "是。开包之前，我们就有理由逮捕他。",
+          "tone": "把逮捕依据与包里的东西分开",
+          "start": 6.93,
+          "end": 12.93
+        },
+        {
+          "id": "E17-D008",
+          "speaker": "警员A",
+          "listener": "州检察官",
+          "text": "We logged his property back at the station. That's when we took out the gun and the notebook.",
+          "translationZh": "回到警局后，我们登记了他的随身物品。枪和笔记本是那时拿出来的。",
+          "tone": "按财物登记说明，不争辩",
+          "start": 17.8,
+          "end": 27.48
+        }
+      ],
+      "overlay": [],
+      "next": "本场结果成立后切入 E17-SC02（COURT-STATE，日·同日休庭后）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "viewerEntry": "现场搜查有问题。",
+      "viewerExit": "警局清点建立独立证据来源，防止把餐厅争点听成全部案证失效。",
+      "cutTrigger": "成片剪点由本镜结束后注意与任务发生变化决定：警局清点建立独立证据来源，防止把餐厅争点听成全部案证失效。 技术生成段边界不触发剪辑。",
+      "sourceShotIds": [
+        "E17-SH003",
+        "E17-SH004"
+      ],
+      "generationSegments": [
+        {
+          "duration": 17,
+          "start": "检察官从东桌站起，拿独立核验页。",
+          "action": "控方递证件记录，证人确认先查证件后开包，西桌仍听。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "控方递证件记录，证人确认先查证件后开包，西桌仍听。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E17-D006",
+            "E17-D007"
+          ]
+        },
+        {
+          "duration": 17,
+          "start": "控方递证件记录，证人确认先查证件后开包，西桌仍听。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "action": "证人翻警局财物表读登记；海伦在西桌写下两项并将笔放平。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "证人翻警局财物表读登记；海伦在西桌写下两项并将笔放平。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E17-D008"
+          ]
+        }
+      ],
+      "continuousTakeGroup": "E17-SH003",
+      "mediaContinuityStatus": "pending_media",
+      "editorialContinuity": "一个成片观察位置和完整表演；技术段只为生成与衔接试片计划，非新增剪点。实际连贯性待媒体测试。",
+      "offscreenRoleIds": [],
+      "broadcastEpisode": 18,
+      "displayId": "EP18-002"
+    },
+    {
+      "id": "E17-SH005",
+      "sceneId": "E17-SC02",
+      "duration": 55,
+      "characters": [
+        "JUDGE-STATE",
+        "HELEN",
+        "LUIGI-FORMAL"
+      ],
+      "purpose": "同一场宣判中的希望被限定，不能把局部成功剪成全面翻盘。",
+      "framing": "西南固定西桌双人中景",
+      "composition": "州法庭北法官席画外、西辩方、东控方、南旁听；北窗冷光、顶灯中性。本成片镜按如下连续机位与人物动作执行：西南固定西桌双人中景，法官始终为北席同场画外声；左排除列、右保留列在同一桌面，镜头只观察这两位听者。 海伦随着完整裁定范围划左列，青年慢慢伸手到桌沿；听到警局清点合法后她停笔。青年想把右列页件也划去，被低声制止，手退回，右列仍完整留着。",
+      "camera": "西南固定西桌双人中景，法官始终为北席同场画外声；左排除列、右保留列在同一桌面，镜头只观察这两位听者。",
+      "focus": "按人物当前任务保持共享画面可读；同一场宣判中的希望被限定，不能把局部成功剪成全面翻盘。 不按每句说话人自动反打；细字由后期证据页必要叠加，不要求景深同时清楚全部正文。",
+      "start": "法官读裁定，海伦笔尖贴左列旁。",
+      "action": "海伦随着完整裁定范围划左列，青年慢慢伸手到桌沿；听到警局清点合法后她停笔。青年想把右列页件也划去，被低声制止，手退回，右列仍完整留着。",
+      "end": "同一场宣判中的希望被限定，不能把局部成功剪成全面翻盘。；具体动作终态：北席确认枪与笔记可用；海伦停笔，青年问这些页能否划去，她答清后他退手。",
+      "sound": "州男法官声音来自同场北席画外；范围说完后海伦划纸，无胜利音乐。；州男法官北侧画外宣读，笔擦纸后停。；法官清楚原声，控方落笔一声。；桌边低声问答，法庭收纸余声在远处。；只保留本镜对白表所列可辨英语，原场内画外、电话、直播声源关系保持；不增配解释旁白。",
+      "music": "无背景音乐；先以表演、对白、真实环境声成立，禁止在技术段接缝加音乐遮掩。",
+      "dialogue": [
+        {
+          "id": "E17-D009",
+          "speaker": "州法官",
+          "listener": "法庭各方",
+          "text": "The restaurant search was not justified by an immediate threat. The items recovered in that search are excluded.",
+          "translationZh": "餐厅搜查不存在足以支持它的即时威胁。该次搜查取得的物品予以排除。",
+          "tone": "宣读范围",
+          "start": 0.8,
+          "end": 10.48
+        },
+        {
+          "id": "E17-D010",
+          "speaker": "州法官",
+          "listener": "法庭各方",
+          "text": "Certain unwarned answers after custody are excluded as well. The remaining evidence requires a separate ruling.",
+          "translationZh": "进入羁押后未经告知取得的部分答复也予排除。其余证据须另行判断。",
+          "tone": "继续裁定",
+          "start": 19.8,
+          "end": 28.43
+        },
+        {
+          "id": "E17-D011",
+          "speaker": "州法官",
+          "listener": "法庭各方",
+          "text": "The station inventory was lawful. The gun and the notebook remain admissible.",
+          "translationZh": "警局清点合法，枪与笔记本仍可采纳。",
+          "tone": "明确保留",
+          "start": 37.8,
+          "end": 44.33
+        },
+        {
+          "id": "E17-D012",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "That includes these pages?",
+          "translationZh": "这些页也在里面？",
+          "tone": "指向清单",
+          "start": 44.98,
+          "end": 47.31
+        },
+        {
+          "id": "E17-D013",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "Yes. Those were recovered legally. Don't cross them out.",
+          "translationZh": "是。那些页是合法取得的，不能划掉。",
+          "tone": "压低声音，止住他划线的动作",
+          "start": 47.96,
+          "end": 52.92
+        }
+      ],
+      "overlay": [],
+      "next": "本场结果成立后切入 E17-SC03（VISIT，傍晚·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "viewerEntry": "两列均待裁定。",
+      "viewerExit": "同一场宣判中的希望被限定，不能把局部成功剪成全面翻盘。",
+      "cutTrigger": "成片剪点由本镜结束后注意与任务发生变化决定：同一场宣判中的希望被限定，不能把局部成功剪成全面翻盘。 技术生成段边界不触发剪辑。",
+      "sourceShotIds": [
+        "E17-SH005",
+        "E17-SH006",
+        "E17-SH007",
+        "E17-SH008"
+      ],
+      "generationSegments": [
+        {
+          "duration": 19,
+          "start": "法官读裁定，海伦笔尖贴左列旁。",
+          "action": "北席宣读餐厅搜查部分；海伦等范围明确才划左列，青年伸手到桌沿。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "北席宣读餐厅搜查部分；海伦等范围明确才划左列，青年伸手到桌沿。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E17-D009"
+          ]
+        },
+        {
+          "duration": 18,
+          "start": "北席宣读餐厅搜查部分；海伦等范围明确才划左列，青年伸手到桌沿。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "action": "未经告知的部分答复被排除；海伦继续左列，不动右列，青年等后半段。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "未经告知的部分答复被排除；海伦继续左列，不动右列，青年等后半段。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E17-D010"
+          ]
+        },
+        {
+          "duration": 18,
+          "start": "未经告知的部分答复被排除；海伦继续左列，不动右列，青年等后半段。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "action": "北席确认枪与笔记可用；海伦停笔，青年问这些页能否划去，她答清后他退手。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "北席确认枪与笔记可用；海伦停笔，青年问这些页能否划去，她答清后他退手。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E17-D011",
+            "E17-D012",
+            "E17-D013"
+          ]
+        }
+      ],
+      "continuousTakeGroup": "E17-SH005",
+      "mediaContinuityStatus": "pending_media",
+      "extraRoleIds": [
+        "STATE-JUDGE-OFFSCREEN-VOICE"
+      ],
+      "editorialContinuity": "一个成片观察位置和完整表演；技术段只为生成与衔接试片计划，非新增剪点。实际连贯性待媒体测试。",
+      "offscreenRoleIds": [
+        "JUDGE-STATE",
+        "STATE-JUDGE-OFFSCREEN-VOICE"
+      ],
+      "broadcastEpisode": 18,
+      "displayId": "EP18-003"
+    },
+    {
+      "id": "E17-SH009",
+      "sceneId": "E17-SC03",
+      "duration": 35,
+      "characters": [
+        "LUIGI-DETENTION",
+        "HELEN"
+      ],
+      "purpose": "他不再把自己的行动推给来源，但证据效力并不因此消失。",
+      "framing": "青年与通信页近中景，西南朝东北；海伦南侧画外。",
+      "composition": "会见室南门、东窄窗、中央固定桌；路易吉北、海伦南，冷顶灯，所有机位在桌西侧。桌西南固定青年近中景，通信及目录可在他面前被对照；海伦指日期的说明为南侧同场画外声，青年自己把两条摊开。 本镜看被迫阅读的人怎样从日期走向护住来源；下一镜放宽，才允许律师真正离开。",
+      "camera": "桌西南固定青年近中景，通信及目录可在他面前被对照；海伦指日期的说明为南侧同场画外声，青年自己把两条摊开。",
+      "focus": "本镜看被迫阅读的人怎样从日期走向护住来源；下一镜放宽，才允许律师真正离开。",
+      "start": "会见桌中央放通信页，青年空双手。",
+      "action": "律师把依法交付通信与保留目录并列，青年再对自己的日期，然后将自己的话和莉娜模板回复完整摊开，纠正责任归属。",
+      "end": "他不再把自己的行动推给来源，但证据效力并不因此消失。；具体动作终态：青年把两条消息铺平，说明莉娜只提供申诉表，说完移开手。",
+      "sound": "纸页压住桌声，门外巡查脚步从南经过。；短句后纸声，保留一句回答前的呼吸。；只保留本镜对白表所列可辨英语，原场内画外、电话、直播声源关系保持；不增配解释旁白。",
+      "music": "无背景音乐；先以表演、对白、真实环境声成立，禁止在技术段接缝加音乐遮掩。",
+      "dialogue": [
+        {
+          "id": "E17-D014",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "Look at these dates. You'd already decided before Lena sent that message. They'll use that.",
+          "translationZh": "看这几个日期。莉娜发那条消息之前，你就已经决定了。检方会用这一点。",
+          "tone": "指着时间先后，等他看清再继续",
+          "start": 0.8,
+          "end": 8.9
+        },
+        {
+          "id": "E17-D015",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "She offered an appeal form. She didn't send me there. Don't blame her.",
+          "translationZh": "她只是提出给我申诉表。不是她让我去的，别怪到她头上。",
+          "tone": "急着纠正归责，说完把手移开",
+          "start": 18.8,
+          "end": 25.85
+        }
+      ],
+      "overlay": [],
+      "next": "下一成片镜 E17-SH011。同场时承接本镜已完成动作，不重复表演；跨场依剧本时间和空间建立。",
+      "viewerEntry": "E16已交完整通信。",
+      "viewerExit": "他不再把自己的行动推给来源，但证据效力并不因此消失。",
+      "cutTrigger": "成片剪点由本镜结束后注意与任务发生变化决定：他不再把自己的行动推给来源，但证据效力并不因此消失。 技术生成段边界不触发剪辑。",
+      "sourceShotIds": [
+        "E17-SH009",
+        "E17-SH010"
+      ],
+      "generationSegments": [
+        {
+          "duration": 18,
+          "start": "会见桌中央放通信页，青年空双手。",
+          "action": "海伦将日期并列讲清，青年先核自己原句，不遮页。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "海伦将日期并列讲清，青年先核自己原句，不遮页。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E17-D014"
+          ]
+        },
+        {
+          "duration": 17,
+          "start": "海伦将日期并列讲清，青年先核自己原句，不遮页。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "action": "青年把两条消息铺平，说明莉娜只提供申诉表，说完移开手。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "青年把两条消息铺平，说明莉娜只提供申诉表，说完移开手。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E17-D015"
+          ]
+        }
+      ],
+      "continuousTakeGroup": "E17-SH009",
+      "mediaContinuityStatus": "pending_media",
+      "editorialContinuity": "一个成片观察位置和完整表演；技术段只为生成与衔接试片计划，非新增剪点。实际连贯性待媒体测试。",
+      "offscreenRoleIds": [
+        "HELEN"
+      ],
+      "broadcastEpisode": 18,
+      "displayId": "EP18-004"
+    },
+    {
+      "id": "E17-SH011",
+      "sceneId": "E17-SC03",
+      "duration": 45,
+      "characters": [
+        "HELEN",
+        "LUIGI-DETENTION"
+      ],
+      "purpose": "他开始处理自己的话给自己造成的后果，同时把家庭通知当作实际任务。",
+      "framing": "继续桌西同轴固定中景",
+      "composition": "会见室南门、东窄窗、中央固定桌；路易吉北、海伦南，冷顶灯，所有机位在桌西侧。本成片镜按如下连续机位与人物动作执行：继续桌西同轴固定中景，南门在律师后层；她的收拾与起身连续完成，最后留青年在原位读，不能追出去。 青年要求留下副本，确认能否带着问题慢读；律师让他标问题而不改旧消息。他做一个页边待问记号，临走请求先通知请假的母亲。海伦答应后收裁定离开，青年已经读第一页。",
+      "camera": "继续桌西同轴固定中景，南门在律师后层；她的收拾与起身连续完成，最后留青年在原位读，不能追出去。",
+      "focus": "按人物当前任务保持共享画面可读；他开始处理自己的话给自己造成的后果，同时把家庭通知当作实际任务。 不按每句说话人自动反打；细字由后期证据页必要叠加，不要求景深同时清楚全部正文。",
+      "start": "海伦准备收裁定，笔记副本在青年前。",
+      "action": "青年要求留下副本，确认能否带着问题慢读；律师让他标问题而不改旧消息。他做一个页边待问记号，临走请求先通知请假的母亲。海伦答应后收裁定离开，青年已经读第一页。",
+      "end": "他开始处理自己的话给自己造成的后果，同时把家庭通知当作实际任务。；具体动作终态：钥匙声到南门；青年请她先打给母亲，她答后收夹起身走出画缘，青年继续读。",
+      "sound": "案卷纸声，远处门锁不打断对话。；钥匙触发抬眼，门关声结束，不加煽情乐。；只保留本镜对白表所列可辨英语，原场内画外、电话、直播声源关系保持；不增配解释旁白。",
+      "music": "无背景音乐；先以表演、对白、真实环境声成立，禁止在技术段接缝加音乐遮掩。",
+      "dialogue": [
+        {
+          "id": "E17-D016",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "I won't. But these are still evidence. You need to read them.",
+          "translationZh": "我不会。可这些还是证据，你得把它们读完。",
+          "tone": "不跟他争，话回到留下的文件",
+          "start": 0.8,
+          "end": 7.33
+        },
+        {
+          "id": "E17-D017",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "Leave me the copy.",
+          "translationZh": "副本留下给我。",
+          "tone": "作出小决定",
+          "start": 7.98,
+          "end": 10.31
+        },
+        {
+          "id": "E17-D201",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "The copy stays here?",
+          "translationZh": "副本能留在这里？",
+          "tone": "确认确实能自己读",
+          "start": 10.96,
+          "end": 13.29
+        },
+        {
+          "id": "E17-D202",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "Yes. Mark what you want to ask me. Don't rewrite what you sent.",
+          "translationZh": "能。想问我的地方标出来，别改你原来发过的话。",
+          "tone": "把阅读和重写过去分开",
+          "start": 13.94,
+          "end": 20.99
+        },
+        {
+          "id": "E17-D018",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "My mom took today off. Can you call her before she sees the news?",
+          "translationZh": "我妈今天特意请了假。能在她看到新闻之前，先给她打个电话吗？",
+          "tone": "临走才想起，声音放轻",
+          "start": 23.8,
+          "end": 31.38
+        },
+        {
+          "id": "E17-D019",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "I will. Take your time with it.",
+          "translationZh": "我会。你慢慢读。",
+          "tone": "不催交答案",
+          "start": 32.03,
+          "end": 35.94
+        }
+      ],
+      "overlay": [],
+      "next": "本场结果成立后切入 E18-SC02（VISIT，日·州取证听证次日；诺拉的更正与咖啡会面已发生）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "viewerEntry": "他拒绝推责，下一步尚未决定。",
+      "viewerExit": "他开始处理自己的话给自己造成的后果，同时把家庭通知当作实际任务。",
+      "cutTrigger": "成片剪点由本镜结束后注意与任务发生变化决定：他开始处理自己的话给自己造成的后果，同时把家庭通知当作实际任务。 技术生成段边界不触发剪辑。",
+      "sourceShotIds": [
+        "E17-SH011",
+        "E17-SH012"
+      ],
+      "generationSegments": [
+        {
+          "duration": 23,
+          "start": "海伦准备收裁定，笔记副本在青年前。",
+          "action": "海伦只收裁定；青年拉住副本，确认能留下后标一个待问记号。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "海伦只收裁定；青年拉住副本，确认能留下后标一个待问记号。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E17-D016",
+            "E17-D017",
+            "E17-D201",
+            "E17-D202"
+          ]
+        },
+        {
+          "duration": 22,
+          "start": "海伦只收裁定；青年拉住副本，确认能留下后标一个待问记号。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "action": "钥匙声到南门；青年请她先打给母亲，她答后收夹起身走出画缘，青年继续读。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "钥匙声到南门；青年请她先打给母亲，她答后收夹起身走出画缘，青年继续读。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E17-D018",
+            "E17-D019"
+          ]
+        }
+      ],
+      "continuousTakeGroup": "E17-SH011",
+      "mediaContinuityStatus": "pending_media",
+      "editorialContinuity": "一个成片观察位置和完整表演；技术段只为生成与衔接试片计划，非新增剪点。实际连贯性待媒体测试。",
+      "offscreenRoleIds": [],
+      "broadcastEpisode": 18,
+      "displayId": "EP18-005"
+    },
+    {
+      "id": "E18-SH005",
+      "sceneId": "E18-SC02",
+      "duration": 40,
+      "characters": [
+        "HELEN",
+        "LUIGI-DETENTION"
+      ],
+      "purpose": "把“我写的”从“材料证明的”分开是实际工作。",
+      "framing": "青年上身与分栏纸中近景，桌西南朝东北。",
+      "composition": "会见室南门、东窗、中央桌，路易吉北海伦南；冷顶灯，机位留桌西侧。桌西南固定青年与纸的中近景；海伦从南侧画外交纸并发出任务，镜头留在他誊写、核自己原话的完整动作上。 原资料与自写断言的归属通过他真实誊写成立；他决定向律师提出待查问题后，下一镜才改共享画面。",
+      "camera": "桌西南固定青年与纸的中近景；海伦从南侧画外交纸并发出任务，镜头留在他誊写、核自己原话的完整动作上。",
+      "focus": "原资料与自写断言的归属通过他真实誊写成立；他决定向律师提出待查问题后，下一镜才改共享画面。",
+      "start": "空白纸居中，原资料左、笔记副本右。",
+      "action": "青年接过分栏空纸，先发现批注和资料混在一起。他从自己本上找到无人阅读那句，完整誊到自己的半边，然后再核左侧原文，没有改动原资料。",
+      "end": "把“我写的”从“材料证明的”分开是实际工作。；具体动作终态：青年誊写自己的断言并读清归属，笔回到左侧原资料，原文未改。",
+      "sound": "笔杆被拿起的轻响，门外脚步过而不停。；笔尖写字，青年清楚原声，无强调乐。；只保留本镜对白表所列可辨英语，原场内画外、电话、直播声源关系保持；不增配解释旁白。",
+      "music": "无背景音乐；先以表演、对白、真实环境声成立，禁止在技术段接缝加音乐遮掩。",
+      "dialogue": [
+        {
+          "id": "E18-D008",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "Put the document's words here. Your own notes on that side.",
+          "translationZh": "文件原话写这边，你自己的批注写另一边。",
+          "tone": "把纸分好后交给他自己写",
+          "start": 0.8,
+          "end": 6.8
+        },
+        {
+          "id": "E18-D009",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "I've mixed them up.",
+          "translationZh": "我把它们混到一起了。",
+          "tone": "看着旧批注，笔还没落下",
+          "start": 7.45,
+          "end": 9.78
+        },
+        {
+          "id": "E18-D010",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "The file says the appeal was incomplete. 'No one read it.' That's my line. I added that.",
+          "translationZh": "文件只说申诉材料不全。“没人读过”是我说的，是我自己加上去的。",
+          "tone": "读一句核一句，承认那句属于自己",
+          "start": 20.8,
+          "end": 29.95
+        }
+      ],
+      "overlay": [],
+      "next": "下一成片镜 E18-SH007。同场时承接本镜已完成动作，不重复表演；跨场依剧本时间和空间建立。",
+      "viewerEntry": "青年善于解释材料。",
+      "viewerExit": "把“我写的”从“材料证明的”分开是实际工作。",
+      "cutTrigger": "成片剪点由本镜结束后注意与任务发生变化决定：把“我写的”从“材料证明的”分开是实际工作。 技术生成段边界不触发剪辑。",
+      "sourceShotIds": [
+        "E18-SH005",
+        "E18-SH006"
+      ],
+      "generationSegments": [
+        {
+          "duration": 20,
+          "start": "空白纸居中，原资料左、笔记副本右。",
+          "action": "海伦交分栏纸，青年转正检查旧批注，承认混在一起。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "海伦交分栏纸，青年转正检查旧批注，承认混在一起。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E18-D008",
+            "E18-D009"
+          ]
+        },
+        {
+          "duration": 20,
+          "start": "海伦交分栏纸，青年转正检查旧批注，承认混在一起。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "action": "青年誊写自己的断言并读清归属，笔回到左侧原资料，原文未改。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "青年誊写自己的断言并读清归属，笔回到左侧原资料，原文未改。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E18-D010"
+          ]
+        }
+      ],
+      "continuousTakeGroup": "E18-SH005",
+      "mediaContinuityStatus": "pending_media",
+      "editorialContinuity": "一个成片观察位置和完整表演；技术段只为生成与衔接试片计划，非新增剪点。实际连贯性待媒体测试。",
+      "offscreenRoleIds": [
+        "HELEN"
+      ],
+      "broadcastEpisode": 18,
+      "displayId": "EP18-006"
+    },
+    {
+      "id": "E18-SH007",
+      "sceneId": "E18-SC02",
+      "duration": 45,
+      "characters": [
+        "LUIGI-DETENTION",
+        "HELEN"
+      ],
+      "purpose": "独立提出可查问题，同时停止把疑问包装成结论。",
+      "framing": "会见双人中景，桌西朝东。",
+      "composition": "会见室南门、东窗、中央桌，路易吉北海伦南；冷顶灯，机位留桌西侧。桌西共享中景，纸被青年转向南侧接收者时缓慢前移约二十厘米，停在两人能一起看清清单的位置；不在技术段边界重新推进。 把孤立的自我纠错变成有边界的请求；先问未知，再形成便签。",
+      "camera": "桌西共享中景，纸被青年转向南侧接收者时缓慢前移约二十厘米，停在两人能一起看清清单的位置；不在技术段边界重新推进。",
+      "focus": "把孤立的自我纠错变成有边界的请求；先问未知，再形成便签。",
+      "start": "两份附件清单展开，青年笔停在空处。",
+      "action": "青年比出一个附件未对上，主动提出可能版本不同；海伦说明到件也不等于谁看过。他让律师只转待查问题，明确不带猜测；纸和资料分别归回各自位置。",
+      "end": "海伦回答到件还不能证明谁看过；随后写去身份问题便签，等青年确认不带猜测才收起。 末步真实状态直接接下一段，不重演。",
+      "sound": "两次翻页后对白，推纸声结束。；轻推便签、蓝夹纸声，门锁在远处。；只保留本镜对白表所列可辨英语，原场内画外、电话、直播声源关系保持；不增配解释旁白。",
+      "music": "无背景音乐；先以表演、对白、真实环境声成立，禁止在技术段接缝加音乐遮掩。",
+      "dialogue": [
+        {
+          "id": "E18-D011",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "The clinic lists a file that's missing here. Maybe these are different versions. Can Kevin check?",
+          "translationZh": "诊所这边有个文件，这份上没有。也许版本不同。能让凯文查一下吗？",
+          "tone": "先提出另一种可能，不往下断言",
+          "start": 0.8,
+          "end": 9.43
+        },
+        {
+          "id": "E18-D012",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "He can ask for the records. We don't know yet.",
+          "translationZh": "他可以申请调记录。现在还不知道。",
+          "tone": "把能做的和不知道的分开",
+          "start": 10.08,
+          "end": 15.56
+        },
+        {
+          "id": "E18-D201",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "If he finds it was sent?",
+          "translationZh": "如果他查到确实发过去了呢？",
+          "tone": "停在尚未验证的可能性",
+          "start": 16.21,
+          "end": 19.59
+        },
+        {
+          "id": "E18-D202",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "Then that's what the records say. It still won't tell us who saw it.",
+          "translationZh": "那记录就说明发过。可还不能说明谁看过。",
+          "tone": "把到件与实际阅看分开，不提前揭队列结论",
+          "start": 23.8,
+          "end": 31.38
+        },
+        {
+          "id": "E18-D013",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "Can I send him this? Without the patient names.",
+          "translationZh": "我把这个问题发给他？患者姓名去掉。",
+          "tone": "给他看便签，等明确答复",
+          "start": 32.03,
+          "end": 36.99
+        },
+        {
+          "id": "E18-D014",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "Yes. Leave my theory out of it.",
+          "translationZh": "行。别把我的猜测也带过去。",
+          "tone": "确认转交，只留下待查问题",
+          "start": 37.64,
+          "end": 41.55
+        }
+      ],
+      "overlay": [],
+      "next": "本集结束。他将来源原文和自己的判断分栏，只把附件缺项作为疑问交独立程序核验；调查方向不能替他撤回自己的决定。 下集从INSURER展开：谁能替瑞秋和儿子决定，一个不完美的父亲应该怎样被记住？",
+      "viewerEntry": "旧结论被放弃，调查可能停住。",
+      "viewerExit": "独立提出可查问题，同时停止把疑问包装成结论。",
+      "cutTrigger": "成片剪点由本镜结束后注意与任务发生变化决定：独立提出可查问题，同时停止把疑问包装成结论。 技术生成段边界不触发剪辑。",
+      "sourceShotIds": [
+        "E18-SH007",
+        "E18-SH008"
+      ],
+      "generationSegments": [
+        {
+          "duration": 23,
+          "start": "两份附件清单展开，青年笔停在空处。",
+          "action": "青年逐项对清单，提出版本可能，律师答仍需调记录；他紧接着追问如果确实发到的含义。 同一成片镜连续接续，人物位置、物件归属、光线与机位轨迹不重置。",
+          "end": "青年逐项对清单，提出版本可能，律师答仍需调记录；他紧接着追问如果确实发到的含义。 末步真实状态直接接下一段，不重演。",
+          "dialogueCueIds": [
+            "E18-D011",
+            "E18-D012",
+            "E18-D201"
+          ]
+        },
+        {
+          "duration": 22,
+          "start": "青年逐项对清单，提出版本可能，律师答仍需调记录；他紧接着追问如果确实发到的含义。 末步真实状态直接接下一段，不重演。",
+          "action": "海伦回答到件还不能证明谁看过；随后写去身份问题便签，等青年确认不带猜测才收起。 同一成片镜连续接续，人物位置、物件归属、光线与机位轨迹不重置。",
+          "end": "海伦回答到件还不能证明谁看过；随后写去身份问题便签，等青年确认不带猜测才收起。 末步真实状态直接接下一段，不重演。",
+          "dialogueCueIds": [
+            "E18-D202",
+            "E18-D013",
+            "E18-D014"
+          ]
+        }
+      ],
+      "continuousTakeGroup": "E18-SH007",
+      "mediaContinuityStatus": "pending_media",
+      "editorialContinuity": "一个成片观察位置和完整表演；技术段只为生成与衔接试片计划，非新增剪点。实际连贯性待媒体测试。",
+      "offscreenRoleIds": [],
+      "broadcastEpisode": 18,
+      "displayId": "EP18-007"
+    }
+  ]
+}

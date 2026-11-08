@@ -1,0 +1,17 @@
+{
+  "pid": 21668,
+  "exit": 0,
+  "timeout": false,
+  "end_utc": "2026-11-02T16:47:29.245018+00:00",
+  "turn_completed": true,
+  "turn_failed": false,
+  "event_count": 41,
+  "stderr_classification": [
+    "HTTP 403 observed; response omitted",
+    "MCP OAuth refresh rejection observed; details omitted"
+  ],
+  "raw_cleanup": [
+    "events.raw: cleared but locked",
+    "stderr.raw: cleared but locked"
+  ]
+}

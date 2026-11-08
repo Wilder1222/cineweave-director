@@ -1,0 +1,13 @@
+{
+  "pid": 51412,
+  "exit": 0,
+  "timeout": false,
+  "end_utc": "2026-11-02T18:31:47.410809+00:00",
+  "stderr_classification": [
+    "HTTP 403 observed; response omitted",
+    "MCP OAuth warning observed; details omitted"
+  ],
+  "turn_completed": true,
+  "turn_failed": false,
+  "redacted_memory_outputs": 2
+}

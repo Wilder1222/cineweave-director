@@ -1,0 +1,67 @@
+{
+  "case": "C06",
+  "model": null,
+  "tokens": null,
+  "elapsed_seconds": null,
+  "read_files": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C06\\request.txt",
+      "sha256": "bcbe3bc021a2dcef3bb004c2a00b62e4b2c8b1cd0401a8bb700b470fc3c7be7d"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\SKILL.md",
+      "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\style.md",
+      "sha256": "8c68adec5424cdeef9735099102eabd022e65181af21efac4564d41e7528e806"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\color-grading-presets.md",
+      "sha256": "cbe652ec6887da11d73914dd4fc9ae6728a933c820e476a3bd3246b54a79fbf0"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\makeup-style-presets.md",
+      "sha256": "a2e4efa2134d2362a54efea433b802480a810c9a9c3b9e9cc4fadc6799992a8a"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\image-prompt.md",
+      "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+      "sha256": "0880a163be9679d32807688a0c434c0fa936c0fb00a5c4aae24e381d0dd92c25"
+    }
+  ],
+  "checks": [
+    {
+      "name": "independent_card_revisions",
+      "result": true
+    },
+    {
+      "name": "required_identity_locks_present",
+      "result": true
+    },
+    {
+      "name": "complete_copy_block_present",
+      "result": true
+    },
+    {
+      "name": "lf_line_endings",
+      "result": true
+    }
+  ],
+  "artifacts": [
+    {
+      "type": "complete_answer",
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C06\\output.md",
+      "sha256": "0104727c6da654fa182bca8b1059737bde39929d4436c6713c9e067c4468386b"
+    }
+  ],
+  "limitations": [
+    "No image generation or media acceptance validation was performed.",
+    "No original image or complete earlier character draft was supplied.",
+    "Full prompt-detail resource tool output was truncated; relevant character and expression sections were visible.",
+    "Model identity, token usage, and elapsed timing are unknown and recorded as null."
+  ]
+}

@@ -1,0 +1,113 @@
+{
+  "finding": "F06",
+  "version": "3.2.2",
+  "status": "closed_for_scoped_loading",
+  "metrics": [
+    {
+      "case": "C01",
+      "version": "3.2.1",
+      "toolResponses": 2,
+      "modelVisibleUtf8Bytes": 55123,
+      "modelVisibleCodePoints": 22297,
+      "truncatedResponses": 1,
+      "trace": "before/C01/trace.json"
+    },
+    {
+      "case": "C06",
+      "version": "3.2.1",
+      "toolResponses": 5,
+      "modelVisibleUtf8Bytes": 88781,
+      "modelVisibleCodePoints": 43136,
+      "truncatedResponses": 2,
+      "trace": "before/C06/trace.json"
+    },
+    {
+      "case": "A01",
+      "version": "3.2.2",
+      "toolResponses": 5,
+      "modelVisibleUtf8Bytes": 33722,
+      "modelVisibleCodePoints": 13982,
+      "truncatedResponses": 0,
+      "trace": "after/A01/visible-trace.json"
+    },
+    {
+      "case": "A06",
+      "version": "3.2.2",
+      "toolResponses": 6,
+      "modelVisibleUtf8Bytes": 42968,
+      "modelVisibleCodePoints": 18572,
+      "truncatedResponses": 0,
+      "trace": "after/A06/visible-trace.json"
+    },
+    {
+      "case": "R06",
+      "version": "3.2.2",
+      "toolResponses": 6,
+      "modelVisibleUtf8Bytes": 42034,
+      "modelVisibleCodePoints": 17638,
+      "truncatedResponses": 0,
+      "trace": "after/R06/visible-trace.json"
+    }
+  ],
+  "comparison": [
+    {
+      "before": "C01",
+      "after": "A01",
+      "beforeBytes": 55123,
+      "afterBytes": 33722,
+      "reduction": 0.3882408432051957,
+      "toolResponsesBefore": 2,
+      "toolResponsesAfter": 5
+    },
+    {
+      "before": "C06",
+      "after": "A06",
+      "beforeBytes": 88781,
+      "afterBytes": 42968,
+      "reduction": 0.5160225723972471,
+      "toolResponsesBefore": 5,
+      "toolResponsesAfter": 6
+    },
+    {
+      "before": "C06",
+      "after": "R06",
+      "beforeBytes": 88781,
+      "afterBytes": 42034,
+      "reduction": 0.5265428413737174,
+      "toolResponsesBefore": 5,
+      "toolResponsesAfter": 6
+    }
+  ],
+  "qualityReview": {
+    "A01": {
+      "status": "pass_text_scope",
+      "basis": "完整单段海报：准确图尽、16:9、成年原创使者、合拢米黄地图、不显露匕首，保留礼仪紧张；无媒体。"
+    },
+    "A06": {
+      "status": "pass_text_scope",
+      "basis": "CG11@r2与MU14@r3独立，窗光变体合理；保留58岁、偏深肤、矮壮、圆脸细纹、灰发低髻、靛蓝棉衣、西窗与静看门外；完整复制稿。"
+    },
+    "R06": {
+      "status": "pass_text_scope",
+      "basis": "独立重复仍只取同两卡，原年龄、肤色、体型、衣装、光位与静帧状态保留；完整复制稿。"
+    }
+  },
+  "qualityReviewer": "root; manual semantic check of complete output and original hard locks",
+  "formulaFilesByteUnchanged": true,
+  "all68CardsFullTextTests": true,
+  "initialFilesMissing": [],
+  "measurementBoundary": {
+    "actualModelVisible": "Exact selected tool result text blocks, including JSON wrappers and truncation notices. Excludes user request, system prompt, agent reasoning, final answer and filesystem-only reads.",
+    "helperPayload": "Literal UTF8 text written to stdout before tool wrapping, with source line spans and hashes.",
+    "timing": "Local read + parse + render only; not model or end-to-end latency.",
+    "tokenUsage": null
+  },
+  "limitations": [
+    "Historical before and fresh-context after, not randomized same-model A/B; model identity and token metrics unavailable.",
+    "Two optimized combination executions and one poster do not estimate general stability.",
+    "Smaller context coincides with more tool responses in these traces; no fewer-round-trips claim.",
+    "Helper scans both full local catalogs; not less disk I/O.",
+    "No image/video/audio generated or reviewed.",
+    "F07 explicitly deferred; full specialist resource profiles preserved."
+  ]
+}

@@ -1,0 +1,227 @@
+{
+  "fps": 24,
+  "timingVerified": false,
+  "lipSyncVerified": false,
+  "cues": [
+    {
+      "shotId": "H003-01A",
+      "speaker": "程野",
+      "text": "这是哪儿？",
+      "addressee": "阿荠",
+      "performance": "举图问，确实不知道",
+      "startFrame": 0,
+      "endFrameExclusive": 72,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-01A",
+      "speaker": "阿荠",
+      "text": "蔡州。我三天前出城送药，我娘还住北门里。你们若去那里，别在巷口放火，里面的人出不来。",
+      "addressee": "程野",
+      "performance": "由具体地址说到请求，不作激昂演说",
+      "startFrame": 72,
+      "endFrameExclusive": 528,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-01B",
+      "speaker": "程野",
+      "text": "将军只让我们东行。我不知道去不去。",
+      "addressee": "阿荠",
+      "performance": "坦白任务边界",
+      "startFrame": 576,
+      "endFrameExclusive": 768,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-01B",
+      "speaker": "阿荠",
+      "text": "我也不知道。我看见你们朝东走，才想试着送图。",
+      "addressee": "程野",
+      "performance": "承认猜想，重音试着",
+      "startFrame": 768,
+      "endFrameExclusive": 960,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-02A",
+      "speaker": "罗七",
+      "text": "城里人给我们画门，是想引到哪里？",
+      "addressee": "阿荠",
+      "performance": "拿到图才质问，带戒心",
+      "startFrame": 1128,
+      "endFrameExclusive": 1248,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-02A",
+      "speaker": "阿荠",
+      "text": "我不是给你们带路。我只认得半边城，门画出来，你们才知道我说哪条巷。",
+      "addressee": "罗七",
+      "performance": "解释图的指认功能，非求信誓言",
+      "startFrame": 1248,
+      "endFrameExclusive": 1536,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-02B",
+      "speaker": "罗七",
+      "text": "三天里换没换岗，巷还通不通？",
+      "addressee": "阿荠",
+      "performance": "具体两问",
+      "startFrame": 1536,
+      "endFrameExclusive": 1680,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-02B",
+      "speaker": "阿荠",
+      "text": "我不知道。我没法回去看。",
+      "addressee": "罗七",
+      "performance": "不填未知，低而坚决",
+      "startFrame": 1680,
+      "endFrameExclusive": 1776,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-03A",
+      "speaker": "罗七",
+      "text": "只画半边，谁敢拿它引路？",
+      "addressee": "程野/阿荠",
+      "performance": "偏重军事用途的判断",
+      "startFrame": 1824,
+      "endFrameExclusive": 1944,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-03A",
+      "speaker": "程野",
+      "text": "烧了，就没人知道巷里曾经住过人。让我把她说不准的地方也写上。",
+      "addressee": "罗七",
+      "performance": "先按住才说，给保留材料办法",
+      "startFrame": 2016,
+      "endFrameExclusive": 2328,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-03B",
+      "speaker": "阿荠",
+      "text": "别写一定有人。我只知道三天前我娘住那里。",
+      "addressee": "程野",
+      "performance": "看到初注才纠正，重音三天前",
+      "startFrame": 2880,
+      "endFrameExclusive": 3024,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-04A",
+      "speaker": "罗七",
+      "text": "我会上报，但不能答应谁会信，更不能替别人许诺那条巷安全。你得留给后面的人核问。",
+      "addressee": "阿荠",
+      "performance": "陈述限制，不训诫式抬腔",
+      "startFrame": 3168,
+      "endFrameExclusive": 3528,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-04A",
+      "speaker": "阿荠",
+      "text": "我想回去。",
+      "addressee": "罗七",
+      "performance": "短句牵挂母亲",
+      "startFrame": 3528,
+      "endFrameExclusive": 3600,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-04A",
+      "speaker": "罗七",
+      "text": "现在不能。药带着，你得等。",
+      "addressee": "阿荠",
+      "performance": "拒绝放行，未没收药",
+      "startFrame": 3600,
+      "endFrameExclusive": 3696,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-04B",
+      "speaker": "罗七",
+      "text": "将军说了，入蔡州。",
+      "addressee": "程野/阿荠",
+      "performance": "回门边后才清楚告知",
+      "startFrame": 3816,
+      "endFrameExclusive": 3912,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-04B",
+      "speaker": "阿荠",
+      "text": "写了三天前，就别改成今天。",
+      "addressee": "罗七",
+      "performance": "坚持材料限定，未求破例改军令",
+      "startFrame": 3912,
+      "endFrameExclusive": 4056,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-04C",
+      "speaker": "程野",
+      "text": "留着等天亮。",
+      "addressee": "阿荠",
+      "performance": "递半粮时说，无安全保证",
+      "startFrame": 4152,
+      "endFrameExclusive": 4248,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-05A",
+      "speaker": "罗七",
+      "text": "我口头报了图和她的话，原图一直由我拿着。没人叫我们按它走。",
+      "addressee": "程野",
+      "performance": "分清报送与采用，重音没人",
+      "startFrame": 4464,
+      "endFrameExclusive": 4800,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-05B",
+      "speaker": "程野",
+      "text": "天亮后，她能回去吗？",
+      "addressee": "罗七",
+      "performance": "吞咽后问，带饿与担心",
+      "startFrame": 5088,
+      "endFrameExclusive": 5160,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-06A",
+      "speaker": "罗七",
+      "text": "不知道。她娘在哪儿，我也不知道。",
+      "addressee": "程野",
+      "performance": "承认无知，不斩钉截铁坏消息",
+      "startFrame": 5160,
+      "endFrameExclusive": 5304,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-06A",
+      "speaker": "程野",
+      "text": "若进了城，我想看看那条巷。",
+      "addressee": "罗七",
+      "performance": "若与想保条件性",
+      "startFrame": 5304,
+      "endFrameExclusive": 5424,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H003-06A",
+      "speaker": "罗七",
+      "text": "先跟队。这张纸不是今夜的守备图。",
+      "addressee": "程野",
+      "performance": "限制行动与图用途",
+      "startFrame": 5424,
+      "endFrameExclusive": 5592,
+      "timingStatus": "authored_window_pending_measurement"
+    }
+  ]
+}

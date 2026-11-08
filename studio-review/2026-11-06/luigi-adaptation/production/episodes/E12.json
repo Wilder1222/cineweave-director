@@ -1,0 +1,1345 @@
+{
+  "number": 12,
+  "title": "和解价",
+  "logline": "玛拉以限制个案公开争议换过渡治疗资金，独立律师保留正式取证和作证权；钱到账，她先选择支付。",
+  "scenes": [
+    {
+      "id": "E12-SC01",
+      "location": "INSURER",
+      "time": "日·诊所告知付款期限的同日下午",
+      "script": "同日下午合众健康会议室，玛拉坐长桌南侧，灰风衣仍罩黑工服，诊所付款卡压在费用页上。维克多在北端，平板左侧，南门在她身后。\n\n玛拉将诊所付款卡压到维克多的费用页上，要他先回答时间。他把费用页转正，她仍用指尖盖住金额，不让话题移到赔多少。\n\n玛拉（英语，压住金额，只等到账时间）：Will the clinic have it today?\n中文对照：诊所今天能收到吗？\n维克多（英语，先把付款条件摆在桌上）：This covers the current treatment. We send it once you've signed.\n中文对照：这笔付眼下的疗程。你签完，我们就放款。\n\n维克多将保密与结案页推到付款页上方。玛拉终于移开压住金额的手，翻向采访条款，手机放到桌右免得挡字。\n\n维克多（英语，说限制时仍把纸推向签字处）：Once this claim's settled, no more interviews about it.\n中文对照：这起申请结了，就不能再就这事接受采访。\n玛拉（英语，看采访条款，当面核对代价）：I take the money and stop talking. That's the deal?\n中文对照：钱拿了，就不许再说了。是这个意思？\n\n玛拉没有去碰签字页，先把付款卡从两页之间抽出来，确保电话号码还在自己手里。\n\n玛拉（英语，要求说出退路）：And if I don't sign?\n中文对照：不签呢？\n维克多（英语，说流程，没有承诺位置）：The claim stays disputed. You can keep appealing.\n中文对照：这起申请仍有争议，你可以继续申诉。\n\n玛拉连翻两页找下个疗程，维克多没有替她翻。她指到空着的续批项，拿起笔想让他加进去；他将笔轻推回她一侧。\n\n玛拉（英语，把笔递过去，试一次能否多争）：Then put the next round in here.\n中文对照：那把下个疗程也写进去。\n维克多（英语，把笔推回，不绕开拒绝）：I can't promise they'll approve the next one.\n中文对照：下次批不批，我保证不了。\n\n玛拉合起未签协议收入左侧蓝夹，右手拿回手机起身。维克多伸手到桌中拿笔，她已转向南门。\n\n玛拉（英语，合夹起身，先结束这次谈判）：I'm taking this to my lawyer. Don't call the store.\n中文对照：我拿给律师看。别往店里打电话。\n维克多（英语，继续争速度）：Have him call me.\n中文对照：让他打给我。",
+      "entry": "让治疗期限进入真正的交换条件。",
+      "exit": "她争取未来疗程失败，拒绝现场签字，带未签稿去独立咨询。 继续申诉仍可行，但无法保证眼前位置；当前付款换来采访限制。",
+      "dramaticFunction": "让治疗期限进入真正的交换条件。",
+      "turn": "她争取未来疗程失败，拒绝现场签字，带未签稿去独立咨询。",
+      "exitCost": "继续申诉仍可行，但无法保证眼前位置；当前付款换来采访限制。",
+      "sceneRhythm": "先问到账—看见禁采访—问不签退路—争下一疗程—带稿离开。",
+      "sourceSceneIds": [
+        "E12-SC01"
+      ],
+      "plannedDuration": 59
+    },
+    {
+      "id": "E12-SC02",
+      "location": "CLINIC",
+      "time": "日·次日早上08:15，付款期限当日",
+      "script": "次日 08:15，诊所东南咨询室，玛拉坐桌西，灰风衣搭椅背，黑工服未换。凯文坐东，黑公文包靠右脚，南门外治疗车经过；付款卡背写着今天中午。\n\n咨询室里凯文把一条过宽的保密措辞划出，玛拉把诊所卡移到他笔尖边催。南门外有人推治疗车，他先把门带上再给她看拟修订页。\n\n凯文（英语，划出条款，解释她能做什么）：This bit has to change. You can still answer regulators or testify.\n中文对照：这段得改。监管来问、法院叫你作证，你还得能配合。\n玛拉（英语，把时限卡推到他笔边）：I'm back on shift soon. They want an answer.\n中文对照：我快上班了，他们等着答复。\n\n凯文将拟加的例外页递给玛拉，让她与原条款并排。他把原始回执推回她蓝夹一侧，不把记录交给公司。\n\n凯文（英语，指拟加页，让口头承诺落实到签字版）：Regulators ask for records, or a court calls you, you can answer. I want it in writing.\n中文对照：监管要材料，或者法院叫你，你都能配合。这得白纸黑字写进去。\n\n玛拉把例外页抬到自己眼前，指向仍保留的采访限制。凯文没有盖过那一行，让两种后果同时留在她眼前。\n\n玛拉（英语，核对自己到底放弃什么）：If Nora calls about the same denial, I still can't talk?\n中文对照：诺拉再问这次拒赔，我还是不能讲？\n凯文（英语，不把例外说成全面解禁）：Not an interview. A formal records request or testimony is different.\n中文对照：采访不行。正式索取记录和作证是另外的事。\n玛拉（英语，要求先说透再签）：I don't want to find that out after I've spent the money.\n中文对照：我不想钱花了才知道这些。\n\n玛拉在账单背面算出能付到哪次，发现后面又有空白。她把笔尖移到下一疗程日期，凯文另拿一张续批表，和和解书分开摆。\n\n玛拉（英语，看账单而问）：Then we do this again?\n中文对照：那之后还得再来一遍？\n凯文（英语，另外拿续批表，不假装已替她争到）：Yes. This settles this denial. It doesn't cover the next round.\n中文对照：是。这回只解决这次拒赔，下个疗程不在里面。\n\n值班提醒响，玛拉按掉；她把诊所卡背面的中午指给凯文，坐近桌子，让他现在联系维克多改文书，自己也开始发迟到通知。\n\n玛拉（英语，作决定时指卡，不把选择说成胜利）：Today. Noon. Get that changed and I'll sign.\n中文对照：今天中午。把那儿改好，我就签。\n凯文（英语，拿手机开始做事）：I'm sending it now.\n中文对照：我现在发。",
+      "entry": "在独立意见下让签约成为理解后果的决定。",
+      "exit": "玛拉知道采访仍受限与下轮未覆盖，要求书面监管/作证例外后决定签。 她仍需再申请未来治疗，还得通知店里迟到。",
+      "dramaticFunction": "在独立意见下让签约成为理解后果的决定。",
+      "turn": "玛拉知道采访仍受限与下轮未覆盖，要求书面监管/作证例外后决定签。",
+      "exitCost": "她仍需再申请未来治疗，还得通知店里迟到。",
+      "sceneRhythm": "律师标出过宽条款—客户追问真实禁限—确认未来成本—由客户给出签约条件。",
+      "sourceSceneIds": [
+        "E12-SC02"
+      ],
+      "plannedDuration": 71
+    },
+    {
+      "id": "E12-SC03",
+      "location": "INSURER",
+      "time": "日·同日上午11:20",
+      "script": "同日 11:20，公司会议桌南侧玛拉与凯文并坐，维克多在北端。西窗是上午自然散射光，签字夹两份、蓝夹在玛拉左侧，诊所期限还有四十分钟。\n\n玛拉已经拿笔。凯文翻到例外页，发现仍是旧版，手掌挡在签名栏前。维克多核对批准邮件，将平板转给他们看；玛拉要求双方各持的两份都改，笔未碰签字栏。\n\n凯文（英语，立即阻止）：Wrong version. The exception's missing.\n中文对照：版本错了，例外没加。\n维克多（英语，核邮件后立刻收回旧版）：They approved it. The email's here.\n中文对照：已经批了。邮件在这儿。\n玛拉（英语，自己盯住落实）：Both copies.\n中文对照：两份都重打。\n\n玛拉把笔放横，凯文仍挡着旧稿签字栏。维克多把批准邮件转给她看，她看完却没有重新拿笔；午时限只剩四十分钟。\n\n维克多（英语，试着让流程先走）：The approval's here. We can get the payment moving.\n中文对照：批准邮件在这儿，可以先办付款。\n玛拉（英语，要求承诺进入有效文本）：Can I answer a request with your email, or with what I sign?\n中文对照：以后真来问，我凭你这封邮件，还是凭我签的东西？\n凯文（英语，把客户要求变成可执行条件）：We need both copies to match the approval. Then she can sign.\n中文对照：两份都得和批准的修改一致，她才能签。\n\n维克多将两份旧稿从签署夹取出换好新页。凯文并排核对例外，玛拉确认监管正式索取与依法作证不受该保密条款限制，且两份都有这段。维克多先签，玛拉随后落笔，自己的全套协议留在左手。\n\n凯文（英语，确认后才让签）：It's in both. Go ahead.\n中文对照：两份都有，可以了。\n玛拉（英语，签完仍盯下一步，不等对方祝贺）：Send the confirmation to the clinic. Now.\n中文对照：把确认发给诊所，现在就发。\n\n玛拉刚说现在就发，维克多便用平板发送确认到诊所付款邮箱。凯文在旁核对收件地址，玛拉看着邮件送出，仍把自己的全套文本握在手里。\n\n维克多（英语，给具体执行结果）：It's sent. They'll have the payment reference.\n中文对照：发了，付款编号也发过去了。\n玛拉（英语，要一份能拿到现场用的记录）：Copy me. The last time I had to explain it at the desk.\n中文对照：也抄送我。上次到柜台，还得我自己解释。\n维克多（英语，完成，不寻求感谢）：I've added you.\n中文对照：已经抄送。\n\n玛拉站到南门前，维克多提起公司会发布个案处理说明。她回身不再谈金额，只把灰风衣搭在蓝夹上盖住孩子资料，凯文已拿起包等她。\n\n维克多（英语，在人到门口时补充公司的安排）：We'll put out a statement saying it's resolved.\n中文对照：我们会发个说明，说这事解决了。\n玛拉（英语，最后一道边界）：No pictures of Ellie.\n中文对照：别用艾莉照片。",
+      "entry": "把律师的建议落实为母亲可以坚持的条件。",
+      "exit": "口头批准被拒，双方两份有效稿都含例外后签字，付款确认发诊所并抄送。 她接受当前疗程范围和采访限制，留下全套副本，不许公司使用孩子照片。",
+      "dramaticFunction": "把律师的建议落实为母亲可以坚持的条件。",
+      "turn": "口头批准被拒，双方两份有效稿都含例外后签字，付款确认发诊所并抄送。",
+      "exitCost": "她接受当前疗程范围和采访限制，留下全套副本，不许公司使用孩子照片。",
+      "sceneRhythm": "发现旧稿—试口头先走—玛拉不落笔—两份换齐—付款执行—拒照片；不延长打印等待。",
+      "sourceSceneIds": [
+        "E12-SC03"
+      ],
+      "plannedDuration": 82
+    },
+    {
+      "id": "E12-SC04",
+      "location": "MARA-HOME",
+      "time": "夜·签署当天",
+      "script": "当晚公寓东侧是厨房，房间中央是餐桌，北面卧室门关着。艾莉坐桌西画绿色公交车，玛拉换米灰针织衫站在东台面旁，手机在右手，完整协议已放进蓝夹。\n\n家里水壶响，玛拉右手手机收到转款。她先用左手关壶，再将手机置桌完成诊所支付，留存回执；艾莉拿着绿色公交画等她看。\n\n艾莉（英语，只要确定这周安排）：So we're going Thursday?\n中文对照：那周四能去了？\n玛拉（英语，看完支付确认再答）：Yes. It's paid.\n中文对照：能，已经付了。\n艾莉（英语，继续她画里的计划）：Can we take the bus?\n中文对照：能坐公交去吗？\n\n艾莉把画里的公交车转向母亲，让她看车窗上的雨点。玛拉检查支付完成页后没有立刻听见问题，艾莉把画本放到空出的桌面。\n\n玛拉（英语，先按省事的办法安排）：The bus? We can get a ride.\n中文对照：坐公交？可以找人开车送。\n艾莉（英语，讲自己的愿望，不问病情）：I can see everything from the bus. Can we go early?\n中文对照：公交上什么都能看见。能早点去吗？\n玛拉（英语，终于接孩子的话）：Yeah. We'll leave early.\n中文对照：好，早点走。\n\n玛拉正要回孩子，陌生留言亮起要求她开直播。她打开回复框，艾莉用绿蜡笔敲敲画上的靠窗座。玛拉删掉刚打的一个词，把手机扣在桌东缘。\n\n艾莉（英语，指着座位）：I saved you this one.\n中文对照：这个给你留的。\n玛拉（英语，终于看着孩子指出的座位）：Okay. I'll sit there.\n中文对照：好，我坐那儿。\n\n玛拉接绿蜡笔画了个歪脑袋，艾莉立即抢回画本修正。她笑一下，不去看再次无声亮起的手机。\n\n艾莉（英语，认真挑母亲画错的地方）：That's not your hair.\n中文对照：你的头发又不是这样。\n玛拉（英语，把笔交还，带一点被挑错后的笑意）：You do it, then.\n中文对照：那你来画。",
+      "entry": "把制度选择的结果还给一个家庭的普通晚上。",
+      "exit": "母亲完成付款、答应坐公交，最后把手机扣下参与孩子的画。 公众还要求她表态，她此刻把注意力给了女儿。",
+      "dramaticFunction": "把制度选择的结果还给一个家庭的普通晚上。",
+      "turn": "母亲完成付款、答应坐公交，最后把手机扣下参与孩子的画。",
+      "exitCost": "公众还要求她表态，她此刻把注意力给了女儿。",
+      "sceneRhythm": "支付确认后不是大获全胜；孩子不断把母亲从屏幕拉回同一张画。",
+      "sourceSceneIds": [
+        "E12-SC04"
+      ],
+      "plannedDuration": 48
+    }
+  ],
+  "shots": [
+    {
+      "id": "E12-SH001",
+      "sceneId": "E12-SC01",
+      "sourceShotIds": [
+        "E12-SH001",
+        "E12-SH002"
+      ],
+      "duration": 27,
+      "characters": [
+        "MARA-WORK",
+        "VICTOR"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK",
+        "VICTOR"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "她追问到账，直到限制覆盖付款页才改变问题。",
+      "framing": "公司会议桌西侧40mm南玛拉、北维克多共享中景，付款卡在两人之间。",
+      "composition": "同日下午合众健康会议室，玛拉坐长桌南侧，灰风衣仍罩黑工服，诊所付款卡压在费用页上。维克多在北端，平板左侧，南门在她身后。 本镜画内角色：MARA-WORK,VICTOR。",
+      "camera": "固定27秒，金额被她指尖压住，采访页从北端推来。",
+      "focus": "她追问到账，直到限制覆盖付款页才改变问题。",
+      "start": "玛拉左夹右手机，维克多手离平板。",
+      "action": "玛拉将诊所付款卡压到维克多的费用页上，要他先回答时间。他把费用页转正，她仍用指尖盖住金额，不让话题移到赔多少。\n维克多将保密与结案页推到付款页上方。玛拉终于移开压住金额的手，翻向采访条款，手机放到桌右免得挡字。",
+      "end": "她看清款项换来的公开限制，双手空出翻页。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E12-D001",
+          "speaker": "玛拉",
+          "listener": "维克多",
+          "text": "Will the clinic have it today?",
+          "translationZh": "诊所今天能收到吗？",
+          "tone": "压住金额，只等到账时间",
+          "start": 1,
+          "end": 4.3
+        },
+        {
+          "id": "E12-D002",
+          "speaker": "维克多",
+          "listener": "玛拉",
+          "text": "This covers the current treatment. We send it once you've signed.",
+          "translationZh": "这笔付眼下的疗程。你签完，我们就放款。",
+          "tone": "先把付款条件摆在桌上",
+          "start": 4.6,
+          "end": 10.3
+        },
+        {
+          "id": "E12-D003",
+          "speaker": "维克多",
+          "listener": "玛拉",
+          "text": "Once this claim's settled, no more interviews about it.",
+          "translationZh": "这起申请结了，就不能再就这事接受采访。",
+          "tone": "说限制时仍把纸推向签字处",
+          "start": 15,
+          "end": 20.7
+        },
+        {
+          "id": "E12-D004",
+          "speaker": "玛拉",
+          "listener": "维克多",
+          "text": "I take the money and stop talking. That's the deal?",
+          "translationZh": "钱拿了，就不许再说了。是这个意思？",
+          "tone": "看采访条款，当面核对代价",
+          "start": 21,
+          "end": 26.2
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 14,
+          "start": "玛拉左夹右手机，维克多手离平板。",
+          "action": "玛拉将诊所付款卡压到维克多的费用页上，要他先回答时间。他把费用页转正，她仍用指尖盖住金额，不让话题移到赔多少。",
+          "end": "她要的是今日能否到账，协议尚未签。",
+          "dialogueCueIds": [
+            "E12-D001",
+            "E12-D002"
+          ],
+          "sourceShotIds": [
+            "E12-SH001"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 16
+        },
+        {
+          "duration": 13,
+          "start": "她要的是今日能否到账，协议尚未签。",
+          "action": "维克多将保密与结案页推到付款页上方。玛拉终于移开压住金额的手，翻向采访条款，手机放到桌右免得挡字。",
+          "end": "她看清款项换来的公开限制，双手空出翻页。",
+          "dialogueCueIds": [
+            "E12-D003",
+            "E12-D004"
+          ],
+          "sourceShotIds": [
+            "E12-SH002"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 15
+        }
+      ],
+      "viewerEntry": "让治疗期限进入真正的交换条件。",
+      "viewerExit": "她看清款项换来的公开限制，双手空出翻页。",
+      "cutTrigger": "她问不签会怎样，转为从客户角度争退路和未来。",
+      "next": "接E12-SH003；她问不签会怎样，转为从客户角度争退路和未来。"
+    },
+    {
+      "id": "E12-SH003",
+      "sceneId": "E12-SC01",
+      "sourceShotIds": [
+        "E12-SH003"
+      ],
+      "duration": 22,
+      "characters": [
+        "MARA-WORK",
+        "VICTOR"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK"
+      ],
+      "offscreenCharacterIds": [
+        "VICTOR"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "玛拉先问退路，再要求下疗程，连续两次得不到保证。",
+      "framing": "维克多西肩旁朝南65mm玛拉中近景，笔与续批空栏在下方，维克多的手从近前景推回笔。",
+      "composition": "同日下午合众健康会议室，玛拉坐长桌南侧，灰风衣仍罩黑工服，诊所付款卡压在费用页上。维克多在北端，平板左侧，南门在她身后。 本镜画内角色：MARA-WORK。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定22秒，不用反打替拒绝加重。",
+      "focus": "玛拉先问退路，再要求下疗程，连续两次得不到保证。",
+      "start": "她看清款项换来的公开限制，双手空出翻页。",
+      "action": "玛拉没有去碰签字页，先把付款卡从两页之间抽出来，确保电话号码还在自己手里。\n玛拉连翻两页找下个疗程，维克多没有替她翻。她指到空着的续批项，拿起笔想让他加进去；他将笔轻推回她一侧。",
+      "end": "未来保障没有获书面承诺，她把笔留桌上。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E12-D201",
+          "speaker": "玛拉",
+          "listener": "维克多",
+          "text": "And if I don't sign?",
+          "translationZh": "不签呢？",
+          "tone": "要求说出退路",
+          "start": 1,
+          "end": 2.96
+        },
+        {
+          "id": "E12-D202",
+          "speaker": "维克多",
+          "listener": "同场对话者",
+          "text": "The claim stays disputed. You can keep appealing.",
+          "translationZh": "这起申请仍有争议，你可以继续申诉。",
+          "tone": "说流程，没有承诺位置",
+          "start": 3.26,
+          "end": 6.4
+        },
+        {
+          "id": "E12-D005",
+          "speaker": "玛拉",
+          "listener": "维克多",
+          "text": "Then put the next round in here.",
+          "translationZh": "那把下个疗程也写进去。",
+          "tone": "把笔递过去，试一次能否多争",
+          "start": 12,
+          "end": 14.8
+        },
+        {
+          "id": "E12-D006",
+          "speaker": "维克多",
+          "listener": "玛拉",
+          "text": "I can't promise they'll approve the next one.",
+          "translationZh": "下次批不批，我保证不了。",
+          "tone": "把笔推回，不绕开拒绝",
+          "start": 15.1,
+          "end": 18.4
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 11,
+          "start": "她看清款项换来的公开限制，双手空出翻页。",
+          "action": "玛拉没有去碰签字页，先把付款卡从两页之间抽出来，确保电话号码还在自己手里。",
+          "end": "她看一眼卡背的中午，转而要求把未来疗程写进去。",
+          "dialogueCueIds": [
+            "E12-D201",
+            "E12-D202"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 13
+        },
+        {
+          "duration": 11,
+          "start": "她看一眼卡背的中午，转而要求把未来疗程写进去。",
+          "action": "玛拉连翻两页找下个疗程，维克多没有替她翻。她指到空着的续批项，拿起笔想让他加进去；他将笔轻推回她一侧。",
+          "end": "未来保障没有获书面承诺，她把笔留桌上。",
+          "dialogueCueIds": [
+            "E12-D005",
+            "E12-D006"
+          ],
+          "sourceShotIds": [
+            "E12-SH003"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 13
+        }
+      ],
+      "viewerEntry": "她看清款项换来的公开限制，双手空出翻页。",
+      "viewerExit": "未来保障没有获书面承诺，她把笔留桌上。",
+      "cutTrigger": "她合起未签稿准备离开，切到行动后果。",
+      "next": "接E12-SH004；她合起未签稿准备离开，切到行动后果。"
+    },
+    {
+      "id": "E12-SH004",
+      "sceneId": "E12-SC01",
+      "sourceShotIds": [
+        "E12-SH004"
+      ],
+      "duration": 10,
+      "characters": [
+        "MARA-WORK",
+        "VICTOR"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK",
+        "VICTOR"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "她决定找独立律师并禁止拨店里电话。",
+      "framing": "会议室西墙35mm中全景，玛拉起身走南门，维克多留北端。",
+      "composition": "同日下午合众健康会议室，玛拉坐长桌南侧，灰风衣仍罩黑工服，诊所付款卡压在费用页上。维克多在北端，平板左侧，南门在她身后。 本镜画内角色：MARA-WORK,VICTOR。",
+      "camera": "固定10秒，让蓝夹带出门而笔留桌上。",
+      "focus": "她决定找独立律师并禁止拨店里电话。",
+      "start": "未来保障没有获书面承诺，她把笔留桌上。",
+      "action": "玛拉合起未签协议收入左侧蓝夹，右手拿回手机起身。维克多伸手到桌中拿笔，她已转向南门。",
+      "end": "未签版带走，维克多未取得签名。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E12-D007",
+          "speaker": "玛拉",
+          "listener": "维克多",
+          "text": "I'm taking this to my lawyer. Don't call the store.",
+          "translationZh": "我拿给律师看。别往店里打电话。",
+          "tone": "合夹起身，先结束这次谈判",
+          "start": 1,
+          "end": 5.7
+        },
+        {
+          "id": "E12-D008",
+          "speaker": "维克多",
+          "listener": "玛拉",
+          "text": "Have him call me.",
+          "translationZh": "让他打给我。",
+          "tone": "继续争速度",
+          "start": 6,
+          "end": 8.3
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 10,
+          "start": "未来保障没有获书面承诺，她把笔留桌上。",
+          "action": "玛拉合起未签协议收入左侧蓝夹，右手拿回手机起身。维克多伸手到桌中拿笔，她已转向南门。",
+          "end": "未签版带走，维克多未取得签名。",
+          "dialogueCueIds": [
+            "E12-D007",
+            "E12-D008"
+          ],
+          "sourceShotIds": [
+            "E12-SH004"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 12
+        }
+      ],
+      "viewerEntry": "未来保障没有获书面承诺，她把笔留桌上。",
+      "viewerExit": "未签版带走，维克多未取得签名。",
+      "cutTrigger": "南门关上，下一场独立意见确实发生。",
+      "next": "本场完成，按正式EP场序转场；南门关上，下一场独立意见确实发生。"
+    },
+    {
+      "id": "E12-SH005",
+      "sceneId": "E12-SC02",
+      "sourceShotIds": [
+        "E12-SH005",
+        "E12-SH006"
+      ],
+      "duration": 26,
+      "characters": [
+        "MARA-WORK",
+        "COUNSEL"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK",
+        "COUNSEL"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "付款卡催时限，律师把拟加例外与原条款并排。",
+      "framing": "诊所东南咨询室南门内35mm共享中景，玛拉桌西、凯文桌东、黑包右脚边。",
+      "composition": "次日 08:15，诊所东南咨询室，玛拉坐桌西，灰风衣搭椅背，黑工服未换。凯文坐东，黑公文包靠右脚，南门外治疗车经过；付款卡背写着今天中午。 本镜画内角色：MARA-WORK,COUNSEL。",
+      "camera": "凯文把门带上后退回座位，相机固定不追他。",
+      "focus": "付款卡催时限，律师把拟加例外与原条款并排。",
+      "start": "黑工服玛拉把手机放右手边。",
+      "action": "咨询室里凯文把一条过宽的保密措辞划出，玛拉把诊所卡移到他笔尖边催。南门外有人推治疗车，他先把门带上再给她看拟修订页。\n凯文将拟加的例外页递给玛拉，让她与原条款并排。他把原始回执推回她蓝夹一侧，不把记录交给公司。",
+      "end": "最终签约的条件变成书面保留监管调取与依法作证。",
+      "sound": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E12-D009",
+          "speaker": "凯文",
+          "listener": "玛拉",
+          "text": "This bit has to change. You can still answer regulators or testify.",
+          "translationZh": "这段得改。监管来问、法院叫你作证，你还得能配合。",
+          "tone": "划出条款，解释她能做什么",
+          "start": 1,
+          "end": 7.2
+        },
+        {
+          "id": "E12-D010",
+          "speaker": "玛拉",
+          "listener": "凯文",
+          "text": "I'm back on shift soon. They want an answer.",
+          "translationZh": "我快上班了，他们等着答复。",
+          "tone": "把时限卡推到他笔边",
+          "start": 7.5,
+          "end": 11.8
+        },
+        {
+          "id": "E12-D011",
+          "speaker": "凯文",
+          "listener": "玛拉",
+          "text": "Regulators ask for records, or a court calls you, you can answer. I want it in writing.",
+          "translationZh": "监管要材料，或者法院叫你，你都能配合。这得白纸黑字写进去。",
+          "tone": "指拟加页，让口头承诺落实到签字版",
+          "start": 15,
+          "end": 23.6
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 14,
+          "start": "黑工服玛拉把手机放右手边。",
+          "action": "咨询室里凯文把一条过宽的保密措辞划出，玛拉把诊所卡移到他笔尖边催。南门外有人推治疗车，他先把门带上再给她看拟修订页。",
+          "end": "签字被独立律师暂时按住，未回绝款项。",
+          "dialogueCueIds": [
+            "E12-D009",
+            "E12-D010"
+          ],
+          "sourceShotIds": [
+            "E12-SH005"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 16
+        },
+        {
+          "duration": 12,
+          "start": "签字被独立律师暂时按住，未回绝款项。",
+          "action": "凯文将拟加的例外页递给玛拉，让她与原条款并排。他把原始回执推回她蓝夹一侧，不把记录交给公司。",
+          "end": "最终签约的条件变成书面保留监管调取与依法作证。",
+          "dialogueCueIds": [
+            "E12-D011"
+          ],
+          "sourceShotIds": [
+            "E12-SH006"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        }
+      ],
+      "viewerEntry": "在独立意见下让签约成为理解后果的决定。",
+      "viewerExit": "最终签约的条件变成书面保留监管调取与依法作证。",
+      "cutTrigger": "玛拉不再只问快不快，转问签了后自己能做什么。",
+      "next": "接E12-SH007；玛拉不再只问快不快，转问签了后自己能做什么。"
+    },
+    {
+      "id": "E12-SH007",
+      "sceneId": "E12-SC02",
+      "sourceShotIds": [
+        "E12-SH007"
+      ],
+      "duration": 33,
+      "characters": [
+        "MARA-WORK",
+        "COUNSEL"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK"
+      ],
+      "offscreenCharacterIds": [
+        "COUNSEL"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "她理解禁采访、正式索取例外与未来仍需申请，才决定是否接受。",
+      "framing": "凯文南肩旁朝西65mm玛拉半身，采访限制和例外在她手上，凯文只留指页手。",
+      "composition": "次日 08:15，诊所东南咨询室，玛拉坐桌西，灰风衣搭椅背，黑工服未换。凯文坐东，黑公文包靠右脚，南门外治疗车经过；付款卡背写着今天中午。 本镜画内角色：MARA-WORK。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定33秒，允许她计算下一疗程后停在空白日期。",
+      "focus": "她理解禁采访、正式索取例外与未来仍需申请，才决定是否接受。",
+      "start": "最终签约的条件变成书面保留监管调取与依法作证。",
+      "action": "玛拉把例外页抬到自己眼前，指向仍保留的采访限制。凯文没有盖过那一行，让两种后果同时留在她眼前。\n玛拉在账单背面算出能付到哪次，发现后面又有空白。她把笔尖移到下一疗程日期，凯文另拿一张续批表，和和解书分开摆。",
+      "end": "眼前费用与未来续批仍是两份工作。",
+      "sound": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E12-D203",
+          "speaker": "玛拉",
+          "listener": "凯文",
+          "text": "If Nora calls about the same denial, I still can't talk?",
+          "translationZh": "诺拉再问这次拒赔，我还是不能讲？",
+          "tone": "核对自己到底放弃什么",
+          "start": 1,
+          "end": 5.31
+        },
+        {
+          "id": "E12-D204",
+          "speaker": "凯文",
+          "listener": "玛拉",
+          "text": "Not an interview. A formal records request or testimony is different.",
+          "translationZh": "采访不行。正式索取记录和作证是另外的事。",
+          "tone": "不把例外说成全面解禁",
+          "start": 5.61,
+          "end": 9.93
+        },
+        {
+          "id": "E12-D205",
+          "speaker": "玛拉",
+          "listener": "凯文",
+          "text": "I don't want to find that out after I've spent the money.",
+          "translationZh": "我不想钱花了才知道这些。",
+          "tone": "要求先说透再签",
+          "start": 10.23,
+          "end": 14.93
+        },
+        {
+          "id": "E12-D012",
+          "speaker": "玛拉",
+          "listener": "凯文",
+          "text": "Then we do this again?",
+          "translationZh": "那之后还得再来一遍？",
+          "tone": "看账单而问",
+          "start": 21,
+          "end": 23.8
+        },
+        {
+          "id": "E12-D013",
+          "speaker": "凯文",
+          "listener": "玛拉",
+          "text": "Yes. This settles this denial. It doesn't cover the next round.",
+          "translationZh": "是。这回只解决这次拒赔，下个疗程不在里面。",
+          "tone": "另外拿续批表，不假装已替她争到",
+          "start": 24.1,
+          "end": 29.3
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 20,
+          "start": "最终签约的条件变成书面保留监管调取与依法作证。",
+          "action": "玛拉把例外页抬到自己眼前，指向仍保留的采访限制。凯文没有盖过那一行，让两种后果同时留在她眼前。",
+          "end": "凯文把采访限制和拟加例外同时标明，再谈当前疗程边界。",
+          "dialogueCueIds": [
+            "E12-D203",
+            "E12-D204",
+            "E12-D205"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 22
+        },
+        {
+          "duration": 13,
+          "start": "凯文把采访限制和拟加例外同时标明，再谈当前疗程边界。",
+          "action": "玛拉在账单背面算出能付到哪次，发现后面又有空白。她把笔尖移到下一疗程日期，凯文另拿一张续批表，和和解书分开摆。",
+          "end": "眼前费用与未来续批仍是两份工作。",
+          "dialogueCueIds": [
+            "E12-D012",
+            "E12-D013"
+          ],
+          "sourceShotIds": [
+            "E12-SH007"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 15
+        }
+      ],
+      "viewerEntry": "最终签约的条件变成书面保留监管调取与依法作证。",
+      "viewerExit": "眼前费用与未来续批仍是两份工作。",
+      "cutTrigger": "她给出今天中午的决定，切律师落实而非停在解释。",
+      "next": "接E12-SH008；她给出今天中午的决定，切律师落实而非停在解释。"
+    },
+    {
+      "id": "E12-SH008",
+      "sceneId": "E12-SC02",
+      "sourceShotIds": [
+        "E12-SH008"
+      ],
+      "duration": 12,
+      "characters": [
+        "COUNSEL",
+        "MARA-WORK"
+      ],
+      "onScreenCharacterIds": [
+        "COUNSEL",
+        "MARA-WORK"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "两人各做一件为签约腾出时间的事。",
+      "framing": "玛拉南肩旁朝东50mm凯文及桌面中景，手机发送修订，客户发迟到通知的手在画缘。",
+      "composition": "次日 08:15，诊所东南咨询室，玛拉坐桌西，灰风衣搭椅背，黑工服未换。凯文坐东，黑公文包靠右脚，南门外治疗车经过；付款卡背写着今天中午。 本镜画内角色：COUNSEL,MARA-WORK。",
+      "camera": "固定12秒，不拉近邮件正文。",
+      "focus": "两人各做一件为签约腾出时间的事。",
+      "start": "眼前费用与未来续批仍是两份工作。",
+      "action": "值班提醒响，玛拉按掉；她把诊所卡背面的中午指给凯文，坐近桌子，让他现在联系维克多改文书，自己也开始发迟到通知。",
+      "end": "玛拉选择争当前疗程，接受仍需后续申请，凯文开始改约。",
+      "sound": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E12-D014",
+          "speaker": "玛拉",
+          "listener": "凯文",
+          "text": "Today. Noon. Get that changed and I'll sign.",
+          "translationZh": "今天中午。把那儿改好，我就签。",
+          "tone": "作决定时指卡，不把选择说成胜利",
+          "start": 1,
+          "end": 5.7
+        },
+        {
+          "id": "E12-D015",
+          "speaker": "凯文",
+          "listener": "玛拉",
+          "text": "I'm sending it now.",
+          "translationZh": "我现在发。",
+          "tone": "拿手机开始做事",
+          "start": 6,
+          "end": 8.8
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 12,
+          "start": "眼前费用与未来续批仍是两份工作。",
+          "action": "值班提醒响，玛拉按掉；她把诊所卡背面的中午指给凯文，坐近桌子，让他现在联系维克多改文书，自己也开始发迟到通知。",
+          "end": "玛拉选择争当前疗程，接受仍需后续申请，凯文开始改约。",
+          "dialogueCueIds": [
+            "E12-D014",
+            "E12-D015"
+          ],
+          "sourceShotIds": [
+            "E12-SH008"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        }
+      ],
+      "viewerEntry": "眼前费用与未来续批仍是两份工作。",
+      "viewerExit": "玛拉选择争当前疗程，接受仍需后续申请，凯文开始改约。",
+      "cutTrigger": "修订发出，接11:20实际签署文本核对。",
+      "next": "本场完成，按正式EP场序转场；修订发出，接11:20实际签署文本核对。"
+    },
+    {
+      "id": "E12-SH009",
+      "sceneId": "E12-SC03",
+      "sourceShotIds": [
+        "E12-SH009"
+      ],
+      "duration": 15,
+      "characters": [
+        "MARA-WORK",
+        "COUNSEL",
+        "VICTOR"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK",
+        "COUNSEL",
+        "VICTOR"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "发现错误版本与双方两份必须同改，首先建立真实空间与错误所在。",
+      "framing": "公司会议桌西南侧50mm略俯的三人中景，两份签署夹在画面中下部，玛拉与凯文南、维克多北。",
+      "composition": "同日 11:20，公司会议桌南侧玛拉与凯文并坐，维克多在北端。西窗是上午自然散射光，签字夹两份、蓝夹在玛拉左侧，诊所期限还有四十分钟。 本镜画内角色：MARA-WORK,COUNSEL,VICTOR。",
+      "camera": "固定15秒，凯文的手停在签字栏，保住玛拉笔尖没有落下。",
+      "focus": "发现错误版本与双方两份必须同改，首先建立真实空间与错误所在。",
+      "start": "玛拉已将手机放桌右、蓝夹放桌左，右手握笔；签署夹在桌中央，凯文坐西侧翻页。",
+      "action": "玛拉已经拿笔。凯文翻到例外页，发现仍是旧版，手掌挡在签名栏前。维克多核对批准邮件，将平板转给他们看；玛拉要求双方各持的两份都改，笔未碰签字栏。",
+      "end": "两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E12-D016",
+          "speaker": "凯文",
+          "listener": "维克多",
+          "text": "Wrong version. The exception's missing.",
+          "translationZh": "版本错了，例外没加。",
+          "tone": "立即阻止",
+          "start": 1,
+          "end": 3.8
+        },
+        {
+          "id": "E12-D017",
+          "speaker": "维克多",
+          "listener": "凯文",
+          "text": "They approved it. The email's here.",
+          "translationZh": "已经批了。邮件在这儿。",
+          "tone": "核邮件后立刻收回旧版",
+          "start": 4.1,
+          "end": 7.4
+        },
+        {
+          "id": "E12-D801",
+          "speaker": "玛拉",
+          "listener": "维克多",
+          "text": "Both copies.",
+          "translationZh": "两份都重打。",
+          "tone": "自己盯住落实",
+          "start": 7.7,
+          "end": 9
+        }
+      ],
+      "overlay": [
+        {
+          "text": "11:20 — CLINIC HOLDS UNTIL 12:00 / 11:20——诊所保留至12:00",
+          "start": 1,
+          "end": 6,
+          "position": "转场时间后期"
+        }
+      ],
+      "generationSegments": [
+        {
+          "duration": 15,
+          "start": "玛拉已将手机放桌右、蓝夹放桌左，右手握笔；签署夹在桌中央，凯文坐西侧翻页。",
+          "action": "玛拉已经拿笔。凯文翻到例外页，发现仍是旧版，手掌挡在签名栏前。维克多核对批准邮件，将平板转给他们看；玛拉要求双方各持的两份都改，笔未碰签字栏。",
+          "end": "两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。",
+          "dialogueCueIds": [
+            "E12-D016",
+            "E12-D017",
+            "E12-D801"
+          ],
+          "sourceShotIds": [
+            "E12-SH009"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 17
+        }
+      ],
+      "viewerEntry": "把律师的建议落实为母亲可以坚持的条件。",
+      "viewerExit": "两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。",
+      "cutTrigger": "口头批准不能替代签字页，切向承担签字后果的人。",
+      "next": "接E12-SH101；口头批准不能替代签字页，切向承担签字后果的人。"
+    },
+    {
+      "id": "E12-SH101",
+      "sceneId": "E12-SC03",
+      "sourceShotIds": [],
+      "duration": 21,
+      "characters": [
+        "MARA-WORK",
+        "COUNSEL",
+        "VICTOR"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK",
+        "COUNSEL"
+      ],
+      "offscreenCharacterIds": [
+        "VICTOR"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "她放下笔拒绝用邮件代替有效文本；律师接话把要求具体化。",
+      "framing": "维克多西肩旁朝南65mm玛拉中近景，凯文在她同侧画缘，平板批准邮件只留边。",
+      "composition": "同日 11:20，公司会议桌南侧玛拉与凯文并坐，维克多在北端。西窗是上午自然散射光，签字夹两份、蓝夹在玛拉左侧，诊所期限还有四十分钟。 本镜画内角色：MARA-WORK,COUNSEL。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定21秒，不做英雄式仰拍。",
+      "focus": "她放下笔拒绝用邮件代替有效文本；律师接话把要求具体化。",
+      "start": "两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。",
+      "action": "玛拉把笔放横，凯文仍挡着旧稿签字栏。维克多把批准邮件转给她看，她看完却没有重新拿笔；午时限只剩四十分钟。",
+      "end": "维克多收回旧版，不要求她在替换前落笔。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E12-D206",
+          "speaker": "维克多",
+          "listener": "同场对话者",
+          "text": "The approval's here. We can get the payment moving.",
+          "translationZh": "批准邮件在这儿，可以先办付款。",
+          "tone": "试着让流程先走",
+          "start": 1,
+          "end": 4.53
+        },
+        {
+          "id": "E12-D207",
+          "speaker": "玛拉",
+          "listener": "维克多",
+          "text": "Can I answer a request with your email, or with what I sign?",
+          "translationZh": "以后真来问，我凭你这封邮件，还是凭我签的东西？",
+          "tone": "要求承诺进入有效文本",
+          "start": 4.83,
+          "end": 9.93
+        },
+        {
+          "id": "E12-D208",
+          "speaker": "凯文",
+          "listener": "玛拉",
+          "text": "We need both copies to match the approval. Then she can sign.",
+          "translationZh": "两份都得和批准的修改一致，她才能签。",
+          "tone": "把客户要求变成可执行条件",
+          "start": 10.23,
+          "end": 14.94
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 21,
+          "start": "两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。",
+          "action": "玛拉把笔放横，凯文仍挡着旧稿签字栏。维克多把批准邮件转给她看，她看完却没有重新拿笔；午时限只剩四十分钟。",
+          "end": "维克多收回旧版，不要求她在替换前落笔。",
+          "dialogueCueIds": [
+            "E12-D206",
+            "E12-D207",
+            "E12-D208"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 23
+        }
+      ],
+      "viewerEntry": "两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。",
+      "viewerExit": "维克多收回旧版，不要求她在替换前落笔。",
+      "cutTrigger": "维克多撤回旧版，切唯一需要仔细看清的证据变化。",
+      "next": "接E12-SH010；维克多撤回旧版，切唯一需要仔细看清的证据变化。"
+    },
+    {
+      "id": "E12-SH010",
+      "sceneId": "E12-SC03",
+      "sourceShotIds": [
+        "E12-SH010"
+      ],
+      "duration": 15,
+      "characters": [
+        "MARA-WORK",
+        "COUNSEL",
+        "VICTOR"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK",
+        "COUNSEL",
+        "VICTOR"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "两份都含正式监管请求/作证例外，双方签完，玛拉留全套；英文条款美术后期精排。",
+      "framing": "桌西侧60mm斜俯近景，两份协议的同一例外位置、三人的手与两处签字栏同框。",
+      "composition": "同日 11:20，公司会议桌南侧玛拉与凯文并坐，维克多在北端。西窗是上午自然散射光，签字夹两份、蓝夹在玛拉左侧，诊所期限还有四十分钟。 本镜画内角色：MARA-WORK,COUNSEL,VICTOR。",
+      "camera": "固定15秒；页面由人物并排摊开，不作镜内跳放大。",
+      "focus": "两份都含正式监管请求/作证例外，双方签完，玛拉留全套；英文条款美术后期精排。",
+      "start": "维克多收回旧版，不要求她在替换前落笔。",
+      "action": "维克多将两份旧稿从签署夹取出换好新页。凯文并排核对例外，玛拉确认监管正式索取与依法作证不受该保密条款限制，且两份都有这段。维克多先签，玛拉随后落笔，自己的全套协议留在左手。",
+      "end": "双方两份都签好，玛拉留全套副本，付款确认尚待发送。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E12-D018",
+          "speaker": "凯文",
+          "listener": "玛拉",
+          "text": "It's in both. Go ahead.",
+          "translationZh": "两份都有，可以了。",
+          "tone": "确认后才让签",
+          "start": 1,
+          "end": 3.8
+        },
+        {
+          "id": "E12-D019",
+          "speaker": "玛拉",
+          "listener": "维克多",
+          "text": "Send the confirmation to the clinic. Now.",
+          "translationZh": "把确认发给诊所，现在就发。",
+          "tone": "签完仍盯下一步，不等对方祝贺",
+          "start": 4.1,
+          "end": 7.4
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 15,
+          "start": "维克多收回旧版，不要求她在替换前落笔。",
+          "action": "维克多将两份旧稿从签署夹取出换好新页。凯文并排核对例外，玛拉确认监管正式索取与依法作证不受该保密条款限制，且两份都有这段。维克多先签，玛拉随后落笔，自己的全套协议留在左手。",
+          "end": "双方两份都签好，玛拉留全套副本，付款确认尚待发送。",
+          "dialogueCueIds": [
+            "E12-D018",
+            "E12-D019"
+          ],
+          "sourceShotIds": [
+            "E12-SH010"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 17
+        }
+      ],
+      "viewerEntry": "维克多收回旧版，不要求她在替换前落笔。",
+      "viewerExit": "双方两份都签好，玛拉留全套副本，付款确认尚待发送。",
+      "cutTrigger": "她要求立即发诊所确认，切到执行和离开是否发生。",
+      "next": "接E12-SH011；她要求立即发诊所确认，切到执行和离开是否发生。"
+    },
+    {
+      "id": "E12-SH011",
+      "sceneId": "E12-SC03",
+      "sourceShotIds": [
+        "E12-SH011"
+      ],
+      "duration": 31,
+      "characters": [
+        "MARA-WORK",
+        "COUNSEL",
+        "VICTOR"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK",
+        "COUNSEL",
+        "VICTOR"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "付款执行、完整副本随身和照片拒绝都得到后果，没人为签约合影。",
+      "framing": "会议室西墙35mm中全景，北端维克多操作平板，玛拉与凯文从南侧座位起身，南门在左侧后层。",
+      "composition": "同日 11:20，公司会议桌南侧玛拉与凯文并坐，维克多在北端。西窗是上午自然散射光，签字夹两份、蓝夹在玛拉左侧，诊所期限还有四十分钟。 本镜画内角色：MARA-WORK,COUNSEL,VICTOR。",
+      "camera": "固定31秒；她等收到抄送后才走到门边，在同一画面回身拒照片。",
+      "focus": "付款执行、完整副本随身和照片拒绝都得到后果，没人为签约合影。",
+      "start": "双方两份都签好，玛拉留全套副本，付款确认尚待发送。",
+      "action": "玛拉刚说现在就发，维克多便用平板发送确认到诊所付款邮箱。凯文在旁核对收件地址，玛拉看着邮件送出，仍把自己的全套文本握在手里。\n玛拉站到南门前，维克多提起公司会发布个案处理说明。她回身不再谈金额，只把灰风衣搭在蓝夹上盖住孩子资料，凯文已拿起包等她。",
+      "end": "公司只获结案事实，孩子照片不授权。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E12-D209",
+          "speaker": "维克多",
+          "listener": "同场对话者",
+          "text": "It's sent. They'll have the payment reference.",
+          "translationZh": "发了，付款编号也发过去了。",
+          "tone": "给具体执行结果",
+          "start": 1,
+          "end": 3.75
+        },
+        {
+          "id": "E12-D210",
+          "speaker": "玛拉",
+          "listener": "维克多",
+          "text": "Copy me. The last time I had to explain it at the desk.",
+          "translationZh": "也抄送我。上次到柜台，还得我自己解释。",
+          "tone": "要一份能拿到现场用的记录",
+          "start": 4.05,
+          "end": 9.14
+        },
+        {
+          "id": "E12-D211",
+          "speaker": "维克多",
+          "listener": "同场对话者",
+          "text": "I've added you.",
+          "translationZh": "已经抄送。",
+          "tone": "完成，不寻求感谢",
+          "start": 9.44,
+          "end": 10.62
+        },
+        {
+          "id": "E12-D020",
+          "speaker": "维克多",
+          "listener": "玛拉",
+          "text": "We'll put out a statement saying it's resolved.",
+          "translationZh": "我们会发个说明，说这事解决了。",
+          "tone": "在人到门口时补充公司的安排",
+          "start": 22,
+          "end": 25.3
+        },
+        {
+          "id": "E12-D021",
+          "speaker": "玛拉",
+          "listener": "维克多",
+          "text": "No pictures of Ellie.",
+          "translationZh": "别用艾莉照片。",
+          "tone": "最后一道边界",
+          "start": 25.6,
+          "end": 27.9
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 21,
+          "start": "双方两份都签好，玛拉留全套副本，付款确认尚待发送。",
+          "action": "玛拉刚说现在就发，维克多便用平板发送确认到诊所付款邮箱。凯文在旁核对收件地址，玛拉看着邮件送出，仍把自己的全套文本握在手里。",
+          "end": "玛拉手机收到同一份确认，才把手机和完整协议收好。",
+          "dialogueCueIds": [
+            "E12-D209",
+            "E12-D210",
+            "E12-D211"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 23
+        },
+        {
+          "duration": 10,
+          "start": "玛拉手机收到同一份确认，才把手机和完整协议收好。",
+          "action": "玛拉站到南门前，维克多提起公司会发布个案处理说明。她回身不再谈金额，只把灰风衣搭在蓝夹上盖住孩子资料，凯文已拿起包等她。",
+          "end": "公司只获结案事实，孩子照片不授权。",
+          "dialogueCueIds": [
+            "E12-D020",
+            "E12-D021"
+          ],
+          "sourceShotIds": [
+            "E12-SH011"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 12
+        }
+      ],
+      "viewerEntry": "双方两份都签好，玛拉留全套副本，付款确认尚待发送。",
+      "viewerExit": "公司只获结案事实，孩子照片不授权。",
+      "cutTrigger": "玛拉带协议离开，切家中真正到账与支付。",
+      "next": "本场完成，按正式EP场序转场；玛拉带协议离开，切家中真正到账与支付。"
+    },
+    {
+      "id": "E12-SH012",
+      "sceneId": "E12-SC04",
+      "sourceShotIds": [
+        "E12-SH012"
+      ],
+      "duration": 31,
+      "characters": [
+        "MARA-HOME",
+        "ELLIE"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-HOME",
+        "ELLIE"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "到账后实际支付，再让孩子提出公交愿望；手机和画本争的是注意。",
+      "framing": "公寓南侧35mm母女中全景，东厨房在画右、中央餐桌在画面中部偏左、北卧室门居后；艾莉坐桌西，玛拉从东台面转向桌东座。",
+      "composition": "当晚公寓东侧是厨房，房间中央是餐桌，北面卧室门关着。艾莉坐桌西画绿色公交车，玛拉换米灰针织衫站在东台面旁，手机在右手，完整协议已放进蓝夹。 本镜画内角色：MARA-HOME,ELLIE。",
+      "camera": "固定31秒，关壶到桌边的两步完整留在同一画面。",
+      "focus": "到账后实际支付，再让孩子提出公交愿望；手机和画本争的是注意。",
+      "start": "水壶正响，玛拉右手手机。",
+      "action": "家里水壶响，玛拉右手手机收到转款。她先用左手关壶，再将手机置桌完成诊所支付，留存回执；艾莉拿着绿色公交画等她看。\n艾莉把画里的公交车转向母亲，让她看车窗上的雨点。玛拉检查支付完成页后没有立刻听见问题，艾莉把画本放到空出的桌面。",
+      "end": "她准备回孩子时，屏幕又亮起开直播的要求。",
+      "sound": "东厨房水壶与日常室内底声，手机通知只亮屏不朗读。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E12-D022",
+          "speaker": "艾莉",
+          "listener": "玛拉",
+          "text": "So we're going Thursday?",
+          "translationZh": "那周四能去了？",
+          "tone": "只要确定这周安排",
+          "start": 1,
+          "end": 3.3
+        },
+        {
+          "id": "E12-D023",
+          "speaker": "玛拉",
+          "listener": "艾莉",
+          "text": "Yes. It's paid.",
+          "translationZh": "能，已经付了。",
+          "tone": "看完支付确认再答",
+          "start": 3.6,
+          "end": 5.9
+        },
+        {
+          "id": "E12-D802",
+          "speaker": "艾莉",
+          "listener": "玛拉",
+          "text": "Can we take the bus?",
+          "translationZh": "能坐公交去吗？",
+          "tone": "继续她画里的计划",
+          "start": 6.2,
+          "end": 9
+        },
+        {
+          "id": "E12-D212",
+          "speaker": "玛拉",
+          "listener": "艾莉",
+          "text": "The bus? We can get a ride.",
+          "translationZh": "坐公交？可以找人开车送。",
+          "tone": "先按省事的办法安排",
+          "start": 17,
+          "end": 19.75
+        },
+        {
+          "id": "E12-D213",
+          "speaker": "艾莉",
+          "listener": "玛拉",
+          "text": "I can see everything from the bus. Can we go early?",
+          "translationZh": "公交上什么都能看见。能早点去吗？",
+          "tone": "讲自己的愿望，不问病情",
+          "start": 20.05,
+          "end": 24.36
+        },
+        {
+          "id": "E12-D214",
+          "speaker": "玛拉",
+          "listener": "艾莉",
+          "text": "Yeah. We'll leave early.",
+          "translationZh": "好，早点走。",
+          "tone": "终于接孩子的话",
+          "start": 24.66,
+          "end": 26.23
+        }
+      ],
+      "overlay": [
+        {
+          "text": "TRANSFER RECEIVED / 转款到账",
+          "start": 1,
+          "end": 5,
+          "position": "手机银行后期"
+        },
+        {
+          "text": "TREATMENT PAYMENT CONFIRMED / 疗程付款已确认",
+          "start": 6,
+          "end": 12,
+          "position": "手机诊所回执后期"
+        }
+      ],
+      "generationSegments": [
+        {
+          "duration": 16,
+          "start": "水壶正响，玛拉右手手机。",
+          "action": "家里水壶响，玛拉右手手机收到转款。她先用左手关壶，再将手机置桌完成诊所支付，留存回执；艾莉拿着绿色公交画等她看。",
+          "end": "付款完成，玛拉从东侧坐到餐桌南边；蓝夹桌南缘，手机桌东，艾莉在北侧。",
+          "dialogueCueIds": [
+            "E12-D022",
+            "E12-D023",
+            "E12-D802"
+          ],
+          "sourceShotIds": [
+            "E12-SH012"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 18
+        },
+        {
+          "duration": 15,
+          "start": "付款完成，玛拉从东侧坐到餐桌南边；蓝夹桌南缘，手机桌东，艾莉在北侧。",
+          "action": "艾莉把画里的公交车转向母亲，让她看车窗上的雨点。玛拉检查支付完成页后没有立刻听见问题，艾莉把画本放到空出的桌面。",
+          "end": "她准备回孩子时，屏幕又亮起开直播的要求。",
+          "dialogueCueIds": [
+            "E12-D212",
+            "E12-D213",
+            "E12-D214"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 17
+        }
+      ],
+      "viewerEntry": "把制度选择的结果还给一个家庭的普通晚上。",
+      "viewerExit": "她准备回孩子时，屏幕又亮起开直播的要求。",
+      "cutTrigger": "直播邀请再亮，切到孩子所等的回应。",
+      "next": "接E12-SH013；直播邀请再亮，切到孩子所等的回应。"
+    },
+    {
+      "id": "E12-SH013",
+      "sceneId": "E12-SC04",
+      "sourceShotIds": [
+        "E12-SH013",
+        "E12-SH014"
+      ],
+      "duration": 17,
+      "characters": [
+        "MARA-HOME",
+        "ELLIE"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-HOME",
+        "ELLIE"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "母亲停止回复，接笔画错头发，由孩子抢回笔修正。",
+      "framing": "餐桌南偏西50mm孩子高度的母女中近景，艾莉西、玛拉东，手机扣在桌东缘，绿画本居中。",
+      "composition": "当晚公寓东侧是厨房，房间中央是餐桌，北面卧室门关着。艾莉坐桌西画绿色公交车，玛拉换米灰针织衫站在东台面旁，手机在右手，完整协议已放进蓝夹。 本镜画内角色：MARA-HOME,ELLIE。",
+      "camera": "固定17秒，母亲坐下自然进入较近空间，不用镜头追通知。",
+      "focus": "母亲停止回复，接笔画错头发，由孩子抢回笔修正。",
+      "start": "她准备回孩子时，屏幕又亮起开直播的要求。",
+      "action": "玛拉正要回孩子，陌生留言亮起要求她开直播。她打开回复框，艾莉用绿蜡笔敲敲画上的靠窗座。玛拉删掉刚打的一个词，把手机扣在桌东缘。\n玛拉接绿蜡笔画了个歪脑袋，艾莉立即抢回画本修正。她笑一下，不去看再次无声亮起的手机。",
+      "end": "画本和绿笔回艾莉，付款回执收入蓝夹，手机仍扣桌东。",
+      "sound": "东厨房水壶与日常室内底声，手机通知只亮屏不朗读。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E12-D024",
+          "speaker": "艾莉",
+          "listener": "玛拉",
+          "text": "I saved you this one.",
+          "translationZh": "这个给你留的。",
+          "tone": "指着座位",
+          "start": 1,
+          "end": 3.8
+        },
+        {
+          "id": "E12-D025",
+          "speaker": "玛拉",
+          "listener": "艾莉",
+          "text": "Okay. I'll sit there.",
+          "translationZh": "好，我坐那儿。",
+          "tone": "终于看着孩子指出的座位",
+          "start": 4.1,
+          "end": 6.4
+        },
+        {
+          "id": "E12-D026",
+          "speaker": "艾莉",
+          "listener": "玛拉",
+          "text": "That's not your hair.",
+          "translationZh": "你的头发又不是这样。",
+          "tone": "认真挑母亲画错的地方",
+          "start": 11,
+          "end": 12.8
+        },
+        {
+          "id": "E12-D027",
+          "speaker": "玛拉",
+          "listener": "艾莉",
+          "text": "You do it, then.",
+          "translationZh": "那你来画。",
+          "tone": "把笔交还，带一点被挑错后的笑意",
+          "start": 13.1,
+          "end": 15.4
+        }
+      ],
+      "overlay": [
+        {
+          "text": "WE'RE WAITING FOR YOU TO SPEAK / 我们等你站出来发声",
+          "start": 2,
+          "end": 8,
+          "position": "陌生留言后期"
+        }
+      ],
+      "generationSegments": [
+        {
+          "duration": 10,
+          "start": "她准备回孩子时，屏幕又亮起开直播的要求。",
+          "action": "玛拉正要回孩子，陌生留言亮起要求她开直播。她打开回复框，艾莉用绿蜡笔敲敲画上的靠窗座。玛拉删掉刚打的一个词，把手机扣在桌东缘。",
+          "end": "她不为自己公开孩子病历，转向画本。",
+          "dialogueCueIds": [
+            "E12-D024",
+            "E12-D025"
+          ],
+          "sourceShotIds": [
+            "E12-SH013"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 12
+        },
+        {
+          "duration": 7,
+          "start": "她不为自己公开孩子病历，转向画本。",
+          "action": "玛拉接绿蜡笔画了个歪脑袋，艾莉立即抢回画本修正。她笑一下，不去看再次无声亮起的手机。",
+          "end": "画本和绿笔回艾莉，付款回执收入蓝夹，手机仍扣桌东。",
+          "dialogueCueIds": [
+            "E12-D026",
+            "E12-D027"
+          ],
+          "sourceShotIds": [
+            "E12-SH014"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 9
+        }
+      ],
+      "viewerEntry": "她准备回孩子时，屏幕又亮起开直播的要求。",
+      "viewerExit": "画本和绿笔回艾莉，付款回执收入蓝夹，手机仍扣桌东。",
+      "cutTrigger": "孩子继续画而手机留在画外边缘，集末在普通关系上落地。",
+      "next": "本场完成，按正式EP场序转场；孩子继续画而手机留在画外边缘，集末在普通关系上落地。"
+    }
+  ],
+  "continuityNote": "凯文独立代理玛拉，不属海伦团队。咨询室在CLINIC东南受控侧廊，南门西窗桌中柜东，主走廊不变。和解保留监管调取与依法作证权利，E14可据此提供回执。费用解决眼前疗程，不保证未来申请；孩子病历与肖像未授权公司公开。 签署时间为次日11:20，诊所保留至12:00；立即发付款确认保住时段，当夜到账支付，不让时限跨过才补救。",
+  "dramaturgy": {
+    "openingQuestion": "玛拉能否在疗程时限前拿到钱，又保住依法提供记录的权利？",
+    "pursuit": "她用诊所卡逼问付款；凯文修改保密例外，签署时阻止旧版落笔。",
+    "reversal": "钱能争当前疗程，不能买断未来；即使修订获批，桌上仍拿来旧页。",
+    "cost": "她迟到、等待、签下公开限制，未来还要重新申请。",
+    "cliffhanger": "款确实支付疗程，外界却仍要求她开直播。",
+    "nextEpisodeBridge": "E13将收款事实变成围堵借口，孩子的画与照片归属是玛拉要保住的下一件事。"
+  },
+  "productionUnitNote": "旧E编号只作生产来源；正式观众分集依当前24集短剧场序。长镜按generationSegments连续制作，段间继承人物/道具/轴线。"
+}

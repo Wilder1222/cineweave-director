@@ -1,0 +1,134 @@
+{
+  "model": null,
+  "tokens": null,
+  "timing": null,
+  "source_files_read": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C09\\request.txt",
+      "sha256": "d27ea4ece04181d7e43087d35525885d0feec03222065d5744445d279a0c65ac",
+      "read_scope": "full"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\SKILL.md",
+      "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c",
+      "read_scope": "full"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\stage-deliverables.md",
+      "sha256": "0ac88de3aa91b2594d0cc27f88b77578cbb017e0800cb54f5149ecf444c6781d",
+      "read_scope": "full"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\visual-development.md",
+      "sha256": "31598759336f1f9b34f37df77a0034df4dec337b18e47124f0d8a5d151af4b6e",
+      "read_scope": "full"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\scene-directing-pipeline.md",
+      "sha256": "cb52024e10ce0ec9f1a0dfcd1dd27ea7268cef526e8457e83be8a166a0bd6019",
+      "read_scope": "selected G1/readiness matches with context"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\shot-direction.md",
+      "sha256": "135208d33bbc8316378b3947d99142a7ff36acd84fe1f2668f0e818a5aca572d",
+      "read_scope": "full"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\video-performance-direction.md",
+      "sha256": "080817e75161a966a35d3170c686850e5280d2dbc905a1e52ba1bab807b32018",
+      "read_scope": "full"
+    }
+  ],
+  "checks_performed": [
+    {
+      "check": "SVG XML parses",
+      "file": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C09\\01-style.svg",
+      "result": "parsed"
+    },
+    {
+      "check": "SVG XML parses",
+      "file": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C09\\02-palette.svg",
+      "result": "parsed"
+    },
+    {
+      "check": "SVG XML parses",
+      "file": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C09\\03-material.svg",
+      "result": "parsed"
+    },
+    {
+      "check": "SVG XML parses",
+      "file": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C09\\04-lighting.svg",
+      "result": "parsed"
+    },
+    {
+      "check": "SVG XML parses",
+      "file": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C09\\05-light-plot.svg",
+      "result": "parsed"
+    },
+    {
+      "check": "SVG XML parses",
+      "file": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C09\\06-lookdev-board.svg",
+      "result": "parsed"
+    },
+    {
+      "check": "HTML has six distinct artifact sections and six inline SVG elements",
+      "result": true
+    },
+    {
+      "check": "Seven self-contained test prompts include expanded baseline",
+      "result": true
+    },
+    {
+      "check": "All local href targets exist",
+      "result": true
+    },
+    {
+      "check": "UTF-8 decoding and LF-only output files",
+      "result": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C09\\output.md",
+      "sha256": "a8d562629a3bc32af4096d7023a7fcf18ab7db4d38bd43198e95083181e831ea"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C09\\G1-visual-development.html",
+      "sha256": "19dea72900b46fede8fcf8f2273dfa00292744551a7f3c57f2d328a972c0f527"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C09\\LookDev-tests.md",
+      "sha256": "67bea5200b98a394ae605c4629bf5156e982bc209a36e78e4cefe0a393053f81"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C09\\01-style.svg",
+      "sha256": "1c26eb5f346844db5ec981b4d432c09146303df60df59ffc6b955a4c20b1db78"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C09\\02-palette.svg",
+      "sha256": "33ecdfb96e9d2da94d65debd29e5619343531a9a583a75370a79099560ac8ae2"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C09\\03-material.svg",
+      "sha256": "c65b3a55ae6eeb861a69ac7ace8bcd8cd99e2b72194b8cb09d58af8fb0117b16"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C09\\04-lighting.svg",
+      "sha256": "b4ffd603cf70d6789f285fadceedd695c883af456cacda99ba006ce32221de5c"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C09\\05-light-plot.svg",
+      "sha256": "62a9b6f9fe895fbd5da38c6b2a75b5fc22dad36584479784ae5580f2d4099cab"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C09\\06-lookdev-board.svg",
+      "sha256": "7fa2d95b2b7a2d98fa66e5f0b8bedbe44ac07fdb1405263c2d0813f9cfbdb163"
+    }
+  ],
+  "limitations": [
+    "No supplier invoked and no AI media provided.",
+    "No browser rendering or visual screenshot inspection performed; SVG XML and HTML structure checked only.",
+    "No historical source verification; user-provided mechanism is the creative basis.",
+    "No claim of media quality, production readiness, user acceptance or full-film completion."
+  ]
+}

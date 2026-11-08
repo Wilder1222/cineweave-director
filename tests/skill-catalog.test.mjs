@@ -16,7 +16,7 @@ const CORE = `skills/${DIRECTOR}`;
 const PROJECTION = "cineweave_codex_prompt_projection_plan";
 const HELPERS = [
   "check-delivery.mjs", "check-video-plan.mjs", "check-audio-returns.mjs",
-  "check-shot-review.mjs", "check-change-impact.mjs", "parse-json.mjs",
+  "check-shot-review.mjs", "check-change-impact.mjs", "parse-json.mjs", "read-style-card.mjs",
 ];
 const sort = (values) => [...values].sort((left, right) => left.localeCompare(right, "en"));
 const clone = (value) => structuredClone(value);
@@ -28,6 +28,46 @@ const [sourceCatalog, contracts, lifecycle, index] = await Promise.all([
   readFile(join(ROOT, CORE, "resources/contracts/index.json"), "utf8").then(parseJsonStrict),
 ]);
 const authority = { contracts, lifecycle, index };
+
+test("film reference library exposes exactly twelve live directions separately from animation and method cards", async () => {
+  const optional = join(ROOT, CORE, "references/optional");
+  const [entry, live, animation, skill, style, reference] = await Promise.all([
+    readFile(join(optional, "film-television-reference-library.md"), "utf8"),
+    readFile(join(optional, "live-action-reference-directions.md"), "utf8"),
+    readFile(join(optional, "animation-reference-directions.md"), "utf8"),
+    readFile(join(ROOT, CORE, "SKILL.md"), "utf8"),
+    readFile(join(ROOT, CORE, "references/routes/style.md"), "utf8"),
+    readFile(join(ROOT, CORE, "references/routes/reference-evidence.md"), "utf8"),
+  ]);
+  const liveIds = [
+    "live-youth-friends", "live-urban-family", "live-workplace-ensemble", "live-town-rural",
+    "live-grounded-suspense", "live-republican-street", "live-war-field", "live-song-everyday",
+    "live-song-court", "live-ming-court", "live-ming-jianghu", "live-natural-xianxia",
+  ];
+  const animationIds = ["anim-2d-everyday", "anim-2d-fantasy", "anim-ink-line", "anim-3d-eastern-fantasy"];
+  assert.deepEqual([...live.matchAll(/^## (live-[a-z-]+)$/gm)].map((match) => match[1]), liveIds);
+  assert.deepEqual([...animation.matchAll(/^## (anim-[a-z0-9-]+)$/gm)].map((match) => match[1]), animationIds);
+  for (const id of liveIds) assert.ok(entry.includes(`live-action-reference-directions.md#${id}`));
+  for (const id of animationIds) assert.ok(entry.includes(`animation-reference-directions.md#${id}`));
+  for (const card of live.split(/^## live-[a-z-]+$/m).slice(1)) {
+    for (const field of ["题材与时代", "参考作品与范围", "美术", "光线与摄影", "服装妆造", "情绪与用途", "禁用与验收"]) {
+      assert.ok(card.includes(`**${field}：**`), `live direction needs ${field}`);
+    }
+  }
+  for (const text of [skill, style, reference]) assert.ok(text.includes("film-television-reference-library.md"));
+  for (const name of ["film-television-reference-library", "live-action-reference-directions", "animation-reference-directions"]) {
+    const registration = lifecycle.references.find((value) => value.path === `references/optional/${name}.md`);
+    assert.equal(registration?.lifecycle, "optional");
+    assert.ok(registration.loadContexts.includes("style") && registration.loadContexts.includes("reference_evidence"));
+  }
+  const methods = await readFile(join(optional, "master-style-presets.md"), "utf8");
+  const methodIds = [
+    "hitchcock-suspense", "kurosawa-ensemble", "wong-withheld-intimacy", "anderson-tableau",
+    "cuaron-lubezki-immersion", "deakins-source-led", "martel-sonic-space", "varda-essay-observation",
+  ];
+  assert.deepEqual([...methods.matchAll(/^\| `([a-z-]+)` \|/gm)].map((match) => match[1]), methodIds);
+  for (const id of methodIds) assert.ok(entry.includes(`\`${id}\``), `compatibility record needs ${id}`);
+});
 
 function catalogAtStage(source, stage) {
   const selected = clone(source);
@@ -45,6 +85,7 @@ function profileFiles(documents = authority) {
   return sort([
     ".codex-plugin/plugin.json", "LICENSE", `${CORE}/SKILL.md`, `${CORE}/agents/openai.yaml`,
     `${CORE}/contracts.json`, `${CORE}/reference-lifecycle.json`, `${CORE}/resources/contracts/index.json`,
+    `${CORE}/assets/adaptation-example.html`,
     ...HELPERS.map((name) => `${CORE}/scripts/${name}`),
     ...documents.lifecycle.references.map((entry) => `${CORE}/${entry.path}`),
     ...documents.index.contracts.flatMap((entry) => [
@@ -213,16 +254,16 @@ test("temporary catalogs load exact identities and reject filesystem-controlled 
   await assert.rejects(() => loadSkillCatalog(source), /fields mismatch/);
 });
 
-test("P1 plugin remains 161 files with the original paths; director leaf contains 160 files", () => {
+test("P1 plugin contains the registered 176 files; director leaf contains 175 files", () => {
   const value = fixture();
   const plugin = plan(value);
-  assert.equal(plugin.files.length, 161);
-  assert.equal(plugin.sourceFiles.length, 161);
+  assert.equal(plugin.files.length, 176);
+  assert.equal(plugin.sourceFiles.length, 176);
   assert.deepEqual(plugin.files, value.files);
   assert.deepEqual(plugin.exports.map((entry) => entry.source), value.files);
   assert.ok(plugin.exports.every((entry) => entry.source === entry.destination));
   assert.deepEqual(plugin.skills.map((skill) => skill.name), [DIRECTOR]);
-  assert.equal(plugin.skills[0].files.length, 159);
+  assert.equal(plugin.skills[0].files.length, 174);
   assert.equal(plugin.skills[0].root, CORE);
   assert.equal(plugin.skills[0].sourceRoot, CORE);
   assert.equal(plugin.skills[0].destinationRoot, CORE);
@@ -230,8 +271,8 @@ test("P1 plugin remains 161 files with the original paths; director leaf contain
   assert.equal(plugin.skills[0].targetKinds.length, 43);
 
   const leaf = plan(value, { type: "skill", name: DIRECTOR });
-  assert.equal(leaf.files.length, 160);
-  assert.equal(leaf.sourceFiles.length, 160);
+  assert.equal(leaf.files.length, 175);
+  assert.equal(leaf.sourceFiles.length, 175);
   assert.equal(leaf.skills[0].root, ".");
   assert.equal(leaf.skills[0].destinationRoot, ".");
   assert.ok(leaf.files.includes("SKILL.md") && leaf.files.includes("LICENSE"));
@@ -240,18 +281,18 @@ test("P1 plugin remains 161 files with the original paths; director leaf contain
   assert.deepEqual(leaf.skills[0].files, sort(value.files.filter((path) => path.startsWith(`${CORE}/`)).map((path) => path.slice(CORE.length + 1))));
 });
 
-test("enabled specialists reuse all 159 core files and replace only their two authoring surfaces", async (t) => {
+test("enabled specialists reuse all 174 core files and replace only their two authoring surfaces", async (t) => {
   for (let stage = 2; stage <= 4; stage += 1) {
     await t.test(`stage ${stage}`, () => {
       const value = fixture(stage);
       const exported = plan(value);
-      assert.equal(exported.files.length, 2 + 159 * stage);
-      assert.equal(exported.sourceFiles.length, 161 + 2 * (stage - 1));
+      assert.equal(exported.files.length, 2 + 174 * stage);
+      assert.equal(exported.sourceFiles.length, 176 + 2 * (stage - 1));
       assert.equal(exported.exports.length, exported.files.length, "one source may have several destinations");
       assert.deepEqual(exported.skills.map((skill) => skill.name), NAMES.slice(0, stage));
       for (const skill of exported.skills) {
-        assert.equal(skill.files.length, 159);
-        assert.equal(skill.exports.length, 159);
+        assert.equal(skill.files.length, 174);
+        assert.equal(skill.exports.length, 174);
         assert.equal(skill.sourceRoot, skill.name === DIRECTOR ? CORE : `skill-sources/${skill.name}`);
         for (const key of ["contracts", "lifecycle", "index"]) assert.equal(skill[key], value[key]);
         assert.deepEqual(skill.actualKinds, contracts.contractKinds.filter((kind) => {
@@ -265,7 +306,7 @@ test("enabled specialists reuse all 159 core files and replace only their two au
           assert.equal(entry.source, `${ownEntry ? skill.sourceRoot : CORE}/${local}`);
         }
         const leaf = plan(value, { type: "skill", name: skill.name });
-        assert.equal(leaf.files.length, 160);
+        assert.equal(leaf.files.length, 175);
         assert.deepEqual(leaf.exports, sort([...skill.exports.map((entry) => entry.destination.slice(skill.destinationRoot.length + 1)), "LICENSE"]).map((destination) => ({
           source: destination === "LICENSE" ? "LICENSE" : skill.exports.find((entry) => entry.destination === `${skill.destinationRoot}/${destination}`).source,
           destination,
@@ -282,7 +323,7 @@ test("export plan does not discover or create authoring roots from disk", async 
   await writeFile(join(source, "skills", "cineweave-extra", "rogue.md"), "must not export", "utf8");
   const model = validateSkillCatalog(await loadSkillCatalog(source), value);
   const exported = createSkillExportPlan(source, model, value);
-  assert.equal(exported.files.length, 320);
+  assert.equal(exported.files.length, 350);
   assert.ok(exported.sourceFiles.includes(`skill-sources/${PLATFORM}/SKILL.md`));
   assert.ok(!exported.files.some((path) => path.includes("cineweave-extra")));
   assert.deepEqual(sort(await readdir(source)), ["skill-catalog.json", "skills"]);
@@ -331,8 +372,8 @@ test("unreviewed, missing, duplicate, and colliding canonical inventory paths fa
 
 test("manifest paths and resource counts cannot silently expand or shrink the shared profile", async (t) => {
   const cases = [
-    ["missing reference", (value) => { value.lifecycle.references.pop(); }, /exactly 42 references/],
-    ["extra reference", (value) => { value.lifecycle.references.push({ path: "references/extra.md" }); }, /exactly 42 references/],
+    ["missing reference", (value) => { value.lifecycle.references.pop(); }, /exactly 55 references/],
+    ["extra reference", (value) => { value.lifecycle.references.push({ path: "references/extra.md" }); }, /exactly 55 references/],
     ["missing support schema", (value) => { value.index.supportSchemas.pop(); }, /exactly 2 support schemas/],
     ["duplicate reference", (value) => { value.lifecycle.references[0].path = value.lifecycle.references[1].path; }, /contains duplicate paths/],
     ["duplicate schema", (value) => { value.index.contracts[0].schema = value.index.contracts[1].schema; }, /contains duplicate paths/],

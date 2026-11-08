@@ -1,0 +1,72 @@
+{
+  "case": "A06",
+  "status": "completed",
+  "request_read": "request.txt",
+  "skill_entry": "snapshot/skills/cineweave-director/SKILL.md",
+  "resource_loads": [
+    {
+      "mode": "file",
+      "path": "SKILL.md",
+      "heading": null,
+      "result": "success",
+      "truncated": false
+    },
+    {
+      "mode": "file",
+      "path": "references/routes/style.md",
+      "heading": "按风格名称调用与独立组合",
+      "result": "success",
+      "truncated": false
+    },
+    {
+      "mode": "card",
+      "queries": [
+        "宋韵清雅·古偶柔光",
+        "杏露薄妆·清雅日常"
+      ],
+      "resolved": [
+        "CG11@r2",
+        "MU14@r3"
+      ],
+      "result": "success",
+      "truncated": false
+    },
+    {
+      "mode": "file",
+      "path": "references/routes/character.md",
+      "heading": null,
+      "result": "success",
+      "truncated": false
+    },
+    {
+      "mode": "file",
+      "path": "references/optional/prompt-detail-standard.md",
+      "heading": "人物",
+      "result": "success",
+      "truncated": false
+    },
+    {
+      "mode": "file",
+      "path": "references/optional/portrait-natural-human.md",
+      "heading": "先分清肖像任务",
+      "result": "success",
+      "truncated": false
+    }
+  ],
+  "all_skill_reads_via_meter": true,
+  "tool_failures": [],
+  "observed_truncations": [],
+  "media_generated": false,
+  "delegation": false,
+  "repository_or_snapshot_modified": false,
+  "output": "output.md",
+  "model": null,
+  "tokens": null,
+  "end_to_end_elapsed_seconds": null,
+  "limitations": [
+    "未生成媒体或进行实际肤色、妆色验收。",
+    "无原人物图像或更完整原稿，仅依据请求中硬锁编写，未声称图像身份一致性已核验。",
+    "未读取参考图片，卡片不被当作实际妆面证据。",
+    "六次Skill资源读取的functions.exec使用默认输出预算而非显式16000；各次exec_command均为12000，所有资源完整返回且未观察到截断。"
+  ]
+}

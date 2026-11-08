@@ -1,0 +1,25 @@
+{
+  "args": [
+    "C:\\Users\\ww\\AppData\\Local\\OpenAI\\Codex\\bin\\896a0166b774037a\\codex.exe",
+    "exec",
+    "--ephemeral",
+    "--skip-git-repo-check",
+    "--sandbox",
+    "read-only",
+    "--json",
+    "-m",
+    "gpt-6.1-sol",
+    "-C",
+    "D:\\Temp\\cineweave-r08-current-ajwqk8bq\\workspace",
+    "-"
+  ],
+  "cwd": "D:\\Temp\\cineweave-r08-current-ajwqk8bq\\workspace",
+  "start_utc": "2026-11-03T05:14:32.076104+00:00",
+  "file_count": 692,
+  "timeout_seconds": 1200,
+  "environment_overrides": {
+    "PYTHONUTF8": "1",
+    "PYTHONIOENCODING": "utf-8"
+  },
+  "acl": "temporary base RX and temporary workspace recursive RX for local CodexSandboxUsers; no source changes"
+}

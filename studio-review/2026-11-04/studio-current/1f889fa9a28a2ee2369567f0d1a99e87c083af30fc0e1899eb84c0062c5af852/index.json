@@ -1,0 +1,55 @@
+{
+  "topicId": "H004",
+  "title": "空粮营",
+  "projectId": "1f889fa9a28a2ee2369567f0d1a99e87c083af30fc0e1899eb84c0062c5af852",
+  "currentRevision": null,
+  "source": "browser_ui_dom",
+  "exportComplete": true,
+  "documents": [
+    {
+      "documentId": "5e85531bd64b2d61c2a50962a94a0c5ab24cf170c61b8a081dd29bbae461d680",
+      "meta": "提示词",
+      "title": "H004 空粮营｜审阅与来源｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "1711dcd1d6f06166727699f046da8c4f307d404569e3e866d3526799151ad3c0",
+      "characters": 778,
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=1f889fa9a28a2ee2369567f0d1a99e87c083af30fc0e1899eb84c0062c5af852#scripts",
+      "readbackAt": "2026-11-04T06:40:34.022Z",
+      "proposal": {
+        "currentRevision": null,
+        "bodies": [],
+        "statusText": "当前文档提案\nH004 空粮营｜审阅与来源｜20261031审阅版 · 0 项提案"
+      }
+    },
+    {
+      "documentId": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931",
+      "meta": "提示词",
+      "title": "H004 空粮营｜分镜与视频提示｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "43f18468904b3486b3c5930c7dd9860591738139ccf0dc1d01d30115ad4211d7",
+      "characters": 9908,
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=1f889fa9a28a2ee2369567f0d1a99e87c083af30fc0e1899eb84c0062c5af852#scripts",
+      "readbackAt": "2026-11-04T06:40:42.019Z",
+      "proposal": {
+        "currentRevision": null,
+        "bodies": [],
+        "statusText": "当前文档提案\nH004 空粮营｜分镜与视频提示｜20261031审阅版 · 0 项提案"
+      }
+    },
+    {
+      "documentId": "59118f2a9ad80a3f3539428a80e7f94da741ae9ac80bd6069564810b530e207d",
+      "meta": "剧本",
+      "title": "H004 空粮营｜剧本｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "2b90d55c5707afa140650dc0faff618306f2fe359c56bb7396966f205a0ba650",
+      "characters": 1328,
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=1f889fa9a28a2ee2369567f0d1a99e87c083af30fc0e1899eb84c0062c5af852#scripts",
+      "readbackAt": "2026-11-04T06:40:48.308Z",
+      "proposal": {
+        "currentRevision": null,
+        "bodies": [],
+        "statusText": "当前文档提案\nH004 空粮营｜剧本｜20261031审阅版 · 0 项提案"
+      }
+    }
+  ]
+}

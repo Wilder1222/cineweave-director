@@ -1,0 +1,51 @@
+{
+  "project": {
+    "id": "cbc75daab816325e99c6aa1315339ee5b9f3c2c06fbf2c4abbab59c8c3aed451",
+    "title": "合租到期",
+    "topic_id": "D002"
+  },
+  "source": "Studio authenticated UI DOM",
+  "currentRevision": null,
+  "inventoryReadAt": "2026-11-04T06:57:21.823Z",
+  "expectedDocumentIds": [
+    "2bc20915cb161c2a8c80d810b95d6131a409762ca0dc5aaf7e34220972c81b54",
+    "aee2d0e0f0b0d0b716b64c90a8006a6d3a67d2de1afd9195f8e6fa939d064856",
+    "793fe7a81f29faf2811cc949a5804c81a9679d4c9c329219d84df673fead2b71"
+  ],
+  "documents": [
+    {
+      "id": "2bc20915cb161c2a8c80d810b95d6131a409762ca0dc5aaf7e34220972c81b54",
+      "meta": "提示词",
+      "title": "D002 合租到期｜审阅与来源｜20261031审阅版",
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/studio-review/2026-11-04/studio-current/cbc75daab816325e99c6aa1315339ee5b9f3c2c06fbf2c4abbab59c8c3aed451/2bc20915cb161c2a8c80d810b95d6131a409762ca0dc5aaf7e34220972c81b54.md",
+      "sha256": "115b777c3a61a65993e1fbccecead67fa7df795ced1b276ffd2439ca9cf1cb41",
+      "length": 792,
+      "readAt": "2026-11-04T06:57:22.892Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts",
+      "proposals": []
+    },
+    {
+      "id": "aee2d0e0f0b0d0b716b64c90a8006a6d3a67d2de1afd9195f8e6fa939d064856",
+      "meta": "提示词",
+      "title": "D002 合租到期｜分镜与视频提示｜20261031审阅版",
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/studio-review/2026-11-04/studio-current/cbc75daab816325e99c6aa1315339ee5b9f3c2c06fbf2c4abbab59c8c3aed451/aee2d0e0f0b0d0b716b64c90a8006a6d3a67d2de1afd9195f8e6fa939d064856.md",
+      "sha256": "bf1d2d5fb9061624fa20d3d9659b94bf7da2c9b20a209e1afa36e2988b9eee77",
+      "length": 5491,
+      "readAt": "2026-11-04T06:57:33.171Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts",
+      "proposals": []
+    },
+    {
+      "id": "793fe7a81f29faf2811cc949a5804c81a9679d4c9c329219d84df673fead2b71",
+      "meta": "剧本",
+      "title": "D002 合租到期｜剧本｜20261031审阅版",
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/studio-review/2026-11-04/studio-current/cbc75daab816325e99c6aa1315339ee5b9f3c2c06fbf2c4abbab59c8c3aed451/793fe7a81f29faf2811cc949a5804c81a9679d4c9c329219d84df673fead2b71.md",
+      "sha256": "711de8dd2b0b136215f8b0874a6069ec4024ada2024be8d71ab213f6bca435c7",
+      "length": 1300,
+      "readAt": "2026-11-04T06:57:44.583Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts",
+      "proposals": []
+    }
+  ],
+  "complete": true
+}

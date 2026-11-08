@@ -1,0 +1,167 @@
+{
+  "fps": 24,
+  "timingVerified": false,
+  "lipSyncVerified": false,
+  "cues": [
+    {
+      "shotId": "H002-01A",
+      "speaker": "阿澜",
+      "text": "先灭火。外面不知是谁，不能把门后位置都照出去。",
+      "addressee": "岑石",
+      "performance": "上阶后看火指明风险，清楚不喊口号",
+      "startFrame": 96,
+      "endFrameExclusive": 264,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H002-01B",
+      "speaker": "岑石",
+      "text": "也许是援军。",
+      "addressee": "阿澜",
+      "performance": "带希望但试探",
+      "startFrame": 408,
+      "endFrameExclusive": 504,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H002-01B",
+      "speaker": "阿澜",
+      "text": "也许。外面的人会冻，里面的人也退无可退。",
+      "addressee": "岑石",
+      "performance": "承认两方处境，不是怀疑一切",
+      "startFrame": 504,
+      "endFrameExclusive": 672,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H002-01B",
+      "speaker": "范羌",
+      "text": "我是范羌！汉军来迎校尉！",
+      "addressee": "墙内守者",
+      "performance": "远处穿风声高喊，同一声线",
+      "startFrame": 672,
+      "endFrameExclusive": 768,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H002-02A",
+      "speaker": "阿澜",
+      "text": "你听见了吗？",
+      "addressee": "墙外范羌",
+      "performance": "拨完两声才朝外问",
+      "startFrame": 1032,
+      "endFrameExclusive": 1104,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H002-02B",
+      "speaker": "范羌",
+      "text": "第二声短。那天你袖上有线头！",
+      "addressee": "阿澜",
+      "performance": "远声回应实际听到的第二短",
+      "startFrame": 1104,
+      "endFrameExclusive": 1248,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H002-02B",
+      "speaker": "阿澜",
+      "text": "那天门边的人也听见他笑我袖口。再问他从哪里来。",
+      "addressee": "岑石",
+      "performance": "不是再否认本人，而是指出信息可能外泄",
+      "startFrame": 1320,
+      "endFrameExclusive": 1608,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H002-03A",
+      "speaker": "岑石",
+      "text": "你从哪里来？",
+      "addressee": "墙外范羌",
+      "performance": "隔墙再问，尽量清楚投声",
+      "startFrame": 1608,
+      "endFrameExclusive": 1680,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H002-03A",
+      "speaker": "范羌",
+      "text": "奉汉军之命，来迎校尉。",
+      "addressee": "岑石",
+      "performance": "远声重复来意，不增加未核军情",
+      "startFrame": 1680,
+      "endFrameExclusive": 1776,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H002-04A",
+      "speaker": "岑石",
+      "text": "校尉听过我们的回报，决定接应。还没看见人。",
+      "addressee": "阿澜",
+      "performance": "已知决定与未知身份分句讲清",
+      "startFrame": 2520,
+      "endFrameExclusive": 2784,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H002-04B",
+      "speaker": "阿澜",
+      "text": "寒衣呢？",
+      "addressee": "范羌",
+      "performance": "先看清他的脸，关切具体物资",
+      "startFrame": 2976,
+      "endFrameExclusive": 3048,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H002-04B",
+      "speaker": "范羌",
+      "text": "带来一些。后面的人还在整队。",
+      "addressee": "阿澜",
+      "performance": "疲惫短答，后队信息不化作群像",
+      "startFrame": 3048,
+      "endFrameExclusive": 3240,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H002-05A",
+      "speaker": "范羌",
+      "text": "路上还有伤的。明天走，路上也许有追兵。",
+      "addressee": "二人",
+      "performance": "落下风险，非胜利宣告",
+      "startFrame": 3600,
+      "endFrameExclusive": 3768,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H002-05A",
+      "speaker": "阿澜",
+      "text": "谁走不了，要先记下来。",
+      "addressee": "岑石",
+      "performance": "实务要求，重音谁走不了",
+      "startFrame": 3768,
+      "endFrameExclusive": 3864,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H002-05A",
+      "speaker": "岑石",
+      "text": "你自己呢？",
+      "addressee": "阿澜",
+      "performance": "边划记边问，不抬声盘问",
+      "startFrame": 3864,
+      "endFrameExclusive": 3960,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H002-05A",
+      "speaker": "阿澜",
+      "text": "我能走，慢一点。",
+      "addressee": "岑石",
+      "performance": "有冷与疲惫，保本人主动判断",
+      "startFrame": 3960,
+      "endFrameExclusive": 4128,
+      "timingStatus": "authored_window_pending_measurement"
+    }
+  ]
+}

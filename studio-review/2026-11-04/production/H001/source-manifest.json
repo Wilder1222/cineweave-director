@@ -1,0 +1,45 @@
+{
+  "topicId": "H001",
+  "projectId": "aec0be325f5f1e3dafadfdb14739fc7420eb387a7dff6567dbf044b78f011701",
+  "currentRevision": null,
+  "sourcePins": [
+    {
+      "documentId": "b09c49b0b50c38ef87b207bb2538860dd832b16081d637ce5329240444011189",
+      "title": "H001 楼兰夜宴｜剧本｜20261031审阅版",
+      "sha256": "4ce214894cc2eba7662a575f804bb54cfe2d1d1d7b2dfc1b110f147e285dd0ac",
+      "currentRevision": null,
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=aec0be325f5f1e3dafadfdb14739fc7420eb387a7dff6567dbf044b78f011701#scripts"
+    },
+    {
+      "documentId": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4",
+      "title": "H001 楼兰夜宴｜分镜与视频提示｜20261031审阅版",
+      "sha256": "80ddcea4a34a19ec66e8a0c06dc679e3a1238a1e9fede4d87466cd6e3e07dfe6",
+      "currentRevision": null,
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=aec0be325f5f1e3dafadfdb14739fc7420eb387a7dff6567dbf044b78f011701#scripts"
+    },
+    {
+      "documentId": "dbe028af5503edce9dde0df61182a9e41b593c5966af1d710e94c58ba4d90b5b",
+      "title": "H001 楼兰夜宴｜审阅与来源｜20261031审阅版",
+      "sha256": "1bc3fc98186b89d6a8711ea178e6253fa0578abf4cab8adc63584213cba75f48",
+      "currentRevision": null,
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=aec0be325f5f1e3dafadfdb14739fc7420eb387a7dff6567dbf044b78f011701#scripts"
+    }
+  ],
+  "patches": [
+    {
+      "documentId": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4",
+      "before": "王看向傅后取阿妍的蜡印按在木牍上",
+      "after": "王看向傅后取自己的私印按在木牍上",
+      "reason": "明确同意条款的可见授权来自王；私印形制为候选，不宣称史料与放人执行"
+    },
+    {
+      "documentId": "b09c49b0b50c38ef87b207bb2538860dd832b16081d637ce5329240444011189",
+      "before": "王看向傅后取阿妍的蜡印按在木牍上",
+      "after": "王看向傅后取自己的私印按在木牍上",
+      "reason": "明确同意条款的可见授权来自王；私印形制为候选，不宣称史料与放人执行"
+    }
+  ],
+  "candidate": true,
+  "authorApproved": false,
+  "rawSourceUnchanged": true
+}

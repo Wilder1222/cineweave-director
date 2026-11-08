@@ -1,0 +1,68 @@
+{
+  "topicId": "U006",
+  "projectId": "ef0af9e69622f57b2139b5c412af086de24091cfa8c09887313e5d7f7d40044f",
+  "projectTitle": "我替剑仙修手机",
+  "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=ef0af9e69622f57b2139b5c412af086de24091cfa8c09887313e5d7f7d40044f#scripts",
+  "transport": "authorized_browser_ui_dom",
+  "currentRevision": null,
+  "exportComplete": true,
+  "documents": [
+    {
+      "documentId": "a13d9c0e0149570779e6b81028f85a93b026db99c0ac66111ae98261e37766e7",
+      "metadata": "提示词",
+      "title": "U006 我替剑仙修手机｜审阅与来源｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "5c768b51cf50b66724b480ab9a58725700a9f01bcb7d59fc2676317da8fc8753",
+      "bodyLength": 845,
+      "readAt": "2026-11-04T06:41:53.179Z",
+      "file": "a13d9c0e0149570779e6b81028f85a93b026db99c0ac66111ae98261e37766e7.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=ef0af9e69622f57b2139b5c412af086de24091cfa8c09887313e5d7f7d40044f#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "9baa5df5c1147184a754eb7c04fd58b3dc17c71c3abe35517dbcebd06f5d85c4",
+      "metadata": "提示词",
+      "title": "U006 我替剑仙修手机｜分镜与视频提示｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "d0e31f8bb52aad29e8c53031afb2503fa86da5bde33baae40acc825043c34039",
+      "bodyLength": 2269,
+      "readAt": "2026-11-04T06:42:01.003Z",
+      "file": "9baa5df5c1147184a754eb7c04fd58b3dc17c71c3abe35517dbcebd06f5d85c4.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=ef0af9e69622f57b2139b5c412af086de24091cfa8c09887313e5d7f7d40044f#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "c075ddc0d50282f3b7bba1034c25595bb35afef68bd01d976f77fefac0de8c60",
+      "metadata": "剧本",
+      "title": "U006 我替剑仙修手机｜剧本｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "4853b561cb77c069c484b0e90f9ed524768eb7781631060a20fb9be1d92f534a",
+      "bodyLength": 827,
+      "readAt": "2026-11-04T06:42:09.484Z",
+      "file": "c075ddc0d50282f3b7bba1034c25595bb35afef68bd01d976f77fefac0de8c60.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=ef0af9e69622f57b2139b5c412af086de24091cfa8c09887313e5d7f7d40044f#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "67662ac234e2bb21b69d8cd7ad5d0528578b7b02769e2622e3f017b093ee279f",
+      "metadata": "提示词",
+      "title": "U006 我替剑仙修手机｜分镜与视频提示词候选",
+      "currentRevision": null,
+      "sha256": "90fbd85acb20d01be893309dd853497b18e9bcc2e2e3c76d64fa5a29ed62e2f4",
+      "bodyLength": 1433,
+      "readAt": "2026-11-04T06:42:17.859Z",
+      "file": "67662ac234e2bb21b69d8cd7ad5d0528578b7b02769e2622e3f017b093ee279f.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=ef0af9e69622f57b2139b5c412af086de24091cfa8c09887313e5d7f7d40044f#scripts",
+      "proposals": [
+        {
+          "proposalId": "03d6675c4b063f24735009bae3678dcdacac5a1cc7185f97a3180105167c9f65",
+          "file": "67662ac234e2bb21b69d8cd7ad5d0528578b7b02769e2622e3f017b093ee279f.proposal-1.md",
+          "sha256": "90fbd85acb20d01be893309dd853497b18e9bcc2e2e3c76d64fa5a29ed62e2f4",
+          "cardText": "创作者提交的内容审阅提案2026/10/28 14:14待审阅# U006《我替剑仙修手机》｜逐镜分镜与视频提示词候选\n\n依据 U006-小说.md、U006-剧本.md。设计审阅：法力依赖碎屏手机，修机可能断电而困住撤离的人；女符修决定承担风险，随后还需继续撤离并制作第二套。屏幕修复不等于已修好手机或可换设备。候选未经作者采纳及严格隔离排练，未生成媒体；不作为真实维修指南。\n\n通案：110 秒，手机维修店一场，维修师周既明与女符修宁照。碎屏手机、备用机、测试线、木牌、纸图、临时屏、存储卡依序建立。守门人只听宁照的通话不出镜不答话。01 风险与撤离、02 授权和符文、03 触屏修阵、04 再通话和复制。所有屏显后期准确排版。\n\n## 01｜0—25 秒｜不能贸然断电\n**视频提示词：**日间手机维修店，维修台居中，宁照放下碎屏手机，帆布袋中的剑鞘抵桌沿，屏幕灰城外白线从缺口流失；周既明在台对侧，备用手机先可见。平视固定中近景，宁说“别关机。里面的阵挡着城外的风。”周答“我没有备份。临时屏测试可能断电、丢数据，你能接受吗？”她看缺口说“先让我联系守门人。”他递备用手机，她拨号说“还有人没过桥？继续按路线撤，别等我。我不能保证修好。”经她同意他检查接口外观、接测试线，电量图标亮，白线仍流失。焦点从破屏到备用机、再到测试线；店内底声与电话拨号，无守门人可辨声音，出点线已连接。\n\n## 02｜25—50 秒｜画已知，保留问号\n**视频提示词：**同一维修台，前景七点木牌与纸图，中景宁照和周既明的手，后景测试设备。宁取刻七点的木牌在纸上画阵，一处留问号，说“我的符全靠这部手机。没有它，我连剑诀也使不出来。”周说“先画你确定的。测试不保证恢复，看到异常我会停。”她读风险说明签名说“试吧。”周断开测试线，打开机身；芯片边缘显现细小符文，两人停住。宁说“这是底符。我认识这条线，裂屏后它在这里断了——但我不能确定里面的原因。”俯角固定近景，焦点由问号、签名转芯片，线缆轻响；以虚构视觉和安全道具表达，不示范维修，出点测试线已断、机身打开。\n\n## 03｜50—85 秒｜一起补线\n**视频提示词：**同一店内维修台，前景纸图与测试屏，中景宁照和周既明，后景工具。宁在纸上标判断，周接带触控层的临时替换屏并固定线缆，再连测试线供电；画面亮起，白线所剩不多。她对照木牌与屏幕找到问号处残线，说“向里，不是向外。”她描补白线，初次退回，调整后再连上；周扶测试屏边框不碰她手，她示意固定右侧，再补最后一笔。光圈暂稳，北边仍有一处暗。台侧平视中景因屏幕亮起缓慢推近，焦点从残线移到补线与北侧暗处，电子轻响；出点临时屏亮、光圈仅暂稳。\n\n## 04｜85—110 秒｜先复制，再继续撤\n**视频提示词：**同一维修店，前景维修单与备用手机，中景两人，后景台灯下测试设备。宁用备用机再次拨号说“阵暂时稳住，不等于修好。继续撤。”周说“能操作了，先复制你同意的阵图和修补记录。换个设备能不能用，我不保证。”她点头拿自己保管的存储卡，指认文件及接收位置；屏显传输完成，她打开接收文件核对，图像在但另机能否载法未知。她收修正纸与木牌，说“先教会其他人，再一起做第二套。我不能再只靠自己。”周在单上写“临时显示、指定数据已复制、手机未完成修复”；她签字握备用手机等消息。固定双人中景，焦点由通话转授权文件、接收核验与维修单，切黑。\n\n试拍：屏幕特效与手指、供电和临时屏的时序；两次通话与授权复制的 110 秒密度待测，不代表设备修复成功。\n采纳提案拒绝",
+          "readAt": "2026-11-04T06:42:19.049Z"
+        }
+      ]
+    }
+  ],
+  "exportedAt": "2026-11-04T06:42:20.026Z"
+}

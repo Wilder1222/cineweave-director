@@ -1,0 +1,397 @@
+{
+  "case": "C10",
+  "model": null,
+  "tokens": null,
+  "timing": null,
+  "source_files_read": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\request.txt",
+      "sha256": "6cc2e3e416f52b2f2b71e9323f1bbc169a7f8cc080fb6656ba1b88932dfd2635",
+      "bytes": 866
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\SKILL.md",
+      "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c",
+      "bytes": 14711
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\short-film-creation.md",
+      "sha256": "5a2b5be09b50372a00ad08ead75bacd0e0ae9d3e391864270904ad901c2052d8",
+      "bytes": 15660
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\stage-deliverables.md",
+      "sha256": "0ac88de3aa91b2594d0cc27f88b77578cbb017e0800cb54f5149ecf444c6781d",
+      "bytes": 8020
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\scene-directing-pipeline.md",
+      "sha256": "cb52024e10ce0ec9f1a0dfcd1dd27ea7268cef526e8457e83be8a166a0bd6019",
+      "bytes": 21867
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\shot-direction.md",
+      "sha256": "135208d33bbc8316378b3947d99142a7ff36acd84fe1f2668f0e818a5aca572d",
+      "bytes": 9146
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\video-sound-and-delivery.md",
+      "sha256": "ca77595c37042bd7b21974736b50a485d983e8ea5b9bc90f74359e6a2c76d941",
+      "bytes": 15825
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\video-performance-direction.md",
+      "sha256": "080817e75161a966a35d3170c686850e5280d2dbc905a1e52ba1bab807b32018",
+      "bytes": 29622
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\ensemble-direction-and-review.md",
+      "sha256": "1f24e64c74187b39b5fa78f1cb8f499a167fb3ca6300e35f92c08b9ff087bc8b",
+      "bytes": 12891
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\visual-development.md",
+      "sha256": "31598759336f1f9b34f37df77a0034df4dec337b18e47124f0d8a5d151af4b6e",
+      "bytes": 19654
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+      "sha256": "0880a163be9679d32807688a0c434c0fa936c0fb00a5c4aae24e381d0dd92c25",
+      "bytes": 34113
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-reference\\SKILL.md",
+      "sha256": "33d06365a2b861f431e66ff4960ae2ad9a26457f8fe7e4b2b20a7b110f71c155",
+      "bytes": 6489
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-reference\\references\\routes\\reference-evidence.md",
+      "sha256": "8f2833929f5d6df0fa3cbbdf540cdd5f2f10688b381f85eb6fe26b81c8c0b697",
+      "bytes": 5815
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-reference\\references\\core\\reference-evidence-and-rights.md",
+      "sha256": "55332bfbab84d121328260c56f971586658dff692a526cac318e2b435a522393",
+      "bytes": 2459
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-review\\SKILL.md",
+      "sha256": "b047a160930822e62395653b562a4a47067ee5bd82a90ca02eeb316a12da955a",
+      "bytes": 7833
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-review\\references\\routes\\review-repair.md",
+      "sha256": "9f87901d2e8583dc3ed065ba30a1058db040a8b26c0a16e8a48402b55cdd4b4b",
+      "bytes": 9034
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\scripts\\check-shot-review.mjs",
+      "sha256": "5c2230917425de00084a65a778e083b7ded4151abbdb7506cd9e17b97532c7eb",
+      "bytes": 17602
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\scripts\\check-delivery.mjs",
+      "sha256": "3147c6f5fad4d4d32682a05f34eca15337c6ca2b8c73c69ea96331a209f2e4a5",
+      "bytes": 7861
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\scripts\\parse-json.mjs",
+      "sha256": "9c15621d8304bf6114cc4cb322409c8e59433409ac17950311725cdcbebecf11",
+      "bytes": 3750
+    }
+  ],
+  "generated_inputs_read": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\output.md",
+      "sha256": "4008f4d341d8f353e887fcbabe392688df6c745ab26fe578085ea0af365d16c9",
+      "bytes": 47237
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\build_design.py",
+      "sha256": "8224730a06d7deec3d0d8879473aa254dc3de8594ff5e821275130d0ab19bad0",
+      "bytes": 18223
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\finalize.py",
+      "sha256": "30d9d3decfcb0acc4a81240891b61b58694e1a120eb9ec85a04daf812aa70df0",
+      "bytes": 4893
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\review.json",
+      "sha256": "c8481c297fc80e9f761519ce1e22aa973b71366daeb8f445b9ad2fbbd86e37ca",
+      "bytes": 17798
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\delivery.json",
+      "sha256": "cdf7594bc968a4b554b103d0d11808ae461a876fb2c118b56ad56ed0337f1059",
+      "bytes": 582
+    }
+  ],
+  "checks_performed": {
+    "shotReview": {
+      "command": [
+        "node",
+        "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\scripts\\check-shot-review.mjs",
+        "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\review.json"
+      ],
+      "exit_code": 0,
+      "result": {
+        "valid": true,
+        "scope": "plan_only",
+        "coverageComplete": true,
+        "reviewComplete": true,
+        "expectedRows": 24,
+        "missing": [],
+        "openItems": [],
+        "prompt": null,
+        "errors": [],
+        "cameraLanguage": {
+          "valid": true,
+          "coverageComplete": true,
+          "scope": "plan_only",
+          "expectedShots": 4,
+          "missing": [],
+          "errors": [],
+          "limitation": "只读文本与声明一致性检查；不能核验实际相机轨迹、光学焦点、观众反应或模型实现。"
+        },
+        "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。",
+        "localization": {
+          "locale": "zh-CN",
+          "summary": "规划评审已完成；实际媒体仍未核验。"
+        }
+      }
+    },
+    "delivery": {
+      "command": [
+        "node",
+        "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\scripts\\check-delivery.mjs",
+        "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\delivery.json"
+      ],
+      "exit_code": 0,
+      "result": {
+        "valid": true,
+        "errors": [],
+        "duration": {
+          "numerator": "576",
+          "denominator": "24"
+        },
+        "endTimecode": "00:00:24,000",
+        "subtitles": [
+          {
+            "id": "D1",
+            "text": "原来如此。",
+            "start": "00:00:21,000",
+            "end": "00:00:23,000",
+            "counts": {
+              "codePoints": 5,
+              "graphemes": 5,
+              "hanCharacters": 4
+            }
+          }
+        ],
+        "srt": "1\n00:00:21,000 --> 00:00:23,000\n原来如此。\n",
+        "scope": "Planning arithmetic only: cut-only shot coverage and one subtitle track. Text counts do not establish speech duration, readability, synchronization, rights, or media quality.",
+        "localization": {
+          "locale": "zh-CN",
+          "summary": "剪辑覆盖与字幕算术检查通过，实际声音及画面同步仍未核验。",
+          "errors": [],
+          "scope": "仅检查硬切镜头覆盖、单字幕轨和文字计数；字数不等于口播时长，不证明可读性、同步、权利或媒体质量。"
+        }
+      }
+    },
+    "svgXml": {
+      "files": 10,
+      "parsed": true,
+      "nonemptyDrawingElements": true
+    },
+    "localLinks": {
+      "checked": 12,
+      "missing": []
+    },
+    "contentInventory": {
+      "G0_G7_headings": true,
+      "independent_image_prompts": 4,
+      "independent_video_prompts": 4,
+      "has_exact_dialogue": true,
+      "svg_cards": 10
+    },
+    "encoding": {
+      "output_utf8": true,
+      "output_lf_only": true
+    },
+    "visualInspection": {
+      "method": "Viewed Pillow-rendered contact-sheet.png with view_image",
+      "scope": "10 drawn card previews; checked layout, nonempty drawings, palette, directions and labels",
+      "limitation": "PNG previews are drawn by the same layout code; browser SVG rendering and narrative media were not inspected."
+    },
+    "buildHistory": [
+      {
+        "command": "python -X utf8 build_design.py",
+        "result": "initial build succeeded"
+      },
+      {
+        "command": "python -X utf8 build_design.py",
+        "result": "rerun failed because a removed correction heading was assumed to exist; no frozen source affected"
+      },
+      {
+        "command": "python -X utf8 build_design.py",
+        "result": "made heading cleanup conditional; rerun succeeded"
+      }
+    ]
+  },
+  "artifacts": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\build_design.py",
+      "sha256": "8224730a06d7deec3d0d8879473aa254dc3de8594ff5e821275130d0ab19bad0",
+      "bytes": 18223
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\contact-sheet.png",
+      "sha256": "f04b4369a59bbe8d638a484a48299624ab3c4fa4db21e743386b481528fe3913",
+      "bytes": 232901
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G1_light_plot_v1.png",
+      "sha256": "9de51aded78807af8b9384214d722c65d3ff874b710bf1d196886ae7c7fd5692",
+      "bytes": 109807
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G1_light_plot_v1.svg",
+      "sha256": "addec96002565d56942edf070e984aef96bf7d9f5ecc7495d8f9171dbde7491f",
+      "bytes": 3965
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G1_lighting_card_v1.png",
+      "sha256": "17490f6850f178fe81506cbe4035b69183daffc02bb54c38bf04cd5b6e49c793",
+      "bytes": 99605
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G1_lighting_card_v1.svg",
+      "sha256": "473c26bb434beae4e457327cba7d754c3db475b207293b6344625b148bf813ec",
+      "bytes": 2431
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G1_lookdev_test_board_v1.png",
+      "sha256": "205cfcff4bce5625c91ec2614a92d34878d83e032ee99e62dab43e55926e3d24",
+      "bytes": 150405
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G1_lookdev_test_board_v1.svg",
+      "sha256": "24a5a577dd2d7269104b5c4a578979e721f0c6a2e962c73e5134a42ceb3a77ed",
+      "bytes": 4822
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G1_material_card_v1.png",
+      "sha256": "708613efd1aa70ba0a26972a0b7995cd627368c3a0128de8a882e6fbb533ba29",
+      "bytes": 92282
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G1_material_card_v1.svg",
+      "sha256": "9a355ad945ba864155cf0eea90d98dc2aa86a31088e15f256d9fb0153b4f0146",
+      "bytes": 7216
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G1_palette_card_v1.png",
+      "sha256": "31f71abd04a422521becce6be4f59e5f1a4b7b4628214a4a1cee2f4640394da5",
+      "bytes": 93063
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G1_palette_card_v1.svg",
+      "sha256": "6d291fd01dd201d2f23b32b9401e0ae75dd86bb16cf869033c575fee8fb61887",
+      "bytes": 2280
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G1_style_card_v1.png",
+      "sha256": "ad0fd401d27682d78178ae467322025311eb33c36beb7acd01cce171b959867e",
+      "bytes": 89159
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G1_style_card_v1.svg",
+      "sha256": "4cee252e7aa1860baa6eba3ee16fae26a57503c1f05e4a8045c00744f43b1c03",
+      "bytes": 2410
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G2_scene_map_v1.png",
+      "sha256": "33b0b2f721d4486df076d814901861d8c054d66a76c376b952fad17621cc1a2e",
+      "bytes": 113427
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G2_scene_map_v1.svg",
+      "sha256": "057494336ec0aefe16d4c32901b4b6f6852bff2d7d501e7adc56fd22db76c0f8",
+      "bytes": 3964
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G3_blocking_board_v1.png",
+      "sha256": "a7ae094e7f7a24b5bac85ac57ead06419da9fa4e9ad56b457c43cdf60cc493da",
+      "bytes": 94666
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G3_blocking_board_v1.svg",
+      "sha256": "ccbba51d6644be5c9fb39198cd2c6c609cb7ad9f8bc227cf72b179f846bd8b94",
+      "bytes": 5200
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G4_storyboard_board_v1.png",
+      "sha256": "5fd216ea0a1481e3451a93293c9e753e74219e7a5c4862f2ac8e6edd367812ae",
+      "bytes": 93219
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G4_storyboard_board_v1.svg",
+      "sha256": "9baca30ce5eb5a6f94361b5ec63f7450d7b39aff77927628c3d25e440721c83c",
+      "bytes": 3942
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G5_edit_timeline_v1.png",
+      "sha256": "679dff2a1d2facbbfab6cb3183d675b1ae19e162c9376faf807e154d0b5c24f4",
+      "bytes": 88494
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\HP01_SC01_G5_edit_timeline_v1.svg",
+      "sha256": "4c11d93e148817864a68331779fee737391114d7dd62e5ffe778ec0acf4e6983",
+      "bytes": 2781
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\cards\\index.html",
+      "sha256": "99349bf80372e088b1669c397a065fc8a74d4ea6d71032ade503472f0d994b26",
+      "bytes": 2376
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\check-results.json",
+      "sha256": "6f45b1d6bc31f87ab4f6b20324e6dca32515870f5802f7a2857dea09bc19c7a7",
+      "bytes": 3987
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\delivery.json",
+      "sha256": "cdf7594bc968a4b554b103d0d11808ae461a876fb2c118b56ad56ed0337f1059",
+      "bytes": 582
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\dialogue.srt",
+      "sha256": "b1d93740b402f7d35e2a78f15aecfa8cad55b88cc09ae3c75b22094c59c4fa4d",
+      "bytes": 48
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\finalize.py",
+      "sha256": "30d9d3decfcb0acc4a81240891b61b58694e1a120eb9ec85a04daf812aa70df0",
+      "bytes": 4893
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\output.md",
+      "sha256": "4008f4d341d8f353e887fcbabe392688df6c745ab26fe578085ea0af365d16c9",
+      "bytes": 47237
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\review.json",
+      "sha256": "c8481c297fc80e9f761519ce1e22aa973b71366daeb8f445b9ad2fbbd86e37ca",
+      "bytes": 17798
+    }
+  ],
+  "limitations": [
+    "No actual image/video/audio candidates exist; no generation vendor was invoked.",
+    "No live app, repository source, installation or frozen skill was mutated; only C10 deliverables were written.",
+    "Original literary edition and film adaptations were not consulted; user-supplied mechanism is declared source.",
+    "No media playback, listening review, speech measurement, trial edit, LUT, illuminance or provider capability verification.",
+    "Design checker results are plan_only and do not grade artistic or media quality."
+  ],
+  "status": "design package saved; pending_media"
+}

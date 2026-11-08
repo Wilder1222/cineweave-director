@@ -1,0 +1,1213 @@
+{
+  "metadata": {
+    "collectedAt": "2026-11-08",
+    "cases": 29,
+    "uniqueSourcePages": 26,
+    "ageBuckets": {
+      "infant": 13,
+      "unknown": 1,
+      "toddler": 15
+    },
+    "interactionClarity": {
+      "B": 10,
+      "A": 19
+    },
+    "excludedOrUnselectedRecords": 22,
+    "note": "已核读公开家长自述的目标正文或评论；事件、年龄和日期以作者叙述为限，未作独立事实核验。未观看原始视频，不把图片、检索摘要或科普举例当现场证据。",
+    "videoObserved": false,
+    "existingStoriesModified": false,
+    "errors": [],
+    "sourceFileHashes": {
+      "source-infant.json": "8a5c4b8a096aa27e476b6c03d451bc286bb85e644db0b60d9f2941ff14bc6d6f",
+      "source-zh.json": "af87565a6aba36073535880c5712cf574068d7ffea63ec5fcb06a17d334b26db",
+      "source-toddler.json": "e6c544fa3a39bc693e4ac6e65011f6f9224ccee9e41b484d7c1c5697ce227e19",
+      "source-supplement.json": "78d72e5d5c1f3eee540d76317febfaacd1e9e5303fed49865bab8ca22f6f92e7"
+    }
+  },
+  "cases": [
+    {
+      "id": "RT07",
+      "title": "大口亲妈妈的同时，把眼镜拿走",
+      "ageReported": "同一宝宝系列在2016-04-14明确写满8个月；本篇4月16日未重写月龄",
+      "ageGroup": "0—12个月",
+      "source": {
+        "url": "https://www.miloandbehold.com/misty/2016-04-16-bad-sleep/",
+        "title": "Bad Sleep",
+        "platform": "Milo and Behold｜Misty的育儿日记",
+        "author": "misty（母亲自述）",
+        "published": "2016-04-16",
+        "readLevel": "已打开原始日记正文；另读4月14日同系列明确的8个月年龄记录，未观察照片或播放视频",
+        "firstPerson": true,
+        "locator": "正文第三段及Notes；年龄旁证为同系列4月14日日记",
+        "ageSourceUrl": "https://www.miloandbehold.com/photo/2016-04-14-day-two-hundred-forty-five/"
+      },
+      "process": {
+        "setup": "母亲说孩子经常想拿她的眼镜，也喜欢大张嘴贴近亲吻。",
+        "babyAction": "孩子在亲妈妈时同时拿眼镜，自己不停笑。",
+        "adultResponse": "母亲记下自己当天去验配了隐形眼镜；本篇没有明确交代这个决定的动机。",
+        "outcome": "妈妈改戴隐形后，孩子没有特别大的反应；这是反复习惯及当天后续，不是一次抓取的逐秒实录。"
+      },
+      "evidenceNote": "母亲特地说明自己也不确定亲吻与拿眼镜是否有意安排；本例不把它写成已证实的计谋。",
+      "missingDetails": [
+        "没写哪只手、抓住镜框哪里，以及每次拿走后的成人即时动作。",
+        "“动作太快，大人来不及移开”另见前一日简短备注，没有具体事件过程，不能与此条拼成同一现场。",
+        "没有用换隐形眼镜的行动反推她一定是因为被抓眼镜才决定验配。"
+      ],
+      "creativeInference": "可保留亲近时小手伸向镜框的动作巧合；若改为安全软布环或添加成人停顿，属于原创改编，不能当原帖细节。",
+      "limitations": "公开母亲自述，未独立证实；跨篇年龄依据已列链接，不计算额外日龄；不把隐形眼镜选择写成建议。",
+      "processCompleteness": "B：抓取、笑与家长后续有记录，缺单次交接细节",
+      "inventorySourceFile": "source-supplement.json",
+      "ageBucket": "infant",
+      "interactionClarity": "B",
+      "clarityLabel": "需补现场细节",
+      "timeForm": "反复习惯与当天后续",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实"
+    },
+    {
+      "id": "RT01",
+      "title": "突然敲奶瓶，原来少装了吸管",
+      "ageReported": "作者自报12个月（一周岁）",
+      "ageGroup": "0—12个月",
+      "source": {
+        "url": "https://changchen.me/blog/20260530/paipai_one_year/",
+        "title": "派派成长日记 #15 - 无法贪睡的闹钟（12m）",
+        "platform": "Henry Z's blog",
+        "author": "Henry Zhu（父亲自述）",
+        "published": "2026-05-30",
+        "firstPerson": true,
+        "readLevel": "已打开原始页面并核读相关正文；未播放视频、未以照片验证事件",
+        "locator": "“无法贪睡的闹钟”小节，有趣瞬间第2点",
+        "licenseNote": "站点标示CC BY-NC 4.0；本库没有获得商业改编、影像或声音使用许可"
+      },
+      "process": {
+        "setup": "父亲说孩子平常喝奶很专注，这天早晨却表现反常。",
+        "babyAction": "孩子双手拿最爱的奶瓶敲餐椅。",
+        "adultResponse": "父亲起初不明白，随后仔细检查奶瓶。",
+        "outcome": "发现组装时漏放了吸管（重力球）；原文未写补装后的反应。"
+      },
+      "evidenceNote": "同段连续记录平日喝奶、当天敲瓶、家长困惑和检查发现漏件。",
+      "missingDetails": [
+        "未记录补装吸管后孩子是否继续喝奶。"
+      ],
+      "creativeInference": "可用“成人先误解、检查小物件才发现原因”构成30秒短片。补装后恢复喝奶只能作为另行标明的原创结尾。",
+      "limitations": "家长公开自述，未独立证实；不采纳同文育儿判断为一般规律。",
+      "processCompleteness": "A：触发、动作、成人回应和发现结果可读",
+      "inventorySourceFile": "source-supplement.json",
+      "ageBucket": "infant",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "当天事件与原因发现",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实"
+    },
+    {
+      "id": "IN03",
+      "title": "高脚椅里的玩具钥匙一次次掉下，家长一次次捡",
+      "ageReported": "未注明；正文作者没有直接自报当时月龄",
+      "ageGroup": "婴儿自述，0—12个月范围未由作者月龄自报确认",
+      "source": {
+        "url": "https://andbabybmakesthree.wordpress.com/2007/08/15/gravity-spot/",
+        "title": "Gravity spot",
+        "platform": "公开家长日记 / And Baby B Makes Three!（WordPress）",
+        "author": "正文未显示署名；站点名And Baby B Makes Three!",
+        "published": "2007-08-15 21:11；原页未显示时区",
+        "readLevel": "opened_public_diary",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "作者记下宝宝坐在高脚椅里玩玩具车钥匙的情形，未直接写当时月龄。",
+        "babyAction": "宝宝开始故意松手让钥匙掉下去，拿回来后又继续丢，一次接一次。",
+        "adultResponse": "家长跟着物件落点去捡，再还给她，而且每发生一次都忍不住笑。",
+        "outcome": "宝宝当时还没有跟着笑，只露出作者形容为很满意的神情；并非原文中的双方同时大笑。"
+      },
+      "evidenceNote": "日记唯一主体段完整写到drop objects on purpose、成人捡回、玩具车钥匙反复掉落、宝宝尚不笑而家长每次笑。下方Alli评论提到约六个月，是他人说法，未用来补作者自报年龄；也未用侧栏出生日期反算。",
+      "missingDetails": [
+        "月龄未由作者直接注明；本条不计入7条年龄明确的0—12个月案例。",
+        "正文未直接署名，没有写具体哪位成人捡、哪只手松开、落点或何时停止。"
+      ],
+      "creativeInference": "可迁移“松手—落地—成人捡回—再松手”的物件状态链，宝宝不必和成人同时笑。若添加成人摊掌承接、握食指或改变物件，均是新的情节。",
+      "limitations": "公开日记自述并非独立核实；年龄与完整身份不确定，不能把旁人评论或侧栏推算当正文月龄。满意或得意是家长对表情的解释，不是已证明的婴儿意图。",
+      "inventorySourceFile": "source-infant.json",
+      "ageBucket": "unknown",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "反复游戏",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实",
+      "processCompleteness": "互动链较清楚；缺项详见记录，不等于事件已获证实。"
+    },
+    {
+      "id": "IN05",
+      "title": "十个月宝宝把拖鞋贴到耳边当电话",
+      "ageReported": "10个月",
+      "ageGroup": "0—12个月（自报月龄明确）",
+      "source": {
+        "url": "https://www.reddit.com/r/NewParents/comments/1m0wd4b/whats_the_funniest_thing_your_kiddo_does/",
+        "title": "What's the funniest thing your kiddo does?",
+        "platform": "Reddit / r/NewParents",
+        "author": "florinbuttercup242",
+        "published": "原页显示1y ago；读取到的正文未显示精确日期",
+        "readLevel": "opened_original_post",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "作者说女儿十个月，最近开始把随手拿到的东西当电话；这周才到周二，她就觉得格外漫长。",
+        "babyAction": "宝宝把不同物件贴到耳边，先说一个“hi”，再对着物件咿呀说话；那天用的是作者的拖鞋。",
+        "adultResponse": "作者和丈夫每次看到都会被逗笑。",
+        "outcome": "即兴“电话”成了父母反复发笑的小事；该次通话之后的收物与结束过程未交代。"
+      },
+      "evidenceNote": "只取主帖同一家庭：Mine is ten months old、random objects to ear、hi后babble、earlier my slipper、husband and I laugh。未借用同帖八个月爬行或双胞胎评论补过程。",
+      "missingDetails": [
+        "没有写她最初如何学到电话动作、哪只手拿拖鞋、站坐姿或最后如何放下。",
+        "原文只给一个hi和咿呀，没有完整成人句子；具体发音未听音频。"
+      ],
+      "creativeInference": "可提取“物件用途被宝宝重新解释—成人看到才笑”的反差；若改成其他物件、扩展电话对白或添加大人接听，都是新创作。",
+      "limitations": "公开家长自述并非独立核实；未验证实际发音或模仿理解，不把一名十个月宝宝的hi改写成该月龄普遍会完整说话。",
+      "inventorySourceFile": "source-infant.json",
+      "ageBucket": "infant",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "反复习惯与当天例子",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实",
+      "processCompleteness": "互动链较清楚；缺项详见记录，不等于事件已获证实。"
+    },
+    {
+      "id": "ZH01",
+      "title": "想拍一张脸，先被湿漉漉的小手握住",
+      "ageReported": "文章自报刚满5个月；这一小段没有另标具体日龄。",
+      "ageGroup": "0—12个月",
+      "source": {
+        "url": "https://anyray0127.pixnet.net/blog/posts/7102979960",
+        "title": "【育兒＊紀錄】晴晴兒滿5個月☆愛笑指數持續飆高（ノ^ｏ^）ノ♪",
+        "platform": "Pixnet／痞客邦个人育儿博客",
+        "author": "抱枕",
+        "published": "2014-01-20",
+        "readLevel": "原页正文已实际打开；相关事件段、文章日期与署名已读；非搜索摘要；未播放任何嵌入视频",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "作者觉得孩子脸颊可爱，想给她拍一张照片。",
+        "babyAction": "孩子主动伸手握住作者；作者感觉手湿。",
+        "adultResponse": "作者把自己的手抽开。",
+        "outcome": "孩子马上把自己的手塞回嘴里，笑着看作者；作者记为好气又好笑。"
+      },
+      "evidenceNote": "正文先交代想拍照，再写握手、觉得湿、抽手和孩子把手塞嘴的连续动作。作者的“得逞”说法属于成人对表情的幽默解读。",
+      "processCompleteness": "较完整：前情、动作、成人即时回应和后续均有文字；没有实际动作时长。",
+      "missingDetails": [
+        "没有写宝宝用哪只手、握成人哪根手指。",
+        "没有写拍照是否成功，也没有交代湿手动作的具体意图。"
+      ],
+      "creativeInference": "可原创成30—45秒的小误判：家长准备拍照，握手时才发现湿手，抽手后孩子继续研究自己的手。反应和接触距离可做喜剧，不把孩子写成故意把口水擦给成人的算计者。",
+      "limitations": [
+        "公开母亲自述，未独立核实；未观察原始视频。",
+        "只取动作链，不能把作者拟人的动机评价当成已证明的婴儿心理。"
+      ],
+      "inventorySourceFile": "source-zh.json",
+      "ageBucket": "infant",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "单次片段",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实"
+    },
+    {
+      "id": "IN02",
+      "title": "宝宝自己拉毯露脸，大人的夸张回应让游戏继续",
+      "ageReported": "8个月",
+      "ageGroup": "0—12个月（自报月龄明确）",
+      "source": {
+        "url": "https://www.reddit.com/r/NewParents/comments/18l1b3e/8_month_old_playing_peekaboo_can_she_be_more_cute/",
+        "title": "8 month old playing peekaboo.. Can she be more cute",
+        "platform": "Reddit / r/NewParents",
+        "author": "Ok-Journalist-870",
+        "published": "原页显示3y ago；读取到的正文未显示精确日期",
+        "readLevel": "opened_original_post",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "作者把自报八个月的女儿放进婴儿床，床里有她的小毯子。",
+        "babyAction": "宝宝抓起毯子拉到脸前，停几秒，再自己拉下，随后发笑。",
+        "adultResponse": "家长在露面时给出夸张回应；作者说，自己反应越夸张，宝宝笑得越厉害。",
+        "outcome": "宝宝接着重复这个来回，作者在八个月来难以连续睡超过四小时的日子里，觉得这一刻很值得。"
+      },
+      "evidenceNote": "原帖三段正文：八个月；放进crib后grab blanket、等待、拉下并笑；成人dramatic reaction越明显，宝宝笑与重复越多。",
+      "missingDetails": [
+        "没有写成人的具体台词、手势、每轮次数或哪只手持毯。",
+        "没有写停止游戏、取走毯子或之后入睡的过程。"
+      ],
+      "creativeInference": "可提取“宝宝主动发起—留等待—露面—成人回应—继续”的互相触发节奏。新的场地、遮挡方式和安全设计应另立，不能把原创分镜称作原帖逐镜复现。",
+      "limitations": "公开家长自述并非独立核实；没有实际视频、遮挡几何或声音时长。此例说明这一位家长描述的互动，不证明所有八个月宝宝都如此。",
+      "inventorySourceFile": "source-infant.json",
+      "ageBucket": "infant",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "反复游戏",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实",
+      "processCompleteness": "互动链较清楚；缺项详见记录，不等于事件已获证实。"
+    },
+    {
+      "id": "RT03",
+      "title": "抱着包裹走来，却只是假递一下",
+      "ageReported": "同篇作者明确称孩子15个月，第一件事未单独标龄",
+      "ageGroup": "13—36个月",
+      "source": {
+        "url": "https://yubingbing.wordpress.com/2008/01/08/%E7%8E%A9%E7%8E%A9%E6%9D%82%E4%BA%8B-2/",
+        "title": "玩玩杂事",
+        "platform": "WordPress｜天然去雕饰",
+        "author": "yubingbing（母亲自述）",
+        "published": "2008-01-08",
+        "firstPerson": true,
+        "readLevel": "已打开原始页面并核读相关正文；未播放视频、未以照片验证事件",
+        "locator": "正文第一段；同篇第二段有“15个月”"
+      },
+      "process": {
+        "setup": "快递送到，爸爸把体积较大但不重的包裹放在地上。",
+        "babyAction": "孩子马上抱起包裹，摇摇晃晃地在屋里走。",
+        "adultResponse": "妈妈叫她把包裹给自己。",
+        "outcome": "她走到妈妈面前做出递的样子，又把包裹抱回去，继续走。"
+      },
+      "evidenceNote": "父亲接包裹、孩子抱走、母亲提出请求、孩子假递后收回在同段按顺序出现。",
+      "missingDetails": [
+        "没有写妈妈之后是否接到包裹。"
+      ],
+      "creativeInference": "保留“以为要交到手，结果抱回去”的可见动作，适用于已经能行走的阶段；不额外赋予成人式算计。",
+      "limitations": "家长公开自述，未独立证实；未读取或使用儿童照片。",
+      "processCompleteness": "A：前情、孩子行动、家长请求和结果可读",
+      "inventorySourceFile": "source-supplement.json",
+      "ageBucket": "toddler",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "单次包裹互动",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实"
+    },
+    {
+      "id": "TD07",
+      "title": "一边装洗碗机一边被往外拿，改分工才顺下来",
+      "ageReported": "2 year old（作者原话，精确月龄未注明）",
+      "ageGroup": "参与家庭任务的2岁幼儿；不等同有靠坐婴儿的手部游戏",
+      "source": {
+        "url": "https://www.reddit.com/r/Mommit/comments/koo3ho/how_did_i_not_figure_this_out_sooner/",
+        "title": "How did I not figure this out sooner",
+        "platform": "Reddit / r/Mommit",
+        "author": "u/sweetpeach1022",
+        "published": "未注明（所读主帖只显示相对时间“6y ago”，不由页尾关联日期推算）",
+        "readLevel": "已打开原帖并完整核读主帖正文",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "家长往洗碗机里放脏餐具。",
+        "babyAction": "2岁孩子总试着把刚放进去的脏餐具往外拿。",
+        "adultResponse": "家长请他改做把餐具放入分类格的任务。",
+        "outcome": "家长称孩子高兴地专注新任务，不再挡着原来的工作。"
+      },
+      "evidenceNote": "主帖单段，短摘“pull dirty dishes out”；同段随后写请求分类、孩子高兴且专注。",
+      "missingDetails": [
+        "餐具具体种类、分类完成程度及成人现场细节未交代。",
+        "作者“每次都有效”的泛化感受不作为本案例效果保证。"
+      ],
+      "creativeInference": "可研究同一劳动中双方目标相反、再重新分工的过程；不复制成育儿技巧承诺。",
+      "limitations": "家长公开自述，未独立证实。",
+      "inventorySourceFile": "source-toddler.json",
+      "ageBucket": "toddler",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "家务协作习惯",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实",
+      "processCompleteness": "互动链较清楚；缺项详见记录，不等于事件已获证实。"
+    },
+    {
+      "id": "IN01",
+      "title": "小手突然拿走妈妈的午餐，趣事分享却让妈妈委屈",
+      "ageReported": "6个月；作者原文为当月满6个月",
+      "ageGroup": "0—12个月（自报月龄明确）",
+      "source": {
+        "url": "https://www.reddit.com/r/beyondthebump/comments/1u0ayzk/6_month_old_grabbed_my_food_and_now_i_feel/",
+        "title": "6 month old grabbed my food and now I feel horrible",
+        "platform": "Reddit / r/beyondthebump",
+        "author": "Great-Insurance2854",
+        "published": "原页显示4mo ago；读取到的正文未显示精确日期",
+        "readLevel": "opened_post_and_same_author_followup",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "作者说宝宝当月满六个月；她给自己做了鸡肉条午餐，一边吃一边陪宝宝。",
+        "babyAction": "宝宝突然伸手拿走一条并放到嘴边嚼。",
+        "adultResponse": "她立刻取回扔掉，觉得小手太快而笑，拍下宝宝笑着的样子发给自己妈妈。",
+        "outcome": "外婆回复让她别对外提食物，她因此委屈哭了；她后来补充，叫宝宝“小偷”时宝宝还会笑。"
+      },
+      "evidenceNote": "主帖正文先写月龄、午餐、拿走、立刻取回，再写发视频及外婆回复；同作者在LJ161评论下的回复补充，宝宝听到chicken dipper thief还会笑。没有引用其他评论者的宝宝经历。",
+      "missingDetails": [
+        "未交代使用哪只手、双方坐姿、抓取距离或具体物件交接帧。",
+        "未观察作者提及的视频；食物是否实际吞咽只按作者称未吃进去转述，不能由此独立确认。"
+      ],
+      "creativeInference": "可独立提取“成人自己的东西进入可达区—宝宝突然拿走—成人取回—分享反应”的因果结构；若迁移到软玩具是新创作，原帖不是软环交接，也不是始终轻松的喜剧。",
+      "limitations": "公开家长自述并非独立核实。保留作者受外婆回复影响的情绪结果，不能只摘快抓而宣称原故事以全家大笑结束；不把食品或帖内喂养意见当建议。",
+      "inventorySourceFile": "source-infant.json",
+      "ageBucket": "infant",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "单次事件与事后补充",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实",
+      "processCompleteness": "互动链较清楚；缺项详见记录，不等于事件已获证实。"
+    },
+    {
+      "id": "IN04",
+      "title": "第一次蹬出水花，愣一下后变成全家的泼水时刻",
+      "ageReported": "11.5周；保留作者周龄表述，不换算精确月龄",
+      "ageGroup": "0—12个月（自报周龄明确）",
+      "source": {
+        "url": "https://www.reddit.com/r/NewParents/comments/1x67yqr/postpartum_sucks_tell_me_something_funny/",
+        "title": "Postpartum sucks, tell me something funny",
+        "platform": "Reddit / r/NewParents",
+        "author": "Relevant_Lynx_5117",
+        "published": "原页显示24d ago；读取到的正文未显示精确日期",
+        "readLevel": "opened_original_post",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "作者说女儿十一周半，最近会主动伸手、抓东西；当晚作者和伴侣正在给她洗澡。",
+        "babyAction": "宝宝先蹬脚溅出水花，短暂愣住，随后又踢脚、挥手，把水不断溅到两位大人身上。",
+        "adultResponse": "作者和伴侣当场一起笑出了声。",
+        "outcome": "宝宝看着两人露出笑容；作者把这次洗澡记为会一直珍惜的家庭时刻，和发帖开头难过的夜晚形成反差。"
+      },
+      "evidenceNote": "只用主帖第二段十一周半女儿的洗澡故事：第一次splash、startled、继续踢水挥手、大人cracking up、宝宝grinning。没有混入评论区另一家庭吐奶或宠物的故事。",
+      "missingDetails": [
+        "没有写浴具、水深、成人如何托扶、谁负责哪只手或拍摄角度。",
+        "没有写洗澡如何结束；“主动动作”是作者对最近行为的表述，不是独立评估。"
+      ],
+      "creativeInference": "可独立迁移“偶然出现结果—短暂停顿—再次尝试—家长回应—宝宝看家长”的节拍；水中承托与浴具必须另做具体设计，不能从自述里臆补。",
+      "limitations": "公开家长自述并非独立核实，未看媒体；不能以十一周半的单条经验建立统一能力或洗澡操作标准。",
+      "inventorySourceFile": "source-infant.json",
+      "ageBucket": "infant",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "单次洗澡事件",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实",
+      "processCompleteness": "互动链较清楚；缺项详见记录，不等于事件已获证实。"
+    },
+    {
+      "id": "IN06",
+      "title": "宝宝抓下太阳镜，家长戴回去又被抓走",
+      "ageReported": "8个月；来自所选评论自身，非父帖月龄",
+      "ageGroup": "0—12个月（评论者自报月龄明确）",
+      "source": {
+        "url": "https://www.reddit.com/r/NewParents/comments/1k5p25n/my_9_month_old_baby_is_funny/",
+        "title": "My 9 month old baby is funny!（所选为评论区八个月宝宝的独立自述）",
+        "platform": "Reddit / r/NewParents",
+        "author": "[deleted]；原页未显示可恢复昵称",
+        "published": "所选评论显示2y ago；读取到的正文未显示精确日期",
+        "readLevel": "opened_original_comment",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "一位评论者自报宝宝八个月，外出时大人戴着太阳镜，宝宝最近特别喜欢眼镜。",
+        "babyAction": "宝宝从家长脸上把太阳镜抓下来。",
+        "adultResponse": "家长把眼镜重新戴回脸上，宝宝又来拿，于是同一来回反复发生。",
+        "outcome": "评论者说宝宝觉得这件事很有趣，自己看见孩子笑、听到笑声也很开心；没有交代某一次如何停下。"
+      },
+      "evidenceNote": "评论区[deleted]、以Love this post. My 8 month old is so funny too开头的完整一段；其后明确glasses off my face、put them back on、rinse repeat。父帖是九个月将满十个月的另一家庭，未合并。",
+      "missingDetails": [
+        "昵称已删除，无法进一步核验发言身份。",
+        "没有写左右手、抓取速度、是否短暂双持或每轮间隔；未写如何结束游戏。"
+      ],
+      "creativeInference": "可提取“拿走—成人复位—宝宝再次拿走”的循环和成人自愿配合。若要表现一把快抓，必须另设计并试拍接触链，原评论没有证明任何具体速度或同镜交接。",
+      "limitations": "公开匿名评论自述并非独立核实；deleted使身份追溯更弱。宝宝觉得好玩是作者判断，实际可直接转述的是重复拿镜、家长戴回与笑声，不能编成恶作剧动机。",
+      "inventorySourceFile": "source-infant.json",
+      "ageBucket": "infant",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "反复游戏",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实",
+      "processCompleteness": "互动链较清楚；缺项详见记录，不等于事件已获证实。"
+    },
+    {
+      "id": "IN07",
+      "title": "吃饭时对着家长吹口水声，严肃说不也没有用",
+      "ageReported": "7.5个月；作者帖标题自报",
+      "ageGroup": "0—12个月（自报月龄明确）",
+      "source": {
+        "url": "https://www.mumsnet.com/talk/behaviour_development/1726570-7-5-month-baby-started-spitting-out-food-blowing-raspberries",
+        "title": "7.5 month baby started spitting out food/blowing raspberries",
+        "platform": "Mumsnet / Behaviour/development",
+        "author": "MrsMigginslovespies",
+        "published": "主帖07/04/2013 20:15；同作者跟进09/04/2013 20:09，原页未显示时区",
+        "readLevel": "opened_post_and_same_author_followup",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "发帖者说七个半月的儿子从前很享受吃东西，前一天却开始在吃饭时大量吐出食物、吹口水声。",
+        "babyAction": "宝宝经常边做边笑，还直视家长；换爸爸喂也一样，酸奶却是例外。",
+        "adultResponse": "她先严肃说“不”，发现没什么用；两天后的跟帖里改为准备把两人遮好，顺着这阵变化应对。",
+        "outcome": "她说当天已有所好转，自己看着宝宝开心也很难忍住不笑，但没有说问题已经彻底结束。"
+      },
+      "evidenceNote": "只合并MrsMigginslovespies的首帖和两天后同名OP跟进；首帖有looks me right in the eye及stern/no无效，跟进有slightly better、cover us both及很难不笑。未采用其他家庭或跟帖里的喂养建议。",
+      "missingDetails": [
+        "未交代具体哪一口、使用哪种餐具、成人手位或食物落点。",
+        "“把两人遮好”是她的应对计划，原文没有说明实际已完成怎样的遮挡或奏效程度。"
+      ],
+      "creativeInference": "可迁移“成人严肃反应没改变宝宝的小动作—成人自己也忍不住笑”的关系变化；若补围兜、勺子、具体喷溅方向，均应标为原创调度。",
+      "limitations": "公开家长自述并非独立核实；帖含健康与喂养讨论，本条只取她自报的事件与回应，不采纳旁人原因解释、食物建议或停止行为的方法。",
+      "inventorySourceFile": "source-infant.json",
+      "ageBucket": "infant",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "跨两日跟帖",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实",
+      "processCompleteness": "互动链较清楚；缺项详见记录，不等于事件已获证实。"
+    },
+    {
+      "id": "IN08",
+      "title": "脚趾一蜷、脚一弯，袜子和鞋都难留住",
+      "ageReported": "11个月；所选评论原文为in his little 11 month life",
+      "ageGroup": "0—12个月（评论者自报月龄明确）",
+      "source": {
+        "url": "https://www.reddit.com/r/beyondthebump/comments/ppp6vj/comment/hd5n8le/",
+        "title": "I don’t understand the whole obsession with socks and shoes for babies（RedditRose3评论）",
+        "platform": "Reddit / r/beyondthebump",
+        "author": "RedditRose3",
+        "published": "所选评论显示5y ago；读取到的正文未显示精确日期",
+        "readLevel": "opened_original_comment",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "一位自报孩子十一月龄的评论者说，自己几次试着给宝宝穿袜和鞋。",
+        "babyAction": "宝宝很会蜷脚趾、弯脚；袜子往往还没到目的地就湿了，鞋也很难穿进去。",
+        "adultResponse": "家长回想这十一个月，真正成功穿上鞋的大概只有三次，觉得反复折腾并不值得。",
+        "outcome": "即使穿上，每次也只留住约五分钟。原评论没有解释袜子怎样湿的，或鞋究竟被谁、怎样弄掉。"
+      },
+      "evidenceNote": "实际打开评论链接，核读RedditRose3的完整段落：socks soggy before destination、toe-curler/foot-bender、约三次穿鞋成功、每次约五分钟。没有把父帖十二个月孩子撕袜的经历接到这位十一月龄宝宝身上。",
+      "missingDetails": [
+        "这是家长回顾反复经验，不是一次完整穿脱的逐步记录。",
+        "未交代袜子变湿的原因、鞋最终怎样离脚；不能补成宝宝用手脱掉或放嘴里。",
+        "没有具体左右脚、衣裤、鞋袜型号或成人穿鞋动作。"
+      ],
+      "creativeInference": "可迁移穿着过程中脚趾蜷缩与成人耐心的视觉反差。若要演抓袜、松袜、放下鞋等状态链，必须独立创作，原评论没有这些过程。",
+      "limitations": "公开家长评论自述并非独立核实；本条不是鞋袜或足部发展建议。约三次、约五分钟是家长回忆值，不能当精确测量或统一穿着规律。",
+      "inventorySourceFile": "source-infant.json",
+      "ageBucket": "infant",
+      "interactionClarity": "B",
+      "clarityLabel": "需补现场细节",
+      "timeForm": "反复经验回顾",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实",
+      "processCompleteness": "需补现场细节；缺项详见记录，不等于事件已获证实。"
+    },
+    {
+      "id": "RT05",
+      "title": "换爸爸的名字再问，还是指同一个人",
+      "ageReported": "原帖归在11—12个月记录；未给该日精确月龄",
+      "ageGroup": "0—12个月",
+      "source": {
+        "url": "https://www.gzmama.com/thread-1457352-1-1.html",
+        "title": "分享一下我家小猪11-12月份的宝宝日记",
+        "platform": "广州妈妈网",
+        "author": "gzshirleyli（楼主、母亲自述）",
+        "published": "2010-01-12；该事件日记标01.01",
+        "firstPerson": true,
+        "readLevel": "已打开原始页面并核读相关正文；未播放视频、未以照片验证事件",
+        "locator": "楼主3楼，01.01条目（页面相关正文第171行）"
+      },
+      "process": {
+        "setup": "家人问孩子爸爸在哪里。",
+        "babyAction": "孩子指向爸爸。",
+        "adultResponse": "大人改用爸爸的名字再问一次。",
+        "outcome": "孩子仍指爸爸，作者记下孩子没有被换称呼弄糊涂。"
+      },
+      "evidenceNote": "两次提问与两次指认在同一句日记中连续记录；没有记录其他动作。",
+      "missingDetails": [
+        "没有写孩子是否发声；帖子生日措辞与侧栏日期不完全一致，不据此倒算月龄。"
+      ],
+      "creativeInference": "适合一岁前后有指认表现的澈澈：两种称呼、同一指向即可成立，不需要宝宝完整说话。",
+      "limitations": "家长公开自述未独立证实；只依据作者的11—12个月分段，不推算生日。",
+      "processCompleteness": "A：两轮提问、回应和结果均有记录",
+      "inventorySourceFile": "source-supplement.json",
+      "ageBucket": "infant",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "两次连续提问",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实"
+    },
+    {
+      "id": "ZH02",
+      "title": "醒来先玩自己的手，等人靠近对眼才笑",
+      "ageReported": "同篇自报刚满5个月；作者把它写成这一时期常见的醒后过程，不是标明日期的单次记录。",
+      "ageGroup": "0—12个月",
+      "source": {
+        "url": "https://anyray0127.pixnet.net/blog/posts/7102979960",
+        "title": "【育兒＊紀錄】晴晴兒滿5個月☆愛笑指數持續飆高（ノ^ｏ^）ノ♪",
+        "platform": "Pixnet／痞客邦个人育儿博客",
+        "author": "抱枕",
+        "published": "2014-01-20",
+        "readLevel": "原页正文已实际打开；相关事件段、文章日期与署名已读；非搜索摘要；未播放任何嵌入视频",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "作者说孩子醒后先自己玩手、咿呀约5—10分钟，有时更久。",
+        "babyAction": "如果玩腻还没人发现，孩子才会哭。",
+        "adultResponse": "发现她的家人靠近，与她对上眼。",
+        "outcome": "孩子随即露出开心表情。"
+      },
+      "evidenceNote": "相关正文明确写了先自玩、无人发现才哭、来人对眼后开心的先后。作者称哭声“很假”，本摘记不据此认定婴儿在装哭。",
+      "processCompleteness": "较完整的习惯性过程：成人靠近与表情变化可追踪；不是逐秒现场实录。",
+      "missingDetails": [
+        "没有写每次由哪位家人靠近。",
+        "哭的持续时间、家人是否随后抱起孩子未交代。"
+      ],
+      "creativeInference": "可把一次醒后对眼微笑独立成30—60秒动画，保留先自玩、成人发现、对眼后变化。若压缩前面等待，需要承认是原创时间压缩，原文写的是5—10分钟或更久。",
+      "limitations": [
+        "来自同一作者同一篇日记，不能当成独立家庭的第二次证明。",
+        "文字没有证实哭的动机，也没有提供精确反应延迟。"
+      ],
+      "inventorySourceFile": "source-zh.json",
+      "ageBucket": "infant",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "醒后习惯",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实"
+    },
+    {
+      "id": "ZH03",
+      "title": "正哭着，被抱到镜子前后转笑",
+      "ageReported": "文章标题与正文自报满7个月。",
+      "ageGroup": "0—12个月",
+      "source": {
+        "url": "https://yaziiyeh.pixnet.net/blog/posts/3047303466",
+        "title": "【可可娜育兒】小泰陽滿7個月了",
+        "platform": "Pixnet／痞客邦个人育儿博客",
+        "author": "可可娜",
+        "published": "2017-06-08",
+        "readLevel": "原页正文已实际打开；相关事件段、文章日期与署名已读；非搜索摘要；未播放任何嵌入视频",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "作者描述孩子喜欢看镜子，也记下孩子大哭时的情形。",
+        "babyAction": "文中说孩子见镜中形象会笑。",
+        "adultResponse": "照顾者把哭着的孩子抱去照镜子。",
+        "outcome": "作者说这样孩子就不哭了。"
+      },
+      "evidenceNote": "“其它”段将照镜子会笑与大哭时抱去后止哭写在同一条里，是具体家庭做法的自述，不是本次观察到的录像。",
+      "processCompleteness": "较完整但简短：哭、成人抱到镜前、转为不哭的变化可见于文字；缺少细部中间动作。",
+      "missingDetails": [
+        "没有交代原先为何哭。",
+        "抱到镜前后看了哪里、多久转变、是否伸手触镜未交代。"
+      ],
+      "creativeInference": "可原创为30—45秒的注意力变化：家长抱稳，镜中多出一张会跟着动的脸，孩子停顿、观察后表情变松。镜中动作及转笑细节需要另行创作，不能写成原文已经发生；也不能宣称镜子必能止哭或婴儿已认出自己。",
+      "limitations": [
+        "作者说看到“自己”不等于证实婴儿具有镜像自我识别。",
+        "这是家庭反复观察式表述，次数与适用范围未写，不能推广为通用方法。"
+      ],
+      "inventorySourceFile": "source-zh.json",
+      "ageBucket": "infant",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "反复观察",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实"
+    },
+    {
+      "id": "RT02",
+      "title": "拿着遥控器跑几间房，空调后来开着",
+      "ageReported": "作者自报1岁4个月",
+      "ageGroup": "13—36个月",
+      "source": {
+        "url": "https://changchen.me/blog/20260925/paipai-1year4month/",
+        "title": "派派成长日记 #16 - 介个介个（1y4m）",
+        "platform": "Henry Z's blog",
+        "author": "Henry Zhu（父亲自述）",
+        "published": "2026-09-25",
+        "firstPerson": true,
+        "readLevel": "已打开原始页面并核读相关正文；未播放视频、未以照片验证事件",
+        "locator": "“碎碎念”第1项",
+        "licenseNote": "站点标示CC BY-NC 4.0；未取得商业改编许可"
+      },
+      "process": {
+        "setup": "周末孩子拿着空调遥控器在客厅、主卧和次卧之间来回。",
+        "babyAction": "他带着遥控器跑了几间房，大人不知道他在忙什么。",
+        "adultResponse": "父亲过一会儿去主卧准备睡觉。",
+        "outcome": "发现空调已经打开；原文没说亲眼看到孩子按键。"
+      },
+      "evidenceNote": "原文把拿遥控器来回跑与后来发现空调开启并列记录，没有按键现场。",
+      "missingDetails": [
+        "没有记录实际按键者和按键时间。"
+      ],
+      "creativeInference": "可拍“大人后来才发现孩子忙出了什么”的揭示；若增加孩子按键特写，必须标为原创补写，不能说原帖已证实。",
+      "limitations": "公开自述未独立证实；孩子开了空调是隐含联系，因果未被现场核实。",
+      "processCompleteness": "B：过程可读，关键因果未被目击",
+      "inventorySourceFile": "source-supplement.json",
+      "ageBucket": "toddler",
+      "interactionClarity": "B",
+      "clarityLabel": "需补现场细节",
+      "timeForm": "当天观察与事后发现",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实"
+    },
+    {
+      "id": "RT04",
+      "title": "等不及照镜子，转去照电视反光",
+      "ageReported": "作者自报16个月",
+      "ageGroup": "13—36个月",
+      "source": {
+        "url": "https://yubingbing.wordpress.com/2008/01/11/%E7%8E%A9%E7%8E%A9%E4%BB%8A%E5%A4%A9%E5%8D%81%E5%85%AD%E4%B8%AA%E6%9C%88%EF%BC%8C%E7%88%B1%E8%87%AD%E7%BE%8E/",
+        "title": "玩玩今天十六个月，爱臭美",
+        "platform": "WordPress｜天然去雕饰",
+        "author": "yubingbing（母亲自述）",
+        "published": "2008-01-11",
+        "firstPerson": true,
+        "readLevel": "已打开原始页面并核读相关正文；未播放视频、未以照片验证事件",
+        "locator": "正文年龄声明及其后第一段"
+      },
+      "process": {
+        "setup": "作者说孩子穿新衣、换鞋或扎头发后，常找家人看，并要求照镜子。",
+        "babyAction": "有一次奶奶来不及带她照镜子，她自己歪头看向电视。",
+        "adultResponse": "只记奶奶没来得及；没有写奶奶当时说了什么。",
+        "outcome": "孩子把电视反光当镜面，喊“照”并笑起来。"
+      },
+      "evidenceNote": "原文区分反复出现的展示习惯与“某天奶奶来不及”的具体事件。",
+      "missingDetails": [
+        "奶奶当场反应和后续是否照真正镜子未写。"
+      ],
+      "creativeInference": "可围绕“找不到惯常镜子，却找到另一处反光”设计视觉发现；具体屏幕、摆位与成人回应需另行创作。",
+      "limitations": "公开自述未独立证实；母亲对爱美天性的评价不作为普遍结论。",
+      "processCompleteness": "B：动作和发现明确，成人现场回应未写",
+      "inventorySourceFile": "source-supplement.json",
+      "ageBucket": "toddler",
+      "interactionClarity": "B",
+      "clarityLabel": "需补现场细节",
+      "timeForm": "习惯中的一次发现",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实"
+    },
+    {
+      "id": "RT06",
+      "title": "妈妈一开电脑，就来牵手叫陪玩",
+      "ageReported": "日记该条明确标1Y8M16D",
+      "ageGroup": "13—36个月",
+      "source": {
+        "url": "https://feitravel.tw/p-5062220628/",
+        "title": "〖蔡小球日记〗12月份小球的日常~1Y8M~1Y9M纪录",
+        "platform": "加小菲爱碎碎念",
+        "author": "加小菲（母亲自述）",
+        "published": "页面显示2026-03-04；日记条目12/4，事件年份未核实",
+        "firstPerson": true,
+        "readLevel": "已打开原始页面并核读相关正文；未播放视频、未以照片验证事件",
+        "locator": "12/4（1Y8M16D），中午打开电脑处理邮件的段落"
+      },
+      "process": {
+        "setup": "妈妈中午回家后打开电脑处理邮件。",
+        "babyAction": "孩子自己玩不到几分钟，就来牵妈妈的手叫她陪玩，并反复这样做。",
+        "adultResponse": "母亲记录自己受到打断，觉得缠人又可爱；没逐次写她是否起身。",
+        "outcome": "到儿歌跳舞节目开始播放，这种反复牵手才停止。"
+      },
+      "evidenceNote": "原段记录开电脑、不到三分钟来牵手、反复发生、节目出现后停止。",
+      "missingDetails": [
+        "没有逐次记录妈妈是否陪玩；页面发布日期与日记事件年份不是一回事。"
+      ],
+      "creativeInference": "可保留“孩子用牵手邀请而非说教”的关系动作；若改成妈妈关电脑陪玩，需明确是原创结尾。",
+      "limitations": "公开自述未独立证实；不将节目分散注意的做法写为育儿建议。",
+      "processCompleteness": "B：重复过程与停止条件可读，成人逐次回应缺失",
+      "inventorySourceFile": "source-supplement.json",
+      "ageBucket": "toddler",
+      "interactionClarity": "B",
+      "clarityLabel": "需补现场细节",
+      "timeForm": "当天反复邀请",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实"
+    },
+    {
+      "id": "TD01",
+      "title": "失踪的衣服，数周后在玩具水壶里现身",
+      "ageReported": "2 year old（作者原话，精确月龄未注明）",
+      "ageGroup": "幼儿，作者自报2岁；并非婴儿阶段素材",
+      "source": {
+        "url": "https://www.mumsnet.com/talk/behaviour_development/2533635-tell-me-your-kids-strangest-hiding-places-of-things",
+        "title": "tell me your kids strangest hiding places of things..",
+        "platform": "Mumsnet / Behaviour/development",
+        "author": "CinnamonBunYou",
+        "published": "2015-12-23 13:26（页面原样显示日期时间；时区未注明）",
+        "readLevel": "已打开原帖并完整核读CinnamonBunYou的目标评论；未通读其他所有评论",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "家长找不到孩子的一条连裤袜和一件幼儿园上衣。",
+        "babyAction": "家长称2岁女儿喜欢把东西塞进任何有盖子的容器；这次把衣服塞进玩具水壶。",
+        "adultResponse": "数周后，家长打开玩具水壶时发现了衣服。",
+        "outcome": "失物的藏处揭晓；孩子面对发现时的反应未交代。"
+      },
+      "evidenceNote": "评论定位：CinnamonBunYou，23/12/2015 13:26；短摘“inside her toy kettle”。原文依次写衣物找不到、数周后开壶发现。",
+      "missingDetails": [
+        "没有描述孩子实际塞衣服的现场；该归因来自家长回述。",
+        "未交代寻找方法、发现后的对话或孩子反应。"
+      ],
+      "creativeInference": "可研究“孩子按容器规则收纳，成人按衣物规则寻找”的错位；不能补成孩子故意设局或撒谎。",
+      "limitations": "家长公开自述，未独立证实。",
+      "inventorySourceFile": "source-toddler.json",
+      "ageBucket": "toddler",
+      "interactionClarity": "B",
+      "clarityLabel": "需补现场细节",
+      "timeForm": "失物发现；未目击藏入",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实",
+      "processCompleteness": "需补现场细节；缺项详见记录，不等于事件已获证实。"
+    },
+    {
+      "id": "TD02",
+      "title": "被追回的土豆，最后穿上袜子当了睡伴",
+      "ageReported": "two year old（作者原话，精确月龄未注明）",
+      "ageGroup": "会跑动的2岁幼儿；不能直接套入有靠坐婴儿",
+      "source": {
+        "url": "https://www.reddit.com/r/toddlers/comments/1vbna38/toddlers_are_so_cute_and_weird/",
+        "title": "Toddlers are so cute and weird",
+        "platform": "Reddit / r/toddlers",
+        "author": "u/wonkynipples",
+        "published": "未注明（所读页面仅显示相对时间“3mo ago”，不换算绝对日期）",
+        "readLevel": "已打开原帖并完整核读主帖正文",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "当天下午，家中储物处有土豆。",
+        "babyAction": "2岁孩子反复拿走一颗土豆、尖叫着跑开；后来给它洗澡、擦干，再套上一只袜子。",
+        "adultResponse": "家长与伴侣先追着取回，称只是玩闹；随后决定让她把土豆带去洗澡。",
+        "outcome": "发帖时孩子已经抱着穿袜子的土豆睡着。"
+      },
+      "evidenceNote": "主帖开头“grab a potato”到第二段“put her clothes on (a sock)”；最后明确写抱着它睡着。",
+      "missingDetails": [
+        "未说明追逐次数、土豆在浴室的具体摆位及中间对话。",
+        "未交代这是不是以前已有的仪式。"
+      ],
+      "creativeInference": "可提取成人从追回物品转为接纳孩子照料游戏的过程；“情感寄托”等原因不能当作已证实心理解释。",
+      "limitations": "家长公开自述，未独立证实。",
+      "inventorySourceFile": "source-toddler.json",
+      "ageBucket": "toddler",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "同日下午至睡前",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实",
+      "processCompleteness": "互动链较清楚；缺项详见记录，不等于事件已获证实。"
+    },
+    {
+      "id": "TD03",
+      "title": "不许爸爸把我当玩具，却反过来轻抚爸爸",
+      "ageReported": "current 2 year old (almost 3)（作者原话，未注明具体月龄）",
+      "ageGroup": "接近3岁的会说话幼儿；原句不是婴儿台词",
+      "source": {
+        "url": "https://www.reddit.com/r/toddlers/comments/1rcpedj/toddlers_be_toddlin/",
+        "title": "Toddlers be toddlin",
+        "platform": "Reddit / r/toddlers",
+        "author": "u/wllwrkfrfd",
+        "published": "未注明（本次打开的主帖正文未给出绝对发布日期）",
+        "readLevel": "已打开原帖并完整核读主帖；采用编号3的睡前事件",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "爸爸哄孩子睡觉时开始揉他的背。",
+        "babyAction": "孩子拒绝被摸，说自己不是玩具。",
+        "adultResponse": "爸爸解释以为孩子会喜欢揉背，表示会停。",
+        "outcome": "孩子翻过身，说爸爸才是玩具，并开始轻轻抚摸爸爸胸毛。"
+      },
+      "evidenceNote": "主帖编号3；短摘“DON'T PET ME DADDY”和“you a toy”。拒绝、成人答应停止、角色反转均在同段。",
+      "missingDetails": [
+        "没有写随后是否继续揉背或何时入睡。",
+        "对话是家长回述，未有独立录音。"
+      ],
+      "creativeInference": "趣味来自孩子把刚刚拒绝的角色关系倒过来；只能研究回应结构，不能把这组完整语言移给婴儿。",
+      "limitations": "家长公开自述，未独立证实。",
+      "inventorySourceFile": "source-toddler.json",
+      "ageBucket": "toddler",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "单次睡前互动",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实",
+      "processCompleteness": "互动链较清楚；缺项详见记录，不等于事件已获证实。"
+    },
+    {
+      "id": "TD04",
+      "title": "家长想东西时的小动作，变成孩子的侦探仪式",
+      "ageReported": "2.5yo（评论作者原话）",
+      "ageGroup": "2岁半幼儿，已有模仿手势与角色游戏；不是婴儿能力证明",
+      "source": {
+        "url": "https://www.reddit.com/r/toddlers/comments/1h549kn/toddler_inside_jokes/",
+        "title": "Toddler inside jokes",
+        "platform": "Reddit / r/toddlers",
+        "author": "GarbageSepty",
+        "published": "未注明（目标评论只显示相对时间“2y ago”）",
+        "readLevel": "已打开原帖并完整核读GarbageSepty的目标评论；未通读全帖所有评论",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "家长思考时会用手指轻点嘴部，原先自己都没注意。",
+        "babyAction": "2岁半孩子开始在找东西时重复这个动作。",
+        "adultResponse": "家长认出是在模仿后，给孩子起了侦探角色称呼。",
+        "outcome": "后来找玩具或收拾时，一叫该称呼，孩子就笑着点嘴、投入扮演；没有写实际找到了什么。"
+      },
+      "evidenceNote": "目标评论开头“My boy (2.5yo)”；作者说直到孩子模仿才注意到自己的手势，随后出现“Detective Watson”称呼。",
+      "missingDetails": [
+        "缺一回具体找物的起终点。",
+        "没有明确寻物成功结果。"
+      ],
+      "creativeInference": "可研究成人发现自己被模仿后的回应；角色称呼与台词需原创，不默认婴儿能理解该语言游戏。",
+      "limitations": "家长公开自述，未独立证实。",
+      "inventorySourceFile": "source-toddler.json",
+      "ageBucket": "toddler",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "家庭角色游戏习惯",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实",
+      "processCompleteness": "互动链较清楚；缺项详见记录，不等于事件已获证实。"
+    },
+    {
+      "id": "TD05",
+      "title": "家里没有这个人，却越打招呼越好笑",
+      "ageReported": "2.5 year old（主帖作者原话）",
+      "ageGroup": "2岁半会说话幼儿；依赖押韵与家庭暗号",
+      "source": {
+        "url": "https://www.reddit.com/r/toddlers/comments/1h549kn/toddler_inside_jokes/",
+        "title": "Toddler inside jokes",
+        "platform": "Reddit / r/toddlers",
+        "author": "u/dancethrusunday",
+        "published": "未注明（所读主帖只显示相对时间“2y ago”）",
+        "readLevel": "已打开原帖并完整核读主帖正文",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "家里没有人叫Pete。",
+        "babyAction": "孩子偶尔带笑走过来，说“hi Pete”。",
+        "adultResponse": "家长把同一句回给他。",
+        "outcome": "孩子大笑，有时接着换成押韵词，边说边笑。"
+      },
+      "evidenceNote": "主帖首段；短摘“hi Pete”。作者明确写无同名家人、成人回声、孩子笑及继续押韵的先后。",
+      "missingDetails": [
+        "没有交代暗号的最初来源。",
+        "未写一次互动结束后做了什么。"
+      ],
+      "creativeInference": "可研究双方重复一个小暗号如何积累笑意；押韵和完整招呼语属于该幼儿，不能原样赋予婴儿。",
+      "limitations": "家长公开自述，未独立证实。",
+      "inventorySourceFile": "source-toddler.json",
+      "ageBucket": "toddler",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "反复亲子暗号",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实",
+      "processCompleteness": "互动链较清楚；缺项详见记录，不等于事件已获证实。"
+    },
+    {
+      "id": "TD06",
+      "title": "把家长的结束用餐判断，听成了要做的动作",
+      "ageReported": "At about 18 months；He’s 2.5 now（评论作者原话，叙述横跨两个年龄）",
+      "ageGroup": "约18个月开始、2岁半仍持续的幼儿家庭习惯；不当作普遍发展规则",
+      "source": {
+        "url": "https://www.reddit.com/r/toddlers/comments/1i5qy1l/comment/m860m3e/",
+        "title": "What funny thing is your toddler mistaken about?",
+        "platform": "Reddit / r/toddlers",
+        "author": "CanThisBeEvery",
+        "published": "未注明（所读目标评论只显示相对时间“2y ago”）",
+        "readLevel": "已打开原帖并核读目标评论，另打开目标评论永久链接确认同一正文",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "约18个月时，孩子把脚搁到餐桌上。",
+        "babyAction": "到2岁半，吃完饭时仍经常主动把脚放上桌。",
+        "adultResponse": "家长当初说这样表示吃完，要收走盘子；后来尝试解释，却没有消除这个习惯。",
+        "outcome": "家长称孩子仍以为这样是在配合；并称他在托育处不这样做。"
+      },
+      "evidenceNote": "CanThisBeEvery评论，开头“At about 18 months”；正文将最初说明与“He’s 2.5 now”后的持续动作相接。",
+      "missingDetails": [
+        "后来如何解释、重复多少次未交代。",
+        "“想讨好家长”是发帖者对动机的解释，并非独立证明。"
+      ],
+      "creativeInference": "可提取成人条件句被孩子当成操作步骤的错位；不把该动作或家长说法推荐为育儿做法。",
+      "limitations": "家长公开自述，未独立证实。",
+      "inventorySourceFile": "source-toddler.json",
+      "ageBucket": "toddler",
+      "interactionClarity": "B",
+      "clarityLabel": "需补现场细节",
+      "timeForm": "跨月误会与习惯",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实",
+      "processCompleteness": "需补现场细节；缺项详见记录，不等于事件已获证实。"
+    },
+    {
+      "id": "TD08",
+      "title": "其他家务都想参加，扫地偏要跑过垃圾堆",
+      "ageReported": "21 month old（评论作者原话）",
+      "ageGroup": "21个月会主动跑动的幼儿；不能直接变成婴儿行动",
+      "source": {
+        "url": "https://www.reddit.com/r/toddlers/comments/1hb163u/teaching_my_two_year_old_chores/",
+        "title": "Teaching my two year old chores",
+        "platform": "Reddit / r/toddlers",
+        "author": "moluruth",
+        "published": "未注明（目标评论只显示相对时间“2y ago”）",
+        "readLevel": "已打开原帖并完整核读moluruth的目标评论；不是仅取搜索摘要",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "家长描述孩子平常会帮拿衣服、收玩具等，一天最后还要扫地。",
+        "babyAction": "但扫地时，孩子总要跑过已经扫成堆的垃圾。",
+        "adultResponse": "家长说劝不住，所以不让他参加一天最后的扫地；另提到他会扫一些小脏乱。",
+        "outcome": "家长区分了孩子扫小脏乱与不参与日末扫地的情况；一次具体清扫如何结束未交代。"
+      },
+      "evidenceNote": "目标评论开头“My 21 month old”；结尾写“run through the pile”及不让参加“end of the day sweep”。",
+      "missingDetails": [
+        "这是重复习惯回述，不是完整记下一次清扫。",
+        "没有描述跑过后的垃圾状态或当场对话。"
+      ],
+      "creativeInference": "趣味可来自成人刚聚好的东西被另一套行动目标打散；不能擅自补写孩子故意捣乱。",
+      "limitations": "家长公开自述，未独立证实。",
+      "inventorySourceFile": "source-toddler.json",
+      "ageBucket": "toddler",
+      "interactionClarity": "B",
+      "clarityLabel": "需补现场细节",
+      "timeForm": "家务习惯回顾",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实",
+      "processCompleteness": "需补现场细节；缺项详见记录，不等于事件已获证实。"
+    },
+    {
+      "id": "ZH04",
+      "title": "钓鱼玩着玩着，改成拿鱼去碰磁铁",
+      "ageReported": "作者自报1y2m时制作钓鱼教具；后来改玩法的具体月龄未注明。文章声明主体记录1岁—1岁9个月。",
+      "ageGroup": "1—3岁",
+      "source": {
+        "url": "https://iamjane06.pixnet.net/blog/posts/12217834350",
+        "title": "1-2歲陪玩活動",
+        "platform": "Pixnet／痞客邦家长陪玩日记",
+        "author": "晴晴媽咪",
+        "published": "2017-08-04",
+        "readLevel": "原页正文已实际打开；相关事件段、文章日期与署名已读；非搜索摘要；未播放任何嵌入视频",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "家长在孩子1y2m时自制钓鱼教具。",
+        "babyAction": "作者说孩子第一次就能玩；后来直接拿鱼去吸磁铁。",
+        "adultResponse": "作者以趣味评价记录改玩法，没写当场如何阻止或配合。",
+        "outcome": "玩法由用钓具钓鱼变成用手把鱼送向磁铁；之后怎样未交代。"
+      },
+      "evidenceNote": "“釣魚高手”段先写自制与初次上手，随后另写孩子改变方法、直接拿鱼吸磁铁。不能把后文的“后来”硬定为1y2m同一天。",
+      "processCompleteness": "中等：来由和改玩法有前后关系，现场成人动作及改法后的反应未详。",
+      "missingDetails": [
+        "改变玩法发生于哪一天、精确月龄未注明。",
+        "鱼与磁铁尺寸、绳长、成人即时表情和之后是否恢复钓法未交代。"
+      ],
+      "creativeInference": "可原创成30—45秒动作喜剧：成人安排钓法，幼儿直接移动鱼去接磁铁。喜剧来自两种动作路径的差别，不把幼儿演成存心作弊；若设计成人愣住或加入新玩法，那是新增剧情。",
+      "limitations": [
+        "原文混有活动建议，只有自制、初次上手与后来改法属于这名孩子的自述。",
+        "适用于这篇1—3岁幼儿材料，不能直接移给小月龄有靠坐婴儿。",
+        "只迁移磁吸互动原理，不据原文照片或品牌细节认定道具已适合制作。"
+      ],
+      "inventorySourceFile": "source-zh.json",
+      "ageBucket": "toddler",
+      "interactionClarity": "B",
+      "clarityLabel": "需补现场细节",
+      "timeForm": "跨时段改玩法",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实"
+    },
+    {
+      "id": "ZH05",
+      "title": "睡前固定唱，后来孩子先接尾音再唱整首",
+      "ageReported": "作者明确自报1y7m能接唱尾音，1y8m能独立唱完整首；开始每天唱的具体月龄未注明。",
+      "ageGroup": "1—3岁",
+      "source": {
+        "url": "https://iamjane06.pixnet.net/blog/posts/12217834350",
+        "title": "1-2歲陪玩活動",
+        "platform": "Pixnet／痞客邦家长陪玩日记",
+        "author": "晴晴媽咪",
+        "published": "2017-08-04",
+        "readLevel": "原页正文已实际打开；相关事件段、文章日期与署名已读；非搜索摘要；未播放任何嵌入视频",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "作者每天睡前固定给孩子唱同一首《小星星》，观察回应。",
+        "babyAction": "1y7m时接唱尾音。",
+        "adultResponse": "作者持续记录这个日常唱歌过程；当场怎样回应接唱没有写。",
+        "outcome": "到1y8m，作者记录孩子能独立唱完整首。"
+      },
+      "evidenceNote": "“唱歌、玩樂器”段有第一人称日常安排与两个明确年龄节点。作者自己的“实验证明”结论，不当作本次证实的因果规律。",
+      "processCompleteness": "跨月过程较完整；不是一场30秒内从不会唱到会唱的现场，缺少即时亲子回应。",
+      "missingDetails": [
+        "没有交代第一次接尾音时具体是哪一句。",
+        "家长是否暂停等待、鼓掌或接唱未交代。"
+      ],
+      "creativeInference": "可只迁移家长唱一小句、幼儿接一个尾音的30—60秒互动，具体等候与对看需原创。若表现1y7m到1y8m变化，需要明确跨时段剪辑，不能压成同场突然学完整首；也不能让婴儿角色说唱完整话。",
+      "limitations": [
+        "与ZH04同一作者同一URL，不是另一家庭。",
+        "长期重复与学会唱歌的关联是作者观察，未控制其他听歌经历，不作发展或训练保证。"
+      ],
+      "inventorySourceFile": "source-zh.json",
+      "ageBucket": "toddler",
+      "interactionClarity": "B",
+      "clarityLabel": "需补现场细节",
+      "timeForm": "跨月成长",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实"
+    },
+    {
+      "id": "ZH06",
+      "title": "七片拼图丢下后，几天后拿成品来要掌声",
+      "ageReported": "标题自报满两岁七个月，正文称“这个月”；没有另列事件日龄。",
+      "ageGroup": "1—3岁",
+      "source": {
+        "url": "https://fishliao2005.pixnet.net/blog/posts/30405261",
+        "title": "滿兩歲七個月‧跟媽媽在家",
+        "platform": "Pixnet／痞客邦个人育儿博客",
+        "author": "fishliao2005（博客名MISS DAPHNE）",
+        "published": "2012-02-22",
+        "readLevel": "原页正文已实际打开；相关事件段、文章日期与署名已读；非搜索摘要；未播放任何嵌入视频",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "孩子重新注意到家里早已买来的七片拼图。",
+        "babyAction": "受挫后丢拼图片，说不玩了。",
+        "adultResponse": "妈妈捡回慢慢教，家人在他完成时拍手鼓励。",
+        "outcome": "过几天孩子能独立完成，还会拿成品来要掌声。"
+      },
+      "evidenceNote": "开头家庭日记段完整记下丢片、成人捡回陪做、成功时鼓掌及几天后的变化；这里没有把后面转载的教养文章算作亲历。",
+      "processCompleteness": "较完整的跨日动作与回应链；“几天”不可改成一次尝试或几秒。",
+      "missingDetails": [
+        "拼图图案、各块形状、具体帮助步骤未交代。",
+        "最后拿成品来时家人是否再次鼓掌未交代。"
+      ],
+      "creativeInference": "可创作一条45—60秒幼儿片，选“拿完成品来要掌声”作为单次小动作，早期失败只用明确时间省略处理；若要演全学习过程需保留跨日提示。该年龄的言语、拼图与行动能力不能套给婴儿。",
+      "limitations": [
+        "作者公开自述，未独立证实，实际用了几次尝试不明。",
+        "原页后半另有转载教养内容；本例只取前面的家庭日记，不把其余方法并入这次经历。"
+      ],
+      "inventorySourceFile": "source-zh.json",
+      "ageBucket": "toddler",
+      "interactionClarity": "A",
+      "clarityLabel": "互动链较清楚",
+      "timeForm": "跨几日变化",
+      "truthStatus": "已读第一人称公开自述；事件未独立证实"
+    }
+  ],
+  "excluded": [
+    {
+      "inventorySourceFile": "source-infant.json",
+      "url": "https://www.mominzurich.com/my-five-month-old/",
+      "title": "My Five Month Old",
+      "readLevel": "search_snippet_only_after_failed_open",
+      "reason": "搜索摘要提到五个月宝宝抓咖啡杯，但实际open返回404，未读到原文，不能作为全文核读案例。"
+    },
+    {
+      "inventorySourceFile": "source-infant.json",
+      "url": "https://www.peanut-app.io/posts/4hmkk-auo/mamas",
+      "title": "Mamas",
+      "readLevel": "search_snippet_only_after_javascript_placeholder",
+      "reason": "摘要提到九个月宝宝反复扔玩具，但open仅得到需启用JavaScript的占位页，未读具体原帖过程。"
+    },
+    {
+      "inventorySourceFile": "source-infant.json",
+      "url": "https://www.reddit.com/r/NewParents/comments/1p693au/my_baby_made_me_laugh_so_hard_this_morning_for_no/",
+      "title": "My baby made me laugh so hard this morning for no reason（搜索标题）",
+      "readLevel": "search_snippet_only_original_removed",
+      "reason": "搜索摘要含四个月宝宝打喷嚏吓到自己的完整感趣段，但实际原页仅显示Removed by moderator，正文已不可读，不收入。"
+    },
+    {
+      "inventorySourceFile": "source-infant.json",
+      "url": "https://www.reddit.com/r/NewParents/comments/1bavtym/my_baby_giggled_for_the_first_time_today/",
+      "title": "My baby giggled for the first time today",
+      "readLevel": "opened_original_post",
+      "reason": "已实际读到四个半月、洗澡前爸爸躲猫猫与首次笑；正文非常简短，没有展开成人当时具体回应和过程，已有更完整躲猫猫案例，本批未收入。"
+    },
+    {
+      "inventorySourceFile": "source-infant.json",
+      "url": "https://www.netmums.com/coffeehouse/drop-clinic-984/weaning-560/703139-blowing-raspberries-whilst-eating.html",
+      "title": "Blowing raspberries whilst eating??",
+      "readLevel": "opened_original_post",
+      "reason": "已读原帖自报五个半月及新出现的进食吹口水声，但作者主要求助，成人实际应对和后续结果未展开；为避免靠建议补成事件，本批不收入。"
+    },
+    {
+      "inventorySourceFile": "source-zh.json",
+      "url": "https://alwa1919.pixnet.net/blog/posts/7112851800",
+      "title": "【寶貝成長日誌】9M+元泰躲貓貓",
+      "readLevel": "原页正文已打开；看到9M+标题、日期2015-11-23及作者艾蛙Aiwa，但未播放YouTube嵌入",
+      "reason": "正文只有学会新技能、亲子躲猫猫带来喜悦，没有展开谁先藏、如何显露和宝宝回应；不能用未播放视频补过程。"
+    },
+    {
+      "inventorySourceFile": "source-zh.json",
+      "url": "https://forum.babyhome.com.tw/topic/200106",
+      "title": "八个月小尾（搜索候选，未核正文）",
+      "readLevel": "实际open返回403 Forbidden，仅有搜索线索",
+      "reason": "原帖未读到，不进入已读案例，作者、日期、过程均未核。"
+    },
+    {
+      "inventorySourceFile": "source-zh.json",
+      "url": "https://www.mamibuy.com.tw/talk/article/40477/%E5%92%8C%E5%AF%B6%E5%AF%B6%E8%BA%B2%E8%B2%93%E8%B2%93%E6%8E%A2%E7%B4%A2%E7%92%B0%E5%A2%83%E5%8F%88%E6%B6%88%E8%80%97%E9%AB%94%E5%8A%9B",
+      "title": "和寶寶躲貓貓，探索環境又消耗體力｜艾莉",
+      "readLevel": "实际open返回403 Forbidden，搜索页显示可能衍生自作者Pixnet",
+      "reason": "没读到原页具体段落，也未追认其原始博客，故只留候选。"
+    },
+    {
+      "inventorySourceFile": "source-zh.json",
+      "url": "https://annieplaza.pixnet.net/blog/posts/27232332",
+      "title": "弟弟11個月了~",
+      "readLevel": "原页正文、作者annieplaza及2010-10-05日期已读",
+      "reason": "有拆积木举给妈妈看、歪头等行为片段，但本批相关片段未写清成人后续回应与结果；不补为完整互动。"
+    },
+    {
+      "inventorySourceFile": "source-zh.json",
+      "url": "https://inonat.pixnet.net/blog/posts/5065689168",
+      "title": "【育兒心得】10M~1Y6M寶寶小孩愛亂丟東西怎麼辦教養方式心得",
+      "readLevel": "原页正文已打开，相关段落实际阅读",
+      "reason": "主体为教养解释、建议和个人做法，没有选出一场明确家庭事件的完整前后过程；标题年龄也跨两个年龄段，不拿泛化描述充案例。"
+    },
+    {
+      "inventorySourceFile": "source-zh.json",
+      "url": "https://patrica.pixnet.net/blog/posts/21428010",
+      "title": "[辰辰] 六個月達成記錄",
+      "readLevel": "原页正文已打开，作者自报6M及事件列表实际阅读",
+      "reason": "抓物、啃脚和拉衣等多为成长项目列举，相关短段缺成人回应与结果；不把列表拼成一场亲子事件。"
+    },
+    {
+      "inventorySourceFile": "source-zh.json",
+      "url": "https://cookiesisterlo.pixnet.net/blog/posts/9456814787",
+      "title": "【玉兒－體驗】1Y28D新竹竹東小星星親子民宿，溜滑梯民宿處處都是玩具，好貼心好好玩，包棟超棒（甜蜜花園）",
+      "readLevel": "原页可打开并读到部分住宿正文、日期与署名；未在本次可读正文窗口找到搜索摘要中的门帘互动段",
+      "reason": "搜索摘要有爸爸钻入下铺门帘、孩子寻找的过程，但本批不能拿摘要代替原文核读，故不纳入。"
+    },
+    {
+      "inventorySourceFile": "source-zh.json",
+      "url": "https://k272821.pixnet.net/blog/posts/13347390372",
+      "title": "[開箱] 育兒兩三物－寶物廢物很難說",
+      "readLevel": "原页正文已打开，播放玩具音乐惊醒孩子及成人关机段已读",
+      "reason": "有具体过程，但首次播放事件的准确月龄未单独注明；物品心得兼有本批不拟迁移的睡眠摆放做法，有限批次优先收入年龄更明确的生活互动。保留为候选，不据此声称该经历不存在。"
+    },
+    {
+      "inventorySourceFile": "source-toddler.json",
+      "url": "https://www.momtastic.com/news/814729-toddler-masters-hide-and-seek-video/",
+      "title": "Video: Toddler Masters Hide & Seek in the Most Unexpected Way",
+      "readLevel": "仅索引摘要，未核读家长原始亲述",
+      "reason": "媒体转述候选；不能把报道索引当作家长原文或视频过程核读，未计入cases。"
+    },
+    {
+      "inventorySourceFile": "source-toddler.json",
+      "url": "https://www.reddit.com/r/toddlers/comments/1klu605/what_funny_things_does_your_kid_do_that_is_both/",
+      "title": "What funny things does your kid do that is both amusing and helpful?",
+      "readLevel": "已打开原帖并读到vijeze的目标评论",
+      "reason": "给家长送早餐的过程较完整，但作者明报女儿3.5岁，超出本批12—36个月范围，不采用。"
+    },
+    {
+      "inventorySourceFile": "source-toddler.json",
+      "url": "https://www.reddit.com/r/toddlers/comments/1rp0utj/pretend_play_at_2_years_old/",
+      "title": "Pretend play at 2 years old",
+      "readLevel": "已打开原帖并读到destria自报20个月的目标评论",
+      "reason": "主要罗列给玩偶喂食、盖被等日常游戏；未交代一回具体事件中的成人回应和结果，本批优先采用过程更完整的案例。"
+    },
+    {
+      "inventorySourceFile": "source-supplement.json",
+      "url": "https://mypaper.pchome.com.tw/0824su8798bb/post/1326515549",
+      "reason": "原页403，只得到搜索摘要，不列已核读经历"
+    },
+    {
+      "inventorySourceFile": "source-supplement.json",
+      "url": "https://mamabaobao.blogspot.com/2010/09/",
+      "reason": "访问被重定向至访问限制页面，未读原文，不重试绕过"
+    },
+    {
+      "inventorySourceFile": "source-supplement.json",
+      "url": "https://feitravel.tw/p-5064701613/",
+      "reason": "已读页面，但标题2Y8M与日条1Y8M标注冲突，未选入本批年龄清楚案例"
+    },
+    {
+      "inventorySourceFile": "source-supplement.json",
+      "url": "https://changchen.me/blog/20260308/paipai_nine_months/",
+      "reason": "已读9个月体验课想拿布书的片段，但未交代真正拿到与成人即时回应，仅作线索，不把“想拿”改成“已经抢走”"
+    },
+    {
+      "inventorySourceFile": "source-supplement.json",
+      "url": "https://changchen.me/blog/20260324/paipai_ten_months/",
+      "reason": "已读用餐后爬去拾地上食物的自述，本批未选；同文育儿评价和医疗信息不用于科普结论"
+    },
+    {
+      "inventorySourceFile": "source-supplement.json",
+      "url": "https://www.miloandbehold.com/misty/2016-04-15-staying-home/",
+      "reason": "原文已读，母亲明确说孩子快到大人移物之前就抓到；但没有具体物件、单次动作与结尾，单列快抓线索，未拼成完整经历。"
+    }
+  ]
+}

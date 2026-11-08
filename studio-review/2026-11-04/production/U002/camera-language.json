@@ -1,0 +1,385 @@
+{
+  "scope": "narrative_video",
+  "shotIds": [
+    "U002-01",
+    "U002-02",
+    "U002-03",
+    "U002-04",
+    "U002-05",
+    "U002-06"
+  ],
+  "decisions": [
+    {
+      "shotId": "U002-01",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "年份改写是碰壁而非身份确证",
+        "audiencePayoff": "年份改写是碰壁而非身份确证",
+        "trigger": "年份改写是碰壁而非身份确证",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "focusTargetEnd": "窗口外稍后方小满面部",
+        "exitMatch": "表在窗口内待核"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "玻璃内侧侧前",
+        "height": "柜台上方",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "年份改写是碰壁而非身份确证",
+        "focusTarget": "递物口近处申请表",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "窗口人物连线同一端，内外世界位置不反转",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "近处申请表与递物口",
+        "midground": "周砚与外侧小满",
+        "background": "A083号码屏",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "年份改写是碰壁而非身份确证"
+      },
+      "temporal": {
+        "durationSeconds": 18,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "年份改写是碰壁而非身份确证",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：玻璃内侧侧前",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：玻璃内侧侧前",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U002-01-F1",
+            "timeSeconds": 0,
+            "description": "递物口近处申请表"
+          },
+          {
+            "eventId": "U002-01-F2",
+            "timeSeconds": 6,
+            "description": "窗口外稍后方小满面部"
+          }
+        ],
+        "edit": {
+          "entry": "白日同一窗口；周砚内、小满外，正反侧仅在玻璃轴线同一端换位，递物口始终在小满右前方。窗下玻璃/透明区让身侧桌腿及尾巴可见，绝不穿过实墙。白日大厅散射光。手机与新笔在06取出前位于包内，已取物不因每镜开头的道具清单重新回包。",
+          "exit": "表在窗口内待核",
+          "preferredTransition": "从本片真实初态开始，建立空间后继续",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；大厅低底噪，纸/笔帽轻响；电话另一端无可辨对白，06下一号用无具体第三人声提示音/数字呈现"
+        }
+      }
+    },
+    {
+      "shotId": "U002-02",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "笔帽撬断与照片出盒",
+        "audiencePayoff": "笔帽撬断与照片出盒",
+        "trigger": "笔帽撬断与照片出盒",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "断帽在外侧，照片在小满手"
+      },
+      "camera": {
+        "shotScale": "中近景",
+        "position": "外侧桌端",
+        "height": "台面略上方",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "笔帽撬断与照片出盒",
+        "focusTarget": "旧笔帽与铁盒/照片的工作区域",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "窗口人物连线同一端，内外世界位置不反转",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "帽/旧笔位",
+        "midground": "小满双手与铁盒照片",
+        "background": "玻璃内周砚只保留必要轮廓",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "笔帽撬断与照片出盒"
+      },
+      "temporal": {
+        "durationSeconds": 20,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "笔帽撬断与照片出盒",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：外侧桌端",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：外侧桌端",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U002-02-F1",
+            "timeSeconds": 0,
+            "description": "旧笔帽与铁盒/照片的工作区域"
+          }
+        ],
+        "edit": {
+          "entry": "表在窗口内待核",
+          "exit": "断帽在外侧，照片在小满手",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；大厅低底噪，纸/笔帽轻响；电话另一端无可辨对白，06下一号用无具体第三人声提示音/数字呈现"
+        }
+      }
+    },
+    {
+      "shotId": "U002-03",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "尾巴意外露出但照片仍不足以核验",
+        "audiencePayoff": "尾巴意外露出但照片仍不足以核验",
+        "trigger": "尾巴意外露出但照片仍不足以核验",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "focusTargetEnd": "透明侧板后小满身侧尾巴",
+        "exitMatch": "照片已推回小满，铁盒仍敞开在外侧台面，包口已理好"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "柜台内侧略低侧斜",
+        "height": "柜台面略下方但非脚踝",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "尾巴意外露出但照片仍不足以核验",
+        "focusTarget": "递物口近处照片",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "窗口人物连线同一端，内外世界位置不反转",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "照片与递物口",
+        "midground": "小满/透明侧板后的红褐尾",
+        "background": "大厅墙面无其他可辨人",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "尾巴意外露出但照片仍不足以核验"
+      },
+      "temporal": {
+        "durationSeconds": 28,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "尾巴意外露出但照片仍不足以核验",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：柜台内侧略低侧斜",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：柜台内侧略低侧斜",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U002-03-F1",
+            "timeSeconds": 0,
+            "description": "递物口近处照片"
+          },
+          {
+            "eventId": "U002-03-F2",
+            "timeSeconds": 12,
+            "description": "透明侧板后小满身侧尾巴"
+          }
+        ],
+        "edit": {
+          "entry": "断帽在外侧，照片在小满手",
+          "exit": "照片已推回小满，铁盒仍敞开在外侧台面，包口已理好",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；大厅低底噪，纸/笔帽轻响；电话另一端无可辨对白，06下一号用无具体第三人声提示音/数字呈现"
+        }
+      }
+    },
+    {
+      "shotId": "U002-04",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "拒绝造假后转向可核经历",
+        "audiencePayoff": "拒绝造假后转向可核经历",
+        "trigger": "拒绝造假后转向可核经历",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "旧笔放桌，双方转向记录经历"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "玻璃外侧桌端",
+        "height": "登记表略上方",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "拒绝造假后转向可核经历",
+        "focusTarget": "笔与双方回应的同一工作区域",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "窗口人物连线同一端，内外世界位置不反转",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "表/旧笔",
+        "midground": "周砚与小满",
+        "background": "窗口玻璃、号码屏或透明侧板后的大厅，不增加排队人物",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "拒绝造假后转向可核经历"
+      },
+      "temporal": {
+        "durationSeconds": 24,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "拒绝造假后转向可核经历",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：玻璃外侧桌端",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：玻璃外侧桌端",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U002-04-F1",
+            "timeSeconds": 0,
+            "description": "笔与双方回应的同一工作区域"
+          }
+        ],
+        "edit": {
+          "entry": "照片退回小满，尾已藏",
+          "exit": "旧笔放桌，双方转向记录经历",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；大厅低底噪，纸/笔帽轻响；电话另一端无可辨对白，06下一号用无具体第三人声提示音/数字呈现"
+        }
+      }
+    },
+    {
+      "shotId": "U002-05",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "咨询信息只保证下一步可问",
+        "audiencePayoff": "咨询信息只保证下一步可问",
+        "trigger": "咨询信息只保证下一步可问",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "便签在小满手，咨询结果未知"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "玻璃内侧侧前",
+        "height": "柜台上方",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "咨询信息只保证下一步可问",
+        "focusTarget": "记录与递出便签的工作面",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "窗口人物连线同一端，内外世界位置不反转",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "内侧电话/便签、递物口",
+        "midground": "周砚与小满",
+        "background": "窗口玻璃、号码屏或透明侧板后的大厅，不增加排队人物",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "咨询信息只保证下一步可问"
+      },
+      "temporal": {
+        "durationSeconds": 28,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "咨询信息只保证下一步可问",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：玻璃内侧侧前",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：玻璃内侧侧前",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U002-05-F1",
+            "timeSeconds": 0,
+            "description": "记录与递出便签的工作面"
+          }
+        ],
+        "edit": {
+          "entry": "旧笔放桌，双方转向记录经历",
+          "exit": "便签在小满手，咨询结果未知",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；大厅低底噪，纸/笔帽轻响；电话另一端无可辨对白，06下一号用无具体第三人声提示音/数字呈现"
+        }
+      }
+    },
+    {
+      "shotId": "U002-06",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "赔笔与主动联系熟人结束对峙",
+        "audiencePayoff": "赔笔与主动联系熟人结束对峙",
+        "trigger": "赔笔与主动联系熟人结束对峙",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "新笔在周砚，照片回盒并合盖，手机便签归小满，窗口已让开"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "玻璃外侧桌端",
+        "height": "台面物件略上方",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "赔笔与主动联系熟人结束对峙",
+        "focusTarget": "新笔与便签/手机交接工作面",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "窗口人物连线同一端，内外世界位置不反转",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "新笔、手机/便签、合盖铁盒",
+        "midground": "周砚与小满",
+        "background": "窗口玻璃、号码屏或透明侧板后的大厅，不增加排队人物",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "赔笔与主动联系熟人结束对峙"
+      },
+      "temporal": {
+        "durationSeconds": 32,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "赔笔与主动联系熟人结束对峙",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：玻璃外侧桌端",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：玻璃外侧桌端",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U002-06-F1",
+            "timeSeconds": 0,
+            "description": "新笔与便签/手机交接工作面"
+          }
+        ],
+        "edit": {
+          "entry": "便签在小满手，咨询结果未知",
+          "exit": "新笔在周砚，照片回盒并合盖，手机便签归小满，窗口已让开",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；大厅低底噪，纸/笔帽轻响；电话另一端无可辨对白，06下一号用无具体第三人声提示音/数字呈现"
+        }
+      }
+    }
+  ]
+}

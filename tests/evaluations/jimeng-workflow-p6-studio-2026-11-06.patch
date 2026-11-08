@@ -1,0 +1,1185 @@
+diff --git a/components/workspace/business-spec-form.tsx b/components/workspace/business-spec-form.tsx
+index 6877afc..0e85f2f 100644
+--- a/components/workspace/business-spec-form.tsx
++++ b/components/workspace/business-spec-form.tsx
+@@ -5,9 +5,10 @@ import { Input } from '@/components/ui/input';
+ import { Textarea } from '@/components/ui/textarea';
+ import { NativeSelect } from '@/components/ui/native-select';
+ import type { ItemKind, StoryItem } from './model';
++import {moveStoryReference,sourceParagraphs} from './episode-shot-ux.mjs';
+ 
+ type Value = Record<string, unknown>;
+-type Field = {key:string;label:string;type?:'number'|'boolean'|'reference'|'references'|'list';kinds?:ItemKind[];options?:Record<string,string>;fields?:Field[];initial?:()=>Value;min?:number;max?:number};
++type Field = {key:string;label:string;type?:'number'|'boolean'|'reference'|'references'|'orderedReferences'|'numbers'|'list';kinds?:ItemKind[];options?:Record<string,string>;fields?:Field[];initial?:()=>Value;min?:number;max?:number};
+ const reference=(key:string,label:string,kinds:ItemKind[],multiple=false):Field=>({key,label,kinds,type:multiple?'references':'reference'});
+ const number=(key:string,label:string,min:number,max:number):Field=>({key,label,type:'number',min,max});
+ const voice:Field[]=['lexicon','sentence_length','address','pauses','avoidance'].map((key,i)=>({key,label:['常用词语','句子长短','称呼习惯','停顿习惯','避免的表达'][i]}));
+@@ -20,24 +21,44 @@ const schema:Partial<Record<ItemKind,Field[]>>={
+  chapter:[reference('outline_id','依据大纲',['outline']),reference('simulation_id','参考推演',['simulation'])],
+  adaptation:[reference('chapter_id','原作章节',['chapter']),{key:'scenes',label:'场次安排',type:'list',max:8,fields:[{key:'title',label:'场次名称'},{key:'location',label:'地点'},{key:'story_time',label:'故事时间'},cast,{key:'paragraphs',label:'原文处理',type:'list',max:120,fields:mapping,initial:()=>({paragraph:null,action:'add',render_as:'action',reason:''})}]}],
+  scene:[reference('adaptation_id','依据改编方案',['adaptation']),number('scene_index','场次序号',1,8),cast,{key:'screenplay',label:'按剧本格式识别说话人',type:'boolean'}],
++ episode:[number('number','分集编号',1,Number.MAX_SAFE_INTEGER),{key:'goal',label:'本集目标'},{key:'entry_state',label:'入集状态'},{key:'exit_state',label:'离集状态'},reference('previous_episode_id','承接前集',['episode']),{key:'scene_ids',label:'场次顺序',type:'orderedReferences',kinds:['scene']}],
++ shot:[reference('episode_id','所属分集',['episode']),reference('scene_id','所属场次',['scene']),number('number','镜头编号',1,Number.MAX_SAFE_INTEGER),number('duration_ms','时长（毫秒，可留空）',1,Number.MAX_SAFE_INTEGER),cast,{key:'framing',label:'景别与构图'},{key:'camera',label:'机位与运动'},{key:'action',label:'画面与动作'},{key:'dialogue',label:'对白与声音'},{key:'source_paragraphs',label:'依据场次正文段落',type:'numbers'}],
+  review_policy:[{key:'enabled',label:'启用本作品审阅规则',type:'boolean'},{key:'rules',label:'审阅规则',type:'list',max:50,fields:rules,initial:()=>({id:crypto.randomUUID(),title:'',scope:'all',level:'context',instruction:'',exceptions:'',source:''})}],
+  review:[reference('policy_id','使用规则',['review_policy']),reference('target_id','审阅内容',['chapter','scene']),{key:'issues',label:'审阅问题',type:'list',max:50,fields:[{key:'rule_id',label:'关联规则',type:'reference'},{key:'unit_type',label:'定位方式',options:{paragraph:'段落',block:'剧本节拍'}},number('unit','位置',1,100000),reference('speaker_id','说话人',['instance']),reference('listener_ids','听众',['instance'],true),{key:'scene_goal',label:'场景目标'},{key:'knowledge_boundary',label:'人物认知边界'},{key:'mechanism',label:'疑似问题'},{key:'evidence',label:'依据与上下文'},{key:'exception',label:'例外或误报说明'},{key:'confidence',label:'判断把握',options:{low:'较低',medium:'一般',high:'较高'}},{key:'conclusion',label:'结论',options:{confirmed:'确有问题',context:'需结合语境',not_applicable:'保留原文',insufficient_information:'信息不足'}}]}]
+ };
+ // Touch only the field the user edited. Exact source pins and future metadata survive.
+ export function updateBusinessSpec(value:Value,key:string,next:unknown):Value {const out={...value};if(next===undefined)delete out[key];else out[key]=next;return out;}
+ export function updateBusinessRows(value:unknown,index:number,next:Value|null,reindex=false):Value[]{const rows=Array.isArray(value)?value as Value[]:[];const out=next===null?rows.filter((_,i)=>i!==index):rows.map((row,i)=>i===index?next:row);return reindex?out.map((row,i)=>({...row,index:i+1})):out;}
+-export default function BusinessSpecForm({kind,value,items,onChange}:{kind:ItemKind;value?:Value;items:StoryItem[];onChange(value:Value):void}){
++export default function BusinessSpecForm({kind,value,items,referenceItems,onChange}:{kind:ItemKind;value?:Value;items:StoryItem[];referenceItems?:StoryItem[];onChange(value:Value):void}){
+  const spec=value??{};
++ const planning=kind==='episode'||kind==='shot',available=planning?(referenceItems??[]):items;
++ const selectedEpisode=available.find(item=>item.kind==='episode'&&item.id===spec.episode_id);
++ const selectedScene=available.find(item=>item.kind==='scene'&&item.id===spec.scene_id);
++ const allowed=(field:Field,item:StoryItem)=>{
++  if(!field.kinds?.includes(item.kind)||item.archived||planning&&item.status!=='accepted')return false;
++  if(kind==='episode'&&field.key==='previous_episode_id')return typeof spec.number==='number'&&typeof item.content.spec?.number==='number'&&item.content.spec.number<spec.number;
++  if(kind==='shot'&&field.key==='scene_id')return Array.isArray(selectedEpisode?.content.spec?.scene_ids)&&selectedEpisode.content.spec.scene_ids.includes(item.id);
++  if(kind==='shot'&&field.key==='cast')return Array.isArray(selectedScene?.content.spec?.cast)&&selectedScene.content.spec.cast.includes(item.id);
++  return true;
++ };
+  const render=(fields:Field[],current:Value,change:(next:Value)=>void,prefix:string)=>fields.map(field=>{
+   const v=current[field.key],key=prefix+field.key;
+-  const set=(next:unknown)=>{let result=updateBusinessSpec(current,field.key,next);if(field.key==='action'){if(next==='add')result={...result,paragraph:null};if(next==='omit')result={...result,render_as:'omit'};else if(result.render_as==='omit')result={...result,render_as:'action'};}change(result);};
++  const set=(next:unknown)=>{let result=updateBusinessSpec(current,field.key,next);if(kind==='adaptation'&&field.key==='action'){if(next==='add')result={...result,paragraph:null};if(next==='omit')result={...result,render_as:'omit'};else if(result.render_as==='omit')result={...result,render_as:'action'};}change(result);};
+   if(field.type==='list'){
+    const rows=Array.isArray(v)?v as Value[]:[];
+    return <section className="cw-inspector-section" key={key}><h3>{field.label}</h3>{rows.map((row,i)=><fieldset key={i}><legend>{field.label} {i+1}</legend>{render(field.fields??[],row,next=>set(updateBusinessRows(rows,i,next,field.key==='scenes')),key+i+'.')}<Button type="button" variant="ghost" onClick={()=>set(updateBusinessRows(rows,i,null,field.key==='scenes'))}>移除此项</Button></fieldset>)}<Button type="button" variant="outline" disabled={rows.length>=(field.max??50)} onClick={()=>set([...rows,{...(field.initial?.()??{}),...(field.key==='scenes'?{index:rows.length+1}:{})}])}>添加{field.label}</Button></section>;
+   }
++  if(field.type==='orderedReferences'){
++   const selected=Array.isArray(v)?v.filter((id):id is string=>typeof id==='string'):[],options=available.filter(item=>allowed(field,item));
++   return <section className="cw-inspector-section" key={key}><h3>{field.label}</h3><ol>{selected.map((id,index)=><li key={id+':'+index}><p>{index+1} · {available.find(item=>item.id===id)?.content.title||'原关联暂不可用（保留）'}</p><div className="cw-writing-primary"><Button type="button" variant="ghost" disabled={index===0} aria-label={`上移场次 ${index+1}`} onClick={()=>set(moveStoryReference(selected,index,-1))}>上移</Button><Button type="button" variant="ghost" disabled={index===selected.length-1} aria-label={`下移场次 ${index+1}`} onClick={()=>set(moveStoryReference(selected,index,1))}>下移</Button><Button type="button" variant="ghost" aria-label={`移除场次 ${index+1}`} onClick={()=>set(selected.filter((_,i)=>i!==index))}>移除</Button></div></li>)}</ol><label>添加已采纳场次<NativeSelect value="" onChange={e=>{if(e.target.value)set([...selected,e.target.value]);}}><option value="">选择场次</option>{options.filter(item=>!selected.includes(item.id)).map(item=><option key={item.id} value={item.id}>{item.content.title} · v{item.version}</option>)}</NativeSelect></label></section>;
++  }
++  if(field.type==='numbers'){
++   const selected=Array.isArray(v)?v:[],parts=sourceParagraphs(selectedScene?.content.body);
++   return <section className="cw-inspector-section" key={key}><h3>{field.label}</h3>{selected.map((value,index)=><div key={index}><label>段落 {index+1}<Input type="number" step="1" min="1" value={typeof value==='number'?value:''} onChange={e=>set(selected.map((old,i)=>i===index?(e.target.value===''?null:Number(e.target.value)):old))}/></label><Button type="button" variant="ghost" aria-label={`移除正文段落 ${index+1}`} onClick={()=>set(selected.filter((_,i)=>i!==index))}>移除此段</Button></div>)}<Button type="button" variant="outline" onClick={()=>set([...selected,null])}>添加正文段落</Button>{selectedScene&&<details><summary>查看所选场次当前已采纳正文</summary><p className="cw-small-copy">v{selectedScene.version}；旧候选准确来源见概览。</p><ol>{parts.map((part,index)=><li key={index}><strong>第 {index+1} 段</strong><MarkdownContent content={part}/></li>)}</ol>{!parts.length&&<p>场次正文尚无可定位段落。</p>}</details>}</section>;
++  }
+   if(field.type==='reference'||field.type==='references'){
+    const policyRules=items.find(x=>x.id===spec.policy_id)?.content.spec?.rules;
+-   const options=field.key==='rule_id'?(Array.isArray(policyRules)?policyRules as Value[]:[]).map(x=>({id:String(x.id),label:String(x.title||'未命名规则')})):items.filter(x=>field.kinds?.includes(x.kind)&&!x.archived).map(x=>({id:x.id,label:x.content.title||'未命名内容'}));
++   const options=field.key==='rule_id'?(Array.isArray(policyRules)?policyRules as Value[]:[]).map(x=>({id:String(x.id),label:String(x.title||'未命名规则')})):available.filter(x=>allowed(field,x)).map(x=>({id:x.id,label:(x.content.title||'未命名内容')+(planning?` · v${x.version}`:'')}));
+    const multiple=field.type==='references',selected=multiple?(Array.isArray(v)?v.filter(x=>typeof x==='string') as string[]:[]):typeof v==='string'?v:'';
+    const missing=(Array.isArray(selected)?selected:[selected]).filter(id=>id&&!options.some(x=>x.id===id));
+    return <label key={key}>{field.label}<NativeSelect multiple={multiple} value={selected} onChange={e=>set(multiple?Array.from(e.target.selectedOptions,x=>x.value).filter(Boolean):e.target.value||undefined)}><option value="">请选择已保存内容</option>{missing.map(id=><option key={id} value={id}>原关联暂不可用（保留）</option>)}{options.map(x=><option key={x.id} value={x.id}>{x.label}</option>)}</NativeSelect></label>;
+diff --git a/components/workspace/episode-shot-plan.tsx b/components/workspace/episode-shot-plan.tsx
+new file mode 100644
+index 0000000..5a7dc39
+--- /dev/null
++++ b/components/workspace/episode-shot-plan.tsx
+@@ -0,0 +1,18 @@
++'use client';
++import {Button} from '@/components/ui/button';
++import {episodeShotPlan} from './episode-shot-ux.mjs';
++import {statusLabels,type StoryItem} from './model';
++
++interface Props {items:StoryItem[];candidates:boolean;onCandidates():void;onSelect(id:string):void}
++/** Text planning records use the existing guarded inspector, never a media timeline. */
++export default function EpisodeShotPlan({items,candidates,onCandidates,onSelect}:Props){
++ const plan=episodeShotPlan(items);
++ const open=(item:StoryItem,prefix:string)=><Button type="button" variant="record" size="record" className="cw-document-open" onClick={()=>onSelect(item.id)}><span>{prefix}{item.content.title}<small>{statusLabels[item.status]||'状态未记录'} · v{item.version}{item.needs_review?.length?' · 来源待复核':''}</small></span></Button>;
++ const shot=(item:StoryItem)=>open(item,`镜 ${String(item.content.spec?.number??'未编号')} · `);
++ return <section aria-label="分集场次与镜头计划"><header className="cw-module-toolbar"><h2>分集与镜头</h2><Button type="button" variant="ghost" aria-pressed={candidates} onClick={onCandidates}>{candidates?'隐藏未采纳候选':'显示未采纳候选'}</Button></header>
++ {!plan.groups.length&&!plan.scenes.length&&!plan.shots.length&&<p>尚无结构记录。可先保存场次，再编排分集与镜头计划。</p>}
++ {plan.groups.map(group=><section className="cw-inspector-section" key={group.episode.id}>{open(group.episode,`第 ${String(group.episode.content.spec?.number??'未编号')} 集 · `)}{group.scenes.length?<ol>{group.scenes.map((entry,index)=><li key={entry.id}>{entry.scene?open(entry.scene,`场 ${index+1} · `):<p>场 {index+1} · 原关联未在当前快照展开</p>}{entry.shots.length?<ul>{entry.shots.map(item=><li key={item.id}>{shot(item)}</li>)}</ul>:<p className="cw-small-copy">尚无此场次的镜头计划。</p>}</li>)}</ol>:<p className="cw-small-copy">尚未编排场次。</p>}</section>)}
++ {plan.scenes.length>0&&<section className="cw-inspector-section"><h3>未编入已显示分集的场次</h3>{plan.scenes.map(item=><div key={item.id}>{open(item,'场次 · ')}</div>)}</section>}
++ {plan.shots.length>0&&<section className="cw-inspector-section"><h3>所属结构未在当前快照展开的镜头</h3>{plan.shots.map(item=><div key={item.id}>{shot(item)}</div>)}</section>}
++ </section>;
++}
+diff --git a/components/workspace/episode-shot-ux.d.mts b/components/workspace/episode-shot-ux.d.mts
+new file mode 100644
+index 0000000..be5812a
+--- /dev/null
++++ b/components/workspace/episode-shot-ux.d.mts
+@@ -0,0 +1,6 @@
++import type {StoryContent,StoryItem} from './model';
++export interface EpisodeGroup {episode:StoryItem;scenes:{id:string;scene:StoryItem|null;shots:StoryItem[]}[]}
++export function episodeShotPlan(items:StoryItem[]):{groups:EpisodeGroup[];scenes:StoryItem[];shots:StoryItem[]};
++export function moveStoryReference(value:unknown,index:number,direction:number):string[];
++export function sourceParagraphs(body:unknown):string[];
++export function resetPlanningPins(kind:string,content:StoryContent,original?:Partial<StoryContent>):StoryContent;
+diff --git a/components/workspace/episode-shot-ux.mjs b/components/workspace/episode-shot-ux.mjs
+new file mode 100644
+index 0000000..3e6b921
+--- /dev/null
++++ b/components/workspace/episode-shot-ux.mjs
+@@ -0,0 +1,37 @@
++const ids = value => Array.isArray(value) ? value.filter(id => typeof id === 'string' && id) : [];
++const order = (a, b) => (a.content?.spec?.number ?? Infinity) - (b.content?.spec?.number ?? Infinity) || a.id.localeCompare(b.id);
++
++/** Reading order is explicit metadata; no text parsing or membership inference. */
++export function episodeShotPlan(items) {
++  const active = items.filter(item => !item.archived);
++  const byId = new Map(active.map(item => [item.id, item]));
++  const episodes = active.filter(item => item.kind === 'episode').sort(order);
++  const shots = active.filter(item => item.kind === 'shot').sort(order);
++  const placedScenes = new Set(), placedShots = new Set();
++  const groups = episodes.map(episode => ({ episode, scenes: ids(episode.content.spec?.scene_ids).map(id => {
++    const item = byId.get(id), scene = item?.kind === 'scene' ? item : null;
++    if (scene) placedScenes.add(id);
++    const children = shots.filter(shot => shot.content.spec?.episode_id === episode.id && shot.content.spec?.scene_id === id);
++    children.forEach(shot => placedShots.add(shot.id));
++    return { id, scene, shots: children };
++  }) }));
++  return { groups, scenes: active.filter(item => item.kind === 'scene' && !placedScenes.has(item.id)).sort((a, b) => (a.content.narrative_order ?? a.content.story_order ?? Infinity) - (b.content.narrative_order ?? b.content.story_order ?? Infinity) || a.id.localeCompare(b.id)), shots: shots.filter(shot => !placedShots.has(shot.id)) };
++}
++
++export function moveStoryReference(value, index, direction) {
++  const result = ids(value), next = index + direction;
++  if (!Number.isInteger(index) || ![-1, 1].includes(direction) || index < 0 || index >= result.length || next < 0 || next >= result.length) return result;
++  [result[index], result[next]] = [result[next], result[index]];
++  return result;
++}
++
++/** Matches the story service's blank-line paragraph numbering. */
++export const sourceParagraphs = body => String(body || '').split(/\n\s*\n/).map(part => part.trim()).filter(Boolean);
++
++/** Explicit re-pin only: leave notes, documents and unrelated manual evidence intact. */
++export function resetPlanningPins(kind, content, original = {}) {
++  const specs = [content.spec || {}, original.spec || {}];
++  const structural = new Set(specs.flatMap(spec => kind === 'episode' ? [...ids(spec.scene_ids), spec.previous_episode_id].filter(Boolean) : kind === 'shot' ? [spec.episode_id, spec.scene_id, ...ids(spec.cast)].filter(Boolean) : []));
++  const scenes = new Set(kind === 'shot' ? specs.map(spec => spec.scene_id).filter(Boolean) : []);
++  return { ...content, sources: (content.sources || []).filter(source => !(source.kind === 'item' && structural.has(source.item_id)) && !(source.kind === 'story' && scenes.has(source.item_id))) };
++}
+diff --git a/components/workspace/item-inspector.tsx b/components/workspace/item-inspector.tsx
+index 04b6f03..db1a5c4 100644
+--- a/components/workspace/item-inspector.tsx
++++ b/components/workspace/item-inspector.tsx
+@@ -15,6 +15,8 @@ import { emptyContent, ids, kindLabels, relationships, safeMedia, statusLabels,
+ 
+ import ProductionLinks,{ProductionDetails} from './production-links';
+ import type {WorkspaceApi} from './api';
++import {readGraph} from './api';
++import {resetPlanningPins} from './episode-shot-ux.mjs';
+ import MarkdownContent from './markdown-content';
+ 
+ export interface Decision { action: string; version: number; expected_revision: number; expected_canon_revision: number; note: string }
+@@ -43,10 +45,25 @@ export default function ItemInspector({ api,projectId,onBusy,onReview, item, new
+   const [localError, setLocalError] = useState('');
+   const [decision, setDecision] = useState<Decision | null>(null);
+   const [linkDirty,setLinkDirty]=useState(false);
++  const [referenceItems,setReferenceItems]=useState<StoryItem[]>([]),[referencesLoading,setReferencesLoading]=useState(false),[referencesError,setReferencesError]=useState(''),[loadedReferenceScope,setLoadedReferenceScope]=useState('');
++  const [referenceRetry,setReferenceRetry]=useState(0);
+   const linksDirty=(value:boolean)=>{setLinkDirty(value);onDirty(dirty||value);};
+   const previousScope = useRef<string | null>(null);
+   const kind = newKind || item?.kind || 'character';
++  const planning=kind==='episode'||kind==='shot';
++  const referenceScope=projectId+':'+kind+':'+(item?.id||'new')+':'+(history?.item.revision??'');
++  const referencesReady=loadedReferenceScope===referenceScope&&!referencesLoading&&!referencesError;
+   const automaticReview=['character','casting','appearance'].includes(kind);
++  useEffect(()=>{
++    let active=true;setReferenceItems([]);setReferencesError('');setLoadedReferenceScope('');setReferencesLoading(planning);
++    if(planning)void readGraph(api,projectId,false).then(graph=>{
++      if(!active)return;
++      if(graph.project_id!==projectId||graph.perspective!=='author'||!Array.isArray(graph.nodes))throw Error('已采纳来源快照尚未确认');
++      setReferenceItems(graph.nodes.filter(node=>node.project_id===projectId&&node.branch==='main'&&node.timeline==='main'&&node.status==='accepted'&&!node.archived));
++      setLoadedReferenceScope(referenceScope);
++    }).catch(error=>{if(active)setReferencesError(error instanceof Error?error.message:'已采纳来源读取失败');}).finally(()=>{if(active)setReferencesLoading(false);});
++    return()=>{active=false;};
++  },[api,projectId,planning,referenceScope,referenceRetry]);
+   useEffect(() => {
+     const head = history?.versions.find(v => v.version === item?.version) || history?.versions.find(v => v.version === history.item.head_version);
+     const content = head?.content || item?.content || emptyContent();
+@@ -84,6 +101,7 @@ export default function ItemInspector({ api,projectId,onBusy,onReview, item, new
+       <Tabs value={tab} onValueChange={value=>{const t=value as typeof tab;if(t===tab)return;if(linkDirty)onAttempt(()=>{setLinkDirty(false);onDirty(dirty);setTab(t);});else setTab(t);}}><TabsList className="cw-inspector-tabs" aria-label="卡片详情">{(['overview', 'edit', 'history'] as const).map(t => <TabsTrigger value={t} key={t}>{({ overview: '概览', edit: '编辑', history: '版本与审阅' })[t]}</TabsTrigger>)}</TabsList></Tabs>
+       {localError && <div className="cw-inline-error" role="alert">{localError}</div>}
+       {tab === 'overview' && <div className="cw-inspector-body"><MarkdownContent content={draft.body || '暂无内容'} />
++        {planning&&<section className="cw-inspector-section"><h3>创作计划</h3><div className="cw-small-copy whitespace-pre-wrap">{readableContent({spec:draft.spec||{}},Object.fromEntries([...referenceItems,...items].map(value=>[value.id,value.content.title])))||'尚未填写创作设置'}</div></section>}
+         {Object.entries(draft.fields).filter(([k, v]) => (fieldsByKind[kind] || []).some(([field]) => field === k) && !k.endsWith('_id') && typeof v === 'string' && v).slice(0, 6).map(([key, value]) => <div className="cw-detail-pair" key={key}><span>{fieldsByKind[kind]?.find(([k]) => k === key)?.[1] || key}</span>{choices[key] ? <p>{choices[key][text(value)] || text(value)}</p> : <MarkdownContent content={text(value)}/>}</div>)}
+         {item&&['character','instance','event','scene'].includes(kind)&&<ProductionLinks key={item.id} api={api} projectId={projectId} item={item} disabled={dirty||busy} onSelect={onSelect} onActors={onActors} onReview={onReview} onAttempt={onAttempt} onDirty={linksDirty} onBusy={onBusy}/>}
+         {item&&['casting','appearance'].includes(kind)&&<ProductionDetails key={item.id+':'+version} api={api} projectId={projectId} item={{...item,content:draft}} version={version||item.version} onSelect={onSelect} onActors={onActors}/>}
+@@ -94,11 +112,14 @@ export default function ItemInspector({ api,projectId,onBusy,onReview, item, new
+       </div>}
+       {tab === 'edit' && <form className="cw-inspector-body cw-editor" onSubmit={e => { e.preventDefault(); void save(); }}><fieldset disabled={busy}>
+         <label>标题<Input value={draft.title} maxLength={200} required onChange={e => change({ ...draft, title: e.target.value })} /></label>
+-        <label>{kind === 'chapter' || kind === 'scene' ? '正文' : '简介与设定'}<Textarea rows={kind === 'chapter' ? 14 : 5} value={draft.body} onChange={e => change({ ...draft, body: e.target.value })} /></label>
++        <label>{kind === 'chapter' || kind === 'scene' || planning ? '正文' : '简介与设定'}<Textarea rows={kind === 'chapter' ? 14 : planning?8:5} value={draft.body} onChange={e => change({ ...draft, body: e.target.value })} /></label>
+         {(fieldsByKind[kind] || []).map(([key, label]) => <label key={key}>{label}{choices[key] ? <NativeSelect value={text(draft.fields[key])} onChange={e => change({ ...draft, fields: { ...draft.fields, [key]: e.target.value } })}><option value="">请选择</option>{Object.entries(choices[key]).map(([value, caption]) => <option key={value} value={value}>{caption}</option>)}</NativeSelect> : ['character_id', 'from_id', 'to_id', 'knower_id', 'participants'].includes(key) ? <NativeSelect multiple={key === 'participants'} value={key === 'participants' ? ids(draft.fields[key]) : text(draft.fields[key])} onChange={e => change({ ...draft, fields: { ...draft.fields, [key]: key === 'participants' ? Array.from(e.target.selectedOptions, o => o.value) : e.target.value } })}><option value="">请选择已保存记录</option>{items.filter(n => key === 'character_id' ? n.kind === 'character' : ['from_id', 'to_id'].includes(key) ? ['instance', 'event'].includes(n.kind) : n.kind === 'instance').map(n => <option key={n.id} value={n.id}>{n.content.title} · {kindLabels[n.kind]}</option>)}</NativeSelect> : <Textarea rows={2} value={text(draft.fields[key])} onChange={e => change({ ...draft, fields: { ...draft.fields, [key]: e.target.value } })} />}</label>)}
+         <details><summary>预览正文与设定</summary><MarkdownContent content={draft.body || '暂无内容'}/>{Object.entries(draft.fields).filter(([key,value]) => (fieldsByKind[kind] || []).some(([field]) => field === key) && typeof value === 'string' && value && !choices[key] && !key.endsWith('_id') && key !== 'participants').map(([key,value]) => <section key={key}><strong>{fieldsByKind[kind]?.find(([field])=>field===key)?.[1] || key}</strong><MarkdownContent content={text(value)}/></section>)}</details>
+         <label>故事顺序<Input type="number" step="1" value={draft.story_order ?? ''} onChange={e => change({ ...draft, story_order: e.target.value === '' ? null : Number(e.target.value) })} /></label>
+-        <BusinessSpecForm kind={kind} value={draft.spec} items={items} onChange={spec=>change({...draft,spec})}/>
++        {planning&&referencesLoading&&<p role="status">正在读取已采纳来源…</p>}
++        {planning&&referencesError&&<div role="alert" className="cw-warning"><p>{referencesError}。原关联保留，请重新读取来源后再选择。</p><Button type="button" variant="outline" onClick={()=>setReferenceRetry(value=>value+1)}>重新读取来源</Button></div>}
++        <BusinessSpecForm kind={kind} value={draft.spec} items={items} referenceItems={referencesReady?referenceItems:[]} onChange={spec=>change({...draft,spec})}/>
++        {planning&&<details><summary>来源版本调整</summary><p className="cw-small-copy">重新固定后，保存将使用所选内容当前已采纳版本，另存待审候选；原版本与无关来源保留。</p><Button type="button" variant="outline" disabled={!referencesReady} onClick={()=>change(resetPlanningPins(kind,draft,history?.versions.find(value=>value.version===version)?.content||item?.content||{}) as StoryContent)}>重新固定所选依赖版本</Button></details>}
+         {['casting','appearance'].includes(kind) && typeof draft.spec?.[kind==='casting'?'character_id':'target_id']==='string' && <Button type="button" variant="outline" onClick={()=>onAttempt(()=>onSelect(String(draft.spec?.[kind==='casting'?'character_id':'target_id'])))}>前往{kind==='casting'?'项目角色调整选角':'关联内容调整造型'}<ArrowUpRight/></Button>}
+         <Button className="cw-primary cw-wide" disabled={busy || loading || !!history?.item.archived} type="submit"><Save />{readbackPending ? '提交已确认，待回读' : busy ? '正在保存…' : automaticReview?'保存并自动采纳':'保存为新候选'}</Button></fieldset>
+       </form>}
+diff --git a/components/workspace/model.ts b/components/workspace/model.ts
+index f3fc230..0bcb1c7 100644
+--- a/components/workspace/model.ts
++++ b/components/workspace/model.ts
+@@ -1,4 +1,4 @@
+-export type ItemKind = 'character' | 'instance' | 'event' | 'relation' | 'knowledge' | 'outline' | 'simulation' | 'chapter' | 'adaptation' | 'scene' | 'review_policy' | 'review' | 'casting' | 'appearance';
++export type ItemKind = 'character' | 'instance' | 'event' | 'relation' | 'knowledge' | 'outline' | 'simulation' | 'chapter' | 'adaptation' | 'scene' | 'episode' | 'shot' | 'review_policy' | 'review' | 'casting' | 'appearance';
+ export type Source = { kind: string; item_id?: string; version?: number; paragraph?: number; [key: string]: unknown };
+ export interface StoryContent {
+   title: string; body: string; fields: Record<string, unknown>; sources: Source[];
+@@ -8,6 +8,7 @@ export interface StoryContent {
+ }
+ export interface StoryItem {
+   id: string; kind: ItemKind; version: number; status: string; content: StoryContent;
++  project_id?:string;branch?:string;timeline?:string;sha256?:string;
+   revision?: number; head_version?: number; accepted_version?: number | null; archived?: boolean; needs_review?: unknown[];
+ }
+ export interface Project { id: string; title: string; name?: string; description?: string; revision?: number; kind?: string; phase?:string; updated_at?:string; created_at?:string }
+@@ -26,7 +27,7 @@ export interface ReferenceMedia { src: string; alt: string }
+ export type MediaMap = Record<string, ReferenceMedia>;
+ export interface Relationship { id: string; source: string; target: string; label: string; layer: string; direction: string; status: string; via: string[] }
+ 
+-export const kindLabels: Record<ItemKind, string> = { character: '项目角色', instance: '场次状态', event: '故事事件', relation: '关系依据', knowledge: '知识记录', outline: '章节大纲', simulation: '角色推演', chapter: '小说章节', adaptation: '改编方案', scene: '剧本场景', review_policy: '审阅规则', review: '审阅问题', casting: '选角关联', appearance: '造型关联' };
++export const kindLabels: Record<ItemKind, string> = { character: '项目角色', instance: '场次状态', event: '故事事件', relation: '关系依据', knowledge: '知识记录', outline: '章节大纲', simulation: '角色推演', chapter: '小说章节', adaptation: '改编方案', scene: '剧本场景', episode: '分集计划', shot: '镜头计划', review_policy: '审阅规则', review: '审阅问题', casting: '选角关联', appearance: '造型关联' };
+ export const statusLabels: Record<string, string> = { draft: '候选', pending: '待审阅', accepted: '已采纳', rejected: '已拒绝', archived: '已归档' };
+ export const text = (value: unknown) => typeof value === 'string' ? value : '';
+ export const ids = (value: unknown): string[] => Array.isArray(value) ? value.filter((v): v is string => typeof v === 'string') : [];
+diff --git a/components/workspace/production-workspace.tsx b/components/workspace/production-workspace.tsx
+index bd70453..f775661 100644
+--- a/components/workspace/production-workspace.tsx
++++ b/components/workspace/production-workspace.tsx
+@@ -8,6 +8,7 @@ import {Checkbox} from '@/components/ui/checkbox';
+ import MarkdownContent from './markdown-content';
+ import DocumentEditor from './document-editor';
+ import ProjectRelations from './project-relations';
++import EpisodeShotPlan from './episode-shot-plan';
+ import {ownerRequest,errorMessage,isKnownRejection} from './advanced-api';
+ import type {WorkspaceApi} from './api';
+ import type {Project,StoryItem,FeedbackHandler,ItemKind,GraphData} from './model';
+@@ -18,10 +19,10 @@ interface External {revision:number;project_url:string|null;production_status:st
+ interface Handoff {id:string;project_id:string;manifest_sha256:string;stale:boolean;created_at:string;external:External|null;manifest:{script:{name:string;revision:number;body:string};target_platform:string;production?:{scenes:{scene:{id:string;version:number};title:string}[]};[key:string]:unknown}}
+ interface Summary {id:string;script_revision:number;created_at:string;target_platform:string}
+ interface Pending {key:string;input:Record<string,unknown>;id?:string;sha?:string}
+-interface Props {stage:Stage;api:WorkspaceApi;project:Project|null;items:StoryItem[];graph:GraphData|null;onError:(message:string)=>void;onNotice:FeedbackHandler;onDirty:(value:boolean)=>void;onBusy:(value:boolean)=>void;onSelect:(id:string)=>void;onCreateItem:(kind:ItemKind)=>void;onNavigate:(view:'novel'|'review'|'tasks'|'production')=>void;onAttempt:(action:()=>void)=>void}
++interface Props {stage:Stage;api:WorkspaceApi;project:Project|null;items:StoryItem[];graph:GraphData|null;candidates:boolean;onCandidates:(visible?:boolean)=>void;onError:(message:string)=>void;onNotice:FeedbackHandler;onDirty:(value:boolean)=>void;onBusy:(value:boolean)=>void;onSelect:(id:string)=>void;onCreateItem:(kind:ItemKind)=>void;onNavigate:(view:'novel'|'review'|'tasks'|'production')=>void;onAttempt:(action:()=>void)=>void}
+ const esc=encodeURIComponent;
+ /** Existing immutable handoff + manual external tracking. No media generation or editing. */
+-export default function ProductionWorkspace({stage,api,project,items,graph,onError,onNotice,onDirty,onBusy,onSelect,onCreateItem,onNavigate,onAttempt}:Props){
++export default function ProductionWorkspace({stage,api,project,items,graph,candidates,onCandidates,onError,onNotice,onDirty,onBusy,onSelect,onCreateItem,onNavigate,onAttempt}:Props){
+  const pid=project?.id||'',scope='cw-handoff-pending:'+pid;
+  const [mode,setMode]=useState<'create'|'record'>('create');
+  const [documents,setDocuments]=useState<Document[]>([]),[document,setDocument]=useState<Document|null>(null),[documentId,setDocumentId]=useState(''),[selected,setSelected]=useState<string[]>([]),[platform,setPlatform]=useState('libtv'),[handoffScope,setHandoffScope]=useState('materials'),[handoffs,setHandoffs]=useState<Summary[]>([]),[handoff,setHandoff]=useState<Handoff|null>(null),[busy,setBusy]=useState(false),[loading,setLoading]=useState(false),[error,setError]=useState(''),[pending,setPending]=useState<Pending|null>(null),[externalPending,setExternalPending]=useState<Record<string,unknown>|null>(null),[url,setUrl]=useState(''),[status,setStatus]=useState('not_started'),[notes,setNotes]=useState(''),[director,setDirector]=useState<unknown>(null),[directorScene,setDirectorScene]=useState(''),[documentKind,setDocumentKind]=useState('all');
+@@ -47,10 +48,12 @@ export default function ProductionWorkspace({stage,api,project,items,graph,onErr
+  if(!project)return <section className="cw-module-empty">先选择作品。</section>;
+  return <section className="cw-module"><header className="cw-module-toolbar"><Button variant="ghost" disabled={busy||loading} onClick={()=>onAttempt(()=>void load())}>刷新</Button></header>{error&&<p role="alert" className="cw-warning">{error}</p>}{loading&&<p role="status">正在读取作品资料…</p>}
+  <ProjectRelations key={pid} projectId={pid} graph={graph} handoff={handoff} onSelect={onSelect} onAttempt={onAttempt} onProduction={stage==='production'?undefined:()=>onNavigate('production')}/>
+- {stage==='story'&&<section className="cw-writing-actions" aria-label="开始创作"><div className="cw-writing-primary">{project.kind==='long_form'?<Button variant="outline" onClick={()=>onCreateItem('chapter')}>新建小说章节</Button>:project.kind==='daily'?null:<Button variant="outline" onClick={()=>onCreateItem('scene')}>新建剧本场次</Button>}</div><details><summary>更多创作工具</summary><div className="cw-writing-primary"><Button variant="ghost" onClick={()=>onCreateItem('outline')}>新建大纲</Button>{project.kind!=='long_form'&&<Button variant="ghost" onClick={()=>onCreateItem('chapter')}>新建小说章节</Button>}{project.kind==='long_form'||project.kind==='daily'?<Button variant="ghost" onClick={()=>onCreateItem('scene')}>新建剧本场次</Button>:null}<Button variant="ghost" onClick={()=>onNavigate('novel')}>小说与大纲</Button><Button variant="ghost" onClick={()=>onNavigate('tasks')}>写作任务</Button><Button variant="ghost" onClick={()=>onNavigate('review')}>故事候选审阅</Button></div></details></section>}
++ {stage==='story'&&<section className="cw-writing-actions" aria-label="开始创作"><div className="cw-writing-primary">{project.kind==='long_form'?<Button variant="outline" onClick={()=>onCreateItem('chapter')}>新建小说章节</Button>:project.kind==='daily'?null:<Button variant="outline" onClick={()=>onCreateItem('scene')}>新建剧本场次</Button>}<Button variant="outline" onClick={()=>onCreateItem('episode')}>新建分集计划</Button></div><details><summary>更多创作工具</summary><div className="cw-writing-primary"><Button variant="ghost" onClick={()=>onCreateItem('outline')}>新建大纲</Button>{project.kind!=='long_form'&&<Button variant="ghost" onClick={()=>onCreateItem('chapter')}>新建小说章节</Button>}{project.kind==='long_form'||project.kind==='daily'?<Button variant="ghost" onClick={()=>onCreateItem('scene')}>新建剧本场次</Button>:null}<Button variant="ghost" onClick={()=>onNavigate('novel')}>小说与大纲</Button><Button variant="ghost" onClick={()=>onNavigate('tasks')}>写作任务</Button><Button variant="ghost" onClick={()=>onNavigate('review')}>故事候选审阅</Button></div></details></section>}
++ {stage==='storyboard'&&<div className="cw-writing-primary"><Button variant="outline" onClick={()=>onCreateItem('shot')}>新建镜头计划</Button><Button variant="ghost" onClick={()=>onCreateItem('episode')}>新建分集计划</Button><Button variant="ghost" onClick={()=>onCreateItem('scene')}>新建剧本场次</Button></div>}
++ {(stage==='story'||stage==='storyboard')&&<EpisodeShotPlan items={items} candidates={candidates} onCandidates={()=>onAttempt(()=>onCandidates(!candidates))} onSelect={onSelect}/>}
+  {stage==='story'&&<DocumentEditor key={project.id} project={project} onError={onError} onNotice={onNotice} onDirty={onDirty} onBusy={onBusy} onAttempt={onAttempt}/>}
+  {stage==='story'&&(scenes.length>0||project.kind!=='daily')&&<section><h3>已采纳场次</h3>{scenes.map(scene=><Button key={scene.id} variant="record" onClick={()=>onSelect(scene.id)}>{scene.content.title} · 打开场次</Button>)}{!scenes.length&&project.kind!=='daily'&&<p>还没有已采纳的场次。</p>}</section>}
+- {stage==='storyboard'&&<><label>文稿类型<NativeSelect value={documentKind} onChange={e=>setDocumentKind(e.target.value)}><option value="all">全部文稿</option>{[...new Set(documents.map(d=>d.kind))].map(kind=><option key={kind} value={kind}>{({story:'故事',script:'剧本',daily_plan:'日常方案',scene_text:'场次文本',prompt_note:'提示词笔记',handoff_note:'交接笔记'} as Record<string,string>)[kind]||kind}</option>)}</NativeSelect></label><label>分镜与剧本文稿<NativeSelect value={documentId} onChange={e=>void readDocument(e.target.value)}><option value="">选择原文</option>{documents.filter(d=>documentKind==='all'||d.kind===documentKind).map(d=><option key={d.id} value={d.id}>{d.name}</option>)}</NativeSelect></label>{!loading&&!documents.length&&<p>尚无已存文稿。<Button variant="ghost" onClick={()=>onAttempt(()=>location.assign('/studio?project='+esc(pid)+'#scripts'))}>打开文稿编辑器</Button></p>}{document&&<article><h3>{document.name}</h3><p className="cw-small-copy">文稿原文 · {document.state==='approved'?'已审核':'尚未审核'}；未解析为结构化镜头，不推算镜头数量。</p><Button variant="outline" onClick={()=>onAttempt(()=>location.assign('/studio?project='+esc(pid)+'&document='+esc(document.id)+'#scripts'))}>在文稿编辑器打开</Button><MarkdownContent content={document.body||''}/></article>}<p className="cw-small-copy">现有文稿类型没有独立的分镜类型；按真实类型筛选，不按标题判断镜头结构。</p><h3>已采纳场次</h3>{scenes.map(scene=><Button key={scene.id} variant="record" onClick={()=>onSelect(scene.id)}>{scene.content.title} · 打开场次</Button>)}{!scenes.length&&<p>尚无已采纳场次。已有文稿仍可阅读，不自动改成场次。</p>}</>}
++ {stage==='storyboard'&&<details><summary>手写分镜与剧本文稿</summary><label>文稿类型<NativeSelect value={documentKind} onChange={e=>setDocumentKind(e.target.value)}><option value="all">全部文稿</option>{[...new Set(documents.map(d=>d.kind))].map(kind=><option key={kind} value={kind}>{({story:'故事',script:'剧本',daily_plan:'日常方案',scene_text:'场次文本',prompt_note:'提示词笔记',handoff_note:'交接笔记'} as Record<string,string>)[kind]||kind}</option>)}</NativeSelect></label><label>分镜与剧本文稿<NativeSelect value={documentId} onChange={e=>void readDocument(e.target.value)}><option value="">选择原文</option>{documents.filter(d=>documentKind==='all'||d.kind===documentKind).map(d=><option key={d.id} value={d.id}>{d.name}</option>)}</NativeSelect></label>{!loading&&!documents.length&&<p>尚无已存文稿。<Button variant="ghost" onClick={()=>onAttempt(()=>location.assign('/studio?project='+esc(pid)+'#scripts'))}>打开文稿编辑器</Button></p>}{document&&<article><h3>{document.name}</h3><p className="cw-small-copy">文稿原文 · {document.state==='approved'?'已审核':'尚未审核'}；此文稿按原文阅读，不自动解析镜头。</p><Button variant="outline" onClick={()=>onAttempt(()=>location.assign('/studio?project='+esc(pid)+'&document='+esc(document.id)+'#scripts'))}>在文稿编辑器打开</Button><MarkdownContent content={document.body||''}/></article>}</details>}
+  {stage==='production'&&<div className="cw-writing-primary"><Button variant={mode==='create'?'default':'ghost'} aria-pressed={mode==='create'} disabled={!!pending||!!externalPending} onClick={()=>changeMode('create')}>新建交接</Button><Button variant={mode==='record'?'default':'ghost'} aria-pressed={mode==='record'} disabled={!!pending||!!externalPending} onClick={()=>changeMode('record')}>查看交接与进度</Button></div>}
+  {stage==='production'&&mode==='create'&&<form onSubmit={e=>{e.preventDefault();void operation(()=>submit());}}><fieldset disabled={busy||!!pending} className="cw-form-fieldset"><label>剧本来源<NativeSelect value={documentId} onChange={e=>{void readDocument(e.target.value);onDirty(true);}}><option value="">选择剧本或内容方案</option>{documents.filter(d=>['script','daily_plan','story','scene_text'].includes(d.kind)).map(d=><option key={d.id} value={d.id}>{d.name}</option>)}</NativeSelect></label>{document&&<p>{approvedScript(document)?'已审核，可用于交接':'尚未审核，不能创建交接包'}</p>}<label>交接范围<NativeSelect value={handoffScope} onChange={e=>{setHandoffScope(e.target.value);onDirty(true);}}><option value="materials">文字 / 图文资料</option><option value="scenes">场次制作</option></NativeSelect></label>{handoffScope==='scenes'&&<div><h3>本次制作场次</h3>{scenes.map(scene=><label key={scene.id} className="flex items-center gap-2"><Checkbox checked={selected.includes(scene.id)} onCheckedChange={checked=>{setSelected(old=>checked?[...new Set([...old,scene.id])]:old.filter(id=>id!==scene.id));onDirty(true);}}/>{scene.content.title}</label>)}{!scenes.length&&<p>先在故事中采纳场次及选角造型；这里不代替审核。</p>}</div>}<label>外部制作平台<NativeSelect value={platform} onChange={e=>{setPlatform(e.target.value);onDirty(true);}}><option value="libtv">LibTV</option><option value="xiaoyunque">小云雀</option><option value="other">其他</option></NativeSelect></label><Button type="submit" disabled={!approvedScript(document)||(handoffScope==='scenes'&&(!selected.length||selected.length>20))}>保存制作交接包</Button><p className="cw-small-copy">{handoffScope==='scenes'?'冻结所选场次、选角与素材准确版本。':'仅交接已审核文字与已有资料引用，不含冻结场次或指定演员。'}实际图片 / 视频制作在外部完成；不会开始生成或扣费。</p></fieldset></form>}
+  {pending&&<div role="status"><p>{pending.id?'已提交，回读待核验。':'提交结果尚未确认，输入已保留。请核对上次提交。'}</p><Button disabled={busy} onClick={()=>void operation(()=>submit(pending))}>{pending.id?'仅回读交接包':'核对并恢复原提交'}</Button></div>}
+diff --git a/components/workspace/project-relations.mjs b/components/workspace/project-relations.mjs
+index c29de2d..4ebaa62 100644
+--- a/components/workspace/project-relations.mjs
++++ b/components/workspace/project-relations.mjs
+@@ -1,7 +1,7 @@
+ const object = value => value && typeof value === 'object' && !Array.isArray(value) ? value : {};
+ const text = value => typeof value === 'string' ? value : '';
+ const list = value => Array.isArray(value) ? value : [];
+-const kinds = new Set(['character', 'instance', 'scene', 'casting', 'appearance', 'chapter', 'adaptation', 'outline', 'event', 'relation', 'simulation', 'knowledge', 'review', 'review_policy']);
++const kinds = new Set(['character', 'instance', 'scene', 'episode', 'shot', 'casting', 'appearance', 'chapter', 'adaptation', 'outline', 'event', 'relation', 'simulation', 'knowledge', 'review', 'review_policy']);
+ const hash = value => typeof value === 'string' && /^[a-f0-9]{64}$/.test(value);
+ 
+ /** A reading projection of an already-authorized main/main author graph. No I/O,
+@@ -32,7 +32,17 @@ export function projectRelations(projectId, graph, handoff = null) {
+   }
+   for (const node of nodes) {
+     const fields = object(node.content.fields), spec = object(node.content.spec);
++    const pinned = (id, label, allowed) => add(node, id, label, allowed, list(node.content.sources).find(source => source?.kind === 'item' && source.item_id === id) || {kind:'item'});
+     if (node.kind === 'instance') add(node, fields.character_id, '所属角色', ['character']);
++    if (node.kind === 'episode') {
++      for (const id of list(spec.scene_ids)) pinned(id, '集内场次', ['scene']);
++      pinned(spec.previous_episode_id, '承接前集', ['episode']);
++    }
++    if (node.kind === 'shot') {
++      pinned(spec.episode_id, '所属分集', ['episode']);
++      pinned(spec.scene_id, '所属场次', ['scene']);
++      for (const id of list(spec.cast)) pinned(id, '镜头出场状态', ['instance']);
++    }
+     if (node.kind === 'scene') {
+       for (const id of list(spec.cast)) add(node, id, '出场状态', ['instance']);
+       add(node, spec.adaptation_id, '改编方案', ['adaptation']);
+@@ -72,5 +82,8 @@ export function projectRelations(projectId, graph, handoff = null) {
+       assets = [...new Set(valid.map(asset => asset.id))].map(id => ({ id, uses: valid.filter(asset => asset.id === id).map(asset => ({ usage: asset.usage, targetId: asset.targetId })) }));
+     }
+   }
+-  return { ...empty, available: true, reason: '', canonRevision: graph.canon_revision ?? null, records, edges, external, assets, assetScope, notices };
++  const gaps = [];
++  if (!nodes.some(node => node.kind === 'episode')) gaps.push('尚无结构化分集');
++  if (!nodes.some(node => node.kind === 'shot')) gaps.push('尚无镜头计划');
++  return { ...empty, available: true, reason: '', canonRevision: graph.canon_revision ?? null, records, edges, external, assets, assetScope, notices, gaps };
+ }
+diff --git a/components/workspace/project-relations.tsx b/components/workspace/project-relations.tsx
+index 0d07417..13ccfc8 100644
+--- a/components/workspace/project-relations.tsx
++++ b/components/workspace/project-relations.tsx
+@@ -21,7 +21,7 @@ export default function ProjectRelations({projectId,graph,handoff,onSelect,onAtt
+  const open=(href:string)=>onAttempt(()=>window.location.assign(href));
+  return <details className="cw-project-relations"><summary>项目关系查阅</summary><section aria-label="当前作品的已声明关系">
+  {!data.available?<p role="status">{data.reason}</p>:<>
+- <p className="cw-small-copy">{data.gaps.join('；')}。以下按已读取记录查阅，章节不等于集，场次不等于镜头。</p>
++ <p className="cw-small-copy">{data.gaps.length?data.gaps.join('；')+'。':''}以下按已读取记录查阅，章节不等于集，场次不等于镜头。</p>
+  {data.notices.map(notice=><p key={notice} className="cw-warning">{notice}</p>)}
+  <div className="cw-project-relations-tools"><label>记录类型<NativeSelect value={kind} onChange={event=>{setKind(event.target.value);setChosen('');}}><option value="all">全部记录</option>{[...new Set(data.records.map(record=>record.kind))].map(value=><option key={value} value={value}>{label(value)}</option>)}</NativeSelect></label><label>选择原记录<NativeSelect value={focus?.id||''} disabled={!records.length} onChange={event=>setChosen(event.target.value)}>{!records.length&&<option value="">没有此类记录</option>}{records.map(record=><option key={record.id} value={record.id}>{label(record.kind)} · {record.title} · v{record.version} · {record.id.slice(0,8)}</option>)}</NativeSelect></label></div>
+  {focus?<article className="cw-project-relations-record"><header><div><h3>{focus.title}</h3><p>{label(focus.kind)} · v{focus.version} · {statusLabels[focus.status]||'状态未记录'}{focus.needsReview?' · 依赖需核对':''}</p></div><Button type="button" variant="outline" onClick={()=>onSelect(focus.id)}>打开原记录</Button></header>
+diff --git a/components/workspace/workspace-modules.tsx b/components/workspace/workspace-modules.tsx
+index 59b916a..9d6197f 100644
+--- a/components/workspace/workspace-modules.tsx
++++ b/components/workspace/workspace-modules.tsx
+@@ -24,7 +24,7 @@ import type { WorkspaceApi } from './api';
+ import { kindLabels, referenceVersionUrl, statusLabels, text, type Actor, type GraphData, type Project, type StoryItem, type ItemKind } from './model';
+ import type { WorkspaceView } from './workspace';
+ 
+-interface Props { onDashboardOpen(pid:string,view:string,item?:string):void; introScope?:string; workspaceReady?: boolean; workspaceError?:boolean; onReloadWorkspace?():void; onRefresh(): Promise<void>; onAttempt(action: () => void): void; actorId?: string | null; actorTab?: string; onActorTabSelect(tab: string): void; onActorSelect(id: string | null, tab?: string): void; view: WorkspaceView; api: WorkspaceApi; projects: Project[]; project: Project | null; items: StoryItem[]; graph: GraphData | null; candidates: boolean; onCandidates(): void; onProjectCreated(project: Project): Promise<void>; onOpenProject(project: Project): void; onSelect(id: string): void; onCreateItem(kind: ItemKind): void; onNavigate(view: WorkspaceView): void; onError(message: string): void; onNotice:FeedbackHandler; onDirty(dirty: boolean): void; onBusy(busy: boolean): void }
++interface Props { onDashboardOpen(pid:string,view:string,item?:string):void; introScope?:string; workspaceReady?: boolean; workspaceError?:boolean; onReloadWorkspace?():void; onRefresh(): Promise<void>; onAttempt(action: () => void): void; actorId?: string | null; actorTab?: string; onActorTabSelect(tab: string): void; onActorSelect(id: string | null, tab?: string): void; view: WorkspaceView; api: WorkspaceApi; projects: Project[]; project: Project | null; items: StoryItem[]; graph: GraphData | null; candidates: boolean; onCandidates(visible?:boolean): void; onProjectCreated(project: Project): Promise<void>; onOpenProject(project: Project): void; onSelect(id: string): void; onCreateItem(kind: ItemKind): void; onNavigate(view: WorkspaceView): void; onError(message: string): void; onNotice:FeedbackHandler; onDirty(dirty: boolean): void; onBusy(busy: boolean): void }
+ const message = (err: unknown) => err instanceof Error ? err.message : '请求未完成，请重新读取';
+ const Empty = ({ title, children }: { title: string; children?: React.ReactNode }) => <div className="cw-module-empty"><h2>{title}</h2>{children&&<p>{children}</p>}</div>;
+ const mediaPath = (value: unknown) => typeof value === 'string' && /^\/media\/[A-Za-z0-9_./-]+$/.test(value) && !value.split('/').includes('..') ? value : null;
+diff --git a/components/workspace/workspace.tsx b/components/workspace/workspace.tsx
+index bf708ee..faf5908 100644
+--- a/components/workspace/workspace.tsx
++++ b/components/workspace/workspace.tsx
+@@ -150,7 +150,7 @@ export default function Workspace({ api: injectedApi, mediaByItem = EmptyMedia,
+   const inspectSource = async (source: Source) => { if (!source.item_id || !source.version) return; try { const data = await api.story(route.project, `${source.paragraph ? 'source' : 'source-item'}/${encodeURIComponent(source.item_id)}?version=${source.version}${source.paragraph ? `&paragraph=${source.paragraph}` : ''}`) as Record<string, unknown>; setSourcePreview({ title: String(data.title || '准确来源'), text: String(data.text || (data.content as StoryContent)?.body || ''), version: source.version }); } catch (err) { setError(errorText(err)); } };
+   const scenes = relatedScenes(items, showAllScenes ? null : selected);
+   const primaryKinds: ItemKind[] = project?.kind==='long_form' ? ['character','chapter','outline'] : project?.kind==='daily' ? ['character','event'] : ['character','scene','event'];
+-  const allCanvasKinds: ItemKind[] = ['character','instance','event','relation','chapter','adaptation','scene','outline','knowledge'];
++  const allCanvasKinds: ItemKind[] = ['character','instance','event','relation','chapter','adaptation','scene','episode','shot','outline','knowledge'];
+   const projectViews: WorkspaceView[] = ['canvas', 'novel', 'screenplay', 'review', 'tasks', 'storyboard', 'production', 'delivery'];
+   const inProject = projectViews.includes(route.view) || route.view === 'connection';
+   const researchHref='/studio'+(route.project?'?project='+encodeURIComponent(route.project):'')+'#research';
+@@ -174,7 +174,7 @@ export default function Workspace({ api: injectedApi, mediaByItem = EmptyMedia,
+         <div className="cw-workspace-controls"><div className="cw-view-title"><Network size={18} /><span>角色与场景</span><Button variant="ghost" size="sm" aria-pressed={showGraph} onClick={()=>setShowGraph(v=>!v)}>{showGraph?'卡片':'关系图'}</Button></div><label className="cw-search"><Search size={14} /><Input type="search" value={search} onChange={e => setSearch(e.target.value)} placeholder="查找角色、场景" aria-label="查找角色与场景" /></label><label className="cw-candidate-toggle"><Checkbox  checked={candidates} onCheckedChange={checked => attempt(() => setCandidates((checked === true)))} />包含候选</label></div>
+         {!project ? <div className="cw-project-empty"><FolderOpen size={42} strokeWidth={1} /><h2>{projectsLoaded && !projects.length ? '从一个真实作品开始' : '选择要继续的作品'}</h2><p>{projectsLoaded && !projects.length ? '项目列表为空。现有素材仍保留在素材库；尚未入库的文稿不会自动变成正式故事。' : '选择项目，读取已保存的角色、事件与场次。'}</p><Button className="cw-primary" onClick={() => navigate({ view: 'projects' })}>前往作品项目<ArrowRight /></Button></div> : loading && !graph ? <div className="cw-canvas-loading" role="status"><LoaderCircle className="animate-spin" /><p>正在读取「{project.title}」的故事快照…</p></div> : graph ? !showGraph ? <div className="cw-cast-scene-list">{items.filter(n=>['character','scene'].includes(n.kind)&&(!search||`${n.content.title} ${n.content.body}`.toLocaleLowerCase().includes(search.toLocaleLowerCase()))).map(n=><Button key={n.id} variant="record" size="record" aria-pressed={route.item===n.id} onClick={()=>select(n.id)}><div><small>{n.kind==='character'?'角色':'场景'}{n.needs_review?.length?' · 引用需核对':''}</small><h3>{n.content.title}</h3><MarkdownExcerpt content={n.content.body} /></div><ArrowRight size={16}/></Button>)}{!items.some(n=>['character','scene'].includes(n.kind))&&<p>尚未建立角色或场景。可从已有故事继续添加，不会自动指定演员。</p>}</div> : <Suspense fallback={<div className="cw-canvas-loading" role="status">正在载入画布组件…</div>}><RelationshipCanvas key={project.id} items={items} query={search} selectedId={route.item} onSelect={select} onClear={closeInspector} media={mediaByItem} reducedMotion={reducedMotion} compact={mobile} /></Suspense> : <div className="cw-canvas-loading">故事快照尚未读取，请恢复连接后重试。</div>}
+         {project && showGraph && <section className="cw-scenes"><header><div><Clapperboard size={18} /><h2>剧情场次</h2><span>{scenes.length} 场</span></div><Button variant="ghost" size="sm" onClick={() => setShowAllScenes(!showAllScenes)}>{selected && !showAllScenes ? '查看全部场次' : '查看关联场次'}<ArrowRight /></Button></header><div className="cw-scene-strip">{scenes.map((scene, index) => { const picture = safeMedia(mediaByItem, scene.id); return <Button variant="record" size="record" type="button" className={`cw-scene-card ${route.item === scene.id ? 'is-selected' : ''}`} aria-pressed={route.item === scene.id} key={scene.id} onClick={() => select(scene.id)}><div className="cw-scene-picture">{picture ? <img src={picture.src} alt={picture.alt} width={130} height={86} loading="lazy" /> : <Clapperboard strokeWidth={1} size={28} />}</div><div><span>场 {index + 1}<small>{scene.status === 'accepted' ? '已采纳' : '候选'}</small></span><h3>{scene.content.title}</h3><MarkdownExcerpt content={scene.content.body}/></div></Button>; })}{!scenes.length && <p className="cw-scenes-empty">{selected && !showAllScenes ? '此卡片尚无明确关联的场次，可切换查看全部。' : '暂无场次'}</p>}</div></section>}
+-      </> : route.view==='screenplay' && selectedOpen ? <section className="cw-module"><h2>场次编辑</h2><p>当前正在编辑故事卡片。</p><Button variant="outline" onClick={closeInspector}>返回文稿写作</Button></section> : <Suspense fallback={<div className="cw-panel-loading" role="status">正在载入模块…</div>}><WorkspaceModules key={JSON.stringify([route.view,route.project,route.view==='screenplay'?route.item:null,route.view==='screenplay'?route.newKind:null])} onDashboardOpen={(pid,view,item)=>navigate({project:pid,view:view as WorkspaceView,item:item||null,newKind:null})} introScope={introScope} workspaceReady={projectsLoaded} workspaceError={!projectsLoaded&&!!error} onReloadWorkspace={()=>void loadProjects()} onAttempt={attempt} onRefresh={async () => { await reload(); }} actorId={route.actor} actorTab={route.actorTab || undefined} onActorTabSelect={actorTab => applyRoute({ ...routeRef.current, actorTab })} onActorSelect={(actor, actorTab) => navigate({ view: 'ip', actor, actorTab: actorTab || null, item: null, newKind: null })} view={route.view} api={api} projects={projects} project={project} items={items} graph={graph} candidates={candidates} onCandidates={() => setCandidates(true)} onProjectCreated={async p => { await loadProjects(); applyRoute({ ...routeRef.current, project: p.id, view: 'screenplay', item: null, newKind: null }); }} onOpenProject={p => navigate({ project: p.id, view: 'screenplay', item: null, newKind: null })} onSelect={select} onCreateItem={kind => navigate({view:'canvas',newKind:kind,item:null})} onNavigate={view => navigate({ view })} onError={setError} onNotice={setNotice} onDirty={moduleDirty} onBusy={moduleBusy} /></Suspense>}
++      </> : route.view==='screenplay' && selectedOpen ? <section className="cw-module"><h2>场次编辑</h2><p>当前正在编辑故事卡片。</p><Button variant="outline" onClick={closeInspector}>返回文稿写作</Button></section> : <Suspense fallback={<div className="cw-panel-loading" role="status">正在载入模块…</div>}><WorkspaceModules key={JSON.stringify([route.view,route.project,route.view==='screenplay'?route.item:null,route.view==='screenplay'?route.newKind:null])} onDashboardOpen={(pid,view,item)=>navigate({project:pid,view:view as WorkspaceView,item:item||null,newKind:null})} introScope={introScope} workspaceReady={projectsLoaded} workspaceError={!projectsLoaded&&!!error} onReloadWorkspace={()=>void loadProjects()} onAttempt={attempt} onRefresh={async () => { await reload(); }} actorId={route.actor} actorTab={route.actorTab || undefined} onActorTabSelect={actorTab => applyRoute({ ...routeRef.current, actorTab })} onActorSelect={(actor, actorTab) => navigate({ view: 'ip', actor, actorTab: actorTab || null, item: null, newKind: null })} view={route.view} api={api} projects={projects} project={project} items={items} graph={graph} candidates={candidates} onCandidates={(visible=true) => setCandidates(visible)} onProjectCreated={async p => { await loadProjects(); applyRoute({ ...routeRef.current, project: p.id, view: 'screenplay', item: null, newKind: null }); }} onOpenProject={p => navigate({ project: p.id, view: 'screenplay', item: null, newKind: null })} onSelect={select} onCreateItem={kind => navigate({view:'canvas',newKind:kind,item:null})} onNavigate={view => navigate({ view })} onError={setError} onNotice={setNotice} onDirty={moduleDirty} onBusy={moduleBusy} /></Suspense>}
+       </div></FeatureBoundary>
+     </main>
+     {selectedOpen && (mobile ? <Sheet open onOpenChange={open => { if (!open) closeInspector(); }}><SheetContent className="cw-theme cw-light cw-inspector-sheet" showCloseButton={false} onCloseAutoFocus={event => { event.preventDefault(); requestAnimationFrame(() => { const trigger = lastTrigger.current; if (trigger?.isConnected) trigger.focus(); else document.querySelector<HTMLElement>('.cw-flow')?.focus(); }); }}><SheetTitle className="sr-only">卡片与准确来源</SheetTitle><SheetDescription className="sr-only">检查设定、版本与审阅候选</SheetDescription>{inspector}</SheetContent></Sheet> : <aside className="cw-inspector" aria-label="卡片检查器">{inspector}</aside>)}
+diff --git a/studio-core/docs/phase-p6-episode-shot-20261106.md b/studio-core/docs/phase-p6-episode-shot-20261106.md
+new file mode 100644
+index 0000000..39185e4
+--- /dev/null
++++ b/studio-core/docs/phase-p6-episode-shot-20261106.md
+@@ -0,0 +1,30 @@
++# P6 · 分集与镜头计划
++
++2026-11-06。基线为同一 owner-private Site v96，源码 `1520c78adb0a7b5971045b0b77a8d75a256dfc9e`。先审计现有通用存储、前端编辑和权限路径，再实施本阶段。
++
++## 合同与范围
++
++- 复用 `studio_story_items` / 不可变 `studio_story_versions`，新增 workflow artifact `episode`、`shot`；底层沿用既有 chapter 存储兼容层，不新增或执行数据库迁移，不改 FRAME。
++- 分集 spec：`number` 正整数、`goal`、`entry_state`、`exit_state`、可选 `previous_episode_id`、有序 `scene_ids`（拒绝重复）。前集必须编号更小；前集和场次必须已采纳，并固定精确版本/SHA。入集/离集状态为作者明确填写的文本，不推断角色记忆。
++- 镜头计划 spec：`episode_id`、`scene_id`、`number` 正整数、可空 `duration_ms` 正整数、`cast`、`framing`、`camera`、`action`、`dialogue`、可选 `source_paragraphs`。场次须属于所钉版本的分集，场次版本须与分集中的 pin 一致；人物须为该场次 cast 子集；正文定位绑定该场次精确版本的真实段落。
++- `body` 保留完整创作稿；编号用于明确排序，允许编号间隙及同号，界面同号时稳定排序，不承诺唯一槽位。单向依赖：shot→episode→scene，episode→previous_episode；不写反向 shot_ids，避免循环。
++- 仅作者可见，复用 save/history/review/decision/CAS/幂等及跨项目、分支、时间线校验。Agent 只能提候选，episode/shot 不进入 casting 自动采纳。结构依赖拒绝从未采纳的版本与归档记录；曾采纳的旧 pin 可另存待复核候选，不能直接采纳或恢复为正式内容。前集关系沿精确版本链拒绝当前 ID 或重复 ID，避免改号形成循环。
++- 界面复用 Inspector 和业务表单；故事入口创建分集、分镜入口创建镜头计划，列表与关系面板读取真实对象。保留旧章/场、手写分镜文稿、未保存保护。镜头计划是文字创作记录，不新增视频/音频时间线或生成执行器。
++- P7 的历史深链/范围变更、P8 执行桥接、P9 3D工具仍在后续阶段。
++
++## 验收与反例
++
++1. 分集→人工采纳→镜头候选→人工采纳→重建服务回读；顺序、内容、精确来源和历史一致。
++2. owner/project/branch/timeline 隔离；拒绝未知、归档、未采纳和类型错误的依赖、重复场次、场次越界、人物越界、段落越界、无效编号/时长。
++3. 同 key 重试返回同回执；改 payload、过期 revision/canon 均冲突，不能多写版本。Agent 不能采纳，候选不混入正式图，不泄漏角色/读者上下文。
++4. 上游变更后旧 pin 不改写，needs_review 明确，采纳过期镜头失败。既有章节/场次/造型/导出回归通过。
++5. UI 支持创建、编辑、选择父级/人物/正文段落、查阅顺序、未保存离开保护与恢复；无真实授权会话时不虚称浏览器验收通过。
++6. 独立复核后执行完整 `npm run review`、TypeScript 和 Sites build。通过官方 helper 打包及同站私有发布，保存终态回执；实际线上编辑/媒体质量另记。
++
++## 执行证据
++
++- 后端新增16项与既有35项合计51/51通过；关系/中文审阅29项、UX 6项及旧页面兼容1项通过。独立最终复核 PASS，独立重跑52/52，未发现阻挡发布的P1/P2问题。
++- 完整 stage Review 156/156；核心486项、475通过、11既有跳过、0失败。TypeScript和完整Sites/Vinext build通过。`site-source-readiness --source-only`确认源码完整；没有伪造登录或存储供应商证据。
++- 兼容旧页面：新增类型只读展示并导向完整工作台编辑/审阅，避免旧 `typeFields[kind].map` 路径崩溃与不完整字段表单。
++- 本地SQLite/Vite隔离预览启动成功；CUA IAB不可用，Chrome报告 `Cannot read properties of undefined (reading 'timeoutMs')`。未取得真实浏览器交互/视觉验收，未用替代浏览器自动化绕过。测试不证明媒体质量或作者采纳。
++- 发布目标仍为同一owner-private Site。正式版本/部署终态回执记录在父仓库P6执行报告，避免把源码审阅报告自身当成上线证明。
+diff --git a/studio-core/review-report.json b/studio-core/review-report.json
+index 16accc5..b3ba2ed 100644
+--- a/studio-core/review-report.json
++++ b/studio-core/review-report.json
+@@ -1,6 +1,6 @@
+ {
+   "stage": "CineWeave Studio Core: 0+1+2+3+4+5+6+7",
+-  "generated_at": "2026-11-05T09:28:13.338Z",
++  "generated_at": "2026-11-05T16:42:06.106Z",
+   "checks": [
+     {
+       "label": "syntax:src/casting-handoff.mjs",
+@@ -780,7 +780,7 @@
+       "label": "mcp:legacy-asset-readonly-security",
+       "passed": true,
+       "status": 0,
+-      "details": "k 1 - Scene MCP search includes architecture once and keeps the legacy child and saved records intact\n  ---\n  duration_ms: 48.8395\n  type: 'test'\n  ...\n# Subtest: discovery is static and stateless; no identity, private IDs or storage reads\nok 2 - discovery is static and stateless; no identity, private IDs or storage reads\n  ---\n  duration_ms: 3.9359\n  type: 'test'\n  ...\n# Subtest: missing identity/service bypass is 401 and another subject is 403 before any storage read\nok 3 - missing identity/service bypass is 401 and another subject is 403 before any storage read\n  ---\n  duration_ms: 26.0894\n  type: 'test'\n  ...\n# Subtest: search/get read current records and exclude trash, without changing any table\nok 4 - search/get read current records and exclude trash, without changing any table\n  ---\n  duration_ms: 41.8773\n  type: 'test'\n  ...\n# Subtest: image tool returns verified ImageContent bytes, not a URL, and refuses corruption/oversize\nok 5 - image tool returns verified ImageContent bytes, not a URL, and refuses corruption/oversize\n  ---\n  duration_ms: 29.5681\n  type: 'test'\n  ...\n# Subtest: no write tool, arbitrary URL, SQL injection or cross-origin bypass\nok 6 - no write tool, arbitrary URL, SQL injection or cross-origin bypass\n  ---\n  duration_ms: 23.3968\n  type: 'test'\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 364.0087\n\n"
++      "details": "ok 1 - Scene MCP search includes architecture once and keeps the legacy child and saved records intact\n  ---\n  duration_ms: 55.6184\n  type: 'test'\n  ...\n# Subtest: discovery is static and stateless; no identity, private IDs or storage reads\nok 2 - discovery is static and stateless; no identity, private IDs or storage reads\n  ---\n  duration_ms: 2.1316\n  type: 'test'\n  ...\n# Subtest: missing identity/service bypass is 401 and another subject is 403 before any storage read\nok 3 - missing identity/service bypass is 401 and another subject is 403 before any storage read\n  ---\n  duration_ms: 19.2531\n  type: 'test'\n  ...\n# Subtest: search/get read current records and exclude trash, without changing any table\nok 4 - search/get read current records and exclude trash, without changing any table\n  ---\n  duration_ms: 34.083\n  type: 'test'\n  ...\n# Subtest: image tool returns verified ImageContent bytes, not a URL, and refuses corruption/oversize\nok 5 - image tool returns verified ImageContent bytes, not a URL, and refuses corruption/oversize\n  ---\n  duration_ms: 19.8178\n  type: 'test'\n  ...\n# Subtest: no write tool, arbitrary URL, SQL injection or cross-origin bypass\nok 6 - no write tool, arbitrary URL, SQL injection or cross-origin bypass\n  ---\n  duration_ms: 20.0005\n  type: 'test'\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 288.1334\n\n"
+     },
+     {
+       "label": "syntax:src/material-frame-adapter.mjs",
+@@ -834,19 +834,19 @@
+       "label": "materials:ingest-and-human-field-regressions",
+       "passed": true,
+       "status": 0,
+-      "details": "\n  ---\n  duration_ms: 29.8669\n  type: 'test'\n  ...\n# (node:312) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n# (Use `node --trace-warnings ...` to show where the warning was created)\n# Subtest: objects and catalog are persistent and idempotent\nok 38 - objects and catalog are persistent and idempotent\n  ---\n  duration_ms: 86.509\n  type: 'test'\n  ...\n# Subtest: changed batch identity and unchecked assets are rejected\nok 39 - changed batch identity and unchecked assets are rejected\n  ---\n  duration_ms: 47.5919\n  type: 'test'\n  ...\n# Subtest: content hash mismatches rejected\nok 40 - content hash mismatches rejected\n  ---\n  duration_ms: 41.3071\n  type: 'test'\n  ...\n# Subtest: database triggers pin alias even if competing reads become stale\nok 41 - database triggers pin alias even if competing reads become stale\n  ---\n  duration_ms: 42.2947\n  type: 'test'\n  ...\n# Subtest: catalog ingestion never changes saved selections\nok 42 - catalog ingestion never changes saved selections\n  ---\n  duration_ms: 42.8806\n  type: 'test'\n  ...\n# Subtest: transient storage faults are retryable rather than hidden validation failures\nok 43 - transient storage faults are retryable rather than hidden validation failures\n  ---\n  duration_ms: 30.2209\n  type: 'test'\n  ...\n1..43\n# tests 43\n# suites 0\n# pass 43\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 761\n\n"
++      "details": "  duration_ms: 26.3873\n  type: 'test'\n  ...\n# (node:27984) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n# (Use `node --trace-warnings ...` to show where the warning was created)\n# Subtest: objects and catalog are persistent and idempotent\nok 38 - objects and catalog are persistent and idempotent\n  ---\n  duration_ms: 66.2593\n  type: 'test'\n  ...\n# Subtest: changed batch identity and unchecked assets are rejected\nok 39 - changed batch identity and unchecked assets are rejected\n  ---\n  duration_ms: 49.8815\n  type: 'test'\n  ...\n# Subtest: content hash mismatches rejected\nok 40 - content hash mismatches rejected\n  ---\n  duration_ms: 32.868\n  type: 'test'\n  ...\n# Subtest: database triggers pin alias even if competing reads become stale\nok 41 - database triggers pin alias even if competing reads become stale\n  ---\n  duration_ms: 36.0435\n  type: 'test'\n  ...\n# Subtest: catalog ingestion never changes saved selections\nok 42 - catalog ingestion never changes saved selections\n  ---\n  duration_ms: 39.1641\n  type: 'test'\n  ...\n# Subtest: transient storage faults are retryable rather than hidden validation failures\nok 43 - transient storage faults are retryable rather than hidden validation failures\n  ---\n  duration_ms: 33.4664\n  type: 'test'\n  ...\n1..43\n# tests 43\n# suites 0\n# pass 43\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 629.6199\n\n"
+     },
+     {
+       "label": "primary-category:catalog-and-ui-regressions",
+       "passed": true,
+       "status": 0,
+-      "details": " retains the chosen primary root\nok 33 - category UI starts in apparel with no mixed query and reset retains the chosen primary root\n  ---\n  duration_ms: 22.8844\n  type: 'test'\n  ...\n# Subtest: category switch clears incompatible pending filters, page, counts and groups while retaining user records\nok 34 - category switch clears incompatible pending filters, page, counts and groups while retaining user records\n  ---\n  duration_ms: 13.5607\n  type: 'test'\n  ...\n# Subtest: category history contexts cannot restore another root filters and a bad category receipt cannot enter the gallery\nok 35 - category history contexts cannot restore another root filters and a bad category receipt cannot enter the gallery\n  ---\n  duration_ms: 16.7551\n  type: 'test'\n  ...\n# Subtest: quick category switching rejects late search/page responses and keeps only the newest category result\nok 36 - quick category switching rejects late search/page responses and keeps only the newest category result\n  ---\n  duration_ms: 32.0676\n  type: 'test'\n  ...\n# Subtest: a successful empty category request replaces its loading placeholder with a scoped empty state\nok 37 - a successful empty category request replaces its loading placeholder with a scoped empty state\n  ---\n  duration_ms: 13.6136\n  type: 'test'\n  ...\n1..37\n# tests 37\n# suites 0\n# pass 37\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 1275.8507\n\n"
++      "details": "eset retains the chosen primary root\nok 33 - category UI starts in apparel with no mixed query and reset retains the chosen primary root\n  ---\n  duration_ms: 20.3806\n  type: 'test'\n  ...\n# Subtest: category switch clears incompatible pending filters, page, counts and groups while retaining user records\nok 34 - category switch clears incompatible pending filters, page, counts and groups while retaining user records\n  ---\n  duration_ms: 8.8572\n  type: 'test'\n  ...\n# Subtest: category history contexts cannot restore another root filters and a bad category receipt cannot enter the gallery\nok 35 - category history contexts cannot restore another root filters and a bad category receipt cannot enter the gallery\n  ---\n  duration_ms: 11.4754\n  type: 'test'\n  ...\n# Subtest: quick category switching rejects late search/page responses and keeps only the newest category result\nok 36 - quick category switching rejects late search/page responses and keeps only the newest category result\n  ---\n  duration_ms: 24.516\n  type: 'test'\n  ...\n# Subtest: a successful empty category request replaces its loading placeholder with a scoped empty state\nok 37 - a successful empty category request replaces its loading placeholder with a scoped empty state\n  ---\n  duration_ms: 10.6977\n  type: 'test'\n  ...\n1..37\n# tests 37\n# suites 0\n# pass 37\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 997.696\n\n"
+     },
+     {
+       "label": "stage1+stage2+stage3+stage4+stage5:unit-and-contract-tests",
+       "passed": true,
+       "status": 0,
+-      "details": " browser client preserves backend 401/503 instead of replacing with fake records\nok 456 - browser client preserves backend 401/503 instead of replacing with fake records\n  ---\n  duration_ms: 2.7772\n  type: 'test'\n  ...\n# Subtest: project picker loads all pages and preserves failures on later pages\nok 457 - project picker loads all pages and preserves failures on later pages\n  ---\n  duration_ms: 3.541\n  type: 'test'\n  ...\n# Subtest: browser handoff export returns a real protected response, not editor timeline\nok 458 - browser handoff export returns a real protected response, not editor timeline\n  ---\n  duration_ms: 8.7967\n  type: 'test'\n  ...\n# Subtest: browser API client only accepts same-origin path, no token local storage\nok 459 - browser API client only accepts same-origin path, no token local storage\n  ---\n  duration_ms: 0.2509\n  type: 'test'\n  ...\n# Subtest: browser client permits reusing a stable idempotency key for the same retry\nok 460 - browser client permits reusing a stable idempotency key for the same retry\n  ---\n  duration_ms: 4.5143\n  type: 'test'\n  ...\n# Subtest: browser errors expose actionable reasons without raw server details\nok 461 - browser errors expose actionable reasons without raw server details\n  ---\n  duration_ms: 0.7997\n  type: 'test'\n  ...\n1..461\n# tests 461\n# suites 0\n# pass 450\n# fail 0\n# cancelled 0\n# skipped 11\n# todo 0\n# duration_ms 7001.7505\n\n"
++      "details": ": browser client preserves backend 401/503 instead of replacing with fake records\nok 481 - browser client preserves backend 401/503 instead of replacing with fake records\n  ---\n  duration_ms: 2.9482\n  type: 'test'\n  ...\n# Subtest: project picker loads all pages and preserves failures on later pages\nok 482 - project picker loads all pages and preserves failures on later pages\n  ---\n  duration_ms: 5.2882\n  type: 'test'\n  ...\n# Subtest: browser handoff export returns a real protected response, not editor timeline\nok 483 - browser handoff export returns a real protected response, not editor timeline\n  ---\n  duration_ms: 7.217\n  type: 'test'\n  ...\n# Subtest: browser API client only accepts same-origin path, no token local storage\nok 484 - browser API client only accepts same-origin path, no token local storage\n  ---\n  duration_ms: 0.2499\n  type: 'test'\n  ...\n# Subtest: browser client permits reusing a stable idempotency key for the same retry\nok 485 - browser client permits reusing a stable idempotency key for the same retry\n  ---\n  duration_ms: 4.248\n  type: 'test'\n  ...\n# Subtest: browser errors expose actionable reasons without raw server details\nok 486 - browser errors expose actionable reasons without raw server details\n  ---\n  duration_ms: 0.7282\n  type: 'test'\n  ...\n1..486\n# tests 486\n# suites 0\n# pass 475\n# fail 0\n# cancelled 0\n# skipped 11\n# todo 0\n# duration_ms 6654.5516\n\n"
+     },
+     {
+       "label": "organization:syntax:lib/material-organization-policy.mjs",
+@@ -876,25 +876,25 @@
+       "label": "organization:policy-atomicity-and-client",
+       "passed": true,
+       "status": 0,
+-      "details": "duration_ms: 10.1231\n  type: 'test'\n  ...\n# Subtest: bounded body and JSON validation reject malformed input before touching any ledger\nok 112 - bounded body and JSON validation reject malformed input before touching any ledger\n  ---\n  duration_ms: 11.2269\n  type: 'test'\n  ...\n# Subtest: oversized Unicode operation response is rejected before writing rather than hitting D1 bind limits\nok 113 - oversized Unicode operation response is rejected before writing rather than hitting D1 bind limits\n  ---\n  duration_ms: 32.1509\n  type: 'test'\n  ...\n# Subtest: history paging preserves records beyond 100 entries and initial null defaults appear only at end\nok 114 - history paging preserves records beyond 100 entries and initial null defaults appear only at end\n  ---\n  duration_ms: 8.895\n  type: 'test'\n  ...\n# Subtest: audit guards deny update/delete/replace and source absence leaves original fields null\nok 115 - audit guards deny update/delete/replace and source absence leaves original fields null\n  ---\n  duration_ms: 7.6971\n  type: 'test'\n  ...\n# Subtest: unknown storage failure uses a fixed safe error and never exposes source text or SQL\nok 116 - unknown storage failure uses a fixed safe error and never exposes source text or SQL\n  ---\n  duration_ms: 2.6332\n  type: 'test'\n  ...\n1..116\n# tests 116\n# suites 0\n# pass 116\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 9595.5546\n\n"
++      "details": "duration_ms: 8.5655\n  type: 'test'\n  ...\n# Subtest: bounded body and JSON validation reject malformed input before touching any ledger\nok 112 - bounded body and JSON validation reject malformed input before touching any ledger\n  ---\n  duration_ms: 10.8699\n  type: 'test'\n  ...\n# Subtest: oversized Unicode operation response is rejected before writing rather than hitting D1 bind limits\nok 113 - oversized Unicode operation response is rejected before writing rather than hitting D1 bind limits\n  ---\n  duration_ms: 31.4443\n  type: 'test'\n  ...\n# Subtest: history paging preserves records beyond 100 entries and initial null defaults appear only at end\nok 114 - history paging preserves records beyond 100 entries and initial null defaults appear only at end\n  ---\n  duration_ms: 8.7835\n  type: 'test'\n  ...\n# Subtest: audit guards deny update/delete/replace and source absence leaves original fields null\nok 115 - audit guards deny update/delete/replace and source absence leaves original fields null\n  ---\n  duration_ms: 8.6882\n  type: 'test'\n  ...\n# Subtest: unknown storage failure uses a fixed safe error and never exposes source text or SQL\nok 116 - unknown storage failure uses a fixed safe error and never exposes source text or SQL\n  ---\n  duration_ms: 4.5137\n  type: 'test'\n  ...\n1..116\n# tests 116\n# suites 0\n# pass 116\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 7575.8852\n\n"
+     },
+     {
+       "label": "organization:python-collector",
+       "passed": true,
+       "status": 0,
+-      "details": "\ntest_committed_readback_pending_permits_only_reads (test_material_organization_client.OrganizationClientTests.test_committed_readback_pending_permits_only_reads) ... ok\r\ntest_confirmed_result_is_reconciled_without_another_write (test_material_organization_client.OrganizationClientTests.test_confirmed_result_is_reconciled_without_another_write) ... ok\r\ntest_dry_run_is_only_a_read_plan_and_does_not_checkpoint (test_material_organization_client.OrganizationClientTests.test_dry_run_is_only_a_read_plan_and_does_not_checkpoint) ... ok\r\ntest_known_absent_job_resumes_identical_request_after_lost_transport (test_material_organization_client.OrganizationClientTests.test_known_absent_job_resumes_identical_request_after_lost_transport) ... ok\r\ntest_same_key_different_content_is_rejected_before_transport (test_material_organization_client.OrganizationClientTests.test_same_key_different_content_is_rejected_before_transport) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 5 tests in 0.001s\r\n\r\nOK\r\n"
++      "details": "\ntest_committed_readback_pending_permits_only_reads (test_material_organization_client.OrganizationClientTests.test_committed_readback_pending_permits_only_reads) ... ok\r\ntest_confirmed_result_is_reconciled_without_another_write (test_material_organization_client.OrganizationClientTests.test_confirmed_result_is_reconciled_without_another_write) ... ok\r\ntest_dry_run_is_only_a_read_plan_and_does_not_checkpoint (test_material_organization_client.OrganizationClientTests.test_dry_run_is_only_a_read_plan_and_does_not_checkpoint) ... ok\r\ntest_known_absent_job_resumes_identical_request_after_lost_transport (test_material_organization_client.OrganizationClientTests.test_known_absent_job_resumes_identical_request_after_lost_transport) ... ok\r\ntest_same_key_different_content_is_rejected_before_transport (test_material_organization_client.OrganizationClientTests.test_same_key_different_content_is_rejected_before_transport) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 5 tests in 0.002s\r\n\r\nOK\r\n"
+     },
+     {
+       "label": "stage0+stage1:additive-sql-migration-review",
+       "passed": true,
+       "status": 0,
+-      "details": "\ntest_foreign_keys_reject_orphan_documents (test_migrations.StudioMigrationReview.test_foreign_keys_reject_orphan_documents) ... ok\r\ntest_migration_is_additive_idempotent (test_migrations.StudioMigrationReview.test_migration_is_additive_idempotent) ... ok\r\ntest_no_destructive_legacy_media_sql (test_migrations.StudioMigrationReview.test_no_destructive_legacy_media_sql) ... ok\r\ntest_rejects_unsupported_video_editing_entities (test_migrations.StudioMigrationReview.test_rejects_unsupported_video_editing_entities) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.004s\r\n\r\nOK\r\n"
++      "details": "\ntest_foreign_keys_reject_orphan_documents (test_migrations.StudioMigrationReview.test_foreign_keys_reject_orphan_documents) ... ok\r\ntest_migration_is_additive_idempotent (test_migrations.StudioMigrationReview.test_migration_is_additive_idempotent) ... ok\r\ntest_no_destructive_legacy_media_sql (test_migrations.StudioMigrationReview.test_no_destructive_legacy_media_sql) ... ok\r\ntest_rejects_unsupported_video_editing_entities (test_migrations.StudioMigrationReview.test_rejects_unsupported_video_editing_entities) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.008s\r\n\r\nOK\r\n"
+     },
+     {
+       "label": "stage2:handoff-sql-migration-review",
+       "passed": true,
+       "status": 0,
+-      "details": "\ntest_additive_idempotent_and_meta_gate (test_handoff_migrations.HandoffMigrationReview.test_additive_idempotent_and_meta_gate) ... ok\r\ntest_external_status_manual_only (test_handoff_migrations.HandoffMigrationReview.test_external_status_manual_only) ... ok\r\ntest_foreign_keys_reject_orphan (test_handoff_migrations.HandoffMigrationReview.test_foreign_keys_reject_orphan) ... ok\r\ntest_no_legacy_media_mutations (test_handoff_migrations.HandoffMigrationReview.test_no_legacy_media_mutations) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.008s\r\n\r\nOK\r\n"
++      "details": "\ntest_additive_idempotent_and_meta_gate (test_handoff_migrations.HandoffMigrationReview.test_additive_idempotent_and_meta_gate) ... ok\r\ntest_external_status_manual_only (test_handoff_migrations.HandoffMigrationReview.test_external_status_manual_only) ... ok\r\ntest_foreign_keys_reject_orphan (test_handoff_migrations.HandoffMigrationReview.test_foreign_keys_reject_orphan) ... ok\r\ntest_no_legacy_media_mutations (test_handoff_migrations.HandoffMigrationReview.test_no_legacy_media_mutations) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.009s\r\n\r\nOK\r\n"
+     },
+     {
+       "label": "stage5:next-route-syntax:app/materials/route.ts",
+diff --git a/studio-core/src/story-spec.mjs b/studio-core/src/story-spec.mjs
+index ce57d77..6b1888d 100644
+--- a/studio-core/src/story-spec.mjs
++++ b/studio-core/src/story-spec.mjs
+@@ -1,7 +1,8 @@
+ import {error,objectInput,requiredText,optionalText,stableId} from './validation.mjs';
+ import {parseScreenplay} from './screenplay.mjs';
+ import {normalizeQuality,resolveVoice} from './story-quality.mjs';
+-export const workflowKinds=['outline','simulation','adaptation','review_policy','review','casting','appearance'];
++import {normalizeStoryStructure,structureKinds} from './story-structure.mjs';
++export const workflowKinds=['outline','simulation','adaptation','review_policy','review','casting','appearance',...structureKinds];
+ export const storageKind=kind=>workflowKinds.includes(kind)?'chapter':kind;
+ const keys=(value,allowed)=>{objectInput(value);for(const k of Object.keys(value))if(!allowed.includes(k))error('INVALID_SPEC_FIELD',422,'不支持的创作文稿字段：'+k);};
+ const list=(value=[],max=100)=>{if(!Array.isArray(value)||value.length>max)error('INVALID_SPEC',422,'列表超出范围');return value;};
+@@ -14,6 +15,7 @@ export const paragraphs=body=>String(body??'').split(/\n\s*\n/).map(x=>x.trim())
+  * This module does not fetch a model, change canon or silently rebase sources. */
+ export async function normalizeStorySpec(kind,input,ctx){
+  const s=input??{};objectInput(s);
++ if(structureKinds.includes(kind))return normalizeStoryStructure(kind,s,ctx);
+  if(['review_policy','review'].includes(kind))return normalizeQuality(kind,s,ctx);
+  if(['character','instance'].includes(kind)){
+   keys(s,['voice']);const result={};
+diff --git a/studio-core/src/story-structure.mjs b/studio-core/src/story-structure.mjs
+new file mode 100644
+index 0000000..eeaa93a
+--- /dev/null
++++ b/studio-core/src/story-structure.mjs
+@@ -0,0 +1,45 @@
++import {error,objectInput,optionalText,stableId} from './validation.mjs';
++
++export const structureKinds=['episode','shot'];
++const keys=(value,allowed)=>{objectInput(value);for(const key of Object.keys(value))if(!allowed.includes(key))error('INVALID_SPEC_FIELD',422,'不支持的创作文稿字段：'+key);};
++const list=(value=[],label,max=100)=>{if(!Array.isArray(value)||value.length>max)error('INVALID_STRUCTURE_LIST',422,label+'最多 '+max+' 项');return value;};
++const unique=(value,label,normalize)=>{const result=list(value,label).map(normalize);if(new Set(result).size!==result.length)error('DUPLICATE_STRUCTURE_REFERENCE',422,label+'不能重复');return result;};
++const number=(value,label)=>{if(!Number.isSafeInteger(value)||value<1)error('INVALID_STRUCTURE_NUMBER',422,label+'必须为正整数');return value;};
++const text=(value,label)=>optionalText(value,label,8000);
++
++/** Author-supplied plans only. Dependencies use immutable story versions; reverse
++ * membership is a reading projection, never another versioned parent pointer. */
++export async function normalizeStoryStructure(kind,input,ctx){
++ const s=input??{};
++ if(kind==='episode'){
++  keys(s,['number','goal','entry_state','exit_state','previous_episode_id','scene_ids']);
++  const result={number:number(s.number,'集号'),goal:text(s.goal,'本集目标'),entry_state:text(s.entry_state,'入集状态'),exit_state:text(s.exit_state,'离集状态'),scene_ids:unique(s.scene_ids,'分集场次',stableId)};
++  if(s.previous_episode_id){
++   const previousId=stableId(s.previous_episode_id),seen=new Set(ctx.itemId?[ctx.itemId]:[]);
++   if(seen.has(previousId))error('EPISODE_DEPENDENCY_CYCLE',422,'前集关联不能返回当前分集或形成循环');
++   let previous=await ctx.dep(previousId,['episode']);if(previous.content.spec.number>=result.number)error('PREVIOUS_EPISODE_ORDER',422,'前集的编号必须小于本集');result.previous_episode_id=previous.id;
++   while(previous){
++    if(seen.has(previous.id))error('EPISODE_DEPENDENCY_CYCLE',422,'前集关联不能返回当前分集或形成循环');seen.add(previous.id);
++    const ancestorId=previous.content.spec.previous_episode_id;if(!ancestorId)break;
++    if(seen.has(ancestorId))error('EPISODE_DEPENDENCY_CYCLE',422,'前集关联不能返回当前分集或形成循环');
++    const pin=previous.content.sources.find(source=>source.kind==='item'&&source.item_id===ancestorId);if(!pin)error('EPISODE_PREVIOUS_PIN_REQUIRED',422,'前集链缺少准确版本来源');
++    previous=await ctx.readDependency(ancestorId,['episode'],pin.version);if(previous.sha256!==pin.sha256)error('SOURCE_HASH_MISMATCH',422,'前集链的固定哈希不一致');
++   }
++  }
++  for(const id of result.scene_ids)await ctx.dep(id,['scene']);
++  return result;
++ }
++ keys(s,['episode_id','scene_id','number','duration_ms','cast','framing','camera','action','dialogue','source_paragraphs']);
++ const episode=await ctx.dep(stableId(s.episode_id),['episode']),sceneId=stableId(s.scene_id);
++ if(!episode.content.spec.scene_ids.includes(sceneId))error('SHOT_SCENE_SCOPE',422,'镜头场次不属于所选分集的准确版本');
++ const scenePin=episode.content.sources.find(source=>source.kind==='item'&&source.item_id===sceneId);
++ if(!scenePin)error('EPISODE_SCENE_PIN_REQUIRED',422,'分集场次缺少准确版本来源');
++ const scene=await ctx.dep(sceneId,['scene'],true,scenePin.version);
++ if(scene.sha256!==scenePin.sha256)error('SOURCE_HASH_MISMATCH',422,'镜头场次与分集固定的来源哈希不同');
++ const cast=unique(s.cast,'镜头人物',stableId),allowed=new Set(scene.content.spec?.cast??[]);
++ for(const id of cast){if(!allowed.has(id))error('SHOT_CAST_SCOPE',422,'镜头人物不在该场次的出场状态中');await ctx.dep(id,['instance']);}
++ const source_paragraphs=unique(s.source_paragraphs,'正文段落',value=>number(value,'正文段落'));
++ for(const source of ctx.sources.filter(source=>source.kind==='story'))if(source.item_id!==scene.id||source.version!==scene.version||!source_paragraphs.includes(source.paragraph))error('SHOT_PARAGRAPH_SCOPE',422,'镜头正文来源必须属于所选场次的准确版本和明确段落');
++ for(const index of source_paragraphs)await ctx.paragraph(scene.id,scene.version,index,'scene');
++ return {episode_id:episode.id,scene_id:scene.id,number:number(s.number,'镜号'),duration_ms:s.duration_ms==null?null:number(s.duration_ms,'计划时长（毫秒）'),cast,framing:text(s.framing,'景别与构图'),camera:text(s.camera,'机位与运动'),action:text(s.action,'镜头动作'),dialogue:text(s.dialogue,'准确台词'),source_paragraphs};
++}
+diff --git a/studio-core/src/story-workspace.mjs b/studio-core/src/story-workspace.mjs
+index 6baee29..a4a43f0 100644
+--- a/studio-core/src/story-workspace.mjs
++++ b/studio-core/src/story-workspace.mjs
+@@ -6,8 +6,9 @@ import {parseScreenplay,renderScreenplay,voiceReview} from './screenplay.mjs';
+ import {createStoryProduction,productionKinds} from './story-production.mjs';
+ import {hasCreationAccess} from './creation-authority.mjs';
+ import {hasRunnerAccess} from './runner-authority.mjs';
++import {structureKinds} from './story-structure.mjs';
+ 
+-export const storyKinds=['character','instance','event','relation','knowledge','outline','simulation','chapter','adaptation','scene','review_policy','review','casting','appearance'];
++export const storyKinds=['character','instance','event','relation','knowledge','outline','simulation','chapter','adaptation','scene','review_policy','review','casting','appearance',...structureKinds];
+ const keys=(value,allowed)=>{objectInput(value);for(const key of Object.keys(value))if(!allowed.includes(key))error('INVALID_FIELD',422,`不支持字段：${key}`);};
+ const integer=(v,label)=>{if(v===undefined||v===null||v==='')return null;if(!Number.isSafeInteger(v)||Math.abs(v)>100000000)error('INVALID_INPUT',422,`${label}必须为有限整数或空`);return v;};
+ const ids=(v=[])=>{if(!Array.isArray(v)||v.length>100)error('INVALID_INPUT',422,'关联列表最多 100 项');return [...new Set(v.map(stableId))];};
+@@ -46,7 +47,7 @@ export function createStoryWorkspace({db,now=()=>new Date().toISOString(),id=()=
+   }
+   async function refItem(owner,pid,itemId,kinds,branch,timeline){const r=await row(owner,pid,itemId);if(!kinds.includes(r.kind)||r.branch!==branch||r.timeline!==timeline)error('REFERENCE_SCOPE_MISMATCH',422,'关联对象类型、分支或时间线不匹配');return r;}
+   const persistedLookup={row,revision};
+-  async function normalize(owner,pid,kind,input,branch,timeline,{requireCurrent=false,lookup=persistedLookup}={}){
++  async function normalize(owner,pid,kind,input,branch,timeline,{requireCurrent=false,lookup=persistedLookup,itemId=null}={}){
+     const {row,revision}=lookup;
+     const refItem=async(owner,pid,itemId,kinds,branch,timeline)=>{const r=await row(owner,pid,itemId);if(!kinds.includes(r.kind)||r.branch!==branch||r.timeline!==timeline)error('REFERENCE_SCOPE_MISMATCH',422,'关联对象类型、分支或时间线不匹配');return r;};
+     keys(input,['title','body','aliases','fields','sources','audience','known_by','known_from','reader_from','story_order','narrative_order','valid_from','valid_to','spec']);
+@@ -78,7 +79,7 @@ export function createStoryWorkspace({db,now=()=>new Date().toISOString(),id=()=
+       const a=await refItem(owner,pid,fields.from_id,allowed,branch,timeline),b=await refItem(owner,pid,fields.to_id,allowed,branch,timeline);
+       if(['causes','requires'].includes(fields.relationship_type)&&(a.kind!=='event'||b.kind!=='event'||fields.layer!=='event'||fields.direction!=='one'))error('INVALID_CAUSAL_EDGE',422,'明确因果与必要条件仅用于有向事件关系');
+     }
+-    const sources=[];
++    const sources=[],structurePins=new Set();
+     if(!Array.isArray(input.sources??[])||(input.sources??[]).length>100)error('INVALID_INPUT',422,'来源最多 100 条');
+     for(const source of input.sources??[]){
+       keys(source,['kind','item_id','version','paragraph','text','origin','url','quote','sha256']);
+@@ -87,6 +88,7 @@ export function createStoryWorkspace({db,now=()=>new Date().toISOString(),id=()=
+         sources.push({kind:'note',text:requiredText(source.text,'依据摘要',5000),origin:enumValue(source.origin??'user',['user','adopted_text','assistant','inference','external'],'来源性质'),url});continue;
+       }
+       if(source.kind==='item'){
++        if(structureKinds.includes(kind)){if(structurePins.has(source.item_id))error('DUPLICATE_STRUCTURE_REFERENCE',422,'同一创作依赖只能固定一个准确版本');structurePins.add(source.item_id);}
+         const r=await row(owner,pid,source.item_id);if(r.branch!==branch||r.timeline!==timeline)error('REFERENCE_SCOPE_MISMATCH',422,'来源的分支或时间线不匹配');
+         const v=await revision(owner,pid,r.id,source.version);if(source.sha256&&source.sha256!==v.sha256)error('SOURCE_HASH_MISMATCH',422,'来源哈希与精确版本不一致');
+         sources.push({kind:'item',item_id:r.id,version:v.version,sha256:v.sha256});continue;
+@@ -96,6 +98,7 @@ export function createStoryWorkspace({db,now=()=>new Date().toISOString(),id=()=
+       let text;
+       if(source.kind==='story'){
+         const r=await row(owner,pid,source.item_id),v=await revision(owner,pid,r.id,source.version);
++        if(structureKinds.includes(kind)&&(r.branch!==branch||r.timeline!==timeline))error('REFERENCE_SCOPE_MISMATCH',422,'正文来源的分支或时间线不匹配');
+         if(!['chapter','scene'].includes(r.kind))error('INVALID_SOURCE',422,'段落来源必须是章节或场景');text=v.content.body;
+         if(kind==='scene'&&(r.kind!=='chapter'||r.accepted_version!==source.version))error('ADOPTED_CHAPTER_REQUIRED',422,'改编必须引用本作品当前已采纳章节的精确版本');
+       }else{
+@@ -105,22 +108,27 @@ export function createStoryWorkspace({db,now=()=>new Date().toISOString(),id=()=
+       const quote=storyParagraphs(text)[source.paragraph-1];if(quote===undefined)error('SOURCE_PARAGRAPH_MISSING',422,'指定段落不存在，不能悄悄改连到最新段落');
+       sources.push({kind:source.kind,item_id:source.item_id,version:source.version,paragraph:source.paragraph,quote});
+     }
+-    async function dep(itemId,kinds=null,required=true,pinnedVersion=null){
++    async function dep(itemId,kinds=null,required=true,pinnedVersion=null,track=true){
+       const r=await row(owner,pid,stableId(itemId));if(r.branch!==branch||r.timeline!==timeline||kinds&&!kinds.includes(r.kind))error('REFERENCE_SCOPE_MISMATCH',422,'创作依赖的类型、分支或时间线不匹配');
+-      const pin=sources.find(s=>s.kind==='item'&&s.item_id===itemId),version=pinnedVersion??pin?.version??r.accepted_version;
+-      if(pin&&pinnedVersion&&pin.version!==pinnedVersion)error('SOURCE_VERSION_MISMATCH',422,'改编方案与场次的章节版本不一致');
++      const pin=track?sources.find(s=>s.kind==='item'&&s.item_id===itemId):null,version=pinnedVersion??pin?.version??r.accepted_version;
++      if(pin&&pinnedVersion&&pin.version!==pinnedVersion)error('SOURCE_VERSION_MISMATCH',422,'引用的固定版本与上游计划不一致');
+       if(!version){if(required||requireCurrent)error('ADOPTED_INPUT_REQUIRED',422,'此创作依赖尚未采纳');return null;}
++      if(structureKinds.includes(kind)){
++        if(r.archived||!r.accepted_version)error('ADOPTED_INPUT_REQUIRED',422,'分集与镜头依赖必须已采纳且未归档');
++        if(version!==r.accepted_version&&!await sql("SELECT id FROM studio_story_decisions WHERE owner_id=? AND project_id=? AND item_id=? AND version=? AND action='accept' LIMIT 1",owner,pid,itemId,version).first())error('ADOPTED_INPUT_REQUIRED',422,'分集与镜头不能引用尚未采纳的候选版本');
++      }
+       const v=await revision(owner,pid,itemId,version);
+       if(requireCurrent&&(r.archived||r.accepted_version!==version))error('SOURCE_STALE',409,'来源已改变或归档，请明确重绑版本后另存候选');
+-      if(!pin)sources.push({kind:'item',item_id:itemId,version,sha256:v.sha256});
++      if(track&&!pin)sources.push({kind:'item',item_id:itemId,version,sha256:v.sha256});
+       return {id:itemId,kind:r.kind,version,sha256:v.sha256,content:v.content};
+     }
+-    async function paragraph(itemId,version,index){
+-      const r=await row(owner,pid,itemId);if(r.kind!=='chapter'||r.branch!==branch||r.timeline!==timeline)error('INVALID_SOURCE',422,'原文必须是当前分支小说章节');
++    async function paragraph(itemId,version,index,sourceKind='chapter'){
++      const r=await row(owner,pid,itemId);if(r.kind!==sourceKind||r.branch!==branch||r.timeline!==timeline)error('INVALID_SOURCE',422,'原文类型、分支或时间线不匹配');
+       const v=await revision(owner,pid,itemId,version),quote=storyParagraphs(v.content.body)[index-1];if(!quote)error('SOURCE_PARAGRAPH_MISSING',422,'指定原文段落不存在');
+       if(!sources.some(s=>s.kind==='story'&&s.item_id===itemId&&s.version===version&&s.paragraph===index))sources.push({kind:'story',item_id:itemId,version,paragraph:index,quote});
+     }
+-    const spec=productionKinds.includes(kind)?await production.normalize(kind,input.spec,{owner,pid,dep}):await normalizeStorySpec(kind,input.spec,{title,body,fields,sources,dep,paragraph});
++    const spec=productionKinds.includes(kind)?await production.normalize(kind,input.spec,{owner,pid,dep}):await normalizeStorySpec(kind,input.spec,{title,body,fields,sources,dep,paragraph,itemId,readDependency:(id,kinds,version)=>dep(id,kinds,true,version,false)});
++    if(structureKinds.includes(kind)&&sources.length>100)error('STRUCTURE_SOURCE_LIMIT',422,'分集与镜头的来源及准确引用合计最多 100 条，请缩小创作范围');
+     if(workflowKinds.includes(kind)&&(audience!=='author'||input.reader_from!=null))error('PLAN_IS_NOT_FACT',422,'创作计划、规则包和审阅材料仅供作者使用，不作为角色或读者已知事实');
+     if(kind==='scene'&&!sources.some(s=>s.kind==='story'))error('ADOPTED_CHAPTER_REQUIRED',422,'场景需要已采纳小说章节的段落来源');
+     const content={title,body,aliases,fields,sources,audience,known_by,known_from:integer(input.known_from,'获知时点'),reader_from:integer(input.reader_from,'读者揭示时点'),story_order:integer(input.story_order,'剧情顺序'),valid_from:integer(input.valid_from,'生效时点'),valid_to:integer(input.valid_to,'结束时点')};
+@@ -139,13 +147,14 @@ export function createStoryWorkspace({db,now=()=>new Date().toISOString(),id=()=
+     const branch=previous?.branch??requiredText(input.branch??'main','分支',80),timeline=previous?.timeline??requiredText(input.timeline??'main','时间线',80);
+     if(previous&&(input.kind&&input.kind!==kind||input.branch&&input.branch!==branch||input.timeline&&input.timeline!==timeline))error('IMMUTABLE_SCOPE',422,'类型、分支和时间线不可原位修改');
+     if(previous&&(previous.archived||previous.revision!==input.expected_revision))conflict();
+-    const content=await normalize(owner,pid,kind,input.content,branch,timeline),baseline=await canon(owner,pid);
++    const item_id=itemId??await sha256(owner+':'+pid+':'+op.key);
++    const content=await normalize(owner,pid,kind,input.content,branch,timeline,{itemId:item_id}),baseline=await canon(owner,pid);
+     if(input.expected_canon_revision!==undefined&&input.expected_canon_revision!==baseline)conflict();
+     if(previous){const old=await revision(owner,pid,itemId,previous.head_version);for(const s of old.content.sources){let pin;try{pin=JSON.parse(s.text);}catch{continue;}if(!['research_topic','research_source'].includes(pin?.type))continue;
+       const kept=content.sources.some(n=>{try{const next=JSON.parse(n.text);return next.type===pin.type&&(pin.type==='research_topic'?next.topic_id===pin.topic_id:n.text===s.text&&n.url===s.url);}catch{return false;}});if(!kept)error('RESEARCH_PROVENANCE_REQUIRED',422,'研究来源不可从提案版本中静默删除或改写；请保留原来源并另加人工说明');}}
+     let gate=input.expected_canon_revision===undefined?'':' AND COALESCE((SELECT revision FROM studio_story_canon WHERE project_id=? AND owner_id=?),0)=?';
+     const gateArgs=input.expected_canon_revision===undefined?[]:[pid,owner,input.expected_canon_revision];
+-    const item_id=itemId??await sha256(owner+':'+pid+':'+op.key),version=(previous?.head_version??0)+1,nextRevision=(previous?.revision??0)+1;
++    const version=(previous?.head_version??0)+1,nextRevision=(previous?.revision??0)+1;
+     if(productionKinds.includes(kind)){const g=await production.guard(owner,pid,kind,content,item_id);gate+=' AND ('+g.text+')';gateArgs.push(...g.args);}
+     if(content.sources.some(s=>s.kind==='item'&&s.item_id===item_id))error('SELF_DEPENDENCY',422,'不可将当前卡片自身作为创作上游；旧版本由版本历史保留');
+     const result={id:item_id,version,revision:nextRevision,canonical_unchanged:true};
+@@ -192,7 +201,7 @@ export function createStoryWorkspace({db,now=()=>new Date().toISOString(),id=()=
+     // completed copy must not re-check a later canon or append another version.
+     const op=await prepareOp(p,pid,saveInput,'save:'+itemId);if(op.replay)return op.replay;
+     if(v.version!==r.head_version||v.version===r.accepted_version)error('CURRENT_CANDIDATE_REQUIRED',409,'请重新读取最新候选；正式版本请通过编辑另存');
+-    await normalize(owner,pid,r.kind,v.content,r.branch,r.timeline,{requireCurrent:true});
++    await normalize(owner,pid,r.kind,v.content,r.branch,r.timeline,{requireCurrent:true,itemId});
+     return save(p,pid,saveInput,itemId);
+   }
+   async function decide(p,pid,itemId,input,authority=null){
+@@ -213,17 +222,17 @@ export function createStoryWorkspace({db,now=()=>new Date().toISOString(),id=()=
+       }
+       if(!automatic&&latest?.action!=='submit')error('REVIEW_REQUIRED',409,'请先提交该候选审阅；已拒绝版本须另存新候选');
+       if(v.base_accepted_version!==r.accepted_version||input.expected_canon_revision!==await canon(op.owner,pid)||v.base_canon_revision!==input.expected_canon_revision)conflict();
+-      await normalize(op.owner,pid,r.kind,{...v.content,sources:v.content.sources.map(({quote,...s})=>s)},r.branch,r.timeline,{requireCurrent:true});
++      await normalize(op.owner,pid,r.kind,{...v.content,sources:v.content.sources.map(({quote,...s})=>s)},r.branch,r.timeline,{requireCurrent:true,itemId});
+       if(!v.content.sources.length)error('SOURCE_REQUIRED',422,'采纳前请填写设定依据或准确原文来源');
+       const check=await continuityInternal(op.owner,pid,r,v.content);
+       if(check.some(x=>x.severity==='block'))error('CONTINUITY_BLOCKED',409,check.filter(x=>x.severity==='block').map(x=>x.message).join('；'));
+     }
+-    if(action==='restore'&&r.accepted_version!==null&&productionKinds.includes(r.kind)){const accepted=await revision(op.owner,pid,itemId,r.accepted_version);await normalize(op.owner,pid,r.kind,accepted.content,r.branch,r.timeline,{requireCurrent:true});}
++    if(action==='restore'&&r.accepted_version!==null&&(productionKinds.includes(r.kind)||structureKinds.includes(r.kind))){const accepted=await revision(op.owner,pid,itemId,r.accepted_version);await normalize(op.owner,pid,r.kind,accepted.content,r.branch,r.timeline,{requireCurrent:true,itemId});}
+     const changesCanon=action==='accept'||(['archive','restore'].includes(action)&&r.accepted_version!==null);
+     const result={id:itemId,version:v.version,revision:r.revision+1,action,canonical_unchanged:!changesCanon};
+-    const productionDecision=productionKinds.includes(r.kind)&&changesCanon;
+-    const expectedCanon=action==='accept'||productionDecision?input.expected_canon_revision:await canon(op.owner,pid);
+-    if(productionDecision&&expectedCanon!==await canon(op.owner,pid))conflict();
++    const guardedDecision=(productionKinds.includes(r.kind)||structureKinds.includes(r.kind))&&changesCanon;
++    const expectedCanon=action==='accept'||guardedDecision?input.expected_canon_revision:await canon(op.owner,pid);
++    if(guardedDecision&&expectedCanon!==await canon(op.owner,pid))conflict();
+     const externalGate=productionKinds.includes(r.kind)&&(action==='accept'||action==='restore'&&r.accepted_version!==null)?await production.guard(op.owner,pid,r.kind,(action==='restore'?await revision(op.owner,pid,itemId,r.accepted_version):v).content,itemId,{unique:true}):{text:'1=1',args:[]};
+     const update=sql(`UPDATE studio_story_items SET revision=revision+1,last_mutation_id=?,updated_at=?,accepted_version=?,archived=? WHERE id=? AND owner_id=? AND project_id=? AND revision=?${changesCanon?' AND EXISTS(SELECT 1 FROM studio_story_canon WHERE project_id=? AND owner_id=? AND revision=?)':''} AND (${externalGate.text})`,op.op,op.stamp,action==='accept'?v.version:r.accepted_version,action==='archive'?1:action==='restore'?0:r.archived,itemId,op.owner,pid,input.expected_revision,...(changesCanon?[pid,op.owner,expectedCanon]:[]),...externalGate.args);
+     const statements=[update];
+@@ -277,7 +286,7 @@ export function createStoryWorkspace({db,now=()=>new Date().toISOString(),id=()=
+     if(perspective==='author'){
+       const accepted=new Map((await records(owner,pid,{...options,candidates:false,archived:true})).map(n=>[n.id,n]));
+       const heads=options.candidates?scopedNodes:await records(owner,pid,{...options,candidates:true});
+-      workflowSummary={scope:'branch_timeline',includes_hidden_candidates:true,counts:Object.fromEntries(['outline','simulation','chapter','adaptation','scene'].map(kind=>[kind,{accepted:[...accepted.values()].filter(n=>n.kind===kind&&(options.archived||!n.archived)).length,candidates:heads.filter(n=>n.kind===kind&&['draft','pending'].includes(n.status)).length,rejected:heads.filter(n=>n.kind===kind&&n.status==='rejected').length}]))};
++      workflowSummary={scope:'branch_timeline',includes_hidden_candidates:true,counts:Object.fromEntries(['outline','simulation','chapter','adaptation','scene',...structureKinds].map(kind=>[kind,{accepted:[...accepted.values()].filter(n=>n.kind===kind&&(options.archived||!n.archived)).length,candidates:heads.filter(n=>n.kind===kind&&['draft','pending'].includes(n.status)).length,rejected:heads.filter(n=>n.kind===kind&&n.status==='rejected').length}]))};
+       const documents=new Map((await all('SELECT id,current_revision AS version FROM studio_documents WHERE owner_id=? AND project_id=?',owner,pid)).map(n=>[n.id,n]));
+       const externalCache=new Map();for(const n of nodes)n.needs_review=[...dependencyFindings(n,accepted,documents),...await production.findings(owner,n,accepted,externalCache)];
+     }else for(const n of nodes)n.needs_review=[];
+@@ -380,13 +389,13 @@ export function createStoryWorkspace({db,now=()=>new Date().toISOString(),id=()=
+         if(['item','story'].includes(out.kind)&&out.version==='next'){const target=drafts.get(out.item_id);if(!target)error('INVALID_NEXT_VERSION',422,'next 只适用于当前变更集');out.version=target.version;}
+         return out;
+       }
+-      if(typeof value==='string'&&value.startsWith('$')&&(/_id$/.test(key)||['participants','known_by','cast','required_events','forbidden_events'].includes(key))){const target=byKey.get(value.slice(1));if(!target)error('UNKNOWN_CHANGE_REFERENCE',422,'未知的变更集引用');return target.id;}
++      if(typeof value==='string'&&value.startsWith('$')&&(/_id$/.test(key)||['participants','known_by','cast','scene_ids','required_events','forbidden_events'].includes(key))){const target=byKey.get(value.slice(1));if(!target)error('UNKNOWN_CHANGE_REFERENCE',422,'未知的变更集引用');return target.id;}
+       return value;
+     }
+     const lookup={row:async(o,projectId,itemId)=>{const d=drafts.get(itemId);return d?{...d,accepted_version:d.version,head_version:d.version,archived:0}:row(o,projectId,itemId);},revision:async(o,projectId,itemId,version)=>{const d=drafts.get(itemId);if(d&&version===d.version)return compute(d);return revision(o,projectId,itemId,version);}};
+     async function compute(d){
+       if(done.has(d.id))return done.get(d.id);if(visiting.has(d.id))error('CHANGESET_DEPENDENCY_CYCLE',422,'变更集版本依赖形成循环');visiting.add(d.id);
+-      const content=await normalize(owner,pid,d.kind,resolve(d.raw),branch,timeline,{lookup});
++      const content=await normalize(owner,pid,d.kind,resolve(d.raw),branch,timeline,{lookup,itemId:d.id});
+       if(!content.sources.length)error('SOURCE_REQUIRED',422,'每项变更需要明确来源或作者提案说明');
+       const result={...d,raw:undefined,content,sha256:await sha256(JSON.stringify(content))};done.set(d.id,result);visiting.delete(d.id);ordered.push(result);return result;
+     }
+diff --git a/studio-core/tests/episode-shot-ux.test.mjs b/studio-core/tests/episode-shot-ux.test.mjs
+new file mode 100644
+index 0000000..85a2554
+--- /dev/null
++++ b/studio-core/tests/episode-shot-ux.test.mjs
+@@ -0,0 +1,34 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import {episodeShotPlan,moveStoryReference,resetPlanningPins,sourceParagraphs} from '../../components/workspace/episode-shot-ux.mjs';
++
++const item=(id,kind,spec={},extra={})=>({id,kind,version:1,status:'accepted',content:{title:id,body:'',fields:{},sources:[],spec},...extra});
++test('declared episode membership retains scene order and sorts equal shot numbers stably',()=>{
++ const result=episodeShotPlan([item('scene-a','scene'),item('scene-b','scene'),item('chapter','chapter'),item('e2','episode',{number:2,scene_ids:[]}),item('e1','episode',{number:1,scene_ids:['scene-b','scene-a','missing']}),item('s-b','shot',{episode_id:'e1',scene_id:'scene-b',number:2}),item('s-a','shot',{episode_id:'e1',scene_id:'scene-b',number:2})]);
++ assert.deepEqual(result.groups.map(group=>group.episode.id),['e1','e2']);
++ assert.deepEqual(result.groups[0].scenes.map(entry=>entry.id),['scene-b','scene-a','missing']);
++ assert.deepEqual(result.groups[0].scenes[0].shots.map(shot=>shot.id),['s-a','s-b']);
++ assert.equal(result.groups[0].scenes[2].scene,null);assert.deepEqual(result.scenes,[]);assert.deepEqual(result.shots,[]);
++});
++test('candidate status and unexpanded parents remain truthful without guessing membership from titles',()=>{
++ const orphan=item('orphan','shot',{episode_id:'unloaded',scene_id:'scene',number:1},{status:'draft'});
++ const result=episodeShotPlan([item('scene','scene'),item('e','episode',{number:1,scene_ids:[]},{archived:true}),orphan,item('e 1 scene 1 shot 1','chapter')]);
++ assert.deepEqual(result.groups,[]);assert.deepEqual(result.scenes.map(value=>value.id),['scene']);assert.equal(result.shots[0].status,'draft');
++});
++test('scene reordering copies input and preserves IDs at boundaries',()=>{
++ const original=['a','b','c'];assert.deepEqual(moveStoryReference(original,1,-1),['b','a','c']);assert.deepEqual(original,['a','b','c']);assert.deepEqual(moveStoryReference(original,0,-1),original);assert.deepEqual(moveStoryReference(original,2,1),original);
++});
++test('explicit re-pin removes only original/current structural pins and scene paragraph pins',()=>{
++ const sources=[{kind:'item',item_id:'old-episode',version:1},{kind:'item',item_id:'episode',version:1},{kind:'item',item_id:'old-scene',version:1},{kind:'item',item_id:'scene',version:1},{kind:'item',item_id:'cast',version:1},{kind:'item',item_id:'research',version:1},{kind:'story',item_id:'scene',version:1,paragraph:1},{kind:'story',item_id:'old-scene',version:1,paragraph:2},{kind:'story',item_id:'research',version:1,paragraph:1},{kind:'document',item_id:'scene',version:1},{kind:'note',text:'手工依据'}];
++ const content={title:'镜头',body:'',fields:{},sources,spec:{episode_id:'episode',scene_id:'scene',cast:['cast']}};
++ const result=resetPlanningPins('shot',content,{spec:{episode_id:'old-episode',scene_id:'old-scene'}});
++ assert.deepEqual(result.sources,sources.slice(5,6).concat(sources.slice(8)));assert.equal(content.sources.length,11);assert.equal(result.spec,content.spec);
++});
++test('episode re-pin preserves unrelated paragraphs, notes and unsupported kinds',()=>{
++ const content={title:'集',body:'',fields:{},spec:{previous_episode_id:'e0',scene_ids:['scene']},sources:[{kind:'item',item_id:'scene'},{kind:'item',item_id:'old-scene'},{kind:'item',item_id:'e0'},{kind:'story',item_id:'scene',paragraph:1},{kind:'note',text:'依据'}]};
++ assert.deepEqual(resetPlanningPins('episode',content,{spec:{scene_ids:['old-scene']}}).sources,content.sources.slice(3));
++ assert.deepEqual(resetPlanningPins('chapter',content).sources,content.sources);
++});
++test('source paragraph preview shares blank-line numbering with source locator',()=>{
++ assert.deepEqual(sourceParagraphs('  第一段\n段内换行\n\n \n第二段\n\n第三段  '),['第一段\n段内换行','第二段','第三段']);assert.deepEqual(sourceParagraphs(''),[]);
++});
+diff --git a/studio-core/tests/project-relations.test.mjs b/studio-core/tests/project-relations.test.mjs
+index c2a2f4f..6bb28d4 100644
+--- a/studio-core/tests/project-relations.test.mjs
++++ b/studio-core/tests/project-relations.test.mjs
+@@ -38,7 +38,7 @@ test('same title and body episode/shot words create no implicit relation or tota
+  const a=record('a','character'),b=record('b','scene');a.content.title=b.content.title='第12集 少年 8镜';b.content.body='18岁，采用服装look，角色a出场';
+  const result=projectRelations('p',graph([a,b]));
+  assert.deepEqual(result.edges,[]);assert.deepEqual(result.assets,[]);assert.equal(result.records[0].age,'');
+- assert.deepEqual(result.gaps,['分集关系尚未结构化','逐镜关系尚未结构化']);assert.ok(!Object.hasOwn(result,'episodeCount'));assert.ok(!Object.hasOwn(result,'shotCount'));
++ assert.deepEqual(result.gaps,['尚无结构化分集','尚无镜头计划']);assert.ok(!Object.hasOwn(result,'episodeCount'));assert.ok(!Object.hasOwn(result,'shotCount'));
+ });
+ test('source pins report unavailable, changed version, missing revision and hash mismatch without rebasing',()=>{
+  const nodes=fixture(),scene=nodes.find(node=>node.id==='scene');
+@@ -89,3 +89,21 @@ test('all projections are pure and leave caller records and immutable handoff by
+  const g=graph(fixture()),h={project_id:'p',manifest:{project:{id:'p'},assets:[{frame_asset_id:asset}]}};const before=JSON.stringify([g,h]);
+  projectRelations('p',g,h);assert.equal(JSON.stringify([g,h]),before);
+ });
++
++test('episode and shot links use declared exact pins and report missing structures independently',()=>{
++ const scene=record('scene','scene',{}, {cast:['state']}),state=record('state','instance');
++ const previous=record('previous','episode',{}, {number:1,scene_ids:[]});
++ const episode=record('episode','episode',{}, {number:2,previous_episode_id:'previous',scene_ids:['scene']});
++ episode.content.sources=[{kind:'item',item_id:'scene',version:1,sha256:digest},{kind:'item',item_id:'previous',version:1,sha256:digest}];
++ const shot=record('shot','shot',{}, {number:3,episode_id:'episode',scene_id:'scene',cast:['state']},{status:'draft'});
++ shot.content.sources=[{kind:'item',item_id:'episode',version:1,sha256:digest},{kind:'item',item_id:'scene',version:1,sha256:digest},{kind:'item',item_id:'state',version:1,sha256:digest}];
++ const result=projectRelations('p',graph([previous,episode,scene,state,shot]));
++ assert.deepEqual(result.gaps,[]);assert.equal(result.records.find(n=>n.id==='shot').status,'draft');
++ for(const label of ['承接前集','集内场次','所属分集','所属场次','镜头出场状态'])assert.ok(result.edges.some(e=>e.label===label&&e.state==='loaded'),label);
++ assert.deepEqual(projectRelations('p',graph([episode,scene])).gaps,['尚无镜头计划']);
++ const changed=projectRelations('p',graph([previous,episode,{...scene,version:2},state,shot]));
++ assert.equal(changed.edges.find(e=>e.from==='shot'&&e.label==='所属场次').state,'version_mismatch');
++ assert.equal(shot.content.sources[1].version,1);
++ shot.content.sources=[];
++ assert.equal(projectRelations('p',graph([episode,scene,shot])).edges.find(e=>e.label==='所属分集').state,'pin_missing');
++});
+diff --git a/studio-core/tests/review-readable.test.mjs b/studio-core/tests/review-readable.test.mjs
+index ea4f785..174c510 100644
+--- a/studio-core/tests/review-readable.test.mjs
++++ b/studio-core/tests/review-readable.test.mjs
+@@ -2,7 +2,22 @@ import test from 'node:test';
+ import assert from 'node:assert/strict';
+ import fs from 'node:fs';import path from 'node:path';import {fileURLToPath} from 'node:url';
+ import {readableContent,readableExecution,readableResult} from '../web/review-readable.mjs';
++import {unshownProductFields} from '../web/review-readable.mjs';
+ const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'../..');
++
++test('episode and shot reviews expose named structure and free prose action without weakening adaptation enums',()=>{
++ const names={episode:'归乡',previous:'离乡',scene:'门外',state:'少年状态'};
++ const episode={kind:'episode',spec:{number:2,previous_episode_id:'previous',scene_ids:['scene'],entry_state:'伤未愈',exit_state:'重获行走能力'}};
++ assert.deepEqual(unshownProductFields(episode,names),[]);
++ const epText=readableContent(episode,names);for(const word of ['分集计划','离乡','门外','伤未愈','重获行走能力'])assert.ok(epText.includes(word),word);
++ const shot={kind:'shot',spec:{number:1,episode_id:'episode',scene_id:'scene',cast:['state'],duration_ms:3500,framing:'中景',camera:'门内看门外',action:'他扶着门框站稳，等雨停。',dialogue:'我回来了。',source_paragraphs:[1,3]}};
++ const shown=readableContent(shot,names);
++ for(const word of ['镜头计划','归乡','门外','少年状态','3500','中景','门内看门外','他扶着门框站稳，等雨停。','我回来了。'])assert.ok(shown.includes(word),word);
++ assert.deepEqual(unshownProductFields(shot,names),[]);
++ assert.ok(unshownProductFields(shot,{}).includes('episode_id'));
++ assert.ok(unshownProductFields({spec:{scenes:[{paragraphs:[{action:'INVALID'}]}]}}).includes('action'));
++ assert.equal(readableContent({spec:{scenes:[{paragraphs:[{action:'keep'}]}]}}).includes('保留'),true);
++});
+ test('readable candidate content retains prose and provenance without protocol packets or hashes',()=>{
+  const hash='a'.repeat(64),rendered=readableContent({title:'Fixture proposal',body:'Actual candidate prose',sha256:hash,context:{private:'ISOLATED_CONTEXT'},packets:[{secret:'ROLE_SECRET'}],sources:[{kind:'note',origin:'external',text:JSON.stringify({type:'research_source',work:'Actual source work',fact_summary:'Actual original fact',verification:'attachment_claim_only'})}]});
+  assert.match(rendered,/Actual candidate prose/);assert.match(rendered,/Actual source work/);assert.match(rendered,/Actual original fact/);assert.match(rendered,/未独立核验/);assert.ok(!rendered.includes(hash));assert.ok(!rendered.includes('ISOLATED_CONTEXT'));assert.ok(!rendered.includes('ROLE_SECRET'));assert.ok(!rendered.includes('research_source'));
+diff --git a/studio-core/tests/story-planning-legacy.test.mjs b/studio-core/tests/story-planning-legacy.test.mjs
+new file mode 100644
+index 0000000..5f066e9
+--- /dev/null
++++ b/studio-core/tests/story-planning-legacy.test.mjs
+@@ -0,0 +1,12 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import {renderPlanningRecord} from '../web/story-ui.mjs';
++
++test('legacy story surface reads new planning records and routes editing to the complete form',()=>{
++ const content={title:'门外 <script>',body:'扶门停步。',spec:{episode_id:'episode',scene_id:'scene',action:'等雨停。',source_paragraphs:[2]}};
++ const rendered=renderPlanningRecord('shot',content,{projectId:'p&other',itemId:'shot',nodes:[{id:'episode',content:{title:'归乡'}},{id:'scene',content:{title:'门外'}}]});
++ for(const word of ['镜头计划','扶门停步','等雨停','归乡','门外','在工作台编辑与审阅','project=p%26other'])assert.ok(rendered.includes(word),word);
++ assert.ok(!rendered.includes('<script>'));
++ assert.ok(!rendered.includes('id="story-editor"'));
++ assert.ok(!rendered.includes('data-story-action="accept"'));
++});
+diff --git a/studio-core/tests/story-structure.test.mjs b/studio-core/tests/story-structure.test.mjs
+new file mode 100644
+index 0000000..09b0d65
+--- /dev/null
++++ b/studio-core/tests/story-structure.test.mjs
+@@ -0,0 +1,229 @@
++import {test} from 'node:test';
++import assert from 'node:assert/strict';
++import fs from 'node:fs';
++import os from 'node:os';
++import path from 'node:path';
++import {createDatabase,human,agent} from './harness.mjs';
++import {createStudioService} from '../src/service.mjs';
++import {createStoryWorkspace} from '../src/story-workspace.mjs';
++import {createStoryCollaboration} from '../src/story-collaboration.mjs';
++import {openLocalDatabase} from '../src/local-preview.mjs';
++import {studioFetch} from '../src/http.mjs';
++
++const key=()=>crypto.randomUUID(),fails=code=>error=>error.code===code;
++const content=(title,spec={},extra={})=>({title,body:'[FIXTURE] '+title,sources:[{kind:'note',text:'隔离测试作者明确填写，不属于用户作品'}],spec,...extra});
++async function fixture(storage=null){
++ const f=storage??createDatabase();
++ if(!storage)for(const name of ['0004_story_workspace.sql','0006_story_workflow.sql'])f.sqlite.exec(fs.readFileSync(new URL('../migrations/'+name,import.meta.url),'utf8'));
++ const p=human(),core=createStudioService({db:f.db}),story=createStoryWorkspace({db:f.db}),project=await core.createProject(p,{title:'[FIXTURE] 分集镜头',kind:'film'}),pid=project.id;
++ async function decide(saved,action='accept',extra={}){let h=await story.history(p,pid,saved.id);if(action==='accept'){await story.decide(p,pid,saved.id,{idempotency_key:key(),action:'submit',version:saved.version,expected_revision:h.item.revision});h=await story.history(p,pid,saved.id);}return story.decide(p,pid,saved.id,{idempotency_key:key(),action,version:saved.version,expected_revision:h.item.revision,expected_canon_revision:h.canon_revision,...extra});}
++ async function save(kind,spec={},extra={},scope={}){return story.save(p,pid,{kind,idempotency_key:key(),content:content(kind,spec,extra),...scope});}
++ async function create(kind,spec={},extra={},scope={}){const result=await save(kind,spec,extra,scope);await decide(result);return result;}
++ const character=await create('character'),instance=await create('instance',{}, {fields:{character_id:character.id}}),otherCharacter=await create('character'),otherInstance=await create('instance',{}, {fields:{character_id:otherCharacter.id}}),chapter=await create('chapter',{}, {body:'小说第一段。\n\n小说第二段。'});
++ const sceneContent={body:'场次第一段：门口与桌子。\n\n场次第二段：甲递信。\n\n场次第三段：门外回应。',sources:[{kind:'story',item_id:chapter.id,version:chapter.version,paragraph:1}]};
++ const scene=await create('scene',{cast:[instance.id]},sceneContent),secondScene=await create('scene',{cast:[otherInstance.id]},sceneContent);
++ const episodeSpec=(number=1,extra={})=>({number,goal:'本集目标',entry_state:'入集处境',exit_state:'离集变化',scene_ids:[scene.id],...extra});
++ const shotSpec=(episode,extra={})=>({episode_id:episode.id,scene_id:scene.id,number:1,duration_ms:3500,cast:[instance.id],framing:'近景',camera:'固定机位',action:'甲递信',dialogue:'信在这里。',source_paragraphs:[2],...extra});
++ return {...f,p,pid,core,story,decide,save,create,character,instance,otherInstance,chapter,scene,secondScene,episodeSpec,shotSpec};
++}
++async function snapshot(f,item){return (await f.story.history(f.p,f.pid,item.id)).versions[0].content;}
++async function revise(f,item,change){const h=await f.story.history(f.p,f.pid,item.id),prior=h.versions[0].content;return f.story.save(f.p,f.pid,{idempotency_key:key(),expected_revision:h.item.revision,content:{...prior,...change}},item.id);}
++
++test('episode and shot persist through a database reopen with exact source versions, paragraphs and old schemas intact',async()=>{
++ const directory=fs.mkdtempSync(path.join(os.tmpdir(),'cw-p6-')),filename=path.join(directory,'fixture.sqlite');let f;
++ try{
++  f=await fixture(openLocalDatabase(filename));
++  const schema=f.sqlite.prepare("SELECT name,sql FROM sqlite_master WHERE name NOT LIKE 'sqlite_%' ORDER BY name").all(),legacy=f.sqlite.prepare('SELECT * FROM studio_story_versions ORDER BY item_id,version').all();
++  const episode=await f.create('episode',f.episodeSpec(10)),shot=await f.save('shot',f.shotSpec(episode));
++  assert.equal((await f.story.graph(f.p,f.pid)).nodes.some(n=>n.id===shot.id),false);
++  await f.decide(shot);const before=await f.story.history(f.p,f.pid,shot.id),saved=before.versions[0].content;
++  assert.deepEqual(saved.spec.source_paragraphs,[2]);assert.equal(saved.sources.find(s=>s.kind==='story').quote,'场次第二段：甲递信。');
++  assert.equal(saved.sources.find(s=>s.kind==='story').version,f.scene.version);assert.ok(saved.sources.filter(s=>s.kind==='item').every(s=>/^[a-f0-9]{64}$/.test(s.sha256)));
++  assert.deepEqual(f.sqlite.prepare("SELECT kind,artifact_type FROM studio_story_items WHERE id IN (?,?) ORDER BY artifact_type").all(episode.id,shot.id).map(r=>({...r})),[{kind:'chapter',artifact_type:'episode'},{kind:'chapter',artifact_type:'shot'}]);
++  assert.deepEqual(f.sqlite.prepare("SELECT name,sql FROM sqlite_master WHERE name NOT LIKE 'sqlite_%' ORDER BY name").all(),schema);
++  for(const row of legacy)assert.deepEqual(f.sqlite.prepare('SELECT * FROM studio_story_versions WHERE item_id=? AND version=?').get(row.item_id,row.version),row);
++  const pid=f.pid,p=f.p;f.close();f=null;const reopened=openLocalDatabase(filename);try{const service=createStoryWorkspace({db:reopened.db});assert.deepEqual(await service.history(p,pid,shot.id),before);assert.deepEqual(reopened.sqlite.prepare('PRAGMA foreign_key_check').all(),[]);}finally{reopened.close();}
++ }finally{f?.close();fs.rmSync(directory,{recursive:true,force:true});}
++});
++
++test('empty episodes and empty shots, optional values, repeated numbering and explicit scene order remain author choices',async()=>{
++ const f=await fixture();try{
++  const empty=await f.create('episode',{number:4});assert.deepEqual((await snapshot(f,empty)).spec.scene_ids,[]);
++  const first=await f.create('episode',f.episodeSpec(10,{scene_ids:[f.secondScene.id,f.scene.id]})),second=await f.create('episode',f.episodeSpec(10));
++  assert.deepEqual((await snapshot(f,first)).spec.scene_ids,[f.secondScene.id,f.scene.id]);
++  const shot=await f.create('shot',f.shotSpec(first,{number:7,cast:undefined,source_paragraphs:undefined,duration_ms:undefined}));
++  const s=(await snapshot(f,shot)).spec;assert.deepEqual(s.cast,[]);assert.deepEqual(s.source_paragraphs,[]);assert.equal(s.duration_ms,null);
++  await f.create('shot',f.shotSpec(second,{number:7}));
++  const graph=await f.story.graph(f.p,f.pid);assert.equal(graph.workflow_summary.counts.episode.accepted,3);assert.equal(graph.workflow_summary.counts.shot.accepted,2);
++ }finally{f.close();}
++});
++
++test('structure references reject wrong owners, projects, branches, timelines, types, drafts and archives before writing',async()=>{
++ const f=await fixture();try{
++  const project=await f.core.createProject(f.p,{title:'[FIXTURE] 其他作品',kind:'film'}),foreign=await f.story.save(f.p,project.id,{kind:'episode',idempotency_key:key(),content:content('foreign',{number:1})});
++  await assert.rejects(()=>f.save('episode',f.episodeSpec(2,{previous_episode_id:foreign.id})),fails('NOT_FOUND'));
++  await assert.rejects(()=>f.story.history(human('other-owner'),f.pid,f.scene.id),fails('NOT_FOUND'));
++  for(const scope of [{branch:'parallel'},{timeline:'elsewhere'}])await assert.rejects(()=>f.save('episode',f.episodeSpec(),{},scope),fails('REFERENCE_SCOPE_MISMATCH'));
++  await assert.rejects(()=>f.save('episode',f.episodeSpec(1,{scene_ids:[f.character.id]})),fails('REFERENCE_SCOPE_MISMATCH'));
++  await assert.rejects(()=>f.save('episode',f.episodeSpec(1,{scene_ids:[key()]})),fails('NOT_FOUND'));
++  const draft=await f.save('episode',f.episodeSpec());await assert.rejects(()=>f.save('shot',f.shotSpec(draft)),fails('ADOPTED_INPUT_REQUIRED'));
++  await f.decide(f.scene,'archive');const count=f.sqlite.prepare('SELECT COUNT(*) n FROM studio_story_versions').get().n;
++  await assert.rejects(()=>f.save('episode',f.episodeSpec()),fails('ADOPTED_INPUT_REQUIRED'));assert.equal(f.sqlite.prepare('SELECT COUNT(*) n FROM studio_story_versions').get().n,count);
++ }finally{f.close();}
++});
++
++test('unaccepted pinned candidate versions are rejected while historical accepted pins can remain in a reviewable draft',async()=>{
++ const f=await fixture();try{
++  const neverAccepted=await revise(f,f.scene,{body:'尚未采纳的新场次候选'});
++  await assert.rejects(()=>f.save('episode',f.episodeSpec(),{sources:[{kind:'item',item_id:f.scene.id,version:neverAccepted.version}]}),fails('ADOPTED_INPUT_REQUIRED'));
++  const oldScene=(await f.story.graph(f.p,f.pid)).nodes.find(n=>n.id===f.scene.id),oldPin={kind:'item',item_id:f.scene.id,version:oldScene.version,sha256:oldScene.sha256};
++  await f.decide(neverAccepted);const episode=await f.save('episode',f.episodeSpec(),{sources:[oldPin]});
++  const candidate=(await f.story.graph(f.p,f.pid,{candidates:true})).nodes.find(n=>n.id===episode.id);assert.ok(candidate.needs_review.length);assert.deepEqual(candidate.content.sources.find(s=>s.kind==='item'),oldPin);
++  await assert.rejects(()=>f.decide(episode),fails('SOURCE_STALE'));assert.equal((await f.story.history(f.p,f.pid,episode.id)).item.accepted_version,null);
++ }finally{f.close();}
++});
++
++test('number, duration, repeated lists, unknown fields, scene membership, cast membership and paragraph bounds fail closed',async()=>{
++ const f=await fixture();try{
++  const episode=await f.create('episode',f.episodeSpec());
++  for(const number of [0,-1,1.5,NaN,Infinity,Number.MAX_SAFE_INTEGER+1])await assert.rejects(()=>f.save('episode',f.episodeSpec(number)),fails('INVALID_STRUCTURE_NUMBER'));
++  for(const duration_ms of [0,-10,0.5,'1000',Infinity])await assert.rejects(()=>f.save('shot',f.shotSpec(episode,{duration_ms})),fails('INVALID_STRUCTURE_NUMBER'));
++  for(const [kind,spec] of [['episode',f.episodeSpec(1,{scene_ids:[f.scene.id,f.scene.id]})],['shot',f.shotSpec(episode,{cast:[f.instance.id,f.instance.id]})],['shot',f.shotSpec(episode,{source_paragraphs:[2,2]})]])await assert.rejects(()=>f.save(kind,spec),fails('DUPLICATE_STRUCTURE_REFERENCE'));
++  await assert.rejects(()=>f.save('episode',f.episodeSpec(1,{invented:'field'})),fails('INVALID_SPEC_FIELD'));
++  await assert.rejects(()=>f.save('shot',f.shotSpec(episode,{scene_id:f.secondScene.id})),fails('SHOT_SCENE_SCOPE'));
++  await assert.rejects(()=>f.save('shot',f.shotSpec(episode,{cast:[f.otherInstance.id]})),fails('SHOT_CAST_SCOPE'));
++  await assert.rejects(()=>f.save('shot',f.shotSpec(episode,{source_paragraphs:[999]})),fails('SOURCE_PARAGRAPH_MISSING'));
++ }finally{f.close();}
++});
++
++test('previous episodes pin lower-numbered versions and reject self, changed-version ID cycles and unknown parents',async()=>{
++ const f=await fixture();try{
++  const a=await f.create('episode',f.episodeSpec(1)),b=await f.create('episode',f.episodeSpec(2,{previous_episode_id:a.id}));
++  const bs=await snapshot(f,b);assert.equal(bs.spec.previous_episode_id,a.id);assert.equal(bs.sources.find(s=>s.item_id===a.id).version,1);
++  await assert.rejects(()=>f.save('episode',f.episodeSpec(2,{previous_episode_id:b.id})),fails('PREVIOUS_EPISODE_ORDER'));
++  await assert.rejects(()=>revise(f,a,{spec:f.episodeSpec(3,{previous_episode_id:a.id})}),fails('EPISODE_DEPENDENCY_CYCLE'));
++  await assert.rejects(()=>revise(f,a,{spec:f.episodeSpec(3,{previous_episode_id:b.id})}),fails('EPISODE_DEPENDENCY_CYCLE'));
++  await assert.rejects(()=>f.save('episode',f.episodeSpec(3,{previous_episode_id:key()})),fails('NOT_FOUND'));
++  const history=await f.story.history(f.p,f.pid,a.id);assert.equal(history.versions.length,1);
++ }finally{f.close();}
++});
++
++test('a shot uses its episode scene pin and rejects duplicate pins, different versions, unrelated paragraphs and foreign-branch text',async()=>{
++ const f=await fixture();try{
++  const episode=await f.create('episode',f.episodeSpec()),scene=(await f.story.graph(f.p,f.pid)).nodes.find(n=>n.id===f.scene.id),pin={kind:'item',item_id:scene.id,version:scene.version,sha256:scene.sha256};
++  await assert.rejects(()=>f.save('episode',f.episodeSpec(),{sources:[pin,pin]}),fails('DUPLICATE_STRUCTURE_REFERENCE'));
++  await assert.rejects(()=>f.save('episode',f.episodeSpec(),{sources:[{...pin,sha256:'b'.repeat(64)}]}),fails('SOURCE_HASH_MISMATCH'));
++  const next=await revise(f,f.scene,{body:'修订第一段。\n\n修订第二段。'});await f.decide(next);
++  await assert.rejects(()=>f.save('shot',f.shotSpec(episode),{sources:[pin,{kind:'item',item_id:scene.id,version:next.version}]}),fails('DUPLICATE_STRUCTURE_REFERENCE'));
++  await assert.rejects(()=>f.save('shot',f.shotSpec(episode),{sources:[{kind:'item',item_id:scene.id,version:next.version}]}),fails('SOURCE_VERSION_MISMATCH'));
++  await assert.rejects(()=>f.save('shot',f.shotSpec(episode),{sources:[{kind:'story',item_id:scene.id,version:next.version,paragraph:2}]}),fails('SHOT_PARAGRAPH_SCOPE'));
++  await assert.rejects(()=>f.save('shot',f.shotSpec(episode),{sources:[{kind:'story',item_id:f.secondScene.id,version:1,paragraph:2}]}),fails('SHOT_PARAGRAPH_SCOPE'));
++  const foreignChapter=await f.create('chapter',{}, {body:'其他支线。'},{branch:'parallel'});
++  const foreignScene=await f.create('scene',{cast:[]},{body:'其他支线场次。',sources:[{kind:'story',item_id:foreignChapter.id,version:1,paragraph:1}]},{branch:'parallel'});
++  await assert.rejects(()=>f.save('shot',f.shotSpec(episode),{sources:[{kind:'story',item_id:foreignScene.id,version:1,paragraph:1}]}),fails('REFERENCE_SCOPE_MISMATCH'));
++ }finally{f.close();}
++});
++
++test('adopted upstream changes leave all old shot pins and prose immutable and block adoption and restore',async()=>{
++ const f=await fixture();try{
++  const episode=await f.create('episode',f.episodeSpec()),shot=await f.create('shot',f.shotSpec(episode)),before=await snapshot(f,shot);
++  await f.decide(shot,'archive');const next=await revise(f,f.scene,{body:'新的第一段。\n\n新的第二段。'});await f.decide(next);
++  await assert.rejects(()=>f.decide(shot,'restore'),fails('SOURCE_STALE'));
++  const stale=await f.save('shot',f.shotSpec(episode));assert.deepEqual((await snapshot(f,stale)).sources.filter(s=>s.kind==='item'&&s.item_id===f.scene.id),before.sources.filter(s=>s.kind==='item'&&s.item_id===f.scene.id));
++  assert.equal((await snapshot(f,stale)).sources.find(s=>s.kind==='story').quote,'场次第二段：甲递信。');
++  const candidate=(await f.story.graph(f.p,f.pid,{candidates:true})).nodes.find(n=>n.id===stale.id);assert.ok(candidate.needs_review.length);
++  await assert.rejects(()=>f.decide(stale),fails('SOURCE_STALE'));assert.deepEqual(await snapshot(f,shot),before);
++ }finally{f.close();}
++});
++
++test('restore rejects archived dependencies and stale canon then succeeds without rewriting immutable versions',async()=>{
++ const f=await fixture();try{
++  const episode=await f.create('episode',f.episodeSpec()),before=await snapshot(f,episode);await f.decide(episode,'archive');
++  let h=await f.story.history(f.p,f.pid,episode.id);
++  await assert.rejects(()=>f.story.decide(f.p,f.pid,episode.id,{idempotency_key:key(),action:'restore',version:1,expected_revision:h.item.revision,expected_canon_revision:h.canon_revision-1}),fails('VERSION_CONFLICT'));
++  await f.decide(f.scene,'archive');await assert.rejects(()=>f.decide(episode,'restore'),fails('ADOPTED_INPUT_REQUIRED'));
++  await f.decide(f.scene,'restore');await f.decide(episode,'restore');h=await f.story.history(f.p,f.pid,episode.id);assert.equal(h.item.archived,0);assert.deepEqual(h.versions[0].content,before);assert.equal(h.versions.length,1);
++ }finally{f.close();}
++});
++
++test('idempotent retries and stale revision or canon do not append extra versions or overwrite formal plans',async()=>{
++ const f=await fixture();try{
++  const input={kind:'episode',idempotency_key:key(),content:content('first',f.episodeSpec())},episode=await f.story.save(f.p,f.pid,input);
++  assert.deepEqual(await f.story.save(f.p,f.pid,input),episode);await assert.rejects(()=>f.story.save(f.p,f.pid,{...input,content:content('changed',f.episodeSpec())}),fails('IDEMPOTENCY_CONFLICT'));
++  await f.decide(episode);const before=await f.story.history(f.p,f.pid,episode.id),update={idempotency_key:key(),expected_revision:before.item.revision,expected_canon_revision:before.canon_revision,content:content('updated',f.episodeSpec(2))},next=await f.story.save(f.p,f.pid,update,episode.id);
++  assert.deepEqual(await f.story.save(f.p,f.pid,update,episode.id),next);await assert.rejects(()=>f.story.save(f.p,f.pid,{...update,idempotency_key:key()},episode.id),fails('VERSION_CONFLICT'));
++  const other=await f.create('episode',{number:5});assert.ok(other.id);
++  await assert.rejects(()=>f.decide(next),fails('VERSION_CONFLICT'));const after=await f.story.history(f.p,f.pid,episode.id);assert.equal(after.versions.length,2);assert.equal(after.item.accepted_version,1);
++  assert.equal((await f.story.graph(f.p,f.pid)).nodes.find(n=>n.id===episode.id).content.title,'first');
++ }finally{f.close();}
++});
++
++test('author-only plans cannot enter reader or character views and Agent proposals do not acquire adoption authority',async()=>{
++ const f=await fixture();try{
++  const episode=await f.create('episode',f.episodeSpec()),shot=await f.create('shot',f.shotSpec(episode));
++  await assert.rejects(()=>f.save('episode',f.episodeSpec(),{audience:'public'}),fails('PLAN_IS_NOT_FACT'));
++  await assert.rejects(()=>f.save('shot',f.shotSpec(episode),{reader_from:1}),fails('PLAN_IS_NOT_FACT'));
++  const candidate=await f.story.saveAndReview(agent(),f.pid,{kind:'episode',idempotency_key:key(),content:content('agent candidate',{number:20})});assert.equal(candidate.automatic_review,undefined);
++  await assert.rejects(()=>f.story.decide({...agent(),scopes:['studio:read','studio:draft_write','studio:review']},f.pid,candidate.id,{action:'accept',idempotency_key:key(),version:1,expected_revision:1,expected_canon_revision:0}),fails('HUMAN_APPROVAL_REQUIRED'));
++  await assert.rejects(()=>f.story.autoReview(f.p,f.pid,candidate.id,1,key()),fails('AUTO_REVIEW_SCOPE'));
++  for(const options of [{perspective:'reader',at:100},{perspective:'character',instance_id:f.instance.id,at:100}])assert.equal((await f.story.graph(f.p,f.pid,options)).nodes.some(n=>[episode.id,shot.id,candidate.id].includes(n.id)),false);
++ }finally{f.close();}
++});
++
++test('collaborative future snapshots resolve new scene_ids and previous_episode_id without cycles or canonical writes',async()=>{
++ const f=await fixture();try{
++  const before=await f.story.graph(f.p,f.pid),changes=[
++   {key:'chapter',kind:'chapter',content:content('new chapter',{}, {body:'新原文。'})},
++   {key:'scene',kind:'scene',content:content('new scene',{cast:[f.instance.id]},{body:'新场次。',sources:[{kind:'story',item_id:'$chapter',version:'next',paragraph:1}]})},
++   {key:'episode',kind:'episode',content:content('new episode',{number:1,scene_ids:['$scene']})},
++   {key:'next_episode',kind:'episode',content:content('next episode',{number:2,scene_ids:['$scene'],previous_episode_id:'$episode'})},
++   {key:'shot',kind:'shot',content:content('new shot',{episode_id:'$next_episode',scene_id:'$scene',number:1,cast:[f.instance.id],source_paragraphs:[1]})}
++  ];
++  const result=await f.story.previewChanges(f.p,f.pid,{operation_key:key(),changes}),byKey=new Map(result.map(n=>[n.key,n]));
++  assert.deepEqual(byKey.get('episode').content.spec.scene_ids,[byKey.get('scene').id]);assert.equal(byKey.get('next_episode').content.spec.previous_episode_id,byKey.get('episode').id);assert.equal(byKey.get('shot').content.sources.find(s=>s.kind==='story').quote,'新场次。');
++  assert.deepEqual(await f.story.graph(f.p,f.pid),before);
++  const episode=await f.create('episode',f.episodeSpec(1)),next=await f.create('episode',f.episodeSpec(2,{previous_episode_id:episode.id})),h=await f.story.history(f.p,f.pid,episode.id);
++  await assert.rejects(()=>f.story.previewChanges(f.p,f.pid,{operation_key:key(),changes:[{key:'cycle',kind:'episode',item_id:episode.id,expected_revision:h.item.revision,content:content('cycle',f.episodeSpec(3,{previous_episode_id:next.id}))}]}),fails('EPISODE_DEPENDENCY_CYCLE'));
++ }finally{f.close();}
++});
++
++test('reviewed collaboration atomically adopts an episode and shot then returns precise author context',async()=>{
++ const f=await fixture();try{
++  const collaboration=createStoryCollaboration({db:f.db}),request={source_ids:[f.scene.id]},context=await collaboration.context(f.p,f.pid,request),proposal=await collaboration.propose(f.p,f.pid,{idempotency_key:key(),context_request:request,context_sha256:context.sha256,skill:context.skill,summary:'隔离测试分集镜头',reported_mode:'fixture',role_outputs:[],changes:[{key:'episode',kind:'episode',content:content('episode',f.episodeSpec())},{key:'shot',kind:'shot',content:content('shot',f.shotSpec({id:'$episode'}))}]});
++  assert.equal(proposal.state,'candidate');const receipt=await collaboration.decide(f.p,f.pid,proposal.id,{idempotency_key:key(),proposal_version:proposal.version,proposal_sha256:proposal.sha256,action:'accept',note:'测试人工明确采纳'});assert.equal(receipt.state,'committed');
++  assert.equal((await collaboration.readback(f.p,f.pid,proposal.id)).verified,true);
++  const shot=proposal.changes.find(n=>n.kind==='shot'),next=await collaboration.context(f.p,f.pid,{source_ids:[shot.id]});assert.ok(next.author_facts.some(n=>n.kind==='episode'));assert.ok(next.author_facts.some(n=>n.kind==='shot'));assert.equal(next.production_references.length,0);
++ }finally{f.close();}
++});
++
++test('existing HTTP item/history/decision routes persist new artifacts and isolate projects without new endpoints',async()=>{
++ const f=await fixture();try{
++  const call=(tail,method='GET',input=null,p=f.p)=>studioFetch(new Request('http://127.0.0.1/api/studio/story/'+f.pid+'/'+tail,{method,headers:{Origin:'http://127.0.0.1',...(input?{'Content-Type':'application/json','Idempotency-Key':key()}:{})},...(input?{body:JSON.stringify(input)}:{})}),{DB:f.db},{principal:p});
++  const created=await call('items','POST',{kind:'episode',content:content('HTTP episode',f.episodeSpec())});assert.equal(created.status,200);const {data}=await created.json();assert.equal(data.automatic_review,undefined);
++  const read=await call('items/'+data.id);assert.equal(read.status,200);const history=(await read.json()).data;assert.equal(history.item.kind,'episode');assert.equal(history.item.accepted_version,null);
++  assert.equal((await call('items/'+data.id,'GET',null,human('other'))).status,404);
++  const draftGraph=(await (await call('graph?perspective=author&candidates=true')).json()).data;assert.ok(draftGraph.nodes.some(n=>n.id===data.id));
++ }finally{f.close();}
++});
++
++test('auto-added pins respect the existing source budget before a candidate is written',async()=>{
++ const f=await fixture();try{
++  const scene=await f.create('scene',{cast:[]},{body:Array.from({length:100},(_,i)=>'真实场次段落 '+(i+1)).join('\n\n'),sources:[{kind:'story',item_id:f.chapter.id,version:1,paragraph:1}]}),episode=await f.create('episode',f.episodeSpec(1,{scene_ids:[scene.id]})),before=f.sqlite.prepare('SELECT COUNT(*) n FROM studio_story_versions').get().n;
++  await assert.rejects(()=>f.save('shot',f.shotSpec(episode,{scene_id:scene.id,cast:[],source_paragraphs:Array.from({length:100},(_,i)=>i+1)})),fails('STRUCTURE_SOURCE_LIMIT'));
++  assert.equal(f.sqlite.prepare('SELECT COUNT(*) n FROM studio_story_versions').get().n,before);
++ }finally{f.close();}
++});
++
++test('canon races at the atomic acceptance and restore boundary leave no false decision or accepted pointer',async()=>{
++ for(const action of ['accept','restore']){
++  const f=await fixture();try{
++   const episode=await f.save('episode',f.episodeSpec());
++   if(action==='restore'){await f.decide(episode);await f.decide(episode,'archive');}
++   else {const h=await f.story.history(f.p,f.pid,episode.id);await f.story.decide(f.p,f.pid,episode.id,{idempotency_key:key(),action:'submit',version:1,expected_revision:h.item.revision});}
++   const h=await f.story.history(f.p,f.pid,episode.id),decisions=f.sqlite.prepare('SELECT COUNT(*) n FROM studio_story_decisions').get().n,operations=f.sqlite.prepare('SELECT COUNT(*) n FROM studio_story_operations').get().n,batch=f.db.batch;
++   f.db.batch=async statements=>{f.db.batch=batch;f.sqlite.prepare('UPDATE studio_story_canon SET revision=revision+1 WHERE project_id=?').run(f.pid);return batch(statements);};
++   await assert.rejects(()=>f.story.decide(f.p,f.pid,episode.id,{idempotency_key:key(),action,version:1,expected_revision:h.item.revision,expected_canon_revision:h.canon_revision}),fails('VERSION_CONFLICT'));
++   const after=await f.story.history(f.p,f.pid,episode.id);assert.equal(after.item.accepted_version,h.item.accepted_version);assert.equal(after.item.archived,h.item.archived);assert.deepEqual(after.versions,h.versions);assert.equal(f.sqlite.prepare('SELECT COUNT(*) n FROM studio_story_decisions').get().n,decisions);assert.equal(f.sqlite.prepare('SELECT COUNT(*) n FROM studio_story_operations').get().n,operations);
++  }finally{f.close();}
++ }
++});
+diff --git a/studio-core/web/review-readable.mjs b/studio-core/web/review-readable.mjs
+index a3f0696..a56dfa2 100644
+--- a/studio-core/web/review-readable.mjs
++++ b/studio-core/web/review-readable.mjs
+@@ -25,12 +25,14 @@ export function machineReadableContent(value,names={}){
+ const productLabels={outline_id:'章节大纲',instance_id:'角色状态',simulation_id:'人物推演',chapter_id:'小说章节',adaptation_id:'改编方案',scene_index:'场次顺序',heading:'场景标题',blocks:'剧本节拍',segments:'台词分段',delivery:'表演提示',extension:'画外说明',screenplay:'采用剧本格式',description:'描述',
+  ...labels,...detailLabels,audience:'可见范围',known_by:'指定获知者',aliases:'别名',age:'年龄',location:'地点',motivation:'动机',goal:'目标',behavior:'行为',speech:'说话方式',author_secret:'作者设定',unresolved:'待解决事项',event_layer:'事件状态',time_label:'时间',time_precision:'时间范围',layer:'关系类别',relationship_type:'关系',subjective:'主观描述',knowledge_type:'认知类型',channel:'渠道',adaptation_note:'改编说明',entry_state:'入场状态',exit_state:'离场变化',min_words:'最少字数',max_words:'最多字数',beats:'情节',proposals:'人物提议',notes:'备注',at:'故事时点',index:'顺序',story_time:'故事时间',paragraphs:'段落',paragraph:'段落',action:'处理方式',render_as:'表现方式',script:'剧本',voice:'说话方式',lexicon:'常用词',sentence_length:'句式长度',address:'称呼',pauses:'停顿',avoidance:'避免使用',known_from:'获知时点',reader_from:'读者揭示时点',story_order:'剧情顺序',valid_from:'开始时点',valid_to:'结束时点',rules:'审阅规则',issues:'审阅问题',enabled:'是否启用',scope:'适用范围',level:'审阅级别',exceptions:'例外',unit_type:'位置类型',unit:'位置',scene_goal:'场景目标',knowledge_boundary:'知识边界',mechanism:'疑似机制',evidence:'依据与上下文',exception:'例外说明',confidence:'置信程度',conclusion:'审阅结论',quote:'引用原文',authority:'适用说明',rule_id:'关联规则',item_id:'来源内容',origin:'来源',policy_id:'关联规则包',target_id:'审阅对象',speaker_id:'说话人物',listener_ids:'听众',participants:'参与人物',required_events:'必达事件',forbidden_events:'禁止事件'
+ };
++Object.assign(productLabels,{episode_id:'所属分集',scene_id:'所属场次',previous_episode_id:'承接前集',scene_ids:'集内场次',number:'编号',duration_ms:'计划时长（毫秒）',framing:'景别与构图',camera:'机位与运动',dialogue:'对白',source_paragraphs:'场次正文段落'});
+ const internalFields=/^(?:internal|secret|credentials?|authorization|tokens?|api_key|private_key|access_token|refresh_token|unrecognized_internal)$/i;
+ const hiddenFields=/(?:^|_)(?:id|ids|version|revision|schema|sha256|digest|hash|fingerprint|key|token|credential|authorization|packets?|contexts?|role_outputs|snapshot)(?:_|$)/i;
+-const lookupFields=new Set(['frame_asset_id','character_id','ip_id','from_id','to_id','knower_id','viewpoint_id','item_id','rule_id','policy_id','target_id','speaker_id','outline_id','instance_id','simulation_id','chapter_id','adaptation_id']);
+-const referenceLists=new Set(['known_by','participants','required_events','forbidden_events','listener_ids']);
++const lookupFields=new Set(['frame_asset_id','character_id','ip_id','from_id','to_id','knower_id','viewpoint_id','item_id','rule_id','policy_id','target_id','speaker_id','outline_id','instance_id','simulation_id','chapter_id','adaptation_id','episode_id','scene_id','previous_episode_id']);
++const referenceLists=new Set(['known_by','participants','required_events','forbidden_events','listener_ids','scene_ids']);
+ const enumFields=new Set(['audience','state','status','kind','mode','verification','source_type','source_kind','claim_origin','event_layer','time_precision','layer','knowledge_type','action','render_as','direction','scope','level','unit_type','confidence','conclusion','authority']);
+ const productWords={...words,parenthetical:'表演提示',text:'台词',proposals_only:'仅人物提议，不构成正式剧情',character:'人物关系',event:'事件关系',user:'用户提供',author:'仅作者',public:'角色公开信息',restricted:'指定获知者',planned:'计划',hypothetical:'假设',occurred:'已发生',discarded:'已舍弃',exact:'明确',range:'范围',order_only:'仅顺序',unknown:'未指定',known:'已知',belief:'相信',suspicion:'怀疑',lie:'谎言',one:'单向',two:'双向',none:'无',keep:'保留',compress:'压缩',omit:'省略',add:'新增',action:'动作',dialogue:'对话',voiceover:'旁白',reference:'参考',narration:'叙述',all:'全部',forbid:'禁止',context:'需语境复核',paragraph:'段落',block:'剧本节拍',low:'低',medium:'中',high:'高',confirmed:'确有问题',not_applicable:'不适用 / 保留原文',insufficient_information:'信息不足',project_opt_in_rules:'作品启用的审阅规则',review_advice_only:'审阅建议',item:'来源卡片',note:'来源备注',story:'小说来源',document:'文档来源'};
++Object.assign(productWords,{episode:'分集计划',shot:'镜头计划'});
+ export function readableProse(value){
+  return String(value).replace(/\b(?:libfile|file)_[\w-]+\b|\b[a-f0-9]{64}\b|\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b/gi,'〔素材引用〕').replace(/\/api\/[^\s，。；、）)]+/gi,'[相关服务]');
+ }
+@@ -46,23 +48,24 @@ function sourceEnvelope(text){
+ }
+ function provenanceEntry(value){return value&&typeof value==='object'&&value.kind==='note'&&['assistant','external'].includes(value.origin);}
+ export function readableContent(value,names={}){
+- function read(input,key='',depth=0,inSpec=false,sourceEntry=false){
++ function read(input,key='',depth=0,inSpec=false,sourceEntry=false,shotSpec=false){
+   if(depth>20||input===null||input===undefined||input==='')return '';
+   if(typeof input==='boolean')return input?'是':'否';
+   if(typeof input==='number')return String(input);
+   if(typeof input==='string'){
+    if(lookupFields.has(key)||referenceLists.has(key)||(inSpec&&key==='cast'))return Object.hasOwn(names,input)?readableProse(String(names[input])):'关联内容暂不可用';
+    if(sourceEntry&&key==='text'&&/^[\s]*[\[{]/.test(input)){const parsed=sourceEnvelope(input);if(parsed)return read(parsed,'',depth+1);}
+-   if(enumFields.has(key))return Object.hasOwn(productWords,input)?productWords[input]:'待核对';
++   if(enumFields.has(key)&&!(shotSpec&&key==='action'))return Object.hasOwn(productWords,input)?productWords[input]:'待核对';
+    if(!key&&Object.hasOwn(productWords,input))return productWords[input];
+    return readableProse(input);
+   }
+-  if(Array.isArray(input))return input.map(item=>read(item,key,depth+1,inSpec,key==='sources'&&provenanceEntry(item))).filter(Boolean).join('\n\n');
++  if(Array.isArray(input))return input.map(item=>read(item,key,depth+1,inSpec,key==='sources'&&provenanceEntry(item),shotSpec)).filter(Boolean).join('\n\n');
+   if(typeof input==='object')return Object.entries(input).map(([field,entry])=>{
+    if(lookupFields.has(field)||referenceLists.has(field)){const text=read(entry,field,depth+1,inSpec||field==='spec');return text?(productLabels[field]||'关联内容')+'：'+text:'';}
+    if(field==='type'||field==='format'||hiddenFields.test(field)||(internalFields.test(field)&&!Object.hasOwn(productLabels,field)))return '';
+-   const label=productLabels[field] || (/^[\p{Script=Han}\s]+$/u.test(field)?field:'补充设定');
+-   const text=read(entry,field,depth+1,inSpec||field==='spec',sourceEntry&&field==='text');return text?label+'：'+text:'';
++   const label=shotSpec&&field==='action'?'镜头动作':productLabels[field] || (/^[\p{Script=Han}\s]+$/u.test(field)?field:'补充设定');
++   const isShot=field==='spec'&&entry&&typeof entry==='object'&&typeof entry.episode_id==='string'&&typeof entry.scene_id==='string';
++   const text=read(entry,field,depth+1,inSpec||field==='spec',sourceEntry&&field==='text',shotSpec||isShot);return text?label+'：'+text:'';
+   }).filter(Boolean).join('\n');
+   return '';
+  }
+@@ -74,17 +77,17 @@ export function readableContent(value,names={}){
+ export function unshownProductFields(value,names={}) {
+  const missing=[];
+  const mechanical=new Set(['id','type','format','schema','sha256','digest','fingerprint','hash','idempotency_key','mutation_id','operation_key','owner_id','project_id','item_id','task_id','run_id','packet','packets','context','author_facts','base_canon_revision','base_accepted_version','created_by','actor_id','bound_asset_ids','version','revision','profile_version','identity_revision']);
+- function visit(input,key='',depth=0,inSpec=false,sourceEntry=false){
++ function visit(input,key='',depth=0,inSpec=false,sourceEntry=false,shotSpec=false){
+   if(input===null||input===undefined||input==='')return;
+   if(depth>20){missing.push('内容过深');return;}
+   if(typeof input==='string'){
+    if(sourceEntry&&key==='text'&&/^[\s]*[\[{]/.test(input)){const parsed=sourceEnvelope(input);if(parsed){visit(parsed,'',depth+1);return;}}
+    if(lookupFields.has(key)||referenceLists.has(key)||(inSpec&&key==='cast')){if(!Object.hasOwn(names,input))missing.push(key);else if(maskActorText(String(names[input])).entries.length)missing.push(key);return;}
+-   if(enumFields.has(key)&&!Object.hasOwn(productWords,input)){missing.push(key);return;}
++   if(enumFields.has(key)&&!(shotSpec&&key==='action')&&!Object.hasOwn(productWords,input)){missing.push(key);return;}
+    if(/\b(?:libfile|file)_[\w-]+\b|\b[a-f0-9]{64}\b|\b[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\b/i.test(input)||/\/api\/[^\s，。；、）)]+/i.test(input))missing.push(key||'内容');
+    return;
+   }
+-  if(Array.isArray(input)){for(const entry of input)visit(entry,key,depth+1,inSpec,key==='sources'&&provenanceEntry(entry));return;}
++  if(Array.isArray(input)){for(const entry of input)visit(entry,key,depth+1,inSpec,key==='sources'&&provenanceEntry(entry),shotSpec);return;}
+   if(typeof input==='object')for(const [field,entry] of Object.entries(input)){
+    if(entry===null||entry===undefined||entry===''||(Array.isArray(entry)&&!entry.length))continue;
+    if(lookupFields.has(field)||referenceLists.has(field)){visit(entry,field,depth+1,inSpec||field==='spec');continue;}
+@@ -92,7 +95,8 @@ export function unshownProductFields(value,names={}) {
+    if(mechanical.has(field)||/^(?:.*_)?(?:sha256|hash|digest|fingerprint|revision|version|idempotency_key)$/i.test(field))continue;
+    if(internalFields.test(field)&&!Object.hasOwn(productLabels,field))continue;
+    if(hiddenFields.test(field)){missing.push(field);continue;}
+-   visit(entry,field,depth+1,inSpec||field==='spec',sourceEntry&&field==='text');
++   const isShot=field==='spec'&&entry&&typeof entry==='object'&&typeof entry.episode_id==='string'&&typeof entry.scene_id==='string';
++   visit(entry,field,depth+1,inSpec||field==='spec',sourceEntry&&field==='text',shotSpec||isShot);
+   }
+  }
+  visit(value);return [...new Set(missing)];
+diff --git a/studio-core/web/story-ui.mjs b/studio-core/web/story-ui.mjs
+index c247c6d..29a9612 100644
+--- a/studio-core/web/story-ui.mjs
++++ b/studio-core/web/story-ui.mjs
+@@ -8,6 +8,13 @@ import {renderMarkdown,markdownToText} from './markdown.mjs';
+ const e=v=>String(v??'').replaceAll('&','&amp;').replaceAll('<','&lt;').replaceAll('>','&gt;').replaceAll('"','&quot;').replaceAll("'",'&#39;');
+ const kinds={character:'人物卡',instance:'人物实例',event:'事件卡',relation:'关系',knowledge:'知识记录',outline:'章节大纲',simulation:'角色推演',chapter:'小说章节',adaptation:'改编方案',scene:'剧本场景',review_policy:'作品审阅规则',review:'审阅问题卡'};
+ const statuses={draft:'候选',pending:'待审',accepted:'已采纳',rejected:'已拒绝'};
++const planningLabels={episode:'分集计划',shot:'镜头计划'};
++const recordKindLabel=kind=>planningLabels[kind]??kinds[kind]??'故事记录';
++export function renderPlanningRecord(kind,content,{projectId,itemId,nodes=[]}={}){
++ const names=Object.fromEntries(nodes.map(node=>[node.id,node.content.title]));
++ const href='/workspace?view=storyboard&project='+encodeURIComponent(projectId)+'&item='+encodeURIComponent(itemId);
++ return `<section><h2>${e(content.title)}</h2><p>${e(recordKindLabel(kind))}</p><div class="story-prose markdown-content">${renderMarkdown(content.body)}</div><pre class="story-prose">${e(readableContent({spec:content.spec??{}},names))}</pre><a class="button" href="${e(href)}">在工作台编辑与审阅</a></section>`;
++}
+ const fieldLabels={character_id:'稳定人物',age:'年龄 / 不确定性',location:'地点 / 处境',motivation:'动机与欲望',goal:'当前目标',behavior:'行为底线 / 不能擅改的设定',speech:'语言与声音描述',author_secret:'仅作者可见秘密（不导出给角色）',unresolved:'未决矛盾 / 代价',participants:'参与者实例（不会自动获知）',event_layer:'事件层级',time_label:'作品时间说明（未知可留空）',time_precision:'时间精度',from_id:'关系起点',to_id:'关系终点',layer:'关系层',relationship_type:'关系类型',direction:'方向',subjective:'客观依据 / 谁的主观认知',knower_id:'获知者实例',knowledge_type:'知识类型',channel:'获知渠道 / 依据',adaptation_note:'省略、合并、原创增写说明'};
+ const typeFields={character:['motivation','goal','behavior','speech','author_secret'],instance:['character_id','age','location','goal','speech','author_secret'],event:['event_layer','time_precision','time_label','location','participants','unresolved'],relation:['from_id','to_id','layer','relationship_type','direction','subjective'],knowledge:['knower_id','knowledge_type','channel'],outline:[],simulation:[],chapter:[],adaptation:[],scene:['adaptation_note'],review_policy:[],review:[]};
+ const referenceFields=new Set(['character_id','knower_id','from_id','to_id','participants']);
+@@ -62,7 +69,7 @@ export function createStoryWorkspaceUI({api,onProjectChange,mediaByItem={}}={}){
+     catch(err){if(g!==generation)return;data=null;notice=err.message;}
+     render();
+   }
+-  function nodeSelect(name,value,kindList,multiple=false){const list=(view.perspective==='author'?allAuthorNodes:current()).filter(n=>kindList.includes(n.kind));const selected=(multiple?(Array.isArray(value)?value:[]):[value]).filter(Boolean),missing=selected.filter(id=>!list.some(n=>n.id===id));return `<select name="${name}" ${multiple?'multiple size="3"':''}><option value="">未指定</option>${missing.map(id=>`<option value="${e(id)}" selected>关联内容不可用</option>`).join('')}${list.map(n=>`<option value="${e(n.id)}" ${selected.includes(n.id)?'selected':''}>${e(n.content.title)} · ${kinds[n.kind]}</option>`).join('')}</select>`;}
++  function nodeSelect(name,value,kindList,multiple=false){const list=(view.perspective==='author'?allAuthorNodes:current()).filter(n=>kindList.includes(n.kind));const selected=(multiple?(Array.isArray(value)?value:[]):[value]).filter(Boolean),missing=selected.filter(id=>!list.some(n=>n.id===id));return `<select name="${name}" ${multiple?'multiple size="3"':''}><option value="">未指定</option>${missing.map(id=>`<option value="${e(id)}" selected>关联内容不可用</option>`).join('')}${list.map(n=>`<option value="${e(n.id)}" ${selected.includes(n.id)?'selected':''}>${e(n.content.title)} · ${recordKindLabel(n.kind)}</option>`).join('')}</select>`;}
+   function field(name,value){const label=fieldLabels[name];let control;
+     if(choices[name])control=`<select name="${name}">${options(choices[name],value??Object.keys(choices[name])[0])}</select>`;
+     else if(['character_id','knower_id','from_id','to_id','participants'].includes(name))control=nodeSelect(name,value,name==='character_id'?['character']:['knower_id','participants'].includes(name)?['instance']:['character','instance','event','chapter','scene'],name==='participants');
+@@ -73,6 +80,7 @@ export function createStoryWorkspaceUI({api,onProjectChange,mediaByItem={}}={}){
+   function side(){
+     if(!editor)return '<div class="story-side-empty"><span>○</span><h2>从一个人物开始</h2><p>选择节点或关系查看依据，也可以创建人物、事件与小说章节。新内容先保存为候选。</p></div>';
+     const c=editor.content,f=c.fields,kind=editor.kind;
++    if(planningLabels[kind])return renderPlanningRecord(kind,c,{projectId,itemId:editor.id,nodes:allAuthorNodes});
+     if(view.perspective!=='author')return `<h2>${e(c.title)}</h2><span class="tag">${e(kinds[kind])} · 已过滤知识视角</span><div class="story-prose markdown-content">${renderMarkdown(c.body)}</div>${Object.entries(f).map(([k,v])=>renderStoryField(k,v,current())).join('')}<p>当前视角不提供作者秘密、来源原文、候选或全知编辑接口。</p>`;
+     const v=history?.versions.find(v=>v.version===version),accepted=history?.versions.find(v=>v.version===history.item.accepted_version);
+     const paragraphs=kind==='chapter'?String(c.body).split(/\n\s*\n/).filter(x=>x.trim()):[];
+@@ -103,7 +111,7 @@ export function createStoryWorkspaceUI({api,onProjectChange,mediaByItem={}}={}){
+     <div class="story-filter-bar"><label>节点范围<select data-story-filter="kind">${options({all:'全部节点',...kinds},view.kind)}</select></label><label>关系层<select data-story-filter="layer">${options({all:'全部关系',character:'人物关系',event:'事件关系',reference:'来源 / 实例'},view.layer)}</select></label><label>关系类型<select data-story-filter="edgeType"><option value="">全部类型</option>${[...new Set(storyEdges(current()).map(x=>x.label))].map(x=>`<option value="${e(x)}" ${view.edgeType===x?'selected':''}>${e(x)}</option>`).join('')}</select></label><div class="story-tabs" aria-label="关系图模式">${[['layered','分层布局'],['focus','环形总览']].map(([v,l])=>`<button type="button" class="button ${view.mode===v?'teal':''}" data-story-action="mode" data-mode="${v}" aria-pressed="${view.mode===v}">${icon(v==='layered'?'Layers':'Network')}${l}</button>`).join('')}</div></div>
+     <div class="story-columns insight-columns"><section class="story-map-panel"><header class="insight-panel-head"><h2>${icon('Network')}角色关系</h2><label class="insight-search">${icon('Search')}<input data-story-search value="${e(view.query)}" placeholder="搜索节点" aria-label="搜索人物、事件和正文"/></label><div class="story-zoom">${button('−','zoom-out','aria-label="缩小图"')}${button('+','zoom-in','aria-label="放大图"')}${button('复位','reset')}</div></header>
+     ${data?diagram():`<div class="insight-map-empty"><h3>${notice?'当前范围未读取':'正在读取项目范围'}</h3><p>${notice?'请核对上方提示，恢复连接或选择有效范围后重新读取。':'正在读取已保存内容，不填充示例节点。'}</p>${notice?button('重新读取','refresh'):''}</div>`}</section>
+-    <aside class="story-side" role="${matchMedia('(max-width:900px)').matches?'dialog':'complementary'}" ${matchMedia('(max-width:900px)').matches&&editor?'aria-modal="true"':''} aria-label="卡片编辑与来源">${inspectorSummary(editor?{...current().find(n=>n.id===editor.id),id:editor.id,kind:editor.kind,content:editor.content,version,status:!dirty&&(history?history.item.accepted_version===version:current().find(n=>n.id===editor.id)?.status==='accepted')?'accepted':'draft'}:null,current(),mediaByItem)}${editor?`<details class="insight-editor" ${!editor.id?'open':''}><summary>编辑卡片、版本与来源</summary>${side()}</details>`:''}</aside>${sceneStrip(current(),current().find(n=>n.id===selected),view.sceneAll,mediaByItem)}</div><details class="story-index"><summary>所有节点与关系 · 键盘列表</summary><section class="story-node-list" aria-label="可键盘操作的图节点列表"><div class="section-head"><h2>当前范围 · ${filtered().length} 项</h2>${button('重新读取','refresh')}</div>${filtered().map(n=>`<button type="button" class="story-list-item ${n.id===selected?'selected':''}" data-story-action="select" data-id="${e(n.id)}"><span class="story-kind">${e(kinds[n.kind])}</span><strong>${e(n.content.title)}</strong><span>${e(statuses[n.status])}${n.archived?' · 已归档':''}${n.needs_review.length?' · 上游改变，需复核':''}</span></button>`).join('')||'<p class="sub">此范围没有记录。候选需开启开关，知识视角只显示后台授权内容。</p>'}</section></details>
++    <aside class="story-side" role="${matchMedia('(max-width:900px)').matches?'dialog':'complementary'}" ${matchMedia('(max-width:900px)').matches&&editor?'aria-modal="true"':''} aria-label="卡片编辑与来源">${inspectorSummary(editor?{...current().find(n=>n.id===editor.id),id:editor.id,kind:editor.kind,content:editor.content,version,status:!dirty&&(history?history.item.accepted_version===version:current().find(n=>n.id===editor.id)?.status==='accepted')?'accepted':'draft'}:null,current(),mediaByItem)}${editor?`<details class="insight-editor" ${!editor.id?'open':''}><summary>编辑卡片、版本与来源</summary>${side()}</details>`:''}</aside>${sceneStrip(current(),current().find(n=>n.id===selected),view.sceneAll,mediaByItem)}</div><details class="story-index"><summary>所有节点与关系 · 键盘列表</summary><section class="story-node-list" aria-label="可键盘操作的图节点列表"><div class="section-head"><h2>当前范围 · ${filtered().length} 项</h2>${button('重新读取','refresh')}</div>${filtered().map(n=>`<button type="button" class="story-list-item ${n.id===selected?'selected':''}" data-story-action="select" data-id="${e(n.id)}"><span class="story-kind">${e(recordKindLabel(n.kind))}</span><strong>${e(n.content.title)}</strong><span>${e(statuses[n.status])}${n.archived?' · 已归档':''}${n.needs_review.length?' · 上游改变，需复核':''}</span></button>`).join('')||'<p class="sub">此范围没有记录。候选需开启开关，知识视角只显示后台授权内容。</p>'}</section></details>
+     ${view.perspective==='author'?`${workflowLane(current(),data?.workflow_summary)}<div class="story-create"><h2>添加到当前作品</h2>${Object.entries(kinds).filter(([k])=>!['simulation','adaptation'].includes(k)).map(([k,l])=>button('＋ '+l,'new',`data-kind="${k}"`)).join('')}</div>
+     <section class="panel story-task"><h2>交给 Codex 的创作任务</h2><p>${data?.runner.capability?.test_double?'当前是隔离工程验收替身，所有输出仅验证流程，未调用模型。':data?.runner.connected?'本机 Runner 已连接。保存任务后，点击执行才会生成文字候选；每位角色使用独立会话。':'当前 Runner 未连接。任务可保存为「未提交 / 等待连接」，不会生成模拟正文。'}</p><form id="story-task-form" class="form"><label class="story-field">作者创作要求<textarea name="request" required rows="3" maxlength="12000">${e(taskDraft.request)}</textarea></label><details><summary>预览</summary><div class="markdown-content" data-task-preview="request">${renderMarkdown(taskDraft.request)}</div></details><label class="story-field">产物<select name="kind">${options({chapter:'一章小说候选',scene:'方案中的多场剧本 / 单场候选',outline:'章节大纲候选',simulation:'多角色推演（先审核意图）'},taskDraft.kind)}</select></label><label class="story-field">输入版本（仅已采纳内容）<select name="source_ids" multiple size="3">${current().filter(n=>n.status==='accepted').map(n=>`<option value="${e(n.id)}" ${taskDraft.source_ids.includes(n.id)?'selected':''}>${e(n.content.title)}</option>`).join('')}</select></label><details><summary>小说角色执行上下文</summary><label class="story-field">两位核心角色${nodeSelect('instance_ids',taskDraft.instance_ids,['instance'],true)}</label><label class="story-field">独立 NPC 实例${nodeSelect('npc_instance_ids',taskDraft.npc_instance_ids,['instance'],true)}</label><label class="story-field">明确执行时点<input name="at" type="number" value="${e(taskDraft.at)}"/></label><label class="story-field">仅给各角色的共享简报<textarea name="public_brief" rows="3" maxlength="5000">${e(taskDraft.public_brief)}</textarea></label><details><summary>预览</summary><div class="markdown-content" data-task-preview="public_brief">${renderMarkdown(taskDraft.public_brief)}</div></details><p>共享简报不要填写作者秘密。各角色只收到自己的设定与当时所知，不会收到上面的作者要求或其他角色意图。</p></details><button type="submit" class="button">保存创作任务</button></form>${tasks.map(t=>`<div class="story-task-row"><strong>${e(({waiting_connection:data?.runner.connected?'等待手动执行':'未提交 · 等待连接',running:'上次状态为执行中 · 刷新后先核对审计',completed:'候选已生成 · 等待人工采纳',failed:'执行失败 · 记录已保留',interrupted:'执行已中断 · 记录已保留'})[t.run_state]??'状态待核对')}</strong><div class="markdown-content">${renderMarkdown(t.request.request)}</div><small>${e(runReason(t.reason))}</small>${t.run_state==='waiting_connection'&&data?.runner.connected?button('执行此任务','run-task',`data-task="${e(t.id)}"`):''}${(t.candidates??(t.candidate?[t.candidate]:[])).map(c=>button('查看候选'+(c.scene_index?' · 第 '+c.scene_index+' 场':''),'select',`data-id="${e(c.id)}"`)).join('')}${['failed','interrupted'].includes(t.run_state)&&data?.runner.resume_supported?button('核验恢复条件并继续','resume-task',`data-task="${e(t.id)}"`):''}${t.run_state==='running'&&data?.runner.interruption_recovery_supported?button('核对中断状态','recover-task',`data-task="${e(t.id)}"`):''}${t.run_state==='running'&&data?.runner.connected&&data.runner.active?button('取消本机执行','cancel-task',`data-task="${e(t.id)}"`):''}${data?.runner.connected||t.run_state!=='waiting_connection'?button('执行记录','run-audit',`data-task="${e(t.id)}"`):''}</div>`).join('')}${exportLinks()}${runAudit?`<details open><summary>最近执行记录</summary><pre class="story-prose">${e(runAudit)}</pre></details>`:''}</section>`:''}
+     <p class="sub">关系和场次来自当前作品版本；位置不表示亲密程度，参与不代表知情。</p>`}</section>`;

@@ -76,7 +76,7 @@ CineWeave 按输入与目标选择文生视频、图生视频、首尾帧或参�
 | --- | --- |
 | [完整短片创作](../../skills/cineweave-director/references/optional/short-film-creation.md) | 约定全套范围，贯通叙事、导演、视觉、逐镜稿、配音与剪辑 |
 | [视觉开发](../../skills/cineweave-director/references/optional/visual-development.md) | 比较问题、固定与变化、人物表情和衣饰、场景探索、资产收敛与修订 |
-| [完整示例](../../skills/cineweave-director/references/optional/short-film-example.md) | 24 秒四镜原创全套正文与可检查的覆盖／时间数据 |
+| [完整示例](https://github.com/Wilder1222/cineweave-director/blob/aa3571d81dd74af9756cb826eaefd22e5c76f2f5/skills/cineweave-director/references/optional/short-film-example.md) | 24 秒四镜原创全套正文与可检查的覆盖／时间数据 |
 | [共同细节规范](../../skills/cineweave-director/references/optional/prompt-detail-standard.md) | 继续作为人物、场景、摄影、灯光、收音及部门协调的细节权威 |
 | [交付回归](../check-delivery.test.mjs) | 检查样例资产与镜头正文存在、时间覆盖、台词复制边界和源／成片字幕映射 |
 

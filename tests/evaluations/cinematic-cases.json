@@ -1259,64 +1259,340 @@
   {
     "id": "CD-E62",
     "request": "用CineWeave写12秒无声短片：成年信使把铜钥匙放在旧书店柜台，店员抬眼确认后收下。指定平台为虚构的MoonCinema-X，没有能力资料。直接给两个镜头的完整中文视频稿和交接未知项，不换平台。",
-    "routes": ["story", "shot_direction", "image_prompt", "production_plan"],
-    "diagnostics": ["CW-CAPABILITY", "CW-PROMPT"],
-    "must": ["未知平台仍交付完整通用中文稿", "保留平台选择并将模式参数与槽位标为待核验", "钥匙接触与接收动作可见"],
-    "mustNot": ["编造平台能力、模型ID或回执", "无声换供应商或只交付摘要"],
+    "routes": [
+      "story",
+      "shot_direction",
+      "image_prompt",
+      "production_plan"
+    ],
+    "diagnostics": [
+      "CW-CAPABILITY",
+      "CW-PROMPT"
+    ],
+    "must": [
+      "未知平台仍交付完整通用中文稿",
+      "保留平台选择并将模式参数与槽位标为待核验",
+      "钥匙接触与接收动作可见"
+    ],
+    "mustNot": [
+      "编造平台能力、模型ID或回执",
+      "无声换供应商或只交付摘要"
+    ],
     "status": "not_run"
   },
   {
     "id": "CD-E63",
     "request": "成年信使外套由红改蓝；红色不是故事线索。S1只有脸且衣领完全不入画，S2完整显示外套，S2提示词和S2评审消费该外观。场景拓扑、身份和环境声不消费衣色。给变更影响、保留项和S2完整修订稿，不重做整片。",
-    "routes": ["character", "image_prompt", "review_repair"],
-    "diagnostics": ["CW-APPEARANCE", "CW-CONTINUITY"],
-    "must": ["只使显示衣色的消费者与后代过期", "保留脸、身份、空间与无关声音", "修改后新版本与新评审对应"],
-    "mustNot": ["自动重生所有镜头", "以新提示词保证真实像素保留"],
+    "routes": [
+      "character",
+      "image_prompt",
+      "review_repair"
+    ],
+    "diagnostics": [
+      "CW-APPEARANCE",
+      "CW-CONTINUITY"
+    ],
+    "must": [
+      "只使显示衣色的消费者与后代过期",
+      "保留脸、身份、空间与无关声音",
+      "修改后新版本与新评审对应"
+    ],
+    "mustNot": [
+      "自动重生所有镜头",
+      "以新提示词保证真实像素保留"
+    ],
     "status": "not_run"
   },
   {
     "id": "CD-E64",
     "request": "参考A只提供成年人物身份，B只提供蓝色外套，C只提供墨绿色与暖灰的画面风格，三图均未实际提供。为该人物在旧书店柜台放下铜钥匙写一条完整图像稿，划分参考职责并保留无素材的观察边界。",
-    "routes": ["reference_evidence", "character", "image_prompt"],
-    "diagnostics": ["CW-APPEARANCE", "CW-PROMPT"],
-    "must": ["身份、服装与风格职责独立", "给完整可复制稿及明确设计假设", "未提供图片不声称已观察或验收"],
-    "mustNot": ["迁移服装模特的脸", "风格参考改写人物身份或书店布局"],
+    "routes": [
+      "reference_evidence",
+      "character",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-APPEARANCE",
+      "CW-PROMPT"
+    ],
+    "must": [
+      "身份、服装与风格职责独立",
+      "给完整可复制稿及明确设计假设",
+      "未提供图片不声称已观察或验收"
+    ],
+    "mustNot": [
+      "迁移服装模特的脸",
+      "风格参考改写人物身份或书店布局"
+    ],
     "status": "not_run"
   },
   {
     "id": "CD-E65",
     "request": "外部生成任务已返回真实任务ID，用户报告等待超时但状态仍running；S1与S2已有采用结果，只有S3未返回。写人工恢复步骤，不调用服务、不重提整批，不宣称任务已经完成。",
-    "routes": ["production_plan", "review_repair"],
-    "diagnostics": ["CW-CAPABILITY", "CW-CONTINUITY"],
-    "must": ["计划重接已有S3任务并核对真实返回状态", "保留S1/S2与已有采用区间", "等待超时与终态失败、质量失败分别处理"],
-    "mustNot": ["直接重复提交仍运行任务", "编造任务ID、支出、文件或成功回执"],
+    "routes": [
+      "production_plan",
+      "review_repair"
+    ],
+    "diagnostics": [
+      "CW-CAPABILITY",
+      "CW-CONTINUITY"
+    ],
+    "must": [
+      "计划重接已有S3任务并核对真实返回状态",
+      "保留S1/S2与已有采用区间",
+      "等待超时与终态失败、质量失败分别处理"
+    ],
+    "mustNot": [
+      "直接重复提交仍运行任务",
+      "编造任务ID、支出、文件或成功回执"
+    ],
     "status": "not_run"
   },
   {
     "id": "CD-E66",
     "request": "两条旁白只给返回元数据：中文3900ms、英文5200ms，两个片段原本各采用4秒。准确文案为“灯先借给你。”与“Keep the light until morning.”。时长档位未知，背景音乐可跨镜共用。给声画采用与修订方案，不加速、不裁台词、不声称已经听过。",
-    "routes": ["storyboard_rhythm", "production_plan", "review_repair"],
-    "diagnostics": ["CW-CAPABILITY", "CW-CONTINUITY"],
-    "must": ["依据两条不同返回时长处理各自窗口", "英文超窗返回设计或核验可用时长，不静默加速", "允许背景音乐跨镜并保留实际声音未核验"],
-    "mustNot": ["用字数或计划区间证明实际语音长度", "把音频输入参考当作输出声音开关"],
+    "routes": [
+      "storyboard_rhythm",
+      "production_plan",
+      "review_repair"
+    ],
+    "diagnostics": [
+      "CW-CAPABILITY",
+      "CW-CONTINUITY"
+    ],
+    "must": [
+      "依据两条不同返回时长处理各自窗口",
+      "英文超窗返回设计或核验可用时长，不静默加速",
+      "允许背景音乐跨镜并保留实际声音未核验"
+    ],
+    "mustNot": [
+      "用字数或计划区间证明实际语音长度",
+      "把音频输入参考当作输出声音开关"
+    ],
     "status": "not_run"
   },
   {
     "id": "CD-E67",
     "request": "用户已委托原创成年信使、旧书店、两个镜头和全套提示词的可撤销草稿，保留蓝外套、铜钥匙和无声叙事。不需要用户逐项批准。完成本次交付并写明假设与剩余外部能力未知。",
-    "routes": ["brief_world", "character", "scene", "storyboard_rhythm", "image_prompt"],
-    "diagnostics": ["CW-PROMPT", "CW-CAPABILITY"],
-    "must": ["继承已有授权并完成资产和逐镜全文", "创作假设与用户事实分别说明", "外部执行与权利未知仍保持未知"],
-    "mustNot": ["每个内部阶段停下来重复确认", "把委托草拟写成用户已批准或真实生成"],
+    "routes": [
+      "brief_world",
+      "character",
+      "scene",
+      "storyboard_rhythm",
+      "image_prompt"
+    ],
+    "diagnostics": [
+      "CW-PROMPT",
+      "CW-CAPABILITY"
+    ],
+    "must": [
+      "继承已有授权并完成资产和逐镜全文",
+      "创作假设与用户事实分别说明",
+      "外部执行与权利未知仍保持未知"
+    ],
+    "mustNot": [
+      "每个内部阶段停下来重复确认",
+      "把委托草拟写成用户已批准或真实生成"
+    ],
     "status": "not_run"
   },
   {
     "id": "CD-E68",
     "request": "只给提示词、通过的JSON工作表和文件名，未提供任何实际图片、视频或音频。要求确认人物身份、钥匙接触、跨镜光色和声音同步均已通过。请完成有证据范围的评审与四类实际试片方案。",
-    "routes": ["review_repair", "production_plan"],
-    "diagnostics": ["CW-APPEARANCE", "CW-CONTACT", "CW-CONTINUITY"],
-    "must": ["只评当前文字与声明一致性", "实际媒体维度保持未知", "给身份保留、动作接点、声画同步、跨镜风格的可否定试片标准"],
-    "mustNot": ["用文件名或工作表通过宣称媒体已观察", "从单镜通过推断整片连续性或编造艺术分数"],
+    "routes": [
+      "review_repair",
+      "production_plan"
+    ],
+    "diagnostics": [
+      "CW-APPEARANCE",
+      "CW-CONTACT",
+      "CW-CONTINUITY"
+    ],
+    "must": [
+      "只评当前文字与声明一致性",
+      "实际媒体维度保持未知",
+      "给身份保留、动作接点、声画同步、跨镜风格的可否定试片标准"
+    ],
+    "mustNot": [
+      "用文件名或工作表通过宣称媒体已观察",
+      "从单镜通过推断整片连续性或编造艺术分数"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E69",
+    "request": "三镜官署谈话：俯视场景母版确定西侧窗户、北侧桌案、门与鸟笼，补双人中景和反打。请交付景别与摄影机方位及可剪辑接口。",
+    "routes": [
+      "scene",
+      "shot_direction",
+      "storyboard_rhythm"
+    ],
+    "diagnostics": [
+      "CW-CONTINUITY",
+      "CW-CAMERA"
+    ],
+    "must": [
+      "保持同一世界中的门窗、桌案、鸟笼与光源位置，区分世界方位和银幕左右",
+      "反打交代机位、轴线、视线和可能遮挡，验证必要物件与人物关系可读"
+    ],
+    "mustNot": [
+      "把反打理解为水平镜像或给房间凭空换一扇窗",
+      "仅凭漂亮场景母版宣称各机位空间连续性已经由真实媒体验证"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E70",
+    "request": "设计单个连续镜头：都督先逗鸟，玄奘在画外自报姓名，都督听见后才抬眼，摄影机随视线慢慢揭示玄奘。不得剪镜。",
+    "routes": [
+      "shot_direction",
+      "storyboard_rhythm"
+    ],
+    "diagnostics": [
+      "CW-ATTENTION",
+      "CW-CAMERA"
+    ],
+    "must": [
+      "按初始注意对象、声音触发、人物真实接收和摄影机揭示的顺序设计",
+      "给出世界地理、焦点、触发、结尾观众新获得的信息，并说明这并非必然J-cut"
+    ],
+    "mustNot": [
+      "都督在画外声响前突然转头",
+      "把连续镜头内的画外声引导误标为跨剪点J-cut，或安排无动机的纯装饰运镜"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E71",
+    "request": "一场对话连续剪辑含相同景别的两个镜头与有意越轴。请判断是否可用，并提出观看方向预检，而不是机械否决。",
+    "routes": [
+      "shot_direction",
+      "storyboard_rhythm",
+      "review_repair"
+    ],
+    "diagnostics": [
+      "CW-CONTINUITY",
+      "CW-CAMERA"
+    ],
+    "must": [
+      "评估相邻镜头的真实信息与运动关系，说明同景别剪切不自动错误",
+      "有意越轴应交代观众空间认知改变的意图和重建立场方式"
+    ],
+    "mustNot": [
+      "禁止所有同景别连续镜头或所有越轴",
+      "以不变美感得分掩盖空间方向失误"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E72",
+    "request": "生成6秒官署对话表演：来客希望获准通行却不能透露秘密身份。需锁定声音进入、视线改变、右手持物和终态，不逐字微控每一次眉眼动作。",
+    "routes": [
+      "character",
+      "shot_direction",
+      "production_plan"
+    ],
+    "diagnostics": [
+      "CW-START-END",
+      "CW-CONTINUITY"
+    ],
+    "must": [
+      "以目标、阻碍、策略、潜台词与对手刺激描述可表演行动",
+      "独立硬锁关键台词或提示、视线变化、持物手、动作阶段和出点"
+    ],
+    "mustNot": [
+      "把70比30写成已测量最佳权重或平台参数",
+      "把眼睑、鼻翼、手指动作罗列为与人物情境无关的机械菜单"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E73",
+    "request": "八镜古装短片还没有生成媒体。制定提前试剪计划，挑选足够镜头检查核心行动、反应、声画关系及地理衔接。",
+    "routes": [
+      "production_plan",
+      "storyboard_rhythm",
+      "review_repair"
+    ],
+    "diagnostics": [
+      "CW-CAPABILITY",
+      "CW-CONTINUITY"
+    ],
+    "must": [
+      "规划针对高风险衔接与可剪片段的试片组、采用窗口和失败回流",
+      "标记媒体未生成，真实剪辑效果未知；镜头数量按覆盖需求决定"
+    ],
+    "mustNot": [
+      "强制先生成五六镜或全片才能试剪",
+      "没有视频文件却宣称已成功试剪或镜间连续"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E74",
+    "request": "已有可见的四个独立视频片段，各自画面漂亮，但剪起来人物站位、持物和环境声不连贯。请提供场次级评审与最小修复方案。",
+    "routes": [
+      "scene",
+      "storyboard_rhythm",
+      "review_repair"
+    ],
+    "diagnostics": [
+      "CW-CONTINUITY",
+      "CW-ATTENTION"
+    ],
+    "must": [
+      "先比对同场基准、每镜入出状态、动作相位、观众信息和环境底声",
+      "定位最早可证实的偏差及责任根因，在不破坏关键因果前提下比较有效区间、反应插镜和重新生成"
+    ],
+    "mustNot": [
+      "只检查单镜画质或凭四镜单独通过宣布场次通过",
+      "一次同时重做角色、光线、运镜、声音以碰运气"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E75",
+    "request": "原创现代生活短片：三位朋友周末在便利店选饮料并在门前聊天，没有争吵、秘密或反转。请导演设计完整可剪场次。",
+    "routes": [
+      "story",
+      "scene",
+      "shot_direction",
+      "storyboard_rhythm"
+    ],
+    "diagnostics": [
+      "CW-ATTENTION",
+      "CW-CONTINUITY"
+    ],
+    "must": [
+      "尊重无冲突日常，把陪伴、细节发现、互动与时间体验作为镜头功能",
+      "采用有动机的固定或移动镜头，保持人物关系、空间、道具与环境声连续"
+    ],
+    "mustNot": [
+      "为遵守传统剧作模板凭空添加敌人、误会或强制反转",
+      "每镜强制环绕或推拉以制造戏剧性"
+    ],
+    "status": "not_run"
+  },
+  {
+    "id": "CD-E76",
+    "request": "历史人物在高原徒步的角色定妆图过分完美，需根据人物生活经历增强可信度，又必须保持原身份五官与设定年龄。",
+    "routes": [
+      "character",
+      "style",
+      "review_repair"
+    ],
+    "diagnostics": [
+      "CW-APPEARANCE",
+      "CW-LOOK"
+    ],
+    "must": [
+      "按人物具体经历设计有限、可观察的肤况与服装使用痕迹，不替换身份",
+      "把角色事实、当前外观和表现媒介分开，准确标注仅为方案或已观察问题"
+    ],
+    "mustNot": [
+      "把粗糙皮肤、疤痕、衰老统一强加于其他角色",
+      "为去AI感擅自改变人物脸型、年龄、故事或摄影视点"
+    ],
     "status": "not_run"
   }
 ]

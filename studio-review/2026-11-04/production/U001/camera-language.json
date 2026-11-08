@@ -1,0 +1,495 @@
+{
+  "scope": "narrative_video",
+  "shotIds": [
+    "U001-01",
+    "U001-02",
+    "U001-03",
+    "U001-04A",
+    "U001-04B",
+    "U001-05A",
+    "U001-05B",
+    "U001-06"
+  ],
+  "decisions": [
+    {
+      "shotId": "U001-01",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "陌生住客误会电视，保留租客的距离与戒心",
+        "audiencePayoff": "陌生住客误会电视，保留租客的距离与戒心",
+        "trigger": "陌生住客误会电视，保留租客的距离与戒心",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "外卖鞋柜、手机许竞；遥控闻溪左手剑右手。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "玄关内侧朝沙发",
+        "height": "站姿眼线",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "陌生住客误会电视，保留租客的距离与戒心",
+        "focusTarget": "玄关与沙发上两人的可辨关系，先读遥控再读警惕对视",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "沿两人互动与茶几—北墙轴线的南/西侧，不凭反打交换门窗",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "鞋柜与外卖、玄关门框",
+        "midground": "许竞与沙发上的闻溪",
+        "background": "电视和北墙柜",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "陌生住客误会电视，保留租客的距离与戒心"
+      },
+      "temporal": {
+        "durationSeconds": 32,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "陌生住客误会电视，保留租客的距离与戒心",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：玄关内侧朝沙发",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：玄关内侧朝沙发",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U001-01-F1",
+            "timeSeconds": 0,
+            "description": "玄关与沙发上两人的可辨关系，先读遥控再读警惕对视"
+          }
+        ],
+        "edit": {
+          "entry": "夜间许竞提外卖到玄关，闻溪已在沙发，门后鞋拔未取。",
+          "exit": "外卖鞋柜、手机许竞；遥控闻溪左手剑右手。",
+          "preferredTransition": "从本片真实初态开始，建立空间后继续",
+          "soundBridge": "开门、电视购物背景声与人物对白；完整台词优先，未新增其他人的可辨声音。；电视02静音后不复响；墙缝水声在04B渐弱但不把现场变为已修好；报修电话只保留许竞单侧台词"
+        }
+      }
+    },
+    {
+      "shotId": "U001-02",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "双方主张住处却先协作防水",
+        "audiencePayoff": "双方主张住处却先协作防水",
+        "trigger": "双方主张住处却先协作防水",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "剑鞘挡水、手机干茶几免提、电视静音。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "茶几南侧看北墙与干区",
+        "height": "桌面略上方含人物上缘",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "双方主张住处却先协作防水",
+        "focusTarget": "水路与两人分工处同一工作范围",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "沿两人互动与茶几—北墙轴线的南/西侧，不凭反打交换门窗",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "挡水剑鞘、干区手机、插线板",
+        "midground": "许竞与闻溪",
+        "background": "北墙电视柜、正常玄关门或同一东窗，依本镜机位真实可见",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "双方主张住处却先协作防水"
+      },
+      "temporal": {
+        "durationSeconds": 32,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "双方主张住处却先协作防水",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：茶几南侧看北墙与干区",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：茶几南侧看北墙与干区",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U001-02-F1",
+            "timeSeconds": 0,
+            "description": "水路与两人分工处同一工作范围"
+          }
+        ],
+        "edit": {
+          "entry": "外卖鞋柜、手机许竞；遥控闻溪左手剑右手。",
+          "exit": "剑鞘挡水、手机干茶几免提、电视静音。",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "电视声被关掉，水声、拨号提示及单侧通话；完整台词优先，未新增其他人的可辨声音。；电视02静音后不复响；墙缝水声在04B渐弱但不把现场变为已修好；报修电话只保留许竞单侧台词"
+        }
+      }
+    },
+    {
+      "shotId": "U001-03",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "拒绝让她以被困换止水",
+        "audiencePayoff": "拒绝让她以被困换止水",
+        "trigger": "拒绝让她以被困换止水",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "许竞仍按剑，闻溪未入墙门。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "正常门内侧斜看北墙",
+        "height": "人物眼线",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "拒绝让她以被困换止水",
+        "focusTarget": "门后鞋拔与北墙按鞘的真实层次关系",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "沿两人互动与茶几—北墙轴线的南/西侧，不凭反打交换门窗",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "断栓/伤手、门后鞋拔",
+        "midground": "许竞与闻溪",
+        "background": "北墙电视柜、正常玄关门或同一东窗，依本镜机位真实可见",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "拒绝让她以被困换止水"
+      },
+      "temporal": {
+        "durationSeconds": 30,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "拒绝让她以被困换止水",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：正常门内侧斜看北墙",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：正常门内侧斜看北墙",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U001-03-F1",
+            "timeSeconds": 0,
+            "description": "门后鞋拔与北墙按鞘的真实层次关系"
+          }
+        ],
+        "edit": {
+          "entry": "剑鞘挡水、手机干茶几免提、电视静音。",
+          "exit": "许竞仍按剑，闻溪未入墙门。",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "持续水声、矮柜移动声和对白；完整台词优先，未新增其他人的可辨声音。；电视02静音后不复响；墙缝水声在04B渐弱但不把现场变为已修好；报修电话只保留许竞单侧台词"
+        }
+      }
+    },
+    {
+      "shotId": "U001-04A",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "用完整取件动作消除工具瞬移",
+        "audiencePayoff": "用完整取件动作消除工具瞬移",
+        "trigger": "用完整取件动作消除工具瞬移",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "鞋拔闻溪手、门后空挂点。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "客厅南侧含西南门与北墙",
+        "height": "站姿眼线",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "用完整取件动作消除工具瞬移",
+        "focusTarget": "取铁件的闻溪及完整行进通道",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "沿两人互动与茶几—北墙轴线的南/西侧，不凭反打交换门窗",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "空挂点、闻溪手中鞋拔",
+        "midground": "许竞与闻溪",
+        "background": "北墙电视柜、正常玄关门或同一东窗，依本镜机位真实可见",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "用完整取件动作消除工具瞬移"
+      },
+      "temporal": {
+        "durationSeconds": 8,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "用完整取件动作消除工具瞬移",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：客厅南侧含西南门与北墙",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：客厅南侧含西南门与北墙",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U001-04A-F1",
+            "timeSeconds": 0,
+            "description": "取铁件的闻溪及完整行进通道"
+          }
+        ],
+        "edit": {
+          "entry": "许竞仍按剑，闻溪未入墙门。",
+          "exit": "鞋拔闻溪手、门后空挂点。",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "脚步、铁件取下轻响、持续流水；完整台词优先，未新增其他人的可辨声音。；电视02静音后不复响；墙缝水声在04B渐弱但不把现场变为已修好；报修电话只保留许竞单侧台词"
+        }
+      }
+    },
+    {
+      "shotId": "U001-04B",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "临时卡栓且保留维修未完成",
+        "audiencePayoff": "临时卡栓且保留维修未完成",
+        "trigger": "临时卡栓且保留维修未完成",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "鞋拔卡栓、水不再冒、许竞仍按剑。"
+      },
+      "camera": {
+        "shotScale": "近景",
+        "position": "北墙缝外侧",
+        "height": "接触处高度",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "临时卡栓且保留维修未完成",
+        "focusTarget": "墙缝窄头/断栓与两只操作手的工作面",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "沿两人互动与茶几—北墙轴线的南/西侧，不凭反打交换门窗",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "鞋拔窄头与断栓",
+        "midground": "闻溪推栓手、许竞按鞘手",
+        "background": "墙缝后暗区，不穿墙看洞府",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "临时卡栓且保留维修未完成"
+      },
+      "temporal": {
+        "durationSeconds": 20,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "临时卡栓且保留维修未完成",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：北墙缝外侧",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：北墙缝外侧",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U001-04B-F1",
+            "timeSeconds": 0,
+            "description": "墙缝窄头/断栓与两只操作手的工作面"
+          }
+        ],
+        "edit": {
+          "entry": "鞋拔闻溪手、门后空挂点。",
+          "exit": "鞋拔卡栓、水不再冒、许竞仍按剑。",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "墙内闷响、铁件接触、水声减弱及对白；完整台词优先，未新增其他人的可辨声音。；电视02静音后不复响；墙缝水声在04B渐弱但不把现场变为已修好；报修电话只保留许竞单侧台词"
+        }
+      }
+    },
+    {
+      "shotId": "U001-05A",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "把共同维修转成回来先敲门的约定",
+        "audiencePayoff": "把共同维修转成回来先敲门的约定",
+        "trigger": "把共同维修转成回来先敲门的约定",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "剑沙发边、伤手已贴、鞋拔仍卡栓。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "客厅南侧看干茶几与沙发",
+        "height": "站姿眼线",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "把共同维修转成回来先敲门的约定",
+        "focusTarget": "归还剑与包贴伤、双方回应的可辨工作区域",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "沿两人互动与茶几—北墙轴线的南/西侧，不凭反打交换门窗",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "沙发边剑、创可贴/干手机",
+        "midground": "许竞与闻溪",
+        "background": "北墙电视柜、正常玄关门或同一东窗，依本镜机位真实可见",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "把共同维修转成回来先敲门的约定"
+      },
+      "temporal": {
+        "durationSeconds": 34,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "把共同维修转成回来先敲门的约定",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：客厅南侧看干茶几与沙发",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：客厅南侧看干茶几与沙发",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U001-05A-F1",
+            "timeSeconds": 0,
+            "description": "归还剑与包贴伤、双方回应的可辨工作区域"
+          }
+        ],
+        "edit": {
+          "entry": "鞋拔卡栓、水不再冒、许竞仍按剑。",
+          "exit": "剑沙发边、伤手已贴、鞋拔仍卡栓。",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "单侧补报、包装纸轻响与对白，电视保持无声；完整台词优先，未新增其他人的可辨声音。；电视02静音后不复响；墙缝水声在04B渐弱但不把现场变为已修好；报修电话只保留许竞单侧台词"
+        }
+      }
+    },
+    {
+      "shotId": "U001-05B",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她携剑从正常门主动离去",
+        "audiencePayoff": "她携剑从正常门主动离去",
+        "trigger": "她携剑从正常门主动离去",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "闻溪携剑从正常玄关门离开并带门；鞋拔仍卡栓，外卖袋盆内"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "客厅南侧含茶几/沙发和正常玄关门",
+        "height": "人物眼线",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "她携剑从正常门主动离去",
+        "focusTarget": "沙发边剑入手、空通道与正常门",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "沿两人互动与茶几—北墙轴线的南/西侧，不凭反打交换门窗",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "低速浮剑、玄关门、外卖盆",
+        "midground": "许竞与闻溪",
+        "background": "北墙电视柜、正常玄关门或同一东窗，依本镜机位真实可见",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "她携剑从正常门主动离去"
+      },
+      "temporal": {
+        "durationSeconds": 12,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她携剑从正常门主动离去",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：客厅南侧含茶几/沙发和正常玄关门",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：客厅南侧含茶几/沙发和正常玄关门",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U001-05B-F1",
+            "timeSeconds": 0,
+            "description": "沙发边剑入手、空通道与正常门"
+          }
+        ],
+        "edit": {
+          "entry": "剑沙发边、伤手已贴、鞋拔仍卡栓。",
+          "exit": "闻溪携剑从正常玄关门离开并带门；鞋拔仍卡栓，外卖袋盆内",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "两下叩桌、脚步、袋入盆轻响；完整台词优先，未新增其他人的可辨声音。；电视02静音后不复响；墙缝水声在04B渐弱但不把现场变为已修好；报修电话只保留许竞单侧台词"
+        }
+      }
+    },
+    {
+      "shotId": "U001-06",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "第一次敲门与替件入屋，责任仍未结束",
+        "audiencePayoff": "第一次敲门与替件入屋，责任仍未结束",
+        "trigger": "第一次敲门与替件入屋，责任仍未结束",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "闻溪带替件入屋，维修人员未到。"
+      },
+      "camera": {
+        "shotScale": "宽中景",
+        "position": "客厅南侧朝西南玄关门",
+        "height": "人物眼线",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "第一次敲门与替件入屋，责任仍未结束",
+        "focusTarget": "墙缝卡件、门口替件与两人位置保持可辨景深",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "沿两人互动与茶几—北墙轴线的南/西侧，不凭反打交换门窗",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "近墙卡件、门口铁件/拖鞋",
+        "midground": "许竞与闻溪",
+        "background": "北墙电视柜、正常玄关门或同一东窗，依本镜机位真实可见",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "第一次敲门与替件入屋，责任仍未结束"
+      },
+      "temporal": {
+        "durationSeconds": 25,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "第一次敲门与替件入屋，责任仍未结束",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：客厅南侧朝西南玄关门",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：客厅南侧朝西南玄关门",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U001-06-F1",
+            "timeSeconds": 0,
+            "description": "墙缝卡件、门口替件与两人位置保持可辨景深"
+          }
+        ],
+        "edit": {
+          "entry": "明确跳切拂晓，闻溪已离屋一段时间，鞋拔仍卡墙栓，许竞在沙发边。",
+          "exit": "闻溪带替件入屋，维修人员未到。",
+          "preferredTransition": "05B后明确跳切至拂晓；先敲门再开门，不把夜至晨当连续几秒",
+          "soundBridge": "两下敲门、开门声和对白，晨间低底声；完整台词优先，未新增其他人的可辨声音。；电视02静音后不复响；墙缝水声在04B渐弱但不把现场变为已修好；报修电话只保留许竞单侧台词"
+        }
+      }
+    }
+  ]
+}

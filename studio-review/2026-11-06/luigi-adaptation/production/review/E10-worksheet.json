@@ -1,0 +1,1322 @@
+{
+  "source": {
+    "type": "design",
+    "id": "DENIED-E10-text-coverage-fe9484967f24",
+    "version": 2,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "E10-SH001",
+    "E10-SH003",
+    "E10-SH004",
+    "E10-SH005",
+    "E10-SH007",
+    "E10-SH008",
+    "E10-SH009",
+    "E10-SH010",
+    "E10-SH011",
+    "E10-SH012",
+    "E10-SH013",
+    "E10-SH014"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "E10-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：来源先设时间和样本数量，记者只接获准递来的页。；入镜已知：记者索取能发表的因果，来源只愿交有限核实材料。；本镜新知：三页样本在中间，报告封页仍归莉娜。；实际写出的动作：服务员放下两杯咖啡。莉娜将杯子移到桌东缘，灰信封贴着自己；诺拉刚翻开红本，她伸手压住信封口，先说明离开的时间。\n莉娜只抽出三页盖过身份的表格，剩余封页压在北侧手肘下。诺拉将玛拉授权的上传回执推过去，比对一处缺材栏，不碰其余材料。",
+      "sourceLocator": "season/E10.json#/shots/0"
+    },
+    {
+      "role": "performance",
+      "shotId": "E10-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "莉娜左手压灰信封，工作手机右手扣着。 → 三页样本在中间，报告封页仍归莉娜。；莉娜向诺拉：I've got twenty minutes before I'm due back.；先限制时间，手压住信封 / 诺拉向莉娜：Okay. What have you got?；顺着她的时限，直接看材料 / 莉娜向诺拉：Three cases. That's all I can give you.；只抽出约定三页 / 诺拉向莉娜：Receipt here, missing paperwork here. Same code on all three.；对着两栏核对，不替医生下结论",
+      "sourceLocator": "season/E10.json#/shots/0"
+    },
+    {
+      "role": "staging",
+      "shotId": "E10-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "咖啡店南门不断进出取外卖的人，吧台在东，西窗的上午散射光落在西北桌边。莉娜坐北侧看得见门，灰信封贴身、工作手机在右；诺拉坐南侧，红本尚未打开。 本镜画内角色：LENA,NORA。；起态：莉娜左手压灰信封，工作手机右手扣着。；出态：三页样本在中间，报告封页仍归莉娜。",
+      "sourceLocator": "season/E10.json#/shots/0"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E10-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "咖啡桌西侧40mm双人中景，莉娜北、诺拉南，南门在远侧背景，三页样本由北推到中间。；相机：固定，让信封到桌中成为第一次构图变化。；焦点：来源先设时间和样本数量，记者只接获准递来的页。",
+      "sourceLocator": "season/E10.json#/shots/0"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E10-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E10-SH001.txt；23秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E10.json#/shots/0"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E10-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "三页样本在中间，报告封页仍归莉娜。；切点：诺拉追问还有多少，切向有权拒绝扩大样本的来源。；接口：接E10-SH003；诺拉追问还有多少，切向有权拒绝扩大样本的来源。",
+      "sourceLocator": "season/E10.json#/shots/0"
+    },
+    {
+      "role": "direction",
+      "shotId": "E10-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她拒给未知数字、只说自己质检所见，返岗提醒继续亮在桌边。；入镜已知：三页样本在中间，报告封页仍归莉娜。；本镜新知：封页文号可见，正文仍被她手臂遮住。；实际写出的动作：诺拉把三个相同代码排成一列，写下统一处理的问号。莉娜将别的纸继续压在肘下，只把最先那份回执留给她比对。\n南门铃响，莉娜把露出的报告封页翻面。取外卖的人从桌东侧经过，她等他走远，将封页重新露给诺拉，但只让看页首。",
+      "sourceLocator": "season/E10.json#/shots/1"
+    },
+    {
+      "role": "performance",
+      "shotId": "E10-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "三页样本在中间，报告封页仍归莉娜。 → 封页文号可见，正文仍被她手臂遮住。；诺拉向莉娜：How many more look like this?；想扩大样本 / 莉娜向诺拉：I checked these three. I'm not giving you a number I don't have.；截住扩张，不撤回已核部分 / 诺拉向莉娜：Can I talk to the doctors who signed them?；改找可核实的人 / 莉娜向诺拉：You'll have to ask them.；不替医生授权 / 莉娜向诺拉：I reported it. Got a ticket number. Never heard back.；压低声抱怨一件做过却没结果的工作",
+      "sourceLocator": "season/E10.json#/shots/1"
+    },
+    {
+      "role": "staging",
+      "shotId": "E10-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "咖啡店南门不断进出取外卖的人，吧台在东，西窗的上午散射光落在西北桌边。莉娜坐北侧看得见门，灰信封贴身、工作手机在右；诺拉坐南侧，红本尚未打开。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。；起态：三页样本在中间，报告封页仍归莉娜。；出态：封页文号可见，正文仍被她手臂遮住。",
+      "sourceLocator": "season/E10.json#/shots/1"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E10-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "诺拉西肩旁朝北65mm莉娜中近景，诺拉只留前景肩和执笔手。；相机：固定；门铃响时不切门，留在莉娜翻面护页的反应。；焦点：她拒给未知数字、只说自己质检所见，返岗提醒继续亮在桌边。",
+      "sourceLocator": "season/E10.json#/shots/1"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E10-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E10-SH003.txt；27秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E10.json#/shots/1"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E10-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "封页文号可见，正文仍被她手臂遮住。；切点：她重新露页首，诺拉提出没读就签的解释，切看记者如何要求确认。；接口：接E10-SH004；她重新露页首，诺拉提出没读就签的解释，切看记者如何要求确认。",
+      "sourceLocator": "season/E10.json#/shots/1"
+    },
+    {
+      "role": "direction",
+      "shotId": "E10-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：诺拉的推断遭画外来源否认，她必须亲手写下没见过日志。；入镜已知：封页文号可见，正文仍被她手臂遮住。；本镜新知：诺拉把没看过日志写全，随后才拿起手机请求拍摄。；实际写出的动作：诺拉写下批量签名四个字，把本子转向莉娜求确认。莉娜没有看本子，而把三张表压到一起，手留在最上面那张不放。\n诺拉没有立刻收回批量签名的字样，转而指向缺材料栏。莉娜把她的本子推回南侧，要求那句限定也留在上面。",
+      "sourceLocator": "season/E10.json#/shots/2"
+    },
+    {
+      "role": "performance",
+      "shotId": "E10-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "封页文号可见，正文仍被她手臂遮住。 → 诺拉把没看过日志写全，随后才拿起手机请求拍摄。；诺拉向莉娜：Signed off without opening the files?；想从她嘴里拿到一句肯定 / 莉娜向诺拉：I haven't seen the viewing logs. Don't say I told you that.；打断推断，压住原件不让带走 / 诺拉向莉娜：Then how does a file get signed off with the paperwork missing?；试图让来源补上因果 / 莉娜向诺拉：That's what I asked in the report. It isn't an answer.；把自己的质检问题与结论分开 / 诺拉向莉娜：Okay. You haven't seen them. I've got it.；写下限定，心里仍不满意",
+      "sourceLocator": "season/E10.json#/shots/2"
+    },
+    {
+      "role": "staging",
+      "shotId": "E10-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "咖啡店南门不断进出取外卖的人，吧台在东，西窗的上午散射光落在西北桌边。莉娜坐北侧看得见门，灰信封贴身、工作手机在右；诺拉坐南侧，红本尚未打开。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。；起态：封页文号可见，正文仍被她手臂遮住。；出态：诺拉把没看过日志写全，随后才拿起手机请求拍摄。",
+      "sourceLocator": "season/E10.json#/shots/2"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E10-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "莉娜西肩旁朝南65mm诺拉中近景，莉娜压样本的手在下前景，脸在画外。；相机：固定，记者将本子转过去时轻微下俯，不变换机位。；焦点：诺拉的推断遭画外来源否认，她必须亲手写下没见过日志。",
+      "sourceLocator": "season/E10.json#/shots/2"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E10-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E10-SH004.txt；30秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E10.json#/shots/2"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E10-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "诺拉把没看过日志写全，随后才拿起手机请求拍摄。；切点：她放下笔准备举手机，转到拍摄许可实际改变的桌面关系。；接口：接E10-SH005；她放下笔准备举手机，转到拍摄许可实际改变的桌面关系。",
+      "sourceLocator": "season/E10.json#/shots/2"
+    },
+    {
+      "role": "direction",
+      "shotId": "E10-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：餐巾先遮员工编号，再拍样本与报告封页；附注在同一授权照片里。；入镜已知：诺拉把没看过日志写全，随后才拿起手机请求拍摄。；本镜新知：诺拉持有获准拍摄的遮名封页照片，文号校过，附件提示尚未追查；原件由莉娜留存。；实际写出的动作：诺拉举手机拍照，莉娜用餐巾盖住员工编号。诺拉先放下手机确认范围；得到同意后，她拍下遮名的三页样本，纸上只留下日期和处理代码，莉娜未放走原件。\n诺拉抄下文号，向莉娜指出尾数请她校正。莉娜允许她再拍这一页的去身份副本；诺拉手机收进整张封页，可见附注‘ATTACHMENTS: SEE LIST’，但她只盯文号尾数。原件随后回灰信封。",
+      "sourceLocator": "season/E10.json#/shots/3"
+    },
+    {
+      "role": "performance",
+      "shotId": "E10-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "诺拉把没看过日志写全，随后才拿起手机请求拍摄。 → 诺拉持有获准拍摄的遮名封页照片，文号校过，附件提示尚未追查；原件由莉娜留存。；莉娜向诺拉：You can trace that right to me.；餐巾先盖编号，再提醒 / 诺拉向莉娜：Okay. Dates only?；手机先放低，等明确范围 / 莉娜向诺拉：And the report number.；给出有限同意 / 诺拉向莉娜：This number gets us the report?；逐位核完后问下一步 / 莉娜向诺拉：It should. They never sent me a response.；给线索，不保证结果",
+      "sourceLocator": "season/E10.json#/shots/3"
+    },
+    {
+      "role": "staging",
+      "shotId": "E10-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "咖啡店南门不断进出取外卖的人，吧台在东，西窗的上午散射光落在西北桌边。莉娜坐北侧看得见门，灰信封贴身、工作手机在右；诺拉坐南侧，红本尚未打开。 本镜画内角色：LENA,NORA。；起态：诺拉把没看过日志写全，随后才拿起手机请求拍摄。；出态：诺拉持有获准拍摄的遮名封页照片，文号校过，附件提示尚未追查；原件由莉娜留存。",
+      "sourceLocator": "season/E10.json#/shots/3"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E10-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "桌西侧略高50mm斜俯双手、两部手机和遮名文件，人物上身只到肩下。；相机：固定23秒；页在手中移动，不用剪辑放大未授权区域。；焦点：餐巾先遮员工编号，再拍样本与报告封页；附注在同一授权照片里。",
+      "sourceLocator": "season/E10.json#/shots/3"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E10-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E10-SH005.txt；23秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E10.json#/shots/3"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E10-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "诺拉持有获准拍摄的遮名封页照片，文号校过，附件提示尚未追查；原件由莉娜留存。；切点：诺拉找到同一裁切页，来源关系从公司资料转为路易吉联系。；接口：接E10-SH007；诺拉找到同一裁切页，来源关系从公司资料转为路易吉联系。",
+      "sourceLocator": "season/E10.json#/shots/3"
+    },
+    {
+      "role": "direction",
+      "shotId": "E10-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她停住拿杯子的手，明确消息联系和未见面，拒交完整通信。；入镜已知：诺拉持有获准拍摄的遮名封页照片，文号校过，附件提示尚未追查；原件由莉娜留存。；本镜新知：诺拉没拿到消息，莉娜准备带走全部原件。；实际写出的动作：诺拉翻出先前在患者互助资料里见过的同一处裁切痕迹，放在三页样本旁。莉娜拿杯子的手停住，工作手机催返的振动又响，她没有接。\n工作手机的返岗提醒仍未消失。诺拉把同一裁切页转正，不碰莉娜的手机；莉娜把报告封页收进灰信封，桌上只剩三份样本。",
+      "sourceLocator": "season/E10.json#/shots/4"
+    },
+    {
+      "role": "performance",
+      "shotId": "E10-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "诺拉持有获准拍摄的遮名封页照片，文号校过，附件提示尚未追查；原件由莉娜留存。 → 诺拉没拿到消息，莉娜准备带走全部原件。；诺拉向莉娜：Luigi had this page.；陈述核对结果 / 莉娜向诺拉：I sent it to the appeal group. He offered to help.；先交代当时为什么发 / 诺拉向莉娜：Did you meet him?；先核联系形式 / 莉娜向诺拉：No. Messages. Mostly people asking where to send an appeal.；只答亲历 / 诺拉向莉娜：Can you show me those?；争取通信 / 莉娜向诺拉：Not here. Not before I talk to someone.；拒绝交出完整通信",
+      "sourceLocator": "season/E10.json#/shots/4"
+    },
+    {
+      "role": "staging",
+      "shotId": "E10-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "咖啡店南门不断进出取外卖的人，吧台在东，西窗的上午散射光落在西北桌边。莉娜坐北侧看得见门，灰信封贴身、工作手机在右；诺拉坐南侧，红本尚未打开。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。；起态：诺拉持有获准拍摄的遮名封页照片，文号校过，附件提示尚未追查；原件由莉娜留存。；出态：诺拉没拿到消息，莉娜准备带走全部原件。",
+      "sourceLocator": "season/E10.json#/shots/4"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E10-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "诺拉西肩旁朝北75mm莉娜半身，杯、工作手机和信封仍在下部；记者的页从画缘进入。；相机：一次缓慢靠近约二十厘米，在莉娜拒交消息时停止。；焦点：她停住拿杯子的手，明确消息联系和未见面，拒交完整通信。",
+      "sourceLocator": "season/E10.json#/shots/4"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E10-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E10-SH007.txt；31秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E10.json#/shots/4"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E10-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "诺拉没拿到消息，莉娜准备带走全部原件。；切点：她把样本收进信封并起身，切给离开与记者留下的位置。；接口：接E10-SH008；她把样本收进信封并起身，切给离开与记者留下的位置。",
+      "sourceLocator": "season/E10.json#/shots/4"
+    },
+    {
+      "role": "direction",
+      "shotId": "E10-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她声明不知道枪，记者没有拦她也没拿到原件。；入镜已知：诺拉没拿到消息，莉娜准备带走全部原件。；本镜新知：来源离开，未给任何暴力计划的知情证词；诺拉留在桌南。；实际写出的动作：莉娜把样本收回信封，起身才意识到杯里的咖啡一口没喝。诺拉没有拦路，只说明仍须写明资料流转；莉娜拿起工作手机，将那句否认说得比前面更响。",
+      "sourceLocator": "season/E10.json#/shots/5"
+    },
+    {
+      "role": "performance",
+      "shotId": "E10-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "诺拉没拿到消息，莉娜准备带走全部原件。 → 来源离开，未给任何暴力计划的知情证词；诺拉留在桌南。；莉娜向诺拉：Don't put me in a story about him.；收信封时顾不上压稳声音 / 诺拉向莉娜：I won't name you. But I have to mention the group.；不拦她，说明自己能答应到哪 / 莉娜向诺拉：I didn't know anything about a gun.；离开前补得更响，急于划开责任",
+      "sourceLocator": "season/E10.json#/shots/5"
+    },
+    {
+      "role": "staging",
+      "shotId": "E10-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "咖啡店南门不断进出取外卖的人，吧台在东，西窗的上午散射光落在西北桌边。莉娜坐北侧看得见门，灰信封贴身、工作手机在右；诺拉坐南侧，红本尚未打开。 本镜画内角色：LENA,NORA。；起态：诺拉没拿到消息，莉娜准备带走全部原件。；出态：来源离开，未给任何暴力计划的知情证词；诺拉留在桌南。",
+      "sourceLocator": "season/E10.json#/shots/5"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E10-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "桌西南角35mm双人中全景，莉娜立于北椅旁，诺拉仍坐南，南门出口在右侧。；相机：固定等莉娜经桌东侧离开，不跟出去；最后让空北椅留在画面。；焦点：她声明不知道枪，记者没有拦她也没拿到原件。",
+      "sourceLocator": "season/E10.json#/shots/5"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E10-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E10-SH008.txt；15秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E10.json#/shots/5"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E10-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "来源离开，未给任何暴力计划的知情证词；诺拉留在桌南。；切点：空椅与未喝咖啡留下，下一场记者独自决定如何写。；接口：本场结果成立后切入 E10-SC02（NEWSROOM，傍晚·当天截稿前）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E10.json#/shots/5"
+    },
+    {
+      "role": "direction",
+      "shotId": "E10-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：可发布的较窄导语真的存在，诺拉当面反对。；入镜已知：把报道失实写成一个人物主动做出的发布选择。；本镜新知：限定导语仍在修改框中，诺拉尚未接受。；实际写出的动作：编辑把诺拉的合同续签提醒压到稿件边上，要求在换班前交稿。诺拉把莉娜那句警告留在笔记里，拿正文里的可验证三项顶上去。\n编辑将导语暂改成三个申请材料去向不明，屏幕上保留更改痕迹。诺拉把纸质回执推到键盘前，挡住合同提醒的一角。",
+      "sourceLocator": "season/E10.json#/shots/6"
+    },
+    {
+      "role": "performance",
+      "shotId": "E10-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "诺拉敲稿，编辑把排班表挪出键盘区域。 → 限定导语仍在修改框中，诺拉尚未接受。；值班编辑向诺拉：Did anyone actually see a doctor skip a file?；只追问最强断言有没有直接依据 / 诺拉向值班编辑：No. Three receipts, three denials. Nobody will explain it.；承认缺口后仍把材料推回编辑 / 值班编辑向诺拉：Three families sent records. The insurer says they were missing. We can prove that much.；给出可发的版本 / 诺拉向值班编辑：That's the letter they already got. We need to say what happened to them.；嫌限定写法没有揭穿原因",
+      "sourceLocator": "season/E10.json#/shots/6"
+    },
+    {
+      "role": "staging",
+      "shotId": "E10-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "当天傍晚编辑部西窗转暗。诺拉坐西桌，女值班编辑站东侧，共用屏幕旁放着三份回执与合同续签提醒，来源的警告还在红本上。 本镜画内角色：NORA,EDITOR-DESK。；起态：诺拉敲稿，编辑把排班表挪出键盘区域。；出态：限定导语仍在修改框中，诺拉尚未接受。",
+      "sourceLocator": "season/E10.json#/shots/6"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E10-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "编辑部西桌南侧40mm诺拉与女编辑共享中景，三份回执、合同提醒和屏幕边缘清楚。；相机：固定33秒，由编辑把限定版本输入屏幕。；焦点：可发布的较窄导语真的存在，诺拉当面反对。",
+      "sourceLocator": "season/E10.json#/shots/6"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E10-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E10-SH009.txt；33秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E10.json#/shots/6"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E10-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "限定导语仍在修改框中，诺拉尚未接受。；切点：公司邮件到达，争论从写法转为证据缺口，切到编辑审问的方向。；接口：接E10-SH010；公司邮件到达，争论从写法转为证据缺口，切到编辑审问的方向。",
+      "sourceLocator": "season/E10.json#/shots/6"
+    },
+    {
+      "role": "direction",
+      "shotId": "E10-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她区分不交日志与无人打开，最后直接问记者能证明什么；记者辩解来自近侧画外。；入镜已知：限定导语仍在修改框中，诺拉尚未接受。；本镜新知：诺拉不再指公司回复，改把三份病例记录并排。；实际写出的动作：公司书面回复到达，诺拉将它贴入正文第三段。编辑想把它移近标题，诺拉拖动鼠标让开头仍落在那三份对不上的记录上。\n编辑从公司回复回到第一行，把无人打开的动词圈出来。诺拉看见自己记下的来源警告，先将本子往外移，仍坚持让导语留在最前。",
+      "sourceLocator": "season/E10.json#/shots/7"
+    },
+    {
+      "role": "performance",
+      "shotId": "E10-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "限定导语仍在修改框中，诺拉尚未接受。 → 诺拉不再指公司回复，改把三份病例记录并排。；值班编辑向诺拉：They say clinicians reviewed them.；读回复 / 诺拉向值班编辑：Use it. They still haven't sent the logs.；接受引用，仍想保住自己的开头 / 值班编辑向诺拉：Not sending us a log isn't the same as nobody opening a file.；说具体缺口 / 诺拉向值班编辑：Then they can show us one. We've asked twice.；把举证负担推回公司 / 值班编辑向诺拉：I'm asking what you can show me.；不让她换问题",
+      "sourceLocator": "season/E10.json#/shots/7"
+    },
+    {
+      "role": "staging",
+      "shotId": "E10-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "当天傍晚编辑部西窗转暗。诺拉坐西桌，女值班编辑站东侧，共用屏幕旁放着三份回执与合同续签提醒，来源的警告还在红本上。 本镜画内角色：EDITOR-DESK。其余所列说话者留在已建立的画外席位或电话对端。；起态：限定导语仍在修改框中，诺拉尚未接受。；出态：诺拉不再指公司回复，改把三份病例记录并排。",
+      "sourceLocator": "season/E10.json#/shots/7"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E10-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "诺拉南肩旁朝东北65mm女编辑中近景，诺拉一角肩与红本前景可见。；相机：固定，编辑看完邮件抬头，不借运动替台词加压。；焦点：她区分不交日志与无人打开，最后直接问记者能证明什么；记者辩解来自近侧画外。",
+      "sourceLocator": "season/E10.json#/shots/7"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E10-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E10-SH010.txt；30秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E10.json#/shots/7"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E10-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "诺拉不再指公司回复，改把三份病例记录并排。；切点：编辑问句没有得到证据，切到真正掌握发布按钮的人。；接口：接E10-SH011；编辑问句没有得到证据，切到真正掌握发布按钮的人。",
+      "sourceLocator": "season/E10.json#/shots/7"
+    },
+    {
+      "role": "direction",
+      "shotId": "E10-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她把限定版留在历史、让公司回应靠近，却亲手发布过强断言并留署名。；入镜已知：诺拉不再指公司回复，改把三份病例记录并排。；本镜新知：问题式标题与无证据支撑的断言同时发布，诺拉署名保留。；实际写出的动作：诺拉把限定版本留在修订历史，恢复原导语。问题式标题没变，下面已经是没人打开过文件的陈述；编辑看着她按回原句，没有替她操作。\n编辑把鼠标推回诺拉。她看一眼红本里的没看过日志，再看问题式标题下仍写着 Nobody opened the files. 的导语；公司回应紧挨着放。她没有改断言，亲手发布，社媒摘句采用同一行。",
+      "sourceLocator": "season/E10.json#/shots/8"
+    },
+    {
+      "role": "performance",
+      "shotId": "E10-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "诺拉不再指公司回复，改把三份病例记录并排。 → 问题式标题与无证据支撑的断言同时发布，诺拉署名保留。；诺拉向值班编辑：Three times. Same missing-materials code. I'm keeping the line.；以重复模式替代尚无的访问证明 / 值班编辑向诺拉：Keep their response beside it. Don't bury it.；让步，但坚持回应位置 / 诺拉向值班编辑：Fine.；接受位置，不改断言 / 值班编辑向诺拉：Your call.；不替她担 / 诺拉向值班编辑：Leave my name on it.；承担也争机会",
+      "sourceLocator": "season/E10.json#/shots/8"
+    },
+    {
+      "role": "staging",
+      "shotId": "E10-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "当天傍晚编辑部西窗转暗。诺拉坐西桌，女值班编辑站东侧，共用屏幕旁放着三份回执与合同续签提醒，来源的警告还在红本上。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。；起态：诺拉不再指公司回复，改把三份病例记录并排。；出态：问题式标题与无证据支撑的断言同时发布，诺拉署名保留。",
+      "sourceLocator": "season/E10.json#/shots/8"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E10-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "编辑西肩后朝西北50mm诺拉及电脑三分之二侧面，屏幕导语、鼠标与她的脸都可见。；相机：固定；恢复原句时短暂移焦屏幕，发布后回到诺拉，不在镜内换角度。；焦点：她把限定版留在历史、让公司回应靠近，却亲手发布过强断言并留署名。",
+      "sourceLocator": "season/E10.json#/shots/8"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E10-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E10-SH011.txt；28秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E10.json#/shots/8"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E10-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "问题式标题与无证据支撑的断言同时发布，诺拉署名保留。；切点：发布完成，她拿外套欲离开，机会弹窗改变她的动作。；接口：接E10-SH012；发布完成，她拿外套欲离开，机会弹窗改变她的动作。",
+      "sourceLocator": "season/E10.json#/shots/8"
+    },
+    {
+      "role": "direction",
+      "shotId": "E10-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：约谈机会把她留在座位上，待核清单仍留桌面。；入镜已知：问题式标题与无证据支撑的断言同时发布，诺拉署名保留。；本镜新知：采访缺口仍在，职业机会已先到。；实际写出的动作：全国版约谈消息弹出，诺拉拿外套的动作停住。编辑指了指她桌边的续约提醒，诺拉重新坐下，先回复约谈时间。",
+      "sourceLocator": "season/E10.json#/shots/9"
+    },
+    {
+      "role": "performance",
+      "shotId": "E10-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "问题式标题与无证据支撑的断言同时发布，诺拉署名保留。 → 采访缺口仍在，职业机会已先到。；值班编辑向诺拉：National desk. They want a meeting.；好消息的口吻 / 诺拉向值班编辑：Tomorrow? I can do tomorrow.；比核实时快答",
+      "sourceLocator": "season/E10.json#/shots/9"
+    },
+    {
+      "role": "staging",
+      "shotId": "E10-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "当天傍晚编辑部西窗转暗。诺拉坐西桌，女值班编辑站东侧，共用屏幕旁放着三份回执与合同续签提醒，来源的警告还在红本上。 本镜画内角色：NORA,EDITOR-DESK。；起态：问题式标题与无证据支撑的断言同时发布，诺拉署名保留。；出态：采访缺口仍在，职业机会已先到。",
+      "sourceLocator": "season/E10.json#/shots/9"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E10-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "过道南端35mm西桌全景，诺拉椅子、外套和编辑在桌旁同框。；相机：固定9秒，她重新坐下形成与前镜近景不同的空间尺度。；焦点：约谈机会把她留在座位上，待核清单仍留桌面。",
+      "sourceLocator": "season/E10.json#/shots/9"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E10-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E10-SH012.txt；9秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E10.json#/shots/9"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E10-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "采访缺口仍在，职业机会已先到。；切点：她先回复约谈，切公司如何承担这次发布。；接口：本场结果成立后切入 E10-SC03（INSURER，夜·稿件发布后）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E10.json#/shots/9"
+    },
+    {
+      "role": "direction",
+      "shotId": "E10-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：保存访问记录的真实指示与调查文件去向从这里开始。；入镜已知：让记者的收益立刻对应来源的调查压力。；本镜新知：追查从发表样本的内部流转开始，未指明幕后操纵。；实际写出的动作：维克多将文章里的三个样本日期放大，和内部文号列表并排，拨给法务要求保留访问记录。他没有查记者的私人消息。",
+      "sourceLocator": "season/E10.json#/shots/10"
+    },
+    {
+      "role": "performance",
+      "shotId": "E10-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "维克多坐中央桌北端，平板放左手边。 → 追查从发表样本的内部流转开始，未指明幕后操纵。；维克多向公司内部法务（电话）：Find out who handled these cases. Preserve the access records.；给法务两件具体工作，不做威胁宣言",
+      "sourceLocator": "season/E10.json#/shots/10"
+    },
+    {
+      "role": "staging",
+      "shotId": "E10-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "当晚公司东侧质检区只亮一排灯，莉娜已经把包从椅背取下。玻璃另一边中央会议室，维克多坐桌北端核对文章中三个日期，双方通过工作电话相连。 本镜画内角色：VICTOR。；起态：维克多坐中央桌北端，平板放左手边。；出态：追查从发表样本的内部流转开始，未指明幕后操纵。",
+      "sourceLocator": "season/E10.json#/shots/10"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E10-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中央会议室西侧50mm维克多中景，玻璃后东工位远处可见但不读莉娜脸。；相机：固定，三个日期与文号并排后他打电话。；焦点：保存访问记录的真实指示与调查文件去向从这里开始。",
+      "sourceLocator": "season/E10.json#/shots/10"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E10-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E10-SH013.txt；10秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E10.json#/shots/10"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E10-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "追查从发表样本的内部流转开始，未指明幕后操纵。；切点：电话会议来电到达东工位，切来源接听而非继续跟公司。；接口：接E10-SH014；电话会议来电到达东工位，切来源接听而非继续跟公司。",
+      "sourceLocator": "season/E10.json#/shots/10"
+    },
+    {
+      "role": "direction",
+      "shotId": "E10-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她问今晚工作、要书面问题，挂断工作机后才取私人手机；维克多声音仅经听筒。；入镜已知：追查从发表样本的内部流转开始，未指明幕后操纵。；本镜新知：工作手机留工位，私人手机回包；她暂不走向会议室。；实际写出的动作：莉娜准备下班，看到工作手机的法务电话会议来电，把椅背上的包取下又放回。她保存尚未完成的质检表，接起电话。\n莉娜还没挂断工作电话。她把刚保存的质检表留在屏幕上，玻璃外会议室的维克多并没有走过来。\n法务电话会议里，维克多的要求从莉娜右手的工作手机听筒传来。她望向玻璃后的会议桌，听完才挂断，把工作手机放桌右；左手将椅背包拉近，右手从包里取私人手机，给自己的独立咨询发约见消息。",
+      "sourceLocator": "season/E10.json#/shots/11"
+    },
+    {
+      "role": "performance",
+      "shotId": "E10-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "追查从发表样本的内部流转开始，未指明幕后操纵。 → 工作手机留工位，私人手机回包；她暂不走向会议室。；莉娜向公司法务（电话）：I'm still here. Should I bring someone?；先确认自己的处境 / 莉娜向维克多（电话）：Am I supposed to keep working tonight?；先问眼前能做什么 / 维克多向同场对话者：Save what you're doing. We'll arrange a time with counsel.；不逼当晚答复资料流转 / 莉娜向维克多（电话）：Email me the request. I want to know what I'm answering.；争取书面范围 / 维克多向莉娜（电话）：We need to know where the documents went. You can speak to a lawyer first.；把要求说清，不替她提供保证",
+      "sourceLocator": "season/E10.json#/shots/11"
+    },
+    {
+      "role": "staging",
+      "shotId": "E10-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "当晚公司东侧质检区只亮一排灯，莉娜已经把包从椅背取下。玻璃另一边中央会议室，维克多坐桌北端核对文章中三个日期，双方通过工作电话相连。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。；起态：追查从发表样本的内部流转开始，未指明幕后操纵。；出态：工作手机留工位，私人手机回包；她暂不走向会议室。",
+      "sourceLocator": "season/E10.json#/shots/11"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E10-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "东工位南侧50mm莉娜半身，玻璃后会议桌维克多在远处失焦，工作手机右、私人包左。；相机：固定42秒，让她的下班动作被通话中断再改成找独立咨询。；焦点：她问今晚工作、要书面问题，挂断工作机后才取私人手机；维克多声音仅经听筒。",
+      "sourceLocator": "season/E10.json#/shots/11"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E10-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E10-SH014.txt；42秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E10.json#/shots/11"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E10-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "工作手机留工位，私人手机回包；她暂不走向会议室。；切点：私人咨询发出，下一场对外公告无法抹去来源的代价。；接口：本集结束。同一篇报道把莉娜带进资料流转调查。她要求书面问题和律师在场，记者的收益由另一个人承担代价。 下集从INSURER展开：优先复核是不是批准付款；人物是否愿意更新自己已经相信的旧答案？",
+      "sourceLocator": "season/E10.json#/shots/11"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "E10-SH001",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "来源先设时间和样本数量，记者只接获准递来的页。",
+        "audiencePayoff": "三页样本在中间，报告封页仍归莉娜。",
+        "trigger": "莉娜左手压灰信封，工作手机右手扣着。；服务员放下两杯咖啡。莉娜将杯子移到桌东缘，灰信封贴着自己；诺拉刚翻开红本，她伸手压住信封口，先说明离开的时间。\n莉娜只抽出三页盖过身份的表格，剩余封页压在北侧手肘下。诺拉将玛拉授权的上传回执推过去，比对一处缺材栏，不碰其余材料。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "诺拉追问还有多少，切向有权拒绝扩大样本的来源。；接E10-SH003；诺拉追问还有多少，切向有权拒绝扩大样本的来源。",
+        "noMotionReason": "固定，让信封到桌中成为第一次构图变化。；观看变化：三页样本在中间，报告封页仍归莉娜。"
+      },
+      "camera": {
+        "shotScale": "咖啡桌西侧40mm双人中景",
+        "position": "咖啡桌西侧40mm双人中景，莉娜北、诺拉南，南门在远侧背景，三页样本由北推到中间。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "咖啡桌西侧40mm双人中景，莉娜北、诺拉南，南门在远侧背景，三页样本由北推到中间。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "来源先设时间和样本数量，记者只接获准递来的页。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 咖啡店南门不断进出取外卖的人，吧台在东，西窗的上午散射光落在西北桌边。莉娜坐北侧看得见门，灰信封贴身、工作手机在右；诺拉坐南侧，红本尚未打开。 本镜画内角色：LENA,NORA。",
+        "movementIntent": "固定，让信封到桌中成为第一次构图变化。"
+      },
+      "composition": {
+        "layout": "咖啡店南门不断进出取外卖的人，吧台在东，西窗的上午散射光落在西北桌边。莉娜坐北侧看得见门，灰信封贴身、工作手机在右；诺拉坐南侧，红本尚未打开。 本镜画内角色：LENA,NORA。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：服务员放下两杯咖啡。莉娜将杯子移到桌东缘，灰信封贴着自己；诺拉刚翻开红本，她伸手压住信封口，先说明离开的时间。\n莉娜只抽出三页盖过身份的表格，剩余封页压在北侧手肘下。诺拉将玛拉授权的上传回执推过去，比对一处缺材栏，不碰其余材料。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "来源先设时间和样本数量，记者只接获准递来的页。；来源先设时间和样本数量，记者只接获准递来的页。"
+      },
+      "temporal": {
+        "durationSeconds": 23,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "来源先设时间和样本数量，记者只接获准递来的页。",
+          "path": "机位不移动。",
+          "start": "莉娜左手压灰信封，工作手机右手扣着。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "三页样本在中间，报告封页仍归莉娜。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E10-SH001-F1",
+            "timeSeconds": 0,
+            "description": "来源先设时间和样本数量，记者只接获准递来的页。"
+          }
+        ],
+        "edit": {
+          "entry": "莉娜左手压灰信封，工作手机右手扣着。",
+          "exit": "三页样本在中间，报告封页仍归莉娜。；诺拉追问还有多少，切向有权拒绝扩大样本的来源。",
+          "preferredTransition": "接E10-SH003；诺拉追问还有多少，切向有权拒绝扩大样本的来源。",
+          "soundBridge": "门铃、咖啡机和杯碟底声连续，周围客人无可辨台词。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E10-SH003",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她拒给未知数字、只说自己质检所见，返岗提醒继续亮在桌边。",
+        "audiencePayoff": "封页文号可见，正文仍被她手臂遮住。",
+        "trigger": "三页样本在中间，报告封页仍归莉娜。；诺拉把三个相同代码排成一列，写下统一处理的问号。莉娜将别的纸继续压在肘下，只把最先那份回执留给她比对。\n南门铃响，莉娜把露出的报告封页翻面。取外卖的人从桌东侧经过，她等他走远，将封页重新露给诺拉，但只让看页首。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "她重新露页首，诺拉提出没读就签的解释，切看记者如何要求确认。；接E10-SH004；她重新露页首，诺拉提出没读就签的解释，切看记者如何要求确认。",
+        "noMotionReason": "固定；门铃响时不切门，留在莉娜翻面护页的反应。；观看变化：封页文号可见，正文仍被她手臂遮住。"
+      },
+      "camera": {
+        "shotScale": "诺拉西肩旁朝北65mm莉娜中近景",
+        "position": "诺拉西肩旁朝北65mm莉娜中近景，诺拉只留前景肩和执笔手。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "诺拉西肩旁朝北65mm莉娜中近景，诺拉只留前景肩和执笔手。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "她拒给未知数字、只说自己质检所见，返岗提醒继续亮在桌边。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 咖啡店南门不断进出取外卖的人，吧台在东，西窗的上午散射光落在西北桌边。莉娜坐北侧看得见门，灰信封贴身、工作手机在右；诺拉坐南侧，红本尚未打开。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定；门铃响时不切门，留在莉娜翻面护页的反应。"
+      },
+      "composition": {
+        "layout": "咖啡店南门不断进出取外卖的人，吧台在东，西窗的上午散射光落在西北桌边。莉娜坐北侧看得见门，灰信封贴身、工作手机在右；诺拉坐南侧，红本尚未打开。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：诺拉把三个相同代码排成一列，写下统一处理的问号。莉娜将别的纸继续压在肘下，只把最先那份回执留给她比对。\n南门铃响，莉娜把露出的报告封页翻面。取外卖的人从桌东侧经过，她等他走远，将封页重新露给诺拉，但只让看页首。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她拒给未知数字、只说自己质检所见，返岗提醒继续亮在桌边。；她拒给未知数字、只说自己质检所见，返岗提醒继续亮在桌边。"
+      },
+      "temporal": {
+        "durationSeconds": 27,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她拒给未知数字、只说自己质检所见，返岗提醒继续亮在桌边。",
+          "path": "机位不移动。",
+          "start": "三页样本在中间，报告封页仍归莉娜。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "封页文号可见，正文仍被她手臂遮住。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E10-SH003-F1",
+            "timeSeconds": 0,
+            "description": "她拒给未知数字、只说自己质检所见，返岗提醒继续亮在桌边。"
+          }
+        ],
+        "edit": {
+          "entry": "三页样本在中间，报告封页仍归莉娜。",
+          "exit": "封页文号可见，正文仍被她手臂遮住。；她重新露页首，诺拉提出没读就签的解释，切看记者如何要求确认。",
+          "preferredTransition": "接E10-SH004；她重新露页首，诺拉提出没读就签的解释，切看记者如何要求确认。",
+          "soundBridge": "门铃、咖啡机和杯碟底声连续，周围客人无可辨台词。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E10-SH004",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "诺拉的推断遭画外来源否认，她必须亲手写下没见过日志。",
+        "audiencePayoff": "诺拉把没看过日志写全，随后才拿起手机请求拍摄。",
+        "trigger": "封页文号可见，正文仍被她手臂遮住。；诺拉写下批量签名四个字，把本子转向莉娜求确认。莉娜没有看本子，而把三张表压到一起，手留在最上面那张不放。\n诺拉没有立刻收回批量签名的字样，转而指向缺材料栏。莉娜把她的本子推回南侧，要求那句限定也留在上面。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "她放下笔准备举手机，转到拍摄许可实际改变的桌面关系。；接E10-SH005；她放下笔准备举手机，转到拍摄许可实际改变的桌面关系。",
+        "noMotionReason": "固定，记者将本子转过去时轻微下俯，不变换机位。；观看变化：诺拉把没看过日志写全，随后才拿起手机请求拍摄。"
+      },
+      "camera": {
+        "shotScale": "莉娜西肩旁朝南65mm诺拉中近景",
+        "position": "莉娜西肩旁朝南65mm诺拉中近景，莉娜压样本的手在下前景，脸在画外。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "莉娜西肩旁朝南65mm诺拉中近景，莉娜压样本的手在下前景，脸在画外。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "诺拉的推断遭画外来源否认，她必须亲手写下没见过日志。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 咖啡店南门不断进出取外卖的人，吧台在东，西窗的上午散射光落在西北桌边。莉娜坐北侧看得见门，灰信封贴身、工作手机在右；诺拉坐南侧，红本尚未打开。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定，记者将本子转过去时轻微下俯，不变换机位。"
+      },
+      "composition": {
+        "layout": "咖啡店南门不断进出取外卖的人，吧台在东，西窗的上午散射光落在西北桌边。莉娜坐北侧看得见门，灰信封贴身、工作手机在右；诺拉坐南侧，红本尚未打开。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：诺拉写下批量签名四个字，把本子转向莉娜求确认。莉娜没有看本子，而把三张表压到一起，手留在最上面那张不放。\n诺拉没有立刻收回批量签名的字样，转而指向缺材料栏。莉娜把她的本子推回南侧，要求那句限定也留在上面。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "诺拉的推断遭画外来源否认，她必须亲手写下没见过日志。；诺拉的推断遭画外来源否认，她必须亲手写下没见过日志。"
+      },
+      "temporal": {
+        "durationSeconds": 30,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "诺拉的推断遭画外来源否认，她必须亲手写下没见过日志。",
+          "path": "机位不移动。",
+          "start": "封页文号可见，正文仍被她手臂遮住。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "诺拉把没看过日志写全，随后才拿起手机请求拍摄。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E10-SH004-F1",
+            "timeSeconds": 0,
+            "description": "诺拉的推断遭画外来源否认，她必须亲手写下没见过日志。"
+          }
+        ],
+        "edit": {
+          "entry": "封页文号可见，正文仍被她手臂遮住。",
+          "exit": "诺拉把没看过日志写全，随后才拿起手机请求拍摄。；她放下笔准备举手机，转到拍摄许可实际改变的桌面关系。",
+          "preferredTransition": "接E10-SH005；她放下笔准备举手机，转到拍摄许可实际改变的桌面关系。",
+          "soundBridge": "门铃、咖啡机和杯碟底声连续，周围客人无可辨台词。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E10-SH005",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "餐巾先遮员工编号，再拍样本与报告封页；附注在同一授权照片里。",
+        "audiencePayoff": "诺拉持有获准拍摄的遮名封页照片，文号校过，附件提示尚未追查；原件由莉娜留存。",
+        "trigger": "诺拉把没看过日志写全，随后才拿起手机请求拍摄。；诺拉举手机拍照，莉娜用餐巾盖住员工编号。诺拉先放下手机确认范围；得到同意后，她拍下遮名的三页样本，纸上只留下日期和处理代码，莉娜未放走原件。\n诺拉抄下文号，向莉娜指出尾数请她校正。莉娜允许她再拍这一页的去身份副本；诺拉手机收进整张封页，可见附注‘ATTACHMENTS: SEE LIST’，但她只盯文号尾数。原件随后回灰信封。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "诺拉找到同一裁切页，来源关系从公司资料转为路易吉联系。；接E10-SH007；诺拉找到同一裁切页，来源关系从公司资料转为路易吉联系。",
+        "noMotionReason": "固定23秒；页在手中移动，不用剪辑放大未授权区域。；观看变化：诺拉持有获准拍摄的遮名封页照片，文号校过，附件提示尚未追查；原件由莉娜留存。"
+      },
+      "camera": {
+        "shotScale": "桌西侧略高50mm斜俯双手、两部手机和遮名文件",
+        "position": "桌西侧略高50mm斜俯双手、两部手机和遮名文件，人物上身只到肩下。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "桌西侧略高50mm斜俯双手、两部手机和遮名文件，人物上身只到肩下。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "餐巾先遮员工编号，再拍样本与报告封页；附注在同一授权照片里。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 咖啡店南门不断进出取外卖的人，吧台在东，西窗的上午散射光落在西北桌边。莉娜坐北侧看得见门，灰信封贴身、工作手机在右；诺拉坐南侧，红本尚未打开。 本镜画内角色：LENA,NORA。",
+        "movementIntent": "固定23秒；页在手中移动，不用剪辑放大未授权区域。"
+      },
+      "composition": {
+        "layout": "咖啡店南门不断进出取外卖的人，吧台在东，西窗的上午散射光落在西北桌边。莉娜坐北侧看得见门，灰信封贴身、工作手机在右；诺拉坐南侧，红本尚未打开。 本镜画内角色：LENA,NORA。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：诺拉举手机拍照，莉娜用餐巾盖住员工编号。诺拉先放下手机确认范围；得到同意后，她拍下遮名的三页样本，纸上只留下日期和处理代码，莉娜未放走原件。\n诺拉抄下文号，向莉娜指出尾数请她校正。莉娜允许她再拍这一页的去身份副本；诺拉手机收进整张封页，可见附注‘ATTACHMENTS: SEE LIST’，但她只盯文号尾数。原件随后回灰信封。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "餐巾先遮员工编号，再拍样本与报告封页；附注在同一授权照片里。；餐巾先遮员工编号，再拍样本与报告封页；附注在同一授权照片里。"
+      },
+      "temporal": {
+        "durationSeconds": 23,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "餐巾先遮员工编号，再拍样本与报告封页；附注在同一授权照片里。",
+          "path": "机位不移动。",
+          "start": "诺拉把没看过日志写全，随后才拿起手机请求拍摄。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "诺拉持有获准拍摄的遮名封页照片，文号校过，附件提示尚未追查；原件由莉娜留存。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E10-SH005-F1",
+            "timeSeconds": 0,
+            "description": "餐巾先遮员工编号，再拍样本与报告封页；附注在同一授权照片里。"
+          }
+        ],
+        "edit": {
+          "entry": "诺拉把没看过日志写全，随后才拿起手机请求拍摄。",
+          "exit": "诺拉持有获准拍摄的遮名封页照片，文号校过，附件提示尚未追查；原件由莉娜留存。；诺拉找到同一裁切页，来源关系从公司资料转为路易吉联系。",
+          "preferredTransition": "接E10-SH007；诺拉找到同一裁切页，来源关系从公司资料转为路易吉联系。",
+          "soundBridge": "门铃、咖啡机和杯碟底声连续，周围客人无可辨台词。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E10-SH007",
+      "decision": {
+        "primaryTechniqueId": "M01",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她停住拿杯子的手，明确消息联系和未见面，拒交完整通信。",
+        "audiencePayoff": "诺拉没拿到消息，莉娜准备带走全部原件。",
+        "trigger": "诺拉持有获准拍摄的遮名封页照片，文号校过，附件提示尚未追查；原件由莉娜留存。；诺拉翻出先前在患者互助资料里见过的同一处裁切痕迹，放在三页样本旁。莉娜拿杯子的手停住，工作手机催返的振动又响，她没有接。\n工作手机的返岗提醒仍未消失。诺拉把同一裁切页转正，不碰莉娜的手机；莉娜把报告封页收进灰信封，桌上只剩三份样本。",
+        "cameraMode": "moving",
+        "focusMode": "hold",
+        "exitMatch": "她把样本收进信封并起身，切给离开与记者留下的位置。；接E10-SH008；她把样本收进信封并起身，切给离开与记者留下的位置。"
+      },
+      "camera": {
+        "shotScale": "诺拉西肩旁朝北75mm莉娜半身",
+        "position": "诺拉西肩旁朝北75mm莉娜半身，杯、工作手机和信封仍在下部；记者的页从画缘进入。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "诺拉西肩旁朝北75mm莉娜半身，杯、工作手机和信封仍在下部；记者的页从画缘进入。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "她停住拿杯子的手，明确消息联系和未见面，拒交完整通信。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 咖啡店南门不断进出取外卖的人，吧台在东，西窗的上午散射光落在西北桌边。莉娜坐北侧看得见门，灰信封贴身、工作手机在右；诺拉坐南侧，红本尚未打开。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "一次缓慢靠近约二十厘米，在莉娜拒交消息时停止。"
+      },
+      "composition": {
+        "layout": "咖啡店南门不断进出取外卖的人，吧台在东，西窗的上午散射光落在西北桌边。莉娜坐北侧看得见门，灰信封贴身、工作手机在右；诺拉坐南侧，红本尚未打开。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：诺拉翻出先前在患者互助资料里见过的同一处裁切痕迹，放在三页样本旁。莉娜拿杯子的手停住，工作手机催返的振动又响，她没有接。\n工作手机的返岗提醒仍未消失。诺拉把同一裁切页转正，不碰莉娜的手机；莉娜把报告封页收进灰信封，桌上只剩三份样本。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她停住拿杯子的手，明确消息联系和未见面，拒交完整通信。；她停住拿杯子的手，明确消息联系和未见面，拒交完整通信。"
+      },
+      "temporal": {
+        "durationSeconds": 31,
+        "cameraMotion": {
+          "type": "dolly",
+          "motivation": "她停住拿杯子的手，明确消息联系和未见面，拒交完整通信。",
+          "path": "一次缓慢靠近约二十厘米，在莉娜拒交消息时停止。",
+          "start": "诺拉持有获准拍摄的遮名封页照片，文号校过，附件提示尚未追查；原件由莉娜留存。",
+          "acceleration": "仅执行作者本镜规定的启动与速度，不另加缓起：一次缓慢靠近约二十厘米，在莉娜拒交消息时停止。",
+          "peak": "依本镜作者运动描述，不统一套匀速：一次缓慢靠近约二十厘米，在莉娜拒交消息时停止。",
+          "deceleration": "不强制停稳；按作者出点接后镜：她把样本收进信封并起身，切给离开与记者留下的位置。",
+          "end": "诺拉没拿到消息，莉娜准备带走全部原件。",
+          "framingChange": "一次缓慢靠近约二十厘米，在莉娜拒交消息时停止。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E10-SH007-F1",
+            "timeSeconds": 0,
+            "description": "她停住拿杯子的手，明确消息联系和未见面，拒交完整通信。"
+          }
+        ],
+        "edit": {
+          "entry": "诺拉持有获准拍摄的遮名封页照片，文号校过，附件提示尚未追查；原件由莉娜留存。",
+          "exit": "诺拉没拿到消息，莉娜准备带走全部原件。；她把样本收进信封并起身，切给离开与记者留下的位置。",
+          "preferredTransition": "接E10-SH008；她把样本收进信封并起身，切给离开与记者留下的位置。",
+          "soundBridge": "门铃、咖啡机和杯碟底声连续，周围客人无可辨台词。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E10-SH008",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她声明不知道枪，记者没有拦她也没拿到原件。",
+        "audiencePayoff": "来源离开，未给任何暴力计划的知情证词；诺拉留在桌南。",
+        "trigger": "诺拉没拿到消息，莉娜准备带走全部原件。；莉娜把样本收回信封，起身才意识到杯里的咖啡一口没喝。诺拉没有拦路，只说明仍须写明资料流转；莉娜拿起工作手机，将那句否认说得比前面更响。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "空椅与未喝咖啡留下，下一场记者独自决定如何写。；本场结果成立后切入 E10-SC02（NEWSROOM，傍晚·当天截稿前）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定等莉娜经桌东侧离开，不跟出去；最后让空北椅留在画面。；观看变化：来源离开，未给任何暴力计划的知情证词；诺拉留在桌南。"
+      },
+      "camera": {
+        "shotScale": "桌西南角35mm双人中全景",
+        "position": "桌西南角35mm双人中全景，莉娜立于北椅旁，诺拉仍坐南，南门出口在右侧。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "桌西南角35mm双人中全景，莉娜立于北椅旁，诺拉仍坐南，南门出口在右侧。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "她声明不知道枪，记者没有拦她也没拿到原件。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 咖啡店南门不断进出取外卖的人，吧台在东，西窗的上午散射光落在西北桌边。莉娜坐北侧看得见门，灰信封贴身、工作手机在右；诺拉坐南侧，红本尚未打开。 本镜画内角色：LENA,NORA。",
+        "movementIntent": "固定等莉娜经桌东侧离开，不跟出去；最后让空北椅留在画面。"
+      },
+      "composition": {
+        "layout": "咖啡店南门不断进出取外卖的人，吧台在东，西窗的上午散射光落在西北桌边。莉娜坐北侧看得见门，灰信封贴身、工作手机在右；诺拉坐南侧，红本尚未打开。 本镜画内角色：LENA,NORA。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：莉娜把样本收回信封，起身才意识到杯里的咖啡一口没喝。诺拉没有拦路，只说明仍须写明资料流转；莉娜拿起工作手机，将那句否认说得比前面更响。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她声明不知道枪，记者没有拦她也没拿到原件。；她声明不知道枪，记者没有拦她也没拿到原件。"
+      },
+      "temporal": {
+        "durationSeconds": 15,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她声明不知道枪，记者没有拦她也没拿到原件。",
+          "path": "机位不移动。",
+          "start": "诺拉没拿到消息，莉娜准备带走全部原件。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "来源离开，未给任何暴力计划的知情证词；诺拉留在桌南。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E10-SH008-F1",
+            "timeSeconds": 0,
+            "description": "她声明不知道枪，记者没有拦她也没拿到原件。"
+          }
+        ],
+        "edit": {
+          "entry": "诺拉没拿到消息，莉娜准备带走全部原件。",
+          "exit": "来源离开，未给任何暴力计划的知情证词；诺拉留在桌南。；空椅与未喝咖啡留下，下一场记者独自决定如何写。",
+          "preferredTransition": "本场结果成立后切入 E10-SC02（NEWSROOM，傍晚·当天截稿前）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "门铃、咖啡机和杯碟底声连续，周围客人无可辨台词。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E10-SH009",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "可发布的较窄导语真的存在，诺拉当面反对。",
+        "audiencePayoff": "限定导语仍在修改框中，诺拉尚未接受。",
+        "trigger": "诺拉敲稿，编辑把排班表挪出键盘区域。；编辑把诺拉的合同续签提醒压到稿件边上，要求在换班前交稿。诺拉把莉娜那句警告留在笔记里，拿正文里的可验证三项顶上去。\n编辑将导语暂改成三个申请材料去向不明，屏幕上保留更改痕迹。诺拉把纸质回执推到键盘前，挡住合同提醒的一角。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "公司邮件到达，争论从写法转为证据缺口，切到编辑审问的方向。；接E10-SH010；公司邮件到达，争论从写法转为证据缺口，切到编辑审问的方向。",
+        "noMotionReason": "固定33秒，由编辑把限定版本输入屏幕。；观看变化：限定导语仍在修改框中，诺拉尚未接受。"
+      },
+      "camera": {
+        "shotScale": "编辑部西桌南侧40mm诺拉与女编辑共享中景",
+        "position": "编辑部西桌南侧40mm诺拉与女编辑共享中景，三份回执、合同提醒和屏幕边缘清楚。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "编辑部西桌南侧40mm诺拉与女编辑共享中景，三份回执、合同提醒和屏幕边缘清楚。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "可发布的较窄导语真的存在，诺拉当面反对。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 当天傍晚编辑部西窗转暗。诺拉坐西桌，女值班编辑站东侧，共用屏幕旁放着三份回执与合同续签提醒，来源的警告还在红本上。 本镜画内角色：NORA,EDITOR-DESK。",
+        "movementIntent": "固定33秒，由编辑把限定版本输入屏幕。"
+      },
+      "composition": {
+        "layout": "当天傍晚编辑部西窗转暗。诺拉坐西桌，女值班编辑站东侧，共用屏幕旁放着三份回执与合同续签提醒，来源的警告还在红本上。 本镜画内角色：NORA,EDITOR-DESK。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：编辑把诺拉的合同续签提醒压到稿件边上，要求在换班前交稿。诺拉把莉娜那句警告留在笔记里，拿正文里的可验证三项顶上去。\n编辑将导语暂改成三个申请材料去向不明，屏幕上保留更改痕迹。诺拉把纸质回执推到键盘前，挡住合同提醒的一角。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "可发布的较窄导语真的存在，诺拉当面反对。；可发布的较窄导语真的存在，诺拉当面反对。"
+      },
+      "temporal": {
+        "durationSeconds": 33,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "可发布的较窄导语真的存在，诺拉当面反对。",
+          "path": "机位不移动。",
+          "start": "诺拉敲稿，编辑把排班表挪出键盘区域。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "限定导语仍在修改框中，诺拉尚未接受。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E10-SH009-F1",
+            "timeSeconds": 0,
+            "description": "可发布的较窄导语真的存在，诺拉当面反对。"
+          }
+        ],
+        "edit": {
+          "entry": "诺拉敲稿，编辑把排班表挪出键盘区域。",
+          "exit": "限定导语仍在修改框中，诺拉尚未接受。；公司邮件到达，争论从写法转为证据缺口，切到编辑审问的方向。",
+          "preferredTransition": "接E10-SH010；公司邮件到达，争论从写法转为证据缺口，切到编辑审问的方向。",
+          "soundBridge": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E10-SH010",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她区分不交日志与无人打开，最后直接问记者能证明什么；记者辩解来自近侧画外。",
+        "audiencePayoff": "诺拉不再指公司回复，改把三份病例记录并排。",
+        "trigger": "限定导语仍在修改框中，诺拉尚未接受。；公司书面回复到达，诺拉将它贴入正文第三段。编辑想把它移近标题，诺拉拖动鼠标让开头仍落在那三份对不上的记录上。\n编辑从公司回复回到第一行，把无人打开的动词圈出来。诺拉看见自己记下的来源警告，先将本子往外移，仍坚持让导语留在最前。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "编辑问句没有得到证据，切到真正掌握发布按钮的人。；接E10-SH011；编辑问句没有得到证据，切到真正掌握发布按钮的人。",
+        "noMotionReason": "固定，编辑看完邮件抬头，不借运动替台词加压。；观看变化：诺拉不再指公司回复，改把三份病例记录并排。"
+      },
+      "camera": {
+        "shotScale": "诺拉南肩旁朝东北65mm女编辑中近景",
+        "position": "诺拉南肩旁朝东北65mm女编辑中近景，诺拉一角肩与红本前景可见。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "诺拉南肩旁朝东北65mm女编辑中近景，诺拉一角肩与红本前景可见。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "她区分不交日志与无人打开，最后直接问记者能证明什么；记者辩解来自近侧画外。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 当天傍晚编辑部西窗转暗。诺拉坐西桌，女值班编辑站东侧，共用屏幕旁放着三份回执与合同续签提醒，来源的警告还在红本上。 本镜画内角色：EDITOR-DESK。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定，编辑看完邮件抬头，不借运动替台词加压。"
+      },
+      "composition": {
+        "layout": "当天傍晚编辑部西窗转暗。诺拉坐西桌，女值班编辑站东侧，共用屏幕旁放着三份回执与合同续签提醒，来源的警告还在红本上。 本镜画内角色：EDITOR-DESK。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：公司书面回复到达，诺拉将它贴入正文第三段。编辑想把它移近标题，诺拉拖动鼠标让开头仍落在那三份对不上的记录上。\n编辑从公司回复回到第一行，把无人打开的动词圈出来。诺拉看见自己记下的来源警告，先将本子往外移，仍坚持让导语留在最前。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她区分不交日志与无人打开，最后直接问记者能证明什么；记者辩解来自近侧画外。；她区分不交日志与无人打开，最后直接问记者能证明什么；记者辩解来自近侧画外。"
+      },
+      "temporal": {
+        "durationSeconds": 30,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她区分不交日志与无人打开，最后直接问记者能证明什么；记者辩解来自近侧画外。",
+          "path": "机位不移动。",
+          "start": "限定导语仍在修改框中，诺拉尚未接受。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "诺拉不再指公司回复，改把三份病例记录并排。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E10-SH010-F1",
+            "timeSeconds": 0,
+            "description": "她区分不交日志与无人打开，最后直接问记者能证明什么；记者辩解来自近侧画外。"
+          }
+        ],
+        "edit": {
+          "entry": "限定导语仍在修改框中，诺拉尚未接受。",
+          "exit": "诺拉不再指公司回复，改把三份病例记录并排。；编辑问句没有得到证据，切到真正掌握发布按钮的人。",
+          "preferredTransition": "接E10-SH011；编辑问句没有得到证据，切到真正掌握发布按钮的人。",
+          "soundBridge": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E10-SH011",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她把限定版留在历史、让公司回应靠近，却亲手发布过强断言并留署名。",
+        "audiencePayoff": "问题式标题与无证据支撑的断言同时发布，诺拉署名保留。",
+        "trigger": "诺拉不再指公司回复，改把三份病例记录并排。；诺拉把限定版本留在修订历史，恢复原导语。问题式标题没变，下面已经是没人打开过文件的陈述；编辑看着她按回原句，没有替她操作。\n编辑把鼠标推回诺拉。她看一眼红本里的没看过日志，再看问题式标题下仍写着 Nobody opened the files. 的导语；公司回应紧挨着放。她没有改断言，亲手发布，社媒摘句采用同一行。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "发布完成，她拿外套欲离开，机会弹窗改变她的动作。；接E10-SH012；发布完成，她拿外套欲离开，机会弹窗改变她的动作。",
+        "noMotionReason": "固定；恢复原句时短暂移焦屏幕，发布后回到诺拉，不在镜内换角度。；观看变化：问题式标题与无证据支撑的断言同时发布，诺拉署名保留。"
+      },
+      "camera": {
+        "shotScale": "编辑西肩后朝西北50mm诺拉及电脑三分之二侧面",
+        "position": "编辑西肩后朝西北50mm诺拉及电脑三分之二侧面，屏幕导语、鼠标与她的脸都可见。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "编辑西肩后朝西北50mm诺拉及电脑三分之二侧面，屏幕导语、鼠标与她的脸都可见。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "她把限定版留在历史、让公司回应靠近，却亲手发布过强断言并留署名。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 当天傍晚编辑部西窗转暗。诺拉坐西桌，女值班编辑站东侧，共用屏幕旁放着三份回执与合同续签提醒，来源的警告还在红本上。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定；恢复原句时短暂移焦屏幕，发布后回到诺拉，不在镜内换角度。"
+      },
+      "composition": {
+        "layout": "当天傍晚编辑部西窗转暗。诺拉坐西桌，女值班编辑站东侧，共用屏幕旁放着三份回执与合同续签提醒，来源的警告还在红本上。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：诺拉把限定版本留在修订历史，恢复原导语。问题式标题没变，下面已经是没人打开过文件的陈述；编辑看着她按回原句，没有替她操作。\n编辑把鼠标推回诺拉。她看一眼红本里的没看过日志，再看问题式标题下仍写着 Nobody opened the files. 的导语；公司回应紧挨着放。她没有改断言，亲手发布，社媒摘句采用同一行。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她把限定版留在历史、让公司回应靠近，却亲手发布过强断言并留署名。；她把限定版留在历史、让公司回应靠近，却亲手发布过强断言并留署名。"
+      },
+      "temporal": {
+        "durationSeconds": 28,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她把限定版留在历史、让公司回应靠近，却亲手发布过强断言并留署名。",
+          "path": "机位不移动。",
+          "start": "诺拉不再指公司回复，改把三份病例记录并排。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "问题式标题与无证据支撑的断言同时发布，诺拉署名保留。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E10-SH011-F1",
+            "timeSeconds": 0,
+            "description": "她把限定版留在历史、让公司回应靠近，却亲手发布过强断言并留署名。"
+          }
+        ],
+        "edit": {
+          "entry": "诺拉不再指公司回复，改把三份病例记录并排。",
+          "exit": "问题式标题与无证据支撑的断言同时发布，诺拉署名保留。；发布完成，她拿外套欲离开，机会弹窗改变她的动作。",
+          "preferredTransition": "接E10-SH012；发布完成，她拿外套欲离开，机会弹窗改变她的动作。",
+          "soundBridge": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E10-SH012",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "约谈机会把她留在座位上，待核清单仍留桌面。",
+        "audiencePayoff": "采访缺口仍在，职业机会已先到。",
+        "trigger": "问题式标题与无证据支撑的断言同时发布，诺拉署名保留。；全国版约谈消息弹出，诺拉拿外套的动作停住。编辑指了指她桌边的续约提醒，诺拉重新坐下，先回复约谈时间。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "她先回复约谈，切公司如何承担这次发布。；本场结果成立后切入 E10-SC03（INSURER，夜·稿件发布后）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定9秒，她重新坐下形成与前镜近景不同的空间尺度。；观看变化：采访缺口仍在，职业机会已先到。"
+      },
+      "camera": {
+        "shotScale": "过道南端35mm西桌全景",
+        "position": "过道南端35mm西桌全景，诺拉椅子、外套和编辑在桌旁同框。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "过道南端35mm西桌全景，诺拉椅子、外套和编辑在桌旁同框。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "约谈机会把她留在座位上，待核清单仍留桌面。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 当天傍晚编辑部西窗转暗。诺拉坐西桌，女值班编辑站东侧，共用屏幕旁放着三份回执与合同续签提醒，来源的警告还在红本上。 本镜画内角色：NORA,EDITOR-DESK。",
+        "movementIntent": "固定9秒，她重新坐下形成与前镜近景不同的空间尺度。"
+      },
+      "composition": {
+        "layout": "当天傍晚编辑部西窗转暗。诺拉坐西桌，女值班编辑站东侧，共用屏幕旁放着三份回执与合同续签提醒，来源的警告还在红本上。 本镜画内角色：NORA,EDITOR-DESK。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：全国版约谈消息弹出，诺拉拿外套的动作停住。编辑指了指她桌边的续约提醒，诺拉重新坐下，先回复约谈时间。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "约谈机会把她留在座位上，待核清单仍留桌面。；约谈机会把她留在座位上，待核清单仍留桌面。"
+      },
+      "temporal": {
+        "durationSeconds": 9,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "约谈机会把她留在座位上，待核清单仍留桌面。",
+          "path": "机位不移动。",
+          "start": "问题式标题与无证据支撑的断言同时发布，诺拉署名保留。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "采访缺口仍在，职业机会已先到。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E10-SH012-F1",
+            "timeSeconds": 0,
+            "description": "约谈机会把她留在座位上，待核清单仍留桌面。"
+          }
+        ],
+        "edit": {
+          "entry": "问题式标题与无证据支撑的断言同时发布，诺拉署名保留。",
+          "exit": "采访缺口仍在，职业机会已先到。；她先回复约谈，切公司如何承担这次发布。",
+          "preferredTransition": "本场结果成立后切入 E10-SC03（INSURER，夜·稿件发布后）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E10-SH013",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "保存访问记录的真实指示与调查文件去向从这里开始。",
+        "audiencePayoff": "追查从发表样本的内部流转开始，未指明幕后操纵。",
+        "trigger": "维克多坐中央桌北端，平板放左手边。；维克多将文章里的三个样本日期放大，和内部文号列表并排，拨给法务要求保留访问记录。他没有查记者的私人消息。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "电话会议来电到达东工位，切来源接听而非继续跟公司。；接E10-SH014；电话会议来电到达东工位，切来源接听而非继续跟公司。",
+        "noMotionReason": "固定，三个日期与文号并排后他打电话。；观看变化：追查从发表样本的内部流转开始，未指明幕后操纵。"
+      },
+      "camera": {
+        "shotScale": "中央会议室西侧50mm维克多中景",
+        "position": "中央会议室西侧50mm维克多中景，玻璃后东工位远处可见但不读莉娜脸。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中央会议室西侧50mm维克多中景，玻璃后东工位远处可见但不读莉娜脸。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "保存访问记录的真实指示与调查文件去向从这里开始。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 当晚公司东侧质检区只亮一排灯，莉娜已经把包从椅背取下。玻璃另一边中央会议室，维克多坐桌北端核对文章中三个日期，双方通过工作电话相连。 本镜画内角色：VICTOR。",
+        "movementIntent": "固定，三个日期与文号并排后他打电话。"
+      },
+      "composition": {
+        "layout": "当晚公司东侧质检区只亮一排灯，莉娜已经把包从椅背取下。玻璃另一边中央会议室，维克多坐桌北端核对文章中三个日期，双方通过工作电话相连。 本镜画内角色：VICTOR。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：维克多将文章里的三个样本日期放大，和内部文号列表并排，拨给法务要求保留访问记录。他没有查记者的私人消息。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "保存访问记录的真实指示与调查文件去向从这里开始。；保存访问记录的真实指示与调查文件去向从这里开始。"
+      },
+      "temporal": {
+        "durationSeconds": 10,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "保存访问记录的真实指示与调查文件去向从这里开始。",
+          "path": "机位不移动。",
+          "start": "维克多坐中央桌北端，平板放左手边。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "追查从发表样本的内部流转开始，未指明幕后操纵。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E10-SH013-F1",
+            "timeSeconds": 0,
+            "description": "保存访问记录的真实指示与调查文件去向从这里开始。"
+          }
+        ],
+        "edit": {
+          "entry": "维克多坐中央桌北端，平板放左手边。",
+          "exit": "追查从发表样本的内部流转开始，未指明幕后操纵。；电话会议来电到达东工位，切来源接听而非继续跟公司。",
+          "preferredTransition": "接E10-SH014；电话会议来电到达东工位，切来源接听而非继续跟公司。",
+          "soundBridge": "办公室空调与实际手机提示，不加未列来电内容。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E10-SH014",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她问今晚工作、要书面问题，挂断工作机后才取私人手机；维克多声音仅经听筒。",
+        "audiencePayoff": "工作手机留工位，私人手机回包；她暂不走向会议室。",
+        "trigger": "追查从发表样本的内部流转开始，未指明幕后操纵。；莉娜准备下班，看到工作手机的法务电话会议来电，把椅背上的包取下又放回。她保存尚未完成的质检表，接起电话。\n莉娜还没挂断工作电话。她把刚保存的质检表留在屏幕上，玻璃外会议室的维克多并没有走过来。\n法务电话会议里，维克多的要求从莉娜右手的工作手机听筒传来。她望向玻璃后的会议桌，听完才挂断，把工作手机放桌右；左手将椅背包拉近，右手从包里取私人手机，给自己的独立咨询发约见消息。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "私人咨询发出，下一场对外公告无法抹去来源的代价。；本集结束。同一篇报道把莉娜带进资料流转调查。她要求书面问题和律师在场，记者的收益由另一个人承担代价。 下集从INSURER展开：优先复核是不是批准付款；人物是否愿意更新自己已经相信的旧答案？",
+        "noMotionReason": "固定42秒，让她的下班动作被通话中断再改成找独立咨询。；观看变化：工作手机留工位，私人手机回包；她暂不走向会议室。"
+      },
+      "camera": {
+        "shotScale": "东工位南侧50mm莉娜半身",
+        "position": "东工位南侧50mm莉娜半身，玻璃后会议桌维克多在远处失焦，工作手机右、私人包左。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "东工位南侧50mm莉娜半身，玻璃后会议桌维克多在远处失焦，工作手机右、私人包左。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "她问今晚工作、要书面问题，挂断工作机后才取私人手机；维克多声音仅经听筒。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 当晚公司东侧质检区只亮一排灯，莉娜已经把包从椅背取下。玻璃另一边中央会议室，维克多坐桌北端核对文章中三个日期，双方通过工作电话相连。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定42秒，让她的下班动作被通话中断再改成找独立咨询。"
+      },
+      "composition": {
+        "layout": "当晚公司东侧质检区只亮一排灯，莉娜已经把包从椅背取下。玻璃另一边中央会议室，维克多坐桌北端核对文章中三个日期，双方通过工作电话相连。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：莉娜准备下班，看到工作手机的法务电话会议来电，把椅背上的包取下又放回。她保存尚未完成的质检表，接起电话。\n莉娜还没挂断工作电话。她把刚保存的质检表留在屏幕上，玻璃外会议室的维克多并没有走过来。\n法务电话会议里，维克多的要求从莉娜右手的工作手机听筒传来。她望向玻璃后的会议桌，听完才挂断，把工作手机放桌右；左手将椅背包拉近，右手从包里取私人手机，给自己的独立咨询发约见消息。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她问今晚工作、要书面问题，挂断工作机后才取私人手机；维克多声音仅经听筒。；她问今晚工作、要书面问题，挂断工作机后才取私人手机；维克多声音仅经听筒。"
+      },
+      "temporal": {
+        "durationSeconds": 42,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她问今晚工作、要书面问题，挂断工作机后才取私人手机；维克多声音仅经听筒。",
+          "path": "机位不移动。",
+          "start": "追查从发表样本的内部流转开始，未指明幕后操纵。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "工作手机留工位，私人手机回包；她暂不走向会议室。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E10-SH014-F1",
+            "timeSeconds": 0,
+            "description": "她问今晚工作、要书面问题，挂断工作机后才取私人手机；维克多声音仅经听筒。"
+          }
+        ],
+        "edit": {
+          "entry": "追查从发表样本的内部流转开始，未指明幕后操纵。",
+          "exit": "工作手机留工位，私人手机回包；她暂不走向会议室。；私人咨询发出，下一场对外公告无法抹去来源的代价。",
+          "preferredTransition": "本集结束。同一篇报道把莉娜带进资料流转调查。她要求书面问题和律师在场，记者的收益由另一个人承担代价。 下集从INSURER展开：优先复核是不是批准付款；人物是否愿意更新自己已经相信的旧答案？",
+          "soundBridge": "办公室空调与实际手机提示，不加未列来电内容。 维克多声音经莉娜工作手机听筒传出，他仍在远处玻璃后的会议室，不移到工位。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    }
+  ]
+}

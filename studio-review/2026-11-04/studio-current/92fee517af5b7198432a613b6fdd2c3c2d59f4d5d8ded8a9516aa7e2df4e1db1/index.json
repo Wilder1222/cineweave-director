@@ -1,0 +1,48 @@
+{
+  "topicId": "V008",
+  "projectId": "92fee517af5b7198432a613b6fdd2c3c2d59f4d5d8ded8a9516aa7e2df4e1db1",
+  "projectTitle": "雨师请假了",
+  "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=92fee517af5b7198432a613b6fdd2c3c2d59f4d5d8ded8a9516aa7e2df4e1db1#scripts",
+  "transport": "authorized_browser_ui_dom",
+  "currentRevision": null,
+  "exportComplete": true,
+  "documents": [
+    {
+      "documentId": "5b37c57bd0f6a1243975d4384ce9f173361119393c83ed343331a37625d1d4d7",
+      "metadata": "提示词",
+      "title": "V008 雨师请假了｜审阅与来源｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "f0a09fc8a572b6c222efceaed4a6a01233bfa976aa5daa44ae14c5b7da6fc67b",
+      "bodyLength": 794,
+      "readAt": "2026-11-04T06:51:42.554Z",
+      "file": "5b37c57bd0f6a1243975d4384ce9f173361119393c83ed343331a37625d1d4d7.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=92fee517af5b7198432a613b6fdd2c3c2d59f4d5d8ded8a9516aa7e2df4e1db1#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "a27a84cab5cd100b14e03fe7002d7da3b58ae1c844ec60e9bf625daa17d6c5eb",
+      "metadata": "提示词",
+      "title": "V008 雨师请假了｜分镜与视频提示｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "2dc46e11a49850378dc7898bf066440ee8e07edc91a7ebe8ea93b6829ff3f8ef",
+      "bodyLength": 13761,
+      "readAt": "2026-11-04T06:51:50.436Z",
+      "file": "a27a84cab5cd100b14e03fe7002d7da3b58ae1c844ec60e9bf625daa17d6c5eb.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=92fee517af5b7198432a613b6fdd2c3c2d59f4d5d8ded8a9516aa7e2df4e1db1#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "5ecda5c058d7526262ac50e9b63b2ade7a8f3cee4f066198fa6abd0586f1aefc",
+      "metadata": "剧本",
+      "title": "V008 雨师请假了｜剧本｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "4c6632f2fc30b3e22cc89a5a8e1337232bf3058033e10f1b9c00664bfa5f65ad",
+      "bodyLength": 903,
+      "readAt": "2026-11-04T06:51:57.785Z",
+      "file": "5ecda5c058d7526262ac50e9b63b2ade7a8f3cee4f066198fa6abd0586f1aefc.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=92fee517af5b7198432a613b6fdd2c3c2d59f4d5d8ded8a9516aa7e2df4e1db1#scripts",
+      "proposals": []
+    }
+  ],
+  "exportedAt": "2026-11-04T06:51:59.665Z"
+}

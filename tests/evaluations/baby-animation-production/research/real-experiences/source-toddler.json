@@ -1,0 +1,233 @@
+{
+  "scope": {
+    "target": "搜集12—36个月幼儿家长公开亲述中的具体生活过程，供原创亲子生活短片研究；不改现有32条选题、创作源或页面。",
+    "retrievedAt": "2026-11-08",
+    "coverage": "8例，来自7条讨论、Reddit与Mumsnet两个平台；同一讨论最多采用2例。",
+    "readingPolicy": "cases均已用实际web工具打开原帖页面，完整核读所采用的正文或目标评论；不代表通读长帖全部评论。只见索引摘要的候选单列excluded，不计全文核读。",
+    "agePolicy": "保留作者明示年龄，不由版名、措辞或发帖日期推算月龄；没有精确月龄则明确缺失。仅显示相对时间的页面不倒推出绝对发布日期。",
+    "adaptationBoundary": "本批是幼儿经历，多例涉及主动跑动、日常任务与说话。不能据此给现有婴儿阶段的澈澈增加未设定能力，也不能把幼儿的完整句子直接塞给婴儿。creativeInference是创作分析，不是原帖事实或已获作者采纳的剧情。",
+    "verificationBoundary": "家长公开自述，未独立证实；不据此判断行为普遍性、成长标准或某种育儿方法的效果。"
+  },
+  "cases": [
+    {
+      "id": "TD01",
+      "title": "失踪的衣服，数周后在玩具水壶里现身",
+      "ageReported": "2 year old（作者原话，精确月龄未注明）",
+      "ageGroup": "幼儿，作者自报2岁；并非婴儿阶段素材",
+      "source": {
+        "url": "https://www.mumsnet.com/talk/behaviour_development/2533635-tell-me-your-kids-strangest-hiding-places-of-things",
+        "title": "tell me your kids strangest hiding places of things..",
+        "platform": "Mumsnet / Behaviour/development",
+        "author": "CinnamonBunYou",
+        "published": "2015-12-23 13:26（页面原样显示日期时间；时区未注明）",
+        "readLevel": "已打开原帖并完整核读CinnamonBunYou的目标评论；未通读其他所有评论",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "家长找不到孩子的一条连裤袜和一件幼儿园上衣。",
+        "babyAction": "家长称2岁女儿喜欢把东西塞进任何有盖子的容器；这次把衣服塞进玩具水壶。",
+        "adultResponse": "数周后，家长打开玩具水壶时发现了衣服。",
+        "outcome": "失物的藏处揭晓；孩子面对发现时的反应未交代。"
+      },
+      "evidenceNote": "评论定位：CinnamonBunYou，23/12/2015 13:26；短摘“inside her toy kettle”。原文依次写衣物找不到、数周后开壶发现。",
+      "missingDetails": ["没有描述孩子实际塞衣服的现场；该归因来自家长回述。", "未交代寻找方法、发现后的对话或孩子反应。"],
+      "creativeInference": "可研究“孩子按容器规则收纳，成人按衣物规则寻找”的错位；不能补成孩子故意设局或撒谎。",
+      "limitations": "家长公开自述，未独立证实。"
+    },
+    {
+      "id": "TD02",
+      "title": "被追回的土豆，最后穿上袜子当了睡伴",
+      "ageReported": "two year old（作者原话，精确月龄未注明）",
+      "ageGroup": "会跑动的2岁幼儿；不能直接套入有靠坐婴儿",
+      "source": {
+        "url": "https://www.reddit.com/r/toddlers/comments/1vbna38/toddlers_are_so_cute_and_weird/",
+        "title": "Toddlers are so cute and weird",
+        "platform": "Reddit / r/toddlers",
+        "author": "u/wonkynipples",
+        "published": "未注明（所读页面仅显示相对时间“3mo ago”，不换算绝对日期）",
+        "readLevel": "已打开原帖并完整核读主帖正文",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "当天下午，家中储物处有土豆。",
+        "babyAction": "2岁孩子反复拿走一颗土豆、尖叫着跑开；后来给它洗澡、擦干，再套上一只袜子。",
+        "adultResponse": "家长与伴侣先追着取回，称只是玩闹；随后决定让她把土豆带去洗澡。",
+        "outcome": "发帖时孩子已经抱着穿袜子的土豆睡着。"
+      },
+      "evidenceNote": "主帖开头“grab a potato”到第二段“put her clothes on (a sock)”；最后明确写抱着它睡着。",
+      "missingDetails": ["未说明追逐次数、土豆在浴室的具体摆位及中间对话。", "未交代这是不是以前已有的仪式。"],
+      "creativeInference": "可提取成人从追回物品转为接纳孩子照料游戏的过程；“情感寄托”等原因不能当作已证实心理解释。",
+      "limitations": "家长公开自述，未独立证实。"
+    },
+    {
+      "id": "TD03",
+      "title": "不许爸爸把我当玩具，却反过来轻抚爸爸",
+      "ageReported": "current 2 year old (almost 3)（作者原话，未注明具体月龄）",
+      "ageGroup": "接近3岁的会说话幼儿；原句不是婴儿台词",
+      "source": {
+        "url": "https://www.reddit.com/r/toddlers/comments/1rcpedj/toddlers_be_toddlin/",
+        "title": "Toddlers be toddlin",
+        "platform": "Reddit / r/toddlers",
+        "author": "u/wllwrkfrfd",
+        "published": "未注明（本次打开的主帖正文未给出绝对发布日期）",
+        "readLevel": "已打开原帖并完整核读主帖；采用编号3的睡前事件",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "爸爸哄孩子睡觉时开始揉他的背。",
+        "babyAction": "孩子拒绝被摸，说自己不是玩具。",
+        "adultResponse": "爸爸解释以为孩子会喜欢揉背，表示会停。",
+        "outcome": "孩子翻过身，说爸爸才是玩具，并开始轻轻抚摸爸爸胸毛。"
+      },
+      "evidenceNote": "主帖编号3；短摘“DON'T PET ME DADDY”和“you a toy”。拒绝、成人答应停止、角色反转均在同段。",
+      "missingDetails": ["没有写随后是否继续揉背或何时入睡。", "对话是家长回述，未有独立录音。"],
+      "creativeInference": "趣味来自孩子把刚刚拒绝的角色关系倒过来；只能研究回应结构，不能把这组完整语言移给婴儿。",
+      "limitations": "家长公开自述，未独立证实。"
+    },
+    {
+      "id": "TD04",
+      "title": "家长想东西时的小动作，变成孩子的侦探仪式",
+      "ageReported": "2.5yo（评论作者原话）",
+      "ageGroup": "2岁半幼儿，已有模仿手势与角色游戏；不是婴儿能力证明",
+      "source": {
+        "url": "https://www.reddit.com/r/toddlers/comments/1h549kn/toddler_inside_jokes/",
+        "title": "Toddler inside jokes",
+        "platform": "Reddit / r/toddlers",
+        "author": "GarbageSepty",
+        "published": "未注明（目标评论只显示相对时间“2y ago”）",
+        "readLevel": "已打开原帖并完整核读GarbageSepty的目标评论；未通读全帖所有评论",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "家长思考时会用手指轻点嘴部，原先自己都没注意。",
+        "babyAction": "2岁半孩子开始在找东西时重复这个动作。",
+        "adultResponse": "家长认出是在模仿后，给孩子起了侦探角色称呼。",
+        "outcome": "后来找玩具或收拾时，一叫该称呼，孩子就笑着点嘴、投入扮演；没有写实际找到了什么。"
+      },
+      "evidenceNote": "目标评论开头“My boy (2.5yo)”；作者说直到孩子模仿才注意到自己的手势，随后出现“Detective Watson”称呼。",
+      "missingDetails": ["缺一回具体找物的起终点。", "没有明确寻物成功结果。"],
+      "creativeInference": "可研究成人发现自己被模仿后的回应；角色称呼与台词需原创，不默认婴儿能理解该语言游戏。",
+      "limitations": "家长公开自述，未独立证实。"
+    },
+    {
+      "id": "TD05",
+      "title": "家里没有这个人，却越打招呼越好笑",
+      "ageReported": "2.5 year old（主帖作者原话）",
+      "ageGroup": "2岁半会说话幼儿；依赖押韵与家庭暗号",
+      "source": {
+        "url": "https://www.reddit.com/r/toddlers/comments/1h549kn/toddler_inside_jokes/",
+        "title": "Toddler inside jokes",
+        "platform": "Reddit / r/toddlers",
+        "author": "u/dancethrusunday",
+        "published": "未注明（所读主帖只显示相对时间“2y ago”）",
+        "readLevel": "已打开原帖并完整核读主帖正文",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "家里没有人叫Pete。",
+        "babyAction": "孩子偶尔带笑走过来，说“hi Pete”。",
+        "adultResponse": "家长把同一句回给他。",
+        "outcome": "孩子大笑，有时接着换成押韵词，边说边笑。"
+      },
+      "evidenceNote": "主帖首段；短摘“hi Pete”。作者明确写无同名家人、成人回声、孩子笑及继续押韵的先后。",
+      "missingDetails": ["没有交代暗号的最初来源。", "未写一次互动结束后做了什么。"],
+      "creativeInference": "可研究双方重复一个小暗号如何积累笑意；押韵和完整招呼语属于该幼儿，不能原样赋予婴儿。",
+      "limitations": "家长公开自述，未独立证实。"
+    },
+    {
+      "id": "TD06",
+      "title": "把家长的结束用餐判断，听成了要做的动作",
+      "ageReported": "At about 18 months；He’s 2.5 now（评论作者原话，叙述横跨两个年龄）",
+      "ageGroup": "约18个月开始、2岁半仍持续的幼儿家庭习惯；不当作普遍发展规则",
+      "source": {
+        "url": "https://www.reddit.com/r/toddlers/comments/1i5qy1l/comment/m860m3e/",
+        "title": "What funny thing is your toddler mistaken about?",
+        "platform": "Reddit / r/toddlers",
+        "author": "CanThisBeEvery",
+        "published": "未注明（所读目标评论只显示相对时间“2y ago”）",
+        "readLevel": "已打开原帖并核读目标评论，另打开目标评论永久链接确认同一正文",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "约18个月时，孩子把脚搁到餐桌上。",
+        "babyAction": "到2岁半，吃完饭时仍经常主动把脚放上桌。",
+        "adultResponse": "家长当初说这样表示吃完，要收走盘子；后来尝试解释，却没有消除这个习惯。",
+        "outcome": "家长称孩子仍以为这样是在配合；并称他在托育处不这样做。"
+      },
+      "evidenceNote": "CanThisBeEvery评论，开头“At about 18 months”；正文将最初说明与“He’s 2.5 now”后的持续动作相接。",
+      "missingDetails": ["后来如何解释、重复多少次未交代。", "“想讨好家长”是发帖者对动机的解释，并非独立证明。"],
+      "creativeInference": "可提取成人条件句被孩子当成操作步骤的错位；不把该动作或家长说法推荐为育儿做法。",
+      "limitations": "家长公开自述，未独立证实。"
+    },
+    {
+      "id": "TD07",
+      "title": "一边装洗碗机一边被往外拿，改分工才顺下来",
+      "ageReported": "2 year old（作者原话，精确月龄未注明）",
+      "ageGroup": "参与家庭任务的2岁幼儿；不等同有靠坐婴儿的手部游戏",
+      "source": {
+        "url": "https://www.reddit.com/r/Mommit/comments/koo3ho/how_did_i_not_figure_this_out_sooner/",
+        "title": "How did I not figure this out sooner",
+        "platform": "Reddit / r/Mommit",
+        "author": "u/sweetpeach1022",
+        "published": "未注明（所读主帖只显示相对时间“6y ago”，不由页尾关联日期推算）",
+        "readLevel": "已打开原帖并完整核读主帖正文",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "家长往洗碗机里放脏餐具。",
+        "babyAction": "2岁孩子总试着把刚放进去的脏餐具往外拿。",
+        "adultResponse": "家长请他改做把餐具放入分类格的任务。",
+        "outcome": "家长称孩子高兴地专注新任务，不再挡着原来的工作。"
+      },
+      "evidenceNote": "主帖单段，短摘“pull dirty dishes out”；同段随后写请求分类、孩子高兴且专注。",
+      "missingDetails": ["餐具具体种类、分类完成程度及成人现场细节未交代。", "作者“每次都有效”的泛化感受不作为本案例效果保证。"],
+      "creativeInference": "可研究同一劳动中双方目标相反、再重新分工的过程；不复制成育儿技巧承诺。",
+      "limitations": "家长公开自述，未独立证实。"
+    },
+    {
+      "id": "TD08",
+      "title": "其他家务都想参加，扫地偏要跑过垃圾堆",
+      "ageReported": "21 month old（评论作者原话）",
+      "ageGroup": "21个月会主动跑动的幼儿；不能直接变成婴儿行动",
+      "source": {
+        "url": "https://www.reddit.com/r/toddlers/comments/1hb163u/teaching_my_two_year_old_chores/",
+        "title": "Teaching my two year old chores",
+        "platform": "Reddit / r/toddlers",
+        "author": "moluruth",
+        "published": "未注明（目标评论只显示相对时间“2y ago”）",
+        "readLevel": "已打开原帖并完整核读moluruth的目标评论；不是仅取搜索摘要",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "家长描述孩子平常会帮拿衣服、收玩具等，一天最后还要扫地。",
+        "babyAction": "但扫地时，孩子总要跑过已经扫成堆的垃圾。",
+        "adultResponse": "家长说劝不住，所以不让他参加一天最后的扫地；另提到他会扫一些小脏乱。",
+        "outcome": "家长区分了孩子扫小脏乱与不参与日末扫地的情况；一次具体清扫如何结束未交代。"
+      },
+      "evidenceNote": "目标评论开头“My 21 month old”；结尾写“run through the pile”及不让参加“end of the day sweep”。",
+      "missingDetails": ["这是重复习惯回述，不是完整记下一次清扫。", "没有描述跑过后的垃圾状态或当场对话。"],
+      "creativeInference": "趣味可来自成人刚聚好的东西被另一套行动目标打散；不能擅自补写孩子故意捣乱。",
+      "limitations": "家长公开自述，未独立证实。"
+    }
+  ],
+  "excluded": [
+    {
+      "url": "https://www.momtastic.com/news/814729-toddler-masters-hide-and-seek-video/",
+      "title": "Video: Toddler Masters Hide & Seek in the Most Unexpected Way",
+      "readLevel": "仅索引摘要，未核读家长原始亲述",
+      "reason": "媒体转述候选；不能把报道索引当作家长原文或视频过程核读，未计入cases。"
+    },
+    {
+      "url": "https://www.reddit.com/r/toddlers/comments/1klu605/what_funny_things_does_your_kid_do_that_is_both/",
+      "title": "What funny things does your kid do that is both amusing and helpful?",
+      "readLevel": "已打开原帖并读到vijeze的目标评论",
+      "reason": "给家长送早餐的过程较完整，但作者明报女儿3.5岁，超出本批12—36个月范围，不采用。"
+    },
+    {
+      "url": "https://www.reddit.com/r/toddlers/comments/1rp0utj/pretend_play_at_2_years_old/",
+      "title": "Pretend play at 2 years old",
+      "readLevel": "已打开原帖并读到destria自报20个月的目标评论",
+      "reason": "主要罗列给玩偶喂食、盖被等日常游戏；未交代一回具体事件中的成人回应和结果，本批优先采用过程更完整的案例。"
+    }
+  ]
+}

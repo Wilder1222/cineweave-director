@@ -1,0 +1,1432 @@
+{
+  "source": {
+    "type": "design",
+    "id": "H003-production-r1",
+    "version": 1,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "H003-01A",
+    "H003-01B",
+    "H003-02A",
+    "H003-02B",
+    "H003-03A",
+    "H003-03B",
+    "H003-04A",
+    "H003-04B",
+    "H003-04C",
+    "H003-05A",
+    "H003-05B",
+    "H003-06A",
+    "H003-06B"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "H003-01A",
+      "status": "pass",
+      "criterion": "半图是平民警告，不能变当前军事路线",
+      "observation": "半图是平民警告，不能变当前军事路线",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L7–L26"
+    },
+    {
+      "role": "performance",
+      "shotId": "H003-01A",
+      "status": "pass",
+      "criterion": "程野问后她说三日前出城，药包握紧有具体任务",
+      "observation": "程野问后她说三日前出城，药包握紧有具体任务",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L7–L26"
+    },
+    {
+      "role": "staging",
+      "shotId": "H003-01A",
+      "status": "pass",
+      "criterion": "程野持图、她持药包，罗七尚未入",
+      "observation": "程野持图、她持药包，罗七尚未入",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L7–L26"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H003-01A",
+      "status": "pass",
+      "criterion": "桌侧中近景先图后脸，纸与药包不靠极浅景深丢失",
+      "observation": "桌侧中近景先图后脸，纸与药包不靠极浅景深丢失",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L7–L26"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H003-01A",
+      "status": "pass",
+      "criterion": "24秒长台词保三日前/别放火限定，不加母亲画面",
+      "observation": "24秒长台词保三日前/别放火限定，不加母亲画面",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L7–L26"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H003-01A",
+      "status": "pass",
+      "criterion": "图继续程野持，药包阿荠未转手",
+      "observation": "图继续程野持，药包阿荠未转手",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L7–L26"
+    },
+    {
+      "role": "direction",
+      "shotId": "H003-01B",
+      "status": "pass",
+      "criterion": "双方均未知目的地，送图只是见东行后试着送",
+      "observation": "双方均未知目的地，送图只是见东行后试着送",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L27–L46"
+    },
+    {
+      "role": "performance",
+      "shotId": "H003-01B",
+      "status": "pass",
+      "criterion": "程野坦白不知道，她承认自己也猜，非暗中带路",
+      "observation": "程野坦白不知道，她承认自己也猜，非暗中带路",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L27–L46"
+    },
+    {
+      "role": "staging",
+      "shotId": "H003-01B",
+      "status": "pass",
+      "criterion": "图程野手、药包她手，门帘只因风动",
+      "observation": "图程野手、药包她手，门帘只因风动",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L27–L46"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H003-01B",
+      "status": "pass",
+      "criterion": "桌侧原轴平视，让不知道的脸彼此回应",
+      "observation": "桌侧原轴平视，让不知道的脸彼此回应",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L27–L46"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H003-01B",
+      "status": "pass",
+      "criterion": "独立稿明确不倒灌后段入蔡州知识",
+      "observation": "独立稿明确不倒灌后段入蔡州知识",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L27–L46"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H003-01B",
+      "status": "pass",
+      "criterion": "门帘动为来者前置，不能已见罗七",
+      "observation": "门帘动为来者前置，不能已见罗七",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L27–L46"
+    },
+    {
+      "role": "direction",
+      "shotId": "H003-02A",
+      "status": "pass",
+      "criterion": "接图后质疑用途，冲突针对真实物件",
+      "observation": "接图后质疑用途，冲突针对真实物件",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L47–L66"
+    },
+    {
+      "role": "performance",
+      "shotId": "H003-02A",
+      "status": "pass",
+      "criterion": "罗七入帘接稳后发问，她解释只认半城",
+      "observation": "罗七入帘接稳后发问，她解释只认半城",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L47–L66"
+    },
+    {
+      "role": "staging",
+      "shotId": "H003-02A",
+      "status": "pass",
+      "criterion": "程野交后空手，图由罗七唯一持有",
+      "observation": "程野交后空手，图由罗七唯一持有",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L47–L66"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H003-02A",
+      "status": "pass",
+      "criterion": "门侧中景含交接双手与墙边磨盘，入门路径可达",
+      "observation": "门侧中景含交接双手与墙边磨盘，入门路径可达",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L47–L66"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H003-02A",
+      "status": "pass",
+      "criterion": "22秒不插入整城俯瞰把半图扩充成全知",
+      "observation": "22秒不插入整城俯瞰把半图扩充成全知",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L47–L66"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H003-02A",
+      "status": "pass",
+      "criterion": "02B图罗七手、药包阿荠手",
+      "observation": "02B图罗七手、药包阿荠手",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L47–L66"
+    },
+    {
+      "role": "direction",
+      "shotId": "H003-02B",
+      "status": "pass",
+      "criterion": "三日空白被承认，不能用图补出实时岗哨",
+      "observation": "三日空白被承认，不能用图补出实时岗哨",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L67–L86"
+    },
+    {
+      "role": "performance",
+      "shotId": "H003-02B",
+      "status": "pass",
+      "criterion": "罗七追问，阿荠先答不知道再解释回不去",
+      "observation": "罗七追问，阿荠先答不知道再解释回不去",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L67–L86"
+    },
+    {
+      "role": "staging",
+      "shotId": "H003-02B",
+      "status": "pass",
+      "criterion": "图未触盆，程野侧位可准备按住",
+      "observation": "图未触盆，程野侧位可准备按住",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L67–L86"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H003-02B",
+      "status": "pass",
+      "criterion": "原轴中景，盆在后方向先建立风险，不烧纸",
+      "observation": "原轴中景，盆在后方向先建立风险，不烧纸",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L67–L86"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H003-02B",
+      "status": "pass",
+      "criterion": "12秒保换岗/通巷双未知，不自动画新岗哨",
+      "observation": "12秒保换岗/通巷双未知，不自动画新岗哨",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L67–L86"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H003-02B",
+      "status": "pass",
+      "criterion": "末图角移盆方向，为03A按住保动作起点",
+      "observation": "末图角移盆方向，为03A按住保动作起点",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L67–L86"
+    },
+    {
+      "role": "direction",
+      "shotId": "H003-03A",
+      "status": "pass",
+      "criterion": "程野阻毁证据不是宣布图可靠",
+      "observation": "程野阻毁证据不是宣布图可靠",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L87–L106"
+    },
+    {
+      "role": "performance",
+      "shotId": "H003-03A",
+      "status": "pass",
+      "criterion": "罗七嫌不能引路欲烧，程野按住后才反驳住户线索价值",
+      "observation": "罗七嫌不能引路欲烧，程野按住后才反驳住户线索价值",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L87–L106"
+    },
+    {
+      "role": "staging",
+      "shotId": "H003-03A",
+      "status": "pass",
+      "criterion": "图角按住未燃，盆与手有安全间隔，不真火接触",
+      "observation": "图角按住未燃，盆与手有安全间隔，不真火接触",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L87–L106"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H003-03A",
+      "status": "pass",
+      "criterion": "斜俯近中景同见图角/按手/盆外沿，受力可读",
+      "observation": "斜俯近中景同见图角/按手/盆外沿，受力可读",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L87–L106"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H003-03A",
+      "status": "pass",
+      "criterion": "21秒保持按住未烧，而非燃纸后魔法修复",
+      "observation": "21秒保持按住未烧，而非燃纸后魔法修复",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L87–L106"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H003-03A",
+      "status": "pass",
+      "criterion": "03B从罗七准备收回进入，程野尚按图角",
+      "observation": "03B从罗七准备收回进入，程野尚按图角",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L87–L106"
+    },
+    {
+      "role": "direction",
+      "shotId": "H003-03B",
+      "status": "pass",
+      "criterion": "曾有修字尊重证人界限，记录不是采信证明",
+      "observation": "曾有修字尊重证人界限，记录不是采信证明",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L107–L126"
+    },
+    {
+      "role": "performance",
+      "shotId": "H003-03B",
+      "status": "pass",
+      "criterion": "阿荠看到有住户才纠正，程野随即改字",
+      "observation": "阿荠看到有住户才纠正，程野随即改字",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L107–L126"
+    },
+    {
+      "role": "staging",
+      "shotId": "H003-03B",
+      "status": "pass",
+      "criterion": "罗七先收回铺桌递笔，程野写后还笔，罗七收图",
+      "observation": "罗七先收回铺桌递笔，程野写后还笔，罗七收图",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L107–L126"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H003-03B",
+      "status": "pass",
+      "criterion": "纸面斜俯近景包含完整背面，阿荠上身可在外侧但声音方向清楚",
+      "observation": "纸面斜俯近景包含完整背面，阿荠上身可在外侧但声音方向清楚",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L107–L126"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H003-03B",
+      "status": "pass",
+      "criterion": "35秒单母镜保初注与改注，字由确定性后期或实物",
+      "observation": "35秒单母镜保初注与改注，字由确定性后期或实物",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L107–L126"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H003-03B",
+      "status": "pass",
+      "criterion": "图笔回罗七，阿荠药包不变",
+      "observation": "图笔回罗七，阿荠药包不变；无第三份成文",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L107–L126"
+    },
+    {
+      "role": "direction",
+      "shotId": "H003-04A",
+      "status": "pass",
+      "criterion": "留下核问是送图的代价，不给巷安全假保证",
+      "observation": "留下核问是送图的代价，不给巷安全假保证",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L127–L146"
+    },
+    {
+      "role": "performance",
+      "shotId": "H003-04A",
+      "status": "pass",
+      "criterion": "罗七先说明上报与限制，她才说想回去，他拒绝",
+      "observation": "罗七先说明上报与限制，她才说想回去，他拒绝",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L127–L146"
+    },
+    {
+      "role": "staging",
+      "shotId": "H003-04A",
+      "status": "pass",
+      "criterion": "图笔已收，阿荠握药包留屋，没有一边走一边被留",
+      "observation": "图笔已收，阿荠握药包留屋，没有一边走一边被留",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L127–L146"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H003-04A",
+      "status": "pass",
+      "criterion": "三人桌侧朝门中景，留下与出路同画形成压力",
+      "observation": "三人桌侧朝门中景，留下与出路同画形成压力",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L127–L146"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H003-04A",
+      "status": "pass",
+      "criterion": "23秒保限制全部含义，不用剪掉不答应来美化罗七",
+      "observation": "23秒保限制全部含义，不用剪掉不答应来美化罗七",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L127–L146"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H003-04A",
+      "status": "pass",
+      "criterion": "号令末到，04B才出去听，未提前知目的地",
+      "observation": "号令末到，04B才出去听，未提前知目的地",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L127–L146"
+    },
+    {
+      "role": "direction",
+      "shotId": "H003-04B",
+      "status": "pass",
+      "criterion": "实际听命后才知道入蔡州，未倒灌早段",
+      "observation": "实际听命后才知道入蔡州，未倒灌早段",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L147–L166"
+    },
+    {
+      "role": "performance",
+      "shotId": "H003-04B",
+      "status": "pass",
+      "criterion": "罗七出去听后返回门边说，她望图离开方向强调日期",
+      "observation": "罗七出去听后返回门边说，她望图离开方向强调日期",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L147–L166"
+    },
+    {
+      "role": "staging",
+      "shotId": "H003-04B",
+      "status": "pass",
+      "criterion": "原图怀内不随号令交出，程野看阿荠不替她答",
+      "observation": "原图怀内不随号令交出，程野看阿荠不替她答",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L147–L166"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H003-04B",
+      "status": "pass",
+      "criterion": "屋内朝门固定中景，短离画与返回在同镜可见",
+      "observation": "屋内朝门固定中景，短离画与返回在同镜可见",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L147–L166"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H003-04B",
+      "status": "pass",
+      "criterion": "14秒真实出入听命需排练，不把无词号令当完整军情",
+      "observation": "14秒真实出入听命需排练，不把无词号令当完整军情",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L147–L166"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H003-04B",
+      "status": "pass",
+      "criterion": "04C罗七仍门口持图怀，阿荠空手侧可接粮",
+      "observation": "04C罗七仍门口持图怀，阿荠空手侧可接粮",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L147–L166"
+    },
+    {
+      "role": "direction",
+      "shotId": "H003-04C",
+      "status": "pass",
+      "criterion": "半粮实际交付却不解决拘留，保留小帮助尺度",
+      "observation": "半粮实际交付却不解决拘留，保留小帮助尺度",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L167–L186"
+    },
+    {
+      "role": "performance",
+      "shotId": "H003-04C",
+      "status": "pass",
+      "criterion": "程野掰半递，她以空手接，未把药包换手作戏",
+      "observation": "程野掰半递，她以空手接，未把药包换手作戏",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L167–L186"
+    },
+    {
+      "role": "staging",
+      "shotId": "H003-04C",
+      "status": "pass",
+      "criterion": "她一手药一手粮，程野余半收好才随罗出",
+      "observation": "她一手药一手粮，程野余半收好才随罗出",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L167–L186"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H003-04C",
+      "status": "pass",
+      "criterion": "固定中景含分粮手与左后出门路径",
+      "observation": "固定中景含分粮手与左后出门路径",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L167–L186"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H003-04C",
+      "status": "pass",
+      "criterion": "13秒不加拥抱/救援承诺，保持粮守恒",
+      "observation": "13秒不加拥抱/救援承诺，保持粮守恒",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L167–L186"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H003-04C",
+      "status": "pass",
+      "criterion": "阿荠持药包半粮留屋，程野余半城外才吃",
+      "observation": "阿荠持药包半粮留屋，程野余半城外才吃",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L167–L186"
+    },
+    {
+      "role": "direction",
+      "shotId": "H003-05A",
+      "status": "pass",
+      "criterion": "口头报图不是军队采用，原件仍罗七拿",
+      "observation": "口头报图不是军队采用，原件仍罗七拿",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L187–L206"
+    },
+    {
+      "role": "performance",
+      "shotId": "H003-05A",
+      "status": "pass",
+      "criterion": "抵城外后罗七取图展示背注再说明，程野听",
+      "observation": "抵城外后罗七取图展示背注再说明，程野听",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L187–L206"
+    },
+    {
+      "role": "staging",
+      "shotId": "H003-05A",
+      "status": "pass",
+      "criterion": "同一原图裂边与注记，程野余半粮仍随身未吃",
+      "observation": "同一原图裂边与注记，程野余半粮仍随身未吃",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L187–L206"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H003-05A",
+      "status": "pass",
+      "criterion": "蹲伏胸高中景含图背二人远闭墙，新场重建方位",
+      "observation": "蹲伏胸高中景含图背二人远闭墙，新场重建方位",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L187–L206"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H003-05A",
+      "status": "pass",
+      "criterion": "20秒不要生成军队按图行军蒙太奇",
+      "observation": "20秒不要生成军队按图行军蒙太奇",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L187–L206"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H003-05A",
+      "status": "pass",
+      "criterion": "05B罗七继续持图，程野才能取余半吃",
+      "observation": "05B罗七继续持图，程野才能取余半吃",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L187–L206"
+    },
+    {
+      "role": "direction",
+      "shotId": "H003-05B",
+      "status": "pass",
+      "criterion": "饥饿与她能否回去并存，不把分粮写成英雄奖赏",
+      "observation": "饥饿与她能否回去并存，不把分粮写成英雄奖赏",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L207–L226"
+    },
+    {
+      "role": "performance",
+      "shotId": "H003-05B",
+      "status": "pass",
+      "criterion": "程野吃余半后按腹才问，鹅鸭不盖问句",
+      "observation": "程野吃余半后按腹才问，鹅鸭不盖问句",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L207–L226"
+    },
+    {
+      "role": "staging",
+      "shotId": "H003-05B",
+      "status": "pass",
+      "criterion": "余半确实入口吃完，罗七持图双手不变",
+      "observation": "余半确实入口吃完，罗七持图双手不变",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L207–L226"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H003-05B",
+      "status": "pass",
+      "criterion": "低伏原轴中景保粮手与按腹，非突然站起全景",
+      "observation": "低伏原轴中景保粮手与按腹，非突然站起全景",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L207–L226"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H003-05B",
+      "status": "pass",
+      "criterion": "13秒小半粮咀嚼吞咽待实演，不能含粮说满句",
+      "observation": "13秒小半粮咀嚼吞咽待实演，不能含粮说满句",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L207–L226"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H003-05B",
+      "status": "pass",
+      "criterion": "06A程野已问等答、粮无余，不能再持半块",
+      "observation": "06A程野已问等答、粮无余，不能再持半块",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L207–L226"
+    },
+    {
+      "role": "direction",
+      "shotId": "H003-06A",
+      "status": "pass",
+      "criterion": "愿望与承诺分开，母亲位置未知保持到结尾",
+      "observation": "愿望与承诺分开，母亲位置未知保持到结尾",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L227–L246"
+    },
+    {
+      "role": "performance",
+      "shotId": "H003-06A",
+      "status": "pass",
+      "criterion": "罗七答不知道后程野说想去，罗七要求先跟队",
+      "observation": "罗七答不知道后程野说想去，罗七要求先跟队",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L227–L246"
+    },
+    {
+      "role": "staging",
+      "shotId": "H003-06A",
+      "status": "pass",
+      "criterion": "图仍罗七手，二人低伏，视线远城不等于看到巷",
+      "observation": "图仍罗七手，二人低伏，视线远城不等于看到巷",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L227–L246"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H003-06A",
+      "status": "pass",
+      "criterion": "原轴眼线中景看两人，远墙闭门不被虚构打开",
+      "observation": "原轴眼线中景看两人，远墙闭门不被虚构打开",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L227–L246"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H003-06A",
+      "status": "pass",
+      "criterion": "18秒三轮否定和愿望全保，鹅鸭底不吞不知道",
+      "observation": "18秒三轮否定和愿望全保，鹅鸭底不吞不知道",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L227–L246"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H003-06A",
+      "status": "pass",
+      "criterion": "06B罗七准备收图、程野听完起身跟",
+      "observation": "06B罗七准备收图、程野听完起身跟",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L227–L246"
+    },
+    {
+      "role": "direction",
+      "shotId": "H003-06B",
+      "status": "pass",
+      "criterion": "离画不补破城或母女获救，纸只被保留下来",
+      "observation": "离画不补破城或母女获救，纸只被保留下来",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L247–L266"
+    },
+    {
+      "role": "performance",
+      "shotId": "H003-06B",
+      "status": "pass",
+      "criterion": "罗七先收图再二人起身，动作完成便停",
+      "observation": "罗七先收图再二人起身，动作完成便停",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L247–L266"
+    },
+    {
+      "role": "staging",
+      "shotId": "H003-06B",
+      "status": "pass",
+      "criterion": "怀内收同图，程野粮已空",
+      "observation": "怀内收同图，程野粮已空；城门一直闭",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L247–L266"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "H003-06B",
+      "status": "pass",
+      "criterion": "低机位仍容两人起身全身，不靠截头掩换位",
+      "observation": "低机位仍容两人起身全身，不靠截头掩换位",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L247–L266"
+    },
+    {
+      "role": "prompt",
+      "shotId": "H003-06B",
+      "status": "pass",
+      "criterion": "7秒只收图起身，无后续胜利画面",
+      "observation": "7秒只收图起身，无后续胜利画面",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L247–L266"
+    },
+    {
+      "role": "continuity",
+      "shotId": "H003-06B",
+      "status": "pass",
+      "criterion": "衣图随二人离，阿荠仍属于前场未给新状态",
+      "observation": "衣图随二人离，阿荠仍属于前场未给新状态",
+      "sourceLocator": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c.md:L247–L266"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "H003-01A",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她送的是平民警告而非确定的军事路线。",
+        "audiencePayoff": "半图是平民警告，不能变当前军事路线",
+        "trigger": "程野问后她说三日前出城，药包握紧有具体任务",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在桌侧朝程野与阿荠，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持她送的是平民警告而非确定的军事路线的空间参照。理由：让观众读出她送的是平民警告而非确定的军事路线；不改变人物既定行动。",
+        "exitMatch": "程野持图，她已讲三天前离城。"
+      },
+      "camera": {
+        "shotScale": "中近景",
+        "position": "桌侧朝程野与阿荠。",
+        "height": "二人胸口高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "半图是平民警告，不能变当前军事路线",
+        "focusTarget": "起焦程野举图的手",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "磨屋桌—门轴靠磨盘侧；城外二人低伏轴南侧不对城内反打",
+        "movementIntent": "固定在桌侧朝程野与阿荠，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持她送的是平民警告而非确定的军事路线的空间参照。理由：让观众读出她送的是平民警告而非确定的军事路线；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "中近景；桌侧朝程野与阿荠。高度：二人胸口高度。前景半幅炭图；中景程野阿荠与药包；后景门帘。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中近景；桌侧朝程野与阿荠。高度：二人胸口高度。前景半幅炭图；中景程野阿荠与药包；后景门帘。保留行动方向的余地，不增加演员或道具。",
+        "midground": "程野持图、她持药包，罗七尚未入",
+        "background": "磨屋门帘与墙边磨盘；省略夜行后改远城闭门与雪，阿荠不出现在城外",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "半图是平民警告，不能变当前军事路线"
+      },
+      "temporal": {
+        "durationSeconds": 24,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她送的是平民警告而非确定的军事路线。",
+          "path": "固定在桌侧朝程野与阿荠，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持她送的是平民警告而非确定的军事路线的空间参照。理由：让观众读出她送的是平民警告而非确定的军事路线；不改变人物既定行动。",
+          "start": "机位固定于：桌侧朝程野与阿荠。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：桌侧朝程野与阿荠。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H003-01A-F1",
+            "timeSeconds": 0,
+            "description": "起焦程野举图的手"
+          }
+        ],
+        "edit": {
+          "entry": "程野已接阿荠半图，阿荠握药包，罗七未入。",
+          "exit": "程野持图，她已讲三天前离城。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "屋内风推破帘、衣料与炭笔擦纸，火盆只安全拟音；号令不可辨词，罗七确实出去听命后才回报；城外水边鹅鸭画外，不能盖住关键否定词。"
+        }
+      }
+    },
+    {
+      "shotId": "H003-01B",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "不把送图解释成双方已知进攻目的地。",
+        "audiencePayoff": "双方均未知目的地，送图只是见东行后试着送",
+        "trigger": "程野坦白不知道，她承认自己也猜，非暗中带路",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在沿桌侧原轴，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持不把送图解释成双方已知进攻目的地的空间参照。理由：让观众读出不把送图解释成双方已知进攻目的地；不改变人物既定行动。",
+        "exitMatch": "双方说明未知，门帘将被来者掀动。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "沿桌侧原轴。",
+        "height": "二人眼线高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "双方均未知目的地，送图只是见东行后试着送",
+        "focusTarget": "起焦程野回答的脸",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "磨屋桌—门轴靠磨盘侧；城外二人低伏轴南侧不对城内反打",
+        "movementIntent": "固定在沿桌侧原轴，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持不把送图解释成双方已知进攻目的地的空间参照。理由：让观众读出不把送图解释成双方已知进攻目的地；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "中景；沿桌侧原轴。高度：二人眼线高度。前景半图；中景程野阿荠；后景门帘。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；沿桌侧原轴。高度：二人眼线高度。前景半图；中景程野阿荠；后景门帘。保留行动方向的余地，不增加演员或道具。",
+        "midground": "图程野手、药包她手，门帘只因风动",
+        "background": "磨屋门帘与墙边磨盘；省略夜行后改远城闭门与雪，阿荠不出现在城外",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "双方均未知目的地，送图只是见东行后试着送"
+      },
+      "temporal": {
+        "durationSeconds": 18,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "不把送图解释成双方已知进攻目的地。",
+          "path": "固定在沿桌侧原轴，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持不把送图解释成双方已知进攻目的地的空间参照。理由：让观众读出不把送图解释成双方已知进攻目的地；不改变人物既定行动。",
+          "start": "机位固定于：沿桌侧原轴。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：沿桌侧原轴。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H003-01B-F1",
+            "timeSeconds": 0,
+            "description": "起焦程野回答的脸"
+          }
+        ],
+        "edit": {
+          "entry": "半图仍程野手，药包阿荠手。",
+          "exit": "双方说明未知，门帘将被来者掀动。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "屋内风推破帘、衣料与炭笔擦纸，火盆只安全拟音；号令不可辨词，罗七确实出去听命后才回报；城外水边鹅鸭画外，不能盖住关键否定词。"
+        }
+      }
+    },
+    {
+      "shotId": "H003-02A",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "先交物件再以其用途质疑，不空手对不存在地图争执。",
+        "audiencePayoff": "接图后质疑用途，冲突针对真实物件",
+        "trigger": "罗七入帘接稳后发问，她解释只认半城",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在门侧同轴朝交图，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持先交物件再以其用途质疑，不空手对不存在地图争执的空间参照。理由：让观众读出先交物件再以其用途质疑，不空手对不存在地图争执；不改变人物既定行动。",
+        "exitMatch": "图已归罗七，阿荠仍持药包。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "门侧同轴朝交图。",
+        "height": "罗七胸口高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "接图后质疑用途，冲突针对真实物件",
+        "focusTarget": "起焦门帘及刚入内的罗七",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "磨屋桌—门轴靠磨盘侧；城外二人低伏轴南侧不对城内反打",
+        "movementIntent": "固定在门侧同轴朝交图，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持先交物件再以其用途质疑，不空手对不存在地图争执的空间参照。理由：让观众读出先交物件再以其用途质疑，不空手对不存在地图争执；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "中景；门侧同轴朝交图。高度：罗七胸口高度。前景半图交接区；中景三人；后景磨盘。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；门侧同轴朝交图。高度：罗七胸口高度。前景半图交接区；中景三人；后景磨盘。保留行动方向的余地，不增加演员或道具。",
+        "midground": "程野交后空手，图由罗七唯一持有",
+        "background": "磨屋门帘与墙边磨盘；省略夜行后改远城闭门与雪，阿荠不出现在城外",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "接图后质疑用途，冲突针对真实物件"
+      },
+      "temporal": {
+        "durationSeconds": 22,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "先交物件再以其用途质疑，不空手对不存在地图争执。",
+          "path": "固定在门侧同轴朝交图，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持先交物件再以其用途质疑，不空手对不存在地图争执的空间参照。理由：让观众读出先交物件再以其用途质疑，不空手对不存在地图争执；不改变人物既定行动。",
+          "start": "机位固定于：门侧同轴朝交图。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：门侧同轴朝交图。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H003-02A-F1",
+            "timeSeconds": 0,
+            "description": "起焦门帘及刚入内的罗七"
+          }
+        ],
+        "edit": {
+          "entry": "罗七尚门外，程野持图。",
+          "exit": "图已归罗七，阿荠仍持药包。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "屋内风推破帘、衣料与炭笔擦纸，火盆只安全拟音；号令不可辨词，罗七确实出去听命后才回报；城外水边鹅鸭画外，不能盖住关键否定词。"
+        }
+      }
+    },
+    {
+      "shotId": "H003-02B",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她承认没法返城核实，拒绝被当现状证明。",
+        "audiencePayoff": "三日空白被承认，不能用图补出实时岗哨",
+        "trigger": "罗七追问，阿荠先答不知道再解释回不去",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在门侧原轴，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持她承认没法返城核实，拒绝被当现状证明的空间参照。理由：让观众读出她承认没法返城核实，拒绝被当现状证明；不改变人物既定行动。",
+        "exitMatch": "罗七开始把图角移向火盆。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "门侧原轴。",
+        "height": "罗七眼线高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "三日空白被承认，不能用图补出实时岗哨",
+        "focusTarget": "起焦两人问答的脸",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "磨屋桌—门轴靠磨盘侧；城外二人低伏轴南侧不对城内反打",
+        "movementIntent": "固定在门侧原轴，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持她承认没法返城核实，拒绝被当现状证明的空间参照。理由：让观众读出她承认没法返城核实，拒绝被当现状证明；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "中景；门侧原轴。高度：罗七眼线高度。前景罗七手中的图；中景罗七阿荠；后景程野与火盆方向。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；门侧原轴。高度：罗七眼线高度。前景罗七手中的图；中景罗七阿荠；后景程野与火盆方向。保留行动方向的余地，不增加演员或道具。",
+        "midground": "图未触盆，程野侧位可准备按住",
+        "background": "磨屋门帘与墙边磨盘；省略夜行后改远城闭门与雪，阿荠不出现在城外",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "三日空白被承认，不能用图补出实时岗哨"
+      },
+      "temporal": {
+        "durationSeconds": 12,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她承认没法返城核实，拒绝被当现状证明。",
+          "path": "固定在门侧原轴，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持她承认没法返城核实，拒绝被当现状证明的空间参照。理由：让观众读出她承认没法返城核实，拒绝被当现状证明；不改变人物既定行动。",
+          "start": "机位固定于：门侧原轴。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：门侧原轴。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H003-02B-F1",
+            "timeSeconds": 0,
+            "description": "起焦两人问答的脸"
+          }
+        ],
+        "edit": {
+          "entry": "罗七持图尚未靠火。",
+          "exit": "罗七开始把图角移向火盆。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "屋内风推破帘、衣料与炭笔擦纸，火盆只安全拟音；号令不可辨词，罗七确实出去听命后才回报；城外水边鹅鸭画外，不能盖住关键否定词。"
+        }
+      }
+    },
+    {
+      "shotId": "H003-03A",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "保留未确认警告不是把它变成真军事图。",
+        "audiencePayoff": "程野阻毁证据不是宣布图可靠",
+        "trigger": "罗七嫌不能引路欲烧，程野按住后才反驳住户线索价值",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在桌侧斜俯看图角与按手，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持保留未确认警告不是把它变成真军事图的空间参照。理由：让观众读出保留未确认警告不是把它变成真军事图；不改变人物既定行动。",
+        "exitMatch": "程野按住图角，图未烧，罗七准备收回。"
+      },
+      "camera": {
+        "shotScale": "近中景",
+        "position": "桌侧斜俯看图角与按手。",
+        "height": "高于图纸平面，斜俯火盆外沿",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "程野阻毁证据不是宣布图可靠",
+        "focusTarget": "起焦图角与程野将按下的手",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "磨屋桌—门轴靠磨盘侧；城外二人低伏轴南侧不对城内反打",
+        "movementIntent": "固定在桌侧斜俯看图角与按手，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持保留未确认警告不是把它变成真军事图的空间参照。理由：让观众读出保留未确认警告不是把它变成真军事图；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "近中景；桌侧斜俯看图角与按手。高度：高于图纸平面，斜俯火盆外沿。前景未着火图角；中景两人双手和半身；后景火盆边及阿荠。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "近中景；桌侧斜俯看图角与按手。高度：高于图纸平面，斜俯火盆外沿。前景未着火图角；中景两人双手和半身；后景火盆边及阿荠。保留行动方向的余地，不增加演员或道具。",
+        "midground": "图角按住未燃，盆与手有安全间隔，不真火接触",
+        "background": "磨屋门帘与墙边磨盘；省略夜行后改远城闭门与雪，阿荠不出现在城外",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "程野阻毁证据不是宣布图可靠"
+      },
+      "temporal": {
+        "durationSeconds": 21,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "保留未确认警告不是把它变成真军事图。",
+          "path": "固定在桌侧斜俯看图角与按手，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持保留未确认警告不是把它变成真军事图的空间参照。理由：让观众读出保留未确认警告不是把它变成真军事图；不改变人物既定行动。",
+          "start": "机位固定于：桌侧斜俯看图角与按手。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：桌侧斜俯看图角与按手。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H003-03A-F1",
+            "timeSeconds": 0,
+            "description": "起焦图角与程野将按下的手"
+          }
+        ],
+        "edit": {
+          "entry": "图仍罗七持着接近火，程野空手。",
+          "exit": "程野按住图角，图未烧，罗七准备收回。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "屋内风推破帘、衣料与炭笔擦纸，火盆只安全拟音；号令不可辨词，罗七确实出去听命后才回报；城外水边鹅鸭画外，不能盖住关键否定词。"
+        }
+      }
+    },
+    {
+      "shotId": "H003-03B",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "把现状未经核实写进记录，同时尊重证人纠正。",
+        "audiencePayoff": "曾有修字尊重证人界限，记录不是采信证明",
+        "trigger": "阿荠看到有住户才纠正，程野随即改字",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在桌边斜俯看完整纸面与笔，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持把现状未经核实写进记录，同时尊重证人纠正的空间参照。理由：让观众读出把现状未经核实写进记录，同时尊重证人纠正；不改变人物既定行动。",
+        "exitMatch": "图改完回罗七怀，笔归罗七，阿荠仍握药包。"
+      },
+      "camera": {
+        "shotScale": "近景",
+        "position": "桌边斜俯看完整纸面与笔。",
+        "height": "高于桌面，斜俯书写平面",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "曾有修字尊重证人界限，记录不是采信证明",
+        "focusTarget": "起焦尚未注字的图背",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "磨屋桌—门轴靠磨盘侧；城外二人低伏轴南侧不对城内反打",
+        "movementIntent": "固定在桌边斜俯看完整纸面与笔，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持把现状未经核实写进记录，同时尊重证人纠正的空间参照。理由：让观众读出把现状未经核实写进记录，同时尊重证人纠正；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "近景；桌边斜俯看完整纸面与笔。高度：高于桌面，斜俯书写平面。前景炭图背面和笔；中景程野写字与罗七递笔手；后景阿荠上身在画外侧。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "近景；桌边斜俯看完整纸面与笔。高度：高于桌面，斜俯书写平面。前景炭图背面和笔；中景程野写字与罗七递笔手；后景阿荠上身在画外侧。保留行动方向的余地，不增加演员或道具。",
+        "midground": "罗七先收回铺桌递笔，程野写后还笔，罗七收图",
+        "background": "磨屋门帘与墙边磨盘；省略夜行后改远城闭门与雪，阿荠不出现在城外",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "曾有修字尊重证人界限，记录不是采信证明"
+      },
+      "temporal": {
+        "durationSeconds": 35,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "把现状未经核实写进记录，同时尊重证人纠正。",
+          "path": "固定在桌边斜俯看完整纸面与笔，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持把现状未经核实写进记录，同时尊重证人纠正的空间参照。理由：让观众读出把现状未经核实写进记录，同时尊重证人纠正；不改变人物既定行动。",
+          "start": "机位固定于：桌边斜俯看完整纸面与笔。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：桌边斜俯看完整纸面与笔。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H003-03B-F1",
+            "timeSeconds": 0,
+            "description": "起焦尚未注字的图背"
+          }
+        ],
+        "edit": {
+          "entry": "图按住未烧，罗七持图和笔尚未递。",
+          "exit": "图改完回罗七怀，笔归罗七，阿荠仍握药包。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "屋内风推破帘、衣料与炭笔擦纸，火盆只安全拟音；号令不可辨词，罗七确实出去听命后才回报；城外水边鹅鸭画外，不能盖住关键否定词。"
+        }
+      }
+    },
+    {
+      "shotId": "H003-04A",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "送图代价是仍需留下接受核问，不给安全承诺。",
+        "audiencePayoff": "留下核问是送图的代价，不给巷安全假保证",
+        "trigger": "罗七先说明上报与限制，她才说想回去，他拒绝",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在桌侧原轴朝门，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持送图代价是仍需留下接受核问，不给安全承诺的空间参照。理由：让观众读出送图代价是仍需留下接受核问，不给安全承诺；不改变人物既定行动。",
+        "exitMatch": "阿荠仍留屋，门外号令刚到。"
+      },
+      "camera": {
+        "shotScale": "三人中景",
+        "position": "桌侧原轴朝门。",
+        "height": "罗七胸口高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "留下核问是送图的代价，不给巷安全假保证",
+        "focusTarget": "起焦罗七说明限制的脸",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "磨屋桌—门轴靠磨盘侧；城外二人低伏轴南侧不对城内反打",
+        "movementIntent": "固定在桌侧原轴朝门，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持送图代价是仍需留下接受核问，不给安全承诺的空间参照。理由：让观众读出送图代价是仍需留下接受核问，不给安全承诺；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "三人中景；桌侧原轴朝门。高度：罗七胸口高度。前景药包；中景三人；后景门帘。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "三人中景；桌侧原轴朝门。高度：罗七胸口高度。前景药包；中景三人；后景门帘。保留行动方向的余地，不增加演员或道具。",
+        "midground": "图笔已收，阿荠握药包留屋，没有一边走一边被留",
+        "background": "磨屋门帘与墙边磨盘；省略夜行后改远城闭门与雪，阿荠不出现在城外",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "留下核问是送图的代价，不给巷安全假保证"
+      },
+      "temporal": {
+        "durationSeconds": 23,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "送图代价是仍需留下接受核问，不给安全承诺。",
+          "path": "固定在桌侧原轴朝门，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持送图代价是仍需留下接受核问，不给安全承诺的空间参照。理由：让观众读出送图代价是仍需留下接受核问，不给安全承诺；不改变人物既定行动。",
+          "start": "机位固定于：桌侧原轴朝门。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：桌侧原轴朝门。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H003-04A-F1",
+            "timeSeconds": 0,
+            "description": "起焦罗七说明限制的脸"
+          }
+        ],
+        "edit": {
+          "entry": "图已罗七怀中，笔收好，阿荠握药包。",
+          "exit": "阿荠仍留屋，门外号令刚到。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "屋内风推破帘、衣料与炭笔擦纸，火盆只安全拟音；号令不可辨词，罗七确实出去听命后才回报；城外水边鹅鸭画外，不能盖住关键否定词。"
+        }
+      }
+    },
+    {
+      "shotId": "H003-04B",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "只有听命后才知道目的地，不倒灌早段认知。",
+        "audiencePayoff": "实际听命后才知道入蔡州，未倒灌早段",
+        "trigger": "罗七出去听后返回门边说，她望图离开方向强调日期",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在屋内朝门口固定，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持只有听命后才知道目的地，不倒灌早段认知的空间参照。理由：让观众读出只有听命后才知道目的地，不倒灌早段认知；不改变人物既定行动。",
+        "exitMatch": "罗七回门边宣布，阿荠强调别改成今天。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "屋内朝门口固定。",
+        "height": "罗七胸口高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "实际听命后才知道入蔡州，未倒灌早段",
+        "focusTarget": "起焦暂空的门口",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "磨屋桌—门轴靠磨盘侧；城外二人低伏轴南侧不对城内反打",
+        "movementIntent": "固定在屋内朝门口固定，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持只有听命后才知道目的地，不倒灌早段认知的空间参照。理由：让观众读出只有听命后才知道目的地，不倒灌早段认知；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "中景；屋内朝门口固定。高度：罗七胸口高度。前景门帘；中景罗七返回门边、阿荠；后景程野与桌。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；屋内朝门口固定。高度：罗七胸口高度。前景门帘；中景罗七返回门边、阿荠；后景程野与桌。保留行动方向的余地，不增加演员或道具。",
+        "midground": "原图怀内不随号令交出，程野看阿荠不替她答",
+        "background": "磨屋门帘与墙边磨盘；省略夜行后改远城闭门与雪，阿荠不出现在城外",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "实际听命后才知道入蔡州，未倒灌早段"
+      },
+      "temporal": {
+        "durationSeconds": 14,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "只有听命后才知道目的地，不倒灌早段认知。",
+          "path": "固定在屋内朝门口固定，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持只有听命后才知道目的地，不倒灌早段认知的空间参照。理由：让观众读出只有听命后才知道目的地，不倒灌早段认知；不改变人物既定行动。",
+          "start": "机位固定于：屋内朝门口固定。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：屋内朝门口固定。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H003-04B-F1",
+            "timeSeconds": 0,
+            "description": "起焦暂空的门口"
+          }
+        ],
+        "edit": {
+          "entry": "号令已响，罗七将出去听命，原图衣内。",
+          "exit": "罗七回门边宣布，阿荠强调别改成今天。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "屋内风推破帘、衣料与炭笔擦纸，火盆只安全拟音；号令不可辨词，罗七确实出去听命后才回报；城外水边鹅鸭画外，不能盖住关键否定词。"
+        }
+      }
+    },
+    {
+      "shotId": "H003-04C",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "实际交出食物但不能替她脱离拘留困境。",
+        "audiencePayoff": "半粮实际交付却不解决拘留，保留小帮助尺度",
+        "trigger": "程野掰半递，她以空手接，未把药包换手作戏",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在桌侧固定含门口路线，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持实际交出食物但不能替她脱离拘留困境的空间参照。理由：让观众读出实际交出食物但不能替她脱离拘留困境；不改变人物既定行动。",
+        "exitMatch": "她持药包和半粮留屋，程野另一半收好随罗离开。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "桌侧固定含门口路线。",
+        "height": "程野胸口高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "半粮实际交付却不解决拘留，保留小帮助尺度",
+        "focusTarget": "起焦尚在程野手里的整份干粮",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "磨屋桌—门轴靠磨盘侧；城外二人低伏轴南侧不对城内反打",
+        "movementIntent": "固定在桌侧固定含门口路线，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持实际交出食物但不能替她脱离拘留困境的空间参照。理由：让观众读出实际交出食物但不能替她脱离拘留困境；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "中景；桌侧固定含门口路线。高度：程野胸口高度。前景干粮分半的手；中景程野阿荠；后景罗七门口。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；桌侧固定含门口路线。高度：程野胸口高度。前景干粮分半的手；中景程野阿荠；后景罗七门口。保留行动方向的余地，不增加演员或道具。",
+        "midground": "她一手药一手粮，程野余半收好才随罗出",
+        "background": "磨屋门帘与墙边磨盘；省略夜行后改远城闭门与雪，阿荠不出现在城外",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "半粮实际交付却不解决拘留，保留小帮助尺度"
+      },
+      "temporal": {
+        "durationSeconds": 13,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "实际交出食物但不能替她脱离拘留困境。",
+          "path": "固定在桌侧固定含门口路线，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持实际交出食物但不能替她脱离拘留困境的空间参照。理由：让观众读出实际交出食物但不能替她脱离拘留困境；不改变人物既定行动。",
+          "start": "机位固定于：桌侧固定含门口路线。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：桌侧固定含门口路线。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H003-04C-F1",
+            "timeSeconds": 0,
+            "description": "起焦尚在程野手里的整份干粮"
+          }
+        ],
+        "edit": {
+          "entry": "阿荠一手握药包另手空；程野未分粮。",
+          "exit": "她持药包和半粮留屋，程野另一半收好随罗离开。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "屋内风推破帘、衣料与炭笔擦纸，火盆只安全拟音；号令不可辨词，罗七确实出去听命后才回报；城外水边鹅鸭画外，不能盖住关键否定词。"
+        }
+      }
+    },
+    {
+      "shotId": "H003-05A",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "口头上报不等于采信，更不是按此图行军。",
+        "audiencePayoff": "口头报图不是军队采用，原件仍罗七拿",
+        "trigger": "抵城外后罗七取图展示背注再说明，程野听",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在城外低伏二人同侧朝图背，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持口头上报不等于采信，更不是按此图行军的空间参照。理由：让观众读出口头上报不等于采信，更不是按此图行军；不改变人物既定行动。",
+        "exitMatch": "罗七持图，程野还未吃余半粮。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "城外低伏二人同侧朝图背。",
+        "height": "蹲伏人物胸口高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "口头报图不是军队采用，原件仍罗七拿",
+        "focusTarget": "起焦罗七取图的手",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "磨屋桌—门轴靠磨盘侧；城外二人低伏轴南侧不对城内反打",
+        "movementIntent": "固定在城外低伏二人同侧朝图背，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持口头上报不等于采信，更不是按此图行军的空间参照。理由：让观众读出口头上报不等于采信，更不是按此图行军；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "中景；城外低伏二人同侧朝图背。高度：蹲伏人物胸口高度。前景从怀中取出的图背；中景罗七程野；后景雪中远墙。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；城外低伏二人同侧朝图背。高度：蹲伏人物胸口高度。前景从怀中取出的图背；中景罗七程野；后景雪中远墙。保留行动方向的余地，不增加演员或道具。",
+        "midground": "同一原图裂边与注记，程野余半粮仍随身未吃",
+        "background": "磨屋门帘与墙边磨盘；省略夜行后改远城闭门与雪，阿荠不出现在城外",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "口头报图不是军队采用，原件仍罗七拿"
+      },
+      "temporal": {
+        "durationSeconds": 20,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "口头上报不等于采信，更不是按此图行军。",
+          "path": "固定在城外低伏二人同侧朝图背，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持口头上报不等于采信，更不是按此图行军的空间参照。理由：让观众读出口头上报不等于采信，更不是按此图行军；不改变人物既定行动。",
+          "start": "机位固定于：城外低伏二人同侧朝图背。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：城外低伏二人同侧朝图背。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H003-05A-F1",
+            "timeSeconds": 0,
+            "description": "起焦罗七取图的手"
+          }
+        ],
+        "edit": {
+          "entry": "跳过行军至城外；罗七仍携原图，程野余粮随身，阿荠不在此场。",
+          "exit": "罗七持图，程野还未吃余半粮。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "屋内风推破帘、衣料与炭笔擦纸，火盆只安全拟音；号令不可辨词，罗七确实出去听命后才回报；城外水边鹅鸭画外，不能盖住关键否定词。"
+        }
+      }
+    },
+    {
+      "shotId": "H003-05B",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "具体代价在肚饿与母亲去向未知之间并存。",
+        "audiencePayoff": "饥饿与她能否回去并存，不把分粮写成英雄奖赏",
+        "trigger": "程野吃余半后按腹才问，鹅鸭不盖问句",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在低伏原轴侧面，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持具体代价在肚饿与母亲去向未知之间并存的空间参照。理由：让观众读出具体代价在肚饿与母亲去向未知之间并存；不改变人物既定行动。",
+        "exitMatch": "粮已吃完，程野按空腹等答。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "低伏原轴侧面。",
+        "height": "蹲伏程野胸口高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "饥饿与她能否回去并存，不把分粮写成英雄奖赏",
+        "focusTarget": "起焦程野取粮的手",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "磨屋桌—门轴靠磨盘侧；城外二人低伏轴南侧不对城内反打",
+        "movementIntent": "固定在低伏原轴侧面，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持具体代价在肚饿与母亲去向未知之间并存的空间参照。理由：让观众读出具体代价在肚饿与母亲去向未知之间并存；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "中景；低伏原轴侧面。高度：蹲伏程野胸口高度。前景余下半粮；中景二人；后景远墙雪。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；低伏原轴侧面。高度：蹲伏程野胸口高度。前景余下半粮；中景二人；后景远墙雪。保留行动方向的余地，不增加演员或道具。",
+        "midground": "余半确实入口吃完，罗七持图双手不变",
+        "background": "磨屋门帘与墙边磨盘；省略夜行后改远城闭门与雪，阿荠不出现在城外",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "饥饿与她能否回去并存，不把分粮写成英雄奖赏"
+      },
+      "temporal": {
+        "durationSeconds": 13,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "具体代价在肚饿与母亲去向未知之间并存。",
+          "path": "固定在低伏原轴侧面，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持具体代价在肚饿与母亲去向未知之间并存的空间参照。理由：让观众读出具体代价在肚饿与母亲去向未知之间并存；不改变人物既定行动。",
+          "start": "机位固定于：低伏原轴侧面。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：低伏原轴侧面。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H003-05B-F1",
+            "timeSeconds": 0,
+            "description": "起焦程野取粮的手"
+          }
+        ],
+        "edit": {
+          "entry": "罗七持图，程野余半粮未吃。",
+          "exit": "粮已吃完，程野按空腹等答。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "屋内风推破帘、衣料与炭笔擦纸，火盆只安全拟音；号令不可辨词，罗七确实出去听命后才回报；城外水边鹅鸭画外，不能盖住关键否定词。"
+        }
+      }
+    },
+    {
+      "shotId": "H003-06A",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "仍未知道母亲位置，不拿意愿冒充救援承诺。",
+        "audiencePayoff": "愿望与承诺分开，母亲位置未知保持到结尾",
+        "trigger": "罗七答不知道后程野说想去，罗七要求先跟队",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在低伏侧面原轴朝二人，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持仍未知道母亲位置，不拿意愿冒充救援承诺的空间参照。理由：让观众读出仍未知道母亲位置，不拿意愿冒充救援承诺；不改变人物既定行动。",
+        "exitMatch": "罗七准备收图，程野听完先跟队。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "低伏侧面原轴朝二人。",
+        "height": "蹲伏两人眼线高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "愿望与承诺分开，母亲位置未知保持到结尾",
+        "focusTarget": "起焦罗七回答的脸",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "磨屋桌—门轴靠磨盘侧；城外二人低伏轴南侧不对城内反打",
+        "movementIntent": "固定在低伏侧面原轴朝二人，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持仍未知道母亲位置，不拿意愿冒充救援承诺的空间参照。理由：让观众读出仍未知道母亲位置，不拿意愿冒充救援承诺；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "中景；低伏侧面原轴朝二人。高度：蹲伏两人眼线高度。前景罗七手中图；中景二人；后景远城墙。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；低伏侧面原轴朝二人。高度：蹲伏两人眼线高度。前景罗七手中图；中景二人；后景远城墙。保留行动方向的余地，不增加演员或道具。",
+        "midground": "图仍罗七手，二人低伏，视线远城不等于看到巷",
+        "background": "磨屋门帘与墙边磨盘；省略夜行后改远城闭门与雪，阿荠不出现在城外",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "愿望与承诺分开，母亲位置未知保持到结尾"
+      },
+      "temporal": {
+        "durationSeconds": 18,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "仍未知道母亲位置，不拿意愿冒充救援承诺。",
+          "path": "固定在低伏侧面原轴朝二人，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持仍未知道母亲位置，不拿意愿冒充救援承诺的空间参照。理由：让观众读出仍未知道母亲位置，不拿意愿冒充救援承诺；不改变人物既定行动。",
+          "start": "机位固定于：低伏侧面原轴朝二人。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：低伏侧面原轴朝二人。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H003-06A-F1",
+            "timeSeconds": 0,
+            "description": "起焦罗七回答的脸"
+          }
+        ],
+        "edit": {
+          "entry": "程野已问，罗七持图。",
+          "exit": "罗七准备收图，程野听完先跟队。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "屋内风推破帘、衣料与炭笔擦纸，火盆只安全拟音；号令不可辨词，罗七确实出去听命后才回报；城外水边鹅鸭画外，不能盖住关键否定词。"
+        }
+      }
+    },
+    {
+      "shotId": "H003-06B",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "离开画面不补造破城或母女获救。",
+        "audiencePayoff": "离画不补破城或母女获救，纸只被保留下来",
+        "trigger": "罗七先收图再二人起身，动作完成便停",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在城外同侧固定含两人全身，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持离开画面不补造破城或母女获救的空间参照。理由：让观众读出离开画面不补造破城或母女获救；不改变人物既定行动。",
+        "exitMatch": "图回罗七怀，二人起身；城门未开。"
+      },
+      "camera": {
+        "shotScale": "中全景",
+        "position": "城外同侧固定含两人全身。",
+        "height": "蹲伏人物胸口高度，起身后仍全身在框",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "perspectiveIntent": "离画不补破城或母女获救，纸只被保留下来",
+        "focusTarget": "起焦收图与起身动作",
+        "depthOfField": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "axisSide": "磨屋桌—门轴靠磨盘侧；城外二人低伏轴南侧不对城内反打",
+        "movementIntent": "固定在城外同侧固定含两人全身，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持离开画面不补造破城或母女获救的空间参照。理由：让观众读出离开画面不补造破城或母女获救；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "中全景；城外同侧固定含两人全身。高度：蹲伏人物胸口高度，起身后仍全身在框。前景罗七怀前收图手；中景两人从低伏起身；后景没有打开的远城门。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中全景；城外同侧固定含两人全身。高度：蹲伏人物胸口高度，起身后仍全身在框。前景罗七怀前收图手；中景两人从低伏起身；后景没有打开的远城门。保留行动方向的余地，不增加演员或道具。",
+        "midground": "怀内收同图，程野粮已空；城门一直闭",
+        "background": "磨屋门帘与墙边磨盘；省略夜行后改远城闭门与雪，阿荠不出现在城外",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "离画不补破城或母女获救，纸只被保留下来"
+      },
+      "temporal": {
+        "durationSeconds": 7,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "离开画面不补造破城或母女获救。",
+          "path": "固定在城外同侧固定含两人全身，让本镜问题/声音/动作先于对应回应触发人物而非相机移动，保持离开画面不补造破城或母女获救的空间参照。理由：让观众读出离开画面不补造破城或母女获救；不改变人物既定行动。",
+          "start": "机位固定于：城外同侧固定含两人全身。",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：城外同侧固定含两人全身。",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "H003-06B-F1",
+            "timeSeconds": 0,
+            "description": "起焦收图与起身动作"
+          }
+        ],
+        "edit": {
+          "entry": "罗七仍持图，二人低伏。",
+          "exit": "图回罗七怀，二人起身；城门未开。",
+          "preferredTransition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+          "soundBridge": "屋内风推破帘、衣料与炭笔擦纸，火盆只安全拟音；号令不可辨词，罗七确实出去听命后才回报；城外水边鹅鸭画外，不能盖住关键否定词。"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "case": "A01",
+  "status": "completed",
+  "model": null,
+  "tokens": null,
+  "end_to_end_seconds": null,
+  "request_read": "request.txt",
+  "skill_entry": "snapshot/skills/cineweave-director/SKILL.md",
+  "resource_reads": [
+    {
+      "mode": "file",
+      "path": "SKILL.md",
+      "scope": "full",
+      "result": "complete"
+    },
+    {
+      "mode": "file",
+      "path": "references/routes/image-prompt.md",
+      "scope": "full",
+      "result": "complete"
+    },
+    {
+      "mode": "file",
+      "path": "references/optional/prompt-detail-standard.md",
+      "heading": "表达原则",
+      "result": "complete"
+    },
+    {
+      "mode": "file",
+      "path": "references/optional/prompt-detail-standard.md",
+      "heading": "人物",
+      "result": "complete; includes child headings and example returned by heading extraction"
+    },
+    {
+      "mode": "file",
+      "path": "references/optional/prompt-detail-standard.md",
+      "heading": "场景",
+      "result": "complete"
+    }
+  ],
+  "read_method": "Every Skill resource read used measure-resource-load.mjs file mode; each call returned its own full output.",
+  "tool_failures": [],
+  "observed_truncations": [],
+  "limits": [
+    "No media generated or inspected.",
+    "No other case, report, historical answer, memory or repository files read.",
+    "No external historical research; original face and costume structure described without claiming archaeological reconstruction.",
+    "Exact title is a prompt requirement and has not been verified in generated media.",
+    "Model, token count and end-to-end elapsed time are unknown."
+  ],
+  "delegation": false,
+  "output": "output.md",
+  "self_scoring": false
+}

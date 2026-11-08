@@ -1,0 +1,126 @@
+{
+  "format": "cineweave-project-workflow/v1",
+  "canonical": false,
+  "projectId": "fixture.river-letter",
+  "frameRate": { "numerator": 24, "denominator": 1 },
+  "declaredEpisodeIds": ["EP01", "EP02"],
+  "episodes": [
+    {
+      "id": "EP01",
+      "purpose": "原创结构夹具：少年信使在渡口把信交给守渡人，骤雨使外衣浸湿。",
+      "entryState": "信在少年右手，二人分处柜台两侧，外衣尚干。",
+      "exitState": "守渡人左手接稳信，少年外衣被骤雨浸湿。",
+      "source": { "path": "fixture:original/EP01-script.md", "revision": 1 },
+      "scenes": [{ "id": "EP01.SC01", "shotIds": ["EP01.SC01.S01", "EP01.SC01.S02", "EP01.SC01.S03"] }]
+    },
+    {
+      "id": "EP02",
+      "purpose": "原创结构夹具：多年后，成年信使穿雨披返回渡口；进屋脱下雨披，守渡人把原信交还。",
+      "entryState": "成年信使空手入场，信由守渡人保管。",
+      "exitState": "成年信使左手持信，守渡人松手；返还动作在相邻镜头间继续。",
+      "source": { "path": "fixture:original/EP02-script.md", "revision": 2 },
+      "scenes": [{ "id": "EP02.SC01", "shotIds": ["EP02.SC01.S01", "EP02.SC01.S02"] }]
+    }
+  ],
+  "characters": [
+    { "id": "courier", "identityAssetId": "identity.courier", "periods": [
+      { "id": "teen", "episodeIds": ["EP01"] },
+      { "id": "adult", "episodeIds": ["EP02"] }
+    ] },
+    { "id": "keeper", "identityAssetId": "identity.keeper", "periods": [
+      { "id": "middle", "episodeIds": ["EP01"] },
+      { "id": "older", "episodeIds": ["EP02"] }
+    ] }
+  ],
+  "appearances": [
+    { "id": "appearance.courier.teen.dry", "characterId": "courier", "periodId": "teen", "episodeIds": ["EP01"], "sceneIds": ["EP01.SC01"], "shotIds": ["EP01.SC01.S01", "EP01.SC01.S02"] },
+    { "id": "appearance.courier.teen.wet", "characterId": "courier", "periodId": "teen", "episodeIds": ["EP01"], "sceneIds": ["EP01.SC01"], "shotIds": ["EP01.SC01.S03"] },
+    { "id": "appearance.courier.adult", "characterId": "courier", "periodId": "adult", "episodeIds": ["EP02"], "sceneIds": ["EP02.SC01"] },
+    { "id": "appearance.courier.adult.raincoat", "characterId": "courier", "periodId": "adult", "episodeIds": ["EP02"], "sceneIds": ["EP02.SC01"], "shotIds": ["EP02.SC01.S01", "EP02.SC01.S02"] },
+    { "id": "appearance.keeper.middle", "characterId": "keeper", "periodId": "middle", "episodeIds": ["EP01"], "sceneIds": ["EP01.SC01"] },
+    { "id": "appearance.keeper.older", "characterId": "keeper", "periodId": "older", "episodeIds": ["EP02"], "sceneIds": ["EP02.SC01"] }
+  ],
+  "assets": [
+    { "id": "identity.courier", "revision": 1, "role": "identity" },
+    { "id": "identity.keeper", "revision": 1, "role": "identity" },
+    { "id": "appearance.courier.teen.dry", "revision": 1, "role": "appearance" },
+    { "id": "appearance.courier.teen.wet", "revision": 1, "role": "appearance" },
+    { "id": "appearance.courier.adult", "revision": 2, "role": "appearance" },
+    { "id": "appearance.courier.adult.raincoat", "revision": 1, "role": "appearance" },
+    { "id": "appearance.keeper.middle", "revision": 1, "role": "appearance" },
+    { "id": "appearance.keeper.older", "revision": 1, "role": "appearance" },
+    { "id": "prop.letter", "revision": 1, "role": "prop" },
+    { "id": "scene.ferry", "revision": 1, "role": "scene" }
+  ],
+  "shots": [
+    { "id": "EP01.SC01.S01", "revision": 1, "episodeId": "EP01", "sceneId": "EP01.SC01", "characters": [
+      { "characterId": "courier", "periodId": "teen", "appearanceId": "appearance.courier.teen.dry" },
+      { "characterId": "keeper", "periodId": "middle", "appearanceId": "appearance.keeper.middle" }
+    ], "assets": [
+      { "assetId": "identity.courier", "revision": 1 }, { "assetId": "identity.keeper", "revision": 1 },
+      { "assetId": "appearance.courier.teen.dry", "revision": 1 }, { "assetId": "appearance.keeper.middle", "revision": 1 },
+      { "assetId": "prop.letter", "revision": 1 }, { "assetId": "scene.ferry", "revision": 1 }
+    ] },
+    { "id": "EP01.SC01.S02", "revision": 1, "episodeId": "EP01", "sceneId": "EP01.SC01", "characters": [
+      { "characterId": "courier", "periodId": "teen", "appearanceId": "appearance.courier.teen.dry" },
+      { "characterId": "keeper", "periodId": "middle", "appearanceId": "appearance.keeper.middle" }
+    ], "assets": [
+      { "assetId": "identity.courier", "revision": 1 }, { "assetId": "identity.keeper", "revision": 1 },
+      { "assetId": "appearance.courier.teen.dry", "revision": 1 }, { "assetId": "appearance.keeper.middle", "revision": 1 },
+      { "assetId": "prop.letter", "revision": 1 }, { "assetId": "scene.ferry", "revision": 1 }
+    ] },
+    { "id": "EP01.SC01.S03", "revision": 1, "episodeId": "EP01", "sceneId": "EP01.SC01", "characters": [
+      { "characterId": "courier", "periodId": "teen", "appearanceId": "appearance.courier.teen.wet" },
+      { "characterId": "keeper", "periodId": "middle", "appearanceId": "appearance.keeper.middle" }
+    ], "assets": [
+      { "assetId": "identity.courier", "revision": 1 }, { "assetId": "identity.keeper", "revision": 1 },
+      { "assetId": "appearance.courier.teen.wet", "revision": 1 }, { "assetId": "appearance.keeper.middle", "revision": 1 },
+      { "assetId": "prop.letter", "revision": 1 }, { "assetId": "scene.ferry", "revision": 1 }
+    ] },
+    { "id": "EP02.SC01.S01", "revision": 2, "episodeId": "EP02", "sceneId": "EP02.SC01", "characters": [
+      { "characterId": "courier", "periodId": "adult", "appearanceId": "appearance.courier.adult.raincoat" },
+      { "characterId": "keeper", "periodId": "older", "appearanceId": "appearance.keeper.older" }
+    ], "assets": [
+      { "assetId": "identity.courier", "revision": 1 }, { "assetId": "identity.keeper", "revision": 1 },
+      { "assetId": "appearance.courier.adult.raincoat", "revision": 1 }, { "assetId": "appearance.keeper.older", "revision": 1 },
+      { "assetId": "prop.letter", "revision": 1 }, { "assetId": "scene.ferry", "revision": 1 }
+    ] },
+    { "id": "EP02.SC01.S02", "revision": 2, "episodeId": "EP02", "sceneId": "EP02.SC01", "characters": [
+      { "characterId": "courier", "periodId": "adult", "appearanceId": "appearance.courier.adult.raincoat", "appearanceChanges": [
+        { "appearanceId": "appearance.courier.adult", "trigger": "走入有顶的渡口屋后解开雨披并挂上门旁木钩，显露里面的室内衣着，再伸手接信。" }
+      ] },
+      { "characterId": "keeper", "periodId": "older", "appearanceId": "appearance.keeper.older" }
+    ], "assets": [
+      { "assetId": "identity.courier", "revision": 1 }, { "assetId": "identity.keeper", "revision": 1 },
+      { "assetId": "appearance.courier.adult.raincoat", "revision": 1 },
+      { "assetId": "appearance.courier.adult", "revision": 2 }, { "assetId": "appearance.keeper.older", "revision": 1 },
+      { "assetId": "prop.letter", "revision": 1 }, { "assetId": "scene.ferry", "revision": 1 }
+    ] }
+  ],
+  "previsGroups": [
+    { "id": "PREVIS.EP01", "shotIds": ["EP01.SC01.S01", "EP01.SC01.S02", "EP01.SC01.S03"], "frames": [
+      { "frameId": "F01", "shotId": "EP01.SC01.S01" }, { "frameId": "F02", "shotId": "EP01.SC01.S02" }, { "frameId": "F03", "shotId": "EP01.SC01.S03" }
+    ], "status": "planned", "media": null },
+    { "id": "PREVIS.EP02", "shotIds": ["EP02.SC01.S01", "EP02.SC01.S02"], "frames": [
+      { "frameId": "F01", "shotId": "EP02.SC01.S01" }, { "frameId": "F02", "shotId": "EP02.SC01.S01" }, { "frameId": "F03", "shotId": "EP02.SC01.S02" }
+    ], "status": "returned", "media": { "locator": "fixture:simulated/EP02-board.png" } }
+  ],
+  "candidates": [
+    { "id": "TAKE.EP02.S01", "shotId": "EP02.SC01.S01", "inputRevision": 2, "assetInputs": [
+      { "assetId": "identity.courier", "revision": 1 }, { "assetId": "identity.keeper", "revision": 1 },
+      { "assetId": "appearance.courier.adult.raincoat", "revision": 1 }, { "assetId": "appearance.keeper.older", "revision": 1 },
+      { "assetId": "prop.letter", "revision": 1 }, { "assetId": "scene.ferry", "revision": 1 }
+    ], "media": { "locator": "fixture:simulated/EP02-S01-take01.mp4", "totalFrames": 144 }, "adopted": true, "adoptedWindow": { "startFrame": 12, "endFrame": 132 } },
+    { "id": "TAKE.EP02.S02.OLD", "shotId": "EP02.SC01.S02", "inputRevision": 1, "assetInputs": [
+      { "assetId": "identity.courier", "revision": 1 }, { "assetId": "identity.keeper", "revision": 1 },
+      { "assetId": "appearance.courier.adult", "revision": 1 }, { "assetId": "appearance.keeper.older", "revision": 1 },
+      { "assetId": "prop.letter", "revision": 1 }, { "assetId": "scene.ferry", "revision": 1 }
+    ], "media": { "locator": "fixture:simulated/EP02-S02-old.mp4", "totalFrames": 144 }, "adopted": false, "adoptedWindow": null },
+    { "id": "TAKE.EP01.S01.PLAN", "shotId": "EP01.SC01.S01", "inputRevision": 1, "assetInputs": [
+      { "assetId": "identity.courier", "revision": 1 }, { "assetId": "identity.keeper", "revision": 1 },
+      { "assetId": "appearance.courier.teen.dry", "revision": 1 }, { "assetId": "appearance.keeper.middle", "revision": 1 },
+      { "assetId": "prop.letter", "revision": 1 }, { "assetId": "scene.ferry", "revision": 1 }
+    ], "media": null, "adopted": false, "adoptedWindow": null }
+  ],
+  "claims": { "allEpisodesExpanded": true, "mediaComplete": false }
+}

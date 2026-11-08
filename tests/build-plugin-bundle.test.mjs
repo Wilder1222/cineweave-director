@@ -4,6 +4,7 @@ import { mkdir, mkdtemp, readFile, rm, symlink, writeFile } from "node:fs/promis
 import { tmpdir } from "node:os";
 import { join } from "node:path";
 import { assertSafeBuildRoot } from "../scripts/build-plugin-bundle.mjs";
+import { renderAdaptationBoard, EXAMPLE, BOARD } from "../scripts/generate-adaptation-board.mjs";
 
 test("bundle output cannot traverse an intermediate symlink or junction", async () => {
   const root = await mkdtemp(join(tmpdir(), "cineweave-build-safety-"));
@@ -39,6 +40,28 @@ test("bundle output cannot traverse an intermediate symlink or junction", async 
 
 // 仅检查知识和分发结构，不运行模型或判断媒体质量。
 const cwSkillUrl = new URL("../skills/cineweave-director/", import.meta.url);
+
+test("the adaptation design board reproduces the current complete source without external assets", async () => {
+  const source = await readFile(new URL(`../${EXAMPLE}`, import.meta.url), "utf8");
+  const board = await readFile(new URL(`../${BOARD}`, import.meta.url), "utf8");
+  assert.equal(board, renderAdaptationBoard(source), "regenerate after changing the source or drawing code");
+  assert.equal((board.match(/<article id=/gu) ?? []).length, 13);
+  assert.equal((board.match(/<svg /gu) ?? []).length, 13);
+  assert.equal(/<(?:script|iframe)\b|(?:src|href)=["']https?:/iu.test(board), false);
+  assert.ok(board.includes("媒体") && board.includes("未提供"));
+});
+
+test("all current color cards expose an unambiguous ID and positive formula revision", async () => {
+  const text = await readFile(new URL("references/optional/color-grading-presets.md", cwSkillUrl), "utf8");
+  const cards = [...text.matchAll(/^## (CG\d+) ([^\n]+)\n([\s\S]*?)(?=^## CG\d+|$(?![\s\S]))/gmu)];
+  assert.equal(cards.length, 35);
+  assert.equal(new Set(cards.map(card => card[1])).size, cards.length);
+  for (const [_, id, name, body] of cards) {
+    const revisions = [...body.matchAll(/\*\*卡片修订：\*\*(\d+)/gu)];
+    assert.equal(revisions.length, 1, `${id} ${name}: exactly one formula revision`);
+    assert.ok(Number.isSafeInteger(Number(revisions[0][1])) && Number(revisions[0][1]) > 0);
+  }
+});
 const cwNewReferences = [
   "references/optional/shot-design-workbench.md",
   "references/optional/generation-diagnostics.md",
@@ -181,8 +204,8 @@ test("插件、市场和 agent 中文展示信息一致，协议标识保留", (
   const p=JSON.parse(cwZhReadText(".codex-plugin/plugin.json"));
   const m=JSON.parse(cwZhReadText(".agents/plugins/marketplace.json"));
   const a=cwZhReadText("skills/cineweave-director/agents/openai.yaml");
-  assert.equal(p.name,"cineweave-director");assert.equal(p.version,"3.2.0");assert.equal(p.interface.displayName,"CineWeave 导演");
-  assert.equal(m.interface.displayName,p.interface.displayName);assert.equal(m.plugins[0].source.ref,"v3.2.0");
+  assert.equal(p.name,"cineweave-director");assert.equal(p.version,"3.2.2");assert.equal(p.interface.displayName,"CineWeave 导演");
+  assert.equal(m.interface.displayName,p.interface.displayName);assert.equal(m.plugins[0].source.ref,"v3.2.2");
   assert.ok(a.includes(JSON.stringify(p.interface.defaultPrompt[0])));assert.ok(a.includes(JSON.stringify(p.interface.shortDescription)));
 });
 test("视频中文摘要保留原始诊断并不修改输入", () => {

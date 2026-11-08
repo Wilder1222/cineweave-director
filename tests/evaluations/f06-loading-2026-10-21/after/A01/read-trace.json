@@ -1,0 +1,120 @@
+[
+  {
+    "index": 1,
+    "mode": "file",
+    "args": [
+      "SKILL.md"
+    ],
+    "sources": [
+      {
+        "path": "SKILL.md",
+        "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c",
+        "fileBytesRead": 14711,
+        "startLine": 1,
+        "endLine": 103
+      }
+    ],
+    "payloadFile": "read-01.txt",
+    "payloadSha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c",
+    "emittedUtf8Bytes": 14711,
+    "emittedCodePoints": 6651,
+    "localReadAndRenderMs": 2.960099999999997,
+    "tokenUsage": null,
+    "toolEnvelopeIncluded": false
+  },
+  {
+    "index": 2,
+    "mode": "file",
+    "args": [
+      "references/routes/image-prompt.md"
+    ],
+    "sources": [
+      {
+        "path": "references/routes/image-prompt.md",
+        "sha256": "949791e8133f13d13c878522a189df1fab12db811ac064f07d18e15086be54d4",
+        "fileBytesRead": 8439,
+        "startLine": 1,
+        "endLine": 69
+      }
+    ],
+    "payloadFile": "read-02.txt",
+    "payloadSha256": "949791e8133f13d13c878522a189df1fab12db811ac064f07d18e15086be54d4",
+    "emittedUtf8Bytes": 8439,
+    "emittedCodePoints": 3359,
+    "localReadAndRenderMs": 2.2079999999999984,
+    "tokenUsage": null,
+    "toolEnvelopeIncluded": false
+  },
+  {
+    "index": 3,
+    "mode": "file",
+    "args": [
+      "references/optional/prompt-detail-standard.md",
+      "表达原则"
+    ],
+    "sources": [
+      {
+        "path": "references/optional/prompt-detail-standard.md",
+        "sha256": "0880a163be9679d32807688a0c434c0fa936c0fb00a5c4aae24e381d0dd92c25",
+        "fileBytesRead": 34113,
+        "startLine": 5,
+        "endLine": 12
+      }
+    ],
+    "payloadFile": "read-03.txt",
+    "payloadSha256": "3c8013517f42a9690c174793588f655b87a9a44e72da377f1e627a24002d387e",
+    "emittedUtf8Bytes": 1267,
+    "emittedCodePoints": 453,
+    "localReadAndRenderMs": 3.9617000000000004,
+    "tokenUsage": null,
+    "toolEnvelopeIncluded": false
+  },
+  {
+    "index": 4,
+    "mode": "file",
+    "args": [
+      "references/optional/prompt-detail-standard.md",
+      "人物"
+    ],
+    "sources": [
+      {
+        "path": "references/optional/prompt-detail-standard.md",
+        "sha256": "0880a163be9679d32807688a0c434c0fa936c0fb00a5c4aae24e381d0dd92c25",
+        "fileBytesRead": 34113,
+        "startLine": 13,
+        "endLine": 63
+      }
+    ],
+    "payloadFile": "read-04.txt",
+    "payloadSha256": "0e9e4a7dabc58cbbbf248bc9d99a11cb21efc468476e6d913163b993d997221d",
+    "emittedUtf8Bytes": 7578,
+    "emittedCodePoints": 2722,
+    "localReadAndRenderMs": 2.5961,
+    "tokenUsage": null,
+    "toolEnvelopeIncluded": false
+  },
+  {
+    "index": 5,
+    "mode": "file",
+    "args": [
+      "references/optional/prompt-detail-standard.md",
+      "场景"
+    ],
+    "sources": [
+      {
+        "path": "references/optional/prompt-detail-standard.md",
+        "sha256": "0880a163be9679d32807688a0c434c0fa936c0fb00a5c4aae24e381d0dd92c25",
+        "fileBytesRead": 34113,
+        "startLine": 64,
+        "endLine": 76
+      }
+    ],
+    "payloadFile": "read-05.txt",
+    "payloadSha256": "2b9f5dd6bb5c42caaabab3934197047ef841f7102bc28390dda3f7c1fe412cba",
+    "emittedUtf8Bytes": 1487,
+    "emittedCodePoints": 557,
+    "localReadAndRenderMs": 3.3714000000000013,
+    "tokenUsage": null,
+    "toolEnvelopeIncluded": false
+  }
+]

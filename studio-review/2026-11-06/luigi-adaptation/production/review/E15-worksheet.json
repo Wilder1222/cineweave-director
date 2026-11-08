@@ -1,0 +1,887 @@
+{
+  "source": {
+    "type": "design",
+    "id": "DENIED-E15-text-coverage-493d2a47d62f",
+    "version": 2,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "E15-SH001",
+    "E15-SH003",
+    "E15-SH005",
+    "E15-SH006",
+    "E15-SH007",
+    "E15-SH009",
+    "E15-SH010",
+    "E15-SH011"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "E15-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：季节和衣服说明时间过去，普通谋杀厚夹仍留辩桌。；入镜已知：让辩护能力来自限定罪名与证据所能证明的范围。；本镜新知：同一叠证据开始被按发出者与日期分开。；实际写出的动作：春雨拍着北高窗，案卷标签已换过几轮。青年深蓝西装白衬衫无领带，双手自由坐西桌。海伦只抽出特别控罪那一夹，普通谋杀的厚夹仍留在手边。\n检察官将案后威胁邮件与青年笔记叠在一起，向北席提出特别控罪意图。海伦在自己的副本上找到最早那封邮件日期，抽出来搁到外侧。",
+      "sourceLocator": "season/E15.json#/shots/0"
+    },
+    {
+      "role": "performance",
+      "shotId": "E15-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "路易吉空手坐西桌，海伦翻新的标签页。 → 同一叠证据开始被按发出者与日期分开。；州检察官向州法官：He targeted the industry. His own writing explains why. Now its workers are getting threats.；仍试图把本人文字与他人案后行为连成意图",
+      "sourceLocator": "season/E15.json#/shots/0"
+    },
+    {
+      "role": "staging",
+      "shotId": "E15-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "明确四个月后，春雨拍北高窗。州法官在北，控方东，海伦与深蓝西装白衬衫无领带的路易吉在西；他双手自由，瑞秋仍在东南旁听。 本镜画内角色：LUIGI-FORMAL,HELEN,PROSECUTOR-STATE,JUDGE-STATE,RACHEL。；起态：路易吉空手坐西桌，海伦翻新的标签页。；出态：同一叠证据开始被按发出者与日期分开。",
+      "sourceLocator": "season/E15.json#/shots/0"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E15-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "州法庭南隔栏中央35mm中全景，北席、西辩桌、东控桌与东南瑞秋有清楚座位关系。；相机：固定21秒，检方展开案后邮件与青年文字；春雨只留窗后。；焦点：季节和衣服说明时间过去，普通谋杀厚夹仍留辩桌。",
+      "sourceLocator": "season/E15.json#/shots/0"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E15-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E15-SH001.txt；21秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E15.json#/shots/0"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E15-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "同一叠证据开始被按发出者与日期分开。；切点：海伦举最早邮件反驳归属，切她保留不利本人文字的具体做法。；接口：接E15-SH003；海伦举最早邮件反驳归属，切她保留不利本人文字的具体做法。",
+      "sourceLocator": "season/E15.json#/shots/0"
+    },
+    {
+      "role": "direction",
+      "shotId": "E15-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她先排除他人案后威胁的替代证明，再接受讨论本人文字，争特定意图；青年的听者反应保留。；入镜已知：同一叠证据开始被按发出者与日期分开。；本镜新知：普通谋杀责任与特别罪名的要件被分开争。；实际写出的动作：海伦举出案后邮件，没有把青年自己的文字藏起来。她把两组放在桌上不同位置，请控方指出其中哪封出自青年；北席看向东桌。\n控方把后发邮件推开，留下青年自己的文字；海伦也把同一页留在案卷上方，没有借邮件时序回避他本人写过的内容。\n控方指青年笔记中的目标选择，海伦没有争事件无害，只将申请页翻到特别罪名的意图项。法官示意双方停在这个问题，不继续谈民意。",
+      "sourceLocator": "season/E15.json#/shots/1"
+    },
+    {
+      "role": "performance",
+      "shotId": "E15-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "同一叠证据开始被按发出者与日期分开。 → 普通谋杀责任与特别罪名的要件被分开争。；海伦向州法官：These were sent after his arrest. Did he send any of them? Use his words. They're here.；分开两叠，用具体出处拆控方连接 / 州检察官向州法官：The writing is ours too. We're not relying only on the emails.；回到本人材料 / 海伦向路易吉：Then address the charge. A public audience doesn't settle the intent question.；承认传播对象，追究具体要件 / 州检察官向州法官：He meant to reach the public.；转守青年自己的传播意图 / 海伦向州法官：You still have to prove the intent this charge requires.；把讨论收回缺失要件",
+      "sourceLocator": "season/E15.json#/shots/1"
+    },
+    {
+      "role": "staging",
+      "shotId": "E15-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "明确四个月后，春雨拍北高窗。州法官在北，控方东，海伦与深蓝西装白衬衫无领带的路易吉在西；他双手自由，瑞秋仍在东南旁听。 本镜画内角色：HELEN,LUIGI-FORMAL。其余所列说话者留在已建立的画外席位或电话对端。；起态：同一叠证据开始被按发出者与日期分开。；出态：普通谋杀责任与特别罪名的要件被分开争。",
+      "sourceLocator": "season/E15.json#/shots/1"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E15-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "控方南侧肩后50mm朝西辩桌的海伦及青年中景，控方近前景只留肩与持纸手，法官在北侧画外。；相机：固定44秒；纸在律师手中交换主次，相机不交替扫两席。；焦点：她先排除他人案后威胁的替代证明，再接受讨论本人文字，争特定意图；青年的听者反应保留。",
+      "sourceLocator": "season/E15.json#/shots/1"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E15-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E15-SH003.txt；44秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E15.json#/shots/1"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E15-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "普通谋杀责任与特别罪名的要件被分开争。；切点：法官停止争论开始读裁定，切权力实际发出结果的北席。；接口：接E15-SH005；法官停止争论开始读裁定，切权力实际发出结果的北席。",
+      "sourceLocator": "season/E15.json#/shots/1"
+    },
+    {
+      "role": "direction",
+      "shotId": "E15-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：不将有限撤罪剪成无罪；声源就是画内法官。；入镜已知：普通谋杀责任与特别罪名的要件被分开争。；本镜新知：北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。；实际写出的动作：法官读书面裁定，撤销特别控罪后，手仍停在剩余普通谋杀项，随后把裁定放下，示意书记按书面结果安排下一步。",
+      "sourceLocator": "season/E15.json#/shots/2"
+    },
+    {
+      "role": "performance",
+      "shotId": "E15-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "普通谋杀责任与特别罪名的要件被分开争。 → 北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。；州法官向控辩双方：The terrorism-related counts are dismissed on this record. This ruling does not dismiss the ordinary murder charge or determine the defendant's guilt.；按庭审与关系自然说，不高声煽情",
+      "sourceLocator": "season/E15.json#/shots/2"
+    },
+    {
+      "role": "staging",
+      "shotId": "E15-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "明确四个月后，春雨拍北高窗。州法官在北，控方东，海伦与深蓝西装白衬衫无领带的路易吉在西；他双手自由，瑞秋仍在东南旁听。 本镜画内角色：JUDGE-STATE。；起态：普通谋杀责任与特别罪名的要件被分开争。；出态：北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。",
+      "sourceLocator": "season/E15.json#/shots/2"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E15-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "南侧中央75mm男州法官正面中景，书面裁定与手在桌前，控辩不入画。；相机：固定14秒，一口气给出撤销范围及普通谋杀仍在。；焦点：不将有限撤罪剪成无罪；声源就是画内法官。",
+      "sourceLocator": "season/E15.json#/shots/2"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E15-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E15-SH005.txt；14秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E15.json#/shots/2"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E15-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。；切点：完整裁定说完，切看被告如何拿走这份结果。；接口：接E15-SH006；完整裁定说完，切看被告如何拿走这份结果。",
+      "sourceLocator": "season/E15.json#/shots/2"
+    },
+    {
+      "role": "direction",
+      "shotId": "E15-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：两页必须一起留，后续日程继续。；入镜已知：北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。；本镜新知：青年留完整裁定，律师继续安排州案。；实际写出的动作：青年伸手想留一页裁定。海伦将仍列普通谋杀的第二页一起递给他，另一只手继续填后续日程。他接下两页，没再把它们分开。",
+      "sourceLocator": "season/E15.json#/shots/3"
+    },
+    {
+      "role": "performance",
+      "shotId": "E15-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。 → 青年留完整裁定，律师继续安排州案。；路易吉向海伦：Can I take this?；想先拿走胜利那页 / 海伦向路易吉：Both pages.；让限制跟着结果",
+      "sourceLocator": "season/E15.json#/shots/3"
+    },
+    {
+      "role": "staging",
+      "shotId": "E15-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "明确四个月后，春雨拍北高窗。州法官在北，控方东，海伦与深蓝西装白衬衫无领带的路易吉在西；他双手自由，瑞秋仍在东南旁听。 本镜画内角色：LUIGI-FORMAL,HELEN。；起态：北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。；出态：青年留完整裁定，律师继续安排州案。",
+      "sourceLocator": "season/E15.json#/shots/3"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E15-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "西桌南侧65mm青年与海伦的腰上中近景，两页裁定、自由双手与普通谋杀厚夹在下方。；相机：固定9秒，第二页由海伦一起递给他，不另拍庆祝脸。；焦点：两页必须一起留，后续日程继续。",
+      "sourceLocator": "season/E15.json#/shots/3"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E15-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E15-SH006.txt；9秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E15.json#/shots/3"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E15-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "青年留完整裁定，律师继续安排州案。；切点：他接两页，切同日公司以另一份真实记录反击。；接口：本场结果成立后切入 E15-SC02（INSURER，日·同日下午）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E15.json#/shots/3"
+    },
+    {
+      "role": "direction",
+      "shotId": "E15-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：真实访问/签名只反驳原句，不能替所有过程作证。；入镜已知：让机构用真实反证赢回一部分叙事主动，而不因此清白化。；本镜新知：公司准确利用一处过度断言，不说明医生具体看到哪些附件。；实际写出的动作：公司会议桌上，维克多核对许可范围，传播职员逐项展示真实登录、工作页访问与医生本人签名。含患者编号的一页被他抽出不发。\n传播职员给说明加上完整复核，维克多划去，指向诺拉发表的‘Nobody opened the files.’那句，让职员只用三项真实记录回应。",
+      "sourceLocator": "season/E15.json#/shots/4"
+    },
+    {
+      "role": "performance",
+      "shotId": "E15-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "去身份资料平放桌中。 → 公司准确利用一处过度断言，不说明医生具体看到哪些附件。；维克多向传播职员：All verified. The login, page access, doctor's signature. Send the redacted copies.；逐项点可证实记录，同时撤下身份页 / 传播职员向维克多：'Fully reviewed'?；寻求强一句 / 维克多向传播职员：No. We can prove that sentence wrong.；只圈那句公开断言，不帮自己扩大胜利",
+      "sourceLocator": "season/E15.json#/shots/4"
+    },
+    {
+      "role": "staging",
+      "shotId": "E15-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日下午公司会议室，维克多坐北端，传播职员在南，三项核实过的去身份记录在两人之间，含患者编号页留在他左手下。 本镜画内角色：VICTOR,PR-STAFF。；起态：去身份资料平放桌中。；出态：公司准确利用一处过度断言，不说明医生具体看到哪些附件。",
+      "sourceLocator": "season/E15.json#/shots/4"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E15-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "公司会议桌西南侧50mm过传播职员肩看维克多和三项认证材料，患者身份页被他留在左侧。；相机：固定23秒，先核可公开范围，再划掉完整复核。；焦点：真实访问/签名只反驳原句，不能替所有过程作证。",
+      "sourceLocator": "season/E15.json#/shots/4"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E15-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E15-SH007.txt；23秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E15.json#/shots/4"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E15-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "公司准确利用一处过度断言，不说明医生具体看到哪些附件。；切点：职员仍想说整个调查虚假，切她准备怎样写的表情和动作。；接口：接E15-SH009；职员仍想说整个调查虚假，切她准备怎样写的表情和动作。",
+      "sourceLocator": "season/E15.json#/shots/4"
+    },
+    {
+      "role": "direction",
+      "shotId": "E15-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：公司用准确记录赢一部分叙事权，记者将收到可验证反证。；入镜已知：公司准确利用一处过度断言，不说明医生具体看到哪些附件。；本镜新知：诺拉实际得到反证，不只是被公司新闻喊话。；实际写出的动作：传播职员删掉完整复核，又把标题改成否定整个调查。维克多没有签这版，将引用框只框住诺拉原句。\n职员准备先发公号，维克多将同一组获准公开的附件推到她手边，示意一起送达诺拉邮箱。职员听完指示，确认两边采用相同版本，分别提交公开回应和给记者的更正要求。",
+      "sourceLocator": "season/E15.json#/shots/5"
+    },
+    {
+      "role": "performance",
+      "shotId": "E15-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "公司准确利用一处过度断言，不说明医生具体看到哪些附件。 → 诺拉实际得到反证，不只是被公司新闻喊话。；传播职员向维克多：So the investigation was false?；仍想扩大胜利范围 / 维克多向同场对话者：That sentence was false. Quote it. Attach what proves it.；让真实证据做有限反击 / 维克多向传播职员：Send her the records. Tell her we want a correction.；先送对方可核的附件，再施压",
+      "sourceLocator": "season/E15.json#/shots/5"
+    },
+    {
+      "role": "staging",
+      "shotId": "E15-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日下午公司会议室，维克多坐北端，传播职员在南，三项核实过的去身份记录在两人之间，含患者编号页留在他左手下。 本镜画内角色：PR-STAFF。其余所列说话者留在已建立的画外席位或电话对端。；起态：公司准确利用一处过度断言，不说明医生具体看到哪些附件。；出态：诺拉实际得到反证，不只是被公司新闻喊话。",
+      "sourceLocator": "season/E15.json#/shots/5"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E15-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "会议桌西北侧65mm传播职员半身，维克多只留前景手指向原句，邮箱收件栏在桌上平板边缘。；相机：固定25秒，听完限定后她按同版本发公号与记者。；焦点：公司用准确记录赢一部分叙事权，记者将收到可验证反证。",
+      "sourceLocator": "season/E15.json#/shots/5"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E15-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E15-SH009.txt；25秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E15.json#/shots/5"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E15-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "诺拉实际得到反证，不只是被公司新闻喊话。；切点：发送完成，接诺拉验证而非跳公众嘲讽蒙太奇。；接口：本场结果成立后切入 E15-SC03（NEWSROOM，傍晚·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E15.json#/shots/5"
+    },
+    {
+      "role": "direction",
+      "shotId": "E15-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：真实反证与未解疑点同时存在，后者不能洗掉前者。；入镜已知：让记者明确知道自己需要纠正什么，而不是靠来源再救一次。；本镜新知：诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。；实际写出的动作：诺拉将三项记录与样本日期对上，核过来源说明，拿铅笔圈出与旧导语直接冲突的访问记录。编辑站在东桌边等她给结论，她没再把纸推回去。\n诺拉把真实签名和当初三份缺材料回执排成两行。编辑看完，先将当前续稿从发布队列移出，等她说出两者各自证明什么。",
+      "sourceLocator": "season/E15.json#/shots/6"
+    },
+    {
+      "role": "performance",
+      "shotId": "E15-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "邮件已收到，她逐页对照。 → 诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。；值班编辑向诺拉：Real?；只要核验结果 / 诺拉向值班编辑：Yeah. The signatures and the login sessions.；看着核过的记录承认，不先找解释 / 诺拉向值班编辑：The receipts still don't match the denials.；想保留值得继续调查的问题 / 值班编辑向诺拉：Then that's another question. This says someone opened the page.；不让未解问题抵消现有反证 / 诺拉向值班编辑：It doesn't say what they read.；争取最后的限定 / 值班编辑向诺拉：No. It doesn't make your sentence true either.；要求她先处理已经错的部分",
+      "sourceLocator": "season/E15.json#/shots/6"
+    },
+    {
+      "role": "staging",
+      "shotId": "E15-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日傍晚编辑部西窗映着雨，诺拉在西桌把新记录与旧样本日期对上。女值班编辑在东侧，续稿队列开着，红本在诺拉手边。 本镜画内角色：NORA,EDITOR-DESK。；起态：邮件已收到，她逐页对照。；出态：诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。",
+      "sourceLocator": "season/E15.json#/shots/6"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E15-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "编辑部西桌南侧50mm诺拉与女编辑共享中景，真实记录与旧回执在桌上两排。；相机：固定36秒，允许记者先争调查仍有价值，编辑保持看着她。；焦点：真实反证与未解疑点同时存在，后者不能洗掉前者。",
+      "sourceLocator": "season/E15.json#/shots/6"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E15-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E15-SH010.txt；36秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E15.json#/shots/6"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E15-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。；切点：诺拉终于翻回自己的笔记，切向她早已拥有的限定。；接口：接E15-SH011；诺拉终于翻回自己的笔记，切向她早已拥有的限定。",
+      "sourceLocator": "season/E15.json#/shots/6"
+    },
+    {
+      "role": "direction",
+      "shotId": "E15-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：采访警告就在手里，她仍选择先求来源帮忙。；入镜已知：诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。；本镜新知：新稿暂停，诺拉仍先索要能救解释的来源回应。；实际写出的动作：续稿已经移出发布队列，编辑给出恢复发布的截止时间。诺拉合起红本又打开，找到来源警告，仍先拿手机约莉娜见面。",
+      "sourceLocator": "season/E15.json#/shots/7"
+    },
+    {
+      "role": "performance",
+      "shotId": "E15-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。 → 新稿暂停，诺拉仍先索要能救解释的来源回应。；值班编辑向诺拉：You've got until six. Then the follow-up stays down.；把稿件拖出队列，让时限有实物后果 / 诺拉向值班编辑：Let me call her.；争最后一点时间",
+      "sourceLocator": "season/E15.json#/shots/7"
+    },
+    {
+      "role": "staging",
+      "shotId": "E15-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日傍晚编辑部西窗映着雨，诺拉在西桌把新记录与旧样本日期对上。女值班编辑在东侧，续稿队列开着，红本在诺拉手边。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。；起态：诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。；出态：新稿暂停，诺拉仍先索要能救解释的来源回应。",
+      "sourceLocator": "season/E15.json#/shots/7"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E15-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "诺拉西肩后65mm红本、手机与电脑下半屏近景，编辑手从东侧进入提示截止时间。；相机：固定12秒，合本又重开，电话从桌上拿起。；焦点：采访警告就在手里，她仍选择先求来源帮忙。",
+      "sourceLocator": "season/E15.json#/shots/7"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E15-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E15-SH011.txt；12秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E15.json#/shots/7"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E15-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "新稿暂停，诺拉仍先索要能救解释的来源回应。；切点：她拨通约见，进入一次无法替自己解围的谈话。；接口：本集结束。诺拉已经确认登录和签名真实，续稿被暂停，六点期限逼近；她仍先打给莉娜。下一集立即接同日会面与当夜更正。 下集从CAFE展开：诺拉是在找事实，还是在找一句能保住旧报道的话？",
+      "sourceLocator": "season/E15.json#/shots/7"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "E15-SH001",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "季节和衣服说明时间过去，普通谋杀厚夹仍留辩桌。",
+        "audiencePayoff": "同一叠证据开始被按发出者与日期分开。",
+        "trigger": "路易吉空手坐西桌，海伦翻新的标签页。；春雨拍着北高窗，案卷标签已换过几轮。青年深蓝西装白衬衫无领带，双手自由坐西桌。海伦只抽出特别控罪那一夹，普通谋杀的厚夹仍留在手边。\n检察官将案后威胁邮件与青年笔记叠在一起，向北席提出特别控罪意图。海伦在自己的副本上找到最早那封邮件日期，抽出来搁到外侧。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "海伦举最早邮件反驳归属，切她保留不利本人文字的具体做法。；接E15-SH003；海伦举最早邮件反驳归属，切她保留不利本人文字的具体做法。",
+        "noMotionReason": "固定21秒，检方展开案后邮件与青年文字；春雨只留窗后。；观看变化：同一叠证据开始被按发出者与日期分开。"
+      },
+      "camera": {
+        "shotScale": "州法庭南隔栏中央35mm中全景",
+        "position": "州法庭南隔栏中央35mm中全景，北席、西辩桌、东控桌与东南瑞秋有清楚座位关系。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "州法庭南隔栏中央35mm中全景，北席、西辩桌、东控桌与东南瑞秋有清楚座位关系。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "季节和衣服说明时间过去，普通谋杀厚夹仍留辩桌。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 明确四个月后，春雨拍北高窗。州法官在北，控方东，海伦与深蓝西装白衬衫无领带的路易吉在西；他双手自由，瑞秋仍在东南旁听。 本镜画内角色：LUIGI-FORMAL,HELEN,PROSECUTOR-STATE,JUDGE-STATE,RACHEL。",
+        "movementIntent": "固定21秒，检方展开案后邮件与青年文字；春雨只留窗后。"
+      },
+      "composition": {
+        "layout": "明确四个月后，春雨拍北高窗。州法官在北，控方东，海伦与深蓝西装白衬衫无领带的路易吉在西；他双手自由，瑞秋仍在东南旁听。 本镜画内角色：LUIGI-FORMAL,HELEN,PROSECUTOR-STATE,JUDGE-STATE,RACHEL。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：春雨拍着北高窗，案卷标签已换过几轮。青年深蓝西装白衬衫无领带，双手自由坐西桌。海伦只抽出特别控罪那一夹，普通谋杀的厚夹仍留在手边。\n检察官将案后威胁邮件与青年笔记叠在一起，向北席提出特别控罪意图。海伦在自己的副本上找到最早那封邮件日期，抽出来搁到外侧。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "季节和衣服说明时间过去，普通谋杀厚夹仍留辩桌。；季节和衣服说明时间过去，普通谋杀厚夹仍留辩桌。"
+      },
+      "temporal": {
+        "durationSeconds": 21,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "季节和衣服说明时间过去，普通谋杀厚夹仍留辩桌。",
+          "path": "机位不移动。",
+          "start": "路易吉空手坐西桌，海伦翻新的标签页。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "同一叠证据开始被按发出者与日期分开。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E15-SH001-F1",
+            "timeSeconds": 0,
+            "description": "季节和衣服说明时间过去，普通谋杀厚夹仍留辩桌。"
+          }
+        ],
+        "edit": {
+          "entry": "路易吉空手坐西桌，海伦翻新的标签页。",
+          "exit": "同一叠证据开始被按发出者与日期分开。；海伦举最早邮件反驳归属，切她保留不利本人文字的具体做法。",
+          "preferredTransition": "接E15-SH003；海伦举最早邮件反驳归属，切她保留不利本人文字的具体做法。",
+          "soundBridge": "木椅、纸页与法庭室内混响，所列台词按既定席位发声，旁听者不喊话。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E15-SH003",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她先排除他人案后威胁的替代证明，再接受讨论本人文字，争特定意图；青年的听者反应保留。",
+        "audiencePayoff": "普通谋杀责任与特别罪名的要件被分开争。",
+        "trigger": "同一叠证据开始被按发出者与日期分开。；海伦举出案后邮件，没有把青年自己的文字藏起来。她把两组放在桌上不同位置，请控方指出其中哪封出自青年；北席看向东桌。\n控方把后发邮件推开，留下青年自己的文字；海伦也把同一页留在案卷上方，没有借邮件时序回避他本人写过的内容。\n控方指青年笔记中的目标选择，海伦没有争事件无害，只将申请页翻到特别罪名的意图项。法官示意双方停在这个问题，不继续谈民意。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "法官停止争论开始读裁定，切权力实际发出结果的北席。；接E15-SH005；法官停止争论开始读裁定，切权力实际发出结果的北席。",
+        "noMotionReason": "固定44秒；纸在律师手中交换主次，相机不交替扫两席。；观看变化：普通谋杀责任与特别罪名的要件被分开争。"
+      },
+      "camera": {
+        "shotScale": "控方南侧肩后50mm朝西辩桌的海伦及青年中景",
+        "position": "控方南侧肩后50mm朝西辩桌的海伦及青年中景，控方近前景只留肩与持纸手，法官在北侧画外。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "控方南侧肩后50mm朝西辩桌的海伦及青年中景，控方近前景只留肩与持纸手，法官在北侧画外。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "她先排除他人案后威胁的替代证明，再接受讨论本人文字，争特定意图；青年的听者反应保留。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 明确四个月后，春雨拍北高窗。州法官在北，控方东，海伦与深蓝西装白衬衫无领带的路易吉在西；他双手自由，瑞秋仍在东南旁听。 本镜画内角色：HELEN,LUIGI-FORMAL。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定44秒；纸在律师手中交换主次，相机不交替扫两席。"
+      },
+      "composition": {
+        "layout": "明确四个月后，春雨拍北高窗。州法官在北，控方东，海伦与深蓝西装白衬衫无领带的路易吉在西；他双手自由，瑞秋仍在东南旁听。 本镜画内角色：HELEN,LUIGI-FORMAL。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：海伦举出案后邮件，没有把青年自己的文字藏起来。她把两组放在桌上不同位置，请控方指出其中哪封出自青年；北席看向东桌。\n控方把后发邮件推开，留下青年自己的文字；海伦也把同一页留在案卷上方，没有借邮件时序回避他本人写过的内容。\n控方指青年笔记中的目标选择，海伦没有争事件无害，只将申请页翻到特别罪名的意图项。法官示意双方停在这个问题，不继续谈民意。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她先排除他人案后威胁的替代证明，再接受讨论本人文字，争特定意图；青年的听者反应保留。；她先排除他人案后威胁的替代证明，再接受讨论本人文字，争特定意图；青年的听者反应保留。"
+      },
+      "temporal": {
+        "durationSeconds": 44,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她先排除他人案后威胁的替代证明，再接受讨论本人文字，争特定意图；青年的听者反应保留。",
+          "path": "机位不移动。",
+          "start": "同一叠证据开始被按发出者与日期分开。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "普通谋杀责任与特别罪名的要件被分开争。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E15-SH003-F1",
+            "timeSeconds": 0,
+            "description": "她先排除他人案后威胁的替代证明，再接受讨论本人文字，争特定意图；青年的听者反应保留。"
+          }
+        ],
+        "edit": {
+          "entry": "同一叠证据开始被按发出者与日期分开。",
+          "exit": "普通谋杀责任与特别罪名的要件被分开争。；法官停止争论开始读裁定，切权力实际发出结果的北席。",
+          "preferredTransition": "接E15-SH005；法官停止争论开始读裁定，切权力实际发出结果的北席。",
+          "soundBridge": "木椅、纸页与法庭室内混响，所列台词按既定席位发声，旁听者不喊话。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E15-SH005",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "不将有限撤罪剪成无罪；声源就是画内法官。",
+        "audiencePayoff": "北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。",
+        "trigger": "普通谋杀责任与特别罪名的要件被分开争。；法官读书面裁定，撤销特别控罪后，手仍停在剩余普通谋杀项，随后把裁定放下，示意书记按书面结果安排下一步。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "完整裁定说完，切看被告如何拿走这份结果。；接E15-SH006；完整裁定说完，切看被告如何拿走这份结果。",
+        "noMotionReason": "固定14秒，一口气给出撤销范围及普通谋杀仍在。；观看变化：北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。"
+      },
+      "camera": {
+        "shotScale": "南侧中央75mm男州法官正面中景",
+        "position": "南侧中央75mm男州法官正面中景，书面裁定与手在桌前，控辩不入画。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "南侧中央75mm男州法官正面中景，书面裁定与手在桌前，控辩不入画。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "不将有限撤罪剪成无罪；声源就是画内法官。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 明确四个月后，春雨拍北高窗。州法官在北，控方东，海伦与深蓝西装白衬衫无领带的路易吉在西；他双手自由，瑞秋仍在东南旁听。 本镜画内角色：JUDGE-STATE。",
+        "movementIntent": "固定14秒，一口气给出撤销范围及普通谋杀仍在。"
+      },
+      "composition": {
+        "layout": "明确四个月后，春雨拍北高窗。州法官在北，控方东，海伦与深蓝西装白衬衫无领带的路易吉在西；他双手自由，瑞秋仍在东南旁听。 本镜画内角色：JUDGE-STATE。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：法官读书面裁定，撤销特别控罪后，手仍停在剩余普通谋杀项，随后把裁定放下，示意书记按书面结果安排下一步。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "不将有限撤罪剪成无罪；声源就是画内法官。；不将有限撤罪剪成无罪；声源就是画内法官。"
+      },
+      "temporal": {
+        "durationSeconds": 14,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "不将有限撤罪剪成无罪；声源就是画内法官。",
+          "path": "机位不移动。",
+          "start": "普通谋杀责任与特别罪名的要件被分开争。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E15-SH005-F1",
+            "timeSeconds": 0,
+            "description": "不将有限撤罪剪成无罪；声源就是画内法官。"
+          }
+        ],
+        "edit": {
+          "entry": "普通谋杀责任与特别罪名的要件被分开争。",
+          "exit": "北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。；完整裁定说完，切看被告如何拿走这份结果。",
+          "preferredTransition": "接E15-SH006；完整裁定说完，切看被告如何拿走这份结果。",
+          "soundBridge": "木椅、纸页与法庭室内混响，所列台词按既定席位发声，旁听者不喊话。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E15-SH006",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "两页必须一起留，后续日程继续。",
+        "audiencePayoff": "青年留完整裁定，律师继续安排州案。",
+        "trigger": "北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。；青年伸手想留一页裁定。海伦将仍列普通谋杀的第二页一起递给他，另一只手继续填后续日程。他接下两页，没再把它们分开。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "他接两页，切同日公司以另一份真实记录反击。；本场结果成立后切入 E15-SC02（INSURER，日·同日下午）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定9秒，第二页由海伦一起递给他，不另拍庆祝脸。；观看变化：青年留完整裁定，律师继续安排州案。"
+      },
+      "camera": {
+        "shotScale": "西桌南侧65mm青年与海伦的腰上中近景",
+        "position": "西桌南侧65mm青年与海伦的腰上中近景，两页裁定、自由双手与普通谋杀厚夹在下方。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "西桌南侧65mm青年与海伦的腰上中近景，两页裁定、自由双手与普通谋杀厚夹在下方。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "两页必须一起留，后续日程继续。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 明确四个月后，春雨拍北高窗。州法官在北，控方东，海伦与深蓝西装白衬衫无领带的路易吉在西；他双手自由，瑞秋仍在东南旁听。 本镜画内角色：LUIGI-FORMAL,HELEN。",
+        "movementIntent": "固定9秒，第二页由海伦一起递给他，不另拍庆祝脸。"
+      },
+      "composition": {
+        "layout": "明确四个月后，春雨拍北高窗。州法官在北，控方东，海伦与深蓝西装白衬衫无领带的路易吉在西；他双手自由，瑞秋仍在东南旁听。 本镜画内角色：LUIGI-FORMAL,HELEN。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：青年伸手想留一页裁定。海伦将仍列普通谋杀的第二页一起递给他，另一只手继续填后续日程。他接下两页，没再把它们分开。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "两页必须一起留，后续日程继续。；两页必须一起留，后续日程继续。"
+      },
+      "temporal": {
+        "durationSeconds": 9,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "两页必须一起留，后续日程继续。",
+          "path": "机位不移动。",
+          "start": "北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "青年留完整裁定，律师继续安排州案。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E15-SH006-F1",
+            "timeSeconds": 0,
+            "description": "两页必须一起留，后续日程继续。"
+          }
+        ],
+        "edit": {
+          "entry": "北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。",
+          "exit": "青年留完整裁定，律师继续安排州案。；他接两页，切同日公司以另一份真实记录反击。",
+          "preferredTransition": "本场结果成立后切入 E15-SC02（INSURER，日·同日下午）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "木椅、纸页与法庭室内混响，所列台词按既定席位发声，旁听者不喊话。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E15-SH007",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "真实访问/签名只反驳原句，不能替所有过程作证。",
+        "audiencePayoff": "公司准确利用一处过度断言，不说明医生具体看到哪些附件。",
+        "trigger": "去身份资料平放桌中。；公司会议桌上，维克多核对许可范围，传播职员逐项展示真实登录、工作页访问与医生本人签名。含患者编号的一页被他抽出不发。\n传播职员给说明加上完整复核，维克多划去，指向诺拉发表的‘Nobody opened the files.’那句，让职员只用三项真实记录回应。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "职员仍想说整个调查虚假，切她准备怎样写的表情和动作。；接E15-SH009；职员仍想说整个调查虚假，切她准备怎样写的表情和动作。",
+        "noMotionReason": "固定23秒，先核可公开范围，再划掉完整复核。；观看变化：公司准确利用一处过度断言，不说明医生具体看到哪些附件。"
+      },
+      "camera": {
+        "shotScale": "公司会议桌西南侧50mm过传播职员肩看维克多和三项认证材料",
+        "position": "公司会议桌西南侧50mm过传播职员肩看维克多和三项认证材料，患者身份页被他留在左侧。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "公司会议桌西南侧50mm过传播职员肩看维克多和三项认证材料，患者身份页被他留在左侧。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "真实访问/签名只反驳原句，不能替所有过程作证。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日下午公司会议室，维克多坐北端，传播职员在南，三项核实过的去身份记录在两人之间，含患者编号页留在他左手下。 本镜画内角色：VICTOR,PR-STAFF。",
+        "movementIntent": "固定23秒，先核可公开范围，再划掉完整复核。"
+      },
+      "composition": {
+        "layout": "同日下午公司会议室，维克多坐北端，传播职员在南，三项核实过的去身份记录在两人之间，含患者编号页留在他左手下。 本镜画内角色：VICTOR,PR-STAFF。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：公司会议桌上，维克多核对许可范围，传播职员逐项展示真实登录、工作页访问与医生本人签名。含患者编号的一页被他抽出不发。\n传播职员给说明加上完整复核，维克多划去，指向诺拉发表的‘Nobody opened the files.’那句，让职员只用三项真实记录回应。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "真实访问/签名只反驳原句，不能替所有过程作证。；真实访问/签名只反驳原句，不能替所有过程作证。"
+      },
+      "temporal": {
+        "durationSeconds": 23,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "真实访问/签名只反驳原句，不能替所有过程作证。",
+          "path": "机位不移动。",
+          "start": "去身份资料平放桌中。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "公司准确利用一处过度断言，不说明医生具体看到哪些附件。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E15-SH007-F1",
+            "timeSeconds": 0,
+            "description": "真实访问/签名只反驳原句，不能替所有过程作证。"
+          }
+        ],
+        "edit": {
+          "entry": "去身份资料平放桌中。",
+          "exit": "公司准确利用一处过度断言，不说明医生具体看到哪些附件。；职员仍想说整个调查虚假，切她准备怎样写的表情和动作。",
+          "preferredTransition": "接E15-SH009；职员仍想说整个调查虚假，切她准备怎样写的表情和动作。",
+          "soundBridge": "办公室空调与实际手机提示，不加未列来电内容。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E15-SH009",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "公司用准确记录赢一部分叙事权，记者将收到可验证反证。",
+        "audiencePayoff": "诺拉实际得到反证，不只是被公司新闻喊话。",
+        "trigger": "公司准确利用一处过度断言，不说明医生具体看到哪些附件。；传播职员删掉完整复核，又把标题改成否定整个调查。维克多没有签这版，将引用框只框住诺拉原句。\n职员准备先发公号，维克多将同一组获准公开的附件推到她手边，示意一起送达诺拉邮箱。职员听完指示，确认两边采用相同版本，分别提交公开回应和给记者的更正要求。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "发送完成，接诺拉验证而非跳公众嘲讽蒙太奇。；本场结果成立后切入 E15-SC03（NEWSROOM，傍晚·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定25秒，听完限定后她按同版本发公号与记者。；观看变化：诺拉实际得到反证，不只是被公司新闻喊话。"
+      },
+      "camera": {
+        "shotScale": "会议桌西北侧65mm传播职员半身",
+        "position": "会议桌西北侧65mm传播职员半身，维克多只留前景手指向原句，邮箱收件栏在桌上平板边缘。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "会议桌西北侧65mm传播职员半身，维克多只留前景手指向原句，邮箱收件栏在桌上平板边缘。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "公司用准确记录赢一部分叙事权，记者将收到可验证反证。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日下午公司会议室，维克多坐北端，传播职员在南，三项核实过的去身份记录在两人之间，含患者编号页留在他左手下。 本镜画内角色：PR-STAFF。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定25秒，听完限定后她按同版本发公号与记者。"
+      },
+      "composition": {
+        "layout": "同日下午公司会议室，维克多坐北端，传播职员在南，三项核实过的去身份记录在两人之间，含患者编号页留在他左手下。 本镜画内角色：PR-STAFF。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：传播职员删掉完整复核，又把标题改成否定整个调查。维克多没有签这版，将引用框只框住诺拉原句。\n职员准备先发公号，维克多将同一组获准公开的附件推到她手边，示意一起送达诺拉邮箱。职员听完指示，确认两边采用相同版本，分别提交公开回应和给记者的更正要求。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "公司用准确记录赢一部分叙事权，记者将收到可验证反证。；公司用准确记录赢一部分叙事权，记者将收到可验证反证。"
+      },
+      "temporal": {
+        "durationSeconds": 25,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "公司用准确记录赢一部分叙事权，记者将收到可验证反证。",
+          "path": "机位不移动。",
+          "start": "公司准确利用一处过度断言，不说明医生具体看到哪些附件。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "诺拉实际得到反证，不只是被公司新闻喊话。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E15-SH009-F1",
+            "timeSeconds": 0,
+            "description": "公司用准确记录赢一部分叙事权，记者将收到可验证反证。"
+          }
+        ],
+        "edit": {
+          "entry": "公司准确利用一处过度断言，不说明医生具体看到哪些附件。",
+          "exit": "诺拉实际得到反证，不只是被公司新闻喊话。；发送完成，接诺拉验证而非跳公众嘲讽蒙太奇。",
+          "preferredTransition": "本场结果成立后切入 E15-SC03（NEWSROOM，傍晚·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "办公室空调与实际手机提示，不加未列来电内容。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E15-SH010",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "真实反证与未解疑点同时存在，后者不能洗掉前者。",
+        "audiencePayoff": "诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。",
+        "trigger": "邮件已收到，她逐页对照。；诺拉将三项记录与样本日期对上，核过来源说明，拿铅笔圈出与旧导语直接冲突的访问记录。编辑站在东桌边等她给结论，她没再把纸推回去。\n诺拉把真实签名和当初三份缺材料回执排成两行。编辑看完，先将当前续稿从发布队列移出，等她说出两者各自证明什么。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "诺拉终于翻回自己的笔记，切向她早已拥有的限定。；接E15-SH011；诺拉终于翻回自己的笔记，切向她早已拥有的限定。",
+        "noMotionReason": "固定36秒，允许记者先争调查仍有价值，编辑保持看着她。；观看变化：诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。"
+      },
+      "camera": {
+        "shotScale": "编辑部西桌南侧50mm诺拉与女编辑共享中景",
+        "position": "编辑部西桌南侧50mm诺拉与女编辑共享中景，真实记录与旧回执在桌上两排。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "编辑部西桌南侧50mm诺拉与女编辑共享中景，真实记录与旧回执在桌上两排。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "真实反证与未解疑点同时存在，后者不能洗掉前者。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日傍晚编辑部西窗映着雨，诺拉在西桌把新记录与旧样本日期对上。女值班编辑在东侧，续稿队列开着，红本在诺拉手边。 本镜画内角色：NORA,EDITOR-DESK。",
+        "movementIntent": "固定36秒，允许记者先争调查仍有价值，编辑保持看着她。"
+      },
+      "composition": {
+        "layout": "同日傍晚编辑部西窗映着雨，诺拉在西桌把新记录与旧样本日期对上。女值班编辑在东侧，续稿队列开着，红本在诺拉手边。 本镜画内角色：NORA,EDITOR-DESK。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：诺拉将三项记录与样本日期对上，核过来源说明，拿铅笔圈出与旧导语直接冲突的访问记录。编辑站在东桌边等她给结论，她没再把纸推回去。\n诺拉把真实签名和当初三份缺材料回执排成两行。编辑看完，先将当前续稿从发布队列移出，等她说出两者各自证明什么。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "真实反证与未解疑点同时存在，后者不能洗掉前者。；真实反证与未解疑点同时存在，后者不能洗掉前者。"
+      },
+      "temporal": {
+        "durationSeconds": 36,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "真实反证与未解疑点同时存在，后者不能洗掉前者。",
+          "path": "机位不移动。",
+          "start": "邮件已收到，她逐页对照。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E15-SH010-F1",
+            "timeSeconds": 0,
+            "description": "真实反证与未解疑点同时存在，后者不能洗掉前者。"
+          }
+        ],
+        "edit": {
+          "entry": "邮件已收到，她逐页对照。",
+          "exit": "诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。；诺拉终于翻回自己的笔记，切向她早已拥有的限定。",
+          "preferredTransition": "接E15-SH011；诺拉终于翻回自己的笔记，切向她早已拥有的限定。",
+          "soundBridge": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E15-SH011",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "采访警告就在手里，她仍选择先求来源帮忙。",
+        "audiencePayoff": "新稿暂停，诺拉仍先索要能救解释的来源回应。",
+        "trigger": "诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。；续稿已经移出发布队列，编辑给出恢复发布的截止时间。诺拉合起红本又打开，找到来源警告，仍先拿手机约莉娜见面。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "她拨通约见，进入一次无法替自己解围的谈话。；本集结束。诺拉已经确认登录和签名真实，续稿被暂停，六点期限逼近；她仍先打给莉娜。下一集立即接同日会面与当夜更正。 下集从CAFE展开：诺拉是在找事实，还是在找一句能保住旧报道的话？",
+        "noMotionReason": "固定12秒，合本又重开，电话从桌上拿起。；观看变化：新稿暂停，诺拉仍先索要能救解释的来源回应。"
+      },
+      "camera": {
+        "shotScale": "诺拉西肩后65mm红本、手机与电脑下半屏近景",
+        "position": "诺拉西肩后65mm红本、手机与电脑下半屏近景，编辑手从东侧进入提示截止时间。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "诺拉西肩后65mm红本、手机与电脑下半屏近景，编辑手从东侧进入提示截止时间。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "采访警告就在手里，她仍选择先求来源帮忙。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日傍晚编辑部西窗映着雨，诺拉在西桌把新记录与旧样本日期对上。女值班编辑在东侧，续稿队列开着，红本在诺拉手边。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定12秒，合本又重开，电话从桌上拿起。"
+      },
+      "composition": {
+        "layout": "同日傍晚编辑部西窗映着雨，诺拉在西桌把新记录与旧样本日期对上。女值班编辑在东侧，续稿队列开着，红本在诺拉手边。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：续稿已经移出发布队列，编辑给出恢复发布的截止时间。诺拉合起红本又打开，找到来源警告，仍先拿手机约莉娜见面。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "采访警告就在手里，她仍选择先求来源帮忙。；采访警告就在手里，她仍选择先求来源帮忙。"
+      },
+      "temporal": {
+        "durationSeconds": 12,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "采访警告就在手里，她仍选择先求来源帮忙。",
+          "path": "机位不移动。",
+          "start": "诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "新稿暂停，诺拉仍先索要能救解释的来源回应。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E15-SH011-F1",
+            "timeSeconds": 0,
+            "description": "采访警告就在手里，她仍选择先求来源帮忙。"
+          }
+        ],
+        "edit": {
+          "entry": "诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。",
+          "exit": "新稿暂停，诺拉仍先索要能救解释的来源回应。；她拨通约见，进入一次无法替自己解围的谈话。",
+          "preferredTransition": "本集结束。诺拉已经确认登录和签名真实，续稿被暂停，六点期限逼近；她仍先打给莉娜。下一集立即接同日会面与当夜更正。 下集从CAFE展开：诺拉是在找事实，还是在找一句能保住旧报道的话？",
+          "soundBridge": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    }
+  ]
+}

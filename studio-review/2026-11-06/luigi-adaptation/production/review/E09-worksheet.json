@@ -1,0 +1,1212 @@
+{
+  "source": {
+    "type": "design",
+    "id": "DENIED-E09-text-coverage-11db317cb7ca",
+    "version": 2,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "E09-SH001",
+    "E09-SH002",
+    "E09-SH004",
+    "E09-SH006",
+    "E09-SH007",
+    "E09-SH009",
+    "E09-SH010",
+    "E09-SH012",
+    "E09-SH013",
+    "E09-SH014",
+    "E09-SH016"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "E09-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：看他试着索取折页、她把页压回去。；入镜已知：带着公开一页材料的欲望进入正式程序。；本镜新知：折页仍在海伦蓝夹内，青年双腕仍在身前铐住。；实际写出的动作：路易吉用被铐住的双手示意蓝夹里的折页，想让海伦现在拿出来。北门打开，海伦把折页压回夹内，带他让开出来的人。",
+      "sourceLocator": "season/E09.json#/shots/0"
+    },
+    {
+      "role": "performance",
+      "shotId": "E09-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "路易吉身前腕铐未解，海伦站他西侧，蓝夹里露出一张折页。 → 折页仍在海伦蓝夹内，青年双腕仍在身前铐住。；路易吉向海伦：Can you get that page into the record?；催她做一件事 / 海伦向路易吉：After your plea. The names stay covered.；边让路边交代",
+      "sourceLocator": "season/E09.json#/shots/0"
+    },
+    {
+      "role": "staging",
+      "shotId": "E09-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "候庭走廊北门一次只放几个人通过，西侧长椅前，路易吉穿深红毛衣、白衬衫、灰长裤，双腕仍在身前铐住。海伦在他西侧，蓝色案卷夹露出患者折页。 本镜画内角色：LUIGI-RED,HELEN。；起态：路易吉身前腕铐未解，海伦站他西侧，蓝夹里露出一张折页。；出态：折页仍在海伦蓝夹内，青年双腕仍在身前铐住。",
+      "sourceLocator": "season/E09.json#/shots/0"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E09-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "走廊西墙旁朝东北的35mm双人中景，画幅到腰下，青年身前腕铐与律师蓝夹同在前层。；相机：固定；让北门开合和来人经过改变背景，不追出门的人。；焦点：看他试着索取折页、她把页压回去。",
+      "sourceLocator": "season/E09.json#/shots/0"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E09-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E09-SH001.txt；13秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E09.json#/shots/0"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E09-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "折页仍在海伦蓝夹内，青年双腕仍在身前铐住。；切点：法警示意伸手，注意从谈判落到解铐的实际动作。；接口：接E09-SH002；法警示意伸手，注意从谈判落到解铐的实际动作。",
+      "sourceLocator": "season/E09.json#/shots/0"
+    },
+    {
+      "role": "direction",
+      "shotId": "E09-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：两腕确实自由后再跟他追折页的目光，整副铐归法警腰侧。；入镜已知：折页仍在海伦蓝夹内，青年双腕仍在身前铐住。；本镜新知：青年空手向北入庭，海伦蓝夹在左手，腕铐留法警身上。；实际写出的动作：法警示意伸手，逐一打开两只腕铐，将整副铐子收进自己的腰侧皮套。路易吉先松开指头，再把双手垂在身体两边，白袖口从毛衣内露出一截。\n路易吉揉一下手腕，目光仍追着蓝夹。法警把北门拉开，海伦问他的背怎么样；他向门走一步，伸手又收回，没有去拿那张纸。",
+      "sourceLocator": "season/E09.json#/shots/1"
+    },
+    {
+      "role": "performance",
+      "shotId": "E09-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "折页仍在海伦蓝夹内，青年双腕仍在身前铐住。 → 青年空手向北入庭，海伦蓝夹在左手，腕铐留法警身上。；海伦向路易吉：How's your back?；走动中低声问 / 路易吉向海伦：I'll be okay. Just don't lose that page.；搪塞背痛，马上盯回蓝夹",
+      "sourceLocator": "season/E09.json#/shots/1"
+    },
+    {
+      "role": "staging",
+      "shotId": "E09-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "候庭走廊北门一次只放几个人通过，西侧长椅前，路易吉穿深红毛衣、白衬衫、灰长裤，双腕仍在身前铐住。海伦在他西侧，蓝色案卷夹露出患者折页。 本镜画内角色：LUIGI-RED,HELEN。；起态：折页仍在海伦蓝夹内，青年双腕仍在身前铐住。；出态：青年空手向北入庭，海伦蓝夹在左手，腕铐留法警身上。",
+      "sourceLocator": "season/E09.json#/shots/1"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E09-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "走廊西侧偏南50mm中近景，双腕在下半部，青年和海伦上身同框，北门在右后方。；相机：法警开两只铐后，连续缓慢上仰到青年揉腕和律师问话；不剪掉收铐过程。；焦点：两腕确实自由后再跟他追折页的目光，整副铐归法警腰侧。",
+      "sourceLocator": "season/E09.json#/shots/1"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E09-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E09-SH002.txt；18秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E09.json#/shots/1"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E09-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "青年空手向北入庭，海伦蓝夹在左手，腕铐留法警身上。；切点：他空手朝北门跨步，接下一场落座。；接口：本场结果成立后切入 E09-SC02（COURT-STATE，日·紧接候庭）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E09.json#/shots/1"
+    },
+    {
+      "role": "direction",
+      "shotId": "E09-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：青年自由双手落桌、律师指答辩表与瑞秋看见他，在一个空间同时发生。；入镜已知：让红毛衣名场面发生在受限的辩护任务中。；本镜新知：不认罪已录入；青年双手自由，右手从纸边收回膝上。；实际写出的动作：路易吉拉开椅子落座，把两只自由的手放在桌面。瑞秋抬起眼，看清他的脸与整洁衣领，再把棕文件袋移到腿上；法官翻开案卷。\n法官问答辩。路易吉先看蓝夹里的折页，海伦用指尖在空白答辩表上点一下；他转回北席明确作答。",
+      "sourceLocator": "season/E09.json#/shots/2"
+    },
+    {
+      "role": "performance",
+      "shotId": "E09-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "路易吉从南隔栏口向西辩方桌走，双手空着。 → 不认罪已录入；青年双手自由，右手从纸边收回膝上。；州法官向路易吉：Mr. Mangione, can you hear me clearly?；例行明确 / 路易吉向州法官：Yes, Your Honor.；清楚平稳 / 州法官向路易吉：How do you plead to the charges before this court?；程序提问 / 路易吉向州法官：Not guilty, Your Honor.；停半拍后明确",
+      "sourceLocator": "season/E09.json#/shots/2"
+    },
+    {
+      "role": "staging",
+      "shotId": "E09-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "法官席在北、辩护桌在西、控方在东，木隔栏后的南侧旁听席已坐满。瑞秋在东南，棕文件袋放膝上。路易吉与海伦由南通道到西桌，双腕自由。 本镜画内角色：LUIGI-RED,HELEN,JUDGE-STATE,PROSECUTOR-STATE,RACHEL。；起态：路易吉从南隔栏口向西辩方桌走，双手空着。；出态：不认罪已录入；青年双手自由，右手从纸边收回膝上。",
+      "sourceLocator": "season/E09.json#/shots/2"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E09-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "南侧隔栏中央35mm固定中全景，北法官席、东西控辩桌和东南旁听第一排都能辨位。；相机：固定保持22秒，不在问答间推近。；焦点：青年自由双手落桌、律师指答辩表与瑞秋看见他，在一个空间同时发生。",
+      "sourceLocator": "season/E09.json#/shots/2"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E09-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E09-SH004.txt；22秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E09.json#/shots/2"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E09-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "不认罪已录入；青年双手自由，右手从纸边收回膝上。；切点：海伦站起要求录像，切到她与青年争取材料的桌边。；接口：接E09-SH006；海伦站起要求录像，切到她与青年争取材料的桌边。",
+      "sourceLocator": "season/E09.json#/shots/2"
+    },
+    {
+      "role": "direction",
+      "shotId": "E09-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她压住患者折页，同时坚持需要完整录像；控方和法官的声音来自既定席位。；入镜已知：不认罪已录入；青年双手自由，右手从纸边收回膝上。；本镜新知：书记员记下请求，海伦留着清单，青年那张折页仍未展示。；实际写出的动作：海伦站起，将搜查申请交到西桌前供书记收取。蓝夹里的患者折页被青年指尖轻轻推出一角，她用另一只手压住。\n海伦的手还压着患者折页，控方先把背包部分标出，要求西桌说明请求范围。海伦没有让青年替她作答，直接把清单中尚缺的起止时间指给书记员。",
+      "sourceLocator": "season/E09.json#/shots/3"
+    },
+    {
+      "role": "performance",
+      "shotId": "E09-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "不认罪已录入；青年双手自由，右手从纸边收回膝上。 → 书记员记下请求，海伦留着清单，青年那张折页仍未展示。；海伦向州法官：We request the full arrest recordings, including the period before the backpack was opened.；争取具体材料 / 州检察官向州法官：The defense has the inventory. What else are you asking for?；把请求缩成重复索取 / 海伦向州法官：The recordings. A list tells us what was logged, not what happened before that.；不接受把两种材料混为一谈 / 州法官向控辩双方：Put the missing material in your request.；把争执转成可处理的书面范围",
+      "sourceLocator": "season/E09.json#/shots/3"
+    },
+    {
+      "role": "staging",
+      "shotId": "E09-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "法官席在北、辩护桌在西、控方在东，木隔栏后的南侧旁听席已坐满。瑞秋在东南，棕文件袋放膝上。路易吉与海伦由南通道到西桌，双腕自由。 本镜画内角色：LUIGI-RED,HELEN。其余所列说话者留在已建立的画外席位或电话对端。；起态：不认罪已录入；青年双手自由，右手从纸边收回膝上。；出态：书记员记下请求，海伦留着清单，青年那张折页仍未展示。",
+      "sourceLocator": "season/E09.json#/shots/3"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E09-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "西桌南端50mm律师和青年双人中景，桌上申请与蓝夹在前景；东桌、北席都在画外。；相机：固定，海伦站起后稍上仰保持头部空间，青年仍留画面下侧。；焦点：她压住患者折页，同时坚持需要完整录像；控方和法官的声音来自既定席位。",
+      "sourceLocator": "season/E09.json#/shots/3"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E09-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E09-SH006.txt；32秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E09.json#/shots/3"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E09-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "书记员记下请求，海伦留着清单，青年那张折页仍未展示。；切点：录像范围被列入请求，海伦转向笔记作者问题，切回能看见控辩同时反应的位置。；接口：接E09-SH007；录像范围被列入请求，海伦转向笔记作者问题，切回能看见控辩同时反应的位置。",
+      "sourceLocator": "season/E09.json#/shots/3"
+    },
+    {
+      "role": "direction",
+      "shotId": "E09-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：控方指另一组页码与律师收患者页相互对照，公开程序给出边界。；入镜已知：书记员记下请求，海伦留着清单，青年那张折页仍未展示。；本镜新知：法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。；实际写出的动作：青年看见折页被压住，手指缩回桌边。海伦转而提出笔记来源，控方翻开副本可见地指出另一组页码；两人没有展示患者姓名。\n法官把当日清单推给书记员，指定来源问题改由书面申请处理。西侧海伦合住蓝夹的纸声传来；法官示意她坐下，低头转到下一项。",
+      "sourceLocator": "season/E09.json#/shots/4"
+    },
+    {
+      "role": "performance",
+      "shotId": "E09-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "书记员记下请求，海伦留着清单，青年那张折页仍未展示。 → 法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。；海伦向州法官：Some entries copy patient records. We need to distinguish those from his own statements.；区分材料原文和本人陈述，不把亲笔抄录当作作者身份 / 州检察官向州法官：That requires a written motion.；抓程序缺口 / 州法官向海伦：File it in writing. Redact the patients' names. Today we're setting the schedule.；截断扩展",
+      "sourceLocator": "season/E09.json#/shots/4"
+    },
+    {
+      "role": "staging",
+      "shotId": "E09-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "法官席在北、辩护桌在西、控方在东，木隔栏后的南侧旁听席已坐满。瑞秋在东南，棕文件袋放膝上。路易吉与海伦由南通道到西桌，双腕自由。 本镜画内角色：LUIGI-RED,HELEN,PROSECUTOR-STATE,JUDGE-STATE。；起态：书记员记下请求，海伦留着清单，青年那张折页仍未展示。；出态：法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。",
+      "sourceLocator": "season/E09.json#/shots/4"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E09-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "南隔栏偏西40mm中全景，海伦在近左、控方在右、北席居后，青年仍在西桌。；相机：固定；法官示意坐下后让海伦自行降回构图，不切法官正面。；焦点：控方指另一组页码与律师收患者页相互对照，公开程序给出边界。",
+      "sourceLocator": "season/E09.json#/shots/4"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E09-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E09-SH007.txt；26秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E09.json#/shots/4"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E09-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。；切点：法官转下一项，程序继续，切给这一结果落到谁身上。；接口：接E09-SH009；法官转下一项，程序继续，切给这一结果落到谁身上。",
+      "sourceLocator": "season/E09.json#/shots/4"
+    },
+    {
+      "role": "direction",
+      "shotId": "E09-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她抽出又收回折纸，没有得到关于死亡的答复。；入镜已知：法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。；本镜新知：折纸回棕袋，瑞秋没有与西侧青年对视；青年自由双手在画外继承。；实际写出的动作：瑞秋从棕文件袋抽出一张折纸，捏在手里却没有展开。后排有椅子挪动，她将折纸塞回袋中，仍看着北面。",
+      "sourceLocator": "season/E09.json#/shots/5"
+    },
+    {
+      "role": "performance",
+      "shotId": "E09-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。 → 折纸回棕袋，瑞秋没有与西侧青年对视；青年自由双手在画外继承。；无对白，以已写动作承载表演。",
+      "sourceLocator": "season/E09.json#/shots/5"
+    },
+    {
+      "role": "staging",
+      "shotId": "E09-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "法官席在北、辩护桌在西、控方在东，木隔栏后的南侧旁听席已坐满。瑞秋在东南，棕文件袋放膝上。路易吉与海伦由南通道到西桌，双腕自由。 本镜画内角色：RACHEL。；起态：法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。；出态：折纸回棕袋，瑞秋没有与西侧青年对视；青年自由双手在画外继承。",
+      "sourceLocator": "season/E09.json#/shots/5"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E09-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "东南旁听区南侧75mm瑞秋中近景，棕袋与折纸在膝上，北席不入画。；相机：固定7秒，不推近折纸，不揭纸上内容。；焦点：她抽出又收回折纸，没有得到关于死亡的答复。",
+      "sourceLocator": "season/E09.json#/shots/5"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E09-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E09-SH009.txt；7秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E09.json#/shots/5"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E09-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "折纸回棕袋，瑞秋没有与西侧青年对视；青年自由双手在画外继承。；切点：她重新望北席，转庭外商品化热闹，私人损失留在前一镜。；接口：本场结果成立后切入 E09-SC03（EXTERIOR，日·答辩后）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E09.json#/shots/5"
+    },
+    {
+      "role": "direction",
+      "shotId": "E09-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：记者要经过的路径与商品链接争抢同一个空间。；入镜已知：把公众消费与记者实际追问放在同一条通路。；本镜新知：诺拉从稳定器东侧通过，布莱克留在西栏杆外。；实际写出的动作：布莱克让手机对着自己，把商品图弹到直播角落。诺拉从东侧通道绕到稳定器外端，试图先看北台阶是否有人出来。\n海伦出现在北台阶，诺拉想从东侧通道接近，稳定器横过来挡住半步。她把红本贴身收窄，示意布莱克让出空间；他仍盯着评论区。",
+      "sourceLocator": "season/E09.json#/shots/6"
+    },
+    {
+      "role": "performance",
+      "shotId": "E09-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "布莱克举稳定器，诺拉从东通道走到栏杆边。 → 诺拉从稳定器东侧通过，布莱克留在西栏杆外。；布莱克向直播观众：That color's back in stock. Link below. It'll ship before the next hearing.；眼睛看评论，熟练接着卖 / 诺拉向布莱克：Were you inside?；普通询问 / 诺拉向布莱克：Can you move?；绕设备时问，不停下来争吵 / 布莱克向直播观众：Hang on, the lawyer's coming out. Size chart's down below.；先应付身旁的人，立刻转回直播",
+      "sourceLocator": "season/E09.json#/shots/6"
+    },
+    {
+      "role": "staging",
+      "shotId": "E09-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "法院北台阶下，记者集中在西栏杆外，东侧通路留给出庭者。诺拉抱红本等出口，布莱克的稳定器正占通路半步；路易吉从内部押返通道离开，不在广场。 本镜画内角色：HOST,NORA,HELEN。；起态：布莱克举稳定器，诺拉从东通道走到栏杆边。；出态：诺拉从稳定器东侧通过，布莱克留在西栏杆外。",
+      "sourceLocator": "season/E09.json#/shots/6"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E09-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "法院东通路外侧35mm中景，布莱克与稳定器在近西侧，诺拉和北台阶保持可见。；相机：随诺拉向北微移两步，稳定器挡路时停住，不模拟主播直播机位。；焦点：记者要经过的路径与商品链接争抢同一个空间。",
+      "sourceLocator": "season/E09.json#/shots/6"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E09-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E09-SH010.txt；23秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E09.json#/shots/6"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E09-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "诺拉从稳定器东侧通过，布莱克留在西栏杆外。；切点：海伦下台阶，诺拉绕过设备接近，切随行视角。；接口：接E09-SH012；海伦下台阶，诺拉绕过设备接近，切随行视角。",
+      "sourceLocator": "season/E09.json#/shots/6"
+    },
+    {
+      "role": "direction",
+      "shotId": "E09-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：录音设备在她胸前，不堵路；回答完整保留开头的Nothing。；入镜已知：诺拉从稳定器东侧通过，布莱克留在西栏杆外。；本镜新知：海伦向南走出，诺拉停在东侧通道，录音已得完整答复。；实际写出的动作：诺拉跟上海伦，手机贴近自己胸前录音，不挡通路。海伦没有停在主播镜头前，边走边回答；诺拉走到南侧后停下，让她离开。",
+      "sourceLocator": "season/E09.json#/shots/7"
+    },
+    {
+      "role": "performance",
+      "shotId": "E09-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "诺拉从稳定器东侧通过，布莱克留在西栏杆外。 → 海伦向南走出，诺拉停在东侧通道，录音已得完整答复。；诺拉向海伦：Anything thrown out today?；抢一句可用答复 / 海伦向诺拉：Nothing. We've asked for the arrest recordings. We don't have them yet.；脚步不停，堵住胜利标题",
+      "sourceLocator": "season/E09.json#/shots/7"
+    },
+    {
+      "role": "staging",
+      "shotId": "E09-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "法院北台阶下，记者集中在西栏杆外，东侧通路留给出庭者。诺拉抱红本等出口，布莱克的稳定器正占通路半步；路易吉从内部押返通道离开，不在广场。 本镜画内角色：NORA,HELEN。；起态：诺拉从稳定器东侧通过，布莱克留在西栏杆外。；出态：海伦向南走出，诺拉停在东侧通道，录音已得完整答复。",
+      "sourceLocator": "season/E09.json#/shots/7"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E09-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "东通路东侧50mm诺拉与海伦并行中景，西栏杆退为背景。；相机：实拍平行向南后退三米，海伦答完离开后停在诺拉。；焦点：录音设备在她胸前，不堵路；回答完整保留开头的Nothing。",
+      "sourceLocator": "season/E09.json#/shots/7"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E09-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E09-SH012.txt；13秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E09.json#/shots/7"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E09-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "海伦向南走出，诺拉停在东侧通道，录音已得完整答复。；切点：海伦走出，诺拉手机新消息使她停下来。；接口：接E09-SH013；海伦走出，诺拉手机新消息使她停下来。",
+      "sourceLocator": "season/E09.json#/shots/7"
+    },
+    {
+      "role": "direction",
+      "shotId": "E09-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：匿名消息与她记下处理编号，手挡屏保护来信。；入镜已知：海伦向南走出，诺拉停在东侧通道，录音已得完整答复。；本镜新知：诺拉保存匿名线索，未验证，也未将来源发给编辑。；实际写出的动作：匿名消息打断诺拉保存录音。她把屏幕向身前转，抄下处理编号，再把来信收起；西栏杆后的主播仍在工作，只作不可辨背景。",
+      "sourceLocator": "season/E09.json#/shots/8"
+    },
+    {
+      "role": "performance",
+      "shotId": "E09-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "海伦向南走出，诺拉停在东侧通道，录音已得完整答复。 → 诺拉保存匿名线索，未验证，也未将来源发给编辑。；无对白，以已写动作承载表演。",
+      "sourceLocator": "season/E09.json#/shots/8"
+    },
+    {
+      "role": "staging",
+      "shotId": "E09-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "法院北台阶下，记者集中在西栏杆外，东侧通路留给出庭者。诺拉抱红本等出口，布莱克的稳定器正占通路半步；路易吉从内部押返通道离开，不在广场。 本镜画内角色：NORA。；起态：海伦向南走出，诺拉停在东侧通道，录音已得完整答复。；出态：诺拉保存匿名线索，未验证，也未将来源发给编辑。",
+      "sourceLocator": "season/E09.json#/shots/8"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E09-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "诺拉东肩后65mm手机和红本近景，栏杆人群失焦。；相机：固定，不转去窥看主播另一部手机。；焦点：匿名消息与她记下处理编号，手挡屏保护来信。",
+      "sourceLocator": "season/E09.json#/shots/8"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E09-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E09-SH013.txt；7秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E09.json#/shots/8"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E09-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "诺拉保存匿名线索，未验证，也未将来源发给编辑。；切点：编号落笔，进入当晚编辑部追查。；接口：本场结果成立后切入 E09-SC04（NEWSROOM，夜·当晚）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E09.json#/shots/8"
+    },
+    {
+      "role": "direction",
+      "shotId": "E09-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：编辑给工作，她遮内部编号又保存短片，两个任务都真正在做。；入镜已知：让追查与记者实际工作合同并行。；本镜新知：她先保存短片工程，再把匿名便签翻到空白面准备打电话。；实际写出的动作：编辑部打印机吐出最后一页，诺拉从西桌绕过去取，编辑伸手想看，她用红本盖住内部编号，只露对照字段。编辑没有接过去。\n编辑将毛衣短视频的待剪任务推到她电脑上，诺拉打开了剪辑窗口，又把匿名便签压在键盘边。她没有把任何一项关掉。\n诺拉把字幕轨拉到开头，编辑看见她还留着匿名材料，停在桌边等成片时点。她没有答应当天写完新报道。",
+      "sourceLocator": "season/E09.json#/shots/9"
+    },
+    {
+      "role": "performance",
+      "shotId": "E09-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "打印机刚吐出附件末页，诺拉从西桌起身去取；红本在左手，黑手机留桌右。 → 她先保存短片工程，再把匿名便签翻到空白面准备打电话。；值班编辑向诺拉：Can we run this?；手已伸向纸，要当天能用的东西 / 诺拉向值班编辑：Not yet. This box is blank. I don't know what should be in it.；看着空栏，拒绝先给结论 / 值班编辑向诺拉：Get the sweater clip done first. Then follow this up.；把付钱的工作推到她面前 / 诺拉向值班编辑：Send me the clean audio.；接受交换 / 值班编辑向诺拉：The clip's due in ten.；说排期，不评价调查 / 诺拉向莉娜：You'll have it. I'm not running the documents tonight.；先承担手头工作，不承诺没查清的报道",
+      "sourceLocator": "season/E09.json#/shots/9"
+    },
+    {
+      "role": "staging",
+      "shotId": "E09-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "夜间编辑部东桌还有女值班编辑，西桌是诺拉的红本、电脑与匿名便签。北屏静音重播庭审新闻，打印机在过道另一边。 本镜画内角色：NORA,EDITOR-DESK。；起态：打印机刚吐出附件末页，诺拉从西桌起身去取；红本在左手，黑手机留桌右。；出态：她先保存短片工程，再把匿名便签翻到空白面准备打电话。",
+      "sourceLocator": "season/E09.json#/shots/9"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E09-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "编辑部过道南端35mm共享中景，西桌诺拉、东桌女编辑与打印机取纸路线同框。；相机：诺拉取回纸后相机停止，余下谈排期保持固定。；焦点：编辑给工作，她遮内部编号又保存短片，两个任务都真正在做。",
+      "sourceLocator": "season/E09.json#/shots/9"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E09-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E09-SH014.txt；33秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E09.json#/shots/9"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E09-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "她先保存短片工程，再把匿名便签翻到空白面准备打电话。；切点：编辑转回自己桌，诺拉把私人电话接起来，转到她的单独决定。；接口：接E09-SH016；编辑转回自己桌，诺拉把私人电话接起来，转到她的单独决定。",
+      "sourceLocator": "season/E09.json#/shots/9"
+    },
+    {
+      "role": "direction",
+      "shotId": "E09-SH016",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她停止剪辑，明确告知匿名风险并等约见答复；对端不加台词。；入镜已知：她先保存短片工程，再把匿名便签翻到空白面准备打电话。；本镜新知：她写下约见时间，视频停在半剪状态，来源姓名没有说出口。；实际写出的动作：诺拉一边用左手拖视频音轨，一边将右手手机贴耳拨通匿名号码。听到街边底声，她停下鼠标，把便签翻到空白背面。",
+      "sourceLocator": "season/E09.json#/shots/10"
+    },
+    {
+      "role": "performance",
+      "shotId": "E09-SH016",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "她先保存短片工程，再把匿名便签翻到空白面准备打电话。 → 她写下约见时间，视频停在半剪状态，来源姓名没有说出口。；诺拉向匿名来源：I won't use your name. Someone could still figure it out. Do you want to meet?；电话接通后停下工作，把决定留给对方",
+      "sourceLocator": "season/E09.json#/shots/10"
+    },
+    {
+      "role": "staging",
+      "shotId": "E09-SH016",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "夜间编辑部东桌还有女值班编辑，西桌是诺拉的红本、电脑与匿名便签。北屏静音重播庭审新闻，打印机在过道另一边。 本镜画内角色：NORA。；起态：她先保存短片工程，再把匿名便签翻到空白面准备打电话。；出态：她写下约见时间，视频停在半剪状态，来源姓名没有说出口。",
+      "sourceLocator": "season/E09.json#/shots/10"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E09-SH016",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "诺拉西桌南侧65mm侧面中近景，剪辑窗口只留光和一角，匿名便签在手边。；相机：固定14秒，电话接通时不加推镜。；焦点：她停止剪辑，明确告知匿名风险并等约见答复；对端不加台词。",
+      "sourceLocator": "season/E09.json#/shots/10"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E09-SH016",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E09-SH016.txt；14秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E09.json#/shots/10"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E09-SH016",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "她写下约见时间，视频停在半剪状态，来源姓名没有说出口。；切点：她写下见面时间，切翌日约见现场。；接口：本集结束。诺拉明确说明即使匿名也可能被认出，随后询问来源是否仍愿见面；决定留在电话另一端。 下集从CAFE展开：有限的三例材料，是否足以支持记者想发表的那句话？",
+      "sourceLocator": "season/E09.json#/shots/10"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "E09-SH001",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "看他试着索取折页、她把页压回去。",
+        "audiencePayoff": "折页仍在海伦蓝夹内，青年双腕仍在身前铐住。",
+        "trigger": "路易吉身前腕铐未解，海伦站他西侧，蓝夹里露出一张折页。；路易吉用被铐住的双手示意蓝夹里的折页，想让海伦现在拿出来。北门打开，海伦把折页压回夹内，带他让开出来的人。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "法警示意伸手，注意从谈判落到解铐的实际动作。；接E09-SH002；法警示意伸手，注意从谈判落到解铐的实际动作。",
+        "noMotionReason": "固定；让北门开合和来人经过改变背景，不追出门的人。；观看变化：折页仍在海伦蓝夹内，青年双腕仍在身前铐住。"
+      },
+      "camera": {
+        "shotScale": "走廊西墙旁朝东北的35mm双人中景",
+        "position": "走廊西墙旁朝东北的35mm双人中景，画幅到腰下，青年身前腕铐与律师蓝夹同在前层。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "走廊西墙旁朝东北的35mm双人中景，画幅到腰下，青年身前腕铐与律师蓝夹同在前层。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "看他试着索取折页、她把页压回去。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 候庭走廊北门一次只放几个人通过，西侧长椅前，路易吉穿深红毛衣、白衬衫、灰长裤，双腕仍在身前铐住。海伦在他西侧，蓝色案卷夹露出患者折页。 本镜画内角色：LUIGI-RED,HELEN。",
+        "movementIntent": "固定；让北门开合和来人经过改变背景，不追出门的人。"
+      },
+      "composition": {
+        "layout": "候庭走廊北门一次只放几个人通过，西侧长椅前，路易吉穿深红毛衣、白衬衫、灰长裤，双腕仍在身前铐住。海伦在他西侧，蓝色案卷夹露出患者折页。 本镜画内角色：LUIGI-RED,HELEN。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：路易吉用被铐住的双手示意蓝夹里的折页，想让海伦现在拿出来。北门打开，海伦把折页压回夹内，带他让开出来的人。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "看他试着索取折页、她把页压回去。；看他试着索取折页、她把页压回去。"
+      },
+      "temporal": {
+        "durationSeconds": 13,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "看他试着索取折页、她把页压回去。",
+          "path": "机位不移动。",
+          "start": "路易吉身前腕铐未解，海伦站他西侧，蓝夹里露出一张折页。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "折页仍在海伦蓝夹内，青年双腕仍在身前铐住。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E09-SH001-F1",
+            "timeSeconds": 0,
+            "description": "看他试着索取折页、她把页压回去。"
+          }
+        ],
+        "edit": {
+          "entry": "路易吉身前腕铐未解，海伦站他西侧，蓝夹里露出一张折页。",
+          "exit": "折页仍在海伦蓝夹内，青年双腕仍在身前铐住。；法警示意伸手，注意从谈判落到解铐的实际动作。",
+          "preferredTransition": "接E09-SH002；法警示意伸手，注意从谈判落到解铐的实际动作。",
+          "soundBridge": "开门、钥匙、腕铐和脚步声；法警无可辨对白。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E09-SH002",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "两腕确实自由后再跟他追折页的目光，整副铐归法警腰侧。",
+        "audiencePayoff": "青年空手向北入庭，海伦蓝夹在左手，腕铐留法警身上。",
+        "trigger": "折页仍在海伦蓝夹内，青年双腕仍在身前铐住。；法警示意伸手，逐一打开两只腕铐，将整副铐子收进自己的腰侧皮套。路易吉先松开指头，再把双手垂在身体两边，白袖口从毛衣内露出一截。\n路易吉揉一下手腕，目光仍追着蓝夹。法警把北门拉开，海伦问他的背怎么样；他向门走一步，伸手又收回，没有去拿那张纸。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "他空手朝北门跨步，接下一场落座。；本场结果成立后切入 E09-SC02（COURT-STATE，日·紧接候庭）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "法警开两只铐后，连续缓慢上仰到青年揉腕和律师问话；不剪掉收铐过程。；观看变化：青年空手向北入庭，海伦蓝夹在左手，腕铐留法警身上。"
+      },
+      "camera": {
+        "shotScale": "走廊西侧偏南50mm中近景",
+        "position": "走廊西侧偏南50mm中近景，双腕在下半部，青年和海伦上身同框，北门在右后方。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "走廊西侧偏南50mm中近景，双腕在下半部，青年和海伦上身同框，北门在右后方。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "两腕确实自由后再跟他追折页的目光，整副铐归法警腰侧。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 候庭走廊北门一次只放几个人通过，西侧长椅前，路易吉穿深红毛衣、白衬衫、灰长裤，双腕仍在身前铐住。海伦在他西侧，蓝色案卷夹露出患者折页。 本镜画内角色：LUIGI-RED,HELEN。",
+        "movementIntent": "法警开两只铐后，连续缓慢上仰到青年揉腕和律师问话；不剪掉收铐过程。"
+      },
+      "composition": {
+        "layout": "候庭走廊北门一次只放几个人通过，西侧长椅前，路易吉穿深红毛衣、白衬衫、灰长裤，双腕仍在身前铐住。海伦在他西侧，蓝色案卷夹露出患者折页。 本镜画内角色：LUIGI-RED,HELEN。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：法警示意伸手，逐一打开两只腕铐，将整副铐子收进自己的腰侧皮套。路易吉先松开指头，再把双手垂在身体两边，白袖口从毛衣内露出一截。\n路易吉揉一下手腕，目光仍追着蓝夹。法警把北门拉开，海伦问他的背怎么样；他向门走一步，伸手又收回，没有去拿那张纸。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "两腕确实自由后再跟他追折页的目光，整副铐归法警腰侧。；两腕确实自由后再跟他追折页的目光，整副铐归法警腰侧。"
+      },
+      "temporal": {
+        "durationSeconds": 18,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "两腕确实自由后再跟他追折页的目光，整副铐归法警腰侧。",
+          "path": "机位不移动。",
+          "start": "折页仍在海伦蓝夹内，青年双腕仍在身前铐住。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "青年空手向北入庭，海伦蓝夹在左手，腕铐留法警身上。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E09-SH002-F1",
+            "timeSeconds": 0,
+            "description": "两腕确实自由后再跟他追折页的目光，整副铐归法警腰侧。"
+          }
+        ],
+        "edit": {
+          "entry": "折页仍在海伦蓝夹内，青年双腕仍在身前铐住。",
+          "exit": "青年空手向北入庭，海伦蓝夹在左手，腕铐留法警身上。；他空手朝北门跨步，接下一场落座。",
+          "preferredTransition": "本场结果成立后切入 E09-SC02（COURT-STATE，日·紧接候庭）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "开门、钥匙、腕铐和脚步声；法警无可辨对白。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E09-SH004",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "青年自由双手落桌、律师指答辩表与瑞秋看见他，在一个空间同时发生。",
+        "audiencePayoff": "不认罪已录入；青年双手自由，右手从纸边收回膝上。",
+        "trigger": "路易吉从南隔栏口向西辩方桌走，双手空着。；路易吉拉开椅子落座，把两只自由的手放在桌面。瑞秋抬起眼，看清他的脸与整洁衣领，再把棕文件袋移到腿上；法官翻开案卷。\n法官问答辩。路易吉先看蓝夹里的折页，海伦用指尖在空白答辩表上点一下；他转回北席明确作答。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "海伦站起要求录像，切到她与青年争取材料的桌边。；接E09-SH006；海伦站起要求录像，切到她与青年争取材料的桌边。",
+        "noMotionReason": "固定保持22秒，不在问答间推近。；观看变化：不认罪已录入；青年双手自由，右手从纸边收回膝上。"
+      },
+      "camera": {
+        "shotScale": "南侧隔栏中央35mm固定中全景",
+        "position": "南侧隔栏中央35mm固定中全景，北法官席、东西控辩桌和东南旁听第一排都能辨位。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "南侧隔栏中央35mm固定中全景，北法官席、东西控辩桌和东南旁听第一排都能辨位。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "青年自由双手落桌、律师指答辩表与瑞秋看见他，在一个空间同时发生。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 法官席在北、辩护桌在西、控方在东，木隔栏后的南侧旁听席已坐满。瑞秋在东南，棕文件袋放膝上。路易吉与海伦由南通道到西桌，双腕自由。 本镜画内角色：LUIGI-RED,HELEN,JUDGE-STATE,PROSECUTOR-STATE,RACHEL。",
+        "movementIntent": "固定保持22秒，不在问答间推近。"
+      },
+      "composition": {
+        "layout": "法官席在北、辩护桌在西、控方在东，木隔栏后的南侧旁听席已坐满。瑞秋在东南，棕文件袋放膝上。路易吉与海伦由南通道到西桌，双腕自由。 本镜画内角色：LUIGI-RED,HELEN,JUDGE-STATE,PROSECUTOR-STATE,RACHEL。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：路易吉拉开椅子落座，把两只自由的手放在桌面。瑞秋抬起眼，看清他的脸与整洁衣领，再把棕文件袋移到腿上；法官翻开案卷。\n法官问答辩。路易吉先看蓝夹里的折页，海伦用指尖在空白答辩表上点一下；他转回北席明确作答。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "青年自由双手落桌、律师指答辩表与瑞秋看见他，在一个空间同时发生。；青年自由双手落桌、律师指答辩表与瑞秋看见他，在一个空间同时发生。"
+      },
+      "temporal": {
+        "durationSeconds": 22,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "青年自由双手落桌、律师指答辩表与瑞秋看见他，在一个空间同时发生。",
+          "path": "机位不移动。",
+          "start": "路易吉从南隔栏口向西辩方桌走，双手空着。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "不认罪已录入；青年双手自由，右手从纸边收回膝上。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E09-SH004-F1",
+            "timeSeconds": 0,
+            "description": "青年自由双手落桌、律师指答辩表与瑞秋看见他，在一个空间同时发生。"
+          }
+        ],
+        "edit": {
+          "entry": "路易吉从南隔栏口向西辩方桌走，双手空着。",
+          "exit": "不认罪已录入；青年双手自由，右手从纸边收回膝上。；海伦站起要求录像，切到她与青年争取材料的桌边。",
+          "preferredTransition": "接E09-SH006；海伦站起要求录像，切到她与青年争取材料的桌边。",
+          "soundBridge": "木椅、纸页与法庭室内混响，所列台词按既定席位发声，旁听者不喊话。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E09-SH006",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她压住患者折页，同时坚持需要完整录像；控方和法官的声音来自既定席位。",
+        "audiencePayoff": "书记员记下请求，海伦留着清单，青年那张折页仍未展示。",
+        "trigger": "不认罪已录入；青年双手自由，右手从纸边收回膝上。；海伦站起，将搜查申请交到西桌前供书记收取。蓝夹里的患者折页被青年指尖轻轻推出一角，她用另一只手压住。\n海伦的手还压着患者折页，控方先把背包部分标出，要求西桌说明请求范围。海伦没有让青年替她作答，直接把清单中尚缺的起止时间指给书记员。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "录像范围被列入请求，海伦转向笔记作者问题，切回能看见控辩同时反应的位置。；接E09-SH007；录像范围被列入请求，海伦转向笔记作者问题，切回能看见控辩同时反应的位置。",
+        "noMotionReason": "固定，海伦站起后稍上仰保持头部空间，青年仍留画面下侧。；观看变化：书记员记下请求，海伦留着清单，青年那张折页仍未展示。"
+      },
+      "camera": {
+        "shotScale": "西桌南端50mm律师和青年双人中景",
+        "position": "西桌南端50mm律师和青年双人中景，桌上申请与蓝夹在前景；东桌、北席都在画外。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "西桌南端50mm律师和青年双人中景，桌上申请与蓝夹在前景；东桌、北席都在画外。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "她压住患者折页，同时坚持需要完整录像；控方和法官的声音来自既定席位。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 法官席在北、辩护桌在西、控方在东，木隔栏后的南侧旁听席已坐满。瑞秋在东南，棕文件袋放膝上。路易吉与海伦由南通道到西桌，双腕自由。 本镜画内角色：LUIGI-RED,HELEN。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定，海伦站起后稍上仰保持头部空间，青年仍留画面下侧。"
+      },
+      "composition": {
+        "layout": "法官席在北、辩护桌在西、控方在东，木隔栏后的南侧旁听席已坐满。瑞秋在东南，棕文件袋放膝上。路易吉与海伦由南通道到西桌，双腕自由。 本镜画内角色：LUIGI-RED,HELEN。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：海伦站起，将搜查申请交到西桌前供书记收取。蓝夹里的患者折页被青年指尖轻轻推出一角，她用另一只手压住。\n海伦的手还压着患者折页，控方先把背包部分标出，要求西桌说明请求范围。海伦没有让青年替她作答，直接把清单中尚缺的起止时间指给书记员。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她压住患者折页，同时坚持需要完整录像；控方和法官的声音来自既定席位。；她压住患者折页，同时坚持需要完整录像；控方和法官的声音来自既定席位。"
+      },
+      "temporal": {
+        "durationSeconds": 32,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她压住患者折页，同时坚持需要完整录像；控方和法官的声音来自既定席位。",
+          "path": "机位不移动。",
+          "start": "不认罪已录入；青年双手自由，右手从纸边收回膝上。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "书记员记下请求，海伦留着清单，青年那张折页仍未展示。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E09-SH006-F1",
+            "timeSeconds": 0,
+            "description": "她压住患者折页，同时坚持需要完整录像；控方和法官的声音来自既定席位。"
+          }
+        ],
+        "edit": {
+          "entry": "不认罪已录入；青年双手自由，右手从纸边收回膝上。",
+          "exit": "书记员记下请求，海伦留着清单，青年那张折页仍未展示。；录像范围被列入请求，海伦转向笔记作者问题，切回能看见控辩同时反应的位置。",
+          "preferredTransition": "接E09-SH007；录像范围被列入请求，海伦转向笔记作者问题，切回能看见控辩同时反应的位置。",
+          "soundBridge": "木椅、纸页与法庭室内混响，所列台词按既定席位发声，旁听者不喊话。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E09-SH007",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "控方指另一组页码与律师收患者页相互对照，公开程序给出边界。",
+        "audiencePayoff": "法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。",
+        "trigger": "书记员记下请求，海伦留着清单，青年那张折页仍未展示。；青年看见折页被压住，手指缩回桌边。海伦转而提出笔记来源，控方翻开副本可见地指出另一组页码；两人没有展示患者姓名。\n法官把当日清单推给书记员，指定来源问题改由书面申请处理。西侧海伦合住蓝夹的纸声传来；法官示意她坐下，低头转到下一项。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "法官转下一项，程序继续，切给这一结果落到谁身上。；接E09-SH009；法官转下一项，程序继续，切给这一结果落到谁身上。",
+        "noMotionReason": "固定；法官示意坐下后让海伦自行降回构图，不切法官正面。；观看变化：法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。"
+      },
+      "camera": {
+        "shotScale": "南隔栏偏西40mm中全景",
+        "position": "南隔栏偏西40mm中全景，海伦在近左、控方在右、北席居后，青年仍在西桌。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "南隔栏偏西40mm中全景，海伦在近左、控方在右、北席居后，青年仍在西桌。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "控方指另一组页码与律师收患者页相互对照，公开程序给出边界。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 法官席在北、辩护桌在西、控方在东，木隔栏后的南侧旁听席已坐满。瑞秋在东南，棕文件袋放膝上。路易吉与海伦由南通道到西桌，双腕自由。 本镜画内角色：LUIGI-RED,HELEN,PROSECUTOR-STATE,JUDGE-STATE。",
+        "movementIntent": "固定；法官示意坐下后让海伦自行降回构图，不切法官正面。"
+      },
+      "composition": {
+        "layout": "法官席在北、辩护桌在西、控方在东，木隔栏后的南侧旁听席已坐满。瑞秋在东南，棕文件袋放膝上。路易吉与海伦由南通道到西桌，双腕自由。 本镜画内角色：LUIGI-RED,HELEN,PROSECUTOR-STATE,JUDGE-STATE。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：青年看见折页被压住，手指缩回桌边。海伦转而提出笔记来源，控方翻开副本可见地指出另一组页码；两人没有展示患者姓名。\n法官把当日清单推给书记员，指定来源问题改由书面申请处理。西侧海伦合住蓝夹的纸声传来；法官示意她坐下，低头转到下一项。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "控方指另一组页码与律师收患者页相互对照，公开程序给出边界。；控方指另一组页码与律师收患者页相互对照，公开程序给出边界。"
+      },
+      "temporal": {
+        "durationSeconds": 26,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "控方指另一组页码与律师收患者页相互对照，公开程序给出边界。",
+          "path": "机位不移动。",
+          "start": "书记员记下请求，海伦留着清单，青年那张折页仍未展示。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E09-SH007-F1",
+            "timeSeconds": 0,
+            "description": "控方指另一组页码与律师收患者页相互对照，公开程序给出边界。"
+          }
+        ],
+        "edit": {
+          "entry": "书记员记下请求，海伦留着清单，青年那张折页仍未展示。",
+          "exit": "法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。；法官转下一项，程序继续，切给这一结果落到谁身上。",
+          "preferredTransition": "接E09-SH009；法官转下一项，程序继续，切给这一结果落到谁身上。",
+          "soundBridge": "木椅、纸页与法庭室内混响，所列台词按既定席位发声，旁听者不喊话。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E09-SH009",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她抽出又收回折纸，没有得到关于死亡的答复。",
+        "audiencePayoff": "折纸回棕袋，瑞秋没有与西侧青年对视；青年自由双手在画外继承。",
+        "trigger": "法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。；瑞秋从棕文件袋抽出一张折纸，捏在手里却没有展开。后排有椅子挪动，她将折纸塞回袋中，仍看着北面。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "她重新望北席，转庭外商品化热闹，私人损失留在前一镜。；本场结果成立后切入 E09-SC03（EXTERIOR，日·答辩后）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定7秒，不推近折纸，不揭纸上内容。；观看变化：折纸回棕袋，瑞秋没有与西侧青年对视；青年自由双手在画外继承。"
+      },
+      "camera": {
+        "shotScale": "东南旁听区南侧75mm瑞秋中近景",
+        "position": "东南旁听区南侧75mm瑞秋中近景，棕袋与折纸在膝上，北席不入画。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "东南旁听区南侧75mm瑞秋中近景，棕袋与折纸在膝上，北席不入画。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "她抽出又收回折纸，没有得到关于死亡的答复。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 法官席在北、辩护桌在西、控方在东，木隔栏后的南侧旁听席已坐满。瑞秋在东南，棕文件袋放膝上。路易吉与海伦由南通道到西桌，双腕自由。 本镜画内角色：RACHEL。",
+        "movementIntent": "固定7秒，不推近折纸，不揭纸上内容。"
+      },
+      "composition": {
+        "layout": "法官席在北、辩护桌在西、控方在东，木隔栏后的南侧旁听席已坐满。瑞秋在东南，棕文件袋放膝上。路易吉与海伦由南通道到西桌，双腕自由。 本镜画内角色：RACHEL。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：瑞秋从棕文件袋抽出一张折纸，捏在手里却没有展开。后排有椅子挪动，她将折纸塞回袋中，仍看着北面。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她抽出又收回折纸，没有得到关于死亡的答复。；她抽出又收回折纸，没有得到关于死亡的答复。"
+      },
+      "temporal": {
+        "durationSeconds": 7,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她抽出又收回折纸，没有得到关于死亡的答复。",
+          "path": "机位不移动。",
+          "start": "法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "折纸回棕袋，瑞秋没有与西侧青年对视；青年自由双手在画外继承。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E09-SH009-F1",
+            "timeSeconds": 0,
+            "description": "她抽出又收回折纸，没有得到关于死亡的答复。"
+          }
+        ],
+        "edit": {
+          "entry": "法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。",
+          "exit": "折纸回棕袋，瑞秋没有与西侧青年对视；青年自由双手在画外继承。；她重新望北席，转庭外商品化热闹，私人损失留在前一镜。",
+          "preferredTransition": "本场结果成立后切入 E09-SC03（EXTERIOR，日·答辩后）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "木椅、纸页与法庭室内混响，所列台词按既定席位发声，旁听者不喊话。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E09-SH010",
+      "decision": {
+        "primaryTechniqueId": "M04",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "记者要经过的路径与商品链接争抢同一个空间。",
+        "audiencePayoff": "诺拉从稳定器东侧通过，布莱克留在西栏杆外。",
+        "trigger": "布莱克举稳定器，诺拉从东通道走到栏杆边。；布莱克让手机对着自己，把商品图弹到直播角落。诺拉从东侧通道绕到稳定器外端，试图先看北台阶是否有人出来。\n海伦出现在北台阶，诺拉想从东侧通道接近，稳定器横过来挡住半步。她把红本贴身收窄，示意布莱克让出空间；他仍盯着评论区。",
+        "cameraMode": "moving",
+        "focusMode": "hold",
+        "exitMatch": "海伦下台阶，诺拉绕过设备接近，切随行视角。；接E09-SH012；海伦下台阶，诺拉绕过设备接近，切随行视角。"
+      },
+      "camera": {
+        "shotScale": "法院东通路外侧35mm中景",
+        "position": "法院东通路外侧35mm中景，布莱克与稳定器在近西侧，诺拉和北台阶保持可见。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "法院东通路外侧35mm中景，布莱克与稳定器在近西侧，诺拉和北台阶保持可见。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "记者要经过的路径与商品链接争抢同一个空间。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 法院北台阶下，记者集中在西栏杆外，东侧通路留给出庭者。诺拉抱红本等出口，布莱克的稳定器正占通路半步；路易吉从内部押返通道离开，不在广场。 本镜画内角色：HOST,NORA,HELEN。",
+        "movementIntent": "随诺拉向北微移两步，稳定器挡路时停住，不模拟主播直播机位。"
+      },
+      "composition": {
+        "layout": "法院北台阶下，记者集中在西栏杆外，东侧通路留给出庭者。诺拉抱红本等出口，布莱克的稳定器正占通路半步；路易吉从内部押返通道离开，不在广场。 本镜画内角色：HOST,NORA,HELEN。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：布莱克让手机对着自己，把商品图弹到直播角落。诺拉从东侧通道绕到稳定器外端，试图先看北台阶是否有人出来。\n海伦出现在北台阶，诺拉想从东侧通道接近，稳定器横过来挡住半步。她把红本贴身收窄，示意布莱克让出空间；他仍盯着评论区。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "记者要经过的路径与商品链接争抢同一个空间。；记者要经过的路径与商品链接争抢同一个空间。"
+      },
+      "temporal": {
+        "durationSeconds": 23,
+        "cameraMotion": {
+          "type": "gimbal",
+          "motivation": "记者要经过的路径与商品链接争抢同一个空间。",
+          "path": "随诺拉向北微移两步，稳定器挡路时停住，不模拟主播直播机位。",
+          "start": "布莱克举稳定器，诺拉从东通道走到栏杆边。",
+          "acceleration": "仅执行作者本镜规定的启动与速度，不另加缓起：随诺拉向北微移两步，稳定器挡路时停住，不模拟主播直播机位。",
+          "peak": "依本镜作者运动描述，不统一套匀速：随诺拉向北微移两步，稳定器挡路时停住，不模拟主播直播机位。",
+          "deceleration": "不强制停稳；按作者出点接后镜：海伦下台阶，诺拉绕过设备接近，切随行视角。",
+          "end": "诺拉从稳定器东侧通过，布莱克留在西栏杆外。",
+          "framingChange": "随诺拉向北微移两步，稳定器挡路时停住，不模拟主播直播机位。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E09-SH010-F1",
+            "timeSeconds": 0,
+            "description": "记者要经过的路径与商品链接争抢同一个空间。"
+          }
+        ],
+        "edit": {
+          "entry": "布莱克举稳定器，诺拉从东通道走到栏杆边。",
+          "exit": "诺拉从稳定器东侧通过，布莱克留在西栏杆外。；海伦下台阶，诺拉绕过设备接近，切随行视角。",
+          "preferredTransition": "接E09-SH012；海伦下台阶，诺拉绕过设备接近，切随行视角。",
+          "soundBridge": "庭外人群底声与所列现场话语，后期文字不额外朗读。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E09-SH012",
+      "decision": {
+        "primaryTechniqueId": "M02",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "录音设备在她胸前，不堵路；回答完整保留开头的Nothing。",
+        "audiencePayoff": "海伦向南走出，诺拉停在东侧通道，录音已得完整答复。",
+        "trigger": "诺拉从稳定器东侧通过，布莱克留在西栏杆外。；诺拉跟上海伦，手机贴近自己胸前录音，不挡通路。海伦没有停在主播镜头前，边走边回答；诺拉走到南侧后停下，让她离开。",
+        "cameraMode": "moving",
+        "focusMode": "hold",
+        "exitMatch": "海伦走出，诺拉手机新消息使她停下来。；接E09-SH013；海伦走出，诺拉手机新消息使她停下来。"
+      },
+      "camera": {
+        "shotScale": "东通路东侧50mm诺拉与海伦并行中景",
+        "position": "东通路东侧50mm诺拉与海伦并行中景，西栏杆退为背景。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "东通路东侧50mm诺拉与海伦并行中景，西栏杆退为背景。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "录音设备在她胸前，不堵路；回答完整保留开头的Nothing。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 法院北台阶下，记者集中在西栏杆外，东侧通路留给出庭者。诺拉抱红本等出口，布莱克的稳定器正占通路半步；路易吉从内部押返通道离开，不在广场。 本镜画内角色：NORA,HELEN。",
+        "movementIntent": "实拍平行向南后退三米，海伦答完离开后停在诺拉。"
+      },
+      "composition": {
+        "layout": "法院北台阶下，记者集中在西栏杆外，东侧通路留给出庭者。诺拉抱红本等出口，布莱克的稳定器正占通路半步；路易吉从内部押返通道离开，不在广场。 本镜画内角色：NORA,HELEN。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：诺拉跟上海伦，手机贴近自己胸前录音，不挡通路。海伦没有停在主播镜头前，边走边回答；诺拉走到南侧后停下，让她离开。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "录音设备在她胸前，不堵路；回答完整保留开头的Nothing。；录音设备在她胸前，不堵路；回答完整保留开头的Nothing。"
+      },
+      "temporal": {
+        "durationSeconds": 13,
+        "cameraMotion": {
+          "type": "dolly",
+          "motivation": "录音设备在她胸前，不堵路；回答完整保留开头的Nothing。",
+          "path": "实拍平行向南后退三米，海伦答完离开后停在诺拉。",
+          "start": "诺拉从稳定器东侧通过，布莱克留在西栏杆外。",
+          "acceleration": "仅执行作者本镜规定的启动与速度，不另加缓起：实拍平行向南后退三米，海伦答完离开后停在诺拉。",
+          "peak": "依本镜作者运动描述，不统一套匀速：实拍平行向南后退三米，海伦答完离开后停在诺拉。",
+          "deceleration": "不强制停稳；按作者出点接后镜：海伦走出，诺拉手机新消息使她停下来。",
+          "end": "海伦向南走出，诺拉停在东侧通道，录音已得完整答复。",
+          "framingChange": "实拍平行向南后退三米，海伦答完离开后停在诺拉。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E09-SH012-F1",
+            "timeSeconds": 0,
+            "description": "录音设备在她胸前，不堵路；回答完整保留开头的Nothing。"
+          }
+        ],
+        "edit": {
+          "entry": "诺拉从稳定器东侧通过，布莱克留在西栏杆外。",
+          "exit": "海伦向南走出，诺拉停在东侧通道，录音已得完整答复。；海伦走出，诺拉手机新消息使她停下来。",
+          "preferredTransition": "接E09-SH013；海伦走出，诺拉手机新消息使她停下来。",
+          "soundBridge": "庭外人群底声与所列现场话语，后期文字不额外朗读。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E09-SH013",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "匿名消息与她记下处理编号，手挡屏保护来信。",
+        "audiencePayoff": "诺拉保存匿名线索，未验证，也未将来源发给编辑。",
+        "trigger": "海伦向南走出，诺拉停在东侧通道，录音已得完整答复。；匿名消息打断诺拉保存录音。她把屏幕向身前转，抄下处理编号，再把来信收起；西栏杆后的主播仍在工作，只作不可辨背景。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "编号落笔，进入当晚编辑部追查。；本场结果成立后切入 E09-SC04（NEWSROOM，夜·当晚）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定，不转去窥看主播另一部手机。；观看变化：诺拉保存匿名线索，未验证，也未将来源发给编辑。"
+      },
+      "camera": {
+        "shotScale": "诺拉东肩后65mm手机和红本近景",
+        "position": "诺拉东肩后65mm手机和红本近景，栏杆人群失焦。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "诺拉东肩后65mm手机和红本近景，栏杆人群失焦。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "匿名消息与她记下处理编号，手挡屏保护来信。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 法院北台阶下，记者集中在西栏杆外，东侧通路留给出庭者。诺拉抱红本等出口，布莱克的稳定器正占通路半步；路易吉从内部押返通道离开，不在广场。 本镜画内角色：NORA。",
+        "movementIntent": "固定，不转去窥看主播另一部手机。"
+      },
+      "composition": {
+        "layout": "法院北台阶下，记者集中在西栏杆外，东侧通路留给出庭者。诺拉抱红本等出口，布莱克的稳定器正占通路半步；路易吉从内部押返通道离开，不在广场。 本镜画内角色：NORA。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：匿名消息打断诺拉保存录音。她把屏幕向身前转，抄下处理编号，再把来信收起；西栏杆后的主播仍在工作，只作不可辨背景。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "匿名消息与她记下处理编号，手挡屏保护来信。；匿名消息与她记下处理编号，手挡屏保护来信。"
+      },
+      "temporal": {
+        "durationSeconds": 7,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "匿名消息与她记下处理编号，手挡屏保护来信。",
+          "path": "机位不移动。",
+          "start": "海伦向南走出，诺拉停在东侧通道，录音已得完整答复。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "诺拉保存匿名线索，未验证，也未将来源发给编辑。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E09-SH013-F1",
+            "timeSeconds": 0,
+            "description": "匿名消息与她记下处理编号，手挡屏保护来信。"
+          }
+        ],
+        "edit": {
+          "entry": "海伦向南走出，诺拉停在东侧通道，录音已得完整答复。",
+          "exit": "诺拉保存匿名线索，未验证，也未将来源发给编辑。；编号落笔，进入当晚编辑部追查。",
+          "preferredTransition": "本场结果成立后切入 E09-SC04（NEWSROOM，夜·当晚）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "庭外人群底声与所列现场话语，后期文字不额外朗读。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E09-SH014",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "编辑给工作，她遮内部编号又保存短片，两个任务都真正在做。",
+        "audiencePayoff": "她先保存短片工程，再把匿名便签翻到空白面准备打电话。",
+        "trigger": "打印机刚吐出附件末页，诺拉从西桌起身去取；红本在左手，黑手机留桌右。；编辑部打印机吐出最后一页，诺拉从西桌绕过去取，编辑伸手想看，她用红本盖住内部编号，只露对照字段。编辑没有接过去。\n编辑将毛衣短视频的待剪任务推到她电脑上，诺拉打开了剪辑窗口，又把匿名便签压在键盘边。她没有把任何一项关掉。\n诺拉把字幕轨拉到开头，编辑看见她还留着匿名材料，停在桌边等成片时点。她没有答应当天写完新报道。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "编辑转回自己桌，诺拉把私人电话接起来，转到她的单独决定。；接E09-SH016；编辑转回自己桌，诺拉把私人电话接起来，转到她的单独决定。",
+        "noMotionReason": "诺拉取回纸后相机停止，余下谈排期保持固定。；观看变化：她先保存短片工程，再把匿名便签翻到空白面准备打电话。"
+      },
+      "camera": {
+        "shotScale": "编辑部过道南端35mm共享中景",
+        "position": "编辑部过道南端35mm共享中景，西桌诺拉、东桌女编辑与打印机取纸路线同框。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "编辑部过道南端35mm共享中景，西桌诺拉、东桌女编辑与打印机取纸路线同框。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "编辑给工作，她遮内部编号又保存短片，两个任务都真正在做。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 夜间编辑部东桌还有女值班编辑，西桌是诺拉的红本、电脑与匿名便签。北屏静音重播庭审新闻，打印机在过道另一边。 本镜画内角色：NORA,EDITOR-DESK。",
+        "movementIntent": "诺拉取回纸后相机停止，余下谈排期保持固定。"
+      },
+      "composition": {
+        "layout": "夜间编辑部东桌还有女值班编辑，西桌是诺拉的红本、电脑与匿名便签。北屏静音重播庭审新闻，打印机在过道另一边。 本镜画内角色：NORA,EDITOR-DESK。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：编辑部打印机吐出最后一页，诺拉从西桌绕过去取，编辑伸手想看，她用红本盖住内部编号，只露对照字段。编辑没有接过去。\n编辑将毛衣短视频的待剪任务推到她电脑上，诺拉打开了剪辑窗口，又把匿名便签压在键盘边。她没有把任何一项关掉。\n诺拉把字幕轨拉到开头，编辑看见她还留着匿名材料，停在桌边等成片时点。她没有答应当天写完新报道。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "编辑给工作，她遮内部编号又保存短片，两个任务都真正在做。；编辑给工作，她遮内部编号又保存短片，两个任务都真正在做。"
+      },
+      "temporal": {
+        "durationSeconds": 33,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "编辑给工作，她遮内部编号又保存短片，两个任务都真正在做。",
+          "path": "机位不移动。",
+          "start": "打印机刚吐出附件末页，诺拉从西桌起身去取；红本在左手，黑手机留桌右。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "她先保存短片工程，再把匿名便签翻到空白面准备打电话。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E09-SH014-F1",
+            "timeSeconds": 0,
+            "description": "编辑给工作，她遮内部编号又保存短片，两个任务都真正在做。"
+          }
+        ],
+        "edit": {
+          "entry": "打印机刚吐出附件末页，诺拉从西桌起身去取；红本在左手，黑手机留桌右。",
+          "exit": "她先保存短片工程，再把匿名便签翻到空白面准备打电话。；编辑转回自己桌，诺拉把私人电话接起来，转到她的单独决定。",
+          "preferredTransition": "接E09-SH016；编辑转回自己桌，诺拉把私人电话接起来，转到她的单独决定。",
+          "soundBridge": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E09-SH016",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她停止剪辑，明确告知匿名风险并等约见答复；对端不加台词。",
+        "audiencePayoff": "她写下约见时间，视频停在半剪状态，来源姓名没有说出口。",
+        "trigger": "她先保存短片工程，再把匿名便签翻到空白面准备打电话。；诺拉一边用左手拖视频音轨，一边将右手手机贴耳拨通匿名号码。听到街边底声，她停下鼠标，把便签翻到空白背面。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "她写下见面时间，切翌日约见现场。；本集结束。诺拉明确说明即使匿名也可能被认出，随后询问来源是否仍愿见面；决定留在电话另一端。 下集从CAFE展开：有限的三例材料，是否足以支持记者想发表的那句话？",
+        "noMotionReason": "固定14秒，电话接通时不加推镜。；观看变化：她写下约见时间，视频停在半剪状态，来源姓名没有说出口。"
+      },
+      "camera": {
+        "shotScale": "诺拉西桌南侧65mm侧面中近景",
+        "position": "诺拉西桌南侧65mm侧面中近景，剪辑窗口只留光和一角，匿名便签在手边。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "诺拉西桌南侧65mm侧面中近景，剪辑窗口只留光和一角，匿名便签在手边。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "她停止剪辑，明确告知匿名风险并等约见答复；对端不加台词。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 夜间编辑部东桌还有女值班编辑，西桌是诺拉的红本、电脑与匿名便签。北屏静音重播庭审新闻，打印机在过道另一边。 本镜画内角色：NORA。",
+        "movementIntent": "固定14秒，电话接通时不加推镜。"
+      },
+      "composition": {
+        "layout": "夜间编辑部东桌还有女值班编辑，西桌是诺拉的红本、电脑与匿名便签。北屏静音重播庭审新闻，打印机在过道另一边。 本镜画内角色：NORA。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：诺拉一边用左手拖视频音轨，一边将右手手机贴耳拨通匿名号码。听到街边底声，她停下鼠标，把便签翻到空白背面。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她停止剪辑，明确告知匿名风险并等约见答复；对端不加台词。；她停止剪辑，明确告知匿名风险并等约见答复；对端不加台词。"
+      },
+      "temporal": {
+        "durationSeconds": 14,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她停止剪辑，明确告知匿名风险并等约见答复；对端不加台词。",
+          "path": "机位不移动。",
+          "start": "她先保存短片工程，再把匿名便签翻到空白面准备打电话。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "她写下约见时间，视频停在半剪状态，来源姓名没有说出口。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E09-SH016-F1",
+            "timeSeconds": 0,
+            "description": "她停止剪辑，明确告知匿名风险并等约见答复；对端不加台词。"
+          }
+        ],
+        "edit": {
+          "entry": "她先保存短片工程，再把匿名便签翻到空白面准备打电话。",
+          "exit": "她写下约见时间，视频停在半剪状态，来源姓名没有说出口。；她写下见面时间，切翌日约见现场。",
+          "preferredTransition": "本集结束。诺拉明确说明即使匿名也可能被认出，随后询问来源是否仍愿见面；决定留在电话另一端。 下集从CAFE展开：有限的三例材料，是否足以支持记者想发表的那句话？",
+          "soundBridge": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    }
+  ]
+}

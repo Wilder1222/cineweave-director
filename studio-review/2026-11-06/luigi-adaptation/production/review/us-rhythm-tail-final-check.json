@@ -1,0 +1,251 @@
+{
+  "status": "text_checks_pass_pending_media",
+  "scope": "E16–E24 all 30 scenes; final E18 three-plus-three middle patch merged",
+  "scenes": [
+    {
+      "id": "E16-SC01",
+      "seconds": 80,
+      "shots": 3,
+      "cues": 8
+    },
+    {
+      "id": "E16-SC02",
+      "seconds": 110,
+      "shots": 3,
+      "cues": 16
+    },
+    {
+      "id": "E16-SC03",
+      "seconds": 25,
+      "shots": 1,
+      "cues": 0
+    },
+    {
+      "id": "E17-SC01",
+      "seconds": 75,
+      "shots": 2,
+      "cues": 8
+    },
+    {
+      "id": "E17-SC02",
+      "seconds": 55,
+      "shots": 1,
+      "cues": 5
+    },
+    {
+      "id": "E17-SC03",
+      "seconds": 80,
+      "shots": 2,
+      "cues": 8
+    },
+    {
+      "id": "E18-SC01",
+      "seconds": 82,
+      "shots": 3,
+      "cues": 10
+    },
+    {
+      "id": "E18-SC02",
+      "seconds": 85,
+      "shots": 2,
+      "cues": 9
+    },
+    {
+      "id": "E18-SC03",
+      "seconds": 89,
+      "shots": 3,
+      "cues": 10
+    },
+    {
+      "id": "E19-SC01",
+      "seconds": 70,
+      "shots": 2,
+      "cues": 8
+    },
+    {
+      "id": "E19-SC02",
+      "seconds": 67,
+      "shots": 2,
+      "cues": 8
+    },
+    {
+      "id": "E19-SC03",
+      "seconds": 90,
+      "shots": 2,
+      "cues": 9
+    },
+    {
+      "id": "E20-SC01",
+      "seconds": 70,
+      "shots": 2,
+      "cues": 5
+    },
+    {
+      "id": "E20-SC02",
+      "seconds": 105,
+      "shots": 2,
+      "cues": 14
+    },
+    {
+      "id": "E20-SC03",
+      "seconds": 85,
+      "shots": 2,
+      "cues": 9
+    },
+    {
+      "id": "E21-SC01",
+      "seconds": 125,
+      "shots": 3,
+      "cues": 17
+    },
+    {
+      "id": "E21-SC02",
+      "seconds": 50,
+      "shots": 2,
+      "cues": 5
+    },
+    {
+      "id": "E21-SC03",
+      "seconds": 60,
+      "shots": 2,
+      "cues": 7
+    },
+    {
+      "id": "E21-SC04",
+      "seconds": 65,
+      "shots": 2,
+      "cues": 7
+    },
+    {
+      "id": "E22-SC01",
+      "seconds": 44,
+      "shots": 1,
+      "cues": 6
+    },
+    {
+      "id": "E22-SC02",
+      "seconds": 111,
+      "shots": 4,
+      "cues": 12
+    },
+    {
+      "id": "E22-SC03",
+      "seconds": 49,
+      "shots": 1,
+      "cues": 5
+    },
+    {
+      "id": "E23-SC01",
+      "seconds": 66,
+      "shots": 2,
+      "cues": 6
+    },
+    {
+      "id": "E23-SC02",
+      "seconds": 76,
+      "shots": 2,
+      "cues": 6
+    },
+    {
+      "id": "E23-SC03",
+      "seconds": 68,
+      "shots": 1,
+      "cues": 7
+    },
+    {
+      "id": "E24-SC01",
+      "seconds": 60,
+      "shots": 2,
+      "cues": 4
+    },
+    {
+      "id": "E24-SC02",
+      "seconds": 75,
+      "shots": 3,
+      "cues": 10
+    },
+    {
+      "id": "E24-SC03",
+      "seconds": 60,
+      "shots": 2,
+      "cues": 8
+    },
+    {
+      "id": "E24-SC04",
+      "seconds": 48,
+      "shots": 1,
+      "cues": 7
+    },
+    {
+      "id": "E24-SC05",
+      "seconds": 44,
+      "shots": 1,
+      "cues": 2
+    }
+  ],
+  "maxWordsPerSecond": [
+    2.552,
+    "E18-D404"
+  ],
+  "sourceFileHashes": {
+    "E16.json": "f97f463c985e4d1e3d53773d04bc3c67ae9eaebdc105771f526689b5b4d73b08",
+    "E17.json": "3c40d0dfb1119ee06675e151d37ac0494b8cbc6610649528b5b3fd75a3c46cb5",
+    "E18.json": "b2338c280b2d6986592da348f23762e04fd4eb67bdb7984feed176d35da34dc6",
+    "E19.json": "4529fb7ed36cf1ca6e1ad3af910c0f1221108e94600112a39261e83f65240bd4",
+    "E20.json": "e6b5029d72b81fda6d31e3efb04ab111ce2927c4b421b4381973244546f896de",
+    "E21.json": "5d82349a887267b8dcaefca81fec8a557b96eada28b1bc2f7584259996b4b511",
+    "E22.json": "6ede3917cc778e55c1ad4354ddb52652eb9130c326a2cfa6c1554a7fa288dd31",
+    "E23.json": "df2970f396c6b5368bb393ac1e08f46021cb700810018164dcb001e082ec3d02",
+    "E24.json": "b5228f33ced2d1ef03365d6472dff542d5dc5d9fce93cd1d576d5b5e136d4710"
+  },
+  "ep05Seconds": 997,
+  "ep06Seconds": 1001,
+  "newTailCues": 48,
+  "newScenes": 0,
+  "validation": [
+    "English and Chinese script/cue exact sequence",
+    "Unique dialogue ids",
+    "All four dramatic scene fields",
+    "Cue windows ordered and within shot",
+    "No cue crosses a <=26 second technical span",
+    "All technical durations sum to editorial shot duration",
+    "Explicit offscreen roles after coverage redesign",
+    "D017 no earlier public identity claim; D406 refers to prospective employers",
+    "No media rendered or quality claimed",
+    "Cross-review custody, named quote permission, paper action and framing corrected in script/cue/segments",
+    "E24 SH009 static segment state and nonrepeated sound specified; notification overlay precedes phone-down state"
+  ],
+  "crossReviewResolution": [
+    {
+      "item": "E21 original custody",
+      "decision": "adopted",
+      "detail": "D020 patient files remain with Kevin; download contains only redacted findings. Lena retains her own report. No investigator transfer or patient-file download option remains."
+    },
+    {
+      "item": "E21 named quotation consent",
+      "decision": "adopted",
+      "detail": "D018 explicitly authorizes her name for this quotation; 8.0–12.0 window; whole article remains journalist decision."
+    },
+    {
+      "item": "E24 duplicate paper insertion",
+      "decision": "adopted",
+      "detail": "First half inserted before answer; final half inserted once after interview answer. Envelope stays on Lena lap under left palm."
+    },
+    {
+      "item": "E24 SH007/008 coverage",
+      "decision": "adopted",
+      "detail": "SH007 shared medium; SH008 fixed downward desk/hands close view over Nora west shoulder, motivated by remaining callback work."
+    },
+    {
+      "item": "E21 company notice wording",
+      "decision": "adopted_optional",
+      "detail": "D005 says company had been told about gap, bounded by receipt response."
+    },
+    {
+      "item": "E24 SH009 segment continuity",
+      "decision": "adopted_root_followup",
+      "detail": "G01 end/G02 start share explicit seated, phone-down, food-on-table, green/yellow-crayon state; segment composition/sound exclude repeated notification and sitting. Phone-screen overlay now 4.0–6.6 before phone goes face down."
+    }
+  ],
+  "rootIntegration": "Final source hashes refreshed after compiled-prompt review: E21 paper-state boundary, E22 completed mother call and east drinking-station boundary, E24 G02 stationary camera. Dialogue, durations and scene inventory unchanged. Whole-season check: us-rhythm-check.json."
+}

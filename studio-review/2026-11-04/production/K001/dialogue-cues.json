@@ -1,0 +1,177 @@
+{
+  "fps": 24,
+  "timingVerified": false,
+  "lipSyncVerified": false,
+  "cues": [
+    {
+      "shotId": "K001-01",
+      "speaker": "林岑",
+      "text": "你会修电源？记录器要低压检修电源。",
+      "addressee": "本镜对手",
+      "performance": "周先看编号公告再问，不凭一眼就替她定罪",
+      "startFrame": 0,
+      "endFrameExclusive": 912,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "K001-01",
+      "speaker": "周野",
+      "text": "这台是军方在找的？",
+      "addressee": "本镜对手",
+      "performance": "周先看编号公告再问，不凭一眼就替她定罪",
+      "startFrame": 0,
+      "endFrameExclusive": 912,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "K001-01",
+      "speaker": "林岑",
+      "text": "是。我驾驶过它。别的暂时不能说。",
+      "addressee": "本镜对手",
+      "performance": "周先看编号公告再问，不凭一眼就替她定罪",
+      "startFrame": 0,
+      "endFrameExclusive": 912,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "K001-01",
+      "speaker": "周野",
+      "text": "来历都不清楚，我不能借你电源。",
+      "addressee": "本镜对手",
+      "performance": "周先看编号公告再问，不凭一眼就替她定罪",
+      "startFrame": 0,
+      "endFrameExclusive": 912,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "K001-02",
+      "speaker": "林岑",
+      "text": "支撑油压在掉。我先去驾驶舱锁停车支架。记录器的备用电也快没了，再断电，临时数据可能丢。",
+      "addressee": "本镜对手",
+      "performance": "震动后才拨号；林不阻拦不是应急已解决",
+      "startFrame": 912,
+      "endFrameExclusive": 1752,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "K001-02",
+      "speaker": "周野",
+      "text": "车库大型机械不稳，请通知车道住户暂离，并联系应急人员。",
+      "addressee": "本镜对手",
+      "performance": "震动后才拨号；林不阻拦不是应急已解决",
+      "startFrame": 912,
+      "endFrameExclusive": 1752,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "K001-02",
+      "speaker": "周野",
+      "text": "我已经报了位置。",
+      "addressee": "本镜对手",
+      "performance": "震动后才拨号；林不阻拦不是应急已解决",
+      "startFrame": 912,
+      "endFrameExclusive": 1752,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "K001-03",
+      "speaker": "林岑",
+      "text": "手过线就告诉我。听见我叫撤，往那边跑。",
+      "addressee": "本镜对手",
+      "performance": "先指退路再拉带；周目送上梯不跟上",
+      "startFrame": 1752,
+      "endFrameExclusive": 2520,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "K001-04",
+      "speaker": "林岑",
+      "text": "我要让重量慢慢落到支架上。",
+      "addressee": "本镜对手",
+      "performance": "周在手近线时才警告，手电不乱扫",
+      "startFrame": 2520,
+      "endFrameExclusive": 3168,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "K001-04",
+      "speaker": "周野",
+      "text": "快到线了！",
+      "addressee": "本镜对手",
+      "performance": "周在手近线时才警告，手电不乱扫",
+      "startFrame": 2520,
+      "endFrameExclusive": 3168,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "K001-05",
+      "speaker": "林岑",
+      "text": "停车锁接合。支撑还得检查，不能再走。",
+      "addressee": "本镜对手",
+      "performance": "她说不能再走后才下梯",
+      "startFrame": 3168,
+      "endFrameExclusive": 3600,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "K001-06",
+      "speaker": "周野",
+      "text": "我只处理检修口。能不能读、能保存什么，你确认。",
+      "addressee": "本镜对手",
+      "performance": "周先确认职责，双方核卡再接，手不碰动力区",
+      "startFrame": 3600,
+      "endFrameExclusive": 4320,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "K001-07",
+      "speaker": "周野",
+      "text": "剩下的呢？",
+      "addressee": "本镜对手",
+      "performance": "她停手在受限提示后；他问剩下的不要求绕过",
+      "startFrame": 4320,
+      "endFrameExclusive": 4896,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "K001-07",
+      "speaker": "林岑",
+      "text": "要交给有权限的人。我先留住能留的。",
+      "addressee": "本镜对手",
+      "performance": "她停手在受限提示后；他问剩下的不要求绕过",
+      "startFrame": 4320,
+      "endFrameExclusive": 4896,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "K001-08",
+      "speaker": "林岑",
+      "text": "他们会看到它。",
+      "addressee": "本镜对手",
+      "performance": "她看车声不逃；他承认维修延期并可退款",
+      "startFrame": 4896,
+      "endFrameExclusive": 5616,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "K001-08",
+      "speaker": "周野",
+      "text": "我知道。",
+      "addressee": "本镜对手",
+      "performance": "她看车声不逃；他承认维修延期并可退款",
+      "startFrame": 4896,
+      "endFrameExclusive": 5616,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "K001-08",
+      "speaker": "林岑",
+      "text": "我留下，交代停车锁。",
+      "addressee": "本镜对手",
+      "performance": "她看车声不逃；他承认维修延期并可退款",
+      "startFrame": 4896,
+      "endFrameExclusive": 5616,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "scope": "中文第一人称原始日记补充；2026-11-08实际网页核读，公开自述未独立证实",
+  "cases": [
+    {
+      "id": "RT01",
+      "title": "突然敲奶瓶，原来少装了吸管",
+      "ageReported": "作者自报12个月（一周岁）",
+      "ageGroup": "0—12个月",
+      "source": {
+        "url": "https://changchen.me/blog/20260530/paipai_one_year/",
+        "title": "派派成长日记 #15 - 无法贪睡的闹钟（12m）",
+        "platform": "Henry Z's blog",
+        "author": "Henry Zhu（父亲自述）",
+        "published": "2026-05-30",
+        "firstPerson": true,
+        "readLevel": "已打开原始页面并核读相关正文；未播放视频、未以照片验证事件",
+        "locator": "“无法贪睡的闹钟”小节，有趣瞬间第2点",
+        "licenseNote": "站点标示CC BY-NC 4.0；本库没有获得商业改编、影像或声音使用许可"
+      },
+      "process": {
+        "setup": "父亲说孩子平常喝奶很专注，这天早晨却表现反常。",
+        "babyAction": "孩子双手拿最爱的奶瓶敲餐椅。",
+        "adultResponse": "父亲起初不明白，随后仔细检查奶瓶。",
+        "outcome": "发现组装时漏放了吸管（重力球）；原文未写补装后的反应。"
+      },
+      "evidenceNote": "同段连续记录平日喝奶、当天敲瓶、家长困惑和检查发现漏件。",
+      "missingDetails": [
+        "未记录补装吸管后孩子是否继续喝奶。"
+      ],
+      "creativeInference": "可用“成人先误解、检查小物件才发现原因”构成30秒短片。补装后恢复喝奶只能作为另行标明的原创结尾。",
+      "limitations": "家长公开自述，未独立证实；不采纳同文育儿判断为一般规律。",
+      "processCompleteness": "A：触发、动作、成人回应和发现结果可读"
+    },
+    {
+      "id": "RT02",
+      "title": "拿着遥控器跑几间房，空调后来开着",
+      "ageReported": "作者自报1岁4个月",
+      "ageGroup": "13—36个月",
+      "source": {
+        "url": "https://changchen.me/blog/20260925/paipai-1year4month/",
+        "title": "派派成长日记 #16 - 介个介个（1y4m）",
+        "platform": "Henry Z's blog",
+        "author": "Henry Zhu（父亲自述）",
+        "published": "2026-09-25",
+        "firstPerson": true,
+        "readLevel": "已打开原始页面并核读相关正文；未播放视频、未以照片验证事件",
+        "locator": "“碎碎念”第1项",
+        "licenseNote": "站点标示CC BY-NC 4.0；未取得商业改编许可"
+      },
+      "process": {
+        "setup": "周末孩子拿着空调遥控器在客厅、主卧和次卧之间来回。",
+        "babyAction": "他带着遥控器跑了几间房，大人不知道他在忙什么。",
+        "adultResponse": "父亲过一会儿去主卧准备睡觉。",
+        "outcome": "发现空调已经打开；原文没说亲眼看到孩子按键。"
+      },
+      "evidenceNote": "原文把拿遥控器来回跑与后来发现空调开启并列记录，没有按键现场。",
+      "missingDetails": [
+        "没有记录实际按键者和按键时间。"
+      ],
+      "creativeInference": "可拍“大人后来才发现孩子忙出了什么”的揭示；若增加孩子按键特写，必须标为原创补写，不能说原帖已证实。",
+      "limitations": "公开自述未独立证实；孩子开了空调是隐含联系，因果未被现场核实。",
+      "processCompleteness": "B：过程可读，关键因果未被目击"
+    },
+    {
+      "id": "RT03",
+      "title": "抱着包裹走来，却只是假递一下",
+      "ageReported": "同篇作者明确称孩子15个月，第一件事未单独标龄",
+      "ageGroup": "13—36个月",
+      "source": {
+        "url": "https://yubingbing.wordpress.com/2008/01/08/%E7%8E%A9%E7%8E%A9%E6%9D%82%E4%BA%8B-2/",
+        "title": "玩玩杂事",
+        "platform": "WordPress｜天然去雕饰",
+        "author": "yubingbing（母亲自述）",
+        "published": "2008-01-08",
+        "firstPerson": true,
+        "readLevel": "已打开原始页面并核读相关正文；未播放视频、未以照片验证事件",
+        "locator": "正文第一段；同篇第二段有“15个月”"
+      },
+      "process": {
+        "setup": "快递送到，爸爸把体积较大但不重的包裹放在地上。",
+        "babyAction": "孩子马上抱起包裹，摇摇晃晃地在屋里走。",
+        "adultResponse": "妈妈叫她把包裹给自己。",
+        "outcome": "她走到妈妈面前做出递的样子，又把包裹抱回去，继续走。"
+      },
+      "evidenceNote": "父亲接包裹、孩子抱走、母亲提出请求、孩子假递后收回在同段按顺序出现。",
+      "missingDetails": [
+        "没有写妈妈之后是否接到包裹。"
+      ],
+      "creativeInference": "保留“以为要交到手，结果抱回去”的可见动作，适用于已经能行走的阶段；不额外赋予成人式算计。",
+      "limitations": "家长公开自述，未独立证实；未读取或使用儿童照片。",
+      "processCompleteness": "A：前情、孩子行动、家长请求和结果可读"
+    },
+    {
+      "id": "RT04",
+      "title": "等不及照镜子，转去照电视反光",
+      "ageReported": "作者自报16个月",
+      "ageGroup": "13—36个月",
+      "source": {
+        "url": "https://yubingbing.wordpress.com/2008/01/11/%E7%8E%A9%E7%8E%A9%E4%BB%8A%E5%A4%A9%E5%8D%81%E5%85%AD%E4%B8%AA%E6%9C%88%EF%BC%8C%E7%88%B1%E8%87%AD%E7%BE%8E/",
+        "title": "玩玩今天十六个月，爱臭美",
+        "platform": "WordPress｜天然去雕饰",
+        "author": "yubingbing（母亲自述）",
+        "published": "2008-01-11",
+        "firstPerson": true,
+        "readLevel": "已打开原始页面并核读相关正文；未播放视频、未以照片验证事件",
+        "locator": "正文年龄声明及其后第一段"
+      },
+      "process": {
+        "setup": "作者说孩子穿新衣、换鞋或扎头发后，常找家人看，并要求照镜子。",
+        "babyAction": "有一次奶奶来不及带她照镜子，她自己歪头看向电视。",
+        "adultResponse": "只记奶奶没来得及；没有写奶奶当时说了什么。",
+        "outcome": "孩子把电视反光当镜面，喊“照”并笑起来。"
+      },
+      "evidenceNote": "原文区分反复出现的展示习惯与“某天奶奶来不及”的具体事件。",
+      "missingDetails": [
+        "奶奶当场反应和后续是否照真正镜子未写。"
+      ],
+      "creativeInference": "可围绕“找不到惯常镜子，却找到另一处反光”设计视觉发现；具体屏幕、摆位与成人回应需另行创作。",
+      "limitations": "公开自述未独立证实；母亲对爱美天性的评价不作为普遍结论。",
+      "processCompleteness": "B：动作和发现明确，成人现场回应未写"
+    },
+    {
+      "id": "RT05",
+      "title": "换爸爸的名字再问，还是指同一个人",
+      "ageReported": "原帖归在11—12个月记录；未给该日精确月龄",
+      "ageGroup": "0—12个月",
+      "source": {
+        "url": "https://www.gzmama.com/thread-1457352-1-1.html",
+        "title": "分享一下我家小猪11-12月份的宝宝日记",
+        "platform": "广州妈妈网",
+        "author": "gzshirleyli（楼主、母亲自述）",
+        "published": "2010-01-12；该事件日记标01.01",
+        "firstPerson": true,
+        "readLevel": "已打开原始页面并核读相关正文；未播放视频、未以照片验证事件",
+        "locator": "楼主3楼，01.01条目（页面相关正文第171行）"
+      },
+      "process": {
+        "setup": "家人问孩子爸爸在哪里。",
+        "babyAction": "孩子指向爸爸。",
+        "adultResponse": "大人改用爸爸的名字再问一次。",
+        "outcome": "孩子仍指爸爸，作者记下孩子没有被换称呼弄糊涂。"
+      },
+      "evidenceNote": "两次提问与两次指认在同一句日记中连续记录；没有记录其他动作。",
+      "missingDetails": [
+        "没有写孩子是否发声；帖子生日措辞与侧栏日期不完全一致，不据此倒算月龄。"
+      ],
+      "creativeInference": "适合一岁前后有指认表现的澈澈：两种称呼、同一指向即可成立，不需要宝宝完整说话。",
+      "limitations": "家长公开自述未独立证实；只依据作者的11—12个月分段，不推算生日。",
+      "processCompleteness": "A：两轮提问、回应和结果均有记录"
+    },
+    {
+      "id": "RT06",
+      "title": "妈妈一开电脑，就来牵手叫陪玩",
+      "ageReported": "日记该条明确标1Y8M16D",
+      "ageGroup": "13—36个月",
+      "source": {
+        "url": "https://feitravel.tw/p-5062220628/",
+        "title": "〖蔡小球日记〗12月份小球的日常~1Y8M~1Y9M纪录",
+        "platform": "加小菲爱碎碎念",
+        "author": "加小菲（母亲自述）",
+        "published": "页面显示2026-03-04；日记条目12/4，事件年份未核实",
+        "firstPerson": true,
+        "readLevel": "已打开原始页面并核读相关正文；未播放视频、未以照片验证事件",
+        "locator": "12/4（1Y8M16D），中午打开电脑处理邮件的段落"
+      },
+      "process": {
+        "setup": "妈妈中午回家后打开电脑处理邮件。",
+        "babyAction": "孩子自己玩不到几分钟，就来牵妈妈的手叫她陪玩，并反复这样做。",
+        "adultResponse": "母亲记录自己受到打断，觉得缠人又可爱；没逐次写她是否起身。",
+        "outcome": "到儿歌跳舞节目开始播放，这种反复牵手才停止。"
+      },
+      "evidenceNote": "原段记录开电脑、不到三分钟来牵手、反复发生、节目出现后停止。",
+      "missingDetails": [
+        "没有逐次记录妈妈是否陪玩；页面发布日期与日记事件年份不是一回事。"
+      ],
+      "creativeInference": "可保留“孩子用牵手邀请而非说教”的关系动作；若改成妈妈关电脑陪玩，需明确是原创结尾。",
+      "limitations": "公开自述未独立证实；不将节目分散注意的做法写为育儿建议。",
+      "processCompleteness": "B：重复过程与停止条件可读，成人逐次回应缺失"
+    },
+    {
+      "id": "RT07",
+      "title": "大口亲妈妈的同时，把眼镜拿走",
+      "ageReported": "同一宝宝系列在2016-04-14明确写满8个月；本篇4月16日未重写月龄",
+      "ageGroup": "0—12个月",
+      "source": {
+        "url": "https://www.miloandbehold.com/misty/2016-04-16-bad-sleep/",
+        "title": "Bad Sleep",
+        "platform": "Milo and Behold｜Misty的育儿日记",
+        "author": "misty（母亲自述）",
+        "published": "2016-04-16",
+        "readLevel": "已打开原始日记正文；另读4月14日同系列明确的8个月年龄记录，未观察照片或播放视频",
+        "firstPerson": true,
+        "locator": "正文第三段及Notes；年龄旁证为同系列4月14日日记",
+        "ageSourceUrl": "https://www.miloandbehold.com/photo/2016-04-14-day-two-hundred-forty-five/"
+      },
+      "process": {
+        "setup": "母亲说孩子经常想拿她的眼镜，也喜欢大张嘴贴近亲吻。",
+        "babyAction": "孩子在亲妈妈时同时拿眼镜，自己不停笑。",
+        "adultResponse": "母亲记下自己当天去验配了隐形眼镜；本篇没有明确交代这个决定的动机。",
+        "outcome": "妈妈改戴隐形后，孩子没有特别大的反应；这是反复习惯及当天后续，不是一次抓取的逐秒实录。"
+      },
+      "evidenceNote": "母亲特地说明自己也不确定亲吻与拿眼镜是否有意安排；本例不把它写成已证实的计谋。",
+      "missingDetails": [
+        "没写哪只手、抓住镜框哪里，以及每次拿走后的成人即时动作。",
+        "“动作太快，大人来不及移开”另见前一日简短备注，没有具体事件过程，不能与此条拼成同一现场。",
+        "没有用换隐形眼镜的行动反推她一定是因为被抓眼镜才决定验配。"
+      ],
+      "creativeInference": "可保留亲近时小手伸向镜框的动作巧合；若改为安全软布环或添加成人停顿，属于原创改编，不能当原帖细节。",
+      "limitations": "公开母亲自述，未独立证实；跨篇年龄依据已列链接，不计算额外日龄；不把隐形眼镜选择写成建议。",
+      "processCompleteness": "B：抓取、笑与家长后续有记录，缺单次交接细节"
+    }
+  ],
+  "excluded": [
+    {
+      "url": "https://mypaper.pchome.com.tw/0824su8798bb/post/1326515549",
+      "reason": "原页403，只得到搜索摘要，不列已核读经历"
+    },
+    {
+      "url": "https://mamabaobao.blogspot.com/2010/09/",
+      "reason": "访问被重定向至访问限制页面，未读原文，不重试绕过"
+    },
+    {
+      "url": "https://feitravel.tw/p-5064701613/",
+      "reason": "已读页面，但标题2Y8M与日条1Y8M标注冲突，未选入本批年龄清楚案例"
+    },
+    {
+      "url": "https://changchen.me/blog/20260308/paipai_nine_months/",
+      "reason": "已读9个月体验课想拿布书的片段，但未交代真正拿到与成人即时回应，仅作线索，不把“想拿”改成“已经抢走”"
+    },
+    {
+      "url": "https://changchen.me/blog/20260324/paipai_ten_months/",
+      "reason": "已读用餐后爬去拾地上食物的自述，本批未选；同文育儿评价和医疗信息不用于科普结论"
+    },
+    {
+      "url": "https://www.miloandbehold.com/misty/2016-04-15-staying-home/",
+      "reason": "原文已读，母亲明确说孩子快到大人移物之前就抓到；但没有具体物件、单次动作与结尾，单列快抓线索，未拼成完整经历。"
+    }
+  ]
+}

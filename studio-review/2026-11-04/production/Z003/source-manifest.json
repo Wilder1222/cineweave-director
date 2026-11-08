@@ -1,0 +1,35 @@
+{
+  "topicId": "Z003",
+  "projectId": "9c25f09e280cf93074e46d17c9721ee91fd1b16d035e48863ad283be82d43a6f",
+  "currentRevision": null,
+  "sourcePins": [
+    {
+      "documentId": "fc06682645af324d22b6f4192fb62b2b4ba061bb50d39f3d750c9aeec7a46980",
+      "title": "Z003 相思树｜剧本｜20261031审阅版",
+      "sha256": "c16b7f5db577792cc8f1b77aaf5643c1a25b3951944a25fcbc1dc19edd2876d6",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:39:41.781Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts"
+    },
+    {
+      "documentId": "4847f9449735b0b26e98aed901a5bc2651bfd9e44ea7cb4dc7a08f8ea4ba6d05",
+      "title": "Z003 相思树｜分镜与视频提示｜20261031审阅版",
+      "sha256": "cab354c4bf44928d26fe45c0cab4775c2a30f1faf6a62a5c2d0aa2b8f1f9b070",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:39:33.633Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts"
+    },
+    {
+      "documentId": "b9724f3a820d155b03e450adee4048b99ded535a2bbc5e8ec2217956e922bd10",
+      "title": "Z003 相思树｜审阅与来源｜20261031审阅版",
+      "sha256": "73cf862e1780104979826ef30afdc1ce297bbcb15ae417ce042fb367b2d71fe3",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:39:25.406Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts"
+    }
+  ],
+  "patches": [],
+  "candidate": true,
+  "authorApproved": false,
+  "rawSourceUnchanged": true
+}

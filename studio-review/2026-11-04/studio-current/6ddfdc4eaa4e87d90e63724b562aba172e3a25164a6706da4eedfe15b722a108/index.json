@@ -1,0 +1,48 @@
+{
+  "topicId": "U009",
+  "projectId": "6ddfdc4eaa4e87d90e63724b562aba172e3a25164a6706da4eedfe15b722a108",
+  "projectTitle": "地铁安检与本命剑",
+  "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=6ddfdc4eaa4e87d90e63724b562aba172e3a25164a6706da4eedfe15b722a108#scripts",
+  "transport": "authorized_browser_ui_dom",
+  "currentRevision": null,
+  "exportComplete": true,
+  "documents": [
+    {
+      "documentId": "f98a5be22a21fee113375dd0ce20f6432262b96f3c68c022fcc41ce7b7e95f67",
+      "metadata": "提示词",
+      "title": "U009 地铁安检与本命剑｜审阅与来源｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "c58b4f144d6f3d0b29edb263a134959bbc120ea11352b6731dc078342223216e",
+      "bodyLength": 843,
+      "readAt": "2026-11-04T06:44:00.425Z",
+      "file": "f98a5be22a21fee113375dd0ce20f6432262b96f3c68c022fcc41ce7b7e95f67.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=6ddfdc4eaa4e87d90e63724b562aba172e3a25164a6706da4eedfe15b722a108#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "c5926814221e2815a9be094c10a85650ccf5ae465ee537949b8fe7719605fb22",
+      "metadata": "提示词",
+      "title": "U009 地铁安检与本命剑｜分镜与视频提示｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "596dc7d786552e31871f6e16547099d97a5879190b642680c516e0e08eb1d366",
+      "bodyLength": 3820,
+      "readAt": "2026-11-04T06:44:09.783Z",
+      "file": "c5926814221e2815a9be094c10a85650ccf5ae465ee537949b8fe7719605fb22.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=6ddfdc4eaa4e87d90e63724b562aba172e3a25164a6706da4eedfe15b722a108#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "b7e0cf304850f689697c0fce43212c67045cb334073c5500d795867a2e7a3b3c",
+      "metadata": "剧本",
+      "title": "U009 地铁安检与本命剑｜剧本｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "65e4263be42a91bf73ded23f5a249ebb730fee9e3d7dc07496443e0bedb11d60",
+      "bodyLength": 782,
+      "readAt": "2026-11-04T06:44:17.741Z",
+      "file": "b7e0cf304850f689697c0fce43212c67045cb334073c5500d795867a2e7a3b3c.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=6ddfdc4eaa4e87d90e63724b562aba172e3a25164a6706da4eedfe15b722a108#scripts",
+      "proposals": []
+    }
+  ],
+  "exportedAt": "2026-11-04T06:44:19.653Z"
+}

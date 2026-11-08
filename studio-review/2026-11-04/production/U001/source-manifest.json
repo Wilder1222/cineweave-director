@@ -1,0 +1,67 @@
+{
+  "topicId": "U001",
+  "projectId": "7da63810f1afd54c769a6b2e550d3ee64c8850d7a0cd7071f9d05f0f0b33d1c2",
+  "transport": "authorized_browser_ui_dom",
+  "currentRevision": null,
+  "sourcePins": [
+    {
+      "documentId": "3554e5732938fcd1034c761ea71963e56597e8bedcea01d81b423ab44b023955",
+      "title": "U001 我家住进一位剑仙｜剧本｜20261031审阅版",
+      "sha256": "94a3878be4e86823629fe3bffc81eaa6f70893a5fd85d139aec989d1320d35e6",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:38:14.986Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=7da63810f1afd54c769a6b2e550d3ee64c8850d7a0cd7071f9d05f0f0b33d1c2#scripts"
+    },
+    {
+      "documentId": "f7ebe9847a0b6108f53f1157702995c63752a6e66239cf0a49314b99cd20c37c",
+      "title": "U001 我家住进一位剑仙｜分镜与视频提示｜20261031审阅版",
+      "sha256": "2c85bed8bb6c242daccc5debb4bd0fe226cf360dbcfd8c641a66fc312d9720af",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:37:17.775Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=7da63810f1afd54c769a6b2e550d3ee64c8850d7a0cd7071f9d05f0f0b33d1c2#scripts"
+    },
+    {
+      "documentId": "13628e0e498d20265ac3c6af7b14e48a085cf8ad9da2ef04239d65f684ac58ae",
+      "title": "U001 我家住进一位剑仙｜审阅与来源｜20261031审阅版",
+      "sha256": "80c1de18d1373ed376e6101d999b7a0038d6bef9d5b2242fe43c548ec2e2e7f3",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:37:08.122Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=7da63810f1afd54c769a6b2e550d3ee64c8850d7a0cd7071f9d05f0f0b33d1c2#scripts"
+    }
+  ],
+  "patches": [
+    {
+      "documentId": "3554e5732938fcd1034c761ea71963e56597e8bedcea01d81b423ab44b023955",
+      "before": "她轻叩两下茶几，引沙发边剑低飞入手，持剑走到柜后；许竞取回渗漏外卖袋放盆里，看她消失于柜后阴影。",
+      "after": "她轻叩两下茶几，引沙发边剑低飞入手，持剑沿茶几外侧通道走到正常玄关门，开门离去并把门轻轻带上；许竞取回渗漏外卖袋放盆里。她没有进入临时卡住的墙门。",
+      "reason": "不以重入可能困人的墙门否定刚达成的替代方案；拂晓正常敲门承接不变。"
+    },
+    {
+      "documentId": "f7ebe9847a0b6108f53f1157702995c63752a6e66239cf0a49314b99cd20c37c",
+      "before": "她轻叩两下茶几，引沙发边剑低飞入手，持剑走到柜后；许竞取回渗漏外卖袋放盆里，看她消失于柜后阴影。",
+      "after": "她轻叩两下茶几，引沙发边剑低飞入手，持剑沿茶几外侧通道走到正常玄关门，开门离去并把门轻轻带上；许竞取回渗漏外卖袋放盆里。她没有进入临时卡住的墙门。",
+      "reason": "不以重入可能困人的墙门否定刚达成的替代方案；拂晓正常敲门承接不变。"
+    },
+    {
+      "documentId": "f7ebe9847a0b6108f53f1157702995c63752a6e66239cf0a49314b99cd20c37c",
+      "before": "摄影：中景，机身固定于客厅原侧含茶几沙发柜后。人物眼线高度，朝向客厅原侧含茶几沙发柜后。将叩桌手与浮剑及闻溪移向柜后按真实远近分层纳入画幅；保持关键动作和道具轮廓可辨景深，视线随行动改变观看重点，不声称这些对象同距或实施光学拉焦。实际光学与布景需测试。",
+      "after": "摄影：客厅南侧固定中景，含茶几、沙发边剑与正常玄关门；人物眼线高度。让叩桌、剑低速入手、闻溪沿空通道开门离开依次可见，不移动墙缝或将柜后当新通道。保持所需景深，实际布景/光学待测试。",
+      "reason": "同步05B正常门离场的机位和取景。"
+    },
+    {
+      "documentId": "f7ebe9847a0b6108f53f1157702995c63752a6e66239cf0a49314b99cd20c37c",
+      "before": "出态：闻溪携剑消失柜后、外卖袋盆内。",
+      "after": "出态：闻溪携剑经正常玄关门离开、门已带上、外卖袋盆内。",
+      "reason": "同步离场出态。"
+    },
+    {
+      "documentId": "f7ebe9847a0b6108f53f1157702995c63752a6e66239cf0a49314b99cd20c37c",
+      "before": "05B,156,168,12,保持焦点,剑沙发边、伤手已贴、鞋拔仍卡栓,闻溪携剑消失柜后、外卖袋盆内",
+      "after": "05B,156,168,12,保持焦点,剑沙发边、伤手已贴、鞋拔仍卡栓,闻溪携剑经正常玄关门离开、门已带上、外卖袋盆内",
+      "reason": "同步当前镜头时间表，预算不变。"
+    }
+  ],
+  "candidate": true,
+  "authorApproved": false,
+  "rawSourceUnchanged": true
+}

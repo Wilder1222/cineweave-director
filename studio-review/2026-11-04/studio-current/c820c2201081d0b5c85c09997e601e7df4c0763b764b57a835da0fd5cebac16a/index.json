@@ -1,0 +1,68 @@
+{
+  "topicId": "U005",
+  "projectId": "c820c2201081d0b5c85c09997e601e7df4c0763b764b57a835da0fd5cebac16a",
+  "projectTitle": "女仙的面试",
+  "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=c820c2201081d0b5c85c09997e601e7df4c0763b764b57a835da0fd5cebac16a#scripts",
+  "transport": "authorized_browser_ui_dom",
+  "currentRevision": null,
+  "exportComplete": true,
+  "documents": [
+    {
+      "documentId": "d7ff4501b918726d00e890fb73cdbaecb444957e532a4e09eb12cd714d78de58",
+      "metadata": "提示词",
+      "title": "U005 女仙的面试｜审阅与来源｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "30e279021f8fff224b1722412e1ab91b3fa1d15c2a8bab88b427777436fdf6bf",
+      "bodyLength": 813,
+      "readAt": "2026-11-04T06:41:10.260Z",
+      "file": "d7ff4501b918726d00e890fb73cdbaecb444957e532a4e09eb12cd714d78de58.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=c820c2201081d0b5c85c09997e601e7df4c0763b764b57a835da0fd5cebac16a#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb",
+      "metadata": "提示词",
+      "title": "U005 女仙的面试｜分镜与视频提示｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "c5896cd92f91ad0d13086621b7c0a94e93a95bf06f5041f7541a424cd56f3644",
+      "bodyLength": 2049,
+      "readAt": "2026-11-04T06:41:17.870Z",
+      "file": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=c820c2201081d0b5c85c09997e601e7df4c0763b764b57a835da0fd5cebac16a#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "1992c1fdb21d83f40bda61f7676de808b20fa5a2f7572ce0ed7735bd8b2f5bc8",
+      "metadata": "剧本",
+      "title": "U005 女仙的面试｜剧本｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "14bd7478472b6854a47ef0429d3811b5d5eca56eaa78002a46df5145782f14de",
+      "bodyLength": 737,
+      "readAt": "2026-11-04T06:41:25.258Z",
+      "file": "1992c1fdb21d83f40bda61f7676de808b20fa5a2f7572ce0ed7735bd8b2f5bc8.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=c820c2201081d0b5c85c09997e601e7df4c0763b764b57a835da0fd5cebac16a#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "847a524a4462ef331d1a93545e6bda69778aabe3948c82fdb1517fe37390d358",
+      "metadata": "提示词",
+      "title": "U005 女仙的面试｜分镜与视频提示词候选",
+      "currentRevision": null,
+      "sha256": "72f978aaec6c07728cfa74ccfc4e65fba1b4222852f6e06f498d257b580edec0",
+      "bodyLength": 1296,
+      "readAt": "2026-11-04T06:41:33.314Z",
+      "file": "847a524a4462ef331d1a93545e6bda69778aabe3948c82fdb1517fe37390d358.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=c820c2201081d0b5c85c09997e601e7df4c0763b764b57a835da0fd5cebac16a#scripts",
+      "proposals": [
+        {
+          "proposalId": "ba0a756f0d98651c89f8d2833c00ad6c38b3e88133e39f7cde30b6e0f24a7850",
+          "file": "847a524a4462ef331d1a93545e6bda69778aabe3948c82fdb1517fe37390d358.proposal-1.md",
+          "sha256": "72f978aaec6c07728cfa74ccfc4e65fba1b4222852f6e06f498d257b580edec0",
+          "cardText": "创作者提交的内容审阅提案2026/10/28 14:13待审阅# U005《女仙的面试》｜逐镜分镜与视频提示词候选\n\n依据 U005-小说.md、U005-剧本.md。设计审阅：三百年修士不懂基础表格，招聘者顶住熟人压力以同一题目核验；算错能自查，焦虑只让水杯升起，录用未决。候选未经作者采纳及严格角色隔离排练；未生成媒体。\n\n通案：90 秒，一间会议室，顾准、闻青对坐，水杯、手机短信、简历、物资表、种植记录、下一轮说明及两份面试资料均先建立再使用。四镜：简历与技能缺口、算错及修正、停种经历、悬杯与公平核验。字迹后期排版；假杯安全合成。\n\n## 01｜0—18 秒｜仙人要交房租\n**视频提示词：**日间公司会议室，桌上水杯、顾准亮起的主管短信“熟人尽快定下来，差一点也能培养。”及闻青简历，中景顾准和闻青对坐，后景会议室门。固定平视桌侧中近景，顾准翻简历问“三百年炼丹经验？”闻青答“没写错，我是金丹修士。药圃交给师妹了，我后天要交房租。今天就能上班。”顾说“我们先看能核验的经历。这个岗位要核对物资，也要会基础表格。”她说“表格我在学，公式还不会。”焦点从短信到简历与闻青，办公室底声与翻纸；出点简历仍桌上。\n\n## 02｜18—42 秒｜先承认算错\n**视频提示词：**同一会议桌，前景顾准推来的物资表，中景闻青书写的手、顾准记录纸，后景两人。俯角固定近景，顾说“三个社区要三十五、四十、四十五个箱子。现有一百一十六，缺多少？”闻青指箱子型号说“箱底没孔，苗可能烂根。”顾说“我记下来。先核数量。”她先写“需求八十”，自行复查，说“我把四十五看成五了。需求一百二十，缺四个。”顾在面试表写“复核后更正”。焦点依次落数量、错误和修正，笔声清楚；精确字句后期排版，出点表仍桌上。\n\n## 03｜42—65 秒｜有过失也有经验\n**视频提示词：**同一会议室，闻青从帆布袋取出种植记录，翻到“停种”的空白页；顾准在对面。平视固定双人中景，前景记录，中景二人，后景会议室墙。她说“水泡过土，我让大家先停。师妹少卖一季，怪过我。后来我知道该分区检查，不让所有人一起等。”顾问“近两年的记录能核验吗？”闻答“能。我先问师妹愿不愿意留号码。”他点头，在纸上记下同样核验问题。焦点从空白页转到说话与记笔，纸声轻；出点原件在闻青手边。\n\n## 04｜65—90 秒｜不靠法术录用\n**视频提示词：**同一会议桌，前景电脑测试说明与先前水杯，中景闻青、顾准和面试表，后景另一份简历。顾递说明，闻问“明天下午能出结果？”顾答“测试当天出分，录用还要核验。我不能保证时间。”她攥说明，水杯无风升半寸、水面晃动，她注意后杯落回，说“抱歉，我紧张了。”顾移远杯说“现场有孩子，杯子不能乱动。这个也不能算你会表格。”她笑说“我也没打算这么证明。今晚再练，没过就找别的工作。”她收原件、携说明离开；顾把面试表放待处理文件夹，结果栏空着，在熟人简历旁放同一物资题、录入测试规则和同样核验问题。固定平视中景，焦点从说明到杯再到空白结果和另一简历，纸声及轻杯碰声后切黑；不展示录用结果。\n\n试拍：三十五＋四十＋四十五＝一百二十、缺四个的道具算式；杯升落的无风连续和 90 秒对白。\n采纳提案拒绝",
+          "readAt": "2026-11-04T06:41:34.351Z"
+        }
+      ]
+    }
+  ],
+  "exportedAt": "2026-11-04T06:41:35.263Z"
+}

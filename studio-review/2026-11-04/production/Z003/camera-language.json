@@ -1,0 +1,603 @@
+{
+  "scope": "narrative_video",
+  "shotIds": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06",
+    "07-A",
+    "07-B",
+    "07-C"
+  ],
+  "decisions": [
+    {
+      "shotId": "01",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "缺口让囚者认出妻信。",
+        "audiencePayoff": "缺口让囚者认出妻信。",
+        "trigger": "抬碗使竹片滑出。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在床侧稍俯，门在后，让抬碗使竹片滑出触发人物而非相机移动，保持缺口让囚者认出妻信的空间参照。理由：让观众读出缺口让囚者认出妻信；不改变人物既定行动。",
+        "focusTargetEnd": "竹末缺口",
+        "exitMatch": "竹在韩凭手，门闩已响。"
+      },
+      "camera": {
+        "shotScale": "手部近景",
+        "position": "床侧稍俯，门在后",
+        "height": "工作面上方斜俯，具体高度由光学测试确定",
+        "angle": "斜俯",
+        "perspectiveIntent": "缺口让囚者认出妻信。",
+        "focusTarget": "碗沿",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "牢室床门轴西侧；墓地土路南侧锁定观察位",
+        "movementIntent": "固定在床侧稍俯，门在后，让抬碗使竹片滑出触发人物而非相机移动，保持缺口让囚者认出妻信的空间参照。理由：让观众读出缺口让囚者认出妻信；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "工作面斜线组织，关键物件完整落画",
+        "foreground": "碗和窄竹",
+        "midground": "韩凭双手",
+        "background": "牢门",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "碗沿滑出的缺口竹片 → 在场人物的接收/反应 → 床沿"
+      },
+      "temporal": {
+        "durationSeconds": 20,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "缺口让囚者认出妻信。",
+          "path": "固定在床侧稍俯，门在后，让抬碗使竹片滑出触发人物而非相机移动，保持缺口让囚者认出妻信的空间参照。理由：让观众读出缺口让囚者认出妻信；不改变人物既定行动。",
+          "start": "机位固定于：床侧稍俯，门在后",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：床侧稍俯，门在后",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "01-F1",
+            "timeSeconds": 0,
+            "description": "碗沿"
+          },
+          {
+            "eventId": "01-F2",
+            "timeSeconds": 3,
+            "description": "竹末缺口"
+          }
+        ],
+        "edit": {
+          "entry": "韩凭独处床边，饭碗遮竹片。",
+          "exit": "竹在韩凭手，门闩已响。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "囚室镜只保留碗竹、门闩、衣料及已设画外守卫脚步，不加守卫人声；墓地镜只风、土路脚步、写牌与显影的原句；无羊铃。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "02",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "信被拿走而读信者仅获片刻。",
+        "audiencePayoff": "信被拿走而读信者仅获片刻。",
+        "trigger": "脚步门响后苏贺入。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在门侧平视沿床门轴同侧，让脚步门响后苏贺入触发人物而非相机移动，保持信被拿走而读信者仅获片刻的空间参照。理由：让观众读出信被拿走而读信者仅获片刻；不改变人物既定行动。",
+        "focusTargetEnd": "苏贺取信手",
+        "exitMatch": "竹片收入苏贺袖并被带走。"
+      },
+      "camera": {
+        "shotScale": "双人中景",
+        "position": "门侧平视沿床门轴同侧",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "信被拿走而读信者仅获片刻。",
+        "focusTarget": "韩凭放信手",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "牢室床门轴西侧；墓地土路南侧锁定观察位",
+        "movementIntent": "固定在门侧平视沿床门轴同侧，让脚步门响后苏贺入触发人物而非相机移动，保持信被拿走而读信者仅获片刻的空间参照。理由：让观众读出信被拿走而读信者仅获片刻；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "床沿竹片",
+        "midground": "韩凭和入门苏贺",
+        "background": "敞门",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "床沿竹片 → 在场人物的接收/反应 → 牢门"
+      },
+      "temporal": {
+        "durationSeconds": 25,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "信被拿走而读信者仅获片刻。",
+          "path": "固定在门侧平视沿床门轴同侧，让脚步门响后苏贺入触发人物而非相机移动，保持信被拿走而读信者仅获片刻的空间参照。理由：让观众读出信被拿走而读信者仅获片刻；不改变人物既定行动。",
+          "start": "机位固定于：门侧平视沿床门轴同侧",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：门侧平视沿床门轴同侧",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "02-F1",
+            "timeSeconds": 0,
+            "description": "韩凭放信手"
+          },
+          {
+            "eventId": "02-F2",
+            "timeSeconds": 13,
+            "description": "苏贺取信手"
+          }
+        ],
+        "edit": {
+          "entry": "竹在韩凭手，门闩已响。",
+          "exit": "竹片收入苏贺袖并被带走。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "囚室镜只保留碗竹、门闩、衣料及已设画外守卫脚步，不加守卫人声；墓地镜只风、土路脚步、写牌与显影的原句；无羊铃。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "03",
+      "decision": {
+        "primaryTechniqueId": "M01",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "解释者承认自己的利益和未知后果。",
+        "audiencePayoff": "解释者承认自己的利益和未知后果。",
+        "trigger": "苏贺回来报告王询问信义。",
+        "cameraMode": "moving",
+        "focusMode": "rack",
+        "focusTargetEnd": "苏贺承认自保的脸",
+        "exitMatch": "韩凭已质问，苏贺未保证何氏安全。"
+      },
+      "camera": {
+        "shotScale": "双人中景",
+        "position": "同侧平视缓推向苏贺",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "解释者承认自己的利益和未知后果。",
+        "focusTarget": "韩凭握钥匙手",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "牢室床门轴西侧；墓地土路南侧锁定观察位",
+        "movementIntent": "收到“苏贺回来报告王询问信义”后沿原轴线侧缓推半步；起步轻、匀速靠近、在出态前柔和减速，无环绕、无变焦。理由：让观众读出解释者承认自己的利益和未知后果；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "钥匙环",
+        "midground": "二人",
+        "background": "牢门",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "钥匙环 → 在场人物的接收/反应 → 打开牢门"
+      },
+      "temporal": {
+        "durationSeconds": 35,
+        "cameraMotion": {
+          "type": "dolly",
+          "motivation": "解释者承认自己的利益和未知后果。",
+          "path": "收到“苏贺回来报告王询问信义”后沿原轴线侧缓推半步；起步轻、匀速靠近、在出态前柔和减速，无环绕、无变焦。理由：让观众读出解释者承认自己的利益和未知后果；不改变人物既定行动。",
+          "start": "明确省略苏贺呈信时间；竹片已不在韩凭手，日影改变。",
+          "acceleration": "明确刺激后缓起，保留初始空间参照",
+          "peak": "同侧前移半步的低速段，有真实视差不变焦",
+          "deceleration": "出态前柔停，终点不越人物轴",
+          "end": "韩凭已质问，苏贺未保证何氏安全。",
+          "framingChange": "初始双人中景在前移半步后略紧，钥匙环与人物的占幅增加，既有打开牢门产生可辨纵深视差，终点不切掉关键触点"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "03-F1",
+            "timeSeconds": 0,
+            "description": "韩凭握钥匙手"
+          },
+          {
+            "eventId": "03-F2",
+            "timeSeconds": 12,
+            "description": "苏贺承认自保的脸"
+          }
+        ],
+        "edit": {
+          "entry": "明确省略苏贺呈信时间；竹片已不在韩凭手，日影改变。",
+          "exit": "韩凭已质问，苏贺未保证何氏安全。",
+          "preferredTransition": "明确时间省略，先重建入态，保留环境声的时空边界",
+          "soundBridge": "囚室镜只保留碗竹、门闩、衣料及已设画外守卫脚步，不加守卫人声；墓地镜只风、土路脚步、写牌与显影的原句；无羊铃。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "04",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "嘱托也只能得到尝试的承诺。",
+        "audiencePayoff": "嘱托也只能得到尝试的承诺。",
+        "trigger": "苏贺承认不能保证见到她。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在床侧平视，让苏贺承认不能保证见到她触发人物而非相机移动，保持嘱托也只能得到尝试的承诺的空间参照。理由：让观众读出嘱托也只能得到尝试的承诺；不改变人物既定行动。",
+        "focusTargetEnd": "苏贺攥钥匙",
+        "exitMatch": "钥匙归苏贺并被带出，韩凭空手。"
+      },
+      "camera": {
+        "shotScale": "近中景",
+        "position": "床侧平视",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "嘱托也只能得到尝试的承诺。",
+        "focusTarget": "钥匙交接",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "牢室床门轴西侧；墓地土路南侧锁定观察位",
+        "movementIntent": "固定在床侧平视，让苏贺承认不能保证见到她触发人物而非相机移动，保持嘱托也只能得到尝试的承诺的空间参照。理由：让观众读出嘱托也只能得到尝试的承诺；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "钥匙",
+        "midground": "韩凭苏贺",
+        "background": "牢门",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "钥匙交接 → 在场人物的接收/反应 → 床至门"
+      },
+      "temporal": {
+        "durationSeconds": 30,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "嘱托也只能得到尝试的承诺。",
+          "path": "固定在床侧平视，让苏贺承认不能保证见到她触发人物而非相机移动，保持嘱托也只能得到尝试的承诺的空间参照。理由：让观众读出嘱托也只能得到尝试的承诺；不改变人物既定行动。",
+          "start": "机位固定于：床侧平视",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：床侧平视",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "04-F1",
+            "timeSeconds": 0,
+            "description": "钥匙交接"
+          },
+          {
+            "eventId": "04-F2",
+            "timeSeconds": 18,
+            "description": "苏贺攥钥匙"
+          }
+        ],
+        "edit": {
+          "entry": "韩凭已质问，苏贺未保证何氏安全。",
+          "exit": "钥匙归苏贺并被带出，韩凭空手。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "囚室镜只保留碗竹、门闩、衣料及已设画外守卫脚步，不加守卫人声；墓地镜只风、土路脚步、写牌与显影的原句；无羊铃。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "05",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "缺席物件留下尚未解释的结局。",
+        "audiencePayoff": "缺席物件留下尚未解释的结局。",
+        "trigger": "苏贺出门后门关。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "固定在床侧低俯，让苏贺出门后门关触发人物而非相机移动，保持缺席物件留下尚未解释的结局的空间参照。理由：让观众读出缺席物件留下尚未解释的结局；不改变人物既定行动。",
+        "exitMatch": "手停在原竹片处，黑场省略未呈现事件。"
+      },
+      "camera": {
+        "shotScale": "手部近景",
+        "position": "床侧低俯",
+        "height": "工作面上方斜俯，具体高度由光学测试确定",
+        "angle": "斜俯",
+        "perspectiveIntent": "缺席物件留下尚未解释的结局。",
+        "focusTarget": "空床沿手指",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "牢室床门轴西侧；墓地土路南侧锁定观察位",
+        "movementIntent": "固定在床侧低俯，让苏贺出门后门关触发人物而非相机移动，保持缺席物件留下尚未解释的结局的空间参照。理由：让观众读出缺席物件留下尚未解释的结局；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "工作面斜线组织，关键物件完整落画",
+        "foreground": "空床沿",
+        "midground": "韩凭停住的手",
+        "background": "关闭牢门",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "空床沿手指 → 在场人物的接收/反应 → 关牢门"
+      },
+      "temporal": {
+        "durationSeconds": 12,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "缺席物件留下尚未解释的结局。",
+          "path": "固定在床侧低俯，让苏贺出门后门关触发人物而非相机移动，保持缺席物件留下尚未解释的结局的空间参照。理由：让观众读出缺席物件留下尚未解释的结局；不改变人物既定行动。",
+          "start": "机位固定于：床侧低俯",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：床侧低俯",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "05-F1",
+            "timeSeconds": 0,
+            "description": "空床沿手指"
+          }
+        ],
+        "edit": {
+          "entry": "钥匙归苏贺并被带出，韩凭空手。",
+          "exit": "手停在原竹片处，黑场省略未呈现事件。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "囚室镜只保留碗竹、门闩、衣料及已设画外守卫脚步，不加守卫人声；墓地镜只风、土路脚步、写牌与显影的原句；无羊铃。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "06",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "死讯是转述，未合葬是现实。",
+        "audiencePayoff": "死讯是转述，未合葬是现实。",
+        "trigger": "看到两墓后苏贺说出未见她。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在土路入口平视，同框两墓，让看到两墓后苏贺说出未见她触发人物而非相机移动，保持死讯是转述，未合葬是现实的空间参照。理由：让观众读出死讯是转述，未合葬是现实；不改变人物既定行动。",
+        "focusTargetEnd": "苏贺与两墓",
+        "exitMatch": "名字已写，笔停，何氏未显影。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "土路入口平视，同框两墓",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "死讯是转述，未合葬是现实。",
+        "focusTarget": "空白木牌至书写名字的过程",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "牢室床门轴西侧；墓地土路南侧锁定观察位",
+        "movementIntent": "固定在土路入口平视，同框两墓，让看到两墓后苏贺说出未见她触发人物而非相机移动，保持死讯是转述，未合葬是现实的空间参照。理由：让观众读出死讯是转述，未合葬是现实；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "木牌和笔",
+        "midground": "苏贺",
+        "background": "相望新墓车辙米碗",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "空木牌及笔 → 在场人物的接收/反应 → 两墓米碗"
+      },
+      "temporal": {
+        "durationSeconds": 35,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "死讯是转述，未合葬是现实。",
+          "path": "固定在土路入口平视，同框两墓，让看到两墓后苏贺说出未见她触发人物而非相机移动，保持死讯是转述，未合葬是现实的空间参照。理由：让观众读出死讯是转述，未合葬是现实；不改变人物既定行动。",
+          "start": "机位固定于：土路入口平视，同框两墓",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：土路入口平视，同框两墓",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "06-F1",
+            "timeSeconds": 0,
+            "description": "空白木牌至书写名字的过程"
+          },
+          {
+            "eventId": "06-F2",
+            "timeSeconds": 20,
+            "description": "苏贺与两墓"
+          }
+        ],
+        "edit": {
+          "entry": "黑场后明确数日跳切；钥匙已托人带走而送达未知。",
+          "exit": "名字已写，笔停，何氏未显影。",
+          "preferredTransition": "明确时间省略，先重建入态，保留环境声的时空边界",
+          "soundBridge": "囚室镜只保留碗竹、门闩、衣料及已设画外守卫脚步，不加守卫人声；墓地镜只风、土路脚步、写牌与显影的原句；无羊铃。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "07-A",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "遗愿不能改变被拒合葬。",
+        "audiencePayoff": "遗愿不能改变被拒合葬。",
+        "trigger": "主观显影出现，双方仍不看对方。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在墓侧平视固定合成观察位，让主观显影出现，双方仍不看对方触发人物而非相机移动，保持遗愿不能改变被拒合葬的空间参照。理由：让观众读出遗愿不能改变被拒合葬；不改变人物既定行动。",
+        "focusTargetEnd": "写上相望的牌",
+        "exitMatch": "何氏淡去，牌已插路边，苏贺转身离开。"
+      },
+      "camera": {
+        "shotScale": "中远景",
+        "position": "墓侧平视固定合成观察位",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "遗愿不能改变被拒合葬。",
+        "focusTarget": "尚空的墓前显影区域",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "牢室床门轴西侧；墓地土路南侧锁定观察位",
+        "movementIntent": "固定在墓侧平视固定合成观察位，让主观显影出现，双方仍不看对方触发人物而非相机移动，保持遗愿不能改变被拒合葬的空间参照。理由：让观众读出遗愿不能改变被拒合葬；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "木牌",
+        "midground": "苏贺与主观何氏",
+        "background": "双墓",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "相望木牌 → 在场人物的接收/反应 → 两座分离墓"
+      },
+      "temporal": {
+        "durationSeconds": 18,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "遗愿不能改变被拒合葬。",
+          "path": "固定在墓侧平视固定合成观察位，让主观显影出现，双方仍不看对方触发人物而非相机移动，保持遗愿不能改变被拒合葬的空间参照。理由：让观众读出遗愿不能改变被拒合葬；不改变人物既定行动。",
+          "start": "机位固定于：墓侧平视固定合成观察位",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：墓侧平视固定合成观察位",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "07-A-F1",
+            "timeSeconds": 0,
+            "description": "尚空的墓前显影区域"
+          },
+          {
+            "eventId": "07-A-F2",
+            "timeSeconds": 11,
+            "description": "写上相望的牌"
+          }
+        ],
+        "edit": {
+          "entry": "承接06，苏贺持笔木牌；何氏只是主观显影。",
+          "exit": "何氏淡去，牌已插路边，苏贺转身离开。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "囚室镜只保留碗竹、门闩、衣料及已设画外守卫脚步，不加守卫人声；墓地镜只风、土路脚步、写牌与显影的原句；无羊铃。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "07-B",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "奇观连接愿望但墓仍分离。",
+        "audiencePayoff": "奇观连接愿望但墓仍分离。",
+        "trigger": "显影和苏贺离开后进入时间压缩。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在沿07-A同机位的锁定无演员合成底板，显影和苏贺离开后进入无演员时间压缩，相机锁定，植物生长是合成变化而非演员动作，保持奇观连接愿望但墓仍分离的空间参照。理由：让观众读出奇观连接愿望但墓仍分离；不改变人物既定行动。",
+        "focusTargetEnd": "上方相接枝条",
+        "exitMatch": "十日变化结束，枝条接合，两墓仍分离。"
+      },
+      "camera": {
+        "shotScale": "中远景",
+        "position": "沿07-A同机位的锁定无演员合成底板",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "奇观连接愿望但墓仍分离。",
+        "focusTarget": "两座尚未长树的坟头",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "牢室床门轴西侧；墓地土路南侧锁定观察位",
+        "movementIntent": "固定在沿07-A同机位的锁定无演员合成底板，显影和苏贺离开后进入无演员时间压缩，相机锁定，植物生长是合成变化而非演员动作，保持奇观连接愿望但墓仍分离的空间参照。理由：让观众读出奇观连接愿望但墓仍分离；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "相望木牌",
+        "midground": "分离两墓",
+        "background": "梓木伸枝",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "分离坟头与树根 → 在场人物的接收/反应 → 接合枝条"
+      },
+      "temporal": {
+        "durationSeconds": 10,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "奇观连接愿望但墓仍分离。",
+          "path": "固定在沿07-A同机位的锁定无演员合成底板，显影和苏贺离开后进入无演员时间压缩，相机锁定，植物生长是合成变化而非演员动作，保持奇观连接愿望但墓仍分离的空间参照。理由：让观众读出奇观连接愿望但墓仍分离；不改变人物既定行动。",
+          "start": "机位固定于：沿07-A同机位的锁定无演员合成底板",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：沿07-A同机位的锁定无演员合成底板",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "07-B-F1",
+            "timeSeconds": 0,
+            "description": "两座尚未长树的坟头"
+          },
+          {
+            "eventId": "07-B-F2",
+            "timeSeconds": 7,
+            "description": "上方相接枝条"
+          }
+        ],
+        "edit": {
+          "entry": "省略苏贺离开后的生活；该段是连续时间压缩合成而非实时十日。",
+          "exit": "十日变化结束，枝条接合，两墓仍分离。",
+          "preferredTransition": "明确时间省略，先重建入态，保留环境声的时空边界",
+          "soundBridge": "囚室镜只保留碗竹、门闩、衣料及已设画外守卫脚步，不加守卫人声；墓地镜只风、土路脚步、写牌与显影的原句；无羊铃。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "07-C",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "回看只确认墓仍相隔。",
+        "audiencePayoff": "回看只确认墓仍相隔。",
+        "trigger": "苏贺从土路回到原位置。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在沿07-A原观察位，让苏贺从土路回到原位置触发人物而非相机移动，保持回看只确认墓仍相隔的空间参照。理由：让观众读出回看只确认墓仍相隔；不改变人物既定行动。",
+        "focusTargetEnd": "分开的墓",
+        "exitMatch": "苏贺看墓，枝相接墓不合，结束。"
+      },
+      "camera": {
+        "shotScale": "中远景",
+        "position": "沿07-A原观察位",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "回看只确认墓仍相隔。",
+        "focusTarget": "苏贺停步",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "牢室床门轴西侧；墓地土路南侧锁定观察位",
+        "movementIntent": "固定在沿07-A原观察位，让苏贺从土路回到原位置触发人物而非相机移动，保持回看只确认墓仍相隔的空间参照。理由：让观众读出回看只确认墓仍相隔；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "木牌",
+        "midground": "归来的苏贺",
+        "background": "交枝及分离墓",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "路边木牌 → 在场人物的接收/反应 → 分墓与合枝"
+      },
+      "temporal": {
+        "durationSeconds": 8,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "回看只确认墓仍相隔。",
+          "path": "固定在沿07-A原观察位，让苏贺从土路回到原位置触发人物而非相机移动，保持回看只确认墓仍相隔的空间参照。理由：让观众读出回看只确认墓仍相隔；不改变人物既定行动。",
+          "start": "机位固定于：沿07-A原观察位",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：沿07-A原观察位",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "07-C-F1",
+            "timeSeconds": 0,
+            "description": "苏贺停步"
+          },
+          {
+            "eventId": "07-C-F2",
+            "timeSeconds": 3,
+            "description": "分开的墓"
+          }
+        ],
+        "edit": {
+          "entry": "明确十日后返回，非一个人站十日；木牌未换位。",
+          "exit": "苏贺看墓，枝相接墓不合，结束。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "囚室镜只保留碗竹、门闩、衣料及已设画外守卫脚步，不加守卫人声；墓地镜只风、土路脚步、写牌与显影的原句；无羊铃。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    }
+  ]
+}

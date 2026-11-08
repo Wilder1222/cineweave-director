@@ -1,0 +1,1104 @@
+{
+  "source": {
+    "type": "design",
+    "id": "DENIED-E03-text-coverage-c365a86df0a0",
+    "version": 2,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "E03-SH011",
+    "E03-SH012",
+    "E04-SH001",
+    "E04-SH002",
+    "E04-SH003",
+    "E04-SH101",
+    "E04-SH004",
+    "E04-SH005",
+    "E04-SH006",
+    "E04-SH007"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "E03-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：普通点餐把他们放入同一空间，礼貌不能证明危险与否。；入镜已知：两人出门理由已清楚。；本镜新知：普通点餐把他们放入同一空间，礼貌不能证明危险与否。；实际写出的动作：路易吉戴口罩到东柜台数硬币，说英语“Coffee, please. Whatever's hot. Thank you.”。玛拉接热咖啡先递到他左手，说“Here you go. You can take that table.”，等他握稳收零钱。杯盖一侧弹起，她说“Lid's loose. Hold the cup, not the top.”，拿新盖按紧。青年未喝咖啡，戴口罩绕开收盘客人去西北桌。",
+      "sourceLocator": "season/E03.json#/shots/0"
+    },
+    {
+      "role": "performance",
+      "shotId": "E03-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "玛拉东柜台工服，风衣挂东工作区蓝夹收个人包；青年南门入，口罩戴包双肩。 玛拉手边咖啡机已有热咖啡，纸杯叠在机旁。 → 热咖啡在青年左手，杯盖扣好；零钱已付，青年戴口罩往西北桌走。；路易吉向玛拉：Coffee, please. Whatever's hot. Thank you.；疲倦却客气，供后来亲眼记忆 / 玛拉向路易吉：Here you go. You can take that table.；忙着开班，普通照顾 / 玛拉向路易吉：Lid's loose. Hold the cup, not the top.；职业习惯，注意热饮而非认脸",
+      "sourceLocator": "season/E03.json#/shots/0"
+    },
+    {
+      "role": "staging",
+      "shotId": "E03-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "东柜台Mara，西窗，北后排；起态：玛拉东柜台工服，风衣挂东工作区蓝夹收个人包；青年南门入，口罩戴包双肩。 玛拉手边咖啡机已有热咖啡，纸杯叠在机旁。；出态：热咖啡在青年左手，杯盖扣好；零钱已付，青年戴口罩往西北桌走。",
+      "sourceLocator": "season/E03.json#/shots/0"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E03-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "全景，南门内朝北，轴东侧；相机：固定南门内偏东全景，南门—东柜台—西北桌路线同框，轴东侧。；焦点：交杯与交钱可读，口罩不露嘴。",
+      "sourceLocator": "season/E03.json#/shots/0"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E03-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E03-SH011.txt；24秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E03.json#/shots/0"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E03-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "热咖啡在青年左手，杯盖扣好；零钱已付，青年戴口罩往西北桌走。；切点：装好热咖啡的杯交稳青年左手、零钱留柜台后，他朝北后排走；没有待叫号的订单。；接口：同场跟到西北后排",
+      "sourceLocator": "season/E03.json#/shots/0"
+    },
+    {
+      "role": "direction",
+      "shotId": "E03-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：另一位顾客开始比对公开照片与眼前的人。；入镜已知：青年坐到最远空桌，母亲还在等诊所。；本镜新知：另一位顾客开始比对公开照片与眼前的人。；实际写出的动作：他坐西北桌，杯放前方，包卸在右脚边。疼痛让左掌撑桌、右手贴腰。东柜台玛拉叫住同事。玛拉对同事说本镜第1句英语对白，把救急联系托给同事。棕夹克老人从电视看向北桌，拿着收据离开自己的座位。",
+      "sourceLocator": "season/E03.json#/shots/1"
+    },
+    {
+      "role": "performance",
+      "shotId": "E03-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "他左手杯，右手扶背包带 → 包右脚、杯桌前、口罩戴；老人拿收据向东柜台，玛拉柜台内。；玛拉向同事：If the clinic calls, come get me. Doesn't matter how busy we are.；把救急联系托给同事",
+      "sourceLocator": "season/E03.json#/shots/1"
+    },
+    {
+      "role": "staging",
+      "shotId": "E03-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "青年西北桌居中，背包右脚在画下沿；棕夹克老人从北侧相邻桌起身走向画外东柜台。玛拉与同事仅画外声，位置继承东工作区。；起态：他左手杯，右手扶背包带；出态：包右脚、杯桌前、口罩戴；老人拿收据向东柜台，玛拉柜台内。",
+      "sourceLocator": "season/E03.json#/shots/1"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E03-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中全景，中央通道东侧朝西北；相机：固定通道东侧中全景朝西北，青年卸包中景、老人起身后层；不替老人先下结论。；焦点：右脚旁放包完整可见，老人是后层活动。",
+      "sourceLocator": "season/E03.json#/shots/1"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E03-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E03-SH012.txt；16秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E03.json#/shots/1"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E03-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "包右脚、杯桌前、口罩戴；老人拿收据向东柜台，玛拉柜台内。；切点：老人持收据走向柜台，E04接收据。；接口：快餐店同一早晨连续接入E04-SC01；保持南门、东柜台、西北座及右脚边背包。环境声连续，不插片尾或重复客人走向柜台。",
+      "sourceLocator": "season/E03.json#/shots/1"
+    },
+    {
+      "role": "direction",
+      "shotId": "E04-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：举报先经过一个不确定判断，玛拉必须在没有把握时处理店里真实的人。；入镜已知：老人压住收据，玛拉在东柜台内；青年戴口罩坐西北桌。；本镜新知：老人留东柜台，玛拉拿纸巾走向通道西侧母子桌；青年仍戴口罩。；实际写出的动作：老人把收据推过柜台，手指却压着不松。玛拉先指向一笔价格，他没有看。他朝西北桌偏一下头。老顾客对玛拉说英语“Back there. Isn't that the guy on the news? Don't point.”；怕被听见，把不确定藏在催促里。玛拉等他偏第二次才看过去，青年正扶腰换坐姿。她收回视线，声音压到两人之间。玛拉对老顾客说英语“You know him?”；先分辨认识一个人与觉得脸像。老顾客对玛拉说英语“No. The picture. On the TV.”；自己的把握没有刚才那么足。玛拉对老顾客说英语“Okay. Let me look. Just stay here a minute.”；不向别人广播自己的判断。老人终于松开收据。玛拉拿起纸巾，绕出柜台，经过电视可见的角度；她没有掏手机拍青年。",
+      "sourceLocator": "season/E03.json#/shots/2"
+    },
+    {
+      "role": "performance",
+      "shotId": "E04-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "老人压住收据，玛拉在东柜台内；青年戴口罩坐西北桌。 → 老人留东柜台，玛拉拿纸巾走向通道西侧母子桌；青年仍戴口罩。；老顾客向玛拉：Back there. Isn't that the guy on the news? Don't point.；怕被听见，把不确定藏在催促里 / 玛拉向老顾客：You know him?；先分辨认识一个人与觉得脸像 / 老顾客向玛拉：No. The picture. On the TV.；自己的把握没有刚才那么足 / 玛拉向老顾客：Okay. Let me look. Just stay here a minute.；不向别人广播自己的判断",
+      "sourceLocator": "season/E03.json#/shots/2"
+    },
+    {
+      "role": "staging",
+      "shotId": "E04-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "老人和玛拉隔柜台；青年远处低头，电视只作背景可见物，不用通缉图反复插镜。；起态：老人压住收据，玛拉在东柜台内；青年戴口罩坐西北桌。；出态：老人留东柜台，玛拉拿纸巾走向通道西侧母子桌；青年仍戴口罩。",
+      "sourceLocator": "season/E03.json#/shots/2"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E04-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "东柜台外侧双人中景，西北桌在远层；相机：固定双人关系，不跟每次眼神切青年脸；结尾让玛拉离开这一层。；焦点：人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "sourceLocator": "season/E03.json#/shots/2"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E04-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E04-SH001.txt；38秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E03.json#/shots/2"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E04-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "老人留东柜台，玛拉拿纸巾走向通道西侧母子桌；青年仍戴口罩。；切点：老人留东柜台，玛拉拿纸巾走向通道西侧母子桌；青年仍戴口罩。；接口：因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "sourceLocator": "season/E03.json#/shots/2"
+    },
+    {
+      "role": "direction",
+      "shotId": "E04-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：安全意图遇到顾客正常用餐的阻力，母亲必须自己承担解释和服务。；入镜已知：母子在通道西侧吃东西；玛拉持纸巾走近，南桌有空位。；本镜新知：母子已到南桌，托盘放稳；玛拉回东工作区，西侧通道空出。；实际写出的动作：玛拉对带孩子的顾客说英语“Would you mind moving over there? I need to clear this section. I'll get your tray.”；把安全转移藏在工作安排里。母亲看一眼没有污渍的桌面，没立刻起身。孩子要把敞口果汁杯放到满托盘上，杯身歪向桌边。玛拉先把纸巾垫住杯底。玛拉对带孩子的女顾客及孩子说英语“You don't have to finish. I'll bring it all over. Careful with that one.”；努力保持平常服务口气，眼睛先看杯子。她等孩子两手握稳杯身，才拿起托盘；母亲把椅子推回，一起移到南桌。玛拉把食物按原位放下，没有催他们出店。",
+      "sourceLocator": "season/E03.json#/shots/3"
+    },
+    {
+      "role": "performance",
+      "shotId": "E04-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "母子在通道西侧吃东西；玛拉持纸巾走近，南桌有空位。 → 母子已到南桌，托盘放稳；玛拉回东工作区，西侧通道空出。；玛拉向带孩子的顾客：Would you mind moving over there? I need to clear this section. I'll get your tray.；把安全转移藏在工作安排里 / 玛拉向带孩子的女顾客及孩子：You don't have to finish. I'll bring it all over. Careful with that one.；努力保持平常服务口气，眼睛先看杯子",
+      "sourceLocator": "season/E03.json#/shots/3"
+    },
+    {
+      "role": "staging",
+      "shotId": "E04-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "南门可见，玛拉始终在母子与北桌之间；杯子和托盘处于人物手边。；起态：母子在通道西侧吃东西；玛拉持纸巾走近，南桌有空位。；出态：母子已到南桌，托盘放稳；玛拉回东工作区，西侧通道空出。",
+      "sourceLocator": "season/E03.json#/shots/3"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E04-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "从西桌到南桌的平视三人中景；相机：同侧短横移跟一次完整移桌；不插杯子险些掉落特写，不把礼貌动作拍成战术展示。；焦点：人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "sourceLocator": "season/E03.json#/shots/3"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E04-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E04-SH002.txt；32秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E03.json#/shots/3"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E04-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "母子已到南桌，托盘放稳；玛拉回东工作区，西侧通道空出。；切点：母子已到南桌，托盘放稳；玛拉回东工作区，西侧通道空出。；接口：因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "sourceLocator": "season/E03.json#/shots/3"
+    },
+    {
+      "role": "direction",
+      "shotId": "E04-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她带着安全顾虑与报酬念头报警，没有把怀疑说成已知事实。；入镜已知：她先挪开母子，也看到悬赏。；本镜新知：她带着安全顾虑与报酬念头报警，没有把怀疑说成已知事实。；实际写出的动作：玛拉从右裤袋取手机，看见电视悬赏条，核对北桌后拨通；按所列英语报告地址、外貌判断与不知是否有武器。听完接线端不可辨回复，向老人示意稍等。",
+      "sourceLocator": "season/E03.json#/shots/4"
+    },
+    {
+      "role": "performance",
+      "shotId": "E04-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "玛拉回东柜台，手机仍右裤袋；母子已在南桌。 → 报警电话结束，手机收回右裤袋；玛拉必须继续接待眼前客人。；玛拉向报警接线员：I'm at the restaurant on Oak Street. A customer looks like the man you're looking for. I don't know if he's armed.；压低声报自己观察到的程度",
+      "sourceLocator": "season/E03.json#/shots/4"
+    },
+    {
+      "role": "staging",
+      "shotId": "E04-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "玛拉在东工作区近层，电话右耳，柜台客人的手在画左缘；西北座位远层仅方向可辨，南门画外。；起态：玛拉回东柜台，手机仍右裤袋；母子已在南桌。；出态：报警电话结束，手机收回右裤袋；玛拉必须继续接待眼前客人。",
+      "sourceLocator": "season/E03.json#/shots/4"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E04-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "近景，柜台东侧内向西北；相机：固定柜台内近景，手机右耳、向顾客示意的左手同框；悬赏由眼线和既有电视位置交代。；焦点：保持玛拉，不用夸张拉焦把悬赏变成唯一动机。",
+      "sourceLocator": "season/E03.json#/shots/4"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E04-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E04-SH003.txt；23秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E03.json#/shots/4"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E04-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "报警电话结束，手机收回右裤袋；玛拉必须继续接待眼前客人。；切点：她听接线员，南门铃声在下一镜响起。；接口：略去等待，接警员南门进入",
+      "sourceLocator": "season/E03.json#/shots/4"
+    },
+    {
+      "role": "direction",
+      "shotId": "E04-SH101",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：把报警和到场之间的等待交给必须继续工作的人，让警员抵达有经过。；入镜已知：电话已挂，玛拉在柜台攥着老人的收据；老人空手等在柜台外，青年戴口罩在西北桌。；本镜新知：两警员已入南门，玛拉留柜台；青年右脚边背包未动，口罩未摘。；实际写出的动作：玛拉低头才发现自己还攥着老人的收据，便把纸折齐。玛拉对老顾客说英语“You wanted the receipt, right? Here.”；用最普通的工作把自己稳住。老人接过，回自己的座位。玛拉给空杯续水，水快满时才停。她把杯底擦干送过柜台。同事从后面收走空壶。南门响一下，是出门的客人；又过几秒，门响第二次，两名警员进来。",
+      "sourceLocator": "season/E03.json#/shots/5"
+    },
+    {
+      "role": "performance",
+      "shotId": "E04-SH101",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "电话已挂，玛拉在柜台攥着老人的收据；老人空手等在柜台外，青年戴口罩在西北桌。 → 两警员已入南门，玛拉留柜台；青年右脚边背包未动，口罩未摘。；玛拉向老顾客：You wanted the receipt, right? Here.；用最普通的工作把自己稳住",
+      "sourceLocator": "season/E03.json#/shots/5"
+    },
+    {
+      "role": "staging",
+      "shotId": "E04-SH101",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "玛拉前景水杯与收据；南门后层；西北桌在画外，不跨越其已建立方位。；起态：电话已挂，玛拉在柜台攥着老人的收据；老人空手等在柜台外，青年戴口罩在西北桌。；出态：两警员已入南门，玛拉留柜台；青年右脚边背包未动，口罩未摘。",
+      "sourceLocator": "season/E03.json#/shots/5"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E04-SH101",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "东柜台斜望南入口的中全景；相机：固定柜台视角，让一次误判门声与真正到场连续发生；不倒计时、不切枪包。；焦点：人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "sourceLocator": "season/E03.json#/shots/5"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E04-SH101",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E04-SH101.txt；20秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E03.json#/shots/5"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E04-SH101",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "两警员已入南门，玛拉留柜台；青年右脚边背包未动，口罩未摘。；切点：两警员已入南门，玛拉留柜台；青年右脚边背包未动，口罩未摘。；接口：因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "sourceLocator": "season/E03.json#/shots/5"
+    },
+    {
+      "role": "direction",
+      "shotId": "E04-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：青年意识到盘问针对自己，主动让双手进入可见区。；入镜已知：报警已经打出，青年还在原位。；本镜新知：青年意识到盘问针对自己，主动让双手进入可见区。；实际写出的动作：两警员由南门沿通道来。甲停在桌南侧，乙在通道略后。路易吉先看甲，再看唯一通向南门的空隙，扶腰的手停住。警员甲对路易吉说本镜第1句英语对白，观察两只手，短句给明确指令。他把双手放到桌面，杯子被手背碰出一声。",
+      "sourceLocator": "season/E03.json#/shots/6"
+    },
+    {
+      "role": "performance",
+      "shotId": "E04-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "Luigi右脚边背包，杯桌前，口罩戴着 → 青年双手桌面，口罩仍戴，背包右脚，杯在手前。；警员甲向路易吉：Morning. Hands on the table, please. Got any ID?；观察两只手，短句给明确指令",
+      "sourceLocator": "season/E03.json#/shots/6"
+    },
+    {
+      "role": "staging",
+      "shotId": "E04-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "青年西北桌，警员由南沿中道来；起态：Luigi右脚边背包，杯桌前，口罩戴着；出态：青年双手桌面，口罩仍戴，背包右脚，杯在手前。",
+      "sourceLocator": "season/E03.json#/shots/6"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E04-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中全景，中央通道东侧向西北；相机：固定通道东侧中全景，甲桌南乙稍后、青年坐北、包右脚四点关系完整。；焦点：保持双手与脚边包所在关系，不用浅景深遮住背包。",
+      "sourceLocator": "season/E03.json#/shots/6"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E04-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E04-SH004.txt；16秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E03.json#/shots/6"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E04-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "青年双手桌面，口罩仍戴，背包右脚，杯在手前。；切点：杯子轻碰桌面，甲的视线移向口罩。；接口：同场靠近，摘口罩须完整可见",
+      "sourceLocator": "season/E03.json#/shots/6"
+    },
+    {
+      "role": "direction",
+      "shotId": "E04-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：青年亲手摘下口罩，取证件位置已说明，身份仍待核。；入镜已知：警员只见口罩遮着的脸，双手可见。；本镜新知：青年亲手摘下口罩，取证件位置已说明，身份仍待核。；实际写出的动作：警员甲对路易吉说本镜第1句英语对白，先要看清脸，再限定取物步骤。路易吉右手缓慢抬到耳边，勾开一侧耳带，把口罩完整摘下，平放杯子旁，手再回桌面。甲看清他的脸，等他回答刚才问的证件位置。路易吉对警员甲说本镜第2句英语对白，短答，避免突然伸手。路易吉眼睛没离开甲，只用下巴示意自己的左侧。甲看一眼他说的左口袋，点一下头，准许他取证件。",
+      "sourceLocator": "season/E03.json#/shots/7"
+    },
+    {
+      "role": "performance",
+      "shotId": "E04-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "Luigi双手桌面，口罩覆盖口鼻 → 口罩桌面杯旁，脸无遮挡，双手回桌；证件还在左袋，他已完整说明位置，甲刚点头准许。；警员甲向路易吉：Take the mask off. Slowly. Then tell me where your ID is.；先要看清脸，再限定取物步骤 / 路易吉向警员甲：Left jacket pocket.；短答，避免突然伸手",
+      "sourceLocator": "season/E03.json#/shots/7"
+    },
+    {
+      "role": "staging",
+      "shotId": "E04-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "甲在南缘，青年居中，包画外右脚；起态：Luigi双手桌面，口罩覆盖口鼻；出态：口罩桌面杯旁，脸无遮挡，双手回桌；证件还在左袋，他已完整说明位置，甲刚点头准许。",
+      "sourceLocator": "season/E03.json#/shots/7"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E04-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中近景，桌东侧向西北，不跨轴；相机：固定桌东侧中近景，脸、右手摘罩、杯旁落罩全在画面内；不切断摘下的动作。；焦点：脸到桌边接触保持同一可读范围，不逐次拉焦。",
+      "sourceLocator": "season/E03.json#/shots/7"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E04-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E04-SH005.txt；18秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E03.json#/shots/7"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E04-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "口罩桌面杯旁，脸无遮挡，双手回桌；证件还在左袋，他已完整说明位置，甲刚点头准许。；切点：口罩已落在杯旁；青年完整说完Left jacket pocket，双手仍在桌上，甲点头准许后才切取证件。；接口：接E04-SH006，承接甲已点头准许，青年这才用左手从左袋取卡。",
+      "sourceLocator": "season/E03.json#/shots/7"
+    },
+    {
+      "role": "direction",
+      "shotId": "E04-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：证件交警员后出现疑点；包先被移走，青年尚未上铐。；入镜已知：脸已经露出，卡仍在口袋。；本镜新知：证件交警员后出现疑点；包先被移走，青年尚未上铐。；实际写出的动作：青年交卡后左手回桌；乙比对、退到通道拨核查电话，等待结果后才于14秒开口。甲等乙说完，才将背包由右脚边移到通道外侧；青年两手留桌。",
+      "sourceLocator": "season/E03.json#/shots/8"
+    },
+    {
+      "role": "performance",
+      "shotId": "E04-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "口罩完整放在杯旁，青年获准从左口袋取证件。 → 核查已报不符，甲已将包移到通道外侧；青年未起身，两手在桌。；警员乙向路易吉：This isn't checking out. Keep your hands there.；发现身份核查疑点，停止闲聊",
+      "sourceLocator": "season/E03.json#/shots/8"
+    },
+    {
+      "role": "staging",
+      "shotId": "E04-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "青年坐西北桌，左袋取卡交乙在中层；甲在南侧伸向青年右脚，包移到通道东侧的接触在下层。；起态：口罩完整放在杯旁，青年获准从左口袋取证件。；出态：核查已报不符，甲已将包移到通道外侧；青年未起身，两手在桌。",
+      "sourceLocator": "season/E03.json#/shots/8"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E04-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中全景，桌东南朝西北，轴东侧；从青年头到右脚背包完整容纳。；相机：固定桌东侧偏南中全景而非脸近景，左手取卡和右脚旁移包都必须完整可见。；焦点：保持足够景深读清左手取卡、乙核卡并听电话、甲随后移包；不提前把注意力引向尚未移动的包。",
+      "sourceLocator": "season/E03.json#/shots/8"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E04-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E04-SH006.txt；24秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E03.json#/shots/8"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E04-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "核查已报不符，甲已将包移到通道外侧；青年未起身，两手在桌。；切点：乙核查后说完警告，甲把包放稳在通道外侧、抬手示意起身时切；不重复取卡或移包。；接口：接E04-SH007：证件在乙手、包已隔开；承接甲刚抬手示意，青年再起身上铐。",
+      "sourceLocator": "season/E03.json#/shots/8"
+    },
+    {
+      "role": "direction",
+      "shotId": "E04-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：身体照料与搜查争议并存；控制已完成才开包，为后续听证留下看得见的事实。；入镜已知：青年两手在桌，包已隔开；甲在身旁准备让他起身，乙在通道。；本镜新知：青年前铐由甲握上臂带向南门；乙持包跟上，口罩杯子留桌；包内尚未向观众展示。；实际写出的动作：甲示意路易吉起身。青年先移脚，撑桌慢慢站直；甲在身前合上双腕手铐，抓稳上臂。乙让他们向南移开两步。路易吉第二步没跟上，甲停住，没有放开他。警员甲对路易吉说英语“Take a second. Keep your hands in front.”；允许停步但维持控制。青年还在调整脚位，甲仍抓稳他的上臂；乙回身拉开通道外侧的背包，肩膀挡住里面。路易吉对警员甲说英语“Wait, let me get my balance. The bag's over there.”；争取身体位置，同时指出自己够不到包。甲看他站稳，重新带他往南。南桌顾客已举手机，词句不可辨；玛拉仍留东柜台，不知道自己也在画面内。乙拉拢包口提起跟上，桌上留下口罩和未喝的咖啡。",
+      "sourceLocator": "season/E03.json#/shots/9"
+    },
+    {
+      "role": "performance",
+      "shotId": "E04-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "青年两手在桌，包已隔开；甲在身旁准备让他起身，乙在通道。 → 青年前铐由甲握上臂带向南门；乙持包跟上，口罩杯子留桌；包内尚未向观众展示。；警员甲向路易吉：Take a second. Keep your hands in front.；允许停步但维持控制 / 路易吉向警员甲：Wait, let me get my balance. The bag's over there.；争取身体位置，同时指出自己够不到包",
+      "sourceLocator": "season/E03.json#/shots/9"
+    },
+    {
+      "role": "staging",
+      "shotId": "E04-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "甲和青年前景；隔开的包与乙在通道外侧同一画面层次；南桌顾客画外。；起态：青年两手在桌，包已隔开；甲在身旁准备让他起身，乙在通道。；出态：青年前铐由甲握上臂带向南门；乙持包跟上，口罩杯子留桌；包内尚未向观众展示。",
+      "sourceLocator": "season/E03.json#/shots/9"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E04-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "桌东南朝西北中全景，人物移动仍在同一轴侧；相机：固定关系镜保留起身、前铐、两步离包、乙开包完整先后；不把技术续接当剪辑点。；焦点：人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "sourceLocator": "season/E03.json#/shots/9"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E04-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E04-SH007.txt；39秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E03.json#/shots/9"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E04-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "青年前铐由甲握上臂带向南门；乙持包跟上，口罩杯子留桌；包内尚未向观众展示。；切点：青年前铐由甲握上臂带向南门；乙持包跟上，口罩杯子留桌；包内尚未向观众展示。；接口：本集结束。青年被带向南门，玛拉不知道自己也在顾客的偷拍视频中；一次已完成的选择将产生两种后果。 下集从POLICE展开：被捕和举报之后，两个人今晚实际得到了什么？",
+      "sourceLocator": "season/E03.json#/shots/9"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "E03-SH011",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "普通点餐把他们放入同一空间，礼貌不能证明危险与否。",
+        "audiencePayoff": "普通点餐把他们放入同一空间，礼貌不能证明危险与否。",
+        "trigger": "玛拉东柜台工服，风衣挂东工作区蓝夹收个人包；青年南门入，口罩戴包双肩。 玛拉手边咖啡机已有热咖啡，纸杯叠在机旁。；路易吉戴口罩到东柜台数硬币，说英语“Coffee, please. Whatever's hot. Thank you.”。玛拉接热咖啡先递到他左手，说“Here you go. You can take that table.”，等他握稳收零钱。杯盖一侧弹起，她说“Lid's loose. Hold the cup, not the top.”，拿新盖按紧。青年未喝咖啡，戴口罩绕开收盘客人去西北桌。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "装好热咖啡的杯交稳青年左手、零钱留柜台后，他朝北后排走；没有待叫号的订单。；同场跟到西北后排",
+        "noMotionReason": "固定南门内偏东全景，南门—东柜台—西北桌路线同框，轴东侧。；观看变化：普通点餐把他们放入同一空间，礼貌不能证明危险与否。"
+      },
+      "camera": {
+        "shotScale": "全景",
+        "position": "全景，南门内朝北，轴东侧",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "全景，南门内朝北，轴东侧",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "交杯与交钱可读，口罩不露嘴。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 东柜台Mara，西窗，北后排",
+        "movementIntent": "固定南门内偏东全景，南门—东柜台—西北桌路线同框，轴东侧。"
+      },
+      "composition": {
+        "layout": "东柜台Mara，西窗，北后排",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：路易吉戴口罩到东柜台数硬币，说英语“Coffee, please. Whatever's hot. Thank you.”。玛拉接热咖啡先递到他左手，说“Here you go. You can take that table.”，等他握稳收零钱。杯盖一侧弹起，她说“Lid's loose. Hold the cup, not the top.”，拿新盖按紧。青年未喝咖啡，戴口罩绕开收盘客人去西北桌。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "普通点餐把他们放入同一空间，礼貌不能证明危险与否。；交杯与交钱可读，口罩不露嘴。"
+      },
+      "temporal": {
+        "durationSeconds": 24,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "普通点餐把他们放入同一空间，礼貌不能证明危险与否。",
+          "path": "机位不移动。",
+          "start": "玛拉东柜台工服，风衣挂东工作区蓝夹收个人包；青年南门入，口罩戴包双肩。 玛拉手边咖啡机已有热咖啡，纸杯叠在机旁。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "热咖啡在青年左手，杯盖扣好；零钱已付，青年戴口罩往西北桌走。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E03-SH011-F1",
+            "timeSeconds": 0,
+            "description": "交杯与交钱可读，口罩不露嘴。"
+          }
+        ],
+        "edit": {
+          "entry": "玛拉东柜台工服，风衣挂东工作区蓝夹收个人包；青年南门入，口罩戴包双肩。 玛拉手边咖啡机已有热咖啡，纸杯叠在机旁。",
+          "exit": "热咖啡在青年左手，杯盖扣好；零钱已付，青年戴口罩往西北桌走。；装好热咖啡的杯交稳青年左手、零钱留柜台后，他朝北后排走；没有待叫号的订单。",
+          "preferredTransition": "同场跟到西北后排",
+          "soundBridge": "门铃、咖啡机、厨房炸锅；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E03-SH012",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "另一位顾客开始比对公开照片与眼前的人。",
+        "audiencePayoff": "另一位顾客开始比对公开照片与眼前的人。",
+        "trigger": "他左手杯，右手扶背包带；他坐西北桌，杯放前方，包卸在右脚边。疼痛让左掌撑桌、右手贴腰。东柜台玛拉叫住同事。玛拉对同事说本镜第1句英语对白，把救急联系托给同事。棕夹克老人从电视看向北桌，拿着收据离开自己的座位。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "老人持收据走向柜台，E04接收据。；快餐店同一早晨连续接入E04-SC01；保持南门、东柜台、西北座及右脚边背包。环境声连续，不插片尾或重复客人走向柜台。",
+        "noMotionReason": "固定通道东侧中全景朝西北，青年卸包中景、老人起身后层；不替老人先下结论。；观看变化：另一位顾客开始比对公开照片与眼前的人。"
+      },
+      "camera": {
+        "shotScale": "中全景",
+        "position": "中全景，中央通道东侧朝西北",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中全景，中央通道东侧朝西北",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "右脚旁放包完整可见，老人是后层活动。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 青年西北桌居中，背包右脚在画下沿；棕夹克老人从北侧相邻桌起身走向画外东柜台。玛拉与同事仅画外声，位置继承东工作区。",
+        "movementIntent": "固定通道东侧中全景朝西北，青年卸包中景、老人起身后层；不替老人先下结论。"
+      },
+      "composition": {
+        "layout": "青年西北桌居中，背包右脚在画下沿；棕夹克老人从北侧相邻桌起身走向画外东柜台。玛拉与同事仅画外声，位置继承东工作区。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：他坐西北桌，杯放前方，包卸在右脚边。疼痛让左掌撑桌、右手贴腰。东柜台玛拉叫住同事。玛拉对同事说本镜第1句英语对白，把救急联系托给同事。棕夹克老人从电视看向北桌，拿着收据离开自己的座位。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "另一位顾客开始比对公开照片与眼前的人。；右脚旁放包完整可见，老人是后层活动。"
+      },
+      "temporal": {
+        "durationSeconds": 16,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "另一位顾客开始比对公开照片与眼前的人。",
+          "path": "机位不移动。",
+          "start": "他左手杯，右手扶背包带",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "包右脚、杯桌前、口罩戴；老人拿收据向东柜台，玛拉柜台内。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E03-SH012-F1",
+            "timeSeconds": 0,
+            "description": "右脚旁放包完整可见，老人是后层活动。"
+          }
+        ],
+        "edit": {
+          "entry": "他左手杯，右手扶背包带",
+          "exit": "包右脚、杯桌前、口罩戴；老人拿收据向东柜台，玛拉柜台内。；老人持收据走向柜台，E04接收据。",
+          "preferredTransition": "快餐店同一早晨连续接入E04-SC01；保持南门、东柜台、西北座及右脚边背包。环境声连续，不插片尾或重复客人走向柜台。",
+          "soundBridge": "青年椅脚与放包、低电视声；玛拉从画外东柜台说所列英语，同事不新增答话。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E04-SH001",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "举报先经过一个不确定判断，玛拉必须在没有把握时处理店里真实的人。",
+        "audiencePayoff": "老人留东柜台，玛拉拿纸巾走向通道西侧母子桌；青年仍戴口罩。",
+        "trigger": "老人压住收据，玛拉在东柜台内；青年戴口罩坐西北桌。；老人把收据推过柜台，手指却压着不松。玛拉先指向一笔价格，他没有看。他朝西北桌偏一下头。老顾客对玛拉说英语“Back there. Isn't that the guy on the news? Don't point.”；怕被听见，把不确定藏在催促里。玛拉等他偏第二次才看过去，青年正扶腰换坐姿。她收回视线，声音压到两人之间。玛拉对老顾客说英语“You know him?”；先分辨认识一个人与觉得脸像。老顾客对玛拉说英语“No. The picture. On the TV.”；自己的把握没有刚才那么足。玛拉对老顾客说英语“Okay. Let me look. Just stay here a minute.”；不向别人广播自己的判断。老人终于松开收据。玛拉拿起纸巾，绕出柜台，经过电视可见的角度；她没有掏手机拍青年。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "老人留东柜台，玛拉拿纸巾走向通道西侧母子桌；青年仍戴口罩。；因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+        "noMotionReason": "固定双人关系，不跟每次眼神切青年脸；结尾让玛拉离开这一层。；观看变化：老人留东柜台，玛拉拿纸巾走向通道西侧母子桌；青年仍戴口罩。"
+      },
+      "camera": {
+        "shotScale": "东柜台外侧双人中景",
+        "position": "东柜台外侧双人中景，西北桌在远层",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "东柜台外侧双人中景，西北桌在远层",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 老人和玛拉隔柜台；青年远处低头，电视只作背景可见物，不用通缉图反复插镜。",
+        "movementIntent": "固定双人关系，不跟每次眼神切青年脸；结尾让玛拉离开这一层。"
+      },
+      "composition": {
+        "layout": "老人和玛拉隔柜台；青年远处低头，电视只作背景可见物，不用通缉图反复插镜。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：老人把收据推过柜台，手指却压着不松。玛拉先指向一笔价格，他没有看。他朝西北桌偏一下头。老顾客对玛拉说英语“Back there. Isn't that the guy on the news? Don't point.”；怕被听见，把不确定藏在催促里。玛拉等他偏第二次才看过去，青年正扶腰换坐姿。她收回视线，声音压到两人之间。玛拉对老顾客说英语“You know him?”；先分辨认识一个人与觉得脸像。老顾客对玛拉说英语“No. The picture. On the TV.”；自己的把握没有刚才那么足。玛拉对老顾客说英语“Okay. Let me look. Just stay here a minute.”；不向别人广播自己的判断。老人终于松开收据。玛拉拿起纸巾，绕出柜台，经过电视可见的角度；她没有掏手机拍青年。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "举报先经过一个不确定判断，玛拉必须在没有把握时处理店里真实的人。；人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+      },
+      "temporal": {
+        "durationSeconds": 38,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "举报先经过一个不确定判断，玛拉必须在没有把握时处理店里真实的人。",
+          "path": "机位不移动。",
+          "start": "老人压住收据，玛拉在东柜台内；青年戴口罩坐西北桌。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "老人留东柜台，玛拉拿纸巾走向通道西侧母子桌；青年仍戴口罩。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E04-SH001-F1",
+            "timeSeconds": 0,
+            "description": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+          }
+        ],
+        "edit": {
+          "entry": "老人压住收据，玛拉在东柜台内；青年戴口罩坐西北桌。",
+          "exit": "老人留东柜台，玛拉拿纸巾走向通道西侧母子桌；青年仍戴口罩。；老人留东柜台，玛拉拿纸巾走向通道西侧母子桌；青年仍戴口罩。",
+          "preferredTransition": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+          "soundBridge": "同场环境声与所列英语；不补额外可辨台词；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E04-SH002",
+      "decision": {
+        "primaryTechniqueId": "M03",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "安全意图遇到顾客正常用餐的阻力，母亲必须自己承担解释和服务。",
+        "audiencePayoff": "母子已到南桌，托盘放稳；玛拉回东工作区，西侧通道空出。",
+        "trigger": "母子在通道西侧吃东西；玛拉持纸巾走近，南桌有空位。；玛拉对带孩子的顾客说英语“Would you mind moving over there? I need to clear this section. I'll get your tray.”；把安全转移藏在工作安排里。母亲看一眼没有污渍的桌面，没立刻起身。孩子要把敞口果汁杯放到满托盘上，杯身歪向桌边。玛拉先把纸巾垫住杯底。玛拉对带孩子的女顾客及孩子说英语“You don't have to finish. I'll bring it all over. Careful with that one.”；努力保持平常服务口气，眼睛先看杯子。她等孩子两手握稳杯身，才拿起托盘；母亲把椅子推回，一起移到南桌。玛拉把食物按原位放下，没有催他们出店。",
+        "cameraMode": "moving",
+        "focusMode": "hold",
+        "exitMatch": "母子已到南桌，托盘放稳；玛拉回东工作区，西侧通道空出。；因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。"
+      },
+      "camera": {
+        "shotScale": "从西桌到南桌的平视三人中景",
+        "position": "从西桌到南桌的平视三人中景",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "从西桌到南桌的平视三人中景",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 南门可见，玛拉始终在母子与北桌之间；杯子和托盘处于人物手边。",
+        "movementIntent": "同侧短横移跟一次完整移桌；不插杯子险些掉落特写，不把礼貌动作拍成战术展示。"
+      },
+      "composition": {
+        "layout": "南门可见，玛拉始终在母子与北桌之间；杯子和托盘处于人物手边。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：玛拉对带孩子的顾客说英语“Would you mind moving over there? I need to clear this section. I'll get your tray.”；把安全转移藏在工作安排里。母亲看一眼没有污渍的桌面，没立刻起身。孩子要把敞口果汁杯放到满托盘上，杯身歪向桌边。玛拉先把纸巾垫住杯底。玛拉对带孩子的女顾客及孩子说英语“You don't have to finish. I'll bring it all over. Careful with that one.”；努力保持平常服务口气，眼睛先看杯子。她等孩子两手握稳杯身，才拿起托盘；母亲把椅子推回，一起移到南桌。玛拉把食物按原位放下，没有催他们出店。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "安全意图遇到顾客正常用餐的阻力，母亲必须自己承担解释和服务。；人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+      },
+      "temporal": {
+        "durationSeconds": 32,
+        "cameraMotion": {
+          "type": "truck",
+          "motivation": "安全意图遇到顾客正常用餐的阻力，母亲必须自己承担解释和服务。",
+          "path": "同侧短横移跟一次完整移桌；不插杯子险些掉落特写，不把礼貌动作拍成战术展示。",
+          "start": "母子在通道西侧吃东西；玛拉持纸巾走近，南桌有空位。",
+          "acceleration": "仅执行作者本镜规定的启动与速度，不另加缓起：同侧短横移跟一次完整移桌；不插杯子险些掉落特写，不把礼貌动作拍成战术展示。",
+          "peak": "依本镜作者运动描述，不统一套匀速：同侧短横移跟一次完整移桌；不插杯子险些掉落特写，不把礼貌动作拍成战术展示。",
+          "deceleration": "不强制停稳；按作者出点接后镜：母子已到南桌，托盘放稳；玛拉回东工作区，西侧通道空出。",
+          "end": "母子已到南桌，托盘放稳；玛拉回东工作区，西侧通道空出。",
+          "framingChange": "同侧短横移跟一次完整移桌；不插杯子险些掉落特写，不把礼貌动作拍成战术展示。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E04-SH002-F1",
+            "timeSeconds": 0,
+            "description": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+          }
+        ],
+        "edit": {
+          "entry": "母子在通道西侧吃东西；玛拉持纸巾走近，南桌有空位。",
+          "exit": "母子已到南桌，托盘放稳；玛拉回东工作区，西侧通道空出。；母子已到南桌，托盘放稳；玛拉回东工作区，西侧通道空出。",
+          "preferredTransition": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+          "soundBridge": "同场环境声与所列英语；不补额外可辨台词；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E04-SH003",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她带着安全顾虑与报酬念头报警，没有把怀疑说成已知事实。",
+        "audiencePayoff": "她带着安全顾虑与报酬念头报警，没有把怀疑说成已知事实。",
+        "trigger": "玛拉回东柜台，手机仍右裤袋；母子已在南桌。；玛拉从右裤袋取手机，看见电视悬赏条，核对北桌后拨通；按所列英语报告地址、外貌判断与不知是否有武器。听完接线端不可辨回复，向老人示意稍等。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "她听接线员，南门铃声在下一镜响起。；略去等待，接警员南门进入",
+        "noMotionReason": "固定柜台内近景，手机右耳、向顾客示意的左手同框；悬赏由眼线和既有电视位置交代。；观看变化：她带着安全顾虑与报酬念头报警，没有把怀疑说成已知事实。"
+      },
+      "camera": {
+        "shotScale": "近景",
+        "position": "近景，柜台东侧内向西北",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "近景，柜台东侧内向西北",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "保持玛拉，不用夸张拉焦把悬赏变成唯一动机。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 玛拉在东工作区近层，电话右耳，柜台客人的手在画左缘；西北座位远层仅方向可辨，南门画外。",
+        "movementIntent": "固定柜台内近景，手机右耳、向顾客示意的左手同框；悬赏由眼线和既有电视位置交代。"
+      },
+      "composition": {
+        "layout": "玛拉在东工作区近层，电话右耳，柜台客人的手在画左缘；西北座位远层仅方向可辨，南门画外。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：玛拉从右裤袋取手机，看见电视悬赏条，核对北桌后拨通；按所列英语报告地址、外貌判断与不知是否有武器。听完接线端不可辨回复，向老人示意稍等。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她带着安全顾虑与报酬念头报警，没有把怀疑说成已知事实。；保持玛拉，不用夸张拉焦把悬赏变成唯一动机。"
+      },
+      "temporal": {
+        "durationSeconds": 23,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她带着安全顾虑与报酬念头报警，没有把怀疑说成已知事实。",
+          "path": "机位不移动。",
+          "start": "玛拉回东柜台，手机仍右裤袋；母子已在南桌。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "报警电话结束，手机收回右裤袋；玛拉必须继续接待眼前客人。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E04-SH003-F1",
+            "timeSeconds": 0,
+            "description": "保持玛拉，不用夸张拉焦把悬赏变成唯一动机。"
+          }
+        ],
+        "edit": {
+          "entry": "玛拉回东柜台，手机仍右裤袋；母子已在南桌。",
+          "exit": "报警电话结束，手机收回右裤袋；玛拉必须继续接待眼前客人。；她听接线员，南门铃声在下一镜响起。",
+          "preferredTransition": "略去等待，接警员南门进入",
+          "soundBridge": "电话连接声、厨房通风、柜台远交谈；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E04-SH101",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "把报警和到场之间的等待交给必须继续工作的人，让警员抵达有经过。",
+        "audiencePayoff": "两警员已入南门，玛拉留柜台；青年右脚边背包未动，口罩未摘。",
+        "trigger": "电话已挂，玛拉在柜台攥着老人的收据；老人空手等在柜台外，青年戴口罩在西北桌。；玛拉低头才发现自己还攥着老人的收据，便把纸折齐。玛拉对老顾客说英语“You wanted the receipt, right? Here.”；用最普通的工作把自己稳住。老人接过，回自己的座位。玛拉给空杯续水，水快满时才停。她把杯底擦干送过柜台。同事从后面收走空壶。南门响一下，是出门的客人；又过几秒，门响第二次，两名警员进来。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "两警员已入南门，玛拉留柜台；青年右脚边背包未动，口罩未摘。；因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+        "noMotionReason": "固定柜台视角，让一次误判门声与真正到场连续发生；不倒计时、不切枪包。；观看变化：两警员已入南门，玛拉留柜台；青年右脚边背包未动，口罩未摘。"
+      },
+      "camera": {
+        "shotScale": "东柜台斜望南入口的中全景",
+        "position": "东柜台斜望南入口的中全景",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "东柜台斜望南入口的中全景",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 玛拉前景水杯与收据；南门后层；西北桌在画外，不跨越其已建立方位。",
+        "movementIntent": "固定柜台视角，让一次误判门声与真正到场连续发生；不倒计时、不切枪包。"
+      },
+      "composition": {
+        "layout": "玛拉前景水杯与收据；南门后层；西北桌在画外，不跨越其已建立方位。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：玛拉低头才发现自己还攥着老人的收据，便把纸折齐。玛拉对老顾客说英语“You wanted the receipt, right? Here.”；用最普通的工作把自己稳住。老人接过，回自己的座位。玛拉给空杯续水，水快满时才停。她把杯底擦干送过柜台。同事从后面收走空壶。南门响一下，是出门的客人；又过几秒，门响第二次，两名警员进来。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "把报警和到场之间的等待交给必须继续工作的人，让警员抵达有经过。；人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+      },
+      "temporal": {
+        "durationSeconds": 20,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "把报警和到场之间的等待交给必须继续工作的人，让警员抵达有经过。",
+          "path": "机位不移动。",
+          "start": "电话已挂，玛拉在柜台攥着老人的收据；老人空手等在柜台外，青年戴口罩在西北桌。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "两警员已入南门，玛拉留柜台；青年右脚边背包未动，口罩未摘。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E04-SH101-F1",
+            "timeSeconds": 0,
+            "description": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+          }
+        ],
+        "edit": {
+          "entry": "电话已挂，玛拉在柜台攥着老人的收据；老人空手等在柜台外，青年戴口罩在西北桌。",
+          "exit": "两警员已入南门，玛拉留柜台；青年右脚边背包未动，口罩未摘。；两警员已入南门，玛拉留柜台；青年右脚边背包未动，口罩未摘。",
+          "preferredTransition": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+          "soundBridge": "同场环境声与所列英语；不补额外可辨台词；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E04-SH004",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "青年意识到盘问针对自己，主动让双手进入可见区。",
+        "audiencePayoff": "青年意识到盘问针对自己，主动让双手进入可见区。",
+        "trigger": "Luigi右脚边背包，杯桌前，口罩戴着；两警员由南门沿通道来。甲停在桌南侧，乙在通道略后。路易吉先看甲，再看唯一通向南门的空隙，扶腰的手停住。警员甲对路易吉说本镜第1句英语对白，观察两只手，短句给明确指令。他把双手放到桌面，杯子被手背碰出一声。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "杯子轻碰桌面，甲的视线移向口罩。；同场靠近，摘口罩须完整可见",
+        "noMotionReason": "固定通道东侧中全景，甲桌南乙稍后、青年坐北、包右脚四点关系完整。；观看变化：青年意识到盘问针对自己，主动让双手进入可见区。"
+      },
+      "camera": {
+        "shotScale": "中全景",
+        "position": "中全景，中央通道东侧向西北",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中全景，中央通道东侧向西北",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "保持双手与脚边包所在关系，不用浅景深遮住背包。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 青年西北桌，警员由南沿中道来",
+        "movementIntent": "固定通道东侧中全景，甲桌南乙稍后、青年坐北、包右脚四点关系完整。"
+      },
+      "composition": {
+        "layout": "青年西北桌，警员由南沿中道来",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：两警员由南门沿通道来。甲停在桌南侧，乙在通道略后。路易吉先看甲，再看唯一通向南门的空隙，扶腰的手停住。警员甲对路易吉说本镜第1句英语对白，观察两只手，短句给明确指令。他把双手放到桌面，杯子被手背碰出一声。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "青年意识到盘问针对自己，主动让双手进入可见区。；保持双手与脚边包所在关系，不用浅景深遮住背包。"
+      },
+      "temporal": {
+        "durationSeconds": 16,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "青年意识到盘问针对自己，主动让双手进入可见区。",
+          "path": "机位不移动。",
+          "start": "Luigi右脚边背包，杯桌前，口罩戴着",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "青年双手桌面，口罩仍戴，背包右脚，杯在手前。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E04-SH004-F1",
+            "timeSeconds": 0,
+            "description": "保持双手与脚边包所在关系，不用浅景深遮住背包。"
+          }
+        ],
+        "edit": {
+          "entry": "Luigi右脚边背包，杯桌前，口罩戴着",
+          "exit": "青年双手桌面，口罩仍戴，背包右脚，杯在手前。；杯子轻碰桌面，甲的视线移向口罩。",
+          "preferredTransition": "同场靠近，摘口罩须完整可见",
+          "soundBridge": "警员脚步止住、后方杯碟声变轻；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E04-SH005",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "青年亲手摘下口罩，取证件位置已说明，身份仍待核。",
+        "audiencePayoff": "青年亲手摘下口罩，取证件位置已说明，身份仍待核。",
+        "trigger": "Luigi双手桌面，口罩覆盖口鼻；警员甲对路易吉说本镜第1句英语对白，先要看清脸，再限定取物步骤。路易吉右手缓慢抬到耳边，勾开一侧耳带，把口罩完整摘下，平放杯子旁，手再回桌面。甲看清他的脸，等他回答刚才问的证件位置。路易吉对警员甲说本镜第2句英语对白，短答，避免突然伸手。路易吉眼睛没离开甲，只用下巴示意自己的左侧。甲看一眼他说的左口袋，点一下头，准许他取证件。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "口罩已落在杯旁；青年完整说完Left jacket pocket，双手仍在桌上，甲点头准许后才切取证件。；接E04-SH006，承接甲已点头准许，青年这才用左手从左袋取卡。",
+        "noMotionReason": "固定桌东侧中近景，脸、右手摘罩、杯旁落罩全在画面内；不切断摘下的动作。；观看变化：青年亲手摘下口罩，取证件位置已说明，身份仍待核。"
+      },
+      "camera": {
+        "shotScale": "中近景",
+        "position": "中近景，桌东侧向西北，不跨轴",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中近景，桌东侧向西北，不跨轴",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "脸到桌边接触保持同一可读范围，不逐次拉焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 甲在南缘，青年居中，包画外右脚",
+        "movementIntent": "固定桌东侧中近景，脸、右手摘罩、杯旁落罩全在画面内；不切断摘下的动作。"
+      },
+      "composition": {
+        "layout": "甲在南缘，青年居中，包画外右脚",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：警员甲对路易吉说本镜第1句英语对白，先要看清脸，再限定取物步骤。路易吉右手缓慢抬到耳边，勾开一侧耳带，把口罩完整摘下，平放杯子旁，手再回桌面。甲看清他的脸，等他回答刚才问的证件位置。路易吉对警员甲说本镜第2句英语对白，短答，避免突然伸手。路易吉眼睛没离开甲，只用下巴示意自己的左侧。甲看一眼他说的左口袋，点一下头，准许他取证件。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "青年亲手摘下口罩，取证件位置已说明，身份仍待核。；脸到桌边接触保持同一可读范围，不逐次拉焦。"
+      },
+      "temporal": {
+        "durationSeconds": 18,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "青年亲手摘下口罩，取证件位置已说明，身份仍待核。",
+          "path": "机位不移动。",
+          "start": "Luigi双手桌面，口罩覆盖口鼻",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "口罩桌面杯旁，脸无遮挡，双手回桌；证件还在左袋，他已完整说明位置，甲刚点头准许。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E04-SH005-F1",
+            "timeSeconds": 0,
+            "description": "脸到桌边接触保持同一可读范围，不逐次拉焦。"
+          }
+        ],
+        "edit": {
+          "entry": "Luigi双手桌面，口罩覆盖口鼻",
+          "exit": "口罩桌面杯旁，脸无遮挡，双手回桌；证件还在左袋，他已完整说明位置，甲刚点头准许。；口罩已落在杯旁；青年完整说完Left jacket pocket，双手仍在桌上，甲点头准许后才切取证件。",
+          "preferredTransition": "接E04-SH006，承接甲已点头准许，青年这才用左手从左袋取卡。",
+          "soundBridge": "耳带衣料轻擦、短椅响；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E04-SH006",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "证件交警员后出现疑点；包先被移走，青年尚未上铐。",
+        "audiencePayoff": "证件交警员后出现疑点；包先被移走，青年尚未上铐。",
+        "trigger": "口罩完整放在杯旁，青年获准从左口袋取证件。；青年交卡后左手回桌；乙比对、退到通道拨核查电话，等待结果后才于14秒开口。甲等乙说完，才将背包由右脚边移到通道外侧；青年两手留桌。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "乙核查后说完警告，甲把包放稳在通道外侧、抬手示意起身时切；不重复取卡或移包。；接E04-SH007：证件在乙手、包已隔开；承接甲刚抬手示意，青年再起身上铐。",
+        "noMotionReason": "固定桌东侧偏南中全景而非脸近景，左手取卡和右脚旁移包都必须完整可见。；观看变化：证件交警员后出现疑点；包先被移走，青年尚未上铐。"
+      },
+      "camera": {
+        "shotScale": "中全景",
+        "position": "中全景，桌东南朝西北，轴东侧；从青年头到右脚背包完整容纳。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中全景，桌东南朝西北，轴东侧；从青年头到右脚背包完整容纳。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "保持足够景深读清左手取卡、乙核卡并听电话、甲随后移包；不提前把注意力引向尚未移动的包。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 青年坐西北桌，左袋取卡交乙在中层；甲在南侧伸向青年右脚，包移到通道东侧的接触在下层。",
+        "movementIntent": "固定桌东侧偏南中全景而非脸近景，左手取卡和右脚旁移包都必须完整可见。"
+      },
+      "composition": {
+        "layout": "青年坐西北桌，左袋取卡交乙在中层；甲在南侧伸向青年右脚，包移到通道东侧的接触在下层。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：青年交卡后左手回桌；乙比对、退到通道拨核查电话，等待结果后才于14秒开口。甲等乙说完，才将背包由右脚边移到通道外侧；青年两手留桌。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "证件交警员后出现疑点；包先被移走，青年尚未上铐。；保持足够景深读清左手取卡、乙核卡并听电话、甲随后移包；不提前把注意力引向尚未移动的包。"
+      },
+      "temporal": {
+        "durationSeconds": 24,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "证件交警员后出现疑点；包先被移走，青年尚未上铐。",
+          "path": "机位不移动。",
+          "start": "口罩完整放在杯旁，青年获准从左口袋取证件。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "核查已报不符，甲已将包移到通道外侧；青年未起身，两手在桌。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E04-SH006-F1",
+            "timeSeconds": 0,
+            "description": "保持足够景深读清左手取卡、乙核卡并听电话、甲随后移包；不提前把注意力引向尚未移动的包。"
+          }
+        ],
+        "edit": {
+          "entry": "口罩完整放在杯旁，青年获准从左口袋取证件。",
+          "exit": "核查已报不符，甲已将包移到通道外侧；青年未起身，两手在桌。；乙核查后说完警告，甲把包放稳在通道外侧、抬手示意起身时切；不重复取卡或移包。",
+          "preferredTransition": "接E04-SH007：证件在乙手、包已隔开；承接甲刚抬手示意，青年再起身上铐。",
+          "soundBridge": "塑料卡交接，乙拨号后的听筒底声不可辨，不新增接线员台词；核查后才有乙所列英语，随后背包拖地短响。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E04-SH007",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "身体照料与搜查争议并存；控制已完成才开包，为后续听证留下看得见的事实。",
+        "audiencePayoff": "青年前铐由甲握上臂带向南门；乙持包跟上，口罩杯子留桌；包内尚未向观众展示。",
+        "trigger": "青年两手在桌，包已隔开；甲在身旁准备让他起身，乙在通道。；甲示意路易吉起身。青年先移脚，撑桌慢慢站直；甲在身前合上双腕手铐，抓稳上臂。乙让他们向南移开两步。路易吉第二步没跟上，甲停住，没有放开他。警员甲对路易吉说英语“Take a second. Keep your hands in front.”；允许停步但维持控制。青年还在调整脚位，甲仍抓稳他的上臂；乙回身拉开通道外侧的背包，肩膀挡住里面。路易吉对警员甲说英语“Wait, let me get my balance. The bag's over there.”；争取身体位置，同时指出自己够不到包。甲看他站稳，重新带他往南。南桌顾客已举手机，词句不可辨；玛拉仍留东柜台，不知道自己也在画面内。乙拉拢包口提起跟上，桌上留下口罩和未喝的咖啡。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "青年前铐由甲握上臂带向南门；乙持包跟上，口罩杯子留桌；包内尚未向观众展示。；本集结束。青年被带向南门，玛拉不知道自己也在顾客的偷拍视频中；一次已完成的选择将产生两种后果。 下集从POLICE展开：被捕和举报之后，两个人今晚实际得到了什么？",
+        "noMotionReason": "固定关系镜保留起身、前铐、两步离包、乙开包完整先后；不把技术续接当剪辑点。；观看变化：青年前铐由甲握上臂带向南门；乙持包跟上，口罩杯子留桌；包内尚未向观众展示。"
+      },
+      "camera": {
+        "shotScale": "桌东南朝西北中全景",
+        "position": "桌东南朝西北中全景，人物移动仍在同一轴侧",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "桌东南朝西北中全景，人物移动仍在同一轴侧",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 甲和青年前景；隔开的包与乙在通道外侧同一画面层次；南桌顾客画外。",
+        "movementIntent": "固定关系镜保留起身、前铐、两步离包、乙开包完整先后；不把技术续接当剪辑点。"
+      },
+      "composition": {
+        "layout": "甲和青年前景；隔开的包与乙在通道外侧同一画面层次；南桌顾客画外。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：甲示意路易吉起身。青年先移脚，撑桌慢慢站直；甲在身前合上双腕手铐，抓稳上臂。乙让他们向南移开两步。路易吉第二步没跟上，甲停住，没有放开他。警员甲对路易吉说英语“Take a second. Keep your hands in front.”；允许停步但维持控制。青年还在调整脚位，甲仍抓稳他的上臂；乙回身拉开通道外侧的背包，肩膀挡住里面。路易吉对警员甲说英语“Wait, let me get my balance. The bag's over there.”；争取身体位置，同时指出自己够不到包。甲看他站稳，重新带他往南。南桌顾客已举手机，词句不可辨；玛拉仍留东柜台，不知道自己也在画面内。乙拉拢包口提起跟上，桌上留下口罩和未喝的咖啡。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "身体照料与搜查争议并存；控制已完成才开包，为后续听证留下看得见的事实。；人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+      },
+      "temporal": {
+        "durationSeconds": 39,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "身体照料与搜查争议并存；控制已完成才开包，为后续听证留下看得见的事实。",
+          "path": "机位不移动。",
+          "start": "青年两手在桌，包已隔开；甲在身旁准备让他起身，乙在通道。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "青年前铐由甲握上臂带向南门；乙持包跟上，口罩杯子留桌；包内尚未向观众展示。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E04-SH007-F1",
+            "timeSeconds": 0,
+            "description": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+          }
+        ],
+        "edit": {
+          "entry": "青年两手在桌，包已隔开；甲在身旁准备让他起身，乙在通道。",
+          "exit": "青年前铐由甲握上臂带向南门；乙持包跟上，口罩杯子留桌；包内尚未向观众展示。；青年前铐由甲握上臂带向南门；乙持包跟上，口罩杯子留桌；包内尚未向观众展示。",
+          "preferredTransition": "本集结束。青年被带向南门，玛拉不知道自己也在顾客的偷拍视频中；一次已完成的选择将产生两种后果。 下集从POLICE展开：被捕和举报之后，两个人今晚实际得到了什么？",
+          "soundBridge": "同场环境声与所列英语；不补额外可辨台词；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,561 @@
+{
+  "format": "cineweave-behavior-review/v1",
+  "version": "3.2.1",
+  "case_count": 14,
+  "reviewer": "root agent; manual constraint review plus executable equality, XML, file hash and checker checks",
+  "rubric_visibility": "not supplied to case agents",
+  "results": [
+    {
+      "id": "C01",
+      "status": "pass_text_and_design_scope",
+      "basis": "完整单条海报稿；准确片名、闭合地图、成年与原创面貌；没有可见匕首。",
+      "independent_fresh_context": true,
+      "raw_output": "cases/C01/output.md",
+      "output_sha256": "9f01aa0442566ee52ad130b031eba240cc6d2f871b9c8c9d890d2ee2aaa6e4ad",
+      "source_reads": [
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C01\\request.txt",
+          "sha256": "1f0daddd00f10330fe2163c42a06efde6f4e0a92f5cb1d7c85448c45f86ee490"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\SKILL.md",
+          "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\image-prompt.md",
+          "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+          "sha256": "0880a163be9679d32807688a0c434c0fa936c0fb00a5c4aae24e381d0dd92c25"
+        }
+      ],
+      "executable_checks": [],
+      "media_status": "not_executed",
+      "automatic_host_selection": "not_tested"
+    },
+    {
+      "id": "C02",
+      "status": "pass_text_and_design_scope",
+      "basis": "单镜6秒，听声→停脚→转头→原句；固定机位且窗内主体全程遮挡，新增对白有归属。",
+      "independent_fresh_context": true,
+      "raw_output": "cases/C02/output.md",
+      "output_sha256": "767df1641e6072478cc14b2984b0dcb20e4ef0cdaa3fc4156c8438df1d8ab6e0",
+      "source_reads": [
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C02\\request.txt",
+          "sha256": "838a21b63f72cab969d105459bda118380e86fc68939b4bdd99e8b03737f161e"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\SKILL.md",
+          "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\shot-direction.md",
+          "sha256": "135208d33bbc8316378b3947d99142a7ff36acd84fe1f2668f0e818a5aca572d"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+          "sha256": "0880a163be9679d32807688a0c434c0fa936c0fb00a5c4aae24e381d0dd92c25"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\video-performance-direction.md",
+          "sha256": "080817e75161a966a35d3170c686850e5280d2dbc905a1e52ba1bab807b32018"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\video-sound-and-delivery.md",
+          "sha256": "ca77595c37042bd7b21974736b50a485d983e8ea5b9bc90f74359e6a2c76d941"
+        }
+      ],
+      "executable_checks": [],
+      "media_status": "not_executed",
+      "automatic_host_selection": "not_tested"
+    },
+    {
+      "id": "C03",
+      "status": "pass_text_and_design_scope",
+      "basis": "两个独立5秒稿，一斧接触后完全退出；次镜从原缺口、离树斧开始，南北锚点和切点闭合。",
+      "independent_fresh_context": true,
+      "raw_output": "cases/C03/output.md",
+      "output_sha256": "997777ea9751f43f817c02e9245e3f4ec453193a1138fef0c8dc449a0c997274",
+      "source_reads": [
+        {
+          "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior/C03/request.txt",
+          "sha256": "27d95eff29260381b2d65d563115f11b612a7782dee521c92752430353c1bf63"
+        },
+        {
+          "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/SKILL.md",
+          "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+        },
+        {
+          "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/routes/shot-direction.md",
+          "sha256": "135208d33bbc8316378b3947d99142a7ff36acd84fe1f2668f0e818a5aca572d"
+        },
+        {
+          "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/routes/storyboard-rhythm.md",
+          "sha256": "c7e156fa929901eadefc126bc859f47df39e28a27d24f9b1ae37d4f43dfddb6e"
+        },
+        {
+          "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/optional/scene-directing-pipeline.md",
+          "sha256": "cb52024e10ce0ec9f1a0dfcd1dd27ea7268cef526e8457e83be8a166a0bd6019"
+        },
+        {
+          "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/optional/prompt-detail-standard.md",
+          "sha256": "0880a163be9679d32807688a0c434c0fa936c0fb00a5c4aae24e381d0dd92c25"
+        },
+        {
+          "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/optional/video-performance-direction.md",
+          "sha256": "080817e75161a966a35d3170c686850e5280d2dbc905a1e52ba1bab807b32018"
+        },
+        {
+          "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/optional/video-sound-and-delivery.md",
+          "sha256": "ca77595c37042bd7b21974736b50a485d983e8ea5b9bc90f74359e6a2c76d941"
+        },
+        {
+          "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior/C03/output.md",
+          "sha256": "997777ea9751f43f817c02e9245e3f4ec453193a1138fef0c8dc449a0c997274"
+        }
+      ],
+      "executable_checks": [],
+      "media_status": "not_executed",
+      "automatic_host_selection": "not_tested"
+    },
+    {
+      "id": "C04",
+      "status": "pass_text_and_design_scope",
+      "basis": "名称无中点仍定位CG11@r2；只改色彩，保留48岁、深肤微胖、妆容、衣色和东窗光。",
+      "independent_fresh_context": true,
+      "raw_output": "cases/C04/output.md",
+      "output_sha256": "db2a18c50adb29abcb2ba38d824fdfb24e28f9994a3e291fd880e078ed95609d",
+      "source_reads": [
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C04\\request.txt",
+          "sha256": "a1c69ed733eef502fb0b3816b3be8b633e8a305947634d72d5767d3b0fa1b5f1"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\SKILL.md",
+          "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\style.md",
+          "sha256": "8c68adec5424cdeef9735099102eabd022e65181af21efac4564d41e7528e806"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\color-grading-presets.md",
+          "sha256": "cbe652ec6887da11d73914dd4fc9ae6728a933c820e476a3bd3246b54a79fbf0"
+        }
+      ],
+      "executable_checks": [],
+      "media_status": "not_executed",
+      "automatic_host_selection": "not_tested"
+    },
+    {
+      "id": "C05",
+      "status": "pass_text_and_design_scope",
+      "basis": "MU14@r3，明确不采用色彩卡；保留麦色、头发、衣装、光位和冷灰调色。",
+      "independent_fresh_context": true,
+      "raw_output": "cases/C05/output.md",
+      "output_sha256": "8c452f938dba42c0c45abdbb601db5828d0d4c8dae031de1d6b60a00f614f662",
+      "source_reads": [
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C05\\request.txt",
+          "sha256": "d11fada1ff6b8d8ab0f074b5bb56e3c71f458f835f9bdb886b8065431eb842b9"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\SKILL.md",
+          "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\style.md",
+          "sha256": "8c68adec5424cdeef9735099102eabd022e65181af21efac4564d41e7528e806"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\makeup-style-presets.md",
+          "sha256": "a2e4efa2134d2362a54efea433b802480a810c9a9c3b9e9cc4fadc6799992a8a"
+        }
+      ],
+      "executable_checks": [],
+      "media_status": "not_executed",
+      "automatic_host_selection": "not_tested"
+    },
+    {
+      "id": "C06",
+      "status": "pass_text_and_design_scope",
+      "basis": "CG11@r2与MU14@r3独立，选择茶坊窗光变体；保留58岁、深肤矮壮、细纹、灰发、靛蓝衣与西窗。",
+      "independent_fresh_context": true,
+      "raw_output": "cases/C06/output.md",
+      "output_sha256": "0104727c6da654fa182bca8b1059737bde39929d4436c6713c9e067c4468386b",
+      "source_reads": [
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C06\\request.txt",
+          "sha256": "bcbe3bc021a2dcef3bb004c2a00b62e4b2c8b1cd0401a8bb700b470fc3c7be7d"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\SKILL.md",
+          "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\style.md",
+          "sha256": "8c68adec5424cdeef9735099102eabd022e65181af21efac4564d41e7528e806"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\color-grading-presets.md",
+          "sha256": "cbe652ec6887da11d73914dd4fc9ae6728a933c820e476a3bd3246b54a79fbf0"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\makeup-style-presets.md",
+          "sha256": "a2e4efa2134d2362a54efea433b802480a810c9a9c3b9e9cc4fadc6799992a8a"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\image-prompt.md",
+          "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+          "sha256": "0880a163be9679d32807688a0c434c0fa936c0fb00a5c4aae24e381d0dd92c25"
+        }
+      ],
+      "executable_checks": [],
+      "media_status": "not_executed",
+      "automatic_host_selection": "not_tested"
+    },
+    {
+      "id": "C07",
+      "status": "pass_text_and_design_scope",
+      "basis": "只将深酒红哑光唇妆替换为MU28唇部原规则，前后字句逐字保留。",
+      "independent_fresh_context": true,
+      "raw_output": "cases/C07/output.md",
+      "output_sha256": "07cd61cd9adb7003435b783a6efb82476ac838032252c0edc1bd5e15fba2a4b1",
+      "source_reads": [
+        {
+          "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior/C07/request.txt",
+          "sha256": "0c3db42d4f3f3fdae95d150d37f0b85dd68641ff401a435594fea9c3845a195a"
+        },
+        {
+          "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/SKILL.md",
+          "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+        },
+        {
+          "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/routes/style.md",
+          "sha256": "8c68adec5424cdeef9735099102eabd022e65181af21efac4564d41e7528e806"
+        },
+        {
+          "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/optional/makeup-style-presets.md",
+          "sha256": "a2e4efa2134d2362a54efea433b802480a810c9a9c3b9e9cc4fadc6799992a8a"
+        }
+      ],
+      "executable_checks": [
+        "literal single-region replacement exact equality"
+      ],
+      "media_status": "not_executed",
+      "automatic_host_selection": "not_tested"
+    },
+    {
+      "id": "C08",
+      "status": "pass_text_and_design_scope",
+      "basis": "CG31@r1和MU37@r1，二维平涂、窄脸棕肤暗红衣与左手纸封均保留，无真人／三维迁移。",
+      "independent_fresh_context": true,
+      "raw_output": "cases/C08/output.md",
+      "output_sha256": "ee4b6d14c313a81aab68392ee95013c2f16a98faecfd83e3b61981c18ad34bd2",
+      "source_reads": [
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C08\\request.txt",
+          "sha256": "55723385e14e2851d139033ad2ad108f25ab14761296ace8205b59d88b887049"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\SKILL.md",
+          "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\style.md",
+          "sha256": "8c68adec5424cdeef9735099102eabd022e65181af21efac4564d41e7528e806"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\image-prompt.md",
+          "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\color-grading-presets.md",
+          "sha256": "cbe652ec6887da11d73914dd4fc9ae6728a933c820e476a3bd3246b54a79fbf0"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\makeup-style-presets.md",
+          "sha256": "a2e4efa2134d2362a54efea433b802480a810c9a9c3b9e9cc4fadc6799992a8a"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+          "sha256": "0880a163be9679d32807688a0c434c0fa936c0fb00a5c4aae24e381d0dd92c25"
+        }
+      ],
+      "executable_checks": [],
+      "media_status": "not_executed",
+      "automatic_host_selection": "not_tested"
+    },
+    {
+      "id": "C09",
+      "status": "pass_text_and_design_scope",
+      "basis": "六项G1实际图卡和独立测试正文齐；同树、南人北岩、东侧唯一光；无AI样片且未扩全片。",
+      "independent_fresh_context": true,
+      "raw_output": "cases/C09/output.original.txt",
+      "output_sha256": "a8d562629a3bc32af4096d7023a7fcf18ab7db4d38bd43198e95083181e831ea",
+      "source_reads": [
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C09\\request.txt",
+          "sha256": "d27ea4ece04181d7e43087d35525885d0feec03222065d5744445d279a0c65ac"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\SKILL.md",
+          "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\stage-deliverables.md",
+          "sha256": "0ac88de3aa91b2594d0cc27f88b77578cbb017e0800cb54f5149ecf444c6781d"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\visual-development.md",
+          "sha256": "31598759336f1f9b34f37df77a0034df4dec337b18e47124f0d8a5d151af4b6e"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\scene-directing-pipeline.md",
+          "sha256": "cb52024e10ce0ec9f1a0dfcd1dd27ea7268cef526e8457e83be8a166a0bd6019"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\shot-direction.md",
+          "sha256": "135208d33bbc8316378b3947d99142a7ff36acd84fe1f2668f0e818a5aca572d"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\video-performance-direction.md",
+          "sha256": "080817e75161a966a35d3170c686850e5280d2dbc905a1e52ba1bab807b32018"
+        }
+      ],
+      "executable_checks": [],
+      "media_status": "not_executed",
+      "automatic_host_selection": "not_tested",
+      "portable_output": "cases/C09/output.md",
+      "portable_copy_change": "Only absolute local artifact link prefix removed; original bytes retained in output.original.txt."
+    },
+    {
+      "id": "C10",
+      "status": "pass_text_and_design_scope",
+      "basis": "G0–G7正文、10张实绘图卡、8个资产稿、四镜独立图／视频／声音稿、24行评审与576帧覆盖齐；准确新增句归王生。",
+      "independent_fresh_context": true,
+      "raw_output": "cases/C10/output.md",
+      "output_sha256": "4008f4d341d8f353e887fcbabe392688df6c745ab26fe578085ea0af365d16c9",
+      "source_reads": [
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\request.txt",
+          "sha256": "6cc2e3e416f52b2f2b71e9323f1bbc169a7f8cc080fb6656ba1b88932dfd2635"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\SKILL.md",
+          "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\short-film-creation.md",
+          "sha256": "5a2b5be09b50372a00ad08ead75bacd0e0ae9d3e391864270904ad901c2052d8"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\stage-deliverables.md",
+          "sha256": "0ac88de3aa91b2594d0cc27f88b77578cbb017e0800cb54f5149ecf444c6781d"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\scene-directing-pipeline.md",
+          "sha256": "cb52024e10ce0ec9f1a0dfcd1dd27ea7268cef526e8457e83be8a166a0bd6019"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\shot-direction.md",
+          "sha256": "135208d33bbc8316378b3947d99142a7ff36acd84fe1f2668f0e818a5aca572d"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\video-sound-and-delivery.md",
+          "sha256": "ca77595c37042bd7b21974736b50a485d983e8ea5b9bc90f74359e6a2c76d941"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\video-performance-direction.md",
+          "sha256": "080817e75161a966a35d3170c686850e5280d2dbc905a1e52ba1bab807b32018"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\ensemble-direction-and-review.md",
+          "sha256": "1f24e64c74187b39b5fa78f1cb8f499a167fb3ca6300e35f92c08b9ff087bc8b"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\visual-development.md",
+          "sha256": "31598759336f1f9b34f37df77a0034df4dec337b18e47124f0d8a5d151af4b6e"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+          "sha256": "0880a163be9679d32807688a0c434c0fa936c0fb00a5c4aae24e381d0dd92c25"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-reference\\SKILL.md",
+          "sha256": "33d06365a2b861f431e66ff4960ae2ad9a26457f8fe7e4b2b20a7b110f71c155"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-reference\\references\\routes\\reference-evidence.md",
+          "sha256": "8f2833929f5d6df0fa3cbbdf540cdd5f2f10688b381f85eb6fe26b81c8c0b697"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-reference\\references\\core\\reference-evidence-and-rights.md",
+          "sha256": "55332bfbab84d121328260c56f971586658dff692a526cac318e2b435a522393"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-review\\SKILL.md",
+          "sha256": "b047a160930822e62395653b562a4a47067ee5bd82a90ca02eeb316a12da955a"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-review\\references\\routes\\review-repair.md",
+          "sha256": "9f87901d2e8583dc3ed065ba30a1058db040a8b26c0a16e8a48402b55cdd4b4b"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\scripts\\check-shot-review.mjs",
+          "sha256": "5c2230917425de00084a65a778e083b7ded4151abbdb7506cd9e17b97532c7eb"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\scripts\\check-delivery.mjs",
+          "sha256": "3147c6f5fad4d4d32682a05f34eca15337c6ca2b8c73c69ea96331a209f2e4a5"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\scripts\\parse-json.mjs",
+          "sha256": "9c15621d8304bf6114cc4cb322409c8e59433409ac17950311725cdcbebecf11"
+        }
+      ],
+      "executable_checks": [],
+      "media_status": "not_executed",
+      "automatic_host_selection": "not_tested"
+    },
+    {
+      "id": "C11",
+      "status": "pass_text_and_design_scope",
+      "basis": "仅导演入口完成母稿及条件适配；不安装专业入口，保留平台能力未知；展图者与双手退开在复制稿中。",
+      "independent_fresh_context": true,
+      "raw_output": "cases/C11/output.md",
+      "output_sha256": "b27a3c06d27048496b54bd761eeea6dd716edb0d3ddeeef095e4778551779a90",
+      "source_reads": [
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C11\\request.txt",
+          "sha256": "0f12e6d804159cfe1671967f1e8189bc78c9be818cdb1764c2489792b4333968"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\SKILL.md",
+          "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\shot-direction.md",
+          "sha256": "135208d33bbc8316378b3947d99142a7ff36acd84fe1f2668f0e818a5aca572d"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+          "sha256": "0880a163be9679d32807688a0c434c0fa936c0fb00a5c4aae24e381d0dd92c25"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\video-performance-direction.md",
+          "sha256": "080817e75161a966a35d3170c686850e5280d2dbc905a1e52ba1bab807b32018"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\video-sound-and-delivery.md",
+          "sha256": "ca77595c37042bd7b21974736b50a485d983e8ea5b9bc90f74359e6a2c76d941"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\video-platform-adaptation.md",
+          "sha256": "9b5a4e163a6482704b43333547d16ffc0ed3542d9526599e49455460971bd7f9"
+        }
+      ],
+      "executable_checks": [
+        "only director resources read"
+      ],
+      "media_status": "not_executed",
+      "automatic_host_selection": "not_tested"
+    },
+    {
+      "id": "C12",
+      "status": "pass_text_and_design_scope",
+      "basis": "两份完整稿仅替换指定方位，其他字句逐字保留。",
+      "independent_fresh_context": true,
+      "raw_output": "cases/C12/output.md",
+      "output_sha256": "cea1e9c83d0ddfa1785bc263731c8972ff2dc4c788109ee1925c5281d41d9eab",
+      "source_reads": [
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C12\\request.txt",
+          "sha256": "7a32b0fe3acd1a35b7a50bcf1d3c1cf9633c00a6c6edc7bc2b10e78b385f8a5b"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\SKILL.md",
+          "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-review\\SKILL.md",
+          "sha256": "b047a160930822e62395653b562a4a47067ee5bd82a90ca02eeb316a12da955a"
+        },
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-review\\references\\routes\\review-repair.md",
+          "sha256": "9f87901d2e8583dc3ed065ba30a1058db040a8b26c0a16e8a48402b55cdd4b4b"
+        }
+      ],
+      "executable_checks": [
+        "both full outputs exact equality after authorized replacement"
+      ],
+      "media_status": "not_executed",
+      "automatic_host_selection": "not_tested"
+    },
+    {
+      "id": "N01",
+      "status": "pass_text_and_design_scope",
+      "basis": "仅给翻译，没有创作工作流或额外解释。",
+      "independent_fresh_context": true,
+      "raw_output": "cases/N01/output.md",
+      "output_sha256": "c7b2d0a87b210ecad6b142c77f419e059a6e549fc6199a0f662010235b004927",
+      "source_reads": [
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\N01\\request.txt",
+          "sha256": "135d8202de8b015e8c5f99ae2428e21852134df7ff8a42d59cb248b9fba587a1"
+        }
+      ],
+      "executable_checks": [
+        "no skill source read; minimal requested result"
+      ],
+      "media_status": "not_executed",
+      "automatic_host_selection": "not_tested"
+    },
+    {
+      "id": "N02",
+      "status": "pass_text_and_design_scope",
+      "basis": "仅给882，没有创作工作流或额外解释。",
+      "independent_fresh_context": true,
+      "raw_output": "cases/N02/output.md",
+      "output_sha256": "d9f81b72e2f290dfb67164fa5a2e45bd23e834c0e8ec5e8c5ced4154116c88d5",
+      "source_reads": [
+        {
+          "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\N02\\request.txt",
+          "sha256": "4ae7ecda476205c27bb6b841dee2ae7310251005612c4264fda4f17b3ec03a95"
+        }
+      ],
+      "executable_checks": [
+        "no skill source read; minimal requested result"
+      ],
+      "media_status": "not_executed",
+      "automatic_host_selection": "not_tested"
+    }
+  ],
+  "source_snapshot_files": 684,
+  "post_snapshot_delta": [
+    "skills/cineweave-director/assets/adaptation-example.html",
+    "skills/cineweave-platform/assets/adaptation-example.html",
+    "skills/cineweave-reference/assets/adaptation-example.html",
+    "skills/cineweave-review/assets/adaptation-example.html"
+  ],
+  "delta_scope": "Only HTML SVG label position; every instruction, prompt, contract and checker hash unchanged.",
+  "preservation": {
+    "initial_status_entries": 81,
+    "missing_initial_paths": [],
+    "HEAD_unchanged": true,
+    "backups_verified": "installation-validation.json"
+  },
+  "limitations": [
+    "Single sample per case, no repeated reliability estimate.",
+    "No without-skill comparison.",
+    "Candidate entrypoints supplied manually; automatic host skill selection not tested.",
+    "No AI image/video/audio generation or provider calls.",
+    "Artistic quality and actual motion/sound/timing await media and user review.",
+    "Raw captured absolute links and execution paths describe the original .build run; use REPORT.md relative links for portable evidence."
+  ]
+}

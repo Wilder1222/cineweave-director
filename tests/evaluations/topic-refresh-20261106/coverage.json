@@ -1,0 +1,2670 @@
+{
+  "format": "cineweave-topic-refresh-coverage/v1",
+  "created_at": "2026-11-05T17:28:18.550Z",
+  "source_snapshot_date": "2026-11-04",
+  "coverage": {
+    "formal_topics": 84,
+    "analyses": 84,
+    "current_remote_readback": 0,
+    "online_writeback": 84,
+    "revision_candidates": 17,
+    "revision_snapshots_available": 10,
+    "revision_snapshots_missing": 7,
+    "canonical_adopted": 0,
+    "media_verified": 0,
+    "current_accepted_context_readback": 84,
+    "current_legacy_document_fulltext_readback": 0,
+    "current_remote_readback_meaning": "legacy_document_fulltext_not_accepted_context",
+    "online_candidates_verified": 84,
+    "current_owner_projects_available": 102,
+    "writeback_failures": 0,
+    "unknown_outcomes": 0
+  },
+  "package_bytes": 655557,
+  "package_sha256": "11f99ac541fd4b2679ed375388610cfc48cba089f829774252d93f402bbaf00c",
+  "import_parser": "passed_84_records",
+  "sources": [
+    {
+      "topic_id": "U002",
+      "project_id": "a3d761494b052639a2b3e370c20fe3ad6e2ebb63a6b780e29471ee561db0a5ae",
+      "title": "狐狸小姐的身份证",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "6c00d428854d71b26b6b89ae8899bfb75c0ff7ff1c0c312466581feb30d0f124",
+        "storyboard": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785"
+      },
+      "analysis_body_sha256": "d7b6a2bd68bacfc80802b512482f885a217bc1238542d73ad358e5ed07eec543",
+      "online_candidate": {
+        "id": "fd7dc8b163e44c10aab394701fa7aa9854daae664e114235b6b78ff0e1e5f01d",
+        "version": 1,
+        "sha256": "ef834d50cb01c1c6d11deab73a3a840dbc392be50dc8d517fc4982bea2b708e4",
+        "change_id": "21d21317163d78cd0250247b29620eed598c281d17d8ff576dc33b898fdf11f8",
+        "change_version": 1,
+        "change_sha256": "9cbe6fe3652281a3b647ff4d5442157644ba2c716f16b7dd88cff9e07dbd5a37",
+        "context_sha256": "3a7e498e17190cec527c131937d592c6f87c49cb854a1df04d9a6118eb777f25",
+        "verified_at": "2026-11-06T06:22:05.878Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=a3d761494b052639a2b3e370c20fe3ad6e2ebb63a6b780e29471ee561db0a5ae"
+      }
+    },
+    {
+      "topic_id": "D001",
+      "project_id": "0269ed680f1fae2124b685c4c57fb7a951ed0634a7b46542dc1eb4a6911c6d3d",
+      "title": "打印店凌晨一点",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "d569ccb07c9a7457a0d8a7258c17527e937ec17cbfc14a4837c43f1409031dd1"
+        ],
+        "storyboard_document_ids": [
+          "af03d72e9261949c506112e3f0adef9043316defc7a8e5af35ef5bac87e44a2e"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "d569ccb07c9a7457a0d8a7258c17527e937ec17cbfc14a4837c43f1409031dd1",
+        "storyboard": "af03d72e9261949c506112e3f0adef9043316defc7a8e5af35ef5bac87e44a2e"
+      },
+      "analysis_body_sha256": "73f6b7a047963685647e1786601b4024d047dd1cff3f4238254443e868a16027",
+      "online_candidate": {
+        "id": "d5bb37eae6e01b3130ef51c27c5a3849f5afdca09c6a69afd2cf484e0699d31e",
+        "version": 1,
+        "sha256": "e3974bec3b35ab5f9464a1bdf848b7f5d36f5ddc6248fa9e7ba6ea54a78a6032",
+        "change_id": "9da6b7d2a3b1735b633ca194fce622d8c16fa1caccfff89f054fff2a40c6eac7",
+        "change_version": 1,
+        "change_sha256": "e10579c11c3414187877a75a95b568b2ef4b5f116ec351d4755a21772a820934",
+        "context_sha256": "9f34425f92597fa668ac0c6567ada4a8456aa2ea2130050aeeb4203f782bb4b4",
+        "verified_at": "2026-11-06T06:22:07.161Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=0269ed680f1fae2124b685c4c57fb7a951ed0634a7b46542dc1eb4a6911c6d3d"
+      }
+    },
+    {
+      "topic_id": "Z009",
+      "project_id": "ba5522929a4e1b6335eb9166bce5fd225cdb7b0fe5d8b4cf78d36a38eab5690b",
+      "title": "红线金盒",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "4de2428e6ff94c17ad9997fab451fe25c913f7e8b0f371f19085a236a8e907e6"
+        ],
+        "storyboard_document_ids": [
+          "06ad89f1fabf229b6060679af0d18bf06d1211eb482f50921e1a03ca3fcb5e6e"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false,
+        "related_candidate_script_document_ids": [
+          "3c9ac81559644038feb804b038ee5798a8ccc75529092336bad1e06481c85341"
+        ]
+      },
+      "baseline_document_ids": {
+        "script": "4de2428e6ff94c17ad9997fab451fe25c913f7e8b0f371f19085a236a8e907e6",
+        "storyboard": "06ad89f1fabf229b6060679af0d18bf06d1211eb482f50921e1a03ca3fcb5e6e"
+      },
+      "analysis_body_sha256": "24c3601185fa3de4d5f513ae47536db4d449254092ac8292e8967dbc1dd8c192",
+      "online_candidate": {
+        "id": "e503f4fee9940573c9ccda9974748388d3b6a18f400cc521b96cbbc499f342df",
+        "version": 1,
+        "sha256": "c29aa6cc1b778925fb58c12a3fcc0b19a2f71a5e76e71157bfaff5b09e62de21",
+        "change_id": "c4140ff0e654dcae2864bafaacb26859466693d7f1f1ce1359514f0036b4fb5e",
+        "change_version": 1,
+        "change_sha256": "3b5a23bed0ed421407e9a7f05825d1f591d78df235b7fb79adf1a0b8e005583b",
+        "context_sha256": "008c576fdeac9c04390633abe11e3333ab36a0e175f60e2cac25d930eb72e817",
+        "verified_at": "2026-11-06T06:22:04.705Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=ba5522929a4e1b6335eb9166bce5fd225cdb7b0fe5d8b4cf78d36a38eab5690b"
+      }
+    },
+    {
+      "topic_id": "V004",
+      "project_id": "1f73bb7fb9feaa728eb80298ca4631adef6f3fa3e4f7856787d57026bfec1089",
+      "title": "便利店夜班神",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "完整读取组合修订文档中的短片剧本部分并对照；没有将同文小说结局当成短片事实。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "f9c66e496c8c592bf8a6e4a970e4db6cac9404df5dd00f324d69276d91f71cc4",
+        "storyboard": "ea8fb5d5781bf56fb9eb44fd26ab8f212254eccffc8153f3553f4a7ad2d6f064"
+      },
+      "analysis_body_sha256": "3a3a7c47cc2a20d3ebb37bde1b8af011ec4169b0d802e31e7125fd776ca91b9c",
+      "online_candidate": {
+        "id": "75bd8fa2590b7cc73f6e77ec08f2ab4cd382a5c4af5c2dcaee30df2981fb9a03",
+        "version": 1,
+        "sha256": "4e626d97ce24b8fe2e4bac59166a6aec7a4779275079fa16a26d3ed51fb0568c",
+        "change_id": "f75891a4e134f1cd13f17f88d189c1c55b7f0edfefe660fee832416cf34ce713",
+        "change_version": 1,
+        "change_sha256": "e64b56ce27bd0b1b1bc634f52b13dd8f8a4ae4419273c1d603024ded14080316",
+        "context_sha256": "4991beb8416ee22cf19bc725d579bcc44122b3096a7409e00ce9722c5ac4d339",
+        "verified_at": "2026-11-06T06:22:07.079Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=1f73bb7fb9feaa728eb80298ca4631adef6f3fa3e4f7856787d57026bfec1089"
+      }
+    },
+    {
+      "topic_id": "U001",
+      "project_id": "7da63810f1afd54c769a6b2e550d3ee64c8850d7a0cd7071f9d05f0f0b33d1c2",
+      "title": "我家住进一位剑仙",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "3554e5732938fcd1034c761ea71963e56597e8bedcea01d81b423ab44b023955",
+        "storyboard": "f7ebe9847a0b6108f53f1157702995c63752a6e66239cf0a49314b99cd20c37c"
+      },
+      "analysis_body_sha256": "c75a65d9c09e4ff0e44711ba4b117dafc74bf809af315d6a973d1fd2622a0abf",
+      "online_candidate": {
+        "id": "5ec7a48c739a6bbd4d1a906e15e8e2bb91ab0f8b826584239fe62921f610cd5d",
+        "version": 1,
+        "sha256": "8783b64c45ac55376f60c8c261d8f5751abd120a5585a2cfefd760b83ff6414f",
+        "change_id": "145a1c7139731f345de9beaa5d459327af5fc07e564b9811914a678c9add4a89",
+        "change_version": 1,
+        "change_sha256": "8346327286be5e2f3d05a01b3abb1911e50f1b652b481105def71944936803d6",
+        "context_sha256": "a998d0dc8097e71f7a73af6b53235448b3a290c5e113cffc8172146d300ec50d",
+        "verified_at": "2026-11-06T06:22:41.195Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=7da63810f1afd54c769a6b2e550d3ee64c8850d7a0cd7071f9d05f0f0b33d1c2"
+      }
+    },
+    {
+      "topic_id": "X004",
+      "project_id": "357e0cd4be343c767a4df941dd9734e13565fcc696c9dd3ad6ee824708ceabfc",
+      "title": "借命三年",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "dc56a94b866ca461b6f4d57531b1a861889682fea36e3e2372fd7776160a08c1"
+        ],
+        "storyboard_document_ids": [
+          "b28448bd41b0cc85fa5f9a7c8fc5480356e50264a90f85b474d4432c59db11ca"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "dc56a94b866ca461b6f4d57531b1a861889682fea36e3e2372fd7776160a08c1",
+        "storyboard": "b28448bd41b0cc85fa5f9a7c8fc5480356e50264a90f85b474d4432c59db11ca"
+      },
+      "analysis_body_sha256": "129f00b2ab8e47ade3902b07f68e250ff6861252f1dfb3f6e001bc09911b93bd",
+      "online_candidate": {
+        "id": "c6bf11f525a3b4101a2a137a5aa2ee36e9017a914fcfc977f35c7fb9c7fd2d8b",
+        "version": 1,
+        "sha256": "e9d7cba352d76d3cd536d45b9c123aee96e506c5d4f018edfe682585ac632126",
+        "change_id": "a4b982a68ad2d6d1deedf6147c801bf5723d819a56b423996965ee2c6c24eeb6",
+        "change_version": 1,
+        "change_sha256": "10c9b58fe3a809860a9087ca0fbe3aa0ab61d7364547c5302f53327ab5644905",
+        "context_sha256": "10c82e86a0707d1a0380891659f8b2df88af3ae883966410b6eaf6589478da01",
+        "verified_at": "2026-11-06T06:22:39.087Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=357e0cd4be343c767a4df941dd9734e13565fcc696c9dd3ad6ee824708ceabfc"
+      }
+    },
+    {
+      "topic_id": "V001",
+      "project_id": "0f700853f09aaa017509ad8d06aff3ff65e37473971b285da507b0cdf0b9c76a",
+      "title": "城隍夜班",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "e4c8a9be2a98a48939aefbebf873bd472e03ac3311decd990ddaddb93b691342",
+        "storyboard": "73c1b5f1e003bc2d11ead298151d7bdcae854f0311a94f211162dad307e7f8bc"
+      },
+      "analysis_body_sha256": "35caea3e24c043b33a09ae0e15081d7bab5e36ce5fd09213ac27dccdf6ec4a0b",
+      "online_candidate": {
+        "id": "6eba0b4af6088d1868f8be395cd3fd67c93de0509fe57bc86e0e014aaaf8e5d8",
+        "version": 1,
+        "sha256": "bd2876d8961273331bad3238b0c402cbd7436e4caebd4e7c632edfa2c4c0f774",
+        "change_id": "11819459f15040ad3fd33f8db8ccde57ee3cb0107a6f9114019019fb67807dcc",
+        "change_version": 1,
+        "change_sha256": "63fd849fe4b65f687842c2bc1dfeff1d48e114c8a7fc3607d735d49b2d657c33",
+        "context_sha256": "97a61f104df5879dbbe1c0474355299a101d9f786ef2a33c095fbac161d3068f",
+        "verified_at": "2026-11-06T06:22:41.301Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=0f700853f09aaa017509ad8d06aff3ff65e37473971b285da507b0cdf0b9c76a"
+      }
+    },
+    {
+      "topic_id": "H001",
+      "project_id": "aec0be325f5f1e3dafadfdb14739fc7420eb387a7dff6567dbf044b78f011701",
+      "title": "楼兰夜宴",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "本题无独立修订项目正文。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "b09c49b0b50c38ef87b207bb2538860dd832b16081d637ce5329240444011189",
+        "storyboard": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4"
+      },
+      "analysis_body_sha256": "7165585cd5abd00575e611bb3b44f3b10f4089a1af5d5c832223f0a8c7b60a89",
+      "online_candidate": {
+        "id": "77b892c323827a33843969d8f1f447abcbcb8eec05f7ac326544177d4923afe6",
+        "version": 1,
+        "sha256": "a18ee2912ae4ee725fa0bb52f103261c9b2f05c4cf46b25b780f8aa216987e2b",
+        "change_id": "046c43be9b0f477ddd31e9c05804997a5e9480c8d7713cb508b193446d04e213",
+        "change_version": 1,
+        "change_sha256": "051dded4918a232501e778343e97ca90a7469daa37a331e4375374702c40380f",
+        "context_sha256": "caee2811b32ff643eb69120a5925c20ea45514c993c74e5a7df17d976ed7dbe6",
+        "verified_at": "2026-11-06T06:20:35.183Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=aec0be325f5f1e3dafadfdb14739fc7420eb387a7dff6567dbf044b78f011701"
+      }
+    },
+    {
+      "topic_id": "K001",
+      "project_id": "145484a0b528d0f98580d83dffe30dfc8bd1707bae9290267cdc67d6b5d0d173",
+      "title": "隔壁的机甲驾驶员",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "cab9d88ee28c1cca461d4db8aaf08c57c29f39a370d15d2b5020780e4525d844"
+        ],
+        "storyboard_document_ids": [
+          "a88d870ba6032789f38d0ba73713ada4d1cdb9c47bd370985280f1ac473ce0a8"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "cab9d88ee28c1cca461d4db8aaf08c57c29f39a370d15d2b5020780e4525d844",
+        "storyboard": "a88d870ba6032789f38d0ba73713ada4d1cdb9c47bd370985280f1ac473ce0a8"
+      },
+      "analysis_body_sha256": "89b0539576e2a8807b06cbb4c93036ac5f9c58525c16a086e501a71e43d28387",
+      "online_candidate": {
+        "id": "8cb6b4a8ce6ca2535464940c7d33efc9b6cb897592bf1e2f25d00aac1c9eea03",
+        "version": 1,
+        "sha256": "98cf5fee6d8336f1bf1a8d868b92ce6d088f78be6ea8bb29863182252bd8de1c",
+        "change_id": "b4239fa000f4a04e13928cc9a223456d07482def598d595fcacecafcd3543c5d",
+        "change_version": 1,
+        "change_sha256": "022835c40001b1f184a826a15841e22328eb86750fad7b2e89f912113359a364",
+        "context_sha256": "283cd805cfec9f2e7d4d91bada048032d325eddbf3e9bf691e498e60e3635dc9",
+        "verified_at": "2026-11-06T06:22:40.086Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=145484a0b528d0f98580d83dffe30dfc8bd1707bae9290267cdc67d6b5d0d173"
+      }
+    },
+    {
+      "topic_id": "D002",
+      "project_id": "cbc75daab816325e99c6aa1315339ee5b9f3c2c06fbf2c4abbab59c8c3aed451",
+      "title": "合租到期",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "793fe7a81f29faf2811cc949a5804c81a9679d4c9c329219d84df673fead2b71"
+        ],
+        "storyboard_document_ids": [
+          "aee2d0e0f0b0d0b716b64c90a8006a6d3a67d2de1afd9195f8e6fa939d064856"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "793fe7a81f29faf2811cc949a5804c81a9679d4c9c329219d84df673fead2b71",
+        "storyboard": "aee2d0e0f0b0d0b716b64c90a8006a6d3a67d2de1afd9195f8e6fa939d064856"
+      },
+      "analysis_body_sha256": "c20c17667ef72c92b988ff69b3b67bd5f6423e120dee14d7917bc1f2fd43d4f3",
+      "online_candidate": {
+        "id": "23600151da69b80204f5826539ba050ba4e82abe50ed9e99c9f8c56135656df5",
+        "version": 1,
+        "sha256": "dd60da4c01ed927634a67a7f848b21dfde557f570c7ed436bcfe969a5f4a281d",
+        "change_id": "7f1189820d3733447f3a10830da3c43c90cfefda3d95074b4c454109a3d8d9dc",
+        "change_version": 1,
+        "change_sha256": "51f60714555d3200053c352073d89c588466bdc08ba94f9e42d3f6b95a9109a2",
+        "context_sha256": "d9e984a35e6385ea77a9efb142417ed64f05dcb98de4eb028fc1e9e49d6f4ad0",
+        "verified_at": "2026-11-06T06:23:13.614Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=cbc75daab816325e99c6aa1315339ee5b9f3c2c06fbf2c4abbab59c8c3aed451"
+      }
+    },
+    {
+      "topic_id": "M007",
+      "project_id": "e52b3cc9f8668b7bb3e2fb54ddd002f940d4ee842d9d531cababf4435951f7ac",
+      "title": "浑沌第七窍",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "本题无独立修订项目正文。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "496de5b33ae2d0781e293883672fce60c5df9b8a57ec17c4b0ab017d1ee691b4",
+        "storyboard": "c61eca57f12b65193aca527af3675d51581ea18144fad652bd2a33539d35ecb9"
+      },
+      "analysis_body_sha256": "16b686f4c3365e94a3e47c2bc5a27679a974738b8353a47c7779c3048a30a6cf",
+      "online_candidate": {
+        "id": "6aaaea18c4a7027fa10ab747f4e5617a5dd23461a347f96223aa319cd7e6d060",
+        "version": 1,
+        "sha256": "a3b9928b5592f3c3dfd177feda915c28b588a28441e0f9b863071ec909b8181f",
+        "change_id": "9ca83976fbd67294b6262636cae93f773fee91129947d8f2fd68acc7864d350b",
+        "change_version": 1,
+        "change_sha256": "9ed8b0a3d6ac2a2876ee226cde7ff5680bcdef5632aa04d9857c6410fc135f49",
+        "context_sha256": "9205a64af1eba7a21626e8a1f65b02c933630ab00cc75d1a0cd0f7ef77048b4c",
+        "verified_at": "2026-11-06T06:23:17.881Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=e52b3cc9f8668b7bb3e2fb54ddd002f940d4ee842d9d531cababf4435951f7ac"
+      }
+    },
+    {
+      "topic_id": "D003",
+      "project_id": "0e6d466f1613172d84c52f10fe66fcc87784bca155303f764f5fa88fc693166c",
+      "title": "雨停之后",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "ec44c713738002b1a00c6d409cbc3b3ff0d977d0dd7e4fb8af7da679f89cb3e7"
+        ],
+        "storyboard_document_ids": [
+          "1725427a3981eb5bcb5f57adfb56556d7756c57c2b03bde544eca4139e58543e"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "ec44c713738002b1a00c6d409cbc3b3ff0d977d0dd7e4fb8af7da679f89cb3e7",
+        "storyboard": "1725427a3981eb5bcb5f57adfb56556d7756c57c2b03bde544eca4139e58543e"
+      },
+      "analysis_body_sha256": "a4d91f3b8c5ae27ea71a487bb6ae8dcbbca5b6940f0558cbc38bb48f3611444e",
+      "online_candidate": {
+        "id": "1772a29e2b04a67543e848381d8e54c38bb3c1c128e0717625da06b0578be4f7",
+        "version": 1,
+        "sha256": "93e0bae0bd784a623b7dfdbbd4ebf2baba61fff1584dca63fd2bffdfda8e5d51",
+        "change_id": "449b57d9343be43d75e0f47ea74541b1fdcc58c25b054f559ff319fefe4f0a62",
+        "change_version": 1,
+        "change_sha256": "db8bbd9c704c9c4902c48113d8d40fb15125a123e1327a21f423a23b581a2357",
+        "context_sha256": "fed2ae9b4776a28d37e74512633738ed4cd4bf1386bd565a643a47f9203444b1",
+        "verified_at": "2026-11-06T06:23:17.650Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=0e6d466f1613172d84c52f10fe66fcc87784bca155303f764f5fa88fc693166c"
+      }
+    },
+    {
+      "topic_id": "D004",
+      "project_id": "c185e5ca4973c87e5778c2faeadbb6ebeca8f79b9aa5922e40622cecb6b2c126",
+      "title": "第二份晚餐",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "8a1196897555d12d16bd2f588ae56c0968211d3f307d9e8cd0546e7977159ec4"
+        ],
+        "storyboard_document_ids": [
+          "d88e230359fbe1e33724103bc44506a5566824f92cce62e3caafcbed94372ccf"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "8a1196897555d12d16bd2f588ae56c0968211d3f307d9e8cd0546e7977159ec4",
+        "storyboard": "d88e230359fbe1e33724103bc44506a5566824f92cce62e3caafcbed94372ccf"
+      },
+      "analysis_body_sha256": "7c08ce23ac5435ee10e83e9bf275ddbb6f9e02b0fe9d04e1787692406df9f186",
+      "online_candidate": {
+        "id": "cc1b801e96f86d5350922b45ea95ae80860c92a5a7dad5016beee26cea5afa8a",
+        "version": 1,
+        "sha256": "7b68177ebb0ee86fed45c0297b7e9dbbbfcad94cb73e50fbc90a2a77194728cc",
+        "change_id": "b1adb7fa70a630f6e80c36a12c34e5d0d0931c6cdc7acd2783babb03303bea1e",
+        "change_version": 1,
+        "change_sha256": "a4b81d0f17ea8e575d76f9d350e39fd712d64f2dfcdf66977ad89ce6833a06a4",
+        "context_sha256": "909c76e1838ce3ea83c65e1f89eb11d1c9ffb52ffb06be5330375cc37cbc316a",
+        "verified_at": "2026-11-06T06:23:17.855Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=c185e5ca4973c87e5778c2faeadbb6ebeca8f79b9aa5922e40622cecb6b2c126"
+      }
+    },
+    {
+      "topic_id": "U003",
+      "project_id": "369d61b677a23a5aac2fd6936e7f5990d41b49937a8251f231d0f43b9fff27d0",
+      "title": "她是三千年前的剑灵",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "4afa41ebbae85686366856c491dca52698fc965463ce8b147628e47803a5705e",
+        "storyboard": "5a111b4d913d242610e7e1209c92f5c883c56bc964adfbc92dbf6d2fe70af80d"
+      },
+      "analysis_body_sha256": "afd415f5a18227c4bc68f6043aee5564803c36875f492e56893f53dcda538360",
+      "online_candidate": {
+        "id": "54a943491f38c4ddd3f5b4ae02cccf7777fabe3107dfef54128a2e2b7b0f16b1",
+        "version": 1,
+        "sha256": "034ba31d8c2808fe2e000653deb3019bbe70f6fc49c3512a99c4e7d6157bbbe7",
+        "change_id": "913b90ba1abfed71b87668e0f6ab216c813743f2791cbf27843d65d00331f952",
+        "change_version": 1,
+        "change_sha256": "6446e573d1816aef2d45a2e4b7a7197211a5f894a91769d82278c8b7a0e3ba60",
+        "context_sha256": "a628d8ef4dd52db3d4c3f814334d89be69757c9d6821e24b4fb7ebd5438f8d8a",
+        "verified_at": "2026-11-06T06:23:33.285Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=369d61b677a23a5aac2fd6936e7f5990d41b49937a8251f231d0f43b9fff27d0"
+      }
+    },
+    {
+      "topic_id": "D005",
+      "project_id": "8a79e5d27577998b66b2ca63e34960ac0cfa60c8b0c2d2e550d914aa201794b9",
+      "title": "周五不加班",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "6d21089ae2fdf31c0e3e166df19e1a4d666a94dbe5bfdd2274e053eeb2a2489b"
+        ],
+        "storyboard_document_ids": [
+          "3798d2062e940371cd45bee77bd0d4f7171f48c7c3a02c7f96be194c5dddb470"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "6d21089ae2fdf31c0e3e166df19e1a4d666a94dbe5bfdd2274e053eeb2a2489b",
+        "storyboard": "3798d2062e940371cd45bee77bd0d4f7171f48c7c3a02c7f96be194c5dddb470"
+      },
+      "analysis_body_sha256": "030487c5632b974daa0baa918bab7e9df33cd40e81f16dc8e305fa3cd46cf7fa",
+      "online_candidate": {
+        "id": "d2f48647034b9d2cd2c71f7770129d1b14d561f9669172f52c67a151fbce4db7",
+        "version": 1,
+        "sha256": "eb8b5c21837a42fc6bc5e0a610477b09cebc9e4cb188358481699a277c6767bc",
+        "change_id": "7bed7d1524a982dd1199425e6a51c2c5acf9ed88d5959685045f6ccb9411ae0f",
+        "change_version": 1,
+        "change_sha256": "a9df2e7e0e9f6a5a28827cea2ddebc5df27b1a3fd549d3a03eccc242a68d4e5b",
+        "context_sha256": "07ce55160fb56dc747ba101628cafcc347f99dea91f4df35c320d4bcf536087d",
+        "verified_at": "2026-11-06T06:23:43.262Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=8a79e5d27577998b66b2ca63e34960ac0cfa60c8b0c2d2e550d914aa201794b9"
+      }
+    },
+    {
+      "topic_id": "V003",
+      "project_id": "a3078e0eed2139ba4023a60802cd2ec01851e1588f4b6b6a9f060251b24d440c",
+      "title": "镜中长安",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "4bb14dbc2c370e8488270dc7e9f44ea81e82df1648a528809032c5cc4424768b",
+        "storyboard": "897feac6836449f35da793d6cd636a3afd1879806033fe06a225940a62a2ce63"
+      },
+      "analysis_body_sha256": "766f2582b4a5d3e0b621131c034bc49266212e8e3d65a5bdb37b3224c1830373",
+      "online_candidate": {
+        "id": "0781062c2a2cb92727349f0e2d4805dfe2df50bfbcdc523365bc2f65c28816b7",
+        "version": 1,
+        "sha256": "7eaea9ca562fbd9edb50be51d3224de3cbff4e73770cd598af96a2f79ac7751a",
+        "change_id": "6347c27f908120784beaf3bbe7ba62b124018fa93f0259c8e93d18f77ce0bba5",
+        "change_version": 1,
+        "change_sha256": "f14d37f4cc99dceed02219e15356ef7f0d4f9250f4b4a35725d30df992d01687",
+        "context_sha256": "6c66b798d2951b7a15d03e3644b4de34ea4292d5af4b94d51012071b7917fac8",
+        "verified_at": "2026-11-06T06:23:40.350Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=a3078e0eed2139ba4023a60802cd2ec01851e1588f4b6b6a9f060251b24d440c"
+      }
+    },
+    {
+      "topic_id": "D006",
+      "project_id": "d4c27037db040da862942a79bb8bc721a0bf0310889f089bdf5cbeb75878ded1",
+      "title": "最后一班公交",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "74ff5d3bd41ec496cc3f671c8417bc044e0f17d5410c6ee941a740989da2c9ae"
+        ],
+        "storyboard_document_ids": [
+          "c6e35e69616e23c847b920a01f044247f4886ff18a63b4444f983a1febd6acd2"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "74ff5d3bd41ec496cc3f671c8417bc044e0f17d5410c6ee941a740989da2c9ae",
+        "storyboard": "c6e35e69616e23c847b920a01f044247f4886ff18a63b4444f983a1febd6acd2"
+      },
+      "analysis_body_sha256": "ae073f26473fb8c41c429a6298e096f39d81ac0b881cb18e615f549455174389",
+      "online_candidate": {
+        "id": "c64a527b7f811fad4dad5b87caa4f7426ce73c866871e2c47a3996336e4a20fc",
+        "version": 1,
+        "sha256": "47254afa4ae70646c55aeb4d1caabccb8c1d8220e581d3cd01b01131a080e93b",
+        "change_id": "e546050a6b8b65bb82847b4099fbff98b6f5e79951c4023870038c7fc1a07ff7",
+        "change_version": 1,
+        "change_sha256": "710f3937d14ef9f7dedddfc6266e55db1c2687953a4ec6b0a7b8c96db3206947",
+        "context_sha256": "007dd6d9986d3a1fe4261324caebe0dc2fc418f8977cd69f54e565fbeafa0ee2",
+        "verified_at": "2026-11-06T06:23:50.590Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=d4c27037db040da862942a79bb8bc721a0bf0310889f089bdf5cbeb75878ded1"
+      }
+    },
+    {
+      "topic_id": "V005",
+      "project_id": "dba0bb21f663b5cebc055159f4fa3aa6ba32d1324caf6f82faede1e5ad0c98d6",
+      "title": "外卖送到三十三楼",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "dc14cc5644e77866428109d5748c3434e311e07e992c2a656d7eb6f99c3dbe56",
+        "storyboard": "ff4412ba638c114f47db9d863c63bde7f4e1fc45eb19f38646f539bb00b38f95"
+      },
+      "analysis_body_sha256": "c56a3cadbc26d04f4124ac3a9119c6ad2a9eb44df47cbec170b55ef591846272",
+      "online_candidate": {
+        "id": "7b6a0530116886a8402c89f09acc8be074c15d62d96cbcb9277dbd923ecc2c20",
+        "version": 1,
+        "sha256": "156bf2676d4c6a50412bb4d9ef589deefde0bbc4132d1cb259a3a178ad6c1a53",
+        "change_id": "3ef7f863654583dc8d6209031eb352f210ab0559399186ffa6e1dbba6601b941",
+        "change_version": 1,
+        "change_sha256": "865924e2671789f0d8d7cf8c204245e5f853f647f712303f566ef3c2f682e917",
+        "context_sha256": "d6d5796dc1ce17d485ad945b669574408a4b1aee81eed8dbd570195e8f5b98b3",
+        "verified_at": "2026-11-06T06:24:08.805Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=dba0bb21f663b5cebc055159f4fa3aa6ba32d1324caf6f82faede1e5ad0c98d6"
+      }
+    },
+    {
+      "topic_id": "M001",
+      "project_id": "d284224d00a2091014053e9b85bc8eab3a4394cfee822234caf52656416e42aa",
+      "title": "绝地天通·最后一巫",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "本题无独立修订项目正文。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "92058e554ffbdbf11c4339befea6ea1de798f8876bbed7bbdd03cb02a01e1a7e",
+        "storyboard": "2d0395e429663340d97d25f11b769246abb26e640f83e053df46bafad1068917"
+      },
+      "analysis_body_sha256": "8aeed14626f257c31f3890b8e12c405226fd333994f39f44b549579c49f70997",
+      "online_candidate": {
+        "id": "3023e5a7a4f32f5314cce6be7ec5f503d140136fc298516fb5f369b951876bc7",
+        "version": 1,
+        "sha256": "876702ae858ef5e7c3af1bf1e780b9a81f014cbcf41cb1fee6e5ef6a6fdca6f4",
+        "change_id": "70287ee696baf9a1f7ca3f3739af1bd98d78eca341109d3664e7a5a593ef2018",
+        "change_version": 1,
+        "change_sha256": "a859f9fecfb02f0679b66618f41bad690d4fc9ce7e503aa911cbb42a6d60bf37",
+        "context_sha256": "f42f14273f3298140bcd0095cd79852a5d133a2f303221eecd6ffb11dd9120cb",
+        "verified_at": "2026-11-06T06:24:14.091Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=d284224d00a2091014053e9b85bc8eab3a4394cfee822234caf52656416e42aa"
+      }
+    },
+    {
+      "topic_id": "D007",
+      "project_id": "94468149dad8dc13059b2e77e75b56247fb127d138e01ea1ab2680ecd16b41ec",
+      "title": "回收站里的合照",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "8fe78fd057897dafe2aa5440b9d2e103b4aa7669c2964224a8ec6dc09ff7191d"
+        ],
+        "storyboard_document_ids": [
+          "f79168fbf7485d211eccf48ec98577264d083bddbae9fdbcc3854c19c7c35993"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "8fe78fd057897dafe2aa5440b9d2e103b4aa7669c2964224a8ec6dc09ff7191d",
+        "storyboard": "f79168fbf7485d211eccf48ec98577264d083bddbae9fdbcc3854c19c7c35993"
+      },
+      "analysis_body_sha256": "47cc7188dd1e617288e0cd3128e126203fee9fdd168c36e8486247dd841dcf96",
+      "online_candidate": {
+        "id": "ad0d68ddfbc6162144164e041fc465da8912fa84efa2f58957cc49da6c8ba36d",
+        "version": 1,
+        "sha256": "d0cceb26a8e80ad03f9c7f9461081c2d257e11aa459f37f417c061f6c3b67437",
+        "change_id": "f515d9453130b0e45178a2189cd98abae27fdfd6e83433985f362e23e702592f",
+        "change_version": 1,
+        "change_sha256": "fbea6ee6d50c26f8733728d5b31c96e8b14efc28e3b35d5d1c7bb58d4d8a1380",
+        "context_sha256": "50f6448873d2cca532805f932e0f43f16b1c653f2db1e51af566baa997371e9e",
+        "verified_at": "2026-11-06T06:24:22.260Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=94468149dad8dc13059b2e77e75b56247fb127d138e01ea1ab2680ecd16b41ec"
+      }
+    },
+    {
+      "topic_id": "U004",
+      "project_id": "2430e23fc4199279bec36aa52a58be692fe2f09c0095fc7a73c0df5d7917f62a",
+      "title": "第九十九道雷·女邻居",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "6da9fbe99e48e66ae9c0d4dd86ded5dec6e69784c393e2eaee252dc0a7db0289",
+        "storyboard": "d2fe856bc49128d2a9e8799e6c52a2ae90ded2f46a024ba4c31545ba205b69df"
+      },
+      "analysis_body_sha256": "7398b97f916442a433820a7e9a060bf57e1c05af21f9b6e07759ace1eaf74fef",
+      "online_candidate": {
+        "id": "4141271b275d68f90cc10a74e15f4f1f00be004cd3647d3b2ddd05a1cae3be74",
+        "version": 1,
+        "sha256": "8fc38d0aef60904b9bb05554d6677d012d1d21ca8702e00208c8a90c1ad946ba",
+        "change_id": "1aefb28561940b32846a3db174ffd084614798b9bffb3fe66fdf4da491dc6983",
+        "change_version": 1,
+        "change_sha256": "cac7ab81299d914f8fa9f65653123619943519fa346ba55a15a7bb3288022640",
+        "context_sha256": "300c87f23c38cd95842c30943f5a954749f18cdabbbe409c03b2b6df47ce03ee",
+        "verified_at": "2026-11-06T06:24:27.598Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=2430e23fc4199279bec36aa52a58be692fe2f09c0095fc7a73c0df5d7917f62a"
+      }
+    },
+    {
+      "topic_id": "D008",
+      "project_id": "a8365e2c1f75bdbfa751b164cc942cc989e3ca42f20b14ae7eabd3b466f8dde9",
+      "title": "旧照相馆",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "b3bc85c3bd87d8b8541817ceee30968f5e9f978b0c6e9d0f5b8a88b632dd4848"
+        ],
+        "storyboard_document_ids": [
+          "91271e70d8301f93417137cc7206f5d81a40a54de28c708dce823d93930479f3"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "b3bc85c3bd87d8b8541817ceee30968f5e9f978b0c6e9d0f5b8a88b632dd4848",
+        "storyboard": "91271e70d8301f93417137cc7206f5d81a40a54de28c708dce823d93930479f3"
+      },
+      "analysis_body_sha256": "d3927941999f38025a0a088e15559c1a83d12518bf704a40f27b24a878563d16",
+      "online_candidate": {
+        "id": "3b3964d2365928d55e8a7effa2821bd964d0e210e3781ee1f1b18b6c6b65cc31",
+        "version": 1,
+        "sha256": "d0bb4aad8baac98207d6b09d8c8653d5f7de275622c06d439aa5c5998b23f00d",
+        "change_id": "4ae1ef28b0af140a7b28665e75b10b2049bd11e49ac9c6ac66a40027f9fbe77e",
+        "change_version": 1,
+        "change_sha256": "b0dd4ca3a3aa81a7aa1006e0b7a7662d0a1a36ab7863db35e712b39f91e36782",
+        "context_sha256": "970849d6f1d2c9d51d1377bc9af9f5630af536412a09db86dadac0ae4827103d",
+        "verified_at": "2026-11-06T06:24:53.321Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=a8365e2c1f75bdbfa751b164cc942cc989e3ca42f20b14ae7eabd3b466f8dde9"
+      }
+    },
+    {
+      "topic_id": "U005",
+      "project_id": "c820c2201081d0b5c85c09997e601e7df4c0763b764b57a835da0fd5cebac16a",
+      "title": "女仙的面试",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "1992c1fdb21d83f40bda61f7676de808b20fa5a2f7572ce0ed7735bd8b2f5bc8",
+        "storyboard": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb"
+      },
+      "analysis_body_sha256": "bb42c5cef47eb12862eba01e380949ff9579b83a3aed4fd9331b9dd0749d811f",
+      "online_candidate": {
+        "id": "4d2afbd86e7f604376da7715c1bc9bf5526783d1ffd6c24caf783337dca3bd1e",
+        "version": 1,
+        "sha256": "fe0436b9b841a18c7c2d29fce1400dfb381c0b7081ef6f30e9d3ce84e2ddf44a",
+        "change_id": "f48bc472da85de2bd78634b8aa9d3363c29368bd47dd6518b73d8c9ccba1352c",
+        "change_version": 1,
+        "change_sha256": "49ecb3a29002f75e1a8a6d08bcdabfbe1cd46e530cfc467e220aa53cbe568a9b",
+        "context_sha256": "57d750328a0321a4c1ef02165b052414b5074d715a070364b673aa05f85dbdb8",
+        "verified_at": "2026-11-06T06:24:46.480Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=c820c2201081d0b5c85c09997e601e7df4c0763b764b57a835da0fd5cebac16a"
+      }
+    },
+    {
+      "topic_id": "D009",
+      "project_id": "01884170a32a4b2a5efa8e1dba88d72df187c5dd184b1a2869a8c0cd51e2535c",
+      "title": "小店最后一夜",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "0be2f8e38492d7e0fbba66e4a5958d8ccee1238bbecc67c57b8d2f485f5f4e8a"
+        ],
+        "storyboard_document_ids": [
+          "8dde2c381c13775206696118c80fe8630f425214e2740ce351bb840a947e4188"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "0be2f8e38492d7e0fbba66e4a5958d8ccee1238bbecc67c57b8d2f485f5f4e8a",
+        "storyboard": "8dde2c381c13775206696118c80fe8630f425214e2740ce351bb840a947e4188"
+      },
+      "analysis_body_sha256": "9ab8e23b7a92f8763f9ace1740164907bc2d1ce6f61241380866f19b266cc996",
+      "online_candidate": {
+        "id": "6b3fcbcc8003a5feb4240f74ed3ef1d5c54dbdef451b6684dc0af2a2597a0972",
+        "version": 1,
+        "sha256": "0aaff708a4d2bc93b7f3f0f4a04f49f5e03f2ed60df6ef5ecf942611189ae22a",
+        "change_id": "5ba02356c0ffce760aa762e104bebafe30dd095b5ffa110919a4b63cc3b85e7f",
+        "change_version": 1,
+        "change_sha256": "14343ae7f024f3b28a0b8f884d5643d1cb246f4d095c650164ded10428843756",
+        "context_sha256": "593cc8fc8ce94a7f83946a990f5cbe04e19767a7e01a9ebb66ec44d9ab0024a6",
+        "verified_at": "2026-11-06T06:25:04.281Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=01884170a32a4b2a5efa8e1dba88d72df187c5dd184b1a2869a8c0cd51e2535c"
+      }
+    },
+    {
+      "topic_id": "K002",
+      "project_id": "efbce97fa0b1d9dfbe6f1b0ad85aadad2613f8dddd14093c1c3d3da2bda05faf",
+      "title": "同步率17%",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "b3d3a1d97a815c4b1abb768057f3182e982892fa000e2659b816452e1b0fd4f4"
+        ],
+        "storyboard_document_ids": [
+          "f5e4c20314c3de41f1ac589a48b07490e007099dc4331db06fd18401cc1bf079"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "b3d3a1d97a815c4b1abb768057f3182e982892fa000e2659b816452e1b0fd4f4",
+        "storyboard": "f5e4c20314c3de41f1ac589a48b07490e007099dc4331db06fd18401cc1bf079"
+      },
+      "analysis_body_sha256": "d5d2043c52ac4c187d503f649a938df8949adf1db0865c6e8e0da6dd10e0752d",
+      "online_candidate": {
+        "id": "82763b4d787ee19f83a8e841942851550a96c042044a01b17a7807f9ecc18ee4",
+        "version": 1,
+        "sha256": "158939e36e9890b0dc736ca48775a635b2f18d4802321bff104623fd5fc902d6",
+        "change_id": "ed2eab98a14646b399d79da9334f7ab60b4cd7307961795972f5d6853f3081f6",
+        "change_version": 1,
+        "change_sha256": "9571d11aab3b64d799dce4f3ec0b17177a72d4d3c80414ad0845435e80bc9574",
+        "context_sha256": "36664ad16076cb39a05cfa78b8f5902b5d87401add3fa7bd60fe5cb833574983",
+        "verified_at": "2026-11-06T06:25:13.774Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=efbce97fa0b1d9dfbe6f1b0ad85aadad2613f8dddd14093c1c3d3da2bda05faf"
+      }
+    },
+    {
+      "topic_id": "U007",
+      "project_id": "48b8f36b083f31b1e67085023161213f126140ad0d59d70e8c19b6fc603570ec",
+      "title": "丹修住在楼下",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "c04051a6a170f5082be29372cd26664faa533295106522702d2f3d736395bb86",
+        "storyboard": "ce588ac715455c78e72c0632700bb5866d6c3be10805f7953e8b65527d0bbe37"
+      },
+      "analysis_body_sha256": "a9761fb47dddc3791779ce9c8aac08cdeb048026801a064e4fd11d8013b22f11",
+      "online_candidate": {
+        "id": "d81d75b2e8be8803a92570a20a0b5cc32a0afb0f2479efea8a4ed7090f986935",
+        "version": 1,
+        "sha256": "b8792ec6ad86a8581946027201e409f5a00d1ecf9616cde5797b0e14dabce354",
+        "change_id": "bb6cd91f089217dceb247b89a319a0fe676cbd6a60423d02722d5817dea465a3",
+        "change_version": 1,
+        "change_sha256": "86d1ad078b363dc71d49728fe417d63c9b12ade277dcf5e5471811e891efa432",
+        "context_sha256": "9ea56850e84b3485c86086c89806f74bf99565b53fa3906f5b8a1df3bed18175",
+        "verified_at": "2026-11-06T06:25:13.835Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=48b8f36b083f31b1e67085023161213f126140ad0d59d70e8c19b6fc603570ec"
+      }
+    },
+    {
+      "topic_id": "U006",
+      "project_id": "ef0af9e69622f57b2139b5c412af086de24091cfa8c09887313e5d7f7d40044f",
+      "title": "我替剑仙修手机",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "c075ddc0d50282f3b7bba1034c25595bb35afef68bd01d976f77fefac0de8c60",
+        "storyboard": "9baa5df5c1147184a754eb7c04fd58b3dc17c71c3abe35517dbcebd06f5d85c4"
+      },
+      "analysis_body_sha256": "caf5ab44d764dd0a8763e4e39cebf3c962d806863bf1fc46801da5bfaf9a9718",
+      "online_candidate": {
+        "id": "b4b87c03f9ef344bcd2f67e7bdd162d541c3153633544d261b5c958df248a8ff",
+        "version": 1,
+        "sha256": "9e0290ad99358df6a0e3bb9f676044d73633476524783e27742749b015a4f82b",
+        "change_id": "7938bc91f971f4eba36d6b0c2b25f9b1de47d180307c4616540fa646a44b268a",
+        "change_version": 1,
+        "change_sha256": "9f66517ffe993c0e9df743c9ab8fada55cb081cfd0662ebed7a178b28456a5cd",
+        "context_sha256": "be1ce4cf9740a642af70daa73c739ff912b47cd64760d37289039bc97623f35d",
+        "verified_at": "2026-11-06T06:25:36.618Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=ef0af9e69622f57b2139b5c412af086de24091cfa8c09887313e5d7f7d40044f"
+      }
+    },
+    {
+      "topic_id": "V002",
+      "project_id": "1e0ebfe83aed1bc50c27bd5a636d07168931a3c1a63f731ec2eee7f52f2b9f22",
+      "title": "归墟末班车",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "a8ca534d4168760df5327557a527a58faa153c312cbbc7b5ee594c77a1ea4b4f",
+        "storyboard": "87f10b8c2c5bb766ecd02e5e3fc593bbd5eae998d348e018ff878e2685da4c84"
+      },
+      "analysis_body_sha256": "89a6fa1f0e8ea1e43f278727eb9f4f56ff4dfa3e63ac92a250a3d13dd330fd33",
+      "online_candidate": {
+        "id": "aca74b5e243676df28738fe9134038decfc5739c794fbf4ab7c47165b2585a1b",
+        "version": 1,
+        "sha256": "5be6755b53f132d2285f90c256c944b8cafd182b5220a03566013ca61f302190",
+        "change_id": "f0acebeaaae4f74ad2574713e03d55cd0252d188372caed5cbf20b7bb1454d9c",
+        "change_version": 1,
+        "change_sha256": "48c1f21f61aee90a8363f07224eb4abf9ba285923be6c9ffbb1c641625cdc69c",
+        "context_sha256": "39328c7e72806d37b0a8e563483d5ebcde094e9c7415797d8dde78baba3f0910",
+        "verified_at": "2026-11-06T06:25:42.395Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=1e0ebfe83aed1bc50c27bd5a636d07168931a3c1a63f731ec2eee7f52f2b9f22"
+      }
+    },
+    {
+      "topic_id": "U008",
+      "project_id": "0c4e47c94abc825fccd61004665ff2dec7306debaf1d5de6dedee5c32ce75314",
+      "title": "修真界入职培训",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "a214862fb35834ec31fb77197251af63d4c26980bfbee763b66c98e960f667c2",
+        "storyboard": "761efbd374c9d4833e1707b7abde3b1090191623638ae8ecf546a25b08e0c004"
+      },
+      "analysis_body_sha256": "81e2fab7dc2aecbadbbe672ff793166462dc71a5958adb2bc8bbefc814ff8f19",
+      "online_candidate": {
+        "id": "aad3143b837f28bd4c71da3f784c113606b2438a7ca6cd5dc6c04d3a1a2eec17",
+        "version": 1,
+        "sha256": "55adab0a70ff6977123a58d0a2fd60d31502e1ecef69cc0a52cb0408dc5c4b1c",
+        "change_id": "6eafa76e11561f9ded2b31713cd283d22ae76c0680c1460fc1e0f124d5365ef2",
+        "change_version": 1,
+        "change_sha256": "ebe5f41c6a762fb166b97d63631905277071ff4237bfc3380801ef4fcc236593",
+        "context_sha256": "e8c9d357b0b8dcf8220ca29a7ba06d35853ad32a320d05a12b27d7f51e2d34d6",
+        "verified_at": "2026-11-06T06:25:56.468Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=0c4e47c94abc825fccd61004665ff2dec7306debaf1d5de6dedee5c32ce75314"
+      }
+    },
+    {
+      "topic_id": "U009",
+      "project_id": "6ddfdc4eaa4e87d90e63724b562aba172e3a25164a6706da4eedfe15b722a108",
+      "title": "地铁安检与本命剑",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "完整读取组合修订文档中的短片剧本部分并对照；没有将同文小说结局当成短片事实。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "b7e0cf304850f689697c0fce43212c67045cb334073c5500d795867a2e7a3b3c",
+        "storyboard": "c5926814221e2815a9be094c10a85650ccf5ae465ee537949b8fe7719605fb22"
+      },
+      "analysis_body_sha256": "6a63f8af9467f92a1c555ebad70b5baaf760d1e1c7f3ed240291c98be77c3d41",
+      "online_candidate": {
+        "id": "8abf696b749cb2f6872fe8ea0ecf8830b73a2b78f0a8163e7204178cd2cfc75a",
+        "version": 1,
+        "sha256": "66795d755a839d1f0896631fcbdff1e577d3c49a255be1258c75ea41a23dacad",
+        "change_id": "cb12f77f103977095b0c83e9fb7205d78c20087a4830912b1dde36df5dd55152",
+        "change_version": 1,
+        "change_sha256": "39d130834eb0f910bf754d4e3fb8be4f6c2eee4d116d2a624598a9357c93d6fc",
+        "context_sha256": "6248c4d15f61a0b3f8a9c905b21af0949a9736378ed14355ef563ddd71da9f1d",
+        "verified_at": "2026-11-06T06:25:56.317Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=6ddfdc4eaa4e87d90e63724b562aba172e3a25164a6706da4eedfe15b722a108"
+      }
+    },
+    {
+      "topic_id": "V006",
+      "project_id": "b174fa755ff00f0c0fe613922c063b8e401d036dacaea041258945ac7381cca1",
+      "title": "零号展厅",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "cf518c6decf9d5ead459af4749ff9c541fbbf99abfd959cfa2de96fa4087325d",
+        "storyboard": "be3cc102939af8945c8cd5267e9d551e65cacef7a36ffd11af6db6183e1e89d0"
+      },
+      "analysis_body_sha256": "e6e43a2616ff5f0284da1b98733fe9b4b2ea4b9503a67024711c3a823369a627",
+      "online_candidate": {
+        "id": "ef55d1ea7c936c1bedfbc3178df83d3ff01eaea964d9f264aac6b31ecc049c4f",
+        "version": 1,
+        "sha256": "021f48f8f185e8c77c394e2ea820bc6c080227f0daf97e7217c5b7fc747d234a",
+        "change_id": "8058b60d15a72dd8bd1b1f46515973fb0717babebdf7ecdfe2a7f5cb923d8598",
+        "change_version": 1,
+        "change_sha256": "16958d04d358812f0edb01a26df5562d6a985161465e2d3e8cd4ee437d399382",
+        "context_sha256": "eec20a08198ebbeb2b326729e55c7c4fb94334dce91bd1ae781f86f3355cdb3a",
+        "verified_at": "2026-11-06T06:26:07.683Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=b174fa755ff00f0c0fe613922c063b8e401d036dacaea041258945ac7381cca1"
+      }
+    },
+    {
+      "topic_id": "K003",
+      "project_id": "260c4931a828a4f121655bdbfc68f0608c6d910e1c4422bcebf356234b9c1862",
+      "title": "旧城七号机",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "aecfa668ba4cafc71ee1a9871fb708fde65b2b7f4e19262f099686918c2394e4"
+        ],
+        "storyboard_document_ids": [
+          "f31b85eba85759bf6b5dc831c0a7dd8c08a3bf742c0d6fb38ea63829a30ac9d7"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "aecfa668ba4cafc71ee1a9871fb708fde65b2b7f4e19262f099686918c2394e4",
+        "storyboard": "f31b85eba85759bf6b5dc831c0a7dd8c08a3bf742c0d6fb38ea63829a30ac9d7"
+      },
+      "analysis_body_sha256": "4c838719d65fce07fd430460ba0e00bc8dd5d0890d0c0f23c53f70c19401783e",
+      "online_candidate": {
+        "id": "a75f2b0a6e1c892b12bea78d4599ba1e5314a027b79948471b57aec6b418c612",
+        "version": 1,
+        "sha256": "843e08717dd35c772ca11a4ef2451cb3a6c4a77595c4ec89e34f60c0e92f8854",
+        "change_id": "634275f73490b15906cf12301358cb8f026f70dfce51a2ab91e5d6c4bec3ad0c",
+        "change_version": 1,
+        "change_sha256": "abb5919baa29f334a179f4d294dac44124cba29951f0f344e9d494a47e404a8b",
+        "context_sha256": "35b3bb3e0f51f38e493963076f999f3155560b46d446fe498c721f55fe48d461",
+        "verified_at": "2026-11-06T06:26:17.576Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=260c4931a828a4f121655bdbfc68f0608c6d910e1c4422bcebf356234b9c1862"
+      }
+    },
+    {
+      "topic_id": "V008",
+      "project_id": "92fee517af5b7198432a613b6fdd2c3c2d59f4d5d8ded8a9516aa7e2df4e1db1",
+      "title": "雨师请假了",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "5ecda5c058d7526262ac50e9b63b2ade7a8f3cee4f066198fa6abd0586f1aefc",
+        "storyboard": "a27a84cab5cd100b14e03fe7002d7da3b58ae1c844ec60e9bf625daa17d6c5eb"
+      },
+      "analysis_body_sha256": "1913c3a3e1ee451034b9909f941fa81679cfc2d375775fd97819235a9f50b724",
+      "online_candidate": {
+        "id": "cc363f345fe8b06dc5dd623388ccb675cb687f92d62ad0139d201976f3428c19",
+        "version": 1,
+        "sha256": "b695cae7a644ec0161f0bcdec474903779e9a43972d428e658ea5b0003c0f5fb",
+        "change_id": "25619a9da98322d253f1e9b6e9baf1e26ae93f05f3c0a8b7c5cfb4674184f022",
+        "change_version": 1,
+        "change_sha256": "44b348b529e56c7fc79ca95f2b345bdaf7cea924f9d0168f3c55945e8568db08",
+        "context_sha256": "ef4c4810bf251783055dc1db0e0311120280ca3349da0b769e9c48237c0e7279",
+        "verified_at": "2026-11-06T06:26:36.336Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=92fee517af5b7198432a613b6fdd2c3c2d59f4d5d8ded8a9516aa7e2df4e1db1"
+      }
+    },
+    {
+      "topic_id": "V007",
+      "project_id": "affb92f5edeb9c52264fdc69759e6bd7b134c303bcf78a34ecc3596fc4b364f9",
+      "title": "消失的巷口",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "74ca045e28d5a22f02431af16246e8b1f4a4c5bbd361ed801bce7a9155ed8a4a",
+        "storyboard": "7aac34d70bbf470acb4b3eb5114d78acae8fefb691fb06593d412eb5d2bde15e"
+      },
+      "analysis_body_sha256": "4ece9b0676d5413e218e295b8d64475f00ffcb382c62a759db3cb3c681504ed7",
+      "online_candidate": {
+        "id": "c598a177934ad2585a1bd99ab1c6094ec32594d9216ee2e522e77218ebfe697e",
+        "version": 1,
+        "sha256": "251c0e58a4f616f53c211539e31ae21b46445b513f725f3049b6d80277b25349",
+        "change_id": "80142df90ab331da8756f3e4873987dc64ff311468e5c115c310c0aa2697023c",
+        "change_version": 1,
+        "change_sha256": "6058a24c7156bd7792de63849824781afb8b1217f9c3670456bda69f9ee234c7",
+        "context_sha256": "ea549d2dff77c039b831dd2ad973be12a0f0fce1af2abc8b7238eda023a095ad",
+        "verified_at": "2026-11-06T06:26:25.868Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=affb92f5edeb9c52264fdc69759e6bd7b134c303bcf78a34ecc3596fc4b364f9"
+      }
+    },
+    {
+      "topic_id": "X005",
+      "project_id": "12c1f01e8c66ebc378c483469dd4ef382c2eb2d29a5c8e27f702a7f1807243bb",
+      "title": "渡劫邻村",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "74fa6d88c6d154ea0f447ce1c9198c7f1d227b007300d6781293120100bce447"
+        ],
+        "storyboard_document_ids": [
+          "cfe8a2310ecd25c865e3a6fde410bcbfac59bebbbcb36065f8733c63e52a6b27"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "74fa6d88c6d154ea0f447ce1c9198c7f1d227b007300d6781293120100bce447",
+        "storyboard": "cfe8a2310ecd25c865e3a6fde410bcbfac59bebbbcb36065f8733c63e52a6b27"
+      },
+      "analysis_body_sha256": "0d80399de038f727c4bcbbd1ea6322d3f839e9b608a753ec010f2b3c6e1ec912",
+      "online_candidate": {
+        "id": "36277b0fbbe2347a71239869f88f3d9ba9e096b49a3a0ab7cc0f6a7b07ef182c",
+        "version": 1,
+        "sha256": "902d0283016c3a37bece40c579939b479f82be3dba1719e94ceb10fae24aa557",
+        "change_id": "fe5a6c091db129839a076ea02a7f2785da3a601839605f84a68b0c58ca5e58b2",
+        "change_version": 1,
+        "change_sha256": "c2bfa3a6dab11624be8b1f9977633aaeb5520ced560bd1580ba66231bb8fcea1",
+        "context_sha256": "d6ad5bdfdf05579942f1f752eb4164b6473202158c5c4fbc0f894f0d3cce2716",
+        "verified_at": "2026-11-06T06:26:47.846Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=12c1f01e8c66ebc378c483469dd4ef382c2eb2d29a5c8e27f702a7f1807243bb"
+      }
+    },
+    {
+      "topic_id": "X006",
+      "project_id": "3ad8f41ab4dda07fe876230522422f977ca5200e5a92a1d2e95ddc9d093c4ac3",
+      "title": "试剑石无痕",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "8c058ae26d4664a67865a4163fda2d3c8e530a29cffa44e0a564a19b39d7b6b8"
+        ],
+        "storyboard_document_ids": [
+          "4f811b978fd9a0b9ddd927c6dd32bdcee0cfe98f818f446862e3e889e9abbf8d"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "8c058ae26d4664a67865a4163fda2d3c8e530a29cffa44e0a564a19b39d7b6b8",
+        "storyboard": "4f811b978fd9a0b9ddd927c6dd32bdcee0cfe98f818f446862e3e889e9abbf8d"
+      },
+      "analysis_body_sha256": "92a71ba73f08e7e3d1394fd9f94265a5e6611cb0140d50aa5ad6d0d1cfdb3d67",
+      "online_candidate": {
+        "id": "d8a74830d5fc1324fb1065b671996b263296ef98f34dd250f46e11f79734bcb3",
+        "version": 1,
+        "sha256": "e2f44fdae752483180bca19c1c946f79e0c2d48ad2a1c5c2665956f899e3d106",
+        "change_id": "577d688354a0915aedc9737d0acfa16042865b01511d0d7b9a6ce145da1e6cdc",
+        "change_version": 1,
+        "change_sha256": "d48df955f8b5280060b88983d6252ed9bb2e11c2f2831c5deff40b7176b60205",
+        "context_sha256": "07533c01622ba370224699813e488b6d1c4298aa6b4a4c56aad2ae947c0ab1b7",
+        "verified_at": "2026-11-06T06:26:50.623Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=3ad8f41ab4dda07fe876230522422f977ca5200e5a92a1d2e95ddc9d093c4ac3"
+      }
+    },
+    {
+      "topic_id": "V009",
+      "project_id": "6414a6e214e486ba012295853fba42f1f159eb9e113a365f9d45444e0ba72cf8",
+      "title": "玻璃窗里的旧人",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "366dbdd47e41c376c02175e8c301b957f06670a10deb4f2e3f981380bf2bc546",
+        "storyboard": "4e499a89b23888648da1d8101b618da63f7ebfce30e3c0094ba827b38618d946"
+      },
+      "analysis_body_sha256": "513f255a23afda3c46cf09f5dccd8bce3cb9cc550f26fdd04d6ace5ac6f9b5ca",
+      "online_candidate": {
+        "id": "5183151ac50f35becc36742c144ccac5ad35cc3f1059946265ed1900a4a3729b",
+        "version": 1,
+        "sha256": "d7cd49240ba3d4e52c46247da4b2cc7777c95a6fde151599dfcf20c3cb0035c2",
+        "change_id": "d22c6f18166fe2d9f4768c9704d371662028ea0d97bc277f0a858da9f92138d6",
+        "change_version": 1,
+        "change_sha256": "bb2cd84ee026b90c818748fe0b87d88e3224744ebaadd0eeb008d2351a0302e7",
+        "context_sha256": "db16b8b2d321e29e093495bc4495ae34f704fc2188057a30ade8b1b5a8a2f5e1",
+        "verified_at": "2026-11-06T06:26:58.107Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=6414a6e214e486ba012295853fba42f1f159eb9e113a365f9d45444e0ba72cf8"
+      }
+    },
+    {
+      "topic_id": "V010",
+      "project_id": "fe78e3481ea8813938d6513b68efc910c16e20efd288f5ddb6a408f5bd6072eb",
+      "title": "凌晨三点的订单",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "e926ff7be25cdd2fe7eb6e8ba5868fbd648cd2257ed95810cb9bc2e46d62e4cd",
+        "storyboard": "e06fe095ac4b24200fdb48366439dc1af43eb1d3fcd2c9669240df8f58f24438"
+      },
+      "analysis_body_sha256": "81a83593b7c9ad504638fac5d2dce2124035d6e8e93e1027376f6da6ae887760",
+      "online_candidate": {
+        "id": "a50f2c31fd2dc969287861cd989f23e4f33f2ab3d4ab0c43fc798ec1317cf6c6",
+        "version": 1,
+        "sha256": "3842b0ce24bf4ca615843efb9041a914008fd4edca34164680a0430cb1286394",
+        "change_id": "61cf8ef1c1ba0bd4cc8d099e8196fd1deab2550c9a6623c587ef067f62e33612",
+        "change_version": 1,
+        "change_sha256": "955a65722dbc07f562e88ab0345c6b6e9f1bbc3df18119d1ba7144deaa843041",
+        "context_sha256": "7e3633622cb232782f2f7e868693c3d7ef92f2bbbb32d24cb05979692f5380e6",
+        "verified_at": "2026-11-06T06:27:22.372Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=fe78e3481ea8813938d6513b68efc910c16e20efd288f5ddb6a408f5bd6072eb"
+      }
+    },
+    {
+      "topic_id": "K004",
+      "project_id": "52f7b3c30c99c933c44d4e69bc7321f0de76e85820f18a16cba10ee534cbd4c4",
+      "title": "天台停着一台机甲",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "b0031623a1a1248ccf47f5a93a9fb7ab5de4b282f34da8f6abfdbadc26545e1b"
+        ],
+        "storyboard_document_ids": [
+          "7b398331bb44b8e7fdc1ffa440ac7374ac34425e2b92c3b4f3dd563c86932def"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "b0031623a1a1248ccf47f5a93a9fb7ab5de4b282f34da8f6abfdbadc26545e1b",
+        "storyboard": "7b398331bb44b8e7fdc1ffa440ac7374ac34425e2b92c3b4f3dd563c86932def"
+      },
+      "analysis_body_sha256": "d38aa60cc8ac6925bda607c007e8c2b9d2086bbd8e887b3fded77c3049a4e86c",
+      "online_candidate": {
+        "id": "beaca370c76800a49599a577fe2944a281c8f49920c5e0927235970b67e91012",
+        "version": 1,
+        "sha256": "0a7f366fb270afad866bc36f3c4221d1848c222b963ee65c1d12ad770aa9ba48",
+        "change_id": "059af2438611e4b7b9a62c4d2d1970fe9ff7eece91734f187b447d8e3f5168a5",
+        "change_version": 1,
+        "change_sha256": "52eb983a745b16bae68f221c805a3081d4492b9c396132c15fe884b74b4a3daf",
+        "context_sha256": "ccfb180ad600ce16d03ef7b434ccad25cd82a7f3b66550b6b2ef9486ee19ac5b",
+        "verified_at": "2026-11-06T06:27:26.339Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=52f7b3c30c99c933c44d4e69bc7321f0de76e85820f18a16cba10ee534cbd4c4"
+      }
+    },
+    {
+      "topic_id": "H002",
+      "project_id": "f8c1a5deca645522de8d719ad2944535522e5f930625f55d2b37f23d9034d5df",
+      "title": "玉门十三人",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "完整读取关联修订项目合并文档中的短片剧本及导演镜头卡；前置小说未计入全读范围。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "c895b0a3edbc822e4fea134eb27cb198f4a00cfa16e47d0a01cc70616d0e9d86",
+        "storyboard": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794"
+      },
+      "analysis_body_sha256": "2250476c95601c0953090c8c43456470b89668e78362be99da0fa2cfeda7d364",
+      "online_candidate": {
+        "id": "48ef8b4e505c588d5019d586675a220189498f0327366cec31d945408fe4f5ff",
+        "version": 1,
+        "sha256": "46e48be83ae98a08ad496d05bac27d5b7765df44c0588869f36b266ad84dedc8",
+        "change_id": "9799a9d3f77bd5fb86b4b46aad9b9184f02689e20c5b1cb17449af1a278b0762",
+        "change_version": 1,
+        "change_sha256": "37ffe83b5efa58077128c00e874d2f67dc2deeb4fbcba6b0c1c821e91b9d9dea",
+        "context_sha256": "24740a8e78d1dff390a4066f2c68305f26e6bf703222719e7cbe7711f9c031ac",
+        "verified_at": "2026-11-06T06:27:29.104Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=f8c1a5deca645522de8d719ad2944535522e5f930625f55d2b37f23d9034d5df"
+      }
+    },
+    {
+      "topic_id": "X007",
+      "project_id": "e5e22c8415a2978d36bd3cfb0342f9bc1b1043a884b01dec3e2a682616097b15",
+      "title": "无字道帖",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "0997e5c3cf3ec8e8cea25d618d156f5dc58f165fb003c1dcd043b8edc33abb16"
+        ],
+        "storyboard_document_ids": [
+          "c37ccb2eb1656def36b754b7677254d8f5429d8ba3bf9e31ec85ac6ac47e6024"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "0997e5c3cf3ec8e8cea25d618d156f5dc58f165fb003c1dcd043b8edc33abb16",
+        "storyboard": "c37ccb2eb1656def36b754b7677254d8f5429d8ba3bf9e31ec85ac6ac47e6024"
+      },
+      "analysis_body_sha256": "486fc9aafce77fc6906976debb1e509baba07423828f3437a7845a45298a3f0f",
+      "online_candidate": {
+        "id": "fe4b188b33427835c8bd47cc24434b3ecb8dd9fe7fba9aef7b952e514aab3b40",
+        "version": 1,
+        "sha256": "cc44e0022de167fc2b5a19561b9c8bbef254337226458772333cd66593848302",
+        "change_id": "78cfd26e88f85133a5eb8727334d68941669b2883761273ea79a80f398596a21",
+        "change_version": 1,
+        "change_sha256": "f110de11845c44d6da9cdeb7ce2b9824e8521e82027281486ef90413cb72819c",
+        "context_sha256": "2a512f1355c5b1813915068df3de365e867669f7d6e4817a380a28c5c894aad8",
+        "verified_at": "2026-11-06T06:27:39.139Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=e5e22c8415a2978d36bd3cfb0342f9bc1b1043a884b01dec3e2a682616097b15"
+      }
+    },
+    {
+      "topic_id": "U011",
+      "project_id": "c2941444999482819ea6956917eacad28901d6858b11063ba8a92f467ae2e1ba",
+      "title": "月老错牵线",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "1df06305c23eff8cf3d61c5c406bfe2bd698739848a225d8c8043753fcd9915a",
+        "storyboard": "0222bad3793ea13dba30d1211f8075154ff6f3d1f0171d9e000520e84a1ab001"
+      },
+      "analysis_body_sha256": "c7ec196784712630200fa86801259de1db86d3e795cba6fcdf71992b892672d8",
+      "online_candidate": {
+        "id": "5bbc1b61fc96c1b9ca1c13c7e265a4fb5df9cc6be211c45e4c8bfb19040e7c3b",
+        "version": 1,
+        "sha256": "ee1ab17050dc3630a18f9f7c1c28c74813a9ae7a87c8470332c9269377ed6dcd",
+        "change_id": "9e3ba08b7de93ef069812b36733462a2f9c5bfd0cba15eb00049b85c4c2166fb",
+        "change_version": 1,
+        "change_sha256": "0bae5b4ed106fe6653d56accea7f61f2bebbbdf6af55bd8eb08f3a7824012526",
+        "context_sha256": "4c0a7100f17ae8b6aa6eefb2aa4576eb8ab2349ccd841b0d50e051d12a9efe53",
+        "verified_at": "2026-11-06T06:27:54.827Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=c2941444999482819ea6956917eacad28901d6858b11063ba8a92f467ae2e1ba"
+      }
+    },
+    {
+      "topic_id": "U010",
+      "project_id": "f77ca6248141e88f2aae6a4931fc531dc6cf7f8d8935d72c4d39e2d55286e0bc",
+      "title": "被封印的女宗主",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "完整读取组合修订文档中的短片剧本部分并对照；没有将同文小说结局当成短片事实。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "1643098cb621fdd83083e370fd67565035ba94cf4585deb36c6bab486be91db8",
+        "storyboard": "8dfc0e3d9e87397224932214177b2b10705ac343381b54e46040ee8303f487e9"
+      },
+      "analysis_body_sha256": "a3f94e2b2d0073d15dc274374ac2b2252ff799702384b9280f7b94339dc8d9e5",
+      "online_candidate": {
+        "id": "7d6d2017092707f3c8cbde62b5193df1d8ab7e087b733760aecb355274b6af52",
+        "version": 1,
+        "sha256": "067dace6a097e41683bf81070d920424fd49e45f2698af556f951aad4cefbd7e",
+        "change_id": "623cc690f3beafa54212707d25bcd964efd78173d63c8430016fa7280a130a05",
+        "change_version": 1,
+        "change_sha256": "a088443677e94987246edfd1be5cc73ffb1a0e35e8250863b156d59fdfc32a77",
+        "context_sha256": "e0ec6476a450ab27a45df165a2f1107f0926524909bebba33c5130d90725eb8b",
+        "verified_at": "2026-11-06T06:28:07.022Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=f77ca6248141e88f2aae6a4931fc531dc6cf7f8d8935d72c4d39e2d55286e0bc"
+      }
+    },
+    {
+      "topic_id": "X008",
+      "project_id": "7f0d0813cfe944e6671a8cb943c33c11cfa5a587c722f2be1efa5689a4ba41e1",
+      "title": "下山问心",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "32611d2c1856a2871b745a15fb3d0daa49ff255f41a767a0fd6d3cc0230bf89f"
+        ],
+        "storyboard_document_ids": [
+          "a3f084d23e8ad4813165d5ebaffde7898fcf1bca1ea0d44569083717a9456d1a"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "32611d2c1856a2871b745a15fb3d0daa49ff255f41a767a0fd6d3cc0230bf89f",
+        "storyboard": "a3f084d23e8ad4813165d5ebaffde7898fcf1bca1ea0d44569083717a9456d1a"
+      },
+      "analysis_body_sha256": "19a83d0bbd30495b3c229168a3dff3c3e61ec85a8d32eb8b29002cda04d4aed8",
+      "online_candidate": {
+        "id": "88e4d3429cd20240a63699f082e710a5802400047eb2243d99b92f541987fd13",
+        "version": 1,
+        "sha256": "bab527dadad6f96e98e186abd8f32bf5d98f33033bc2336c3933ca712c758d92",
+        "change_id": "1635a2ec7f6bd9c0b2939882e573f3ea03b4161eb0df20fe8ba9a17ba52e0488",
+        "change_version": 1,
+        "change_sha256": "05490fbcc5ae8745c92a48b781ecba7828b48bb764b5969a750dec03f3e5bc17",
+        "context_sha256": "ab963f0b749cda7580aedbc907f11477a42b58686224991506b1c119053468d7",
+        "verified_at": "2026-11-06T06:28:07.160Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=7f0d0813cfe944e6671a8cb943c33c11cfa5a587c722f2be1efa5689a4ba41e1"
+      }
+    },
+    {
+      "topic_id": "H003",
+      "project_id": "bd4e5139e15d26e29d958564419eea546de2ac05a3331c6d3c0c6c1de1b03605",
+      "title": "雪夜蔡州",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "完整读取关联修订项目合并文档中的短片剧本及导演镜头卡；前置小说未计入全读范围。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "2b1cb277c070317b8fc43b1506d4346b59cc511f38443ea93c07df5551057496",
+        "storyboard": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c"
+      },
+      "analysis_body_sha256": "84105f3e35d45cb4d699ec6edbebc22e2f7c88674813fbb5d0aa0e4dbc85e78b",
+      "online_candidate": {
+        "id": "98c8443a66c166b6ffcaafa68e6c183d94e796ac6483b97266600d60337e649b",
+        "version": 1,
+        "sha256": "243ecf76cc8d12cbb8ec9da8552ac3546521856e179af26b0e2d7d5c2aa05797",
+        "change_id": "e9a2eb668eba61f15da4f26432606b18244374bc49809559d230af622e37a5fd",
+        "change_version": 1,
+        "change_sha256": "d1facfa5d2f4902ba09f81f19592c6669b07ff1458411c185b0f794b96b7fc4f",
+        "context_sha256": "f56221205a7ffda0fa659244fcdaaf0c382760c9062ffb916691f5fe34a4a946",
+        "verified_at": "2026-11-06T06:28:16.543Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=bd4e5139e15d26e29d958564419eea546de2ac05a3331c6d3c0c6c1de1b03605"
+      }
+    },
+    {
+      "topic_id": "H004",
+      "project_id": "1f889fa9a28a2ee2369567f0d1a99e87c083af30fc0e1899eb84c0062c5af852",
+      "title": "空粮营",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "完整读取关联修订项目合并文档中的短片剧本及导演镜头卡；前置小说未计入全读范围。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "59118f2a9ad80a3f3539428a80e7f94da741ae9ac80bd6069564810b530e207d",
+        "storyboard": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931"
+      },
+      "analysis_body_sha256": "ed56491b36aff6972dd60b5e4404c021997d71827f88544ec1efb4d3c9f53bed",
+      "online_candidate": {
+        "id": "df175f6a702ba9c5de161d70024ccc877d66c70c503957676af8df905a609062",
+        "version": 1,
+        "sha256": "b0bc77804ffff31ae566e29ab1dd5b1e209aa4f507dbfba421a1fd0027428c26",
+        "change_id": "fe43440a9ff75c0b43db7ccb409af9951a382261e7479005af708c3f9e34074f",
+        "change_version": 1,
+        "change_sha256": "7cb799172e9115e1002515a800625c8b14637308cea7acacb230ac357f9e6d1e",
+        "context_sha256": "1ed063c650212c26f5a4ee790b37462532fe9096a58ab32c6aad8e9f6bd7a373",
+        "verified_at": "2026-11-06T06:28:36.939Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=1f889fa9a28a2ee2369567f0d1a99e87c083af30fc0e1899eb84c0062c5af852"
+      }
+    },
+    {
+      "topic_id": "X009",
+      "project_id": "e2d64d4ee0110d880bb6a20240c15e00fd2eaead4f54c4cd25b7702545b926bc",
+      "title": "听雪客",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "d4fcc85744b4c09ec14f3e8d8d0eb7bf2859f409adc2a033cd8e402148fa3839"
+        ],
+        "storyboard_document_ids": [
+          "4d9b981b98d6542bca9077dbf4ed11ca8c8d95d8365a2cc61148f0ca5ff03d59"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "d4fcc85744b4c09ec14f3e8d8d0eb7bf2859f409adc2a033cd8e402148fa3839",
+        "storyboard": "4d9b981b98d6542bca9077dbf4ed11ca8c8d95d8365a2cc61148f0ca5ff03d59"
+      },
+      "analysis_body_sha256": "28b7f156002d7f763c88f21ba682a9251e2f727a2f81058c686c395f97765a4d",
+      "online_candidate": {
+        "id": "8aea09a39b9f4d71fc626719199a0f7dabe1d89dfa85a766845692f4c6422e8a",
+        "version": 1,
+        "sha256": "f81f6b98e74758faa34156c2e6ea85b3441b631f300cd852887d3450823e287e",
+        "change_id": "ef575861cc8a3421760a2e2f430cbef8775145dbada07831e0b1ece9d634e83c",
+        "change_version": 1,
+        "change_sha256": "683abee52ac61d2ec750dcb2b672edfbfe94e5346c94c7c094e7516f78f6dbd4",
+        "context_sha256": "b2c9e4c2a65b822c528a7fae97332c20967b90d4e8c7af57efa77b50fc683f01",
+        "verified_at": "2026-11-06T06:28:39.691Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=e2d64d4ee0110d880bb6a20240c15e00fd2eaead4f54c4cd25b7702545b926bc"
+      }
+    },
+    {
+      "topic_id": "M002",
+      "project_id": "63490b56866e5fbe60294ed7ff81d7ad7b0432a1a3d88dd4b34482c900f7788b",
+      "title": "鲧盗息壤·火神降临",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "完整读取关联修订项目合并文档中的短片剧本及导演镜头卡；前置小说未计入全读范围。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "968ed8bfd9149534c955cd41f2c47ca234a0dc36b8929cb430db0b1ae24cd3e6",
+        "storyboard": "e69616c88af51f6c318797700619419ee1313d8a46134337b3b51d0d93785a7b"
+      },
+      "analysis_body_sha256": "cc97bf1da80a912f752280353bb70f9952fe1245b789177ec23e7cbebe15c2cc",
+      "online_candidate": {
+        "id": "0c19cdd52d2490626b2be5fc0a3f59d4e8cbac4a232cea39b7c58b71c5f56cef",
+        "version": 1,
+        "sha256": "984862ce6f0e5353c62004ce03b3bd28940a24d6f7ec30d22ee9894a6f7e3e43",
+        "change_id": "cdcff68a5091ab023020e58e76d6cd061e981264830d4ee453bcd04802921029",
+        "change_version": 1,
+        "change_sha256": "7ae28ee9090c05f6f9a0c82ffd2365e6ccf600fd9292ef10745adb6eea49ebaf",
+        "context_sha256": "ff542b1f6660605afd91df7e6467829b66d2ea52ba246afbbe2a7e489ff4b3ba",
+        "verified_at": "2026-11-06T06:28:43.697Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=63490b56866e5fbe60294ed7ff81d7ad7b0432a1a3d88dd4b34482c900f7788b"
+      }
+    },
+    {
+      "topic_id": "Z001",
+      "project_id": "8cc1cc7dfa3dafcf75c94afea6687f259fd2713be52badb572ed9a3b02c0b36d",
+      "title": "倩娘离魂·归家",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "11fed777dbdcb395213bc7f30f820781775407187c890a8f8ea87bdd4b4aa26a"
+        ],
+        "storyboard_document_ids": [
+          "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "11fed777dbdcb395213bc7f30f820781775407187c890a8f8ea87bdd4b4aa26a",
+        "storyboard": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702"
+      },
+      "analysis_body_sha256": "4634abbf5e3ce9eb68e67f6797643b4291ac52ad2d8d798b0c1e90439a818a80",
+      "online_candidate": {
+        "id": "c642b51fefa63e51394b3fcc12d8a1c4d711bbc3dcdfefa9925beb7fab746868",
+        "version": 1,
+        "sha256": "7aa45f9d1c0b074c58ff5f82e40c80a08a75fd828167857b843fae3f8e29cd54",
+        "change_id": "9667977afa71234b666f134abe1fed0fec004d83ab30a5713755b79c12652887",
+        "change_version": 1,
+        "change_sha256": "e1fa187d8870d0c04699ec529256106f6886125882bb0c113e5de05d4c25e208",
+        "context_sha256": "ceba768dfb8afed3e16c2e85fc49990e93b5c80a4ba776103601359590eba632",
+        "verified_at": "2026-11-06T06:28:44.001Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=8cc1cc7dfa3dafcf75c94afea6687f259fd2713be52badb572ed9a3b02c0b36d"
+      }
+    },
+    {
+      "topic_id": "U012",
+      "project_id": "bbfad2c7ca06d3029675dd68239216ba6615e8f63e3971f1ebdd30bd24cae20f",
+      "title": "道观的快递柜",
+      "reading_coverage": {
+        "formal_script": "完整读取指定analysis_baseline_document_ids.script全文；不据此声称原小说全文、当前在线版本或作者定稿。",
+        "formal_storyboard": "读取全部镜号／时段结构及摄影、出入态、相关连续性段落；U001/U002分镜全文另已读。不是逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "未用相关修订项目正文作为本题评析依据；缺失项目未用本地旧稿补冒。",
+        "historical_reviews": "旧review与原小说未作为本次完整阅读覆盖；现实法规、工艺与古籍来源未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "6c73b8bb3299bb771d9c1252b3c9d33adfbb7c4b14c90ab4743c2d3e2fab8f89",
+        "storyboard": "fb5629a62309f0a6768d4b850bb6c59367317260103947c29900ea171a5985a9"
+      },
+      "analysis_body_sha256": "fb516a867ade53513e952748fc5e530690ea0982bafe5ea704793587ceb10c36",
+      "online_candidate": {
+        "id": "e5e6b1872804b1dbc30b577c505b76931262fcb00570677f4683aa2c968f6081",
+        "version": 1,
+        "sha256": "92a6bbb09ce578084e9b6ad0a719b25fedaa1b3272fa2449bc1b3fa005b37e74",
+        "change_id": "8c86cdd67dbca015dd4557de73ed458d60e9d628066ae19cb4fd677f2526e583",
+        "change_version": 1,
+        "change_sha256": "b58a864103b3f1efd771b37799bb4abd4f580b513ec7d9e18e3f20ad319d4108",
+        "context_sha256": "47422525012908af2a4000d20e952ccc60aee5cca33a25dba3b7206da16dc8cd",
+        "verified_at": "2026-11-06T06:29:10.287Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=bbfad2c7ca06d3029675dd68239216ba6615e8f63e3971f1ebdd30bd24cae20f"
+      }
+    },
+    {
+      "topic_id": "K005",
+      "project_id": "6e9bd665fdfbd9d18e3a2e6781a33a0c7c634a781b1e37a5c1c7e9fa8c16e107",
+      "title": "实习生与护山灵甲",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "6b141dd881a4bebb66c506078e459a1d4f7ca2092ccfb2c3238f70d8393083e5"
+        ],
+        "storyboard_document_ids": [
+          "b47d9d9e5444081c1b67a72e4712427472f18463fdd8fa669622172a8eceac00"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "6b141dd881a4bebb66c506078e459a1d4f7ca2092ccfb2c3238f70d8393083e5",
+        "storyboard": "b47d9d9e5444081c1b67a72e4712427472f18463fdd8fa669622172a8eceac00"
+      },
+      "analysis_body_sha256": "6b3da74021afa88cc7b032d1018b3e39576161b4045c3de23500d82401ea44b1",
+      "online_candidate": {
+        "id": "000f8d8f266b4b1346090f2bf541e022d9e1df0695c7ecd3311cf2b984dc98c4",
+        "version": 1,
+        "sha256": "806c1ed6547ef90a596973cddcd52c3f282f9d3c300a89891e1ae5a06a2aaa5e",
+        "change_id": "f717a7913737509b036cf3b006fd32d8e774f88e81221a5d052418110eb9cfea",
+        "change_version": 1,
+        "change_sha256": "8582707c4d829195112749222011e00781f92aae283e06c5663f77bc8bcf97b1",
+        "context_sha256": "f6ece244900c50a6f988c4f82733ed1bfdf50e6b413f04a469cc74c2221869a8",
+        "verified_at": "2026-11-06T06:29:14.582Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=6e9bd665fdfbd9d18e3a2e6781a33a0c7c634a781b1e37a5c1c7e9fa8c16e107"
+      }
+    },
+    {
+      "topic_id": "H005",
+      "project_id": "6cf2d8551af64f359fa853f8ede5f4deb3eb3247b9cec8a31f064acd2291e493",
+      "title": "百灶疑兵",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "完整读取关联修订项目合并文档中的短片剧本及导演镜头卡；前置小说未计入全读范围。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "80eb7f46232d515ffd05d52493b8faa9b57c007e3bb6b8c45f9c17fedc8232e2",
+        "storyboard": "4b228ca341697637623c6b3b78c439f17e71563b09f78cfc24dd2bb8d1e6d72f"
+      },
+      "analysis_body_sha256": "5e91b1b6d2996c276f7cda479ab34d135da2d4bcb5c9cc59058f5aa81d4402fa",
+      "online_candidate": {
+        "id": "d9e059420cb2ac34f3430573a7524df3bccfd2325ac1c423f98de953c745e882",
+        "version": 1,
+        "sha256": "bd29db01810fd5a3801ad4ba8709de0ae9a9b70b080b9feff8575d8917799a41",
+        "change_id": "7983e98357aaa0adfc6b304c9a6b3c23cb7c090770f342ce946a9e8e1c66d746",
+        "change_version": 1,
+        "change_sha256": "e2aeb4ecb34190f429630fdb65d105b65dbdfe8b9c324ca5854b7e69273c40ba",
+        "context_sha256": "1ba1001aa08c19264ee9f71eb17bd882362b6b96d4573fa197516f981d91fb95",
+        "verified_at": "2026-11-06T06:29:14.644Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=6cf2d8551af64f359fa853f8ede5f4deb3eb3247b9cec8a31f064acd2291e493"
+      }
+    },
+    {
+      "topic_id": "H006",
+      "project_id": "1eb147ec19a4c1427f36f34f1a2dfe1afd49d2788d507cce33ec2bb9f6f6f371",
+      "title": "射天之夜",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "本题无独立修订项目正文。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "a8e2a42b5377b35d62bd32b555ca5236bfd9ec812f3d83723d2a4c4c9d45509b",
+        "storyboard": "e919db72dab7b53888a8d12ec6d989d02af889ea800c507ad5242798dfaafa93"
+      },
+      "analysis_body_sha256": "6156a5bb415e27b27f12cb496daa6c9b69cce0e5e340b10ba90dade954963c4d",
+      "online_candidate": {
+        "id": "9ea83610bd15bdf9a5b2a0d94d96c363d5078f19c2d80eca5190afbb995880e4",
+        "version": 1,
+        "sha256": "4afbb773189f6c29561afff88ea88a62b91a29a7ad2c84fd907b695504764dc6",
+        "change_id": "994ec01c3a1f5b227d7f0580541415eabb181375c3e7146e2f2b924f6918a484",
+        "change_version": 1,
+        "change_sha256": "a48b396d2462c3db79a9ef531856495daf61c5dbf24c0de401cf1c376e9bad9a",
+        "context_sha256": "05999bf9c3b300fcdee5315857956d1ce665f6fb81268e3196f21fd104dfd3db",
+        "verified_at": "2026-11-06T06:29:17.693Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=1eb147ec19a4c1427f36f34f1a2dfe1afd49d2788d507cce33ec2bb9f6f6f371"
+      }
+    },
+    {
+      "topic_id": "Z002",
+      "project_id": "49882a22d455a0f31ec4b62810b9cc0c11c376e405b06ea4458f607a54f8ba3a",
+      "title": "洞庭寄书",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "287594300fe3fa277bb694e6eeb53e3859e7295885a2b0ed1582aa6d5bcbef12"
+        ],
+        "storyboard_document_ids": [
+          "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "287594300fe3fa277bb694e6eeb53e3859e7295885a2b0ed1582aa6d5bcbef12",
+        "storyboard": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4"
+      },
+      "analysis_body_sha256": "6cb8d5a854e54d1e67f87cf3a4c9414a7e8529ea9d4799e1b79658c55f3d6bcd",
+      "online_candidate": {
+        "id": "f41a7c6a277d424dc9ec93e171cabbb23e93f074caf18d4fbdc21e18de8fd87e",
+        "version": 1,
+        "sha256": "c0a2610575b48803945ac2b1b09918c86f4d66cee62e46770a8f8bcfa2725ee6",
+        "change_id": "403489d0eff525b9cb2535595d57f8c46fc92704badad24a081da73a195ec96e",
+        "change_version": 1,
+        "change_sha256": "47c1121be8e595a4b62a8a8e52c06e5905159a9b0912a168428788cbfb0c3086",
+        "context_sha256": "34dea733bded58557e415cac69e5db3cfe2cf9b4a7a25dbb2c16cc74550d4212",
+        "verified_at": "2026-11-06T06:29:44.093Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=49882a22d455a0f31ec4b62810b9cc0c11c376e405b06ea4458f607a54f8ba3a"
+      }
+    },
+    {
+      "topic_id": "K006",
+      "project_id": "eec4ecf99e50af92fd2c9e2701de44e79f0c73ba9b55b88600302b6521f6ecf1",
+      "title": "失联的女飞行员",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "475afe507829af6c199479920c5b4153b0c7a085c57d4e87d8e4a0904ff274f8"
+        ],
+        "storyboard_document_ids": [
+          "00a3f45cbd8804e21be24211198aabfdedf815a0d3e8f2fa37657826e416fd7a"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "475afe507829af6c199479920c5b4153b0c7a085c57d4e87d8e4a0904ff274f8",
+        "storyboard": "00a3f45cbd8804e21be24211198aabfdedf815a0d3e8f2fa37657826e416fd7a"
+      },
+      "analysis_body_sha256": "40684865d2c543cf47a29f31297dc99711f3e07ec4939d39059d8b773292099b",
+      "online_candidate": {
+        "id": "17437ec103b99664feab7a44b7a26b084f1dfca30c242e11b11645c0520b87e2",
+        "version": 1,
+        "sha256": "02f48376fceb5af819afa05e38ad73cb115d6b004d8f12e7bb14fd5f180ce2e6",
+        "change_id": "90cb900da09862689d6407dd7c43be094e1d53b40e7c899f249f353376937d29",
+        "change_version": 1,
+        "change_sha256": "2077a0e10cebdb381bdb6ff0810e0805eec3302251afbe5866c5d9a79175b4e7",
+        "context_sha256": "ac47b2a57e4f0d7a8c2205d3a0a2edf6edead3ba8a2622c6b7c6b665570a78d8",
+        "verified_at": "2026-11-06T06:29:51.365Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=eec4ecf99e50af92fd2c9e2701de44e79f0c73ba9b55b88600302b6521f6ecf1"
+      }
+    },
+    {
+      "topic_id": "M003",
+      "project_id": "b9b12e81866d496552603db0e6666b4df635b1bab50310fd19476533c49ea8c7",
+      "title": "窫窳复生",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "本题无独立修订项目正文。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "93fa3ccd44307394a14b6c31aa8b101c208faa45aea3ed191f8467cbb6203089",
+        "storyboard": "cdc683688af43d5a7aec47f875dc474b04704846d3d2da0d3ef5e620327bc2eb"
+      },
+      "analysis_body_sha256": "780b1d9acb24ec4a9ad7899aedbdcd45ac908f8dcb45f91786f3b48c2ac81e61",
+      "online_candidate": {
+        "id": "4fd9e34e8d56f443bbdec8291c443b3f1db213da40a306cf784de8b5907b30f6",
+        "version": 1,
+        "sha256": "46ffa6709b2db75cefdb62612e731865d05a3fd6b48827bbf9234b6315d07160",
+        "change_id": "0973576d842502350c216000c37cef2a7d990ff75fba680881fc9c9e2c02d899",
+        "change_version": 1,
+        "change_sha256": "0e126765579e4c7d1ed24e79d26f169f31ac564b2ed6a79335230c16c313c5b5",
+        "context_sha256": "807cc4933db0c9401922ac693f434132e5381f08890ff789b4015122a1db4b76",
+        "verified_at": "2026-11-06T06:29:51.301Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=b9b12e81866d496552603db0e6666b4df635b1bab50310fd19476533c49ea8c7"
+      }
+    },
+    {
+      "topic_id": "H007",
+      "project_id": "00cc5a8d8de09842f854289e41edaea227566589c093e3bc96c4b5d62e8a85a4",
+      "title": "晋侯噩梦",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "本题无独立修订项目正文。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "b6a01d95497a99923a5bf10da9d35d5d6c3b6c500730fa73109d06dcb06e0d09",
+        "storyboard": "20e044d354e93b431ca038b665730947a863ed8991530ba9aa87bcac1cbf1558"
+      },
+      "analysis_body_sha256": "630f2160e587e2841c97ab086e59f5fdea495b08481205265963a26815e60540",
+      "online_candidate": {
+        "id": "31291b52481299289c067d4cd7087fb1f7a494f8cd357c922c6e70562e01fb18",
+        "version": 1,
+        "sha256": "8ab2a3ec9827950880255c82ea46d25d0b2790ddff32c40757b82eee2d4176b8",
+        "change_id": "82936403453a8004c9efedc7b618d3ce1db4318634f7595021098c07348bbf14",
+        "change_version": 1,
+        "change_sha256": "aab7f0fa5a87d087241fe1c213296b3549fea43855df722c3dd51b752e8cbe00",
+        "context_sha256": "1bf713f9d8b8bd2558411422426866c841ccd0b921b8ab768ce9bc799797b80e",
+        "verified_at": "2026-11-06T06:29:54.776Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=00cc5a8d8de09842f854289e41edaea227566589c093e3bc96c4b5d62e8a85a4"
+      }
+    },
+    {
+      "topic_id": "Z003",
+      "project_id": "9c25f09e280cf93074e46d17c9721ee91fd1b16d035e48863ad283be82d43a6f",
+      "title": "相思树",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "fc06682645af324d22b6f4192fb62b2b4ba061bb50d39f3d750c9aeec7a46980"
+        ],
+        "storyboard_document_ids": [
+          "4847f9449735b0b26e98aed901a5bc2651bfd9e44ea7cb4dc7a08f8ea4ba6d05"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "fc06682645af324d22b6f4192fb62b2b4ba061bb50d39f3d750c9aeec7a46980",
+        "storyboard": "4847f9449735b0b26e98aed901a5bc2651bfd9e44ea7cb4dc7a08f8ea4ba6d05"
+      },
+      "analysis_body_sha256": "8aac58d179f374348f06ea3cc917bbc25ca5eb71f50ba0e25b8606d007c97f9e",
+      "online_candidate": {
+        "id": "9ceb2dff310dc21efa0b19dde876a2a7ab465305f17f7d75c9b348b48e1f44ee",
+        "version": 1,
+        "sha256": "ab4b3cb4d5c584a5aaf34c1d680c447d330b05eed6a6cc5400a3df84d7392c2f",
+        "change_id": "74cceb35d6edd6097fffb6e5bd9b99859c82d23cc737360657d8b3fbcef31506",
+        "change_version": 1,
+        "change_sha256": "45b154ae96f998b43791ae3a535adb37bad3fa9213a69508a9e6aefdfe717fcc",
+        "context_sha256": "e3bee2785bfdb34412992362fd19c0a00af9af2aece4f90c7faa5ba614344ce6",
+        "verified_at": "2026-11-06T06:30:24.416Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=9c25f09e280cf93074e46d17c9721ee91fd1b16d035e48863ad283be82d43a6f"
+      }
+    },
+    {
+      "topic_id": "M004",
+      "project_id": "05b17a24121d921c743118382e9d97f18629ddd7ca57816e090f94a0a058b67d",
+      "title": "归墟钓鳌",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "本题无独立修订项目正文。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "b2cc0ba04b4c430b4a65c84c1d2ae35a25b92fe0515d36b5eb9a9533c2082f22",
+        "storyboard": "881b8db1aa6cf97bc16fe6d96ea265d2e770f2ea99f929c9975520c067b829ec"
+      },
+      "analysis_body_sha256": "686bf46bee7fc68cf06f9742b078350636ae934275c3ce1bf131658cfd735c8e",
+      "online_candidate": {
+        "id": "a936f49ff232d6ed13837934af0c62e50a744d50e2d4b600756b5c8fea0d272a",
+        "version": 1,
+        "sha256": "67a6ba9385796417ebbc041ba8a21568a15f96b8d6c11d1648c09f3494aad2e7",
+        "change_id": "46805d289798887cb8af50ed7926c901379c539abe689b3dca07fe552d90bca9",
+        "change_version": 1,
+        "change_sha256": "c21783c32af22e4d4bd3b242c3afb68dbdc8f31105b06a3863db3b4585fc9a36",
+        "context_sha256": "362695d04970fa9b1361a4a0d1e4ba701a324a0d33704d117c578bae031139ce",
+        "verified_at": "2026-11-06T06:30:32.009Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=05b17a24121d921c743118382e9d97f18629ddd7ca57816e090f94a0a058b67d"
+      }
+    },
+    {
+      "topic_id": "H008",
+      "project_id": "ebc713c89d39e6a4798252bcd7a332ab1c9a3110d7d39123e4e09c239167b30b",
+      "title": "朱弓索命",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "本题无独立修订项目正文。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "81e79af07a8cb549a19c0de85f586ad370ba253a0ef6ae85915bd019dd22ce60",
+        "storyboard": "dc2616380bc099be16c3e1d27191760ca4ccf0e9f7d5db95d7dc3778b6d60e03"
+      },
+      "analysis_body_sha256": "b5b64090003394efcccd26b8229bb1605039635908fcc999eeb76f5cc6c35893",
+      "online_candidate": {
+        "id": "64cb5f7200078158dc4d1ef1104745ddeb97c243bfcc0c868ea138138cfe7bdd",
+        "version": 1,
+        "sha256": "ec5a3ab7b1e7682f5292aab1e104fc48ddf9f566e5c27b6ce4c4c978c9c5a80b",
+        "change_id": "49205cc14b4a9c384eae7eaeca266ff59a6df1f6df89d12a44405e8c708fd568",
+        "change_version": 1,
+        "change_sha256": "a5cf94a1da6fbeac227b614919842d17128c4109bbdcb7b18804f6afd09a2636",
+        "context_sha256": "4aad07eef30540de839f633803a92efc0aba3d48e1dc9d5d601d99056173496d",
+        "verified_at": "2026-11-06T06:30:32.159Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=ebc713c89d39e6a4798252bcd7a332ab1c9a3110d7d39123e4e09c239167b30b"
+      }
+    },
+    {
+      "topic_id": "Z004",
+      "project_id": "ec6c33f5f5b2acb5ab1db4ed1a1b548700d52288ee5d5656f8397594bffd3f2c",
+      "title": "香玉花落",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "49affd42a32d87cf2238c003fe495d1cc9aca9d7e96b7e58b1e1377f8e6ac503"
+        ],
+        "storyboard_document_ids": [
+          "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "49affd42a32d87cf2238c003fe495d1cc9aca9d7e96b7e58b1e1377f8e6ac503",
+        "storyboard": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b"
+      },
+      "analysis_body_sha256": "e8cb9316c4c6fbfdce7d37e16eee2fc95199c6bb734f27685c222d9150d26d5e",
+      "online_candidate": {
+        "id": "83b3cace8765df7d3f8d6239fddc74cc64d6c01ca843cf19696401df408bf6f9",
+        "version": 1,
+        "sha256": "a124400cec1d8f43d52dd8f0b737b55e7e2474680845ac10259d8748c069fab5",
+        "change_id": "20457ed1ea7a3f37569518a642fe5b223eea827b7583731930b4d8ceaa7020dc",
+        "change_version": 1,
+        "change_sha256": "ee4ba74ec422776c7c01bb305734940264a6d93d5df5fd3eb1cfdb9e07a031ad",
+        "context_sha256": "886dfcfbc2d92c3111de265260954f087b465fc26af2388cf60b4a24fa0b1e65",
+        "verified_at": "2026-11-06T06:30:35.325Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=ec6c33f5f5b2acb5ab1db4ed1a1b548700d52288ee5d5656f8397594bffd3f2c"
+      }
+    },
+    {
+      "topic_id": "K007",
+      "project_id": "cd5f0e349c1933884bc2eb9b188ba0cea6ea945110fb8df6d498db097db2cc11",
+      "title": "机甲送外卖",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "3005ad5b391bb6417ab76e8db2c5dfa215866b4cec3d93104d03c46f81af042c"
+        ],
+        "storyboard_document_ids": [
+          "c9422d3dd6c055c051cdb627e24834e917494c80f6bb822deaafde57e3fa30f7"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "3005ad5b391bb6417ab76e8db2c5dfa215866b4cec3d93104d03c46f81af042c",
+        "storyboard": "c9422d3dd6c055c051cdb627e24834e917494c80f6bb822deaafde57e3fa30f7"
+      },
+      "analysis_body_sha256": "aa2e1fcb634c7a4fa17ce5b5420d65895c8e38c04726357cb98025e06e4e9ef4",
+      "online_candidate": {
+        "id": "e729d74fa82e3ce2c413250ce58e3e18340f53f7fdd9634837a1563d9393e3d4",
+        "version": 1,
+        "sha256": "02f9e05fc97de7a7c496499369c2bc4565c90a3c1f6f01fee1e0d1f165a3e4a3",
+        "change_id": "81d3db548f8726789e236e4c03d87ab7b610db86dd98d6dc5d04fe2b5c569402",
+        "change_version": 1,
+        "change_sha256": "8aa7931ee7ea8bb00157d7331dc2e59916f43e70b35340ef96c367c57e113a45",
+        "context_sha256": "c0c2fdd553e130d4b3a8a642870d9787cf9c5b29fa9babee14d8d5fcf4edcc72",
+        "verified_at": "2026-11-06T06:30:59.781Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=cd5f0e349c1933884bc2eb9b188ba0cea6ea945110fb8df6d498db097db2cc11"
+      }
+    },
+    {
+      "topic_id": "Z005",
+      "project_id": "fda10d2f178ebb16b37aabdf88fc72d881da94e5fcff2ac4599d9b8312175136",
+      "title": "宋定伯夜行",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "b7ebf5952c2ea35d21b1e95e6e1f0ab8500ad2929d6dd7c0def89767b40273d5"
+        ],
+        "storyboard_document_ids": [
+          "644cc812978b60f3790de092f2ee1e66a44cda2ab293b033cdf5d49b90a968eb"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "b7ebf5952c2ea35d21b1e95e6e1f0ab8500ad2929d6dd7c0def89767b40273d5",
+        "storyboard": "644cc812978b60f3790de092f2ee1e66a44cda2ab293b033cdf5d49b90a968eb"
+      },
+      "analysis_body_sha256": "c43459e924a3ced3db2dc9ee47bc047c0343db27118dab350435b244de3afca4",
+      "online_candidate": {
+        "id": "3ed4abafe743307a9c099ec98d448e1b01c07ea8ea569ad064a9f7da76a0e233",
+        "version": 1,
+        "sha256": "5047933583412449501217e7f337ff3774ddc9df69df4ebc9845f9a3dc1f896c",
+        "change_id": "2d4fd3ed4732f0bc3489b717d5042824ea22e068711bd0c5f4e4d63a7c6494da",
+        "change_version": 1,
+        "change_sha256": "2911477f76753c163fe15cc044a24fdc3c04089fc7019dd81ca220d75acff6c6",
+        "context_sha256": "e007130317e1f15a4819ae6931ca6fff60b5d6deade3a61351a61dbf6a5da32b",
+        "verified_at": "2026-11-06T06:31:08.356Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=fda10d2f178ebb16b37aabdf88fc72d881da94e5fcff2ac4599d9b8312175136"
+      }
+    },
+    {
+      "topic_id": "K008",
+      "project_id": "8a5fdd9a8e97e13ed03fb21e491c5314cb100352d87f51b2d161003d6f2b1c58",
+      "title": "双驾驶位",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "d1b9395e27b0661cbd83797fd712e53800a1cc32660a5ba1dd970f9ed8769d26"
+        ],
+        "storyboard_document_ids": [
+          "d8ec493512f05846988f23640c100c6f19527b636b2ed49c67d0e5d9a6d930c2"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "d1b9395e27b0661cbd83797fd712e53800a1cc32660a5ba1dd970f9ed8769d26",
+        "storyboard": "d8ec493512f05846988f23640c100c6f19527b636b2ed49c67d0e5d9a6d930c2"
+      },
+      "analysis_body_sha256": "ad98944e7fa6ea377eb4751d927ad8f80c7ae17c3d8ea130fa4d6d7a7a5252ba",
+      "online_candidate": {
+        "id": "300ab5b9ded57dad7bd7619d3d95e246a3be3686ca2eeece35a92d6f6cfc0878",
+        "version": 1,
+        "sha256": "435148b3012cdc518dd23083c147b12bbe51637166f0dd78f734ca3f54771fbe",
+        "change_id": "4eed1d04e16b15fe420a4d888c97b0c98368cde81c39f9622423a262328f9ae4",
+        "change_version": 1,
+        "change_sha256": "ed0bee2d119ca66417234d2dbaed7a568241169292774f01da978d22d061feac",
+        "context_sha256": "c2f82c9e91b16339ce0febaa6d9b4e74c73657d646e4d8182df20810ef746400",
+        "verified_at": "2026-11-06T06:31:14.163Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=8a5fdd9a8e97e13ed03fb21e491c5314cb100352d87f51b2d161003d6f2b1c58"
+      }
+    },
+    {
+      "topic_id": "H009",
+      "project_id": "4a8427c58a1eee5fb5a47614b647b643c7e0d6bf0410992c4bbe108896f47ac0",
+      "title": "壬寅夜变",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "本题无独立修订项目正文。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "9472eadd555e591dc72a158c43889fd749e99806275bb1757fcb8cf929f6891c",
+        "storyboard": "f7214662e11e392e644e9074518ca93b92e54b84e31f0748905f1b25536c07b5"
+      },
+      "analysis_body_sha256": "e20a8c7e852f11be7f31216a0de56ee896796f0d300803de7563479491ff3784",
+      "online_candidate": {
+        "id": "a6363d4a817f36c46f82e33c7c84ebe4b627a20c0aee4c9184ee1a44e4060559",
+        "version": 1,
+        "sha256": "08dda8213c8441babff5c6d526e8c10fbc4384a470e78a73e99d5dc8670f71dc",
+        "change_id": "c0e1aa515b19c66f73fe95e0241b9ca93704c7cabca5645f9c84291882457113",
+        "change_version": 1,
+        "change_sha256": "518a6e2fc848a1550ea59c3534741e0768d40dd8c973cfdfc0197255f70f6d61",
+        "context_sha256": "a8aa5d53764baf19130fab5129ebd3acc28554361424e798d6d8a73596ea4fe8",
+        "verified_at": "2026-11-06T06:31:14.283Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=4a8427c58a1eee5fb5a47614b647b643c7e0d6bf0410992c4bbe108896f47ac0"
+      }
+    },
+    {
+      "topic_id": "K009",
+      "project_id": "8edc612e2f71fa2772785ba92246429919ed01eb0fd8d1050c5307f92828c791",
+      "title": "记忆外骨骼",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "8da2903d8d9797d76ebbd0ff99a5079000b8f3d3b95375a51d7a8394b0d482d0"
+        ],
+        "storyboard_document_ids": [
+          "b0f6915a6bf2878050f0cc77a6894d6cd9c2315453bf5807fe34be110a021adc"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "8da2903d8d9797d76ebbd0ff99a5079000b8f3d3b95375a51d7a8394b0d482d0",
+        "storyboard": "b0f6915a6bf2878050f0cc77a6894d6cd9c2315453bf5807fe34be110a021adc"
+      },
+      "analysis_body_sha256": "cd0dbfaa9c12ef57b7788ec7b0974abd01b0bfd8b130c2a03c86a51a0e2e9761",
+      "online_candidate": {
+        "id": "9ba5892bafc6070b0c01c50e27df0dfda221bcc1aeb26a43dcf42b24b30c8fcc",
+        "version": 1,
+        "sha256": "73fd4a855180bcfefe8cc1ac30ec97cc7627d766564af615ec4db9d73df46c70",
+        "change_id": "76725e9154bc7860a8f64766768ef1e5f9727fde8792784354e286e701643ee1",
+        "change_version": 1,
+        "change_sha256": "a036cbc668753bb06f2eccf478028811d86e942c6718c1fd70203b493a9803e2",
+        "context_sha256": "c62aaa739aeba19960e925b73c242d3de254121a3eefabdbd8efed3c64a0ee9a",
+        "verified_at": "2026-11-06T06:31:37.894Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=8edc612e2f71fa2772785ba92246429919ed01eb0fd8d1050c5307f92828c791"
+      }
+    },
+    {
+      "topic_id": "H010",
+      "project_id": "264d16d7ab209cd1a92858c0cd293cdfb391b3cf0ce0706309150f63d50e7802",
+      "title": "归来堂赌书",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "本题无独立修订项目正文。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "ab5e8c62f2bd3afd07dee93d299cbef080102035f49e4bedb7cb74779645153d",
+        "storyboard": "7f2d29166c0e4801bbd668fabf2115c163e1ef0e3cb619edc159da45882f2215"
+      },
+      "analysis_body_sha256": "29bf11c0bc4ddc145519546eb11e18a804eb4e8ac31a203cfee3787f3e74a97d",
+      "online_candidate": {
+        "id": "32c4b1f3199769ce0a098d08b1fd27d4d4079c5a60bbafec46954cb474d13c20",
+        "version": 1,
+        "sha256": "1f8c3d07e3b1e9402c77ee3e8ed8a6495c22bc2c34f9edaac8a3507fa4ce769f",
+        "change_id": "0a68adf02e0134f896351d1ddcb379def6208afe6d3830b035255d16b57451e9",
+        "change_version": 1,
+        "change_sha256": "e25dd79d8f6fc24ba6d5a713e0f6efeeb30c85868714841a2688ef772d016cd3",
+        "context_sha256": "d18bcc55339f8a8b2f93e91b127c3104a20fc16ec8e68dc054bf415a79e65e42",
+        "verified_at": "2026-11-06T06:31:32.771Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=264d16d7ab209cd1a92858c0cd293cdfb391b3cf0ce0706309150f63d50e7802"
+      }
+    },
+    {
+      "topic_id": "Z006",
+      "project_id": "c4964737bf59c6d55578e7d89b46e8e7288a7afaca88a66be73f20eccbddfed3",
+      "title": "偃师造人",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "726bdbef3ba3e37a60d3121b4af4c11e9aa6e439784718f21605ce9551ed4ed6"
+        ],
+        "storyboard_document_ids": [
+          "6567f1d033ccae86874966853aac22177eb8284e5bf999313e6eeec43cf96872"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "726bdbef3ba3e37a60d3121b4af4c11e9aa6e439784718f21605ce9551ed4ed6",
+        "storyboard": "6567f1d033ccae86874966853aac22177eb8284e5bf999313e6eeec43cf96872"
+      },
+      "analysis_body_sha256": "28aaba0310e12a193e2c56773dec8b07c957d52ca577954ba69b7652ffc46ea6",
+      "online_candidate": {
+        "id": "b5678c9cec1664548cb42420271cd7e2a2274138936eca197e28e64ea684a685",
+        "version": 1,
+        "sha256": "f0168e92dc34e22d63ca5f5ba448c9798eab7fb377afbabdb70bc6e98b7847a6",
+        "change_id": "dbe4c79d8a1b9781b2a714d58c2955416e5529f30c167b0dc8d554499ce3fe7d",
+        "change_version": 1,
+        "change_sha256": "b389f3eac413335d5647e5cc2cc1fcfb245ff95cc9c719aa4ddfc45668a2d501",
+        "context_sha256": "1f1a8924f8e1700b4a163c17acec9860291dc0218011504937f33c3b8001bf72",
+        "verified_at": "2026-11-06T06:31:49.852Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=c4964737bf59c6d55578e7d89b46e8e7288a7afaca88a66be73f20eccbddfed3"
+      }
+    },
+    {
+      "topic_id": "M005",
+      "project_id": "b46982362cbba6b5316f5aa8c356ed16fb12674f78f5ee80a6893c306de93e6d",
+      "title": "灵山十巫·最后一药",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "本题无独立修订项目正文。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "4979274186eba1ae7a7183a0cd86ff256c24b04bb13dfa999a7ab6917942446f",
+        "storyboard": "3ee70bf5fe20c5758d12f6bcfe97ad23cd370e3b29b3802681a61f00514d7123"
+      },
+      "analysis_body_sha256": "0149ea710924825654f2b672c359e178318e63e244291eb2e1f164c916f5f35c",
+      "online_candidate": {
+        "id": "0500266d57eaaa254969f6c57746c64056a63327bd488cbafb3d0c5754089633",
+        "version": 1,
+        "sha256": "03d4231e8b48f53fb92f6d19a262b1454c18ba28f855e1eb6408f99ced8f9d22",
+        "change_id": "0834a0ff58c719432edb9ec262fca7f5b2fb36b348535eef5b07a7c656a457fc",
+        "change_version": 1,
+        "change_sha256": "2cd481e7d04807376ddcdda1fa90656cb195c357469b811873ebb6453a2018e8",
+        "context_sha256": "5672d356ba55a76cb18dfbf3f747a93b4c1113c3098f21952a2c63b62e2ea59e",
+        "verified_at": "2026-11-06T06:31:49.701Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=b46982362cbba6b5316f5aa8c356ed16fb12674f78f5ee80a6893c306de93e6d"
+      }
+    },
+    {
+      "topic_id": "Z007",
+      "project_id": "ff6266e06504b2d5c27305ce9cb80aae4a20521c99d022919b8165edce8105d2",
+      "title": "鹅笼书生",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "622d15e33a439596e0e799ec8f078f8f6f4892e6d15860338a22c12d6f9ff570"
+        ],
+        "storyboard_document_ids": [
+          "3768ccc788a2e6618c226fd33800f7d54190e185d1f5efcac551d61d17f960cc"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "622d15e33a439596e0e799ec8f078f8f6f4892e6d15860338a22c12d6f9ff570",
+        "storyboard": "3768ccc788a2e6618c226fd33800f7d54190e185d1f5efcac551d61d17f960cc"
+      },
+      "analysis_body_sha256": "d19815c21fda60b662f15ab2e68a9ca248770b71548c23911f332783f7ad4461",
+      "online_candidate": {
+        "id": "d8ac2542df4fc24aae192fd0905e15b84d7aff58fa0af02e98db0830a3902845",
+        "version": 1,
+        "sha256": "6e6cec412637405d028c37073464c44dfcea663f4a39b33904a126ec3eb6047e",
+        "change_id": "6e9165e02c4d0553f6ce77f694604f564595e1df42ecea3874e73f2f9310b133",
+        "change_version": 1,
+        "change_sha256": "372747a8cdebc11b6f1fbf280e918e6b874aa0151eaa0ea943d3fc15c95faade",
+        "context_sha256": "ab29be50838dd7fc4b7f14184bcb389a8e7ba7e18e377a0879e8db7bd130e7cc",
+        "verified_at": "2026-11-06T06:32:15.494Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=ff6266e06504b2d5c27305ce9cb80aae4a20521c99d022919b8165edce8105d2"
+      }
+    },
+    {
+      "topic_id": "X001",
+      "project_id": "200aa462d03ef5c2ccea3cce2ed57eb6d51f813ff292927bf58c059f88c3bfed",
+      "title": "杜子春·最后一关",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "da991372682c5ba7b1989235195884c8cdf2cfa222e651bd0f004532f51b511e"
+        ],
+        "storyboard_document_ids": [
+          "19ab5ac9c0c0fd7420ec6293230622dcee8d235333b83ef33639097f16195e20"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "da991372682c5ba7b1989235195884c8cdf2cfa222e651bd0f004532f51b511e",
+        "storyboard": "19ab5ac9c0c0fd7420ec6293230622dcee8d235333b83ef33639097f16195e20"
+      },
+      "analysis_body_sha256": "4d850809e9212c68611f6d959544b57660a899eee6c27467b481e6091aadfe76",
+      "online_candidate": {
+        "id": "6ddba7031ede1e0ae2635b7d5efb4fe44d692d10d5c166e17b53184571e1c4b6",
+        "version": 1,
+        "sha256": "82dee977f117685d8d011ee044b5ac276e5d153fa74ba699dc02c96ab9b7c744",
+        "change_id": "4ad98072a316b9f9dcda6f881f85e11297601bc2c9ced5a99fdcc7fd846680c2",
+        "change_version": 1,
+        "change_sha256": "4621328e7016b255f2dd98a984aa519ba3a1a82c4482aa15196365d6505ee8aa",
+        "context_sha256": "4bb82d05fd9904622ed54a4f74ba27a111983bd878b63d639d027193daaffb18",
+        "verified_at": "2026-11-06T06:32:17.915Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=200aa462d03ef5c2ccea3cce2ed57eb6d51f813ff292927bf58c059f88c3bfed"
+      }
+    },
+    {
+      "topic_id": "M006",
+      "project_id": "ecb8c778785d17489b2433406666f9ef5667738b0882fe032f6720b4bff97636",
+      "title": "建木无影",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "本题无独立修订项目正文。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "9bab8b63bea56d2f33dfcb8ff54489e3c4edd7c67368fc41d5bea3977d40bf6e",
+        "storyboard": "386b846afa3855fc5e87c5e18a2c290b55d9ee1a51cc91d6953314aa6bb92474"
+      },
+      "analysis_body_sha256": "faff223c1e382726f7e6613d63b9c9ac5e64e4a23b054b6182bccbd19ebd3cee",
+      "online_candidate": {
+        "id": "0f01cd5ff70aa686566bcf9cdb9d7201c959413aa3b22989a69482ba83f229e4",
+        "version": 1,
+        "sha256": "a00b403533571a4e716de3c58bc0cc02eba7d69bf12722ce3321a395a18af7cd",
+        "change_id": "1b19fe3b306e40ff2e1562f0b8e61cb83dcae99efa2029aa47010bdb27888926",
+        "change_version": 1,
+        "change_sha256": "6fd5516ae88e39d80ae37b1d10cf694103c7f59845d9fe7deef526b3ccf586d2",
+        "context_sha256": "daa9a6644d03b256357ff9cd7ad7ace06602debe17ba6fe54626cf14edbadb49",
+        "verified_at": "2026-11-06T06:32:30.589Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=ecb8c778785d17489b2433406666f9ef5667738b0882fe032f6720b4bff97636"
+      }
+    },
+    {
+      "topic_id": "M008",
+      "project_id": "f54313aa7244269ad80d76657697ef24e78561f83a5388fe65b0d6f4afc16bb6",
+      "title": "巫阳招魂",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "本题无独立修订项目正文。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "89b0c54ae8aa3e8d7e36670a3651577a0584e2b00e3780509e49d936be5e8297",
+        "storyboard": "8e16665dcee3cb28fdb08c3898f7b2c16dfb23568c0a04f38469b7973d28ba66"
+      },
+      "analysis_body_sha256": "959d0d329d7884e3674397d0414d2521186d5485f60b16d913e4e6008526651c",
+      "online_candidate": {
+        "id": "c5163147c64583b5700f4372b1d296c1bc2c9d62d8ab2c5d5f8bdda91e156684",
+        "version": 1,
+        "sha256": "87d6bec2d545272e3d1ce7947d7596805154a9a127d9795d19495f4709e344cc",
+        "change_id": "a6a3e6f015dcc77086c82c27103abe80ab0ba3ff5a2f0efa690240a7bde2c30e",
+        "change_version": 1,
+        "change_sha256": "fbffbceb3973ce02455584ade5468c4d2e713971771496c5f0c67fc66e32af57",
+        "context_sha256": "ab266da332a063605329c5b7ec6a0dc5309d90035ab9e12c892d5f7ec113723b",
+        "verified_at": "2026-11-06T06:32:20.917Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=f54313aa7244269ad80d76657697ef24e78561f83a5388fe65b0d6f4afc16bb6"
+      }
+    },
+    {
+      "topic_id": "M009",
+      "project_id": "c303c30060799ea321cff4b75141138b578502b6a0efbbfb4491e4391be86951",
+      "title": "相繇毒地",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "本题无独立修订项目正文。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "ba165e64595c0f4d555784b926947e04ac5c7b1add78caf903696c3249a9e3a4",
+        "storyboard": "203c88f8baae93f83311f8ba23a699551c80a1ea4ff2b5a51de44d5891ef15cb"
+      },
+      "analysis_body_sha256": "6732a0a12d5eda4bbc13d126bd7b74df27d8a3cab5ae5d830a0cf85dd389343e",
+      "online_candidate": {
+        "id": "58f3d1c3f40a0ca99c2b98ce8f01ec757ddb6305fbe7bcbc7c892832bcdd63a8",
+        "version": 1,
+        "sha256": "1f1e7106a8ea8e9967057e249230c41abbaafadf0241fda57850eac6580681c6",
+        "change_id": "d684bf8f18ea62e1267a0c7f5065db7362e236e93f5afe35cdda1c421b75bda5",
+        "change_version": 1,
+        "change_sha256": "978770de47a1300827c3d99afabf5583ed0fdb1e0cd7daf37dab29fe434ba735",
+        "context_sha256": "a2e895ad512ec704cf5486b55919a63714f88d55004ba1a049d255cf39f7061a",
+        "verified_at": "2026-11-06T06:33:00.475Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=c303c30060799ea321cff4b75141138b578502b6a0efbbfb4491e4391be86951"
+      }
+    },
+    {
+      "topic_id": "Z008",
+      "project_id": "353c05e7eaafcecc566e5f29599b2b32ba8a18a67edcf5cd689cb5ff6f279393",
+      "title": "叶限鱼骨",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "821f33d9e0587b46764bb4e054b1cfc0a3804d23d34938bd0c0d9fc4a77ef035"
+        ],
+        "storyboard_document_ids": [
+          "af6ea9926f0548bdb1e49c0abb37a21b4f573abb99b4519e14cfbb8fc43ec582"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "821f33d9e0587b46764bb4e054b1cfc0a3804d23d34938bd0c0d9fc4a77ef035",
+        "storyboard": "af6ea9926f0548bdb1e49c0abb37a21b4f573abb99b4519e14cfbb8fc43ec582"
+      },
+      "analysis_body_sha256": "6f8d1aced0eceb4c8522a1eee73e15eb94e2ef89acd3b749f75a2ca6c44143e3",
+      "online_candidate": {
+        "id": "3058b82e33d6df0111eafd764c2f83cb04bfdfaddd64b384a16917581980f8d9",
+        "version": 1,
+        "sha256": "d049d52892859b7cf77fed505db34dace6356bfd406228bdaa9dbd2540c1cdec",
+        "change_id": "91379c41bb10ab29e6dca4e8b9ce0de397e1f191fe1f1fbd9aaffead6e7b9e62",
+        "change_version": 1,
+        "change_sha256": "64f6cb3e5091f9133e0ea675d19b2970c0106cd45fd0ea0bece9e2a715063528",
+        "context_sha256": "90ca8d5cc511fe739850648a9780b083284b4e61e0958d4b5afe12e88d9f11c0",
+        "verified_at": "2026-11-06T06:33:00.438Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=353c05e7eaafcecc566e5f29599b2b32ba8a18a67edcf5cd689cb5ff6f279393"
+      }
+    },
+    {
+      "topic_id": "X002",
+      "project_id": "92afeeae4984b6926ff0216d1424eff58eed87d01b2368d6621059f4801bda13",
+      "title": "山门最后一剑",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "ac1fbde0fffc6bd94918f0b109ef73af5417abb4f18a111b0c66ea78766a6f86"
+        ],
+        "storyboard_document_ids": [
+          "11646fcc1d6fdb2f91821b639943dce8f8c276feb74717b2651e2b3f8fcce9db"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "ac1fbde0fffc6bd94918f0b109ef73af5417abb4f18a111b0c66ea78766a6f86",
+        "storyboard": "11646fcc1d6fdb2f91821b639943dce8f8c276feb74717b2651e2b3f8fcce9db"
+      },
+      "analysis_body_sha256": "0487139f82958da4645866986a4ae8bb0ed2030384cce0863919c3c3f32ee999",
+      "online_candidate": {
+        "id": "5a0b1e89cc16b4545012798a46450869c61b5cdfbed97d18eb3a850c9aa4d81c",
+        "version": 1,
+        "sha256": "66f806e7584f97c7a3e9cd0be0bc5033847b245742886562cc8fb9e11c3e9a90",
+        "change_id": "b279330a52c69b8db602502a141f5283507c97e351d0e94a9f7873c6b8c2f9d2",
+        "change_version": 1,
+        "change_sha256": "00f4ad89f16f54de20582a2af5ad3905a99b34a4715fdfd4071b8496b63f9602",
+        "context_sha256": "0d1273063fb5ecefd99a84f477b09f68861fc74995ffc40f6194f455869a8d06",
+        "verified_at": "2026-11-06T06:33:07.549Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=92afeeae4984b6926ff0216d1424eff58eed87d01b2368d6621059f4801bda13"
+      }
+    },
+    {
+      "topic_id": "Z010",
+      "project_id": "095dbed6bf7ff6760c93b734cc776f47cdb227534adc213d03b3eb0d1f7537ea",
+      "title": "壶中客",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "86ed0c1e8e9280fcafb15af98f478e7addfafe1f08fa082a2e2dbdb96953e49c"
+        ],
+        "storyboard_document_ids": [
+          "804789edeefbed5b4610f2f5ea9a5a8ebfd9282dd7a8a0ed4ae2a13e75d118ee"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "86ed0c1e8e9280fcafb15af98f478e7addfafe1f08fa082a2e2dbdb96953e49c",
+        "storyboard": "804789edeefbed5b4610f2f5ea9a5a8ebfd9282dd7a8a0ed4ae2a13e75d118ee"
+      },
+      "analysis_body_sha256": "25391aff5c6def19f7db24791cfe04cb74c1a5e41ca7f1cfce9aede03e7183c8",
+      "online_candidate": {
+        "id": "d68f63ef484e7e07a025131e020d3e8cf854e6f67ef4d39dbc1adb0568eb62c3",
+        "version": 1,
+        "sha256": "942977bc436c42dcc474d46f3b89decd0d11132598cb772879d072bc6c81d67f",
+        "change_id": "67b747250a02ffae1ea9db99ceff410090b7427bed0ce03be7086d304e238c63",
+        "change_version": 1,
+        "change_sha256": "a4bba5aa7b85c500c21e8ee617024574ae2711044eeb6b382ee8f358b9f573fa",
+        "context_sha256": "11572d0074cd73e51d8f8dc100476695772bf56e60ff31886bb8612c7aedced1",
+        "verified_at": "2026-11-06T06:33:07.665Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=095dbed6bf7ff6760c93b734cc776f47cdb227534adc213d03b3eb0d1f7537ea"
+      }
+    },
+    {
+      "topic_id": "M010",
+      "project_id": "70411a7e83ecbc02680e844ac3c78f2647f5618c7a110979d69aa30682a3266b",
+      "title": "华胥无惧",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "本题无独立修订项目正文。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "693d05b80796a8ed03a77fc67505549526d104aa5686ce6190ba145706286206",
+        "storyboard": "9d51ff90b435327ff023bfb4132d38a268741763e3f130b5bdd331adbba41883"
+      },
+      "analysis_body_sha256": "4e78c5084717d706753526f4b0290231d701f22b7065f4a67debefd2ed6979a6",
+      "online_candidate": {
+        "id": "38008f533d1591479ec34c8a39f470681845aafe2f764c5871fbde88a4785b80",
+        "version": 1,
+        "sha256": "4aec2694500953da382fcd52cf1f4e892283327a87eb2f4eb7382f4bd0eb38be",
+        "change_id": "669cd3bc30767577fb8877119f1ae569f06ed5c02352917b7a0bbe50c9af9774",
+        "change_version": 1,
+        "change_sha256": "3235c04d0f12638e2b7abdf18cac9cc9d58c0d00c8c74058318b1f43ef011746",
+        "context_sha256": "62152f82fd410cdfd47f7aaa9427baa3409ce9de3ee31bbe393d4057f550232a",
+        "verified_at": "2026-11-06T06:33:34.787Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=70411a7e83ecbc02680e844ac3c78f2647f5618c7a110979d69aa30682a3266b"
+      }
+    },
+    {
+      "topic_id": "X003",
+      "project_id": "e36992827c441ab86b326a1f89747a33f13d19a4dc5e914248a5cbae0c32c6d4",
+      "title": "剑灵归鞘",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "c0a0830d95a48ef58bfdb5d27f80112975c42a5a38a00f0e28eff77a10006c31"
+        ],
+        "storyboard_document_ids": [
+          "926936702c3d83f4cda843ddf62428c10f5111d329e9761c85bd171bbf2f36ec"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "c0a0830d95a48ef58bfdb5d27f80112975c42a5a38a00f0e28eff77a10006c31",
+        "storyboard": "926936702c3d83f4cda843ddf62428c10f5111d329e9761c85bd171bbf2f36ec"
+      },
+      "analysis_body_sha256": "ba4a6ddc79c1b5d83ef437a69b2ff29a507804cf570e40162539cce6c1b71bb8",
+      "online_candidate": {
+        "id": "132edf2191eba4770bb10bf2e8fc3a65280b4673416e91e774a6ee443fb19e6f",
+        "version": 1,
+        "sha256": "ceadba9845aed888acb584b4115a7e8d173fc3722a83ebdc8c1d216d79c5bae6",
+        "change_id": "e9dc672af1824c4477694dc612c74c9927c7884da4f07b7e19bd974fc8d87f92",
+        "change_version": 1,
+        "change_sha256": "ad57a0e5497acbb00ff5e6539d2c2bf9792150584d7d15284b26968fb912c208",
+        "context_sha256": "dad6fd5b36a9b535ab2cc975062d8306559fa025372708876954f76f96e6dd4d",
+        "verified_at": "2026-11-06T06:33:34.706Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=e36992827c441ab86b326a1f89747a33f13d19a4dc5e914248a5cbae0c32c6d4"
+      }
+    },
+    {
+      "topic_id": "M011",
+      "project_id": "c0d531571c7b550d545045ea28e301b68c599efc373630246523ecefc1ea0b0c",
+      "title": "太子长琴·断弦",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "本题无独立修订项目正文。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "8e612f59f53bc2b2c977eec1fd531bb10d5687e6141d0368beefd988a516fd80",
+        "storyboard": "f6e9790cbecd68aacc557e8d2290ee1cff0451a57558f3b58f6ef107dfb00889"
+      },
+      "analysis_body_sha256": "086c1d0b77eabad9bc477673825c4864ebb7a866a8e5b860098cb6789d201eae",
+      "online_candidate": {
+        "id": "d33056e8b7072dca59058ce315651e0776e67cb01740d6280f0e0a4c65f8d7ef",
+        "version": 1,
+        "sha256": "fb3d5779c5ef2cf108f7d52d6822ed81be2996803fc171f6ea3d064394512968",
+        "change_id": "f240090cbf1afb5f0ce4397fadd9bf9511dcb1b5198f080df2d62c6fccdf9352",
+        "change_version": 1,
+        "change_sha256": "eac80167fe483af3238ea651a04263d108b5e2f26b0b74f9276af4b1efd21e29",
+        "context_sha256": "46208c91dc4e14959a0507eb826ebf115deabeb4037f9491b6a05a68cfd283de",
+        "verified_at": "2026-11-06T06:33:35.039Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=c0d531571c7b550d545045ea28e301b68c599efc373630246523ecefc1ea0b0c"
+      }
+    },
+    {
+      "topic_id": "X010",
+      "project_id": "3945fad2fd6a32fd249a0bb8f34387f1c16803b4c6b797ea2815d8e7b79457b2",
+      "title": "山海借舟",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "2d64c845596d789a7124b7d074ebac84bb91d71d648f06091c87c50001aa0d05"
+        ],
+        "storyboard_document_ids": [
+          "311f80c0b2b12f5c9aad9787d299cb6451f80e44f9dbc1f6e1c480035fe1aa1d"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "2d64c845596d789a7124b7d074ebac84bb91d71d648f06091c87c50001aa0d05",
+        "storyboard": "311f80c0b2b12f5c9aad9787d299cb6451f80e44f9dbc1f6e1c480035fe1aa1d"
+      },
+      "analysis_body_sha256": "311c1f649c63c86cbe566ae092ee85d2e71e1e1cfb911370db879a4b934ba689",
+      "online_candidate": {
+        "id": "ce1d148d7d93bd6239768aaae2f9e2ad6cc678bc666b9743611bd2cc1c2c5893",
+        "version": 1,
+        "sha256": "e92353e6b61d4bc8a897b985e7d4aba1d753ac09d2cb64165bd137771efdbae9",
+        "change_id": "5ae66684e9beeeb590d157c3c35a707996aec05f780c9b527100a3bd7b4ff513",
+        "change_version": 1,
+        "change_sha256": "6697f07dfe80afe8c6da0273272a624a0694fdbdb17d1bcee80cb5c4a6425ba5",
+        "context_sha256": "4beaab4b0de9eff709e0431223a1c58adbed87da0104988d0e85c1258946b046",
+        "verified_at": "2026-11-06T06:33:41.082Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=3945fad2fd6a32fd249a0bb8f34387f1c16803b4c6b797ea2815d8e7b79457b2"
+      }
+    },
+    {
+      "topic_id": "M012",
+      "project_id": "59171ee20808ad9919f87f34073ef904896bbf759c692b753528ac8901236267",
+      "title": "神鼓初鸣",
+      "reading_coverage": {
+        "formal_script": "完整读取本题20261031审阅版剧本，包括正文及附录；这是当时独立云端候选，不等同原小说或作者定稿。",
+        "formal_storyboard": "读取完整镜号/时段结构、总体空间说明及相关摄影/因果段落；没有宣称逐镜完整正式评审或媒体验收。",
+        "related_revision_scripts": "本题无独立修订项目正文。",
+        "historical_reviews": "旧review未作为本轮诊断依据；来源与史料链接未在本轮重新核验。"
+      },
+      "baseline_document_ids": {
+        "script": "9a9212d1c795c76f25fd1f925693a5a5982457eeb31c738b6de85e93d1370fdf",
+        "storyboard": "826b34fe0b06aa18e30aa92f2c194daba8bd445b2d5a212444f91b7d7d61ffc9"
+      },
+      "analysis_body_sha256": "27f2b27479c68f16e261f982bbd0827857239df60deaf1c5e23ee3d4a2d48b01",
+      "online_candidate": {
+        "id": "14425654b85ee865859c60c01a5f5d672c6526c79869b466d492da6e029ed2b6",
+        "version": 1,
+        "sha256": "e4f2efe950d57a60597908f76c9af560f532a4078a1369e90c8283adc5b837dd",
+        "change_id": "379d7ceaf9fd114284a99d09630e4c4e79300b80364ad6caf3d517ae71e41690",
+        "change_version": 1,
+        "change_sha256": "f401e649eb7c5e72802567541a9306f925ec09088667bddf861c41cb083a5188",
+        "context_sha256": "b3489f6f0dacca7dd5d6c65d02728757e1d5f8726871412bc5ce242be8b90260",
+        "verified_at": "2026-11-06T06:34:07.451Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=59171ee20808ad9919f87f34073ef904896bbf759c692b753528ac8901236267"
+      }
+    },
+    {
+      "topic_id": "Z011",
+      "project_id": "6d444589cd5fdad16dbf32cb2700d2ffe0754f94acb274cb5efe12374d20c923",
+      "title": "破镜相逢",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "7fe61c1070617d3b60828115847dece3b51288675f4280ac444427b5882141be"
+        ],
+        "storyboard_document_ids": [
+          "5b998b6acbf669238e12db331829d2d7b09fa1f37aca112ea5e90e1c2c294604"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "7fe61c1070617d3b60828115847dece3b51288675f4280ac444427b5882141be",
+        "storyboard": "5b998b6acbf669238e12db331829d2d7b09fa1f37aca112ea5e90e1c2c294604"
+      },
+      "analysis_body_sha256": "dfd8b63b9225ffafa0382a4b962f1135a170fafcc6ded846953689b92698fcb0",
+      "online_candidate": {
+        "id": "163d313b36d8f7e47e2ff56c37800f55a7ac8cb54a0e21fbd9058d136bf3c008",
+        "version": 1,
+        "sha256": "f2d7f52f0099ee6d0f91a4012e8805ec8b542f1c2e76ec822a73056b075f66ff",
+        "change_id": "28c39ccaa273669a728d9aa57533d1150645d4c4cc543312d65c16d56d5588c5",
+        "change_version": 1,
+        "change_sha256": "b1e42c15ce7cadef161e59b104a1581ad7a9a4211d5d52688d575f63b43c6414",
+        "context_sha256": "9d1a778ca2fe10ce038c5441f9d8ab149d2413e953ae87a7f88552a582debaee",
+        "verified_at": "2026-11-06T06:34:07.577Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=6d444589cd5fdad16dbf32cb2700d2ffe0754f94acb274cb5efe12374d20c923"
+      }
+    },
+    {
+      "topic_id": "Z012",
+      "project_id": "f452d18fbf8b45ec1af6947bbfc4b1ac602f6cce1f6acf92c2a565e1cd92e330",
+      "title": "红衣未归",
+      "reading_coverage": {
+        "full_script_document_ids": [
+          "daf207d033e0f70bb25253e6815d94e2dc5e0087a8e8290453bc6f05649fc8b9"
+        ],
+        "storyboard_document_ids": [
+          "e8d60007ab61d0b10d5d365471193ca60951586d191112765c6f24fe071134da"
+        ],
+        "storyboard_reading": "structure_and_relevant_passages",
+        "current_remote_verified": false
+      },
+      "baseline_document_ids": {
+        "script": "daf207d033e0f70bb25253e6815d94e2dc5e0087a8e8290453bc6f05649fc8b9",
+        "storyboard": "e8d60007ab61d0b10d5d365471193ca60951586d191112765c6f24fe071134da"
+      },
+      "analysis_body_sha256": "647ab7fbeb2a92038bd855007807dc5d9071be198cf07a1c2bea2405c5d4972a",
+      "online_candidate": {
+        "id": "a7d44dab96244d2fb915ed4091a5800be88f72212685936d1bcd93754fdcba48",
+        "version": 1,
+        "sha256": "f3d3d7b54b8ffd52358955fda8e3e6a521a5dad05373cda2a226e36f3586fba3",
+        "change_id": "9894f501cc1f574c24d5a5641a74b70fd53151757fecce6be4324a975e5421ea",
+        "change_version": 1,
+        "change_sha256": "173e45be0fc822ed09cba8e126b2b6c263edd8550980bcd4045dd3469ac3cdf3",
+        "context_sha256": "6d0fa2c29480f38dbc42d5846b6fc0f0ee8c8ee3d7fee7173a71962bb9797f45",
+        "verified_at": "2026-11-06T06:34:07.388Z",
+        "state_at_readback": "candidate",
+        "policy_id": "owner-project-access-v2",
+        "review_url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace?view=review&project=f452d18fbf8b45ec1af6947bbfc4b1ac602f6cce1f6acf92c2a565e1cd92e330"
+      }
+    }
+  ],
+  "studio_release": {
+    "version_number": 99,
+    "source_commit_sha": "c7ec63472ebe17670f7cd4ccc817d3a1cce7ce59",
+    "deployment_id": "appgdep_6aed6fb12b248191afdfa0d510b1300f",
+    "version_id": "appgprj_6acc43424a1c8191ba99b0630deac146~appgver_e77a622557688191b1abf1ce22f0deca",
+    "status": "succeeded",
+    "url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace",
+    "audience": {
+      "access_mode": "custom",
+      "allowed_users": 1,
+      "allowed_groups": 0,
+      "external_visitors": 0
+    },
+    "has_mcp": true,
+    "hosted_browser_verified": false
+  },
+  "updated_at": "2026-11-06T06:36:55.538Z",
+  "development_plan_release": {
+    "version_number": 98,
+    "source_commit_sha": "d5764ce730befca722f98487c721e3b7308ac722",
+    "deployment_id": "appgdep_6aecbd2de1208191a72c6133494bbd6a",
+    "version_id": "appgprj_6acc43424a1c8191ba99b0630deac146~appgver_c26918ba26588191884fea3fff46dd53",
+    "status": "succeeded",
+    "url": "https://aigc-image-library.wangwilder1222.chatgpt.site/workspace",
+    "audience": {
+      "access_mode": "custom",
+      "allowed_users": 1,
+      "allowed_groups": 0,
+      "external_visitors": 0
+    },
+    "has_mcp": true,
+    "hosted_browser_verified": false
+  },
+  "owner_connection": {
+    "project_access": "all_owned_projects",
+    "default_enabled": true,
+    "projects": 102,
+    "skill": {
+      "version": "1.4.0",
+      "sha256": "245ac60c7caac679d5977fc9a8012985182174f1cad80ce84559e8a3541a0975"
+    }
+  },
+  "provenance_note": "Candidate bodies and import metadata remain their frozen pre-submission text. Current online status is recorded here; accepted contexts do not contain legacy document fulltext."
+}

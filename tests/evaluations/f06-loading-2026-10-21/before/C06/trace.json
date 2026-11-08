@@ -1,0 +1,57 @@
+{
+  "source_run_id": "01a15c9d-4a13-7e72-83e2-fb980a5be19c",
+  "source_log_sha256": "41ac0390905fb92a60fc413ce8987914304af3c0980fbe66e42eef5bf52a72ff",
+  "metric": "all actual text blocks in selected resource tool results, including wrapper and any truncation notice; not model tokens",
+  "reads": [
+    {
+      "callId": "call_7337a452ec4f463b8055115168888ffc",
+      "command": "text(await tools.exec_command({cmd:\"Get-Content -Raw '.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/SKILL.md'\",\"max_output_tokens\":10000}));\n",
+      "payloadFile": "read-01.txt",
+      "sha256": "1446b85f4ce1fbb0360bda9451db9b8d69eceaeb7e0df4d1b99e2e74bcb15f14",
+      "modelVisibleUtf8Bytes": 14973,
+      "modelVisibleCodePoints": 6913,
+      "truncated": false,
+      "tokenUsage": null
+    },
+    {
+      "callId": "call_1132dbd3411044b3b0d610843c1bc590",
+      "command": "text(await tools.exec_command({cmd:\"Get-Content -Raw '.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/routes/style.md'\",\"max_output_tokens\":10000}));\n",
+      "payloadFile": "read-02.txt",
+      "sha256": "06a115d271dde05f6eda4d0921416f5dfba3e5935721660c2aa31bbe4aa3784b",
+      "modelVisibleUtf8Bytes": 9959,
+      "modelVisibleCodePoints": 4205,
+      "truncated": false,
+      "tokenUsage": null
+    },
+    {
+      "callId": "call_cdd2607abd4b4923b192b7908ca0aabf",
+      "command": "text(await tools.exec_command({cmd:\"rg -n '宋韵清雅|杏露薄妆|^## CG11|^## MU14|修订|^## ' '.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/optional/color-grading-presets.md' '.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/optional/makeup-style-presets.md'\",\"max_output_tokens\":5500}));\n",
+      "payloadFile": "read-03.txt",
+      "sha256": "0ea953e5fa4a8ff90573a4c9ce4432f76b7bec84dfaa9219cca94ed210033a04",
+      "modelVisibleUtf8Bytes": 22340,
+      "modelVisibleCodePoints": 15754,
+      "truncated": true,
+      "tokenUsage": null
+    },
+    {
+      "callId": "call_070ccef7d73e4a54a93ed542097387a0",
+      "command": "text(await tools.exec_command({cmd:\"$cg = Get-Content -Raw '.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/optional/color-grading-presets.md'; [regex]::Match($cg, '(?ms)^## CG11 .*?(?=^## |\\\\z)').Value; $mu = Get-Content -Raw '.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/optional/makeup-style-presets.md'; [regex]::Match($mu, '(?ms)^## 选用、组合与覆盖.*?(?=^## |\\\\z)').Value; [regex]::Match($mu, '(?ms)^## MU14 .*?(?=^## |\\\\z)').Value\",\"max_output_tokens\":5500}));\n",
+      "payloadFile": "read-04.txt",
+      "sha256": "8170c80ea00d394e60d38316db759e969de1ec338f8aa6608b97b8e24c94f150",
+      "modelVisibleUtf8Bytes": 11028,
+      "modelVisibleCodePoints": 4333,
+      "truncated": false,
+      "tokenUsage": null
+    },
+    {
+      "callId": "call_ce1eeb3d5f39485b8245947926e87f9b",
+      "command": "text(await tools.exec_command({cmd:\"Get-Content -Raw '.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/routes/image-prompt.md'; Get-Content -Raw '.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/optional/prompt-detail-standard.md'\",\"max_output_tokens\":7500}));\n",
+      "payloadFile": "read-05.txt",
+      "sha256": "dd25bd7b6d514d6ccf24d00978a94914dd489367bc74bc5645551ece92dda7a2",
+      "modelVisibleUtf8Bytes": 30481,
+      "modelVisibleCodePoints": 11931,
+      "truncated": true,
+      "tokenUsage": null
+    }
+  ]
+}

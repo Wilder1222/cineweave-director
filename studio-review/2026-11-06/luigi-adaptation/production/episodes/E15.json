@@ -1,0 +1,1352 @@
+{
+  "number": 15,
+  "title": "撤销",
+  "logline": "四个月后，特别控罪撤销但谋杀仍在；真实登录与签名反证推翻记者简单解释，来源拒绝替她补足确定性。",
+  "scenes": [
+    {
+      "id": "E15-SC01",
+      "location": "COURT-STATE",
+      "time": "日·明确跳时四个月后·春季听证",
+      "script": "明确四个月后，春雨拍北高窗。州法官在北，控方东，海伦与深蓝西装白衬衫无领带的路易吉在西；他双手自由，瑞秋仍在东南旁听。\n\n春雨拍着北高窗，案卷标签已换过几轮。青年深蓝西装白衬衫无领带，双手自由坐西桌。海伦只抽出特别控罪那一夹，普通谋杀的厚夹仍留在手边。\n\n检察官将案后威胁邮件与青年笔记叠在一起，向北席提出特别控罪意图。海伦在自己的副本上找到最早那封邮件日期，抽出来搁到外侧。\n\n州检察官（英语，仍试图把本人文字与他人案后行为连成意图）：He targeted the industry. His own writing explains why. Now its workers are getting threats.\n中文对照：他针对这个行业，自己的文字写了原因。现在行业里的员工收到了威胁。\n\n海伦举出案后邮件，没有把青年自己的文字藏起来。她把两组放在桌上不同位置，请控方指出其中哪封出自青年；北席看向东桌。\n\n海伦（英语，分开两叠，用具体出处拆控方连接）：These were sent after his arrest. Did he send any of them? Use his words. They're here.\n中文对照：这些都在他被捕后才发。哪封是他发的？要看他的文字，在这儿。\n\n控方把后发邮件推开，留下青年自己的文字；海伦也把同一页留在案卷上方，没有借邮件时序回避他本人写过的内容。\n\n州检察官（英语，回到本人材料）：The writing is ours too. We're not relying only on the emails.\n中文对照：我们也依据他的文字，不只靠这些邮件。\n海伦（英语，承认传播对象，追究具体要件）：Then address the charge. A public audience doesn't settle the intent question.\n中文对照：那就针对这项控罪。想让公众看见，还没有回答意图的问题。\n\n控方指青年笔记中的目标选择，海伦没有争事件无害，只将申请页翻到特别罪名的意图项。法官示意双方停在这个问题，不继续谈民意。\n\n州检察官（英语，转守青年自己的传播意图）：He meant to reach the public.\n中文对照：他本来就想让公众看到。\n海伦（英语，把讨论收回缺失要件）：You still have to prove the intent this charge requires.\n中文对照：这项控罪要求的意图，你们还是得证明。\n\n法官读书面裁定，撤销特别控罪后，手仍停在剩余普通谋杀项，随后把裁定放下，示意书记按书面结果安排下一步。\n\n州法官（英语，按庭审与关系自然说，不高声煽情）：The terrorism-related counts are dismissed on this record. This ruling does not dismiss the ordinary murder charge or determine the defendant's guilt.\n中文对照：依现有记录撤销恐怖主义相关指控。本裁定不撤销普通谋杀指控，也不判断被告有罪与否。\n\n青年伸手想留一页裁定。海伦将仍列普通谋杀的第二页一起递给他，另一只手继续填后续日程。他接下两页，没再把它们分开。\n\n路易吉（英语，想先拿走胜利那页）：Can I take this?\n中文对照：这张能给我吗？\n海伦（英语，让限制跟着结果）：Both pages.\n中文对照：两页一起留。",
+      "entry": "让辩护能力来自限定罪名与证据所能证明的范围。",
+      "exit": "特别控罪撤销，普通谋杀不撤；青年收到裁定两页而非一页喜讯。 羁押与普通谋杀责任仍在，瑞秋没有听到关于死亡的解决。",
+      "dramaticFunction": "让辩护能力来自限定罪名与证据所能证明的范围。",
+      "turn": "特别控罪撤销，普通谋杀不撤；青年收到裁定两页而非一页喜讯。",
+      "exitCost": "羁押与普通谋杀责任仍在，瑞秋没有听到关于死亡的解决。",
+      "sceneRhythm": "争作者/时间后回到本人文字与特定意图；宣告清楚完整；第二页的交付收住胜利。",
+      "sourceSceneIds": [
+        "E15-SC01"
+      ],
+      "plannedDuration": 88
+    },
+    {
+      "id": "E15-SC02",
+      "location": "INSURER",
+      "time": "日·同日下午",
+      "script": "同日下午公司会议室，维克多坐北端，传播职员在南，三项核实过的去身份记录在两人之间，含患者编号页留在他左手下。\n\n公司会议桌上，维克多核对许可范围，传播职员逐项展示真实登录、工作页访问与医生本人签名。含患者编号的一页被他抽出不发。\n\n维克多（英语，逐项点可证实记录，同时撤下身份页）：All verified. The login, page access, doctor's signature. Send the redacted copies.\n中文对照：都核实了。登录、页面访问、医生签名。发去掉身份信息的副本。\n\n传播职员给说明加上完整复核，维克多划去，指向诺拉发表的‘Nobody opened the files.’那句，让职员只用三项真实记录回应。\n\n传播职员（英语，寻求强一句）：'Fully reviewed'?\n中文对照：写‘完整复核’？\n维克多（英语，只圈那句公开断言，不帮自己扩大胜利）：No. We can prove that sentence wrong.\n中文对照：不写那个。我们能证明她这句不对。\n\n传播职员删掉完整复核，又把标题改成否定整个调查。维克多没有签这版，将引用框只框住诺拉原句。\n\n传播职员（英语，仍想扩大胜利范围）：So the investigation was false?\n中文对照：那就说整个调查是假的？\n维克多（英语，让真实证据做有限反击）：That sentence was false. Quote it. Attach what proves it.\n中文对照：错的是那一句。原句引出来，证明附上。\n\n职员准备先发公号，维克多将同一组获准公开的附件推到她手边，示意一起送达诺拉邮箱。职员听完指示，确认两边采用相同版本，分别提交公开回应和给记者的更正要求。\n\n维克多（英语，先送对方可核的附件，再施压）：Send her the records. Tell her we want a correction.\n中文对照：把记录发她，告诉她我们要求更正。",
+      "entry": "让机构用真实反证赢回一部分叙事主动，而不因此清白化。",
+      "exit": "公关想扩大为全部调查失实，被限制为准确反驳原句。 诺拉必须回应真实登录、页面访问和签名，完整复核仍未获证实。",
+      "dramaticFunction": "让机构用真实反证赢回一部分叙事主动，而不因此清白化。",
+      "turn": "公关想扩大为全部调查失实，被限制为准确反驳原句。",
+      "exitCost": "诺拉必须回应真实登录、页面访问和签名，完整复核仍未获证实。",
+      "sceneRhythm": "确认真实性—两次阻止扩大结论—同版本附件送记者及公号。",
+      "sourceSceneIds": [
+        "E15-SC02"
+      ],
+      "plannedDuration": 48
+    },
+    {
+      "id": "E15-SC03",
+      "location": "NEWSROOM",
+      "time": "傍晚·同日",
+      "script": "同日傍晚编辑部西窗映着雨，诺拉在西桌把新记录与旧样本日期对上。女值班编辑在东侧，续稿队列开着，红本在诺拉手边。\n\n诺拉将三项记录与样本日期对上，核过来源说明，拿铅笔圈出与旧导语直接冲突的访问记录。编辑站在东桌边等她给结论，她没再把纸推回去。\n\n值班编辑（英语，只要核验结果）：Real?\n中文对照：是真的？\n诺拉（英语，看着核过的记录承认，不先找解释）：Yeah. The signatures and the login sessions.\n中文对照：真的，签名和登录会话都是真的。\n\n诺拉把真实签名和当初三份缺材料回执排成两行。编辑看完，先将当前续稿从发布队列移出，等她说出两者各自证明什么。\n\n诺拉（英语，想保留值得继续调查的问题）：The receipts still don't match the denials.\n中文对照：回执和拒赔理由还是对不上。\n值班编辑（英语，不让未解问题抵消现有反证）：Then that's another question. This says someone opened the page.\n中文对照：那是另一个问题。这里证明有人打开过页面。\n诺拉（英语，争取最后的限定）：It doesn't say what they read.\n中文对照：没证明他们读了什么。\n值班编辑（英语，要求她先处理已经错的部分）：No. It doesn't make your sentence true either.\n中文对照：对，也没让你那句话变成真的。\n\n续稿已经移出发布队列，编辑给出恢复发布的截止时间。诺拉合起红本又打开，找到来源警告，仍先拿手机约莉娜见面。\n\n值班编辑（英语，把稿件拖出队列，让时限有实物后果）：You've got until six. Then the follow-up stays down.\n中文对照：给你到六点，过了续稿就不发。\n诺拉（英语，争最后一点时间）：Let me call her.\n中文对照：让我给她打个电话。",
+      "entry": "让记者明确知道自己需要纠正什么，而不是靠来源再救一次。",
+      "exit": "旧回执仍有疑问不能抵消真实访问，续稿六点后停发。 她失去今晚发表的控制，仍先去找来源，暴露依赖。",
+      "dramaticFunction": "让记者明确知道自己需要纠正什么，而不是靠来源再救一次。",
+      "turn": "旧回执仍有疑问不能抵消真实访问，续稿六点后停发。",
+      "exitCost": "她失去今晚发表的控制，仍先去找来源，暴露依赖。",
+      "sceneRhythm": "核真—试保留调查价值—编辑区分问题—留最小工作期限—联系来源。",
+      "sourceSceneIds": [
+        "E15-SC03"
+      ],
+      "plannedDuration": 48
+    },
+    {
+      "id": "E15-SC04",
+      "location": "CAFE",
+      "time": "傍晚·同日临近18:00至天色转暗",
+      "script": "当天傍晚将近六点，咖啡店西窗是阴雨里的暗蓝天光，东吧台亮着暖灯。西北桌莉娜坐北，包口朝自己，诺拉坐南；湿伞立在南门，灰信封始终未取出。\n\n咖啡桌上诺拉将已公开的认证记录推向莉娜，要她解释怎样仍可能没人读。莉娜只看了一页，便把记录推回她那边，不像上次那样交出新材料。\n\n诺拉（英语，先找一个能保住旧说法的解释）：Could that be automatic? Like the screen just opens?\n中文对照：会不会是自动的？比如页面自己打开？\n莉娜（英语，把文件推还，不交给她新的断言）：You want me to say yes. I can't prove that.\n中文对照：你想让我说是，可我证明不了。\n\n莉娜将认证记录推回，诺拉把其中一页转了九十度，指着访问时间再问。莉娜没有接笔，也没有替她把空白处补成技术说明。\n\n诺拉（英语，降低请求口气，仍想得到可引用解释）：I'm not asking you to prove it. Could it happen?\n中文对照：我没让你证明，就问有没有可能。\n莉娜（英语，识破用途）：And then you write that I said it could.\n中文对照：然后你就写我说有可能。\n诺拉（英语，争取一次信任）：I'd check it.\n中文对照：我会再核实。\n莉娜（英语，不接受未来承诺替代旧记录）：You were going to check last time.\n中文对照：上次你也是要核实。\n\n莉娜让诺拉翻回第一次的笔记，那句没看过访问记录仍在那里。诺拉拇指盖住自己当时写的判断，莉娜把杯子端离文件，不再替她看下一页。\n\n莉娜（英语，回到第一次实际说过的限制，不把没看过偷换成没持有）：I told you I hadn't seen the logs. You wrote it down.\n中文对照：我说过，我没看过访问记录。你自己都记下来了。\n诺拉（英语，承认自己的推断，不把责任推回来源）：I thought three cases was enough.\n中文对照：我以为三个案子就够了。\n\n诺拉拇指仍压着自己的判断。莉娜没有把她的手拿开，只让她顺着前一行读；南门有人进来，两人让服务员从桌东侧经过。\n\n莉娜（英语，要求她说清推论跨度）：Enough for what? I gave you three cases to check.\n中文对照：够说明什么？我给三个案子，是让你查。\n诺拉（英语，仍想依靠模式辩护）：The same thing kept happening.\n中文对照：同样的事一直在发生。\n莉娜（英语，拒绝被用作确定性来源）：Then write that. You didn't need to make me say the rest.\n中文对照：那就写那个。不用把后面的也算我说的。\n\n诺拉的手机提醒六点已到。莉娜从包里取出自己的停权与询问通知放到桌边，穿好外套；诺拉没有拿来拍，也没有新打开记录。\n\n诺拉（英语，想让对方看到自己也有损失）：They pulled the follow-up.\n中文对照：续稿被撤了。\n莉娜（英语，把自己的正式通知放到桌边）：I have to answer this in the morning.\n中文对照：我明早得答复这个。\n\n诺拉看了一眼六点提醒，再看莉娜放到桌边的正式询问通知。莉娜把日期朝自己转回去，她没有答应让记者拍。\n\n诺拉（英语，第一次提出自己承担记录）：I can explain that you warned me.\n中文对照：我可以说明你提醒过我。\n莉娜（英语，两个世界的代价不相等）：To who? Your editor? The people asking me for every message?\n中文对照：跟谁说明？你编辑，还是那些要我交全部消息的人？\n诺拉（英语，不再讨一条解释公司的引语）：In the correction.\n中文对照：写进更正。\n莉娜（英语，将纠错责任退回作者）：Then write it. Don't ask me to fix it first.\n中文对照：那就写，别先来找我替你补。\n\n莉娜把通知收回包，拿杯去回收台，向南门走。诺拉问能否引用，她没有回座，只指一下还打开的第一次笔记。\n\n诺拉（英语，人已经要走，仍追一条可用答复）：What can I use?\n中文对照：那我能用什么？\n莉娜（英语，指第一次笔记，没回座也没给新结论）：Use what I actually told you.\n中文对照：就用我当时真跟你说的。",
+      "entry": "记者争一个能救原文的解释，来源拒绝再为她提供确定性。",
+      "exit": "自动打开假设、三病例推论、丢稿诉苦依次失败，纠错责任回到记者。 来源次晨要接受正式询问，诺拉续稿被撤；关系尚未修复。",
+      "dramaticFunction": "记者争一个能救原文的解释，来源拒绝再为她提供确定性。",
+      "turn": "自动打开假设、三病例推论、丢稿诉苦依次失败，纠错责任回到记者。",
+      "exitCost": "来源次晨要接受正式询问，诺拉续稿被撤；关系尚未修复。",
+      "sceneRhythm": "三个改策略回合串成同一次见面；六点提醒是实际失去机会，不用雨声延长沉默。",
+      "sourceSceneIds": [
+        "E15-SC04"
+      ],
+      "plannedDuration": 112
+    }
+  ],
+  "shots": [
+    {
+      "id": "E15-SH001",
+      "sceneId": "E15-SC01",
+      "sourceShotIds": [
+        "E15-SH001",
+        "E15-SH002"
+      ],
+      "duration": 21,
+      "characters": [
+        "LUIGI-FORMAL",
+        "HELEN",
+        "PROSECUTOR-STATE",
+        "JUDGE-STATE",
+        "RACHEL"
+      ],
+      "onScreenCharacterIds": [
+        "LUIGI-FORMAL",
+        "HELEN",
+        "PROSECUTOR-STATE",
+        "JUDGE-STATE",
+        "RACHEL"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "季节和衣服说明时间过去，普通谋杀厚夹仍留辩桌。",
+      "framing": "州法庭南隔栏中央35mm中全景，北席、西辩桌、东控桌与东南瑞秋有清楚座位关系。",
+      "composition": "明确四个月后，春雨拍北高窗。州法官在北，控方东，海伦与深蓝西装白衬衫无领带的路易吉在西；他双手自由，瑞秋仍在东南旁听。 本镜画内角色：LUIGI-FORMAL,HELEN,PROSECUTOR-STATE,JUDGE-STATE,RACHEL。",
+      "camera": "固定21秒，检方展开案后邮件与青年文字；春雨只留窗后。",
+      "focus": "季节和衣服说明时间过去，普通谋杀厚夹仍留辩桌。",
+      "start": "路易吉空手坐西桌，海伦翻新的标签页。",
+      "action": "春雨拍着北高窗，案卷标签已换过几轮。青年深蓝西装白衬衫无领带，双手自由坐西桌。海伦只抽出特别控罪那一夹，普通谋杀的厚夹仍留在手边。\n检察官将案后威胁邮件与青年笔记叠在一起，向北席提出特别控罪意图。海伦在自己的副本上找到最早那封邮件日期，抽出来搁到外侧。",
+      "end": "同一叠证据开始被按发出者与日期分开。",
+      "sound": "木椅、纸页与法庭室内混响，所列台词按既定席位发声，旁听者不喊话。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E15-D001",
+          "speaker": "州检察官",
+          "listener": "州法官",
+          "text": "He targeted the industry. His own writing explains why. Now its workers are getting threats.",
+          "translationZh": "他针对这个行业，自己的文字写了原因。现在行业里的员工收到了威胁。",
+          "tone": "仍试图把本人文字与他人案后行为连成意图",
+          "start": 9,
+          "end": 17.2
+        }
+      ],
+      "overlay": [
+        {
+          "text": "FOUR MONTHS LATER / 四个月后",
+          "start": 1,
+          "end": 5,
+          "position": "转场字卡"
+        }
+      ],
+      "generationSegments": [
+        {
+          "duration": 8,
+          "start": "路易吉空手坐西桌，海伦翻新的标签页。",
+          "action": "春雨拍着北高窗，案卷标签已换过几轮。青年深蓝西装白衬衫无领带，双手自由坐西桌。海伦只抽出特别控罪那一夹，普通谋杀的厚夹仍留在手边。",
+          "end": "本次申请范围由分开的夹子可见，旁听落座。",
+          "dialogueCueIds": [],
+          "sourceShotIds": [
+            "E15-SH001"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 10
+        },
+        {
+          "duration": 13,
+          "start": "本次申请范围由分开的夹子可见，旁听落座。",
+          "action": "检察官将案后威胁邮件与青年笔记叠在一起，向北席提出特别控罪意图。海伦在自己的副本上找到最早那封邮件日期，抽出来搁到外侧。",
+          "end": "同一叠证据开始被按发出者与日期分开。",
+          "dialogueCueIds": [
+            "E15-D001"
+          ],
+          "sourceShotIds": [
+            "E15-SH002"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 15
+        }
+      ],
+      "viewerEntry": "让辩护能力来自限定罪名与证据所能证明的范围。",
+      "viewerExit": "同一叠证据开始被按发出者与日期分开。",
+      "cutTrigger": "海伦举最早邮件反驳归属，切她保留不利本人文字的具体做法。",
+      "next": "接E15-SH003；海伦举最早邮件反驳归属，切她保留不利本人文字的具体做法。"
+    },
+    {
+      "id": "E15-SH003",
+      "sceneId": "E15-SC01",
+      "sourceShotIds": [
+        "E15-SH003",
+        "E15-SH004"
+      ],
+      "duration": 44,
+      "characters": [
+        "HELEN",
+        "LUIGI-FORMAL",
+        "PROSECUTOR-STATE"
+      ],
+      "onScreenCharacterIds": [
+        "HELEN",
+        "LUIGI-FORMAL"
+      ],
+      "offscreenCharacterIds": [
+        "PROSECUTOR-STATE"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "她先排除他人案后威胁的替代证明，再接受讨论本人文字，争特定意图；青年的听者反应保留。",
+      "framing": "控方南侧肩后50mm朝西辩桌的海伦及青年中景，控方近前景只留肩与持纸手，法官在北侧画外。",
+      "composition": "明确四个月后，春雨拍北高窗。州法官在北，控方东，海伦与深蓝西装白衬衫无领带的路易吉在西；他双手自由，瑞秋仍在东南旁听。 本镜画内角色：HELEN,LUIGI-FORMAL。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定44秒；纸在律师手中交换主次，相机不交替扫两席。",
+      "focus": "她先排除他人案后威胁的替代证明，再接受讨论本人文字，争特定意图；青年的听者反应保留。",
+      "start": "同一叠证据开始被按发出者与日期分开。",
+      "action": "海伦举出案后邮件，没有把青年自己的文字藏起来。她把两组放在桌上不同位置，请控方指出其中哪封出自青年；北席看向东桌。\n控方把后发邮件推开，留下青年自己的文字；海伦也把同一页留在案卷上方，没有借邮件时序回避他本人写过的内容。\n控方指青年笔记中的目标选择，海伦没有争事件无害，只将申请页翻到特别罪名的意图项。法官示意双方停在这个问题，不继续谈民意。",
+      "end": "普通谋杀责任与特别罪名的要件被分开争。",
+      "sound": "木椅、纸页与法庭室内混响，所列台词按既定席位发声，旁听者不喊话。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E15-D002",
+          "speaker": "海伦",
+          "listener": "州法官",
+          "text": "These were sent after his arrest. Did he send any of them? Use his words. They're here.",
+          "translationZh": "这些都在他被捕后才发。哪封是他发的？要看他的文字，在这儿。",
+          "tone": "分开两叠，用具体出处拆控方连接",
+          "start": 1,
+          "end": 9.6
+        },
+        {
+          "id": "E15-D201",
+          "speaker": "州检察官",
+          "listener": "州法官",
+          "text": "The writing is ours too. We're not relying only on the emails.",
+          "translationZh": "我们也依据他的文字，不只靠这些邮件。",
+          "tone": "回到本人材料",
+          "start": 14,
+          "end": 18.71
+        },
+        {
+          "id": "E15-D202",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "Then address the charge. A public audience doesn't settle the intent question.",
+          "translationZh": "那就针对这项控罪。想让公众看见，还没有回答意图的问题。",
+          "tone": "承认传播对象，追究具体要件",
+          "start": 19.01,
+          "end": 23.71
+        },
+        {
+          "id": "E15-D003",
+          "speaker": "州检察官",
+          "listener": "州法官",
+          "text": "He meant to reach the public.",
+          "translationZh": "他本来就想让公众看到。",
+          "tone": "转守青年自己的传播意图",
+          "start": 32,
+          "end": 34.3
+        },
+        {
+          "id": "E15-D004",
+          "speaker": "海伦",
+          "listener": "州法官",
+          "text": "You still have to prove the intent this charge requires.",
+          "translationZh": "这项控罪要求的意图，你们还是得证明。",
+          "tone": "把讨论收回缺失要件",
+          "start": 34.6,
+          "end": 39.3
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 13,
+          "start": "同一叠证据开始被按发出者与日期分开。",
+          "action": "海伦举出案后邮件，没有把青年自己的文字藏起来。她把两组放在桌上不同位置，请控方指出其中哪封出自青年；北席看向东桌。",
+          "end": "公众后果没有自动成为本人发送的威胁。",
+          "dialogueCueIds": [
+            "E15-D002"
+          ],
+          "sourceShotIds": [
+            "E15-SH003"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 15
+        },
+        {
+          "duration": 18,
+          "start": "公众后果没有自动成为本人发送的威胁。",
+          "action": "控方把后发邮件推开，留下青年自己的文字；海伦也把同一页留在案卷上方，没有借邮件时序回避他本人写过的内容。",
+          "end": "法官让双方停在控罪所需的意图项，案后声浪不替代证明。",
+          "dialogueCueIds": [
+            "E15-D201",
+            "E15-D202"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 20
+        },
+        {
+          "duration": 13,
+          "start": "法官让双方停在控罪所需的意图项，案后声浪不替代证明。",
+          "action": "控方指青年笔记中的目标选择，海伦没有争事件无害，只将申请页翻到特别罪名的意图项。法官示意双方停在这个问题，不继续谈民意。",
+          "end": "普通谋杀责任与特别罪名的要件被分开争。",
+          "dialogueCueIds": [
+            "E15-D003",
+            "E15-D004"
+          ],
+          "sourceShotIds": [
+            "E15-SH004"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 15
+        }
+      ],
+      "viewerEntry": "同一叠证据开始被按发出者与日期分开。",
+      "viewerExit": "普通谋杀责任与特别罪名的要件被分开争。",
+      "cutTrigger": "法官停止争论开始读裁定，切权力实际发出结果的北席。",
+      "next": "接E15-SH005；法官停止争论开始读裁定，切权力实际发出结果的北席。"
+    },
+    {
+      "id": "E15-SH005",
+      "sceneId": "E15-SC01",
+      "sourceShotIds": [
+        "E15-SH005"
+      ],
+      "duration": 14,
+      "characters": [
+        "JUDGE-STATE"
+      ],
+      "onScreenCharacterIds": [
+        "JUDGE-STATE"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "不将有限撤罪剪成无罪；声源就是画内法官。",
+      "framing": "南侧中央75mm男州法官正面中景，书面裁定与手在桌前，控辩不入画。",
+      "composition": "明确四个月后，春雨拍北高窗。州法官在北，控方东，海伦与深蓝西装白衬衫无领带的路易吉在西；他双手自由，瑞秋仍在东南旁听。 本镜画内角色：JUDGE-STATE。",
+      "camera": "固定14秒，一口气给出撤销范围及普通谋杀仍在。",
+      "focus": "不将有限撤罪剪成无罪；声源就是画内法官。",
+      "start": "普通谋杀责任与特别罪名的要件被分开争。",
+      "action": "法官读书面裁定，撤销特别控罪后，手仍停在剩余普通谋杀项，随后把裁定放下，示意书记按书面结果安排下一步。",
+      "end": "北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。",
+      "sound": "木椅、纸页与法庭室内混响，所列台词按既定席位发声，旁听者不喊话。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E15-D005",
+          "speaker": "州法官",
+          "listener": "控辩双方",
+          "text": "The terrorism-related counts are dismissed on this record. This ruling does not dismiss the ordinary murder charge or determine the defendant's guilt.",
+          "translationZh": "依现有记录撤销恐怖主义相关指控。本裁定不撤销普通谋杀指控，也不判断被告有罪与否。",
+          "tone": "按庭审与关系自然说，不高声煽情",
+          "start": 1.1,
+          "end": 12.8
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 14,
+          "start": "普通谋杀责任与特别罪名的要件被分开争。",
+          "action": "法官读书面裁定，撤销特别控罪后，手仍停在剩余普通谋杀项，随后把裁定放下，示意书记按书面结果安排下一步。",
+          "end": "北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。",
+          "dialogueCueIds": [
+            "E15-D005"
+          ],
+          "sourceShotIds": [
+            "E15-SH005"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 16
+        }
+      ],
+      "viewerEntry": "普通谋杀责任与特别罪名的要件被分开争。",
+      "viewerExit": "北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。",
+      "cutTrigger": "完整裁定说完，切看被告如何拿走这份结果。",
+      "next": "接E15-SH006；完整裁定说完，切看被告如何拿走这份结果。"
+    },
+    {
+      "id": "E15-SH006",
+      "sceneId": "E15-SC01",
+      "sourceShotIds": [
+        "E15-SH006"
+      ],
+      "duration": 9,
+      "characters": [
+        "LUIGI-FORMAL",
+        "HELEN"
+      ],
+      "onScreenCharacterIds": [
+        "LUIGI-FORMAL",
+        "HELEN"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "两页必须一起留，后续日程继续。",
+      "framing": "西桌南侧65mm青年与海伦的腰上中近景，两页裁定、自由双手与普通谋杀厚夹在下方。",
+      "composition": "明确四个月后，春雨拍北高窗。州法官在北，控方东，海伦与深蓝西装白衬衫无领带的路易吉在西；他双手自由，瑞秋仍在东南旁听。 本镜画内角色：LUIGI-FORMAL,HELEN。",
+      "camera": "固定9秒，第二页由海伦一起递给他，不另拍庆祝脸。",
+      "focus": "两页必须一起留，后续日程继续。",
+      "start": "北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。",
+      "action": "青年伸手想留一页裁定。海伦将仍列普通谋杀的第二页一起递给他，另一只手继续填后续日程。他接下两页，没再把它们分开。",
+      "end": "青年留完整裁定，律师继续安排州案。",
+      "sound": "木椅、纸页与法庭室内混响，所列台词按既定席位发声，旁听者不喊话。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E15-D006",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "Can I take this?",
+          "translationZh": "这张能给我吗？",
+          "tone": "想先拿走胜利那页",
+          "start": 1,
+          "end": 3.3
+        },
+        {
+          "id": "E15-D007",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "Both pages.",
+          "translationZh": "两页一起留。",
+          "tone": "让限制跟着结果",
+          "start": 3.6,
+          "end": 4.9
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 9,
+          "start": "北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。",
+          "action": "青年伸手想留一页裁定。海伦将仍列普通谋杀的第二页一起递给他，另一只手继续填后续日程。他接下两页，没再把它们分开。",
+          "end": "青年留完整裁定，律师继续安排州案。",
+          "dialogueCueIds": [
+            "E15-D006",
+            "E15-D007"
+          ],
+          "sourceShotIds": [
+            "E15-SH006"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 11
+        }
+      ],
+      "viewerEntry": "北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。",
+      "viewerExit": "青年留完整裁定，律师继续安排州案。",
+      "cutTrigger": "他接两页，切同日公司以另一份真实记录反击。",
+      "next": "本场完成，按正式EP场序转场；他接两页，切同日公司以另一份真实记录反击。"
+    },
+    {
+      "id": "E15-SH007",
+      "sceneId": "E15-SC02",
+      "sourceShotIds": [
+        "E15-SH007",
+        "E15-SH008"
+      ],
+      "duration": 23,
+      "characters": [
+        "VICTOR",
+        "PR-STAFF"
+      ],
+      "onScreenCharacterIds": [
+        "VICTOR",
+        "PR-STAFF"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "真实访问/签名只反驳原句，不能替所有过程作证。",
+      "framing": "公司会议桌西南侧50mm过传播职员肩看维克多和三项认证材料，患者身份页被他留在左侧。",
+      "composition": "同日下午公司会议室，维克多坐北端，传播职员在南，三项核实过的去身份记录在两人之间，含患者编号页留在他左手下。 本镜画内角色：VICTOR,PR-STAFF。",
+      "camera": "固定23秒，先核可公开范围，再划掉完整复核。",
+      "focus": "真实访问/签名只反驳原句，不能替所有过程作证。",
+      "start": "去身份资料平放桌中。",
+      "action": "公司会议桌上，维克多核对许可范围，传播职员逐项展示真实登录、工作页访问与医生本人签名。含患者编号的一页被他抽出不发。\n传播职员给说明加上完整复核，维克多划去，指向诺拉发表的‘Nobody opened the files.’那句，让职员只用三项真实记录回应。",
+      "end": "公司准确利用一处过度断言，不说明医生具体看到哪些附件。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E15-D008",
+          "speaker": "维克多",
+          "listener": "传播职员",
+          "text": "All verified. The login, page access, doctor's signature. Send the redacted copies.",
+          "translationZh": "都核实了。登录、页面访问、医生签名。发去掉身份信息的副本。",
+          "tone": "逐项点可证实记录，同时撤下身份页",
+          "start": 1,
+          "end": 7.2
+        },
+        {
+          "id": "E15-D009",
+          "speaker": "传播职员",
+          "listener": "维克多",
+          "text": "'Fully reviewed'?",
+          "translationZh": "写‘完整复核’？",
+          "tone": "寻求强一句",
+          "start": 14,
+          "end": 15.3
+        },
+        {
+          "id": "E15-D010",
+          "speaker": "维克多",
+          "listener": "传播职员",
+          "text": "No. We can prove that sentence wrong.",
+          "translationZh": "不写那个。我们能证明她这句不对。",
+          "tone": "只圈那句公开断言，不帮自己扩大胜利",
+          "start": 15.6,
+          "end": 19.9
+        }
+      ],
+      "overlay": [
+        {
+          "text": "AUTHENTICATED LOGIN / 认证登录\nWORK PAGE ACCESSED / 已访问工作页\nCLINICIAN SIGNATURE / 医生本人签名",
+          "start": 3,
+          "end": 11,
+          "position": "公开记录后期"
+        }
+      ],
+      "generationSegments": [
+        {
+          "duration": 13,
+          "start": "去身份资料平放桌中。",
+          "action": "公司会议桌上，维克多核对许可范围，传播职员逐项展示真实登录、工作页访问与医生本人签名。含患者编号的一页被他抽出不发。",
+          "end": "可公开的去身份反证留三项，不给完整复核背书。",
+          "dialogueCueIds": [
+            "E15-D008"
+          ],
+          "sourceShotIds": [
+            "E15-SH007"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 15
+        },
+        {
+          "duration": 10,
+          "start": "可公开的去身份反证留三项，不给完整复核背书。",
+          "action": "传播职员给说明加上完整复核，维克多划去，指向诺拉发表的‘Nobody opened the files.’那句，让职员只用三项真实记录回应。",
+          "end": "公司准确利用一处过度断言，不说明医生具体看到哪些附件。",
+          "dialogueCueIds": [
+            "E15-D009",
+            "E15-D010"
+          ],
+          "sourceShotIds": [
+            "E15-SH008"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 12
+        }
+      ],
+      "viewerEntry": "让机构用真实反证赢回一部分叙事主动，而不因此清白化。",
+      "viewerExit": "公司准确利用一处过度断言，不说明医生具体看到哪些附件。",
+      "cutTrigger": "职员仍想说整个调查虚假，切她准备怎样写的表情和动作。",
+      "next": "接E15-SH009；职员仍想说整个调查虚假，切她准备怎样写的表情和动作。"
+    },
+    {
+      "id": "E15-SH009",
+      "sceneId": "E15-SC02",
+      "sourceShotIds": [
+        "E15-SH009"
+      ],
+      "duration": 25,
+      "characters": [
+        "PR-STAFF",
+        "VICTOR"
+      ],
+      "onScreenCharacterIds": [
+        "PR-STAFF"
+      ],
+      "offscreenCharacterIds": [
+        "VICTOR"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "公司用准确记录赢一部分叙事权，记者将收到可验证反证。",
+      "framing": "会议桌西北侧65mm传播职员半身，维克多只留前景手指向原句，邮箱收件栏在桌上平板边缘。",
+      "composition": "同日下午公司会议室，维克多坐北端，传播职员在南，三项核实过的去身份记录在两人之间，含患者编号页留在他左手下。 本镜画内角色：PR-STAFF。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定25秒，听完限定后她按同版本发公号与记者。",
+      "focus": "公司用准确记录赢一部分叙事权，记者将收到可验证反证。",
+      "start": "公司准确利用一处过度断言，不说明医生具体看到哪些附件。",
+      "action": "传播职员删掉完整复核，又把标题改成否定整个调查。维克多没有签这版，将引用框只框住诺拉原句。\n职员准备先发公号，维克多将同一组获准公开的附件推到她手边，示意一起送达诺拉邮箱。职员听完指示，确认两边采用相同版本，分别提交公开回应和给记者的更正要求。",
+      "end": "诺拉实际得到反证，不只是被公司新闻喊话。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E15-D203",
+          "speaker": "传播职员",
+          "listener": "维克多",
+          "text": "So the investigation was false?",
+          "translationZh": "那就说整个调查是假的？",
+          "tone": "仍想扩大胜利范围",
+          "start": 1,
+          "end": 2.96
+        },
+        {
+          "id": "E15-D204",
+          "speaker": "维克多",
+          "listener": "同场对话者",
+          "text": "That sentence was false. Quote it. Attach what proves it.",
+          "translationZh": "错的是那一句。原句引出来，证明附上。",
+          "tone": "让真实证据做有限反击",
+          "start": 3.26,
+          "end": 7.18
+        },
+        {
+          "id": "E15-D011",
+          "speaker": "维克多",
+          "listener": "传播职员",
+          "text": "Send her the records. Tell her we want a correction.",
+          "translationZh": "把记录发她，告诉她我们要求更正。",
+          "tone": "先送对方可核的附件，再施压",
+          "start": 17,
+          "end": 22.2
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 16,
+          "start": "公司准确利用一处过度断言，不说明医生具体看到哪些附件。",
+          "action": "传播职员删掉完整复核，又把标题改成否定整个调查。维克多没有签这版，将引用框只框住诺拉原句。",
+          "end": "发布附件保留登录、页面访问和真实签名，不新增全部材料已看完的结论。",
+          "dialogueCueIds": [
+            "E15-D203",
+            "E15-D204"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 18
+        },
+        {
+          "duration": 9,
+          "start": "发布附件保留登录、页面访问和真实签名，不新增全部材料已看完的结论。",
+          "action": "职员准备先发公号，维克多将同一组获准公开的附件推到她手边，示意一起送达诺拉邮箱。职员听完指示，确认两边采用相同版本，分别提交公开回应和给记者的更正要求。",
+          "end": "诺拉实际得到反证，不只是被公司新闻喊话。",
+          "dialogueCueIds": [
+            "E15-D011"
+          ],
+          "sourceShotIds": [
+            "E15-SH009"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 11
+        }
+      ],
+      "viewerEntry": "公司准确利用一处过度断言，不说明医生具体看到哪些附件。",
+      "viewerExit": "诺拉实际得到反证，不只是被公司新闻喊话。",
+      "cutTrigger": "发送完成，接诺拉验证而非跳公众嘲讽蒙太奇。",
+      "next": "本场完成，按正式EP场序转场；发送完成，接诺拉验证而非跳公众嘲讽蒙太奇。"
+    },
+    {
+      "id": "E15-SH010",
+      "sceneId": "E15-SC03",
+      "sourceShotIds": [
+        "E15-SH010"
+      ],
+      "duration": 36,
+      "characters": [
+        "NORA",
+        "EDITOR-DESK"
+      ],
+      "onScreenCharacterIds": [
+        "NORA",
+        "EDITOR-DESK"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "真实反证与未解疑点同时存在，后者不能洗掉前者。",
+      "framing": "编辑部西桌南侧50mm诺拉与女编辑共享中景，真实记录与旧回执在桌上两排。",
+      "composition": "同日傍晚编辑部西窗映着雨，诺拉在西桌把新记录与旧样本日期对上。女值班编辑在东侧，续稿队列开着，红本在诺拉手边。 本镜画内角色：NORA,EDITOR-DESK。",
+      "camera": "固定36秒，允许记者先争调查仍有价值，编辑保持看着她。",
+      "focus": "真实反证与未解疑点同时存在，后者不能洗掉前者。",
+      "start": "邮件已收到，她逐页对照。",
+      "action": "诺拉将三项记录与样本日期对上，核过来源说明，拿铅笔圈出与旧导语直接冲突的访问记录。编辑站在东桌边等她给结论，她没再把纸推回去。\n诺拉把真实签名和当初三份缺材料回执排成两行。编辑看完，先将当前续稿从发布队列移出，等她说出两者各自证明什么。",
+      "end": "诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。",
+      "sound": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E15-D012",
+          "speaker": "值班编辑",
+          "listener": "诺拉",
+          "text": "Real?",
+          "translationZh": "是真的？",
+          "tone": "只要核验结果",
+          "start": 1,
+          "end": 1.8
+        },
+        {
+          "id": "E15-D013",
+          "speaker": "诺拉",
+          "listener": "值班编辑",
+          "text": "Yeah. The signatures and the login sessions.",
+          "translationZh": "真的，签名和登录会话都是真的。",
+          "tone": "看着核过的记录承认，不先找解释",
+          "start": 2.1,
+          "end": 5.4
+        },
+        {
+          "id": "E15-D205",
+          "speaker": "诺拉",
+          "listener": "值班编辑",
+          "text": "The receipts still don't match the denials.",
+          "translationZh": "回执和拒赔理由还是对不上。",
+          "tone": "想保留值得继续调查的问题",
+          "start": 13,
+          "end": 15.75
+        },
+        {
+          "id": "E15-D206",
+          "speaker": "值班编辑",
+          "listener": "诺拉",
+          "text": "Then that's another question. This says someone opened the page.",
+          "translationZh": "那是另一个问题。这里证明有人打开过页面。",
+          "tone": "不让未解问题抵消现有反证",
+          "start": 16.05,
+          "end": 19.97
+        },
+        {
+          "id": "E15-D207",
+          "speaker": "诺拉",
+          "listener": "值班编辑",
+          "text": "It doesn't say what they read.",
+          "translationZh": "没证明他们读了什么。",
+          "tone": "争取最后的限定",
+          "start": 20.27,
+          "end": 22.62
+        },
+        {
+          "id": "E15-D208",
+          "speaker": "值班编辑",
+          "listener": "诺拉",
+          "text": "No. It doesn't make your sentence true either.",
+          "translationZh": "对，也没让你那句话变成真的。",
+          "tone": "要求她先处理已经错的部分",
+          "start": 22.92,
+          "end": 26.06
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 12,
+          "start": "邮件已收到，她逐页对照。",
+          "action": "诺拉将三项记录与样本日期对上，核过来源说明，拿铅笔圈出与旧导语直接冲突的访问记录。编辑站在东桌边等她给结论，她没再把纸推回去。",
+          "end": "记录真实，记者不能继续以假签名回避。",
+          "dialogueCueIds": [
+            "E15-D012",
+            "E15-D013"
+          ],
+          "sourceShotIds": [
+            "E15-SH010"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        },
+        {
+          "duration": 24,
+          "start": "记录真实，记者不能继续以假签名回避。",
+          "action": "诺拉把真实签名和当初三份缺材料回执排成两行。编辑看完，先将当前续稿从发布队列移出，等她说出两者各自证明什么。",
+          "end": "诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。",
+          "dialogueCueIds": [
+            "E15-D205",
+            "E15-D206",
+            "E15-D207",
+            "E15-D208"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 26
+        }
+      ],
+      "viewerEntry": "让记者明确知道自己需要纠正什么，而不是靠来源再救一次。",
+      "viewerExit": "诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。",
+      "cutTrigger": "诺拉终于翻回自己的笔记，切向她早已拥有的限定。",
+      "next": "接E15-SH011；诺拉终于翻回自己的笔记，切向她早已拥有的限定。"
+    },
+    {
+      "id": "E15-SH011",
+      "sceneId": "E15-SC03",
+      "sourceShotIds": [
+        "E15-SH011"
+      ],
+      "duration": 12,
+      "characters": [
+        "NORA",
+        "EDITOR-DESK"
+      ],
+      "onScreenCharacterIds": [
+        "NORA"
+      ],
+      "offscreenCharacterIds": [
+        "EDITOR-DESK"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "采访警告就在手里，她仍选择先求来源帮忙。",
+      "framing": "诺拉西肩后65mm红本、手机与电脑下半屏近景，编辑手从东侧进入提示截止时间。",
+      "composition": "同日傍晚编辑部西窗映着雨，诺拉在西桌把新记录与旧样本日期对上。女值班编辑在东侧，续稿队列开着，红本在诺拉手边。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定12秒，合本又重开，电话从桌上拿起。",
+      "focus": "采访警告就在手里，她仍选择先求来源帮忙。",
+      "start": "诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。",
+      "action": "续稿已经移出发布队列，编辑给出恢复发布的截止时间。诺拉合起红本又打开，找到来源警告，仍先拿手机约莉娜见面。",
+      "end": "新稿暂停，诺拉仍先索要能救解释的来源回应。",
+      "sound": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E15-D014",
+          "speaker": "值班编辑",
+          "listener": "诺拉",
+          "text": "You've got until six. Then the follow-up stays down.",
+          "translationZh": "给你到六点，过了续稿就不发。",
+          "tone": "把稿件拖出队列，让时限有实物后果",
+          "start": 1,
+          "end": 5.3
+        },
+        {
+          "id": "E15-D015",
+          "speaker": "诺拉",
+          "listener": "值班编辑",
+          "text": "Let me call her.",
+          "translationZh": "让我给她打个电话。",
+          "tone": "争最后一点时间",
+          "start": 5.6,
+          "end": 7.9
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 12,
+          "start": "诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。",
+          "action": "续稿已经移出发布队列，编辑给出恢复发布的截止时间。诺拉合起红本又打开，找到来源警告，仍先拿手机约莉娜见面。",
+          "end": "新稿暂停，诺拉仍先索要能救解释的来源回应。",
+          "dialogueCueIds": [
+            "E15-D014",
+            "E15-D015"
+          ],
+          "sourceShotIds": [
+            "E15-SH011"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        }
+      ],
+      "viewerEntry": "诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。",
+      "viewerExit": "新稿暂停，诺拉仍先索要能救解释的来源回应。",
+      "cutTrigger": "她拨通约见，进入一次无法替自己解围的谈话。",
+      "next": "本场完成，按正式EP场序转场；她拨通约见，进入一次无法替自己解围的谈话。"
+    },
+    {
+      "id": "E15-SH012",
+      "sceneId": "E15-SC04",
+      "sourceShotIds": [
+        "E15-SH012"
+      ],
+      "duration": 35,
+      "characters": [
+        "LENA",
+        "NORA"
+      ],
+      "onScreenCharacterIds": [
+        "LENA",
+        "NORA"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "自动打开假设被拒，记者退到只问可能，来源不再愿被引用。",
+      "framing": "咖啡桌西侧40mm南北双人中景，莉娜北、诺拉南，南门湿伞在后层，灰信封没取出。",
+      "composition": "当天傍晚将近六点，咖啡店西窗是阴雨里的暗蓝天光，东吧台亮着暖灯。西北桌莉娜坐北，包口朝自己，诺拉坐南；湿伞立在南门，灰信封始终未取出。 本镜画内角色：LENA,NORA。",
+      "camera": "固定35秒，公开认证记录由南推北又被推回。",
+      "focus": "自动打开假设被拒，记者退到只问可能，来源不再愿被引用。",
+      "start": "诺拉红本未开，莉娜双手抱热杯。",
+      "action": "咖啡桌上诺拉将已公开的认证记录推向莉娜，要她解释怎样仍可能没人读。莉娜只看了一页，便把记录推回她那边，不像上次那样交出新材料。\n莉娜将认证记录推回，诺拉把其中一页转了九十度，指着访问时间再问。莉娜没有接笔，也没有替她把空白处补成技术说明。",
+      "end": "诺拉把访问页放下，只能打开第一次的采访笔记。",
+      "sound": "门铃、咖啡机和杯碟底声连续，周围客人无可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E15-D016",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "Could that be automatic? Like the screen just opens?",
+          "translationZh": "会不会是自动的？比如页面自己打开？",
+          "tone": "先找一个能保住旧说法的解释",
+          "start": 1,
+          "end": 5.7
+        },
+        {
+          "id": "E15-D017",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "You want me to say yes. I can't prove that.",
+          "translationZh": "你想让我说是，可我证明不了。",
+          "tone": "把文件推还，不交给她新的断言",
+          "start": 6,
+          "end": 11.7
+        },
+        {
+          "id": "E15-D209",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "I'm not asking you to prove it. Could it happen?",
+          "translationZh": "我没让你证明，就问有没有可能。",
+          "tone": "降低请求口气，仍想得到可引用解释",
+          "start": 14,
+          "end": 17.92
+        },
+        {
+          "id": "E15-D210",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "And then you write that I said it could.",
+          "translationZh": "然后你就写我说有可能。",
+          "tone": "识破用途",
+          "start": 18.22,
+          "end": 21.75
+        },
+        {
+          "id": "E15-D211",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "I'd check it.",
+          "translationZh": "我会再核实。",
+          "tone": "争取一次信任",
+          "start": 22.05,
+          "end": 23.23
+        },
+        {
+          "id": "E15-D212",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "You were going to check last time.",
+          "translationZh": "上次你也是要核实。",
+          "tone": "不接受未来承诺替代旧记录",
+          "start": 23.53,
+          "end": 26.27
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 13,
+          "start": "诺拉红本未开，莉娜双手抱热杯。",
+          "action": "咖啡桌上诺拉将已公开的认证记录推向莉娜，要她解释怎样仍可能没人读。莉娜只看了一页，便把记录推回她那边，不像上次那样交出新材料。",
+          "end": "她没拿到反驳反证的证据，来源不再补缺口。",
+          "dialogueCueIds": [
+            "E15-D016",
+            "E15-D017"
+          ],
+          "sourceShotIds": [
+            "E15-SH012"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 15
+        },
+        {
+          "duration": 22,
+          "start": "她没拿到反驳反证的证据，来源不再补缺口。",
+          "action": "莉娜将认证记录推回，诺拉把其中一页转了九十度，指着访问时间再问。莉娜没有接笔，也没有替她把空白处补成技术说明。",
+          "end": "诺拉把访问页放下，只能打开第一次的采访笔记。",
+          "dialogueCueIds": [
+            "E15-D209",
+            "E15-D210",
+            "E15-D211",
+            "E15-D212"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 24
+        }
+      ],
+      "viewerEntry": "记者争一个能救原文的解释，来源拒绝再为她提供确定性。",
+      "viewerExit": "诺拉把访问页放下，只能打开第一次的采访笔记。",
+      "cutTrigger": "莉娜要求她翻回旧笔记，切到记者如何看自己的记录。",
+      "next": "接E15-SH013；莉娜要求她翻回旧笔记，切到记者如何看自己的记录。"
+    },
+    {
+      "id": "E15-SH013",
+      "sceneId": "E15-SC04",
+      "sourceShotIds": [
+        "E15-SH013"
+      ],
+      "duration": 34,
+      "characters": [
+        "NORA",
+        "LENA"
+      ],
+      "onScreenCharacterIds": [
+        "NORA"
+      ],
+      "offscreenCharacterIds": [
+        "LENA"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "她以三个病例辩护，来源逼她承认模式与断言之间的跨度。",
+      "framing": "莉娜西肩旁朝南65mm诺拉中近景，红本和她盖住判断的拇指在下部，莉娜的杯从前景移开。",
+      "composition": "当天傍晚将近六点，咖啡店西窗是阴雨里的暗蓝天光，东吧台亮着暖灯。西北桌莉娜坐北，包口朝自己，诺拉坐南；湿伞立在南门，灰信封始终未取出。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定34秒，不用纸件特写替她承受对话。",
+      "focus": "她以三个病例辩护，来源逼她承认模式与断言之间的跨度。",
+      "start": "诺拉把访问页放下，只能打开第一次的采访笔记。",
+      "action": "莉娜让诺拉翻回第一次的笔记，那句没看过访问记录仍在那里。诺拉拇指盖住自己当时写的判断，莉娜把杯子端离文件，不再替她看下一页。\n诺拉拇指仍压着自己的判断。莉娜没有把她的手拿开，只让她顺着前一行读；南门有人进来，两人让服务员从桌东侧经过。",
+      "end": "诺拉移开拇指，自己的批量签名推断与来源限定同时露出来。",
+      "sound": "门铃、咖啡机和杯碟底声连续，周围客人无可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E15-D018",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "I told you I hadn't seen the logs. You wrote it down.",
+          "translationZh": "我说过，我没看过访问记录。你自己都记下来了。",
+          "tone": "回到第一次实际说过的限制，不把没看过偷换成没持有",
+          "start": 1,
+          "end": 6.7
+        },
+        {
+          "id": "E15-D801",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "I thought three cases was enough.",
+          "translationZh": "我以为三个案子就够了。",
+          "tone": "承认自己的推断，不把责任推回来源",
+          "start": 7,
+          "end": 10.3
+        },
+        {
+          "id": "E15-D213",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "Enough for what? I gave you three cases to check.",
+          "translationZh": "够说明什么？我给三个案子，是让你查。",
+          "tone": "要求她说清推论跨度",
+          "start": 13,
+          "end": 16.92
+        },
+        {
+          "id": "E15-D214",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "The same thing kept happening.",
+          "translationZh": "同样的事一直在发生。",
+          "tone": "仍想依靠模式辩护",
+          "start": 17.22,
+          "end": 19.18
+        },
+        {
+          "id": "E15-D215",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "Then write that. You didn't need to make me say the rest.",
+          "translationZh": "那就写那个。不用把后面的也算我说的。",
+          "tone": "拒绝被用作确定性来源",
+          "start": 19.48,
+          "end": 24.19
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 12,
+          "start": "诺拉把访问页放下，只能打开第一次的采访笔记。",
+          "action": "莉娜让诺拉翻回第一次的笔记，那句没看过访问记录仍在那里。诺拉拇指盖住自己当时写的判断，莉娜把杯子端离文件，不再替她看下一页。",
+          "end": "早有的警告被重新看见，来源不会再替报道补确定性。",
+          "dialogueCueIds": [
+            "E15-D018",
+            "E15-D801"
+          ],
+          "sourceShotIds": [
+            "E15-SH013"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        },
+        {
+          "duration": 22,
+          "start": "早有的警告被重新看见，来源不会再替报道补确定性。",
+          "action": "诺拉拇指仍压着自己的判断。莉娜没有把她的手拿开，只让她顺着前一行读；南门有人进来，两人让服务员从桌东侧经过。",
+          "end": "诺拉移开拇指，自己的批量签名推断与来源限定同时露出来。",
+          "dialogueCueIds": [
+            "E15-D213",
+            "E15-D214",
+            "E15-D215"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 24
+        }
+      ],
+      "viewerEntry": "诺拉把访问页放下，只能打开第一次的采访笔记。",
+      "viewerExit": "诺拉移开拇指，自己的批量签名推断与来源限定同时露出来。",
+      "cutTrigger": "六点提醒响，记者提丢稿，切真正面临调查的人。",
+      "next": "接E15-SH014；六点提醒响，记者提丢稿，切真正面临调查的人。"
+    },
+    {
+      "id": "E15-SH014",
+      "sceneId": "E15-SC04",
+      "sourceShotIds": [
+        "E15-SH014"
+      ],
+      "duration": 34,
+      "characters": [
+        "LENA",
+        "NORA"
+      ],
+      "onScreenCharacterIds": [
+        "LENA"
+      ],
+      "offscreenCharacterIds": [
+        "NORA"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "来源要求公开更正而不是替记者补解释，她次晨还有自己的调查要面对。",
+      "framing": "诺拉西肩旁朝北65mm莉娜中近景，询问通知在桌北侧、外套已穿上。",
+      "composition": "当天傍晚将近六点，咖啡店西窗是阴雨里的暗蓝天光，东吧台亮着暖灯。西北桌莉娜坐北，包口朝自己，诺拉坐南；湿伞立在南门，灰信封始终未取出。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定34秒，她把通知转向自己，阻止记者将它拍走。",
+      "focus": "来源要求公开更正而不是替记者补解释，她次晨还有自己的调查要面对。",
+      "start": "诺拉移开拇指，自己的批量签名推断与来源限定同时露出来。",
+      "action": "诺拉的手机提醒六点已到。莉娜从包里取出自己的停权与询问通知放到桌边，穿好外套；诺拉没有拿来拍，也没有新打开记录。\n诺拉看了一眼六点提醒，再看莉娜放到桌边的正式询问通知。莉娜把日期朝自己转回去，她没有答应让记者拍。",
+      "end": "莉娜把通知收进包，诺拉不再索要记录副本。",
+      "sound": "门铃、咖啡机和杯碟底声连续，周围客人无可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E15-D019",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "They pulled the follow-up.",
+          "translationZh": "续稿被撤了。",
+          "tone": "想让对方看到自己也有损失",
+          "start": 1,
+          "end": 3.3
+        },
+        {
+          "id": "E15-D020",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "I have to answer this in the morning.",
+          "translationZh": "我明早得答复这个。",
+          "tone": "把自己的正式通知放到桌边",
+          "start": 3.6,
+          "end": 7.4
+        },
+        {
+          "id": "E15-D216",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "I can explain that you warned me.",
+          "translationZh": "我可以说明你提醒过我。",
+          "tone": "第一次提出自己承担记录",
+          "start": 13,
+          "end": 15.75
+        },
+        {
+          "id": "E15-D217",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "To who? Your editor? The people asking me for every message?",
+          "translationZh": "跟谁说明？你编辑，还是那些要我交全部消息的人？",
+          "tone": "两个世界的代价不相等",
+          "start": 16.05,
+          "end": 20.36
+        },
+        {
+          "id": "E15-D218",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "In the correction.",
+          "translationZh": "写进更正。",
+          "tone": "不再讨一条解释公司的引语",
+          "start": 20.66,
+          "end": 21.84
+        },
+        {
+          "id": "E15-D219",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "Then write it. Don't ask me to fix it first.",
+          "translationZh": "那就写，别先来找我替你补。",
+          "tone": "将纠错责任退回作者",
+          "start": 22.14,
+          "end": 26.06
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 12,
+          "start": "诺拉移开拇指，自己的批量签名推断与来源限定同时露出来。",
+          "action": "诺拉的手机提醒六点已到。莉娜从包里取出自己的停权与询问通知放到桌边，穿好外套；诺拉没有拿来拍，也没有新打开记录。",
+          "end": "记者失去续稿，来源已为披露付工作代价，两人的利益无法互换。",
+          "dialogueCueIds": [
+            "E15-D019",
+            "E15-D020"
+          ],
+          "sourceShotIds": [
+            "E15-SH014"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        },
+        {
+          "duration": 22,
+          "start": "记者失去续稿，来源已为披露付工作代价，两人的利益无法互换。",
+          "action": "诺拉看了一眼六点提醒，再看莉娜放到桌边的正式询问通知。莉娜把日期朝自己转回去，她没有答应让记者拍。",
+          "end": "莉娜把通知收进包，诺拉不再索要记录副本。",
+          "dialogueCueIds": [
+            "E15-D216",
+            "E15-D217",
+            "E15-D218",
+            "E15-D219"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 24
+        }
+      ],
+      "viewerEntry": "诺拉移开拇指，自己的批量签名推断与来源限定同时露出来。",
+      "viewerExit": "莉娜把通知收进包，诺拉不再索要记录副本。",
+      "cutTrigger": "莉娜收通知离座，切保持空椅和未收笔记的距离。",
+      "next": "接E15-SH015；莉娜收通知离座，切保持空椅和未收笔记的距离。"
+    },
+    {
+      "id": "E15-SH015",
+      "sceneId": "E15-SC04",
+      "sourceShotIds": [
+        "E15-SH015"
+      ],
+      "duration": 9,
+      "characters": [
+        "NORA",
+        "LENA"
+      ],
+      "onScreenCharacterIds": [
+        "NORA",
+        "LENA"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "最后只能用她实际说过的话；新材料和原谅都没带回来。",
+      "framing": "桌西南角35mm中全景，诺拉仍坐南，莉娜沿桌东侧去回收台再向南门走。",
+      "composition": "当天傍晚将近六点，咖啡店西窗是阴雨里的暗蓝天光，东吧台亮着暖灯。西北桌莉娜坐北，包口朝自己，诺拉坐南；湿伞立在南门，灰信封始终未取出。 本镜画内角色：NORA,LENA。",
+      "camera": "固定9秒，不追莉娜出门。",
+      "focus": "最后只能用她实际说过的话；新材料和原谅都没带回来。",
+      "start": "莉娜把通知收进包，诺拉不再索要记录副本。",
+      "action": "莉娜把通知收回包，拿杯去回收台，向南门走。诺拉问能否引用，她没有回座，只指一下还打开的第一次笔记。",
+      "end": "莉娜离开，原警告和新反证都留给诺拉，问题尚未解。",
+      "sound": "门铃、咖啡机和杯碟底声连续，周围客人无可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E15-D021",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "What can I use?",
+          "translationZh": "那我能用什么？",
+          "tone": "人已经要走，仍追一条可用答复",
+          "start": 1,
+          "end": 3.3
+        },
+        {
+          "id": "E15-D022",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "Use what I actually told you.",
+          "translationZh": "就用我当时真跟你说的。",
+          "tone": "指第一次笔记，没回座也没给新结论",
+          "start": 3.6,
+          "end": 6.9
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 9,
+          "start": "莉娜把通知收进包，诺拉不再索要记录副本。",
+          "action": "莉娜把通知收回包，拿杯去回收台，向南门走。诺拉问能否引用，她没有回座，只指一下还打开的第一次笔记。",
+          "end": "莉娜离开，原警告和新反证都留给诺拉，问题尚未解。",
+          "dialogueCueIds": [
+            "E15-D021",
+            "E15-D022"
+          ],
+          "sourceShotIds": [
+            "E15-SH015"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 11
+        }
+      ],
+      "viewerEntry": "莉娜把通知收进包，诺拉不再索要记录副本。",
+      "viewerExit": "莉娜离开，原警告和新反证都留给诺拉，问题尚未解。",
+      "cutTrigger": "门铃后留诺拉，接同日晚间更正，不再跳过数月。",
+      "next": "本场完成，按正式EP场序转场；门铃后留诺拉，接同日晚间更正，不再跳过数月。"
+    }
+  ],
+  "continuityNote": "首次明确跳时四个月，以春枝与新案卷日期落地。路易吉改LUIGI-FORMAL深蓝西装白衬衫无领带，双手自由。本集州案只撤恐怖主义相关控罪，不减普通谋杀。公司公开获准去身份记录仅证明认证登录、工作页面访问、签名人亲签；不提前知道医生看到了哪些附件，E18与E21才推进。女传播职员PR-STAFF与E11一致；女编辑EDITOR-DESK与E09一致。",
+  "dramaturgy": {
+    "openingQuestion": "法律上的一次撤控，是否意味着其他争夺也开始顺着青年一方？",
+    "pursuit": "海伦拆开案后恐惧与本人证据；公司用真记录回应过度断言；诺拉赶在六点前向来源索要解释。",
+    "reversal": "特别控罪撤销同时，真实登录与亲签推翻空壳解释，来源也拒绝自动流程猜测。",
+    "cost": "青年连胜利页都须与剩余控罪一起拿，诺拉失去续稿，莉娜仍要答正式询问。",
+    "cliffhanger": "记者只拿回自己早已记下的警告，手里已有材料也还未被读懂。",
+    "nextEpisodeBridge": "E16继续发生有限法律胜利，但完整通信会以同样的‘两面证据’反压青年。"
+  },
+  "productionUnitNote": "旧E编号只作生产来源；正式观众分集依当前24集短剧场序。长镜按generationSegments连续制作，段间继承人物/道具/轴线。"
+}

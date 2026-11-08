@@ -1,0 +1,378 @@
+{
+  "scope": "narrative_video",
+  "shotIds": [
+    "U003-01",
+    "U003-02",
+    "U003-03",
+    "U003-04",
+    "U003-05",
+    "U003-06"
+  ],
+  "decisions": [
+    {
+      "shotId": "U003-01",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "铜镜人影带来对封印的指认",
+        "audiencePayoff": "铜镜人影带来对封印的指认",
+        "trigger": "铜镜人影带来对封印的指认",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "focusTargetEnd": "台后剑影与阿照",
+        "exitMatch": "阿照在台旁，真剑未动"
+      },
+      "camera": {
+        "shotScale": "中近景",
+        "position": "修复台南侧",
+        "height": "台面略上方",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "铜镜人影带来对封印的指认",
+        "focusTarget": "近处完成待复核记录",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "真剑台—双方的同一摄影侧，影剑与真剑同时能分辨；05横移不越门",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "近记录、真剑托架",
+        "midground": "陆闻舟与阿照",
+        "background": "固定真剑托架、室内门框或走廊东窗；按实际镜号区分",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "铜镜人影带来对封印的指认"
+      },
+      "temporal": {
+        "durationSeconds": 30,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "铜镜人影带来对封印的指认",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：修复台南侧",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：修复台南侧",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U003-01-F1",
+            "timeSeconds": 0,
+            "description": "近处完成待复核记录"
+          },
+          {
+            "eventId": "U003-01-F2",
+            "timeSeconds": 9,
+            "description": "台后剑影与阿照"
+          }
+        ],
+        "edit": {
+          "entry": "本候选明确事件起于拂晓前，修复室内人工工作灯稳定，走廊窗开始透灰蓝晨光，不是145秒从深夜突然跳到白昼。真实青铜剑始终托架不动，影剑与腕光是超自然层。修复台到门两步，门与托架同在室内摄影侧可见。",
+          "exit": "阿照在台旁，真剑未动",
+          "preferredTransition": "从本片真实初态开始，建立空间后继续",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；修复室空调/纸笔/门把与两人呼吸；回忆声音仅两位原演员，走廊换底噪但无第三人可辨话"
+        }
+      }
+    },
+    {
+      "shotId": "U003-02",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "威胁暴露双方都受束缚",
+        "audiencePayoff": "威胁暴露双方都受束缚",
+        "trigger": "威胁暴露双方都受束缚",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "影剑抵领口，真剑在托架"
+      },
+      "camera": {
+        "shotScale": "中近景",
+        "position": "修复台同侧",
+        "height": "陆胸口至领口",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "威胁暴露双方都受束缚",
+        "focusTarget": "领口/持影剑手与真实剑托架的可辨层次",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "真剑台—双方的同一摄影侧，影剑与真剑同时能分辨；05横移不越门",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "领口前影剑、真剑托架",
+        "midground": "陆闻舟与阿照",
+        "background": "固定真剑托架、室内门框或走廊东窗；按实际镜号区分",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "威胁暴露双方都受束缚"
+      },
+      "temporal": {
+        "durationSeconds": 32,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "威胁暴露双方都受束缚",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：修复台同侧",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：修复台同侧",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U003-02-F1",
+            "timeSeconds": 0,
+            "description": "领口/持影剑手与真实剑托架的可辨层次"
+          }
+        ],
+        "edit": {
+          "entry": "阿照在台旁，真剑未动",
+          "exit": "影剑抵领口，真剑在托架",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；修复室空调/纸笔/门把与两人呼吸；回忆声音仅两位原演员，走廊换底噪但无第三人可辨话"
+        }
+      }
+    },
+    {
+      "shotId": "U003-03",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "认错只针对记起的违意行为",
+        "audiencePayoff": "认错只针对记起的违意行为",
+        "trigger": "认错只针对记起的违意行为",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "影剑撤离，陆扶柜"
+      },
+      "camera": {
+        "shotScale": "近景",
+        "position": "陆柜前同侧",
+        "height": "陆胸口",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "认错只针对记起的违意行为",
+        "focusTarget": "陆握紧手/面部与阿照撤影剑的工作区域",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "真剑台—双方的同一摄影侧，影剑与真剑同时能分辨；05横移不越门",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "扶柜手、收回影剑",
+        "midground": "陆闻舟与阿照",
+        "background": "固定真剑托架、室内门框或走廊东窗；按实际镜号区分",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "认错只针对记起的违意行为"
+      },
+      "temporal": {
+        "durationSeconds": 32,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "认错只针对记起的违意行为",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：陆柜前同侧",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：陆柜前同侧",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U003-03-F1",
+            "timeSeconds": 0,
+            "description": "陆握紧手/面部与阿照撤影剑的工作区域"
+          }
+        ],
+        "edit": {
+          "entry": "影剑抵领口，真剑在托架",
+          "exit": "影剑撤离，陆扶柜",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；修复室空调/纸笔/门把与两人呼吸；回忆声音仅两位原演员，走廊换底噪但无第三人可辨话"
+        }
+      }
+    },
+    {
+      "shotId": "U003-04",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "准确记下责任与她愿意承担的风险",
+        "audiencePayoff": "准确记下责任与她愿意承担的风险",
+        "trigger": "准确记下责任与她愿意承担的风险",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "手机与打开个人本都在桌边，笔放桌，两纸折入本，双手空"
+      },
+      "camera": {
+        "shotScale": "中近景",
+        "position": "桌侧同轴",
+        "height": "落笔手略上方",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "准确记下责任与她愿意承担的风险",
+        "focusTarget": "两纸修改面与腕线的可辨工作区域",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "真剑台—双方的同一摄影侧，影剑与真剑同时能分辨；05横移不越门",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "打开个人本/两纸、桌边手机/笔、腕光",
+        "midground": "陆闻舟与阿照",
+        "background": "固定真剑托架、室内门框或走廊东窗；按实际镜号区分",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "准确记下责任与她愿意承担的风险"
+      },
+      "temporal": {
+        "durationSeconds": 54,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "准确记下责任与她愿意承担的风险",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：桌侧同轴",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：桌侧同轴",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U003-04-F1",
+            "timeSeconds": 0,
+            "description": "两纸修改面与腕线的可辨工作区域"
+          }
+        ],
+        "edit": {
+          "entry": "影剑撤离，陆扶柜",
+          "exit": "手机与打开个人本都在桌边，笔放桌，两纸折入本，双手空",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；修复室空调/纸笔/门把与两人呼吸；回忆声音仅两位原演员，走廊换底噪但无第三人可辨话"
+        }
+      }
+    },
+    {
+      "shotId": "U003-05",
+      "decision": {
+        "primaryTechniqueId": "M03",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "让记忆失去而不是收回她的选择",
+        "audiencePayoff": "让记忆失去而不是收回她的选择",
+        "trigger": "让记忆失去而不是收回她的选择",
+        "cameraMode": "moving",
+        "focusMode": "follow",
+        "exitMatch": "手机入袋、个人本左手，二人先后出门，真剑未动，门已带上"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "修复台外侧两步短轨至室内门框",
+        "height": "站姿胸口",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "让记忆失去而不是收回她的选择",
+        "focusTarget": "沿台旁走向门把的阿照，后续陆取物在可辨景深内",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "真剑台—双方的同一摄影侧，影剑与真剑同时能分辨；05横移不越门",
+        "movementIntent": "阿照从台旁走至门把时，机身沿台外侧横移两步，止室内门框；不越门"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "腕光/空手、打开个人本、室内门框",
+        "midground": "陆闻舟与阿照",
+        "background": "固定真剑托架、室内门框或走廊东窗；按实际镜号区分",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "让记忆失去而不是收回她的选择"
+      },
+      "temporal": {
+        "durationSeconds": 50,
+        "cameraMotion": {
+          "type": "truck",
+          "motivation": "让记忆失去而不是收回她的选择",
+          "path": "阿照从台旁走至门把时，机身沿台外侧横移两步，止室内门框；不越门",
+          "start": "手机、打开个人本与笔留桌，两纸可看；陆双手空、阿照仍在台旁",
+          "acceleration": "阿照起步后短轨柔和起移，不抢她第一步",
+          "peak": "沿两步轨道匀速侧向跟随阿照到门",
+          "deceleration": "到室内门框前平缓收速，演员出画后机身停住",
+          "end": "手机入袋、个人本左手，二人先后出门，真剑未动，门已带上",
+          "framingChange": "台旁中景逐步转到室内门框中景，门外走廊不透门追看"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U003-05-F1",
+            "timeSeconds": 0,
+            "description": "沿台旁走向门把的阿照，后续陆取物在可辨景深内"
+          }
+        ],
+        "edit": {
+          "entry": "手机、打开个人本与笔留桌，两纸可看；陆双手空、阿照仍在台旁",
+          "exit": "手机入袋、个人本左手，二人先后出门，真剑未动，门已带上",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；修复室空调/纸笔/门把与两人呼吸；回忆声音仅两位原演员，走廊换底噪但无第三人可辨话"
+        }
+      }
+    },
+    {
+      "shotId": "U003-06",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "自由不等于原谅，保留同行距离",
+        "audiencePayoff": "自由不等于原谅，保留同行距离",
+        "trigger": "自由不等于原谅，保留同行距离",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "她前行两步，他隔数步同行"
+      },
+      "camera": {
+        "shotScale": "中远景",
+        "position": "走廊窗内侧",
+        "height": "二人肩高",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "自由不等于原谅，保留同行距离",
+        "focusTarget": "阿照影子与二人实际间距",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "真剑台—双方的同一摄影侧，影剑与真剑同时能分辨；05横移不越门",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "窗光影子、陆左手个人本",
+        "midground": "陆闻舟与阿照",
+        "background": "走廊东窗与同一修复室门",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "自由不等于原谅，保留同行距离"
+      },
+      "temporal": {
+        "durationSeconds": 24,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "自由不等于原谅，保留同行距离",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：走廊窗内侧",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：走廊窗内侧",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U003-06-F1",
+            "timeSeconds": 0,
+            "description": "阿照影子与二人实际间距"
+          }
+        ],
+        "edit": {
+          "entry": "拂晓走廊，阿照已先到窗边；陆闻舟左手持个人本在数步外，手机已收袋，修复室门已带上。",
+          "exit": "她前行两步，他隔数步同行",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；修复室空调/纸笔/门把与两人呼吸；回忆声音仅两位原演员，走廊换底噪但无第三人可辨话"
+        }
+      }
+    }
+  ]
+}

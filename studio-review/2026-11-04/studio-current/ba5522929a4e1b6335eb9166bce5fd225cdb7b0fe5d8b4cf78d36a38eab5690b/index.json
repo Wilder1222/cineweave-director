@@ -1,0 +1,63 @@
+{
+  "topic": "Z009",
+  "title": "红线金盒",
+  "projectId": "ba5522929a4e1b6335eb9166bce5fd225cdb7b0fe5d8b4cf78d36a38eab5690b",
+  "currentRevision": null,
+  "source": "browser UI DOM",
+  "documents": [
+    {
+      "documentId": "dee4156543ab81747969cc3f870cc057d7039e080a6be65710edf064735736f5",
+      "meta": "提示词",
+      "title": "Z009 红线金盒｜审阅与来源｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "3a458b400b76ce557c2509eb29b9651e2de6322cbcbda6e64a4e6108067c83f2",
+      "utf8Bytes": 1633,
+      "readAt": "2026-11-04T06:43:11.903Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts",
+      "file": "dee4156543ab81747969cc3f870cc057d7039e080a6be65710edf064735736f5.md",
+      "proposals": {
+        "readAt": "2026-11-04T06:43:12.797Z",
+        "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#review",
+        "visibleText": "Agent 协作审阅\n当前文档提案\nZ009 红线金盒｜审阅与来源｜20261031审阅版 · 0 项提案\n回到剧本\n暂无待审阅提案\n\n在剧本编辑器提交候选。\n\n进入剧本",
+        "bodies": []
+      }
+    },
+    {
+      "documentId": "06ad89f1fabf229b6060679af0d18bf06d1211eb482f50921e1a03ca3fcb5e6e",
+      "meta": "提示词",
+      "title": "Z009 红线金盒｜分镜与视频提示｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "540e4a106a73534ac84a1ccaaade7c87ac95e7d5acdc944580c28bc0504179ec",
+      "utf8Bytes": 34213,
+      "readAt": "2026-11-04T06:43:19.329Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts",
+      "file": "06ad89f1fabf229b6060679af0d18bf06d1211eb482f50921e1a03ca3fcb5e6e.md",
+      "proposals": {
+        "readAt": "2026-11-04T06:43:20.155Z",
+        "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#review",
+        "visibleText": "Agent 协作审阅\n当前文档提案\nZ009 红线金盒｜分镜与视频提示｜20261031审阅版 · 0 项提案\n回到剧本\n暂无待审阅提案\n\n在剧本编辑器提交候选。\n\n进入剧本",
+        "bodies": []
+      }
+    },
+    {
+      "documentId": "4de2428e6ff94c17ad9997fab451fe25c913f7e8b0f371f19085a236a8e907e6",
+      "meta": "剧本",
+      "title": "Z009 红线金盒｜剧本｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "4dd7cf9bf632b2ff88fa58ec9c63b5e3dbc6c4bef13e09a2c2bac246f7569e8a",
+      "utf8Bytes": 3799,
+      "readAt": "2026-11-04T06:43:27.401Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts",
+      "file": "4de2428e6ff94c17ad9997fab451fe25c913f7e8b0f371f19085a236a8e907e6.md",
+      "proposals": {
+        "readAt": "2026-11-04T06:43:28.359Z",
+        "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#review",
+        "visibleText": "Agent 协作审阅\n当前文档提案\nZ009 红线金盒｜剧本｜20261031审阅版 · 0 项提案\n回到剧本\n暂无待审阅提案\n\n在剧本编辑器提交候选。\n\n进入剧本",
+        "bodies": []
+      }
+    }
+  ],
+  "exportComplete": true,
+  "exportDocumentCount": 3,
+  "exportCompletenessBasis": "UI directory inventory equals every document edit/readback; 22-project export completed before this annotation"
+}

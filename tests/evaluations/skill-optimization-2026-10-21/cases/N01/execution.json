@@ -1,0 +1,29 @@
+{
+  "case_id": "N01",
+  "model": null,
+  "tokens": null,
+  "elapsed_time": null,
+  "read_files": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\N01\\request.txt",
+      "sha256": "135d8202de8b015e8c5f99ae2428e21852134df7ff8a42d59cb248b9fba587a1"
+    }
+  ],
+  "checks": [
+    {
+      "name": "translation_only",
+      "result": "Output contains only the requested Simplified Chinese translation."
+    },
+    {
+      "name": "utf8_lf",
+      "result": "Written as UTF-8 with LF newline."
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\N01\\output.md",
+      "sha256": "c7b2d0a87b210ecad6b142c77f419e059a6e549fc6199a0f662010235b004927"
+    }
+  ],
+  "limitations": []
+}

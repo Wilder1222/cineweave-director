@@ -1,0 +1,1185 @@
+{
+  "number": 16,
+  "title": "改掉那一行",
+  "logline": "来源拒绝提供新的确定性；诺拉当夜以自己为主语公开更正，两日后接受不录音、不擅自发表等边界。",
+  "dramaturgy": {
+    "openingQuestion": "诺拉是在找事实，还是在找一句能保住旧报道的话？",
+    "pursuit": "记者需要先承认自己的错误，再争取来源允许继续追查的有限空间。",
+    "reversal": "来源拒绝提供新的确定性；诺拉当夜以自己为主语公开更正，两日后接受不录音、不擅自发表等边界。",
+    "cost": "只得到一个可追查的问题，没有新的公开引语、原件或全面信任。",
+    "cliffhanger": "她终于看见自己原照片中一直存在的附件清单提示。得到的是可追查的问题和有限合作，并非两队列答案或全面和解。",
+    "nextEpisodeBridge": "死刑风险解除之后，青年愿不愿交出同时伤及自己的完整通信？"
+  },
+  "movements": [
+    {
+      "title": "来源拒绝补答案",
+      "startScene": "E15-SC04",
+      "question": "记者争一个能救原文的解释，来源拒绝再为她提供确定性。",
+      "turn": "自动打开假设、三病例推论、丢稿诉苦依次失败，纠错责任回到记者。"
+    },
+    {
+      "title": "把自己写成主语",
+      "startScene": "E18-SC01",
+      "question": "让公开更正紧接反证，不拖到数月后的另一听证。",
+      "turn": "她把自己作主语，先承认已经知道的错误，再写仍未知的范围。"
+    },
+    {
+      "title": "有限恢复合作",
+      "startScene": "E18-SC03",
+      "question": "用接受来源边界换来一次有限核对，不安排立刻和解。",
+      "turn": "诺拉接受不发表、不录音、不擅联络单位，重新看见自己原照片中的附件提示。"
+    }
+  ],
+  "continuityNote": "当前播出编号为24集短剧；E01–E24场号/制作镜号只作稳定资产定位。各集以完整场景为边界，英语对白与中文对照同步。死刑风险解除之后，青年愿不愿交出同时伤及自己的完整通信？",
+  "scenes": [
+    {
+      "id": "E15-SC04",
+      "location": "CAFE",
+      "time": "傍晚·同日临近18:00至天色转暗",
+      "script": "当天傍晚将近六点，咖啡店西窗是阴雨里的暗蓝天光，东吧台亮着暖灯。西北桌莉娜坐北，包口朝自己，诺拉坐南；湿伞立在南门，灰信封始终未取出。\n\n咖啡桌上诺拉将已公开的认证记录推向莉娜，要她解释怎样仍可能没人读。莉娜只看了一页，便把记录推回她那边，不像上次那样交出新材料。\n\n诺拉（英语，先找一个能保住旧说法的解释）：Could that be automatic? Like the screen just opens?\n中文对照：会不会是自动的？比如页面自己打开？\n莉娜（英语，把文件推还，不交给她新的断言）：You want me to say yes. I can't prove that.\n中文对照：你想让我说是，可我证明不了。\n\n莉娜将认证记录推回，诺拉把其中一页转了九十度，指着访问时间再问。莉娜没有接笔，也没有替她把空白处补成技术说明。\n\n诺拉（英语，降低请求口气，仍想得到可引用解释）：I'm not asking you to prove it. Could it happen?\n中文对照：我没让你证明，就问有没有可能。\n莉娜（英语，识破用途）：And then you write that I said it could.\n中文对照：然后你就写我说有可能。\n诺拉（英语，争取一次信任）：I'd check it.\n中文对照：我会再核实。\n莉娜（英语，不接受未来承诺替代旧记录）：You were going to check last time.\n中文对照：上次你也是要核实。\n\n莉娜让诺拉翻回第一次的笔记，那句没看过访问记录仍在那里。诺拉拇指盖住自己当时写的判断，莉娜把杯子端离文件，不再替她看下一页。\n\n莉娜（英语，回到第一次实际说过的限制，不把没看过偷换成没持有）：I told you I hadn't seen the logs. You wrote it down.\n中文对照：我说过，我没看过访问记录。你自己都记下来了。\n诺拉（英语，承认自己的推断，不把责任推回来源）：I thought three cases was enough.\n中文对照：我以为三个案子就够了。\n\n诺拉拇指仍压着自己的判断。莉娜没有把她的手拿开，只让她顺着前一行读；南门有人进来，两人让服务员从桌东侧经过。\n\n莉娜（英语，要求她说清推论跨度）：Enough for what? I gave you three cases to check.\n中文对照：够说明什么？我给三个案子，是让你查。\n诺拉（英语，仍想依靠模式辩护）：The same thing kept happening.\n中文对照：同样的事一直在发生。\n莉娜（英语，拒绝被用作确定性来源）：Then write that. You didn't need to make me say the rest.\n中文对照：那就写那个。不用把后面的也算我说的。\n\n诺拉的手机提醒六点已到。莉娜从包里取出自己的停权与询问通知放到桌边，穿好外套；诺拉没有拿来拍，也没有新打开记录。\n\n诺拉（英语，想让对方看到自己也有损失）：They pulled the follow-up.\n中文对照：续稿被撤了。\n莉娜（英语，把自己的正式通知放到桌边）：I have to answer this in the morning.\n中文对照：我明早得答复这个。\n\n诺拉看了一眼六点提醒，再看莉娜放到桌边的正式询问通知。莉娜把日期朝自己转回去，她没有答应让记者拍。\n\n诺拉（英语，第一次提出自己承担记录）：I can explain that you warned me.\n中文对照：我可以说明你提醒过我。\n莉娜（英语，两个世界的代价不相等）：To who? Your editor? The people asking me for every message?\n中文对照：跟谁说明？你编辑，还是那些要我交全部消息的人？\n诺拉（英语，不再讨一条解释公司的引语）：In the correction.\n中文对照：写进更正。\n莉娜（英语，将纠错责任退回作者）：Then write it. Don't ask me to fix it first.\n中文对照：那就写，别先来找我替你补。\n\n莉娜把通知收回包，拿杯去回收台，向南门走。诺拉问能否引用，她没有回座，只指一下还打开的第一次笔记。\n\n诺拉（英语，人已经要走，仍追一条可用答复）：What can I use?\n中文对照：那我能用什么？\n莉娜（英语，指第一次笔记，没回座也没给新结论）：Use what I actually told you.\n中文对照：就用我当时真跟你说的。",
+      "entry": "记者争一个能救原文的解释，来源拒绝再为她提供确定性。",
+      "exit": "自动打开假设、三病例推论、丢稿诉苦依次失败，纠错责任回到记者。 来源次晨要接受正式询问，诺拉续稿被撤；关系尚未修复。",
+      "dramaticFunction": "记者争一个能救原文的解释，来源拒绝再为她提供确定性。",
+      "turn": "自动打开假设、三病例推论、丢稿诉苦依次失败，纠错责任回到记者。",
+      "exitCost": "来源次晨要接受正式询问，诺拉续稿被撤；关系尚未修复。",
+      "sceneRhythm": "三个改策略回合串成同一次见面；六点提醒是实际失去机会，不用雨声延长沉默。",
+      "sourceSceneIds": [
+        "E15-SC04"
+      ],
+      "plannedDuration": 112
+    },
+    {
+      "id": "E18-SC01",
+      "location": "NEWSROOM",
+      "time": "夜·真实访问反证公布及咖啡店争执的同日晚间",
+      "script": "同日晚间编辑部东桌已空，西桌只亮诺拉的工作灯。黑手机免提放在更正打印稿旁，红本压着未付账单，托马斯的声音从手机传来，人不在房间。\n\n电话指出被动句；诺拉划掉短语，重写自己作主语，念出错误所在。\n\n编辑托马斯电话声音（英语，不接被动说法，等她自己回答）：Cut 'was misunderstood.' What did you get wrong?\n中文对照：把“被误解”删掉。你到底错在哪儿？\n诺拉（英语，直接读出自己发表过的断言）：I wrote, 'Nobody opened the files.' I can't back that up.\n中文对照：我写了“没人打开过文件”。我拿不出证据。\n\n诺拉把删去的被动句留在修订记录，将公司真实访问证明与自己的原句并排。她想在下一段先写尚未得到的材料，托马斯要求她先把错误说完。\n\n诺拉（英语，怕更正会把调查一起抹去）：We still don't know whether they read everything.\n中文对照：我们还是不知道他们有没有读完所有材料。\n编辑托马斯电话声音（英语，保留调查空间，拒绝转移）：Say that after the correction. Don't use it to get around what we do know.\n中文对照：放在更正后面。别拿它绕开已经知道的事。\n诺拉（英语，先承担已证实的错误）：Okay. Someone accessed the page. My sentence was wrong.\n中文对照：好，有人访问过页面。我那句写错了。\n\n诺拉听到委约暂停，伸手塞账单，听完要求后停在半途，转问署名。\n\n编辑托马斯电话声音（英语，工作安排说完便停，不安慰）：We're holding your next assignment. Legal needs your notes and source files tonight.\n中文对照：你下一篇先停了。法务今晚就要你的笔记和原始采访资料。\n诺拉（英语，先确认自己要承担的署名）：My name stays on the correction?\n中文对照：更正还署我的名字？\n\n诺拉把更正页转回自己，指尖停在发送键前，等编辑确认署名。\n\n编辑托马斯电话声音（英语，把发布决定留给她）：Yes. Are you ready?\n中文对照：对。可以发了吗？\n诺拉（英语，决定）：Send it. Leave my name on.\n中文对照：发吧。名字留下。\n\n她按发送，等更正出现已发送状态，结束编辑通话。随后打开莉娜联系人拨号；线路转入语音信箱。提示末声结束，她将获准封面照片打印件拉到灯下，低声留言。\n\n诺拉（英语，留言只留来意，不抢先解释自己）：Lena, it's Nora. The correction's up. I've still got questions about your report. Call me when you can.\n中文对照：莉娜，是诺拉。更正发了。你的报告还有几处我想问问。方便的话，给我回个电话。\n\n留言结束，她把手机放回桌右，灯下留下封面照片打印件和红本。",
+      "entry": "让公开更正紧接反证，不拖到数月后的另一听证。",
+      "exit": "她把自己作主语，先承认已经知道的错误，再写仍未知的范围。 下一委约暂停、笔记交法务；更正有她的名字，来源尚未回复。",
+      "dramaticFunction": "让公开更正紧接反证，不拖到数月后的另一听证。",
+      "turn": "她把自己作主语，先承认已经知道的错误，再写仍未知的范围。",
+      "exitCost": "下一委约暂停、笔记交法务；更正有她的名字，来源尚未回复。",
+      "sceneRhythm": "改被动句—处理未解问题与已证实错误—收到职业代价—明确署名发布—单次留言。",
+      "sourceSceneIds": [
+        "E18-SC01"
+      ],
+      "plannedDuration": 82
+    },
+    {
+      "id": "E18-SC03",
+      "location": "CAFE",
+      "time": "下午·上述更正发布两日后",
+      "script": "更正发布两日后下午，西北咖啡桌莉娜坐北，灰信封紧挨左手、手机扣着，诺拉坐南，红本仍在膝上；东侧磨豆机的工作声停下，她才开口。\n\n诺拉等磨豆机停后道歉，莉娜不松信封，直接把律师的警惕说给她。\n\n诺拉（英语，不要求对方接住这句道歉）：You didn't say that. I put it in the story. I'm sorry.\n中文对照：那些话不是你说的，是我写进报道的。对不起。\n莉娜（英语，信封仍压着，先说出防备）：My lawyer said you'd come back for another quote.\n中文对照：我的律师说，你还会来找我要一句话。\n\n她说面试安排，同时把信封收近包口；诺拉收回原想开本子的手。\n\n莉娜（英语，有求职安排，不再承担记者的取材风险）：I've got an interview Monday. I need to get back to work. I'm not doing this again.\n中文对照：我周一有面试。我得回去工作。我不想再来一次。\n\n诺拉把问题便签放桌中，说明不是正式受访请求；莉娜读到附件清单字样后停止收包。\n\n诺拉（英语，只放下问题便签，不打开录音）：We can keep this off the record. What did I miss?\n中文对照：这次可以不写进报道。我到底漏了什么？\n\n莉娜没有立即拿出报告，先把诺拉的问题便签转到桌中，指着她还在口袋里的手机。诺拉将空着的双手放上桌。\n\n莉娜（英语，限定本次谈话）：Nothing from today goes in a story unless we agree later.\n中文对照：今天说的，以后另说之前都不能写。\n诺拉（英语，接受具体规则）：Agreed. No recording. I'll ask before I use anything.\n中文对照：同意。不录，用之前先问你。\n莉娜（英语，把自己生活留在自己手里）：Don't contact the places I'm applying to.\n中文对照：也别去联系我投简历的地方。\n诺拉（英语，不索取新交换条件）：I understand.\n中文对照：明白。\n\n莉娜取原报告遮住姓名，指附件提示；诺拉从右衣袋取手机，打开获准拍的去身份照片核对，再把红本上桌记问题，不新拍患者资料。\n\n莉娜（英语，指着已有照片能核到的那一行）：You copied the date. What about 'attachments: see list'? It's right there in the photo I let you take.\n中文对照：日期你抄了。“附件：见清单”呢？我让你拍的那张照片里就有。\n诺拉（英语，核对到旧照片里的那行）：I see it.\n中文对照：我看到了。",
+      "entry": "用接受来源边界换来一次有限核对，不安排立刻和解。",
+      "exit": "诺拉接受不发表、不录音、不擅联络单位，重新看见自己原照片中的附件提示。 只得到一个可追查的问题，没有新的公开引语、原件或全面信任。",
+      "dramaticFunction": "用接受来源边界换来一次有限核对，不安排立刻和解。",
+      "turn": "诺拉接受不发表、不录音、不擅联络单位，重新看见自己原照片中的附件提示。",
+      "exitCost": "只得到一个可追查的问题，没有新的公开引语、原件或全面信任。",
+      "sceneRhythm": "道歉未获接纳—来源求职现实—提出原材料问题—谈妥范围—在旧照片核对一行。",
+      "sourceSceneIds": [
+        "E18-SC03"
+      ],
+      "plannedDuration": 89
+    }
+  ],
+  "shots": [
+    {
+      "id": "E15-SH012",
+      "sceneId": "E15-SC04",
+      "sourceShotIds": [
+        "E15-SH012"
+      ],
+      "duration": 35,
+      "characters": [
+        "LENA",
+        "NORA"
+      ],
+      "onScreenCharacterIds": [
+        "LENA",
+        "NORA"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "自动打开假设被拒，记者退到只问可能，来源不再愿被引用。",
+      "framing": "咖啡桌西侧40mm南北双人中景，莉娜北、诺拉南，南门湿伞在后层，灰信封没取出。",
+      "composition": "当天傍晚将近六点，咖啡店西窗是阴雨里的暗蓝天光，东吧台亮着暖灯。西北桌莉娜坐北，包口朝自己，诺拉坐南；湿伞立在南门，灰信封始终未取出。 本镜画内角色：LENA,NORA。",
+      "camera": "固定35秒，公开认证记录由南推北又被推回。",
+      "focus": "自动打开假设被拒，记者退到只问可能，来源不再愿被引用。",
+      "start": "诺拉红本未开，莉娜双手抱热杯。",
+      "action": "咖啡桌上诺拉将已公开的认证记录推向莉娜，要她解释怎样仍可能没人读。莉娜只看了一页，便把记录推回她那边，不像上次那样交出新材料。\n莉娜将认证记录推回，诺拉把其中一页转了九十度，指着访问时间再问。莉娜没有接笔，也没有替她把空白处补成技术说明。",
+      "end": "诺拉把访问页放下，只能打开第一次的采访笔记。",
+      "sound": "门铃、咖啡机和杯碟底声连续，周围客人无可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E15-D016",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "Could that be automatic? Like the screen just opens?",
+          "translationZh": "会不会是自动的？比如页面自己打开？",
+          "tone": "先找一个能保住旧说法的解释",
+          "start": 1,
+          "end": 5.7
+        },
+        {
+          "id": "E15-D017",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "You want me to say yes. I can't prove that.",
+          "translationZh": "你想让我说是，可我证明不了。",
+          "tone": "把文件推还，不交给她新的断言",
+          "start": 6,
+          "end": 11.7
+        },
+        {
+          "id": "E15-D209",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "I'm not asking you to prove it. Could it happen?",
+          "translationZh": "我没让你证明，就问有没有可能。",
+          "tone": "降低请求口气，仍想得到可引用解释",
+          "start": 14,
+          "end": 17.92
+        },
+        {
+          "id": "E15-D210",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "And then you write that I said it could.",
+          "translationZh": "然后你就写我说有可能。",
+          "tone": "识破用途",
+          "start": 18.22,
+          "end": 21.75
+        },
+        {
+          "id": "E15-D211",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "I'd check it.",
+          "translationZh": "我会再核实。",
+          "tone": "争取一次信任",
+          "start": 22.05,
+          "end": 23.23
+        },
+        {
+          "id": "E15-D212",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "You were going to check last time.",
+          "translationZh": "上次你也是要核实。",
+          "tone": "不接受未来承诺替代旧记录",
+          "start": 23.53,
+          "end": 26.27
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 13,
+          "start": "诺拉红本未开，莉娜双手抱热杯。",
+          "action": "咖啡桌上诺拉将已公开的认证记录推向莉娜，要她解释怎样仍可能没人读。莉娜只看了一页，便把记录推回她那边，不像上次那样交出新材料。",
+          "end": "她没拿到反驳反证的证据，来源不再补缺口。",
+          "dialogueCueIds": [
+            "E15-D016",
+            "E15-D017"
+          ],
+          "sourceShotIds": [
+            "E15-SH012"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 15
+        },
+        {
+          "duration": 22,
+          "start": "她没拿到反驳反证的证据，来源不再补缺口。",
+          "action": "莉娜将认证记录推回，诺拉把其中一页转了九十度，指着访问时间再问。莉娜没有接笔，也没有替她把空白处补成技术说明。",
+          "end": "诺拉把访问页放下，只能打开第一次的采访笔记。",
+          "dialogueCueIds": [
+            "E15-D209",
+            "E15-D210",
+            "E15-D211",
+            "E15-D212"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 24
+        }
+      ],
+      "viewerEntry": "记者争一个能救原文的解释，来源拒绝再为她提供确定性。",
+      "viewerExit": "诺拉把访问页放下，只能打开第一次的采访笔记。",
+      "cutTrigger": "莉娜要求她翻回旧笔记，切到记者如何看自己的记录。",
+      "next": "接E15-SH013；莉娜要求她翻回旧笔记，切到记者如何看自己的记录。",
+      "broadcastEpisode": 16,
+      "displayId": "EP16-001"
+    },
+    {
+      "id": "E15-SH013",
+      "sceneId": "E15-SC04",
+      "sourceShotIds": [
+        "E15-SH013"
+      ],
+      "duration": 34,
+      "characters": [
+        "NORA",
+        "LENA"
+      ],
+      "onScreenCharacterIds": [
+        "NORA"
+      ],
+      "offscreenCharacterIds": [
+        "LENA"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "她以三个病例辩护，来源逼她承认模式与断言之间的跨度。",
+      "framing": "莉娜西肩旁朝南65mm诺拉中近景，红本和她盖住判断的拇指在下部，莉娜的杯从前景移开。",
+      "composition": "当天傍晚将近六点，咖啡店西窗是阴雨里的暗蓝天光，东吧台亮着暖灯。西北桌莉娜坐北，包口朝自己，诺拉坐南；湿伞立在南门，灰信封始终未取出。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定34秒，不用纸件特写替她承受对话。",
+      "focus": "她以三个病例辩护，来源逼她承认模式与断言之间的跨度。",
+      "start": "诺拉把访问页放下，只能打开第一次的采访笔记。",
+      "action": "莉娜让诺拉翻回第一次的笔记，那句没看过访问记录仍在那里。诺拉拇指盖住自己当时写的判断，莉娜把杯子端离文件，不再替她看下一页。\n诺拉拇指仍压着自己的判断。莉娜没有把她的手拿开，只让她顺着前一行读；南门有人进来，两人让服务员从桌东侧经过。",
+      "end": "诺拉移开拇指，自己的批量签名推断与来源限定同时露出来。",
+      "sound": "门铃、咖啡机和杯碟底声连续，周围客人无可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E15-D018",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "I told you I hadn't seen the logs. You wrote it down.",
+          "translationZh": "我说过，我没看过访问记录。你自己都记下来了。",
+          "tone": "回到第一次实际说过的限制，不把没看过偷换成没持有",
+          "start": 1,
+          "end": 6.7
+        },
+        {
+          "id": "E15-D801",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "I thought three cases was enough.",
+          "translationZh": "我以为三个案子就够了。",
+          "tone": "承认自己的推断，不把责任推回来源",
+          "start": 7,
+          "end": 10.3
+        },
+        {
+          "id": "E15-D213",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "Enough for what? I gave you three cases to check.",
+          "translationZh": "够说明什么？我给三个案子，是让你查。",
+          "tone": "要求她说清推论跨度",
+          "start": 13,
+          "end": 16.92
+        },
+        {
+          "id": "E15-D214",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "The same thing kept happening.",
+          "translationZh": "同样的事一直在发生。",
+          "tone": "仍想依靠模式辩护",
+          "start": 17.22,
+          "end": 19.18
+        },
+        {
+          "id": "E15-D215",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "Then write that. You didn't need to make me say the rest.",
+          "translationZh": "那就写那个。不用把后面的也算我说的。",
+          "tone": "拒绝被用作确定性来源",
+          "start": 19.48,
+          "end": 24.19
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 12,
+          "start": "诺拉把访问页放下，只能打开第一次的采访笔记。",
+          "action": "莉娜让诺拉翻回第一次的笔记，那句没看过访问记录仍在那里。诺拉拇指盖住自己当时写的判断，莉娜把杯子端离文件，不再替她看下一页。",
+          "end": "早有的警告被重新看见，来源不会再替报道补确定性。",
+          "dialogueCueIds": [
+            "E15-D018",
+            "E15-D801"
+          ],
+          "sourceShotIds": [
+            "E15-SH013"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        },
+        {
+          "duration": 22,
+          "start": "早有的警告被重新看见，来源不会再替报道补确定性。",
+          "action": "诺拉拇指仍压着自己的判断。莉娜没有把她的手拿开，只让她顺着前一行读；南门有人进来，两人让服务员从桌东侧经过。",
+          "end": "诺拉移开拇指，自己的批量签名推断与来源限定同时露出来。",
+          "dialogueCueIds": [
+            "E15-D213",
+            "E15-D214",
+            "E15-D215"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 24
+        }
+      ],
+      "viewerEntry": "诺拉把访问页放下，只能打开第一次的采访笔记。",
+      "viewerExit": "诺拉移开拇指，自己的批量签名推断与来源限定同时露出来。",
+      "cutTrigger": "六点提醒响，记者提丢稿，切真正面临调查的人。",
+      "next": "接E15-SH014；六点提醒响，记者提丢稿，切真正面临调查的人。",
+      "broadcastEpisode": 16,
+      "displayId": "EP16-002"
+    },
+    {
+      "id": "E15-SH014",
+      "sceneId": "E15-SC04",
+      "sourceShotIds": [
+        "E15-SH014"
+      ],
+      "duration": 34,
+      "characters": [
+        "LENA",
+        "NORA"
+      ],
+      "onScreenCharacterIds": [
+        "LENA"
+      ],
+      "offscreenCharacterIds": [
+        "NORA"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "来源要求公开更正而不是替记者补解释，她次晨还有自己的调查要面对。",
+      "framing": "诺拉西肩旁朝北65mm莉娜中近景，询问通知在桌北侧、外套已穿上。",
+      "composition": "当天傍晚将近六点，咖啡店西窗是阴雨里的暗蓝天光，东吧台亮着暖灯。西北桌莉娜坐北，包口朝自己，诺拉坐南；湿伞立在南门，灰信封始终未取出。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定34秒，她把通知转向自己，阻止记者将它拍走。",
+      "focus": "来源要求公开更正而不是替记者补解释，她次晨还有自己的调查要面对。",
+      "start": "诺拉移开拇指，自己的批量签名推断与来源限定同时露出来。",
+      "action": "诺拉的手机提醒六点已到。莉娜从包里取出自己的停权与询问通知放到桌边，穿好外套；诺拉没有拿来拍，也没有新打开记录。\n诺拉看了一眼六点提醒，再看莉娜放到桌边的正式询问通知。莉娜把日期朝自己转回去，她没有答应让记者拍。",
+      "end": "莉娜把通知收进包，诺拉不再索要记录副本。",
+      "sound": "门铃、咖啡机和杯碟底声连续，周围客人无可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E15-D019",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "They pulled the follow-up.",
+          "translationZh": "续稿被撤了。",
+          "tone": "想让对方看到自己也有损失",
+          "start": 1,
+          "end": 3.3
+        },
+        {
+          "id": "E15-D020",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "I have to answer this in the morning.",
+          "translationZh": "我明早得答复这个。",
+          "tone": "把自己的正式通知放到桌边",
+          "start": 3.6,
+          "end": 7.4
+        },
+        {
+          "id": "E15-D216",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "I can explain that you warned me.",
+          "translationZh": "我可以说明你提醒过我。",
+          "tone": "第一次提出自己承担记录",
+          "start": 13,
+          "end": 15.75
+        },
+        {
+          "id": "E15-D217",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "To who? Your editor? The people asking me for every message?",
+          "translationZh": "跟谁说明？你编辑，还是那些要我交全部消息的人？",
+          "tone": "两个世界的代价不相等",
+          "start": 16.05,
+          "end": 20.36
+        },
+        {
+          "id": "E15-D218",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "In the correction.",
+          "translationZh": "写进更正。",
+          "tone": "不再讨一条解释公司的引语",
+          "start": 20.66,
+          "end": 21.84
+        },
+        {
+          "id": "E15-D219",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "Then write it. Don't ask me to fix it first.",
+          "translationZh": "那就写，别先来找我替你补。",
+          "tone": "将纠错责任退回作者",
+          "start": 22.14,
+          "end": 26.06
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 12,
+          "start": "诺拉移开拇指，自己的批量签名推断与来源限定同时露出来。",
+          "action": "诺拉的手机提醒六点已到。莉娜从包里取出自己的停权与询问通知放到桌边，穿好外套；诺拉没有拿来拍，也没有新打开记录。",
+          "end": "记者失去续稿，来源已为披露付工作代价，两人的利益无法互换。",
+          "dialogueCueIds": [
+            "E15-D019",
+            "E15-D020"
+          ],
+          "sourceShotIds": [
+            "E15-SH014"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        },
+        {
+          "duration": 22,
+          "start": "记者失去续稿，来源已为披露付工作代价，两人的利益无法互换。",
+          "action": "诺拉看了一眼六点提醒，再看莉娜放到桌边的正式询问通知。莉娜把日期朝自己转回去，她没有答应让记者拍。",
+          "end": "莉娜把通知收进包，诺拉不再索要记录副本。",
+          "dialogueCueIds": [
+            "E15-D216",
+            "E15-D217",
+            "E15-D218",
+            "E15-D219"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 24
+        }
+      ],
+      "viewerEntry": "诺拉移开拇指，自己的批量签名推断与来源限定同时露出来。",
+      "viewerExit": "莉娜把通知收进包，诺拉不再索要记录副本。",
+      "cutTrigger": "莉娜收通知离座，切保持空椅和未收笔记的距离。",
+      "next": "接E15-SH015；莉娜收通知离座，切保持空椅和未收笔记的距离。",
+      "broadcastEpisode": 16,
+      "displayId": "EP16-003"
+    },
+    {
+      "id": "E15-SH015",
+      "sceneId": "E15-SC04",
+      "sourceShotIds": [
+        "E15-SH015"
+      ],
+      "duration": 9,
+      "characters": [
+        "NORA",
+        "LENA"
+      ],
+      "onScreenCharacterIds": [
+        "NORA",
+        "LENA"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "最后只能用她实际说过的话；新材料和原谅都没带回来。",
+      "framing": "桌西南角35mm中全景，诺拉仍坐南，莉娜沿桌东侧去回收台再向南门走。",
+      "composition": "当天傍晚将近六点，咖啡店西窗是阴雨里的暗蓝天光，东吧台亮着暖灯。西北桌莉娜坐北，包口朝自己，诺拉坐南；湿伞立在南门，灰信封始终未取出。 本镜画内角色：NORA,LENA。",
+      "camera": "固定9秒，不追莉娜出门。",
+      "focus": "最后只能用她实际说过的话；新材料和原谅都没带回来。",
+      "start": "莉娜把通知收进包，诺拉不再索要记录副本。",
+      "action": "莉娜把通知收回包，拿杯去回收台，向南门走。诺拉问能否引用，她没有回座，只指一下还打开的第一次笔记。",
+      "end": "莉娜离开，原警告和新反证都留给诺拉，问题尚未解。",
+      "sound": "门铃、咖啡机和杯碟底声连续，周围客人无可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E15-D021",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "What can I use?",
+          "translationZh": "那我能用什么？",
+          "tone": "人已经要走，仍追一条可用答复",
+          "start": 1,
+          "end": 3.3
+        },
+        {
+          "id": "E15-D022",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "Use what I actually told you.",
+          "translationZh": "就用我当时真跟你说的。",
+          "tone": "指第一次笔记，没回座也没给新结论",
+          "start": 3.6,
+          "end": 6.9
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 9,
+          "start": "莉娜把通知收进包，诺拉不再索要记录副本。",
+          "action": "莉娜把通知收回包，拿杯去回收台，向南门走。诺拉问能否引用，她没有回座，只指一下还打开的第一次笔记。",
+          "end": "莉娜离开，原警告和新反证都留给诺拉，问题尚未解。",
+          "dialogueCueIds": [
+            "E15-D021",
+            "E15-D022"
+          ],
+          "sourceShotIds": [
+            "E15-SH015"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 11
+        }
+      ],
+      "viewerEntry": "莉娜把通知收进包，诺拉不再索要记录副本。",
+      "viewerExit": "莉娜离开，原警告和新反证都留给诺拉，问题尚未解。",
+      "cutTrigger": "门铃后留诺拉，接同日晚间更正，不再跳过数月。",
+      "next": "来源对误报的指责没有和解；切当夜编辑室E18-SC01，让诺拉立即完成实名更正，不等待近一年后的听证。",
+      "broadcastEpisode": 16,
+      "displayId": "EP16-004"
+    },
+    {
+      "id": "E18-SH001",
+      "sceneId": "E18-SC01",
+      "sourceShotIds": [
+        "E18-SH001"
+      ],
+      "duration": 38,
+      "characters": [
+        "NORA"
+      ],
+      "onScreenCharacterIds": [
+        "NORA"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [
+        "THOMAS"
+      ],
+      "offscreenRoleIds": [
+        "THOMAS"
+      ],
+      "purpose": "她从被动句改为承认自己断言错误，再将未解问题放后；托马斯只电话出声。",
+      "framing": "夜编辑部西桌南侧50mm诺拉三分之二侧面中景，手机免提、原句与认证记录在桌前，东桌空。",
+      "composition": "同日晚间编辑部东桌已空，西桌只亮诺拉的工作灯。黑手机免提放在更正打印稿旁，红本压着未付账单，托马斯的声音从手机传来，人不在房间。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定38秒，只在她改主语时自然前倾，不代替演员推近。",
+      "focus": "她从被动句改为承认自己断言错误，再将未解问题放后；托马斯只电话出声。",
+      "start": "诺拉笔压在更正稿上，手机桌右免提。",
+      "action": "电话指出被动句；诺拉划掉短语，重写自己作主语，念出错误所在。\n诺拉把删去的被动句留在修订记录，将公司真实访问证明与自己的原句并排。她想在下一段先写尚未得到的材料，托马斯要求她先把错误说完。",
+      "end": "她把未解问题移到后面，首段明确承认原断言缺乏支持且已被反证。",
+      "sound": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。 托马斯只从免提说列出的英语，人在另一地点；拨莉娜后没有对端回复台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E18-D001",
+          "speaker": "编辑托马斯电话声音",
+          "listener": "诺拉",
+          "text": "Cut 'was misunderstood.' What did you get wrong?",
+          "translationZh": "把“被误解”删掉。你到底错在哪儿？",
+          "tone": "不接被动说法，等她自己回答",
+          "start": 1.3,
+          "end": 6.35
+        },
+        {
+          "id": "E18-D002",
+          "speaker": "诺拉",
+          "listener": "编辑托马斯电话声音",
+          "text": "I wrote, 'Nobody opened the files.' I can't back that up.",
+          "translationZh": "我写了“没人打开过文件”。我拿不出证据。",
+          "tone": "直接读出自己发表过的断言",
+          "start": 6.9,
+          "end": 12.45
+        },
+        {
+          "id": "E18-D401",
+          "speaker": "诺拉",
+          "listener": "编辑托马斯（电话）",
+          "text": "We still don't know whether they read everything.",
+          "translationZh": "我们还是不知道他们有没有读完所有材料。",
+          "tone": "怕更正会把调查一起抹去",
+          "start": 17,
+          "end": 20.14
+        },
+        {
+          "id": "E18-D402",
+          "speaker": "编辑托马斯电话声音",
+          "listener": "诺拉",
+          "text": "Say that after the correction. Don't use it to get around what we do know.",
+          "translationZh": "放在更正后面。别拿它绕开已经知道的事。",
+          "tone": "保留调查空间，拒绝转移",
+          "start": 20.44,
+          "end": 26.32
+        },
+        {
+          "id": "E18-D403",
+          "speaker": "诺拉",
+          "listener": "编辑托马斯（电话）",
+          "text": "Okay. Someone accessed the page. My sentence was wrong.",
+          "translationZh": "好，有人访问过页面。我那句写错了。",
+          "tone": "先承担已证实的错误",
+          "start": 26.62,
+          "end": 30.15
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 16,
+          "start": "诺拉笔压在更正稿上，手机桌右免提。",
+          "action": "电话指出被动句；诺拉划掉短语，重写自己作主语，念出错误所在。",
+          "end": "被划短语仍可见，笔停在改好的句边。",
+          "dialogueCueIds": [
+            "E18-D001",
+            "E18-D002"
+          ],
+          "sourceShotIds": [
+            "E18-SH001"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 18
+        },
+        {
+          "duration": 22,
+          "start": "被划短语仍可见，笔停在改好的句边。",
+          "action": "诺拉把删去的被动句留在修订记录，将公司真实访问证明与自己的原句并排。她想在下一段先写尚未得到的材料，托马斯要求她先把错误说完。",
+          "end": "她把未解问题移到后面，首段明确承认原断言缺乏支持且已被反证。",
+          "dialogueCueIds": [
+            "E18-D401",
+            "E18-D402",
+            "E18-D403"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 24
+        }
+      ],
+      "viewerEntry": "让公开更正紧接反证，不拖到数月后的另一听证。",
+      "viewerExit": "她把未解问题移到后面，首段明确承认原断言缺乏支持且已被反证。",
+      "cutTrigger": "电话告知委约暂停，切更近的个人代价与署名选择。",
+      "next": "接E18-SH002；电话告知委约暂停，切更近的个人代价与署名选择。",
+      "broadcastEpisode": 16,
+      "displayId": "EP16-005"
+    },
+    {
+      "id": "E18-SH002",
+      "sceneId": "E18-SC01",
+      "sourceShotIds": [
+        "E18-SH002",
+        "E18-SH003"
+      ],
+      "duration": 30,
+      "characters": [
+        "NORA"
+      ],
+      "onScreenCharacterIds": [
+        "NORA"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [
+        "THOMAS"
+      ],
+      "offscreenRoleIds": [
+        "THOMAS"
+      ],
+      "purpose": "职业后果没有被道歉抵消，她仍把名字留在更正上。",
+      "framing": "西桌东南侧75mm诺拉中近景，相比前镜视角向西转四十度，红本下账单与键盘在下沿。",
+      "composition": "同日晚间编辑部东桌已空，西桌只亮诺拉的工作灯。黑手机免提放在更正打印稿旁，红本压着未付账单，托马斯的声音从手机传来，人不在房间。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定30秒，塞账单的手停住，确认署名后按发送。",
+      "focus": "职业后果没有被道歉抵消，她仍把名字留在更正上。",
+      "start": "她把未解问题移到后面，首段明确承认原断言缺乏支持且已被反证。",
+      "action": "诺拉听到委约暂停，伸手塞账单，听完要求后停在半途，转问署名。\n核对署名、答复编辑并发送更正，挂断后打开莉娜联系人拨号；一次动作持续，不假装两条电话同时通着。",
+      "end": "更正已发送，编辑通话已结束，手机正在接通莉娜号码，诺拉等待线路。",
+      "sound": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。 托马斯只从免提说列出的英语，人在另一地点；拨莉娜后没有对端回复台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E18-D003",
+          "speaker": "编辑托马斯电话声音",
+          "listener": "诺拉",
+          "text": "We're holding your next assignment. Legal needs your notes and source files tonight.",
+          "translationZh": "你下一篇先停了。法务今晚就要你的笔记和原始采访资料。",
+          "tone": "工作安排说完便停，不安慰",
+          "start": 1.3,
+          "end": 8.85
+        },
+        {
+          "id": "E18-D004",
+          "speaker": "诺拉",
+          "listener": "编辑托马斯电话声音",
+          "text": "My name stays on the correction?",
+          "translationZh": "更正还署我的名字？",
+          "tone": "先确认自己要承担的署名",
+          "start": 9.4,
+          "end": 13.45
+        },
+        {
+          "id": "E18-D005",
+          "speaker": "编辑托马斯电话声音",
+          "listener": "诺拉",
+          "text": "Yes. Are you ready?",
+          "translationZh": "对。可以发了吗？",
+          "tone": "把发布决定留给她",
+          "start": 17.3,
+          "end": 20.85
+        },
+        {
+          "id": "E18-D006",
+          "speaker": "诺拉",
+          "listener": "编辑托马斯电话声音",
+          "text": "Send it. Leave my name on.",
+          "translationZh": "发吧。名字留下。",
+          "tone": "决定",
+          "start": 21.4,
+          "end": 24.95
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 16,
+          "start": "她把未解问题移到后面，首段明确承认原断言缺乏支持且已被反证。",
+          "action": "诺拉听到委约暂停，伸手塞账单，听完要求后停在半途，转问署名。",
+          "end": "账单仍露半边，双手离开笔。",
+          "dialogueCueIds": [
+            "E18-D003",
+            "E18-D004"
+          ],
+          "sourceShotIds": [
+            "E18-SH002"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 18
+        },
+        {
+          "duration": 14,
+          "start": "账单仍露半边，双手离开笔。",
+          "action": "核对署名、答复编辑并发送更正，挂断后打开莉娜联系人拨号；一次动作持续，不假装两条电话同时通着。",
+          "end": "更正已发送，编辑通话已结束，手机正在接通莉娜号码，诺拉等待线路。",
+          "dialogueCueIds": [
+            "E18-D005",
+            "E18-D006"
+          ],
+          "sourceShotIds": [
+            "E18-SH003"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 16
+        }
+      ],
+      "viewerEntry": "她把未解问题移到后面，首段明确承认原断言缺乏支持且已被反证。",
+      "viewerExit": "更正已发送，编辑通话已结束，手机正在接通莉娜号码，诺拉等待线路。",
+      "cutTrigger": "电话结束，切回已在手里却没追到的原始材料。",
+      "next": "接E18-SH004；电话结束，切回已在手里却没追到的原始材料。",
+      "broadcastEpisode": 16,
+      "displayId": "EP16-006"
+    },
+    {
+      "id": "E18-SH004",
+      "sceneId": "E18-SC01",
+      "sourceShotIds": [
+        "E18-SH004"
+      ],
+      "duration": 14,
+      "characters": [
+        "NORA"
+      ],
+      "onScreenCharacterIds": [
+        "NORA"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "更正已公开、来源未回应，附件问题从她已有照片开始。",
+      "framing": "诺拉西肩后65mm桌面近景，获准拍摄的旧报告封面照片、红本和未付账单同框，手机在右。",
+      "composition": "同日晚间编辑部东桌已空，西桌只亮诺拉的工作灯。黑手机免提放在更正打印稿旁，红本压着未付账单，托马斯的声音从手机传来，人不在房间。 本镜画内角色：NORA。",
+      "camera": "固定14秒，她留言后把封面照片拉到灯下，不新拍新资料。",
+      "focus": "更正已公开、来源未回应，附件问题从她已有照片开始。",
+      "start": "更正已发送，编辑通话已结束，手机正在接通莉娜号码，诺拉等待线路。",
+      "action": "线路转入语音信箱，提示末声结束后诺拉留言；她将获准封面照片打印件拉到灯下，留言结束手机回桌右，不追加对端声音。",
+      "end": "手机回桌右，获准封面照片的打印件铺开，委约暂停通知仍在旁。",
+      "sound": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。 托马斯只从免提说列出的英语，人在另一地点；拨莉娜后没有对端回复台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E18-D007",
+          "speaker": "诺拉",
+          "listener": "莉娜的语音信箱",
+          "text": "Lena, it's Nora. The correction's up. I've still got questions about your report. Call me when you can.",
+          "translationZh": "莉娜，是诺拉。更正发了。你的报告还有几处我想问问。方便的话，给我回个电话。",
+          "tone": "留言只留来意，不抢先解释自己",
+          "start": 3.0,
+          "end": 13.0
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 14,
+          "start": "更正已发送，编辑通话已结束，手机正在接通莉娜号码，诺拉等待线路。",
+          "action": "线路转入语音信箱，提示末声结束后诺拉留言；她将获准封面照片打印件拉到灯下，留言结束手机回桌右，不追加对端声音。",
+          "end": "手机回桌右，获准封面照片的打印件铺开，委约暂停通知仍在旁。",
+          "dialogueCueIds": [
+            "E18-D007"
+          ],
+          "sourceShotIds": [
+            "E18-SH004"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 16
+        }
+      ],
+      "viewerEntry": "更正已发送，编辑通话已结束，手机正在接通莉娜号码，诺拉等待线路。",
+      "viewerExit": "手机回桌右，获准封面照片的打印件铺开，委约暂停通知仍在旁。",
+      "cutTrigger": "旧照片留下待问的问题，转两日后有边界的再次见面。",
+      "next": "更正发布后转两日后的咖啡会面；西窗日光重新定时，原件仍归来源，信任并不因更正一次恢复。",
+      "editTransition": "前镜已实际拨号，本镜以线路转入语音信箱起。成片切换目标与视角；不宣称两个成片镜是无剪辑技术连续。",
+      "broadcastEpisode": 16,
+      "displayId": "EP16-007"
+    },
+    {
+      "id": "E18-SH009",
+      "sceneId": "E18-SC03",
+      "sourceShotIds": [
+        "E18-SH009",
+        "E18-SH010"
+      ],
+      "duration": 28,
+      "characters": [
+        "LENA",
+        "NORA"
+      ],
+      "onScreenCharacterIds": [
+        "LENA"
+      ],
+      "offscreenCharacterIds": [
+        "NORA"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "道歉没有直接换来信任，求职和重回工作的现实压力落在来源身上。",
+      "framing": "诺拉西肩旁朝北65mm莉娜中近景，灰信封压在左手下，诺拉只露肩；南门在机位后方画外。",
+      "composition": "更正发布两日后下午，西北咖啡桌莉娜坐北，灰信封紧挨左手、手机扣着，诺拉坐南，红本仍在膝上；东侧磨豆机的工作声停下，她才开口。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定28秒，来源准备收包时不跟记者求和。",
+      "focus": "道歉没有直接换来信任，求职和重回工作的现实压力落在来源身上。",
+      "start": "莉娜手压灰信封，诺拉红本在膝上。",
+      "action": "诺拉等磨豆机停后道歉，莉娜不松信封，直接把律师的警惕说给她。\n她说面试安排，同时把信封收近包口；诺拉收回原想开本子的手。",
+      "end": "信封将入包但仍握着，诺拉没有阻挡出口。",
+      "sound": "门铃、咖啡机和杯碟底声连续，周围客人无可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E18-D015",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "You didn't say that. I put it in the story. I'm sorry.",
+          "translationZh": "那些话不是你说的，是我写进报道的。对不起。",
+          "tone": "不要求对方接住这句道歉",
+          "start": 1.3,
+          "end": 6.35
+        },
+        {
+          "id": "E18-D016",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "My lawyer said you'd come back for another quote.",
+          "translationZh": "我的律师说，你还会来找我要一句话。",
+          "tone": "信封仍压着，先说出防备",
+          "start": 6.9,
+          "end": 11.45
+        },
+        {
+          "id": "E18-D017",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "I've got an interview Monday. I need to get back to work. I'm not doing this again.",
+          "translationZh": "我周一有面试。我得回去工作。我不想再来一次。",
+          "tone": "有求职安排，不再承担记者的取材风险",
+          "start": 15.3,
+          "end": 25.85
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 14,
+          "start": "莉娜手压灰信封，诺拉红本在膝上。",
+          "action": "诺拉等磨豆机停后道歉，莉娜不松信封，直接把律师的警惕说给她。",
+          "end": "信封仍由莉娜压住，诺拉未伸手。",
+          "dialogueCueIds": [
+            "E18-D015",
+            "E18-D016"
+          ],
+          "sourceShotIds": [
+            "E18-SH009"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 16
+        },
+        {
+          "duration": 14,
+          "start": "信封仍由莉娜压住，诺拉未伸手。",
+          "action": "她说面试安排，同时把信封收近包口；诺拉收回原想开本子的手。",
+          "end": "信封将入包但仍握着，诺拉没有阻挡出口。",
+          "dialogueCueIds": [
+            "E18-D017"
+          ],
+          "sourceShotIds": [
+            "E18-SH010"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 16
+        }
+      ],
+      "viewerEntry": "用接受来源边界换来一次有限核对，不安排立刻和解。",
+      "viewerExit": "信封将入包但仍握着，诺拉没有阻挡出口。",
+      "cutTrigger": "诺拉放问题便签，切两人重新谈许可的桌面关系。",
+      "next": "接E18-SH011；诺拉放问题便签，切两人重新谈许可的桌面关系。",
+      "broadcastEpisode": 16,
+      "displayId": "EP16-008"
+    },
+    {
+      "id": "E18-SH011",
+      "sceneId": "E18-SC03",
+      "sourceShotIds": [
+        "E18-SH011"
+      ],
+      "duration": 37,
+      "characters": [
+        "LENA",
+        "NORA"
+      ],
+      "onScreenCharacterIds": [
+        "LENA",
+        "NORA"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "许可先谈妥再取报告，记者没有用道歉跳过边界。",
+      "framing": "桌西侧40mm双人中景，莉娜北、诺拉南，问题便签在中间，双方手机仍各归自己。",
+      "composition": "更正发布两日后下午，西北咖啡桌莉娜坐北，灰信封紧挨左手、手机扣着，诺拉坐南，红本仍在膝上；东侧磨豆机的工作声停下，她才开口。 本镜画内角色：LENA,NORA。",
+      "camera": "固定37秒，让诺拉把空手放上桌，听完不发表与不联系单位的条件。",
+      "focus": "许可先谈妥再取报告，记者没有用道歉跳过边界。",
+      "start": "信封将入包但仍握着，诺拉没有阻挡出口。",
+      "action": "诺拉把问题便签放桌中，说明不是正式受访请求；莉娜读到附件清单字样后停止收包。\n莉娜没有立即拿出报告，先把诺拉的问题便签转到桌中，指着她还在口袋里的手机。诺拉将空着的双手放上桌。",
+      "end": "莉娜将信封压回自己桌侧，手停在封口，尚未抽出报告。",
+      "sound": "门铃、咖啡机和杯碟底声连续，周围客人无可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E18-D018",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "We can keep this off the record. What did I miss?",
+          "translationZh": "这次可以不写进报道。我到底漏了什么？",
+          "tone": "只放下问题便签，不打开录音",
+          "start": 1.3,
+          "end": 9.35
+        },
+        {
+          "id": "E18-D404",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "Nothing from today goes in a story unless we agree later.",
+          "translationZh": "今天说的，以后另说之前都不能写。",
+          "tone": "限定本次谈话",
+          "start": 17,
+          "end": 21.31
+        },
+        {
+          "id": "E18-D405",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "Agreed. No recording. I'll ask before I use anything.",
+          "translationZh": "同意。不录，用之前先问你。",
+          "tone": "接受具体规则",
+          "start": 21.61,
+          "end": 25.14
+        },
+        {
+          "id": "E18-D406",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "Don't contact the places I'm applying to.",
+          "translationZh": "也别去联系我投简历的地方。",
+          "tone": "把自己生活留在自己手里",
+          "start": 25.44,
+          "end": 29.36
+        },
+        {
+          "id": "E18-D407",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "I understand.",
+          "translationZh": "明白。",
+          "tone": "不索取新交换条件",
+          "start": 29.66,
+          "end": 30.76
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 16,
+          "start": "信封将入包但仍握着，诺拉没有阻挡出口。",
+          "action": "诺拉把问题便签放桌中，说明不是正式受访请求；莉娜读到附件清单字样后停止收包。",
+          "end": "莉娜手停在包口，视线落便签。",
+          "dialogueCueIds": [
+            "E18-D018"
+          ],
+          "sourceShotIds": [
+            "E18-SH011"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 18
+        },
+        {
+          "duration": 21,
+          "start": "莉娜手停在包口，视线落便签。",
+          "action": "莉娜没有立即拿出报告，先把诺拉的问题便签转到桌中，指着她还在口袋里的手机。诺拉将空着的双手放上桌。",
+          "end": "莉娜将信封压回自己桌侧，手停在封口，尚未抽出报告。",
+          "dialogueCueIds": [
+            "E18-D404",
+            "E18-D405",
+            "E18-D406",
+            "E18-D407"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 23
+        }
+      ],
+      "viewerEntry": "信封将入包但仍握着，诺拉没有阻挡出口。",
+      "viewerExit": "莉娜将信封压回自己桌侧，手停在封口，尚未抽出报告。",
+      "cutTrigger": "莉娜终于抽出遮名报告，切到本场唯一新看清的旧证据。",
+      "next": "接E18-SH012；莉娜终于抽出遮名报告，切到本场唯一新看清的旧证据。",
+      "broadcastEpisode": 16,
+      "displayId": "EP16-009"
+    },
+    {
+      "id": "E18-SH012",
+      "sceneId": "E18-SC03",
+      "sourceShotIds": [
+        "E18-SH012"
+      ],
+      "duration": 24,
+      "characters": [
+        "NORA",
+        "LENA"
+      ],
+      "onScreenCharacterIds": [
+        "NORA",
+        "LENA"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "ATTACHMENTS: SEE LIST早在旧照片中，现在只是待取得清单的入口，尚无队列或缺陷结论。",
+      "framing": "诺拉西肩后60mm斜俯桌面近景，旧手机照片在南、莉娜遮名原件在北，手指仍压着原件。",
+      "composition": "更正发布两日后下午，西北咖啡桌莉娜坐北，灰信封紧挨左手、手机扣着，诺拉坐南，红本仍在膝上；东侧磨豆机的工作声停下，她才开口。 本镜画内角色：NORA,LENA。",
+      "camera": "固定24秒，诺拉打开旧照片与纸件并排，不重新拍摄；最后记问题。",
+      "focus": "ATTACHMENTS: SEE LIST早在旧照片中，现在只是待取得清单的入口，尚无队列或缺陷结论。",
+      "start": "莉娜将信封压回自己桌侧，手停在封口，尚未抽出报告。",
+      "action": "莉娜取原报告遮住姓名，指附件提示；诺拉从右衣袋取手机，打开获准拍的去身份照片核对，再把红本上桌记问题，不新拍患者资料。",
+      "end": "莉娜指尖仍压报告，诺拉只记，不拍照。",
+      "sound": "门铃、咖啡机和杯碟底声连续，周围客人无可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E18-D019",
+          "speaker": "莉娜",
+          "listener": "诺拉",
+          "text": "You copied the date. What about 'attachments: see list'? It's right there in the photo I let you take.",
+          "translationZh": "日期你抄了。“附件：见清单”呢？我让你拍的那张照片里就有。",
+          "tone": "指着已有照片能核到的那一行",
+          "start": 1.3,
+          "end": 10.85
+        },
+        {
+          "id": "E18-D020",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "I see it.",
+          "translationZh": "我看到了。",
+          "tone": "核对到旧照片里的那行",
+          "start": 11.4,
+          "end": 13.45
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 24,
+          "start": "莉娜将信封压回自己桌侧，手停在封口，尚未抽出报告。",
+          "action": "莉娜取原报告遮住姓名，指附件提示；诺拉从右衣袋取手机，打开获准拍的去身份照片核对，再把红本上桌记问题，不新拍患者资料。",
+          "end": "莉娜指尖仍压报告，诺拉只记，不拍照。",
+          "dialogueCueIds": [
+            "E18-D019",
+            "E18-D020"
+          ],
+          "sourceShotIds": [
+            "E18-SH012"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 26
+        }
+      ],
+      "viewerEntry": "莉娜将信封压回自己桌侧，手停在封口，尚未抽出报告。",
+      "viewerExit": "莉娜指尖仍压报告，诺拉只记，不拍照。",
+      "cutTrigger": "原件仍归来源，记者只得到一个问题，结束本集。",
+      "next": "本集结束。她终于看见自己原照片中一直存在的附件清单提示。得到的是可追查的问题和有限合作，并非两队列答案或全面和解。 下集从COURT-FEDERAL展开：死刑风险解除之后，青年愿不愿交出同时伤及自己的完整通信？",
+      "broadcastEpisode": 16,
+      "displayId": "EP16-010"
+    }
+  ]
+}

@@ -1,0 +1,407 @@
+{
+  "number": 4,
+  "title": "那通电话",
+  "logline": "青年先要求律师，移包与开包责任分别登记；玛拉没有拿到付款，反而看见自己已被圈进传播画面。",
+  "dramaturgy": {
+    "openingQuestion": "被捕和举报之后，两个人今晚实际得到了什么？",
+    "pursuit": "青年争取律师和身体空间；玛拉要撑过曝光后第一晚并继续追付款。",
+    "reversal": "青年先要求律师，移包与开包责任分别登记；玛拉没有拿到付款，反而看见自己已被圈进传播画面。",
+    "cost": "妹妹已再次请假；玛拉被公开识别，付款问题和孩子的约定仍未解决。",
+    "cliffhanger": "玛拉把号码推给乔，请妹妹先替她向账务开口；事情没有解决，但她终于接受有人分担。下一集由律师开始处理青年这边的后果。",
+    "nextEpisodeBridge": "海伦能否让青年停止选择性讲述，提供可以真正办案的事实？"
+  },
+  "movements": [
+    {
+      "title": "先要律师",
+      "startScene": "E04-SC02",
+      "question": "把青年提出律师要求与警方分别登记移包、开包的人落实为可追踪后果。",
+      "turn": "青年先要律师才请求挪椅，警员停问；另一警员将移包与开包署名拆开。"
+    },
+    {
+      "title": "让妹妹先说",
+      "startScene": "E04-SC03",
+      "question": "兑现早晨的工时期限，让被拍、没拿到钱、继续拒赔同时落到一次归家。",
+      "turn": "玛拉从解释自己为什么迟到，变成承认她撑不住独自再打一通电话。"
+    }
+  ],
+  "continuityNote": "当前播出编号为24集短剧；E01–E24场号/制作镜号只作稳定资产定位。各集以完整场景为边界，英语对白与中文对照同步。海伦能否让青年停止选择性讲述，提供可以真正办案的事实？",
+  "durationNote": "本集2分41秒：警局登记与家庭余波已经形成完整变化，按自然落点结束。",
+  "scenes": [
+    {
+      "id": "E04-SC02",
+      "location": "POLICE",
+      "time": "上午·同日稍后",
+      "entry": "青年前铐坐北侧；包东台",
+      "exit": "移包栏记甲、开包栏记乙，登记纸与财物同桌；笔记、手机分放，青年在画外北桌前铐状态继承。",
+      "script": "警局南侧接待门内，中央问询桌对着北墙时钟，东边是财物台。路易吉无口罩，穿街装，双手前铐，坐中央桌北侧。黑背包已经在东财物台，警员乙在旁；警员甲站桌南边。\n\n警局中央桌前，甲把水推到青年前铐能触到的位置。\n警员甲（英语）：Need a medic?\n中文对照：要叫医护吗？\n路易吉没有喝，先把脚从椅下移出一点。甲拉近自己的椅子，翻开问询页，笔还没落。\n\n\n路易吉（英语）：I want a lawyer before I answer anything.\n中文对照：我要先见律师，再回答问题。\n甲的笔停住。路易吉这才伸出两只铐在一起的手，把杯子拖近。\n路易吉（英语）：My back hurts. Can I move the chair?\n中文对照：我的背疼，能挪一下椅子吗？\n甲合上问询页，指向椅旁空位，等他自己换姿势。\n\n乙在东台把笔记与手机分别放到登记纸旁，枪械相关物品留在不透明袋内。他指着一栏问甲。\n警员乙（英语）：You moved the bag, right? I need your name here too.\n中文对照：包是你挪的，对吧？这儿也得填你的名字。\n甲指着移包一栏确认自己的姓名，再指开包一栏；乙在移包栏记甲、开包栏记自己，逐栏核对。",
+      "dramaticFunction": "把青年提出律师要求与警方分别登记移包、开包的人落实为可追踪后果。",
+      "turn": "青年先要律师才请求挪椅，警员停问；另一警员将移包与开包署名拆开。",
+      "exitCost": "自由已失，物件仍由警方保管；署名也不能自动推导所有证据被排除。",
+      "sceneRhythm": "三短镜各处理一种明确权限变化：询问、终止询问与身体安排、物件登记；不给登记页胜利式特写。"
+    },
+    {
+      "id": "E04-SC03",
+      "location": "MARA-HOME",
+      "time": "傍晚·同日",
+      "entry": "玛拉带个人包进南门，乔守桌边；孩子在北屋，右手手机左肩包。",
+      "exit": "姐妹一起等账务接听，蓝夹打开但拒赔未变；偷拍视频仍在传播，孩子的桥仍未画完。",
+      "script": "玛拉公寓中央餐桌亮一盏暖灯，东厨房水槽堆着杯子，西窗天色将暗，北卧室门半掩。玛拉刚从南门回来，灰风衣罩黑工服；棕卷发的乔穿深紫针织衫、深裤守在桌边，艾莉在北屋画画。手机右手，个人包挂左肩。\n\n乔看墙上时间。玛拉放包取出蓝夹，先把右手手机放桌边。\n\n玛拉（英语）：I'm sorry. They kept asking me the same thing.\n中文对照：对不起。他们翻来覆去问那些事。\n\n乔（英语）：I know. I called work.\n中文对照：知道。我给单位打过电话了。\n\n乔把一杯水推过去，玛拉没接。北屋传来蜡笔盒落地声，两人都转头。\n\n艾莉（英语）：I'm okay. It was the box.\n中文对照：我没事。盒子掉了。\n\n乔往北走两步，听见孩子在自己捡笔，停住。玛拉把蓝夹盖好，手留在上面。\n\n乔（英语）：Did they pay you?\n中文对照：他们给你钱了吗？\n\n玛拉（英语）：They took my number.\n中文对照：他们记了我的号码。\n\n乔（英语）：A number for what?\n中文对照：留号码干什么？\n\n玛拉（英语）：They didn't say. I had to ask who to call.\n中文对照：没说。我还得自己问该找谁。\n\n乔把水重新推近一点；玛拉这次拿起来，却没喝。\n\n手机收到店内视频。玛拉放下水，点开看，画面中有人圈出柜台后的她。乔伸手要拿，玛拉先把进度拖回，再看一遍，才转给妹妹。\n\n乔（英语）：Who sent you that?\n中文对照：谁发给你的？\n\n玛拉（英语）：Someone from work. It's already everywhere.\n中文对照：店里的人。已经传开了。\n\n乔把手机音量调低。蓝夹被手机碰开，拒赔单后露出玛拉签字的加班申请。\n\n玛拉（英语）：I should've been home. I'm the one who asked for that shift.\n中文对照：我本来该在家的。是我自己要加那一班。\n\n她翻扣手机，手停在写着周五的通知上。北屋捡笔声音停止，餐桌没有人接她那句自责。\n\n玛拉（英语）：Will you call billing with me? I can't go through it all again on my own.\n中文对照：陪我打给账务，行吗？我一个人实在讲不下去了。\n\n乔拿起总机号码便签，将自己的手机放到两人中间拨号。玛拉把该报的号码找出来，放在杯子旁。等待音乐开始。她把那杯水喝下第一口。\n\n玛拉将报号码的便签推给乔。\n玛拉（英语）：Can you start? Just say it's about the renewal.\n中文对照：你先说，行吗？就说是续批的事。\n乔把便签转到自己面前，手机仍留两人中央，准备替她开口。",
+      "dramaticFunction": "兑现早晨的工时期限，让被拍、没拿到钱、继续拒赔同时落到一次归家。",
+      "turn": "玛拉从解释自己为什么迟到，变成承认她撑不住独自再打一通电话。",
+      "exitCost": "妹妹已再次请假；玛拉被公开识别，付款问题和孩子的约定仍未解决。",
+      "sceneRhythm": "两段五十五秒关系镜各有独立转向；第一次切在她终于接过水，第二段用共同拨号完成余波，不用通知声当唯一集尾。"
+    }
+  ],
+  "shots": [
+    {
+      "id": "E04-SH008",
+      "sceneId": "E04-SC02",
+      "duration": 14,
+      "characters": [
+        "LUIGI-STREET",
+        "OFFICER-A/B"
+      ],
+      "purpose": "人和包进入警局，新的问询、清点与现场行为分开。",
+      "framing": "全景，南门向北问询桌",
+      "composition": "北墙钟、中央青年、东财物台",
+      "camera": "固定南门朝北全景，问询桌中央、财物台东侧，重新建立与餐厅不同地点。",
+      "focus": "保持桌、前铐、东台黑包的空间关系。",
+      "start": "青年前铐坐北侧；包东台",
+      "action": "警局中央桌前，甲把水推到青年前铐能触到的位置。警员甲对路易吉说本镜第1句英语对白，例行确认当前需要，不替对方作答。路易吉没有喝，先把脚从椅下移出一点。甲拉近自己的椅子，翻开问询页，笔还没落。",
+      "end": "水桌中，青年前铐坐北侧，甲南侧翻问询页，包东台。",
+      "sound": "冷顶灯嗡声、东台纸袋摩擦",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E04-D009",
+          "speaker": "警员甲",
+          "listener": "路易吉",
+          "text": "Need a medic?",
+          "translationZh": "要叫医护吗？",
+          "tone": "例行确认当前需要，不替对方作答",
+          "start": 0.6,
+          "end": 2.38
+        }
+      ],
+      "overlay": [],
+      "next": "接青年要求律师",
+      "viewerEntry": "餐厅现场搜包已发生。",
+      "viewerExit": "人和包进入警局，新的问询、清点与现场行为分开。",
+      "cutTrigger": "甲的笔停在问询第一页，青年开口。",
+      "extraRoleIds": [],
+      "broadcastEpisode": 4,
+      "displayId": "EP04-001"
+    },
+    {
+      "id": "E04-SH009",
+      "sceneId": "E04-SC02",
+      "duration": 14,
+      "characters": [
+        "LUIGI-STREET",
+        "OFFICER-A/B"
+      ],
+      "purpose": "他主动停止未经律师在场的回答，身体照护另行提出。",
+      "framing": "中近景，桌西南看北侧青年",
+      "composition": "前铐在桌边下部可见",
+      "camera": "固定桌西南中近景，同时见他的手、杯与甲合页边缘；不靠远景拍不清停笔。",
+      "focus": "青年为主，合页在同层边缘可读。",
+      "start": "青年看桌上水，再看甲",
+      "action": "路易吉对警员甲说本镜第1句英语对白，先保住回答的边界。甲的笔停住。路易吉这才伸出两只铐在一起的手，把杯子拖近。路易吉对警员甲说本镜第2句英语对白，确定问询暂停才提出身体需要。甲合上问询页，指向椅旁空位，等他自己换姿势。",
+      "end": "杯靠青年，双腕前铐；问询页合上，甲留出换姿势空间。",
+      "sound": "椅背轻响、远无线电；问询停止",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E04-D010",
+          "speaker": "路易吉",
+          "listener": "警员甲",
+          "text": "I want a lawyer before I answer anything.",
+          "translationZh": "我要先见律师，再回答问题。",
+          "tone": "先保住回答的边界",
+          "start": 0.6,
+          "end": 4.76
+        },
+        {
+          "id": "E04-D111",
+          "speaker": "路易吉",
+          "listener": "警员甲",
+          "text": "My back hurts. Can I move the chair?",
+          "translationZh": "我的背疼，能挪一下椅子吗？",
+          "tone": "确定问询暂停才提出身体需要",
+          "start": 5.11,
+          "end": 9.27
+        }
+      ],
+      "overlay": [],
+      "next": "转财物台的正式清点",
+      "viewerEntry": "警员准备提问，青年还没喝水。",
+      "viewerExit": "他主动停止未经律师在场的回答，身体照护另行提出。",
+      "cutTrigger": "问询页合上，东财物台传来纸袋响。",
+      "extraRoleIds": [],
+      "broadcastEpisode": 4,
+      "displayId": "EP04-002"
+    },
+    {
+      "id": "E04-SH010",
+      "sceneId": "E04-SC02",
+      "duration": 14,
+      "characters": [
+        "OFFICER-A/B"
+      ],
+      "purpose": "不同人的移包、搜包与警局登记被分别记下，之后可以核对。",
+      "framing": "近景，东财物台西侧向东",
+      "composition": "黑包、封袋、登记页；青年画外北桌",
+      "camera": "固定东台西侧近景，纸本、手机和登记手可见，青年留画外继承；不揭开不透明袋炫示物品。",
+      "focus": "移包栏与开包栏同层可见，甲依次指认、乙分别登记；姓名以后期排字清楚呈现。",
+      "start": "乙戴手套，包口已开，甲在旁",
+      "action": "乙在东台把笔记与手机分别放到登记纸旁，枪械相关物品留在不透明袋内。他指着一栏问甲。警员乙对警员甲说本镜第1句英语对白，让移包同事补齐署名，自己核对开包一栏。甲指着移包一栏确认自己的姓名，再指开包一栏；乙在移包栏记甲、开包栏记自己，逐栏核对。",
+      "end": "移包栏记甲、开包栏记乙，登记纸与财物同桌；笔记、手机分放，青年在画外北桌前铐状态继承。",
+      "sound": "纸袋、笔尖、墙钟滴答",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E04-D011",
+          "speaker": "警员乙",
+          "listener": "警员甲",
+          "text": "You moved the bag, right? I need your name here too.",
+          "translationZh": "包是你挪的，对吧？这儿也得填你的名字。",
+          "tone": "让移包同事补齐署名，自己核对开包一栏",
+          "start": 0.6,
+          "end": 6.19
+        }
+      ],
+      "overlay": [],
+      "next": "本场结果成立后切入 E04-SC03（MARA-HOME，傍晚·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "viewerEntry": "警方在清点，现场开包仍是一件独立行为。",
+      "viewerExit": "不同人的移包、搜包与警局登记被分别记下，之后可以核对。",
+      "cutTrigger": "乙在开包栏记下自己的姓名，指尖回核两栏后切；笔记封面仍完整保留。",
+      "extraRoleIds": [],
+      "broadcastEpisode": 4,
+      "displayId": "EP04-003"
+    },
+    {
+      "id": "E04-SH011",
+      "sceneId": "E04-SC03",
+      "duration": 55,
+      "characters": [
+        "MARA-WORK",
+        "ELLIE"
+      ],
+      "purpose": "回家先还时间债，再面对悬赏并未兑现；妹妹不是专为安慰主角而留在屋里。",
+      "framing": "餐桌西侧姐妹双人中景，北门在后层",
+      "composition": "手机在桌右，蓝夹桌中，乔站桌南；北卧室只闻孩子不露脸。",
+      "camera": "固定双人中景，让迟到、孩子的小响动、金钱问题在同一空间里改变次序。",
+      "focus": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "start": "玛拉带个人包进南门，乔守桌边；孩子在北屋，右手手机左肩包。",
+      "action": "乔看墙上时间。玛拉放包取出蓝夹，先把右手手机放桌边。玛拉对乔说英语“I'm sorry. They kept asking me the same thing.”；先解释迟到而非索取夸奖。乔对玛拉说英语“I know. I called work.”；已经替姐姐承担后果，没有立刻原谅。乔把一杯水推过去，玛拉没接。北屋传来蜡笔盒落地声，两人都转头。艾莉对门外的玛拉和乔说英语“I'm okay. It was the box.”；从北屋画外先解决成人担心，不出来表演恐惧。乔往北走两步，听见孩子在自己捡笔，停住。玛拉把蓝夹盖好，手留在上面。乔对玛拉说英语“Did they pay you?”；自己也先问出了外面正在问的话。玛拉对乔说英语“They took my number.”；只答眼前发生的事，疲惫里带一点刺。乔对玛拉说英语“A number for what?”；要弄清妹妹实际能得到什么。玛拉对乔说英语“They didn't say. I had to ask who to call.”；没有把登记说成奖励获批。乔把水重新推近一点；玛拉这次拿起来，却没喝。",
+      "end": "蓝夹在桌，玛拉拿水杯；奖励没有承诺，乔自己的工时已经损失。",
+      "sound": "同场环境声与所列英语；不补额外可辨台词",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E04-D207",
+          "speaker": "玛拉",
+          "text": "I'm sorry. They kept asking me the same thing.",
+          "translationZh": "对不起。他们翻来覆去问那些事。",
+          "listener": "乔",
+          "tone": "先解释迟到而非索取夸奖",
+          "start": 2,
+          "end": 5.83
+        },
+        {
+          "id": "E04-D208",
+          "speaker": "乔",
+          "text": "I know. I called work.",
+          "translationZh": "知道。我给单位打过电话了。",
+          "listener": "玛拉",
+          "tone": "已经替姐姐承担后果，没有立刻原谅",
+          "start": 9,
+          "end": 11.13
+        },
+        {
+          "id": "E04-D209",
+          "speaker": "艾莉",
+          "text": "I'm okay. It was the box.",
+          "translationZh": "我没事。盒子掉了。",
+          "listener": "门外的玛拉和乔",
+          "tone": "从北屋画外先解决成人担心，不出来表演恐惧",
+          "start": 21,
+          "end": 23.55
+        },
+        {
+          "id": "E04-D012",
+          "speaker": "乔",
+          "listener": "玛拉",
+          "text": "Did they pay you?",
+          "translationZh": "他们给你钱了吗？",
+          "tone": "自己也先问出了外面正在问的话",
+          "start": 30,
+          "end": 31.7
+        },
+        {
+          "id": "E04-D114",
+          "speaker": "玛拉",
+          "listener": "乔",
+          "text": "They took my number.",
+          "translationZh": "他们记了我的号码。",
+          "tone": "只答眼前发生的事，疲惫里带一点刺",
+          "start": 34,
+          "end": 35.7
+        },
+        {
+          "id": "E04-D210",
+          "speaker": "乔",
+          "text": "A number for what?",
+          "translationZh": "留号码干什么？",
+          "listener": "玛拉",
+          "tone": "要弄清妹妹实际能得到什么",
+          "start": 39,
+          "end": 40.7
+        },
+        {
+          "id": "E04-D211",
+          "speaker": "玛拉",
+          "text": "They didn't say. I had to ask who to call.",
+          "translationZh": "没说。我还得自己问该找谁。",
+          "listener": "乔",
+          "tone": "没有把登记说成奖励获批",
+          "start": 44,
+          "end": 48.26
+        }
+      ],
+      "overlay": [],
+      "next": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "viewerEntry": "玛拉带个人包进南门，乔守桌边；孩子在北屋，右手手机左肩包。",
+      "viewerExit": "蓝夹在桌，玛拉拿水杯；奖励没有承诺，乔自己的工时已经损失。",
+      "cutTrigger": "蓝夹在桌，玛拉拿水杯；奖励没有承诺，乔自己的工时已经损失。",
+      "extraRoleIds": [
+        "JO"
+      ],
+      "generationSegments": [
+        {
+          "duration": 20,
+          "start": "玛拉刚到家，乔等在桌边。",
+          "action": "玛拉解释警方反复问话，乔说已给单位请假；推水却无人接。",
+          "end": "北屋响起蜡笔盒落地，两人转头。"
+        },
+        {
+          "duration": 18,
+          "start": "姐妹看北门，孩子在里面。",
+          "action": "孩子画外报平安，乔确认无需进去；回桌问是否拿到钱，玛拉只说留了号码。",
+          "end": "水杯还在桌，蓝夹已合上。"
+        },
+        {
+          "duration": 17,
+          "start": "姐妹隔桌，奖励仍不明。",
+          "action": "乔追问号码用途，玛拉承认对方未说明；妹妹再次推水，玛拉接杯。",
+          "end": "杯在母亲手上，妹妹仍未能去工作。"
+        }
+      ],
+      "offscreenRoleIds": [
+        "ELLIE"
+      ],
+      "broadcastEpisode": 4,
+      "displayId": "EP04-004"
+    },
+    {
+      "id": "E04-SH012",
+      "sceneId": "E04-SC03",
+      "duration": 64,
+      "characters": [
+        "MARA-WORK"
+      ],
+      "purpose": "她发现自己也成为素材，才开口向妹妹索取具体帮助；一起拨号是本集的行动结尾。",
+      "framing": "桌北偏西双人中景，母亲手机只在手边可读",
+      "composition": "两人前景，蓝夹和加班申请中间，北卧室门在同侧画外。",
+      "camera": "留住看视频第二遍的选择；只在认出圈中本人时做一次轻微推进，此后不再切纸件。",
+      "focus": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "start": "水杯在玛拉手上，蓝夹合着，手机在桌右；乔坐桌南。",
+      "action": "手机收到店内视频。玛拉放下水，点开看，画面中有人圈出柜台后的她。乔伸手要拿，玛拉先把进度拖回，再看一遍，才转给妹妹。乔对玛拉说英语“Who sent you that?”；先找这段影像实际从哪来。玛拉对乔说英语“Someone from work. It's already everywhere.”；刚理解自己不是镜头外的人。乔把手机音量调低。蓝夹被手机碰开，拒赔单后露出玛拉签字的加班申请。玛拉对乔说英语“I should've been home. I'm the one who asked for that shift.”；第一次把偶然相遇接回自己的选择。她翻扣手机，手停在写着周五的通知上。北屋捡笔声音停止，餐桌没有人接她那句自责。玛拉对乔说英语“Will you call billing with me? I can't go through it all again on my own.”；不再为报警辩护，要求实际帮助。乔拿起总机号码便签，将自己的手机放到两人中间拨号。玛拉把该报的号码找出来，放在杯子旁。等待音乐开始。她把那杯水喝下第一口。玛拉把记录号码推到乔面前，按所列新句请求妹妹先说。乔将便签转向自己，手机留两人中央等人工接听。 玛拉对乔说英语“Can you start? Just say it's about the renewal.”；乔把号码便签转向自己，实际接过开口的任务。",
+      "end": "姐妹一起等账务接听，蓝夹打开但拒赔未变；偷拍视频仍在传播，孩子的桥仍未画完。",
+      "sound": "同场环境声与所列英语；不补额外可辨台词",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E04-D212",
+          "speaker": "乔",
+          "text": "Who sent you that?",
+          "translationZh": "谁发给你的？",
+          "listener": "玛拉",
+          "tone": "先找这段影像实际从哪来",
+          "start": 9,
+          "end": 10.7
+        },
+        {
+          "id": "E04-D213",
+          "speaker": "玛拉",
+          "text": "Someone from work. It's already everywhere.",
+          "translationZh": "店里的人。已经传开了。",
+          "listener": "乔",
+          "tone": "刚理解自己不是镜头外的人",
+          "start": 14,
+          "end": 16.55
+        },
+        {
+          "id": "E04-D013",
+          "speaker": "玛拉",
+          "listener": "乔",
+          "text": "I should've been home. I'm the one who asked for that shift.",
+          "translationZh": "我本来该在家的。是我自己要加那一班。",
+          "tone": "第一次把偶然相遇接回自己的选择",
+          "start": 23,
+          "end": 28.11
+        },
+        {
+          "id": "E04-D116",
+          "speaker": "玛拉",
+          "listener": "乔",
+          "text": "Will you call billing with me? I can't go through it all again on my own.",
+          "translationZh": "陪我打给账务，行吗？我一个人实在讲不下去了。",
+          "tone": "不再为报警辩护，要求实际帮助",
+          "start": 38,
+          "end": 44.81
+        },
+        {
+          "id": "E04-D214",
+          "speaker": "玛拉",
+          "text": "Can you start? Just say it's about the renewal.",
+          "translationZh": "你先说，行吗？就说是续批的事。",
+          "listener": "乔",
+          "tone": "把开口这一步也交给妹妹，接受具体帮助",
+          "start": 52,
+          "end": 55.83
+        }
+      ],
+      "overlay": [],
+      "next": "本集结束。玛拉把号码推给乔，请妹妹先替她向账务开口；事情没有解决，但她终于接受有人分担。下一集由律师开始处理青年这边的后果。 下集从VISIT展开：海伦能否让青年停止选择性讲述，提供可以真正办案的事实？",
+      "viewerEntry": "水杯在玛拉手上，蓝夹合着，手机在桌右；乔坐桌南。",
+      "viewerExit": "姐妹一起等账务接听，蓝夹打开但拒赔未变；偷拍视频仍在传播，孩子的桥仍未画完。",
+      "cutTrigger": "姐妹一起等账务接听，蓝夹打开但拒赔未变；偷拍视频仍在传播，孩子的桥仍未画完。",
+      "extraRoleIds": [
+        "JO"
+      ],
+      "generationSegments": [
+        {
+          "duration": 20,
+          "start": "手机有新视频，水杯在玛拉手中。",
+          "action": "母亲放水回看两遍，妹妹问来源，母亲把屏幕转给她。",
+          "end": "视频已被两人看见，手机在桌边。"
+        },
+        {
+          "duration": 18,
+          "start": "乔降低音量，蓝夹被碰开。",
+          "action": "加班申请露出，母亲承认自己要求了这班；扣下手机，没有得到立刻的安慰。",
+          "end": "母亲手留在周五通知，妹妹还在旁边。"
+        },
+        {
+          "duration": 26,
+          "start": "两人无话，文件仍在桌上。",
+          "action": "母亲请求陪着打电话，乔拨号；母亲找到号码、喝水，再请求妹妹先说，乔将号码便签转到自己面前。",
+          "end": "姐妹等人工接听，乔准备先说；没有赔付、悬赏或网络撤回的假解决。"
+        }
+      ],
+      "broadcastEpisode": 4,
+      "displayId": "EP04-005"
+    }
+  ]
+}

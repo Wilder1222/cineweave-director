@@ -1,0 +1,37 @@
+{
+  "case_id": "C07",
+  "model": null,
+  "tokens": null,
+  "time": null,
+  "read_files": [
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior/C07/request.txt",
+      "sha256": "0c3db42d4f3f3fdae95d150d37f0b85dd68641ff401a435594fea9c3845a195a"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/SKILL.md",
+      "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/routes/style.md",
+      "sha256": "8c68adec5424cdeef9735099102eabd022e65181af21efac4564d41e7528e806"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/optional/makeup-style-presets.md",
+      "sha256": "a2e4efa2134d2362a54efea433b802480a810c9a9c3b9e9cc4fadc6799992a8a"
+    }
+  ],
+  "checks": {
+    "single_authorized_replacement": true,
+    "lip_rule_matches_MU28_r1": true,
+    "output_utf8_lf": true,
+    "no_image_generated": true
+  },
+  "artifacts": [
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior/C07/output.md",
+      "sha256": "07cd61cd9adb7003435b783a6efb82476ac838032252c0edc1bd5e15fba2a4b1"
+    }
+  ],
+  "limitations": []
+}

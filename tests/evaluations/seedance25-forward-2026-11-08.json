@@ -1,0 +1,143 @@
+{
+  "evaluatedAt": "2026-11-08",
+  "scope": "3项独立首次请求及2次同代理定向复测；未调用供应商、上传、生成媒体、听审、核验宿主自动调用或测量稳定性。",
+  "sourceHashMeaning": "可用本地源码快照的哈希，不冒称代理实际逐文件读取轨迹。",
+  "reviewBasis": "作者根据完整返回文本逐项审阅，不使用自拟质量分数。",
+  "modelAndUsageMetrics": "unknown",
+  "runs": [
+    {
+      "id": "timing_initial",
+      "context": "独立代理首次试跑",
+      "request": "将这个已有母稿忠实适配火山方舟 Seedance 2.5 API，只要一条完整视频提示词和必需设置。总长7.5秒、固定中近景、16:9均不得改变：0–2.5秒，短黑发成年修复师穿深灰棉衬衫，坐在左窗暖光照到的木工作台后，左手压住台上旧书，右手拿干刷缓慢掸去书脊灰尘，视线在书脊；2.5–7.5秒，右手把刷子放回台面右侧，抬眼看向画外左侧听者，用普通话轻声说“还来得及。”，说完闭唇，左手仍压书。只保留刷毛声、室内底声和这句对白，没有音乐，没有字幕。没有任何参考文件，不要增加镜头或剧情，也不要替我调用生成。",
+      "output": "以下为忠实条件稿：本地接口资料确认 `duration` 范围为4–30秒，但未确认是否接受7.5秒，不能将其标为已可提交。\n\n```text\n16:9，单个连续固定中近景，摄影机全程静止，不切镜、不改变景别。短黑发成年修复师穿深灰棉衬衫，坐在左窗暖光照到的木工作台后；画面保留面部、双手、台上旧书与台面右侧的放刷位置。\n\n前段占全片前三分之一：修复师左手压住台上旧书，右手拿干刷，缓慢掸去书脊灰尘，视线落在书脊。掸刷时出现<刷毛轻扫书脊的声音>，室内底声持续。\n\n随后进入余下三分之二：右手把干刷放回台面右侧，抬眼看向画外左侧听者。修复师在画内用普通话轻声说：{还来得及。}，口型与对白同步；说完闭唇。左手从始至终压住旧书，结束时刷子留在台面右侧，视线仍朝向画外左侧听者。\n\n全段只保留刷毛声、室内底声和这句对白。没有音乐，没有字幕，不增加其他声音、人物入画、镜头或剧情。\n```\n\n必需设置：\n\n| 项目 | 设置 |\n|---|---|\n| 入口／模式 | 火山方舟 Seedance 2.5 API，纯文生视频 |\n| `model` | 填目标账号可用的准确 Seedance 2.5 模型ID；本次未核验 |\n| `content` | 仅上述文本，不附参考文件 |\n| `ratio` | `\"16:9\"` |\n| `generate_audio` | `true` |\n| 时长硬锁 | 总长7.5秒；掸灰0–2.5秒，放刷、抬眼及对白2.5–7.5秒 |\n| `duration` | 7.5秒能否作为请求值待核；保留原时长，不擅自取整或改用自动时长 |\n\n接口条件依据随包保存的[方舟任务 API资料](https://docs.volcengine.com/docs/ark/create-video-generation-task-api?lang=zh)，本次未联网复核。实际返回后仍需核对7.5秒总长、2.5秒动作转折及对白完成时间。",
+      "outputSha256": "5a30a368ad5cc044fa47f3ab19f09d6a275c96ba817733e84335682c8c8f4ff8",
+      "availableSourceSnapshotSha256": {
+        "skills/cineweave-director/SKILL.md": "1e17c44958daf728b99ab156ed8e4aa229a69c7d0d4c133d282f5aaf8edb7d07",
+        "skill-sources/cineweave-platform/SKILL.md": "4c8adcdc9d96f8a523a39a93e4061255765a395e6a1f0abaee7222c944633e61",
+        "skills/cineweave-director/references/optional/video-model-practices-2026-10.md": "4cb1d3b3a1f2fd13c3779506471236071a02f2e01f2660b1e597d65dad0795c8",
+        "skills/cineweave-director/references/optional/video-platform-adaptation.md": "4286ffb73ad0337197310b3a95c5280e2273547795a7ac91bd5cf295e76b751b"
+      },
+      "result": "partial",
+      "observation": "识别并保留7.5秒依赖，但将已知整数约束记成未知，判部分通过。"
+    },
+    {
+      "id": "strict_first_frame_plus_references",
+      "context": "独立代理首次试跑",
+      "request": "我想用火山方舟 Seedance 2.5 API做8秒单镜。必须严格用图片1锁定首帧，同时同次使用视频1的推镜和音频1的女人声线。图、视频、音频还没上传，你也没见过。内容是女站务员右手持布已贴住玻璃，擦开雾气后看见窗外手提灯，停手，轻声说“你终于来了。”，灯始终在窗外，室内暖光、室外冷雨光。无背景音乐，无字幕，保留雨声。请给完整复制稿和最少的交接说明，不要生成或擅自换模式。",
+      "output": "按随包方舟 API 资料，**严格首帧与图／视频／音频全模态参考属于互斥场景**，因此你要求的同次组合目前不能作为合法请求提交。下面保留全部原要求，交付完整条件稿；没有替你换模式。该结论依据本地记录，接口基准为 2026-10-31，本次未联网复核。[方舟任务 API](https://docs.volcengine.com/docs/ark/create-video-generation-task-api?lang=zh)\n\n```text\n8秒，一镜到底。雨夜车站内，一名女站务员擦开窗玻璃上的雾气，看见窗外手提灯后停手，轻声对窗外方向说话。\n\n以@图片1严格锁定首帧，保留其人物身份、服装、场景、机位、构图和初始光色。室内眼平斜侧中近景，前景保留右手、布与雾玻璃，中景保留她的脸侧，玻璃外的手提灯处于后景，起初被尚未擦开的雾气遮住，不能辨清。她身体朝向玻璃，闭唇，目光落在准备擦开的区域；右手已经握住布，布已经贴住玻璃，不补取布或伸手接触过程。\n\n0–3秒：她以右手带动布，沿玻璃擦开一小块雾气，布与玻璃保持真实接触。擦痕逐渐形成可透视的区域，窗外手提灯随之显露。<室外连续雨声；轻微擦玻璃摩擦声随擦拭动作发生>\n\n3–4秒：看清灯后，她的目光从擦拭处移向窗外灯所在的位置，右手随即停住，仍握着布，布仍贴住玻璃。呼吸略停，眉间的紧张稍稍松开，反应克制，不突然转头或夸张惊叫。摩擦声随停手结束，雨声持续。\n\n4–7秒：她保持望向窗外灯所在的方向，以@音频1提供的女性声线，用普通话轻声说：{你终于来了。} 语速自然，像终于确认等候的人到了，声音轻而清楚；口唇和下颌随准确发音自然变化。右手与布保持停在玻璃上的状态，不重新擦拭。\n\n7–8秒：说完整句后自然闭唇，继续望着窗外，保留短暂等待。右手仍握布，布仍贴住玻璃，灯仍在窗外，雨声连续。\n\n全段只参考@视频1的推镜轨迹、速度变化与幅度，用靠近加强擦雾后发现灯与人物反应的注意变化；不迁移视频中的人物、场景、动作、光色或声音。摄影机始终位于室内，不穿过玻璃，不切镜，不用遮挡或过浅景深盖住擦拭接触、脸部反应及显露后的灯。\n\n室内暖光、室外冷雨光全段连续；手提灯始终隔着玻璃位于窗外，不进入室内，不穿透玻璃。@音频1只提供女站务员的声线，不沿用其原台词、音乐或背景声。全片无背景音乐，无字幕，无额外对白，保留雨声。\n```\n\n图片1、视频1、音频1均为**预留／未绑定**，未观察、未验收。最少交接如下：\n\n- **首图待核：**实际图片必须符合正文开场：室内眼平斜侧中近景；身体朝向玻璃、闭唇、望向擦拭区域；右手持布且布已接触玻璃；脸侧和接触处可见；灯在窗外并被雾遮住；室内暖、室外冷。缺项时需调整素材或开场，不能声称已经匹配。严格路径须将实际图片设为 `content.role=first_frame`，文字不能代替绑定。\n- **参考待核：**视频1的推镜须能在该室内空间及8秒内成立；音频1须能明确定位目标女性声线。两项均不能凭文件名认定已经匹配。\n\n逐文件规格依据同一份[方舟 API 记录](https://docs.volcengine.com/docs/ark/create-video-generation-task-api?lang=zh)，当前全部待核：\n\n| 素材 | 对应要求 |\n|---|---|\n| 图片1 | jpeg/png/webp/bmp/tiff/gif/heic/heif；宽高各300–6000 px，宽高比0.4–2.5；小于30 MB。 |\n| 视频1 | mp4/mov，编码另核；480p/720p/1080p/4k；非编辑参考2–30秒，24–60 fps；宽高各300–6000 px，宽高比0.4–2.5，总像素407696–8295044；不超过200 MB。 |\n| 音频1 | wav/mp3，2–30秒，不超过15 MB；声线用途与许可待核。 |\n\n请求体上限64 MB，Base64计入其中。随包记录还指出，该 API 不支持直接上传含真人人脸的参考图／视频，需核对指定模型产物、预置虚拟人像或已授权真人素材等适用渠道；尚未知图片1、视频1是否涉及此项。[真人素材录入指南](https://docs.volcengine.com/docs/ark/upload-real-person-portrait-assets?lang=zh)\n\n两条有损路径仅供后续选择，**均未采用**：\n\n- 严格首帧：`duration=8`、`ratio=adaptive`、`generate_audio=true`；失去同请求的视频推镜参考和音频声线参考。\n- 全模态参考：保留三类参考，`duration=8`、`generate_audio=true`，新生成意图使用 `omni_reference_task_type=reference`；失去严格首帧保证，仍需核对异步终态。\n\n未生成、上传或提交任务。",
+      "outputSha256": "f8551292e93ee9106b2b4194fb10b34a94a9ea4e551c3daffaa48c851195f47c",
+      "availableSourceSnapshotSha256": {
+        "skills/cineweave-director/SKILL.md": "1e17c44958daf728b99ab156ed8e4aa229a69c7d0d4c133d282f5aaf8edb7d07",
+        "skill-sources/cineweave-platform/SKILL.md": "4c8adcdc9d96f8a523a39a93e4061255765a395e6a1f0abaee7222c944633e61",
+        "skills/cineweave-director/references/optional/video-model-practices-2026-10.md": "4cb1d3b3a1f2fd13c3779506471236071a02f2e01f2660b1e597d65dad0795c8",
+        "skills/cineweave-director/references/optional/video-platform-adaptation.md": "4286ffb73ad0337197310b3a95c5280e2273547795a7ac91bd5cf295e76b751b"
+      },
+      "result": "pass_with_limitations",
+      "observation": "明确模式互斥，保留原目标与未绑定状态，有损备选均未采用；答复比最少交接理想长度更长。"
+    },
+    {
+      "id": "local_video_edit",
+      "context": "独立代理首次试跑",
+      "request": "把下面编辑要求改写成适合火山方舟 Seedance 2.5 API 的完整提示词和必要设置。视频1是18秒、16:9的原片，只把第4到7秒画面右侧男子的深蓝色外套改成深灰色，其他画面、动作、摄影、剪辑、原片对白和环境音都保留。不要重新生成故事，不要增加人物和声音。视频还没交给你，也没上传，你只能按我的文字做条件稿。",
+      "output": "以下是按 **CineWeave 导演及平台适配能力**整理的条件稿。视频尚未提供、上传或绑定；`@视频1` 是预留编号，拿到原片后须按实际输入顺序核对。\n\n完整提示词：\n\n```text\n编辑@视频1。原片为18秒、16:9视频，以原片时间轴为准，仅修改第4至7秒画面右侧男子的外套颜色：将深蓝色外套改为深灰色。\n\n修改范围严格限制在该时段这名男子的外套区域。保持外套原有版型、织物纹理、褶皱、边缘、遮挡关系、运动和受光变化，只改变颜色；不得影响皮肤、头发、其他衣物、道具、其他人物或背景。\n\n第4秒之前及第7秒之后的画面保留原片。第4至7秒内，除指定外套颜色外，人物身份、数量、位置、表情、视线、动作、场景、光线、构图、景别、焦点、摄影机运动、镜头顺序、切点和播放速度全部沿用原片。按原片第4秒和第7秒的画面衔接，不向区间外扩展修改。\n\n全片保留原片全部声音，包括原片对白和环境音，保持原有内容、说话人、声线、语气、时间位置及声画同步。不增加人物，不新增或重写对白、旁白、音乐、音效或字幕；已有声音和画面文字沿用原片。\n\n这是对原片指定时段、指定服装区域的颜色编辑，不重新生成故事，不重排镜头，不增加剧情。\n```\n\n必要设置与绑定：\n\n| 项目 | 条件设置 |\n|---|---|\n| 平台／模型 | 火山方舟 Seedance 2.5；本地文档记录模型 ID 为 `doubao-seedance-2-5-260628`，实际账号可用性待核 |\n| 任务 | 视频编辑；完整18秒原片作为待编辑的 `reference_video`，不是只提供动作参考 |\n| 素材编号 | 预留 `@视频1`；真实文件、上传顺序和绑定均待核 |\n| `duration` | `-1`，不要填 `18` |\n| `ratio` | `adaptive`，沿用原片画幅；实际输入须核对为16:9 |\n| `omni_reference_task_type` | 按文档默认 `auto` 配合正文明确编辑意图；不要指定为新片参考生成的 `reference` |\n| 分辨率 | 原片像素尺寸未知，待取得文件后按实际支持档位选择 |\n| 声音 | 若由 API 输出有声视频，`generate_audio=true`；它启用声音生成，**不等于复制原音轨** |\n\n编辑输出时长与源片**基本对齐**，不保证恰好18秒。本地资料记录的两份官方说明分别提及最多约0.3秒、0.4秒的缩短，需以实际返回文件测量，不能预先计算补时。[模型说明](https://docs.volcengine.com/docs/ark/seedance-2-5?lang=zh)、[提示词指南](https://docs.volcengine.com/docs/ark/seedance-2-5-prompt-guide?lang=zh)。\n\n上传前的文件条件，按方舟该 API 的本地记录核对：\n\n- MP4／MOV；编辑源视频4–30秒，单段不超过200 MB、24–60 fps。\n- 宽高各300–6000 px，宽／高为0.4–2.5，总像素407696–8295044；输入分辨率档为480p、720p、1080p或4K，编码另核。\n- 本题只需一段视频；已知18秒、16:9满足对应时长与比例范围，其余规格未知。\n- 方舟文档对直接上传含真人人脸的参考图／视频有限制，并列有指定产物、虚拟人像及授权真人素材等渠道。原片是否涉及这些条件尚不清楚，须按实际文件、账号和适用渠道核对。[任务 API](https://docs.volcengine.com/docs/ark/create-video-generation-task-api?lang=zh)、[真人素材录入指南](https://docs.volcengine.com/docs/ark/upload-real-person-portrait-assets?lang=zh)。\n\n“其他画面和原声全部保留”是验收硬要求，提示词不能保证生成式编辑逐帧、逐样本不变。严格交付时，可用原片作底，仅合成4–7秒的外套修改区域，并复用原音轨；返回后检查边界帧、外套遮挡、区间外画面、总时长及声画同步。当前只完成文字条件稿，未执行这些操作。\n\n上述接口条件来自本地指南记录，接口核查基准为2026-10-31；本次未联网核验当前服务状态。",
+      "outputSha256": "95643615479514432166778413c2266ccb60aa1c4179c66d8f4f21b0dd413323",
+      "availableSourceSnapshotSha256": {
+        "skills/cineweave-director/SKILL.md": "1e17c44958daf728b99ab156ed8e4aa229a69c7d0d4c133d282f5aaf8edb7d07",
+        "skill-sources/cineweave-platform/SKILL.md": "4c8adcdc9d96f8a523a39a93e4061255765a395e6a1f0abaee7222c944633e61",
+        "skills/cineweave-director/references/optional/video-model-practices-2026-10.md": "4cb1d3b3a1f2fd13c3779506471236071a02f2e01f2660b1e597d65dad0795c8",
+        "skills/cineweave-director/references/optional/video-platform-adaptation.md": "4286ffb73ad0337197310b3a95c5280e2273547795a7ac91bd5cf295e76b751b"
+      },
+      "result": "pass",
+      "observation": "保留4至7秒外套改色、原声意图、未知素材、adaptive比例、编辑自动时长和实际媒体验收。"
+    },
+    {
+      "id": "timing_retest",
+      "context": "同代理定向重读复测",
+      "request": "将这个已有母稿忠实适配火山方舟 Seedance 2.5 API，只要一条完整视频提示词和必需设置。总长7.5秒、固定中近景、16:9均不得改变：0–2.5秒，短黑发成年修复师穿深灰棉衬衫，坐在左窗暖光照到的木工作台后，左手压住台上旧书，右手拿干刷缓慢掸去书脊灰尘，视线在书脊；2.5–7.5秒，右手把刷子放回台面右侧，抬眼看向画外左侧听者，用普通话轻声说“还来得及。”，说完闭唇，左手仍压书。只保留刷毛声、室内底声和这句对白，没有音乐，没有字幕。没有任何参考文件，不要增加镜头或剧情，也不要替我调用生成。",
+      "output": "方舟 Seedance 2.5 API 的 `duration` 只接受整数，无法原生请求7.5秒。保留你的时长硬锁，以下交付完整条件稿；目前没有满足全部要求的直接提交设置。\n\n```text\n16:9，单个连续固定中近景，摄影机全程静止，不切镜、不改变景别。短黑发成年修复师穿深灰棉衬衫，坐在左窗暖光照到的木工作台后；画面保留面部、双手、台上旧书与台面右侧的放刷位置。\n\n前段占全片前三分之一：修复师左手压住台上旧书，右手拿干刷，缓慢掸去书脊灰尘，视线落在书脊。掸刷时出现<刷毛轻扫书脊的声音>，室内底声持续。\n\n随后进入余下三分之二：右手把干刷放回台面右侧，抬眼看向画外左侧听者。修复师在画内用普通话轻声说：{还来得及。}，口型与对白同步；说完闭唇。左手从始至终压住旧书，结束时刷子留在台面右侧，视线仍朝向画外左侧听者。\n\n全段只保留刷毛声、室内底声和这句对白。没有音乐，没有字幕，不增加其他声音、人物入画、镜头或剧情。\n```\n\n必需设置：\n\n| 项目 | 设置 |\n|---|---|\n| 入口／模式 | 火山方舟 Seedance 2.5 API，纯文生视频 |\n| `model` | 填目标账号可用的准确 Seedance 2.5 模型ID；本次未核验 |\n| `content` | 仅上述文本，不附参考文件 |\n| `ratio` | `\"16:9\"` |\n| `generate_audio` | `true` |\n| 时长硬锁 | 总长7.5秒；掸灰0–2.5秒，放刷、抬眼及对白2.5–7.5秒 |\n| `duration` | 无兼容值：7.5不是合法整数请求值；不改成8秒或自动时长 |\n\n时长限制依据本地指引2026-11-08对[方舟任务 API](https://docs.volcengine.com/docs/ark/create-video-generation-task-api?lang=zh)的专项复核，本次未联网。提示词中的相对节拍保留原定顺序与比例，不能替代7.5秒原生时长控制或证明实际2.5秒转折已满足。",
+      "outputSha256": "a0415716e30c20822cdce7efa1e7d2b342962825eb40dd37bd71daf3497ea567",
+      "availableSourceSnapshotSha256": {
+        "skills/cineweave-director/SKILL.md": "1e17c44958daf728b99ab156ed8e4aa229a69c7d0d4c133d282f5aaf8edb7d07",
+        "skill-sources/cineweave-platform/SKILL.md": "4c8adcdc9d96f8a523a39a93e4061255765a395e6a1f0abaee7222c944633e61",
+        "skills/cineweave-director/references/optional/video-model-practices-2026-10.md": "da4dda1a46fe8100013d655697d473c94ad235d9b47a5237c5f46036a8daa2ae",
+        "skills/cineweave-director/references/optional/video-platform-adaptation.md": "4286ffb73ad0337197310b3a95c5280e2273547795a7ac91bd5cf295e76b751b"
+      },
+      "result": "pass",
+      "observation": "重读更新指引后明确7.5不兼容duration，保留精确上游时长，不擅自取整。"
+    },
+    {
+      "id": "minimal_handoff_retest",
+      "context": "同代理定向重读复测",
+      "request": "我想用火山方舟 Seedance 2.5 API做8秒单镜。必须严格用图片1锁定首帧，同时同次使用视频1的推镜和音频1的女人声线。图、视频、音频还没上传，你也没见过。内容是女站务员右手持布已贴住玻璃，擦开雾气后看见窗外手提灯，停手，轻声说“你终于来了。”，灯始终在窗外，室内暖光、室外冷雨光。无背景音乐，无字幕，保留雨声。请给完整复制稿和最少的交接说明，不要生成或擅自换模式。",
+      "output": "**这组要求在随包方舟 API 资料中存在互斥：严格首帧不能同次叠加视频、音频参考。**以下保留全部原要求，给出完整条件稿，尚不能直接提交；没有替你换模式。依据本地接口记录（核验基准2026-10-31，本次未在线复核）。[方舟任务 API](https://docs.volcengine.com/docs/ark/create-video-generation-task-api?lang=zh)\n\n```text\n8秒，一镜到底。雨夜车站室内，女站务员擦开雾玻璃，看见窗外手提灯后停手，轻声说话。\n\n以@图片1作为严格首帧，继承其人物身份、服装、场景和初始光色。室内眼平斜侧中近景，前景保留右手、布与玻璃接触处，中景保留她的脸侧，后景是玻璃外被雾遮住、尚不能辨清的手提灯。她身体朝向玻璃，闭唇，目光落在擦拭区域；右手已经握住布，布已经贴住玻璃。\n\n0–3秒：她以右手带布擦开一小块雾气，布持续贴着玻璃，擦痕逐渐露出窗外手提灯。<连续雨声；轻微擦玻璃摩擦声随擦拭发生>\n\n3–4秒：看清灯后，她的目光从擦拭处移向窗外灯所在的位置，右手随即停住，仍握布贴着玻璃。呼吸略停，眉间稍稍松开，反应克制。摩擦声随停手结束，雨声持续。\n\n4–7秒：她继续望向窗外灯所在的方向。画内女站务员采用@音频1的女性声线，用普通话轻声说：{你终于来了。} 声音轻而清楚，带着终于确认对方到来的释然；口唇和下颌随准确发音自然变化。右手和布保持停在玻璃上的状态。\n\n7–8秒：说完整句后自然闭唇，继续望向窗外，保留短暂等待。右手仍握布，布仍贴住玻璃，雨声连续。\n\n摄影机从图片1的室内机位开始，仅参考@视频1的推镜方向、速度变化与幅度，推进用于加强擦雾后发现灯和人物反应的注意变化。不迁移视频中的人物、场景、动作、光色或声音。摄影机全程留在室内，不穿过玻璃、不切镜；焦点与景深保护脸部、擦拭接触和擦开后窗外灯的可读性。\n\n人物身份、服装和空间关系连续；室内暖光、室外冷雨光保持连续。灯始终隔着玻璃位于窗外，不进入室内。@音频1只提供女站务员的声线，不沿用原台词、音乐或背景声。全片无背景音乐，无字幕，无额外对白，保留雨声。\n```\n\n图片1、视频1、音频1均为**预留／未绑定**，尚未观察。首图待核条件就是正文开场：室内眼平斜侧中近景；身体朝向玻璃、闭唇、望向擦拭区域；右手持布且布已接触玻璃，脸侧和接触处可见；灯在窗外并被雾遮住；室内暖、室外冷。视频推镜须与该空间和取景相容，音频须能明确定位目标女性声线；不符时不能声称已经匹配。\n\n当前两条条件路径均未采用：\n\n- **保留严格首帧：**实际图片须绑定为 `content.role=first_frame`，`ratio=adaptive`；失去同请求的视频推镜参考和音频声线参考。\n- **保留三类参考：**采用全模态参考可表达图片作为起始画面的意图，但失去严格首帧保证。\n\n请求时长目标仍为8秒；对白和雨声需要 `generate_audio=true`。文件规格待路径选定再核。若图／视频含真人人脸，随包资料指出该 API 不支持直接上传此类参考，须核对指定模型产物、预置虚拟人像或已授权真人素材等适用渠道，不能据未知素材认定已符合。[真人素材录入指南](https://docs.volcengine.com/docs/ark/upload-real-person-portrait-assets?lang=zh)\n\n未生成、上传或提交任务。",
+      "outputSha256": "63e535c2e5d7aef5828d81a9ec968fea2a72c50a89c1de6db4032b778b4cd553",
+      "availableSourceSnapshotSha256": {
+        "skills/cineweave-director/SKILL.md": "1e17c44958daf728b99ab156ed8e4aa229a69c7d0d4c133d282f5aaf8edb7d07",
+        "skill-sources/cineweave-platform/SKILL.md": "6259d2e9bc8bde61e489327b71d8454effee725af3bb251eec51c5698aab3c78",
+        "skills/cineweave-director/references/optional/video-model-practices-2026-10.md": "390fba0afc3a2e7df4acdb820181a11e4a892cf49e2744b3dffddd6b7bec7710",
+        "skills/cineweave-director/references/optional/video-platform-adaptation.md": "4286ffb73ad0337197310b3a95c5280e2273547795a7ac91bd5cf295e76b751b"
+      },
+      "result": "pass",
+      "observation": "补充最少交接规则后，复测保留完整条件正文、首帧待核和互斥路径损失，移除尚未选定路径的整套文件规格表。"
+    }
+  ],
+  "minimalHandoffLength": {
+    "metric": "Unicode码点数，含Markdown和链接，仅衡量本次文本长度，不代表模型速度、费用或质量",
+    "initial": 2064,
+    "retest": 1443
+  },
+  "finalAuthorSourceSha256": {
+    "skills/cineweave-director/SKILL.md": "1e17c44958daf728b99ab156ed8e4aa229a69c7d0d4c133d282f5aaf8edb7d07",
+    "skill-sources/cineweave-platform/SKILL.md": "6259d2e9bc8bde61e489327b71d8454effee725af3bb251eec51c5698aab3c78",
+    "skills/cineweave-director/references/optional/video-model-practices-2026-10.md": "390fba0afc3a2e7df4acdb820181a11e4a892cf49e2744b3dffddd6b7bec7710",
+    "skills/cineweave-director/references/optional/video-platform-adaptation.md": "4286ffb73ad0337197310b3a95c5280e2273547795a7ac91bd5cf295e76b751b"
+  },
+  "engineering": {
+    "scope": "当前登记开发清单及完整Skill作者源／派生副本的隔离副本；原工作区无关资料白名单阻断保持。",
+    "fullRegression": {
+      "tests": 597,
+      "pass": 597,
+      "fail": 0,
+      "skipped": 0,
+      "durationMs": 721118.4682,
+      "scope": "末轮文案收口前的登记清单副本"
+    },
+    "bundleSmoke": {
+      "tests": 9,
+      "pass": 9,
+      "fail": 0,
+      "durationMs": 101386.1365,
+      "scope": "末轮文案收口前，工具代码未变"
+    },
+    "finalSourceValidation": true,
+    "finalBuild": {
+      "files": 698,
+      "byteIdentical": true
+    },
+    "finalBundleValidation": true,
+    "derivedFilesCompared": 522,
+    "unchangedSchemasAndExamples": 106,
+    "logs": [
+      {
+        "path": "D:/Temp/cw-seedance25-test.log",
+        "sha256": "08d685be9a60ab075b2c6bca4142641a71b3d19662b04a0a38464155cafebd4d"
+      },
+      {
+        "path": "D:/Temp/cw-seedance25-final-validate.log",
+        "sha256": "a65221372e5a4ea08cdb5e1c6a2ff5e494387140e5d197d86024495da289be4b"
+      },
+      {
+        "path": "D:/Temp/cw-seedance25-final-build.log",
+        "sha256": "ebfa3a1d94bf71d12ed4af1faff5513c42f78981851467caceb78501f87db8a7"
+      },
+      {
+        "path": "D:/Temp/cw-seedance25-final-bundle-validate.log",
+        "sha256": "57f45017618c5b5d6c453a70392cc5a46c56464710f00405d8014f255df621ee"
+      },
+      {
+        "path": "D:/Temp/cw-seedance25-final-bundle-test.log",
+        "sha256": "b6b931c0de1bcb77c193d4c915403b427642c11690749d68a12314e40eeda422"
+      }
+    ]
+  }
+}

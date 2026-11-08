@@ -1,0 +1,1104 @@
+{
+  "source": {
+    "type": "design",
+    "id": "DENIED-E05-text-coverage-bbd573af0e1c",
+    "version": 2,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "E05-SH001",
+    "E05-SH003",
+    "E05-SH005",
+    "E05-SH006",
+    "E05-SH007",
+    "E05-SH008",
+    "E05-SH009",
+    "E05-SH010",
+    "E05-SH011",
+    "E05-SH012"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "E05-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：青年试图先控制他人风险，律师承认这项请求但不让它替代必要事实。；入镜已知：海伦在南侧，青年北侧，桌上尚无文件；双方双手自由，会见无玻璃隔断。；本镜新知：患者姓名问题另页记下，蓝夹在桌西；青年收手坐回，海伦准备重建抓捕经过。；实际写出的动作：海伦把蓝夹放桌西侧，取出空白工作纸，笔落在纸上，没有伸手握手。海伦对路易吉说英语“I'm Helen Kane. I'm your lawyer. What name did you give the police?”；介绍完立即要求可核事实。路易吉对海伦说英语“The one on the card.”；先给最窄的答案。青年指一下海伦蓝夹封面，想让她去材料里找那个名字。她等他抬起头，没有替他填空。海伦对路易吉说英语“I need you to say it. Not point.”；建立必须能复述而非靠猜的工作方式。青年看那张还空着的纸，改把手伸向蓝夹。路易吉对海伦说英语“There are patient records in my bag. Those people didn't agree to any of this.”；试图重排会见议程。路易吉对海伦说英语“Please. Keep their names out of this.”；终于把请求缩成具体保护。海伦把夹子收回一寸，青年停手。她在另一页写下“患者姓名”，把这页留在他看得见的位置。海伦对路易吉说英语“I can ask to protect their names. I can't make the records disappear. First I need to know what's in there.”；接受具体任务，同时撤掉他以为能一把取回材料的期待。路易吉对海伦说英语“I don't want them paying for this.”；无法改变自己的处境，先试图控制别人是否被牵连。海伦把患者姓名那页留开，翻回第一张空纸。他看见她确实记下了，才靠回椅背。",
+      "sourceLocator": "season/E05.json#/shots/0"
+    },
+    {
+      "role": "performance",
+      "shotId": "E05-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "海伦在南侧，青年北侧，桌上尚无文件；双方双手自由，会见无玻璃隔断。 → 患者姓名问题另页记下，蓝夹在桌西；青年收手坐回，海伦准备重建抓捕经过。；海伦向路易吉：I'm Helen Kane. I'm your lawyer. What name did you give the police?；介绍完立即要求可核事实 / 路易吉向海伦：The one on the card.；先给最窄的答案 / 海伦向路易吉：I need you to say it. Not point.；建立必须能复述而非靠猜的工作方式 / 路易吉向海伦：There are patient records in my bag. Those people didn't agree to any of this.；试图重排会见议程 / 路易吉向海伦：Please. Keep their names out of this.；终于把请求缩成具体保护 / 海伦向路易吉：I can ask to protect their names. I can't make the records disappear. First I need to know what's in there.；接受具体任务，同时撤掉他以为能一把取回材料的期待 / 路易吉向海伦：I don't want them paying for this.；无法改变自己的处境，先试图控制别人是否被牵连",
+      "sourceLocator": "season/E05.json#/shots/0"
+    },
+    {
+      "role": "staging",
+      "shotId": "E05-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "海伦南、青年北，蓝夹西侧；固定桌无玻璃，二人之间的空纸仍空。；起态：海伦在南侧，青年北侧，桌上尚无文件；双方双手自由，会见无玻璃隔断。；出态：患者姓名问题另页记下，蓝夹在桌西；青年收手坐回，海伦准备重建抓捕经过。",
+      "sourceLocator": "season/E05.json#/shots/0"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E05-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "桌东侧平视双人中景；相机：固定两人同框，手伸向夹子成为第一次关系变化；不把每一项权利做成插镜。；焦点：人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "sourceLocator": "season/E05.json#/shots/0"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E05-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E05-SH001.txt；60秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E05.json#/shots/0"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E05-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "患者姓名问题另页记下，蓝夹在桌西；青年收手坐回，海伦准备重建抓捕经过。；切点：患者姓名问题另页记下，蓝夹在桌西；青年收手坐回，海伦准备重建抓捕经过。；接口：因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "sourceLocator": "season/E05.json#/shots/0"
+    },
+    {
+      "role": "direction",
+      "shotId": "E05-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：将搜查争议从青年口号收窄到可检查的实际距离与控制状态。；入镜已知：保护姓名另页在桌西；海伦在空纸划出包、手铐、打开三栏。；本镜新知：桌上三栏顺序为移包、前铐并带离、开包；青年期待法律胜利，海伦尚未承诺。；实际写出的动作：海伦对路易吉说英语“We'll deal with the names. Where was the bag when they grabbed you?”；先接下保护姓名的请求，随即把话题拉回逮捕时的位置。青年指向“包”那栏，想把纸转到自己面前，海伦用笔停住他往后跳的手势。海伦对路易吉说英语“By your foot, or in the aisle?”；把抽象解释压到一个位置。路易吉对海伦说英语“They moved it away from my foot. I got up. Then they cuffed me.”；把自己记忆拆成步骤。他把双手并在身前模仿铐住的位置，身体仍坐着。海伦的笔没有跟着跳到结论。海伦对路易吉说英语“And the bag?”；截住要跳过的距离。路易吉对海伦说英语“Over there. They'd already moved me when he opened it.”；双手合拢示意受控，再指向桌外。她把手掌放到纸两边，使“青年”和“包”分开。海伦对路易吉说英语“Could you reach it?”；限定能亲身确定的距离而非法律结论。路易吉对海伦说英语“No. He had my arm. I couldn't even turn.”；回到自己的身体位置。海伦圈下“打开”。青年看见那个圈，第一次向前坐，像等一个已经确定的好消息。",
+      "sourceLocator": "season/E05.json#/shots/1"
+    },
+    {
+      "role": "performance",
+      "shotId": "E05-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "保护姓名另页在桌西；海伦在空纸划出包、手铐、打开三栏。 → 桌上三栏顺序为移包、前铐并带离、开包；青年期待法律胜利，海伦尚未承诺。；海伦向路易吉：We'll deal with the names. Where was the bag when they grabbed you?；先接下保护姓名的请求，随即把话题拉回逮捕时的位置 / 海伦向路易吉：By your foot, or in the aisle?；把抽象解释压到一个位置 / 路易吉向海伦：They moved it away from my foot. I got up. Then they cuffed me.；把自己记忆拆成步骤 / 海伦向路易吉：And the bag?；截住要跳过的距离 / 路易吉向海伦：Over there. They'd already moved me when he opened it.；双手合拢示意受控，再指向桌外 / 海伦向路易吉：Could you reach it?；限定能亲身确定的距离而非法律结论 / 路易吉向海伦：No. He had my arm. I couldn't even turn.；回到自己的身体位置",
+      "sourceLocator": "season/E05.json#/shots/1"
+    },
+    {
+      "role": "staging",
+      "shotId": "E05-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "青年北侧双手在身前演示；律师南侧与纸同层，蓝夹在西边画缘。；起态：保护姓名另页在桌西；海伦在空纸划出包、手铐、打开三栏。；出态：桌上三栏顺序为移包、前铐并带离、开包；青年期待法律胜利，海伦尚未承诺。",
+      "sourceLocator": "season/E05.json#/shots/1"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E05-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "桌西侧双人中近景，桌纸只占下缘；相机：从原东侧机位明确换至西侧前先给同桌全貌接轴；此后固定，让重演动作与听者反应持续同框。；焦点：人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "sourceLocator": "season/E05.json#/shots/1"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E05-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E05-SH003.txt；55秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E05.json#/shots/1"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E05-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "桌上三栏顺序为移包、前铐并带离、开包；青年期待法律胜利，海伦尚未承诺。；切点：桌上三栏顺序为移包、前铐并带离、开包；青年期待法律胜利，海伦尚未承诺。；接口：因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "sourceLocator": "season/E05.json#/shots/1"
+    },
+    {
+      "role": "direction",
+      "shotId": "E05-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：一次似乎到手的优势暴露青年对律师工作的错误期待。；入镜已知：青年看着被圈的“打开”，海伦的笔仍在手里，三栏纸在中央。；本镜新知：律师将有利搜查事实与不利口供并置；青年开始接受完整复述，尚未取得法律保证。；实际写出的动作：路易吉对海伦说英语“So they can't use it?”；抓住一项有利事实急于把全部案件推出去。海伦对路易吉说英语“I haven't seen the video. Don't get ahead of me.”；拒绝把初次会见变成保证。她将三栏纸放在下面，翻到问答页。海伦对路易吉说英语“What else did you tell them?”；要求完整而非漂亮版本。青年看回那个圈；她用掌心遮住。海伦对路易吉说英语“Even the bad stuff. I can't hear it for the first time in court.”；察觉他又想用搜查问题挡住不利陈述。他不再看包的位置，指向始终空着的姓名栏。海伦翻出空白问答页，划掉他用手势躲开的空格，重新留出能写全称的位置。他吸气，终于开始逐项补足；后续具体内容在场景省略中完成。",
+      "sourceLocator": "season/E05.json#/shots/2"
+    },
+    {
+      "role": "performance",
+      "shotId": "E05-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "青年看着被圈的“打开”，海伦的笔仍在手里，三栏纸在中央。 → 律师将有利搜查事实与不利口供并置；青年开始接受完整复述，尚未取得法律保证。；路易吉向海伦：So they can't use it?；抓住一项有利事实急于把全部案件推出去 / 海伦向路易吉：I haven't seen the video. Don't get ahead of me.；拒绝把初次会见变成保证 / 海伦向路易吉：What else did you tell them?；要求完整而非漂亮版本 / 海伦向路易吉：Even the bad stuff. I can't hear it for the first time in court.；察觉他又想用搜查问题挡住不利陈述",
+      "sourceLocator": "season/E05.json#/shots/2"
+    },
+    {
+      "role": "staging",
+      "shotId": "E05-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "海伦掌心近景压纸；青年脸与空白问答页同一景深。；起态：青年看着被圈的“打开”，海伦的笔仍在手里，三栏纸在中央。；出态：律师将有利搜查事实与不利口供并置；青年开始接受完整复述，尚未取得法律保证。",
+      "sourceLocator": "season/E05.json#/shots/2"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E05-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "律师肩侧看青年与桌面的中近景；相机：在青年误以为赢时切近一次，随后不切开律师盖住圈的动作；省略发生在完整决定之后。；焦点：人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "sourceLocator": "season/E05.json#/shots/2"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E05-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E05-SH005.txt；35秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E05.json#/shots/2"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E05-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "律师将有利搜查事实与不利口供并置；青年开始接受完整复述，尚未取得法律保证。；切点：律师将有利搜查事实与不利口供并置；青年开始接受完整复述，尚未取得法律保证。；接口：因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "sourceLocator": "season/E05.json#/shots/2"
+    },
+    {
+      "role": "direction",
+      "shotId": "E05-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：互助材料来源的风险不能凭善意消失；青年第一次接受表达会限制自己的有利叙事。；入镜已知：已作过一轮完整问答，海伦收好页纸，青年看见蓝夹将合上。；本镜新知：他接受“从未告知”而非“确定对方不知”的准确记录；律师夹重新打开，会见以继续工作结束。；实际写出的动作：路易吉对海伦说英语“I got those samples through mutual aid. That person had no idea what I was going to do.”；赶在会见结束前要求保护来源。海伦对路易吉说英语“Did they tell you that? Or did you just never tell them?”；区分能够证明的知情来源。青年看停住的笔。海伦没有替他补词，手也没有伸向门。路易吉对海伦说英语“I never told them.”；放弃替别人概括内心。海伦对路易吉说英语“Then that's what we can say. What they knew is a separate question.”；限定陈述范围，没有把他逼成认罪演说。路易吉对海伦说英语“Okay. Write it that way.”；放弃那个更好听、却超出自己所知的版本。海伦重新打开夹子，在原句旁留下更正。青年把仍并在一起的双手分开，掌心放回桌上。",
+      "sourceLocator": "season/E05.json#/shots/3"
+    },
+    {
+      "role": "performance",
+      "shotId": "E05-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "已作过一轮完整问答，海伦收好页纸，青年看见蓝夹将合上。 → 他接受“从未告知”而非“确定对方不知”的准确记录；律师夹重新打开，会见以继续工作结束。；路易吉向海伦：I got those samples through mutual aid. That person had no idea what I was going to do.；赶在会见结束前要求保护来源 / 海伦向路易吉：Did they tell you that? Or did you just never tell them?；区分能够证明的知情来源 / 路易吉向海伦：I never told them.；放弃替别人概括内心 / 海伦向路易吉：Then that's what we can say. What they knew is a separate question.；限定陈述范围，没有把他逼成认罪演说 / 路易吉向海伦：Okay. Write it that way.；放弃那个更好听、却超出自己所知的版本",
+      "sourceLocator": "season/E05.json#/shots/3"
+    },
+    {
+      "role": "staging",
+      "shotId": "E05-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "青年北、律师南；无门外旁听者，无额外拘束。；起态：已作过一轮完整问答，海伦收好页纸，青年看见蓝夹将合上。；出态：他接受“从未告知”而非“确定对方不知”的准确记录；律师夹重新打开，会见以继续工作结束。",
+      "sourceLocator": "season/E05.json#/shots/3"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E05-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "南桌边看青年的中景，海伦笔与夹在近层；相机：固定听者视角，停在对方选择准确陈述的过程；不把最后回答剪成金句。；焦点：人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "sourceLocator": "season/E05.json#/shots/3"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E05-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E05-SH006.txt；40秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E05.json#/shots/3"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E05-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "他接受“从未告知”而非“确定对方不知”的准确记录；律师夹重新打开，会见以继续工作结束。；切点：他接受“从未告知”而非“确定对方不知”的准确记录；律师夹重新打开，会见以继续工作结束。；接口：本场结果成立后切入 E05-SC02（HELEN-OFFICE，晚·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E05.json#/shots/3"
+    },
+    {
+      "role": "direction",
+      "shotId": "E05-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她也受到曝光诱惑，主动推开的只是不能控制的笔记表演。；入镜已知：律师在会见中掌握了一个可查的来源问题。；本镜新知：她也受到曝光诱惑，主动推开的只是不能控制的笔记表演。；实际写出的动作：丹尼尔把三张采访邀约铺到桌上，海伦伸手，先拿了最上面那家。丹尼尔对海伦说本镜第1句英语对白，知道曝光能帮案件，也知道这个条件越线。她读到“笔记”两个字，把那张纸反扣，但没有把另外两张一起扔掉。丹尼尔把执法记录索引推到原来邀约的位置。",
+      "sourceLocator": "season/E05.json#/shots/4"
+    },
+    {
+      "role": "performance",
+      "shotId": "E05-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "蓝夹桌西，助理持采访请求打印页 → 邀约一张翻扣两张留桌南，索引桌中，蓝夹桌西。；丹尼尔向海伦：Three networks called. This one wants you to read from the notebook. On camera.；知道曝光能帮案件，也知道这个条件越线",
+      "sourceLocator": "season/E05.json#/shots/4"
+    },
+    {
+      "role": "staging",
+      "shotId": "E05-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "Helen桌西、助理桌东、证据板北；起态：蓝夹桌西，助理持采访请求打印页；出态：邀约一张翻扣两张留桌南，索引桌中，蓝夹桌西。",
+      "sourceLocator": "season/E05.json#/shots/4"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E05-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "办公室全景，南门朝北；相机：固定办公室南门全景，助理主动递索引，海伦先取邀约的动作不藏。；焦点：长桌两人和文件次序可读，北墙证据板保持空。",
+      "sourceLocator": "season/E05.json#/shots/4"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E05-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E05-SH007.txt；15秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E05.json#/shots/4"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E05-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "邀约一张翻扣两张留桌南，索引桌中，蓝夹桌西。；切点：邀约翻扣，索引取代它到桌中央。；接口：同场拟调取范围",
+      "sourceLocator": "season/E05.json#/shots/4"
+    },
+    {
+      "role": "direction",
+      "shotId": "E05-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她选择要完整时序，同时仍使用公众关注传播受控声明。；入镜已知：团队有镜头邀约也有证据索引。；本镜新知：她选择要完整时序，同时仍使用公众关注传播受控声明。；实际写出的动作：海伦用笔沿索引指到最前的时间栏。海伦对丹尼尔说本镜第1句英语对白，明确取证范围。丹尼尔已经在旁边记，她注意到采访页还露着一句大标题，伸手盖住。海伦对丹尼尔说本镜第2句英语对白，保留传播机会，控制具体内容。丹尼尔划掉邀约上给她预写的标题，另起一页写调取请求。",
+      "sourceLocator": "season/E05.json#/shots/5"
+    },
+    {
+      "role": "performance",
+      "shotId": "E05-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "她指索引空白处，助理等写 → 丹尼尔写调取申请，声明另列，蓝夹仍桌西。；海伦向丹尼尔：From when they arrived to when they drove off. Not just the bit with the cuffs.；明确取证范围 / 海伦向丹尼尔：Send them the statement. His rights, that's it. Nothing from the notebook.；保留传播机会，控制具体内容",
+      "sourceLocator": "season/E05.json#/shots/5"
+    },
+    {
+      "role": "staging",
+      "shotId": "E05-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "蓝夹左前，助理东侧手持笔；起态：她指索引空白处，助理等写；出态：丹尼尔写调取申请，声明另列，蓝夹仍桌西。",
+      "sourceLocator": "season/E05.json#/shots/5"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E05-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中景，长桌西南向东北；相机：固定桌西南中景，指时间范围与盖标题形成两项不同工作，不绕桌。；焦点：海伦与助理笔尖同层，不把屏幕当真实法律文书生成。",
+      "sourceLocator": "season/E05.json#/shots/5"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E05-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E05-SH008.txt；18秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E05.json#/shots/5"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E05-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "丹尼尔写调取申请，声明另列，蓝夹仍桌西。；切点：助理另起调取页，海伦翻到笔记日期副本。；接口：接笔记副本日期",
+      "sourceLocator": "season/E05.json#/shots/5"
+    },
+    {
+      "role": "direction",
+      "shotId": "E05-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：同样完整的记录也可能支持预谋，律师不能只保留有利片段。；入镜已知：完整记录可能帮助挑战搜查。；本镜新知：同样完整的记录也可能支持预谋，律师不能只保留有利片段。；实际写出的动作：丹尼尔把笔记副本和行程记录并排放下。丹尼尔对海伦说本镜第1句英语对白，提出自己查出的不利信息。海伦把前后两页再翻一次，想找到日期属于别人材料的标记，没找到。她用空便签标记日期，不划掉它。海伦对丹尼尔说本镜第2句英语对白，继续要完整内容，即使不好用。 丹尼尔指着复印件被截的页边，说明要调完整扫描；海伦把日期标记留着，不因边缘缺损撤掉不利内容。",
+      "sourceLocator": "season/E05.json#/shots/6"
+    },
+    {
+      "role": "performance",
+      "shotId": "E05-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "助理将副本放她面前 → 不利日期仍有便签，丹尼尔记下完整扫描及相邻页调取；没有把副本缺损当作日期为假的依据。；丹尼尔向海伦：This is his first dated entry. He hadn't even booked New York yet.；提出自己查出的不利信息 / 海伦向丹尼尔：I want the pages on either side of it, too.；继续要完整内容，即使不好用 / 丹尼尔向海伦：I'll get the full scan. This copy cuts off at the margin.；助理独立指出副本限制，未宣告日期失真",
+      "sourceLocator": "season/E05.json#/shots/6"
+    },
+    {
+      "role": "staging",
+      "shotId": "E05-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "复制页、旅行日期表并列，原物不出现；起态：助理将副本放她面前；出态：不利日期仍有便签，丹尼尔记下完整扫描及相邻页调取；没有把副本缺损当作日期为假的依据。",
+      "sourceLocator": "season/E05.json#/shots/6"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E05-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "近景，长桌西侧向北；相机：固定桌西侧斜近景，让两页日期先同框，再看海伦翻邻页的手；不拍夸张震惊脸。；焦点：纸页接触与便签可读，准确日期只后期；不提前发明笔记原文。",
+      "sourceLocator": "season/E05.json#/shots/6"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E05-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E05-SH009.txt；27秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E05.json#/shots/6"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E05-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "不利日期仍有便签，丹尼尔记下完整扫描及相邻页调取；没有把副本缺损当作日期为假的依据。；切点：日期便签贴牢，切青年为自己的家人填另一张表。；接口：本场结果成立后切入 E05-SC03（PRISON，夜·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E05.json#/shots/6"
+    },
+    {
+      "role": "direction",
+      "shotId": "E05-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：青年开始联系此前不肯回复的人，连一张表也要等程序。；入镜已知：律师面对不能删除的早期日期。；本镜新知：青年开始联系此前不肯回复的人，连一张表也要等程序。；实际写出的动作：监室里路易吉把空白家属通话申请铺在西桌，写下母亲名字。笔写到姓氏中段断墨，他在页角划了两下，换了更重的力道，字终于续上。南门小窗里有影子经过，他拿着纸快走一步。",
+      "sourceLocator": "season/E05.json#/shots/7"
+    },
+    {
+      "role": "performance",
+      "shotId": "E05-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "他站西桌前，双腕自由 → 申请左手，笔留西桌，青年到南门内腕自由。；无对白，以已写动作承载表演。",
+      "sourceLocator": "season/E05.json#/shots/7"
+    },
+    {
+      "role": "staging",
+      "shotId": "E05-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "西固定桌、东床、北黑窗中央固定防护顶灯为本场中性主光，照清西桌和双手；北窗外暗，南门漏光局部，灯位不随反打改变。；起态：他站西桌前，双腕自由；出态：申请左手，笔留西桌，青年到南门内腕自由。",
+      "sourceLocator": "season/E05.json#/shots/7"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E05-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "监室全景，南门朝北；相机：固定南门向北监室全景，西桌、东床、门口路径清楚；笔断墨仅由动作不做声效夸张。；焦点：人物取纸与行走清楚，纸上姓名不靠模型排字。",
+      "sourceLocator": "season/E05.json#/shots/7"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E05-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E05-SH010.txt；10秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E05.json#/shots/7"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E05-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "申请左手，笔留西桌，青年到南门内腕自由。；切点：门外影子将过去，他拿纸追到门口。；接口：同场他向门口提出具体请求",
+      "sourceLocator": "season/E05.json#/shots/7"
+    },
+    {
+      "role": "direction",
+      "shotId": "E05-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：他想要今晚的答复，但表被收走后时间不归他决定。；入镜已知：他已决定联系母亲。；本镜新知：他想要今晚的答复，但表被收走后时间不归他决定。；实际写出的动作：路易吉把纸从小窗递过去，门外的人没有立刻接。路易吉对看管员画外声说本镜第1句英语对白，努力把恳求说成一个具体安排。他把母亲姓名那栏朝上翻正。门外一只手这才接住，青年松开时仍用食指压着页角，最后自己收回手。",
+      "sourceLocator": "season/E05.json#/shots/8"
+    },
+    {
+      "role": "performance",
+      "shotId": "E05-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "左手申请，短笔留西桌，青年南门内。 → 表在门外看管员手，青年空手留窗前。；路易吉向看管员画外声：It's a call to my mom. Her number's on there. Any chance I can call tonight?；努力把恳求说成一个具体安排",
+      "sourceLocator": "season/E05.json#/shots/8"
+    },
+    {
+      "role": "staging",
+      "shotId": "E05-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "青年手纸前景，南观察口后景中央固定防护顶灯为本场中性主光，照清西桌和双手；北窗外暗，南门漏光局部，灯位不随反打改变。；起态：左手申请，短笔留西桌，青年南门内。；出态：表在门外看管员手，青年空手留窗前。",
+      "sourceLocator": "season/E05.json#/shots/8"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E05-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中景，西桌侧向南门；相机：固定西桌侧朝南门中景，递出与松开纸角连续发生，不突然让表在门外。；焦点：保持脸和递纸手；门外看管员只手部，不新增全貌。",
+      "sourceLocator": "season/E05.json#/shots/8"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E05-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E05-SH011.txt；14秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E05.json#/shots/8"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E05-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "表在门外看管员手，青年空手留窗前。；切点：手指终于松开纸角，画外答复先传来。；接口：申请已交门外，接看管员画外答复，不再次递表。",
+      "sourceLocator": "season/E05.json#/shots/8"
+    },
+    {
+      "role": "direction",
+      "shotId": "E05-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：得到律师并未让今晚变得可控，他第一次留下话等家人接。；入镜已知：他提交了家属通话申请。；本镜新知：得到律师并未让今晚变得可控，他第一次留下话等家人接。；实际写出的动作：看管员画外声对路易吉说本镜第1句英语对白，工作答复，不额外安抚。脚步走远。路易吉仍站小窗前，像等后半句；外面没再说话。他回到东床坐下，把原本要放到膝上的手放到床边，留下一个空位。",
+      "sourceLocator": "season/E05.json#/shots/9"
+    },
+    {
+      "role": "performance",
+      "shotId": "E05-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "青年空手门前，表已门外。 → 东床坐下腕自由，申请在门外，电话尚未安排。；看管员画外声向路易吉：You're on the morning list. Can't say what time.；工作答复，不额外安抚",
+      "sourceLocator": "season/E05.json#/shots/9"
+    },
+    {
+      "role": "staging",
+      "shotId": "E05-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "青年空手由南门走向东床，中景落座；西桌短笔留在后层，申请已经门外不再入画。中央固定防护顶灯为本场中性主光，照清西桌和双手；北窗外暗，南门漏光局部，灯位不随反打改变。；起态：青年空手门前，表已门外。；出态：东床坐下腕自由，申请在门外，电话尚未安排。",
+      "sourceLocator": "season/E05.json#/shots/9"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E05-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中全景，南门内朝东北，容纳青年回东床落座。；相机：固定南门内中全景，青年从门到床完整走回；不为一句答复推近泪眼。；焦点：随青年移到东床，停在坐下的身体与空位。",
+      "sourceLocator": "season/E05.json#/shots/9"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E05-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E05-SH012.txt；14秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E05.json#/shots/9"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E05-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "东床坐下腕自由，申请在门外，电话尚未安排。；切点：东床旁的空位保持，切下集公众争抢他的画面。；接口：本集结束。打给母亲的通话申请已经递出去，答复只是明早名单，没有确定时间；律师开始工作不等于本人恢复与家人的联系。 下集从DOCK展开：同一段押送画面被各方使用后，谁的现实处境发生了改变？",
+      "sourceLocator": "season/E05.json#/shots/9"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "E05-SH001",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "青年试图先控制他人风险，律师承认这项请求但不让它替代必要事实。",
+        "audiencePayoff": "患者姓名问题另页记下，蓝夹在桌西；青年收手坐回，海伦准备重建抓捕经过。",
+        "trigger": "海伦在南侧，青年北侧，桌上尚无文件；双方双手自由，会见无玻璃隔断。；海伦把蓝夹放桌西侧，取出空白工作纸，笔落在纸上，没有伸手握手。海伦对路易吉说英语“I'm Helen Kane. I'm your lawyer. What name did you give the police?”；介绍完立即要求可核事实。路易吉对海伦说英语“The one on the card.”；先给最窄的答案。青年指一下海伦蓝夹封面，想让她去材料里找那个名字。她等他抬起头，没有替他填空。海伦对路易吉说英语“I need you to say it. Not point.”；建立必须能复述而非靠猜的工作方式。青年看那张还空着的纸，改把手伸向蓝夹。路易吉对海伦说英语“There are patient records in my bag. Those people didn't agree to any of this.”；试图重排会见议程。路易吉对海伦说英语“Please. Keep their names out of this.”；终于把请求缩成具体保护。海伦把夹子收回一寸，青年停手。她在另一页写下“患者姓名”，把这页留在他看得见的位置。海伦对路易吉说英语“I can ask to protect their names. I can't make the records disappear. First I need to know what's in there.”；接受具体任务，同时撤掉他以为能一把取回材料的期待。路易吉对海伦说英语“I don't want them paying for this.”；无法改变自己的处境，先试图控制别人是否被牵连。海伦把患者姓名那页留开，翻回第一张空纸。他看见她确实记下了，才靠回椅背。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "患者姓名问题另页记下，蓝夹在桌西；青年收手坐回，海伦准备重建抓捕经过。；因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+        "noMotionReason": "固定两人同框，手伸向夹子成为第一次关系变化；不把每一项权利做成插镜。；观看变化：患者姓名问题另页记下，蓝夹在桌西；青年收手坐回，海伦准备重建抓捕经过。"
+      },
+      "camera": {
+        "shotScale": "桌东侧平视双人中景",
+        "position": "桌东侧平视双人中景",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "桌东侧平视双人中景",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 海伦南、青年北，蓝夹西侧；固定桌无玻璃，二人之间的空纸仍空。",
+        "movementIntent": "固定两人同框，手伸向夹子成为第一次关系变化；不把每一项权利做成插镜。"
+      },
+      "composition": {
+        "layout": "海伦南、青年北，蓝夹西侧；固定桌无玻璃，二人之间的空纸仍空。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：海伦把蓝夹放桌西侧，取出空白工作纸，笔落在纸上，没有伸手握手。海伦对路易吉说英语“I'm Helen Kane. I'm your lawyer. What name did you give the police?”；介绍完立即要求可核事实。路易吉对海伦说英语“The one on the card.”；先给最窄的答案。青年指一下海伦蓝夹封面，想让她去材料里找那个名字。她等他抬起头，没有替他填空。海伦对路易吉说英语“I need you to say it. Not point.”；建立必须能复述而非靠猜的工作方式。青年看那张还空着的纸，改把手伸向蓝夹。路易吉对海伦说英语“There are patient records in my bag. Those people didn't agree to any of this.”；试图重排会见议程。路易吉对海伦说英语“Please. Keep their names out of this.”；终于把请求缩成具体保护。海伦把夹子收回一寸，青年停手。她在另一页写下“患者姓名”，把这页留在他看得见的位置。海伦对路易吉说英语“I can ask to protect their names. I can't make the records disappear. First I need to know what's in there.”；接受具体任务，同时撤掉他以为能一把取回材料的期待。路易吉对海伦说英语“I don't want them paying for this.”；无法改变自己的处境，先试图控制别人是否被牵连。海伦把患者姓名那页留开，翻回第一张空纸。他看见她确实记下了，才靠回椅背。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "青年试图先控制他人风险，律师承认这项请求但不让它替代必要事实。；人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+      },
+      "temporal": {
+        "durationSeconds": 60,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "青年试图先控制他人风险，律师承认这项请求但不让它替代必要事实。",
+          "path": "机位不移动。",
+          "start": "海伦在南侧，青年北侧，桌上尚无文件；双方双手自由，会见无玻璃隔断。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "患者姓名问题另页记下，蓝夹在桌西；青年收手坐回，海伦准备重建抓捕经过。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E05-SH001-F1",
+            "timeSeconds": 0,
+            "description": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+          }
+        ],
+        "edit": {
+          "entry": "海伦在南侧，青年北侧，桌上尚无文件；双方双手自由，会见无玻璃隔断。",
+          "exit": "患者姓名问题另页记下，蓝夹在桌西；青年收手坐回，海伦准备重建抓捕经过。；患者姓名问题另页记下，蓝夹在桌西；青年收手坐回，海伦准备重建抓捕经过。",
+          "preferredTransition": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+          "soundBridge": "同场环境声与所列英语；不补额外可辨台词；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E05-SH003",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "将搜查争议从青年口号收窄到可检查的实际距离与控制状态。",
+        "audiencePayoff": "桌上三栏顺序为移包、前铐并带离、开包；青年期待法律胜利，海伦尚未承诺。",
+        "trigger": "保护姓名另页在桌西；海伦在空纸划出包、手铐、打开三栏。；海伦对路易吉说英语“We'll deal with the names. Where was the bag when they grabbed you?”；先接下保护姓名的请求，随即把话题拉回逮捕时的位置。青年指向“包”那栏，想把纸转到自己面前，海伦用笔停住他往后跳的手势。海伦对路易吉说英语“By your foot, or in the aisle?”；把抽象解释压到一个位置。路易吉对海伦说英语“They moved it away from my foot. I got up. Then they cuffed me.”；把自己记忆拆成步骤。他把双手并在身前模仿铐住的位置，身体仍坐着。海伦的笔没有跟着跳到结论。海伦对路易吉说英语“And the bag?”；截住要跳过的距离。路易吉对海伦说英语“Over there. They'd already moved me when he opened it.”；双手合拢示意受控，再指向桌外。她把手掌放到纸两边，使“青年”和“包”分开。海伦对路易吉说英语“Could you reach it?”；限定能亲身确定的距离而非法律结论。路易吉对海伦说英语“No. He had my arm. I couldn't even turn.”；回到自己的身体位置。海伦圈下“打开”。青年看见那个圈，第一次向前坐，像等一个已经确定的好消息。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "桌上三栏顺序为移包、前铐并带离、开包；青年期待法律胜利，海伦尚未承诺。；因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+        "noMotionReason": "从原东侧机位明确换至西侧前先给同桌全貌接轴；此后固定，让重演动作与听者反应持续同框。；观看变化：桌上三栏顺序为移包、前铐并带离、开包；青年期待法律胜利，海伦尚未承诺。"
+      },
+      "camera": {
+        "shotScale": "桌西侧双人中近景",
+        "position": "桌西侧双人中近景，桌纸只占下缘",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "桌西侧双人中近景，桌纸只占下缘",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 青年北侧双手在身前演示；律师南侧与纸同层，蓝夹在西边画缘。",
+        "movementIntent": "从原东侧机位明确换至西侧前先给同桌全貌接轴；此后固定，让重演动作与听者反应持续同框。"
+      },
+      "composition": {
+        "layout": "青年北侧双手在身前演示；律师南侧与纸同层，蓝夹在西边画缘。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：海伦对路易吉说英语“We'll deal with the names. Where was the bag when they grabbed you?”；先接下保护姓名的请求，随即把话题拉回逮捕时的位置。青年指向“包”那栏，想把纸转到自己面前，海伦用笔停住他往后跳的手势。海伦对路易吉说英语“By your foot, or in the aisle?”；把抽象解释压到一个位置。路易吉对海伦说英语“They moved it away from my foot. I got up. Then they cuffed me.”；把自己记忆拆成步骤。他把双手并在身前模仿铐住的位置，身体仍坐着。海伦的笔没有跟着跳到结论。海伦对路易吉说英语“And the bag?”；截住要跳过的距离。路易吉对海伦说英语“Over there. They'd already moved me when he opened it.”；双手合拢示意受控，再指向桌外。她把手掌放到纸两边，使“青年”和“包”分开。海伦对路易吉说英语“Could you reach it?”；限定能亲身确定的距离而非法律结论。路易吉对海伦说英语“No. He had my arm. I couldn't even turn.”；回到自己的身体位置。海伦圈下“打开”。青年看见那个圈，第一次向前坐，像等一个已经确定的好消息。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "将搜查争议从青年口号收窄到可检查的实际距离与控制状态。；人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+      },
+      "temporal": {
+        "durationSeconds": 55,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "将搜查争议从青年口号收窄到可检查的实际距离与控制状态。",
+          "path": "机位不移动。",
+          "start": "保护姓名另页在桌西；海伦在空纸划出包、手铐、打开三栏。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "桌上三栏顺序为移包、前铐并带离、开包；青年期待法律胜利，海伦尚未承诺。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E05-SH003-F1",
+            "timeSeconds": 0,
+            "description": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+          }
+        ],
+        "edit": {
+          "entry": "保护姓名另页在桌西；海伦在空纸划出包、手铐、打开三栏。",
+          "exit": "桌上三栏顺序为移包、前铐并带离、开包；青年期待法律胜利，海伦尚未承诺。；桌上三栏顺序为移包、前铐并带离、开包；青年期待法律胜利，海伦尚未承诺。",
+          "preferredTransition": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+          "soundBridge": "同场环境声与所列英语；不补额外可辨台词；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E05-SH005",
+      "decision": {
+        "primaryTechniqueId": "M04",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "一次似乎到手的优势暴露青年对律师工作的错误期待。",
+        "audiencePayoff": "律师将有利搜查事实与不利口供并置；青年开始接受完整复述，尚未取得法律保证。",
+        "trigger": "青年看着被圈的“打开”，海伦的笔仍在手里，三栏纸在中央。；路易吉对海伦说英语“So they can't use it?”；抓住一项有利事实急于把全部案件推出去。海伦对路易吉说英语“I haven't seen the video. Don't get ahead of me.”；拒绝把初次会见变成保证。她将三栏纸放在下面，翻到问答页。海伦对路易吉说英语“What else did you tell them?”；要求完整而非漂亮版本。青年看回那个圈；她用掌心遮住。海伦对路易吉说英语“Even the bad stuff. I can't hear it for the first time in court.”；察觉他又想用搜查问题挡住不利陈述。他不再看包的位置，指向始终空着的姓名栏。海伦翻出空白问答页，划掉他用手势躲开的空格，重新留出能写全称的位置。他吸气，终于开始逐项补足；后续具体内容在场景省略中完成。",
+        "cameraMode": "moving",
+        "focusMode": "hold",
+        "exitMatch": "律师将有利搜查事实与不利口供并置；青年开始接受完整复述，尚未取得法律保证。；因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。"
+      },
+      "camera": {
+        "shotScale": "律师肩侧看青年与桌面的中近景",
+        "position": "律师肩侧看青年与桌面的中近景",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "律师肩侧看青年与桌面的中近景",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 海伦掌心近景压纸；青年脸与空白问答页同一景深。",
+        "movementIntent": "在青年误以为赢时切近一次，随后不切开律师盖住圈的动作；省略发生在完整决定之后。"
+      },
+      "composition": {
+        "layout": "海伦掌心近景压纸；青年脸与空白问答页同一景深。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：路易吉对海伦说英语“So they can't use it?”；抓住一项有利事实急于把全部案件推出去。海伦对路易吉说英语“I haven't seen the video. Don't get ahead of me.”；拒绝把初次会见变成保证。她将三栏纸放在下面，翻到问答页。海伦对路易吉说英语“What else did you tell them?”；要求完整而非漂亮版本。青年看回那个圈；她用掌心遮住。海伦对路易吉说英语“Even the bad stuff. I can't hear it for the first time in court.”；察觉他又想用搜查问题挡住不利陈述。他不再看包的位置，指向始终空着的姓名栏。海伦翻出空白问答页，划掉他用手势躲开的空格，重新留出能写全称的位置。他吸气，终于开始逐项补足；后续具体内容在场景省略中完成。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "一次似乎到手的优势暴露青年对律师工作的错误期待。；人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+      },
+      "temporal": {
+        "durationSeconds": 35,
+        "cameraMotion": {
+          "type": "gimbal",
+          "motivation": "一次似乎到手的优势暴露青年对律师工作的错误期待。",
+          "path": "在青年误以为赢时切近一次，随后不切开律师盖住圈的动作；省略发生在完整决定之后。",
+          "start": "青年看着被圈的“打开”，海伦的笔仍在手里，三栏纸在中央。",
+          "acceleration": "仅执行作者本镜规定的启动与速度，不另加缓起：在青年误以为赢时切近一次，随后不切开律师盖住圈的动作；省略发生在完整决定之后。",
+          "peak": "依本镜作者运动描述，不统一套匀速：在青年误以为赢时切近一次，随后不切开律师盖住圈的动作；省略发生在完整决定之后。",
+          "deceleration": "不强制停稳；按作者出点接后镜：律师将有利搜查事实与不利口供并置；青年开始接受完整复述，尚未取得法律保证。",
+          "end": "律师将有利搜查事实与不利口供并置；青年开始接受完整复述，尚未取得法律保证。",
+          "framingChange": "在青年误以为赢时切近一次，随后不切开律师盖住圈的动作；省略发生在完整决定之后。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E05-SH005-F1",
+            "timeSeconds": 0,
+            "description": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+          }
+        ],
+        "edit": {
+          "entry": "青年看着被圈的“打开”，海伦的笔仍在手里，三栏纸在中央。",
+          "exit": "律师将有利搜查事实与不利口供并置；青年开始接受完整复述，尚未取得法律保证。；律师将有利搜查事实与不利口供并置；青年开始接受完整复述，尚未取得法律保证。",
+          "preferredTransition": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+          "soundBridge": "同场环境声与所列英语；不补额外可辨台词；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E05-SH006",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "互助材料来源的风险不能凭善意消失；青年第一次接受表达会限制自己的有利叙事。",
+        "audiencePayoff": "他接受“从未告知”而非“确定对方不知”的准确记录；律师夹重新打开，会见以继续工作结束。",
+        "trigger": "已作过一轮完整问答，海伦收好页纸，青年看见蓝夹将合上。；路易吉对海伦说英语“I got those samples through mutual aid. That person had no idea what I was going to do.”；赶在会见结束前要求保护来源。海伦对路易吉说英语“Did they tell you that? Or did you just never tell them?”；区分能够证明的知情来源。青年看停住的笔。海伦没有替他补词，手也没有伸向门。路易吉对海伦说英语“I never told them.”；放弃替别人概括内心。海伦对路易吉说英语“Then that's what we can say. What they knew is a separate question.”；限定陈述范围，没有把他逼成认罪演说。路易吉对海伦说英语“Okay. Write it that way.”；放弃那个更好听、却超出自己所知的版本。海伦重新打开夹子，在原句旁留下更正。青年把仍并在一起的双手分开，掌心放回桌上。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "他接受“从未告知”而非“确定对方不知”的准确记录；律师夹重新打开，会见以继续工作结束。；本场结果成立后切入 E05-SC02（HELEN-OFFICE，晚·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定听者视角，停在对方选择准确陈述的过程；不把最后回答剪成金句。；观看变化：他接受“从未告知”而非“确定对方不知”的准确记录；律师夹重新打开，会见以继续工作结束。"
+      },
+      "camera": {
+        "shotScale": "南桌边看青年的中景",
+        "position": "南桌边看青年的中景，海伦笔与夹在近层",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "南桌边看青年的中景，海伦笔与夹在近层",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 青年北、律师南；无门外旁听者，无额外拘束。",
+        "movementIntent": "固定听者视角，停在对方选择准确陈述的过程；不把最后回答剪成金句。"
+      },
+      "composition": {
+        "layout": "青年北、律师南；无门外旁听者，无额外拘束。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：路易吉对海伦说英语“I got those samples through mutual aid. That person had no idea what I was going to do.”；赶在会见结束前要求保护来源。海伦对路易吉说英语“Did they tell you that? Or did you just never tell them?”；区分能够证明的知情来源。青年看停住的笔。海伦没有替他补词，手也没有伸向门。路易吉对海伦说英语“I never told them.”；放弃替别人概括内心。海伦对路易吉说英语“Then that's what we can say. What they knew is a separate question.”；限定陈述范围，没有把他逼成认罪演说。路易吉对海伦说英语“Okay. Write it that way.”；放弃那个更好听、却超出自己所知的版本。海伦重新打开夹子，在原句旁留下更正。青年把仍并在一起的双手分开，掌心放回桌上。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "互助材料来源的风险不能凭善意消失；青年第一次接受表达会限制自己的有利叙事。；人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+      },
+      "temporal": {
+        "durationSeconds": 40,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "互助材料来源的风险不能凭善意消失；青年第一次接受表达会限制自己的有利叙事。",
+          "path": "机位不移动。",
+          "start": "已作过一轮完整问答，海伦收好页纸，青年看见蓝夹将合上。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "他接受“从未告知”而非“确定对方不知”的准确记录；律师夹重新打开，会见以继续工作结束。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E05-SH006-F1",
+            "timeSeconds": 0,
+            "description": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+          }
+        ],
+        "edit": {
+          "entry": "已作过一轮完整问答，海伦收好页纸，青年看见蓝夹将合上。",
+          "exit": "他接受“从未告知”而非“确定对方不知”的准确记录；律师夹重新打开，会见以继续工作结束。；他接受“从未告知”而非“确定对方不知”的准确记录；律师夹重新打开，会见以继续工作结束。",
+          "preferredTransition": "本场结果成立后切入 E05-SC02（HELEN-OFFICE，晚·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "同场环境声与所列英语；不补额外可辨台词；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E05-SH007",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她也受到曝光诱惑，主动推开的只是不能控制的笔记表演。",
+        "audiencePayoff": "她也受到曝光诱惑，主动推开的只是不能控制的笔记表演。",
+        "trigger": "蓝夹桌西，助理持采访请求打印页；丹尼尔把三张采访邀约铺到桌上，海伦伸手，先拿了最上面那家。丹尼尔对海伦说本镜第1句英语对白，知道曝光能帮案件，也知道这个条件越线。她读到“笔记”两个字，把那张纸反扣，但没有把另外两张一起扔掉。丹尼尔把执法记录索引推到原来邀约的位置。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "邀约翻扣，索引取代它到桌中央。；同场拟调取范围",
+        "noMotionReason": "固定办公室南门全景，助理主动递索引，海伦先取邀约的动作不藏。；观看变化：她也受到曝光诱惑，主动推开的只是不能控制的笔记表演。"
+      },
+      "camera": {
+        "shotScale": "办公室全景",
+        "position": "办公室全景，南门朝北",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "办公室全景，南门朝北",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "长桌两人和文件次序可读，北墙证据板保持空。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 Helen桌西、助理桌东、证据板北",
+        "movementIntent": "固定办公室南门全景，助理主动递索引，海伦先取邀约的动作不藏。"
+      },
+      "composition": {
+        "layout": "Helen桌西、助理桌东、证据板北",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：丹尼尔把三张采访邀约铺到桌上，海伦伸手，先拿了最上面那家。丹尼尔对海伦说本镜第1句英语对白，知道曝光能帮案件，也知道这个条件越线。她读到“笔记”两个字，把那张纸反扣，但没有把另外两张一起扔掉。丹尼尔把执法记录索引推到原来邀约的位置。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她也受到曝光诱惑，主动推开的只是不能控制的笔记表演。；长桌两人和文件次序可读，北墙证据板保持空。"
+      },
+      "temporal": {
+        "durationSeconds": 15,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她也受到曝光诱惑，主动推开的只是不能控制的笔记表演。",
+          "path": "机位不移动。",
+          "start": "蓝夹桌西，助理持采访请求打印页",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "邀约一张翻扣两张留桌南，索引桌中，蓝夹桌西。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E05-SH007-F1",
+            "timeSeconds": 0,
+            "description": "长桌两人和文件次序可读，北墙证据板保持空。"
+          }
+        ],
+        "edit": {
+          "entry": "蓝夹桌西，助理持采访请求打印页",
+          "exit": "邀约一张翻扣两张留桌南，索引桌中，蓝夹桌西。；邀约翻扣，索引取代它到桌中央。",
+          "preferredTransition": "同场拟调取范围",
+          "soundBridge": "台灯、纸页、窗外夜车；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E05-SH008",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她选择要完整时序，同时仍使用公众关注传播受控声明。",
+        "audiencePayoff": "她选择要完整时序，同时仍使用公众关注传播受控声明。",
+        "trigger": "她指索引空白处，助理等写；海伦用笔沿索引指到最前的时间栏。海伦对丹尼尔说本镜第1句英语对白，明确取证范围。丹尼尔已经在旁边记，她注意到采访页还露着一句大标题，伸手盖住。海伦对丹尼尔说本镜第2句英语对白，保留传播机会，控制具体内容。丹尼尔划掉邀约上给她预写的标题，另起一页写调取请求。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "助理另起调取页，海伦翻到笔记日期副本。；接笔记副本日期",
+        "noMotionReason": "固定桌西南中景，指时间范围与盖标题形成两项不同工作，不绕桌。；观看变化：她选择要完整时序，同时仍使用公众关注传播受控声明。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "中景，长桌西南向东北",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中景，长桌西南向东北",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "海伦与助理笔尖同层，不把屏幕当真实法律文书生成。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 蓝夹左前，助理东侧手持笔",
+        "movementIntent": "固定桌西南中景，指时间范围与盖标题形成两项不同工作，不绕桌。"
+      },
+      "composition": {
+        "layout": "蓝夹左前，助理东侧手持笔",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：海伦用笔沿索引指到最前的时间栏。海伦对丹尼尔说本镜第1句英语对白，明确取证范围。丹尼尔已经在旁边记，她注意到采访页还露着一句大标题，伸手盖住。海伦对丹尼尔说本镜第2句英语对白，保留传播机会，控制具体内容。丹尼尔划掉邀约上给她预写的标题，另起一页写调取请求。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她选择要完整时序，同时仍使用公众关注传播受控声明。；海伦与助理笔尖同层，不把屏幕当真实法律文书生成。"
+      },
+      "temporal": {
+        "durationSeconds": 18,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她选择要完整时序，同时仍使用公众关注传播受控声明。",
+          "path": "机位不移动。",
+          "start": "她指索引空白处，助理等写",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "丹尼尔写调取申请，声明另列，蓝夹仍桌西。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E05-SH008-F1",
+            "timeSeconds": 0,
+            "description": "海伦与助理笔尖同层，不把屏幕当真实法律文书生成。"
+          }
+        ],
+        "edit": {
+          "entry": "她指索引空白处，助理等写",
+          "exit": "丹尼尔写调取申请，声明另列，蓝夹仍桌西。；助理另起调取页，海伦翻到笔记日期副本。",
+          "preferredTransition": "接笔记副本日期",
+          "soundBridge": "笔尖、纸翻面；手机震动未接；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E05-SH009",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "同样完整的记录也可能支持预谋，律师不能只保留有利片段。",
+        "audiencePayoff": "同样完整的记录也可能支持预谋，律师不能只保留有利片段。",
+        "trigger": "助理将副本放她面前；丹尼尔把笔记副本和行程记录并排放下。丹尼尔对海伦说本镜第1句英语对白，提出自己查出的不利信息。海伦把前后两页再翻一次，想找到日期属于别人材料的标记，没找到。她用空便签标记日期，不划掉它。海伦对丹尼尔说本镜第2句英语对白，继续要完整内容，即使不好用。 丹尼尔指着复印件被截的页边，说明要调完整扫描；海伦把日期标记留着，不因边缘缺损撤掉不利内容。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "日期便签贴牢，切青年为自己的家人填另一张表。；本场结果成立后切入 E05-SC03（PRISON，夜·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定桌西侧斜近景，让两页日期先同框，再看海伦翻邻页的手；不拍夸张震惊脸。；观看变化：同样完整的记录也可能支持预谋，律师不能只保留有利片段。"
+      },
+      "camera": {
+        "shotScale": "近景",
+        "position": "近景，长桌西侧向北",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "近景，长桌西侧向北",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "纸页接触与便签可读，准确日期只后期；不提前发明笔记原文。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 复制页、旅行日期表并列，原物不出现",
+        "movementIntent": "固定桌西侧斜近景，让两页日期先同框，再看海伦翻邻页的手；不拍夸张震惊脸。"
+      },
+      "composition": {
+        "layout": "复制页、旅行日期表并列，原物不出现",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：丹尼尔把笔记副本和行程记录并排放下。丹尼尔对海伦说本镜第1句英语对白，提出自己查出的不利信息。海伦把前后两页再翻一次，想找到日期属于别人材料的标记，没找到。她用空便签标记日期，不划掉它。海伦对丹尼尔说本镜第2句英语对白，继续要完整内容，即使不好用。 丹尼尔指着复印件被截的页边，说明要调完整扫描；海伦把日期标记留着，不因边缘缺损撤掉不利内容。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "同样完整的记录也可能支持预谋，律师不能只保留有利片段。；纸页接触与便签可读，准确日期只后期；不提前发明笔记原文。"
+      },
+      "temporal": {
+        "durationSeconds": 27,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "同样完整的记录也可能支持预谋，律师不能只保留有利片段。",
+          "path": "机位不移动。",
+          "start": "助理将副本放她面前",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "不利日期仍有便签，丹尼尔记下完整扫描及相邻页调取；没有把副本缺损当作日期为假的依据。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E05-SH009-F1",
+            "timeSeconds": 0,
+            "description": "纸页接触与便签可读，准确日期只后期；不提前发明笔记原文。"
+          }
+        ],
+        "edit": {
+          "entry": "助理将副本放她面前",
+          "exit": "不利日期仍有便签，丹尼尔记下完整扫描及相邻页调取；没有把副本缺损当作日期为假的依据。；日期便签贴牢，切青年为自己的家人填另一张表。",
+          "preferredTransition": "本场结果成立后切入 E05-SC03（PRISON，夜·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "纸页停下，窗外车经过；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E05-SH010",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "青年开始联系此前不肯回复的人，连一张表也要等程序。",
+        "audiencePayoff": "青年开始联系此前不肯回复的人，连一张表也要等程序。",
+        "trigger": "他站西桌前，双腕自由；监室里路易吉把空白家属通话申请铺在西桌，写下母亲名字。笔写到姓氏中段断墨，他在页角划了两下，换了更重的力道，字终于续上。南门小窗里有影子经过，他拿着纸快走一步。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "门外影子将过去，他拿纸追到门口。；同场他向门口提出具体请求",
+        "noMotionReason": "固定南门向北监室全景，西桌、东床、门口路径清楚；笔断墨仅由动作不做声效夸张。；观看变化：青年开始联系此前不肯回复的人，连一张表也要等程序。"
+      },
+      "camera": {
+        "shotScale": "监室全景",
+        "position": "监室全景，南门朝北",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "监室全景，南门朝北",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "人物取纸与行走清楚，纸上姓名不靠模型排字。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 西固定桌、东床、北黑窗中央固定防护顶灯为本场中性主光，照清西桌和双手；北窗外暗，南门漏光局部，灯位不随反打改变。",
+        "movementIntent": "固定南门向北监室全景，西桌、东床、门口路径清楚；笔断墨仅由动作不做声效夸张。"
+      },
+      "composition": {
+        "layout": "西固定桌、东床、北黑窗中央固定防护顶灯为本场中性主光，照清西桌和双手；北窗外暗，南门漏光局部，灯位不随反打改变。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：监室里路易吉把空白家属通话申请铺在西桌，写下母亲名字。笔写到姓氏中段断墨，他在页角划了两下，换了更重的力道，字终于续上。南门小窗里有影子经过，他拿着纸快走一步。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "青年开始联系此前不肯回复的人，连一张表也要等程序。；人物取纸与行走清楚，纸上姓名不靠模型排字。"
+      },
+      "temporal": {
+        "durationSeconds": 10,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "青年开始联系此前不肯回复的人，连一张表也要等程序。",
+          "path": "机位不移动。",
+          "start": "他站西桌前，双腕自由",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "申请左手，笔留西桌，青年到南门内腕自由。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E05-SH010-F1",
+            "timeSeconds": 0,
+            "description": "人物取纸与行走清楚，纸上姓名不靠模型排字。"
+          }
+        ],
+        "edit": {
+          "entry": "他站西桌前，双腕自由",
+          "exit": "申请左手，笔留西桌，青年到南门内腕自由。；门外影子将过去，他拿纸追到门口。",
+          "preferredTransition": "同场他向门口提出具体请求",
+          "soundBridge": "笔划、远处水管、南门脚步；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E05-SH011",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "他想要今晚的答复，但表被收走后时间不归他决定。",
+        "audiencePayoff": "他想要今晚的答复，但表被收走后时间不归他决定。",
+        "trigger": "左手申请，短笔留西桌，青年南门内。；路易吉把纸从小窗递过去，门外的人没有立刻接。路易吉对看管员画外声说本镜第1句英语对白，努力把恳求说成一个具体安排。他把母亲姓名那栏朝上翻正。门外一只手这才接住，青年松开时仍用食指压着页角，最后自己收回手。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "手指终于松开纸角，画外答复先传来。；申请已交门外，接看管员画外答复，不再次递表。",
+        "noMotionReason": "固定西桌侧朝南门中景，递出与松开纸角连续发生，不突然让表在门外。；观看变化：他想要今晚的答复，但表被收走后时间不归他决定。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "中景，西桌侧向南门",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中景，西桌侧向南门",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "保持脸和递纸手；门外看管员只手部，不新增全貌。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 青年手纸前景，南观察口后景中央固定防护顶灯为本场中性主光，照清西桌和双手；北窗外暗，南门漏光局部，灯位不随反打改变。",
+        "movementIntent": "固定西桌侧朝南门中景，递出与松开纸角连续发生，不突然让表在门外。"
+      },
+      "composition": {
+        "layout": "青年手纸前景，南观察口后景中央固定防护顶灯为本场中性主光，照清西桌和双手；北窗外暗，南门漏光局部，灯位不随反打改变。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：路易吉把纸从小窗递过去，门外的人没有立刻接。路易吉对看管员画外声说本镜第1句英语对白，努力把恳求说成一个具体安排。他把母亲姓名那栏朝上翻正。门外一只手这才接住，青年松开时仍用食指压着页角，最后自己收回手。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "他想要今晚的答复，但表被收走后时间不归他决定。；保持脸和递纸手；门外看管员只手部，不新增全貌。"
+      },
+      "temporal": {
+        "durationSeconds": 14,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "他想要今晚的答复，但表被收走后时间不归他决定。",
+          "path": "机位不移动。",
+          "start": "左手申请，短笔留西桌，青年南门内。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "表在门外看管员手，青年空手留窗前。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E05-SH011-F1",
+            "timeSeconds": 0,
+            "description": "保持脸和递纸手；门外看管员只手部，不新增全貌。"
+          }
+        ],
+        "edit": {
+          "entry": "左手申请，短笔留西桌，青年南门内。",
+          "exit": "表在门外看管员手，青年空手留窗前。；手指终于松开纸角，画外答复先传来。",
+          "preferredTransition": "申请已交门外，接看管员画外答复，不再次递表。",
+          "soundBridge": "纸、门口钥匙、远电视不可辨；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E05-SH012",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "得到律师并未让今晚变得可控，他第一次留下话等家人接。",
+        "audiencePayoff": "得到律师并未让今晚变得可控，他第一次留下话等家人接。",
+        "trigger": "青年空手门前，表已门外。；看管员画外声对路易吉说本镜第1句英语对白，工作答复，不额外安抚。脚步走远。路易吉仍站小窗前，像等后半句；外面没再说话。他回到东床坐下，把原本要放到膝上的手放到床边，留下一个空位。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "东床旁的空位保持，切下集公众争抢他的画面。；本集结束。打给母亲的通话申请已经递出去，答复只是明早名单，没有确定时间；律师开始工作不等于本人恢复与家人的联系。 下集从DOCK展开：同一段押送画面被各方使用后，谁的现实处境发生了改变？",
+        "noMotionReason": "固定南门内中全景，青年从门到床完整走回；不为一句答复推近泪眼。；观看变化：得到律师并未让今晚变得可控，他第一次留下话等家人接。"
+      },
+      "camera": {
+        "shotScale": "中全景",
+        "position": "中全景，南门内朝东北，容纳青年回东床落座。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中全景，南门内朝东北，容纳青年回东床落座。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "随青年移到东床，停在坐下的身体与空位。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 青年空手由南门走向东床，中景落座；西桌短笔留在后层，申请已经门外不再入画。中央固定防护顶灯为本场中性主光，照清西桌和双手；北窗外暗，南门漏光局部，灯位不随反打改变。",
+        "movementIntent": "固定南门内中全景，青年从门到床完整走回；不为一句答复推近泪眼。"
+      },
+      "composition": {
+        "layout": "青年空手由南门走向东床，中景落座；西桌短笔留在后层，申请已经门外不再入画。中央固定防护顶灯为本场中性主光，照清西桌和双手；北窗外暗，南门漏光局部，灯位不随反打改变。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：看管员画外声对路易吉说本镜第1句英语对白，工作答复，不额外安抚。脚步走远。路易吉仍站小窗前，像等后半句；外面没再说话。他回到东床坐下，把原本要放到膝上的手放到床边，留下一个空位。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "得到律师并未让今晚变得可控，他第一次留下话等家人接。；随青年移到东床，停在坐下的身体与空位。"
+      },
+      "temporal": {
+        "durationSeconds": 14,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "得到律师并未让今晚变得可控，他第一次留下话等家人接。",
+          "path": "机位不移动。",
+          "start": "青年空手门前，表已门外。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "东床坐下腕自由，申请在门外，电话尚未安排。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E05-SH012-F1",
+            "timeSeconds": 0,
+            "description": "随青年移到东床，停在坐下的身体与空位。"
+          }
+        ],
+        "edit": {
+          "entry": "青年空手门前，表已门外。",
+          "exit": "东床坐下腕自由，申请在门外，电话尚未安排。；东床旁的空位保持，切下集公众争抢他的画面。",
+          "preferredTransition": "本集结束。打给母亲的通话申请已经递出去，答复只是明早名单，没有确定时间；律师开始工作不等于本人恢复与家人的联系。 下集从DOCK展开：同一段押送画面被各方使用后，谁的现实处境发生了改变？",
+          "soundBridge": "门外看管员所列答复、远去脚步、青年回床的床架声；没有重复抽纸动作。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    }
+  ]
+}

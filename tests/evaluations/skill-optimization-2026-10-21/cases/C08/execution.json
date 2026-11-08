@@ -1,0 +1,62 @@
+{
+  "case": "C08",
+  "model": null,
+  "token_usage": null,
+  "time": null,
+  "read_files": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C08\\request.txt",
+      "sha256": "55723385e14e2851d139033ad2ad108f25ab14761296ace8205b59d88b887049",
+      "scope": "entire file"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\SKILL.md",
+      "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c",
+      "scope": "entire file"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\style.md",
+      "sha256": "8c68adec5424cdeef9735099102eabd022e65181af21efac4564d41e7528e806",
+      "scope": "entire file"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\image-prompt.md",
+      "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08",
+      "scope": "entire file"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\color-grading-presets.md",
+      "sha256": "cbe652ec6887da11d73914dd4fc9ae6728a933c820e476a3bd3246b54a79fbf0",
+      "scope": "heading/name search and CG31 card lines 475-486"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\makeup-style-presets.md",
+      "sha256": "a2e4efa2134d2362a54efea433b802480a810c9a9c3b9e9cc4fadc6799992a8a",
+      "scope": "heading/name search and MU37 card through EOF"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\prompt-detail-standard.md",
+      "sha256": "0880a163be9679d32807688a0c434c0fa936c0fb00a5c4aae24e381d0dd92c25",
+      "scope": "heading search and lines 1-63"
+    }
+  ],
+  "checks": {
+    "output_utf8": true,
+    "output_lf_only": true,
+    "card_ids_and_revisions_present": true,
+    "single_complete_prompt_block": true,
+    "no_image_generation_tools_called": true
+  },
+  "artifacts": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C08\\output.md",
+      "sha256": "ee4b6d14c313a81aab68392ee95013c2f16a98faecfd83e3b61981c18ad34bd2",
+      "type": "markdown_answer"
+    }
+  ],
+  "limitations": [
+    "No source image supplied; original facial identity and existing scene preservation cannot be visually verified.",
+    "No image generated or media review performed."
+  ],
+  "snapshot_or_live_repo_mutations": false
+}

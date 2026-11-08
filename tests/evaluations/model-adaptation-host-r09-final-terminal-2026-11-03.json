@@ -1,0 +1,17 @@
+{
+  "pid": 18900,
+  "exit": 0,
+  "timeout": false,
+  "end_utc": "2026-11-02T16:18:12.609283+00:00",
+  "turn_completed": true,
+  "turn_failed": false,
+  "event_count": 36,
+  "stderr_classification": [
+    "HTTP 403 observed; response omitted",
+    "MCP OAuth refresh rejection observed; details omitted"
+  ],
+  "raw_cleanup": [
+    "events.raw: removed",
+    "stderr.raw: removed"
+  ]
+}

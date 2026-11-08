@@ -1,6 +1,6 @@
 {
   "name": "cineweave-director",
-  "version": "3.2.0",
+  "version": "3.2.2",
   "private": true,
   "type": "module",
   "description": "CineWeave 统一入口 Skill 工作流的无依赖开发、校验与打包工具。",
@@ -8,7 +8,7 @@
     "node": ">=22"
   },
   "scripts": {
-    "test": "node --test tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs tests/check-delivery.test.mjs tests/check-shot-review.test.mjs tests/reliability.test.mjs tests/contract-context.test.mjs tests/projection-integrity.test.mjs tests/shot-compiler-context.test.mjs tests/change-impact.test.mjs tests/video-return.test.mjs tests/skill-catalog.test.mjs tests/skill-bundles.test.mjs",
+    "test": "node --test tests/resource-loading.test.mjs tests/canonical-json.test.mjs tests/validate-output.test.mjs tests/build-plugin-bundle.test.mjs tests/check-delivery.test.mjs tests/check-shot-review.test.mjs tests/reliability.test.mjs tests/contract-context.test.mjs tests/projection-integrity.test.mjs tests/shot-compiler-context.test.mjs tests/change-impact.test.mjs tests/video-return.test.mjs tests/skill-catalog.test.mjs tests/skill-bundles.test.mjs",
     "test:bundle": "node --test tests/bundle-smoke.test.mjs",
     "build": "node scripts/build-plugin-bundle.mjs",
     "contracts:index": "node scripts/generate-contract-index.mjs",
@@ -17,7 +17,8 @@
     "validate:bundle": "node scripts/validate-repository.mjs --bundle .build/cineweave-director",
     "validate:output": "node scripts/validate-output.mjs",
     "skills:sync": "node scripts/sync-skill-exports.mjs",
-    "skills:sync:check": "node scripts/sync-skill-exports.mjs --check"
+    "skills:sync:check": "node scripts/sync-skill-exports.mjs --check",
+    "stage:check": "node scripts/check-stage-artifacts.mjs tests/evaluations/2026-10-16/stage-artifacts-v1.json"
   },
   "license": "MIT"
 }

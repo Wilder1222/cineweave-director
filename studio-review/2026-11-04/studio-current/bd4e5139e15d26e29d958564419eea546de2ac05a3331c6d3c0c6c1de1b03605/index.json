@@ -1,0 +1,55 @@
+{
+  "topicId": "H003",
+  "title": "雪夜蔡州",
+  "projectId": "bd4e5139e15d26e29d958564419eea546de2ac05a3331c6d3c0c6c1de1b03605",
+  "currentRevision": null,
+  "source": "browser_ui_dom",
+  "exportComplete": true,
+  "documents": [
+    {
+      "documentId": "e39c369b00ba45a544369b07ad279bc47ae3a6c1f49d7472f2fb1f2928988a74",
+      "meta": "提示词",
+      "title": "H003 雪夜蔡州｜审阅与来源｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "0a17777e746451d875968debd3dca5a862f50993cfd9c1d707c322f36eb17a61",
+      "characters": 843,
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=bd4e5139e15d26e29d958564419eea546de2ac05a3331c6d3c0c6c1de1b03605#scripts",
+      "readbackAt": "2026-11-04T06:40:06.570Z",
+      "proposal": {
+        "currentRevision": null,
+        "bodies": [],
+        "statusText": "当前文档提案\nH003 雪夜蔡州｜审阅与来源｜20261031审阅版 · 0 项提案"
+      }
+    },
+    {
+      "documentId": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c",
+      "meta": "提示词",
+      "title": "H003 雪夜蔡州｜分镜与视频提示｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "7e4db0a04314d3bdd903bfbaa36bc74b93aa9de9b97c972f49bdbc16703a9a26",
+      "characters": 14039,
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=bd4e5139e15d26e29d958564419eea546de2ac05a3331c6d3c0c6c1de1b03605#scripts",
+      "readbackAt": "2026-11-04T06:40:14.204Z",
+      "proposal": {
+        "currentRevision": null,
+        "bodies": [],
+        "statusText": "当前文档提案\nH003 雪夜蔡州｜分镜与视频提示｜20261031审阅版 · 0 项提案"
+      }
+    },
+    {
+      "documentId": "2b1cb277c070317b8fc43b1506d4346b59cc511f38443ea93c07df5551057496",
+      "meta": "剧本",
+      "title": "H003 雪夜蔡州｜剧本｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "ae63379a247e3993a391e8165f96a9b76d8214896587398599423236e7147b7b",
+      "characters": 1686,
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=bd4e5139e15d26e29d958564419eea546de2ac05a3331c6d3c0c6c1de1b03605#scripts",
+      "readbackAt": "2026-11-04T06:40:22.596Z",
+      "proposal": {
+        "currentRevision": null,
+        "bodies": [],
+        "statusText": "当前文档提案\nH003 雪夜蔡州｜剧本｜20261031审阅版 · 0 项提案"
+      }
+    }
+  ]
+}

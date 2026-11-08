@@ -367,6 +367,10 @@
           "const": true
         }
       }
+    },
+    "cameraLanguageDecision": {
+      "$ref": "#/$defs/cameraLanguageDecision",
+      "description": "影视叙事镜头的选镜理由与可见目标。v2.2 兼容增量字段；新镜头规范工作流必须填写并经逐镜检查器验收，旧版存档可不含此字段。"
     }
   },
   "$defs": {
@@ -456,6 +460,117 @@
           "maxLength": 1200
         }
       }
+    },
+    "cameraLanguageDecision": {
+      "type": "object",
+      "additionalProperties": false,
+      "description": "技法决策不替代 camera、composition 和 TemporalSpec 的机位／运动／焦点权威。固定镜头同样可以是积极选择。",
+      "required": [
+        "primaryTechniqueId",
+        "supportingTechniqueIds",
+        "narrativeReason",
+        "audiencePayoff",
+        "trigger",
+        "cameraMode",
+        "focusMode",
+        "exitMatch"
+      ],
+      "properties": {
+        "primaryTechniqueId": {
+          "type": "string",
+          "pattern": "^(?:K0[1-7]|C0[1-9]|M(?:0[1-9]|1[0-2])|F0[1-3]|E0[1-4]|neutral_static)$",
+          "description": "当前项目 7 个核心、28 个扩展 ID 或中性固定出口 neutral_static。"
+        },
+        "supportingTechniqueIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "maxItems": 8,
+          "items": {
+            "type": "string",
+            "pattern": "^(?:K0[1-7]|C0[1-9]|M(?:0[1-9]|1[0-2])|F0[1-3]|E0[1-4])$"
+          }
+        },
+        "narrativeReason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "audiencePayoff": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        },
+        "trigger": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 600
+        },
+        "cameraMode": {
+          "enum": [
+            "static",
+            "moving",
+            "compound"
+          ]
+        },
+        "focusMode": {
+          "enum": [
+            "hold",
+            "follow",
+            "rack"
+          ]
+        },
+        "noMotionReason": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 600
+        },
+        "focusTargetEnd": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "exitMatch": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 800
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "cameraMode": {
+                "const": "static"
+              }
+            },
+            "required": [
+              "cameraMode"
+            ]
+          },
+          "then": {
+            "required": [
+              "noMotionReason"
+            ]
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "focusMode": {
+                "const": "rack"
+              }
+            },
+            "required": [
+              "focusMode"
+            ]
+          },
+          "then": {
+            "required": [
+              "focusTargetEnd"
+            ]
+          }
+        }
+      ]
     }
   },
   "not": {

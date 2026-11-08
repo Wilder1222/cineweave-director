@@ -1,0 +1,681 @@
+{
+  "source": {
+    "type": "design",
+    "id": "U002-production-r1",
+    "version": 1,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "U002-01",
+    "U002-02",
+    "U002-03",
+    "U002-04",
+    "U002-05",
+    "U002-06"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "U002-01",
+      "status": "pass",
+      "criterion": "该镜必须传递本题指定的观众信息而不预支后果：年份改写是碰壁而非身份确证",
+      "observation": "公历提示后才写1544，观众尚未看到狐尾",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L3–L11"
+    },
+    {
+      "role": "performance",
+      "shotId": "U002-01",
+      "status": "pass",
+      "criterion": "行动由角色收到的刺激和当前任务触发：年份改写是碰壁而非身份确证",
+      "observation": "小满认真按要求修改，不以荒诞表演嘲笑她",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L3–L11"
+    },
+    {
+      "role": "staging",
+      "shotId": "U002-01",
+      "status": "pass",
+      "criterion": "走位与持物接触在该镜真实空间中可达：年份改写是碰壁而非身份确证",
+      "observation": "旧笔由外侧笔位取、写后放回，表再过口",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L3–L11"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "U002-01",
+      "status": "pass",
+      "criterion": "机位/焦点服务本镜信息且继承既定轴线：年份改写是碰壁而非身份确证",
+      "observation": "固定内侧前机位只在不同深度表与面部转焦",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L3–L11"
+    },
+    {
+      "role": "prompt",
+      "shotId": "U002-01",
+      "status": "pass",
+      "criterion": "独立视频稿保留准确台词和该镜必要初终态：年份改写是碰壁而非身份确证",
+      "observation": "完整公历/这样台词与1544准确保留",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L3–L11"
+    },
+    {
+      "role": "continuity",
+      "shotId": "U002-01",
+      "status": "pass",
+      "criterion": "本镜出态能按所述转场接入后镜：年份改写是碰壁而非身份确证",
+      "observation": "表入内，旧笔回外笔位，02能再次取",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L3–L11"
+    },
+    {
+      "role": "direction",
+      "shotId": "U002-02",
+      "status": "pass",
+      "criterion": "该镜必须传递本题指定的观众信息而不预支后果：笔帽撬断与照片出盒",
+      "observation": "无证件的事实先说，照片并不自动变身份证据",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L12–L20"
+    },
+    {
+      "role": "performance",
+      "shotId": "U002-02",
+      "status": "pass",
+      "criterion": "行动由角色收到的刺激和当前任务触发：笔帽撬断与照片出盒",
+      "observation": "她急开盒而非故意毁物，断帽后仍继续找证据",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L12–L20"
+    },
+    {
+      "role": "staging",
+      "shotId": "U002-02",
+      "status": "pass",
+      "criterion": "走位与持物接触在该镜真实空间中可达：笔帽撬断与照片出盒",
+      "observation": "候选补旧笔本体落回笔位，铁盒在外台面有支撑",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L12–L20"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "U002-02",
+      "status": "pass",
+      "criterion": "机位/焦点服务本镜信息且继承既定轴线：笔帽撬断与照片出盒",
+      "observation": "外侧桌端中近景可看帽断和取照，不强拉焦",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L12–L20"
+    },
+    {
+      "role": "prompt",
+      "shotId": "U002-02",
+      "status": "pass",
+      "criterion": "独立视频稿保留准确台词和该镜必要初终态：笔帽撬断与照片出盒",
+      "observation": "两个角色准确问答与旧/新笔区分保留",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L12–L20"
+    },
+    {
+      "role": "continuity",
+      "shotId": "U002-02",
+      "status": "pass",
+      "criterion": "本镜出态能按所述转场接入后镜：笔帽撬断与照片出盒",
+      "observation": "断帽外侧、笔位有笔、照片小满手，03可递照",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L12–L20"
+    },
+    {
+      "role": "direction",
+      "shotId": "U002-03",
+      "status": "pass",
+      "criterion": "该镜必须传递本题指定的观众信息而不预支后果：尾巴意外露出但照片仍不足以核验",
+      "observation": "观众和周砚此刻确认异常，不推断真实出生年份",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L21–L29"
+    },
+    {
+      "role": "performance",
+      "shotId": "U002-03",
+      "status": "pass",
+      "criterion": "行动由角色收到的刺激和当前任务触发：尾巴意外露出但照片仍不足以核验",
+      "observation": "她循他视线才藏尾，承认藏不稳保留难堪",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L21–L29"
+    },
+    {
+      "role": "staging",
+      "shotId": "U002-03",
+      "status": "pass",
+      "criterion": "走位与持物接触在该镜真实空间中可达：尾巴意外露出但照片仍不足以核验",
+      "observation": "铁盒敞开留外台面，照片过口退回，尾只穿透明观察区",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L21–L29"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "U002-03",
+      "status": "pass",
+      "criterion": "机位/焦点服务本镜信息且继承既定轴线：尾巴意外露出但照片仍不足以核验",
+      "observation": "略低侧斜从近照转深处尾巴，两真实深度待实拍",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L21–L29"
+    },
+    {
+      "role": "prompt",
+      "shotId": "U002-03",
+      "status": "pass",
+      "criterion": "独立视频稿保留准确台词和该镜必要初终态：尾巴意外露出但照片仍不足以核验",
+      "observation": "准确联系人目的和照片暂不足身份依据同时保留",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L21–L29"
+    },
+    {
+      "role": "continuity",
+      "shotId": "U002-03",
+      "status": "pass",
+      "criterion": "本镜出态能按所述转场接入后镜：尾巴意外露出但照片仍不足以核验",
+      "observation": "照片回小满、尾藏、盒仍台面，04不是新生一盒",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L21–L29"
+    },
+    {
+      "role": "direction",
+      "shotId": "U002-04",
+      "status": "pass",
+      "criterion": "该镜必须传递本题指定的观众信息而不预支后果：拒绝造假后转向可核经历",
+      "observation": "没有把真的也不行写成办证无解，周提出下一步",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L30–L38"
+    },
+    {
+      "role": "performance",
+      "shotId": "U002-04",
+      "status": "pass",
+      "criterion": "行动由角色收到的刺激和当前任务触发：拒绝造假后转向可核经历",
+      "observation": "她放笔发问后先听完整回应，再收住冲动",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L30–L38"
+    },
+    {
+      "role": "staging",
+      "shotId": "U002-04",
+      "status": "pass",
+      "criterion": "走位与持物接触在该镜真实空间中可达：拒绝造假后转向可核经历",
+      "observation": "旧笔来自外侧笔位，放回桌面不穿玻璃",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L30–L38"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "U002-04",
+      "status": "pass",
+      "criterion": "机位/焦点服务本镜信息且继承既定轴线：拒绝造假后转向可核经历",
+      "observation": "固定外侧中近景保留两人关系和笔手",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L30–L38"
+    },
+    {
+      "role": "prompt",
+      "shotId": "U002-04",
+      "status": "pass",
+      "criterion": "独立视频稿保留准确台词和该镜必要初终态：拒绝造假后转向可核经历",
+      "observation": "改年轻的原句与不能填假准确，未替她填任一年",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L30–L38"
+    },
+    {
+      "role": "continuity",
+      "shotId": "U002-04",
+      "status": "pass",
+      "criterion": "本镜出态能按所述转场接入后镜：拒绝造假后转向可核经历",
+      "observation": "旧笔落桌，05可抽空白纸而不持笔冲突",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L30–L38"
+    },
+    {
+      "role": "direction",
+      "shotId": "U002-05",
+      "status": "pass",
+      "criterion": "该镜必须传递本题指定的观众信息而不预支后果：咨询信息只保证下一步可问",
+      "observation": "证人由她主动提出，电话结果只说咨询",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L39–L47"
+    },
+    {
+      "role": "performance",
+      "shotId": "U002-05",
+      "status": "pass",
+      "criterion": "行动由角色收到的刺激和当前任务触发：咨询信息只保证下一步可问",
+      "observation": "她想到具体住处才说熟人，周边听边写不替她证明",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L39–L47"
+    },
+    {
+      "role": "staging",
+      "shotId": "U002-05",
+      "status": "pass",
+      "criterion": "走位与持物接触在该镜真实空间中可达：咨询信息只保证下一步可问",
+      "observation": "内侧电话和便签、外侧空纸分开，便签经口交",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L39–L47"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "U002-05",
+      "status": "pass",
+      "criterion": "机位/焦点服务本镜信息且继承既定轴线：咨询信息只保证下一步可问",
+      "observation": "内侧固定中景读记录与递出便签，未强制焦点迁移",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L39–L47"
+    },
+    {
+      "role": "prompt",
+      "shotId": "U002-05",
+      "status": "pass",
+      "criterion": "独立视频稿保留准确台词和该镜必要初终态：咨询信息只保证下一步可问",
+      "observation": "河沿巷和补鞋钱家、机构待核台词完整",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L39–L47"
+    },
+    {
+      "role": "continuity",
+      "shotId": "U002-05",
+      "status": "pass",
+      "criterion": "本镜出态能按所述转场接入后镜：咨询信息只保证下一步可问",
+      "observation": "便签到小满手，照片盒仍外台，06按此整理",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L39–L47"
+    },
+    {
+      "role": "direction",
+      "shotId": "U002-06",
+      "status": "pass",
+      "criterion": "该镜必须传递本题指定的观众信息而不预支后果：赔笔与主动联系熟人结束对峙",
+      "observation": "赔笔回收断帽，拨熟人不等于已经取证",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L48–L58"
+    },
+    {
+      "role": "performance",
+      "shotId": "U002-06",
+      "status": "pass",
+      "criterion": "行动由角色收到的刺激和当前任务触发：赔笔与主动联系熟人结束对峙",
+      "observation": "她说没想到撬盒有自己的反差幽默，之后认真自报身份",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L48–L58"
+    },
+    {
+      "role": "staging",
+      "shotId": "U002-06",
+      "status": "pass",
+      "criterion": "走位与持物接触在该镜真实空间中可达：赔笔与主动联系熟人结束对峙",
+      "observation": "右取手机交左/夹便签，右取新笔过口再收照片合盒",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L48–L58"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "U002-06",
+      "status": "pass",
+      "criterion": "机位/焦点服务本镜信息且继承既定轴线：赔笔与主动联系熟人结束对峙",
+      "observation": "外侧中近景保留台面和让位动线，32秒容纳手序待试演",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L48–L58"
+    },
+    {
+      "role": "prompt",
+      "shotId": "U002-06",
+      "status": "pass",
+      "criterion": "独立视频稿保留准确台词和该镜必要初终态：赔笔与主动联系熟人结束对峙",
+      "observation": "准确钱晓英称呼、四句对白和下一号保留",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L48–L58"
+    },
+    {
+      "role": "continuity",
+      "shotId": "U002-06",
+      "status": "pass",
+      "criterion": "本镜出态能按所述转场接入后镜：赔笔与主动联系熟人结束对峙",
+      "observation": "新笔归周，照片盒/便签/手机归小满，窗口让空",
+      "sourceLocator": "91bc95a3017ad768a043a3aef6006f67191f604c05e833731004eb999ebd2785:L48–L58"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "U002-01",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "年份改写是碰壁而非身份确证",
+        "audiencePayoff": "年份改写是碰壁而非身份确证",
+        "trigger": "年份改写是碰壁而非身份确证",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "focusTargetEnd": "窗口外稍后方小满面部",
+        "exitMatch": "表在窗口内待核"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "玻璃内侧侧前",
+        "height": "柜台上方",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "年份改写是碰壁而非身份确证",
+        "focusTarget": "递物口近处申请表",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "窗口人物连线同一端，内外世界位置不反转",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "近处申请表与递物口",
+        "midground": "周砚与外侧小满",
+        "background": "A083号码屏",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "年份改写是碰壁而非身份确证"
+      },
+      "temporal": {
+        "durationSeconds": 18,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "年份改写是碰壁而非身份确证",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：玻璃内侧侧前",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：玻璃内侧侧前",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U002-01-F1",
+            "timeSeconds": 0,
+            "description": "递物口近处申请表"
+          },
+          {
+            "eventId": "U002-01-F2",
+            "timeSeconds": 6,
+            "description": "窗口外稍后方小满面部"
+          }
+        ],
+        "edit": {
+          "entry": "白日同一窗口；周砚内、小满外，正反侧仅在玻璃轴线同一端换位，递物口始终在小满右前方。窗下玻璃/透明区让身侧桌腿及尾巴可见，绝不穿过实墙。白日大厅散射光。手机与新笔在06取出前位于包内，已取物不因每镜开头的道具清单重新回包。",
+          "exit": "表在窗口内待核",
+          "preferredTransition": "从本片真实初态开始，建立空间后继续",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；大厅低底噪，纸/笔帽轻响；电话另一端无可辨对白，06下一号用无具体第三人声提示音/数字呈现"
+        }
+      }
+    },
+    {
+      "shotId": "U002-02",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "笔帽撬断与照片出盒",
+        "audiencePayoff": "笔帽撬断与照片出盒",
+        "trigger": "笔帽撬断与照片出盒",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "断帽在外侧，照片在小满手"
+      },
+      "camera": {
+        "shotScale": "中近景",
+        "position": "外侧桌端",
+        "height": "台面略上方",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "笔帽撬断与照片出盒",
+        "focusTarget": "旧笔帽与铁盒/照片的工作区域",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "窗口人物连线同一端，内外世界位置不反转",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "帽/旧笔位",
+        "midground": "小满双手与铁盒照片",
+        "background": "玻璃内周砚只保留必要轮廓",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "笔帽撬断与照片出盒"
+      },
+      "temporal": {
+        "durationSeconds": 20,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "笔帽撬断与照片出盒",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：外侧桌端",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：外侧桌端",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U002-02-F1",
+            "timeSeconds": 0,
+            "description": "旧笔帽与铁盒/照片的工作区域"
+          }
+        ],
+        "edit": {
+          "entry": "表在窗口内待核",
+          "exit": "断帽在外侧，照片在小满手",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；大厅低底噪，纸/笔帽轻响；电话另一端无可辨对白，06下一号用无具体第三人声提示音/数字呈现"
+        }
+      }
+    },
+    {
+      "shotId": "U002-03",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "尾巴意外露出但照片仍不足以核验",
+        "audiencePayoff": "尾巴意外露出但照片仍不足以核验",
+        "trigger": "尾巴意外露出但照片仍不足以核验",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "focusTargetEnd": "透明侧板后小满身侧尾巴",
+        "exitMatch": "照片已推回小满，铁盒仍敞开在外侧台面，包口已理好"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "柜台内侧略低侧斜",
+        "height": "柜台面略下方但非脚踝",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "尾巴意外露出但照片仍不足以核验",
+        "focusTarget": "递物口近处照片",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "窗口人物连线同一端，内外世界位置不反转",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "照片与递物口",
+        "midground": "小满/透明侧板后的红褐尾",
+        "background": "大厅墙面无其他可辨人",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "尾巴意外露出但照片仍不足以核验"
+      },
+      "temporal": {
+        "durationSeconds": 28,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "尾巴意外露出但照片仍不足以核验",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：柜台内侧略低侧斜",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：柜台内侧略低侧斜",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U002-03-F1",
+            "timeSeconds": 0,
+            "description": "递物口近处照片"
+          },
+          {
+            "eventId": "U002-03-F2",
+            "timeSeconds": 12,
+            "description": "透明侧板后小满身侧尾巴"
+          }
+        ],
+        "edit": {
+          "entry": "断帽在外侧，照片在小满手",
+          "exit": "照片已推回小满，铁盒仍敞开在外侧台面，包口已理好",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；大厅低底噪，纸/笔帽轻响；电话另一端无可辨对白，06下一号用无具体第三人声提示音/数字呈现"
+        }
+      }
+    },
+    {
+      "shotId": "U002-04",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "拒绝造假后转向可核经历",
+        "audiencePayoff": "拒绝造假后转向可核经历",
+        "trigger": "拒绝造假后转向可核经历",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "旧笔放桌，双方转向记录经历"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "玻璃外侧桌端",
+        "height": "登记表略上方",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "拒绝造假后转向可核经历",
+        "focusTarget": "笔与双方回应的同一工作区域",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "窗口人物连线同一端，内外世界位置不反转",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "表/旧笔",
+        "midground": "周砚与小满",
+        "background": "窗口玻璃、号码屏或透明侧板后的大厅，不增加排队人物",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "拒绝造假后转向可核经历"
+      },
+      "temporal": {
+        "durationSeconds": 24,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "拒绝造假后转向可核经历",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：玻璃外侧桌端",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：玻璃外侧桌端",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U002-04-F1",
+            "timeSeconds": 0,
+            "description": "笔与双方回应的同一工作区域"
+          }
+        ],
+        "edit": {
+          "entry": "照片退回小满，尾已藏",
+          "exit": "旧笔放桌，双方转向记录经历",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；大厅低底噪，纸/笔帽轻响；电话另一端无可辨对白，06下一号用无具体第三人声提示音/数字呈现"
+        }
+      }
+    },
+    {
+      "shotId": "U002-05",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "咨询信息只保证下一步可问",
+        "audiencePayoff": "咨询信息只保证下一步可问",
+        "trigger": "咨询信息只保证下一步可问",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "便签在小满手，咨询结果未知"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "玻璃内侧侧前",
+        "height": "柜台上方",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "咨询信息只保证下一步可问",
+        "focusTarget": "记录与递出便签的工作面",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "窗口人物连线同一端，内外世界位置不反转",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "内侧电话/便签、递物口",
+        "midground": "周砚与小满",
+        "background": "窗口玻璃、号码屏或透明侧板后的大厅，不增加排队人物",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "咨询信息只保证下一步可问"
+      },
+      "temporal": {
+        "durationSeconds": 28,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "咨询信息只保证下一步可问",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：玻璃内侧侧前",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：玻璃内侧侧前",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U002-05-F1",
+            "timeSeconds": 0,
+            "description": "记录与递出便签的工作面"
+          }
+        ],
+        "edit": {
+          "entry": "旧笔放桌，双方转向记录经历",
+          "exit": "便签在小满手，咨询结果未知",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；大厅低底噪，纸/笔帽轻响；电话另一端无可辨对白，06下一号用无具体第三人声提示音/数字呈现"
+        }
+      }
+    },
+    {
+      "shotId": "U002-06",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "赔笔与主动联系熟人结束对峙",
+        "audiencePayoff": "赔笔与主动联系熟人结束对峙",
+        "trigger": "赔笔与主动联系熟人结束对峙",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "新笔在周砚，照片回盒并合盖，手机便签归小满，窗口已让开"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "玻璃外侧桌端",
+        "height": "台面物件略上方",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "赔笔与主动联系熟人结束对峙",
+        "focusTarget": "新笔与便签/手机交接工作面",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "窗口人物连线同一端，内外世界位置不反转",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "新笔、手机/便签、合盖铁盒",
+        "midground": "周砚与小满",
+        "background": "窗口玻璃、号码屏或透明侧板后的大厅，不增加排队人物",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "赔笔与主动联系熟人结束对峙"
+      },
+      "temporal": {
+        "durationSeconds": 32,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "赔笔与主动联系熟人结束对峙",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：玻璃外侧桌端",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：玻璃外侧桌端",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U002-06-F1",
+            "timeSeconds": 0,
+            "description": "新笔与便签/手机交接工作面"
+          }
+        ],
+        "edit": {
+          "entry": "便签在小满手，咨询结果未知",
+          "exit": "新笔在周砚，照片回盒并合盖，手机便签归小满，窗口已让开",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；大厅低底噪，纸/笔帽轻响；电话另一端无可辨对白，06下一号用无具体第三人声提示音/数字呈现"
+        }
+      }
+    }
+  ]
+}

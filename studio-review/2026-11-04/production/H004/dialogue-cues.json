@@ -1,0 +1,107 @@
+{
+  "fps": 24,
+  "timingVerified": false,
+  "lipSyncVerified": false,
+  "cues": [
+    {
+      "shotId": "H004-01B",
+      "speaker": "程简",
+      "text": "账上八袋，都是沙？",
+      "addressee": "闻绢",
+      "performance": "从眼前证据问，不先知全部",
+      "startFrame": 288,
+      "endFrameExclusive": 408,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H004-01B",
+      "speaker": "闻绢",
+      "text": "昨夜核了八袋，今晚待再核。底下是沙，米在上面。外面的人要看。",
+      "addressee": "程简",
+      "performance": "先分日期再说层次与外观用途",
+      "startFrame": 408,
+      "endFrameExclusive": 696,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H004-02A",
+      "speaker": "程简",
+      "text": "我答应过病卒，明早有饭。我以为自己核过。",
+      "addressee": "闻绢",
+      "performance": "眼看旧页，羞惭而非演哭",
+      "startFrame": 864,
+      "endFrameExclusive": 1056,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H004-02A",
+      "speaker": "闻绢",
+      "text": "你核的是袋数，不是粮。真数得告诉能分粮的人，不能在外账上装作分过。",
+      "addressee": "程简",
+      "performance": "具体纠正数据与投递对象",
+      "startFrame": 1056,
+      "endFrameExclusive": 1296,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H004-03A",
+      "speaker": "程简",
+      "text": "再割深点，就是沙。他信了吗？",
+      "addressee": "闻绢",
+      "performance": "看裂口问，不自答计成",
+      "startFrame": 1800,
+      "endFrameExclusive": 1872,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H004-03A",
+      "speaker": "闻绢",
+      "text": "不知道。别替他写。",
+      "addressee": "程简",
+      "performance": "不看见结果就不认定",
+      "startFrame": 1872,
+      "endFrameExclusive": 1944,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H004-03A",
+      "speaker": "程简",
+      "text": "这是能吃的。",
+      "addressee": "闻绢",
+      "performance": "护住小碗，压低但急切",
+      "startFrame": 2136,
+      "endFrameExclusive": 2256,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H004-03B",
+      "speaker": "闻绢",
+      "text": "借我。再看见沙，他们未必会走。",
+      "addressee": "程简",
+      "performance": "脚步近后才说，重音未必",
+      "startFrame": 2400,
+      "endFrameExclusive": 2544,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H004-04A",
+      "speaker": "程简",
+      "text": "我交完实数，去告诉他，我答应时没看清。",
+      "addressee": "闻绢",
+      "performance": "承责而非寻求宽恕",
+      "startFrame": 3264,
+      "endFrameExclusive": 3480,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H004-04A",
+      "speaker": "闻绢",
+      "text": "还要告诉带队的人，谁已经走不动。",
+      "addressee": "程简",
+      "performance": "补实务对象，保持急迫",
+      "startFrame": 3480,
+      "endFrameExclusive": 3624,
+      "timingStatus": "authored_window_pending_measurement"
+    }
+  ]
+}

@@ -1,0 +1,360 @@
+﻿episode,shot,candidate,shotInSeconds,shotOutSeconds,episodeInSeconds,episodeOutSeconds,requestSeconds,candidateInSeconds,candidateOutSeconds,isEditorialCut,startState,endState,mediaStatus,seamStatus
+E01,E01-SH001,E01-SH001,0,9,0,9,11,1,10,False,北向南队列已走到通道中段，右脚落地，身前铐连腰链，无背包。,青年第二步缩短，两警员仍在两侧，前方道路开始腾出。,pending_media,single_candidate
+E01,E01-SH002,E01-SH002,0,8,9,17,10,1,9,False,右脚已落、第二步缩短，身体暂被前方停步扯住；双腕身前、甲在上臂旁。,青年继续南行，甲轻扶上臂，双腕在身前连腰链。,pending_media,single_candidate
+E01,E01-SH003,E01-SH003,0,9,17,26,11,1,10,False,距南车门两步，前铐低垂,到踏板前尚未上车；腰链仍在,pending_media,single_candidate
+E01,E02-SH001,E02-SH001,0,13,26,39,15,1,14,False,青年坐东床沿，左手将撑床起身；手机北桌，黑包桌脚，无口罩。,他在桌边停下，右手拿手机,pending_media,single_candidate
+E01,E02-SH002,E02-SH002,0,15,39,54,17,1,16,False,他按住录音键，左手压页角,互助语音发出；手机右手，左手压笔记，家人来信覆盖屏幕。,pending_media,single_candidate
+E01,E02-SH003,E02-SH003,0,22,54,76,24,1,23,False,手机右手停家人对话，左手离开笔记，纸本仍摊北桌。,两条家人回复都删除，手机扣桌，互助帖语音已经单独发送。,pending_media,single_candidate
+E01,E02-SH004,E02-SH004,0,13,76,89,15,1,14,False,手机桌面，笔记摊开，背包桌脚,手机笔记都进包，包双肩；离开南门，无口罩。,pending_media,single_candidate
+E01,E02-SH005,E02-SH005-G01,0,22,89,111,24,1,23,False,业务电话接通，盘子仍在桌上。,笔悬在签字栏外，尚未签。,pending_media,pending_continuity_review
+E01,E02-SH005,E02-SH005-G02,22,45,111,134,25,1,24,False,咖啡移到桌边，空缺岗位露出。,业务页已签并收起，家庭来电待接。,pending_media,pending_continuity_review
+E01,E02-SH007,E02-SH007,0,19,134,153,21,1,20,False,沃德挂业务电话，另一个电话进来,未写完的时间留餐巾、笔已桌面；电话右耳，左手收资料。,pending_media,single_candidate
+E01,E02-SH008,E02-SH008,0,16,153,169,18,1,17,False,资料叠起，手机右耳,薄公文袋夹左腋，电话右耳，笔收袋边笔环，离早餐厅。,pending_media,single_candidate
+E01,E02-SH009,E02-SH009,0,24,169,193,26,1,25,False,沃德北门外右耳电话、薄公文袋夹左腋；东行李员收箱，青年将入西缘。,沃德卡已回左袋，电话右耳；路易吉从西人行道进入视线，行李员仍东门边。,pending_media,single_candidate
+E01,E02-SH010,E02-SH010,0,17,193,210,19,1,18,False,沃德手机右耳、会议卡回左袋；青年由西向东行。,青年转向沃德；沃德手机开始离耳，无其他持械者。,pending_media,single_candidate
+E01,E02-SH011,E02-SH011,0,10,210,220,12,1,11,False,路易吉注视沃德，手臂在身体前低处,沃德地面仅露衣角，手机仍亮；青年离西侧，无第二枪手。,pending_media,single_candidate
+E01,E02-SH012,E02-SH012,0,13,220,233,15,1,14,False,时间跳至警方到场；青年不在，杯子位置保持。,乙和酒店人员北门内，甲南路缘，影像调取开始。,pending_media,single_candidate
+E02,E03-SH001,E03-SH001,0,12,0,12,14,1,13,False,口罩遮口鼻；包在背；票右手,他在西长椅边停下,pending_media,single_candidate
+E02,E03-SH002,E03-SH002,0,14,12,26,16,1,15,False,青年站西椅旁，将试着坐下，右手车票，口罩与背包在身。,青年椅边站着，右手票，工作人员隔离带在手。,pending_media,single_candidate
+E02,E03-SH003,E03-SH003,0,19,26,45,21,1,20,False,青年仍在椅旁，票在右手,青年从南门走出，隔离带在厅内扣上；没有新的逃亡路线信息。,pending_media,single_candidate
+E02,E03-SH004,E03-SH004,0,21,45,66,23,1,22,False,口罩仍戴着；他坐床边,留言已听完；回复框空白，手机回北桌，母亲仍无回音。,pending_media,single_candidate
+E02,E03-SH005,E03-SH005,0,14,66,80,16,1,15,False,手机北桌，左手抽笔记，右手扶包口。,笔记进包拉链合上，手机北桌，口罩戴着。,pending_media,single_candidate
+E02,E03-SH006,E03-SH006,0,20,80,100,22,1,21,False,青年坐回东床，黑包已拉好在北桌脚；响起的手机从北桌拿到右手。,房卡在左袋，黑包双肩，手机右手，口罩仍戴；青年开南门出去。,pending_media,single_candidate
+E02,E03-SH007,E03-SH007-G01,0,20,100,120,22,1,21,False,地图在孩子手里，母亲将走。,艾莉缩回脚，地图仍向外。,pending_media,pending_continuity_review
+E02,E03-SH007,E03-SH007-G02,20,40,120,140,22,1,21,False,艾莉手指地图上的家。,母亲回头看光脚；文件和手机留桌南角。,pending_media,pending_continuity_review
+E02,E03-SH008,E03-SH008-G01,0,20,140,160,22,1,21,False,艾莉举画，玛拉不耐烦。,孩子尚未交画，乔继续把袜子穿好。,pending_media,pending_continuity_review
+E02,E03-SH008,E03-SH008-G02,20,40,160,180,22,1,21,False,母亲蹲在孩子面前。,地图摊开，母亲尚未离开，孩子找绿笔。,pending_media,pending_continuity_review
+E02,E03-SH009,E03-SH009-G01,0,20,180,200,22,1,21,False,外套在乔手上，母亲准备走。,两人仍面对面，文件未拿。,pending_media,pending_continuity_review
+E02,E03-SH009,E03-SH009-G02,20,40,200,220,22,1,21,False,乔挡住半步，孩子在背景画。,手机在母亲右手响，文件夹左臂。,pending_media,pending_continuity_review
+E02,E03-SH010,E03-SH010-G01,0,20,220,240,22,1,21,False,手机已接通，文件夹抱在左臂。,通话结束，母亲仍在门内。,pending_media,pending_continuity_review
+E02,E03-SH010,E03-SH010-G02,20,40,240,260,22,1,21,False,孩子放下绿笔望向母亲。,门合上，孩子与乔画水流，地图桥仍空着。,pending_media,pending_continuity_review
+E03,E03-SH011,E03-SH011,0,24,0,24,26,1,25,False,玛拉东柜台工服，风衣挂东工作区蓝夹收个人包；青年南门入，口罩戴包双肩。 玛拉手边咖啡机已有热咖啡，纸杯叠在机旁。,热咖啡在青年左手，杯盖扣好；零钱已付，青年戴口罩往西北桌走。,pending_media,single_candidate
+E03,E03-SH012,E03-SH012,0,16,24,40,18,1,17,False,他左手杯，右手扶背包带,包右脚、杯桌前、口罩戴；老人拿收据向东柜台，玛拉柜台内。,pending_media,single_candidate
+E03,E04-SH001,E04-SH001-G01,0,19,40,59,21,1,20,False,老人手压收据，玛拉以为价格有错。,老人留柜台，玛拉等答。,pending_media,pending_continuity_review
+E03,E04-SH001,E04-SH001-G02,19,38,59,78,21,1,20,False,青年还在远层扶腰坐着。,玛拉向母子桌去，老人松开收据。,pending_media,pending_continuity_review
+E03,E04-SH002,E04-SH002-G01,0,16,78,94,18,1,17,False,母子仍坐原桌，玛拉到桌边。,纸巾在杯底，托盘尚未提起。,pending_media,pending_continuity_review
+E03,E04-SH002,E04-SH002-G02,16,32,94,110,18,1,17,False,孩子两手正在握杯。,通道西桌空出，母子留南桌，玛拉回工作区。,pending_media,pending_continuity_review
+E03,E04-SH003,E04-SH003,0,23,110,133,25,1,24,False,玛拉回东柜台，手机仍右裤袋；母子已在南桌。,报警电话结束，手机收回右裤袋；玛拉必须继续接待眼前客人。,pending_media,single_candidate
+E03,E04-SH101,E04-SH101,0,20,133,153,22,1,21,False,电话已挂，玛拉在柜台攥着老人的收据；老人空手等在柜台外，青年戴口罩在西北桌。,两警员已入南门，玛拉留柜台；青年右脚边背包未动，口罩未摘。,pending_media,single_candidate
+E03,E04-SH004,E04-SH004,0,16,153,169,18,1,17,False,Luigi右脚边背包，杯桌前，口罩戴着,青年双手桌面，口罩仍戴，背包右脚，杯在手前。,pending_media,single_candidate
+E03,E04-SH005,E04-SH005,0,18,169,187,20,1,19,False,Luigi双手桌面，口罩覆盖口鼻,口罩桌面杯旁，脸无遮挡，双手回桌；证件还在左袋，他已完整说明位置，甲刚点头准许。,pending_media,single_candidate
+E03,E04-SH006,E04-SH006,0,24,187,211,26,1,25,False,口罩完整放在杯旁，青年获准从左口袋取证件。,核查已报不符，甲已将包移到通道外侧；青年未起身，两手在桌。,pending_media,single_candidate
+E03,E04-SH007,E04-SH007-G01,0,20,211,231,22,1,21,False,青年坐桌边，背包通道外侧。,青年双腕被铐受甲控制，已离包两步，乙尚未开包。,pending_media,pending_continuity_review
+E03,E04-SH007,E04-SH007-G02,20,39,231,250,21,1,20,False,青年已离包两步，前铐受甲控制，仍在调整双脚重心。,青年由甲南行，乙持包，杯旁口罩仍在桌。,pending_media,pending_continuity_review
+E04,E04-SH008,E04-SH008,0,14,0,14,16,1,15,False,青年前铐坐北侧；包东台,水桌中，青年前铐坐北侧，甲南侧翻问询页，包东台。,pending_media,single_candidate
+E04,E04-SH009,E04-SH009,0,14,14,28,16,1,15,False,青年看桌上水，再看甲,杯靠青年，双腕前铐；问询页合上，甲留出换姿势空间。,pending_media,single_candidate
+E04,E04-SH010,E04-SH010,0,14,28,42,16,1,15,False,乙戴手套，包口已开，甲在旁,移包栏记甲、开包栏记乙，登记纸与财物同桌；笔记、手机分放，青年在画外北桌前铐状态继承。,pending_media,single_candidate
+E04,E04-SH011,E04-SH011-G01,0,20,42,62,22,1,21,False,玛拉刚到家，乔等在桌边。,北屋响起蜡笔盒落地，两人转头。,pending_media,pending_continuity_review
+E04,E04-SH011,E04-SH011-G02,20,38,62,80,20,1,19,False,姐妹看北门，孩子在里面。,水杯还在桌，蓝夹已合上。,pending_media,pending_continuity_review
+E04,E04-SH011,E04-SH011-G03,38,55,80,97,19,1,18,False,姐妹隔桌，奖励仍不明。,杯在母亲手上，妹妹仍未能去工作。,pending_media,pending_continuity_review
+E04,E04-SH012,E04-SH012-G01,0,20,97,117,22,1,21,False,手机有新视频，水杯在玛拉手中。,视频已被两人看见，手机在桌边。,pending_media,pending_continuity_review
+E04,E04-SH012,E04-SH012-G02,20,38,117,135,20,1,19,False,乔降低音量，蓝夹被碰开。,母亲手留在周五通知，妹妹还在旁边。,pending_media,pending_continuity_review
+E04,E04-SH012,E04-SH012-G03,38,64,135,161,28,1,27,False,两人无话，文件仍在桌上。,姐妹等人工接听，乔准备先说；没有赔付、悬赏或网络撤回的假解决。,pending_media,pending_continuity_review
+E05,E05-SH001,E05-SH001-G01,0,20,0,20,22,1,21,False,蓝夹尚未打开，律师取白纸。,假名栏仍待完整回答，青年转向蓝夹。,pending_media,pending_continuity_review
+E05,E05-SH001,E05-SH001-G02,20,40,20,40,22,1,21,False,青年伸手向蓝夹，律师在南侧。,青年已收手，保护姓名页朝向他。,pending_media,pending_continuity_review
+E05,E05-SH001,E05-SH001-G03,40,60,40,60,22,1,21,False,患者姓名问题已记在另页。,蓝夹西侧未交给青年，双方开始按经过工作。,pending_media,pending_continuity_review
+E05,E05-SH003,E05-SH003-G01,0,25,60,85,27,1,26,False,律师刚画三栏，青年看着第一栏。,只到上铐节点，尚未说开包。,pending_media,pending_continuity_review
+E05,E05-SH003,E05-SH003-G02,25,40,85,100,17,1,16,False,青年双手并在身前，律师继续等。,开包时序完整，律师手掌分开青年和包两处。,pending_media,pending_continuity_review
+E05,E05-SH003,E05-SH003-G03,40,55,100,115,17,1,16,False,律师手掌表示双方距离。,圈下的只是待核实事实，不是胜诉结论。,pending_media,pending_continuity_review
+E05,E05-SH005,E05-SH005-G01,0,18,115,133,20,1,19,False,青年等着圈下的事实变成结论。,律师掌心将要盖住三栏纸。,pending_media,pending_continuity_review
+E05,E05-SH005,E05-SH005-G02,18,35,133,150,19,1,18,False,青年又看圈，律师把它遮住。,问答页打开；时间可在此省略，决定不能省略。,pending_media,pending_continuity_review
+E05,E05-SH006,E05-SH006-G01,0,20,150,170,22,1,21,False,律师收问答，青年按住桌沿。,青年尚未作答，律师等。,pending_media,pending_continuity_review
+E05,E05-SH006,E05-SH006-G02,20,40,170,190,22,1,21,False,笔停在原句旁，青年望着它。,更正已写，双方仍在继续工作。,pending_media,pending_continuity_review
+E05,E05-SH007,E05-SH007,0,15,190,205,17,1,16,False,蓝夹桌西，助理持采访请求打印页,邀约一张翻扣两张留桌南，索引桌中，蓝夹桌西。,pending_media,single_candidate
+E05,E05-SH008,E05-SH008,0,18,205,223,20,1,19,False,她指索引空白处，助理等写,丹尼尔写调取申请，声明另列，蓝夹仍桌西。,pending_media,single_candidate
+E05,E05-SH009,E05-SH009-G01,0,14,223,237,16,1,15,False,丹尼尔将笔记副本与行程并排，海伦刚做完录像调取要求。,便签留在不利日期，丹尼尔看见副本页边被截。,pending_media,pending_continuity_review
+E05,E05-SH009,E05-SH009-G02,14,27,237,250,15,1,14,False,不利日期已有便签，副本在两人之间。,不利日期继续待核实，调取完整扫描列为实际任务。,pending_media,pending_continuity_review
+E05,E05-SH010,E05-SH010,0,10,250,260,12,1,11,False,他站西桌前，双腕自由,申请左手，笔留西桌，青年到南门内腕自由。,pending_media,single_candidate
+E05,E05-SH011,E05-SH011,0,14,260,274,16,1,15,False,左手申请，短笔留西桌，青年南门内。,表在门外看管员手，青年空手留窗前。,pending_media,single_candidate
+E05,E05-SH012,E05-SH012,0,14,274,288,16,1,15,False,青年空手门前，表已门外。,东床坐下腕自由，申请在门外，电话尚未安排。,pending_media,single_candidate
+E06,E06-SH004,E06-SH004,0,18,0,18,20,1,19,False,同次押送已到南车旁；青年刚抬眼看清门口，右脚仍在踏板前；记者在西栏杆外举手机。,手机停在抬眼的裁切帧；现场青年将迈上踏板，橙衣和前铐腰链状态延续冷开。,pending_media,single_candidate
+E06,E06-SH005,E06-SH005,0,12,18,30,14,1,13,False,右脚踏板前，前铐收腹，警员两侧让路。,青年坐车内前铐连腰链，门已合；两警员车外。,pending_media,single_candidate
+E06,E06-SH006,E06-SH006,0,13,30,43,15,1,14,False,诺拉右手机，红本左侧桌面,诺拉西桌电脑声明打开，手机桌右，托马斯站她东侧鼠标在手，标题栏空着。,pending_media,single_candidate
+E06,E06-SH007,E06-SH007,0,14,43,57,16,1,15,False,诺拉看西桌电脑声明，手机桌右；托马斯站她东侧。,标题选短句，完整来源链接保留，诺拉手机放西桌。,pending_media,single_candidate
+E06,E06-SH008,E06-SH008,0,13,57,70,15,1,14,False,编辑仍站诺拉东侧，鼠标在手，诺拉红本已开、手机桌右。,视频已发布，声明存档，诺拉重新听现场声；编辑做下一条。,pending_media,single_candidate
+E06,E06-SH009,E06-SH009-G01,0,20,70,90,22,1,21,False,两份申请刚推上桌。,安保已批，黛安手还压招聘单。,pending_media,pending_continuity_review
+E06,E06-SH009,E06-SH009-G02,20,42,90,112,24,1,23,False,黛安没有收纸，维克多仍压着岗位角。,招聘单归黛安，安保单留桌等待支付。,pending_media,pending_continuity_review
+E06,E06-SH011,E06-SH011,0,18,112,130,20,1,19,False,招聘单已在黛安手里，安保单独留桌；维克多抬眼。,黛安带走招聘与岗位表，维克多留安保单；周一仍须面对未解决的人手问题。,pending_media,single_candidate
+E06,E01-SH004,E01-SH004,0,14,130,144,16,1,15,False,玛拉灰风衣罩黑工服，西长椅坐着；手机右手，蓝夹左臂；艾莉握绿笔把本子转给她。,画本回到艾莉膝上，手机贴玛拉右腿，蓝夹仍左臂。,pending_media,single_candidate
+E06,E01-SH005,E01-SH005,0,12,144,156,14,1,13,False,手机右手；左臂压蓝夹,手机拨号页，蓝夹膝上，艾莉把画本转向自己。,pending_media,single_candidate
+E06,E01-SH006,E01-SH006,0,16,156,172,18,1,17,False,手机右耳，蓝夹已在膝上，她左手翻到折页。,手机右耳，左手压折页；北门刚发出开门声。,pending_media,single_candidate
+E06,E01-SH007,E01-SH007,0,18,172,190,20,1,19,False,玛拉手机右耳，蓝夹膝上刚被左手抬起，身体准备离椅；医生北门外，艾莉把绿笔插画本。,玛拉已经站在长椅前，左臂夹蓝夹、手机回右耳；艾莉站医生旁。,pending_media,single_candidate
+E06,E01-SH008,E01-SH008,0,14,190,204,16,1,15,False,电话右耳，蓝夹左臂；艾莉与医生已走出一步。,等待音重新开始，玛拉站着，孩子回过头后转回北门。,pending_media,single_candidate
+E06,E01-SH009,E01-SH009,0,16,204,220,18,1,17,False,母亲在长椅旁站着，蓝夹左臂，电话右耳；艾莉北门口。,母亲走到北门边，孩子和医生在门内；电话仍未回答。,pending_media,single_candidate
+E06,E06-SH012,E06-SH012,0,26,220,246,28,1,27,False,玛拉家居针织右手机，乔在南门穿外套，蓝夹中央桌，孩子北屋睡。,门已锁，乔取消接车并挂回外套；玛拉存好截图待拨电话，北屋孩子仍睡。,pending_media,single_candidate
+E07,E07-SH001,E07-SH001,0,14,0,14,16,1,15,False,Mara左夹蓝夹、右手机，Blake站南门,玛拉离东门几步，蓝夹左臂贴胸手机右手，布莱克挡侧前方。,pending_media,single_candidate
+E07,E07-SH002,E07-SH002,0,14,14,28,16,1,15,False,Mara看员工门，右手手机贴身,玛拉停在东门槛外，蓝夹背离直播镜头；诺拉两步外，布莱克退到南侧仍拍。,pending_media,single_candidate
+E07,E07-SH003,E07-SH003,0,14,28,42,16,1,15,False,玛拉尚在门槛外，蓝夹左臂、手机右手；诺拉红本左手，右手递名片，门口通行空隙保留。,玛拉进门，手机右袋、名片右手、蓝夹左臂；诺拉门外。,pending_media,single_candidate
+E07,E07-SH004,E07-SH004-G01,0,22,42,64,24,1,23,False,手机未开，文件夹在玛拉面前。,蓝夹合着，采访仍没开始。,pending_media,pending_continuity_review
+E07,E07-SH004,E07-SH004-G02,22,45,64,87,25,1,24,False,红本放到手机后，录制未开。,录制开始，文件仍未交出。,pending_media,pending_continuity_review
+E07,E07-SH005,E07-SH005-G01,0,18,87,105,20,1,19,False,记者问悬赏，母亲两手压蓝夹。,笔停在红本，录制未停。,pending_media,pending_continuity_review
+E07,E07-SH005,E07-SH005-G02,18,36,105,123,20,1,19,False,母亲看手机与红本。,采访保留混合动机，蓝夹已开。,pending_media,pending_continuity_review
+E07,E07-SH006,E07-SH006-G01,0,21,123,144,23,1,22,False,拒赔页与加班申请仍叠着，手机录制中。,账单尚待收回，患者号还未遮。,pending_media,pending_continuity_review
+E07,E07-SH006,E07-SH006-G02,21,42,144,165,23,1,22,False,母亲手指要公开的段落。,诊所抬头和处理标记已录，便签压平，手机不停录。,pending_media,pending_continuity_review
+E07,E07-SH007,E07-SH007,0,24,165,189,26,1,25,False,Ellie抱画本停北门，未靠手机,绿笔归艾莉、画本随她回北屋；玛拉站桌北西，手机继续录。,pending_media,single_candidate
+E07,E07-SH008,E07-SH008-G01,0,22,189,211,24,1,23,False,记者刚停录，母亲仍站着。,回放停止，原片保留，母亲尚未坐。,pending_media,pending_continuity_review
+E07,E07-SH008,E07-SH008-G02,22,43,211,232,23,1,22,False,手机不录，患者号便签仍盖着。,采访结束，孩子自己画图，诊所抬头没有被撤掉。,pending_media,pending_continuity_review
+E07,E07-SH009,E07-SH009,0,15,232,247,17,1,16,False,玛拉右手手机，左手空，画本在桌；艾莉将从北屋门缝探看。,两通陌生号已拒，艾莉听完才关门回北屋；画本在玛拉左手，右手手机新留言待播。,pending_media,single_candidate
+E07,E07-SH010,E07-SH010,0,17,247,264,19,1,18,False,手机显示新语音，她按播放,画本桌上、蓝夹打开，手机右耳拨总机，不回拨骚扰号。,pending_media,single_candidate
+E08,E08-SH001,E08-SH001-G01,0,22,0,22,24,1,23,False,授权页刚放桌，记者还拿手机。,授权已签，手机已灭，医生才准备取回执。,pending_media,pending_continuity_review
+E08,E08-SH001,E08-SH001-G02,22,48,22,48,28,1,27,False,医生拿出回执，母亲笔放桌边。,两纸并存桌面，未得内部阅件结论。,pending_media,pending_continuity_review
+E08,E08-SH003,E08-SH003-G01,0,25,48,73,27,1,26,False,母亲站着把两纸推给医生。,母亲坐前沿，蓝夹膝上，材料仍桌面。,pending_media,pending_continuity_review
+E08,E08-SH003,E08-SH003-G02,25,50,73,98,27,1,26,False,母亲不走，指着纸上的接收。,原件入蓝夹，副本留医生，拒赔未变。,pending_media,pending_continuity_review
+E08,E08-SH005,E08-SH005,0,22,98,120,24,1,23,False,红本打开手机右袋，医生备可授权回执副本。,副本交诺拉工作夹，原件仍玛拉蓝夹；本次授权只含回执日期，无孩子名字与声音。,pending_media,single_candidate
+E08,E08-SH006,E08-SH006,0,20,120,140,22,1,21,False,Mara授权副本，Nora手不遮签名,诺拉只得到一个待采访姓名与处理标记；玛拉要解决的仍是周五，二人目的开始分开。,pending_media,single_candidate
+E08,E08-SH007,E08-SH007,0,15,140,155,17,1,16,False,Nora右手按免提，红本左开,通话结束、匿名条件记好，三组副本到桌，个人信息未公开。,pending_media,single_candidate
+E08,E08-SH008,E08-SH008,0,18,155,173,20,1,19,False,她已结束通话，右手拿笔,签名被复制仍只是未刊疑问标题，各份材料出处保留。,pending_media,single_candidate
+E08,E08-SH009,E08-SH009,0,16,173,189,18,1,17,False,编辑看标题，Nora右手鼠标,草稿保存未发，复核签名是否被复制的疑问标题仍留，编辑回东桌。,pending_media,single_candidate
+E08,E08-SH010,E08-SH010,0,25,189,214,27,1,26,False,公开采访在莉娜工位电脑，工作手机靠屏，私人机右侧；自己的样本清单尚未打开。,本人质检备注与公开标记对应；邮箱已抄，缩写露在纸面，工作机停止震动。,pending_media,single_candidate
+E08,E08-SH011,E08-SH011,0,20,214,234,22,1,21,False,本人缩写露在备注页，邮箱便签旁；灰封未封，私人机右侧，工作机靠屏。,私人提醒已发、私人机扣灰封，工牌仍佩戴；身份与证据范围尚未公开。,pending_media,single_candidate
+E08,E08-SH012,E08-SH012,0,18,234,252,20,1,19,False,红本已合手机右，诺拉准备起身，新邮件进工作邮箱。,旧标题删除、草稿未发、见面请求发出，匿名说法仍未证实。,pending_media,single_candidate
+E09,E09-SH001,E09-SH001,0,13,0,13,15,1,14,False,路易吉身前腕铐未解，海伦站他西侧，蓝夹里露出一张折页。,折页仍在海伦蓝夹内，青年双腕仍在身前铐住。,pending_media,single_candidate
+E09,E09-SH002,E09-SH002-G01,0,9,13,22,11,1,10,False,折页仍在海伦蓝夹内，青年双腕仍在身前铐住。,双手已完全自由；腕铐由法警收走，不在路易吉身上。,pending_media,pending_continuity_review
+E09,E09-SH002,E09-SH002-G02,9,18,22,31,11,1,10,False,双手已完全自由；腕铐由法警收走，不在路易吉身上。,青年空手向北入庭，海伦蓝夹在左手，腕铐留法警身上。,pending_media,pending_continuity_review
+E09,E09-SH004,E09-SH004-G01,0,11,31,42,13,1,12,False,路易吉从南隔栏口向西辩方桌走，双手空着。,路易吉坐在海伦北侧，双手桌上；瑞秋坐东南。,pending_media,pending_continuity_review
+E09,E09-SH004,E09-SH004-G02,11,22,42,53,13,1,12,False,路易吉坐在海伦北侧，双手桌上；瑞秋坐东南。,不认罪已录入；青年双手自由，右手从纸边收回膝上。,pending_media,pending_continuity_review
+E09,E09-SH006,E09-SH006-G01,0,12,53,65,14,1,13,False,不认罪已录入；青年双手自由，右手从纸边收回膝上。,搜查申请已递出，患者折页仍在蓝夹内。,pending_media,pending_continuity_review
+E09,E09-SH006,E09-SH006-G02,12,32,65,85,22,1,21,False,搜查申请已递出，患者折页仍在蓝夹内。,书记员记下请求，海伦留着清单，青年那张折页仍未展示。,pending_media,pending_continuity_review
+E09,E09-SH007,E09-SH007-G01,0,14,85,99,16,1,15,False,书记员记下请求，海伦留着清单，青年那张折页仍未展示。,控方副本与患者折页分开，来源争议未获当庭展开。,pending_media,pending_continuity_review
+E09,E09-SH007,E09-SH007-G02,14,26,99,111,14,1,13,False,控方副本与患者折页分开，来源争议未获当庭展开。,法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。,pending_media,pending_continuity_review
+E09,E09-SH009,E09-SH009,0,7,111,118,9,1,8,False,法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。,折纸回棕袋，瑞秋没有与西侧青年对视；青年自由双手在画外继承。,pending_media,single_candidate
+E09,E09-SH010,E09-SH010-G01,0,13,118,131,15,1,14,False,布莱克举稳定器，诺拉从东通道走到栏杆边。,商品直播继续，诺拉视线越过主播看法院出口。,pending_media,pending_continuity_review
+E09,E09-SH010,E09-SH010-G02,13,23,131,141,12,1,11,False,商品直播继续，诺拉视线越过主播看法院出口。,诺拉从稳定器东侧通过，布莱克留在西栏杆外。,pending_media,pending_continuity_review
+E09,E09-SH012,E09-SH012,0,13,141,154,15,1,14,False,诺拉从稳定器东侧通过，布莱克留在西栏杆外。,海伦向南走出，诺拉停在东侧通道，录音已得完整答复。,pending_media,single_candidate
+E09,E09-SH013,E09-SH013,0,7,154,161,9,1,8,False,海伦向南走出，诺拉停在东侧通道，录音已得完整答复。,诺拉保存匿名线索，未验证，也未将来源发给编辑。,pending_media,single_candidate
+E09,E09-SH014,E09-SH014-G01,0,12,161,173,14,1,13,False,打印机刚吐出附件末页，诺拉从西桌起身去取；红本在左手，黑手机留桌右。,编号被红本遮住，诺拉准备联系能解释字段的人。,pending_media,pending_continuity_review
+E09,E09-SH014,E09-SH014-G02,12,23,173,184,13,1,12,False,编号被红本遮住，诺拉准备联系能解释字段的人。,毛衣稿和匿名核实都由诺拉接下，午夜工作继续。,pending_media,pending_continuity_review
+E09,E09-SH014,E09-SH014-G03,23,33,184,194,12,1,11,False,毛衣稿和匿名核实都由诺拉接下，午夜工作继续。,她先保存短片工程，再把匿名便签翻到空白面准备打电话。,pending_media,pending_continuity_review
+E09,E09-SH016,E09-SH016,0,14,194,208,16,1,15,False,她先保存短片工程，再把匿名便签翻到空白面准备打电话。,她写下约见时间，视频停在半剪状态，来源姓名没有说出口。,pending_media,single_candidate
+E10,E10-SH001,E10-SH001-G01,0,11,0,11,13,1,12,False,莉娜左手压灰信封，工作手机右手扣着。,二人仍南北对坐，信封未开，莉娜右手工作手机计时。,pending_media,pending_continuity_review
+E10,E10-SH001,E10-SH001-G02,11,23,11,23,14,1,13,False,二人仍南北对坐，信封未开，莉娜右手工作手机计时。,三页样本在中间，报告封页仍归莉娜。,pending_media,pending_continuity_review
+E10,E10-SH003,E10-SH003-G01,0,18,23,41,20,1,19,False,三页样本在中间，报告封页仍归莉娜。,诺拉在医生姓名栏旁写待联系，三个病例没有扩成总体结论。,pending_media,pending_continuity_review
+E10,E10-SH003,E10-SH003-G02,18,27,41,50,11,1,10,False,诺拉在医生姓名栏旁写待联系，三个病例没有扩成总体结论。,封页文号可见，正文仍被她手臂遮住。,pending_media,pending_continuity_review
+E10,E10-SH004,E10-SH004-G01,0,12,50,62,14,1,13,False,封页文号可见，正文仍被她手臂遮住。,本子里的解释未获来源认可；三页仍在莉娜手下。,pending_media,pending_continuity_review
+E10,E10-SH004,E10-SH004-G02,12,30,62,80,20,1,19,False,本子里的解释未获来源认可；三页仍在莉娜手下。,诺拉把没看过日志写全，随后才拿起手机请求拍摄。,pending_media,pending_continuity_review
+E10,E10-SH005,E10-SH005-G01,0,11,80,91,13,1,12,False,诺拉把没看过日志写全，随后才拿起手机请求拍摄。,手机已拍获准的遮名三页，原件仍归莉娜。,pending_media,pending_continuity_review
+E10,E10-SH005,E10-SH005-G02,11,23,91,103,14,1,13,False,手机已拍获准的遮名三页，原件仍归莉娜。,诺拉持有获准拍摄的遮名封页照片，文号校过，附件提示尚未追查；原件由莉娜留存。,pending_media,pending_continuity_review
+E10,E10-SH007,E10-SH007-G01,0,12,103,115,14,1,13,False,诺拉持有获准拍摄的遮名封页照片，文号校过，附件提示尚未追查；原件由莉娜留存。,同一页进入过互助渠道的事实被确认。,pending_media,pending_continuity_review
+E10,E10-SH007,E10-SH007-G02,12,31,115,134,21,1,20,False,同一页进入过互助渠道的事实被确认。,诺拉没拿到消息，莉娜准备带走全部原件。,pending_media,pending_continuity_review
+E10,E10-SH008,E10-SH008,0,15,134,149,17,1,16,False,诺拉没拿到消息，莉娜准备带走全部原件。,来源离开，未给任何暴力计划的知情证词；诺拉留在桌南。,pending_media,single_candidate
+E10,E10-SH009,E10-SH009-G01,0,13,149,162,15,1,14,False,诺拉敲稿，编辑把排班表挪出键盘区域。,文稿留有限定段落，题目却开始围绕人工复核的疑问。,pending_media,pending_continuity_review
+E10,E10-SH009,E10-SH009-G02,13,33,162,182,22,1,21,False,文稿留有限定段落，题目却开始围绕人工复核的疑问。,限定导语仍在修改框中，诺拉尚未接受。,pending_media,pending_continuity_review
+E10,E10-SH010,E10-SH010-G01,0,10,182,192,12,1,11,False,限定导语仍在修改框中，诺拉尚未接受。,公司回应保留，但问题式开头由诺拉选择。,pending_media,pending_continuity_review
+E10,E10-SH010,E10-SH010-G02,10,30,192,212,22,1,21,False,公司回应保留，但问题式开头由诺拉选择。,诺拉不再指公司回复，改把三份病例记录并排。,pending_media,pending_continuity_review
+E10,E10-SH011,E10-SH011-G01,0,17,212,229,19,1,18,False,诺拉不再指公司回复，改把三份病例记录并排。,她将公司回应移近，仍保留 Nobody opened the files.；鼠标回到发布按钮。,pending_media,pending_continuity_review
+E10,E10-SH011,E10-SH011-G02,17,28,229,240,13,1,12,False,她将公司回应移近，仍保留 Nobody opened the files.；鼠标回到发布按钮。,问题式标题与无证据支撑的断言同时发布，诺拉署名保留。,pending_media,pending_continuity_review
+E10,E10-SH012,E10-SH012,0,9,240,249,11,1,10,False,问题式标题与无证据支撑的断言同时发布，诺拉署名保留。,采访缺口仍在，职业机会已先到。,pending_media,single_candidate
+E10,E10-SH013,E10-SH013,0,10,249,259,12,1,11,False,维克多坐中央桌北端，平板放左手边。,追查从发表样本的内部流转开始，未指明幕后操纵。,pending_media,single_candidate
+E10,E10-SH014,E10-SH014-G01,0,9,259,268,11,1,10,False,追查从发表样本的内部流转开始，未指明幕后操纵。,包回椅背，手机右耳，工作未被删除。,pending_media,pending_continuity_review
+E10,E10-SH014,E10-SH014-G02,9,29,268,288,22,1,21,False,包回椅背，手机右耳，工作未被删除。,电话仍接通，莉娜等对方确认咨询安排。,pending_media,pending_continuity_review
+E10,E10-SH014,E10-SH014-G03,29,42,288,301,15,1,14,False,电话仍接通，莉娜等对方确认咨询安排。,工作手机留工位，私人手机回包；她暂不走向会议室。,pending_media,pending_continuity_review
+E11,E11-SH001,E11-SH001,0,12,0,12,14,1,13,False,维克多看过平板，传播职员准备录制。,公告录完，付款页仍未签，维克多取回平板。,pending_media,single_candidate
+E11,E11-SH002,E11-SH002-G01,0,10,12,22,12,1,11,False,公告录完，付款页仍未签，维克多取回平板。,公司待发配文已保存为优先复核；手机外部获批标题仍在，付款页未签。,pending_media,pending_continuity_review
+E11,E11-SH002,E11-SH002-G02,10,23,22,35,15,1,14,False,公司待发配文已保存为优先复核；手机外部获批标题仍在，付款页未签。,她保存准确配文，手机上错误外部标题仍在传播。,pending_media,pending_continuity_review
+E11,E11-SH003,E11-SH003-G01,0,15,35,50,17,1,16,False,玛拉从西椅前起身，右手手机亮新闻，左臂蓝夹；医生从北门刚出来。,医生接过蓝夹核对，玛拉右手机仍举着，诺拉发现自己的转发也有错。,pending_media,pending_continuity_review
+E11,E11-SH003,E11-SH003-G02,15,35,50,70,22,1,21,False,医生接过蓝夹核对，玛拉右手机仍举着，诺拉发现自己的转发也有错。,诺拉把转发页关掉，玛拉仍保留周四空出的班。,pending_media,pending_continuity_review
+E11,E11-SH004,E11-SH004-G01,0,13,70,83,15,1,14,False,诺拉把转发页关掉，玛拉仍保留周四空出的班。,两份时间明确不同，重审在案前已启动。,pending_media,pending_continuity_review
+E11,E11-SH004,E11-SH004-G02,13,25,83,95,14,1,13,False,两份时间明确不同，重审在案前已启动。,诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。,pending_media,pending_continuity_review
+E11,E11-SH006,E11-SH006-G01,0,10,95,105,12,1,11,False,诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。,绿蜡笔回艾莉右手，玛拉蓝夹左臂，手机仍右袋。,pending_media,pending_continuity_review
+E11,E11-SH006,E11-SH006-G02,10,24,105,119,16,1,15,False,绿蜡笔回艾莉右手，玛拉蓝夹左臂，手机仍右袋。,卡片夹在蓝夹最前，周四位置暂留到明天中午。,pending_media,pending_continuity_review
+E11,E12-SH001,E12-SH001-G01,0,14,119,133,16,1,15,False,玛拉左夹右手机，维克多手离平板。,她要的是今日能否到账，协议尚未签。,pending_media,pending_continuity_review
+E11,E12-SH001,E12-SH001-G02,14,27,133,146,15,1,14,False,她要的是今日能否到账，协议尚未签。,她看清款项换来的公开限制，双手空出翻页。,pending_media,pending_continuity_review
+E11,E12-SH003,E12-SH003-G01,0,11,146,157,13,1,12,False,她看清款项换来的公开限制，双手空出翻页。,她看一眼卡背的中午，转而要求把未来疗程写进去。,pending_media,pending_continuity_review
+E11,E12-SH003,E12-SH003-G02,11,22,157,168,13,1,12,False,她看一眼卡背的中午，转而要求把未来疗程写进去。,未来保障没有获书面承诺，她把笔留桌上。,pending_media,pending_continuity_review
+E11,E12-SH004,E12-SH004,0,10,168,178,12,1,11,False,未来保障没有获书面承诺，她把笔留桌上。,未签版带走，维克多未取得签名。,pending_media,single_candidate
+E11,E11-SH008,E11-SH008-G01,0,12,178,190,14,1,13,False,她把更正段落打在新稿顶部。,标题关系明确更正，旧版本仍可追溯。,pending_media,pending_continuity_review
+E11,E11-SH008,E11-SH008-G02,12,22,190,200,12,1,11,False,标题关系明确更正，旧版本仍可追溯。,本方旧推送撤下，外部流转仍在。,pending_media,pending_continuity_review
+E11,E11-SH010,E11-SH010-G01,0,11,200,211,13,1,12,False,本方旧推送撤下，外部流转仍在。,她继续把原报道当作待补证调查，Nobody opened the files. 仍在线。,pending_media,pending_continuity_review
+E11,E11-SH010,E11-SH010-G02,11,21,211,221,12,1,11,False,她继续把原报道当作待补证调查，Nobody opened the files. 仍在线。,她只获继续查登录记录的有限安排。,pending_media,pending_continuity_review
+E11,E11-SH011,E11-SH011-G01,0,10,221,231,12,1,11,False,路易吉手腕自由，伸手翻公开报道。,材料堆没获整体背书，桌面只选一个案子。,pending_media,pending_continuity_review
+E11,E11-SH011,E11-SH011-G02,10,24,231,245,16,1,15,False,材料堆没获整体背书，桌面只选一个案子。,旧页北、新页南，两份都可见。,pending_media,pending_continuity_review
+E11,E11-SH013,E11-SH013-G01,0,21,245,266,23,1,22,False,旧页北、新页南，两份都可见。,他放低旧页，新通知日期重新露出来。,pending_media,pending_continuity_review
+E11,E11-SH013,E11-SH013-G02,21,31,266,276,12,1,11,False,他放低旧页，新通知日期重新露出来。,他承认没有追问，新通知未被拿走。,pending_media,pending_continuity_review
+E11,E11-SH014,E11-SH014-G01,0,10,276,286,12,1,11,False,他承认没有追问，新通知未被拿走。,青年移开压住遗漏句的手，准备补全；新通知仍在桌南侧。,pending_media,pending_continuity_review
+E11,E11-SH014,E11-SH014-G02,10,31,286,307,23,1,22,False,青年移开压住遗漏句的手，准备补全；新通知仍在桌南侧。,他补上自己停在旧答复的经过，纸仍留在自己这一侧，手已经移开。,pending_media,pending_continuity_review
+E11,E11-SH014,E11-SH014-G03,31,40,307,316,11,1,10,False,他补上自己停在旧答复的经过，纸仍留在自己这一侧，手已经移开。,新旧记录一同归律师，尚无完整内部流程结论。,pending_media,pending_continuity_review
+E12,E12-SH005,E12-SH005-G01,0,14,0,14,16,1,15,False,黑工服玛拉把手机放右手边。,签字被独立律师暂时按住，未回绝款项。,pending_media,pending_continuity_review
+E12,E12-SH005,E12-SH005-G02,14,26,14,26,14,1,13,False,签字被独立律师暂时按住，未回绝款项。,最终签约的条件变成书面保留监管调取与依法作证。,pending_media,pending_continuity_review
+E12,E12-SH007,E12-SH007-G01,0,20,26,46,22,1,21,False,最终签约的条件变成书面保留监管调取与依法作证。,凯文把采访限制和拟加例外同时标明，再谈当前疗程边界。,pending_media,pending_continuity_review
+E12,E12-SH007,E12-SH007-G02,20,33,46,59,15,1,14,False,凯文把采访限制和拟加例外同时标明，再谈当前疗程边界。,眼前费用与未来续批仍是两份工作。,pending_media,pending_continuity_review
+E12,E12-SH008,E12-SH008,0,12,59,71,14,1,13,False,眼前费用与未来续批仍是两份工作。,玛拉选择争当前疗程，接受仍需后续申请，凯文开始改约。,pending_media,single_candidate
+E12,E12-SH009,E12-SH009,0,15,71,86,17,1,16,False,玛拉已将手机放桌右、蓝夹放桌左，右手握笔；签署夹在桌中央，凯文坐西侧翻页。,两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。,pending_media,single_candidate
+E12,E12-SH101,E12-SH101,0,21,86,107,23,1,22,False,两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。,维克多收回旧版，不要求她在替换前落笔。,pending_media,single_candidate
+E12,E12-SH010,E12-SH010,0,15,107,122,17,1,16,False,维克多收回旧版，不要求她在替换前落笔。,双方两份都签好，玛拉留全套副本，付款确认尚待发送。,pending_media,single_candidate
+E12,E12-SH011,E12-SH011-G01,0,21,122,143,23,1,22,False,双方两份都签好，玛拉留全套副本，付款确认尚待发送。,玛拉手机收到同一份确认，才把手机和完整协议收好。,pending_media,pending_continuity_review
+E12,E12-SH011,E12-SH011-G02,21,31,143,153,12,1,11,False,玛拉手机收到同一份确认，才把手机和完整协议收好。,公司只获结案事实，孩子照片不授权。,pending_media,pending_continuity_review
+E12,E12-SH012,E12-SH012-G01,0,16,153,169,18,1,17,False,水壶正响，玛拉右手手机。,付款完成，玛拉从东侧坐到餐桌南边；蓝夹桌南缘，手机桌东，艾莉在北侧。,pending_media,pending_continuity_review
+E12,E12-SH012,E12-SH012-G02,16,31,169,184,17,1,16,False,付款完成，玛拉从东侧坐到餐桌南边；蓝夹桌南缘，手机桌东，艾莉在北侧。,她准备回孩子时，屏幕又亮起开直播的要求。,pending_media,pending_continuity_review
+E12,E12-SH013,E12-SH013-G01,0,10,184,194,12,1,11,False,她准备回孩子时，屏幕又亮起开直播的要求。,她不为自己公开孩子病历，转向画本。,pending_media,pending_continuity_review
+E12,E12-SH013,E12-SH013-G02,10,17,194,201,9,1,8,False,她不为自己公开孩子病历，转向画本。,画本和绿笔回艾莉，付款回执收入蓝夹，手机仍扣桌东。,pending_media,pending_continuity_review
+E13,E13-SH001,E13-SH001-G01,0,10,0,10,12,1,11,False,玛拉右手机，左手压治疗收据。,拼图角仍在孩子手里，母亲被手机占住。,pending_media,pending_continuity_review
+E13,E13-SH001,E13-SH001-G02,10,21,10,21,13,1,12,False,拼图角仍在孩子手里，母亲被手机占住。,治疗照片未发，母亲手指离开发送。,pending_media,pending_continuity_review
+E13,E13-SH003,E13-SH003-G01,0,18,21,39,20,1,19,False,治疗照片未发，母亲手指离开发送。,玛拉退出整个相册，不再寻找另一张治疗照。,pending_media,pending_continuity_review
+E13,E13-SH003,E13-SH003-G02,18,27,39,48,11,1,10,False,玛拉退出整个相册，不再寻找另一张治疗照。,画本由孩子抱，蓝夹归玛拉，手机出发前回右手导航。,pending_media,pending_continuity_review
+E13,E13-SH004,E13-SH004-G01,0,12,48,60,14,1,13,False,玛拉右手机左夹，孩子抱画本。,主门通路被直播者的追问截住，母女尚未进门。,pending_media,pending_continuity_review
+E13,E13-SH004,E13-SH004-G02,12,23,60,71,13,1,12,False,主门通路被直播者的追问截住，母女尚未进门。,右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。,pending_media,pending_continuity_review
+E13,E13-SH006,E13-SH006-G01,0,11,71,82,13,1,12,False,右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。,保安带路到东南，布莱克仍在门外跟随。,pending_media,pending_continuity_review
+E13,E13-SH006,E13-SH006-G02,11,23,82,94,14,1,13,False,保安带路到东南，布莱克仍在门外跟随。,母女在门内、主播留门外，门合上隔开直播声。,pending_media,pending_continuity_review
+E13,E13-SH008,E13-SH008-G01,0,12,94,106,14,1,13,False,母女在门内、主播留门外，门合上隔开直播声。,孩子没有交出画本，只重新牵母亲；手机仍在右袋。,pending_media,pending_continuity_review
+E13,E13-SH008,E13-SH008-G02,12,36,106,130,26,1,25,False,孩子没有交出画本，只重新牵母亲；手机仍在右袋。,艾莉自己把画本放进包里，随后伸手；母亲等她先迈步才起身。,pending_media,pending_continuity_review
+E13,E13-SH009,E13-SH009,0,11,130,141,13,1,12,False,她把围堵视频暂停，未开声音。,抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。,pending_media,single_candidate
+E13,E13-SH010,E13-SH010-G01,0,12,141,153,14,1,13,False,抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。,本站原片、相关截图和推荐位撤下，外部副本继续流传。,pending_media,pending_continuity_review
+E13,E13-SH010,E13-SH010-G02,12,30,153,171,20,1,19,False,本站原片、相关截图和推荐位撤下，外部副本继续流传。,诺拉留下处理结果，采访提纲翻到桌面朝下。,pending_media,pending_continuity_review
+E13,E13-SH011,E13-SH011,0,10,171,181,12,1,11,False,诺拉留下处理结果，采访提纲翻到桌面朝下。,她没换来回复或新采访，继续承担撤图损失。,pending_media,single_candidate
+E13,E13-SH012,E13-SH012-G01,0,11,181,192,13,1,12,False,灰衣青年北侧双腕自由，整页草稿在北、遮名截图桌中；海伦南侧，笔在夹边。,声明先移掉讲患者经历的开头，截图不获公开授权。,pending_media,pending_continuity_review
+E13,E13-SH012,E13-SH012-G02,11,26,192,207,17,1,16,False,声明先移掉讲患者经历的开头，截图不获公开授权。,桌面只留下反骚扰段，拒赔经历不再作为发言前提。,pending_media,pending_continuity_review
+E13,E13-SH013,E13-SH013-G01,0,14,207,221,16,1,15,False,桌面只留下反骚扰段，拒赔经历不再作为发言前提。,声明署名但不带患者细节，海伦收起待正式发布。,pending_media,pending_continuity_review
+E13,E13-SH013,E13-SH013-G02,14,30,221,237,18,1,17,False,声明署名但不带患者细节，海伦收起待正式发布。,发布授权保持为签署的反骚扰段，患者身份和背景不附上。,pending_media,pending_continuity_review
+E13,E13-SH014,E13-SH014,0,9,237,246,11,1,10,False,夜间海伦办公室，蓝夹在中央桌西侧，签字声明已摆在工作电脑旁；她坐桌南侧。,声明留在公开渠道，支持者开始攻击青年，签字纸回蓝夹。,pending_media,single_candidate
+E14,E14-SH001,E14-SH001-G01,0,15,0,15,17,1,16,False,莉娜在东工位已拨通IT咨询，工作手机桌右开免提，屏上保留政策与九点常规任务类别。,IT通话结束，工作手机桌右，保留类别与九点时间记在便签。,pending_media,pending_continuity_review
+E14,E14-SH001,E14-SH001-G02,15,26,15,26,13,1,12,False,IT通话结束，工作手机桌右，保留类别与九点时间记在便签。,电话接通右耳，政策类别已记下，未复制患者档案。,pending_media,pending_continuity_review
+E14,E14-SH003,E14-SH003-G01,0,18,26,44,20,1,19,False,电话接通右耳，政策类别已记下，未复制患者档案。,她只打开已有权限的保留政策索引，不再检索其他患者。,pending_media,pending_continuity_review
+E14,E14-SH003,E14-SH003-G02,18,31,44,57,15,1,14,False,她只打开已有权限的保留政策索引，不再检索其他患者。,公开政策线索已发送，未越权取走数据，电话已断。,pending_media,pending_continuity_review
+E14,E14-SH004,E14-SH004-G01,0,12,57,69,14,1,13,False,玛拉左臂蓝色文件夹，右手机，医生持回执。,三名独立委托人与玛拉补充材料分开。,pending_media,pending_continuity_review
+E14,E14-SH004,E14-SH004-G02,12,24,69,81,14,1,13,False,三名独立委托人与玛拉补充材料分开。,有限授权归凯文，原回执与和解副本仍归玛拉。,pending_media,pending_continuity_review
+E14,E14-SH101,E14-SH101,0,22,81,103,24,1,23,False,有限授权归凯文，原回执与和解副本仍归玛拉。,凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。,pending_media,single_candidate
+E14,E14-SH006,E14-SH006-G01,0,15,103,118,17,1,16,False,凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。,签名证言仅确认上传和收件回执，医生回到自己的工作。,pending_media,pending_continuity_review
+E14,E14-SH006,E14-SH006-G02,15,26,118,129,13,1,12,False,签名证言仅确认上传和收件回执，医生回到自己的工作。,申请已受理，尚未裁定，更无记录内容。,pending_media,pending_continuity_review
+E14,E14-SH008,E14-SH008-G01,0,14,129,143,16,1,15,False,凯文持黑包与裁定副本，维克多站西侧。,已送达的保全裁定进入执行，常规任务尚未运行。,pending_media,pending_continuity_review
+E14,E14-SH008,E14-SH008-G02,14,26,143,155,14,1,13,False,已送达的保全裁定进入执行，常规任务尚未运行。,日志及索引都进入正式保全范围，患者全档不外流。,pending_media,pending_continuity_review
+E14,E14-SH010,E14-SH010-G01,0,18,155,173,20,1,19,False,日志及索引都进入正式保全范围，患者全档不外流。,技术员保存排除项，再确认九点任务跳过指定日志与索引。,pending_media,pending_continuity_review
+E14,E14-SH010,E14-SH010-G02,18,31,173,186,15,1,14,False,技术员保存排除项，再确认九点任务跳过指定日志与索引。,保全生效，凯文只拿执行确认，日志内容未交出。,pending_media,pending_continuity_review
+E14,E14-SH011,E14-SH011,0,10,186,196,12,1,11,False,保全生效，凯文只拿执行确认，日志内容未交出。,记录保存下来，独立调取还要继续。,pending_media,single_candidate
+E14,E14-SH012,E14-SH012-G01,0,11,196,207,13,1,12,False,莉娜工位已停权限，工牌和工作手机尚在她手边，私人水杯在杯垫上；维克多从中央桌带清单走近。,工作物件交回，私人杯带走，调查清单拦住下班。,pending_media,pending_continuity_review
+E14,E14-SH012,E14-SH012-G02,11,24,207,220,15,1,14,False,工作物件交回，私人杯带走，调查清单拦住下班。,联系事实进入正式调查，不当场等于她知道暴力计划。,pending_media,pending_continuity_review
+E14,E14-SH102,E14-SH102,0,25,220,245,27,1,26,False,联系事实进入正式调查，不当场等于她知道暴力计划。,她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。,pending_media,single_candidate
+E14,E14-SH014,E14-SH014,0,17,245,262,19,1,18,False,她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。,清单照片已发给自己的律师，原件及工作物件留东桌；私人手机随莉娜离开，没有接到对方答复。,pending_media,single_candidate
+E15,E15-SH001,E15-SH001-G01,0,8,0,8,10,1,9,False,路易吉空手坐西桌，海伦翻新的标签页。,本次申请范围由分开的夹子可见，旁听落座。,pending_media,pending_continuity_review
+E15,E15-SH001,E15-SH001-G02,8,21,8,21,15,1,14,False,本次申请范围由分开的夹子可见，旁听落座。,同一叠证据开始被按发出者与日期分开。,pending_media,pending_continuity_review
+E15,E15-SH003,E15-SH003-G01,0,13,21,34,15,1,14,False,同一叠证据开始被按发出者与日期分开。,公众后果没有自动成为本人发送的威胁。,pending_media,pending_continuity_review
+E15,E15-SH003,E15-SH003-G02,13,31,34,52,20,1,19,False,公众后果没有自动成为本人发送的威胁。,法官让双方停在控罪所需的意图项，案后声浪不替代证明。,pending_media,pending_continuity_review
+E15,E15-SH003,E15-SH003-G03,31,44,52,65,15,1,14,False,法官让双方停在控罪所需的意图项，案后声浪不替代证明。,普通谋杀责任与特别罪名的要件被分开争。,pending_media,pending_continuity_review
+E15,E15-SH005,E15-SH005,0,14,65,79,16,1,15,False,普通谋杀责任与特别罪名的要件被分开争。,北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。,pending_media,single_candidate
+E15,E15-SH006,E15-SH006,0,9,79,88,11,1,10,False,北席裁定宣读完，普通谋杀继续；省略书记分发两页副本的时间，下一镜西桌已有完整副本。,青年留完整裁定，律师继续安排州案。,pending_media,single_candidate
+E15,E15-SH007,E15-SH007-G01,0,13,88,101,15,1,14,False,去身份资料平放桌中。,可公开的去身份反证留三项，不给完整复核背书。,pending_media,pending_continuity_review
+E15,E15-SH007,E15-SH007-G02,13,23,101,111,12,1,11,False,可公开的去身份反证留三项，不给完整复核背书。,公司准确利用一处过度断言，不说明医生具体看到哪些附件。,pending_media,pending_continuity_review
+E15,E15-SH009,E15-SH009-G01,0,16,111,127,18,1,17,False,公司准确利用一处过度断言，不说明医生具体看到哪些附件。,发布附件保留登录、页面访问和真实签名，不新增全部材料已看完的结论。,pending_media,pending_continuity_review
+E15,E15-SH009,E15-SH009-G02,16,25,127,136,11,1,10,False,发布附件保留登录、页面访问和真实签名，不新增全部材料已看完的结论。,诺拉实际得到反证，不只是被公司新闻喊话。,pending_media,pending_continuity_review
+E15,E15-SH010,E15-SH010-G01,0,12,136,148,14,1,13,False,邮件已收到，她逐页对照。,记录真实，记者不能继续以假签名回避。,pending_media,pending_continuity_review
+E15,E15-SH010,E15-SH010-G02,12,36,148,172,26,1,25,False,记录真实，记者不能继续以假签名回避。,诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。,pending_media,pending_continuity_review
+E15,E15-SH011,E15-SH011,0,12,172,184,14,1,13,False,诺拉把红本翻回原始采访，改正方向已明确，仍想先联系来源。,新稿暂停，诺拉仍先索要能救解释的来源回应。,pending_media,single_candidate
+E16,E15-SH012,E15-SH012-G01,0,13,0,13,15,1,14,False,诺拉红本未开，莉娜双手抱热杯。,她没拿到反驳反证的证据，来源不再补缺口。,pending_media,pending_continuity_review
+E16,E15-SH012,E15-SH012-G02,13,35,13,35,24,1,23,False,她没拿到反驳反证的证据，来源不再补缺口。,诺拉把访问页放下，只能打开第一次的采访笔记。,pending_media,pending_continuity_review
+E16,E15-SH013,E15-SH013-G01,0,12,35,47,14,1,13,False,诺拉把访问页放下，只能打开第一次的采访笔记。,早有的警告被重新看见，来源不会再替报道补确定性。,pending_media,pending_continuity_review
+E16,E15-SH013,E15-SH013-G02,12,34,47,69,24,1,23,False,早有的警告被重新看见，来源不会再替报道补确定性。,诺拉移开拇指，自己的批量签名推断与来源限定同时露出来。,pending_media,pending_continuity_review
+E16,E15-SH014,E15-SH014-G01,0,12,69,81,14,1,13,False,诺拉移开拇指，自己的批量签名推断与来源限定同时露出来。,记者失去续稿，来源已为披露付工作代价，两人的利益无法互换。,pending_media,pending_continuity_review
+E16,E15-SH014,E15-SH014-G02,12,34,81,103,24,1,23,False,记者失去续稿，来源已为披露付工作代价，两人的利益无法互换。,莉娜把通知收进包，诺拉不再索要记录副本。,pending_media,pending_continuity_review
+E16,E15-SH015,E15-SH015,0,9,103,112,11,1,10,False,莉娜把通知收进包，诺拉不再索要记录副本。,莉娜离开，原警告和新反证都留给诺拉，问题尚未解。,pending_media,single_candidate
+E16,E18-SH001,E18-SH001-G01,0,16,112,128,18,1,17,False,诺拉笔压在更正稿上，手机桌右免提。,被划短语仍可见，笔停在改好的句边。,pending_media,pending_continuity_review
+E16,E18-SH001,E18-SH001-G02,16,38,128,150,24,1,23,False,被划短语仍可见，笔停在改好的句边。,她把未解问题移到后面，首段明确承认原断言缺乏支持且已被反证。,pending_media,pending_continuity_review
+E16,E18-SH002,E18-SH002-G01,0,16,150,166,18,1,17,False,她把未解问题移到后面，首段明确承认原断言缺乏支持且已被反证。,账单仍露半边，双手离开笔。,pending_media,pending_continuity_review
+E16,E18-SH002,E18-SH002-G02,16,30,166,180,16,1,15,False,账单仍露半边，双手离开笔。,更正已发送，编辑通话已结束，手机正在接通莉娜号码，诺拉等待线路。,pending_media,pending_continuity_review
+E16,E18-SH004,E18-SH004,0,14,180,194,16,1,15,False,更正已发送，编辑通话已结束，手机正在接通莉娜号码，诺拉等待线路。,手机回桌右，获准封面照片的打印件铺开，委约暂停通知仍在旁。,pending_media,single_candidate
+E16,E18-SH009,E18-SH009-G01,0,14,194,208,16,1,15,False,莉娜手压灰信封，诺拉红本在膝上。,信封仍由莉娜压住，诺拉未伸手。,pending_media,pending_continuity_review
+E16,E18-SH009,E18-SH009-G02,14,28,208,222,16,1,15,False,信封仍由莉娜压住，诺拉未伸手。,信封将入包但仍握着，诺拉没有阻挡出口。,pending_media,pending_continuity_review
+E16,E18-SH011,E18-SH011-G01,0,16,222,238,18,1,17,False,信封将入包但仍握着，诺拉没有阻挡出口。,莉娜手停在包口，视线落便签。,pending_media,pending_continuity_review
+E16,E18-SH011,E18-SH011-G02,16,37,238,259,23,1,22,False,莉娜手停在包口，视线落便签。,莉娜将信封压回自己桌侧，手停在封口，尚未抽出报告。,pending_media,pending_continuity_review
+E16,E18-SH012,E18-SH012,0,24,259,283,26,1,25,False,莉娜将信封压回自己桌侧，手停在封口，尚未抽出报告。,莉娜指尖仍压报告，诺拉只记，不拍照。,pending_media,single_candidate
+E17,E16-SH001,E16-SH001-G01,0,19,0,19,21,1,20,False,各方坐定，青年双手自由，海伦开蓝夹。,东控方站定，法官的提问转到西桌；青年一直坐西桌，海伦从椅上站起。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E17,E16-SH001,E16-SH001-G02,19,38,19,38,21,1,20,False,东控方站定，法官的提问转到西桌；青年一直坐西桌，海伦从椅上站起。 角色与物件停留在这一步的连续状态，机位及照明不重置。,海伦站在西桌完成回答并交出标注条文；她松手后留在原位，北席拿到裁定。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E17,E16-SH004,E16-SH004,0,17,38,55,19,1,18,False,法官看完双方标记，取出裁定页。,正式排除死刑，余下控罪继续。；具体动作终态：女法官读两项枪械指控撤销及两项致死跟踪仍留，把范围完整说清才让书记记录；西桌取笔声只作画外声。,pending_media,single_candidate
+E17,E16-SH005,E16-SH005,0,25,55,80,27,1,26,False,他手指一直压着桌边，双手自由。,短暂松口气并不消除第二天的新选择。；具体动作终态：路易吉手指从桌沿松开，先问能否亲自告诉母亲。海伦回答后将莉娜律师来函放进明日栏，青年按住页边问明天，得到答复才松手让夹子合上。,pending_media,single_candidate
+E17,E16-SH007,E16-SH007-G01,0,25,80,105,27,1,26,False,灰衣青年手腕自由，海伦尚未递笔。,青年从北侧抽回复，上一条仍连着；海伦指出盖住的日期，他答知道并问能否先只发回复。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E17,E16-SH007,E16-SH007-G02,25,50,105,130,27,1,26,False,青年从北侧抽回复，上一条仍连着；海伦指出盖住的日期，他答知道并问能否先只发回复。 末步真实状态直接接下一段，不重演。,海伦回应删节不能算完整；青年再确认拒绝后仍会获辩护，听清答复才把回复放回原顺序。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E17,E16-SH009,E16-SH009-G01,0,16,130,146,18,1,17,False,两页通信展平在北侧，日期已露出；青年双手搁页边，海伦把案前时间线放到消息旁。,两页展平，海伦将时间线推到日期旁，说清完整记录的风险。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E17,E16-SH009,E16-SH009-G02,16,32,146,162,18,1,17,False,两页展平，海伦将时间线推到日期旁，说清完整记录的风险。 角色与物件停留在这一步的连续状态，机位及照明不重置。,青年翻回模板回复问她会不会没事；律师说明限度，将授权继续留在自己手边。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E17,E16-SH011,E16-SH011-G01,0,14,162,176,16,1,15,False,青年已听完风险，两条消息展平在北侧，他的右手不再遮日期，海伦南侧未递笔。,他把两条连页推到中间，明确自己的话与日期都留下，律师尚未递笔。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E17,E16-SH011,E16-SH011-G02,14,28,176,190,16,1,15,False,他把两条连页推到中间，明确自己的话与日期都留下，律师尚未递笔。 角色与物件停留在这一步的连续状态，机位及照明不重置。,律师转正授权放笔；青年读交付对象再签，连页和笔一并还回南侧。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E17,E16-SH013,E16-SH013,0,25,190,215,27,1,26,False,夜间办公室授权书与完整通信在工作电脑旁，蓝夹桌西，海伦坐南侧；桌右工作手机未开录音。,当晚完成可追溯交付；下一场直接进入后来听证，不再制造一集结尾式停顿。；具体动作终态：海伦逐页核对授权对象、通信起止和附件数量，再正式发送。收件确认到达，她核对回执范围，把案前日期圈入州案时间线，联邦排除死刑裁定仍在另一夹内。,pending_media,single_candidate
+E18,E17-SH001,E17-SH001-G01,0,21,0,21,23,1,22,False,证人台上已有照片副本；海伦西桌同页副本摊开。,证人看清照片后答无法触及，海伦问题来自西侧画外。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E18,E17-SH001,E17-SH001-G02,21,41,21,41,22,1,21,False,证人看清照片后答无法触及，海伦问题来自西侧画外。 角色与物件停留在这一步的连续状态，机位及照明不重置。,警员解释转移后再核开包前动作，回答青年没动；照片仍归证人台。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E18,E17-SH003,E17-SH003-G01,0,17,41,58,19,1,18,False,检察官从东桌站起，拿独立核验页。,控方递证件记录，证人确认先查证件后开包，西桌仍听。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E18,E17-SH003,E17-SH003-G02,17,34,58,75,19,1,18,False,控方递证件记录，证人确认先查证件后开包，西桌仍听。 角色与物件停留在这一步的连续状态，机位及照明不重置。,证人翻警局财物表读登记；海伦在西桌写下两项并将笔放平。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E18,E17-SH005,E17-SH005-G01,0,19,75,94,21,1,20,False,法官读裁定，海伦笔尖贴左列旁。,北席宣读餐厅搜查部分；海伦等范围明确才划左列，青年伸手到桌沿。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E18,E17-SH005,E17-SH005-G02,19,37,94,112,20,1,19,False,北席宣读餐厅搜查部分；海伦等范围明确才划左列，青年伸手到桌沿。 角色与物件停留在这一步的连续状态，机位及照明不重置。,未经告知的部分答复被排除；海伦继续左列，不动右列，青年等后半段。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E18,E17-SH005,E17-SH005-G03,37,55,112,130,20,1,19,False,未经告知的部分答复被排除；海伦继续左列，不动右列，青年等后半段。 角色与物件停留在这一步的连续状态，机位及照明不重置。,北席确认枪与笔记可用；海伦停笔，青年问这些页能否划去，她答清后他退手。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E18,E17-SH009,E17-SH009-G01,0,18,130,148,20,1,19,False,会见桌中央放通信页，青年空双手。,海伦将日期并列讲清，青年先核自己原句，不遮页。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E18,E17-SH009,E17-SH009-G02,18,35,148,165,19,1,18,False,海伦将日期并列讲清，青年先核自己原句，不遮页。 角色与物件停留在这一步的连续状态，机位及照明不重置。,青年把两条消息铺平，说明莉娜只提供申诉表，说完移开手。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E18,E17-SH011,E17-SH011-G01,0,23,165,188,25,1,24,False,海伦准备收裁定，笔记副本在青年前。,海伦只收裁定；青年拉住副本，确认能留下后标一个待问记号。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E18,E17-SH011,E17-SH011-G02,23,45,188,210,24,1,23,False,海伦只收裁定；青年拉住副本，确认能留下后标一个待问记号。 角色与物件停留在这一步的连续状态，机位及照明不重置。,钥匙声到南门；青年请她先打给母亲，她答后收夹起身走出画缘，青年继续读。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E18,E18-SH005,E18-SH005-G01,0,20,210,230,22,1,21,False,空白纸居中，原资料左、笔记副本右。,海伦交分栏纸，青年转正检查旧批注，承认混在一起。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E18,E18-SH005,E18-SH005-G02,20,40,230,250,22,1,21,False,海伦交分栏纸，青年转正检查旧批注，承认混在一起。 角色与物件停留在这一步的连续状态，机位及照明不重置。,青年誊写自己的断言并读清归属，笔回到左侧原资料，原文未改。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E18,E18-SH007,E18-SH007-G01,0,23,250,273,25,1,24,False,两份附件清单展开，青年笔停在空处。,青年逐项对清单，提出版本可能，律师答仍需调记录；他紧接着追问如果确实发到的含义。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E18,E18-SH007,E18-SH007-G02,23,45,273,295,24,1,23,False,青年逐项对清单，提出版本可能，律师答仍需调记录；他紧接着追问如果确实发到的含义。 末步真实状态直接接下一段，不重演。,海伦回答到件还不能证明谁看过；随后写去身份问题便签，等青年确认不带猜测才收起。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E19,E19-SH001,E19-SH001-G01,0,18,0,18,20,1,19,False,维克多东侧将笔压在授权页上，瑞秋西侧未伸手。,维克多推笔与用途页，瑞秋不接，看调查页后问家庭影像为什么在此。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E19,E19-SH001,E19-SH001-G02,18,35,18,35,19,1,18,False,维克多推笔与用途页，瑞秋不接，看调查页后问家庭影像为什么在此。 末步真实状态直接接下一段，不重演。,维克多下移预览说明同页，瑞秋指出混用；未签页仍留桌中。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E19,E19-SH001,E19-SH001-G03,35,52,35,52,19,1,18,False,维克多下移预览说明同页，瑞秋指出混用；未签页仍留桌中。 末步真实状态直接接下一段，不重演。,维克多诉诸纪念，她明确拒签撤视频，把未签纸推回，双手回棕袋。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E19,E19-SH004,E19-SH004,0,18,52,70,20,1,19,False,维克多面前放回未签页，平板靠东。,撤的是这份未获授权的家庭素材，私人边界落实到当前草稿。；具体动作终态：维克多撤下厨房预览并答应新版，瑞秋补不许带孩子且发律师的条件，等屏幕恢复公司稿才拿棕袋离开。,pending_media,single_candidate
+E19,E19-SH005,E19-SH005-G01,0,20,70,90,22,1,21,False,两人西椅南北分坐，玛拉右手手机低垂。,两人隔位坐着，瑞秋提客气，玛拉限定点餐语境，不取资料。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E19,E19-SH005,E19-SH005-G02,20,42,90,112,24,1,23,False,两人隔位坐着，瑞秋提客气，玛拉限定点餐语境，不取资料。 角色与物件停留在这一步的连续状态，机位及照明不重置。,瑞秋捏袋扣问丈夫在家里怎样，玛拉承认不认识；电话随后振动，玛拉示意来电。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E19,E19-SH008,E19-SH008,0,25,112,137,27,1,26,False,玛拉接电话背靠走廊，瑞秋仍西椅。,短暂提供安静位置而不强行和解；患者仍须处理工作时段。；具体动作终态：玛拉听不清周四预约，瑞秋指窗边让出路，自己回椅。玛拉在窗前听医生重复后说明上班接不了电话，请变动留语音，挂断将十点存日历。,pending_media,single_candidate
+E19,E19-SH009,E19-SH009-G01,0,20,137,157,22,1,21,False,瑞秋东侧石凳坐下，棕袋左，手机右耳。,瑞秋接电话，答不用交纪念照片；儿子仍担心别人家长都交了，她等他把担心说完整。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E19,E19-SH009,E19-SH009-G02,20,40,157,177,22,1,21,False,瑞秋接电话，答不用交纪念照片；儿子仍担心别人家长都交了，她等他把担心说完整。 末步真实状态直接接下一段，不重演。,瑞秋答由自己回学校邮件；随后听纸盒声和未装机翼，才问是否承诺过周六，摸袋扣的手停住。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E19,E19-SH009,E19-SH009-G03,40,60,177,197,22,1,21,False,瑞秋答由自己回学校邮件；随后听纸盒声和未装机翼，才问是否承诺过周六，摸袋扣的手停住。 末步真实状态直接接下一段，不重演。,儿子承认以为父亲在敷衍；她听完松开袋扣，承认孩子可以生气。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E19,E19-SH012,E19-SH012-G01,0,15,197,212,17,1,16,False,电话仍接通，棕袋贴左腿。,瑞秋答一起看、不许诺修好，挂电话，先记回学校邮件这件事。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E19,E19-SH012,E19-SH012-G02,15,30,212,227,17,1,16,False,瑞秋答一起看、不许诺修好，挂电话，先记回学校邮件这件事。 角色与物件停留在这一步的连续状态，机位及照明不重置。,手机进右袋，她写陈述开头后把纸折回，提棕袋起身向南走。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E20,E20-SH001,E20-SH001-G01,0,24,0,24,26,1,25,False,海伦笔悬空，手机免提，外卖封着。,她问刑期与纽约，等对端逐项否定，手停在空栏。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E20,E20-SH001,E20-SH001-G02,24,48,24,48,26,1,25,False,她问刑期与纽约，等对端逐项否定，手停在空栏。 角色与物件停留在这一步的连续状态，机位及照明不重置。,她划去空栏、要求完整书面并指定工作邮箱，然后挂断，等待另一个时间点实际收件。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E20,E20-SH004,E20-SH004,0,22,48,70,24,1,23,False,私人未接来电亮起，书面页已取到。,专业工作和家庭维护同时要她做事，没有献身式旁白。；具体动作终态：书面立场已打印，她先核与电话条件一致，再给家人留锅炉账单和周日午饭消息，拆筷吃两口，把文件装夹。,pending_media,single_candidate
+E20,E20-SH005,E20-SH005-G01,0,18,70,88,20,1,19,False,青年北侧手空，海伦持说明与未签页。,她放联邦说明和纽约文件，青年在她翻页前用手挡住，问申请是否必须被接受。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E20,E20-SH005,E20-SH005-G02,18,36,88,106,20,1,19,False,她放联邦说明和纽约文件，青年在她翻页前用手挡住，问申请是否必须被接受。 角色与物件停留在这一步的连续状态，机位及照明不重置。,律师说明例外可能，青年追问为何先认；她把顺序和把握分开。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E20,E20-SH005,E20-SH005-G03,36,53,106,123,19,1,18,False,律师说明例外可能，青年追问为何先认；她把顺序和把握分开。 角色与物件停留在这一步的连续状态，机位及照明不重置。,青年问不认会怎样，律师明确准备审判、不要求当场决定，笔仍南侧。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E20,E20-SH007,E20-SH007-G01,0,18,123,141,20,1,19,False,说明在青年眼前，未签页仍南侧。,他找到承认用途，海伦说清即便纽约撤也可能联邦终身，手从纸上移开。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E20,E20-SH007,E20-SH007-G02,18,35,141,158,19,1,18,False,他找到承认用途，海伦说清即便纽约撤也可能联邦终身，手从纸上移开。 角色与物件停留在这一步的连续状态，机位及照明不重置。,他以为文字不同，转纸找行；海伦只让他指出，他重新读过并承认误读。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E20,E20-SH007,E20-SH007-G03,35,52,158,175,19,1,18,False,他以为文字不同，转纸找行；海伦只让他指出，他重新读过并承认误读。 角色与物件停留在这一步的连续状态，机位及照明不重置。,青年圈住疑问，留说明退签字页；海伦收笔答明天，再让他独自折好说明。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E20,E20-SH009,E20-SH009-G01,0,25,175,200,27,1,26,False,青年北侧已铺开折页，海伦刚坐南。,海伦坐稳，青年先说两项都认；她问有哪些未获保证，他自己逐项回答，签页仍未递出。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E20,E20-SH009,E20-SH009-G02,25,50,200,225,27,1,26,False,海伦坐稳，青年先说两项都认；她问有哪些未获保证，他自己逐项回答，签页仍未递出。 末步真实状态直接接下一段，不重演。,海伦提供再会见一次的机会，青年明确不要，知道法官仍会问本人；确认后才准备接程序指示页。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E20,E20-SH011,E20-SH011-G01,0,20,225,245,22,1,21,False,确认页中线，青年右手取笔。,他签给律师的程序指示、还笔，要求媒体不称胜利，律师记下回看措辞。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E20,E20-SH011,E20-SH011-G02,20,35,245,260,17,1,16,False,他签给律师的程序指示、还笔，要求媒体不称胜利，律师记下回看措辞。 角色与物件停留在这一步的连续状态，机位及照明不重置。,律师收页留副本，他扶夹请求母亲电话；她记申请后，他才松手收自己的说明。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E21,E21-SH001,E21-SH001-G01,0,16,0,16,18,1,17,False,凯文把夹板横放三人之间，诺拉指着收件行。,凯文摊两份去身份记录，诺拉逐位核编号，先得到整份材料已进客服收件的事实。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E21,E21-SH001,E21-SH001-G02,16,32,16,32,18,1,17,False,凯文摊两份去身份记录，诺拉逐位核编号，先得到整份材料已进客服收件的事实。 角色与物件停留在这一步的连续状态，机位及照明不重置。,诺拉指回执完整，凯文限定到件；她在红本记材料名称后提出有人不管的猜测。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E21,E21-SH002,E21-SH002-G01,0,16,32,48,18,1,17,False,莉娜的右手从夹板下抽出医生可见清单。,莉娜问她用哪份清单，抽出医学审核当时可见清单，两份并排不互相替代。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E21,E21-SH002,E21-SH002-G02,16,32,48,64,18,1,17,False,莉娜问她用哪份清单，抽出医学审核当时可见清单，两份并排不互相替代。 角色与物件停留在这一步的连续状态，机位及照明不重置。,莉娜说明附件未到医学队列，诺拉核真实登录与签名后停下旧判断。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E21,E21-SH002,E21-SH002-G03,32,48,64,80,18,1,17,False,莉娜说明附件未到医学队列，诺拉核真实登录与签名后停下旧判断。 角色与物件停留在这一步的连续状态，机位及照明不重置。,诺拉尝试较晚副本解释，凯文指日期案号让她自己核，同案同次比完才划去版本问号。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E21,E21-SH003,E21-SH003-G01,0,23,80,103,25,1,24,False,凯文将报告与收悉回复从另一透明套取出。,独立质检报告、公司收悉回复和后发拒赔信已经摊在夹板上，凯文保持夹板稳定；莉娜后来的签字表仍在她手边，尚未移入，诺拉已经看完当前三份日期。相机停在长椅南端原共享中景，尚未推进。,pending_media,pending_continuity_review
+E21,E21-SH003,E21-SH003-G02,23,45,103,125,24,1,23,False,独立质检报告、公司收悉回复和后发拒赔信已经摊在夹板上，凯文保持夹板稳定；莉娜后来的签字表仍在她手边，尚未移入，诺拉已经看完当前三份日期。相机停在长椅南端原共享中景，尚未推进。,凯文已收回完整编号核验页；莉娜把自己的原报告和后签表收在灰信封中；诺拉手边只留下获准公开的去身份副本。三人座位不变，相机已停在一次短前移后的终点。,pending_media,pending_continuity_review
+E21,E21-SH004,E21-SH004-G01,0,17,125,142,19,1,18,False,艾莉画第二只翅膀，玛拉站桌南看右手手机。,直播从手机发声，孩子停笔，母亲降音量并把手机放腰侧，蹲到桌角。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E21,E21-SH004,E21-SH004-G02,17,34,142,159,19,1,18,False,直播从手机发声，孩子停笔，母亲降音量并把手机放腰侧，蹲到桌角。 角色与物件停留在这一步的连续状态，机位及照明不重置。,母亲等孩子决定；孩子护画说先制止再收，母亲起身退出直播，不把画交给镜头。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E21,E21-SH006,E21-SH006,0,16,159,175,18,1,17,False,省略拨号等待，电话已接通；玛拉站桌南，蓝夹在左手下。,允许核查不等于同意公开全部生活，电话离开孩子手边。；具体动作终态：玛拉拨号说清只用查证内容、不能有姓名和治疗照，听对方片刻后挂断。她把手机放离餐桌，孩子抬眼确认，才接着画。,pending_media,single_candidate
+E21,E21-SH007,E21-SH007-G01,0,20,175,195,22,1,21,False,海伦把遮住姓名的便签放桌中，路易吉不伸手。,她转述要求并给账号表，青年认出两个，开始圈选，不看病历。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E21,E21-SH007,E21-SH007-G02,20,40,195,215,22,1,21,False,她转述要求并给账号表，青年认出两个，开始圈选，不看病历。 角色与物件停留在这一步的连续状态，机位及照明不重置。,他在第三行停住明确不属自己，律师不让圈，另记可独立提出的请求。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E21,E21-SH009,E21-SH009,0,20,215,235,22,1,21,False,海伦取回圈选表，空白声明页留青年手边。,他放弃借患者要求再做一次公开表态，实际撤回结果仍未保证。；具体动作终态：海伦说明副本已传开、布莱克可拒；青年仍要求试，并把空白声明退回。律师把声明和账号表分开，只把圈表记入工作任务。,pending_media,single_candidate
+E21,E21-SH010,E21-SH010-G01,0,15,235,250,17,1,16,False,诺拉从电脑旁抽出单独引语页，莉娜灰信封仍膝上。,引语页仍在莉娜手中，她已确认准确并同意本次署名，笔尖停在继续签表一句旁；诺拉仍坐桌南等待。,pending_media,pending_continuity_review
+E21,E21-SH010,E21-SH010-G02,15,29,250,264,16,1,15,False,引语页仍在莉娜手中，她已确认准确并同意本次署名，笔尖停在继续签表一句旁；诺拉仍坐桌南等待。,莉娜画线保留签表句，要求去编号，再把核对页交还，抱起信封。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E21,E21-SH012,E21-SH012-G01,0,18,264,282,20,1,19,False,核对页回到诺拉手边，她打开公开下载清单。,莉娜已站在北端椅旁，灰信封抱在怀里；诺拉仍坐南端，公开下载清单核完，手在发布键旁，尚未发布。,pending_media,pending_continuity_review
+E21,E21-SH012,E21-SH012-G02,18,36,282,300,20,1,19,False,莉娜已站在北端椅旁，灰信封抱在怀里；诺拉仍坐南端，公开下载清单核完，手在发布键旁，尚未发布。,诺拉问是否面试后才发链接，莉娜拒绝回避；说完向南门走，诺拉发布并发送链接，来源页归套。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E22,E22-SH001,E22-SH001-G01,0,22,0,22,24,1,23,False,青年转着纸杯，海伦站在南侧等他喝完。,青年已经站起，持纸杯停在东侧饮水机前；海伦在他身后，准备纸仍归青年，杯尚未放在托盘。西南地面机位已经摇向东，保持当前朝向。,pending_media,pending_continuity_review
+E22,E22-SH001,E22-SH001-G02,22,44,22,44,24,1,23,False,青年已经站起，持纸杯停在东侧饮水机前；海伦在他身后，准备纸仍归青年，杯尚未放在托盘。西南地面机位已经摇向东，保持当前朝向。,青年已先跨过北法庭门槛，海伦跟在他后方，手中蓝夹和准备纸齐全；纸杯留东侧托盘，工作人员仍在北门边。西南地面机位已转向北门并停住。,pending_media,pending_continuity_review
+E22,E22-SH004,E22-SH004-G01,0,18,44,62,20,1,19,False,书记员在北席下方起身，青年立在西桌旁。,书记员起身，青年举手宣誓后放下；法官提醒不明白须问。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E22,E22-SH004,E22-SH004-G02,18,36,62,80,20,1,19,False,书记员起身，青年举手宣誓后放下；法官提醒不明白须问。 角色与物件停留在这一步的连续状态，机位及照明不重置。,法官完整问终身风险和未获承诺，青年听完回答，两手自然垂下。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E22,E22-SH006,E22-SH006-G01,0,18,80,98,20,1,19,False,青年仍直立，海伦坐其南边，夹子合着。,北席念两项具体致死跟踪罪，青年听完认两项，律师把准备纸留在夹内。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E22,E22-SH006,E22-SH006-G02,18,36,98,116,20,1,19,False,北席念两项具体致死跟踪罪，青年听完认两项，律师把准备纸留在夹内。 角色与物件停留在这一步的连续状态，机位及照明不重置。,青年看北席讲上网查行程、跨州跟踪及故意杀人，讲完闭口等问，不转旁听席。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E22,E22-SH008,E22-SH008,0,20,116,136,22,1,21,False,瑞秋东南坐着，把家庭陈述抽出放在棕袋上。,受害家属听见具体死亡因果，镜头不向杀人者索取表情回应。；具体动作终态：她将家庭陈述抽出放在棕袋上，听完整问及青年承认开枪致死，拇指按折线把纸慢慢折回，不与支持者交换目光。,pending_media,single_candidate
+E22,E22-SH009,E22-SH009,0,19,136,155,21,1,20,False,西南灰夹克支持者坐通道边，青年仍立西桌。,供述完成且被接受，公众的离开不能替青年撤回答案。；具体动作终态：青年仍面向北席说行业反对不改变供述。支持者拉好外套侧身起立，法官接受两项认罪并另定量刑；支持者从西南通道走出，青年不随他转头。,pending_media,single_candidate
+E22,E22-SH010,E22-SH010-G01,0,25,155,180,27,1,26,False,海伦在西栏杆前停步，诺拉收住举手机的手。,诺拉问本人决定，海伦答并转正回执；诺拉拿已备州方异议追问，仍未拍照。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E22,E22-SH010,E22-SH010-G02,25,49,180,204,26,1,25,False,诺拉问本人决定，海伦答并转正回执；诺拉拿已备州方异议追问，仍未拍照。 末步真实状态直接接下一段，不重演。,海伦先限定没有裁定；诺拉再拍，她挪开挡日期拇指强调不是释放令，拍完收夹沿东步道离开。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E23,E23-SH001,E23-SH001-G01,0,18,0,18,20,1,19,False,州检察官站东桌，将两张对照页分开。,东检方起身把两页分开放，说明不同危害，北席听完不判。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E23,E23-SH001,E23-SH001-G02,18,35,18,35,19,1,18,False,东检方起身把两页分开放，说明不同危害，北席听完不判。 角色与物件停留在这一步的连续状态，机位及照明不重置。,西海伦站起，翻联邦事实基础对州页同名，说是同一连续行为，青年不递提示。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E23,E23-SH003,E23-SH003-G01,0,16,35,51,18,1,17,False,法官手举到胸口示意海伦停在本案。,画面留北席法官限题，海伦画外答正确；他继续等待两桌的补充，不切他们反应。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E23,E23-SH003,E23-SH003-G02,16,31,51,66,17,1,16,False,画面留北席法官限题，海伦画外答正确；他继续等待两桌的补充，不切他们反应。 末步真实状态直接接下一段，不重演。,检方画外坚持不同危害，海伦画外指本案适用；法官核记录后合夹起身，画外只留两桌纸声。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E23,E23-SH005,E23-SH005-G01,0,17,66,83,19,1,18,False,下午复庭后，法官书面裁定摊开，后门刚合。,下午复庭北席读具体记录与州法例外结论，海伦只在对应段落作记号。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E23,E23-SH005,E23-SH005-G02,17,33,83,99,18,1,17,False,下午复庭北席读具体记录与州法例外结论，海伦只在对应段落作记号。 角色与物件停留在这一步的连续状态，机位及照明不重置。,法官读撤销范围及不释放，青年和瑞秋分别听清，没人向对方表示胜利。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E23,E23-SH007,E23-SH007-G01,0,22,99,121,24,1,23,False,法官收左边裁定，拿起纽约持有事项单页；青年站起。,法官转独立纽约持有事项，青年起身听问，自己答明知持有与自愿认罪。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E23,E23-SH007,E23-SH007-G02,22,43,121,142,23,1,22,False,法官转独立纽约持有事项，青年起身听问，自己答明知持有与自愿认罪。 角色与物件停留在这一步的连续状态，机位及照明不重置。,北席核记录接受此项已羁押时间，青年答后坐回，律师分收文件，法警等待押返示意。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E23,E23-SH009,E23-SH009-G01,0,23,142,165,25,1,24,False,三份文件已分放桌西中东，青年北侧持笔与自留纸。,青年复述口号，律师区分三地文件并将联邦通知推近，他先看法庭名称。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E23,E23-SH009,E23-SH009-G02,23,46,165,188,25,1,24,False,青年复述口号，律师区分三地文件并将联邦通知推近，他先看法庭名称。 角色与物件停留在这一步的连续状态，机位及照明不重置。,她提醒刑期未定，他抄确定量刑日期，下面另起探视栏，提出姐姐票务问题。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E23,E23-SH009,E23-SH009-G03,46,68,188,210,24,1,23,False,她提醒刑期未定，他抄确定量刑日期，下面另起探视栏，提出姐姐票务问题。 角色与物件停留在这一步的连续状态，机位及照明不重置。,律师查日历无法确认，青年请她通知姐姐等票，画空方框放笔，三份文件分收。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E24,E24-SH001,E24-SH001,0,24,0,24,26,1,25,False,瑞秋站东南陈述位置，自己的纸在手，棕袋在身旁空椅、公司稿留袋内。,家属陈述不被包装成完美婚姻，损失是不能再问的问题。；具体动作终态：她展开自己写的纸，讲分居与孩子还没问完的问题，手指停在磨弯的Brian处。说完折纸坐下，保留一口能坐稳的气，再由北席处理判决。,pending_media,single_candidate
+E24,E24-SH002,E24-SH002-G01,0,18,24,42,20,1,19,False,女法官翻到判决页，青年西桌两手摊着。,北席完整宣判三十年并行总三十年，青年收手，律师在副本记总数。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E24,E24-SH002,E24-SH002-G02,18,36,42,60,20,1,19,False,北席完整宣判三十年并行总三十年，青年收手，律师在副本记总数。 角色与物件停留在这一步的连续状态，机位及照明不重置。,程序结束青年请求陪母亲等车，律师答应收夹看南出口，青年留座等待押返。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E24,E24-SH004,E24-SH004,0,22,60,82,24,1,23,False,玛拉蓝夹横膝，凯文将两张不同日期文件放夹板。,这次批准实用但有限，钱和疗程的账目不能被一句胜利概括。；具体动作终态：凯文按两期日期指出旧和解款和新保单批准的不同费用，玛拉自己逐页核对，分别归冬季与下一疗程隔页；她发现仍有今后的空隔页，却先把当前批准页扣好。,pending_media,single_candidate
+E24,E24-SH005,E24-SH005-G01,0,17,82,99,19,1,18,False,医生从北门走到椅旁，将预约单交玛拉。,医生到西椅边交预约，玛拉取手机核周二排班，说需要换班；医生停在椅旁等她。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E24,E24-SH005,E24-SH005-G02,17,34,99,116,19,1,18,False,医生到西椅边交预约，玛拉取手机核周二排班，说需要换班；医生停在椅旁等她。 末步真实状态直接接下一段，不重演。,医生先问是否需要时间，玛拉仍保留预约并存待办、把手机放回右袋；艾莉再问鲸，医生答应而不拿画。 末步真实状态直接接下一段，不重演。,pending_media,pending_continuity_review
+E24,E24-SH006,E24-SH006,0,19,116,135,21,1,20,False,艾莉已抱本踩地，凯文从黑包取未来续批清单。,获得一天不用继续办材料的余地，下一期仍需续批。；具体动作终态：凯文拿出再下一疗程续批清单，玛拉手压扣问今天要不要办。他看到她和孩子已起身准备走，收回清单说不今天，母女牵手离开，他留原处记提前提醒。,pending_media,single_candidate
+E24,E24-SH007,E24-SH007-G01,0,20,135,155,22,1,21,False,莉娜坐北侧，左手压膝上灰信封，折好的签字页露在封口外；诺拉坐南，等她整理文件的手停住。,莉娜仍坐北侧，签字页只有一半进入膝上灰信封，另一半露在封口外；诺拉坐南，已问面试情况，手机扣在红本上。,pending_media,pending_continuity_review
+E24,E24-SH007,E24-SH007-G02,20,39,155,174,21,1,20,False,莉娜仍坐北侧，签字页只有一半进入膝上灰信封，另一半露在封口外；诺拉坐南，已问面试情况，手机扣在红本上。,签字页已一次完整推入灰信封，封口已压平，信封留在莉娜膝上左掌下；她看向诺拉侧的公开命令。诺拉手机仍扣在红本上。,pending_media,pending_continuity_review
+E24,E24-SH008,E24-SH008,0,21,174,195,23,1,22,False,诺拉的手停在自己一侧的公开命令旁，尚未将它翻正；莉娜的私人签字页已收好，灰信封留在膝上画外。,公开命令与回访表已收回诺拉红本旁，待核空栏没有被填上；空杯已交东缘服务员手，杯钱在托盘边，莉娜私人信封仍归自己保管。,pending_media,single_candidate
+E24,E24-SH009,E24-SH009-G01,0,24,195,219,26,1,25,False,两份饭上桌，玛拉站桌南，艾莉北侧画大翅膀。,玛拉已坐在艾莉西侧，手机已扣在南桌蓝夹旁，两份饭仍在桌上；艾莉坐北侧，右手持绿笔，黄蜡笔仍在桌边，尚未交给母亲。南偏西固定共享中景和东厨房暖光保持。,pending_media,pending_continuity_review
+E24,E24-SH009,E24-SH009-G02,24,48,219,243,26,1,25,False,玛拉已坐在艾莉西侧，手机已扣在南桌蓝夹旁，两份饭仍在桌上；艾莉坐北侧，右手持绿笔，黄蜡笔仍在桌边，尚未交给母亲。南偏西固定共享中景和东厨房暖光保持。,玛拉坐孩子西侧持黄笔涂泡泡，艾莉右手绿笔继续画，手机扣在南桌蓝夹旁，晚饭仍在桌上。,pending_media,pending_continuity_review
+E24,E24-SH011,E24-SH011-G01,0,22,243,265,24,1,23,False,青年独坐西固定桌，已有草稿和空信封在前。,他按住纸角划去索取近况的旧句，补称呼逗号，低读第一段，笔移向空落款。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review
+E24,E24-SH011,E24-SH011-G02,22,44,265,287,24,1,23,False,他按住纸角划去索取近况的旧句，补称呼逗号，低读第一段，笔移向空落款。 角色与物件停留在这一步的连续状态，机位及照明不重置。,他读不必回信和不替她发言，核删句后签名；放笔折信装封，留桌前，双手放开。 角色与物件停留在这一步的连续状态，机位及照明不重置。,pending_media,pending_continuity_review

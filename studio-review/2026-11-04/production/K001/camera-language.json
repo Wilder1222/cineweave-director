@@ -1,0 +1,495 @@
+{
+  "scope": "narrative_video",
+  "shotIds": [
+    "K001-01",
+    "K001-02",
+    "K001-03",
+    "K001-04",
+    "K001-05",
+    "K001-06",
+    "K001-07",
+    "K001-08"
+  ],
+  "decisions": [
+    {
+      "shotId": "K001-01",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "借电请求被编号与未知来历挡住",
+        "audiencePayoff": "借电请求被编号与未知来历挡住",
+        "trigger": "周先看编号公告再问，不凭一眼就替她定罪",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。",
+        "exitMatch": "拒借电源，身份未讲全"
+      },
+      "camera": {
+        "shotScale": "中远景",
+        "position": "车库门外朝门洞",
+        "height": "地面人物胸口高度",
+        "angle": "朝门洞略仰带钢肩，不进入门内",
+        "perspectiveIntent": "借电请求被编号与未知来历挡住",
+        "focusTarget": "两人",
+        "depthOfField": "让本镜已列关键工作范围可读；不同深度对象保留真实层次，不把全清晰或景深效果当已验证。",
+        "axisSide": "车库门洞—巨手—黄线轴的东侧安全半平面",
+        "movementIntent": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。"
+      },
+      "composition": {
+        "layout": "沿车库门洞—巨手—黄线轴的东侧安全半平面，中远景覆盖本镜主要信息；实际物件不为构图换位置",
+        "foreground": "维修包与人高门缘",
+        "midground": "两人",
+        "background": "肩架和伸出巨手",
+        "negativeSpace": "为本镜视线/进出路径留实际空区，不虚构新对象",
+        "visualHierarchy": "借电请求被编号与未知来历挡住"
+      },
+      "temporal": {
+        "durationSeconds": 38,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "借电请求被编号与未知来历挡住",
+          "path": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。",
+          "start": "机位固定于：车库门外朝门洞",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：车库门外朝门洞",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "K001-01-F1",
+            "timeSeconds": 0,
+            "description": "两人"
+          }
+        ],
+        "edit": {
+          "entry": "机甲已跪坑，周在车道赶来，卷帘正升；没有人接电。",
+          "exit": "拒借电源，身份未讲全",
+          "preferredTransition": "同一场动作连续，硬切承接。",
+          "soundBridge": "本场底声持续，衣料/脚步/道具接触依动作先后；仅用本镜明确原句；指定角色可从同一现场画外说话，未列第三人不加声。；雨滴、金属受力与吊灯小摆；04沉重锁定声先于绿灯，远车声08不等于人员已到。林岑04通信允许指定画外音，无第三人对白。"
+        }
+      }
+    },
+    {
+      "shotId": "K001-02",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "危险出现后先报位置并退侧后",
+        "audiencePayoff": "危险出现后先报位置并退侧后",
+        "trigger": "震动后才拨号；林不阻拦不是应急已解决",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。",
+        "exitMatch": "报位置、持警戒带退外侧"
+      },
+      "camera": {
+        "shotScale": "中远景",
+        "position": "车道墙边朝门侧",
+        "height": "地面人物腰高",
+        "angle": "斜向滑手路径侧缘与退路",
+        "perspectiveIntent": "危险出现后先报位置并退侧后",
+        "focusTarget": "两人后退",
+        "depthOfField": "让本镜已列关键工作范围可读；不同深度对象保留真实层次，不把全清晰或景深效果当已验证。",
+        "axisSide": "车库门洞—巨手—黄线轴的东侧安全半平面",
+        "movementIntent": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。"
+      },
+      "composition": {
+        "layout": "沿车库门洞—巨手—黄线轴的东侧安全半平面，中远景覆盖本镜主要信息；实际物件不为构图换位置",
+        "foreground": "裂地边缘及安全退路",
+        "midground": "两人后退",
+        "background": "巨手和控制灯",
+        "negativeSpace": "为本镜视线/进出路径留实际空区，不虚构新对象",
+        "visualHierarchy": "危险出现后先报位置并退侧后"
+      },
+      "temporal": {
+        "durationSeconds": 35,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "危险出现后先报位置并退侧后",
+          "path": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。",
+          "start": "机位固定于：车道墙边朝门侧",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：车道墙边朝门侧",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "K001-02-F1",
+            "timeSeconds": 0,
+            "description": "两人后退"
+          }
+        ],
+        "edit": {
+          "entry": "拒借电源，身份未讲全",
+          "exit": "报位置、持警戒带退外侧",
+          "preferredTransition": "同一场动作连续，硬切承接。",
+          "soundBridge": "本场底声持续，衣料/脚步/道具接触依动作先后；仅用本镜明确原句；指定角色可从同一现场画外说话，未列第三人不加声。；雨滴、金属受力与吊灯小摆；04沉重锁定声先于绿灯，远车声08不等于人员已到。林岑04通信允许指定画外音，无第三人对白。"
+        }
+      }
+    },
+    {
+      "shotId": "K001-03",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "划出退路之后才上胸舱",
+        "audiencePayoff": "划出退路之后才上胸舱",
+        "trigger": "先指退路再拉带；周目送上梯不跟上",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。",
+        "exitMatch": "林已上胸舱，周守墙角"
+      },
+      "camera": {
+        "shotScale": "中远景",
+        "position": "车道黄线外侧朝梯",
+        "height": "地面人物胸口高度",
+        "angle": "朝检修梯上仰，黄线保留底缘",
+        "perspectiveIntent": "划出退路之后才上胸舱",
+        "focusTarget": "拉带的两人",
+        "depthOfField": "让本镜已列关键工作范围可读；不同深度对象保留真实层次，不把全清晰或景深效果当已验证。",
+        "axisSide": "车库门洞—巨手—黄线轴的东侧安全半平面",
+        "movementIntent": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。"
+      },
+      "composition": {
+        "layout": "沿车库门洞—巨手—黄线轴的东侧安全半平面，中远景覆盖本镜主要信息；实际物件不为构图换位置",
+        "foreground": "黄线警戒带",
+        "midground": "拉带的两人",
+        "background": "检修梯与楼窗",
+        "negativeSpace": "为本镜视线/进出路径留实际空区，不虚构新对象",
+        "visualHierarchy": "划出退路之后才上胸舱"
+      },
+      "temporal": {
+        "durationSeconds": 32,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "划出退路之后才上胸舱",
+          "path": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。",
+          "start": "机位固定于：车道黄线外侧朝梯",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：车道黄线外侧朝梯",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "K001-03-F1",
+            "timeSeconds": 0,
+            "description": "拉带的两人"
+          }
+        ],
+        "edit": {
+          "entry": "二人到车道外侧，警戒带仍手中未拉开，周尚未守墙角。",
+          "exit": "林已上胸舱，周守墙角",
+          "preferredTransition": "同一场动作连续，硬切承接。",
+          "soundBridge": "本场底声持续，衣料/脚步/道具接触依动作先后；仅用本镜明确原句；指定角色可从同一现场画外说话，未列第三人不加声。；雨滴、金属受力与吊灯小摆；04沉重锁定声先于绿灯，远车声08不等于人员已到。林岑04通信允许指定画外音，无第三人对白。"
+        }
+      }
+    },
+    {
+      "shotId": "K001-04",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "警告发生于巨手近线，锁声先于灯绿",
+        "audiencePayoff": "警告发生于巨手近线，锁声先于灯绿",
+        "trigger": "周在手近线时才警告，手电不乱扫",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。",
+        "exitMatch": "锁定声后停车灯稳绿"
+      },
+      "camera": {
+        "shotScale": "中远景",
+        "position": "车道墙角朝黄线与指节",
+        "height": "地面人物腰高",
+        "angle": "朝黄线平看巨手与远处服务箱",
+        "perspectiveIntent": "警告发生于巨手近线，锁声先于灯绿",
+        "focusTarget": "巨手",
+        "depthOfField": "让本镜已列关键工作范围可读；不同深度对象保留真实层次，不把全清晰或景深效果当已验证。",
+        "axisSide": "车库门洞—巨手—黄线轴的东侧安全半平面",
+        "movementIntent": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。"
+      },
+      "composition": {
+        "layout": "沿车库门洞—巨手—黄线轴的东侧安全半平面，中远景覆盖本镜主要信息；实际物件不为构图换位置",
+        "foreground": "手电光束黄线",
+        "midground": "巨手",
+        "background": "服务箱停车灯与肩架",
+        "negativeSpace": "为本镜视线/进出路径留实际空区，不虚构新对象",
+        "visualHierarchy": "警告发生于巨手近线，锁声先于灯绿"
+      },
+      "temporal": {
+        "durationSeconds": 27,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "警告发生于巨手近线，锁声先于灯绿",
+          "path": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。",
+          "start": "机位固定于：车道墙角朝黄线与指节",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：车道墙角朝黄线与指节",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "K001-04-F1",
+            "timeSeconds": 0,
+            "description": "巨手"
+          }
+        ],
+        "edit": {
+          "entry": "林已上胸舱，周守墙角",
+          "exit": "锁定声后停车灯稳绿",
+          "preferredTransition": "同一场动作连续，硬切承接。",
+          "soundBridge": "本场底声持续，衣料/脚步/道具接触依动作先后；仅用本镜明确原句；指定角色可从同一现场画外说话，未列第三人不加声。；雨滴、金属受力与吊灯小摆；04沉重锁定声先于绿灯，远车声08不等于人员已到。林岑04通信允许指定画外音，无第三人对白。"
+        }
+      }
+    },
+    {
+      "shotId": "K001-05",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "锁接合后承认仍须专业检查",
+        "audiencePayoff": "锁接合后承认仍须专业检查",
+        "trigger": "她说不能再走后才下梯",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。",
+        "exitMatch": "林下梯到服务箱，周未接线"
+      },
+      "camera": {
+        "shotScale": "中远景",
+        "position": "同侧朝梯与服务箱",
+        "height": "地面人物胸口高度",
+        "angle": "斜看原梯下口与服务箱",
+        "perspectiveIntent": "锁接合后承认仍须专业检查",
+        "focusTarget": "下梯的林岑及等候周",
+        "depthOfField": "让本镜已列关键工作范围可读；不同深度对象保留真实层次，不把全清晰或景深效果当已验证。",
+        "axisSide": "车库门洞—巨手—黄线轴的东侧安全半平面",
+        "movementIntent": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。"
+      },
+      "composition": {
+        "layout": "沿车库门洞—巨手—黄线轴的东侧安全半平面，中远景覆盖本镜主要信息；实际物件不为构图换位置",
+        "foreground": "墙边服务箱",
+        "midground": "下梯的林岑及等候周",
+        "background": "仍锁住肩架",
+        "negativeSpace": "为本镜视线/进出路径留实际空区，不虚构新对象",
+        "visualHierarchy": "锁接合后承认仍须专业检查"
+      },
+      "temporal": {
+        "durationSeconds": 18,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "锁接合后承认仍须专业检查",
+          "path": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。",
+          "start": "机位固定于：同侧朝梯与服务箱",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：同侧朝梯与服务箱",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "K001-05-F1",
+            "timeSeconds": 0,
+            "description": "下梯的林岑及等候周"
+          }
+        ],
+        "edit": {
+          "entry": "锁定声后停车灯稳绿",
+          "exit": "林下梯到服务箱，周未接线",
+          "preferredTransition": "同一场动作连续，硬切承接。",
+          "soundBridge": "本场底声持续，衣料/脚步/道具接触依动作先后；仅用本镜明确原句；指定角色可从同一现场画外说话，未列第三人不加声。；雨滴、金属受力与吊灯小摆；04沉重锁定声先于绿灯，远车声08不等于人员已到。林岑04通信允许指定画外音，无第三人对白。"
+        }
+      }
+    },
+    {
+      "shotId": "K001-06",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "仅在明确独立检修口核对接线",
+        "audiencePayoff": "仅在明确独立检修口核对接线",
+        "trigger": "周先确认职责，双方核卡再接，手不碰动力区",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。",
+        "exitMatch": "核对后电源开启"
+      },
+      "camera": {
+        "shotScale": "双人中近景",
+        "position": "服务箱外侧近身",
+        "height": "服务箱接口胸口高度",
+        "angle": "斜向维护卡和两人核对手",
+        "perspectiveIntent": "仅在明确独立检修口核对接线",
+        "focusTarget": "两人手与关闭电源",
+        "depthOfField": "让本镜已列关键工作范围可读；不同深度对象保留真实层次，不把全清晰或景深效果当已验证。",
+        "axisSide": "车库门洞—巨手—黄线轴的东侧安全半平面",
+        "movementIntent": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。"
+      },
+      "composition": {
+        "layout": "沿车库门洞—巨手—黄线轴的东侧安全半平面，双人中近景覆盖本镜主要信息；实际物件不为构图换位置",
+        "foreground": "维护卡和标识",
+        "midground": "两人手与关闭电源",
+        "background": "警戒带",
+        "negativeSpace": "为本镜视线/进出路径留实际空区，不虚构新对象",
+        "visualHierarchy": "仅在明确独立检修口核对接线"
+      },
+      "temporal": {
+        "durationSeconds": 30,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "仅在明确独立检修口核对接线",
+          "path": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。",
+          "start": "机位固定于：服务箱外侧近身",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：服务箱外侧近身",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "K001-06-F1",
+            "timeSeconds": 0,
+            "description": "两人手与关闭电源"
+          }
+        ],
+        "edit": {
+          "entry": "林下梯到服务箱，周未接线",
+          "exit": "核对后电源开启",
+          "preferredTransition": "同一场动作连续，硬切承接。",
+          "soundBridge": "本场底声持续，衣料/脚步/道具接触依动作先后；仅用本镜明确原句；指定角色可从同一现场画外说话，未列第三人不加声。；雨滴、金属受力与吊灯小摆；04沉重锁定声先于绿灯，远车声08不等于人员已到。林岑04通信允许指定画外音，无第三人对白。"
+        }
+      }
+    },
+    {
+      "shotId": "K001-07",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "保留有权记录并停在受限区",
+        "audiencePayoff": "保留有权记录并停在受限区",
+        "trigger": "她停手在受限提示后；他问剩下的不要求绕过",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。",
+        "exitMatch": "允许记录保存，无权限停手"
+      },
+      "camera": {
+        "shotScale": "双人中近景",
+        "position": "服务箱终端侧",
+        "height": "终端屏中心高度",
+        "angle": "斜向许可区域及二人侧脸",
+        "perspectiveIntent": "保留有权记录并停在受限区",
+        "focusTarget": "两人手脸",
+        "depthOfField": "让本镜已列关键工作范围可读；不同深度对象保留真实层次，不把全清晰或景深效果当已验证。",
+        "axisSide": "车库门洞—巨手—黄线轴的东侧安全半平面",
+        "movementIntent": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。"
+      },
+      "composition": {
+        "layout": "沿车库门洞—巨手—黄线轴的东侧安全半平面，双人中近景覆盖本镜主要信息；实际物件不为构图换位置",
+        "foreground": "终端许可/无权限区",
+        "midground": "两人手脸",
+        "background": "电源仍原位",
+        "negativeSpace": "为本镜视线/进出路径留实际空区，不虚构新对象",
+        "visualHierarchy": "保留有权记录并停在受限区"
+      },
+      "temporal": {
+        "durationSeconds": 24,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "保留有权记录并停在受限区",
+          "path": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。",
+          "start": "机位固定于：服务箱终端侧",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：服务箱终端侧",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "K001-07-F1",
+            "timeSeconds": 0,
+            "description": "两人手脸"
+          }
+        ],
+        "edit": {
+          "entry": "核对后电源开启",
+          "exit": "允许记录保存，无权限停手",
+          "preferredTransition": "同一场动作连续，硬切承接。",
+          "soundBridge": "本场底声持续，衣料/脚步/道具接触依动作先后；仅用本镜明确原句；指定角色可从同一现场画外说话，未列第三人不加声。；雨滴、金属受力与吊灯小摆；04沉重锁定声先于绿灯，远车声08不等于人员已到。林岑04通信允许指定画外音，无第三人对白。"
+        }
+      }
+    },
+    {
+      "shotId": "K001-08",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "两人留下承担说明与个人延期",
+        "audiencePayoff": "两人留下承担说明与个人延期",
+        "trigger": "她看车声不逃；他承认维修延期并可退款",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。",
+        "exitMatch": "人留下、供电仍原位待接管"
+      },
+      "camera": {
+        "shotScale": "中远景",
+        "position": "车道警戒线外侧",
+        "height": "地面人物胸口高度",
+        "angle": "平向警戒带与二人，巨指保持后方",
+        "perspectiveIntent": "两人留下承担说明与个人延期",
+        "focusTarget": "两人",
+        "depthOfField": "让本镜已列关键工作范围可读；不同深度对象保留真实层次，不把全清晰或景深效果当已验证。",
+        "axisSide": "车库门洞—巨手—黄线轴的东侧安全半平面",
+        "movementIntent": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。"
+      },
+      "composition": {
+        "layout": "沿车库门洞—巨手—黄线轴的东侧安全半平面，中远景覆盖本镜主要信息；实际物件不为构图换位置",
+        "foreground": "警戒带",
+        "midground": "两人",
+        "background": "静止巨手与车库",
+        "negativeSpace": "为本镜视线/进出路径留实际空区，不虚构新对象",
+        "visualHierarchy": "两人留下承担说明与个人延期"
+      },
+      "temporal": {
+        "durationSeconds": 30,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "两人留下承担说明与个人延期",
+          "path": "机身固定在本镜已列可达机位，人物和物件按正文行动；不用装饰性运镜掩盖接触或对话。",
+          "start": "机位固定于：车道警戒线外侧",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：车道警戒线外侧",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "K001-08-F1",
+            "timeSeconds": 0,
+            "description": "两人"
+          }
+        ],
+        "edit": {
+          "entry": "允许记录保存，无权限停手",
+          "exit": "人留下、供电仍原位待接管",
+          "preferredTransition": "同一场动作连续，硬切承接。",
+          "soundBridge": "本场底声持续，衣料/脚步/道具接触依动作先后；仅用本镜明确原句；指定角色可从同一现场画外说话，未列第三人不加声。；雨滴、金属受力与吊灯小摆；04沉重锁定声先于绿灯，远车声08不等于人员已到。林岑04通信允许指定画外音，无第三人对白。"
+        }
+      }
+    }
+  ]
+}

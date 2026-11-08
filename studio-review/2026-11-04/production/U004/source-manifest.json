@@ -1,0 +1,49 @@
+{
+  "topicId": "U004",
+  "projectId": "2430e23fc4199279bec36aa52a58be692fe2f09c0095fc7a73c0df5d7917f62a",
+  "transport": "authorized_browser_ui_dom",
+  "currentRevision": null,
+  "sourcePins": [
+    {
+      "documentId": "6da9fbe99e48e66ae9c0d4dd86ded5dec6e69784c393e2eaee252dc0a7db0289",
+      "title": "U004 第九十九道雷·女邻居｜剧本｜20261031审阅版",
+      "sha256": "94df32fc1a58716354b0813033a56be4e986867117b9fef8072268129c5d3e24",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:39:48.843Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=2430e23fc4199279bec36aa52a58be692fe2f09c0095fc7a73c0df5d7917f62a#scripts"
+    },
+    {
+      "documentId": "d2fe856bc49128d2a9e8799e6c52a2ae90ded2f46a024ba4c31545ba205b69df",
+      "title": "U004 第九十九道雷·女邻居｜分镜与视频提示｜20261031审阅版",
+      "sha256": "7aee51a4e79d66b7a9b95683ae44966c545d9c915606eebe6620a4e935a9ba6d",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:39:38.829Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=2430e23fc4199279bec36aa52a58be692fe2f09c0095fc7a73c0df5d7917f62a#scripts"
+    },
+    {
+      "documentId": "221f92137f1d6dff5f5c5a337d0a987f90bcd645ba668fcd5ca4af69267a5912",
+      "title": "U004 第九十九道雷·女邻居｜审阅与来源｜20261031审阅版",
+      "sha256": "12542723c0e5f1c63f26b05042cef0d27b0a8cc300634b08aea048bff678cfd0",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:39:30.703Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=2430e23fc4199279bec36aa52a58be692fe2f09c0095fc7a73c0df5d7917f62a#scripts"
+    }
+  ],
+  "patches": [
+    {
+      "documentId": "6da9fbe99e48e66ae9c0d4dd86ded5dec6e69784c393e2eaee252dc0a7db0289",
+      "before": "梁峥上前拉住她背包带试图阻止继续操作，她护盒，两人短暂争夺；",
+      "after": "沈霁在门边停一步，拇指再次趋近盒上阵记；梁峥看见后才上前拉住她背包带试图阻止继续操作，她护盒，两人短暂争夺；",
+      "reason": "为已经向门口移动的人被阻拦补具体可见刺激，保留她随后自主先撤。"
+    },
+    {
+      "documentId": "d2fe856bc49128d2a9e8799e6c52a2ae90ded2f46a024ba4c31545ba205b69df",
+      "before": "梁峥上前拉住她背包带试图阻止继续操作，她护盒，两人短暂争夺；",
+      "after": "沈霁在门边停一步，拇指再次趋近盒上阵记；梁峥看见后才上前拉住她背包带试图阻止继续操作，她护盒，两人短暂争夺；",
+      "reason": "为已经向门口移动的人被阻拦补具体可见刺激，保留她随后自主先撤。"
+    }
+  ],
+  "candidate": true,
+  "authorApproved": false,
+  "rawSourceUnchanged": true
+}

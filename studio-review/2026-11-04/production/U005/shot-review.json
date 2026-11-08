@@ -1,0 +1,457 @@
+{
+  "source": {
+    "type": "design",
+    "id": "U005-production-r1",
+    "version": 1,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "U005-01",
+    "U005-02",
+    "U005-03",
+    "U005-04"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "U005-01",
+      "status": "pass",
+      "criterion": "该镜必须传递本题指定的观众信息而不预支后果：房租压力与三百年经历撞上岗位要求",
+      "observation": "先见熟人短信再听修士经历，录用尚无结论",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L3–L11"
+    },
+    {
+      "role": "performance",
+      "shotId": "U005-01",
+      "status": "pass",
+      "criterion": "行动由角色收到的刺激和当前任务触发：房租压力与三百年经历撞上岗位要求",
+      "observation": "闻直说短板，不靠仙人身份压招聘者",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L3–L11"
+    },
+    {
+      "role": "staging",
+      "shotId": "U005-01",
+      "status": "pass",
+      "criterion": "走位与持物接触在该镜真实空间中可达：房租压力与三百年经历撞上岗位要求",
+      "observation": "简历/职位说明/杯/手机先建立，两人各自笔",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L3–L11"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "U005-01",
+      "status": "pass",
+      "criterion": "机位/焦点服务本镜信息且继承既定轴线：房租压力与三百年经历撞上岗位要求",
+      "observation": "桌侧中近景从近手机转对侧闻面部，真实不同深度",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L3–L11"
+    },
+    {
+      "role": "prompt",
+      "shotId": "U005-01",
+      "status": "pass",
+      "criterion": "独立视频稿保留准确台词和该镜必要初终态：房租压力与三百年经历撞上岗位要求",
+      "observation": "四句经验/核验/公式不会准确，会议室无孩子",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L3–L11"
+    },
+    {
+      "role": "continuity",
+      "shotId": "U005-01",
+      "status": "pass",
+      "criterion": "本镜出态能按所述转场接入后镜：房租压力与三百年经历撞上岗位要求",
+      "observation": "简历仍桌、结果未评，02才推物资题",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L3–L11"
+    },
+    {
+      "role": "direction",
+      "shotId": "U005-02",
+      "status": "pass",
+      "criterion": "该镜必须传递本题指定的观众信息而不预支后果：有经验也会算错，但能自查",
+      "observation": "箱底无孔的观察与算数量是不同能力",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L12–L20"
+    },
+    {
+      "role": "performance",
+      "shotId": "U005-02",
+      "status": "pass",
+      "criterion": "行动由角色收到的刺激和当前任务触发：有经验也会算错，但能自查",
+      "observation": "她先指出苗风险，被要求后自行复查，不等顾揭错",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L12–L20"
+    },
+    {
+      "role": "staging",
+      "shotId": "U005-02",
+      "status": "pass",
+      "criterion": "走位与持物接触在该镜真实空间中可达：有经验也会算错，但能自查",
+      "observation": "顾推表、闻本人笔算，顾本人笔记复核后更正",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L12–L20"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "U005-02",
+      "status": "pass",
+      "criterion": "机位/焦点服务本镜信息且继承既定轴线：有经验也会算错，但能自查",
+      "observation": "俯角近景只读纸和手，不硬画全身双人",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L12–L20"
+    },
+    {
+      "role": "prompt",
+      "shotId": "U005-02",
+      "status": "pass",
+      "criterion": "独立视频稿保留准确台词和该镜必要初终态：有经验也会算错，但能自查",
+      "observation": "35/40/45/116与80→120缺4逐字逐数保留",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L12–L20"
+    },
+    {
+      "role": "continuity",
+      "shotId": "U005-02",
+      "status": "pass",
+      "criterion": "本镜出态能按所述转场接入后镜：有经验也会算错，但能自查",
+      "observation": "物资表和面试记录留桌，03才取种植原件",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L12–L20"
+    },
+    {
+      "role": "direction",
+      "shotId": "U005-03",
+      "status": "pass",
+      "criterion": "该镜必须传递本题指定的观众信息而不预支后果：停种经历中的代价与仍待核验",
+      "observation": "她讲少卖一季与后来改进，不把经验当已证明",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L21–L29"
+    },
+    {
+      "role": "performance",
+      "shotId": "U005-03",
+      "status": "pass",
+      "criterion": "行动由角色收到的刺激和当前任务触发：停种经历中的代价与仍待核验",
+      "observation": "顾听完问近两年，她先征询师妹号码许可",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L21–L29"
+    },
+    {
+      "role": "staging",
+      "shotId": "U005-03",
+      "status": "pass",
+      "criterion": "走位与持物接触在该镜真实空间中可达：停种经历中的代价与仍待核验",
+      "observation": "种植本从袋取到手边，顾笔只记问题",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L21–L29"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "U005-03",
+      "status": "pass",
+      "criterion": "机位/焦点服务本镜信息且继承既定轴线：停种经历中的代价与仍待核验",
+      "observation": "固定双人中景兼读停种标题与两人反应",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L21–L29"
+    },
+    {
+      "role": "prompt",
+      "shotId": "U005-03",
+      "status": "pass",
+      "criterion": "独立视频稿保留准确台词和该镜必要初终态：停种经历中的代价与仍待核验",
+      "observation": "停种只有标题无数据、先问师妹意愿都在稿内",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L21–L29"
+    },
+    {
+      "role": "continuity",
+      "shotId": "U005-03",
+      "status": "pass",
+      "criterion": "本镜出态能按所述转场接入后镜：停种经历中的代价与仍待核验",
+      "observation": "种植原件留闻手边，04收自己原件可接",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L21–L29"
+    },
+    {
+      "role": "direction",
+      "shotId": "U005-04",
+      "status": "pass",
+      "criterion": "该镜必须传递本题指定的观众信息而不预支后果：悬杯失控也不等于会表格或被录用",
+      "observation": "准确否定特殊录用，结尾两组同题但未来核验未做",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L30–L40"
+    },
+    {
+      "role": "performance",
+      "shotId": "U005-04",
+      "status": "pass",
+      "criterion": "行动由角色收到的刺激和当前任务触发：悬杯失控也不等于会表格或被录用",
+      "observation": "她紧张先杯动再注意落回，说抱歉后才听岗位提醒",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L30–L40"
+    },
+    {
+      "role": "staging",
+      "shotId": "U005-04",
+      "status": "pass",
+      "criterion": "走位与持物接触在该镜真实空间中可达：悬杯失控也不等于会表格或被录用",
+      "observation": "杯落稳顾再移远，闻收自己原件/说明，顾面试表留桌",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L30–L40"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "U005-04",
+      "status": "pass",
+      "criterion": "机位/焦点服务本镜信息且继承既定轴线：悬杯失控也不等于会表格或被录用",
+      "observation": "固定中景兼顾说明/落杯/两组资料，不用神光遮动作",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L30–L40"
+    },
+    {
+      "role": "prompt",
+      "shotId": "U005-04",
+      "status": "pass",
+      "criterion": "独立视频稿保留准确台词和该镜必要初终态：悬杯失控也不等于会表格或被录用",
+      "observation": "儿童活动区已在01职位说明，此镜指文字不加孩子",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L30–L40"
+    },
+    {
+      "role": "continuity",
+      "shotId": "U005-04",
+      "status": "pass",
+      "criterion": "本镜出态能按所述转场接入后镜：悬杯失控也不等于会表格或被录用",
+      "observation": "结果空白和两份同题留顾，闻带原件说明离开",
+      "sourceLocator": "a8ad097ad6277b3690172591abfeeb77776ec9548dc864a4f9fa5b151ce353cb:L30–L40"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "U005-01",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "房租压力与三百年经历撞上岗位要求",
+        "audiencePayoff": "房租压力与三百年经历撞上岗位要求",
+        "trigger": "房租压力与三百年经历撞上岗位要求",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "focusTargetEnd": "桌对侧闻青面部",
+        "exitMatch": "简历留桌，未评价录用"
+      },
+      "camera": {
+        "shotScale": "中近景",
+        "position": "会议桌侧",
+        "height": "闻坐姿胸口",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "房租压力与三百年经历撞上岗位要求",
+        "focusTarget": "桌边近处主管短信",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "顾—闻对坐连线同一端，不为纸手特写翻转双方位置",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "主管短信、简历/职位说明、杯",
+        "midground": "顾准与闻青",
+        "background": "同一会议墙/门/职位说明/熟人材料，按每镜取景裁切",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "房租压力与三百年经历撞上岗位要求"
+      },
+      "temporal": {
+        "durationSeconds": 28,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "房租压力与三百年经历撞上岗位要求",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：会议桌侧",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：会议桌侧",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U005-01-F1",
+            "timeSeconds": 0,
+            "description": "桌边近处主管短信"
+          },
+          {
+            "eventId": "U005-01-F2",
+            "timeSeconds": 5,
+            "description": "桌对侧闻青面部"
+          }
+        ],
+        "edit": {
+          "entry": "日间会议室两人对坐，无孩子在场。顾准所说“现场有孩子”专指岗位未来服务的社区工作现场，非本会议室。停种记录页有“停种”标题但无种植数据；窗光与顶灯稳定。",
+          "exit": "简历留桌，未评价录用",
+          "preferredTransition": "从本片真实初态开始，建立空间后继续",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；办公室低空调、纸笔、水杯轻碰；主管短信仅文字和提示音，不增第三人对白"
+        }
+      }
+    },
+    {
+      "shotId": "U005-02",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "有经验也会算错，但能自查",
+        "audiencePayoff": "有经验也会算错，但能自查",
+        "trigger": "有经验也会算错，但能自查",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "更正为120缺4已记"
+      },
+      "camera": {
+        "shotScale": "近景",
+        "position": "会议桌端俯角",
+        "height": "物资表上方",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "有经验也会算错，但能自查",
+        "focusTarget": "数量与更正结果的纸手工作区域",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "顾—闻对坐连线同一端，不为纸手特写翻转双方位置",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "物资表/闻书写手",
+        "midground": "顾记录纸与两支不同笔",
+        "background": "桌面边界，不增人物脸特写",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "有经验也会算错，但能自查"
+      },
+      "temporal": {
+        "durationSeconds": 32,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "有经验也会算错，但能自查",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：会议桌端俯角",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：会议桌端俯角",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U005-02-F1",
+            "timeSeconds": 0,
+            "description": "数量与更正结果的纸手工作区域"
+          }
+        ],
+        "edit": {
+          "entry": "简历留桌，未评价录用",
+          "exit": "更正为120缺4已记",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；办公室低空调、纸笔、水杯轻碰；主管短信仅文字和提示音，不增第三人对白"
+        }
+      }
+    },
+    {
+      "shotId": "U005-03",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "停种经历中的代价与仍待核验",
+        "audiencePayoff": "停种经历中的代价与仍待核验",
+        "trigger": "停种经历中的代价与仍待核验",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "种植原件在闻青手边"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "会议桌侧",
+        "height": "顾坐姿眼线",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "停种经历中的代价与仍待核验",
+        "focusTarget": "停种页与说话/记笔的可辨工作区域",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "顾—闻对坐连线同一端，不为纸手特写翻转双方位置",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "停种原件、顾笔记",
+        "midground": "顾准与闻青",
+        "background": "同一会议墙/门/职位说明/熟人材料，按每镜取景裁切",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "停种经历中的代价与仍待核验"
+      },
+      "temporal": {
+        "durationSeconds": 32,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "停种经历中的代价与仍待核验",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：会议桌侧",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：会议桌侧",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U005-03-F1",
+            "timeSeconds": 0,
+            "description": "停种页与说话/记笔的可辨工作区域"
+          }
+        ],
+        "edit": {
+          "entry": "更正为120缺4已记",
+          "exit": "种植原件在闻青手边",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；办公室低空调、纸笔、水杯轻碰；主管短信仅文字和提示音，不增第三人对白"
+        }
+      }
+    },
+    {
+      "shotId": "U005-04",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "悬杯失控也不等于会表格或被录用",
+        "audiencePayoff": "悬杯失控也不等于会表格或被录用",
+        "trigger": "悬杯失控也不等于会表格或被录用",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "noMotionReason": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+        "exitMatch": "她携原件说明离开，两份同题并列，结果空白"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "会议桌侧",
+        "height": "双方坐姿胸口",
+        "angle": "按源稿所述俯仰和地标观看，不改变世界关系",
+        "perspectiveIntent": "悬杯失控也不等于会表格或被录用",
+        "focusTarget": "说明、杯与空结果/同题的工作区域",
+        "depthOfField": "按源稿保留本镜关键人物/道具的真实不同深度关系；实际景深待样片",
+        "axisSide": "顾—闻对坐连线同一端，不为纸手特写翻转双方位置",
+        "movementIntent": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代"
+      },
+      "composition": {
+        "layout": "服从本镜源稿机位，保留对手关系与关键物接触，不跨轴",
+        "foreground": "说明/水杯",
+        "midground": "两人/面试表",
+        "background": "熟人资料与同一会议室门",
+        "negativeSpace": "为本镜视线/动作方向保留空间，不加入新叙事对象",
+        "visualHierarchy": "悬杯失控也不等于会表格或被录用"
+      },
+      "temporal": {
+        "durationSeconds": 40,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "悬杯失控也不等于会表格或被录用",
+          "path": "摄影机固定在源稿本镜机位；人物和道具按正文行动，焦点策略不以假运镜替代",
+          "start": "机位固定于：会议桌侧",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：会议桌侧",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "U005-04-F1",
+            "timeSeconds": 0,
+            "description": "说明、杯与空结果/同题的工作区域"
+          }
+        ],
+        "edit": {
+          "entry": "种植原件在闻青手边",
+          "exit": "她携原件说明离开，两份同题并列，结果空白",
+          "preferredTransition": "连续承接前镜；以本镜已写明的行动/出态硬切；未声明省略时不重演前镜",
+          "soundBridge": "按本镜实际对白和动作声，不补第三人可辨话。；办公室低空调、纸笔、水杯轻碰；主管短信仅文字和提示音，不增第三人对白"
+        }
+      }
+    }
+  ]
+}

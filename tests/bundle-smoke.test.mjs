@@ -68,6 +68,27 @@ async function checkInstalledLayout(repository, skillName, standalone) {
       await writeFile(paths[name], JSON.stringify(data));
     }
     const inputBefore = await snapshot(directory);
+    const projectWorkflowPath = join(directory, "project-workflow.json");
+    await writeFile(projectWorkflowPath, JSON.stringify({
+      format: "cineweave-project-workflow/v1", canonical: false, projectId: "installed-fixture",
+      frameRate: { numerator: 24, denominator: 1 }, declaredEpisodeIds: ["E1", "E2"],
+      episodes: [{ id: "E1", purpose: "核对安装后的项目引用", entryState: "无人", exitState: "仍无人",
+        source: { path: "fixture:script", revision: 1 }, scenes: [{ id: "A", shotIds: ["S1"] }] }],
+      characters: [], appearances: [], assets: [],
+      shots: [{ id: "S1", revision: 1, episodeId: "E1", sceneId: "A", characters: [], assets: [] }],
+      previsGroups: [], candidates: [], claims: { allEpisodesExpanded: false, mediaComplete: false },
+    }));
+    const projectBefore = await snapshot(directory);
+    const project = run("check-delivery", ["--project-workflow", projectWorkflowPath]);
+    assert.equal(project.status, 2, project.stderr);
+    const projectPlan = JSON.parse(project.stdout);
+    assert.equal(projectPlan.valid, true);
+    assert.deepEqual(projectPlan.remaining, ["E2"]);
+    assert.equal(projectPlan.mediaVerified, false);
+    assert.equal(projectPlan.sourceAuthorityVerified, false);
+    assert.deepEqual(await snapshot(directory), projectBefore);
+    // Restore the fixture inventory for the existing read-only checks below.
+    await rm(projectWorkflowPath);
     const count = run("check-delivery", ["--text", "值得专程回来"]);
     assert.equal(count.status, 0, count.stderr);
     assert.equal(JSON.parse(count.stdout).hanCharacters, 6);

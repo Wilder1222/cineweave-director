@@ -1,0 +1,207 @@
+{
+  "fps": 24,
+  "timingVerified": false,
+  "lipSyncVerified": false,
+  "cues": [
+    {
+      "shotId": "01",
+      "speaker": "王宙",
+      "text": "我和倩娘在蜀中五年，有了两个孩子。她想回来见您。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 0,
+      "endFrameExclusive": 720,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "01",
+      "speaker": "张镒",
+      "text": "我女儿病在房中五年，从未出门。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 0,
+      "endFrameExclusive": 720,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "01",
+      "speaker": "王宙",
+      "text": "我不敢说您看错。但她就在船上，孩子托船家照看。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 0,
+      "endFrameExclusive": 720,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "02-A",
+      "speaker": "张镒",
+      "text": "去船上看，别惊动孩子。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 720,
+      "endFrameExclusive": 912,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "02-B",
+      "speaker": "张镒",
+      "text": "那房里的又是谁？",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 912,
+      "endFrameExclusive": 1392,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "02-B",
+      "speaker": "王宙",
+      "text": "先问她愿不愿意见我。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 912,
+      "endFrameExclusive": 1392,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "02-C",
+      "speaker": "张镒",
+      "text": "她愿意见你，也想见船上那位。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1392,
+      "endFrameExclusive": 1824,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "02-C",
+      "speaker": "王宙",
+      "text": "我去问她。若她不愿意，不能强求。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1392,
+      "endFrameExclusive": 1824,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "03",
+      "speaker": "倩娘（船上）",
+      "text": "船家答应照看孩子到日落。我想见她，可我还要回去接孩子。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1824,
+      "endFrameExclusive": 2688,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "03",
+      "speaker": "倩娘（室中）",
+      "text": "我想走到你面前。如果你不愿意，我就在这里等。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1824,
+      "endFrameExclusive": 2688,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "03",
+      "speaker": "王宙",
+      "text": "一个与我同行五年，一个在这里过了五年。我不能替你们决定。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1824,
+      "endFrameExclusive": 2688,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "04",
+      "speaker": "倩娘（室中）",
+      "text": "梦里我见过孩子，却不知道抱起来有多重。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 2688,
+      "endFrameExclusive": 3528,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "04",
+      "speaker": "倩娘（船上）",
+      "text": "我怕你这五年的日子，都被当成一场梦。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 2688,
+      "endFrameExclusive": 3528,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "04",
+      "speaker": "倩娘（船上）",
+      "text": "我能碰你吗？",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 2688,
+      "endFrameExclusive": 3528,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "04",
+      "speaker": "倩娘（室中）",
+      "text": "能。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 2688,
+      "endFrameExclusive": 3528,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "05",
+      "speaker": "张镒",
+      "text": "你能站住吗？",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 3528,
+      "endFrameExclusive": 4368,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "05",
+      "speaker": "倩娘",
+      "text": "让我缓一缓。我还要去接孩子。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 3528,
+      "endFrameExclusive": 4368,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "05",
+      "speaker": "张镒",
+      "text": "从前许婚，我没有问你。你先接孩子；等你愿意听，我再说。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 3528,
+      "endFrameExclusive": 4368,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "05",
+      "speaker": "王宙",
+      "text": "我也有话要说。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 3528,
+      "endFrameExclusive": 4368,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "05",
+      "speaker": "倩娘",
+      "text": "别替我说。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 3528,
+      "endFrameExclusive": 4368,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    }
+  ]
+}

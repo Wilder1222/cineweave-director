@@ -1,0 +1,32 @@
+{
+  "topicId": "H003",
+  "projectId": "bd4e5139e15d26e29d958564419eea546de2ac05a3331c6d3c0c6c1de1b03605",
+  "currentRevision": null,
+  "sourcePins": [
+    {
+      "documentId": "2b1cb277c070317b8fc43b1506d4346b59cc511f38443ea93c07df5551057496",
+      "title": "H003 雪夜蔡州｜剧本｜20261031审阅版",
+      "sha256": "ae63379a247e3993a391e8165f96a9b76d8214896587398599423236e7147b7b",
+      "currentRevision": null,
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=bd4e5139e15d26e29d958564419eea546de2ac05a3331c6d3c0c6c1de1b03605#scripts"
+    },
+    {
+      "documentId": "0051d12b79bdb97d0447ffc2d60b463e5f545acdf0b9815adc9fcd533ab78a5c",
+      "title": "H003 雪夜蔡州｜分镜与视频提示｜20261031审阅版",
+      "sha256": "7e4db0a04314d3bdd903bfbaa36bc74b93aa9de9b97c972f49bdbc16703a9a26",
+      "currentRevision": null,
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=bd4e5139e15d26e29d958564419eea546de2ac05a3331c6d3c0c6c1de1b03605#scripts"
+    },
+    {
+      "documentId": "e39c369b00ba45a544369b07ad279bc47ae3a6c1f49d7472f2fb1f2928988a74",
+      "title": "H003 雪夜蔡州｜审阅与来源｜20261031审阅版",
+      "sha256": "0a17777e746451d875968debd3dca5a862f50993cfd9c1d707c322f36eb17a61",
+      "currentRevision": null,
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=bd4e5139e15d26e29d958564419eea546de2ac05a3331c6d3c0c6c1de1b03605#scripts"
+    }
+  ],
+  "patches": [],
+  "candidate": true,
+  "authorApproved": false,
+  "rawSourceUnchanged": true
+}

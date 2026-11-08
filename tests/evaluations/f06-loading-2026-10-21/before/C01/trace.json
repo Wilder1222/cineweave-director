@@ -1,0 +1,27 @@
+{
+  "source_run_id": "01a15c96-1292-70a3-be71-812cd181e605",
+  "source_log_sha256": "583002edbd202ec4f2ea6a0c09129e0ceb1d83ba12b8e2296ef4f39201ea6c73",
+  "metric": "all actual text blocks in selected resource tool results, including wrapper and any truncation notice; not model tokens",
+  "reads": [
+    {
+      "callId": "call_500a678b7b5d4d16afdc3df30c6726e5",
+      "command": "text(await tools.exec_command({cmd:\"Get-Content -Raw -LiteralPath 'D:\\\\study\\\\projects\\\\cineweave-codex-skills\\\\cineweave-director\\\\.build\\\\audits\\\\skill-optimization-2026-10-21\\\\behavior-snapshot\\\\skills\\\\cineweave-director\\\\SKILL.md'\",\"max_output_tokens\":10000}));\n",
+      "payloadFile": "read-01.txt",
+      "sha256": "40c07f38ef159bb363347a09c124dc8c0a9d81a90df7d77a3c693cc7e4a5e8b6",
+      "modelVisibleUtf8Bytes": 14973,
+      "modelVisibleCodePoints": 6913,
+      "truncated": false,
+      "tokenUsage": null
+    },
+    {
+      "callId": "call_0b1daa6f2c9e43e6a886d9dc479836f2",
+      "command": "const files = [\n\"D:\\\\study\\\\projects\\\\cineweave-codex-skills\\\\cineweave-director\\\\.build\\\\audits\\\\skill-optimization-2026-10-21\\\\behavior-snapshot\\\\skills\\\\cineweave-director\\\\references\\\\routes\\\\image-prompt.md\",\n\"D:\\\\study\\\\projects\\\\cineweave-codex-skills\\\\cineweave-director\\\\.build\\\\audits\\\\skill-optimization-2026-10-21\\\\behavior-snapshot\\\\skills\\\\cineweave-director\\\\references\\\\optional\\\\prompt-detail-standard.md\"];\ntext(await tools.exec_command({cmd:files.map(p=>`Get-Content -Raw -LiteralPath '${p}'`).join(\"\\n\"),\"max_output_tokens\":12000}));\n",
+      "payloadFile": "read-02.txt",
+      "sha256": "4a612b597dec5629b960c440ef603a0b2b2207d0393db3fdeb66a303f3598b2a",
+      "modelVisibleUtf8Bytes": 40150,
+      "modelVisibleCodePoints": 15384,
+      "truncated": true,
+      "tokenUsage": null
+    }
+  ]
+}

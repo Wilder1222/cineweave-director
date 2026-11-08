@@ -1,0 +1,475 @@
+{
+  "scope": "narrative_video",
+  "shotIds": [
+    "01",
+    "02",
+    "03-A",
+    "03-B",
+    "04",
+    "05",
+    "06"
+  ],
+  "decisions": [
+    {
+      "shotId": "01",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她先自己争取花期。",
+        "audiencePayoff": "她先自己争取花期。",
+        "trigger": "写告示时她说出计划。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在窗侧平视，让写告示时她说出计划触发人物而非相机移动，保持她先自己争取花期的空间参照。理由：让观众读出她先自己争取花期；不改变人物既定行动。",
+        "focusTargetEnd": "香玉抬头说明",
+        "exitMatch": "告示写完，白牡丹仍在。"
+      },
+      "camera": {
+        "shotScale": "双人中景",
+        "position": "窗侧平视",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "她先自己争取花期。",
+        "focusTarget": "笔墨",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "书室窗南侧与花圃坑西南侧，花圃门/坑轴同侧",
+        "movementIntent": "固定在窗侧平视，让写告示时她说出计划触发人物而非相机移动，保持她先自己争取花期的空间参照。理由：让观众读出她先自己争取花期；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "纸墨",
+        "midground": "香玉写告示黄生磨墨",
+        "background": "窗外白牡丹",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "笔墨与告示 → 在场人物的接收/反应 → 窗外白牡丹"
+      },
+      "temporal": {
+        "durationSeconds": 22,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她先自己争取花期。",
+          "path": "固定在窗侧平视，让写告示时她说出计划触发人物而非相机移动，保持她先自己争取花期的空间参照。理由：让观众读出她先自己争取花期；不改变人物既定行动。",
+          "start": "机位固定于：窗侧平视",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：窗侧平视",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "01-F1",
+            "timeSeconds": 0,
+            "description": "笔墨"
+          },
+          {
+            "eventId": "01-F2",
+            "timeSeconds": 6,
+            "description": "香玉抬头说明"
+          }
+        ],
+        "edit": {
+          "entry": "前夜二人在书室案边，袖无泥，花尚未被掘。",
+          "exit": "告示写完，白牡丹仍在。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "前夜书室为纸笔衣料和原对白；次晨为院风、瓦盆轻触、既定落瓣合成声；无守卫、羊铃或追车者人声。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "02",
+      "decision": {
+        "primaryTechniqueId": "M01",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "购买不能替代花的意愿。",
+        "audiencePayoff": "购买不能替代花的意愿。",
+        "trigger": "香玉反问后黄生才怔。",
+        "cameraMode": "moving",
+        "focusMode": "rack",
+        "focusTargetEnd": "黄生停住的脸",
+        "exitMatch": "纸收入香玉袖，她离门；明确省略到次晨。"
+      },
+      "camera": {
+        "shotScale": "近中景",
+        "position": "书室侧面原轴缓推",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "购买不能替代花的意愿。",
+        "focusTarget": "桌上尚未折起的纸",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "书室窗南侧与花圃坑西南侧，花圃门/坑轴同侧",
+        "movementIntent": "收到“香玉反问后黄生才怔”后沿原轴线侧缓推半步；起步轻、匀速靠近、在出态前柔和减速，无环绕、无变焦。理由：让观众读出购买不能替代花的意愿；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "折纸",
+        "midground": "二人",
+        "background": "窗口",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "折起告示 → 在场人物的接收/反应 → 书窗"
+      },
+      "temporal": {
+        "durationSeconds": 18,
+        "cameraMotion": {
+          "type": "dolly",
+          "motivation": "购买不能替代花的意愿。",
+          "path": "收到“香玉反问后黄生才怔”后沿原轴线侧缓推半步；起步轻、匀速靠近、在出态前柔和减速，无环绕、无变焦。理由：让观众读出购买不能替代花的意愿；不改变人物既定行动。",
+          "start": "告示写完，白牡丹仍在。",
+          "acceleration": "明确刺激后缓起，保留初始空间参照",
+          "peak": "同侧前移半步的低速段，有真实视差不变焦",
+          "deceleration": "出态前柔停，终点不越人物轴",
+          "end": "纸收入香玉袖，她离门；明确省略到次晨。",
+          "framingChange": "初始近中景在前移半步后略紧，折起告示与人物的占幅增加，既有书窗产生可辨纵深视差，终点不切掉关键触点"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "02-F1",
+            "timeSeconds": 0,
+            "description": "桌上尚未折起的纸"
+          },
+          {
+            "eventId": "02-F2",
+            "timeSeconds": 9,
+            "description": "黄生停住的脸"
+          }
+        ],
+        "edit": {
+          "entry": "告示写完，白牡丹仍在。",
+          "exit": "纸收入香玉袖，她离门；明确省略到次晨。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "前夜书室为纸笔衣料和原对白；次晨为院风、瓦盆轻触、既定落瓣合成声；无守卫、羊铃或追车者人声。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "03-A",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "移花已发生且争取失败。",
+        "audiencePayoff": "移花已发生且争取失败。",
+        "trigger": "黄生见空坑才问。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在坑侧平视，让黄生见空坑才问触发人物而非相机移动，保持移花已发生且争取失败的空间参照。理由：让观众读出移花已发生且争取失败；不改变人物既定行动。",
+        "focusTargetEnd": "淡去的香玉袖",
+        "exitMatch": "香玉说蓝家掘走，手将指向坑角。"
+      },
+      "camera": {
+        "shotScale": "中远景",
+        "position": "坑侧平视",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "移花已发生且争取失败。",
+        "focusTarget": "空坑",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "书室窗南侧与花圃坑西南侧，花圃门/坑轴同侧",
+        "movementIntent": "固定在坑侧平视，让黄生见空坑才问触发人物而非相机移动，保持移花已发生且争取失败的空间参照。理由：让观众读出移花已发生且争取失败；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "白瓣湿土",
+        "midground": "黄生至空坑",
+        "background": "扶门香玉及车辙",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "空坑湿土白瓣 → 在场人物的接收/反应 → 门外车辙"
+      },
+      "temporal": {
+        "durationSeconds": 15,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "移花已发生且争取失败。",
+          "path": "固定在坑侧平视，让黄生见空坑才问触发人物而非相机移动，保持移花已发生且争取失败的空间参照。理由：让观众读出移花已发生且争取失败；不改变人物既定行动。",
+          "start": "机位固定于：坑侧平视",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：坑侧平视",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "03-A-F1",
+            "timeSeconds": 0,
+            "description": "空坑"
+          },
+          {
+            "eventId": "03-A-F2",
+            "timeSeconds": 8,
+            "description": "淡去的香玉袖"
+          }
+        ],
+        "edit": {
+          "entry": "隔夜跳切：花已被移，香玉泥袖边缘渐淡，不补移花人。",
+          "exit": "香玉说蓝家掘走，手将指向坑角。",
+          "preferredTransition": "明确时间省略，先重建入态，保留环境声的时空边界",
+          "soundBridge": "前夜书室为纸笔衣料和原对白；次晨为院风、瓦盆轻触、既定落瓣合成声；无守卫、羊铃或追车者人声。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "03-B",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "根身份及生还均未知。",
+        "audiencePayoff": "根身份及生还均未知。",
+        "trigger": "她先指明坑角才说明不确定。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在坑沿斜俯，同侧看指尖指向而不触根，让她先指明坑角才说明不确定触发人物而非相机移动，保持根身份及生还均未知的空间参照。理由：让观众读出根身份及生还均未知；不改变人物既定行动。",
+        "focusTargetEnd": "细根",
+        "exitMatch": "细根未拔未碰；指向手收回。"
+      },
+      "camera": {
+        "shotScale": "细节近景",
+        "position": "坑沿斜俯，同侧看指尖指向而不触根",
+        "height": "工作面上方斜俯，具体高度由光学测试确定",
+        "angle": "斜俯",
+        "perspectiveIntent": "根身份及生还均未知。",
+        "focusTarget": "手指方向",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "书室窗南侧与花圃坑西南侧，花圃门/坑轴同侧",
+        "movementIntent": "固定在坑沿斜俯，同侧看指尖指向而不触根，让她先指明坑角才说明不确定触发人物而非相机移动，保持根身份及生还均未知的空间参照。理由：让观众读出根身份及生还均未知；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "工作面斜线组织，关键物件完整落画",
+        "foreground": "香玉的指向手",
+        "midground": "坑角细根",
+        "background": "湿土与白瓣",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "指尖方向与细根 → 在场人物的接收/反应 → 湿土坑角"
+      },
+      "temporal": {
+        "durationSeconds": 15,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "根身份及生还均未知。",
+          "path": "固定在坑沿斜俯，同侧看指尖指向而不触根，让她先指明坑角才说明不确定触发人物而非相机移动，保持根身份及生还均未知的空间参照。理由：让观众读出根身份及生还均未知；不改变人物既定行动。",
+          "start": "机位固定于：坑沿斜俯，同侧看指尖指向而不触根",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：坑沿斜俯，同侧看指尖指向而不触根",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "03-B-F1",
+            "timeSeconds": 0,
+            "description": "手指方向"
+          },
+          {
+            "eventId": "03-B-F2",
+            "timeSeconds": 4,
+            "description": "细根"
+          }
+        ],
+        "edit": {
+          "entry": "接03-A指向动作，根从开镜就在坑角；不重说花被掘。",
+          "exit": "细根未拔未碰；指向手收回。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "前夜书室为纸笔衣料和原对白；次晨为院风、瓦盆轻触、既定落瓣合成声；无守卫、羊铃或追车者人声。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "04",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她愿自己去看而不是被买回。",
+        "audiencePayoff": "她愿自己去看而不是被买回。",
+        "trigger": "黄生提出追车，她才问原处能否保留。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在门内侧平视，守坑与门的同侧，让黄生提出追车，她才问原处能否保留触发人物而非相机移动，保持她愿自己去看而不是被买回的空间参照。理由：让观众读出她愿自己去看而不是被买回；不改变人物既定行动。",
+        "focusTargetEnd": "香玉回应后望根",
+        "exitMatch": "黄生尚未追，香玉交代守到日落。"
+      },
+      "camera": {
+        "shotScale": "双人中景",
+        "position": "门内侧平视，守坑与门的同侧",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "她愿自己去看而不是被买回。",
+        "focusTarget": "黄生望车辙",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "书室窗南侧与花圃坑西南侧，花圃门/坑轴同侧",
+        "movementIntent": "固定在门内侧平视，守坑与门的同侧，让黄生提出追车，她才问原处能否保留触发人物而非相机移动，保持她愿自己去看而不是被买回的空间参照。理由：让观众读出她愿自己去看而不是被买回；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "坑角根所在区域",
+        "midground": "黄生香玉",
+        "background": "车辙院门",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "渐淡的手 → 在场人物的接收/反应 → 车辙与门"
+      },
+      "temporal": {
+        "durationSeconds": 38,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她愿自己去看而不是被买回。",
+          "path": "固定在门内侧平视，守坑与门的同侧，让黄生提出追车，她才问原处能否保留触发人物而非相机移动，保持她愿自己去看而不是被买回的空间参照。理由：让观众读出她愿自己去看而不是被买回；不改变人物既定行动。",
+          "start": "机位固定于：门内侧平视，守坑与门的同侧",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：门内侧平视，守坑与门的同侧",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "04-F1",
+            "timeSeconds": 0,
+            "description": "黄生望车辙"
+          },
+          {
+            "eventId": "04-F2",
+            "timeSeconds": 19,
+            "description": "香玉回应后望根"
+          }
+        ],
+        "edit": {
+          "entry": "细根未拔未碰；指向手收回。",
+          "exit": "黄生尚未追，香玉交代守到日落。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "前夜书室为纸笔衣料和原对白；次晨为院风、瓦盆轻触、既定落瓣合成声；无守卫、羊铃或追车者人声。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "05",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "守住不确定生命需具体手工。",
+        "audiencePayoff": "守住不确定生命需具体手工。",
+        "trigger": "黄生决定留下后倒扣盆。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在坑沿上方斜俯，让黄生决定留下后倒扣盆触发人物而非相机移动，保持守住不确定生命需具体手工的空间参照。理由：让观众读出守住不确定生命需具体手工；不改变人物既定行动。",
+        "focusTargetEnd": "背风侧通风缝",
+        "exitMatch": "根罩在盆下未压，背风缝敞，另一瓦遮底孔。"
+      },
+      "camera": {
+        "shotScale": "俯角近景",
+        "position": "坑沿上方斜俯",
+        "height": "工作面上方斜俯，具体高度由光学测试确定",
+        "angle": "斜俯",
+        "perspectiveIntent": "守住不确定生命需具体手工。",
+        "focusTarget": "坑旁尚未拿起的空盆",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "书室窗南侧与花圃坑西南侧，花圃门/坑轴同侧",
+        "movementIntent": "固定在坑沿上方斜俯，让黄生决定留下后倒扣盆触发人物而非相机移动，保持守住不确定生命需具体手工的空间参照。理由：让观众读出守住不确定生命需具体手工；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "工作面斜线组织，关键物件完整落画",
+        "foreground": "盆瓦与细根",
+        "midground": "黄生手",
+        "background": "香玉在后",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "空盆薄瓦与根 → 在场人物的接收/反应 → 门外车路"
+      },
+      "temporal": {
+        "durationSeconds": 25,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "守住不确定生命需具体手工。",
+          "path": "固定在坑沿上方斜俯，让黄生决定留下后倒扣盆触发人物而非相机移动，保持守住不确定生命需具体手工的空间参照。理由：让观众读出守住不确定生命需具体手工；不改变人物既定行动。",
+          "start": "机位固定于：坑沿上方斜俯",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：坑沿上方斜俯",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "05-F1",
+            "timeSeconds": 0,
+            "description": "坑旁尚未拿起的空盆"
+          },
+          {
+            "eventId": "05-F2",
+            "timeSeconds": 18,
+            "description": "背风侧通风缝"
+          }
+        ],
+        "edit": {
+          "entry": "黄生尚未追，香玉交代守到日落。",
+          "exit": "根罩在盆下未压，背风缝敞，另一瓦遮底孔。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "前夜书室为纸笔衣料和原对白；次晨为院风、瓦盆轻触、既定落瓣合成声；无守卫、羊铃或追车者人声。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "06",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她可离开，他不以照顾强留。",
+        "audiencePayoff": "她可离开，他不以照顾强留。",
+        "trigger": "她触手再说不能保证回来。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在花圃侧保持门与盆同框，让她触手再说不能保证回来触发人物而非相机移动，保持她可离开，他不以照顾强留的空间参照。理由：让观众读出她可离开，他不以照顾强留；不改变人物既定行动。",
+        "focusTargetEnd": "盆外挡风的手",
+        "exitMatch": "香玉出门渐淡，黄生留盆旁，根是否活未知。"
+      },
+      "camera": {
+        "shotScale": "平视中景",
+        "position": "花圃侧保持门与盆同框",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "她可离开，他不以照顾强留。",
+        "focusTarget": "手背接触",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "书室窗南侧与花圃坑西南侧，花圃门/坑轴同侧",
+        "movementIntent": "固定在花圃侧保持门与盆同框，让她触手再说不能保证回来触发人物而非相机移动，保持她可离开，他不以照顾强留的空间参照。理由：让观众读出她可离开，他不以照顾强留；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "盆白瓣",
+        "midground": "接触后分开的两人",
+        "background": "门与雾",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "盆外迎风手 → 在场人物的接收/反应 → 门外雾"
+      },
+      "temporal": {
+        "durationSeconds": 28,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她可离开，他不以照顾强留。",
+          "path": "固定在花圃侧保持门与盆同框，让她触手再说不能保证回来触发人物而非相机移动，保持她可离开，他不以照顾强留的空间参照。理由：让观众读出她可离开，他不以照顾强留；不改变人物既定行动。",
+          "start": "机位固定于：花圃侧保持门与盆同框",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：花圃侧保持门与盆同框",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "06-F1",
+            "timeSeconds": 0,
+            "description": "手背接触"
+          },
+          {
+            "eventId": "06-F2",
+            "timeSeconds": 22,
+            "description": "盆外挡风的手"
+          }
+        ],
+        "edit": {
+          "entry": "根罩在盆下未压，背风缝敞，另一瓦遮底孔。",
+          "exit": "香玉出门渐淡，黄生留盆旁，根是否活未知。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "前夜书室为纸笔衣料和原对白；次晨为院风、瓦盆轻触、既定落瓣合成声；无守卫、羊铃或追车者人声。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    }
+  ]
+}

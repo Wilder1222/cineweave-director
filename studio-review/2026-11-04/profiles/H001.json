@@ -1,0 +1,2628 @@
+{
+  "schemaVersion": "cineweave-production-profile/v1",
+  "topicId": "H001",
+  "title": "楼兰夜宴",
+  "revision": 1,
+  "source": {
+    "projectId": "aec0be325f5f1e3dafadfdb14739fc7420eb387a7dff6567dbf044b78f011701",
+    "scriptDocumentId": "b09c49b0b50c38ef87b207bb2538860dd832b16081d637ce5329240444011189",
+    "storyboardDocumentId": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4",
+    "reviewDocumentId": "dbe028af5503edce9dde0df61182a9e41b593c5966af1d710e94c58ba4d90b5b"
+  },
+  "patches": [
+    {
+      "documentId": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4",
+      "before": "王看向傅后取阿妍的蜡印按在木牍上",
+      "after": "王看向傅后取自己的私印按在木牍上",
+      "reason": "明确同意条款的可见授权来自王；私印形制为候选，不宣称史料与放人执行"
+    },
+    {
+      "documentId": "b09c49b0b50c38ef87b207bb2538860dd832b16081d637ce5329240444011189",
+      "before": "王看向傅后取阿妍的蜡印按在木牍上",
+      "after": "王看向傅后取自己的私印按在木牍上",
+      "reason": "明确同意条款的可见授权来自王；私印形制为候选，不宣称史料与放人执行"
+    }
+  ],
+  "creative": {
+    "logline": "翻译阿妍借楼兰王夜宴争取被扣送信人获释，逼得放人条款签发后，却亲见汉使的伏兵刺王；她不能以刺杀成功代替尚无确认的救援。",
+    "intent": "从阿妍的手和视线组织权力交换，物件逐步由礼物变成可追责承诺，结尾不给救人成功的假慰藉。",
+    "hardLocks": [
+      "三名可辨人物：王、傅、阿妍；萨合不出现，两伏兵只投影",
+      "两帐独立分场，私帐入口左/案中央/内帘右后/传信竹管门边",
+      "14实际镜231秒设计预算；04C横移，其余固定",
+      "不改既有救人目的、刺王结果与放人未确认结尾"
+    ],
+    "assumptions": [
+      "写实历史寓言外观是视觉候选，服饰不冒称考据完成",
+      "私印采用无可辨文字的几何印面，后期只为条款和姓名排字",
+      "中文录音母版使用听觉等值转述，历史异语母版尚未制作"
+    ],
+    "review": "已完整读当前3份20261031文本。换杯、递酒、松笔、回案与04C跟焦已修，旧本地问题撤回。仍需明确印的归属与逐字译语。本包同步明确私印为王所有，避免借阿妍印冒充王令；所有印文及语言方案仍为候选。"
+  },
+  "visual": {
+    "style": {
+      "medium": "写实表演、受控帐景与影偶合成；沉静的宽画幅历史寓言",
+      "rules": [
+        "人物比例自然，衣纹有重量；不美化成奇幻宫廷",
+        "前景器物边缘清晰，关键手部和身体接触不溶进暗部",
+        "宴帐锦有一处低饱和暖亮，私帐减去宴会辉光；阴影可读不纯黑",
+        "时间保持动作完整，刺杀用投影相位与身体回应而非血浆"
+      ],
+      "exclusions": [
+        "不增加已锁角色/结果；不把设计矢量卡标为生成媒体",
+        "不以景深、炫光、快切掩盖关键因果接触"
+      ]
+    },
+    "palette": [
+      {
+        "id": "P1",
+        "name": "帐麻",
+        "hex": "#75634C",
+        "use": "约半画幅织壁/地面"
+      },
+      {
+        "id": "P2",
+        "name": "夜黑",
+        "hex": "#171C21",
+        "use": "帘后和门外深度，保留层次"
+      },
+      {
+        "id": "P3",
+        "name": "锦赭",
+        "hex": "#A7603A",
+        "use": "王手中的锦小面积主注意"
+      },
+      {
+        "id": "P4",
+        "name": "灯金",
+        "hex": "#D2A66D",
+        "use": "壶杯与脸颊少量暖边"
+      },
+      {
+        "id": "P5",
+        "name": "衣灰",
+        "hex": "#687478",
+        "use": "阿妍与傅衣料分明度"
+      },
+      {
+        "id": "P6",
+        "name": "牍木",
+        "hex": "#9C8258",
+        "use": "文书与传信管，限制高光"
+      }
+    ],
+    "materials": [
+      {
+        "id": "M1",
+        "asset": "粗麻帐壁",
+        "description": "中粗织纹可见但不产生摩尔纹，偏哑光，灯侧暖、远侧冷",
+        "preserve": "内帘透光度统一，不随镜神秘变化",
+        "baseColor": "#75634C",
+        "texture": "weave"
+      },
+      {
+        "id": "M2",
+        "asset": "阿妍袖与锦",
+        "description": "袖用细哑布、锦有方向性细亮丝，锦反光比袖高但不闪烁",
+        "preserve": "旧褶和锦的案角/铺开状态",
+        "baseColor": "#A7603A",
+        "texture": "weave"
+      },
+      {
+        "id": "M3",
+        "asset": "木牍壶杯金片",
+        "description": "牍哑木纹，杯釉柔亮、壶旧陶粗糙，金片为暗金短高光",
+        "preserve": "裂杯、换杯、私印、金片只在规定位置",
+        "baseColor": "#9C8258",
+        "texture": "grain"
+      }
+    ],
+    "lighting": [
+      {
+        "id": "L1",
+        "sourceId": "BANQUET_LAMP",
+        "position": "宴帐案侧左前离地1.4m",
+        "quality": "宽柔暖面主光，右侧负补，背景再低1档",
+        "intent": "让换杯无声动作先于王捻锦被读到"
+      },
+      {
+        "id": "L2",
+        "sourceId": "TENT_LAMP",
+        "position": "私帐南侧案前离地1.5m",
+        "quality": "柔主光包住三脸和牍，禁止它把伏兵真身映出",
+        "intent": "保持案—门移动手部曝光"
+      },
+      {
+        "id": "L3",
+        "sourceId": "SHADOW_SOURCE",
+        "position": "私帐内帘后右方，独立受控影偶光",
+        "quality": "小硬光仅作用于帘，遮扉不溢到表演区",
+        "intent": "三影可分，不混成一个无因黑团"
+      }
+    ],
+    "characters": [
+      {
+        "id": "C1",
+        "name": "阿妍",
+        "identity": "成年翻译，谨慎而有执行力；脸型、发际线候选一次锁定",
+        "costume": "灰褐窄袖哑布，便于取笔牍和拿壶",
+        "voice": "低中声区，要求先放人时平直明确，后段不以哭喊代替行动",
+        "prompt": "角色资产候选：成年女性翻译阿妍，灰褐窄袖哑布衣，自然疲惫、目光警觉，双手空，半身与全身并排设计，柔暖侧光与冷暗背景，写实材质，发型脸型保持统一，无字无武器，不增加传奇纹饰。"
+      },
+      {
+        "id": "C2",
+        "name": "傅",
+        "identity": "成年汉使，自持并轻微醉意，面部不过度醉红",
+        "costume": "深灰旅行袍，手部可伸展",
+        "voice": "中低声，礼貌邀请与威告有相同控制欲",
+        "prompt": "角色资产候选：成年汉使傅，深灰旅行袍、自然肤质，站立持空手姿态与坐姿表情对照，轻微酒意仍能站稳，写实帐景暖侧光，无字不持剑，人物面孔和衣襟稳定。"
+      },
+      {
+        "id": "C3",
+        "name": "王",
+        "identity": "成年楼兰王，警惕赏赐与身后动静，外貌为候选",
+        "costume": "低饱和赭褐袍，无夸张金冠",
+        "voice": "低沉慢问，压笔时语尾短促",
+        "prompt": "角色资产候选：成年楼兰王，低饱和赭褐袍、克制权力标识，眼神防备，站立和坐姿自然比例，怀中锦另作为可选状态板，暖面冷轮廓，写实无字，不夸张奢华冠饰。"
+      }
+    ],
+    "assets": [
+      {
+        "id": "A1",
+        "name": "宴帐全景",
+        "prompt": "场景候选：夜间织物宴帐，低案中央、王座位画左、汉使画右、翻译在后，出门在画左，案上锦和两杯一壶依当前镜状态，宽幅写实暖侧光，留出换杯双手可读平面，空场无人物无文字，不添加武器。"
+      },
+      {
+        "id": "A2",
+        "name": "私帐空间",
+        "prompt": "场景候选：夜间相邻私帐，入口画左、案中央、内帘右后、竹管位于门帘边、横杆近门左外可见；案前南侧有可达机位，内帘可投独立影偶，空场、哑麻与旧木、暖柔案光加受控硬影光，不出现第四人物、不写文字。"
+      },
+      {
+        "id": "A3",
+        "name": "文书器物状态",
+        "prompt": "道具状态板候选：哑木牍、笔、王的几何私印、传信竹管，分别独立清晰摆放，木牍留后期文字空位；再示杯沿裂口、新杯、旧陶壶、暗金片和折叠锦，无可辨生成字，真实尺度与可握厚度，柔侧光黑白反光对照。"
+      }
+    ],
+    "lookdev": [
+      {
+        "id": "LD1",
+        "target": "人物近景",
+        "prompt": "阿妍灰褐窄袖半身，私帐暖柔光，脸和持牍手处同一可读曝光，背景内帘暗而有织纹；不持多余物。",
+        "fixed": [
+          "阿妍身份/服装",
+          "私帐南主光"
+        ],
+        "compare": "主光软度两档",
+        "pass": [
+          "两眼和持牍手均可读",
+          "袖与帘色不融"
+        ],
+        "fail": "脸灰化/手发亮脱体/私自变脸"
+      },
+      {
+        "id": "LD2",
+        "target": "场景",
+        "prompt": "私帐空景：入口左、案中央、内帘右后、竹管门旁，南侧广角观察；不露伏兵真身。",
+        "fixed": [
+          "门案帘坐标",
+          "3人规模"
+        ],
+        "compare": "案到门距离1.2m/1.8m候选",
+        "pass": [
+          "三点关系一眼可读",
+          "04C横移通道不穿案"
+        ],
+        "fail": "竹管漂移/门案互换/通道被堵"
+      },
+      {
+        "id": "LD3",
+        "target": "材质",
+        "prompt": "裂杯、新杯、壶、锦、木牍和王私印的同光材质测试，哑木与旧陶保持差异，不生文字。",
+        "fixed": [
+          "器物形状/比例"
+        ],
+        "compare": "粗糙度一项变化",
+        "pass": [
+          "裂沿可读但无尖锐实拍风险",
+          "锦高光不抢脸"
+        ],
+        "fail": "金属化皮肤/壶杯熔合/自动印字"
+      },
+      {
+        "id": "LD4",
+        "target": "内外转换",
+        "prompt": "阿妍从私帐内到门外横杆旁的双区域光位测试，暖面光自然衰减到冷夜反光，横杆端部始终可见。",
+        "fixed": [
+          "门口与横杆位置"
+        ],
+        "compare": "门外补光强度",
+        "pass": [
+          "人出门不突然换脸或消失",
+          "杆停位置可分辨"
+        ],
+        "fail": "门内外同一曝光平面/杆穿身"
+      },
+      {
+        "id": "LD5",
+        "target": "反打",
+        "prompt": "案侧王与傅阿妍的同轴反向机位照明对照，南侧轴线不越，保持私印、锦与杯的位置。",
+        "fixed": [
+          "人物座序",
+          "光源世界位置"
+        ],
+        "compare": "机位左右两端",
+        "pass": [
+          "暖光始终来自同一世界侧",
+          "视线相接而非同向看空处"
+        ],
+        "fail": "反打光源翻面/人物位置交换"
+      },
+      {
+        "id": "LD6",
+        "target": "影接触",
+        "prompt": "以王躯干影与两独立影偶在麻帘上的几何板做刺杀替代，两个短刃影先接触后王抓案倒地，真身不入画。",
+        "fixed": [
+          "两道独立影",
+          "无锐刃接触演员"
+        ],
+        "compare": "影光与帘距离",
+        "pass": [
+          "三个影轮廓能区分",
+          "接触前没有倒地反应"
+        ],
+        "fail": "影先融成一团/刀影浮空/第四真身出现"
+      }
+    ]
+  },
+  "space": {
+    "coordinate": "设计平面，x东增、y北增；观众常在南侧，入口西侧投影为画左。非实测米制图。",
+    "anchors": [
+      {
+        "id": "DOOR",
+        "label": "左门",
+        "x": 12,
+        "y": 48,
+        "description": "门帘与安全横杆区相邻，通道宽至少1人"
+      },
+      {
+        "id": "TABLE",
+        "label": "中央案",
+        "x": 52,
+        "y": 53,
+        "description": "案到门设计1.2–1.8m供04C排练"
+      },
+      {
+        "id": "CURTAIN",
+        "label": "内帘",
+        "x": 78,
+        "y": 78,
+        "description": "双影合成平面，不露真身"
+      },
+      {
+        "id": "TUBE",
+        "label": "传信管",
+        "x": 16,
+        "y": 54,
+        "description": "阿妍持牍能单手投，非自动送达"
+      },
+      {
+        "id": "BAR",
+        "label": "横杆",
+        "x": 6,
+        "y": 42,
+        "description": "受控停止，无真实压人载荷"
+      },
+      {
+        "id": "PROP",
+        "label": "壶与金片落点",
+        "x": 48,
+        "y": 43,
+        "description": "案旁与脚边两态按镜切换"
+      }
+    ],
+    "lights": [
+      {
+        "id": "L1",
+        "label": "案前柔灯",
+        "x": 40,
+        "y": 12,
+        "description": "朝北，面光",
+        "targetX": 52,
+        "targetY": 53
+      },
+      {
+        "id": "L2",
+        "label": "影偶硬光",
+        "x": 92,
+        "y": 92,
+        "description": "朝内帘受控区域",
+        "targetX": 52,
+        "targetY": 53
+      }
+    ],
+    "cameraZones": "南侧案外弧区固定机位；04C沿南边向西平移，04C不得绕到门北侧；影偶区独立。",
+    "geography": "宴帐与私帐分场靠明确省略转接。私帐门—案—内帘三点先于拦杆建立。横杆在门外左侧，一步可达；竹管在同门边，04C由案到管步行不穿桌。案上留笔印落点，锦案角不占投递通道。"
+  },
+  "blocking": [
+    {
+      "character": "阿妍",
+      "task": "争取萨合先被放",
+      "path": "宴帐后位→案边换杯→随两人入私帐→门外挡杆→确认托住后回案→投牍→回案→离帐",
+      "gaze": "杯裂口→王手压笔→杆停→私印/牍→管口无回音→王倒→傅",
+      "props": "换杯前落壶；写名后搁笔；金片先拾放案；最后提壶",
+      "residual": "最终携壶离开，萨合仍未见"
+    },
+    {
+      "character": "王",
+      "task": "保留对萨合与使节的控制",
+      "path": "宴帐坐位→抱锦到私帐→案边放锦→转向傅背内帘→倒锦旁",
+      "gaze": "锦→阿妍抗命→傅→内帘→傅",
+      "props": "两杯留宴帐；锦放私帐案角；私印按牍后留案",
+      "residual": "倒地，不补死后对白"
+    },
+    {
+      "character": "傅",
+      "task": "引王离宴及执行政治行动",
+      "path": "宴帐右位→提壶入私帐落壶→案旁挡王视线→帘口威告→留帐",
+      "gaze": "阿妍要求→王→内帘→门外脚步",
+      "props": "提壶示意后放回，末尾不再持壶",
+      "residual": "留帐，不能替萨合回答"
+    }
+  ],
+  "shots": [
+    {
+      "id": "H001-01A",
+      "title": "宴帐·换杯",
+      "durationSeconds": 12.0,
+      "source": {
+        "documentId": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4",
+        "startLine": 7,
+        "endLine": 26
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "无声关照先于政治赏赐。",
+      "purpose": "无声关照先于政治赏赐。",
+      "entry": "裂杯在傅前，阿妍持壶在后。",
+      "exit": "新杯傅前、裂杯移案侧、壶已稳放案边，阿妍双手空。",
+      "camera": {
+        "scale": "中景",
+        "position": "案前同侧朝阿妍换杯。",
+        "height": "坐姿王胸口高度，轻俯案面",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "宴帐案前侧；私帐门—案轴南侧，04C沿南侧横移不越轴",
+        "perspective": "无声换杯先于政治交涉；12秒只交代阿妍在意具体人的处境",
+        "type": "static",
+        "movement": "固定在案前同侧朝阿妍换杯，让正文行动按本镜时间轨依次发生触发人物而非相机移动，保持无声关照先于政治赏赐的空间参照。理由：让观众读出无声关照先于政治赏赐；不改变人物既定行动。",
+        "trigger": "她见裂沿后先落壶，关照不靠夸张怜悯脸",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦裂杯与换杯双手"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中景；案前同侧朝阿妍换杯。高度：坐姿王胸口高度，轻俯案面。前景裂杯和新杯；中景阿妍双手与傅；后景王和锦。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；案前同侧朝阿妍换杯。高度：坐姿王胸口高度，轻俯案面。前景裂杯和新杯；中景阿妍双手与傅；后景王和锦。保留行动方向的余地，不增加演员或道具。",
+        "midground": "双手换杯前壶落案边；新杯停傅前、裂杯案侧",
+        "background": "宴帐织壁；私帐右后内帘、门口横杆与传信管按镜分场，不增加萨合实体",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "无声换杯先于政治交涉；12秒只交代阿妍在意具体人的处境"
+      },
+      "sound": "宴帐布幕轻响与杯壶接触；私帐风推帘与衣料、远脚步；只有王、傅、阿妍可辨对白，双影无可辨说话声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "无声换杯先于政治交涉",
+          "observation": "无声换杯先于政治交涉；12秒只交代阿妍在意具体人的处境",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L7–L26"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "她见裂沿后先落壶，关照不靠夸张怜悯脸",
+          "observation": "她见裂沿后先落壶，关照不靠夸张怜悯脸",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L7–L26"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "双手换杯前壶落案边",
+          "observation": "双手换杯前壶落案边；新杯停傅前、裂杯案侧",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L7–L26"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "案前中景轻俯同时含裂杯/换杯手/傅，固定让接触有尺度",
+          "observation": "案前中景轻俯同时含裂杯/换杯手/傅，固定让接触有尺度",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L7–L26"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "独立稿明确三人及两帐，换杯没有隐含特写剪接",
+          "observation": "独立稿明确三人及两帐，换杯没有隐含特写剪接",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L7–L26"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "下镜承接新杯傅前、阿妍空手",
+          "observation": "下镜承接新杯傅前、阿妍空手；锦仍在王手下",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L7–L26"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "王",
+            "x": 25,
+            "y": 48,
+            "scale": 0.8,
+            "pose": "坐位捻锦"
+          },
+          {
+            "label": "傅",
+            "x": 70,
+            "y": 48,
+            "scale": 0.8,
+            "pose": "看换入新杯"
+          },
+          {
+            "label": "阿妍",
+            "x": 52,
+            "y": 40,
+            "scale": 0.75,
+            "pose": "双手推新杯；壶已放"
+          }
+        ],
+        "props": [
+          {
+            "label": "案",
+            "x": 15,
+            "y": 63,
+            "width": 70,
+            "height": 10,
+            "shape": "rect"
+          },
+          {
+            "label": "锦",
+            "x": 25,
+            "y": 61,
+            "width": 15,
+            "height": 5,
+            "shape": "rect"
+          },
+          {
+            "label": "裂杯",
+            "x": 80,
+            "y": 59,
+            "width": 5,
+            "height": 5,
+            "shape": "circle"
+          },
+          {
+            "label": "新杯",
+            "x": 61,
+            "y": 60,
+            "width": 5,
+            "height": 5,
+            "shape": "circle"
+          },
+          {
+            "label": "壶落点",
+            "x": 47,
+            "y": 70,
+            "width": 6,
+            "height": 8,
+            "shape": "rect"
+          }
+        ],
+        "layers": []
+      }
+    },
+    {
+      "id": "H001-01B",
+      "title": "宴帐·赏锦",
+      "durationSeconds": 17.0,
+      "source": {
+        "documentId": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4",
+        "startLine": 27,
+        "endLine": 46
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "宴礼含有方向盘问。",
+      "purpose": "宴礼含有方向盘问。",
+      "entry": "新杯停傅前，锦仍案上。",
+      "exit": "王手按锦，傅手撤回。",
+      "camera": {
+        "scale": "中景",
+        "position": "案前原轴平视。",
+        "height": "坐姿王眼线高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "宴帐案前侧；私帐门—案轴南侧，04C沿南侧横移不越轴",
+        "perspective": "王的西行盘问把赏锦变成政治试探",
+        "type": "static",
+        "movement": "固定在案前原轴平视，让正文行动按本镜时间轨依次发生触发人物而非相机移动，保持宴礼含有方向盘问的空间参照。理由：让观众读出宴礼含有方向盘问；不改变人物既定行动。",
+        "trigger": "王捻锦先问；阿妍转述后傅才推锦答，不提前微笑保证",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦王捻锦的手与脸"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中景；案前原轴平视。高度：坐姿王眼线高度。前景案上锦；中景王傅阿妍；后景帐帘。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；案前原轴平视。高度：坐姿王眼线高度。前景案上锦；中景王傅阿妍；后景帐帘。保留行动方向的余地，不增加演员或道具。",
+        "midground": "王按锦与傅撤手为出态，三人桌侧顺序不换",
+        "background": "宴帐织壁；私帐右后内帘、门口横杆与传信管按镜分场，不增加萨合实体",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "王的西行盘问把赏锦变成政治试探"
+      },
+      "sound": "宴帐布幕轻响与杯壶接触；私帐风推帘与衣料、远脚步；只有王、傅、阿妍可辨对白，双影无可辨说话声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [
+        {
+          "speaker": "王",
+          "text": "汉使要赏我，为何先往西走？",
+          "addressee": "阿妍/傅",
+          "performance": "捻锦问，试探西行而非怒吼",
+          "startSeconds": 0,
+          "endSeconds": 5
+        },
+        {
+          "speaker": "阿妍",
+          "text": "汉使要赏我，为何先往西走？",
+          "addressee": "傅",
+          "performance": "目光转傅，作为王话听觉等值译语",
+          "startSeconds": 5,
+          "endSeconds": 10
+        },
+        {
+          "speaker": "傅",
+          "text": "王若喜欢，自可留下。",
+          "addressee": "王",
+          "performance": "推锦才答，礼貌但不承诺救人",
+          "startSeconds": 10,
+          "endSeconds": 15
+        }
+      ],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "王的西行盘问把赏锦变成政治试探",
+          "observation": "王的西行盘问把赏锦变成政治试探",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L27–L46"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "王捻锦先问",
+          "observation": "王捻锦先问；阿妍转述后傅才推锦答，不提前微笑保证",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L27–L46"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "王按锦与傅撤手为出态，三人桌侧顺序不换",
+          "observation": "王按锦与傅撤手为出态，三人桌侧顺序不换",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L27–L46"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "原轴平视保留王手按锦和傅手退的同一平面",
+          "observation": "原轴平视保留王手按锦和傅手退的同一平面",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L27–L46"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "台词补听觉等值译句，中文录音不臆造历史异语",
+          "observation": "台词补听觉等值译句，中文录音不臆造历史异语",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L27–L46"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "杯未被再次拿起，锦仍案上，为02A落壶/递酒留位",
+          "observation": "杯未被再次拿起，锦仍案上，为02A落壶/递酒留位",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L27–L46"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "王",
+            "x": 28,
+            "y": 52,
+            "scale": 0.85,
+            "pose": "按锦"
+          },
+          {
+            "label": "傅",
+            "x": 70,
+            "y": 52,
+            "scale": 0.85,
+            "pose": "推锦后撤手"
+          },
+          {
+            "label": "阿妍",
+            "x": 50,
+            "y": 35,
+            "scale": 0.65,
+            "pose": "转述王问"
+          }
+        ],
+        "props": [
+          {
+            "label": "案",
+            "x": 17,
+            "y": 68,
+            "width": 66,
+            "height": 10,
+            "shape": "rect"
+          },
+          {
+            "label": "锦",
+            "x": 29,
+            "y": 63,
+            "width": 24,
+            "height": 5,
+            "shape": "rect"
+          },
+          {
+            "label": "新杯",
+            "x": 65,
+            "y": 65,
+            "width": 5,
+            "height": 5,
+            "shape": "circle"
+          }
+        ],
+        "layers": []
+      }
+    },
+    {
+      "id": "H001-02A",
+      "title": "宴帐·先放人",
+      "durationSeconds": 22.0,
+      "source": {
+        "documentId": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4",
+        "startLine": 47,
+        "endLine": 66
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "争取萨合释放不是接受寻人空诺。",
+      "purpose": "争取萨合释放不是接受寻人空诺。",
+      "entry": "王按锦，阿妍空手，壶在案边尚未再取。",
+      "exit": "壶落案边，酒杯递到王面前。",
+      "camera": {
+        "scale": "近中景",
+        "position": "案侧看阿妍与傅，王同层后侧。",
+        "height": "坐姿傅眼线高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "宴帐案前侧；私帐门—案轴南侧，04C沿南侧横移不越轴",
+        "perspective": "阿妍把找人与先放人明确区分，王的抬眼终止低声通道",
+        "type": "static",
+        "movement": "固定在案侧看阿妍与傅，王同层后侧，让正文行动按本镜时间轨依次发生触发人物而非相机移动，保持争取萨合释放不是接受寻人空诺的空间参照。理由：让观众读出争取萨合释放不是接受寻人空诺；不改变人物既定行动。",
+        "trigger": "先低头斟酒，要求被敷衍才重说先放人；抬眼刺激后直身",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦阿妍低语与傅回应"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "近中景；案侧看阿妍与傅，王同层后侧。高度：坐姿傅眼线高度。前景壶与递酒杯；中景阿妍傅；后景抬眼的王。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "近中景；案侧看阿妍与傅，王同层后侧。高度：坐姿傅眼线高度。前景壶与递酒杯；中景阿妍傅；后景抬眼的王。保留行动方向的余地，不增加演员或道具。",
+        "midground": "取壶—斟酒—低语—落壶—递杯先后已成立",
+        "background": "宴帐织壁；私帐右后内帘、门口横杆与传信管按镜分场，不增加萨合实体",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "阿妍把找人与先放人明确区分，王的抬眼终止低声通道"
+      },
+      "sound": "宴帐布幕轻响与杯壶接触；私帐风推帘与衣料、远脚步；只有王、傅、阿妍可辨对白，双影无可辨说话声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [
+        {
+          "speaker": "阿妍",
+          "text": "送信使者萨合还扣着。他不是兵。",
+          "addressee": "傅",
+          "performance": "斟酒低语，萨合清晰可听",
+          "startSeconds": 3,
+          "endSeconds": 8
+        },
+        {
+          "speaker": "傅",
+          "text": "我会让人去找。",
+          "addressee": "阿妍",
+          "performance": "压低声但仍是空诺",
+          "startSeconds": 8,
+          "endSeconds": 11
+        },
+        {
+          "speaker": "阿妍",
+          "text": "我要他先放人。",
+          "addressee": "傅",
+          "performance": "短而直，重音先",
+          "startSeconds": 11,
+          "endSeconds": 15
+        }
+      ],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "阿妍把找人与先放人明确区分，王的抬眼终止低声通道",
+          "observation": "阿妍把找人与先放人明确区分，王的抬眼终止低声通道",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L47–L66"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "先低头斟酒，要求被敷衍才重说先放人",
+          "observation": "先低头斟酒，要求被敷衍才重说先放人；抬眼刺激后直身",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L47–L66"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "取壶—斟酒—低语—落壶—递杯先后已成立",
+          "observation": "取壶—斟酒—低语—落壶—递杯先后已成立",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L47–L66"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "案侧近中景同含王抬眼与壶杯落点，焦点不靠脸虚化遮手",
+          "observation": "案侧近中景同含王抬眼与壶杯落点，焦点不靠脸虚化遮手",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L47–L66"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "现稿修复斟酒后仍持壶递酒的问题，母稿保持修复",
+          "observation": "现稿修复斟酒后仍持壶递酒的问题，母稿保持修复",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L47–L66"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "出态壶案边/杯王前，02B王接杯不凭空换手",
+          "observation": "出态壶案边/杯王前，02B王接杯不凭空换手",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L47–L66"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "阿妍",
+            "x": 43,
+            "y": 49,
+            "scale": 1,
+            "pose": "先落壶再递杯"
+          },
+          {
+            "label": "傅",
+            "x": 68,
+            "y": 49,
+            "scale": 1,
+            "pose": "低声回应"
+          },
+          {
+            "label": "王",
+            "x": 80,
+            "y": 31,
+            "scale": 0.65,
+            "pose": "抬眼"
+          }
+        ],
+        "props": [
+          {
+            "label": "壶落案边",
+            "x": 27,
+            "y": 72,
+            "width": 9,
+            "height": 12,
+            "shape": "rect"
+          },
+          {
+            "label": "递杯",
+            "x": 52,
+            "y": 59,
+            "width": 6,
+            "height": 6,
+            "shape": "circle"
+          },
+          {
+            "label": "锦",
+            "x": 74,
+            "y": 53,
+            "width": 15,
+            "height": 6,
+            "shape": "rect"
+          }
+        ],
+        "layers": []
+      }
+    },
+    {
+      "id": "H001-02B",
+      "title": "宴帐·移步",
+      "durationSeconds": 17.0,
+      "source": {
+        "documentId": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4",
+        "startLine": 67,
+        "endLine": 86
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "饮后晃动使邀请私话带危险而非倒醉。",
+      "purpose": "饮后晃动使邀请私话带危险而非倒醉。",
+      "entry": "王接杯，壶已案边。",
+      "exit": "两杯留案，王抱锦、傅提壶、阿妍跟出。",
+      "camera": {
+        "scale": "中景",
+        "position": "宴帐侧面固定含出门方向。",
+        "height": "坐姿人物胸口高度，抬身后仍含至腰",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "宴帐案前侧；私帐门—案轴南侧，04C沿南侧横移不越轴",
+        "perspective": "饮后晃而稳使邀请危险仍可执行，不写成醉倒",
+        "type": "static",
+        "movement": "固定在宴帐侧面固定含出门方向，让正文行动按本镜时间轨依次发生触发人物而非相机移动，保持饮后晃动使邀请私话带危险而非倒醉的空间参照。理由：让观众读出饮后晃动使邀请私话带危险而非倒醉；不改变人物既定行动。",
+        "trigger": "傅放杯微晃又稳住后邀请；王听译才抱锦",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦傅饮尽后停顿"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中景；宴帐侧面固定含出门方向。高度：坐姿人物胸口高度，抬身后仍含至腰。前景两只酒杯；中景三人饮酒与起身；后景入口。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；宴帐侧面固定含出门方向。高度：坐姿人物胸口高度，抬身后仍含至腰。前景两只酒杯；中景三人饮酒与起身；后景入口。保留行动方向的余地，不增加演员或道具。",
+        "midground": "两杯留宴帐，王抱锦、傅取壶、阿妍跟出",
+        "background": "宴帐织壁；私帐右后内帘、门口横杆与传信管按镜分场，不增加萨合实体",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "饮后晃而稳使邀请危险仍可执行，不写成醉倒"
+      },
+      "sound": "宴帐布幕轻响与杯壶接触；私帐风推帘与衣料、远脚步；只有王、傅、阿妍可辨对白，双影无可辨说话声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [
+        {
+          "speaker": "傅",
+          "text": "天子有私话，请王移步。",
+          "addressee": "阿妍/王",
+          "performance": "稳住身后才邀，声音控制住",
+          "startSeconds": 6,
+          "endSeconds": 9
+        },
+        {
+          "speaker": "阿妍",
+          "text": "天子有私话，请王移步。",
+          "addressee": "王",
+          "performance": "中性转述，未替傅担保",
+          "startSeconds": 9,
+          "endSeconds": 12
+        }
+      ],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "饮后晃而稳使邀请危险仍可执行，不写成醉倒",
+          "observation": "饮后晃而稳使邀请危险仍可执行，不写成醉倒",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L67–L86"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "傅放杯微晃又稳住后邀请",
+          "observation": "傅放杯微晃又稳住后邀请；王听译才抱锦",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L67–L86"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "两杯留宴帐，王抱锦、傅取壶、阿妍跟出",
+          "observation": "两杯留宴帐，王抱锦、傅取壶、阿妍跟出",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L67–L86"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "侧面中景留门方向，起身不因坐姿构图截头，需现场核高度",
+          "observation": "侧面中景留门方向，起身不因坐姿构图截头，需现场核高度",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L67–L86"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "“天子有私话”两遍中文听觉等值译语单独录制，17秒仍待实读",
+          "observation": "“天子有私话”两遍中文听觉等值译语单独录制，17秒仍待实读",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L67–L86"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "03A省略两帐路程，只保留抱锦/提壶状态",
+          "observation": "03A省略两帐路程，只保留抱锦/提壶状态",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L67–L86"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "王",
+            "x": 32,
+            "y": 42,
+            "scale": 0.85,
+            "pose": "抱锦向左门"
+          },
+          {
+            "label": "傅",
+            "x": 57,
+            "y": 44,
+            "scale": 0.85,
+            "pose": "提壶跟出"
+          },
+          {
+            "label": "阿妍",
+            "x": 79,
+            "y": 46,
+            "scale": 0.85,
+            "pose": "跟出"
+          }
+        ],
+        "props": [
+          {
+            "label": "两杯留案",
+            "x": 57,
+            "y": 72,
+            "width": 16,
+            "height": 7,
+            "shape": "rect"
+          },
+          {
+            "label": "锦在怀",
+            "x": 28,
+            "y": 42,
+            "width": 12,
+            "height": 8,
+            "shape": "rect"
+          },
+          {
+            "label": "壶",
+            "x": 54,
+            "y": 55,
+            "width": 6,
+            "height": 10,
+            "shape": "rect"
+          },
+          {
+            "label": "出门",
+            "x": 2,
+            "y": 20,
+            "width": 13,
+            "height": 57,
+            "shape": "rect"
+          }
+        ],
+        "layers": []
+      }
+    },
+    {
+      "id": "H001-03A",
+      "title": "私帐·帘后双影",
+      "durationSeconds": 11.0,
+      "source": {
+        "documentId": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4",
+        "startLine": 87,
+        "endLine": 106
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "新空间先建立壶落点与伏兵影。",
+      "purpose": "新空间先建立壶落点与伏兵影。",
+      "entry": "省略两帐路程；王抱锦、傅提壶从门左入，阿妍随后。",
+      "exit": "壶案旁，王抱锦，阿妍在入口发现杆落。",
+      "camera": {
+        "scale": "中景",
+        "position": "私帐门对侧朝门和右后内帘。",
+        "height": "站立傅胸口高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "宴帐案前侧；私帐门—案轴南侧，04C沿南侧横移不越轴",
+        "perspective": "新空间先建门案帘三点，观众先知潜在威胁",
+        "type": "static",
+        "movement": "固定在私帐门对侧朝门和右后内帘，让正文行动按本镜时间轨依次发生触发人物而非相机移动，保持新空间先建立壶落点与伏兵影的空间参照。理由：让观众读出新空间先建立壶落点与伏兵影；不改变人物既定行动。",
+        "trigger": "王先入傅随后，傅壶落稳后帘掀，两影各自移动",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦门口进入的王傅"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中景；私帐门对侧朝门和右后内帘。高度：站立傅胸口高度。前景门帘边竹管；中景王傅入帐；后景内帘双影。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；私帐门对侧朝门和右后内帘。高度：站立傅胸口高度。前景门帘边竹管；中景王傅入帐；后景内帘双影。保留行动方向的余地，不增加演员或道具。",
+        "midground": "壶落案旁、王仍抱锦，阿妍停门口可抢横杆",
+        "background": "宴帐织壁；私帐右后内帘、门口横杆与传信管按镜分场，不增加萨合实体",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "新空间先建门案帘三点，观众先知潜在威胁"
+      },
+      "sound": "宴帐布幕轻响与杯壶接触；私帐风推帘与衣料、远脚步；只有王、傅、阿妍可辨对白，双影无可辨说话声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "新空间先建门案帘三点，观众先知潜在威胁",
+          "observation": "新空间先建门案帘三点，观众先知潜在威胁",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L87–L106"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "王先入傅随后，傅壶落稳后帘掀，两影各自移动",
+          "observation": "王先入傅随后，傅壶落稳后帘掀，两影各自移动",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L87–L106"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "壶落案旁、王仍抱锦，阿妍停门口可抢横杆",
+          "observation": "壶落案旁、王仍抱锦，阿妍停门口可抢横杆",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L87–L106"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "门对侧固定中景保留管作前景、帘作后景，双影不靠切插",
+          "observation": "门对侧固定中景保留管作前景、帘作后景，双影不靠切插",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L87–L106"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "独立稿明确私帐换场与两影仅投影，11秒不延伸刺杀",
+          "observation": "独立稿明确私帐换场与两影仅投影，11秒不延伸刺杀",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L87–L106"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "03B杆开始下降必须从本镜末阿妍的门口观察接上",
+          "observation": "03B杆开始下降必须从本镜末阿妍的门口观察接上",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L87–L106"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "王",
+            "x": 29,
+            "y": 47,
+            "scale": 0.85,
+            "pose": "抱锦先入"
+          },
+          {
+            "label": "傅",
+            "x": 50,
+            "y": 48,
+            "scale": 0.85,
+            "pose": "将壶放案旁"
+          },
+          {
+            "label": "阿妍",
+            "x": 15,
+            "y": 52,
+            "scale": 0.8,
+            "pose": "门口看杆"
+          }
+        ],
+        "props": [
+          {
+            "label": "门与管",
+            "x": 2,
+            "y": 23,
+            "width": 12,
+            "height": 55,
+            "shape": "rect"
+          },
+          {
+            "label": "案",
+            "x": 42,
+            "y": 68,
+            "width": 33,
+            "height": 10,
+            "shape": "rect"
+          },
+          {
+            "label": "壶落点",
+            "x": 43,
+            "y": 65,
+            "width": 6,
+            "height": 8,
+            "shape": "rect"
+          }
+        ],
+        "layers": [
+          {
+            "label": "右后内帘，两道独立人影",
+            "x": 70,
+            "y": 12,
+            "width": 28,
+            "height": 51,
+            "color": "#625745",
+            "opacity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "H001-03B",
+      "title": "私帐门口·拦杆",
+      "durationSeconds": 17.0,
+      "source": {
+        "documentId": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4",
+        "startLine": 107,
+        "endLine": 126
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "她以行动迫使放人问题被回应。",
+      "purpose": "她以行动迫使放人问题被回应。",
+      "entry": "杆正落，阿妍门内空手，王抱锦。",
+      "exit": "阿妍挡杆，王刚抬手。",
+      "camera": {
+        "scale": "中全景",
+        "position": "帐内门轴同侧透门看横杆接触。",
+        "height": "站立阿妍腰部高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "宴帐案前侧；私帐门—案轴南侧，04C沿南侧横移不越轴",
+        "perspective": "拦杆让救人诉求变成可见代价，先拦再说",
+        "type": "static",
+        "movement": "固定在帐内门轴同侧透门看横杆接触，让正文行动按本镜时间轨依次发生触发人物而非相机移动，保持她以行动迫使放人问题被回应的空间参照。理由：让观众读出她以行动迫使放人问题被回应；不改变人物既定行动。",
+        "trigger": "她由门口抢左外杆，身体阻挡后才能发言；王回头命让开",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦阿妍冲向横杆"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中全景；帐内门轴同侧透门看横杆接触。高度：站立阿妍腰部高度。前景门框；中景阿妍拦杆全身；后景帐内王傅。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中全景；帐内门轴同侧透门看横杆接触。高度：站立阿妍腰部高度。前景门框；中景阿妍拦杆全身；后景帐内王傅。保留行动方向的余地，不增加演员或道具。",
+        "midground": "软道具杆在固定铰接区停止，不能压演员；画外托手不露脸",
+        "background": "宴帐织壁；私帐右后内帘、门口横杆与传信管按镜分场，不增加萨合实体",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "拦杆让救人诉求变成可见代价，先拦再说"
+      },
+      "sound": "宴帐布幕轻响与杯壶接触；私帐风推帘与衣料、远脚步；只有王、傅、阿妍可辨对白，双影无可辨说话声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [
+        {
+          "speaker": "王",
+          "text": "让开。",
+          "addressee": "阿妍",
+          "performance": "先回头看接触，短命令",
+          "startSeconds": 4,
+          "endSeconds": 7
+        },
+        {
+          "speaker": "阿妍",
+          "text": "先放萨合。他给我送过信，不是兵。",
+          "addressee": "王",
+          "performance": "受力下说，急但语义完整",
+          "startSeconds": 7,
+          "endSeconds": 14
+        }
+      ],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "拦杆让救人诉求变成可见代价，先拦再说",
+          "observation": "拦杆让救人诉求变成可见代价，先拦再说",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L107–L126"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "她由门口抢左外杆，身体阻挡后才能发言",
+          "observation": "她由门口抢左外杆，身体阻挡后才能发言；王回头命让开",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L107–L126"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "软道具杆在固定铰接区停止，不能压演员",
+          "observation": "软道具杆在固定铰接区停止，不能压演员；画外托手不露脸",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L107–L126"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "腰高全身中全景同含门框、接触点、王傅，暗部不吞杆",
+          "observation": "腰高全身中全景同含门框、接触点、王傅，暗部不吞杆",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L107–L126"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "17秒是整拦杆与两句对白预算，不能将冲向与接触藏成切镜",
+          "observation": "17秒是整拦杆与两句对白预算，不能将冲向与接触藏成切镜",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L107–L126"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "03C承接她仍挡杆，不能已松手或自行抬杆",
+          "observation": "03C承接她仍挡杆，不能已松手或自行抬杆",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L107–L126"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "阿妍",
+            "x": 29,
+            "y": 52,
+            "scale": 0.9,
+            "pose": "门左外身体挡杆"
+          },
+          {
+            "label": "王",
+            "x": 74,
+            "y": 43,
+            "scale": 0.65,
+            "pose": "帐内回头令让开"
+          },
+          {
+            "label": "傅",
+            "x": 88,
+            "y": 42,
+            "scale": 0.65,
+            "pose": "案旁"
+          }
+        ],
+        "props": [
+          {
+            "label": "门框",
+            "x": 43,
+            "y": 16,
+            "width": 5,
+            "height": 67,
+            "shape": "rect"
+          },
+          {
+            "label": "受控横杆",
+            "x": 4,
+            "y": 48,
+            "width": 35,
+            "height": 5,
+            "shape": "rect"
+          },
+          {
+            "label": "案",
+            "x": 66,
+            "y": 67,
+            "width": 31,
+            "height": 8,
+            "shape": "rect"
+          }
+        ],
+        "layers": []
+      }
+    },
+    {
+      "id": "H001-03C",
+      "title": "门口至案边·回译",
+      "durationSeconds": 18.0,
+      "source": {
+        "documentId": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4",
+        "startLine": 127,
+        "endLine": 146
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "确认承重转移后她才离开。",
+      "purpose": "确认承重转移后她才离开。",
+      "entry": "阿妍挡住杆，王手刚抬。",
+      "exit": "杆画外托稳，阿妍回帐空手，傅要求放人。",
+      "camera": {
+        "scale": "中全景",
+        "position": "帐内门对侧兼见门外杆和案。",
+        "height": "站立阿妍腰部高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "宴帐案前侧；私帐门—案轴南侧，04C沿南侧横移不越轴",
+        "perspective": "承重先转移到画外受控支架，她确认杆稳才回译",
+        "type": "static",
+        "movement": "固定在帐内门对侧兼见门外杆和案，让正文行动按本镜时间轨依次发生触发人物而非相机移动，保持确认承重转移后她才离开的空间参照。理由：让观众读出确认承重转移后她才离开；不改变人物既定行动。",
+        "trigger": "王命令→杆停→她确认→松手回帐，拒绝提前转身",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦王抬手与受阻杆"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中全景；帐内门对侧兼见门外杆和案。高度：站立阿妍腰部高度。前景横杆靠近门的端部；中景阿妍松手回帐；后景王傅。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中全景；帐内门对侧兼见门外杆和案。高度：站立阿妍腰部高度。前景横杆靠近门的端部；中景阿妍松手回帐；后景王傅。保留行动方向的余地，不增加演员或道具。",
+        "midground": "门外杆与帐内案同在可达通路，回帐不穿门框",
+        "background": "宴帐织壁；私帐右后内帘、门口横杆与传信管按镜分场，不增加萨合实体",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "承重先转移到画外受控支架，她确认杆稳才回译"
+      },
+      "sound": "宴帐布幕轻响与杯壶接触；私帐风推帘与衣料、远脚步；只有王、傅、阿妍可辨对白，双影无可辨说话声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [
+        {
+          "speaker": "王",
+          "text": "横杆先托住。",
+          "addressee": "画外守卫",
+          "performance": "抬手令，声源在帐内",
+          "startSeconds": 0,
+          "endSeconds": 5
+        },
+        {
+          "speaker": "阿妍",
+          "text": "先放萨合，他不是兵。",
+          "addressee": "傅",
+          "performance": "回帐后转述本人刚才对王要求",
+          "startSeconds": 8,
+          "endSeconds": 13
+        },
+        {
+          "speaker": "傅",
+          "text": "放人，我再说。",
+          "addressee": "王",
+          "performance": "看王说，给条件不承诺结果",
+          "startSeconds": 13,
+          "endSeconds": 18
+        }
+      ],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "承重先转移到画外受控支架，她确认杆稳才回译",
+          "observation": "承重先转移到画外受控支架，她确认杆稳才回译",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L127–L146"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "王命令→杆停→她确认→松手回帐，拒绝提前转身",
+          "observation": "王命令→杆停→她确认→松手回帐，拒绝提前转身",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L127–L146"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "门外杆与帐内案同在可达通路，回帐不穿门框",
+          "observation": "门外杆与帐内案同在可达通路，回帐不穿门框",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L127–L146"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "门对侧固定中全景，起焦王手和杆，保持杆/阿妍同清晰面",
+          "observation": "门对侧固定中全景，起焦王手和杆，保持杆/阿妍同清晰面",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L127–L146"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "照译句给出明确中文等值版本，18秒不冒称已实演",
+          "observation": "照译句给出明确中文等值版本，18秒不冒称已实演",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L127–L146"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "回帐空手，壶案旁、王抱锦不变",
+          "observation": "回帐空手，壶案旁、王抱锦不变",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L127–L146"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "王",
+            "x": 76,
+            "y": 40,
+            "scale": 0.7,
+            "pose": "抬手命托杆"
+          },
+          {
+            "label": "阿妍",
+            "x": 35,
+            "y": 53,
+            "scale": 0.9,
+            "pose": "确认杆稳再回帐"
+          },
+          {
+            "label": "傅",
+            "x": 87,
+            "y": 43,
+            "scale": 0.7,
+            "pose": "向王说放人"
+          }
+        ],
+        "props": [
+          {
+            "label": "杆停",
+            "x": 4,
+            "y": 46,
+            "width": 31,
+            "height": 5,
+            "shape": "rect"
+          },
+          {
+            "label": "门框",
+            "x": 44,
+            "y": 17,
+            "width": 4,
+            "height": 63,
+            "shape": "rect"
+          },
+          {
+            "label": "案",
+            "x": 66,
+            "y": 68,
+            "width": 30,
+            "height": 8,
+            "shape": "rect"
+          }
+        ],
+        "layers": []
+      }
+    },
+    {
+      "id": "H001-04A",
+      "title": "私帐案旁·影子的借口",
+      "durationSeconds": 12.0,
+      "source": {
+        "documentId": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4",
+        "startLine": 147,
+        "endLine": 166
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "傅的解释不是可验证退伏兵。",
+      "purpose": "傅的解释不是可验证退伏兵。",
+      "entry": "阿妍已回帐，壶案旁、王抱锦。",
+      "exit": "壶放回案旁，王仍看帘。",
+      "camera": {
+        "scale": "中景",
+        "position": "案外同轴看王与内帘。",
+        "height": "站立傅胸口高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "宴帐案前侧；私帐门—案轴南侧，04C沿南侧横移不越轴",
+        "perspective": "傅解释影子是借口，画面不能替他证明伏兵已退",
+        "type": "static",
+        "movement": "固定在案外同轴看王与内帘，让正文行动按本镜时间轨依次发生触发人物而非相机移动，保持傅的解释不是可验证退伏兵的空间参照。理由：让观众读出傅的解释不是可验证退伏兵；不改变人物既定行动。",
+        "trigger": "王先瞥影，傅才取壶示意，话说完壶落回",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦王看内帘的视线"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中景；案外同轴看王与内帘。高度：站立傅胸口高度。前景案旁酒壶；中景王傅阿妍；后景内帘影。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；案外同轴看王与内帘。高度：站立傅胸口高度。前景案旁酒壶；中景王傅阿妍；后景内帘影。保留行动方向的余地，不增加演员或道具。",
+        "midground": "傅提壶短暂占手，王仍抱锦，阿妍已离杆",
+        "background": "宴帐织壁；私帐右后内帘、门口横杆与传信管按镜分场，不增加萨合实体",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "傅解释影子是借口，画面不能替他证明伏兵已退"
+      },
+      "sound": "宴帐布幕轻响与杯壶接触；私帐风推帘与衣料、远脚步；只有王、傅、阿妍可辨对白，双影无可辨说话声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [
+        {
+          "speaker": "傅",
+          "text": "备酒的人会退下。",
+          "addressee": "王",
+          "performance": "提壶示意，平稳撒谎，不朝镜头解释",
+          "startSeconds": 3,
+          "endSeconds": 9
+        }
+      ],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "傅解释影子是借口，画面不能替他证明伏兵已退",
+          "observation": "傅解释影子是借口，画面不能替他证明伏兵已退",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L147–L166"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "王先瞥影，傅才取壶示意，话说完壶落回",
+          "observation": "王先瞥影，傅才取壶示意，话说完壶落回",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L147–L166"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "傅提壶短暂占手，王仍抱锦，阿妍已离杆",
+          "observation": "傅提壶短暂占手，王仍抱锦，阿妍已离杆",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L147–L166"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "案外原轴中景含内帘，不能把影虚到不可辨后当悬疑",
+          "observation": "案外原轴中景含内帘，不能把影虚到不可辨后当悬疑",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L147–L166"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "独立稿不得因“会退下”自动生成两影离开",
+          "observation": "独立稿不得因“会退下”自动生成两影离开",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L147–L166"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "下镜壶仍案旁、王抱锦",
+          "observation": "下镜壶仍案旁、王抱锦；横杆画外稳住的残留保留",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L147–L166"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "王",
+            "x": 38,
+            "y": 49,
+            "scale": 0.9,
+            "pose": "抱锦瞥右后影"
+          },
+          {
+            "label": "傅",
+            "x": 63,
+            "y": 49,
+            "scale": 0.9,
+            "pose": "提壶示意后放回"
+          },
+          {
+            "label": "阿妍",
+            "x": 22,
+            "y": 50,
+            "scale": 0.9,
+            "pose": "已回帐"
+          }
+        ],
+        "props": [
+          {
+            "label": "案",
+            "x": 26,
+            "y": 70,
+            "width": 52,
+            "height": 8,
+            "shape": "rect"
+          },
+          {
+            "label": "壶",
+            "x": 58,
+            "y": 62,
+            "width": 6,
+            "height": 9,
+            "shape": "rect"
+          }
+        ],
+        "layers": [
+          {
+            "label": "内帘影仍在",
+            "x": 77,
+            "y": 12,
+            "width": 21,
+            "height": 55,
+            "color": "#625745",
+            "opacity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "H001-04B",
+      "title": "案旁·压笔",
+      "durationSeconds": 23.0,
+      "source": {
+        "documentId": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4",
+        "startLine": 167,
+        "endLine": 186
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "不许回头抓捕的条款才是放人保障。",
+      "purpose": "不许回头抓捕的条款才是放人保障。",
+      "entry": "王仍抱锦，阿妍尚未取笔牍。",
+      "exit": "锦案角，笔被松开，牍案上，王看傅。",
+      "camera": {
+        "scale": "近中景",
+        "position": "案侧轻俯看书写与王手。",
+        "height": "高于案面，斜俯看木牍笔",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "宴帐案前侧；私帐门—案轴南侧，04C沿南侧横移不越轴",
+        "perspective": "保障来自不再抓捕条款，压笔冲突具体而非空谈信任",
+        "type": "static",
+        "movement": "固定在案侧轻俯看书写与王手，让正文行动按本镜时间轨依次发生触发人物而非相机移动，保持不许回头抓捕的条款才是放人保障的空间参照。理由：让观众读出不许回头抓捕的条款才是放人保障；不改变人物既定行动。",
+        "trigger": "她写时王压笔，她答后王松开，王看傅有停顿",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦王怀中锦与尚空的案角"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "近中景；案侧轻俯看书写与王手。高度：高于案面，斜俯看木牍笔。前景起初尚空的案角；取出后才见木牍笔与放下的锦角；中景王阿妍双手及上身；后景傅与内帘。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "近中景；案侧轻俯看书写与王手。高度：高于案面，斜俯看木牍笔。前景起初尚空的案角；取出后才见木牍笔与放下的锦角；中景王阿妍双手及上身；后景傅与内帘。保留行动方向的余地，不增加演员或道具。",
+        "midground": "先放锦案角才压笔；阿妍取出牍笔不与壶冲突",
+        "background": "宴帐织壁；私帐右后内帘、门口横杆与传信管按镜分场，不增加萨合实体",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "保障来自不再抓捕条款，压笔冲突具体而非空谈信任"
+      },
+      "sound": "宴帐布幕轻响与杯壶接触；私帐风推帘与衣料、远脚步；只有王、傅、阿妍可辨对白，双影无可辨说话声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [
+        {
+          "speaker": "王",
+          "text": "不得追问他送过什么？这句不必。",
+          "addressee": "阿妍",
+          "performance": "压笔才问，拒绝放弃追索",
+          "startSeconds": 8,
+          "endSeconds": 14
+        },
+        {
+          "speaker": "阿妍",
+          "text": "出了门再抓回来，就是没放。",
+          "addressee": "王",
+          "performance": "重音没放，直视具体执行漏洞",
+          "startSeconds": 14,
+          "endSeconds": 19
+        }
+      ],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "保障来自不再抓捕条款，压笔冲突具体而非空谈信任",
+          "observation": "保障来自不再抓捕条款，压笔冲突具体而非空谈信任",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L167–L186"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "她写时王压笔，她答后王松开，王看傅有停顿",
+          "observation": "她写时王压笔，她答后王松开，王看傅有停顿",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L167–L186"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "先放锦案角才压笔",
+          "observation": "先放锦案角才压笔；阿妍取出牍笔不与壶冲突",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L167–L186"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "案侧轻俯要同时读手指与笔被压，焦点起于锦的落点",
+          "observation": "案侧轻俯要同时读手指与笔被压，焦点起于锦的落点",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L167–L186"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "保留现稿松手修复",
+          "observation": "保留现稿松手修复；条款长字由后期确定性排版",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L167–L186"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "04C牍案上、笔可用、王手已松，印从王自身道具位取",
+          "observation": "04C牍案上、笔可用、王手已松，印从王自身道具位取",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L167–L186"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "王",
+            "x": 35,
+            "y": 39,
+            "scale": 1,
+            "pose": "压笔后松手"
+          },
+          {
+            "label": "阿妍",
+            "x": 63,
+            "y": 39,
+            "scale": 1,
+            "pose": "写条款并回应"
+          },
+          {
+            "label": "傅",
+            "x": 82,
+            "y": 27,
+            "scale": 0.65,
+            "pose": "后层观察"
+          }
+        ],
+        "props": [
+          {
+            "label": "案",
+            "x": 20,
+            "y": 63,
+            "width": 64,
+            "height": 16,
+            "shape": "rect"
+          },
+          {
+            "label": "牍与笔接触",
+            "x": 45,
+            "y": 57,
+            "width": 21,
+            "height": 8,
+            "shape": "rect"
+          },
+          {
+            "label": "锦在案角",
+            "x": 22,
+            "y": 61,
+            "width": 14,
+            "height": 9,
+            "shape": "rect"
+          }
+        ],
+        "layers": []
+      }
+    },
+    {
+      "id": "H001-04C",
+      "title": "案至竹管·她留下名字",
+      "durationSeconds": 18.0,
+      "source": {
+        "documentId": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4",
+        "startLine": 187,
+        "endLine": 206
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "她签名并送出文书不等于收信完成。",
+      "purpose": "她签名并送出文书不等于收信完成。",
+      "entry": "王看傅后准备取印，锦案角。",
+      "exit": "牍已入竹管，印笔留案；无回音。",
+      "camera": {
+        "scale": "中景",
+        "position": "案侧沿原轴向门口小幅横移。",
+        "height": "阿妍胸口高度，轻俯保留牍和管口",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "宴帐案前侧；私帐门—案轴南侧，04C沿南侧横移不越轴",
+        "perspective": "印确认条款、她签名留下责任，投管仍无收件保证",
+        "type": "truck",
+        "movement": "沿案前南侧向西平移到门，持牍人物开始步行才起移，停止于管口，不旋绕越轴",
+        "trigger": "王交牍后阿妍才写名，搁笔后持牍走，管口等无回音",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "王按私印手"
+          },
+          {
+            "time": 7,
+            "target": "阿妍写名持牍手"
+          },
+          {
+            "time": 12,
+            "target": "阿妍与管口同一可读平面"
+          }
+        ],
+        "techniqueId": "M03",
+        "acceleration": "阿妍搁笔持牍开始步行时缓起，离案第一步不突冲",
+        "peak": "与她向门口平行同速，不超前揭露空管口",
+        "deceleration": "她在管前停步时缓停，投入与等待保固定",
+        "motionStart": "案边按印到写名阶段机位静止",
+        "motionEnd": "门边管口南侧停稳",
+        "framingChange": "由案边王与阿妍中景转为阿妍管口中景，王可自然离画"
+      },
+      "composition": {
+        "layout": "中景；案侧沿原轴向门口小幅横移。高度：阿妍胸口高度，轻俯保留牍和管口。前景木牍印与笔；中景王按印与阿妍；后景竹管。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；案侧沿原轴向门口小幅横移。高度：阿妍胸口高度，轻俯保留牍和管口。前景木牍印与笔；中景王按印与阿妍；后景竹管。保留行动方向的余地，不增加演员或道具。",
+        "midground": "私印归王、按后落案；牍在她手、笔在案，通道可达",
+        "background": "宴帐织壁；私帐右后内帘、门口横杆与传信管按镜分场，不增加萨合实体",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "印确认条款、她签名留下责任，投管仍无收件保证"
+      },
+      "sound": "宴帐布幕轻响与杯壶接触；私帐风推帘与衣料、远脚步；只有王、傅、阿妍可辨对白，双影无可辨说话声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "印确认条款、她签名留下责任，投管仍无收件保证",
+          "observation": "印确认条款、她签名留下责任，投管仍无收件保证",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L187–L206"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "王交牍后阿妍才写名，搁笔后持牍走，管口等无回音",
+          "observation": "王交牍后阿妍才写名，搁笔后持牍走，管口等无回音",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L187–L206"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "私印归王、按后落案",
+          "observation": "私印归王、按后落案；牍在她手、笔在案，通道可达",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L187–L206"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "南侧向西平移，先王手转阿妍手再随人到管口",
+          "observation": "南侧向西平移，先王手转阿妍手再随人到管口；18秒须实测",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L187–L206"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "候选补丁仅改印归属并保留完整独立稿，旧正文来源不改",
+          "observation": "候选补丁仅改印归属并保留完整独立稿，旧正文来源不改",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L187–L206"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "05A从管边返案",
+          "observation": "05A从管边返案；印笔留案/牍已入管不能复活",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L187–L206"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "王",
+            "x": 73,
+            "y": 35,
+            "scale": 0.65,
+            "pose": "按私印后交牍"
+          },
+          {
+            "label": "阿妍",
+            "x": 43,
+            "y": 49,
+            "scale": 1,
+            "pose": "写名后持牍往左管口"
+          }
+        ],
+        "props": [
+          {
+            "label": "案",
+            "x": 57,
+            "y": 62,
+            "width": 39,
+            "height": 11,
+            "shape": "rect"
+          },
+          {
+            "label": "印笔留案",
+            "x": 71,
+            "y": 57,
+            "width": 13,
+            "height": 6,
+            "shape": "rect"
+          },
+          {
+            "label": "持牍",
+            "x": 38,
+            "y": 45,
+            "width": 10,
+            "height": 6,
+            "shape": "rect"
+          },
+          {
+            "label": "传信管",
+            "x": 9,
+            "y": 35,
+            "width": 7,
+            "height": 34,
+            "shape": "rect"
+          }
+        ],
+        "layers": []
+      }
+    },
+    {
+      "id": "H001-05A",
+      "title": "案边·没有见到人",
+      "durationSeconds": 21.0,
+      "source": {
+        "documentId": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4",
+        "startLine": 207,
+        "endLine": 226
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "投递不等于释放得到确认。",
+      "purpose": "投递不等于释放得到确认。",
+      "entry": "文书入管无回音，锦仍案角。",
+      "exit": "锦铺开，王面向傅背内帘。",
+      "camera": {
+        "scale": "中景",
+        "position": "案外平视含内帘。",
+        "height": "站立王胸口高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "宴帐案前侧；私帐门—案轴南侧，04C沿南侧横移不越轴",
+        "perspective": "王问结果时她明确承认只送文书未见人",
+        "type": "static",
+        "movement": "固定在案外平视含内帘，让正文行动按本镜时间轨依次发生触发人物而非相机移动，保持投递不等于释放得到确认的空间参照。理由：让观众读出投递不等于释放得到确认；不改变人物既定行动。",
+        "trigger": "阿妍先从管旁回案再铺锦，王看帘才傅挡半步",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦尚留案角的锦与阿妍返案路径"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中景；案外平视含内帘。高度：站立王胸口高度。前景锦与案角；中景王傅阿妍；后景内帘。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；案外平视含内帘。高度：站立王胸口高度。前景锦与案角；中景王傅阿妍；后景内帘。保留行动方向的余地，不增加演员或道具。",
+        "midground": "王靠案，阿妍不瞬移；傅挡视线让王背内帘有动机",
+        "background": "宴帐织壁；私帐右后内帘、门口横杆与传信管按镜分场，不增加萨合实体",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "王问结果时她明确承认只送文书未见人"
+      },
+      "sound": "宴帐布幕轻响与杯壶接触；私帐风推帘与衣料、远脚步；只有王、傅、阿妍可辨对白，双影无可辨说话声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [
+        {
+          "speaker": "王",
+          "text": "人放了？",
+          "addressee": "阿妍",
+          "performance": "问结果，仍不确定",
+          "startSeconds": 7,
+          "endSeconds": 10
+        },
+        {
+          "speaker": "阿妍",
+          "text": "文书放进传信管了。我还没见到人。",
+          "addressee": "王",
+          "performance": "不替承诺粉饰执行",
+          "startSeconds": 10,
+          "endSeconds": 14
+        },
+        {
+          "speaker": "傅",
+          "text": "王先听完。",
+          "addressee": "王",
+          "performance": "半步挡住王看帘的视线",
+          "startSeconds": 17,
+          "endSeconds": 20
+        }
+      ],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "王问结果时她明确承认只送文书未见人",
+          "observation": "王问结果时她明确承认只送文书未见人",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L207–L226"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "阿妍先从管旁回案再铺锦，王看帘才傅挡半步",
+          "observation": "阿妍先从管旁回案再铺锦，王看帘才傅挡半步",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L207–L226"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "王靠案，阿妍不瞬移",
+          "observation": "王靠案，阿妍不瞬移；傅挡视线让王背内帘有动机",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L207–L226"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "原轴中景含返回路径和帘，王视线被挡可见而非字幕解释",
+          "observation": "原轴中景含返回路径和帘，王视线被挡可见而非字幕解释",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L207–L226"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "21秒完整三句与三次位移，不能省回案或先铺锦",
+          "observation": "21秒完整三句与三次位移，不能省回案或先铺锦",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L207–L226"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "王背内帘、锦铺开、金片案上，为影袭与震落提供条件",
+          "observation": "王背内帘、锦铺开、金片案上，为影袭与震落提供条件",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L207–L226"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "阿妍",
+            "x": 27,
+            "y": 51,
+            "scale": 0.9,
+            "pose": "从左管口返案铺锦"
+          },
+          {
+            "label": "王",
+            "x": 55,
+            "y": 49,
+            "scale": 0.9,
+            "pose": "听答后转向傅背内帘"
+          },
+          {
+            "label": "傅",
+            "x": 73,
+            "y": 50,
+            "scale": 0.9,
+            "pose": "上前半步挡视线"
+          }
+        ],
+        "props": [
+          {
+            "label": "案与铺锦",
+            "x": 35,
+            "y": 69,
+            "width": 46,
+            "height": 10,
+            "shape": "rect"
+          },
+          {
+            "label": "传信管",
+            "x": 7,
+            "y": 34,
+            "width": 6,
+            "height": 28,
+            "shape": "rect"
+          }
+        ],
+        "layers": [
+          {
+            "label": "内帘在王背后",
+            "x": 78,
+            "y": 12,
+            "width": 21,
+            "height": 52,
+            "color": "#625745",
+            "opacity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "H001-05B",
+      "title": "内帘前·双影接触",
+      "durationSeconds": 12.0,
+      "source": {
+        "documentId": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4",
+        "startLine": 227,
+        "endLine": 246
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "两影分开靠近与王倒下有先后因果。",
+      "purpose": "两影分开靠近与王倒下有先后因果。",
+      "entry": "王背内帘，锦案旁，金片尚案上。",
+      "exit": "王倒锦旁，金片停阿妍脚边。",
+      "camera": {
+        "scale": "中全景",
+        "position": "案侧固定含躯干投影与地面。",
+        "height": "站立王腰部高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "宴帐案前侧；私帐门—案轴南侧，04C沿南侧横移不越轴",
+        "perspective": "两独立刃影接触先于王身体反应，政治成功以物理行动发生",
+        "type": "static",
+        "movement": "固定在案侧固定含躯干投影与地面，让正文行动按本镜时间轨依次发生触发人物而非相机移动，保持两影分开靠近与王倒下有先后因果的空间参照。理由：让观众读出两影分开靠近与王倒下有先后因果；不改变人物既定行动。",
+        "trigger": "接触后王背收紧抓案才倒，不提前表演遇害",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦王尚站立的躯干影"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中全景；案侧固定含躯干投影与地面。高度：站立王腰部高度。前景案与金片落点；中景王和两道独立投影；后景内帘。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中全景；案侧固定含躯干投影与地面。高度：站立王腰部高度。前景案与金片落点；中景王和两道独立投影；后景内帘。保留行动方向的余地，不增加演员或道具。",
+        "midground": "两影与王影在同一帘面，金片源在案，软倒地替代不露脸伏兵",
+        "background": "宴帐织壁；私帐右后内帘、门口横杆与传信管按镜分场，不增加萨合实体",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "两独立刃影接触先于王身体反应，政治成功以物理行动发生"
+      },
+      "sound": "宴帐布幕轻响与杯壶接触；私帐风推帘与衣料、远脚步；只有王、傅、阿妍可辨对白，双影无可辨说话声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "两独立刃影接触先于王身体反应，政治成功以物理行动发生",
+          "observation": "两独立刃影接触先于王身体反应，政治成功以物理行动发生",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L227–L246"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "接触后王背收紧抓案才倒，不提前表演遇害",
+          "observation": "接触后王背收紧抓案才倒，不提前表演遇害",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L227–L246"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "两影与王影在同一帘面，金片源在案，软倒地替代不露脸伏兵",
+          "observation": "两影与王影在同一帘面，金片源在案，软倒地替代不露脸伏兵",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L227–L246"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "固定腰高中全景同时读三影与地面落点，非镜头晃动遮接触",
+          "observation": "固定腰高中全景同时读三影与地面落点，非镜头晃动遮接触",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L227–L246"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "12秒单母镜，影偶合成仍算该画段不偷偷切成攻击特写",
+          "observation": "12秒单母镜，影偶合成仍算该画段不偷偷切成攻击特写",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L227–L246"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "倒锦旁/金片脚边是06A拾物前提，壶继续案旁",
+          "observation": "倒锦旁/金片脚边是06A拾物前提，壶继续案旁",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L227–L246"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "王",
+            "x": 53,
+            "y": 50,
+            "scale": 0.9,
+            "pose": "先被影接触，再抓案倒锦旁"
+          },
+          {
+            "label": "阿妍",
+            "x": 28,
+            "y": 53,
+            "scale": 0.8,
+            "pose": "站在金片落点旁"
+          },
+          {
+            "label": "傅",
+            "x": 14,
+            "y": 53,
+            "scale": 0.8,
+            "pose": "向门侧"
+          }
+        ],
+        "props": [
+          {
+            "label": "案",
+            "x": 36,
+            "y": 62,
+            "width": 43,
+            "height": 8,
+            "shape": "rect"
+          },
+          {
+            "label": "金片落点",
+            "x": 27,
+            "y": 81,
+            "width": 4,
+            "height": 3,
+            "shape": "rect"
+          },
+          {
+            "label": "锦旁倒地区",
+            "x": 43,
+            "y": 82,
+            "width": 29,
+            "height": 7,
+            "shape": "rect"
+          }
+        ],
+        "layers": [
+          {
+            "label": "王影与两道独立刃影",
+            "x": 65,
+            "y": 12,
+            "width": 33,
+            "height": 55,
+            "color": "#625745",
+            "opacity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "H001-06A",
+      "title": "私帐·威告与金片",
+      "durationSeconds": 17.0,
+      "source": {
+        "documentId": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4",
+        "startLine": 247,
+        "endLine": 266
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "行动成功仍需威告压住外界反应。",
+      "purpose": "行动成功仍需威告压住外界反应。",
+      "entry": "王倒地，金片脚边，傅到门帘。",
+      "exit": "金片回案，傅仍帘边，阿妍空手。",
+      "camera": {
+        "scale": "中全景",
+        "position": "案侧固定含门帘和地面。",
+        "height": "阿妍腰部高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "宴帐案前侧；私帐门—案轴南侧，04C沿南侧横移不越轴",
+        "perspective": "威告压外界反应，阿妍照译并处理金片不等于救人成功",
+        "type": "static",
+        "movement": "固定在案侧固定含门帘和地面，让正文行动按本镜时间轨依次发生触发人物而非相机移动，保持行动成功仍需威告压住外界反应的空间参照。理由：让观众读出行动成功仍需威告压住外界反应；不改变人物既定行动。",
+        "trigger": "脚步先到傅才挑帘下令，阿妍转回才弯拾",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦傅先听见脚步的脸"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中全景；案侧固定含门帘和地面。高度：阿妍腰部高度。前景脚边金片；中景阿妍拾起与傅挑帘；后景王倒地和门外方向。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中全景；案侧固定含门帘和地面。高度：阿妍腰部高度。前景脚边金片；中景阿妍拾起与傅挑帘；后景王倒地和门外方向。保留行动方向的余地，不增加演员或道具。",
+        "midground": "她把金片放回案后双手空，不边译边凭空持壶",
+        "background": "宴帐织壁；私帐右后内帘、门口横杆与传信管按镜分场，不增加萨合实体",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "威告压外界反应，阿妍照译并处理金片不等于救人成功"
+      },
+      "sound": "宴帐布幕轻响与杯壶接触；私帐风推帘与衣料、远脚步；只有王、傅、阿妍可辨对白，双影无可辨说话声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [
+        {
+          "speaker": "傅",
+          "text": "告诉他们，汉兵将至，勿动。",
+          "addressee": "阿妍",
+          "performance": "听见脚步才命令，控制而不喊成群戏",
+          "startSeconds": 3,
+          "endSeconds": 6
+        },
+        {
+          "speaker": "阿妍",
+          "text": "汉兵将至，勿动。",
+          "addressee": "画外帐外人",
+          "performance": "向门外的听觉等值译语，不新增回答者",
+          "startSeconds": 6,
+          "endSeconds": 10
+        }
+      ],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "威告压外界反应，阿妍照译并处理金片不等于救人成功",
+          "observation": "威告压外界反应，阿妍照译并处理金片不等于救人成功",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L247–L266"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "脚步先到傅才挑帘下令，阿妍转回才弯拾",
+          "observation": "脚步先到傅才挑帘下令，阿妍转回才弯拾",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L247–L266"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "她把金片放回案后双手空，不边译边凭空持壶",
+          "observation": "她把金片放回案后双手空，不边译边凭空持壶",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L247–L266"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "案侧固定中全景含门与脚边，注意顺序由脚步声引到傅再金片",
+          "observation": "案侧固定中全景含门与脚边，注意顺序由脚步声引到傅再金片",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L247–L266"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "中文威告原句与照译两次受话人不同，音轨保留可辨分离",
+          "observation": "中文威告原句与照译两次受话人不同，音轨保留可辨分离",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L247–L266"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "王仍倒地、傅仍帘边、阿妍空手，06B才能取壶",
+          "observation": "王仍倒地、傅仍帘边、阿妍空手，06B才能取壶",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L247–L266"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "傅",
+            "x": 20,
+            "y": 43,
+            "scale": 0.9,
+            "pose": "帘边听脚步后威告"
+          },
+          {
+            "label": "阿妍",
+            "x": 52,
+            "y": 58,
+            "scale": 0.85,
+            "pose": "照译后拾金片放案"
+          }
+        ],
+        "props": [
+          {
+            "label": "王倒锦旁",
+            "x": 71,
+            "y": 78,
+            "width": 23,
+            "height": 8,
+            "shape": "rect"
+          },
+          {
+            "label": "脚边金片",
+            "x": 45,
+            "y": 82,
+            "width": 4,
+            "height": 3,
+            "shape": "rect"
+          },
+          {
+            "label": "案",
+            "x": 55,
+            "y": 65,
+            "width": 36,
+            "height": 8,
+            "shape": "rect"
+          },
+          {
+            "label": "门帘",
+            "x": 2,
+            "y": 16,
+            "width": 12,
+            "height": 58,
+            "shape": "rect"
+          }
+        ],
+        "layers": []
+      }
+    },
+    {
+      "id": "H001-06B",
+      "title": "私帐·仍要去找人",
+      "durationSeconds": 14.0,
+      "source": {
+        "documentId": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4",
+        "startLine": 267,
+        "endLine": 286
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "不能把刺杀结果当作她所求救援结果。",
+      "purpose": "不能把刺杀结果当作她所求救援结果。",
+      "entry": "金片案上壶案旁，阿妍空手。",
+      "exit": "阿妍携壶离帐，傅留下；萨合未见。",
+      "camera": {
+        "scale": "中景",
+        "position": "原案侧朝阿妍与门帘。",
+        "height": "阿妍胸口高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "宴帐案前侧；私帐门—案轴南侧，04C沿南侧横移不越轴",
+        "perspective": "最终回到萨合下落，结尾停在她继续找而非救援获胜",
+        "type": "static",
+        "movement": "固定在原案侧朝阿妍与门帘，让正文行动按本镜时间轨依次发生触发人物而非相机移动，保持不能把刺杀结果当作她所求救援结果的空间参照。理由：让观众读出不能把刺杀结果当作她所求救援结果；不改变人物既定行动。",
+        "trigger": "她问赶不及，听到不能代答才取壶离帐，不演成接受胜利",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦阿妍问萨合的脸"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中景；原案侧朝阿妍与门帘。高度：阿妍胸口高度。前景金片酒壶；中景阿妍傅；后景倒地王与帘口。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；原案侧朝阿妍与门帘。高度：阿妍胸口高度。前景金片酒壶；中景阿妍傅；后景倒地王与帘口。保留行动方向的余地，不增加演员或道具。",
+        "midground": "金片案上、壶案旁，阿妍提壶推帘，傅留原地",
+        "background": "宴帐织壁；私帐右后内帘、门口横杆与传信管按镜分场，不增加萨合实体",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "最终回到萨合下落，结尾停在她继续找而非救援获胜"
+      },
+      "sound": "宴帐布幕轻响与杯壶接触；私帐风推帘与衣料、远脚步；只有王、傅、阿妍可辨对白，双影无可辨说话声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [
+        {
+          "speaker": "阿妍",
+          "text": "萨合若赶不及呢？",
+          "addressee": "傅",
+          "performance": "问具体人，非对历史结果议论",
+          "startSeconds": 0,
+          "endSeconds": 4
+        },
+        {
+          "speaker": "傅",
+          "text": "我不能替他答。",
+          "addressee": "阿妍",
+          "performance": "不追出、不许诺",
+          "startSeconds": 4,
+          "endSeconds": 8
+        }
+      ],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "最终回到萨合下落，结尾停在她继续找而非救援获胜",
+          "observation": "最终回到萨合下落，结尾停在她继续找而非救援获胜",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L267–L286"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "她问赶不及，听到不能代答才取壶离帐，不演成接受胜利",
+          "observation": "她问赶不及，听到不能代答才取壶离帐，不演成接受胜利",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L267–L286"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "金片案上、壶案旁，阿妍提壶推帘，傅留原地",
+          "observation": "金片案上、壶案旁，阿妍提壶推帘，傅留原地",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L267–L286"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "原案侧中景留左门出口，倒地王在后景可读但不抢她决定",
+          "observation": "原案侧中景留左门出口，倒地王在后景可读但不抢她决定",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L267–L286"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "14秒只做问答与离场，不自动生萨合或救人镜头",
+          "observation": "14秒只做问答与离场，不自动生萨合或救人镜头",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L267–L286"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "门帘落，壶随她离开",
+          "observation": "门帘落，壶随她离开；印笔金片仍案，政治与私人目的分开",
+          "sourceLocator": "b0eaccda5edd661c0bc40bf3e18ac8e98d1297b32f3a6a8a6744cb95c46c5ba4.md:L267–L286"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "阿妍",
+            "x": 28,
+            "y": 52,
+            "scale": 0.9,
+            "pose": "取壶推左帘离帐"
+          },
+          {
+            "label": "傅",
+            "x": 58,
+            "y": 52,
+            "scale": 0.9,
+            "pose": "留帐不追"
+          }
+        ],
+        "props": [
+          {
+            "label": "王倒锦旁",
+            "x": 75,
+            "y": 80,
+            "width": 22,
+            "height": 8,
+            "shape": "rect"
+          },
+          {
+            "label": "壶随阿妍",
+            "x": 24,
+            "y": 57,
+            "width": 7,
+            "height": 10,
+            "shape": "rect"
+          },
+          {
+            "label": "案上金片",
+            "x": 72,
+            "y": 64,
+            "width": 4,
+            "height": 3,
+            "shape": "rect"
+          },
+          {
+            "label": "门帘出口",
+            "x": 2,
+            "y": 16,
+            "width": 12,
+            "height": 58,
+            "shape": "rect"
+          }
+        ],
+        "layers": []
+      }
+    }
+  ],
+  "audio": {
+    "fps": 24,
+    "music": "前段不铺持续旋律，让壶杯和低声交涉形成张力；双影接触前不提前打击提示；倒地后留一段无配乐的脚步/帘响。",
+    "subtitles": "中文听觉等值母版，王/傅/阿妍各句按speaker独立字幕；转述不省略成“翻译中”。片名与条款、姓名后期排字，印面不生成可辨字；非中文录音版本另核语言和时长。",
+    "colorGrade": "锦为有限暖重心，肤色不随反打漂绿；私帐暗部保留帘与双影分离；禁止把倒地瞬间加血红闪光作为因果。",
+    "delivery": "14镜231秒、24fps设计序列，实际输出分辨率/编码/响度待平台与交付目标核验；不把设计秒数标成实测。"
+  },
+  "tests": [
+    {
+      "id": "T-BAR",
+      "shots": [
+        "H001-03B",
+        "H001-03C"
+      ],
+      "objective": "横杆停住到承重转移的可读安全替代",
+      "fixed": [
+        "横杆与门几何",
+        "阿妍先确认后松手",
+        "不新增可辨守卫"
+      ],
+      "input": "使用03B/C完整母稿，杆由软道具/影偶合成，单独录王“横杆先托住”刺激；不做真实落杆压演员。",
+      "pass": [
+        "王命令先于杆停",
+        "停稳至少能观察一个完整保持相位才松手",
+        "人物不穿杆"
+      ],
+      "fail": [
+        "她松手后杆还下降",
+        "杆弹穿身体",
+        "生成出第四守卫脸"
+      ],
+      "stop": "每轮最多2候选；任一穿体即停，回G2杆轴与G3承重图，不继续拼剪遮盖。"
+    },
+    {
+      "id": "T-SHADOW",
+      "shots": [
+        "H001-05B"
+      ],
+      "objective": "双影/王影接触及金片滚落因果",
+      "fixed": [
+        "仅两伏兵影",
+        "12秒母镜",
+        "无真锐刃接触"
+      ],
+      "input": "05B完整稿+内帘几何候选；先影偶预演，再独立合成身体收紧与安全倒地。",
+      "pass": [
+        "两刃影接触先于抓案",
+        "王影不瞬移成伏兵",
+        "金片由案面震动后滚到阿妍脚边"
+      ],
+      "fail": [
+        "凭空金片",
+        "未接触已倒",
+        "两个影融合或多一真身"
+      ],
+      "stop": "2轮仍不分离则停，回影光与帘距LookDev，不增加打斗镜。"
+    },
+    {
+      "id": "T-SIGN",
+      "shots": [
+        "H001-04C"
+      ],
+      "objective": "18秒内按印、交牍、写名、搁笔、走管与跟焦",
+      "fixed": [
+        "母镜总18秒",
+        "案到管设计距离",
+        "牍笔印数量"
+      ],
+      "input": "04C完整稿做真人/代理物无剪排练并录步行时间；当前只提供待执行方案。",
+      "pass": [
+        "每件落点在画内可读",
+        "人持牍到管才跟",
+        "无承重/持物重叠"
+      ],
+      "fail": [
+        "笔随牍入管",
+        "印消失",
+        "为赶时长无过渡漂移"
+      ],
+      "stop": "两轮仍超时，带实测报告退回作者明确是否改预算；不静默加速或切镜。"
+    }
+  ],
+  "handoff": {
+    "xiaoyunque": "同一母稿先做G6指定高风险短段；以当前账号真实可用入口/模型核验后才确定文生或参考节点。每个母镜独立节点，源镜号、完整稿、入/出态、对白音轨与设计帧窗一起交接。超出真实单次时长上限时仅提出同镜连续延展/首尾状态匹配实验，保持原母镜及总预算；不可静默切成新镜。失败先查询任务ID，禁止重复消费。本包不提交生成、不声称账号/模型或参数已验证。",
+    "libtv": "按同一母稿建立角色候选、场景候选、分镜文本、音轨与结果占位节点；母镜号保持一致并保留来源hash。采用窗由真实输出校准，不把文字节点当已生成视频。现有画布/节点ID、端口连接、入口参数与真实时长能力均未核验；不能猜写API字段。G6通过后再由真实素材接入剪辑。",
+    "unknowns": [
+      "当前平台真实账号/模型/额度与单次时长、分辨率、输入参数未核验",
+      "所有角色图/首帧/镜头视频/声音仍未生成或未实测",
+      "设计帧窗不等于真人读演、口型或rough cut验收"
+    ]
+  }
+}

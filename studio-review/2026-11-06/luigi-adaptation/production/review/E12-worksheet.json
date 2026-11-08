@@ -1,0 +1,996 @@
+{
+  "source": {
+    "type": "design",
+    "id": "DENIED-E12-text-coverage-30049053340e",
+    "version": 2,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "E12-SH005",
+    "E12-SH007",
+    "E12-SH008",
+    "E12-SH009",
+    "E12-SH101",
+    "E12-SH010",
+    "E12-SH011",
+    "E12-SH012",
+    "E12-SH013"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "E12-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：付款卡催时限，律师把拟加例外与原条款并排。；入镜已知：在独立意见下让签约成为理解后果的决定。；本镜新知：最终签约的条件变成书面保留监管调取与依法作证。；实际写出的动作：咨询室里凯文把一条过宽的保密措辞划出，玛拉把诊所卡移到他笔尖边催。南门外有人推治疗车，他先把门带上再给她看拟修订页。\n凯文将拟加的例外页递给玛拉，让她与原条款并排。他把原始回执推回她蓝夹一侧，不把记录交给公司。",
+      "sourceLocator": "season/E12.json#/shots/0"
+    },
+    {
+      "role": "performance",
+      "shotId": "E12-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "黑工服玛拉把手机放右手边。 → 最终签约的条件变成书面保留监管调取与依法作证。；凯文向玛拉：This bit has to change. You can still answer regulators or testify.；划出条款，解释她能做什么 / 玛拉向凯文：I'm back on shift soon. They want an answer.；把时限卡推到他笔边 / 凯文向玛拉：Regulators ask for records, or a court calls you, you can answer. I want it in writing.；指拟加页，让口头承诺落实到签字版",
+      "sourceLocator": "season/E12.json#/shots/0"
+    },
+    {
+      "role": "staging",
+      "shotId": "E12-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "次日 08:15，诊所东南咨询室，玛拉坐桌西，灰风衣搭椅背，黑工服未换。凯文坐东，黑公文包靠右脚，南门外治疗车经过；付款卡背写着今天中午。 本镜画内角色：MARA-WORK,COUNSEL。；起态：黑工服玛拉把手机放右手边。；出态：最终签约的条件变成书面保留监管调取与依法作证。",
+      "sourceLocator": "season/E12.json#/shots/0"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E12-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "诊所东南咨询室南门内35mm共享中景，玛拉桌西、凯文桌东、黑包右脚边。；相机：凯文把门带上后退回座位，相机固定不追他。；焦点：付款卡催时限，律师把拟加例外与原条款并排。",
+      "sourceLocator": "season/E12.json#/shots/0"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E12-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E12-SH005.txt；26秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E12.json#/shots/0"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E12-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "最终签约的条件变成书面保留监管调取与依法作证。；切点：玛拉不再只问快不快，转问签了后自己能做什么。；接口：接E12-SH007；玛拉不再只问快不快，转问签了后自己能做什么。",
+      "sourceLocator": "season/E12.json#/shots/0"
+    },
+    {
+      "role": "direction",
+      "shotId": "E12-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她理解禁采访、正式索取例外与未来仍需申请，才决定是否接受。；入镜已知：最终签约的条件变成书面保留监管调取与依法作证。；本镜新知：眼前费用与未来续批仍是两份工作。；实际写出的动作：玛拉把例外页抬到自己眼前，指向仍保留的采访限制。凯文没有盖过那一行，让两种后果同时留在她眼前。\n玛拉在账单背面算出能付到哪次，发现后面又有空白。她把笔尖移到下一疗程日期，凯文另拿一张续批表，和和解书分开摆。",
+      "sourceLocator": "season/E12.json#/shots/1"
+    },
+    {
+      "role": "performance",
+      "shotId": "E12-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "最终签约的条件变成书面保留监管调取与依法作证。 → 眼前费用与未来续批仍是两份工作。；玛拉向凯文：If Nora calls about the same denial, I still can't talk?；核对自己到底放弃什么 / 凯文向玛拉：Not an interview. A formal records request or testimony is different.；不把例外说成全面解禁 / 玛拉向凯文：I don't want to find that out after I've spent the money.；要求先说透再签 / 玛拉向凯文：Then we do this again?；看账单而问 / 凯文向玛拉：Yes. This settles this denial. It doesn't cover the next round.；另外拿续批表，不假装已替她争到",
+      "sourceLocator": "season/E12.json#/shots/1"
+    },
+    {
+      "role": "staging",
+      "shotId": "E12-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "次日 08:15，诊所东南咨询室，玛拉坐桌西，灰风衣搭椅背，黑工服未换。凯文坐东，黑公文包靠右脚，南门外治疗车经过；付款卡背写着今天中午。 本镜画内角色：MARA-WORK。其余所列说话者留在已建立的画外席位或电话对端。；起态：最终签约的条件变成书面保留监管调取与依法作证。；出态：眼前费用与未来续批仍是两份工作。",
+      "sourceLocator": "season/E12.json#/shots/1"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E12-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "凯文南肩旁朝西65mm玛拉半身，采访限制和例外在她手上，凯文只留指页手。；相机：固定33秒，允许她计算下一疗程后停在空白日期。；焦点：她理解禁采访、正式索取例外与未来仍需申请，才决定是否接受。",
+      "sourceLocator": "season/E12.json#/shots/1"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E12-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E12-SH007.txt；33秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E12.json#/shots/1"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E12-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "眼前费用与未来续批仍是两份工作。；切点：她给出今天中午的决定，切律师落实而非停在解释。；接口：接E12-SH008；她给出今天中午的决定，切律师落实而非停在解释。",
+      "sourceLocator": "season/E12.json#/shots/1"
+    },
+    {
+      "role": "direction",
+      "shotId": "E12-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：两人各做一件为签约腾出时间的事。；入镜已知：眼前费用与未来续批仍是两份工作。；本镜新知：玛拉选择争当前疗程，接受仍需后续申请，凯文开始改约。；实际写出的动作：值班提醒响，玛拉按掉；她把诊所卡背面的中午指给凯文，坐近桌子，让他现在联系维克多改文书，自己也开始发迟到通知。",
+      "sourceLocator": "season/E12.json#/shots/2"
+    },
+    {
+      "role": "performance",
+      "shotId": "E12-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "眼前费用与未来续批仍是两份工作。 → 玛拉选择争当前疗程，接受仍需后续申请，凯文开始改约。；玛拉向凯文：Today. Noon. Get that changed and I'll sign.；作决定时指卡，不把选择说成胜利 / 凯文向玛拉：I'm sending it now.；拿手机开始做事",
+      "sourceLocator": "season/E12.json#/shots/2"
+    },
+    {
+      "role": "staging",
+      "shotId": "E12-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "次日 08:15，诊所东南咨询室，玛拉坐桌西，灰风衣搭椅背，黑工服未换。凯文坐东，黑公文包靠右脚，南门外治疗车经过；付款卡背写着今天中午。 本镜画内角色：COUNSEL,MARA-WORK。；起态：眼前费用与未来续批仍是两份工作。；出态：玛拉选择争当前疗程，接受仍需后续申请，凯文开始改约。",
+      "sourceLocator": "season/E12.json#/shots/2"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E12-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "玛拉南肩旁朝东50mm凯文及桌面中景，手机发送修订，客户发迟到通知的手在画缘。；相机：固定12秒，不拉近邮件正文。；焦点：两人各做一件为签约腾出时间的事。",
+      "sourceLocator": "season/E12.json#/shots/2"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E12-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E12-SH008.txt；12秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E12.json#/shots/2"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E12-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "玛拉选择争当前疗程，接受仍需后续申请，凯文开始改约。；切点：修订发出，接11:20实际签署文本核对。；接口：本场结果成立后切入 E12-SC03（INSURER，日·同日上午11:20）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E12.json#/shots/2"
+    },
+    {
+      "role": "direction",
+      "shotId": "E12-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：发现错误版本与双方两份必须同改，首先建立真实空间与错误所在。；入镜已知：把律师的建议落实为母亲可以坚持的条件。；本镜新知：两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。；实际写出的动作：玛拉已经拿笔。凯文翻到例外页，发现仍是旧版，手掌挡在签名栏前。维克多核对批准邮件，将平板转给他们看；玛拉要求双方各持的两份都改，笔未碰签字栏。",
+      "sourceLocator": "season/E12.json#/shots/3"
+    },
+    {
+      "role": "performance",
+      "shotId": "E12-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "玛拉已将手机放桌右、蓝夹放桌左，右手握笔；签署夹在桌中央，凯文坐西侧翻页。 → 两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。；凯文向维克多：Wrong version. The exception's missing.；立即阻止 / 维克多向凯文：They approved it. The email's here.；核邮件后立刻收回旧版 / 玛拉向维克多：Both copies.；自己盯住落实",
+      "sourceLocator": "season/E12.json#/shots/3"
+    },
+    {
+      "role": "staging",
+      "shotId": "E12-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日 11:20，公司会议桌南侧玛拉与凯文并坐，维克多在北端。西窗是上午自然散射光，签字夹两份、蓝夹在玛拉左侧，诊所期限还有四十分钟。 本镜画内角色：MARA-WORK,COUNSEL,VICTOR。；起态：玛拉已将手机放桌右、蓝夹放桌左，右手握笔；签署夹在桌中央，凯文坐西侧翻页。；出态：两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。",
+      "sourceLocator": "season/E12.json#/shots/3"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E12-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "公司会议桌西南侧50mm略俯的三人中景，两份签署夹在画面中下部，玛拉与凯文南、维克多北。；相机：固定15秒，凯文的手停在签字栏，保住玛拉笔尖没有落下。；焦点：发现错误版本与双方两份必须同改，首先建立真实空间与错误所在。",
+      "sourceLocator": "season/E12.json#/shots/3"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E12-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E12-SH009.txt；15秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E12.json#/shots/3"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E12-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。；切点：口头批准不能替代签字页，切向承担签字后果的人。；接口：接E12-SH101；口头批准不能替代签字页，切向承担签字后果的人。",
+      "sourceLocator": "season/E12.json#/shots/3"
+    },
+    {
+      "role": "direction",
+      "shotId": "E12-SH101",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她放下笔拒绝用邮件代替有效文本；律师接话把要求具体化。；入镜已知：两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。；本镜新知：维克多收回旧版，不要求她在替换前落笔。；实际写出的动作：玛拉把笔放横，凯文仍挡着旧稿签字栏。维克多把批准邮件转给她看，她看完却没有重新拿笔；午时限只剩四十分钟。",
+      "sourceLocator": "season/E12.json#/shots/4"
+    },
+    {
+      "role": "performance",
+      "shotId": "E12-SH101",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。 → 维克多收回旧版，不要求她在替换前落笔。；维克多向同场对话者：The approval's here. We can get the payment moving.；试着让流程先走 / 玛拉向维克多：Can I answer a request with your email, or with what I sign?；要求承诺进入有效文本 / 凯文向玛拉：We need both copies to match the approval. Then she can sign.；把客户要求变成可执行条件",
+      "sourceLocator": "season/E12.json#/shots/4"
+    },
+    {
+      "role": "staging",
+      "shotId": "E12-SH101",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日 11:20，公司会议桌南侧玛拉与凯文并坐，维克多在北端。西窗是上午自然散射光，签字夹两份、蓝夹在玛拉左侧，诊所期限还有四十分钟。 本镜画内角色：MARA-WORK,COUNSEL。其余所列说话者留在已建立的画外席位或电话对端。；起态：两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。；出态：维克多收回旧版，不要求她在替换前落笔。",
+      "sourceLocator": "season/E12.json#/shots/4"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E12-SH101",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "维克多西肩旁朝南65mm玛拉中近景，凯文在她同侧画缘，平板批准邮件只留边。；相机：固定21秒，不做英雄式仰拍。；焦点：她放下笔拒绝用邮件代替有效文本；律师接话把要求具体化。",
+      "sourceLocator": "season/E12.json#/shots/4"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E12-SH101",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E12-SH101.txt；21秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E12.json#/shots/4"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E12-SH101",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "维克多收回旧版，不要求她在替换前落笔。；切点：维克多撤回旧版，切唯一需要仔细看清的证据变化。；接口：接E12-SH010；维克多撤回旧版，切唯一需要仔细看清的证据变化。",
+      "sourceLocator": "season/E12.json#/shots/4"
+    },
+    {
+      "role": "direction",
+      "shotId": "E12-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：两份都含正式监管请求/作证例外，双方签完，玛拉留全套；英文条款美术后期精排。；入镜已知：维克多收回旧版，不要求她在替换前落笔。；本镜新知：双方两份都签好，玛拉留全套副本，付款确认尚待发送。；实际写出的动作：维克多将两份旧稿从签署夹取出换好新页。凯文并排核对例外，玛拉确认监管正式索取与依法作证不受该保密条款限制，且两份都有这段。维克多先签，玛拉随后落笔，自己的全套协议留在左手。",
+      "sourceLocator": "season/E12.json#/shots/5"
+    },
+    {
+      "role": "performance",
+      "shotId": "E12-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "维克多收回旧版，不要求她在替换前落笔。 → 双方两份都签好，玛拉留全套副本，付款确认尚待发送。；凯文向玛拉：It's in both. Go ahead.；确认后才让签 / 玛拉向维克多：Send the confirmation to the clinic. Now.；签完仍盯下一步，不等对方祝贺",
+      "sourceLocator": "season/E12.json#/shots/5"
+    },
+    {
+      "role": "staging",
+      "shotId": "E12-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日 11:20，公司会议桌南侧玛拉与凯文并坐，维克多在北端。西窗是上午自然散射光，签字夹两份、蓝夹在玛拉左侧，诊所期限还有四十分钟。 本镜画内角色：MARA-WORK,COUNSEL,VICTOR。；起态：维克多收回旧版，不要求她在替换前落笔。；出态：双方两份都签好，玛拉留全套副本，付款确认尚待发送。",
+      "sourceLocator": "season/E12.json#/shots/5"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E12-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "桌西侧60mm斜俯近景，两份协议的同一例外位置、三人的手与两处签字栏同框。；相机：固定15秒；页面由人物并排摊开，不作镜内跳放大。；焦点：两份都含正式监管请求/作证例外，双方签完，玛拉留全套；英文条款美术后期精排。",
+      "sourceLocator": "season/E12.json#/shots/5"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E12-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E12-SH010.txt；15秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E12.json#/shots/5"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E12-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "双方两份都签好，玛拉留全套副本，付款确认尚待发送。；切点：她要求立即发诊所确认，切到执行和离开是否发生。；接口：接E12-SH011；她要求立即发诊所确认，切到执行和离开是否发生。",
+      "sourceLocator": "season/E12.json#/shots/5"
+    },
+    {
+      "role": "direction",
+      "shotId": "E12-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：付款执行、完整副本随身和照片拒绝都得到后果，没人为签约合影。；入镜已知：双方两份都签好，玛拉留全套副本，付款确认尚待发送。；本镜新知：公司只获结案事实，孩子照片不授权。；实际写出的动作：玛拉刚说现在就发，维克多便用平板发送确认到诊所付款邮箱。凯文在旁核对收件地址，玛拉看着邮件送出，仍把自己的全套文本握在手里。\n玛拉站到南门前，维克多提起公司会发布个案处理说明。她回身不再谈金额，只把灰风衣搭在蓝夹上盖住孩子资料，凯文已拿起包等她。",
+      "sourceLocator": "season/E12.json#/shots/6"
+    },
+    {
+      "role": "performance",
+      "shotId": "E12-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "双方两份都签好，玛拉留全套副本，付款确认尚待发送。 → 公司只获结案事实，孩子照片不授权。；维克多向同场对话者：It's sent. They'll have the payment reference.；给具体执行结果 / 玛拉向维克多：Copy me. The last time I had to explain it at the desk.；要一份能拿到现场用的记录 / 维克多向同场对话者：I've added you.；完成，不寻求感谢 / 维克多向玛拉：We'll put out a statement saying it's resolved.；在人到门口时补充公司的安排 / 玛拉向维克多：No pictures of Ellie.；最后一道边界",
+      "sourceLocator": "season/E12.json#/shots/6"
+    },
+    {
+      "role": "staging",
+      "shotId": "E12-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日 11:20，公司会议桌南侧玛拉与凯文并坐，维克多在北端。西窗是上午自然散射光，签字夹两份、蓝夹在玛拉左侧，诊所期限还有四十分钟。 本镜画内角色：MARA-WORK,COUNSEL,VICTOR。；起态：双方两份都签好，玛拉留全套副本，付款确认尚待发送。；出态：公司只获结案事实，孩子照片不授权。",
+      "sourceLocator": "season/E12.json#/shots/6"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E12-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "会议室西墙35mm中全景，北端维克多操作平板，玛拉与凯文从南侧座位起身，南门在左侧后层。；相机：固定31秒；她等收到抄送后才走到门边，在同一画面回身拒照片。；焦点：付款执行、完整副本随身和照片拒绝都得到后果，没人为签约合影。",
+      "sourceLocator": "season/E12.json#/shots/6"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E12-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E12-SH011.txt；31秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E12.json#/shots/6"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E12-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "公司只获结案事实，孩子照片不授权。；切点：玛拉带协议离开，切家中真正到账与支付。；接口：本场结果成立后切入 E12-SC04（MARA-HOME，夜·签署当天）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E12.json#/shots/6"
+    },
+    {
+      "role": "direction",
+      "shotId": "E12-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：到账后实际支付，再让孩子提出公交愿望；手机和画本争的是注意。；入镜已知：把制度选择的结果还给一个家庭的普通晚上。；本镜新知：她准备回孩子时，屏幕又亮起开直播的要求。；实际写出的动作：家里水壶响，玛拉右手手机收到转款。她先用左手关壶，再将手机置桌完成诊所支付，留存回执；艾莉拿着绿色公交画等她看。\n艾莉把画里的公交车转向母亲，让她看车窗上的雨点。玛拉检查支付完成页后没有立刻听见问题，艾莉把画本放到空出的桌面。",
+      "sourceLocator": "season/E12.json#/shots/7"
+    },
+    {
+      "role": "performance",
+      "shotId": "E12-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "水壶正响，玛拉右手手机。 → 她准备回孩子时，屏幕又亮起开直播的要求。；艾莉向玛拉：So we're going Thursday?；只要确定这周安排 / 玛拉向艾莉：Yes. It's paid.；看完支付确认再答 / 艾莉向玛拉：Can we take the bus?；继续她画里的计划 / 玛拉向艾莉：The bus? We can get a ride.；先按省事的办法安排 / 艾莉向玛拉：I can see everything from the bus. Can we go early?；讲自己的愿望，不问病情 / 玛拉向艾莉：Yeah. We'll leave early.；终于接孩子的话",
+      "sourceLocator": "season/E12.json#/shots/7"
+    },
+    {
+      "role": "staging",
+      "shotId": "E12-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "当晚公寓东侧是厨房，房间中央是餐桌，北面卧室门关着。艾莉坐桌西画绿色公交车，玛拉换米灰针织衫站在东台面旁，手机在右手，完整协议已放进蓝夹。 本镜画内角色：MARA-HOME,ELLIE。；起态：水壶正响，玛拉右手手机。；出态：她准备回孩子时，屏幕又亮起开直播的要求。",
+      "sourceLocator": "season/E12.json#/shots/7"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E12-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "公寓南侧35mm母女中全景，东厨房在画右、中央餐桌在画面中部偏左、北卧室门居后；艾莉坐桌西，玛拉从东台面转向桌东座。；相机：固定31秒，关壶到桌边的两步完整留在同一画面。；焦点：到账后实际支付，再让孩子提出公交愿望；手机和画本争的是注意。",
+      "sourceLocator": "season/E12.json#/shots/7"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E12-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E12-SH012.txt；31秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E12.json#/shots/7"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E12-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "她准备回孩子时，屏幕又亮起开直播的要求。；切点：直播邀请再亮，切到孩子所等的回应。；接口：接E12-SH013；直播邀请再亮，切到孩子所等的回应。",
+      "sourceLocator": "season/E12.json#/shots/7"
+    },
+    {
+      "role": "direction",
+      "shotId": "E12-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：母亲停止回复，接笔画错头发，由孩子抢回笔修正。；入镜已知：她准备回孩子时，屏幕又亮起开直播的要求。；本镜新知：画本和绿笔回艾莉，付款回执收入蓝夹，手机仍扣桌东。；实际写出的动作：玛拉正要回孩子，陌生留言亮起要求她开直播。她打开回复框，艾莉用绿蜡笔敲敲画上的靠窗座。玛拉删掉刚打的一个词，把手机扣在桌东缘。\n玛拉接绿蜡笔画了个歪脑袋，艾莉立即抢回画本修正。她笑一下，不去看再次无声亮起的手机。",
+      "sourceLocator": "season/E12.json#/shots/8"
+    },
+    {
+      "role": "performance",
+      "shotId": "E12-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "她准备回孩子时，屏幕又亮起开直播的要求。 → 画本和绿笔回艾莉，付款回执收入蓝夹，手机仍扣桌东。；艾莉向玛拉：I saved you this one.；指着座位 / 玛拉向艾莉：Okay. I'll sit there.；终于看着孩子指出的座位 / 艾莉向玛拉：That's not your hair.；认真挑母亲画错的地方 / 玛拉向艾莉：You do it, then.；把笔交还，带一点被挑错后的笑意",
+      "sourceLocator": "season/E12.json#/shots/8"
+    },
+    {
+      "role": "staging",
+      "shotId": "E12-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "当晚公寓东侧是厨房，房间中央是餐桌，北面卧室门关着。艾莉坐桌西画绿色公交车，玛拉换米灰针织衫站在东台面旁，手机在右手，完整协议已放进蓝夹。 本镜画内角色：MARA-HOME,ELLIE。；起态：她准备回孩子时，屏幕又亮起开直播的要求。；出态：画本和绿笔回艾莉，付款回执收入蓝夹，手机仍扣桌东。",
+      "sourceLocator": "season/E12.json#/shots/8"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E12-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "餐桌南偏西50mm孩子高度的母女中近景，艾莉西、玛拉东，手机扣在桌东缘，绿画本居中。；相机：固定17秒，母亲坐下自然进入较近空间，不用镜头追通知。；焦点：母亲停止回复，接笔画错头发，由孩子抢回笔修正。",
+      "sourceLocator": "season/E12.json#/shots/8"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E12-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E12-SH013.txt；17秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E12.json#/shots/8"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E12-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "画本和绿笔回艾莉，付款回执收入蓝夹，手机仍扣桌东。；切点：孩子继续画而手机留在画外边缘，集末在普通关系上落地。；接口：本集结束。治疗终于付清。玛拉放下催她公开表态的手机，坐进孩子画里为她留的位置；这集以获得具体一天收束，不假装往后都已解决。 下集从MARA-HOME展开：为了证明自己没有出卖谁，玛拉必须继续拿孩子的生活给公众看吗？",
+      "sourceLocator": "season/E12.json#/shots/8"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "E12-SH005",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "付款卡催时限，律师把拟加例外与原条款并排。",
+        "audiencePayoff": "最终签约的条件变成书面保留监管调取与依法作证。",
+        "trigger": "黑工服玛拉把手机放右手边。；咨询室里凯文把一条过宽的保密措辞划出，玛拉把诊所卡移到他笔尖边催。南门外有人推治疗车，他先把门带上再给她看拟修订页。\n凯文将拟加的例外页递给玛拉，让她与原条款并排。他把原始回执推回她蓝夹一侧，不把记录交给公司。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "玛拉不再只问快不快，转问签了后自己能做什么。；接E12-SH007；玛拉不再只问快不快，转问签了后自己能做什么。",
+        "noMotionReason": "凯文把门带上后退回座位，相机固定不追他。；观看变化：最终签约的条件变成书面保留监管调取与依法作证。"
+      },
+      "camera": {
+        "shotScale": "诊所东南咨询室南门内35mm共享中景",
+        "position": "诊所东南咨询室南门内35mm共享中景，玛拉桌西、凯文桌东、黑包右脚边。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "诊所东南咨询室南门内35mm共享中景，玛拉桌西、凯文桌东、黑包右脚边。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "付款卡催时限，律师把拟加例外与原条款并排。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 次日 08:15，诊所东南咨询室，玛拉坐桌西，灰风衣搭椅背，黑工服未换。凯文坐东，黑公文包靠右脚，南门外治疗车经过；付款卡背写着今天中午。 本镜画内角色：MARA-WORK,COUNSEL。",
+        "movementIntent": "凯文把门带上后退回座位，相机固定不追他。"
+      },
+      "composition": {
+        "layout": "次日 08:15，诊所东南咨询室，玛拉坐桌西，灰风衣搭椅背，黑工服未换。凯文坐东，黑公文包靠右脚，南门外治疗车经过；付款卡背写着今天中午。 本镜画内角色：MARA-WORK,COUNSEL。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：咨询室里凯文把一条过宽的保密措辞划出，玛拉把诊所卡移到他笔尖边催。南门外有人推治疗车，他先把门带上再给她看拟修订页。\n凯文将拟加的例外页递给玛拉，让她与原条款并排。他把原始回执推回她蓝夹一侧，不把记录交给公司。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "付款卡催时限，律师把拟加例外与原条款并排。；付款卡催时限，律师把拟加例外与原条款并排。"
+      },
+      "temporal": {
+        "durationSeconds": 26,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "付款卡催时限，律师把拟加例外与原条款并排。",
+          "path": "机位不移动。",
+          "start": "黑工服玛拉把手机放右手边。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "最终签约的条件变成书面保留监管调取与依法作证。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E12-SH005-F1",
+            "timeSeconds": 0,
+            "description": "付款卡催时限，律师把拟加例外与原条款并排。"
+          }
+        ],
+        "edit": {
+          "entry": "黑工服玛拉把手机放右手边。",
+          "exit": "最终签约的条件变成书面保留监管调取与依法作证。；玛拉不再只问快不快，转问签了后自己能做什么。",
+          "preferredTransition": "接E12-SH007；玛拉不再只问快不快，转问签了后自己能做什么。",
+          "soundBridge": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E12-SH007",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她理解禁采访、正式索取例外与未来仍需申请，才决定是否接受。",
+        "audiencePayoff": "眼前费用与未来续批仍是两份工作。",
+        "trigger": "最终签约的条件变成书面保留监管调取与依法作证。；玛拉把例外页抬到自己眼前，指向仍保留的采访限制。凯文没有盖过那一行，让两种后果同时留在她眼前。\n玛拉在账单背面算出能付到哪次，发现后面又有空白。她把笔尖移到下一疗程日期，凯文另拿一张续批表，和和解书分开摆。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "她给出今天中午的决定，切律师落实而非停在解释。；接E12-SH008；她给出今天中午的决定，切律师落实而非停在解释。",
+        "noMotionReason": "固定33秒，允许她计算下一疗程后停在空白日期。；观看变化：眼前费用与未来续批仍是两份工作。"
+      },
+      "camera": {
+        "shotScale": "凯文南肩旁朝西65mm玛拉半身",
+        "position": "凯文南肩旁朝西65mm玛拉半身，采访限制和例外在她手上，凯文只留指页手。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "凯文南肩旁朝西65mm玛拉半身，采访限制和例外在她手上，凯文只留指页手。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "她理解禁采访、正式索取例外与未来仍需申请，才决定是否接受。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 次日 08:15，诊所东南咨询室，玛拉坐桌西，灰风衣搭椅背，黑工服未换。凯文坐东，黑公文包靠右脚，南门外治疗车经过；付款卡背写着今天中午。 本镜画内角色：MARA-WORK。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定33秒，允许她计算下一疗程后停在空白日期。"
+      },
+      "composition": {
+        "layout": "次日 08:15，诊所东南咨询室，玛拉坐桌西，灰风衣搭椅背，黑工服未换。凯文坐东，黑公文包靠右脚，南门外治疗车经过；付款卡背写着今天中午。 本镜画内角色：MARA-WORK。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：玛拉把例外页抬到自己眼前，指向仍保留的采访限制。凯文没有盖过那一行，让两种后果同时留在她眼前。\n玛拉在账单背面算出能付到哪次，发现后面又有空白。她把笔尖移到下一疗程日期，凯文另拿一张续批表，和和解书分开摆。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她理解禁采访、正式索取例外与未来仍需申请，才决定是否接受。；她理解禁采访、正式索取例外与未来仍需申请，才决定是否接受。"
+      },
+      "temporal": {
+        "durationSeconds": 33,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她理解禁采访、正式索取例外与未来仍需申请，才决定是否接受。",
+          "path": "机位不移动。",
+          "start": "最终签约的条件变成书面保留监管调取与依法作证。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "眼前费用与未来续批仍是两份工作。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E12-SH007-F1",
+            "timeSeconds": 0,
+            "description": "她理解禁采访、正式索取例外与未来仍需申请，才决定是否接受。"
+          }
+        ],
+        "edit": {
+          "entry": "最终签约的条件变成书面保留监管调取与依法作证。",
+          "exit": "眼前费用与未来续批仍是两份工作。；她给出今天中午的决定，切律师落实而非停在解释。",
+          "preferredTransition": "接E12-SH008；她给出今天中午的决定，切律师落实而非停在解释。",
+          "soundBridge": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E12-SH008",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "两人各做一件为签约腾出时间的事。",
+        "audiencePayoff": "玛拉选择争当前疗程，接受仍需后续申请，凯文开始改约。",
+        "trigger": "眼前费用与未来续批仍是两份工作。；值班提醒响，玛拉按掉；她把诊所卡背面的中午指给凯文，坐近桌子，让他现在联系维克多改文书，自己也开始发迟到通知。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "修订发出，接11:20实际签署文本核对。；本场结果成立后切入 E12-SC03（INSURER，日·同日上午11:20）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定12秒，不拉近邮件正文。；观看变化：玛拉选择争当前疗程，接受仍需后续申请，凯文开始改约。"
+      },
+      "camera": {
+        "shotScale": "玛拉南肩旁朝东50mm凯文及桌面中景",
+        "position": "玛拉南肩旁朝东50mm凯文及桌面中景，手机发送修订，客户发迟到通知的手在画缘。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "玛拉南肩旁朝东50mm凯文及桌面中景，手机发送修订，客户发迟到通知的手在画缘。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "两人各做一件为签约腾出时间的事。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 次日 08:15，诊所东南咨询室，玛拉坐桌西，灰风衣搭椅背，黑工服未换。凯文坐东，黑公文包靠右脚，南门外治疗车经过；付款卡背写着今天中午。 本镜画内角色：COUNSEL,MARA-WORK。",
+        "movementIntent": "固定12秒，不拉近邮件正文。"
+      },
+      "composition": {
+        "layout": "次日 08:15，诊所东南咨询室，玛拉坐桌西，灰风衣搭椅背，黑工服未换。凯文坐东，黑公文包靠右脚，南门外治疗车经过；付款卡背写着今天中午。 本镜画内角色：COUNSEL,MARA-WORK。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：值班提醒响，玛拉按掉；她把诊所卡背面的中午指给凯文，坐近桌子，让他现在联系维克多改文书，自己也开始发迟到通知。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "两人各做一件为签约腾出时间的事。；两人各做一件为签约腾出时间的事。"
+      },
+      "temporal": {
+        "durationSeconds": 12,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "两人各做一件为签约腾出时间的事。",
+          "path": "机位不移动。",
+          "start": "眼前费用与未来续批仍是两份工作。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "玛拉选择争当前疗程，接受仍需后续申请，凯文开始改约。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E12-SH008-F1",
+            "timeSeconds": 0,
+            "description": "两人各做一件为签约腾出时间的事。"
+          }
+        ],
+        "edit": {
+          "entry": "眼前费用与未来续批仍是两份工作。",
+          "exit": "玛拉选择争当前疗程，接受仍需后续申请，凯文开始改约。；修订发出，接11:20实际签署文本核对。",
+          "preferredTransition": "本场结果成立后切入 E12-SC03（INSURER，日·同日上午11:20）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E12-SH009",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "发现错误版本与双方两份必须同改，首先建立真实空间与错误所在。",
+        "audiencePayoff": "两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。",
+        "trigger": "玛拉已将手机放桌右、蓝夹放桌左，右手握笔；签署夹在桌中央，凯文坐西侧翻页。；玛拉已经拿笔。凯文翻到例外页，发现仍是旧版，手掌挡在签名栏前。维克多核对批准邮件，将平板转给他们看；玛拉要求双方各持的两份都改，笔未碰签字栏。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "口头批准不能替代签字页，切向承担签字后果的人。；接E12-SH101；口头批准不能替代签字页，切向承担签字后果的人。",
+        "noMotionReason": "固定15秒，凯文的手停在签字栏，保住玛拉笔尖没有落下。；观看变化：两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。"
+      },
+      "camera": {
+        "shotScale": "公司会议桌西南侧50mm略俯的三人中景",
+        "position": "公司会议桌西南侧50mm略俯的三人中景，两份签署夹在画面中下部，玛拉与凯文南、维克多北。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "公司会议桌西南侧50mm略俯的三人中景，两份签署夹在画面中下部，玛拉与凯文南、维克多北。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "发现错误版本与双方两份必须同改，首先建立真实空间与错误所在。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日 11:20，公司会议桌南侧玛拉与凯文并坐，维克多在北端。西窗是上午自然散射光，签字夹两份、蓝夹在玛拉左侧，诊所期限还有四十分钟。 本镜画内角色：MARA-WORK,COUNSEL,VICTOR。",
+        "movementIntent": "固定15秒，凯文的手停在签字栏，保住玛拉笔尖没有落下。"
+      },
+      "composition": {
+        "layout": "同日 11:20，公司会议桌南侧玛拉与凯文并坐，维克多在北端。西窗是上午自然散射光，签字夹两份、蓝夹在玛拉左侧，诊所期限还有四十分钟。 本镜画内角色：MARA-WORK,COUNSEL,VICTOR。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：玛拉已经拿笔。凯文翻到例外页，发现仍是旧版，手掌挡在签名栏前。维克多核对批准邮件，将平板转给他们看；玛拉要求双方各持的两份都改，笔未碰签字栏。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "发现错误版本与双方两份必须同改，首先建立真实空间与错误所在。；发现错误版本与双方两份必须同改，首先建立真实空间与错误所在。"
+      },
+      "temporal": {
+        "durationSeconds": 15,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "发现错误版本与双方两份必须同改，首先建立真实空间与错误所在。",
+          "path": "机位不移动。",
+          "start": "玛拉已将手机放桌右、蓝夹放桌左，右手握笔；签署夹在桌中央，凯文坐西侧翻页。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E12-SH009-F1",
+            "timeSeconds": 0,
+            "description": "发现错误版本与双方两份必须同改，首先建立真实空间与错误所在。"
+          }
+        ],
+        "edit": {
+          "entry": "玛拉已将手机放桌右、蓝夹放桌左，右手握笔；签署夹在桌中央，凯文坐西侧翻页。",
+          "exit": "两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。；口头批准不能替代签字页，切向承担签字后果的人。",
+          "preferredTransition": "接E12-SH101；口头批准不能替代签字页，切向承担签字后果的人。",
+          "soundBridge": "办公室空调与实际手机提示，不加未列来电内容。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E12-SH101",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她放下笔拒绝用邮件代替有效文本；律师接话把要求具体化。",
+        "audiencePayoff": "维克多收回旧版，不要求她在替换前落笔。",
+        "trigger": "两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。；玛拉把笔放横，凯文仍挡着旧稿签字栏。维克多把批准邮件转给她看，她看完却没有重新拿笔；午时限只剩四十分钟。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "维克多撤回旧版，切唯一需要仔细看清的证据变化。；接E12-SH010；维克多撤回旧版，切唯一需要仔细看清的证据变化。",
+        "noMotionReason": "固定21秒，不做英雄式仰拍。；观看变化：维克多收回旧版，不要求她在替换前落笔。"
+      },
+      "camera": {
+        "shotScale": "维克多西肩旁朝南65mm玛拉中近景",
+        "position": "维克多西肩旁朝南65mm玛拉中近景，凯文在她同侧画缘，平板批准邮件只留边。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "维克多西肩旁朝南65mm玛拉中近景，凯文在她同侧画缘，平板批准邮件只留边。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "她放下笔拒绝用邮件代替有效文本；律师接话把要求具体化。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日 11:20，公司会议桌南侧玛拉与凯文并坐，维克多在北端。西窗是上午自然散射光，签字夹两份、蓝夹在玛拉左侧，诊所期限还有四十分钟。 本镜画内角色：MARA-WORK,COUNSEL。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定21秒，不做英雄式仰拍。"
+      },
+      "composition": {
+        "layout": "同日 11:20，公司会议桌南侧玛拉与凯文并坐，维克多在北端。西窗是上午自然散射光，签字夹两份、蓝夹在玛拉左侧，诊所期限还有四十分钟。 本镜画内角色：MARA-WORK,COUNSEL。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：玛拉把笔放横，凯文仍挡着旧稿签字栏。维克多把批准邮件转给她看，她看完却没有重新拿笔；午时限只剩四十分钟。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她放下笔拒绝用邮件代替有效文本；律师接话把要求具体化。；她放下笔拒绝用邮件代替有效文本；律师接话把要求具体化。"
+      },
+      "temporal": {
+        "durationSeconds": 21,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她放下笔拒绝用邮件代替有效文本；律师接话把要求具体化。",
+          "path": "机位不移动。",
+          "start": "两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "维克多收回旧版，不要求她在替换前落笔。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E12-SH101-F1",
+            "timeSeconds": 0,
+            "description": "她放下笔拒绝用邮件代替有效文本；律师接话把要求具体化。"
+          }
+        ],
+        "edit": {
+          "entry": "两份旧签署夹还在桌上，凯文挡着签字栏；邮件批准尚未变成有效文本。",
+          "exit": "维克多收回旧版，不要求她在替换前落笔。；维克多撤回旧版，切唯一需要仔细看清的证据变化。",
+          "preferredTransition": "接E12-SH010；维克多撤回旧版，切唯一需要仔细看清的证据变化。",
+          "soundBridge": "办公室空调与实际手机提示，不加未列来电内容。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E12-SH010",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "两份都含正式监管请求/作证例外，双方签完，玛拉留全套；英文条款美术后期精排。",
+        "audiencePayoff": "双方两份都签好，玛拉留全套副本，付款确认尚待发送。",
+        "trigger": "维克多收回旧版，不要求她在替换前落笔。；维克多将两份旧稿从签署夹取出换好新页。凯文并排核对例外，玛拉确认监管正式索取与依法作证不受该保密条款限制，且两份都有这段。维克多先签，玛拉随后落笔，自己的全套协议留在左手。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "她要求立即发诊所确认，切到执行和离开是否发生。；接E12-SH011；她要求立即发诊所确认，切到执行和离开是否发生。",
+        "noMotionReason": "固定15秒；页面由人物并排摊开，不作镜内跳放大。；观看变化：双方两份都签好，玛拉留全套副本，付款确认尚待发送。"
+      },
+      "camera": {
+        "shotScale": "桌西侧60mm斜俯近景",
+        "position": "桌西侧60mm斜俯近景，两份协议的同一例外位置、三人的手与两处签字栏同框。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "桌西侧60mm斜俯近景，两份协议的同一例外位置、三人的手与两处签字栏同框。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "两份都含正式监管请求/作证例外，双方签完，玛拉留全套；英文条款美术后期精排。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日 11:20，公司会议桌南侧玛拉与凯文并坐，维克多在北端。西窗是上午自然散射光，签字夹两份、蓝夹在玛拉左侧，诊所期限还有四十分钟。 本镜画内角色：MARA-WORK,COUNSEL,VICTOR。",
+        "movementIntent": "固定15秒；页面由人物并排摊开，不作镜内跳放大。"
+      },
+      "composition": {
+        "layout": "同日 11:20，公司会议桌南侧玛拉与凯文并坐，维克多在北端。西窗是上午自然散射光，签字夹两份、蓝夹在玛拉左侧，诊所期限还有四十分钟。 本镜画内角色：MARA-WORK,COUNSEL,VICTOR。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：维克多将两份旧稿从签署夹取出换好新页。凯文并排核对例外，玛拉确认监管正式索取与依法作证不受该保密条款限制，且两份都有这段。维克多先签，玛拉随后落笔，自己的全套协议留在左手。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "两份都含正式监管请求/作证例外，双方签完，玛拉留全套；英文条款美术后期精排。；两份都含正式监管请求/作证例外，双方签完，玛拉留全套；英文条款美术后期精排。"
+      },
+      "temporal": {
+        "durationSeconds": 15,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "两份都含正式监管请求/作证例外，双方签完，玛拉留全套；英文条款美术后期精排。",
+          "path": "机位不移动。",
+          "start": "维克多收回旧版，不要求她在替换前落笔。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "双方两份都签好，玛拉留全套副本，付款确认尚待发送。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E12-SH010-F1",
+            "timeSeconds": 0,
+            "description": "两份都含正式监管请求/作证例外，双方签完，玛拉留全套；英文条款美术后期精排。"
+          }
+        ],
+        "edit": {
+          "entry": "维克多收回旧版，不要求她在替换前落笔。",
+          "exit": "双方两份都签好，玛拉留全套副本，付款确认尚待发送。；她要求立即发诊所确认，切到执行和离开是否发生。",
+          "preferredTransition": "接E12-SH011；她要求立即发诊所确认，切到执行和离开是否发生。",
+          "soundBridge": "办公室空调与实际手机提示，不加未列来电内容。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E12-SH011",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "付款执行、完整副本随身和照片拒绝都得到后果，没人为签约合影。",
+        "audiencePayoff": "公司只获结案事实，孩子照片不授权。",
+        "trigger": "双方两份都签好，玛拉留全套副本，付款确认尚待发送。；玛拉刚说现在就发，维克多便用平板发送确认到诊所付款邮箱。凯文在旁核对收件地址，玛拉看着邮件送出，仍把自己的全套文本握在手里。\n玛拉站到南门前，维克多提起公司会发布个案处理说明。她回身不再谈金额，只把灰风衣搭在蓝夹上盖住孩子资料，凯文已拿起包等她。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "玛拉带协议离开，切家中真正到账与支付。；本场结果成立后切入 E12-SC04（MARA-HOME，夜·签署当天）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定31秒；她等收到抄送后才走到门边，在同一画面回身拒照片。；观看变化：公司只获结案事实，孩子照片不授权。"
+      },
+      "camera": {
+        "shotScale": "会议室西墙35mm中全景",
+        "position": "会议室西墙35mm中全景，北端维克多操作平板，玛拉与凯文从南侧座位起身，南门在左侧后层。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "会议室西墙35mm中全景，北端维克多操作平板，玛拉与凯文从南侧座位起身，南门在左侧后层。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "付款执行、完整副本随身和照片拒绝都得到后果，没人为签约合影。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日 11:20，公司会议桌南侧玛拉与凯文并坐，维克多在北端。西窗是上午自然散射光，签字夹两份、蓝夹在玛拉左侧，诊所期限还有四十分钟。 本镜画内角色：MARA-WORK,COUNSEL,VICTOR。",
+        "movementIntent": "固定31秒；她等收到抄送后才走到门边，在同一画面回身拒照片。"
+      },
+      "composition": {
+        "layout": "同日 11:20，公司会议桌南侧玛拉与凯文并坐，维克多在北端。西窗是上午自然散射光，签字夹两份、蓝夹在玛拉左侧，诊所期限还有四十分钟。 本镜画内角色：MARA-WORK,COUNSEL,VICTOR。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：玛拉刚说现在就发，维克多便用平板发送确认到诊所付款邮箱。凯文在旁核对收件地址，玛拉看着邮件送出，仍把自己的全套文本握在手里。\n玛拉站到南门前，维克多提起公司会发布个案处理说明。她回身不再谈金额，只把灰风衣搭在蓝夹上盖住孩子资料，凯文已拿起包等她。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "付款执行、完整副本随身和照片拒绝都得到后果，没人为签约合影。；付款执行、完整副本随身和照片拒绝都得到后果，没人为签约合影。"
+      },
+      "temporal": {
+        "durationSeconds": 31,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "付款执行、完整副本随身和照片拒绝都得到后果，没人为签约合影。",
+          "path": "机位不移动。",
+          "start": "双方两份都签好，玛拉留全套副本，付款确认尚待发送。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "公司只获结案事实，孩子照片不授权。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E12-SH011-F1",
+            "timeSeconds": 0,
+            "description": "付款执行、完整副本随身和照片拒绝都得到后果，没人为签约合影。"
+          }
+        ],
+        "edit": {
+          "entry": "双方两份都签好，玛拉留全套副本，付款确认尚待发送。",
+          "exit": "公司只获结案事实，孩子照片不授权。；玛拉带协议离开，切家中真正到账与支付。",
+          "preferredTransition": "本场结果成立后切入 E12-SC04（MARA-HOME，夜·签署当天）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "办公室空调与实际手机提示，不加未列来电内容。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E12-SH012",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "到账后实际支付，再让孩子提出公交愿望；手机和画本争的是注意。",
+        "audiencePayoff": "她准备回孩子时，屏幕又亮起开直播的要求。",
+        "trigger": "水壶正响，玛拉右手手机。；家里水壶响，玛拉右手手机收到转款。她先用左手关壶，再将手机置桌完成诊所支付，留存回执；艾莉拿着绿色公交画等她看。\n艾莉把画里的公交车转向母亲，让她看车窗上的雨点。玛拉检查支付完成页后没有立刻听见问题，艾莉把画本放到空出的桌面。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "直播邀请再亮，切到孩子所等的回应。；接E12-SH013；直播邀请再亮，切到孩子所等的回应。",
+        "noMotionReason": "固定31秒，关壶到桌边的两步完整留在同一画面。；观看变化：她准备回孩子时，屏幕又亮起开直播的要求。"
+      },
+      "camera": {
+        "shotScale": "公寓南侧35mm母女中全景",
+        "position": "公寓南侧35mm母女中全景，东厨房在画右、中央餐桌在画面中部偏左、北卧室门居后；艾莉坐桌西，玛拉从东台面转向桌东座。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "公寓南侧35mm母女中全景，东厨房在画右、中央餐桌在画面中部偏左、北卧室门居后；艾莉坐桌西，玛拉从东台面转向桌东座。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "到账后实际支付，再让孩子提出公交愿望；手机和画本争的是注意。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 当晚公寓东侧是厨房，房间中央是餐桌，北面卧室门关着。艾莉坐桌西画绿色公交车，玛拉换米灰针织衫站在东台面旁，手机在右手，完整协议已放进蓝夹。 本镜画内角色：MARA-HOME,ELLIE。",
+        "movementIntent": "固定31秒，关壶到桌边的两步完整留在同一画面。"
+      },
+      "composition": {
+        "layout": "当晚公寓东侧是厨房，房间中央是餐桌，北面卧室门关着。艾莉坐桌西画绿色公交车，玛拉换米灰针织衫站在东台面旁，手机在右手，完整协议已放进蓝夹。 本镜画内角色：MARA-HOME,ELLIE。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：家里水壶响，玛拉右手手机收到转款。她先用左手关壶，再将手机置桌完成诊所支付，留存回执；艾莉拿着绿色公交画等她看。\n艾莉把画里的公交车转向母亲，让她看车窗上的雨点。玛拉检查支付完成页后没有立刻听见问题，艾莉把画本放到空出的桌面。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "到账后实际支付，再让孩子提出公交愿望；手机和画本争的是注意。；到账后实际支付，再让孩子提出公交愿望；手机和画本争的是注意。"
+      },
+      "temporal": {
+        "durationSeconds": 31,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "到账后实际支付，再让孩子提出公交愿望；手机和画本争的是注意。",
+          "path": "机位不移动。",
+          "start": "水壶正响，玛拉右手手机。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "她准备回孩子时，屏幕又亮起开直播的要求。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E12-SH012-F1",
+            "timeSeconds": 0,
+            "description": "到账后实际支付，再让孩子提出公交愿望；手机和画本争的是注意。"
+          }
+        ],
+        "edit": {
+          "entry": "水壶正响，玛拉右手手机。",
+          "exit": "她准备回孩子时，屏幕又亮起开直播的要求。；直播邀请再亮，切到孩子所等的回应。",
+          "preferredTransition": "接E12-SH013；直播邀请再亮，切到孩子所等的回应。",
+          "soundBridge": "东厨房水壶与日常室内底声，手机通知只亮屏不朗读。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E12-SH013",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "母亲停止回复，接笔画错头发，由孩子抢回笔修正。",
+        "audiencePayoff": "画本和绿笔回艾莉，付款回执收入蓝夹，手机仍扣桌东。",
+        "trigger": "她准备回孩子时，屏幕又亮起开直播的要求。；玛拉正要回孩子，陌生留言亮起要求她开直播。她打开回复框，艾莉用绿蜡笔敲敲画上的靠窗座。玛拉删掉刚打的一个词，把手机扣在桌东缘。\n玛拉接绿蜡笔画了个歪脑袋，艾莉立即抢回画本修正。她笑一下，不去看再次无声亮起的手机。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "孩子继续画而手机留在画外边缘，集末在普通关系上落地。；本集结束。治疗终于付清。玛拉放下催她公开表态的手机，坐进孩子画里为她留的位置；这集以获得具体一天收束，不假装往后都已解决。 下集从MARA-HOME展开：为了证明自己没有出卖谁，玛拉必须继续拿孩子的生活给公众看吗？",
+        "noMotionReason": "固定17秒，母亲坐下自然进入较近空间，不用镜头追通知。；观看变化：画本和绿笔回艾莉，付款回执收入蓝夹，手机仍扣桌东。"
+      },
+      "camera": {
+        "shotScale": "餐桌南偏西50mm孩子高度的母女中近景",
+        "position": "餐桌南偏西50mm孩子高度的母女中近景，艾莉西、玛拉东，手机扣在桌东缘，绿画本居中。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "餐桌南偏西50mm孩子高度的母女中近景，艾莉西、玛拉东，手机扣在桌东缘，绿画本居中。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "母亲停止回复，接笔画错头发，由孩子抢回笔修正。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 当晚公寓东侧是厨房，房间中央是餐桌，北面卧室门关着。艾莉坐桌西画绿色公交车，玛拉换米灰针织衫站在东台面旁，手机在右手，完整协议已放进蓝夹。 本镜画内角色：MARA-HOME,ELLIE。",
+        "movementIntent": "固定17秒，母亲坐下自然进入较近空间，不用镜头追通知。"
+      },
+      "composition": {
+        "layout": "当晚公寓东侧是厨房，房间中央是餐桌，北面卧室门关着。艾莉坐桌西画绿色公交车，玛拉换米灰针织衫站在东台面旁，手机在右手，完整协议已放进蓝夹。 本镜画内角色：MARA-HOME,ELLIE。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：玛拉正要回孩子，陌生留言亮起要求她开直播。她打开回复框，艾莉用绿蜡笔敲敲画上的靠窗座。玛拉删掉刚打的一个词，把手机扣在桌东缘。\n玛拉接绿蜡笔画了个歪脑袋，艾莉立即抢回画本修正。她笑一下，不去看再次无声亮起的手机。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "母亲停止回复，接笔画错头发，由孩子抢回笔修正。；母亲停止回复，接笔画错头发，由孩子抢回笔修正。"
+      },
+      "temporal": {
+        "durationSeconds": 17,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "母亲停止回复，接笔画错头发，由孩子抢回笔修正。",
+          "path": "机位不移动。",
+          "start": "她准备回孩子时，屏幕又亮起开直播的要求。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "画本和绿笔回艾莉，付款回执收入蓝夹，手机仍扣桌东。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E12-SH013-F1",
+            "timeSeconds": 0,
+            "description": "母亲停止回复，接笔画错头发，由孩子抢回笔修正。"
+          }
+        ],
+        "edit": {
+          "entry": "她准备回孩子时，屏幕又亮起开直播的要求。",
+          "exit": "画本和绿笔回艾莉，付款回执收入蓝夹，手机仍扣桌东。；孩子继续画而手机留在画外边缘，集末在普通关系上落地。",
+          "preferredTransition": "本集结束。治疗终于付清。玛拉放下催她公开表态的手机，坐进孩子画里为她留的位置；这集以获得具体一天收束，不假装往后都已解决。 下集从MARA-HOME展开：为了证明自己没有出卖谁，玛拉必须继续拿孩子的生活给公众看吗？",
+          "soundBridge": "东厨房水壶与日常室内底声，手机通知只亮屏不朗读。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,860 @@
+{
+  "version": "3.2.1",
+  "files": [
+    {
+      "path": "skills/cineweave-director/contracts.json",
+      "sha256": "5918d80cd5666d07a881f92ccbaefb3f169ffdd29bed20b3515835c245d4a163",
+      "bytes": 6590
+    },
+    {
+      "path": "skills/cineweave-director/reference-lifecycle.json",
+      "sha256": "94982b25bfe2b2eeb835714f7e838859ab67574773ac19edf02014a7c50edfe7",
+      "bytes": 11561
+    },
+    {
+      "path": "skills/cineweave-director/SKILL.md",
+      "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c",
+      "bytes": 14711
+    },
+    {
+      "path": "skills/cineweave-director/agents/openai.yaml",
+      "sha256": "5c18c928b1fb53088bf6e8aeb24375ec2389714b396f617e46c8eae5c5bc46b5",
+      "bytes": 387
+    },
+    {
+      "path": "skills/cineweave-director/assets/adaptation-example.html",
+      "sha256": "cfdcc8f98ac0483a0db3f6c4aa8891fd94112298a4fe43d0eee7e17e47dfa22a",
+      "bytes": 66963
+    },
+    {
+      "path": "skills/cineweave-director/scripts/check-audio-returns.mjs",
+      "sha256": "523722ef0e3200e02cb47174c1b26bed39e14e296c7e508796ff19501bba80b1",
+      "bytes": 12649
+    },
+    {
+      "path": "skills/cineweave-director/scripts/check-change-impact.mjs",
+      "sha256": "9e4192ac7b4722834f38293291601621305f90b414ab52e02d4d944c6096ae85",
+      "bytes": 16625
+    },
+    {
+      "path": "skills/cineweave-director/scripts/check-delivery.mjs",
+      "sha256": "3147c6f5fad4d4d32682a05f34eca15337c6ca2b8c73c69ea96331a209f2e4a5",
+      "bytes": 7861
+    },
+    {
+      "path": "skills/cineweave-director/scripts/check-shot-review.mjs",
+      "sha256": "5c2230917425de00084a65a778e083b7ded4151abbdb7506cd9e17b97532c7eb",
+      "bytes": 17602
+    },
+    {
+      "path": "skills/cineweave-director/scripts/check-video-plan.mjs",
+      "sha256": "c8d3dae44543e85a494238a4953904e513094a16091b0385f69e9938b6e7000b",
+      "bytes": 36406
+    },
+    {
+      "path": "skills/cineweave-director/scripts/parse-json.mjs",
+      "sha256": "9c15621d8304bf6114cc4cb322409c8e59433409ac17950311725cdcbebecf11",
+      "bytes": 3750
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/index.json",
+      "sha256": "79ae614f1a89ddb9683e5cb528bc7209b036c3c963b86eeff847f6837d1288e5",
+      "bytes": 22425
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/action-sequence-spec.json",
+      "sha256": "2fceea2409c67d169cf1d37ea323e6e12582672b07b5b653fe8fc82529224798",
+      "bytes": 43752
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/asset-alias-registry.json",
+      "sha256": "288ba399191183a705e0a50747b06533444724b3d29e39d87b10a66a549bf3f2",
+      "bytes": 3336
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/asset-recipe.json",
+      "sha256": "71d029c6803f94b4cbdc4cd7d638dfc3d4a15dfb008300d73592cf10c761585a",
+      "bytes": 14546
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/beat-sheet.json",
+      "sha256": "97b08d71fa74cfd3d11365ea6f91dc0f157f83b0c4e8267d41eb24d730f09d1a",
+      "bytes": 2596
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/board-assembly-plan.json",
+      "sha256": "3b840b0d94a30681bc4e06995ec7f3e8e2ddfea96198c771229061c8d9972ca6",
+      "bytes": 7432
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/camera-previs-spec.json",
+      "sha256": "77f2fc862071ab73a58718d3a3f5b1a4c95a57879a045862207978f66d85c152",
+      "bytes": 5329
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/capability-profile.json",
+      "sha256": "cc7d10e98215751ab4bd747139b765c85cc8b9e9ff6a40f9696796b9a7864e70",
+      "bytes": 7076
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/capability-resolution-plan.json",
+      "sha256": "3d234561dd7bf6495e7766a8f861ab02a234488f401cd95c3e151f40182a0a8a",
+      "bytes": 3379
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/character-appearance-state.json",
+      "sha256": "4c0e5e0c197cdd97d1da1599df06bed5fc795f081c3bfe3ec06f63096b5e06cd",
+      "bytes": 7615
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/character-binding.json",
+      "sha256": "aaf450b5bf73caa45f752709a6249dc46ae505097f02723b2ab38dab82e8cf96",
+      "bytes": 3436
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/character-morphology-spec.json",
+      "sha256": "43af97a7b2ca0fb06325a2bfbd2a87773e09bca4cdc8c9ffec7696d8cc0d0f23",
+      "bytes": 7879
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/character-spec.json",
+      "sha256": "6fdbab10a6c894db65d43aa062c5d3007c071c7763565533a6ba7f38a010eb2b",
+      "bytes": 11717
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/cinematic-skill-manifest.json",
+      "sha256": "b3ca5d54a6954cc5a53d98da785b05e9b391081bbb8e423a2107c99425747666",
+      "bytes": 83654
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/color-pipeline-profile.json",
+      "sha256": "e39ca39ae693a29e0d5d62cf909ef4702bded798f4e0d3382e9b607b0a3c2328",
+      "bytes": 3360
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/continuity-ledger.json",
+      "sha256": "2661a86b7fd64b99ba451b16d9777b621cbeb36576d9e385a68c6d7a223305de",
+      "bytes": 1322
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/control-benchmark-review.json",
+      "sha256": "ad16666aef448a3dc5289c482755cc2b06736c019325618816f05a46102e2509",
+      "bytes": 5135
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/control-benchmark.json",
+      "sha256": "a45b639bf37cb1cca78188c51ad7656381f95960d30dabe52ef10fac9e2f1363",
+      "bytes": 38670
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/control-channel-set.json",
+      "sha256": "8916b9c2bc2363870ae314e4ebab2c635f15fa463bd81fdf0be128011c12f273",
+      "bytes": 6714
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/creative-brief.json",
+      "sha256": "98153f31953297b26258331846bb81bdc8e2617ace4a36f59d188d1bb2e2549b",
+      "bytes": 4547
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/creative-review.json",
+      "sha256": "038d4861ece2cff958f4c269feed5300f446ba8afacd3ac0d1b1d983aa9699d6",
+      "bytes": 2670
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/editorial-timeline-plan.json",
+      "sha256": "3bc9489ea4d1a68ab205405c6288e18aa9f398ff822055edb2a0eed5100a95b9",
+      "bytes": 4940
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/evidence-bundle.json",
+      "sha256": "1f448284b5c08788289d7ed4517fcfe5096947bcc2b8fe6a3cdcf80d3b39c608",
+      "bytes": 7392
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/hero-frame-anchor.json",
+      "sha256": "87df06ceb4db93286efedbaaf6045166cb218eba96f9db7f6dbd0dc83faa24ae",
+      "bytes": 5286
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/image-prompt.json",
+      "sha256": "700967cf8e7a2af10f52705cc0807476be07acdf1710460a7343bb617b839baa",
+      "bytes": 18488
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/interaction-constraint-set.json",
+      "sha256": "0699b2f0aa83f1f3c685d663599feec61468df6ac9ef1bd006fe2017213e5f02",
+      "bytes": 4612
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/license-profile.json",
+      "sha256": "32f9f1e655c6fc6d99204c1388ccf0102615b08767bf6a17406ef30b2a4f3785",
+      "bytes": 2119
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/performance-timeline.json",
+      "sha256": "a1c2a539c32d1fe52441e345c322159ae26d0bf003ad49dbbd2ae1ed4c1533cd",
+      "bytes": 3453
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/prompt-projection-plan.json",
+      "sha256": "5f5516600822f33a6e1d8131a0e862e2fe43870fbd7a975891c96a2f18672300",
+      "bytes": 14824
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/prompt-record.json",
+      "sha256": "d86cfd77abb8101bdf5eb31cc8bb96480575547c327be683fe5af54ef7a02a28",
+      "bytes": 8343
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/reference-asset.json",
+      "sha256": "318c7297a3b23e157b6517fcd8c593a4ebe24d09c94c73735ed62dee9f9af53a",
+      "bytes": 1946
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/reference-binding-set.json",
+      "sha256": "8a76357e7cf7762d3b3d6747b68aa1fd6819acb631632465e46bb74b2df9ba18",
+      "bytes": 2139
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/reference-observation.json",
+      "sha256": "6b43f56ca5e8335a0398fd7ec5d963812c2a6d3fdf314c1ebfb91e7da78e3d47",
+      "bytes": 2260
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/render-plan.json",
+      "sha256": "dce34414c5a14e177e5eeb5cccbcd059a8ef2788b5918843dec5a7fd1d41aec2",
+      "bytes": 5090
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/repair-plan.json",
+      "sha256": "58e11182ce4b71a2f6fa98b3ba8d1b08d8de6ec61fa260c2cd554dcc9a14c5cc",
+      "bytes": 2609
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/representation-binding.json",
+      "sha256": "a06c540414ec704647f95b5fa7e3011f4977e72aa2157fe298a584f84906cb5c",
+      "bytes": 5597
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/scene-binding.json",
+      "sha256": "42698971433dce6eef6e96c4a7041828b8810ff3881ceba9674e472f86bb3f9f",
+      "bytes": 5785
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/scene-light-state.json",
+      "sha256": "861d6dc8e57fa7ddf9448b44234dc76cd8ae9ab35d07ab16425ce889586756db",
+      "bytes": 2978
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/scene-spec.json",
+      "sha256": "317a33c5850a6091308a41584f6001e60691cde235ffb71008e17b864f18774d",
+      "bytes": 11015
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/scene-state.json",
+      "sha256": "8fca18991159f86a7cacea288e1ab2837576b298f668cfb2c2db8d23ed02ea88",
+      "bytes": 4323
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/script-scene.json",
+      "sha256": "53c73266217190c0129ee2cde49061691fd546eda872a7e7dad97bc0144f6b37",
+      "bytes": 3063
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/sequence-rhythm-spec.json",
+      "sha256": "222f0ee6c1ce507537cf0b3020365398752e007bcf4946b83a909143fcc93578",
+      "bytes": 3327
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/shot-compiler-plan.json",
+      "sha256": "ee5cd2f776c72661ad36c2d854343b162a7d3782be52d2a56ecfc9d9902cbe4d",
+      "bytes": 11799
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/shot-lighting-plan.json",
+      "sha256": "e8ff48c7ec1f4f02b98260ad0da66104c8e03d0ad07b28a28e37c17b0e7770bc",
+      "bytes": 3463
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/shot-spec.json",
+      "sha256": "5b6483b406cf2b797b9eb6065beb611fd5ada358d75c146216064975eb22f377",
+      "bytes": 5152
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/story-brief.json",
+      "sha256": "ad91882c4e7b448f871c7e5e48e0f5a9e48f8ff2fd0afb09630bb663252b9659",
+      "bytes": 2431
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/storyboard.json",
+      "sha256": "79d972aaf3cf0288d703636bb24ad3ee8bee6f76caf5958dfa5d3ff70abb751d",
+      "bytes": 6607
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/style-compile.json",
+      "sha256": "1a50ac3a43223058013dcfdb36f73325d59d0cf41c57c1b9791dd3db39e4b579",
+      "bytes": 5349
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/style-light-grammar.json",
+      "sha256": "b896d606f0fc535977def6e1c55103689c6ad5386c1184692e543c422798a5aa",
+      "bytes": 2165
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/style-package.json",
+      "sha256": "752670cc6cd1c4b6344e76f26c462d692faec4b136ed5825f6523caa3c9d821a",
+      "bytes": 15849
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/temporal-spec.json",
+      "sha256": "8213b3e58b738d67a5a9b4c954634dbd2e0f4e16f9864667b1ac66efdff83e24",
+      "bytes": 4579
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/workflow-plan.json",
+      "sha256": "98eac32f42ed06161f5eef6659ea807af872cdecec70eb8f8a836ea9e5b402e0",
+      "bytes": 5927
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/examples/world-bible.json",
+      "sha256": "5f625ea3e0d5dc43644208ba62108ce03485884361ef9346be50a7724c4bb63b",
+      "bytes": 5521
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/action-sequence-spec.schema.json",
+      "sha256": "809991375d5eda4c1328ceed88823dcdbff4b5b972c787733d9762ef47aba02a",
+      "bytes": 29056
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/asset-alias-registry.schema.json",
+      "sha256": "0ba95f7d2f3dc5162bae8f0a02eb6784d9152560df7e58d5c3ad3aa1d634f257",
+      "bytes": 8579
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/asset-recipe.schema.json",
+      "sha256": "aa6a8c8e5ea46caded6dacdc83edea631ab7a978f5e84610faedc7f52d3bfbcd",
+      "bytes": 18447
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/beat-sheet.schema.json",
+      "sha256": "83379f1587b89c210f4fe9982a7a4e063d1063b1efd19cb157f22a0d94fa0803",
+      "bytes": 3917
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/board-assembly-plan.schema.json",
+      "sha256": "32897b364a8defec6dde1141daeebe8872bcc47c24f2e7f5c1e0031452cad86a",
+      "bytes": 8202
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/camera-previs-spec.schema.json",
+      "sha256": "898aac32c5a0c097d18d384b23159b258cf0e67f76a6611b9e159d3411890d22",
+      "bytes": 12114
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/capability-profile.schema.json",
+      "sha256": "829fde864a1414dbbec4c42b8d46f08b3efca6efffec47738b3c908196b049f2",
+      "bytes": 9602
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/capability-resolution-plan.schema.json",
+      "sha256": "e4e908e22a16e55e715dffb8effd99990fa408ced54abcde36c7aea6bd687a52",
+      "bytes": 10455
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/character-appearance-state.schema.json",
+      "sha256": "8bbfe45d3cc49ec0c07afcdf46c382f974c21bd8eb15edd022d3a6c0ddf3c8d7",
+      "bytes": 20132
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/character-binding.schema.json",
+      "sha256": "1e2eada22faa3607018e40dcaa7069c5d2a1f21c4f90c69481ec85d5cef51954",
+      "bytes": 9279
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/character-morphology-spec.schema.json",
+      "sha256": "02cac4530eea8ef9d218fddb510523660f5fd95fb95c9b2d9a1350d6c416bb3e",
+      "bytes": 14095
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/character-spec.schema.json",
+      "sha256": "4e768b0e28bd3f6f2c2eedadc71d0f0047229fda5c7335c0d52e4f2457d12dec",
+      "bytes": 24806
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/cinematic-skill-manifest.schema.json",
+      "sha256": "f9330fddbe59492672b15230ae9f16e5822fde8f1162bb7bcf89cf9218ecb9d3",
+      "bytes": 14043
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/color-pipeline-profile.schema.json",
+      "sha256": "0b709706ae1af1c277a6358971b45bba726365f10af3b38bffb0cb7c17ac1f85",
+      "bytes": 15028
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/common.schema.json",
+      "sha256": "f11cafddd9a3251871ec127993cac7f455a45c21002a8c4952a38a15b0738754",
+      "bytes": 3400
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/continuity-ledger.schema.json",
+      "sha256": "6244549f5e3073c5ace4d7222066e73d77365cf8957340611cba24180a9ae1d6",
+      "bytes": 4093
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/control-benchmark-review.schema.json",
+      "sha256": "0b4f9ee71ec817db469e29c433b97107f22482f6d2af1fafd8d8548bb53d3545",
+      "bytes": 18340
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/control-benchmark.schema.json",
+      "sha256": "ee7f6b4f6cfe679ee0647fa90a9c4c8fd76ddeb89837a6510494b3e6fb9013a3",
+      "bytes": 18652
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/control-channel-set.schema.json",
+      "sha256": "cd7e6e36781125c3f9f7c4c5535d5b17c4621d7884d035a1ef68836486f4b8dc",
+      "bytes": 11236
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/creative-brief.schema.json",
+      "sha256": "35471cb7cf0cb9e7b2a92a507a8ae1a60e7790d4ee5b1fb9294c676152b3b48d",
+      "bytes": 8267
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/creative-review.schema.json",
+      "sha256": "66b4c4321b446f3c2c09240a6e17961acd5d2f37ef75207acb60cb878d11f48c",
+      "bytes": 6355
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/editorial-timeline-plan.schema.json",
+      "sha256": "fe8d7ce83470ec71bf0178ecb6f3bb986c638dc982eaf2c30c8e5359f918999a",
+      "bytes": 12631
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/evidence-bundle.schema.json",
+      "sha256": "cb01989bb35de3747860d49b4acba11186621e72250406b24e8f6ca05fd1a3aa",
+      "bytes": 12910
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/hero-frame-anchor.schema.json",
+      "sha256": "8ca78206720e4011da8e5f669f9280ae26e81994205563e237ec8a5cc8da734f",
+      "bytes": 13508
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/image-prompt-output.schema.json",
+      "sha256": "73d68d1922ace3c3419f617d1c119535ebeb832ed1e2ef5e4c237df1370bf730",
+      "bytes": 15181
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/interaction-constraint-set.schema.json",
+      "sha256": "51e329e907494f114a15d7e9a56afaac4d340783e3850c06684258c361a80e45",
+      "bytes": 14757
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/license-profile.schema.json",
+      "sha256": "2ceaa42f11a0044de6ea8ff7c9e506c881238ad34ae857e175e98c320e1a1a4c",
+      "bytes": 12770
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/performance-timeline.schema.json",
+      "sha256": "981f3256460f0d9f171a40713fc88b6dbdc7bd5f4db4cd16479b46631cee94a0",
+      "bytes": 4112
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/prompt-projection-plan.schema.json",
+      "sha256": "250e9322a5fe23273c506869e532f6e1098cb16240a4aff6a01fce601cd14a6c",
+      "bytes": 16107
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/prompt-record.schema.json",
+      "sha256": "73c8603d053cedbc7c8a35d59d60a236ec91faa6d4bb3e00e1bc30d251c0c1d8",
+      "bytes": 13940
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/reference-asset.schema.json",
+      "sha256": "1f3cfa34f482964ef68966adb6a4e1fce329b5237eb4d9620c95afc53c860823",
+      "bytes": 14603
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/reference-binding-set.schema.json",
+      "sha256": "0a5ffb5d6e4a816d904916a48da726194fe75f3b6efb532c6ae0f3c175bb3f3d",
+      "bytes": 5591
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/reference-observation.schema.json",
+      "sha256": "63608ed7bc8cb4e74f063b0b8b0aae2d5c9a38b95ff42373c6893a3d2ebe5af1",
+      "bytes": 12858
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/reference-transform.schema.json",
+      "sha256": "934647250e31f5038b7f315a1106f5538fa24f40b33d6c415a6d65ec39a0a1ff",
+      "bytes": 4108
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/render-plan.schema.json",
+      "sha256": "eab0cf2904c5431ed568238f56d357bd07a370289adbd9f50070e57f5dd4c39a",
+      "bytes": 15515
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/repair-plan.schema.json",
+      "sha256": "49fcdc8c15583bb0f95ca89b31b4608c2464c171f0d5d217c9c366489afe5f26",
+      "bytes": 4470
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/representation-binding.schema.json",
+      "sha256": "17c558c8b16373277f16fd7fb7c9b00fafcabb0d6a79595fc575ac39349a4f28",
+      "bytes": 8779
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/scene-binding.schema.json",
+      "sha256": "8253ed37fbb4a9c3abbc86326cf7ed9d5a75d9f92cd83f037e0095a2fa3da292",
+      "bytes": 11281
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/scene-light-state.schema.json",
+      "sha256": "1d36eb040a754acd71989b5db788c8cc51c112eacb787e4ed8f09e0d791a513c",
+      "bytes": 4461
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/scene-spec.schema.json",
+      "sha256": "3999c432101b000ffbe85bd247ae940c43d68ad309585b4bb11c72286c6801ea",
+      "bytes": 24227
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/scene-state.schema.json",
+      "sha256": "afc628e95596f69fd53b5e982b63dc15ad6ad6bb9113df2c17f17c60f55b2424",
+      "bytes": 14085
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/script-scene.schema.json",
+      "sha256": "eec20afc7ffa9bc151472b9937e512406000a8cf676f3c7b80f4ee47d9676002",
+      "bytes": 5144
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/sequence-rhythm-spec.schema.json",
+      "sha256": "f2ae994855f3cddf8be1df50b898fb832e0e9bb5e8e0743aa404b3d4e78914be",
+      "bytes": 9669
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/shot-compiler-plan.schema.json",
+      "sha256": "4b27b3a8e3192027fa33ee36da7107da1bed7ea6d6c6baef218b496f68e7d06b",
+      "bytes": 16574
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/shot-lighting-plan.schema.json",
+      "sha256": "933159f7d5fc626b6c874215d40230bb81e3d491b066dc5e0d60e73eec3b84ab",
+      "bytes": 7353
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/shot-spec.schema.json",
+      "sha256": "1f8f89676fa445af435f2b9f436a1bb2eac51e580ae9b140f7f60f58f88759d0",
+      "bytes": 14120
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/story-brief.schema.json",
+      "sha256": "8e2f29da8af8166ad97ab74c7179c8ad7f1068ff7bc3a01e08049a27cf8d01c8",
+      "bytes": 4086
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/storyboard-output.schema.json",
+      "sha256": "3aab6fc19eed484b6119e50fd5eff74b48b9bc0e9009daa7ddd4500a3633fc58",
+      "bytes": 17121
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/style-compile.schema.json",
+      "sha256": "0e2097183827735c18f9d907bb2c564777ac3644b7f651b152ba09a5887c7107",
+      "bytes": 10734
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/style-light-grammar.schema.json",
+      "sha256": "3ef2466ecadb20e3c43f14330f9006f8d37e0c3db5a5eb6cf53c796123b8ac77",
+      "bytes": 3279
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/style-package.schema.json",
+      "sha256": "964e09a5101db585bc6b88c47b939e68b7e68fc9ca036b9436e91f7d9a1523d4",
+      "bytes": 21492
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/temporal-spec.schema.json",
+      "sha256": "b8e5f5eb756821544759662936debe8a52d25c2aeaf1b72c059dfbc20047d5fa",
+      "bytes": 6605
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/workflow-plan.schema.json",
+      "sha256": "da683f9de7df7edaa210f54fa600cb0324b1ecff14822d7d5a8d6e3202b082f8",
+      "bytes": 4879
+    },
+    {
+      "path": "skills/cineweave-director/resources/contracts/schemas/world-bible.schema.json",
+      "sha256": "20154dd9479eb27143907aa2579ddfc322f65a899ef21300f3527600c2bb1e89",
+      "bytes": 8230
+    },
+    {
+      "path": "skills/cineweave-director/references/core/artifact-control-and-precedence.md",
+      "sha256": "378b9f8d7ab60d8ab19b2f2ab3ccb7eccbbd609aac42ced477c4139e6765e786",
+      "bytes": 5151
+    },
+    {
+      "path": "skills/cineweave-director/references/core/operating-model.md",
+      "sha256": "ccb16a0f50976de9ff9bd9fbfcfe303c2ca871970dc2e381a25d16c9ed42639b",
+      "bytes": 9427
+    },
+    {
+      "path": "skills/cineweave-director/references/core/reference-evidence-and-rights.md",
+      "sha256": "55332bfbab84d121328260c56f971586658dff692a526cac318e2b435a522393",
+      "bytes": 2459
+    },
+    {
+      "path": "skills/cineweave-director/references/core/visual-bible-and-continuity.md",
+      "sha256": "ba8e5894516ac66b1396a24dab5fabdc25cd3db8fa5d1beddd12be24f0a1139e",
+      "bytes": 6402
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/adaptation-example.md",
+      "sha256": "ec43969972208b18a6a8f21286a5bc100278ed7a07d6e64bbdc1a11f7505d3e8",
+      "bytes": 27117
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/aigc-control-and-evaluation.md",
+      "sha256": "1087161d1435a87e6b9de891c3b8d0976693645a5484df59ee146b9e5425b771",
+      "bytes": 10654
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/animation-reference-directions.md",
+      "sha256": "4048a2ecd60735c34a763359d6750b789ee1692bbbc028c52d5488921924ae8c",
+      "bytes": 6361
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/camera-previsualization.md",
+      "sha256": "dde1e7e5db24ba047ff2bdd1b8aac4fcf414aa29cf45b3327df6bf4226ed0669",
+      "bytes": 3775
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/cinematic-patterns.md",
+      "sha256": "58923acd0d4b4ecac693e3e0467990e3c64a8a31a477fc540570157ec971df70",
+      "bytes": 19639
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/cinematography-craft.md",
+      "sha256": "915545176b1a1719956fd72d7d757159aca947578d2fb01dbd00aab6036597e9",
+      "bytes": 14672
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/color-grading-presets.md",
+      "sha256": "cbe652ec6887da11d73914dd4fc9ae6728a933c820e476a3bd3246b54a79fbf0",
+      "bytes": 69266
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/color-grading-research.md",
+      "sha256": "8289c2e42084d834170ada6a8eb941a743cee8005bcb8b85886711c3f1916eb2",
+      "bytes": 30144
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/comic-manga.md",
+      "sha256": "6f7c0562b2f2485e99c06abc0bff0d8d512416613df37507d2dabbf578efe589",
+      "bytes": 1158
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/directing-craft.md",
+      "sha256": "82524260f2823fe2d779e367a8a17802c050368c29d8e084cea1b741dd1bcf03",
+      "bytes": 13561
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/drafts-and-change-impact.md",
+      "sha256": "84670321b3cb5a42b34120fb0ead60b790e9db05c923e87f04265392c9b4d94b",
+      "bytes": 10810
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/editing-sound-craft.md",
+      "sha256": "184f2fc8e8d638aab40b294d266badecc6ee37c99e1d097c8e3ec847e45a4da4",
+      "bytes": 8791
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/ensemble-direction-and-review.md",
+      "sha256": "1f24e64c74187b39b5fa78f1cb8f499a167fb3ca6300e35f92c08b9ff087bc8b",
+      "bytes": 12891
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/film-craft-study.md",
+      "sha256": "c609d58d38e926395af0e867e15d2996d3ae03b5046f13856438b50621a57388",
+      "bytes": 24064
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/film-television-reference-library.md",
+      "sha256": "8a2c2dc03b18dba01bf6be7a9c966eeb263172176f6c39b041d40bf5c087333c",
+      "bytes": 15188
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/generation-diagnostics.md",
+      "sha256": "aa698539d2ccef83ba40693ecc6c8233a49789c9325dd7c7e27fd0c10a49a624",
+      "bytes": 12736
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/live-action-reference-directions.md",
+      "sha256": "0c4c24a8ed8053469ea89d45014be84b6402b2c37988ca7964016f33942d8383",
+      "bytes": 18280
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/lookdev-delivery-example.md",
+      "sha256": "92f8adec7966014db13e04de9d97f9094783854bc93cd5fd722b756e17ef2f30",
+      "bytes": 11710
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/makeup-style-presets.md",
+      "sha256": "a2e4efa2134d2362a54efea433b802480a810c9a9c3b9e9cc4fadc6799992a8a",
+      "bytes": 79613
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/master-style-presets.md",
+      "sha256": "08a3490bc7fe8cb41b98abb29f2cd1f5e5748c9b4e07262f8c50eb85f613e829",
+      "bytes": 27165
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/midjourney-projection.md",
+      "sha256": "3ad60bf6550c16093daf14984713692839feeea0ba98e802764bfa84f93a8c1f",
+      "bytes": 13062
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/portrait-natural-human.md",
+      "sha256": "a370c4ca4e05a31576d99e262dd52924667f199d205c9087a6104d709b8d1d43",
+      "bytes": 8734
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/prompt-detail-standard.md",
+      "sha256": "0880a163be9679d32807688a0c434c0fa936c0fb00a5c4aae24e381d0dd92c25",
+      "bytes": 34113
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/rendering-quality-workflows.md",
+      "sha256": "5495ab7203adbd38be111c3e4b59172ac60e616b19a3418a071aacfe96c12588",
+      "bytes": 19824
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/scene-directing-pipeline.md",
+      "sha256": "cb52024e10ce0ec9f1a0dfcd1dd27ea7268cef526e8457e83be8a166a0bd6019",
+      "bytes": 21867
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/semantic-morphology.md",
+      "sha256": "9f571c5f00f7313d8a09ede9b4f6518737376fd5b21ad5315e660d55dd4f08ab",
+      "bytes": 1073
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/short-film-creation.md",
+      "sha256": "5a2b5be09b50372a00ad08ead75bacd0e0ae9d3e391864270904ad901c2052d8",
+      "bytes": 15660
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/shot-design-workbench.md",
+      "sha256": "bc1f476dd6548d0bc9772d02be7c895746101f5855985b89c0d1bfb111ec3d96",
+      "bytes": 33891
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/stage-deliverables.md",
+      "sha256": "0ac88de3aa91b2594d0cc27f88b77578cbb017e0800cb54f5149ecf444c6781d",
+      "bytes": 8020
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/style-still-references.md",
+      "sha256": "8bbb3283f2a81c3ba85a630e24f9751b2889c1ef3b737b2d2bb5738b5eccf697",
+      "bytes": 52841
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/tagged-video-nodes.md",
+      "sha256": "8a0c54a921d87225187f428aeb6a65c8c92e158fc7c3111c32d5723764faf9c8",
+      "bytes": 8529
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-performance-direction.md",
+      "sha256": "080817e75161a966a35d3170c686850e5280d2dbc905a1e52ba1bab807b32018",
+      "bytes": 29622
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-platform-adaptation.md",
+      "sha256": "9b5a4e163a6482704b43333547d16ffc0ed3542d9526599e49455460971bd7f9",
+      "bytes": 29370
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-sound-and-delivery.md",
+      "sha256": "ca77595c37042bd7b21974736b50a485d983e8ea5b9bc90f74359e6a2c76d941",
+      "bytes": 15825
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/video-timing-and-handles.md",
+      "sha256": "0856cc9f67c10259a54755a470ae338e93a25df3d031b0d1730e5429aeb55fa8",
+      "bytes": 7813
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/visual-development.md",
+      "sha256": "31598759336f1f9b34f37df77a0034df4dec337b18e47124f0d8a5d151af4b6e",
+      "bytes": 19654
+    },
+    {
+      "path": "skills/cineweave-director/references/optional/xuanzang-director-case-study.md",
+      "sha256": "d22f594c289cc1f17c3ddddf52a5417517571581127431a79b9707800b8a2bf1",
+      "bytes": 8650
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/action.md",
+      "sha256": "857dc2c45e0dca7eadd283b7b48b2ec87bb565f9f9a6a95e2fdf81ded7eb9c7b",
+      "bytes": 3495
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/brief-world.md",
+      "sha256": "de1072b66d907d76cd47c6d7e02878b2c75c7904d2b521018443e727e7b983d6",
+      "bytes": 2136
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/character.md",
+      "sha256": "4bcf89282d209975511866ec6c8153d242d25585d6a14bb09cf6ff966978cc88",
+      "bytes": 5352
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/image-prompt.md",
+      "sha256": "8875d78177edce7ab4aaea763bf0f6d3bdc6216ee1acf3c215aab661b96e5c08",
+      "bytes": 8011
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/production-plan.md",
+      "sha256": "5b616f26333d853776b0060a55d837cbc696e47c74e57506666d4fd8bac3c399",
+      "bytes": 9709
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/reference-evidence.md",
+      "sha256": "8f2833929f5d6df0fa3cbbdf540cdd5f2f10688b381f85eb6fe26b81c8c0b697",
+      "bytes": 5815
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/review-repair.md",
+      "sha256": "9f87901d2e8583dc3ed065ba30a1058db040a8b26c0a16e8a48402b55cdd4b4b",
+      "bytes": 9034
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/scene.md",
+      "sha256": "7eecb663caa26e432ed21b23fb47a5a12818e4898f6bff122da870a2c4e422c9",
+      "bytes": 4883
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/shot-direction.md",
+      "sha256": "135208d33bbc8316378b3947d99142a7ff36acd84fe1f2668f0e818a5aca572d",
+      "bytes": 9146
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/story.md",
+      "sha256": "ac58917ee9389b6ddac9396137e1408cc5fe126f87d17066089c004c5c0859ec",
+      "bytes": 4264
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/storyboard-rhythm.md",
+      "sha256": "c7e156fa929901eadefc126bc859f47df39e28a27d24f9b1ae37d4f43dfddb6e",
+      "bytes": 10117
+    },
+    {
+      "path": "skills/cineweave-director/references/routes/style.md",
+      "sha256": "8c68adec5424cdeef9735099102eabd022e65181af21efac4564d41e7528e806",
+      "bytes": 9725
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "case": "C12",
+  "read_files": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C12\\request.txt",
+      "sha256": "7a32b0fe3acd1a35b7a50bcf1d3c1cf9633c00a6c6edc7bc2b10e78b385f8a5b"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\SKILL.md",
+      "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-review\\SKILL.md",
+      "sha256": "b047a160930822e62395653b562a4a47067ee5bd82a90ca02eeb316a12da955a"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-review\\references\\routes\\review-repair.md",
+      "sha256": "9f87901d2e8583dc3ed065ba30a1058db040a8b26c0a16e8a48402b55cdd4b4b"
+    }
+  ],
+  "skills_used": [
+    "cineweave-director",
+    "cineweave-review"
+  ],
+  "checks": [
+    {
+      "name": "two_complete_manuscripts",
+      "result": true
+    },
+    {
+      "name": "exact_authorized_replacement_only",
+      "result": true,
+      "detail": "Each manuscript differs by exactly one character: 南 to 北 in 案东南侧略俯; reverse replacement reproduces original verbatim."
+    },
+    {
+      "name": "no_media_generation",
+      "result": true
+    },
+    {
+      "name": "utf8_lf_output",
+      "result": true
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C12\\output.md",
+      "sha256": "cea1e9c83d0ddfa1785bc263731c8972ff2dc4c788109ee1925c5281d41d9eab"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C12\\execution.json"
+    }
+  ],
+  "limitations": [],
+  "model": null,
+  "tokens": null,
+  "time": null
+}

@@ -1,0 +1,123 @@
+{
+  "checkedAt": "2026-11-08",
+  "scope": "current source text and derived files only",
+  "groups": [
+    {
+      "group": "B",
+      "stories": 14,
+      "shots": 84,
+      "seconds": 495,
+      "segments": 23
+    },
+    {
+      "group": "F",
+      "stories": 14,
+      "shots": 85,
+      "seconds": 579,
+      "segments": 28
+    },
+    {
+      "group": "G",
+      "stories": 13,
+      "shots": 85,
+      "seconds": 580,
+      "segments": 31
+    }
+  ],
+  "stories": 41,
+  "shots": 254,
+  "segments": 82,
+  "seconds": 1654,
+  "copyBlocks": 590,
+  "copyBlocksComparedAcrossJsonMarkdownHtml": true,
+  "sourceActionsAndStartEndContinuityPresentInAuthoredVideos": true,
+  "dialogueEntriesChecked": 36,
+  "sourceHashes": {
+    "B": "88ca6623a10b72c1db79c6dca425697eea15f9b7f037375aac64d5ff0b92922d",
+    "F": "3d31dbde36b1bdcedad41a6c502fa4ff7e0a3e24f7e1c2216c7417d54dfd7099",
+    "G": "b8e0c10c1acd699a214e96865321cb4fc94f5cd19fb2a76f2adcb752e637e7a4"
+  },
+  "researchCasesUsed": [
+    "IN02",
+    "IN03",
+    "IN05",
+    "IN08",
+    "RT01",
+    "RT03",
+    "RT05",
+    "RT06",
+    "RT07",
+    "TD07",
+    "ZH01",
+    "ZH02",
+    "ZH04",
+    "ZH06"
+  ],
+  "newStoryIds": [
+    "B12",
+    "B13",
+    "B14",
+    "F12",
+    "F13",
+    "F14",
+    "G11",
+    "G12",
+    "G13"
+  ],
+  "changedOriginalIds": [
+    "B02",
+    "B03",
+    "B07",
+    "B11",
+    "F06",
+    "F09",
+    "F11",
+    "G07"
+  ],
+  "unchangedOriginalIds": [
+    "B01",
+    "B04",
+    "B05",
+    "B06",
+    "B08",
+    "B09",
+    "B10",
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "F05",
+    "F07",
+    "F08",
+    "F10",
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G08",
+    "G09",
+    "G10"
+  ],
+  "sourceObjectsUnchanged": 24,
+  "localLinksChecked": 366,
+  "svgParsed": 88,
+  "largestPromptCharacters": 5350,
+  "browserInteraction": {
+    "status": "not revalidated",
+    "reason": "file protocol route previously blocked; no alternate route used"
+  },
+  "referencesBound": false,
+  "mediaGenerated": false,
+  "errors": [],
+  "javascriptSyntax": "both generated page scripts passed node --check",
+  "gitDiffCheck": "passed for task paths; this does not inspect untracked content",
+  "independentCrossReview": {
+    "stories": 17,
+    "shots": 107,
+    "authoredPromptTexts": 214,
+    "textBlockingIssuesRemaining": 0,
+    "mediaVerified": false
+  }
+}

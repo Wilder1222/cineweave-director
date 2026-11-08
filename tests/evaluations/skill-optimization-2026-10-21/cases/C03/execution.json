@@ -1,0 +1,106 @@
+{
+  "case": "C03",
+  "entrypoint_used": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/SKILL.md",
+  "files_read": [
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior/C03/request.txt",
+      "sha256": "27d95eff29260381b2d65d563115f11b612a7782dee521c92752430353c1bf63"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/SKILL.md",
+      "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/routes/shot-direction.md",
+      "sha256": "135208d33bbc8316378b3947d99142a7ff36acd84fe1f2668f0e818a5aca572d"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/routes/storyboard-rhythm.md",
+      "sha256": "c7e156fa929901eadefc126bc859f47df39e28a27d24f9b1ae37d4f43dfddb6e"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/optional/scene-directing-pipeline.md",
+      "sha256": "cb52024e10ce0ec9f1a0dfcd1dd27ea7268cef526e8457e83be8a166a0bd6019"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/optional/prompt-detail-standard.md",
+      "sha256": "0880a163be9679d32807688a0c434c0fa936c0fb00a5c4aae24e381d0dd92c25"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/optional/video-performance-direction.md",
+      "sha256": "080817e75161a966a35d3170c686850e5280d2dbc905a1e52ba1bab807b32018"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior-snapshot/skills/cineweave-director/references/optional/video-sound-and-delivery.md",
+      "sha256": "ca77595c37042bd7b21974736b50a485d983e8ea5b9bc90f74359e6a2c76d941"
+    },
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior/C03/output.md",
+      "sha256": "997777ea9751f43f817c02e9245e3f4ec453193a1138fef0c8dc449a0c997274",
+      "role": "generated answer verified after writing"
+    }
+  ],
+  "checks": [
+    {
+      "name": "two_independent_copy_blocks",
+      "method": "count text code blocks in saved answer",
+      "observed": 2,
+      "expected": 2
+    },
+    {
+      "name": "utf8_lf_output",
+      "method": "strict UTF8 decode and byte check",
+      "utf8": true,
+      "contains_cr": false
+    },
+    {
+      "name": "timeline",
+      "method": "manual arithmetic and text continuity inspection",
+      "shots": [
+        {
+          "id": "S01",
+          "start_seconds": 0,
+          "end_seconds": 5
+        },
+        {
+          "id": "S02",
+          "start_seconds": 5,
+          "end_seconds": 10
+        }
+      ],
+      "total_seconds": 10
+    },
+    {
+      "name": "request_constraints",
+      "method": "manual text review",
+      "observations": [
+        "S01 specifies one swing, one contact, one notch, complete axe withdrawal and visible air gap.",
+        "S02 begins with existing notch and withdrawn axe, holds it before progressive healing, and never swings again.",
+        "Both copy blocks contain adult Wu Gang, his stance south of tree, rock north of tree, same axe and grasp, and fixed east-side lighting.",
+        "Hard cut continues time with aligned notch, axe, grasp, geography, framing direction and silence.",
+        "Myth adaptation is explicitly distinguished from scientific fact. No dialogue or music. No media generated."
+      ]
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/skill-optimization-2026-10-21/behavior/C03/output.md",
+      "media_type": "text/markdown",
+      "encoding": "UTF-8",
+      "line_endings": "LF",
+      "sha256": "997777ea9751f43f817c02e9245e3f4ec453193a1138fef0c8dc449a0c997274"
+    }
+  ],
+  "limitations": [
+    "Text design only; no image, video or audio was generated or inspected.",
+    "Action timing and healing continuity are planned, not measured media results.",
+    "Source scope is the quotation supplied in request.txt; no additional edition or historical fact was verified.",
+    "Initial batched resource read was output-truncated; relevant scene-directing, prompt-detail and performance sections were subsequently read with targeted ranges."
+  ],
+  "metrics": {
+    "model": null,
+    "input_tokens": null,
+    "output_tokens": null,
+    "elapsed_seconds": null
+  }
+}

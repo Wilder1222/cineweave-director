@@ -1,0 +1,1213 @@
+{
+  "source": {
+    "type": "design",
+    "id": "DENIED-E13-text-coverage-a5ce59d26e87",
+    "version": 2,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "E13-SH001",
+    "E13-SH003",
+    "E13-SH004",
+    "E13-SH006",
+    "E13-SH008",
+    "E13-SH009",
+    "E13-SH010",
+    "E13-SH011",
+    "E13-SH012",
+    "E13-SH013",
+    "E13-SH014"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "E13-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：孩子把拼图角挡在自己照片前，母亲发现要证明自己的代价是孩子身体被看。；入镜已知：把母亲证明清白的冲动与孩子的隐私意愿正面对上。；本镜新知：治疗照片未发，母亲手指离开发送。；实际写出的动作：玛拉在公司说明中看到自己的姓，刷新后连女儿的名字也被评论拼出。艾莉举着拼图角等她，玛拉伸手去接，却又缩回去看新的评论。\n玛拉选中一张治疗照片想证明钱的去处，艾莉看见缩略图，将拼图角放到照片和母亲之间。玛拉抬头发现孩子看着她，取消选择。",
+      "sourceLocator": "season/E13.json#/shots/0"
+    },
+    {
+      "role": "performance",
+      "shotId": "E13-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "玛拉右手机，左手压治疗收据。 → 治疗照片未发，母亲手指离开发送。；艾莉向玛拉：This is the corner.；催母亲一起做 / 玛拉向艾莉：Hang on. That's our name.；接拼图的手停住，读自己的姓 / 艾莉向玛拉：I said not that one.；不想再讲一次 / 玛拉向艾莉：Okay. I won't send it.；看见孩子在等，取消照片",
+      "sourceLocator": "season/E13.json#/shots/0"
+    },
+    {
+      "role": "staging",
+      "shotId": "E13-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "签约后的翌晨，公寓东厨房连着中央餐桌，北面卧室门关着。玛拉坐餐桌东侧，艾莉坐西侧拼图；公司说明在母亲手机上亮起，孩子的画本放椅子上，蓝夹在南门边等出发。 本镜画内角色：MARA-HOME,ELLIE。；起态：玛拉右手机，左手压治疗收据。；出态：治疗照片未发，母亲手指离开发送。",
+      "sourceLocator": "season/E13.json#/shots/0"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E13-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "公寓餐桌南侧50mm母女共享中景，玛拉桌东、艾莉桌西，东厨房与北卧室门保持原方向。；相机：固定21秒，相册由母亲举起又放低。；焦点：孩子把拼图角挡在自己照片前，母亲发现要证明自己的代价是孩子身体被看。",
+      "sourceLocator": "season/E13.json#/shots/0"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E13-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E13-SH001.txt；21秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E13.json#/shots/0"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E13-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "治疗照片未发，母亲手指离开发送。；切点：孩子明确照片里是自己，切到她的高度处理边界。；接口：接E13-SH003；孩子明确照片里是自己，切到她的高度处理边界。",
+      "sourceLocator": "season/E13.json#/shots/0"
+    },
+    {
+      "role": "direction",
+      "shotId": "E13-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：母亲退出整个相册，放开替孩子收画本的手；孩子自己抱着走。；入镜已知：治疗照片未发，母亲手指离开发送。；本镜新知：画本由孩子抱，蓝夹归玛拉，手机出发前回右手导航。；实际写出的动作：玛拉取消图片勾选，评论还在问她收了多少。她将手机转到自己一边，艾莉却已看见自己治疗时的缩略图，没把拼图角递过来。\n玛拉关掉直播邀请，把手机收入包。艾莉收自己的画本，玛拉伸手帮她装，孩子抱紧一下，她松手让孩子自己拿，再把蓝夹夹到左臂；临出南门，她从包里取回手机看路线。",
+      "sourceLocator": "season/E13.json#/shots/1"
+    },
+    {
+      "role": "performance",
+      "shotId": "E13-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "治疗照片未发，母亲手指离开发送。 → 画本由孩子抱，蓝夹归玛拉，手机出发前回右手导航。；玛拉向艾莉：People think I kept the money.；向孩子解释自己刚才的冲动 / 艾莉向玛拉：That's me in the picture.；只认自己不愿公开的身体 / 玛拉向艾莉：I know. I won't use it.；不让孩子承担替她证明的任务 / 艾莉向玛拉：Not the other one either.；把边界说完整 / 玛拉向艾莉：All right, you carry yours. I'll take this.；松开孩子的本子，转拿自己的蓝夹 / 艾莉向玛拉：Don't look in it.；抱住画本，把自己的条件说清",
+      "sourceLocator": "season/E13.json#/shots/1"
+    },
+    {
+      "role": "staging",
+      "shotId": "E13-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "签约后的翌晨，公寓东厨房连着中央餐桌，北面卧室门关着。玛拉坐餐桌东侧，艾莉坐西侧拼图；公司说明在母亲手机上亮起，孩子的画本放椅子上，蓝夹在南门边等出发。 本镜画内角色：MARA-HOME,ELLIE。；起态：治疗照片未发，母亲手指离开发送。；出态：画本由孩子抱，蓝夹归玛拉，手机出发前回右手导航。",
+      "sourceLocator": "season/E13.json#/shots/1"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E13-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "桌南偏东50mm儿童高度的双人中景，艾莉正面、母亲侧面，南门出发路线留在左边。；相机：先固定，二人起身后仅向南平移半米让出桌角，不追手机屏幕。；焦点：母亲退出整个相册，放开替孩子收画本的手；孩子自己抱着走。",
+      "sourceLocator": "season/E13.json#/shots/1"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E13-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E13-SH003.txt；27秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E13.json#/shots/1"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E13-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "画本由孩子抱，蓝夹归玛拉，手机出发前回右手导航。；切点：母亲只取手机查路线，接诊所实际通路被堵。；接口：本场结果成立后切入 E13-SC02（CLINIC，日·同日上午）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E13.json#/shots/1"
+    },
+    {
+      "role": "direction",
+      "shotId": "E13-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她腾出右手牵孩子，蓝夹顶胸，确实无手可推设备。；入镜已知：让网络身份暴露变成阻挡身体通行的真实后果。；本镜新知：右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。；实际写出的动作：母女到南门坡道，布莱克退到门前让手机正对玛拉。她转肩把孩子隔在自己东侧，身后还有其他来就诊的人；她不往人群挤。\n布莱克把手机向她收窄的通路送近，玛拉将自己右手手机收入风衣右袋，牵住艾莉左手；她的蓝夹顶住胸口，没有空手去推设备。",
+      "sourceLocator": "season/E13.json#/shots/2"
+    },
+    {
+      "role": "performance",
+      "shotId": "E13-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "玛拉右手机左夹，孩子抱画本。 → 右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。；布莱克向玛拉：How much did they pay you, Mara?；已经开播，逼她给一句数字 / 玛拉向布莱克：Let us through. We have an appointment.；只争门前那条路 / 布莱克向玛拉：Just give us the number.；把对方拒绝压成简单问题 / 玛拉向布莱克：Not here. She's nine.；压住吵给孩子听的冲动",
+      "sourceLocator": "season/E13.json#/shots/2"
+    },
+    {
+      "role": "staging",
+      "shotId": "E13-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日上午诊所南门坡道窄，其他患者在母女后方。布莱克的稳定器占着正门，保安在东接待台；东南还有一道刷卡侧门。玛拉左臂蓝夹、艾莉抱画本。 本镜画内角色：MARA-WORK,ELLIE,HOST。；起态：玛拉右手机左夹，孩子抱画本。；出态：右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。",
+      "sourceLocator": "season/E13.json#/shots/2"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E13-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "诊所南坡道东侧35mm三人中景，布莱克在正门前，母亲居中、孩子在她东侧，后面患者不被挤成一团。；相机：手持幅度克制，随母亲后退半步便停住，不冲入主播直播视角。；焦点：她腾出右手牵孩子，蓝夹顶胸，确实无手可推设备。",
+      "sourceLocator": "season/E13.json#/shots/2"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E13-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E13-SH004.txt；23秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E13.json#/shots/2"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E13-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。；切点：保安从东接待台出来给替代路径，切到受控门一侧。；接口：接E13-SH006；保安从东接待台出来给替代路径，切到受控门一侧。",
+      "sourceLocator": "season/E13.json#/shots/2"
+    },
+    {
+      "role": "direction",
+      "shotId": "E13-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：保安挡设备而不碰孩子，母女通过才关门，主播不能跟入。；入镜已知：右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。；本镜新知：母女在门内、主播留门外，门合上隔开直播声。；实际写出的动作：东接待台旁保安看到母女进不了门，出来将手掌横在稳定器与孩子之间，指东南受控入口。艾莉把画本合紧，走在母亲身侧。\n保安刷牌开受控门，玛拉先牵孩子进去，蓝夹被门框碰歪，她用左肘夹住没有停下。布莱克举稳定器跟到门线，保安回身将通路占住，等母女通过才带门。",
+      "sourceLocator": "season/E13.json#/shots/3"
+    },
+    {
+      "role": "performance",
+      "shotId": "E13-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。 → 母女在门内、主播留门外，门合上隔开直播声。；保安向玛拉：This way. Use the side door.；给出可走路线，先带人离开设备 / 艾莉向玛拉：Don't let him see my book.；把画本抱紧，仍在保护自己的东西 / 布莱克向保安：We're live.；试图让对方顾忌 / 保安向布莱克：You can't film in here.；站住门线，不跟主播争直播权威",
+      "sourceLocator": "season/E13.json#/shots/3"
+    },
+    {
+      "role": "staging",
+      "shotId": "E13-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日上午诊所南门坡道窄，其他患者在母女后方。布莱克的稳定器占着正门，保安在东接待台；东南还有一道刷卡侧门。玛拉左臂蓝夹、艾莉抱画本。 本镜画内角色：MARA-WORK,ELLIE,HOST,GUARD-CLINIC。；起态：右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。；出态：母女在门内、主播留门外，门合上隔开直播声。",
+      "sourceLocator": "season/E13.json#/shots/3"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E13-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "东南侧门内35mm朝西南的中全景，门框是边界，保安在门口，母女从外侧进来；主播留门外。；相机：固定23秒，门开启后人物经过相机，不以暗切跨门。；焦点：保安挡设备而不碰孩子，母女通过才关门，主播不能跟入。",
+      "sourceLocator": "season/E13.json#/shots/3"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E13-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E13-SH006.txt；23秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E13.json#/shots/3"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E13-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "母女在门内、主播留门外，门合上隔开直播声。；切点：门合上隔开直播，切到孩子已停住的内部侧廊。；接口：接E13-SH008；门合上隔开直播，切到孩子已停住的内部侧廊。",
+      "sourceLocator": "season/E13.json#/shots/3"
+    },
+    {
+      "role": "direction",
+      "shotId": "E13-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：门后仍不安全的主观感受、另一出口约定、孩子自己收画本再递手完整发生。；入镜已知：母女在门内、主播留门外，门合上隔开直播声。；本镜新知：艾莉自己把画本放进包里，随后伸手；母亲等她先迈步才起身。；实际写出的动作：到了侧廊，艾莉不再跟母亲走，停着把画本塞进怀里。玛拉蹲下，将蓝夹靠左腿立住，松开右手，等孩子重新把手给她。\n侧门隔住直播声，艾莉仍贴着墙。玛拉从蹲着的位置挪开半步，让女儿能看到北端治疗门；她没有拉孩子往前，蓝夹立在左腿旁。",
+      "sourceLocator": "season/E13.json#/shots/4"
+    },
+    {
+      "role": "performance",
+      "shotId": "E13-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "母女在门内、主播留门外，门合上隔开直播声。 → 艾莉自己把画本放进包里，随后伸手；母亲等她先迈步才起身。；艾莉向玛拉：I don't want to go back out.；门合上才说，脚不再往前走 / 玛拉向艾莉：Okay. We'll stay here for a bit.；蹲下来等，不催她牵手 / 艾莉向玛拉：Does he know which room?；怕门只是暂时挡住人 / 玛拉向艾莉：No. He can't come through that door.；指身后的受控门给孩子确认 / 艾莉向玛拉：Can we leave a different way?；先争取离开的办法 / 玛拉向艾莉：I'll ask. We don't have to go past him.；给实际安排，不命令她别怕",
+      "sourceLocator": "season/E13.json#/shots/4"
+    },
+    {
+      "role": "staging",
+      "shotId": "E13-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日上午诊所南门坡道窄，其他患者在母女后方。布莱克的稳定器占着正门，保安在东接待台；东南还有一道刷卡侧门。玛拉左臂蓝夹、艾莉抱画本。 本镜画内角色：MARA-WORK,ELLIE。；起态：母女在门内、主播留门外，门合上隔开直播声。；出态：艾莉自己把画本放进包里，随后伸手；母亲等她先迈步才起身。",
+      "sourceLocator": "season/E13.json#/shots/4"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E13-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "侧廊北侧35mm儿童眼高双人中景，受控门在南后方、北治疗入口位于画外左侧去向；蓝夹靠母亲左腿。；相机：固定36秒，母亲蹲下并侧移让孩子看清北向通路，相机不贴近哭脸。；焦点：门后仍不安全的主观感受、另一出口约定、孩子自己收画本再递手完整发生。",
+      "sourceLocator": "season/E13.json#/shots/4"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E13-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E13-SH008.txt；36秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E13.json#/shots/4"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E13-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "艾莉自己把画本放进包里，随后伸手；母亲等她先迈步才起身。；切点：艾莉先迈向治疗区，转记者处理自己原片。；接口：本场结果成立后切入 E13-SC03（NEWSROOM，午·围堵之后）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E13.json#/shots/4"
+    },
+    {
+      "role": "direction",
+      "shotId": "E13-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：记者准确找到自己留下的暴露点，编辑只从东侧画外答复。；入镜已知：让记者处理自己参与造成的损害。；本镜新知：抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。；实际写出的动作：诺拉静音重开自己的原采访，在玛拉转出诊所信件抬头的位置暂停；下面仍保留着孩子的原声音轨。她把这两处加入撤下清单，关掉围堵视频，不重播额外可辨童声。",
+      "sourceLocator": "season/E13.json#/shots/5"
+    },
+    {
+      "role": "performance",
+      "shotId": "E13-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "她把围堵视频暂停，未开声音。 → 抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。；诺拉向值班编辑：We gave them the clinic's name. And her voice. I left that in.；对着自己的原片核，后半句不推给团队 / 值班编辑向诺拉：Pull the original.；落实动作",
+      "sourceLocator": "season/E13.json#/shots/5"
+    },
+    {
+      "role": "staging",
+      "shotId": "E13-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "午间编辑部，诺拉在西桌重开先前自己的采访原片，女值班编辑站东侧。屏幕一侧是诊所门口围堵，另一侧是她当时留下的信件抬头与孩子原声。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。；起态：她把围堵视频暂停，未开声音。；出态：抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。",
+      "sourceLocator": "season/E13.json#/shots/5"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E13-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "诺拉西桌南肩后50mm屏幕和红本近景，原采访静音，诊所抬头与未删的孩子音轨可见。；相机：固定11秒，按她的两次定位停住，不播放额外儿童台词。；焦点：记者准确找到自己留下的暴露点，编辑只从东侧画外答复。",
+      "sourceLocator": "season/E13.json#/shots/5"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E13-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E13-SH009.txt；11秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E13.json#/shots/5"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E13-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。；切点：撤原片影响整个特写版面，切两人面对工作后果。；接口：接E13-SH010；撤原片影响整个特写版面，切两人面对工作后果。",
+      "sourceLocator": "season/E13.json#/shots/5"
+    },
+    {
+      "role": "direction",
+      "shotId": "E13-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：撤本站视频、截图和缩略图做完；外部副本仍在，不能用一次点击消失。；入镜已知：抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。；本镜新知：诺拉留下处理结果，采访提纲翻到桌面朝下。；实际写出的动作：编辑提醒撤原片会带走整条推荐入口。诺拉撤本站原采访视频、由它抽出的截图和缩略图，保留更正告知；手机上别人保存的副本仍在播放，她将播放器关掉，不声称副本消失。\n推荐位变灰，编辑把另一个稿件补上。诺拉准备给玛拉发通知，停在原来附着采访问题的草稿上，将那些问题全删了。",
+      "sourceLocator": "season/E13.json#/shots/6"
+    },
+    {
+      "role": "performance",
+      "shotId": "E13-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。 → 诺拉留下处理结果，采访提纲翻到桌面朝下。；值班编辑向诺拉：We lose the whole feature if we do.；指着待清空的位置，让她最后确认 / 诺拉向值班编辑：Do it.；不补原则演讲 / 值班编辑向诺拉：They've already copied it. We can't take those down ourselves.；交代本站操作的边界 / 诺拉向值班编辑：I know. Take ours down. I'll tell her what we did.；不许诺全网消失",
+      "sourceLocator": "season/E13.json#/shots/6"
+    },
+    {
+      "role": "staging",
+      "shotId": "E13-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "午间编辑部，诺拉在西桌重开先前自己的采访原片，女值班编辑站东侧。屏幕一侧是诊所门口围堵，另一侧是她当时留下的信件抬头与孩子原声。 本镜画内角色：NORA,EDITOR-DESK。；起态：抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。；出态：诺拉留下处理结果，采访提纲翻到桌面朝下。",
+      "sourceLocator": "season/E13.json#/shots/6"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E13-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "编辑部西桌南侧40mm共享中景，编辑站东，诺拉坐西，屏幕边缘与手机同时可见。；相机：固定30秒，推荐变灰后编辑换稿，诺拉删掉留言里的采访问题。；焦点：撤本站视频、截图和缩略图做完；外部副本仍在，不能用一次点击消失。",
+      "sourceLocator": "season/E13.json#/shots/6"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E13-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E13-SH010.txt；30秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E13.json#/shots/6"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E13-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "诺拉留下处理结果，采访提纲翻到桌面朝下。；切点：她把提纲扣下拨电话，切到不再索取的单独留言。；接口：接E13-SH011；她把提纲扣下拨电话，切到不再索取的单独留言。",
+      "sourceLocator": "season/E13.json#/shots/6"
+    },
+    {
+      "role": "direction",
+      "shotId": "E13-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：一句实际处理结果和道歉，没有向对方要新材料或谅解。；入镜已知：诺拉留下处理结果，采访提纲翻到桌面朝下。；本镜新知：她没换来回复或新采访，继续承担撤图损失。；实际写出的动作：电话转语音信箱。诺拉将采访提纲翻扣，不问新问题，只说本站原片和截图已撤，随后把手机放回右侧，不再追拨。",
+      "sourceLocator": "season/E13.json#/shots/7"
+    },
+    {
+      "role": "performance",
+      "shotId": "E13-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "诺拉留下处理结果，采访提纲翻到桌面朝下。 → 她没换来回复或新采访，继续承担撤图损失。；诺拉向玛拉（语音留言）：Our video's down. The photos too. I'm sorry. You don't have to call me back.；留言只交代已做的事，不索取回应",
+      "sourceLocator": "season/E13.json#/shots/7"
+    },
+    {
+      "role": "staging",
+      "shotId": "E13-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "午间编辑部，诺拉在西桌重开先前自己的采访原片，女值班编辑站东侧。屏幕一侧是诊所门口围堵，另一侧是她当时留下的信件抬头与孩子原声。 本镜画内角色：NORA。；起态：诺拉留下处理结果，采访提纲翻到桌面朝下。；出态：她没换来回复或新采访，继续承担撤图损失。",
+      "sourceLocator": "season/E13.json#/shots/7"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E13-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "西桌东南侧75mm诺拉中近景，手机贴耳、翻扣提纲在画幅下缘，编辑不入画。；相机：固定10秒，留言完放下电话，不再追拨。；焦点：一句实际处理结果和道歉，没有向对方要新材料或谅解。",
+      "sourceLocator": "season/E13.json#/shots/7"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E13-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E13-SH011.txt；10秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E13.json#/shots/7"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E13-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "她没换来回复或新采访，继续承担撤图损失。；切点：电话离手，下一场轮到主角决定是否使用患者的遭遇。；接口：本场结果成立后切入 E13-SC04（VISIT，日·次日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E13.json#/shots/7"
+    },
+    {
+      "role": "direction",
+      "shotId": "E13-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：律师要求他说出删前言的原因，患者不再承担他的论证。；入镜已知：让当事人对支持他的人的行为设边界，而不再借患者抬高自己。；本镜新知：桌面只留下反骚扰段，拒赔经历不再作为发言前提。；实际写出的动作：会见桌上，海伦放下青年写过的整页声明，旁边是获母亲许可遮名的截图。青年看完入口被堵的画面，把声明第一段折到背面。\n海伦把折到背面的第一段重新摊平，原来准备讲拒赔背景。青年看过诊所门口截图，把那一段往自己这边收回。",
+      "sourceLocator": "season/E13.json#/shots/8"
+    },
+    {
+      "role": "performance",
+      "shotId": "E13-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "灰衣青年北侧双腕自由，整页草稿在北、遮名截图桌中；海伦南侧，笔在夹边。 → 桌面只留下反骚扰段，拒赔经历不再作为发言前提。；海伦向路易吉：All of it?；等他确定发布范围 / 路易吉向海伦：Not the first paragraph.；折掉自己用来解释的背景 / 海伦向路易吉：You wrote this part. Why take it out now?；确认是他的决定 / 路易吉向海伦：It's her daughter. She didn't ask to be in my statement.；停止替她安排角色 / 海伦向路易吉：Then we leave her out.；执行明确边界",
+      "sourceLocator": "season/E13.json#/shots/8"
+    },
+    {
+      "role": "staging",
+      "shotId": "E13-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "次日会见室固定桌北侧仍是灰衣青年，海伦坐南，门在南。桌上是一整页声明和获玛拉许可后遮名的诊所入口截图，双方手腕自由。 本镜画内角色：LUIGI-DETENTION,HELEN。；起态：灰衣青年北侧双腕自由，整页草稿在北、遮名截图桌中；海伦南侧，笔在夹边。；出态：桌面只留下反骚扰段，拒赔经历不再作为发言前提。",
+      "sourceLocator": "season/E13.json#/shots/8"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E13-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "会见桌西侧40mm双人中景，青年北、海伦南，整页声明与遮名截图在中间。；相机：固定26秒，前言折到背面又摊开，由青年自己决定收回。；焦点：律师要求他说出删前言的原因，患者不再承担他的论证。",
+      "sourceLocator": "season/E13.json#/shots/8"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E13-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E13-SH012.txt；26秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E13.json#/shots/8"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E13-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "桌面只留下反骚扰段，拒赔经历不再作为发言前提。；切点：青年选好只发反骚扰段，切律师确认对支持者也适用的代价。；接口：接E13-SH013；青年选好只发反骚扰段，切律师确认对支持者也适用的代价。",
+      "sourceLocator": "season/E13.json#/shots/8"
+    },
+    {
+      "role": "direction",
+      "shotId": "E13-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：筹款者反对的可能被说清，青年坚持，律师承诺不添加自己的开场。；入镜已知：桌面只留下反骚扰段，拒赔经历不再作为发言前提。；本镜新知：发布授权保持为签署的反骚扰段，患者身份和背景不附上。；实际写出的动作：海伦指出被折走的一段是玛拉拒赔经历，青年将停骚扰那段留正面，签上自己的名字。她问发出会否得罪筹款者，他没有加回那段背景。\n海伦将签好的一段收进文件夹，青年仍看着截图，想补一个限定，又把笔搁下。她不替他把责任推给不明身份的少数人。",
+      "sourceLocator": "season/E13.json#/shots/9"
+    },
+    {
+      "role": "performance",
+      "shotId": "E13-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "桌面只留下反骚扰段，拒赔经历不再作为发言前提。 → 发布授权保持为签署的反骚扰段，患者身份和背景不附上。；海伦向路易吉：Some of your fundraisers won't like this.；只说会失去谁的支持 / 路易吉向海伦：Post that part. Put my name on it.；签字，不另加一段自我说明 / 路易吉向海伦：Even the ones raising money for me.；把禁骚扰范围说到自己人 / 海伦向路易吉：I'll post exactly what you signed. No introduction.；不替他恢复道德辩解 / 路易吉向海伦：Okay.；接受可能损失支持",
+      "sourceLocator": "season/E13.json#/shots/9"
+    },
+    {
+      "role": "staging",
+      "shotId": "E13-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "次日会见室固定桌北侧仍是灰衣青年，海伦坐南，门在南。桌上是一整页声明和获玛拉许可后遮名的诊所入口截图，双方手腕自由。 本镜画内角色：HELEN。其余所列说话者留在已建立的画外席位或电话对端。；起态：桌面只留下反骚扰段，拒赔经历不再作为发言前提。；出态：发布授权保持为签署的反骚扰段，患者身份和背景不附上。",
+      "sourceLocator": "season/E13.json#/shots/9"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E13-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "青年西肩旁朝南65mm海伦中近景，签署的页和青年笔手在下前景。；相机：固定30秒，海伦收页后仍留青年放下笔的手。；焦点：筹款者反对的可能被说清，青年坚持，律师承诺不添加自己的开场。",
+      "sourceLocator": "season/E13.json#/shots/9"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E13-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E13-SH013.txt；30秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E13.json#/shots/9"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E13-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "发布授权保持为签署的反骚扰段，患者身份和背景不附上。；切点：正式授权进入蓝夹，接真实发布而非再说一次原则。；接口：本场结果成立后切入 E13-SC05（HELEN-OFFICE，夜·会见后）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E13.json#/shots/9"
+    },
+    {
+      "role": "direction",
+      "shotId": "E13-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：发布完成后反对留言出现，她保存已发布版本。；入镜已知：完成上一场选择的真实对外动作。；本镜新知：声明留在公开渠道，支持者开始攻击青年，签字纸回蓝夹。；实际写出的动作：海伦将获授权的一段声明发到正式渠道，确认公开版本不带诊所地址和患者细节。几条声援账号的反对留言随后刷新，她没有撤回，保存公开版本与交付时间。",
+      "sourceLocator": "season/E13.json#/shots/10"
+    },
+    {
+      "role": "performance",
+      "shotId": "E13-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "夜间海伦办公室，蓝夹在中央桌西侧，签字声明已摆在工作电脑旁；她坐桌南侧。 → 声明留在公开渠道，支持者开始攻击青年，签字纸回蓝夹。；无对白，以已写动作承载表演。",
+      "sourceLocator": "season/E13.json#/shots/10"
+    },
+    {
+      "role": "staging",
+      "shotId": "E13-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "当晚海伦办公室，西桌电脑面对她，蓝夹已合，东侧座位空着。公开渠道草稿只有签署的反骚扰段，没有诊所与患者信息。 本镜画内角色：HELEN。；起态：夜间海伦办公室，蓝夹在中央桌西侧，签字声明已摆在工作电脑旁；她坐桌南侧。；出态：声明留在公开渠道，支持者开始攻击青年，签字纸回蓝夹。",
+      "sourceLocator": "season/E13.json#/shots/10"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E13-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "海伦西肩后65mm电脑与签署页近景，正文不含患者细节，海伦只留肩和手。；相机：固定9秒，不切评论者头像或想象人群。；焦点：发布完成后反对留言出现，她保存已发布版本。",
+      "sourceLocator": "season/E13.json#/shots/10"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E13-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E13-SH014.txt；9秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E13.json#/shots/10"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E13-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "声明留在公开渠道，支持者开始攻击青年，签字纸回蓝夹。；切点：她不撤回，数周后转实际保存争议资料。；接口：本集结束。声明真的发出，部分声援者反对，海伦没有撤回；设定边界已经发生代价，下一步转向能独立保存的证据。 下集从INSURER展开：在个人停权和系统例行覆盖之前，哪些记录还能依法保住？",
+      "sourceLocator": "season/E13.json#/shots/10"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "E13-SH001",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "孩子把拼图角挡在自己照片前，母亲发现要证明自己的代价是孩子身体被看。",
+        "audiencePayoff": "治疗照片未发，母亲手指离开发送。",
+        "trigger": "玛拉右手机，左手压治疗收据。；玛拉在公司说明中看到自己的姓，刷新后连女儿的名字也被评论拼出。艾莉举着拼图角等她，玛拉伸手去接，却又缩回去看新的评论。\n玛拉选中一张治疗照片想证明钱的去处，艾莉看见缩略图，将拼图角放到照片和母亲之间。玛拉抬头发现孩子看着她，取消选择。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "孩子明确照片里是自己，切到她的高度处理边界。；接E13-SH003；孩子明确照片里是自己，切到她的高度处理边界。",
+        "noMotionReason": "固定21秒，相册由母亲举起又放低。；观看变化：治疗照片未发，母亲手指离开发送。"
+      },
+      "camera": {
+        "shotScale": "公寓餐桌南侧50mm母女共享中景",
+        "position": "公寓餐桌南侧50mm母女共享中景，玛拉桌东、艾莉桌西，东厨房与北卧室门保持原方向。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "公寓餐桌南侧50mm母女共享中景，玛拉桌东、艾莉桌西，东厨房与北卧室门保持原方向。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "孩子把拼图角挡在自己照片前，母亲发现要证明自己的代价是孩子身体被看。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 签约后的翌晨，公寓东厨房连着中央餐桌，北面卧室门关着。玛拉坐餐桌东侧，艾莉坐西侧拼图；公司说明在母亲手机上亮起，孩子的画本放椅子上，蓝夹在南门边等出发。 本镜画内角色：MARA-HOME,ELLIE。",
+        "movementIntent": "固定21秒，相册由母亲举起又放低。"
+      },
+      "composition": {
+        "layout": "签约后的翌晨，公寓东厨房连着中央餐桌，北面卧室门关着。玛拉坐餐桌东侧，艾莉坐西侧拼图；公司说明在母亲手机上亮起，孩子的画本放椅子上，蓝夹在南门边等出发。 本镜画内角色：MARA-HOME,ELLIE。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：玛拉在公司说明中看到自己的姓，刷新后连女儿的名字也被评论拼出。艾莉举着拼图角等她，玛拉伸手去接，却又缩回去看新的评论。\n玛拉选中一张治疗照片想证明钱的去处，艾莉看见缩略图，将拼图角放到照片和母亲之间。玛拉抬头发现孩子看着她，取消选择。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "孩子把拼图角挡在自己照片前，母亲发现要证明自己的代价是孩子身体被看。；孩子把拼图角挡在自己照片前，母亲发现要证明自己的代价是孩子身体被看。"
+      },
+      "temporal": {
+        "durationSeconds": 21,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "孩子把拼图角挡在自己照片前，母亲发现要证明自己的代价是孩子身体被看。",
+          "path": "机位不移动。",
+          "start": "玛拉右手机，左手压治疗收据。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "治疗照片未发，母亲手指离开发送。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E13-SH001-F1",
+            "timeSeconds": 0,
+            "description": "孩子把拼图角挡在自己照片前，母亲发现要证明自己的代价是孩子身体被看。"
+          }
+        ],
+        "edit": {
+          "entry": "玛拉右手机，左手压治疗收据。",
+          "exit": "治疗照片未发，母亲手指离开发送。；孩子明确照片里是自己，切到她的高度处理边界。",
+          "preferredTransition": "接E13-SH003；孩子明确照片里是自己，切到她的高度处理边界。",
+          "soundBridge": "东厨房水壶与日常室内底声，手机通知只亮屏不朗读。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E13-SH003",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "母亲退出整个相册，放开替孩子收画本的手；孩子自己抱着走。",
+        "audiencePayoff": "画本由孩子抱，蓝夹归玛拉，手机出发前回右手导航。",
+        "trigger": "治疗照片未发，母亲手指离开发送。；玛拉取消图片勾选，评论还在问她收了多少。她将手机转到自己一边，艾莉却已看见自己治疗时的缩略图，没把拼图角递过来。\n玛拉关掉直播邀请，把手机收入包。艾莉收自己的画本，玛拉伸手帮她装，孩子抱紧一下，她松手让孩子自己拿，再把蓝夹夹到左臂；临出南门，她从包里取回手机看路线。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "母亲只取手机查路线，接诊所实际通路被堵。；本场结果成立后切入 E13-SC02（CLINIC，日·同日上午）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "先固定，二人起身后仅向南平移半米让出桌角，不追手机屏幕。；观看变化：画本由孩子抱，蓝夹归玛拉，手机出发前回右手导航。"
+      },
+      "camera": {
+        "shotScale": "桌南偏东50mm儿童高度的双人中景",
+        "position": "桌南偏东50mm儿童高度的双人中景，艾莉正面、母亲侧面，南门出发路线留在左边。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "桌南偏东50mm儿童高度的双人中景，艾莉正面、母亲侧面，南门出发路线留在左边。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "母亲退出整个相册，放开替孩子收画本的手；孩子自己抱着走。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 签约后的翌晨，公寓东厨房连着中央餐桌，北面卧室门关着。玛拉坐餐桌东侧，艾莉坐西侧拼图；公司说明在母亲手机上亮起，孩子的画本放椅子上，蓝夹在南门边等出发。 本镜画内角色：MARA-HOME,ELLIE。",
+        "movementIntent": "先固定，二人起身后仅向南平移半米让出桌角，不追手机屏幕。"
+      },
+      "composition": {
+        "layout": "签约后的翌晨，公寓东厨房连着中央餐桌，北面卧室门关着。玛拉坐餐桌东侧，艾莉坐西侧拼图；公司说明在母亲手机上亮起，孩子的画本放椅子上，蓝夹在南门边等出发。 本镜画内角色：MARA-HOME,ELLIE。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：玛拉取消图片勾选，评论还在问她收了多少。她将手机转到自己一边，艾莉却已看见自己治疗时的缩略图，没把拼图角递过来。\n玛拉关掉直播邀请，把手机收入包。艾莉收自己的画本，玛拉伸手帮她装，孩子抱紧一下，她松手让孩子自己拿，再把蓝夹夹到左臂；临出南门，她从包里取回手机看路线。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "母亲退出整个相册，放开替孩子收画本的手；孩子自己抱着走。；母亲退出整个相册，放开替孩子收画本的手；孩子自己抱着走。"
+      },
+      "temporal": {
+        "durationSeconds": 27,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "母亲退出整个相册，放开替孩子收画本的手；孩子自己抱着走。",
+          "path": "机位不移动。",
+          "start": "治疗照片未发，母亲手指离开发送。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "画本由孩子抱，蓝夹归玛拉，手机出发前回右手导航。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E13-SH003-F1",
+            "timeSeconds": 0,
+            "description": "母亲退出整个相册，放开替孩子收画本的手；孩子自己抱着走。"
+          }
+        ],
+        "edit": {
+          "entry": "治疗照片未发，母亲手指离开发送。",
+          "exit": "画本由孩子抱，蓝夹归玛拉，手机出发前回右手导航。；母亲只取手机查路线，接诊所实际通路被堵。",
+          "preferredTransition": "本场结果成立后切入 E13-SC02（CLINIC，日·同日上午）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "东厨房水壶与日常室内底声，手机通知只亮屏不朗读。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E13-SH004",
+      "decision": {
+        "primaryTechniqueId": "M02",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她腾出右手牵孩子，蓝夹顶胸，确实无手可推设备。",
+        "audiencePayoff": "右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。",
+        "trigger": "玛拉右手机左夹，孩子抱画本。；母女到南门坡道，布莱克退到门前让手机正对玛拉。她转肩把孩子隔在自己东侧，身后还有其他来就诊的人；她不往人群挤。\n布莱克把手机向她收窄的通路送近，玛拉将自己右手手机收入风衣右袋，牵住艾莉左手；她的蓝夹顶住胸口，没有空手去推设备。",
+        "cameraMode": "moving",
+        "focusMode": "hold",
+        "exitMatch": "保安从东接待台出来给替代路径，切到受控门一侧。；接E13-SH006；保安从东接待台出来给替代路径，切到受控门一侧。"
+      },
+      "camera": {
+        "shotScale": "诊所南坡道东侧35mm三人中景",
+        "position": "诊所南坡道东侧35mm三人中景，布莱克在正门前，母亲居中、孩子在她东侧，后面患者不被挤成一团。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "诊所南坡道东侧35mm三人中景，布莱克在正门前，母亲居中、孩子在她东侧，后面患者不被挤成一团。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "她腾出右手牵孩子，蓝夹顶胸，确实无手可推设备。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日上午诊所南门坡道窄，其他患者在母女后方。布莱克的稳定器占着正门，保安在东接待台；东南还有一道刷卡侧门。玛拉左臂蓝夹、艾莉抱画本。 本镜画内角色：MARA-WORK,ELLIE,HOST。",
+        "movementIntent": "手持幅度克制，随母亲后退半步便停住，不冲入主播直播视角。"
+      },
+      "composition": {
+        "layout": "同日上午诊所南门坡道窄，其他患者在母女后方。布莱克的稳定器占着正门，保安在东接待台；东南还有一道刷卡侧门。玛拉左臂蓝夹、艾莉抱画本。 本镜画内角色：MARA-WORK,ELLIE,HOST。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：母女到南门坡道，布莱克退到门前让手机正对玛拉。她转肩把孩子隔在自己东侧，身后还有其他来就诊的人；她不往人群挤。\n布莱克把手机向她收窄的通路送近，玛拉将自己右手手机收入风衣右袋，牵住艾莉左手；她的蓝夹顶住胸口，没有空手去推设备。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她腾出右手牵孩子，蓝夹顶胸，确实无手可推设备。；她腾出右手牵孩子，蓝夹顶胸，确实无手可推设备。"
+      },
+      "temporal": {
+        "durationSeconds": 23,
+        "cameraMotion": {
+          "type": "dolly",
+          "motivation": "她腾出右手牵孩子，蓝夹顶胸，确实无手可推设备。",
+          "path": "手持幅度克制，随母亲后退半步便停住，不冲入主播直播视角。",
+          "start": "玛拉右手机左夹，孩子抱画本。",
+          "acceleration": "仅执行作者本镜规定的启动与速度，不另加缓起：手持幅度克制，随母亲后退半步便停住，不冲入主播直播视角。",
+          "peak": "依本镜作者运动描述，不统一套匀速：手持幅度克制，随母亲后退半步便停住，不冲入主播直播视角。",
+          "deceleration": "不强制停稳；按作者出点接后镜：保安从东接待台出来给替代路径，切到受控门一侧。",
+          "end": "右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。",
+          "framingChange": "手持幅度克制，随母亲后退半步便停住，不冲入主播直播视角。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E13-SH004-F1",
+            "timeSeconds": 0,
+            "description": "她腾出右手牵孩子，蓝夹顶胸，确实无手可推设备。"
+          }
+        ],
+        "edit": {
+          "entry": "玛拉右手机左夹，孩子抱画本。",
+          "exit": "右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。；保安从东接待台出来给替代路径，切到受控门一侧。",
+          "preferredTransition": "接E13-SH006；保安从东接待台出来给替代路径，切到受控门一侧。",
+          "soundBridge": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E13-SH006",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "保安挡设备而不碰孩子，母女通过才关门，主播不能跟入。",
+        "audiencePayoff": "母女在门内、主播留门外，门合上隔开直播声。",
+        "trigger": "右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。；东接待台旁保安看到母女进不了门，出来将手掌横在稳定器与孩子之间，指东南受控入口。艾莉把画本合紧，走在母亲身侧。\n保安刷牌开受控门，玛拉先牵孩子进去，蓝夹被门框碰歪，她用左肘夹住没有停下。布莱克举稳定器跟到门线，保安回身将通路占住，等母女通过才带门。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "门合上隔开直播，切到孩子已停住的内部侧廊。；接E13-SH008；门合上隔开直播，切到孩子已停住的内部侧廊。",
+        "noMotionReason": "固定23秒，门开启后人物经过相机，不以暗切跨门。；观看变化：母女在门内、主播留门外，门合上隔开直播声。"
+      },
+      "camera": {
+        "shotScale": "东南侧门内35mm朝西南的中全景",
+        "position": "东南侧门内35mm朝西南的中全景，门框是边界，保安在门口，母女从外侧进来；主播留门外。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "东南侧门内35mm朝西南的中全景，门框是边界，保安在门口，母女从外侧进来；主播留门外。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "保安挡设备而不碰孩子，母女通过才关门，主播不能跟入。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日上午诊所南门坡道窄，其他患者在母女后方。布莱克的稳定器占着正门，保安在东接待台；东南还有一道刷卡侧门。玛拉左臂蓝夹、艾莉抱画本。 本镜画内角色：MARA-WORK,ELLIE,HOST,GUARD-CLINIC。",
+        "movementIntent": "固定23秒，门开启后人物经过相机，不以暗切跨门。"
+      },
+      "composition": {
+        "layout": "同日上午诊所南门坡道窄，其他患者在母女后方。布莱克的稳定器占着正门，保安在东接待台；东南还有一道刷卡侧门。玛拉左臂蓝夹、艾莉抱画本。 本镜画内角色：MARA-WORK,ELLIE,HOST,GUARD-CLINIC。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：东接待台旁保安看到母女进不了门，出来将手掌横在稳定器与孩子之间，指东南受控入口。艾莉把画本合紧，走在母亲身侧。\n保安刷牌开受控门，玛拉先牵孩子进去，蓝夹被门框碰歪，她用左肘夹住没有停下。布莱克举稳定器跟到门线，保安回身将通路占住，等母女通过才带门。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "保安挡设备而不碰孩子，母女通过才关门，主播不能跟入。；保安挡设备而不碰孩子，母女通过才关门，主播不能跟入。"
+      },
+      "temporal": {
+        "durationSeconds": 23,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "保安挡设备而不碰孩子，母女通过才关门，主播不能跟入。",
+          "path": "机位不移动。",
+          "start": "右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "母女在门内、主播留门外，门合上隔开直播声。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E13-SH006-F1",
+            "timeSeconds": 0,
+            "description": "保安挡设备而不碰孩子，母女通过才关门，主播不能跟入。"
+          }
+        ],
+        "edit": {
+          "entry": "右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。",
+          "exit": "母女在门内、主播留门外，门合上隔开直播声。；门合上隔开直播，切到孩子已停住的内部侧廊。",
+          "preferredTransition": "接E13-SH008；门合上隔开直播，切到孩子已停住的内部侧廊。",
+          "soundBridge": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E13-SH008",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "门后仍不安全的主观感受、另一出口约定、孩子自己收画本再递手完整发生。",
+        "audiencePayoff": "艾莉自己把画本放进包里，随后伸手；母亲等她先迈步才起身。",
+        "trigger": "母女在门内、主播留门外，门合上隔开直播声。；到了侧廊，艾莉不再跟母亲走，停着把画本塞进怀里。玛拉蹲下，将蓝夹靠左腿立住，松开右手，等孩子重新把手给她。\n侧门隔住直播声，艾莉仍贴着墙。玛拉从蹲着的位置挪开半步，让女儿能看到北端治疗门；她没有拉孩子往前，蓝夹立在左腿旁。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "艾莉先迈向治疗区，转记者处理自己原片。；本场结果成立后切入 E13-SC03（NEWSROOM，午·围堵之后）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定36秒，母亲蹲下并侧移让孩子看清北向通路，相机不贴近哭脸。；观看变化：艾莉自己把画本放进包里，随后伸手；母亲等她先迈步才起身。"
+      },
+      "camera": {
+        "shotScale": "侧廊北侧35mm儿童眼高双人中景",
+        "position": "侧廊北侧35mm儿童眼高双人中景，受控门在南后方、北治疗入口位于画外左侧去向；蓝夹靠母亲左腿。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "侧廊北侧35mm儿童眼高双人中景，受控门在南后方、北治疗入口位于画外左侧去向；蓝夹靠母亲左腿。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "门后仍不安全的主观感受、另一出口约定、孩子自己收画本再递手完整发生。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日上午诊所南门坡道窄，其他患者在母女后方。布莱克的稳定器占着正门，保安在东接待台；东南还有一道刷卡侧门。玛拉左臂蓝夹、艾莉抱画本。 本镜画内角色：MARA-WORK,ELLIE。",
+        "movementIntent": "固定36秒，母亲蹲下并侧移让孩子看清北向通路，相机不贴近哭脸。"
+      },
+      "composition": {
+        "layout": "同日上午诊所南门坡道窄，其他患者在母女后方。布莱克的稳定器占着正门，保安在东接待台；东南还有一道刷卡侧门。玛拉左臂蓝夹、艾莉抱画本。 本镜画内角色：MARA-WORK,ELLIE。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：到了侧廊，艾莉不再跟母亲走，停着把画本塞进怀里。玛拉蹲下，将蓝夹靠左腿立住，松开右手，等孩子重新把手给她。\n侧门隔住直播声，艾莉仍贴着墙。玛拉从蹲着的位置挪开半步，让女儿能看到北端治疗门；她没有拉孩子往前，蓝夹立在左腿旁。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "门后仍不安全的主观感受、另一出口约定、孩子自己收画本再递手完整发生。；门后仍不安全的主观感受、另一出口约定、孩子自己收画本再递手完整发生。"
+      },
+      "temporal": {
+        "durationSeconds": 36,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "门后仍不安全的主观感受、另一出口约定、孩子自己收画本再递手完整发生。",
+          "path": "机位不移动。",
+          "start": "母女在门内、主播留门外，门合上隔开直播声。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "艾莉自己把画本放进包里，随后伸手；母亲等她先迈步才起身。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E13-SH008-F1",
+            "timeSeconds": 0,
+            "description": "门后仍不安全的主观感受、另一出口约定、孩子自己收画本再递手完整发生。"
+          }
+        ],
+        "edit": {
+          "entry": "母女在门内、主播留门外，门合上隔开直播声。",
+          "exit": "艾莉自己把画本放进包里，随后伸手；母亲等她先迈步才起身。；艾莉先迈向治疗区，转记者处理自己原片。",
+          "preferredTransition": "本场结果成立后切入 E13-SC03（NEWSROOM，午·围堵之后）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E13-SH009",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "记者准确找到自己留下的暴露点，编辑只从东侧画外答复。",
+        "audiencePayoff": "抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。",
+        "trigger": "她把围堵视频暂停，未开声音。；诺拉静音重开自己的原采访，在玛拉转出诊所信件抬头的位置暂停；下面仍保留着孩子的原声音轨。她把这两处加入撤下清单，关掉围堵视频，不重播额外可辨童声。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "撤原片影响整个特写版面，切两人面对工作后果。；接E13-SH010；撤原片影响整个特写版面，切两人面对工作后果。",
+        "noMotionReason": "固定11秒，按她的两次定位停住，不播放额外儿童台词。；观看变化：抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。"
+      },
+      "camera": {
+        "shotScale": "诺拉西桌南肩后50mm屏幕和红本近景",
+        "position": "诺拉西桌南肩后50mm屏幕和红本近景，原采访静音，诊所抬头与未删的孩子音轨可见。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "诺拉西桌南肩后50mm屏幕和红本近景，原采访静音，诊所抬头与未删的孩子音轨可见。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "记者准确找到自己留下的暴露点，编辑只从东侧画外答复。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 午间编辑部，诺拉在西桌重开先前自己的采访原片，女值班编辑站东侧。屏幕一侧是诊所门口围堵，另一侧是她当时留下的信件抬头与孩子原声。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定11秒，按她的两次定位停住，不播放额外儿童台词。"
+      },
+      "composition": {
+        "layout": "午间编辑部，诺拉在西桌重开先前自己的采访原片，女值班编辑站东侧。屏幕一侧是诊所门口围堵，另一侧是她当时留下的信件抬头与孩子原声。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：诺拉静音重开自己的原采访，在玛拉转出诊所信件抬头的位置暂停；下面仍保留着孩子的原声音轨。她把这两处加入撤下清单，关掉围堵视频，不重播额外可辨童声。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "记者准确找到自己留下的暴露点，编辑只从东侧画外答复。；记者准确找到自己留下的暴露点，编辑只从东侧画外答复。"
+      },
+      "temporal": {
+        "durationSeconds": 11,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "记者准确找到自己留下的暴露点，编辑只从东侧画外答复。",
+          "path": "机位不移动。",
+          "start": "她把围堵视频暂停，未开声音。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E13-SH009-F1",
+            "timeSeconds": 0,
+            "description": "记者准确找到自己留下的暴露点，编辑只从东侧画外答复。"
+          }
+        ],
+        "edit": {
+          "entry": "她把围堵视频暂停，未开声音。",
+          "exit": "抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。；撤原片影响整个特写版面，切两人面对工作后果。",
+          "preferredTransition": "接E13-SH010；撤原片影响整个特写版面，切两人面对工作后果。",
+          "soundBridge": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E13-SH010",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "撤本站视频、截图和缩略图做完；外部副本仍在，不能用一次点击消失。",
+        "audiencePayoff": "诺拉留下处理结果，采访提纲翻到桌面朝下。",
+        "trigger": "抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。；编辑提醒撤原片会带走整条推荐入口。诺拉撤本站原采访视频、由它抽出的截图和缩略图，保留更正告知；手机上别人保存的副本仍在播放，她将播放器关掉，不声称副本消失。\n推荐位变灰，编辑把另一个稿件补上。诺拉准备给玛拉发通知，停在原来附着采访问题的草稿上，将那些问题全删了。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "她把提纲扣下拨电话，切到不再索取的单独留言。；接E13-SH011；她把提纲扣下拨电话，切到不再索取的单独留言。",
+        "noMotionReason": "固定30秒，推荐变灰后编辑换稿，诺拉删掉留言里的采访问题。；观看变化：诺拉留下处理结果，采访提纲翻到桌面朝下。"
+      },
+      "camera": {
+        "shotScale": "编辑部西桌南侧40mm共享中景",
+        "position": "编辑部西桌南侧40mm共享中景，编辑站东，诺拉坐西，屏幕边缘与手机同时可见。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "编辑部西桌南侧40mm共享中景，编辑站东，诺拉坐西，屏幕边缘与手机同时可见。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "撤本站视频、截图和缩略图做完；外部副本仍在，不能用一次点击消失。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 午间编辑部，诺拉在西桌重开先前自己的采访原片，女值班编辑站东侧。屏幕一侧是诊所门口围堵，另一侧是她当时留下的信件抬头与孩子原声。 本镜画内角色：NORA,EDITOR-DESK。",
+        "movementIntent": "固定30秒，推荐变灰后编辑换稿，诺拉删掉留言里的采访问题。"
+      },
+      "composition": {
+        "layout": "午间编辑部，诺拉在西桌重开先前自己的采访原片，女值班编辑站东侧。屏幕一侧是诊所门口围堵，另一侧是她当时留下的信件抬头与孩子原声。 本镜画内角色：NORA,EDITOR-DESK。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：编辑提醒撤原片会带走整条推荐入口。诺拉撤本站原采访视频、由它抽出的截图和缩略图，保留更正告知；手机上别人保存的副本仍在播放，她将播放器关掉，不声称副本消失。\n推荐位变灰，编辑把另一个稿件补上。诺拉准备给玛拉发通知，停在原来附着采访问题的草稿上，将那些问题全删了。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "撤本站视频、截图和缩略图做完；外部副本仍在，不能用一次点击消失。；撤本站视频、截图和缩略图做完；外部副本仍在，不能用一次点击消失。"
+      },
+      "temporal": {
+        "durationSeconds": 30,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "撤本站视频、截图和缩略图做完；外部副本仍在，不能用一次点击消失。",
+          "path": "机位不移动。",
+          "start": "抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "诺拉留下处理结果，采访提纲翻到桌面朝下。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E13-SH010-F1",
+            "timeSeconds": 0,
+            "description": "撤本站视频、截图和缩略图做完；外部副本仍在，不能用一次点击消失。"
+          }
+        ],
+        "edit": {
+          "entry": "抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。",
+          "exit": "诺拉留下处理结果，采访提纲翻到桌面朝下。；她把提纲扣下拨电话，切到不再索取的单独留言。",
+          "preferredTransition": "接E13-SH011；她把提纲扣下拨电话，切到不再索取的单独留言。",
+          "soundBridge": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E13-SH011",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "一句实际处理结果和道歉，没有向对方要新材料或谅解。",
+        "audiencePayoff": "她没换来回复或新采访，继续承担撤图损失。",
+        "trigger": "诺拉留下处理结果，采访提纲翻到桌面朝下。；电话转语音信箱。诺拉将采访提纲翻扣，不问新问题，只说本站原片和截图已撤，随后把手机放回右侧，不再追拨。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "电话离手，下一场轮到主角决定是否使用患者的遭遇。；本场结果成立后切入 E13-SC04（VISIT，日·次日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定10秒，留言完放下电话，不再追拨。；观看变化：她没换来回复或新采访，继续承担撤图损失。"
+      },
+      "camera": {
+        "shotScale": "西桌东南侧75mm诺拉中近景",
+        "position": "西桌东南侧75mm诺拉中近景，手机贴耳、翻扣提纲在画幅下缘，编辑不入画。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "西桌东南侧75mm诺拉中近景，手机贴耳、翻扣提纲在画幅下缘，编辑不入画。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "一句实际处理结果和道歉，没有向对方要新材料或谅解。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 午间编辑部，诺拉在西桌重开先前自己的采访原片，女值班编辑站东侧。屏幕一侧是诊所门口围堵，另一侧是她当时留下的信件抬头与孩子原声。 本镜画内角色：NORA。",
+        "movementIntent": "固定10秒，留言完放下电话，不再追拨。"
+      },
+      "composition": {
+        "layout": "午间编辑部，诺拉在西桌重开先前自己的采访原片，女值班编辑站东侧。屏幕一侧是诊所门口围堵，另一侧是她当时留下的信件抬头与孩子原声。 本镜画内角色：NORA。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：电话转语音信箱。诺拉将采访提纲翻扣，不问新问题，只说本站原片和截图已撤，随后把手机放回右侧，不再追拨。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "一句实际处理结果和道歉，没有向对方要新材料或谅解。；一句实际处理结果和道歉，没有向对方要新材料或谅解。"
+      },
+      "temporal": {
+        "durationSeconds": 10,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "一句实际处理结果和道歉，没有向对方要新材料或谅解。",
+          "path": "机位不移动。",
+          "start": "诺拉留下处理结果，采访提纲翻到桌面朝下。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "她没换来回复或新采访，继续承担撤图损失。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E13-SH011-F1",
+            "timeSeconds": 0,
+            "description": "一句实际处理结果和道歉，没有向对方要新材料或谅解。"
+          }
+        ],
+        "edit": {
+          "entry": "诺拉留下处理结果，采访提纲翻到桌面朝下。",
+          "exit": "她没换来回复或新采访，继续承担撤图损失。；电话离手，下一场轮到主角决定是否使用患者的遭遇。",
+          "preferredTransition": "本场结果成立后切入 E13-SC04（VISIT，日·次日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。 只听诺拉语音信箱留言，无玛拉答复。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E13-SH012",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "律师要求他说出删前言的原因，患者不再承担他的论证。",
+        "audiencePayoff": "桌面只留下反骚扰段，拒赔经历不再作为发言前提。",
+        "trigger": "灰衣青年北侧双腕自由，整页草稿在北、遮名截图桌中；海伦南侧，笔在夹边。；会见桌上，海伦放下青年写过的整页声明，旁边是获母亲许可遮名的截图。青年看完入口被堵的画面，把声明第一段折到背面。\n海伦把折到背面的第一段重新摊平，原来准备讲拒赔背景。青年看过诊所门口截图，把那一段往自己这边收回。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "青年选好只发反骚扰段，切律师确认对支持者也适用的代价。；接E13-SH013；青年选好只发反骚扰段，切律师确认对支持者也适用的代价。",
+        "noMotionReason": "固定26秒，前言折到背面又摊开，由青年自己决定收回。；观看变化：桌面只留下反骚扰段，拒赔经历不再作为发言前提。"
+      },
+      "camera": {
+        "shotScale": "会见桌西侧40mm双人中景",
+        "position": "会见桌西侧40mm双人中景，青年北、海伦南，整页声明与遮名截图在中间。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "会见桌西侧40mm双人中景，青年北、海伦南，整页声明与遮名截图在中间。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "律师要求他说出删前言的原因，患者不再承担他的论证。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 次日会见室固定桌北侧仍是灰衣青年，海伦坐南，门在南。桌上是一整页声明和获玛拉许可后遮名的诊所入口截图，双方手腕自由。 本镜画内角色：LUIGI-DETENTION,HELEN。",
+        "movementIntent": "固定26秒，前言折到背面又摊开，由青年自己决定收回。"
+      },
+      "composition": {
+        "layout": "次日会见室固定桌北侧仍是灰衣青年，海伦坐南，门在南。桌上是一整页声明和获玛拉许可后遮名的诊所入口截图，双方手腕自由。 本镜画内角色：LUIGI-DETENTION,HELEN。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：会见桌上，海伦放下青年写过的整页声明，旁边是获母亲许可遮名的截图。青年看完入口被堵的画面，把声明第一段折到背面。\n海伦把折到背面的第一段重新摊平，原来准备讲拒赔背景。青年看过诊所门口截图，把那一段往自己这边收回。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "律师要求他说出删前言的原因，患者不再承担他的论证。；律师要求他说出删前言的原因，患者不再承担他的论证。"
+      },
+      "temporal": {
+        "durationSeconds": 26,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "律师要求他说出删前言的原因，患者不再承担他的论证。",
+          "path": "机位不移动。",
+          "start": "灰衣青年北侧双腕自由，整页草稿在北、遮名截图桌中；海伦南侧，笔在夹边。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "桌面只留下反骚扰段，拒赔经历不再作为发言前提。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E13-SH012-F1",
+            "timeSeconds": 0,
+            "description": "律师要求他说出删前言的原因，患者不再承担他的论证。"
+          }
+        ],
+        "edit": {
+          "entry": "灰衣青年北侧双腕自由，整页草稿在北、遮名截图桌中；海伦南侧，笔在夹边。",
+          "exit": "桌面只留下反骚扰段，拒赔经历不再作为发言前提。；青年选好只发反骚扰段，切律师确认对支持者也适用的代价。",
+          "preferredTransition": "接E13-SH013；青年选好只发反骚扰段，切律师确认对支持者也适用的代价。",
+          "soundBridge": "会见室低通风声和纸页摩擦；南门外只有不可辨脚步。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E13-SH013",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "筹款者反对的可能被说清，青年坚持，律师承诺不添加自己的开场。",
+        "audiencePayoff": "发布授权保持为签署的反骚扰段，患者身份和背景不附上。",
+        "trigger": "桌面只留下反骚扰段，拒赔经历不再作为发言前提。；海伦指出被折走的一段是玛拉拒赔经历，青年将停骚扰那段留正面，签上自己的名字。她问发出会否得罪筹款者，他没有加回那段背景。\n海伦将签好的一段收进文件夹，青年仍看着截图，想补一个限定，又把笔搁下。她不替他把责任推给不明身份的少数人。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "正式授权进入蓝夹，接真实发布而非再说一次原则。；本场结果成立后切入 E13-SC05（HELEN-OFFICE，夜·会见后）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定30秒，海伦收页后仍留青年放下笔的手。；观看变化：发布授权保持为签署的反骚扰段，患者身份和背景不附上。"
+      },
+      "camera": {
+        "shotScale": "青年西肩旁朝南65mm海伦中近景",
+        "position": "青年西肩旁朝南65mm海伦中近景，签署的页和青年笔手在下前景。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "青年西肩旁朝南65mm海伦中近景，签署的页和青年笔手在下前景。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "筹款者反对的可能被说清，青年坚持，律师承诺不添加自己的开场。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 次日会见室固定桌北侧仍是灰衣青年，海伦坐南，门在南。桌上是一整页声明和获玛拉许可后遮名的诊所入口截图，双方手腕自由。 本镜画内角色：HELEN。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定30秒，海伦收页后仍留青年放下笔的手。"
+      },
+      "composition": {
+        "layout": "次日会见室固定桌北侧仍是灰衣青年，海伦坐南，门在南。桌上是一整页声明和获玛拉许可后遮名的诊所入口截图，双方手腕自由。 本镜画内角色：HELEN。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：海伦指出被折走的一段是玛拉拒赔经历，青年将停骚扰那段留正面，签上自己的名字。她问发出会否得罪筹款者，他没有加回那段背景。\n海伦将签好的一段收进文件夹，青年仍看着截图，想补一个限定，又把笔搁下。她不替他把责任推给不明身份的少数人。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "筹款者反对的可能被说清，青年坚持，律师承诺不添加自己的开场。；筹款者反对的可能被说清，青年坚持，律师承诺不添加自己的开场。"
+      },
+      "temporal": {
+        "durationSeconds": 30,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "筹款者反对的可能被说清，青年坚持，律师承诺不添加自己的开场。",
+          "path": "机位不移动。",
+          "start": "桌面只留下反骚扰段，拒赔经历不再作为发言前提。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "发布授权保持为签署的反骚扰段，患者身份和背景不附上。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E13-SH013-F1",
+            "timeSeconds": 0,
+            "description": "筹款者反对的可能被说清，青年坚持，律师承诺不添加自己的开场。"
+          }
+        ],
+        "edit": {
+          "entry": "桌面只留下反骚扰段，拒赔经历不再作为发言前提。",
+          "exit": "发布授权保持为签署的反骚扰段，患者身份和背景不附上。；正式授权进入蓝夹，接真实发布而非再说一次原则。",
+          "preferredTransition": "本场结果成立后切入 E13-SC05（HELEN-OFFICE，夜·会见后）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "会见室低通风声和纸页摩擦；南门外只有不可辨脚步。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E13-SH014",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "发布完成后反对留言出现，她保存已发布版本。",
+        "audiencePayoff": "声明留在公开渠道，支持者开始攻击青年，签字纸回蓝夹。",
+        "trigger": "夜间海伦办公室，蓝夹在中央桌西侧，签字声明已摆在工作电脑旁；她坐桌南侧。；海伦将获授权的一段声明发到正式渠道，确认公开版本不带诊所地址和患者细节。几条声援账号的反对留言随后刷新，她没有撤回，保存公开版本与交付时间。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "她不撤回，数周后转实际保存争议资料。；本集结束。声明真的发出，部分声援者反对，海伦没有撤回；设定边界已经发生代价，下一步转向能独立保存的证据。 下集从INSURER展开：在个人停权和系统例行覆盖之前，哪些记录还能依法保住？",
+        "noMotionReason": "固定9秒，不切评论者头像或想象人群。；观看变化：声明留在公开渠道，支持者开始攻击青年，签字纸回蓝夹。"
+      },
+      "camera": {
+        "shotScale": "海伦西肩后65mm电脑与签署页近景",
+        "position": "海伦西肩后65mm电脑与签署页近景，正文不含患者细节，海伦只留肩和手。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "海伦西肩后65mm电脑与签署页近景，正文不含患者细节，海伦只留肩和手。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "发布完成后反对留言出现，她保存已发布版本。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 当晚海伦办公室，西桌电脑面对她，蓝夹已合，东侧座位空着。公开渠道草稿只有签署的反骚扰段，没有诊所与患者信息。 本镜画内角色：HELEN。",
+        "movementIntent": "固定9秒，不切评论者头像或想象人群。"
+      },
+      "composition": {
+        "layout": "当晚海伦办公室，西桌电脑面对她，蓝夹已合，东侧座位空着。公开渠道草稿只有签署的反骚扰段，没有诊所与患者信息。 本镜画内角色：HELEN。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：海伦将获授权的一段声明发到正式渠道，确认公开版本不带诊所地址和患者细节。几条声援账号的反对留言随后刷新，她没有撤回，保存公开版本与交付时间。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "发布完成后反对留言出现，她保存已发布版本。；发布完成后反对留言出现，她保存已发布版本。"
+      },
+      "temporal": {
+        "durationSeconds": 9,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "发布完成后反对留言出现，她保存已发布版本。",
+          "path": "机位不移动。",
+          "start": "夜间海伦办公室，蓝夹在中央桌西侧，签字声明已摆在工作电脑旁；她坐桌南侧。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "声明留在公开渠道，支持者开始攻击青年，签字纸回蓝夹。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E13-SH014-F1",
+            "timeSeconds": 0,
+            "description": "发布完成后反对留言出现，她保存已发布版本。"
+          }
+        ],
+        "edit": {
+          "entry": "夜间海伦办公室，蓝夹在中央桌西侧，签字声明已摆在工作电脑旁；她坐桌南侧。",
+          "exit": "声明留在公开渠道，支持者开始攻击青年，签字纸回蓝夹。；她不撤回，数周后转实际保存争议资料。",
+          "preferredTransition": "本集结束。声明真的发出，部分声援者反对，海伦没有撤回；设定边界已经发生代价，下一步转向能独立保存的证据。 下集从INSURER展开：在个人停权和系统例行覆盖之前，哪些记录还能依法保住？",
+          "soundBridge": "发送轻响与键盘底声，无新增声明朗读。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "case_id": "C04",
+  "model": null,
+  "token_usage": null,
+  "elapsed_seconds": null,
+  "read_files": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C04\\request.txt",
+      "sha256": "a1c69ed733eef502fb0b3816b3be8b633e8a305947634d72d5767d3b0fa1b5f1"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\SKILL.md",
+      "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\style.md",
+      "sha256": "8c68adec5424cdeef9735099102eabd022e65181af21efac4564d41e7528e806"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\color-grading-presets.md",
+      "sha256": "cbe652ec6887da11d73914dd4fc9ae6728a933c820e476a3bd3246b54a79fbf0"
+    }
+  ],
+  "checks": [
+    {
+      "name": "preset_identity_revision",
+      "result": "CG11 宋韵清雅·古偶柔光; revision 2 from card body"
+    },
+    {
+      "name": "scope",
+      "result": "Color relationships only; no MU enabled; no added props or light sources"
+    },
+    {
+      "name": "hard_locks",
+      "result": "Manual check preserved adult female messenger, age 48, face, skin tone, body, hair, brows, eyeliner, lips, garment and ink-green color, empty hands, stone corridor, east-window soft white daylight, eye-level half-body framing"
+    },
+    {
+      "name": "completeness",
+      "result": "Full Chinese character text delivered; original neutral low-saturation clause replaced with expanded color intent"
+    },
+    {
+      "name": "output_encoding",
+      "result": "UTF-8 LF"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C04\\output.md",
+      "sha256": "db2a18c50adb29abcb2ba38d824fdfb24e28f9994a3e291fd880e078ed95609d"
+    }
+  ],
+  "limitations": [
+    "Text-only local color revision; no images generated and no visual-media validation performed."
+  ]
+}

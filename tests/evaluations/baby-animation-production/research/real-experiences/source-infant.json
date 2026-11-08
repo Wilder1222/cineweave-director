@@ -1,0 +1,250 @@
+{
+  "scope": {
+    "topic": "0—12个月婴儿家长第一人称日常趣事与实际过程",
+    "accessed": "2026-11-08",
+    "method": "使用实际网络搜索发现线索，再打开原帖、公开日记或具体评论核读。主案例8条，来自8个URL；7条有作者自报的0—12个月内年龄，1条未自报月龄，单独保留年龄未确认边界。不以父帖作者的月龄替代评论者孩子的月龄，不以其他人评论或日期计算补年龄。",
+    "readLevelDefinition": {
+      "opened_original_post": "实际打开原帖并读到所转述的正文过程，不代表读过全部评论、视频或图片",
+      "opened_original_comment": "实际打开原始评论区或评论链接，读到标明发言者的具体自述，不代表父帖年龄属于这位评论者",
+      "opened_post_and_same_author_followup": "实际读到原帖及同一作者在该帖中的跟进，只合并同一家庭的连续叙述",
+      "opened_public_diary": "实际打开公开家长日记正文"
+    },
+    "processPolicy": "每条process四字段合计约100—180个中文字符，均为中文转述；作者的情绪/动机解释明确归给作者，不补镜头、左右手或未记载的成人回应。缺项写未交代。creativeInference是独立原创迁移建议，不是原文事实。",
+    "datePolicy": "原页只显示相对发布时间时照录，不据抓取时间推算精确发布日期。明确年月日的原页照录日期并注明时区缺失。",
+    "limitations": "公开家长自述并非独立核实的真实事件或视频观察证据；匿名发言者身份及不同账号是否代表不同家庭不能另行验证。收集用于创作材料，不采纳帖内健康、睡眠、喂养或发展建议，也不把自报行为变成统一月龄标准。没有改动故事源、脚本或页面。"
+  },
+  "cases": [
+    {
+      "id": "IN01",
+      "title": "小手突然拿走妈妈的午餐，趣事分享却让妈妈委屈",
+      "ageReported": "6个月；作者原文为当月满6个月",
+      "ageGroup": "0—12个月（自报月龄明确）",
+      "source": {
+        "url": "https://www.reddit.com/r/beyondthebump/comments/1u0ayzk/6_month_old_grabbed_my_food_and_now_i_feel/",
+        "title": "6 month old grabbed my food and now I feel horrible",
+        "platform": "Reddit / r/beyondthebump",
+        "author": "Great-Insurance2854",
+        "published": "原页显示4mo ago；读取到的正文未显示精确日期",
+        "readLevel": "opened_post_and_same_author_followup",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "作者说宝宝当月满六个月；她给自己做了鸡肉条午餐，一边吃一边陪宝宝。",
+        "babyAction": "宝宝突然伸手拿走一条并放到嘴边嚼。",
+        "adultResponse": "她立刻取回扔掉，觉得小手太快而笑，拍下宝宝笑着的样子发给自己妈妈。",
+        "outcome": "外婆回复让她别对外提食物，她因此委屈哭了；她后来补充，叫宝宝“小偷”时宝宝还会笑。"
+      },
+      "evidenceNote": "主帖正文先写月龄、午餐、拿走、立刻取回，再写发视频及外婆回复；同作者在LJ161评论下的回复补充，宝宝听到chicken dipper thief还会笑。没有引用其他评论者的宝宝经历。",
+      "missingDetails": ["未交代使用哪只手、双方坐姿、抓取距离或具体物件交接帧。", "未观察作者提及的视频；食物是否实际吞咽只按作者称未吃进去转述，不能由此独立确认。"],
+      "creativeInference": "可独立提取“成人自己的东西进入可达区—宝宝突然拿走—成人取回—分享反应”的因果结构；若迁移到软玩具是新创作，原帖不是软环交接，也不是始终轻松的喜剧。",
+      "limitations": "公开家长自述并非独立核实。保留作者受外婆回复影响的情绪结果，不能只摘快抓而宣称原故事以全家大笑结束；不把食品或帖内喂养意见当建议。"
+    },
+    {
+      "id": "IN02",
+      "title": "宝宝自己拉毯露脸，大人的夸张回应让游戏继续",
+      "ageReported": "8个月",
+      "ageGroup": "0—12个月（自报月龄明确）",
+      "source": {
+        "url": "https://www.reddit.com/r/NewParents/comments/18l1b3e/8_month_old_playing_peekaboo_can_she_be_more_cute/",
+        "title": "8 month old playing peekaboo.. Can she be more cute",
+        "platform": "Reddit / r/NewParents",
+        "author": "Ok-Journalist-870",
+        "published": "原页显示3y ago；读取到的正文未显示精确日期",
+        "readLevel": "opened_original_post",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "作者把自报八个月的女儿放进婴儿床，床里有她的小毯子。",
+        "babyAction": "宝宝抓起毯子拉到脸前，停几秒，再自己拉下，随后发笑。",
+        "adultResponse": "家长在露面时给出夸张回应；作者说，自己反应越夸张，宝宝笑得越厉害。",
+        "outcome": "宝宝接着重复这个来回，作者在八个月来难以连续睡超过四小时的日子里，觉得这一刻很值得。"
+      },
+      "evidenceNote": "原帖三段正文：八个月；放进crib后grab blanket、等待、拉下并笑；成人dramatic reaction越明显，宝宝笑与重复越多。",
+      "missingDetails": ["没有写成人的具体台词、手势、每轮次数或哪只手持毯。", "没有写停止游戏、取走毯子或之后入睡的过程。"],
+      "creativeInference": "可提取“宝宝主动发起—留等待—露面—成人回应—继续”的互相触发节奏。新的场地、遮挡方式和安全设计应另立，不能把原创分镜称作原帖逐镜复现。",
+      "limitations": "公开家长自述并非独立核实；没有实际视频、遮挡几何或声音时长。此例说明这一位家长描述的互动，不证明所有八个月宝宝都如此。"
+    },
+    {
+      "id": "IN03",
+      "title": "高脚椅里的玩具钥匙一次次掉下，家长一次次捡",
+      "ageReported": "未注明；正文作者没有直接自报当时月龄",
+      "ageGroup": "婴儿自述，0—12个月范围未由作者月龄自报确认",
+      "source": {
+        "url": "https://andbabybmakesthree.wordpress.com/2007/08/15/gravity-spot/",
+        "title": "Gravity spot",
+        "platform": "公开家长日记 / And Baby B Makes Three!（WordPress）",
+        "author": "正文未显示署名；站点名And Baby B Makes Three!",
+        "published": "2007-08-15 21:11；原页未显示时区",
+        "readLevel": "opened_public_diary",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "作者记下宝宝坐在高脚椅里玩玩具车钥匙的情形，未直接写当时月龄。",
+        "babyAction": "宝宝开始故意松手让钥匙掉下去，拿回来后又继续丢，一次接一次。",
+        "adultResponse": "家长跟着物件落点去捡，再还给她，而且每发生一次都忍不住笑。",
+        "outcome": "宝宝当时还没有跟着笑，只露出作者形容为很满意的神情；并非原文中的双方同时大笑。"
+      },
+      "evidenceNote": "日记唯一主体段完整写到drop objects on purpose、成人捡回、玩具车钥匙反复掉落、宝宝尚不笑而家长每次笑。下方Alli评论提到约六个月，是他人说法，未用来补作者自报年龄；也未用侧栏出生日期反算。",
+      "missingDetails": ["月龄未由作者直接注明；本条不计入7条年龄明确的0—12个月案例。", "正文未直接署名，没有写具体哪位成人捡、哪只手松开、落点或何时停止。"],
+      "creativeInference": "可迁移“松手—落地—成人捡回—再松手”的物件状态链，宝宝不必和成人同时笑。若添加成人摊掌承接、握食指或改变物件，均是新的情节。",
+      "limitations": "公开日记自述并非独立核实；年龄与完整身份不确定，不能把旁人评论或侧栏推算当正文月龄。满意或得意是家长对表情的解释，不是已证明的婴儿意图。"
+    },
+    {
+      "id": "IN04",
+      "title": "第一次蹬出水花，愣一下后变成全家的泼水时刻",
+      "ageReported": "11.5周；保留作者周龄表述，不换算精确月龄",
+      "ageGroup": "0—12个月（自报周龄明确）",
+      "source": {
+        "url": "https://www.reddit.com/r/NewParents/comments/1x67yqr/postpartum_sucks_tell_me_something_funny/",
+        "title": "Postpartum sucks, tell me something funny",
+        "platform": "Reddit / r/NewParents",
+        "author": "Relevant_Lynx_5117",
+        "published": "原页显示24d ago；读取到的正文未显示精确日期",
+        "readLevel": "opened_original_post",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "作者说女儿十一周半，最近会主动伸手、抓东西；当晚作者和伴侣正在给她洗澡。",
+        "babyAction": "宝宝先蹬脚溅出水花，短暂愣住，随后又踢脚、挥手，把水不断溅到两位大人身上。",
+        "adultResponse": "作者和伴侣当场一起笑出了声。",
+        "outcome": "宝宝看着两人露出笑容；作者把这次洗澡记为会一直珍惜的家庭时刻，和发帖开头难过的夜晚形成反差。"
+      },
+      "evidenceNote": "只用主帖第二段十一周半女儿的洗澡故事：第一次splash、startled、继续踢水挥手、大人cracking up、宝宝grinning。没有混入评论区另一家庭吐奶或宠物的故事。",
+      "missingDetails": ["没有写浴具、水深、成人如何托扶、谁负责哪只手或拍摄角度。", "没有写洗澡如何结束；“主动动作”是作者对最近行为的表述，不是独立评估。"],
+      "creativeInference": "可独立迁移“偶然出现结果—短暂停顿—再次尝试—家长回应—宝宝看家长”的节拍；水中承托与浴具必须另做具体设计，不能从自述里臆补。",
+      "limitations": "公开家长自述并非独立核实，未看媒体；不能以十一周半的单条经验建立统一能力或洗澡操作标准。"
+    },
+    {
+      "id": "IN05",
+      "title": "十个月宝宝把拖鞋贴到耳边当电话",
+      "ageReported": "10个月",
+      "ageGroup": "0—12个月（自报月龄明确）",
+      "source": {
+        "url": "https://www.reddit.com/r/NewParents/comments/1m0wd4b/whats_the_funniest_thing_your_kiddo_does/",
+        "title": "What's the funniest thing your kiddo does?",
+        "platform": "Reddit / r/NewParents",
+        "author": "florinbuttercup242",
+        "published": "原页显示1y ago；读取到的正文未显示精确日期",
+        "readLevel": "opened_original_post",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "作者说女儿十个月，最近开始把随手拿到的东西当电话；这周才到周二，她就觉得格外漫长。",
+        "babyAction": "宝宝把不同物件贴到耳边，先说一个“hi”，再对着物件咿呀说话；那天用的是作者的拖鞋。",
+        "adultResponse": "作者和丈夫每次看到都会被逗笑。",
+        "outcome": "即兴“电话”成了父母反复发笑的小事；该次通话之后的收物与结束过程未交代。"
+      },
+      "evidenceNote": "只取主帖同一家庭：Mine is ten months old、random objects to ear、hi后babble、earlier my slipper、husband and I laugh。未借用同帖八个月爬行或双胞胎评论补过程。",
+      "missingDetails": ["没有写她最初如何学到电话动作、哪只手拿拖鞋、站坐姿或最后如何放下。", "原文只给一个hi和咿呀，没有完整成人句子；具体发音未听音频。"],
+      "creativeInference": "可提取“物件用途被宝宝重新解释—成人看到才笑”的反差；若改成其他物件、扩展电话对白或添加大人接听，都是新创作。",
+      "limitations": "公开家长自述并非独立核实；未验证实际发音或模仿理解，不把一名十个月宝宝的hi改写成该月龄普遍会完整说话。"
+    },
+    {
+      "id": "IN06",
+      "title": "宝宝抓下太阳镜，家长戴回去又被抓走",
+      "ageReported": "8个月；来自所选评论自身，非父帖月龄",
+      "ageGroup": "0—12个月（评论者自报月龄明确）",
+      "source": {
+        "url": "https://www.reddit.com/r/NewParents/comments/1k5p25n/my_9_month_old_baby_is_funny/",
+        "title": "My 9 month old baby is funny!（所选为评论区八个月宝宝的独立自述）",
+        "platform": "Reddit / r/NewParents",
+        "author": "[deleted]；原页未显示可恢复昵称",
+        "published": "所选评论显示2y ago；读取到的正文未显示精确日期",
+        "readLevel": "opened_original_comment",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "一位评论者自报宝宝八个月，外出时大人戴着太阳镜，宝宝最近特别喜欢眼镜。",
+        "babyAction": "宝宝从家长脸上把太阳镜抓下来。",
+        "adultResponse": "家长把眼镜重新戴回脸上，宝宝又来拿，于是同一来回反复发生。",
+        "outcome": "评论者说宝宝觉得这件事很有趣，自己看见孩子笑、听到笑声也很开心；没有交代某一次如何停下。"
+      },
+      "evidenceNote": "评论区[deleted]、以Love this post. My 8 month old is so funny too开头的完整一段；其后明确glasses off my face、put them back on、rinse repeat。父帖是九个月将满十个月的另一家庭，未合并。",
+      "missingDetails": ["昵称已删除，无法进一步核验发言身份。", "没有写左右手、抓取速度、是否短暂双持或每轮间隔；未写如何结束游戏。"],
+      "creativeInference": "可提取“拿走—成人复位—宝宝再次拿走”的循环和成人自愿配合。若要表现一把快抓，必须另设计并试拍接触链，原评论没有证明任何具体速度或同镜交接。",
+      "limitations": "公开匿名评论自述并非独立核实；deleted使身份追溯更弱。宝宝觉得好玩是作者判断，实际可直接转述的是重复拿镜、家长戴回与笑声，不能编成恶作剧动机。"
+    },
+    {
+      "id": "IN07",
+      "title": "吃饭时对着家长吹口水声，严肃说不也没有用",
+      "ageReported": "7.5个月；作者帖标题自报",
+      "ageGroup": "0—12个月（自报月龄明确）",
+      "source": {
+        "url": "https://www.mumsnet.com/talk/behaviour_development/1726570-7-5-month-baby-started-spitting-out-food-blowing-raspberries",
+        "title": "7.5 month baby started spitting out food/blowing raspberries",
+        "platform": "Mumsnet / Behaviour/development",
+        "author": "MrsMigginslovespies",
+        "published": "主帖07/04/2013 20:15；同作者跟进09/04/2013 20:09，原页未显示时区",
+        "readLevel": "opened_post_and_same_author_followup",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "发帖者说七个半月的儿子从前很享受吃东西，前一天却开始在吃饭时大量吐出食物、吹口水声。",
+        "babyAction": "宝宝经常边做边笑，还直视家长；换爸爸喂也一样，酸奶却是例外。",
+        "adultResponse": "她先严肃说“不”，发现没什么用；两天后的跟帖里改为准备把两人遮好，顺着这阵变化应对。",
+        "outcome": "她说当天已有所好转，自己看着宝宝开心也很难忍住不笑，但没有说问题已经彻底结束。"
+      },
+      "evidenceNote": "只合并MrsMigginslovespies的首帖和两天后同名OP跟进；首帖有looks me right in the eye及stern/no无效，跟进有slightly better、cover us both及很难不笑。未采用其他家庭或跟帖里的喂养建议。",
+      "missingDetails": ["未交代具体哪一口、使用哪种餐具、成人手位或食物落点。", "“把两人遮好”是她的应对计划，原文没有说明实际已完成怎样的遮挡或奏效程度。"],
+      "creativeInference": "可迁移“成人严肃反应没改变宝宝的小动作—成人自己也忍不住笑”的关系变化；若补围兜、勺子、具体喷溅方向，均应标为原创调度。",
+      "limitations": "公开家长自述并非独立核实；帖含健康与喂养讨论，本条只取她自报的事件与回应，不采纳旁人原因解释、食物建议或停止行为的方法。"
+    },
+    {
+      "id": "IN08",
+      "title": "脚趾一蜷、脚一弯，袜子和鞋都难留住",
+      "ageReported": "11个月；所选评论原文为in his little 11 month life",
+      "ageGroup": "0—12个月（评论者自报月龄明确）",
+      "source": {
+        "url": "https://www.reddit.com/r/beyondthebump/comments/ppp6vj/comment/hd5n8le/",
+        "title": "I don’t understand the whole obsession with socks and shoes for babies（RedditRose3评论）",
+        "platform": "Reddit / r/beyondthebump",
+        "author": "RedditRose3",
+        "published": "所选评论显示5y ago；读取到的正文未显示精确日期",
+        "readLevel": "opened_original_comment",
+        "firstPerson": true
+      },
+      "process": {
+        "setup": "一位自报孩子十一月龄的评论者说，自己几次试着给宝宝穿袜和鞋。",
+        "babyAction": "宝宝很会蜷脚趾、弯脚；袜子往往还没到目的地就湿了，鞋也很难穿进去。",
+        "adultResponse": "家长回想这十一个月，真正成功穿上鞋的大概只有三次，觉得反复折腾并不值得。",
+        "outcome": "即使穿上，每次也只留住约五分钟。原评论没有解释袜子怎样湿的，或鞋究竟被谁、怎样弄掉。"
+      },
+      "evidenceNote": "实际打开评论链接，核读RedditRose3的完整段落：socks soggy before destination、toe-curler/foot-bender、约三次穿鞋成功、每次约五分钟。没有把父帖十二个月孩子撕袜的经历接到这位十一月龄宝宝身上。",
+      "missingDetails": ["这是家长回顾反复经验，不是一次完整穿脱的逐步记录。", "未交代袜子变湿的原因、鞋最终怎样离脚；不能补成宝宝用手脱掉或放嘴里。", "没有具体左右脚、衣裤、鞋袜型号或成人穿鞋动作。"],
+      "creativeInference": "可迁移穿着过程中脚趾蜷缩与成人耐心的视觉反差。若要演抓袜、松袜、放下鞋等状态链，必须独立创作，原评论没有这些过程。",
+      "limitations": "公开家长评论自述并非独立核实；本条不是鞋袜或足部发展建议。约三次、约五分钟是家长回忆值，不能当精确测量或统一穿着规律。"
+    }
+  ],
+  "excluded": [
+    {
+      "url": "https://www.mominzurich.com/my-five-month-old/",
+      "title": "My Five Month Old",
+      "readLevel": "search_snippet_only_after_failed_open",
+      "reason": "搜索摘要提到五个月宝宝抓咖啡杯，但实际open返回404，未读到原文，不能作为全文核读案例。"
+    },
+    {
+      "url": "https://www.peanut-app.io/posts/4hmkk-auo/mamas",
+      "title": "Mamas",
+      "readLevel": "search_snippet_only_after_javascript_placeholder",
+      "reason": "摘要提到九个月宝宝反复扔玩具，但open仅得到需启用JavaScript的占位页，未读具体原帖过程。"
+    },
+    {
+      "url": "https://www.reddit.com/r/NewParents/comments/1p693au/my_baby_made_me_laugh_so_hard_this_morning_for_no/",
+      "title": "My baby made me laugh so hard this morning for no reason（搜索标题）",
+      "readLevel": "search_snippet_only_original_removed",
+      "reason": "搜索摘要含四个月宝宝打喷嚏吓到自己的完整感趣段，但实际原页仅显示Removed by moderator，正文已不可读，不收入。"
+    },
+    {
+      "url": "https://www.reddit.com/r/NewParents/comments/1bavtym/my_baby_giggled_for_the_first_time_today/",
+      "title": "My baby giggled for the first time today",
+      "readLevel": "opened_original_post",
+      "reason": "已实际读到四个半月、洗澡前爸爸躲猫猫与首次笑；正文非常简短，没有展开成人当时具体回应和过程，已有更完整躲猫猫案例，本批未收入。"
+    },
+    {
+      "url": "https://www.netmums.com/coffeehouse/drop-clinic-984/weaning-560/703139-blowing-raspberries-whilst-eating.html",
+      "title": "Blowing raspberries whilst eating??",
+      "readLevel": "opened_original_post",
+      "reason": "已读原帖自报五个半月及新出现的进食吹口水声，但作者主要求助，成人实际应对和后续结果未展开；为避免靠建议补成事件，本批不收入。"
+    }
+  ]
+}

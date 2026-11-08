@@ -1,0 +1,562 @@
+{
+  "format": "cineweave-topic-candidate-comparison/v1",
+  "source_snapshot_date": "2026-11-04",
+  "count": 17,
+  "available_compared": 10,
+  "missing": 7,
+  "records": [
+    {
+      "topic_id": "K004",
+      "project_id": "c4c074549a3e03ad9cb2b9994e26d30a2299b86f936d6c36e31a3d8d10dc0a4e",
+      "title": "K004 天台停着一台机甲｜修订候选",
+      "scope": "included_revision_candidate",
+      "formal_project_id": "52f7b3c30c99c933c44d4e69bc7321f0de76e85820f18a16cba10ee534cbd4c4",
+      "comparison_status": "historical_snapshot_compared",
+      "source_snapshot": {
+        "date": "2026-11-04",
+        "documents": [
+          {
+            "id": "3a8abd4b5c10772d2574711d363f313ff406480d5a95f13254346b4eb0f6957e",
+            "title": "K004 天台停着一台机甲｜分镜与视频提示词候选",
+            "kind": "storyboard",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\c4c074549a3e03ad9cb2b9994e26d30a2299b86f936d6c36e31a3d8d10dc0a4e\\3a8abd4b5c10772d2574711d363f313ff406480d5a95f13254346b4eb0f6957e.md",
+            "sha256": "6ade25398a82215d272789b44602fe77d2e0162e9f6152028f981edc136e513a",
+            "read_at": "2026-11-04T07:13:26.091Z"
+          }
+        ],
+        "database_revision": null,
+        "current_remote_verified": false
+      },
+      "author_adoption_in_this_round": false,
+      "current_author_adoption": "unverified",
+      "automatic_merge": false,
+      "reading_contribution": "root",
+      "reading_coverage": "root完整读取独立修订项目唯一分镜文件，与正式C6剧本全文及分镜结构对照；修订项目无独立剧本可读。",
+      "differences": "修订唯一分镜125秒/5镜，正式C6分镜206秒/5镜；同为饭盒、不能启动、连廊观察、署名与等候。正式第二镜65秒，候选25秒，正式为更完整说明留预算，镜数并未增加。",
+      "preserve_reasons": "保留饭盒误会与署名段的不同覆盖作为对照；当前仅分镜有正文不等于完整候选剧本存在或已演完。",
+      "merge_recommendation": "保留C6作阅读基线，先实读并评估压缩说明，再决定时长；125秒不能直接代表精炼可拍。独立剧本与实际演出均未取得，不自动合并。",
+      "body": "# K004 天台停着一台机甲｜修订候选\n\n状态：historical_snapshot_compared；历史快照日期2026-11-04，当前远端及作者采纳状态未核验。\n\n阅读：root完整读取独立修订项目唯一分镜文件，与正式C6剧本全文及分镜结构对照；修订项目无独立剧本可读。\n\n差异：修订唯一分镜125秒/5镜，正式C6分镜206秒/5镜；同为饭盒、不能启动、连廊观察、署名与等候。正式第二镜65秒，候选25秒，正式为更完整说明留预算，镜数并未增加。\n\n保留理由：保留饭盒误会与署名段的不同覆盖作为对照；当前仅分镜有正文不等于完整候选剧本存在或已演完。\n\n后续：保留C6作阅读基线，先实读并评估压缩说明，再决定时长；125秒不能直接代表精炼可拍。独立剧本与实际演出均未取得，不自动合并。\n\n本轮未执行自动合并或作者采纳，未生成或审片。"
+    },
+    {
+      "topic_id": "V004",
+      "project_id": "ed6fee3652f98c0688747d876babbc02d4deb64ab8e8ab6562f85e09203a0302",
+      "title": "V004 便利店夜班神｜状态标记修订候选",
+      "scope": "included_revision_candidate",
+      "formal_project_id": "1f73bb7fb9feaa728eb80298ca4631adef6f3fa3e4f7856787d57026bfec1089",
+      "comparison_status": "historical_snapshot_compared",
+      "source_snapshot": {
+        "date": "2026-11-04",
+        "documents": [
+          {
+            "id": "e9d2574dbbaac62ece812c159f02f7af8c2d287081c56d5318b88a0ba93464a8",
+            "title": "V004 便利店夜班神｜分镜与视频提示词候选",
+            "kind": "storyboard",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\ed6fee3652f98c0688747d876babbc02d4deb64ab8e8ab6562f85e09203a0302\\e9d2574dbbaac62ece812c159f02f7af8c2d287081c56d5318b88a0ba93464a8.md",
+            "sha256": "ed88cd7b8813e99270718a161acadc334cb8521791647c38b0545674ed5d85bd",
+            "read_at": "2026-11-04T07:13:52.630Z"
+          },
+          {
+            "id": "b167be19fb93356e1f887ed3e1f06342b9dbbacf173726ec9759f4c736a5a0c3",
+            "title": "V004 便利店夜班神｜独立审读修订候选（小说与剧本）",
+            "kind": "script",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\ed6fee3652f98c0688747d876babbc02d4deb64ab8e8ab6562f85e09203a0302\\b167be19fb93356e1f887ed3e1f06342b9dbbacf173726ec9759f4c736a5a0c3.md",
+            "sha256": "66c036399deb08087e60f472b1b6aa2d1781df1ae78399d8a71eb4c1e99b1d22",
+            "read_at": "2026-11-04T07:14:01.410Z"
+          }
+        ],
+        "database_revision": null,
+        "current_remote_verified": false
+      },
+      "author_adoption_in_this_round": false,
+      "current_author_adoption": "unverified",
+      "automatic_merge": false,
+      "reading_contribution": "flow_studio_audit",
+      "reading_coverage": "UV代理完整读取修订合并文档的剧本部分与正式剧本；正式分镜结构及问题段落已读，小说未计全文。",
+      "differences": "修订候选115秒/七个标时段，正式CV2为193秒/8镜；核心情节一致。正式细分署名、身份与未浇第二次，并明确笔回文具座后取手机、瓶盖归位；两版都没有已成活或神位恢复结论。",
+      "preserve_reasons": "保留水与瓶的有限状态，以及两人的普通生活切口；候选可供状态段落和对话概览对照。",
+      "merge_recommendation": "保留正式CV2为阅读基线，先用读演判断说明性动作是否可合并；不因115秒较短就宣布更可拍，也不新增成活或复位。",
+      "body": "# V004 便利店夜班神｜状态标记修订候选\n\n状态：historical_snapshot_compared；历史快照日期2026-11-04，当前远端及作者采纳状态未核验。\n\n阅读：UV代理完整读取修订合并文档的剧本部分与正式剧本；正式分镜结构及问题段落已读，小说未计全文。\n\n差异：修订候选115秒/七个标时段，正式CV2为193秒/8镜；核心情节一致。正式细分署名、身份与未浇第二次，并明确笔回文具座后取手机、瓶盖归位；两版都没有已成活或神位恢复结论。\n\n保留理由：保留水与瓶的有限状态，以及两人的普通生活切口；候选可供状态段落和对话概览对照。\n\n后续：保留正式CV2为阅读基线，先用读演判断说明性动作是否可合并；不因115秒较短就宣布更可拍，也不新增成活或复位。\n\n本轮未执行自动合并或作者采纳，未生成或审片。"
+    },
+    {
+      "topic_id": "H004",
+      "project_id": "99833abe56ef959087b5da0c6b7d6c06a7bc137f83d2768a0b12867eee67d166",
+      "title": "H004 空粮营｜冲突修订候选",
+      "scope": "included_revision_candidate",
+      "formal_project_id": "1f889fa9a28a2ee2369567f0d1a99e87c083af30fc0e1899eb84c0062c5af852",
+      "comparison_status": "historical_snapshot_compared",
+      "source_snapshot": {
+        "date": "2026-11-04",
+        "documents": [
+          {
+            "id": "5295aa86b68e6e82c1ace89ab3107473796ceacc5dc56639f19bcb89ef33f22b",
+            "title": "H004 空粮营｜分镜与视频提示词候选",
+            "kind": "storyboard",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\99833abe56ef959087b5da0c6b7d6c06a7bc137f83d2768a0b12867eee67d166\\5295aa86b68e6e82c1ace89ab3107473796ceacc5dc56639f19bcb89ef33f22b.md",
+            "sha256": "8bbca953c805a1f06cb0119488a57608fb3097b3396d266aa99a173991c6327c",
+            "read_at": "2026-11-04T07:14:12.467Z"
+          },
+          {
+            "id": "d75c98f9fc9494c95d3df6f5901e8a0b1d7b05805987fc2d6d06908b032cfa72",
+            "title": "H004 空粮营｜独立审读修订候选（小说与剧本）",
+            "kind": "script",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\99833abe56ef959087b5da0c6b7d6c06a7bc137f83d2768a0b12867eee67d166\\d75c98f9fc9494c95d3df6f5901e8a0b1d7b05805987fc2d6d06908b032cfa72.md",
+            "sha256": "3ccf62cd4923e840e5e90ce5d6a5d65ff3fad5bb95198b84b1fe438da68422a6",
+            "read_at": "2026-11-04T07:14:21.780Z"
+          }
+        ],
+        "database_revision": null,
+        "current_remote_verified": false
+      },
+      "author_adoption_in_this_round": false,
+      "current_author_adoption": "unverified",
+      "automatic_merge": false,
+      "reading_contribution": "flow_topic_inventory",
+      "reading_coverage": "完整读取修订短片剧本及镜头卡；正式171秒剧本全读、9子镜结构和空间段落。前置小说未列入全文覆盖。",
+      "differences": "修订候选90秒/四段卡，正式171秒/9子镜。剧情同为露沙、核粮、落米、借碗覆沙与交实数；修订明确裂袋由帐外身份未明者造成，正式以可见预裂结果为主，并把接碗承重、暂放碗、灰米分离和两牍系衣内写得更完整。",
+      "preserve_reasons": "可吃的米反被拿去维持伪装，是两版共同最有力的两难；不应因简化制作而丢弃护碗与借碗。",
+      "merge_recommendation": "候选供因果和口播压缩对照，正式状态连续性继续保留；帐外动作是否进一步明确交作者选择。90秒与171秒均为书面预算，不自动合并或恢复旧时长。",
+      "body": "# H004 空粮营｜冲突修订候选\n\n状态：historical_snapshot_compared；历史快照日期2026-11-04，当前远端及作者采纳状态未核验。\n\n阅读：完整读取修订短片剧本及镜头卡；正式171秒剧本全读、9子镜结构和空间段落。前置小说未列入全文覆盖。\n\n差异：修订候选90秒/四段卡，正式171秒/9子镜。剧情同为露沙、核粮、落米、借碗覆沙与交实数；修订明确裂袋由帐外身份未明者造成，正式以可见预裂结果为主，并把接碗承重、暂放碗、灰米分离和两牍系衣内写得更完整。\n\n保留理由：可吃的米反被拿去维持伪装，是两版共同最有力的两难；不应因简化制作而丢弃护碗与借碗。\n\n后续：候选供因果和口播压缩对照，正式状态连续性继续保留；帐外动作是否进一步明确交作者选择。90秒与171秒均为书面预算，不自动合并或恢复旧时长。\n\n本轮未执行自动合并或作者采纳，未生成或审片。"
+    },
+    {
+      "topic_id": "H003",
+      "project_id": "08b6a4a3022ff9140b99e914239f466fac11dd3ea8a8411f2972ce52afe584b2",
+      "title": "H003 雪夜入蔡州｜冲突修订候选",
+      "scope": "included_revision_candidate",
+      "formal_project_id": "bd4e5139e15d26e29d958564419eea546de2ac05a3331c6d3c0c6c1de1b03605",
+      "comparison_status": "historical_snapshot_compared",
+      "source_snapshot": {
+        "date": "2026-11-04",
+        "documents": [
+          {
+            "id": "8bd78115090e2817ddcd3f4363243fa7dc0191b6a7733d5f567245354f99ec27",
+            "title": "H003 雪夜蔡州｜分镜与视频提示词候选",
+            "kind": "storyboard",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\08b6a4a3022ff9140b99e914239f466fac11dd3ea8a8411f2972ce52afe584b2\\8bd78115090e2817ddcd3f4363243fa7dc0191b6a7733d5f567245354f99ec27.md",
+            "sha256": "e26871761e901c4be91d970aba66d5480e0eac1357bc843e3f9e04f1c2cd555a",
+            "read_at": "2026-11-04T07:14:28.307Z"
+          },
+          {
+            "id": "38e778830feab666bc19a183d8ae07cccf7bfd281c63dd324de51a489b812535",
+            "title": "H003 雪夜入蔡州｜独立审读修订候选（小说与剧本）",
+            "kind": "script",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\08b6a4a3022ff9140b99e914239f466fac11dd3ea8a8411f2972ce52afe584b2\\38e778830feab666bc19a183d8ae07cccf7bfd281c63dd324de51a489b812535.md",
+            "sha256": "cd02afb78c5935d25f48df95767d9a5ed66e04bbec601f58d97264a98fcd34fe",
+            "read_at": "2026-11-04T07:14:36.714Z"
+          }
+        ],
+        "database_revision": null,
+        "current_remote_verified": false
+      },
+      "author_adoption_in_this_round": false,
+      "current_author_adoption": "unverified",
+      "automatic_merge": false,
+      "reading_contribution": "flow_topic_inventory",
+      "reading_coverage": "完整读取修订短片剧本与导演镜头卡；正式240秒剧本全读，13子镜结构及对应空间段落。合并文档前置小说未计全文。",
+      "differences": "修订候选140秒/六段卡，正式240秒/13子镜；双方同以半幅平民图、三日前信息、曾有住户纠正、留守与分粮为主线。正式拆开罗七接图、图近火盆、书写、听令和两次分粮状态，城外仍不按图行军。",
+      "preserve_reasons": "修订文本的完整史事/原创边界能帮助恢复人物与场次概览；阿荠留屋、母亲情况未知和城门未开都应保留。",
+      "merge_recommendation": "不回退至旧140秒；从正式稿中选取有情绪新信息的节拍，压缩重复不知道的说明。候选可提供简介与因果摘要，不能把古籍叙述当本轮已核史实。",
+      "body": "# H003 雪夜入蔡州｜冲突修订候选\n\n状态：historical_snapshot_compared；历史快照日期2026-11-04，当前远端及作者采纳状态未核验。\n\n阅读：完整读取修订短片剧本与导演镜头卡；正式240秒剧本全读，13子镜结构及对应空间段落。合并文档前置小说未计全文。\n\n差异：修订候选140秒/六段卡，正式240秒/13子镜；双方同以半幅平民图、三日前信息、曾有住户纠正、留守与分粮为主线。正式拆开罗七接图、图近火盆、书写、听令和两次分粮状态，城外仍不按图行军。\n\n保留理由：修订文本的完整史事/原创边界能帮助恢复人物与场次概览；阿荠留屋、母亲情况未知和城门未开都应保留。\n\n后续：不回退至旧140秒；从正式稿中选取有情绪新信息的节拍，压缩重复不知道的说明。候选可提供简介与因果摘要，不能把古籍叙述当本轮已核史实。\n\n本轮未执行自动合并或作者采纳，未生成或审片。"
+    },
+    {
+      "topic_id": "M002",
+      "project_id": "1a7c5001eb5fbc57384c6adfe9ad203ae950815544f8cfde8e8060f467ea2cec",
+      "title": "M002 鲧盗息壤｜行动修订候选",
+      "scope": "included_revision_candidate",
+      "formal_project_id": "63490b56866e5fbe60294ed7ff81d7ad7b0432a1a3d88dd4b34482c900f7788b",
+      "comparison_status": "historical_snapshot_compared",
+      "source_snapshot": {
+        "date": "2026-11-04",
+        "documents": [
+          {
+            "id": "b81347ce7a12d7b4ce540a2bee5db5b96ed63d9eb26335234af763ddb19c995a",
+            "title": "M002 鲧盗息壤｜分镜与视频提示词候选",
+            "kind": "storyboard",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\1a7c5001eb5fbc57384c6adfe9ad203ae950815544f8cfde8e8060f467ea2cec\\b81347ce7a12d7b4ce540a2bee5db5b96ed63d9eb26335234af763ddb19c995a.md",
+            "sha256": "7c1dde33ef27d95102672c14c0981a1fedc927ac4568c204a734ea812f49f3fe",
+            "read_at": "2026-11-04T07:15:22.969Z"
+          },
+          {
+            "id": "2eaecf43011a9ae16376799f7f753a75c88643e2914aa05fd88d4823bd219528",
+            "title": "M002 鲧盗息壤｜独立审读修订候选（小说与剧本）",
+            "kind": "script",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\1a7c5001eb5fbc57384c6adfe9ad203ae950815544f8cfde8e8060f467ea2cec\\2eaecf43011a9ae16376799f7f753a75c88643e2914aa05fd88d4823bd219528.md",
+            "sha256": "95982f11784643dbb84f5dc099cb489bc9b43f2d266fc2facc2f2caa83d9466e",
+            "read_at": "2026-11-04T07:15:30.506Z"
+          }
+        ],
+        "database_revision": null,
+        "current_remote_verified": false
+      },
+      "author_adoption_in_this_round": false,
+      "current_author_adoption": "unverified",
+      "automatic_merge": false,
+      "reading_contribution": "flow_topic_inventory",
+      "reading_coverage": "完整读取修订短片剧本及逐镜制作卡；正式240秒剧本全读，18子镜结构与总体世界/空间说明。前置小说未列作全文。",
+      "differences": "修订候选170秒/五段卡，正式240秒/18子镜，最后息壤、三人分工、四轮廓通过、只报局部亲见与交空罐的事件相同。正式补炭板背带、双铃收放、祝融由门外高处沿既有高阶让路并到同层接罐、分开两支炭与暂放空罐。",
+      "preserve_reasons": "禾舟自己用土、桑枝独立观察、祝融暂照路仍追使命三种行动都成立；四与三不能相加为已核获救总数。",
+      "merge_recommendation": "保留正式可达与收纳修复，压缩三绳教学和报数的同义解释，把息壤变化还给观众。170秒只作旧目标，不自动采用或扩展鲧的结局。",
+      "body": "# M002 鲧盗息壤｜行动修订候选\n\n状态：historical_snapshot_compared；历史快照日期2026-11-04，当前远端及作者采纳状态未核验。\n\n阅读：完整读取修订短片剧本及逐镜制作卡；正式240秒剧本全读，18子镜结构与总体世界/空间说明。前置小说未列作全文。\n\n差异：修订候选170秒/五段卡，正式240秒/18子镜，最后息壤、三人分工、四轮廓通过、只报局部亲见与交空罐的事件相同。正式补炭板背带、双铃收放、祝融由门外高处沿既有高阶让路并到同层接罐、分开两支炭与暂放空罐。\n\n保留理由：禾舟自己用土、桑枝独立观察、祝融暂照路仍追使命三种行动都成立；四与三不能相加为已核获救总数。\n\n后续：保留正式可达与收纳修复，压缩三绳教学和报数的同义解释，把息壤变化还给观众。170秒只作旧目标，不自动采用或扩展鲧的结局。\n\n本轮未执行自动合并或作者采纳，未生成或审片。"
+    },
+    {
+      "topic_id": "H002",
+      "project_id": "0d38b9958c996f1154b52b3398c3b278fb9965eab99743f9f43f935250fda994",
+      "title": "H002 玉门十三人｜节奏修订候选",
+      "scope": "included_revision_candidate",
+      "formal_project_id": "f8c1a5deca645522de8d719ad2944535522e5f930625f55d2b37f23d9034d5df",
+      "comparison_status": "historical_snapshot_compared",
+      "source_snapshot": {
+        "date": "2026-11-04",
+        "documents": [
+          {
+            "id": "17667836ab41bb223d6eb74319d2e7b5b484afd32d1a3cce623cbaf1179875ae",
+            "title": "H002 玉门十三人｜独立审读节奏修订候选（小说与剧本）",
+            "kind": "script",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\0d38b9958c996f1154b52b3398c3b278fb9965eab99743f9f43f935250fda994\\17667836ab41bb223d6eb74319d2e7b5b484afd32d1a3cce623cbaf1179875ae.md",
+            "sha256": "e76f73ebdb9fdb7dd46718500a2af9d9a0bc358a466e83946e25fd8000faea77",
+            "read_at": "2026-11-04T07:15:37.047Z"
+          },
+          {
+            "id": "012f4d65c57223d1f9eef43ebe32b33461ffbde54323f8a94ef8eb18133c762f",
+            "title": "H002 玉门十三人｜分镜与视频提示词候选",
+            "kind": "storyboard",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\0d38b9958c996f1154b52b3398c3b278fb9965eab99743f9f43f935250fda994\\012f4d65c57223d1f9eef43ebe32b33461ffbde54323f8a94ef8eb18133c762f.md",
+            "sha256": "b43be2f8153e377f464b2dbc9dc0abb760742995a36b1d83ece50e41e6f7f4dd",
+            "read_at": "2026-11-04T07:15:45.791Z"
+          }
+        ],
+        "database_revision": null,
+        "current_remote_verified": false
+      },
+      "author_adoption_in_this_round": false,
+      "current_author_adoption": "unverified",
+      "automatic_merge": false,
+      "reading_contribution": "flow_topic_inventory",
+      "reading_coverage": "完整读取修订合并文档的短片剧本和导演镜头卡；正式184秒剧本全读，分镜11子镜结构及总体段落。前置小说不计入全文阅读。",
+      "differences": "修订候选150秒/五段镜头卡，正式基线184秒/11子镜，故事仍是灭火、裂铃问答、回报、开门、给水和登记慢行者。正式细分两次铃答、记具收纳、下阶、门缝见脸与水囊交接，并明确饮水囊与让路空囊不同。",
+      "preserve_reasons": "修订稿清楚区分疏勒开门与后来抵玉门的人数/时点，并把阿澜慢一点保作余味；这是选题定位对照，不代表史料已经重新核验。",
+      "merge_recommendation": "以正式快照为阅读基线，参考修订剧本的三段情绪概览来减少重复报命；保留新增连续性。先读演再定时长，不将150秒当可拍证明。",
+      "body": "# H002 玉门十三人｜节奏修订候选\n\n状态：historical_snapshot_compared；历史快照日期2026-11-04，当前远端及作者采纳状态未核验。\n\n阅读：完整读取修订合并文档的短片剧本和导演镜头卡；正式184秒剧本全读，分镜11子镜结构及总体段落。前置小说不计入全文阅读。\n\n差异：修订候选150秒/五段镜头卡，正式基线184秒/11子镜，故事仍是灭火、裂铃问答、回报、开门、给水和登记慢行者。正式细分两次铃答、记具收纳、下阶、门缝见脸与水囊交接，并明确饮水囊与让路空囊不同。\n\n保留理由：修订稿清楚区分疏勒开门与后来抵玉门的人数/时点，并把阿澜慢一点保作余味；这是选题定位对照，不代表史料已经重新核验。\n\n后续：以正式快照为阅读基线，参考修订剧本的三段情绪概览来减少重复报命；保留新增连续性。先读演再定时长，不将150秒当可拍证明。\n\n本轮未执行自动合并或作者采纳，未生成或审片。"
+    },
+    {
+      "topic_id": "H005",
+      "project_id": "d18e4c8d05944a44b8028fc8911d977da9e16aaa28b4e5c414efed813d5a9d03",
+      "title": "H005 百灶疑兵｜节奏修订候选",
+      "scope": "included_revision_candidate",
+      "formal_project_id": "6cf2d8551af64f359fa853f8ede5f4deb3eb3247b9cec8a31f064acd2291e493",
+      "comparison_status": "historical_snapshot_compared",
+      "source_snapshot": {
+        "date": "2026-11-04",
+        "documents": [
+          {
+            "id": "5f529df8acc77fde4ce7ff4e1aabf428a52eb02f6948e9f45216da9c2e6281ea",
+            "title": "H005 百灶疑兵｜分镜与视频提示词候选",
+            "kind": "storyboard",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\d18e4c8d05944a44b8028fc8911d977da9e16aaa28b4e5c414efed813d5a9d03\\5f529df8acc77fde4ce7ff4e1aabf428a52eb02f6948e9f45216da9c2e6281ea.md",
+            "sha256": "bfbbcf127a7d9db7e1ab5969f2e30bd81e756400416a3a754ef8d19ff0c4ba9c",
+            "read_at": "2026-11-04T07:17:16.021Z"
+          },
+          {
+            "id": "1e5ec29266e9e67c834f00a5fa1f5839f870bf9c51cddc7555690a49a3219c64",
+            "title": "H005 百灶疑兵｜独立审读节奏修订候选（小说与剧本）",
+            "kind": "script",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\d18e4c8d05944a44b8028fc8911d977da9e16aaa28b4e5c414efed813d5a9d03\\1e5ec29266e9e67c834f00a5fa1f5839f870bf9c51cddc7555690a49a3219c64.md",
+            "sha256": "6a8c1154892c910f4d7bc114263edd0d11d3e5a7157a041845d846bd505bf6a6",
+            "read_at": "2026-11-04T07:17:24.517Z"
+          }
+        ],
+        "database_revision": null,
+        "current_remote_verified": false
+      },
+      "author_adoption_in_this_round": false,
+      "current_author_adoption": "unverified",
+      "automatic_merge": false,
+      "reading_contribution": "flow_topic_inventory",
+      "reading_coverage": "完整读取修订短片剧本和镜头卡；正式204秒剧本全读，11子镜结构及首镜摄影/空间段落。前置小说未计全文。",
+      "differences": "修订候选90秒/五等分卡，正式204秒/11子镜，红布、折片、两日灶数、韩简失前队差事和阿岚自行传话的剧情一致。正式补记数先收笔再翻石、写字先收笔再折片，次日以膝托记录且接私家木片前收起公用记录。",
+      "preserve_reasons": "军队故意留痕与向导私人留痕的对照、两日跳切以及不把怀疑写成已查清，是可提炼的选题核心。",
+      "merge_recommendation": "保留正式的手部与两种木片区分；用候选概览评估说明是否重复，不能把五等分卡当拍摄节奏答案。她没原谅但继续领路，不合并成和解或寻亲成功。",
+      "body": "# H005 百灶疑兵｜节奏修订候选\n\n状态：historical_snapshot_compared；历史快照日期2026-11-04，当前远端及作者采纳状态未核验。\n\n阅读：完整读取修订短片剧本和镜头卡；正式204秒剧本全读，11子镜结构及首镜摄影/空间段落。前置小说未计全文。\n\n差异：修订候选90秒/五等分卡，正式204秒/11子镜，红布、折片、两日灶数、韩简失前队差事和阿岚自行传话的剧情一致。正式补记数先收笔再翻石、写字先收笔再折片，次日以膝托记录且接私家木片前收起公用记录。\n\n保留理由：军队故意留痕与向导私人留痕的对照、两日跳切以及不把怀疑写成已查清，是可提炼的选题核心。\n\n后续：保留正式的手部与两种木片区分；用候选概览评估说明是否重复，不能把五等分卡当拍摄节奏答案。她没原谅但继续领路，不合并成和解或寻亲成功。\n\n本轮未执行自动合并或作者采纳，未生成或审片。"
+    },
+    {
+      "topic_id": "U010",
+      "project_id": "5685549f11d12840d5b0e4435b65ed4809f20776a0578a99970f569224b6b526",
+      "title": "U010 被封印的女宗主｜冲突修订候选",
+      "scope": "included_revision_candidate",
+      "formal_project_id": "f77ca6248141e88f2aae6a4931fc531dc6cf7f8d8935d72c4d39e2d55286e0bc",
+      "comparison_status": "historical_snapshot_compared",
+      "source_snapshot": {
+        "date": "2026-11-04",
+        "documents": [
+          {
+            "id": "2647c79777220d96795ecb5b554979374b87dc016f9d6a1021095177a60037fd",
+            "title": "U010 被封印的女宗主｜分镜与视频提示词候选",
+            "kind": "storyboard",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\5685549f11d12840d5b0e4435b65ed4809f20776a0578a99970f569224b6b526\\2647c79777220d96795ecb5b554979374b87dc016f9d6a1021095177a60037fd.md",
+            "sha256": "c7deeb61380de156bbfbf888590654ee5057ea5a6962b56d7c2dca1239eb2b30",
+            "read_at": "2026-11-04T07:17:32.032Z"
+          },
+          {
+            "id": "fa10331c967897d348db3168b274573abcdec36f5cbe5a57f524ef7da82472ab",
+            "title": "U010 女宗主｜独立审读候选（小说与剧本）",
+            "kind": "script",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\5685549f11d12840d5b0e4435b65ed4809f20776a0578a99970f569224b6b526\\fa10331c967897d348db3168b274573abcdec36f5cbe5a57f524ef7da82472ab.md",
+            "sha256": "74fded140daeba7a2dea4a705dae26af258a7f8715551de4771f02a964af2b06",
+            "read_at": "2026-11-04T07:17:40.601Z"
+          }
+        ],
+        "database_revision": null,
+        "current_remote_verified": false
+      },
+      "author_adoption_in_this_round": false,
+      "current_author_adoption": "unverified",
+      "automatic_merge": false,
+      "reading_contribution": "flow_studio_audit",
+      "reading_coverage": "UV代理完整读取修订短片剧本与正式238秒剧本；正式分镜8镜结构及关联动作段落已读，小说未计全文。",
+      "differences": "修订短片140秒/六卡，正式238秒/8镜；正式补手机收袋再用钥匙、05A先写旧账册再听请求补公开目录并递笔、05B消息回读与纸笔手机腾手。故事未新增铜匣来历、身份坐实或弟子核实结果。",
+      "preserve_reasons": "保留旧账与公开目录的不同职责以及角色各自持物；传来信息不等于身份核实完成。",
+      "merge_recommendation": "以正式连续性为基线，把旧候选当关系与场次概览；压说明前先明确账册信息的观众用途，不能用140秒作可行性结论或自动采纳证据。",
+      "body": "# U010 被封印的女宗主｜冲突修订候选\n\n状态：historical_snapshot_compared；历史快照日期2026-11-04，当前远端及作者采纳状态未核验。\n\n阅读：UV代理完整读取修订短片剧本与正式238秒剧本；正式分镜8镜结构及关联动作段落已读，小说未计全文。\n\n差异：修订短片140秒/六卡，正式238秒/8镜；正式补手机收袋再用钥匙、05A先写旧账册再听请求补公开目录并递笔、05B消息回读与纸笔手机腾手。故事未新增铜匣来历、身份坐实或弟子核实结果。\n\n保留理由：保留旧账与公开目录的不同职责以及角色各自持物；传来信息不等于身份核实完成。\n\n后续：以正式连续性为基线，把旧候选当关系与场次概览；压说明前先明确账册信息的观众用途，不能用140秒作可行性结论或自动采纳证据。\n\n本轮未执行自动合并或作者采纳，未生成或审片。"
+    },
+    {
+      "topic_id": "U009",
+      "project_id": "a41408d0adf647a23652a0f62b2930eb50766507348bacc51b47783b0800fc12",
+      "title": "U009 地铁安检与本命剑｜冲突复核候选",
+      "scope": "included_revision_candidate",
+      "formal_project_id": "6ddfdc4eaa4e87d90e63724b562aba172e3a25164a6706da4eedfe15b722a108",
+      "comparison_status": "historical_snapshot_compared",
+      "source_snapshot": {
+        "date": "2026-11-04",
+        "documents": [
+          {
+            "id": "01e76316e6d2db55ec38a741097aa875b30f000f68bb8928fa65d78c64e1e0d5",
+            "title": "U009 地铁安检与本命剑｜分镜与视频提示词候选",
+            "kind": "storyboard",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\a41408d0adf647a23652a0f62b2930eb50766507348bacc51b47783b0800fc12\\01e76316e6d2db55ec38a741097aa875b30f000f68bb8928fa65d78c64e1e0d5.md",
+            "sha256": "45cda89510256b084e8ee7dc60df5ee413d9518fd2b9e0f01d5f4b44dc58d43d",
+            "read_at": "2026-11-04T07:21:53.674Z"
+          },
+          {
+            "id": "5e0688bcc66e0c53c3b159d59e20b716396829d4c29e9ff2ce8b4ae378f9cdd7",
+            "title": "U009 地铁安检与本命剑｜独立审读修订候选（小说与剧本）",
+            "kind": "script",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\a41408d0adf647a23652a0f62b2930eb50766507348bacc51b47783b0800fc12\\5e0688bcc66e0c53c3b159d59e20b716396829d4c29e9ff2ce8b4ae378f9cdd7.md",
+            "sha256": "a3ac6642e2961b4a25bd7ac8f21e55842b724f4f364182d839686243f08b7874",
+            "read_at": "2026-11-04T07:22:02.287Z"
+          }
+        ],
+        "database_revision": null,
+        "current_remote_verified": false
+      },
+      "author_adoption_in_this_round": false,
+      "current_author_adoption": "unverified",
+      "automatic_merge": false,
+      "reading_contribution": "flow_studio_audit",
+      "reading_coverage": "UV代理完整读取修订剧本部分与正式169秒剧本；正式分镜结构/问题相关段落已读，组合小说结局仅作边界对照。",
+      "differences": "修订短片95秒/五段，正式169秒/5镜；正式补结束师姐通话后再拨急救、江微举手机给看而不交出、梁野用自己手机记录。结局仍留口等待。组合小说另有负责人到场、取回伞和地面行走，短片及正式稿没有。",
+      "preserve_reasons": "手机归属与两通电话顺序的正式修复需要保留；不能把小说的后来事项挪作短片已发生结局。",
+      "merge_recommendation": "以正式为本轮基线，对照旧95秒稿评估对话重复，不回退状态修复。若选择使用小说后续，需另列新增候选、重新定范围与读演，不自动合并。",
+      "body": "# U009 地铁安检与本命剑｜冲突复核候选\n\n状态：historical_snapshot_compared；历史快照日期2026-11-04，当前远端及作者采纳状态未核验。\n\n阅读：UV代理完整读取修订剧本部分与正式169秒剧本；正式分镜结构/问题相关段落已读，组合小说结局仅作边界对照。\n\n差异：修订短片95秒/五段，正式169秒/5镜；正式补结束师姐通话后再拨急救、江微举手机给看而不交出、梁野用自己手机记录。结局仍留口等待。组合小说另有负责人到场、取回伞和地面行走，短片及正式稿没有。\n\n保留理由：手机归属与两通电话顺序的正式修复需要保留；不能把小说的后来事项挪作短片已发生结局。\n\n后续：以正式为本轮基线，对照旧95秒稿评估对话重复，不回退状态修复。若选择使用小说后续，需另列新增候选、重新定范围与读演，不自动合并。\n\n本轮未执行自动合并或作者采纳，未生成或审片。"
+    },
+    {
+      "topic_id": "Z009",
+      "project_id": "3f2d53b9f61455b9ff898778acddd1bf8079e490499f7cfdb69704dad400b92c",
+      "title": "Z009 红线金盒｜冲突复核候选",
+      "scope": "included_revision_candidate",
+      "formal_project_id": "ba5522929a4e1b6335eb9166bce5fd225cdb7b0fe5d8b4cf78d36a38eab5690b",
+      "comparison_status": "historical_snapshot_compared",
+      "source_snapshot": {
+        "date": "2026-11-04",
+        "documents": [
+          {
+            "id": "40b3e909038bd59b9ae3c1cb4635c119494b32f3de05388e5bd49f6af547424a",
+            "title": "Z009 红线金盒｜分镜与视频提示词候选",
+            "kind": "storyboard",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\3f2d53b9f61455b9ff898778acddd1bf8079e490499f7cfdb69704dad400b92c\\40b3e909038bd59b9ae3c1cb4635c119494b32f3de05388e5bd49f6af547424a.md",
+            "sha256": "3a4592637bbd80c09f247cfb2ff0a2d555a24274487757c1dedc87f52f26db8a",
+            "read_at": "2026-11-04T07:22:09.741Z"
+          },
+          {
+            "id": "3c9ac81559644038feb804b038ee5798a8ccc75529092336bad1e06481c85341",
+            "title": "Z009 红线金盒｜独立审读修订候选（小说与剧本）",
+            "kind": "script",
+            "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\studio-review\\2026-11-04\\studio-current\\3f2d53b9f61455b9ff898778acddd1bf8079e490499f7cfdb69704dad400b92c\\3c9ac81559644038feb804b038ee5798a8ccc75529092336bad1e06481c85341.md",
+            "sha256": "753c6414ec5db386bb127f7d7e181ea1c2eab0454473468ac6a8b41ecbe14695",
+            "read_at": "2026-11-04T07:22:18.089Z"
+          }
+        ],
+        "database_revision": null,
+        "current_remote_verified": false
+      },
+      "author_adoption_in_this_round": false,
+      "current_author_adoption": "unverified",
+      "automatic_merge": false,
+      "reading_contribution": "p6_ui_audit",
+      "reading_coverage": "ZX代理完整读取正式v2剧本、分镜结构以及独立修订合并文档的小说和短片剧本；小说与短片范围分别记账。",
+      "differences": "修订短片100秒/5镜，正式v2为214秒/11镜，三人、主要对白及盒证据不等于退兵的核心一致。正式将潜入分为门边/两盒/脱袖，并在04-B显式省略传话等待后再见愿去回条；候选则递令后紧接画外递回条。小说额外有误报骑兵旧事、两道文书/划旧令、使者家况及换热水生活段，正式短片未含。",
+      "preserve_reasons": "保留正式对于传话耗时、持物与证据局限的修复；小说的个人缘由和冷茶余波具有可讨论的人物材料价值。",
+      "merge_recommendation": "以正式v2为基线，个人缘由或冷茶余波只能另列新增候选，不能当正式已采纳情节；100秒和214秒均未实演。史料来源为稿内声明，非本轮权利核验。",
+      "body": "# Z009 红线金盒｜冲突复核候选\n\n状态：historical_snapshot_compared；历史快照日期2026-11-04，当前远端及作者采纳状态未核验。\n\n阅读：ZX代理完整读取正式v2剧本、分镜结构以及独立修订合并文档的小说和短片剧本；小说与短片范围分别记账。\n\n差异：修订短片100秒/5镜，正式v2为214秒/11镜，三人、主要对白及盒证据不等于退兵的核心一致。正式将潜入分为门边/两盒/脱袖，并在04-B显式省略传话等待后再见愿去回条；候选则递令后紧接画外递回条。小说额外有误报骑兵旧事、两道文书/划旧令、使者家况及换热水生活段，正式短片未含。\n\n保留理由：保留正式对于传话耗时、持物与证据局限的修复；小说的个人缘由和冷茶余波具有可讨论的人物材料价值。\n\n后续：以正式v2为基线，个人缘由或冷茶余波只能另列新增候选，不能当正式已采纳情节；100秒和214秒均未实演。史料来源为稿内声明，非本轮权利核验。\n\n本轮未执行自动合并或作者采纳，未生成或审片。"
+    },
+    {
+      "topic_id": "X007",
+      "project_id": "ee0931630a731187f5882fee4cd3529070c7c4ac388edb2bf70cd35483a499ab",
+      "title": "X007 无字道帖｜冲突复核候选",
+      "scope": "included_revision_candidate",
+      "formal_project_id": "e5e22c8415a2978d36bd3cfb0342f9bc1b1043a884b01dec3e2a682616097b15",
+      "comparison_status": "snapshot_missing_not_compared",
+      "source_snapshot": {
+        "date": "2026-11-04",
+        "documents": [],
+        "database_revision": null,
+        "current_remote_verified": false
+      },
+      "author_adoption_in_this_round": false,
+      "current_author_adoption": "unverified",
+      "automatic_merge": false,
+      "reading_contribution": "flow_topic_inventory_inventory_audit",
+      "reading_coverage": "项目在11月4日目录中，缺该项目index及正文；未以本地旧稿、题名或其他项目正文代替读取。",
+      "differences": "缺该独立修订项目正文，不能判断与正式快照的差异或称已被后版吸收。",
+      "preserve_reasons": "保留候选身份和正式题号关联；文件缺失不等于候选应丢弃。",
+      "merge_recommendation": "先取得该项目完整当前正文及提案，与正式版本绑定后再比较；不从相似标题、mtime或本地旧修订重建其内容。",
+      "body": "# X007 无字道帖｜冲突复核候选\n\n状态：snapshot_missing_not_compared；历史快照日期2026-11-04，当前远端及作者采纳状态未核验。\n\n阅读：项目在11月4日目录中，缺该项目index及正文；未以本地旧稿、题名或其他项目正文代替读取。\n\n差异：缺该独立修订项目正文，不能判断与正式快照的差异或称已被后版吸收。\n\n保留理由：保留候选身份和正式题号关联；文件缺失不等于候选应丢弃。\n\n后续：先取得该项目完整当前正文及提案，与正式版本绑定后再比较；不从相似标题、mtime或本地旧修订重建其内容。\n\n本轮未执行自动合并或作者采纳，未生成或审片。"
+    },
+    {
+      "topic_id": "X009",
+      "project_id": "0e09dc6d2c37b2b26eb8832de5ac263eb5f8f01ec3f4d4f0c9a484f7e4701f4f",
+      "title": "X009 听雪客｜冲突复核候选",
+      "scope": "included_revision_candidate",
+      "formal_project_id": "e2d64d4ee0110d880bb6a20240c15e00fd2eaead4f54c4cd25b7702545b926bc",
+      "comparison_status": "snapshot_missing_not_compared",
+      "source_snapshot": {
+        "date": "2026-11-04",
+        "documents": [],
+        "database_revision": null,
+        "current_remote_verified": false
+      },
+      "author_adoption_in_this_round": false,
+      "current_author_adoption": "unverified",
+      "automatic_merge": false,
+      "reading_contribution": "flow_topic_inventory_inventory_audit",
+      "reading_coverage": "项目在11月4日目录中，缺该项目index及正文；未以本地旧稿、题名或其他项目正文代替读取。",
+      "differences": "缺该独立修订项目正文，不能判断与正式快照的差异或称已被后版吸收。",
+      "preserve_reasons": "保留候选身份和正式题号关联；文件缺失不等于候选应丢弃。",
+      "merge_recommendation": "先取得该项目完整当前正文及提案，与正式版本绑定后再比较；不从相似标题、mtime或本地旧修订重建其内容。",
+      "body": "# X009 听雪客｜冲突复核候选\n\n状态：snapshot_missing_not_compared；历史快照日期2026-11-04，当前远端及作者采纳状态未核验。\n\n阅读：项目在11月4日目录中，缺该项目index及正文；未以本地旧稿、题名或其他项目正文代替读取。\n\n差异：缺该独立修订项目正文，不能判断与正式快照的差异或称已被后版吸收。\n\n保留理由：保留候选身份和正式题号关联；文件缺失不等于候选应丢弃。\n\n后续：先取得该项目完整当前正文及提案，与正式版本绑定后再比较；不从相似标题、mtime或本地旧修订重建其内容。\n\n本轮未执行自动合并或作者采纳，未生成或审片。"
+    },
+    {
+      "topic_id": "U001",
+      "project_id": "6ccb73687969d2d1f1ac29af1d76bcff6124448d0cd9e56d4ad6b38d0e235702",
+      "title": "U001 我家住进一位剑仙｜冲突复核候选",
+      "scope": "included_revision_candidate",
+      "formal_project_id": "7da63810f1afd54c769a6b2e550d3ee64c8850d7a0cd7071f9d05f0f0b33d1c2",
+      "comparison_status": "snapshot_missing_not_compared",
+      "source_snapshot": {
+        "date": "2026-11-04",
+        "documents": [],
+        "database_revision": null,
+        "current_remote_verified": false
+      },
+      "author_adoption_in_this_round": false,
+      "current_author_adoption": "unverified",
+      "automatic_merge": false,
+      "reading_contribution": "flow_topic_inventory_inventory_audit",
+      "reading_coverage": "项目在11月4日目录中，缺该项目index及正文；未以本地旧稿、题名或其他项目正文代替读取。",
+      "differences": "缺该独立修订项目正文，不能判断与正式快照的差异或称已被后版吸收。",
+      "preserve_reasons": "保留候选身份和正式题号关联；文件缺失不等于候选应丢弃。",
+      "merge_recommendation": "先取得该项目完整当前正文及提案，与正式版本绑定后再比较；不从相似标题、mtime或本地旧修订重建其内容。",
+      "body": "# U001 我家住进一位剑仙｜冲突复核候选\n\n状态：snapshot_missing_not_compared；历史快照日期2026-11-04，当前远端及作者采纳状态未核验。\n\n阅读：项目在11月4日目录中，缺该项目index及正文；未以本地旧稿、题名或其他项目正文代替读取。\n\n差异：缺该独立修订项目正文，不能判断与正式快照的差异或称已被后版吸收。\n\n保留理由：保留候选身份和正式题号关联；文件缺失不等于候选应丢弃。\n\n后续：先取得该项目完整当前正文及提案，与正式版本绑定后再比较；不从相似标题、mtime或本地旧修订重建其内容。\n\n本轮未执行自动合并或作者采纳，未生成或审片。"
+    },
+    {
+      "topic_id": "V010",
+      "project_id": "37d7fe8e7bbffc841194ba3cd6a01a3c1eb1dbf618e07ed32687b872905927f1",
+      "title": "V010 凌晨三点的订单｜冲突复核候选",
+      "scope": "included_revision_candidate",
+      "formal_project_id": "fe78e3481ea8813938d6513b68efc910c16e20efd288f5ddb6a408f5bd6072eb",
+      "comparison_status": "snapshot_missing_not_compared",
+      "source_snapshot": {
+        "date": "2026-11-04",
+        "documents": [],
+        "database_revision": null,
+        "current_remote_verified": false
+      },
+      "author_adoption_in_this_round": false,
+      "current_author_adoption": "unverified",
+      "automatic_merge": false,
+      "reading_contribution": "flow_topic_inventory_inventory_audit",
+      "reading_coverage": "项目在11月4日目录中，缺该项目index及正文；未以本地旧稿、题名或其他项目正文代替读取。",
+      "differences": "缺该独立修订项目正文，不能判断与正式快照的差异或称已被后版吸收。",
+      "preserve_reasons": "保留候选身份和正式题号关联；文件缺失不等于候选应丢弃。",
+      "merge_recommendation": "先取得该项目完整当前正文及提案，与正式版本绑定后再比较；不从相似标题、mtime或本地旧修订重建其内容。",
+      "body": "# V010 凌晨三点的订单｜冲突复核候选\n\n状态：snapshot_missing_not_compared；历史快照日期2026-11-04，当前远端及作者采纳状态未核验。\n\n阅读：项目在11月4日目录中，缺该项目index及正文；未以本地旧稿、题名或其他项目正文代替读取。\n\n差异：缺该独立修订项目正文，不能判断与正式快照的差异或称已被后版吸收。\n\n保留理由：保留候选身份和正式题号关联；文件缺失不等于候选应丢弃。\n\n后续：先取得该项目完整当前正文及提案，与正式版本绑定后再比较；不从相似标题、mtime或本地旧修订重建其内容。\n\n本轮未执行自动合并或作者采纳，未生成或审片。"
+    },
+    {
+      "topic_id": "D002",
+      "project_id": "be2c483c62a61c6c184c0fc97e884c5c17fd3787cdcd263c811375594c70aacf",
+      "title": "D002 合租到期｜冲突复核候选",
+      "scope": "included_revision_candidate",
+      "formal_project_id": "cbc75daab816325e99c6aa1315339ee5b9f3c2c06fbf2c4abbab59c8c3aed451",
+      "comparison_status": "snapshot_missing_not_compared",
+      "source_snapshot": {
+        "date": "2026-11-04",
+        "documents": [],
+        "database_revision": null,
+        "current_remote_verified": false
+      },
+      "author_adoption_in_this_round": false,
+      "current_author_adoption": "unverified",
+      "automatic_merge": false,
+      "reading_contribution": "flow_topic_inventory_inventory_audit",
+      "reading_coverage": "项目在11月4日目录中，缺该项目index及正文；未以本地旧稿、题名或其他项目正文代替读取。",
+      "differences": "缺该独立修订项目正文，不能判断与正式快照的差异或称已被后版吸收。",
+      "preserve_reasons": "保留候选身份和正式题号关联；文件缺失不等于候选应丢弃。",
+      "merge_recommendation": "先取得该项目完整当前正文及提案，与正式版本绑定后再比较；不从相似标题、mtime或本地旧修订重建其内容。",
+      "body": "# D002 合租到期｜冲突复核候选\n\n状态：snapshot_missing_not_compared；历史快照日期2026-11-04，当前远端及作者采纳状态未核验。\n\n阅读：项目在11月4日目录中，缺该项目index及正文；未以本地旧稿、题名或其他项目正文代替读取。\n\n差异：缺该独立修订项目正文，不能判断与正式快照的差异或称已被后版吸收。\n\n保留理由：保留候选身份和正式题号关联；文件缺失不等于候选应丢弃。\n\n后续：先取得该项目完整当前正文及提案，与正式版本绑定后再比较；不从相似标题、mtime或本地旧修订重建其内容。\n\n本轮未执行自动合并或作者采纳，未生成或审片。"
+    },
+    {
+      "topic_id": "V008",
+      "project_id": "196c049bb63a57dd2539777ad11d82f6e184d06adc2de9f77ea7c9b6de4fe72d",
+      "title": "V008 雨师请假了｜冲突复核候选",
+      "scope": "included_revision_candidate",
+      "formal_project_id": "92fee517af5b7198432a613b6fdd2c3c2d59f4d5d8ded8a9516aa7e2df4e1db1",
+      "comparison_status": "snapshot_missing_not_compared",
+      "source_snapshot": {
+        "date": "2026-11-04",
+        "documents": [],
+        "database_revision": null,
+        "current_remote_verified": false
+      },
+      "author_adoption_in_this_round": false,
+      "current_author_adoption": "unverified",
+      "automatic_merge": false,
+      "reading_contribution": "flow_topic_inventory_inventory_audit",
+      "reading_coverage": "项目在11月4日目录中，缺该项目index及正文；未以本地旧稿、题名或其他项目正文代替读取。",
+      "differences": "缺该独立修订项目正文，不能判断与正式快照的差异或称已被后版吸收。",
+      "preserve_reasons": "保留候选身份和正式题号关联；文件缺失不等于候选应丢弃。",
+      "merge_recommendation": "先取得该项目完整当前正文及提案，与正式版本绑定后再比较；不从相似标题、mtime或本地旧修订重建其内容。",
+      "body": "# V008 雨师请假了｜冲突复核候选\n\n状态：snapshot_missing_not_compared；历史快照日期2026-11-04，当前远端及作者采纳状态未核验。\n\n阅读：项目在11月4日目录中，缺该项目index及正文；未以本地旧稿、题名或其他项目正文代替读取。\n\n差异：缺该独立修订项目正文，不能判断与正式快照的差异或称已被后版吸收。\n\n保留理由：保留候选身份和正式题号关联；文件缺失不等于候选应丢弃。\n\n后续：先取得该项目完整当前正文及提案，与正式版本绑定后再比较；不从相似标题、mtime或本地旧修订重建其内容。\n\n本轮未执行自动合并或作者采纳，未生成或审片。"
+    },
+    {
+      "topic_id": null,
+      "project_id": "9c90f3b471ca404fa45ba6066a26e8f56f0880b2b668feb7186b9d7670a12884",
+      "title": "84 项分镜与视频提示词｜集中查阅候选",
+      "scope": "included_collection_candidate",
+      "formal_project_id": null,
+      "comparison_status": "snapshot_missing_not_compared",
+      "source_snapshot": {
+        "date": "2026-11-04",
+        "documents": [],
+        "database_revision": null,
+        "current_remote_verified": false
+      },
+      "author_adoption_in_this_round": false,
+      "current_author_adoption": "unverified",
+      "automatic_merge": false,
+      "reading_contribution": "flow_topic_inventory_inventory_audit",
+      "reading_coverage": "项目在11月4日目录中，缺该项目index及正文；未以本地旧稿、题名或其他项目正文代替读取。",
+      "differences": "缺正文，无法判断汇编是否包含额外修订或与84正式项目逐题一致。",
+      "preserve_reasons": "保留独立项目ID与关联关系，避免遗漏集中候选。",
+      "merge_recommendation": "恢复获准连接后读取完整当前正文、版本与提案，再逐题对照；当前不合并、不重写、不开采纳门。",
+      "body": "# 84 项分镜与视频提示词｜集中查阅候选\n\n状态：snapshot_missing_not_compared；历史快照日期2026-11-04，当前远端及作者采纳状态未核验。\n\n阅读：项目在11月4日目录中，缺该项目index及正文；未以本地旧稿、题名或其他项目正文代替读取。\n\n差异：缺正文，无法判断汇编是否包含额外修订或与84正式项目逐题一致。\n\n保留理由：保留独立项目ID与关联关系，避免遗漏集中候选。\n\n后续：恢复获准连接后读取完整当前正文、版本与提案，再逐题对照；当前不合并、不重写、不开采纳门。\n\n本轮未执行自动合并或作者采纳，未生成或审片。"
+    }
+  ]
+}

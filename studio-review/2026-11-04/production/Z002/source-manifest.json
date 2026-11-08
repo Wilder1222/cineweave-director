@@ -1,0 +1,54 @@
+{
+  "topicId": "Z002",
+  "projectId": "49882a22d455a0f31ec4b62810b9cc0c11c376e405b06ea4458f607a54f8ba3a",
+  "currentRevision": null,
+  "sourcePins": [
+    {
+      "documentId": "287594300fe3fa277bb694e6eeb53e3859e7295885a2b0ed1582aa6d5bcbef12",
+      "title": "Z002 洞庭寄书｜剧本｜20261031审阅版",
+      "sha256": "502f4bf774e2a2a0c428fe9eeb9dec58887268dbfb9adc8e8cfb1b14099dfac0",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:39:07.251Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts"
+    },
+    {
+      "documentId": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4",
+      "title": "Z002 洞庭寄书｜分镜与视频提示｜20261031审阅版",
+      "sha256": "343bf259695b910f9ddb437df82a5d4801a658c7ee18d5aaefa0470a20b44774",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:38:55.593Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts"
+    },
+    {
+      "documentId": "fb5a20b498e4fbddb3a76887c8c0c880e3a694123073db4c0cf20e0151abb5d5",
+      "title": "Z002 洞庭寄书｜审阅与来源｜20261031审阅版",
+      "sha256": "f7c9992a183bb8859422935822a0243808c4cdeeee0dcf08876e3793dd645cb0",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:38:48.282Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts"
+    }
+  ],
+  "patches": [
+    {
+      "documentId": "287594300fe3fa277bb694e6eeb53e3859e7295885a2b0ed1582aa6d5bcbef12",
+      "before": "随后询问来意，柳毅听见回应后才带书囊走近。",
+      "after": "随后问：“你为何叩树？”柳毅听见回应后才带书囊走近。",
+      "reason": "把摘要式询问变成可录准确对白"
+    },
+    {
+      "documentId": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4",
+      "before": "随后询问来意，柳毅听见回应后才带书囊走近。",
+      "after": "随后问：“你为何叩树？”柳毅听见回应后才带书囊走近。",
+      "reason": "把摘要式询问变成可录准确对白"
+    },
+    {
+      "documentId": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4",
+      "before": "时间审校：本镜22秒仅排练预算",
+      "after": "时间审校：本镜30秒仅排练预算",
+      "reason": "03实际映射/CSV30秒，统一审校说明"
+    }
+  ],
+  "candidate": true,
+  "authorApproved": false,
+  "rawSourceUnchanged": true
+}

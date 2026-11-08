@@ -1,0 +1,49 @@
+{
+  "checkedAt": "2026-11-08",
+  "scope": "current authored text, prompt projections, local links and SVG; no media acceptance",
+  "stories": 32,
+  "shots": 196,
+  "seconds": 1296,
+  "seedance25Segments": 63,
+  "svgFilesParsed": 70,
+  "localLinksChecked": 227,
+  "sourceHashes": {
+    "B": "6516b70e0bc07200f57e7eea19dbbb056dbf6d0dd806dd37276a70fc9b5431e0",
+    "F": "f3a88e509acbd802077e4872fdf0bbdc88a9971b15ba76d105e6f5704dcde8b8",
+    "G": "38d362be3a4db205b7e3c441f3047b0690fbdad5e8374323b5934f2982aea367"
+  },
+  "babyName": "澈澈",
+  "oldNameHitsInDeliverables": 0,
+  "sourceProjectionMatchesCurrentSource": true,
+  "previous31SourceObjectsUnchanged": true,
+  "previous31PromptStoriesUnchanged": true,
+  "newF11CopyBlocksComparedAcrossJsonMarkdownHtml": 13,
+  "inlineScriptSyntax": [
+    {
+      "file": "index.html",
+      "syntax": "passed"
+    },
+    {
+      "file": "seedance25/index.html",
+      "syntax": "passed"
+    }
+  ],
+  "browserInteraction": {
+    "status": "not revalidated this turn",
+    "reason": "file protocol page was blocked by browser URL policy in the previous turn; restricted route and alternate browser workarounds were not retried"
+  },
+  "errors": [],
+  "dialogueRevision": {
+    "story": "F11",
+    "language": "natural Mandarin Chinese",
+    "accurateLines": [
+      "在这儿！",
+      "再来？"
+    ],
+    "sourceDialogueSoundVideoAndProjectedTextsMatch": true,
+    "allSixSourceOpeningPromptsUnchanged": true,
+    "other31SourceObjectsUnchanged": true,
+    "other31PromptStoriesUnchanged": true,
+    "actualSpeechAndLipSync": "not generated or verified"
+  }
+}

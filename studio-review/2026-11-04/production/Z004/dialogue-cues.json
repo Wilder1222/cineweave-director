@@ -1,0 +1,147 @@
+{
+  "fps": 24,
+  "timingVerified": false,
+  "lipSyncVerified": false,
+  "cues": [
+    {
+      "shotId": "01",
+      "speaker": "香玉",
+      "text": "有人想移花。我先去问观里的人，能不能让它在这儿过完花期。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 0,
+      "endFrameExclusive": 528,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "02",
+      "speaker": "黄生",
+      "text": "要是留不住，我买来，种在我家。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 528,
+      "endFrameExclusive": 960,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "02",
+      "speaker": "香玉",
+      "text": "你没问花想不想去。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 528,
+      "endFrameExclusive": 960,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "03-A",
+      "speaker": "黄生",
+      "text": "花呢？",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 960,
+      "endFrameExclusive": 1320,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "03-A",
+      "speaker": "香玉",
+      "text": "蓝家天亮前掘走了。我去说过，没留住。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 960,
+      "endFrameExclusive": 1320,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "03-B",
+      "speaker": "香玉",
+      "text": "我昨夜见过它。也许是我的根，也许不是。别拔，遮风，留缝。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1320,
+      "endFrameExclusive": 1680,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "04",
+      "speaker": "黄生",
+      "text": "我追上去，把花买回来。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1680,
+      "endFrameExclusive": 2592,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "04",
+      "speaker": "香玉",
+      "text": "你能让我留在原处？",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1680,
+      "endFrameExclusive": 2592,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "04",
+      "speaker": "黄生",
+      "text": "不知道。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1680,
+      "endFrameExclusive": 2592,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "04",
+      "speaker": "香玉",
+      "text": "若花还能活，我想自己看看那边。不想从一个人手里到另一个人手里。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1680,
+      "endFrameExclusive": 2592,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "04",
+      "speaker": "黄生",
+      "text": "那这截根怎么办？",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1680,
+      "endFrameExclusive": 2592,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "04",
+      "speaker": "香玉",
+      "text": "先守到日落。如果你还想找我，就去。它会不会长，我不知道。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1680,
+      "endFrameExclusive": 2592,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "05",
+      "speaker": "黄生",
+      "text": "我先留下。车怕是追不上了。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 2592,
+      "endFrameExclusive": 3192,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "06",
+      "speaker": "香玉",
+      "text": "我不能保证能回来。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 3192,
+      "endFrameExclusive": 3864,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    }
+  ]
+}

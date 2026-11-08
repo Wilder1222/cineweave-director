@@ -31,6 +31,8 @@
 
 `CharacterBinding` 选择场景或镜头所需的精确身份和外观状态。演员时序由 `PerformanceTimeline` 负责；导演可以对齐摄影机与焦点，但不能改写演员的因果阶段。
 
+同一人物跨年龄、时期或多套妆造时，按[时期与造型适用范围](../optional/project-workflow.md#角色身份时期和造型适用范围)索引已有身份、`age_state`、外观修订及适用集／场／镜。同场换装用准确镜号区分，倒叙不按集号推断年龄；名称相同不允许自动换成最新状态。
+
 演员任务先明确目标、对象、触发与策略改变，再挑选本镜可读的眼线、呼吸、停顿、重心和接触。真人排练给行动与关系，保留演员选择；AIGC 稿描述已选演法的可见过程。台词发音允许唇形变化，倾听者保持任务与前一节拍的残留状态。完整方法及原创对白示例见[可表演任务](../optional/video-performance-direction.md#把角色处境转成可表演任务)。
 
 采用表演参考或数字人时，按[表演迁移](../optional/video-performance-direction.md#表演迁移输入职责先于参数)区分身份／造型、表演、身体／摄影机与声音来源；按[录制与追踪采集](../optional/video-performance-direction.md#录制参考与追踪采集)选择输入条件。采集平光不等于成片用光，面部系数不等于心理强度，生成结果需对照参考作二次校准。实际使用真人身份、肖像、声音或录制表演时核对已有用途与传输授权；普通虚构创作直接继续。
@@ -46,3 +48,5 @@
 可选规范输出（仅在请求结构化交接时）：`CharacterMorphologySpec`、`CharacterSpec`、`CharacterAppearanceState`、`CharacterBinding`、`PerformanceTimeline`。
 
 需要比较候选、表情／姿态研究、多视图或资产收敛时，使用[视觉开发](../optional/visual-development.md)；详细维度沿用共同提示词规范。
+
+需要可组合妆容时，按需读取[独立妆容预设](../optional/makeup-style-presets.md)相关 MU 卡；保持人物身份和当前完整外观，局部覆盖后输出完整妆容正文。仅引用[真实剧照](../optional/style-still-references.md)的可见妆面和光色，不迁移演员脸型、年龄或辨识点。

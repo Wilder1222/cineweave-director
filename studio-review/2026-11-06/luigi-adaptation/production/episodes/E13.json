@@ -1,0 +1,1281 @@
+{
+  "number": 13,
+  "title": "收钱的人",
+  "logline": "和解令玛拉遭到两边利用，主播堵住治疗入口；记者撤图，路易吉要求停止骚扰却失去部分支持。",
+  "scenes": [
+    {
+      "id": "E13-SC01",
+      "location": "MARA-HOME",
+      "time": "日·和解次日上午",
+      "script": "签约后的翌晨，公寓东厨房连着中央餐桌，北面卧室门关着。玛拉坐餐桌东侧，艾莉坐西侧拼图；公司说明在母亲手机上亮起，孩子的画本放椅子上，蓝夹在南门边等出发。\n\n玛拉在公司说明中看到自己的姓，刷新后连女儿的名字也被评论拼出。艾莉举着拼图角等她，玛拉伸手去接，却又缩回去看新的评论。\n\n艾莉（英语，催母亲一起做）：This is the corner.\n中文对照：角在这儿。\n玛拉（英语，接拼图的手停住，读自己的姓）：Hang on. That's our name.\n中文对照：等会儿，那是咱们的名字。\n\n玛拉选中一张治疗照片想证明钱的去处，艾莉看见缩略图，将拼图角放到照片和母亲之间。玛拉抬头发现孩子看着她，取消选择。\n\n艾莉（英语，不想再讲一次）：I said not that one.\n中文对照：我说了别用那张。\n玛拉（英语，看见孩子在等，取消照片）：Okay. I won't send it.\n中文对照：好，我不发。\n\n玛拉取消图片勾选，评论还在问她收了多少。她将手机转到自己一边，艾莉却已看见自己治疗时的缩略图，没把拼图角递过来。\n\n玛拉（英语，向孩子解释自己刚才的冲动）：People think I kept the money.\n中文对照：他们以为钱让我自己拿了。\n艾莉（英语，只认自己不愿公开的身体）：That's me in the picture.\n中文对照：可照片里是我。\n玛拉（英语，不让孩子承担替她证明的任务）：I know. I won't use it.\n中文对照：我知道。不发这张。\n艾莉（英语，把边界说完整）：Not the other one either.\n中文对照：另外那张也不行。\n\n玛拉关掉直播邀请，把手机收入包。艾莉收自己的画本，玛拉伸手帮她装，孩子抱紧一下，她松手让孩子自己拿，再把蓝夹夹到左臂；临出南门，她从包里取回手机看路线。\n\n玛拉（英语，松开孩子的本子，转拿自己的蓝夹）：All right, you carry yours. I'll take this.\n中文对照：好，你拿你的。我拿这个。\n艾莉（英语，抱住画本，把自己的条件说清）：Don't look in it.\n中文对照：不许偷看。",
+      "entry": "把母亲证明清白的冲动与孩子的隐私意愿正面对上。",
+      "exit": "她不只撤掉一张照片，而是退出相册，允许孩子自己带画本。 无法用治疗照向网友证明钱去向，女儿的边界优先。",
+      "dramaticFunction": "把母亲证明清白的冲动与孩子的隐私意愿正面对上。",
+      "turn": "她不只撤掉一张照片，而是退出相册，允许孩子自己带画本。",
+      "exitCost": "无法用治疗照向网友证明钱去向，女儿的边界优先。",
+      "sceneRhythm": "从拼图被打断到取消照片，再把出门动作交回孩子自己。",
+      "sourceSceneIds": [
+        "E13-SC01"
+      ],
+      "plannedDuration": 48
+    },
+    {
+      "id": "E13-SC02",
+      "location": "CLINIC",
+      "time": "日·同日上午",
+      "script": "同日上午诊所南门坡道窄，其他患者在母女后方。布莱克的稳定器占着正门，保安在东接待台；东南还有一道刷卡侧门。玛拉左臂蓝夹、艾莉抱画本。\n\n母女到南门坡道，布莱克退到门前让手机正对玛拉。她转肩把孩子隔在自己东侧，身后还有其他来就诊的人；她不往人群挤。\n\n布莱克（英语，已经开播，逼她给一句数字）：How much did they pay you, Mara?\n中文对照：他们到底给了你多少，玛拉？\n玛拉（英语，只争门前那条路）：Let us through. We have an appointment.\n中文对照：让我们过去，有预约。\n\n布莱克把手机向她收窄的通路送近，玛拉将自己右手手机收入风衣右袋，牵住艾莉左手；她的蓝夹顶住胸口，没有空手去推设备。\n\n布莱克（英语，把对方拒绝压成简单问题）：Just give us the number.\n中文对照：说个数就行。\n玛拉（英语，压住吵给孩子听的冲动）：Not here. She's nine.\n中文对照：别在这儿，她才九岁。\n\n东接待台旁保安看到母女进不了门，出来将手掌横在稳定器与孩子之间，指东南受控入口。艾莉把画本合紧，走在母亲身侧。\n\n保安（英语，给出可走路线，先带人离开设备）：This way. Use the side door.\n中文对照：这边，走侧门。\n艾莉（英语，把画本抱紧，仍在保护自己的东西）：Don't let him see my book.\n中文对照：别让他看我的本子。\n\n保安刷牌开受控门，玛拉先牵孩子进去，蓝夹被门框碰歪，她用左肘夹住没有停下。布莱克举稳定器跟到门线，保安回身将通路占住，等母女通过才带门。\n\n布莱克（英语，试图让对方顾忌）：We're live.\n中文对照：我们在直播。\n保安（英语，站住门线，不跟主播争直播权威）：You can't film in here.\n中文对照：里面不能拍。\n\n到了侧廊，艾莉不再跟母亲走，停着把画本塞进怀里。玛拉蹲下，将蓝夹靠左腿立住，松开右手，等孩子重新把手给她。\n\n艾莉（英语，门合上才说，脚不再往前走）：I don't want to go back out.\n中文对照：我不想再出去了。\n玛拉（英语，蹲下来等，不催她牵手）：Okay. We'll stay here for a bit.\n中文对照：好，咱们先在这儿待会儿。\n\n侧门隔住直播声，艾莉仍贴着墙。玛拉从蹲着的位置挪开半步，让女儿能看到北端治疗门；她没有拉孩子往前，蓝夹立在左腿旁。\n\n艾莉（英语，怕门只是暂时挡住人）：Does he know which room?\n中文对照：他知道我们进哪间吗？\n玛拉（英语，指身后的受控门给孩子确认）：No. He can't come through that door.\n中文对照：不知道，他过不来。\n艾莉（英语，先争取离开的办法）：Can we leave a different way?\n中文对照：走的时候能换个出口吗？\n玛拉（英语，给实际安排，不命令她别怕）：I'll ask. We don't have to go past him.\n中文对照：我去问。用不着从他旁边走。",
+      "entry": "让网络身份暴露变成阻挡身体通行的真实后果。",
+      "exit": "侧门挡住镜头，却不能立刻让孩子恢复正常行走。 她们必须另选出入路线，玛拉不能靠解释和解金额让女儿安全。",
+      "dramaticFunction": "让网络身份暴露变成阻挡身体通行的真实后果。",
+      "turn": "侧门挡住镜头，却不能立刻让孩子恢复正常行走。",
+      "exitCost": "她们必须另选出入路线，玛拉不能靠解释和解金额让女儿安全。",
+      "sceneRhythm": "围堵升级—保安打开路径—关门—停在孩子高度处理余波；不让直播者享受更多展示时间。",
+      "sourceSceneIds": [
+        "E13-SC02"
+      ],
+      "plannedDuration": 82
+    },
+    {
+      "id": "E13-SC03",
+      "location": "NEWSROOM",
+      "time": "午·围堵之后",
+      "script": "午间编辑部，诺拉在西桌重开先前自己的采访原片，女值班编辑站东侧。屏幕一侧是诊所门口围堵，另一侧是她当时留下的信件抬头与孩子原声。\n\n诺拉静音重开自己的原采访，在玛拉转出诊所信件抬头的位置暂停；下面仍保留着孩子的原声音轨。她把这两处加入撤下清单，关掉围堵视频，不重播额外可辨童声。\n\n诺拉（英语，对着自己的原片核，后半句不推给团队）：We gave them the clinic's name. And her voice. I left that in.\n中文对照：诊所名字是我们给出去的。还有她的声音，是我留下来的。\n值班编辑（英语，落实动作）：Pull the original.\n中文对照：撤原片。\n\n编辑提醒撤原片会带走整条推荐入口。诺拉撤本站原采访视频、由它抽出的截图和缩略图，保留更正告知；手机上别人保存的副本仍在播放，她将播放器关掉，不声称副本消失。\n\n值班编辑（英语，指着待清空的位置，让她最后确认）：We lose the whole feature if we do.\n中文对照：这么撤，整条推荐都没了。\n诺拉（英语，不补原则演讲）：Do it.\n中文对照：撤。\n\n推荐位变灰，编辑把另一个稿件补上。诺拉准备给玛拉发通知，停在原来附着采访问题的草稿上，将那些问题全删了。\n\n值班编辑（英语，交代本站操作的边界）：They've already copied it. We can't take those down ourselves.\n中文对照：别人都存了。那些我们自己删不了。\n诺拉（英语，不许诺全网消失）：I know. Take ours down. I'll tell her what we did.\n中文对照：我知道。先撤我们的。我告诉她已经做了什么。\n\n电话转语音信箱。诺拉将采访提纲翻扣，不问新问题，只说本站原片和截图已撤，随后把手机放回右侧，不再追拨。\n\n诺拉（英语，留言只交代已做的事，不索取回应）：Our video's down. The photos too. I'm sorry. You don't have to call me back.\n中文对照：我们的视频撤了，照片也是。对不起。你不用给我回电话。",
+      "entry": "让记者处理自己参与造成的损害。",
+      "exit": "撤原片、静帧和缩略图，失去整个特写推荐，留言不再要求回电。 原件撤除不能让他人副本消失，也不能买到被采访者的原谅。",
+      "dramaticFunction": "让记者处理自己参与造成的损害。",
+      "turn": "撤原片、静帧和缩略图，失去整个特写推荐，留言不再要求回电。",
+      "exitCost": "原件撤除不能让他人副本消失，也不能买到被采访者的原谅。",
+      "sceneRhythm": "核出具体暴露点—执行撤下—接受版面损失—一通不索取的留言。",
+      "sourceSceneIds": [
+        "E13-SC03"
+      ],
+      "plannedDuration": 51
+    },
+    {
+      "id": "E13-SC04",
+      "location": "VISIT",
+      "time": "日·次日",
+      "script": "次日会见室固定桌北侧仍是灰衣青年，海伦坐南，门在南。桌上是一整页声明和获玛拉许可后遮名的诊所入口截图，双方手腕自由。\n\n会见桌上，海伦放下青年写过的整页声明，旁边是获母亲许可遮名的截图。青年看完入口被堵的画面，把声明第一段折到背面。\n\n海伦（英语，等他确定发布范围）：All of it?\n中文对照：整页？\n路易吉（英语，折掉自己用来解释的背景）：Not the first paragraph.\n中文对照：第一段不要。\n\n海伦把折到背面的第一段重新摊平，原来准备讲拒赔背景。青年看过诊所门口截图，把那一段往自己这边收回。\n\n海伦（英语，确认是他的决定）：You wrote this part. Why take it out now?\n中文对照：这段是你写的，现在为什么删？\n路易吉（英语，停止替她安排角色）：It's her daughter. She didn't ask to be in my statement.\n中文对照：那是她女儿，她没答应让我拿来说。\n海伦（英语，执行明确边界）：Then we leave her out.\n中文对照：那就不写她。\n\n海伦指出被折走的一段是玛拉拒赔经历，青年将停骚扰那段留正面，签上自己的名字。她问发出会否得罪筹款者，他没有加回那段背景。\n\n海伦（英语，只说会失去谁的支持）：Some of your fundraisers won't like this.\n中文对照：有些替你筹款的人不会喜欢这段。\n路易吉（英语，签字，不另加一段自我说明）：Post that part. Put my name on it.\n中文对照：就发这段，署我的名字。\n\n海伦将签好的一段收进文件夹，青年仍看着截图，想补一个限定，又把笔搁下。她不替他把责任推给不明身份的少数人。\n\n路易吉（英语，把禁骚扰范围说到自己人）：Even the ones raising money for me.\n中文对照：替我筹款的也一样。\n海伦（英语，不替他恢复道德辩解）：I'll post exactly what you signed. No introduction.\n中文对照：我就发你签的这段，不另加开场白。\n路易吉（英语，接受可能损失支持）：Okay.\n中文对照：好。",
+      "entry": "让当事人对支持他的人的行为设边界，而不再借患者抬高自己。",
+      "exit": "他删掉拒赔经历前言，只签反骚扰段，明确筹款者也在约束内。 可能失去声援和筹款，不把代价转嫁给患者背书。",
+      "dramaticFunction": "让当事人对支持他的人的行为设边界，而不再借患者抬高自己。",
+      "turn": "他删掉拒赔经历前言，只签反骚扰段，明确筹款者也在约束内。",
+      "exitCost": "可能失去声援和筹款，不把代价转嫁给患者背书。",
+      "sceneRhythm": "看见伤害—决定删背景—律师确认原因—明确对自己支持者同样适用—签署授权。",
+      "sourceSceneIds": [
+        "E13-SC04"
+      ],
+      "plannedDuration": 56
+    },
+    {
+      "id": "E13-SC05",
+      "location": "HELEN-OFFICE",
+      "time": "夜·会见后",
+      "script": "当晚海伦办公室，西桌电脑面对她，蓝夹已合，东侧座位空着。公开渠道草稿只有签署的反骚扰段，没有诊所与患者信息。\n\n海伦将获授权的一段声明发到正式渠道，确认公开版本不带诊所地址和患者细节。几条声援账号的反对留言随后刷新，她没有撤回，保存公开版本与交付时间。",
+      "entry": "完成上一场选择的真实对外动作。",
+      "exit": "声明发布，部分声援者反对，她不撤回。 支持并非无条件保留。",
+      "dramaticFunction": "完成上一场选择的真实对外动作。",
+      "turn": "声明发布，部分声援者反对，她不撤回。",
+      "exitCost": "支持并非无条件保留。",
+      "sceneRhythm": "一段简短执行与结果，无新发言；与会见场形成选择/后果，勿扩成独立高潮。",
+      "sourceSceneIds": [
+        "E13-SC05"
+      ],
+      "plannedDuration": 9
+    }
+  ],
+  "shots": [
+    {
+      "id": "E13-SH001",
+      "sceneId": "E13-SC01",
+      "sourceShotIds": [
+        "E13-SH001",
+        "E13-SH002"
+      ],
+      "duration": 21,
+      "characters": [
+        "MARA-HOME",
+        "ELLIE"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-HOME",
+        "ELLIE"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "孩子把拼图角挡在自己照片前，母亲发现要证明自己的代价是孩子身体被看。",
+      "framing": "公寓餐桌南侧50mm母女共享中景，玛拉桌东、艾莉桌西，东厨房与北卧室门保持原方向。",
+      "composition": "签约后的翌晨，公寓东厨房连着中央餐桌，北面卧室门关着。玛拉坐餐桌东侧，艾莉坐西侧拼图；公司说明在母亲手机上亮起，孩子的画本放椅子上，蓝夹在南门边等出发。 本镜画内角色：MARA-HOME,ELLIE。",
+      "camera": "固定21秒，相册由母亲举起又放低。",
+      "focus": "孩子把拼图角挡在自己照片前，母亲发现要证明自己的代价是孩子身体被看。",
+      "start": "玛拉右手机，左手压治疗收据。",
+      "action": "玛拉在公司说明中看到自己的姓，刷新后连女儿的名字也被评论拼出。艾莉举着拼图角等她，玛拉伸手去接，却又缩回去看新的评论。\n玛拉选中一张治疗照片想证明钱的去处，艾莉看见缩略图，将拼图角放到照片和母亲之间。玛拉抬头发现孩子看着她，取消选择。",
+      "end": "治疗照片未发，母亲手指离开发送。",
+      "sound": "东厨房水壶与日常室内底声，手机通知只亮屏不朗读。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E13-D001",
+          "speaker": "艾莉",
+          "listener": "玛拉",
+          "text": "This is the corner.",
+          "translationZh": "角在这儿。",
+          "tone": "催母亲一起做",
+          "start": 1,
+          "end": 3.3
+        },
+        {
+          "id": "E13-D002",
+          "speaker": "玛拉",
+          "listener": "艾莉",
+          "text": "Hang on. That's our name.",
+          "translationZh": "等会儿，那是咱们的名字。",
+          "tone": "接拼图的手停住，读自己的姓",
+          "start": 3.6,
+          "end": 6.4
+        },
+        {
+          "id": "E13-D003",
+          "speaker": "艾莉",
+          "listener": "玛拉",
+          "text": "I said not that one.",
+          "translationZh": "我说了别用那张。",
+          "tone": "不想再讲一次",
+          "start": 11,
+          "end": 13.8
+        },
+        {
+          "id": "E13-D004",
+          "speaker": "玛拉",
+          "listener": "艾莉",
+          "text": "Okay. I won't send it.",
+          "translationZh": "好，我不发。",
+          "tone": "看见孩子在等，取消照片",
+          "start": 14.1,
+          "end": 17.4
+        }
+      ],
+      "overlay": [
+        {
+          "text": "INDIVIDUAL CLAIM RESOLVED / 个案争议已解决",
+          "start": 2,
+          "end": 7,
+          "position": "电脑新闻标题后期"
+        }
+      ],
+      "generationSegments": [
+        {
+          "duration": 10,
+          "start": "玛拉右手机，左手压治疗收据。",
+          "action": "玛拉在公司说明中看到自己的姓，刷新后连女儿的名字也被评论拼出。艾莉举着拼图角等她，玛拉伸手去接，却又缩回去看新的评论。",
+          "end": "拼图角仍在孩子手里，母亲被手机占住。",
+          "dialogueCueIds": [
+            "E13-D001",
+            "E13-D002"
+          ],
+          "sourceShotIds": [
+            "E13-SH001"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 12
+        },
+        {
+          "duration": 11,
+          "start": "拼图角仍在孩子手里，母亲被手机占住。",
+          "action": "玛拉选中一张治疗照片想证明钱的去处，艾莉看见缩略图，将拼图角放到照片和母亲之间。玛拉抬头发现孩子看着她，取消选择。",
+          "end": "治疗照片未发，母亲手指离开发送。",
+          "dialogueCueIds": [
+            "E13-D003",
+            "E13-D004"
+          ],
+          "sourceShotIds": [
+            "E13-SH002"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 13
+        }
+      ],
+      "viewerEntry": "把母亲证明清白的冲动与孩子的隐私意愿正面对上。",
+      "viewerExit": "治疗照片未发，母亲手指离开发送。",
+      "cutTrigger": "孩子明确照片里是自己，切到她的高度处理边界。",
+      "next": "接E13-SH003；孩子明确照片里是自己，切到她的高度处理边界。"
+    },
+    {
+      "id": "E13-SH003",
+      "sceneId": "E13-SC01",
+      "sourceShotIds": [
+        "E13-SH003"
+      ],
+      "duration": 27,
+      "characters": [
+        "MARA-HOME",
+        "ELLIE"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-HOME",
+        "ELLIE"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "母亲退出整个相册，放开替孩子收画本的手；孩子自己抱着走。",
+      "framing": "桌南偏东50mm儿童高度的双人中景，艾莉正面、母亲侧面，南门出发路线留在左边。",
+      "composition": "签约后的翌晨，公寓东厨房连着中央餐桌，北面卧室门关着。玛拉坐餐桌东侧，艾莉坐西侧拼图；公司说明在母亲手机上亮起，孩子的画本放椅子上，蓝夹在南门边等出发。 本镜画内角色：MARA-HOME,ELLIE。",
+      "camera": "先固定，二人起身后仅向南平移半米让出桌角，不追手机屏幕。",
+      "focus": "母亲退出整个相册，放开替孩子收画本的手；孩子自己抱着走。",
+      "start": "治疗照片未发，母亲手指离开发送。",
+      "action": "玛拉取消图片勾选，评论还在问她收了多少。她将手机转到自己一边，艾莉却已看见自己治疗时的缩略图，没把拼图角递过来。\n玛拉关掉直播邀请，把手机收入包。艾莉收自己的画本，玛拉伸手帮她装，孩子抱紧一下，她松手让孩子自己拿，再把蓝夹夹到左臂；临出南门，她从包里取回手机看路线。",
+      "end": "画本由孩子抱，蓝夹归玛拉，手机出发前回右手导航。",
+      "sound": "东厨房水壶与日常室内底声，手机通知只亮屏不朗读。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E13-D201",
+          "speaker": "玛拉",
+          "listener": "艾莉",
+          "text": "People think I kept the money.",
+          "translationZh": "他们以为钱让我自己拿了。",
+          "tone": "向孩子解释自己刚才的冲动",
+          "start": 1,
+          "end": 3.35
+        },
+        {
+          "id": "E13-D202",
+          "speaker": "艾莉",
+          "listener": "玛拉",
+          "text": "That's me in the picture.",
+          "translationZh": "可照片里是我。",
+          "tone": "只认自己不愿公开的身体",
+          "start": 3.65,
+          "end": 5.61
+        },
+        {
+          "id": "E13-D203",
+          "speaker": "玛拉",
+          "listener": "艾莉",
+          "text": "I know. I won't use it.",
+          "translationZh": "我知道。不发这张。",
+          "tone": "不让孩子承担替她证明的任务",
+          "start": 5.91,
+          "end": 8.27
+        },
+        {
+          "id": "E13-D204",
+          "speaker": "艾莉",
+          "listener": "玛拉",
+          "text": "Not the other one either.",
+          "translationZh": "另外那张也不行。",
+          "tone": "把边界说完整",
+          "start": 8.57,
+          "end": 10.53
+        },
+        {
+          "id": "E13-D005",
+          "speaker": "玛拉",
+          "listener": "艾莉",
+          "text": "All right, you carry yours. I'll take this.",
+          "translationZh": "好，你拿你的。我拿这个。",
+          "tone": "松开孩子的本子，转拿自己的蓝夹",
+          "start": 19,
+          "end": 23.3
+        },
+        {
+          "id": "E13-D006",
+          "speaker": "艾莉",
+          "listener": "玛拉",
+          "text": "Don't look in it.",
+          "translationZh": "不许偷看。",
+          "tone": "抱住画本，把自己的条件说清",
+          "start": 23.6,
+          "end": 25.4
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 18,
+          "start": "治疗照片未发，母亲手指离开发送。",
+          "action": "玛拉取消图片勾选，评论还在问她收了多少。她将手机转到自己一边，艾莉却已看见自己治疗时的缩略图，没把拼图角递过来。",
+          "end": "玛拉退出整个相册，不再寻找另一张治疗照。",
+          "dialogueCueIds": [
+            "E13-D201",
+            "E13-D202",
+            "E13-D203",
+            "E13-D204"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 20
+        },
+        {
+          "duration": 9,
+          "start": "玛拉退出整个相册，不再寻找另一张治疗照。",
+          "action": "玛拉关掉直播邀请，把手机收入包。艾莉收自己的画本，玛拉伸手帮她装，孩子抱紧一下，她松手让孩子自己拿，再把蓝夹夹到左臂；临出南门，她从包里取回手机看路线。",
+          "end": "画本由孩子抱，蓝夹归玛拉，手机出发前回右手导航。",
+          "dialogueCueIds": [
+            "E13-D005",
+            "E13-D006"
+          ],
+          "sourceShotIds": [
+            "E13-SH003"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 11
+        }
+      ],
+      "viewerEntry": "治疗照片未发，母亲手指离开发送。",
+      "viewerExit": "画本由孩子抱，蓝夹归玛拉，手机出发前回右手导航。",
+      "cutTrigger": "母亲只取手机查路线，接诊所实际通路被堵。",
+      "next": "本场完成，按正式EP场序转场；母亲只取手机查路线，接诊所实际通路被堵。"
+    },
+    {
+      "id": "E13-SH004",
+      "sceneId": "E13-SC02",
+      "sourceShotIds": [
+        "E13-SH004",
+        "E13-SH005"
+      ],
+      "duration": 23,
+      "characters": [
+        "MARA-WORK",
+        "ELLIE",
+        "HOST"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK",
+        "ELLIE",
+        "HOST"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "她腾出右手牵孩子，蓝夹顶胸，确实无手可推设备。",
+      "framing": "诊所南坡道东侧35mm三人中景，布莱克在正门前，母亲居中、孩子在她东侧，后面患者不被挤成一团。",
+      "composition": "同日上午诊所南门坡道窄，其他患者在母女后方。布莱克的稳定器占着正门，保安在东接待台；东南还有一道刷卡侧门。玛拉左臂蓝夹、艾莉抱画本。 本镜画内角色：MARA-WORK,ELLIE,HOST。",
+      "camera": "手持幅度克制，随母亲后退半步便停住，不冲入主播直播视角。",
+      "focus": "她腾出右手牵孩子，蓝夹顶胸，确实无手可推设备。",
+      "start": "玛拉右手机左夹，孩子抱画本。",
+      "action": "母女到南门坡道，布莱克退到门前让手机正对玛拉。她转肩把孩子隔在自己东侧，身后还有其他来就诊的人；她不往人群挤。\n布莱克把手机向她收窄的通路送近，玛拉将自己右手手机收入风衣右袋，牵住艾莉左手；她的蓝夹顶住胸口，没有空手去推设备。",
+      "end": "右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。",
+      "sound": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E13-D007",
+          "speaker": "布莱克",
+          "listener": "玛拉",
+          "text": "How much did they pay you, Mara?",
+          "translationZh": "他们到底给了你多少，玛拉？",
+          "tone": "已经开播，逼她给一句数字",
+          "start": 1,
+          "end": 4.8
+        },
+        {
+          "id": "E13-D008",
+          "speaker": "玛拉",
+          "listener": "布莱克",
+          "text": "Let us through. We have an appointment.",
+          "translationZh": "让我们过去，有预约。",
+          "tone": "只争门前那条路",
+          "start": 5.1,
+          "end": 7.9
+        },
+        {
+          "id": "E13-D009",
+          "speaker": "布莱克",
+          "listener": "玛拉",
+          "text": "Just give us the number.",
+          "translationZh": "说个数就行。",
+          "tone": "把对方拒绝压成简单问题",
+          "start": 13,
+          "end": 16.3
+        },
+        {
+          "id": "E13-D010",
+          "speaker": "玛拉",
+          "listener": "布莱克",
+          "text": "Not here. She's nine.",
+          "translationZh": "别在这儿，她才九岁。",
+          "tone": "压住吵给孩子听的冲动",
+          "start": 16.6,
+          "end": 18.9
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 12,
+          "start": "玛拉右手机左夹，孩子抱画本。",
+          "action": "母女到南门坡道，布莱克退到门前让手机正对玛拉。她转肩把孩子隔在自己东侧，身后还有其他来就诊的人；她不往人群挤。",
+          "end": "主门通路被直播者的追问截住，母女尚未进门。",
+          "dialogueCueIds": [
+            "E13-D007",
+            "E13-D008"
+          ],
+          "sourceShotIds": [
+            "E13-SH004"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        },
+        {
+          "duration": 11,
+          "start": "主门通路被直播者的追问截住，母女尚未进门。",
+          "action": "布莱克把手机向她收窄的通路送近，玛拉将自己右手手机收入风衣右袋，牵住艾莉左手；她的蓝夹顶住胸口，没有空手去推设备。",
+          "end": "右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。",
+          "dialogueCueIds": [
+            "E13-D009",
+            "E13-D010"
+          ],
+          "sourceShotIds": [
+            "E13-SH005"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 13
+        }
+      ],
+      "viewerEntry": "让网络身份暴露变成阻挡身体通行的真实后果。",
+      "viewerExit": "右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。",
+      "cutTrigger": "保安从东接待台出来给替代路径，切到受控门一侧。",
+      "next": "接E13-SH006；保安从东接待台出来给替代路径，切到受控门一侧。"
+    },
+    {
+      "id": "E13-SH006",
+      "sceneId": "E13-SC02",
+      "sourceShotIds": [
+        "E13-SH006",
+        "E13-SH007"
+      ],
+      "duration": 23,
+      "characters": [
+        "MARA-WORK",
+        "ELLIE",
+        "HOST",
+        "GUARD-CLINIC"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK",
+        "ELLIE",
+        "HOST",
+        "GUARD-CLINIC"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "保安挡设备而不碰孩子，母女通过才关门，主播不能跟入。",
+      "framing": "东南侧门内35mm朝西南的中全景，门框是边界，保安在门口，母女从外侧进来；主播留门外。",
+      "composition": "同日上午诊所南门坡道窄，其他患者在母女后方。布莱克的稳定器占着正门，保安在东接待台；东南还有一道刷卡侧门。玛拉左臂蓝夹、艾莉抱画本。 本镜画内角色：MARA-WORK,ELLIE,HOST,GUARD-CLINIC。",
+      "camera": "固定23秒，门开启后人物经过相机，不以暗切跨门。",
+      "focus": "保安挡设备而不碰孩子，母女通过才关门，主播不能跟入。",
+      "start": "右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。",
+      "action": "东接待台旁保安看到母女进不了门，出来将手掌横在稳定器与孩子之间，指东南受控入口。艾莉把画本合紧，走在母亲身侧。\n保安刷牌开受控门，玛拉先牵孩子进去，蓝夹被门框碰歪，她用左肘夹住没有停下。布莱克举稳定器跟到门线，保安回身将通路占住，等母女通过才带门。",
+      "end": "母女在门内、主播留门外，门合上隔开直播声。",
+      "sound": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E13-D011",
+          "speaker": "保安",
+          "listener": "玛拉",
+          "text": "This way. Use the side door.",
+          "translationZh": "这边，走侧门。",
+          "tone": "给出可走路线，先带人离开设备",
+          "start": 1,
+          "end": 3.8
+        },
+        {
+          "id": "E13-D012",
+          "speaker": "艾莉",
+          "listener": "玛拉",
+          "text": "Don't let him see my book.",
+          "translationZh": "别让他看我的本子。",
+          "tone": "把画本抱紧，仍在保护自己的东西",
+          "start": 4.1,
+          "end": 6.9
+        },
+        {
+          "id": "E13-D013",
+          "speaker": "布莱克",
+          "listener": "保安",
+          "text": "We're live.",
+          "translationZh": "我们在直播。",
+          "tone": "试图让对方顾忌",
+          "start": 12,
+          "end": 13.3
+        },
+        {
+          "id": "E13-D014",
+          "speaker": "保安",
+          "listener": "布莱克",
+          "text": "You can't film in here.",
+          "translationZh": "里面不能拍。",
+          "tone": "站住门线，不跟主播争直播权威",
+          "start": 13.6,
+          "end": 16.4
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 11,
+          "start": "右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。",
+          "action": "东接待台旁保安看到母女进不了门，出来将手掌横在稳定器与孩子之间，指东南受控入口。艾莉把画本合紧，走在母亲身侧。",
+          "end": "保安带路到东南，布莱克仍在门外跟随。",
+          "dialogueCueIds": [
+            "E13-D011",
+            "E13-D012"
+          ],
+          "sourceShotIds": [
+            "E13-SH006"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 13
+        },
+        {
+          "duration": 12,
+          "start": "保安带路到东南，布莱克仍在门外跟随。",
+          "action": "保安刷牌开受控门，玛拉先牵孩子进去，蓝夹被门框碰歪，她用左肘夹住没有停下。布莱克举稳定器跟到门线，保安回身将通路占住，等母女通过才带门。",
+          "end": "母女在门内、主播留门外，门合上隔开直播声。",
+          "dialogueCueIds": [
+            "E13-D013",
+            "E13-D014"
+          ],
+          "sourceShotIds": [
+            "E13-SH007"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        }
+      ],
+      "viewerEntry": "右手牵孩子、左臂蓝夹、手机右袋，母女改变方向找入口。",
+      "viewerExit": "母女在门内、主播留门外，门合上隔开直播声。",
+      "cutTrigger": "门合上隔开直播，切到孩子已停住的内部侧廊。",
+      "next": "接E13-SH008；门合上隔开直播，切到孩子已停住的内部侧廊。"
+    },
+    {
+      "id": "E13-SH008",
+      "sceneId": "E13-SC02",
+      "sourceShotIds": [
+        "E13-SH008"
+      ],
+      "duration": 36,
+      "characters": [
+        "MARA-WORK",
+        "ELLIE"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK",
+        "ELLIE"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "门后仍不安全的主观感受、另一出口约定、孩子自己收画本再递手完整发生。",
+      "framing": "侧廊北侧35mm儿童眼高双人中景，受控门在南后方、北治疗入口位于画外左侧去向；蓝夹靠母亲左腿。",
+      "composition": "同日上午诊所南门坡道窄，其他患者在母女后方。布莱克的稳定器占着正门，保安在东接待台；东南还有一道刷卡侧门。玛拉左臂蓝夹、艾莉抱画本。 本镜画内角色：MARA-WORK,ELLIE。",
+      "camera": "固定36秒，母亲蹲下并侧移让孩子看清北向通路，相机不贴近哭脸。",
+      "focus": "门后仍不安全的主观感受、另一出口约定、孩子自己收画本再递手完整发生。",
+      "start": "母女在门内、主播留门外，门合上隔开直播声。",
+      "action": "到了侧廊，艾莉不再跟母亲走，停着把画本塞进怀里。玛拉蹲下，将蓝夹靠左腿立住，松开右手，等孩子重新把手给她。\n侧门隔住直播声，艾莉仍贴着墙。玛拉从蹲着的位置挪开半步，让女儿能看到北端治疗门；她没有拉孩子往前，蓝夹立在左腿旁。",
+      "end": "艾莉自己把画本放进包里，随后伸手；母亲等她先迈步才起身。",
+      "sound": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E13-D015",
+          "speaker": "艾莉",
+          "listener": "玛拉",
+          "text": "I don't want to go back out.",
+          "translationZh": "我不想再出去了。",
+          "tone": "门合上才说，脚不再往前走",
+          "start": 1,
+          "end": 4.8
+        },
+        {
+          "id": "E13-D016",
+          "speaker": "玛拉",
+          "listener": "艾莉",
+          "text": "Okay. We'll stay here for a bit.",
+          "translationZh": "好，咱们先在这儿待会儿。",
+          "tone": "蹲下来等，不催她牵手",
+          "start": 5.1,
+          "end": 8.4
+        },
+        {
+          "id": "E13-D205",
+          "speaker": "艾莉",
+          "listener": "玛拉",
+          "text": "Does he know which room?",
+          "translationZh": "他知道我们进哪间吗？",
+          "tone": "怕门只是暂时挡住人",
+          "start": 13,
+          "end": 14.96
+        },
+        {
+          "id": "E13-D206",
+          "speaker": "玛拉",
+          "listener": "艾莉",
+          "text": "No. He can't come through that door.",
+          "translationZh": "不知道，他过不来。",
+          "tone": "指身后的受控门给孩子确认",
+          "start": 15.26,
+          "end": 18.01
+        },
+        {
+          "id": "E13-D207",
+          "speaker": "艾莉",
+          "listener": "玛拉",
+          "text": "Can we leave a different way?",
+          "translationZh": "走的时候能换个出口吗？",
+          "tone": "先争取离开的办法",
+          "start": 18.31,
+          "end": 20.66
+        },
+        {
+          "id": "E13-D208",
+          "speaker": "玛拉",
+          "listener": "艾莉",
+          "text": "I'll ask. We don't have to go past him.",
+          "translationZh": "我去问。用不着从他旁边走。",
+          "tone": "给实际安排，不命令她别怕",
+          "start": 20.96,
+          "end": 24.49
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 12,
+          "start": "母女在门内、主播留门外，门合上隔开直播声。",
+          "action": "到了侧廊，艾莉不再跟母亲走，停着把画本塞进怀里。玛拉蹲下，将蓝夹靠左腿立住，松开右手，等孩子重新把手给她。",
+          "end": "孩子没有交出画本，只重新牵母亲；手机仍在右袋。",
+          "dialogueCueIds": [
+            "E13-D015",
+            "E13-D016"
+          ],
+          "sourceShotIds": [
+            "E13-SH008"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        },
+        {
+          "duration": 24,
+          "start": "孩子没有交出画本，只重新牵母亲；手机仍在右袋。",
+          "action": "侧门隔住直播声，艾莉仍贴着墙。玛拉从蹲着的位置挪开半步，让女儿能看到北端治疗门；她没有拉孩子往前，蓝夹立在左腿旁。",
+          "end": "艾莉自己把画本放进包里，随后伸手；母亲等她先迈步才起身。",
+          "dialogueCueIds": [
+            "E13-D205",
+            "E13-D206",
+            "E13-D207",
+            "E13-D208"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 26
+        }
+      ],
+      "viewerEntry": "母女在门内、主播留门外，门合上隔开直播声。",
+      "viewerExit": "艾莉自己把画本放进包里，随后伸手；母亲等她先迈步才起身。",
+      "cutTrigger": "艾莉先迈向治疗区，转记者处理自己原片。",
+      "next": "本场完成，按正式EP场序转场；艾莉先迈向治疗区，转记者处理自己原片。"
+    },
+    {
+      "id": "E13-SH009",
+      "sceneId": "E13-SC03",
+      "sourceShotIds": [
+        "E13-SH009"
+      ],
+      "duration": 11,
+      "characters": [
+        "NORA",
+        "EDITOR-DESK"
+      ],
+      "onScreenCharacterIds": [
+        "NORA"
+      ],
+      "offscreenCharacterIds": [
+        "EDITOR-DESK"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "记者准确找到自己留下的暴露点，编辑只从东侧画外答复。",
+      "framing": "诺拉西桌南肩后50mm屏幕和红本近景，原采访静音，诊所抬头与未删的孩子音轨可见。",
+      "composition": "午间编辑部，诺拉在西桌重开先前自己的采访原片，女值班编辑站东侧。屏幕一侧是诊所门口围堵，另一侧是她当时留下的信件抬头与孩子原声。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定11秒，按她的两次定位停住，不播放额外儿童台词。",
+      "focus": "记者准确找到自己留下的暴露点，编辑只从东侧画外答复。",
+      "start": "她把围堵视频暂停，未开声音。",
+      "action": "诺拉静音重开自己的原采访，在玛拉转出诊所信件抬头的位置暂停；下面仍保留着孩子的原声音轨。她把这两处加入撤下清单，关掉围堵视频，不重播额外可辨童声。",
+      "end": "抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。",
+      "sound": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E13-D017",
+          "speaker": "诺拉",
+          "listener": "值班编辑",
+          "text": "We gave them the clinic's name. And her voice. I left that in.",
+          "translationZh": "诊所名字是我们给出去的。还有她的声音，是我留下来的。",
+          "tone": "对着自己的原片核，后半句不推给团队",
+          "start": 1,
+          "end": 7.7
+        },
+        {
+          "id": "E13-D018",
+          "speaker": "值班编辑",
+          "listener": "诺拉",
+          "text": "Pull the original.",
+          "translationZh": "撤原片。",
+          "tone": "落实动作",
+          "start": 8,
+          "end": 9.9
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 11,
+          "start": "她把围堵视频暂停，未开声音。",
+          "action": "诺拉静音重开自己的原采访，在玛拉转出诊所信件抬头的位置暂停；下面仍保留着孩子的原声音轨。她把这两处加入撤下清单，关掉围堵视频，不重播额外可辨童声。",
+          "end": "抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。",
+          "dialogueCueIds": [
+            "E13-D017",
+            "E13-D018"
+          ],
+          "sourceShotIds": [
+            "E13-SH009"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 13
+        }
+      ],
+      "viewerEntry": "让记者处理自己参与造成的损害。",
+      "viewerExit": "抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。",
+      "cutTrigger": "撤原片影响整个特写版面，切两人面对工作后果。",
+      "next": "接E13-SH010；撤原片影响整个特写版面，切两人面对工作后果。"
+    },
+    {
+      "id": "E13-SH010",
+      "sceneId": "E13-SC03",
+      "sourceShotIds": [
+        "E13-SH010"
+      ],
+      "duration": 30,
+      "characters": [
+        "NORA",
+        "EDITOR-DESK"
+      ],
+      "onScreenCharacterIds": [
+        "NORA",
+        "EDITOR-DESK"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "撤本站视频、截图和缩略图做完；外部副本仍在，不能用一次点击消失。",
+      "framing": "编辑部西桌南侧40mm共享中景，编辑站东，诺拉坐西，屏幕边缘与手机同时可见。",
+      "composition": "午间编辑部，诺拉在西桌重开先前自己的采访原片，女值班编辑站东侧。屏幕一侧是诊所门口围堵，另一侧是她当时留下的信件抬头与孩子原声。 本镜画内角色：NORA,EDITOR-DESK。",
+      "camera": "固定30秒，推荐变灰后编辑换稿，诺拉删掉留言里的采访问题。",
+      "focus": "撤本站视频、截图和缩略图做完；外部副本仍在，不能用一次点击消失。",
+      "start": "抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。",
+      "action": "编辑提醒撤原片会带走整条推荐入口。诺拉撤本站原采访视频、由它抽出的截图和缩略图，保留更正告知；手机上别人保存的副本仍在播放，她将播放器关掉，不声称副本消失。\n推荐位变灰，编辑把另一个稿件补上。诺拉准备给玛拉发通知，停在原来附着采访问题的草稿上，将那些问题全删了。",
+      "end": "诺拉留下处理结果，采访提纲翻到桌面朝下。",
+      "sound": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E13-D019",
+          "speaker": "值班编辑",
+          "listener": "诺拉",
+          "text": "We lose the whole feature if we do.",
+          "translationZh": "这么撤，整条推荐都没了。",
+          "tone": "指着待清空的位置，让她最后确认",
+          "start": 1,
+          "end": 4.3
+        },
+        {
+          "id": "E13-D020",
+          "speaker": "诺拉",
+          "listener": "值班编辑",
+          "text": "Do it.",
+          "translationZh": "撤。",
+          "tone": "不补原则演讲",
+          "start": 4.6,
+          "end": 5.9
+        },
+        {
+          "id": "E13-D209",
+          "speaker": "值班编辑",
+          "listener": "诺拉",
+          "text": "They've already copied it. We can't take those down ourselves.",
+          "translationZh": "别人都存了。那些我们自己删不了。",
+          "tone": "交代本站操作的边界",
+          "start": 13,
+          "end": 16.92
+        },
+        {
+          "id": "E13-D210",
+          "speaker": "诺拉",
+          "listener": "值班编辑",
+          "text": "I know. Take ours down. I'll tell her what we did.",
+          "translationZh": "我知道。先撤我们的。我告诉她已经做了什么。",
+          "tone": "不许诺全网消失",
+          "start": 17.22,
+          "end": 21.54
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 12,
+          "start": "抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。",
+          "action": "编辑提醒撤原片会带走整条推荐入口。诺拉撤本站原采访视频、由它抽出的截图和缩略图，保留更正告知；手机上别人保存的副本仍在播放，她将播放器关掉，不声称副本消失。",
+          "end": "本站原片、相关截图和推荐位撤下，外部副本继续流传。",
+          "dialogueCueIds": [
+            "E13-D019",
+            "E13-D020"
+          ],
+          "sourceShotIds": [
+            "E13-SH010"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        },
+        {
+          "duration": 18,
+          "start": "本站原片、相关截图和推荐位撤下，外部副本继续流传。",
+          "action": "推荐位变灰，编辑把另一个稿件补上。诺拉准备给玛拉发通知，停在原来附着采访问题的草稿上，将那些问题全删了。",
+          "end": "诺拉留下处理结果，采访提纲翻到桌面朝下。",
+          "dialogueCueIds": [
+            "E13-D209",
+            "E13-D210"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 20
+        }
+      ],
+      "viewerEntry": "抬头画面与儿童原声联用造成定位被确认；待撤的是本站原片和相关截图。",
+      "viewerExit": "诺拉留下处理结果，采访提纲翻到桌面朝下。",
+      "cutTrigger": "她把提纲扣下拨电话，切到不再索取的单独留言。",
+      "next": "接E13-SH011；她把提纲扣下拨电话，切到不再索取的单独留言。"
+    },
+    {
+      "id": "E13-SH011",
+      "sceneId": "E13-SC03",
+      "sourceShotIds": [
+        "E13-SH011"
+      ],
+      "duration": 10,
+      "characters": [
+        "NORA"
+      ],
+      "onScreenCharacterIds": [
+        "NORA"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "一句实际处理结果和道歉，没有向对方要新材料或谅解。",
+      "framing": "西桌东南侧75mm诺拉中近景，手机贴耳、翻扣提纲在画幅下缘，编辑不入画。",
+      "composition": "午间编辑部，诺拉在西桌重开先前自己的采访原片，女值班编辑站东侧。屏幕一侧是诊所门口围堵，另一侧是她当时留下的信件抬头与孩子原声。 本镜画内角色：NORA。",
+      "camera": "固定10秒，留言完放下电话，不再追拨。",
+      "focus": "一句实际处理结果和道歉，没有向对方要新材料或谅解。",
+      "start": "诺拉留下处理结果，采访提纲翻到桌面朝下。",
+      "action": "电话转语音信箱。诺拉将采访提纲翻扣，不问新问题，只说本站原片和截图已撤，随后把手机放回右侧，不再追拨。",
+      "end": "她没换来回复或新采访，继续承担撤图损失。",
+      "sound": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。 只听诺拉语音信箱留言，无玛拉答复。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E13-D021",
+          "speaker": "诺拉",
+          "listener": "玛拉（语音留言）",
+          "text": "Our video's down. The photos too. I'm sorry. You don't have to call me back.",
+          "translationZh": "我们的视频撤了，照片也是。对不起。你不用给我回电话。",
+          "tone": "留言只交代已做的事，不索取回应",
+          "start": 1,
+          "end": 8.8
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 10,
+          "start": "诺拉留下处理结果，采访提纲翻到桌面朝下。",
+          "action": "电话转语音信箱。诺拉将采访提纲翻扣，不问新问题，只说本站原片和截图已撤，随后把手机放回右侧，不再追拨。",
+          "end": "她没换来回复或新采访，继续承担撤图损失。",
+          "dialogueCueIds": [
+            "E13-D021"
+          ],
+          "sourceShotIds": [
+            "E13-SH011"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 12
+        }
+      ],
+      "viewerEntry": "诺拉留下处理结果，采访提纲翻到桌面朝下。",
+      "viewerExit": "她没换来回复或新采访，继续承担撤图损失。",
+      "cutTrigger": "电话离手，下一场轮到主角决定是否使用患者的遭遇。",
+      "next": "本场完成，按正式EP场序转场；电话离手，下一场轮到主角决定是否使用患者的遭遇。"
+    },
+    {
+      "id": "E13-SH012",
+      "sceneId": "E13-SC04",
+      "sourceShotIds": [
+        "E13-SH012"
+      ],
+      "duration": 26,
+      "characters": [
+        "LUIGI-DETENTION",
+        "HELEN"
+      ],
+      "onScreenCharacterIds": [
+        "LUIGI-DETENTION",
+        "HELEN"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "律师要求他说出删前言的原因，患者不再承担他的论证。",
+      "framing": "会见桌西侧40mm双人中景，青年北、海伦南，整页声明与遮名截图在中间。",
+      "composition": "次日会见室固定桌北侧仍是灰衣青年，海伦坐南，门在南。桌上是一整页声明和获玛拉许可后遮名的诊所入口截图，双方手腕自由。 本镜画内角色：LUIGI-DETENTION,HELEN。",
+      "camera": "固定26秒，前言折到背面又摊开，由青年自己决定收回。",
+      "focus": "律师要求他说出删前言的原因，患者不再承担他的论证。",
+      "start": "灰衣青年北侧双腕自由，整页草稿在北、遮名截图桌中；海伦南侧，笔在夹边。",
+      "action": "会见桌上，海伦放下青年写过的整页声明，旁边是获母亲许可遮名的截图。青年看完入口被堵的画面，把声明第一段折到背面。\n海伦把折到背面的第一段重新摊平，原来准备讲拒赔背景。青年看过诊所门口截图，把那一段往自己这边收回。",
+      "end": "桌面只留下反骚扰段，拒赔经历不再作为发言前提。",
+      "sound": "会见室低通风声和纸页摩擦；南门外只有不可辨脚步。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E13-D022",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "All of it?",
+          "translationZh": "整页？",
+          "tone": "等他确定发布范围",
+          "start": 1,
+          "end": 2.8
+        },
+        {
+          "id": "E13-D023",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "Not the first paragraph.",
+          "translationZh": "第一段不要。",
+          "tone": "折掉自己用来解释的背景",
+          "start": 3.1,
+          "end": 5.9
+        },
+        {
+          "id": "E13-D211",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "You wrote this part. Why take it out now?",
+          "translationZh": "这段是你写的，现在为什么删？",
+          "tone": "确认是他的决定",
+          "start": 12,
+          "end": 15.53
+        },
+        {
+          "id": "E13-D212",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "It's her daughter. She didn't ask to be in my statement.",
+          "translationZh": "那是她女儿，她没答应让我拿来说。",
+          "tone": "停止替她安排角色",
+          "start": 15.83,
+          "end": 20.14
+        },
+        {
+          "id": "E13-D213",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "Then we leave her out.",
+          "translationZh": "那就不写她。",
+          "tone": "执行明确边界",
+          "start": 20.44,
+          "end": 22.4
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 11,
+          "start": "灰衣青年北侧双腕自由，整页草稿在北、遮名截图桌中；海伦南侧，笔在夹边。",
+          "action": "会见桌上，海伦放下青年写过的整页声明，旁边是获母亲许可遮名的截图。青年看完入口被堵的画面，把声明第一段折到背面。",
+          "end": "声明先移掉讲患者经历的开头，截图不获公开授权。",
+          "dialogueCueIds": [
+            "E13-D022",
+            "E13-D023"
+          ],
+          "sourceShotIds": [
+            "E13-SH012"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 13
+        },
+        {
+          "duration": 15,
+          "start": "声明先移掉讲患者经历的开头，截图不获公开授权。",
+          "action": "海伦把折到背面的第一段重新摊平，原来准备讲拒赔背景。青年看过诊所门口截图，把那一段往自己这边收回。",
+          "end": "桌面只留下反骚扰段，拒赔经历不再作为发言前提。",
+          "dialogueCueIds": [
+            "E13-D211",
+            "E13-D212",
+            "E13-D213"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 17
+        }
+      ],
+      "viewerEntry": "让当事人对支持他的人的行为设边界，而不再借患者抬高自己。",
+      "viewerExit": "桌面只留下反骚扰段，拒赔经历不再作为发言前提。",
+      "cutTrigger": "青年选好只发反骚扰段，切律师确认对支持者也适用的代价。",
+      "next": "接E13-SH013；青年选好只发反骚扰段，切律师确认对支持者也适用的代价。"
+    },
+    {
+      "id": "E13-SH013",
+      "sceneId": "E13-SC04",
+      "sourceShotIds": [
+        "E13-SH013"
+      ],
+      "duration": 30,
+      "characters": [
+        "HELEN",
+        "LUIGI-DETENTION"
+      ],
+      "onScreenCharacterIds": [
+        "HELEN"
+      ],
+      "offscreenCharacterIds": [
+        "LUIGI-DETENTION"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "筹款者反对的可能被说清，青年坚持，律师承诺不添加自己的开场。",
+      "framing": "青年西肩旁朝南65mm海伦中近景，签署的页和青年笔手在下前景。",
+      "composition": "次日会见室固定桌北侧仍是灰衣青年，海伦坐南，门在南。桌上是一整页声明和获玛拉许可后遮名的诊所入口截图，双方手腕自由。 本镜画内角色：HELEN。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定30秒，海伦收页后仍留青年放下笔的手。",
+      "focus": "筹款者反对的可能被说清，青年坚持，律师承诺不添加自己的开场。",
+      "start": "桌面只留下反骚扰段，拒赔经历不再作为发言前提。",
+      "action": "海伦指出被折走的一段是玛拉拒赔经历，青年将停骚扰那段留正面，签上自己的名字。她问发出会否得罪筹款者，他没有加回那段背景。\n海伦将签好的一段收进文件夹，青年仍看着截图，想补一个限定，又把笔搁下。她不替他把责任推给不明身份的少数人。",
+      "end": "发布授权保持为签署的反骚扰段，患者身份和背景不附上。",
+      "sound": "会见室低通风声和纸页摩擦；南门外只有不可辨脚步。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E13-D024",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "Some of your fundraisers won't like this.",
+          "translationZh": "有些替你筹款的人不会喜欢这段。",
+          "tone": "只说会失去谁的支持",
+          "start": 1,
+          "end": 4.8
+        },
+        {
+          "id": "E13-D025",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "Post that part. Put my name on it.",
+          "translationZh": "就发这段，署我的名字。",
+          "tone": "签字，不另加一段自我说明",
+          "start": 5.1,
+          "end": 9.4
+        },
+        {
+          "id": "E13-D214",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "Even the ones raising money for me.",
+          "translationZh": "替我筹款的也一样。",
+          "tone": "把禁骚扰范围说到自己人",
+          "start": 15,
+          "end": 17.75
+        },
+        {
+          "id": "E13-D215",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "I'll post exactly what you signed. No introduction.",
+          "translationZh": "我就发你签的这段，不另加开场白。",
+          "tone": "不替他恢复道德辩解",
+          "start": 18.05,
+          "end": 21.18
+        },
+        {
+          "id": "E13-D216",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "Okay.",
+          "translationZh": "好。",
+          "tone": "接受可能损失支持",
+          "start": 21.48,
+          "end": 22.58
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 14,
+          "start": "桌面只留下反骚扰段，拒赔经历不再作为发言前提。",
+          "action": "海伦指出被折走的一段是玛拉拒赔经历，青年将停骚扰那段留正面，签上自己的名字。她问发出会否得罪筹款者，他没有加回那段背景。",
+          "end": "声明署名但不带患者细节，海伦收起待正式发布。",
+          "dialogueCueIds": [
+            "E13-D024",
+            "E13-D025"
+          ],
+          "sourceShotIds": [
+            "E13-SH013"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 16
+        },
+        {
+          "duration": 16,
+          "start": "声明署名但不带患者细节，海伦收起待正式发布。",
+          "action": "海伦将签好的一段收进文件夹，青年仍看着截图，想补一个限定，又把笔搁下。她不替他把责任推给不明身份的少数人。",
+          "end": "发布授权保持为签署的反骚扰段，患者身份和背景不附上。",
+          "dialogueCueIds": [
+            "E13-D214",
+            "E13-D215",
+            "E13-D216"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 18
+        }
+      ],
+      "viewerEntry": "桌面只留下反骚扰段，拒赔经历不再作为发言前提。",
+      "viewerExit": "发布授权保持为签署的反骚扰段，患者身份和背景不附上。",
+      "cutTrigger": "正式授权进入蓝夹，接真实发布而非再说一次原则。",
+      "next": "本场完成，按正式EP场序转场；正式授权进入蓝夹，接真实发布而非再说一次原则。"
+    },
+    {
+      "id": "E13-SH014",
+      "sceneId": "E13-SC05",
+      "sourceShotIds": [
+        "E13-SH014"
+      ],
+      "duration": 9,
+      "characters": [
+        "HELEN"
+      ],
+      "onScreenCharacterIds": [
+        "HELEN"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "发布完成后反对留言出现，她保存已发布版本。",
+      "framing": "海伦西肩后65mm电脑与签署页近景，正文不含患者细节，海伦只留肩和手。",
+      "composition": "当晚海伦办公室，西桌电脑面对她，蓝夹已合，东侧座位空着。公开渠道草稿只有签署的反骚扰段，没有诊所与患者信息。 本镜画内角色：HELEN。",
+      "camera": "固定9秒，不切评论者头像或想象人群。",
+      "focus": "发布完成后反对留言出现，她保存已发布版本。",
+      "start": "夜间海伦办公室，蓝夹在中央桌西侧，签字声明已摆在工作电脑旁；她坐桌南侧。",
+      "action": "海伦将获授权的一段声明发到正式渠道，确认公开版本不带诊所地址和患者细节。几条声援账号的反对留言随后刷新，她没有撤回，保存公开版本与交付时间。",
+      "end": "声明留在公开渠道，支持者开始攻击青年，签字纸回蓝夹。",
+      "sound": "发送轻响与键盘底声，无新增声明朗读。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [],
+      "overlay": [
+        {
+          "text": "HE'S BEEN SCRIPTED. / 他被人安排好台词了。",
+          "start": 4,
+          "end": 8,
+          "position": "公开评论后期"
+        }
+      ],
+      "generationSegments": [
+        {
+          "duration": 9,
+          "start": "夜间海伦办公室，蓝夹在中央桌西侧，签字声明已摆在工作电脑旁；她坐桌南侧。",
+          "action": "海伦将获授权的一段声明发到正式渠道，确认公开版本不带诊所地址和患者细节。几条声援账号的反对留言随后刷新，她没有撤回，保存公开版本与交付时间。",
+          "end": "声明留在公开渠道，支持者开始攻击青年，签字纸回蓝夹。",
+          "dialogueCueIds": [],
+          "sourceShotIds": [
+            "E13-SH014"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 11
+        }
+      ],
+      "viewerEntry": "完成上一场选择的真实对外动作。",
+      "viewerExit": "声明留在公开渠道，支持者开始攻击青年，签字纸回蓝夹。",
+      "cutTrigger": "她不撤回，数周后转实际保存争议资料。",
+      "next": "本场完成，按正式EP场序转场；她不撤回，数周后转实际保存争议资料。"
+    }
+  ],
+  "continuityNote": "承接E12，钱确实已用于治疗，和解正式调取例外仍保留，但无须接受媒体采访。手机从右手收入右风衣袋后才牵艾莉，蓝色文件夹始终左臂，侧廊门禁由保安完成。保安GUARD-CLINIC为40岁黑人男性，深蓝工作夹克、工牌，声音平静，非警员；无对主播的秘密指使。E07患者号已遮，但玛拉选择拍清诊所信件抬头并保留艾莉原声；本集回看原视频发现二者联用造成定位。记者撤本站原片、截图、缩略图与推荐位，不能抹除既有副本。声明由海伦带到办公室后发布，不让羁押会见室出现手机即时反馈。",
+  "dramaturgy": {
+    "openingQuestion": "收款后的玛拉能否带孩子按预约进门，而不先接受公众审问？",
+    "pursuit": "母亲试图自证又收回照片，随后只争一条能进治疗区的通路；记者撤源图，青年删掉用患者经历辩解的段落。",
+    "reversal": "钱解决了付款，却使主播认为自己有资格要她报数字；青年发停止声明也被指受控制。",
+    "cost": "孩子暂不愿继续走，记者失去推荐位，青年损失一部分声援。",
+    "cliffhanger": "停止围堵的短声明已经发布，授权渠道出现对青年的攻击，他收不回全部传播。",
+    "nextEpisodeBridge": "E14从该停止的骚扰转向该留下的日志，患者代理要靠正式授权行动。"
+  },
+  "productionUnitNote": "旧E编号只作生产来源；正式观众分集依当前24集短剧场序。长镜按generationSegments连续制作，段间继承人物/道具/轴线。"
+}

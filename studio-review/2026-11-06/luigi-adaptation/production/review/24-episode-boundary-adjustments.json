@@ -1,0 +1,9 @@
+{
+  "scope": "Three explicit orientation metadata corrections; scene prose, shot actions, durations and dialogue are unchanged",
+  "changes": [
+    {"shotId": "E02-SH001", "path": ["overlay", 0, "text"], "before": "EARLIER THAT MORNING / 当天稍早", "after": "BEFORE THE SHOOTING / 枪击前", "reason": "The escort cold open and shooting morning are different days."},
+    {"shotId": "E02-SH001", "path": ["viewerEntry"], "before": "枪声已发生，还不知道青年前几个小时的行动。", "after": "已见青年被押送，还不知道他在案发当天清晨作了哪些选择。", "reason": "The audience has seen the escort, not yet the shooting."},
+    {"shotId": "E03-SH001", "path": ["overlay", 0, "text"], "before": "FIVE DAYS LATER / 五天后", "after": "DAYS LATER / 数日后", "reason": "The station scene occurs the night before the fifth-day morning scenes."}
+  ],
+  "mediaVerified": false
+}

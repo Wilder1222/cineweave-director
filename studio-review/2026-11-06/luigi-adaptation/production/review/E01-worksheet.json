@@ -1,0 +1,1540 @@
+{
+  "source": {
+    "type": "design",
+    "id": "DENIED-E01-text-coverage-3516cfda24df",
+    "version": 2,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "E01-SH001",
+    "E01-SH002",
+    "E01-SH003",
+    "E02-SH001",
+    "E02-SH002",
+    "E02-SH003",
+    "E02-SH004",
+    "E02-SH005",
+    "E02-SH007",
+    "E02-SH008",
+    "E02-SH009",
+    "E02-SH010",
+    "E02-SH011",
+    "E02-SH012"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "E01-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：南行突然受阻，镜头却把疼痛动作当作可争抢的表情。；入镜已知：只见橙色身体处在警员与栏杆之间。；本镜新知：南行突然受阻，镜头却把疼痛动作当作可争抢的表情。；实际写出的动作：南边警员抬掌拦住横穿通道的人，队列忽然收短。路易吉的右脚已落下，上身被步幅扯住，腕链撞在橙色布料上。西边立刻有人举高手机。现场记者对路易吉说本镜第1句英语对白，从西侧抢着喊，喊声穿过旋翼。他没有看喊声，把下一步缩小。",
+      "sourceLocator": "season/E01.json#/shots/0"
+    },
+    {
+      "role": "performance",
+      "shotId": "E01-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "北向南队列已走到通道中段，右脚落地，身前铐连腰链，无背包。 → 青年第二步缩短，两警员仍在两侧，前方道路开始腾出。；现场记者向路易吉：Luigi! Here! Look up!；从西侧抢着喊，喊声穿过旋翼",
+      "sourceLocator": "season/E01.json#/shots/0"
+    },
+    {
+      "role": "staging",
+      "shotId": "E01-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "前景西栏杆和举起的手机边缘；中景橙衣青年夹在两警员间；北直升机在后景，南行通道向画面右下延伸。；起态：北向南队列已走到通道中段，右脚落地，身前铐连腰链，无背包。；出态：青年第二步缩短，两警员仍在两侧，前方道路开始腾出。",
+      "sourceLocator": "season/E01.json#/shots/0"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E01-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中全景，西南向东北，轴西侧；从鞋至头顶完整容纳青年和两侧警员。；相机：固定在西南栏杆内许可区；不追人脸，让队列急停和手机举起在同一画面内发生。；焦点：保持三人及脚步同一可读范围，不切焦追闪光。",
+      "sourceLocator": "season/E01.json#/shots/0"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E01-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E01-SH001.txt；9秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E01.json#/shots/0"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E01-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "青年第二步缩短，两警员仍在两侧，前方道路开始腾出。；切点：缩短的第二步尚未落地，切近看警员怎样接住这次停顿。；接口：同场保持轴西侧，接上臂扶持和青年要空间，不先拍不到的腰链特写。",
+      "sourceLocator": "season/E01.json#/shots/0"
+    },
+    {
+      "role": "direction",
+      "shotId": "E01-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：他在争取身体空间，警员配合后才继续走。；入镜已知：他突然停了半步，原因还可能被误读。；本镜新知：他在争取身体空间，警员配合后才继续走。；实际写出的动作：警员甲握一下他的上臂，给他停住的空间。警员甲对路易吉说本镜第1句英语对白，贴近问，手先托住上臂。路易吉呼气，肩膀落下，没有向喊声转头。路易吉对警员甲说本镜第2句英语对白，压低声音，等呼气后才答。甲松到只扶不拽，青年重新迈步。",
+      "sourceLocator": "season/E01.json#/shots/1"
+    },
+    {
+      "role": "performance",
+      "shotId": "E01-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "右脚已落、第二步缩短，身体暂被前方停步扯住；双腕身前、甲在上臂旁。 → 青年继续南行，甲轻扶上臂，双腕在身前连腰链。；警员甲向路易吉：Need a second?；贴近问，手先托住上臂 / 路易吉向警员甲：Just room.；压低声音，等呼气后才答",
+      "sourceLocator": "season/E01.json#/shots/1"
+    },
+    {
+      "role": "staging",
+      "shotId": "E01-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "青年居中，警员肩臂在两边；起态：右脚已落、第二步缩短，身体暂被前方停步扯住；双腕身前、甲在上臂旁。；出态：青年继续南行，甲轻扶上臂，双腕在身前连腰链。",
+      "sourceLocator": "season/E01.json#/shots/1"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E01-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中景，西侧向东南，容纳青年头至腰链及警员接触上臂。；相机：西侧与队列同速向南平移约一步；停步触发停机，恢复步伐再随行，不超过人。；焦点：保持脸、上臂接触和身前手铐都在中近景可读范围，不做手到脸的大幅切焦。",
+      "sourceLocator": "season/E01.json#/shots/1"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E01-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E01-SH002.txt；8秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E01.json#/shots/1"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E01-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "青年继续南行，甲轻扶上臂，双腕在身前连腰链。；切点：甲的握力放松，青年的肩线随下一步恢复向南。；接口：切南端斜看，轴线不变",
+      "sourceLocator": "season/E01.json#/shots/1"
+    },
+    {
+      "role": "direction",
+      "shotId": "E01-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：一次寻找踏板的抬眼已被数十部手机截取。；入镜已知：他重新走动，前方仍由警员挡着。；本镜新知：一次寻找踏板的抬眼已被数十部手机截取。；实际写出的动作：踏板近了，路易吉收起双手，目光落在脚下。前面的警员让到一旁，他抬眼看清车门，西侧快门顿时密起来。路易吉对警员甲说本镜第1句英语对白，对近旁警员说，不朝媒体喊。他把右脚移到踏板前，尚未抬起。深色大衣的市政官员在西后方挤入取景范围。",
+      "sourceLocator": "season/E01.json#/shots/2"
+    },
+    {
+      "role": "performance",
+      "shotId": "E01-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "距南车门两步，前铐低垂 → 到踏板前尚未上车；腰链仍在；路易吉向警员甲：Watch the chain.；对近旁警员说，不朝媒体喊",
+      "sourceLocator": "season/E01.json#/shots/2"
+    },
+    {
+      "role": "staging",
+      "shotId": "E01-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "南车门框在右前景，青年两步外中景，西媒体与官员后景。；起态：距南车门两步，前铐低垂；出态：到踏板前尚未上车；腰链仍在",
+      "sourceLocator": "season/E01.json#/shots/2"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E01-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中全景，南车门西侧朝北偏东，容纳青年头至脚、踏板和门框。；相机：固定南车门西侧朝北偏东，车门边缘给出终点；不后退把青年拍成巡游。；焦点：保持青年及车门踏板，不追后方官员。",
+      "sourceLocator": "season/E01.json#/shots/2"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E01-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E01-SH003.txt；9秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E01.json#/shots/2"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E01-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "到踏板前尚未上车；腰链仍在；切点：右脚停在踏板前，快门声切到诊所手机的短震。；接口：踏板前的抬眼已经被镜头抢走；冷开到此，回到案发当天清晨的酒店房间，以时间字卡、电话与室内空间重新定向。旋翼声结束，不假接成电话声。",
+      "sourceLocator": "season/E01.json#/shots/2"
+    },
+    {
+      "role": "direction",
+      "shotId": "E02-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：疼痛妨碍起身，他仍能处理别人的具体求助。；入镜已知：已见青年被押送，还不知道他在案发当天清晨作了哪些选择。；本镜新知：疼痛妨碍起身，他仍能处理别人的具体求助。；实际写出的动作：路易吉想从东床边站起，腰背绷住，改用左手撑床沿。北桌手机自动播出互助帖语音。互助帖患者录音对互助群成员说本镜第1句英语对白，疲倦的成年女声，急着证明没有遗漏。录音结束，他仍站着，等手能松开才去拿手机。",
+      "sourceLocator": "season/E01.json#/shots/3"
+    },
+    {
+      "role": "performance",
+      "shotId": "E02-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "青年坐东床沿，左手将撑床起身；手机北桌，黑包桌脚，无口罩。 → 他在桌边停下，右手拿手机；互助帖患者录音向互助群成员：They want the form again. I already sent it. I've got the receipt.；疲倦的成年女声，急着证明没有遗漏",
+      "sourceLocator": "season/E01.json#/shots/3"
+    },
+    {
+      "role": "staging",
+      "shotId": "E02-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "东床、西窗、北桌同见；起态：青年坐东床沿，左手将撑床起身；手机北桌，黑包桌脚，无口罩。；出态：他在桌边停下，右手拿手机",
+      "sourceLocator": "season/E01.json#/shots/3"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E02-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "全景，南门内朝北，轴西侧；相机：固定南门内中全景，东床和北桌相距两步同时可见；不把起身拍成倒地。；焦点：床沿支撑与身体同层可读，走向北桌时跟随人物对焦。",
+      "sourceLocator": "season/E01.json#/shots/3"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E02-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E02-SH001.txt；13秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E01.json#/shots/3"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E02-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "他在桌边停下，右手拿手机；切点：手机停止播放，他伸手把它拿起。；接口：同场桌边看他的回复",
+      "sourceLocator": "season/E01.json#/shots/3"
+    },
+    {
+      "role": "direction",
+      "shotId": "E02-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：他懂得保留证据、遮住隐私，却仍不回应家人。；入镜已知：他接下了陌生人的问题。；本镜新知：他懂得保留证据、遮住隐私，却仍不回应家人。；实际写出的动作：他按住录音键，从笔记里翻出自己列的项目。路易吉对互助帖患者说本镜第1句英语对白，熟练给出步骤，末句因看到附件截图而补上。松开键后回听开头，只把这条语音发回互助帖。手机再次震动，家人的姓名盖住发送成功。",
+      "sourceLocator": "season/E01.json#/shots/4"
+    },
+    {
+      "role": "performance",
+      "shotId": "E02-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "他按住录音键，左手压页角 → 互助语音发出；手机右手，左手压笔记，家人来信覆盖屏幕。；路易吉向互助帖患者：Keep that receipt. Ask the clinic for a list of the attachments. And cover your address before you post.；熟练给出步骤，末句因看到附件截图而补上",
+      "sourceLocator": "season/E01.json#/shots/4"
+    },
+    {
+      "role": "staging",
+      "shotId": "E02-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "手机右手，笔记摊在北桌；起态：他按住录音键，左手压页角；出态：互助语音发出；手机右手，左手压笔记，家人来信覆盖屏幕。",
+      "sourceLocator": "season/E01.json#/shots/4"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E02-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中景，桌西侧朝东北；相机：固定北桌西侧中景，纸和录音手在下沿；保留录音—回听—发送的动作。；焦点：保持脸与手机，不要求读私人病历。",
+      "sourceLocator": "season/E01.json#/shots/4"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E02-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E02-SH002.txt；15秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E01.json#/shots/4"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E02-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "互助语音发出；手机右手，左手压笔记，家人来信覆盖屏幕。；切点：家人姓名盖住发送成功，拇指停住。；接口：接家人消息与未回复",
+      "sourceLocator": "season/E01.json#/shots/4"
+    },
+    {
+      "role": "direction",
+      "shotId": "E02-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：回复被他主动删掉；家人只能继续等。；入镜已知：他对陌生人说话清楚，对家人的话还没发出。；本镜新知：回复被他主动删掉；家人只能继续等。；实际写出的动作：他录下原有开头“I know you've been calling. I'm—”，走廊轮声使他停住。放开录音键，听见空白后删掉；重新按键说“I'm all right. I'll call you when I can.”，回听时看着发送键，仍删除，最后扣下手机。",
+      "sourceLocator": "season/E01.json#/shots/5"
+    },
+    {
+      "role": "performance",
+      "shotId": "E02-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "手机右手停家人对话，左手离开笔记，纸本仍摊北桌。 → 两条家人回复都删除，手机扣桌，互助帖语音已经单独发送。；路易吉向未发送的家人语音：I know you've been calling. I'm—；想交代又停止，第二句没能说下去 / 路易吉向未发送的家人语音：I'm all right. I'll call you when I can.；第二次换成完整、听起来正常的答复，仍无法发送",
+      "sourceLocator": "season/E01.json#/shots/5"
+    },
+    {
+      "role": "staging",
+      "shotId": "E02-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "手机上方，纸本下方，包靠桌脚；起态：手机右手停家人对话，左手离开笔记，纸本仍摊北桌。；出态：两条家人回复都删除，手机扣桌，互助帖语音已经单独发送。",
+      "sourceLocator": "season/E01.json#/shots/5"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E02-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "近景，北桌西南看手与脸；相机：固定桌西南近景，门在画外；先听推车再见眼线转移，不给预先惊吓反打。；焦点：保持脸和按住的拇指，电话界面后期处理。",
+      "sourceLocator": "season/E01.json#/shots/5"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E02-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E02-SH003.txt；22秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E01.json#/shots/5"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E02-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "两条家人回复都删除，手机扣桌，互助帖语音已经单独发送。；切点：手机扣到桌上，南门敲响。；接口：同场准备离开",
+      "sourceLocator": "season/E01.json#/shots/5"
+    },
+    {
+      "role": "direction",
+      "shotId": "E02-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：他把笔记带走，自己决定离开房间。；入镜已知：他刚选择不联系家人，普通工作来敲门。；本镜新知：他把笔记带走，自己决定离开房间。；实际写出的动作：敲门响了两下。旅馆清洁员画外声对路易吉说本镜第1句英语对白，在门外等答复。他看一眼门，把笔记合上放进黑包。路易吉对旅馆清洁员画外声说本镜第2句英语对白，压住急促，隔门答复。推车继续走。他把手机放进包内，拉好拉链；等轮声远开，背起包，转动门把。",
+      "sourceLocator": "season/E01.json#/shots/6"
+    },
+    {
+      "role": "performance",
+      "shotId": "E02-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "手机桌面，笔记摊开，背包桌脚 → 手机笔记都进包，包双肩；离开南门，无口罩。；旅馆清洁员画外声向路易吉：Housekeeping. Towels?；在门外等答复 / 路易吉向旅馆清洁员画外声：No, thanks.；压住急促，隔门答复",
+      "sourceLocator": "season/E01.json#/shots/6"
+    },
+    {
+      "role": "staging",
+      "shotId": "E02-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "北桌在左后，南门在右前；起态：手机桌面，笔记摊开，背包桌脚；出态：手机笔记都进包，包双肩；离开南门，无口罩。",
+      "sourceLocator": "season/E01.json#/shots/6"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E02-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中全景，西侧朝南门；相机：固定西侧中全景，北桌到南门完整可见；不跳过收手机、收本、背包三个动作。；焦点：随人从桌到门，装包动作保持可见。",
+      "sourceLocator": "season/E01.json#/shots/6"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E02-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E02-SH004.txt；13秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E01.json#/shots/6"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E02-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "手机笔记都进包，包双肩；离开南门，无口罩。；切点：门把转下，切到另一人的早餐选择。；接口：本场结果成立后切入 E02-SC02（HOTEL-BREAKFAST，清晨·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E01.json#/shots/6"
+    },
+    {
+      "role": "direction",
+      "shotId": "E02-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：冻结招聘来自一个有现实商业压力但主动签字的选择；不以家庭温情抹去责任。；入镜已知：沃德右手业务电话、左手咖啡，会议资料在盘下。；本镜新知：冻结已获沃德签字；他结束业务电话接儿子，服务员的盘子仍未收。；实际写出的动作：服务员要收盘，沃德用左掌挡住，把杯子压到人力表翘起的角上。运营主管电话声对沃德说英语“We can still make the number if we freeze hiring. Reviews will take longer, though. I need you to sign off.”；把数字收益与等待代价一起交给决策人。他左手从纸边拿笔，笔尖停在冻结栏外，没有落下。沃德对运营主管电话声说英语“And if we don't freeze it?”；问有没有另一条能保住季度指标的路。电话那头翻页，他把咖啡挪开，杯底湿印留在空缺岗位旁。运营主管电话声对沃德说英语“We miss the quarter. Those are the choices I've got.”；把实际取舍交还给签字人。沃德对运营主管电话声说英语“Then freeze hiring till the end of the quarter.”；作出决定，不向对方寻求安慰。沃德在延期框签名，把笔放下，却没立刻挂电话。沃德对运营主管电话声说英语“Monday, send me the wait times. In days.”；追加管理要求。他把签字页压回公文袋上，儿子来电亮起。业务电话还在说，他先结束这一通。",
+      "sourceLocator": "season/E01.json#/shots/7"
+    },
+    {
+      "role": "performance",
+      "shotId": "E02-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "沃德右手业务电话、左手咖啡，会议资料在盘下。 → 冻结已获沃德签字，业务电话结束，儿子来电待接；服务员的盘子仍未收。；运营主管电话声向沃德：We can still make the number if we freeze hiring. Reviews will take longer, though. I need you to sign off.；把数字收益与等待代价一起交给决策人 / 沃德向运营主管电话声：And if we don't freeze it?；问有没有另一条能保住季度指标的路 / 运营主管电话声向沃德：We miss the quarter. Those are the choices I've got.；把实际取舍交还给签字人 / 沃德向运营主管电话声：Then freeze hiring till the end of the quarter.；作出决定，不向对方寻求安慰 / 沃德向运营主管电话声：Monday, send me the wait times. In days.；追加管理要求",
+      "sourceLocator": "season/E01.json#/shots/7"
+    },
+    {
+      "role": "staging",
+      "shotId": "E02-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "杯、签字页、薄公文袋均在沃德左手可达处；服务员立西侧边缘，不与电话里的主管混成现场角色。；起态：沃德右手业务电话、左手咖啡，会议资料在盘下。；出态：冻结已获沃德签字，业务电话结束，儿子来电待接；服务员的盘子仍未收。",
+      "sourceLocator": "season/E01.json#/shots/7"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E02-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "东桌西南侧单人中景，桌面只占下缘；相机：固定中景以一次连续签字选择承受两条后果，不切成文件宣读；儿子来电才换关系角度。；焦点：人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "sourceLocator": "season/E01.json#/shots/7"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E02-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E02-SH005.txt；45秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E01.json#/shots/7"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E02-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "冻结已获沃德签字，业务电话结束，儿子来电待接；服务员的盘子仍未收。；切点：冻结已获沃德签字；他结束业务电话接儿子，服务员的盘子仍未收。；接口：因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "sourceLocator": "season/E01.json#/shots/7"
+    },
+    {
+      "role": "direction",
+      "shotId": "E02-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：周六约定需要绕开分居伴侣，家庭并未统一等待他。；入镜已知：他把工作问题留到周一。；本镜新知：周六约定需要绕开分居伴侣，家庭并未统一等待他。；实际写出的动作：看见儿子来电，他结束业务电话，接通后用纸巾擦手。沃德对电话中的儿子说本镜第1句英语对白，把家庭约定排进日程。他把纸巾放桌边，左手重新拿笔，在一张干净餐巾上写时间。孩子似乎要把电话递给别人，他把笔放回桌面，立刻压低声音。沃德对电话中的儿子说本镜第2句英语对白，太快回绝，随后放缓。 对面没有立刻结束这个话题，他听完才把餐巾上写错的时间划掉重写。",
+      "sourceLocator": "season/E01.json#/shots/8"
+    },
+    {
+      "role": "performance",
+      "shotId": "E02-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "沃德挂业务电话，另一个电话进来 → 未写完的时间留餐巾、笔已桌面；电话右耳，左手收资料。；沃德向电话中的儿子：Saturday's fine. What time did your mom say?；把家庭约定排进日程 / 沃德向电话中的儿子：No, don't put her on. Text me.；太快回绝，随后放缓",
+      "sourceLocator": "season/E01.json#/shots/8"
+    },
+    {
+      "role": "staging",
+      "shotId": "E02-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "手机右手，窗光照半边脸；起态：沃德挂业务电话，另一个电话进来；出态：未写完的时间留餐巾、笔已桌面；电话右耳，左手收资料。",
+      "sourceLocator": "season/E01.json#/shots/8"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E02-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中景，西侧朝东桌；相机：固定西侧中景，让擦手、记时间和突然回绝构成关系，不补家人画面。；焦点：保持脸和餐巾所在桌沿，儿子不出镜。",
+      "sourceLocator": "season/E01.json#/shots/8"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E02-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E02-SH007.txt；19秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E01.json#/shots/8"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E02-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "未写完的时间留餐巾、笔已桌面；电话右耳，左手收资料。；切点：未写完的时间停在餐巾上，服务员再次来收盘。；接口：同场离开早餐厅",
+      "sourceLocator": "season/E01.json#/shots/8"
+    },
+    {
+      "role": "direction",
+      "shotId": "E02-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：私人通话延续到案发门前。；入镜已知：孩子仍在电话上，早餐时间已经用完。；本镜新知：私人通话延续到案发门前。；实际写出的动作：服务员终于端走盘子。沃德抽回资料塞进公文袋，把薄袋夹在左腋。沃德对电话中的儿子说本镜第1句英语对白，用熟悉的小事续住电话。他离开椅子，经过南门前回看桌面，发现笔还在，返一步用左手拿走笔，插进袋边笔环，电话一直没挂。 他把改过时间的餐巾折好收进左袋，再走出南门，电话一直未断。",
+      "sourceLocator": "season/E01.json#/shots/9"
+    },
+    {
+      "role": "performance",
+      "shotId": "E02-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "资料叠起，手机右耳 → 薄公文袋夹左腋，电话右耳，笔收袋边笔环，离早餐厅。；沃德向电话中的儿子：Tell me about the plane. I'm heading out.；用熟悉的小事续住电话",
+      "sourceLocator": "season/E01.json#/shots/9"
+    },
+    {
+      "role": "staging",
+      "shotId": "E02-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "桌前景，南出口后景；起态：资料叠起，手机右耳；出态：薄公文袋夹左腋，电话右耳，笔收袋边笔环，离早餐厅。",
+      "sourceLocator": "season/E01.json#/shots/9"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E02-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中全景，东桌西侧向南门；相机：固定东桌西侧向南门中全景，允许为忘拿的笔折返；不跟出门增加无效路程。；焦点：人及桌面取笔动作同层，离场才跟焦。",
+      "sourceLocator": "season/E01.json#/shots/9"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E02-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E02-SH008.txt；16秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E01.json#/shots/9"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E02-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "薄公文袋夹左腋，电话右耳，笔收袋边笔环，离早餐厅。；切点：他拿笔再次出南门，街道倒车提示进入。；接口：本场结果成立后切入 E02-SC03（HOTEL，清晨·枪响时）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E01.json#/shots/9"
+    },
+    {
+      "role": "direction",
+      "shotId": "E02-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：普通人各忙自己的事，西边来者还可以继续经过。；入镜已知：电话没挂，地点回到已见过的案发酒店。；本镜新知：普通人各忙自己的事，西边来者还可以继续经过。；实际写出的动作：沃德从北旋转门出来，薄袋夹左腋电话贴右耳；行李员对旅客说原有提醒，沃德让箱、取会议卡后回答儿子周六与机翼问题。卡收回左袋；青年在西人行道出现。",
+      "sourceLocator": "season/E01.json#/shots/10"
+    },
+    {
+      "role": "performance",
+      "shotId": "E02-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "沃德北门外右耳电话、薄公文袋夹左腋；东行李员收箱，青年将入西缘。 → 沃德卡已回左袋，电话右耳；路易吉从西人行道进入视线，行李员仍东门边。；行李员向旅客：Not that one. Just wait by the door, please.；纠正旅客，注意在行李而非青年 / 沃德向电话中的儿子：Saturday. I said Saturday. What happened to the wing?；先不耐烦重复约定，听到模型后改变话题",
+      "sourceLocator": "season/E01.json#/shots/10"
+    },
+    {
+      "role": "staging",
+      "shotId": "E02-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "北旋转门，东行李员，南车道；起态：沃德北门外右耳电话、薄公文袋夹左腋；东行李员收箱，青年将入西缘。；出态：沃德卡已回左袋，电话右耳；路易吉从西人行道进入视线，行李员仍东门边。",
+      "sourceLocator": "season/E01.json#/shots/10"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E02-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "全景，酒店西南朝东北；相机：固定西南全景，北门南车道东上客位同框；青年从西缘进入。；焦点：门前三层关系保持可读，不选武器为焦点。",
+      "sourceLocator": "season/E01.json#/shots/10"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E02-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E02-SH009.txt；24秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E01.json#/shots/10"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E02-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "沃德卡已回左袋，电话右耳；路易吉从西人行道进入视线，行李员仍东门边。；切点：灰夹克进入西侧空隙，沃德仍朝南。；接口：同场中景，电话与西侧来人",
+      "sourceLocator": "season/E01.json#/shots/10"
+    },
+    {
+      "role": "direction",
+      "shotId": "E02-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：路易吉主动放弃路过，转向目标。；入镜已知：青年从西来路进入，沃德不知道自己被认出。；本镜新知：路易吉主动放弃路过，转向目标。；实际写出的动作：沃德左手比划机翼，说完桌上放置与周六一起修的承诺。路易吉由西向东认出他，停步后主动转肩面向沃德，未继续路过。沃德放低手机仍听儿子。",
+      "sourceLocator": "season/E01.json#/shots/11"
+    },
+    {
+      "role": "performance",
+      "shotId": "E02-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "沃德手机右耳、会议卡回左袋；青年由西向东行。 → 青年转向沃德；沃德手机开始离耳，无其他持械者。；沃德向电话中的儿子：Leave it on my desk. Not the kitchen table. We can fix it Saturday.；先纠正模型放置位置，最后一句对儿子放软；此承诺全剧只完整听到一次",
+      "sourceLocator": "season/E01.json#/shots/11"
+    },
+    {
+      "role": "staging",
+      "shotId": "E02-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "沃德北门南沿中右，路易吉西人行道中左，南车道留出现实出口。；起态：沃德手机右耳、会议卡回左袋；青年由西向东行。；出态：青年转向沃德；沃德手机开始离耳，无其他持械者。",
+      "sourceLocator": "season/E01.json#/shots/11"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E02-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中全景，西南向东北，轴西侧；沃德中右，青年中左，能见步伐和上身。；相机：固定西南中全景，两个人的选择同框，不只拍沃德脸。；焦点：二人保持可读景深，不切焦把青年变成突然出现的幻影。",
+      "sourceLocator": "season/E01.json#/shots/11"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E02-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E02-SH010.txt；17秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E01.json#/shots/11"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E02-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "青年转向沃德；沃德手机开始离耳，无其他持械者。；切点：青年肩膀转定、重心向沃德移动。；接口：保持方向，以声响呈现枪击",
+      "sourceLocator": "season/E01.json#/shots/11"
+    },
+    {
+      "role": "direction",
+      "shotId": "E02-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：迈步、枪响与倒下是路易吉主动行为的连续后果。；入镜已知：青年已经选择改变行进方向。；本镜新知：迈步、枪响与倒下是路易吉主动行为的连续后果。；实际写出的动作：路易吉朝沃德迈一步，手臂在身前抬起，操作细节不显露。两声枪响，手机掉地，门边杯子滚向路缘。行李员蹲到柱后。路易吉看见沃德倒下，停一瞬，转身从西侧离开。",
+      "sourceLocator": "season/E01.json#/shots/12"
+    },
+    {
+      "role": "performance",
+      "shotId": "E02-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "路易吉注视沃德，手臂在身体前低处 → 沃德地面仅露衣角，手机仍亮；青年离西侧，无第二枪手。；无对白，以已写动作承载表演。",
+      "sourceLocator": "season/E01.json#/shots/12"
+    },
+    {
+      "role": "staging",
+      "shotId": "E02-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "沃德近北门；青年西侧；路缘南；起态：路易吉注视沃德，手臂在身体前低处；出态：沃德地面仅露衣角，手机仍亮；青年离西侧，无第二枪手。",
+      "sourceLocator": "season/E01.json#/shots/12"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E02-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中全景，西南侧，轴西侧；相机：固定西南中全景保留空间因果；不摇追逃路，不给操作与伤口细节。；焦点：保持迈步与倒下的关系，地面仅见衣角和手机。",
+      "sourceLocator": "season/E01.json#/shots/12"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E02-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E02-SH011.txt；10秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E01.json#/shots/12"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E02-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "沃德地面仅露衣角，手机仍亮；青年离西侧，无第二枪手。；切点：青年离开后，行李员才探出一点视线。；接口：枪声后留物件，再切警方回报",
+      "sourceLocator": "season/E01.json#/shots/12"
+    },
+    {
+      "role": "direction",
+      "shotId": "E02-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：离开画面不能撤销案发前到场的影像。；入镜已知：行凶者离开，但现场有独立目击者和固定记录。；本镜新知：离开画面不能撤销案发前到场的影像。；实际写出的动作：稍后南路缘拉起封锁线，那只纸杯还停在路边。警员甲问行李员，指向酒店门口摄像机。警员甲对警员乙与酒店值班人员说本镜第1句英语对白，把调查倒回主动到场。行李员指西边来路，手还在抖。乙带值班人员进北门，甲看一眼杯子，又抬头看摄像机。",
+      "sourceLocator": "season/E01.json#/shots/13"
+    },
+    {
+      "role": "performance",
+      "shotId": "E02-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "时间跳至警方到场；青年不在，杯子位置保持。 → 乙和酒店人员北门内，甲南路缘，影像调取开始。；警员甲向警员乙与酒店值班人员：Get the footage from before the shots, too. I want to see him coming in.；把调查倒回主动到场",
+      "sourceLocator": "season/E01.json#/shots/13"
+    },
+    {
+      "role": "staging",
+      "shotId": "E02-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "前景警员，北门旁监控机罩可见；起态：时间跳至警方到场；青年不在，杯子位置保持。；出态：乙和酒店人员北门内，甲南路缘，影像调取开始。",
+      "sourceLocator": "season/E01.json#/shots/13"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E02-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "全景，南侧封锁线向北酒店；相机：固定南封锁线外全景，以原杯子接回时间省略；不新增杜撰监控内容。；焦点：警方走向北门可读，摄像机是后景物，不读屏。",
+      "sourceLocator": "season/E01.json#/shots/13"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E02-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E02-SH012.txt；13秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E01.json#/shots/13"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E02-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "乙和酒店人员北门内，甲南路缘，影像调取开始。；切点：酒店人员带警员进入北门，摄像机留在门上方。；接口：本集结束。沃德倒下，青年离场，警方调取监控；下一集追问这次行动把青年带到了哪里。 下集从STATION展开：青年还能找到停留的地方吗；玛拉能否把照顾孩子和额外班次接起来？",
+      "sourceLocator": "season/E01.json#/shots/13"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "E01-SH001",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "南行突然受阻，镜头却把疼痛动作当作可争抢的表情。",
+        "audiencePayoff": "南行突然受阻，镜头却把疼痛动作当作可争抢的表情。",
+        "trigger": "北向南队列已走到通道中段，右脚落地，身前铐连腰链，无背包。；南边警员抬掌拦住横穿通道的人，队列忽然收短。路易吉的右脚已落下，上身被步幅扯住，腕链撞在橙色布料上。西边立刻有人举高手机。现场记者对路易吉说本镜第1句英语对白，从西侧抢着喊，喊声穿过旋翼。他没有看喊声，把下一步缩小。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "缩短的第二步尚未落地，切近看警员怎样接住这次停顿。；同场保持轴西侧，接上臂扶持和青年要空间，不先拍不到的腰链特写。",
+        "noMotionReason": "固定在西南栏杆内许可区；不追人脸，让队列急停和手机举起在同一画面内发生。；观看变化：南行突然受阻，镜头却把疼痛动作当作可争抢的表情。"
+      },
+      "camera": {
+        "shotScale": "中全景",
+        "position": "中全景，西南向东北，轴西侧；从鞋至头顶完整容纳青年和两侧警员。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中全景，西南向东北，轴西侧；从鞋至头顶完整容纳青年和两侧警员。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "保持三人及脚步同一可读范围，不切焦追闪光。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 前景西栏杆和举起的手机边缘；中景橙衣青年夹在两警员间；北直升机在后景，南行通道向画面右下延伸。",
+        "movementIntent": "固定在西南栏杆内许可区；不追人脸，让队列急停和手机举起在同一画面内发生。"
+      },
+      "composition": {
+        "layout": "前景西栏杆和举起的手机边缘；中景橙衣青年夹在两警员间；北直升机在后景，南行通道向画面右下延伸。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：南边警员抬掌拦住横穿通道的人，队列忽然收短。路易吉的右脚已落下，上身被步幅扯住，腕链撞在橙色布料上。西边立刻有人举高手机。现场记者对路易吉说本镜第1句英语对白，从西侧抢着喊，喊声穿过旋翼。他没有看喊声，把下一步缩小。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "南行突然受阻，镜头却把疼痛动作当作可争抢的表情。；保持三人及脚步同一可读范围，不切焦追闪光。"
+      },
+      "temporal": {
+        "durationSeconds": 9,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "南行突然受阻，镜头却把疼痛动作当作可争抢的表情。",
+          "path": "机位不移动。",
+          "start": "北向南队列已走到通道中段，右脚落地，身前铐连腰链，无背包。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "青年第二步缩短，两警员仍在两侧，前方道路开始腾出。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E01-SH001-F1",
+            "timeSeconds": 0,
+            "description": "保持三人及脚步同一可读范围，不切焦追闪光。"
+          }
+        ],
+        "edit": {
+          "entry": "北向南队列已走到通道中段，右脚落地，身前铐连腰链，无背包。",
+          "exit": "青年第二步缩短，两警员仍在两侧，前方道路开始腾出。；缩短的第二步尚未落地，切近看警员怎样接住这次停顿。",
+          "preferredTransition": "同场保持轴西侧，接上臂扶持和青年要空间，不先拍不到的腰链特写。",
+          "soundBridge": "北侧旋翼、西侧快门与记者声；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E01-SH002",
+      "decision": {
+        "primaryTechniqueId": "M03",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "他在争取身体空间，警员配合后才继续走。",
+        "audiencePayoff": "他在争取身体空间，警员配合后才继续走。",
+        "trigger": "右脚已落、第二步缩短，身体暂被前方停步扯住；双腕身前、甲在上臂旁。；警员甲握一下他的上臂，给他停住的空间。警员甲对路易吉说本镜第1句英语对白，贴近问，手先托住上臂。路易吉呼气，肩膀落下，没有向喊声转头。路易吉对警员甲说本镜第2句英语对白，压低声音，等呼气后才答。甲松到只扶不拽，青年重新迈步。",
+        "cameraMode": "moving",
+        "focusMode": "hold",
+        "exitMatch": "甲的握力放松，青年的肩线随下一步恢复向南。；切南端斜看，轴线不变"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "中景，西侧向东南，容纳青年头至腰链及警员接触上臂。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中景，西侧向东南，容纳青年头至腰链及警员接触上臂。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "保持脸、上臂接触和身前手铐都在中近景可读范围，不做手到脸的大幅切焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 青年居中，警员肩臂在两边",
+        "movementIntent": "西侧与队列同速向南平移约一步；停步触发停机，恢复步伐再随行，不超过人。"
+      },
+      "composition": {
+        "layout": "青年居中，警员肩臂在两边",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：警员甲握一下他的上臂，给他停住的空间。警员甲对路易吉说本镜第1句英语对白，贴近问，手先托住上臂。路易吉呼气，肩膀落下，没有向喊声转头。路易吉对警员甲说本镜第2句英语对白，压低声音，等呼气后才答。甲松到只扶不拽，青年重新迈步。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "他在争取身体空间，警员配合后才继续走。；保持脸、上臂接触和身前手铐都在中近景可读范围，不做手到脸的大幅切焦。"
+      },
+      "temporal": {
+        "durationSeconds": 8,
+        "cameraMotion": {
+          "type": "truck",
+          "motivation": "他在争取身体空间，警员配合后才继续走。",
+          "path": "西侧与队列同速向南平移约一步；停步触发停机，恢复步伐再随行，不超过人。",
+          "start": "右脚已落、第二步缩短，身体暂被前方停步扯住；双腕身前、甲在上臂旁。",
+          "acceleration": "仅执行作者本镜规定的启动与速度，不另加缓起：西侧与队列同速向南平移约一步；停步触发停机，恢复步伐再随行，不超过人。",
+          "peak": "依本镜作者运动描述，不统一套匀速：西侧与队列同速向南平移约一步；停步触发停机，恢复步伐再随行，不超过人。",
+          "deceleration": "不强制停稳；按作者出点接后镜：甲的握力放松，青年的肩线随下一步恢复向南。",
+          "end": "青年继续南行，甲轻扶上臂，双腕在身前连腰链。",
+          "framingChange": "西侧与队列同速向南平移约一步；停步触发停机，恢复步伐再随行，不超过人。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E01-SH002-F1",
+            "timeSeconds": 0,
+            "description": "保持脸、上臂接触和身前手铐都在中近景可读范围，不做手到脸的大幅切焦。"
+          }
+        ],
+        "edit": {
+          "entry": "右脚已落、第二步缩短，身体暂被前方停步扯住；双腕身前、甲在上臂旁。",
+          "exit": "青年继续南行，甲轻扶上臂，双腕在身前连腰链。；甲的握力放松，青年的肩线随下一步恢复向南。",
+          "preferredTransition": "切南端斜看，轴线不变",
+          "soundBridge": "链子短响、鞋底摩擦、持续旋翼；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E01-SH003",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "一次寻找踏板的抬眼已被数十部手机截取。",
+        "audiencePayoff": "一次寻找踏板的抬眼已被数十部手机截取。",
+        "trigger": "距南车门两步，前铐低垂；踏板近了，路易吉收起双手，目光落在脚下。前面的警员让到一旁，他抬眼看清车门，西侧快门顿时密起来。路易吉对警员甲说本镜第1句英语对白，对近旁警员说，不朝媒体喊。他把右脚移到踏板前，尚未抬起。深色大衣的市政官员在西后方挤入取景范围。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "右脚停在踏板前，快门声切到诊所手机的短震。；踏板前的抬眼已经被镜头抢走；冷开到此，回到案发当天清晨的酒店房间，以时间字卡、电话与室内空间重新定向。旋翼声结束，不假接成电话声。",
+        "noMotionReason": "固定南车门西侧朝北偏东，车门边缘给出终点；不后退把青年拍成巡游。；观看变化：一次寻找踏板的抬眼已被数十部手机截取。"
+      },
+      "camera": {
+        "shotScale": "中全景",
+        "position": "中全景，南车门西侧朝北偏东，容纳青年头至脚、踏板和门框。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中全景，南车门西侧朝北偏东，容纳青年头至脚、踏板和门框。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "保持青年及车门踏板，不追后方官员。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 南车门框在右前景，青年两步外中景，西媒体与官员后景。",
+        "movementIntent": "固定南车门西侧朝北偏东，车门边缘给出终点；不后退把青年拍成巡游。"
+      },
+      "composition": {
+        "layout": "南车门框在右前景，青年两步外中景，西媒体与官员后景。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：踏板近了，路易吉收起双手，目光落在脚下。前面的警员让到一旁，他抬眼看清车门，西侧快门顿时密起来。路易吉对警员甲说本镜第1句英语对白，对近旁警员说，不朝媒体喊。他把右脚移到踏板前，尚未抬起。深色大衣的市政官员在西后方挤入取景范围。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "一次寻找踏板的抬眼已被数十部手机截取。；保持青年及车门踏板，不追后方官员。"
+      },
+      "temporal": {
+        "durationSeconds": 9,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "一次寻找踏板的抬眼已被数十部手机截取。",
+          "path": "机位不移动。",
+          "start": "距南车门两步，前铐低垂",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "到踏板前尚未上车；腰链仍在",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E01-SH003-F1",
+            "timeSeconds": 0,
+            "description": "保持青年及车门踏板，不追后方官员。"
+          }
+        ],
+        "edit": {
+          "entry": "距南车门两步，前铐低垂",
+          "exit": "到踏板前尚未上车；腰链仍在；右脚停在踏板前，快门声切到诊所手机的短震。",
+          "preferredTransition": "踏板前的抬眼已经被镜头抢走；冷开到此，回到案发当天清晨的酒店房间，以时间字卡、电话与室内空间重新定向。旋翼声结束，不假接成电话声。",
+          "soundBridge": "连拍、衣料擦动，旋翼不断；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E02-SH001",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "疼痛妨碍起身，他仍能处理别人的具体求助。",
+        "audiencePayoff": "疼痛妨碍起身，他仍能处理别人的具体求助。",
+        "trigger": "青年坐东床沿，左手将撑床起身；手机北桌，黑包桌脚，无口罩。；路易吉想从东床边站起，腰背绷住，改用左手撑床沿。北桌手机自动播出互助帖语音。互助帖患者录音对互助群成员说本镜第1句英语对白，疲倦的成年女声，急着证明没有遗漏。录音结束，他仍站着，等手能松开才去拿手机。",
+        "cameraMode": "static",
+        "focusMode": "follow",
+        "exitMatch": "手机停止播放，他伸手把它拿起。；同场桌边看他的回复",
+        "noMotionReason": "固定南门内中全景，东床和北桌相距两步同时可见；不把起身拍成倒地。；观看变化：疼痛妨碍起身，他仍能处理别人的具体求助。"
+      },
+      "camera": {
+        "shotScale": "全景",
+        "position": "全景，南门内朝北，轴西侧",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "全景，南门内朝北，轴西侧",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "床沿支撑与身体同层可读，走向北桌时跟随人物对焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 东床、西窗、北桌同见",
+        "movementIntent": "固定南门内中全景，东床和北桌相距两步同时可见；不把起身拍成倒地。"
+      },
+      "composition": {
+        "layout": "东床、西窗、北桌同见",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：路易吉想从东床边站起，腰背绷住，改用左手撑床沿。北桌手机自动播出互助帖语音。互助帖患者录音对互助群成员说本镜第1句英语对白，疲倦的成年女声，急着证明没有遗漏。录音结束，他仍站着，等手能松开才去拿手机。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "疼痛妨碍起身，他仍能处理别人的具体求助。；床沿支撑与身体同层可读，走向北桌时跟随人物对焦。"
+      },
+      "temporal": {
+        "durationSeconds": 13,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "疼痛妨碍起身，他仍能处理别人的具体求助。",
+          "path": "机位不移动。",
+          "start": "青年坐东床沿，左手将撑床起身；手机北桌，黑包桌脚，无口罩。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "他在桌边停下，右手拿手机",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E02-SH001-F1",
+            "timeSeconds": 0,
+            "description": "床沿支撑与身体同层可读，走向北桌时跟随人物对焦。"
+          }
+        ],
+        "edit": {
+          "entry": "青年坐东床沿，左手将撑床起身；手机北桌，黑包桌脚，无口罩。",
+          "exit": "他在桌边停下，右手拿手机；手机停止播放，他伸手把它拿起。",
+          "preferredTransition": "同场桌边看他的回复",
+          "soundBridge": "床架轻响、西窗外清运车、手机录音；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E02-SH002",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "他懂得保留证据、遮住隐私，却仍不回应家人。",
+        "audiencePayoff": "他懂得保留证据、遮住隐私，却仍不回应家人。",
+        "trigger": "他按住录音键，左手压页角；他按住录音键，从笔记里翻出自己列的项目。路易吉对互助帖患者说本镜第1句英语对白，熟练给出步骤，末句因看到附件截图而补上。松开键后回听开头，只把这条语音发回互助帖。手机再次震动，家人的姓名盖住发送成功。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "家人姓名盖住发送成功，拇指停住。；接家人消息与未回复",
+        "noMotionReason": "固定北桌西侧中景，纸和录音手在下沿；保留录音—回听—发送的动作。；观看变化：他懂得保留证据、遮住隐私，却仍不回应家人。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "中景，桌西侧朝东北",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中景，桌西侧朝东北",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "保持脸与手机，不要求读私人病历。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 手机右手，笔记摊在北桌",
+        "movementIntent": "固定北桌西侧中景，纸和录音手在下沿；保留录音—回听—发送的动作。"
+      },
+      "composition": {
+        "layout": "手机右手，笔记摊在北桌",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：他按住录音键，从笔记里翻出自己列的项目。路易吉对互助帖患者说本镜第1句英语对白，熟练给出步骤，末句因看到附件截图而补上。松开键后回听开头，只把这条语音发回互助帖。手机再次震动，家人的姓名盖住发送成功。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "他懂得保留证据、遮住隐私，却仍不回应家人。；保持脸与手机，不要求读私人病历。"
+      },
+      "temporal": {
+        "durationSeconds": 15,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "他懂得保留证据、遮住隐私，却仍不回应家人。",
+          "path": "机位不移动。",
+          "start": "他按住录音键，左手压页角",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "互助语音发出；手机右手，左手压笔记，家人来信覆盖屏幕。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E02-SH002-F1",
+            "timeSeconds": 0,
+            "description": "保持脸与手机，不要求读私人病历。"
+          }
+        ],
+        "edit": {
+          "entry": "他按住录音键，左手压页角",
+          "exit": "互助语音发出；手机右手，左手压笔记，家人来信覆盖屏幕。；家人姓名盖住发送成功，拇指停住。",
+          "preferredTransition": "接家人消息与未回复",
+          "soundBridge": "手指轻敲屏、短发送音、窗外车声；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E02-SH003",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "回复被他主动删掉；家人只能继续等。",
+        "audiencePayoff": "回复被他主动删掉；家人只能继续等。",
+        "trigger": "手机右手停家人对话，左手离开笔记，纸本仍摊北桌。；他录下原有开头“I know you've been calling. I'm—”，走廊轮声使他停住。放开录音键，听见空白后删掉；重新按键说“I'm all right. I'll call you when I can.”，回听时看着发送键，仍删除，最后扣下手机。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "手机扣到桌上，南门敲响。；同场准备离开",
+        "noMotionReason": "固定桌西南近景，门在画外；先听推车再见眼线转移，不给预先惊吓反打。；观看变化：回复被他主动删掉；家人只能继续等。"
+      },
+      "camera": {
+        "shotScale": "近景",
+        "position": "近景，北桌西南看手与脸",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "近景，北桌西南看手与脸",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "保持脸和按住的拇指，电话界面后期处理。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 手机上方，纸本下方，包靠桌脚",
+        "movementIntent": "固定桌西南近景，门在画外；先听推车再见眼线转移，不给预先惊吓反打。"
+      },
+      "composition": {
+        "layout": "手机上方，纸本下方，包靠桌脚",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：他录下原有开头“I know you've been calling. I'm—”，走廊轮声使他停住。放开录音键，听见空白后删掉；重新按键说“I'm all right. I'll call you when I can.”，回听时看着发送键，仍删除，最后扣下手机。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "回复被他主动删掉；家人只能继续等。；保持脸和按住的拇指，电话界面后期处理。"
+      },
+      "temporal": {
+        "durationSeconds": 22,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "回复被他主动删掉；家人只能继续等。",
+          "path": "机位不移动。",
+          "start": "手机右手停家人对话，左手离开笔记，纸本仍摊北桌。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "两条家人回复都删除，手机扣桌，互助帖语音已经单独发送。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E02-SH003-F1",
+            "timeSeconds": 0,
+            "description": "保持脸和按住的拇指，电话界面后期处理。"
+          }
+        ],
+        "edit": {
+          "entry": "手机右手停家人对话，左手离开笔记，纸本仍摊北桌。",
+          "exit": "两条家人回复都删除，手机扣桌，互助帖语音已经单独发送。；手机扣到桌上，南门敲响。",
+          "preferredTransition": "同场准备离开",
+          "soundBridge": "手机录音提示、走廊推车轮声先来；家人没有新增回答。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E02-SH004",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "他把笔记带走，自己决定离开房间。",
+        "audiencePayoff": "他把笔记带走，自己决定离开房间。",
+        "trigger": "手机桌面，笔记摊开，背包桌脚；敲门响了两下。旅馆清洁员画外声对路易吉说本镜第1句英语对白，在门外等答复。他看一眼门，把笔记合上放进黑包。路易吉对旅馆清洁员画外声说本镜第2句英语对白，压住急促，隔门答复。推车继续走。他把手机放进包内，拉好拉链；等轮声远开，背起包，转动门把。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "门把转下，切到另一人的早餐选择。；本场结果成立后切入 E02-SC02（HOTEL-BREAKFAST，清晨·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定西侧中全景，北桌到南门完整可见；不跳过收手机、收本、背包三个动作。；观看变化：他把笔记带走，自己决定离开房间。"
+      },
+      "camera": {
+        "shotScale": "中全景",
+        "position": "中全景，西侧朝南门",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中全景，西侧朝南门",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "随人从桌到门，装包动作保持可见。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 北桌在左后，南门在右前",
+        "movementIntent": "固定西侧中全景，北桌到南门完整可见；不跳过收手机、收本、背包三个动作。"
+      },
+      "composition": {
+        "layout": "北桌在左后，南门在右前",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：敲门响了两下。旅馆清洁员画外声对路易吉说本镜第1句英语对白，在门外等答复。他看一眼门，把笔记合上放进黑包。路易吉对旅馆清洁员画外声说本镜第2句英语对白，压住急促，隔门答复。推车继续走。他把手机放进包内，拉好拉链；等轮声远开，背起包，转动门把。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "他把笔记带走，自己决定离开房间。；随人从桌到门，装包动作保持可见。"
+      },
+      "temporal": {
+        "durationSeconds": 13,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "他把笔记带走，自己决定离开房间。",
+          "path": "机位不移动。",
+          "start": "手机桌面，笔记摊开，背包桌脚",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "手机笔记都进包，包双肩；离开南门，无口罩。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E02-SH004-F1",
+            "timeSeconds": 0,
+            "description": "随人从桌到门，装包动作保持可见。"
+          }
+        ],
+        "edit": {
+          "entry": "手机桌面，笔记摊开，背包桌脚",
+          "exit": "手机笔记都进包，包双肩；离开南门，无口罩。；门把转下，切到另一人的早餐选择。",
+          "preferredTransition": "本场结果成立后切入 E02-SC02（HOTEL-BREAKFAST，清晨·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "门外推车轮、门扣；无配乐；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E02-SH005",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "冻结招聘来自一个有现实商业压力但主动签字的选择；不以家庭温情抹去责任。",
+        "audiencePayoff": "冻结已获沃德签字；他结束业务电话接儿子，服务员的盘子仍未收。",
+        "trigger": "沃德右手业务电话、左手咖啡，会议资料在盘下。；服务员要收盘，沃德用左掌挡住，把杯子压到人力表翘起的角上。运营主管电话声对沃德说英语“We can still make the number if we freeze hiring. Reviews will take longer, though. I need you to sign off.”；把数字收益与等待代价一起交给决策人。他左手从纸边拿笔，笔尖停在冻结栏外，没有落下。沃德对运营主管电话声说英语“And if we don't freeze it?”；问有没有另一条能保住季度指标的路。电话那头翻页，他把咖啡挪开，杯底湿印留在空缺岗位旁。运营主管电话声对沃德说英语“We miss the quarter. Those are the choices I've got.”；把实际取舍交还给签字人。沃德对运营主管电话声说英语“Then freeze hiring till the end of the quarter.”；作出决定，不向对方寻求安慰。沃德在延期框签名，把笔放下，却没立刻挂电话。沃德对运营主管电话声说英语“Monday, send me the wait times. In days.”；追加管理要求。他把签字页压回公文袋上，儿子来电亮起。业务电话还在说，他先结束这一通。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "冻结已获沃德签字；他结束业务电话接儿子，服务员的盘子仍未收。；因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+        "noMotionReason": "固定中景以一次连续签字选择承受两条后果，不切成文件宣读；儿子来电才换关系角度。；观看变化：冻结已获沃德签字；他结束业务电话接儿子，服务员的盘子仍未收。"
+      },
+      "camera": {
+        "shotScale": "东桌西南侧单人中景",
+        "position": "东桌西南侧单人中景，桌面只占下缘",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "东桌西南侧单人中景，桌面只占下缘",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 杯、签字页、薄公文袋均在沃德左手可达处；服务员立西侧边缘，不与电话里的主管混成现场角色。",
+        "movementIntent": "固定中景以一次连续签字选择承受两条后果，不切成文件宣读；儿子来电才换关系角度。"
+      },
+      "composition": {
+        "layout": "杯、签字页、薄公文袋均在沃德左手可达处；服务员立西侧边缘，不与电话里的主管混成现场角色。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：服务员要收盘，沃德用左掌挡住，把杯子压到人力表翘起的角上。运营主管电话声对沃德说英语“We can still make the number if we freeze hiring. Reviews will take longer, though. I need you to sign off.”；把数字收益与等待代价一起交给决策人。他左手从纸边拿笔，笔尖停在冻结栏外，没有落下。沃德对运营主管电话声说英语“And if we don't freeze it?”；问有没有另一条能保住季度指标的路。电话那头翻页，他把咖啡挪开，杯底湿印留在空缺岗位旁。运营主管电话声对沃德说英语“We miss the quarter. Those are the choices I've got.”；把实际取舍交还给签字人。沃德对运营主管电话声说英语“Then freeze hiring till the end of the quarter.”；作出决定，不向对方寻求安慰。沃德在延期框签名，把笔放下，却没立刻挂电话。沃德对运营主管电话声说英语“Monday, send me the wait times. In days.”；追加管理要求。他把签字页压回公文袋上，儿子来电亮起。业务电话还在说，他先结束这一通。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "冻结招聘来自一个有现实商业压力但主动签字的选择；不以家庭温情抹去责任。；人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+      },
+      "temporal": {
+        "durationSeconds": 45,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "冻结招聘来自一个有现实商业压力但主动签字的选择；不以家庭温情抹去责任。",
+          "path": "机位不移动。",
+          "start": "沃德右手业务电话、左手咖啡，会议资料在盘下。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "冻结已获沃德签字，业务电话结束，儿子来电待接；服务员的盘子仍未收。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E02-SH005-F1",
+            "timeSeconds": 0,
+            "description": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+          }
+        ],
+        "edit": {
+          "entry": "沃德右手业务电话、左手咖啡，会议资料在盘下。",
+          "exit": "冻结已获沃德签字，业务电话结束，儿子来电待接；服务员的盘子仍未收。；冻结已获沃德签字；他结束业务电话接儿子，服务员的盘子仍未收。",
+          "preferredTransition": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+          "soundBridge": "同场环境声与所列英语；不补额外可辨台词；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E02-SH007",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "周六约定需要绕开分居伴侣，家庭并未统一等待他。",
+        "audiencePayoff": "周六约定需要绕开分居伴侣，家庭并未统一等待他。",
+        "trigger": "沃德挂业务电话，另一个电话进来；看见儿子来电，他结束业务电话，接通后用纸巾擦手。沃德对电话中的儿子说本镜第1句英语对白，把家庭约定排进日程。他把纸巾放桌边，左手重新拿笔，在一张干净餐巾上写时间。孩子似乎要把电话递给别人，他把笔放回桌面，立刻压低声音。沃德对电话中的儿子说本镜第2句英语对白，太快回绝，随后放缓。 对面没有立刻结束这个话题，他听完才把餐巾上写错的时间划掉重写。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "未写完的时间停在餐巾上，服务员再次来收盘。；同场离开早餐厅",
+        "noMotionReason": "固定西侧中景，让擦手、记时间和突然回绝构成关系，不补家人画面。；观看变化：周六约定需要绕开分居伴侣，家庭并未统一等待他。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "中景，西侧朝东桌",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中景，西侧朝东桌",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "保持脸和餐巾所在桌沿，儿子不出镜。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 手机右手，窗光照半边脸",
+        "movementIntent": "固定西侧中景，让擦手、记时间和突然回绝构成关系，不补家人画面。"
+      },
+      "composition": {
+        "layout": "手机右手，窗光照半边脸",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：看见儿子来电，他结束业务电话，接通后用纸巾擦手。沃德对电话中的儿子说本镜第1句英语对白，把家庭约定排进日程。他把纸巾放桌边，左手重新拿笔，在一张干净餐巾上写时间。孩子似乎要把电话递给别人，他把笔放回桌面，立刻压低声音。沃德对电话中的儿子说本镜第2句英语对白，太快回绝，随后放缓。 对面没有立刻结束这个话题，他听完才把餐巾上写错的时间划掉重写。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "周六约定需要绕开分居伴侣，家庭并未统一等待他。；保持脸和餐巾所在桌沿，儿子不出镜。"
+      },
+      "temporal": {
+        "durationSeconds": 19,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "周六约定需要绕开分居伴侣，家庭并未统一等待他。",
+          "path": "机位不移动。",
+          "start": "沃德挂业务电话，另一个电话进来",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "未写完的时间留餐巾、笔已桌面；电话右耳，左手收资料。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E02-SH007-F1",
+            "timeSeconds": 0,
+            "description": "保持脸和餐巾所在桌沿，儿子不出镜。"
+          }
+        ],
+        "edit": {
+          "entry": "沃德挂业务电话，另一个电话进来",
+          "exit": "未写完的时间留餐巾、笔已桌面；电话右耳，左手收资料。；未写完的时间停在餐巾上，服务员再次来收盘。",
+          "preferredTransition": "同场离开早餐厅",
+          "soundBridge": "手机人声不可辨、餐厅低语；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E02-SH008",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "私人通话延续到案发门前。",
+        "audiencePayoff": "私人通话延续到案发门前。",
+        "trigger": "资料叠起，手机右耳；服务员终于端走盘子。沃德抽回资料塞进公文袋，把薄袋夹在左腋。沃德对电话中的儿子说本镜第1句英语对白，用熟悉的小事续住电话。他离开椅子，经过南门前回看桌面，发现笔还在，返一步用左手拿走笔，插进袋边笔环，电话一直没挂。 他把改过时间的餐巾折好收进左袋，再走出南门，电话一直未断。",
+        "cameraMode": "static",
+        "focusMode": "follow",
+        "exitMatch": "他拿笔再次出南门，街道倒车提示进入。；本场结果成立后切入 E02-SC03（HOTEL，清晨·枪响时）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定东桌西侧向南门中全景，允许为忘拿的笔折返；不跟出门增加无效路程。；观看变化：私人通话延续到案发门前。"
+      },
+      "camera": {
+        "shotScale": "中全景",
+        "position": "中全景，东桌西侧向南门",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中全景，东桌西侧向南门",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "人及桌面取笔动作同层，离场才跟焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 桌前景，南出口后景",
+        "movementIntent": "固定东桌西侧向南门中全景，允许为忘拿的笔折返；不跟出门增加无效路程。"
+      },
+      "composition": {
+        "layout": "桌前景，南出口后景",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：服务员终于端走盘子。沃德抽回资料塞进公文袋，把薄袋夹在左腋。沃德对电话中的儿子说本镜第1句英语对白，用熟悉的小事续住电话。他离开椅子，经过南门前回看桌面，发现笔还在，返一步用左手拿走笔，插进袋边笔环，电话一直没挂。 他把改过时间的餐巾折好收进左袋，再走出南门，电话一直未断。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "私人通话延续到案发门前。；人及桌面取笔动作同层，离场才跟焦。"
+      },
+      "temporal": {
+        "durationSeconds": 16,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "私人通话延续到案发门前。",
+          "path": "机位不移动。",
+          "start": "资料叠起，手机右耳",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "薄公文袋夹左腋，电话右耳，笔收袋边笔环，离早餐厅。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E02-SH008-F1",
+            "timeSeconds": 0,
+            "description": "人及桌面取笔动作同层，离场才跟焦。"
+          }
+        ],
+        "edit": {
+          "entry": "资料叠起，手机右耳",
+          "exit": "薄公文袋夹左腋，电话右耳，笔收袋边笔环，离早餐厅。；他拿笔再次出南门，街道倒车提示进入。",
+          "preferredTransition": "本场结果成立后切入 E02-SC03（HOTEL，清晨·枪响时）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "椅脚、收盘、袋边笔环轻碰，儿子仅不可辨听筒底声。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E02-SH009",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "普通人各忙自己的事，西边来者还可以继续经过。",
+        "audiencePayoff": "普通人各忙自己的事，西边来者还可以继续经过。",
+        "trigger": "沃德北门外右耳电话、薄公文袋夹左腋；东行李员收箱，青年将入西缘。；沃德从北旋转门出来，薄袋夹左腋电话贴右耳；行李员对旅客说原有提醒，沃德让箱、取会议卡后回答儿子周六与机翼问题。卡收回左袋；青年在西人行道出现。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "灰夹克进入西侧空隙，沃德仍朝南。；同场中景，电话与西侧来人",
+        "noMotionReason": "固定西南全景，北门南车道东上客位同框；青年从西缘进入。；观看变化：普通人各忙自己的事，西边来者还可以继续经过。"
+      },
+      "camera": {
+        "shotScale": "全景",
+        "position": "全景，酒店西南朝东北",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "全景，酒店西南朝东北",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "门前三层关系保持可读，不选武器为焦点。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 北旋转门，东行李员，南车道",
+        "movementIntent": "固定西南全景，北门南车道东上客位同框；青年从西缘进入。"
+      },
+      "composition": {
+        "layout": "北旋转门，东行李员，南车道",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：沃德从北旋转门出来，薄袋夹左腋电话贴右耳；行李员对旅客说原有提醒，沃德让箱、取会议卡后回答儿子周六与机翼问题。卡收回左袋；青年在西人行道出现。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "普通人各忙自己的事，西边来者还可以继续经过。；门前三层关系保持可读，不选武器为焦点。"
+      },
+      "temporal": {
+        "durationSeconds": 24,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "普通人各忙自己的事，西边来者还可以继续经过。",
+          "path": "机位不移动。",
+          "start": "沃德北门外右耳电话、薄公文袋夹左腋；东行李员收箱，青年将入西缘。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "沃德卡已回左袋，电话右耳；路易吉从西人行道进入视线，行李员仍东门边。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E02-SH009-F1",
+            "timeSeconds": 0,
+            "description": "门前三层关系保持可读，不选武器为焦点。"
+          }
+        ],
+        "edit": {
+          "entry": "沃德北门外右耳电话、薄公文袋夹左腋；东行李员收箱，青年将入西缘。",
+          "exit": "沃德卡已回左袋，电话右耳；路易吉从西人行道进入视线，行李员仍东门边。；灰夹克进入西侧空隙，沃德仍朝南。",
+          "preferredTransition": "同场中景，电话与西侧来人",
+          "soundBridge": "旋转门、箱轮、南侧车流；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E02-SH010",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "路易吉主动放弃路过，转向目标。",
+        "audiencePayoff": "路易吉主动放弃路过，转向目标。",
+        "trigger": "沃德手机右耳、会议卡回左袋；青年由西向东行。；沃德左手比划机翼，说完桌上放置与周六一起修的承诺。路易吉由西向东认出他，停步后主动转肩面向沃德，未继续路过。沃德放低手机仍听儿子。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "青年肩膀转定、重心向沃德移动。；保持方向，以声响呈现枪击",
+        "noMotionReason": "固定西南中全景，两个人的选择同框，不只拍沃德脸。；观看变化：路易吉主动放弃路过，转向目标。"
+      },
+      "camera": {
+        "shotScale": "中全景",
+        "position": "中全景，西南向东北，轴西侧；沃德中右，青年中左，能见步伐和上身。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中全景，西南向东北，轴西侧；沃德中右，青年中左，能见步伐和上身。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "二人保持可读景深，不切焦把青年变成突然出现的幻影。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 沃德北门南沿中右，路易吉西人行道中左，南车道留出现实出口。",
+        "movementIntent": "固定西南中全景，两个人的选择同框，不只拍沃德脸。"
+      },
+      "composition": {
+        "layout": "沃德北门南沿中右，路易吉西人行道中左，南车道留出现实出口。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：沃德左手比划机翼，说完桌上放置与周六一起修的承诺。路易吉由西向东认出他，停步后主动转肩面向沃德，未继续路过。沃德放低手机仍听儿子。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "路易吉主动放弃路过，转向目标。；二人保持可读景深，不切焦把青年变成突然出现的幻影。"
+      },
+      "temporal": {
+        "durationSeconds": 17,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "路易吉主动放弃路过，转向目标。",
+          "path": "机位不移动。",
+          "start": "沃德手机右耳、会议卡回左袋；青年由西向东行。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "青年转向沃德；沃德手机开始离耳，无其他持械者。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E02-SH010-F1",
+            "timeSeconds": 0,
+            "description": "二人保持可读景深，不切焦把青年变成突然出现的幻影。"
+          }
+        ],
+        "edit": {
+          "entry": "沃德手机右耳、会议卡回左袋；青年由西向东行。",
+          "exit": "青年转向沃德；沃德手机开始离耳，无其他持械者。；青年肩膀转定、重心向沃德移动。",
+          "preferredTransition": "保持方向，以声响呈现枪击",
+          "soundBridge": "电话、垃圾车倒车提示，脚步短停；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E02-SH011",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "迈步、枪响与倒下是路易吉主动行为的连续后果。",
+        "audiencePayoff": "迈步、枪响与倒下是路易吉主动行为的连续后果。",
+        "trigger": "路易吉注视沃德，手臂在身体前低处；路易吉朝沃德迈一步，手臂在身前抬起，操作细节不显露。两声枪响，手机掉地，门边杯子滚向路缘。行李员蹲到柱后。路易吉看见沃德倒下，停一瞬，转身从西侧离开。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "青年离开后，行李员才探出一点视线。；枪声后留物件，再切警方回报",
+        "noMotionReason": "固定西南中全景保留空间因果；不摇追逃路，不给操作与伤口细节。；观看变化：迈步、枪响与倒下是路易吉主动行为的连续后果。"
+      },
+      "camera": {
+        "shotScale": "中全景",
+        "position": "中全景，西南侧，轴西侧",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中全景，西南侧，轴西侧",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "保持迈步与倒下的关系，地面仅见衣角和手机。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 沃德近北门；青年西侧；路缘南",
+        "movementIntent": "固定西南中全景保留空间因果；不摇追逃路，不给操作与伤口细节。"
+      },
+      "composition": {
+        "layout": "沃德近北门；青年西侧；路缘南",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：路易吉朝沃德迈一步，手臂在身前抬起，操作细节不显露。两声枪响，手机掉地，门边杯子滚向路缘。行李员蹲到柱后。路易吉看见沃德倒下，停一瞬，转身从西侧离开。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "迈步、枪响与倒下是路易吉主动行为的连续后果。；保持迈步与倒下的关系，地面仅见衣角和手机。"
+      },
+      "temporal": {
+        "durationSeconds": 10,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "迈步、枪响与倒下是路易吉主动行为的连续后果。",
+          "path": "机位不移动。",
+          "start": "路易吉注视沃德，手臂在身体前低处",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "沃德地面仅露衣角，手机仍亮；青年离西侧，无第二枪手。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E02-SH011-F1",
+            "timeSeconds": 0,
+            "description": "保持迈步与倒下的关系，地面仅见衣角和手机。"
+          }
+        ],
+        "edit": {
+          "entry": "路易吉注视沃德，手臂在身体前低处",
+          "exit": "沃德地面仅露衣角，手机仍亮；青年离西侧，无第二枪手。；青年离开后，行李员才探出一点视线。",
+          "preferredTransition": "枪声后留物件，再切警方回报",
+          "soundBridge": "两下枪声、碎裂杯盖、现场惊呼不可辨；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E02-SH012",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "离开画面不能撤销案发前到场的影像。",
+        "audiencePayoff": "离开画面不能撤销案发前到场的影像。",
+        "trigger": "时间跳至警方到场；青年不在，杯子位置保持。；稍后南路缘拉起封锁线，那只纸杯还停在路边。警员甲问行李员，指向酒店门口摄像机。警员甲对警员乙与酒店值班人员说本镜第1句英语对白，把调查倒回主动到场。行李员指西边来路，手还在抖。乙带值班人员进北门，甲看一眼杯子，又抬头看摄像机。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "酒店人员带警员进入北门，摄像机留在门上方。；本集结束。沃德倒下，青年离场，警方调取监控；下一集追问这次行动把青年带到了哪里。 下集从STATION展开：青年还能找到停留的地方吗；玛拉能否把照顾孩子和额外班次接起来？",
+        "noMotionReason": "固定南封锁线外全景，以原杯子接回时间省略；不新增杜撰监控内容。；观看变化：离开画面不能撤销案发前到场的影像。"
+      },
+      "camera": {
+        "shotScale": "全景",
+        "position": "全景，南侧封锁线向北酒店",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "全景，南侧封锁线向北酒店",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "警方走向北门可读，摄像机是后景物，不读屏。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 前景警员，北门旁监控机罩可见",
+        "movementIntent": "固定南封锁线外全景，以原杯子接回时间省略；不新增杜撰监控内容。"
+      },
+      "composition": {
+        "layout": "前景警员，北门旁监控机罩可见",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：稍后南路缘拉起封锁线，那只纸杯还停在路边。警员甲问行李员，指向酒店门口摄像机。警员甲对警员乙与酒店值班人员说本镜第1句英语对白，把调查倒回主动到场。行李员指西边来路，手还在抖。乙带值班人员进北门，甲看一眼杯子，又抬头看摄像机。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "离开画面不能撤销案发前到场的影像。；警方走向北门可读，摄像机是后景物，不读屏。"
+      },
+      "temporal": {
+        "durationSeconds": 13,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "离开画面不能撤销案发前到场的影像。",
+          "path": "机位不移动。",
+          "start": "时间跳至警方到场；青年不在，杯子位置保持。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "乙和酒店人员北门内，甲南路缘，影像调取开始。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E02-SH012-F1",
+            "timeSeconds": 0,
+            "description": "警方走向北门可读，摄像机是后景物，不读屏。"
+          }
+        ],
+        "edit": {
+          "entry": "时间跳至警方到场；青年不在，杯子位置保持。",
+          "exit": "乙和酒店人员北门内，甲南路缘，影像调取开始。；酒店人员带警员进入北门，摄像机留在门上方。",
+          "preferredTransition": "本集结束。沃德倒下，青年离场，警方调取监控；下一集追问这次行动把青年带到了哪里。 下集从STATION展开：青年还能找到停留的地方吗；玛拉能否把照顾孩子和额外班次接起来？",
+          "soundBridge": "无线电压缩声、封锁带拍风、远处警笛；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "checkedAt": "2026-11-08",
+  "purpose": "本轮文字改编与Seedance 2.5提示词交接",
+  "targetSurface": "未指定；账号、入口与模式未核验",
+  "referencesBound": false,
+  "sources": [
+    {
+      "url": "https://docs.volcengine.com/docs/ark/seedance-2-5-prompt-guide?lang=zh",
+      "scope": "火山方舟Seedance 2.5提示词指南",
+      "readLevel": "官方搜索索引正文；直接打开为文档壳",
+      "pageUpdatedAtShown": "2026-11-03 16:15:44",
+      "adopted": ["按上传顺序明确素材编号和职责", "概述主体地点事件", "按镜头组织动作摄影台词音效", "明确无字幕和不需要的背景音乐"],
+      "notClaimed": ["未取得指南正文文件", "未安装sd25-pe", "未验证目标账号支持"]
+    },
+    {
+      "url": "https://seed.bytedance.com/en/blog/one-take-creation-flexible-referencing-introducing-seedance-2-5",
+      "scope": "Seedance 2.5模型发布说明",
+      "published": "2026-07-31",
+      "readLevel": "正文已打开读取；页面内视频未观看",
+      "adopted": ["模型说明的单次最长30秒用于分段设计依据", "多模态参考按不同素材职责表达"],
+      "notClaimed": ["未把模型公告当作未知平台或账号的控件实测", "未声称返回视频达到模型演示效果"]
+    }
+  ],
+  "mediaGenerated": false
+}

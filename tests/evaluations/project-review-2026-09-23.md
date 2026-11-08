@@ -96,7 +96,7 @@ Markdown 校验现在覆盖本仓库使用的 ATX／Setext 标题、中文与重
 | `tests/evaluations/2026-09-08.md` | `47ef6f2ebb5b51440ad2fd0e7030f1035b627a6ae48841aae4d630a8fc6ef040` | 旧原始输出缺失的限制已记于本文；实现仍由检查器和回归维护，原报告可从 Git 历史读取 |
 | `tests/evaluations/2026-09-14.md` | `d6e985e5df1575c1d70dcecce63e3d9dad52ca0d180ab00bc877291025b5692d` | 去掉逐阶段测试计数和操作流水；功能归入更新记录，方法保留在指南和研究报告 |
 | `tests/evaluations/2026-09-16-leos-review.md` | `f09042bea7f791a889bd48e929e656f4c5a8dc5fef45bb471a961782859c1aea` | 来源、许可边界与取舍并入[研究报告](aigc-creation-research-2026-09-14.md#六视角评审的来源与取舍2026-09-16)；逐镜夹具与回归保留 |
-| `skills/cineweave-director/references/optional/creative-workflow-evaluation.md` | `6bbb9cc649afb68822be231dbff49bd8197c8b3f0ef51b4a5e934f6765c676bf` | 完整创作统一使用[短片示例](../../skills/cineweave-director/references/optional/short-film-example.md)，衣色修订由[变更影响指南](../../skills/cineweave-director/references/optional/drafts-and-change-impact.md#变更影响示例)维护；评测方法移入[贡献指南](../../CONTRIBUTING.md#创作行为评测) |
+| `skills/cineweave-director/references/optional/creative-workflow-evaluation.md` | `6bbb9cc649afb68822be231dbff49bd8197c8b3f0ef51b4a5e934f6765c676bf` | 完整创作统一使用[短片示例](https://github.com/Wilder1222/cineweave-director/blob/aa3571d81dd74af9756cb826eaefd22e5c76f2f5/skills/cineweave-director/references/optional/short-film-example.md)，衣色修订由[变更影响指南](../../skills/cineweave-director/references/optional/drafts-and-change-impact.md#变更影响示例)维护；评测方法移入[贡献指南](../../CONTRIBUTING.md#创作行为评测) |
 
 四个删除文件合计 49,356 字节。按 UTF-8 字节数，README 缩减约 23%，更新记录缩减约 45%，Skill 入口缩减约 7%；仅压缩重复说明，详细提示词规范和完整复制稿保留。同步更新分发生命周期、源码白名单及所有活动引用；清理过程中发现的诊断目录旧锚点也已移除。
 

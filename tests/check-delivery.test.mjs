@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { checkDelivery, countText, frameToSrt } from "../skills/cineweave-director/scripts/check-delivery.mjs";
+import { checkDelivery, checkProjectWorkflow, countText, frameToSrt } from "../skills/cineweave-director/scripts/check-delivery.mjs";
 
 function worksheet() {
   return {
@@ -82,7 +82,7 @@ test("delivery rejects unsupported worksheets instead of silently skipping check
 import videoTest from "node:test";
 import videoAssert from "node:assert/strict";
 import { spawnSync as cwVideoSpawn } from "node:child_process";
-import { mkdtempSync as cwVideoTemp, writeFileSync as cwVideoWrite, readFileSync as cwVideoRead, rmSync as cwVideoRm } from "node:fs";
+import { mkdtempSync as cwVideoTemp, writeFileSync as cwVideoWrite, readFileSync as cwVideoRead, rmSync as cwVideoRm, readdirSync as cwVideoFiles } from "node:fs";
 import { tmpdir as cwVideoTmpdir } from "node:os";
 import { join as cwVideoJoin } from "node:path";
 import { fileURLToPath as cwVideoPath } from "node:url";
@@ -287,7 +287,7 @@ videoTest("无参考图的放宽不影响图生视频的首帧要求", () => {
 });
 
 function cwFullFilm() {
-  const doc = cwVideoRead(new URL("../skills/cineweave-director/references/optional/short-film-example.md", import.meta.url), "utf8");
+  const doc = cwVideoRead(new URL("../skills/cineweave-director/references/optional/adaptation-example.md", import.meta.url), "utf8");
   const section = doc.split("<!-- short-film-plan:start -->")[1]?.split("<!-- short-film-plan:end -->")[0];
   const match = section?.match(/```json\s*\n([\s\S]*?)\n```/u);
   videoAssert.ok(match, "the example must expose its actual plan");
@@ -363,4 +363,235 @@ videoTest("分镜板不冒充图生视频首帧或绕过模式参考要求", () 
   videoAssert.ok(cwCodes(cwCheck(b)).includes("MISSING_REFERENCE_ROLE"));
   const c = cwBoardVideo(); c.nodes[0].references = [];
   videoAssert.ok(cwCodes(cwCheck(c)).includes("MISSING_REFERENCE"));
+});
+
+function projectWorkbook() {
+  return JSON.parse(cwVideoRead(new URL("./evaluations/jimeng-workflow-workbook-2026-11-05.json", import.meta.url), "utf8"));
+}
+const projectCodes = (result) => result.errors.map(({ code }) => code);
+function projectMutation(name, mutate, code) {
+  test(`项目工作表拒绝${name}`, () => {
+    const workbook = projectWorkbook(); mutate(workbook);
+    const result = checkProjectWorkflow(workbook);
+    assert.equal(result.valid, false, JSON.stringify(result));
+    assert.ok(projectCodes(result).includes(code), JSON.stringify(result.errors));
+  });
+}
+test("两集工作表保持身份时期与外观映射，反向消费者仅由镜头消费派生", () => {
+  const workbook = projectWorkbook(), before = JSON.stringify(workbook), result = checkProjectWorkflow(workbook);
+  assert.equal(result.valid, true, JSON.stringify(result.errors));
+  assert.deepEqual(result.remaining, []);
+  assert.equal(result.scope, "plan_only");
+  assert.equal(result.mediaVerified, false);
+  assert.equal(result.sourceAuthorityVerified, false);
+  assert.equal(result.providerExecution, false);
+  assert.deepEqual(result.assetConsumers.find(({ assetId }) => assetId === "appearance.courier.teen.dry").consumers,
+    ["EP01.SC01.S01", "EP01.SC01.S02"].map((shotId) => ({ shotId, episodeId: "EP01", sceneId: "EP01.SC01", revision: 1 })));
+  assert.equal(result.assetConsumers.find(({ assetId }) => assetId === "identity.courier").consumers.length, 5);
+  for (const code of ["PREVIS_PENDING_MEDIA", "PREVIS_MEDIA_UNVERIFIED", "CANDIDATE_PENDING_MEDIA", "CANDIDATE_MEDIA_UNVERIFIED", "STALE_SHOT_INPUT", "STALE_ASSET_INPUT", "CANDIDATE_INPUT_REVISION", "SHOT_WITHOUT_CANDIDATE"]) {
+    assert.ok(result.needsReview.some((item) => item.code === code), code);
+  }
+  assert.equal(JSON.stringify(workbook), before, "检查不得改变输入、自动选择候选或写回修订");
+});
+test("总集清单与本次展开范围分开，未展开集保持 remaining", () => {
+  const workbook = projectWorkbook(); workbook.declaredEpisodeIds.push("EP03"); workbook.claims.allEpisodesExpanded = false;
+  const result = checkProjectWorkflow(workbook);
+  assert.equal(result.valid, true);
+  assert.deepEqual(result.remaining, ["EP03"]);
+  assert.ok(result.needsReview.some(({ code }) => code === "EPISODE_UNEXPANDED"));
+});
+test("旧资产与旧候选只进入待审，不伪造重生成或让无关镜头过期", () => {
+  const workbook = projectWorkbook(); workbook.assets.find(({ id }) => id === "appearance.courier.teen.dry").revision = 2;
+  const result = checkProjectWorkflow(workbook);
+  assert.equal(result.valid, true);
+  const old = result.needsReview.filter(({ code }) => code === "STALE_ASSET_INPUT");
+  assert.ok(old.some(({ path }) => path.startsWith("$.shots[0]")));
+  assert.ok(old.some(({ path }) => path.startsWith("$.shots[1]")));
+  assert.ok(!old.some(({ path }) => path.startsWith("$.shots[2]")), "湿外衣镜头没有消费干外衣资产");
+});
+test("旧镜头候选保留原资产集合，缺少旧版正文时待审而不强行改写", () => {
+  const workbook = projectWorkbook(); workbook.candidates[1].assetInputs.pop();
+  const result = checkProjectWorkflow(workbook);
+  assert.equal(result.valid, true, JSON.stringify(result.errors));
+  assert.ok(result.needsReview.some(({ code }) => code === "STALE_CANDIDATE_INPUTS"));
+});
+test("一镜多张预演格保留原镜号且不强迫每镜只有一格", () => {
+  const workbook = projectWorkbook();
+  assert.equal(workbook.previsGroups[1].frames.length, 3);
+  assert.equal(workbook.previsGroups[1].shotIds.length, 2);
+  assert.equal(checkProjectWorkflow(workbook).valid, true);
+});
+test("同镜头保留唯一角色起态并允许有触发的一次或多次外观变化", () => {
+  const workbook = projectWorkbook(), shot = workbook.shots[4], binding = shot.characters[0];
+  assert.equal(binding.appearanceId, "appearance.courier.adult.raincoat");
+  assert.equal(binding.appearanceChanges[0].appearanceId, "appearance.courier.adult");
+  const once = checkProjectWorkflow(workbook);
+  assert.equal(once.valid, true, JSON.stringify(once.errors));
+  assert.ok(once.assetConsumers.find(({ assetId }) => assetId === "appearance.courier.adult").consumers.some(({ shotId }) => shotId === shot.id));
+  binding.appearanceChanges.push({ appearanceId: "appearance.courier.adult.raincoat", trigger: "接信后听见屋外雨声渐密，从木钩取回雨披重新披上，准备离开。" });
+  const before = JSON.stringify(workbook), twice = checkProjectWorkflow(workbook);
+  assert.equal(twice.valid, true, JSON.stringify(twice.errors));
+  assert.equal(JSON.stringify(workbook), before, "检查不能选择造型或重排变化顺序");
+  assert.equal(shot.characters.filter(({ characterId }) => characterId === binding.characterId).length, 1);
+});
+for (const [name, mutate, code] of [
+  ["外观变化缺少触发", (b) => { delete b.shots[4].characters[0].appearanceChanges[0].trigger; }, "REQUIRED"],
+  ["外观变化触发为空", (b) => { b.shots[4].characters[0].appearanceChanges[0].trigger = " "; }, "TEXT"],
+  ["外观变化目标不存在", (b) => { b.shots[4].characters[0].appearanceChanges[0].appearanceId = "appearance.ghost"; }, "APPEARANCE_SCOPE"],
+  ["外观变化目标属于别的角色", (b) => { b.shots[4].characters[0].appearanceChanges[0].appearanceId = "appearance.keeper.older"; }, "APPEARANCE_SCOPE"],
+  ["外观变化目标属于别的时期", (b) => { b.shots[4].characters[0].appearanceChanges[0].appearanceId = "appearance.courier.teen.dry"; }, "APPEARANCE_SCOPE"],
+  ["外观变化目标超出镜号范围", (b) => { b.appearances.find(({ id }) => id === "appearance.courier.adult").shotIds = ["EP02.SC01.S01"]; }, "APPEARANCE_SCOPE"],
+  ["外观变化目标缺准确资产消费", (b) => { b.shots[4].assets = b.shots[4].assets.filter(({ assetId }) => assetId !== "appearance.courier.adult"); }, "APPEARANCE_INPUT"],
+  ["外观变化数组为空", (b) => { b.shots[4].characters[0].appearanceChanges = []; }, "ARRAY"],
+  ["外观变化重复前一状态", (b) => { b.shots[4].characters[0].appearanceChanges[0].appearanceId = "appearance.courier.adult.raincoat"; }, "APPEARANCE_CHANGE"],
+  ["未声明变化却消费第二外观", (b) => { delete b.shots[4].characters[0].appearanceChanges; }, "UNBOUND_CHARACTER_ASSET"],
+  ["用重复角色绑定冒充外观变化", (b) => { b.shots[4].characters.push({ characterId: "courier", periodId: "adult", appearanceId: "appearance.courier.adult" }); }, "DUPLICATE_CHARACTER"],
+]) projectMutation(name, mutate, code);
+for (const [name, mutate, code] of [
+  ["冒充正式设定", (b) => { b.canonical = true; }, "NONCANONICAL"],
+  ["错误格式", (b) => { b.format = "cineweave-project-workflow/v2"; }, "FORMAT"],
+  ["未展开却声称全剧完成", (b) => { b.declaredEpisodeIds.push("EP03"); }, "INCOMPLETE_CLAIM"],
+  ["声称媒体完成", (b) => { b.claims.mediaComplete = true; }, "MEDIA_CLAIM"],
+  ["重复总集编号", (b) => { b.declaredEpisodeIds.push("EP01"); }, "DUPLICATE_ID"],
+  ["未声明的展开集", (b) => { b.declaredEpisodeIds.pop(); }, "UNDECLARED_EPISODE"],
+  ["展开集颠倒叙事顺序", (b) => { b.episodes.reverse(); }, "EPISODE_ORDER"],
+  ["无实际定位的剧本来源", (b) => { b.episodes[0].source.path = ""; }, "TEXT"],
+  ["空场次冒充已展开集", (b) => { b.episodes[0].scenes = []; }, "ARRAY"],
+  ["漏掉实际镜头", (b) => { b.shots.pop(); }, "MISSING_SHOT"],
+  ["重复镜号", (b) => { b.shots.push(structuredClone(b.shots[0])); }, "DUPLICATE_ID"],
+  ["镜号无场次归属", (b) => { b.episodes[0].scenes[0].shotIds.pop(); }, "SHOT_OWNERSHIP"],
+  ["镜头归属错误的集", (b) => { b.shots[0].episodeId = "EP02"; }, "SHOT_OWNERSHIP"],
+  ["镜头在两场重复归属", (b) => { b.episodes[1].scenes[0].shotIds.push(b.shots[0].id); }, "SHOT_OWNERSHIP"],
+  ["少年镜头消费成年时期", (b) => { b.shots[0].characters[0].periodId = "adult"; }, "CHARACTER_PERIOD"],
+  ["雨前镜头误用湿外衣", (b) => { b.shots[0].characters[0].appearanceId = "appearance.courier.teen.wet"; }, "APPEARANCE_SCOPE"],
+  ["外观适用集超出角色时期", (b) => { b.appearances[0].episodeIds.push("EP02"); }, "APPEARANCE_SCOPE"],
+  ["外观适用未知场次", (b) => { b.appearances[0].sceneIds = ["UNKNOWN.SC01"]; }, "APPEARANCE_SCOPE"],
+  ["不同角色外观混用", (b) => { b.shots[0].characters[0].appearanceId = "appearance.keeper.middle"; }, "APPEARANCE_SCOPE"],
+  ["同镜角色重复绑定", (b) => { b.shots[0].characters.push(structuredClone(b.shots[0].characters[0])); }, "DUPLICATE_CHARACTER"],
+  ["只有服装没有身份输入", (b) => { b.shots[0].assets.shift(); }, "IDENTITY_INPUT"],
+  ["外观绑定没有准确资产消费", (b) => { b.shots[0].assets.splice(2, 1); }, "APPEARANCE_INPUT"],
+  ["资产未知修订", (b) => { b.shots[0].assets[0].revision = 99; }, "FUTURE_REVISION"],
+  ["消费不存在资产", (b) => { b.shots[0].assets[0].assetId = "ghost"; }, "MISSING_ASSET"],
+  ["重复资产消费", (b) => { b.shots[0].assets.push(structuredClone(b.shots[0].assets[0])); }, "DUPLICATE_ASSET"],
+  ["旁路加入未绑定外观", (b) => { b.shots[0].assets.push({ assetId: "appearance.courier.adult", revision: 2 }); }, "UNBOUND_CHARACTER_ASSET"],
+  ["手写另一份资产反查", (b) => { b.assetConsumers = []; }, "UNKNOWN_FIELD"],
+  ["预演颠倒原镜顺序", (b) => { b.previsGroups[0].shotIds.reverse(); }, "PREVIS_ORDER"],
+  ["预演漏格", (b) => { b.previsGroups[0].frames.pop(); }, "PREVIS_MAPPING"],
+  ["预演乱序画格", (b) => { b.previsGroups[0].frames.reverse(); }, "PREVIS_MAPPING"],
+  ["预演未知镜号", (b) => { b.previsGroups[0].shotIds[0] = "UNKNOWN.SHOT"; }, "PREVIS_SHOT"],
+  ["重复画格标识", (b) => { b.previsGroups[0].frames[1].frameId = "F01"; }, "DUPLICATE_FRAME"],
+  ["预演重标为已验收", (b) => { b.previsGroups[0].status = "accepted"; }, "PREVIS_STATUS"],
+  ["计划预演声明返回媒体", (b) => { b.previsGroups[0].media = { locator: "fixture:board.png" }; }, "PREVIS_STATUS"],
+  ["返回预演缺媒体", (b) => { b.previsGroups[1].media = null; }, "OBJECT"],
+  ["候选丢失镜号归属", (b) => { b.candidates[0].shotId = "UNKNOWN.SHOT"; }, "CANDIDATE_SHOT"],
+  ["候选输入未来镜头修订", (b) => { b.candidates[0].inputRevision = 99; }, "FUTURE_REVISION"],
+  ["候选漏掉资产输入", (b) => { b.candidates[0].assetInputs.pop(); }, "CANDIDATE_INPUTS"],
+  ["没有媒体却声明采用", (b) => { b.candidates[0].media = null; }, "ADOPTION"],
+  ["缺少采用区间", (b) => { b.candidates[0].adoptedWindow = null; }, "OBJECT"],
+  ["采用窗口超出源媒体", (b) => { b.candidates[0].adoptedWindow.endFrame = 145; }, "ADOPTED_WINDOW"],
+  ["零时长采用窗口", (b) => { b.candidates[0].adoptedWindow.startFrame = 132; }, "ADOPTED_WINDOW"],
+  ["未采用候选携带采用窗口", (b) => { b.candidates[1].adoptedWindow = { startFrame: 0, endFrame: 24 }; }, "ADOPTION"],
+  ["同镜同时采用两个候选", (b) => { b.candidates.push({ ...structuredClone(b.candidates[0]), id: "TAKE.DUP" }); }, "ADOPTION"],
+  ["把任务编号充当媒体定位", (b) => { b.candidates[0].media = { taskId: "FAKE", totalFrames: 144 }; }, "UNKNOWN_FIELD"],
+  ["无效修订数字", (b) => { b.shots[0].revision = Number.NaN; }, "JSON_SCALAR"],
+  ["无效 Unicode 标量", (b) => { b.episodes[0].purpose = "bad\uD800"; }, "JSON_SCALAR"],
+  ["错误形状的外观范围", (b) => { b.appearances[0].sceneIds = {}; }, "ARRAY"],
+]) projectMutation(name, mutate, code);
+test("项目工作表结构错误返回 invalid 而不会使普通交付算术改变", () => {
+  for (const workbook of [null, [], {}, { format: "cineweave-project-workflow/v1" }]) assert.equal(checkProjectWorkflow(workbook).valid, false);
+  assert.equal(checkDelivery(worksheet()).valid, true);
+});
+test("直接导出检查先拒绝访问器，不触发根对象或嵌套对象的 getter", () => {
+  for (const nested of [false, true]) {
+    const workbook = projectWorkbook(); let getterCalls = 0;
+    Object.defineProperty(nested ? workbook.episodes[0] : workbook, nested ? "purpose" : "format", {
+      enumerable: true, get() { getterCalls++; throw new Error("检查不应执行此 getter"); },
+    });
+    const result = checkProjectWorkflow(workbook);
+    assert.equal(result.valid, false);
+    assert.ok(projectCodes(result).includes("JSON_SCALAR"));
+    assert.equal(getterCalls, 0);
+  }
+});
+test("直接导出检查拒绝 Symbol、隐藏属性、稀疏数组及数组额外属性", () => {
+  for (const mutate of [
+    (b) => { b[Symbol("hidden")] = true; },
+    (b) => { Object.defineProperty(b.episodes[0], "hidden", { value: true }); },
+    (b) => { delete b.episodes[0].scenes[0].shotIds[1]; },
+    (b) => { b.episodes.extra = true; },
+  ]) {
+    const workbook = projectWorkbook(); mutate(workbook);
+    const result = checkProjectWorkflow(workbook);
+    assert.equal(result.valid, false);
+    assert.ok(projectCodes(result).includes("JSON_SCALAR"));
+  }
+});
+test("非法对象 ID 保留结构化诊断，不做隐式字符串转换或抛出 TypeError", () => {
+  for (const malformed of [Object.create(null), { toString: null }, { toString: 0, valueOf: 0 }]) {
+    for (const mutate of [
+      (b, value) => { b.declaredEpisodeIds[0] = value; },
+      (b, value) => { b.characters[0].periods[0].episodeIds[0] = value; },
+      (b, value) => { b.episodes[0].scenes[0].shotIds[0] = value; },
+      (b, value) => { b.appearances[0].characterId = value; },
+      (b, value) => { b.appearances[0].periodId = value; },
+      (b, value) => { b.shots[0].characters[0].periodId = value; },
+      (b, value) => { b.shots[0].assets[0].assetId = value; },
+      (b, value) => { b.shots[4].characters[0].appearanceChanges[0].appearanceId = value; },
+      (b, value) => { b.candidates[0].shotId = value; },
+    ]) {
+      const workbook = projectWorkbook(); mutate(workbook, malformed);
+      const result = checkProjectWorkflow(workbook);
+      assert.equal(result.valid, false);
+      assert.ok(projectCodes(result).includes("ID"), JSON.stringify(result.errors));
+    }
+  }
+});
+test("非法修订或帧边界对象返回 invalid 而不会触发数值转换异常", () => {
+  for (const mutate of [
+    (b) => { b.assets[0].revision = { toString: null }; },
+    (b) => { b.shots[0].assets[0].revision = { toString: null }; },
+    (b) => { b.shots[3].revision = { toString: null }; },
+    (b) => { b.candidates[0].inputRevision = { toString: null }; },
+    (b) => { b.candidates[0].adoptedWindow.startFrame = { toString: null }; },
+  ]) {
+    const workbook = projectWorkbook(); mutate(workbook);
+    const result = checkProjectWorkflow(workbook);
+    assert.equal(result.valid, false);
+    assert.ok(projectCodes(result).includes("INTEGER"));
+  }
+});
+test("项目 CLI 严格解析且只读取工作表，不读取虚构媒体或写入结果", () => {
+  const dir = cwVideoTemp(cwVideoJoin(cwVideoTmpdir(), "cw-project-"));
+  try {
+    const cli = cwVideoJoin(dir, "check-delivery.mjs"), input = cwVideoJoin(dir, "input.json");
+    cwVideoWrite(cli, cwVideoRead(new URL("../skills/cineweave-director/scripts/check-delivery.mjs", import.meta.url)));
+    cwVideoWrite(cwVideoJoin(dir, "parse-json.mjs"), cwVideoRead(new URL("../skills/cineweave-director/scripts/parse-json.mjs", import.meta.url)));
+    const original = JSON.stringify(projectWorkbook()); cwVideoWrite(input, original);
+    const filesBefore = cwVideoFiles(dir).sort();
+    const run = () => cwVideoSpawn(process.execPath, [cli, "--project-workflow", input], { encoding: "utf8", timeout: 10000 });
+    const valid = run();
+    assert.equal(valid.status, 2, valid.stderr);
+    const result = JSON.parse(valid.stdout);
+    assert.equal(result.valid, true); assert.equal(result.mediaVerified, false); assert.equal(result.localization.locale, "zh-CN");
+    assert.equal(cwVideoRead(input, "utf8"), original);
+    assert.deepEqual(cwVideoFiles(dir).sort(), filesBefore);
+    const invalid = projectWorkbook(); invalid.claims.mediaComplete = true; cwVideoWrite(input, JSON.stringify(invalid));
+    assert.equal(run().status, 1);
+    const invalidId = projectWorkbook(); invalidId.declaredEpisodeIds[0] = {}; cwVideoWrite(input, JSON.stringify(invalidId));
+    const invalidIdRun = run();
+    assert.equal(invalidIdRun.status, 1);
+    assert.equal(JSON.parse(invalidIdRun.stdout).valid, false);
+    assert.ok(projectCodes(JSON.parse(invalidIdRun.stdout)).includes("ID"));
+    assert.equal(invalidIdRun.stderr, "", "非法 JSON 字段值应返回已收集的结构化错误");
+    for (const raw of [
+      '{"format":"cineweave-project-workflow/v1","format":"duplicate"}',
+      '{"projectId":"bad\\uD800"}',
+      '{"revision":1e400}',
+      "{bad json",
+    ]) { cwVideoWrite(input, raw); assert.equal(run().status, 1, raw); }
+    const help = cwVideoSpawn(process.execPath, [cli, "--help"], { encoding: "utf8", timeout: 10000 });
+    assert.equal(help.status, 0); assert.match(help.stdout, /--project-workflow/u);
+    const badArgs = cwVideoSpawn(process.execPath, [cli, "--project-workflow"], { encoding: "utf8", timeout: 10000 });
+    assert.equal(badArgs.status, 1);
+  } finally { cwVideoRm(dir, { recursive: true, force: true }); }
 });

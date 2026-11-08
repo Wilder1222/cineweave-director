@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 790" role="img" aria-label="G1 / G6 · 光材联合测试设计板">
+<defs><linearGradient id="skin"><stop stop-color="#f2d3bf"/><stop offset="1" stop-color="#dcae96"/></linearGradient>
+<linearGradient id="soft"><stop stop-color="#e5dcd0"/><stop offset="1" stop-color="#c0b4a7"/></linearGradient>
+<pattern id="cloth" width="9" height="9" patternUnits="userSpaceOnUse"><rect width="9" height="9" fill="#eee5d6"/><path d="M0 2H9M2 0V9" stroke="#d8cdbd" stroke-width=".6"/></pattern>
+<pattern id="wood" width="40" height="22" patternUnits="userSpaceOnUse"><rect width="40" height="22" fill="#c8ac89"/><path d="M0 6Q20 0 40 8M0 15Q20 21 40 13" fill="none" stroke="#a48767" stroke-width="1"/></pattern>
+<marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0 0L6 3L0 6" fill="none" stroke="#c77c67" stroke-width="1.3"/></marker></defs>
+<rect width="100%" height="100%" fill="#faf7f1"/>
+<g font-family="Microsoft YaHei, PingFang SC, sans-serif"><text x="42" y="54" fill="#30383b" font-size="30" font-weight="700" text-anchor="start"><tspan x="42" dy="0">G1 / G6 · 光材联合测试设计板</tspan></text>
+<text x="42" y="88" fill="#67757a" font-size="15" font-weight="400" text-anchor="start"><tspan x="42" dy="0">原创视觉设计提案 / 矢量示意；非生成电影帧、非实测光材</tspan></text><rect x="45" y="135" width="355" height="155" rx="12" fill="#eee9e1" stroke="#c0b7aa"/><g transform="translate(160 196)"><ellipse cx="0" cy="43.45" rx="25.85" ry="5.5" fill="#ddddda"/>
+
+<rect x="-17.05" y="9.9" width="34.1" height="34.650000000000006" rx="13.200000000000001" fill="#c77c67"/>
+<circle cy="-7.700000000000001" r="14.850000000000001" fill="url(#skin)" stroke="#af8878" stroke-width="0.55"/>
+<path d="M-9.9 -22.0Q0.0 -31.35 10.450000000000001 -20.900000000000002" fill="#3d3430"/>
+<path d="M-2.75 -23.650000000000002Q0.55 -32.45 6.6000000000000005 -25.85" fill="none" stroke="#3d3430" stroke-width="2.75"/>
+<circle cx="-6.050000000000001" cy="-8.25" r="1.4300000000000002" fill="#40352f"/><circle cx="6.050000000000001" cy="-8.25" r="1.4300000000000002" fill="#40352f"/>
+<path d="M-3.8500000000000005 -0.55Q0 3.8500000000000005 3.8500000000000005 -0.55" fill="none" stroke="#a25f58" stroke-width="1.1"/>
+<path d="M-13.750000000000002 19.25L-25.85 32.45M13.750000000000002 19.25L25.85 32.45" stroke="#c77c67" stroke-width="8.8" stroke-linecap="round"/>
+<path d="M-8.25 42.35L-16.5 51.7M8.25 42.35L16.5 51.7" stroke="#c5b7a3" stroke-width="8.25" stroke-linecap="round"/></g><g transform="translate(280 210)"><ellipse cx="0" cy="39.5" rx="23.5" ry="5.0" fill="#ddddda"/>
+
+<rect x="-15.5" y="9.0" width="31.0" height="31.5" rx="12.0" fill="#eee5d6"/>
+<circle cy="-7.0" r="17.0" fill="url(#skin)" stroke="#af8878" stroke-width="0.5"/>
+<path d="M-9.0 -20.0Q0.0 -28.5 9.5 -19.0" fill="#3d3430"/>
+<path d="M-2.5 -21.5Q0.5 -29.5 6.0 -23.5" fill="none" stroke="#3d3430" stroke-width="2.5"/>
+<circle cx="-5.5" cy="-7.5" r="1.3" fill="#40352f"/><circle cx="5.5" cy="-7.5" r="1.3" fill="#40352f"/>
+<path d="M-3.5 -0.5Q0 3.5 3.5 -0.5" fill="none" stroke="#a25f58" stroke-width="1.0"/>
+<path d="M-12.5 17.5L-23.5 29.5M12.5 17.5L23.5 29.5" stroke="#eee5d6" stroke-width="8.0" stroke-linecap="round"/>
+<path d="M-7.5 38.5L-15.0 47.0M7.5 38.5L15.0 47.0" stroke="#c5b7a3" stroke-width="7.5" stroke-linecap="round"/></g><text x="57" y="319" fill="#30383b" font-size="20" font-weight="700" text-anchor="start"><tspan x="57" dy="0">T01 客厅共享双人</tspan></text><text x="57" y="349" fill="#30383b" font-size="16" font-weight="400" text-anchor="start"><tspan x="57" dy="0">脸、手、道具同时可读；暗侧保留体积</tspan></text><text x="57" y="276" fill="#67757a" font-size="12" font-weight="400" text-anchor="start"><tspan x="57" dy="0">已绘制测试构想 · 实际样片待制作</tspan></text><rect x="435" y="135" width="355" height="155" rx="12" fill="#eee9e1" stroke="#c0b7aa"/><g transform="translate(613 197)"><ellipse cx="0" cy="59.25" rx="35.25" ry="7.5" fill="#ddddda"/>
+
+<rect x="-23.25" y="13.5" width="46.5" height="47.25" rx="18.0" fill="url(#cloth)"/>
+<circle cy="-10.5" r="25.5" fill="url(#skin)" stroke="#af8878" stroke-width="0.75"/>
+<path d="M-13.5 -30.0Q0.0 -42.75 14.25 -28.5" fill="#3d3430"/>
+<path d="M-3.75 -32.25Q0.75 -44.25 9.0 -35.25" fill="none" stroke="#3d3430" stroke-width="3.75"/>
+<circle cx="-8.25" cy="-11.25" r="1.9500000000000002" fill="#40352f"/><circle cx="8.25" cy="-11.25" r="1.9500000000000002" fill="#40352f"/>
+<path d="M-5.25 -0.75Q0 5.25 5.25 -0.75" fill="none" stroke="#a25f58" stroke-width="1.5"/>
+<path d="M-18.75 26.25L-35.25 44.25M18.75 26.25L35.25 44.25" stroke="url(#cloth)" stroke-width="12.0" stroke-linecap="round"/>
+<path d="M-11.25 57.75L-22.5 70.5M11.25 57.75L22.5 70.5" stroke="#c5b7a3" stroke-width="11.25" stroke-linecap="round"/></g><text x="447" y="319" fill="#30383b" font-size="20" font-weight="700" text-anchor="start"><tspan x="447" dy="0">T02 面颊与棉衣近景</tspan></text><text x="447" y="349" fill="#30383b" font-size="16" font-weight="400" text-anchor="start"><tspan x="447" dy="0">肤色和衣料分离；不油亮、不纹理闪动</tspan></text><text x="447" y="276" fill="#67757a" font-size="12" font-weight="400" text-anchor="start"><tspan x="447" dy="0">已绘制测试构想 · 实际样片待制作</tspan></text><rect x="825" y="135" width="355" height="155" rx="12" fill="#eee9e1" stroke="#c0b7aa"/><ellipse cx="945" cy="211" rx="18" ry="13" fill="#e8bca6" stroke="#a57d67"/><circle cx="932" cy="200" r="4" fill="#e8bca6" stroke="#a57d67" stroke-width=".6"/><circle cx="940" cy="200" r="4" fill="#e8bca6" stroke="#a57d67" stroke-width=".6"/><circle cx="948" cy="200" r="4" fill="#e8bca6" stroke="#a57d67" stroke-width=".6"/><circle cx="956" cy="200" r="4" fill="#e8bca6" stroke="#a57d67" stroke-width=".6"/><ellipse cx="1000" cy="217" rx="19" ry="15" fill="none" stroke="#d98c7c" stroke-width="10"/><path d="M962 215L985 217" stroke="#c77c67" stroke-width="3"/><text x="837" y="319" fill="#30383b" font-size="20" font-weight="700" text-anchor="start"><tspan x="837" dy="0">T03 手—软布环接触</tspan></text><text x="837" y="349" fill="#30383b" font-size="16" font-weight="400" text-anchor="start"><tspan x="837" dy="0">抓稳后才释放；布环形状、数量连续</tspan></text><text x="837" y="276" fill="#67757a" font-size="12" font-weight="400" text-anchor="start"><tspan x="837" dy="0">已绘制测试构想 · 实际样片待制作</tspan></text><rect x="45" y="415" width="355" height="155" rx="12" fill="#eee9e1" stroke="#c0b7aa"/><rect x="70" y="443" width="35" height="80" fill="#88a4b0"/><path d="M110 477L255 498" stroke="#c77c67" stroke-width="3" marker-end="url(#arrow)"/><g transform="translate(280 482)"><ellipse cx="0" cy="41.08" rx="24.44" ry="5.2" fill="#ddddda"/>
+
+<rect x="-16.12" y="9.36" width="32.24" height="32.76" rx="12.48" fill="#eee5d6"/>
+<circle cy="-7.28" r="17.68" fill="url(#skin)" stroke="#af8878" stroke-width="0.52"/>
+<path d="M-9.36 -20.8Q0.0 -29.64 9.88 -19.76" fill="#3d3430"/>
+<path d="M-2.6 -22.36Q0.52 -30.68 6.24 -24.44" fill="none" stroke="#3d3430" stroke-width="2.6"/>
+<circle cx="-5.720000000000001" cy="-7.800000000000001" r="1.352" fill="#40352f"/><circle cx="5.720000000000001" cy="-7.800000000000001" r="1.352" fill="#40352f"/>
+<path d="M-3.64 -0.52Q0 3.64 3.64 -0.52" fill="none" stroke="#a25f58" stroke-width="1.04"/>
+<path d="M-13.0 18.2L-24.44 30.68M13.0 18.2L24.44 30.68" stroke="#eee5d6" stroke-width="8.32" stroke-linecap="round"/>
+<path d="M-7.800000000000001 40.04L-15.600000000000001 48.88M7.800000000000001 40.04L15.600000000000001 48.88" stroke="#c5b7a3" stroke-width="7.800000000000001" stroke-linecap="round"/></g><text x="57" y="599" fill="#30383b" font-size="20" font-weight="700" text-anchor="start"><tspan x="57" dy="0">T04 反向机位</tspan></text><text x="57" y="629" fill="#30383b" font-size="16" font-weight="400" text-anchor="start"><tspan x="57" dy="0">窗仍在世界西侧；反打光向有依据</tspan></text><text x="57" y="556" fill="#67757a" font-size="12" font-weight="400" text-anchor="start"><tspan x="57" dy="0">已绘制测试构想 · 实际样片待制作</tspan></text><rect x="435" y="415" width="355" height="155" rx="12" fill="#eee9e1" stroke="#c0b7aa"/><rect x="453" y="432" width="319" height="103" rx="10" fill="#b8c2c2"/><g transform="translate(615 480)"><ellipse cx="0" cy="41.08" rx="24.44" ry="5.2" fill="#ddddda"/>
+
+<rect x="-16.12" y="9.36" width="32.24" height="32.76" rx="12.48" fill="#eee5d6"/>
+<circle cy="-7.28" r="17.68" fill="url(#skin)" stroke="#af8878" stroke-width="0.52"/>
+<path d="M-9.36 -20.8Q0.0 -29.64 9.88 -19.76" fill="#3d3430"/>
+<path d="M-2.6 -22.36Q0.52 -30.68 6.24 -24.44" fill="none" stroke="#3d3430" stroke-width="2.6"/>
+<circle cx="-5.720000000000001" cy="-7.800000000000001" r="1.352" fill="#40352f"/><circle cx="5.720000000000001" cy="-7.800000000000001" r="1.352" fill="#40352f"/>
+<path d="M-3.64 -0.52Q0 3.64 3.64 -0.52" fill="none" stroke="#a25f58" stroke-width="1.04"/>
+<path d="M-13.0 18.2L-24.44 30.68M13.0 18.2L24.44 30.68" stroke="#eee5d6" stroke-width="8.32" stroke-linecap="round"/>
+<path d="M-7.800000000000001 40.04L-15.600000000000001 48.88M7.800000000000001 40.04L15.600000000000001 48.88" stroke="#c5b7a3" stroke-width="7.800000000000001" stroke-linecap="round"/></g><text x="447" y="599" fill="#30383b" font-size="20" font-weight="700" text-anchor="start"><tspan x="447" dy="0">T05 休息角醒来</tspan></text><text x="447" y="629" fill="#30383b" font-size="16" font-weight="400" text-anchor="start"><tspan x="447" dy="0">较弱日光下眼神与伸手仍可见</tspan></text><text x="447" y="556" fill="#67757a" font-size="12" font-weight="400" text-anchor="start"><tspan x="447" dy="0">已绘制测试构想 · 实际样片待制作</tspan></text><rect x="825" y="415" width="355" height="155" rx="12" fill="#eee9e1" stroke="#c0b7aa"/><rect x="958" y="476" width="84" height="48" rx="8" fill="#d4dedf" stroke="#66797e" stroke-width="2"/><circle cx="970" cy="533" r="10" fill="#67757a"/><circle cx="1030" cy="533" r="10" fill="#67757a"/><ellipse cx="997" cy="460" rx="26" ry="13" fill="#e8bca6" stroke="#a57d67"/><circle cx="984" cy="449" r="4" fill="#e8bca6" stroke="#a57d67" stroke-width=".6"/><circle cx="992" cy="449" r="4" fill="#e8bca6" stroke="#a57d67" stroke-width=".6"/><circle cx="1000" cy="449" r="4" fill="#e8bca6" stroke="#a57d67" stroke-width=".6"/><circle cx="1008" cy="449" r="4" fill="#e8bca6" stroke="#a57d67" stroke-width=".6"/><text x="837" y="599" fill="#30383b" font-size="20" font-weight="700" text-anchor="start"><tspan x="837" dy="0">T06 脚—车沿接触</tspan></text><text x="837" y="629" fill="#30383b" font-size="16" font-weight="400" text-anchor="start"><tspan x="837" dy="0">脚有支撑、腿不穿框、车架保持刚性</tspan></text><text x="837" y="556" fill="#67757a" font-size="12" font-weight="400" text-anchor="start"><tspan x="837" dy="0">已绘制测试构想 · 实际样片待制作</tspan></text><text x="50" y="742" fill="#30383b" font-size="16" font-weight="400" text-anchor="start"><tspan x="50" dy="0">比较时固定身份、造型与观察视图，分别测试中性光及场景光；当前未通过任何真实光材/动态审片。</tspan></text></g></svg>

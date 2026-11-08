@@ -1,0 +1,25 @@
+{
+  "collectedAt": "2026-11-08",
+  "cases": 29,
+  "uniqueSourcePages": 26,
+  "ageBuckets": {
+    "infant": 13,
+    "unknown": 1,
+    "toddler": 15
+  },
+  "interactionClarity": {
+    "B": 10,
+    "A": 19
+  },
+  "excludedOrUnselectedRecords": 22,
+  "note": "已核读公开家长自述的目标正文或评论；事件、年龄和日期以作者叙述为限，未作独立事实核验。未观看原始视频，不把图片、检索摘要或科普举例当现场证据。",
+  "videoObserved": false,
+  "existingStoriesModified": false,
+  "errors": [],
+  "sourceFileHashes": {
+    "source-infant.json": "8a5c4b8a096aa27e476b6c03d451bc286bb85e644db0b60d9f2941ff14bc6d6f",
+    "source-zh.json": "af87565a6aba36073535880c5712cf574068d7ffea63ec5fcb06a17d334b26db",
+    "source-toddler.json": "e6c544fa3a39bc693e4ac6e65011f6f9224ccee9e41b484d7c1c5697ce227e19",
+    "source-supplement.json": "78d72e5d5c1f3eee540d76317febfaacd1e9e5303fed49865bab8ca22f6f92e7"
+  }
+}

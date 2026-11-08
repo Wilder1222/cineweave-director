@@ -1,0 +1,16 @@
+{
+  "scope": "local PNG design-artifact visual inspection only",
+  "files": [
+    "boards/E03-board-03.png",
+    "visual/style-card.png"
+  ],
+  "findings": [
+    "Text, shot labels and six-panel layout legible in inspected PNGs.",
+    "Corrected insert classification: a phone or document mentioned at a frame edge no longer turns an actor shot into a full-frame prop view.",
+    "Over-shoulder and shared medium examples now use corresponding schematic figures."
+  ],
+  "limitations": [
+    "Figures are shot-scale index symbols, not exact blocking or generated keyframes.",
+    "No browser interaction, real actor, generated video, audio, color grading or actual rhythm verified."
+  ]
+}

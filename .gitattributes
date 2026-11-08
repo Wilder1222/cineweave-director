@@ -1,6 +1,8 @@
 * text=auto eol=lf
 # Preserve frozen evaluation inputs, raw outputs, and their recorded byte hashes.
 tests/evaluations/** -text whitespace=-blank-at-eol,-blank-at-eof
+# 保留创作、评审与交付材料的原始字节及已记录的内容哈希。
+studio-review/** -text whitespace=-blank-at-eol,-blank-at-eof
 *.png binary
 *.jpg binary
 *.jpeg binary

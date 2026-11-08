@@ -1,0 +1,63 @@
+{
+  "topic": "X009",
+  "title": "听雪客",
+  "projectId": "e2d64d4ee0110d880bb6a20240c15e00fd2eaead4f54c4cd25b7702545b926bc",
+  "currentRevision": null,
+  "source": "browser UI DOM",
+  "documents": [
+    {
+      "documentId": "db144b4c15bf44f01259afc503269dbaf933adbf060a7a4fc786483684f32f5f",
+      "meta": "提示词",
+      "title": "X009 听雪客｜审阅与来源｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "767d32986e7e5d576e7c071f9e54a15a03b6ba83044222034e27baf58fbecaca",
+      "utf8Bytes": 1710,
+      "readAt": "2026-11-04T06:52:00.746Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts",
+      "file": "db144b4c15bf44f01259afc503269dbaf933adbf060a7a4fc786483684f32f5f.md",
+      "proposals": {
+        "readAt": "2026-11-04T06:52:01.648Z",
+        "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#review",
+        "visibleText": "Agent 协作审阅\n当前文档提案\nX009 听雪客｜审阅与来源｜20261031审阅版 · 0 项提案\n回到剧本\n暂无待审阅提案\n\n在剧本编辑器提交候选。\n\n进入剧本",
+        "bodies": []
+      }
+    },
+    {
+      "documentId": "4d9b981b98d6542bca9077dbf4ed11ca8c8d95d8365a2cc61148f0ca5ff03d59",
+      "meta": "提示词",
+      "title": "X009 听雪客｜分镜与视频提示｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "ccb43b2e92405ceaa9a8262eec75c73a8d6784303d365ef6cb5b51642e5612db",
+      "utf8Bytes": 17390,
+      "readAt": "2026-11-04T06:52:08.657Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts",
+      "file": "4d9b981b98d6542bca9077dbf4ed11ca8c8d95d8365a2cc61148f0ca5ff03d59.md",
+      "proposals": {
+        "readAt": "2026-11-04T06:52:11.997Z",
+        "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#review",
+        "visibleText": "Agent 协作审阅\n当前文档提案\nX009 听雪客｜分镜与视频提示｜20261031审阅版 · 0 项提案\n回到剧本\n暂无待审阅提案\n\n在剧本编辑器提交候选。\n\n进入剧本",
+        "bodies": []
+      }
+    },
+    {
+      "documentId": "d4fcc85744b4c09ec14f3e8d8d0eb7bf2859f409adc2a033cd8e402148fa3839",
+      "meta": "剧本",
+      "title": "X009 听雪客｜剧本｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "f2ce41921355d405b51f69f76cf7b4b95c6ef91332d424648f9d4100e486f8ae",
+      "utf8Bytes": 3040,
+      "readAt": "2026-11-04T06:52:18.405Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts",
+      "file": "d4fcc85744b4c09ec14f3e8d8d0eb7bf2859f409adc2a033cd8e402148fa3839.md",
+      "proposals": {
+        "readAt": "2026-11-04T06:52:21.803Z",
+        "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#review",
+        "visibleText": "Agent 协作审阅\n当前文档提案\nX009 听雪客｜剧本｜20261031审阅版 · 0 项提案\n回到剧本\n暂无待审阅提案\n\n在剧本编辑器提交候选。\n\n进入剧本",
+        "bodies": []
+      }
+    }
+  ],
+  "exportComplete": true,
+  "exportDocumentCount": 3,
+  "exportCompletenessBasis": "UI directory inventory equals every document edit/readback; 22-project export completed before this annotation"
+}

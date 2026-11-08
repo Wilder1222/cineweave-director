@@ -1,0 +1,68 @@
+{
+  "topicId": "V006",
+  "projectId": "b174fa755ff00f0c0fe613922c063b8e401d036dacaea041258945ac7381cca1",
+  "projectTitle": "零号展厅",
+  "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=b174fa755ff00f0c0fe613922c063b8e401d036dacaea041258945ac7381cca1#scripts",
+  "transport": "authorized_browser_ui_dom",
+  "currentRevision": null,
+  "exportComplete": true,
+  "documents": [
+    {
+      "documentId": "2e3532cbb6b8d2bef60354218808a0b7f48c3abd84aa76b6f5a30a5b5b8af236",
+      "metadata": "提示词",
+      "title": "V006 零号展厅｜审阅与来源｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "c2514d437abd2898fd363dab8332b15a567275fba17e1374458aed4932a6c767",
+      "bodyLength": 742,
+      "readAt": "2026-11-04T06:50:27.119Z",
+      "file": "2e3532cbb6b8d2bef60354218808a0b7f48c3abd84aa76b6f5a30a5b5b8af236.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=b174fa755ff00f0c0fe613922c063b8e401d036dacaea041258945ac7381cca1#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "be3cc102939af8945c8cd5267e9d551e65cacef7a36ffd11af6db6183e1e89d0",
+      "metadata": "提示词",
+      "title": "V006 零号展厅｜分镜与视频提示｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "a844c1c3d494a58b3895c4210984063f7965211a98fca3e04b8d1f07450ae295",
+      "bodyLength": 4204,
+      "readAt": "2026-11-04T06:50:34.773Z",
+      "file": "be3cc102939af8945c8cd5267e9d551e65cacef7a36ffd11af6db6183e1e89d0.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=b174fa755ff00f0c0fe613922c063b8e401d036dacaea041258945ac7381cca1#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "cf518c6decf9d5ead459af4749ff9c541fbbf99abfd959cfa2de96fa4087325d",
+      "metadata": "剧本",
+      "title": "V006 零号展厅｜剧本｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "0dcdf5cd17c097c8ea42870e15fe33555670e94cc3e6f069334a5a70f7af6618",
+      "bodyLength": 990,
+      "readAt": "2026-11-04T06:50:42.909Z",
+      "file": "cf518c6decf9d5ead459af4749ff9c541fbbf99abfd959cfa2de96fa4087325d.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=b174fa755ff00f0c0fe613922c063b8e401d036dacaea041258945ac7381cca1#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "2a0d644882f7234a804d87dcb53be9e17bedcbb3494ae84b1aadd456349f7f24",
+      "metadata": "提示词",
+      "title": "V006 零号展厅｜分镜与视频提示词候选",
+      "currentRevision": null,
+      "sha256": "73b4f286c5a40e96a2f167516951c6d6d7da5758b16032417c2f0a59d04eee20",
+      "bodyLength": 1290,
+      "readAt": "2026-11-04T06:50:51.059Z",
+      "file": "2a0d644882f7234a804d87dcb53be9e17bedcbb3494ae84b1aadd456349f7f24.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=b174fa755ff00f0c0fe613922c063b8e401d036dacaea041258945ac7381cca1#scripts",
+      "proposals": [
+        {
+          "proposalId": "c69dafc8530ea6f031e32e557f0c54db89fca0e71405b481ba26df152bc47bbd",
+          "file": "2a0d644882f7234a804d87dcb53be9e17bedcbb3494ae84b1aadd456349f7f24.proposal-1.md",
+          "sha256": "73b4f286c5a40e96a2f167516951c6d6d7da5758b16032417c2f0a59d04eee20",
+          "cardText": "创作者提交的内容审阅提案2026/10/28 14:19待审阅# V006《零号展厅》｜逐镜分镜与视频提示词候选\n\n依据 V006-小说.md、V006-剧本.md。设计审阅：保安守护馆藏却决定未经授权开柜，影中女子争取自由又不愿碰盏；她仍未确定出去，他暂停值守并待调查。展柜动作不展示真实安防绕过。候选未经作者采纳及严格隔离排练；未生成媒体。\n\n通案：105 秒，一间深夜展厅，陈川与固定侧玻璃中的阿芫两人。青铜盏实体在底座中央，监控显示向边缘移动；固定侧玻璃与独立柜门分开，同一柜侧轴线。对讲回复以文字呈现，开柜触发警报。四镜：显示矛盾、请求、自担责任、影离开和报告。\n\n## 01｜0—22 秒｜屏幕动，实物未动\n**视频提示词：**深夜虚构博物馆展厅，前景监控屏中青铜盏缓慢靠近底座边缘，中景夜班安保陈川，后景展柜实物仍在底座中央。柜侧固定平视中景，陈抬眼确认实物未动，以对讲报告画面异常、请求保留录像并通知保管人员；展柜固定侧面玻璃出现古衣女子阿芫的倒影，向他招手。她说“明早他们要移走它。请别关灯。”焦点从监控转静物再到玻璃人影，低展厅底声及对讲提示，无其他人可辨声音；独立柜门不等于侧玻璃。\n\n## 02｜22—48 秒｜只想试，不碰盏\n**视频提示词：**同一展厅，同侧轴线下前景展柜固定侧玻璃、中景陈川及玻璃中阿芫、后景静止铜盏，独立柜门可见。陈不靠近柜门，问“你是谁？”阿芫答“阿芫。我醒来就在这里。上次它被拿走，我只看见黑，回来时过了多久都不知道。”监控里的盏又移一点，她袖口渐淡；她说“把柜门打开，我想试着出去。别碰盏。”陈说“开了也不一定有用。”她说“我知道。但我想试。”固定中近景，焦点由她转渐淡袖和监控边缘，展厅底声持续；实体盏仍居中。\n\n## 03｜48—78 秒｜明确无授权\n**视频提示词：**同一展厅，前景对讲回复文字“保管人员在路上，请等待，勿开柜。”及记录设备，中景陈川和独立柜门，后景固定侧玻璃中的阿芫。陈补报自己看见人影、听见声音，不能确认别人也看得见；阿芫看渐淡的手说“你已经叫人了。别因为我丢了工作。”监控中的盏到边缘，陈举对讲说“我准备开柜。没有授权，请记录。”他听值班室要求等待的提示音并见文字，不关闭记录；他打开独立柜门，警报响，不碰铜盏。平视中景因决定缓慢推近，焦点从指令转陈与门；不展示真实安防绕过，出点柜门开、侧玻璃仍固定、实盏未动。\n\n## 04｜78—105 秒｜结果不由他宣布\n**视频提示词：**同一展厅柜侧固定近景，独立柜门已开，阿芫倒影仍在固定侧面玻璃、实体铜盏在底座中央。阿芫转身向玻璃深处走，陈问“你出来了？”她答“没有。多了一条路，我想自己去看看。”她走出玻璃倒影画面；陈合上独立柜门，在旁报告时间等支援。值班室文字“保留记录，暂停值守，配合调查。”他退离柜边，将巡查表和记录设备留待交接，表写“未经授权开柜；人影自称阿芫，身份未核实；去向未知。”焦点由她离开转静盏、文字与记录；玻璃里只剩陈川，警报及室内声按现场计划衔接，切黑，不声称调查结果。\n\n试拍：固定玻璃的反射与独立门关系、监控/实体相反状态、开柜报警和 105 秒动作时长；真实安保程序须另行核验。\n采纳提案拒绝",
+          "readAt": "2026-11-04T06:50:52.013Z"
+        }
+      ]
+    }
+  ],
+  "exportedAt": "2026-11-04T06:50:53.205Z"
+}

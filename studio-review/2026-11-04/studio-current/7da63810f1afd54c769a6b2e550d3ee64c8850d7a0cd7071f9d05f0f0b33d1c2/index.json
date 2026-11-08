@@ -1,0 +1,48 @@
+{
+  "topicId": "U001",
+  "projectId": "7da63810f1afd54c769a6b2e550d3ee64c8850d7a0cd7071f9d05f0f0b33d1c2",
+  "projectTitle": "我家住进一位剑仙",
+  "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=7da63810f1afd54c769a6b2e550d3ee64c8850d7a0cd7071f9d05f0f0b33d1c2#scripts",
+  "transport": "authorized_browser_ui_dom",
+  "currentRevision": null,
+  "exportComplete": true,
+  "documents": [
+    {
+      "documentId": "13628e0e498d20265ac3c6af7b14e48a085cf8ad9da2ef04239d65f684ac58ae",
+      "metadata": "提示词",
+      "title": "U001 我家住进一位剑仙｜审阅与来源｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "80c1de18d1373ed376e6101d999b7a0038d6bef9d5b2242fe43c548ec2e2e7f3",
+      "bodyLength": 849,
+      "readAt": "2026-11-04T06:37:08.122Z",
+      "file": "13628e0e498d20265ac3c6af7b14e48a085cf8ad9da2ef04239d65f684ac58ae.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=7da63810f1afd54c769a6b2e550d3ee64c8850d7a0cd7071f9d05f0f0b33d1c2#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "f7ebe9847a0b6108f53f1157702995c63752a6e66239cf0a49314b99cd20c37c",
+      "metadata": "提示词",
+      "title": "U001 我家住进一位剑仙｜分镜与视频提示｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "2c85bed8bb6c242daccc5debb4bd0fe226cf360dbcfd8c641a66fc312d9720af",
+      "bodyLength": 5755,
+      "readAt": "2026-11-04T06:37:17.775Z",
+      "file": "f7ebe9847a0b6108f53f1157702995c63752a6e66239cf0a49314b99cd20c37c.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=7da63810f1afd54c769a6b2e550d3ee64c8850d7a0cd7071f9d05f0f0b33d1c2#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "3554e5732938fcd1034c761ea71963e56597e8bedcea01d81b423ab44b023955",
+      "metadata": "剧本",
+      "title": "U001 我家住进一位剑仙｜剧本｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "94a3878be4e86823629fe3bffc81eaa6f70893a5fd85d139aec989d1320d35e6",
+      "bodyLength": 934,
+      "readAt": "2026-11-04T06:38:14.986Z",
+      "file": "3554e5732938fcd1034c761ea71963e56597e8bedcea01d81b423ab44b023955.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=7da63810f1afd54c769a6b2e550d3ee64c8850d7a0cd7071f9d05f0f0b33d1c2#scripts",
+      "proposals": []
+    }
+  ],
+  "exportedAt": "2026-11-04T06:38:18.834Z"
+}

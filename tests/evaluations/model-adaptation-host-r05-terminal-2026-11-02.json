@@ -1,0 +1,9 @@
+{
+  "pid": 20884,
+  "exit": 0,
+  "end_utc": "2026-11-02T15:27:26.867465+00:00",
+  "turn_completed": true,
+  "turn_failed": false,
+  "command_error": "Windows error 267; file reading recovered via node_repl",
+  "stderr": "not included; raw remains in isolated local temp"
+}

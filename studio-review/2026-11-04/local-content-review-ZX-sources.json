@@ -1,0 +1,457 @@
+{
+  "scope": "Z001-Z012, X001-X010",
+  "document_count": 50,
+  "review": "local-content-review-ZX.md",
+  "records": [
+    {
+      "topic_id": "Z001",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z001-剧本.md",
+      "line_count": 81,
+      "sha256": "371206207138e37dfdb27b1631c5e4c249a552791341d54ecbe02f4b8ac58de6",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z001",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z001-分镜与视频提示词-候选.md",
+      "line_count": 57,
+      "sha256": "f7e158deef3d7a2cf00946d45392871e97ff83439cf4bfe25dce2f0a4c5167b1",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z002",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z002-剧本.md",
+      "line_count": 82,
+      "sha256": "340c9754abeb8d45336f0163dc5ad09e619acb73ba6f935a0c107e29202913a9",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z002",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z002-分镜与视频提示词-候选.md",
+      "line_count": 65,
+      "sha256": "1d45d4c902273cb1535020407f1f0db3f413cb78661593aa7a25c12d08486118",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z003",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z003-剧本.md",
+      "line_count": 73,
+      "sha256": "dfa3c8ad44349eb6c9475d87c44f9e396e27af6ce2eb66405001212a5c1c4b2a",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z003",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z003-分镜与视频提示词-候选.md",
+      "line_count": 73,
+      "sha256": "c23b05ffd182ed36edd855ccda6d4ad8479e6bb17a8139cf1980075c150f5636",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z004",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z004-剧本.md",
+      "line_count": 67,
+      "sha256": "db2fb842960592ece4f1bf376f74593421524df753c51f5b30b1e67fa1f7a81d",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z004",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z004-分镜与视频提示词-候选.md",
+      "line_count": 65,
+      "sha256": "8077fbcb16aad560c0722f7411aca0f1476c9d17068b2f2ab4814863703a9526",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z005",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z005-剧本.md",
+      "line_count": 81,
+      "sha256": "308e2f269336ee52a1327283873402d9efb3c985610977a8386eb6bde9eacffb",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z005",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z005-分镜与视频提示词-候选.md",
+      "line_count": 65,
+      "sha256": "12bdc144418f61ad19a46cea6c847ae8f76d9403bff4e9be705eb96b29c40c45",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z006",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z006-剧本.md",
+      "line_count": 74,
+      "sha256": "bd48b75c5a6f133184b412539d7371ca37490d0db5d3855bebc9480cfc85668b",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z006",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z006-分镜候选.md",
+      "line_count": 33,
+      "sha256": "3ad8fddc9949056f2bbb9590b4f70226d1123aea7414e09b3b6d2161639b84f6",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z007",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z007-剧本.md",
+      "line_count": 67,
+      "sha256": "6cde274add601927a404ac0ede7d016def64daa53c388dd5d260ff82771d6ae8",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z007",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z007-分镜候选.md",
+      "line_count": 33,
+      "sha256": "cac33e27174a077409b78c8e697ebbdb22db7744acdf1c5dd601adcc9ab486f0",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z008",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z008-剧本.md",
+      "line_count": 77,
+      "sha256": "27269fbd12b3886350618d631cbffa9e352b869f84f206f1e3c71a189e6bf4c1",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z008",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z008-分镜候选.md",
+      "line_count": 33,
+      "sha256": "7c5691249268b58802b386a651d3101e0ea9894d9d171412057ec8b755cdd96d",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z009",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z009-剧本.md",
+      "line_count": 70,
+      "sha256": "29b888cb5dddad244d8c720e49268f227a2a7ed359fb464bfd57dbc8bcbc5bf8",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z009",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z009-分镜候选.md",
+      "line_count": 30,
+      "sha256": "2ac8cdf6366671277a6aec175cd13a357d69e684a04af9f7b89fabf09245ec9b",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z009",
+      "role": "revision",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z009-剧本-冲突节奏修订候选.md",
+      "line_count": 70,
+      "sha256": "ae8b0d99bcb7db77e118ceabe0a454aa0709d823cadc1d2b545f9d4034c6dbd2",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z009",
+      "role": "revision",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z009-小说-冲突节奏修订候选.md",
+      "line_count": 123,
+      "sha256": "bfed1d479c0696dbaed9d5c45bc5a67b01a941001c0ed35d51880d09652b52cb",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z010",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z010-剧本.md",
+      "line_count": 57,
+      "sha256": "78ee281ca2c1ca07b1758c365c53f25d73b06bd3eee4e7d25596c2bcaa1874b0",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z010",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z010-分镜候选.md",
+      "line_count": 30,
+      "sha256": "aee8846f0b532d79fc7874855fce57ccc90d08faebbe3885e20bb765d27b2ddb",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z011",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z011-剧本.md",
+      "line_count": 78,
+      "sha256": "8b852f1b8d2327a5b51397584674b0f74db039dd215e0333a67d3215bb87dc6b",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z011",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z011-分镜与视频提示词-候选.md",
+      "line_count": 22,
+      "sha256": "ce8304de42d40e141c8a33b8cd0dcb772ca270c9dfa2f001fb5a0e7d02a67afb",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z012",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z012-剧本.md",
+      "line_count": 58,
+      "sha256": "52cd72b216a14f6e939bae5d4a7a9a460b7a4336348b57299773096e2d0b467e",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "Z012",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/Z012-分镜与视频提示词-候选.md",
+      "line_count": 22,
+      "sha256": "2d7b6a091d993a2cdd4036847dae741ff231fb96d5775bac9557ac3def8fa136",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X001",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/X001-剧本.md",
+      "line_count": 62,
+      "sha256": "d6dee5da0e602d1c5b04a7ca06ca57f5b302375e30b087fa5ae5ac2b0976291f",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X001",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/X001-分镜与视频提示词-候选.md",
+      "line_count": 25,
+      "sha256": "de72804e4e5f3e25f9f5b7139dfa7214ca73808b27383ae497ff8f13f1025017",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X002",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/X002-剧本.md",
+      "line_count": 62,
+      "sha256": "339eb0612cbc3f3f345f87c4529c5bd2b5b930ef110365357905d2aab48b3400",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X002",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/X002-分镜与视频提示词-候选.md",
+      "line_count": 25,
+      "sha256": "47abcee205a04ec7a516545217ac2fee19f74f2b38ae74bfe52090a633d416d3",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X003",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/X003-剧本.md",
+      "line_count": 69,
+      "sha256": "2a61a87f640f484bf21881e93a669d187c5b7ad4fe5f808fbfe8ed87afe72419",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X003",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/X003-分镜与视频提示词-候选.md",
+      "line_count": 22,
+      "sha256": "087009dda2d40843e036148b4d01ed52414d3811debd9f751f692dcace0d232e",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X004",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/X004-剧本.md",
+      "line_count": 110,
+      "sha256": "77908ca5d67dd01f299a1bbf2d3493cec32224c57b5ba8be3906b42031e1939d",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X004",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/X004-分镜候选.md",
+      "line_count": 37,
+      "sha256": "92e428a7d3febab6434431a7cc56bbd6ee975c62c0046668752c33e1674c5811",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X005",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/X005-剧本.md",
+      "line_count": 69,
+      "sha256": "d908a6ce2ef2cc08dc3a3f94098e9df41e165422170b66abe22934ffdb01d572",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X005",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/X005-分镜候选.md",
+      "line_count": 29,
+      "sha256": "e1aff50265e9da84bf5bee00eae01c8e6f0fd7afc1a8aa6254b709bb3b5fe42f",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X006",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/X006-剧本.md",
+      "line_count": 75,
+      "sha256": "9dc636b634a03959bd6c56aebe417c897ee1e8beed51aeeb59322a3a2028105a",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X006",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/X006-分镜候选.md",
+      "line_count": 29,
+      "sha256": "0fc4bbe078a022307b297561142ae5dd94c79975e40be5455271f7ac49bbcb0c",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X007",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/X007-剧本.md",
+      "line_count": 73,
+      "sha256": "85ae2a46e49d89767a0476c021085fcaae1b34236af4f620d6f692179375ac32",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X007",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/X007-分镜候选.md",
+      "line_count": 29,
+      "sha256": "5f3d91ce36369e3fa4c350e4f335f83a59de38611125f4561c7feff8924b7e2c",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X007",
+      "role": "revision",
+      "path": "D:/study/projects/combat-director/studio-drafts/X007-剧本-本轮修订候选.md",
+      "line_count": 73,
+      "sha256": "ad6a250b0afe4eaaf042b31bd6d0d9f98d9cdb02463279375654b21cdb70788c",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X007",
+      "role": "revision",
+      "path": "D:/study/projects/combat-director/studio-drafts/X007-小说-本轮修订候选.md",
+      "line_count": 205,
+      "sha256": "d35897b10d5763154e8ea12cdc9e995ada03a5f9ede08fc2ae8a0b1005624fa7",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X008",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/X008-剧本.md",
+      "line_count": 83,
+      "sha256": "e20ab5497b16778fe2d882ff95fc6568b6ad086630c94b472f3b854cb1fb7b98",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X008",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/X008-分镜候选.md",
+      "line_count": 29,
+      "sha256": "673b5eec5c513284136b610776ca8fbd6c81d1583f05ecd8284961389c5dc663",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X009",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/X009-剧本.md",
+      "line_count": 63,
+      "sha256": "f5309ce891133939069dace00170d4e901ee0dc117488d60680de22c14c46e70",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X009",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/X009-分镜与视频提示词-候选.md",
+      "line_count": 57,
+      "sha256": "8a8e529b4e06da951a07aacb27a1a21bb8695486b9c7ede339fe9b3dc65b2453",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X009",
+      "role": "revision",
+      "path": "D:/study/projects/combat-director/studio-drafts/X009-剧本-本轮修订候选.md",
+      "line_count": 69,
+      "sha256": "64dcdbcdf90125eb1fe629ac031a2be8b9484846c029ed527d088663af623258",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X009",
+      "role": "revision",
+      "path": "D:/study/projects/combat-director/studio-drafts/X009-小说-本轮修订候选.md",
+      "line_count": 204,
+      "sha256": "67b9701db68cca1330d9718e6d0ce2905946d1cfc22cf12e4efba94814d91780",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X010",
+      "role": "baseline_screenplay",
+      "path": "D:/study/projects/combat-director/studio-drafts/X010-剧本.md",
+      "line_count": 62,
+      "sha256": "1da0b5ff3390295ede899f42b9af28fae22deb9be7a0bf457cb8de72704a1a2e",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    },
+    {
+      "topic_id": "X010",
+      "role": "indexed_storyboard",
+      "path": "D:/study/projects/combat-director/studio-drafts/X010-分镜与视频提示词-候选.md",
+      "line_count": 65,
+      "sha256": "3dcbd84d778a8996e29a53e8fc211a452d307016d2e12213edfce00966106ec4",
+      "evidence": "local-source/current-Studio-unverified",
+      "full_text_read": true
+    }
+  ]
+}

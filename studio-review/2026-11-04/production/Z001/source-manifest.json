@@ -1,0 +1,48 @@
+{
+  "topicId": "Z001",
+  "projectId": "8cc1cc7dfa3dafcf75c94afea6687f259fd2713be52badb572ed9a3b02c0b36d",
+  "currentRevision": null,
+  "sourcePins": [
+    {
+      "documentId": "11fed777dbdcb395213bc7f30f820781775407187c890a8f8ea87bdd4b4aa26a",
+      "title": "Z001 倩娘离魂·归家｜剧本｜20261031审阅版",
+      "sha256": "b970d6150633bd63760af6c9501d47f47855e5a2112213e3c46e6db87efb56ea",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:38:16.143Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts"
+    },
+    {
+      "documentId": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702",
+      "title": "Z001 倩娘离魂·归家｜分镜与视频提示｜20261031审阅版",
+      "sha256": "fb59c59dfb3d8da27365b67524dd42858a92902c0ac7d787b21bebbb3fcfee33",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:38:08.440Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts"
+    },
+    {
+      "documentId": "71529e85541964c52e622ff93fe595336910c3b08acd75c5e76bbcb45da48b6c",
+      "title": "Z001 倩娘离魂·归家｜审阅与来源｜20261031审阅版",
+      "sha256": "012484ab32e363b5ab162d92b86b9e23d73a86e344d4c82cf5a92e6f07f04d07",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:38:00.865Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts"
+    }
+  ],
+  "patches": [
+    {
+      "documentId": "11fed777dbdcb395213bc7f30f820781775407187c890a8f8ea87bdd4b4aa26a",
+      "before": "室中倩娘扶门框站稳，船上倩娘伸手：",
+      "after": "室中倩娘沿床至门的东侧通道走近，左手扶门框站稳；船上倩娘抬起绕青线的右手：",
+      "reason": "补床门路径与接触手，不改变同意及合一事实"
+    },
+    {
+      "documentId": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702",
+      "before": "室中倩娘扶门框站稳，船上倩娘伸手：",
+      "after": "室中倩娘沿床至门的东侧通道走近，左手扶门框站稳；船上倩娘抬起绕青线的右手：",
+      "reason": "补床门路径与接触手，不改变同意及合一事实"
+    }
+  ],
+  "candidate": true,
+  "authorApproved": false,
+  "rawSourceUnchanged": true
+}

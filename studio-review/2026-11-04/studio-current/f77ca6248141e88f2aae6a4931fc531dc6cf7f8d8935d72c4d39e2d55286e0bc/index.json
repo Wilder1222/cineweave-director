@@ -1,0 +1,48 @@
+{
+  "topicId": "U010",
+  "projectId": "f77ca6248141e88f2aae6a4931fc531dc6cf7f8d8935d72c4d39e2d55286e0bc",
+  "projectTitle": "被封印的女宗主",
+  "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=f77ca6248141e88f2aae6a4931fc531dc6cf7f8d8935d72c4d39e2d55286e0bc#scripts",
+  "transport": "authorized_browser_ui_dom",
+  "currentRevision": null,
+  "exportComplete": true,
+  "documents": [
+    {
+      "documentId": "226a1a9fc29c429045c8019043cd3806613d331e76ca35c5381018030bcae47b",
+      "metadata": "提示词",
+      "title": "U010 被封印的女宗主｜审阅与来源｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "c37cd322999a1dd64f07f301272cef20556d9448e36bd3f07fb4363d072ce6fd",
+      "bodyLength": 893,
+      "readAt": "2026-11-04T06:44:31.220Z",
+      "file": "226a1a9fc29c429045c8019043cd3806613d331e76ca35c5381018030bcae47b.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=f77ca6248141e88f2aae6a4931fc531dc6cf7f8d8935d72c4d39e2d55286e0bc#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "8dfc0e3d9e87397224932214177b2b10705ac343381b54e46040ee8303f487e9",
+      "metadata": "提示词",
+      "title": "U010 被封印的女宗主｜分镜与视频提示｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "355d90351e8731b513fa67be4c4dccf2e30bfbbffc84c3e4073c120d8dc330cd",
+      "bodyLength": 5799,
+      "readAt": "2026-11-04T06:44:39.257Z",
+      "file": "8dfc0e3d9e87397224932214177b2b10705ac343381b54e46040ee8303f487e9.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=f77ca6248141e88f2aae6a4931fc531dc6cf7f8d8935d72c4d39e2d55286e0bc#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "1643098cb621fdd83083e370fd67565035ba94cf4585deb36c6bab486be91db8",
+      "metadata": "剧本",
+      "title": "U010 被封印的女宗主｜剧本｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "d450ad0a0ae7e01af03b3fb754fab88bbe6c25237d722905075255049e4fb75f",
+      "bodyLength": 1078,
+      "readAt": "2026-11-04T06:44:46.745Z",
+      "file": "1643098cb621fdd83083e370fd67565035ba94cf4585deb36c6bab486be91db8.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=f77ca6248141e88f2aae6a4931fc531dc6cf7f8d8935d72c4d39e2d55286e0bc#scripts",
+      "proposals": []
+    }
+  ],
+  "exportedAt": "2026-11-04T06:44:48.677Z"
+}

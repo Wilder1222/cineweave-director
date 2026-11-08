@@ -17,6 +17,9 @@ description: "CineWeave 统一入口工作流的内部能力。将已有中文�
 
 只有摘要、文件名或来源声明时，不把它们当成已核对正文／媒体。没有母稿时，返回导演创作职责或交付围绕当前已给内容的限定待补稿；列出必需缺口，不自行创作整个新故事。缺能力、正式引用或参考图时继续可独立完成的忠实条件稿，依赖这些输入的提交结论保留未核验，不编槽位语法、时长档位或隐藏默认值。无需自动安装其他 Skill 或新增运行时。
 
+## 镜头设计归导演母稿所有
+
+平台投射应保留已批准机位、构图、摄影机静止／运动、焦点与切点；平台缺乏精确环绕或拉焦控件时注明兼容风险、将备选回流导演，不得默默重写为默认镜头。忠实既有稿转换不触发新创意选镜。
 ## 忠实适配与交付
 
 1. **先整理可见内容。** 从源稿提取本图／本镜需要的可见与可听命题，保留身份、妆造、空间、表演、动作触发、关键接触／落空、结果、恢复与出入态。静帧保持一个选定瞬间；视频保持初态、主体与摄影机各自变化、可达终态、准确声音和相邻连续性。精简重复，不靠删硬锁或必要线索缩短。
@@ -27,6 +30,12 @@ description: "CineWeave 统一入口工作流的内部能力。将已有中文�
 局部修订已有适配稿时，只传播授权变量与必要版本变化，保留未影响字句。原稿若已有独立复制上下文不足，单列其来源缺口与另修范围，不以补齐上下文为由无声扩大本次修改；它仍是有未决项的工作稿。逐镜新编译按每镜独立稿交付，母稿要求的准确台词在相应稿内完整保留。
 
 能力未核验时交付可审阅条件稿；只有依赖的能力、权利和兼容关卡通过，才称“可直接提交”。官方证据优先支持语法和模式，社区材料只能启发组织与试验；随包指南保留原核验日期，版本／界面变化或证据过期时复核。能力测试夹具与规范示例都不能证明当前账号或在线服务支持。
+
+用户要求同一母稿跨模型适配或比较时，除逐份完整复制稿外，简要指出真正影响本次任务的方言、参考绑定或声音／时长差异，在交付中给出对应官方页面链接及版本／界面／模式范围，而不是只说“参见快照”；若宿主未知，将该差异限定为有证据的官方入口示例，目标入口保持待核。没有证据的差异明确未知，不为制造差异而改动作、台词或镜头。
+
+目标入口已知且用户需要执行条件时，对本次涉及的每类实际输入，按[模型实践](references/optional/video-model-practices-2026-10.md)逐文件交接对应版本／模式已核验的格式、大小、时长和视频帧率等限制及来源；未提供素材或来源未列字段保持待核，不把它们推为已合格。若要求的关键帧与视频参考组合存在官方资料冲突，就近列出各来源的具体限制和示例及实际入口待核，不以笼统“有差异”代替，也不假定可用或不可用。仅要最少交接且组合已被互斥规则阻断时，先交冲突、条件稿和选择损失，文件规格留到路径选定或用户明确要求完整执行条件时展开。纯创意稿与其他入口不强加该 API 的无关规格。
+
+Seedance 2.5 适配只读[该模型专节](references/optional/video-model-practices-2026-10.md#seedance-25)中本题所需的任务分流、编译方法与接口条件：先区分新片参考、关键帧、严格首尾帧、编辑或延长，再交付所选模式的一份完整正文与必要旁路表；已核精准参考可按职责去重，准确台词、因果与硬锁不能省略。整秒与声音方言不回写母稿，小数秒或帧级要求不能无声改时长；未知上传顺序用预留编号标明，图内角色名不算绑定。
 
 ## 创作约定
 
@@ -41,7 +50,7 @@ description: "CineWeave 统一入口工作流的内部能力。将已有中文�
 | 当前问题 | 读取章节 |
 | --- | --- |
 | 图像母稿的忠实编译、参考去重与文字交付 | [图像提示词](references/routes/image-prompt.md#平台适配)、[细节与复制稿](references/optional/prompt-detail-standard.md#场次与逐镜交付模板)；不借此接管从零创作 |
-| 视频模式、输入职责、多镜／分镜板或人工返回 | [视频平台适配](references/optional/video-platform-adaptation.md)对应路径；时间问题再读[时长与余量](references/optional/video-timing-and-handles.md)，声音问题再读[声音与交付](references/optional/video-sound-and-delivery.md) |
+| 视频模式、输入职责、多镜／分镜板或人工返回 | [视频平台适配](references/optional/video-platform-adaptation.md)对应路径；指定 Seedance 2.5、Kling 或 Wan 时再读[模型实践](references/optional/video-model-practices-2026-10.md)，按准确界面和模式核验；时间问题再读[时长与余量](references/optional/video-timing-and-handles.md)，声音问题再读[声音与交付](references/optional/video-sound-and-delivery.md) |
 | Midjourney 模型、参数尾、参考及默认 | [Midjourney 适配](references/optional/midjourney-projection.md)；保留原证据日期并按触发条件复核 |
 | 正式引用、权威冲突或来源版本变更 | [产物控制](references/core/artifact-control-and-precedence.md)、[工作模型](references/core/operating-model.md)相关章节；修订影响再读[草稿与变更影响](references/optional/drafts-and-change-impact.md) |
 | 用户要求受控比较或已有外部失败 | [AIGC 控制](references/optional/aigc-control-and-evaluation.md)、[失败分诊](references/optional/generation-diagnostics.md#外部失败分诊与恢复交接)相关章节；返回命名变量与条件，不伪称已完成试验或修复媒体 |
@@ -51,6 +60,8 @@ description: "CineWeave 统一入口工作流的内部能力。将已有中文�
 ## 可选规范交接
 
 仅在用户要求规范 JSON 或已有系统需要时，读取[契约索引](resources/contracts/index.json)、[PromptProjectionPlan schema](resources/contracts/schemas/prompt-projection-plan.schema.json)及[规范示例](resources/contracts/examples/prompt-projection-plan.json)，逐字复用现有字段、枚举与边界；示例身份、批准和能力证据是夹具。精确绑定源母稿、`CapabilityProfile`、`LicenseProfile`及实际正文，不暗解 `latest`，不造 ID、版本、哈希或 `skillReceipt`。`ImagePrompt` 本身没有规范 ID／version；缺外部准确引用时保留工作引用和未核验状态，不为填引用改造母稿。`@Asset` 只经指定准确注册表解析。
+
+现行 `PromptProjectionPlan` 的源引用面向图像提示词，最多 12 个参考，且参数模型是正文后的文本尾；它不能完整表达一般视频母稿、多模态输入或独立界面／API 设置。不要为通过校验把视频稿冒充图像稿、遗漏参考、虚构参数尾或拆成多个看似完整的调用。此类视频交付使用完整复制正文及旁路参考／设置工作表，逐项标记请求值、界面解析值、实际返回值和证据；明确不受该规范契约完整验证，不能以它的 `ready_for_human` 代表整次视频调用已就绪。需要机器规范交接时说明现有契约不覆盖并保留缺口，不伪造新 schema。
 
 规范复制稿按[内部闭合规则](references/optional/video-platform-adaptation.md#复制稿的内部闭合)检查：`promptBody` 与 `renderedPrompt.body` 逐字符相等；参数 ID／order 唯一，按 order 渲染一次，参数尾用 ASCII 空格连接，`copyText` 等于正文及有条件的单个 ASCII 空格与参数尾。不得 Unicode 归一化或改准确文案。方言语法仅依已定义证据；这项装配规则不能外推所有平台。检查正文和最终复制稿没有额外 flag、私有本地／file 定位符、凭据或签名私链。
 

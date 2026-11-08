@@ -1,0 +1,819 @@
+{
+  "source": {
+    "type": "design",
+    "id": "Z004-production-r1",
+    "version": 1,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "01",
+    "02",
+    "03-A",
+    "03-B",
+    "04",
+    "05",
+    "06"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "01",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：香玉先自己争取而非等黄生买",
+      "observation": "香玉先自己争取而非等黄生买。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L7–L26"
+    },
+    {
+      "role": "performance",
+      "shotId": "01",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：边写边说计划，黄生磨墨听",
+      "observation": "边写边说计划，黄生磨墨听。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L7–L26"
+    },
+    {
+      "role": "staging",
+      "shotId": "01",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：笔纸在她手区，黄不代写",
+      "observation": "笔纸在她手区，黄不代写。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L7–L26"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "01",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：笔墨至她抬头的转焦保动作先后",
+      "observation": "笔墨至她抬头的转焦保动作先后。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L7–L26"
+    },
+    {
+      "role": "prompt",
+      "shotId": "01",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：告示未给全文不添成功批准文",
+      "observation": "告示未给全文不添成功批准文。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L7–L26"
+    },
+    {
+      "role": "continuity",
+      "shotId": "01",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：前夜牡丹尚在，为次晨空坑参照",
+      "observation": "前夜牡丹尚在，为次晨空坑参照。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L7–L26"
+    },
+    {
+      "role": "direction",
+      "shotId": "02",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：提出购买后被花的意愿打断",
+      "observation": "提出购买后被花的意愿打断。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L27–L46"
+    },
+    {
+      "role": "performance",
+      "shotId": "02",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：反问先发生，黄生怔后再让她离开",
+      "observation": "反问先发生，黄生怔后再让她离开。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L27–L46"
+    },
+    {
+      "role": "staging",
+      "shotId": "02",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：她搁笔后折纸入袖，手序完整",
+      "observation": "她搁笔后折纸入袖，手序完整。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L27–L46"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "02",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：反问触发半步推，不抢无表情空推",
+      "observation": "反问触发半步推，不抢无表情空推。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L27–L46"
+    },
+    {
+      "role": "prompt",
+      "shotId": "02",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：保留你没问花原话不改说教",
+      "observation": "保留你没问花原话不改说教。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L27–L46"
+    },
+    {
+      "role": "continuity",
+      "shotId": "02",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：告示归袖，黄未买到任何东西",
+      "observation": "告示归袖，黄未买到任何东西。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L27–L46"
+    },
+    {
+      "role": "direction",
+      "shotId": "03-A",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：争取确已失败，车已远去",
+      "observation": "争取确已失败，车已远去。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L47–L66"
+    },
+    {
+      "role": "performance",
+      "shotId": "03-A",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：黄见坑才问，香说没留住",
+      "observation": "黄见坑才问，香说没留住。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L47–L66"
+    },
+    {
+      "role": "staging",
+      "shotId": "03-A",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：她门框起步沿右侧两步到坑角",
+      "observation": "她门框起步沿右侧两步到坑角。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L47–L66"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "03-A",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：中远景建立坑门可达而非瞬移",
+      "observation": "中远景建立坑门可达而非瞬移。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L47–L66"
+    },
+    {
+      "role": "prompt",
+      "shotId": "03-A",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：不加蓝家人露脸或新对白",
+      "observation": "不加蓝家人露脸或新对白。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L47–L66"
+    },
+    {
+      "role": "continuity",
+      "shotId": "03-A",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：次晨跳切，空盆两瓦从此预置",
+      "observation": "次晨跳切，空盆两瓦从此预置。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L47–L66"
+    },
+    {
+      "role": "direction",
+      "shotId": "03-B",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：根身份未知，守护指令有边界",
+      "observation": "根身份未知，守护指令有边界。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L67–L86"
+    },
+    {
+      "role": "performance",
+      "shotId": "03-B",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：她先指后说也许不是，不演肯定认亲",
+      "observation": "她先指后说也许不是，不演肯定认亲。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L67–L86"
+    },
+    {
+      "role": "staging",
+      "shotId": "03-B",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：手在根外上方不触不拔",
+      "observation": "手在根外上方不触不拔。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L67–L86"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "03-B",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：细节焦点指向到根，实际深度待测",
+      "observation": "细节焦点指向到根，实际深度待测。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L67–L86"
+    },
+    {
+      "role": "prompt",
+      "shotId": "03-B",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：根不显示姓名或确认符号",
+      "observation": "根不显示姓名或确认符号。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L67–L86"
+    },
+    {
+      "role": "continuity",
+      "shotId": "03-B",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：此刻未盆罩，位置锁东北角",
+      "observation": "此刻未盆罩，位置锁东北角。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L67–L86"
+    },
+    {
+      "role": "direction",
+      "shotId": "04",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：愿去新处由她决定，留下只约到日落",
+      "observation": "愿去新处由她决定，留下只约到日落。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L87–L106"
+    },
+    {
+      "role": "performance",
+      "shotId": "04",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：黄先买回被问原处后答不知道",
+      "observation": "黄先买回被问原处后答不知道。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L87–L106"
+    },
+    {
+      "role": "staging",
+      "shotId": "04",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：两人仍坑门同侧，黄不拽她",
+      "observation": "两人仍坑门同侧，黄不拽她。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L87–L106"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "04",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：固定双人可见望车辙再望根",
+      "observation": "固定双人可见望车辙再望根。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L87–L106"
+    },
+    {
+      "role": "prompt",
+      "shotId": "04",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：不能保证成活和去向均保留",
+      "observation": "不能保证成活和去向均保留。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L87–L106"
+    },
+    {
+      "role": "continuity",
+      "shotId": "04",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：盆瓦仍坑旁，未提前盖根",
+      "observation": "盆瓦仍坑旁，未提前盖根。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L87–L106"
+    },
+    {
+      "role": "direction",
+      "shotId": "05",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：具体守护让追车代价可见",
+      "observation": "具体守护让追车代价可见。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L107–L126"
+    },
+    {
+      "role": "performance",
+      "shotId": "05",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：他说先留下是在完成罩盆之后",
+      "observation": "他说先留下是在完成罩盆之后。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L107–L126"
+    },
+    {
+      "role": "staging",
+      "shotId": "05",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：先盆罩，再东南垫瓦与顶孔盖瓦",
+      "observation": "先盆罩，再东南垫瓦与顶孔盖瓦。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L107–L126"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "05",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：俯视逐件可读不以光晕遮缝",
+      "observation": "俯视逐件可读不以光晕遮缝。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L107–L126"
+    },
+    {
+      "role": "prompt",
+      "shotId": "05",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：不写盆底密封也不新加第三瓦",
+      "observation": "不写盆底密封也不新加第三瓦。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L107–L126"
+    },
+    {
+      "role": "continuity",
+      "shotId": "05",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：两瓦分工固定，根未被压",
+      "observation": "两瓦分工固定，根未被压。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L107–L126"
+    },
+    {
+      "role": "direction",
+      "shotId": "06",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：她可离开且照顾不换归来",
+      "observation": "她可离开且照顾不换归来。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L127–L146"
+    },
+    {
+      "role": "performance",
+      "shotId": "06",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：触后穿过，黄生接收而不抓留",
+      "observation": "触后穿过，黄生接收而不抓留。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L127–L146"
+    },
+    {
+      "role": "staging",
+      "shotId": "06",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：挡风手在西北外侧，不封东南缝",
+      "observation": "挡风手在西北外侧，不封东南缝。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L127–L146"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "06",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：平视同见盆与门，离场非焦点抹除",
+      "observation": "平视同见盆与门，离场非焦点抹除。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L127–L146"
+    },
+    {
+      "role": "prompt",
+      "shotId": "06",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：透明只香玉，不让陶盆也透明",
+      "observation": "透明只香玉，不让陶盆也透明。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L127–L146"
+    },
+    {
+      "role": "continuity",
+      "shotId": "06",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：两瓦缝留住，白瓣只落盆外",
+      "observation": "两瓦缝留住，白瓣只落盆外。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b:L127–L146"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "01",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她先自己争取花期。",
+        "audiencePayoff": "她先自己争取花期。",
+        "trigger": "写告示时她说出计划。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在窗侧平视，让写告示时她说出计划触发人物而非相机移动，保持她先自己争取花期的空间参照。理由：让观众读出她先自己争取花期；不改变人物既定行动。",
+        "focusTargetEnd": "香玉抬头说明",
+        "exitMatch": "告示写完，白牡丹仍在。"
+      },
+      "camera": {
+        "shotScale": "双人中景",
+        "position": "窗侧平视",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "她先自己争取花期。",
+        "focusTarget": "笔墨",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "书室窗南侧与花圃坑西南侧，花圃门/坑轴同侧",
+        "movementIntent": "固定在窗侧平视，让写告示时她说出计划触发人物而非相机移动，保持她先自己争取花期的空间参照。理由：让观众读出她先自己争取花期；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "纸墨",
+        "midground": "香玉写告示黄生磨墨",
+        "background": "窗外白牡丹",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "笔墨与告示 → 在场人物的接收/反应 → 窗外白牡丹"
+      },
+      "temporal": {
+        "durationSeconds": 22,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她先自己争取花期。",
+          "path": "固定在窗侧平视，让写告示时她说出计划触发人物而非相机移动，保持她先自己争取花期的空间参照。理由：让观众读出她先自己争取花期；不改变人物既定行动。",
+          "start": "机位固定于：窗侧平视",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：窗侧平视",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "01-F1",
+            "timeSeconds": 0,
+            "description": "笔墨"
+          },
+          {
+            "eventId": "01-F2",
+            "timeSeconds": 6,
+            "description": "香玉抬头说明"
+          }
+        ],
+        "edit": {
+          "entry": "前夜二人在书室案边，袖无泥，花尚未被掘。",
+          "exit": "告示写完，白牡丹仍在。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "前夜书室为纸笔衣料和原对白；次晨为院风、瓦盆轻触、既定落瓣合成声；无守卫、羊铃或追车者人声。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "02",
+      "decision": {
+        "primaryTechniqueId": "M01",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "购买不能替代花的意愿。",
+        "audiencePayoff": "购买不能替代花的意愿。",
+        "trigger": "香玉反问后黄生才怔。",
+        "cameraMode": "moving",
+        "focusMode": "rack",
+        "focusTargetEnd": "黄生停住的脸",
+        "exitMatch": "纸收入香玉袖，她离门；明确省略到次晨。"
+      },
+      "camera": {
+        "shotScale": "近中景",
+        "position": "书室侧面原轴缓推",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "购买不能替代花的意愿。",
+        "focusTarget": "桌上尚未折起的纸",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "书室窗南侧与花圃坑西南侧，花圃门/坑轴同侧",
+        "movementIntent": "收到“香玉反问后黄生才怔”后沿原轴线侧缓推半步；起步轻、匀速靠近、在出态前柔和减速，无环绕、无变焦。理由：让观众读出购买不能替代花的意愿；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "折纸",
+        "midground": "二人",
+        "background": "窗口",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "折起告示 → 在场人物的接收/反应 → 书窗"
+      },
+      "temporal": {
+        "durationSeconds": 18,
+        "cameraMotion": {
+          "type": "dolly",
+          "motivation": "购买不能替代花的意愿。",
+          "path": "收到“香玉反问后黄生才怔”后沿原轴线侧缓推半步；起步轻、匀速靠近、在出态前柔和减速，无环绕、无变焦。理由：让观众读出购买不能替代花的意愿；不改变人物既定行动。",
+          "start": "告示写完，白牡丹仍在。",
+          "acceleration": "明确刺激后缓起，保留初始空间参照",
+          "peak": "同侧前移半步的低速段，有真实视差不变焦",
+          "deceleration": "出态前柔停，终点不越人物轴",
+          "end": "纸收入香玉袖，她离门；明确省略到次晨。",
+          "framingChange": "初始近中景在前移半步后略紧，折起告示与人物的占幅增加，既有书窗产生可辨纵深视差，终点不切掉关键触点"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "02-F1",
+            "timeSeconds": 0,
+            "description": "桌上尚未折起的纸"
+          },
+          {
+            "eventId": "02-F2",
+            "timeSeconds": 9,
+            "description": "黄生停住的脸"
+          }
+        ],
+        "edit": {
+          "entry": "告示写完，白牡丹仍在。",
+          "exit": "纸收入香玉袖，她离门；明确省略到次晨。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "前夜书室为纸笔衣料和原对白；次晨为院风、瓦盆轻触、既定落瓣合成声；无守卫、羊铃或追车者人声。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "03-A",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "移花已发生且争取失败。",
+        "audiencePayoff": "移花已发生且争取失败。",
+        "trigger": "黄生见空坑才问。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在坑侧平视，让黄生见空坑才问触发人物而非相机移动，保持移花已发生且争取失败的空间参照。理由：让观众读出移花已发生且争取失败；不改变人物既定行动。",
+        "focusTargetEnd": "淡去的香玉袖",
+        "exitMatch": "香玉说蓝家掘走，手将指向坑角。"
+      },
+      "camera": {
+        "shotScale": "中远景",
+        "position": "坑侧平视",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "移花已发生且争取失败。",
+        "focusTarget": "空坑",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "书室窗南侧与花圃坑西南侧，花圃门/坑轴同侧",
+        "movementIntent": "固定在坑侧平视，让黄生见空坑才问触发人物而非相机移动，保持移花已发生且争取失败的空间参照。理由：让观众读出移花已发生且争取失败；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "白瓣湿土",
+        "midground": "黄生至空坑",
+        "background": "扶门香玉及车辙",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "空坑湿土白瓣 → 在场人物的接收/反应 → 门外车辙"
+      },
+      "temporal": {
+        "durationSeconds": 15,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "移花已发生且争取失败。",
+          "path": "固定在坑侧平视，让黄生见空坑才问触发人物而非相机移动，保持移花已发生且争取失败的空间参照。理由：让观众读出移花已发生且争取失败；不改变人物既定行动。",
+          "start": "机位固定于：坑侧平视",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：坑侧平视",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "03-A-F1",
+            "timeSeconds": 0,
+            "description": "空坑"
+          },
+          {
+            "eventId": "03-A-F2",
+            "timeSeconds": 8,
+            "description": "淡去的香玉袖"
+          }
+        ],
+        "edit": {
+          "entry": "隔夜跳切：花已被移，香玉泥袖边缘渐淡，不补移花人。",
+          "exit": "香玉说蓝家掘走，手将指向坑角。",
+          "preferredTransition": "明确时间省略，先重建入态，保留环境声的时空边界",
+          "soundBridge": "前夜书室为纸笔衣料和原对白；次晨为院风、瓦盆轻触、既定落瓣合成声；无守卫、羊铃或追车者人声。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "03-B",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "根身份及生还均未知。",
+        "audiencePayoff": "根身份及生还均未知。",
+        "trigger": "她先指明坑角才说明不确定。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在坑沿斜俯，同侧看指尖指向而不触根，让她先指明坑角才说明不确定触发人物而非相机移动，保持根身份及生还均未知的空间参照。理由：让观众读出根身份及生还均未知；不改变人物既定行动。",
+        "focusTargetEnd": "细根",
+        "exitMatch": "细根未拔未碰；指向手收回。"
+      },
+      "camera": {
+        "shotScale": "细节近景",
+        "position": "坑沿斜俯，同侧看指尖指向而不触根",
+        "height": "工作面上方斜俯，具体高度由光学测试确定",
+        "angle": "斜俯",
+        "perspectiveIntent": "根身份及生还均未知。",
+        "focusTarget": "手指方向",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "书室窗南侧与花圃坑西南侧，花圃门/坑轴同侧",
+        "movementIntent": "固定在坑沿斜俯，同侧看指尖指向而不触根，让她先指明坑角才说明不确定触发人物而非相机移动，保持根身份及生还均未知的空间参照。理由：让观众读出根身份及生还均未知；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "工作面斜线组织，关键物件完整落画",
+        "foreground": "香玉的指向手",
+        "midground": "坑角细根",
+        "background": "湿土与白瓣",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "指尖方向与细根 → 在场人物的接收/反应 → 湿土坑角"
+      },
+      "temporal": {
+        "durationSeconds": 15,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "根身份及生还均未知。",
+          "path": "固定在坑沿斜俯，同侧看指尖指向而不触根，让她先指明坑角才说明不确定触发人物而非相机移动，保持根身份及生还均未知的空间参照。理由：让观众读出根身份及生还均未知；不改变人物既定行动。",
+          "start": "机位固定于：坑沿斜俯，同侧看指尖指向而不触根",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：坑沿斜俯，同侧看指尖指向而不触根",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "03-B-F1",
+            "timeSeconds": 0,
+            "description": "手指方向"
+          },
+          {
+            "eventId": "03-B-F2",
+            "timeSeconds": 4,
+            "description": "细根"
+          }
+        ],
+        "edit": {
+          "entry": "接03-A指向动作，根从开镜就在坑角；不重说花被掘。",
+          "exit": "细根未拔未碰；指向手收回。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "前夜书室为纸笔衣料和原对白；次晨为院风、瓦盆轻触、既定落瓣合成声；无守卫、羊铃或追车者人声。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "04",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她愿自己去看而不是被买回。",
+        "audiencePayoff": "她愿自己去看而不是被买回。",
+        "trigger": "黄生提出追车，她才问原处能否保留。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在门内侧平视，守坑与门的同侧，让黄生提出追车，她才问原处能否保留触发人物而非相机移动，保持她愿自己去看而不是被买回的空间参照。理由：让观众读出她愿自己去看而不是被买回；不改变人物既定行动。",
+        "focusTargetEnd": "香玉回应后望根",
+        "exitMatch": "黄生尚未追，香玉交代守到日落。"
+      },
+      "camera": {
+        "shotScale": "双人中景",
+        "position": "门内侧平视，守坑与门的同侧",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "她愿自己去看而不是被买回。",
+        "focusTarget": "黄生望车辙",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "书室窗南侧与花圃坑西南侧，花圃门/坑轴同侧",
+        "movementIntent": "固定在门内侧平视，守坑与门的同侧，让黄生提出追车，她才问原处能否保留触发人物而非相机移动，保持她愿自己去看而不是被买回的空间参照。理由：让观众读出她愿自己去看而不是被买回；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "坑角根所在区域",
+        "midground": "黄生香玉",
+        "background": "车辙院门",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "渐淡的手 → 在场人物的接收/反应 → 车辙与门"
+      },
+      "temporal": {
+        "durationSeconds": 38,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她愿自己去看而不是被买回。",
+          "path": "固定在门内侧平视，守坑与门的同侧，让黄生提出追车，她才问原处能否保留触发人物而非相机移动，保持她愿自己去看而不是被买回的空间参照。理由：让观众读出她愿自己去看而不是被买回；不改变人物既定行动。",
+          "start": "机位固定于：门内侧平视，守坑与门的同侧",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：门内侧平视，守坑与门的同侧",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "04-F1",
+            "timeSeconds": 0,
+            "description": "黄生望车辙"
+          },
+          {
+            "eventId": "04-F2",
+            "timeSeconds": 19,
+            "description": "香玉回应后望根"
+          }
+        ],
+        "edit": {
+          "entry": "细根未拔未碰；指向手收回。",
+          "exit": "黄生尚未追，香玉交代守到日落。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "前夜书室为纸笔衣料和原对白；次晨为院风、瓦盆轻触、既定落瓣合成声；无守卫、羊铃或追车者人声。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "05",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "守住不确定生命需具体手工。",
+        "audiencePayoff": "守住不确定生命需具体手工。",
+        "trigger": "黄生决定留下后倒扣盆。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在坑沿上方斜俯，让黄生决定留下后倒扣盆触发人物而非相机移动，保持守住不确定生命需具体手工的空间参照。理由：让观众读出守住不确定生命需具体手工；不改变人物既定行动。",
+        "focusTargetEnd": "背风侧通风缝",
+        "exitMatch": "根罩在盆下未压，背风缝敞，另一瓦遮底孔。"
+      },
+      "camera": {
+        "shotScale": "俯角近景",
+        "position": "坑沿上方斜俯",
+        "height": "工作面上方斜俯，具体高度由光学测试确定",
+        "angle": "斜俯",
+        "perspectiveIntent": "守住不确定生命需具体手工。",
+        "focusTarget": "坑旁尚未拿起的空盆",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "书室窗南侧与花圃坑西南侧，花圃门/坑轴同侧",
+        "movementIntent": "固定在坑沿上方斜俯，让黄生决定留下后倒扣盆触发人物而非相机移动，保持守住不确定生命需具体手工的空间参照。理由：让观众读出守住不确定生命需具体手工；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "工作面斜线组织，关键物件完整落画",
+        "foreground": "盆瓦与细根",
+        "midground": "黄生手",
+        "background": "香玉在后",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "空盆薄瓦与根 → 在场人物的接收/反应 → 门外车路"
+      },
+      "temporal": {
+        "durationSeconds": 25,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "守住不确定生命需具体手工。",
+          "path": "固定在坑沿上方斜俯，让黄生决定留下后倒扣盆触发人物而非相机移动，保持守住不确定生命需具体手工的空间参照。理由：让观众读出守住不确定生命需具体手工；不改变人物既定行动。",
+          "start": "机位固定于：坑沿上方斜俯",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：坑沿上方斜俯",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "05-F1",
+            "timeSeconds": 0,
+            "description": "坑旁尚未拿起的空盆"
+          },
+          {
+            "eventId": "05-F2",
+            "timeSeconds": 18,
+            "description": "背风侧通风缝"
+          }
+        ],
+        "edit": {
+          "entry": "黄生尚未追，香玉交代守到日落。",
+          "exit": "根罩在盆下未压，背风缝敞，另一瓦遮底孔。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "前夜书室为纸笔衣料和原对白；次晨为院风、瓦盆轻触、既定落瓣合成声；无守卫、羊铃或追车者人声。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "06",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她可离开，他不以照顾强留。",
+        "audiencePayoff": "她可离开，他不以照顾强留。",
+        "trigger": "她触手再说不能保证回来。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在花圃侧保持门与盆同框，让她触手再说不能保证回来触发人物而非相机移动，保持她可离开，他不以照顾强留的空间参照。理由：让观众读出她可离开，他不以照顾强留；不改变人物既定行动。",
+        "focusTargetEnd": "盆外挡风的手",
+        "exitMatch": "香玉出门渐淡，黄生留盆旁，根是否活未知。"
+      },
+      "camera": {
+        "shotScale": "平视中景",
+        "position": "花圃侧保持门与盆同框",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "她可离开，他不以照顾强留。",
+        "focusTarget": "手背接触",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "书室窗南侧与花圃坑西南侧，花圃门/坑轴同侧",
+        "movementIntent": "固定在花圃侧保持门与盆同框，让她触手再说不能保证回来触发人物而非相机移动，保持她可离开，他不以照顾强留的空间参照。理由：让观众读出她可离开，他不以照顾强留；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "盆白瓣",
+        "midground": "接触后分开的两人",
+        "background": "门与雾",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "盆外迎风手 → 在场人物的接收/反应 → 门外雾"
+      },
+      "temporal": {
+        "durationSeconds": 28,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她可离开，他不以照顾强留。",
+          "path": "固定在花圃侧保持门与盆同框，让她触手再说不能保证回来触发人物而非相机移动，保持她可离开，他不以照顾强留的空间参照。理由：让观众读出她可离开，他不以照顾强留；不改变人物既定行动。",
+          "start": "机位固定于：花圃侧保持门与盆同框",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：花圃侧保持门与盆同框",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "06-F1",
+            "timeSeconds": 0,
+            "description": "手背接触"
+          },
+          {
+            "eventId": "06-F2",
+            "timeSeconds": 22,
+            "description": "盆外挡风的手"
+          }
+        ],
+        "edit": {
+          "entry": "根罩在盆下未压，背风缝敞，另一瓦遮底孔。",
+          "exit": "香玉出门渐淡，黄生留盆旁，根是否活未知。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "前夜书室为纸笔衣料和原对白；次晨为院风、瓦盆轻触、既定落瓣合成声；无守卫、羊铃或追车者人声。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    }
+  ]
+}

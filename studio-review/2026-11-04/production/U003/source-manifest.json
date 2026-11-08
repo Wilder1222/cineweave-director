@@ -1,0 +1,49 @@
+{
+  "topicId": "U003",
+  "projectId": "369d61b677a23a5aac2fd6936e7f5990d41b49937a8251f231d0f43b9fff27d0",
+  "transport": "authorized_browser_ui_dom",
+  "currentRevision": null,
+  "sourcePins": [
+    {
+      "documentId": "4afa41ebbae85686366856c491dca52698fc965463ce8b147628e47803a5705e",
+      "title": "U003 她是三千年前的剑灵｜剧本｜20261031审阅版",
+      "sha256": "8d7ba3f7848a8e7502c70e903dd116f6c507d3010f753110358337d578296366",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:39:16.653Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=369d61b677a23a5aac2fd6936e7f5990d41b49937a8251f231d0f43b9fff27d0#scripts"
+    },
+    {
+      "documentId": "5a111b4d913d242610e7e1209c92f5c883c56bc964adfbc92dbf6d2fe70af80d",
+      "title": "U003 她是三千年前的剑灵｜分镜与视频提示｜20261031审阅版",
+      "sha256": "4bb373bbd075296af6c6f900466cdfe1e24f439a17642a481c29d0a37b1d8ad0",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:39:08.423Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=369d61b677a23a5aac2fd6936e7f5990d41b49937a8251f231d0f43b9fff27d0#scripts"
+    },
+    {
+      "documentId": "f27380de451931992b144ee569186d4ec2f4c2f89bcb91640f968a34eadc65f9",
+      "title": "U003 她是三千年前的剑灵｜审阅与来源｜20261031审阅版",
+      "sha256": "572ffd932c1373eaa010686fa4415fd25f788ef6eb8b55f4fe9c8b65e74eb607",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:38:57.811Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=369d61b677a23a5aac2fd6936e7f5990d41b49937a8251f231d0f43b9fff27d0#scripts"
+    }
+  ],
+  "patches": [
+    {
+      "documentId": "4afa41ebbae85686366856c491dca52698fc965463ce8b147628e47803a5705e",
+      "before": "陆闻舟合上本轮处理记录，写“完成，待复核”；",
+      "after": "陆闻舟在本轮处理记录上写“完成，待复核”，随后合上记录；",
+      "reason": "先写字再合上，明确纸面支撑与动作先后。"
+    },
+    {
+      "documentId": "5a111b4d913d242610e7e1209c92f5c883c56bc964adfbc92dbf6d2fe70af80d",
+      "before": "陆闻舟合上本轮处理记录，写“完成，待复核”；",
+      "after": "陆闻舟在本轮处理记录上写“完成，待复核”，随后合上记录；",
+      "reason": "先写字再合上，明确纸面支撑与动作先后。"
+    }
+  ],
+  "candidate": true,
+  "authorApproved": false,
+  "rawSourceUnchanged": true
+}

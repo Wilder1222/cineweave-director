@@ -1,0 +1,48 @@
+{
+  "topicId": "Z004",
+  "projectId": "ec6c33f5f5b2acb5ab1db4ed1a1b548700d52288ee5d5656f8397594bffd3f2c",
+  "currentRevision": null,
+  "sourcePins": [
+    {
+      "documentId": "49affd42a32d87cf2238c003fe495d1cc9aca9d7e96b7e58b1e1377f8e6ac503",
+      "title": "Z004 香玉花落｜剧本｜20261031审阅版",
+      "sha256": "f0c48f7b7c8ab976123c376c7647653b740b24b62f530f9bea013de6bb94a340",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:40:24.767Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts"
+    },
+    {
+      "documentId": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b",
+      "title": "Z004 香玉花落｜分镜与视频提示｜20261031审阅版",
+      "sha256": "a1d99ebf22d72592ea17b8ed7ee23fe1950b76671470674e004ab793555f72de",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:40:15.748Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts"
+    },
+    {
+      "documentId": "d5506815299c944d0e443b403d40313b4fe52c3f3644956703aab127a8775633",
+      "title": "Z004 香玉花落｜审阅与来源｜20261031审阅版",
+      "sha256": "906aac9b6767e8a48f53195b912fe7d01c5bc40ec8bad591eaf712672d719bbf",
+      "currentRevision": null,
+      "readAt": "2026-11-04T06:40:07.394Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts"
+    }
+  ],
+  "patches": [
+    {
+      "documentId": "49affd42a32d87cf2238c003fe495d1cc9aca9d7e96b7e58b1e1377f8e6ac503",
+      "before": "香玉：“蓝家天亮前掘走了。我去说过，没留住。”",
+      "after": "香玉：“蓝家天亮前掘走了。我去说过，没留住。”她松开门框，沿坑右侧走两步到坑角旁。",
+      "reason": "补远门至指根可达路径"
+    },
+    {
+      "documentId": "1219ba066685528a3fb44352a12f989f36e93691424bf547752196da8e35550b",
+      "before": "香玉：“蓝家天亮前掘走了。我去说过，没留住。”",
+      "after": "香玉：“蓝家天亮前掘走了。我去说过，没留住。”她松开门框，沿坑右侧走两步到坑角旁。",
+      "reason": "补远门至指根可达路径"
+    }
+  ],
+  "candidate": true,
+  "authorApproved": false,
+  "rawSourceUnchanged": true
+}

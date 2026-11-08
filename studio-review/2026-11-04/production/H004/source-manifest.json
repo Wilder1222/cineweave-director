@@ -1,0 +1,45 @@
+{
+  "topicId": "H004",
+  "projectId": "1f889fa9a28a2ee2369567f0d1a99e87c083af30fc0e1899eb84c0062c5af852",
+  "currentRevision": null,
+  "sourcePins": [
+    {
+      "documentId": "59118f2a9ad80a3f3539428a80e7f94da741ae9ac80bd6069564810b530e207d",
+      "title": "H004 空粮营｜剧本｜20261031审阅版",
+      "sha256": "2b90d55c5707afa140650dc0faff618306f2fe359c56bb7396966f205a0ba650",
+      "currentRevision": null,
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=1f889fa9a28a2ee2369567f0d1a99e87c083af30fc0e1899eb84c0062c5af852#scripts"
+    },
+    {
+      "documentId": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931",
+      "title": "H004 空粮营｜分镜与视频提示｜20261031审阅版",
+      "sha256": "43f18468904b3486b3c5930c7dd9860591738139ccf0dc1d01d30115ad4211d7",
+      "currentRevision": null,
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=1f889fa9a28a2ee2369567f0d1a99e87c083af30fc0e1899eb84c0062c5af852#scripts"
+    },
+    {
+      "documentId": "5e85531bd64b2d61c2a50962a94a0c5ab24cf170c61b8a081dd29bbae461d680",
+      "title": "H004 空粮营｜审阅与来源｜20261031审阅版",
+      "sha256": "1711dcd1d6f06166727699f046da8c4f307d404569e3e866d3526799151ad3c0",
+      "currentRevision": null,
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=1f889fa9a28a2ee2369567f0d1a99e87c083af30fc0e1899eb84c0062c5af852#scripts"
+    }
+  ],
+  "patches": [
+    {
+      "documentId": "1519051626de1c8da99ebd7a789543fac6ec68dfb96ef0a4cf1f2dddf6cf4931",
+      "before": "最外侧粮袋角裂开一道口子",
+      "after": "最外侧粮袋上肩米层处裂开一道口子",
+      "reason": "把裂口定位在米覆层，避免从底沙层凭空先漏米"
+    },
+    {
+      "documentId": "59118f2a9ad80a3f3539428a80e7f94da741ae9ac80bd6069564810b530e207d",
+      "before": "最外侧粮袋角裂开一道口子",
+      "after": "最外侧粮袋上肩米层处裂开一道口子",
+      "reason": "把裂口定位在米覆层，避免从底沙层凭空先漏米"
+    }
+  ],
+  "candidate": true,
+  "authorApproved": false,
+  "rawSourceUnchanged": true
+}

@@ -1,0 +1,237 @@
+{
+  "fps": 24,
+  "timingVerified": false,
+  "lipSyncVerified": false,
+  "cues": [
+    {
+      "shotId": "H001-01B",
+      "speaker": "王",
+      "text": "汉使要赏我，为何先往西走？",
+      "addressee": "阿妍/傅",
+      "performance": "捻锦问，试探西行而非怒吼",
+      "startFrame": 288,
+      "endFrameExclusive": 408,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-01B",
+      "speaker": "阿妍",
+      "text": "汉使要赏我，为何先往西走？",
+      "addressee": "傅",
+      "performance": "目光转傅，作为王话听觉等值译语",
+      "startFrame": 408,
+      "endFrameExclusive": 528,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-01B",
+      "speaker": "傅",
+      "text": "王若喜欢，自可留下。",
+      "addressee": "王",
+      "performance": "推锦才答，礼貌但不承诺救人",
+      "startFrame": 528,
+      "endFrameExclusive": 648,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-02A",
+      "speaker": "阿妍",
+      "text": "送信使者萨合还扣着。他不是兵。",
+      "addressee": "傅",
+      "performance": "斟酒低语，萨合清晰可听",
+      "startFrame": 768,
+      "endFrameExclusive": 888,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-02A",
+      "speaker": "傅",
+      "text": "我会让人去找。",
+      "addressee": "阿妍",
+      "performance": "压低声但仍是空诺",
+      "startFrame": 888,
+      "endFrameExclusive": 960,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-02A",
+      "speaker": "阿妍",
+      "text": "我要他先放人。",
+      "addressee": "傅",
+      "performance": "短而直，重音先",
+      "startFrame": 960,
+      "endFrameExclusive": 1056,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-02B",
+      "speaker": "傅",
+      "text": "天子有私话，请王移步。",
+      "addressee": "阿妍/王",
+      "performance": "稳住身后才邀，声音控制住",
+      "startFrame": 1368,
+      "endFrameExclusive": 1440,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-02B",
+      "speaker": "阿妍",
+      "text": "天子有私话，请王移步。",
+      "addressee": "王",
+      "performance": "中性转述，未替傅担保",
+      "startFrame": 1440,
+      "endFrameExclusive": 1512,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-03B",
+      "speaker": "王",
+      "text": "让开。",
+      "addressee": "阿妍",
+      "performance": "先回头看接触，短命令",
+      "startFrame": 1992,
+      "endFrameExclusive": 2064,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-03B",
+      "speaker": "阿妍",
+      "text": "先放萨合。他给我送过信，不是兵。",
+      "addressee": "王",
+      "performance": "受力下说，急但语义完整",
+      "startFrame": 2064,
+      "endFrameExclusive": 2232,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-03C",
+      "speaker": "王",
+      "text": "横杆先托住。",
+      "addressee": "画外守卫",
+      "performance": "抬手令，声源在帐内",
+      "startFrame": 2304,
+      "endFrameExclusive": 2424,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-03C",
+      "speaker": "阿妍",
+      "text": "先放萨合，他不是兵。",
+      "addressee": "傅",
+      "performance": "回帐后转述本人刚才对王要求",
+      "startFrame": 2496,
+      "endFrameExclusive": 2616,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-03C",
+      "speaker": "傅",
+      "text": "放人，我再说。",
+      "addressee": "王",
+      "performance": "看王说，给条件不承诺结果",
+      "startFrame": 2616,
+      "endFrameExclusive": 2736,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-04A",
+      "speaker": "傅",
+      "text": "备酒的人会退下。",
+      "addressee": "王",
+      "performance": "提壶示意，平稳撒谎，不朝镜头解释",
+      "startFrame": 2808,
+      "endFrameExclusive": 2952,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-04B",
+      "speaker": "王",
+      "text": "不得追问他送过什么？这句不必。",
+      "addressee": "阿妍",
+      "performance": "压笔才问，拒绝放弃追索",
+      "startFrame": 3216,
+      "endFrameExclusive": 3360,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-04B",
+      "speaker": "阿妍",
+      "text": "出了门再抓回来，就是没放。",
+      "addressee": "王",
+      "performance": "重音没放，直视具体执行漏洞",
+      "startFrame": 3360,
+      "endFrameExclusive": 3480,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-05A",
+      "speaker": "王",
+      "text": "人放了？",
+      "addressee": "阿妍",
+      "performance": "问结果，仍不确定",
+      "startFrame": 4176,
+      "endFrameExclusive": 4248,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-05A",
+      "speaker": "阿妍",
+      "text": "文书放进传信管了。我还没见到人。",
+      "addressee": "王",
+      "performance": "不替承诺粉饰执行",
+      "startFrame": 4248,
+      "endFrameExclusive": 4344,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-05A",
+      "speaker": "傅",
+      "text": "王先听完。",
+      "addressee": "王",
+      "performance": "半步挡住王看帘的视线",
+      "startFrame": 4416,
+      "endFrameExclusive": 4488,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-06A",
+      "speaker": "傅",
+      "text": "告诉他们，汉兵将至，勿动。",
+      "addressee": "阿妍",
+      "performance": "听见脚步才命令，控制而不喊成群戏",
+      "startFrame": 4872,
+      "endFrameExclusive": 4944,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-06A",
+      "speaker": "阿妍",
+      "text": "汉兵将至，勿动。",
+      "addressee": "画外帐外人",
+      "performance": "向门外的听觉等值译语，不新增回答者",
+      "startFrame": 4944,
+      "endFrameExclusive": 5040,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-06B",
+      "speaker": "阿妍",
+      "text": "萨合若赶不及呢？",
+      "addressee": "傅",
+      "performance": "问具体人，非对历史结果议论",
+      "startFrame": 5208,
+      "endFrameExclusive": 5304,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "H001-06B",
+      "speaker": "傅",
+      "text": "我不能替他答。",
+      "addressee": "阿妍",
+      "performance": "不追出、不许诺",
+      "startFrame": 5304,
+      "endFrameExclusive": 5400,
+      "timingStatus": "authored_window_pending_measurement"
+    }
+  ]
+}

@@ -1,0 +1,714 @@
+{
+  "number": 8,
+  "title": "收到了，还是没收到",
+  "logline": "回执与付款是两回事；多例相似记录使记者想写复制签名，匿名提醒却说签名是真的。",
+  "dramaturgy": {
+    "openingQuestion": "如果诊所能证明材料收到了，拒赔通知为什么仍说材料缺失？",
+    "pursuit": "母亲要付款，记者要解释收讫回执与缺件拒赔的冲突，职员要限定自己透露的范围。",
+    "reversal": "回执与付款是两回事；多例相似记录使记者想写复制签名，匿名提醒却说签名是真的。",
+    "cost": "原先好用的解释被放弃，新的证人身份和证明仍未知。",
+    "cliffhanger": "诺拉删掉复制签名的草稿标题并发出见面请求；她需要换一个问题，而不是把匿名邮件当答案。",
+    "nextEpisodeBridge": "公众的注视和患者材料，能在首次答辩中替青年争到什么？"
+  },
+  "movements": [
+    {
+      "title": "收到不等于付款",
+      "startScene": "E08-SC01",
+      "question": "用一场看记录的实际挫折，把母亲付款问题与记者调查问题分开。",
+      "turn": "母亲得到枪击前收件的实证，却不能当场获得付款；她只给记者更窄的使用许可。"
+    },
+    {
+      "title": "先留在草稿",
+      "startScene": "E08-SC02",
+      "question": "记者取得另外患者授权后形成可调查的重复模式，同时露出过早拟题的欲望。",
+      "turn": "编辑拒绝用问号掩盖复制签名指控，她保存草稿而未发布。"
+    },
+    {
+      "title": "有限提醒",
+      "startScene": "E08-SC03",
+      "question": "把看到公开报道、识别自己的批次和决定发出提醒放在一次完整下班后的工作场里。",
+      "turn": "她从查看公众争议，转到看见自己的签认，最终发送一封去掉同事称呼的有限提醒。"
+    },
+    {
+      "title": "换一个问题",
+      "startScene": "E08-SC04",
+      "question": "让有限匿名提醒真正改变记者下一步，而不是只以新邮件到达结束。",
+      "turn": "她删掉复制签名草稿标题，发出见面请求；编辑仍问是否有证据。"
+    }
+  ],
+  "continuityNote": "当前播出编号为24集短剧；E01–E24场号/制作镜号只作稳定资产定位。各集以完整场景为边界，英语对白与中文对照同步。公众的注视和患者材料，能在首次答辩中替青年争到什么？",
+  "scenes": [
+    {
+      "id": "E08-SC01",
+      "location": "CLINIC",
+      "time": "日·次日",
+      "entry": "东小桌前玛拉抱蓝夹，诺拉拿红本和黑手机；医生持授权页。",
+      "exit": "诺拉只得到一个待采访姓名与处理标记；玛拉要解决的仍是周五，二人目的开始分开。",
+      "script": "宾州治疗中心南入口通向北治疗门，西窗照着长椅，东接待台旁摆一张供查材料的小桌。玛拉灰风衣罩米灰针织衫，左臂蓝夹、右手手机；诺拉红本左手、黑手机右手。医生从北门来，把二人带到东侧小桌，不进入任何其他患者的治疗空间。\n\n医生把授权页放到桌上。玛拉放下蓝夹，没接笔。\n\n玛拉（英语）：Another form? I thought you found it.\n中文对照：怎么又是表？你不是说找着了吗？\n\n医生（英语）：We did. This lets her sit in with you.\n中文对照：找到了。这张是让她陪你一起看。\n\n诺拉把手机屏幕按灭，朝南入口退半步。\n\n诺拉（英语）：I can wait outside.\n中文对照：我可以到外面等。\n\n玛拉（英语）：No. Stay. I don't want to do this twice.\n中文对照：不用，留下吧。我不想再讲一遍。\n\n玛拉签字，将笔放桌边，医生才抽出回执和附件清单；诺拉把手机收进口袋，没有拍。\n\n医生（英语）：They got it two days before the shooting. See? Your report's on the list.\n中文对照：枪击前两天，他们就收到了。你看，报告就在清单上。\n\n玛拉（英语）：Then why does this say it's missing?\n中文对照：那这上面为什么还写缺材料？\n\n她推来拒赔页，两根手指分别压住接收日期与缺少一行。\n\n医生（英语）：That's what we're asking them to explain.\n中文对照：这正是我们要让他们解释的。\n\n医生让两页留在一起，没有收回有矛盾的那张。\n\n玛拉将两张叠起推回医生。\n\n玛拉（英语）：Send them both. Can they sort it out while we're here?\n中文对照：两张都发过去。我们在这儿等，能给弄好吗？\n\n玛拉（英语）：I took time off for this.\n中文对照：我是请假来的。\n\n医生把椅子拉开，没有接下当场办好的许诺。\n\n医生（英语）：If you need to leave, we can finish this by phone.\n中文对照：你要赶回去的话，后面我们可以电话说。\n\n玛拉没有走，坐到椅子前沿，蓝夹搁膝。\n\n玛拉（英语）：I can't keep leaving work every time you find another page.\n中文对照：不能每找着一张纸，我就再请一次假。\n\n医生（英语）：I'll send them with the appeal. I can't fix their system from here.\n中文对照：我会跟申诉一起发过去。他们的系统，我这里改不了。\n\n她伸手拿材料，医生先留下副本，把原件推回。\n\n医生（英语）：This tells us they got it. I can't tell you who read it.\n中文对照：这说明他们收到了。谁看过，我说不了。\n\n玛拉的指尖仍压着“接收”，最终将两页放回蓝夹，手机拒赔状态仍旧。\n\n诺拉把红本翻到空白姓名栏，让玛拉先看。\n\n诺拉（英语）：Can I use the receipt and the dates? Just those.\n中文对照：回执和日期能用吗？就这两样。\n\n玛拉（英语）：Without her name this time.\n中文对照：这次别带她名字。\n\n诺拉划掉姓名栏，合上手机录音应用，没有开始新录制。\n\n诺拉（英语）：No name. No voice. Just the receipt and dates.\n中文对照：不带名字，不带声音。只用回执和日期。\n\n玛拉等她说完才推过去一份副本，原件仍收自己蓝夹。\n\n诺拉翻拒赔副本到签字旁，准备在红本记采访对象。\n\n诺拉（英语）：This says the report's missing. You know the doctor who signed it?\n中文对照：这上面说报告没到。签字的这个医生，你认识吗？\n\n医生看清名字摇头，指公司抬头。\n\n医生（英语）：No. Ask them.\n中文对照：不认识，问对方。\n\n诺拉圈处理标记，在签名下写问号。玛拉已拿着自己的蓝夹起身，仍等医生说周五的安排；她没有加入这个新猜测。",
+      "dramaticFunction": "用一场看记录的实际挫折，把母亲付款问题与记者调查问题分开。",
+      "turn": "母亲得到枪击前收件的实证，却不能当场获得付款；她只给记者更窄的使用许可。",
+      "exitCost": "又一次请假没有换来批准；诺拉带走可调查的签名，玛拉仍带着未解决的治疗安排。",
+      "sceneRhythm": "两个完整48/50秒关系镜处理授权与失败的立即解决；之后两次短切分别给出新的材料许可和记者转向，纸件不再六次拆镜。"
+    },
+    {
+      "id": "E08-SC02",
+      "location": "NEWSROOM",
+      "time": "傍晚·同日",
+      "entry": "Nora右手按免提，红本左开",
+      "exit": "草稿保存未发，复核签名是否被复制的疑问标题仍留，编辑回东桌。",
+      "script": "编辑室入口南，西窗天色暗下，诺拉在西桌，编辑托马斯在东桌，北屏幕暂停报道页面。红笔记本在诺拉左手边，黑手机接免提电话，蓝色材料副本夹是新的工作夹，与玛拉保管的原蓝夹分开。\n\n诺拉按下免提，另一位患者的资料只在自己电脑上，没有共享到北屏。\n受访患者电话声（英语）：You can use the letter. Leave my name off. I still need them to cover next month.\n中文对照：信你可以用。别写我名字。我下个月还得靠他们报呢。\n她将匿名条件记在红本页顶，用键盘发出答复；收到第二份回执后才结束通话。\n\n三份信并排，诺拉把同样的处理标记对齐。\n诺拉（英语）：Three clinics, same wording, same mark. What if someone just copied those signatures?\n中文对照：三家诊所，措辞、标记都一样。会不会有人直接把签名复制过来了？\n托马斯走近，她把怀疑复核签名被复制的草稿标题转给他看，稿件尚未发布。\n编辑托马斯（英语）：You can't fix that by adding a question mark.\n中文对照：加个问号也不能这么写。\n她没有反驳，却仍保留问号，把那一行拖到稿件最上方。\n\n托马斯把手放到显示器上沿，不让她向下滑过标题。\n编辑托马斯（英语）：Have you called the doctor? The actual doctor, not PR.\n中文对照：打给那个医生了吗？我说医生本人，别光找公关。\n诺拉刷新邮箱，只有自动收件回复。\n诺拉（英语）：Both. Still waiting.\n中文对照：都找了。还在等。\n她把鼠标从发布移到保存。编辑看确认状态才离开，屏幕上标题仍没删。",
+      "dramaticFunction": "记者取得另外患者授权后形成可调查的重复模式，同时露出过早拟题的欲望。",
+      "turn": "编辑拒绝用问号掩盖复制签名指控，她保存草稿而未发布。",
+      "exitCost": "医生尚未回应，悬疑不能先当报道结论；旧标题仍是她必须修正的预设。",
+      "sceneRhythm": "三个工作节点各有新障碍：匿名授权、模式猜测、直接采访缺失；纸件与屏幕内容仅作一次确认。"
+    },
+    {
+      "id": "E08-SC03",
+      "location": "INSURER",
+      "time": "夜·同时段",
+      "entry": "公开采访在莉娜工位电脑，工作手机靠屏，私人机右侧；自己的样本清单尚未打开。",
+      "exit": "私人提醒已发、私人机扣灰封，工牌仍佩戴；身份与证据范围尚未公开。",
+      "script": "合众健康楼层南入口玻璃门外偶有人经过，北显示屏已黑，西窗反着夜色。东侧质检区工作顶灯仍照清纸页、双手和工牌。莉娜穿橄榄绿开衫、戴薄金属框眼镜坐自己工位，灰信封左侧、工作手机靠屏、私人手机右侧。这是采访报道已公开后的一个晚上，她这时才第一次看完那段公开视频；她看不到编辑室未发布的签名标题。\n\n公开采访里的儿童声音让莉娜停下整理。她摘眼镜擦一下，戴回后只放大公开信件的处理标记，再打开自己经手样本清单。她从纸面找到同批备注，把公开标记与自己的标记并排，翻到背页，自己签过的缩写仍在。\n\n工作手机震动。她看见来电但没接，先把诺拉公开邮箱写到空便签上；没有检索其他患者，更没有下载整库。\n\n莉娜把备注装进灰信封，拿私人机照便签输入邮箱。起草到一位同事称呼时，逐字删掉；她看一眼自己的工牌，把话收窄到能确认的签名事实。\n\n她再查收件地址，按发送。送达后私人机翻面压灰信封，工作机仍放靠屏。她伸手想拿工作机，停住，最后只把工牌别正。",
+      "dramaticFunction": "把看到公开报道、识别自己的批次和决定发出提醒放在一次完整下班后的工作场里。",
+      "turn": "她从查看公众争议，转到看见自己的签认，最终发送一封去掉同事称呼的有限提醒。",
+      "exitCost": "工作身份仍在她胸前；发送后无法撤回对外接触，但尚未交出材料或证明整条内部链。",
+      "sceneRhythm": "保留25秒比对和20秒发送两个动机阶段；只在她从知道转为选择对外联系时切，避免两处重复开屏。"
+    },
+    {
+      "id": "E08-SC04",
+      "location": "NEWSROOM",
+      "time": "夜·匿名信到达",
+      "entry": "红本已合手机右，诺拉准备起身，新邮件进工作邮箱。",
+      "exit": "旧标题删除、草稿未发、见面请求发出，匿名说法仍未证实。",
+      "script": "编辑室南门口的灯已关掉一排，西窗反着桌灯，诺拉仍在西桌，编辑留在东桌。红本已经合起，黑手机在右侧；工作邮箱突然亮出新邮件提示。\n\n诺拉合本准备离开，新邮件让她停在半个起身里。读到“签名是真的”，她坐回去，选中旧标题。\n诺拉（英语）：Wait. I've got someone saying those signatures are real.\n中文对照：等等。有人说那些签名是真的。\n东桌托马斯回头。\n编辑托马斯（英语）：Can they back that up?\n中文对照：拿得出证据吗？\n她删掉标题，向陌生地址发出见面请求，新的空白页上只写下一个待问的问题。",
+      "dramaticFunction": "让有限匿名提醒真正改变记者下一步，而不是只以新邮件到达结束。",
+      "turn": "她删掉复制签名草稿标题，发出见面请求；编辑仍问是否有证据。",
+      "exitCost": "原先好用的解释被放弃，新的证人身份和证明仍未知。",
+      "sceneRhythm": "单18秒保留坐回、删除和请求见面的连贯决定；结尾是新工作而非空提示音。"
+    }
+  ],
+  "shots": [
+    {
+      "id": "E08-SH001",
+      "sceneId": "E08-SC01",
+      "duration": 48,
+      "characters": [
+        "MARA-HOME",
+        "NORA",
+        "DOCTOR"
+      ],
+      "purpose": "母亲以为找到记录就能结束程序，却先要重新选择是否信任记者；证据只证明接收。",
+      "framing": "东小桌西南侧三人中景",
+      "composition": "玛拉桌西、医生北、诺拉南侧半步外；治疗门在北背景，不拍其他患者。",
+      "camera": "固定三人关系，诺拉退半步与母亲留她成为场内转向；两纸只在手边可读一次。",
+      "focus": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "start": "东小桌前玛拉抱蓝夹，诺拉拿红本和黑手机；医生持授权页。",
+      "action": "医生把授权页放到桌上。玛拉放下蓝夹，没接笔。玛拉对医生说英语“Another form? I thought you found it.”；怕帮助再次被程序推后。医生对玛拉说英语“We did. This lets her sit in with you.”；将自己的记录与记者观看授权分开。诺拉把手机屏幕按灭，朝南入口退半步。诺拉对玛拉说英语“I can wait outside.”；让陪同变成可撤回的选择。玛拉对诺拉说英语“No. Stay. I don't want to do this twice.”；需要帮手，仍对前次采访有戒心。玛拉签字，将笔放桌边，医生才抽出回执和附件清单；诺拉把手机收进口袋，没有拍。医生对玛拉说英语“They got it two days before the shooting. See? Your report's on the list.”；只核对回执本身。玛拉对医生说英语“Then why does this say it's missing?”；把两张互相冲突的纸推给能说话的人。她推来拒赔页，两根手指分别压住接收日期与缺少一行。医生对玛拉说英语“That's what we're asking them to explain.”；承认问题，未假装看到保险内部流程。医生让两页留在一起，没有收回有矛盾的那张。",
+      "end": "授权已签，记者只能看本次材料；接收清单与拒赔缺少并存，内部谁读过未知。",
+      "sound": "同场环境声与所列英语；不补额外可辨台词",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E08-D001",
+          "speaker": "玛拉",
+          "listener": "医生",
+          "text": "Another form? I thought you found it.",
+          "translationZh": "怎么又是表？你不是说找着了吗？",
+          "tone": "怕帮助再次被程序推后",
+          "start": 1,
+          "end": 3.98
+        },
+        {
+          "id": "E08-D102",
+          "speaker": "医生",
+          "listener": "玛拉",
+          "text": "We did. This lets her sit in with you.",
+          "translationZh": "找到了。这张是让她陪你一起看。",
+          "tone": "将自己的记录与记者观看授权分开",
+          "start": 6,
+          "end": 9.83
+        },
+        {
+          "id": "E08-D201",
+          "speaker": "诺拉",
+          "text": "I can wait outside.",
+          "translationZh": "我可以到外面等。",
+          "listener": "玛拉",
+          "tone": "让陪同变成可撤回的选择",
+          "start": 11,
+          "end": 12.7
+        },
+        {
+          "id": "E08-D202",
+          "speaker": "玛拉",
+          "text": "No. Stay. I don't want to do this twice.",
+          "translationZh": "不用，留下吧。我不想再讲一遍。",
+          "listener": "诺拉",
+          "tone": "需要帮手，仍对前次采访有戒心",
+          "start": 16,
+          "end": 19.83
+        },
+        {
+          "id": "E08-D002",
+          "speaker": "医生",
+          "listener": "玛拉",
+          "text": "They got it two days before the shooting. See? Your report's on the list.",
+          "translationZh": "枪击前两天，他们就收到了。你看，报告就在清单上。",
+          "tone": "只核对回执本身",
+          "start": 25,
+          "end": 30.96
+        },
+        {
+          "id": "E08-D203",
+          "speaker": "玛拉",
+          "text": "Then why does this say it's missing?",
+          "translationZh": "那这上面为什么还写缺材料？",
+          "listener": "医生",
+          "tone": "把两张互相冲突的纸推给能说话的人",
+          "start": 34,
+          "end": 36.98
+        },
+        {
+          "id": "E08-D204",
+          "speaker": "医生",
+          "text": "That's what we're asking them to explain.",
+          "translationZh": "这正是我们要让他们解释的。",
+          "listener": "玛拉",
+          "tone": "承认问题，未假装看到保险内部流程",
+          "start": 40,
+          "end": 42.98
+        }
+      ],
+      "overlay": [],
+      "next": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "viewerEntry": "东小桌前玛拉抱蓝夹，诺拉拿红本和黑手机；医生持授权页。",
+      "viewerExit": "授权已签，记者只能看本次材料；接收清单与拒赔缺少并存，内部谁读过未知。",
+      "cutTrigger": "授权已签，记者只能看本次材料；接收清单与拒赔缺少并存，内部谁读过未知。",
+      "extraRoleIds": [],
+      "generationSegments": [
+        {
+          "duration": 22,
+          "start": "授权页刚放桌，记者还拿手机。",
+          "action": "母亲质疑又一张表，医生解释陪同授权，记者愿退出，母亲主动留她并签字。",
+          "end": "授权已签，手机已灭，医生才准备取回执。"
+        },
+        {
+          "duration": 26,
+          "start": "医生拿出回执，母亲笔放桌边。",
+          "action": "医生指出枪击前已接收，母亲拿拒赔缺少行对照，医生承认需要对方解释。",
+          "end": "两纸并存桌面，未得内部阅件结论。"
+        }
+      ],
+      "sourceShotIds": [
+        "E08-SH001",
+        "E08-SH002"
+      ],
+      "broadcastEpisode": 8,
+      "displayId": "EP08-001"
+    },
+    {
+      "id": "E08-SH003",
+      "sceneId": "E08-SC01",
+      "duration": 50,
+      "characters": [
+        "MARA-HOME",
+        "DOCTOR"
+      ],
+      "purpose": "收件证据不能兑现工时或治疗费，医生的有限帮助与母亲的立即需要发生真正碰撞。",
+      "framing": "小桌南侧母亲与医生双人中近景",
+      "composition": "玛拉坐西侧前沿，医生北侧；诺拉在同场南侧画外，材料不越过授权桌。",
+      "camera": "固定母亲由站到坐的高度关系，可缓慢下调保持平视；不给纸件单独正面镜。",
+      "focus": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "start": "接收回执和拒赔页并排，玛拉仍站着；医生向桌旁拉一把椅子。",
+      "action": "玛拉将两张叠起推回医生。玛拉对医生说英语“Send them both. Can they sort it out while we're here?”；把证据当成立刻生效的按钮。玛拉对医生说英语“I took time off for this.”；拿工时换一个确定答复。医生把椅子拉开，没有接下当场办好的许诺。医生对玛拉说英语“If you need to leave, we can finish this by phone.”；提供实际省工时的办法，不能承诺改付款。玛拉没有走，坐到椅子前沿，蓝夹搁膝。玛拉对医生说英语“I can't keep leaving work every time you find another page.”；怒气指向眼前人，要求停止这种消耗。医生对玛拉说英语“I'll send them with the appeal. I can't fix their system from here.”；只说自己能做的事。她伸手拿材料，医生先留下副本，把原件推回。医生对玛拉说英语“This tells us they got it. I can't tell you who read it.”；不猜内部路径。玛拉的指尖仍压着“接收”，最终将两页放回蓝夹，手机拒赔状态仍旧。",
+      "end": "原件归玛拉，副本供申诉；她坐下仍未取得当日付款或内部读件结论。",
+      "sound": "同场环境声与所列英语；不补额外可辨台词",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E08-D003",
+          "speaker": "玛拉",
+          "listener": "医生",
+          "text": "Send them both. Can they sort it out while we're here?",
+          "translationZh": "两张都发过去。我们在这儿等，能给弄好吗？",
+          "tone": "把证据当成立刻生效的按钮",
+          "start": 1,
+          "end": 5.68
+        },
+        {
+          "id": "E08-D105",
+          "speaker": "玛拉",
+          "listener": "医生",
+          "text": "I took time off for this.",
+          "translationZh": "我是请假来的。",
+          "tone": "拿工时换一个确定答复",
+          "start": 11,
+          "end": 13.55
+        },
+        {
+          "id": "E08-D205",
+          "speaker": "医生",
+          "text": "If you need to leave, we can finish this by phone.",
+          "translationZh": "你要赶回去的话，后面我们可以电话说。",
+          "listener": "玛拉",
+          "tone": "提供实际省工时的办法，不能承诺改付款",
+          "start": 16,
+          "end": 20.68
+        },
+        {
+          "id": "E08-D206",
+          "speaker": "玛拉",
+          "text": "I can't keep leaving work every time you find another page.",
+          "translationZh": "不能每找着一张纸，我就再请一次假。",
+          "listener": "医生",
+          "tone": "怒气指向眼前人，要求停止这种消耗",
+          "start": 26,
+          "end": 30.68
+        },
+        {
+          "id": "E08-D004",
+          "speaker": "医生",
+          "listener": "玛拉",
+          "text": "I'll send them with the appeal. I can't fix their system from here.",
+          "translationZh": "我会跟申诉一起发过去。他们的系统，我这里改不了。",
+          "tone": "只说自己能做的事",
+          "start": 33,
+          "end": 38.53
+        },
+        {
+          "id": "E08-D107",
+          "speaker": "医生",
+          "listener": "玛拉",
+          "text": "This tells us they got it. I can't tell you who read it.",
+          "translationZh": "这说明他们收到了。谁看过，我说不了。",
+          "tone": "不猜内部路径",
+          "start": 44,
+          "end": 49.53
+        }
+      ],
+      "overlay": [],
+      "next": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "viewerEntry": "接收回执和拒赔页并排，玛拉仍站着；医生向桌旁拉一把椅子。",
+      "viewerExit": "原件归玛拉，副本供申诉；她坐下仍未取得当日付款或内部读件结论。",
+      "cutTrigger": "原件归玛拉，副本供申诉；她坐下仍未取得当日付款或内部读件结论。",
+      "extraRoleIds": [],
+      "generationSegments": [
+        {
+          "duration": 25,
+          "start": "母亲站着把两纸推给医生。",
+          "action": "母亲要求当场处理并说已请假，医生拉椅提出后续电话，母亲坐下。",
+          "end": "母亲坐前沿，蓝夹膝上，材料仍桌面。"
+        },
+        {
+          "duration": 25,
+          "start": "母亲不走，指着纸上的接收。",
+          "action": "母亲拒绝继续反复请假，医生说明可随申诉发送且收件不证明谁读过；原件归母亲。",
+          "end": "原件入蓝夹，副本留医生，拒赔未变。"
+        }
+      ],
+      "sourceShotIds": [
+        "E08-SH003",
+        "E08-SH004"
+      ],
+      "broadcastEpisode": 8,
+      "displayId": "EP08-002"
+    },
+    {
+      "id": "E08-SH005",
+      "sceneId": "E08-SC01",
+      "duration": 22,
+      "characters": [
+        "NORA",
+        "DOCTOR",
+        "MARA-HOME"
+      ],
+      "purpose": "新的授权更窄，记者继续在场并不等于免责。",
+      "framing": "双人中景，东小桌西南向东北，玛拉桌西与诺拉桌南为主，医生北侧仅手入边缘。",
+      "composition": "母亲西边、诺拉南边同层，红本与副本在两人之间；医生北侧手把可授权副本留桌。",
+      "camera": "固定东桌西南双人中景，空栏与延迟递纸可见，不以点头代全面授权。",
+      "focus": "母亲记者同层，副本交接可读。",
+      "start": "红本打开手机右袋，医生备可授权回执副本。",
+      "action": "诺拉展示空白姓名栏，问能否用回执和日期。玛拉明确此次不带孩子名字；诺拉划掉姓名栏、关闭录音应用，准确重复不带名字声音、只用回执日期后，母亲才交副本。",
+      "end": "副本交诺拉工作夹，原件仍玛拉蓝夹；本次授权只含回执日期，无孩子名字与声音。",
+      "sound": "红本翻页、笔划掉姓名栏、纸页交接；远接待打印机，不新增现场复印动作。",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E08-D005",
+          "speaker": "诺拉",
+          "listener": "玛拉与医生",
+          "text": "Can I use the receipt and the dates? Just those.",
+          "translationZh": "回执和日期能用吗？就这两样。",
+          "tone": "缩小取材范围",
+          "start": 1,
+          "end": 5.26
+        },
+        {
+          "id": "E08-D109",
+          "speaker": "玛拉",
+          "listener": "诺拉",
+          "text": "Without her name this time.",
+          "translationZh": "这次别带她名字。",
+          "tone": "点出已发生的伤害，不作原谅表态",
+          "start": 8,
+          "end": 10.13
+        },
+        {
+          "id": "E08-D207",
+          "speaker": "诺拉",
+          "text": "No name. No voice. Just the receipt and dates.",
+          "translationZh": "不带名字，不带声音。只用回执和日期。",
+          "listener": "玛拉",
+          "tone": "复述这一次明确缩小的授权范围",
+          "start": 12,
+          "end": 15.83
+        }
+      ],
+      "overlay": [],
+      "next": "接复核签名成为新问题",
+      "viewerEntry": "上一条报道已造成辨认。",
+      "viewerExit": "新的授权更窄，记者继续在场并不等于免责。",
+      "cutTrigger": "姓名栏被划掉，诺拉看另一页签名。",
+      "extraRoleIds": [],
+      "broadcastEpisode": 8,
+      "displayId": "EP08-003"
+    },
+    {
+      "id": "E08-SH006",
+      "sceneId": "E08-SC01",
+      "duration": 20,
+      "characters": [
+        "NORA",
+        "MARA-HOME",
+        "DOCTOR"
+      ],
+      "purpose": "诺拉开始怀疑签名，医生没有提供支持猜测的新事实。",
+      "framing": "斜中景，小桌西侧向东，签名页下中层，医生北侧上后层摇头可辨。",
+      "composition": "拒赔副本上签名和Q-17标记，手在页边",
+      "camera": "固定东桌西侧斜中景，笔落问号与医生摇头可读，不把签名做伪证特写。",
+      "focus": "签名标记与笔同平面，医生后层可辨。",
+      "start": "Mara授权副本，Nora手不遮签名",
+      "action": "诺拉把拒赔副本翻到签名旁。诺拉对医生说本镜第1句英语对白，开始把矛盾收窄到签认者。医生看清名字，摇头，指公司抬头。医生对诺拉说本镜第2句英语对白，不替陌生人解释。诺拉圈下相邻处理标记，却把问号写在签名下面。玛拉看她的笔，没有加入这个新猜测。 玛拉已抱好原件蓝夹站起，仍看医生等周五安排，没有跟着记者看签名猜测。",
+      "end": "诺拉只得到一个待采访姓名与处理标记；玛拉要解决的仍是周五，二人目的开始分开。",
+      "sound": "笔圈纸、走廊电梯提示",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E08-D006",
+          "speaker": "诺拉",
+          "listener": "医生",
+          "text": "This says the report's missing. You know the doctor who signed it?",
+          "translationZh": "这上面说报告没到。签字的这个医生，你认识吗？",
+          "tone": "开始把矛盾收窄到签认者",
+          "start": 0.6,
+          "end": 6.66
+        },
+        {
+          "id": "E08-D111",
+          "speaker": "医生",
+          "listener": "诺拉",
+          "text": "No. Ask them.",
+          "translationZh": "不认识，问对方。",
+          "tone": "不替陌生人解释",
+          "start": 7.49,
+          "end": 9.27
+        }
+      ],
+      "overlay": [
+        {
+          "text": "PHYSICIAN REVIEW / 医师复核",
+          "start": 2,
+          "end": 7,
+          "position": "后期拒赔副本"
+        },
+        {
+          "text": "Q-17",
+          "start": 8,
+          "end": 14,
+          "position": "后期单据队列标记"
+        }
+      ],
+      "next": "本场结果成立后切入 E08-SC02（NEWSROOM，傍晚·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "viewerEntry": "回执证明收到，内部过程仍未知。",
+      "viewerExit": "诺拉开始怀疑签名，医生没有提供支持猜测的新事实。",
+      "cutTrigger": "问号落在签名下，切其他患者副本。",
+      "extraRoleIds": [],
+      "broadcastEpisode": 8,
+      "displayId": "EP08-004"
+    },
+    {
+      "id": "E08-SH007",
+      "sceneId": "E08-SC02",
+      "duration": 15,
+      "characters": [
+        "NORA"
+      ],
+      "purpose": "独立材料继续进来，但来源的公开授权有限。",
+      "framing": "全景，南门朝西桌北屏",
+      "composition": "Nora西桌，editor东桌远景，电话桌面",
+      "camera": "固定南门向西桌全景，免提机、红本、向内电脑清楚；电话患者不出镜。",
+      "focus": "记者接收动作可读，材料不在公共北屏展示。",
+      "start": "Nora右手按免提，红本左开",
+      "action": "诺拉按下免提，另一位患者的资料只在自己电脑上，没有共享到北屏。受访患者电话声对诺拉说本镜第1句英语对白，愿意帮忙，仍被下一次支付限制。她将匿名条件记在红本页顶，用键盘发出答复；收到第二份回执后才结束通话。",
+      "end": "通话结束、匿名条件记好，三组副本到桌，个人信息未公开。",
+      "sound": "桌面电话、键盘，编辑室低语",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E08-D007",
+          "speaker": "受访患者电话声",
+          "listener": "诺拉",
+          "text": "You can use the letter. Leave my name off. I still need them to cover next month.",
+          "translationZh": "信你可以用。别写我名字。我下个月还得靠他们报呢。",
+          "tone": "愿意帮忙，仍被下一次支付限制",
+          "start": 0.6,
+          "end": 9.05
+        }
+      ],
+      "overlay": [],
+      "next": "接其他样本比对，不推定整体",
+      "viewerEntry": "一组回执不足以证明普遍模式。",
+      "viewerExit": "独立材料继续进来，但来源的公开授权有限。",
+      "cutTrigger": "第二份回执收到，她把三组副本并排。",
+      "extraRoleIds": [
+        "ANON-PATIENT-VOICE",
+        "THOMAS"
+      ],
+      "broadcastEpisode": 8,
+      "displayId": "EP08-005"
+    },
+    {
+      "id": "E08-SH008",
+      "sceneId": "E08-SC02",
+      "duration": 18,
+      "characters": [
+        "NORA"
+      ],
+      "purpose": "模式仅支持追问，她已经把签名被复制的猜测放到最上面。",
+      "framing": "斜中景，西桌南侧朝北，纸和显示器下半都可见，编辑从东侧走入边缘。",
+      "composition": "三份去身份副本在桌前同平面，红本左边，显示器后层，编辑站桌东侧。",
+      "camera": "固定西桌南侧斜中景，三份纸与转屏选择可见，不用快速叠图虚增样本。",
+      "focus": "先同平面标记，再由转屏引注意到后期标题。",
+      "start": "她已结束通话，右手拿笔",
+      "action": "三份信并排，诺拉把同样的处理标记对齐。诺拉对编辑托马斯说本镜第1句英语对白，模式让她兴奋，先走向吸引人的解释。托马斯走近，她把怀疑复核签名被复制的草稿标题转给他看，稿件尚未发布。编辑托马斯对诺拉说本镜第2句英语对白，直接压住标题的写法，暂不否定继续调查。她没有反驳，却仍保留问号，把那一行拖到稿件最上方。",
+      "end": "签名被复制仍只是未刊疑问标题，各份材料出处保留。",
+      "sound": "纸对齐、键盘、远打印机",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E08-D008",
+          "speaker": "诺拉",
+          "listener": "编辑托马斯",
+          "text": "Three clinics, same wording, same mark. What if someone just copied those signatures?",
+          "translationZh": "三家诊所，措辞、标记都一样。会不会有人直接把签名复制过来了？",
+          "tone": "模式让她兴奋，先走向吸引人的解释",
+          "start": 0.6,
+          "end": 7.14
+        },
+        {
+          "id": "E08-D114",
+          "speaker": "编辑托马斯",
+          "listener": "诺拉",
+          "text": "You can't fix that by adding a question mark.",
+          "translationZh": "加个问号也不能这么写。",
+          "tone": "直接压住标题的写法，暂不否定继续调查",
+          "start": 7.49,
+          "end": 12.13
+        }
+      ],
+      "overlay": [],
+      "next": "编辑追问是否现在发布",
+      "viewerEntry": "更多独立材料呈现相近模式。",
+      "viewerExit": "模式仅支持追问，她已经把签名被复制的猜测放到最上面。",
+      "cutTrigger": "疑问标题置顶，编辑要求找到被怀疑的人回应。",
+      "extraRoleIds": [
+        "THOMAS"
+      ],
+      "broadcastEpisode": 8,
+      "displayId": "EP08-006"
+    },
+    {
+      "id": "E08-SH009",
+      "sceneId": "E08-SC02",
+      "duration": 16,
+      "characters": [
+        "NORA"
+      ],
+      "purpose": "稿件暂留草稿，时间压力只是延后那个猜测。",
+      "framing": "双人中景，西桌西南朝东北，诺拉坐西桌、编辑立东侧，不跨两人关系轴。",
+      "composition": "诺拉画左、编辑画右，两人面前为西桌显示器，标题在该屏后期合成，北公共屏不承载私密稿件。",
+      "camera": "固定西桌旁双人中景，屏上沿的手与移到保存的鼠标动作可见。",
+      "focus": "两人同层，邮件和按钮后期，不读真实账户。",
+      "start": "编辑看标题，Nora右手鼠标",
+      "action": "托马斯把手放到显示器上沿，不让她向下滑过标题。编辑托马斯对诺拉说本镜第1句英语对白，要求直接采访被怀疑的人。诺拉刷新邮箱，只有自动收件回复。诺拉对编辑托马斯说本镜第2句英语对白，想赶稿，但手里只有自动回复。她把鼠标从发布移到保存。编辑看确认状态才离开，屏幕上标题仍没删。",
+      "end": "草稿保存未发，复核签名是否被复制的疑问标题仍留，编辑回东桌。",
+      "sound": "鼠标、邮件提示、桌灯",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E08-D009",
+          "speaker": "编辑托马斯",
+          "listener": "诺拉",
+          "text": "Have you called the doctor? The actual doctor, not PR.",
+          "translationZh": "打给那个医生了吗？我说医生本人，别光找公关。",
+          "tone": "要求直接采访被怀疑的人",
+          "start": 0.6,
+          "end": 5.71
+        },
+        {
+          "id": "E08-D116",
+          "speaker": "诺拉",
+          "listener": "编辑托马斯",
+          "text": "Both. Still waiting.",
+          "translationZh": "都找了。还在等。",
+          "tone": "想赶稿，但手里只有自动回复",
+          "start": 6.06,
+          "end": 7.84
+        }
+      ],
+      "overlay": [
+        {
+          "text": "WERE THE REVIEW SIGNATURES COPIED? / 复核签名是复制的吗？",
+          "start": 2,
+          "end": 10,
+          "position": "后期未发布工作稿标题"
+        }
+      ],
+      "next": "本场结果成立后切入 E08-SC03（INSURER，夜·同时段）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "viewerEntry": "标题选好了，证据不足。",
+      "viewerExit": "稿件暂留草稿，时间压力只是延后那个猜测。",
+      "cutTrigger": "保存状态出现，切有人决定是否纠偏。",
+      "extraRoleIds": [
+        "THOMAS"
+      ],
+      "broadcastEpisode": 8,
+      "displayId": "EP08-007"
+    },
+    {
+      "id": "E08-SH010",
+      "sceneId": "E08-SC03",
+      "duration": 25,
+      "characters": [
+        "LENA"
+      ],
+      "purpose": "她意识到自己签认的流程就在公开争议里，有限知识同时带来参与责任。",
+      "framing": "工位西侧单人中景",
+      "composition": "莉娜东桌，电脑北沿、灰封左、私人机右、工作机靠屏；纸张在工作顶灯下可读。",
+      "camera": "固定中景允许她在屏幕和本人纸件之间实际比对；不剪出不存在的内部全库。",
+      "focus": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "start": "公开采访在莉娜工位电脑，工作手机靠屏，私人机右侧；自己的样本清单尚未打开。",
+      "action": "公开采访里的儿童声音让莉娜停下整理。她摘眼镜擦一下，戴回后只放大公开信件的处理标记，再打开自己经手样本清单。她从纸面找到同批备注，把公开标记与自己的标记并排，翻到背页，自己签过的缩写仍在。工作手机震动。她看见来电但没接，先把诺拉公开邮箱写到空便签上；没有检索其他患者，更没有下载整库。",
+      "end": "本人质检备注与公开标记对应；邮箱已抄，缩写露在纸面，工作机停止震动。",
+      "sound": "同场环境声与所列英语；不补额外可辨台词",
+      "music": "无背景音乐",
+      "dialogue": [],
+      "overlay": [],
+      "next": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "viewerEntry": "公开采访在莉娜工位电脑，工作手机靠屏，私人机右侧；自己的样本清单尚未打开。",
+      "viewerExit": "本人质检备注与公开标记对应；邮箱已抄，缩写露在纸面，工作机停止震动。",
+      "cutTrigger": "本人质检备注与公开标记对应；邮箱已抄，缩写露在纸面，工作机停止震动。",
+      "extraRoleIds": [],
+      "sourceShotIds": [
+        "E08-SH010",
+        "E07-SH011",
+        "E07-SH012"
+      ],
+      "broadcastEpisode": 8,
+      "displayId": "EP08-008"
+    },
+    {
+      "id": "E08-SH011",
+      "sceneId": "E08-SC03",
+      "duration": 20,
+      "characters": [
+        "LENA"
+      ],
+      "purpose": "她承担发送风险，但仍把提醒限定在自己能作证的范围，不能自动成为记者的新结论。",
+      "framing": "工位西南侧中近景，手和脸在同层",
+      "composition": "私人机在右手，灰封左侧，工作机后层；中性工作顶灯照清手纸，北屏无光。",
+      "camera": "固定中近景保留删除识别信息、确认、发送和未接工作机的连续选择。",
+      "focus": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "start": "本人缩写露在备注页，邮箱便签旁；灰封未封，私人机右侧，工作机靠屏。",
+      "action": "莉娜把备注装进灰信封，拿私人机照便签输入邮箱。起草到一位同事称呼时，逐字删掉；她看一眼自己的工牌，把话收窄到能确认的签名事实。她再查收件地址，按发送。送达后私人机翻面压灰信封，工作机仍放靠屏。她伸手想拿工作机，停住，最后只把工牌别正。",
+      "end": "私人提醒已发、私人机扣灰封，工牌仍佩戴；身份与证据范围尚未公开。",
+      "sound": "同场环境声与所列英语；不补额外可辨台词",
+      "music": "无背景音乐",
+      "dialogue": [],
+      "overlay": [
+        {
+          "text": "The signatures are real. Ask what happened before the signature. / 签名是真的。问问签名之前发生了什么。",
+          "start": 8,
+          "end": 17,
+          "position": "后期匿名邮件全文"
+        }
+      ],
+      "next": "本场结果成立后切入 E08-SC04（NEWSROOM，夜·匿名信到达）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "viewerEntry": "本人缩写露在备注页，邮箱便签旁；灰封未封，私人机右侧，工作机靠屏。",
+      "viewerExit": "私人提醒已发、私人机扣灰封，工牌仍佩戴；身份与证据范围尚未公开。",
+      "cutTrigger": "私人提醒已发、私人机扣灰封，工牌仍佩戴；身份与证据范围尚未公开。",
+      "extraRoleIds": [],
+      "sourceShotIds": [
+        "E08-SH011"
+      ],
+      "broadcastEpisode": 8,
+      "displayId": "EP08-009"
+    },
+    {
+      "id": "E08-SH012",
+      "sceneId": "E08-SC04",
+      "duration": 18,
+      "characters": [
+        "NORA"
+      ],
+      "purpose": "匿名信动摇最吸引人的解释，记者必须先查来源。",
+      "framing": "Nora近景，西桌东南朝西北",
+      "composition": "右侧手机、左红本、北屏草稿虚",
+      "camera": "固定西桌东南近景，起到一半坐回和删标题完整发生；东桌编辑只画外发声。",
+      "focus": "诺拉为主，屏幕边缘选择删除可辨，邮件准确文字后期。",
+      "start": "红本已合手机右，诺拉准备起身，新邮件进工作邮箱。",
+      "action": "诺拉合本准备离开，新邮件让她停在半个起身里。读到“签名是真的”，她坐回去，选中旧标题。诺拉对编辑托马斯说本镜第1句英语对白，新信息截住预设解释。东桌托马斯回头。编辑托马斯对诺拉说本镜第2句英语对白，不让匿名说法自动成为新结论。她删掉标题，向陌生地址发出见面请求，新的空白页上只写下一个待问的问题。",
+      "end": "旧标题删除、草稿未发、见面请求发出，匿名说法仍未证实。",
+      "sound": "工作邮箱提示、诺拉与东桌托马斯所列英语、删除键和发送键；托马斯不出现在诺拉近景内。",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E08-D010",
+          "speaker": "诺拉",
+          "listener": "编辑托马斯",
+          "text": "Wait. I've got someone saying those signatures are real.",
+          "translationZh": "等等。有人说那些签名是真的。",
+          "tone": "新信息截住预设解释",
+          "start": 0.6,
+          "end": 5.24
+        },
+        {
+          "id": "E08-D118",
+          "speaker": "编辑托马斯",
+          "listener": "诺拉",
+          "text": "Can they back that up?",
+          "translationZh": "拿得出证据吗？",
+          "tone": "不让匿名说法自动成为新结论",
+          "start": 5.59,
+          "end": 8.32
+        }
+      ],
+      "overlay": [
+        {
+          "text": "The signatures are real. Ask what happened before the signature. / 签名是真的。问问签名之前发生了什么。",
+          "start": 2,
+          "end": 9,
+          "position": "后期工作邮箱片段"
+        }
+      ],
+      "next": "本集结束。诺拉删掉复制签名的草稿标题并发出见面请求；她需要换一个问题，而不是把匿名邮件当答案。 下集从COURT-CORRIDOR展开：公众的注视和患者材料，能在首次答辩中替青年争到什么？",
+      "viewerEntry": "稿件此前只因没有回应暂缓。",
+      "viewerExit": "匿名信动摇最吸引人的解释，记者必须先查来源。",
+      "cutTrigger": "旧标题被删、见面请求发出，E09再收到有限记录。",
+      "extraRoleIds": [
+        "THOMAS"
+      ],
+      "broadcastEpisode": 8,
+      "displayId": "EP08-010"
+    }
+  ]
+}

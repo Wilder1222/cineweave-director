@@ -1,0 +1,187 @@
+{
+  "fps": 24,
+  "timingVerified": false,
+  "lipSyncVerified": false,
+  "cues": [
+    {
+      "shotId": "U001-01",
+      "speaker": "闻溪",
+      "text": "这法器里的人，是不是被困住了？",
+      "addressee": "许竞",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 92,
+      "endFrameExclusive": 282,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U001-01",
+      "speaker": "许竞",
+      "text": "那是卖锅的。你手里是遥控器。你怎么进来的？",
+      "addressee": "闻溪",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 282,
+      "endFrameExclusive": 549,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U001-01",
+      "speaker": "闻溪",
+      "text": "从下面。",
+      "addressee": "许竞",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 549,
+      "endFrameExclusive": 600,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U001-01",
+      "speaker": "许竞",
+      "text": "先把剑放下。",
+      "addressee": "闻溪",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 600,
+      "endFrameExclusive": 676,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U001-02",
+      "speaker": "闻溪",
+      "text": "我闭关三百年，你们在我的洞府上盖了这栋楼。",
+      "addressee": "许竞",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 860,
+      "endFrameExclusive": 1201,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U001-02",
+      "speaker": "许竞",
+      "text": "我房东没说。",
+      "addressee": "闻溪",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 1201,
+      "endFrameExclusive": 1298,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U001-02",
+      "speaker": "闻溪",
+      "text": "造楼的人也没问我。",
+      "addressee": "许竞",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 1298,
+      "endFrameExclusive": 1444,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U001-03",
+      "speaker": "闻溪",
+      "text": "门栓断了。我进去推回去，你替我按剑。",
+      "addressee": "许竞",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 1622,
+      "endFrameExclusive": 1819,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U001-03",
+      "speaker": "许竞",
+      "text": "推完呢？",
+      "addressee": "闻溪",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 1819,
+      "endFrameExclusive": 1863,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U001-03",
+      "speaker": "闻溪",
+      "text": "门合上，我可能出不来。",
+      "addressee": "许竞",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 1863,
+      "endFrameExclusive": 1984,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U001-03",
+      "speaker": "许竞",
+      "text": "先别进去。把它顶住，我们再找人修。",
+      "addressee": "闻溪",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 1984,
+      "endFrameExclusive": 2170,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U001-04B",
+      "speaker": "闻溪",
+      "text": "暂时合住了。拔出来还会漏。",
+      "addressee": "许竞",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 2506,
+      "endFrameExclusive": 2870,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U001-05A",
+      "speaker": "许竞",
+      "text": "墙内有缝，别急着拔卡住的东西。",
+      "addressee": "闻溪",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 3026,
+      "endFrameExclusive": 3205,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U001-05A",
+      "speaker": "闻溪",
+      "text": "我去找能替换的门栓。天亮前回来。",
+      "addressee": "许竞",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 3205,
+      "endFrameExclusive": 3396,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U001-05A",
+      "speaker": "许竞",
+      "text": "回来先敲门。",
+      "addressee": "闻溪",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 3396,
+      "endFrameExclusive": 3467,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U001-05A",
+      "speaker": "闻溪",
+      "text": "这是我的洞府。",
+      "addressee": "许竞",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 3467,
+      "endFrameExclusive": 3551,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U001-05A",
+      "speaker": "许竞",
+      "text": "也是我的出租屋。",
+      "addressee": "闻溪",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 3551,
+      "endFrameExclusive": 3646,
+      "timingStatus": "authored_window_pending_measurement"
+    },
+    {
+      "shotId": "U001-06",
+      "speaker": "闻溪",
+      "text": "找到能换的了。等修屋子的人来，一起看怎么换。",
+      "addressee": "许竞",
+      "performance": "依本镜具体任务自然说出，收到对手刺激后再回应，不改变字句",
+      "startFrame": 4104,
+      "endFrameExclusive": 4560,
+      "timingStatus": "authored_window_pending_measurement"
+    }
+  ]
+}

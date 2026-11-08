@@ -1,5 +1,5 @@
 {
-  "catalogVersion": "3.2.0",
+  "catalogVersion": "3.2.2",
   "skill": "cineweave-director",
   "authority": {
     "routeOwnership": "contracts.json#/routes",
@@ -55,6 +55,72 @@
   "policy": "contracts.json 负责路由 ID、路由基线参考和产物归属；本文件负责分发与类型化加载条件；SKILL.md 是人类入口，不建立竞争的机器权威。",
   "references": [
     {
+      "path": "references/optional/project-workflow.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "multi_route",
+        "continuity",
+        "draft_revision"
+      ]
+    },
+    {
+      "path": "references/optional/makeup-style-presets.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "style",
+        "character",
+        "portrait",
+        "review_repair"
+      ]
+    },
+    {
+      "path": "references/optional/style-still-references.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "style",
+        "color",
+        "portrait",
+        "reference_evidence"
+      ]
+    },
+    {
+      "path": "references/optional/stage-deliverables.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "multi_route",
+        "style",
+        "production_plan",
+        "review_repair"
+      ]
+    },
+    {
+      "path": "references/optional/color-grading-presets.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "style",
+        "color",
+        "production_plan",
+        "review_repair"
+      ]
+    },
+    {
+      "path": "references/optional/color-grading-research.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "color",
+        "reference_evidence",
+        "craft_study"
+      ]
+    },
+    {
+      "path": "references/optional/lookdev-delivery-example.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "style",
+        "skill_evaluation"
+      ]
+    },
+    {
       "path": "references/optional/short-film-creation.md",
       "lifecycle": "optional",
       "loadContexts": [
@@ -74,7 +140,7 @@
       ]
     },
     {
-      "path": "references/optional/short-film-example.md",
+      "path": "references/optional/adaptation-example.md",
       "lifecycle": "optional",
       "loadContexts": [
         "skill_evaluation"
@@ -249,7 +315,11 @@
       "lifecycle": "optional",
       "loadContexts": [
         "cinematic_pattern",
-        "shot_compile"
+        "shot_compile",
+        "shot_direction",
+        "storyboard_rhythm",
+        "action",
+        "production_plan"
       ]
     },
     {
@@ -270,6 +340,13 @@
     },
     {
       "path": "references/optional/video-platform-adaptation.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "video_sound_delivery"
+      ]
+    },
+    {
+      "path": "references/optional/video-model-practices-2026-10.md",
       "lifecycle": "optional",
       "loadContexts": [
         "video_sound_delivery"
@@ -383,6 +460,57 @@
         "image_prompt",
         "production_plan",
         "review_repair"
+      ]
+    },
+    {
+      "path": "references/optional/scene-directing-pipeline.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "multi_route",
+        "scene",
+        "shot_direction",
+        "storyboard_rhythm",
+        "production_plan",
+        "review_repair"
+      ]
+    },
+    {
+      "path": "references/optional/xuanzang-director-case-study.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "skill_evaluation",
+        "shot_direction",
+        "storyboard_rhythm"
+      ]
+    },
+    {
+      "path": "references/optional/film-television-reference-library.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "style",
+        "reference_evidence",
+        "character",
+        "scene"
+      ]
+    },
+    {
+      "path": "references/optional/live-action-reference-directions.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "style",
+        "reference_evidence",
+        "character",
+        "scene"
+      ]
+    },
+    {
+      "path": "references/optional/animation-reference-directions.md",
+      "lifecycle": "optional",
+      "loadContexts": [
+        "style",
+        "reference_evidence",
+        "character",
+        "scene"
       ]
     }
   ]

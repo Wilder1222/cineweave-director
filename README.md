@@ -15,9 +15,15 @@
 
 只执行当前请求需要的步骤。内部结果返回导演入口后检查原请求、硬锁和完整性，再合并成一个最终结果；有上游问题则回到负责能力修订。默认同一代理执行，不需要后台调度服务。
 
+## 阶段结果产物验收（完整短片）
+
+对于完整制作，CineWeave 现在要求**每阶段都有真实可查看的结果**：导演卡与完整剧本、视觉六卡（风格／配色／材质／灯光／光位／LookDev）、空间图、走位表、分镜板、剪辑时间线、试片单和审阅报告。设计卡已经出图 ≠ 真实生成视频和材质样片已经通过。[查看 G0–G7 两条完整案例的 26 份图板](tests/evaluations/2026-10-16/stage-results-v1.md)。仓库开发检查：`npm run stage:check`（只读，不执行生成，也不认证实际媒体质量）。
+
 ## 开始创作
 
-要完整交付，可直接提出“开发一部短片并生成全套提示词”。[短片创作流程](skills/cineweave-director/references/optional/short-film-creation.md)统一叙事、视觉开发、导演摄影、配音和剪辑；[完整样例《留一盏灯》](skills/cineweave-director/references/optional/short-film-example.md)展示每项可复制稿，不用自行补齐被省略的镜头。
+本地候选版本 `3.2.1` 统一已安装的摄影语言、场次流程、影视参考库和工作区色彩／妆容增量。[优化报告与14案首版](tests/evaluations/skill-optimization-2026-10-21/REPORT.md)记录当前验证范围。未打标签或推送；本地安装以本轮验证的构建包为准。
+
+要完整交付，可直接提出“开发一部短片并生成全套提示词”。[短片创作流程](skills/cineweave-director/references/optional/short-film-creation.md)统一叙事、视觉开发、导演摄影、配音和剪辑；[完整样例《图尽》](skills/cineweave-director/references/optional/adaptation-example.md)展示每项可复制稿，不用自行补齐被省略的镜头。
 
 支持文字单镜／多镜、单首帧、首尾帧、全能参考及分镜板视频规划；按任务选择路径，不要求所有任务先制首尾帧。完整方案统一空间、摄影、灯光、声音与剪辑，模型和界面支持另行核验。
 
@@ -57,17 +63,28 @@
 
 ## 按需使用的指南
 
+- [场次级导演生产关卡](skills/cineweave-director/references/optional/scene-directing-pipeline.md)：八阶段从戏剧任务、场景地理、Blocking、覆盖、声音剪辑到小样和修复；完整短片／正式连续镜头才加载，不影响普通单图。
+- [《玄奘》双段重要实践案例](skills/cineweave-director/references/optional/xuanzang-director-case-study.md)：约 11:47＋10:59 两段课程的可采纳导演方法、反例与 CineWeave 迁移，明确作者口播与案例推论边界。
+
 - [Skill 入口](skills/cineweave-director/SKILL.md)：交付规模、创作顺序与领域路由。
 - [镜头工作台](skills/cineweave-director/references/optional/shot-design-workbench.md)：注意力、动作瞬间与关键帧准备度。
+- [镜头语言与叙事作用词典](skills/cineweave-director/references/optional/cinematic-patterns.md#镜头语言与叙事作用词典)：7 种核心技法、28 种扩展、中文镜头示例及 AIGC 分镜交接；影视叙事必经逐镜选镜。
 - [群像调度与逐镜评审](skills/cineweave-director/references/optional/ensemble-direction-and-review.md)：演员触发、配角任务、六视角检查与单变量修订。
 - [平台适配](skills/cineweave-director/references/optional/video-platform-adaptation.md)与[剪辑余量](skills/cineweave-director/references/optional/video-timing-and-handles.md)：参考、时长与人工交接。
 - [画质与引擎流程](skills/cineweave-director/references/optional/rendering-quality-workflows.md)：画风规则、Unreal／Blender 预演与渲染、采样、色管和交付验收。
 - [AIGC 控制与评审](skills/cineweave-director/references/optional/aigc-control-and-evaluation.md)：结构／身份／风格参考分工、局部编辑保留及对照试片。
 - [连续性](skills/cineweave-director/references/core/visual-bible-and-continuity.md)与[诊断](skills/cineweave-director/references/optional/generation-diagnostics.md)：保留已通过部分，修复明确问题。
 
-## 使用当前源码
+## 安装与使用
 
-当前源码为 `3.2.0` 候选版本，已完成重构与本地验证，正式版本标签尚未发布；旧 `v3.1.0` 标签不包含本次改动，远程 `v3.2.0` 尚不可作为安装来源。完整工作流将当前仓库的四个 `skills/` 目录全部按宿主支持方式加载，再从 `$cineweave-director` 开始。内部三个 Skill 由入口明确交接，不自动作为独立用户入口。不要只复制 `SKILL.md`，各目录都需要相邻参考与脚本。
+本版为 `3.2.0`，安装使用固定版本标签 `v3.2.0`；旧 `v3.1.0` 不包含本版的统一入口和影视参考库。完整工作流包含四个 `skills/` 目录，从 `$cineweave-director` 开始。内部三个 Skill 由入口明确交接，不自动作为独立用户入口。不要只复制 `SKILL.md`，各目录都需要相邻参考与脚本。
+
+```bash
+codex plugin marketplace add Wilder1222/cineweave-director --ref v3.2.0
+codex plugin add cineweave-director@cineweave-director
+```
+
+已配置该版本来源时，可先运行 `codex plugin marketplace upgrade cineweave-director`，再运行安装命令。安装后核对宿主显示的版本与实际参考文件；宿主尚未重新加载时，在新会话中使用新版。源码合并与本地构建不会自动更新已有安装。
 
 仓库维护者先执行 `npm run skills:sync` 再构建 `.build/cineweave-director`，该目录包含完整工作流。可用 `node scripts/build-plugin-bundle.mjs --skill cineweave-review` 构建自包含单叶包；这用于独立分发和兼容检查。只装导演时，同一入口用本包资料恢复缺失内部能力。宿主可能显示带插件前缀的名字，例如 `cineweave-director:cineweave-review`，入口按实际发现的准确路径交接。用户现有插件缓存不会由构建自动更新。旧版安装说明与版本发布约定见[贡献指南](CONTRIBUTING.md)。
 
@@ -78,13 +95,17 @@
 ```powershell
 node skills/cineweave-director/scripts/check-delivery.mjs --text "值得专程回来"
 node skills/cineweave-director/scripts/check-delivery.mjs worksheet.json
+node skills/cineweave-director/scripts/check-delivery.mjs --project-workflow project-workflow.json
 node skills/cineweave-director/scripts/check-video-plan.mjs workbook.json
 node skills/cineweave-director/scripts/check-video-plan.mjs workbook.json --evaluation-date 2026-10-12
 node skills/cineweave-director/scripts/check-shot-review.mjs review.json
+node skills/cineweave-director/scripts/check-shot-review.mjs --camera-language camera-workbook.json
 node skills/cineweave-director/scripts/check-change-impact.mjs impact.json
 ```
 
 交付检查器检查字数、成片时间线与字幕；视频检查器检查节点、参考声明和生成余量；逐镜检查器检查所选视角的覆盖、结论与未决项；[变更影响检查器](skills/cineweave-director/references/optional/drafts-and-change-impact.md#只读变更影响查询)查询声明字段的消费者、传递影响和依赖待审项。它们不验证真实媒体效果或平台能力。
+
+多集短剧、跨时期／多造型人物或恢复制作项目可按需使用[项目与镜头回流](skills/cineweave-director/references/optional/project-workflow.md)索引既有集／场／镜、准确资产版本、整组预演和候选。`--project-workflow` 只读核对声明关系并派生资产反查，保留未展开集、过期输入和未提供媒体，不解析正文来猜业务状态，不自动选用或生成。
 
 视频工作表可选填[返回音频与采用窗口](skills/cineweave-director/references/optional/video-sound-and-delivery.md)，核对声明的时长、来源区间、同步锚点及指定模板配对。提供评估日期才比较证据查阅日期；填写测量来源或通过时间算术不会提升为实际媒体、测量或权利已验证。
 

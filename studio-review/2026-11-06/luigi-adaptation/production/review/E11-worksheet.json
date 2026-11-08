@@ -1,0 +1,1432 @@
+{
+  "source": {
+    "type": "design",
+    "id": "DENIED-E11-text-coverage-5d0bc54608d4",
+    "version": 2,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "E11-SH001",
+    "E11-SH002",
+    "E11-SH003",
+    "E11-SH004",
+    "E11-SH006",
+    "E12-SH001",
+    "E12-SH003",
+    "E12-SH004",
+    "E11-SH008",
+    "E11-SH010",
+    "E11-SH011",
+    "E11-SH013",
+    "E11-SH014"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "E11-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：他说的是优先复核，未签付款页没有被误拍成付款完成。；入镜已知：区分机构可以宣布的动作与家庭真正需要的付款。；本镜新知：公告录完，付款页仍未签，维克多取回平板。；实际写出的动作：传播职员拿横置手机录公告，维克多看了一眼桌角的答复清单，将治疗付款那页压在平板下。她示意开始，他只录下特别复核的承诺。",
+      "sourceLocator": "season/E11.json#/shots/0"
+    },
+    {
+      "role": "performance",
+      "shotId": "E11-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "维克多看过平板，传播职员准备录制。 → 公告录完，付款页仍未签，维克多取回平板。；维克多向公司公告观众：We've arranged a priority review for the Reed family's request and are contacting their treatment provider today.；平稳公告",
+      "sourceLocator": "season/E11.json#/shots/0"
+    },
+    {
+      "role": "staging",
+      "shotId": "E11-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "翌日上午公司会议室，西窗照着桌面，维克多坐北端，传播职员在南端拿横置手机，付款页仍无签字。 本镜画内角色：VICTOR,PR-STAFF。；起态：维克多看过平板，传播职员准备录制。；出态：公告录完，付款页仍未签，维克多取回平板。",
+      "sourceLocator": "season/E11.json#/shots/0"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E11-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "传播职员西肩后40mm维克多正面中景，横置手机在下前景，付款页露桌角。；相机：固定12秒完成一次公告录制。；焦点：他说的是优先复核，未签付款页没有被误拍成付款完成。",
+      "sourceLocator": "season/E11.json#/shots/0"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E11-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E11-SH001.txt；12秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E11.json#/shots/0"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E11-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "公告录完，付款页仍未签，维克多取回平板。；切点：职员结束录制把外部标题递来，切到配文审查而非重录。；接口：接E11-SH002；职员结束录制把外部标题递来，切到配文审查而非重录。",
+      "sourceLocator": "season/E11.json#/shots/0"
+    },
+    {
+      "role": "direction",
+      "shotId": "E11-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：删的是尚未发出的获批配文，再拒绝治疗可预约的扩大承诺。；入镜已知：公告录完，付款页仍未签，维克多取回平板。；本镜新知：她保存准确配文，手机上错误外部标题仍在传播。；实际写出的动作：传播职员给维克多看手机上的外部“治疗获批”标题；同样的词已被她填进平板待发配文。他指着配文中的“获批”，明确付款未批。她将配文改成“优先复核”并保存，没有重录或删改上一镜准确公告；手机上的外部转发仍增长。\n传播职员删去获批，在下一行仍留着迅速响应。维克多看向没有签字的付款页，要求把联络和付款分开。",
+      "sourceLocator": "season/E11.json#/shots/1"
+    },
+    {
+      "role": "performance",
+      "shotId": "E11-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "公告录完，付款页仍未签，维克多取回平板。 → 她保存准确配文，手机上错误外部标题仍在传播。；传播职员向维克多：They're calling it approved.；想顺势采用 / 维克多向传播职员：Payment isn't approved. Take 'approved' out of our caption.；指平板上的待发配文，改发布用词，不改已录承诺 / 传播职员向维克多：Can we say the family can book treatment?；想要公众可理解的结果 / 维克多向同场对话者：Not until payment's approved. Use the review date.；不承诺尚未办成的事",
+      "sourceLocator": "season/E11.json#/shots/1"
+    },
+    {
+      "role": "staging",
+      "shotId": "E11-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "翌日上午公司会议室，西窗照着桌面，维克多坐北端，传播职员在南端拿横置手机，付款页仍无签字。 本镜画内角色：VICTOR,PR-STAFF。；起态：公告录完，付款页仍未签，维克多取回平板。；出态：她保存准确配文，手机上错误外部标题仍在传播。",
+      "sourceLocator": "season/E11.json#/shots/1"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E11-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "会议桌西侧偏北50mm职员、维克多侧面与平板共享中景，两部设备分清。；相机：固定23秒，职员改平板配文，另一手机外部标题不跟着改变。；焦点：删的是尚未发出的获批配文，再拒绝治疗可预约的扩大承诺。",
+      "sourceLocator": "season/E11.json#/shots/1"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E11-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E11-SH002.txt；23秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E11.json#/shots/1"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E11-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "她保存准确配文，手机上错误外部标题仍在传播。；切点：准确配文保存，切家庭已经相信的错误外部消息。；接口：本场结果成立后切入 E11-SC02（CLINIC，日·同日上午）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E11.json#/shots/1"
+    },
+    {
+      "role": "direction",
+      "shotId": "E11-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：获批期待变成已换班的成本，记者看见自己的转发造成什么。；入镜已知：让误报落到已经换好的班次、期待与治疗位置。；本镜新知：诺拉把转发页关掉，玛拉仍保留周四空出的班。；实际写出的动作：玛拉从西椅前跨到医生跟前举起手机，蓝夹在左臂。医生看完标题，把她的纸质通知拿来对照。诺拉听见‘复核’两个字，迅速看自己的手机。\n玛拉把手机降到胸前，拿出已经换好的周四班次表。医生没有接班表，只给她留下付款页的位置；艾莉在西椅把公交车画本合了一半。",
+      "sourceLocator": "season/E11.json#/shots/2"
+    },
+    {
+      "role": "performance",
+      "shotId": "E11-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "玛拉从西椅前起身，右手手机亮新闻，左臂蓝夹；医生从北门刚出来。 → 诺拉把转发页关掉，玛拉仍保留周四空出的班。；玛拉向医生：They approved it. Can we have Thursday back?；举手机，先要回预约 / 医生向玛拉：It says review, Mara. I still need them to authorize payment.；看着通知答，不把她当学生 / 诺拉向玛拉：I shared that headline.；承认自己在场的份 / 玛拉向同场对话者：I swapped my shift. I told her we were coming.；第一次意识到白高兴了 / 医生向玛拉：Keep the shift for now. Let me call billing again.；给可做的一步，不承诺付款 / 玛拉向同场对话者：Please don't tell me it's sorted until it is.；对着医生，话也落到旁边记者身上",
+      "sourceLocator": "season/E11.json#/shots/2"
+    },
+    {
+      "role": "staging",
+      "shotId": "E11-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日上午治疗中心，西侧长椅上艾莉拿公交画本，北治疗门开合。玛拉灰风衣罩黑工服，左臂蓝夹，诺拉在她南侧；医生从北门出来就被手机上的获批标题截住。 本镜画内角色：MARA-WORK,DOCTOR,NORA,ELLIE。；起态：玛拉从西椅前起身，右手手机亮新闻，左臂蓝夹；医生从北门刚出来。；出态：诺拉把转发页关掉，玛拉仍保留周四空出的班。",
+      "sourceLocator": "season/E11.json#/shots/2"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E11-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "诊所候诊走廊西椅前35mm三人中景，玛拉北向医生，诺拉在南侧；艾莉在西椅后层。；相机：固定，玛拉举手机迎医生后不再向前挤。；焦点：获批期待变成已换班的成本，记者看见自己的转发造成什么。",
+      "sourceLocator": "season/E11.json#/shots/2"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E11-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E11-SH003.txt；35秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E11.json#/shots/2"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E11-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "诺拉把转发页关掉，玛拉仍保留周四空出的班。；切点：医生从夹底找出旧回执，转到能读时间关系的位置。；接口：接E11-SH004；医生从夹底找出旧回执，转到能读时间关系的位置。",
+      "sourceLocator": "season/E11.json#/shots/2"
+    },
+    {
+      "role": "direction",
+      "shotId": "E11-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：日期证实枪击前已启动，诺拉试着主张加速功劳时保留玛拉听见的反应。；入镜已知：诺拉把转发页关掉，玛拉仍保留周四空出的班。；本镜新知：诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。；实际写出的动作：医生从蓝夹底抽出案前重审受理回执，与今日通知并排。玛拉立刻翻出自己记下的通话日期；诺拉的手机降下来。\n诺拉请求拍两张日期栏，医生把姓名遮住后交给她。玛拉将自己的手机收入风衣右袋，腾手翻通话笔记；医生听到北治疗门有人等，把说明说得更短。",
+      "sourceLocator": "season/E11.json#/shots/3"
+    },
+    {
+      "role": "performance",
+      "shotId": "E11-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "诺拉把转发页关掉，玛拉仍保留周四空出的班。 → 诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。；医生向诺拉：We reopened this two days before the shooting. Here.；把回执递到眼前再停 / 玛拉向医生：You called me on my break.；想起当时的事 / 诺拉向医生：But my story got them to move faster.；试着保住自己原先判断的一部分 / 医生向诺拉：Yes. We'd already started.；简短纠正，已经要回治疗区",
+      "sourceLocator": "season/E11.json#/shots/3"
+    },
+    {
+      "role": "staging",
+      "shotId": "E11-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日上午治疗中心，西侧长椅上艾莉拿公交画本，北治疗门开合。玛拉灰风衣罩黑工服，左臂蓝夹，诺拉在她南侧；医生从北门出来就被手机上的获批标题截住。 本镜画内角色：MARA-WORK,NORA。其余所列说话者留在已建立的画外席位或电话对端。；起态：诺拉把转发页关掉，玛拉仍保留周四空出的班。；出态：诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。",
+      "sourceLocator": "season/E11.json#/shots/3"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E11-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "医生西肩旁50mm玛拉、诺拉及两份日期栏中近景，医生只留执页手与肩。；相机：固定25秒，姓名遮住后文件向记者转；不插入未知内部页面。；焦点：日期证实枪击前已启动，诺拉试着主张加速功劳时保留玛拉听见的反应。",
+      "sourceLocator": "season/E11.json#/shots/3"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E11-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E11-SH004.txt；25秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E11.json#/shots/3"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E11-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。；切点：绿蜡笔掉到椅前，注意从记者的解释转回一直等着的孩子。；接口：接E11-SH006；绿蜡笔掉到椅前，注意从记者的解释转回一直等着的孩子。",
+      "sourceLocator": "season/E11.json#/shots/3"
+    },
+    {
+      "role": "direction",
+      "shotId": "E11-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：孩子的空座与付款卡同时落到母亲手上，时间限制结束解释。；入镜已知：诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。；本镜新知：卡片夹在蓝夹最前，周四位置暂留到明天中午。；实际写出的动作：艾莉把画本里的公交车递向母亲，玛拉伸手时碰落绿蜡笔。她蹲下捡，才看清女儿画的靠窗座；医生把蓝夹还到她左臂。\n医生把付款办公室号码卡递到玛拉腾出的右手，指着卡背写下保留时限。北门再次打开，她先让推车过去，才回治疗区。",
+      "sourceLocator": "season/E11.json#/shots/4"
+    },
+    {
+      "role": "performance",
+      "shotId": "E11-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。 → 卡片夹在蓝夹最前，周四位置暂留到明天中午。；艾莉向玛拉：I saved you the window seat.；孩子只关心画里母亲坐哪 / 玛拉向艾莉：Okay. Give me a minute.；还陷在付款问题 / 医生向玛拉：Thursday's yours till noon tomorrow. Call that number. I'll send them my note.；边写卡边交代，不另起安慰演说 / 玛拉向医生：Noon. Okay.；记下真正期限",
+      "sourceLocator": "season/E11.json#/shots/4"
+    },
+    {
+      "role": "staging",
+      "shotId": "E11-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日上午治疗中心，西侧长椅上艾莉拿公交画本，北治疗门开合。玛拉灰风衣罩黑工服，左臂蓝夹，诺拉在她南侧；医生从北门出来就被手机上的获批标题截住。 本镜画内角色：MARA-WORK,ELLIE,DOCTOR。；起态：诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。；出态：卡片夹在蓝夹最前，周四位置暂留到明天中午。",
+      "sourceLocator": "season/E11.json#/shots/4"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E11-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "西长椅南端35mm低机位母女与医生腰部中景，北治疗门留远后层。；相机：玛拉蹲下捡笔时轻微下俯，随后固定；医生只在原站位递付款卡再经北门离开。；焦点：孩子的空座与付款卡同时落到母亲手上，时间限制结束解释。",
+      "sourceLocator": "season/E11.json#/shots/4"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E11-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E11-SH006.txt；24秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E11.json#/shots/4"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E11-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "卡片夹在蓝夹最前，周四位置暂留到明天中午。；切点：母亲把付款卡放最前，切同日下午第一次报价。；接口：本场结果成立后切入 E12-SC01（INSURER，日·诊所告知付款期限的同日下午）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E11.json#/shots/4"
+    },
+    {
+      "role": "direction",
+      "shotId": "E12-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她追问到账，直到限制覆盖付款页才改变问题。；入镜已知：让治疗期限进入真正的交换条件。；本镜新知：她看清款项换来的公开限制，双手空出翻页。；实际写出的动作：玛拉将诊所付款卡压到维克多的费用页上，要他先回答时间。他把费用页转正，她仍用指尖盖住金额，不让话题移到赔多少。\n维克多将保密与结案页推到付款页上方。玛拉终于移开压住金额的手，翻向采访条款，手机放到桌右免得挡字。",
+      "sourceLocator": "season/E11.json#/shots/5"
+    },
+    {
+      "role": "performance",
+      "shotId": "E12-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "玛拉左夹右手机，维克多手离平板。 → 她看清款项换来的公开限制，双手空出翻页。；玛拉向维克多：Will the clinic have it today?；压住金额，只等到账时间 / 维克多向玛拉：This covers the current treatment. We send it once you've signed.；先把付款条件摆在桌上 / 维克多向玛拉：Once this claim's settled, no more interviews about it.；说限制时仍把纸推向签字处 / 玛拉向维克多：I take the money and stop talking. That's the deal?；看采访条款，当面核对代价",
+      "sourceLocator": "season/E11.json#/shots/5"
+    },
+    {
+      "role": "staging",
+      "shotId": "E12-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日下午合众健康会议室，玛拉坐长桌南侧，灰风衣仍罩黑工服，诊所付款卡压在费用页上。维克多在北端，平板左侧，南门在她身后。 本镜画内角色：MARA-WORK,VICTOR。；起态：玛拉左夹右手机，维克多手离平板。；出态：她看清款项换来的公开限制，双手空出翻页。",
+      "sourceLocator": "season/E11.json#/shots/5"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E12-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "公司会议桌西侧40mm南玛拉、北维克多共享中景，付款卡在两人之间。；相机：固定27秒，金额被她指尖压住，采访页从北端推来。；焦点：她追问到账，直到限制覆盖付款页才改变问题。",
+      "sourceLocator": "season/E11.json#/shots/5"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E12-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E12-SH001.txt；27秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E11.json#/shots/5"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E12-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "她看清款项换来的公开限制，双手空出翻页。；切点：她问不签会怎样，转为从客户角度争退路和未来。；接口：接E12-SH003；她问不签会怎样，转为从客户角度争退路和未来。",
+      "sourceLocator": "season/E11.json#/shots/5"
+    },
+    {
+      "role": "direction",
+      "shotId": "E12-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：玛拉先问退路，再要求下疗程，连续两次得不到保证。；入镜已知：她看清款项换来的公开限制，双手空出翻页。；本镜新知：未来保障没有获书面承诺，她把笔留桌上。；实际写出的动作：玛拉没有去碰签字页，先把付款卡从两页之间抽出来，确保电话号码还在自己手里。\n玛拉连翻两页找下个疗程，维克多没有替她翻。她指到空着的续批项，拿起笔想让他加进去；他将笔轻推回她一侧。",
+      "sourceLocator": "season/E11.json#/shots/6"
+    },
+    {
+      "role": "performance",
+      "shotId": "E12-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "她看清款项换来的公开限制，双手空出翻页。 → 未来保障没有获书面承诺，她把笔留桌上。；玛拉向维克多：And if I don't sign?；要求说出退路 / 维克多向同场对话者：The claim stays disputed. You can keep appealing.；说流程，没有承诺位置 / 玛拉向维克多：Then put the next round in here.；把笔递过去，试一次能否多争 / 维克多向玛拉：I can't promise they'll approve the next one.；把笔推回，不绕开拒绝",
+      "sourceLocator": "season/E11.json#/shots/6"
+    },
+    {
+      "role": "staging",
+      "shotId": "E12-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日下午合众健康会议室，玛拉坐长桌南侧，灰风衣仍罩黑工服，诊所付款卡压在费用页上。维克多在北端，平板左侧，南门在她身后。 本镜画内角色：MARA-WORK。其余所列说话者留在已建立的画外席位或电话对端。；起态：她看清款项换来的公开限制，双手空出翻页。；出态：未来保障没有获书面承诺，她把笔留桌上。",
+      "sourceLocator": "season/E11.json#/shots/6"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E12-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "维克多西肩旁朝南65mm玛拉中近景，笔与续批空栏在下方，维克多的手从近前景推回笔。；相机：固定22秒，不用反打替拒绝加重。；焦点：玛拉先问退路，再要求下疗程，连续两次得不到保证。",
+      "sourceLocator": "season/E11.json#/shots/6"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E12-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E12-SH003.txt；22秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E11.json#/shots/6"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E12-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "未来保障没有获书面承诺，她把笔留桌上。；切点：她合起未签稿准备离开，切到行动后果。；接口：接E12-SH004；她合起未签稿准备离开，切到行动后果。",
+      "sourceLocator": "season/E11.json#/shots/6"
+    },
+    {
+      "role": "direction",
+      "shotId": "E12-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她决定找独立律师并禁止拨店里电话。；入镜已知：未来保障没有获书面承诺，她把笔留桌上。；本镜新知：未签版带走，维克多未取得签名。；实际写出的动作：玛拉合起未签协议收入左侧蓝夹，右手拿回手机起身。维克多伸手到桌中拿笔，她已转向南门。",
+      "sourceLocator": "season/E11.json#/shots/7"
+    },
+    {
+      "role": "performance",
+      "shotId": "E12-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "未来保障没有获书面承诺，她把笔留桌上。 → 未签版带走，维克多未取得签名。；玛拉向维克多：I'm taking this to my lawyer. Don't call the store.；合夹起身，先结束这次谈判 / 维克多向玛拉：Have him call me.；继续争速度",
+      "sourceLocator": "season/E11.json#/shots/7"
+    },
+    {
+      "role": "staging",
+      "shotId": "E12-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日下午合众健康会议室，玛拉坐长桌南侧，灰风衣仍罩黑工服，诊所付款卡压在费用页上。维克多在北端，平板左侧，南门在她身后。 本镜画内角色：MARA-WORK,VICTOR。；起态：未来保障没有获书面承诺，她把笔留桌上。；出态：未签版带走，维克多未取得签名。",
+      "sourceLocator": "season/E11.json#/shots/7"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E12-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "会议室西墙35mm中全景，玛拉起身走南门，维克多留北端。；相机：固定10秒，让蓝夹带出门而笔留桌上。；焦点：她决定找独立律师并禁止拨店里电话。",
+      "sourceLocator": "season/E11.json#/shots/7"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E12-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E12-SH004.txt；10秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E11.json#/shots/7"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E12-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "未签版带走，维克多未取得签名。；切点：南门关上，下一场独立意见确实发生。；接口：本场结果成立后切入 E11-SC03（NEWSROOM，傍晚·当天）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E11.json#/shots/7"
+    },
+    {
+      "role": "direction",
+      "shotId": "E11-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：两人争更新/更正后真正失去排期。；入镜已知：完成较小的准确性纠错，同时留下尚未承担的大断言。；本镜新知：本方旧推送撤下，外部流转仍在。；实际写出的动作：诺拉把错误转发截下留档，在西桌更新原文。编辑把‘更正’改成‘更新’，她将鼠标移回去，两个光标在同一处停住。\n编辑打开已排好的全国版推荐，那里仍引用旧标题。诺拉用自己的账号撤掉该条推送，手机上转发提醒却继续增长。",
+      "sourceLocator": "season/E11.json#/shots/8"
+    },
+    {
+      "role": "performance",
+      "shotId": "E11-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "她把更正段落打在新稿顶部。 → 本方旧推送撤下，外部流转仍在。；值班编辑向诺拉：We can call it an update.；替她和栏目留余地 / 诺拉向值班编辑：We got it wrong. Put a correction on the original.；把鼠标拉回原链接 / 值班编辑向诺拉：Pull it, and we lose that slot.；让她看清要失去哪块位置 / 诺拉向值班编辑：Pull it.；短促不解释",
+      "sourceLocator": "season/E11.json#/shots/8"
+    },
+    {
+      "role": "staging",
+      "shotId": "E11-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日傍晚编辑部西桌摆着重审与今日通知，北屏的公司说明静音。诺拉打开自己转过的错误标题，女编辑站东侧看推荐排期。 本镜画内角色：NORA,EDITOR-DESK。；起态：她把更正段落打在新稿顶部。；出态：本方旧推送撤下，外部流转仍在。",
+      "sourceLocator": "season/E11.json#/shots/8"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E11-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "西桌南侧50mm屏幕旁的诺拉与编辑共享中景，原错误标题与排定推荐处在同一屏幕。；相机：固定22秒，让撤推荐动作完整发生。；焦点：两人争更新/更正后真正失去排期。",
+      "sourceLocator": "season/E11.json#/shots/8"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E11-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E11-SH008.txt；22秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E11.json#/shots/8"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E11-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "本方旧推送撤下，外部流转仍在。；切点：编辑追问最初报道，切到诺拉如何避开更大的问题。；接口：接E11-SH010；编辑追问最初报道，切到诺拉如何避开更大的问题。",
+      "sourceLocator": "season/E11.json#/shots/8"
+    },
+    {
+      "role": "direction",
+      "shotId": "E11-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：诺拉只承认治疗标题错误，仍把访问记录作为下一步索取。；入镜已知：本方旧推送撤下，外部流转仍在。；本镜新知：她只获继续查登录记录的有限安排。；实际写出的动作：诺拉确认旧推荐已撤，编辑把调查原稿拉回屏幕。她指向待索取的访问记录，没有去动原导语。\n诺拉将下一步需要的查看记录清单推给编辑申请时间；编辑拿来栏目排期，没有给她空白预算。诺拉用笔圈了一项最小核实任务。",
+      "sourceLocator": "season/E11.json#/shots/9"
+    },
+    {
+      "role": "performance",
+      "shotId": "E11-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "本方旧推送撤下，外部流转仍在。 → 她只获继续查登录记录的有限安排。；值班编辑向诺拉：And the original story?；问是否还要处理别处 / 诺拉向值班编辑：The treatment headline was wrong. I'm still chasing the records.；把问题限在本次转发 / 值班编辑向诺拉：What's next? Pick one thing.；把栏目排期压到清单边 / 诺拉向值班编辑：The doctors' access records.；改为可核任务",
+      "sourceLocator": "season/E11.json#/shots/9"
+    },
+    {
+      "role": "staging",
+      "shotId": "E11-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日傍晚编辑部西桌摆着重审与今日通知，北屏的公司说明静音。诺拉打开自己转过的错误标题，女编辑站东侧看推荐排期。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。；起态：本方旧推送撤下，外部流转仍在。；出态：她只获继续查登录记录的有限安排。",
+      "sourceLocator": "season/E11.json#/shots/9"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E11-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "编辑西肩旁65mm诺拉中近景，原调查标题在后侧屏幕边缘，编辑只留递排期的手。；相机：固定21秒，不转屏幕特写。；焦点：诺拉只承认治疗标题错误，仍把访问记录作为下一步索取。",
+      "sourceLocator": "season/E11.json#/shots/9"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E11-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E11-SH010.txt；21秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E11.json#/shots/9"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E11-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "她只获继续查登录记录的有限安排。；切点：她圈定访问记录，切律师追问主角有没有追过自己的材料。；接口：本场结果成立后切入 E11-SC04（VISIT，日·次日上午）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E11.json#/shots/9"
+    },
+    {
+      "role": "direction",
+      "shotId": "E11-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：两个版本按日期进入同一桌面，回避还没有开始。；入镜已知：将主角的普遍控诉逼回自己有没有追问的行为。；本镜新知：旧页北、新页南，两份都可见。；实际写出的动作：青年将一叠旧样本推向海伦，想补充公开报道。海伦从中只抽出最上面一份，把其他纸留在青年那边。\n青年指出自己最后收到的页。海伦将后来重审通知滑入它旁边，青年用手挡了一下，像仍能把两个时间分开，最后让出位置。",
+      "sourceLocator": "season/E11.json#/shots/10"
+    },
+    {
+      "role": "performance",
+      "shotId": "E11-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "路易吉手腕自由，伸手翻公开报道。 → 旧页北、新页南，两份都可见。；路易吉向海伦：All of these. Not just Ellie.；想夺回广度 / 海伦向路易吉：Pick one. What's the last page you got?；从整叠里抽一份，让问题落到具体时间 / 路易吉向海伦：This one. Nothing after that.；指自己的收件末页，不替对方解释 / 海伦向路易吉：This notice came later. Did you ask them for an update?；把通知放在旁边，等他答",
+      "sourceLocator": "season/E11.json#/shots/10"
+    },
+    {
+      "role": "staging",
+      "shotId": "E11-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "次日上午会见室南门外传来巡行脚步。固定桌北侧路易吉穿灰衣，双腕自由，海伦坐南；两人之间没有玻璃，旧患者样本先由青年占满桌面。 本镜画内角色：LUIGI-DETENTION,HELEN。；起态：路易吉手腕自由，伸手翻公开报道。；出态：旧页北、新页南，两份都可见。",
+      "sourceLocator": "season/E11.json#/shots/10"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E11-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "会见桌西侧40mm南北双人中景，青年北、海伦南、门在南后方。；相机：固定24秒，青年推整叠，律师只取一份。；焦点：两个版本按日期进入同一桌面，回避还没有开始。",
+      "sourceLocator": "season/E11.json#/shots/10"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E11-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E11-SH011.txt；24秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E11.json#/shots/10"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E11-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "旧页北、新页南，两份都可见。；切点：新通知被放下，切到必须回答有没有追问的青年。；接口：接E11-SH013；新通知被放下，切到必须回答有没有追问的青年。",
+      "sourceLocator": "season/E11.json#/shots/10"
+    },
+    {
+      "role": "direction",
+      "shotId": "E11-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：他用公司拖延解释，最终承认没问过，律师的短问从近侧画外来。；入镜已知：旧页北、新页南，两份都可见。；本镜新知：他承认没有追问，新通知未被拿走。；实际写出的动作：青年将旧拒赔页举高，遮住后来的通知日期。海伦不与他争公司好坏，只把椅子移近桌沿，等他回答刚才的问题。\n青年拿起旧页想说明，海伦将新通知按在桌面不收回。他把旧页放下，直接回答没问过后续。",
+      "sourceLocator": "season/E11.json#/shots/11"
+    },
+    {
+      "role": "performance",
+      "shotId": "E11-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "旧页北、新页南，两份都可见。 → 他承认没有追问，新通知未被拿走。；路易吉向海伦：They send another letter. Then another. People run out of time.；把问题推回程序拖延 / 海伦向路易吉：Did you ask this family what happened next?；坚持具体到这个人 / 路易吉向海伦：They'd already been turned down.；继续用旧结论挡后续 / 海伦向路易吉：I can see that. Did you ask?；不替他把没问说出来 / 路易吉向海伦：No. I thought I knew what the answer would be.；先说没有，理由说完也收不回去 / 海伦向路易吉：Put the date here.；直接点空白处，不安慰也不训人",
+      "sourceLocator": "season/E11.json#/shots/11"
+    },
+    {
+      "role": "staging",
+      "shotId": "E11-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "次日上午会见室南门外传来巡行脚步。固定桌北侧路易吉穿灰衣，双腕自由，海伦坐南；两人之间没有玻璃，旧患者样本先由青年占满桌面。 本镜画内角色：LUIGI-DETENTION。其余所列说话者留在已建立的画外席位或电话对端。；起态：旧页北、新页南，两份都可见。；出态：他承认没有追问，新通知未被拿走。",
+      "sourceLocator": "season/E11.json#/shots/11"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E11-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "海伦西肩旁朝北65mm青年中近景，海伦按新通知的手在下前景。；相机：固定31秒；青年举旧页遮挡时不绕开纸，等他自己放低。；焦点：他用公司拖延解释，最终承认没问过，律师的短问从近侧画外来。",
+      "sourceLocator": "season/E11.json#/shots/11"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E11-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E11-SH013.txt；31秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E11.json#/shots/11"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E11-SH013",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "他承认没有追问，新通知未被拿走。；切点：承认之后他写下时间，却遮住不利的一句，切到律师如何接住而不代写。；接口：接E11-SH014；承认之后他写下时间，却遮住不利的一句，切到律师如何接住而不代写。",
+      "sourceLocator": "season/E11.json#/shots/11"
+    },
+    {
+      "role": "direction",
+      "shotId": "E11-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她不安慰或抢纸，等他写全，再接收新旧两份；青年担心观感的声音在近前景外。；入镜已知：他承认没有追问，新通知未被拿走。；本镜新知：新旧记录一同归律师，尚无完整内部流程结论。；实际写出的动作：青年在空纸上写日期，又用手压住那句自己没追问的话。海伦没有抢纸，只指一下桌上的新通知，明确要求他把前后经过都写全。\n青年移开压住句子的手，仍没有递纸。他看着自己写下的没问，想把这一句换成对拖延的解释；海伦把笔留给他，不代写。\n青年核对自己补上的那句，把纸连同旧样本推给海伦。她按日期重排，他把重审通知也推过去，不再要求只留旧的一页。",
+      "sourceLocator": "season/E11.json#/shots/12"
+    },
+    {
+      "role": "performance",
+      "shotId": "E11-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "他承认没有追问，新通知未被拿走。 → 新旧记录一同归律师，尚无完整内部流程结论。；路易吉向海伦：Do we have to put that in?；手压着遗漏那行，试探能否不写 / 海伦向路易吉：Yes. I need it all.；明确要求完整经过，不允许自己先挑掉不利段 / 路易吉向海伦：It makes it sound like I didn't care.；担心自己失去道德立足点 / 海伦向路易吉：Then tell me what you did. Don't fix how it sounds.；要求行为而非表态 / 路易吉向海伦：I stopped asking. I kept the first answer.；把遗漏说完整 / 路易吉向海伦：Get the later pages.；把要求从公布改成查完",
+      "sourceLocator": "season/E11.json#/shots/12"
+    },
+    {
+      "role": "staging",
+      "shotId": "E11-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "次日上午会见室南门外传来巡行脚步。固定桌北侧路易吉穿灰衣，双腕自由，海伦坐南；两人之间没有玻璃，旧患者样本先由青年占满桌面。 本镜画内角色：HELEN。其余所列说话者留在已建立的画外席位或电话对端。；起态：他承认没有追问，新通知未被拿走。；出态：新旧记录一同归律师，尚无完整内部流程结论。",
+      "sourceLocator": "season/E11.json#/shots/12"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E11-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "青年西肩旁朝南50mm海伦中景，青年手与补写纸在前层可见。；相机：固定40秒，纸推到海伦前才短暂下俯十度，仍是同一机位。；焦点：她不安慰或抢纸，等他写全，再接收新旧两份；青年担心观感的声音在近前景外。",
+      "sourceLocator": "season/E11.json#/shots/12"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E11-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E11-SH014.txt；40秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E11.json#/shots/12"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E11-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "新旧记录一同归律师，尚无完整内部流程结论。；切点：后续页一并交付，主角改了工作方法而没有获得免责。；接口：本集结束。青年交出不利的完整经过，要求取得后来页；与此同时，玛拉仍握着未签协议，面对当天中午的付款期限，下一集必须作出实际选择。 下集从CLINIC展开：玛拉能在付款截止前，把必须保留的权利写进真正生效的两份协议吗？",
+      "sourceLocator": "season/E11.json#/shots/12"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "E11-SH001",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "他说的是优先复核，未签付款页没有被误拍成付款完成。",
+        "audiencePayoff": "公告录完，付款页仍未签，维克多取回平板。",
+        "trigger": "维克多看过平板，传播职员准备录制。；传播职员拿横置手机录公告，维克多看了一眼桌角的答复清单，将治疗付款那页压在平板下。她示意开始，他只录下特别复核的承诺。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "职员结束录制把外部标题递来，切到配文审查而非重录。；接E11-SH002；职员结束录制把外部标题递来，切到配文审查而非重录。",
+        "noMotionReason": "固定12秒完成一次公告录制。；观看变化：公告录完，付款页仍未签，维克多取回平板。"
+      },
+      "camera": {
+        "shotScale": "传播职员西肩后40mm维克多正面中景",
+        "position": "传播职员西肩后40mm维克多正面中景，横置手机在下前景，付款页露桌角。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "传播职员西肩后40mm维克多正面中景，横置手机在下前景，付款页露桌角。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "他说的是优先复核，未签付款页没有被误拍成付款完成。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 翌日上午公司会议室，西窗照着桌面，维克多坐北端，传播职员在南端拿横置手机，付款页仍无签字。 本镜画内角色：VICTOR,PR-STAFF。",
+        "movementIntent": "固定12秒完成一次公告录制。"
+      },
+      "composition": {
+        "layout": "翌日上午公司会议室，西窗照着桌面，维克多坐北端，传播职员在南端拿横置手机，付款页仍无签字。 本镜画内角色：VICTOR,PR-STAFF。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：传播职员拿横置手机录公告，维克多看了一眼桌角的答复清单，将治疗付款那页压在平板下。她示意开始，他只录下特别复核的承诺。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "他说的是优先复核，未签付款页没有被误拍成付款完成。；他说的是优先复核，未签付款页没有被误拍成付款完成。"
+      },
+      "temporal": {
+        "durationSeconds": 12,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "他说的是优先复核，未签付款页没有被误拍成付款完成。",
+          "path": "机位不移动。",
+          "start": "维克多看过平板，传播职员准备录制。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "公告录完，付款页仍未签，维克多取回平板。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E11-SH001-F1",
+            "timeSeconds": 0,
+            "description": "他说的是优先复核，未签付款页没有被误拍成付款完成。"
+          }
+        ],
+        "edit": {
+          "entry": "维克多看过平板，传播职员准备录制。",
+          "exit": "公告录完，付款页仍未签，维克多取回平板。；职员结束录制把外部标题递来，切到配文审查而非重录。",
+          "preferredTransition": "接E11-SH002；职员结束录制把外部标题递来，切到配文审查而非重录。",
+          "soundBridge": "办公室空调与实际手机提示，不加未列来电内容。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E11-SH002",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "删的是尚未发出的获批配文，再拒绝治疗可预约的扩大承诺。",
+        "audiencePayoff": "她保存准确配文，手机上错误外部标题仍在传播。",
+        "trigger": "公告录完，付款页仍未签，维克多取回平板。；传播职员给维克多看手机上的外部“治疗获批”标题；同样的词已被她填进平板待发配文。他指着配文中的“获批”，明确付款未批。她将配文改成“优先复核”并保存，没有重录或删改上一镜准确公告；手机上的外部转发仍增长。\n传播职员删去获批，在下一行仍留着迅速响应。维克多看向没有签字的付款页，要求把联络和付款分开。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "准确配文保存，切家庭已经相信的错误外部消息。；本场结果成立后切入 E11-SC02（CLINIC，日·同日上午）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定23秒，职员改平板配文，另一手机外部标题不跟着改变。；观看变化：她保存准确配文，手机上错误外部标题仍在传播。"
+      },
+      "camera": {
+        "shotScale": "会议桌西侧偏北50mm职员、维克多侧面与平板共享中景",
+        "position": "会议桌西侧偏北50mm职员、维克多侧面与平板共享中景，两部设备分清。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "会议桌西侧偏北50mm职员、维克多侧面与平板共享中景，两部设备分清。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "删的是尚未发出的获批配文，再拒绝治疗可预约的扩大承诺。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 翌日上午公司会议室，西窗照着桌面，维克多坐北端，传播职员在南端拿横置手机，付款页仍无签字。 本镜画内角色：VICTOR,PR-STAFF。",
+        "movementIntent": "固定23秒，职员改平板配文，另一手机外部标题不跟着改变。"
+      },
+      "composition": {
+        "layout": "翌日上午公司会议室，西窗照着桌面，维克多坐北端，传播职员在南端拿横置手机，付款页仍无签字。 本镜画内角色：VICTOR,PR-STAFF。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：传播职员给维克多看手机上的外部“治疗获批”标题；同样的词已被她填进平板待发配文。他指着配文中的“获批”，明确付款未批。她将配文改成“优先复核”并保存，没有重录或删改上一镜准确公告；手机上的外部转发仍增长。\n传播职员删去获批，在下一行仍留着迅速响应。维克多看向没有签字的付款页，要求把联络和付款分开。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "删的是尚未发出的获批配文，再拒绝治疗可预约的扩大承诺。；删的是尚未发出的获批配文，再拒绝治疗可预约的扩大承诺。"
+      },
+      "temporal": {
+        "durationSeconds": 23,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "删的是尚未发出的获批配文，再拒绝治疗可预约的扩大承诺。",
+          "path": "机位不移动。",
+          "start": "公告录完，付款页仍未签，维克多取回平板。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "她保存准确配文，手机上错误外部标题仍在传播。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E11-SH002-F1",
+            "timeSeconds": 0,
+            "description": "删的是尚未发出的获批配文，再拒绝治疗可预约的扩大承诺。"
+          }
+        ],
+        "edit": {
+          "entry": "公告录完，付款页仍未签，维克多取回平板。",
+          "exit": "她保存准确配文，手机上错误外部标题仍在传播。；准确配文保存，切家庭已经相信的错误外部消息。",
+          "preferredTransition": "本场结果成立后切入 E11-SC02（CLINIC，日·同日上午）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "办公室空调与实际手机提示，不加未列来电内容。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E11-SH003",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "获批期待变成已换班的成本，记者看见自己的转发造成什么。",
+        "audiencePayoff": "诺拉把转发页关掉，玛拉仍保留周四空出的班。",
+        "trigger": "玛拉从西椅前起身，右手手机亮新闻，左臂蓝夹；医生从北门刚出来。；玛拉从西椅前跨到医生跟前举起手机，蓝夹在左臂。医生看完标题，把她的纸质通知拿来对照。诺拉听见‘复核’两个字，迅速看自己的手机。\n玛拉把手机降到胸前，拿出已经换好的周四班次表。医生没有接班表，只给她留下付款页的位置；艾莉在西椅把公交车画本合了一半。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "医生从夹底找出旧回执，转到能读时间关系的位置。；接E11-SH004；医生从夹底找出旧回执，转到能读时间关系的位置。",
+        "noMotionReason": "固定，玛拉举手机迎医生后不再向前挤。；观看变化：诺拉把转发页关掉，玛拉仍保留周四空出的班。"
+      },
+      "camera": {
+        "shotScale": "诊所候诊走廊西椅前35mm三人中景",
+        "position": "诊所候诊走廊西椅前35mm三人中景，玛拉北向医生，诺拉在南侧；艾莉在西椅后层。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "诊所候诊走廊西椅前35mm三人中景，玛拉北向医生，诺拉在南侧；艾莉在西椅后层。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "获批期待变成已换班的成本，记者看见自己的转发造成什么。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日上午治疗中心，西侧长椅上艾莉拿公交画本，北治疗门开合。玛拉灰风衣罩黑工服，左臂蓝夹，诺拉在她南侧；医生从北门出来就被手机上的获批标题截住。 本镜画内角色：MARA-WORK,DOCTOR,NORA,ELLIE。",
+        "movementIntent": "固定，玛拉举手机迎医生后不再向前挤。"
+      },
+      "composition": {
+        "layout": "同日上午治疗中心，西侧长椅上艾莉拿公交画本，北治疗门开合。玛拉灰风衣罩黑工服，左臂蓝夹，诺拉在她南侧；医生从北门出来就被手机上的获批标题截住。 本镜画内角色：MARA-WORK,DOCTOR,NORA,ELLIE。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：玛拉从西椅前跨到医生跟前举起手机，蓝夹在左臂。医生看完标题，把她的纸质通知拿来对照。诺拉听见‘复核’两个字，迅速看自己的手机。\n玛拉把手机降到胸前，拿出已经换好的周四班次表。医生没有接班表，只给她留下付款页的位置；艾莉在西椅把公交车画本合了一半。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "获批期待变成已换班的成本，记者看见自己的转发造成什么。；获批期待变成已换班的成本，记者看见自己的转发造成什么。"
+      },
+      "temporal": {
+        "durationSeconds": 35,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "获批期待变成已换班的成本，记者看见自己的转发造成什么。",
+          "path": "机位不移动。",
+          "start": "玛拉从西椅前起身，右手手机亮新闻，左臂蓝夹；医生从北门刚出来。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "诺拉把转发页关掉，玛拉仍保留周四空出的班。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E11-SH003-F1",
+            "timeSeconds": 0,
+            "description": "获批期待变成已换班的成本，记者看见自己的转发造成什么。"
+          }
+        ],
+        "edit": {
+          "entry": "玛拉从西椅前起身，右手手机亮新闻，左臂蓝夹；医生从北门刚出来。",
+          "exit": "诺拉把转发页关掉，玛拉仍保留周四空出的班。；医生从夹底找出旧回执，转到能读时间关系的位置。",
+          "preferredTransition": "接E11-SH004；医生从夹底找出旧回执，转到能读时间关系的位置。",
+          "soundBridge": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E11-SH004",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "日期证实枪击前已启动，诺拉试着主张加速功劳时保留玛拉听见的反应。",
+        "audiencePayoff": "诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。",
+        "trigger": "诺拉把转发页关掉，玛拉仍保留周四空出的班。；医生从蓝夹底抽出案前重审受理回执，与今日通知并排。玛拉立刻翻出自己记下的通话日期；诺拉的手机降下来。\n诺拉请求拍两张日期栏，医生把姓名遮住后交给她。玛拉将自己的手机收入风衣右袋，腾手翻通话笔记；医生听到北治疗门有人等，把说明说得更短。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "绿蜡笔掉到椅前，注意从记者的解释转回一直等着的孩子。；接E11-SH006；绿蜡笔掉到椅前，注意从记者的解释转回一直等着的孩子。",
+        "noMotionReason": "固定25秒，姓名遮住后文件向记者转；不插入未知内部页面。；观看变化：诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。"
+      },
+      "camera": {
+        "shotScale": "医生西肩旁50mm玛拉、诺拉及两份日期栏中近景",
+        "position": "医生西肩旁50mm玛拉、诺拉及两份日期栏中近景，医生只留执页手与肩。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "医生西肩旁50mm玛拉、诺拉及两份日期栏中近景，医生只留执页手与肩。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "日期证实枪击前已启动，诺拉试着主张加速功劳时保留玛拉听见的反应。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日上午治疗中心，西侧长椅上艾莉拿公交画本，北治疗门开合。玛拉灰风衣罩黑工服，左臂蓝夹，诺拉在她南侧；医生从北门出来就被手机上的获批标题截住。 本镜画内角色：MARA-WORK,NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定25秒，姓名遮住后文件向记者转；不插入未知内部页面。"
+      },
+      "composition": {
+        "layout": "同日上午治疗中心，西侧长椅上艾莉拿公交画本，北治疗门开合。玛拉灰风衣罩黑工服，左臂蓝夹，诺拉在她南侧；医生从北门出来就被手机上的获批标题截住。 本镜画内角色：MARA-WORK,NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：医生从蓝夹底抽出案前重审受理回执，与今日通知并排。玛拉立刻翻出自己记下的通话日期；诺拉的手机降下来。\n诺拉请求拍两张日期栏，医生把姓名遮住后交给她。玛拉将自己的手机收入风衣右袋，腾手翻通话笔记；医生听到北治疗门有人等，把说明说得更短。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "日期证实枪击前已启动，诺拉试着主张加速功劳时保留玛拉听见的反应。；日期证实枪击前已启动，诺拉试着主张加速功劳时保留玛拉听见的反应。"
+      },
+      "temporal": {
+        "durationSeconds": 25,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "日期证实枪击前已启动，诺拉试着主张加速功劳时保留玛拉听见的反应。",
+          "path": "机位不移动。",
+          "start": "诺拉把转发页关掉，玛拉仍保留周四空出的班。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E11-SH004-F1",
+            "timeSeconds": 0,
+            "description": "日期证实枪击前已启动，诺拉试着主张加速功劳时保留玛拉听见的反应。"
+          }
+        ],
+        "edit": {
+          "entry": "诺拉把转发页关掉，玛拉仍保留周四空出的班。",
+          "exit": "诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。；绿蜡笔掉到椅前，注意从记者的解释转回一直等着的孩子。",
+          "preferredTransition": "接E11-SH006；绿蜡笔掉到椅前，注意从记者的解释转回一直等着的孩子。",
+          "soundBridge": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E11-SH006",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "孩子的空座与付款卡同时落到母亲手上，时间限制结束解释。",
+        "audiencePayoff": "卡片夹在蓝夹最前，周四位置暂留到明天中午。",
+        "trigger": "诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。；艾莉把画本里的公交车递向母亲，玛拉伸手时碰落绿蜡笔。她蹲下捡，才看清女儿画的靠窗座；医生把蓝夹还到她左臂。\n医生把付款办公室号码卡递到玛拉腾出的右手，指着卡背写下保留时限。北门再次打开，她先让推车过去，才回治疗区。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "母亲把付款卡放最前，切同日下午第一次报价。；本场结果成立后切入 E12-SC01（INSURER，日·诊所告知付款期限的同日下午）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "玛拉蹲下捡笔时轻微下俯，随后固定；医生只在原站位递付款卡再经北门离开。；观看变化：卡片夹在蓝夹最前，周四位置暂留到明天中午。"
+      },
+      "camera": {
+        "shotScale": "西长椅南端35mm低机位母女与医生腰部中景",
+        "position": "西长椅南端35mm低机位母女与医生腰部中景，北治疗门留远后层。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "西长椅南端35mm低机位母女与医生腰部中景，北治疗门留远后层。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "孩子的空座与付款卡同时落到母亲手上，时间限制结束解释。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日上午治疗中心，西侧长椅上艾莉拿公交画本，北治疗门开合。玛拉灰风衣罩黑工服，左臂蓝夹，诺拉在她南侧；医生从北门出来就被手机上的获批标题截住。 本镜画内角色：MARA-WORK,ELLIE,DOCTOR。",
+        "movementIntent": "玛拉蹲下捡笔时轻微下俯，随后固定；医生只在原站位递付款卡再经北门离开。"
+      },
+      "composition": {
+        "layout": "同日上午治疗中心，西侧长椅上艾莉拿公交画本，北治疗门开合。玛拉灰风衣罩黑工服，左臂蓝夹，诺拉在她南侧；医生从北门出来就被手机上的获批标题截住。 本镜画内角色：MARA-WORK,ELLIE,DOCTOR。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：艾莉把画本里的公交车递向母亲，玛拉伸手时碰落绿蜡笔。她蹲下捡，才看清女儿画的靠窗座；医生把蓝夹还到她左臂。\n医生把付款办公室号码卡递到玛拉腾出的右手，指着卡背写下保留时限。北门再次打开，她先让推车过去，才回治疗区。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "孩子的空座与付款卡同时落到母亲手上，时间限制结束解释。；孩子的空座与付款卡同时落到母亲手上，时间限制结束解释。"
+      },
+      "temporal": {
+        "durationSeconds": 24,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "孩子的空座与付款卡同时落到母亲手上，时间限制结束解释。",
+          "path": "机位不移动。",
+          "start": "诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "卡片夹在蓝夹最前，周四位置暂留到明天中午。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E11-SH006-F1",
+            "timeSeconds": 0,
+            "description": "孩子的空座与付款卡同时落到母亲手上，时间限制结束解释。"
+          }
+        ],
+        "edit": {
+          "entry": "诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。",
+          "exit": "卡片夹在蓝夹最前，周四位置暂留到明天中午。；母亲把付款卡放最前，切同日下午第一次报价。",
+          "preferredTransition": "本场结果成立后切入 E12-SC01（INSURER，日·诊所告知付款期限的同日下午）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E12-SH001",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她追问到账，直到限制覆盖付款页才改变问题。",
+        "audiencePayoff": "她看清款项换来的公开限制，双手空出翻页。",
+        "trigger": "玛拉左夹右手机，维克多手离平板。；玛拉将诊所付款卡压到维克多的费用页上，要他先回答时间。他把费用页转正，她仍用指尖盖住金额，不让话题移到赔多少。\n维克多将保密与结案页推到付款页上方。玛拉终于移开压住金额的手，翻向采访条款，手机放到桌右免得挡字。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "她问不签会怎样，转为从客户角度争退路和未来。；接E12-SH003；她问不签会怎样，转为从客户角度争退路和未来。",
+        "noMotionReason": "固定27秒，金额被她指尖压住，采访页从北端推来。；观看变化：她看清款项换来的公开限制，双手空出翻页。"
+      },
+      "camera": {
+        "shotScale": "公司会议桌西侧40mm南玛拉、北维克多共享中景",
+        "position": "公司会议桌西侧40mm南玛拉、北维克多共享中景，付款卡在两人之间。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "公司会议桌西侧40mm南玛拉、北维克多共享中景，付款卡在两人之间。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "她追问到账，直到限制覆盖付款页才改变问题。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日下午合众健康会议室，玛拉坐长桌南侧，灰风衣仍罩黑工服，诊所付款卡压在费用页上。维克多在北端，平板左侧，南门在她身后。 本镜画内角色：MARA-WORK,VICTOR。",
+        "movementIntent": "固定27秒，金额被她指尖压住，采访页从北端推来。"
+      },
+      "composition": {
+        "layout": "同日下午合众健康会议室，玛拉坐长桌南侧，灰风衣仍罩黑工服，诊所付款卡压在费用页上。维克多在北端，平板左侧，南门在她身后。 本镜画内角色：MARA-WORK,VICTOR。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：玛拉将诊所付款卡压到维克多的费用页上，要他先回答时间。他把费用页转正，她仍用指尖盖住金额，不让话题移到赔多少。\n维克多将保密与结案页推到付款页上方。玛拉终于移开压住金额的手，翻向采访条款，手机放到桌右免得挡字。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她追问到账，直到限制覆盖付款页才改变问题。；她追问到账，直到限制覆盖付款页才改变问题。"
+      },
+      "temporal": {
+        "durationSeconds": 27,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她追问到账，直到限制覆盖付款页才改变问题。",
+          "path": "机位不移动。",
+          "start": "玛拉左夹右手机，维克多手离平板。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "她看清款项换来的公开限制，双手空出翻页。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E12-SH001-F1",
+            "timeSeconds": 0,
+            "description": "她追问到账，直到限制覆盖付款页才改变问题。"
+          }
+        ],
+        "edit": {
+          "entry": "玛拉左夹右手机，维克多手离平板。",
+          "exit": "她看清款项换来的公开限制，双手空出翻页。；她问不签会怎样，转为从客户角度争退路和未来。",
+          "preferredTransition": "接E12-SH003；她问不签会怎样，转为从客户角度争退路和未来。",
+          "soundBridge": "办公室空调与实际手机提示，不加未列来电内容。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E12-SH003",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "玛拉先问退路，再要求下疗程，连续两次得不到保证。",
+        "audiencePayoff": "未来保障没有获书面承诺，她把笔留桌上。",
+        "trigger": "她看清款项换来的公开限制，双手空出翻页。；玛拉没有去碰签字页，先把付款卡从两页之间抽出来，确保电话号码还在自己手里。\n玛拉连翻两页找下个疗程，维克多没有替她翻。她指到空着的续批项，拿起笔想让他加进去；他将笔轻推回她一侧。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "她合起未签稿准备离开，切到行动后果。；接E12-SH004；她合起未签稿准备离开，切到行动后果。",
+        "noMotionReason": "固定22秒，不用反打替拒绝加重。；观看变化：未来保障没有获书面承诺，她把笔留桌上。"
+      },
+      "camera": {
+        "shotScale": "维克多西肩旁朝南65mm玛拉中近景",
+        "position": "维克多西肩旁朝南65mm玛拉中近景，笔与续批空栏在下方，维克多的手从近前景推回笔。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "维克多西肩旁朝南65mm玛拉中近景，笔与续批空栏在下方，维克多的手从近前景推回笔。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "玛拉先问退路，再要求下疗程，连续两次得不到保证。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日下午合众健康会议室，玛拉坐长桌南侧，灰风衣仍罩黑工服，诊所付款卡压在费用页上。维克多在北端，平板左侧，南门在她身后。 本镜画内角色：MARA-WORK。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定22秒，不用反打替拒绝加重。"
+      },
+      "composition": {
+        "layout": "同日下午合众健康会议室，玛拉坐长桌南侧，灰风衣仍罩黑工服，诊所付款卡压在费用页上。维克多在北端，平板左侧，南门在她身后。 本镜画内角色：MARA-WORK。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：玛拉没有去碰签字页，先把付款卡从两页之间抽出来，确保电话号码还在自己手里。\n玛拉连翻两页找下个疗程，维克多没有替她翻。她指到空着的续批项，拿起笔想让他加进去；他将笔轻推回她一侧。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "玛拉先问退路，再要求下疗程，连续两次得不到保证。；玛拉先问退路，再要求下疗程，连续两次得不到保证。"
+      },
+      "temporal": {
+        "durationSeconds": 22,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "玛拉先问退路，再要求下疗程，连续两次得不到保证。",
+          "path": "机位不移动。",
+          "start": "她看清款项换来的公开限制，双手空出翻页。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "未来保障没有获书面承诺，她把笔留桌上。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E12-SH003-F1",
+            "timeSeconds": 0,
+            "description": "玛拉先问退路，再要求下疗程，连续两次得不到保证。"
+          }
+        ],
+        "edit": {
+          "entry": "她看清款项换来的公开限制，双手空出翻页。",
+          "exit": "未来保障没有获书面承诺，她把笔留桌上。；她合起未签稿准备离开，切到行动后果。",
+          "preferredTransition": "接E12-SH004；她合起未签稿准备离开，切到行动后果。",
+          "soundBridge": "办公室空调与实际手机提示，不加未列来电内容。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E12-SH004",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她决定找独立律师并禁止拨店里电话。",
+        "audiencePayoff": "未签版带走，维克多未取得签名。",
+        "trigger": "未来保障没有获书面承诺，她把笔留桌上。；玛拉合起未签协议收入左侧蓝夹，右手拿回手机起身。维克多伸手到桌中拿笔，她已转向南门。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "南门关上，下一场独立意见确实发生。；本场结果成立后切入 E11-SC03（NEWSROOM，傍晚·当天）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定10秒，让蓝夹带出门而笔留桌上。；观看变化：未签版带走，维克多未取得签名。"
+      },
+      "camera": {
+        "shotScale": "会议室西墙35mm中全景",
+        "position": "会议室西墙35mm中全景，玛拉起身走南门，维克多留北端。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "会议室西墙35mm中全景，玛拉起身走南门，维克多留北端。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "她决定找独立律师并禁止拨店里电话。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日下午合众健康会议室，玛拉坐长桌南侧，灰风衣仍罩黑工服，诊所付款卡压在费用页上。维克多在北端，平板左侧，南门在她身后。 本镜画内角色：MARA-WORK,VICTOR。",
+        "movementIntent": "固定10秒，让蓝夹带出门而笔留桌上。"
+      },
+      "composition": {
+        "layout": "同日下午合众健康会议室，玛拉坐长桌南侧，灰风衣仍罩黑工服，诊所付款卡压在费用页上。维克多在北端，平板左侧，南门在她身后。 本镜画内角色：MARA-WORK,VICTOR。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：玛拉合起未签协议收入左侧蓝夹，右手拿回手机起身。维克多伸手到桌中拿笔，她已转向南门。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她决定找独立律师并禁止拨店里电话。；她决定找独立律师并禁止拨店里电话。"
+      },
+      "temporal": {
+        "durationSeconds": 10,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她决定找独立律师并禁止拨店里电话。",
+          "path": "机位不移动。",
+          "start": "未来保障没有获书面承诺，她把笔留桌上。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "未签版带走，维克多未取得签名。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E12-SH004-F1",
+            "timeSeconds": 0,
+            "description": "她决定找独立律师并禁止拨店里电话。"
+          }
+        ],
+        "edit": {
+          "entry": "未来保障没有获书面承诺，她把笔留桌上。",
+          "exit": "未签版带走，维克多未取得签名。；南门关上，下一场独立意见确实发生。",
+          "preferredTransition": "本场结果成立后切入 E11-SC03（NEWSROOM，傍晚·当天）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "办公室空调与实际手机提示，不加未列来电内容。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E11-SH008",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "两人争更新/更正后真正失去排期。",
+        "audiencePayoff": "本方旧推送撤下，外部流转仍在。",
+        "trigger": "她把更正段落打在新稿顶部。；诺拉把错误转发截下留档，在西桌更新原文。编辑把‘更正’改成‘更新’，她将鼠标移回去，两个光标在同一处停住。\n编辑打开已排好的全国版推荐，那里仍引用旧标题。诺拉用自己的账号撤掉该条推送，手机上转发提醒却继续增长。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "编辑追问最初报道，切到诺拉如何避开更大的问题。；接E11-SH010；编辑追问最初报道，切到诺拉如何避开更大的问题。",
+        "noMotionReason": "固定22秒，让撤推荐动作完整发生。；观看变化：本方旧推送撤下，外部流转仍在。"
+      },
+      "camera": {
+        "shotScale": "西桌南侧50mm屏幕旁的诺拉与编辑共享中景",
+        "position": "西桌南侧50mm屏幕旁的诺拉与编辑共享中景，原错误标题与排定推荐处在同一屏幕。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "西桌南侧50mm屏幕旁的诺拉与编辑共享中景，原错误标题与排定推荐处在同一屏幕。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "两人争更新/更正后真正失去排期。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日傍晚编辑部西桌摆着重审与今日通知，北屏的公司说明静音。诺拉打开自己转过的错误标题，女编辑站东侧看推荐排期。 本镜画内角色：NORA,EDITOR-DESK。",
+        "movementIntent": "固定22秒，让撤推荐动作完整发生。"
+      },
+      "composition": {
+        "layout": "同日傍晚编辑部西桌摆着重审与今日通知，北屏的公司说明静音。诺拉打开自己转过的错误标题，女编辑站东侧看推荐排期。 本镜画内角色：NORA,EDITOR-DESK。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：诺拉把错误转发截下留档，在西桌更新原文。编辑把‘更正’改成‘更新’，她将鼠标移回去，两个光标在同一处停住。\n编辑打开已排好的全国版推荐，那里仍引用旧标题。诺拉用自己的账号撤掉该条推送，手机上转发提醒却继续增长。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "两人争更新/更正后真正失去排期。；两人争更新/更正后真正失去排期。"
+      },
+      "temporal": {
+        "durationSeconds": 22,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "两人争更新/更正后真正失去排期。",
+          "path": "机位不移动。",
+          "start": "她把更正段落打在新稿顶部。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "本方旧推送撤下，外部流转仍在。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E11-SH008-F1",
+            "timeSeconds": 0,
+            "description": "两人争更新/更正后真正失去排期。"
+          }
+        ],
+        "edit": {
+          "entry": "她把更正段落打在新稿顶部。",
+          "exit": "本方旧推送撤下，外部流转仍在。；编辑追问最初报道，切到诺拉如何避开更大的问题。",
+          "preferredTransition": "接E11-SH010；编辑追问最初报道，切到诺拉如何避开更大的问题。",
+          "soundBridge": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E11-SH010",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "诺拉只承认治疗标题错误，仍把访问记录作为下一步索取。",
+        "audiencePayoff": "她只获继续查登录记录的有限安排。",
+        "trigger": "本方旧推送撤下，外部流转仍在。；诺拉确认旧推荐已撤，编辑把调查原稿拉回屏幕。她指向待索取的访问记录，没有去动原导语。\n诺拉将下一步需要的查看记录清单推给编辑申请时间；编辑拿来栏目排期，没有给她空白预算。诺拉用笔圈了一项最小核实任务。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "她圈定访问记录，切律师追问主角有没有追过自己的材料。；本场结果成立后切入 E11-SC04（VISIT，日·次日上午）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定21秒，不转屏幕特写。；观看变化：她只获继续查登录记录的有限安排。"
+      },
+      "camera": {
+        "shotScale": "编辑西肩旁65mm诺拉中近景",
+        "position": "编辑西肩旁65mm诺拉中近景，原调查标题在后侧屏幕边缘，编辑只留递排期的手。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "编辑西肩旁65mm诺拉中近景，原调查标题在后侧屏幕边缘，编辑只留递排期的手。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "诺拉只承认治疗标题错误，仍把访问记录作为下一步索取。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日傍晚编辑部西桌摆着重审与今日通知，北屏的公司说明静音。诺拉打开自己转过的错误标题，女编辑站东侧看推荐排期。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定21秒，不转屏幕特写。"
+      },
+      "composition": {
+        "layout": "同日傍晚编辑部西桌摆着重审与今日通知，北屏的公司说明静音。诺拉打开自己转过的错误标题，女编辑站东侧看推荐排期。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：诺拉确认旧推荐已撤，编辑把调查原稿拉回屏幕。她指向待索取的访问记录，没有去动原导语。\n诺拉将下一步需要的查看记录清单推给编辑申请时间；编辑拿来栏目排期，没有给她空白预算。诺拉用笔圈了一项最小核实任务。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "诺拉只承认治疗标题错误，仍把访问记录作为下一步索取。；诺拉只承认治疗标题错误，仍把访问记录作为下一步索取。"
+      },
+      "temporal": {
+        "durationSeconds": 21,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "诺拉只承认治疗标题错误，仍把访问记录作为下一步索取。",
+          "path": "机位不移动。",
+          "start": "本方旧推送撤下，外部流转仍在。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "她只获继续查登录记录的有限安排。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E11-SH010-F1",
+            "timeSeconds": 0,
+            "description": "诺拉只承认治疗标题错误，仍把访问记录作为下一步索取。"
+          }
+        ],
+        "edit": {
+          "entry": "本方旧推送撤下，外部流转仍在。",
+          "exit": "她只获继续查登录记录的有限安排。；她圈定访问记录，切律师追问主角有没有追过自己的材料。",
+          "preferredTransition": "本场结果成立后切入 E11-SC04（VISIT，日·次日上午）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E11-SH011",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "两个版本按日期进入同一桌面，回避还没有开始。",
+        "audiencePayoff": "旧页北、新页南，两份都可见。",
+        "trigger": "路易吉手腕自由，伸手翻公开报道。；青年将一叠旧样本推向海伦，想补充公开报道。海伦从中只抽出最上面一份，把其他纸留在青年那边。\n青年指出自己最后收到的页。海伦将后来重审通知滑入它旁边，青年用手挡了一下，像仍能把两个时间分开，最后让出位置。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "新通知被放下，切到必须回答有没有追问的青年。；接E11-SH013；新通知被放下，切到必须回答有没有追问的青年。",
+        "noMotionReason": "固定24秒，青年推整叠，律师只取一份。；观看变化：旧页北、新页南，两份都可见。"
+      },
+      "camera": {
+        "shotScale": "会见桌西侧40mm南北双人中景",
+        "position": "会见桌西侧40mm南北双人中景，青年北、海伦南、门在南后方。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "会见桌西侧40mm南北双人中景，青年北、海伦南、门在南后方。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "两个版本按日期进入同一桌面，回避还没有开始。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 次日上午会见室南门外传来巡行脚步。固定桌北侧路易吉穿灰衣，双腕自由，海伦坐南；两人之间没有玻璃，旧患者样本先由青年占满桌面。 本镜画内角色：LUIGI-DETENTION,HELEN。",
+        "movementIntent": "固定24秒，青年推整叠，律师只取一份。"
+      },
+      "composition": {
+        "layout": "次日上午会见室南门外传来巡行脚步。固定桌北侧路易吉穿灰衣，双腕自由，海伦坐南；两人之间没有玻璃，旧患者样本先由青年占满桌面。 本镜画内角色：LUIGI-DETENTION,HELEN。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：青年将一叠旧样本推向海伦，想补充公开报道。海伦从中只抽出最上面一份，把其他纸留在青年那边。\n青年指出自己最后收到的页。海伦将后来重审通知滑入它旁边，青年用手挡了一下，像仍能把两个时间分开，最后让出位置。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "两个版本按日期进入同一桌面，回避还没有开始。；两个版本按日期进入同一桌面，回避还没有开始。"
+      },
+      "temporal": {
+        "durationSeconds": 24,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "两个版本按日期进入同一桌面，回避还没有开始。",
+          "path": "机位不移动。",
+          "start": "路易吉手腕自由，伸手翻公开报道。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "旧页北、新页南，两份都可见。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E11-SH011-F1",
+            "timeSeconds": 0,
+            "description": "两个版本按日期进入同一桌面，回避还没有开始。"
+          }
+        ],
+        "edit": {
+          "entry": "路易吉手腕自由，伸手翻公开报道。",
+          "exit": "旧页北、新页南，两份都可见。；新通知被放下，切到必须回答有没有追问的青年。",
+          "preferredTransition": "接E11-SH013；新通知被放下，切到必须回答有没有追问的青年。",
+          "soundBridge": "会见室低通风声和纸页摩擦；南门外只有不可辨脚步。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E11-SH013",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "他用公司拖延解释，最终承认没问过，律师的短问从近侧画外来。",
+        "audiencePayoff": "他承认没有追问，新通知未被拿走。",
+        "trigger": "旧页北、新页南，两份都可见。；青年将旧拒赔页举高，遮住后来的通知日期。海伦不与他争公司好坏，只把椅子移近桌沿，等他回答刚才的问题。\n青年拿起旧页想说明，海伦将新通知按在桌面不收回。他把旧页放下，直接回答没问过后续。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "承认之后他写下时间，却遮住不利的一句，切到律师如何接住而不代写。；接E11-SH014；承认之后他写下时间，却遮住不利的一句，切到律师如何接住而不代写。",
+        "noMotionReason": "固定31秒；青年举旧页遮挡时不绕开纸，等他自己放低。；观看变化：他承认没有追问，新通知未被拿走。"
+      },
+      "camera": {
+        "shotScale": "海伦西肩旁朝北65mm青年中近景",
+        "position": "海伦西肩旁朝北65mm青年中近景，海伦按新通知的手在下前景。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "海伦西肩旁朝北65mm青年中近景，海伦按新通知的手在下前景。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "他用公司拖延解释，最终承认没问过，律师的短问从近侧画外来。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 次日上午会见室南门外传来巡行脚步。固定桌北侧路易吉穿灰衣，双腕自由，海伦坐南；两人之间没有玻璃，旧患者样本先由青年占满桌面。 本镜画内角色：LUIGI-DETENTION。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定31秒；青年举旧页遮挡时不绕开纸，等他自己放低。"
+      },
+      "composition": {
+        "layout": "次日上午会见室南门外传来巡行脚步。固定桌北侧路易吉穿灰衣，双腕自由，海伦坐南；两人之间没有玻璃，旧患者样本先由青年占满桌面。 本镜画内角色：LUIGI-DETENTION。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：青年将旧拒赔页举高，遮住后来的通知日期。海伦不与他争公司好坏，只把椅子移近桌沿，等他回答刚才的问题。\n青年拿起旧页想说明，海伦将新通知按在桌面不收回。他把旧页放下，直接回答没问过后续。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "他用公司拖延解释，最终承认没问过，律师的短问从近侧画外来。；他用公司拖延解释，最终承认没问过，律师的短问从近侧画外来。"
+      },
+      "temporal": {
+        "durationSeconds": 31,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "他用公司拖延解释，最终承认没问过，律师的短问从近侧画外来。",
+          "path": "机位不移动。",
+          "start": "旧页北、新页南，两份都可见。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "他承认没有追问，新通知未被拿走。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E11-SH013-F1",
+            "timeSeconds": 0,
+            "description": "他用公司拖延解释，最终承认没问过，律师的短问从近侧画外来。"
+          }
+        ],
+        "edit": {
+          "entry": "旧页北、新页南，两份都可见。",
+          "exit": "他承认没有追问，新通知未被拿走。；承认之后他写下时间，却遮住不利的一句，切到律师如何接住而不代写。",
+          "preferredTransition": "接E11-SH014；承认之后他写下时间，却遮住不利的一句，切到律师如何接住而不代写。",
+          "soundBridge": "会见室低通风声和纸页摩擦；南门外只有不可辨脚步。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E11-SH014",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她不安慰或抢纸，等他写全，再接收新旧两份；青年担心观感的声音在近前景外。",
+        "audiencePayoff": "新旧记录一同归律师，尚无完整内部流程结论。",
+        "trigger": "他承认没有追问，新通知未被拿走。；青年在空纸上写日期，又用手压住那句自己没追问的话。海伦没有抢纸，只指一下桌上的新通知，明确要求他把前后经过都写全。\n青年移开压住句子的手，仍没有递纸。他看着自己写下的没问，想把这一句换成对拖延的解释；海伦把笔留给他，不代写。\n青年核对自己补上的那句，把纸连同旧样本推给海伦。她按日期重排，他把重审通知也推过去，不再要求只留旧的一页。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "后续页一并交付，主角改了工作方法而没有获得免责。；本集结束。青年交出不利的完整经过，要求取得后来页；与此同时，玛拉仍握着未签协议，面对当天中午的付款期限，下一集必须作出实际选择。 下集从CLINIC展开：玛拉能在付款截止前，把必须保留的权利写进真正生效的两份协议吗？",
+        "noMotionReason": "固定40秒，纸推到海伦前才短暂下俯十度，仍是同一机位。；观看变化：新旧记录一同归律师，尚无完整内部流程结论。"
+      },
+      "camera": {
+        "shotScale": "青年西肩旁朝南50mm海伦中景",
+        "position": "青年西肩旁朝南50mm海伦中景，青年手与补写纸在前层可见。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "青年西肩旁朝南50mm海伦中景，青年手与补写纸在前层可见。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "她不安慰或抢纸，等他写全，再接收新旧两份；青年担心观感的声音在近前景外。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 次日上午会见室南门外传来巡行脚步。固定桌北侧路易吉穿灰衣，双腕自由，海伦坐南；两人之间没有玻璃，旧患者样本先由青年占满桌面。 本镜画内角色：HELEN。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定40秒，纸推到海伦前才短暂下俯十度，仍是同一机位。"
+      },
+      "composition": {
+        "layout": "次日上午会见室南门外传来巡行脚步。固定桌北侧路易吉穿灰衣，双腕自由，海伦坐南；两人之间没有玻璃，旧患者样本先由青年占满桌面。 本镜画内角色：HELEN。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：青年在空纸上写日期，又用手压住那句自己没追问的话。海伦没有抢纸，只指一下桌上的新通知，明确要求他把前后经过都写全。\n青年移开压住句子的手，仍没有递纸。他看着自己写下的没问，想把这一句换成对拖延的解释；海伦把笔留给他，不代写。\n青年核对自己补上的那句，把纸连同旧样本推给海伦。她按日期重排，他把重审通知也推过去，不再要求只留旧的一页。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她不安慰或抢纸，等他写全，再接收新旧两份；青年担心观感的声音在近前景外。；她不安慰或抢纸，等他写全，再接收新旧两份；青年担心观感的声音在近前景外。"
+      },
+      "temporal": {
+        "durationSeconds": 40,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她不安慰或抢纸，等他写全，再接收新旧两份；青年担心观感的声音在近前景外。",
+          "path": "机位不移动。",
+          "start": "他承认没有追问，新通知未被拿走。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "新旧记录一同归律师，尚无完整内部流程结论。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E11-SH014-F1",
+            "timeSeconds": 0,
+            "description": "她不安慰或抢纸，等他写全，再接收新旧两份；青年担心观感的声音在近前景外。"
+          }
+        ],
+        "edit": {
+          "entry": "他承认没有追问，新通知未被拿走。",
+          "exit": "新旧记录一同归律师，尚无完整内部流程结论。；后续页一并交付，主角改了工作方法而没有获得免责。",
+          "preferredTransition": "本集结束。青年交出不利的完整经过，要求取得后来页；与此同时，玛拉仍握着未签协议，面对当天中午的付款期限，下一集必须作出实际选择。 下集从CLINIC展开：玛拉能在付款截止前，把必须保留的权利写进真正生效的两份协议吗？",
+          "soundBridge": "会见室低通风声和纸页摩擦；南门外只有不可辨脚步。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    }
+  ]
+}

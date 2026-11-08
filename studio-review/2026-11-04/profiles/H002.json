@@ -1,0 +1,2049 @@
+{
+  "schemaVersion": "cineweave-production-profile/v1",
+  "topicId": "H002",
+  "title": "玉门十三人",
+  "revision": 1,
+  "source": {
+    "projectId": "f8c1a5deca645522de8d719ad2944535522e5f930625f55d2b37f23d9034d5df",
+    "scriptDocumentId": "c895b0a3edbc822e4fea134eb27cb198f4a00cfa16e47d0a01cc70616d0e9d86",
+    "storyboardDocumentId": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794",
+    "reviewDocumentId": "57b8289cb20df96f09e98d4c74448ff13665275eca0cc88d344fc424a6aa8797"
+  },
+  "patches": [],
+  "creative": {
+    "logline": "雪夜守门的阿澜听见援军呼名，仍坚持裂铃试问、记下冒名疑虑并报告，开门见到范羌后首先关心物资和走不快的人。",
+    "intent": "让谨慎成为对内外两方的责任。声音答对并不终止判断，救援抵达也不终止劳动。",
+    "hardLocks": [
+      "仅岑石、阿澜、范羌三名可辨人物，入门前范羌只声音",
+      "墙垛阻外视线，不能用看清远人证明身份",
+      "11镜184秒设计预算，铃第二声短",
+      "校尉决定经报告转述，不能擅自开门；十三人数不移入本时刻"
+    ],
+    "assumptions": [
+      "写实寒夜城关外观为设计候选，未独立史料复原",
+      "裂铃短声用可控拟音，不要求真实裂器可预测发声"
+    ],
+    "review": "完整读20261031剧本、分镜、来源。现稿已补木板记具、饮用水与空囊区分、写后收板再点火；旧记忆/书写缺口撤回。本轮保持因果，补齐分光源、裂铃声音、人物身体代价和试镜否定条件。"
+  },
+  "visual": {
+    "style": {
+      "medium": "写实雪夜边塞，克制固定摄影与近距离手部动作",
+      "rules": [
+        "冷夜以灰青分层，灯暖只占门洞少量面积",
+        "风雪有方向，人物衣褶与雪片同向响应；不做暴雪遮脸",
+        "阿澜的慢和寒冷来自身体负担，不用固定颤抖配额",
+        "墙面保留粗尺度石纹，城外不出现可辨援军面孔"
+      ],
+      "exclusions": [
+        "不增加已锁角色/结果；不把设计矢量卡标为生成媒体",
+        "不以景深、炫光、快切掩盖关键因果接触"
+      ]
+    },
+    "palette": [
+      {
+        "id": "P1",
+        "name": "城石",
+        "hex": "#59646A",
+        "use": "主墙体约半幅"
+      },
+      {
+        "id": "P2",
+        "name": "雪灰",
+        "hex": "#B9C3C7",
+        "use": "雪与肩部少量结霜"
+      },
+      {
+        "id": "P3",
+        "name": "衣褐",
+        "hex": "#5B4A3D",
+        "use": "阿澜与岑石旧衣分层"
+      },
+      {
+        "id": "P4",
+        "name": "深夜",
+        "hex": "#141E29",
+        "use": "墙外不可视区"
+      },
+      {
+        "id": "P5",
+        "name": "灯暖",
+        "hex": "#C4985E",
+        "use": "门洞小灯与复燃火把"
+      },
+      {
+        "id": "P6",
+        "name": "铜铃",
+        "hex": "#8D7955",
+        "use": "袖中裂铃低反光"
+      }
+    ],
+    "materials": [
+      {
+        "id": "M1",
+        "asset": "旧棉麻衣",
+        "description": "哑布厚重，袖口旧线可辨，雪融湿处更暗不油亮",
+        "preserve": "阿澜旧袖线始终同侧",
+        "baseColor": "#5B4A3D",
+        "texture": "weave"
+      },
+      {
+        "id": "M2",
+        "asset": "城石与雪",
+        "description": "石粒粗不尖锐，雪薄积沿石缝，灯下微暖不纯白溢出",
+        "preserve": "墙垛真实遮挡外视线",
+        "baseColor": "#59646A",
+        "texture": "grain"
+      },
+      {
+        "id": "M3",
+        "asset": "铜铃板囊",
+        "description": "铃暗铜裂舌、木板哑木、皮水囊柔褶，水囊装量仅少许",
+        "preserve": "空囊与饮用囊形态/落点区分",
+        "baseColor": "#8D7955",
+        "texture": "metal"
+      }
+    ],
+    "lighting": [
+      {
+        "id": "L1",
+        "sourceId": "WALL_BOUNCE",
+        "position": "墙内偏远南侧反射散光",
+        "quality": "宽软冷光，低于火把亮面但灭火后仍可读脸手",
+        "intent": "灭火隐藏外向位置而非把观众视野灭掉"
+      },
+      {
+        "id": "L2",
+        "sourceId": "GATE_LAMP",
+        "position": "门洞内北侧遮光小灯",
+        "quality": "暖小面主光只照内侧，门外漏光严格控制",
+        "intent": "范羌入灯下才看清脸"
+      },
+      {
+        "id": "L3",
+        "sourceId": "TORCH",
+        "position": "岑石手中，墙上先灭、门洞后借灯复燃",
+        "quality": "可控无焰道具加合成，亮度渐变",
+        "intent": "时序明确区分灭与复燃"
+      }
+    ],
+    "characters": [
+      {
+        "id": "C1",
+        "name": "阿澜",
+        "identity": "成年守城者，疲惫、能行但慢，旧袖线是稳定标识",
+        "costume": "厚旧灰褐衣，袖内藏裂铃",
+        "voice": "偏低、气息保留冷空气负担，问话清楚不装神秘",
+        "prompt": "角色候选：成年阿澜，旧灰褐厚衣、同侧袖口有短旧线头，脸部有寒冷疲惫而非重伤妆，空手站姿重心稳但缓慢，半身/全身设计，冷软侧光与小暖边，自然比例、写实无字，不持兵器。"
+      },
+      {
+        "id": "C2",
+        "name": "岑石",
+        "identity": "成年守门人，急于救援但接受程序约束",
+        "costume": "深褐厚衣，衣内能收小木板记具",
+        "voice": "中声区，初句有希望，报告决定时清楚区分已知与未知",
+        "prompt": "角色候选：成年岑石，深褐厚衣、衣内可收薄木板小笔，站立和持灭火把状态板，谨慎带一点急切，冷夜散光脸手可读，无字不加盔甲花纹，脸型一致。"
+      },
+      {
+        "id": "C3",
+        "name": "范羌",
+        "identity": "成年来援者，披雪、入门前不出现实体",
+        "costume": "暗灰行旅衣与薄积雪肩头",
+        "voice": "同一声线先远处高喊后门内低声，禁止换成另一演员",
+        "prompt": "角色候选：成年范羌，暗灰厚行旅衣、肩头薄雪、自然疲劳，门洞暖光显脸冷夜轮廓，半身与全身无字，单人站姿不增加随从，面部年龄与发型统一。"
+      }
+    ],
+    "assets": [
+      {
+        "id": "A1",
+        "name": "城墙城阶",
+        "prompt": "场景候选：雪夜城墙内侧，墙垛足够遮住外人，城阶在画右下行，内侧石面可搁湿布与倚灭火把，远侧冷散光保留手脸曝光，空场宽幅写实无字，不画城外人或群马。"
+      },
+      {
+        "id": "A2",
+        "name": "门洞",
+        "prompt": "场景候选：厚城门门洞内侧，门闩与小遮光灯位置明确，门边物资让出一人窄路，空皮囊靠里，另有少量水的囊在灯下可取，门外只有散雪冷光，无人物无字，暖小灯不变成大殿泛光。"
+      },
+      {
+        "id": "A3",
+        "name": "铃与记录器",
+        "prompt": "道具候选：暗铜小铃与有裂口铃舌、薄木板与短记具、灭火把和湿布、两只不同装量皮水囊；同光状态板标示靠形体不生文字，铃舌断口安全替代，真实可握比例。"
+      }
+    ],
+    "lookdev": [
+      {
+        "id": "LD1",
+        "target": "人物近景",
+        "prompt": "阿澜灰褐衣旧袖线，灭火后墙内冷散光半身，脸和握铃手均可读，无外向火头。",
+        "fixed": [
+          "旧袖线同侧",
+          "灭火状态"
+        ],
+        "compare": "散光亮度半档",
+        "pass": [
+          "脸手可读",
+          "外墙不被照亮"
+        ],
+        "fail": "脸黑洞/凭空点亮火把"
+      },
+      {
+        "id": "LD2",
+        "target": "场景",
+        "prompt": "城墙内侧到城阶空景，墙垛完全遮人，冷夜与下阶路径可读，风雪同向。",
+        "fixed": [
+          "墙外不可见人",
+          "城阶位置"
+        ],
+        "compare": "散雪密度",
+        "pass": [
+          "路径不被雪遮断",
+          "墙体有厚度"
+        ],
+        "fail": "远援军面孔/城阶断裂"
+      },
+      {
+        "id": "LD3",
+        "target": "材质",
+        "prompt": "暗铜裂铃、哑木板、少量水囊与空囊并列的写实材质板，不要求字形。",
+        "fixed": [
+          "器物数量与装量"
+        ],
+        "compare": "反光粗糙度",
+        "pass": [
+          "裂舌近景可读",
+          "两囊装量可区分"
+        ],
+        "fail": "铃变完整/水囊硬塑料化"
+      },
+      {
+        "id": "LD4",
+        "target": "内外转换",
+        "prompt": "同一范羌从门缝冷雪迈入遮光小灯，面部由暗到可辨，门外无随从脸。",
+        "fixed": [
+          "单范羌",
+          "门灯世界位置"
+        ],
+        "compare": "暖冷比",
+        "pass": [
+          "看清脸发生在入灯后",
+          "雪不变雨"
+        ],
+        "fail": "门外先全亮脸/身份漂移"
+      },
+      {
+        "id": "LD5",
+        "target": "反打",
+        "prompt": "墙内阿澜岑石同侧问答与听画外范羌的视线板，无墙外人物反打。",
+        "fixed": [
+          "墙垛遮挡",
+          "同一远声方向"
+        ],
+        "compare": "墙内机位距离",
+        "pass": [
+          "两人朝同一墙外方向听",
+          "地理不翻转"
+        ],
+        "fail": "对墙内空处答话/外援实体"
+      },
+      {
+        "id": "LD6",
+        "target": "声源可视对应",
+        "prompt": "裂铃两次拨动的静态连续状态板：手指第一拨/回位/第二拨停，铃仅一只，袖口固定。",
+        "fixed": [
+          "一次成对第二短",
+          "同一只铃"
+        ],
+        "compare": "铃舌可读尺度",
+        "pass": [
+          "两拨动作可分",
+          "未提前出现回答者"
+        ],
+        "fail": "多只铃/拨动三次/第二长"
+      }
+    ]
+  },
+  "space": {
+    "coordinate": "设计图：北为城外，x东增y北增；城墙内机位在南，不上越垛拍援军。",
+    "anchors": [
+      {
+        "id": "WALL",
+        "label": "墙垛",
+        "x": 50,
+        "y": 80,
+        "description": "不透视城外人"
+      },
+      {
+        "id": "STAIR",
+        "label": "城阶",
+        "x": 82,
+        "y": 46,
+        "description": "自墙内向右下，供二人依次走"
+      },
+      {
+        "id": "GATE",
+        "label": "门缝门闩",
+        "x": 50,
+        "y": 48,
+        "description": "门洞独立场，窄开后推宽"
+      },
+      {
+        "id": "LAMP",
+        "label": "遮光灯",
+        "x": 65,
+        "y": 32,
+        "description": "供复燃与看清范羌"
+      },
+      {
+        "id": "EMPTY",
+        "label": "空囊",
+        "x": 23,
+        "y": 25,
+        "description": "已让开窄路"
+      },
+      {
+        "id": "WATER",
+        "label": "少量水囊",
+        "x": 42,
+        "y": 30,
+        "description": "阿澜能单手取递，喝后回门边"
+      }
+    ],
+    "lights": [
+      {
+        "id": "L1",
+        "label": "墙内散光",
+        "x": 30,
+        "y": 15,
+        "description": "灭火后持续冷反射",
+        "targetX": 52,
+        "targetY": 53
+      },
+      {
+        "id": "L2",
+        "label": "门内遮光灯",
+        "x": 65,
+        "y": 32,
+        "description": "暖，限制对外漏光",
+        "targetX": 52,
+        "targetY": 53
+      }
+    ],
+    "cameraZones": "城墙南侧固定机位、城阶侧腰高全身位、门洞内侧固定区；禁止凭借外反打解决身份疑虑。",
+    "geography": "墙内与门洞由城阶连接，报告在明确稍后省略段中完成。墙内湿布留石面、火把可倚。门内空囊与饮水囊不同物资区，留一人通过宽度；小灯在借火可达手高处。"
+  },
+  "blocking": [
+    {
+      "character": "阿澜",
+      "task": "验证身份与安排慢行者",
+      "path": "上城阶→墙内阻岑石→拨铃→仍握铃追问→收铃下阶→门洞取水→看清脸→递水→留守",
+      "gaze": "外向火→听声方向→裂铃→岑石板→入灯范羌",
+      "props": "铃由袖取后握，记录完收入；水囊取递喝后放回门边",
+      "residual": "最后双手空仍守门，慢行事实不被救援抹去"
+    },
+    {
+      "character": "岑石",
+      "task": "守门并履行报告程序",
+      "path": "探火→收回按灭→阶边被拉停→倚火把记板→收板带火把下阶→门闩→推宽→再记板→收板借火",
+      "gaze": "马蹄声方向→阿澜→木板→门闩/范羌",
+      "props": "湿布留墙；火把灭态带下；板笔两次收好才双手执行其他任务",
+      "residual": "复燃火把后留门，不擅自跟援军走"
+    },
+    {
+      "character": "范羌",
+      "task": "报来援与有限物资，饮水后说明伤者",
+      "path": "墙外仅声音→门开一缝才进灯下→接水喝→放门边→留下说明",
+      "gaze": "墙内问话方向→阿澜→水囊",
+      "props": "只接这只少量水囊，不凭空带衣物入镜",
+      "residual": "后队仍在整队只作已说信息，不自动展示群体"
+    }
+  ],
+  "shots": [
+    {
+      "id": "H002-01A",
+      "title": "城墙·先灭外火",
+      "durationSeconds": 17.0,
+      "source": {
+        "documentId": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794",
+        "startLine": 7,
+        "endLine": 26
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "先听马蹄再主动隐藏己方位置。",
+      "purpose": "先听马蹄再主动隐藏己方位置。",
+      "entry": "火把尚点亮，阿澜从城阶上来。",
+      "exit": "火把熄灭归岑石，湿布留墙内石面。",
+      "camera": {
+        "scale": "中景",
+        "position": "墙内侧朝火把与阿澜上阶。",
+        "height": "站立岑石胸口高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "城墙内侧南区与门洞内侧，墙外不设人物反打",
+        "perspective": "马蹄未知所以先隐藏己方位置，不能把谨慎写成拒救",
+        "type": "static",
+        "movement": "固定在墙内侧朝火把与阿澜上阶，让先听/见本镜正文刺激，再进入对应动作触发人物而非相机移动，保持先听马蹄再主动隐藏己方位置的空间参照。理由：让观众读出先听马蹄再主动隐藏己方位置；不改变人物既定行动。",
+        "trigger": "阿澜上阶听马蹄才要求灭火，岑石收回后按熄",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦火把被收回的路径"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中景；墙内侧朝火把与阿澜上阶。高度：站立岑石胸口高度。前景外伸火把与湿布；中景岑石阿澜；后景遮视线的墙垛。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；墙内侧朝火把与阿澜上阶。高度：站立岑石胸口高度。前景外伸火把与湿布；中景岑石阿澜；后景遮视线的墙垛。保留行动方向的余地，不增加演员或道具。",
+        "midground": "火把收墙后再按布；湿布最后留内石面，手数足够",
+        "background": "墙垛遮城外人，门洞只有小灯和散雪；范羌入门后可见，援军不加群像",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "马蹄未知所以先隐藏己方位置，不能把谨慎写成拒救"
+      },
+      "sound": "雪风连续但给对白让位；马蹄由远渐近先于探火，裂铃两声仅一次成对第二短；范羌同一声线在墙外滤高频、入门后回近声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [
+        {
+          "speaker": "阿澜",
+          "text": "先灭火。外面不知是谁，不能把门后位置都照出去。",
+          "addressee": "岑石",
+          "performance": "上阶后看火指明风险，清楚不喊口号",
+          "startSeconds": 4,
+          "endSeconds": 11
+        }
+      ],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "马蹄未知所以先隐藏己方位置，不能把谨慎写成拒救",
+          "observation": "马蹄未知所以先隐藏己方位置，不能把谨慎写成拒救",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L7–L26"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "阿澜上阶听马蹄才要求灭火，岑石收回后按熄",
+          "observation": "阿澜上阶听马蹄才要求灭火，岑石收回后按熄",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L7–L26"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "火把收墙后再按布",
+          "observation": "火把收墙后再按布；湿布最后留内石面，手数足够",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L7–L26"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "墙内中景同时含火头收回和遮视线墙垛，灭火仍有冷散光",
+          "observation": "墙内中景同时含火头收回和遮视线墙垛，灭火仍有冷散光",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L7–L26"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "独立稿灭外火并不全黑，17秒不增援军脸",
+          "observation": "独立稿灭外火并不全黑，17秒不增援军脸",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L7–L26"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "01B火把灭态在岑石手，布留石，不随身走",
+          "observation": "01B火把灭态在岑石手，布留石，不随身走",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L7–L26"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "岑石",
+            "x": 43,
+            "y": 50,
+            "scale": 0.95,
+            "pose": "将外火收回按灭"
+          },
+          {
+            "label": "阿澜",
+            "x": 72,
+            "y": 52,
+            "scale": 0.9,
+            "pose": "从城阶上来"
+          }
+        ],
+        "props": [
+          {
+            "label": "火把与湿布",
+            "x": 27,
+            "y": 48,
+            "width": 20,
+            "height": 8,
+            "shape": "rect"
+          },
+          {
+            "label": "墙内石面",
+            "x": 17,
+            "y": 72,
+            "width": 32,
+            "height": 9,
+            "shape": "rect"
+          },
+          {
+            "label": "城阶",
+            "x": 78,
+            "y": 67,
+            "width": 20,
+            "height": 25,
+            "shape": "rect"
+          }
+        ],
+        "layers": [
+          {
+            "label": "墙垛遮城外",
+            "x": 0,
+            "y": 3,
+            "width": 100,
+            "height": 24,
+            "color": "#59646A",
+            "opacity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "H002-01B",
+      "title": "城墙·远处呼名",
+      "durationSeconds": 17.0,
+      "source": {
+        "documentId": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794",
+        "startLine": 27,
+        "endLine": 46
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "希望与警惕同时成立，呼名不是身份确认。",
+      "purpose": "希望与警惕同时成立，呼名不是身份确认。",
+      "entry": "火把已熄，范羌尚未自报。",
+      "exit": "二人已听呼名，岑石开始转向城阶。",
+      "camera": {
+        "scale": "中景",
+        "position": "墙内原轴侧看二人听声。",
+        "height": "二人站立眼线高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "城墙内侧南区与门洞内侧，墙外不设人物反打",
+        "perspective": "援军呼名只增加希望，未证明身份",
+        "type": "static",
+        "movement": "固定在墙内原轴侧看二人听声，让先听/见本镜正文刺激，再进入对应动作触发人物而非相机移动，保持希望与警惕同时成立，呼名不是身份确认的空间参照。理由：让观众读出希望与警惕同时成立，呼名不是身份确认；不改变人物既定行动。",
+        "trigger": "岑石也许、阿澜也许都保不确定，呼名后才同时听向外",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦两人听声的脸"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中景；墙内原轴侧看二人听声。高度：二人站立眼线高度。前景熄灭火把；中景岑石阿澜；后景墙垛及远光。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；墙内原轴侧看二人听声。高度：二人站立眼线高度。前景熄灭火把；中景岑石阿澜；后景墙垛及远光。保留行动方向的余地，不增加演员或道具。",
+        "midground": "两人均墙内，熄火把不重新伸到外侧",
+        "background": "墙垛遮城外人，门洞只有小灯和散雪；范羌入门后可见，援军不加群像",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "援军呼名只增加希望，未证明身份"
+      },
+      "sound": "雪风连续但给对白让位；马蹄由远渐近先于探火，裂铃两声仅一次成对第二短；范羌同一声线在墙外滤高频、入门后回近声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [
+        {
+          "speaker": "岑石",
+          "text": "也许是援军。",
+          "addressee": "阿澜",
+          "performance": "带希望但试探",
+          "startSeconds": 0,
+          "endSeconds": 4
+        },
+        {
+          "speaker": "阿澜",
+          "text": "也许。外面的人会冻，里面的人也退无可退。",
+          "addressee": "岑石",
+          "performance": "承认两方处境，不是怀疑一切",
+          "startSeconds": 4,
+          "endSeconds": 11
+        },
+        {
+          "speaker": "范羌",
+          "text": "我是范羌！汉军来迎校尉！",
+          "addressee": "墙内守者",
+          "performance": "远处穿风声高喊，同一声线",
+          "startSeconds": 11,
+          "endSeconds": 15
+        }
+      ],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "援军呼名只增加希望，未证明身份",
+          "observation": "援军呼名只增加希望，未证明身份",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L27–L46"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "岑石也许、阿澜也许都保不确定，呼名后才同时听向外",
+          "observation": "岑石也许、阿澜也许都保不确定，呼名后才同时听向外",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L27–L46"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "两人均墙内，熄火把不重新伸到外侧",
+          "observation": "两人均墙内，熄火把不重新伸到外侧",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L27–L46"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "固定原轴平视，脸与灭火把同可读，无远人反打",
+          "observation": "固定原轴平视，脸与灭火把同可读，无远人反打",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L27–L46"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "声音范羌唯一同声，远光不能长成人形",
+          "observation": "声音范羌唯一同声，远光不能长成人形",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L27–L46"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "末岑石转阶，02A拉住的动作动机明确",
+          "observation": "末岑石转阶，02A拉住的动作动机明确",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L27–L46"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "岑石",
+            "x": 37,
+            "y": 50,
+            "scale": 0.95,
+            "pose": "握灭把听呼名"
+          },
+          {
+            "label": "阿澜",
+            "x": 65,
+            "y": 50,
+            "scale": 0.95,
+            "pose": "听向墙外"
+          }
+        ],
+        "props": [
+          {
+            "label": "灭火把",
+            "x": 32,
+            "y": 58,
+            "width": 6,
+            "height": 20,
+            "shape": "rect"
+          }
+        ],
+        "layers": [
+          {
+            "label": "墙垛；外人不可见",
+            "x": 0,
+            "y": 3,
+            "width": 100,
+            "height": 25,
+            "color": "#59646A",
+            "opacity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "H002-02A",
+      "title": "城阶边·两声裂铃",
+      "durationSeconds": 12.0,
+      "source": {
+        "documentId": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794",
+        "startLine": 47,
+        "endLine": 66
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "先阻行动再给验证刺激，不预先得到回答。",
+      "purpose": "先阻行动再给验证刺激，不预先得到回答。",
+      "entry": "岑石正转向阶，阿澜空手，铃在袖中。",
+      "exit": "铃已拨两声，第二短，阿澜握铃。",
+      "camera": {
+        "scale": "近景",
+        "position": "墙内斜俯朝阿澜拉住岑石的手和铜铃。",
+        "height": "高于两人腰间手部，斜俯",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "城墙内侧南区与门洞内侧，墙外不设人物反打",
+        "perspective": "先阻下阶再拨铃，验证刺激由她实际产生",
+        "type": "static",
+        "movement": "固定在墙内斜俯朝阿澜拉住岑石的手和铜铃，让先听/见本镜正文刺激，再进入对应动作触发人物而非相机移动，保持先阻行动再给验证刺激，不预先得到回答的空间参照。理由：让观众读出先阻行动再给验证刺激，不预先得到回答；不改变人物既定行动。",
+        "trigger": "拉袖后取铃，两次拨动留第二短的听觉间隔",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦拉住袖的手"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "近景；墙内斜俯朝阿澜拉住岑石的手和铜铃。高度：高于两人腰间手部，斜俯。前景裂铃取出位置；中景她拉袖与拨铃双手；后景岑石腰侧灭火把。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "近景；墙内斜俯朝阿澜拉住岑石的手和铜铃。高度：高于两人腰间手部，斜俯。前景裂铃取出位置；中景她拉袖与拨铃双手；后景岑石腰侧灭火把。保留行动方向的余地，不增加演员或道具。",
+        "midground": "她先松拉袖的手再取铃拨，岑石灭把仍腰侧",
+        "background": "墙垛遮城外人，门洞只有小灯和散雪；范羌入门后可见，援军不加群像",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "先阻下阶再拨铃，验证刺激由她实际产生"
+      },
+      "sound": "雪风连续但给对白让位；马蹄由远渐近先于探火，裂铃两声仅一次成对第二短；范羌同一声线在墙外滤高频、入门后回近声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [
+        {
+          "speaker": "阿澜",
+          "text": "你听见了吗？",
+          "addressee": "墙外范羌",
+          "performance": "拨完两声才朝外问",
+          "startSeconds": 9,
+          "endSeconds": 12
+        }
+      ],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "先阻下阶再拨铃，验证刺激由她实际产生",
+          "observation": "先阻下阶再拨铃，验证刺激由她实际产生",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L47–L66"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "拉袖后取铃，两次拨动留第二短的听觉间隔",
+          "observation": "拉袖后取铃，两次拨动留第二短的听觉间隔",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L47–L66"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "她先松拉袖的手再取铃拨，岑石灭把仍腰侧",
+          "observation": "她先松拉袖的手再取铃拨，岑石灭把仍腰侧",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L47–L66"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "斜俯近景包含袖手铃和岑石腰侧，裂舌不要求生成字",
+          "observation": "斜俯近景包含袖手铃和岑石腰侧，裂舌不要求生成字",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L47–L66"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "12秒一对两声，不把两次拨动剪成多铃蒙太奇",
+          "observation": "12秒一对两声，不把两次拨动剪成多铃蒙太奇",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L47–L66"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "02B阿澜继续握同铃，答声不能提前到",
+          "observation": "02B阿澜继续握同铃，答声不能提前到",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L47–L66"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [],
+        "props": [
+          {
+            "label": "拉袖的手",
+            "x": 13,
+            "y": 38,
+            "width": 29,
+            "height": 15,
+            "shape": "rect"
+          },
+          {
+            "label": "裂铃与两拨手",
+            "x": 47,
+            "y": 44,
+            "width": 17,
+            "height": 16,
+            "shape": "circle"
+          },
+          {
+            "label": "岑石腰侧灭把",
+            "x": 80,
+            "y": 53,
+            "width": 6,
+            "height": 27,
+            "shape": "rect"
+          }
+        ],
+        "layers": [
+          {
+            "label": "阿澜旧袖口",
+            "x": 2,
+            "y": 57,
+            "width": 45,
+            "height": 35,
+            "color": "#5B4A3D",
+            "opacity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "H002-02B",
+      "title": "城墙·仍可能冒名",
+      "durationSeconds": 21.0,
+      "source": {
+        "documentId": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794",
+        "startLine": 67,
+        "endLine": 86
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "答对记号也可能来自在场旁人。",
+      "purpose": "答对记号也可能来自在场旁人。",
+      "entry": "两声刚响，岑石仍未下阶。",
+      "exit": "铃仍阿澜手，岑石停阶边准备再问。",
+      "camera": {
+        "scale": "近中景",
+        "position": "墙内侧兼见袖口和岑石伸手。",
+        "height": "阿澜胸口高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "城墙内侧南区与门洞内侧，墙外不设人物反打",
+        "perspective": "答对仍可能来自旁观者，谨慎逻辑不被答案终止",
+        "type": "static",
+        "movement": "固定在墙内侧兼见袖口和岑石伸手，让先听/见本镜正文刺激，再进入对应动作触发人物而非相机移动，保持答对记号也可能来自在场旁人的空间参照。理由：让观众读出答对记号也可能来自在场旁人；不改变人物既定行动。",
+        "trigger": "范羌回忆过去袖线，阿澜握铃再说旁人也知，不演全盘否认",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦阿澜握铃的手与脸"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "近中景；墙内侧兼见袖口和岑石伸手。高度：阿澜胸口高度。前景裂铃和旧袖线；中景二人；后景城阶边。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "近中景；墙内侧兼见袖口和岑石伸手。高度：阿澜胸口高度。前景裂铃和旧袖线；中景二人；后景城阶边。保留行动方向的余地，不增加演员或道具。",
+        "midground": "岑石摸阶仍未下，阿澜不靠拉住才能继续说",
+        "background": "墙垛遮城外人，门洞只有小灯和散雪；范羌入门后可见，援军不加群像",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "答对仍可能来自旁观者，谨慎逻辑不被答案终止"
+      },
+      "sound": "雪风连续但给对白让位；马蹄由远渐近先于探火，裂铃两声仅一次成对第二短；范羌同一声线在墙外滤高频、入门后回近声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [
+        {
+          "speaker": "范羌",
+          "text": "第二声短。那天你袖上有线头！",
+          "addressee": "阿澜",
+          "performance": "远声回应实际听到的第二短",
+          "startSeconds": 0,
+          "endSeconds": 6
+        },
+        {
+          "speaker": "阿澜",
+          "text": "那天门边的人也听见他笑我袖口。再问他从哪里来。",
+          "addressee": "岑石",
+          "performance": "不是再否认本人，而是指出信息可能外泄",
+          "startSeconds": 9,
+          "endSeconds": 21
+        }
+      ],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "答对仍可能来自旁观者，谨慎逻辑不被答案终止",
+          "observation": "答对仍可能来自旁观者，谨慎逻辑不被答案终止",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L67–L86"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "范羌回忆过去袖线，阿澜握铃再说旁人也知，不演全盘否认",
+          "observation": "范羌回忆过去袖线，阿澜握铃再说旁人也知，不演全盘否认",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L67–L86"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "岑石摸阶仍未下，阿澜不靠拉住才能继续说",
+          "observation": "岑石摸阶仍未下，阿澜不靠拉住才能继续说",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L67–L86"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "墙内近中景保袖线与握铃，禁止看清墙外眼神的反打",
+          "observation": "墙内近中景保袖线与握铃，禁止看清墙外眼神的反打",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L67–L86"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "“那天”限制为回忆，不能生成墙外看此刻袖口",
+          "observation": "“那天”限制为回忆，不能生成墙外看此刻袖口",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L67–L86"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "03A双方仍墙内/灭火把在手/铃在她手",
+          "observation": "03A双方仍墙内/灭火把在手/铃在她手",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L67–L86"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "阿澜",
+            "x": 38,
+            "y": 50,
+            "scale": 1,
+            "pose": "握铃说明旁人也知"
+          },
+          {
+            "label": "岑石",
+            "x": 72,
+            "y": 51,
+            "scale": 1,
+            "pose": "伸手摸阶但未下"
+          }
+        ],
+        "props": [
+          {
+            "label": "裂铃",
+            "x": 32,
+            "y": 61,
+            "width": 8,
+            "height": 8,
+            "shape": "circle"
+          },
+          {
+            "label": "阶口",
+            "x": 81,
+            "y": 70,
+            "width": 17,
+            "height": 20,
+            "shape": "rect"
+          }
+        ],
+        "layers": [
+          {
+            "label": "阻外视线墙",
+            "x": 0,
+            "y": 4,
+            "width": 100,
+            "height": 22,
+            "color": "#59646A",
+            "opacity": 1
+          }
+        ]
+      }
+    },
+    {
+      "id": "H002-03A",
+      "title": "城墙·把疑点记下",
+      "durationSeconds": 24.0,
+      "source": {
+        "documentId": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794",
+        "startLine": 87,
+        "endLine": 106
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "记录身份回答同时保留无法排除冒名。",
+      "purpose": "记录身份回答同时保留无法排除冒名。",
+      "entry": "岑石手持灭火把，木板记具在衣内；阿澜握铃。",
+      "exit": "灭火把倚墙，木板记具回衣内，铃回阿澜袖。",
+      "camera": {
+        "scale": "中景",
+        "position": "墙内侧朝岑石记录和阿澜。",
+        "height": "岑石胸口高度，轻俯看木板",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "城墙内侧南区与门洞内侧，墙外不设人物反打",
+        "perspective": "报告保留证据与疑虑，不能写成已验真",
+        "type": "static",
+        "movement": "固定在墙内侧朝岑石记录和阿澜，让先听/见本镜正文刺激，再进入对应动作触发人物而非相机移动，保持记录身份回答同时保留无法排除冒名的空间参照。理由：让观众读出记录身份回答同时保留无法排除冒名；不改变人物既定行动。",
+        "trigger": "再问再答后岑石先倚火把才取板写，阿澜收铃等写完",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦岑石隔墙问话的脸"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中景；墙内侧朝岑石记录和阿澜。高度：岑石胸口高度，轻俯看木板。前景靠墙的灭火把；中景岑石木板与阿澜；后景墙垛。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；墙内侧朝岑石记录和阿澜。高度：岑石胸口高度，轻俯看木板。前景靠墙的灭火把；中景岑石木板与阿澜；后景墙垛。保留行动方向的余地，不增加演员或道具。",
+        "midground": "现稿已明确板笔来去；划记可用短记号，不边持火把边写",
+        "background": "墙垛遮城外人，门洞只有小灯和散雪；范羌入门后可见，援军不加群像",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "报告保留证据与疑虑，不能写成已验真"
+      },
+      "sound": "雪风连续但给对白让位；马蹄由远渐近先于探火，裂铃两声仅一次成对第二短；范羌同一声线在墙外滤高频、入门后回近声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [
+        {
+          "speaker": "岑石",
+          "text": "你从哪里来？",
+          "addressee": "墙外范羌",
+          "performance": "隔墙再问，尽量清楚投声",
+          "startSeconds": 0,
+          "endSeconds": 3
+        },
+        {
+          "speaker": "范羌",
+          "text": "奉汉军之命，来迎校尉。",
+          "addressee": "岑石",
+          "performance": "远声重复来意，不增加未核军情",
+          "startSeconds": 3,
+          "endSeconds": 7
+        }
+      ],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "报告保留证据与疑虑，不能写成已验真",
+          "observation": "报告保留证据与疑虑，不能写成已验真",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L87–L106"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "再问再答后岑石先倚火把才取板写，阿澜收铃等写完",
+          "observation": "再问再答后岑石先倚火把才取板写，阿澜收铃等写完",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L87–L106"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "现稿已明确板笔来去",
+          "observation": "现稿已明确板笔来去；划记可用短记号，不边持火把边写",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L87–L106"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "中景轻俯能看到板不是空手写，手与脸同景深",
+          "observation": "中景轻俯能看到板不是空手写，手与脸同景深",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L87–L106"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "24秒给问答、取物、记录、收回，不用长字形幻化证明内容",
+          "observation": "24秒给问答、取物、记录、收回，不用长字形幻化证明内容",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L87–L106"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "板笔回衣内、铃回袖、灭火把倚墙，03B才能取走",
+          "observation": "板笔回衣内、铃回袖、灭火把倚墙，03B才能取走",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L87–L106"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "岑石",
+            "x": 42,
+            "y": 49,
+            "scale": 0.95,
+            "pose": "倚灭把，取板划记再收"
+          },
+          {
+            "label": "阿澜",
+            "x": 70,
+            "y": 49,
+            "scale": 0.95,
+            "pose": "握铃后收袖"
+          }
+        ],
+        "props": [
+          {
+            "label": "倚墙灭把",
+            "x": 13,
+            "y": 54,
+            "width": 5,
+            "height": 26,
+            "shape": "rect"
+          },
+          {
+            "label": "木板与记具",
+            "x": 34,
+            "y": 61,
+            "width": 19,
+            "height": 10,
+            "shape": "rect"
+          },
+          {
+            "label": "铃在手",
+            "x": 67,
+            "y": 62,
+            "width": 6,
+            "height": 6,
+            "shape": "circle"
+          }
+        ],
+        "layers": []
+      }
+    },
+    {
+      "id": "H002-03B",
+      "title": "城阶·下去报告",
+      "durationSeconds": 9.0,
+      "source": {
+        "documentId": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794",
+        "startLine": 107,
+        "endLine": 126
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "报告流程开始而不是直接擅自开门。",
+      "purpose": "报告流程开始而不是直接擅自开门。",
+      "entry": "火把倚墙，双方记录物收好。",
+      "exit": "二人携灭火把下阶离开墙面。",
+      "camera": {
+        "scale": "中全景",
+        "position": "墙内城阶侧固定朝下行路线。",
+        "height": "站立人物腰部高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "城墙内侧南区与门洞内侧，墙外不设人物反打",
+        "perspective": "下阶报告是开门前程序动作，不能跳成即时开门",
+        "type": "static",
+        "movement": "固定在墙内城阶侧固定朝下行路线，让先听/见本镜正文刺激，再进入对应动作触发人物而非相机移动，保持报告流程开始而不是直接擅自开门的空间参照。理由：让观众读出报告流程开始而不是直接擅自开门；不改变人物既定行动。",
+        "trigger": "收物后的双手足够，岑石取灭把后两人依次下",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦岑石取回灭火把"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中全景；墙内城阶侧固定朝下行路线。高度：站立人物腰部高度。前景靠墙灭火把；中景岑石阿澜全身；后景向下城阶。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中全景；墙内城阶侧固定朝下行路线。高度：站立人物腰部高度。前景靠墙灭火把；中景岑石阿澜全身；后景向下城阶。保留行动方向的余地，不增加演员或道具。",
+        "midground": "城阶真实连续，不让慢行阿澜瞬间越过岑石",
+        "background": "墙垛遮城外人，门洞只有小灯和散雪；范羌入门后可见，援军不加群像",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "下阶报告是开门前程序动作，不能跳成即时开门"
+      },
+      "sound": "雪风连续但给对白让位；马蹄由远渐近先于探火，裂铃两声仅一次成对第二短；范羌同一声线在墙外滤高频、入门后回近声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "下阶报告是开门前程序动作，不能跳成即时开门",
+          "observation": "下阶报告是开门前程序动作，不能跳成即时开门",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L107–L126"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "收物后的双手足够，岑石取灭把后两人依次下",
+          "observation": "收物后的双手足够，岑石取灭把后两人依次下",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L107–L126"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "城阶真实连续，不让慢行阿澜瞬间越过岑石",
+          "observation": "城阶真实连续，不让慢行阿澜瞬间越过岑石",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L107–L126"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "腰高全身固定看下行路线，步脚不被镜头裁掉",
+          "observation": "腰高全身固定看下行路线，步脚不被镜头裁掉",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L107–L126"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "9秒只取把与下阶，报告内容在下一明确稍后省略",
+          "observation": "9秒只取把与下阶，报告内容在下一明确稍后省略",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L107–L126"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "灭把随岑石、铃板均收好，04A门内落火把",
+          "observation": "灭把随岑石、铃板均收好，04A门内落火把",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L107–L126"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "岑石",
+            "x": 43,
+            "y": 45,
+            "scale": 0.75,
+            "pose": "取灭把，先下阶"
+          },
+          {
+            "label": "阿澜",
+            "x": 65,
+            "y": 45,
+            "scale": 0.75,
+            "pose": "随后慢行下阶"
+          }
+        ],
+        "props": [
+          {
+            "label": "下行城阶",
+            "x": 46,
+            "y": 63,
+            "width": 42,
+            "height": 31,
+            "shape": "rect"
+          },
+          {
+            "label": "灭把",
+            "x": 39,
+            "y": 51,
+            "width": 5,
+            "height": 15,
+            "shape": "rect"
+          }
+        ],
+        "layers": []
+      }
+    },
+    {
+      "id": "H002-04A",
+      "title": "稍后·门洞决定",
+      "durationSeconds": 19.0,
+      "source": {
+        "documentId": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794",
+        "startLine": 127,
+        "endLine": 146
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "先转述决定及尚未见人，后开门。",
+      "purpose": "先转述决定及尚未见人，后开门。",
+      "entry": "省略向校尉报告；二人已到门洞，门仍闭，小灯亮，一只尚有少量水的水囊在门内物资边，阿澜尚未取，与清路空囊分开放。",
+      "exit": "火把靠墙、水囊可及，岑石准备开闩。",
+      "camera": {
+        "scale": "中景",
+        "position": "门洞内侧看门闩和物资窄路。",
+        "height": "站立岑石胸口高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "城墙内侧南区与门洞内侧，墙外不设人物反打",
+        "perspective": "校尉决定先被转述，再准备开门，未见来人仍明确",
+        "type": "static",
+        "movement": "固定在门洞内侧看门闩和物资窄路，让先听/见本镜正文刺激，再进入对应动作触发人物而非相机移动，保持先转述决定及尚未见人，后开门的空间参照。理由：让观众读出先转述决定及尚未见人，后开门；不改变人物既定行动。",
+        "trigger": "岑石先落火把守闩；阿澜放有水囊后才听决定",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦岑石放火把的手"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中景；门洞内侧看门闩和物资窄路。高度：站立岑石胸口高度。前景门闩与水囊落点；中景岑石阿澜；后景关闭城门。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；门洞内侧看门闩和物资窄路。高度：站立岑石胸口高度。前景门闩与水囊落点；中景岑石阿澜；后景关闭城门。保留行动方向的余地，不增加演员或道具。",
+        "midground": "空囊靠里清路，有水囊独立可及，不能互换",
+        "background": "墙垛遮城外人，门洞只有小灯和散雪；范羌入门后可见，援军不加群像",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "校尉决定先被转述，再准备开门，未见来人仍明确"
+      },
+      "sound": "雪风连续但给对白让位；马蹄由远渐近先于探火，裂铃两声仅一次成对第二短；范羌同一声线在墙外滤高频、入门后回近声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [
+        {
+          "speaker": "岑石",
+          "text": "校尉听过我们的回报，决定接应。还没看见人。",
+          "addressee": "阿澜",
+          "performance": "已知决定与未知身份分句讲清",
+          "startSeconds": 5,
+          "endSeconds": 16
+        }
+      ],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "校尉决定先被转述，再准备开门，未见来人仍明确",
+          "observation": "校尉决定先被转述，再准备开门，未见来人仍明确",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L127–L146"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "岑石先落火把守闩",
+          "observation": "岑石先落火把守闩；阿澜放有水囊后才听决定",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L127–L146"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "空囊靠里清路，有水囊独立可及，不能互换",
+          "observation": "空囊靠里清路，有水囊独立可及，不能互换",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L127–L146"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "门洞内侧中景含门闩/水囊落点/闭门，暖小灯先建",
+          "observation": "门洞内侧中景含门闩/水囊落点/闭门，暖小灯先建",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L127–L146"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "19秒独立完整稿保饮用囊补丁，不用“全部没水”全局句",
+          "observation": "19秒独立完整稿保饮用囊补丁，不用“全部没水”全局句",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L127–L146"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "04B门尚闭、灭把墙边、水囊阿澜旁",
+          "observation": "04B门尚闭、灭把墙边、水囊阿澜旁",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L127–L146"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "岑石",
+            "x": 59,
+            "y": 49,
+            "scale": 0.9,
+            "pose": "放灭把后守闩并转述决定"
+          },
+          {
+            "label": "阿澜",
+            "x": 31,
+            "y": 50,
+            "scale": 0.9,
+            "pose": "另取有水囊放可及处"
+          }
+        ],
+        "props": [
+          {
+            "label": "门闩闭",
+            "x": 50,
+            "y": 27,
+            "width": 32,
+            "height": 5,
+            "shape": "rect"
+          },
+          {
+            "label": "少水囊",
+            "x": 29,
+            "y": 70,
+            "width": 9,
+            "height": 10,
+            "shape": "rect"
+          },
+          {
+            "label": "空囊靠里",
+            "x": 6,
+            "y": 81,
+            "width": 16,
+            "height": 6,
+            "shape": "rect"
+          },
+          {
+            "label": "小灯",
+            "x": 82,
+            "y": 42,
+            "width": 6,
+            "height": 8,
+            "shape": "rect"
+          },
+          {
+            "label": "灭把靠墙",
+            "x": 89,
+            "y": 55,
+            "width": 4,
+            "height": 24,
+            "shape": "rect"
+          }
+        ],
+        "layers": []
+      }
+    },
+    {
+      "id": "H002-04B",
+      "title": "门缝·看清来人",
+      "durationSeconds": 19.0,
+      "source": {
+        "documentId": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794",
+        "startLine": 147,
+        "endLine": 166
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "看清脸后才问寒衣，援军到场范围不扩写。",
+      "purpose": "看清脸后才问寒衣，援军到场范围不扩写。",
+      "entry": "门闩旁岑石，火把靠墙、水囊阿澜旁；范羌门外。",
+      "exit": "范羌入灯下，岑石开始推宽门。",
+      "camera": {
+        "scale": "中景",
+        "position": "门洞内同侧朝缝口不出城外。",
+        "height": "站立范羌胸口高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "城墙内侧南区与门洞内侧，墙外不设人物反打",
+        "perspective": "看清脸后才问寒衣，救援到场只到单人",
+        "type": "static",
+        "movement": "固定在门洞内同侧朝缝口不出城外，让先听/见本镜正文刺激，再进入对应动作触发人物而非相机移动，保持看清脸后才问寒衣，援军到场范围不扩写的空间参照。理由：让观众读出看清脸后才问寒衣，援军到场范围不扩写；不改变人物既定行动。",
+        "trigger": "范羌入灯下再阿澜看清问，范羌答有一些而不夸大",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦尚闭的门缝位置"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中景；门洞内同侧朝缝口不出城外。高度：站立范羌胸口高度。前景开启门闩；中景入缝范羌与阿澜；后景门外散光。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；门洞内同侧朝缝口不出城外。高度：站立范羌胸口高度。前景开启门闩；中景入缝范羌与阿澜；后景门外散光。保留行动方向的余地，不增加演员或道具。",
+        "midground": "岑石开闩开缝、范羌入、再推宽，不让人穿闭门",
+        "background": "墙垛遮城外人，门洞只有小灯和散雪；范羌入门后可见，援军不加群像",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "看清脸后才问寒衣，救援到场只到单人"
+      },
+      "sound": "雪风连续但给对白让位；马蹄由远渐近先于探火，裂铃两声仅一次成对第二短；范羌同一声线在墙外滤高频、入门后回近声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [
+        {
+          "speaker": "阿澜",
+          "text": "寒衣呢？",
+          "addressee": "范羌",
+          "performance": "先看清他的脸，关切具体物资",
+          "startSeconds": 5,
+          "endSeconds": 8
+        },
+        {
+          "speaker": "范羌",
+          "text": "带来一些。后面的人还在整队。",
+          "addressee": "阿澜",
+          "performance": "疲惫短答，后队信息不化作群像",
+          "startSeconds": 8,
+          "endSeconds": 16
+        }
+      ],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "看清脸后才问寒衣，救援到场只到单人",
+          "observation": "看清脸后才问寒衣，救援到场只到单人",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L147–L166"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "范羌入灯下再阿澜看清问，范羌答有一些而不夸大",
+          "observation": "范羌入灯下再阿澜看清问，范羌答有一些而不夸大",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L147–L166"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "岑石开闩开缝、范羌入、再推宽，不让人穿闭门",
+          "observation": "岑石开闩开缝、范羌入、再推宽，不让人穿闭门",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L147–L166"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "门洞同侧中景，脸曝光来自内灯，门外依旧不辨群体",
+          "observation": "门洞同侧中景，脸曝光来自内灯，门外依旧不辨群体",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L147–L166"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "19秒三段动作，未经史料核验不做宏大战役插画",
+          "observation": "19秒三段动作，未经史料核验不做宏大战役插画",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L147–L166"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "04C范羌已入、门正推宽，水囊尚在阿澜旁",
+          "observation": "04C范羌已入、门正推宽，水囊尚在阿澜旁",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L147–L166"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "范羌",
+            "x": 48,
+            "y": 48,
+            "scale": 0.9,
+            "pose": "披雪入小灯，脸才可辨"
+          },
+          {
+            "label": "阿澜",
+            "x": 29,
+            "y": 52,
+            "scale": 0.85,
+            "pose": "看清后问寒衣"
+          },
+          {
+            "label": "岑石",
+            "x": 74,
+            "y": 51,
+            "scale": 0.85,
+            "pose": "门闩边推宽"
+          }
+        ],
+        "props": [
+          {
+            "label": "门缝冷光",
+            "x": 43,
+            "y": 9,
+            "width": 16,
+            "height": 58,
+            "shape": "rect"
+          },
+          {
+            "label": "小灯",
+            "x": 82,
+            "y": 40,
+            "width": 6,
+            "height": 8,
+            "shape": "rect"
+          },
+          {
+            "label": "有水囊",
+            "x": 26,
+            "y": 74,
+            "width": 9,
+            "height": 9,
+            "shape": "rect"
+          }
+        ],
+        "layers": []
+      }
+    },
+    {
+      "id": "H002-04C",
+      "title": "门洞·水囊交接",
+      "durationSeconds": 12.0,
+      "source": {
+        "documentId": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794",
+        "startLine": 167,
+        "endLine": 186
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "物资先实际交到人再讨论后续。",
+      "purpose": "物资先实际交到人再讨论后续。",
+      "entry": "范羌已入，水囊原放阿澜旁，岑石推宽门。",
+      "exit": "水囊放回门边，两人空手，门已宽。",
+      "camera": {
+        "scale": "中景",
+        "position": "门洞原侧含手与门边落点。",
+        "height": "站立范羌腰部高度",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "城墙内侧南区与门洞内侧，墙外不设人物反打",
+        "perspective": "饮水真实交到人，人的急需先于后续谈话",
+        "type": "static",
+        "movement": "固定在门洞原侧含手与门边落点，让先听/见本镜正文刺激，再进入对应动作触发人物而非相机移动，保持物资先实际交到人再讨论后续的空间参照。理由：让观众读出物资先实际交到人再讨论后续；不改变人物既定行动。",
+        "trigger": "阿澜取囊递，范羌接稳才喝，喝一口后放稳",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦阿澜拿水囊的手"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中景；门洞原侧含手与门边落点。高度：站立范羌腰部高度。前景门边水囊；中景阿澜范羌双手；后景岑石推宽门。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；门洞原侧含手与门边落点。高度：站立范羌腰部高度。前景门边水囊；中景阿澜范羌双手；后景岑石推宽门。保留行动方向的余地，不增加演员或道具。",
+        "midground": "单只少水囊从门边到二手再回门边，没有重复囊",
+        "background": "墙垛遮城外人，门洞只有小灯和散雪；范羌入门后可见，援军不加群像",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "饮水真实交到人，人的急需先于后续谈话"
+      },
+      "sound": "雪风连续但给对白让位；马蹄由远渐近先于探火，裂铃两声仅一次成对第二短；范羌同一声线在墙外滤高频、入门后回近声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "饮水真实交到人，人的急需先于后续谈话",
+          "observation": "饮水真实交到人，人的急需先于后续谈话",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L167–L186"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "阿澜取囊递，范羌接稳才喝，喝一口后放稳",
+          "observation": "阿澜取囊递，范羌接稳才喝，喝一口后放稳",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L167–L186"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "单只少水囊从门边到二手再回门边，没有重复囊",
+          "observation": "单只少水囊从门边到二手再回门边，没有重复囊",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L167–L186"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "固定腰高中景保手与门边落点，焦点不提前只锁空地",
+          "observation": "固定腰高中景保手与门边落点，焦点不提前只锁空地",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L167–L186"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "12秒完整交接不需对白",
+          "observation": "12秒完整交接不需对白；生成不得演成长饮灌满",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L167–L186"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "05A囊回门边，阿澜范羌空手，岑石已推宽门",
+          "observation": "05A囊回门边，阿澜范羌空手，岑石已推宽门",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L167–L186"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "阿澜",
+            "x": 35,
+            "y": 44,
+            "scale": 0.9,
+            "pose": "拿水囊递给他"
+          },
+          {
+            "label": "范羌",
+            "x": 60,
+            "y": 44,
+            "scale": 0.9,
+            "pose": "接稳喝一口再放门边"
+          },
+          {
+            "label": "岑石",
+            "x": 85,
+            "y": 40,
+            "scale": 0.65,
+            "pose": "继续推门"
+          }
+        ],
+        "props": [
+          {
+            "label": "交接水囊",
+            "x": 44,
+            "y": 58,
+            "width": 12,
+            "height": 12,
+            "shape": "rect"
+          },
+          {
+            "label": "门边回放点",
+            "x": 23,
+            "y": 82,
+            "width": 12,
+            "height": 7,
+            "shape": "rect"
+          }
+        ],
+        "layers": []
+      }
+    },
+    {
+      "id": "H002-05A",
+      "title": "门洞·谁走不了",
+      "durationSeconds": 22.0,
+      "source": {
+        "documentId": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794",
+        "startLine": 187,
+        "endLine": 206
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "撤离安排要包含行动慢的人，而非救援即完结。",
+      "purpose": "撤离安排要包含行动慢的人，而非救援即完结。",
+      "entry": "水囊门边，火把靠墙，岑石木板记具收衣内。",
+      "exit": "木板划记完成，岑石仍持板和记具。",
+      "camera": {
+        "scale": "中景",
+        "position": "门洞同侧朝木板与三人。",
+        "height": "岑石胸口高度，轻俯见木板",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "城墙内侧南区与门洞内侧，墙外不设人物反打",
+        "perspective": "救援不结束责任，慢行者进入记录与安排",
+        "type": "static",
+        "movement": "固定在门洞同侧朝木板与三人，让先听/见本镜正文刺激，再进入对应动作触发人物而非相机移动，保持撤离安排要包含行动慢的人，而非救援即完结的空间参照。理由：让观众读出撤离安排要包含行动慢的人，而非救援即完结；不改变人物既定行动。",
+        "trigger": "范羌说风险，阿澜要求记人；她答能走但慢不必悲泣",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦范羌开口的脸"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中景；门洞同侧朝木板与三人。高度：岑石胸口高度，轻俯见木板。前景取出的木板和记具；中景三人；后景雪门与小灯。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；门洞同侧朝木板与三人。高度：岑石胸口高度，轻俯见木板。前景取出的木板和记具；中景三人；后景雪门与小灯。保留行动方向的余地，不增加演员或道具。",
+        "midground": "岑石从衣内再取板笔，囊门边、火把墙边不占手",
+        "background": "墙垛遮城外人，门洞只有小灯和散雪；范羌入门后可见，援军不加群像",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "救援不结束责任，慢行者进入记录与安排"
+      },
+      "sound": "雪风连续但给对白让位；马蹄由远渐近先于探火，裂铃两声仅一次成对第二短；范羌同一声线在墙外滤高频、入门后回近声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [
+        {
+          "speaker": "范羌",
+          "text": "路上还有伤的。明天走，路上也许有追兵。",
+          "addressee": "二人",
+          "performance": "落下风险，非胜利宣告",
+          "startSeconds": 0,
+          "endSeconds": 7
+        },
+        {
+          "speaker": "阿澜",
+          "text": "谁走不了，要先记下来。",
+          "addressee": "岑石",
+          "performance": "实务要求，重音谁走不了",
+          "startSeconds": 7,
+          "endSeconds": 11
+        },
+        {
+          "speaker": "岑石",
+          "text": "你自己呢？",
+          "addressee": "阿澜",
+          "performance": "边划记边问，不抬声盘问",
+          "startSeconds": 11,
+          "endSeconds": 15
+        },
+        {
+          "speaker": "阿澜",
+          "text": "我能走，慢一点。",
+          "addressee": "岑石",
+          "performance": "有冷与疲惫，保本人主动判断",
+          "startSeconds": 15,
+          "endSeconds": 22
+        }
+      ],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "救援不结束责任，慢行者进入记录与安排",
+          "observation": "救援不结束责任，慢行者进入记录与安排",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L187–L206"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "范羌说风险，阿澜要求记人",
+          "observation": "范羌说风险，阿澜要求记人；她答能走但慢不必悲泣",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L187–L206"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "岑石从衣内再取板笔，囊门边、火把墙边不占手",
+          "observation": "岑石从衣内再取板笔，囊门边、火把墙边不占手",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L187–L206"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "门洞同侧中景轻俯可读板与三脸，慢行代价靠她呼吸重心",
+          "observation": "门洞同侧中景轻俯可读板与三脸，慢行代价靠她呼吸重心",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L187–L206"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "22秒四句和取记具，字形后期处理而非强生成",
+          "observation": "22秒四句和取记具，字形后期处理而非强生成",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L187–L206"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "05B岑石仍持板笔，不能同时已拿复燃把",
+          "observation": "05B岑石仍持板笔，不能同时已拿复燃把",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L187–L206"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "范羌",
+            "x": 30,
+            "y": 50,
+            "scale": 0.9,
+            "pose": "说明路伤与追兵"
+          },
+          {
+            "label": "阿澜",
+            "x": 55,
+            "y": 50,
+            "scale": 0.9,
+            "pose": "说明自己能走但慢"
+          },
+          {
+            "label": "岑石",
+            "x": 78,
+            "y": 50,
+            "scale": 0.9,
+            "pose": "从衣内再取板记"
+          }
+        ],
+        "props": [
+          {
+            "label": "木板",
+            "x": 69,
+            "y": 62,
+            "width": 18,
+            "height": 10,
+            "shape": "rect"
+          },
+          {
+            "label": "水囊门边",
+            "x": 14,
+            "y": 81,
+            "width": 10,
+            "height": 9,
+            "shape": "rect"
+          },
+          {
+            "label": "灭把靠墙",
+            "x": 92,
+            "y": 54,
+            "width": 4,
+            "height": 26,
+            "shape": "rect"
+          }
+        ],
+        "layers": []
+      }
+    },
+    {
+      "id": "H002-05B",
+      "title": "门洞·重新点火",
+      "durationSeconds": 12.0,
+      "source": {
+        "documentId": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794",
+        "startLine": 207,
+        "endLine": 226
+      },
+      "path": "board：当前完整独立视频稿为母稿；首轮文生视频试镜，参考资产待制作，不宣称已生成",
+      "beat": "职责继续，不把最后十三人数移到此刻。",
+      "purpose": "职责继续，不把最后十三人数移到此刻。",
+      "entry": "岑石持木板记具，灭火把靠墙。",
+      "exit": "板笔收好，火把复燃，三人留门洞。",
+      "camera": {
+        "scale": "中景",
+        "position": "门洞同侧固定含靠墙火把与灯。",
+        "height": "岑石腰部高度，轻俯小灯",
+        "angle": "按源中俯仰；未注明时平视候选",
+        "axis": "城墙内侧南区与门洞内侧，墙外不设人物反打",
+        "perspective": "复燃是继续职责，结尾不借火光宣布一切解决",
+        "type": "static",
+        "movement": "固定在门洞同侧固定含靠墙火把与灯，让先听/见本镜正文刺激，再进入对应动作触发人物而非相机移动，保持职责继续，不把最后十三人数移到此刻的空间参照。理由：让观众读出职责继续，不把最后十三人数移到此刻；不改变人物既定行动。",
+        "trigger": "先收好板笔才取灭把借灯，三人仍留门",
+        "depth": "关键接触人物及物件同在可读景深；真实镜头光圈待LookDev",
+        "focus": [
+          {
+            "time": 0,
+            "target": "起焦木板收入衣内的手"
+          }
+        ],
+        "techniqueId": "neutral_static"
+      },
+      "composition": {
+        "layout": "中景；门洞同侧固定含靠墙火把与灯。高度：岑石腰部高度，轻俯小灯。前景靠墙火把与小灯；中景岑石双手、二人留守；后景开放门洞风雪。保留行动方向的余地，不增加演员或道具。",
+        "foreground": "中景；门洞同侧固定含靠墙火把与灯。高度：岑石腰部高度，轻俯小灯。前景靠墙火把与小灯；中景岑石双手、二人留守；后景开放门洞风雪。保留行动方向的余地，不增加演员或道具。",
+        "midground": "灯确实点着且可达；湿布留墙内没有突然跟下楼",
+        "background": "墙垛遮城外人，门洞只有小灯和散雪；范羌入门后可见，援军不加群像",
+        "negativeSpace": "沿该镜既定动作出口留位，其他区域不增加人物或未见结果",
+        "visualHierarchy": "复燃是继续职责，结尾不借火光宣布一切解决"
+      },
+      "sound": "雪风连续但给对白让位；马蹄由远渐近先于探火，裂铃两声仅一次成对第二短；范羌同一声线在墙外滤高频、入门后回近声。",
+      "transition": "切于本镜出态落实后；下一镜按其入态继续或按正文明确省略，不用转场遮盖缺动作",
+      "dialogue": [],
+      "reviews": {
+        "direction": {
+          "status": "pass",
+          "criterion": "复燃是继续职责，结尾不借火光宣布一切解决",
+          "observation": "复燃是继续职责，结尾不借火光宣布一切解决",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L207–L226"
+        },
+        "performance": {
+          "status": "pass",
+          "criterion": "先收好板笔才取灭把借灯，三人仍留门",
+          "observation": "先收好板笔才取灭把借灯，三人仍留门",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L207–L226"
+        },
+        "staging": {
+          "status": "pass",
+          "criterion": "灯确实点着且可达",
+          "observation": "灯确实点着且可达；湿布留墙内没有突然跟下楼",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L207–L226"
+        },
+        "cinematography": {
+          "status": "pass",
+          "criterion": "固定腰高中景保板入衣/取把/借灯三处，不靠火焰炫光",
+          "observation": "固定腰高中景保板入衣/取把/借灯三处，不靠火焰炫光",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L207–L226"
+        },
+        "prompt": {
+          "status": "pass",
+          "criterion": "12秒单镜保收放顺序，禁止出现数到十三的新增人群",
+          "observation": "12秒单镜保收放顺序，禁止出现数到十三的新增人群",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L207–L226"
+        },
+        "continuity": {
+          "status": "pass",
+          "criterion": "水囊门边、板笔收好、火把复燃，开放门洞风雪继续",
+          "observation": "水囊门边、板笔收好、火把复燃，开放门洞风雪继续",
+          "sourceLocator": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794.md:L207–L226"
+        }
+      },
+      "frame": {
+        "background": "#292D31",
+        "actors": [
+          {
+            "label": "岑石",
+            "x": 62,
+            "y": 47,
+            "scale": 0.95,
+            "pose": "收板笔后取灭把借灯"
+          },
+          {
+            "label": "阿澜",
+            "x": 37,
+            "y": 50,
+            "scale": 0.85,
+            "pose": "留门洞"
+          },
+          {
+            "label": "范羌",
+            "x": 19,
+            "y": 50,
+            "scale": 0.85,
+            "pose": "留门洞"
+          }
+        ],
+        "props": [
+          {
+            "label": "遮光小灯",
+            "x": 78,
+            "y": 47,
+            "width": 7,
+            "height": 10,
+            "shape": "rect"
+          },
+          {
+            "label": "复燃火把",
+            "x": 68,
+            "y": 50,
+            "width": 5,
+            "height": 21,
+            "shape": "rect"
+          },
+          {
+            "label": "水囊门边",
+            "x": 10,
+            "y": 82,
+            "width": 10,
+            "height": 9,
+            "shape": "rect"
+          }
+        ],
+        "layers": [
+          {
+            "label": "开放门洞散雪，后续仍未知",
+            "x": 0,
+            "y": 3,
+            "width": 36,
+            "height": 31,
+            "color": "#59646A",
+            "opacity": 1
+          }
+        ]
+      }
+    }
+  ],
+  "audio": {
+    "fps": 24,
+    "music": "风雪做连续底，铃前后不用音乐替短声作提示；看清脸后仍无救援胜利乐，复燃只留灯/衣/门响。",
+    "subtitles": "逐字三人对白分句排版；范羌入门前标画外声但不提前露名字幕替身份确认；划记长字后期排，片尾历史原引文仅来源附录，未核验不出事实字幕。",
+    "colorGrade": "冷墙石与雪保层次，门洞小暖源可定位；复燃增加局部暖度不把整场变白天；肤色反打一致。",
+    "delivery": "11镜184秒24fps设计预算；铃声、风雪遮蔽和长台词需实际听审与试剪。"
+  },
+  "tests": [
+    {
+      "id": "T-BELL",
+      "shots": [
+        "H002-02A",
+        "H002-02B"
+      ],
+      "objective": "一次两声第二短，听后才答",
+      "fixed": [
+        "同一铜铃",
+        "同一范羌远声",
+        "墙外不见人"
+      ],
+      "input": "02A/B完整稿先录两次实际拨/拟音，第二短；回答必须从第二声结束后接入。",
+      "pass": [
+        "两声数目准确",
+        "第二明显短",
+        "听者不提前反应答案"
+      ],
+      "fail": [
+        "铃超过两声",
+        "第二长",
+        "远声已知未响信息"
+      ],
+      "stop": "最多2次声音方案，若仍不辨回音色/衰减设计，不增加字幕“第二短”替代可听性。"
+    },
+    {
+      "id": "T-DARK",
+      "shots": [
+        "H002-01A",
+        "H002-01B"
+      ],
+      "objective": "灭外火仍保墙内可读曝光",
+      "fixed": [
+        "外向火确实熄灭",
+        "墙内散光持续",
+        "城外不可辨人"
+      ],
+      "input": "01A/B当前稿对照墙内冷反射亮度，单变量半档测试。",
+      "pass": [
+        "灭火状态清晰",
+        "岑石阿澜脸手可读",
+        "墙外位置不被火照明"
+      ],
+      "fail": [
+        "火自行复燃",
+        "全黑只能听",
+        "散光变正面舞台灯"
+      ],
+      "stop": "2轮失败回G1光位而非改成不灭火。"
+    },
+    {
+      "id": "T-PROP",
+      "shots": [
+        "H002-03A",
+        "H002-04C",
+        "H002-05B"
+      ],
+      "objective": "板笔/火把/水囊手序与24秒记录预算",
+      "fixed": [
+        "物件数量",
+        "水囊少量水",
+        "三人规模"
+      ],
+      "input": "三镜分别用完整母稿实演，记录手释放和物件落点，未实际生成。",
+      "pass": [
+        "倚火把后才取板",
+        "喝后囊回门边",
+        "收板笔后才取火借灯"
+      ],
+      "fail": [
+        "手凭空多持物",
+        "水囊换装量/位置",
+        "借灭灯点火"
+      ],
+      "stop": "每镜最多2候选，失败退G3持物表，不静默省略收放。"
+    }
+  ],
+  "handoff": {
+    "xiaoyunque": "同一母稿先做G6指定高风险短段；以当前账号真实可用入口/模型核验后才确定文生或参考节点。每个母镜独立节点，源镜号、完整稿、入/出态、对白音轨与设计帧窗一起交接。超出真实单次时长上限时仅提出同镜连续延展/首尾状态匹配实验，保持原母镜及总预算；不可静默切成新镜。失败先查询任务ID，禁止重复消费。本包不提交生成、不声称账号/模型或参数已验证。",
+    "libtv": "按同一母稿建立角色候选、场景候选、分镜文本、音轨与结果占位节点；母镜号保持一致并保留来源hash。采用窗由真实输出校准，不把文字节点当已生成视频。现有画布/节点ID、端口连接、入口参数与真实时长能力均未核验；不能猜写API字段。G6通过后再由真实素材接入剪辑。",
+    "unknowns": [
+      "当前平台真实账号/模型/额度与单次时长、分辨率、输入参数未核验",
+      "所有角色图/首帧/镜头视频/声音仍未生成或未实测",
+      "设计帧窗不等于真人读演、口型或rough cut验收"
+    ]
+  }
+}

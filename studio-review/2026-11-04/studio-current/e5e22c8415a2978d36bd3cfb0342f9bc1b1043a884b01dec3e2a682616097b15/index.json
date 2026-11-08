@@ -1,0 +1,63 @@
+{
+  "topic": "X007",
+  "title": "无字道帖",
+  "projectId": "e5e22c8415a2978d36bd3cfb0342f9bc1b1043a884b01dec3e2a682616097b15",
+  "currentRevision": null,
+  "source": "browser UI DOM",
+  "documents": [
+    {
+      "documentId": "694ba7be2edc2f5e517ef8d7719bb5af28c4ae0a470e441aa5d59e490912fbef",
+      "meta": "提示词",
+      "title": "X007 无字道帖｜审阅与来源｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "cf70b99a3616a4094352b158671efde89dcd3bb0092a947b97414b487d7eea8c",
+      "utf8Bytes": 1773,
+      "readAt": "2026-11-04T06:50:49.665Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts",
+      "file": "694ba7be2edc2f5e517ef8d7719bb5af28c4ae0a470e441aa5d59e490912fbef.md",
+      "proposals": {
+        "readAt": "2026-11-04T06:50:50.521Z",
+        "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#review",
+        "visibleText": "Agent 协作审阅\n当前文档提案\nX007 无字道帖｜审阅与来源｜20261031审阅版 · 0 项提案\n回到剧本\n暂无待审阅提案\n\n在剧本编辑器提交候选。\n\n进入剧本",
+        "bodies": []
+      }
+    },
+    {
+      "documentId": "c37ccb2eb1656def36b754b7677254d8f5429d8ba3bf9e31ec85ac6ac47e6024",
+      "meta": "提示词",
+      "title": "X007 无字道帖｜分镜与视频提示｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "198b2a7bb6fa8daf4f95d2653b54f7669b5cc09955fae8b4f49e0f0b65ff6090",
+      "utf8Bytes": 16105,
+      "readAt": "2026-11-04T06:50:56.833Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts",
+      "file": "c37ccb2eb1656def36b754b7677254d8f5429d8ba3bf9e31ec85ac6ac47e6024.md",
+      "proposals": {
+        "readAt": "2026-11-04T06:50:57.790Z",
+        "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#review",
+        "visibleText": "Agent 协作审阅\n当前文档提案\nX007 无字道帖｜分镜与视频提示｜20261031审阅版 · 0 项提案\n回到剧本\n暂无待审阅提案\n\n在剧本编辑器提交候选。\n\n进入剧本",
+        "bodies": []
+      }
+    },
+    {
+      "documentId": "0997e5c3cf3ec8e8cea25d618d156f5dc58f165fb003c1dcd043b8edc33abb16",
+      "meta": "剧本",
+      "title": "X007 无字道帖｜剧本｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "170bdb31b8fba65413765c66c83044376366aeb3835c91b58d631bb6de80e920",
+      "utf8Bytes": 2915,
+      "readAt": "2026-11-04T06:51:05.050Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts",
+      "file": "0997e5c3cf3ec8e8cea25d618d156f5dc58f165fb003c1dcd043b8edc33abb16.md",
+      "proposals": {
+        "readAt": "2026-11-04T06:51:06.013Z",
+        "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#review",
+        "visibleText": "Agent 协作审阅\n当前文档提案\nX007 无字道帖｜剧本｜20261031审阅版 · 0 项提案\n回到剧本\n暂无待审阅提案\n\n在剧本编辑器提交候选。\n\n进入剧本",
+        "bodies": []
+      }
+    }
+  ],
+  "exportComplete": true,
+  "exportDocumentCount": 3,
+  "exportCompletenessBasis": "UI directory inventory equals every document edit/readback; 22-project export completed before this annotation"
+}

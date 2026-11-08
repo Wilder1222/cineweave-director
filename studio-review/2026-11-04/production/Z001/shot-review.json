@@ -1,0 +1,820 @@
+{
+  "source": {
+    "type": "design",
+    "id": "Z001-production-r1",
+    "version": 1,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "01",
+    "02-A",
+    "02-B",
+    "02-C",
+    "03",
+    "04",
+    "05"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "01",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：五年同行与五年病居同镜形成反证",
+      "observation": "五年同行与五年病居同镜形成反证。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L7–L26"
+    },
+    {
+      "role": "performance",
+      "shotId": "01",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：王宙先陈述再承受父亲否认",
+      "observation": "王宙先陈述再承受父亲否认。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L7–L26"
+    },
+    {
+      "role": "staging",
+      "shotId": "01",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：跪位与父亲对面留外门通路",
+      "observation": "跪位与父亲对面留外门通路。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L7–L26"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "01",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：脸至父亲转焦有明确否认刺激",
+      "observation": "脸至父亲转焦有明确否认刺激。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L7–L26"
+    },
+    {
+      "role": "prompt",
+      "shotId": "01",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：只三人信息且孩子仅转述",
+      "observation": "只三人信息且孩子仅转述。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L7–L26"
+    },
+    {
+      "role": "continuity",
+      "shotId": "01",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：湿衣仍在王宙身上未变船上倩娘",
+      "observation": "湿衣仍在王宙身上未变船上倩娘。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L7–L26"
+    },
+    {
+      "role": "direction",
+      "shotId": "02-A",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：查证被交办而结果仍未出现",
+      "observation": "查证被交办而结果仍未出现。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L27–L46"
+    },
+    {
+      "role": "performance",
+      "shotId": "02-A",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：张镒向门外清楚短令不等回复",
+      "observation": "张镒向门外清楚短令不等回复。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L27–L46"
+    },
+    {
+      "role": "staging",
+      "shotId": "02-A",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：两人留屋，画外传话不增演员",
+      "observation": "两人留屋，画外传话不增演员。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L27–L46"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "02-A",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：焦点门下空位预留回报落点",
+      "observation": "焦点门下空位预留回报落点。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L27–L46"
+    },
+    {
+      "role": "prompt",
+      "shotId": "02-A",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：原传话只一句无画外答腔",
+      "observation": "原传话只一句无画外答腔。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L27–L46"
+    },
+    {
+      "role": "continuity",
+      "shotId": "02-A",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：8秒不装下查船往返",
+      "observation": "8秒不装下查船往返。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L27–L46"
+    },
+    {
+      "role": "direction",
+      "shotId": "02-B",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：纸只支持船上有人不证明身份",
+      "observation": "纸只支持船上有人不证明身份。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L47–L66"
+    },
+    {
+      "role": "performance",
+      "shotId": "02-B",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：父亲读纸后才问房里是谁",
+      "observation": "父亲读纸后才问房里是谁。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L47–L66"
+    },
+    {
+      "role": "staging",
+      "shotId": "02-B",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：王宙拾纸递父亲后松手",
+      "observation": "王宙拾纸递父亲后松手。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L47–L66"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "02-B",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：门下至读纸反应在既有画域",
+      "observation": "门下至读纸反应在既有画域。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L47–L66"
+    },
+    {
+      "role": "prompt",
+      "shotId": "02-B",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：纸字后排不读成新人物台词",
+      "observation": "纸字后排不读成新人物台词。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L47–L66"
+    },
+    {
+      "role": "continuity",
+      "shotId": "02-B",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：纸归父亲且省略已查船时间",
+      "observation": "纸归父亲且省略已查船时间。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L47–L66"
+    },
+    {
+      "role": "direction",
+      "shotId": "02-C",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：病中同意见面不替代船上同意",
+      "observation": "病中同意见面不替代船上同意。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L67–L86"
+    },
+    {
+      "role": "performance",
+      "shotId": "02-C",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：王宙答去问且不能强求",
+      "observation": "王宙答去问且不能强求。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L67–L86"
+    },
+    {
+      "role": "staging",
+      "shotId": "02-C",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：父亲回内室与王宙出外门分路",
+      "observation": "父亲回内室与王宙出外门分路。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L67–L86"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "02-C",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：离场才转焦，不提前见船",
+      "observation": "离场才转焦，不提前见船。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L67–L86"
+    },
+    {
+      "role": "prompt",
+      "shotId": "02-C",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：未拍问话由父亲准确转述",
+      "observation": "未拍问话由父亲准确转述。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L67–L86"
+    },
+    {
+      "role": "continuity",
+      "shotId": "02-C",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：03前另省略接人与返家",
+      "observation": "03前另省略接人与返家。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L67–L86"
+    },
+    {
+      "role": "direction",
+      "shotId": "03",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：两身分别叙述需求，未分真假",
+      "observation": "两身分别叙述需求，未分真假。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L87–L106"
+    },
+    {
+      "role": "performance",
+      "shotId": "03",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：病中起身有试探而船上惦孩子",
+      "observation": "病中起身有试探而船上惦孩子。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L87–L106"
+    },
+    {
+      "role": "staging",
+      "shotId": "03",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：床至门通道补齐且王宙不堵路",
+      "observation": "床至门通道补齐且王宙不堵路。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L87–L106"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "03",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：新床门轴先建立才看两身",
+      "observation": "新床门轴先建立才看两身。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L87–L106"
+    },
+    {
+      "role": "prompt",
+      "shotId": "03",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：同演员双身由服装和位置区分",
+      "observation": "同演员双身由服装和位置区分。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L87–L106"
+    },
+    {
+      "role": "continuity",
+      "shotId": "03",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：室中洁衣与船上泥袖青线不串",
+      "observation": "室中洁衣与船上泥袖青线不串。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L87–L106"
+    },
+    {
+      "role": "direction",
+      "shotId": "04",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：允许接触先于合一且两种经历保留",
+      "observation": "允许接触先于合一且两种经历保留。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L107–L126"
+    },
+    {
+      "role": "performance",
+      "shotId": "04",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：问能碰吗和回答能各给接收",
+      "observation": "问能碰吗和回答能各给接收。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L107–L126"
+    },
+    {
+      "role": "staging",
+      "shotId": "04",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：左手门框与右指接触分工明确",
+      "observation": "左手门框与右指接触分工明确。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L107–L126"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "04",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：固定合成位先手后衣层可核",
+      "observation": "固定合成位先手后衣层可核。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L107–L126"
+    },
+    {
+      "role": "prompt",
+      "shotId": "04",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：合一不增加光爆遮手或第三身",
+      "observation": "合一不增加光爆遮手或第三身。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L107–L126"
+    },
+    {
+      "role": "continuity",
+      "shotId": "04",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：合一后的青线右指泥袖叠衣保留",
+      "observation": "合一后的青线右指泥袖叠衣保留。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L107–L126"
+    },
+    {
+      "role": "direction",
+      "shotId": "05",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：父亲认错仍不占有她的答复",
+      "observation": "父亲认错仍不占有她的答复。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L127–L146"
+    },
+    {
+      "role": "performance",
+      "shotId": "05",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：缓一缓后她主动握而王宙等",
+      "observation": "缓一缓后她主动握而王宙等。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L127–L146"
+    },
+    {
+      "role": "staging",
+      "shotId": "05",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：左手离框再握王宙，右青线不换",
+      "observation": "左手离框再握王宙，右青线不换。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L127–L146"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "05",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：固定门侧容三人出画不跟飞",
+      "observation": "固定门侧容三人出画不跟飞。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L127–L146"
+    },
+    {
+      "role": "prompt",
+      "shotId": "05",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：别替我说仍由她自己说出",
+      "observation": "别替我说仍由她自己说出。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L127–L146"
+    },
+    {
+      "role": "continuity",
+      "shotId": "05",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：末态出门去接孩子而非孩子到场",
+      "observation": "末态出门去接孩子而非孩子到场。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "369f9ac54777a7a72f45d0cd587a1e95031bbd51d2cfcda556a2b859c5b28702:L127–L146"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "01",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "两种五年经历互相冲突。",
+        "audiencePayoff": "两种五年经历互相冲突。",
+        "trigger": "王宙说出同行和孩子。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在桌前侧平视，让王宙说出同行和孩子触发人物而非相机移动，保持两种五年经历互相冲突的空间参照。理由：让观众读出两种五年经历互相冲突；不改变人物既定行动。",
+        "focusTargetEnd": "张镒的脸",
+        "exitMatch": "父亲已听见船上孩子，两人未验证。"
+      },
+      "camera": {
+        "shotScale": "双人中景",
+        "position": "桌前侧平视",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "两种五年经历互相冲突。",
+        "focusTarget": "王宙的脸",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "堂屋桌前南侧、内室门西南侧，分别建立堂屋人物轴与床门轴",
+        "movementIntent": "固定在桌前侧平视，让王宙说出同行和孩子触发人物而非相机移动，保持两种五年经历互相冲突的空间参照。理由：让观众读出两种五年经历互相冲突；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "同一王宙湿衣下摆局部",
+        "midground": "跪着的王宙和张镒",
+        "background": "内室帘",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "王宙湿衣下摆 → 在场人物的接收/反应 → 内室帘"
+      },
+      "temporal": {
+        "durationSeconds": 30,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "两种五年经历互相冲突。",
+          "path": "固定在桌前侧平视，让王宙说出同行和孩子触发人物而非相机移动，保持两种五年经历互相冲突的空间参照。理由：让观众读出两种五年经历互相冲突；不改变人物既定行动。",
+          "start": "机位固定于：桌前侧平视",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：桌前侧平视",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "01-F1",
+            "timeSeconds": 0,
+            "description": "王宙的脸"
+          },
+          {
+            "eventId": "01-F2",
+            "timeSeconds": 15,
+            "description": "张镒的脸"
+          }
+        ],
+        "edit": {
+          "entry": "王宙独自跪堂屋，张镒面对他。",
+          "exit": "父亲已听见船上孩子，两人未验证。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "白日堂屋/内室只有衣料、脚步、纸滑门下及原对白；传话对象、孩子和船家均无可辨人声。合一仅用既定合成声设计，不加守卫或羊铃。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "02-A",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "查证船上来客而不惊动孩子。",
+        "audiencePayoff": "查证船上来客而不惊动孩子。",
+        "trigger": "张镒朝门外传话。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在外门内侧平视，让张镒朝门外传话触发人物而非相机移动，保持查证船上来客而不惊动孩子的空间参照。理由：让观众读出查证船上来客而不惊动孩子；不改变人物既定行动。",
+        "focusTargetEnd": "门下空地",
+        "exitMatch": "传话说完，两人留堂屋；省略查船往返。"
+      },
+      "camera": {
+        "shotScale": "门侧中景",
+        "position": "外门内侧平视",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "查证船上来客而不惊动孩子。",
+        "focusTarget": "张镒",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "堂屋桌前南侧、内室门西南侧，分别建立堂屋人物轴与床门轴",
+        "movementIntent": "固定在外门内侧平视，让张镒朝门外传话触发人物而非相机移动，保持查证船上来客而不惊动孩子的空间参照。理由：让观众读出查证船上来客而不惊动孩子；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "门槛空地",
+        "midground": "朝外说话的张镒和王宙",
+        "background": "内室门",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "空门槛 → 在场人物的接收/反应 → 内室门"
+      },
+      "temporal": {
+        "durationSeconds": 8,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "查证船上来客而不惊动孩子。",
+          "path": "固定在外门内侧平视，让张镒朝门外传话触发人物而非相机移动，保持查证船上来客而不惊动孩子的空间参照。理由：让观众读出查证船上来客而不惊动孩子；不改变人物既定行动。",
+          "start": "机位固定于：外门内侧平视",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：外门内侧平视",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "02-A-F1",
+            "timeSeconds": 0,
+            "description": "张镒"
+          },
+          {
+            "eventId": "02-A-F2",
+            "timeSeconds": 7,
+            "description": "门下空地"
+          }
+        ],
+        "edit": {
+          "entry": "父亲已听见船上孩子，两人未验证。",
+          "exit": "传话说完，两人留堂屋；省略查船往返。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "白日堂屋/内室只有衣料、脚步、纸滑门下及原对白；传话对象、孩子和船家均无可辨人声。合一仅用既定合成声设计，不加守卫或羊铃。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "02-B",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "回报支持船上有人，但仍需问室中意愿。",
+        "audiencePayoff": "回报支持船上有人，但仍需问室中意愿。",
+        "trigger": "纸滑入后王宙才捡。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在沿02-A同侧，让纸滑入后王宙才捡触发人物而非相机移动，保持回报支持船上有人，但仍需问室中意愿的空间参照。理由：让观众读出回报支持船上有人，但仍需问室中意愿；不改变人物既定行动。",
+        "focusTargetEnd": "父亲读纸的反应",
+        "exitMatch": "纸归张镒，父亲进入内室；省略问话。"
+      },
+      "camera": {
+        "shotScale": "门侧近中景",
+        "position": "沿02-A同侧",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "回报支持船上有人，但仍需问室中意愿。",
+        "focusTarget": "回报纸",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "堂屋桌前南侧、内室门西南侧，分别建立堂屋人物轴与床门轴",
+        "movementIntent": "固定在沿02-A同侧，让纸滑入后王宙才捡触发人物而非相机移动，保持回报支持船上有人，但仍需问室中意愿的空间参照。理由：让观众读出回报支持船上有人，但仍需问室中意愿；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "门下纸及拾纸手",
+        "midground": "王宙向张镒递纸",
+        "background": "内室门",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "滑入回报纸 → 在场人物的接收/反应 → 内室门"
+      },
+      "temporal": {
+        "durationSeconds": 20,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "回报支持船上有人，但仍需问室中意愿。",
+          "path": "固定在沿02-A同侧，让纸滑入后王宙才捡触发人物而非相机移动，保持回报支持船上有人，但仍需问室中意愿的空间参照。理由：让观众读出回报支持船上有人，但仍需问室中意愿；不改变人物既定行动。",
+          "start": "机位固定于：沿02-A同侧",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：沿02-A同侧",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "02-B-F1",
+            "timeSeconds": 0,
+            "description": "回报纸"
+          },
+          {
+            "eventId": "02-B-F2",
+            "timeSeconds": 7,
+            "description": "父亲读纸的反应"
+          }
+        ],
+        "edit": {
+          "entry": "时间省略：查船完成后，张镒王宙仍在堂屋，回报纸将从门下滑入。",
+          "exit": "纸归张镒，父亲进入内室；省略问话。",
+          "preferredTransition": "明确时间省略，先重建入态，保留环境声的时空边界",
+          "soundBridge": "白日堂屋/内室只有衣料、脚步、纸滑门下及原对白；传话对象、孩子和船家均无可辨人声。合一仅用既定合成声设计，不加守卫或羊铃。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "02-C",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "双方意愿应分别取得。",
+        "audiencePayoff": "双方意愿应分别取得。",
+        "trigger": "父亲回来转述意愿。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在堂屋观察侧平视，让父亲回来转述意愿触发人物而非相机移动，保持双方意愿应分别取得的空间参照。理由：让观众读出双方意愿应分别取得；不改变人物既定行动。",
+        "focusTargetEnd": "王宙离场去问的动作",
+        "exitMatch": "王宙去船边问并接人、张镒回内室；省略往返。"
+      },
+      "camera": {
+        "shotScale": "双人中景",
+        "position": "堂屋观察侧平视",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "双方意愿应分别取得。",
+        "focusTarget": "张镒回话",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "堂屋桌前南侧、内室门西南侧，分别建立堂屋人物轴与床门轴",
+        "movementIntent": "固定在堂屋观察侧平视，让父亲回来转述意愿触发人物而非相机移动，保持双方意愿应分别取得的空间参照。理由：让观众读出双方意愿应分别取得；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "张镒持回报纸",
+        "midground": "张镒与王宙",
+        "background": "内室门",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "堂屋两人问答 → 在场人物的接收/反应 → 外门方向"
+      },
+      "temporal": {
+        "durationSeconds": 18,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "双方意愿应分别取得。",
+          "path": "固定在堂屋观察侧平视，让父亲回来转述意愿触发人物而非相机移动，保持双方意愿应分别取得的空间参照。理由：让观众读出双方意愿应分别取得；不改变人物既定行动。",
+          "start": "机位固定于：堂屋观察侧平视",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：堂屋观察侧平视",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "02-C-F1",
+            "timeSeconds": 0,
+            "description": "张镒回话"
+          },
+          {
+            "eventId": "02-C-F2",
+            "timeSeconds": 12,
+            "description": "王宙离场去问的动作"
+          }
+        ],
+        "edit": {
+          "entry": "时间省略：张镒已去内室问完意愿，现在回堂屋向王宙转述。",
+          "exit": "王宙去船边问并接人、张镒回内室；省略往返。",
+          "preferredTransition": "明确时间省略，先重建入态，保留环境声的时空边界",
+          "soundBridge": "白日堂屋/内室只有衣料、脚步、纸滑门下及原对白；传话对象、孩子和船家均无可辨人声。合一仅用既定合成声设计，不加守卫或羊铃。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "03",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "两段生活均是主体。",
+        "audiencePayoff": "两段生活均是主体。",
+        "trigger": "船上倩娘到门主动说明来意。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在内室门侧平视重新建立床门轴，让船上倩娘到门主动说明来意触发人物而非相机移动，保持两段生活均是主体的空间参照。理由：让观众读出两段生活均是主体；不改变人物既定行动。",
+        "focusTargetEnd": "两身不同姿态",
+        "exitMatch": "室中倩娘扶床起，两身愿意相见。"
+      },
+      "camera": {
+        "shotScale": "门侧中景",
+        "position": "内室门侧平视重新建立床门轴",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "两段生活均是主体。",
+        "focusTarget": "青线泥袖",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "堂屋桌前南侧、内室门西南侧，分别建立堂屋人物轴与床门轴",
+        "movementIntent": "固定在内室门侧平视重新建立床门轴，让船上倩娘到门主动说明来意触发人物而非相机移动，保持两段生活均是主体的空间参照。理由：让观众读出两段生活均是主体；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "泥袖青线",
+        "midground": "船上倩娘和王宙",
+        "background": "病榻倩娘与张镒",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "泥袖青线 → 在场人物的接收/反应 → 床至门通道"
+      },
+      "temporal": {
+        "durationSeconds": 36,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "两段生活均是主体。",
+          "path": "固定在内室门侧平视重新建立床门轴，让船上倩娘到门主动说明来意触发人物而非相机移动，保持两段生活均是主体的空间参照。理由：让观众读出两段生活均是主体；不改变人物既定行动。",
+          "start": "机位固定于：内室门侧平视重新建立床门轴",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：内室门侧平视重新建立床门轴",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "03-F1",
+            "timeSeconds": 0,
+            "description": "青线泥袖"
+          },
+          {
+            "eventId": "03-F2",
+            "timeSeconds": 18,
+            "description": "两身不同姿态"
+          }
+        ],
+        "edit": {
+          "entry": "省略去船询问与回返；王宙引自愿来的船上倩娘到门。",
+          "exit": "室中倩娘扶床起，两身愿意相见。",
+          "preferredTransition": "明确时间省略，先重建入态，保留环境声的时空边界",
+          "soundBridge": "白日堂屋/内室只有衣料、脚步、纸滑门下及原对白；传话对象、孩子和船家均无可辨人声。合一仅用既定合成声设计，不加守卫或羊铃。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "04",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "允许接触才合一且不抹除经历。",
+        "audiencePayoff": "允许接触才合一且不抹除经历。",
+        "trigger": "回答能后双方靠近。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在内室门侧固定合成位，让回答能后双方靠近触发人物而非相机移动，保持允许接触才合一且不抹除经历的空间参照。理由：让观众读出允许接触才合一且不抹除经历；不改变人物既定行动。",
+        "focusTargetEnd": "叠衣泥袖青线",
+        "exitMatch": "一身倩娘闭眼扶门，叠衣泥袖青线均保留。"
+      },
+      "camera": {
+        "shotScale": "中近景",
+        "position": "内室门侧固定合成位",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "允许接触才合一且不抹除经历。",
+        "focusTarget": "指尖",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "堂屋桌前南侧、内室门西南侧，分别建立堂屋人物轴与床门轴",
+        "movementIntent": "固定在内室门侧固定合成位，让回答能后双方靠近触发人物而非相机移动，保持允许接触才合一且不抹除经历的空间参照。理由：让观众读出允许接触才合一且不抹除经历；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "靠近的双手",
+        "midground": "两身倩娘与门框",
+        "background": "王宙张镒",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "指尖接触与叠衣 → 在场人物的接收/反应 → 固定门框"
+      },
+      "temporal": {
+        "durationSeconds": 35,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "允许接触才合一且不抹除经历。",
+          "path": "固定在内室门侧固定合成位，让回答能后双方靠近触发人物而非相机移动，保持允许接触才合一且不抹除经历的空间参照。理由：让观众读出允许接触才合一且不抹除经历；不改变人物既定行动。",
+          "start": "机位固定于：内室门侧固定合成位",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：内室门侧固定合成位",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "04-F1",
+            "timeSeconds": 0,
+            "description": "指尖"
+          },
+          {
+            "eventId": "04-F2",
+            "timeSeconds": 28,
+            "description": "叠衣泥袖青线"
+          }
+        ],
+        "edit": {
+          "entry": "室中倩娘扶床起，两身愿意相见。",
+          "exit": "一身倩娘闭眼扶门，叠衣泥袖青线均保留。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "白日堂屋/内室只有衣料、脚步、纸滑门下及原对白；传话对象、孩子和船家均无可辨人声。合一仅用既定合成声设计，不加守卫或羊铃。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "05",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "承认错误仍需她选择。",
+        "audiencePayoff": "承认错误仍需她选择。",
+        "trigger": "父亲询问后她答并缓息。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在同一门侧平视，让父亲询问后她答并缓息触发人物而非相机移动，保持承认错误仍需她选择的空间参照。理由：让观众读出承认错误仍需她选择；不改变人物既定行动。",
+        "focusTargetEnd": "她主动握王宙的手",
+        "exitMatch": "三人走出，孩子未出镜、两段记忆完整性未知。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "同一门侧平视",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "承认错误仍需她选择。",
+        "focusTarget": "倩娘站稳",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "堂屋桌前南侧、内室门西南侧，分别建立堂屋人物轴与床门轴",
+        "movementIntent": "固定在同一门侧平视，让父亲询问后她答并缓息触发人物而非相机移动，保持承认错误仍需她选择的空间参照。理由：让观众读出承认错误仍需她选择；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "青线与伸手",
+        "midground": "三人",
+        "background": "堂屋门",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "倩娘扶框与悬掌 → 在场人物的接收/反应 → 出门空位"
+      },
+      "temporal": {
+        "durationSeconds": 35,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "承认错误仍需她选择。",
+          "path": "固定在同一门侧平视，让父亲询问后她答并缓息触发人物而非相机移动，保持承认错误仍需她选择的空间参照。理由：让观众读出承认错误仍需她选择；不改变人物既定行动。",
+          "start": "机位固定于：同一门侧平视",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：同一门侧平视",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "05-F1",
+            "timeSeconds": 0,
+            "description": "倩娘站稳"
+          },
+          {
+            "eventId": "05-F2",
+            "timeSeconds": 24,
+            "description": "她主动握王宙的手"
+          }
+        ],
+        "edit": {
+          "entry": "一身倩娘闭眼扶门，叠衣泥袖青线均保留。",
+          "exit": "三人走出，孩子未出镜、两段记忆完整性未知。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "白日堂屋/内室只有衣料、脚步、纸滑门下及原对白；传话对象、孩子和船家均无可辨人声。合一仅用既定合成声设计，不加守卫或羊铃。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    }
+  ]
+}

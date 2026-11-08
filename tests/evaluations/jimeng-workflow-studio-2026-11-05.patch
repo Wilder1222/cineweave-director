@@ -1,0 +1,420 @@
+diff --git a/components/workspace/production-workspace.tsx b/components/workspace/production-workspace.tsx
+index 620f365..bd70453 100644
+--- a/components/workspace/production-workspace.tsx
++++ b/components/workspace/production-workspace.tsx
+@@ -7,9 +7,10 @@ import {NativeSelect} from '@/components/ui/native-select';
+ import {Checkbox} from '@/components/ui/checkbox';
+ import MarkdownContent from './markdown-content';
+ import DocumentEditor from './document-editor';
++import ProjectRelations from './project-relations';
+ import {ownerRequest,errorMessage,isKnownRejection} from './advanced-api';
+ import type {WorkspaceApi} from './api';
+-import type {Project,StoryItem,FeedbackHandler,ItemKind} from './model';
++import type {Project,StoryItem,FeedbackHandler,ItemKind,GraphData} from './model';
+ import {approvedScript,scenePin,mergeDocuments,handoffReadback,externalMatches,safeExternalUrl,persistHandoffRequest,handoffSelection} from './production-workspace-ux.mjs';
+ type Stage='story'|'storyboard'|'production'|'delivery';
+ interface Document {id:string;project_id:string;name:string;kind:string;current_revision:number;state?:string;body?:string;sha256?:string}
+@@ -17,10 +18,10 @@ interface External {revision:number;project_url:string|null;production_status:st
+ interface Handoff {id:string;project_id:string;manifest_sha256:string;stale:boolean;created_at:string;external:External|null;manifest:{script:{name:string;revision:number;body:string};target_platform:string;production?:{scenes:{scene:{id:string;version:number};title:string}[]};[key:string]:unknown}}
+ interface Summary {id:string;script_revision:number;created_at:string;target_platform:string}
+ interface Pending {key:string;input:Record<string,unknown>;id?:string;sha?:string}
+-interface Props {stage:Stage;api:WorkspaceApi;project:Project|null;items:StoryItem[];onError:(message:string)=>void;onNotice:FeedbackHandler;onDirty:(value:boolean)=>void;onBusy:(value:boolean)=>void;onSelect:(id:string)=>void;onCreateItem:(kind:ItemKind)=>void;onNavigate:(view:'novel'|'review'|'tasks')=>void;onAttempt:(action:()=>void)=>void}
++interface Props {stage:Stage;api:WorkspaceApi;project:Project|null;items:StoryItem[];graph:GraphData|null;onError:(message:string)=>void;onNotice:FeedbackHandler;onDirty:(value:boolean)=>void;onBusy:(value:boolean)=>void;onSelect:(id:string)=>void;onCreateItem:(kind:ItemKind)=>void;onNavigate:(view:'novel'|'review'|'tasks'|'production')=>void;onAttempt:(action:()=>void)=>void}
+ const esc=encodeURIComponent;
+ /** Existing immutable handoff + manual external tracking. No media generation or editing. */
+-export default function ProductionWorkspace({stage,api,project,items,onError,onNotice,onDirty,onBusy,onSelect,onCreateItem,onNavigate,onAttempt}:Props){
++export default function ProductionWorkspace({stage,api,project,items,graph,onError,onNotice,onDirty,onBusy,onSelect,onCreateItem,onNavigate,onAttempt}:Props){
+  const pid=project?.id||'',scope='cw-handoff-pending:'+pid;
+  const [mode,setMode]=useState<'create'|'record'>('create');
+  const [documents,setDocuments]=useState<Document[]>([]),[document,setDocument]=useState<Document|null>(null),[documentId,setDocumentId]=useState(''),[selected,setSelected]=useState<string[]>([]),[platform,setPlatform]=useState('libtv'),[handoffScope,setHandoffScope]=useState('materials'),[handoffs,setHandoffs]=useState<Summary[]>([]),[handoff,setHandoff]=useState<Handoff|null>(null),[busy,setBusy]=useState(false),[loading,setLoading]=useState(false),[error,setError]=useState(''),[pending,setPending]=useState<Pending|null>(null),[externalPending,setExternalPending]=useState<Record<string,unknown>|null>(null),[url,setUrl]=useState(''),[status,setStatus]=useState('not_started'),[notes,setNotes]=useState(''),[director,setDirector]=useState<unknown>(null),[directorScene,setDirectorScene]=useState(''),[documentKind,setDocumentKind]=useState('all');
+@@ -45,6 +46,7 @@ export default function ProductionWorkspace({stage,api,project,items,onError,onN
+  async function saveExternal(){if(!handoff||externalPending)return;const input={expected_revision:handoff.external?.revision||0,project_url:url?(safeExternalUrl(url)||url):null,production_status:status,notes:notes.trim()};setExternalPending(input);let committed=false;try{await ownerRequest(`/api/studio/handoffs/${esc(handoff.id)}/external`,'PATCH',input);committed=true;await checkExternal(input);}catch(e){if(!committed&&isKnownRejection(e))setExternalPending(null);throw e;}}
+  if(!project)return <section className="cw-module-empty">先选择作品。</section>;
+  return <section className="cw-module"><header className="cw-module-toolbar"><Button variant="ghost" disabled={busy||loading} onClick={()=>onAttempt(()=>void load())}>刷新</Button></header>{error&&<p role="alert" className="cw-warning">{error}</p>}{loading&&<p role="status">正在读取作品资料…</p>}
++ <ProjectRelations key={pid} projectId={pid} graph={graph} handoff={handoff} onSelect={onSelect} onAttempt={onAttempt} onProduction={stage==='production'?undefined:()=>onNavigate('production')}/>
+  {stage==='story'&&<section className="cw-writing-actions" aria-label="开始创作"><div className="cw-writing-primary">{project.kind==='long_form'?<Button variant="outline" onClick={()=>onCreateItem('chapter')}>新建小说章节</Button>:project.kind==='daily'?null:<Button variant="outline" onClick={()=>onCreateItem('scene')}>新建剧本场次</Button>}</div><details><summary>更多创作工具</summary><div className="cw-writing-primary"><Button variant="ghost" onClick={()=>onCreateItem('outline')}>新建大纲</Button>{project.kind!=='long_form'&&<Button variant="ghost" onClick={()=>onCreateItem('chapter')}>新建小说章节</Button>}{project.kind==='long_form'||project.kind==='daily'?<Button variant="ghost" onClick={()=>onCreateItem('scene')}>新建剧本场次</Button>:null}<Button variant="ghost" onClick={()=>onNavigate('novel')}>小说与大纲</Button><Button variant="ghost" onClick={()=>onNavigate('tasks')}>写作任务</Button><Button variant="ghost" onClick={()=>onNavigate('review')}>故事候选审阅</Button></div></details></section>}
+  {stage==='story'&&<DocumentEditor key={project.id} project={project} onError={onError} onNotice={onNotice} onDirty={onDirty} onBusy={onBusy} onAttempt={onAttempt}/>}
+  {stage==='story'&&(scenes.length>0||project.kind!=='daily')&&<section><h3>已采纳场次</h3>{scenes.map(scene=><Button key={scene.id} variant="record" onClick={()=>onSelect(scene.id)}>{scene.content.title} · 打开场次</Button>)}{!scenes.length&&project.kind!=='daily'&&<p>还没有已采纳的场次。</p>}</section>}
+diff --git a/components/workspace/project-relations.css b/components/workspace/project-relations.css
+new file mode 100644
+index 0000000..31d49c2
+--- /dev/null
++++ b/components/workspace/project-relations.css
+@@ -0,0 +1,15 @@
++.cw-theme .cw-project-relations{margin-block:20px;border-block:1px solid var(--border);padding-block:4px}
++.cw-project-relations>section{padding-block:4px 20px;min-width:0}
++.cw-project-relations-tools{display:grid;grid-template-columns:minmax(140px,1fr) minmax(0,3fr);gap:16px;margin-block:20px}
++.cw-project-relations-tools label{display:flex;flex-direction:column;gap:8px;font-size:14px}
++.cw-project-relations-record>header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-block:20px}
++.cw-project-relations-record h3{font-size:16px;line-height:1.5;overflow-wrap:anywhere}
++.cw-project-relations h4{font-size:14px;line-height:1.6;margin-block:20px 8px}
++.cw-project-relations p{font-size:14px;line-height:1.7;max-width:75ch;overflow-wrap:anywhere}
++.cw-project-relations code{font-size:13px;overflow-wrap:anywhere;word-break:break-all}
++.cw-project-relations-list,.cw-project-relations-assets ul{padding:0;list-style:none}
++.cw-project-relations-list>li,.cw-project-relations-assets li{padding-block:12px;border-block-end:1px solid var(--border)}
++.cw-project-relations-list>li>div{display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px;font-size:14px;min-width:0}
++.cw-project-relations-list [data-slot=button]{white-space:normal;text-align:start;height:auto;overflow-wrap:anywhere}
++.cw-project-relations-assets{margin-block-start:24px}
++@media(max-width:767px){.cw-project-relations-tools{grid-template-columns:minmax(0,1fr)}.cw-project-relations-record>header{align-items:flex-start;flex-direction:column}.cw-project-relations-list>li>div{align-items:flex-start;flex-direction:column}}
+diff --git a/components/workspace/project-relations.d.mts b/components/workspace/project-relations.d.mts
+new file mode 100644
+index 0000000..e5ca772
+--- /dev/null
++++ b/components/workspace/project-relations.d.mts
+@@ -0,0 +1,6 @@
++export interface RelationRecord {id:string;kind:string;title:string;version:number;status:string;needsReview:boolean;age:string;time:string;validFrom:string|number|null;validTo:string|number|null}
++export interface RelationEdge {from:string;to:string;label:string;state:string;version:number|null;sha256:string}
++export interface ExternalRelation {owner:string;kind:'actor'|'look'|'document';id:string;label:string;revision:number|null;profileVersion?:string;actorId?:string;lookbookId?:string;lookbookRevision?:number|null}
++export interface RelationAsset {id:string;uses:{usage:string;targetId:string}[]}
++export interface RelationProjection {available:boolean;reason?:string;canonRevision?:number|null;records:RelationRecord[];edges:RelationEdge[];external:ExternalRelation[];assets:RelationAsset[];assetScope:string;notices:string[];gaps:string[]}
++export function projectRelations(projectId:string,graph:unknown,handoff?:unknown):RelationProjection;
+diff --git a/components/workspace/project-relations.mjs b/components/workspace/project-relations.mjs
+new file mode 100644
+index 0000000..c29de2d
+--- /dev/null
++++ b/components/workspace/project-relations.mjs
+@@ -0,0 +1,76 @@
++const object = value => value && typeof value === 'object' && !Array.isArray(value) ? value : {};
++const text = value => typeof value === 'string' ? value : '';
++const list = value => Array.isArray(value) ? value : [];
++const kinds = new Set(['character', 'instance', 'scene', 'casting', 'appearance', 'chapter', 'adaptation', 'outline', 'event', 'relation', 'simulation', 'knowledge', 'review', 'review_policy']);
++const hash = value => typeof value === 'string' && /^[a-f0-9]{64}$/.test(value);
++
++/** A reading projection of an already-authorized main/main author graph. No I/O,
++ * content parsing, adoption, rebase, guessed episodes or inferred asset ownership. */
++export function projectRelations(projectId, graph, handoff = null) {
++  const empty = { available: false, records: [], edges: [], external: [], assets: [], assetScope: 'not_loaded', notices: [], gaps: ['分集关系尚未结构化', '逐镜关系尚未结构化'] };
++  if (!projectId || graph?.project_id !== projectId || graph?.perspective !== 'author' || !Array.isArray(graph?.nodes)) {
++    return { ...empty, reason: '当前作品的作者快照尚未确认，请重新读取工作区。' };
++  }
++  const eligible = graph.nodes.filter(node => node && text(node.id) && kinds.has(node.kind) && !node.archived && node.project_id === projectId && node.branch === 'main' && node.timeline === 'main' && Number.isSafeInteger(node.version) && node.version > 0 && node.content && typeof node.content === 'object');
++  const duplicates = new Set(eligible.filter((node, index) => eligible.findIndex(other => other.id === node.id) !== index).map(node => node.id));
++  const nodes = eligible.filter(node => !duplicates.has(node.id));
++  const byId = new Map(nodes.map(node => [node.id, node]));
++  const records = nodes.map(node => ({ id: node.id, kind: node.kind, title: text(node.content.title) || '未命名记录', version: node.version, status: text(node.status), needsReview: list(node.needs_review).length > 0,
++    age: text(node.content.fields?.age), time: text(node.content.fields?.time_label), validFrom: node.content.valid_from ?? null, validTo: node.content.valid_to ?? null }));
++  const edges = [], external = [], seen = new Set();
++  function add(node, targetId, label, allowed = null, pin = null) {
++    if (!text(targetId)) return;
++    const target = byId.get(targetId), key = JSON.stringify([node.id, targetId, label, pin?.version, pin?.sha256]);
++    if (seen.has(key)) return; seen.add(key);
++    let state = !target ? 'not_loaded' : allowed && !allowed.includes(target.kind) ? 'kind_mismatch' : 'loaded';
++    if (state === 'loaded' && pin) {
++      if (!Number.isSafeInteger(pin.version) || pin.version < 1 || pin.kind === 'item' && !hash(pin.sha256)) state = 'pin_missing';
++      else if (target.version !== pin.version) state = 'version_mismatch';
++      else if (pin.sha256 && (!hash(pin.sha256) || target.sha256 !== pin.sha256)) state = 'hash_mismatch';
++    }
++    edges.push({ from: node.id, to: targetId, label, state, version: pin?.version ?? null, sha256: text(pin?.sha256) });
++  }
++  for (const node of nodes) {
++    const fields = object(node.content.fields), spec = object(node.content.spec);
++    if (node.kind === 'instance') add(node, fields.character_id, '所属角色', ['character']);
++    if (node.kind === 'scene') {
++      for (const id of list(spec.cast)) add(node, id, '出场状态', ['instance']);
++      add(node, spec.adaptation_id, '改编方案', ['adaptation']);
++    }
++    if (node.kind === 'casting') {
++      add(node, spec.character_id, '选角角色', ['character']);
++      if (text(spec.ip_id)) external.push({ owner: node.id, kind: 'actor', id: spec.ip_id, label: '演员 IP', revision: spec.identity_revision ?? null, profileVersion: text(spec.profile_version) });
++    }
++    if (node.kind === 'appearance') {
++      add(node, spec.casting_id, '使用选角', ['casting']);
++      add(node, spec.target_id, '适用状态／场次', ['instance', 'event', 'scene']);
++      if (text(spec.look_id)) external.push({ owner: node.id, kind: 'look', id: spec.look_id, actorId: text(spec.ip_id), label: '造型', revision: spec.look_revision ?? null, lookbookId: text(spec.lookbook_id), lookbookRevision: spec.lookbook_revision ?? null });
++    }
++    if (node.kind === 'chapter') { add(node, spec.outline_id, '章节大纲', ['outline']); add(node, spec.simulation_id, '角色推演', ['simulation']); }
++    if (node.kind === 'adaptation') add(node, spec.chapter_id, '改编来源章节', ['chapter']);
++    if (node.kind === 'event') for (const id of list(fields.participants)) add(node, id, '参与状态', ['instance']);
++    if (node.kind === 'relation') { add(node, fields.from_id, '关系起点'); add(node, fields.to_id, '关系终点'); }
++    for (const source of list(node.content.sources)) {
++      if (['item', 'story'].includes(source?.kind)) add(node, source.item_id, '来源版本', null, source);
++      if (source?.kind === 'document' && text(source.item_id)) external.push({ owner: node.id, kind: 'document', id: source.item_id, label: '来源文稿', revision: source.version ?? null });
++    }
++  }
++  const notices = [];
++  if (eligible.length !== graph.nodes.length) notices.push('部分记录不属于当前项目／分支、已归档或字段不完整，未展开。');
++  if (duplicates.size) notices.push('发现重复记录 ID，未选择其中任何版本。');
++  let assetScope = 'not_loaded', assets = [];
++  if (handoff) {
++    if (handoff.project_id !== projectId || handoff.manifest?.project?.id !== projectId) {
++      notices.push('已读取交接与当前作品不匹配，未展开其资产。'); assetScope = 'scope_mismatch';
++    } else if (handoff.manifest.production && (handoff.manifest.production.branch !== 'main' || handoff.manifest.production.timeline !== 'main')) {
++      notices.push('场次交接的分支／时间线不同或尚未确认，未与当前主线快照合并。'); assetScope = 'scope_mismatch';
++    } else {
++      assetScope = handoff.stale === true ? 'stale' : 'frozen';
++      const declared = [...list(handoff.manifest.assets).map(asset => ({ id: asset?.frame_asset_id, usage: text(asset?.usage), targetId: text(asset?.target_id) })), ...list(handoff.manifest.production?.assets).map(id => ({ id, usage: '场次冻结引用', targetId: '' }))];
++      const valid = declared.filter(asset => hash(asset.id));
++      if (valid.length !== declared.length) notices.push('部分交接资产引用格式不完整，未展开。');
++      assets = [...new Set(valid.map(asset => asset.id))].map(id => ({ id, uses: valid.filter(asset => asset.id === id).map(asset => ({ usage: asset.usage, targetId: asset.targetId })) }));
++    }
++  }
++  return { ...empty, available: true, reason: '', canonRevision: graph.canon_revision ?? null, records, edges, external, assets, assetScope, notices };
++}
+diff --git a/components/workspace/project-relations.tsx b/components/workspace/project-relations.tsx
+new file mode 100644
+index 0000000..0d07417
+--- /dev/null
++++ b/components/workspace/project-relations.tsx
+@@ -0,0 +1,34 @@
++'use client';
++import {useMemo,useState} from 'react';
++import {Button} from '@/components/ui/button';
++import {NativeSelect} from '@/components/ui/native-select';
++import {kindLabels,statusLabels,type GraphData,type ItemKind} from './model';
++import {projectRelations} from './project-relations.mjs';
++import './project-relations.css';
++
++interface Props {projectId:string;graph:GraphData|null;handoff?:unknown;onSelect(id:string):void;onAttempt(action:()=>void):void;onProduction?():void}
++const relationState:Record<string,string>={not_loaded:'未在当前快照展开',kind_mismatch:'引用类型需核对',pin_missing:'来源版本未记录',version_mismatch:'与当前显示版本不同',hash_mismatch:'来源内容需核对'};
++const label=(kind:string)=>kindLabels[kind as ItemKind]||kind;
++/** Ordinary record navigation over the existing graph. No writes or media controls. */
++export default function ProjectRelations({projectId,graph,handoff,onSelect,onAttempt,onProduction}:Props){
++ const [kind,setKind]=useState('all'),[chosen,setChosen]=useState('');
++ const data=useMemo(()=>projectRelations(projectId,graph,handoff),[projectId,graph,handoff]);
++ const records=data.records.filter(record=>kind==='all'||record.kind===kind);
++ const focus=records.find(record=>record.id===chosen)||records.find(record=>record.kind==='scene')||records[0];
++ const byId=new Map(data.records.map(record=>[record.id,record]));
++ const direct=focus?data.edges.filter(edge=>edge.from===focus.id||edge.to===focus.id):[];
++ const outside=focus?data.external.filter(source=>source.owner===focus.id):[];
++ const open=(href:string)=>onAttempt(()=>window.location.assign(href));
++ return <details className="cw-project-relations"><summary>项目关系查阅</summary><section aria-label="当前作品的已声明关系">
++ {!data.available?<p role="status">{data.reason}</p>:<>
++ <p className="cw-small-copy">{data.gaps.join('；')}。以下按已读取记录查阅，章节不等于集，场次不等于镜头。</p>
++ {data.notices.map(notice=><p key={notice} className="cw-warning">{notice}</p>)}
++ <div className="cw-project-relations-tools"><label>记录类型<NativeSelect value={kind} onChange={event=>{setKind(event.target.value);setChosen('');}}><option value="all">全部记录</option>{[...new Set(data.records.map(record=>record.kind))].map(value=><option key={value} value={value}>{label(value)}</option>)}</NativeSelect></label><label>选择原记录<NativeSelect value={focus?.id||''} disabled={!records.length} onChange={event=>setChosen(event.target.value)}>{!records.length&&<option value="">没有此类记录</option>}{records.map(record=><option key={record.id} value={record.id}>{label(record.kind)} · {record.title} · v{record.version} · {record.id.slice(0,8)}</option>)}</NativeSelect></label></div>
++ {focus?<article className="cw-project-relations-record"><header><div><h3>{focus.title}</h3><p>{label(focus.kind)} · v{focus.version} · {statusLabels[focus.status]||'状态未记录'}{focus.needsReview?' · 依赖需核对':''}</p></div><Button type="button" variant="outline" onClick={()=>onSelect(focus.id)}>打开原记录</Button></header>
++ {focus.kind==='instance'&&<p>年龄：{focus.age||'未记录'}；时期：{focus.time||'未记录'}；生效时点：{focus.validFrom??'未定'} 至 {focus.validTo??'未定'}。</p>}
++ <h4>直接关联</h4>{!direct.length&&!outside.length?<p>当前快照没有声明此记录的直接关联。</p>:<ul className="cw-project-relations-list">{direct.map((edge,index)=>{const incoming=edge.to===focus.id,other=byId.get(incoming?edge.from:edge.to);return <li key={JSON.stringify([edge.from,edge.to,edge.label,index])}><div><span>{incoming?'被引用为：':'引用：'}{edge.label}</span>{other?<Button type="button" variant="ghost" onClick={()=>{setKind('all');setChosen(other.id);onSelect(other.id);}}>{other.title} · {label(other.kind)} · v{other.version}</Button>:<code>{incoming?edge.from:edge.to}</code>}</div><p className="cw-small-copy">{edge.version!==null?`来源固定 v${edge.version}；`:''}{edge.state==='loaded'?'记录已展开；准确来源和全文见原记录。':relationState[edge.state]||'待核对'}</p></li>;})}{outside.map((source,index)=><li key={source.kind+':'+source.id+':'+index}><div><span>{source.label} · {source.revision!==null?`v${source.revision}`:'版本未记录'}</span><code>{source.id}</code></div>{source.kind==='actor'&&<Button type="button" variant="ghost" onClick={()=>open('/workspace?view=ip&actor='+encodeURIComponent(source.id))}>到演员资料核对</Button>}{source.kind==='look'&&source.actorId&&<Button type="button" variant="ghost" onClick={()=>open('/workspace?view=ip&actor='+encodeURIComponent(source.actorId||'')+'&actorTab=looks')}>到演员造型核对</Button>}{source.kind==='document'&&<Button type="button" variant="ghost" onClick={()=>open('/studio?project='+encodeURIComponent(projectId)+'&document='+encodeURIComponent(source.id)+'#scripts')}>打开来源文稿</Button>}<p className="cw-small-copy">此处仅展示引用；外部记录与准确历史版本尚未展开。</p></li>)}</ul>}
++ </article>:<p>当前快照没有可展开的故事记录。已有文稿仍可从上方文稿入口读取。</p>}
++ <div className="cw-project-relations-assets"><h4>冻结交接的资产引用</h4>{data.assetScope==='not_loaded'?<p>尚未选择并读取交接包；资产依赖未展开。</p>:data.assetScope==='scope_mismatch'?<p>交接范围与当前快照不同或尚未确认，请重新选择。</p>:<><p>{data.assetScope==='stale'?'交接来源已有变化，保留原冻结引用。':'当前选择交接中的冻结引用。'} 原图可访问性与媒体质量需另行核对。</p>{data.assets.length?<ul>{data.assets.map(asset=><li key={asset.id}><code>{asset.id}</code><p className="cw-small-copy">{[...new Set(asset.uses.map(use=>use.usage||'用途未记录'))].join('；')}</p></li>)}</ul>:<p>此交接没有可展开的资产引用。</p>}</>}{onProduction&&<Button type="button" variant="ghost" onClick={onProduction}>到制作查阅交接包</Button>}</div>
++ </>}
++ </section></details>;
++}
+diff --git a/components/workspace/workspace.tsx b/components/workspace/workspace.tsx
+index 2b82ab9..bf708ee 100644
+--- a/components/workspace/workspace.tsx
++++ b/components/workspace/workspace.tsx
+@@ -18,6 +18,7 @@ import { emptyContent, kindLabels, relatedScenes, safeMedia, type GraphData, typ
+ import ItemInspector, { type Decision } from './item-inspector';
+ import MarkdownContent, { MarkdownExcerpt } from './markdown-content';
+ import FeatureBoundary from './feature-boundary';
++import ProjectRelations from './project-relations';
+ import {workflowStages,workflowStage} from './workflow-navigation.mjs';
+ import './workflow-focus.css';
+ import {markIntroSession} from './intro-session.mjs';
+@@ -169,6 +170,7 @@ export default function Workspace({ api: injectedApi, mediaByItem = EmptyMedia,
+       <WorkspaceFeedback notice={notice} announcement={announcement} onDismiss={readbackPending?undefined:()=>setNotice('')}/>
+       <FeatureBoundary key={route.view+':'+route.project}><div id="cw-active-work" role={projectViews.includes(route.view) ? 'tabpanel' : undefined} aria-label={nav.find(n=>n.id===route.view)?.label} tabIndex={projectViews.includes(route.view) ? 0 : undefined}>
+       {route.view === 'canvas' ? <>
++        {project&&<ProjectRelations key={project.id} projectId={project.id} graph={graph} onSelect={select} onAttempt={attempt} onProduction={()=>navigate({view:'production',item:null,newKind:null})}/>}
+         <div className="cw-workspace-controls"><div className="cw-view-title"><Network size={18} /><span>角色与场景</span><Button variant="ghost" size="sm" aria-pressed={showGraph} onClick={()=>setShowGraph(v=>!v)}>{showGraph?'卡片':'关系图'}</Button></div><label className="cw-search"><Search size={14} /><Input type="search" value={search} onChange={e => setSearch(e.target.value)} placeholder="查找角色、场景" aria-label="查找角色与场景" /></label><label className="cw-candidate-toggle"><Checkbox  checked={candidates} onCheckedChange={checked => attempt(() => setCandidates((checked === true)))} />包含候选</label></div>
+         {!project ? <div className="cw-project-empty"><FolderOpen size={42} strokeWidth={1} /><h2>{projectsLoaded && !projects.length ? '从一个真实作品开始' : '选择要继续的作品'}</h2><p>{projectsLoaded && !projects.length ? '项目列表为空。现有素材仍保留在素材库；尚未入库的文稿不会自动变成正式故事。' : '选择项目，读取已保存的角色、事件与场次。'}</p><Button className="cw-primary" onClick={() => navigate({ view: 'projects' })}>前往作品项目<ArrowRight /></Button></div> : loading && !graph ? <div className="cw-canvas-loading" role="status"><LoaderCircle className="animate-spin" /><p>正在读取「{project.title}」的故事快照…</p></div> : graph ? !showGraph ? <div className="cw-cast-scene-list">{items.filter(n=>['character','scene'].includes(n.kind)&&(!search||`${n.content.title} ${n.content.body}`.toLocaleLowerCase().includes(search.toLocaleLowerCase()))).map(n=><Button key={n.id} variant="record" size="record" aria-pressed={route.item===n.id} onClick={()=>select(n.id)}><div><small>{n.kind==='character'?'角色':'场景'}{n.needs_review?.length?' · 引用需核对':''}</small><h3>{n.content.title}</h3><MarkdownExcerpt content={n.content.body} /></div><ArrowRight size={16}/></Button>)}{!items.some(n=>['character','scene'].includes(n.kind))&&<p>尚未建立角色或场景。可从已有故事继续添加，不会自动指定演员。</p>}</div> : <Suspense fallback={<div className="cw-canvas-loading" role="status">正在载入画布组件…</div>}><RelationshipCanvas key={project.id} items={items} query={search} selectedId={route.item} onSelect={select} onClear={closeInspector} media={mediaByItem} reducedMotion={reducedMotion} compact={mobile} /></Suspense> : <div className="cw-canvas-loading">故事快照尚未读取，请恢复连接后重试。</div>}
+         {project && showGraph && <section className="cw-scenes"><header><div><Clapperboard size={18} /><h2>剧情场次</h2><span>{scenes.length} 场</span></div><Button variant="ghost" size="sm" onClick={() => setShowAllScenes(!showAllScenes)}>{selected && !showAllScenes ? '查看全部场次' : '查看关联场次'}<ArrowRight /></Button></header><div className="cw-scene-strip">{scenes.map((scene, index) => { const picture = safeMedia(mediaByItem, scene.id); return <Button variant="record" size="record" type="button" className={`cw-scene-card ${route.item === scene.id ? 'is-selected' : ''}`} aria-pressed={route.item === scene.id} key={scene.id} onClick={() => select(scene.id)}><div className="cw-scene-picture">{picture ? <img src={picture.src} alt={picture.alt} width={130} height={86} loading="lazy" /> : <Clapperboard strokeWidth={1} size={28} />}</div><div><span>场 {index + 1}<small>{scene.status === 'accepted' ? '已采纳' : '候选'}</small></span><h3>{scene.content.title}</h3><MarkdownExcerpt content={scene.content.body}/></div></Button>; })}{!scenes.length && <p className="cw-scenes-empty">{selected && !showAllScenes ? '此卡片尚无明确关联的场次，可切换查看全部。' : '暂无场次'}</p>}</div></section>}
+diff --git a/studio-core/docs/phase-project-relations-local-20261105.md b/studio-core/docs/phase-project-relations-local-20261105.md
+new file mode 100644
+index 0000000..b994fd3
+--- /dev/null
++++ b/studio-core/docs/phase-project-relations-local-20261105.md
+@@ -0,0 +1,31 @@
++# 项目关系查阅 · 本地候选
++
++日期：2026-11-05。最初在历史 v92 源码完成独立关系投影；Sites 连接恢复后，已核对并迁移至官方 helper 取得的当前 v95 源码 `abf48a12fc058f4efabe77233588b30f64d0b966`。保留 v93–v95 的原文稿编辑与新建流程。生产发布由主任务另行核验，本候选不读取生产作品。
++
++## 范围与交互
++
++在既有故事、分镜、制作和交付工作区增加折叠的只读关系查阅面板。使用已由服务器授权返回的同一项目 author graph，沿 `scene.spec.cast`、`instance.fields.character_id`、选角／造型 spec 和精确 sources 查阅原记录；用户通过现有检查器和受保护导航返回来源。
++
++当前 StoryItem 没有分集或逐镜对象。面板明确保留这两项缺口，不从题名、正文、章节号或顺序推导。时期只展示实例明确记录的年龄、时间标签及有效时点。造型保持准确 ID／版本，FRAME 资产只展示当前已读取冻结交接包中声明的引用；这些引用不证明原图或媒体质量已核验。
++
++来源 pin 与当前展开版本分别显示，发生差异时保留警示；点击进入原记录／文稿的现有详情，不宣称已经新增准确历史版本的深链。
++
++复用既有文稿读取、交接选择和交接导出。面板不读写数据库、不创建候选、不调用生成，不改变选角的 `casting-p0-auto-v1` 自动审阅例外。无迁移、权限、身份、素材、托管配置或依赖修改。
++
++## 验收
++
++- 快照 project_id 不匹配／缺失时拒绝投影；过滤外项目、外分支、归档及重复 ID，避免混合上下文。
++- 缺失对象、来源版本／哈希不一致、字段缺失明确显示为未展开／待核对，不能按同名补关系或自动升级版本。
++- 角色、状态、场次、选角、造型和来源的关系可双向查阅，并可回到真实原记录。列表筛选不改数据或精确引用。
++- 只对已读取且 project_id 一致的冻结交接展开资产；场次制作交接另需 branch／timeline 与当前 main／main 一致，缺失或不一致不能混入资产。纯资料交接沿用项目限定，不虚构分支字段。未知、无交接、交接过期和没有资产是不同状态。
++- 单元测试覆盖关系、精确版本、缺字段、候选／自动审核不变、项目隔离和输入不变。执行完整 stage review、TypeScript／构建和只读源码 readiness。
++
++## 状态
++
++- `node --test tests/project-relations.test.mjs`：12/12 通过，含独立审查发现的跨分支／时间线及范围缺失反例。
++- 顶层 `node node_modules/typescript/bin/tsc --noEmit --incremental false`：通过。
++- `studio-core` 的 `npm run review`：156/156 类别通过，包含本轮测试、原有隔离／权限／幂等／CAS、自动选角与迁移保护回归；`review-report.json` 为实际本地结果。
++- `git diff --check`：通过。机械设计检查仅发现新面板 18／15px 不在当前字阶，已调整为现有 16／14px；没有改设计系统。
++- `site-source-readiness.mjs` 确认所需源码齐全；默认未传独立生产证据，结果为 `BLOCKED`。该工具结果不是部署许可。
++
++尚未执行本轮顶层构建、浏览器真实会话及线上发布；由主任务统一完成和记录。当前没有生产作品数据读取、实际媒体或作者批准证据。
+diff --git a/studio-core/review-report.json b/studio-core/review-report.json
+index 7397297..16accc5 100644
+--- a/studio-core/review-report.json
++++ b/studio-core/review-report.json
+@@ -1,6 +1,6 @@
+ {
+   "stage": "CineWeave Studio Core: 0+1+2+3+4+5+6+7",
+-  "generated_at": "2026-11-04T14:31:41.808Z",
++  "generated_at": "2026-11-05T09:28:13.338Z",
+   "checks": [
+     {
+       "label": "syntax:src/casting-handoff.mjs",
+@@ -780,7 +780,7 @@
+       "label": "mcp:legacy-asset-readonly-security",
+       "passed": true,
+       "status": 0,
+-      "details": "✔ Scene MCP search includes architecture once and keeps the legacy child and saved records intact (68.528819ms)\n✔ discovery is static and stateless; no identity, private IDs or storage reads (3.995854ms)\n✔ missing identity/service bypass is 401 and another subject is 403 before any storage read (35.312838ms)\n✔ search/get read current records and exclude trash, without changing any table (44.928108ms)\n✔ image tool returns verified ImageContent bytes, not a URL, and refuses corruption/oversize (23.766681ms)\n✔ no write tool, arbitrary URL, SQL injection or cross-origin bypass (21.364083ms)\nℹ tests 6\nℹ suites 0\nℹ pass 6\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 372.978299\n\n"
++      "details": "k 1 - Scene MCP search includes architecture once and keeps the legacy child and saved records intact\n  ---\n  duration_ms: 48.8395\n  type: 'test'\n  ...\n# Subtest: discovery is static and stateless; no identity, private IDs or storage reads\nok 2 - discovery is static and stateless; no identity, private IDs or storage reads\n  ---\n  duration_ms: 3.9359\n  type: 'test'\n  ...\n# Subtest: missing identity/service bypass is 401 and another subject is 403 before any storage read\nok 3 - missing identity/service bypass is 401 and another subject is 403 before any storage read\n  ---\n  duration_ms: 26.0894\n  type: 'test'\n  ...\n# Subtest: search/get read current records and exclude trash, without changing any table\nok 4 - search/get read current records and exclude trash, without changing any table\n  ---\n  duration_ms: 41.8773\n  type: 'test'\n  ...\n# Subtest: image tool returns verified ImageContent bytes, not a URL, and refuses corruption/oversize\nok 5 - image tool returns verified ImageContent bytes, not a URL, and refuses corruption/oversize\n  ---\n  duration_ms: 29.5681\n  type: 'test'\n  ...\n# Subtest: no write tool, arbitrary URL, SQL injection or cross-origin bypass\nok 6 - no write tool, arbitrary URL, SQL injection or cross-origin bypass\n  ---\n  duration_ms: 23.3968\n  type: 'test'\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 364.0087\n\n"
+     },
+     {
+       "label": "syntax:src/material-frame-adapter.mjs",
+@@ -834,19 +834,19 @@
+       "label": "materials:ingest-and-human-field-regressions",
+       "passed": true,
+       "status": 0,
+-      "details": "nd new alias admission all stop without writes (319.692645ms)\n✔ historical completed batch replay does not waive current trash (86.938932ms)\n✔ explicit restore keeps the SHA visible while duplicate collection adds no new source (104.070661ms)\n✔ active reject selection is preserved and does not block admission (82.046723ms)\n✔ mixed batch with an already trashed member creates no partial active asset or completed receipt (86.675344ms)\n✔ trash at catalog batch boundary atomically rejects every asset, alias, entry and completion (76.374266ms)\n✔ duplicate-only collection is read-only and never reaches a source-write transaction (81.228056ms)\n✔ existing SHA skips the legacy claim write window entirely (38.315898ms)\n✔ existing SHA skips the legacy trash write window entirely (28.136024ms)\n✔ existing SHA skips the legacy remote write window entirely (39.3137ms)\n✔ objects and catalog are persistent and idempotent (161.687923ms)\n✔ changed batch identity and unchecked assets are rejected (114.897403ms)\n✔ content hash mismatches rejected (65.70877ms)\n✔ database triggers pin alias even if competing reads become stale (116.797582ms)\n✔ catalog ingestion never changes saved selections (119.572093ms)\n✔ transient storage faults are retryable rather than hidden validation failures (65.056676ms)\nℹ tests 43\nℹ suites 0\nℹ pass 43\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 1353.565324\n\n"
++      "details": "\n  ---\n  duration_ms: 29.8669\n  type: 'test'\n  ...\n# (node:312) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n# (Use `node --trace-warnings ...` to show where the warning was created)\n# Subtest: objects and catalog are persistent and idempotent\nok 38 - objects and catalog are persistent and idempotent\n  ---\n  duration_ms: 86.509\n  type: 'test'\n  ...\n# Subtest: changed batch identity and unchecked assets are rejected\nok 39 - changed batch identity and unchecked assets are rejected\n  ---\n  duration_ms: 47.5919\n  type: 'test'\n  ...\n# Subtest: content hash mismatches rejected\nok 40 - content hash mismatches rejected\n  ---\n  duration_ms: 41.3071\n  type: 'test'\n  ...\n# Subtest: database triggers pin alias even if competing reads become stale\nok 41 - database triggers pin alias even if competing reads become stale\n  ---\n  duration_ms: 42.2947\n  type: 'test'\n  ...\n# Subtest: catalog ingestion never changes saved selections\nok 42 - catalog ingestion never changes saved selections\n  ---\n  duration_ms: 42.8806\n  type: 'test'\n  ...\n# Subtest: transient storage faults are retryable rather than hidden validation failures\nok 43 - transient storage faults are retryable rather than hidden validation failures\n  ---\n  duration_ms: 30.2209\n  type: 'test'\n  ...\n1..43\n# tests 43\n# suites 0\n# pass 43\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 761\n\n"
+     },
+     {
+       "label": "primary-category:catalog-and-ui-regressions",
+       "passed": true,
+       "status": 0,
+-      "details": "ta filters or selections (12.608892ms)\n✔ same-query append without bootstrap retains valid facets but a replacement clears them (12.316079ms)\n✔ filter pruning preserves all-active notes, groups, rejected IDs and original source fields (35.193247ms)\n✔ finished stage gate remains manual while effective facets never upgrade legacy three-check records (64.804625ms)\n✔ synthetic interface fixtures use the real backend parser for normalized queries and fingerprints without D1 (179.590098ms)\n✔ Scene card accepts saved architecture, hides its old top card and keeps stored classifications intact (22.84571ms)\n✔ Scene filter style hierarchy combines both subtypes without changing editor style rules (0.204518ms)\n✔ category UI starts in apparel with no mixed query and reset retains the chosen primary root (38.898418ms)\n✔ category switch clears incompatible pending filters, page, counts and groups while retaining user records (16.694702ms)\n✔ category history contexts cannot restore another root filters and a bad category receipt cannot enter the gallery (27.697336ms)\n✔ quick category switching rejects late search/page responses and keeps only the newest category result (37.62524ms)\n✔ a successful empty category request replaces its loading placeholder with a scoped empty state (15.251943ms)\nℹ tests 37\nℹ suites 0\nℹ pass 37\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 2213.299167\n\n"
++      "details": " retains the chosen primary root\nok 33 - category UI starts in apparel with no mixed query and reset retains the chosen primary root\n  ---\n  duration_ms: 22.8844\n  type: 'test'\n  ...\n# Subtest: category switch clears incompatible pending filters, page, counts and groups while retaining user records\nok 34 - category switch clears incompatible pending filters, page, counts and groups while retaining user records\n  ---\n  duration_ms: 13.5607\n  type: 'test'\n  ...\n# Subtest: category history contexts cannot restore another root filters and a bad category receipt cannot enter the gallery\nok 35 - category history contexts cannot restore another root filters and a bad category receipt cannot enter the gallery\n  ---\n  duration_ms: 16.7551\n  type: 'test'\n  ...\n# Subtest: quick category switching rejects late search/page responses and keeps only the newest category result\nok 36 - quick category switching rejects late search/page responses and keeps only the newest category result\n  ---\n  duration_ms: 32.0676\n  type: 'test'\n  ...\n# Subtest: a successful empty category request replaces its loading placeholder with a scoped empty state\nok 37 - a successful empty category request replaces its loading placeholder with a scoped empty state\n  ---\n  duration_ms: 13.6136\n  type: 'test'\n  ...\n1..37\n# tests 37\n# suites 0\n# pass 37\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 1275.8507\n\n"
+     },
+     {
+       "label": "stage1+stage2+stage3+stage4+stage5:unit-and-contract-tests",
+       "passed": true,
+       "status": 0,
+-      "details": "cted server env keys (0.934301ms)\n✔ Next/Vinext route source is opt-in and does not touch FRAME legacy dispatch (0.552294ms)\n✔ hosted materials navigation points to the existing FRAME library (0.614418ms)\n✔ legacy FRAME home is byte-identical until owner enables Studio (1.575068ms)\n✔ enabled Studio enters protected React workspace and original FRAME remains without storage changes (0.497661ms)\n✔ hosted research module imports are served with JS MIME and retain owner gates (2.709712ms)\n✔ every static Studio entry import is allowed by the hosted asset gate (3.527716ms)\n✔ transitive research editor imports are served by hosted private gate (2.432883ms)\n✔ browser client reads projects via same-origin API, not demo state or secret credentials (25.159959ms)\n✔ browser client preserves backend 401/503 instead of replacing with fake records (3.045138ms)\n✔ project picker loads all pages and preserves failures on later pages (5.581597ms)\n✔ browser handoff export returns a real protected response, not editor timeline (8.451691ms)\n✔ browser API client only accepts same-origin path, no token local storage (0.511211ms)\n✔ browser client permits reusing a stable idempotency key for the same retry (5.72911ms)\n✔ browser errors expose actionable reasons without raw server details (1.264809ms)\nℹ tests 449\nℹ suites 0\nℹ pass 438\nℹ fail 0\nℹ cancelled 0\nℹ skipped 11\nℹ todo 0\nℹ duration_ms 6302.951793\n\n"
++      "details": " browser client preserves backend 401/503 instead of replacing with fake records\nok 456 - browser client preserves backend 401/503 instead of replacing with fake records\n  ---\n  duration_ms: 2.7772\n  type: 'test'\n  ...\n# Subtest: project picker loads all pages and preserves failures on later pages\nok 457 - project picker loads all pages and preserves failures on later pages\n  ---\n  duration_ms: 3.541\n  type: 'test'\n  ...\n# Subtest: browser handoff export returns a real protected response, not editor timeline\nok 458 - browser handoff export returns a real protected response, not editor timeline\n  ---\n  duration_ms: 8.7967\n  type: 'test'\n  ...\n# Subtest: browser API client only accepts same-origin path, no token local storage\nok 459 - browser API client only accepts same-origin path, no token local storage\n  ---\n  duration_ms: 0.2509\n  type: 'test'\n  ...\n# Subtest: browser client permits reusing a stable idempotency key for the same retry\nok 460 - browser client permits reusing a stable idempotency key for the same retry\n  ---\n  duration_ms: 4.5143\n  type: 'test'\n  ...\n# Subtest: browser errors expose actionable reasons without raw server details\nok 461 - browser errors expose actionable reasons without raw server details\n  ---\n  duration_ms: 0.7997\n  type: 'test'\n  ...\n1..461\n# tests 461\n# suites 0\n# pass 450\n# fail 0\n# cancelled 0\n# skipped 11\n# todo 0\n# duration_ms 7001.7505\n\n"
+     },
+     {
+       "label": "organization:syntax:lib/material-organization-policy.mjs",
+@@ -876,25 +876,25 @@
+       "label": "organization:policy-atomicity-and-client",
+       "passed": true,
+       "status": 0,
+-      "details": "ion completed during pre-validation state read returns its actor-bound receipt (6.02058ms)\n✔ same undo completed during pre-validation state read returns its actor-bound receipt without another undo (6.768629ms)\n✔ different actor winning the same operation ID during state read remains a conflict (4.472042ms)\n✔ 100 members commit atomically within D1 statement and parameter bounds; 101 never writes (24.137375ms)\n✔ batch undo restores final fields and lock state, records reversal, and refuses to overwrite newer edits (13.057696ms)\n✔ undo write-time race prevents one restored member from leaking into the rest of the batch (6.774058ms)\n✔ cross-origin and same-site writes are denied; owner same-origin and scoped service reads retain private headers (4.64926ms)\n✔ bounded body and JSON validation reject malformed input before touching any ledger (8.897975ms)\n✔ oversized Unicode operation response is rejected before writing rather than hitting D1 bind limits (52.677006ms)\n✔ history paging preserves records beyond 100 entries and initial null defaults appear only at end (11.949853ms)\n✔ audit guards deny update/delete/replace and source absence leaves original fields null (11.963428ms)\n✔ unknown storage failure uses a fixed safe error and never exposes source text or SQL (2.792616ms)\nℹ tests 116\nℹ suites 0\nℹ pass 116\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 8941.355141\n\n"
++      "details": "duration_ms: 10.1231\n  type: 'test'\n  ...\n# Subtest: bounded body and JSON validation reject malformed input before touching any ledger\nok 112 - bounded body and JSON validation reject malformed input before touching any ledger\n  ---\n  duration_ms: 11.2269\n  type: 'test'\n  ...\n# Subtest: oversized Unicode operation response is rejected before writing rather than hitting D1 bind limits\nok 113 - oversized Unicode operation response is rejected before writing rather than hitting D1 bind limits\n  ---\n  duration_ms: 32.1509\n  type: 'test'\n  ...\n# Subtest: history paging preserves records beyond 100 entries and initial null defaults appear only at end\nok 114 - history paging preserves records beyond 100 entries and initial null defaults appear only at end\n  ---\n  duration_ms: 8.895\n  type: 'test'\n  ...\n# Subtest: audit guards deny update/delete/replace and source absence leaves original fields null\nok 115 - audit guards deny update/delete/replace and source absence leaves original fields null\n  ---\n  duration_ms: 7.6971\n  type: 'test'\n  ...\n# Subtest: unknown storage failure uses a fixed safe error and never exposes source text or SQL\nok 116 - unknown storage failure uses a fixed safe error and never exposes source text or SQL\n  ---\n  duration_ms: 2.6332\n  type: 'test'\n  ...\n1..116\n# tests 116\n# suites 0\n# pass 116\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 9595.5546\n\n"
+     },
+     {
+       "label": "organization:python-collector",
+       "passed": true,
+       "status": 0,
+-      "details": "\ntest_committed_readback_pending_permits_only_reads (test_material_organization_client.OrganizationClientTests.test_committed_readback_pending_permits_only_reads) ... ok\ntest_confirmed_result_is_reconciled_without_another_write (test_material_organization_client.OrganizationClientTests.test_confirmed_result_is_reconciled_without_another_write) ... ok\ntest_dry_run_is_only_a_read_plan_and_does_not_checkpoint (test_material_organization_client.OrganizationClientTests.test_dry_run_is_only_a_read_plan_and_does_not_checkpoint) ... ok\ntest_known_absent_job_resumes_identical_request_after_lost_transport (test_material_organization_client.OrganizationClientTests.test_known_absent_job_resumes_identical_request_after_lost_transport) ... ok\ntest_same_key_different_content_is_rejected_before_transport (test_material_organization_client.OrganizationClientTests.test_same_key_different_content_is_rejected_before_transport) ... ok\n\n----------------------------------------------------------------------\nRan 5 tests in 0.001s\n\nOK\n"
++      "details": "\ntest_committed_readback_pending_permits_only_reads (test_material_organization_client.OrganizationClientTests.test_committed_readback_pending_permits_only_reads) ... ok\r\ntest_confirmed_result_is_reconciled_without_another_write (test_material_organization_client.OrganizationClientTests.test_confirmed_result_is_reconciled_without_another_write) ... ok\r\ntest_dry_run_is_only_a_read_plan_and_does_not_checkpoint (test_material_organization_client.OrganizationClientTests.test_dry_run_is_only_a_read_plan_and_does_not_checkpoint) ... ok\r\ntest_known_absent_job_resumes_identical_request_after_lost_transport (test_material_organization_client.OrganizationClientTests.test_known_absent_job_resumes_identical_request_after_lost_transport) ... ok\r\ntest_same_key_different_content_is_rejected_before_transport (test_material_organization_client.OrganizationClientTests.test_same_key_different_content_is_rejected_before_transport) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 5 tests in 0.001s\r\n\r\nOK\r\n"
+     },
+     {
+       "label": "stage0+stage1:additive-sql-migration-review",
+       "passed": true,
+       "status": 0,
+-      "details": "\ntest_foreign_keys_reject_orphan_documents (test_migrations.StudioMigrationReview.test_foreign_keys_reject_orphan_documents) ... ok\ntest_migration_is_additive_idempotent (test_migrations.StudioMigrationReview.test_migration_is_additive_idempotent) ... ok\ntest_no_destructive_legacy_media_sql (test_migrations.StudioMigrationReview.test_no_destructive_legacy_media_sql) ... ok\ntest_rejects_unsupported_video_editing_entities (test_migrations.StudioMigrationReview.test_rejects_unsupported_video_editing_entities) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.004s\n\nOK\n"
++      "details": "\ntest_foreign_keys_reject_orphan_documents (test_migrations.StudioMigrationReview.test_foreign_keys_reject_orphan_documents) ... ok\r\ntest_migration_is_additive_idempotent (test_migrations.StudioMigrationReview.test_migration_is_additive_idempotent) ... ok\r\ntest_no_destructive_legacy_media_sql (test_migrations.StudioMigrationReview.test_no_destructive_legacy_media_sql) ... ok\r\ntest_rejects_unsupported_video_editing_entities (test_migrations.StudioMigrationReview.test_rejects_unsupported_video_editing_entities) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.004s\r\n\r\nOK\r\n"
+     },
+     {
+       "label": "stage2:handoff-sql-migration-review",
+       "passed": true,
+       "status": 0,
+-      "details": "\ntest_additive_idempotent_and_meta_gate (test_handoff_migrations.HandoffMigrationReview.test_additive_idempotent_and_meta_gate) ... ok\ntest_external_status_manual_only (test_handoff_migrations.HandoffMigrationReview.test_external_status_manual_only) ... ok\ntest_foreign_keys_reject_orphan (test_handoff_migrations.HandoffMigrationReview.test_foreign_keys_reject_orphan) ... ok\ntest_no_legacy_media_mutations (test_handoff_migrations.HandoffMigrationReview.test_no_legacy_media_mutations) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.006s\n\nOK\n"
++      "details": "\ntest_additive_idempotent_and_meta_gate (test_handoff_migrations.HandoffMigrationReview.test_additive_idempotent_and_meta_gate) ... ok\r\ntest_external_status_manual_only (test_handoff_migrations.HandoffMigrationReview.test_external_status_manual_only) ... ok\r\ntest_foreign_keys_reject_orphan (test_handoff_migrations.HandoffMigrationReview.test_foreign_keys_reject_orphan) ... ok\r\ntest_no_legacy_media_mutations (test_handoff_migrations.HandoffMigrationReview.test_no_legacy_media_mutations) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.008s\r\n\r\nOK\r\n"
+     },
+     {
+       "label": "stage5:next-route-syntax:app/materials/route.ts",
+diff --git a/studio-core/tests/project-relations.test.mjs b/studio-core/tests/project-relations.test.mjs
+new file mode 100644
+index 0000000..c2a2f4f
+--- /dev/null
++++ b/studio-core/tests/project-relations.test.mjs
+@@ -0,0 +1,91 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import {projectRelations} from '../../components/workspace/project-relations.mjs';
++
++const digest='a'.repeat(64),asset='b'.repeat(64);
++const record=(id,kind,fields={},spec={},extra={})=>({id,project_id:'p',branch:'main',timeline:'main',kind,version:1,sha256:digest,status:'accepted',content:{title:id,body:'',fields,spec,sources:[]},...extra});
++const graph=nodes=>({project_id:'p',perspective:'author',canon_revision:4,nodes});
++const fixture=()=>[
++ record('role','character'),record('young','instance',{character_id:'role',age:'少年',time_label:'离乡前'}),record('adult','instance',{character_id:'role',age:'成年'}),
++ record('scene','scene',{}, {cast:['young']}),record('casting','casting',{}, {character_id:'role',ip_id:'actor',identity_revision:3,profile_version:digest}),
++ record('appearance','appearance',{}, {casting_id:'casting',target_id:'young',ip_id:'actor',look_id:'look',look_revision:2,lookbook_id:'book',lookbook_revision:5})
++];
++
++test('real spec links preserve identity, role state and appearance scope independently',()=>{
++ const result=projectRelations('p',graph(fixture()));
++ assert.equal(result.available,true);
++ assert.ok(result.edges.some(edge=>edge.from==='scene'&&edge.to==='young'&&edge.label==='出场状态'));
++ assert.ok(result.edges.some(edge=>edge.from==='young'&&edge.to==='role'&&edge.label==='所属角色'));
++ assert.ok(result.edges.some(edge=>edge.from==='appearance'&&edge.to==='young'));
++ assert.ok(!result.edges.some(edge=>edge.from==='appearance'&&edge.to==='adult'));
++ assert.equal(result.records.find(item=>item.id==='young').age,'少年');
++ assert.deepEqual(result.external.find(item=>item.kind==='look'),{owner:'appearance',kind:'look',id:'look',actorId:'actor',label:'造型',revision:2,lookbookId:'book',lookbookRevision:5});
++});
++test('wrong, unidentified and non-author snapshots return no records or handoff assets',()=>{
++ for(const value of [null,{}, {...graph(fixture()),project_id:'other'}, {...graph(fixture()),perspective:'reader'}, {...graph(fixture()),perspective:'character'}]){
++  const result=projectRelations('p',value,{project_id:'p',manifest:{project:{id:'p'},assets:[{frame_asset_id:asset}]}});
++  assert.equal(result.available,false);assert.deepEqual(result.records,[]);assert.deepEqual(result.assets,[]);
++ }
++});
++test('individual project/branch/timeline scope, archived and duplicate records fail closed',()=>{
++ const base=fixture(),foreign=record('foreign','character',{}, {},{project_id:'other'}),branch=record('branch','character',{}, {},{branch:'alternate'}),timeline=record('timeline','character',{}, {},{timeline:'past'}),archived=record('archived','character',{}, {},{archived:true});
++ const result=projectRelations('p',graph([...base,foreign,branch,timeline,archived,{...base[0],version:2},record('unscoped','character',{}, {},{project_id:undefined})]));
++ assert.ok(result.records.every(item=>!['foreign','branch','timeline','archived','role','unscoped'].includes(item.id)));
++ assert.equal(result.edges.find(edge=>edge.from==='young').state,'not_loaded');
++ assert.equal(result.notices.length,2);
++});
++test('same title and body episode/shot words create no implicit relation or total',()=>{
++ const a=record('a','character'),b=record('b','scene');a.content.title=b.content.title='第12集 少年 8镜';b.content.body='18岁，采用服装look，角色a出场';
++ const result=projectRelations('p',graph([a,b]));
++ assert.deepEqual(result.edges,[]);assert.deepEqual(result.assets,[]);assert.equal(result.records[0].age,'');
++ assert.deepEqual(result.gaps,['分集关系尚未结构化','逐镜关系尚未结构化']);assert.ok(!Object.hasOwn(result,'episodeCount'));assert.ok(!Object.hasOwn(result,'shotCount'));
++});
++test('source pins report unavailable, changed version, missing revision and hash mismatch without rebasing',()=>{
++ const nodes=fixture(),scene=nodes.find(node=>node.id==='scene');
++ scene.content.sources=[{kind:'item',item_id:'role',version:2,sha256:digest},{kind:'item',item_id:'young',version:1,sha256:asset},{kind:'story',item_id:'missing',version:9},{kind:'item',item_id:'adult'},{kind:'item',item_id:'adult',version:1}];
++ const edges=projectRelations('p',graph(nodes)).edges.filter(edge=>edge.label==='来源版本');
++ assert.deepEqual(edges.map(edge=>edge.state),['version_mismatch','hash_mismatch','not_loaded','pin_missing','pin_missing']);assert.equal(edges[0].version,2);assert.equal(nodes[0].version,1);
++});
++test('malformed fields and wrong target kinds remain unknown rather than crash or adopt',()=>{
++ const bad=record('bad','instance');bad.content={title:'unknown'};
++ const scene=record('scene','scene',{}, {cast:['role',null,7]});const result=projectRelations('p',graph([record('role','character'),bad,scene]));
++ assert.equal(result.records.find(item=>item.id==='bad').age,'');assert.equal(result.edges[0].state,'kind_mismatch');assert.equal(result.edges.length,1);
++});
++test('chapter/adaptation/scene provenance uses exact explicit links and valid source hashes',()=>{
++ const chapter=record('chapter','chapter'),plan=record('plan','adaptation',{}, {chapter_id:'chapter'}),scene=record('scene','scene',{}, {adaptation_id:'plan'});
++ scene.content.sources=[{kind:'item',item_id:'chapter',version:1,sha256:digest}];
++ const result=projectRelations('p',graph([chapter,plan,scene]));
++ assert.ok(result.edges.some(edge=>edge.from==='plan'&&edge.to==='chapter'&&edge.label==='改编来源章节'));
++ assert.ok(result.edges.some(edge=>edge.from==='scene'&&edge.to==='plan'&&edge.label==='改编方案'));
++ assert.equal(result.edges.find(edge=>edge.label==='来源版本').state,'loaded');
++});
++test('candidate and review flags survive unchanged and never claim adoption or production readiness',()=>{
++ const candidate=record('look-candidate','appearance',{}, {casting_id:'casting',target_id:'scene'}, {status:'pending',accepted_version:null,needs_review:[{reason:'stale'}]});
++ const result=projectRelations('p',graph([candidate]));assert.equal(result.records[0].status,'pending');assert.equal(result.records[0].needsReview,true);
++ assert.ok(!Object.hasOwn(result,'adopted'));assert.ok(!Object.hasOwn(result,'production_ready'));assert.ok(!Object.hasOwn(result,'media_verified'));
++});
++test('only the exact selected same-project handoff contributes frozen asset IDs',()=>{
++ const h={project_id:'p',stale:false,manifest:{project:{id:'p'},assets:[{frame_asset_id:asset,usage:'服装',target_id:'actor'}],production:{branch:'main',timeline:'main',assets:[asset,digest]}}};
++ const result=projectRelations('p',graph(fixture()),h);assert.equal(result.assetScope,'frozen');assert.deepEqual(result.assets.map(a=>a.id),[asset,digest]);assert.equal(result.assets[0].uses.length,2);
++ assert.equal(projectRelations('p',graph(fixture()),{...h,stale:true}).assetScope,'stale');
++ for(const invalid of [{...h,project_id:'other'},{...h,manifest:{...h.manifest,project:{id:'other'}}}]){const value=projectRelations('p',graph(fixture()),invalid);assert.equal(value.assetScope,'scope_mismatch');assert.deepEqual(value.assets,[]);}
++ assert.equal(projectRelations('p',graph(fixture())).assetScope,'not_loaded');
++});
++test('production handoff branch and timeline must match main/main; material-only handoffs need no invented story scope',()=>{
++ const production={branch:'main',timeline:'main',assets:[asset]},h={project_id:'p',stale:false,manifest:{project:{id:'p'},production,assets:[{frame_asset_id:digest}]}};
++ for(const invalid of [{...production,branch:'alternate'},{...production,timeline:'past'},{assets:[asset]},{...production,branch:undefined}]){
++  const result=projectRelations('p',graph(fixture()),{...h,manifest:{...h.manifest,production:invalid}});
++  assert.equal(result.assetScope,'scope_mismatch');assert.deepEqual(result.assets,[]);assert.match(result.notices[0],/分支／时间线/);
++ }
++ const material={project_id:'p',stale:false,manifest:{project:{id:'p'},assets:[{frame_asset_id:digest}]}};
++ const result=projectRelations('p',graph(fixture()),material);assert.equal(result.assetScope,'frozen');assert.deepEqual(result.assets.map(item=>item.id),[digest]);
++});
++test('malformed handoff IDs are disclosed, and source documents retain exact revisions',()=>{
++ const scene=record('s','scene');scene.content.sources=[{kind:'document',item_id:'doc',version:7,paragraph:2}];
++ const h={project_id:'p',manifest:{project:{id:'p'},assets:[{frame_asset_id:'look'},null]}};
++ const result=projectRelations('p',graph([scene]),h);assert.deepEqual(result.assets,[]);assert.match(result.notices[0],/格式不完整/);assert.equal(result.external[0].revision,7);
++});
++test('all projections are pure and leave caller records and immutable handoff byte-identical',()=>{
++ const g=graph(fixture()),h={project_id:'p',manifest:{project:{id:'p'},assets:[{frame_asset_id:asset}]}};const before=JSON.stringify([g,h]);
++ projectRelations('p',g,h);assert.equal(JSON.stringify([g,h]),before);
++});

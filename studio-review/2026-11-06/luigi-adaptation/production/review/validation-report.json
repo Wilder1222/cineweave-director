@@ -1,0 +1,20 @@
+{
+  "date": "2026-11-08",
+  "scope": "text_and_plan_only",
+  "episodes": 24,
+  "shots": 223,
+  "dialogueLines": 712,
+  "seconds": 5953,
+  "expectedEpisodes": 24,
+  "completeInventory": true,
+  "episodeDurationRangeSeconds": [
+    150,
+    360
+  ],
+  "generationCandidates": 359,
+  "longShots": 94,
+  "errors": [],
+  "warnings": [],
+  "mediaVerified": false,
+  "productionReady": false
+}

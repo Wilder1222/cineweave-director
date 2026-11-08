@@ -1,0 +1,77 @@
+{
+  "stages": {
+    "G0": {
+      "status": "design_complete",
+      "evidence": [
+        "story-outline.md",
+        "authoring-brief.md",
+        "director-card.md"
+      ]
+    },
+    "G1": {
+      "status": "vector_design_complete_media_pending",
+      "evidence": [
+        "visual/light-plot.png",
+        "visual/light-plot.svg",
+        "visual/lighting-card.png",
+        "visual/lighting-card.svg",
+        "visual/lookdev-test-board.png",
+        "visual/lookdev-test-board.svg",
+        "visual/material-card.png",
+        "visual/material-card.svg",
+        "visual/palette-card.png",
+        "visual/palette-card.svg",
+        "visual/style-card.png",
+        "visual/style-card.svg"
+      ]
+    },
+    "G2": {
+      "status": "spatial_design_complete",
+      "evidence": [
+        "maps/",
+        "authoring-brief.md"
+      ]
+    },
+    "G3": {
+      "status": "blocking_and_performance_design_complete",
+      "evidence": [
+        "editorial/blocking.csv",
+        "audio/dialogue-cues.csv"
+      ]
+    },
+    "G4": {
+      "status": "storyboard_and_prompt_design_complete",
+      "evidence": [
+        "storyboard.html",
+        "storyboard-design.md",
+        "boards/",
+        "prompts/",
+        "editorial/shot-registry.json"
+      ]
+    },
+    "G5": {
+      "status": "timing_design_complete_actual_sync_pending",
+      "evidence": [
+        "editorial/timeline.csv",
+        "audio/",
+        "editorial/overlays.csv"
+      ]
+    },
+    "G6": {
+      "status": "test_plan_complete_not_executed",
+      "evidence": [
+        "test-plan.md",
+        "requests/"
+      ]
+    },
+    "G7": {
+      "status": "paper_review_complete_media_review_pending",
+      "evidence": [
+        "review/",
+        "README.md"
+      ]
+    }
+  },
+  "mediaVerified": false,
+  "productionReady": false
+}

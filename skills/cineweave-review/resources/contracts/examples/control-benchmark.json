@@ -706,7 +706,7 @@
         "kind": "cineweave_codex_camera_previs_spec",
         "id": "camera-previs.rain-courtyard-recognition-v1",
         "version": 1,
-        "contentHash": "sha256:21fcd86e3c501a73b733bd3fa42577e39d8ba01e3741213c1532059cd38e5a3b"
+        "contentHash": "sha256:983cd933a06480a925e7c13fa3702b8c3353921dc7f54e41a7d98296975c7958"
       },
       "perturbation": "在精确雨庭相认 CameraPrevisSpec 下比较第 0、77 和 132 帧，以及 0–132 帧内的连续运动；不得改写镜头语义、场景坐标、24/1 时间基准或固定焦段。",
       "expectedInvariants": [
@@ -771,13 +771,13 @@
           "kind": "cineweave_codex_temporal_spec",
           "id": "temporal.rain-courtyard-recognition-v1",
           "version": 1,
-          "contentHash": "sha256:4d1654ec389b9a574e3aa302efb2bf2471d8efec16bd135a7e6ef680fe2cb421"
+          "contentHash": "sha256:187f392d1a385aa786541682d6e846d045f34f26f28c211af0357f2b31f3b4a0"
         },
         {
           "kind": "cineweave_codex_camera_previs_spec",
           "id": "camera-previs.rain-courtyard-recognition-v1",
           "version": 1,
-          "contentHash": "sha256:21fcd86e3c501a73b733bd3fa42577e39d8ba01e3741213c1532059cd38e5a3b"
+          "contentHash": "sha256:983cd933a06480a925e7c13fa3702b8c3353921dc7f54e41a7d98296975c7958"
         },
         {
           "kind": "cineweave_codex_storyboard_sequence",

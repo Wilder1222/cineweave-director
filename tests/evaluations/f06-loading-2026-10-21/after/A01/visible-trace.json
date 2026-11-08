@@ -1,0 +1,57 @@
+{
+  "source_run_id": "01a15cfe-750c-7952-a698-1463cb45a0c6",
+  "source_log_sha256": "089d5efa0bc1ece661fe78a72d7262b11752248aabb91ec7788898b7ab9d1131",
+  "metric": "all actual text blocks in selected resource tool results, including wrapper; not model tokens",
+  "reads": [
+    {
+      "callId": "call_5a23903419f048db957423270e0e6d66",
+      "command": "const r = await tools.exec_command({cmd:\"node D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/measure-resource-load.mjs D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/after/A01 D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/snapshot/skills/cineweave-director file SKILL.md\",\"max_output_tokens\":12000});text(r.output);\n",
+      "payloadFile": "visible-01.txt",
+      "sha256": "9964835ca598fbcb4fd0106da12064aa5170c4e582b271411381ce37e799612e",
+      "modelVisibleUtf8Bytes": 14759,
+      "modelVisibleCodePoints": 6699,
+      "truncated": false,
+      "tokenUsage": null
+    },
+    {
+      "callId": "call_cd407a15d2f348759941f8b7537c28fa",
+      "command": "const r = await tools.exec_command({cmd:\"node D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/measure-resource-load.mjs D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/after/A01 D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/snapshot/skills/cineweave-director file references/routes/image-prompt.md\",\"max_output_tokens\":12000});text(r.output);\n",
+      "payloadFile": "visible-02.txt",
+      "sha256": "979aa5761e5ea1cb954b557d07a0007637c3f3b5b32d19823c3262985c557ebd",
+      "modelVisibleUtf8Bytes": 8487,
+      "modelVisibleCodePoints": 3407,
+      "truncated": false,
+      "tokenUsage": null
+    },
+    {
+      "callId": "call_b543832b3a92401abd7861b946226e7c",
+      "command": "const r = await tools.exec_command({cmd:\"node D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/measure-resource-load.mjs D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/after/A01 D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/snapshot/skills/cineweave-director file references/optional/prompt-detail-standard.md 表达原则\",\"max_output_tokens\":12000});text(r.output);\n",
+      "payloadFile": "visible-03.txt",
+      "sha256": "bad589e2dcb41d2fc352801671b2fc598ab28155c7c5168d8abb068a6796b4b4",
+      "modelVisibleUtf8Bytes": 1315,
+      "modelVisibleCodePoints": 501,
+      "truncated": false,
+      "tokenUsage": null
+    },
+    {
+      "callId": "call_eb8c3a3ce1d44b7dbd1c798e63b4870d",
+      "command": "const r = await tools.exec_command({cmd:\"node D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/measure-resource-load.mjs D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/after/A01 D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/snapshot/skills/cineweave-director file references/optional/prompt-detail-standard.md 人物\",\"max_output_tokens\":12000});text(r.output);\n",
+      "payloadFile": "visible-04.txt",
+      "sha256": "8de11a7d9a951f3bb7645eae77a180882161b73b4bd84c923dd62e2da41505bf",
+      "modelVisibleUtf8Bytes": 7626,
+      "modelVisibleCodePoints": 2770,
+      "truncated": false,
+      "tokenUsage": null
+    },
+    {
+      "callId": "call_1c74c2b5f52c4aaebaabd7b17ee500ae",
+      "command": "const r = await tools.exec_command({cmd:\"node D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/measure-resource-load.mjs D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/after/A01 D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/snapshot/skills/cineweave-director file references/optional/prompt-detail-standard.md 场景\",\"max_output_tokens\":12000});text(r.output);\n",
+      "payloadFile": "visible-05.txt",
+      "sha256": "f757746baa2ac454d324c3985ef20c05157ec407feafc37afb84fcea4051426a",
+      "modelVisibleUtf8Bytes": 1535,
+      "modelVisibleCodePoints": 605,
+      "truncated": false,
+      "tokenUsage": null
+    }
+  ]
+}

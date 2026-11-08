@@ -1,0 +1,42 @@
+{
+  "version": "3.2.1",
+  "bundle_files": 686,
+  "installed_files": 686,
+  "byte_identical": true,
+  "old_install_changed": [],
+  "old_cache_restored_after_installer_cleanup": true,
+  "backups": {
+    "worktree-before": {
+      "files": 1187,
+      "crc_and_sha256_verified": true
+    },
+    "installed-before": {
+      "files": 1239,
+      "crc_and_sha256_verified": true
+    }
+  },
+  "behavior_snapshot_files": 684,
+  "post_evaluation_product_delta": [
+    {
+      "path": "skills/cineweave-director/assets/adaptation-example.html",
+      "before": "cfdcc8f98ac0483a0db3f6c4aa8891fd94112298a4fe43d0eee7e17e47dfa22a",
+      "after": "8df8bc325a5c47d6dae4d67d90c35cf32901eb48496aab40f2656a3ebdad9224"
+    },
+    {
+      "path": "skills/cineweave-platform/assets/adaptation-example.html",
+      "before": "cfdcc8f98ac0483a0db3f6c4aa8891fd94112298a4fe43d0eee7e17e47dfa22a",
+      "after": "8df8bc325a5c47d6dae4d67d90c35cf32901eb48496aab40f2656a3ebdad9224"
+    },
+    {
+      "path": "skills/cineweave-reference/assets/adaptation-example.html",
+      "before": "cfdcc8f98ac0483a0db3f6c4aa8891fd94112298a4fe43d0eee7e17e47dfa22a",
+      "after": "8df8bc325a5c47d6dae4d67d90c35cf32901eb48496aab40f2656a3ebdad9224"
+    },
+    {
+      "path": "skills/cineweave-review/assets/adaptation-example.html",
+      "before": "cfdcc8f98ac0483a0db3f6c4aa8891fd94112298a4fe43d0eee7e17e47dfa22a",
+      "after": "8df8bc325a5c47d6dae4d67d90c35cf32901eb48496aab40f2656a3ebdad9224"
+    }
+  ],
+  "delta_reason": "Only C1/C4 SVG label position adjusted after browser review; instructions, prompts, contracts and checker behavior unchanged."
+}

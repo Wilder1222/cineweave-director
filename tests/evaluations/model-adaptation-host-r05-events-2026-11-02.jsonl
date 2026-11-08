@@ -1,0 +1,28 @@
+{"type": "thread.started"}
+{"type": "item.completed", "item": {"id": "item_0", "type": "error"}}
+{"type": "item.completed", "item": {"id": "item_1", "type": "error"}}
+{"type": "turn.started"}
+{"type": "item.completed", "item": {"id": "item_2", "type": "agent_message"}}
+{"type": "item.started", "item": {"id": "item_3", "type": "command_execution", "status": "in_progress", "exit_code": null}}
+{"type": "item.completed", "item": {"id": "item_3", "type": "command_execution", "status": "failed", "exit_code": -1, "failure": "process creation failed; Windows error 267"}}
+{"type": "item.started", "item": {"id": "item_4", "type": "mcp_tool_call", "status": "in_progress", "server": "node_repl", "tool": "js"}}
+{"type": "item.completed", "item": {"id": "item_4", "type": "mcp_tool_call", "status": "completed", "server": "node_repl", "tool": "js"}}
+{"type": "item.started", "item": {"id": "item_5", "type": "mcp_tool_call", "status": "in_progress", "server": "node_repl", "tool": "js"}}
+{"type": "item.completed", "item": {"id": "item_5", "type": "mcp_tool_call", "status": "completed", "server": "node_repl", "tool": "js"}}
+{"type": "item.started", "item": {"id": "item_6", "type": "mcp_tool_call", "status": "in_progress", "server": "node_repl", "tool": "js"}}
+{"type": "item.completed", "item": {"id": "item_6", "type": "mcp_tool_call", "status": "failed", "server": "node_repl", "tool": "js"}}
+{"type": "item.started", "item": {"id": "item_7", "type": "mcp_tool_call", "status": "in_progress", "server": "node_repl", "tool": "js"}}
+{"type": "item.completed", "item": {"id": "item_7", "type": "mcp_tool_call", "status": "completed", "server": "node_repl", "tool": "js"}}
+{"type": "item.completed", "item": {"id": "item_8", "type": "agent_message"}}
+{"type": "item.started", "item": {"id": "item_9", "type": "mcp_tool_call", "status": "in_progress", "server": "node_repl", "tool": "js"}}
+{"type": "item.started", "item": {"id": "exec-5f4462e5-ec38-43b4-93ef-b12c37d3dd58", "type": "web_search"}}
+{"type": "item.completed", "item": {"id": "item_9", "type": "mcp_tool_call", "status": "completed", "server": "node_repl", "tool": "js"}}
+{"type": "item.completed", "item": {"id": "exec-5f4462e5-ec38-43b4-93ef-b12c37d3dd58", "type": "web_search"}}
+{"type": "item.started", "item": {"id": "exec-2134e250-f76a-41fc-b2ab-6faaf1d291e5", "type": "web_search"}}
+{"type": "item.completed", "item": {"id": "exec-2134e250-f76a-41fc-b2ab-6faaf1d291e5", "type": "web_search"}}
+{"type": "item.started", "item": {"id": "exec-4907fea2-c227-42fe-b2a4-b546b7cacb4e", "type": "web_search"}}
+{"type": "item.completed", "item": {"id": "exec-4907fea2-c227-42fe-b2a4-b546b7cacb4e", "type": "web_search"}}
+{"type": "item.started", "item": {"id": "exec-12725e8b-ce2b-4d41-8149-f34d4aecb525", "type": "web_search"}}
+{"type": "item.completed", "item": {"id": "exec-12725e8b-ce2b-4d41-8149-f34d4aecb525", "type": "web_search"}}
+{"type": "item.completed", "item": {"id": "item_14", "type": "agent_message"}}
+{"type": "turn.completed", "usage_present": true}

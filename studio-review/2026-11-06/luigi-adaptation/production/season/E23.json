@@ -1,0 +1,582 @@
+{
+  "number": 23,
+  "title": "同一个死亡",
+  "logline": "纽约重复控罪撤销、纽约假证另行认罪、宾州独立命令分别说明；庭外回家口号与本人收到的三份文件不相符。",
+  "dramaturgy": {
+    "openingQuestion": "联邦认罪能阻止哪些州案事项，又有哪些责任不会因此消失？",
+    "pursuit": "控辩分别争论州法适用，青年需要理解三地结果仍不等于获释。",
+    "reversal": "纽约重复控罪撤销、纽约假证另行认罪、宾州独立命令分别说明；庭外回家口号与本人收到的三份文件不相符。",
+    "cost": "姐姐不能据热搜买票，青年只能记量刑日期和空待办。",
+    "cliffhanger": "青年询问探视，答复仍需确认；下一确定节点是联邦量刑。这集不把三地处理剪成已经获释。",
+    "nextEpisodeBridge": "判决和一轮治疗获批之后，每个人还必须亲自处理什么？"
+  },
+  "movements": [
+    {
+      "title": "双方还在争",
+      "startScene": "E23-SC01",
+      "question": "争纽约州保护与不同危害例外的具体适用。",
+      "turn": "法官明确不靠一概联邦禁令，两方仍不同意。"
+    },
+    {
+      "title": "分别裁定",
+      "startScene": "E23-SC02",
+      "question": "准确处理纽约重复控罪和纽约持有伪造证件两个事项。",
+      "turn": "前者撤销，后者另行自愿认罪已羁押时间。"
+    },
+    {
+      "title": "仍不能买回家的票",
+      "startScene": "E23-SC03",
+      "question": "将三地结果落到本人还在监禁的实际生活。",
+      "turn": "回家口号被三份不同法院文件与未确认探视栏纠正。"
+    }
+  ],
+  "continuityNote": "当前播出编号为24集短剧；E01–E24场号/制作镜号只作稳定资产定位。各集以完整场景为边界，英语对白与中文对照同步。判决和一轮治疗获批之后，每个人还必须亲自处理什么？",
+  "scenes": [
+    {
+      "id": "E23-SC01",
+      "location": "COURT-STATE",
+      "time": "日·认罪后数周·州申请听证",
+      "script": "州法庭北窗的光落在木质席沿。北侧男法官翻到例外条文，西桌海伦与深蓝西装的路易吉并坐，东桌州检察官起身。海伦的蓝夹左边是已接受的联邦认罪记录，右边是州起诉书。瑞秋仍在东南旁听，棕文件袋合着。检察官把自己的两张对照页分开放在东桌，指给北席看。\n州检察官（使用英语，把两页分开摆）：The federal counts punish interstate and online stalking. New York's murder charge punishes an intentional killing here. Our law allows an exception for different harms.\n中文对照：联邦两项惩处跨州和网络跟踪，纽约谋杀罪惩处在这里故意杀人。本州法律对不同危害设有例外。\n海伦等他说完才站起，将联邦记录翻到青年承认死亡与意图的段落，放到州指控同一姓名旁边。\n海伦（使用英语，把两页对应到具体行为，听法官是否追问）：His federal plea covers Brian Ward's intentional killing too. The stalking led to the shooting. It's one course of conduct.\n中文对照：他的联邦认罪也包括故意杀害布莱恩·沃德。跟踪之后就是这次枪击，是同一组连续行为。\n法官没有立即写结论，先抬手让她停在这里。\n州法官（使用英语，限定本案适用范围）：You're relying on New York's protection for the same criminal transaction, not a blanket federal ban?\n中文对照：你依据的是纽约对同一犯罪交易的保护，不是一条一概禁止州起诉的联邦规则？\n海伦（使用英语，不多补一句）：Correct.\n中文对照：对。\n检察官从自己的纸页里抽出例外条文，却没有移开被害人姓名的那页。\n州检察官（使用英语，坚持例外而非否认纸上内容）：The same death appears in both. That doesn't make the harms identical.\n中文对照：两案都有同一死亡，不代表危害就相同。\n海伦的手指留在两份记录相应的位置，没有把它说成只要死者相同就当然禁止。\n海伦（使用英语，手停在对应段落）：The exception still has to fit this conduct.\n中文对照：例外仍须适用于这些具体行为。\n法官看完两处后合上夹子，举手示意暂休，起身离席。检察官把例外页夹回，海伦收住笔，路易吉没有向旁听席回头。",
+      "entry": "两项联邦认罪已被接受，州法例外尚待裁；双方以本案记录争取结果。",
+      "exit": "休庭形成真正未决时段，谁也不能把不同罪名或同一死亡单独当成答案。",
+      "dramaticFunction": "争纽约州保护与不同危害例外的具体适用。",
+      "turn": "法官明确不靠一概联邦禁令，两方仍不同意。",
+      "exitCost": "必须休庭等待书面裁定，双方论点都未被剪成稻草人。",
+      "sceneRhythm": "完整控方、辩方、法官限题和再回应；休庭是真省略。",
+      "plannedDuration": 66
+    },
+    {
+      "id": "E23-SC02",
+      "location": "COURT-STATE",
+      "time": "下午·同日休庭后",
+      "script": "下午复庭，北席放着书面裁定。海伦将两份对照记录重新摆平，路易吉仍在西侧；瑞秋在东南坐好，拇指抵着棕袋扣。法官等后门合上才开口。\n州法官（使用英语，宣读书面裁定）：On this record, the federal convictions addressed the same death in the same criminal transaction. Under our state law, the claimed exception does not apply.\n中文对照：依据本案记录，联邦定罪已处理同一犯罪交易中的同一死亡。依本州法律，所主张的例外不适用。\n海伦翻到收到的副本，在裁定结论旁留下一道短线，没有移开下一页联邦量刑材料。\n州法官（使用英语，把范围说完）：The listed murder and duplicative firearm counts are dismissed. The federal convictions remain. The defendant is not being released.\n中文对照：列明的谋杀和重复枪械指控撤销。联邦定罪仍然有效，被告不会因此获释。\n路易吉听完“不会获释”，双手仍在桌沿。瑞秋抬眼看向北席，没有向西桌点头。法官将裁定收到左边，拿起单独标注纽约持有事项的协议。路易吉起身，海伦坐着等待。\n州法官（使用英语，转入独立事项）：For knowingly possessing a forged identification document in New York, how do you plead?\n中文对照：对于明知是虚假身份证明文件仍在纽约持有这一项，你如何答辩？\n青年听清地域和行为，自己回答。\n路易吉（使用英语，按问题逐项回答，不急着坐下）：Guilty. I had the ID in New York. I knew it was forged. I understand the rights I'm giving up. No one's forced me.\n中文对照：认罪。我在纽约持有那张证件，也知道它是假的。我明白自己放弃哪些权利，没有人强迫我。\n法官核对这一项自愿认罪的记录，再在协议上签认。\n州法官（使用英语，仅对纽约该项裁判）：The plea is accepted. The agreed sentence on this count is time served. It adds no custody.\n中文对照：法院接受认罪。此项协定刑罚为已羁押时间，不追加监禁。\n路易吉（使用英语，坐下前答）：I understand.\n中文对照：我明白。\n路易吉坐回原位。海伦把已签的纽约协议与撤销裁定分别收好。北门侧法警一直等在原处，直到法官示意本庭程序结束才握住门把，准备押返。",
+      "entry": "州法院回席宣读本案裁定；独立纽约假证持有事项待处理。",
+      "exit": "重复追诉撤销，不等于释放；纽约持有假证另行认罪完成，宾州事项没有由本庭裁判。",
+      "dramaticFunction": "准确处理纽约重复控罪和纽约持有伪造证件两个事项。",
+      "turn": "前者撤销，后者另行自愿认罪已羁押时间。",
+      "exitCost": "联邦定罪继续，被告押返而非获释。",
+      "sceneRhythm": "先一段裁定，再一段独立认罪；地域和行为说完整，开门不作自由象征。",
+      "plannedDuration": 76
+    },
+    {
+      "id": "E23-SC03",
+      "location": "VISIT",
+      "time": "傍晚·同日押返后",
+      "script": "傍晚，押返后的会见室里，东窄窗下的桌沿已经暗了。路易吉换回浅灰囚服，双腕自由，坐北侧。海伦坐南侧，已从蓝夹取出三份文件：纽约裁定放西，宾州法院自己的书面命令放中，联邦量刑通知放东。青年手里只有一支笔和一张自留纸。\n路易吉（使用英语，回想刚听见的话，没跟着高兴）：On the way back, someone yelled I was going home. They really think I'm getting out.\n中文对照：回来的路上，有人喊我能回家了。他们真以为我要出去了。\n海伦先将宾州命令转正，让他看清是另一法院，再把东边的量刑通知推向北侧。\n海伦（使用英语，三份纸分别指清，不把它们叠成一件事）：No. We're done in New York. Pennsylvania's own order says time served. No more custody there. This one's your federal sentencing notice.\n中文对照：没有。纽约这边结了。宾州自己的命令写的是已羁押时间，不再追加。剩下这张，是联邦量刑通知。\n青年翻到通知上的日期。海伦松手，让那张纸停在他面前。\n海伦（使用英语，让他先记日期，不领胜诉的功劳）：That's your sentencing date. We haven't agreed on a sentence.\n中文对照：这是量刑日期。判多久，还没谈定。\n他把日期抄到自留纸上，在下方另起一行准备写会见安排。\n路易吉（使用英语，压住空的会见栏，问能不能安排）：My sister's taken two days off. Can you confirm a visit before she pays for the tickets?\n中文对照：我姐已经请了两天假。她买票之前，能先确认让不让她来探视吗？\n海伦翻开日历，没有给那一行补上数字。\n海伦（使用英语，翻日历但不报没确认的日子）：I'll check tomorrow. Don't fill that in yet.\n中文对照：我明天问。那一栏先别填。\n青年笔尖已经落到空行起端，又抬了起来。\n路易吉（使用英语，把家人的安排说实，笔离开空行）：Tell her to wait on the tickets. And make sure she knows it's a visit. I'm not getting out.\n中文对照：让她先别买票。也跟她说清楚，是来探视，我还出不去。\n海伦（使用英语，明确承接家属安排）：I'll tell her.\n中文对照：我会告诉她。\n他在未确认的一行旁只画一个空方框，把笔放下。海伦将三地文件分别收回夹内，青年留下自留纸；那一行没有被填成归家日期。",
+      "entry": "押返完成；三地纸件由各自法院出具，州撤案口号已在外传播。",
+      "exit": "青年明确家人只能等确认后探视，下一确定节点仍是联邦量刑。",
+      "dramaticFunction": "将三地结果落到本人还在监禁的实际生活。",
+      "turn": "回家口号被三份不同法院文件与未确认探视栏纠正。",
+      "exitCost": "姐姐不能据热搜买票，青年只能记量刑日期和空待办。",
+      "sceneRhythm": "一场持续共享阅读和日历查询，确证与未知分别落笔。",
+      "plannedDuration": 68
+    }
+  ],
+  "shots": [
+    {
+      "id": "E23-SH001",
+      "sceneId": "E23-SC01",
+      "duration": 35,
+      "characters": [
+        "PROSECUTOR-STATE",
+        "JUDGE-STATE",
+        "HELEN",
+        "LUIGI-FORMAL"
+      ],
+      "purpose": "双方在具体记录上争州法例外的适用，不否认杀人。",
+      "framing": "州庭南侧固定中全景",
+      "composition": "检察官东桌居中，前景纸页被分开，北法官在后景北席可辨；西桌只在左边远缘，不拍三人假同桌。本成片镜按如下连续机位与人物动作执行：州庭南侧固定中全景，东检方与西辩方各自材料仍在各自桌；北男法官可见，不做文件来回跳转动画。 州检察官摆两页说不同危害，海伦等其结束才起身把联邦承认意图与死亡段对到州指控姓名。她说同一组连续行为，不把同一死者当作自动撤案公式。",
+      "camera": "州庭南侧固定中全景，东检方与西辩方各自材料仍在各自桌；北男法官可见，不做文件来回跳转动画。",
+      "focus": "按人物当前任务保持共享画面可读；双方在具体记录上争州法例外的适用，不否认杀人。 不按每句说话人自动反打；细字由后期证据页必要叠加，不要求景深同时清楚全部正文。",
+      "start": "州检察官站东桌，将两张对照页分开。",
+      "action": "州检察官摆两页说不同危害，海伦等其结束才起身把联邦承认意图与死亡段对到州指控姓名。她说同一组连续行为，不把同一死者当作自动撤案公式。",
+      "end": "双方在具体记录上争州法例外的适用，不否认杀人。；具体动作终态：西海伦站起，翻联邦事实基础对州页同名，说是同一连续行为，青年不递提示。",
+      "sound": "东桌男声清楚，北席纸页翻动一次；无旁听喧哗。；纸页对齐、海伦原声，青年的椅子不动。；只保留本镜对白表所列可辨英语，原场内画外、电话、直播声源关系保持；不增配解释旁白。",
+      "music": "无背景音乐；先以表演、对白、真实环境声成立，禁止在技术段接缝加音乐遮掩。",
+      "dialogue": [
+        {
+          "id": "E23-D001",
+          "speaker": "州检察官",
+          "listener": "州法官",
+          "text": "The federal counts punish interstate and online stalking. New York's murder charge punishes an intentional killing here. Our law allows an exception for different harms.",
+          "translationZh": "联邦两项惩处跨州和网络跟踪，纽约谋杀罪惩处在这里故意杀人。本州法律对不同危害设有例外。",
+          "tone": "把两页分开摆",
+          "start": 0.8,
+          "end": 14.15
+        },
+        {
+          "id": "E23-D002",
+          "speaker": "海伦",
+          "listener": "州法官",
+          "text": "His federal plea covers Brian Ward's intentional killing too. The stalking led to the shooting. It's one course of conduct.",
+          "translationZh": "他的联邦认罪也包括故意杀害布莱恩·沃德。跟踪之后就是这次枪击，是同一组连续行为。",
+          "tone": "把两页对应到具体行为，听法官是否追问",
+          "start": 18.8,
+          "end": 29.52
+        }
+      ],
+      "overlay": [],
+      "next": "下一成片镜 E23-SH003。同场时承接本镜已完成动作，不重复表演；跨场依剧本时间和空间建立。",
+      "viewerEntry": "已有联邦认罪，但州方仍寻求继续追诉。",
+      "viewerExit": "双方在具体记录上争州法例外的适用，不否认杀人。",
+      "cutTrigger": "成片剪点由本镜结束后注意与任务发生变化决定：双方在具体记录上争州法例外的适用，不否认杀人。 技术生成段边界不触发剪辑。",
+      "sourceShotIds": [
+        "E23-SH001",
+        "E23-SH002"
+      ],
+      "generationSegments": [
+        {
+          "duration": 18,
+          "start": "州检察官站东桌，将两张对照页分开。",
+          "action": "东检方起身把两页分开放，说明不同危害，北席听完不判。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "东检方起身把两页分开放，说明不同危害，北席听完不判。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E23-D001"
+          ]
+        },
+        {
+          "duration": 17,
+          "start": "东检方起身把两页分开放，说明不同危害，北席听完不判。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "action": "西海伦站起，翻联邦事实基础对州页同名，说是同一连续行为，青年不递提示。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "西海伦站起，翻联邦事实基础对州页同名，说是同一连续行为，青年不递提示。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E23-D002"
+          ]
+        }
+      ],
+      "continuousTakeGroup": "E23-SH001",
+      "mediaContinuityStatus": "pending_media",
+      "editorialContinuity": "一个成片观察位置和完整表演；技术段只为生成与衔接试片计划，非新增剪点。实际连贯性待媒体测试。",
+      "offscreenRoleIds": [],
+      "broadcastEpisode": 23,
+      "displayId": "EP23-001"
+    },
+    {
+      "id": "E23-SH003",
+      "sceneId": "E23-SC01",
+      "duration": 31,
+      "characters": [
+        "JUDGE-STATE",
+        "HELEN",
+        "PROSECUTOR-STATE",
+        "LUIGI-FORMAL"
+      ],
+      "purpose": "没有当场赢下争论，真实休庭后才进入书面裁定。",
+      "framing": "北席男法官中近景，南侧朝北，控辩同场画外。",
+      "composition": "男法官北席胸口以上及桌面记录下缘，西海伦与东检察官都在画外，声向分别标明；北窗冷光不改变法庭木质空间。南侧固定北席法官中近景；他主动限题时从双方争论转到决定规则适用的人，控辩短答和异议不切反打。 留法官听完两方后核记录、合夹、起身；双方收页只作画外纸声，不能同时声称看见两桌反应。",
+      "camera": "南侧固定北席法官中近景；他主动限题时从双方争论转到决定规则适用的人，控辩短答和异议不切反打。",
+      "focus": "留法官听完两方后核记录、合夹、起身；双方收页只作画外纸声，不能同时声称看见两桌反应。",
+      "start": "法官手举到胸口示意海伦停在本案。",
+      "action": "北席法官抬手将问题限定为纽约州保护而非一概联邦禁令。海伦从西桌画外答正确；检方从东桌画外坚持不同危害，海伦再指本案适用。画面始终留法官核两处记录、合夹示意休庭并起身，控辩纸声留画外。",
+      "end": "检方画外坚持不同危害，海伦画外指本案适用；法官核记录后合夹起身，画外只留两桌纸声。 末步真实状态直接接下一段，不重演。",
+      "sound": "北方男法官麦克风近，海伦从西方答一个词。；两个原声不重叠，随后夹扣和北椅轻退；接下一场后门关合。；只保留本镜对白表所列可辨英语，原场内画外、电话、直播声源关系保持；不增配解释旁白。",
+      "music": "无背景音乐；先以表演、对白、真实环境声成立，禁止在技术段接缝加音乐遮掩。",
+      "dialogue": [
+        {
+          "id": "E23-D003",
+          "speaker": "州法官",
+          "listener": "海伦",
+          "text": "You're relying on New York's protection for the same criminal transaction, not a blanket federal ban?",
+          "translationZh": "你依据的是纽约对同一犯罪交易的保护，不是一条一概禁止州起诉的联邦规则？",
+          "tone": "限定本案适用范围",
+          "start": 0.8,
+          "end": 9.43
+        },
+        {
+          "id": "E23-D004",
+          "speaker": "海伦",
+          "listener": "州法官",
+          "text": "Correct.",
+          "translationZh": "对。",
+          "tone": "不多补一句",
+          "start": 10.08,
+          "end": 11.14
+        },
+        {
+          "id": "E23-D005",
+          "speaker": "州检察官",
+          "listener": "州法官",
+          "text": "The same death appears in both. That doesn't make the harms identical.",
+          "translationZh": "两案都有同一死亡，不代表危害就相同。",
+          "tone": "坚持例外而非否认纸上内容",
+          "start": 16.8,
+          "end": 23.33
+        },
+        {
+          "id": "E23-D006",
+          "speaker": "海伦",
+          "listener": "州法官",
+          "text": "The exception still has to fit this conduct.",
+          "translationZh": "例外仍须适用于这些具体行为。",
+          "tone": "手停在对应段落",
+          "start": 23.98,
+          "end": 28.41
+        }
+      ],
+      "overlay": [],
+      "next": "本场结果成立后切入 E23-SC02（COURT-STATE，下午·同日休庭后）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "viewerEntry": "相同死亡的事实已被辩方对上。",
+      "viewerExit": "没有当场赢下争论，真实休庭后才进入书面裁定。",
+      "cutTrigger": "成片剪点由本镜结束后注意与任务发生变化决定：没有当场赢下争论，真实休庭后才进入书面裁定。 技术生成段边界不触发剪辑。",
+      "sourceShotIds": [
+        "E23-SH003",
+        "E23-SH004"
+      ],
+      "generationSegments": [
+        {
+          "duration": 16,
+          "start": "法官手举到胸口示意海伦停在本案。",
+          "action": "画面留北席法官限题，海伦画外答正确；他继续等待两桌的补充，不切他们反应。 同一成片镜连续接续，人物位置、物件归属、光线与机位轨迹不重置。",
+          "end": "画面留北席法官限题，海伦画外答正确；他继续等待两桌的补充，不切他们反应。 末步真实状态直接接下一段，不重演。",
+          "dialogueCueIds": [
+            "E23-D003",
+            "E23-D004"
+          ]
+        },
+        {
+          "duration": 15,
+          "start": "画面留北席法官限题，海伦画外答正确；他继续等待两桌的补充，不切他们反应。 末步真实状态直接接下一段，不重演。",
+          "action": "检方画外坚持不同危害，海伦画外指本案适用；法官核记录后合夹起身，画外只留两桌纸声。 同一成片镜连续接续，人物位置、物件归属、光线与机位轨迹不重置。",
+          "end": "检方画外坚持不同危害，海伦画外指本案适用；法官核记录后合夹起身，画外只留两桌纸声。 末步真实状态直接接下一段，不重演。",
+          "dialogueCueIds": [
+            "E23-D005",
+            "E23-D006"
+          ]
+        }
+      ],
+      "continuousTakeGroup": "E23-SH003",
+      "mediaContinuityStatus": "pending_media",
+      "editorialContinuity": "一个成片观察位置和完整表演；技术段只为生成与衔接试片计划，非新增剪点。实际连贯性待媒体测试。",
+      "offscreenRoleIds": [
+        "HELEN",
+        "PROSECUTOR-STATE",
+        "LUIGI-FORMAL"
+      ],
+      "broadcastEpisode": 23,
+      "displayId": "EP23-002"
+    },
+    {
+      "id": "E23-SH005",
+      "sceneId": "E23-SC02",
+      "duration": 33,
+      "characters": [
+        "JUDGE-STATE",
+        "HELEN",
+        "LUIGI-FORMAL",
+        "RACHEL"
+      ],
+      "purpose": "纽约重复控罪依虚构州法分析撤销，联邦责任与羁押保留。",
+      "framing": "明确下午复庭后南端偏西固定共享中景",
+      "composition": "北男法官后景、海伦和青年西桌中景；前景副本在桌沿，东控方仅边缘肩线，不虚构纸页直接从法官飞到律师手中。本成片镜按如下连续机位与人物动作执行：明确下午复庭后南端偏西固定共享中景，北席宣读、西桌听，东南瑞秋在远层；镜头不以青年呼气制造胜利结论。 法官从书面裁定说明本案例外不适用，再列撤销的纽约控罪和联邦仍在、未获释放。海伦按范围作记号，青年手留桌沿，瑞秋向北抬眼不向西点头。",
+      "camera": "明确下午复庭后南端偏西固定共享中景，北席宣读、西桌听，东南瑞秋在远层；镜头不以青年呼气制造胜利结论。",
+      "focus": "按人物当前任务保持共享画面可读；纽约重复控罪依虚构州法分析撤销，联邦责任与羁押保留。 不按每句说话人自动反打；细字由后期证据页必要叠加，不要求景深同时清楚全部正文。",
+      "start": "下午复庭后，法官书面裁定摊开，后门刚合。",
+      "action": "法官从书面裁定说明本案例外不适用，再列撤销的纽约控罪和联邦仍在、未获释放。海伦按范围作记号，青年手留桌沿，瑞秋向北抬眼不向西点头。",
+      "end": "纽约重复控罪依虚构州法分析撤销，联邦责任与羁押保留。；具体动作终态：法官读撤销范围及不释放，青年和瑞秋分别听清，没人向对方表示胜利。",
+      "sound": "后门关闭余响、法官北向麦克风，西桌笔短划。；北席男声同场清楚，旁听安静；无掌声或门外口号。；只保留本镜对白表所列可辨英语，原场内画外、电话、直播声源关系保持；不增配解释旁白。",
+      "music": "无背景音乐；先以表演、对白、真实环境声成立，禁止在技术段接缝加音乐遮掩。",
+      "dialogue": [
+        {
+          "id": "E23-D007",
+          "speaker": "州法官",
+          "listener": "法庭各方",
+          "text": "On this record, the federal convictions addressed the same death in the same criminal transaction. Under our state law, the claimed exception does not apply.",
+          "translationZh": "依据本案记录，联邦定罪已处理同一犯罪交易中的同一死亡。依本州法律，所主张的例外不适用。",
+          "tone": "宣读书面裁定",
+          "start": 0.8,
+          "end": 14.15
+        },
+        {
+          "id": "E23-D008",
+          "speaker": "州法官",
+          "listener": "法庭各方",
+          "text": "The listed murder and duplicative firearm counts are dismissed. The federal convictions remain. The defendant is not being released.",
+          "translationZh": "列明的谋杀和重复枪械指控撤销。联邦定罪仍然有效，被告不会因此获释。",
+          "tone": "把范围说完",
+          "start": 17.8,
+          "end": 28.0
+        }
+      ],
+      "overlay": [],
+      "next": "下一成片镜 E23-SH007。同场时承接本镜已完成动作，不重复表演；跨场依剧本时间和空间建立。",
+      "viewerEntry": "同一争议经历休庭，结果未知。",
+      "viewerExit": "纽约重复控罪依虚构州法分析撤销，联邦责任与羁押保留。",
+      "cutTrigger": "成片剪点由本镜结束后注意与任务发生变化决定：纽约重复控罪依虚构州法分析撤销，联邦责任与羁押保留。 技术生成段边界不触发剪辑。",
+      "sourceShotIds": [
+        "E23-SH005",
+        "E23-SH006"
+      ],
+      "generationSegments": [
+        {
+          "duration": 17,
+          "start": "下午复庭后，法官书面裁定摊开，后门刚合。",
+          "action": "下午复庭北席读具体记录与州法例外结论，海伦只在对应段落作记号。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "下午复庭北席读具体记录与州法例外结论，海伦只在对应段落作记号。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E23-D007"
+          ]
+        },
+        {
+          "duration": 16,
+          "start": "下午复庭北席读具体记录与州法例外结论，海伦只在对应段落作记号。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "action": "法官读撤销范围及不释放，青年和瑞秋分别听清，没人向对方表示胜利。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "法官读撤销范围及不释放，青年和瑞秋分别听清，没人向对方表示胜利。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E23-D008"
+          ]
+        }
+      ],
+      "continuousTakeGroup": "E23-SH005",
+      "mediaContinuityStatus": "pending_media",
+      "editorialContinuity": "一个成片观察位置和完整表演；技术段只为生成与衔接试片计划，非新增剪点。实际连贯性待媒体测试。",
+      "offscreenRoleIds": [],
+      "broadcastEpisode": 23,
+      "displayId": "EP23-003"
+    },
+    {
+      "id": "E23-SH007",
+      "sceneId": "E23-SC02",
+      "duration": 43,
+      "characters": [
+        "JUDGE-STATE",
+        "LUIGI-FORMAL",
+        "HELEN"
+      ],
+      "purpose": "纽约伪造证件事项独立处分，绝不与宾州或联邦混成免监禁。",
+      "framing": "西桌青年与海伦中景，南偏西朝东北；北门法警为远层。",
+      "composition": "青年西桌北端站立，中景海伦在南端坐着，纽约单页放青年桌前；北男法官画外提问，宾州命令此时不出现。南偏西固定西桌中景，青年真实站起答独立纽约事项；北法官同场画外发问和宣布，北门法警仅为既定远层，不贴近桌边。 从裁定覆盖的全场转到本人自愿承认纽约持有事项；听完整地域与行为，再坐回等待押返。",
+      "camera": "南偏西固定西桌中景，青年真实站起答独立纽约事项；北法官同场画外发问和宣布，北门法警仅为既定远层，不贴近桌边。",
+      "focus": "从裁定覆盖的全场转到本人自愿承认纽约持有事项；听完整地域与行为，再坐回等待押返。",
+      "start": "法官收左边裁定，拿起纽约持有事项单页；青年站起。",
+      "action": "北席法官画外转入纽约伪造证件事项，青年在西桌起身听清问题，自行承认明知持有、自愿与权利放弃。北席核记录的短停后画外接受此项time served；青年答懂坐回，海伦分收纽约两份文件，北门远层法警等示意才开门准备押返。",
+      "end": "纽约伪造证件事项独立处分，绝不与宾州或联邦混成免监禁。；具体动作终态：北席核记录接受此项已羁押时间，青年答后坐回，律师分收文件，法警等待押返示意。",
+      "sound": "北席男声提问、青年答复；无笔提示或律师耳语。；法官宣判、青年短答、协议纸入夹和门把轻响。；只保留本镜对白表所列可辨英语，原场内画外、电话、直播声源关系保持；不增配解释旁白。",
+      "music": "无背景音乐；先以表演、对白、真实环境声成立，禁止在技术段接缝加音乐遮掩。",
+      "dialogue": [
+        {
+          "id": "E23-D009",
+          "speaker": "州法官",
+          "listener": "路易吉",
+          "text": "For knowingly possessing a forged identification document in New York, how do you plead?",
+          "translationZh": "对于明知是虚假身份证明文件仍在纽约持有这一项，你如何答辩？",
+          "tone": "转入独立事项",
+          "start": 0.8,
+          "end": 8.14
+        },
+        {
+          "id": "E23-D010",
+          "speaker": "路易吉",
+          "listener": "州法官",
+          "text": "Guilty. I had the ID in New York. I knew it was forged. I understand the rights I'm giving up. No one's forced me.",
+          "translationZh": "认罪。我在纽约持有那张证件，也知道它是假的。我明白自己放弃哪些权利，没有人强迫我。",
+          "tone": "按问题逐项回答，不急着坐下",
+          "start": 8.79,
+          "end": 21.2
+        },
+        {
+          "id": "E23-D011",
+          "speaker": "州法官",
+          "listener": "法庭各方",
+          "text": "The plea is accepted. The agreed sentence on this count is time served. It adds no custody.",
+          "translationZh": "法院接受认罪。此项协定刑罚为已羁押时间，不追加监禁。",
+          "tone": "仅对纽约该项裁判",
+          "start": 22.8,
+          "end": 31.95
+        },
+        {
+          "id": "E23-D012",
+          "speaker": "路易吉",
+          "listener": "州法官",
+          "text": "I understand.",
+          "translationZh": "我明白。",
+          "tone": "坐下前答",
+          "start": 32.6,
+          "end": 33.88
+        }
+      ],
+      "overlay": [],
+      "next": "本场结果成立后切入 E23-SC03（VISIT，傍晚·同日押返后）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "viewerEntry": "撤销范围已经说完，纽约另项尚未处分。",
+      "viewerExit": "纽约伪造证件事项独立处分，绝不与宾州或联邦混成免监禁。",
+      "cutTrigger": "成片剪点由本镜结束后注意与任务发生变化决定：纽约伪造证件事项独立处分，绝不与宾州或联邦混成免监禁。 技术生成段边界不触发剪辑。",
+      "sourceShotIds": [
+        "E23-SH007",
+        "E23-SH008"
+      ],
+      "generationSegments": [
+        {
+          "duration": 22,
+          "start": "法官收左边裁定，拿起纽约持有事项单页；青年站起。",
+          "action": "法官转独立纽约持有事项，青年起身听问，自己答明知持有与自愿认罪。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "法官转独立纽约持有事项，青年起身听问，自己答明知持有与自愿认罪。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E23-D009",
+            "E23-D010"
+          ]
+        },
+        {
+          "duration": 21,
+          "start": "法官转独立纽约持有事项，青年起身听问，自己答明知持有与自愿认罪。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "action": "北席核记录接受此项已羁押时间，青年答后坐回，律师分收文件，法警等待押返示意。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "北席核记录接受此项已羁押时间，青年答后坐回，律师分收文件，法警等待押返示意。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E23-D011",
+            "E23-D012"
+          ]
+        }
+      ],
+      "continuousTakeGroup": "E23-SH007",
+      "mediaContinuityStatus": "pending_media",
+      "extraRoleIds": [
+        "MARSHAL-DOOR"
+      ],
+      "editorialContinuity": "一个成片观察位置和完整表演；技术段只为生成与衔接试片计划，非新增剪点。实际连贯性待媒体测试。",
+      "offscreenRoleIds": [
+        "JUDGE-STATE"
+      ],
+      "broadcastEpisode": 23,
+      "displayId": "EP23-004"
+    },
+    {
+      "id": "E23-SH009",
+      "sceneId": "E23-SC03",
+      "duration": 68,
+      "characters": [
+        "LUIGI-DETENTION",
+        "HELEN"
+      ],
+      "purpose": "裁判结果转为仍在监禁中的家人出行安排，未获确认的部分保持空白。",
+      "framing": "会见桌西固定两人中景",
+      "composition": "南海伦、北青年，近景纽约纸西侧、宾州中间、联邦东侧后推北；东窗暗，蓝夹西桌沿，不出现可读患者资料。本成片镜按如下连续机位与人物动作执行：会见桌西固定两人中景，纽约文件西、宾州居中、联邦东；灰衣青年北律师南，三地纸不叠成一份，东窗暮色不作主光。 青年说押返听到回家口号，律师依次指宾州独立命令与联邦量刑通知。青年抄确定日期，却在姐姐探视栏停笔；律师查日历后只允诺查询，他请姐姐先别买票，强调只是探视，留空方框不填归家。",
+      "camera": "会见桌西固定两人中景，纽约文件西、宾州居中、联邦东；灰衣青年北律师南，三地纸不叠成一份，东窗暮色不作主光。",
+      "focus": "按人物当前任务保持共享画面可读；裁判结果转为仍在监禁中的家人出行安排，未获确认的部分保持空白。 不按每句说话人自动反打；细字由后期证据页必要叠加，不要求景深同时清楚全部正文。",
+      "start": "三份文件已分放桌西中东，青年北侧持笔与自留纸。",
+      "action": "青年说押返听到回家口号，律师依次指宾州独立命令与联邦量刑通知。青年抄确定日期，却在姐姐探视栏停笔；律师查日历后只允诺查询，他请姐姐先别买票，强调只是探视，留空方框不填归家。",
+      "end": "裁判结果转为仍在监禁中的家人出行安排，未获确认的部分保持空白。；具体动作终态：律师查日历无法确认，青年请她通知姐姐等票，画空方框放笔，三份文件分收。",
+      "sound": "纸页转正和向北推近的擦桌声；三份纸已在桌上，不再添加三次落桌声，青年说押返口号时不插群众音。；海伦短句、笔划两组，通风声低。；日历翻一页，青年提到姐姐时声音稍低；没有电话接通幻听。；笔放下、海伦夹扣；接下集法庭宣读前的纸展开声。；只保留本镜对白表所列可辨英语，原场内画外、电话、直播声源关系保持；不增配解释旁白。",
+      "music": "无背景音乐；先以表演、对白、真实环境声成立，禁止在技术段接缝加音乐遮掩。",
+      "dialogue": [
+        {
+          "id": "E23-D013",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "On the way back, someone yelled I was going home. They really think I'm getting out.",
+          "translationZh": "回来的路上，有人喊我能回家了。他们真以为我要出去了。",
+          "tone": "回想刚听见的话，没跟着高兴",
+          "start": 0.8,
+          "end": 9.43
+        },
+        {
+          "id": "E23-D014",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "No. We're done in New York. Pennsylvania's own order says time served. No more custody there. This one's your federal sentencing notice.",
+          "translationZh": "没有。纽约这边结了。宾州自己的命令写的是已羁押时间，不再追加。剩下这张，是联邦量刑通知。",
+          "tone": "三份纸分别指清，不把它们叠成一件事",
+          "start": 10.08,
+          "end": 21.85
+        },
+        {
+          "id": "E23-D015",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "That's your sentencing date. We haven't agreed on a sentence.",
+          "translationZh": "这是量刑日期。判多久，还没谈定。",
+          "tone": "让他先记日期，不领胜诉的功劳",
+          "start": 23.8,
+          "end": 29.28
+        },
+        {
+          "id": "E23-D016",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "My sister's taken two days off. Can you confirm a visit before she pays for the tickets?",
+          "translationZh": "我姐已经请了两天假。她买票之前，能先确认让不让她来探视吗？",
+          "tone": "压住空的会见栏，问能不能安排",
+          "start": 29.93,
+          "end": 39.08
+        },
+        {
+          "id": "E23-D017",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "I'll check tomorrow. Don't fill that in yet.",
+          "translationZh": "我明天问。那一栏先别填。",
+          "tone": "翻日历但不报没确认的日子",
+          "start": 46.8,
+          "end": 51.23
+        },
+        {
+          "id": "E23-D018",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "Tell her to wait on the tickets. And make sure she knows it's a visit. I'm not getting out.",
+          "translationZh": "让她先别买票。也跟她说清楚，是来探视，我还出不去。",
+          "tone": "把家人的安排说实，笔离开空行",
+          "start": 51.88,
+          "end": 62.08
+        },
+        {
+          "id": "E23-D019",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "I'll tell her.",
+          "translationZh": "我会告诉她。",
+          "tone": "明确承接家属安排",
+          "start": 62.73,
+          "end": 64.54
+        }
+      ],
+      "overlay": [],
+      "next": "本集结束。青年询问探视，答复仍需确认；下一确定节点是联邦量刑。这集不把三地处理剪成已经获释。 下集从COURT-FEDERAL展开：判决和一轮治疗获批之后，每个人还必须亲自处理什么？",
+      "viewerEntry": "本庭程序结束，外界已有回家口号。",
+      "viewerExit": "裁判结果转为仍在监禁中的家人出行安排，未获确认的部分保持空白。",
+      "cutTrigger": "成片剪点由本镜结束后注意与任务发生变化决定：裁判结果转为仍在监禁中的家人出行安排，未获确认的部分保持空白。 技术生成段边界不触发剪辑。",
+      "sourceShotIds": [
+        "E23-SH009",
+        "E23-SH010",
+        "E23-SH011",
+        "E23-SH012"
+      ],
+      "generationSegments": [
+        {
+          "duration": 23,
+          "start": "三份文件已分放桌西中东，青年北侧持笔与自留纸。",
+          "action": "青年复述口号，律师区分三地文件并将联邦通知推近，他先看法庭名称。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "青年复述口号，律师区分三地文件并将联邦通知推近，他先看法庭名称。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E23-D013",
+            "E23-D014"
+          ]
+        },
+        {
+          "duration": 23,
+          "start": "青年复述口号，律师区分三地文件并将联邦通知推近，他先看法庭名称。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "action": "她提醒刑期未定，他抄确定量刑日期，下面另起探视栏，提出姐姐票务问题。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "她提醒刑期未定，他抄确定量刑日期，下面另起探视栏，提出姐姐票务问题。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E23-D015",
+            "E23-D016"
+          ]
+        },
+        {
+          "duration": 22,
+          "start": "她提醒刑期未定，他抄确定量刑日期，下面另起探视栏，提出姐姐票务问题。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "action": "律师查日历无法确认，青年请她通知姐姐等票，画空方框放笔，三份文件分收。 同一成片镜、同一相机路径与速度；接续上一段已发生动作，不重做开头。",
+          "end": "律师查日历无法确认，青年请她通知姐姐等票，画空方框放笔，三份文件分收。 角色与物件停留在这一步的连续状态，机位及照明不重置。",
+          "dialogueCueIds": [
+            "E23-D017",
+            "E23-D018",
+            "E23-D019"
+          ]
+        }
+      ],
+      "continuousTakeGroup": "E23-SH009",
+      "mediaContinuityStatus": "pending_media",
+      "editorialContinuity": "一个成片观察位置和完整表演；技术段只为生成与衔接试片计划，非新增剪点。实际连贯性待媒体测试。",
+      "offscreenRoleIds": [],
+      "broadcastEpisode": 23,
+      "displayId": "EP23-005"
+    }
+  ]
+}

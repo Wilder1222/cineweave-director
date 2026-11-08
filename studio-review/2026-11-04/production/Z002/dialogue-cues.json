@@ -1,0 +1,187 @@
+{
+  "fps": 24,
+  "timingVerified": false,
+  "lipSyncVerified": false,
+  "cues": [
+    {
+      "shotId": "01",
+      "speaker": "柳毅",
+      "text": "这条路通哪里？",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 0,
+      "endFrameExclusive": 840,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "01",
+      "speaker": "龙女",
+      "text": "向东回官道。坡下水深。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 0,
+      "endFrameExclusive": 840,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "01",
+      "speaker": "龙女",
+      "text": "你若往洞庭去，愿替我带封信吗？我是洞庭君的女儿。嫁来泾水后，夫家把我遣到野外，我多年没有家中的消息。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 0,
+      "endFrameExclusive": 840,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "02",
+      "speaker": "柳毅",
+      "text": "洞庭水深，我不会水。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 840,
+      "endFrameExclusive": 1632,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "02",
+      "speaker": "龙女",
+      "text": "北岸有社橘。换掉腰带，敲树三下；有人回应再跟他走，没有回应就不要下水。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 840,
+      "endFrameExclusive": 1632,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "02",
+      "speaker": "柳毅",
+      "text": "我可以试，但不能保证一定送到。我若没见到你父亲，不会把信交给旁人。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 840,
+      "endFrameExclusive": 1632,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "03",
+      "speaker": "龙女",
+      "text": "信里有我的名字，别拆。请告诉他，我想回家，后面的事我想自己说。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 1632,
+      "endFrameExclusive": 2352,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "04",
+      "speaker": "柳毅",
+      "text": "这群羊又是什么？",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 2352,
+      "endFrameExclusive": 3024,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "04",
+      "speaker": "龙女",
+      "text": "雨工，雷霆一类。它们只是看起来像羊。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 2352,
+      "endFrameExclusive": 3024,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "05",
+      "speaker": "柳毅",
+      "text": "卖衣换船钱，书坊的差事也许赶不上。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 3024,
+      "endFrameExclusive": 3936,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "05",
+      "speaker": "洞庭君",
+      "text": "我是洞庭君。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 3024,
+      "endFrameExclusive": 3936,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "05",
+      "speaker": "洞庭君",
+      "text": "你为何叩树？",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 3024,
+      "endFrameExclusive": 3936,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "06",
+      "speaker": "柳毅",
+      "text": "泾水边一位女子托我送书，说是您的女儿。那是一个多月前，我不知她此刻在哪里。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 3936,
+      "endFrameExclusive": 5016,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "06",
+      "speaker": "洞庭君",
+      "text": "我竟不知道。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 3936,
+      "endFrameExclusive": 5016,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "06",
+      "speaker": "柳毅",
+      "text": "她说想回家，后面的事想亲口告诉您。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 3936,
+      "endFrameExclusive": 5016,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "06",
+      "speaker": "洞庭君",
+      "text": "我先查她在哪里。你见到她的时候，她可安好？",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 3936,
+      "endFrameExclusive": 5016,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "06",
+      "speaker": "柳毅",
+      "text": "我见她手有伤，喝了两口水；附近是否有人看守，我不知道。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 3936,
+      "endFrameExclusive": 5016,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    },
+    {
+      "shotId": "06",
+      "speaker": "洞庭君",
+      "text": "我让人送你回岸。",
+      "addressee": "本镜在场受话人；具体以原文视线和关系为准",
+      "performance": "先接收对方刺激，再按句义回答；动作持续，沉默不抢原话，精确停顿待读演；不添加语气词",
+      "startFrame": 3936,
+      "endFrameExclusive": 5016,
+      "timingStatus": "whole_shot_plan_pending_measurement"
+    }
+  ]
+}

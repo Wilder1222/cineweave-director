@@ -1,0 +1,704 @@
+{
+  "source": {
+    "type": "design",
+    "id": "Z002-production-r1",
+    "version": 1,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "01",
+    "02",
+    "03",
+    "04",
+    "05",
+    "06"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "01",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：先问路后求助使请求有接收过程",
+      "observation": "先问路后求助使请求有接收过程。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L7–L26"
+    },
+    {
+      "role": "performance",
+      "shotId": "01",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：龙女先给方向再表露家中断讯",
+      "observation": "龙女先给方向再表露家中断讯。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L7–L26"
+    },
+    {
+      "role": "staging",
+      "shotId": "01",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：竹枝仍持且信先握自己手中",
+      "observation": "竹枝仍持且信先握自己手中。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L7–L26"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "01",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：起焦问路视线再转封信有实物目标",
+      "observation": "起焦问路视线再转封信有实物目标。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L7–L26"
+    },
+    {
+      "role": "prompt",
+      "shotId": "01",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：羊铃画外不新增牧者说话",
+      "observation": "羊铃画外不新增牧者说话。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L7–L26"
+    },
+    {
+      "role": "continuity",
+      "shotId": "01",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：信尚未交出，不提前露手伤",
+      "observation": "信尚未交出，不提前露手伤。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L7–L26"
+    },
+    {
+      "role": "direction",
+      "shotId": "02",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：规则要求回应才行且承诺不保送达",
+      "observation": "规则要求回应才行且承诺不保送达。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L27–L46"
+    },
+    {
+      "role": "performance",
+      "shotId": "02",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：柳毅迟疑源于不会水与自己行程",
+      "observation": "柳毅迟疑源于不会水与自己行程。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L27–L46"
+    },
+    {
+      "role": "staging",
+      "shotId": "02",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：两人不移动到水门，地理仍荒坡",
+      "observation": "两人不移动到水门，地理仍荒坡。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L27–L46"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "02",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：焦点从信至柳毅犹疑非变焦",
+      "observation": "焦点从信至柳毅犹疑非变焦。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L27–L46"
+    },
+    {
+      "role": "prompt",
+      "shotId": "02",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：只陈述三击规则不提前实现",
+      "observation": "只陈述三击规则不提前实现。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L27–L46"
+    },
+    {
+      "role": "continuity",
+      "shotId": "02",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：自己的家信与受托信不混件",
+      "observation": "自己的家信与受托信不混件。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L27–L46"
+    },
+    {
+      "role": "direction",
+      "shotId": "03",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：保留她亲口说后事的权利",
+      "observation": "保留她亲口说后事的权利。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L47–L66"
+    },
+    {
+      "role": "performance",
+      "shotId": "03",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：柳毅见旧伤才接而不越界问尽",
+      "observation": "柳毅见旧伤才接而不越界问尽。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L47–L66"
+    },
+    {
+      "role": "staging",
+      "shotId": "03",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：枝落地、缰挽前臂、接稳松手顺序齐",
+      "observation": "枝落地、缰挽前臂、接稳松手顺序齐。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L47–L66"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "03",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：近手与包囊转焦不抢未现伤",
+      "observation": "近手与包囊转焦不抢未现伤。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L47–L66"
+    },
+    {
+      "role": "prompt",
+      "shotId": "03",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：正文30秒与CSV统一",
+      "observation": "正文30秒与CSV统一。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L47–L66"
+    },
+    {
+      "role": "continuity",
+      "shotId": "03",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：青线未解，恢复牵缰后书囊封好",
+      "observation": "青线未解，恢复牵缰后书囊封好。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L47–L66"
+    },
+    {
+      "role": "direction",
+      "shotId": "04",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：她取水自主且消失不抹责任",
+      "observation": "她取水自主且消失不抹责任。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L67–L86"
+    },
+    {
+      "role": "performance",
+      "shotId": "04",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：柳毅问羊后听解释再离开",
+      "observation": "柳毅问羊后听解释再离开。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L67–L86"
+    },
+    {
+      "role": "staging",
+      "shotId": "04",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：水囊置石她自己取还，收好再牵缰",
+      "observation": "水囊置石她自己取还，收好再牵缰。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L67–L86"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "04",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：羊影至书囊是两个实际深度",
+      "observation": "羊影至书囊是两个实际深度。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L67–L86"
+    },
+    {
+      "role": "prompt",
+      "shotId": "04",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：雾不添加可辨第三人声",
+      "observation": "雾不添加可辨第三人声。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L67–L86"
+    },
+    {
+      "role": "continuity",
+      "shotId": "04",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：检查的是原包信布，信仍实体",
+      "observation": "检查的是原包信布，信仍实体。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L67–L86"
+    },
+    {
+      "role": "direction",
+      "shotId": "05",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：入水等待回应且已付实在代价",
+      "observation": "入水等待回应且已付实在代价。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L87–L106"
+    },
+    {
+      "role": "performance",
+      "shotId": "05",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：低声误工后不作救人豪言",
+      "observation": "低声误工后不作救人豪言。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L87–L106"
+    },
+    {
+      "role": "staging",
+      "shotId": "05",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：原带单放、三击停树边，再走干阶",
+      "observation": "原带单放、三击停树边，再走干阶。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L87–L106"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "05",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：三击触发半步推，门回应者现后才转焦",
+      "observation": "三击触发半步推，门回应者现后才转焦。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L87–L106"
+    },
+    {
+      "role": "prompt",
+      "shotId": "05",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：新增明确你为何叩树不留生成摘要",
+      "observation": "新增明确你为何叩树不留生成摘要。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L87–L106"
+    },
+    {
+      "role": "continuity",
+      "shotId": "05",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：一个多月跳切，厚衣消失有当票依据",
+      "observation": "一个多月跳切，厚衣消失有当票依据。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L87–L106"
+    },
+    {
+      "role": "direction",
+      "shotId": "06",
+      "status": "pass",
+      "criterion": "观众能区分本镜已见、人物转述与未知；本镜核查点：交信不等找到人、更不等复仇成功",
+      "observation": "交信不等找到人、更不等复仇成功。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L107–L126"
+    },
+    {
+      "role": "performance",
+      "shotId": "06",
+      "status": "pass",
+      "criterion": "台词和身体反应来自本镜刺激，保留各方自主选择；本镜核查点：父亲接读后掩面，柳毅不窥私信",
+      "observation": "父亲接读后掩面，柳毅不窥私信。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L107–L126"
+    },
+    {
+      "role": "staging",
+      "shotId": "06",
+      "status": "pass",
+      "criterion": "持物、接触、路径与终态在设计上可执行；本镜核查点：君接稳才解青线，柳毅收自己的旧布",
+      "observation": "君接稳才解青线，柳毅收自己的旧布。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L107–L126"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "06",
+      "status": "pass",
+      "criterion": "构图、机位和光学目标服务本镜动作且不越轴；本镜核查点：信至父亲反应转焦服务查证",
+      "observation": "信至父亲反应转焦服务查证。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L107–L126"
+    },
+    {
+      "role": "prompt",
+      "shotId": "06",
+      "status": "pass",
+      "criterion": "独立母稿的可见变化、角色和限制无相互冲突；本镜核查点：送回岸为安排而无新使者画外台词",
+      "observation": "送回岸为安排而无新使者画外台词。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L107–L126"
+    },
+    {
+      "role": "continuity",
+      "shotId": "06",
+      "status": "pass",
+      "criterion": "时间省略、道具编号与后镜接口不重置；本镜核查点：信归父亲，当票和书囊归柳毅",
+      "observation": "信归父亲，当票和书囊归柳毅。这是当前文字/候选设计观察；真实媒体未验证。",
+      "sourceLocator": "6b1800ddc69c7ab928a28f41957744f8bf4eeb04ce6f08d1311d71b809c31ac4:L107–L126"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "01",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "问路之后才向陌生人求助。",
+        "audiencePayoff": "问路之后才向陌生人求助。",
+        "trigger": "龙女给路向后提出带信。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在荒坡水岸侧平视，让龙女给路向后提出带信触发人物而非相机移动，保持问路之后才向陌生人求助的空间参照。理由：让观众读出问路之后才向陌生人求助；不改变人物既定行动。",
+        "focusTargetEnd": "青线封信",
+        "exitMatch": "信仍龙女手中，柳毅未答应。"
+      },
+      "camera": {
+        "shotScale": "双人中景",
+        "position": "荒坡水岸侧平视",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "问路之后才向陌生人求助。",
+        "focusTarget": "问路视线",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "荒坡路南侧；洞庭岸内社橘西南侧，不越水线",
+        "movementIntent": "固定在荒坡水岸侧平视，让龙女给路向后提出带信触发人物而非相机移动，保持问路之后才向陌生人求助的空间参照。理由：让观众读出问路之后才向陌生人求助；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "湿草缰绳",
+        "midground": "柳毅与龙女",
+        "background": "羊影",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "手中青线绢信 → 在场人物的接收/反应 → 荒坡草路"
+      },
+      "temporal": {
+        "durationSeconds": 35,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "问路之后才向陌生人求助。",
+          "path": "固定在荒坡水岸侧平视，让龙女给路向后提出带信触发人物而非相机移动，保持问路之后才向陌生人求助的空间参照。理由：让观众读出问路之后才向陌生人求助；不改变人物既定行动。",
+          "start": "机位固定于：荒坡水岸侧平视",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：荒坡水岸侧平视",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "01-F1",
+            "timeSeconds": 0,
+            "description": "问路视线"
+          },
+          {
+            "eventId": "01-F2",
+            "timeSeconds": 27,
+            "description": "青线封信"
+          }
+        ],
+        "edit": {
+          "entry": "柳毅牵缰入坡，马不入画；龙女持枝。",
+          "exit": "信仍龙女手中，柳毅未答应。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "荒坡镜保留风、水、画外羊铃；04浅雾后远雷；洞庭镜仅岸水、三击社橘和既有对白，船家无声。不添加守卫脚步。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "02",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "只尝试且只能交父亲。",
+        "audiencePayoff": "只尝试且只能交父亲。",
+        "trigger": "不会水引出进入规则。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在沿荒坡同侧平视，让不会水引出进入规则触发人物而非相机移动，保持只尝试且只能交父亲的空间参照。理由：让观众读出只尝试且只能交父亲；不改变人物既定行动。",
+        "focusTargetEnd": "柳毅迟疑回答",
+        "exitMatch": "信未交，三击等回应及只交父亲规则已知。"
+      },
+      "camera": {
+        "shotScale": "双人中近景",
+        "position": "沿荒坡同侧平视",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "只尝试且只能交父亲。",
+        "focusTarget": "信",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "荒坡路南侧；洞庭岸内社橘西南侧，不越水线",
+        "movementIntent": "固定在沿荒坡同侧平视，让不会水引出进入规则触发人物而非相机移动，保持只尝试且只能交父亲的空间参照。理由：让观众读出只尝试且只能交父亲；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "封信",
+        "midground": "两人",
+        "background": "湿地",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "封信与衣中家信 → 在场人物的接收/反应 → 东去路"
+      },
+      "temporal": {
+        "durationSeconds": 33,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "只尝试且只能交父亲。",
+          "path": "固定在沿荒坡同侧平视，让不会水引出进入规则触发人物而非相机移动，保持只尝试且只能交父亲的空间参照。理由：让观众读出只尝试且只能交父亲；不改变人物既定行动。",
+          "start": "机位固定于：沿荒坡同侧平视",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：沿荒坡同侧平视",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "02-F1",
+            "timeSeconds": 0,
+            "description": "信"
+          },
+          {
+            "eventId": "02-F2",
+            "timeSeconds": 24,
+            "description": "柳毅迟疑回答"
+          }
+        ],
+        "edit": {
+          "entry": "信仍龙女手中，柳毅未答应。",
+          "exit": "信未交，三击等回应及只交父亲规则已知。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "荒坡镜保留风、水、画外羊铃；04浅雾后远雷；洞庭镜仅岸水、三击社橘和既有对白，船家无声。不添加守卫脚步。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "03",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "保留自述权且谨慎保管信。",
+        "audiencePayoff": "保留自述权且谨慎保管信。",
+        "trigger": "她递信后他才接稳。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在二人侧面同轴，让她递信后他才接稳触发人物而非相机移动，保持保留自述权且谨慎保管信的空间参照。理由：让观众读出保留自述权且谨慎保管信；不改变人物既定行动。",
+        "focusTargetEnd": "包信入囊",
+        "exitMatch": "竹枝留龙女脚旁草坡，女方空手；信包好入柳毅书囊，他已恢复手牵缰，马不入画。"
+      },
+      "camera": {
+        "shotScale": "近中景",
+        "position": "二人侧面同轴",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "保留自述权且谨慎保管信。",
+        "focusTarget": "尚未露伤的持信手与封线",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "荒坡路南侧；洞庭岸内社橘西南侧，不越水线",
+        "movementIntent": "固定在二人侧面同轴，让她递信后他才接稳触发人物而非相机移动，保持保留自述权且谨慎保管信的空间参照。理由：让观众读出保留自述权且谨慎保管信；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "旧布青线和手背伤",
+        "midground": "交接双手及半身",
+        "background": "浅雾",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "放稳竹枝及包信布 → 在场人物的接收/反应 → 画外马侧"
+      },
+      "temporal": {
+        "durationSeconds": 30,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "保留自述权且谨慎保管信。",
+          "path": "固定在二人侧面同轴，让她递信后他才接稳触发人物而非相机移动，保持保留自述权且谨慎保管信的空间参照。理由：让观众读出保留自述权且谨慎保管信；不改变人物既定行动。",
+          "start": "机位固定于：二人侧面同轴",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：二人侧面同轴",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "03-F1",
+            "timeSeconds": 0,
+            "description": "尚未露伤的持信手与封线"
+          },
+          {
+            "eventId": "03-F2",
+            "timeSeconds": 17,
+            "description": "包信入囊"
+          }
+        ],
+        "edit": {
+          "entry": "信未交，三击等回应及只交父亲规则已知。",
+          "exit": "竹枝留龙女脚旁草坡，女方空手；信包好入柳毅书囊，他已恢复手牵缰，马不入画。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "荒坡镜保留风、水、画外羊铃；04浅雾后远雷；洞庭镜仅岸水、三击社橘和既有对白，船家无声。不添加守卫脚步。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "04",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "女子消失不取消实体信和责任。",
+        "audiencePayoff": "女子消失不取消实体信和责任。",
+        "trigger": "问羊后见雾，离开再回望。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在石与离路方向同框的岸侧，让问羊后见雾，离开再回望触发人物而非相机移动，保持女子消失不取消实体信和责任的空间参照。理由：让观众读出女子消失不取消实体信和责任；不改变人物既定行动。",
+        "focusTargetEnd": "检查的书囊",
+        "exitMatch": "女子羊影已消失，水囊收好、包信仍在。"
+      },
+      "camera": {
+        "shotScale": "侧中景",
+        "position": "石与离路方向同框的岸侧",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "女子消失不取消实体信和责任。",
+        "focusTarget": "薄雾出现前的羊影",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "荒坡路南侧；洞庭岸内社橘西南侧，不越水线",
+        "movementIntent": "固定在石与离路方向同框的岸侧，让问羊后见雾，离开再回望触发人物而非相机移动，保持女子消失不取消实体信和责任的空间参照。理由：让观众读出女子消失不取消实体信和责任；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "水囊石面",
+        "midground": "饮水交还的二人",
+        "background": "薄雾出现前的羊影",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "石上水囊 → 在场人物的接收/反应 → 羊影与离路"
+      },
+      "temporal": {
+        "durationSeconds": 28,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "女子消失不取消实体信和责任。",
+          "path": "固定在石与离路方向同框的岸侧，让问羊后见雾，离开再回望触发人物而非相机移动，保持女子消失不取消实体信和责任的空间参照。理由：让观众读出女子消失不取消实体信和责任；不改变人物既定行动。",
+          "start": "机位固定于：石与离路方向同框的岸侧",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：石与离路方向同框的岸侧",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "04-F1",
+            "timeSeconds": 0,
+            "description": "薄雾出现前的羊影"
+          },
+          {
+            "eventId": "04-F2",
+            "timeSeconds": 22,
+            "description": "检查的书囊"
+          }
+        ],
+        "edit": {
+          "entry": "竹枝留龙女脚旁草坡，女方空手；信包好入柳毅书囊，他已恢复手牵缰，马不入画。",
+          "exit": "女子羊影已消失，水囊收好、包信仍在。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "荒坡镜保留风、水、画外羊铃；04浅雾后远雷；洞庭镜仅岸水、三击社橘和既有对白，船家无声。不添加守卫脚步。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "05",
+      "decision": {
+        "primaryTechniqueId": "M01",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "送信有现实损失，入水须等回应。",
+        "audiencePayoff": "送信有现实损失，入水须等回应。",
+        "trigger": "开始三击才缓推。",
+        "cameraMode": "moving",
+        "focusMode": "rack",
+        "focusTargetEnd": "三击后回应者",
+        "exitMatch": "洞庭君已自报，柳毅走近但信未交。"
+      },
+      "camera": {
+        "shotScale": "广景至中景",
+        "position": "岸内侧沿社橘向水门缓推",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "送信有现实损失，入水须等回应。",
+        "focusTarget": "当票及换带手",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "荒坡路南侧；洞庭岸内社橘西南侧，不越水线",
+        "movementIntent": "收到“开始三击才缓推”后沿原轴线侧缓推半步；起步轻、匀速靠近、在出态前柔和减速，无环绕、无变焦。理由：让观众读出送信有现实损失，入水须等回应；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "当票腰带",
+        "midground": "柳毅社橘",
+        "background": "水门宫阙船灯",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "当票换带与树皮 → 在场人物的接收/反应 → 低阶水门"
+      },
+      "temporal": {
+        "durationSeconds": 38,
+        "cameraMotion": {
+          "type": "dolly",
+          "motivation": "送信有现实损失，入水须等回应。",
+          "path": "收到“开始三击才缓推”后沿原轴线侧缓推半步；起步轻、匀速靠近、在出态前柔和减速，无环绕、无变焦。理由：让观众读出送信有现实损失，入水须等回应；不改变人物既定行动。",
+          "start": "明确省略月余回家再出行；外衣已当，包信仍在。",
+          "acceleration": "明确刺激后缓起，保留初始空间参照",
+          "peak": "同侧前移半步的低速段，有真实视差不变焦",
+          "deceleration": "出态前柔停，终点不越人物轴",
+          "end": "洞庭君已自报，柳毅走近但信未交。",
+          "framingChange": "初始广景至中景在前移半步后略紧，当票换带与树皮与人物的占幅增加，既有低阶水门产生可辨纵深视差，终点不切掉关键触点"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "05-F1",
+            "timeSeconds": 0,
+            "description": "当票及换带手"
+          },
+          {
+            "eventId": "05-F2",
+            "timeSeconds": 31,
+            "description": "三击后回应者"
+          }
+        ],
+        "edit": {
+          "entry": "明确省略月余回家再出行；外衣已当，包信仍在。",
+          "exit": "洞庭君已自报，柳毅走近但信未交。",
+          "preferredTransition": "明确时间省略，先重建入态，保留环境声的时空边界",
+          "soundBridge": "荒坡镜保留风、水、画外羊铃；04浅雾后远雷；洞庭镜仅岸水、三击社橘和既有对白，船家无声。不添加守卫脚步。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    },
+    {
+      "shotId": "06",
+      "decision": {
+        "primaryTechniqueId": "K07",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "交信不等于已救回。",
+        "audiencePayoff": "交信不等于已救回。",
+        "trigger": "柳毅说明延迟后才交信。",
+        "cameraMode": "static",
+        "focusMode": "rack",
+        "noMotionReason": "固定在水门岸侧平视，让柳毅说明延迟后才交信触发人物而非相机移动，保持交信不等于已救回的空间参照。理由：让观众读出交信不等于已救回；不改变人物既定行动。",
+        "focusTargetEnd": "父亲读信反应",
+        "exitMatch": "洞庭君持信转内，柳毅收布留当票；救援未知。"
+      },
+      "camera": {
+        "shotScale": "双人中景",
+        "position": "水门岸侧平视",
+        "height": "人物眼线；手部和道具同时可辨",
+        "angle": "平视或源机位明示俯角",
+        "perspectiveIntent": "交信不等于已救回。",
+        "focusTarget": "信交接解线",
+        "depthOfField": "按本镜近中远实际层次配置，关键触物区不得被虚化掩盖；待光学样片",
+        "axisSide": "荒坡路南侧；洞庭岸内社橘西南侧，不越水线",
+        "movementIntent": "固定在水门岸侧平视，让柳毅说明延迟后才交信触发人物而非相机移动，保持交信不等于已救回的空间参照。理由：让观众读出交信不等于已救回；不改变人物既定行动。"
+      },
+      "composition": {
+        "layout": "人物分置画幅两侧、留视线和出入空间",
+        "foreground": "旧布青线",
+        "midground": "柳毅洞庭君",
+        "background": "水中宫阙",
+        "negativeSpace": "留在本镜动作去向，不在无信息边缘堆装饰",
+        "visualHierarchy": "未拆青线信交接 → 在场人物的接收/反应 → 水门干平台"
+      },
+      "temporal": {
+        "durationSeconds": 45,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "交信不等于已救回。",
+          "path": "固定在水门岸侧平视，让柳毅说明延迟后才交信触发人物而非相机移动，保持交信不等于已救回的空间参照。理由：让观众读出交信不等于已救回；不改变人物既定行动。",
+          "start": "机位固定于：水门岸侧平视",
+          "acceleration": "固定机位，无机身加速",
+          "peak": "固定机位，人物动作见本镜正文",
+          "deceleration": "固定机位，无机身减速",
+          "end": "机位保持：水门岸侧平视",
+          "framingChange": "取景范围保持；演员动作及焦点变化见本镜正文"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "06-F1",
+            "timeSeconds": 0,
+            "description": "信交接解线"
+          },
+          {
+            "eventId": "06-F2",
+            "timeSeconds": 16,
+            "description": "父亲读信反应"
+          }
+        ],
+        "edit": {
+          "entry": "承接已自报的洞庭君；信封仍在柳毅书囊。",
+          "exit": "洞庭君持信转内，柳毅收布留当票；救援未知。",
+          "preferredTransition": "按本镜出态停住再接下一镜，不重复取放已完成动作",
+          "soundBridge": "荒坡镜保留风、水、画外羊铃；04浅雾后远雷；洞庭镜仅岸水、三击社橘和既有对白，船家无声。不添加守卫脚步。；拟音逐动作对应实际触点，绝不把画外声升级为新角色出现。"
+        }
+      }
+    }
+  ]
+}

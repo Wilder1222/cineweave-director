@@ -1,0 +1,1214 @@
+{
+  "source": {
+    "type": "design",
+    "id": "DENIED-E14-text-coverage-70118cc3f1c0",
+    "version": 2,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "E14-SH001",
+    "E14-SH003",
+    "E14-SH004",
+    "E14-SH101",
+    "E14-SH006",
+    "E14-SH008",
+    "E14-SH010",
+    "E14-SH011",
+    "E14-SH012",
+    "E14-SH102",
+    "E14-SH014"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "E14-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：九点覆盖与五点停权是不同事项；同事经过使她先回普通工作列表。；入镜已知：在来源即将失去权限前争取保存，而不假装已经取得答案。；本镜新知：电话接通右耳，政策类别已记下，未复制患者档案。；实际写出的动作：莉娜在保留政策页上找到九点的常规覆盖任务，工作手机放桌右开免提。她先问IT日志，再问到病历；咨询员的答案让她把两个词分开记，随后挂断。\n权限暂停通知写着下午五点。莉娜从桌右拿工作手机拨凯文，把便签横在键盘前，看到同事经过便把页面收回普通工作列表。",
+      "sourceLocator": "season/E14.json#/shots/0"
+    },
+    {
+      "role": "performance",
+      "shotId": "E14-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "莉娜在东工位已拨通IT咨询，工作手机桌右开免提，屏上保留政策与九点常规任务类别。 → 电话接通右耳，政策类别已记下，未复制患者档案。；莉娜向IT咨询员（电话）：Nine tonight? Just the event logs? Not the charts?；对着政策页逐项核清 / IT咨询员向莉娜（电话）：Charts stay. Those logs get overwritten unless we put a hold on them.；当作普通保留政策解释，语速不演危险 / 莉娜向凯文（电话）：My access ends at five. They overwrite the logs at nine. What do you need?；把两个时限给清楚，等能做的任务",
+      "sourceLocator": "season/E14.json#/shots/0"
+    },
+    {
+      "role": "staging",
+      "shotId": "E14-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "数周后公司质检区，莉娜在东工位，灰信封贴着键盘。保留政策在屏幕左，下午五点停权通知在右，工作手机放桌右；北窗仍有日光。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。；起态：莉娜在东工位已拨通IT咨询，工作手机桌右开免提，屏上保留政策与九点常规任务类别。；出态：电话接通右耳，政策类别已记下，未复制患者档案。",
+      "sourceLocator": "season/E14.json#/shots/0"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E14-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "东工位南侧40mm莉娜中景，工作手机右侧免提、政策屏幕在左，中央走道在后层。；相机：固定26秒，第一通咨询挂断、第二通拨律师是两次清楚的操作。；焦点：九点覆盖与五点停权是不同事项；同事经过使她先回普通工作列表。",
+      "sourceLocator": "season/E14.json#/shots/0"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E14-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E14-SH001.txt；26秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E14.json#/shots/0"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E14-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "电话接通右耳，政策类别已记下，未复制患者档案。；切点：她想继续检索却停住，切更近的来源决定，不切不存在的律师现场。；接口：接E14-SH003；她想继续检索却停住，切更近的来源决定，不切不存在的律师现场。",
+      "sourceLocator": "season/E14.json#/shots/0"
+    },
+    {
+      "role": "direction",
+      "shotId": "E14-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：律师电话把目标缩到保存什么，来源停在权限内，没有复制未知数据。；入镜已知：电话接通右耳，政策类别已记下，未复制患者档案。；本镜新知：公开政策线索已发送，未越权取走数据，电话已断。；实际写出的动作：莉娜将暂停权限通知另存为自己工作记录，手停在搜索框。她原想再找一份病例，听到电话接通便关掉未输入的搜索栏。\n莉娜把电话放回右侧开免提，按凯文要求发送公司政策索引与日志类别。发送后她核对邮件已送出，才关闭草稿、挂断，把便签收入灰信封。",
+      "sourceLocator": "season/E14.json#/shots/1"
+    },
+    {
+      "role": "performance",
+      "shotId": "E14-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "电话接通右耳，政策类别已记下，未复制患者档案。 → 公开政策线索已发送，未越权取走数据，电话已断。；莉娜向凯文（电话）：I can't promise which files those logs will explain.；不把保全当答案 / 凯文向莉娜（电话）：I need to know what might disappear. We can ask for the contents later.；把今晚的目标缩到保留 / 莉娜向凯文（电话）：All right. I'll send the policy.；接受不越权寻找证明 / 凯文向莉娜（电话）：Send the log category and the policy. Only what you're allowed to see. I'll handle the rest.；接过后续责任，明确不让她越过访问权限",
+      "sourceLocator": "season/E14.json#/shots/1"
+    },
+    {
+      "role": "staging",
+      "shotId": "E14-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "数周后公司质检区，莉娜在东工位，灰信封贴着键盘。保留政策在屏幕左，下午五点停权通知在右，工作手机放桌右；北窗仍有日光。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。；起态：电话接通右耳，政策类别已记下，未复制患者档案。；出态：公开政策线索已发送，未越权取走数据，电话已断。",
+      "sourceLocator": "season/E14.json#/shots/1"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E14-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "东工位西南侧65mm莉娜半身，屏幕只留政策页边缘、搜索栏和她的手，灰信封在下部。；相机：固定31秒，关闭空搜索栏后只发送已有权限的索引。；焦点：律师电话把目标缩到保存什么，来源停在权限内，没有复制未知数据。",
+      "sourceLocator": "season/E14.json#/shots/1"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E14-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E14-SH003.txt；31秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E14.json#/shots/1"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E14-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "公开政策线索已发送，未越权取走数据，电话已断。；切点：发送确认后电话放下，切申请人授权的另一端。；接口：本场结果成立后切入 E14-SC02（CLINIC，日·迁移当天午间）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E14.json#/shots/1"
+    },
+    {
+      "role": "direction",
+      "shotId": "E14-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：三名未和解申请人与玛拉不同，她保留原件且仅签有限范围。；入镜已知：把集体保全建立在各人的有限授权上。；本镜新知：有限授权归凯文，原回执与和解副本仍归玛拉。；实际写出的动作：诊所咨询桌上，凯文将三份未和解患者委托单装进申请夹，把玛拉的和解协议留外面。玛拉拿回自己的原件，问她是否还算申请人。\n玛拉把保留例外的那页从蓝夹里抽出，凯文核对后在有限授权上勾明回执范围。她签字，将原件重新塞回自己的夹内。",
+      "sourceLocator": "season/E14.json#/shots/2"
+    },
+    {
+      "role": "performance",
+      "shotId": "E14-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "玛拉左臂蓝色文件夹，右手机，医生持回执。 → 有限授权归凯文，原回执与和解副本仍归玛拉。；玛拉向凯文：Am I back in the case?；拿回和解原件，怕重新卷进去 / 凯文向玛拉：No. Three other patients are filing. You're just authorizing us to use the receipt.；指有限授权范围，不把她变成申请人 / 玛拉向凯文：No pictures of Ellie.；把个人条件带到公事 / 凯文向玛拉：No photos. Just the receipt. You keep the original.；明确重复她的条件，原件推回去",
+      "sourceLocator": "season/E14.json#/shots/2"
+    },
+    {
+      "role": "staging",
+      "shotId": "E14-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "迁移当日午间诊所东南咨询室，凯文坐东，玛拉坐西，诺拉在南门侧。三位未和解患者的委托单在桌中，玛拉自己的和解书与蓝夹留在西侧；医生由南门进入。 本镜画内角色：COUNSEL,MARA-WORK,NORA。；起态：玛拉左臂蓝色文件夹，右手机，医生持回执。；出态：有限授权归凯文，原回执与和解副本仍归玛拉。",
+      "sourceLocator": "season/E14.json#/shots/2"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E14-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "诊所东南咨询室南门侧35mm三人中景，凯文桌东、玛拉桌西、诺拉靠南门；三份委托与玛拉蓝夹分开。；相机：固定24秒，让回执授权在两位当事人手里完成。；焦点：三名未和解申请人与玛拉不同，她保留原件且仅签有限范围。",
+      "sourceLocator": "season/E14.json#/shots/2"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E14-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E14-SH004.txt；24秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E14.json#/shots/2"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E14-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "有限授权归凯文，原回执与和解副本仍归玛拉。；切点：诺拉抬手机，玛拉先问会不会写进报道，切她要求边界的视角。；接口：接E14-SH101；诺拉抬手机，玛拉先问会不会写进报道，切她要求边界的视角。",
+      "sourceLocator": "season/E14.json#/shots/2"
+    },
+    {
+      "role": "direction",
+      "shotId": "E14-SH101",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她许可正式申请而不许可再次采访，记者必须把手机收回。；入镜已知：有限授权归凯文，原回执与和解副本仍归玛拉。；本镜新知：凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。；实际写出的动作：玛拉把蓝夹合上，诺拉刚把手机抬到桌沿，她便把签好的有限授权转向凯文。凯文逐项确认这次提交走正式程序，诺拉将手机放回口袋。",
+      "sourceLocator": "season/E14.json#/shots/3"
+    },
+    {
+      "role": "performance",
+      "shotId": "E14-SH101",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "有限授权归凯文，原回执与和解副本仍归玛拉。 → 凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。；玛拉向诺拉与凯文：Is this going in another story?；先向记者划界 / 诺拉向莉娜：I'm asking about the records, not for an interview.；接受被拒绝，而不转问孩子 / 凯文向玛拉：This goes with the formal request. Just the receipt you've authorized.；限定使用去向 / 玛拉向诺拉与凯文：Then use that. Nothing from her folder.；保留自己的原件与其余资料",
+      "sourceLocator": "season/E14.json#/shots/3"
+    },
+    {
+      "role": "staging",
+      "shotId": "E14-SH101",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "迁移当日午间诊所东南咨询室，凯文坐东，玛拉坐西，诺拉在南门侧。三位未和解患者的委托单在桌中，玛拉自己的和解书与蓝夹留在西侧；医生由南门进入。 本镜画内角色：MARA-WORK。其余所列说话者留在已建立的画外席位或电话对端。；起态：有限授权归凯文，原回执与和解副本仍归玛拉。；出态：凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。",
+      "sourceLocator": "season/E14.json#/shots/3"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E14-SH101",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "诺拉南肩旁朝西65mm玛拉中近景，诺拉手机在前景降回，凯文在东侧画外。；相机：固定22秒，蓝夹合上留在玛拉手里。；焦点：她许可正式申请而不许可再次采访，记者必须把手机收回。",
+      "sourceLocator": "season/E14.json#/shots/3"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E14-SH101",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E14-SH101.txt；22秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E14.json#/shots/3"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E14-SH101",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。；切点：医生到桌北侧等签能证明的内容，切其工作限制。；接口：接E14-SH006；医生到桌北侧等签能证明的内容，切其工作限制。",
+      "sourceLocator": "season/E14.json#/shots/3"
+    },
+    {
+      "role": "direction",
+      "shotId": "E14-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：医生只证明发送/收讫，申请回执没有被误当取得日志；人物进出替代新纸特写。；入镜已知：凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。；本镜新知：申请已受理，尚未裁定，更无记录内容。；实际写出的动作：医生看一眼挂钟。诺拉想问内部复核，医生把笔放在自己能确认的发送与回执两行旁，边答边签名；答完带笔转身，朝南门画外返回病人那边。\n凯文打开刚收到的受理通知。诺拉举起手机等一句成功消息，凯文回答只是受理回执，不迎向她的镜头；随后收妥签名页与授权副本，合上黑包。",
+      "sourceLocator": "season/E14.json#/shots/4"
+    },
+    {
+      "role": "performance",
+      "shotId": "E14-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。 → 申请已受理，尚未裁定，更无记录内容。；诺拉向医生：Did they have it when they reviewed her case?；想把发送成功往内部复核再推一步 / 医生向诺拉：I sent it. They sent this receipt back. That's all I can sign off on.；只在自己能证实的两行签字 / 诺拉向凯文：Did we get them?；手机举起来，先把受理当成果 / 凯文向诺拉：No. That's the filing receipt.；纠正对象，同时收文件",
+      "sourceLocator": "season/E14.json#/shots/4"
+    },
+    {
+      "role": "staging",
+      "shotId": "E14-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "迁移当日午间诊所东南咨询室，凯文坐东，玛拉坐西，诺拉在南门侧。三位未和解患者的委托单在桌中，玛拉自己的和解书与蓝夹留在西侧；医生由南门进入。 本镜画内角色：DOCTOR,NORA,COUNSEL,MARA-WORK。；起态：凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。；出态：申请已受理，尚未裁定，更无记录内容。",
+      "sourceLocator": "season/E14.json#/shots/4"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E14-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "咨询室西北角40mm医生、门侧诺拉与桌东凯文的斜向中景，玛拉只在西侧边缘。；相机：固定26秒；医生签完沿南门离开，凯文手机亮后留在同一画面内答只是受理。；焦点：医生只证明发送/收讫，申请回执没有被误当取得日志；人物进出替代新纸特写。",
+      "sourceLocator": "season/E14.json#/shots/4"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E14-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E14-SH006.txt；26秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E14.json#/shots/4"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E14-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "申请已受理，尚未裁定，更无记录内容。；切点：凯文合包去送达，切保存行动真正到达公司。；接口：本场结果成立后切入 E14-SC03（SERVER-OFFICE，夜·迁移窗口前）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E14.json#/shots/4"
+    },
+    {
+      "role": "direction",
+      "shotId": "E14-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：只保列明日志还不够，索引必须同样进入执行范围。；入镜已知：让程序竞争以合法保存完成一场有限胜利。；本镜新知：日志及索引都进入正式保全范围，患者全档不外流。；实际写出的动作：夜间技术工区南门开，凯文带正式送达副本到维克多面前。授权技术员在东工位停下迁移准备，等两人核对范围；北墙钟在九点之前。\n维克多在范围附件上指到指定日志，技术员在东侧工位等着范围确认，没有开口。凯文翻到同附件下一行索引要求，维克多看清后把两行一起划进执行单。",
+      "sourceLocator": "season/E14.json#/shots/5"
+    },
+    {
+      "role": "performance",
+      "shotId": "E14-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "凯文持黑包与裁定副本，维克多站西侧。 → 日志及索引都进入正式保全范围，患者全档不外流。；凯文向维克多：You've been served. The logs we need preserved are listed here.；把正式裁定附件展开到对方面前 / 维克多向技术员：Pause the job. Let me check what it covers.；先止住覆盖，再核裁定 / 维克多向技术员：Only these logs.；指确定范围 / 凯文向维克多：The index too. Right there.；顺着对方手指往下一行补 / 维克多向技术员：That too.；看清后确认，不另争一句",
+      "sourceLocator": "season/E14.json#/shots/5"
+    },
+    {
+      "role": "staging",
+      "shotId": "E14-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "当天 20:47 技术工区南门打开，凯文携正式送达副本进入。维克多在西玻璃墙边，技术员坐东侧授权工位，北设备柜风扇持续响，九点例行任务尚未执行。 本镜画内角色：COUNSEL,VICTOR,TECH-AUTH。；起态：凯文持黑包与裁定副本，维克多站西侧。；出态：日志及索引都进入正式保全范围，患者全档不外流。",
+      "sourceLocator": "season/E14.json#/shots/5"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E14-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "技术工区南侧35mm三人中全景，凯文在西玻璃边将裁定给维克多，技术员仍坐东工位。；相机：固定26秒，范围附件在两人手上核对，技术员等指令而不先操作。；焦点：只保列明日志还不够，索引必须同样进入执行范围。",
+      "sourceLocator": "season/E14.json#/shots/5"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E14-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E14-SH008.txt；26秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E14.json#/shots/5"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E14-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "日志及索引都进入正式保全范围，患者全档不外流。；切点：两类范围确定，切执行它的人而非继续拍律师读纸。；接口：接E14-SH010；两类范围确定，切执行它的人而非继续拍律师读纸。",
+      "sourceLocator": "season/E14.json#/shots/5"
+    },
+    {
+      "role": "direction",
+      "shotId": "E14-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：无关业务可继续，指定日志/索引不被覆盖；声音限定保存状态。；入镜已知：日志及索引都进入正式保全范围，患者全档不外流。；本镜新知：保全生效，凯文只拿执行确认，日志内容未交出。；实际写出的动作：技术员将日志与索引两行加入排除清单，剩余迁移项目仍停着。维克多指向其余批次，凯文退开屏幕位置，只看执行范围。\n技术员在已授权工位录入保全编号，勾选执行范围，确认九点例行任务排除这组记录。打印机出执行确认时，他仍让屏幕停在状态页，没有替凯文打开内容。",
+      "sourceLocator": "season/E14.json#/shots/6"
+    },
+    {
+      "role": "performance",
+      "shotId": "E14-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "日志及索引都进入正式保全范围，患者全档不外流。 → 保全生效，凯文只拿执行确认，日志内容未交出。；维克多向同场对话者：Can the rest of the job run?；要恢复不受裁定影响的业务 / 技术员向维克多与凯文：Yes. Once these exclusions are saved.；说实际操作顺序 / 凯文向玛拉：Put both categories on the confirmation.；不要求当场展示内容 / 技术员向维克多、凯文：The hold's in. The nine o'clock job will skip them. I'll print your confirmation.；核状态后才宣布完成，手不打开内容",
+      "sourceLocator": "season/E14.json#/shots/6"
+    },
+    {
+      "role": "staging",
+      "shotId": "E14-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "当天 20:47 技术工区南门打开，凯文携正式送达副本进入。维克多在西玻璃墙边，技术员坐东侧授权工位，北设备柜风扇持续响，九点例行任务尚未执行。 本镜画内角色：TECH-AUTH。其余所列说话者留在已建立的画外席位或电话对端。；起态：日志及索引都进入正式保全范围，患者全档不外流。；出态：保全生效，凯文只拿执行确认，日志内容未交出。",
+      "sourceLocator": "season/E14.json#/shots/6"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E14-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "授权技术员南肩后50mm工作屏与侧脸中景，纸质执行单在屏旁，律师和维克多位于西侧画外。；相机：固定31秒，技术员保存排除项、确认任务状态，再取打印件；不进入内容页面。；焦点：无关业务可继续，指定日志/索引不被覆盖；声音限定保存状态。",
+      "sourceLocator": "season/E14.json#/shots/6"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E14-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E14-SH010.txt；31秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E14.json#/shots/6"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E14-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "保全生效，凯文只拿执行确认，日志内容未交出。；切点：打印确认从东工位交出，切律师接结果及其局限。；接口：接E14-SH011；打印确认从东工位交出，切律师接结果及其局限。",
+      "sourceLocator": "season/E14.json#/shots/6"
+    },
+    {
+      "role": "direction",
+      "shotId": "E14-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：保存完成仍需正式调取，不得到数据内容。；入镜已知：保全生效，凯文只拿执行确认，日志内容未交出。；本镜新知：记录保存下来，独立调取还要继续。；实际写出的动作：凯文读确认单的记录范围和时间，与裁定附件逐一对照。维克多等他核完才恢复其余迁移任务；凯文将下一步正式调取联系人记下，不拿走数据。",
+      "sourceLocator": "season/E14.json#/shots/7"
+    },
+    {
+      "role": "performance",
+      "shotId": "E14-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "保全生效，凯文只拿执行确认，日志内容未交出。 → 记录保存下来，独立调取还要继续。；凯文向维克多：Who handles the records?；确认单已经核好，问下一步 / 维克多向凯文：Our lawyers. This just confirms the hold.；不把保全当作已向对方交出数据",
+      "sourceLocator": "season/E14.json#/shots/7"
+    },
+    {
+      "role": "staging",
+      "shotId": "E14-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "当天 20:47 技术工区南门打开，凯文携正式送达副本进入。维克多在西玻璃墙边，技术员坐东侧授权工位，北设备柜风扇持续响，九点例行任务尚未执行。 本镜画内角色：COUNSEL。其余所列说话者留在已建立的画外席位或电话对端。；起态：保全生效，凯文只拿执行确认，日志内容未交出。；出态：记录保存下来，独立调取还要继续。",
+      "sourceLocator": "season/E14.json#/shots/7"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E14-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "技术工区南偏西65mm凯文中近景，确认单在下前景，维克多只留递纸手。；相机：固定10秒，凯文核范围后把纸放包。；焦点：保存完成仍需正式调取，不得到数据内容。",
+      "sourceLocator": "season/E14.json#/shots/7"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E14-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E14-SH011.txt；10秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E14.json#/shots/7"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E14-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "记录保存下来，独立调取还要继续。；切点：凯文拿纸离开，切来源得知保存成功却仍交出工牌。；接口：本场结果成立后切入 E14-SC04（INSURER，夜·同日稍后）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E14.json#/shots/7"
+    },
+    {
+      "role": "direction",
+      "shotId": "E14-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：日志保住与来源被要求完整消息同时发生，她拒签知情概括。；入镜已知：把保全成功的另一面落到来源生活与调查中。；本镜新知：联系事实进入正式调查，不当场等于她知道暴力计划。；实际写出的动作：东侧工位权限暂停后，莉娜把工牌与工作手机放到桌中，取出自己用了很久的水杯装进包。维克多把一份资料流转清单放在她还没收走的杯垫上。\n莉娜在分发清单里看到路易吉名字，翻到后面确认不是只有互助组的地址。她把纸放回杯垫，不签对知情的概括，只同意由律师处理通信。",
+      "sourceLocator": "season/E14.json#/shots/8"
+    },
+    {
+      "role": "performance",
+      "shotId": "E14-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "莉娜工位已停权限，工牌和工作手机尚在她手边，私人水杯在杯垫上；维克多从中央桌带清单走近。 → 联系事实进入正式调查，不当场等于她知道暴力计划。；莉娜向维克多：They saved the logs?；收自己的杯子前先确认 / 维克多向莉娜：They're on hold. Take a look at this.；把流转清单放在她杯垫上 / 莉娜向维克多：He wanted examples for appeals. That's all I knew.；不签宽泛概括，只说当时目的 / 维克多向莉娜：They'll want every message. Let your lawyer handle it.；给出下一步压力，不替她认定知情",
+      "sourceLocator": "season/E14.json#/shots/8"
+    },
+    {
+      "role": "staging",
+      "shotId": "E14-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日晚间质检区，东工位已停权。莉娜把工牌与工作手机放桌中，水杯还压着用旧的杯垫。维克多从中央桌带来资料流转清单，南侧通路通向出口。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。；起态：莉娜工位已停权限，工牌和工作手机尚在她手边，私人水杯在杯垫上；维克多从中央桌带清单走近。；出态：联系事实进入正式调查，不当场等于她知道暴力计划。",
+      "sourceLocator": "season/E14.json#/shots/8"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E14-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "东工位南侧50mm莉娜与桌面中景，工牌、工作机、水杯和流转清单分别可见，维克多只在左侧递入纸。；相机：固定24秒，让她看到路易吉姓名但不展示所有通信。；焦点：日志保住与来源被要求完整消息同时发生，她拒签知情概括。",
+      "sourceLocator": "season/E14.json#/shots/8"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E14-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E14-SH012.txt；24秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E14.json#/shots/8"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E14-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "联系事实进入正式调查，不当场等于她知道暴力计划。；切点：她转问自己工资入口，切到两人实际行政交接的距离。；接口：接E14-SH102；她转问自己工资入口，切到两人实际行政交接的距离。",
+      "sourceLocator": "season/E14.json#/shots/8"
+    },
+    {
+      "role": "direction",
+      "shotId": "E14-SH102",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她还需要工资记录、要求书面安排和律师收问题，工作身份被实际切断。；入镜已知：联系事实进入正式调查，不当场等于她知道暴力计划。；本镜新知：她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。；实际写出的动作：莉娜将流转清单留在杯垫上，手从工牌移向自己的包。维克多站在中央桌边等她收拾，她先确认哪些东西今天还带得走。",
+      "sourceLocator": "season/E14.json#/shots/9"
+    },
+    {
+      "role": "performance",
+      "shotId": "E14-SH102",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "联系事实进入正式调查，不当场等于她知道暴力计划。 → 她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。；莉娜向维克多：I need my pay records. The portal uses this phone.；提出下班之后的实际困难 / 维克多向莉娜：Payroll can send them to your personal address.；只答能处理的事 / 莉娜向维克多：Put that in the email too. And send the questions to my lawyer.；不再靠口头安排 / 维克多向莉娜：I will.；结束行政交接，不承诺免于调查",
+      "sourceLocator": "season/E14.json#/shots/9"
+    },
+    {
+      "role": "staging",
+      "shotId": "E14-SH102",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日晚间质检区，东工位已停权。莉娜把工牌与工作手机放桌中，水杯还压着用旧的杯垫。维克多从中央桌带来资料流转清单，南侧通路通向出口。 本镜画内角色：LENA,VICTOR。；起态：联系事实进入正式调查，不当场等于她知道暴力计划。；出态：她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。",
+      "sourceLocator": "season/E14.json#/shots/9"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E14-SH102",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "质检区南通道35mm共享中全景，莉娜在东工位收包，维克多在中央桌边，两人相隔数米。；相机：固定25秒，不把远处答复者拉近成私人安慰。；焦点：她还需要工资记录、要求书面安排和律师收问题，工作身份被实际切断。",
+      "sourceLocator": "season/E14.json#/shots/9"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E14-SH102",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E14-SH102.txt；25秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E14.json#/shots/9"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E14-SH102",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。；切点：维克多转回中央桌，留下她独立拨自己的律师。；接口：接E14-SH014；维克多转回中央桌，留下她独立拨自己的律师。",
+      "sourceLocator": "season/E14.json#/shots/9"
+    },
+    {
+      "role": "direction",
+      "shotId": "E14-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：先拍清单、留言、发送，再带私人杯离开；原件没有随包走。；入镜已知：她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。；本镜新知：清单照片已发给自己的律师，原件及工作物件留东桌；私人手机随莉娜离开，没有接到对方答复。；实际写出的动作：莉娜从包里取私人手机，将杯垫上清单逐页拍清，再拨律师语音信箱留下下列留言。留言结束后挂断，将刚拍的清单照片发送给律师；看到发送确认后沿南侧通路离开。清单原件、工作手机与工牌留在东桌，私人杯在肩包里轻碰。",
+      "sourceLocator": "season/E14.json#/shots/10"
+    },
+    {
+      "role": "performance",
+      "shotId": "E14-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。 → 清单照片已发给自己的律师，原件及工作物件留东桌；私人手机随莉娜离开，没有接到对方答复。；莉娜向自己的律师语音信箱：I've got the list. I'll send it. Please call before I talk to them.；对语音信箱说实际请求，结束后才发照片",
+      "sourceLocator": "season/E14.json#/shots/10"
+    },
+    {
+      "role": "staging",
+      "shotId": "E14-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "同日晚间质检区，东工位已停权。莉娜把工牌与工作手机放桌中，水杯还压着用旧的杯垫。维克多从中央桌带来资料流转清单，南侧通路通向出口。 本镜画内角色：LENA。；起态：她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。；出态：清单照片已发给自己的律师，原件及工作物件留东桌；私人手机随莉娜离开，没有接到对方答复。",
+      "sourceLocator": "season/E14.json#/shots/10"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E14-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "东工位西南侧65mm莉娜半身，清单原件、工牌与工作机仍在桌上，私人手机在她手中。；相机：固定17秒直到她向南通路离画，不跟到电梯。；焦点：先拍清单、留言、发送，再带私人杯离开；原件没有随包走。",
+      "sourceLocator": "season/E14.json#/shots/10"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E14-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E14-SH014.txt；17秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E14.json#/shots/10"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E14-SH014",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "清单照片已发给自己的律师，原件及工作物件留东桌；私人手机随莉娜离开，没有接到对方答复。；切点：暗下的工位留着三件公司物品，四个月后转争议材料进入法庭。；接口：本集结束。莉娜仍遭停权与资料流转调查，拒签暗示知情的概括，带走自己的杯子；记录保住了，人的处境没有随之安全。 下集从COURT-STATE展开：一次程序胜利和一组真实记录，各自只能证明到哪里？",
+      "sourceLocator": "season/E14.json#/shots/10"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "E14-SH001",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "九点覆盖与五点停权是不同事项；同事经过使她先回普通工作列表。",
+        "audiencePayoff": "电话接通右耳，政策类别已记下，未复制患者档案。",
+        "trigger": "莉娜在东工位已拨通IT咨询，工作手机桌右开免提，屏上保留政策与九点常规任务类别。；莉娜在保留政策页上找到九点的常规覆盖任务，工作手机放桌右开免提。她先问IT日志，再问到病历；咨询员的答案让她把两个词分开记，随后挂断。\n权限暂停通知写着下午五点。莉娜从桌右拿工作手机拨凯文，把便签横在键盘前，看到同事经过便把页面收回普通工作列表。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "她想继续检索却停住，切更近的来源决定，不切不存在的律师现场。；接E14-SH003；她想继续检索却停住，切更近的来源决定，不切不存在的律师现场。",
+        "noMotionReason": "固定26秒，第一通咨询挂断、第二通拨律师是两次清楚的操作。；观看变化：电话接通右耳，政策类别已记下，未复制患者档案。"
+      },
+      "camera": {
+        "shotScale": "东工位南侧40mm莉娜中景",
+        "position": "东工位南侧40mm莉娜中景，工作手机右侧免提、政策屏幕在左，中央走道在后层。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "东工位南侧40mm莉娜中景，工作手机右侧免提、政策屏幕在左，中央走道在后层。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "九点覆盖与五点停权是不同事项；同事经过使她先回普通工作列表。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 数周后公司质检区，莉娜在东工位，灰信封贴着键盘。保留政策在屏幕左，下午五点停权通知在右，工作手机放桌右；北窗仍有日光。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定26秒，第一通咨询挂断、第二通拨律师是两次清楚的操作。"
+      },
+      "composition": {
+        "layout": "数周后公司质检区，莉娜在东工位，灰信封贴着键盘。保留政策在屏幕左，下午五点停权通知在右，工作手机放桌右；北窗仍有日光。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：莉娜在保留政策页上找到九点的常规覆盖任务，工作手机放桌右开免提。她先问IT日志，再问到病历；咨询员的答案让她把两个词分开记，随后挂断。\n权限暂停通知写着下午五点。莉娜从桌右拿工作手机拨凯文，把便签横在键盘前，看到同事经过便把页面收回普通工作列表。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "九点覆盖与五点停权是不同事项；同事经过使她先回普通工作列表。；九点覆盖与五点停权是不同事项；同事经过使她先回普通工作列表。"
+      },
+      "temporal": {
+        "durationSeconds": 26,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "九点覆盖与五点停权是不同事项；同事经过使她先回普通工作列表。",
+          "path": "机位不移动。",
+          "start": "莉娜在东工位已拨通IT咨询，工作手机桌右开免提，屏上保留政策与九点常规任务类别。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "电话接通右耳，政策类别已记下，未复制患者档案。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E14-SH001-F1",
+            "timeSeconds": 0,
+            "description": "九点覆盖与五点停权是不同事项；同事经过使她先回普通工作列表。"
+          }
+        ],
+        "edit": {
+          "entry": "莉娜在东工位已拨通IT咨询，工作手机桌右开免提，屏上保留政策与九点常规任务类别。",
+          "exit": "电话接通右耳，政策类别已记下，未复制患者档案。；她想继续检索却停住，切更近的来源决定，不切不存在的律师现场。",
+          "preferredTransition": "接E14-SH003；她想继续检索却停住，切更近的来源决定，不切不存在的律师现场。",
+          "soundBridge": "办公室空调与实际手机提示，不加未列来电内容。 IT咨询员与凯文分属先后两通电话，只从工作手机传出所列英语。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E14-SH003",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "律师电话把目标缩到保存什么，来源停在权限内，没有复制未知数据。",
+        "audiencePayoff": "公开政策线索已发送，未越权取走数据，电话已断。",
+        "trigger": "电话接通右耳，政策类别已记下，未复制患者档案。；莉娜将暂停权限通知另存为自己工作记录，手停在搜索框。她原想再找一份病例，听到电话接通便关掉未输入的搜索栏。\n莉娜把电话放回右侧开免提，按凯文要求发送公司政策索引与日志类别。发送后她核对邮件已送出，才关闭草稿、挂断，把便签收入灰信封。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "发送确认后电话放下，切申请人授权的另一端。；本场结果成立后切入 E14-SC02（CLINIC，日·迁移当天午间）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定31秒，关闭空搜索栏后只发送已有权限的索引。；观看变化：公开政策线索已发送，未越权取走数据，电话已断。"
+      },
+      "camera": {
+        "shotScale": "东工位西南侧65mm莉娜半身",
+        "position": "东工位西南侧65mm莉娜半身，屏幕只留政策页边缘、搜索栏和她的手，灰信封在下部。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "东工位西南侧65mm莉娜半身，屏幕只留政策页边缘、搜索栏和她的手，灰信封在下部。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "律师电话把目标缩到保存什么，来源停在权限内，没有复制未知数据。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 数周后公司质检区，莉娜在东工位，灰信封贴着键盘。保留政策在屏幕左，下午五点停权通知在右，工作手机放桌右；北窗仍有日光。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定31秒，关闭空搜索栏后只发送已有权限的索引。"
+      },
+      "composition": {
+        "layout": "数周后公司质检区，莉娜在东工位，灰信封贴着键盘。保留政策在屏幕左，下午五点停权通知在右，工作手机放桌右；北窗仍有日光。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：莉娜将暂停权限通知另存为自己工作记录，手停在搜索框。她原想再找一份病例，听到电话接通便关掉未输入的搜索栏。\n莉娜把电话放回右侧开免提，按凯文要求发送公司政策索引与日志类别。发送后她核对邮件已送出，才关闭草稿、挂断，把便签收入灰信封。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "律师电话把目标缩到保存什么，来源停在权限内，没有复制未知数据。；律师电话把目标缩到保存什么，来源停在权限内，没有复制未知数据。"
+      },
+      "temporal": {
+        "durationSeconds": 31,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "律师电话把目标缩到保存什么，来源停在权限内，没有复制未知数据。",
+          "path": "机位不移动。",
+          "start": "电话接通右耳，政策类别已记下，未复制患者档案。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "公开政策线索已发送，未越权取走数据，电话已断。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E14-SH003-F1",
+            "timeSeconds": 0,
+            "description": "律师电话把目标缩到保存什么，来源停在权限内，没有复制未知数据。"
+          }
+        ],
+        "edit": {
+          "entry": "电话接通右耳，政策类别已记下，未复制患者档案。",
+          "exit": "公开政策线索已发送，未越权取走数据，电话已断。；发送确认后电话放下，切申请人授权的另一端。",
+          "preferredTransition": "本场结果成立后切入 E14-SC02（CLINIC，日·迁移当天午间）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "办公室空调与实际手机提示，不加未列来电内容。 IT咨询员与凯文分属先后两通电话，只从工作手机传出所列英语。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E14-SH004",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "三名未和解申请人与玛拉不同，她保留原件且仅签有限范围。",
+        "audiencePayoff": "有限授权归凯文，原回执与和解副本仍归玛拉。",
+        "trigger": "玛拉左臂蓝色文件夹，右手机，医生持回执。；诊所咨询桌上，凯文将三份未和解患者委托单装进申请夹，把玛拉的和解协议留外面。玛拉拿回自己的原件，问她是否还算申请人。\n玛拉把保留例外的那页从蓝夹里抽出，凯文核对后在有限授权上勾明回执范围。她签字，将原件重新塞回自己的夹内。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "诺拉抬手机，玛拉先问会不会写进报道，切她要求边界的视角。；接E14-SH101；诺拉抬手机，玛拉先问会不会写进报道，切她要求边界的视角。",
+        "noMotionReason": "固定24秒，让回执授权在两位当事人手里完成。；观看变化：有限授权归凯文，原回执与和解副本仍归玛拉。"
+      },
+      "camera": {
+        "shotScale": "诊所东南咨询室南门侧35mm三人中景",
+        "position": "诊所东南咨询室南门侧35mm三人中景，凯文桌东、玛拉桌西、诺拉靠南门；三份委托与玛拉蓝夹分开。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "诊所东南咨询室南门侧35mm三人中景，凯文桌东、玛拉桌西、诺拉靠南门；三份委托与玛拉蓝夹分开。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "三名未和解申请人与玛拉不同，她保留原件且仅签有限范围。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 迁移当日午间诊所东南咨询室，凯文坐东，玛拉坐西，诺拉在南门侧。三位未和解患者的委托单在桌中，玛拉自己的和解书与蓝夹留在西侧；医生由南门进入。 本镜画内角色：COUNSEL,MARA-WORK,NORA。",
+        "movementIntent": "固定24秒，让回执授权在两位当事人手里完成。"
+      },
+      "composition": {
+        "layout": "迁移当日午间诊所东南咨询室，凯文坐东，玛拉坐西，诺拉在南门侧。三位未和解患者的委托单在桌中，玛拉自己的和解书与蓝夹留在西侧；医生由南门进入。 本镜画内角色：COUNSEL,MARA-WORK,NORA。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：诊所咨询桌上，凯文将三份未和解患者委托单装进申请夹，把玛拉的和解协议留外面。玛拉拿回自己的原件，问她是否还算申请人。\n玛拉把保留例外的那页从蓝夹里抽出，凯文核对后在有限授权上勾明回执范围。她签字，将原件重新塞回自己的夹内。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "三名未和解申请人与玛拉不同，她保留原件且仅签有限范围。；三名未和解申请人与玛拉不同，她保留原件且仅签有限范围。"
+      },
+      "temporal": {
+        "durationSeconds": 24,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "三名未和解申请人与玛拉不同，她保留原件且仅签有限范围。",
+          "path": "机位不移动。",
+          "start": "玛拉左臂蓝色文件夹，右手机，医生持回执。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "有限授权归凯文，原回执与和解副本仍归玛拉。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E14-SH004-F1",
+            "timeSeconds": 0,
+            "description": "三名未和解申请人与玛拉不同，她保留原件且仅签有限范围。"
+          }
+        ],
+        "edit": {
+          "entry": "玛拉左臂蓝色文件夹，右手机，医生持回执。",
+          "exit": "有限授权归凯文，原回执与和解副本仍归玛拉。；诺拉抬手机，玛拉先问会不会写进报道，切她要求边界的视角。",
+          "preferredTransition": "接E14-SH101；诺拉抬手机，玛拉先问会不会写进报道，切她要求边界的视角。",
+          "soundBridge": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E14-SH101",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她许可正式申请而不许可再次采访，记者必须把手机收回。",
+        "audiencePayoff": "凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。",
+        "trigger": "有限授权归凯文，原回执与和解副本仍归玛拉。；玛拉把蓝夹合上，诺拉刚把手机抬到桌沿，她便把签好的有限授权转向凯文。凯文逐项确认这次提交走正式程序，诺拉将手机放回口袋。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "医生到桌北侧等签能证明的内容，切其工作限制。；接E14-SH006；医生到桌北侧等签能证明的内容，切其工作限制。",
+        "noMotionReason": "固定22秒，蓝夹合上留在玛拉手里。；观看变化：凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。"
+      },
+      "camera": {
+        "shotScale": "诺拉南肩旁朝西65mm玛拉中近景",
+        "position": "诺拉南肩旁朝西65mm玛拉中近景，诺拉手机在前景降回，凯文在东侧画外。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "诺拉南肩旁朝西65mm玛拉中近景，诺拉手机在前景降回，凯文在东侧画外。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "她许可正式申请而不许可再次采访，记者必须把手机收回。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 迁移当日午间诊所东南咨询室，凯文坐东，玛拉坐西，诺拉在南门侧。三位未和解患者的委托单在桌中，玛拉自己的和解书与蓝夹留在西侧；医生由南门进入。 本镜画内角色：MARA-WORK。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定22秒，蓝夹合上留在玛拉手里。"
+      },
+      "composition": {
+        "layout": "迁移当日午间诊所东南咨询室，凯文坐东，玛拉坐西，诺拉在南门侧。三位未和解患者的委托单在桌中，玛拉自己的和解书与蓝夹留在西侧；医生由南门进入。 本镜画内角色：MARA-WORK。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：玛拉把蓝夹合上，诺拉刚把手机抬到桌沿，她便把签好的有限授权转向凯文。凯文逐项确认这次提交走正式程序，诺拉将手机放回口袋。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她许可正式申请而不许可再次采访，记者必须把手机收回。；她许可正式申请而不许可再次采访，记者必须把手机收回。"
+      },
+      "temporal": {
+        "durationSeconds": 22,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她许可正式申请而不许可再次采访，记者必须把手机收回。",
+          "path": "机位不移动。",
+          "start": "有限授权归凯文，原回执与和解副本仍归玛拉。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E14-SH101-F1",
+            "timeSeconds": 0,
+            "description": "她许可正式申请而不许可再次采访，记者必须把手机收回。"
+          }
+        ],
+        "edit": {
+          "entry": "有限授权归凯文，原回执与和解副本仍归玛拉。",
+          "exit": "凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。；医生到桌北侧等签能证明的内容，切其工作限制。",
+          "preferredTransition": "接E14-SH006；医生到桌北侧等签能证明的内容，切其工作限制。",
+          "soundBridge": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E14-SH006",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "医生只证明发送/收讫，申请回执没有被误当取得日志；人物进出替代新纸特写。",
+        "audiencePayoff": "申请已受理，尚未裁定，更无记录内容。",
+        "trigger": "凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。；医生看一眼挂钟。诺拉想问内部复核，医生把笔放在自己能确认的发送与回执两行旁，边答边签名；答完带笔转身，朝南门画外返回病人那边。\n凯文打开刚收到的受理通知。诺拉举起手机等一句成功消息，凯文回答只是受理回执，不迎向她的镜头；随后收妥签名页与授权副本，合上黑包。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "凯文合包去送达，切保存行动真正到达公司。；本场结果成立后切入 E14-SC03（SERVER-OFFICE，夜·迁移窗口前）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定26秒；医生签完沿南门离开，凯文手机亮后留在同一画面内答只是受理。；观看变化：申请已受理，尚未裁定，更无记录内容。"
+      },
+      "camera": {
+        "shotScale": "咨询室西北角40mm医生、门侧诺拉与桌东凯文的斜向中景",
+        "position": "咨询室西北角40mm医生、门侧诺拉与桌东凯文的斜向中景，玛拉只在西侧边缘。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "咨询室西北角40mm医生、门侧诺拉与桌东凯文的斜向中景，玛拉只在西侧边缘。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "医生只证明发送/收讫，申请回执没有被误当取得日志；人物进出替代新纸特写。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 迁移当日午间诊所东南咨询室，凯文坐东，玛拉坐西，诺拉在南门侧。三位未和解患者的委托单在桌中，玛拉自己的和解书与蓝夹留在西侧；医生由南门进入。 本镜画内角色：DOCTOR,NORA,COUNSEL,MARA-WORK。",
+        "movementIntent": "固定26秒；医生签完沿南门离开，凯文手机亮后留在同一画面内答只是受理。"
+      },
+      "composition": {
+        "layout": "迁移当日午间诊所东南咨询室，凯文坐东，玛拉坐西，诺拉在南门侧。三位未和解患者的委托单在桌中，玛拉自己的和解书与蓝夹留在西侧；医生由南门进入。 本镜画内角色：DOCTOR,NORA,COUNSEL,MARA-WORK。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：医生看一眼挂钟。诺拉想问内部复核，医生把笔放在自己能确认的发送与回执两行旁，边答边签名；答完带笔转身，朝南门画外返回病人那边。\n凯文打开刚收到的受理通知。诺拉举起手机等一句成功消息，凯文回答只是受理回执，不迎向她的镜头；随后收妥签名页与授权副本，合上黑包。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "医生只证明发送/收讫，申请回执没有被误当取得日志；人物进出替代新纸特写。；医生只证明发送/收讫，申请回执没有被误当取得日志；人物进出替代新纸特写。"
+      },
+      "temporal": {
+        "durationSeconds": 26,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "医生只证明发送/收讫，申请回执没有被误当取得日志；人物进出替代新纸特写。",
+          "path": "机位不移动。",
+          "start": "凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "申请已受理，尚未裁定，更无记录内容。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E14-SH006-F1",
+            "timeSeconds": 0,
+            "description": "医生只证明发送/收讫，申请回执没有被误当取得日志；人物进出替代新纸特写。"
+          }
+        ],
+        "edit": {
+          "entry": "凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。",
+          "exit": "申请已受理，尚未裁定，更无记录内容。；凯文合包去送达，切保存行动真正到达公司。",
+          "preferredTransition": "本场结果成立后切入 E14-SC03（SERVER-OFFICE，夜·迁移窗口前）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E14-SH008",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "只保列明日志还不够，索引必须同样进入执行范围。",
+        "audiencePayoff": "日志及索引都进入正式保全范围，患者全档不外流。",
+        "trigger": "凯文持黑包与裁定副本，维克多站西侧。；夜间技术工区南门开，凯文带正式送达副本到维克多面前。授权技术员在东工位停下迁移准备，等两人核对范围；北墙钟在九点之前。\n维克多在范围附件上指到指定日志，技术员在东侧工位等着范围确认，没有开口。凯文翻到同附件下一行索引要求，维克多看清后把两行一起划进执行单。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "两类范围确定，切执行它的人而非继续拍律师读纸。；接E14-SH010；两类范围确定，切执行它的人而非继续拍律师读纸。",
+        "noMotionReason": "固定26秒，范围附件在两人手上核对，技术员等指令而不先操作。；观看变化：日志及索引都进入正式保全范围，患者全档不外流。"
+      },
+      "camera": {
+        "shotScale": "技术工区南侧35mm三人中全景",
+        "position": "技术工区南侧35mm三人中全景，凯文在西玻璃边将裁定给维克多，技术员仍坐东工位。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "技术工区南侧35mm三人中全景，凯文在西玻璃边将裁定给维克多，技术员仍坐东工位。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "只保列明日志还不够，索引必须同样进入执行范围。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 当天 20:47 技术工区南门打开，凯文携正式送达副本进入。维克多在西玻璃墙边，技术员坐东侧授权工位，北设备柜风扇持续响，九点例行任务尚未执行。 本镜画内角色：COUNSEL,VICTOR,TECH-AUTH。",
+        "movementIntent": "固定26秒，范围附件在两人手上核对，技术员等指令而不先操作。"
+      },
+      "composition": {
+        "layout": "当天 20:47 技术工区南门打开，凯文携正式送达副本进入。维克多在西玻璃墙边，技术员坐东侧授权工位，北设备柜风扇持续响，九点例行任务尚未执行。 本镜画内角色：COUNSEL,VICTOR,TECH-AUTH。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：夜间技术工区南门开，凯文带正式送达副本到维克多面前。授权技术员在东工位停下迁移准备，等两人核对范围；北墙钟在九点之前。\n维克多在范围附件上指到指定日志，技术员在东侧工位等着范围确认，没有开口。凯文翻到同附件下一行索引要求，维克多看清后把两行一起划进执行单。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "只保列明日志还不够，索引必须同样进入执行范围。；只保列明日志还不够，索引必须同样进入执行范围。"
+      },
+      "temporal": {
+        "durationSeconds": 26,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "只保列明日志还不够，索引必须同样进入执行范围。",
+          "path": "机位不移动。",
+          "start": "凯文持黑包与裁定副本，维克多站西侧。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "日志及索引都进入正式保全范围，患者全档不外流。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E14-SH008-F1",
+            "timeSeconds": 0,
+            "description": "只保列明日志还不够，索引必须同样进入执行范围。"
+          }
+        ],
+        "edit": {
+          "entry": "凯文持黑包与裁定副本，维克多站西侧。",
+          "exit": "日志及索引都进入正式保全范围，患者全档不外流。；两类范围确定，切执行它的人而非继续拍律师读纸。",
+          "preferredTransition": "接E14-SH010；两类范围确定，切执行它的人而非继续拍律师读纸。",
+          "soundBridge": "设备风扇、键盘与打印机，技术员只说所列状态。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E14-SH010",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "无关业务可继续，指定日志/索引不被覆盖；声音限定保存状态。",
+        "audiencePayoff": "保全生效，凯文只拿执行确认，日志内容未交出。",
+        "trigger": "日志及索引都进入正式保全范围，患者全档不外流。；技术员将日志与索引两行加入排除清单，剩余迁移项目仍停着。维克多指向其余批次，凯文退开屏幕位置，只看执行范围。\n技术员在已授权工位录入保全编号，勾选执行范围，确认九点例行任务排除这组记录。打印机出执行确认时，他仍让屏幕停在状态页，没有替凯文打开内容。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "打印确认从东工位交出，切律师接结果及其局限。；接E14-SH011；打印确认从东工位交出，切律师接结果及其局限。",
+        "noMotionReason": "固定31秒，技术员保存排除项、确认任务状态，再取打印件；不进入内容页面。；观看变化：保全生效，凯文只拿执行确认，日志内容未交出。"
+      },
+      "camera": {
+        "shotScale": "授权技术员南肩后50mm工作屏与侧脸中景",
+        "position": "授权技术员南肩后50mm工作屏与侧脸中景，纸质执行单在屏旁，律师和维克多位于西侧画外。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "授权技术员南肩后50mm工作屏与侧脸中景，纸质执行单在屏旁，律师和维克多位于西侧画外。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "无关业务可继续，指定日志/索引不被覆盖；声音限定保存状态。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 当天 20:47 技术工区南门打开，凯文携正式送达副本进入。维克多在西玻璃墙边，技术员坐东侧授权工位，北设备柜风扇持续响，九点例行任务尚未执行。 本镜画内角色：TECH-AUTH。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定31秒，技术员保存排除项、确认任务状态，再取打印件；不进入内容页面。"
+      },
+      "composition": {
+        "layout": "当天 20:47 技术工区南门打开，凯文携正式送达副本进入。维克多在西玻璃墙边，技术员坐东侧授权工位，北设备柜风扇持续响，九点例行任务尚未执行。 本镜画内角色：TECH-AUTH。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：技术员将日志与索引两行加入排除清单，剩余迁移项目仍停着。维克多指向其余批次，凯文退开屏幕位置，只看执行范围。\n技术员在已授权工位录入保全编号，勾选执行范围，确认九点例行任务排除这组记录。打印机出执行确认时，他仍让屏幕停在状态页，没有替凯文打开内容。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "无关业务可继续，指定日志/索引不被覆盖；声音限定保存状态。；无关业务可继续，指定日志/索引不被覆盖；声音限定保存状态。"
+      },
+      "temporal": {
+        "durationSeconds": 31,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "无关业务可继续，指定日志/索引不被覆盖；声音限定保存状态。",
+          "path": "机位不移动。",
+          "start": "日志及索引都进入正式保全范围，患者全档不外流。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "保全生效，凯文只拿执行确认，日志内容未交出。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E14-SH010-F1",
+            "timeSeconds": 0,
+            "description": "无关业务可继续，指定日志/索引不被覆盖；声音限定保存状态。"
+          }
+        ],
+        "edit": {
+          "entry": "日志及索引都进入正式保全范围，患者全档不外流。",
+          "exit": "保全生效，凯文只拿执行确认，日志内容未交出。；打印确认从东工位交出，切律师接结果及其局限。",
+          "preferredTransition": "接E14-SH011；打印确认从东工位交出，切律师接结果及其局限。",
+          "soundBridge": "设备风扇、键盘与打印机，技术员只说所列状态。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E14-SH011",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "保存完成仍需正式调取，不得到数据内容。",
+        "audiencePayoff": "记录保存下来，独立调取还要继续。",
+        "trigger": "保全生效，凯文只拿执行确认，日志内容未交出。；凯文读确认单的记录范围和时间，与裁定附件逐一对照。维克多等他核完才恢复其余迁移任务；凯文将下一步正式调取联系人记下，不拿走数据。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "凯文拿纸离开，切来源得知保存成功却仍交出工牌。；本场结果成立后切入 E14-SC04（INSURER，夜·同日稍后）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定10秒，凯文核范围后把纸放包。；观看变化：记录保存下来，独立调取还要继续。"
+      },
+      "camera": {
+        "shotScale": "技术工区南偏西65mm凯文中近景",
+        "position": "技术工区南偏西65mm凯文中近景，确认单在下前景，维克多只留递纸手。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "技术工区南偏西65mm凯文中近景，确认单在下前景，维克多只留递纸手。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "保存完成仍需正式调取，不得到数据内容。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 当天 20:47 技术工区南门打开，凯文携正式送达副本进入。维克多在西玻璃墙边，技术员坐东侧授权工位，北设备柜风扇持续响，九点例行任务尚未执行。 本镜画内角色：COUNSEL。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定10秒，凯文核范围后把纸放包。"
+      },
+      "composition": {
+        "layout": "当天 20:47 技术工区南门打开，凯文携正式送达副本进入。维克多在西玻璃墙边，技术员坐东侧授权工位，北设备柜风扇持续响，九点例行任务尚未执行。 本镜画内角色：COUNSEL。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：凯文读确认单的记录范围和时间，与裁定附件逐一对照。维克多等他核完才恢复其余迁移任务；凯文将下一步正式调取联系人记下，不拿走数据。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "保存完成仍需正式调取，不得到数据内容。；保存完成仍需正式调取，不得到数据内容。"
+      },
+      "temporal": {
+        "durationSeconds": 10,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "保存完成仍需正式调取，不得到数据内容。",
+          "path": "机位不移动。",
+          "start": "保全生效，凯文只拿执行确认，日志内容未交出。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "记录保存下来，独立调取还要继续。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E14-SH011-F1",
+            "timeSeconds": 0,
+            "description": "保存完成仍需正式调取，不得到数据内容。"
+          }
+        ],
+        "edit": {
+          "entry": "保全生效，凯文只拿执行确认，日志内容未交出。",
+          "exit": "记录保存下来，独立调取还要继续。；凯文拿纸离开，切来源得知保存成功却仍交出工牌。",
+          "preferredTransition": "本场结果成立后切入 E14-SC04（INSURER，夜·同日稍后）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "设备风扇、键盘与打印机，技术员只说所列状态。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E14-SH012",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "日志保住与来源被要求完整消息同时发生，她拒签知情概括。",
+        "audiencePayoff": "联系事实进入正式调查，不当场等于她知道暴力计划。",
+        "trigger": "莉娜工位已停权限，工牌和工作手机尚在她手边，私人水杯在杯垫上；维克多从中央桌带清单走近。；东侧工位权限暂停后，莉娜把工牌与工作手机放到桌中，取出自己用了很久的水杯装进包。维克多把一份资料流转清单放在她还没收走的杯垫上。\n莉娜在分发清单里看到路易吉名字，翻到后面确认不是只有互助组的地址。她把纸放回杯垫，不签对知情的概括，只同意由律师处理通信。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "她转问自己工资入口，切到两人实际行政交接的距离。；接E14-SH102；她转问自己工资入口，切到两人实际行政交接的距离。",
+        "noMotionReason": "固定24秒，让她看到路易吉姓名但不展示所有通信。；观看变化：联系事实进入正式调查，不当场等于她知道暴力计划。"
+      },
+      "camera": {
+        "shotScale": "东工位南侧50mm莉娜与桌面中景",
+        "position": "东工位南侧50mm莉娜与桌面中景，工牌、工作机、水杯和流转清单分别可见，维克多只在左侧递入纸。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "东工位南侧50mm莉娜与桌面中景，工牌、工作机、水杯和流转清单分别可见，维克多只在左侧递入纸。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "日志保住与来源被要求完整消息同时发生，她拒签知情概括。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日晚间质检区，东工位已停权。莉娜把工牌与工作手机放桌中，水杯还压着用旧的杯垫。维克多从中央桌带来资料流转清单，南侧通路通向出口。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "movementIntent": "固定24秒，让她看到路易吉姓名但不展示所有通信。"
+      },
+      "composition": {
+        "layout": "同日晚间质检区，东工位已停权。莉娜把工牌与工作手机放桌中，水杯还压着用旧的杯垫。维克多从中央桌带来资料流转清单，南侧通路通向出口。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：东侧工位权限暂停后，莉娜把工牌与工作手机放到桌中，取出自己用了很久的水杯装进包。维克多把一份资料流转清单放在她还没收走的杯垫上。\n莉娜在分发清单里看到路易吉名字，翻到后面确认不是只有互助组的地址。她把纸放回杯垫，不签对知情的概括，只同意由律师处理通信。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "日志保住与来源被要求完整消息同时发生，她拒签知情概括。；日志保住与来源被要求完整消息同时发生，她拒签知情概括。"
+      },
+      "temporal": {
+        "durationSeconds": 24,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "日志保住与来源被要求完整消息同时发生，她拒签知情概括。",
+          "path": "机位不移动。",
+          "start": "莉娜工位已停权限，工牌和工作手机尚在她手边，私人水杯在杯垫上；维克多从中央桌带清单走近。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "联系事实进入正式调查，不当场等于她知道暴力计划。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E14-SH012-F1",
+            "timeSeconds": 0,
+            "description": "日志保住与来源被要求完整消息同时发生，她拒签知情概括。"
+          }
+        ],
+        "edit": {
+          "entry": "莉娜工位已停权限，工牌和工作手机尚在她手边，私人水杯在杯垫上；维克多从中央桌带清单走近。",
+          "exit": "联系事实进入正式调查，不当场等于她知道暴力计划。；她转问自己工资入口，切到两人实际行政交接的距离。",
+          "preferredTransition": "接E14-SH102；她转问自己工资入口，切到两人实际行政交接的距离。",
+          "soundBridge": "办公室空调与实际手机提示，不加未列来电内容。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E14-SH102",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她还需要工资记录、要求书面安排和律师收问题，工作身份被实际切断。",
+        "audiencePayoff": "她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。",
+        "trigger": "联系事实进入正式调查，不当场等于她知道暴力计划。；莉娜将流转清单留在杯垫上，手从工牌移向自己的包。维克多站在中央桌边等她收拾，她先确认哪些东西今天还带得走。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "维克多转回中央桌，留下她独立拨自己的律师。；接E14-SH014；维克多转回中央桌，留下她独立拨自己的律师。",
+        "noMotionReason": "固定25秒，不把远处答复者拉近成私人安慰。；观看变化：她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。"
+      },
+      "camera": {
+        "shotScale": "质检区南通道35mm共享中全景",
+        "position": "质检区南通道35mm共享中全景，莉娜在东工位收包，维克多在中央桌边，两人相隔数米。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "质检区南通道35mm共享中全景，莉娜在东工位收包，维克多在中央桌边，两人相隔数米。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "她还需要工资记录、要求书面安排和律师收问题，工作身份被实际切断。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日晚间质检区，东工位已停权。莉娜把工牌与工作手机放桌中，水杯还压着用旧的杯垫。维克多从中央桌带来资料流转清单，南侧通路通向出口。 本镜画内角色：LENA,VICTOR。",
+        "movementIntent": "固定25秒，不把远处答复者拉近成私人安慰。"
+      },
+      "composition": {
+        "layout": "同日晚间质检区，东工位已停权。莉娜把工牌与工作手机放桌中，水杯还压着用旧的杯垫。维克多从中央桌带来资料流转清单，南侧通路通向出口。 本镜画内角色：LENA,VICTOR。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：莉娜将流转清单留在杯垫上，手从工牌移向自己的包。维克多站在中央桌边等她收拾，她先确认哪些东西今天还带得走。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她还需要工资记录、要求书面安排和律师收问题，工作身份被实际切断。；她还需要工资记录、要求书面安排和律师收问题，工作身份被实际切断。"
+      },
+      "temporal": {
+        "durationSeconds": 25,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "她还需要工资记录、要求书面安排和律师收问题，工作身份被实际切断。",
+          "path": "机位不移动。",
+          "start": "联系事实进入正式调查，不当场等于她知道暴力计划。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E14-SH102-F1",
+            "timeSeconds": 0,
+            "description": "她还需要工资记录、要求书面安排和律师收问题，工作身份被实际切断。"
+          }
+        ],
+        "edit": {
+          "entry": "联系事实进入正式调查，不当场等于她知道暴力计划。",
+          "exit": "她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。；维克多转回中央桌，留下她独立拨自己的律师。",
+          "preferredTransition": "接E14-SH014；维克多转回中央桌，留下她独立拨自己的律师。",
+          "soundBridge": "办公室空调与实际手机提示，不加未列来电内容。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E14-SH014",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "先拍清单、留言、发送，再带私人杯离开；原件没有随包走。",
+        "audiencePayoff": "清单照片已发给自己的律师，原件及工作物件留东桌；私人手机随莉娜离开，没有接到对方答复。",
+        "trigger": "她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。；莉娜从包里取私人手机，将杯垫上清单逐页拍清，再拨律师语音信箱留下下列留言。留言结束后挂断，将刚拍的清单照片发送给律师；看到发送确认后沿南侧通路离开。清单原件、工作手机与工牌留在东桌，私人杯在肩包里轻碰。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "暗下的工位留着三件公司物品，四个月后转争议材料进入法庭。；本集结束。莉娜仍遭停权与资料流转调查，拒签暗示知情的概括，带走自己的杯子；记录保住了，人的处境没有随之安全。 下集从COURT-STATE展开：一次程序胜利和一组真实记录，各自只能证明到哪里？",
+        "noMotionReason": "固定17秒直到她向南通路离画，不跟到电梯。；观看变化：清单照片已发给自己的律师，原件及工作物件留东桌；私人手机随莉娜离开，没有接到对方答复。"
+      },
+      "camera": {
+        "shotScale": "东工位西南侧65mm莉娜半身",
+        "position": "东工位西南侧65mm莉娜半身，清单原件、工牌与工作机仍在桌上，私人手机在她手中。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "东工位西南侧65mm莉娜半身，清单原件、工牌与工作机仍在桌上，私人手机在她手中。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "先拍清单、留言、发送，再带私人杯离开；原件没有随包走。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 同日晚间质检区，东工位已停权。莉娜把工牌与工作手机放桌中，水杯还压着用旧的杯垫。维克多从中央桌带来资料流转清单，南侧通路通向出口。 本镜画内角色：LENA。",
+        "movementIntent": "固定17秒直到她向南通路离画，不跟到电梯。"
+      },
+      "composition": {
+        "layout": "同日晚间质检区，东工位已停权。莉娜把工牌与工作手机放桌中，水杯还压着用旧的杯垫。维克多从中央桌带来资料流转清单，南侧通路通向出口。 本镜画内角色：LENA。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：莉娜从包里取私人手机，将杯垫上清单逐页拍清，再拨律师语音信箱留下下列留言。留言结束后挂断，将刚拍的清单照片发送给律师；看到发送确认后沿南侧通路离开。清单原件、工作手机与工牌留在东桌，私人杯在肩包里轻碰。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "先拍清单、留言、发送，再带私人杯离开；原件没有随包走。；先拍清单、留言、发送，再带私人杯离开；原件没有随包走。"
+      },
+      "temporal": {
+        "durationSeconds": 17,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "先拍清单、留言、发送，再带私人杯离开；原件没有随包走。",
+          "path": "机位不移动。",
+          "start": "她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "清单照片已发给自己的律师，原件及工作物件留东桌；私人手机随莉娜离开，没有接到对方答复。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E14-SH014-F1",
+            "timeSeconds": 0,
+            "description": "先拍清单、留言、发送，再带私人杯离开；原件没有随包走。"
+          }
+        ],
+        "edit": {
+          "entry": "她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。",
+          "exit": "清单照片已发给自己的律师，原件及工作物件留东桌；私人手机随莉娜离开，没有接到对方答复。；暗下的工位留着三件公司物品，四个月后转争议材料进入法庭。",
+          "preferredTransition": "本集结束。莉娜仍遭停权与资料流转调查，拒签暗示知情的概括，带走自己的杯子；记录保住了，人的处境没有随之安全。 下集从COURT-STATE展开：一次程序胜利和一组真实记录，各自只能证明到哪里？",
+          "soundBridge": "办公室空调与实际手机提示，不加未列来电内容。 莉娜给自己的律师留言，对端没有回应。；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    }
+  ]
+}

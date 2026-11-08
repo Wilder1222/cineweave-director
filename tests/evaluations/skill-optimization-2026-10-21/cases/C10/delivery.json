@@ -1,0 +1,38 @@
+{
+  "frameRate": {
+    "numerator": 24,
+    "denominator": 1
+  },
+  "totalFrames": 576,
+  "shots": [
+    {
+      "id": "S1",
+      "startFrame": 0,
+      "endFrame": 120
+    },
+    {
+      "id": "S2",
+      "startFrame": 120,
+      "endFrame": 264
+    },
+    {
+      "id": "S3",
+      "startFrame": 264,
+      "endFrame": 456
+    },
+    {
+      "id": "S4",
+      "startFrame": 456,
+      "endFrame": 576
+    }
+  ],
+  "subtitles": [
+    {
+      "id": "D1",
+      "startFrame": 504,
+      "endFrame": 552,
+      "text": "原来如此。",
+      "expectedHanCharacters": 4
+    }
+  ]
+}

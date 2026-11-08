@@ -1,0 +1,1120 @@
+{
+  "number": 9,
+  "title": "深红毛衣",
+  "logline": "红毛衣出庭成为商品，庭内不认罪与证据申请仍按有限程序进行；匿名处理记录让诺拉转向来源。",
+  "scenes": [
+    {
+      "id": "E09-SC01",
+      "location": "COURT-CORRIDOR",
+      "time": "日·首次州案答辩前",
+      "script": "候庭走廊北门一次只放几个人通过，西侧长椅前，路易吉穿深红毛衣、白衬衫、灰长裤，双腕仍在身前铐住。海伦在他西侧，蓝色案卷夹露出患者折页。\n\n路易吉用被铐住的双手示意蓝夹里的折页，想让海伦现在拿出来。北门打开，海伦把折页压回夹内，带他让开出来的人。\n\n路易吉（英语，催她做一件事）：Can you get that page into the record?\n中文对照：能把那一页写进庭审记录吗？\n海伦（英语，边让路边交代）：After your plea. The names stay covered.\n中文对照：先答辩。名字得遮住。\n\n法警示意伸手，逐一打开两只腕铐，将整副铐子收进自己的腰侧皮套。路易吉先松开指头，再把双手垂在身体两边，白袖口从毛衣内露出一截。\n\n路易吉揉一下手腕，目光仍追着蓝夹。法警把北门拉开，海伦问他的背怎么样；他向门走一步，伸手又收回，没有去拿那张纸。\n\n海伦（英语，走动中低声问）：How's your back?\n中文对照：背怎么样？\n路易吉（英语，搪塞背痛，马上盯回蓝夹）：I'll be okay. Just don't lose that page.\n中文对照：我没事。那页可别弄丢。",
+      "entry": "带着公开一页材料的欲望进入正式程序。",
+      "exit": "海伦把先答辩、遮姓名置于他的急迫愿望之前。 双手解开不等于获得发言与展示权。",
+      "dramaticFunction": "带着公开一页材料的欲望进入正式程序。",
+      "turn": "海伦把先答辩、遮姓名置于他的急迫愿望之前。",
+      "exitCost": "双手解开不等于获得发言与展示权。",
+      "sceneRhythm": "两人边等边交涉，解铐是实际进门步骤；尾部直接衔接法庭。",
+      "sourceSceneIds": [
+        "E09-SC01"
+      ],
+      "plannedDuration": 31
+    },
+    {
+      "id": "E09-SC02",
+      "location": "COURT-STATE",
+      "time": "日·紧接候庭",
+      "script": "法官席在北、辩护桌在西、控方在东，木隔栏后的南侧旁听席已坐满。瑞秋在东南，棕文件袋放膝上。路易吉与海伦由南通道到西桌，双腕自由。\n\n路易吉拉开椅子落座，把两只自由的手放在桌面。瑞秋抬起眼，看清他的脸与整洁衣领，再把棕文件袋移到腿上；法官翻开案卷。\n\n州法官（英语，例行明确）：Mr. Mangione, can you hear me clearly?\n中文对照：曼吉奥内先生，你能听清我的话吗？\n路易吉（英语，清楚平稳）：Yes, Your Honor.\n中文对照：能，法官阁下。\n\n法官问答辩。路易吉先看蓝夹里的折页，海伦用指尖在空白答辩表上点一下；他转回北席明确作答。\n\n州法官（英语，程序提问）：How do you plead to the charges before this court?\n中文对照：对本庭所列指控，你如何答辩？\n路易吉（英语，停半拍后明确）：Not guilty, Your Honor.\n中文对照：不认罪，法官阁下。\n\n海伦站起，将搜查申请交到西桌前供书记收取。蓝夹里的患者折页被青年指尖轻轻推出一角，她用另一只手压住。\n\n海伦（英语，争取具体材料）：We request the full arrest recordings, including the period before the backpack was opened.\n中文对照：我们申请完整逮捕记录，包括背包打开以前的部分。\n\n海伦的手还压着患者折页，控方先把背包部分标出，要求西桌说明请求范围。海伦没有让青年替她作答，直接把清单中尚缺的起止时间指给书记员。\n\n州检察官（英语，把请求缩成重复索取）：The defense has the inventory. What else are you asking for?\n中文对照：辩方已经拿到物品清单，还要什么？\n海伦（英语，不接受把两种材料混为一谈）：The recordings. A list tells us what was logged, not what happened before that.\n中文对照：录像。清单记的是登记了什么，不是那之前发生了什么。\n州法官（英语，把争执转成可处理的书面范围）：Put the missing material in your request.\n中文对照：缺哪些，列进申请。\n\n青年看见折页被压住，手指缩回桌边。海伦转而提出笔记来源，控方翻开副本可见地指出另一组页码；两人没有展示患者姓名。\n\n海伦（英语，区分材料原文和本人陈述，不把亲笔抄录当作作者身份）：Some entries copy patient records. We need to distinguish those from his own statements.\n中文对照：部分内容抄自患者记录，需要与他自己的陈述分开。\n州检察官（英语，抓程序缺口）：That requires a written motion.\n中文对照：那需要书面申请。\n\n法官把当日清单推给书记员，指定来源问题改由书面申请处理。西侧海伦合住蓝夹的纸声传来；法官示意她坐下，低头转到下一项。\n\n州法官（英语，截断扩展）：File it in writing. Redact the patients' names. Today we're setting the schedule.\n中文对照：书面提交，遮去患者姓名。今天先安排日程。\n\n瑞秋从棕文件袋抽出一张折纸，捏在手里却没有展开。后排有椅子挪动，她将折纸塞回袋中，仍看着北面。",
+      "entry": "让红毛衣名场面发生在受限的辩护任务中。",
+      "exit": "律师争到完整请求路径，患者页不能当庭取代书面申请。 不认罪不意味着证据已排除，瑞秋仍要坐在同一房间承受程序。",
+      "dramaticFunction": "让红毛衣名场面发生在受限的辩护任务中。",
+      "turn": "律师争到完整请求路径，患者页不能当庭取代书面申请。",
+      "exitCost": "不认罪不意味着证据已排除，瑞秋仍要坐在同一房间承受程序。",
+      "sceneRhythm": "先答辩；控辩围绕请求范围交锋；裁定程序边界后留瑞秋反应，不把她当反派凝视。",
+      "sourceSceneIds": [
+        "E09-SC02"
+      ],
+      "plannedDuration": 87
+    },
+    {
+      "id": "E09-SC03",
+      "location": "EXTERIOR",
+      "time": "日·答辩后",
+      "script": "法院北台阶下，记者集中在西栏杆外，东侧通路留给出庭者。诺拉抱红本等出口，布莱克的稳定器正占通路半步；路易吉从内部押返通道离开，不在广场。\n\n布莱克让手机对着自己，把商品图弹到直播角落。诺拉从东侧通道绕到稳定器外端，试图先看北台阶是否有人出来。\n\n布莱克（英语，眼睛看评论，熟练接着卖）：That color's back in stock. Link below. It'll ship before the next hearing.\n中文对照：这个颜色补货了，链接在下面。下次开庭前发货。\n诺拉（英语，普通询问）：Were you inside?\n中文对照：你刚才在庭里吗？\n\n海伦出现在北台阶，诺拉想从东侧通道接近，稳定器横过来挡住半步。她把红本贴身收窄，示意布莱克让出空间；他仍盯着评论区。\n\n诺拉（英语，绕设备时问，不停下来争吵）：Can you move?\n中文对照：让一下行吗？\n布莱克（英语，先应付身旁的人，立刻转回直播）：Hang on, the lawyer's coming out. Size chart's down below.\n中文对照：等下，律师出来了。尺码表在下面。\n\n诺拉跟上海伦，手机贴近自己胸前录音，不挡通路。海伦没有停在主播镜头前，边走边回答；诺拉走到南侧后停下，让她离开。\n\n诺拉（英语，抢一句可用答复）：Anything thrown out today?\n中文对照：今天排除什么了吗？\n海伦（英语，脚步不停，堵住胜利标题）：Nothing. We've asked for the arrest recordings. We don't have them yet.\n中文对照：没有。我们申请了逮捕录像，还没拿到。\n\n匿名消息打断诺拉保存录音。她把屏幕向身前转，抄下处理编号，再把来信收起；西栏杆后的主播仍在工作，只作不可辨背景。",
+      "entry": "把公众消费与记者实际追问放在同一条通路。",
+      "exit": "商品话题被律师有限答复与匿名处理编号打断。 诺拉必须绕开流量现场，才得到一条尚不能发布的线索。",
+      "dramaticFunction": "把公众消费与记者实际追问放在同一条通路。",
+      "turn": "商品话题被律师有限答复与匿名处理编号打断。",
+      "exitCost": "诺拉必须绕开流量现场，才得到一条尚不能发布的线索。",
+      "sceneRhythm": "短促同行问答，准确保留没有排除；匿名消息无朗读。",
+      "sourceSceneIds": [
+        "E09-SC03"
+      ],
+      "plannedDuration": 43
+    },
+    {
+      "id": "E09-SC04",
+      "location": "NEWSROOM",
+      "time": "夜·当晚",
+      "script": "夜间编辑部东桌还有女值班编辑，西桌是诺拉的红本、电脑与匿名便签。北屏静音重播庭审新闻，打印机在过道另一边。\n\n编辑部打印机吐出最后一页，诺拉从西桌绕过去取，编辑伸手想看，她用红本盖住内部编号，只露对照字段。编辑没有接过去。\n\n值班编辑（英语，手已伸向纸，要当天能用的东西）：Can we run this?\n中文对照：这能发吗？\n诺拉（英语，看着空栏，拒绝先给结论）：Not yet. This box is blank. I don't know what should be in it.\n中文对照：还不能。这格空着，我还不知道该填什么。\n\n编辑将毛衣短视频的待剪任务推到她电脑上，诺拉打开了剪辑窗口，又把匿名便签压在键盘边。她没有把任何一项关掉。\n\n值班编辑（英语，把付钱的工作推到她面前）：Get the sweater clip done first. Then follow this up.\n中文对照：先把毛衣那条剪完，再查这个。\n诺拉（英语，接受交换）：Send me the clean audio.\n中文对照：把干净音轨发我。\n\n诺拉把字幕轨拉到开头，编辑看见她还留着匿名材料，停在桌边等成片时点。她没有答应当天写完新报道。\n\n值班编辑（英语，说排期，不评价调查）：The clip's due in ten.\n中文对照：短片十分钟后要。\n诺拉（英语，先承担手头工作，不承诺没查清的报道）：You'll have it. I'm not running the documents tonight.\n中文对照：会交的。那些材料今晚不发。\n\n诺拉一边用左手拖视频音轨，一边将右手手机贴耳拨通匿名号码。听到街边底声，她停下鼠标，把便签翻到空白背面。\n\n诺拉（英语，电话接通后停下工作，把决定留给对方）：I won't use your name. Someone could still figure it out. Do you want to meet?\n中文对照：我不会用你的名字，可别人还是可能猜出来。你还想见面吗？",
+      "entry": "让追查与记者实际工作合同并行。",
+      "exit": "她先交商业短片，仍选择联系来源而不仓促发纸件。 调查占用下班时间，保护匿名身份也不能保证不会被猜出。",
+      "dramaticFunction": "让追查与记者实际工作合同并行。",
+      "turn": "她先交商业短片，仍选择联系来源而不仓促发纸件。",
+      "exitCost": "调查占用下班时间，保护匿名身份也不能保证不会被猜出。",
+      "sceneRhythm": "工作交接推进到一通明确约见电话，结尾保留未完剪辑而非神秘黑屏。",
+      "sourceSceneIds": [
+        "E09-SC04"
+      ],
+      "plannedDuration": 47
+    }
+  ],
+  "shots": [
+    {
+      "id": "E09-SH001",
+      "sceneId": "E09-SC01",
+      "sourceShotIds": [
+        "E09-SH001"
+      ],
+      "duration": 13,
+      "characters": [
+        "LUIGI-RED",
+        "HELEN"
+      ],
+      "onScreenCharacterIds": [
+        "LUIGI-RED",
+        "HELEN"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "看他试着索取折页、她把页压回去。",
+      "framing": "走廊西墙旁朝东北的35mm双人中景，画幅到腰下，青年身前腕铐与律师蓝夹同在前层。",
+      "composition": "候庭走廊北门一次只放几个人通过，西侧长椅前，路易吉穿深红毛衣、白衬衫、灰长裤，双腕仍在身前铐住。海伦在他西侧，蓝色案卷夹露出患者折页。 本镜画内角色：LUIGI-RED,HELEN。",
+      "camera": "固定；让北门开合和来人经过改变背景，不追出门的人。",
+      "focus": "看他试着索取折页、她把页压回去。",
+      "start": "路易吉身前腕铐未解，海伦站他西侧，蓝夹里露出一张折页。",
+      "action": "路易吉用被铐住的双手示意蓝夹里的折页，想让海伦现在拿出来。北门打开，海伦把折页压回夹内，带他让开出来的人。",
+      "end": "折页仍在海伦蓝夹内，青年双腕仍在身前铐住。",
+      "sound": "开门、钥匙、腕铐和脚步声；法警无可辨对白。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E09-D001",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "Can you get that page into the record?",
+          "translationZh": "能把那一页写进庭审记录吗？",
+          "tone": "催她做一件事",
+          "start": 1,
+          "end": 5.3
+        },
+        {
+          "id": "E09-D002",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "After your plea. The names stay covered.",
+          "translationZh": "先答辩。名字得遮住。",
+          "tone": "边让路边交代",
+          "start": 5.6,
+          "end": 9.4
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 13,
+          "start": "路易吉身前腕铐未解，海伦站他西侧，蓝夹里露出一张折页。",
+          "action": "路易吉用被铐住的双手示意蓝夹里的折页，想让海伦现在拿出来。北门打开，海伦把折页压回夹内，带他让开出来的人。",
+          "end": "折页仍在海伦蓝夹内，青年双腕仍在身前铐住。",
+          "dialogueCueIds": [
+            "E09-D001",
+            "E09-D002"
+          ],
+          "sourceShotIds": [
+            "E09-SH001"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 15
+        }
+      ],
+      "viewerEntry": "带着公开一页材料的欲望进入正式程序。",
+      "viewerExit": "折页仍在海伦蓝夹内，青年双腕仍在身前铐住。",
+      "cutTrigger": "法警示意伸手，注意从谈判落到解铐的实际动作。",
+      "next": "接E09-SH002；法警示意伸手，注意从谈判落到解铐的实际动作。"
+    },
+    {
+      "id": "E09-SH002",
+      "sceneId": "E09-SC01",
+      "sourceShotIds": [
+        "E09-SH002",
+        "E09-SH003"
+      ],
+      "duration": 18,
+      "characters": [
+        "LUIGI-RED",
+        "HELEN"
+      ],
+      "onScreenCharacterIds": [
+        "LUIGI-RED",
+        "HELEN"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [
+        "MARSHAL-DOOR"
+      ],
+      "offscreenRoleIds": [],
+      "purpose": "两腕确实自由后再跟他追折页的目光，整副铐归法警腰侧。",
+      "framing": "走廊西侧偏南50mm中近景，双腕在下半部，青年和海伦上身同框，北门在右后方。",
+      "composition": "候庭走廊北门一次只放几个人通过，西侧长椅前，路易吉穿深红毛衣、白衬衫、灰长裤，双腕仍在身前铐住。海伦在他西侧，蓝色案卷夹露出患者折页。 本镜画内角色：LUIGI-RED,HELEN。",
+      "camera": "法警开两只铐后，连续缓慢上仰到青年揉腕和律师问话；不剪掉收铐过程。",
+      "focus": "两腕确实自由后再跟他追折页的目光，整副铐归法警腰侧。",
+      "start": "折页仍在海伦蓝夹内，青年双腕仍在身前铐住。",
+      "action": "法警示意伸手，逐一打开两只腕铐，将整副铐子收进自己的腰侧皮套。路易吉先松开指头，再把双手垂在身体两边，白袖口从毛衣内露出一截。\n路易吉揉一下手腕，目光仍追着蓝夹。法警把北门拉开，海伦问他的背怎么样；他向门走一步，伸手又收回，没有去拿那张纸。",
+      "end": "青年空手向北入庭，海伦蓝夹在左手，腕铐留法警身上。",
+      "sound": "开门、钥匙、腕铐和脚步声；法警无可辨对白。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E09-D003",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "How's your back?",
+          "translationZh": "背怎么样？",
+          "tone": "走动中低声问",
+          "start": 10,
+          "end": 11.8
+        },
+        {
+          "id": "E09-D004",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "I'll be okay. Just don't lose that page.",
+          "translationZh": "我没事。那页可别弄丢。",
+          "tone": "搪塞背痛，马上盯回蓝夹",
+          "start": 12.1,
+          "end": 15.4
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 9,
+          "start": "折页仍在海伦蓝夹内，青年双腕仍在身前铐住。",
+          "action": "法警示意伸手，逐一打开两只腕铐，将整副铐子收进自己的腰侧皮套。路易吉先松开指头，再把双手垂在身体两边，白袖口从毛衣内露出一截。",
+          "end": "双手已完全自由；腕铐由法警收走，不在路易吉身上。",
+          "dialogueCueIds": [],
+          "sourceShotIds": [
+            "E09-SH002"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 11
+        },
+        {
+          "duration": 9,
+          "start": "双手已完全自由；腕铐由法警收走，不在路易吉身上。",
+          "action": "路易吉揉一下手腕，目光仍追着蓝夹。法警把北门拉开，海伦问他的背怎么样；他向门走一步，伸手又收回，没有去拿那张纸。",
+          "end": "青年空手向北入庭，海伦蓝夹在左手，腕铐留法警身上。",
+          "dialogueCueIds": [
+            "E09-D003",
+            "E09-D004"
+          ],
+          "sourceShotIds": [
+            "E09-SH003"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 11
+        }
+      ],
+      "viewerEntry": "折页仍在海伦蓝夹内，青年双腕仍在身前铐住。",
+      "viewerExit": "青年空手向北入庭，海伦蓝夹在左手，腕铐留法警身上。",
+      "cutTrigger": "他空手朝北门跨步，接下一场落座。",
+      "next": "本场完成，按正式EP场序转场；他空手朝北门跨步，接下一场落座。"
+    },
+    {
+      "id": "E09-SH004",
+      "sceneId": "E09-SC02",
+      "sourceShotIds": [
+        "E09-SH004",
+        "E09-SH005"
+      ],
+      "duration": 22,
+      "characters": [
+        "LUIGI-RED",
+        "HELEN",
+        "JUDGE-STATE",
+        "PROSECUTOR-STATE",
+        "RACHEL"
+      ],
+      "onScreenCharacterIds": [
+        "LUIGI-RED",
+        "HELEN",
+        "JUDGE-STATE",
+        "PROSECUTOR-STATE",
+        "RACHEL"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "青年自由双手落桌、律师指答辩表与瑞秋看见他，在一个空间同时发生。",
+      "framing": "南侧隔栏中央35mm固定中全景，北法官席、东西控辩桌和东南旁听第一排都能辨位。",
+      "composition": "法官席在北、辩护桌在西、控方在东，木隔栏后的南侧旁听席已坐满。瑞秋在东南，棕文件袋放膝上。路易吉与海伦由南通道到西桌，双腕自由。 本镜画内角色：LUIGI-RED,HELEN,JUDGE-STATE,PROSECUTOR-STATE,RACHEL。",
+      "camera": "固定保持22秒，不在问答间推近。",
+      "focus": "青年自由双手落桌、律师指答辩表与瑞秋看见他，在一个空间同时发生。",
+      "start": "路易吉从南隔栏口向西辩方桌走，双手空着。",
+      "action": "路易吉拉开椅子落座，把两只自由的手放在桌面。瑞秋抬起眼，看清他的脸与整洁衣领，再把棕文件袋移到腿上；法官翻开案卷。\n法官问答辩。路易吉先看蓝夹里的折页，海伦用指尖在空白答辩表上点一下；他转回北席明确作答。",
+      "end": "不认罪已录入；青年双手自由，右手从纸边收回膝上。",
+      "sound": "木椅、纸页与法庭室内混响，所列台词按既定席位发声，旁听者不喊话。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E09-D005",
+          "speaker": "州法官",
+          "listener": "路易吉",
+          "text": "Mr. Mangione, can you hear me clearly?",
+          "translationZh": "曼吉奥内先生，你能听清我的话吗？",
+          "tone": "例行明确",
+          "start": 1.1,
+          "end": 5.1
+        },
+        {
+          "id": "E09-D006",
+          "speaker": "路易吉",
+          "listener": "州法官",
+          "text": "Yes, Your Honor.",
+          "translationZh": "能，法官阁下。",
+          "tone": "清楚平稳",
+          "start": 5.5,
+          "end": 7.5
+        },
+        {
+          "id": "E09-D007",
+          "speaker": "州法官",
+          "listener": "路易吉",
+          "text": "How do you plead to the charges before this court?",
+          "translationZh": "对本庭所列指控，你如何答辩？",
+          "tone": "程序提问",
+          "start": 12.1,
+          "end": 17.7
+        },
+        {
+          "id": "E09-D008",
+          "speaker": "路易吉",
+          "listener": "州法官",
+          "text": "Not guilty, Your Honor.",
+          "translationZh": "不认罪，法官阁下。",
+          "tone": "停半拍后明确",
+          "start": 18,
+          "end": 20.5
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 11,
+          "start": "路易吉从南隔栏口向西辩方桌走，双手空着。",
+          "action": "路易吉拉开椅子落座，把两只自由的手放在桌面。瑞秋抬起眼，看清他的脸与整洁衣领，再把棕文件袋移到腿上；法官翻开案卷。",
+          "end": "路易吉坐在海伦北侧，双手桌上；瑞秋坐东南。",
+          "dialogueCueIds": [
+            "E09-D005",
+            "E09-D006"
+          ],
+          "sourceShotIds": [
+            "E09-SH004"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 13
+        },
+        {
+          "duration": 11,
+          "start": "路易吉坐在海伦北侧，双手桌上；瑞秋坐东南。",
+          "action": "法官问答辩。路易吉先看蓝夹里的折页，海伦用指尖在空白答辩表上点一下；他转回北席明确作答。",
+          "end": "不认罪已录入；青年双手自由，右手从纸边收回膝上。",
+          "dialogueCueIds": [
+            "E09-D007",
+            "E09-D008"
+          ],
+          "sourceShotIds": [
+            "E09-SH005"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 13
+        }
+      ],
+      "viewerEntry": "让红毛衣名场面发生在受限的辩护任务中。",
+      "viewerExit": "不认罪已录入；青年双手自由，右手从纸边收回膝上。",
+      "cutTrigger": "海伦站起要求录像，切到她与青年争取材料的桌边。",
+      "next": "接E09-SH006；海伦站起要求录像，切到她与青年争取材料的桌边。"
+    },
+    {
+      "id": "E09-SH006",
+      "sceneId": "E09-SC02",
+      "sourceShotIds": [
+        "E09-SH006"
+      ],
+      "duration": 32,
+      "characters": [
+        "LUIGI-RED",
+        "HELEN",
+        "PROSECUTOR-STATE",
+        "JUDGE-STATE"
+      ],
+      "onScreenCharacterIds": [
+        "LUIGI-RED",
+        "HELEN"
+      ],
+      "offscreenCharacterIds": [
+        "PROSECUTOR-STATE",
+        "JUDGE-STATE"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "她压住患者折页，同时坚持需要完整录像；控方和法官的声音来自既定席位。",
+      "framing": "西桌南端50mm律师和青年双人中景，桌上申请与蓝夹在前景；东桌、北席都在画外。",
+      "composition": "法官席在北、辩护桌在西、控方在东，木隔栏后的南侧旁听席已坐满。瑞秋在东南，棕文件袋放膝上。路易吉与海伦由南通道到西桌，双腕自由。 本镜画内角色：LUIGI-RED,HELEN。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定，海伦站起后稍上仰保持头部空间，青年仍留画面下侧。",
+      "focus": "她压住患者折页，同时坚持需要完整录像；控方和法官的声音来自既定席位。",
+      "start": "不认罪已录入；青年双手自由，右手从纸边收回膝上。",
+      "action": "海伦站起，将搜查申请交到西桌前供书记收取。蓝夹里的患者折页被青年指尖轻轻推出一角，她用另一只手压住。\n海伦的手还压着患者折页，控方先把背包部分标出，要求西桌说明请求范围。海伦没有让青年替她作答，直接把清单中尚缺的起止时间指给书记员。",
+      "end": "书记员记下请求，海伦留着清单，青年那张折页仍未展示。",
+      "sound": "木椅、纸页与法庭室内混响，所列台词按既定席位发声，旁听者不喊话。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E09-D009",
+          "speaker": "海伦",
+          "listener": "州法官",
+          "text": "We request the full arrest recordings, including the period before the backpack was opened.",
+          "translationZh": "我们申请完整逮捕记录，包括背包打开以前的部分。",
+          "tone": "争取具体材料",
+          "start": 1,
+          "end": 8.2
+        },
+        {
+          "id": "E09-D201",
+          "speaker": "州检察官",
+          "listener": "州法官",
+          "text": "The defense has the inventory. What else are you asking for?",
+          "translationZh": "辩方已经拿到物品清单，还要什么？",
+          "tone": "把请求缩成重复索取",
+          "start": 13,
+          "end": 17.31
+        },
+        {
+          "id": "E09-D202",
+          "speaker": "海伦",
+          "listener": "州法官",
+          "text": "The recordings. A list tells us what was logged, not what happened before that.",
+          "translationZh": "录像。清单记的是登记了什么，不是那之前发生了什么。",
+          "tone": "不接受把两种材料混为一谈",
+          "start": 17.61,
+          "end": 23.1
+        },
+        {
+          "id": "E09-D203",
+          "speaker": "州法官",
+          "listener": "控辩双方",
+          "text": "Put the missing material in your request.",
+          "translationZh": "缺哪些，列进申请。",
+          "tone": "把争执转成可处理的书面范围",
+          "start": 23.4,
+          "end": 26.15
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 12,
+          "start": "不认罪已录入；青年双手自由，右手从纸边收回膝上。",
+          "action": "海伦站起，将搜查申请交到西桌前供书记收取。蓝夹里的患者折页被青年指尖轻轻推出一角，她用另一只手压住。",
+          "end": "搜查申请已递出，患者折页仍在蓝夹内。",
+          "dialogueCueIds": [
+            "E09-D009"
+          ],
+          "sourceShotIds": [
+            "E09-SH006"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        },
+        {
+          "duration": 20,
+          "start": "搜查申请已递出，患者折页仍在蓝夹内。",
+          "action": "海伦的手还压着患者折页，控方先把背包部分标出，要求西桌说明请求范围。海伦没有让青年替她作答，直接把清单中尚缺的起止时间指给书记员。",
+          "end": "书记员记下请求，海伦留着清单，青年那张折页仍未展示。",
+          "dialogueCueIds": [
+            "E09-D201",
+            "E09-D202",
+            "E09-D203"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 22
+        }
+      ],
+      "viewerEntry": "不认罪已录入；青年双手自由，右手从纸边收回膝上。",
+      "viewerExit": "书记员记下请求，海伦留着清单，青年那张折页仍未展示。",
+      "cutTrigger": "录像范围被列入请求，海伦转向笔记作者问题，切回能看见控辩同时反应的位置。",
+      "next": "接E09-SH007；录像范围被列入请求，海伦转向笔记作者问题，切回能看见控辩同时反应的位置。"
+    },
+    {
+      "id": "E09-SH007",
+      "sceneId": "E09-SC02",
+      "sourceShotIds": [
+        "E09-SH007",
+        "E09-SH008"
+      ],
+      "duration": 26,
+      "characters": [
+        "LUIGI-RED",
+        "HELEN",
+        "PROSECUTOR-STATE",
+        "JUDGE-STATE"
+      ],
+      "onScreenCharacterIds": [
+        "LUIGI-RED",
+        "HELEN",
+        "PROSECUTOR-STATE",
+        "JUDGE-STATE"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "控方指另一组页码与律师收患者页相互对照，公开程序给出边界。",
+      "framing": "南隔栏偏西40mm中全景，海伦在近左、控方在右、北席居后，青年仍在西桌。",
+      "composition": "法官席在北、辩护桌在西、控方在东，木隔栏后的南侧旁听席已坐满。瑞秋在东南，棕文件袋放膝上。路易吉与海伦由南通道到西桌，双腕自由。 本镜画内角色：LUIGI-RED,HELEN,PROSECUTOR-STATE,JUDGE-STATE。",
+      "camera": "固定；法官示意坐下后让海伦自行降回构图，不切法官正面。",
+      "focus": "控方指另一组页码与律师收患者页相互对照，公开程序给出边界。",
+      "start": "书记员记下请求，海伦留着清单，青年那张折页仍未展示。",
+      "action": "青年看见折页被压住，手指缩回桌边。海伦转而提出笔记来源，控方翻开副本可见地指出另一组页码；两人没有展示患者姓名。\n法官把当日清单推给书记员，指定来源问题改由书面申请处理。西侧海伦合住蓝夹的纸声传来；法官示意她坐下，低头转到下一项。",
+      "end": "法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。",
+      "sound": "木椅、纸页与法庭室内混响，所列台词按既定席位发声，旁听者不喊话。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E09-D010",
+          "speaker": "海伦",
+          "listener": "州法官",
+          "text": "Some entries copy patient records. We need to distinguish those from his own statements.",
+          "translationZh": "部分内容抄自患者记录，需要与他自己的陈述分开。",
+          "tone": "区分材料原文和本人陈述，不把亲笔抄录当作作者身份",
+          "start": 1,
+          "end": 7.7
+        },
+        {
+          "id": "E09-D011",
+          "speaker": "州检察官",
+          "listener": "州法官",
+          "text": "That requires a written motion.",
+          "translationZh": "那需要书面申请。",
+          "tone": "抓程序缺口",
+          "start": 8,
+          "end": 10.8
+        },
+        {
+          "id": "E09-D012",
+          "speaker": "州法官",
+          "listener": "海伦",
+          "text": "File it in writing. Redact the patients' names. Today we're setting the schedule.",
+          "translationZh": "书面提交，遮去患者姓名。今天先安排日程。",
+          "tone": "截断扩展",
+          "start": 15,
+          "end": 21.7
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 14,
+          "start": "书记员记下请求，海伦留着清单，青年那张折页仍未展示。",
+          "action": "青年看见折页被压住，手指缩回桌边。海伦转而提出笔记来源，控方翻开副本可见地指出另一组页码；两人没有展示患者姓名。",
+          "end": "控方副本与患者折页分开，来源争议未获当庭展开。",
+          "dialogueCueIds": [
+            "E09-D010",
+            "E09-D011"
+          ],
+          "sourceShotIds": [
+            "E09-SH007"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 16
+        },
+        {
+          "duration": 12,
+          "start": "控方副本与患者折页分开，来源争议未获当庭展开。",
+          "action": "法官把当日清单推给书记员，指定来源问题改由书面申请处理。西侧海伦合住蓝夹的纸声传来；法官示意她坐下，低头转到下一项。",
+          "end": "法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。",
+          "dialogueCueIds": [
+            "E09-D012"
+          ],
+          "sourceShotIds": [
+            "E09-SH008"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        }
+      ],
+      "viewerEntry": "书记员记下请求，海伦留着清单，青年那张折页仍未展示。",
+      "viewerExit": "法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。",
+      "cutTrigger": "法官转下一项，程序继续，切给这一结果落到谁身上。",
+      "next": "接E09-SH009；法官转下一项，程序继续，切给这一结果落到谁身上。"
+    },
+    {
+      "id": "E09-SH009",
+      "sceneId": "E09-SC02",
+      "sourceShotIds": [
+        "E09-SH009"
+      ],
+      "duration": 7,
+      "characters": [
+        "RACHEL"
+      ],
+      "onScreenCharacterIds": [
+        "RACHEL"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "她抽出又收回折纸，没有得到关于死亡的答复。",
+      "framing": "东南旁听区南侧75mm瑞秋中近景，棕袋与折纸在膝上，北席不入画。",
+      "composition": "法官席在北、辩护桌在西、控方在东，木隔栏后的南侧旁听席已坐满。瑞秋在东南，棕文件袋放膝上。路易吉与海伦由南通道到西桌，双腕自由。 本镜画内角色：RACHEL。",
+      "camera": "固定7秒，不推近折纸，不揭纸上内容。",
+      "focus": "她抽出又收回折纸，没有得到关于死亡的答复。",
+      "start": "法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。",
+      "action": "瑞秋从棕文件袋抽出一张折纸，捏在手里却没有展开。后排有椅子挪动，她将折纸塞回袋中，仍看着北面。",
+      "end": "折纸回棕袋，瑞秋没有与西侧青年对视；青年自由双手在画外继承。",
+      "sound": "木椅、纸页与法庭室内混响，所列台词按既定席位发声，旁听者不喊话。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 7,
+          "start": "法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。",
+          "action": "瑞秋从棕文件袋抽出一张折纸，捏在手里却没有展开。后排有椅子挪动，她将折纸塞回袋中，仍看着北面。",
+          "end": "折纸回棕袋，瑞秋没有与西侧青年对视；青年自由双手在画外继承。",
+          "dialogueCueIds": [],
+          "sourceShotIds": [
+            "E09-SH009"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 9
+        }
+      ],
+      "viewerEntry": "法官转到下一项；西侧合夹声已结束，患者折页在画外仍由海伦保管。",
+      "viewerExit": "折纸回棕袋，瑞秋没有与西侧青年对视；青年自由双手在画外继承。",
+      "cutTrigger": "她重新望北席，转庭外商品化热闹，私人损失留在前一镜。",
+      "next": "本场完成，按正式EP场序转场；她重新望北席，转庭外商品化热闹，私人损失留在前一镜。"
+    },
+    {
+      "id": "E09-SH010",
+      "sceneId": "E09-SC03",
+      "sourceShotIds": [
+        "E09-SH010",
+        "E09-SH011"
+      ],
+      "duration": 23,
+      "characters": [
+        "HOST",
+        "NORA",
+        "HELEN"
+      ],
+      "onScreenCharacterIds": [
+        "HOST",
+        "NORA",
+        "HELEN"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "记者要经过的路径与商品链接争抢同一个空间。",
+      "framing": "法院东通路外侧35mm中景，布莱克与稳定器在近西侧，诺拉和北台阶保持可见。",
+      "composition": "法院北台阶下，记者集中在西栏杆外，东侧通路留给出庭者。诺拉抱红本等出口，布莱克的稳定器正占通路半步；路易吉从内部押返通道离开，不在广场。 本镜画内角色：HOST,NORA,HELEN。",
+      "camera": "随诺拉向北微移两步，稳定器挡路时停住，不模拟主播直播机位。",
+      "focus": "记者要经过的路径与商品链接争抢同一个空间。",
+      "start": "布莱克举稳定器，诺拉从东通道走到栏杆边。",
+      "action": "布莱克让手机对着自己，把商品图弹到直播角落。诺拉从东侧通道绕到稳定器外端，试图先看北台阶是否有人出来。\n海伦出现在北台阶，诺拉想从东侧通道接近，稳定器横过来挡住半步。她把红本贴身收窄，示意布莱克让出空间；他仍盯着评论区。",
+      "end": "诺拉从稳定器东侧通过，布莱克留在西栏杆外。",
+      "sound": "庭外人群底声与所列现场话语，后期文字不额外朗读。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E09-D013",
+          "speaker": "布莱克",
+          "listener": "直播观众",
+          "text": "That color's back in stock. Link below. It'll ship before the next hearing.",
+          "translationZh": "这个颜色补货了，链接在下面。下次开庭前发货。",
+          "tone": "眼睛看评论，熟练接着卖",
+          "start": 1.1,
+          "end": 8.7
+        },
+        {
+          "id": "E09-D014",
+          "speaker": "诺拉",
+          "listener": "布莱克",
+          "text": "Were you inside?",
+          "translationZh": "你刚才在庭里吗？",
+          "tone": "普通询问",
+          "start": 9.1,
+          "end": 11.1
+        },
+        {
+          "id": "E09-D015",
+          "speaker": "诺拉",
+          "listener": "布莱克",
+          "text": "Can you move?",
+          "translationZh": "让一下行吗？",
+          "tone": "绕设备时问，不停下来争吵",
+          "start": 14,
+          "end": 16.3
+        },
+        {
+          "id": "E09-D016",
+          "speaker": "布莱克",
+          "listener": "直播观众",
+          "text": "Hang on, the lawyer's coming out. Size chart's down below.",
+          "translationZh": "等下，律师出来了。尺码表在下面。",
+          "tone": "先应付身旁的人，立刻转回直播",
+          "start": 16.6,
+          "end": 21.3
+        }
+      ],
+      "overlay": [
+        {
+          "text": "BURGUNDY CREWNECK / 深红圆领毛衣",
+          "start": 2,
+          "end": 8,
+          "position": "直播商品屏后期"
+        }
+      ],
+      "generationSegments": [
+        {
+          "duration": 13,
+          "start": "布莱克举稳定器，诺拉从东通道走到栏杆边。",
+          "action": "布莱克让手机对着自己，把商品图弹到直播角落。诺拉从东侧通道绕到稳定器外端，试图先看北台阶是否有人出来。",
+          "end": "商品直播继续，诺拉视线越过主播看法院出口。",
+          "dialogueCueIds": [
+            "E09-D013",
+            "E09-D014"
+          ],
+          "sourceShotIds": [
+            "E09-SH010"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 15
+        },
+        {
+          "duration": 10,
+          "start": "商品直播继续，诺拉视线越过主播看法院出口。",
+          "action": "海伦出现在北台阶，诺拉想从东侧通道接近，稳定器横过来挡住半步。她把红本贴身收窄，示意布莱克让出空间；他仍盯着评论区。",
+          "end": "诺拉从稳定器东侧通过，布莱克留在西栏杆外。",
+          "dialogueCueIds": [
+            "E09-D015",
+            "E09-D016"
+          ],
+          "sourceShotIds": [
+            "E09-SH011"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 12
+        }
+      ],
+      "viewerEntry": "把公众消费与记者实际追问放在同一条通路。",
+      "viewerExit": "诺拉从稳定器东侧通过，布莱克留在西栏杆外。",
+      "cutTrigger": "海伦下台阶，诺拉绕过设备接近，切随行视角。",
+      "next": "接E09-SH012；海伦下台阶，诺拉绕过设备接近，切随行视角。"
+    },
+    {
+      "id": "E09-SH012",
+      "sceneId": "E09-SC03",
+      "sourceShotIds": [
+        "E09-SH012"
+      ],
+      "duration": 13,
+      "characters": [
+        "NORA",
+        "HELEN"
+      ],
+      "onScreenCharacterIds": [
+        "NORA",
+        "HELEN"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "录音设备在她胸前，不堵路；回答完整保留开头的Nothing。",
+      "framing": "东通路东侧50mm诺拉与海伦并行中景，西栏杆退为背景。",
+      "composition": "法院北台阶下，记者集中在西栏杆外，东侧通路留给出庭者。诺拉抱红本等出口，布莱克的稳定器正占通路半步；路易吉从内部押返通道离开，不在广场。 本镜画内角色：NORA,HELEN。",
+      "camera": "实拍平行向南后退三米，海伦答完离开后停在诺拉。",
+      "focus": "录音设备在她胸前，不堵路；回答完整保留开头的Nothing。",
+      "start": "诺拉从稳定器东侧通过，布莱克留在西栏杆外。",
+      "action": "诺拉跟上海伦，手机贴近自己胸前录音，不挡通路。海伦没有停在主播镜头前，边走边回答；诺拉走到南侧后停下，让她离开。",
+      "end": "海伦向南走出，诺拉停在东侧通道，录音已得完整答复。",
+      "sound": "庭外人群底声与所列现场话语，后期文字不额外朗读。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E09-D018",
+          "speaker": "诺拉",
+          "listener": "海伦",
+          "text": "Anything thrown out today?",
+          "translationZh": "今天排除什么了吗？",
+          "tone": "抢一句可用答复",
+          "start": 1,
+          "end": 3.3
+        },
+        {
+          "id": "E09-D019",
+          "speaker": "海伦",
+          "listener": "诺拉",
+          "text": "Nothing. We've asked for the arrest recordings. We don't have them yet.",
+          "translationZh": "没有。我们申请了逮捕录像，还没拿到。",
+          "tone": "脚步不停，堵住胜利标题",
+          "start": 3.6,
+          "end": 9.3
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 13,
+          "start": "诺拉从稳定器东侧通过，布莱克留在西栏杆外。",
+          "action": "诺拉跟上海伦，手机贴近自己胸前录音，不挡通路。海伦没有停在主播镜头前，边走边回答；诺拉走到南侧后停下，让她离开。",
+          "end": "海伦向南走出，诺拉停在东侧通道，录音已得完整答复。",
+          "dialogueCueIds": [
+            "E09-D018",
+            "E09-D019"
+          ],
+          "sourceShotIds": [
+            "E09-SH012"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 15
+        }
+      ],
+      "viewerEntry": "诺拉从稳定器东侧通过，布莱克留在西栏杆外。",
+      "viewerExit": "海伦向南走出，诺拉停在东侧通道，录音已得完整答复。",
+      "cutTrigger": "海伦走出，诺拉手机新消息使她停下来。",
+      "next": "接E09-SH013；海伦走出，诺拉手机新消息使她停下来。"
+    },
+    {
+      "id": "E09-SH013",
+      "sceneId": "E09-SC03",
+      "sourceShotIds": [
+        "E09-SH013"
+      ],
+      "duration": 7,
+      "characters": [
+        "NORA"
+      ],
+      "onScreenCharacterIds": [
+        "NORA"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "匿名消息与她记下处理编号，手挡屏保护来信。",
+      "framing": "诺拉东肩后65mm手机和红本近景，栏杆人群失焦。",
+      "composition": "法院北台阶下，记者集中在西栏杆外，东侧通路留给出庭者。诺拉抱红本等出口，布莱克的稳定器正占通路半步；路易吉从内部押返通道离开，不在广场。 本镜画内角色：NORA。",
+      "camera": "固定，不转去窥看主播另一部手机。",
+      "focus": "匿名消息与她记下处理编号，手挡屏保护来信。",
+      "start": "海伦向南走出，诺拉停在东侧通道，录音已得完整答复。",
+      "action": "匿名消息打断诺拉保存录音。她把屏幕向身前转，抄下处理编号，再把来信收起；西栏杆后的主播仍在工作，只作不可辨背景。",
+      "end": "诺拉保存匿名线索，未验证，也未将来源发给编辑。",
+      "sound": "庭外人群底声与所列现场话语，后期文字不额外朗读。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [],
+      "overlay": [
+        {
+          "text": "I kept the QC case number. Don't forward this. / 我留着质检处理编号，别转发。",
+          "start": 2,
+          "end": 6,
+          "position": "手机匿名消息后期"
+        }
+      ],
+      "generationSegments": [
+        {
+          "duration": 7,
+          "start": "海伦向南走出，诺拉停在东侧通道，录音已得完整答复。",
+          "action": "匿名消息打断诺拉保存录音。她把屏幕向身前转，抄下处理编号，再把来信收起；西栏杆后的主播仍在工作，只作不可辨背景。",
+          "end": "诺拉保存匿名线索，未验证，也未将来源发给编辑。",
+          "dialogueCueIds": [],
+          "sourceShotIds": [
+            "E09-SH013"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 9
+        }
+      ],
+      "viewerEntry": "海伦向南走出，诺拉停在东侧通道，录音已得完整答复。",
+      "viewerExit": "诺拉保存匿名线索，未验证，也未将来源发给编辑。",
+      "cutTrigger": "编号落笔，进入当晚编辑部追查。",
+      "next": "本场完成，按正式EP场序转场；编号落笔，进入当晚编辑部追查。"
+    },
+    {
+      "id": "E09-SH014",
+      "sceneId": "E09-SC04",
+      "sourceShotIds": [
+        "E09-SH014",
+        "E09-SH015"
+      ],
+      "duration": 33,
+      "characters": [
+        "NORA",
+        "EDITOR-DESK"
+      ],
+      "onScreenCharacterIds": [
+        "NORA",
+        "EDITOR-DESK"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "编辑给工作，她遮内部编号又保存短片，两个任务都真正在做。",
+      "framing": "编辑部过道南端35mm共享中景，西桌诺拉、东桌女编辑与打印机取纸路线同框。",
+      "composition": "夜间编辑部东桌还有女值班编辑，西桌是诺拉的红本、电脑与匿名便签。北屏静音重播庭审新闻，打印机在过道另一边。 本镜画内角色：NORA,EDITOR-DESK。",
+      "camera": "诺拉取回纸后相机停止，余下谈排期保持固定。",
+      "focus": "编辑给工作，她遮内部编号又保存短片，两个任务都真正在做。",
+      "start": "打印机刚吐出附件末页，诺拉从西桌起身去取；红本在左手，黑手机留桌右。",
+      "action": "编辑部打印机吐出最后一页，诺拉从西桌绕过去取，编辑伸手想看，她用红本盖住内部编号，只露对照字段。编辑没有接过去。\n编辑将毛衣短视频的待剪任务推到她电脑上，诺拉打开了剪辑窗口，又把匿名便签压在键盘边。她没有把任何一项关掉。\n诺拉把字幕轨拉到开头，编辑看见她还留着匿名材料，停在桌边等成片时点。她没有答应当天写完新报道。",
+      "end": "她先保存短片工程，再把匿名便签翻到空白面准备打电话。",
+      "sound": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E09-D020",
+          "speaker": "值班编辑",
+          "listener": "诺拉",
+          "text": "Can we run this?",
+          "translationZh": "这能发吗？",
+          "tone": "手已伸向纸，要当天能用的东西",
+          "start": 1,
+          "end": 3.3
+        },
+        {
+          "id": "E09-D021",
+          "speaker": "诺拉",
+          "listener": "值班编辑",
+          "text": "Not yet. This box is blank. I don't know what should be in it.",
+          "translationZh": "还不能。这格空着，我还不知道该填什么。",
+          "tone": "看着空栏，拒绝先给结论",
+          "start": 3.6,
+          "end": 10.3
+        },
+        {
+          "id": "E09-D022",
+          "speaker": "值班编辑",
+          "listener": "诺拉",
+          "text": "Get the sweater clip done first. Then follow this up.",
+          "translationZh": "先把毛衣那条剪完，再查这个。",
+          "tone": "把付钱的工作推到她面前",
+          "start": 13,
+          "end": 17.7
+        },
+        {
+          "id": "E09-D023",
+          "speaker": "诺拉",
+          "listener": "值班编辑",
+          "text": "Send me the clean audio.",
+          "translationZh": "把干净音轨发我。",
+          "tone": "接受交换",
+          "start": 18,
+          "end": 20.8
+        },
+        {
+          "id": "E09-D204",
+          "speaker": "值班编辑",
+          "listener": "诺拉",
+          "text": "The clip's due in ten.",
+          "translationZh": "短片十分钟后要。",
+          "tone": "说排期，不评价调查",
+          "start": 24,
+          "end": 25.96
+        },
+        {
+          "id": "E09-D205",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "You'll have it. I'm not running the documents tonight.",
+          "translationZh": "会交的。那些材料今晚不发。",
+          "tone": "先承担手头工作，不承诺没查清的报道",
+          "start": 26.26,
+          "end": 29.79
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 12,
+          "start": "打印机刚吐出附件末页，诺拉从西桌起身去取；红本在左手，黑手机留桌右。",
+          "action": "编辑部打印机吐出最后一页，诺拉从西桌绕过去取，编辑伸手想看，她用红本盖住内部编号，只露对照字段。编辑没有接过去。",
+          "end": "编号被红本遮住，诺拉准备联系能解释字段的人。",
+          "dialogueCueIds": [
+            "E09-D020",
+            "E09-D021"
+          ],
+          "sourceShotIds": [
+            "E09-SH014"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        },
+        {
+          "duration": 11,
+          "start": "编号被红本遮住，诺拉准备联系能解释字段的人。",
+          "action": "编辑将毛衣短视频的待剪任务推到她电脑上，诺拉打开了剪辑窗口，又把匿名便签压在键盘边。她没有把任何一项关掉。",
+          "end": "毛衣稿和匿名核实都由诺拉接下，午夜工作继续。",
+          "dialogueCueIds": [
+            "E09-D022",
+            "E09-D023"
+          ],
+          "sourceShotIds": [
+            "E09-SH015"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 13
+        },
+        {
+          "duration": 10,
+          "start": "毛衣稿和匿名核实都由诺拉接下，午夜工作继续。",
+          "action": "诺拉把字幕轨拉到开头，编辑看见她还留着匿名材料，停在桌边等成片时点。她没有答应当天写完新报道。",
+          "end": "她先保存短片工程，再把匿名便签翻到空白面准备打电话。",
+          "dialogueCueIds": [
+            "E09-D204",
+            "E09-D205"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 12
+        }
+      ],
+      "viewerEntry": "让追查与记者实际工作合同并行。",
+      "viewerExit": "她先保存短片工程，再把匿名便签翻到空白面准备打电话。",
+      "cutTrigger": "编辑转回自己桌，诺拉把私人电话接起来，转到她的单独决定。",
+      "next": "接E09-SH016；编辑转回自己桌，诺拉把私人电话接起来，转到她的单独决定。"
+    },
+    {
+      "id": "E09-SH016",
+      "sceneId": "E09-SC04",
+      "sourceShotIds": [
+        "E09-SH016"
+      ],
+      "duration": 14,
+      "characters": [
+        "NORA"
+      ],
+      "onScreenCharacterIds": [
+        "NORA"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "她停止剪辑，明确告知匿名风险并等约见答复；对端不加台词。",
+      "framing": "诺拉西桌南侧65mm侧面中近景，剪辑窗口只留光和一角，匿名便签在手边。",
+      "composition": "夜间编辑部东桌还有女值班编辑，西桌是诺拉的红本、电脑与匿名便签。北屏静音重播庭审新闻，打印机在过道另一边。 本镜画内角色：NORA。",
+      "camera": "固定14秒，电话接通时不加推镜。",
+      "focus": "她停止剪辑，明确告知匿名风险并等约见答复；对端不加台词。",
+      "start": "她先保存短片工程，再把匿名便签翻到空白面准备打电话。",
+      "action": "诺拉一边用左手拖视频音轨，一边将右手手机贴耳拨通匿名号码。听到街边底声，她停下鼠标，把便签翻到空白背面。",
+      "end": "她写下约见时间，视频停在半剪状态，来源姓名没有说出口。",
+      "sound": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E09-D024",
+          "speaker": "诺拉",
+          "listener": "匿名来源",
+          "text": "I won't use your name. Someone could still figure it out. Do you want to meet?",
+          "translationZh": "我不会用你的名字，可别人还是可能猜出来。你还想见面吗？",
+          "tone": "电话接通后停下工作，把决定留给对方",
+          "start": 1.1,
+          "end": 10.8
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 14,
+          "start": "她先保存短片工程，再把匿名便签翻到空白面准备打电话。",
+          "action": "诺拉一边用左手拖视频音轨，一边将右手手机贴耳拨通匿名号码。听到街边底声，她停下鼠标，把便签翻到空白背面。",
+          "end": "她写下约见时间，视频停在半剪状态，来源姓名没有说出口。",
+          "dialogueCueIds": [
+            "E09-D024"
+          ],
+          "sourceShotIds": [
+            "E09-SH016"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 16
+        }
+      ],
+      "viewerEntry": "她先保存短片工程，再把匿名便签翻到空白面准备打电话。",
+      "viewerExit": "她写下约见时间，视频停在半剪状态，来源姓名没有说出口。",
+      "cutTrigger": "她写下见面时间，切翌日约见现场。",
+      "next": "本场完成，按正式EP场序转场；她写下见面时间，切翌日约见现场。"
+    }
+  ],
+  "continuityNote": "承接E08匿名提醒；本集不确认完整双队列断层。路易吉入庭前腕铐被完整取下并由法警收走，后续桌边双手自由，红毛衣白领整集连续。庭外无路易吉再次出现。法警为中年白人男性，深蓝制服，低沉简短声；值班编辑为四十岁拉丁裔女性，短黑发深蓝衬衣，声音干脆。所有新配角仅承担现有工作。 匿名线索本集只提供QC处理编号，不能直接读出医学复核的队列结构。",
+  "dramaturgy": {
+    "openingQuestion": "青年能否趁第一次答辩把患者材料留进公开记录？",
+    "pursuit": "他催海伦使用折页，海伦先争完整逮捕记录；诺拉争到律师的原话。",
+    "reversal": "法庭只安排程序并压回患者姓名，庭外却先卖起他的毛衣。",
+    "cost": "青年失去对当日议程的控制；诺拉为查匿名编号先接下毛衣短稿。",
+    "cliffhanger": "诺拉同时拿到陌生人的约见时间和一段未剪完的消费新闻。",
+    "nextEpisodeBridge": "E10将匿名编号变成可核对的质检报告，但来源只肯给有限范围。"
+  },
+  "productionUnitNote": "旧E编号只作生产来源；正式观众分集依当前24集短剧场序。长镜按generationSegments连续制作，段间继承人物/道具/轴线。"
+}

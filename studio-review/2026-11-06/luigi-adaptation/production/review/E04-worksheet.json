@@ -1,0 +1,559 @@
+{
+  "source": {
+    "type": "design",
+    "id": "DENIED-E04-text-coverage-ac579d6b2cab",
+    "version": 2,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "E04-SH008",
+    "E04-SH009",
+    "E04-SH010",
+    "E04-SH011",
+    "E04-SH012"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "E04-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：人和包进入警局，新的问询、清点与现场行为分开。；入镜已知：餐厅现场搜包已发生。；本镜新知：人和包进入警局，新的问询、清点与现场行为分开。；实际写出的动作：警局中央桌前，甲把水推到青年前铐能触到的位置。警员甲对路易吉说本镜第1句英语对白，例行确认当前需要，不替对方作答。路易吉没有喝，先把脚从椅下移出一点。甲拉近自己的椅子，翻开问询页，笔还没落。",
+      "sourceLocator": "season/E04.json#/shots/0"
+    },
+    {
+      "role": "performance",
+      "shotId": "E04-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "青年前铐坐北侧；包东台 → 水桌中，青年前铐坐北侧，甲南侧翻问询页，包东台。；警员甲向路易吉：Need a medic?；例行确认当前需要，不替对方作答",
+      "sourceLocator": "season/E04.json#/shots/0"
+    },
+    {
+      "role": "staging",
+      "shotId": "E04-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "北墙钟、中央青年、东财物台；起态：青年前铐坐北侧；包东台；出态：水桌中，青年前铐坐北侧，甲南侧翻问询页，包东台。",
+      "sourceLocator": "season/E04.json#/shots/0"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E04-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "全景，南门向北问询桌；相机：固定南门朝北全景，问询桌中央、财物台东侧，重新建立与餐厅不同地点。；焦点：保持桌、前铐、东台黑包的空间关系。",
+      "sourceLocator": "season/E04.json#/shots/0"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E04-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E04-SH008.txt；14秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E04.json#/shots/0"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E04-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "水桌中，青年前铐坐北侧，甲南侧翻问询页，包东台。；切点：甲的笔停在问询第一页，青年开口。；接口：接青年要求律师",
+      "sourceLocator": "season/E04.json#/shots/0"
+    },
+    {
+      "role": "direction",
+      "shotId": "E04-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：他主动停止未经律师在场的回答，身体照护另行提出。；入镜已知：警员准备提问，青年还没喝水。；本镜新知：他主动停止未经律师在场的回答，身体照护另行提出。；实际写出的动作：路易吉对警员甲说本镜第1句英语对白，先保住回答的边界。甲的笔停住。路易吉这才伸出两只铐在一起的手，把杯子拖近。路易吉对警员甲说本镜第2句英语对白，确定问询暂停才提出身体需要。甲合上问询页，指向椅旁空位，等他自己换姿势。",
+      "sourceLocator": "season/E04.json#/shots/1"
+    },
+    {
+      "role": "performance",
+      "shotId": "E04-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "青年看桌上水，再看甲 → 杯靠青年，双腕前铐；问询页合上，甲留出换姿势空间。；路易吉向警员甲：I want a lawyer before I answer anything.；先保住回答的边界 / 路易吉向警员甲：My back hurts. Can I move the chair?；确定问询暂停才提出身体需要",
+      "sourceLocator": "season/E04.json#/shots/1"
+    },
+    {
+      "role": "staging",
+      "shotId": "E04-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "前铐在桌边下部可见；起态：青年看桌上水，再看甲；出态：杯靠青年，双腕前铐；问询页合上，甲留出换姿势空间。",
+      "sourceLocator": "season/E04.json#/shots/1"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E04-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中近景，桌西南看北侧青年；相机：固定桌西南中近景，同时见他的手、杯与甲合页边缘；不靠远景拍不清停笔。；焦点：青年为主，合页在同层边缘可读。",
+      "sourceLocator": "season/E04.json#/shots/1"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E04-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E04-SH009.txt；14秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E04.json#/shots/1"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E04-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "杯靠青年，双腕前铐；问询页合上，甲留出换姿势空间。；切点：问询页合上，东财物台传来纸袋响。；接口：转财物台的正式清点",
+      "sourceLocator": "season/E04.json#/shots/1"
+    },
+    {
+      "role": "direction",
+      "shotId": "E04-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：不同人的移包、搜包与警局登记被分别记下，之后可以核对。；入镜已知：警方在清点，现场开包仍是一件独立行为。；本镜新知：不同人的移包、搜包与警局登记被分别记下，之后可以核对。；实际写出的动作：乙在东台把笔记与手机分别放到登记纸旁，枪械相关物品留在不透明袋内。他指着一栏问甲。警员乙对警员甲说本镜第1句英语对白，让移包同事补齐署名，自己核对开包一栏。甲指着移包一栏确认自己的姓名，再指开包一栏；乙在移包栏记甲、开包栏记自己，逐栏核对。",
+      "sourceLocator": "season/E04.json#/shots/2"
+    },
+    {
+      "role": "performance",
+      "shotId": "E04-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "乙戴手套，包口已开，甲在旁 → 移包栏记甲、开包栏记乙，登记纸与财物同桌；笔记、手机分放，青年在画外北桌前铐状态继承。；警员乙向警员甲：You moved the bag, right? I need your name here too.；让移包同事补齐署名，自己核对开包一栏",
+      "sourceLocator": "season/E04.json#/shots/2"
+    },
+    {
+      "role": "staging",
+      "shotId": "E04-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "黑包、封袋、登记页；青年画外北桌；起态：乙戴手套，包口已开，甲在旁；出态：移包栏记甲、开包栏记乙，登记纸与财物同桌；笔记、手机分放，青年在画外北桌前铐状态继承。",
+      "sourceLocator": "season/E04.json#/shots/2"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E04-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "近景，东财物台西侧向东；相机：固定东台西侧近景，纸本、手机和登记手可见，青年留画外继承；不揭开不透明袋炫示物品。；焦点：移包栏与开包栏同层可见，甲依次指认、乙分别登记；姓名以后期排字清楚呈现。",
+      "sourceLocator": "season/E04.json#/shots/2"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E04-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E04-SH010.txt；14秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E04.json#/shots/2"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E04-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "移包栏记甲、开包栏记乙，登记纸与财物同桌；笔记、手机分放，青年在画外北桌前铐状态继承。；切点：乙在开包栏记下自己的姓名，指尖回核两栏后切；笔记封面仍完整保留。；接口：本场结果成立后切入 E04-SC03（MARA-HOME，傍晚·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E04.json#/shots/2"
+    },
+    {
+      "role": "direction",
+      "shotId": "E04-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：回家先还时间债，再面对悬赏并未兑现；妹妹不是专为安慰主角而留在屋里。；入镜已知：玛拉带个人包进南门，乔守桌边；孩子在北屋，右手手机左肩包。；本镜新知：蓝夹在桌，玛拉拿水杯；奖励没有承诺，乔自己的工时已经损失。；实际写出的动作：乔看墙上时间。玛拉放包取出蓝夹，先把右手手机放桌边。玛拉对乔说英语“I'm sorry. They kept asking me the same thing.”；先解释迟到而非索取夸奖。乔对玛拉说英语“I know. I called work.”；已经替姐姐承担后果，没有立刻原谅。乔把一杯水推过去，玛拉没接。北屋传来蜡笔盒落地声，两人都转头。艾莉对门外的玛拉和乔说英语“I'm okay. It was the box.”；从北屋画外先解决成人担心，不出来表演恐惧。乔往北走两步，听见孩子在自己捡笔，停住。玛拉把蓝夹盖好，手留在上面。乔对玛拉说英语“Did they pay you?”；自己也先问出了外面正在问的话。玛拉对乔说英语“They took my number.”；只答眼前发生的事，疲惫里带一点刺。乔对玛拉说英语“A number for what?”；要弄清妹妹实际能得到什么。玛拉对乔说英语“They didn't say. I had to ask who to call.”；没有把登记说成奖励获批。乔把水重新推近一点；玛拉这次拿起来，却没喝。",
+      "sourceLocator": "season/E04.json#/shots/3"
+    },
+    {
+      "role": "performance",
+      "shotId": "E04-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "玛拉带个人包进南门，乔守桌边；孩子在北屋，右手手机左肩包。 → 蓝夹在桌，玛拉拿水杯；奖励没有承诺，乔自己的工时已经损失。；玛拉向乔：I'm sorry. They kept asking me the same thing.；先解释迟到而非索取夸奖 / 乔向玛拉：I know. I called work.；已经替姐姐承担后果，没有立刻原谅 / 艾莉向门外的玛拉和乔：I'm okay. It was the box.；从北屋画外先解决成人担心，不出来表演恐惧 / 乔向玛拉：Did they pay you?；自己也先问出了外面正在问的话 / 玛拉向乔：They took my number.；只答眼前发生的事，疲惫里带一点刺 / 乔向玛拉：A number for what?；要弄清妹妹实际能得到什么 / 玛拉向乔：They didn't say. I had to ask who to call.；没有把登记说成奖励获批",
+      "sourceLocator": "season/E04.json#/shots/3"
+    },
+    {
+      "role": "staging",
+      "shotId": "E04-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "手机在桌右，蓝夹桌中，乔站桌南；北卧室只闻孩子不露脸。；起态：玛拉带个人包进南门，乔守桌边；孩子在北屋，右手手机左肩包。；出态：蓝夹在桌，玛拉拿水杯；奖励没有承诺，乔自己的工时已经损失。",
+      "sourceLocator": "season/E04.json#/shots/3"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E04-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "餐桌西侧姐妹双人中景，北门在后层；相机：固定双人中景，让迟到、孩子的小响动、金钱问题在同一空间里改变次序。；焦点：人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "sourceLocator": "season/E04.json#/shots/3"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E04-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E04-SH011.txt；55秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E04.json#/shots/3"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E04-SH011",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "蓝夹在桌，玛拉拿水杯；奖励没有承诺，乔自己的工时已经损失。；切点：蓝夹在桌，玛拉拿水杯；奖励没有承诺，乔自己的工时已经损失。；接口：因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "sourceLocator": "season/E04.json#/shots/3"
+    },
+    {
+      "role": "direction",
+      "shotId": "E04-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：她发现自己也成为素材，才开口向妹妹索取具体帮助；一起拨号是本集的行动结尾。；入镜已知：水杯在玛拉手上，蓝夹合着，手机在桌右；乔坐桌南。；本镜新知：姐妹一起等账务接听，蓝夹打开但拒赔未变；偷拍视频仍在传播，孩子的桥仍未画完。；实际写出的动作：手机收到店内视频。玛拉放下水，点开看，画面中有人圈出柜台后的她。乔伸手要拿，玛拉先把进度拖回，再看一遍，才转给妹妹。乔对玛拉说英语“Who sent you that?”；先找这段影像实际从哪来。玛拉对乔说英语“Someone from work. It's already everywhere.”；刚理解自己不是镜头外的人。乔把手机音量调低。蓝夹被手机碰开，拒赔单后露出玛拉签字的加班申请。玛拉对乔说英语“I should've been home. I'm the one who asked for that shift.”；第一次把偶然相遇接回自己的选择。她翻扣手机，手停在写着周五的通知上。北屋捡笔声音停止，餐桌没有人接她那句自责。玛拉对乔说英语“Will you call billing with me? I can't go through it all again on my own.”；不再为报警辩护，要求实际帮助。乔拿起总机号码便签，将自己的手机放到两人中间拨号。玛拉把该报的号码找出来，放在杯子旁。等待音乐开始。她把那杯水喝下第一口。玛拉把记录号码推到乔面前，按所列新句请求妹妹先说。乔将便签转向自己，手机留两人中央等人工接听。 玛拉对乔说英语“Can you start? Just say it's about the renewal.”；乔把号码便签转向自己，实际接过开口的任务。",
+      "sourceLocator": "season/E04.json#/shots/4"
+    },
+    {
+      "role": "performance",
+      "shotId": "E04-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "水杯在玛拉手上，蓝夹合着，手机在桌右；乔坐桌南。 → 姐妹一起等账务接听，蓝夹打开但拒赔未变；偷拍视频仍在传播，孩子的桥仍未画完。；乔向玛拉：Who sent you that?；先找这段影像实际从哪来 / 玛拉向乔：Someone from work. It's already everywhere.；刚理解自己不是镜头外的人 / 玛拉向乔：I should've been home. I'm the one who asked for that shift.；第一次把偶然相遇接回自己的选择 / 玛拉向乔：Will you call billing with me? I can't go through it all again on my own.；不再为报警辩护，要求实际帮助 / 玛拉向乔：Can you start? Just say it's about the renewal.；把开口这一步也交给妹妹，接受具体帮助",
+      "sourceLocator": "season/E04.json#/shots/4"
+    },
+    {
+      "role": "staging",
+      "shotId": "E04-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "两人前景，蓝夹和加班申请中间，北卧室门在同侧画外。；起态：水杯在玛拉手上，蓝夹合着，手机在桌右；乔坐桌南。；出态：姐妹一起等账务接听，蓝夹打开但拒赔未变；偷拍视频仍在传播，孩子的桥仍未画完。",
+      "sourceLocator": "season/E04.json#/shots/4"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E04-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "桌北偏西双人中景，母亲手机只在手边可读；相机：留住看视频第二遍的选择；只在认出圈中本人时做一次轻微推进，此后不再切纸件。；焦点：人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "sourceLocator": "season/E04.json#/shots/4"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E04-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E04-SH012.txt；64秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E04.json#/shots/4"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E04-SH012",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "姐妹一起等账务接听，蓝夹打开但拒赔未变；偷拍视频仍在传播，孩子的桥仍未画完。；切点：姐妹一起等账务接听，蓝夹打开但拒赔未变；偷拍视频仍在传播，孩子的桥仍未画完。；接口：本集结束。玛拉把号码推给乔，请妹妹先替她向账务开口；事情没有解决，但她终于接受有人分担。下一集由律师开始处理青年这边的后果。 下集从VISIT展开：海伦能否让青年停止选择性讲述，提供可以真正办案的事实？",
+      "sourceLocator": "season/E04.json#/shots/4"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "E04-SH008",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "人和包进入警局，新的问询、清点与现场行为分开。",
+        "audiencePayoff": "人和包进入警局，新的问询、清点与现场行为分开。",
+        "trigger": "青年前铐坐北侧；包东台；警局中央桌前，甲把水推到青年前铐能触到的位置。警员甲对路易吉说本镜第1句英语对白，例行确认当前需要，不替对方作答。路易吉没有喝，先把脚从椅下移出一点。甲拉近自己的椅子，翻开问询页，笔还没落。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "甲的笔停在问询第一页，青年开口。；接青年要求律师",
+        "noMotionReason": "固定南门朝北全景，问询桌中央、财物台东侧，重新建立与餐厅不同地点。；观看变化：人和包进入警局，新的问询、清点与现场行为分开。"
+      },
+      "camera": {
+        "shotScale": "全景",
+        "position": "全景，南门向北问询桌",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "全景，南门向北问询桌",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "保持桌、前铐、东台黑包的空间关系。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 北墙钟、中央青年、东财物台",
+        "movementIntent": "固定南门朝北全景，问询桌中央、财物台东侧，重新建立与餐厅不同地点。"
+      },
+      "composition": {
+        "layout": "北墙钟、中央青年、东财物台",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：警局中央桌前，甲把水推到青年前铐能触到的位置。警员甲对路易吉说本镜第1句英语对白，例行确认当前需要，不替对方作答。路易吉没有喝，先把脚从椅下移出一点。甲拉近自己的椅子，翻开问询页，笔还没落。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "人和包进入警局，新的问询、清点与现场行为分开。；保持桌、前铐、东台黑包的空间关系。"
+      },
+      "temporal": {
+        "durationSeconds": 14,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "人和包进入警局，新的问询、清点与现场行为分开。",
+          "path": "机位不移动。",
+          "start": "青年前铐坐北侧；包东台",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "水桌中，青年前铐坐北侧，甲南侧翻问询页，包东台。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E04-SH008-F1",
+            "timeSeconds": 0,
+            "description": "保持桌、前铐、东台黑包的空间关系。"
+          }
+        ],
+        "edit": {
+          "entry": "青年前铐坐北侧；包东台",
+          "exit": "水桌中，青年前铐坐北侧，甲南侧翻问询页，包东台。；甲的笔停在问询第一页，青年开口。",
+          "preferredTransition": "接青年要求律师",
+          "soundBridge": "冷顶灯嗡声、东台纸袋摩擦；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E04-SH009",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "他主动停止未经律师在场的回答，身体照护另行提出。",
+        "audiencePayoff": "他主动停止未经律师在场的回答，身体照护另行提出。",
+        "trigger": "青年看桌上水，再看甲；路易吉对警员甲说本镜第1句英语对白，先保住回答的边界。甲的笔停住。路易吉这才伸出两只铐在一起的手，把杯子拖近。路易吉对警员甲说本镜第2句英语对白，确定问询暂停才提出身体需要。甲合上问询页，指向椅旁空位，等他自己换姿势。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "问询页合上，东财物台传来纸袋响。；转财物台的正式清点",
+        "noMotionReason": "固定桌西南中近景，同时见他的手、杯与甲合页边缘；不靠远景拍不清停笔。；观看变化：他主动停止未经律师在场的回答，身体照护另行提出。"
+      },
+      "camera": {
+        "shotScale": "中近景",
+        "position": "中近景，桌西南看北侧青年",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中近景，桌西南看北侧青年",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "青年为主，合页在同层边缘可读。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 前铐在桌边下部可见",
+        "movementIntent": "固定桌西南中近景，同时见他的手、杯与甲合页边缘；不靠远景拍不清停笔。"
+      },
+      "composition": {
+        "layout": "前铐在桌边下部可见",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：路易吉对警员甲说本镜第1句英语对白，先保住回答的边界。甲的笔停住。路易吉这才伸出两只铐在一起的手，把杯子拖近。路易吉对警员甲说本镜第2句英语对白，确定问询暂停才提出身体需要。甲合上问询页，指向椅旁空位，等他自己换姿势。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "他主动停止未经律师在场的回答，身体照护另行提出。；青年为主，合页在同层边缘可读。"
+      },
+      "temporal": {
+        "durationSeconds": 14,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "他主动停止未经律师在场的回答，身体照护另行提出。",
+          "path": "机位不移动。",
+          "start": "青年看桌上水，再看甲",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "杯靠青年，双腕前铐；问询页合上，甲留出换姿势空间。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E04-SH009-F1",
+            "timeSeconds": 0,
+            "description": "青年为主，合页在同层边缘可读。"
+          }
+        ],
+        "edit": {
+          "entry": "青年看桌上水，再看甲",
+          "exit": "杯靠青年，双腕前铐；问询页合上，甲留出换姿势空间。；问询页合上，东财物台传来纸袋响。",
+          "preferredTransition": "转财物台的正式清点",
+          "soundBridge": "椅背轻响、远无线电；问询停止；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E04-SH010",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "不同人的移包、搜包与警局登记被分别记下，之后可以核对。",
+        "audiencePayoff": "不同人的移包、搜包与警局登记被分别记下，之后可以核对。",
+        "trigger": "乙戴手套，包口已开，甲在旁；乙在东台把笔记与手机分别放到登记纸旁，枪械相关物品留在不透明袋内。他指着一栏问甲。警员乙对警员甲说本镜第1句英语对白，让移包同事补齐署名，自己核对开包一栏。甲指着移包一栏确认自己的姓名，再指开包一栏；乙在移包栏记甲、开包栏记自己，逐栏核对。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "乙在开包栏记下自己的姓名，指尖回核两栏后切；笔记封面仍完整保留。；本场结果成立后切入 E04-SC03（MARA-HOME，傍晚·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定东台西侧近景，纸本、手机和登记手可见，青年留画外继承；不揭开不透明袋炫示物品。；观看变化：不同人的移包、搜包与警局登记被分别记下，之后可以核对。"
+      },
+      "camera": {
+        "shotScale": "近景",
+        "position": "近景，东财物台西侧向东",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "近景，东财物台西侧向东",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "移包栏与开包栏同层可见，甲依次指认、乙分别登记；姓名以后期排字清楚呈现。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 黑包、封袋、登记页；青年画外北桌",
+        "movementIntent": "固定东台西侧近景，纸本、手机和登记手可见，青年留画外继承；不揭开不透明袋炫示物品。"
+      },
+      "composition": {
+        "layout": "黑包、封袋、登记页；青年画外北桌",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：乙在东台把笔记与手机分别放到登记纸旁，枪械相关物品留在不透明袋内。他指着一栏问甲。警员乙对警员甲说本镜第1句英语对白，让移包同事补齐署名，自己核对开包一栏。甲指着移包一栏确认自己的姓名，再指开包一栏；乙在移包栏记甲、开包栏记自己，逐栏核对。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "不同人的移包、搜包与警局登记被分别记下，之后可以核对。；移包栏与开包栏同层可见，甲依次指认、乙分别登记；姓名以后期排字清楚呈现。"
+      },
+      "temporal": {
+        "durationSeconds": 14,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "不同人的移包、搜包与警局登记被分别记下，之后可以核对。",
+          "path": "机位不移动。",
+          "start": "乙戴手套，包口已开，甲在旁",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "移包栏记甲、开包栏记乙，登记纸与财物同桌；笔记、手机分放，青年在画外北桌前铐状态继承。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E04-SH010-F1",
+            "timeSeconds": 0,
+            "description": "移包栏与开包栏同层可见，甲依次指认、乙分别登记；姓名以后期排字清楚呈现。"
+          }
+        ],
+        "edit": {
+          "entry": "乙戴手套，包口已开，甲在旁",
+          "exit": "移包栏记甲、开包栏记乙，登记纸与财物同桌；笔记、手机分放，青年在画外北桌前铐状态继承。；乙在开包栏记下自己的姓名，指尖回核两栏后切；笔记封面仍完整保留。",
+          "preferredTransition": "本场结果成立后切入 E04-SC03（MARA-HOME，傍晚·同日）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "纸袋、笔尖、墙钟滴答；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E04-SH011",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "回家先还时间债，再面对悬赏并未兑现；妹妹不是专为安慰主角而留在屋里。",
+        "audiencePayoff": "蓝夹在桌，玛拉拿水杯；奖励没有承诺，乔自己的工时已经损失。",
+        "trigger": "玛拉带个人包进南门，乔守桌边；孩子在北屋，右手手机左肩包。；乔看墙上时间。玛拉放包取出蓝夹，先把右手手机放桌边。玛拉对乔说英语“I'm sorry. They kept asking me the same thing.”；先解释迟到而非索取夸奖。乔对玛拉说英语“I know. I called work.”；已经替姐姐承担后果，没有立刻原谅。乔把一杯水推过去，玛拉没接。北屋传来蜡笔盒落地声，两人都转头。艾莉对门外的玛拉和乔说英语“I'm okay. It was the box.”；从北屋画外先解决成人担心，不出来表演恐惧。乔往北走两步，听见孩子在自己捡笔，停住。玛拉把蓝夹盖好，手留在上面。乔对玛拉说英语“Did they pay you?”；自己也先问出了外面正在问的话。玛拉对乔说英语“They took my number.”；只答眼前发生的事，疲惫里带一点刺。乔对玛拉说英语“A number for what?”；要弄清妹妹实际能得到什么。玛拉对乔说英语“They didn't say. I had to ask who to call.”；没有把登记说成奖励获批。乔把水重新推近一点；玛拉这次拿起来，却没喝。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "蓝夹在桌，玛拉拿水杯；奖励没有承诺，乔自己的工时已经损失。；因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+        "noMotionReason": "固定双人中景，让迟到、孩子的小响动、金钱问题在同一空间里改变次序。；观看变化：蓝夹在桌，玛拉拿水杯；奖励没有承诺，乔自己的工时已经损失。"
+      },
+      "camera": {
+        "shotScale": "餐桌西侧姐妹双人中景",
+        "position": "餐桌西侧姐妹双人中景，北门在后层",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "餐桌西侧姐妹双人中景，北门在后层",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 手机在桌右，蓝夹桌中，乔站桌南；北卧室只闻孩子不露脸。",
+        "movementIntent": "固定双人中景，让迟到、孩子的小响动、金钱问题在同一空间里改变次序。"
+      },
+      "composition": {
+        "layout": "手机在桌右，蓝夹桌中，乔站桌南；北卧室只闻孩子不露脸。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：乔看墙上时间。玛拉放包取出蓝夹，先把右手手机放桌边。玛拉对乔说英语“I'm sorry. They kept asking me the same thing.”；先解释迟到而非索取夸奖。乔对玛拉说英语“I know. I called work.”；已经替姐姐承担后果，没有立刻原谅。乔把一杯水推过去，玛拉没接。北屋传来蜡笔盒落地声，两人都转头。艾莉对门外的玛拉和乔说英语“I'm okay. It was the box.”；从北屋画外先解决成人担心，不出来表演恐惧。乔往北走两步，听见孩子在自己捡笔，停住。玛拉把蓝夹盖好，手留在上面。乔对玛拉说英语“Did they pay you?”；自己也先问出了外面正在问的话。玛拉对乔说英语“They took my number.”；只答眼前发生的事，疲惫里带一点刺。乔对玛拉说英语“A number for what?”；要弄清妹妹实际能得到什么。玛拉对乔说英语“They didn't say. I had to ask who to call.”；没有把登记说成奖励获批。乔把水重新推近一点；玛拉这次拿起来，却没喝。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "回家先还时间债，再面对悬赏并未兑现；妹妹不是专为安慰主角而留在屋里。；人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+      },
+      "temporal": {
+        "durationSeconds": 55,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "回家先还时间债，再面对悬赏并未兑现；妹妹不是专为安慰主角而留在屋里。",
+          "path": "机位不移动。",
+          "start": "玛拉带个人包进南门，乔守桌边；孩子在北屋，右手手机左肩包。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "蓝夹在桌，玛拉拿水杯；奖励没有承诺，乔自己的工时已经损失。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E04-SH011-F1",
+            "timeSeconds": 0,
+            "description": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+          }
+        ],
+        "edit": {
+          "entry": "玛拉带个人包进南门，乔守桌边；孩子在北屋，右手手机左肩包。",
+          "exit": "蓝夹在桌，玛拉拿水杯；奖励没有承诺，乔自己的工时已经损失。；蓝夹在桌，玛拉拿水杯；奖励没有承诺，乔自己的工时已经损失。",
+          "preferredTransition": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+          "soundBridge": "同场环境声与所列英语；不补额外可辨台词；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E04-SH012",
+      "decision": {
+        "primaryTechniqueId": "M01",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "她发现自己也成为素材，才开口向妹妹索取具体帮助；一起拨号是本集的行动结尾。",
+        "audiencePayoff": "姐妹一起等账务接听，蓝夹打开但拒赔未变；偷拍视频仍在传播，孩子的桥仍未画完。",
+        "trigger": "水杯在玛拉手上，蓝夹合着，手机在桌右；乔坐桌南。；手机收到店内视频。玛拉放下水，点开看，画面中有人圈出柜台后的她。乔伸手要拿，玛拉先把进度拖回，再看一遍，才转给妹妹。乔对玛拉说英语“Who sent you that?”；先找这段影像实际从哪来。玛拉对乔说英语“Someone from work. It's already everywhere.”；刚理解自己不是镜头外的人。乔把手机音量调低。蓝夹被手机碰开，拒赔单后露出玛拉签字的加班申请。玛拉对乔说英语“I should've been home. I'm the one who asked for that shift.”；第一次把偶然相遇接回自己的选择。她翻扣手机，手停在写着周五的通知上。北屋捡笔声音停止，餐桌没有人接她那句自责。玛拉对乔说英语“Will you call billing with me? I can't go through it all again on my own.”；不再为报警辩护，要求实际帮助。乔拿起总机号码便签，将自己的手机放到两人中间拨号。玛拉把该报的号码找出来，放在杯子旁。等待音乐开始。她把那杯水喝下第一口。玛拉把记录号码推到乔面前，按所列新句请求妹妹先说。乔将便签转向自己，手机留两人中央等人工接听。 玛拉对乔说英语“Can you start? Just say it's about the renewal.”；乔把号码便签转向自己，实际接过开口的任务。",
+        "cameraMode": "moving",
+        "focusMode": "hold",
+        "exitMatch": "姐妹一起等账务接听，蓝夹打开但拒赔未变；偷拍视频仍在传播，孩子的桥仍未画完。；本集结束。玛拉把号码推给乔，请妹妹先替她向账务开口；事情没有解决，但她终于接受有人分担。下一集由律师开始处理青年这边的后果。 下集从VISIT展开：海伦能否让青年停止选择性讲述，提供可以真正办案的事实？"
+      },
+      "camera": {
+        "shotScale": "桌北偏西双人中景",
+        "position": "桌北偏西双人中景，母亲手机只在手边可读",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "桌北偏西双人中景，母亲手机只在手边可读",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 两人前景，蓝夹和加班申请中间，北卧室门在同侧画外。",
+        "movementIntent": "留住看视频第二遍的选择；只在认出圈中本人时做一次轻微推进，此后不再切纸件。"
+      },
+      "composition": {
+        "layout": "两人前景，蓝夹和加班申请中间，北卧室门在同侧画外。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：手机收到店内视频。玛拉放下水，点开看，画面中有人圈出柜台后的她。乔伸手要拿，玛拉先把进度拖回，再看一遍，才转给妹妹。乔对玛拉说英语“Who sent you that?”；先找这段影像实际从哪来。玛拉对乔说英语“Someone from work. It's already everywhere.”；刚理解自己不是镜头外的人。乔把手机音量调低。蓝夹被手机碰开，拒赔单后露出玛拉签字的加班申请。玛拉对乔说英语“I should've been home. I'm the one who asked for that shift.”；第一次把偶然相遇接回自己的选择。她翻扣手机，手停在写着周五的通知上。北屋捡笔声音停止，餐桌没有人接她那句自责。玛拉对乔说英语“Will you call billing with me? I can't go through it all again on my own.”；不再为报警辩护，要求实际帮助。乔拿起总机号码便签，将自己的手机放到两人中间拨号。玛拉把该报的号码找出来，放在杯子旁。等待音乐开始。她把那杯水喝下第一口。玛拉把记录号码推到乔面前，按所列新句请求妹妹先说。乔将便签转向自己，手机留两人中央等人工接听。 玛拉对乔说英语“Can you start? Just say it's about the renewal.”；乔把号码便签转向自己，实际接过开口的任务。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "她发现自己也成为素材，才开口向妹妹索取具体帮助；一起拨号是本集的行动结尾。；人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+      },
+      "temporal": {
+        "durationSeconds": 64,
+        "cameraMotion": {
+          "type": "dolly",
+          "motivation": "她发现自己也成为素材，才开口向妹妹索取具体帮助；一起拨号是本集的行动结尾。",
+          "path": "留住看视频第二遍的选择；只在认出圈中本人时做一次轻微推进，此后不再切纸件。",
+          "start": "水杯在玛拉手上，蓝夹合着，手机在桌右；乔坐桌南。",
+          "acceleration": "仅执行作者本镜规定的启动与速度，不另加缓起：留住看视频第二遍的选择；只在认出圈中本人时做一次轻微推进，此后不再切纸件。",
+          "peak": "依本镜作者运动描述，不统一套匀速：留住看视频第二遍的选择；只在认出圈中本人时做一次轻微推进，此后不再切纸件。",
+          "deceleration": "不强制停稳；按作者出点接后镜：姐妹一起等账务接听，蓝夹打开但拒赔未变；偷拍视频仍在传播，孩子的桥仍未画完。",
+          "end": "姐妹一起等账务接听，蓝夹打开但拒赔未变；偷拍视频仍在传播，孩子的桥仍未画完。",
+          "framingChange": "留住看视频第二遍的选择；只在认出圈中本人时做一次轻微推进，此后不再切纸件。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E04-SH012-F1",
+            "timeSeconds": 0,
+            "description": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+          }
+        ],
+        "edit": {
+          "entry": "水杯在玛拉手上，蓝夹合着，手机在桌右；乔坐桌南。",
+          "exit": "姐妹一起等账务接听，蓝夹打开但拒赔未变；偷拍视频仍在传播，孩子的桥仍未画完。；姐妹一起等账务接听，蓝夹打开但拒赔未变；偷拍视频仍在传播，孩子的桥仍未画完。",
+          "preferredTransition": "本集结束。玛拉把号码推给乔，请妹妹先替她向账务开口；事情没有解决，但她终于接受有人分担。下一集由律师开始处理青年这边的后果。 下集从VISIT展开：海伦能否让青年停止选择性讲述，提供可以真正办案的事实？",
+          "soundBridge": "同场环境声与所列英语；不补额外可辨台词；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    }
+  ]
+}

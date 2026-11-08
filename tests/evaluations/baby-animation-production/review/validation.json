@@ -1,0 +1,385 @@
+{
+  "scope": "authored_text_and_files_only",
+  "completeInventory": [
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06",
+    "B07",
+    "B08",
+    "B09",
+    "B10",
+    "B11",
+    "B12",
+    "B13",
+    "B14",
+    "F01",
+    "F02",
+    "F03",
+    "F04",
+    "F05",
+    "F06",
+    "F07",
+    "F08",
+    "F09",
+    "F10",
+    "F11",
+    "F12",
+    "F13",
+    "F14",
+    "G01",
+    "G02",
+    "G03",
+    "G04",
+    "G05",
+    "G06",
+    "G07",
+    "G08",
+    "G09",
+    "G10",
+    "G11",
+    "G12",
+    "G13"
+  ],
+  "storyCount": 41,
+  "shotCount": 254,
+  "totalSeconds": 1654,
+  "totalFrames24fps": 39696,
+  "errors": [],
+  "stories": [
+    {
+      "id": "B01",
+      "shots": 6,
+      "durationSeconds": 30,
+      "storyCharacters": 300,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "B02",
+      "shots": 7,
+      "durationSeconds": 45,
+      "storyCharacters": 352,
+      "promptPairs": 7,
+      "stage": "R1"
+    },
+    {
+      "id": "B03",
+      "shots": 6,
+      "durationSeconds": 36,
+      "storyCharacters": 345,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "B04",
+      "shots": 5,
+      "durationSeconds": 30,
+      "storyCharacters": 311,
+      "promptPairs": 5,
+      "stage": "R0"
+    },
+    {
+      "id": "B05",
+      "shots": 6,
+      "durationSeconds": 36,
+      "storyCharacters": 323,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "B06",
+      "shots": 5,
+      "durationSeconds": 30,
+      "storyCharacters": 355,
+      "promptPairs": 5,
+      "stage": "R0"
+    },
+    {
+      "id": "B07",
+      "shots": 6,
+      "durationSeconds": 36,
+      "storyCharacters": 309,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "B08",
+      "shots": 5,
+      "durationSeconds": 30,
+      "storyCharacters": 334,
+      "promptPairs": 5,
+      "stage": "R0"
+    },
+    {
+      "id": "B09",
+      "shots": 6,
+      "durationSeconds": 36,
+      "storyCharacters": 339,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "B10",
+      "shots": 7,
+      "durationSeconds": 42,
+      "storyCharacters": 348,
+      "promptPairs": 7,
+      "stage": "R1"
+    },
+    {
+      "id": "B11",
+      "shots": 6,
+      "durationSeconds": 30,
+      "storyCharacters": 337,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "B12",
+      "shots": 6,
+      "durationSeconds": 36,
+      "storyCharacters": 298,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "B13",
+      "shots": 6,
+      "durationSeconds": 36,
+      "storyCharacters": 331,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "B14",
+      "shots": 7,
+      "durationSeconds": 42,
+      "storyCharacters": 331,
+      "promptPairs": 7,
+      "stage": "R1"
+    },
+    {
+      "id": "F01",
+      "shots": 6,
+      "durationSeconds": 45,
+      "storyCharacters": 288,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "F02",
+      "shots": 6,
+      "durationSeconds": 38,
+      "storyCharacters": 294,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "F03",
+      "shots": 7,
+      "durationSeconds": 55,
+      "storyCharacters": 330,
+      "promptPairs": 7,
+      "stage": "R1"
+    },
+    {
+      "id": "F04",
+      "shots": 6,
+      "durationSeconds": 45,
+      "storyCharacters": 309,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "F05",
+      "shots": 6,
+      "durationSeconds": 38,
+      "storyCharacters": 296,
+      "promptPairs": 6,
+      "stage": "R2"
+    },
+    {
+      "id": "F06",
+      "shots": 7,
+      "durationSeconds": 55,
+      "storyCharacters": 341,
+      "promptPairs": 7,
+      "stage": "R1"
+    },
+    {
+      "id": "F07",
+      "shots": 6,
+      "durationSeconds": 45,
+      "storyCharacters": 325,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "F08",
+      "shots": 6,
+      "durationSeconds": 45,
+      "storyCharacters": 321,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "F09",
+      "shots": 5,
+      "durationSeconds": 30,
+      "storyCharacters": 248,
+      "promptPairs": 5,
+      "stage": "R0"
+    },
+    {
+      "id": "F10",
+      "shots": 6,
+      "durationSeconds": 45,
+      "storyCharacters": 315,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "F11",
+      "shots": 6,
+      "durationSeconds": 30,
+      "storyCharacters": 364,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "F12",
+      "shots": 6,
+      "durationSeconds": 36,
+      "storyCharacters": 253,
+      "promptPairs": 6,
+      "stage": "R0"
+    },
+    {
+      "id": "F13",
+      "shots": 6,
+      "durationSeconds": 36,
+      "storyCharacters": 272,
+      "promptPairs": 6,
+      "stage": "R4"
+    },
+    {
+      "id": "F14",
+      "shots": 6,
+      "durationSeconds": 36,
+      "storyCharacters": 259,
+      "promptPairs": 6,
+      "stage": "R4"
+    },
+    {
+      "id": "G01",
+      "shots": 6,
+      "durationSeconds": 36,
+      "storyCharacters": 235,
+      "promptPairs": 6,
+      "stage": "R0"
+    },
+    {
+      "id": "G02",
+      "shots": 6,
+      "durationSeconds": 42,
+      "storyCharacters": 253,
+      "promptPairs": 6,
+      "stage": "R0"
+    },
+    {
+      "id": "G03",
+      "shots": 7,
+      "durationSeconds": 54,
+      "storyCharacters": 270,
+      "promptPairs": 7,
+      "stage": "R0"
+    },
+    {
+      "id": "G04",
+      "shots": 6,
+      "durationSeconds": 42,
+      "storyCharacters": 267,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "G05",
+      "shots": 6,
+      "durationSeconds": 36,
+      "storyCharacters": 251,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "G06",
+      "shots": 7,
+      "durationSeconds": 54,
+      "storyCharacters": 277,
+      "promptPairs": 7,
+      "stage": "R2"
+    },
+    {
+      "id": "G07",
+      "shots": 6,
+      "durationSeconds": 36,
+      "storyCharacters": 269,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "G08",
+      "shots": 6,
+      "durationSeconds": 36,
+      "storyCharacters": 277,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "G09",
+      "shots": 7,
+      "durationSeconds": 54,
+      "storyCharacters": 286,
+      "promptPairs": 7,
+      "stage": "R2"
+    },
+    {
+      "id": "G10",
+      "shots": 7,
+      "durationSeconds": 54,
+      "storyCharacters": 299,
+      "promptPairs": 7,
+      "stage": "R3"
+    },
+    {
+      "id": "G11",
+      "shots": 6,
+      "durationSeconds": 36,
+      "storyCharacters": 242,
+      "promptPairs": 6,
+      "stage": "R1"
+    },
+    {
+      "id": "G12",
+      "shots": 7,
+      "durationSeconds": 42,
+      "storyCharacters": 311,
+      "promptPairs": 7,
+      "stage": "R4"
+    },
+    {
+      "id": "G13",
+      "shots": 8,
+      "durationSeconds": 58,
+      "storyCharacters": 467,
+      "promptPairs": 8,
+      "stage": "R5"
+    }
+  ],
+  "mediaVerified": false,
+  "audienceVerified": false,
+  "authorApproved": false,
+  "note": "机器检查只核对文本、编号、引用和算术，不替代剧情、表演、空间或真实媒体审阅。"
+}

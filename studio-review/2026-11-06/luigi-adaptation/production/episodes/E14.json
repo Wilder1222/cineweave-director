@@ -1,0 +1,1241 @@
+{
+  "number": 14,
+  "title": "保存下来",
+  "logline": "未和解患者独立取得日志保全，保存不等于证明；公司同时把莉娜的资料流转推入调查。",
+  "scenes": [
+    {
+      "id": "E14-SC01",
+      "location": "INSURER",
+      "time": "日·数周后的迁移日前",
+      "script": "数周后公司质检区，莉娜在东工位，灰信封贴着键盘。保留政策在屏幕左，下午五点停权通知在右，工作手机放桌右；北窗仍有日光。\n\n莉娜在保留政策页上找到九点的常规覆盖任务，工作手机放桌右开免提。她先问IT日志，再问到病历；咨询员的答案让她把两个词分开记，随后挂断。\n\n莉娜（英语，对着政策页逐项核清）：Nine tonight? Just the event logs? Not the charts?\n中文对照：今晚九点？只是事件日志？病历不动？\nIT咨询员（英语，当作普通保留政策解释，语速不演危险）：Charts stay. Those logs get overwritten unless we put a hold on them.\n中文对照：病历留着。那类日志不办保全，就会覆盖。\n\n权限暂停通知写着下午五点。莉娜从桌右拿工作手机拨凯文，把便签横在键盘前，看到同事经过便把页面收回普通工作列表。\n\n莉娜（英语，把两个时限给清楚，等能做的任务）：My access ends at five. They overwrite the logs at nine. What do you need?\n中文对照：我五点停权，日志九点覆盖。你要什么？\n\n莉娜将暂停权限通知另存为自己工作记录，手停在搜索框。她原想再找一份病例，听到电话接通便关掉未输入的搜索栏。\n\n莉娜（英语，不把保全当答案）：I can't promise which files those logs will explain.\n中文对照：那些日志能解释哪些文件，我保证不了。\n凯文（英语，把今晚的目标缩到保留）：I need to know what might disappear. We can ask for the contents later.\n中文对照：先告诉我哪些可能消失。内容之后再申请。\n莉娜（英语，接受不越权寻找证明）：All right. I'll send the policy.\n中文对照：好。我发政策。\n\n莉娜把电话放回右侧开免提，按凯文要求发送公司政策索引与日志类别。发送后她核对邮件已送出，才关闭草稿、挂断，把便签收入灰信封。\n\n凯文（英语，接过后续责任，明确不让她越过访问权限）：Send the log category and the policy. Only what you're allowed to see. I'll handle the rest.\n中文对照：发日志类别和保留政策，只发你有权限看的，剩下我办。",
+      "entry": "在来源即将失去权限前争取保存，而不假装已经取得答案。",
+      "exit": "区分五点个人停权与九点日志例行覆盖，交律师的是类别与政策。 来源放弃自己继续搜索，保存程序仍可能不及期限。",
+      "dramaticFunction": "在来源即将失去权限前争取保存，而不假装已经取得答案。",
+      "turn": "区分五点个人停权与九点日志例行覆盖，交律师的是类别与政策。",
+      "exitCost": "来源放弃自己继续搜索，保存程序仍可能不及期限。",
+      "sceneRhythm": "先核覆盖对象—收到停权—向律师求具体任务—停在权限内发索引；不变成黑客行动。",
+      "sourceSceneIds": [
+        "E14-SC01"
+      ],
+      "plannedDuration": 57
+    },
+    {
+      "id": "E14-SC02",
+      "location": "CLINIC",
+      "time": "日·迁移当天午间",
+      "script": "迁移当日午间诊所东南咨询室，凯文坐东，玛拉坐西，诺拉在南门侧。三位未和解患者的委托单在桌中，玛拉自己的和解书与蓝夹留在西侧；医生由南门进入。\n\n诊所咨询桌上，凯文将三份未和解患者委托单装进申请夹，把玛拉的和解协议留外面。玛拉拿回自己的原件，问她是否还算申请人。\n\n玛拉（英语，拿回和解原件，怕重新卷进去）：Am I back in the case?\n中文对照：我又要打官司了？\n凯文（英语，指有限授权范围，不把她变成申请人）：No. Three other patients are filing. You're just authorizing us to use the receipt.\n中文对照：不是，另外三位患者申请。你只授权我们用这张回执。\n\n玛拉把保留例外的那页从蓝夹里抽出，凯文核对后在有限授权上勾明回执范围。她签字，将原件重新塞回自己的夹内。\n\n玛拉（英语，把个人条件带到公事）：No pictures of Ellie.\n中文对照：不交艾莉的照片。\n凯文（英语，明确重复她的条件，原件推回去）：No photos. Just the receipt. You keep the original.\n中文对照：不交照片，只要回执。原件你拿着。\n\n玛拉把蓝夹合上，诺拉刚把手机抬到桌沿，她便把签好的有限授权转向凯文。凯文逐项确认这次提交走正式程序，诺拉将手机放回口袋。\n\n玛拉（英语，先向记者划界）：Is this going in another story?\n中文对照：这也要写进新报道吗？\n诺拉（英语，接受被拒绝，而不转问孩子）：I'm asking about the records, not for an interview.\n中文对照：我来问记录，不是采访你。\n凯文（英语，限定使用去向）：This goes with the formal request. Just the receipt you've authorized.\n中文对照：这张随正式申请提交，只用你授权的回执。\n玛拉（英语，保留自己的原件与其余资料）：Then use that. Nothing from her folder.\n中文对照：那就用这张，别动她其他材料。\n\n医生看一眼挂钟。诺拉想问内部复核，医生把笔放在自己能确认的发送与回执两行旁，边答边签名；答完带笔转身，朝南门画外返回病人那边。\n\n诺拉（英语，想把发送成功往内部复核再推一步）：Did they have it when they reviewed her case?\n中文对照：复核她的申请时，他们手里有吗？\n医生（英语，只在自己能证实的两行签字）：I sent it. They sent this receipt back. That's all I can sign off on.\n中文对照：我发了，他们回了这张回执。我能签字确认的就这些。\n\n凯文打开刚收到的受理通知。诺拉举起手机等一句成功消息，凯文回答只是受理回执，不迎向她的镜头；随后收妥签名页与授权副本，合上黑包。\n\n诺拉（英语，手机举起来，先把受理当成果）：Did we get them?\n中文对照：拿到那些记录了？\n凯文（英语，纠正对象，同时收文件）：No. That's the filing receipt.\n中文对照：没有，这是申请受理回执。",
+      "entry": "把集体保全建立在各人的有限授权上。",
+      "exit": "玛拉只许可回执、医生只证实发送/收讫，得到的是申请受理而非内容。 记者无法把现场拍成调查成功；玛拉保留其余家庭记录。",
+      "dramaticFunction": "把集体保全建立在各人的有限授权上。",
+      "turn": "玛拉只许可回执、医生只证实发送/收讫，得到的是申请受理而非内容。",
+      "exitCost": "记者无法把现场拍成调查成功；玛拉保留其余家庭记录。",
+      "sceneRhythm": "确认申请人—限定许可—面对记者边界—医生签能证明的两行—受理与取得被区分。",
+      "sourceSceneIds": [
+        "E14-SC02"
+      ],
+      "plannedDuration": 72
+    },
+    {
+      "id": "E14-SC03",
+      "location": "SERVER-OFFICE",
+      "time": "夜·迁移窗口前",
+      "script": "当天 20:47 技术工区南门打开，凯文携正式送达副本进入。维克多在西玻璃墙边，技术员坐东侧授权工位，北设备柜风扇持续响，九点例行任务尚未执行。\n\n夜间技术工区南门开，凯文带正式送达副本到维克多面前。授权技术员在东工位停下迁移准备，等两人核对范围；北墙钟在九点之前。\n\n凯文（英语，把正式裁定附件展开到对方面前）：You've been served. The logs we need preserved are listed here.\n中文对照：已经送达了。要保全的日志列在这里。\n维克多（英语，先止住覆盖，再核裁定）：Pause the job. Let me check what it covers.\n中文对照：先暂停。我看一下范围。\n\n维克多在范围附件上指到指定日志，技术员在东侧工位等着范围确认，没有开口。凯文翻到同附件下一行索引要求，维克多看清后把两行一起划进执行单。\n\n维克多（英语，指确定范围）：Only these logs.\n中文对照：只保这几类日志。\n凯文（英语，顺着对方手指往下一行补）：The index too. Right there.\n中文对照：还有索引，就这行。\n维克多（英语，看清后确认，不另争一句）：That too.\n中文对照：那个也保留。\n\n技术员将日志与索引两行加入排除清单，剩余迁移项目仍停着。维克多指向其余批次，凯文退开屏幕位置，只看执行范围。\n\n维克多（英语，要恢复不受裁定影响的业务）：Can the rest of the job run?\n中文对照：其他部分能照常跑吗？\n技术员（英语，说实际操作顺序）：Yes. Once these exclusions are saved.\n中文对照：可以，把排除项保存好就行。\n凯文（英语，不要求当场展示内容）：Put both categories on the confirmation.\n中文对照：确认单把两类都列上。\n\n技术员在已授权工位录入保全编号，勾选执行范围，确认九点例行任务排除这组记录。打印机出执行确认时，他仍让屏幕停在状态页，没有替凯文打开内容。\n\n技术员（英语，核状态后才宣布完成，手不打开内容）：The hold's in. The nine o'clock job will skip them. I'll print your confirmation.\n中文对照：保全设好了，九点的任务会跳过这些。我给你打确认单。\n\n凯文读确认单的记录范围和时间，与裁定附件逐一对照。维克多等他核完才恢复其余迁移任务；凯文将下一步正式调取联系人记下，不拿走数据。\n\n凯文（英语，确认单已经核好，问下一步）：Who handles the records?\n中文对照：记录找谁调？\n维克多（英语，不把保全当作已向对方交出数据）：Our lawyers. This just confirms the hold.\n中文对照：找我们律师。这张只确认保全。",
+      "entry": "让程序竞争以合法保存完成一场有限胜利。",
+      "exit": "日志及索引被排除在覆盖任务外，其余迁移继续。 只有保全确认，没有任何人取得数据内容或解释真相。",
+      "dramaticFunction": "让程序竞争以合法保存完成一场有限胜利。",
+      "turn": "日志及索引被排除在覆盖任务外，其余迁移继续。",
+      "exitCost": "只有保全确认，没有任何人取得数据内容或解释真相。",
+      "sceneRhythm": "送达—核范围—补齐索引—恢复无关业务—确认排除—留下正式调取下一步。",
+      "sourceSceneIds": [
+        "E14-SC03"
+      ],
+      "plannedDuration": 67
+    },
+    {
+      "id": "E14-SC04",
+      "location": "INSURER",
+      "time": "夜·同日稍后",
+      "script": "同日晚间质检区，东工位已停权。莉娜把工牌与工作手机放桌中，水杯还压着用旧的杯垫。维克多从中央桌带来资料流转清单，南侧通路通向出口。\n\n东侧工位权限暂停后，莉娜把工牌与工作手机放到桌中，取出自己用了很久的水杯装进包。维克多把一份资料流转清单放在她还没收走的杯垫上。\n\n莉娜（英语，收自己的杯子前先确认）：They saved the logs?\n中文对照：日志留住了？\n维克多（英语，把流转清单放在她杯垫上）：They're on hold. Take a look at this.\n中文对照：保全了。你看看这个。\n\n莉娜在分发清单里看到路易吉名字，翻到后面确认不是只有互助组的地址。她把纸放回杯垫，不签对知情的概括，只同意由律师处理通信。\n\n莉娜（英语，不签宽泛概括，只说当时目的）：He wanted examples for appeals. That's all I knew.\n中文对照：他要申诉样本，我知道的就这些。\n维克多（英语，给出下一步压力，不替她认定知情）：They'll want every message. Let your lawyer handle it.\n中文对照：他们会要全部消息。交给你律师处理。\n\n莉娜将流转清单留在杯垫上，手从工牌移向自己的包。维克多站在中央桌边等她收拾，她先确认哪些东西今天还带得走。\n\n莉娜（英语，提出下班之后的实际困难）：I need my pay records. The portal uses this phone.\n中文对照：工资记录我还得查，登录要用这部手机。\n维克多（英语，只答能处理的事）：Payroll can send them to your personal address.\n中文对照：工资那边能发到你的私人邮箱。\n莉娜（英语，不再靠口头安排）：Put that in the email too. And send the questions to my lawyer.\n中文对照：这个也写进邮件，问题发给我律师。\n维克多（英语，结束行政交接，不承诺免于调查）：I will.\n中文对照：好。\n\n莉娜从包里取私人手机，将杯垫上清单逐页拍清，再拨律师语音信箱留下下列留言。留言结束后挂断，将刚拍的清单照片发送给律师；看到发送确认后沿南侧通路离开。清单原件、工作手机与工牌留在东桌，私人杯在肩包里轻碰。\n\n莉娜（英语，对语音信箱说实际请求，结束后才发照片）：I've got the list. I'll send it. Please call before I talk to them.\n中文对照：名单我拿到了，会发你。跟他们谈之前，先给我回个电话。",
+      "entry": "把保全成功的另一面落到来源生活与调查中。",
+      "exit": "她拒签知情概括，要求律师处理消息并为工资记录争取个人接收方式。 访问权停了、调查继续；带走杯子不等于获得保护。",
+      "dramaticFunction": "把保全成功的另一面落到来源生活与调查中。",
+      "turn": "她拒签知情概括，要求律师处理消息并为工资记录争取个人接收方式。",
+      "exitCost": "访问权停了、调查继续；带走杯子不等于获得保护。",
+      "sceneRhythm": "先确认日志—发现本人通信被要求—拒绝口头泛化—处理工资入口—独立留言后离开。",
+      "sourceSceneIds": [
+        "E14-SC04"
+      ],
+      "plannedDuration": 66
+    }
+  ],
+  "shots": [
+    {
+      "id": "E14-SH001",
+      "sceneId": "E14-SC01",
+      "sourceShotIds": [
+        "E14-SH001",
+        "E14-SH002"
+      ],
+      "duration": 26,
+      "characters": [
+        "LENA",
+        "IT-VOICE"
+      ],
+      "onScreenCharacterIds": [
+        "LENA"
+      ],
+      "offscreenCharacterIds": [
+        "IT-VOICE"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "九点覆盖与五点停权是不同事项；同事经过使她先回普通工作列表。",
+      "framing": "东工位南侧40mm莉娜中景，工作手机右侧免提、政策屏幕在左，中央走道在后层。",
+      "composition": "数周后公司质检区，莉娜在东工位，灰信封贴着键盘。保留政策在屏幕左，下午五点停权通知在右，工作手机放桌右；北窗仍有日光。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定26秒，第一通咨询挂断、第二通拨律师是两次清楚的操作。",
+      "focus": "九点覆盖与五点停权是不同事项；同事经过使她先回普通工作列表。",
+      "start": "莉娜在东工位已拨通IT咨询，工作手机桌右开免提，屏上保留政策与九点常规任务类别。",
+      "action": "莉娜在保留政策页上找到九点的常规覆盖任务，工作手机放桌右开免提。她先问IT日志，再问到病历；咨询员的答案让她把两个词分开记，随后挂断。\n权限暂停通知写着下午五点。莉娜从桌右拿工作手机拨凯文，把便签横在键盘前，看到同事经过便把页面收回普通工作列表。",
+      "end": "电话接通右耳，政策类别已记下，未复制患者档案。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。 IT咨询员与凯文分属先后两通电话，只从工作手机传出所列英语。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E14-D001",
+          "speaker": "莉娜",
+          "listener": "IT咨询员（电话）",
+          "text": "Nine tonight? Just the event logs? Not the charts?",
+          "translationZh": "今晚九点？只是事件日志？病历不动？",
+          "tone": "对着政策页逐项核清",
+          "start": 1,
+          "end": 5.3
+        },
+        {
+          "id": "E14-D002",
+          "speaker": "IT咨询员",
+          "listener": "莉娜（电话）",
+          "text": "Charts stay. Those logs get overwritten unless we put a hold on them.",
+          "translationZh": "病历留着。那类日志不办保全，就会覆盖。",
+          "tone": "当作普通保留政策解释，语速不演危险",
+          "start": 5.6,
+          "end": 11.3
+        },
+        {
+          "id": "E14-D003",
+          "speaker": "莉娜",
+          "listener": "凯文（电话）",
+          "text": "My access ends at five. They overwrite the logs at nine. What do you need?",
+          "translationZh": "我五点停权，日志九点覆盖。你要什么？",
+          "tone": "把两个时限给清楚，等能做的任务",
+          "start": 16,
+          "end": 24.2
+        }
+      ],
+      "overlay": [
+        {
+          "text": "ROUTINE ROLLOVER: 21:00 / 常规覆盖：21:00",
+          "start": 3,
+          "end": 10,
+          "position": "保留政策页后期"
+        }
+      ],
+      "generationSegments": [
+        {
+          "duration": 15,
+          "start": "莉娜在东工位已拨通IT咨询，工作手机桌右开免提，屏上保留政策与九点常规任务类别。",
+          "action": "莉娜在保留政策页上找到九点的常规覆盖任务，工作手机放桌右开免提。她先问IT日志，再问到病历；咨询员的答案让她把两个词分开记，随后挂断。",
+          "end": "IT通话结束，工作手机桌右，保留类别与九点时间记在便签。",
+          "dialogueCueIds": [
+            "E14-D001",
+            "E14-D002"
+          ],
+          "sourceShotIds": [
+            "E14-SH001"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 17
+        },
+        {
+          "duration": 11,
+          "start": "IT通话结束，工作手机桌右，保留类别与九点时间记在便签。",
+          "action": "权限暂停通知写着下午五点。莉娜从桌右拿工作手机拨凯文，把便签横在键盘前，看到同事经过便把页面收回普通工作列表。",
+          "end": "电话接通右耳，政策类别已记下，未复制患者档案。",
+          "dialogueCueIds": [
+            "E14-D003"
+          ],
+          "sourceShotIds": [
+            "E14-SH002"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 13
+        }
+      ],
+      "viewerEntry": "在来源即将失去权限前争取保存，而不假装已经取得答案。",
+      "viewerExit": "电话接通右耳，政策类别已记下，未复制患者档案。",
+      "cutTrigger": "她想继续检索却停住，切更近的来源决定，不切不存在的律师现场。",
+      "next": "接E14-SH003；她想继续检索却停住，切更近的来源决定，不切不存在的律师现场。"
+    },
+    {
+      "id": "E14-SH003",
+      "sceneId": "E14-SC01",
+      "sourceShotIds": [
+        "E14-SH003"
+      ],
+      "duration": 31,
+      "characters": [
+        "LENA",
+        "COUNSEL"
+      ],
+      "onScreenCharacterIds": [
+        "LENA"
+      ],
+      "offscreenCharacterIds": [
+        "COUNSEL"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "律师电话把目标缩到保存什么，来源停在权限内，没有复制未知数据。",
+      "framing": "东工位西南侧65mm莉娜半身，屏幕只留政策页边缘、搜索栏和她的手，灰信封在下部。",
+      "composition": "数周后公司质检区，莉娜在东工位，灰信封贴着键盘。保留政策在屏幕左，下午五点停权通知在右，工作手机放桌右；北窗仍有日光。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定31秒，关闭空搜索栏后只发送已有权限的索引。",
+      "focus": "律师电话把目标缩到保存什么，来源停在权限内，没有复制未知数据。",
+      "start": "电话接通右耳，政策类别已记下，未复制患者档案。",
+      "action": "莉娜将暂停权限通知另存为自己工作记录，手停在搜索框。她原想再找一份病例，听到电话接通便关掉未输入的搜索栏。\n莉娜把电话放回右侧开免提，按凯文要求发送公司政策索引与日志类别。发送后她核对邮件已送出，才关闭草稿、挂断，把便签收入灰信封。",
+      "end": "公开政策线索已发送，未越权取走数据，电话已断。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。 IT咨询员与凯文分属先后两通电话，只从工作手机传出所列英语。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E14-D201",
+          "speaker": "莉娜",
+          "listener": "凯文（电话）",
+          "text": "I can't promise which files those logs will explain.",
+          "translationZh": "那些日志能解释哪些文件，我保证不了。",
+          "tone": "不把保全当答案",
+          "start": 1,
+          "end": 4.53
+        },
+        {
+          "id": "E14-D202",
+          "speaker": "凯文",
+          "listener": "莉娜（电话）",
+          "text": "I need to know what might disappear. We can ask for the contents later.",
+          "translationZh": "先告诉我哪些可能消失。内容之后再申请。",
+          "tone": "把今晚的目标缩到保留",
+          "start": 4.83,
+          "end": 10.32
+        },
+        {
+          "id": "E14-D203",
+          "speaker": "莉娜",
+          "listener": "凯文（电话）",
+          "text": "All right. I'll send the policy.",
+          "translationZh": "好。我发政策。",
+          "tone": "接受不越权寻找证明",
+          "start": 10.62,
+          "end": 12.97
+        },
+        {
+          "id": "E14-D004",
+          "speaker": "凯文",
+          "listener": "莉娜（电话）",
+          "text": "Send the log category and the policy. Only what you're allowed to see. I'll handle the rest.",
+          "translationZh": "发日志类别和保留政策，只发你有权限看的，剩下我办。",
+          "tone": "接过后续责任，明确不让她越过访问权限",
+          "start": 19,
+          "end": 26.2
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 18,
+          "start": "电话接通右耳，政策类别已记下，未复制患者档案。",
+          "action": "莉娜将暂停权限通知另存为自己工作记录，手停在搜索框。她原想再找一份病例，听到电话接通便关掉未输入的搜索栏。",
+          "end": "她只打开已有权限的保留政策索引，不再检索其他患者。",
+          "dialogueCueIds": [
+            "E14-D201",
+            "E14-D202",
+            "E14-D203"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 20
+        },
+        {
+          "duration": 13,
+          "start": "她只打开已有权限的保留政策索引，不再检索其他患者。",
+          "action": "莉娜把电话放回右侧开免提，按凯文要求发送公司政策索引与日志类别。发送后她核对邮件已送出，才关闭草稿、挂断，把便签收入灰信封。",
+          "end": "公开政策线索已发送，未越权取走数据，电话已断。",
+          "dialogueCueIds": [
+            "E14-D004"
+          ],
+          "sourceShotIds": [
+            "E14-SH003"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 15
+        }
+      ],
+      "viewerEntry": "电话接通右耳，政策类别已记下，未复制患者档案。",
+      "viewerExit": "公开政策线索已发送，未越权取走数据，电话已断。",
+      "cutTrigger": "发送确认后电话放下，切申请人授权的另一端。",
+      "next": "本场完成，按正式EP场序转场；发送确认后电话放下，切申请人授权的另一端。"
+    },
+    {
+      "id": "E14-SH004",
+      "sceneId": "E14-SC02",
+      "sourceShotIds": [
+        "E14-SH004",
+        "E14-SH005"
+      ],
+      "duration": 24,
+      "characters": [
+        "COUNSEL",
+        "MARA-WORK",
+        "NORA"
+      ],
+      "onScreenCharacterIds": [
+        "COUNSEL",
+        "MARA-WORK",
+        "NORA"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "三名未和解申请人与玛拉不同，她保留原件且仅签有限范围。",
+      "framing": "诊所东南咨询室南门侧35mm三人中景，凯文桌东、玛拉桌西、诺拉靠南门；三份委托与玛拉蓝夹分开。",
+      "composition": "迁移当日午间诊所东南咨询室，凯文坐东，玛拉坐西，诺拉在南门侧。三位未和解患者的委托单在桌中，玛拉自己的和解书与蓝夹留在西侧；医生由南门进入。 本镜画内角色：COUNSEL,MARA-WORK,NORA。",
+      "camera": "固定24秒，让回执授权在两位当事人手里完成。",
+      "focus": "三名未和解申请人与玛拉不同，她保留原件且仅签有限范围。",
+      "start": "玛拉左臂蓝色文件夹，右手机，医生持回执。",
+      "action": "诊所咨询桌上，凯文将三份未和解患者委托单装进申请夹，把玛拉的和解协议留外面。玛拉拿回自己的原件，问她是否还算申请人。\n玛拉把保留例外的那页从蓝夹里抽出，凯文核对后在有限授权上勾明回执范围。她签字，将原件重新塞回自己的夹内。",
+      "end": "有限授权归凯文，原回执与和解副本仍归玛拉。",
+      "sound": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E14-D005",
+          "speaker": "玛拉",
+          "listener": "凯文",
+          "text": "Am I back in the case?",
+          "translationZh": "我又要打官司了？",
+          "tone": "拿回和解原件，怕重新卷进去",
+          "start": 1,
+          "end": 3.8
+        },
+        {
+          "id": "E14-D801",
+          "speaker": "凯文",
+          "listener": "玛拉",
+          "text": "No. Three other patients are filing. You're just authorizing us to use the receipt.",
+          "translationZh": "不是，另外三位患者申请。你只授权我们用这张回执。",
+          "tone": "指有限授权范围，不把她变成申请人",
+          "start": 4.1,
+          "end": 10.8
+        },
+        {
+          "id": "E14-D006",
+          "speaker": "玛拉",
+          "listener": "凯文",
+          "text": "No pictures of Ellie.",
+          "translationZh": "不交艾莉的照片。",
+          "tone": "把个人条件带到公事",
+          "start": 13,
+          "end": 15.3
+        },
+        {
+          "id": "E14-D007",
+          "speaker": "凯文",
+          "listener": "玛拉",
+          "text": "No photos. Just the receipt. You keep the original.",
+          "translationZh": "不交照片，只要回执。原件你拿着。",
+          "tone": "明确重复她的条件，原件推回去",
+          "start": 15.6,
+          "end": 19.4
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 12,
+          "start": "玛拉左臂蓝色文件夹，右手机，医生持回执。",
+          "action": "诊所咨询桌上，凯文将三份未和解患者委托单装进申请夹，把玛拉的和解协议留外面。玛拉拿回自己的原件，问她是否还算申请人。",
+          "end": "三名独立委托人与玛拉补充材料分开。",
+          "dialogueCueIds": [
+            "E14-D005",
+            "E14-D801"
+          ],
+          "sourceShotIds": [
+            "E14-SH004"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        },
+        {
+          "duration": 12,
+          "start": "三名独立委托人与玛拉补充材料分开。",
+          "action": "玛拉把保留例外的那页从蓝夹里抽出，凯文核对后在有限授权上勾明回执范围。她签字，将原件重新塞回自己的夹内。",
+          "end": "有限授权归凯文，原回执与和解副本仍归玛拉。",
+          "dialogueCueIds": [
+            "E14-D006",
+            "E14-D007"
+          ],
+          "sourceShotIds": [
+            "E14-SH005"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        }
+      ],
+      "viewerEntry": "把集体保全建立在各人的有限授权上。",
+      "viewerExit": "有限授权归凯文，原回执与和解副本仍归玛拉。",
+      "cutTrigger": "诺拉抬手机，玛拉先问会不会写进报道，切她要求边界的视角。",
+      "next": "接E14-SH101；诺拉抬手机，玛拉先问会不会写进报道，切她要求边界的视角。"
+    },
+    {
+      "id": "E14-SH101",
+      "sceneId": "E14-SC02",
+      "sourceShotIds": [],
+      "duration": 22,
+      "characters": [
+        "MARA-WORK",
+        "NORA",
+        "COUNSEL"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK"
+      ],
+      "offscreenCharacterIds": [
+        "NORA",
+        "COUNSEL"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "她许可正式申请而不许可再次采访，记者必须把手机收回。",
+      "framing": "诺拉南肩旁朝西65mm玛拉中近景，诺拉手机在前景降回，凯文在东侧画外。",
+      "composition": "迁移当日午间诊所东南咨询室，凯文坐东，玛拉坐西，诺拉在南门侧。三位未和解患者的委托单在桌中，玛拉自己的和解书与蓝夹留在西侧；医生由南门进入。 本镜画内角色：MARA-WORK。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定22秒，蓝夹合上留在玛拉手里。",
+      "focus": "她许可正式申请而不许可再次采访，记者必须把手机收回。",
+      "start": "有限授权归凯文，原回执与和解副本仍归玛拉。",
+      "action": "玛拉把蓝夹合上，诺拉刚把手机抬到桌沿，她便把签好的有限授权转向凯文。凯文逐项确认这次提交走正式程序，诺拉将手机放回口袋。",
+      "end": "凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。",
+      "sound": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E14-D204",
+          "speaker": "玛拉",
+          "listener": "诺拉与凯文",
+          "text": "Is this going in another story?",
+          "translationZh": "这也要写进新报道吗？",
+          "tone": "先向记者划界",
+          "start": 1,
+          "end": 3.35
+        },
+        {
+          "id": "E14-D205",
+          "speaker": "诺拉",
+          "listener": "莉娜",
+          "text": "I'm asking about the records, not for an interview.",
+          "translationZh": "我来问记录，不是采访你。",
+          "tone": "接受被拒绝，而不转问孩子",
+          "start": 3.65,
+          "end": 7.18
+        },
+        {
+          "id": "E14-D206",
+          "speaker": "凯文",
+          "listener": "玛拉",
+          "text": "This goes with the formal request. Just the receipt you've authorized.",
+          "translationZh": "这张随正式申请提交，只用你授权的回执。",
+          "tone": "限定使用去向",
+          "start": 7.48,
+          "end": 11.8
+        },
+        {
+          "id": "E14-D207",
+          "speaker": "玛拉",
+          "listener": "诺拉与凯文",
+          "text": "Then use that. Nothing from her folder.",
+          "translationZh": "那就用这张，别动她其他材料。",
+          "tone": "保留自己的原件与其余资料",
+          "start": 12.1,
+          "end": 14.84
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 22,
+          "start": "有限授权归凯文，原回执与和解副本仍归玛拉。",
+          "action": "玛拉把蓝夹合上，诺拉刚把手机抬到桌沿，她便把签好的有限授权转向凯文。凯文逐项确认这次提交走正式程序，诺拉将手机放回口袋。",
+          "end": "凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。",
+          "dialogueCueIds": [
+            "E14-D204",
+            "E14-D205",
+            "E14-D206",
+            "E14-D207"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 24
+        }
+      ],
+      "viewerEntry": "有限授权归凯文，原回执与和解副本仍归玛拉。",
+      "viewerExit": "凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。",
+      "cutTrigger": "医生到桌北侧等签能证明的内容，切其工作限制。",
+      "next": "接E14-SH006；医生到桌北侧等签能证明的内容，切其工作限制。"
+    },
+    {
+      "id": "E14-SH006",
+      "sceneId": "E14-SC02",
+      "sourceShotIds": [
+        "E14-SH006",
+        "E14-SH007"
+      ],
+      "duration": 26,
+      "characters": [
+        "DOCTOR",
+        "NORA",
+        "COUNSEL",
+        "MARA-WORK"
+      ],
+      "onScreenCharacterIds": [
+        "DOCTOR",
+        "NORA",
+        "COUNSEL",
+        "MARA-WORK"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "医生只证明发送/收讫，申请回执没有被误当取得日志；人物进出替代新纸特写。",
+      "framing": "咨询室西北角40mm医生、门侧诺拉与桌东凯文的斜向中景，玛拉只在西侧边缘。",
+      "composition": "迁移当日午间诊所东南咨询室，凯文坐东，玛拉坐西，诺拉在南门侧。三位未和解患者的委托单在桌中，玛拉自己的和解书与蓝夹留在西侧；医生由南门进入。 本镜画内角色：DOCTOR,NORA,COUNSEL,MARA-WORK。",
+      "camera": "固定26秒；医生签完沿南门离开，凯文手机亮后留在同一画面内答只是受理。",
+      "focus": "医生只证明发送/收讫，申请回执没有被误当取得日志；人物进出替代新纸特写。",
+      "start": "凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。",
+      "action": "医生看一眼挂钟。诺拉想问内部复核，医生把笔放在自己能确认的发送与回执两行旁，边答边签名；答完带笔转身，朝南门画外返回病人那边。\n凯文打开刚收到的受理通知。诺拉举起手机等一句成功消息，凯文回答只是受理回执，不迎向她的镜头；随后收妥签名页与授权副本，合上黑包。",
+      "end": "申请已受理，尚未裁定，更无记录内容。",
+      "sound": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E14-D008",
+          "speaker": "诺拉",
+          "listener": "医生",
+          "text": "Did they have it when they reviewed her case?",
+          "translationZh": "复核她的申请时，他们手里有吗？",
+          "tone": "想把发送成功往内部复核再推一步",
+          "start": 1,
+          "end": 5.3
+        },
+        {
+          "id": "E14-D009",
+          "speaker": "医生",
+          "listener": "诺拉",
+          "text": "I sent it. They sent this receipt back. That's all I can sign off on.",
+          "translationZh": "我发了，他们回了这张回执。我能签字确认的就这些。",
+          "tone": "只在自己能证实的两行签字",
+          "start": 5.6,
+          "end": 13.3
+        },
+        {
+          "id": "E14-D010",
+          "speaker": "诺拉",
+          "listener": "凯文",
+          "text": "Did we get them?",
+          "translationZh": "拿到那些记录了？",
+          "tone": "手机举起来，先把受理当成果",
+          "start": 16,
+          "end": 18.3
+        },
+        {
+          "id": "E14-D011",
+          "speaker": "凯文",
+          "listener": "诺拉",
+          "text": "No. That's the filing receipt.",
+          "translationZh": "没有，这是申请受理回执。",
+          "tone": "纠正对象，同时收文件",
+          "start": 18.6,
+          "end": 21.9
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 15,
+          "start": "凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。",
+          "action": "医生看一眼挂钟。诺拉想问内部复核，医生把笔放在自己能确认的发送与回执两行旁，边答边签名；答完带笔转身，朝南门画外返回病人那边。",
+          "end": "签名证言仅确认上传和收件回执，医生回到自己的工作。",
+          "dialogueCueIds": [
+            "E14-D008",
+            "E14-D009"
+          ],
+          "sourceShotIds": [
+            "E14-SH006"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 17
+        },
+        {
+          "duration": 11,
+          "start": "签名证言仅确认上传和收件回执，医生回到自己的工作。",
+          "action": "凯文打开刚收到的受理通知。诺拉举起手机等一句成功消息，凯文回答只是受理回执，不迎向她的镜头；随后收妥签名页与授权副本，合上黑包。",
+          "end": "申请已受理，尚未裁定，更无记录内容。",
+          "dialogueCueIds": [
+            "E14-D010",
+            "E14-D011"
+          ],
+          "sourceShotIds": [
+            "E14-SH007"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 13
+        }
+      ],
+      "viewerEntry": "凯文把授权副本放进申请夹，蓝夹始终留在玛拉手里。",
+      "viewerExit": "申请已受理，尚未裁定，更无记录内容。",
+      "cutTrigger": "凯文合包去送达，切保存行动真正到达公司。",
+      "next": "本场完成，按正式EP场序转场；凯文合包去送达，切保存行动真正到达公司。"
+    },
+    {
+      "id": "E14-SH008",
+      "sceneId": "E14-SC03",
+      "sourceShotIds": [
+        "E14-SH008",
+        "E14-SH009"
+      ],
+      "duration": 26,
+      "characters": [
+        "COUNSEL",
+        "VICTOR",
+        "TECH-AUTH"
+      ],
+      "onScreenCharacterIds": [
+        "COUNSEL",
+        "VICTOR",
+        "TECH-AUTH"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "只保列明日志还不够，索引必须同样进入执行范围。",
+      "framing": "技术工区南侧35mm三人中全景，凯文在西玻璃边将裁定给维克多，技术员仍坐东工位。",
+      "composition": "当天 20:47 技术工区南门打开，凯文携正式送达副本进入。维克多在西玻璃墙边，技术员坐东侧授权工位，北设备柜风扇持续响，九点例行任务尚未执行。 本镜画内角色：COUNSEL,VICTOR,TECH-AUTH。",
+      "camera": "固定26秒，范围附件在两人手上核对，技术员等指令而不先操作。",
+      "focus": "只保列明日志还不够，索引必须同样进入执行范围。",
+      "start": "凯文持黑包与裁定副本，维克多站西侧。",
+      "action": "夜间技术工区南门开，凯文带正式送达副本到维克多面前。授权技术员在东工位停下迁移准备，等两人核对范围；北墙钟在九点之前。\n维克多在范围附件上指到指定日志，技术员在东侧工位等着范围确认，没有开口。凯文翻到同附件下一行索引要求，维克多看清后把两行一起划进执行单。",
+      "end": "日志及索引都进入正式保全范围，患者全档不外流。",
+      "sound": "设备风扇、键盘与打印机，技术员只说所列状态。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E14-D012",
+          "speaker": "凯文",
+          "listener": "维克多",
+          "text": "You've been served. The logs we need preserved are listed here.",
+          "translationZh": "已经送达了。要保全的日志列在这里。",
+          "tone": "把正式裁定附件展开到对方面前",
+          "start": 1,
+          "end": 7.7
+        },
+        {
+          "id": "E14-D013",
+          "speaker": "维克多",
+          "listener": "技术员",
+          "text": "Pause the job. Let me check what it covers.",
+          "translationZh": "先暂停。我看一下范围。",
+          "tone": "先止住覆盖，再核裁定",
+          "start": 8,
+          "end": 12.3
+        },
+        {
+          "id": "E14-D014",
+          "speaker": "维克多",
+          "listener": "技术员",
+          "text": "Only these logs.",
+          "translationZh": "只保这几类日志。",
+          "tone": "指确定范围",
+          "start": 15,
+          "end": 16.8
+        },
+        {
+          "id": "E14-D802",
+          "speaker": "凯文",
+          "listener": "维克多",
+          "text": "The index too. Right there.",
+          "translationZh": "还有索引，就这行。",
+          "tone": "顺着对方手指往下一行补",
+          "start": 17.1,
+          "end": 19.9
+        },
+        {
+          "id": "E14-D803",
+          "speaker": "维克多",
+          "listener": "技术员",
+          "text": "That too.",
+          "translationZh": "那个也保留。",
+          "tone": "看清后确认，不另争一句",
+          "start": 20.2,
+          "end": 21.5
+        }
+      ],
+      "overlay": [
+        {
+          "text": "20:47 — ROLLOVER AT 21:00 / 20:47——21:00常规覆盖",
+          "start": 1,
+          "end": 6,
+          "position": "转场时间后期"
+        }
+      ],
+      "generationSegments": [
+        {
+          "duration": 14,
+          "start": "凯文持黑包与裁定副本，维克多站西侧。",
+          "action": "夜间技术工区南门开，凯文带正式送达副本到维克多面前。授权技术员在东工位停下迁移准备，等两人核对范围；北墙钟在九点之前。",
+          "end": "已送达的保全裁定进入执行，常规任务尚未运行。",
+          "dialogueCueIds": [
+            "E14-D012",
+            "E14-D013"
+          ],
+          "sourceShotIds": [
+            "E14-SH008"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 16
+        },
+        {
+          "duration": 12,
+          "start": "已送达的保全裁定进入执行，常规任务尚未运行。",
+          "action": "维克多在范围附件上指到指定日志，技术员在东侧工位等着范围确认，没有开口。凯文翻到同附件下一行索引要求，维克多看清后把两行一起划进执行单。",
+          "end": "日志及索引都进入正式保全范围，患者全档不外流。",
+          "dialogueCueIds": [
+            "E14-D014",
+            "E14-D802",
+            "E14-D803"
+          ],
+          "sourceShotIds": [
+            "E14-SH009"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        }
+      ],
+      "viewerEntry": "让程序竞争以合法保存完成一场有限胜利。",
+      "viewerExit": "日志及索引都进入正式保全范围，患者全档不外流。",
+      "cutTrigger": "两类范围确定，切执行它的人而非继续拍律师读纸。",
+      "next": "接E14-SH010；两类范围确定，切执行它的人而非继续拍律师读纸。"
+    },
+    {
+      "id": "E14-SH010",
+      "sceneId": "E14-SC03",
+      "sourceShotIds": [
+        "E14-SH010"
+      ],
+      "duration": 31,
+      "characters": [
+        "TECH-AUTH",
+        "VICTOR",
+        "COUNSEL"
+      ],
+      "onScreenCharacterIds": [
+        "TECH-AUTH"
+      ],
+      "offscreenCharacterIds": [
+        "VICTOR",
+        "COUNSEL"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "无关业务可继续，指定日志/索引不被覆盖；声音限定保存状态。",
+      "framing": "授权技术员南肩后50mm工作屏与侧脸中景，纸质执行单在屏旁，律师和维克多位于西侧画外。",
+      "composition": "当天 20:47 技术工区南门打开，凯文携正式送达副本进入。维克多在西玻璃墙边，技术员坐东侧授权工位，北设备柜风扇持续响，九点例行任务尚未执行。 本镜画内角色：TECH-AUTH。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定31秒，技术员保存排除项、确认任务状态，再取打印件；不进入内容页面。",
+      "focus": "无关业务可继续，指定日志/索引不被覆盖；声音限定保存状态。",
+      "start": "日志及索引都进入正式保全范围，患者全档不外流。",
+      "action": "技术员将日志与索引两行加入排除清单，剩余迁移项目仍停着。维克多指向其余批次，凯文退开屏幕位置，只看执行范围。\n技术员在已授权工位录入保全编号，勾选执行范围，确认九点例行任务排除这组记录。打印机出执行确认时，他仍让屏幕停在状态页，没有替凯文打开内容。",
+      "end": "保全生效，凯文只拿执行确认，日志内容未交出。",
+      "sound": "设备风扇、键盘与打印机，技术员只说所列状态。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E14-D208",
+          "speaker": "维克多",
+          "listener": "同场对话者",
+          "text": "Can the rest of the job run?",
+          "translationZh": "其他部分能照常跑吗？",
+          "tone": "要恢复不受裁定影响的业务",
+          "start": 1,
+          "end": 3.75
+        },
+        {
+          "id": "E14-D209",
+          "speaker": "技术员",
+          "listener": "维克多与凯文",
+          "text": "Yes. Once these exclusions are saved.",
+          "translationZh": "可以，把排除项保存好就行。",
+          "tone": "说实际操作顺序",
+          "start": 4.05,
+          "end": 6.4
+        },
+        {
+          "id": "E14-D210",
+          "speaker": "凯文",
+          "listener": "玛拉",
+          "text": "Put both categories on the confirmation.",
+          "translationZh": "确认单把两类都列上。",
+          "tone": "不要求当场展示内容",
+          "start": 6.7,
+          "end": 9.05
+        },
+        {
+          "id": "E14-D015",
+          "speaker": "技术员",
+          "listener": "维克多、凯文",
+          "text": "The hold's in. The nine o'clock job will skip them. I'll print your confirmation.",
+          "translationZh": "保全设好了，九点的任务会跳过这些。我给你打确认单。",
+          "tone": "核状态后才宣布完成，手不打开内容",
+          "start": 19,
+          "end": 25.7
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 18,
+          "start": "日志及索引都进入正式保全范围，患者全档不外流。",
+          "action": "技术员将日志与索引两行加入排除清单，剩余迁移项目仍停着。维克多指向其余批次，凯文退开屏幕位置，只看执行范围。",
+          "end": "技术员保存排除项，再确认九点任务跳过指定日志与索引。",
+          "dialogueCueIds": [
+            "E14-D208",
+            "E14-D209",
+            "E14-D210"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 20
+        },
+        {
+          "duration": 13,
+          "start": "技术员保存排除项，再确认九点任务跳过指定日志与索引。",
+          "action": "技术员在已授权工位录入保全编号，勾选执行范围，确认九点例行任务排除这组记录。打印机出执行确认时，他仍让屏幕停在状态页，没有替凯文打开内容。",
+          "end": "保全生效，凯文只拿执行确认，日志内容未交出。",
+          "dialogueCueIds": [
+            "E14-D015"
+          ],
+          "sourceShotIds": [
+            "E14-SH010"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 15
+        }
+      ],
+      "viewerEntry": "日志及索引都进入正式保全范围，患者全档不外流。",
+      "viewerExit": "保全生效，凯文只拿执行确认，日志内容未交出。",
+      "cutTrigger": "打印确认从东工位交出，切律师接结果及其局限。",
+      "next": "接E14-SH011；打印确认从东工位交出，切律师接结果及其局限。"
+    },
+    {
+      "id": "E14-SH011",
+      "sceneId": "E14-SC03",
+      "sourceShotIds": [
+        "E14-SH011"
+      ],
+      "duration": 10,
+      "characters": [
+        "COUNSEL",
+        "VICTOR"
+      ],
+      "onScreenCharacterIds": [
+        "COUNSEL"
+      ],
+      "offscreenCharacterIds": [
+        "VICTOR"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "保存完成仍需正式调取，不得到数据内容。",
+      "framing": "技术工区南偏西65mm凯文中近景，确认单在下前景，维克多只留递纸手。",
+      "composition": "当天 20:47 技术工区南门打开，凯文携正式送达副本进入。维克多在西玻璃墙边，技术员坐东侧授权工位，北设备柜风扇持续响，九点例行任务尚未执行。 本镜画内角色：COUNSEL。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定10秒，凯文核范围后把纸放包。",
+      "focus": "保存完成仍需正式调取，不得到数据内容。",
+      "start": "保全生效，凯文只拿执行确认，日志内容未交出。",
+      "action": "凯文读确认单的记录范围和时间，与裁定附件逐一对照。维克多等他核完才恢复其余迁移任务；凯文将下一步正式调取联系人记下，不拿走数据。",
+      "end": "记录保存下来，独立调取还要继续。",
+      "sound": "设备风扇、键盘与打印机，技术员只说所列状态。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E14-D016",
+          "speaker": "凯文",
+          "listener": "维克多",
+          "text": "Who handles the records?",
+          "translationZh": "记录找谁调？",
+          "tone": "确认单已经核好，问下一步",
+          "start": 1,
+          "end": 2.8
+        },
+        {
+          "id": "E14-D017",
+          "speaker": "维克多",
+          "listener": "凯文",
+          "text": "Our lawyers. This just confirms the hold.",
+          "translationZh": "找我们律师。这张只确认保全。",
+          "tone": "不把保全当作已向对方交出数据",
+          "start": 3.1,
+          "end": 6.4
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 10,
+          "start": "保全生效，凯文只拿执行确认，日志内容未交出。",
+          "action": "凯文读确认单的记录范围和时间，与裁定附件逐一对照。维克多等他核完才恢复其余迁移任务；凯文将下一步正式调取联系人记下，不拿走数据。",
+          "end": "记录保存下来，独立调取还要继续。",
+          "dialogueCueIds": [
+            "E14-D016",
+            "E14-D017"
+          ],
+          "sourceShotIds": [
+            "E14-SH011"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 12
+        }
+      ],
+      "viewerEntry": "保全生效，凯文只拿执行确认，日志内容未交出。",
+      "viewerExit": "记录保存下来，独立调取还要继续。",
+      "cutTrigger": "凯文拿纸离开，切来源得知保存成功却仍交出工牌。",
+      "next": "本场完成，按正式EP场序转场；凯文拿纸离开，切来源得知保存成功却仍交出工牌。"
+    },
+    {
+      "id": "E14-SH012",
+      "sceneId": "E14-SC04",
+      "sourceShotIds": [
+        "E14-SH012",
+        "E14-SH013"
+      ],
+      "duration": 24,
+      "characters": [
+        "LENA",
+        "VICTOR"
+      ],
+      "onScreenCharacterIds": [
+        "LENA"
+      ],
+      "offscreenCharacterIds": [
+        "VICTOR"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "日志保住与来源被要求完整消息同时发生，她拒签知情概括。",
+      "framing": "东工位南侧50mm莉娜与桌面中景，工牌、工作机、水杯和流转清单分别可见，维克多只在左侧递入纸。",
+      "composition": "同日晚间质检区，东工位已停权。莉娜把工牌与工作手机放桌中，水杯还压着用旧的杯垫。维克多从中央桌带来资料流转清单，南侧通路通向出口。 本镜画内角色：LENA。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定24秒，让她看到路易吉姓名但不展示所有通信。",
+      "focus": "日志保住与来源被要求完整消息同时发生，她拒签知情概括。",
+      "start": "莉娜工位已停权限，工牌和工作手机尚在她手边，私人水杯在杯垫上；维克多从中央桌带清单走近。",
+      "action": "东侧工位权限暂停后，莉娜把工牌与工作手机放到桌中，取出自己用了很久的水杯装进包。维克多把一份资料流转清单放在她还没收走的杯垫上。\n莉娜在分发清单里看到路易吉名字，翻到后面确认不是只有互助组的地址。她把纸放回杯垫，不签对知情的概括，只同意由律师处理通信。",
+      "end": "联系事实进入正式调查，不当场等于她知道暴力计划。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E14-D018",
+          "speaker": "莉娜",
+          "listener": "维克多",
+          "text": "They saved the logs?",
+          "translationZh": "日志留住了？",
+          "tone": "收自己的杯子前先确认",
+          "start": 1,
+          "end": 3.3
+        },
+        {
+          "id": "E14-D019",
+          "speaker": "维克多",
+          "listener": "莉娜",
+          "text": "They're on hold. Take a look at this.",
+          "translationZh": "保全了。你看看这个。",
+          "tone": "把流转清单放在她杯垫上",
+          "start": 3.6,
+          "end": 7.4
+        },
+        {
+          "id": "E14-D020",
+          "speaker": "莉娜",
+          "listener": "维克多",
+          "text": "He wanted examples for appeals. That's all I knew.",
+          "translationZh": "他要申诉样本，我知道的就这些。",
+          "tone": "不签宽泛概括，只说当时目的",
+          "start": 12,
+          "end": 17.2
+        },
+        {
+          "id": "E14-D021",
+          "speaker": "维克多",
+          "listener": "莉娜",
+          "text": "They'll want every message. Let your lawyer handle it.",
+          "translationZh": "他们会要全部消息。交给你律师处理。",
+          "tone": "给出下一步压力，不替她认定知情",
+          "start": 17.5,
+          "end": 22.2
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 11,
+          "start": "莉娜工位已停权限，工牌和工作手机尚在她手边，私人水杯在杯垫上；维克多从中央桌带清单走近。",
+          "action": "东侧工位权限暂停后，莉娜把工牌与工作手机放到桌中，取出自己用了很久的水杯装进包。维克多把一份资料流转清单放在她还没收走的杯垫上。",
+          "end": "工作物件交回，私人杯带走，调查清单拦住下班。",
+          "dialogueCueIds": [
+            "E14-D018",
+            "E14-D019"
+          ],
+          "sourceShotIds": [
+            "E14-SH012"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 13
+        },
+        {
+          "duration": 13,
+          "start": "工作物件交回，私人杯带走，调查清单拦住下班。",
+          "action": "莉娜在分发清单里看到路易吉名字，翻到后面确认不是只有互助组的地址。她把纸放回杯垫，不签对知情的概括，只同意由律师处理通信。",
+          "end": "联系事实进入正式调查，不当场等于她知道暴力计划。",
+          "dialogueCueIds": [
+            "E14-D020",
+            "E14-D021"
+          ],
+          "sourceShotIds": [
+            "E14-SH013"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 15
+        }
+      ],
+      "viewerEntry": "把保全成功的另一面落到来源生活与调查中。",
+      "viewerExit": "联系事实进入正式调查，不当场等于她知道暴力计划。",
+      "cutTrigger": "她转问自己工资入口，切到两人实际行政交接的距离。",
+      "next": "接E14-SH102；她转问自己工资入口，切到两人实际行政交接的距离。"
+    },
+    {
+      "id": "E14-SH102",
+      "sceneId": "E14-SC04",
+      "sourceShotIds": [],
+      "duration": 25,
+      "characters": [
+        "LENA",
+        "VICTOR"
+      ],
+      "onScreenCharacterIds": [
+        "LENA",
+        "VICTOR"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "她还需要工资记录、要求书面安排和律师收问题，工作身份被实际切断。",
+      "framing": "质检区南通道35mm共享中全景，莉娜在东工位收包，维克多在中央桌边，两人相隔数米。",
+      "composition": "同日晚间质检区，东工位已停权。莉娜把工牌与工作手机放桌中，水杯还压着用旧的杯垫。维克多从中央桌带来资料流转清单，南侧通路通向出口。 本镜画内角色：LENA,VICTOR。",
+      "camera": "固定25秒，不把远处答复者拉近成私人安慰。",
+      "focus": "她还需要工资记录、要求书面安排和律师收问题，工作身份被实际切断。",
+      "start": "联系事实进入正式调查，不当场等于她知道暴力计划。",
+      "action": "莉娜将流转清单留在杯垫上，手从工牌移向自己的包。维克多站在中央桌边等她收拾，她先确认哪些东西今天还带得走。",
+      "end": "她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E14-D211",
+          "speaker": "莉娜",
+          "listener": "维克多",
+          "text": "I need my pay records. The portal uses this phone.",
+          "translationZh": "工资记录我还得查，登录要用这部手机。",
+          "tone": "提出下班之后的实际困难",
+          "start": 1,
+          "end": 4.92
+        },
+        {
+          "id": "E14-D212",
+          "speaker": "维克多",
+          "listener": "莉娜",
+          "text": "Payroll can send them to your personal address.",
+          "translationZh": "工资那边能发到你的私人邮箱。",
+          "tone": "只答能处理的事",
+          "start": 5.22,
+          "end": 8.36
+        },
+        {
+          "id": "E14-D213",
+          "speaker": "莉娜",
+          "listener": "维克多",
+          "text": "Put that in the email too. And send the questions to my lawyer.",
+          "translationZh": "这个也写进邮件，问题发给我律师。",
+          "tone": "不再靠口头安排",
+          "start": 8.66,
+          "end": 13.76
+        },
+        {
+          "id": "E14-D214",
+          "speaker": "维克多",
+          "listener": "莉娜",
+          "text": "I will.",
+          "translationZh": "好。",
+          "tone": "结束行政交接，不承诺免于调查",
+          "start": 14.06,
+          "end": 15.16
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 25,
+          "start": "联系事实进入正式调查，不当场等于她知道暴力计划。",
+          "action": "莉娜将流转清单留在杯垫上，手从工牌移向自己的包。维克多站在中央桌边等她收拾，她先确认哪些东西今天还带得走。",
+          "end": "她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。",
+          "dialogueCueIds": [
+            "E14-D211",
+            "E14-D212",
+            "E14-D213",
+            "E14-D214"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 27
+        }
+      ],
+      "viewerEntry": "联系事实进入正式调查，不当场等于她知道暴力计划。",
+      "viewerExit": "她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。",
+      "cutTrigger": "维克多转回中央桌，留下她独立拨自己的律师。",
+      "next": "接E14-SH014；维克多转回中央桌，留下她独立拨自己的律师。"
+    },
+    {
+      "id": "E14-SH014",
+      "sceneId": "E14-SC04",
+      "sourceShotIds": [
+        "E14-SH014"
+      ],
+      "duration": 17,
+      "characters": [
+        "LENA"
+      ],
+      "onScreenCharacterIds": [
+        "LENA"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "先拍清单、留言、发送，再带私人杯离开；原件没有随包走。",
+      "framing": "东工位西南侧65mm莉娜半身，清单原件、工牌与工作机仍在桌上，私人手机在她手中。",
+      "composition": "同日晚间质检区，东工位已停权。莉娜把工牌与工作手机放桌中，水杯还压着用旧的杯垫。维克多从中央桌带来资料流转清单，南侧通路通向出口。 本镜画内角色：LENA。",
+      "camera": "固定17秒直到她向南通路离画，不跟到电梯。",
+      "focus": "先拍清单、留言、发送，再带私人杯离开；原件没有随包走。",
+      "start": "她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。",
+      "action": "莉娜从包里取私人手机，将杯垫上清单逐页拍清，再拨律师语音信箱留下下列留言。留言结束后挂断，将刚拍的清单照片发送给律师；看到发送确认后沿南侧通路离开。清单原件、工作手机与工牌留在东桌，私人杯在肩包里轻碰。",
+      "end": "清单照片已发给自己的律师，原件及工作物件留东桌；私人手机随莉娜离开，没有接到对方答复。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。 莉娜给自己的律师留言，对端没有回应。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E14-D022",
+          "speaker": "莉娜",
+          "listener": "自己的律师语音信箱",
+          "text": "I've got the list. I'll send it. Please call before I talk to them.",
+          "translationZh": "名单我拿到了，会发你。跟他们谈之前，先给我回个电话。",
+          "tone": "对语音信箱说实际请求，结束后才发照片",
+          "start": 3,
+          "end": 10.2
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 17,
+          "start": "她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。",
+          "action": "莉娜从包里取私人手机，将杯垫上清单逐页拍清，再拨律师语音信箱留下下列留言。留言结束后挂断，将刚拍的清单照片发送给律师；看到发送确认后沿南侧通路离开。清单原件、工作手机与工牌留在东桌，私人杯在肩包里轻碰。",
+          "end": "清单照片已发给自己的律师，原件及工作物件留东桌；私人手机随莉娜离开，没有接到对方答复。",
+          "dialogueCueIds": [
+            "E14-D022"
+          ],
+          "sourceShotIds": [
+            "E14-SH014"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 19
+        }
+      ],
+      "viewerEntry": "她把工牌和工作手机留在桌中，只取走自己的杯子和私人手机。",
+      "viewerExit": "清单照片已发给自己的律师，原件及工作物件留东桌；私人手机随莉娜离开，没有接到对方答复。",
+      "cutTrigger": "暗下的工位留着三件公司物品，四个月后转争议材料进入法庭。",
+      "next": "本场完成，按正式EP场序转场；暗下的工位留着三件公司物品，四个月后转争议材料进入法庭。"
+    }
+  ],
+  "continuityNote": "患者律师凯文代表三名未和解患者启动独立民事保全，玛拉依据和解保留条款交回执且留原件。保全由民事程序取得并正式送达，不由杀人案法官处理赔付。仅指定短期事件日志面临常规覆盖，患者病历保留；保全后不立即交出全部内容。TECH-AUTH为36岁亚裔男性，短黑发灰衬衣工牌，平实中音，仅授权操作。IT-VOICE为仅电话的35岁男性普通中音，不新增解谜主角。莉娜独立律师为电话必要角色，无对话。",
+  "dramaturgy": {
+    "openingQuestion": "患者能否在九点例行覆盖前，把尚未读懂的日志正式留下？",
+    "pursuit": "莉娜只给权限内的政策线索，独立患者律师收三名未和解者授权与医生有限证言，再持裁定要求执行。",
+    "reversal": "保存成功不是拿到内容，来源也不能因此带着工作权限离开。",
+    "cost": "玛拉只交限定回执仍需盯隐私，莉娜交回工牌和工作手机、面对流转清单。",
+    "cliffhanger": "完整通信将被要求提供，日志在，谁知道多少却要另答。",
+    "nextEpisodeBridge": "E15公司从正式材料中拿出真登录真签名，保全并没有自动证明记者的解释。"
+  },
+  "productionUnitNote": "旧E编号只作生产来源；正式观众分集依当前24集短剧场序。长镜按generationSegments连续制作，段间继承人物/道具/轴线。"
+}

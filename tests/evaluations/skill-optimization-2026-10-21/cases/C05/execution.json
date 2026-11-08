@@ -1,0 +1,49 @@
+{
+  "case_id": "C05",
+  "model": null,
+  "token_usage": null,
+  "elapsed_time_seconds": null,
+  "read_files": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C05\\request.txt",
+      "sha256": "d11fada1ff6b8d8ab0f074b5bb56e3c71f458f835f9bdb886b8065431eb842b9",
+      "read_scope": "完整请求"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\SKILL.md",
+      "sha256": "b1c68b8861d474a36f4edf7dadb45ee7e7228f9dc0e0f501c5121e3ab50bbf8c",
+      "read_scope": "完整入口"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\routes\\style.md",
+      "sha256": "8c68adec5424cdeef9735099102eabd022e65181af21efac4564d41e7528e806",
+      "read_scope": "完整风格路由"
+    },
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\references\\optional\\makeup-style-presets.md",
+      "sha256": "a2e4efa2134d2362a54efea433b802480a810c9a9c3b9e9cc4fadc6799992a8a",
+      "read_scope": "名称定位片段与 MU14 完整卡；未通读其他配方"
+    }
+  ],
+  "checks": {
+    "utf8_decodable": true,
+    "lf_only": true,
+    "exact_card_revision_present": true,
+    "all_user_locks_present": true,
+    "standalone_copy_block": true,
+    "no_paired_color_card_enabled": true,
+    "no_image_generation_called": true
+  },
+  "artifacts": [
+    {
+      "path": "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C05\\output.md",
+      "sha256": "8c452f938dba42c0c45abdbb601db5828d0d4c8dae031de1d6b60a00f614f662",
+      "encoding": "UTF-8",
+      "line_endings": "LF"
+    }
+  ],
+  "limitations": [
+    "仅文字换妆稿；按请求未生成图像，未做实际妆面效果验收。",
+    "未查看参考图片；卡片配方用于设计，不宣称复现剧组原方。"
+  ]
+}

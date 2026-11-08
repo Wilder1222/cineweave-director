@@ -1,0 +1,51 @@
+{
+  "project": {
+    "id": "52f7b3c30c99c933c44d4e69bc7321f0de76e85820f18a16cba10ee534cbd4c4",
+    "title": "天台停着一台机甲",
+    "topic_id": "K004"
+  },
+  "source": "Studio authenticated UI DOM",
+  "currentRevision": null,
+  "inventoryReadAt": "2026-11-04T06:42:46.366Z",
+  "expectedDocumentIds": [
+    "15bb2e598e4b4f97ab55e8adc76d68d653252d4a92b6398beeb9fa9574afaf7f",
+    "7b398331bb44b8e7fdc1ffa440ac7374ac34425e2b92c3b4f3dd563c86932def",
+    "b0031623a1a1248ccf47f5a93a9fb7ab5de4b282f34da8f6abfdbadc26545e1b"
+  ],
+  "documents": [
+    {
+      "id": "15bb2e598e4b4f97ab55e8adc76d68d653252d4a92b6398beeb9fa9574afaf7f",
+      "meta": "提示词",
+      "title": "K004 天台停着一台机甲｜审阅与来源｜20261031审阅版",
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/studio-review/2026-11-04/studio-current/52f7b3c30c99c933c44d4e69bc7321f0de76e85820f18a16cba10ee534cbd4c4/15bb2e598e4b4f97ab55e8adc76d68d653252d4a92b6398beeb9fa9574afaf7f.md",
+      "sha256": "6f58995760b9fc152c6352b910e240e65b0401c38bcf5e7b70fa9b5293e533e6",
+      "length": 816,
+      "readAt": "2026-11-04T06:42:47.244Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts",
+      "proposals": []
+    },
+    {
+      "id": "7b398331bb44b8e7fdc1ffa440ac7374ac34425e2b92c3b4f3dd563c86932def",
+      "meta": "提示词",
+      "title": "K004 天台停着一台机甲｜分镜与视频提示｜20261031审阅版",
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/studio-review/2026-11-04/studio-current/52f7b3c30c99c933c44d4e69bc7321f0de76e85820f18a16cba10ee534cbd4c4/7b398331bb44b8e7fdc1ffa440ac7374ac34425e2b92c3b4f3dd563c86932def.md",
+      "sha256": "b9419c2e83a0d630b24b5099032d72d3ee7a41d3cffb8735a22309e9673882c8",
+      "length": 5447,
+      "readAt": "2026-11-04T06:42:55.006Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts",
+      "proposals": []
+    },
+    {
+      "id": "b0031623a1a1248ccf47f5a93a9fb7ab5de4b282f34da8f6abfdbadc26545e1b",
+      "meta": "剧本",
+      "title": "K004 天台停着一台机甲｜剧本｜20261031审阅版",
+      "path": "D:/study/projects/cineweave-codex-skills/cineweave-director/studio-review/2026-11-04/studio-current/52f7b3c30c99c933c44d4e69bc7321f0de76e85820f18a16cba10ee534cbd4c4/b0031623a1a1248ccf47f5a93a9fb7ab5de4b282f34da8f6abfdbadc26545e1b.md",
+      "sha256": "d4001e952727846dbda8a8e3ea16cdfe3eac604338ffde050fd7986cfe78e37b",
+      "length": 1278,
+      "readAt": "2026-11-04T06:43:02.542Z",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio#scripts",
+      "proposals": []
+    }
+  ],
+  "complete": true
+}

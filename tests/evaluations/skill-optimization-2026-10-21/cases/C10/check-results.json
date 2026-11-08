@@ -1,0 +1,112 @@
+{
+  "shotReview": {
+    "command": [
+      "node",
+      "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\scripts\\check-shot-review.mjs",
+      "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\review.json"
+    ],
+    "exit_code": 0,
+    "result": {
+      "valid": true,
+      "scope": "plan_only",
+      "coverageComplete": true,
+      "reviewComplete": true,
+      "expectedRows": 24,
+      "missing": [],
+      "openItems": [],
+      "prompt": null,
+      "errors": [],
+      "cameraLanguage": {
+        "valid": true,
+        "coverageComplete": true,
+        "scope": "plan_only",
+        "expectedShots": 4,
+        "missing": [],
+        "errors": [],
+        "limitation": "只读文本与声明一致性检查；不能核验实际相机轨迹、光学焦点、观众反应或模型实现。"
+      },
+      "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。",
+      "localization": {
+        "locale": "zh-CN",
+        "summary": "规划评审已完成；实际媒体仍未核验。"
+      }
+    }
+  },
+  "delivery": {
+    "command": [
+      "node",
+      "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior-snapshot\\skills\\cineweave-director\\scripts\\check-delivery.mjs",
+      "D:\\study\\projects\\cineweave-codex-skills\\cineweave-director\\.build\\audits\\skill-optimization-2026-10-21\\behavior\\C10\\delivery.json"
+    ],
+    "exit_code": 0,
+    "result": {
+      "valid": true,
+      "errors": [],
+      "duration": {
+        "numerator": "576",
+        "denominator": "24"
+      },
+      "endTimecode": "00:00:24,000",
+      "subtitles": [
+        {
+          "id": "D1",
+          "text": "原来如此。",
+          "start": "00:00:21,000",
+          "end": "00:00:23,000",
+          "counts": {
+            "codePoints": 5,
+            "graphemes": 5,
+            "hanCharacters": 4
+          }
+        }
+      ],
+      "srt": "1\n00:00:21,000 --> 00:00:23,000\n原来如此。\n",
+      "scope": "Planning arithmetic only: cut-only shot coverage and one subtitle track. Text counts do not establish speech duration, readability, synchronization, rights, or media quality.",
+      "localization": {
+        "locale": "zh-CN",
+        "summary": "剪辑覆盖与字幕算术检查通过，实际声音及画面同步仍未核验。",
+        "errors": [],
+        "scope": "仅检查硬切镜头覆盖、单字幕轨和文字计数；字数不等于口播时长，不证明可读性、同步、权利或媒体质量。"
+      }
+    }
+  },
+  "svgXml": {
+    "files": 10,
+    "parsed": true,
+    "nonemptyDrawingElements": true
+  },
+  "localLinks": {
+    "checked": 12,
+    "missing": []
+  },
+  "contentInventory": {
+    "G0_G7_headings": true,
+    "independent_image_prompts": 4,
+    "independent_video_prompts": 4,
+    "has_exact_dialogue": true,
+    "svg_cards": 10
+  },
+  "encoding": {
+    "output_utf8": true,
+    "output_lf_only": true
+  },
+  "visualInspection": {
+    "method": "Viewed Pillow-rendered contact-sheet.png with view_image",
+    "scope": "10 drawn card previews; checked layout, nonempty drawings, palette, directions and labels",
+    "limitation": "PNG previews are drawn by the same layout code; browser SVG rendering and narrative media were not inspected."
+  },
+  "buildHistory": [
+    {
+      "command": "python -X utf8 build_design.py",
+      "result": "initial build succeeded"
+    },
+    {
+      "command": "python -X utf8 build_design.py",
+      "result": "rerun failed because a removed correction heading was assumed to exist; no frozen source affected"
+    },
+    {
+      "command": "python -X utf8 build_design.py",
+      "result": "made heading cleanup conditional; rerun succeeded"
+    }
+  ]
+}

@@ -1,0 +1,31 @@
+{
+  "fresh_host": true,
+  "method": "skills/list",
+  "forceReload": true,
+  "skills": [
+    {
+      "name": "cineweave-director:cineweave-director",
+      "path": "C:\\Users\\ww\\.codex\\plugins\\cache\\cineweave-director\\cineweave-director\\3.2.1\\skills\\cineweave-director\\SKILL.md",
+      "enabled": true,
+      "scope": "user"
+    },
+    {
+      "name": "cineweave-director:cineweave-platform",
+      "path": "C:\\Users\\ww\\.codex\\plugins\\cache\\cineweave-director\\cineweave-director\\3.2.1\\skills\\cineweave-platform\\SKILL.md",
+      "enabled": true,
+      "scope": "user"
+    },
+    {
+      "name": "cineweave-director:cineweave-reference",
+      "path": "C:\\Users\\ww\\.codex\\plugins\\cache\\cineweave-director\\cineweave-director\\3.2.1\\skills\\cineweave-reference\\SKILL.md",
+      "enabled": true,
+      "scope": "user"
+    },
+    {
+      "name": "cineweave-director:cineweave-review",
+      "path": "C:\\Users\\ww\\.codex\\plugins\\cache\\cineweave-director\\cineweave-director\\3.2.1\\skills\\cineweave-review\\SKILL.md",
+      "enabled": true,
+      "scope": "user"
+    }
+  ]
+}

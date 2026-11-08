@@ -1,0 +1,1104 @@
+{
+  "source": {
+    "type": "design",
+    "id": "DENIED-E02-text-coverage-b98cd9f5b8c5",
+    "version": 2,
+    "cameraLanguageScope": "narrative_video"
+  },
+  "mode": "full",
+  "shotIds": [
+    "E03-SH001",
+    "E03-SH002",
+    "E03-SH003",
+    "E03-SH004",
+    "E03-SH005",
+    "E03-SH006",
+    "E03-SH007",
+    "E03-SH008",
+    "E03-SH009",
+    "E03-SH010"
+  ],
+  "reviews": [
+    {
+      "role": "direction",
+      "shotId": "E03-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：他想靠交通离开，通缉照片却占用了他必须看的屏幕。；入镜已知：追捕已经开始，青年还在公共空间。；本镜新知：他想靠交通离开，通缉照片却占用了他必须看的屏幕。；实际写出的动作：北端发车牌突然切成通缉照片。路易吉脚步没停，把车票翻到背面。车站广播声对车站旅客说本镜第1句英语对白，普通广播。他原想向北走，却在西长椅尽头停住；旁边旅客只顾拖箱子赶自己的班次。",
+      "sourceLocator": "season/E02.json#/shots/0"
+    },
+    {
+      "role": "performance",
+      "shotId": "E03-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "口罩遮口鼻；包在背；票右手 → 他在西长椅边停下；车站广播声向车站旅客：Last connection delayed. Please check the departure board.；普通广播",
+      "sourceLocator": "season/E02.json#/shots/0"
+    },
+    {
+      "role": "staging",
+      "shotId": "E03-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "西候车椅、东柜台、北门均清楚；起态：口罩遮口鼻；包在背；票右手；出态：他在西长椅边停下",
+      "sourceLocator": "season/E02.json#/shots/0"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E03-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "全景，南端朝北偏西；相机：固定南端向北偏西全景，屏幕后景、青年中景；路人不集体发现他。；焦点：人物与北屏所在空间清楚，屏幕内容后期替换。",
+      "sourceLocator": "season/E02.json#/shots/0"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E03-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E03-SH001.txt；12秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E02.json#/shots/0"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E03-SH001",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "他在西长椅边停下；切点：车票被翻了面，他停在长椅边。；接口：同场近些看疼痛与询问",
+      "sourceLocator": "season/E02.json#/shots/0"
+    },
+    {
+      "role": "direction",
+      "shotId": "E03-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：疼痛与关站一起缩短可选空间。；入镜已知：通缉照片里的人试图在椅子上停留。；本镜新知：疼痛与关站一起缩短可选空间。；实际写出的动作：他在西椅刚坐下又站起，扶椅背换重心。工作人员来拉隔离带，他抬手挡住即将封闭的空位。路易吉对车站工作人员说本镜第1句英语对白，想给正常理由，说到一半放弃。工作人员看见他的票，再看已关掉一半的大厅灯。",
+      "sourceLocator": "season/E02.json#/shots/1"
+    },
+    {
+      "role": "performance",
+      "shotId": "E03-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "青年站西椅旁，将试着坐下，右手车票，口罩与背包在身。 → 青年椅边站着，右手票，工作人员隔离带在手。；路易吉向车站工作人员：Anywhere still open? I just need somewhere to sit. I'm waiting for—；想给正常理由，说到一半放弃",
+      "sourceLocator": "season/E02.json#/shots/1"
+    },
+    {
+      "role": "staging",
+      "shotId": "E03-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "椅背前景，路易吉与工作人员同层；起态：青年站西椅旁，将试着坐下，右手车票，口罩与背包在身。；出态：青年椅边站着，右手票，工作人员隔离带在手。",
+      "sourceLocator": "season/E02.json#/shots/1"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E03-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中景，西椅东侧朝西北；相机：固定长椅东侧中景，椅背、支撑手、工作人员同框。；焦点：支撑与挡带动作同层可见。",
+      "sourceLocator": "season/E02.json#/shots/1"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E03-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E03-SH002.txt；14秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E02.json#/shots/1"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E03-SH002",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "青年椅边站着，右手票，工作人员隔离带在手。；切点：工作人员握隔离带，示意南门外。；接口：接方向回应，不提供逃避路线",
+      "sourceLocator": "season/E02.json#/shots/1"
+    },
+    {
+      "role": "direction",
+      "shotId": "E03-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：他得到一条普通建议，没得到停留的位置。；入镜已知：青年需要坐，工作人员要关站。；本镜新知：他得到一条普通建议，没得到停留的位置。；实际写出的动作：车站工作人员对路易吉说本镜第1句英语对白，想结束班次，只说普通建议。工作人员等他离开，隔离带没有收回去。路易吉把票塞进左袋，整好背包肩带，走向南门；风灌进来，带子在他身后扣上。 南门被拖箱旅客拉开又回弹；他把背包带让开门边，等旅客先通过，才顶住门出去。工作人员等门外身影走开才扣隔离带。",
+      "sourceLocator": "season/E02.json#/shots/2"
+    },
+    {
+      "role": "performance",
+      "shotId": "E03-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "青年仍在椅旁，票在右手 → 青年从南门走出，隔离带在厅内扣上；没有新的逃亡路线信息。；车站工作人员向路易吉：Try your hotel. There are a few places down the road. Don't know what's open.；想结束班次，只说普通建议",
+      "sourceLocator": "season/E02.json#/shots/2"
+    },
+    {
+      "role": "staging",
+      "shotId": "E03-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "南玻璃门、外街灯，工作人员在东缘；起态：青年仍在椅旁，票在右手；出态：青年从南门走出，隔离带在厅内扣上；没有新的逃亡路线信息。",
+      "sourceLocator": "season/E02.json#/shots/2"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E03-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中全景，西侧朝南出口；相机：固定西侧向南中全景，两人的离开与封区分别完成，不跟出门展示路线。；焦点：保持门与隔离带闭合关系。",
+      "sourceLocator": "season/E02.json#/shots/2"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E03-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E03-SH003.txt；19秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E02.json#/shots/2"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E03-SH003",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "青年从南门走出，隔离带在厅内扣上；没有新的逃亡路线信息。；切点：隔离带扣上，南门合拢。；接口：本场结果成立后切入 E03-SC02（HOTEL-ROOM，清晨06:30·第五天·听昨夜留下的家人语音）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E02.json#/shots/2"
+    },
+    {
+      "role": "direction",
+      "shotId": "E03-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：他听到家人的担心，仍让他们不知道他在哪。；入镜已知：公共大厅把他赶走，旅馆可以暂时锁门。；本镜新知：他听到家人的担心，仍让他们不知道他在哪。；实际写出的动作：手机在北桌亮起，路易吉从东床边撑起身走去。母亲的留言播出。母亲语音留言对路易吉说本镜第1句英语对白，不追问，留一个能回答的小要求。他把音量按小，却没有按停，等末尾呼吸声过去才放下手机。 留言结束，他打开回复框写下“I’m warm.”，看着发送键，最后逐字删掉，没有发出。",
+      "sourceLocator": "season/E02.json#/shots/3"
+    },
+    {
+      "role": "performance",
+      "shotId": "E03-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "口罩仍戴着；他坐床边 → 留言已听完；回复框空白，手机回北桌，母亲仍无回音。；母亲语音留言向路易吉：Just tell me you're somewhere warm. You don't have to explain. Your sister's still up.；不追问，留一个能回答的小要求",
+      "sourceLocator": "season/E02.json#/shots/3"
+    },
+    {
+      "role": "staging",
+      "shotId": "E03-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "北手机、东床、西窗明确；起态：口罩仍戴着；他坐床边；出态：留言已听完；回复框空白，手机回北桌，母亲仍无回音。",
+      "sourceLocator": "season/E02.json#/shots/3"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E03-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "全景，南门朝北桌与东床；相机：固定南门向北桌东床全景，响铃触发移动，身体困境不因留言自动消失。；焦点：随人到桌，手机内容不必可读。",
+      "sourceLocator": "season/E02.json#/shots/3"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E03-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E03-SH004.txt；21秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E02.json#/shots/3"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E03-SH004",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "留言已听完；回复框空白，手机回北桌，母亲仍无回音。；切点：手机放下，手转向背包里的笔记。；接口：接笔记与垃圾桶的选择",
+      "sourceLocator": "season/E02.json#/shots/3"
+    },
+    {
+      "role": "direction",
+      "shotId": "E03-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：他亲手保留解释自己的记录，也保留风险。；入镜已知：笔记可以丢掉，可能减少被捕后的风险。；本镜新知：他亲手保留解释自己的记录，也保留风险。；实际写出的动作：他抽出笔记，朝白袋垃圾桶放下。纸角碰到袋口，拇指却挡住封面的字迹。门外脚步靠近又离开。他把本子提回，压进黑包最里面；拉链卡了一次，他重新拉到底。",
+      "sourceLocator": "season/E02.json#/shots/4"
+    },
+    {
+      "role": "performance",
+      "shotId": "E03-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "手机北桌，左手抽笔记，右手扶包口。 → 笔记进包拉链合上，手机北桌，口罩戴着。；无对白，以已写动作承载表演。",
+      "sourceLocator": "season/E02.json#/shots/4"
+    },
+    {
+      "role": "staging",
+      "shotId": "E03-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "桶口白袋在下前景，双手和笔记中景，北桌手机后景；戴口罩的脸上沿。；起态：手机北桌，左手抽笔记，右手扶包口。；出态：笔记进包拉链合上，手机北桌，口罩戴着。",
+      "sourceLocator": "season/E02.json#/shots/4"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E03-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中近景，北桌西侧向东略俯，手、桶口与包口同时容纳。；相机：固定北桌西侧中近景，同时见手、桶口、包口三个相邻接触点。；焦点：三个接触点同在可读范围，无切焦。",
+      "sourceLocator": "season/E02.json#/shots/4"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E03-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E03-SH005.txt；14秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E02.json#/shots/4"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E03-SH005",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "笔记进包拉链合上，手机北桌，口罩戴着。；切点：拉链合上，前台回电接着响。；接口：背包拉链合上后接前台回电，不写成他已拨前台。",
+      "sourceLocator": "season/E02.json#/shots/4"
+    },
+    {
+      "role": "direction",
+      "shotId": "E03-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：他拒绝送水，选择再次进入有人的地方。；入镜已知：笔记留下了，身体仍迫使他坐回床边。；本镜新知：他拒绝送水，选择再次进入有人的地方。；实际写出的动作：路易吉拿起响着的手机，扶床沿坐回去，听见前台说厨房关了可以送水；他回答“No. I'll go out.”。通话结束，他撑床起身，取北桌房卡收入左袋，将手机暂放桌上腾手背起黑包。走到南门，他回头看到手机已暗，返一步拿回右手，才开门出去。",
+      "sourceLocator": "season/E02.json#/shots/5"
+    },
+    {
+      "role": "performance",
+      "shotId": "E03-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "青年坐回东床，黑包已拉好在北桌脚；响起的手机从北桌拿到右手。 → 房卡在左袋，黑包双肩，手机右手，口罩仍戴；青年开南门出去。；旅馆前台电话声向路易吉：Kitchen's closed. I can bring you some water.；普通回电 / 路易吉向旅馆前台电话声：No. I'll go out.；不想让人进房间，结束通话",
+      "sourceLocator": "season/E02.json#/shots/5"
+    },
+    {
+      "role": "staging",
+      "shotId": "E03-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "手机右手，东床边，包在北桌脚；起态：青年坐回东床，黑包已拉好在北桌脚；响起的手机从北桌拿到右手。；出态：房卡在左袋，黑包双肩，手机右手，口罩仍戴；青年开南门出去。",
+      "sourceLocator": "season/E02.json#/shots/5"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E03-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "中全景，西侧向东北，床边和北桌同框。；相机：固定西侧中全景，床至桌路径可见，让他为房卡再站一次。；焦点：支撑手与起身过程可读，最后跟人到桌。",
+      "sourceLocator": "season/E02.json#/shots/5"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E03-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E03-SH006.txt；20秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E02.json#/shots/5"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E03-SH006",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "房卡在左袋，黑包双肩，手机右手，口罩仍戴；青年开南门出去。；切点：房卡被取走，切另一个人准备出门。；接口：本场结果成立后切入 E03-SC03（MARA-HOME，清早06:45·第五天·诊所早班回电）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "sourceLocator": "season/E02.json#/shots/5"
+    },
+    {
+      "role": "direction",
+      "shotId": "E03-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：建立孩子自己的任务与妹妹的照顾工作，母亲的账务焦虑挤占了一次实际请求。；入镜已知：蓝夹在玛拉左臂；艾莉抱地图由北屋走来，乔在桌南拿袜子。；本镜新知：手机和蓝夹放桌南角；玛拉蹲鞋架前，艾莉仍举地图，乔手持袜子。；实际写出的动作：玛拉把拒赔页折回蓝夹，正要绕过餐桌。艾莉横过来，把还没接上的桥举到她面前。艾莉对玛拉说英语“You said you weren't working. We haven't done the bridge. Jo made the river go uphill.”；要母亲兑现约定，还在争地图的规则。乔将一只袜子套上孩子脚尖；艾莉把脚缩回，点她画错的河。乔对艾莉说英语“You asked for a waterfall. That's the waterfall.”；认真为自己那一笔辩解，不逗观众。艾莉对乔说英语“It goes the other way. See? That's our house.”；拿地图讲自己的道理。手机排班确认震动。玛拉看一眼，先把手机与蓝夹放桌南角，回鞋架拉鞋带。乔对玛拉说英语“Mara. She was showing you something.”；替孩子争取一次真正被看见。玛拉回过头，却只看见艾莉还光着的一只脚。",
+      "sourceLocator": "season/E02.json#/shots/6"
+    },
+    {
+      "role": "performance",
+      "shotId": "E03-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "蓝夹在玛拉左臂；艾莉抱地图由北屋走来，乔在桌南拿袜子。 → 手机和蓝夹放桌南角；玛拉蹲鞋架前，艾莉仍举地图，乔手持袜子。；艾莉向玛拉：You said you weren't working. We haven't done the bridge. Jo made the river go uphill.；要母亲兑现约定，还在争地图的规则 / 乔向艾莉：You asked for a waterfall. That's the waterfall.；认真为自己那一笔辩解，不逗观众 / 艾莉向乔：It goes the other way. See? That's our house.；拿地图讲自己的道理 / 乔向玛拉：Mara. She was showing you something.；替孩子争取一次真正被看见",
+      "sourceLocator": "season/E02.json#/shots/6"
+    },
+    {
+      "role": "staging",
+      "shotId": "E03-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "鞋架在近南，餐桌中层，北卧室门为孩子来处；三人可相互看见。东厨房小灯是暖主光。；起态：蓝夹在玛拉左臂；艾莉抱地图由北屋走来，乔在桌南拿袜子。；出态：手机和蓝夹放桌南角；玛拉蹲鞋架前，艾莉仍举地图，乔手持袜子。",
+      "sourceLocator": "season/E02.json#/shots/6"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E03-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "南入口内平视三人中全景；相机：南侧三人中全景起拍；母亲绕开画图桌去鞋架时，小幅横移保持她与举画孩子同框，移到鞋架关系成立后停止。；焦点：人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "sourceLocator": "season/E02.json#/shots/6"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E03-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E03-SH007.txt；40秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E02.json#/shots/6"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E03-SH007",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "手机和蓝夹放桌南角；玛拉蹲鞋架前，艾莉仍举地图，乔手持袜子。；切点：手机和蓝夹放桌南角；玛拉蹲鞋架前，艾莉仍举地图，乔手持袜子。；接口：因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "sourceLocator": "season/E02.json#/shots/6"
+    },
+    {
+      "role": "direction",
+      "shotId": "E03-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：道歉换来有条件的继续合作，而非一句台词就修复关系。；入镜已知：玛拉蹲鞋架前，艾莉站桌南，乔在孩子身旁。；本镜新知：孩子穿好袜子，地图留桌面；母亲蹲姿未起，鞋带仍未系好。；实际写出的动作：玛拉对艾莉说英语“Put your socks on. Please. Just do that for me.”；忙着系鞋带，第二句说重了，听见孩子卷纸才收住。艾莉不再举画，开始卷起来。玛拉的鞋带打歪了，她扯开，走近孩子蹲下。玛拉对艾莉说英语“I'm sorry. Save me the bridge, okay? We'll do it together.”；给具体补偿，不要求立即原谅。艾莉把地图的桥那一面转向自己，只把脚给乔。艾莉对玛拉说英语“When? You said that yesterday.”；要具体答案，非成熟责备。玛拉对艾莉说英语“After my shift. If you're still up for it.”；降低刚才随口许诺的声势。艾莉对玛拉说英语“Don't put a road through it.”；给合作加自己的规则。她把桥留白的部分摊到桌上，留出母亲可以回来坐的一侧；自己先去找绿笔。",
+      "sourceLocator": "season/E02.json#/shots/7"
+    },
+    {
+      "role": "performance",
+      "shotId": "E03-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "玛拉蹲鞋架前，艾莉站桌南，乔在孩子身旁。 → 孩子穿好袜子，地图留桌面；母亲蹲姿未起，鞋带仍未系好。；玛拉向艾莉：Put your socks on. Please. Just do that for me.；忙着系鞋带，第二句说重了，听见孩子卷纸才收住 / 玛拉向艾莉：I'm sorry. Save me the bridge, okay? We'll do it together.；给具体补偿，不要求立即原谅 / 艾莉向玛拉：When? You said that yesterday.；要具体答案，非成熟责备 / 玛拉向艾莉：After my shift. If you're still up for it.；降低刚才随口许诺的声势 / 艾莉向玛拉：Don't put a road through it.；给合作加自己的规则",
+      "sourceLocator": "season/E02.json#/shots/7"
+    },
+    {
+      "role": "staging",
+      "shotId": "E03-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "母女在同一层，地图面朝孩子；鞋架保持南侧画外来向。；起态：玛拉蹲鞋架前，艾莉站桌南，乔在孩子身旁。；出态：孩子穿好袜子，地图留桌面；母亲蹲姿未起，鞋带仍未系好。",
+      "sourceLocator": "season/E02.json#/shots/7"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E03-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "桌东侧低位双人中景，乔的穿袜动作在边缘；相机：留在母女平视高度，完整看见道歉之后孩子没有立刻释怀；不切眼泪特写。；焦点：人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "sourceLocator": "season/E02.json#/shots/7"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E03-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E03-SH008.txt；40秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E02.json#/shots/7"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E03-SH008",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "孩子穿好袜子，地图留桌面；母亲蹲姿未起，鞋带仍未系好。；切点：孩子穿好袜子，地图留桌面；母亲蹲姿未起，鞋带仍未系好。；接口：因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "sourceLocator": "season/E02.json#/shots/7"
+    },
+    {
+      "role": "direction",
+      "shotId": "E03-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：加班不是抽象牺牲，它把母亲欠下的时间转嫁给同样要工作的妹妹。；入镜已知：乔在桌南把外套递来；玛拉双手空，蓝夹和手机仍在桌角。；本镜新知：玛拉已穿外套、左臂蓝夹右手手机；乔仍站桌南，不替她按下接听。；实际写出的动作：玛拉站起穿外套，乔没有把她的文件一起递过去。乔对玛拉说英语“I have to leave at noon. Don't sign up for another shift.”；妹妹也有自己的时间限制。玛拉对乔说英语“It covers Friday's deposit. That's all I'm doing.”；想把不停加班说成最后一次。乔把外套另一只袖口拉平，挡着她往门口走的半步。乔对玛拉说英语“I have work, too. I can't call out again.”；让姐姐承认她也在承担工时损失。玛拉对乔说英语“I'll ask to leave early. I'll call before I leave.”；能保证的是沟通，不能保证排班批准。乔对玛拉说英语“Before noon. Not from the bus.”；熟悉姐姐的拖延，划清可执行边界。玛拉点头，拿回手机和蓝夹。来电打断她抓门把的动作。",
+      "sourceLocator": "season/E02.json#/shots/8"
+    },
+    {
+      "role": "performance",
+      "shotId": "E03-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "乔在桌南把外套递来；玛拉双手空，蓝夹和手机仍在桌角。 → 玛拉已穿外套、左臂蓝夹右手手机；乔仍站桌南，不替她按下接听。；乔向玛拉：I have to leave at noon. Don't sign up for another shift.；妹妹也有自己的时间限制 / 玛拉向乔：It covers Friday's deposit. That's all I'm doing.；想把不停加班说成最后一次 / 乔向玛拉：I have work, too. I can't call out again.；让姐姐承认她也在承担工时损失 / 玛拉向乔：I'll ask to leave early. I'll call before I leave.；能保证的是沟通，不能保证排班批准 / 乔向玛拉：Before noon. Not from the bus.；熟悉姐姐的拖延，划清可执行边界",
+      "sourceLocator": "season/E02.json#/shots/8"
+    },
+    {
+      "role": "staging",
+      "shotId": "E03-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "文件在两人之间，北边孩子仍自己画图，不在每句间插孩子反应。；起态：乔在桌南把外套递来；玛拉双手空，蓝夹和手机仍在桌角。；出态：玛拉已穿外套、左臂蓝夹右手手机；乔仍站桌南，不替她按下接听。",
+      "sourceLocator": "season/E02.json#/shots/8"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E03-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "南门方向的姐妹中景；相机：固定门内，让乔用站位争取自己的时间；来电时不抢切屏幕。；焦点：人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "sourceLocator": "season/E02.json#/shots/8"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E03-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E03-SH009.txt；40秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E02.json#/shots/8"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E03-SH009",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "玛拉已穿外套、左臂蓝夹右手手机；乔仍站桌南，不替她按下接听。；切点：玛拉已穿外套、左臂蓝夹右手手机；乔仍站桌南，不替她按下接听。；接口：因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "sourceLocator": "season/E02.json#/shots/8"
+    },
+    {
+      "role": "direction",
+      "shotId": "E03-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：目的、观众信息变化和可见事件分别存在，便于按镜复核。",
+      "observation": "目的：诊所确认拒赔，孩子得到诚实的不确定答复；母亲离家后生活继续，压力未获安慰性解决。；入镜已知：玛拉接起诊所电话，乔收好空袜包装；孩子在桌北画图。；本镜新知：玛拉离家，蓝夹左臂手机右袋；母亲一侧椅子空着，乔和艾莉继续修地图。；实际写出的动作：医生电话声对玛拉说英语“I've still got her down for Friday. Call billing when you get off. The renewal's still denied.”；交代状态与下一步，不宣布拒绝医疗。玛拉对医生电话声说英语“I'll call at noon. Can you put that in the notes?”；锁定唯一能保证的时间。她挂断，把手机放进右裤袋。艾莉听见周五，把绿笔放下。艾莉对玛拉说英语“Are we still going on Friday?”；只问自己的日程，不承担成人观点。玛拉对艾莉说英语“That's what I'm trying to sort out.”；这次不先承诺能去。玛拉答完孩子，先将蓝夹放在鞋架上，蹲下重系鞋带。乔在她系鞋带时对艾莉说英语“Come on. Show me which way the water goes.”；接回孩子任务而非继续追问账务。乔说话时已经在桌旁坐下，孩子同时给瀑布补向下箭头；玛拉系好鞋带站起，左臂拿回鞋架上的蓝夹，出南门。地图留在桌上。",
+      "sourceLocator": "season/E02.json#/shots/9"
+    },
+    {
+      "role": "performance",
+      "shotId": "E03-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：动作有起止；英语对白有受话者、语气与中文译文。",
+      "observation": "玛拉接起诊所电话，乔收好空袜包装；孩子在桌北画图。 → 玛拉离家，蓝夹左臂手机右袋；母亲一侧椅子空着，乔和艾莉继续修地图。；医生电话声向玛拉：I've still got her down for Friday. Call billing when you get off. The renewal's still denied.；交代状态与下一步，不宣布拒绝医疗 / 玛拉向医生电话声：I'll call at noon. Can you put that in the notes?；锁定唯一能保证的时间 / 艾莉向玛拉：Are we still going on Friday?；只问自己的日程，不承担成人观点 / 玛拉向艾莉：That's what I'm trying to sort out.；这次不先承诺能去 / 乔向艾莉：Come on. Show me which way the water goes.；接回孩子任务而非继续追问账务",
+      "sourceLocator": "season/E02.json#/shots/9"
+    },
+    {
+      "role": "staging",
+      "shotId": "E03-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：构图、人物及起止态能定位本镜行动。",
+      "observation": "母亲近南、餐桌中间、北卧室后层，厨房暖光仍照桌面。；起态：玛拉接起诊所电话，乔收好空袜包装；孩子在桌北画图。；出态：玛拉离家，蓝夹左臂手机右袋；母亲一侧椅子空着，乔和艾莉继续修地图。",
+      "sourceLocator": "season/E02.json#/shots/9"
+    },
+    {
+      "role": "cinematography",
+      "shotId": "E03-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：景别、相机动作、焦点分别声明，固定镜头不伪称移动。",
+      "observation": "南门内朝北的中全景；相机：固定门内，乔坐下说话与孩子补箭头、母亲系鞋并行在共享画面完成；母亲离画后留母女空位与仍继续画的乔和孩子，不延长成新动作。；焦点：人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "sourceLocator": "season/E02.json#/shots/9"
+    },
+    {
+      "role": "prompt",
+      "shotId": "E03-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：该真实镜号有完整独立复制稿，演员和环境展开，英语发声与中文阅读分开。",
+      "observation": "prompts/E03-SH010.txt；40秒成片采用区间；各技术候选及其1秒两端余量见editorial/generation-segments.csv，不将片段接续当剪点。",
+      "sourceLocator": "season/E02.json#/shots/9"
+    },
+    {
+      "role": "continuity",
+      "shotId": "E03-SH010",
+      "status": "pass",
+      "criterion": "文字覆盖：本镜出态、切点与后镜接口明确；具体跨集问题见当前us-rhythm审读记录。",
+      "observation": "玛拉离家，蓝夹左臂手机右袋；母亲一侧椅子空着，乔和艾莉继续修地图。；切点：玛拉离家，蓝夹左臂手机右袋；母亲一侧椅子空着，乔和艾莉继续修地图。；接口：本集结束。玛拉带着蓝夹去加班，自己在家中的椅子空下来；下一集这班普通工作将遇到另一位顾客。 下集从DINER展开：面对一名可能是通缉犯的客人，玛拉在无法确定时要做什么？",
+      "sourceLocator": "season/E02.json#/shots/9"
+    }
+  ],
+  "cameraDecisions": [
+    {
+      "shotId": "E03-SH001",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "他想靠交通离开，通缉照片却占用了他必须看的屏幕。",
+        "audiencePayoff": "他想靠交通离开，通缉照片却占用了他必须看的屏幕。",
+        "trigger": "口罩遮口鼻；包在背；票右手；北端发车牌突然切成通缉照片。路易吉脚步没停，把车票翻到背面。车站广播声对车站旅客说本镜第1句英语对白，普通广播。他原想向北走，却在西长椅尽头停住；旁边旅客只顾拖箱子赶自己的班次。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "车票被翻了面，他停在长椅边。；同场近些看疼痛与询问",
+        "noMotionReason": "固定南端向北偏西全景，屏幕后景、青年中景；路人不集体发现他。；观看变化：他想靠交通离开，通缉照片却占用了他必须看的屏幕。"
+      },
+      "camera": {
+        "shotScale": "全景",
+        "position": "全景，南端朝北偏西",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "全景，南端朝北偏西",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "人物与北屏所在空间清楚，屏幕内容后期替换。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 西候车椅、东柜台、北门均清楚",
+        "movementIntent": "固定南端向北偏西全景，屏幕后景、青年中景；路人不集体发现他。"
+      },
+      "composition": {
+        "layout": "西候车椅、东柜台、北门均清楚",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：北端发车牌突然切成通缉照片。路易吉脚步没停，把车票翻到背面。车站广播声对车站旅客说本镜第1句英语对白，普通广播。他原想向北走，却在西长椅尽头停住；旁边旅客只顾拖箱子赶自己的班次。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "他想靠交通离开，通缉照片却占用了他必须看的屏幕。；人物与北屏所在空间清楚，屏幕内容后期替换。"
+      },
+      "temporal": {
+        "durationSeconds": 12,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "他想靠交通离开，通缉照片却占用了他必须看的屏幕。",
+          "path": "机位不移动。",
+          "start": "口罩遮口鼻；包在背；票右手",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "他在西长椅边停下",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E03-SH001-F1",
+            "timeSeconds": 0,
+            "description": "人物与北屏所在空间清楚，屏幕内容后期替换。"
+          }
+        ],
+        "edit": {
+          "entry": "口罩遮口鼻；包在背；票右手",
+          "exit": "他在西长椅边停下；车票被翻了面，他停在长椅边。",
+          "preferredTransition": "同场近些看疼痛与询问",
+          "soundBridge": "北侧广播、暖气管响、轮箱声；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E03-SH002",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "疼痛与关站一起缩短可选空间。",
+        "audiencePayoff": "疼痛与关站一起缩短可选空间。",
+        "trigger": "青年站西椅旁，将试着坐下，右手车票，口罩与背包在身。；他在西椅刚坐下又站起，扶椅背换重心。工作人员来拉隔离带，他抬手挡住即将封闭的空位。路易吉对车站工作人员说本镜第1句英语对白，想给正常理由，说到一半放弃。工作人员看见他的票，再看已关掉一半的大厅灯。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "工作人员握隔离带，示意南门外。；接方向回应，不提供逃避路线",
+        "noMotionReason": "固定长椅东侧中景，椅背、支撑手、工作人员同框。；观看变化：疼痛与关站一起缩短可选空间。"
+      },
+      "camera": {
+        "shotScale": "中景",
+        "position": "中景，西椅东侧朝西北",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中景，西椅东侧朝西北",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "支撑与挡带动作同层可见。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 椅背前景，路易吉与工作人员同层",
+        "movementIntent": "固定长椅东侧中景，椅背、支撑手、工作人员同框。"
+      },
+      "composition": {
+        "layout": "椅背前景，路易吉与工作人员同层",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：他在西椅刚坐下又站起，扶椅背换重心。工作人员来拉隔离带，他抬手挡住即将封闭的空位。路易吉对车站工作人员说本镜第1句英语对白，想给正常理由，说到一半放弃。工作人员看见他的票，再看已关掉一半的大厅灯。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "疼痛与关站一起缩短可选空间。；支撑与挡带动作同层可见。"
+      },
+      "temporal": {
+        "durationSeconds": 14,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "疼痛与关站一起缩短可选空间。",
+          "path": "机位不移动。",
+          "start": "青年站西椅旁，将试着坐下，右手车票，口罩与背包在身。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "青年椅边站着，右手票，工作人员隔离带在手。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E03-SH002-F1",
+            "timeSeconds": 0,
+            "description": "支撑与挡带动作同层可见。"
+          }
+        ],
+        "edit": {
+          "entry": "青年站西椅旁，将试着坐下，右手车票，口罩与背包在身。",
+          "exit": "青年椅边站着，右手票，工作人员隔离带在手。；工作人员握隔离带，示意南门外。",
+          "preferredTransition": "接方向回应，不提供逃避路线",
+          "soundBridge": "衣料、工作人员钥匙串、远广播；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E03-SH003",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "他得到一条普通建议，没得到停留的位置。",
+        "audiencePayoff": "他得到一条普通建议，没得到停留的位置。",
+        "trigger": "青年仍在椅旁，票在右手；车站工作人员对路易吉说本镜第1句英语对白，想结束班次，只说普通建议。工作人员等他离开，隔离带没有收回去。路易吉把票塞进左袋，整好背包肩带，走向南门；风灌进来，带子在他身后扣上。 南门被拖箱旅客拉开又回弹；他把背包带让开门边，等旅客先通过，才顶住门出去。工作人员等门外身影走开才扣隔离带。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "隔离带扣上，南门合拢。；本场结果成立后切入 E03-SC02（HOTEL-ROOM，清晨06:30·第五天·听昨夜留下的家人语音）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定西侧向南中全景，两人的离开与封区分别完成，不跟出门展示路线。；观看变化：他得到一条普通建议，没得到停留的位置。"
+      },
+      "camera": {
+        "shotScale": "中全景",
+        "position": "中全景，西侧朝南出口",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中全景，西侧朝南出口",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "保持门与隔离带闭合关系。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 南玻璃门、外街灯，工作人员在东缘",
+        "movementIntent": "固定西侧向南中全景，两人的离开与封区分别完成，不跟出门展示路线。"
+      },
+      "composition": {
+        "layout": "南玻璃门、外街灯，工作人员在东缘",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：车站工作人员对路易吉说本镜第1句英语对白，想结束班次，只说普通建议。工作人员等他离开，隔离带没有收回去。路易吉把票塞进左袋，整好背包肩带，走向南门；风灌进来，带子在他身后扣上。 南门被拖箱旅客拉开又回弹；他把背包带让开门边，等旅客先通过，才顶住门出去。工作人员等门外身影走开才扣隔离带。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "他得到一条普通建议，没得到停留的位置。；保持门与隔离带闭合关系。"
+      },
+      "temporal": {
+        "durationSeconds": 19,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "他得到一条普通建议，没得到停留的位置。",
+          "path": "机位不移动。",
+          "start": "青年仍在椅旁，票在右手",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "青年从南门走出，隔离带在厅内扣上；没有新的逃亡路线信息。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E03-SH003-F1",
+            "timeSeconds": 0,
+            "description": "保持门与隔离带闭合关系。"
+          }
+        ],
+        "edit": {
+          "entry": "青年仍在椅旁，票在右手",
+          "exit": "青年从南门走出，隔离带在厅内扣上；没有新的逃亡路线信息。；隔离带扣上，南门合拢。",
+          "preferredTransition": "本场结果成立后切入 E03-SC02（HOTEL-ROOM，清晨06:30·第五天·听昨夜留下的家人语音）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "门铰与冷风，广播留在门后；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E03-SH004",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "他听到家人的担心，仍让他们不知道他在哪。",
+        "audiencePayoff": "他听到家人的担心，仍让他们不知道他在哪。",
+        "trigger": "口罩仍戴着；他坐床边；手机在北桌亮起，路易吉从东床边撑起身走去。母亲的留言播出。母亲语音留言对路易吉说本镜第1句英语对白，不追问，留一个能回答的小要求。他把音量按小，却没有按停，等末尾呼吸声过去才放下手机。 留言结束，他打开回复框写下“I’m warm.”，看着发送键，最后逐字删掉，没有发出。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "手机放下，手转向背包里的笔记。；接笔记与垃圾桶的选择",
+        "noMotionReason": "固定南门向北桌东床全景，响铃触发移动，身体困境不因留言自动消失。；观看变化：他听到家人的担心，仍让他们不知道他在哪。"
+      },
+      "camera": {
+        "shotScale": "全景",
+        "position": "全景，南门朝北桌与东床",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "全景，南门朝北桌与东床",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "随人到桌，手机内容不必可读。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 北手机、东床、西窗明确",
+        "movementIntent": "固定南门向北桌东床全景，响铃触发移动，身体困境不因留言自动消失。"
+      },
+      "composition": {
+        "layout": "北手机、东床、西窗明确",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：手机在北桌亮起，路易吉从东床边撑起身走去。母亲的留言播出。母亲语音留言对路易吉说本镜第1句英语对白，不追问，留一个能回答的小要求。他把音量按小，却没有按停，等末尾呼吸声过去才放下手机。 留言结束，他打开回复框写下“I’m warm.”，看着发送键，最后逐字删掉，没有发出。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "他听到家人的担心，仍让他们不知道他在哪。；随人到桌，手机内容不必可读。"
+      },
+      "temporal": {
+        "durationSeconds": 21,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "他听到家人的担心，仍让他们不知道他在哪。",
+          "path": "机位不移动。",
+          "start": "口罩仍戴着；他坐床边",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "留言已听完；回复框空白，手机回北桌，母亲仍无回音。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E03-SH004-F1",
+            "timeSeconds": 0,
+            "description": "随人到桌，手机内容不必可读。"
+          }
+        ],
+        "edit": {
+          "entry": "口罩仍戴着；他坐床边",
+          "exit": "留言已听完；回复框空白，手机回北桌，母亲仍无回音。；手机放下，手转向背包里的笔记。",
+          "preferredTransition": "接笔记与垃圾桶的选择",
+          "soundBridge": "手机留言、暖灯轻电流、远街声；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E03-SH005",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "他亲手保留解释自己的记录，也保留风险。",
+        "audiencePayoff": "他亲手保留解释自己的记录，也保留风险。",
+        "trigger": "手机北桌，左手抽笔记，右手扶包口。；他抽出笔记，朝白袋垃圾桶放下。纸角碰到袋口，拇指却挡住封面的字迹。门外脚步靠近又离开。他把本子提回，压进黑包最里面；拉链卡了一次，他重新拉到底。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "拉链合上，前台回电接着响。；背包拉链合上后接前台回电，不写成他已拨前台。",
+        "noMotionReason": "固定北桌西侧中近景，同时见手、桶口、包口三个相邻接触点。；观看变化：他亲手保留解释自己的记录，也保留风险。"
+      },
+      "camera": {
+        "shotScale": "中近景",
+        "position": "中近景，北桌西侧向东略俯，手、桶口与包口同时容纳。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中近景，北桌西侧向东略俯，手、桶口与包口同时容纳。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "三个接触点同在可读范围，无切焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 桶口白袋在下前景，双手和笔记中景，北桌手机后景；戴口罩的脸上沿。",
+        "movementIntent": "固定北桌西侧中近景，同时见手、桶口、包口三个相邻接触点。"
+      },
+      "composition": {
+        "layout": "桶口白袋在下前景，双手和笔记中景，北桌手机后景；戴口罩的脸上沿。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：他抽出笔记，朝白袋垃圾桶放下。纸角碰到袋口，拇指却挡住封面的字迹。门外脚步靠近又离开。他把本子提回，压进黑包最里面；拉链卡了一次，他重新拉到底。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "他亲手保留解释自己的记录，也保留风险。；三个接触点同在可读范围，无切焦。"
+      },
+      "temporal": {
+        "durationSeconds": 14,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "他亲手保留解释自己的记录，也保留风险。",
+          "path": "机位不移动。",
+          "start": "手机北桌，左手抽笔记，右手扶包口。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "笔记进包拉链合上，手机北桌，口罩戴着。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E03-SH005-F1",
+            "timeSeconds": 0,
+            "description": "三个接触点同在可读范围，无切焦。"
+          }
+        ],
+        "edit": {
+          "entry": "手机北桌，左手抽笔记，右手扶包口。",
+          "exit": "笔记进包拉链合上，手机北桌，口罩戴着。；拉链合上，前台回电接着响。",
+          "preferredTransition": "背包拉链合上后接前台回电，不写成他已拨前台。",
+          "soundBridge": "纸擦塑料、门外脚步、拉链；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E03-SH006",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "他拒绝送水，选择再次进入有人的地方。",
+        "audiencePayoff": "他拒绝送水，选择再次进入有人的地方。",
+        "trigger": "青年坐回东床，黑包已拉好在北桌脚；响起的手机从北桌拿到右手。；路易吉拿起响着的手机，扶床沿坐回去，听见前台说厨房关了可以送水；他回答“No. I'll go out.”。通话结束，他撑床起身，取北桌房卡收入左袋，将手机暂放桌上腾手背起黑包。走到南门，他回头看到手机已暗，返一步拿回右手，才开门出去。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "房卡被取走，切另一个人准备出门。；本场结果成立后切入 E03-SC03（MARA-HOME，清早06:45·第五天·诊所早班回电）；以新场开头建立空间和人物持物，环境声按新场接入。",
+        "noMotionReason": "固定西侧中全景，床至桌路径可见，让他为房卡再站一次。；观看变化：他拒绝送水，选择再次进入有人的地方。"
+      },
+      "camera": {
+        "shotScale": "中全景",
+        "position": "中全景，西侧向东北，床边和北桌同框。",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "中全景，西侧向东北，床边和北桌同框。",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "支撑手与起身过程可读，最后跟人到桌。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 手机右手，东床边，包在北桌脚",
+        "movementIntent": "固定西侧中全景，床至桌路径可见，让他为房卡再站一次。"
+      },
+      "composition": {
+        "layout": "手机右手，东床边，包在北桌脚",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：路易吉拿起响着的手机，扶床沿坐回去，听见前台说厨房关了可以送水；他回答“No. I'll go out.”。通话结束，他撑床起身，取北桌房卡收入左袋，将手机暂放桌上腾手背起黑包。走到南门，他回头看到手机已暗，返一步拿回右手，才开门出去。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "他拒绝送水，选择再次进入有人的地方。；支撑手与起身过程可读，最后跟人到桌。"
+      },
+      "temporal": {
+        "durationSeconds": 20,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "他拒绝送水，选择再次进入有人的地方。",
+          "path": "机位不移动。",
+          "start": "青年坐回东床，黑包已拉好在北桌脚；响起的手机从北桌拿到右手。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "房卡在左袋，黑包双肩，手机右手，口罩仍戴；青年开南门出去。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E03-SH006-F1",
+            "timeSeconds": 0,
+            "description": "支撑手与起身过程可读，最后跟人到桌。"
+          }
+        ],
+        "edit": {
+          "entry": "青年坐回东床，黑包已拉好在北桌脚；响起的手机从北桌拿到右手。",
+          "exit": "房卡在左袋，黑包双肩，手机右手，口罩仍戴；青年开南门出去。；房卡被取走，切另一个人准备出门。",
+          "preferredTransition": "本场结果成立后切入 E03-SC03（MARA-HOME，清早06:45·第五天·诊所早班回电）；以新场开头建立空间和人物持物，环境声按新场接入。",
+          "soundBridge": "听筒、床架、门外暖气声；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E03-SH007",
+      "decision": {
+        "primaryTechniqueId": "M03",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "建立孩子自己的任务与妹妹的照顾工作，母亲的账务焦虑挤占了一次实际请求。",
+        "audiencePayoff": "手机和蓝夹放桌南角；玛拉蹲鞋架前，艾莉仍举地图，乔手持袜子。",
+        "trigger": "蓝夹在玛拉左臂；艾莉抱地图由北屋走来，乔在桌南拿袜子。；玛拉把拒赔页折回蓝夹，正要绕过餐桌。艾莉横过来，把还没接上的桥举到她面前。艾莉对玛拉说英语“You said you weren't working. We haven't done the bridge. Jo made the river go uphill.”；要母亲兑现约定，还在争地图的规则。乔将一只袜子套上孩子脚尖；艾莉把脚缩回，点她画错的河。乔对艾莉说英语“You asked for a waterfall. That's the waterfall.”；认真为自己那一笔辩解，不逗观众。艾莉对乔说英语“It goes the other way. See? That's our house.”；拿地图讲自己的道理。手机排班确认震动。玛拉看一眼，先把手机与蓝夹放桌南角，回鞋架拉鞋带。乔对玛拉说英语“Mara. She was showing you something.”；替孩子争取一次真正被看见。玛拉回过头，却只看见艾莉还光着的一只脚。",
+        "cameraMode": "moving",
+        "focusMode": "hold",
+        "exitMatch": "手机和蓝夹放桌南角；玛拉蹲鞋架前，艾莉仍举地图，乔手持袜子。；因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。"
+      },
+      "camera": {
+        "shotScale": "南入口内平视三人中全景",
+        "position": "南入口内平视三人中全景",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "南入口内平视三人中全景",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 鞋架在近南，餐桌中层，北卧室门为孩子来处；三人可相互看见。东厨房小灯是暖主光。",
+        "movementIntent": "南侧三人中全景起拍；母亲绕开画图桌去鞋架时，小幅横移保持她与举画孩子同框，移到鞋架关系成立后停止。"
+      },
+      "composition": {
+        "layout": "鞋架在近南，餐桌中层，北卧室门为孩子来处；三人可相互看见。东厨房小灯是暖主光。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：玛拉把拒赔页折回蓝夹，正要绕过餐桌。艾莉横过来，把还没接上的桥举到她面前。艾莉对玛拉说英语“You said you weren't working. We haven't done the bridge. Jo made the river go uphill.”；要母亲兑现约定，还在争地图的规则。乔将一只袜子套上孩子脚尖；艾莉把脚缩回，点她画错的河。乔对艾莉说英语“You asked for a waterfall. That's the waterfall.”；认真为自己那一笔辩解，不逗观众。艾莉对乔说英语“It goes the other way. See? That's our house.”；拿地图讲自己的道理。手机排班确认震动。玛拉看一眼，先把手机与蓝夹放桌南角，回鞋架拉鞋带。乔对玛拉说英语“Mara. She was showing you something.”；替孩子争取一次真正被看见。玛拉回过头，却只看见艾莉还光着的一只脚。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "建立孩子自己的任务与妹妹的照顾工作，母亲的账务焦虑挤占了一次实际请求。；人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+      },
+      "temporal": {
+        "durationSeconds": 40,
+        "cameraMotion": {
+          "type": "truck",
+          "motivation": "建立孩子自己的任务与妹妹的照顾工作，母亲的账务焦虑挤占了一次实际请求。",
+          "path": "南侧三人中全景起拍；母亲绕开画图桌去鞋架时，小幅横移保持她与举画孩子同框，移到鞋架关系成立后停止。",
+          "start": "蓝夹在玛拉左臂；艾莉抱地图由北屋走来，乔在桌南拿袜子。",
+          "acceleration": "仅执行作者本镜规定的启动与速度，不另加缓起：南侧三人中全景起拍；母亲绕开画图桌去鞋架时，小幅横移保持她与举画孩子同框，移到鞋架关系成立后停止。",
+          "peak": "依本镜作者运动描述，不统一套匀速：南侧三人中全景起拍；母亲绕开画图桌去鞋架时，小幅横移保持她与举画孩子同框，移到鞋架关系成立后停止。",
+          "deceleration": "不强制停稳；按作者出点接后镜：手机和蓝夹放桌南角；玛拉蹲鞋架前，艾莉仍举地图，乔手持袜子。",
+          "end": "手机和蓝夹放桌南角；玛拉蹲鞋架前，艾莉仍举地图，乔手持袜子。",
+          "framingChange": "南侧三人中全景起拍；母亲绕开画图桌去鞋架时，小幅横移保持她与举画孩子同框，移到鞋架关系成立后停止。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E03-SH007-F1",
+            "timeSeconds": 0,
+            "description": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+          }
+        ],
+        "edit": {
+          "entry": "蓝夹在玛拉左臂；艾莉抱地图由北屋走来，乔在桌南拿袜子。",
+          "exit": "手机和蓝夹放桌南角；玛拉蹲鞋架前，艾莉仍举地图，乔手持袜子。；手机和蓝夹放桌南角；玛拉蹲鞋架前，艾莉仍举地图，乔手持袜子。",
+          "preferredTransition": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+          "soundBridge": "同场环境声与所列英语；不补额外可辨台词；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E03-SH008",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "道歉换来有条件的继续合作，而非一句台词就修复关系。",
+        "audiencePayoff": "孩子穿好袜子，地图留桌面；母亲蹲姿未起，鞋带仍未系好。",
+        "trigger": "玛拉蹲鞋架前，艾莉站桌南，乔在孩子身旁。；玛拉对艾莉说英语“Put your socks on. Please. Just do that for me.”；忙着系鞋带，第二句说重了，听见孩子卷纸才收住。艾莉不再举画，开始卷起来。玛拉的鞋带打歪了，她扯开，走近孩子蹲下。玛拉对艾莉说英语“I'm sorry. Save me the bridge, okay? We'll do it together.”；给具体补偿，不要求立即原谅。艾莉把地图的桥那一面转向自己，只把脚给乔。艾莉对玛拉说英语“When? You said that yesterday.”；要具体答案，非成熟责备。玛拉对艾莉说英语“After my shift. If you're still up for it.”；降低刚才随口许诺的声势。艾莉对玛拉说英语“Don't put a road through it.”；给合作加自己的规则。她把桥留白的部分摊到桌上，留出母亲可以回来坐的一侧；自己先去找绿笔。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "孩子穿好袜子，地图留桌面；母亲蹲姿未起，鞋带仍未系好。；因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+        "noMotionReason": "留在母女平视高度，完整看见道歉之后孩子没有立刻释怀；不切眼泪特写。；观看变化：孩子穿好袜子，地图留桌面；母亲蹲姿未起，鞋带仍未系好。"
+      },
+      "camera": {
+        "shotScale": "桌东侧低位双人中景",
+        "position": "桌东侧低位双人中景，乔的穿袜动作在边缘",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "桌东侧低位双人中景，乔的穿袜动作在边缘",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 母女在同一层，地图面朝孩子；鞋架保持南侧画外来向。",
+        "movementIntent": "留在母女平视高度，完整看见道歉之后孩子没有立刻释怀；不切眼泪特写。"
+      },
+      "composition": {
+        "layout": "母女在同一层，地图面朝孩子；鞋架保持南侧画外来向。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：玛拉对艾莉说英语“Put your socks on. Please. Just do that for me.”；忙着系鞋带，第二句说重了，听见孩子卷纸才收住。艾莉不再举画，开始卷起来。玛拉的鞋带打歪了，她扯开，走近孩子蹲下。玛拉对艾莉说英语“I'm sorry. Save me the bridge, okay? We'll do it together.”；给具体补偿，不要求立即原谅。艾莉把地图的桥那一面转向自己，只把脚给乔。艾莉对玛拉说英语“When? You said that yesterday.”；要具体答案，非成熟责备。玛拉对艾莉说英语“After my shift. If you're still up for it.”；降低刚才随口许诺的声势。艾莉对玛拉说英语“Don't put a road through it.”；给合作加自己的规则。她把桥留白的部分摊到桌上，留出母亲可以回来坐的一侧；自己先去找绿笔。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "道歉换来有条件的继续合作，而非一句台词就修复关系。；人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+      },
+      "temporal": {
+        "durationSeconds": 40,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "道歉换来有条件的继续合作，而非一句台词就修复关系。",
+          "path": "机位不移动。",
+          "start": "玛拉蹲鞋架前，艾莉站桌南，乔在孩子身旁。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "孩子穿好袜子，地图留桌面；母亲蹲姿未起，鞋带仍未系好。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E03-SH008-F1",
+            "timeSeconds": 0,
+            "description": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+          }
+        ],
+        "edit": {
+          "entry": "玛拉蹲鞋架前，艾莉站桌南，乔在孩子身旁。",
+          "exit": "孩子穿好袜子，地图留桌面；母亲蹲姿未起，鞋带仍未系好。；孩子穿好袜子，地图留桌面；母亲蹲姿未起，鞋带仍未系好。",
+          "preferredTransition": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+          "soundBridge": "同场环境声与所列英语；不补额外可辨台词；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E03-SH009",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "加班不是抽象牺牲，它把母亲欠下的时间转嫁给同样要工作的妹妹。",
+        "audiencePayoff": "玛拉已穿外套、左臂蓝夹右手手机；乔仍站桌南，不替她按下接听。",
+        "trigger": "乔在桌南把外套递来；玛拉双手空，蓝夹和手机仍在桌角。；玛拉站起穿外套，乔没有把她的文件一起递过去。乔对玛拉说英语“I have to leave at noon. Don't sign up for another shift.”；妹妹也有自己的时间限制。玛拉对乔说英语“It covers Friday's deposit. That's all I'm doing.”；想把不停加班说成最后一次。乔把外套另一只袖口拉平，挡着她往门口走的半步。乔对玛拉说英语“I have work, too. I can't call out again.”；让姐姐承认她也在承担工时损失。玛拉对乔说英语“I'll ask to leave early. I'll call before I leave.”；能保证的是沟通，不能保证排班批准。乔对玛拉说英语“Before noon. Not from the bus.”；熟悉姐姐的拖延，划清可执行边界。玛拉点头，拿回手机和蓝夹。来电打断她抓门把的动作。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "玛拉已穿外套、左臂蓝夹右手手机；乔仍站桌南，不替她按下接听。；因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+        "noMotionReason": "固定门内，让乔用站位争取自己的时间；来电时不抢切屏幕。；观看变化：玛拉已穿外套、左臂蓝夹右手手机；乔仍站桌南，不替她按下接听。"
+      },
+      "camera": {
+        "shotScale": "南门方向的姐妹中景",
+        "position": "南门方向的姐妹中景",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "南门方向的姐妹中景",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 文件在两人之间，北边孩子仍自己画图，不在每句间插孩子反应。",
+        "movementIntent": "固定门内，让乔用站位争取自己的时间；来电时不抢切屏幕。"
+      },
+      "composition": {
+        "layout": "文件在两人之间，北边孩子仍自己画图，不在每句间插孩子反应。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：玛拉站起穿外套，乔没有把她的文件一起递过去。乔对玛拉说英语“I have to leave at noon. Don't sign up for another shift.”；妹妹也有自己的时间限制。玛拉对乔说英语“It covers Friday's deposit. That's all I'm doing.”；想把不停加班说成最后一次。乔把外套另一只袖口拉平，挡着她往门口走的半步。乔对玛拉说英语“I have work, too. I can't call out again.”；让姐姐承认她也在承担工时损失。玛拉对乔说英语“I'll ask to leave early. I'll call before I leave.”；能保证的是沟通，不能保证排班批准。乔对玛拉说英语“Before noon. Not from the bus.”；熟悉姐姐的拖延，划清可执行边界。玛拉点头，拿回手机和蓝夹。来电打断她抓门把的动作。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "加班不是抽象牺牲，它把母亲欠下的时间转嫁给同样要工作的妹妹。；人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+      },
+      "temporal": {
+        "durationSeconds": 40,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "加班不是抽象牺牲，它把母亲欠下的时间转嫁给同样要工作的妹妹。",
+          "path": "机位不移动。",
+          "start": "乔在桌南把外套递来；玛拉双手空，蓝夹和手机仍在桌角。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "玛拉已穿外套、左臂蓝夹右手手机；乔仍站桌南，不替她按下接听。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E03-SH009-F1",
+            "timeSeconds": 0,
+            "description": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+          }
+        ],
+        "edit": {
+          "entry": "乔在桌南把外套递来；玛拉双手空，蓝夹和手机仍在桌角。",
+          "exit": "玛拉已穿外套、左臂蓝夹右手手机；乔仍站桌南，不替她按下接听。；玛拉已穿外套、左臂蓝夹右手手机；乔仍站桌南，不替她按下接听。",
+          "preferredTransition": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+          "soundBridge": "同场环境声与所列英语；不补额外可辨台词；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    },
+    {
+      "shotId": "E03-SH010",
+      "decision": {
+        "primaryTechniqueId": "neutral_static",
+        "supportingTechniqueIds": [],
+        "narrativeReason": "诊所确认拒赔，孩子得到诚实的不确定答复；母亲离家后生活继续，压力未获安慰性解决。",
+        "audiencePayoff": "玛拉离家，蓝夹左臂手机右袋；母亲一侧椅子空着，乔和艾莉继续修地图。",
+        "trigger": "玛拉接起诊所电话，乔收好空袜包装；孩子在桌北画图。；医生电话声对玛拉说英语“I've still got her down for Friday. Call billing when you get off. The renewal's still denied.”；交代状态与下一步，不宣布拒绝医疗。玛拉对医生电话声说英语“I'll call at noon. Can you put that in the notes?”；锁定唯一能保证的时间。她挂断，把手机放进右裤袋。艾莉听见周五，把绿笔放下。艾莉对玛拉说英语“Are we still going on Friday?”；只问自己的日程，不承担成人观点。玛拉对艾莉说英语“That's what I'm trying to sort out.”；这次不先承诺能去。玛拉答完孩子，先将蓝夹放在鞋架上，蹲下重系鞋带。乔在她系鞋带时对艾莉说英语“Come on. Show me which way the water goes.”；接回孩子任务而非继续追问账务。乔说话时已经在桌旁坐下，孩子同时给瀑布补向下箭头；玛拉系好鞋带站起，左臂拿回鞋架上的蓝夹，出南门。地图留在桌上。",
+        "cameraMode": "static",
+        "focusMode": "hold",
+        "exitMatch": "玛拉离家，蓝夹左臂手机右袋；母亲一侧椅子空着，乔和艾莉继续修地图。；本集结束。玛拉带着蓝夹去加班，自己在家中的椅子空下来；下一集这班普通工作将遇到另一位顾客。 下集从DINER展开：面对一名可能是通缉犯的客人，玛拉在无法确定时要做什么？",
+        "noMotionReason": "固定门内，乔坐下说话与孩子补箭头、母亲系鞋并行在共享画面完成；母亲离画后留母女空位与仍继续画的乔和孩子，不延长成新动作。；观看变化：玛拉离家，蓝夹左臂手机右袋；母亲一侧椅子空着，乔和艾莉继续修地图。"
+      },
+      "camera": {
+        "shotScale": "南门内朝北的中全景",
+        "position": "南门内朝北的中全景",
+        "height": "依本镜景别机位中的平视/俯视说明；无高低角度特别说明时为被摄者眼高。",
+        "angle": "南门内朝北的中全景",
+        "perspectiveIntent": "人物关系和动作因果可辨，不以夸张透视改变距离。",
+        "focusTarget": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+        "depthOfField": "双人共享镜头保留双方可读，物件近景保留关键接触面可读；依焦点条目执行。",
+        "axisSide": "使用本镜构图已给出的世界方向；反打继承相邻镜头的同侧轴线。 母亲近南、餐桌中间、北卧室后层，厨房暖光仍照桌面。",
+        "movementIntent": "固定门内，乔坐下说话与孩子补箭头、母亲系鞋并行在共享画面完成；母亲离画后留母女空位与仍继续画的乔和孩子，不延长成新动作。"
+      },
+      "composition": {
+        "layout": "母亲近南、餐桌中间、北卧室后层，厨房暖光仍照桌面。",
+        "foreground": "按构图条目，前景仅保留已有遮挡或持物；没有声明时不增加遮挡。",
+        "midground": "本镜行动与受话关系：医生电话声对玛拉说英语“I've still got her down for Friday. Call billing when you get off. The renewal's still denied.”；交代状态与下一步，不宣布拒绝医疗。玛拉对医生电话声说英语“I'll call at noon. Can you put that in the notes?”；锁定唯一能保证的时间。她挂断，把手机放进右裤袋。艾莉听见周五，把绿笔放下。艾莉对玛拉说英语“Are we still going on Friday?”；只问自己的日程，不承担成人观点。玛拉对艾莉说英语“That's what I'm trying to sort out.”；这次不先承诺能去。玛拉答完孩子，先将蓝夹放在鞋架上，蹲下重系鞋带。乔在她系鞋带时对艾莉说英语“Come on. Show me which way the water goes.”；接回孩子任务而非继续追问账务。乔说话时已经在桌旁坐下，孩子同时给瀑布补向下箭头；玛拉系好鞋带站起，左臂拿回鞋架上的蓝夹，出南门。地图留在桌上。",
+        "background": "继承已写环境与出入口，不新增能解释剧情的人或物。",
+        "negativeSpace": "保留人物视线/行走方向的可用空间；文字界面留给后期合成。",
+        "visualHierarchy": "诊所确认拒赔，孩子得到诚实的不确定答复；母亲离家后生活继续，压力未获安慰性解决。；人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+      },
+      "temporal": {
+        "durationSeconds": 40,
+        "cameraMotion": {
+          "type": "static",
+          "motivation": "诊所确认拒赔，孩子得到诚实的不确定答复；母亲离家后生活继续，压力未获安慰性解决。",
+          "path": "机位不移动。",
+          "start": "玛拉接起诊所电话，乔收好空袜包装；孩子在桌北画图。",
+          "acceleration": "无相机位移或加速。",
+          "peak": "保持所述固定构图，演员完成动作。",
+          "deceleration": "无相机位移或减速。",
+          "end": "玛拉离家，蓝夹左臂手机右袋；母亲一侧椅子空着，乔和艾莉继续修地图。",
+          "framingChange": "镜头构图不主动改变；演员在框内变化。"
+        },
+        "focusTimeline": [
+          {
+            "eventId": "E03-SH010-F1",
+            "timeSeconds": 0,
+            "description": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。"
+          }
+        ],
+        "edit": {
+          "entry": "玛拉接起诊所电话，乔收好空袜包装；孩子在桌北画图。",
+          "exit": "玛拉离家，蓝夹左臂手机右袋；母亲一侧椅子空着，乔和艾莉继续修地图。；玛拉离家，蓝夹左臂手机右袋；母亲一侧椅子空着，乔和艾莉继续修地图。",
+          "preferredTransition": "本集结束。玛拉带着蓝夹去加班，自己在家中的椅子空下来；下一集这班普通工作将遇到另一位顾客。 下集从DINER展开：面对一名可能是通缉犯的客人，玛拉在无法确定时要做什么？",
+          "soundBridge": "同场环境声与所列英语；不补额外可辨台词；跨场桥的归属以next接口为准，没有明确跨场声桥时在切点换为新场环境。"
+        }
+      }
+    }
+  ]
+}

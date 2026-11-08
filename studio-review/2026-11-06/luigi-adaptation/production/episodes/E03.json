@@ -1,0 +1,758 @@
+{
+  "number": 3,
+  "title": "第五天",
+  "logline": "青年保留笔记、离开旅馆；为周五预付款接班的母亲失约没画桥。她给他咖啡，另一位顾客开始看他。",
+  "scenes": [
+    {
+      "id": "E03-SC01",
+      "location": "STATION",
+      "time": "夜·案发后第五天前夜",
+      "entry": "口罩遮口鼻；包在背；票右手",
+      "exit": "青年从南门走出，隔离带在厅内扣上；没有新的逃亡路线信息。",
+      "script": "候车厅南入口漏进冷风，东侧售票柜台将关灯，西侧候车椅零散坐人，北端是发车门。路易吉穿深炭灰夹克，戴浅蓝医用口罩，黑背包双肩背着。他站在西边长椅旁，先看北端公布的屏幕，再看手里的车票。\n\n北端发车牌突然切成通缉照片。路易吉脚步没停，把车票翻到背面。\n车站广播声（英语）：Last connection delayed. Please check the departure board.\n中文对照：末班接驳延误，请查看发车牌。\n他原想向北走，却在西长椅尽头停住；旁边旅客只顾拖箱子赶自己的班次。\n\n他在西椅刚坐下又站起，扶椅背换重心。工作人员来拉隔离带，他抬手挡住即将封闭的空位。\n路易吉（英语）：Anywhere still open? I just need somewhere to sit. I'm waiting for—\n中文对照：还有哪儿开着？能坐一会儿就行。我在等——\n工作人员看见他的票，再看已关掉一半的大厅灯。\n\n\n车站工作人员（英语）：Try your hotel. There are a few places down the road. Don't know what's open.\n中文对照：问问你住的旅馆吧。那头有几家吃饭的，哪家开着就不知道了。\n工作人员等他离开，隔离带没有收回去。路易吉把票塞进左袋，整好背包肩带，走向南门；南门被拖箱旅客拉开又回弹。他把背包带让开门边，等旅客先通过，才顶住门出去。风灌进来，工作人员等门外身影走开才扣隔离带。",
+      "dramaticFunction": "用晚班公共空间的关闭把青年推回个人处境，标出枪击后的时间推进。",
+      "turn": "他请求一个能坐的地方，工作人员仍完成关门工作。",
+      "exitCost": "没有因他的疼痛或通缉状态为他暂停的场所，他得自己离开。",
+      "sceneRhythm": "三镜对应看到通缉、争取座位、被关门日程送走；最后的旅客通过与隔离带扣上给离场真实经过。"
+    },
+    {
+      "id": "E03-SC02",
+      "location": "HOTEL-ROOM",
+      "time": "清晨06:30·第五天·听昨夜留下的家人语音",
+      "entry": "口罩仍戴着；他坐床边",
+      "exit": "房卡在左袋，黑包双肩，手机右手，口罩仍戴；青年开南门出去。",
+      "script": "临时旅馆房，南门反锁，床在东，西窗透街灯冷光，北桌亮着暖台灯。路易吉仍戴浅蓝口罩，坐东床边；黑包放在北桌旁，手机亮着未接来电，旁边的小垃圾桶套着白袋。\n\n手机在北桌亮起，路易吉从东床边撑起身走去。母亲的留言播出。\n母亲语音留言（英语）：Just tell me you're somewhere warm. You don't have to explain. Your sister's still up.\n中文对照：就告诉我你待的地方暖不暖。不用解释。你姐姐也还没睡。\n他把音量按小，却没有按停，等末尾呼吸声过去，打开回复框写下“I’m warm.”。他看着发送键，最后逐字删掉，才放下手机。\n\n他抽出笔记，朝白袋垃圾桶放下。纸角碰到袋口，拇指却挡住封面的字迹。门外脚步靠近又离开。他把本子提回，压进黑包最里面；拉链卡了一次，他重新拉到底。\n\n他拿起响着的手机，扶床沿坐回去。\n旅馆前台电话声（英语）：Kitchen's closed. I can bring you some water.\n中文对照：厨房关了。要不我给你送点水？\n\n路易吉（英语）：No. I'll go out.\n中文对照：不用。我出去。\n通话结束，他撑床起身，取北桌房卡收入左袋，将手机暂放桌上腾手背起黑包。走到南门，他回头看到手机已暗，返一步拿回右手，才开门出去。",
+      "dramaticFunction": "让他在被捕当日清晨继续回避家人，并选择保留自己的笔记。",
+      "turn": "短暂准备丢本，最终重新压回黑包，连简单报平安也没有发。",
+      "exitCost": "将来的不利物件仍在他自己携带的包里；家人继续等。",
+      "sceneRhythm": "留言回复、笔记去留、出门找吃的各有实际选择；不把房间孤独拍成无动作的摆拍。"
+    },
+    {
+      "id": "E03-SC03",
+      "location": "MARA-HOME",
+      "time": "清早06:45·第五天·诊所早班回电",
+      "entry": "蓝夹在玛拉左臂；艾莉抱地图由北屋走来，乔在桌南拿袜子。",
+      "exit": "玛拉离家，蓝夹左臂手机右袋；母亲一侧椅子空着，乔和艾莉继续修地图。",
+      "script": "清早六点四十五分，玛拉公寓南入口靠着鞋架，厨房在东，中央餐桌上摊着拒赔通知，西窗尚暗，北侧孩子卧室留着门缝。东厨房现有小灯开着，暖光落到餐桌和鞋架近处。玛拉穿黑polo工服、灰围裙，把蓝文件夹放在左臂下；妹妹乔穿深紫针织衫坐桌南侧，艾莉抱画本从北门出来。\n\n玛拉把拒赔页折回蓝夹，正要绕过餐桌。艾莉横过来，把还没接上的桥举到她面前。\n\n艾莉（英语）：You said you weren't working. We haven't done the bridge. Jo made the river go uphill.\n中文对照：你说今天不上班的。桥还没画呢。乔姨把河都画到山上去了。\n\n乔将一只袜子套上孩子脚尖；艾莉把脚缩回，点她画错的河。\n\n乔（英语）：You asked for a waterfall. That's the waterfall.\n中文对照：你要瀑布啊。这就是瀑布。\n\n艾莉（英语）：It goes the other way. See? That's our house.\n中文对照：流反了。你看，这是咱们家。\n\n手机排班确认震动。玛拉看一眼，先把手机与蓝夹放桌南角，回鞋架拉鞋带。\n\n乔（英语）：Mara. She was showing you something.\n中文对照：玛拉。她在给你看呢。\n\n玛拉回过头，却只看见艾莉还光着的一只脚。\n\n玛拉（英语）：Put your socks on. Please. Just do that for me.\n中文对照：把袜子穿上。行吗？这点事别让我操心。\n\n艾莉不再举画，开始卷起来。玛拉的鞋带打歪了，她扯开，走近孩子蹲下。\n\n玛拉（英语）：I'm sorry. Save me the bridge, okay? We'll do it together.\n中文对照：对不起。桥给我留着，好吗？咱俩一起画。\n\n艾莉把地图的桥那一面转向自己，只把脚给乔。\n\n艾莉（英语）：When? You said that yesterday.\n中文对照：什么时候？你昨天也这么说。\n\n玛拉（英语）：After my shift. If you're still up for it.\n中文对照：等我下班。你还想画的话。\n\n艾莉（英语）：Don't put a road through it.\n中文对照：别在这儿画条公路。\n\n她把桥留白的部分摊到桌上，留出母亲可以回来坐的一侧；自己先去找绿笔。\n\n玛拉站起穿外套，乔没有把她的文件一起递过去。\n\n乔（英语）：I have to leave at noon. Don't sign up for another shift.\n中文对照：我中午得走。你别又加一班。\n\n玛拉（英语）：It covers Friday's deposit. That's all I'm doing.\n中文对照：这班够交周五的预付款了。我就上这一班。\n\n乔把外套另一只袖口拉平，挡着她往门口走的半步。\n\n乔（英语）：I have work, too. I can't call out again.\n中文对照：我也得上班。不能又临时请假。\n\n玛拉（英语）：I'll ask to leave early. I'll call before I leave.\n中文对照：我去说一声，早点走。走之前给你打电话。\n\n乔（英语）：Before noon. Not from the bus.\n中文对照：中午之前。别都上公交车了才打。\n\n玛拉点头，拿回手机和蓝夹。来电打断她抓门把的动作。\n\n医生电话声（英语）：I've still got her down for Friday. Call billing when you get off. The renewal's still denied.\n中文对照：周五还给她留着。下班打给账务。续批还是没过。\n\n玛拉（英语）：I'll call at noon. Can you put that in the notes?\n中文对照：我中午打。能帮我在记录里写上吗？\n\n她挂断，把手机放进右裤袋。艾莉听见周五，把绿笔放下。\n\n艾莉（英语）：Are we still going on Friday?\n中文对照：周五还去吗？\n\n玛拉（英语）：That's what I'm trying to sort out.\n中文对照：我就是在弄这个。\n\n玛拉答完孩子，先将蓝夹放在鞋架上，蹲下重系鞋带。乔在她系鞋带时坐到桌旁，接回孩子的画。\n\n乔（英语）：Come on. Show me which way the water goes.\n中文对照：来，给我看看水该往哪儿流。\n\n乔说话时，孩子已经给瀑布补上向下箭头。玛拉系好鞋带站起，左臂拿回鞋架上的蓝夹，出南门；地图留在桌上。",
+      "dramaticFunction": "让拒赔推动加班，并让观众经历一次有代价的照顾交接。",
+      "turn": "母亲从催促孩子、以为解释钱就够，转为承认周五未定且必须给妹妹一个回电期限。",
+      "exitCost": "孩子的桥又被延后；妹妹自己的班次成为玛拉必须兑现的时限。",
+      "sceneRhythm": "以四个约四十秒的完整关系段停留；切点分别是注意力丢失、道歉的条件、姐妹期限和真正离家，不按每句切反打。"
+    },
+    {
+      "id": "E03-SC04",
+      "location": "DINER",
+      "time": "清早·第五天",
+      "entry": "玛拉东柜台工服，风衣挂东工作区蓝夹收个人包；青年南门入，口罩戴包双肩。 玛拉手边咖啡机已有热咖啡，纸杯叠在机旁。",
+      "exit": "包右脚、杯桌前、口罩戴；老人拿收据向东柜台，玛拉柜台内。",
+      "script": "快餐店南入口对着中央通道，东侧柜台亮暖白灯，西侧临街窗透冷光，北端是后排座椅和厕所通道。玛拉在东柜台里整理零钱。戴浅蓝口罩的路易吉从南门进来，黑包仍在背上。玛拉的灰风衣已挂在东侧工作区，蓝夹收在柜台内个人包中。\n\n路易吉从南门进，在东柜台停下，摊开零钱。\n路易吉（英语）：Coffee, please. Whatever's hot. Thank you.\n中文对照：请给我咖啡。热的就行，谢谢。\n\n他数最后两枚硬币时，玛拉从手边取杯，接好热咖啡，先递到他左手。\n玛拉（英语）：Here you go. You can take that table.\n中文对照：给你，坐那张桌吧。\n她示意北后排，等他拿稳杯子才收下零钱。杯盖一侧弹起，玛拉指向杯身。\n玛拉（英语）：Lid's loose. Hold the cup, not the top.\n中文对照：盖子没扣牢。拿杯身，别提盖子。\n她从柜台拿新盖给他按紧。他绕开收餐盘的客人往那儿去，口罩一直戴着，没有喝咖啡。\n\n他坐西北桌，杯放前方，包卸在右脚边。疼痛让左掌撑桌、右手贴腰。东柜台玛拉叫住同事。\n玛拉（英语）：If the clinic calls, come get me. Doesn't matter how busy we are.\n中文对照：诊所打来就叫我。再忙也得叫我。\n棕夹克老人从电视看向北桌，拿着收据离开自己的座位。",
+      "dramaticFunction": "先让举报人与嫌疑人完成一次普通服务关系，再让识别开始。",
+      "turn": "杯盖的小故障被玛拉职业性处理；另一名客人却从电视认脸。",
+      "exitCost": "母亲等待诊所回电的工时已经开始，青年坐定且背包在脚边。",
+      "sceneRhythm": "保留热饮递交与杯盖修正完整24秒，另16秒建立落座、诊所回电请求和老人起身；紧接旧E04无集尾断点。"
+    }
+  ],
+  "shots": [
+    {
+      "id": "E03-SH001",
+      "sceneId": "E03-SC01",
+      "duration": 12,
+      "characters": [
+        "LUIGI-STREET"
+      ],
+      "purpose": "他想靠交通离开，通缉照片却占用了他必须看的屏幕。",
+      "framing": "全景，南端朝北偏西",
+      "composition": "西候车椅、东柜台、北门均清楚",
+      "camera": "固定南端向北偏西全景，屏幕后景、青年中景；路人不集体发现他。",
+      "focus": "人物与北屏所在空间清楚，屏幕内容后期替换。",
+      "start": "口罩遮口鼻；包在背；票右手",
+      "action": "北端发车牌突然切成通缉照片。路易吉脚步没停，把车票翻到背面。车站广播声对车站旅客说本镜第1句英语对白，普通广播。他原想向北走，却在西长椅尽头停住；旁边旅客只顾拖箱子赶自己的班次。",
+      "end": "他在西长椅边停下",
+      "sound": "北侧广播、暖气管响、轮箱声",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E03-D001",
+          "speaker": "车站广播声",
+          "listener": "车站旅客",
+          "text": "Last connection delayed. Please check the departure board.",
+          "translationZh": "末班接驳延误，请查看发车牌。",
+          "tone": "普通广播",
+          "start": 0.6,
+          "end": 4.76
+        }
+      ],
+      "overlay": [
+        {
+          "text": "DAYS LATER / 数日后",
+          "start": 1,
+          "end": 4,
+          "position": "左下时间字卡"
+        }
+      ],
+      "next": "同场近些看疼痛与询问",
+      "viewerEntry": "追捕已经开始，青年还在公共空间。",
+      "viewerExit": "他想靠交通离开，通缉照片却占用了他必须看的屏幕。",
+      "cutTrigger": "车票被翻了面，他停在长椅边。",
+      "extraRoleIds": [
+        "STATION-VOICE"
+      ]
+    },
+    {
+      "id": "E03-SH002",
+      "sceneId": "E03-SC01",
+      "duration": 14,
+      "characters": [
+        "LUIGI-STREET"
+      ],
+      "purpose": "疼痛与关站一起缩短可选空间。",
+      "framing": "中景，西椅东侧朝西北",
+      "composition": "椅背前景，路易吉与工作人员同层",
+      "camera": "固定长椅东侧中景，椅背、支撑手、工作人员同框。",
+      "focus": "支撑与挡带动作同层可见。",
+      "start": "青年站西椅旁，将试着坐下，右手车票，口罩与背包在身。",
+      "action": "他在西椅刚坐下又站起，扶椅背换重心。工作人员来拉隔离带，他抬手挡住即将封闭的空位。路易吉对车站工作人员说本镜第1句英语对白，想给正常理由，说到一半放弃。工作人员看见他的票，再看已关掉一半的大厅灯。",
+      "end": "青年椅边站着，右手票，工作人员隔离带在手。",
+      "sound": "衣料、工作人员钥匙串、远广播",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E03-D002",
+          "speaker": "路易吉",
+          "listener": "车站工作人员",
+          "text": "Anywhere still open? I just need somewhere to sit. I'm waiting for—",
+          "translationZh": "还有哪儿开着？能坐一会儿就行。我在等——",
+          "tone": "想给正常理由，说到一半放弃",
+          "start": 0.6,
+          "end": 6.66
+        }
+      ],
+      "overlay": [],
+      "next": "接方向回应，不提供逃避路线",
+      "viewerEntry": "通缉照片里的人试图在椅子上停留。",
+      "viewerExit": "疼痛与关站一起缩短可选空间。",
+      "cutTrigger": "工作人员握隔离带，示意南门外。",
+      "extraRoleIds": [
+        "STATION-STAFF"
+      ]
+    },
+    {
+      "id": "E03-SH003",
+      "sceneId": "E03-SC01",
+      "duration": 19,
+      "characters": [
+        "LUIGI-STREET"
+      ],
+      "purpose": "他得到一条普通建议，没得到停留的位置。",
+      "framing": "中全景，西侧朝南出口",
+      "composition": "南玻璃门、外街灯，工作人员在东缘",
+      "camera": "固定西侧向南中全景，两人的离开与封区分别完成，不跟出门展示路线。",
+      "focus": "保持门与隔离带闭合关系。",
+      "start": "青年仍在椅旁，票在右手",
+      "action": "车站工作人员对路易吉说本镜第1句英语对白，想结束班次，只说普通建议。工作人员等他离开，隔离带没有收回去。路易吉把票塞进左袋，整好背包肩带，走向南门；风灌进来，带子在他身后扣上。 南门被拖箱旅客拉开又回弹；他把背包带让开门边，等旅客先通过，才顶住门出去。工作人员等门外身影走开才扣隔离带。",
+      "end": "青年从南门走出，隔离带在厅内扣上；没有新的逃亡路线信息。",
+      "sound": "门铰与冷风，广播留在门后",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E03-D003",
+          "speaker": "车站工作人员",
+          "listener": "路易吉",
+          "text": "Try your hotel. There are a few places down the road. Don't know what's open.",
+          "translationZh": "问问你住的旅馆吧。那头有几家吃饭的，哪家开着就不知道了。",
+          "tone": "想结束班次，只说普通建议",
+          "start": 0.6,
+          "end": 8.09
+        }
+      ],
+      "overlay": [],
+      "next": "跨地到临时房间",
+      "viewerEntry": "青年需要坐，工作人员要关站。",
+      "viewerExit": "他得到一条普通建议，没得到停留的位置。",
+      "cutTrigger": "隔离带扣上，南门合拢。",
+      "extraRoleIds": [
+        "STATION-STAFF"
+      ]
+    },
+    {
+      "id": "E03-SH004",
+      "sceneId": "E03-SC02",
+      "duration": 21,
+      "characters": [
+        "LUIGI-STREET"
+      ],
+      "purpose": "他听到家人的担心，仍让他们不知道他在哪。",
+      "framing": "全景，南门朝北桌与东床",
+      "composition": "北手机、东床、西窗明确",
+      "camera": "固定南门向北桌东床全景，响铃触发移动，身体困境不因留言自动消失。",
+      "focus": "随人到桌，手机内容不必可读。",
+      "start": "口罩仍戴着；他坐床边",
+      "action": "手机在北桌亮起，路易吉从东床边撑起身走去。母亲的留言播出。母亲语音留言对路易吉说本镜第1句英语对白，不追问，留一个能回答的小要求。他把音量按小，却没有按停，等末尾呼吸声过去才放下手机。 留言结束，他打开回复框写下“I’m warm.”，看着发送键，最后逐字删掉，没有发出。",
+      "end": "留言已听完；回复框空白，手机回北桌，母亲仍无回音。",
+      "sound": "手机留言、暖灯轻电流、远街声",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E03-D004",
+          "speaker": "母亲语音留言",
+          "listener": "路易吉",
+          "text": "Just tell me you're somewhere warm. You don't have to explain. Your sister's still up.",
+          "translationZh": "就告诉我你待的地方暖不暖。不用解释。你姐姐也还没睡。",
+          "tone": "不追问，留一个能回答的小要求",
+          "start": 0.6,
+          "end": 8.09
+        }
+      ],
+      "overlay": [],
+      "next": "接笔记与垃圾桶的选择",
+      "viewerEntry": "公共大厅把他赶走，旅馆可以暂时锁门。",
+      "viewerExit": "他听到家人的担心，仍让他们不知道他在哪。",
+      "cutTrigger": "手机放下，手转向背包里的笔记。",
+      "extraRoleIds": [
+        "MOTHER-VOICE"
+      ]
+    },
+    {
+      "id": "E03-SH005",
+      "sceneId": "E03-SC02",
+      "duration": 14,
+      "characters": [
+        "LUIGI-STREET"
+      ],
+      "purpose": "他亲手保留解释自己的记录，也保留风险。",
+      "framing": "中近景，北桌西侧向东略俯，手、桶口与包口同时容纳。",
+      "composition": "桶口白袋在下前景，双手和笔记中景，北桌手机后景；戴口罩的脸上沿。",
+      "camera": "固定北桌西侧中近景，同时见手、桶口、包口三个相邻接触点。",
+      "focus": "三个接触点同在可读范围，无切焦。",
+      "start": "手机北桌，左手抽笔记，右手扶包口。",
+      "action": "他抽出笔记，朝白袋垃圾桶放下。纸角碰到袋口，拇指却挡住封面的字迹。门外脚步靠近又离开。他把本子提回，压进黑包最里面；拉链卡了一次，他重新拉到底。",
+      "end": "笔记进包拉链合上，手机北桌，口罩戴着。",
+      "sound": "纸擦塑料、门外脚步、拉链",
+      "music": "无背景音乐",
+      "dialogue": [],
+      "overlay": [],
+      "next": "背包拉链合上后接前台回电，不写成他已拨前台。",
+      "viewerEntry": "笔记可以丢掉，可能减少被捕后的风险。",
+      "viewerExit": "他亲手保留解释自己的记录，也保留风险。",
+      "cutTrigger": "拉链合上，前台回电接着响。",
+      "extraRoleIds": []
+    },
+    {
+      "id": "E03-SH006",
+      "sceneId": "E03-SC02",
+      "duration": 20,
+      "characters": [
+        "LUIGI-STREET"
+      ],
+      "purpose": "他拒绝送水，选择再次进入有人的地方。",
+      "framing": "中全景，西侧向东北，床边和北桌同框。",
+      "composition": "手机右手，东床边，包在北桌脚",
+      "camera": "固定西侧中全景，床至桌路径可见，让他为房卡再站一次。",
+      "focus": "支撑手与起身过程可读，最后跟人到桌。",
+      "start": "青年坐回东床，黑包已拉好在北桌脚；响起的手机从北桌拿到右手。",
+      "action": "路易吉拿起响着的手机，扶床沿坐回去，听见前台说厨房关了可以送水；他回答“No. I'll go out.”。通话结束，他撑床起身，取北桌房卡收入左袋，将手机暂放桌上腾手背起黑包。走到南门，他回头看到手机已暗，返一步拿回右手，才开门出去。",
+      "end": "房卡在左袋，黑包双肩，手机右手，口罩仍戴；青年开南门出去。",
+      "sound": "听筒、床架、门外暖气声",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E03-D006",
+          "speaker": "旅馆前台电话声",
+          "listener": "路易吉",
+          "text": "Kitchen's closed. I can bring you some water.",
+          "translationZh": "厨房关了。要不我给你送点水？",
+          "tone": "普通回电",
+          "start": 0.6,
+          "end": 4.76
+        },
+        {
+          "id": "E03-D106",
+          "speaker": "路易吉",
+          "listener": "旅馆前台电话声",
+          "text": "No. I'll go out.",
+          "translationZh": "不用。我出去。",
+          "tone": "不想让人进房间，结束通话",
+          "start": 5.11,
+          "end": 7.37
+        }
+      ],
+      "overlay": [],
+      "next": "跨到同夜将尽的玛拉家",
+      "viewerEntry": "笔记留下了，身体仍迫使他坐回床边。",
+      "viewerExit": "他拒绝送水，选择再次进入有人的地方。",
+      "cutTrigger": "房卡被取走，切另一个人准备出门。",
+      "extraRoleIds": [
+        "RECEPTION-VOICE"
+      ]
+    },
+    {
+      "id": "E03-SH007",
+      "sceneId": "E03-SC03",
+      "duration": 40,
+      "characters": [
+        "MARA-WORK",
+        "ELLIE"
+      ],
+      "purpose": "建立孩子自己的任务与妹妹的照顾工作，母亲的账务焦虑挤占了一次实际请求。",
+      "framing": "南入口内平视三人中全景",
+      "composition": "鞋架在近南，餐桌中层，北卧室门为孩子来处；三人可相互看见。东厨房小灯是暖主光。",
+      "camera": "南侧三人中全景起拍；母亲绕开画图桌去鞋架时，小幅横移保持她与举画孩子同框，移到鞋架关系成立后停止。",
+      "focus": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "start": "蓝夹在玛拉左臂；艾莉抱地图由北屋走来，乔在桌南拿袜子。",
+      "action": "玛拉把拒赔页折回蓝夹，正要绕过餐桌。艾莉横过来，把还没接上的桥举到她面前。艾莉对玛拉说英语“You said you weren't working. We haven't done the bridge. Jo made the river go uphill.”；要母亲兑现约定，还在争地图的规则。乔将一只袜子套上孩子脚尖；艾莉把脚缩回，点她画错的河。乔对艾莉说英语“You asked for a waterfall. That's the waterfall.”；认真为自己那一笔辩解，不逗观众。艾莉对乔说英语“It goes the other way. See? That's our house.”；拿地图讲自己的道理。手机排班确认震动。玛拉看一眼，先把手机与蓝夹放桌南角，回鞋架拉鞋带。乔对玛拉说英语“Mara. She was showing you something.”；替孩子争取一次真正被看见。玛拉回过头，却只看见艾莉还光着的一只脚。",
+      "end": "手机和蓝夹放桌南角；玛拉蹲鞋架前，艾莉仍举地图，乔手持袜子。",
+      "sound": "同场环境声与所列英语；不补额外可辨台词",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E03-D007",
+          "speaker": "艾莉",
+          "listener": "玛拉",
+          "text": "You said you weren't working. We haven't done the bridge. Jo made the river go uphill.",
+          "translationZh": "你说今天不上班的。桥还没画呢。乔姨把河都画到山上去了。",
+          "tone": "要母亲兑现约定，还在争地图的规则",
+          "start": 1,
+          "end": 7.81
+        },
+        {
+          "id": "E03-D201",
+          "speaker": "乔",
+          "text": "You asked for a waterfall. That's the waterfall.",
+          "translationZh": "你要瀑布啊。这就是瀑布。",
+          "listener": "艾莉",
+          "tone": "认真为自己那一笔辩解，不逗观众",
+          "start": 12,
+          "end": 15.4
+        },
+        {
+          "id": "E03-D202",
+          "speaker": "艾莉",
+          "text": "It goes the other way. See? That's our house.",
+          "translationZh": "流反了。你看，这是咱们家。",
+          "listener": "乔",
+          "tone": "拿地图讲自己的道理",
+          "start": 21,
+          "end": 24.83
+        },
+        {
+          "id": "E03-D203",
+          "speaker": "乔",
+          "text": "Mara. She was showing you something.",
+          "translationZh": "玛拉。她在给你看呢。",
+          "listener": "玛拉",
+          "tone": "替孩子争取一次真正被看见",
+          "start": 29,
+          "end": 31.55
+        }
+      ],
+      "overlay": [],
+      "next": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "viewerEntry": "蓝夹在玛拉左臂；艾莉抱地图由北屋走来，乔在桌南拿袜子。",
+      "viewerExit": "手机和蓝夹放桌南角；玛拉蹲鞋架前，艾莉仍举地图，乔手持袜子。",
+      "cutTrigger": "手机和蓝夹放桌南角；玛拉蹲鞋架前，艾莉仍举地图，乔手持袜子。",
+      "extraRoleIds": [
+        "JO"
+      ],
+      "generationSegments": [
+        {
+          "duration": 20,
+          "start": "地图在孩子手里，母亲将走。",
+          "action": "孩子拦住母亲展示桥，乔替她穿袜并解释自己画的瀑布。",
+          "end": "艾莉缩回脚，地图仍向外。"
+        },
+        {
+          "duration": 20,
+          "start": "艾莉手指地图上的家。",
+          "action": "孩子纠正河流，母亲收排班消息去系鞋带，乔叫她看孩子。",
+          "end": "母亲回头看光脚；文件和手机留桌南角。"
+        }
+      ]
+    },
+    {
+      "id": "E03-SH008",
+      "sceneId": "E03-SC03",
+      "duration": 40,
+      "characters": [
+        "MARA-WORK",
+        "ELLIE"
+      ],
+      "purpose": "道歉换来有条件的继续合作，而非一句台词就修复关系。",
+      "framing": "桌东侧低位双人中景，乔的穿袜动作在边缘",
+      "composition": "母女在同一层，地图面朝孩子；鞋架保持南侧画外来向。",
+      "camera": "留在母女平视高度，完整看见道歉之后孩子没有立刻释怀；不切眼泪特写。",
+      "focus": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "start": "玛拉蹲鞋架前，艾莉站桌南，乔在孩子身旁。",
+      "action": "玛拉对艾莉说英语“Put your socks on. Please. Just do that for me.”；忙着系鞋带，第二句说重了，听见孩子卷纸才收住。艾莉不再举画，开始卷起来。玛拉的鞋带打歪了，她扯开，走近孩子蹲下。玛拉对艾莉说英语“I'm sorry. Save me the bridge, okay? We'll do it together.”；给具体补偿，不要求立即原谅。艾莉把地图的桥那一面转向自己，只把脚给乔。艾莉对玛拉说英语“When? You said that yesterday.”；要具体答案，非成熟责备。玛拉对艾莉说英语“After my shift. If you're still up for it.”；降低刚才随口许诺的声势。艾莉对玛拉说英语“Don't put a road through it.”；给合作加自己的规则。她把桥留白的部分摊到桌上，留出母亲可以回来坐的一侧；自己先去找绿笔。",
+      "end": "孩子穿好袜子，地图留桌面；母亲蹲姿未起，鞋带仍未系好。",
+      "sound": "同场环境声与所列英语；不补额外可辨台词",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E03-D008",
+          "speaker": "玛拉",
+          "listener": "艾莉",
+          "text": "Put your socks on. Please. Just do that for me.",
+          "translationZh": "把袜子穿上。行吗？这点事别让我操心。",
+          "tone": "忙着系鞋带，第二句说重了，听见孩子卷纸才收住",
+          "start": 1,
+          "end": 5.26
+        },
+        {
+          "id": "E03-D109",
+          "speaker": "玛拉",
+          "listener": "艾莉",
+          "text": "I'm sorry. Save me the bridge, okay? We'll do it together.",
+          "translationZh": "对不起。桥给我留着，好吗？咱俩一起画。",
+          "tone": "给具体补偿，不要求立即原谅",
+          "start": 12,
+          "end": 16.68
+        },
+        {
+          "id": "E03-D204",
+          "speaker": "艾莉",
+          "text": "When? You said that yesterday.",
+          "translationZh": "什么时候？你昨天也这么说。",
+          "listener": "玛拉",
+          "tone": "要具体答案，非成熟责备",
+          "start": 22,
+          "end": 24.13
+        },
+        {
+          "id": "E03-D205",
+          "speaker": "玛拉",
+          "text": "After my shift. If you're still up for it.",
+          "translationZh": "等我下班。你还想画的话。",
+          "listener": "艾莉",
+          "tone": "降低刚才随口许诺的声势",
+          "start": 27,
+          "end": 30.83
+        },
+        {
+          "id": "E03-D206",
+          "speaker": "艾莉",
+          "text": "Don't put a road through it.",
+          "translationZh": "别在这儿画条公路。",
+          "listener": "玛拉",
+          "tone": "给合作加自己的规则",
+          "start": 33,
+          "end": 35.55
+        }
+      ],
+      "overlay": [],
+      "next": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "viewerEntry": "玛拉蹲鞋架前，艾莉站桌南，乔在孩子身旁。",
+      "viewerExit": "孩子穿好袜子，地图留桌面；母亲蹲姿未起，鞋带仍未系好。",
+      "cutTrigger": "孩子穿好袜子，地图留桌面；母亲蹲姿未起，鞋带仍未系好。",
+      "extraRoleIds": [
+        "JO"
+      ],
+      "generationSegments": [
+        {
+          "duration": 20,
+          "start": "艾莉举画，玛拉不耐烦。",
+          "action": "母亲催穿袜，孩子卷画；母亲停下重系鞋带，走近道歉。",
+          "end": "孩子尚未交画，乔继续把袜子穿好。"
+        },
+        {
+          "duration": 20,
+          "start": "母亲蹲在孩子面前。",
+          "action": "孩子追问什么时候，母亲缩小承诺，孩子规定不要画公路并把桥留白。",
+          "end": "地图摊开，母亲尚未离开，孩子找绿笔。"
+        }
+      ]
+    },
+    {
+      "id": "E03-SH009",
+      "sceneId": "E03-SC03",
+      "duration": 40,
+      "characters": [
+        "MARA-WORK",
+        "ELLIE"
+      ],
+      "purpose": "加班不是抽象牺牲，它把母亲欠下的时间转嫁给同样要工作的妹妹。",
+      "framing": "南门方向的姐妹中景",
+      "composition": "文件在两人之间，北边孩子仍自己画图，不在每句间插孩子反应。",
+      "camera": "固定门内，让乔用站位争取自己的时间；来电时不抢切屏幕。",
+      "focus": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "start": "乔在桌南把外套递来；玛拉双手空，蓝夹和手机仍在桌角。",
+      "action": "玛拉站起穿外套，乔没有把她的文件一起递过去。乔对玛拉说英语“I have to leave at noon. Don't sign up for another shift.”；妹妹也有自己的时间限制。玛拉对乔说英语“It covers Friday's deposit. That's all I'm doing.”；想把不停加班说成最后一次。乔把外套另一只袖口拉平，挡着她往门口走的半步。乔对玛拉说英语“I have work, too. I can't call out again.”；让姐姐承认她也在承担工时损失。玛拉对乔说英语“I'll ask to leave early. I'll call before I leave.”；能保证的是沟通，不能保证排班批准。乔对玛拉说英语“Before noon. Not from the bus.”；熟悉姐姐的拖延，划清可执行边界。玛拉点头，拿回手机和蓝夹。来电打断她抓门把的动作。",
+      "end": "玛拉已穿外套、左臂蓝夹右手手机；乔仍站桌南，不替她按下接听。",
+      "sound": "同场环境声与所列英语；不补额外可辨台词",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E03-D009",
+          "speaker": "乔",
+          "listener": "玛拉",
+          "text": "I have to leave at noon. Don't sign up for another shift.",
+          "translationZh": "我中午得走。你别又加一班。",
+          "tone": "妹妹也有自己的时间限制",
+          "start": 1,
+          "end": 6.11
+        },
+        {
+          "id": "E03-D111",
+          "speaker": "玛拉",
+          "listener": "乔",
+          "text": "It covers Friday's deposit. That's all I'm doing.",
+          "translationZh": "这班够交周五的预付款了。我就上这一班。",
+          "tone": "想把不停加班说成最后一次",
+          "start": 8,
+          "end": 11.4
+        },
+        {
+          "id": "E03-D207",
+          "speaker": "乔",
+          "text": "I have work, too. I can't call out again.",
+          "translationZh": "我也得上班。不能又临时请假。",
+          "listener": "玛拉",
+          "tone": "让姐姐承认她也在承担工时损失",
+          "start": 21,
+          "end": 24.83
+        },
+        {
+          "id": "E03-D208",
+          "speaker": "玛拉",
+          "text": "I'll ask to leave early. I'll call before I leave.",
+          "translationZh": "我去说一声，早点走。走之前给你打电话。",
+          "listener": "乔",
+          "tone": "能保证的是沟通，不能保证排班批准",
+          "start": 27,
+          "end": 31.26
+        },
+        {
+          "id": "E03-D209",
+          "speaker": "乔",
+          "text": "Before noon. Not from the bus.",
+          "translationZh": "中午之前。别都上公交车了才打。",
+          "listener": "玛拉",
+          "tone": "熟悉姐姐的拖延，划清可执行边界",
+          "start": 34,
+          "end": 36.55
+        }
+      ],
+      "overlay": [],
+      "next": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "viewerEntry": "乔在桌南把外套递来；玛拉双手空，蓝夹和手机仍在桌角。",
+      "viewerExit": "玛拉已穿外套、左臂蓝夹右手手机；乔仍站桌南，不替她按下接听。",
+      "cutTrigger": "玛拉已穿外套、左臂蓝夹右手手机；乔仍站桌南，不替她按下接听。",
+      "extraRoleIds": [
+        "JO"
+      ],
+      "generationSegments": [
+        {
+          "duration": 20,
+          "start": "外套在乔手上，母亲准备走。",
+          "action": "乔说明中午要走，母亲用周五预付款解释加班，穿上外套。",
+          "end": "两人仍面对面，文件未拿。"
+        },
+        {
+          "duration": 20,
+          "start": "乔挡住半步，孩子在背景画。",
+          "action": "妹妹说自己不能再请假，姐姐只承诺提前联系，乔把期限说清；母亲拿文件时诊所来电。",
+          "end": "手机在母亲右手响，文件夹左臂。"
+        }
+      ]
+    },
+    {
+      "id": "E03-SH010",
+      "sceneId": "E03-SC03",
+      "duration": 40,
+      "characters": [
+        "MARA-WORK",
+        "ELLIE"
+      ],
+      "purpose": "诊所确认拒赔，孩子得到诚实的不确定答复；母亲离家后生活继续，压力未获安慰性解决。",
+      "framing": "南门内朝北的中全景",
+      "composition": "母亲近南、餐桌中间、北卧室后层，厨房暖光仍照桌面。",
+      "camera": "固定门内，乔坐下说话与孩子补箭头、母亲系鞋并行在共享画面完成；母亲离画后留母女空位与仍继续画的乔和孩子，不延长成新动作。",
+      "focus": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "start": "玛拉接起诊所电话，乔收好空袜包装；孩子在桌北画图。",
+      "action": "医生电话声对玛拉说英语“I've still got her down for Friday. Call billing when you get off. The renewal's still denied.”；交代状态与下一步，不宣布拒绝医疗。玛拉对医生电话声说英语“I'll call at noon. Can you put that in the notes?”；锁定唯一能保证的时间。她挂断，把手机放进右裤袋。艾莉听见周五，把绿笔放下。艾莉对玛拉说英语“Are we still going on Friday?”；只问自己的日程，不承担成人观点。玛拉对艾莉说英语“That's what I'm trying to sort out.”；这次不先承诺能去。玛拉答完孩子，先将蓝夹放在鞋架上，蹲下重系鞋带。乔在她系鞋带时对艾莉说英语“Come on. Show me which way the water goes.”；接回孩子任务而非继续追问账务。乔说话时已经在桌旁坐下，孩子同时给瀑布补向下箭头；玛拉系好鞋带站起，左臂拿回鞋架上的蓝夹，出南门。地图留在桌上。",
+      "end": "玛拉离家，蓝夹左臂手机右袋；母亲一侧椅子空着，乔和艾莉继续修地图。",
+      "sound": "同场环境声与所列英语；不补额外可辨台词",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E03-D010",
+          "speaker": "医生电话声",
+          "listener": "玛拉",
+          "text": "I've still got her down for Friday. Call billing when you get off. The renewal's still denied.",
+          "translationZh": "周五还给她留着。下班打给账务。续批还是没过。",
+          "tone": "交代状态与下一步，不宣布拒绝医疗",
+          "start": 1,
+          "end": 8.23
+        },
+        {
+          "id": "E03-D113",
+          "speaker": "玛拉",
+          "listener": "医生电话声",
+          "text": "I'll call at noon. Can you put that in the notes?",
+          "translationZh": "我中午打。能帮我在记录里写上吗？",
+          "tone": "锁定唯一能保证的时间",
+          "start": 11,
+          "end": 15.68
+        },
+        {
+          "id": "E03-D210",
+          "speaker": "艾莉",
+          "text": "Are we still going on Friday?",
+          "translationZh": "周五还去吗？",
+          "listener": "玛拉",
+          "tone": "只问自己的日程，不承担成人观点",
+          "start": 22,
+          "end": 24.55
+        },
+        {
+          "id": "E03-D211",
+          "speaker": "玛拉",
+          "text": "That's what I'm trying to sort out.",
+          "translationZh": "我就是在弄这个。",
+          "listener": "艾莉",
+          "tone": "这次不先承诺能去",
+          "start": 27,
+          "end": 29.98
+        },
+        {
+          "id": "E03-D212",
+          "speaker": "乔",
+          "text": "Come on. Show me which way the water goes.",
+          "translationZh": "来，给我看看水该往哪儿流。",
+          "listener": "艾莉",
+          "tone": "接回孩子任务而非继续追问账务",
+          "start": 33,
+          "end": 36.83
+        }
+      ],
+      "overlay": [],
+      "next": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "viewerEntry": "玛拉接起诊所电话，乔收好空袜包装；孩子在桌北画图。",
+      "viewerExit": "玛拉离家，蓝夹左臂手机右袋；母亲一侧椅子空着，乔和艾莉继续修地图。",
+      "cutTrigger": "玛拉离家，蓝夹左臂手机右袋；母亲一侧椅子空着，乔和艾莉继续修地图。",
+      "extraRoleIds": [
+        "DOCTOR-PHONE-VOICE",
+        "JO"
+      ],
+      "generationSegments": [
+        {
+          "duration": 20,
+          "start": "手机已接通，文件夹抱在左臂。",
+          "action": "医生说明续批仍拒，母亲约中午回电并要求备注。",
+          "end": "通话结束，母亲仍在门内。"
+        },
+        {
+          "duration": 20,
+          "start": "孩子放下绿笔望向母亲。",
+          "action": "孩子问周五，母亲不许诺；答完便把蓝夹放鞋架蹲下系鞋。乔一边坐下接回画图一边说话，孩子同时补箭头；母亲系好站起拿回蓝夹出门。",
+          "end": "门合上，孩子与乔画水流，地图桥仍空着。"
+        }
+      ]
+    },
+    {
+      "id": "E03-SH011",
+      "sceneId": "E03-SC04",
+      "duration": 24,
+      "characters": [
+        "MARA-WORK",
+        "LUIGI-STREET"
+      ],
+      "purpose": "普通点餐把他们放入同一空间，礼貌不能证明危险与否。",
+      "framing": "全景，南门内朝北，轴东侧",
+      "composition": "东柜台Mara，西窗，北后排",
+      "camera": "固定南门内偏东全景，南门—东柜台—西北桌路线同框，轴东侧。",
+      "focus": "交杯与交钱可读，口罩不露嘴。",
+      "start": "玛拉东柜台工服，风衣挂东工作区蓝夹收个人包；青年南门入，口罩戴包双肩。 玛拉手边咖啡机已有热咖啡，纸杯叠在机旁。",
+      "action": "路易吉戴口罩到东柜台数硬币，说英语“Coffee, please. Whatever's hot. Thank you.”。玛拉接热咖啡先递到他左手，说“Here you go. You can take that table.”，等他握稳收零钱。杯盖一侧弹起，她说“Lid's loose. Hold the cup, not the top.”，拿新盖按紧。青年未喝咖啡，戴口罩绕开收盘客人去西北桌。",
+      "end": "热咖啡在青年左手，杯盖扣好；零钱已付，青年戴口罩往西北桌走。",
+      "sound": "门铃、咖啡机、厨房炸锅",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E03-D011",
+          "speaker": "路易吉",
+          "listener": "玛拉",
+          "text": "Coffee, please. Whatever's hot. Thank you.",
+          "translationZh": "请给我咖啡。热的就行，谢谢。",
+          "tone": "疲倦却客气，供后来亲眼记忆",
+          "start": 1.8,
+          "end": 5.01
+        },
+        {
+          "id": "E03-D115",
+          "speaker": "玛拉",
+          "listener": "路易吉",
+          "text": "Here you go. You can take that table.",
+          "translationZh": "给你，坐那张桌吧。",
+          "tone": "忙着开班，普通照顾",
+          "start": 5.36,
+          "end": 9.52
+        },
+        {
+          "id": "E03-D213",
+          "speaker": "玛拉",
+          "text": "Lid's loose. Hold the cup, not the top.",
+          "translationZh": "盖子没扣牢。拿杯身，别提盖子。",
+          "listener": "路易吉",
+          "tone": "职业习惯，注意热饮而非认脸",
+          "start": 12,
+          "end": 15.4
+        }
+      ],
+      "overlay": [],
+      "next": "同场跟到西北后排",
+      "viewerEntry": "两人出门理由已清楚。",
+      "viewerExit": "普通点餐把他们放入同一空间，礼貌不能证明危险与否。",
+      "cutTrigger": "装好热咖啡的杯交稳青年左手、零钱留柜台后，他朝北后排走；没有待叫号的订单。",
+      "extraRoleIds": []
+    },
+    {
+      "id": "E03-SH012",
+      "sceneId": "E03-SC04",
+      "duration": 16,
+      "characters": [
+        "LUIGI-STREET",
+        "MARA-WORK"
+      ],
+      "purpose": "另一位顾客开始比对公开照片与眼前的人。",
+      "framing": "中全景，中央通道东侧朝西北",
+      "composition": "青年西北桌居中，背包右脚在画下沿；棕夹克老人从北侧相邻桌起身走向画外东柜台。玛拉与同事仅画外声，位置继承东工作区。",
+      "camera": "固定通道东侧中全景朝西北，青年卸包中景、老人起身后层；不替老人先下结论。",
+      "focus": "右脚旁放包完整可见，老人是后层活动。",
+      "start": "他左手杯，右手扶背包带",
+      "action": "他坐西北桌，杯放前方，包卸在右脚边。疼痛让左掌撑桌、右手贴腰。东柜台玛拉叫住同事。玛拉对同事说本镜第1句英语对白，把救急联系托给同事。棕夹克老人从电视看向北桌，拿着收据离开自己的座位。",
+      "end": "包右脚、杯桌前、口罩戴；老人拿收据向东柜台，玛拉柜台内。",
+      "sound": "青年椅脚与放包、低电视声；玛拉从画外东柜台说所列英语，同事不新增答话。",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E03-D012",
+          "speaker": "玛拉",
+          "listener": "同事",
+          "text": "If the clinic calls, come get me. Doesn't matter how busy we are.",
+          "translationZh": "诊所打来就叫我。再忙也得叫我。",
+          "tone": "把救急联系托给同事",
+          "start": 0.6,
+          "end": 7.14
+        }
+      ],
+      "overlay": [],
+      "next": "E04接同一清早与座位",
+      "viewerEntry": "青年坐到最远空桌，母亲还在等诊所。",
+      "viewerExit": "另一位顾客开始比对公开照片与眼前的人。",
+      "cutTrigger": "老人持收据走向柜台，E04接收据。",
+      "extraRoleIds": [
+        "DINER-COWORKER",
+        "OLDER-CUSTOMER"
+      ]
+    }
+  ],
+  "continuityNote": "Luigi本集口罩始终戴好，E04才亲手摘除；黑包由肩背→DINER西北座右脚。Mara工服灰围裙，离家穿灰风衣，进店已脱外套挂东工作区，蓝夹留柜台内个人包，需后集取出；Mara常右手机左蓝夹。Jo为34岁白人女性、棕卷发、深紫针织衫深裤，中音亲近，照看Ellie非主要线索人。前台男声、车站女广播、工作人员成年男性灰制服。E03临时旅馆与案发前房间仅空间基线相同，需后期地名宾州，非纽约同房。pending_media。 全程浅蓝口罩，E04-SH005才摘。删除笔记自言自语，用桶口收回体现主动保留。SH011新增青年礼貌点餐，供E07/E19回收；SH012补棕夹克老人可见绑定。地图和孩子抗拒保留独立生活。",
+  "dramaturgy": {
+    "openingQuestion": "通缉照片在他必须看的发车牌上，他还能在哪里停下？",
+    "pursuit": "路易吉找休息吃饭处却不肯放弃笔记；玛拉用额外班补治疗预付款。",
+    "reversal": "他拒绝等送水，她失约去接班，两条主动选择把他们放进同一家店。",
+    "cost": "他携带不利记录；她错过孩子的地图约定并用尽妹妹照护时间。",
+    "cliffhanger": "老人从电视看到北桌，持收据走向玛拉。",
+    "nextEpisodeBridge": "E04从识别的不确定出发，玛拉先选择保护店里的人，再报警。"
+  }
+}

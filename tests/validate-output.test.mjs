@@ -30,6 +30,94 @@ async function loadContractFixture(stem) {
   };
 }
 
+test("ScriptScene rejects ambiguous identities, invalid dialogue attribution, and unordered presentation", async () => {
+  const { schemaPath, payload } = await loadContractFixture("script-scene");
+  const mutations = [
+    ["duplicate participant", (p) => { p.participants.push(structuredClone(p.participants[0])); }, /participants\[2\]\.participantId must be unique/],
+    ["unknown dialogue speaker", (p) => { p.beats[0].speakerId = "character.missing"; }, /beats\[0\]\.speakerId must identify a declared participant/],
+    ["unknown mixed-beat speaker", (p) => { p.beats[2].speakerId = "character.missing"; }, /beats\[2\]\.speakerId must identify a declared participant/],
+    ["unknown silent-beat speaker", (p) => { p.beats[1].speakerId = "character.missing"; }, /beats\[1\]\.speakerId must identify a declared participant/],
+    ["missing dialogue text", (p) => { delete p.beats[0].dialogue; }, /beats\[0\]\.dialogue must contain nonblank text/],
+    ["blank dialogue text", (p) => { p.beats[0].dialogue = " \n\t　"; }, /beats\[0\]\.dialogue must contain nonblank text/],
+    ["missing dialogue speaker", (p) => { delete p.beats[0].speakerId; }, /beats\[0\]\.speakerId is required/],
+    ["duplicate order", (p) => { p.beats[1].order = p.beats[0].order; }, /beats\[1\]\.order must be strictly increasing/],
+    ["reversed order", (p) => { p.beats.reverse(); }, /order must be strictly increasing/],
+    ["duplicate upstream beat ref", (p) => { p.beatRefs.push(p.beatRefs[0]); }, /beatRefs\[2\] must be unique/],
+  ];
+  for (const [label, mutate, expected] of mutations) {
+    const candidate = structuredClone(payload);
+    mutate(candidate);
+    const snapshot = canonicalize(candidate);
+    const result = await validatePayload(schemaPath, candidate);
+    assert.equal(result.valid, false, label);
+    assert.match(result.errors.join("\n"), expected, label);
+    assert.ok(result.unverified.some((item) => item.includes("Literary quality") && item.includes("causal logic")), label);
+    assert.equal(canonicalize(candidate), snapshot, `${label}: validation must not repair input`);
+  }
+});
+
+test("ScriptScene preserves legacy mixed dialogue as unresolved and accepts silence and sparse order", async () => {
+  const { schemaPath, payload } = await loadContractFixture("script-scene");
+  const original = canonicalize(payload);
+  const legacy = await validatePayload(schemaPath, payload);
+  assert.equal(legacy.valid, true, legacy.errors.join("\n"));
+  assert.ok(legacy.unverified.some((item) => item.startsWith("$.beats[2].speakerId:") && item.includes("was not inferred")));
+  assert.equal(canonicalize(payload), original, "Missing legacy attribution must remain absent.");
+  assert.equal(Object.hasOwn(payload.beats[2], "speakerId"), false);
+
+  const attributed = structuredClone(payload);
+  attributed.beats[2].speakerId = attributed.participants[0].participantId;
+  attributed.beats.forEach((beat, index) => { beat.order = (index + 1) * 10; });
+  const snapshot = canonicalize(attributed);
+  const result = await validatePayload(schemaPath, attributed);
+  assert.equal(result.valid, true, result.errors.join("\n"));
+  assert.equal(result.unverified.some((item) => item.startsWith("$.beats[")), false);
+  assert.ok(result.unverified.some((item) => item.includes("character knowledge") && item.includes("locked wording")));
+  assert.equal(canonicalize(attributed), snapshot, "Sparse order and exact dialogue must be preserved.");
+
+  const silent = structuredClone(payload);
+  silent.beats = [structuredClone(payload.beats[1])];
+  silent.beats[0].order = 20;
+  const silence = await validatePayload(schemaPath, silent);
+  assert.equal(silence.valid, true, silence.errors.join("\n"));
+  assert.equal(silence.unverified.some((item) => item.includes("no declared speaker")), false);
+  assert.ok(silence.unverified.some((item) => item.includes("Literary quality")));
+});
+
+test("BeatSheet rejects duplicate IDs, unordered presentation, and dangling setup or payoff references", async () => {
+  const { schemaPath, payload } = await loadContractFixture("beat-sheet");
+  const mutations = [
+    ["duplicate beat identity", (p) => { p.beats[1].beatId = p.beats[0].beatId; }, /beats\[1\]\.beatId must be unique/],
+    ["duplicate order", (p) => { p.beats[1].order = p.beats[0].order; }, /beats\[1\]\.order must be strictly increasing/],
+    ["reversed order", (p) => { p.beats.reverse(); }, /order must be strictly increasing/],
+    ["missing setup beat", (p) => { p.setupPayoffs[0].setupBeatId = "beat.missing"; }, /setupPayoffs\[0\]\.setupBeatId must identify an existing beat/],
+    ["missing payoff beat", (p) => { p.setupPayoffs[0].payoffBeatId = "beat.missing"; }, /setupPayoffs\[0\]\.payoffBeatId must identify an existing beat/],
+  ];
+  for (const [label, mutate, expected] of mutations) {
+    const candidate = structuredClone(payload);
+    mutate(candidate);
+    const snapshot = canonicalize(candidate);
+    const result = await validatePayload(schemaPath, candidate);
+    assert.equal(result.valid, false, label);
+    assert.match(result.errors.join("\n"), expected, label);
+    assert.ok(result.unverified.some((item) => item.includes("Literary quality")), label);
+    assert.equal(canonicalize(candidate), snapshot, `${label}: validation must not repair input`);
+  }
+});
+
+test("BeatSheet permits sparse presentation order without interpreting story chronology or quality", async () => {
+  const { schemaPath, payload } = await loadContractFixture("beat-sheet");
+  assert.equal((await validatePayload(schemaPath, payload)).valid, true);
+  const nonlinear = structuredClone(payload);
+  nonlinear.beats.reverse();
+  nonlinear.beats.forEach((beat, index) => { beat.order = (index + 1) * 10; });
+  const snapshot = canonicalize(nonlinear);
+  const result = await validatePayload(schemaPath, nonlinear);
+  assert.equal(result.valid, true, result.errors.join("\n"));
+  assert.ok(result.unverified.some((item) => item.includes("causal logic") && item.includes("reading the full text")));
+  assert.equal(canonicalize(nonlinear), snapshot, "Validation must preserve the supplied nonlinear presentation.");
+});
+
 function rhythmWithShots(payload, count = 3) {
   const candidate = structuredClone(payload);
   const first = candidate.shotWindows[0];

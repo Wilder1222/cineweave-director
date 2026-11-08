@@ -1,0 +1,21 @@
+{
+  "valid": true,
+  "scope": "plan_only",
+  "coverageComplete": true,
+  "reviewComplete": true,
+  "expectedRows": 42,
+  "missing": [],
+  "openItems": [],
+  "prompt": null,
+  "errors": [],
+  "cameraLanguage": {
+    "valid": true,
+    "coverageComplete": true,
+    "scope": "plan_only",
+    "expectedShots": 7,
+    "missing": [],
+    "errors": [],
+    "limitation": "只读文本与声明一致性检查；不能核验实际相机轨迹、光学焦点、观众反应或模型实现。"
+  },
+  "limitation": "仅检查工作表一致性，不核验引用内容、艺术质量、媒体、权利、批准或实际执行。"
+}

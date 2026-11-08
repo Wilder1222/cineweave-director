@@ -1,0 +1,68 @@
+{
+  "topicId": "V005",
+  "projectId": "dba0bb21f663b5cebc055159f4fa3aa6ba32d1324caf6f82faede1e5ad0c98d6",
+  "projectTitle": "外卖送到三十三楼",
+  "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=dba0bb21f663b5cebc055159f4fa3aa6ba32d1324caf6f82faede1e5ad0c98d6#scripts",
+  "transport": "authorized_browser_ui_dom",
+  "currentRevision": null,
+  "exportComplete": true,
+  "documents": [
+    {
+      "documentId": "f38c4263945df63f6c1609ce42e5ac4580fad76ff799d10e4c7c27111477761a",
+      "metadata": "提示词",
+      "title": "V005 外卖送到三十三楼｜审阅与来源｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "69821103941ba990ccf64380a40a13640261e398f5a5d42c6f9fa9e02ba319ff",
+      "bodyLength": 823,
+      "readAt": "2026-11-04T06:49:49.585Z",
+      "file": "f38c4263945df63f6c1609ce42e5ac4580fad76ff799d10e4c7c27111477761a.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=dba0bb21f663b5cebc055159f4fa3aa6ba32d1324caf6f82faede1e5ad0c98d6#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "ff4412ba638c114f47db9d863c63bde7f4e1fc45eb19f38646f539bb00b38f95",
+      "metadata": "提示词",
+      "title": "V005 外卖送到三十三楼｜分镜与视频提示｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "7de0299ceca565dbc1b4a4b3c001940761de5c0e3d0a336ed83eb71688f4557c",
+      "bodyLength": 5657,
+      "readAt": "2026-11-04T06:49:57.924Z",
+      "file": "ff4412ba638c114f47db9d863c63bde7f4e1fc45eb19f38646f539bb00b38f95.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=dba0bb21f663b5cebc055159f4fa3aa6ba32d1324caf6f82faede1e5ad0c98d6#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "dc14cc5644e77866428109d5748c3434e311e07e992c2a656d7eb6f99c3dbe56",
+      "metadata": "剧本",
+      "title": "V005 外卖送到三十三楼｜剧本｜20261031审阅版",
+      "currentRevision": null,
+      "sha256": "7e9966842c8fc48359a6076161de55f9d540fad36401fea98ccdcd888f8adbff",
+      "bodyLength": 1145,
+      "readAt": "2026-11-04T06:50:06.397Z",
+      "file": "dc14cc5644e77866428109d5748c3434e311e07e992c2a656d7eb6f99c3dbe56.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=dba0bb21f663b5cebc055159f4fa3aa6ba32d1324caf6f82faede1e5ad0c98d6#scripts",
+      "proposals": []
+    },
+    {
+      "documentId": "3bcdd4c8a27ba99e145ab244a58e9f973800630de11f7eef4e1b28d5a598255c",
+      "metadata": "提示词",
+      "title": "V005 外卖送到三十三楼｜分镜与视频提示词候选",
+      "currentRevision": null,
+      "sha256": "3e67a9b7b9dc93c630c139a4730e398b47d59a48bb10accdc5c1dcb7660c795a",
+      "bodyLength": 1324,
+      "readAt": "2026-11-04T06:50:14.345Z",
+      "file": "3bcdd4c8a27ba99e145ab244a58e9f973800630de11f7eef4e1b28d5a598255c.md",
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=dba0bb21f663b5cebc055159f4fa3aa6ba32d1324caf6f82faede1e5ad0c98d6#scripts",
+      "proposals": [
+        {
+          "proposalId": "1e2971644d319171ffa724b8c467cbb2206ed8cc845eb281bebb12d9746c1768",
+          "file": "3bcdd4c8a27ba99e145ab244a58e9f973800630de11f7eef4e1b28d5a598255c.proposal-1.md",
+          "sha256": "3e67a9b7b9dc93c630c139a4730e398b47d59a48bb10accdc5c1dcb7660c795a",
+          "cardText": "创作者提交的内容审阅提案2026/10/28 14:18待审阅# V005《外卖送到三十三楼》｜逐镜分镜与视频提示词候选\n\n依据 V005-小说.md、V005-剧本.md。设计审阅：明知会困住骑手的管理员只想喝热汤，却也必须留下自己的钥匙；骑手舍手套保留核账凭证，订单仍待核实。候选未经作者采纳及严格隔离排练；未生成媒体。\n\n通案：95 秒，摄影机始终电梯内；周行与门外宁两人，宁仅从门缝出现。楼层牌最高 32，数字闪至 33，门框有窄投递口与钥匙孔；餐袋交宁、签字笔及小票返周、手套留投递口、钥匙留孔。四镜依次异常、承认、交换、下降。\n\n## 01｜0—20 秒｜最高只有三十二\n**视频提示词：**夜间岚庭大厦电梯内，前景外卖保温箱与手机订单“33 楼，电梯口”，中景骑手周行，后景楼层牌最高“32”。他按 32，数字上跳停在 32，门不开；他按开门键，数字短暂跳成 33，门打开一条缝，门外只有低黄灯。平视固定中景，焦点由订单到楼层牌与数字；电机停、按键声后短暂寂静，不出现其他乘客，出点他仍持餐。\n\n## 02｜20—45 秒｜她知道却点餐\n**视频提示词：**同一电梯内看窄门缝，周行持外卖袋在门内，自称管理员的宁站门外低黄灯下，制服名牌空白。周说“楼下的牌子只有三十二。”宁答“这里是三十三。汤是我点的。”她接稳外卖袋，确认封口与餐具；他点送达，手机提示定位不符。宁说“你要留下一样从外面带来的自己的东西，电梯才能下去。”周问“你点单前就知道？”宁答“知道。我还是点了。我想吃一碗热汤。”门内固定双人中景，前餐袋、中两人、后黄灯，焦点由交餐到双方表情；轻电梯通风声，出点汤在她手中。\n\n## 03｜45—75 秒｜凭证、手套与钥匙\n**视频提示词：**同一电梯门缝，宁门外抱汤，周在门内；门框有窄投递口和钥匙孔。他收回按开门键的手问“留下什么？”宁答“钥匙、手套都行。不能是别人的餐。留下就拿不回了。”周摸车钥匙和手机，从箱取一只手套与骑手留存小票，从衣袋取笔，连同小票递门外，说“给我签一下，我还要核账。”宁接笔在票空白处写“宁”，连笔还票；周接回拍照，订单号和签名可见、无她的手。宁取管理员钥匙插门框孔，说“你留下东西，我就得把钥匙留在这里。不知道什么时候才能再叫电梯。”他看手套与下一单提醒，收好票将手套投入口，说“这只我留。雨夜手冷，我怕握把不稳，推车走会慢些。”她推钥匙到底松手，抱汤退门外。桌面高度近景机位轻跟手套，焦点从签字接回转手套、孔内钥匙；纸笔与钥匙声，出点票和笔归他、手套留入口、钥匙留孔。\n\n## 04｜75—95 秒｜下降仍待核账\n**视频提示词：**同一电梯内，宁已在门外抱汤，钥匙留门框孔，周行持手机与签字小票；电梯门慢合。宁问“汤还热吗？”周答“刚才盖上还有水汽。”门合严，数字 33 停一瞬跳回 32，电梯下降。手机信号恢复，他上传签收照片及定位异常说明，页面显示“待核实”，没有已完成；他给下一单顾客发“上一单耽误了，预计晚到。”屏幕显示已发出但无回复。周低头把空着一只手缩进袖口；另一只手套仍在楼下车把上。固定电梯内中近景，焦点由数字转待核实与袖口，电机和提示音；切黑。\n\n试拍：签名票与笔往返、钥匙和单手套落点、数字与短信可读性；95 秒交换节奏待验证。\n采纳提案拒绝",
+          "readAt": "2026-11-04T06:50:14.949Z"
+        }
+      ]
+    }
+  ],
+  "exportedAt": "2026-11-04T06:50:15.924Z"
+}

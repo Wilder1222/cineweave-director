@@ -1,0 +1,32 @@
+{
+  "topicId": "H002",
+  "projectId": "f8c1a5deca645522de8d719ad2944535522e5f930625f55d2b37f23d9034d5df",
+  "currentRevision": null,
+  "sourcePins": [
+    {
+      "documentId": "c895b0a3edbc822e4fea134eb27cb198f4a00cfa16e47d0a01cc70616d0e9d86",
+      "title": "H002 玉门十三人｜剧本｜20261031审阅版",
+      "sha256": "bfc90adb92de755bbf62887c3a1d27632539be3e205bcbb9ed7908b8b961e18c",
+      "currentRevision": null,
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=f8c1a5deca645522de8d719ad2944535522e5f930625f55d2b37f23d9034d5df#scripts"
+    },
+    {
+      "documentId": "c24c9be92911676d13f4d578ae43f63e3d27f7e1a49db820572271d4da48d794",
+      "title": "H002 玉门十三人｜分镜与视频提示｜20261031审阅版",
+      "sha256": "4a87bd6a8a55e08ed887d9555fe703bad07fa4c7b943fd456e07892078d9004d",
+      "currentRevision": null,
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=f8c1a5deca645522de8d719ad2944535522e5f930625f55d2b37f23d9034d5df#scripts"
+    },
+    {
+      "documentId": "57b8289cb20df96f09e98d4c74448ff13665275eca0cc88d344fc424a6aa8797",
+      "title": "H002 玉门十三人｜审阅与来源｜20261031审阅版",
+      "sha256": "6b231f11133fd1e9b15738c5fe2f633ac77fa1d62b8fe616cd3b232f21196dc0",
+      "currentRevision": null,
+      "sourceURL": "https://aigc-image-library.wangwilder1222.chatgpt.site/studio?project=f8c1a5deca645522de8d719ad2944535522e5f930625f55d2b37f23d9034d5df#scripts"
+    }
+  ],
+  "patches": [],
+  "candidate": true,
+  "authorApproved": false,
+  "rawSourceUnchanged": true
+}

@@ -1,0 +1,30 @@
+[
+  {
+    "path": "scripts/skill-catalog.mjs",
+    "conflicts_resolved": 1
+  },
+  {
+    "path": "skills/cineweave-director/SKILL.md",
+    "conflicts_resolved": 1
+  },
+  {
+    "path": "skills/cineweave-director/references/optional/master-style-presets.md",
+    "conflicts_resolved": 1
+  },
+  {
+    "path": "skills/cineweave-director/references/optional/video-performance-direction.md",
+    "conflicts_resolved": 1
+  },
+  {
+    "path": "skills/cineweave-director/references/optional/visual-development.md",
+    "conflicts_resolved": 1
+  },
+  {
+    "path": "tests/skill-bundles.test.mjs",
+    "conflicts_resolved": 12
+  },
+  {
+    "path": "tests/skill-catalog.test.mjs",
+    "conflicts_resolved": 10
+  }
+]

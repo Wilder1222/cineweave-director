@@ -1,0 +1,1654 @@
+{
+  "number": 11,
+  "title": "批准过了",
+  "logline": "重审其实在枪击前开始，付款位置却只留到明天中午；记者改小标题但保留大断言，青年则被逼承认自己停止追问进展。",
+  "dramaturgy": {
+    "openingQuestion": "优先复核是不是批准付款；人物是否愿意更新自己已经相信的旧答案？",
+    "pursuit": "玛拉要在截止前拿到付款条件；记者与青年分别面对过时解释。",
+    "reversal": "重审其实在枪击前开始，付款位置却只留到明天中午；记者改小标题但保留大断言，青年则被逼承认自己停止追问进展。",
+    "cost": "道德确定性受损，他必须给律师一个对自己不那么好看的完整叙述。",
+    "cliffhanger": "青年交出不利的完整经过，要求取得后来页；与此同时，玛拉仍握着未签协议，面对当天中午的付款期限，下一集必须作出实际选择。",
+    "nextEpisodeBridge": "玛拉能在付款截止前，把必须保留的权利写进真正生效的两份协议吗？"
+  },
+  "movements": [
+    {
+      "title": "优先复核",
+      "startScene": "E11-SC01",
+      "question": "区分机构可以宣布的动作与家庭真正需要的付款。",
+      "turn": "待发配文中的获批被删，外部错误标题却继续传播。"
+    },
+    {
+      "title": "只留到中午",
+      "startScene": "E11-SC02",
+      "question": "让误报落到已经换好的班次、期待与治疗位置。",
+      "turn": "重审早于枪击两日，仍需付款且位置只留到次日中午。"
+    },
+    {
+      "title": "带走未签稿",
+      "startScene": "E12-SC01",
+      "question": "让治疗期限进入真正的交换条件。",
+      "turn": "她争取未来疗程失败，拒绝现场签字，带未签稿去独立咨询。"
+    },
+    {
+      "title": "撤掉获批标题",
+      "startScene": "E11-SC03",
+      "question": "完成较小的准确性纠错，同时留下尚未承担的大断言。",
+      "turn": "诺拉撤获批标题推荐，却仍把无人打开视为待补证调查。"
+    },
+    {
+      "title": "补齐旧答复",
+      "startScene": "E11-SC04",
+      "question": "将主角的普遍控诉逼回自己有没有追问的行为。",
+      "turn": "他承认停留在旧答复，允许律师写入遗漏，并要求取得后续页。"
+    }
+  ],
+  "continuityNote": "当前播出编号为24集短剧；E01–E24场号/制作镜号只作稳定资产定位。各集以完整场景为边界，英语对白与中文对照同步。玛拉能在付款截止前，把必须保留的权利写进真正生效的两份协议吗？",
+  "durationNote": "本集略超5分钟，保留完整交锋和对方反应；不以加速对白或截断场景压缩。",
+  "scenes": [
+    {
+      "id": "E11-SC01",
+      "location": "INSURER",
+      "time": "日·报道翌日上午",
+      "script": "翌日上午公司会议室，西窗照着桌面，维克多坐北端，传播职员在南端拿横置手机，付款页仍无签字。\n\n传播职员拿横置手机录公告，维克多看了一眼桌角的答复清单，将治疗付款那页压在平板下。她示意开始，他只录下特别复核的承诺。\n\n维克多（英语，平稳公告）：We've arranged a priority review for the Reed family's request and are contacting their treatment provider today.\n中文对照：我们已为里德家的申请安排优先复核，今天正联系治疗机构。\n\n传播职员给维克多看手机上的外部“治疗获批”标题；同样的词已被她填进平板待发配文。他指着配文中的“获批”，明确付款未批。她将配文改成“优先复核”并保存，没有重录或删改上一镜准确公告；手机上的外部转发仍增长。\n\n传播职员（英语，想顺势采用）：They're calling it approved.\n中文对照：他们在说已经批了。\n维克多（英语，指平板上的待发配文，改发布用词，不改已录承诺）：Payment isn't approved. Take 'approved' out of our caption.\n中文对照：付款还没批。咱们配文里的“获批”删掉。\n\n传播职员删去获批，在下一行仍留着迅速响应。维克多看向没有签字的付款页，要求把联络和付款分开。\n\n传播职员（英语，想要公众可理解的结果）：Can we say the family can book treatment?\n中文对照：能说这家人可以预约治疗了吗？\n维克多（英语，不承诺尚未办成的事）：Not until payment's approved. Use the review date.\n中文对照：付款批下来才行。写复核日期。",
+      "entry": "区分机构可以宣布的动作与家庭真正需要的付款。",
+      "exit": "待发配文中的获批被删，外部错误标题却继续传播。 准确公告也不能自动消除误读，付款尚未获准。",
+      "dramaticFunction": "区分机构可以宣布的动作与家庭真正需要的付款。",
+      "turn": "待发配文中的获批被删，外部错误标题却继续传播。",
+      "exitCost": "准确公告也不能自动消除误读，付款尚未获准。",
+      "sceneRhythm": "一次录制后直接核配文；不重复表演录制来拉时长。",
+      "sourceSceneIds": [
+        "E11-SC01"
+      ],
+      "plannedDuration": 35
+    },
+    {
+      "id": "E11-SC02",
+      "location": "CLINIC",
+      "time": "日·同日上午",
+      "script": "同日上午治疗中心，西侧长椅上艾莉拿公交画本，北治疗门开合。玛拉灰风衣罩黑工服，左臂蓝夹，诺拉在她南侧；医生从北门出来就被手机上的获批标题截住。\n\n玛拉从西椅前跨到医生跟前举起手机，蓝夹在左臂。医生看完标题，把她的纸质通知拿来对照。诺拉听见‘复核’两个字，迅速看自己的手机。\n\n玛拉（英语，举手机，先要回预约）：They approved it. Can we have Thursday back?\n中文对照：他们批了，周四那个位置能还给我们吗？\n医生（英语，看着通知答，不把她当学生）：It says review, Mara. I still need them to authorize payment.\n中文对照：这上面说的是复核，玛拉。付款还得他们批准。\n诺拉（英语，承认自己在场的份）：I shared that headline.\n中文对照：我也转了那个标题。\n\n玛拉把手机降到胸前，拿出已经换好的周四班次表。医生没有接班表，只给她留下付款页的位置；艾莉在西椅把公交车画本合了一半。\n\n玛拉（英语，第一次意识到白高兴了）：I swapped my shift. I told her we were coming.\n中文对照：我已经换班了，也跟她说好要来。\n医生（英语，给可做的一步，不承诺付款）：Keep the shift for now. Let me call billing again.\n中文对照：先别换回去。我再找收费那边问。\n玛拉（英语，对着医生，话也落到旁边记者身上）：Please don't tell me it's sorted until it is.\n中文对照：没办好，就别说已经好了。\n\n医生从蓝夹底抽出案前重审受理回执，与今日通知并排。玛拉立刻翻出自己记下的通话日期；诺拉的手机降下来。\n\n医生（英语，把回执递到眼前再停）：We reopened this two days before the shooting. Here.\n中文对照：枪击前两天就重启了。你看。\n玛拉（英语，想起当时的事）：You called me on my break.\n中文对照：你那时打给我，我在午休。\n\n诺拉请求拍两张日期栏，医生把姓名遮住后交给她。玛拉将自己的手机收入风衣右袋，腾手翻通话笔记；医生听到北治疗门有人等，把说明说得更短。\n\n诺拉（英语，试着保住自己原先判断的一部分）：But my story got them to move faster.\n中文对照：可我的报道还是让他们快了点。\n医生（英语，简短纠正，已经要回治疗区）：Yes. We'd already started.\n中文对照：是，但之前就开始了。\n\n艾莉把画本里的公交车递向母亲，玛拉伸手时碰落绿蜡笔。她蹲下捡，才看清女儿画的靠窗座；医生把蓝夹还到她左臂。\n\n艾莉（英语，孩子只关心画里母亲坐哪）：I saved you the window seat.\n中文对照：靠窗那个给你留了。\n玛拉（英语，还陷在付款问题）：Okay. Give me a minute.\n中文对照：好，给我一分钟。\n\n医生把付款办公室号码卡递到玛拉腾出的右手，指着卡背写下保留时限。北门再次打开，她先让推车过去，才回治疗区。\n\n医生（英语，边写卡边交代，不另起安慰演说）：Thursday's yours till noon tomorrow. Call that number. I'll send them my note.\n中文对照：周四给你留到明天中午。打这个号码，我把说明发过去。\n玛拉（英语，记下真正期限）：Noon. Okay.\n中文对照：中午，好。",
+      "entry": "让误报落到已经换好的班次、期待与治疗位置。",
+      "exit": "重审早于枪击两日，仍需付款且位置只留到次日中午。 玛拉要在时间压力下谈条件，孩子先得到的仍是再等一分钟。",
+      "dramaticFunction": "让误报落到已经换好的班次、期待与治疗位置。",
+      "turn": "重审早于枪击两日，仍需付款且位置只留到次日中午。",
+      "exitCost": "玛拉要在时间压力下谈条件，孩子先得到的仍是再等一分钟。",
+      "sceneRhythm": "错误期待—实际成本—旧回执纠正因果—孩子插入自己的问题—付款卡交付。",
+      "sourceSceneIds": [
+        "E11-SC02"
+      ],
+      "plannedDuration": 84
+    },
+    {
+      "id": "E12-SC01",
+      "location": "INSURER",
+      "time": "日·诊所告知付款期限的同日下午",
+      "script": "同日下午合众健康会议室，玛拉坐长桌南侧，灰风衣仍罩黑工服，诊所付款卡压在费用页上。维克多在北端，平板左侧，南门在她身后。\n\n玛拉将诊所付款卡压到维克多的费用页上，要他先回答时间。他把费用页转正，她仍用指尖盖住金额，不让话题移到赔多少。\n\n玛拉（英语，压住金额，只等到账时间）：Will the clinic have it today?\n中文对照：诊所今天能收到吗？\n维克多（英语，先把付款条件摆在桌上）：This covers the current treatment. We send it once you've signed.\n中文对照：这笔付眼下的疗程。你签完，我们就放款。\n\n维克多将保密与结案页推到付款页上方。玛拉终于移开压住金额的手，翻向采访条款，手机放到桌右免得挡字。\n\n维克多（英语，说限制时仍把纸推向签字处）：Once this claim's settled, no more interviews about it.\n中文对照：这起申请结了，就不能再就这事接受采访。\n玛拉（英语，看采访条款，当面核对代价）：I take the money and stop talking. That's the deal?\n中文对照：钱拿了，就不许再说了。是这个意思？\n\n玛拉没有去碰签字页，先把付款卡从两页之间抽出来，确保电话号码还在自己手里。\n\n玛拉（英语，要求说出退路）：And if I don't sign?\n中文对照：不签呢？\n维克多（英语，说流程，没有承诺位置）：The claim stays disputed. You can keep appealing.\n中文对照：这起申请仍有争议，你可以继续申诉。\n\n玛拉连翻两页找下个疗程，维克多没有替她翻。她指到空着的续批项，拿起笔想让他加进去；他将笔轻推回她一侧。\n\n玛拉（英语，把笔递过去，试一次能否多争）：Then put the next round in here.\n中文对照：那把下个疗程也写进去。\n维克多（英语，把笔推回，不绕开拒绝）：I can't promise they'll approve the next one.\n中文对照：下次批不批，我保证不了。\n\n玛拉合起未签协议收入左侧蓝夹，右手拿回手机起身。维克多伸手到桌中拿笔，她已转向南门。\n\n玛拉（英语，合夹起身，先结束这次谈判）：I'm taking this to my lawyer. Don't call the store.\n中文对照：我拿给律师看。别往店里打电话。\n维克多（英语，继续争速度）：Have him call me.\n中文对照：让他打给我。",
+      "entry": "让治疗期限进入真正的交换条件。",
+      "exit": "她争取未来疗程失败，拒绝现场签字，带未签稿去独立咨询。 继续申诉仍可行，但无法保证眼前位置；当前付款换来采访限制。",
+      "dramaticFunction": "让治疗期限进入真正的交换条件。",
+      "turn": "她争取未来疗程失败，拒绝现场签字，带未签稿去独立咨询。",
+      "exitCost": "继续申诉仍可行，但无法保证眼前位置；当前付款换来采访限制。",
+      "sceneRhythm": "先问到账—看见禁采访—问不签退路—争下一疗程—带稿离开。",
+      "sourceSceneIds": [
+        "E12-SC01"
+      ],
+      "plannedDuration": 59
+    },
+    {
+      "id": "E11-SC03",
+      "location": "NEWSROOM",
+      "time": "傍晚·当天",
+      "script": "同日傍晚编辑部西桌摆着重审与今日通知，北屏的公司说明静音。诺拉打开自己转过的错误标题，女编辑站东侧看推荐排期。\n\n诺拉把错误转发截下留档，在西桌更新原文。编辑把‘更正’改成‘更新’，她将鼠标移回去，两个光标在同一处停住。\n\n值班编辑（英语，替她和栏目留余地）：We can call it an update.\n中文对照：可以叫更新。\n诺拉（英语，把鼠标拉回原链接）：We got it wrong. Put a correction on the original.\n中文对照：我们写错了。在原文上更正。\n\n编辑打开已排好的全国版推荐，那里仍引用旧标题。诺拉用自己的账号撤掉该条推送，手机上转发提醒却继续增长。\n\n值班编辑（英语，让她看清要失去哪块位置）：Pull it, and we lose that slot.\n中文对照：撤了，那个推荐位就没了。\n诺拉（英语，短促不解释）：Pull it.\n中文对照：撤。\n\n诺拉确认旧推荐已撤，编辑把调查原稿拉回屏幕。她指向待索取的访问记录，没有去动原导语。\n\n值班编辑（英语，问是否还要处理别处）：And the original story?\n中文对照：最初那篇呢？\n诺拉（英语，把问题限在本次转发）：The treatment headline was wrong. I'm still chasing the records.\n中文对照：治疗标题错了。记录我还在追。\n\n诺拉将下一步需要的查看记录清单推给编辑申请时间；编辑拿来栏目排期，没有给她空白预算。诺拉用笔圈了一项最小核实任务。\n\n值班编辑（英语，把栏目排期压到清单边）：What's next? Pick one thing.\n中文对照：接着查什么？选一件。\n诺拉（英语，改为可核任务）：The doctors' access records.\n中文对照：医生的访问记录。",
+      "entry": "完成较小的准确性纠错，同时留下尚未承担的大断言。",
+      "exit": "诺拉撤获批标题推荐，却仍把无人打开视为待补证调查。 推荐位置丢失；调查的核心断言继续在线。",
+      "dramaticFunction": "完成较小的准确性纠错，同时留下尚未承担的大断言。",
+      "turn": "诺拉撤获批标题推荐，却仍把无人打开视为待补证调查。",
+      "exitCost": "推荐位置丢失；调查的核心断言继续在线。",
+      "sceneRhythm": "迅速执行更正，不给道德演说；把记录调查留作具体下一步。",
+      "sourceSceneIds": [
+        "E11-SC03"
+      ],
+      "plannedDuration": 43
+    },
+    {
+      "id": "E11-SC04",
+      "location": "VISIT",
+      "time": "日·次日上午",
+      "script": "次日上午会见室南门外传来巡行脚步。固定桌北侧路易吉穿灰衣，双腕自由，海伦坐南；两人之间没有玻璃，旧患者样本先由青年占满桌面。\n\n青年将一叠旧样本推向海伦，想补充公开报道。海伦从中只抽出最上面一份，把其他纸留在青年那边。\n\n路易吉（英语，想夺回广度）：All of these. Not just Ellie.\n中文对照：这些都发，不只艾莉那份。\n海伦（英语，从整叠里抽一份，让问题落到具体时间）：Pick one. What's the last page you got?\n中文对照：选一份。你最后收到的是哪页？\n\n青年指出自己最后收到的页。海伦将后来重审通知滑入它旁边，青年用手挡了一下，像仍能把两个时间分开，最后让出位置。\n\n路易吉（英语，指自己的收件末页，不替对方解释）：This one. Nothing after that.\n中文对照：这页。后面就没了。\n海伦（英语，把通知放在旁边，等他答）：This notice came later. Did you ask them for an update?\n中文对照：这份通知是后来才有的。你问过进展吗？\n\n青年将旧拒赔页举高，遮住后来的通知日期。海伦不与他争公司好坏，只把椅子移近桌沿，等他回答刚才的问题。\n\n路易吉（英语，把问题推回程序拖延）：They send another letter. Then another. People run out of time.\n中文对照：一封接一封地发信，人哪有那么多时间。\n海伦（英语，坚持具体到这个人）：Did you ask this family what happened next?\n中文对照：这家后来怎么样了，你问过吗？\n路易吉（英语，继续用旧结论挡后续）：They'd already been turned down.\n中文对照：他们已经被拒过了。\n海伦（英语，不替他把没问说出来）：I can see that. Did you ask?\n中文对照：我看见了。你问了吗？\n\n青年拿起旧页想说明，海伦将新通知按在桌面不收回。他把旧页放下，直接回答没问过后续。\n\n路易吉（英语，先说没有，理由说完也收不回去）：No. I thought I knew what the answer would be.\n中文对照：没问。我以为不用问也知道他们怎么答。\n海伦（英语，直接点空白处，不安慰也不训人）：Put the date here.\n中文对照：日期写这儿。\n\n青年在空纸上写日期，又用手压住那句自己没追问的话。海伦没有抢纸，只指一下桌上的新通知，明确要求他把前后经过都写全。\n\n路易吉（英语，手压着遗漏那行，试探能否不写）：Do we have to put that in?\n中文对照：这句一定得写吗？\n海伦（英语，明确要求完整经过，不允许自己先挑掉不利段）：Yes. I need it all.\n中文对照：得写。你得把前后都告诉我。\n\n青年移开压住句子的手，仍没有递纸。他看着自己写下的没问，想把这一句换成对拖延的解释；海伦把笔留给他，不代写。\n\n路易吉（英语，担心自己失去道德立足点）：It makes it sound like I didn't care.\n中文对照：这么写，好像我根本不在乎。\n海伦（英语，要求行为而非表态）：Then tell me what you did. Don't fix how it sounds.\n中文对照：那就告诉我你做了什么。别先想着怎么写好听。\n路易吉（英语，把遗漏说完整）：I stopped asking. I kept the first answer.\n中文对照：我没再问。我一直用最初那个答复。\n\n青年核对自己补上的那句，把纸连同旧样本推给海伦。她按日期重排，他把重审通知也推过去，不再要求只留旧的一页。\n\n路易吉（英语，把要求从公布改成查完）：Get the later pages.\n中文对照：把后面的页也找来。",
+      "entry": "将主角的普遍控诉逼回自己有没有追问的行为。",
+      "exit": "他承认停留在旧答复，允许律师写入遗漏，并要求取得后续页。 道德确定性受损，他必须给律师一个对自己不那么好看的完整叙述。",
+      "dramaticFunction": "将主角的普遍控诉逼回自己有没有追问的行为。",
+      "turn": "他承认停留在旧答复，允许律师写入遗漏，并要求取得后续页。",
+      "exitCost": "道德确定性受损，他必须给律师一个对自己不那么好看的完整叙述。",
+      "sceneRhythm": "要求公开—律师缩小问题—青年两次回避—承认—担心观感—交付完整时间线。",
+      "sourceSceneIds": [
+        "E11-SC04"
+      ],
+      "plannedDuration": 95
+    }
+  ],
+  "shots": [
+    {
+      "id": "E11-SH001",
+      "sceneId": "E11-SC01",
+      "sourceShotIds": [
+        "E11-SH001"
+      ],
+      "duration": 12,
+      "characters": [
+        "VICTOR",
+        "PR-STAFF"
+      ],
+      "onScreenCharacterIds": [
+        "VICTOR",
+        "PR-STAFF"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "他说的是优先复核，未签付款页没有被误拍成付款完成。",
+      "framing": "传播职员西肩后40mm维克多正面中景，横置手机在下前景，付款页露桌角。",
+      "composition": "翌日上午公司会议室，西窗照着桌面，维克多坐北端，传播职员在南端拿横置手机，付款页仍无签字。 本镜画内角色：VICTOR,PR-STAFF。",
+      "camera": "固定12秒完成一次公告录制。",
+      "focus": "他说的是优先复核，未签付款页没有被误拍成付款完成。",
+      "start": "维克多看过平板，传播职员准备录制。",
+      "action": "传播职员拿横置手机录公告，维克多看了一眼桌角的答复清单，将治疗付款那页压在平板下。她示意开始，他只录下特别复核的承诺。",
+      "end": "公告录完，付款页仍未签，维克多取回平板。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E11-D001",
+          "speaker": "维克多",
+          "listener": "公司公告观众",
+          "text": "We've arranged a priority review for the Reed family's request and are contacting their treatment provider today.",
+          "translationZh": "我们已为里德家的申请安排优先复核，今天正联系治疗机构。",
+          "tone": "平稳公告",
+          "start": 1.1,
+          "end": 10.3
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 12,
+          "start": "维克多看过平板，传播职员准备录制。",
+          "action": "传播职员拿横置手机录公告，维克多看了一眼桌角的答复清单，将治疗付款那页压在平板下。她示意开始，他只录下特别复核的承诺。",
+          "end": "公告录完，付款页仍未签，维克多取回平板。",
+          "dialogueCueIds": [
+            "E11-D001"
+          ],
+          "sourceShotIds": [
+            "E11-SH001"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        }
+      ],
+      "viewerEntry": "区分机构可以宣布的动作与家庭真正需要的付款。",
+      "viewerExit": "公告录完，付款页仍未签，维克多取回平板。",
+      "cutTrigger": "职员结束录制把外部标题递来，切到配文审查而非重录。",
+      "next": "接E11-SH002；职员结束录制把外部标题递来，切到配文审查而非重录。",
+      "broadcastEpisode": 11,
+      "displayId": "EP11-001"
+    },
+    {
+      "id": "E11-SH002",
+      "sceneId": "E11-SC01",
+      "sourceShotIds": [
+        "E11-SH002"
+      ],
+      "duration": 23,
+      "characters": [
+        "VICTOR",
+        "PR-STAFF"
+      ],
+      "onScreenCharacterIds": [
+        "VICTOR",
+        "PR-STAFF"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "删的是尚未发出的获批配文，再拒绝治疗可预约的扩大承诺。",
+      "framing": "会议桌西侧偏北50mm职员、维克多侧面与平板共享中景，两部设备分清。",
+      "composition": "翌日上午公司会议室，西窗照着桌面，维克多坐北端，传播职员在南端拿横置手机，付款页仍无签字。 本镜画内角色：VICTOR,PR-STAFF。",
+      "camera": "固定23秒，职员改平板配文，另一手机外部标题不跟着改变。",
+      "focus": "删的是尚未发出的获批配文，再拒绝治疗可预约的扩大承诺。",
+      "start": "公告录完，付款页仍未签，维克多取回平板。",
+      "action": "传播职员给维克多看手机上的外部“治疗获批”标题；同样的词已被她填进平板待发配文。他指着配文中的“获批”，明确付款未批。她将配文改成“优先复核”并保存，没有重录或删改上一镜准确公告；手机上的外部转发仍增长。\n传播职员删去获批，在下一行仍留着迅速响应。维克多看向没有签字的付款页，要求把联络和付款分开。",
+      "end": "她保存准确配文，手机上错误外部标题仍在传播。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E11-D002",
+          "speaker": "传播职员",
+          "listener": "维克多",
+          "text": "They're calling it approved.",
+          "translationZh": "他们在说已经批了。",
+          "tone": "想顺势采用",
+          "start": 1,
+          "end": 3.3
+        },
+        {
+          "id": "E11-D003",
+          "speaker": "维克多",
+          "listener": "传播职员",
+          "text": "Payment isn't approved. Take 'approved' out of our caption.",
+          "translationZh": "付款还没批。咱们配文里的“获批”删掉。",
+          "tone": "指平板上的待发配文，改发布用词，不改已录承诺",
+          "start": 3.6,
+          "end": 7.4
+        },
+        {
+          "id": "E11-D201",
+          "speaker": "传播职员",
+          "listener": "维克多",
+          "text": "Can we say the family can book treatment?",
+          "translationZh": "能说这家人可以预约治疗了吗？",
+          "tone": "想要公众可理解的结果",
+          "start": 11,
+          "end": 14.14
+        },
+        {
+          "id": "E11-D202",
+          "speaker": "维克多",
+          "listener": "同场对话者",
+          "text": "Not until payment's approved. Use the review date.",
+          "translationZh": "付款批下来才行。写复核日期。",
+          "tone": "不承诺尚未办成的事",
+          "start": 14.44,
+          "end": 17.57
+        }
+      ],
+      "overlay": [
+        {
+          "text": "DRAFT CAPTION: TREATMENT APPROVED / 待发配文：治疗获批",
+          "start": 1,
+          "end": 4,
+          "position": "公司平板待发配文后期，未发布"
+        },
+        {
+          "text": "PRIORITY REVIEW / 优先复核",
+          "start": 8,
+          "end": 10,
+          "position": "公司平板配文修改结果后期，未发布"
+        }
+      ],
+      "generationSegments": [
+        {
+          "duration": 10,
+          "start": "公告录完，付款页仍未签，维克多取回平板。",
+          "action": "传播职员给维克多看手机上的外部“治疗获批”标题；同样的词已被她填进平板待发配文。他指着配文中的“获批”，明确付款未批。她将配文改成“优先复核”并保存，没有重录或删改上一镜准确公告；手机上的外部转发仍增长。",
+          "end": "公司待发配文已保存为优先复核；手机外部获批标题仍在，付款页未签。",
+          "dialogueCueIds": [
+            "E11-D002",
+            "E11-D003"
+          ],
+          "sourceShotIds": [
+            "E11-SH002"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 12
+        },
+        {
+          "duration": 13,
+          "start": "公司待发配文已保存为优先复核；手机外部获批标题仍在，付款页未签。",
+          "action": "传播职员删去获批，在下一行仍留着迅速响应。维克多看向没有签字的付款页，要求把联络和付款分开。",
+          "end": "她保存准确配文，手机上错误外部标题仍在传播。",
+          "dialogueCueIds": [
+            "E11-D201",
+            "E11-D202"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 15
+        }
+      ],
+      "viewerEntry": "公告录完，付款页仍未签，维克多取回平板。",
+      "viewerExit": "她保存准确配文，手机上错误外部标题仍在传播。",
+      "cutTrigger": "准确配文保存，切家庭已经相信的错误外部消息。",
+      "next": "本场结果成立后切入 E11-SC02（CLINIC，日·同日上午）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "broadcastEpisode": 11,
+      "displayId": "EP11-002"
+    },
+    {
+      "id": "E11-SH003",
+      "sceneId": "E11-SC02",
+      "sourceShotIds": [
+        "E11-SH003"
+      ],
+      "duration": 35,
+      "characters": [
+        "MARA-WORK",
+        "DOCTOR",
+        "NORA",
+        "ELLIE"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK",
+        "DOCTOR",
+        "NORA",
+        "ELLIE"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "获批期待变成已换班的成本，记者看见自己的转发造成什么。",
+      "framing": "诊所候诊走廊西椅前35mm三人中景，玛拉北向医生，诺拉在南侧；艾莉在西椅后层。",
+      "composition": "同日上午治疗中心，西侧长椅上艾莉拿公交画本，北治疗门开合。玛拉灰风衣罩黑工服，左臂蓝夹，诺拉在她南侧；医生从北门出来就被手机上的获批标题截住。 本镜画内角色：MARA-WORK,DOCTOR,NORA,ELLIE。",
+      "camera": "固定，玛拉举手机迎医生后不再向前挤。",
+      "focus": "获批期待变成已换班的成本，记者看见自己的转发造成什么。",
+      "start": "玛拉从西椅前起身，右手手机亮新闻，左臂蓝夹；医生从北门刚出来。",
+      "action": "玛拉从西椅前跨到医生跟前举起手机，蓝夹在左臂。医生看完标题，把她的纸质通知拿来对照。诺拉听见‘复核’两个字，迅速看自己的手机。\n玛拉把手机降到胸前，拿出已经换好的周四班次表。医生没有接班表，只给她留下付款页的位置；艾莉在西椅把公交车画本合了一半。",
+      "end": "诺拉把转发页关掉，玛拉仍保留周四空出的班。",
+      "sound": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E11-D004",
+          "speaker": "玛拉",
+          "listener": "医生",
+          "text": "They approved it. Can we have Thursday back?",
+          "translationZh": "他们批了，周四那个位置能还给我们吗？",
+          "tone": "举手机，先要回预约",
+          "start": 1,
+          "end": 5.3
+        },
+        {
+          "id": "E11-D005",
+          "speaker": "医生",
+          "listener": "玛拉",
+          "text": "It says review, Mara. I still need them to authorize payment.",
+          "translationZh": "这上面说的是复核，玛拉。付款还得他们批准。",
+          "tone": "看着通知答，不把她当学生",
+          "start": 5.6,
+          "end": 11.3
+        },
+        {
+          "id": "E11-D801",
+          "speaker": "诺拉",
+          "listener": "玛拉",
+          "text": "I shared that headline.",
+          "translationZh": "我也转了那个标题。",
+          "tone": "承认自己在场的份",
+          "start": 11.6,
+          "end": 13.9
+        },
+        {
+          "id": "E11-D203",
+          "speaker": "玛拉",
+          "listener": "同场对话者",
+          "text": "I swapped my shift. I told her we were coming.",
+          "translationZh": "我已经换班了，也跟她说好要来。",
+          "tone": "第一次意识到白高兴了",
+          "start": 16,
+          "end": 19.92
+        },
+        {
+          "id": "E11-D204",
+          "speaker": "医生",
+          "listener": "玛拉",
+          "text": "Keep the shift for now. Let me call billing again.",
+          "translationZh": "先别换回去。我再找收费那边问。",
+          "tone": "给可做的一步，不承诺付款",
+          "start": 20.22,
+          "end": 24.14
+        },
+        {
+          "id": "E11-D205",
+          "speaker": "玛拉",
+          "listener": "同场对话者",
+          "text": "Please don't tell me it's sorted until it is.",
+          "translationZh": "没办好，就别说已经好了。",
+          "tone": "对着医生，话也落到旁边记者身上",
+          "start": 24.44,
+          "end": 27.97
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 15,
+          "start": "玛拉从西椅前起身，右手手机亮新闻，左臂蓝夹；医生从北门刚出来。",
+          "action": "玛拉从西椅前跨到医生跟前举起手机，蓝夹在左臂。医生看完标题，把她的纸质通知拿来对照。诺拉听见‘复核’两个字，迅速看自己的手机。",
+          "end": "医生接过蓝夹核对，玛拉右手机仍举着，诺拉发现自己的转发也有错。",
+          "dialogueCueIds": [
+            "E11-D004",
+            "E11-D005",
+            "E11-D801"
+          ],
+          "sourceShotIds": [
+            "E11-SH003"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 17
+        },
+        {
+          "duration": 20,
+          "start": "医生接过蓝夹核对，玛拉右手机仍举着，诺拉发现自己的转发也有错。",
+          "action": "玛拉把手机降到胸前，拿出已经换好的周四班次表。医生没有接班表，只给她留下付款页的位置；艾莉在西椅把公交车画本合了一半。",
+          "end": "诺拉把转发页关掉，玛拉仍保留周四空出的班。",
+          "dialogueCueIds": [
+            "E11-D203",
+            "E11-D204",
+            "E11-D205"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 22
+        }
+      ],
+      "viewerEntry": "让误报落到已经换好的班次、期待与治疗位置。",
+      "viewerExit": "诺拉把转发页关掉，玛拉仍保留周四空出的班。",
+      "cutTrigger": "医生从夹底找出旧回执，转到能读时间关系的位置。",
+      "next": "接E11-SH004；医生从夹底找出旧回执，转到能读时间关系的位置。",
+      "broadcastEpisode": 11,
+      "displayId": "EP11-003"
+    },
+    {
+      "id": "E11-SH004",
+      "sceneId": "E11-SC02",
+      "sourceShotIds": [
+        "E11-SH004",
+        "E11-SH005"
+      ],
+      "duration": 25,
+      "characters": [
+        "MARA-WORK",
+        "NORA",
+        "DOCTOR"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK",
+        "NORA"
+      ],
+      "offscreenCharacterIds": [
+        "DOCTOR"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "日期证实枪击前已启动，诺拉试着主张加速功劳时保留玛拉听见的反应。",
+      "framing": "医生西肩旁50mm玛拉、诺拉及两份日期栏中近景，医生只留执页手与肩。",
+      "composition": "同日上午治疗中心，西侧长椅上艾莉拿公交画本，北治疗门开合。玛拉灰风衣罩黑工服，左臂蓝夹，诺拉在她南侧；医生从北门出来就被手机上的获批标题截住。 本镜画内角色：MARA-WORK,NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定25秒，姓名遮住后文件向记者转；不插入未知内部页面。",
+      "focus": "日期证实枪击前已启动，诺拉试着主张加速功劳时保留玛拉听见的反应。",
+      "start": "诺拉把转发页关掉，玛拉仍保留周四空出的班。",
+      "action": "医生从蓝夹底抽出案前重审受理回执，与今日通知并排。玛拉立刻翻出自己记下的通话日期；诺拉的手机降下来。\n诺拉请求拍两张日期栏，医生把姓名遮住后交给她。玛拉将自己的手机收入风衣右袋，腾手翻通话笔记；医生听到北治疗门有人等，把说明说得更短。",
+      "end": "诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。",
+      "sound": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E11-D006",
+          "speaker": "医生",
+          "listener": "诺拉",
+          "text": "We reopened this two days before the shooting. Here.",
+          "translationZh": "枪击前两天就重启了。你看。",
+          "tone": "把回执递到眼前再停",
+          "start": 1,
+          "end": 7.2
+        },
+        {
+          "id": "E11-D007",
+          "speaker": "玛拉",
+          "listener": "医生",
+          "text": "You called me on my break.",
+          "translationZh": "你那时打给我，我在午休。",
+          "tone": "想起当时的事",
+          "start": 7.5,
+          "end": 10.8
+        },
+        {
+          "id": "E11-D008",
+          "speaker": "诺拉",
+          "listener": "医生",
+          "text": "But my story got them to move faster.",
+          "translationZh": "可我的报道还是让他们快了点。",
+          "tone": "试着保住自己原先判断的一部分",
+          "start": 14,
+          "end": 17.8
+        },
+        {
+          "id": "E11-D009",
+          "speaker": "医生",
+          "listener": "诺拉",
+          "text": "Yes. We'd already started.",
+          "translationZh": "是，但之前就开始了。",
+          "tone": "简短纠正，已经要回治疗区",
+          "start": 18.1,
+          "end": 21.9
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 13,
+          "start": "诺拉把转发页关掉，玛拉仍保留周四空出的班。",
+          "action": "医生从蓝夹底抽出案前重审受理回执，与今日通知并排。玛拉立刻翻出自己记下的通话日期；诺拉的手机降下来。",
+          "end": "两份时间明确不同，重审在案前已启动。",
+          "dialogueCueIds": [
+            "E11-D006",
+            "E11-D007"
+          ],
+          "sourceShotIds": [
+            "E11-SH004"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 15
+        },
+        {
+          "duration": 12,
+          "start": "两份时间明确不同，重审在案前已启动。",
+          "action": "诺拉请求拍两张日期栏，医生把姓名遮住后交给她。玛拉将自己的手机收入风衣右袋，腾手翻通话笔记；医生听到北治疗门有人等，把说明说得更短。",
+          "end": "诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。",
+          "dialogueCueIds": [
+            "E11-D008",
+            "E11-D009"
+          ],
+          "sourceShotIds": [
+            "E11-SH005"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        }
+      ],
+      "viewerEntry": "诺拉把转发页关掉，玛拉仍保留周四空出的班。",
+      "viewerExit": "诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。",
+      "cutTrigger": "绿蜡笔掉到椅前，注意从记者的解释转回一直等着的孩子。",
+      "next": "接E11-SH006；绿蜡笔掉到椅前，注意从记者的解释转回一直等着的孩子。",
+      "broadcastEpisode": 11,
+      "displayId": "EP11-004"
+    },
+    {
+      "id": "E11-SH006",
+      "sceneId": "E11-SC02",
+      "sourceShotIds": [
+        "E11-SH006",
+        "E11-SH007"
+      ],
+      "duration": 24,
+      "characters": [
+        "MARA-WORK",
+        "ELLIE",
+        "DOCTOR"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK",
+        "ELLIE",
+        "DOCTOR"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "孩子的空座与付款卡同时落到母亲手上，时间限制结束解释。",
+      "framing": "西长椅南端35mm低机位母女与医生腰部中景，北治疗门留远后层。",
+      "composition": "同日上午治疗中心，西侧长椅上艾莉拿公交画本，北治疗门开合。玛拉灰风衣罩黑工服，左臂蓝夹，诺拉在她南侧；医生从北门出来就被手机上的获批标题截住。 本镜画内角色：MARA-WORK,ELLIE,DOCTOR。",
+      "camera": "玛拉蹲下捡笔时轻微下俯，随后固定；医生只在原站位递付款卡再经北门离开。",
+      "focus": "孩子的空座与付款卡同时落到母亲手上，时间限制结束解释。",
+      "start": "诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。",
+      "action": "艾莉把画本里的公交车递向母亲，玛拉伸手时碰落绿蜡笔。她蹲下捡，才看清女儿画的靠窗座；医生把蓝夹还到她左臂。\n医生把付款办公室号码卡递到玛拉腾出的右手，指着卡背写下保留时限。北门再次打开，她先让推车过去，才回治疗区。",
+      "end": "卡片夹在蓝夹最前，周四位置暂留到明天中午。",
+      "sound": "通风、远处治疗车与受控门声；候诊者和工作人员无新增可辨台词。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E11-D010",
+          "speaker": "艾莉",
+          "listener": "玛拉",
+          "text": "I saved you the window seat.",
+          "translationZh": "靠窗那个给你留了。",
+          "tone": "孩子只关心画里母亲坐哪",
+          "start": 1,
+          "end": 4.8
+        },
+        {
+          "id": "E11-D011",
+          "speaker": "玛拉",
+          "listener": "艾莉",
+          "text": "Okay. Give me a minute.",
+          "translationZh": "好，给我一分钟。",
+          "tone": "还陷在付款问题",
+          "start": 5.1,
+          "end": 7.9
+        },
+        {
+          "id": "E11-D012",
+          "speaker": "医生",
+          "listener": "玛拉",
+          "text": "Thursday's yours till noon tomorrow. Call that number. I'll send them my note.",
+          "translationZh": "周四给你留到明天中午。打这个号码，我把说明发过去。",
+          "tone": "边写卡边交代，不另起安慰演说",
+          "start": 11,
+          "end": 18.7
+        },
+        {
+          "id": "E11-D013",
+          "speaker": "玛拉",
+          "listener": "医生",
+          "text": "Noon. Okay.",
+          "translationZh": "中午，好。",
+          "tone": "记下真正期限",
+          "start": 19,
+          "end": 20.3
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 10,
+          "start": "诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。",
+          "action": "艾莉把画本里的公交车递向母亲，玛拉伸手时碰落绿蜡笔。她蹲下捡，才看清女儿画的靠窗座；医生把蓝夹还到她左臂。",
+          "end": "绿蜡笔回艾莉右手，玛拉蓝夹左臂，手机仍右袋。",
+          "dialogueCueIds": [
+            "E11-D010",
+            "E11-D011"
+          ],
+          "sourceShotIds": [
+            "E11-SH006"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 12
+        },
+        {
+          "duration": 14,
+          "start": "绿蜡笔回艾莉右手，玛拉蓝夹左臂，手机仍右袋。",
+          "action": "医生把付款办公室号码卡递到玛拉腾出的右手，指着卡背写下保留时限。北门再次打开，她先让推车过去，才回治疗区。",
+          "end": "卡片夹在蓝夹最前，周四位置暂留到明天中午。",
+          "dialogueCueIds": [
+            "E11-D012",
+            "E11-D013"
+          ],
+          "sourceShotIds": [
+            "E11-SH007"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 16
+        }
+      ],
+      "viewerEntry": "诺拉获遮名日期图，玛拉手机右袋，蓝夹仍在医生手中。",
+      "viewerExit": "卡片夹在蓝夹最前，周四位置暂留到明天中午。",
+      "cutTrigger": "母亲把付款卡放最前，切同日下午第一次报价。",
+      "next": "本场结果成立后切入 E12-SC01（INSURER，日·诊所告知付款期限的同日下午）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "broadcastEpisode": 11,
+      "displayId": "EP11-005"
+    },
+    {
+      "id": "E12-SH001",
+      "sceneId": "E12-SC01",
+      "sourceShotIds": [
+        "E12-SH001",
+        "E12-SH002"
+      ],
+      "duration": 27,
+      "characters": [
+        "MARA-WORK",
+        "VICTOR"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK",
+        "VICTOR"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "她追问到账，直到限制覆盖付款页才改变问题。",
+      "framing": "公司会议桌西侧40mm南玛拉、北维克多共享中景，付款卡在两人之间。",
+      "composition": "同日下午合众健康会议室，玛拉坐长桌南侧，灰风衣仍罩黑工服，诊所付款卡压在费用页上。维克多在北端，平板左侧，南门在她身后。 本镜画内角色：MARA-WORK,VICTOR。",
+      "camera": "固定27秒，金额被她指尖压住，采访页从北端推来。",
+      "focus": "她追问到账，直到限制覆盖付款页才改变问题。",
+      "start": "玛拉左夹右手机，维克多手离平板。",
+      "action": "玛拉将诊所付款卡压到维克多的费用页上，要他先回答时间。他把费用页转正，她仍用指尖盖住金额，不让话题移到赔多少。\n维克多将保密与结案页推到付款页上方。玛拉终于移开压住金额的手，翻向采访条款，手机放到桌右免得挡字。",
+      "end": "她看清款项换来的公开限制，双手空出翻页。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E12-D001",
+          "speaker": "玛拉",
+          "listener": "维克多",
+          "text": "Will the clinic have it today?",
+          "translationZh": "诊所今天能收到吗？",
+          "tone": "压住金额，只等到账时间",
+          "start": 1,
+          "end": 4.3
+        },
+        {
+          "id": "E12-D002",
+          "speaker": "维克多",
+          "listener": "玛拉",
+          "text": "This covers the current treatment. We send it once you've signed.",
+          "translationZh": "这笔付眼下的疗程。你签完，我们就放款。",
+          "tone": "先把付款条件摆在桌上",
+          "start": 4.6,
+          "end": 10.3
+        },
+        {
+          "id": "E12-D003",
+          "speaker": "维克多",
+          "listener": "玛拉",
+          "text": "Once this claim's settled, no more interviews about it.",
+          "translationZh": "这起申请结了，就不能再就这事接受采访。",
+          "tone": "说限制时仍把纸推向签字处",
+          "start": 15,
+          "end": 20.7
+        },
+        {
+          "id": "E12-D004",
+          "speaker": "玛拉",
+          "listener": "维克多",
+          "text": "I take the money and stop talking. That's the deal?",
+          "translationZh": "钱拿了，就不许再说了。是这个意思？",
+          "tone": "看采访条款，当面核对代价",
+          "start": 21,
+          "end": 26.2
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 14,
+          "start": "玛拉左夹右手机，维克多手离平板。",
+          "action": "玛拉将诊所付款卡压到维克多的费用页上，要他先回答时间。他把费用页转正，她仍用指尖盖住金额，不让话题移到赔多少。",
+          "end": "她要的是今日能否到账，协议尚未签。",
+          "dialogueCueIds": [
+            "E12-D001",
+            "E12-D002"
+          ],
+          "sourceShotIds": [
+            "E12-SH001"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 16
+        },
+        {
+          "duration": 13,
+          "start": "她要的是今日能否到账，协议尚未签。",
+          "action": "维克多将保密与结案页推到付款页上方。玛拉终于移开压住金额的手，翻向采访条款，手机放到桌右免得挡字。",
+          "end": "她看清款项换来的公开限制，双手空出翻页。",
+          "dialogueCueIds": [
+            "E12-D003",
+            "E12-D004"
+          ],
+          "sourceShotIds": [
+            "E12-SH002"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 15
+        }
+      ],
+      "viewerEntry": "让治疗期限进入真正的交换条件。",
+      "viewerExit": "她看清款项换来的公开限制，双手空出翻页。",
+      "cutTrigger": "她问不签会怎样，转为从客户角度争退路和未来。",
+      "next": "接E12-SH003；她问不签会怎样，转为从客户角度争退路和未来。",
+      "broadcastEpisode": 11,
+      "displayId": "EP11-006"
+    },
+    {
+      "id": "E12-SH003",
+      "sceneId": "E12-SC01",
+      "sourceShotIds": [
+        "E12-SH003"
+      ],
+      "duration": 22,
+      "characters": [
+        "MARA-WORK",
+        "VICTOR"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK"
+      ],
+      "offscreenCharacterIds": [
+        "VICTOR"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "玛拉先问退路，再要求下疗程，连续两次得不到保证。",
+      "framing": "维克多西肩旁朝南65mm玛拉中近景，笔与续批空栏在下方，维克多的手从近前景推回笔。",
+      "composition": "同日下午合众健康会议室，玛拉坐长桌南侧，灰风衣仍罩黑工服，诊所付款卡压在费用页上。维克多在北端，平板左侧，南门在她身后。 本镜画内角色：MARA-WORK。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定22秒，不用反打替拒绝加重。",
+      "focus": "玛拉先问退路，再要求下疗程，连续两次得不到保证。",
+      "start": "她看清款项换来的公开限制，双手空出翻页。",
+      "action": "玛拉没有去碰签字页，先把付款卡从两页之间抽出来，确保电话号码还在自己手里。\n玛拉连翻两页找下个疗程，维克多没有替她翻。她指到空着的续批项，拿起笔想让他加进去；他将笔轻推回她一侧。",
+      "end": "未来保障没有获书面承诺，她把笔留桌上。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E12-D201",
+          "speaker": "玛拉",
+          "listener": "维克多",
+          "text": "And if I don't sign?",
+          "translationZh": "不签呢？",
+          "tone": "要求说出退路",
+          "start": 1,
+          "end": 2.96
+        },
+        {
+          "id": "E12-D202",
+          "speaker": "维克多",
+          "listener": "同场对话者",
+          "text": "The claim stays disputed. You can keep appealing.",
+          "translationZh": "这起申请仍有争议，你可以继续申诉。",
+          "tone": "说流程，没有承诺位置",
+          "start": 3.26,
+          "end": 6.4
+        },
+        {
+          "id": "E12-D005",
+          "speaker": "玛拉",
+          "listener": "维克多",
+          "text": "Then put the next round in here.",
+          "translationZh": "那把下个疗程也写进去。",
+          "tone": "把笔递过去，试一次能否多争",
+          "start": 12,
+          "end": 14.8
+        },
+        {
+          "id": "E12-D006",
+          "speaker": "维克多",
+          "listener": "玛拉",
+          "text": "I can't promise they'll approve the next one.",
+          "translationZh": "下次批不批，我保证不了。",
+          "tone": "把笔推回，不绕开拒绝",
+          "start": 15.1,
+          "end": 18.4
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 11,
+          "start": "她看清款项换来的公开限制，双手空出翻页。",
+          "action": "玛拉没有去碰签字页，先把付款卡从两页之间抽出来，确保电话号码还在自己手里。",
+          "end": "她看一眼卡背的中午，转而要求把未来疗程写进去。",
+          "dialogueCueIds": [
+            "E12-D201",
+            "E12-D202"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 13
+        },
+        {
+          "duration": 11,
+          "start": "她看一眼卡背的中午，转而要求把未来疗程写进去。",
+          "action": "玛拉连翻两页找下个疗程，维克多没有替她翻。她指到空着的续批项，拿起笔想让他加进去；他将笔轻推回她一侧。",
+          "end": "未来保障没有获书面承诺，她把笔留桌上。",
+          "dialogueCueIds": [
+            "E12-D005",
+            "E12-D006"
+          ],
+          "sourceShotIds": [
+            "E12-SH003"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 13
+        }
+      ],
+      "viewerEntry": "她看清款项换来的公开限制，双手空出翻页。",
+      "viewerExit": "未来保障没有获书面承诺，她把笔留桌上。",
+      "cutTrigger": "她合起未签稿准备离开，切到行动后果。",
+      "next": "接E12-SH004；她合起未签稿准备离开，切到行动后果。",
+      "broadcastEpisode": 11,
+      "displayId": "EP11-007"
+    },
+    {
+      "id": "E12-SH004",
+      "sceneId": "E12-SC01",
+      "sourceShotIds": [
+        "E12-SH004"
+      ],
+      "duration": 10,
+      "characters": [
+        "MARA-WORK",
+        "VICTOR"
+      ],
+      "onScreenCharacterIds": [
+        "MARA-WORK",
+        "VICTOR"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "她决定找独立律师并禁止拨店里电话。",
+      "framing": "会议室西墙35mm中全景，玛拉起身走南门，维克多留北端。",
+      "composition": "同日下午合众健康会议室，玛拉坐长桌南侧，灰风衣仍罩黑工服，诊所付款卡压在费用页上。维克多在北端，平板左侧，南门在她身后。 本镜画内角色：MARA-WORK,VICTOR。",
+      "camera": "固定10秒，让蓝夹带出门而笔留桌上。",
+      "focus": "她决定找独立律师并禁止拨店里电话。",
+      "start": "未来保障没有获书面承诺，她把笔留桌上。",
+      "action": "玛拉合起未签协议收入左侧蓝夹，右手拿回手机起身。维克多伸手到桌中拿笔，她已转向南门。",
+      "end": "未签版带走，维克多未取得签名。",
+      "sound": "办公室空调与实际手机提示，不加未列来电内容。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E12-D007",
+          "speaker": "玛拉",
+          "listener": "维克多",
+          "text": "I'm taking this to my lawyer. Don't call the store.",
+          "translationZh": "我拿给律师看。别往店里打电话。",
+          "tone": "合夹起身，先结束这次谈判",
+          "start": 1,
+          "end": 5.7
+        },
+        {
+          "id": "E12-D008",
+          "speaker": "维克多",
+          "listener": "玛拉",
+          "text": "Have him call me.",
+          "translationZh": "让他打给我。",
+          "tone": "继续争速度",
+          "start": 6,
+          "end": 8.3
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 10,
+          "start": "未来保障没有获书面承诺，她把笔留桌上。",
+          "action": "玛拉合起未签协议收入左侧蓝夹，右手拿回手机起身。维克多伸手到桌中拿笔，她已转向南门。",
+          "end": "未签版带走，维克多未取得签名。",
+          "dialogueCueIds": [
+            "E12-D007",
+            "E12-D008"
+          ],
+          "sourceShotIds": [
+            "E12-SH004"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 12
+        }
+      ],
+      "viewerEntry": "未来保障没有获书面承诺，她把笔留桌上。",
+      "viewerExit": "未签版带走，维克多未取得签名。",
+      "cutTrigger": "南门关上，下一场独立意见确实发生。",
+      "next": "本场结果成立后切入 E11-SC03（NEWSROOM，傍晚·当天）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "broadcastEpisode": 11,
+      "displayId": "EP11-008"
+    },
+    {
+      "id": "E11-SH008",
+      "sceneId": "E11-SC03",
+      "sourceShotIds": [
+        "E11-SH008",
+        "E11-SH009"
+      ],
+      "duration": 22,
+      "characters": [
+        "NORA",
+        "EDITOR-DESK"
+      ],
+      "onScreenCharacterIds": [
+        "NORA",
+        "EDITOR-DESK"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "两人争更新/更正后真正失去排期。",
+      "framing": "西桌南侧50mm屏幕旁的诺拉与编辑共享中景，原错误标题与排定推荐处在同一屏幕。",
+      "composition": "同日傍晚编辑部西桌摆着重审与今日通知，北屏的公司说明静音。诺拉打开自己转过的错误标题，女编辑站东侧看推荐排期。 本镜画内角色：NORA,EDITOR-DESK。",
+      "camera": "固定22秒，让撤推荐动作完整发生。",
+      "focus": "两人争更新/更正后真正失去排期。",
+      "start": "她把更正段落打在新稿顶部。",
+      "action": "诺拉把错误转发截下留档，在西桌更新原文。编辑把‘更正’改成‘更新’，她将鼠标移回去，两个光标在同一处停住。\n编辑打开已排好的全国版推荐，那里仍引用旧标题。诺拉用自己的账号撤掉该条推送，手机上转发提醒却继续增长。",
+      "end": "本方旧推送撤下，外部流转仍在。",
+      "sound": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E11-D014",
+          "speaker": "值班编辑",
+          "listener": "诺拉",
+          "text": "We can call it an update.",
+          "translationZh": "可以叫更新。",
+          "tone": "替她和栏目留余地",
+          "start": 1,
+          "end": 4.3
+        },
+        {
+          "id": "E11-D015",
+          "speaker": "诺拉",
+          "listener": "值班编辑",
+          "text": "We got it wrong. Put a correction on the original.",
+          "translationZh": "我们写错了。在原文上更正。",
+          "tone": "把鼠标拉回原链接",
+          "start": 4.6,
+          "end": 9.8
+        },
+        {
+          "id": "E11-D016",
+          "speaker": "值班编辑",
+          "listener": "诺拉",
+          "text": "Pull it, and we lose that slot.",
+          "translationZh": "撤了，那个推荐位就没了。",
+          "tone": "让她看清要失去哪块位置",
+          "start": 13,
+          "end": 16.8
+        },
+        {
+          "id": "E11-D017",
+          "speaker": "诺拉",
+          "listener": "值班编辑",
+          "text": "Pull it.",
+          "translationZh": "撤。",
+          "tone": "短促不解释",
+          "start": 17.1,
+          "end": 18.4
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 12,
+          "start": "她把更正段落打在新稿顶部。",
+          "action": "诺拉把错误转发截下留档，在西桌更新原文。编辑把‘更正’改成‘更新’，她将鼠标移回去，两个光标在同一处停住。",
+          "end": "标题关系明确更正，旧版本仍可追溯。",
+          "dialogueCueIds": [
+            "E11-D014",
+            "E11-D015"
+          ],
+          "sourceShotIds": [
+            "E11-SH008"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 14
+        },
+        {
+          "duration": 10,
+          "start": "标题关系明确更正，旧版本仍可追溯。",
+          "action": "编辑打开已排好的全国版推荐，那里仍引用旧标题。诺拉用自己的账号撤掉该条推送，手机上转发提醒却继续增长。",
+          "end": "本方旧推送撤下，外部流转仍在。",
+          "dialogueCueIds": [
+            "E11-D016",
+            "E11-D017"
+          ],
+          "sourceShotIds": [
+            "E11-SH009"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 12
+        }
+      ],
+      "viewerEntry": "完成较小的准确性纠错，同时留下尚未承担的大断言。",
+      "viewerExit": "本方旧推送撤下，外部流转仍在。",
+      "cutTrigger": "编辑追问最初报道，切到诺拉如何避开更大的问题。",
+      "next": "接E11-SH010；编辑追问最初报道，切到诺拉如何避开更大的问题。",
+      "broadcastEpisode": 11,
+      "displayId": "EP11-009"
+    },
+    {
+      "id": "E11-SH010",
+      "sceneId": "E11-SC03",
+      "sourceShotIds": [
+        "E11-SH010"
+      ],
+      "duration": 21,
+      "characters": [
+        "NORA",
+        "EDITOR-DESK"
+      ],
+      "onScreenCharacterIds": [
+        "NORA"
+      ],
+      "offscreenCharacterIds": [
+        "EDITOR-DESK"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "诺拉只承认治疗标题错误，仍把访问记录作为下一步索取。",
+      "framing": "编辑西肩旁65mm诺拉中近景，原调查标题在后侧屏幕边缘，编辑只留递排期的手。",
+      "composition": "同日傍晚编辑部西桌摆着重审与今日通知，北屏的公司说明静音。诺拉打开自己转过的错误标题，女编辑站东侧看推荐排期。 本镜画内角色：NORA。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定21秒，不转屏幕特写。",
+      "focus": "诺拉只承认治疗标题错误，仍把访问记录作为下一步索取。",
+      "start": "本方旧推送撤下，外部流转仍在。",
+      "action": "诺拉确认旧推荐已撤，编辑把调查原稿拉回屏幕。她指向待索取的访问记录，没有去动原导语。\n诺拉将下一步需要的查看记录清单推给编辑申请时间；编辑拿来栏目排期，没有给她空白预算。诺拉用笔圈了一项最小核实任务。",
+      "end": "她只获继续查登录记录的有限安排。",
+      "sound": "键盘、电脑风扇与远处办公底声，不播有额外对白的新闻。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E11-D206",
+          "speaker": "值班编辑",
+          "listener": "诺拉",
+          "text": "And the original story?",
+          "translationZh": "最初那篇呢？",
+          "tone": "问是否还要处理别处",
+          "start": 1,
+          "end": 2.57
+        },
+        {
+          "id": "E11-D207",
+          "speaker": "诺拉",
+          "listener": "值班编辑",
+          "text": "The treatment headline was wrong. I'm still chasing the records.",
+          "translationZh": "治疗标题错了。记录我还在追。",
+          "tone": "把问题限在本次转发",
+          "start": 2.87,
+          "end": 6.79
+        },
+        {
+          "id": "E11-D018",
+          "speaker": "值班编辑",
+          "listener": "诺拉",
+          "text": "What's next? Pick one thing.",
+          "translationZh": "接着查什么？选一件。",
+          "tone": "把栏目排期压到清单边",
+          "start": 12,
+          "end": 15.8
+        },
+        {
+          "id": "E11-D019",
+          "speaker": "诺拉",
+          "listener": "值班编辑",
+          "text": "The doctors' access records.",
+          "translationZh": "医生的访问记录。",
+          "tone": "改为可核任务",
+          "start": 16.1,
+          "end": 18.4
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 11,
+          "start": "本方旧推送撤下，外部流转仍在。",
+          "action": "诺拉确认旧推荐已撤，编辑把调查原稿拉回屏幕。她指向待索取的访问记录，没有去动原导语。",
+          "end": "她继续把原报道当作待补证调查，Nobody opened the files. 仍在线。",
+          "dialogueCueIds": [
+            "E11-D206",
+            "E11-D207"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 13
+        },
+        {
+          "duration": 10,
+          "start": "她继续把原报道当作待补证调查，Nobody opened the files. 仍在线。",
+          "action": "诺拉将下一步需要的查看记录清单推给编辑申请时间；编辑拿来栏目排期，没有给她空白预算。诺拉用笔圈了一项最小核实任务。",
+          "end": "她只获继续查登录记录的有限安排。",
+          "dialogueCueIds": [
+            "E11-D018",
+            "E11-D019"
+          ],
+          "sourceShotIds": [
+            "E11-SH010"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 12
+        }
+      ],
+      "viewerEntry": "本方旧推送撤下，外部流转仍在。",
+      "viewerExit": "她只获继续查登录记录的有限安排。",
+      "cutTrigger": "她圈定访问记录，切律师追问主角有没有追过自己的材料。",
+      "next": "本场结果成立后切入 E11-SC04（VISIT，日·次日上午）；以新场开头建立空间和人物持物，环境声按新场接入。",
+      "broadcastEpisode": 11,
+      "displayId": "EP11-010"
+    },
+    {
+      "id": "E11-SH011",
+      "sceneId": "E11-SC04",
+      "sourceShotIds": [
+        "E11-SH011",
+        "E11-SH012"
+      ],
+      "duration": 24,
+      "characters": [
+        "LUIGI-DETENTION",
+        "HELEN"
+      ],
+      "onScreenCharacterIds": [
+        "LUIGI-DETENTION",
+        "HELEN"
+      ],
+      "offscreenCharacterIds": [],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "两个版本按日期进入同一桌面，回避还没有开始。",
+      "framing": "会见桌西侧40mm南北双人中景，青年北、海伦南、门在南后方。",
+      "composition": "次日上午会见室南门外传来巡行脚步。固定桌北侧路易吉穿灰衣，双腕自由，海伦坐南；两人之间没有玻璃，旧患者样本先由青年占满桌面。 本镜画内角色：LUIGI-DETENTION,HELEN。",
+      "camera": "固定24秒，青年推整叠，律师只取一份。",
+      "focus": "两个版本按日期进入同一桌面，回避还没有开始。",
+      "start": "路易吉手腕自由，伸手翻公开报道。",
+      "action": "青年将一叠旧样本推向海伦，想补充公开报道。海伦从中只抽出最上面一份，把其他纸留在青年那边。\n青年指出自己最后收到的页。海伦将后来重审通知滑入它旁边，青年用手挡了一下，像仍能把两个时间分开，最后让出位置。",
+      "end": "旧页北、新页南，两份都可见。",
+      "sound": "会见室低通风声和纸页摩擦；南门外只有不可辨脚步。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E11-D020",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "All of these. Not just Ellie.",
+          "translationZh": "这些都发，不只艾莉那份。",
+          "tone": "想夺回广度",
+          "start": 1,
+          "end": 4.3
+        },
+        {
+          "id": "E11-D021",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "Pick one. What's the last page you got?",
+          "translationZh": "选一份。你最后收到的是哪页？",
+          "tone": "从整叠里抽一份，让问题落到具体时间",
+          "start": 4.6,
+          "end": 8.4
+        },
+        {
+          "id": "E11-D022",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "This one. Nothing after that.",
+          "translationZh": "这页。后面就没了。",
+          "tone": "指自己的收件末页，不替对方解释",
+          "start": 11.1,
+          "end": 15.7
+        },
+        {
+          "id": "E11-D023",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "This notice came later. Did you ask them for an update?",
+          "translationZh": "这份通知是后来才有的。你问过进展吗？",
+          "tone": "把通知放在旁边，等他答",
+          "start": 16,
+          "end": 22.6
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 10,
+          "start": "路易吉手腕自由，伸手翻公开报道。",
+          "action": "青年将一叠旧样本推向海伦，想补充公开报道。海伦从中只抽出最上面一份，把其他纸留在青年那边。",
+          "end": "材料堆没获整体背书，桌面只选一个案子。",
+          "dialogueCueIds": [
+            "E11-D020",
+            "E11-D021"
+          ],
+          "sourceShotIds": [
+            "E11-SH011"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 12
+        },
+        {
+          "duration": 14,
+          "start": "材料堆没获整体背书，桌面只选一个案子。",
+          "action": "青年指出自己最后收到的页。海伦将后来重审通知滑入它旁边，青年用手挡了一下，像仍能把两个时间分开，最后让出位置。",
+          "end": "旧页北、新页南，两份都可见。",
+          "dialogueCueIds": [
+            "E11-D022",
+            "E11-D023"
+          ],
+          "sourceShotIds": [
+            "E11-SH012"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 16
+        }
+      ],
+      "viewerEntry": "将主角的普遍控诉逼回自己有没有追问的行为。",
+      "viewerExit": "旧页北、新页南，两份都可见。",
+      "cutTrigger": "新通知被放下，切到必须回答有没有追问的青年。",
+      "next": "接E11-SH013；新通知被放下，切到必须回答有没有追问的青年。",
+      "broadcastEpisode": 11,
+      "displayId": "EP11-011"
+    },
+    {
+      "id": "E11-SH013",
+      "sceneId": "E11-SC04",
+      "sourceShotIds": [
+        "E11-SH013"
+      ],
+      "duration": 31,
+      "characters": [
+        "LUIGI-DETENTION",
+        "HELEN"
+      ],
+      "onScreenCharacterIds": [
+        "LUIGI-DETENTION"
+      ],
+      "offscreenCharacterIds": [
+        "HELEN"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "他用公司拖延解释，最终承认没问过，律师的短问从近侧画外来。",
+      "framing": "海伦西肩旁朝北65mm青年中近景，海伦按新通知的手在下前景。",
+      "composition": "次日上午会见室南门外传来巡行脚步。固定桌北侧路易吉穿灰衣，双腕自由，海伦坐南；两人之间没有玻璃，旧患者样本先由青年占满桌面。 本镜画内角色：LUIGI-DETENTION。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定31秒；青年举旧页遮挡时不绕开纸，等他自己放低。",
+      "focus": "他用公司拖延解释，最终承认没问过，律师的短问从近侧画外来。",
+      "start": "旧页北、新页南，两份都可见。",
+      "action": "青年将旧拒赔页举高，遮住后来的通知日期。海伦不与他争公司好坏，只把椅子移近桌沿，等他回答刚才的问题。\n青年拿起旧页想说明，海伦将新通知按在桌面不收回。他把旧页放下，直接回答没问过后续。",
+      "end": "他承认没有追问，新通知未被拿走。",
+      "sound": "会见室低通风声和纸页摩擦；南门外只有不可辨脚步。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E11-D208",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "They send another letter. Then another. People run out of time.",
+          "translationZh": "一封接一封地发信，人哪有那么多时间。",
+          "tone": "把问题推回程序拖延",
+          "start": 1,
+          "end": 5.31
+        },
+        {
+          "id": "E11-D209",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "Did you ask this family what happened next?",
+          "translationZh": "这家后来怎么样了，你问过吗？",
+          "tone": "坚持具体到这个人",
+          "start": 5.61,
+          "end": 8.75
+        },
+        {
+          "id": "E11-D210",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "They'd already been turned down.",
+          "translationZh": "他们已经被拒过了。",
+          "tone": "继续用旧结论挡后续",
+          "start": 9.05,
+          "end": 11.01
+        },
+        {
+          "id": "E11-D211",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "I can see that. Did you ask?",
+          "translationZh": "我看见了。你问了吗？",
+          "tone": "不替他把没问说出来",
+          "start": 11.31,
+          "end": 14.06
+        },
+        {
+          "id": "E11-D024",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "No. I thought I knew what the answer would be.",
+          "translationZh": "没问。我以为不用问也知道他们怎么答。",
+          "tone": "先说没有，理由说完也收不回去",
+          "start": 22,
+          "end": 27.2
+        },
+        {
+          "id": "E11-D025",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "Put the date here.",
+          "translationZh": "日期写这儿。",
+          "tone": "直接点空白处，不安慰也不训人",
+          "start": 27.5,
+          "end": 29.8
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 21,
+          "start": "旧页北、新页南，两份都可见。",
+          "action": "青年将旧拒赔页举高，遮住后来的通知日期。海伦不与他争公司好坏，只把椅子移近桌沿，等他回答刚才的问题。",
+          "end": "他放低旧页，新通知日期重新露出来。",
+          "dialogueCueIds": [
+            "E11-D208",
+            "E11-D209",
+            "E11-D210",
+            "E11-D211"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 23
+        },
+        {
+          "duration": 10,
+          "start": "他放低旧页，新通知日期重新露出来。",
+          "action": "青年拿起旧页想说明，海伦将新通知按在桌面不收回。他把旧页放下，直接回答没问过后续。",
+          "end": "他承认没有追问，新通知未被拿走。",
+          "dialogueCueIds": [
+            "E11-D024",
+            "E11-D025"
+          ],
+          "sourceShotIds": [
+            "E11-SH013"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 12
+        }
+      ],
+      "viewerEntry": "旧页北、新页南，两份都可见。",
+      "viewerExit": "他承认没有追问，新通知未被拿走。",
+      "cutTrigger": "承认之后他写下时间，却遮住不利的一句，切到律师如何接住而不代写。",
+      "next": "接E11-SH014；承认之后他写下时间，却遮住不利的一句，切到律师如何接住而不代写。",
+      "broadcastEpisode": 11,
+      "displayId": "EP11-012"
+    },
+    {
+      "id": "E11-SH014",
+      "sceneId": "E11-SC04",
+      "sourceShotIds": [
+        "E11-SH014",
+        "E11-SH015"
+      ],
+      "duration": 40,
+      "characters": [
+        "HELEN",
+        "LUIGI-DETENTION"
+      ],
+      "onScreenCharacterIds": [
+        "HELEN"
+      ],
+      "offscreenCharacterIds": [
+        "LUIGI-DETENTION"
+      ],
+      "extraRoleIds": [],
+      "offscreenRoleIds": [],
+      "purpose": "她不安慰或抢纸，等他写全，再接收新旧两份；青年担心观感的声音在近前景外。",
+      "framing": "青年西肩旁朝南50mm海伦中景，青年手与补写纸在前层可见。",
+      "composition": "次日上午会见室南门外传来巡行脚步。固定桌北侧路易吉穿灰衣，双腕自由，海伦坐南；两人之间没有玻璃，旧患者样本先由青年占满桌面。 本镜画内角色：HELEN。其余所列说话者留在已建立的画外席位或电话对端。",
+      "camera": "固定40秒，纸推到海伦前才短暂下俯十度，仍是同一机位。",
+      "focus": "她不安慰或抢纸，等他写全，再接收新旧两份；青年担心观感的声音在近前景外。",
+      "start": "他承认没有追问，新通知未被拿走。",
+      "action": "青年在空纸上写日期，又用手压住那句自己没追问的话。海伦没有抢纸，只指一下桌上的新通知，明确要求他把前后经过都写全。\n青年移开压住句子的手，仍没有递纸。他看着自己写下的没问，想把这一句换成对拖延的解释；海伦把笔留给他，不代写。\n青年核对自己补上的那句，把纸连同旧样本推给海伦。她按日期重排，他把重审通知也推过去，不再要求只留旧的一页。",
+      "end": "新旧记录一同归律师，尚无完整内部流程结论。",
+      "sound": "会见室低通风声和纸页摩擦；南门外只有不可辨脚步。",
+      "music": "无背景音乐，场内连续底声承担空间与节奏。",
+      "dialogue": [
+        {
+          "id": "E11-D026",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "Do we have to put that in?",
+          "translationZh": "这句一定得写吗？",
+          "tone": "手压着遗漏那行，试探能否不写",
+          "start": 1,
+          "end": 3.8
+        },
+        {
+          "id": "E11-D027",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "Yes. I need it all.",
+          "translationZh": "得写。你得把前后都告诉我。",
+          "tone": "明确要求完整经过，不允许自己先挑掉不利段",
+          "start": 4.1,
+          "end": 6.4
+        },
+        {
+          "id": "E11-D212",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "It makes it sound like I didn't care.",
+          "translationZh": "这么写，好像我根本不在乎。",
+          "tone": "担心自己失去道德立足点",
+          "start": 11,
+          "end": 14.14
+        },
+        {
+          "id": "E11-D213",
+          "speaker": "海伦",
+          "listener": "路易吉",
+          "text": "Then tell me what you did. Don't fix how it sounds.",
+          "translationZh": "那就告诉我你做了什么。别先想着怎么写好听。",
+          "tone": "要求行为而非表态",
+          "start": 14.44,
+          "end": 18.75
+        },
+        {
+          "id": "E11-D214",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "I stopped asking. I kept the first answer.",
+          "translationZh": "我没再问。我一直用最初那个答复。",
+          "tone": "把遗漏说完整",
+          "start": 19.05,
+          "end": 22.19
+        },
+        {
+          "id": "E11-D028",
+          "speaker": "路易吉",
+          "listener": "海伦",
+          "text": "Get the later pages.",
+          "translationZh": "把后面的页也找来。",
+          "tone": "把要求从公布改成查完",
+          "start": 32,
+          "end": 34.3
+        }
+      ],
+      "overlay": [],
+      "generationSegments": [
+        {
+          "duration": 10,
+          "start": "他承认没有追问，新通知未被拿走。",
+          "action": "青年在空纸上写日期，又用手压住那句自己没追问的话。海伦没有抢纸，只指一下桌上的新通知，明确要求他把前后经过都写全。",
+          "end": "青年移开压住遗漏句的手，准备补全；新通知仍在桌南侧。",
+          "dialogueCueIds": [
+            "E11-D026",
+            "E11-D027"
+          ],
+          "sourceShotIds": [
+            "E11-SH014"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 12
+        },
+        {
+          "duration": 21,
+          "start": "青年移开压住遗漏句的手，准备补全；新通知仍在桌南侧。",
+          "action": "青年移开压住句子的手，仍没有递纸。他看着自己写下的没问，想把这一句换成对拖延的解释；海伦把笔留给他，不代写。",
+          "end": "他补上自己停在旧答复的经过，纸仍留在自己这一侧，手已经移开。",
+          "dialogueCueIds": [
+            "E11-D212",
+            "E11-D213",
+            "E11-D214"
+          ],
+          "sourceShotIds": [],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 23
+        },
+        {
+          "duration": 9,
+          "start": "他补上自己停在旧答复的经过，纸仍留在自己这一侧，手已经移开。",
+          "action": "青年核对自己补上的那句，把纸连同旧样本推给海伦。她按日期重排，他把重审通知也推过去，不再要求只留旧的一页。",
+          "end": "新旧记录一同归律师，尚无完整内部流程结论。",
+          "dialogueCueIds": [
+            "E11-D028"
+          ],
+          "sourceShotIds": [
+            "E11-SH015"
+          ],
+          "handles": {
+            "before": 1,
+            "after": 1
+          },
+          "generationDuration": 11
+        }
+      ],
+      "viewerEntry": "他承认没有追问，新通知未被拿走。",
+      "viewerExit": "新旧记录一同归律师，尚无完整内部流程结论。",
+      "cutTrigger": "后续页一并交付，主角改了工作方法而没有获得免责。",
+      "next": "本集结束。青年交出不利的完整经过，要求取得后来页；与此同时，玛拉仍握着未签协议，面对当天中午的付款期限，下一集必须作出实际选择。 下集从CLINIC展开：玛拉能在付款截止前，把必须保留的权利写进真正生效的两份协议吗？",
+      "broadcastEpisode": 11,
+      "displayId": "EP11-013"
+    }
+  ]
+}

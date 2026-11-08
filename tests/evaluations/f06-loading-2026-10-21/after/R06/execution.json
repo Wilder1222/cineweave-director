@@ -1,0 +1,30 @@
+{
+  "case": "R06",
+  "status": "completed",
+  "output": "output.md",
+  "request": "request.txt",
+  "skillEntry": "D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/snapshot/skills/cineweave-director/SKILL.md",
+  "resourceReadMethod": "All Skill resources were read through the provided measure-resource-load.mjs; the script source was not read.",
+  "actualReads": [
+    {"sequence": 1, "mode": "file", "args": ["SKILL.md"], "range": "full", "purpose": "Entry workflow, route selection and named-style loading requirements", "payload": "read-01.txt", "emittedUtf8Bytes": 14711, "emittedCodePoints": 6651},
+    {"sequence": 2, "mode": "file", "args": ["references/routes/style.md", "按风格名称调用与独立组合"], "range": "heading with descendants", "purpose": "Independent CG/MU composition and exact revisions", "payload": "read-02.txt", "emittedUtf8Bytes": 2759, "emittedCodePoints": 1150},
+    {"sequence": 3, "mode": "card", "args": ["宋韵清雅·古偶柔光", "杏露薄妆·清雅日常"], "resolved": ["CG11@r2", "MU14@r3"], "purpose": "Actual selected card recipes and boundaries", "payload": "read-03.txt", "emittedUtf8Bytes": 9736, "emittedCodePoints": 3887},
+    {"sequence": 4, "mode": "file", "args": ["references/routes/character.md"], "range": "full", "purpose": "Identity, appearance and character prompt boundaries", "payload": "read-04.txt", "emittedUtf8Bytes": 5352, "emittedCodePoints": 2292},
+    {"sequence": 5, "mode": "file", "args": ["references/optional/prompt-detail-standard.md", "人物"], "range": "heading with descendants", "purpose": "Complete visible portrait details and single-static-frame requirements", "payload": "read-05.txt", "emittedUtf8Bytes": 7578, "emittedCodePoints": 2722},
+    {"sequence": 6, "mode": "file", "args": ["references/optional/portrait-natural-human.md", "先分清肖像任务"], "range": "heading with descendants", "purpose": "Classify realistic narrative portrait and preserve character task", "payload": "read-06.txt", "emittedUtf8Bytes": 1610, "emittedCodePoints": 648}
+  ],
+  "measurementTrace": "read-trace.json",
+  "totalResourceCalls": 6,
+  "totalEmittedUtf8Bytes": 41746,
+  "totalEmittedCodePoints": 17350,
+  "measurementNotes": "Byte and code-point totals are emitted payload measures, not model token counts. Card lookup scanned both source catalogs internally, as recorded in read-trace.json, but emitted only the two selected cards.",
+  "toolFailures": [],
+  "truncations": [],
+  "toolObservations": ["Later non-resource PowerShell inventory/date commands were delayed and returned running session IDs; polling the retained sessions completed successfully. This did not truncate or interrupt the six Skill payloads."],
+  "constraintsObserved": ["No media generated", "No delegation", "No other cases, reports or historical answers read", "No snapshot or repository source modified", "Selected card names and revisions listed separately", "No self-scoring"],
+  "validation": {"outputUtf8": true, "outputCrlfCount": 0, "manualReview": "Checked hard locks, independent style selection, deep-skin adaptation, age/body preservation, and self-contained prompt text."},
+  "limitations": ["No original image or full prior manuscript was supplied; stable details are limited to the request. Framing and stance are explicitly described as draft design choices.", "No generated image exists for skin tone, age, body shape or makeup/lighting acceptance."],
+  "model": null,
+  "tokenUsage": null,
+  "endToEndElapsedMs": null
+}

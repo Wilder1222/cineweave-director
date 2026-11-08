@@ -1,0 +1,67 @@
+{
+  "source_run_id": "01a15cfe-44df-7e12-8a76-cfdecdb609bb",
+  "source_log_sha256": "225d4ee9cbe7449914c1e91fab8c431e03e4fbcd6bbf76e71c294a26693090c7",
+  "metric": "all actual text blocks in selected resource tool results, including wrapper; not model tokens",
+  "reads": [
+    {
+      "callId": "call_5fe9088cd47e4b4a99e3a589fe8bf18b",
+      "command": "text(await tools.exec_command({cmd:\"node 'D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/measure-resource-load.mjs' 'D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/after/A06' 'D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/snapshot/skills/cineweave-director' file SKILL.md\",\"max_output_tokens\":12000})); \n",
+      "payloadFile": "visible-01.txt",
+      "sha256": "6ca86a07ca22a5eded53919ab0eaf155579813961dc5cb3ff6257bb306a13665",
+      "modelVisibleUtf8Bytes": 14969,
+      "modelVisibleCodePoints": 6909,
+      "truncated": false,
+      "tokenUsage": null
+    },
+    {
+      "callId": "call_fb6ba42b55a744e3a580d04353495742",
+      "command": "text(await tools.exec_command({cmd:\"node 'D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/measure-resource-load.mjs' 'D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/after/A06' 'D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/snapshot/skills/cineweave-director' file references/routes/style.md '按风格名称调用与独立组合'\",\"max_output_tokens\":12000})); \n",
+      "payloadFile": "visible-02.txt",
+      "sha256": "cb833b791fff0bf338c15609f570cc695a370f6bc7b868ec730864b70902a741",
+      "modelVisibleUtf8Bytes": 2934,
+      "modelVisibleCodePoints": 1325,
+      "truncated": false,
+      "tokenUsage": null
+    },
+    {
+      "callId": "call_1352d35900934a82be2cb16730f66a26",
+      "command": "text(await tools.exec_command({cmd:\"node 'D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/measure-resource-load.mjs' 'D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/after/A06' 'D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/snapshot/skills/cineweave-director' card '宋韵清雅·古偶柔光' '杏露薄妆·清雅日常'\",\"max_output_tokens\":12000})); \n",
+      "payloadFile": "visible-03.txt",
+      "sha256": "39aa65f14201fa7105049ffc99152736141cf2f6ee70427eb5bd5f71c45a9ed7",
+      "modelVisibleUtf8Bytes": 9952,
+      "modelVisibleCodePoints": 4103,
+      "truncated": false,
+      "tokenUsage": null
+    },
+    {
+      "callId": "call_0aa48b54bd464d62b6aae422bf160e05",
+      "command": "text(await tools.exec_command({cmd:\"node 'D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/measure-resource-load.mjs' 'D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/after/A06' 'D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/snapshot/skills/cineweave-director' file references/routes/character.md\",\"max_output_tokens\":12000})); \n",
+      "payloadFile": "visible-04.txt",
+      "sha256": "ec92d08f0dd125316f2e47c76012580fab6cacf35b676b7077628d10c7b41c30",
+      "modelVisibleUtf8Bytes": 5555,
+      "modelVisibleCodePoints": 2495,
+      "truncated": false,
+      "tokenUsage": null
+    },
+    {
+      "callId": "call_2fec172c34594c62b598a72671035359",
+      "command": "text(await tools.exec_command({cmd:\"node 'D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/measure-resource-load.mjs' 'D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/after/A06' 'D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/snapshot/skills/cineweave-director' file references/optional/prompt-detail-standard.md '人物'\",\"max_output_tokens\":12000})); \n",
+      "payloadFile": "visible-05.txt",
+      "sha256": "c5d3e533506b69fc641269d24fdf4c26ceaf4d1c2768b111fbaf12801b7d62f3",
+      "modelVisibleUtf8Bytes": 7782,
+      "modelVisibleCodePoints": 2926,
+      "truncated": false,
+      "tokenUsage": null
+    },
+    {
+      "callId": "call_121ae97a081a4e2cb27c90c333c24490",
+      "command": "text(await tools.exec_command({cmd:\"node 'D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/measure-resource-load.mjs' 'D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/after/A06' 'D:/study/projects/cineweave-codex-skills/cineweave-director/.build/audits/f06-loading-2026-10-21/snapshot/skills/cineweave-director' file references/optional/portrait-natural-human.md '先分清肖像任务'\",\"max_output_tokens\":12000})); \n",
+      "payloadFile": "visible-06.txt",
+      "sha256": "50e68fb2c696595b12b1d857f8d2c23b019ee29f509b3a4113ae93fdc9bd7714",
+      "modelVisibleUtf8Bytes": 1776,
+      "modelVisibleCodePoints": 814,
+      "truncated": false,
+      "tokenUsage": null
+    }
+  ]
+}

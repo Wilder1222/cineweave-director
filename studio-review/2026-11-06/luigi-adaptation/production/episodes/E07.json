@@ -1,0 +1,705 @@
+{
+  "number": 7,
+  "title": "举报者",
+  "logline": "母亲想解释一次换来安静，主动留下孩子原声，记者也接受了。拒赔报道走红，诊所回电却被她当成骚扰按掉；职员从信件标记里认出了自己。",
+  "scenes": [
+    {
+      "id": "E07-SC01",
+      "location": "DINER-EXTERIOR",
+      "time": "清早·姓名曝光次日",
+      "entry": "Mara左夹蓝夹、右手机，Blake站南门",
+      "exit": "玛拉进门，手机右袋、名片右手、蓝夹左臂；诺拉门外。",
+      "script": "快餐店正门朝南开向停车区，东侧员工门连柜台工作区，西边临街窗映着路灯。玛拉穿灰风衣罩工服，左臂蓝夹、右手手机，从停车区向东员工门走。布莱克黑夹克白T恤，举手机稳定器站在南正门外，另外两人只在远处观看。\n\n布莱克侧移两步，把稳定器伸到玛拉去东员工门的路上。她先看门里的打卡钟，才停住。\n布莱克（英语）：Mara! How much did they pay you? Don't walk off. They're paying for an answer.\n中文对照：玛拉！他们给了你多少钱？别走啊。这些人可是付了钱等你回答的。\n他把镜头转向蓝夹，玛拉立刻把夹脊贴住胸口，右手手机收得更近。\n\n\n玛拉（英语）：Move it. I have to clock in.\n中文对照：挪开，我要打卡。\n布莱克想接话，她朝手机旁的空隙侧身。\n布莱克（英语）：Then say you didn't take the money.\n中文对照：那就说你没拿钱。\n他退半步仍拍，玛拉从他与墙之间过去。门里同事伸手替她拉门，她却停在门槛外，把蓝夹转到背离镜头的一侧，还没有进门。\n\n诺拉没有上前挡门，只把名片抬到她看得到的位置。\n诺拉（英语）：Nora Chen. If you've got letters, bills, anything you want me to see, call me.\n中文对照：诺拉·陈。有信、账单，什么想给我看的，都可以打给我。\n玛拉停一秒，看她手里没有举着录制的手机，才把自己的手机收进右袋，伸手接卡。\n玛拉（英语）：I've got plenty of those.\n中文对照：这些我倒是多得很。\n她带卡进门，诺拉留在外面。",
+      "dramaticFunction": "让公开解释的需求从店门口被堵的现场产生，而不是记者随意找到理想受访者。",
+      "turn": "诺拉给出可以私下联系的名片，玛拉得到绕过直播镜头的一条路。",
+      "exitCost": "她仍得进入工作现场面对已公开身份，选择接受采访将有新代价。",
+      "sceneRhythm": "三镜保留直播堵路、同事开员工门、名片交接；每个切点是一条实际去路改变。"
+    },
+    {
+      "id": "E07-SC02",
+      "location": "MARA-HOME",
+      "time": "下午·同日",
+      "entry": "诺拉坐桌东，玛拉桌西；黑手机尚在诺拉手中，蓝夹在玛拉面前。",
+      "exit": "孩子原声选择保留，诊所抬头也在原片；采访结束，母亲暂时松一口气但隐私缺口未修。",
+      "script": "公寓南门内，中央餐桌收拾出半张桌面，东厨房晾着水杯，西窗照进冷天光，北侧艾莉房门开着。玛拉仍穿工服，已脱灰风衣挂南门边；蓝夹在桌西侧。诺拉坐桌东侧，红本尚在左手、黑手机右手，等玛拉确认再开始录制。\n\n诺拉把手机支在桌中央，没有按录制。玛拉先看北卧室门，把蓝夹往自己面前收。\n\n玛拉（英语）：If I tell you what happened, are they going to leave us alone?\n中文对照：我把事情跟你说清楚，他们就能放过我们吗？\n\n诺拉（英语）：I can't promise that.\n中文对照：这个我保证不了。\n\n玛拉把夹子合上，诺拉没有伸手拦。\n\n玛拉（英语）：They know what I did. They keep making up the rest.\n中文对照：我做了什么，他们都知道。别的全在瞎编。\n\n诺拉把红本放到手机后，让玛拉能看见自己还没有写好她的故事。\n\n诺拉（英语）：Then tell me your part. We can stop if you need to.\n中文对照：那就从你这边讲。你需要停，我们就停。\n\n玛拉（英语）：Is it on?\n中文对照：已经开始了吗？\n\n诺拉（英语）：No.\n中文对照：还没有。\n\n玛拉（英语）：All right. Ask.\n中文对照：行，问吧。\n\n玛拉点头，诺拉才按录制。两人听到录制提示，姿势都比刚才僵了一点；蓝夹仍合着。\n\n诺拉（英语）：Did you know about the reward?\n中文对照：你知道有悬赏吗？\n\n玛拉（英语）：Yes. He said please and thank you.\n中文对照：知道。他当时又是请，又是谢谢的。\n\n诺拉的笔停在“知道”旁，没把礼貌那句记作答案的原因。\n\n诺拉（英语）：I'm asking about the money.\n中文对照：我问的是那笔钱。\n\n玛拉看着红本那一处停笔，又看录制手机。\n\n玛拉（英语）：I saw the amount. I thought about Friday's deposit. That's in there too.\n中文对照：数额我看见了。我想到了周五那笔预付款。这也是一个原因。\n\n玛拉（英语）：Kids were right there. I didn't know if he had a gun.\n中文对照：孩子就在旁边。我哪知道他带没带枪。\n\n诺拉写完才抬眼；玛拉没有求她把那句钱删掉，自己打开蓝夹。\n\n玛拉把拒赔页推向桌中，加班申请还夹在后面。\n\n玛拉（英语）：UnionCare turned down her renewal. I needed the extra shift to cover it.\n中文对照：合众健康把她续批拒了。我得多上这一班才付得起。\n\n诺拉伸手，玛拉先翻回写着金额的一角。\n\n玛拉（英语）：You can show them that part. Not all my bills.\n中文对照：这一段可以给他们看。别把我的账单全拍进去。\n\n诺拉（英语）：This page?\n中文对照：就这一页？\n\n玛拉把账单抽回蓝夹，用指尖压住要公开的那一段。\n\n玛拉（英语）：The denial. And the shift I asked for. Leave the rest here.\n中文对照：拒赔那段。还有我申请加班这事。别的留在这儿。\n\n诺拉取便签盖住患者号，等母亲点头。玛拉把那页转向桌中央仍在录制的手机，诊所抬头和处理标记露在遮挡外。诺拉压平便签，只检查它没翘起，没有抬头通查画面。\n\n艾莉抱画本停在北卧室门口，指向蓝夹里的绿笔。\n\n艾莉（英语）：Can I have the green one? Don't show them the bridge. It's not ready.\n中文对照：绿的那支给我好吗？别给他们看桥，还没画好。\n\n艾莉说话时，玛拉已站起压稳拒赔页，从夹内拿出绿笔；她安抚孩子，同时把笔递过去。\n\n玛拉（英语）：Ellie, no one's taking your map.\n中文对照：艾莉，没人要拿走你的地图。\n\n艾莉接笔，把没完成的桥朝自己折进去；她看了眼桌中手机，又看诺拉，抱画本回北屋。门没有关严，手机一直录着。\n\n诺拉停录，回放到母亲叫出孩子名字的地方，拇指悬在剪裁键。\n\n诺拉（英语）：I can cut her voice out.\n中文对照：孩子的声音可以剪掉。\n\n玛拉盯着拒赔页，等回放里孩子那句说完。\n\n玛拉（英语）：No, leave it. Maybe if they hear her, they'll get why I was there.\n中文对照：不用，留着吧。也许听见她的声音，他们就懂我为什么在那儿了。\n\n诺拉先看北屋门，再把患者号上的便签压严一点。她没有重新检查抬头与声音能否拼出孩子身份，也没有重新开录。\n\n玛拉（英语）：Do you have what you need?\n中文对照：这样够了吗？\n\n诺拉（英语）：For this part, yes. I'll send you the link.\n中文对照：这部分够了。出来后我把链接发你。\n\n玛拉坐回椅子，把蓝夹留在自己身边。诺拉收手机和红本准备离开；母亲终于把刚才一直没碰的水拿起来。北屋传来绿笔继续擦过纸面的轻响。",
+      "dramaticFunction": "以完整协商、难答问题、文件边界与回放取舍组成一次采访，公开选择由人物亲自作出。",
+      "turn": "玛拉从想用解释换停止骚扰，转为承认悬赏也是原因并主动留下孩子声音；诺拉完成眼前授权却漏掉上下文识别。",
+      "exitCost": "她们共同制作出既可信又能伤害家庭的原片；记者还欠母亲一次真正的隐私复核。",
+      "sceneRhythm": "45秒协商、36秒追问、42秒材料边界、24秒孩子取物、43秒回放决定；镜头随关系和任务切，不每句切反打。"
+    },
+    {
+      "id": "E07-SC03",
+      "location": "MARA-HOME",
+      "time": "夜·报道发出后",
+      "entry": "玛拉右手手机，左手空，画本在桌；艾莉将从北屋门缝探看。",
+      "exit": "画本桌上、蓝夹打开，手机右耳拨总机，不回拨骚扰号。",
+      "script": "同一公寓西窗已黑，餐桌灯亮着，东厨房水声停止。玛拉换米灰针织衫坐桌西，蓝夹合着，手机右手；艾莉在北屋，桌上留着她的画本。\n\n夜里，评论把艾莉名字和诊所位置排在一起。电话亮起陌生前缀，玛拉按掉，马上又响。她第二次拒接后，才听到北屋脚步，抬头看见门缝里的艾莉。\n玛拉（英语）：Stay in there. I'll get your pencils. Don't open the front door.\n中文对照：先待里面。我把笔拿来。别开大门。\n艾莉听完把门关回去。玛拉左手收起桌上画本，新的语音留言图标出现。\n\n玛拉点开语音留言，前几个字就让她把画本放下。\n医生语音留言（英语）：Mara, it's the clinic. That was me on the other line. We found the submission record. Call the main desk.\n中文对照：玛拉，是诊所。刚才换号码打的是我。提交记录找到了，打总机找我们。\n她没等留言尾音消失，已经翻蓝夹找总机号码；拨错一位，删掉重拨，最后把手机贴紧右耳。",
+      "dramaticFunction": "兑现孩子声音与抬头共同暴露的结果，再让骚扰直接挡住治疗线索。",
+      "turn": "她两次拒接陌生号码，随后发现其中一次正是诊所找到提交记录的回电。",
+      "exitCost": "护孩子的直觉暂时误伤了真正帮助；她必须重新拨总机。",
+      "sceneRhythm": "15秒先拒接、见孩子、护孩子；17秒听留言并拨错再重拨，因果完整不能压成通知蒙太奇。"
+    }
+  ],
+  "shots": [
+    {
+      "id": "E07-SH001",
+      "sceneId": "E07-SC01",
+      "duration": 14,
+      "characters": [
+        "MARA-WORK",
+        "HOST"
+      ],
+      "purpose": "网络身份变成能挡住她上班的身体与镜头。",
+      "framing": "全景，停车区南侧朝北",
+      "composition": "南门居中，东员工门右，西窗左",
+      "camera": "固定停车区南侧全景，南正门与东员工门关系清楚；直播者拦的是路径而非触碰人。",
+      "focus": "两人的路径和稳定器距离可见，远处围观者继续看不齐动。",
+      "start": "Mara左夹蓝夹、右手机，Blake站南门",
+      "action": "布莱克侧移两步，把稳定器伸到玛拉去东员工门的路上。她先看门里的打卡钟，才停住。布莱克对玛拉说本镜第1句英语对白，拿观众当理由，先给她安上收钱的故事。他把镜头转向蓝夹，玛拉立刻把夹脊贴住胸口，右手手机收得更近。",
+      "end": "玛拉离东门几步，蓝夹左臂贴胸手机右手，布莱克挡侧前方。",
+      "sound": "停车区车声、稳定器按键、门内机器",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E07-D001",
+          "speaker": "布莱克",
+          "listener": "玛拉",
+          "text": "Mara! How much did they pay you? Don't walk off. They're paying for an answer.",
+          "translationZh": "玛拉！他们给了你多少钱？别走啊。这些人可是付了钱等你回答的。",
+          "tone": "拿观众当理由，先给她安上收钱的故事",
+          "start": 0.6,
+          "end": 8.09
+        }
+      ],
+      "overlay": [],
+      "next": "接她要求让路，Nora在远处出现",
+      "viewerEntry": "名字和工作地点已经曝光。",
+      "viewerExit": "网络身份变成能挡住她上班的身体与镜头。",
+      "cutTrigger": "镜头从脸转向蓝夹，她把它贴紧胸口。",
+      "extraRoleIds": []
+    },
+    {
+      "id": "E07-SH002",
+      "sceneId": "E07-SC01",
+      "duration": 14,
+      "characters": [
+        "MARA-WORK",
+        "HOST",
+        "NORA"
+      ],
+      "purpose": "她拒绝用表态换通行，先保住工作时间与文件。",
+      "framing": "中全景，员工门东南向西北，能见两人脚步与门槛。",
+      "composition": "Mara中，Blake左，Nora南停车区后景",
+      "camera": "固定东门东南中全景，保留人和墙之间能经过的实际宽度；不把手机拍成撞击。",
+      "focus": "门缝与人通过同层，蓝夹不能忽然换手。",
+      "start": "Mara看员工门，右手手机贴身",
+      "action": "玛拉对布莱克说本镜第1句英语对白，不用采访语言，先争通道。布莱克想接话，她朝手机旁的空隙侧身。布莱克对玛拉说本镜第2句英语对白，用回答作离开条件。他退半步仍拍，玛拉从他与墙之间过去。门里同事伸手替她拉门，她却停在门槛外，把蓝夹转到背离镜头的一侧，还没有进门。",
+      "end": "玛拉停在东门槛外，蓝夹背离直播镜头；诺拉两步外，布莱克退到南侧仍拍。",
+      "sound": "员工门把手、远车；直播旁观低语",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E07-D002",
+          "speaker": "玛拉",
+          "listener": "布莱克",
+          "text": "Move it. I have to clock in.",
+          "translationZh": "挪开，我要打卡。",
+          "tone": "不用采访语言，先争通道",
+          "start": 0.6,
+          "end": 4.28
+        },
+        {
+          "id": "E07-D103",
+          "speaker": "布莱克",
+          "listener": "玛拉",
+          "text": "Then say you didn't take the money.",
+          "translationZh": "那就说你没拿钱。",
+          "tone": "用回答作离开条件",
+          "start": 4.63,
+          "end": 8.32
+        }
+      ],
+      "overlay": [],
+      "next": "接E07-SH003：玛拉仍在门槛外，诺拉递名片；她接卡答话后才进门。",
+      "viewerEntry": "他要她在镜头前确认一个故事。",
+      "viewerExit": "她拒绝用表态换通行，先保住工作时间与文件。",
+      "cutTrigger": "员工门打开后，玛拉在门槛外停稳、护住蓝夹；诺拉等在门外侧而未堵路。",
+      "extraRoleIds": [
+        "DINER-COWORKER"
+      ]
+    },
+    {
+      "id": "E07-SH003",
+      "sceneId": "E07-SC01",
+      "duration": 14,
+      "characters": [
+        "MARA-WORK",
+        "NORA"
+      ],
+      "purpose": "一个关于材料的提议换到她的联系方式，但还没有获得采访同意。",
+      "framing": "双人中景，东门外南侧向北",
+      "composition": "Mara门边，Nora外侧不挡路",
+      "camera": "固定东门外南侧双人中景，名片交接与先收手机完整可见，门保持畅通。",
+      "focus": "名片交接和两张脸同层，布莱克画外继续直播不补台词。",
+      "start": "玛拉尚在门槛外，蓝夹左臂、手机右手；诺拉红本左手，右手递名片，门口通行空隙保留。",
+      "action": "诺拉没有上前挡门，只把名片抬到她看得到的位置。诺拉对玛拉说本镜第1句英语对白，抓住她护住文件夹的动作提出具体价值。玛拉停一秒，看她手里没有举着录制的手机，才把自己的手机收进右袋，伸手接卡。玛拉对诺拉说本镜第2句英语对白，疲惫里透出愿意联系。她带卡进门，诺拉留在外面。",
+      "end": "玛拉进门，手机右袋、名片右手、蓝夹左臂；诺拉门外。",
+      "sound": "名片、手机入袋、员工门闭合",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E07-D003",
+          "speaker": "诺拉",
+          "listener": "玛拉",
+          "text": "Nora Chen. If you've got letters, bills, anything you want me to see, call me.",
+          "translationZh": "诺拉·陈。有信、账单，什么想给我看的，都可以打给我。",
+          "tone": "抓住她护住文件夹的动作提出具体价值",
+          "start": 0.6,
+          "end": 8.09
+        },
+        {
+          "id": "E07-D105",
+          "speaker": "玛拉",
+          "listener": "诺拉",
+          "text": "I've got plenty of those.",
+          "translationZh": "这些我倒是多得很。",
+          "tone": "疲惫里透出愿意联系",
+          "start": 8.44,
+          "end": 11.17
+        }
+      ],
+      "overlay": [],
+      "next": "省略联系安排，跨到获同意的家访",
+      "viewerEntry": "所有人在问她收了多少钱。",
+      "viewerExit": "一个关于材料的提议换到她的联系方式，但还没有获得采访同意。",
+      "cutTrigger": "名片跟她进门，切家中蓝夹仍未打开。",
+      "extraRoleIds": []
+    },
+    {
+      "id": "E07-SH004",
+      "sceneId": "E07-SC02",
+      "duration": 45,
+      "characters": [
+        "MARA-WORK",
+        "NORA"
+      ],
+      "purpose": "采访从边界协商开始，母亲选择的是希望被理解，记者只能承诺眼前可停。",
+      "framing": "桌南端的双人中景",
+      "composition": "西玛拉、东诺拉，北卧室门可见；手机中央、红本偏东、蓝夹偏西。",
+      "camera": "固定双人关系镜，完整留下对公开的顾虑与按键许可；不以屏幕字幕替代同意过程。",
+      "focus": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "start": "诺拉坐桌东，玛拉桌西；黑手机尚在诺拉手中，蓝夹在玛拉面前。",
+      "action": "诺拉把手机支在桌中央，没有按录制。玛拉先看北卧室门，把蓝夹往自己面前收。玛拉对诺拉说英语“If I tell you what happened, are they going to leave us alone?”；要的不是出名，是停止骚扰。诺拉对玛拉说英语“I can't promise that.”；不拿采访换停止骚扰的保证。玛拉把夹子合上，诺拉没有伸手拦。玛拉对诺拉说英语“They know what I did. They keep making up the rest.”；将闭嘴和解释两种选择的困境说给眼前人。诺拉把红本放到手机后，让玛拉能看见自己还没有写好她的故事。诺拉对玛拉说英语“Then tell me your part. We can stop if you need to.”；给实际可控制的采访节奏，不许诺传播结果。玛拉对诺拉说英语“Is it on?”；最后确认自己还有选择。诺拉对玛拉说英语“No.”；指屏幕实答。玛拉对诺拉说英语“All right. Ask.”；在没有保证时仍选择公开。玛拉点头，诺拉才按录制。两人听到录制提示，姿势都比刚才僵了一点；蓝夹仍合着。",
+      "end": "录制已开始，母亲没有获得停止骚扰的保证；她自主选择解释，蓝夹仍在自己手边。",
+      "sound": "同场环境声与所列英语；不补额外可辨台词",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E07-D004",
+          "speaker": "玛拉",
+          "listener": "诺拉",
+          "text": "If I tell you what happened, are they going to leave us alone?",
+          "translationZh": "我把事情跟你说清楚，他们就能放过我们吗？",
+          "tone": "要的不是出名，是停止骚扰",
+          "start": 2,
+          "end": 7.53
+        },
+        {
+          "id": "E07-D201",
+          "speaker": "诺拉",
+          "text": "I can't promise that.",
+          "translationZh": "这个我保证不了。",
+          "listener": "玛拉",
+          "tone": "不拿采访换停止骚扰的保证",
+          "start": 10,
+          "end": 11.7
+        },
+        {
+          "id": "E07-D202",
+          "speaker": "玛拉",
+          "text": "They know what I did. They keep making up the rest.",
+          "translationZh": "我做了什么，他们都知道。别的全在瞎编。",
+          "listener": "诺拉",
+          "tone": "将闭嘴和解释两种选择的困境说给眼前人",
+          "start": 15,
+          "end": 19.68
+        },
+        {
+          "id": "E07-D203",
+          "speaker": "诺拉",
+          "text": "Then tell me your part. We can stop if you need to.",
+          "translationZh": "那就从你这边讲。你需要停，我们就停。",
+          "listener": "玛拉",
+          "tone": "给实际可控制的采访节奏，不许诺传播结果",
+          "start": 25,
+          "end": 30.11
+        },
+        {
+          "id": "E07-D204",
+          "speaker": "玛拉",
+          "text": "Is it on?",
+          "translationZh": "已经开始了吗？",
+          "listener": "诺拉",
+          "tone": "最后确认自己还有选择",
+          "start": 33,
+          "end": 34.28
+        },
+        {
+          "id": "E07-D205",
+          "speaker": "诺拉",
+          "text": "No.",
+          "translationZh": "还没有。",
+          "listener": "玛拉",
+          "tone": "指屏幕实答",
+          "start": 35,
+          "end": 36.2
+        },
+        {
+          "id": "E07-D107",
+          "speaker": "玛拉",
+          "listener": "诺拉",
+          "text": "All right. Ask.",
+          "translationZh": "行，问吧。",
+          "tone": "在没有保证时仍选择公开",
+          "start": 38,
+          "end": 39.28
+        }
+      ],
+      "overlay": [],
+      "next": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "viewerEntry": "诺拉坐桌东，玛拉桌西；黑手机尚在诺拉手中，蓝夹在玛拉面前。",
+      "viewerExit": "录制已开始，母亲没有获得停止骚扰的保证；她自主选择解释，蓝夹仍在自己手边。",
+      "cutTrigger": "录制已开始，母亲没有获得停止骚扰的保证；她自主选择解释，蓝夹仍在自己手边。",
+      "extraRoleIds": [],
+      "generationSegments": [
+        {
+          "duration": 22,
+          "start": "手机未开，文件夹在玛拉面前。",
+          "action": "母亲问能否停止骚扰，记者拒绝保证；母亲合夹并说明外界在编造。",
+          "end": "蓝夹合着，采访仍没开始。"
+        },
+        {
+          "duration": 23,
+          "start": "红本放到手机后，录制未开。",
+          "action": "记者邀请她讲自己部分，母亲确认手机状态后准许开录；记者按键。",
+          "end": "录制开始，文件仍未交出。"
+        }
+      ]
+    },
+    {
+      "id": "E07-SH005",
+      "sceneId": "E07-SC02",
+      "duration": 36,
+      "characters": [
+        "MARA-WORK",
+        "NORA"
+      ],
+      "purpose": "母亲不能用礼貌或安全把金钱完全擦掉；承认混合动机使她的处境成立。",
+      "framing": "诺拉肩侧看玛拉的中近景，手机在画缘",
+      "composition": "玛拉西侧正面，红本边缘前层，北门保持后方；不把采访拍成审讯对称特写。",
+      "camera": "问到金钱时才切到被问者，随后留她自己补足不体面的动机。",
+      "focus": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "start": "桌中手机正在录制；诺拉笔在红本，玛拉手压蓝夹。",
+      "action": "诺拉对玛拉说英语“Did you know about the reward?”；先问最容易被认为回避的事实。玛拉对诺拉说英语“Yes. He said please and thank you.”；承认看见悬赏，接着脱口说出当时听见的客气话。诺拉的笔停在“知道”旁，没把礼貌那句记作答案的原因。诺拉对玛拉说英语“I'm asking about the money.”；把模糊的联想拉回难听但必要的问题。玛拉看着红本那一处停笔，又看录制手机。玛拉对诺拉说英语“I saw the amount. I thought about Friday's deposit. That's in there too.”；不再把金钱从动机里删干净。玛拉对诺拉说英语“Kids were right there. I didn't know if he had a gun.”；拒绝让礼貌变成自己应当知情的证明。诺拉写完才抬眼；玛拉没有求她把那句钱删掉，自己打开蓝夹。",
+      "end": "悬赏与孩子安全同时留在录制中；玛拉打开蓝夹，准备解释为何加班。",
+      "sound": "同场环境声与所列英语；不补额外可辨台词",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E07-D005",
+          "speaker": "诺拉",
+          "listener": "玛拉",
+          "text": "Did you know about the reward?",
+          "translationZh": "你知道有悬赏吗？",
+          "tone": "先问最容易被认为回避的事实",
+          "start": 1,
+          "end": 3.55
+        },
+        {
+          "id": "E07-D006",
+          "speaker": "玛拉",
+          "listener": "诺拉",
+          "text": "Yes. He said please and thank you.",
+          "translationZh": "知道。他当时又是请，又是谢谢的。",
+          "tone": "承认看见悬赏，接着脱口说出当时听见的客气话",
+          "start": 6,
+          "end": 8.98
+        },
+        {
+          "id": "E07-D206",
+          "speaker": "诺拉",
+          "text": "I'm asking about the money.",
+          "translationZh": "我问的是那笔钱。",
+          "listener": "玛拉",
+          "tone": "把模糊的联想拉回难听但必要的问题",
+          "start": 12,
+          "end": 14.13
+        },
+        {
+          "id": "E07-D207",
+          "speaker": "玛拉",
+          "text": "I saw the amount. I thought about Friday's deposit. That's in there too.",
+          "translationZh": "数额我看见了。我想到了周五那笔预付款。这也是一个原因。",
+          "listener": "诺拉",
+          "tone": "不再把金钱从动机里删干净",
+          "start": 19,
+          "end": 24.53
+        },
+        {
+          "id": "E07-D110",
+          "speaker": "玛拉",
+          "listener": "诺拉",
+          "text": "Kids were right there. I didn't know if he had a gun.",
+          "translationZh": "孩子就在旁边。我哪知道他带没带枪。",
+          "tone": "拒绝让礼貌变成自己应当知情的证明",
+          "start": 27,
+          "end": 32.11
+        }
+      ],
+      "overlay": [],
+      "next": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "viewerEntry": "桌中手机正在录制；诺拉笔在红本，玛拉手压蓝夹。",
+      "viewerExit": "悬赏与孩子安全同时留在录制中；玛拉打开蓝夹，准备解释为何加班。",
+      "cutTrigger": "悬赏与孩子安全同时留在录制中；玛拉打开蓝夹，准备解释为何加班。",
+      "extraRoleIds": [],
+      "generationSegments": [
+        {
+          "duration": 18,
+          "start": "记者问悬赏，母亲两手压蓝夹。",
+          "action": "母亲答知道并说青年礼貌，记者明确在问钱。",
+          "end": "笔停在红本，录制未停。"
+        },
+        {
+          "duration": 18,
+          "start": "母亲看手机与红本。",
+          "action": "她承认想到周五预付款，再说孩子就在桌旁且不知道是否有枪，打开蓝夹。",
+          "end": "采访保留混合动机，蓝夹已开。"
+        }
+      ]
+    },
+    {
+      "id": "E07-SH006",
+      "sceneId": "E07-SC02",
+      "duration": 42,
+      "characters": [
+        "MARA-WORK",
+        "NORA"
+      ],
+      "purpose": "母亲主动授权一部分公开，记者只把眼前号码遮好，却漏掉能定位诊所的上下文。",
+      "framing": "桌西侧双人中景，文件在两人之间",
+      "composition": "桌中录制手机与纸在同层，东厨房后景；患者号遮挡，诊所抬头朝镜头。",
+      "camera": "保持两人和纸的边界动作同框；只在页转正后容许后期合成抬头，不另拍没有进入原录制的补件。",
+      "focus": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "start": "蓝夹刚打开，录制仍在进行；拒赔页和加班申请夹在一起。",
+      "action": "玛拉把拒赔页推向桌中，加班申请还夹在后面。玛拉对诺拉说英语“UnionCare turned down her renewal. I needed the extra shift to cover it.”；用单据争取别人理解自己的选择。诺拉伸手，玛拉先翻回写着金额的一角。玛拉对诺拉说英语“You can show them that part. Not all my bills.”；主动设一道仍不够完整的隐私边界。诺拉对玛拉说英语“This page?”；在眼前边界上确认，尚未检查整幅画面。玛拉把账单抽回蓝夹，用指尖压住要公开的那一段。玛拉对诺拉说英语“The denial. And the shift I asked for. Leave the rest here.”；希望控制给出去的材料量。诺拉取便签盖住患者号，等母亲点头。玛拉把那页转向桌中央仍在录制的手机，诊所抬头和处理标记露在遮挡外。诺拉压平便签，只检查它没翘起，没有抬头通查画面。",
+      "end": "患者号遮住、诊所抬头与处理标记进入原片；其他账单已收回，手机持续录制。",
+      "sound": "同场环境声与所列英语；不补额外可辨台词",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E07-D007",
+          "speaker": "玛拉",
+          "listener": "诺拉",
+          "text": "UnionCare turned down her renewal. I needed the extra shift to cover it.",
+          "translationZh": "合众健康把她续批拒了。我得多上这一班才付得起。",
+          "tone": "用单据争取别人理解自己的选择",
+          "start": 2,
+          "end": 7.53
+        },
+        {
+          "id": "E07-D112",
+          "speaker": "玛拉",
+          "listener": "诺拉",
+          "text": "You can show them that part. Not all my bills.",
+          "translationZh": "这一段可以给他们看。别把我的账单全拍进去。",
+          "tone": "主动设一道仍不够完整的隐私边界",
+          "start": 11,
+          "end": 15.26
+        },
+        {
+          "id": "E07-D208",
+          "speaker": "诺拉",
+          "text": "This page?",
+          "translationZh": "就这一页？",
+          "listener": "玛拉",
+          "tone": "在眼前边界上确认，尚未检查整幅画面",
+          "start": 17,
+          "end": 18.2
+        },
+        {
+          "id": "E07-D209",
+          "speaker": "玛拉",
+          "text": "The denial. And the shift I asked for. Leave the rest here.",
+          "translationZh": "拒赔那段。还有我申请加班这事。别的留在这儿。",
+          "listener": "诺拉",
+          "tone": "希望控制给出去的材料量",
+          "start": 24,
+          "end": 29.11
+        }
+      ],
+      "overlay": [
+        {
+          "text": "UNIONCARE HEALTH / 合众健康",
+          "start": 8,
+          "end": 14,
+          "position": "后期拒赔单抬头"
+        },
+        {
+          "text": "NORTH VALLEY TREATMENT CENTER / 北谷治疗中心",
+          "start": 35,
+          "end": 42,
+          "position": "后期诊所抬头，录制持续"
+        }
+      ],
+      "next": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "viewerEntry": "蓝夹刚打开，录制仍在进行；拒赔页和加班申请夹在一起。",
+      "viewerExit": "患者号遮住、诊所抬头与处理标记进入原片；其他账单已收回，手机持续录制。",
+      "cutTrigger": "患者号遮住、诊所抬头与处理标记进入原片；其他账单已收回，手机持续录制。",
+      "extraRoleIds": [],
+      "generationSegments": [
+        {
+          "duration": 21,
+          "start": "拒赔页与加班申请仍叠着，手机录制中。",
+          "action": "母亲解释拒赔与加班，翻回金额角，记者确认仅这一页。",
+          "end": "账单尚待收回，患者号还未遮。"
+        },
+        {
+          "duration": 21,
+          "start": "母亲手指要公开的段落。",
+          "action": "母亲收回其他账单限定用途；记者盖号，母亲点头后转抬头给仍录制手机。",
+          "end": "诊所抬头和处理标记已录，便签压平，手机不停录。"
+        }
+      ]
+    },
+    {
+      "id": "E07-SH007",
+      "sceneId": "E07-SC02",
+      "duration": 24,
+      "characters": [
+        "MARA-WORK",
+        "NORA",
+        "ELLIE"
+      ],
+      "purpose": "孩子自己守住了画，姓名却因母亲一句日常回答进了录音。",
+      "framing": "三人中景，南侧朝北卧室",
+      "composition": "Ellie北门，Mara西桌，手机桌中",
+      "camera": "固定南侧三人中景，北门孩子不过桌边；绿笔从蓝夹交还完整可见。",
+      "focus": "母亲与孩子交笔同层，手机在前层可辨仍录制。",
+      "start": "Ellie抱画本停北门，未靠手机",
+      "action": "艾莉抱画本停北卧室门口，指蓝夹里的绿笔，按第1句英语要笔并拒绝展示未完成的桥。玛拉在孩子说话时站起压稳拒赔页，从夹内取笔；按第2句英语安抚她，同时递笔，把孩子名字留进原声。艾莉接笔，只折一次桥那一面朝向自己，看看桌中手机再看诺拉，抱本回北屋，门未关严。桌中手机始终录制，没有第二次折本或返屋。",
+      "end": "绿笔归艾莉、画本随她回北屋；玛拉站桌北西，手机继续录。",
+      "sound": "脚步、笔取出、录制环境声",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E07-D008",
+          "speaker": "艾莉",
+          "listener": "玛拉",
+          "text": "Can I have the green one? Don't show them the bridge. It's not ready.",
+          "translationZh": "绿的那支给我好吗？别给他们看桥，还没画好。",
+          "tone": "只来取自己的东西，并拒绝展示未完成的作品",
+          "start": 0.6,
+          "end": 7.62
+        },
+        {
+          "id": "E07-D009",
+          "speaker": "玛拉",
+          "listener": "艾莉",
+          "text": "Ellie, no one's taking your map.",
+          "translationZh": "艾莉，没人要拿走你的地图。",
+          "tone": "安抚孩子，却把名字留进原声",
+          "start": 7.97,
+          "end": 11.18
+        }
+      ],
+      "overlay": [],
+      "next": "接采访收尾与后期使用边界",
+      "viewerEntry": "号码已经被遮住，人物以为隐私有了边界。",
+      "viewerExit": "孩子自己守住了画，姓名却因母亲一句日常回答进了录音。",
+      "cutTrigger": "孩子折住地图回北屋，录制红点没有停。",
+      "extraRoleIds": []
+    },
+    {
+      "id": "E07-SH008",
+      "sceneId": "E07-SC02",
+      "duration": 43,
+      "characters": [
+        "MARA-WORK",
+        "NORA"
+      ],
+      "purpose": "母亲把保留孩子声音当成说服公众的机会，记者接受这个选择却未充分检查组合识别风险。",
+      "framing": "桌东侧双人中景，诺拉手机在手边",
+      "composition": "玛拉西侧站转坐，诺拉东侧收材料；蓝夹从未离开母亲。",
+      "camera": "留在一次完整回放与取舍，不剪成按钮特写；记者收手机后仍停到母亲真正坐下。",
+      "focus": "人物关系与正在争夺的物件维持可读景深，不为每句对白切焦。",
+      "start": "艾莉已回北屋，母亲仍站桌西，录制手机桌中；抬头已在原片里。",
+      "action": "诺拉停录，回放到母亲叫出孩子名字的地方，拇指悬在剪裁键。诺拉对玛拉说英语“I can cut her voice out.”；提出一个可做的删减，却没有说全可识别细节。玛拉盯着拒赔页，等回放里孩子那句说完。玛拉对诺拉说英语“No, leave it. Maybe if they hear her, they'll get why I was there.”；把更多暴露当作让骚扰停止的方法。诺拉先看北屋门，再把患者号上的便签压严一点。她没有重新检查抬头与声音能否拼出孩子身份，也没有重新开录。玛拉对诺拉说英语“Do you have what you need?”；把继续暴露当成完成一项能换来安静的任务。诺拉对玛拉说英语“For this part, yes. I'll send you the link.”；结束取材，没有许诺效果。玛拉坐回椅子，把蓝夹留在自己身边。诺拉收手机和红本准备离开；母亲终于把刚才一直没碰的水拿起来。北屋传来绿笔继续擦过纸面的轻响。",
+      "end": "孩子原声选择保留，诊所抬头也在原片；采访结束，母亲暂时松一口气但隐私缺口未修。",
+      "sound": "同场环境声与所列英语；不补额外可辨台词",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E07-D010",
+          "speaker": "诺拉",
+          "listener": "玛拉",
+          "text": "I can cut her voice out.",
+          "translationZh": "孩子的声音可以剪掉。",
+          "tone": "提出一个可做的删减，却没有说全可识别细节",
+          "start": 5,
+          "end": 7.55
+        },
+        {
+          "id": "E07-D116",
+          "speaker": "玛拉",
+          "listener": "诺拉",
+          "text": "No, leave it. Maybe if they hear her, they'll get why I was there.",
+          "translationZh": "不用，留着吧。也许听见她的声音，他们就懂我为什么在那儿了。",
+          "tone": "把更多暴露当作让骚扰停止的方法",
+          "start": 12,
+          "end": 17.96
+        },
+        {
+          "id": "E07-D210",
+          "speaker": "玛拉",
+          "text": "Do you have what you need?",
+          "translationZh": "这样够了吗？",
+          "listener": "诺拉",
+          "tone": "把继续暴露当成完成一项能换来安静的任务",
+          "start": 25,
+          "end": 27.55
+        },
+        {
+          "id": "E07-D211",
+          "speaker": "诺拉",
+          "text": "For this part, yes. I'll send you the link.",
+          "translationZh": "这部分够了。出来后我把链接发你。",
+          "listener": "玛拉",
+          "tone": "结束取材，没有许诺效果",
+          "start": 30,
+          "end": 33.83
+        }
+      ],
+      "overlay": [],
+      "next": "因本镜末的动作或关系变化进入下一镜；技术接续不作为成片切点。",
+      "viewerEntry": "艾莉已回北屋，母亲仍站桌西，录制手机桌中；抬头已在原片里。",
+      "viewerExit": "孩子原声选择保留，诊所抬头也在原片；采访结束，母亲暂时松一口气但隐私缺口未修。",
+      "cutTrigger": "孩子原声选择保留，诊所抬头也在原片；采访结束，母亲暂时松一口气但隐私缺口未修。",
+      "extraRoleIds": [],
+      "generationSegments": [
+        {
+          "duration": 22,
+          "start": "记者刚停录，母亲仍站着。",
+          "action": "回放到孩子声音，记者提出剪掉，母亲明确选择保留。",
+          "end": "回放停止，原片保留，母亲尚未坐。"
+        },
+        {
+          "duration": 21,
+          "start": "手机不录，患者号便签仍盖着。",
+          "action": "记者只补压便签；母亲问是否够了，记者说会发链接，收手机红本，母亲坐下喝水。",
+          "end": "采访结束，孩子自己画图，诊所抬头没有被撤掉。"
+        }
+      ]
+    },
+    {
+      "id": "E07-SH009",
+      "sceneId": "E07-SC03",
+      "duration": 15,
+      "characters": [
+        "MARA-HOME",
+        "ELLIE"
+      ],
+      "purpose": "公开没有换来安静，反让孩子的治疗地点暴露，母亲开始拒接所有未知号码。",
+      "framing": "中景，桌西南向东北，母亲近层、北门缝后层。",
+      "composition": "玛拉桌西拿手机，蓝夹中央，北卧室门缝在后景能看见孩子轮廓。",
+      "camera": "固定桌西侧中景，母亲手机近层、北门缝后层；评论文字仅后期，不展示真实私址。",
+      "focus": "母亲为主，北门开合动作保持可辨。",
+      "start": "玛拉右手手机，左手空，画本在桌；艾莉将从北屋门缝探看。",
+      "action": "夜里，评论把艾莉名字和诊所位置排在一起。电话亮起陌生前缀，玛拉按掉，马上又响；她第二次拒接后，才听到北屋脚步，抬头看见门缝里的艾莉。玛拉对艾莉说本镜第1句英语对白，想压低慌乱，却把家变得更紧。她说完后艾莉把门关回去，玛拉左手收起桌上画本，新的语音留言图标出现。",
+      "end": "两通陌生号已拒，艾莉听完才关门回北屋；画本在玛拉左手，右手手机新留言待播。",
+      "sound": "前段手机来电震动两次，拒接后短停；北卧室门缝里的脚步使玛拉抬头，随后才有她对艾莉所列英语；孩子关门轻响，手机出现留言提示。",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E07-D011",
+          "speaker": "玛拉",
+          "listener": "艾莉",
+          "text": "Stay in there. I'll get your pencils. Don't open the front door.",
+          "translationZh": "先待里面。我把笔拿来。别开大门。",
+          "tone": "想压低慌乱，却把家变得更紧",
+          "start": 6.0,
+          "end": 12.06
+        }
+      ],
+      "overlay": [
+        {
+          "text": "ELLIE — NORTH VALLEY / 艾莉——北谷治疗中心",
+          "start": 2,
+          "end": 7,
+          "position": "后期评论截图"
+        }
+      ],
+      "next": "接真正医生留言，来源清楚",
+      "viewerEntry": "素材里留下了可组合的细节。",
+      "viewerExit": "公开没有换来安静，反让孩子的治疗地点暴露，母亲开始拒接所有未知号码。",
+      "cutTrigger": "她完整说完、孩子关回北门后，新的语音留言图标出现；接她点开留言，不再补一遍拒接。",
+      "extraRoleIds": []
+    },
+    {
+      "id": "E07-SH010",
+      "sceneId": "E07-SC03",
+      "duration": 17,
+      "characters": [
+        "MARA-HOME"
+      ],
+      "purpose": "防骚扰同时挡住正式帮助，她必须重新穿过电话寻找诊所。",
+      "framing": "Mara中景，南侧朝西桌",
+      "composition": "玛拉坐桌西，左手画本将放桌，手机右手尚在播放状态，蓝夹合着；后续开夹并拨号。",
+      "camera": "固定南侧中景，放画本、开蓝夹、抄号、重拨顺序可见，不再插一段手机特写。",
+      "focus": "手和脸同层，号码后期仅虚构总机标识。",
+      "start": "手机显示新语音，她按播放",
+      "action": "玛拉点开语音留言，前几个字就让她把画本放下。医生语音留言对玛拉说本镜第1句英语对白，普通回电，正是她需要等的消息。她没等留言尾音消失，已经翻蓝夹找总机号码；拨错一位，删掉重拨，最后把手机贴紧右耳。",
+      "end": "画本桌上、蓝夹打开，手机右耳拨总机，不回拨骚扰号。",
+      "sound": "留言从手机明确发声，拨号音",
+      "music": "无背景音乐",
+      "dialogue": [
+        {
+          "id": "E07-D012",
+          "speaker": "医生语音留言",
+          "listener": "玛拉",
+          "text": "Mara, it's the clinic. That was me on the other line. We found the submission record. Call the main desk.",
+          "translationZh": "玛拉，是诊所。刚才换号码打的是我。提交记录找到了，打总机找我们。",
+          "tone": "普通回电，正是她需要等的消息",
+          "start": 0.6,
+          "end": 10.47
+        }
+      ],
+      "overlay": [],
+      "next": "跨地到Lena看见同一条报道",
+      "viewerEntry": "她认为拒接陌生号能保住孩子。",
+      "viewerExit": "防骚扰同时挡住正式帮助，她必须重新穿过电话寻找诊所。",
+      "cutTrigger": "总机接通前的等待音响，切另一处正在认出文件的人。",
+      "extraRoleIds": [
+        "DOCTOR-PHONE-VOICE"
+      ]
+    }
+  ],
+  "continuityNote": "新增外景DINER南正门/东员工门/南停车区/西临街窗一致；Blake为独立逐流量者，不受公司暗控。Nora采访获得Mara同意，掩患者号但孩子原声名字与诊所抬头被保留，观众看见风险来源而非事后凭空泄露。Mara工服家访→夜米灰家居衫，右手机左蓝夹常用；Ellie收回绿笔。医生用新线路回电，Mara随后拨公示总机核实。Lena仅核自己的Q-17样本，尚未揭客服与复核断层。pending_media。 SH005保留 He was polite when he ordered. 供E19精确回收，E03点餐已实演。SH008新增保留孩子原声的具体共同选择；患者号遮住但诊所抬头、处理标记可见，不再含混成裸露患者编号。SH012两手机区分工作靠屏/私人右侧，供E08。少年演员只艾莉，不新增出镜孩子。",
+  "dramaturgy": {
+    "openingQuestion": "她能不回答收钱问题就走进自己的工作门吗？",
+    "pursuit": "玛拉想以一次解释停止骚扰，诺拉想拿到与热点不同的具体材料。",
+    "reversal": "号码虽被遮住，母亲要求留下的孩子原声和诊所抬头仍能识别家庭。",
+    "cost": "孩子隐私被拼出，母亲拒掉诊所回电；记者的选择参与了后果。",
+    "cliffhanger": "另一位职员认出公开单据上的批次，也看见自己留过的签认。",
+    "nextEpisodeBridge": "E08医生出示正式回执；莉娜必须决定是否用匿名邮件纠正记者即将下的判断。"
+  },
+  "sceneMerge": [
+    {
+      "retiredSceneId": "E07-SC04",
+      "retainedSceneId": "E08-SC03",
+      "sourceShotIds": [
+        "E07-SH011",
+        "E07-SH012"
+      ]
+    }
+  ]
+}

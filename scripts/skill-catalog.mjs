@@ -16,7 +16,7 @@ const ROUTE_NAMES = Object.freeze([
 ]);
 const HELPERS = Object.freeze([
   "check-delivery.mjs", "check-video-plan.mjs", "check-audio-returns.mjs",
-  "check-shot-review.mjs", "check-change-impact.mjs", "parse-json.mjs",
+  "check-shot-review.mjs", "check-change-impact.mjs", "parse-json.mjs", "read-style-card.mjs",
 ]);
 const ENTRY_FILES = new Set(["SKILL.md", "agents/openai.yaml"]);
 const PLUGIN_FILE = ".codex-plugin/plugin.json";
@@ -199,10 +199,11 @@ function canonicalProfileFiles({ lifecycle, index }) {
     PLUGIN_FILE, "LICENSE", `${CANONICAL_ROOT}/SKILL.md`, `${CANONICAL_ROOT}/agents/openai.yaml`,
     `${CANONICAL_ROOT}/contracts.json`, `${CANONICAL_ROOT}/reference-lifecycle.json`,
     `${CANONICAL_ROOT}/resources/contracts/index.json`,
+    `${CANONICAL_ROOT}/assets/adaptation-example.html`,
     ...HELPERS.map((name) => `${CANONICAL_ROOT}/scripts/${name}`),
   ];
   assert(Array.isArray(lifecycle.references), "lifecycle.references must be an array");
-  assert(lifecycle.references.length === 42, "Canonical profile must contain exactly 42 references");
+  assert(lifecycle.references.length === 55, "Canonical profile must contain exactly 55 references");
   for (const [position, entry] of lifecycle.references.entries()) {
     assertObject(entry, `lifecycle.references[${position}]`);
     const path = normalizePath(entry.path, `Lifecycle reference ${position}`);
