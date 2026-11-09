@@ -120,6 +120,8 @@ Studio 黑色看板、项目入口与演员衣橱的正式源码、验证和部�
 
 项目功能精简、同页声音与演员柔焦展台/流光标签见[项目与演员更新记录](tests/evaluations/studio-project-actors-release-2026-11-09.md)。
 
+素材直接勾选、批量删除及回收站验收见[素材批量操作更新记录](tests/evaluations/studio-material-bulk-release-2026-11-09.md)。
+
 ```powershell
 npm run skills:sync
 npm run skills:sync:check
