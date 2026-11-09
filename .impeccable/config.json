@@ -1,0 +1,26 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "side-tab",
+        "value": "*",
+        "files": [
+          ".build/studio-workflow-20261105/components/workspace/markdown-content.css"
+        ],
+        "createdAt": "2026-11-09T03:51:23.776Z",
+        "reason": "Agent review: semantic Markdown blockquote uses a neutral var(--border) quotation rule, not a decorative card accent; git blame dates it to 2026-10-29."
+      },
+      {
+        "rule": "border-accent-on-rounded",
+        "value": "*",
+        "files": [
+          ".build/studio-workflow-20261105/components/workspace/creative-studio.css"
+        ],
+        "createdAt": "2026-11-09T03:51:24.695Z",
+        "reason": "Agent review: actor tab buttons explicitly use border-radius:0; actor-wardrobe.css overrides the active underline to 1px. This is a flat tab selection indicator, not a rounded card accent."
+      }
+    ]
+  }
+}
