@@ -1,0 +1,1156 @@
+diff --git a/DESIGN.md b/DESIGN.md
+index c9aadd8..93d1897 100644
+--- a/DESIGN.md
++++ b/DESIGN.md
+@@ -10,13 +10,13 @@
+ 
+ ## 页面与交互
+ 
+-桌面左侧菜单 200px，较窄桌面 180px，包含看板、项目、演员、素材；连接、创作规划、创作管理及声音作为可见入口位于底部。767px 以下改为 64px 顶栏与 260px 左侧抽屉。菜单始终通过未保存与保存中保护。内容独立滚动，编辑检查器按现有机制显示。
++桌面左侧菜单 200px，较窄桌面 180px，包含看板、项目、演员、素材；底部只保留连接；声音与创作规划归入项目。767px 以下改为 64px 顶栏与 260px 左侧抽屉。菜单始终通过未保存与保存中保护。内容独立滚动，编辑检查器按现有机制显示。
+ 
+ 看板以真实最近项目为大幅主视觉和纵向章节列表，项目目录为手动横滚卡片，同时保留完整搜索、筛选、排序、分页。项目没有默认封面字段；只有精确属于该项目的可访问素材引用可以装饰主视觉，并标明项目参考，缺图使用黑色排版。不得把素材、演员快照或示例项目伪作正式封面。
+ 
+-项目内以项目名称为主标题；故事、剧集、分镜、提示词、角色场景、项目关系、小说大纲、创作规划、候选审阅、协作任务、制作、交付作为平级常驻功能。导航桌面六列、平板四列、手机三列自然换行，不使用滑动高亮块或滚动条。切换项目使用带搜索、类型筛选与分页的选片面板；点击保留原模块，并经过未保存/保存中保护。故事页文稿先行，目录与正文同屏；结构编排和创作规划在各自入口，项目关系只在关系页展开。提示词使用现有 prompt_note 文稿类型，没有另建一套假保存。
++项目内以项目名称为主标题；故事、剧集、分镜、提示词、角色场景、项目关系、小说大纲、创作规划、声音作为平级常驻功能。审阅、任务、制作与交付不再作为产品导航；旧未确认写入保留恢复路径。导航桌面五列、平板四列、手机三列自然换行，不使用滑动高亮块或滚动条。切换项目使用带搜索、类型筛选与分页的选片面板；点击保留原模块，并经过未保存/保存中保护。故事页文稿先行，目录与正文同屏；结构编排和创作规划在各自入口，项目关系只在关系页展开。提示词使用现有 prompt_note 文稿类型，没有另建一套假保存。
+ 
+-演员为大屏肖像展示，原图 contain，不裁切主体。同一图像提供 blur(26px) brightness(.28) saturate(.72) 的背景与原有边缘融合。性格、档案、经历全部在图像下方常驻，档案/衣橱/作品三项；旧 references 链接归入衣橱，身份链接仍可访问。
++演员为大屏肖像展示，原图 contain，不裁切主体。同一图像提供可辨认的柔焦背景，桌面 blur(18px) brightness(.64) saturate(.88)，错位放大保留人物轮廓与环境色；原有边缘融合减弱，清晰原图保持不变。性格、档案、经历全部在图像下方常驻；原文的方括号标签只在阅读层转换为流光色彩标签，编辑及存储文本不变，标签尊重暂停与减少动态设置。档案/衣橱/作品三项；旧 references 链接归入衣橱，身份链接仍可访问。
+ 
+ 衣橱以真实合集、造型和已绑定素材为数据源；提供当前合集搜索、槽位筛选、网格/列表、选中详情、编辑、新建、复制、排序与历史草稿。卡片标注绑定素材参考。列表摘要需要分批读取精确 spec 并校验 revision，未读完明确显示状态。选择卡片不表示全局已穿戴，不宣称 3D 或生成换装。作品场次仍通过既有 appearance 引用绑定精确版本。
+ 
+diff --git a/components/workspace/actor-wardrobe.css b/components/workspace/actor-wardrobe.css
+index 8ee3f1a..9def353 100644
+--- a/components/workspace/actor-wardrobe.css
++++ b/components/workspace/actor-wardrobe.css
+@@ -1,7 +1,9 @@
+ /* Actor archive and wardrobe: the original image leads; all prose sits below. */
+ .cw-theme .cw-actor-stage{display:block;min-height:0;background:var(--background);color:var(--foreground);overflow:visible}
+ .cw-theme .cw-actor-visual-stage{position:relative;isolation:isolate;min-height:560px;height:78dvh;max-height:940px;overflow:clip;background:var(--background)}
+-.cw-theme .cw-actor-atmosphere{inset:-35px;width:calc(100% + 70px);height:calc(100% + 70px);filter:blur(26px) brightness(.28) saturate(.72)}
++.cw-theme .cw-actor-atmosphere{inset:-5% -5% -5% -25%;width:130%;height:110%;object-position:50% 38%;filter:blur(18px) brightness(.64) saturate(.88);opacity:1}
++.cw-theme .cw-actor-visual-stage::after{content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(90deg,#08090920,transparent 42%,#08090928),linear-gradient(0deg,#080909b8,transparent 24%,transparent 78%,#08090938)}
++.cw-theme .cw-actor-portrait-blend{filter:blur(12px);opacity:.38}
+ .cw-theme .cw-actor-portrait-panel{position:absolute;inset:0;width:100%;height:100%}
+ .cw-theme .cw-actor-portrait-button{inset:32px 18% 60px;min-height:0}
+ .cw-theme .cw-actor-name{position:absolute;left:clamp(28px,5vw,76px);top:45px;z-index:2;max-width:80%;font-family:var(--font-sans);font-size:clamp(34px,4.4vw,64px);font-weight:700;letter-spacing:.04em;line-height:1.3;overflow-wrap:anywhere;pointer-events:none;text-shadow:0 4px 24px #0009}
+@@ -15,7 +17,7 @@
+ .cw-theme .cw-actor-personality-lines{height:auto;margin:0 0 30px;font-family:var(--font-sans);max-width:74ch;color:var(--foreground)}
+ .cw-theme .cw-actor-personality-lines h2,.cw-theme .cw-actor-biography h2{font-size:13px;letter-spacing:.08em;font-weight:500;color:var(--primary);margin-bottom:12px}
+ .cw-theme .cw-actor-personality-lines .cw-prose,.cw-theme .cw-actor-biography .cw-prose{font-size:15px;line-height:1.95;color:var(--foreground);max-width:74ch}
+-.cw-theme .cw-actor-biography{display:grid;grid-template-columns:1fr 1fr;gap:28px 48px;white-space:normal;padding-bottom:36px}
++.cw-theme .cw-actor-biography{display:grid;grid-template-columns:minmax(0,2fr) minmax(180px,1fr);gap:28px 48px;white-space:normal;padding-bottom:36px}
+ .cw-theme .cw-actor-biography>section{min-width:0}
+ .cw-theme .cw-actor-codex-footer{display:flex;align-items:center;flex-wrap:wrap;gap:16px 24px}
+ .cw-theme .cw-actor-tabs{flex:1;min-width:240px;max-width:480px;margin:0;gap:20px}
+@@ -57,3 +59,15 @@
+ @media(max-width:767px){.cw-theme .cw-actor-visual-stage{min-height:440px;height:68dvh}.cw-theme .cw-actor-portrait-panel{position:absolute;inset:0;width:100%;height:100%;min-height:0}.cw-theme .cw-actor-portrait-button{inset:58px 14px 75px}.cw-theme .cw-actor-name{font-size:34px;top:22px;left:24px}.cw-theme .cw-actor-switch{left:24px;bottom:18px}.cw-theme .cw-actor-visual-controls{right:18px;bottom:18px;gap:3px}.cw-theme .cw-actor-visual-controls button{font-size:12px;padding-inline:10px;min-height:44px}.cw-theme .cw-actor-introduction.cw-actor-codex{padding:28px 24px 22px}.cw-theme .cw-actor-personality-lines .cw-prose,.cw-theme .cw-actor-biography .cw-prose{font-size:14px}.cw-theme .cw-actor-codex-footer{gap:16px}.cw-theme .cw-actor-tabs{min-width:100%;max-width:none;gap:12px}.cw-theme .cw-actor-tab-content{padding:24px 18px 36px}.cw-theme .cw-wardrobe-cards{grid-template-columns:repeat(2,minmax(0,1fr))}.cw-theme .cw-book-heading{flex-wrap:wrap}.cw-theme .cw-look-view-toolbar{align-items:flex-start;flex-wrap:wrap}}
+ 
+ .cw-theme .cw-actor-visual-stage>.cw-atmosphere{position:absolute;inset:0;z-index:-1;opacity:.14;pointer-events:none}
++
++/* Read-only annotations preserve the author's source and media placeholders. */
++.cw-theme .cw-actor-label{--tag-tint:#d7be8b;display:inline-flex;vertical-align:baseline;align-items:center;position:relative;isolation:isolate;overflow:hidden;max-width:100%;margin:2px 8px 2px 0;padding:2px 9px;border:1px solid color-mix(in srgb,var(--tag-tint) 34%,transparent);border-radius:5px;background:color-mix(in srgb,var(--tag-tint) 10%,#101211);color:color-mix(in srgb,var(--tag-tint) 68%,#fff);font-size:12px;font-weight:500;line-height:1.8;letter-spacing:.03em;white-space:normal;overflow-wrap:anywhere}
++.cw-theme .cw-actor-label[data-tone="1"]{--tag-tint:#96c8bd}
++.cw-theme .cw-actor-label[data-tone="2"]{--tag-tint:#b7add8}
++.cw-theme .cw-actor-label[data-tone="3"]{--tag-tint:#d4a7b1}
++.cw-theme .cw-actor-label::after{content:'';position:absolute;inset:-50% -65%;z-index:-1;pointer-events:none;background:linear-gradient(115deg,transparent 38%,color-mix(in srgb,var(--tag-tint) 24%,transparent) 47%,#ffffff24 50%,color-mix(in srgb,var(--tag-tint) 14%,transparent) 54%,transparent 62%);transform:translateX(-55%);animation:cw-label-light 12s ease-in-out infinite}
++@keyframes cw-label-light{0%,15%{transform:translateX(-55%)}55%,100%{transform:translateX(55%)}}
++.cw-theme .cw-actor-showcase[data-effects-paused=true] .cw-actor-label::after{animation-play-state:paused}
++@media(prefers-reduced-motion:reduce){.cw-theme .cw-actor-label::after{animation:none;transform:none}}
++@media(prefers-reduced-transparency:reduce){.cw-theme .cw-actor-atmosphere{opacity:.7}.cw-theme .cw-actor-label{background:#151918}.cw-theme .cw-actor-label::after{display:none}}
++@media(max-width:767px){.cw-theme .cw-actor-atmosphere{inset:-3% -12%;width:124%;height:106%;filter:blur(13px) brightness(.62) saturate(.88)}.cw-theme .cw-actor-label{font-size:12px}}
+diff --git a/components/workspace/actor-wardrobe.tsx b/components/workspace/actor-wardrobe.tsx
+index c44e1c8..5c21406 100644
+--- a/components/workspace/actor-wardrobe.tsx
++++ b/components/workspace/actor-wardrobe.tsx
+@@ -8,7 +8,7 @@ import { NativeSelect } from '@/components/ui/native-select';
+ 
+ 
+ import { useEffect, useRef, useState, type CSSProperties } from 'react';
+-import { ArrowDown, ArrowUp, Check, ChevronDown, Grid2X2, Images, List, Pencil, Plus, RefreshCw, Save, Search, ShieldCheck, Shirt, UserRound, X, ZoomIn } from 'lucide-react';
++import { ArrowDown, ArrowUp, Check, Grid2X2, Images, List, Pencil, Plus, RefreshCw, Save, Search, ShieldCheck, Shirt, UserRound, UsersRound, X, ZoomIn } from 'lucide-react';
+ import { Button } from '@/components/ui/button';
+ import {ToggleGroup,ToggleGroupItem} from '@/components/ui/toggle-group';
+ import { Input } from '@/components/ui/input';
+@@ -187,7 +187,7 @@ export default function ActorWardrobe({ onOpenProject, actorTab, onTabSelect, ap
+   const visualName = visual === 'body' ? '体态' : '肖像';
+   const visibleLooks: Look[] = filterWardrobe(looks, lookQuery, slotFilter, referenceAssets);
+   const availableSlots = Object.entries(slots).filter(([slot]) => looks.some(value => value.spec?.items.some(item => item.slot === slot)));
+-  return <section className="cw-wardrobe cw-actor-showcase">
++  return <section className="cw-wardrobe cw-actor-showcase" data-effects-paused={effectPaused}>
+     <div className="cw-actor-stage">
+       <div className="cw-actor-visual-stage"><Atmosphere kind="rays" paused={effectPaused}/>
+       {portrait && !portraitFailed && <img className="cw-actor-atmosphere" src={portrait} alt="" aria-hidden="true"/>}
+@@ -195,13 +195,13 @@ export default function ActorWardrobe({ onOpenProject, actorTab, onTabSelect, ap
+       <div className="cw-actor-portrait-panel">
+         {portrait && !portraitFailed ? <button className="cw-actor-portrait-button" style={{'--portrait-ratio':portraitRatio} as CSSProperties} aria-label={'查看完整'+visualName} onClick={()=>setPortraitOpen(true)}><img className="cw-actor-portrait-blend" src={portrait} alt="" aria-hidden="true"/><img className="cw-actor-hero-image" onLoad={event=>{const img=event.currentTarget;if(img.naturalWidth&&img.naturalHeight)setPortraitRatio(img.naturalWidth/img.naturalHeight);}} src={portrait} alt={info.character.name+' · '+visualName} onError={()=>setPortraitFailed(true)}/></button> : <div className="cw-actor-portrait-empty"><UserRound size={72}/><p>{portraitFailed || (visualId && referenceErrors[visualId]) ? visualName+'暂时无法显示' : visualId ? '正在读取'+visualName+'…' : '尚未选择'+visualName}</p>{(portraitFailed || (visualId && referenceErrors[visualId])) && <Button variant="outline" onClick={()=>{setPortraitFailed(false);setReferenceAssets(old=>{const next={...old};if(visualId)delete next[visualId];return next;});setInitialReload(value=>value+1);}}>重新读取</Button>}</div>}
+       </div>
+-      <Button variant="ghost" className="cw-actor-switch" disabled={busy} onClick={()=>attempt(onBack)} aria-label="选择其他演员">{portrait && !portraitFailed && <img src={portrait} alt=""/>}<ChevronDown/></Button>
++      <Button variant="ghost" className="cw-actor-switch" disabled={busy} onClick={()=>attempt(onBack)} aria-label="选择其他演员">{portrait && !portraitFailed && <img src={portrait} alt=""/>}<UsersRound/></Button>
+       <div className="cw-actor-visual-controls" role="group" aria-label="主图视角"><Button variant="ghost" aria-pressed={effectPaused} onClick={()=>setEffectPaused(value=>!value)}>{effectPaused?'开启动效':'暂停动效'}</Button><Button variant="ghost" aria-pressed={visual==='face'} onClick={()=>setVisual('face')}>肖像</Button>{info.identity?.body_asset_id&&<Button variant="ghost" aria-pressed={visual==='body'} onClick={()=>setVisual('body')}>体态</Button>}<Button variant="ghost" size="icon" aria-label={'查看'+visualName+'原图'} disabled={!portrait||portraitFailed} onClick={()=>setPortraitOpen(true)}><ZoomIn size={18}/></Button></div>
+       </div>
+       <div className="cw-actor-introduction cw-actor-codex">
+         {(editingProfile || blocked || comparison) && <Button variant="ghost" size="icon-sm" className="cw-actor-refresh" disabled={busy} aria-label="重新读取演员资料" onClick={()=>void refresh()}><RefreshCw/></Button>}
+-        {info.character.personality && <section className="cw-actor-personality-lines"><h2>性格</h2><MarkdownContent content={maskActorText(info.character.personality).text}/></section>}
+-        <div className="cw-actor-biography" aria-label="人物档案">{Object.entries({profile:'档案',experiences:'经历'}).map(([key,label])=><section key={key}><h2>{label}</h2><MarkdownContent content={maskActorText(info.character[key as 'profile'|'experiences'] || '尚未填写').text}/></section>)}</div>
++        {info.character.personality && <section className="cw-actor-personality-lines"><h2>性格</h2><MarkdownContent actorLabels content={maskActorText(info.character.personality).text}/></section>}
++        <div className="cw-actor-biography" aria-label="人物档案">{Object.entries({profile:'档案',experiences:'经历'}).map(([key,label])=><section key={key}><h2>{label}</h2><MarkdownContent actorLabels content={maskActorText(info.character[key as 'profile'|'experiences'] || '尚未填写').text}/></section>)}</div>
+         <div className="cw-actor-codex-footer"><ToggleGroup type="single" value={tab === 'identity' ? 'profile' : tab} disabled={busy} onValueChange={value=>{if(value&&value!==tab)attempt(()=>{setEditingProfile(false);onTabSelect(value);});}} className="cw-actor-tabs" aria-label="人物资料">{[['profile','档案'],['looks','衣橱'],['credits','作品']].map(([key,label])=><ToggleGroupItem key={key} value={key}>{label}</ToggleGroupItem>)}</ToggleGroup>
+         <Button variant="ghost" className="cw-actor-edit" disabled={busy || blocked} onClick={()=>attempt(()=>{onTabSelect('profile');setEditingProfile(v=>!v);requestAnimationFrame(()=>contentRegion.current?.scrollIntoView({block:'nearest',behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));})}><Pencil size={17}/>{editingProfile ? '完成编辑' : '编辑档案'}</Button>{tab!=='profile'&&tab!=='identity'&&<Button variant="ghost" onClick={()=>contentRegion.current?.scrollIntoView({block:'start',behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})}><ArrowDown size={17}/>{tab==='looks'?'查看衣橱':'参演作品'}</Button>}</div>
+       </div>
+diff --git a/components/workspace/dashboard.tsx b/components/workspace/dashboard.tsx
+index 8e68abe..e1533b3 100644
+--- a/components/workspace/dashboard.tsx
++++ b/components/workspace/dashboard.tsx
+@@ -2,7 +2,7 @@
+ import {useEffect, useRef, useState} from 'react';
+ import {ArrowUpRight, RefreshCw} from 'lucide-react';
+ import {Button} from '@/components/ui/button';
+-import {createDashboardLoader, dashboardDestination, dashboardRequest, dashboardTime, initialDashboardState, DASHBOARD_SECTIONS} from './dashboard-data.mjs';
++import {createDashboardLoader, dashboardDestination, dashboardRequest, dashboardTime, initialDashboardState} from './dashboard-data.mjs';
+ import type {Project} from './model';
+ import './dashboard.css';
+ 
+@@ -30,11 +30,7 @@ interface Props {
+   directoryError?: boolean;
+   directoryLoading?: boolean;
+ }
+-const sections: Record<SectionName, {title: string; empty: string}> = {
+-  pending: {title: '待处理', empty: '暂无作品待审候选或待处理任务'},
+-  running: {title: '进行中', empty: '暂无进行中的任务'},
+-  recent: {title: '最近内容', empty: '暂无内容记录'},
+-};
++const visibleSections = [{name: 'recent', title: '最近内容', empty: '暂无内容记录'}] as const;
+ 
+ export default function Dashboard({onOpen, onNavigate, onAttempt, onReady, read = dashboardRequest, refreshKey = 0}: Props) {
+   const [state, setState] = useState<DashboardState>(initialDashboardState);
+@@ -56,31 +52,30 @@ export default function Dashboard({onOpen, onNavigate, onAttempt, onReady, read
+   const snapshot = state.data, busy = state.loading || !!state.activeSection;
+   return <section className="cw-dashboard" aria-label="工作台">
+     <header className="cw-dashboard-heading">
+-      <div><h2>创作动态</h2><p className="cw-dashboard-subtitle">未归档作品 · 主线内容</p></div>
++      <div><h2>创作动态</h2></div>
+       <div className="cw-dashboard-actions">
+         <Button variant="ghost" onClick={() => void loader.current?.refresh()} aria-label={state.loading ? '重新读取工作台' : '刷新工作台'}><RefreshCw size={16}/><span>{state.loading ? '重新读取' : '刷新'}</span></Button>
+-        <Button variant="outline" data-home-primary onClick={() => onNavigate('projects')}>全部作品<ArrowUpRight size={16}/></Button>
++        <Button variant="outline" data-home-primary onClick={() => onNavigate('projects')}>全部项目<ArrowUpRight size={16}/></Button>
+       </div>
+     </header>
+     {state.loading && <p className="cw-dashboard-notice" role="status">{snapshot ? '正在刷新，以下为上次读取的内容…' : '正在读取工作台…'}</p>}
+     {state.error && <div className="cw-dashboard-notice cw-dashboard-warning" role="alert"><span>{state.error}{snapshot ? ' 以下为上次读取的内容。' : ''}</span><Button variant="ghost" onClick={() => void loader.current?.refresh()}>重试</Button></div>}
+     {!snapshot && !state.loading && !state.error && <p role="status">工作台尚未读取。</p>}
+     {snapshot && <div className="cw-dashboard-grid" aria-busy={state.loading}>
+-      {(DASHBOARD_SECTIONS as SectionName[]).map(name => {
+-        const section = snapshot.sections[name], meta = sections[name];
++      {visibleSections.map(({name, title, empty}) => {
++        const section = snapshot.sections[name], rows = section.items.filter(row => row.kind === 'story' || row.kind === 'document');
+         const incomplete = !!section.error || section.partial && !section.has_more;
+         return <section key={name} className={'cw-dashboard-section cw-dashboard-' + name} aria-labelledby={'dashboard-' + name} aria-busy={state.activeSection === name}>
+-          <header><h2 id={'dashboard-' + name}>{meta.title}</h2>{section.items.length > 0 && <span className="cw-dashboard-count">已显示 {section.items.length}</span>}</header>
+-          {name === 'pending' && <p className="cw-dashboard-scope">创作、素材候选与协作任务；来源复核在作品内查看。</p>}
++          <header><h2 id={'dashboard-' + name}>{title}</h2>{rows.length > 0 && <span className="cw-dashboard-count">已显示 {rows.length}</span>}</header>
+           {incomplete && <p className="cw-dashboard-warning" role="alert">部分内容未读取，暂无法确认完整状态。<Button variant="ghost" size="sm" onClick={() => void loader.current?.refresh()}>重新读取</Button></p>}
+-          {section.items.length > 0 ? <ul className="cw-dashboard-list">{section.items.map(row => <li key={row.key}>
++          {rows.length > 0 ? <ul className="cw-dashboard-list">{rows.map(row => <li key={row.key}>
+             <button type="button" className="cw-dashboard-row" onClick={() => open(row)} aria-label={'打开' + row.project_title + ' · ' + row.title}>
+               <span className="cw-dashboard-row-copy"><strong>{row.title}</strong><span className="cw-dashboard-row-meta"><span>{row.project_title}</span><span>{row.reason || row.label}</span></span></span>
+-              <span className="cw-dashboard-row-end">{name === 'recent' && <time dateTime={row.updated_at || undefined}>{dashboardTime(row.updated_at)}</time>}<ArrowUpRight size={16} aria-hidden="true"/></span>
++              <span className="cw-dashboard-row-end"><time dateTime={row.updated_at || undefined}>{dashboardTime(row.updated_at)}</time><ArrowUpRight size={16} aria-hidden="true"/></span>
+             </button>
+-          </li>)}</ul> : !incomplete && !section.has_more && <p className="cw-dashboard-empty">{meta.empty}</p>}
++          </li>)}</ul> : !incomplete && !section.has_more && <p className="cw-dashboard-empty">{empty}</p>}
+           {state.moreErrors[name] && <p className="cw-dashboard-warning" role="alert">更多内容未读取，请重试。</p>}
+-          {section.has_more && <Button className="cw-dashboard-more" variant="ghost" disabled={busy} onClick={() => void loader.current?.more(name)} aria-label={'加载更多' + meta.title}>{state.activeSection === name ? '正在读取…' : state.moreErrors[name] ? '重试加载更多' : '加载更多'}</Button>}
++          {section.has_more && <Button className="cw-dashboard-more" variant="ghost" disabled={busy} onClick={() => void loader.current?.more(name)} aria-label={'加载更多' + title}>{state.activeSection === name ? '正在读取…' : state.moreErrors[name] ? '重试加载更多' : '加载更多'}</Button>}
+         </section>;
+       })}
+     </div>}
+diff --git a/components/workspace/document-editor.tsx b/components/workspace/document-editor.tsx
+index 804edb4..48daaf5 100644
+--- a/components/workspace/document-editor.tsx
++++ b/components/workspace/document-editor.tsx
+@@ -78,11 +78,11 @@ export default function DocumentEditor({project,kindFilter,onError,onNotice,onDi
+  async function propose(){if(!doc)return;const input={document_id:doc.id,source_revision:doc.current_revision,proposed_body:body,rationale:'创作者提交的内容审阅提案'};const p:Pending={kind:'proposal',projectId:pid,input,key:crypto.randomUUID()};remember(p);await resolve(p);}
+  const visibleDocuments=documents.filter(d=>(!kindFilter||d.kind===kindFilter||d.id===doc?.id)&&(!search.trim()||d.name.toLocaleLowerCase().includes(search.trim().toLocaleLowerCase())));
+  function newDocument(){onAttempt(()=>{onDirty(false);setDoc(null);setBody('');setName('');setCreating(true);setKind(kindFilter||(project.kind==='daily'?'daily_plan':'script'));setPreview(false);});}
+- return <section className="cw-module cw-document-workbench" aria-label="文稿创作"><header className="cw-project-section-heading"><h2>{kindFilter==='prompt_note'?'提示词':'文稿'}</h2><Button type="button" variant="ghost" onClick={()=>onAttempt(()=>location.assign('/studio?project='+enc(pid)+(doc?'&document='+enc(doc.id):'')+'#review'))}>文稿审核</Button></header>
++ return <section className="cw-module cw-document-workbench" aria-label="文稿创作"><header className="cw-project-section-heading"><h2>{kindFilter==='prompt_note'?'提示词':'文稿'}</h2></header>
+  {error&&<p role="alert" className="cw-warning">{error}</p>}{loading&&<p role="status">正在读取文稿…</p>}
+  {pending&&<div role="status"><p>上次操作结果待核对，输入已保留。</p><label>保留的正文（可复制）<Textarea readOnly rows={5} value={body}/></label><Button type="button" disabled={busy} onClick={()=>void run(()=>resolve(pending))}>{pending.kind==='save'?'核对上次保存':'核对并恢复上次提交'}</Button>{pending.kind==='save'&&<Button type="button" variant="outline" disabled={busy} onClick={()=>{if(window.confirm('放弃核对上次保存并读取最新文稿？保留的正文将留在编辑器中，仍需检查和保存。'))void run(()=>continueWithDraft(pending));}}>放弃核对并继续编辑</Button>}</div>}
+  <fieldset disabled={busy||!!pending} className="cw-document-layout"><aside className="cw-document-library" aria-label="已有文稿"><Button type="button" variant="outline" className="cw-document-new" onClick={newDocument}><Plus aria-hidden="true"/>{kindFilter==='prompt_note'?'新建提示词':'新建文稿'}</Button><label className="cw-document-search"><Search aria-hidden="true"/><Input type="search" aria-label="搜索文稿" placeholder="搜索文稿" value={search} onChange={e=>setSearch(e.target.value)}/></label><div className="cw-document-records">{visibleDocuments.map(d=><Button key={d.id} type="button" variant="record" size="record" className="cw-document-record" aria-pressed={doc?.id===d.id} onClick={()=>switchDocument(d.id)}><FileText aria-hidden="true"/><span><strong>{d.name}</strong><small>{names[d.kind]||d.kind} · v{d.current_revision}</small></span></Button>)}{!loading&&!visibleDocuments.length&&<p className="cw-small-copy">{search?'没有匹配的文稿':'暂无文稿'}</p>}</div></aside>
+  <div className="cw-document-draft cw-form-fieldset">{creating&&<><label>文稿标题<Input required maxLength={200} value={name} onChange={e=>{setName(e.target.value);onDirty(true);}}/></label><div className="cw-project-choice-group" role="group" aria-label="文稿类型">{Object.entries(names).filter(([value])=>!kindFilter||value===kindFilter).map(([value,label])=><Button key={value} type="button" variant="ghost" aria-pressed={kind===value} onClick={()=>{setKind(value);onDirty(true);}}>{label}</Button>)}</div></>}
+- {(doc||creating)?<><header className="cw-document-draft-heading"><h3>{doc?doc.name:'新文稿'}</h3>{doc&&<span>v{doc.current_revision} · {doc.state==='approved'?'已审核':'草稿'}</span>}</header><label>正文<Textarea rows={16} maxLength={100000} value={body} onChange={e=>{setBody(e.target.value);onDirty(true);}}/></label><div className="cw-document-savebar">{creating?<Button type="button" onClick={()=>void run(create)}>创建文稿</Button>:<><Button type="button" onClick={()=>void run(save)}>保存草稿</Button><Button type="button" variant="outline" onClick={()=>void run(propose)}>提交审核提案</Button></>}<Button type="button" variant="ghost" onClick={()=>setPreview(!preview)} aria-expanded={preview}>{preview?'收起预览':'预览'}</Button></div>{preview&&<MarkdownContent content={body}/>}</>:<div className="cw-document-idle"><FileText aria-hidden="true"/><h3>{kindFilter==='prompt_note'?'提示词创作':'开始写作'}</h3><Button type="button" variant="outline" onClick={newDocument}><Plus aria-hidden="true"/>{kindFilter==='prompt_note'?'新建提示词':'新建文稿'}</Button></div>}</div>
++ {(doc||creating)?<><header className="cw-document-draft-heading"><h3>{doc?doc.name:'新文稿'}</h3>{doc&&<span>v{doc.current_revision} · {doc.state==='approved'?'已审核':'草稿'}</span>}</header><label>正文<Textarea rows={16} maxLength={100000} value={body} onChange={e=>{setBody(e.target.value);onDirty(true);}}/></label><div className="cw-document-savebar">{creating?<Button type="button" onClick={()=>void run(create)}>创建文稿</Button>:<><Button type="button" onClick={()=>void run(save)}>保存草稿</Button></>}<Button type="button" variant="ghost" onClick={()=>setPreview(!preview)} aria-expanded={preview}>{preview?'收起预览':'预览'}</Button></div>{preview&&<MarkdownContent content={body}/>}</>:<div className="cw-document-idle"><FileText aria-hidden="true"/><h3>{kindFilter==='prompt_note'?'提示词创作':'开始写作'}</h3><Button type="button" variant="outline" onClick={newDocument}><Plus aria-hidden="true"/>{kindFilter==='prompt_note'?'新建提示词':'新建文稿'}</Button></div>}</div>
+  </fieldset></section>;
+ }
+diff --git a/components/workspace/item-inspector.tsx b/components/workspace/item-inspector.tsx
+index d8c0c88..5b1e7b3 100644
+--- a/components/workspace/item-inspector.tsx
++++ b/components/workspace/item-inspector.tsx
+@@ -21,7 +21,7 @@ import MarkdownContent from './markdown-content';
+ 
+ export interface Decision { action: string; version: number; expected_revision: number; expected_canon_revision: number; note: string }
+ interface Props {
+-  api:WorkspaceApi;projectId:string;onBusy(value:boolean):void;onReview():void;
++  api:WorkspaceApi;projectId:string;onBusy(value:boolean):void;
+   item: StoryItem | null; newKind: ItemKind | null; history: ItemHistory | null; loading: boolean; busy: boolean; media: MediaMap; items: StoryItem[]; acceptedItems: StoryItem[];
+   readbackPending?: boolean;
+   onClose(): void; onActors(id?:string): void; onSelect(id: string): void; onDirty(dirty: boolean): void; onAttempt(action: () => void): void;
+@@ -36,7 +36,7 @@ const fieldsByKind: Partial<Record<ItemKind, [string, string][]>> = {
+ };
+ const choices: Record<string, Record<string, string>> = { event_layer: { planned: '计划', hypothetical: '假设', occurred: '作品内发生', discarded: '废弃，保留历史' }, time_precision: { unknown: '未知', order_only: '仅先后', range: '区间', exact: '明确时间' }, layer: { character: '人物关系', event: '事件关系', reference: '来源引用' }, direction: { one: '单向', two: '双向', none: '无向' }, knowledge_type: { known: '已知', belief: '误信', suspicion: '怀疑', lie: '谎言' } };
+ 
+-export default function ItemInspector({ api,projectId,onBusy,onReview, item, newKind, history, loading, busy, readbackPending = false, media, items, acceptedItems, onClose, onActors, onSelect, onDirty, onAttempt, onSave, onDecision, onSource }: Props) {
++export default function ItemInspector({ api,projectId,onBusy, item, newKind, history, loading, busy, readbackPending = false, media, items, acceptedItems, onClose, onActors, onSelect, onDirty, onAttempt, onSave, onDecision, onSource }: Props) {
+   const [tab, setTab] = useState<'overview' | 'edit' | 'history'>('overview');
+   const [version, setVersion] = useState<number | null>(null);
+   const [draft, setDraft] = useState<StoryContent>(emptyContent);
+@@ -107,7 +107,7 @@ export default function ItemInspector({ api,projectId,onBusy,onReview, item, new
+       {tab === 'overview' && <div className="cw-inspector-body"><MarkdownContent content={draft.body || '暂无内容'} />
+         {creativePlan&&<section className="cw-inspector-section"><h3>创作计划</h3><div className="cw-small-copy whitespace-pre-wrap">{readableContent({spec:draft.spec||{}},Object.fromEntries([...referenceItems,...items].map(value=>[value.id,value.content.title])))||'尚未填写创作设置'}</div></section>}
+         {Object.entries(draft.fields).filter(([k, v]) => (fieldsByKind[kind] || []).some(([field]) => field === k) && !k.endsWith('_id') && typeof v === 'string' && v).slice(0, 6).map(([key, value]) => <div className="cw-detail-pair" key={key}><span>{fieldsByKind[kind]?.find(([k]) => k === key)?.[1] || key}</span>{choices[key] ? <p>{choices[key][text(value)] || text(value)}</p> : <MarkdownContent content={text(value)}/>}</div>)}
+-        {item&&['character','instance','event','scene'].includes(kind)&&<ProductionLinks key={item.id} api={api} projectId={projectId} item={item} disabled={dirty||busy} onSelect={onSelect} onActors={onActors} onReview={onReview} onAttempt={onAttempt} onDirty={linksDirty} onBusy={onBusy}/>}
++        {item&&['character','instance','event','scene'].includes(kind)&&<ProductionLinks key={item.id} api={api} projectId={projectId} item={item} disabled={dirty||busy} onSelect={onSelect} onActors={onActors} onAttempt={onAttempt} onDirty={linksDirty} onBusy={onBusy}/>}
+         {item&&['casting','appearance'].includes(kind)&&<ProductionDetails key={item.id+':'+version} api={api} projectId={projectId} item={{...item,content:draft}} version={version||item.version} onSelect={onSelect} onActors={onActors}/>}
+         {links.length > 0 && <section className="cw-inspector-section"><h3>关联关系 <span>{links.length}</span></h3>{links.map((edge, index) => <Button variant="record" size="record" type="button" className="cw-relation-row" key={index} onClick={() => onSelect(edge.id)}><span>{edge.label}<small>{items.find(n => n.id === (edge.source === item?.id ? edge.target : edge.source))?.content.title}</small></span><ChevronRight size={15} /></Button>)}</section>}
+         <section className="cw-inspector-section"><h3>准确来源</h3>{draft.sources.length ? draft.sources.map((source, index) => source.item_id ? <Button variant="record" size="record" type="button" className="cw-source-row" key={index} onClick={() => onSource(source)}><BookOpen size={15} /><span>{items.find(n => n.id === source.item_id)?.content.title || '来源内容'}{source.paragraph && <small>第 {source.paragraph} 段</small>}</span><ArrowUpRight size={14} /></Button> : <div key={index} className="cw-small-copy"><MarkdownContent content={readableContent({text:source.text}) || readableContent({text:source.note}) || '来源备注'}/></div>) : <p className="cw-small-copy">尚无来源引用</p>}</section>
+diff --git a/components/workspace/markdown-content.tsx b/components/workspace/markdown-content.tsx
+index 102f584..f7dceea 100644
+--- a/components/workspace/markdown-content.tsx
++++ b/components/workspace/markdown-content.tsx
+@@ -4,6 +4,7 @@ import remarkBreaks from 'remark-breaks';
+ import remarkGfm from 'remark-gfm';
+ import remarkChineseStrong from './remark-chinese-strong.mjs';
+ import remarkExcerpt from './remark-excerpt.mjs';
++import remarkActorLabels from './remark-actor-labels.mjs';
+ 
+ /** Only web and mail links are navigable. Relative links retain their normal meaning. */
+ function safeUrl(value: string) {
+@@ -19,11 +20,12 @@ function safeUrl(value: string) {
+ }
+ 
+ const plugins = [remarkGfm, remarkBreaks, remarkChineseStrong];
++const actorPlugins = [...plugins, remarkActorLabels];
+ 
+ /** Render project text without interpreting raw HTML or changing its source. */
+-export default function MarkdownContent({ content }: { content: string }) {
++export default function MarkdownContent({ content, actorLabels = false }: { content: string; actorLabels?: boolean }) {
+   return <div className="cw-prose cw-markdown">
+-    <Markdown remarkPlugins={plugins} urlTransform={safeUrl} components={{
++    <Markdown remarkPlugins={actorLabels ? actorPlugins : plugins} urlTransform={safeUrl} components={{
+       a: ({ node, href, children, ...props }) => href
+         ? <a {...props} href={href} target="_blank" rel="noopener noreferrer">{children}</a>
+         : <span>{children}</span>,
+diff --git a/components/workspace/production-links.tsx b/components/workspace/production-links.tsx
+index 0c06f19..e826733 100644
+--- a/components/workspace/production-links.tsx
++++ b/components/workspace/production-links.tsx
+@@ -21,10 +21,10 @@ interface Options {ips:IP[];has_more:boolean;books:Book[];books_truncated:boolea
+ interface Proposal {id:string;version:number;sha256:string;state:string;summary:string;automatic_review?:{status:string;message?:string}}
+ interface Context {canon_revision:number;sha256:string;skill:unknown}
+ interface Client {context(input:unknown):Promise<Context>;propose(input:unknown,options:{idempotencyKey:string}):Promise<{state:string;proposal?:Proposal}>;read(id:string):Promise<Proposal>;reconcileProposal(key:string):Promise<{proposal:Proposal}>}
+-interface Props {api:WorkspaceApi;projectId:string;item:StoryItem;disabled:boolean;onSelect(id:string):void;onActors(id?:string):void;onReview():void;onAttempt(action:()=>void):void;onDirty(value:boolean):void;onBusy(value:boolean):void}
++interface Props {api:WorkspaceApi;projectId:string;item:StoryItem;disabled:boolean;onSelect(id:string):void;onActors(id?:string):void;onAttempt(action:()=>void):void;onDirty(value:boolean):void;onBusy(value:boolean):void}
+ 
+ /** Explicit selections are checked and adopted by the server automatic policy. */
+-export default function ProductionLinks({api,projectId,item,disabled,onSelect,onActors,onReview,onAttempt,onDirty,onBusy}:Props){
++export default function ProductionLinks({api,projectId,item,disabled,onSelect,onActors,onAttempt,onDirty,onBusy}:Props){
+  const [graph,setGraph]=useState<GraphData|null>(null),[ips,setIps]=useState<IP[]>([]),[books,setBooks]=useState<Book[]>([]),[ipId,setIpId]=useState(''),[castingId,setCastingId]=useState(''),[lookKey,setLookKey]=useState(''),[title,setTitle]=useState(''),[note,setNote]=useState(''),[error,setError]=useState(''),[busy,setBusy]=useState(false),[loading,setLoading]=useState(true),[proposal,setProposal]=useState<Proposal|null>(null),[pending,setPending]=useState(false);
+  const lock=useRef(false),generation=useRef(0),operation=useRef<string|null>(null),signature=useRef(''),scope=`cineweave-production-v1:${projectId}:${item.id}`;
+  const [moreIPs,setMoreIPs]=useState(false),[ipOffset,setIpOffset]=useState(0),[looksTruncated,setLooksTruncated]=useState(false);
+diff --git a/components/workspace/production-workspace.tsx b/components/workspace/production-workspace.tsx
+index 053d0e5..835d2a0 100644
+--- a/components/workspace/production-workspace.tsx
++++ b/components/workspace/production-workspace.tsx
+@@ -22,7 +22,7 @@ interface External {revision:number;project_url:string|null;production_status:st
+ interface Handoff {id:string;project_id:string;manifest_sha256:string;stale:boolean;created_at:string;external:External|null;manifest:{script:{name:string;revision:number;body:string};target_platform:string;production?:{scenes:{scene:{id:string;version:number};title:string}[]};[key:string]:unknown}}
+ interface Summary {id:string;script_revision:number;created_at:string;target_platform:string}
+ interface Pending {key:string;input:Record<string,unknown>;id?:string;sha?:string}
+-interface Props {stage:Stage;api:WorkspaceApi;project:Project|null;items:StoryItem[];acceptedItems:StoryItem[];graph:GraphData|null;candidates:boolean;onCandidates:(visible?:boolean)=>void;onError:(message:string)=>void;onNotice:FeedbackHandler;onDirty:(value:boolean)=>void;onBusy:(value:boolean)=>void;onSelect:(id:string)=>void;onCreateItem:(kind:ItemKind)=>void;onNavigate:(view:'novel'|'review'|'tasks'|'production')=>void;onAttempt:(action:()=>void)=>void}
++interface Props {stage:Stage;api:WorkspaceApi;project:Project|null;items:StoryItem[];acceptedItems:StoryItem[];graph:GraphData|null;candidates:boolean;onCandidates:(visible?:boolean)=>void;onError:(message:string)=>void;onNotice:FeedbackHandler;onDirty:(value:boolean)=>void;onBusy:(value:boolean)=>void;onSelect:(id:string)=>void;onCreateItem:(kind:ItemKind)=>void;onNavigate:(view:'novel'|'production')=>void;onAttempt:(action:()=>void)=>void}
+ const esc=encodeURIComponent;
+ type Choice={value:string;label:string};
+ function ProjectChoices({label,value,options,onChange,disabled=false,searchable=false}:{label:string;value:string;options:Choice[];onChange(value:string):void;disabled?:boolean;searchable?:boolean}){
+@@ -61,7 +61,7 @@ export default function ProductionWorkspace({stage,api,project,items,acceptedIte
+  return <section className="cw-module cw-project-content" data-stage={stage}>
+  {stage==='story'&&<DocumentEditor key={'document-editor:'+project.id} project={project} onError={onError} onNotice={onNotice} onDirty={onDirty} onBusy={onBusy} onAttempt={onAttempt}/>}
+  {error&&<p role="alert" className="cw-warning">{error} <Button variant="outline" disabled={busy||loading} onClick={()=>onAttempt(()=>void load())}>重新读取</Button></p>}{loading&&<p role="status">正在读取项目资料…</p>}
+- {stage==='story'&&<section className="cw-project-section cw-writing-actions" aria-label="故事创作"><header className="cw-project-section-heading"><h2>故事创作</h2><Button variant="ghost" onClick={()=>onNavigate('review')}>候选审阅</Button></header><div className="cw-writing-primary"><Button variant="outline" onClick={()=>onCreateItem('outline')}>新建大纲</Button><Button variant="outline" onClick={()=>onCreateItem('chapter')}>新建章节</Button><Button variant="outline" onClick={()=>onCreateItem('scene')}>新建场次</Button><Button variant="outline" onClick={()=>onCreateItem('episode')}>新建剧集</Button><Button variant="ghost" onClick={()=>onNavigate('novel')}>小说与大纲</Button><Button variant="ghost" onClick={()=>onNavigate('tasks')}>写作任务</Button></div></section>}
++ {stage==='story'&&<section className="cw-project-section cw-writing-actions" aria-label="故事创作"><header className="cw-project-section-heading"><h2>故事创作</h2></header><div className="cw-writing-primary"><Button variant="outline" onClick={()=>onCreateItem('outline')}>新建大纲</Button><Button variant="outline" onClick={()=>onCreateItem('chapter')}>新建章节</Button><Button variant="outline" onClick={()=>onCreateItem('scene')}>新建场次</Button><Button variant="outline" onClick={()=>onCreateItem('episode')}>新建剧集</Button><Button variant="ghost" onClick={()=>onNavigate('novel')}>小说与大纲</Button></div></section>}
+  {stage==='storyboard'&&<CreativeStructure api={api} projectId={pid} stage={stage} items={items} acceptedItems={acceptedItems} onCreate={onCreateItem} onSelect={onSelect} onAttempt={onAttempt}/>}
+  {stage==='storyboard'&&<EpisodeShotPlan items={items} candidates={candidates} onCandidates={()=>onAttempt(()=>onCandidates(!candidates))} onSelect={onSelect}/>}
+  {stage==='planning'&&<section className="cw-project-section"><Button type="button" variant="outline" onClick={()=>onCreateItem('development_plan')}>新建创作规划</Button><DevelopmentPlanList items={items} candidates={candidates} onCandidates={()=>onAttempt(()=>onCandidates(!candidates))} onSelect={onSelect}/></section>}
+diff --git a/components/workspace/project-content.css b/components/workspace/project-content.css
+index 0f0001d..18ccf1b 100644
+--- a/components/workspace/project-content.css
++++ b/components/workspace/project-content.css
+@@ -1,4 +1,5 @@
+ .cw-theme .cw-project-content{display:grid;gap:28px;min-width:0;min-height:0}
++.cw-theme .cw-project-sound,.cw-theme .cw-project-sound-native{min-width:0;width:100%}
+ .cw-theme .cw-project-section{min-width:0;padding-top:28px;border-top:1px solid var(--border)}
+ .cw-theme .cw-project-section h2,.cw-theme .cw-project-section h3{margin:0 0 18px;line-height:1.45;font-weight:550}
+ .cw-theme .cw-project-section h2{font-size:20px}
+diff --git a/components/workspace/project-navigation.css b/components/workspace/project-navigation.css
+index 5e51047..c58048d 100644
+--- a/components/workspace/project-navigation.css
++++ b/components/workspace/project-navigation.css
+@@ -7,17 +7,13 @@
+ .cw-theme .cw-project-meta>span+span::before{content:'/';padding-right:10px;color:var(--border)}
+ .cw-theme .cw-project-switch-trigger{flex-shrink:0;white-space:nowrap;border:1px solid var(--border);border-radius:4px;min-height:44px}
+ .cw-theme .cw-project-switch-trigger:hover{border-color:var(--primary);color:var(--primary)}
+-.cw-theme .cw-project-navigation{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0 12px;margin:0 0 28px;padding:0 0 12px;border-bottom:1px solid var(--border);overflow:visible}
++.cw-theme .cw-project-navigation{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0 12px;margin:0 0 28px;padding:0 0 12px;border-bottom:1px solid var(--border);overflow:visible}
+ .cw-theme .cw-project-navigation>[data-slot=button]{display:flex;justify-content:flex-start;position:relative;min-width:0;min-height:46px;padding:8px 6px;gap:8px;border:0;border-radius:0;overflow:visible;white-space:normal;background:transparent;color:var(--muted-foreground);text-align:left}
+ .cw-theme .cw-project-navigation>[data-slot=button]::after{content:'';position:absolute;left:6px;right:6px;bottom:0;height:1px;background:var(--primary);opacity:0;transform:scaleX(.25);transform-origin:left;transition:transform .22s cubic-bezier(.16,1,.3,1),opacity .15s}
+ .cw-theme .cw-project-navigation>[aria-current=page]{color:var(--primary);background:color-mix(in srgb,var(--primary) 5%,transparent)}
+ .cw-theme .cw-project-navigation>[aria-current=page]::after{opacity:1;transform:scaleX(1)}
+ .cw-theme .cw-project-navigation>button:hover{color:var(--foreground);background:color-mix(in srgb,var(--foreground) 4%,transparent)}
+ .cw-theme .cw-project-navigation>button svg{flex-shrink:0}
+-.cw-theme .cw-global-services{display:grid;gap:4px;margin-top:20px;padding-top:16px;border-top:1px solid var(--border)}
+-.cw-theme .cw-global-services a{display:flex;align-items:center;gap:10px;min-height:44px;padding:8px 12px;color:var(--muted-foreground);font-size:13px;border-radius:4px}
+-.cw-theme .cw-global-services a:hover{color:var(--foreground);background:var(--accent)}
+-.cw-theme .cw-global-services a svg{width:17px;height:17px}
+ .cw-theme.cw-project-switcher[data-slot=dialog-content]{width:min(940px,calc(100vw - 40px));max-width:940px;max-height:calc(100dvh - 64px);display:flex;flex-direction:column;gap:20px;padding:28px;background:var(--background);border-radius:12px;overflow:hidden}
+ .cw-theme.cw-project-switcher>header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+ .cw-theme.cw-project-switcher [data-slot=dialog-title]{font-size:24px;line-height:1.4;font-weight:600}
+diff --git a/components/workspace/project-navigation.tsx b/components/workspace/project-navigation.tsx
+index 75b46c6..8aaf9a3 100644
+--- a/components/workspace/project-navigation.tsx
++++ b/components/workspace/project-navigation.tsx
+@@ -1,6 +1,6 @@
+ 'use client';
+ import {useMemo,useRef,useState,type PointerEvent} from 'react';
+-import {ArrowLeft,ArrowRight,ArrowUpRight,BookOpen,Check,Clapperboard,FolderOpen,Grid2X2,Layers3,ListChecks,Network,NotebookPen,Search,Send,UsersRound,Workflow,X} from 'lucide-react';
++import {ArrowLeft,ArrowRight,ArrowUpRight,BookOpen,Check,Clapperboard,FolderOpen,Grid2X2,Layers3,ListChecks,Network,NotebookPen,Search,Music2,UsersRound,X} from 'lucide-react';
+ import {Button} from '@/components/ui/button';
+ import {Input} from '@/components/ui/input';
+ import {Dialog,DialogContent,DialogTitle,DialogDescription,DialogTrigger} from '@/components/ui/dialog';
+@@ -9,7 +9,7 @@ import {workflowStages} from './workflow-navigation.mjs';
+ import type {Project} from './model';
+ import './project-navigation.css';
+ 
+-const icons:Record<string,typeof BookOpen>={screenplay:Clapperboard,episodes:Layers3,storyboard:Grid2X2,prompts:NotebookPen,canvas:UsersRound,relations:Network,novel:BookOpen,planning:FolderOpen,review:Check,tasks:ListChecks,production:Workflow,delivery:Send};
++const icons:Record<string,typeof BookOpen>={screenplay:Clapperboard,episodes:Layers3,storyboard:Grid2X2,prompts:NotebookPen,canvas:UsersRound,relations:Network,novel:BookOpen,planning:FolderOpen,sound:Music2};
+ 
+ /** Routing stays with the workspace, including its dirty/save guard. */
+ export function ProjectNavigation({view,onNavigate}:{view:string;onNavigate(view:string):void}){
+diff --git a/components/workspace/project-sound.tsx b/components/workspace/project-sound.tsx
+new file mode 100644
+index 0000000..2709fe6
+--- /dev/null
++++ b/components/workspace/project-sound.tsx
+@@ -0,0 +1,33 @@
++'use client';
++import {useEffect,useRef,useState} from 'react';
++import {Button} from '@/components/ui/button';
++import type {Project} from './model';
++import './project-content.css';
++
++interface SoundController {getState():{dirty:boolean;busy:boolean;unsettled?:boolean};dispose?():void}
++interface SoundModule {mountMaterials(host:HTMLElement,options?:Record<string,unknown>):SoundController}
++interface Props {project:Project;onDirty(value:boolean):void;onBusy(value:boolean):void}
++
++/** Reuse the native account sound library in this project's workspace, without inventing project bindings. */
++export default function ProjectSound({project,onDirty,onBusy}:Props){
++ const host=useRef<HTMLDivElement>(null),callbacks=useRef({onDirty,onBusy});callbacks.current={onDirty,onBusy};
++ const [loading,setLoading]=useState(true),[error,setError]=useState(''),[attempt,setAttempt]=useState(0),[unsettled,setUnsettled]=useState(false);
++ useEffect(()=>{
++  const target=host.current;if(!target)return;let alive=true,controller:SoundController|undefined,observer:MutationObserver|undefined,root:ShadowRoot|null=null,last='';
++  const report=()=>{if(!alive||!controller)return;const status=controller.getState(),signature=JSON.stringify(status);if(signature===last)return;last=signature;setUnsettled(status.unsettled===true);callbacks.current.onDirty(status.dirty);callbacks.current.onBusy(status.busy);};
++  const unload=(event:BeforeUnloadEvent)=>{const status=controller?.getState();if(status?.dirty||status?.busy){event.preventDefault();event.returnValue='';}};
++  const eventReport=()=>{report();queueMicrotask(report);};
++  setLoading(true);setError('');
++  const modulePath='/studio/materials-sound.mjs'+(attempt?'?retry='+attempt:'');
++  import(/* @vite-ignore */ modulePath).then((module:SoundModule)=>{
++   if(!alive)return;controller=module.mountMaterials(target);root=target.shadowRoot;
++   if(!root||typeof controller?.getState!=='function')throw Error('声音面板未能完整载入');
++   const frame=root.querySelector('.frame-body');frame?.classList.add('project-sound-panel');
++   observer=new MutationObserver(report);observer.observe(root,{subtree:true,childList:true,attributes:true,characterData:true});
++   for(const name of ['input','change','click','submit','reset','close'])root.addEventListener(name,eventReport,true);
++   window.addEventListener('beforeunload',unload);report();setLoading(false);
++  }).catch(()=>{if(alive){setLoading(false);setError('声音未能载入');}});
++  return()=>{alive=false;observer?.disconnect();if(root)for(const name of ['input','change','click','submit','reset','close'])root.removeEventListener(name,eventReport,true);window.removeEventListener('beforeunload',unload);controller?.dispose?.();callbacks.current.onDirty(false);callbacks.current.onBusy(false);};
++ },[project.id,attempt]);
++ return <section className="cw-project-sound" aria-label="声音"><header className="cw-project-section-heading"><h2>声音</h2><span className="cw-small-copy">账号声音库</span></header>{loading&&<p role="status">正在读取声音…</p>}{unsettled&&<p role="status" className="cw-warning">上次操作结果待核对，请返回原保存或撤销操作重试。</p>}{error&&<div role="alert"><p>{error}</p><Button type="button" variant="outline" onClick={()=>setAttempt(value=>value+1)}>重新载入</Button></div>}<div key={attempt} ref={host} className="cw-project-sound-native"/></section>;
++}
+diff --git a/components/workspace/remark-actor-labels.mjs b/components/workspace/remark-actor-labels.mjs
+new file mode 100644
+index 0000000..71ff706
+--- /dev/null
++++ b/components/workspace/remark-actor-labels.mjs
+@@ -0,0 +1,76 @@
++const scopes = new Set(['paragraph', 'heading', 'tableCell']);
++const inlineContainers = new Set(['emphasis', 'strong', 'delete']);
++
++// Stable presentation only: the same authored label keeps its color after edits.
++function tone(value) {
++  let hash = 2166136261;
++  for (const character of value) hash = Math.imul(hash ^ character.codePointAt(0), 16777619);
++  return (hash >>> 0) % 4;
++}
++
++/** Display short, literal Chinese bracket labels without rewriting the source.
++ * Markdown links/code/images remain opaque; protected 〔素材引用〕 markers stay text.
++ * A label must fit within one text node, so markup and nested brackets cannot
++ * accidentally turn into an interactive or partially formatted label.
++ */
++export default function remarkActorLabels() {
++  return tree => {
++    function transform(scope) {
++      const pieces = []; let value = '', containsHtml = false;
++      function collect(node) {
++        if (node.type === 'html') { containsHtml = true; return; }
++        if (node.type === 'text') {
++          const start = value.length;
++          value += node.value;
++          pieces.push({node, start, end: value.length});
++        } else if (node === scope || inlineContainers.has(node.type)) {
++          for (const child of node.children || []) collect(child);
++        } else value += node.type === 'break' ? '\n' : '\0';
++      }
++      collect(scope);
++      // Inline raw HTML has no mdast subtree. Keep the complete mixed scope
++      // literal instead of styling content between an opening/closing HTML tag.
++      if (containsHtml) return;
++      const replacements = new Map();
++      let depth = 0, start = -1, nested = false;
++      for (let index = 0; index < value.length; index++) {
++        if (value[index] === '【') {
++          if (!depth) { start = index; nested = false; } else nested = true;
++          depth++;
++        } else if (value[index] === '】' && depth) {
++          depth--;
++          if (depth || nested) continue;
++          const label = value.slice(start + 1, index).trim();
++          if (!label || label.length > 48 || /[\r\n\0〔〕]/.test(label)) continue;
++          const piece = pieces.find(part => start >= part.start && index < part.end);
++          if (!piece) continue;
++          const ranges = replacements.get(piece.node) || [];
++          ranges.push({start: start - piece.start, end: index + 1 - piece.start, label});
++          replacements.set(piece.node, ranges);
++        }
++      }
++      function replace(parent) {
++        if (!Array.isArray(parent.children)) return;
++        parent.children = parent.children.flatMap(node => {
++          const ranges = replacements.get(node);
++          if (!ranges) { if (inlineContainers.has(node.type)) replace(node); return [node]; }
++          const out = []; let cursor = 0;
++          for (const range of ranges) {
++            if (range.start > cursor) out.push({type:'text', value:node.value.slice(cursor, range.start)});
++            out.push({type:'emphasis', data:{hName:'span', hProperties:{className:['cw-actor-label'], 'data-tone':String(tone(range.label))}}, children:[{type:'text', value:range.label}]});
++            cursor = range.end;
++          }
++          if (cursor < node.value.length) out.push({type:'text', value:node.value.slice(cursor)});
++          return out;
++        });
++      }
++      replace(scope);
++    }
++    function visit(node) {
++      if (scopes.has(node.type)) { transform(node); return; }
++      // Traverse structural blocks only. Opaque inline nodes are handled above.
++      for (const child of node.children || []) visit(child);
++    }
++    visit(tree);
++  };
++}
+diff --git a/components/workspace/studio-home.tsx b/components/workspace/studio-home.tsx
+index 1057036..2ce8b96 100644
+--- a/components/workspace/studio-home.tsx
++++ b/components/workspace/studio-home.tsx
+@@ -4,7 +4,7 @@ import {StudioIntro,type IntroOutcome} from './creative-motion';
+ import Dashboard from './dashboard';
+ import MomentumProjectBoard from './momentum-project-board';
+ import type {Project,StoryItem} from './model';
+-interface Props{refreshKey?:number;onAttempt(action:()=>void):void;introScope?:string;projects:Project[];project:Project|null;items:StoryItem[];workspaceReady?:boolean;workspaceError?:boolean;onReloadWorkspace?():void;onOpen(project:Project):void;onNavigate(view:'projects'|'materials'|'canvas'|'review'):void;onDashboardOpen(pid:string,view:string,item?:string):void}
++interface Props{refreshKey?:number;onAttempt(action:()=>void):void;introScope?:string;projects:Project[];project:Project|null;items:StoryItem[];workspaceReady?:boolean;workspaceError?:boolean;onReloadWorkspace?():void;onOpen(project:Project):void;onNavigate(view:'projects'|'materials'|'canvas'):void;onDashboardOpen(pid:string,view:string,item?:string):void}
+ export default function StudioHome({refreshKey=0,onAttempt,introScope,projects,project,workspaceReady=true,workspaceError=false,onReloadWorkspace,onNavigate,onDashboardOpen}:Props){
+  const [done,setDone]=useState(false),[retry,setRetry]=useState(0);
+  // Fonts and dashboard summaries enhance an already usable workspace; neither gates entry.
+diff --git a/components/workspace/workflow-navigation.mjs b/components/workspace/workflow-navigation.mjs
+index 34b79ca..ed1864c 100644
+--- a/components/workspace/workflow-navigation.mjs
++++ b/components/workspace/workflow-navigation.mjs
+@@ -4,7 +4,18 @@ export const workflowStages = [
+  {value:'storyboard',label:'分镜'}, {value:'prompts',label:'提示词'},
+  {value:'canvas',label:'角色场景'}, {value:'relations',label:'项目关系'},
+  {value:'novel',label:'小说大纲'}, {value:'planning',label:'创作规划'},
+- {value:'review',label:'候选审阅'}, {value:'tasks',label:'协作任务'},
+- {value:'production',label:'制作'}, {value:'delivery',label:'交付'},
++ {value:'sound',label:'声音'},
+ ];
+ export function workflowStage(view){ return view; }
++
++/** Retired bookmarks return to creative work unless an uncertain write needs recovery. */
++export function resolveProjectView(view, projectId, storage) {
++ const replacements={review:'screenplay',tasks:'planning',production:'storyboard',delivery:'prompts'};
++ if(!Object.hasOwn(replacements,view))return view;
++ if(['production','delivery'].includes(view)&&projectId){
++  try {const pending=JSON.parse(storage?.getItem('cw-handoff-pending:'+projectId)||'null');
++   if(pending?.key&&pending.input?.project_id===projectId)return view;
++  } catch {return view;} // Recovery remains reachable when browser storage is unavailable.
++ }
++ return replacements[view];
++}
+diff --git a/components/workspace/workspace-modules.tsx b/components/workspace/workspace-modules.tsx
+index 2f6abbf..986cb36 100644
+--- a/components/workspace/workspace-modules.tsx
++++ b/components/workspace/workspace-modules.tsx
+@@ -12,11 +12,10 @@ import {ToggleGroup,ToggleGroupItem} from '@/components/ui/toggle-group';
+ import { Input } from '@/components/ui/input';
+ import { Textarea } from '@/components/ui/textarea';
+ import ActorLibrary from './actor-library';
+-import ChangesetReview from './changeset-review';
+ import MaterialWorkspace from './material-workspace';
+ import StudioHome from './studio-home';
+ import { ProjectPreview } from './project-preview';
+-import TaskWorkspace from './task-workspace';
++import ProjectSound from './project-sound';
+ import ProductionWorkspace from './production-workspace';
+ import ProjectRelations from './project-relations';
+ import CreativeStructure from './creative-structure';
+@@ -48,14 +47,13 @@ function Projects({ api, projects, project, onProjectCreated, onOpenProject, onN
+ function StoryDocuments(props: Props) {
+   const { view, project, items, onSelect, onNavigate, api, onError, onNotice } = props;
+   const [filter, setFilter] = useState('all');
+-  useEffect(() => { if (view === 'review' && !props.candidates) props.onCandidates(); }, [view, props.candidates]);
+   const kinds = view === 'novel' ? ['outline', 'simulation', 'chapter', 'adaptation', 'review_policy'] : view === 'screenplay' ? ['scene', 'adaptation'] : [];
+-  const rows = items.filter(n => (view === 'review' ? n.status !== 'accepted' : kinds.includes(n.kind)) && (filter === 'all' || n.kind === filter));
++  const rows = items.filter(n => kinds.includes(n.kind) && (filter === 'all' || n.kind === filter));
+   if (!project) return <Empty title="先选择一个作品"></Empty>;
+   const check = async (item: StoryItem) => { try { const result = await api.story(project.id, `items/${encodeURIComponent(item.id)}/check?version=${item.version}`) as { checks?: { message?: string; code?: string }[] }; if (!Array.isArray(result.checks)) { onNotice('检查结果已返回，请在原工作台查看完整连续性报告。'); return; } onNotice(result.checks.length ? result.checks.map(f => f.message || '存在需复核项').join('；') : '此版本确定性检查未发现问题；创作质量仍需人工审阅。'); } catch (err) { onError(message(err)); } };
+   return <section className="cw-module"><div className="cw-module-toolbar"><Button variant="ghost" onClick={() => onNavigate('canvas')}>回到画布<ArrowRight /></Button></div>
+     {kinds.length > 0 && <ToggleGroup type="single" value={filter} onValueChange={value=>{if(value)setFilter(value);}} className="cw-module-tabs" aria-label="文稿类型"><ToggleGroupItem value="all">全部</ToggleGroupItem>{kinds.map(k=><ToggleGroupItem key={k} value={k}>{kindLabels[k as keyof typeof kindLabels]}</ToggleGroupItem>)}</ToggleGroup>}
+-    {rows.length ? <div className="cw-content-list">{rows.map(n => <div className="cw-content-row" key={n.id}><Button variant="record" size="record" type="button" className="cw-document-open" onClick={() => onSelect(n.id)}>{n.kind === 'scene' ? <Clapperboard size={22} /> : <BookOpen size={22} />}<div><h3>{n.content.title}</h3><MarkdownExcerpt content={n.content.body}/><small>{kindLabels[n.kind]} · {statusLabels[n.status] || n.status}{n.needs_review?.length ? ' · 来源待复核' : ''}</small></div></Button><div className="cw-row-actions"><Button variant="ghost" size="sm" onClick={() => void check(n)}>检查</Button>{n.kind === 'scene' && n.status === 'accepted' && n.content.spec?.screenplay ? <a href={referenceVersionUrl(project.id, n)} download aria-label={`导出${n.content.title}的精确版本`}><ArrowDownToLine size={15} /></a> : null}<Button variant="ghost" size="icon-sm" onClick={() => onSelect(n.id)} aria-label={`查看${n.content.title}`}><ChevronRight /></Button></div></div>)}</div> : <Empty title={view === 'review' ? '当前范围没有待审候选' : '为作品留下第一份文稿'}>{view === 'review' ? '新候选会出现在这里。' : '使用右上角新建。'}</Empty>}</section>;
++    {rows.length ? <div className="cw-content-list">{rows.map(n => <div className="cw-content-row" key={n.id}><Button variant="record" size="record" type="button" className="cw-document-open" onClick={() => onSelect(n.id)}>{n.kind === 'scene' ? <Clapperboard size={22} /> : <BookOpen size={22} />}<div><h3>{n.content.title}</h3><MarkdownExcerpt content={n.content.body}/><small>{kindLabels[n.kind]} · {statusLabels[n.status] || n.status}{n.needs_review?.length ? ' · 来源待复核' : ''}</small></div></Button><div className="cw-row-actions"><Button variant="ghost" size="sm" onClick={() => void check(n)}>检查</Button>{n.kind === 'scene' && n.status === 'accepted' && n.content.spec?.screenplay ? <a href={referenceVersionUrl(project.id, n)} download aria-label={`导出${n.content.title}的精确版本`}><ArrowDownToLine size={15} /></a> : null}<Button variant="ghost" size="icon-sm" onClick={() => onSelect(n.id)} aria-label={`查看${n.content.title}`}><ChevronRight /></Button></div></div>)}</div> : <Empty title="暂无文稿"/>}</section>;
+ }
+ 
+ interface ConnectionStatus { mode:string; project_access:string; default_enabled:boolean }
+@@ -75,10 +73,9 @@ export default function WorkspaceModules(props: Props) {
+   if (props.view === 'planning') return props.project ? <ProductionWorkspace key={props.project.id} {...props} stage="planning" /> : <Empty title="选择项目" />;
+   if (props.view === 'screenplay') return <ProductionWorkspace key={props.project?.id || 'none'} {...props} stage="story" />;
+   if (['storyboard','production','delivery'].includes(props.view)) return <ProductionWorkspace key={props.project?.id || 'none'} {...props} stage={props.view as 'storyboard'|'production'|'delivery'} />;
+-  if (props.view === 'review') return <><ChangesetReview {...props} /><section className="cw-import-panel" aria-label="单条故事候选"><h2>故事候选</h2><StoryDocuments {...props} /></section></>;
++  if (props.view === 'sound') return props.project ? <ProjectSound key={props.project.id} project={props.project} onDirty={props.onDirty} onBusy={props.onBusy}/> : <Empty title="选择项目" />;
+   if (props.view === 'projects') return <Projects {...props} />;
+   if (props.view === 'ip') return <ActorLibrary {...props} onOpenProject={(pid,itemId)=>props.onDashboardOpen(pid,'canvas',itemId)} />;
+-  if (props.view === 'tasks') return <TaskWorkspace key={props.project?.id || 'none'} {...props} />;
+   if (props.view === 'connection') return <><WorkspaceProjectConnection onRefresh={async(id)=>{const projects=await props.api.listProjects();const created=projects.find(p=>p.id===id);if(!created)throw Error("已创建，项目列表回读待核验");await props.onProjectCreated(created);}} /><Connection {...props} /></>;
+   if (props.view === 'materials') return <><div className="cw-materials-entry"><a href="/materials" onClick={event=>{event.preventDefault();props.onAttempt(()=>location.assign('/materials'));}}>素材管理<ArrowRight size={16}/></a></div><MaterialWorkspace {...props} /></>;
+   return <StoryDocuments {...props} />;
+diff --git a/components/workspace/workspace.tsx b/components/workspace/workspace.tsx
+index 2f896ee..9943feb 100644
+--- a/components/workspace/workspace.tsx
++++ b/components/workspace/workspace.tsx
+@@ -9,6 +9,7 @@ import { ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, Check, Clapperboard, Cir
+ import { Button } from '@/components/ui/button';
+ import {ProjectNavigation,ProjectSwitcher} from './project-navigation';
+ import {directoryKindLabel} from './project-directory.mjs';
++import {resolveProjectView} from './workflow-navigation.mjs';
+ import { Sheet, SheetContent, SheetTitle, SheetDescription } from '@/components/ui/sheet';
+ import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogAction, AlertDialogCancel } from '@/components/ui/alert-dialog';
+ import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+@@ -39,8 +40,8 @@ const EmptyMedia: MediaMap = {};
+ const nav = [
+   { id: 'home', label: '看板', icon: LayoutDashboard },
+   { id: 'canvas', label: '角色场景', icon: UsersRound }, { id: 'relations', label: '项目关系', icon: Network }, { id: 'planning', label: '创作规划', icon: FolderOpen }, { id: 'projects', label: '项目', icon: FolderOpen }, { id: 'ip', label: '演员', icon: UsersRound },
+-  { id: 'novel', label: '小说创作', icon: BookOpen }, { id: 'screenplay', label: '故事', icon: Clapperboard }, {id:'episodes',label:'剧集',icon:BookOpen}, {id:'prompts',label:'提示词',icon:ListChecks}, {id:'storyboard',label:'分镜',icon:Layers3}, {id:'production',label:'制作交付',icon:Workflow}, {id:'delivery',label:'交付',icon:ArrowUpRight}, { id: 'materials', label: '素材', icon: Images },
+-  { id: 'review', label: '候选审阅', icon: ListChecks }, { id: 'tasks', label: '协作任务', icon: Workflow }, { id: 'connection', label: '连接', icon: Link2 },
++  { id: 'novel', label: '小说创作', icon: BookOpen }, { id: 'screenplay', label: '故事', icon: Clapperboard }, {id:'episodes',label:'剧集',icon:BookOpen}, {id:'prompts',label:'提示词',icon:ListChecks}, {id:'storyboard',label:'分镜',icon:Layers3}, {id:'sound',label:'声音',icon:Music2}, {id:'production',label:'恢复记录',icon:Workflow}, {id:'delivery',label:'恢复记录',icon:ArrowUpRight}, { id: 'materials', label: '素材', icon: Images },
++  { id: 'connection', label: '连接', icon: Link2 },
+ ] as const;
+ export type WorkspaceView = typeof nav[number]['id'];
+ interface Route { head?:boolean; actorTab?: string | null; actor?: string | null; view: WorkspaceView; project: string; item: string | null; newKind: ItemKind | null }
+@@ -48,7 +49,8 @@ const initialRoute: Route = { view: 'home', project: '', item: null, newKind: nu
+ function fromLocation(): Route {
+   const q = new URLSearchParams(window.location.search), fragment = window.location.hash.slice(1);
+   // Preserve existing Site bookmarks when the root forwards to the React UI.
+-  const requestedView = q.get('view') || ({assets:'materials',story:'canvas',characters:'ip'} as Record<string,string>)[fragment] || fragment;
++  const rawView = q.get('view') || ({assets:'materials',story:'canvas',characters:'ip'} as Record<string,string>)[fragment] || fragment;
++  const requestedView = resolveProjectView(rawView, q.get('project'), {getItem:(key:string)=>sessionStorage.getItem(key)});
+   const view: WorkspaceView = nav.some(n => n.id === requestedView) ? requestedView as WorkspaceView : q.get('project') ? 'canvas' : 'home';
+   return { view, head:view!=='home'&&q.get('head')==='1', actor: q.get('actor'), actorTab: q.get('actorTab')==='references' ? 'looks' : ['looks', 'profile', 'identity', 'credits'].includes(q.get('actorTab') || '') ? q.get('actorTab') : null, project: view === 'home' ? '' : q.get('project') || '', item: view === 'home' ? null : q.get('item'), newKind: null };
+ }
+@@ -79,6 +81,7 @@ export default function Workspace({ api: injectedApi, mediaByItem = EmptyMedia,
+   const selected = useMemo(() => route.head ? dashboardHeadItem(history,route.item,items.find(n=>n.id===route.item)) as StoryItem|null : items.find(n => n.id === route.item) || (history?.item.id === route.item ? { id: history.item.id, kind: history.item.kind, version: history.item.head_version, accepted_version: history.item.accepted_version, status: history.item.accepted_version === history.item.head_version ? 'accepted' : 'draft', content: history.versions.find(v => v.version === history.item.head_version)?.content || emptyContent() } as StoryItem : null), [items, route.item, route.head, history]);
+   const selectedOpen = !!route.item || !!route.newKind;
+   const applyRoute = useCallback((next: Route, replace = false) => {
++    next={...next,view:resolveProjectView(next.view,next.project,{getItem:(key:string)=>sessionStorage.getItem(key)}) as WorkspaceView};
+     if(next.view==='home')next={...next,project:'',item:null,newKind:null,head:false};
+     const current=routeRef.current;
+     if(current.view===next.view&&current.project===next.project&&current.item===next.item&&current.newKind===next.newKind&&Boolean(current.head)===Boolean(next.head)&&(current.actor||null)===(next.actor||null)&&(current.actorTab||null)===(next.actorTab||null)){setMobileNav(false);return;}
+@@ -155,13 +158,11 @@ export default function Workspace({ api: injectedApi, mediaByItem = EmptyMedia,
+   const scenes = relatedScenes(items, showAllScenes ? null : selected);
+   const primaryKinds: ItemKind[] = project?.kind==='long_form' ? ['character','chapter','outline'] : project?.kind==='daily' ? ['character','event'] : ['character','scene','event'];
+   const allCanvasKinds: ItemKind[] = ['character','instance','event','relation','chapter','adaptation','scene','episode','shot','development_plan','outline','knowledge'];
+-  const projectViews: WorkspaceView[] = ['canvas', 'novel', 'screenplay', 'episodes', 'prompts', 'review', 'tasks', 'storyboard', 'production', 'delivery', 'relations', 'planning'];
++  const projectViews: WorkspaceView[] = ['canvas', 'novel', 'screenplay', 'episodes', 'prompts', 'sound', 'storyboard', 'production', 'delivery', 'relations', 'planning'];
+   const inProject = projectViews.includes(route.view);
+-  const planningHref='/workspace?view=planning'+(route.project?'&project='+encodeURIComponent(route.project):'');
+-  const managementHref='/studio'+(route.project?'?project='+encodeURIComponent(route.project):'');
+   const navBody = <><nav aria-label="工作区导航">{nav.filter(n => ['home','projects','ip','materials'].includes(n.id)).map(n => <Button variant="navigation" type="button" key={n.id} onClick={() => navigate({ view: n.id, item: null, newKind: null })} aria-current={route.view === n.id || n.id === 'projects' && projectViews.includes(route.view) ? 'page' : undefined}><n.icon size={19} strokeWidth={1.6} /><span>{n.label}</span></Button>)}</nav>
+-    <div className="cw-nav-footer"><div className="cw-global-services"><a href={planningHref} onClick={event => { event.preventDefault(); navigate({view:'planning',item:null,newKind:null}); }}><FolderOpen size={17}/><span>创作规划</span></a><a href={managementHref} onClick={event => { event.preventDefault(); attempt(() => window.location.assign(managementHref)); }}><Clapperboard size={17}/><span>创作管理</span></a><a href="/sound" onClick={event => { event.preventDefault(); attempt(() => window.location.assign('/sound')); }}><Music2 size={17}/><span>声音</span></a></div><Button variant="navigation" type="button" onClick={() => navigate({view:'connection',item:null,newKind:null})} aria-current={route.view==='connection'?'page':undefined}><Link2 size={17}/><span>连接</span></Button></div></>;
+-  const inspector = <ItemInspector api={api} projectId={route.project} onBusy={moduleBusy} onReview={() => navigate({view:'review',item:null,newKind:null})} item={selected} newKind={route.newKind} history={history} loading={historyLoading} busy={busy || readbackPending} readbackPending={readbackPending} media={mediaByItem} items={items} acceptedItems={acceptedGraph?.nodes || []} onClose={closeInspector} onActors={(actor) => navigate({view:'ip',actor:actor||null,item:null,newKind:null})} onSelect={select} onDirty={moduleDirty} onAttempt={attempt} onSave={save} onDecision={decide} onSource={inspectSource} />;
++    <div className="cw-nav-footer"><Button variant="navigation" type="button" onClick={() => navigate({view:'connection',item:null,newKind:null})} aria-current={route.view==='connection'?'page':undefined}><Link2 size={17}/><span>连接</span></Button></div></>;
++  const inspector = <ItemInspector api={api} projectId={route.project} onBusy={moduleBusy} item={selected} newKind={route.newKind} history={history} loading={historyLoading} busy={busy || readbackPending} readbackPending={readbackPending} media={mediaByItem} items={items} acceptedItems={acceptedGraph?.nodes || []} onClose={closeInspector} onActors={(actor) => navigate({view:'ip',actor:actor||null,item:null,newKind:null})} onSelect={select} onDirty={moduleDirty} onAttempt={attempt} onSave={save} onDecision={decide} onSource={inspectSource} />;
+   const actorShowcase = route.view === 'ip' && Boolean(route.actor);
+   return <div className={`cw-workspace cw-theme cw-light cw-creative-flow cw-unified-shell ${actorShowcase ? 'cw-experience-actor' : ''} ${route.view === 'home' ? 'cw-experience-home' : ''}`} data-view={route.view} data-project-work={inProject} data-reduced-motion={reducedMotion ? 'true' : 'false'}>
+     <aside className="cw-sidebar" aria-label="主导航"><a href="/workspace" className="cw-brand" onClick={event=>{event.preventDefault();navigate({view:'home',item:null,newKind:null});}}><span>CINEWEAVE<span>STUDIO</span></span></a>{navBody}</aside>
+diff --git a/lib/sound-home.ts b/lib/sound-home.ts
+index d78e5fe..9265357 100644
+--- a/lib/sound-home.ts
++++ b/lib/sound-home.ts
+@@ -5,7 +5,7 @@ export const soundHome = `<!doctype html>
+ <main><section class="intro"><div><h1>收藏声音，<span>定义音色。</span></h1></div><p class="private-label">仅自己可见 · 私有存储</p></section>
+ <p class="workspace-note">管理音频与音色候选。真人参考需声明授权范围，不用于生物识别。</p>
+ <nav class="tabs" role="tablist" aria-label="声音资产类型"><button id="tab-audio" role="tab" type="button" aria-selected="true" aria-controls="sound-panel" class="active">音频文件 <span id="audio-count">—</span></button><button id="tab-voice" role="tab" type="button" aria-selected="false" aria-controls="sound-panel" tabindex="-1">音色身份 <span id="voice-count">—</span></button></nav>
+-<section id="sound-panel" role="tabpanel" aria-labelledby="tab-audio"><div class="toolbar"><div><h2 id="list-title">音频文件</h2><p id="list-help">已收藏的音频文件</p></div><div class="tools"><label class="search-label"><span class="sr-only">搜索当前资产</span><input id="sound-search" type="search" placeholder="搜索名称、标签、平台与来源"></label><label><span class="sr-only">显示范围</span><select id="sound-visibility"><option value="active">使用中的资产</option><option value="archived">已归档资产</option></select></label><button id="sound-refresh" class="button outlined" type="button">刷新</button><button id="sound-new" class="button orange" type="button">上传音频</button></div></div>
++<section id="sound-panel" role="tabpanel" aria-labelledby="tab-audio"><div class="toolbar"><div><h2 id="list-title">音频文件</h2><p id="list-help">已收藏的音频文件</p></div><div class="tools"><label class="search-label"><span class="sr-only">搜索当前资产</span><input id="sound-search" type="search" placeholder="搜索名称、标签、平台与来源"></label><div class="sound-visibility" role="group" aria-label="显示范围"><button id="sound-active" type="button" aria-pressed="true">使用中</button><button id="sound-archived" type="button" aria-pressed="false">已归档</button></div><label hidden><span>显示范围</span><select id="sound-visibility" tabindex="-1" aria-hidden="true"><option value="active">使用中的资产</option><option value="archived">已归档资产</option></select></label><button id="sound-refresh" class="button outlined" type="button">刷新</button><button id="sound-new" class="button orange" type="button">上传音频</button></div></div>
+ <div class="status-row"><p id="sound-status" role="status" aria-live="polite">正在读取私有资产…</p><button id="sound-undo" type="button" class="text-button" hidden>撤销上次修改</button></div><div id="sound-error" class="error" role="alert" hidden></div><div id="sound-list" class="sound-list" aria-busy="true"></div><div class="paging"><button id="sound-more" class="button outlined" type="button" hidden>加载更多</button></div></section>
+ <footer>文件、创作设定和逐句录音分别保存。转录与自动识别尚未执行。</footer></main>
+ <dialog id="upload-dialog" aria-labelledby="upload-title"><div class="dialog-head"><div><h2 id="upload-title">上传真实音频</h2><p>WAV、MP3 或 FLAC，单个文件不超过 16 MiB。</p></div><button class="close-button" data-close="upload-dialog" type="button" aria-label="关闭上传">关闭</button></div><form id="upload-form"><div class="dialog-body"><label>音频文件<input id="upload-file" type="file" accept=".wav,.mp3,.flac,audio/wav,audio/mpeg,audio/flac" required></label><p id="upload-file-status" class="muted">原文件和各自来源会保留。</p><label>原始来源描述<textarea id="upload-description" maxlength="10000" rows="3"></textarea></label><label>原始提示词<textarea id="upload-prompt" maxlength="100000" rows="3" placeholder="仅填写实际取得的原文；未取得请留空"></textarea></label><input id="upload-parameters" type="hidden"><label class="button outlined compact">选择来源资料<input class="sr-only" id="upload-parameters-file" type="file" accept=".json,application/json"></label><p id="upload-parameters-status" class="muted" role="status"></p><label>来源说明<textarea id="upload-origin" maxlength="2000" rows="2" placeholder="例如：自己录制、已取得的项目素材"></textarea></label><fieldset><legend>来源授权说明</legend><label>状态<select id="upload-auth"><option value="unconfirmed">未核实</option><option value="user_declared">我已声明授权范围</option></select></label><label>授权范围<input id="upload-scope" maxlength="2000" placeholder="例如：本人原创，允许本项目使用"></label><label>授权备注<textarea id="upload-auth-note" maxlength="2000" rows="2"></textarea></label></fieldset><p class="muted">上传失败时，本标签页保留计划和来源草稿。未传完的文件需要重新选择同一份文件；可继续上次上传。</p><p id="upload-progress" class="progress" role="status"></p><div id="upload-error" class="error" role="alert" hidden></div></div><div class="form-actions"><button id="upload-submit" class="button orange" type="submit">上传并入库</button><button id="upload-discard" class="text-button" type="button">清除未完成草稿</button></div></form></dialog>
+diff --git a/public/sound.css b/public/sound.css
+index ac8596e..118e715 100644
+--- a/public/sound.css
++++ b/public/sound.css
+@@ -1,3 +1,22 @@
+ :root{--paper:#f3f1eb;--surface:#fffefa;--ink:#232820;--muted:#646b5d;--line:#ddded5;--orange:#be4920;--orange-soft:#f8e7de;--green:#47644d;--serif:Georgia,'Songti SC','Noto Serif CJK SC',serif;--sans:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif;--shadow:0 18px 70px #24271f20}*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:14px/1.6 var(--sans);-webkit-font-smoothing:antialiased}::selection{background:#efc0aa;color:var(--ink)}button,input,textarea,select{font:inherit;color:inherit}input,textarea{caret-color:var(--orange)}button{cursor:pointer;border:0;background:transparent}button:disabled{cursor:not-allowed;opacity:.45}a{color:inherit;text-decoration:none;text-underline-offset:4px}button,a,select{touch-action:manipulation}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #b44822;outline-offset:3px}[hidden]{display:none!important}.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}.skip-link{position:fixed;top:-80px;left:16px;z-index:100;background:var(--ink);color:white;padding:12px}.skip-link:focus{top:10px}.topbar{min-height:88px;display:flex;align-items:center;justify-content:space-between;padding:18px 4.2%;border-bottom:1px solid var(--line);gap:20px}.brand{display:flex;align-items:center;gap:12px;font-size:25px;font-weight:760;letter-spacing:-1.3px}.brand-icon{width:23px;height:23px;border:5px solid #d86135;border-right-width:2px;transform:rotate(-5deg)}.brand-divider{height:23px;width:1px;background:#c9cbbf;margin:0 3px}.brand-chinese{font-size:14px;font-weight:500;letter-spacing:2px}.button{min-height:44px;border-radius:5px;padding:10px 17px;font-weight:550;display:inline-flex;align-items:center;justify-content:center;gap:10px}.compact{min-height:36px;font-size:12px;padding:8px 12px}.outlined{border:1px solid #676f5e;background:transparent}.outlined:hover{background:#e7e8df}.orange{background:var(--orange);color:var(--surface)}.orange:hover{background:#a63d19}.text-button{padding:10px 0;color:var(--green);font-size:13px}.text-button:hover{text-decoration:underline}.intro{padding:43px 0 24px;display:flex;justify-content:space-between;align-items:end;gap:24px}main{max-width:1540px;margin:0 auto;padding:0 4.2%}h1{font:500 42px/1.3 var(--serif);margin:0}h1 span{color:var(--orange)}.intro p{color:var(--muted);margin:14px 0 0}.private-label{font-size:12px;white-space:nowrap}.workspace-note{max-width:85ch;margin:0 0 28px;color:var(--muted);font-size:13px}.tabs{display:flex;gap:32px;border-bottom:1px solid var(--line)}.tabs button{font-size:17px;padding:16px 2px;position:relative;color:var(--muted);min-height:52px}.tabs button.active{color:var(--green);font-weight:650}.tabs button.active:after{content:'';height:3px;background:var(--green);position:absolute;bottom:-1px;left:0;right:0}.tabs span{font-size:12px;margin-left:8px;background:#e1e5db;padding:2px 8px;border-radius:3px;font-variant-numeric:tabular-nums}.toolbar{padding:30px 0 16px;display:flex;justify-content:space-between;align-items:center;gap:25px}h2{font-size:21px;margin:0;font-weight:600}.toolbar p{font-size:12px;color:var(--muted);margin:5px 0 0}.tools{display:flex;gap:10px;align-items:center}.tools input,.tools select{min-height:44px;background:var(--surface);border:1px solid var(--line);border-radius:5px;padding:10px 12px}.search-label input{width:240px}.status-row{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:40px;margin:0 0 8px}.status-row p{margin:0;color:var(--muted);font-size:12px}.sound-list{border-top:1px solid var(--line)}.sound-row{display:grid;grid-template-columns:45px minmax(0,1fr) 230px auto;gap:20px;align-items:center;border-bottom:1px solid var(--line);padding:23px 6px}.row-index{font:26px var(--serif);color:var(--green);font-variant-numeric:tabular-nums}.row-main h3{font-size:16px;margin:0 0 5px;overflow-wrap:anywhere}.row-main p{margin:0;color:var(--muted);font-size:12px;max-width:75ch;white-space:pre-wrap;overflow-wrap:anywhere}.row-meta{display:flex;flex-wrap:wrap;gap:7px;font-size:12px;color:var(--muted)}.badge{padding:3px 7px;background:#e4e8df;color:#3c503d;border-radius:3px;white-space:nowrap}.badge.pending{background:#f0e6db;color:#835b35}.empty-state{min-height:315px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:12px;padding:40px 20px}.empty-state strong{font:36px var(--serif);color:var(--green)}.empty-state h3{font-size:20px;margin:0}.empty-state p{max-width:55ch;color:var(--muted);margin:0}.paging{display:flex;justify-content:center;padding:24px}footer{padding:20px 0 40px;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}.error{background:#f8e7de;border:1px solid #d6af99;color:#783519;padding:12px 14px;border-radius:4px;font-size:13px;margin:12px 0;white-space:pre-wrap;overflow-wrap:anywhere}.muted,small{color:var(--muted);font-size:12px}.progress{color:var(--green);font-size:13px;white-space:pre-wrap}dialog{padding:0;border:1px solid var(--line);border-radius:9px;background:var(--surface);color:var(--ink);width:min(760px,calc(100vw - 40px));max-height:90dvh;box-shadow:var(--shadow)}dialog::backdrop{background:#23282066}.detail-dialog{width:min(1080px,calc(100vw - 40px))}.dialog-head{position:sticky;top:0;z-index:2;background:var(--surface);padding:22px 26px;border-bottom:1px solid var(--line);display:flex;align-items:start;justify-content:space-between;gap:20px}.dialog-head h2{overflow-wrap:anywhere}.dialog-head p{color:var(--muted);font-size:12px;margin:7px 0 0}.close-button{font-size:13px;padding:6px;min-height:36px;flex-shrink:0;color:var(--green);text-decoration:underline}.dialog-body{padding:22px 26px;overflow-wrap:anywhere}.dialog-body label{display:flex;flex-direction:column;gap:7px;margin-bottom:18px;font-size:13px;font-weight:550}.dialog-body input:not([type=checkbox]),.dialog-body select,.dialog-body textarea{width:100%;border:1px solid #c5c9bc;background:var(--surface);border-radius:4px;min-height:43px;padding:10px 11px;font-weight:400}.dialog-body input[type=file]{padding:10px;font-size:12px}.dialog-body textarea{resize:vertical;line-height:1.6}.dialog-body small{font-weight:400}.checks{display:flex;flex-wrap:wrap;gap:18px}.checks label{flex-direction:row;align-items:center;font-weight:400}.checks input{accent-color:var(--green);width:17px;height:17px}fieldset{border:1px solid var(--line);margin:22px 0;padding:20px 18px 3px;border-radius:4px}legend{font-weight:600;font-size:14px;padding:0 7px}.form-actions{position:sticky;bottom:0;display:flex;align-items:center;gap:20px;padding:16px 26px;background:var(--surface);border-top:1px solid var(--line);flex-wrap:wrap}.form-actions p{margin:0;font-size:12px;color:var(--muted)}.two-fields{display:grid;grid-template-columns:1fr 1fr;gap:16px}.inline-actions{display:flex;gap:10px;flex-wrap:wrap;margin:0 0 16px}details{border-top:1px solid var(--line);padding:17px 0}summary{cursor:pointer;font-size:14px;font-weight:600;padding:3px 0}details>div,details>p,details>label{margin-top:17px}.detail-overview{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:26px;margin-bottom:24px}.detail-overview p{margin-top:0;white-space:pre-wrap}.player{padding:22px;background:#e9ecdf;border:1px solid #d5dbc9;border-radius:5px}.player audio{width:100%;display:block;margin:14px 0 0}.meta-grid{display:grid;grid-template-columns:130px 1fr;gap:8px 15px;font-size:13px;margin:0}.meta-grid dt{color:var(--muted)}.meta-grid dd{margin:0;white-space:pre-wrap;overflow-wrap:anywhere;font-variant-numeric:tabular-nums}.source-block{padding:16px 0;border-bottom:1px solid var(--line)}.source-block:last-child{border-bottom:0}.source-block h4{margin:0 0 12px;font-size:13px}.plain-source{white-space:pre-wrap;word-break:break-word;font-size:13px;line-height:1.7;margin:10px 0;max-height:360px;overflow:auto}.technical{font:12px/1.7 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre-wrap;overflow-wrap:anywhere;max-height:360px;overflow:auto}.reference-edit{border-bottom:1px solid var(--line);padding:0 0 15px;margin:0 0 20px}.reference-edit h4{margin:0 0 10px;font-size:13px}.nested-row{border-bottom:1px solid var(--line);padding:18px 0}.nested-row h4{font-size:14px;margin:0 0 7px}.nested-row p{white-space:pre-wrap;font-size:13px;margin:8px 0}.nested-row audio{width:100%;margin-top:10px}.nested-tools{display:flex;align-items:center;justify-content:space-between;gap:15px;margin:17px 0}.reference-link{color:var(--green);text-decoration:underline;word-break:break-all}.toast{position:fixed;bottom:24px;left:50%;transform:translateX(-50%);background:var(--ink);color:white;border-radius:5px;padding:12px 20px;z-index:100;max-width:calc(100vw - 30px);font-size:13px}*{scrollbar-width:thin;scrollbar-color:#879378 var(--paper)}@media(max-width:1000px){.toolbar{align-items:start;flex-direction:column;gap:16px}.tools{width:100%;flex-wrap:wrap}.search-label{flex:1}.search-label input{width:100%}.sound-row{grid-template-columns:35px minmax(0,1fr) auto}.row-meta{grid-column:2;grid-row:2}.row-action{grid-column:3;grid-row:1 / span 2}.private-label{display:none}}@media(max-width:600px){.topbar{min-height:76px;padding:15px 5%;gap:12px}.brand{font-size:22px;gap:9px}.brand-divider,.brand-chinese{display:none}main{padding:0 5%}.intro{padding-top:30px}h1{font-size:30px}.intro p{font-size:12px}.workspace-note{font-size:12px;margin-bottom:20px}.tabs{gap:24px}.tabs button{font-size:16px}.toolbar{padding-top:23px}.tools{gap:9px}.search-label{flex-basis:100%}.tools select{flex:1;min-width:0}.tools label:has(select){flex:1;min-width:0}.tools label select{width:100%}.tools .button{padding:10px 12px}.sound-row{grid-template-columns:25px minmax(0,1fr) auto;gap:10px;padding:19px 0}.row-index{font-size:21px}.row-main h3{font-size:14px}.row-action .button{padding:8px 10px;font-size:12px}.row-meta{font-size:11px}.status-row{align-items:start;gap:12px}.status-row p{font-size:11px}.status-row button{padding-top:0}.empty-state{min-height:300px}dialog,.detail-dialog{width:calc(100vw - 20px);max-height:94dvh;border-radius:6px}.dialog-head{padding:17px 18px}.dialog-head h2{font-size:18px}.dialog-body{padding:19px 18px}.form-actions{padding:14px 18px;gap:15px}.detail-overview{grid-template-columns:1fr;gap:20px}.meta-grid{grid-template-columns:104px 1fr;gap:9px 12px;font-size:12px}.two-fields{gap:10px}.player{padding:17px}.nested-tools{align-items:start}.nested-tools strong{font-size:13px}.nested-tools .button{font-size:11px;padding:8px}.checks{gap:9px 16px}.inline-actions .button{flex:1;white-space:nowrap}.toast{bottom:15px}footer{font-size:11px}}
+ 
+ #character-options{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px;margin:12px 0}.character-choice{min-width:0;display:flex;flex-direction:column;text-align:left;gap:6px;border:1px solid var(--line);border-radius:5px;padding:7px;overflow-wrap:anywhere}.character-choice:hover{background:#e7e8df}.character-choice img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:3px}.character-choice span{font-size:12px}.character-choice:focus-visible{outline:3px solid #b44822;outline-offset:3px}
++
++/* Project host keeps one navigation surface and the same native file/voice controls. */
++.sound-visibility{display:flex;gap:4px;align-items:center}.sound-visibility button{min-height:44px;padding:9px 13px;border:1px solid transparent;border-radius:5px;color:var(--muted)}.sound-visibility button[aria-pressed="true"]{border-color:var(--line);color:var(--green);background:var(--surface)}
++.project-sound-panel{background:transparent;min-width:0}
++.project-sound-panel>.topbar,.project-sound-panel .intro,.project-sound-panel .workspace-note,.project-sound-panel footer{display:none}
++.project-sound-panel main{max-width:none;padding:0;margin:0}
++.project-sound-panel .tabs{gap:28px;margin:0}
++.project-sound-panel .tabs button{font-size:15px;min-height:48px}
++.project-sound-panel .toolbar{padding:24px 0 14px;gap:20px}
++.project-sound-panel .toolbar h2{font-size:18px}
++.project-sound-panel .toolbar #list-help{display:none}
++.project-sound-panel .tools{flex-wrap:wrap}
++.project-sound-panel button{min-height:44px;max-width:100%;height:auto;overflow:visible;white-space:normal;overflow-wrap:anywhere}
++.project-sound-panel .sound-row{padding:22px 4px;grid-template-columns:40px minmax(0,1fr) minmax(130px,200px) auto}
++.project-sound-panel .row-index{font:400 15px var(--sans);font-variant-numeric:tabular-nums}
++.project-sound-panel .row-main h3{font-size:16px;font-weight:500}
++.project-sound-panel dialog{border-radius:12px;max-height:90dvh}
++.project-sound-panel .empty-state strong{font:500 28px var(--sans)}
++@media(max-width:760px){.project-sound-panel .toolbar{align-items:stretch}.project-sound-panel .sound-row{grid-template-columns:minmax(0,1fr) auto;gap:12px}.project-sound-panel .row-index{display:none}.project-sound-panel .row-meta{grid-column:1;grid-row:2}.project-sound-panel .row-action{grid-column:2;grid-row:1 / span 2}.project-sound-panel .search-label{flex-basis:100%}}
+diff --git a/public/sound.js b/public/sound.js
+index 7f122b3..8c2ba74 100644
+--- a/public/sound.js
++++ b/public/sound.js
+@@ -24,6 +24,23 @@
+   const uuid = () => crypto.randomUUID();
+   const contexts = {audio:{query:'',visibility:'active',items:[],cursor:null,loaded:false,lastOperation:null},voice:{query:'',visibility:'active',items:[],cursor:null,loaded:false,lastOperation:null}};
+   const state = {characterPicker:{page:1,query:'',hasMore:false,serial:0},kind:'audio',listRequest:0,detailRequest:0,audioOptionsRequest:0,detail:null,edit:null,child:null,audioOptions:[],audioOptionsCursor:null,upload:null,uploadBusy:false,editDrafts:new Map(),childDrafts:new Map(),sourceDrafts:new Map()};
++  let uploadDraftDirty=false;
++  // The native panel reports only navigation safety, never grants project ownership.
++  function hostState(){
++    const edits=[state.edit,...state.editDrafts.values()].filter(Boolean),children=[state.child,...state.childDrafts.values()].filter(Boolean),libraries=Object.values(contexts);
++    const unsettled=edits.some(edit=>edit.attempt&&!edit.busy)||children.some(child=>child.attempt&&!child.busy)||libraries.some(ctx=>ctx.undoAttempt&&!ctx.undoBusy);
++    return {dirty:!!state.upload||uploadDraftDirty||edits.some(edit=>edit.hostDirty||edit.attempt)||children.some(child=>child.hostDirty||child.attempt)||libraries.some(ctx=>ctx.undoAttempt),busy:unsettled||!!state.uploadBusy||edits.some(edit=>edit.busy)||children.some(child=>child.busy)||libraries.some(ctx=>ctx.undoBusy),unsettled};
++  }
++  function markHostDraft(event){
++    const target=event.target,form=target?.closest?.('form');
++    if(target?.id==='character-search')return;
++    if(event.type==='click'&&!target?.closest?.('#add-external-reference,#add-audio-reference,#character-clear,#character-options,[data-remove-reference],[data-existing-voice-source],[data-fork-source-draft],[data-new-version-reference]'))return;
++    if(form?.id==='edit-form'&&state.edit)state.edit.hostDirty=true;
++    if(form?.id==='child-form'&&state.child)state.child.hostDirty=true;
++    if(form?.id==='upload-form')uploadDraftDirty=true;
++  }
++  for(const type of ['input','change','click'])document.addEventListener(type,markHostDraft);
++  $('upload-form').addEventListener('reset',()=>{uploadDraftDirty=false;});
+   const uploadStorageKey = 'frame-audio-upload-draft-v1';
+   const value = id => $(id).value;
+   const nullable = text => text === '' ? null : text;
+@@ -106,6 +123,7 @@
+     $('list-help').textContent=kind==='audio'?'已收藏的音频文件':'平台来源 · 多段候选 · 标签与角色关联';
+     $('sound-new').textContent=kind==='audio'?'上传音频':'新建音色身份';
+     $('sound-undo').hidden=!ctx.lastOperation;
++    $('sound-active').setAttribute('aria-pressed',String(ctx.visibility==='active'));$('sound-archived').setAttribute('aria-pressed',String(ctx.visibility==='archived'));
+     for(const key of ['audio','voice']){$(`tab-${key}`).classList.toggle('active',key===kind);$(`tab-${key}`).setAttribute('aria-selected',String(key===kind));$(`tab-${key}`).tabIndex=key===kind?0:-1;}
+     $('sound-more').hidden=!ctx.cursor;
+     $('sound-list').innerHTML=ctx.items.length?ctx.items.map((item,index)=>`<article class="sound-row"><span class="row-index" aria-hidden="true">${String(index+1).padStart(2,'0')}</span><div class="row-main"><h3>${esc(itemName(item))}</h3>${md(item.record?.description || (kind==='audio'?'尚未填写人工描述':'尚未填写创作设定'))}</div><div class="row-meta">${kind==='audio'?`<span class="badge">${esc(item.metadata?.format?.toUpperCase() || '格式未取得')}</span><span>${esc(formatValue(item.metadata?.duration_seconds,' 秒'))}</span><span class="badge pending">${item.record?.transcript?.source==='not_collected'?'待转录':'已有转录文本'}</span>`:`<span class="badge">${esc(designNames[item.record?.design_kind] || '身份类型未说明')}</span><span>${esc(authorizationName(item.record?.authorization))}</span>`}</div><div class="row-action"><button class="button outlined compact" data-open="${esc(itemID(kind,item))}" type="button">查看${kind==='audio'?' / 试听':''}</button></div></article>`).join(''):`<div class="empty-state"><strong>${ctx.loaded?'0':'—'}</strong><h3>${ctx.loaded?(ctx.query?'没有匹配结果':ctx.visibility==='archived'?'没有已归档资产':kind==='audio'?'还没有音频文件':'还没有音色身份'):'正在读取资产'}</h3><p>${ctx.query?'调整搜索词或显示范围，原资产仍保留。':kind==='audio'?'上传你已取得的 WAV、MP3 或 FLAC。这里展示真实文件，不预置示例素材。':'创建原创音色设定或记录已获授权的真人参考，再关联实际音频与情绪预设。'}</p></div>`;
+@@ -113,9 +131,9 @@
+   }
+   async function loadList({append=false}={}) {
+     const kind=state.kind,ctx=contexts[kind],request=++state.listRequest,params=currentQuery();if(append&&ctx.cursor)params.set('cursor',ctx.cursor);
+-    clearError('sound-error');$('sound-list').setAttribute('aria-busy','true');$('sound-more').disabled=true;
++    clearError('sound-error');$('sound-list').setAttribute('aria-busy','true');$('sound-more').disabled=true;$('sound-status').textContent='正在读取声音…';
+     try{const data=await api(`${route(kind)}?${params}`);if(request!==state.listRequest || kind!==state.kind)return;ctx.items=append?ctx.items.concat(data.items || []):data.items || [];ctx.cursor=data.next_cursor || null;ctx.loaded=true;const total=data.total ?? data.counts?.[ctx.visibility];$(`${kind}-count`).textContent=total??`${ctx.items.length}${ctx.cursor?'+':''}`;renderList();}
+-    catch(error){if(request===state.listRequest)showError('sound-error',error);}
++    catch(error){if(request===state.listRequest){showError('sound-error',error);$('sound-status').textContent=ctx.items.length?'读取失败，已载入内容仍保留':'读取失败';if(!ctx.items.length)$('sound-list').innerHTML='<div class="empty-state"><h3>声音暂不可用</h3><button class="button outlined" data-sound-retry type="button">刷新</button></div>';}}
+     finally{if(request===state.listRequest){$('sound-list').setAttribute('aria-busy','false');$('sound-more').disabled=false;}}
+   }
+   function switchTab(kind){if(!contexts[kind]||kind===state.kind)return;const ctx=contexts[state.kind];ctx.query=value('sound-search');ctx.visibility=value('sound-visibility');state.kind=kind;state.listRequest++;$('sound-search').value=contexts[kind].query;$('sound-visibility').value=contexts[kind].visibility;renderList();void loadList();}
+@@ -185,7 +203,7 @@
+       edit.conflict=false;edit.attempt=null;$('edit-refresh-conflict').hidden=true;setPending('edit-form',false,'edit-save');$('edit-save').textContent='保存';clearError('edit-error');$('edit-status').textContent='已读取最新修订，人工草稿仍保留。已采集原文使用云端真实版本；不同原文草稿可明确保留为新候选。';
+     }catch(error){if(state.edit===edit && $('edit-dialog').open)showError('edit-error',error);}
+   }
+-  async function archiveDetail(){const detail=state.detail;if(!detail)return;await openEditor(detail.kind,detail.item);$('edit-visibility').value=detail.item.record.visibility==='archived'?'active':'archived';toast('请核对状态并点击保存');}
++  async function archiveDetail(){const detail=state.detail;if(!detail)return;await openEditor(detail.kind,detail.item);$('edit-visibility').value=detail.item.record.visibility==='archived'?'active':'archived';state.edit.hostDirty=true;toast('请核对状态并点击保存');}
+   async function undoLast(){const kind=state.kind,ctx=contexts[kind];if(!ctx.lastOperation || ctx.undoBusy)return;if(unsettledWrite(kind)){showError('sound-error',Error('保存结果尚未确认。先重试原保存，再撤销其他操作。'));return;}ctx.undoBusy=true;ctx.undoAttempt ||= {operation_id:uuid(),reverts_operation_id:ctx.lastOperation};$('sound-undo').disabled=true;try{await post(`${route(kind)}/undo`,ctx.undoAttempt);ctx.lastOperation=null;ctx.undoAttempt=null;toast('上次修改已撤销');await loadList();if(state.detail?.kind===kind)await refreshDetailIfOpen(kind,itemID(kind,state.detail.item));}catch(error){showError('sound-error',error);if(!error.retryable)ctx.undoAttempt=null;}finally{ctx.undoBusy=false;$('sound-undo').disabled=false;}}
+   async function openChild(kind,item=null){
+     const voice=state.detail?.item;if(!voice || state.detail.kind!=='voice')return;
+@@ -250,7 +268,8 @@
+   async function readVoiceHistory(append=false){const detail=state.detail;if(detail?.kind!=='voice')return;const serial=detail.historyRequest=(detail.historyRequest || 0)+1,query=detail.historyQuery || '',params=new URLSearchParams({limit:'5',query});if(append&&detail.historyCursor)params.set('before_revision',detail.historyCursor);try{const result=await api(`/api/voices/${encodeURIComponent(detail.item.voice_id)}/history?${params}`);if(state.detail!==detail || !$('detail-dialog').open || serial!==detail.historyRequest)return;detail.history=append?(detail.history || []).concat(result.history):result.history;detail.historyCursor=result.next_before_revision;$('voice-history').innerHTML=`<label>搜索历史原文<input id="voice-history-query" maxlength="200" value="${esc(query)}" placeholder="搜索提示词或标签"></label><button class="text-button" data-history-search type="button">搜索此卡历史</button><p class="muted">列表搜索当前卡信息；此处只查询本卡历史，不自动恢复到当前记录。</p><p class="muted">已显示 ${detail.history.length} 条历史记录${detail.historyCursor?'，还有更多':''}。</p>${historyPromptMarkup(detail.history)}${detail.historyCursor?'<button class="text-button" data-more-history type="button">加载更早记录</button>':''}`;}catch(error){toast(error.message);}}
+   $('tab-audio').addEventListener('click',()=>switchTab('audio'));$('tab-voice').addEventListener('click',()=>switchTab('voice'));for(const key of ['audio','voice'])$(`tab-${key}`).addEventListener('keydown',event=>{if(['ArrowLeft','ArrowRight','Home','End'].includes(event.key)){event.preventDefault();const kind=event.key==='Home'?'audio':event.key==='End'?'voice':state.kind==='audio'?'voice':'audio';switchTab(kind);$(`tab-${kind}`).focus();}});
+   let searchTimer;$('sound-search').addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(filterChanged,250);});$('sound-visibility').addEventListener('change',filterChanged);$('sound-refresh').addEventListener('click',()=>loadList());$('sound-more').addEventListener('click',()=>loadList({append:true}));$('sound-undo').addEventListener('click',undoLast);$('sound-new').addEventListener('click',()=>state.kind==='audio'?openUpload():openEditor('voice'));
+-  $('sound-list').addEventListener('click',event=>{const button=event.target.closest('[data-open]');if(button)void openDetail(state.kind,button.dataset.open);});
++  $('sound-active').addEventListener('click',()=>{$('sound-visibility').value='active';filterChanged();renderList();});$('sound-archived').addEventListener('click',()=>{$('sound-visibility').value='archived';filterChanged();renderList();});
++  $('sound-list').addEventListener('click',event=>{if(event.target.closest('[data-sound-retry]')){void loadList();return;}const button=event.target.closest('[data-open]');if(button)void openDetail(state.kind,button.dataset.open);});
+   document.addEventListener('click',event=>{const close=event.target.closest('[data-close]');if(close)$(close.dataset.close).close();});
+   $('edit-dialog').addEventListener('close',()=>{state.audioOptionsRequest++;retainEditor();});$('child-dialog').addEventListener('close',()=>{state.audioOptionsRequest++;retainChild();});
+   $('detail-dialog').addEventListener('close',()=>{state.detailRequest++;if(state.detail)state.detail.historyRequest=(state.detail.historyRequest || 0)+1;for(const audio of $('detail-content').querySelectorAll('audio'))audio.pause();});
+@@ -265,4 +284,5 @@
+   $('character-search-button').addEventListener('click',()=>loadCharacterOptions(1));$('character-prev').addEventListener('click',()=>loadCharacterOptions(state.characterPicker.page-1));$('character-next').addEventListener('click',()=>loadCharacterOptions(state.characterPicker.page+1));$('character-clear').addEventListener('click',()=>{$('edit-character').value='';$('character-selection').textContent='未关联图像';});$('character-options').addEventListener('click',event=>{const choice=event.target.closest('[data-character-asset]');if(!choice)return;$('edit-character').value=choice.dataset.characterAsset;$('character-selection').textContent='已选择：'+choice.dataset.characterLabel;});
+   for(const id of ['take-audio','take-emotion','take-use-latest'])$(id).addEventListener('change',updateTakeRevisionNote);$('audio-picker-more').addEventListener('click',moreAudioOptions);$('take-audio-more').addEventListener('click',moreAudioOptions);$('take-emotion-more').addEventListener('click',moreEmotionOptions);
+   restoreUpload();renderList();void loadList();
++  return {getState:hostState,dispose(){clearTimeout(searchTimer);clearTimeout(toast.timer);state.listRequest++;state.detailRequest++;state.audioOptionsRequest++;for(const audio of document.querySelectorAll('audio'))audio.pause();}};
+ })();
+diff --git a/studio-core/docs/phase-project-simplify-actor-20261109.md b/studio-core/docs/phase-project-simplify-actor-20261109.md
+new file mode 100644
+index 0000000..2a87d9a
+--- /dev/null
++++ b/studio-core/docs/phase-project-simplify-actor-20261109.md
+@@ -0,0 +1,36 @@
++# Project consolidation and actor display refinement
++
++2026-11-09. Source baseline: private Site v105, d022030ed03151323202ab4fcea6da351241fa95.
++
++## Scope and decisions
++
++The owner asked to consolidate creative work into projects, remove separate management/planning/sound sidebar entries and review/tasks/production/delivery product destinations, then refine actor presentation. The dashboard now shows only recent story/document records; retired task/review links are not rendered, and filtered pages retain their load-more action. The left sidebar now contains dashboard, projects, actors and materials, with connection at the bottom. Projects expose story, episodes, storyboard, prompts, roles/scenes, relations, novel outline, planning and sound.
++
++Old review/task links return to creative work. Production/delivery bookmarks preserve the recovery surface when their existing session-scoped uncertain-write receipt is present, including when browser storage is inaccessible. Records, APIs, adoption rules and private access remain unchanged.
++
++Sound mounts the existing native sound library inside the project page, using the existing Shadow DOM module and API. It is honestly identified as the account sound library; no unsupported project binding is inferred. Draft and busy state feed the shell navigation guard, and disposal stops playback.
++
++The actor's original stays sharp and fully contained. The background uses that exact same displayed image, enlarged and offset, with a brighter soft-focus layer so face/environment colors remain recognizable. Full biography remains below the image. The actor switch uses a people icon rather than a dropdown chevron.
++
++Short authored bracket annotations render as restrained gold/teal/lilac/rose tags. The optional Markdown transform is display-only and skips code, links, images, raw HTML scopes, nested brackets and protected media placeholders. Editors retain exact source text. Tag light follows the existing pause control and reduced-motion preference.
++
++## Acceptance and negative cases
++
++- Single left navigation; no duplicate management/sound/planning sidebar links or separate review/tasks/production/delivery menu items.
++- All nine project destinations remain peer-level and use the existing dirty/busy guard.
++- Legacy uncertain handoff receipts remain recoverable; no data deletion, automatic adoption or permissions expansion.
++- Native sound controls stay in the current page, retain draft on cancelled navigation and permit leaving after explicit discard/clear.
++- Same src for actor background and foreground; foreground filter remains none; source does not get cropped to a fake cutout.
++- Bracket tags in display only, safe Markdown unchanged by default, labels wrap on narrow screens and pause stops their animation.
++- Owner isolation, original asset bytes, CAS/idempotency and errors/retry remain existing contracts.
++
++## Evidence
++
++- TypeScript check passed.
++- Full Site tests passed 879/879. Actor/Markdown, routing and sound focused checks passed 81/81 before the final full run.
++- Core mandatory review passed 161/161.
++- Browser: desktop + 390px actor layout, exact same-image src, clear original filter, color tags and paused animation verified; editor source still contains original brackets.
++- Browser: native sound loaded in the project page; unsaved upload description triggered the shell leave guard, cancelling retained exact input, clearing the isolated draft allowed navigation. Local audio data endpoints are not provided by the preview fixture; real-owner list readback remains a post-deploy check.
++- Complete final build passed. Compiled Worker smoke verified native sound module routes, owner isolation and migration/backup behavior; source-readiness returned complete. Deployment receipt is recorded in the root release evaluation.
++
++No production content was written during UI testing; the edited character was explicitly labelled FIXTURE in the local test database.
+diff --git a/studio-core/review-report.json b/studio-core/review-report.json
+index 986ff37..10c8a20 100644
+--- a/studio-core/review-report.json
++++ b/studio-core/review-report.json
+@@ -1,6 +1,6 @@
+ {
+   "stage": "CineWeave Studio Core: 0+1+2+3+4+5+6+7",
+-  "generated_at": "2026-11-09T03:08:27.066Z",
++  "generated_at": "2026-11-09T03:38:30.870Z",
+   "checks": [
+     {
+       "label": "syntax:src/dashboard.mjs",
+@@ -804,7 +804,7 @@
+       "label": "mcp:legacy-asset-readonly-security",
+       "passed": true,
+       "status": 0,
+-      "details": "k 1 - Scene MCP search includes architecture once and keeps the legacy child and saved records intact\n  ---\n  duration_ms: 55.6699\n  type: 'test'\n  ...\n# Subtest: discovery is static and stateless; no identity, private IDs or storage reads\nok 2 - discovery is static and stateless; no identity, private IDs or storage reads\n  ---\n  duration_ms: 3.2978\n  type: 'test'\n  ...\n# Subtest: missing identity/service bypass is 401 and another subject is 403 before any storage read\nok 3 - missing identity/service bypass is 401 and another subject is 403 before any storage read\n  ---\n  duration_ms: 29.2895\n  type: 'test'\n  ...\n# Subtest: search/get read current records and exclude trash, without changing any table\nok 4 - search/get read current records and exclude trash, without changing any table\n  ---\n  duration_ms: 45.8757\n  type: 'test'\n  ...\n# Subtest: image tool returns verified ImageContent bytes, not a URL, and refuses corruption/oversize\nok 5 - image tool returns verified ImageContent bytes, not a URL, and refuses corruption/oversize\n  ---\n  duration_ms: 22.4203\n  type: 'test'\n  ...\n# Subtest: no write tool, arbitrary URL, SQL injection or cross-origin bypass\nok 6 - no write tool, arbitrary URL, SQL injection or cross-origin bypass\n  ---\n  duration_ms: 28.8786\n  type: 'test'\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 361.2641\n\n"
++      "details": "k 1 - Scene MCP search includes architecture once and keeps the legacy child and saved records intact\n  ---\n  duration_ms: 49.8732\n  type: 'test'\n  ...\n# Subtest: discovery is static and stateless; no identity, private IDs or storage reads\nok 2 - discovery is static and stateless; no identity, private IDs or storage reads\n  ---\n  duration_ms: 2.2219\n  type: 'test'\n  ...\n# Subtest: missing identity/service bypass is 401 and another subject is 403 before any storage read\nok 3 - missing identity/service bypass is 401 and another subject is 403 before any storage read\n  ---\n  duration_ms: 21.8335\n  type: 'test'\n  ...\n# Subtest: search/get read current records and exclude trash, without changing any table\nok 4 - search/get read current records and exclude trash, without changing any table\n  ---\n  duration_ms: 38.9885\n  type: 'test'\n  ...\n# Subtest: image tool returns verified ImageContent bytes, not a URL, and refuses corruption/oversize\nok 5 - image tool returns verified ImageContent bytes, not a URL, and refuses corruption/oversize\n  ---\n  duration_ms: 19.9411\n  type: 'test'\n  ...\n# Subtest: no write tool, arbitrary URL, SQL injection or cross-origin bypass\nok 6 - no write tool, arbitrary URL, SQL injection or cross-origin bypass\n  ---\n  duration_ms: 23.3328\n  type: 'test'\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 317.8225\n\n"
+     },
+     {
+       "label": "syntax:src/material-frame-adapter.mjs",
+@@ -858,19 +858,19 @@
+       "label": "materials:ingest-and-human-field-regressions",
+       "passed": true,
+       "status": 0,
+-      "details": " duration_ms: 36.0666\n  type: 'test'\n  ...\n# (node:61916) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n# (Use `node --trace-warnings ...` to show where the warning was created)\n# Subtest: objects and catalog are persistent and idempotent\nok 38 - objects and catalog are persistent and idempotent\n  ---\n  duration_ms: 97.6841\n  type: 'test'\n  ...\n# Subtest: changed batch identity and unchecked assets are rejected\nok 39 - changed batch identity and unchecked assets are rejected\n  ---\n  duration_ms: 58.9232\n  type: 'test'\n  ...\n# Subtest: content hash mismatches rejected\nok 40 - content hash mismatches rejected\n  ---\n  duration_ms: 47.1483\n  type: 'test'\n  ...\n# Subtest: database triggers pin alias even if competing reads become stale\nok 41 - database triggers pin alias even if competing reads become stale\n  ---\n  duration_ms: 49.9537\n  type: 'test'\n  ...\n# Subtest: catalog ingestion never changes saved selections\nok 42 - catalog ingestion never changes saved selections\n  ---\n  duration_ms: 55.5275\n  type: 'test'\n  ...\n# Subtest: transient storage faults are retryable rather than hidden validation failures\nok 43 - transient storage faults are retryable rather than hidden validation failures\n  ---\n  duration_ms: 45.2609\n  type: 'test'\n  ...\n1..43\n# tests 43\n# suites 0\n# pass 43\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 813.0909\n\n"
++      "details": " duration_ms: 28.7056\n  type: 'test'\n  ...\n# (node:61512) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n# (Use `node --trace-warnings ...` to show where the warning was created)\n# Subtest: objects and catalog are persistent and idempotent\nok 38 - objects and catalog are persistent and idempotent\n  ---\n  duration_ms: 88.3256\n  type: 'test'\n  ...\n# Subtest: changed batch identity and unchecked assets are rejected\nok 39 - changed batch identity and unchecked assets are rejected\n  ---\n  duration_ms: 42.7793\n  type: 'test'\n  ...\n# Subtest: content hash mismatches rejected\nok 40 - content hash mismatches rejected\n  ---\n  duration_ms: 42.4315\n  type: 'test'\n  ...\n# Subtest: database triggers pin alias even if competing reads become stale\nok 41 - database triggers pin alias even if competing reads become stale\n  ---\n  duration_ms: 39.8334\n  type: 'test'\n  ...\n# Subtest: catalog ingestion never changes saved selections\nok 42 - catalog ingestion never changes saved selections\n  ---\n  duration_ms: 39.9158\n  type: 'test'\n  ...\n# Subtest: transient storage faults are retryable rather than hidden validation failures\nok 43 - transient storage faults are retryable rather than hidden validation failures\n  ---\n  duration_ms: 32.9398\n  type: 'test'\n  ...\n1..43\n# tests 43\n# suites 0\n# pass 43\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 704.6903\n\n"
+     },
+     {
+       "label": "primary-category:catalog-and-ui-regressions",
+       "passed": true,
+       "status": 0,
+-      "details": "t retains the chosen primary root\nok 33 - category UI starts in apparel with no mixed query and reset retains the chosen primary root\n  ---\n  duration_ms: 29.762\n  type: 'test'\n  ...\n# Subtest: category switch clears incompatible pending filters, page, counts and groups while retaining user records\nok 34 - category switch clears incompatible pending filters, page, counts and groups while retaining user records\n  ---\n  duration_ms: 14.8272\n  type: 'test'\n  ...\n# Subtest: category history contexts cannot restore another root filters and a bad category receipt cannot enter the gallery\nok 35 - category history contexts cannot restore another root filters and a bad category receipt cannot enter the gallery\n  ---\n  duration_ms: 17.7483\n  type: 'test'\n  ...\n# Subtest: quick category switching rejects late search/page responses and keeps only the newest category result\nok 36 - quick category switching rejects late search/page responses and keeps only the newest category result\n  ---\n  duration_ms: 40.9376\n  type: 'test'\n  ...\n# Subtest: a successful empty category request replaces its loading placeholder with a scoped empty state\nok 37 - a successful empty category request replaces its loading placeholder with a scoped empty state\n  ---\n  duration_ms: 17.0796\n  type: 'test'\n  ...\n1..37\n# tests 37\n# suites 0\n# pass 37\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 1860.6298\n\n"
++      "details": "t retains the chosen primary root\nok 33 - category UI starts in apparel with no mixed query and reset retains the chosen primary root\n  ---\n  duration_ms: 15.165\n  type: 'test'\n  ...\n# Subtest: category switch clears incompatible pending filters, page, counts and groups while retaining user records\nok 34 - category switch clears incompatible pending filters, page, counts and groups while retaining user records\n  ---\n  duration_ms: 14.2648\n  type: 'test'\n  ...\n# Subtest: category history contexts cannot restore another root filters and a bad category receipt cannot enter the gallery\nok 35 - category history contexts cannot restore another root filters and a bad category receipt cannot enter the gallery\n  ---\n  duration_ms: 11.9385\n  type: 'test'\n  ...\n# Subtest: quick category switching rejects late search/page responses and keeps only the newest category result\nok 36 - quick category switching rejects late search/page responses and keeps only the newest category result\n  ---\n  duration_ms: 20.6415\n  type: 'test'\n  ...\n# Subtest: a successful empty category request replaces its loading placeholder with a scoped empty state\nok 37 - a successful empty category request replaces its loading placeholder with a scoped empty state\n  ---\n  duration_ms: 15.5036\n  type: 'test'\n  ...\n1..37\n# tests 37\n# suites 0\n# pass 37\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 1192.0502\n\n"
+     },
+     {
+       "label": "stage1+stage2+stage3+stage4+stage5:unit-and-contract-tests",
+       "passed": true,
+       "status": 0,
+-      "details": " real entry points\nok 586 - explicit workspace consent, immutable candidate, owner review and exact readback through real entry points\n  ---\n  duration_ms: 118.0834\n  type: 'test'\n  ...\n# Subtest: candidate sealing rejects altered content and version; revoked or expired grants cannot submit\nok 587 - candidate sealing rejects altered content and version; revoked or expired grants cannot submit\n  ---\n  duration_ms: 50.7936\n  type: 'test'\n  ...\n# Subtest: revocation interleaved at candidate insert prevents the write\nok 588 - revocation interleaved at candidate insert prevents the write\n  ---\n  duration_ms: 50.9564\n  type: 'test'\n  ...\n# Subtest: project and receipt roll back together on interrupted batch\nok 589 - project and receipt roll back together on interrupted batch\n  ---\n  duration_ms: 54.3878\n  type: 'test'\n  ...\n# Subtest: same decision racing at the same clock instant replays one receipt\nok 590 - same decision racing at the same clock instant replays one receipt\n  ---\n  duration_ms: 44.0423\n  type: 'test'\n  ...\n# Subtest: committed creation can be verified after a transient readback failure without another write\nok 591 - committed creation can be verified after a transient readback failure without another write\n  ---\n  duration_ms: 46.5444\n  type: 'test'\n  ...\n1..591\n# tests 591\n# suites 0\n# pass 580\n# fail 0\n# cancelled 0\n# skipped 11\n# todo 0\n# duration_ms 12061.5827\n\n"
++      "details": "h real entry points\nok 586 - explicit workspace consent, immutable candidate, owner review and exact readback through real entry points\n  ---\n  duration_ms: 103.1678\n  type: 'test'\n  ...\n# Subtest: candidate sealing rejects altered content and version; revoked or expired grants cannot submit\nok 587 - candidate sealing rejects altered content and version; revoked or expired grants cannot submit\n  ---\n  duration_ms: 43.558\n  type: 'test'\n  ...\n# Subtest: revocation interleaved at candidate insert prevents the write\nok 588 - revocation interleaved at candidate insert prevents the write\n  ---\n  duration_ms: 44.2044\n  type: 'test'\n  ...\n# Subtest: project and receipt roll back together on interrupted batch\nok 589 - project and receipt roll back together on interrupted batch\n  ---\n  duration_ms: 44.4187\n  type: 'test'\n  ...\n# Subtest: same decision racing at the same clock instant replays one receipt\nok 590 - same decision racing at the same clock instant replays one receipt\n  ---\n  duration_ms: 46.3968\n  type: 'test'\n  ...\n# Subtest: committed creation can be verified after a transient readback failure without another write\nok 591 - committed creation can be verified after a transient readback failure without another write\n  ---\n  duration_ms: 40.2317\n  type: 'test'\n  ...\n1..591\n# tests 591\n# suites 0\n# pass 580\n# fail 0\n# cancelled 0\n# skipped 11\n# todo 0\n# duration_ms 11524.7387\n\n"
+     },
+     {
+       "label": "organization:syntax:lib/material-organization-policy.mjs",
+@@ -900,7 +900,7 @@
+       "label": "organization:policy-atomicity-and-client",
+       "passed": true,
+       "status": 0,
+-      "details": " duration_ms: 5.0636\n  type: 'test'\n  ...\n# Subtest: bounded body and JSON validation reject malformed input before touching any ledger\nok 112 - bounded body and JSON validation reject malformed input before touching any ledger\n  ---\n  duration_ms: 8.8995\n  type: 'test'\n  ...\n# Subtest: oversized Unicode operation response is rejected before writing rather than hitting D1 bind limits\nok 113 - oversized Unicode operation response is rejected before writing rather than hitting D1 bind limits\n  ---\n  duration_ms: 48.07\n  type: 'test'\n  ...\n# Subtest: history paging preserves records beyond 100 entries and initial null defaults appear only at end\nok 114 - history paging preserves records beyond 100 entries and initial null defaults appear only at end\n  ---\n  duration_ms: 11.644\n  type: 'test'\n  ...\n# Subtest: audit guards deny update/delete/replace and source absence leaves original fields null\nok 115 - audit guards deny update/delete/replace and source absence leaves original fields null\n  ---\n  duration_ms: 11.5649\n  type: 'test'\n  ...\n# Subtest: unknown storage failure uses a fixed safe error and never exposes source text or SQL\nok 116 - unknown storage failure uses a fixed safe error and never exposes source text or SQL\n  ---\n  duration_ms: 4.1064\n  type: 'test'\n  ...\n1..116\n# tests 116\n# suites 0\n# pass 116\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 10203.8974\n\n"
++      "details": "ration_ms: 5.5944\n  type: 'test'\n  ...\n# Subtest: bounded body and JSON validation reject malformed input before touching any ledger\nok 112 - bounded body and JSON validation reject malformed input before touching any ledger\n  ---\n  duration_ms: 8.3079\n  type: 'test'\n  ...\n# Subtest: oversized Unicode operation response is rejected before writing rather than hitting D1 bind limits\nok 113 - oversized Unicode operation response is rejected before writing rather than hitting D1 bind limits\n  ---\n  duration_ms: 51.0591\n  type: 'test'\n  ...\n# Subtest: history paging preserves records beyond 100 entries and initial null defaults appear only at end\nok 114 - history paging preserves records beyond 100 entries and initial null defaults appear only at end\n  ---\n  duration_ms: 14.4706\n  type: 'test'\n  ...\n# Subtest: audit guards deny update/delete/replace and source absence leaves original fields null\nok 115 - audit guards deny update/delete/replace and source absence leaves original fields null\n  ---\n  duration_ms: 11.6153\n  type: 'test'\n  ...\n# Subtest: unknown storage failure uses a fixed safe error and never exposes source text or SQL\nok 116 - unknown storage failure uses a fixed safe error and never exposes source text or SQL\n  ---\n  duration_ms: 4.0516\n  type: 'test'\n  ...\n1..116\n# tests 116\n# suites 0\n# pass 116\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 10603.3101\n\n"
+     },
+     {
+       "label": "organization:python-collector",
+@@ -912,19 +912,19 @@
+       "label": "creative-unit:hosted-additive-migration-review",
+       "passed": true,
+       "status": 0,
+-      "details": "\ntest_additive_migration_preserves_every_old_table_and_record (test_document_episode_migration.DocumentEpisodeMigrationTests.test_additive_migration_preserves_every_old_table_and_record) ... ok\r\ntest_core_and_hosted_migrations_create_identical_objects (test_document_episode_migration.DocumentEpisodeMigrationTests.test_core_and_hosted_migrations_create_identical_objects) ... ok\r\ntest_foreign_keys_restrict_missing_targets_and_existing_parent_deletion (test_document_episode_migration.DocumentEpisodeMigrationTests.test_foreign_keys_restrict_missing_targets_and_existing_parent_deletion) ... ok\r\ntest_nullable_unassigned_link_and_positive_revisions (test_document_episode_migration.DocumentEpisodeMigrationTests.test_nullable_unassigned_link_and_positive_revisions) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.188s\r\n\r\nOK\r\n"
++      "details": "\ntest_additive_migration_preserves_every_old_table_and_record (test_document_episode_migration.DocumentEpisodeMigrationTests.test_additive_migration_preserves_every_old_table_and_record) ... ok\r\ntest_core_and_hosted_migrations_create_identical_objects (test_document_episode_migration.DocumentEpisodeMigrationTests.test_core_and_hosted_migrations_create_identical_objects) ... ok\r\ntest_foreign_keys_restrict_missing_targets_and_existing_parent_deletion (test_document_episode_migration.DocumentEpisodeMigrationTests.test_foreign_keys_restrict_missing_targets_and_existing_parent_deletion) ... ok\r\ntest_nullable_unassigned_link_and_positive_revisions (test_document_episode_migration.DocumentEpisodeMigrationTests.test_nullable_unassigned_link_and_positive_revisions) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.166s\r\n\r\nOK\r\n"
+     },
+     {
+       "label": "stage0+stage1:additive-sql-migration-review",
+       "passed": true,
+       "status": 0,
+-      "details": "\ntest_foreign_keys_reject_orphan_documents (test_migrations.StudioMigrationReview.test_foreign_keys_reject_orphan_documents) ... ok\r\ntest_migration_is_additive_idempotent (test_migrations.StudioMigrationReview.test_migration_is_additive_idempotent) ... ok\r\ntest_no_destructive_legacy_media_sql (test_migrations.StudioMigrationReview.test_no_destructive_legacy_media_sql) ... ok\r\ntest_rejects_unsupported_video_editing_entities (test_migrations.StudioMigrationReview.test_rejects_unsupported_video_editing_entities) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.005s\r\n\r\nOK\r\n"
++      "details": "\ntest_foreign_keys_reject_orphan_documents (test_migrations.StudioMigrationReview.test_foreign_keys_reject_orphan_documents) ... ok\r\ntest_migration_is_additive_idempotent (test_migrations.StudioMigrationReview.test_migration_is_additive_idempotent) ... ok\r\ntest_no_destructive_legacy_media_sql (test_migrations.StudioMigrationReview.test_no_destructive_legacy_media_sql) ... ok\r\ntest_rejects_unsupported_video_editing_entities (test_migrations.StudioMigrationReview.test_rejects_unsupported_video_editing_entities) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.004s\r\n\r\nOK\r\n"
+     },
+     {
+       "label": "stage2:handoff-sql-migration-review",
+       "passed": true,
+       "status": 0,
+-      "details": "\ntest_additive_idempotent_and_meta_gate (test_handoff_migrations.HandoffMigrationReview.test_additive_idempotent_and_meta_gate) ... ok\r\ntest_external_status_manual_only (test_handoff_migrations.HandoffMigrationReview.test_external_status_manual_only) ... ok\r\ntest_foreign_keys_reject_orphan (test_handoff_migrations.HandoffMigrationReview.test_foreign_keys_reject_orphan) ... ok\r\ntest_no_legacy_media_mutations (test_handoff_migrations.HandoffMigrationReview.test_no_legacy_media_mutations) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.008s\r\n\r\nOK\r\n"
++      "details": "\ntest_additive_idempotent_and_meta_gate (test_handoff_migrations.HandoffMigrationReview.test_additive_idempotent_and_meta_gate) ... ok\r\ntest_external_status_manual_only (test_handoff_migrations.HandoffMigrationReview.test_external_status_manual_only) ... ok\r\ntest_foreign_keys_reject_orphan (test_handoff_migrations.HandoffMigrationReview.test_foreign_keys_reject_orphan) ... ok\r\ntest_no_legacy_media_mutations (test_handoff_migrations.HandoffMigrationReview.test_no_legacy_media_mutations) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.009s\r\n\r\nOK\r\n"
+     },
+     {
+       "label": "stage5:next-route-syntax:app/materials/route.ts",
+diff --git a/tests/actor-profile-labels.test.mjs b/tests/actor-profile-labels.test.mjs
+new file mode 100644
+index 0000000..c9fbb26
+--- /dev/null
++++ b/tests/actor-profile-labels.test.mjs
+@@ -0,0 +1,70 @@
++import test,{after} from 'node:test';
++import assert from 'node:assert/strict';
++import {mkdtemp,rm} from 'node:fs/promises';
++import {fileURLToPath,pathToFileURL} from 'node:url';
++import path from 'node:path';
++import {build} from 'esbuild';
++import {maskActorText,restoreActorText} from '../studio-core/web/review-readable.mjs';
++
++const site=fileURLToPath(new URL('..',import.meta.url));
++const temp=await mkdtemp(path.join(site,'node_modules','.actor-label-test-'));
++after(()=>rm(temp,{recursive:true,force:true}));
++const entry=path.join(temp,'render.mjs');
++await build({stdin:{contents:`import React from 'react';
++ import {renderToStaticMarkup} from 'react-dom/server';
++ import MarkdownContent from './components/workspace/markdown-content.tsx';
++ export const render=(content,actorLabels=true)=>renderToStaticMarkup(React.createElement(MarkdownContent,{content,actorLabels}));
++ export const defaults=content=>renderToStaticMarkup(React.createElement(MarkdownContent,{content}));`,resolveDir:site,loader:'js'},bundle:true,packages:'external',platform:'node',format:'esm',outfile:entry,jsx:'automatic',logLevel:'silent'});
++const {render,defaults}=await import(pathToFileURL(entry).href);
++const labels=html=>[...html.matchAll(/<span class="cw-actor-label" data-tone="([0-3])">([^<]*)<\/span>/g)].map(match=>({tone:match[1],text:match[2]}));
++
++test('actor mode renders literal inline labels with stable colors and complete surrounding prose',()=>{
++ const content='【慢热】她会先观察。\n【坚定】答应的事会做完。再次【慢热】。';
++ const html=render(content),found=labels(html);
++ assert.deepEqual(found.map(label=>label.text),['慢热','坚定','慢热']);
++ assert.equal(found[0].tone,found[2].tone);
++ assert.equal(found[0].tone,labels(render('调整前文，再次【慢热】。'))[0].tone);
++ assert.match(html,/她会先观察。<br\/>/);assert.match(html,/答应的事会做完。/);
++ assert.doesNotMatch(html,/<button|tabindex|role="button"/);
++ assert.equal(content,'【慢热】她会先观察。\n【坚定】答应的事会做完。再次【慢热】。');
++});
++
++test('default Markdown rendering keeps brackets and existing Chinese emphasis unchanged',()=>{
++ const content='**性格：**【慢热】\n【坚定】';
++ const standard=defaults(content);
++ assert.equal(standard,render(content,false));assert.doesNotMatch(standard,/cw-actor-label/);
++ assert.match(standard,/<strong>性格：<\/strong>【慢热】/);
++ const actor=render(content);assert.match(actor,/<strong>性格：<\/strong>/);assert.deepEqual(labels(actor).map(label=>label.text),['慢热','坚定']);
++});
++
++test('links, images, inline code, fenced code and HTML remain opaque to label styling',()=>{
++ const content='[【链接】](https://example.com) ![【图片】](https://example.com/pixel.png) `【代码】` 【可见】\n\n```txt\n【围栏】\n```\n\n<span>【原始 HTML】</span>';
++ const html=render(content);
++ assert.deepEqual(labels(html).map(label=>label.text),['可见']);
++ assert.match(html,/>【链接】<\/a>/);assert.match(html,/<span>【图片】<\/span>/);assert.match(html,/<code>【代码】<\/code>/);
++ assert.match(html,/&lt;span&gt;【原始 HTML】&lt;\/span&gt;/);assert.doesNotMatch(html,/<img\b|\ssrc=/);
++ const danglingCode=render('`【` 【独立标签】');assert.deepEqual(labels(danglingCode).map(label=>label.text),['独立标签']);
++});
++
++test('nested, multiline, empty and long bracket prose never becomes a partial label',()=>{
++ const content='【外【内】层】 【外 **层【内】** 尾】 【跨\n行】 【】 【   】 【'+ '长'.repeat(49)+'】 【普通】';
++ const html=render(content);
++ assert.deepEqual(labels(html).map(label=>label.text),['普通']);
++ assert.match(html,/【外【内】层】/);assert.match(html,/【外 <strong>层【内】<\/strong> 尾】/);
++ assert.match(html,/【跨<br\/>\n行】/);
++});
++
++test('protected material markers and exact saved references survive display unchanged',()=>{
++ const source='【冷静】以 file_portrait_123 为素材。〔既有备注〕 【〔素材引用 8〕】';
++ const projection=maskActorText(source),before=JSON.stringify(projection),html=render(projection.text);
++ assert.deepEqual(labels(html).map(label=>label.text),['冷静']);
++ assert.match(html,/〔素材引用 1〕/);assert.match(html,/〔既有备注〕/);assert.match(html,/【〔素材引用 8〕】/);
++ assert.equal(JSON.stringify(projection),before);assert.equal(restoreActorText(projection.text,projection),source);
++});
++
++test('label contents cannot inject HTML or bypass the existing safe-link policy',()=>{
++ const html=render('【&lt;script&gt;alert(1)&lt;/script&gt;】 [【危险】](javascript:alert%281%29)\n\n<script>【注入】</script>');
++ assert.doesNotMatch(html,/<script\b|href="javascript:|dangerouslySetInnerHTML/i);
++ assert.match(html,/&lt;script&gt;/);assert.match(html,/<span>【危险】<\/span>/);
++ assert.deepEqual(labels(html).map(label=>label.text),['&lt;script&gt;alert(1)&lt;/script&gt;']);
++});
+diff --git a/tests/dashboard-recent-ui.test.mjs b/tests/dashboard-recent-ui.test.mjs
+new file mode 100644
+index 0000000..389142c
+--- /dev/null
++++ b/tests/dashboard-recent-ui.test.mjs
+@@ -0,0 +1,49 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import {readFileSync} from 'node:fs';
++import {createRequire} from 'node:module';
++import ts from 'typescript';
++import * as dashboardData from '../components/workspace/dashboard-data.mjs';
++
++const require=createRequire(import.meta.url);
++const source=readFileSync(new URL('../components/workspace/dashboard.tsx',import.meta.url),'utf8');
++const output=ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,target:ts.ScriptTarget.ES2022}}).outputText;
++const walk=node=>!node||typeof node!=='object'?[]:[node,...[node.props?.children].flat(Infinity).flatMap(walk)];
++const text=node=>typeof node==='string'||typeof node==='number'?String(node):node&&typeof node==='object'?[node.props?.children].flat(Infinity).map(text).join(''):'';
++const section=(items=[],extra={})=>({items,has_more:false,partial:false,error:null,...extra});
++const row=(kind,id=kind)=>({kind,id,key:kind+':'+id,title:'记录-'+id,project_id:'project',project_title:'项目',label:'已保存',updated_at:null,target:kind==='story'?{view:'canvas',item:id}:kind==='document'?{view:'screenplay',document:id}:{view:'tasks',task:id}});
++function render(recent,extra={}){
++ const state={data:{sections:{pending:section([row('collaboration')]),running:section([row('task')]),recent}},loading:false,activeSection:null,error:'',moreErrors:{},...extra};
++ const calls=[],controller={more:name=>calls.push(['more',name]),refresh:()=>calls.push(['refresh'])};
++ const react={useState:()=>[state,()=>{}],useRef:value=>({current:value===null?controller:value}),useEffect(){}};
++ const exports={};
++ new Function('require','exports','location',output)(name=>name==='react'?react:name==='react/jsx-runtime'?require(name):name==='./dashboard-data.mjs'?dashboardData:name==='@/components/ui/button'?{Button:'Button'}:name==='lucide-react'?{ArrowUpRight:'ArrowUpRight',RefreshCw:'RefreshCw'}:{},exports,{assign:href=>calls.push(['assign',href])});
++ const tree=exports.default({onOpen:(...args)=>calls.push(['open',...args]),onNavigate:view=>calls.push(['navigate',view]),onAttempt:fn=>{calls.push(['attempt']);fn();},onReady(){}});
++ return{tree,calls,all:walk(tree),text:text(tree)};
++}
++
++test('home presents only recent story and document rows without changing dashboard data',()=>{
++ const recent=section([row('story'),row('task'),row('document'),row('collaboration'),row('material'),row('legacy')]);
++ const before=JSON.stringify(recent),ui=render(recent);
++ assert.match(ui.text,/最近内容/);assert.match(ui.text,/已显示 2/);assert.match(ui.text,/全部项目/);
++ assert.doesNotMatch(ui.text,/待处理|进行中|候选|协作任务|记录-task|记录-collaboration|记录-material|记录-legacy|全部作品/);
++ assert.deepEqual(ui.all.filter(node=>node.props?.className==='cw-dashboard-row').map(node=>text(node)),['记录-story项目已保存时间未提供','记录-document项目已保存时间未提供']);
++ assert.equal(JSON.stringify(recent),before);
++});
++
++test('filtered recent pages retain pagination until the source is exhausted',()=>{
++ const ui=render(section([row('task')],{has_more:true}));
++ assert.doesNotMatch(ui.text,/暂无内容记录|已显示/);
++ const more=ui.all.find(node=>node.props?.className==='cw-dashboard-more');assert.ok(more);assert.equal(more.props.disabled,false);
++ more.props.onClick();assert.deepEqual(ui.calls,[['more','recent']]);
++ assert.match(render(section([row('task')])).text,/暂无内容记录/);
++ const partial=render(section([],{partial:true,error:'未读取'}));assert.doesNotMatch(partial.text,/暂无内容记录/);assert.match(partial.text,/部分内容未读取/);
++});
++
++test('recent records retain actual story and document destinations',()=>{
++ const ui=render(section([row('story','scene'),row('document','draft')]));
++ const rows=ui.all.filter(node=>node.props?.className==='cw-dashboard-row');
++ rows[0].props.onClick();assert.deepEqual(ui.calls,[['open','project','canvas','scene']]);
++ rows[1].props.onClick();assert.deepEqual(ui.calls.slice(1),[['attempt'],['assign','/studio?project=project&document=draft#scripts']]);
++ ui.all.find(node=>node.type==='Button'&&node.props['data-home-primary']).props.onClick();assert.deepEqual(ui.calls.at(-1),['navigate','projects']);
++});
+diff --git a/tests/dashboard-shell.test.mjs b/tests/dashboard-shell.test.mjs
+index 2a184f7..94729ae 100644
+--- a/tests/dashboard-shell.test.mjs
++++ b/tests/dashboard-shell.test.mjs
+@@ -2,13 +2,14 @@ import test from 'node:test';
+ import assert from 'node:assert/strict';
+ import fs from 'node:fs';
+ import ts from 'typescript';
++import * as workflowNavigation from '../components/workspace/workflow-navigation.mjs';
+ import * as dashboardTarget from '../components/workspace/dashboard-target.mjs';
+ import {createRequire} from 'node:module';
+ const require=createRequire(import.meta.url);
+ const source=fs.readFileSync(new URL('../components/workspace/workspace.tsx',import.meta.url),'utf8');
+ const walk=node=>!node||typeof node!=='object'?[]:[node,...[node.props?.children].flat(Infinity).flatMap(walk)];
+ const text=node=>typeof node==='string'?node:node&&typeof node==='object'?[node.props?.children].flat(Infinity).map(text).join(''):'';
+-function harness(search,{headFixture=false}={}){
++function harness(search,{headFixture=false,storage={getItem:()=>null}}={}){
+  let cursor=0,tree,dirty=false;const states=[],deps=[],queue=[],cleanups=[],events={},calls=[];
+  const location={pathname:'/workspace',search,hash:'',assign:url=>calls.push(['assign',url])};
+  const history={pushState(_a,_b,url){const next=new URL(url,'https://studio.test');location.search=next.search;location.hash=next.hash;},replaceState(_a,_b,url){this.pushState(_a,_b,url);}};
+@@ -19,9 +20,9 @@ function harness(search,{headFixture=false}={}){
+  const projects=[{id:'a',title:'First',kind:'series'},{id:'b',title:'Second',kind:'series'}];
+  const api={listProjects:async()=>{calls.push(['projects']);return projects;},newIdempotencyKey:()=> 'fixture'};
+  const symbols=new Proxy({__esModule:true,default:'Component'},{get:(o,k)=>k in o?o[k]:String(k)});
+- const importModule=name=>name==='react'?react:name==='react/jsx-runtime'?require(name):name==='./workspace-feedback'?{useWorkspaceFeedback:()=>{const [notice,setNotice]=react.useState('');return[notice,setNotice,''];},WorkspaceFeedback:'WorkspaceFeedback'}:name==='./api'?{createWorkspaceApi:()=>api,readGraph:async(_api,pid)=>{calls.push(['graph',pid]);return{nodes:headFixture?[{id:'scene-b',version:1,kind:'scene',status:'accepted',content:{title:'Accepted old title',body:'fixture'}}]:[],canon_revision:0};},readHistory:async(_api,pid,id)=>{calls.push(['history',pid,id]);return headFixture?{item:{id,kind:'scene',head_version:2,accepted_version:1},versions:[{version:2,content:{title:'Pending new title',body:'fixture'}},{version:1,content:{title:'Accepted old title',body:'fixture'}}],decisions:[{version:2,action:'submit'},{version:1,action:'accept'}]}:{item:{id,kind:'scene',head_version:1,accepted_version:null},versions:[{version:1,content:{title:id,body:'fixture'}}]};}}:name==='./dashboard-target.mjs'?dashboardTarget:name==='./model'?{relatedScenes:()=>[],emptyContent:()=>({title:'',body:''}),kindLabels:{},safeMedia:()=>null}:name==='./project-directory.mjs'?{directoryKindLabel:kind=>kind||'项目'}:name==='./workflow-navigation.mjs'?{workflowStages:[],workflowStage:view=>view}:name==='./intro-session.mjs'?{markIntroSession(){}}:name==='./item-inspector'?{__esModule:true,default:'ItemInspector'}:symbols;
++ const importModule=name=>name==='react'?react:name==='react/jsx-runtime'?require(name):name==='./workspace-feedback'?{useWorkspaceFeedback:()=>{const [notice,setNotice]=react.useState('');return[notice,setNotice,''];},WorkspaceFeedback:'WorkspaceFeedback'}:name==='./api'?{createWorkspaceApi:()=>api,readGraph:async(_api,pid)=>{calls.push(['graph',pid]);return{nodes:headFixture?[{id:'scene-b',version:1,kind:'scene',status:'accepted',content:{title:'Accepted old title',body:'fixture'}}]:[],canon_revision:0};},readHistory:async(_api,pid,id)=>{calls.push(['history',pid,id]);return headFixture?{item:{id,kind:'scene',head_version:2,accepted_version:1},versions:[{version:2,content:{title:'Pending new title',body:'fixture'}},{version:1,content:{title:'Accepted old title',body:'fixture'}}],decisions:[{version:2,action:'submit'},{version:1,action:'accept'}]}:{item:{id,kind:'scene',head_version:1,accepted_version:null},versions:[{version:1,content:{title:id,body:'fixture'}}]};}}:name==='./dashboard-target.mjs'?dashboardTarget:name==='./model'?{relatedScenes:()=>[],emptyContent:()=>({title:'',body:''}),kindLabels:{},safeMedia:()=>null}:name==='./project-directory.mjs'?{directoryKindLabel:kind=>kind||'项目'}:name==='./workflow-navigation.mjs'?workflowNavigation:name==='./intro-session.mjs'?{markIntroSession(){}}:name==='./item-inspector'?{__esModule:true,default:'ItemInspector'}:symbols;
+  const window={location,history,addEventListener:(name,fn)=>events[name]=fn,removeEventListener:name=>delete events[name],matchMedia:()=>({matches:false,addEventListener(){},removeEventListener(){}})};
+- const exports={};new Function('require','exports','window','document','sessionStorage','requestAnimationFrame',ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,target:ts.ScriptTarget.ES2022}}).outputText)(importModule,exports,window,{activeElement:null,querySelector:()=>null},{},fn=>fn());
++ const exports={};new Function('require','exports','window','document','sessionStorage','requestAnimationFrame',ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,target:ts.ScriptTarget.ES2022}}).outputText)(importModule,exports,window,{activeElement:null,querySelector:()=>null},storage,fn=>fn());
+  function render(){cursor=0;dirty=false;tree=exports.default({api});return tree;}
+  async function settle(){for(let i=0;i<20;i++){render();while(queue.length)queue.shift()();await new Promise(resolve=>setImmediate(resolve));if(!dirty&&!queue.length)break;}return tree;}
+  return {settle,render,calls,location,events,find:(type,predicate=()=>true)=>walk(tree).find(n=>n.type===type&&predicate(n)),all:type=>walk(tree).filter(n=>n.type===type),button:label=>walk(tree).find(n=>n.type==='Button'&&text(n)===label)};
+@@ -62,3 +63,11 @@ test('peer features use guarded routing and respond to browser Back',async()=>{
+  h.find('AlertDialogAction').props.onClick();await h.settle();assert.equal(h.find('WorkspaceModules').props.view,'planning');assert.match(h.location.search,/project=a/);
+  h.location.search='?view=relations&project=a';h.events.popstate();await h.settle();assert.equal(h.find('WorkspaceModules').props.view,'relations');
+ });
++
++test('switching away from recovery normalizes the retired destination for the new project',async()=>{
++ const storage={getItem:key=>key==='cw-handoff-pending:a'?JSON.stringify({key:'pending',input:{project_id:'a'}}):null};
++ const h=harness('?view=production&project=a',{storage});await h.settle();
++ assert.equal(h.find('WorkspaceModules').props.view,'production');
++ h.find('ProjectSwitcher').props.onChoose({id:'b'});await h.settle();
++ assert.equal(h.find('WorkspaceModules').props.view,'storyboard');assert.match(h.location.search,/project=b/);
++});
+diff --git a/tests/project-sound.test.mjs b/tests/project-sound.test.mjs
+new file mode 100644
+index 0000000..09eba51
+--- /dev/null
++++ b/tests/project-sound.test.mjs
+@@ -0,0 +1,34 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import {readFileSync} from 'node:fs';
++import {createRequire} from 'node:module';
++import ts from 'typescript';
++const require=createRequire(import.meta.url);
++const raw=readFileSync(new URL('../components/workspace/project-sound.tsx',import.meta.url),'utf8');
++function harness({deferred=false}={}){
++ const effects=[],changes=[],listeners=new Map(),winEvents=new Map(),observers=[];let resolve,mounts=0,disposed=0,cleanup;
++ let status={dirty:false,busy:false};const controller={getState:()=>status,dispose:()=>disposed++};
++ const root={querySelector:()=>({classList:{add(){}}}),addEventListener:(name,fn)=>listeners.set(name,fn),removeEventListener:(name,fn)=>{if(listeners.get(name)===fn)listeners.delete(name);}};
++ const target={shadowRoot:root};
++ const react={useRef:value=>({current:value===null?target:value}),useState:value=>[value,()=>{}],useEffect:fn=>effects.push(fn)};
++ const imported=new Promise(r=>{resolve=r;});
++ const loadSound=path=>{assert.equal(path,'/studio/materials-sound.mjs');return deferred?imported:Promise.resolve({mountMaterials:()=>{mounts++;return controller;}});};
++ const window={addEventListener:(name,fn)=>winEvents.set(name,fn),removeEventListener:(name,fn)=>{if(winEvents.get(name)===fn)winEvents.delete(name);}};
++ class Observer{constructor(fn){this.fn=fn;observers.push(this);}observe(){}disconnect(){this.disconnected=true;}}
++ const output=ts.transpileModule(raw.replace('import(/* @vite-ignore */ modulePath)','loadSound(modulePath)'),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,target:ts.ScriptTarget.ES2022}}).outputText;
++ const exports={};new Function('require','exports','loadSound','window','MutationObserver','queueMicrotask',output)(name=>name==='react'?react:name==='react/jsx-runtime'?require(name):{Button:'Button'},exports,loadSound,window,Observer,queueMicrotask);
++ exports.default({project:{id:'project'},onDirty:value=>changes.push(['dirty',value]),onBusy:value=>changes.push(['busy',value])});cleanup=effects[0]();
++ const flush=async()=>{for(let i=0;i<8;i++)await Promise.resolve();};
++ return{flush,changes,listeners,winEvents,observers,cleanup,set:next=>status=next,get mounts(){return mounts;},get disposed(){return disposed;},release:()=>resolve({mountMaterials:()=>{mounts++;return controller;}})};
++}
++test('same-page sound relays native pending state and clears listeners when the project is left',async()=>{
++ const ui=harness();await ui.flush();assert.equal(ui.mounts,1);
++ ui.set({dirty:true,busy:true});ui.observers[0].fn();assert.deepEqual(ui.changes.slice(-2),[['dirty',true],['busy',true]]);
++ let prevented=false;const event={preventDefault(){prevented=true;},returnValue:undefined};ui.winEvents.get('beforeunload')(event);assert.equal(prevented,true);
++ ui.set({dirty:true,busy:false});ui.listeners.get('change')();await ui.flush();assert.deepEqual(ui.changes.slice(-2),[['dirty',true],['busy',false]]);
++ ui.cleanup();assert.equal(ui.disposed,1);assert.equal(ui.listeners.size,0);assert.equal(ui.winEvents.size,0);assert.equal(ui.observers[0].disconnected,true);
++ const count=ui.changes.length;ui.observers[0].fn();assert.equal(ui.changes.length,count);
++});
++test('a late native module cannot mount into an abandoned project',async()=>{
++ const ui=harness({deferred:true});ui.cleanup();ui.release();await ui.flush();assert.equal(ui.mounts,0);assert.equal(ui.observers.length,0);
++});
+diff --git a/tests/project-switcher.test.mjs b/tests/project-switcher.test.mjs
+index 324cebf..272e671 100644
+--- a/tests/project-switcher.test.mjs
++++ b/tests/project-switcher.test.mjs
+@@ -13,4 +13,4 @@ function harness(){let cursor=0,tree;const states=[],chosen=[];const react={useS
+ test('switcher searches entire directory beyond first page and returns exact project',()=>{const h=harness();h.dialog().props.onOpenChange(true);h.render();h.find('搜索切换项目').props.onChange({target:{value:'雪山'}});h.render();const cards=h.nodes().filter(n=>n.props?.className==='cw-project-switch-card');assert.equal(cards.length,1);cards[0].props.onClick();assert.deepEqual(h.chosen,['p28']);assert.equal(h.render().props.open,false);});
+ test('switcher pagination preserves reachability and selecting current is a no-op',()=>{const h=harness();assert.equal(h.nodes().filter(n=>n.props?.className==='cw-project-switch-card').length,12);h.find('切换到项目：项目 0').props.onClick();assert.deepEqual(h.chosen,[]);h.find('下一页项目').props.onClick();h.render();assert.equal(h.find('上一页项目').props.disabled,false);assert.equal(h.nodes().filter(n=>n.props?.className==='cw-project-switch-card').length,12);});
+ test('closing and reopening clears filters without switching projects',()=>{const h=harness();h.find('搜索切换项目').props.onChange({target:{value:'no match'}});h.render();assert.equal(h.nodes().filter(n=>n.props?.className==='cw-project-switch-card').length,0);h.find('关闭项目切换').props.onClick();h.dialog().props.onOpenChange(true);h.render();assert.equal(h.find('搜索切换项目').props.value,'');assert.deepEqual(h.chosen,[]);});
+-test('all project functions are equal-level navigation with one exact active destination',()=>{const h=harness(),calls=[];const nodes=walk(h.nav({view:'planning',onNavigate:v=>calls.push(v)}));assert.equal(nodes.filter(n=>n.type==='Button').length,12);assert.equal(nodes.filter(n=>n.props?.['aria-current']==='page').length,1);for(const node of nodes.filter(n=>n.type==='Button'))node.props.onClick();assert.deepEqual(calls,navigation.workflowStages.map(s=>s.value));assert.ok(!nodes.some(n=>['details','select'].includes(n.type)));});
++test('all project functions are equal-level navigation with one exact active destination',()=>{const h=harness(),calls=[];const nodes=walk(h.nav({view:'planning',onNavigate:v=>calls.push(v)}));assert.equal(nodes.filter(n=>n.type==='Button').length,9);assert.equal(nodes.filter(n=>n.props?.['aria-current']==='page').length,1);for(const node of nodes.filter(n=>n.type==='Button'))node.props.onClick();assert.deepEqual(calls,navigation.workflowStages.map(s=>s.value));assert.ok(!nodes.some(n=>['details','select'].includes(n.type)));});
+diff --git a/tests/sound-ui.test.mjs b/tests/sound-ui.test.mjs
+index d3448a8..8d1d945 100644
+--- a/tests/sound-ui.test.mjs
++++ b/tests/sound-ui.test.mjs
+@@ -27,12 +27,42 @@ function harness(markdown){
+   for(const match of home.matchAll(/<(\w+)\b([^>]*\bid="([^"]+)"[^>]*)>/g)){const [all,tag,attrs,id]=match;const start=match.index+all.length,end=home.indexOf(`</${tag}>`,start);const e=element(id,tag,tag==='select'?home.slice(start,end):'');e.type=attrs.match(/type="([^"]+)"/)?.[1] || '';e.hidden=attrs.includes(' hidden');e.required=attrs.includes(' required');elements.set(id,e);}
+   const context={document:{getElementById:id=>elements.get(id)||null,addEventListener(){}},console,URL,URLSearchParams,TextEncoder,TextDecoder,Uint8Array,ArrayBuffer,Map,Set,JSON,Object,String,Number,Boolean,Intl,Date,crypto:{randomUUID,subtle:webcrypto.subtle},navigator:{clipboard:{writeText:async text=>{context.copiedText=text;}}},sessionStorage:{setItem:(k,v)=>storage.set(k,v),getItem:k=>storage.get(k)||null},setTimeout:()=>1,clearTimeout(){},fetch:(...args)=>fetcher(...args)};context.window=context;
+   if(markdown) context.renderMarkdown=markdown;
+-  const instrumented=app.replace('restoreUpload();renderList();void loadList();','globalThis.ui={state,contexts,api,loadList,switchTab,filterChanged,renderList,itemName,metadataMarkup,sourceMarkup,referenceMarkup,openDetail,renderDetail,refreshDetailIfOpen,defaultAudio,defaultVoice,openEditor,editorRecord,saveEditor,refreshEditorConflict,undoLast,openChild,childRecord,saveChild,refreshChildConflict,openUpload,uploadFile,restoreUpload,persistUpload,loadAudioOptions,moreAudioOptions,moreAudioSources,readChildSnapshot,copyOriginalPrompt,readVoiceHistory,nestedMarkup,candidateDetailMarkup,candidateEditorMarkup,captureLabel,historyPromptMarkup,copyCandidatePrompt,copyHistoryPrompt,collectReferences,loadCharacterOptions,uploadDraft,readExistingVoiceSources,existingVoiceSources};');
++  const instrumented=app.replace('restoreUpload();renderList();void loadList();','globalThis.ui={state,contexts,hostState,markHostDraft,api,loadList,switchTab,filterChanged,renderList,itemName,metadataMarkup,sourceMarkup,referenceMarkup,openDetail,renderDetail,refreshDetailIfOpen,defaultAudio,defaultVoice,openEditor,editorRecord,saveEditor,refreshEditorConflict,undoLast,openChild,childRecord,saveChild,refreshChildConflict,openUpload,uploadFile,restoreUpload,persistUpload,loadAudioOptions,moreAudioOptions,moreAudioSources,readChildSnapshot,copyOriginalPrompt,readVoiceHistory,nestedMarkup,candidateDetailMarkup,candidateEditorMarkup,captureLabel,historyPromptMarkup,copyCandidatePrompt,copyHistoryPrompt,collectReferences,loadCharacterOptions,uploadDraft,readExistingVoiceSources,existingVoiceSources};');
+   runInNewContext(instrumented,context);ui=context.ui;assert.ok(ui);return {ui,els:elements,context,storage,setFetch:fn=>{fetcher=fn;}};
+ }
+ const response=(body,status=200)=>({ok:status<400,status,json:async()=>body});
+ const audio=(id='a',extra={})=>({asset_id:id,sha256:'b'.repeat(64),mime_type:'audio/wav',bytes:32044,metadata:{format:'wav',codec:'PCM',duration_seconds:1,sample_rate_hz:16000,channels:1,bits_per_sample:16,bit_rate_bps:null},identity:{code:'YP000001',display_name:'原始.wav'},revision:1,record:{name:null,description:null,locks:{name:false,description:false},semantic_tags:[],transcript:{text:null,source:'not_collected',source_note:''},note:'',visibility:'active'},source_count:1,sources:[{original_filename:'原始.wav',description:' exact source ',prompt:' exact prompt\nsecond line ',parameters:{seed:42},origin_note:'已取得',authorization:{status:'unconfirmed',scope:'',note:''}}],...extra});
+ const voice=(id='voice',extra={})=>({voice_id:id,revision:1,identity:{code:'SW000001',display_name:'SW000001_原创声音'},record:{name:'原创声音',description:'',locks:{name:false,description:false},design_kind:'original_design',authorization:{status:'user_declared',scope:'原创角色项目',note:''},character_asset_id:null,source:{prompt:' exact source ',description:null,note:''},references:[],note:'',visibility:'active'},references:[],emotions:{items:[],next_cursor:null},takes:{items:[],next_cursor:null},...extra});
++test('project sound host retains closed drafts and unknown writes independently of the current voice',async()=>{
++ const {ui,els,setFetch}=harness();setFetch(async()=>response({items:[],next_cursor:null}));
++ await ui.openEditor('audio',audio());assert.deepEqual(plain(ui.hostState()),{dirty:false,busy:false,unsettled:false});
++ ui.markHostDraft({type:'input',target:{closest:selector=>selector==='form'?{id:'edit-form'}:null}});
++ els.get('edit-dialog').close();await ui.openEditor('voice',voice());assert.equal(ui.hostState().dirty,true);
++ ui.state.editDrafts.clear();ui.state.edit.hostDirty=false;ui.state.edit.attempt={operation_id:'unknown-write'};
++ assert.equal(ui.hostState().dirty,true);assert.equal(ui.hostState().unsettled,true);assert.equal(ui.hostState().busy,true);ui.state.edit.busy=true;assert.equal(ui.hostState().busy,true);
++ ui.state.edit=null;ui.contexts.voice.undoAttempt={operation_id:'unknown-undo'};assert.equal(ui.hostState().dirty,true);
++});
++test('a failed sound list leaves the loading state and exposes a retry while retaining prior items',async()=>{
++ const {ui,els,setFetch}=harness();setFetch(async()=>response({error:'unavailable'},503));await ui.loadList();
++ assert.equal(els.get('sound-status').textContent,'读取失败');assert.match(els.get('sound-list').innerHTML,/data-sound-retry/);assert.doesNotMatch(els.get('sound-list').innerHTML,/正在读取/);
++ ui.contexts.audio.items=[audio()];await ui.loadList();assert.equal(ui.contexts.audio.items.length,1);assert.match(els.get('sound-status').textContent,/已载入内容仍保留/);
++});
++test('flat sound visibility buttons retain independent tab filters',async()=>{
++ const {ui,els,setFetch}=harness();setFetch(async()=>response({items:[],next_cursor:null}));
++ await els.get('sound-archived').dispatch('click');assert.equal(ui.contexts.audio.visibility,'archived');
++ ui.switchTab('voice');assert.equal(ui.contexts.voice.visibility,'active');ui.switchTab('audio');assert.equal(els.get('sound-visibility').value,'archived');
++});
++test('project sound host tracks upload preparation before a plan exists and clears only the reset draft',async()=>{
++ const {ui,els}=harness();ui.markHostDraft({type:'change',target:{closest:selector=>selector==='form'?{id:'upload-form'}:null}});
++ assert.deepEqual(plain(ui.hostState()),{dirty:true,busy:false,unsettled:false});await els.get('upload-form').dispatch('reset');assert.equal(ui.hostState().dirty,false);
++ ui.state.upload={operation:{operation_id:'pending-upload'}};assert.equal(ui.hostState().dirty,true);
++ ui.state.uploadBusy=true;assert.equal(ui.hostState().busy,true);
++});
++test('a known rejected sound save releases the host write lock without losing the draft',async()=>{
++ const {ui,setFetch}=harness();await ui.openEditor('audio',audio());ui.state.edit.hostDirty=true;
++ setFetch(async()=>response({error:'Invalid record'},400));await ui.saveEditor();
++ assert.deepEqual(plain(ui.hostState()),{dirty:true,busy:false,unsettled:false});assert.equal(ui.state.edit.attempt,null);
++});
+ test('separate sound workspace uses private route, real empty states and no fabricated audio or generation controls',()=>{
+   const route=readFileSync(new URL('../app/sound/route.ts',import.meta.url),'utf8');assert.match(route,/GET=studioPage/);const host=readFileSync(new URL('../app/studio/route.ts',import.meta.url),'utf8');assert.match(host,/private, no-store/);assert.match(host,/evaluateStudioHost/);assert.match(home,/id="tab-audio"/);assert.match(home,/id="tab-voice"/);assert.match(home,/不用于生物识别/);assert.match(home,/WAV、MP3 或 FLAC/);assert.match(home,/归档（可恢复）/);assert.doesNotMatch(home,/<audio|voice-clone|AssetVersion|永久删除/);assert.match(readFileSync(new URL('../lib/home.ts',import.meta.url),'utf8'),/sound/);
+   const {ui,els}=harness();ui.contexts.audio.loaded=true;ui.renderList();assert.match(els.get('sound-list').innerHTML,/还没有音频文件/);assert.match(els.get('sound-list').innerHTML,/>0</);assert.doesNotMatch(els.get('sound-list').innerHTML,/<audio|sample\.wav/);
+diff --git a/tests/workflow-navigation.test.mjs b/tests/workflow-navigation.test.mjs
+index fa463d6..3933721 100644
+--- a/tests/workflow-navigation.test.mjs
++++ b/tests/workflow-navigation.test.mjs
+@@ -1,17 +1,17 @@
+ import test from 'node:test';
+ import assert from 'node:assert/strict';
+ import {readFileSync} from 'node:fs';
+-import {workflowStages,workflowStage} from '../components/workspace/workflow-navigation.mjs';
++import {workflowStages,workflowStage,resolveProjectView} from '../components/workspace/workflow-navigation.mjs';
+ test('all project functions have distinct peer destinations',()=>{
+- assert.deepEqual(workflowStages.map(x=>x.value),['screenplay','episodes','storyboard','prompts','canvas','relations','novel','planning','review','tasks','production','delivery']);
++ assert.deepEqual(workflowStages.map(x=>x.value),['screenplay','episodes','storyboard','prompts','canvas','relations','novel','planning','sound']);
+  for(const {value} of workflowStages)assert.equal(workflowStage(value),value);
+  assert.equal(workflowStage('delivery'),'delivery');assert.equal(workflowStage('storyboard'),'storyboard');assert.equal(workflowStage('canvas'),'canvas');
+ });
+-test('writing actions remain visible and retain separate review paths',()=>{
++test('writing actions remain visible without separate review and task destinations',()=>{
+  const s=readFileSync('components/workspace/production-workspace.tsx','utf8');
+- for(const action of ["onCreateItem('outline')","onCreateItem('chapter')","onCreateItem('scene')","onNavigate('review')"])assert.ok(s.includes(action),action);
++ for(const action of ["onCreateItem('outline')","onCreateItem('chapter')","onCreateItem('scene')"])assert.ok(s.includes(action),action);
+  assert.doesNotMatch(s,/更多创作工具/);
+- const editor=readFileSync('components/workspace/document-editor.tsx','utf8');assert.ok(editor.includes('#review'));
++ const editor=readFileSync('components/workspace/document-editor.tsx','utf8');assert.ok(!editor.includes('#review'));
+  const shell=readFileSync('components/workspace/workspace.tsx','utf8');
+  assert.match(shell,/allCanvasKinds\.filter/);assert.match(shell,/onCreateItem=\{kind => navigate/);
+ });
+@@ -26,3 +26,14 @@ test('workflow is actual document and external handoff, not synthetic media',()=
+ test('legacy project switching clears stale text before loading and checks returned ownership',()=>{const s=readFileSync('studio-core/web/studio.js','utf8');const change=s.slice(s.indexOf('async function selectProject'),s.indexOf('function selectedOptions'));assert.match(change,/state.document=null/);assert.match(change,/state.editingText=null/);assert.match(change,/正在读取当前作品/);assert.match(s,/documentData.project_id!==state.projectId/);});
+ 
+ test('writing and story-item editing are mutually exclusive even for old item deep links',()=>{const s=readFileSync('components/workspace/workspace.tsx','utf8');assert.match(s,/route.view==='screenplay' && selectedOpen \? <section/);assert.match(s,/onClick=\{closeInspector\}>返回文稿写作/);assert.match(s,/if \(busyRef.current\)/);assert.match(s,/if \(dirtyRef.current\) \{ navigationTrigger.current/);assert.match(s,/setDirty\(false\); dirtyRef.current = false; next\?\.\(\)/);});
++
++test('retired links resolve into project creation while pending handoff recovery remains reachable',()=>{
++ const empty={getItem:()=>null};
++ for(const [old,next] of Object.entries({review:'screenplay',tasks:'planning',production:'storyboard',delivery:'prompts'}))assert.equal(resolveProjectView(old,'p',empty),next);
++ const pending={getItem:()=>JSON.stringify({key:'pending-key',input:{project_id:'p'}})};
++ assert.equal(resolveProjectView('production','p',pending),'production');
++ assert.equal(resolveProjectView('delivery','p',pending),'delivery');
++ assert.equal(resolveProjectView('delivery','other',pending),'prompts');
++ assert.equal(resolveProjectView('production','p',{getItem(){throw Error('denied')}}),'production');
++ assert.equal(resolveProjectView('sound','p',empty),'sound');
++});
+diff --git a/tests/workspace-unified-shell.test.mjs b/tests/workspace-unified-shell.test.mjs
+index 9d4a792..678290e 100644
+--- a/tests/workspace-unified-shell.test.mjs
++++ b/tests/workspace-unified-shell.test.mjs
+@@ -1,5 +1,5 @@
+ import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+ const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'),shell=read('components/workspace/workspace.tsx'),css=read('components/workspace/workspace-shell.css'),actor=read('components/workspace/actor-wardrobe.tsx');
+-test('desktop navigation is on the left and every action keeps the guard',()=>{assert.match(shell,/<aside className="cw-sidebar" aria-label="主导航"/);assert.match(shell,/nav.filter\(n => \['home','projects','ip','materials'\]/);assert.match(shell,/onClick=\{\(\) => navigate/);assert.match(shell,/<Sheet open=\{mobileNav\}/);for(const label of ['连接','创作规划','创作管理','声音'])assert.ok(shell.includes(label));assert.doesNotMatch(shell,/更多工具|更多创作工具/);assert.match(css,/--cw-shell-width:200px/);assert.match(css,/>\.cw-inspector\{grid-column:3;grid-row:1\}/);});
++test('desktop navigation is on the left and every action keeps the guard',()=>{assert.match(shell,/<aside className="cw-sidebar" aria-label="主导航"/);assert.match(shell,/nav.filter\(n => \['home','projects','ip','materials'\]/);assert.match(shell,/onClick=\{\(\) => navigate/);assert.match(shell,/<Sheet open=\{mobileNav\}/);for(const label of ['连接','创作规划','声音'])assert.ok(shell.includes(label));assert.doesNotMatch(shell,/更多工具|更多创作工具|创作管理|cw-global-services/);assert.match(css,/--cw-shell-width:200px/);assert.match(css,/>\.cw-inspector\{grid-column:3;grid-row:1\}/);});
+ test('phone has a compact header and reachable navigation drawer',()=>{assert.match(css,/@media\(max-width:767px\)/);assert.match(css,/grid-template-rows:64px minmax\(0,1fr\)/);assert.match(css,/width:260px!important/);assert.match(shell,/aria-label="展开导航"/);});
+ test('actor codex remains below the portrait and tab changes keep local protection',()=>{assert.ok(actor.indexOf('className="cw-actor-introduction cw-actor-codex"')>actor.indexOf('cw-actor-visual-stage'));assert.doesNotMatch(actor,/<details className="cw-actor-biography"/);assert.match(actor,/attempt\(\(\)=>\{setEditingProfile\(false\);onTabSelect\(value\)/);assert.match(actor,/editingProfile \|\| blocked \|\| comparison/);assert.match(actor,/ref=\{contentRegion\}/);assert.match(actor,/expected_profile_version: info.character.profile_version/);});
