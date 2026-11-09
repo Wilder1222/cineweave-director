@@ -1,0 +1,1071 @@
+diff --git a/DESIGN.md b/DESIGN.md
+index 7cf6aac..c9aadd8 100644
+--- a/DESIGN.md
++++ b/DESIGN.md
+@@ -10,11 +10,11 @@
+ 
+ ## 页面与交互
+ 
+-桌面左侧菜单 200px，较窄桌面 180px，包含看板、项目、演员、素材；连接与更多工具位于底部。767px 以下改为 64px 顶栏与 260px 左侧抽屉。菜单始终通过未保存与保存中保护。内容独立滚动，编辑检查器按现有机制显示。
++桌面左侧菜单 200px，较窄桌面 180px，包含看板、项目、演员、素材；连接、创作规划、创作管理及声音作为可见入口位于底部。767px 以下改为 64px 顶栏与 260px 左侧抽屉。菜单始终通过未保存与保存中保护。内容独立滚动，编辑检查器按现有机制显示。
+ 
+ 看板以真实最近项目为大幅主视觉和纵向章节列表，项目目录为手动横滚卡片，同时保留完整搜索、筛选、排序、分页。项目没有默认封面字段；只有精确属于该项目的可访问素材引用可以装饰主视觉，并标明项目参考，缺图使用黑色排版。不得把素材、演员快照或示例项目伪作正式封面。
+ 
+-项目主入口为故事、剧集、分镜、提示词，调用既有故事结构、文稿与审核接口。角色场景、小说、审阅、任务、制作及交付保留在更多工具中。提示词使用现有 prompt_note 文稿类型，没有另建一套假保存。
++项目内以项目名称为主标题；故事、剧集、分镜、提示词、角色场景、项目关系、小说大纲、创作规划、候选审阅、协作任务、制作、交付作为平级常驻功能。导航桌面六列、平板四列、手机三列自然换行，不使用滑动高亮块或滚动条。切换项目使用带搜索、类型筛选与分页的选片面板；点击保留原模块，并经过未保存/保存中保护。故事页文稿先行，目录与正文同屏；结构编排和创作规划在各自入口，项目关系只在关系页展开。提示词使用现有 prompt_note 文稿类型，没有另建一套假保存。
+ 
+ 演员为大屏肖像展示，原图 contain，不裁切主体。同一图像提供 blur(26px) brightness(.28) saturate(.72) 的背景与原有边缘融合。性格、档案、经历全部在图像下方常驻，档案/衣橱/作品三项；旧 references 链接归入衣橱，身份链接仍可访问。
+ 
+@@ -24,6 +24,6 @@
+ 
+ ## 动效、可达性与真实状态
+ 
+-保留 React Bits GhostFibers、SideRays、AnimatedContent 及既有 GSAP/Embla 能力。仅装饰层动效，手动切换、不自动轮播。支持暂停、离屏停止、减少动态、低性能与无 WebGL 回退，内容默认可见。字段、错误、恢复、确认与无障碍名称不因精简而移除；触控动作最小 44px，键盘焦点明确，滚动条、选区与插入符跟随主题。
++保留 React Bits GhostFibers、SideRays、AnimatedContent 及既有 GSAP/Embla 能力。项目切换增加一次性曝光光带与卡片内局部指针光效，选中功能用细金线及文字着色反馈；均不阻塞操作。仅装饰层动效，手动切换、不自动轮播。支持暂停、离屏停止、减少动态、低性能与无 WebGL 回退，内容默认可见。字段、错误、恢复、确认与无障碍名称不因精简而移除；触控动作最小 44px，键盘焦点明确，滚动条、选区与插入符跟随主题。
+ 
+ 版本/CAS/幂等、未知写入结果核对、所有者身份、所有账号内项目权限、人类审批、原始媒体与可恢复回收站仍由现有业务契约控制。没有新增授权、模型调用、资产迁移或视频编辑器。
+diff --git a/components/workspace/creative-structure.tsx b/components/workspace/creative-structure.tsx
+index 787690e..8582993 100644
+--- a/components/workspace/creative-structure.tsx
++++ b/components/workspace/creative-structure.tsx
+@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
+ import { Button } from '@/components/ui/button';
+ import { NativeSelect } from '@/components/ui/native-select';
+ import {sceneEpisodeIds} from './production-workspace-ux.mjs';
++import './project-content.css';
+ import type { WorkspaceApi } from './api';
+ import type { ItemKind, StoryItem } from './model';
+ 
+@@ -52,8 +53,8 @@ export default function CreativeStructure({ api, projectId, items, acceptedItems
+   };
+   return <section aria-label="剧集与场次" className="cw-creative-structure">
+     <header><h2>{stage==='storyboard'?'剧集与分镜':'剧集与场次'}</h2><div><Button type="button" onClick={()=>add('episode')}>新建剧集</Button>{' '}<Button type="button" variant="outline" onClick={()=>add('scene')}>新建场次</Button>{stage==='storyboard'&&<>{' '}<Button type="button" variant="outline" onClick={()=>add('shot')}>新建镜头</Button></>}</div></header>
+-    <div className="cw-module-toolbar"><label>内容<NativeSelect value={kind} onChange={e=>{setKind(e.target.value as StructureKind);setParent('all');}}><option value="episode">剧集</option><option value="scene">场次</option>{stage==='storyboard'&&<option value="shot">镜头</option>}</NativeSelect></label>
+-      <label>状态<NativeSelect value={mode} onChange={e=>setMode(e.target.value as 'accepted'|'candidates')}><option value="accepted">已采纳</option><option value="candidates">候选</option></NativeSelect></label>
++    <div className="cw-module-toolbar"><div className="cw-project-choice-group" role="group" aria-label="内容类型">{(['episode','scene',...(stage==='storyboard'?['shot']:[])] as StructureKind[]).map(value=><Button key={value} type="button" variant="ghost" aria-pressed={kind===value} onClick={()=>{setKind(value);setParent('all');}}>{kindLabel[value]}</Button>)}</div>
++      <div className="cw-project-choice-group" role="group" aria-label="采纳状态">{(['accepted','candidates'] as const).map(value=><Button key={value} type="button" variant="ghost" aria-pressed={mode===value} onClick={()=>setMode(value)}>{value==='accepted'?'已采纳':'候选'}</Button>)}</div>
+       {kind!=='episode'&&<label>{kind==='scene'?'所属剧集':'所属场次'}<NativeSelect value={parent} onChange={e=>setParent(e.target.value)}><option value="all">全部</option>{kind==='scene'&&<option value="unassigned">未分集</option>}{parents.map(item=><option key={item.id} value={item.id}>{item.content.title}</option>)}</NativeSelect></label>}</div>
+     {error&&<p role="alert">{error} <Button type="button" variant="outline" onClick={()=>setRefresh(v=>v+1)}>重新读取</Button></p>}
+     {loading&&<p role="status">正在读取…</p>}
+diff --git a/components/workspace/document-editor.tsx b/components/workspace/document-editor.tsx
+index 47d233c..804edb4 100644
+--- a/components/workspace/document-editor.tsx
++++ b/components/workspace/document-editor.tsx
+@@ -3,7 +3,8 @@ import {useEffect,useRef,useState} from 'react';
+ import {Button} from '@/components/ui/button';
+ import {Input} from '@/components/ui/input';
+ import {Textarea} from '@/components/ui/textarea';
+-import {NativeSelect} from '@/components/ui/native-select';
++import {FileText,Plus,Search} from 'lucide-react';
++import './project-content.css';
+ import MarkdownContent from './markdown-content';
+ import {ownerRequest,errorMessage,isKnownRejection} from './advanced-api';
+ import {mergeDocuments} from './production-workspace-ux.mjs';
+@@ -19,7 +20,7 @@ const names:Record<string,string>={story:'故事',script:'剧本',daily_plan:'
+ /** Same-origin document editing; it never promotes a version or changes project identity. */
+ export default function DocumentEditor({project,kindFilter,onError,onNotice,onDirty,onBusy,onAttempt}:Props){
+  const pid=project.id,scope='cw-document-pending:'+pid;
+- const [documents,setDocuments]=useState<Doc[]>([]),[doc,setDoc]=useState<Doc|null>(null),[body,setBody]=useState(''),[name,setName]=useState(''),[kind,setKind]=useState(kindFilter||(project.kind==='daily'?'daily_plan':'script')),[creating,setCreating]=useState(false),[preview,setPreview]=useState(false),[pending,setPending]=useState<Pending|null>(null),[busy,setBusy]=useState(false),[loading,setLoading]=useState(false),[error,setError]=useState('');
++ const [documents,setDocuments]=useState<Doc[]>([]),[doc,setDoc]=useState<Doc|null>(null),[body,setBody]=useState(''),[name,setName]=useState(''),[kind,setKind]=useState(kindFilter||(project.kind==='daily'?'daily_plan':'script')),[creating,setCreating]=useState(false),[preview,setPreview]=useState(false),[pending,setPending]=useState<Pending|null>(null),[busy,setBusy]=useState(false),[loading,setLoading]=useState(false),[error,setError]=useState(''),[search,setSearch]=useState('');
+  const epoch=useRef(0), lock=useRef(false);
+  function remember(p:Pending){stageDocumentRequest(sessionStorage,scope,p);setPending(p);onDirty(true);}
+  function clearPending(){try{sessionStorage.removeItem(scope);}catch{/* The same request is safe to recover again. */}setPending(null);}
+@@ -75,12 +76,13 @@ export default function DocumentEditor({project,kindFilter,onError,onNotice,onDi
+   onNotice('已读取最新文稿，保留的正文仍需检查和保存。');
+  }
+  async function propose(){if(!doc)return;const input={document_id:doc.id,source_revision:doc.current_revision,proposed_body:body,rationale:'创作者提交的内容审阅提案'};const p:Pending={kind:'proposal',projectId:pid,input,key:crypto.randomUUID()};remember(p);await resolve(p);}
+- return <section className="cw-module" aria-label="文稿创作"><h2>{kindFilter==='prompt_note'?'提示词':'文稿'}</h2>
++ const visibleDocuments=documents.filter(d=>(!kindFilter||d.kind===kindFilter||d.id===doc?.id)&&(!search.trim()||d.name.toLocaleLowerCase().includes(search.trim().toLocaleLowerCase())));
++ function newDocument(){onAttempt(()=>{onDirty(false);setDoc(null);setBody('');setName('');setCreating(true);setKind(kindFilter||(project.kind==='daily'?'daily_plan':'script'));setPreview(false);});}
++ return <section className="cw-module cw-document-workbench" aria-label="文稿创作"><header className="cw-project-section-heading"><h2>{kindFilter==='prompt_note'?'提示词':'文稿'}</h2><Button type="button" variant="ghost" onClick={()=>onAttempt(()=>location.assign('/studio?project='+enc(pid)+(doc?'&document='+enc(doc.id):'')+'#review'))}>文稿审核</Button></header>
+  {error&&<p role="alert" className="cw-warning">{error}</p>}{loading&&<p role="status">正在读取文稿…</p>}
+  {pending&&<div role="status"><p>上次操作结果待核对，输入已保留。</p><label>保留的正文（可复制）<Textarea readOnly rows={5} value={body}/></label><Button type="button" disabled={busy} onClick={()=>void run(()=>resolve(pending))}>{pending.kind==='save'?'核对上次保存':'核对并恢复上次提交'}</Button>{pending.kind==='save'&&<Button type="button" variant="outline" disabled={busy} onClick={()=>{if(window.confirm('放弃核对上次保存并读取最新文稿？保留的正文将留在编辑器中，仍需检查和保存。'))void run(()=>continueWithDraft(pending));}}>放弃核对并继续编辑</Button>}</div>}
+- <fieldset disabled={busy||!!pending} className="cw-form-fieldset"><label>已有文稿<NativeSelect value={doc?.id||''} onChange={e=>switchDocument(e.target.value)}><option value="">选择文稿</option>{documents.filter(d=>!kindFilter||d.kind===kindFilter||d.id===doc?.id).map(d=><option key={d.id} value={d.id}>{d.name} · {names[d.kind]||d.kind}</option>)}</NativeSelect></label>
+- <Button type="button" variant="outline" onClick={()=>onAttempt(()=>{onDirty(false);setDoc(null);setBody('');setName('');setCreating(true);setKind(kindFilter||(project.kind==='daily'?'daily_plan':'script'));setPreview(false);})}>{kindFilter==='prompt_note'?'新建提示词':'新建文稿'}</Button>
+- {creating&&<><label>文稿标题<Input required maxLength={200} value={name} onChange={e=>{setName(e.target.value);onDirty(true);}}/></label><label>类型<NativeSelect value={kind} onChange={e=>{setKind(e.target.value);onDirty(true);}}>{Object.entries(names).filter(([value])=>!kindFilter||value===kindFilter).map(([value,label])=><option key={value} value={value}>{label}</option>)}</NativeSelect></label></>}
+- {(doc||creating)&&<><h3>{doc?doc.name:'新文稿'}</h3>{doc&&<p>版本 {doc.current_revision} · {doc.state==='approved'?'已审核':'草稿'}</p>}<label>正文（支持 Markdown）<Textarea rows={16} maxLength={100000} value={body} onChange={e=>{setBody(e.target.value);onDirty(true);}}/></label><Button type="button" variant="ghost" onClick={()=>setPreview(!preview)} aria-expanded={preview}>{preview?'收起预览':'预览'}</Button>{preview&&<MarkdownContent content={body}/>}<div className="flex flex-wrap gap-2">{creating?<Button type="button" onClick={()=>void run(create)}>创建文稿</Button>:<><Button type="button" onClick={()=>void run(save)}>保存草稿</Button><Button type="button" variant="outline" onClick={()=>void run(propose)}>提交审核提案</Button></>}</div></>}
+- </fieldset><Button type="button" variant="ghost" onClick={()=>onAttempt(()=>location.assign('/studio?project='+enc(pid)+(doc?'&document='+enc(doc.id):'')+'#review'))}>打开文稿审核</Button></section>;
++ <fieldset disabled={busy||!!pending} className="cw-document-layout"><aside className="cw-document-library" aria-label="已有文稿"><Button type="button" variant="outline" className="cw-document-new" onClick={newDocument}><Plus aria-hidden="true"/>{kindFilter==='prompt_note'?'新建提示词':'新建文稿'}</Button><label className="cw-document-search"><Search aria-hidden="true"/><Input type="search" aria-label="搜索文稿" placeholder="搜索文稿" value={search} onChange={e=>setSearch(e.target.value)}/></label><div className="cw-document-records">{visibleDocuments.map(d=><Button key={d.id} type="button" variant="record" size="record" className="cw-document-record" aria-pressed={doc?.id===d.id} onClick={()=>switchDocument(d.id)}><FileText aria-hidden="true"/><span><strong>{d.name}</strong><small>{names[d.kind]||d.kind} · v{d.current_revision}</small></span></Button>)}{!loading&&!visibleDocuments.length&&<p className="cw-small-copy">{search?'没有匹配的文稿':'暂无文稿'}</p>}</div></aside>
++ <div className="cw-document-draft cw-form-fieldset">{creating&&<><label>文稿标题<Input required maxLength={200} value={name} onChange={e=>{setName(e.target.value);onDirty(true);}}/></label><div className="cw-project-choice-group" role="group" aria-label="文稿类型">{Object.entries(names).filter(([value])=>!kindFilter||value===kindFilter).map(([value,label])=><Button key={value} type="button" variant="ghost" aria-pressed={kind===value} onClick={()=>{setKind(value);onDirty(true);}}>{label}</Button>)}</div></>}
++ {(doc||creating)?<><header className="cw-document-draft-heading"><h3>{doc?doc.name:'新文稿'}</h3>{doc&&<span>v{doc.current_revision} · {doc.state==='approved'?'已审核':'草稿'}</span>}</header><label>正文<Textarea rows={16} maxLength={100000} value={body} onChange={e=>{setBody(e.target.value);onDirty(true);}}/></label><div className="cw-document-savebar">{creating?<Button type="button" onClick={()=>void run(create)}>创建文稿</Button>:<><Button type="button" onClick={()=>void run(save)}>保存草稿</Button><Button type="button" variant="outline" onClick={()=>void run(propose)}>提交审核提案</Button></>}<Button type="button" variant="ghost" onClick={()=>setPreview(!preview)} aria-expanded={preview}>{preview?'收起预览':'预览'}</Button></div>{preview&&<MarkdownContent content={body}/>}</>:<div className="cw-document-idle"><FileText aria-hidden="true"/><h3>{kindFilter==='prompt_note'?'提示词创作':'开始写作'}</h3><Button type="button" variant="outline" onClick={newDocument}><Plus aria-hidden="true"/>{kindFilter==='prompt_note'?'新建提示词':'新建文稿'}</Button></div>}</div>
++ </fieldset></section>;
+ }
+diff --git a/components/workspace/production-workspace.tsx b/components/workspace/production-workspace.tsx
+index 6b6ca70..053d0e5 100644
+--- a/components/workspace/production-workspace.tsx
++++ b/components/workspace/production-workspace.tsx
+@@ -3,19 +3,19 @@ import {useEffect,useRef,useState} from 'react';
+ import {Button} from '@/components/ui/button';
+ import {Input} from '@/components/ui/input';
+ import {Textarea} from '@/components/ui/textarea';
+-import {NativeSelect} from '@/components/ui/native-select';
+ import {Checkbox} from '@/components/ui/checkbox';
+ import MarkdownContent from './markdown-content';
+ import CreativeStructure from './creative-structure';
+ import DocumentEditor from './document-editor';
+-import ProjectRelations from './project-relations';
++import {HandoffAssetReferences} from './project-relations';
++import './project-content.css';
+ import EpisodeShotPlan from './episode-shot-plan';
+ import DevelopmentPlanList from './development-plan-list';
+ import {ownerRequest,errorMessage,isKnownRejection} from './advanced-api';
+ import type {WorkspaceApi} from './api';
+ import type {Project,StoryItem,FeedbackHandler,ItemKind,GraphData} from './model';
+ import {approvedScript,sceneEpisodeIds,readDocumentWithEpisode,missingEpisodeOption,scenePin,shotPin,mergeDocuments,handoffReadback,externalMatches,safeExternalUrl,persistHandoffRequest,handoffSelection} from './production-workspace-ux.mjs';
+-type Stage='story'|'storyboard'|'production'|'delivery';
++type Stage='story'|'storyboard'|'planning'|'production'|'delivery';
+ interface Document {id:string;project_id:string;name:string;kind:string;current_revision:number;state?:string;body?:string;sha256?:string}
+ interface DocumentEpisode {episode_id:string|null;revision:number}
+ interface External {revision:number;project_url:string|null;production_status:string;notes:string}
+@@ -24,6 +24,12 @@ interface Summary {id:string;script_revision:number;created_at:string;target_pla
+ interface Pending {key:string;input:Record<string,unknown>;id?:string;sha?:string}
+ interface Props {stage:Stage;api:WorkspaceApi;project:Project|null;items:StoryItem[];acceptedItems:StoryItem[];graph:GraphData|null;candidates:boolean;onCandidates:(visible?:boolean)=>void;onError:(message:string)=>void;onNotice:FeedbackHandler;onDirty:(value:boolean)=>void;onBusy:(value:boolean)=>void;onSelect:(id:string)=>void;onCreateItem:(kind:ItemKind)=>void;onNavigate:(view:'novel'|'review'|'tasks'|'production')=>void;onAttempt:(action:()=>void)=>void}
+ const esc=encodeURIComponent;
++type Choice={value:string;label:string};
++function ProjectChoices({label,value,options,onChange,disabled=false,searchable=false}:{label:string;value:string;options:Choice[];onChange(value:string):void;disabled?:boolean;searchable?:boolean}){
++ const [search,setSearch]=useState('');
++ const shown=options.filter(option=>!search.trim()||option.label.toLocaleLowerCase().includes(search.trim().toLocaleLowerCase()));
++ return <fieldset className={'cw-project-choices'+(searchable?' cw-project-choices-records':'')} disabled={disabled}><legend>{label}</legend>{searchable&&options.length>8&&<Input aria-label={'搜索'+label} type="search" placeholder="搜索" value={search} onChange={event=>setSearch(event.target.value)}/>}<div className="cw-project-choice-group" role="group" aria-label={label}>{shown.map(option=><Button key={option.value} type="button" variant="ghost" aria-pressed={value===option.value} onClick={()=>onChange(option.value)}>{option.label}</Button>)}{!shown.length&&<p className="cw-small-copy">没有匹配内容</p>}</div></fieldset>;
++}
+ /** Existing immutable handoff + manual external tracking. No media generation or editing. */
+ export default function ProductionWorkspace({stage,api,project,items,acceptedItems,graph,candidates,onCandidates,onError,onNotice,onDirty,onBusy,onSelect,onCreateItem,onNavigate,onAttempt}:Props){
+  const pid=project?.id||'',scope='cw-handoff-pending:'+pid;
+@@ -51,24 +57,22 @@ export default function ProductionWorkspace({stage,api,project,items,acceptedIte
+  async function readDirector(){if(!handoff||!directorScene)return;const token=++directorToken.current;setDirector(null);const value=await ownerRequest(`/api/studio/handoffs/${esc(handoff.id)}/director-input?scene_id=${esc(directorScene)}`);if(token===directorToken.current)setDirector(value);}
+  async function checkExternal(input:Record<string,unknown>){if(!handoff)return;const read=await ownerRequest<Handoff>('/api/studio/handoffs/'+esc(handoff.id));if(externalMatches(read.external,input)){present(read);setExternalPending(null);onDirty(false);onNotice('外部进度记录已回读，未验证成片');}else throw Error('原操作结果尚未匹配；保留输入，请核对当前交接记录，不自动覆盖。');}
+  async function saveExternal(){if(!handoff||externalPending)return;const input={expected_revision:handoff.external?.revision||0,project_url:url?(safeExternalUrl(url)||url):null,production_status:status,notes:notes.trim()};setExternalPending(input);let committed=false;try{await ownerRequest(`/api/studio/handoffs/${esc(handoff.id)}/external`,'PATCH',input);committed=true;await checkExternal(input);}catch(e){if(!committed&&isKnownRejection(e))setExternalPending(null);throw e;}}
+- if(!project)return <section className="cw-module-empty">先选择作品。</section>;
+- return <section className="cw-module"><header className="cw-module-toolbar"><Button variant="ghost" disabled={busy||loading} onClick={()=>onAttempt(()=>void load())}>刷新</Button></header>{error&&<p role="alert" className="cw-warning">{error}</p>}{loading&&<p role="status">正在读取作品资料…</p>}
+- <ProjectRelations key={pid} projectId={pid} graph={graph} handoff={handoff} onSelect={onSelect} onAttempt={onAttempt} onProduction={stage==='production'?undefined:()=>onNavigate('production')}/>
+- {stage==='story'&&<section className="cw-writing-actions" aria-label="开始创作"><div className="cw-writing-primary">{project.kind==='long_form'?<Button variant="outline" onClick={()=>onCreateItem('chapter')}>新建小说章节</Button>:project.kind==='daily'?null:<Button variant="outline" onClick={()=>onCreateItem('scene')}>新建剧本场次</Button>}<Button variant="outline" onClick={()=>onCreateItem('episode')}>新建分集计划</Button></div><details><summary>更多创作工具</summary><div className="cw-writing-primary"><Button variant="ghost" onClick={()=>onCreateItem('outline')}>新建大纲</Button>{project.kind!=='long_form'&&<Button variant="ghost" onClick={()=>onCreateItem('chapter')}>新建小说章节</Button>}{project.kind==='long_form'||project.kind==='daily'?<Button variant="ghost" onClick={()=>onCreateItem('scene')}>新建剧本场次</Button>:null}<Button variant="ghost" onClick={()=>onNavigate('novel')}>小说与大纲</Button><Button variant="ghost" onClick={()=>onNavigate('tasks')}>写作任务</Button><Button variant="ghost" onClick={()=>onNavigate('review')}>故事候选审阅</Button></div></details></section>}
+- {stage==='storyboard'&&<div className="cw-writing-primary"><Button variant="outline" onClick={()=>onCreateItem('shot')}>新建镜头计划</Button><Button variant="ghost" onClick={()=>onCreateItem('episode')}>新建分集计划</Button><Button variant="ghost" onClick={()=>onCreateItem('scene')}>新建剧本场次</Button></div>}
+- {(stage==='story'||stage==='storyboard')&&<CreativeStructure api={api} projectId={pid} stage={stage} items={items} acceptedItems={acceptedItems} onCreate={onCreateItem} onSelect={onSelect} onAttempt={onAttempt}/>}
+- {(stage==='story'||stage==='storyboard')&&<EpisodeShotPlan items={items} candidates={candidates} onCandidates={()=>onAttempt(()=>onCandidates(!candidates))} onSelect={onSelect}/>}
+- {stage==='story'&&<><Button type="button" variant="outline" onClick={()=>onCreateItem('development_plan')}>新建选题与创作规划</Button><DevelopmentPlanList items={items} candidates={candidates} onCandidates={()=>onAttempt(()=>onCandidates(!candidates))} onSelect={onSelect}/></>}
+- {stage==='story'&&<DocumentEditor key={project.id} project={project} onError={onError} onNotice={onNotice} onDirty={onDirty} onBusy={onBusy} onAttempt={onAttempt}/>}
+- {stage==='story'&&(acceptedItems.some(item=>item.kind==='scene')||project.kind!=='daily')&&<section><h3>已采纳场次</h3>{acceptedItems.filter(item=>item.kind==='scene'&&!item.archived).map(scene=><Button key={scene.id} variant="record" onClick={()=>onSelect(scene.id)}>{scene.content.title} · 打开场次</Button>)}{!scenes.length&&project.kind!=='daily'&&<p>还没有已采纳的场次。</p>}</section>}
+- {stage==='storyboard'&&<details><summary>手写分镜与剧本文稿</summary><label>文稿类型<NativeSelect value={documentKind} onChange={e=>setDocumentKind(e.target.value)}><option value="all">全部文稿</option>{[...new Set(documents.map(d=>d.kind))].map(kind=><option key={kind} value={kind}>{({story:'故事',script:'剧本',daily_plan:'日常方案',scene_text:'场次文本',prompt_note:'提示词笔记',handoff_note:'交接笔记'} as Record<string,string>)[kind]||kind}</option>)}</NativeSelect></label><label>分镜与剧本文稿<NativeSelect value={documentId} onChange={e=>{const id=e.target.value;onAttempt(()=>void readDocument(id));}}><option value="">选择原文</option>{documents.filter(d=>documentKind==='all'||d.kind===documentKind).map(d=><option key={d.id} value={d.id}>{d.name}</option>)}</NativeSelect></label>{!loading&&!documents.length&&<p>尚无已存文稿。<Button variant="ghost" onClick={()=>onAttempt(()=>location.assign('/studio?project='+esc(pid)+'#scripts'))}>打开文稿编辑器</Button></p>}{document&&<article><h3>{document.name}</h3><p className="cw-small-copy">文稿原文 · {document.state==='approved'?'已审核':'尚未审核'}；此文稿按原文阅读，不自动解析镜头。</p><Button variant="outline" onClick={()=>onAttempt(()=>location.assign('/studio?project='+esc(pid)+'&document='+esc(document.id)+'#scripts'))}>在文稿编辑器打开</Button><MarkdownContent content={document.body||''}/></article>}</details>}
+- {stage==='story'&&<label>选择文稿设置所属剧集<NativeSelect value={documentId} onChange={e=>{const id=e.target.value;onAttempt(()=>void readDocument(id));}}><option value="">选择已保存文稿</option>{documents.map(d=><option key={d.id} value={d.id}>{d.name}</option>)}</NativeSelect></label>}
+- {(stage==='story'||stage==='storyboard'||stage==='production')&&document&&<section className="cw-document-episode"><h3>文稿所属剧集</h3>{documentEpisode?<><label>所属剧集<NativeSelect value={episodeChoice} disabled={busy||episodeUnknown} onChange={e=>{setEpisodeChoice(e.target.value);onDirty(true);}}><option value="">暂不分集</option>{unavailableEpisode&&<option value={documentEpisode!.episode_id!}>当前所属剧集已不可用，请更换</option>}{acceptedItems.filter(item=>item.kind==='episode'&&!item.archived&&item.accepted_version!=null).map(item=><option key={item.id} value={item.id}>{item.content.title}</option>)}</NativeSelect></label><Button type="button" variant="outline" disabled={busy||episodeUnknown||episodeChoice===(documentEpisode.episode_id||'')} onClick={()=>void operation(saveDocumentEpisode)}>保存归属</Button>{episodeUnknown&&<Button type="button" variant="outline" onClick={()=>void readDocument(document.id)}>重新读取归属</Button>}<p className="cw-small-copy">选择对应剧集后保存；原有未分集文稿仍可使用。</p></>:<p>{episodeUnavailable?'暂无法使用文稿归属，仍可阅读原文及交付文字资料。':'正在读取文稿归属…'}</p>}</section>}
++ if(!project)return <section className="cw-module-empty">先选择项目。</section>;
++ return <section className="cw-module cw-project-content" data-stage={stage}>
++ {stage==='story'&&<DocumentEditor key={'document-editor:'+project.id} project={project} onError={onError} onNotice={onNotice} onDirty={onDirty} onBusy={onBusy} onAttempt={onAttempt}/>}
++ {error&&<p role="alert" className="cw-warning">{error} <Button variant="outline" disabled={busy||loading} onClick={()=>onAttempt(()=>void load())}>重新读取</Button></p>}{loading&&<p role="status">正在读取项目资料…</p>}
++ {stage==='story'&&<section className="cw-project-section cw-writing-actions" aria-label="故事创作"><header className="cw-project-section-heading"><h2>故事创作</h2><Button variant="ghost" onClick={()=>onNavigate('review')}>候选审阅</Button></header><div className="cw-writing-primary"><Button variant="outline" onClick={()=>onCreateItem('outline')}>新建大纲</Button><Button variant="outline" onClick={()=>onCreateItem('chapter')}>新建章节</Button><Button variant="outline" onClick={()=>onCreateItem('scene')}>新建场次</Button><Button variant="outline" onClick={()=>onCreateItem('episode')}>新建剧集</Button><Button variant="ghost" onClick={()=>onNavigate('novel')}>小说与大纲</Button><Button variant="ghost" onClick={()=>onNavigate('tasks')}>写作任务</Button></div></section>}
++ {stage==='storyboard'&&<CreativeStructure api={api} projectId={pid} stage={stage} items={items} acceptedItems={acceptedItems} onCreate={onCreateItem} onSelect={onSelect} onAttempt={onAttempt}/>}
++ {stage==='storyboard'&&<EpisodeShotPlan items={items} candidates={candidates} onCandidates={()=>onAttempt(()=>onCandidates(!candidates))} onSelect={onSelect}/>}
++ {stage==='planning'&&<section className="cw-project-section"><Button type="button" variant="outline" onClick={()=>onCreateItem('development_plan')}>新建创作规划</Button><DevelopmentPlanList items={items} candidates={candidates} onCandidates={()=>onAttempt(()=>onCandidates(!candidates))} onSelect={onSelect}/></section>}
++ {stage==='storyboard'&&<section className="cw-project-section"><h2>分镜文稿</h2><ProjectChoices label="文稿类型" value={documentKind} onChange={setDocumentKind} options={[{value:'all',label:'全部'},...[...new Set(documents.map(d=>d.kind))].map(kind=>({value:kind,label:({story:'故事',script:'剧本',daily_plan:'日常方案',scene_text:'场次文本',prompt_note:'提示词',handoff_note:'交接备注'} as Record<string,string>)[kind]||kind}))]}/><ProjectChoices searchable label="文稿" value={documentId} onChange={id=>onAttempt(()=>void readDocument(id))} options={documents.filter(d=>documentKind==='all'||d.kind===documentKind).map(d=>({value:d.id,label:d.name}))}/>{!loading&&!documents.length&&<p>暂无文稿。<Button variant="ghost" onClick={()=>onAttempt(()=>location.assign('/studio?project='+esc(pid)+'#scripts'))}>文稿编辑</Button></p>}{document&&<article><header className="cw-project-section-heading"><h3>{document.name}</h3><Button variant="outline" onClick={()=>onAttempt(()=>location.assign('/studio?project='+esc(pid)+'&document='+esc(document.id)+'#scripts'))}>编辑文稿</Button></header><p className="cw-small-copy">{document.state==='approved'?'已审核':'尚未审核'} · 原文</p><MarkdownContent content={document.body||''}/></article>}</section>}
++ {stage==='story'&&<section className="cw-project-section cw-project-assignment"><header className="cw-project-section-heading"><h2>文稿归集</h2><Button variant="ghost" disabled={busy||loading} onClick={()=>onAttempt(()=>void load())}>刷新文稿</Button></header><ProjectChoices searchable label="文稿" value={documentId} onChange={id=>onAttempt(()=>void readDocument(id))} options={documents.map(d=>({value:d.id,label:d.name}))}/></section>}
++ {(stage==='story'||stage==='storyboard'||stage==='production')&&document&&<section className="cw-document-episode cw-project-section"><h3>所属剧集</h3>{documentEpisode?<><ProjectChoices searchable label="剧集" value={episodeChoice} disabled={busy||episodeUnknown} onChange={value=>{setEpisodeChoice(value);onDirty(true);}} options={[{value:'',label:'暂不分集'},...(unavailableEpisode?[{value:documentEpisode.episode_id!,label:'原剧集已不可用'}]:[]),...acceptedItems.filter(item=>item.kind==='episode'&&!item.archived&&item.accepted_version!=null).map(item=>({value:item.id,label:item.content.title}))]}/><Button type="button" variant="outline" disabled={busy||episodeUnknown||episodeChoice===(documentEpisode.episode_id||'')} onClick={()=>void operation(saveDocumentEpisode)}>保存归属</Button>{episodeUnknown&&<Button type="button" variant="outline" onClick={()=>void readDocument(document.id)}>重新读取归属</Button>}</>:<p>{episodeUnavailable?'文稿归属暂不可用，可继续阅读与交付。':'正在读取文稿归属…'}</p>}</section>}
+  {stage==='production'&&<div className="cw-writing-primary"><Button variant={mode==='create'?'default':'ghost'} aria-pressed={mode==='create'} disabled={!!pending||!!externalPending} onClick={()=>changeMode('create')}>新建交接</Button><Button variant={mode==='record'?'default':'ghost'} aria-pressed={mode==='record'} disabled={!!pending||!!externalPending} onClick={()=>changeMode('record')}>查看交接与进度</Button></div>}
+- {stage==='production'&&mode==='create'&&<form onSubmit={e=>{e.preventDefault();void operation(()=>submit());}}><fieldset disabled={busy||!!pending} className="cw-form-fieldset"><label>剧本来源<NativeSelect value={documentId} onChange={e=>{const id=e.target.value;onAttempt(()=>{void readDocument(id);onDirty(true);});}}><option value="">选择剧本或内容方案</option>{documents.filter(d=>['script','daily_plan','story','scene_text'].includes(d.kind)).map(d=><option key={d.id} value={d.id}>{d.name}</option>)}</NativeSelect></label>{document&&<p>{approvedScript(document)?'已审核，可用于交接':'尚未审核，不能创建交接包'}</p>}<label>交接范围<NativeSelect value={handoffScope} onChange={e=>{setHandoffScope(e.target.value);onDirty(true);}}><option value="materials">文字 / 图文资料</option><option value="scenes">场次制作</option></NativeSelect></label>{handoffScope==='scenes'&&<div><h3>本次制作场次</h3>{scenes.map(scene=><label key={scene.id} className="flex items-center gap-2"><Checkbox checked={selected.includes(scene.id)} onCheckedChange={checked=>{setSelected(old=>checked?[...new Set([...old,scene.id])]:old.filter(id=>id!==scene.id));if(!checked)setSelectedShots(old=>old.filter(id=>acceptedItems.find(item=>item.id===id)?.content.spec?.scene_id!==scene.id));onDirty(true);}}/>{scene.content.title}</label>)}{!scenes.length&&<p>当前文稿所属剧集没有已采纳场次。</p>}{shots.length>0&&<><h3>本次制作镜头</h3>{shots.map(shot=><label key={shot.id} className="flex items-center gap-2"><Checkbox checked={selectedShots.includes(shot.id)} onCheckedChange={checked=>{setSelectedShots(old=>checked?[...new Set([...old,shot.id])]:old.filter(id=>id!==shot.id));onDirty(true);}}/>{shot.content.title}</label>)}</>}</div>}<label>外部制作平台<NativeSelect value={platform} onChange={e=>{setPlatform(e.target.value);onDirty(true);}}><option value="libtv">LibTV</option><option value="xiaoyunque">小云雀</option><option value="other">其他</option></NativeSelect></label><Button type="submit" disabled={!approvedScript(document)||(!documentEpisode&&!episodeUnavailable)||episodeUnknown||(documentEpisode!==null&&(episodeChoice!==(documentEpisode.episode_id||'')||unavailableEpisode))||(handoffScope==='scenes'&&(!documentEpisode||!selected.length||selected.length>20||selectedShots.length>100))}>保存制作交接包</Button><p className="cw-small-copy">{handoffScope==='scenes'?'冻结所选场次、选角与素材准确版本。':'仅交接已审核文字与已有资料引用，不含冻结场次或指定演员。'}实际图片 / 视频制作在外部完成；不会开始生成或扣费。</p></fieldset></form>}
++ {stage==='production'&&mode==='create'&&<form onSubmit={e=>{e.preventDefault();void operation(()=>submit());}}><fieldset disabled={busy||!!pending} className="cw-form-fieldset"><ProjectChoices searchable label="剧本来源" value={documentId} onChange={id=>onAttempt(()=>{void readDocument(id);onDirty(true);})} options={documents.filter(d=>['script','daily_plan','story','scene_text'].includes(d.kind)).map(d=>({value:d.id,label:d.name}))}/>{document&&<p>{approvedScript(document)?'已审核，可用于交接':'尚未审核，不能创建交接包'}</p>}<ProjectChoices label="交接范围" value={handoffScope} onChange={value=>{setHandoffScope(value);onDirty(true);}} options={[{value:'materials',label:'文字 / 图文资料'},{value:'scenes',label:'场次制作'}]}/>{handoffScope==='scenes'&&<div><h3>本次制作场次</h3>{scenes.map(scene=><label key={scene.id} className="flex items-center gap-2"><Checkbox checked={selected.includes(scene.id)} onCheckedChange={checked=>{setSelected(old=>checked?[...new Set([...old,scene.id])]:old.filter(id=>id!==scene.id));if(!checked)setSelectedShots(old=>old.filter(id=>acceptedItems.find(item=>item.id===id)?.content.spec?.scene_id!==scene.id));onDirty(true);}}/>{scene.content.title}</label>)}{!scenes.length&&<p>当前文稿所属剧集没有已采纳场次。</p>}{shots.length>0&&<><h3>本次制作镜头</h3>{shots.map(shot=><label key={shot.id} className="flex items-center gap-2"><Checkbox checked={selectedShots.includes(shot.id)} onCheckedChange={checked=>{setSelectedShots(old=>checked?[...new Set([...old,shot.id])]:old.filter(id=>id!==shot.id));onDirty(true);}}/>{shot.content.title}</label>)}</>}</div>}<ProjectChoices label="制作平台" value={platform} onChange={value=>{setPlatform(value);onDirty(true);}} options={[{value:'libtv',label:'LibTV'},{value:'xiaoyunque',label:'小云雀'},{value:'other',label:'其他'}]}/><Button type="submit" disabled={!approvedScript(document)||(!documentEpisode&&!episodeUnavailable)||episodeUnknown||(documentEpisode!==null&&(episodeChoice!==(documentEpisode.episode_id||'')||unavailableEpisode))||(handoffScope==='scenes'&&(!documentEpisode||!selected.length||selected.length>20||selectedShots.length>100))}>保存制作交接包</Button><p className="cw-small-copy">{handoffScope==='scenes'?'冻结所选场次、选角与素材准确版本。':'仅交接已审核文字与已有资料引用，不含冻结场次或指定演员。'}实际图片 / 视频制作在外部完成；不会开始生成或扣费。</p></fieldset></form>}
+  {pending&&<div role="status"><p>{pending.id?'已提交，回读待核验。':'提交结果尚未确认，输入已保留。请核对上次提交。'}</p><Button disabled={busy} onClick={()=>void operation(()=>submit(pending))}>{pending.id?'仅回读交接包':'核对并恢复原提交'}</Button></div>}
+- {(stage==='delivery'||stage==='production'&&mode==='record')&&<>{!loading&&!handoffs.length&&<p role="status">尚无已保存交接。先新建交接并保存审核通过的资料；此处不会自动生成或认定成片。</p>}<label>已保存交接<NativeSelect value={handoff?.id||''} disabled={busy||!!externalPending} onChange={e=>{const id=e.target.value;if(id)onAttempt(()=>void operation(()=>readPackage(id)));}}><option value="">选择交接记录</option>{handoffs.map(h=><option key={h.id} value={h.id}>{h.created_at} · {h.target_platform}</option>)}</NativeSelect></label>{handoffs.length===100&&<p className="cw-small-copy">接口最多返回最近 100 份交接，不代表完整历史。</p>}{handoff&&<article><h3>{handoff.manifest.script.name}</h3>{handoff.stale&&<p className="cw-warning">来源已有变化；旧包保持原样，可导出，新的导演输入需重新交接。</p>}<Button disabled={busy} onClick={()=>void operation(()=>exportPackage('md'))}>下载交接文档</Button><details><summary>制作依据</summary><Button variant="ghost" onClick={()=>void operation(()=>exportPackage('json'))}>下载完整交接资料</Button><MarkdownContent content={handoff.manifest.script.body}/></details>
+- {handoff.manifest.production&&<details><summary>场次导演输入</summary><NativeSelect value={directorScene} onChange={e=>{directorToken.current++;setDirectorScene(e.target.value);setDirector(null);}}><option value="">选择冻结场次</option>{handoff.manifest.production.scenes.map(scene=><option key={scene.scene.id} value={scene.scene.id}>{scene.title}</option>)}</NativeSelect><Button disabled={busy||!directorScene||handoff.stale} onClick={()=>void operation(readDirector)}>核验并读取导演输入</Button>{director!==null&&<><p>已取得制作输入，未执行生成。</p><Button onClick={()=>download(JSON.stringify(director,null,2),'application/json','cineweave-director-input.json')}>下载导演输入</Button></>}</details>}
+- {(stage==='delivery'||stage==='production'&&mode==='record')&&<form onSubmit={e=>{e.preventDefault();void operation(saveExternal);}}><fieldset className="cw-form-fieldset" disabled={busy||!!externalPending}><label>外部项目链接<Input type="url" value={url} onChange={e=>{setUrl(e.target.value);onDirty(true);}} placeholder="https://…"/></label><label>人工记录的制作进度<NativeSelect value={status} onChange={e=>{setStatus(e.target.value);onDirty(true);}}><option value="not_started">未开始</option><option value="in_progress">制作中</option><option value="completed">已完成（人工记录）</option></NativeSelect></label><label>交付备注<Textarea value={notes} maxLength={5000} onChange={e=>{setNotes(e.target.value);onDirty(true);}}/></label>{notes&&<details><summary>预览交付备注</summary><MarkdownContent content={notes}/></details>}<Button type="submit">保存外部进度</Button></fieldset>{externalPending&&<Button disabled={busy} type="button" variant="outline" onClick={()=>void operation(()=>checkExternal(externalPending))}>只读核对上次保存</Button>}<p className="cw-small-copy">未上传或审核成片；“已完成”仅是人工进度，不表示媒体验收通过。</p>{safeExternalUrl(handoff.external?.project_url)&&<a href={safeExternalUrl(handoff.external?.project_url)} target="_blank" rel="noopener noreferrer">打开已保存外部项目</a>}</form>}</article>}</>}
++ {(stage==='delivery'||stage==='production'&&mode==='record')&&<>{!loading&&!handoffs.length&&<p role="status">暂无交接记录</p>}<ProjectChoices searchable label="交接记录" value={handoff?.id||''} disabled={busy||!!externalPending} onChange={id=>{if(id)onAttempt(()=>void operation(()=>readPackage(id)));}} options={handoffs.map(h=>({value:h.id,label:h.created_at+' · '+h.target_platform}))}/>{handoff&&<article className="cw-project-handoff"><h2>{handoff.manifest.script.name}</h2>{handoff.stale&&<p className="cw-warning">来源已有变化；旧包保持原样，可导出，新的导演输入需重新交接。</p>}<div className="cw-writing-primary"><Button disabled={busy} onClick={()=>void operation(()=>exportPackage('md'))}>下载交接文档</Button><Button variant="outline" onClick={()=>void operation(()=>exportPackage('json'))}>下载完整资料</Button></div><section className="cw-project-section"><h3>制作依据</h3><MarkdownContent content={handoff.manifest.script.body}/></section><HandoffAssetReferences projectId={pid} graph={graph} handoff={handoff}/>
++ {handoff.manifest.production&&<section className="cw-project-section"><h3>导演输入</h3><ProjectChoices searchable label="冻结场次" value={directorScene} onChange={value=>{directorToken.current++;setDirectorScene(value);setDirector(null);}} options={handoff.manifest.production.scenes.map(scene=>({value:scene.scene.id,label:scene.title}))}/><Button disabled={busy||!directorScene||handoff.stale} onClick={()=>void operation(readDirector)}>核验并读取</Button>{director!==null&&<><p>已取得制作输入，未执行生成。</p><Button onClick={()=>download(JSON.stringify(director,null,2),'application/json','cineweave-director-input.json')}>下载导演输入</Button></>}</section>}
++ {(stage==='delivery'||stage==='production'&&mode==='record')&&<form className="cw-project-section" onSubmit={e=>{e.preventDefault();void operation(saveExternal);}}><h3>制作进度</h3><fieldset className="cw-form-fieldset" disabled={busy||!!externalPending}><label>外部项目链接<Input type="url" value={url} onChange={e=>{setUrl(e.target.value);onDirty(true);}} placeholder="https://…"/></label><ProjectChoices label="人工进度" value={status} onChange={value=>{setStatus(value);onDirty(true);}} options={[{value:'not_started',label:'未开始'},{value:'in_progress',label:'制作中'},{value:'completed',label:'已完成（人工记录）'}]}/><label>交付备注<Textarea value={notes} maxLength={5000} onChange={e=>{setNotes(e.target.value);onDirty(true);}}/></label>{notes&&<MarkdownContent content={notes}/>}<Button type="submit">保存外部进度</Button></fieldset>{externalPending&&<Button disabled={busy} type="button" variant="outline" onClick={()=>void operation(()=>checkExternal(externalPending))}>只读核对上次保存</Button>}<p className="cw-small-copy">未上传或审核成片；“已完成”仅是人工进度，不表示媒体验收通过。</p>{safeExternalUrl(handoff.external?.project_url)&&<a href={safeExternalUrl(handoff.external?.project_url)} target="_blank" rel="noopener noreferrer">打开已保存外部项目</a>}</form>}</article>}</>}
+  </section>;
+ }
+diff --git a/components/workspace/project-content.css b/components/workspace/project-content.css
+new file mode 100644
+index 0000000..0f0001d
+--- /dev/null
++++ b/components/workspace/project-content.css
+@@ -0,0 +1,56 @@
++.cw-theme .cw-project-content{display:grid;gap:28px;min-width:0;min-height:0}
++.cw-theme .cw-project-section{min-width:0;padding-top:28px;border-top:1px solid var(--border)}
++.cw-theme .cw-project-section h2,.cw-theme .cw-project-section h3{margin:0 0 18px;line-height:1.45;font-weight:550}
++.cw-theme .cw-project-section h2{font-size:20px}
++.cw-theme .cw-project-section h3{font-size:17px}
++.cw-theme .cw-project-section-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:20px}
++.cw-theme .cw-project-section-heading h2,.cw-theme .cw-project-section-heading h3{margin:0}
++.cw-theme .cw-project-section-heading h2{font-size:22px;font-weight:550;letter-spacing:-.025em}
++.cw-theme .cw-project-content button,.cw-theme .cw-document-workbench button{max-width:100%;height:auto;min-height:44px;white-space:normal;overflow:visible;overflow-wrap:anywhere}
++.cw-theme .cw-project-content button:focus-visible,.cw-theme .cw-document-workbench button:focus-visible{outline:2px solid var(--ring);outline-offset:3px}
++.cw-theme .cw-project-content .cw-writing-actions{margin:0}
++.cw-theme .cw-project-content .cw-writing-primary{gap:10px}
++.cw-theme .cw-project-content .cw-writing-primary button{padding:10px 16px}
++.cw-theme .cw-project-choices{min-width:0;width:100%;padding:0;border:0;margin:0 0 18px}
++.cw-theme .cw-project-choices legend{font-size:13px;color:var(--muted-foreground);padding:0;margin-bottom:10px}
++.cw-theme .cw-project-choices>input{max-width:360px;margin-bottom:12px}
++.cw-theme .cw-project-choice-group{display:flex;flex-wrap:wrap;align-items:stretch;gap:6px}
++.cw-theme .cw-project-choice-group button{border:1px solid transparent;padding:10px 14px;min-height:44px;height:auto;border-radius:6px;color:var(--muted-foreground);text-align:left;justify-content:flex-start;line-height:1.55;white-space:normal;overflow:visible;overflow-wrap:anywhere}
++.cw-theme .cw-project-choice-group button[aria-pressed="true"]{border-color:color-mix(in srgb,var(--primary) 45%,transparent);color:var(--primary);background:color-mix(in srgb,var(--primary) 9%,transparent)}
++.cw-theme .cw-project-choice-group button:hover{color:var(--foreground);background:var(--accent)}
++.cw-theme .cw-project-choices-records>.cw-project-choice-group{max-height:230px;overflow-y:auto;overscroll-behavior:contain;padding:4px;scrollbar-gutter:stable}
++.cw-theme .cw-project-handoff{display:grid;gap:24px;min-width:0}
++.cw-theme .cw-project-handoff h2{font-size:25px;font-weight:550;overflow-wrap:anywhere}
++.cw-theme .cw-project-handoff .cw-prose{max-width:72ch}
++.cw-theme .cw-document-workbench{min-width:0;min-height:0}
++.cw-theme .cw-document-layout{display:grid;grid-template-columns:minmax(190px,240px) minmax(0,1fr);gap:32px;border:0;margin:0;padding:0;min-width:0}
++.cw-theme .cw-document-layout:disabled{opacity:.72}
++.cw-theme .cw-document-library{min-width:0;padding-right:24px;border-right:1px solid var(--border)}
++.cw-theme .cw-document-new{width:100%;justify-content:flex-start;margin-bottom:18px;padding:11px 14px}
++.cw-theme .cw-document-search{position:relative;display:flex;align-items:center;margin-bottom:12px}
++.cw-theme .cw-document-search>svg{position:absolute;left:12px;pointer-events:none;width:16px;height:16px;color:var(--muted-foreground)}
++.cw-theme .cw-document-search input{padding-left:36px;background:transparent}
++.cw-theme .cw-document-records{max-height:600px;overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;padding:4px}
++.cw-theme .cw-document-record{display:flex;align-items:flex-start;justify-content:flex-start;gap:10px;width:100%;padding:13px 10px!important;border:1px solid transparent;border-radius:6px;margin:0 0 5px;text-align:left}
++.cw-theme .cw-document-record>svg{width:16px;height:16px;flex-shrink:0;margin-top:3px;color:var(--muted-foreground)}
++.cw-theme .cw-document-record>span{display:grid;gap:7px;min-width:0}
++.cw-theme .cw-document-record strong{font-size:13px;font-weight:450;line-height:1.7;overflow-wrap:anywhere}
++.cw-theme .cw-document-record small{font-size:11px;line-height:1.5;color:var(--muted-foreground);font-variant-numeric:tabular-nums}
++.cw-theme .cw-document-record[aria-pressed="true"]{border-color:var(--border);background:color-mix(in srgb,var(--primary) 7%,transparent)}
++.cw-theme .cw-document-record[aria-pressed="true"]>svg,.cw-theme .cw-document-record[aria-pressed="true"] strong{color:var(--primary)}
++.cw-theme .cw-document-record:hover{background:var(--accent)}
++.cw-theme .cw-document-draft.cw-form-fieldset{margin:0;gap:20px;min-width:0}
++.cw-theme .cw-document-draft.cw-form-fieldset>label{max-width:none}
++.cw-theme .cw-document-draft>label>textarea{min-height:460px;max-width:100%;padding:22px 24px;font-size:15px;line-height:1.95;background:rgba(0,0,0,.15);border-color:var(--border);resize:vertical}
++.cw-theme .cw-document-draft-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px;width:100%}
++.cw-theme .cw-document-draft-heading h3{font-size:21px;font-weight:550;letter-spacing:-.02em;line-height:1.5;overflow-wrap:anywhere}
++.cw-theme .cw-document-draft-heading>span{font-size:11px;line-height:1.6;flex-shrink:0;color:var(--muted-foreground);font-variant-numeric:tabular-nums}
++.cw-theme .cw-document-savebar{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
++.cw-theme .cw-document-savebar>button:last-child{margin-left:auto}
++.cw-theme .cw-document-idle{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;min-height:370px;width:100%;border-top:1px solid var(--border);border-bottom:1px solid var(--border);color:var(--muted-foreground)}
++.cw-theme .cw-document-idle>svg{width:32px;height:32px;stroke-width:1}
++.cw-theme .cw-document-idle h3{font-size:21px;font-weight:450;color:var(--foreground)}
++.cw-theme .cw-creative-structure>.cw-module-toolbar{justify-content:flex-start;align-items:flex-start;gap:20px}
++.cw-theme .cw-creative-structure .cw-project-choice-group{gap:3px}
++@media(max-width:1000px){.cw-theme .cw-document-layout{grid-template-columns:190px minmax(0,1fr);gap:20px}.cw-theme .cw-document-library{padding-right:16px}.cw-theme .cw-document-draft-heading{align-items:flex-start;flex-direction:column;gap:5px}}
++@media(max-width:700px){.cw-theme .cw-document-layout{grid-template-columns:minmax(0,1fr);gap:24px}.cw-theme .cw-document-library{padding:0 0 18px;border-right:0;border-bottom:1px solid var(--border)}.cw-theme .cw-document-records{max-height:220px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.cw-theme .cw-document-new{margin-bottom:12px}.cw-theme .cw-document-record{margin:0;padding:10px!important}.cw-theme .cw-document-record>svg{display:none}.cw-theme .cw-project-section-heading{gap:10px;flex-wrap:wrap}.cw-theme .cw-project-section-heading h2{font-size:20px}.cw-theme .cw-document-draft>label>textarea{padding:16px;min-height:390px;font-size:16px}.cw-theme .cw-document-savebar>button:last-child{margin-left:0}.cw-theme .cw-project-content{gap:24px}.cw-theme .cw-project-choices-records>.cw-project-choice-group{max-height:200px}.cw-theme .cw-document-idle{min-height:220px}}
+diff --git a/components/workspace/project-navigation.css b/components/workspace/project-navigation.css
+new file mode 100644
+index 0000000..5e51047
+--- /dev/null
++++ b/components/workspace/project-navigation.css
+@@ -0,0 +1,47 @@
++/* Project identity, equal-level destinations, and a focused searchable switcher. */
++.cw-theme.cw-unified-shell[data-project-work=true] .cw-page-heading{margin-bottom:20px;padding-bottom:0;border:0;gap:20px}
++.cw-theme .cw-project-heading-copy{min-width:0;flex:1}
++.cw-theme.cw-unified-shell .cw-page-heading .cw-project-title{font-size:clamp(24px,2.6vw,36px);font-weight:600;line-height:1.45;overflow-wrap:anywhere;margin:0;position:relative;isolation:isolate}
++.cw-project-title::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 15%,color-mix(in srgb,var(--primary) 16%,transparent) 50%,transparent 85%);transform:scaleX(0);transform-origin:left;animation:cw-project-exposure .55s cubic-bezier(.16,1,.3,1) both;z-index:-1}
++.cw-theme .cw-project-meta{display:flex;align-items:center;gap:10px;margin-top:8px;font-size:13px;color:var(--muted-foreground)}
++.cw-theme .cw-project-meta>span+span::before{content:'/';padding-right:10px;color:var(--border)}
++.cw-theme .cw-project-switch-trigger{flex-shrink:0;white-space:nowrap;border:1px solid var(--border);border-radius:4px;min-height:44px}
++.cw-theme .cw-project-switch-trigger:hover{border-color:var(--primary);color:var(--primary)}
++.cw-theme .cw-project-navigation{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:0 12px;margin:0 0 28px;padding:0 0 12px;border-bottom:1px solid var(--border);overflow:visible}
++.cw-theme .cw-project-navigation>[data-slot=button]{display:flex;justify-content:flex-start;position:relative;min-width:0;min-height:46px;padding:8px 6px;gap:8px;border:0;border-radius:0;overflow:visible;white-space:normal;background:transparent;color:var(--muted-foreground);text-align:left}
++.cw-theme .cw-project-navigation>[data-slot=button]::after{content:'';position:absolute;left:6px;right:6px;bottom:0;height:1px;background:var(--primary);opacity:0;transform:scaleX(.25);transform-origin:left;transition:transform .22s cubic-bezier(.16,1,.3,1),opacity .15s}
++.cw-theme .cw-project-navigation>[aria-current=page]{color:var(--primary);background:color-mix(in srgb,var(--primary) 5%,transparent)}
++.cw-theme .cw-project-navigation>[aria-current=page]::after{opacity:1;transform:scaleX(1)}
++.cw-theme .cw-project-navigation>button:hover{color:var(--foreground);background:color-mix(in srgb,var(--foreground) 4%,transparent)}
++.cw-theme .cw-project-navigation>button svg{flex-shrink:0}
++.cw-theme .cw-global-services{display:grid;gap:4px;margin-top:20px;padding-top:16px;border-top:1px solid var(--border)}
++.cw-theme .cw-global-services a{display:flex;align-items:center;gap:10px;min-height:44px;padding:8px 12px;color:var(--muted-foreground);font-size:13px;border-radius:4px}
++.cw-theme .cw-global-services a:hover{color:var(--foreground);background:var(--accent)}
++.cw-theme .cw-global-services a svg{width:17px;height:17px}
++.cw-theme.cw-project-switcher[data-slot=dialog-content]{width:min(940px,calc(100vw - 40px));max-width:940px;max-height:calc(100dvh - 64px);display:flex;flex-direction:column;gap:20px;padding:28px;background:var(--background);border-radius:12px;overflow:hidden}
++.cw-theme.cw-project-switcher>header{display:flex;align-items:center;justify-content:space-between;gap:16px}
++.cw-theme.cw-project-switcher [data-slot=dialog-title]{font-size:24px;line-height:1.4;font-weight:600}
++.cw-theme .cw-project-switch-search{display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--input);padding:0 0 8px}
++.cw-theme .cw-project-switch-search input{border:0;background:transparent;padding:10px 0;font-size:16px;box-shadow:none}
++.cw-theme .cw-project-switch-filters{display:flex;align-items:center;flex-wrap:wrap;gap:4px}
++.cw-theme .cw-project-switch-filters>span{margin-left:auto;color:var(--muted-foreground);font-size:12px}
++.cw-theme .cw-project-switch-filters>button{padding:7px 12px;border:1px solid transparent;min-height:40px}
++.cw-theme .cw-project-switch-filters>button[aria-pressed=true]{border-color:var(--border);color:var(--primary);background:var(--card)}
++.cw-theme .cw-project-switch-results{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;overflow-y:auto;min-height:0;padding:3px;scrollbar-width:thin;overscroll-behavior:contain;align-content:start}
++.cw-theme .cw-project-switch-card[data-slot=button]{position:relative;display:flex;align-items:stretch;flex-direction:column;text-align:left;gap:20px;min-height:156px;min-width:0;padding:18px;border:1px solid var(--border);border-radius:8px;background:var(--card);overflow:hidden;isolation:isolate}
++.cw-theme .cw-project-switch-card::before{content:'';position:absolute;inset:0;pointer-events:none;z-index:-1;opacity:0;background:radial-gradient(240px circle at var(--pointer-x,50%) var(--pointer-y,50%),color-mix(in srgb,var(--primary) 14%,transparent),transparent 70%);transition:opacity .18s}
++.cw-theme .cw-project-switch-card:hover::before,.cw-theme .cw-project-switch-card:focus-visible::before{opacity:1}
++.cw-theme .cw-project-switch-card:hover{border-color:var(--primary)}
++.cw-theme .cw-project-switch-card[aria-current=true]{border-color:var(--primary);background:color-mix(in srgb,var(--primary) 6%,var(--background))}
++.cw-project-switch-card-top{display:flex;align-items:center;justify-content:space-between;color:var(--muted-foreground);font-size:12px;gap:8px}
++.cw-project-switch-card-top>span:last-child{display:flex;align-items:center;gap:4px;color:var(--primary)}
++.cw-project-switch-card strong{font-size:17px;line-height:1.55;overflow-wrap:anywhere;font-weight:500}
++.cw-project-switch-card-date{margin-top:auto;font-size:12px;color:var(--muted-foreground)}
++.cw-project-switcher>footer{display:flex;align-items:center;justify-content:space-between;gap:12px;color:var(--muted-foreground);font-size:12px}
++.cw-project-switcher>footer>div{display:flex;gap:8px}
++.cw-project-switch-empty{grid-column:1/-1;min-height:160px;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;color:var(--muted-foreground)}
++.cw-theme .cw-record-kind-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.cw-theme .cw-record-kind-grid button{white-space:normal}
++@keyframes cw-project-exposure{0%{transform:scaleX(0);opacity:0}30%{opacity:1}100%{transform:scaleX(1);opacity:0}}
++@media(max-width:1100px){.cw-theme .cw-project-navigation{grid-template-columns:repeat(4,minmax(0,1fr));gap:0 8px}}
++@media(max-width:767px){.cw-theme.cw-unified-shell[data-project-work=true] .cw-page-heading{align-items:flex-start;gap:12px;flex-wrap:wrap}.cw-theme .cw-project-heading-copy{flex-basis:100%}.cw-theme .cw-project-navigation{grid-template-columns:repeat(3,minmax(0,1fr));gap:0 6px;margin-bottom:24px}.cw-theme .cw-project-navigation>button{font-size:13px;gap:6px}.cw-theme.cw-project-switcher[data-slot=dialog-content]{width:calc(100vw - 24px);max-height:calc(100dvh - 24px);padding:20px;gap:16px}.cw-theme .cw-project-switch-results{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.cw-theme .cw-project-switch-card[data-slot=button]{padding:14px;min-height:144px;gap:16px}.cw-project-switch-card strong{font-size:15px}.cw-theme .cw-project-switch-filters>span{width:100%;margin:4px 0 0}.cw-theme .cw-project-switch-filters>button{padding-inline:8px}}
++@media(prefers-reduced-motion:reduce){.cw-project-title::after{animation:none}.cw-theme .cw-project-navigation>button::after{transform:none;transition:none}.cw-theme .cw-project-switch-card::before{display:none}.cw-theme.cw-project-switcher[data-slot=dialog-content]{animation:none!important;transition:none!important}}
+diff --git a/components/workspace/project-navigation.tsx b/components/workspace/project-navigation.tsx
+new file mode 100644
+index 0000000..75b46c6
+--- /dev/null
++++ b/components/workspace/project-navigation.tsx
+@@ -0,0 +1,38 @@
++'use client';
++import {useMemo,useRef,useState,type PointerEvent} from 'react';
++import {ArrowLeft,ArrowRight,ArrowUpRight,BookOpen,Check,Clapperboard,FolderOpen,Grid2X2,Layers3,ListChecks,Network,NotebookPen,Search,Send,UsersRound,Workflow,X} from 'lucide-react';
++import {Button} from '@/components/ui/button';
++import {Input} from '@/components/ui/input';
++import {Dialog,DialogContent,DialogTitle,DialogDescription,DialogTrigger} from '@/components/ui/dialog';
++import {directoryPage,directoryTitle,directoryKindLabel,DIRECTORY_KINDS,formatDirectoryDate} from './project-directory.mjs';
++import {workflowStages} from './workflow-navigation.mjs';
++import type {Project} from './model';
++import './project-navigation.css';
++
++const icons:Record<string,typeof BookOpen>={screenplay:Clapperboard,episodes:Layers3,storyboard:Grid2X2,prompts:NotebookPen,canvas:UsersRound,relations:Network,novel:BookOpen,planning:FolderOpen,review:Check,tasks:ListChecks,production:Workflow,delivery:Send};
++
++/** Routing stays with the workspace, including its dirty/save guard. */
++export function ProjectNavigation({view,onNavigate}:{view:string;onNavigate(view:string):void}){
++ return <nav className="cw-project-navigation" aria-label="项目功能">{workflowStages.map(stage=>{const Icon=icons[stage.value]||FolderOpen;return <Button type="button" key={stage.value} variant="ghost" aria-current={view===stage.value?'page':undefined} onClick={()=>onNavigate(stage.value)}><Icon size={17} strokeWidth={1.6}/><span>{stage.label}</span></Button>;})}</nav>;
++}
++
++export function ProjectSwitcher({projects,project,loaded,loadError=false,onReload,onChoose}:{projects:Project[];project:Project|null;loaded:boolean;loadError?:boolean;onReload?():void;onChoose(project:Project):void}){
++ const [open,setOpen]=useState(false),[query,setQuery]=useState(''),[kind,setKind]=useState('all'),[page,setPage]=useState(1);
++ const search=useRef<HTMLInputElement>(null);
++ const result=useMemo(()=>directoryPage(projects,{query,kind,page,pageSize:12}),[projects,query,kind,page]);
++ const spotlight=(event:PointerEvent<HTMLButtonElement>)=>{if(event.pointerType!=='mouse'||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;const rect=event.currentTarget.getBoundingClientRect();event.currentTarget.style.setProperty('--pointer-x',`${event.clientX-rect.left}px`);event.currentTarget.style.setProperty('--pointer-y',`${event.clientY-rect.top}px`);};
++ return <Dialog open={open} onOpenChange={value=>{setOpen(value);if(value){setQuery('');setKind('all');setPage(1);}}}>
++  <DialogTrigger asChild><Button type="button" variant="ghost" className="cw-project-switch-trigger" aria-label="切换项目"><Grid2X2 size={17}/><span>切换项目</span></Button></DialogTrigger>
++  <DialogContent className="cw-theme cw-project-switcher" showCloseButton={false} onOpenAutoFocus={event=>{event.preventDefault();search.current?.focus();}}>
++   <header><div><DialogTitle>切换项目</DialogTitle><DialogDescription className="sr-only">搜索并打开项目，保留当前功能入口。</DialogDescription></div><Button type="button" variant="ghost" size="icon" aria-label="关闭项目切换" onClick={()=>setOpen(false)}><X size={20}/></Button></header>
++   <label className="cw-project-switch-search"><Search size={19}/><Input ref={search} type="search" aria-label="搜索切换项目" placeholder="搜索项目" value={query} onChange={event=>{setQuery(event.target.value);setPage(1);}}/></label>
++   <div className="cw-project-switch-filters" role="group" aria-label="项目形式">{['all',...DIRECTORY_KINDS].map(value=><Button key={value} type="button" variant="ghost" aria-pressed={kind===value} onClick={()=>{setKind(value);setPage(1);}}>{value==='all'?'全部':directoryKindLabel(value)}</Button>)}<span aria-live="polite">{loaded?`${result.total} 个项目`:loadError?'读取失败':'正在读取'}</span></div>
++   <div className="cw-project-switch-results" aria-label="可切换项目" aria-busy={!loaded&&!loadError}>
++    {result.rows.map(row=><Button type="button" variant="record" size="record" key={row.id} className="cw-project-switch-card" aria-label={`切换到项目：${directoryTitle(row)}`} aria-current={row.id===project?.id?'true':undefined} onPointerMove={spotlight} onClick={()=>{setOpen(false);if(row.id!==project?.id)onChoose(row);}}><span className="cw-project-switch-card-top"><span>{directoryKindLabel(row.kind)}</span>{row.id===project?.id?<span><Check size={14}/>当前</span>:<ArrowUpRight size={16}/>}</span><strong>{directoryTitle(row)}</strong><span className="cw-project-switch-card-date">{formatDirectoryDate(row.updated_at)||'未记录日期'}</span></Button>)}
++    {loadError&&!loaded&&<div className="cw-project-switch-empty" role="alert"><p>项目暂未读取</p><Button variant="outline" onClick={onReload}>重新读取</Button></div>}
++    {loaded&&!result.total&&<div className="cw-project-switch-empty"><FolderOpen size={30}/><p>{projects.length?'没有匹配的项目':'暂无项目'}</p>{projects.length>0&&<Button variant="outline" onClick={()=>{setQuery('');setKind('all');setPage(1);}}>清除筛选</Button>}</div>}
++   </div>
++   <footer><span>{result.total?`${result.start}–${result.end} / ${result.total}`:'0'}</span><div><Button type="button" variant="ghost" size="icon" aria-label="上一页项目" disabled={result.page<=1} onClick={()=>setPage(result.page-1)}><ArrowLeft size={18}/></Button><Button type="button" variant="ghost" size="icon" aria-label="下一页项目" disabled={result.page>=result.pages} onClick={()=>setPage(result.page+1)}><ArrowRight size={18}/></Button></div></footer>
++  </DialogContent>
++ </Dialog>;
++}
+diff --git a/components/workspace/project-preview.tsx b/components/workspace/project-preview.tsx
+index 09ecdc9..56a6b26 100644
+--- a/components/workspace/project-preview.tsx
++++ b/components/workspace/project-preview.tsx
+@@ -73,7 +73,3 @@ export function ProjectPreview({projects,currentId,onOpen,loaded=false,loadError
+   {result.total>0&&<nav className="cw-project-catalog-pagination" aria-label="项目分页"><p>第 {result.start}–{result.end} 部 · 共 {result.total} 部{!loaded||loadError?'已读取项目':''}</p><label className="cw-project-catalog-page-size"><span className="sr-only">每页项目数量</span><NativeSelect aria-label="每页项目数量" value={pageSize} onChange={event=>change({pageSize:Number(event.target.value)})}><option value={12}>每页 12 部</option><option value={24}>每页 24 部</option></NativeSelect></label><div><Button type="button" variant="outline" size="icon" aria-label="上一页项目" disabled={result.page===1} onClick={()=>setPage(result.page-1)}><ChevronLeft size={17}/></Button><span aria-live="polite">{result.page} / {result.pages}</span><Button type="button" variant="outline" size="icon" aria-label="下一页项目" disabled={result.page===result.pages} onClick={()=>setPage(result.page+1)}><ChevronRight size={17}/></Button></div></nav>}
+  </section>;
+ }
+-
+-export function ProjectStageMenu({onNavigate}:{onNavigate(view:'canvas'|'novel'|'screenplay'|'review'):void}){
+- return <details className="cw-workflow-secondary"><summary>项目工具</summary>{([{view:'screenplay',label:'故事'},{view:'canvas',label:'角色与场景'},{view:'novel',label:'小说章节'},{view:'review',label:'候选审阅'}] as const).map(view=><Button variant="ghost" key={view.view} onClick={()=>onNavigate(view.view)}>{view.label}</Button>)}</details>;
+-}
+diff --git a/components/workspace/project-relations.css b/components/workspace/project-relations.css
+index 31d49c2..2830e31 100644
+--- a/components/workspace/project-relations.css
++++ b/components/workspace/project-relations.css
+@@ -1,15 +1,59 @@
+-.cw-theme .cw-project-relations{margin-block:20px;border-block:1px solid var(--border);padding-block:4px}
+-.cw-project-relations>section{padding-block:4px 20px;min-width:0}
+-.cw-project-relations-tools{display:grid;grid-template-columns:minmax(140px,1fr) minmax(0,3fr);gap:16px;margin-block:20px}
+-.cw-project-relations-tools label{display:flex;flex-direction:column;gap:8px;font-size:14px}
+-.cw-project-relations-record>header{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-block:20px}
+-.cw-project-relations-record h3{font-size:16px;line-height:1.5;overflow-wrap:anywhere}
+-.cw-project-relations h4{font-size:14px;line-height:1.6;margin-block:20px 8px}
+-.cw-project-relations p{font-size:14px;line-height:1.7;max-width:75ch;overflow-wrap:anywhere}
+-.cw-project-relations code{font-size:13px;overflow-wrap:anywhere;word-break:break-all}
+-.cw-project-relations-list,.cw-project-relations-assets ul{padding:0;list-style:none}
+-.cw-project-relations-list>li,.cw-project-relations-assets li{padding-block:12px;border-block-end:1px solid var(--border)}
+-.cw-project-relations-list>li>div{display:flex;align-items:center;flex-wrap:wrap;gap:8px 12px;font-size:14px;min-width:0}
+-.cw-project-relations-list [data-slot=button]{white-space:normal;text-align:start;height:auto;overflow-wrap:anywhere}
+-.cw-project-relations-assets{margin-block-start:24px}
+-@media(max-width:767px){.cw-project-relations-tools{grid-template-columns:minmax(0,1fr)}.cw-project-relations-record>header{align-items:flex-start;flex-direction:column}.cw-project-relations-list>li>div{align-items:flex-start;flex-direction:column}}
++.cw-project-relations{min-width:0;padding-block:8px 32px}
++.cw-relations-heading{display:flex;align-items:baseline;justify-content:space-between;gap:16px;margin-bottom:12px}
++.cw-relations-heading h2{margin:0;font-size:24px;font-weight:550;line-height:1.4}
++.cw-relations-heading>div{display:flex;align-items:center;flex-wrap:wrap;gap:12px}
++.cw-relations-heading>div>span,.cw-relations-gaps,.cw-relations-results,.cw-relation-meta,.cw-relation-caption{color:var(--muted-foreground);font-size:13px;line-height:1.7}
++.cw-relations-heading [data-slot=button]{min-height:44px;height:auto;border:1px solid var(--border)}
++.cw-relations-heading [aria-pressed=true]{color:var(--primary);border-color:var(--primary)}
++.cw-relations-gaps{margin:0 0 20px}
++.cw-relation-notice{margin:12px 0;padding:12px 16px;border:1px solid var(--border);color:var(--foreground);font-size:14px;line-height:1.7}
++.cw-relations-types{display:flex;flex-wrap:wrap;gap:4px;padding-bottom:16px;margin-bottom:24px;border-bottom:1px solid var(--border)}
++.cw-relations-types [data-slot=button]{min-height:44px;height:auto;padding:8px 12px;white-space:normal;overflow:visible;color:var(--muted-foreground)}
++.cw-relations-types [aria-pressed=true]{color:var(--foreground);background:color-mix(in srgb,var(--primary) 10%,transparent);box-shadow:inset 0 -1px var(--primary)}
++.cw-relations-browser{display:grid;grid-template-columns:minmax(220px,.72fr) minmax(0,1.6fr);gap:32px;align-items:start}
++.cw-relations-directory{min-width:0}
++.cw-relations-search{display:flex;align-items:center;gap:8px;position:relative}
++.cw-relations-search>svg{position:absolute;left:12px;color:var(--muted-foreground);pointer-events:none}
++.cw-relations-search input{padding-inline-start:36px;width:100%;min-width:0}
++.cw-relations-results{display:flex;align-items:center;justify-content:space-between;gap:8px;min-height:52px}
++.cw-relations-results [data-slot=button]{min-height:44px;padding-inline:8px;font-size:13px}
++.cw-relations-records{list-style:none;margin:0;padding:0;max-height:620px;overflow:auto;overscroll-behavior:contain;scrollbar-width:thin}
++.cw-relations-records>li+li{border-top:1px solid var(--border)}
++.cw-relations-records [data-slot=button]{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:8px;width:100%;min-width:0;min-height:88px;height:auto;padding:16px;text-align:left;white-space:normal;overflow:visible;border-radius:0;border-inline-start:1px solid transparent;background:transparent;transition:background .18s ease,color .18s ease}
++.cw-relations-records [data-slot=button]:hover{background:color-mix(in srgb,var(--foreground) 4%,transparent)}
++.cw-relations-records [aria-pressed=true]{border-inline-start-color:var(--primary);background:color-mix(in srgb,var(--primary) 8%,transparent)}
++.cw-relation-record-title{font-size:15px;line-height:1.7;overflow-wrap:anywhere}
++.cw-relation-meta{display:flex;flex-wrap:wrap;gap:4px 12px;white-space:normal;text-align:left;font-weight:400}
++.cw-relation-attention{color:var(--primary)}
++.cw-project-relations-record{min-width:0;padding:4px 0 0 32px;border-inline-start:1px solid var(--border)}
++.cw-project-relations-record>header{display:flex;align-items:flex-start;justify-content:space-between;gap:24px;margin-bottom:32px}
++.cw-project-relations-record>header>div{min-width:0}
++.cw-project-relations-record h3{font-size:26px;line-height:1.5;font-weight:550;margin:0 0 12px;overflow-wrap:anywhere;text-wrap:balance}
++.cw-project-relations-record>header>[data-slot=button]{flex:none;min-height:44px;height:auto}
++.cw-project-relations-record h4{display:flex;align-items:center;gap:12px;font-size:16px;line-height:1.6;margin:28px 0 12px;font-weight:500}
++.cw-project-relations-record h4>span{font-size:13px;color:var(--muted-foreground);font-variant-numeric:tabular-nums}
++.cw-relations-state{display:flex;flex-wrap:wrap;gap:16px 32px;margin:0 0 24px}
++.cw-relations-state>div{display:grid;gap:8px;font-size:14px;line-height:1.7}
++.cw-relations-state dt{color:var(--muted-foreground)}
++.cw-relations-state dd{margin:0;overflow-wrap:anywhere}
++.cw-project-relations-list{list-style:none;margin:0;padding:0}
++.cw-project-relations-list>li{display:flex;flex-direction:column;align-items:flex-start;gap:8px;padding:20px 0;border-top:1px solid var(--border);min-width:0}
++.cw-relation-direction{font-size:13px;line-height:1.7;color:var(--muted-foreground)}
++.cw-project-relations-list .cw-relation-target{display:flex;justify-content:space-between;gap:24px;width:100%;min-width:0;min-height:52px;height:auto;padding:4px 0;white-space:normal;overflow:visible;text-align:left}
++.cw-relation-target>span{min-width:0;font-size:16px;line-height:1.7;overflow-wrap:anywhere}
++.cw-relation-target small{display:block;font-size:13px;color:var(--muted-foreground);line-height:1.7;margin-top:4px}
++.cw-relation-target>svg{flex:none;color:var(--primary)}
++.cw-relation-caption{margin:0;max-width:75ch;overflow-wrap:anywhere}
++.cw-project-relations code,.cw-project-relations-assets code{font-size:12px;line-height:1.8;overflow-wrap:anywhere;word-break:break-all;white-space:normal}
++.cw-relations-no-links,.cw-relations-list-empty{font-size:14px;line-height:1.8;color:var(--muted-foreground);padding-block:16px}
++.cw-relations-empty{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:16px;min-height:240px;padding:24px 0;min-width:0}
++.cw-relations-empty h2,.cw-relations-empty h3{font-size:22px;line-height:1.5;font-weight:500;margin:0}
++.cw-relations-empty p{font-size:14px;line-height:1.8;color:var(--muted-foreground);margin:0;max-width:65ch}
++.cw-project-relations-assets{margin-block:32px;padding-block:24px;border-block:1px solid var(--border);min-width:0}
++.cw-project-relations-assets h3{font-size:18px;line-height:1.5;font-weight:500;margin:0 0 12px}
++.cw-project-relations-assets ul{list-style:none;padding:0;margin:12px 0 0}
++.cw-project-relations-assets li{display:grid;gap:6px;padding-block:12px;border-top:1px solid var(--border)}
++.cw-project-relations-assets li>span{font-size:13px;line-height:1.7;color:var(--muted-foreground)}
++@media(max-width:1050px){.cw-relations-browser{grid-template-columns:minmax(200px,.8fr) minmax(0,1.2fr);gap:24px}.cw-project-relations-record{padding-inline-start:24px}.cw-project-relations-record>header{flex-direction:column;gap:16px}.cw-project-relations-record h3{font-size:23px}}
++@media(max-width:767px){.cw-relations-heading{align-items:flex-start;flex-direction:column;gap:8px}.cw-relations-browser{grid-template-columns:minmax(0,1fr);gap:24px}.cw-relations-types{margin-bottom:20px}.cw-relations-types [data-slot=button]{padding-inline:10px}.cw-relations-records{max-height:320px}.cw-project-relations-record{padding:24px 0 0;border-inline-start:0;border-top:1px solid var(--border)}.cw-project-relations-record>header{margin-bottom:24px}.cw-relations-empty{min-height:180px}}
++@media(prefers-reduced-motion:reduce){.cw-relations-records [data-slot=button]{transition:none}}
+diff --git a/components/workspace/project-relations.tsx b/components/workspace/project-relations.tsx
+index 13ccfc8..1043446 100644
+--- a/components/workspace/project-relations.tsx
++++ b/components/workspace/project-relations.tsx
+@@ -1,34 +1,94 @@
+ 'use client';
+-import {useMemo,useState} from 'react';
++
++import {useEffect,useMemo,useState} from 'react';
++import {ArrowRight,ArrowUpRight,Search} from 'lucide-react';
+ import {Button} from '@/components/ui/button';
+-import {NativeSelect} from '@/components/ui/native-select';
++import {Input} from '@/components/ui/input';
+ import {kindLabels,statusLabels,type GraphData,type ItemKind} from './model';
+-import {projectRelations} from './project-relations.mjs';
++import {projectRelations,type RelationProjection,type RelationRecord} from './project-relations.mjs';
+ import './project-relations.css';
+ 
+-interface Props {projectId:string;graph:GraphData|null;handoff?:unknown;onSelect(id:string):void;onAttempt(action:()=>void):void;onProduction?():void}
+-const relationState:Record<string,string>={not_loaded:'未在当前快照展开',kind_mismatch:'引用类型需核对',pin_missing:'来源版本未记录',version_mismatch:'与当前显示版本不同',hash_mismatch:'来源内容需核对'};
++interface Props {projectId:string;graph:GraphData|null;candidates?:boolean;onCandidates?(visible:boolean):void;onSelect(id:string):void;onAttempt(action:()=>void):void}
++interface AssetProps {projectId:string;graph:GraphData|null;handoff:unknown}
++const relationState:Record<string,string>={not_loaded:'原记录未展开',kind_mismatch:'引用类型需核对',pin_missing:'来源版本未记录',version_mismatch:'与当前显示版本不同',hash_mismatch:'来源内容需核对'};
+ const label=(kind:string)=>kindLabels[kind as ItemKind]||kind;
+-/** Ordinary record navigation over the existing graph. No writes or media controls. */
+-export default function ProjectRelations({projectId,graph,handoff,onSelect,onAttempt,onProduction}:Props){
+- const [kind,setKind]=useState('all'),[chosen,setChosen]=useState('');
+- const data=useMemo(()=>projectRelations(projectId,graph,handoff),[projectId,graph,handoff]);
+- const records=data.records.filter(record=>kind==='all'||record.kind===kind);
++
++/** Filtering never changes source records, links, or exact version pins. */
++export function relationBrowser(data:RelationProjection,kind:string,query:string,chosen:string){
++ const term=query.trim().toLocaleLowerCase();
++ const records=data.records.filter(record=>(kind==='all'||record.kind===kind)&&(!term||`${record.title} ${label(record.kind)} ${record.id}`.toLocaleLowerCase().includes(term)));
+  const focus=records.find(record=>record.id===chosen)||records.find(record=>record.kind==='scene')||records[0];
+- const byId=new Map(data.records.map(record=>[record.id,record]));
++ return {records,focus};
++}
++
++function RecordMeta({record}:{record:RelationRecord}){
++ return <span className="cw-relation-meta"><span>{label(record.kind)}</span><span>v{record.version}</span><span>{statusLabels[record.status]||'状态未记录'}</span>{record.needsReview&&<span className="cw-relation-attention">依赖需核对</span>}</span>;
++}
++
++/** Asset evidence belongs to the selected immutable handoff, not every project page. */
++export function HandoffAssetReferences({projectId,graph,handoff}:AssetProps){
++ const data=useMemo(()=>projectRelations(projectId,graph,handoff),[projectId,graph,handoff]);
++ return <section className="cw-project-relations-assets" aria-label="冻结交接资产"><h3>冻结资产引用</h3>
++ {!data.available?<p role="status">{data.reason}</p>:<>
++ {data.notices.map(notice=><p key={notice} className="cw-relation-notice" role="status">{notice}</p>)}
++ {data.assetScope==='scope_mismatch'?<p role="status">交接范围与当前快照不同，请重新选择。</p>:data.assetScope==='not_loaded'?<p role="status">交接包尚未读取。</p>:<>
++ <p className="cw-relation-caption">{data.assetScope==='stale'?'来源已有变化，以下保留原冻结版本。':'以下为此交接包固定的引用。'}原图可用性与媒体质量需另行核对。</p>
++ {data.assets.length?<ul>{data.assets.map(asset=><li key={asset.id}><code>{asset.id}</code><span>{[...new Set(asset.uses.map(use=>use.usage||'用途未记录'))].join('；')}</span></li>)}</ul>:<p>此交接没有资产引用。</p>}
++ </>}
++ </>}
++ </section>;
++}
++
++/** A single project-level browser over authorized records; navigation never writes. */
++export default function ProjectRelations({projectId,graph,candidates=false,onCandidates,onSelect,onAttempt}:Props){
++ const [kind,setKind]=useState('all'),[query,setQuery]=useState(''),[chosen,setChosen]=useState('');
++ useEffect(()=>{setKind('all');setQuery('');setChosen('');},[projectId]);
++ const data=useMemo(()=>projectRelations(projectId,graph),[projectId,graph]);
++ const {records,focus}=useMemo(()=>relationBrowser(data,kind,query,chosen),[data,kind,query,chosen]);
++ const types=useMemo(()=>[...new Set(data.records.map(record=>record.kind))],[data.records]);
++ const byId=useMemo(()=>new Map(data.records.map(record=>[record.id,record])),[data.records]);
+  const direct=focus?data.edges.filter(edge=>edge.from===focus.id||edge.to===focus.id):[];
+  const outside=focus?data.external.filter(source=>source.owner===focus.id):[];
+  const open=(href:string)=>onAttempt(()=>window.location.assign(href));
+- return <details className="cw-project-relations"><summary>项目关系查阅</summary><section aria-label="当前作品的已声明关系">
+- {!data.available?<p role="status">{data.reason}</p>:<>
+- <p className="cw-small-copy">{data.gaps.length?data.gaps.join('；')+'。':''}以下按已读取记录查阅，章节不等于集，场次不等于镜头。</p>
+- {data.notices.map(notice=><p key={notice} className="cw-warning">{notice}</p>)}
+- <div className="cw-project-relations-tools"><label>记录类型<NativeSelect value={kind} onChange={event=>{setKind(event.target.value);setChosen('');}}><option value="all">全部记录</option>{[...new Set(data.records.map(record=>record.kind))].map(value=><option key={value} value={value}>{label(value)}</option>)}</NativeSelect></label><label>选择原记录<NativeSelect value={focus?.id||''} disabled={!records.length} onChange={event=>setChosen(event.target.value)}>{!records.length&&<option value="">没有此类记录</option>}{records.map(record=><option key={record.id} value={record.id}>{label(record.kind)} · {record.title} · v{record.version} · {record.id.slice(0,8)}</option>)}</NativeSelect></label></div>
+- {focus?<article className="cw-project-relations-record"><header><div><h3>{focus.title}</h3><p>{label(focus.kind)} · v{focus.version} · {statusLabels[focus.status]||'状态未记录'}{focus.needsReview?' · 依赖需核对':''}</p></div><Button type="button" variant="outline" onClick={()=>onSelect(focus.id)}>打开原记录</Button></header>
+- {focus.kind==='instance'&&<p>年龄：{focus.age||'未记录'}；时期：{focus.time||'未记录'}；生效时点：{focus.validFrom??'未定'} 至 {focus.validTo??'未定'}。</p>}
+- <h4>直接关联</h4>{!direct.length&&!outside.length?<p>当前快照没有声明此记录的直接关联。</p>:<ul className="cw-project-relations-list">{direct.map((edge,index)=>{const incoming=edge.to===focus.id,other=byId.get(incoming?edge.from:edge.to);return <li key={JSON.stringify([edge.from,edge.to,edge.label,index])}><div><span>{incoming?'被引用为：':'引用：'}{edge.label}</span>{other?<Button type="button" variant="ghost" onClick={()=>{setKind('all');setChosen(other.id);onSelect(other.id);}}>{other.title} · {label(other.kind)} · v{other.version}</Button>:<code>{incoming?edge.from:edge.to}</code>}</div><p className="cw-small-copy">{edge.version!==null?`来源固定 v${edge.version}；`:''}{edge.state==='loaded'?'记录已展开；准确来源和全文见原记录。':relationState[edge.state]||'待核对'}</p></li>;})}{outside.map((source,index)=><li key={source.kind+':'+source.id+':'+index}><div><span>{source.label} · {source.revision!==null?`v${source.revision}`:'版本未记录'}</span><code>{source.id}</code></div>{source.kind==='actor'&&<Button type="button" variant="ghost" onClick={()=>open('/workspace?view=ip&actor='+encodeURIComponent(source.id))}>到演员资料核对</Button>}{source.kind==='look'&&source.actorId&&<Button type="button" variant="ghost" onClick={()=>open('/workspace?view=ip&actor='+encodeURIComponent(source.actorId||'')+'&actorTab=looks')}>到演员造型核对</Button>}{source.kind==='document'&&<Button type="button" variant="ghost" onClick={()=>open('/studio?project='+encodeURIComponent(projectId)+'&document='+encodeURIComponent(source.id)+'#scripts')}>打开来源文稿</Button>}<p className="cw-small-copy">此处仅展示引用；外部记录与准确历史版本尚未展开。</p></li>)}</ul>}
+- </article>:<p>当前快照没有可展开的故事记录。已有文稿仍可从上方文稿入口读取。</p>}
+- <div className="cw-project-relations-assets"><h4>冻结交接的资产引用</h4>{data.assetScope==='not_loaded'?<p>尚未选择并读取交接包；资产依赖未展开。</p>:data.assetScope==='scope_mismatch'?<p>交接范围与当前快照不同或尚未确认，请重新选择。</p>:<><p>{data.assetScope==='stale'?'交接来源已有变化，保留原冻结引用。':'当前选择交接中的冻结引用。'} 原图可访问性与媒体质量需另行核对。</p>{data.assets.length?<ul>{data.assets.map(asset=><li key={asset.id}><code>{asset.id}</code><p className="cw-small-copy">{[...new Set(asset.uses.map(use=>use.usage||'用途未记录'))].join('；')}</p></li>)}</ul>:<p>此交接没有可展开的资产引用。</p>}</>}{onProduction&&<Button type="button" variant="ghost" onClick={onProduction}>到制作查阅交接包</Button>}</div>
++ const inspect=(id:string)=>onAttempt(()=>onSelect(id));
++ const follow=(id:string)=>{setKind('all');setQuery('');setChosen(id);};
++
++ return <section className="cw-project-relations" aria-label="项目关系">
++ {!data.available?<div className="cw-relations-empty" role="status"><h2>关系尚未读取</h2><p>{data.reason}</p></div>:<>
++ <header className="cw-relations-heading"><h2>项目关系</h2><div><span>{data.records.length} 条记录 · {data.edges.length+data.external.length} 处引用</span>{onCandidates&&<Button type="button" variant="ghost" aria-pressed={candidates} onClick={()=>onAttempt(()=>onCandidates(!candidates))}>包含候选</Button>}</div></header>
++ {data.notices.map(notice=><p key={notice} className="cw-relation-notice" role="status">{notice}</p>)}
++ {data.gaps.length>0&&<p className="cw-relations-gaps" aria-label="结构状态">{data.gaps.join(' · ')}</p>}
++ <div className="cw-relations-types" role="group" aria-label="记录类型">
++ <Button type="button" variant="ghost" aria-pressed={kind==='all'} onClick={()=>{setKind('all');setChosen('');}}>全部</Button>
++ {types.map(value=><Button key={value} type="button" variant="ghost" aria-pressed={kind===value} onClick={()=>{setKind(value);setChosen('');}}>{label(value)}</Button>)}
++ </div>
++ <div className="cw-relations-browser">
++ <aside className="cw-relations-directory" aria-label="关系记录">
++ <label className="cw-relations-search"><Search size={16} aria-hidden="true"/><span className="sr-only">搜索关系记录</span><Input type="search" value={query} onChange={event=>setQuery(event.target.value)} placeholder="搜索记录"/></label>
++ <div className="cw-relations-results"><span>{records.length} 条记录</span>{query&&<Button type="button" variant="ghost" onClick={()=>setQuery('')}>清除搜索</Button>}</div>
++ <ul className="cw-relations-records">{records.map(record=><li key={record.id}><Button type="button" variant="record" size="record" aria-pressed={focus?.id===record.id} onClick={()=>setChosen(record.id)}><span className="cw-relation-record-title">{record.title}</span><RecordMeta record={record}/></Button></li>)}</ul>
++ {!records.length&&<p className="cw-relations-list-empty">{data.records.length?'没有匹配的记录':'尚无故事记录'}</p>}
++ </aside>
++ {focus?<article className="cw-project-relations-record" aria-label="当前记录关系">
++ <header><div><h3>{focus.title}</h3><RecordMeta record={focus}/></div><Button type="button" variant="outline" onClick={()=>inspect(focus.id)}>打开记录<ArrowUpRight size={16}/></Button></header>
++ {focus.kind==='instance'&&<dl className="cw-relations-state"><div><dt>年龄</dt><dd>{focus.age||'未记录'}</dd></div><div><dt>时期</dt><dd>{focus.time||'未记录'}</dd></div><div><dt>生效时点</dt><dd>{focus.validFrom??'未定'} 至 {focus.validTo??'未定'}</dd></div></dl>}
++ <h4>直接关联 <span>{direct.length+outside.length}</span></h4>
++ {!direct.length&&!outside.length?<p className="cw-relations-no-links">此记录尚无已声明关联。</p>:<ul className="cw-project-relations-list">
++ {direct.map((edge,index)=>{const incoming=edge.to===focus.id,other=byId.get(incoming?edge.from:edge.to);return <li key={JSON.stringify([edge.from,edge.to,edge.label,index])}>
++ <span className="cw-relation-direction">{incoming?'被引用为':'引用'} · {edge.label}</span>
++ {other?<Button type="button" variant="record" size="record" className="cw-relation-target" onClick={()=>follow(other.id)}><span>{other.title}<small>{label(other.kind)} · 当前 v{other.version}</small></span><ArrowRight size={16}/></Button>:<code>{incoming?edge.from:edge.to}</code>}
++ <p className={edge.state==='loaded'?'cw-relation-caption':'cw-relation-caption cw-relation-attention'}>{edge.version!==null?`固定来源 v${edge.version}`:'未固定来源版本'}{edge.state!=='loaded'?` · ${relationState[edge.state]||'待核对'}`:''}</p>
++ </li>;})}
++ {outside.map((source,index)=><li key={source.kind+':'+source.id+':'+index}>
++ <span className="cw-relation-direction">{source.label} · {source.revision!==null?`固定 v${source.revision}`:'版本未记录'}</span><code>{source.id}</code>
++ {source.kind==='actor'&&<Button type="button" variant="ghost" onClick={()=>open('/workspace?view=ip&actor='+encodeURIComponent(source.id))}>演员档案<ArrowUpRight size={16}/></Button>}
++ {source.kind==='look'&&source.actorId&&<Button type="button" variant="ghost" onClick={()=>open('/workspace?view=ip&actor='+encodeURIComponent(source.actorId||'')+'&actorTab=looks')}>演员衣橱<ArrowUpRight size={16}/></Button>}
++ {source.kind==='document'&&<Button type="button" variant="ghost" onClick={()=>open('/studio?project='+encodeURIComponent(projectId)+'&document='+encodeURIComponent(source.id)+'#scripts')}>来源文稿<ArrowUpRight size={16}/></Button>}
++ <p className="cw-relation-caption">准确历史版本尚未展开。</p>
++ </li>)}
++ </ul>}
++ </article>:<div className="cw-relations-empty"><h3>{data.records.length?'没有匹配的关系记录':'关系从创作中建立'}</h3>{data.records.length?<Button type="button" variant="outline" onClick={()=>{setQuery('');setKind('all');}}>查看全部</Button>:<p>已保存的角色、场次与来源引用将在这里显示。</p>}</div>}
++ </div>
+  </>}
+- </section></details>;
++ </section>;
+ }
+diff --git a/components/workspace/workflow-navigation.mjs b/components/workspace/workflow-navigation.mjs
+index bf93954..34b79ca 100644
+--- a/components/workspace/workflow-navigation.mjs
++++ b/components/workspace/workflow-navigation.mjs
+@@ -1,9 +1,10 @@
+-/** Destinations are freely accessible; old views keep their own URLs. */
++/** Peer product destinations. Stable URLs remain the navigation authority. */
+ export const workflowStages = [
+  {value:'screenplay',label:'故事'}, {value:'episodes',label:'剧集'},
+  {value:'storyboard',label:'分镜'}, {value:'prompts',label:'提示词'},
++ {value:'canvas',label:'角色场景'}, {value:'relations',label:'项目关系'},
++ {value:'novel',label:'小说大纲'}, {value:'planning',label:'创作规划'},
++ {value:'review',label:'候选审阅'}, {value:'tasks',label:'协作任务'},
++ {value:'production',label:'制作'}, {value:'delivery',label:'交付'},
+ ];
+-export function workflowStage(view){
+- if (['novel','tasks','review'].includes(view)) return 'screenplay';
+- return view;
+-}
++export function workflowStage(view){ return view; }
+diff --git a/components/workspace/workspace-modules.tsx b/components/workspace/workspace-modules.tsx
+index 77e48d5..2f6abbf 100644
+--- a/components/workspace/workspace-modules.tsx
++++ b/components/workspace/workspace-modules.tsx
+@@ -18,6 +18,7 @@ import StudioHome from './studio-home';
+ import { ProjectPreview } from './project-preview';
+ import TaskWorkspace from './task-workspace';
+ import ProductionWorkspace from './production-workspace';
++import ProjectRelations from './project-relations';
+ import CreativeStructure from './creative-structure';
+ import EpisodeShotPlan from './episode-shot-plan';
+ import DocumentEditor from './document-editor';
+@@ -70,9 +71,11 @@ export default function WorkspaceModules(props: Props) {
+   if (props.view === 'home') return <StudioHome refreshKey={props.dashboardRefreshKey} onAttempt={props.onAttempt} onDashboardOpen={props.onDashboardOpen} key={props.introScope} introScope={props.introScope} workspaceReady={props.workspaceReady} workspaceError={props.workspaceError} onReloadWorkspace={props.onReloadWorkspace} projects={props.projects} project={props.project} items={props.items} onOpen={props.onOpenProject} onNavigate={props.onNavigate} />;
+   if (props.view === 'prompts') return props.project ? <DocumentEditor {...props} project={props.project} kindFilter="prompt_note" /> : <Empty title="选择项目" />;
+   if (props.view === 'episodes') return props.project ? <section className="cw-module"><CreativeStructure api={props.api} projectId={props.project.id} stage="story" items={props.items} acceptedItems={props.acceptedItems} onCreate={props.onCreateItem} onSelect={props.onSelect} onAttempt={props.onAttempt}/><EpisodeShotPlan items={props.items} candidates={props.candidates} onCandidates={()=>props.onAttempt(()=>props.onCandidates(!props.candidates))} onSelect={props.onSelect}/></section> : <Empty title="选择项目" />;
++  if (props.view === 'relations') return props.project ? <ProjectRelations projectId={props.project.id} graph={props.graph} candidates={props.candidates} onCandidates={props.onCandidates} onSelect={props.onSelect} onAttempt={props.onAttempt}/> : <Empty title="选择项目" />;
++  if (props.view === 'planning') return props.project ? <ProductionWorkspace key={props.project.id} {...props} stage="planning" /> : <Empty title="选择项目" />;
+   if (props.view === 'screenplay') return <ProductionWorkspace key={props.project?.id || 'none'} {...props} stage="story" />;
+   if (['storyboard','production','delivery'].includes(props.view)) return <ProductionWorkspace key={props.project?.id || 'none'} {...props} stage={props.view as 'storyboard'|'production'|'delivery'} />;
+-  if (props.view === 'review') return <><ChangesetReview {...props} /><details className="cw-import-panel"><summary>单条故事候选</summary><StoryDocuments {...props} /></details></>;
++  if (props.view === 'review') return <><ChangesetReview {...props} /><section className="cw-import-panel" aria-label="单条故事候选"><h2>故事候选</h2><StoryDocuments {...props} /></section></>;
+   if (props.view === 'projects') return <Projects {...props} />;
+   if (props.view === 'ip') return <ActorLibrary {...props} onOpenProject={(pid,itemId)=>props.onDashboardOpen(pid,'canvas',itemId)} />;
+   if (props.view === 'tasks') return <TaskWorkspace key={props.project?.id || 'none'} {...props} />;
+diff --git a/components/workspace/workspace.tsx b/components/workspace/workspace.tsx
+index 971c1db..2f896ee 100644
+--- a/components/workspace/workspace.tsx
++++ b/components/workspace/workspace.tsx
+@@ -2,14 +2,13 @@
+ import {useWorkspaceFeedback,WorkspaceFeedback} from './workspace-feedback';
+ import { Checkbox } from '@/components/ui/checkbox';
+ import { Input } from '@/components/ui/input';
+-import { NativeSelect } from '@/components/ui/native-select';
+ 
+ 
+ import { lazy, Suspense, useCallback, useEffect, useMemo, useRef, useState } from 'react';
+-import { ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, Check, ChevronDown, Clapperboard, CircleHelp, FolderOpen, Images, Layers3, LayoutDashboard, Link2, ListChecks, LoaderCircle, Menu, Network, Plus, RefreshCw, Search, ShieldCheck, UsersRound, Workflow, X } from 'lucide-react';
++import { ArrowLeft, ArrowRight, ArrowUpRight, BookOpen, Check, Clapperboard, CircleHelp, FolderOpen, Images, Layers3, LayoutDashboard, Link2, ListChecks, LoaderCircle, Menu, Music2, Network, Plus, RefreshCw, Search, ShieldCheck, UsersRound, Workflow, X } from 'lucide-react';
+ import { Button } from '@/components/ui/button';
+-import { DropdownMenu, DropdownMenuTrigger, DropdownMenuContent, DropdownMenuItem, DropdownMenuSub, DropdownMenuSubTrigger, DropdownMenuSubContent } from '@/components/ui/dropdown-menu';
+-import { FloatingTabs } from './creative-motion';
++import {ProjectNavigation,ProjectSwitcher} from './project-navigation';
++import {directoryKindLabel} from './project-directory.mjs';
+ import { Sheet, SheetContent, SheetTitle, SheetDescription } from '@/components/ui/sheet';
+ import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogAction, AlertDialogCancel } from '@/components/ui/alert-dialog';
+ import { Dialog, DialogContent, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+@@ -18,8 +17,6 @@ import { emptyContent, kindLabels, relatedScenes, safeMedia, type GraphData, typ
+ import ItemInspector, { type Decision } from './item-inspector';
+ import MarkdownContent, { MarkdownExcerpt } from './markdown-content';
+ import FeatureBoundary from './feature-boundary';
+-import ProjectRelations from './project-relations';
+-import {workflowStages,workflowStage} from './workflow-navigation.mjs';
+ import './workflow-focus.css';
+ import {dashboardHeadItem} from './dashboard-target.mjs';
+ import {markIntroSession} from './intro-session.mjs';
+@@ -41,7 +38,7 @@ const WorkspaceModules = lazy(() => import('./workspace-modules'));
+ const EmptyMedia: MediaMap = {};
+ const nav = [
+   { id: 'home', label: '看板', icon: LayoutDashboard },
+-  { id: 'canvas', label: '故事画布', icon: Network }, { id: 'projects', label: '项目', icon: FolderOpen }, { id: 'ip', label: '演员', icon: UsersRound },
++  { id: 'canvas', label: '角色场景', icon: UsersRound }, { id: 'relations', label: '项目关系', icon: Network }, { id: 'planning', label: '创作规划', icon: FolderOpen }, { id: 'projects', label: '项目', icon: FolderOpen }, { id: 'ip', label: '演员', icon: UsersRound },
+   { id: 'novel', label: '小说创作', icon: BookOpen }, { id: 'screenplay', label: '故事', icon: Clapperboard }, {id:'episodes',label:'剧集',icon:BookOpen}, {id:'prompts',label:'提示词',icon:ListChecks}, {id:'storyboard',label:'分镜',icon:Layers3}, {id:'production',label:'制作交付',icon:Workflow}, {id:'delivery',label:'交付',icon:ArrowUpRight}, { id: 'materials', label: '素材', icon: Images },
+   { id: 'review', label: '候选审阅', icon: ListChecks }, { id: 'tasks', label: '协作任务', icon: Workflow }, { id: 'connection', label: '连接', icon: Link2 },
+ ] as const;
+@@ -72,10 +69,10 @@ export default function Workspace({ api: injectedApi, mediaByItem = EmptyMedia,
+   const [loading, setLoading] = useState(true), [historyLoading, setHistoryLoading] = useState(false), [busy, setBusy] = useState(false);
+   const [error, setError] = useState(''), [notice,setNotice,announcement]=useWorkspaceFeedback(), [dirty, setDirty] = useState(false), [candidates, setCandidates] = useState(false);
+   const [readbackPending, setReadbackPending] = useState(false);
+-  const [search, setSearch] = useState(''), [mobileNav, setMobileNav] = useState(false), [showAllScenes, setShowAllScenes] = useState(false), [showGraph,setShowGraph]=useState(false);
++  const [search, setSearch] = useState(''), [mobileNav, setMobileNav] = useState(false), [showAllScenes, setShowAllScenes] = useState(false), [showGraph,setShowGraph]=useState(false), [createPicker,setCreatePicker]=useState(false);
+   const [pendingNavigation, setPendingNavigation] = useState<(() => void) | null>(null), [sourcePreview, setSourcePreview] = useState<{ title: string; text: string; version: number | undefined } | null>(null);
+   const generation = useRef(0), historyGeneration = useRef(0), busyRef = useRef(false), pendingOp = useRef<{ signature: string; key: string } | null>(null);
+-  const dirtyRef = useRef(false), lastTrigger = useRef<HTMLElement | null>(null);
++  const dirtyRef = useRef(false), lastTrigger = useRef<HTMLElement | null>(null), navigationTrigger = useRef<HTMLElement | null>(null);
+   const mobile = useMediaQuery('(max-width: 1050px)'), reducedMotion = useMediaQuery('(prefers-reduced-motion: reduce)');
+   const project = projects.find(p => p.id === route.project) || null;
+   const items = graph?.nodes || [];
+@@ -92,7 +89,7 @@ export default function Workspace({ api: injectedApi, mediaByItem = EmptyMedia,
+   }, []);
+   const attempt = useCallback((action: () => void) => {
+     if (busyRef.current) { setNotice('保存正在进行，请等待结果后再切换。'); return; }
+-    if (dirtyRef.current) setPendingNavigation(() => action); else action();
++    if (dirtyRef.current) { navigationTrigger.current = document.activeElement as HTMLElement; setPendingNavigation(() => action); } else action();
+   }, []);
+   useEffect(() => { const initial = fromLocation(); if(initial.view!=='home')try{markIntroSession(sessionStorage,introScope);}catch{/* Cosmetic state unavailable; local readiness remains. */} routeRef.current = initial; setRoute(initial);
+     const back = () => { const next = fromLocation(); if (dirtyRef.current || busyRef.current) { const current = routeRef.current; const q = new URLSearchParams({ view: current.view, project: current.project }); if (current.item) q.set('item', current.item); if(current.item&&current.head)q.set('head','1'); if (current.view === 'ip' && current.actor) q.set('actor', current.actor); if (current.view === 'ip' && current.actor && current.actorTab) q.set('actorTab', current.actorTab); window.history.pushState(null, '', `${window.location.pathname}?${q}`); attempt(() => applyRoute(next, true)); } else { routeRef.current = next; setRoute(next); } };
+@@ -158,27 +155,28 @@ export default function Workspace({ api: injectedApi, mediaByItem = EmptyMedia,
+   const scenes = relatedScenes(items, showAllScenes ? null : selected);
+   const primaryKinds: ItemKind[] = project?.kind==='long_form' ? ['character','chapter','outline'] : project?.kind==='daily' ? ['character','event'] : ['character','scene','event'];
+   const allCanvasKinds: ItemKind[] = ['character','instance','event','relation','chapter','adaptation','scene','episode','shot','development_plan','outline','knowledge'];
+-  const projectViews: WorkspaceView[] = ['canvas', 'novel', 'screenplay', 'episodes', 'prompts', 'review', 'tasks', 'storyboard', 'production', 'delivery'];
++  const projectViews: WorkspaceView[] = ['canvas', 'novel', 'screenplay', 'episodes', 'prompts', 'review', 'tasks', 'storyboard', 'production', 'delivery', 'relations', 'planning'];
+   const inProject = projectViews.includes(route.view);
+-  const researchHref='/studio'+(route.project?'?project='+encodeURIComponent(route.project):'')+'#research';
++  const planningHref='/workspace?view=planning'+(route.project?'&project='+encodeURIComponent(route.project):'');
++  const managementHref='/studio'+(route.project?'?project='+encodeURIComponent(route.project):'');
+   const navBody = <><nav aria-label="工作区导航">{nav.filter(n => ['home','projects','ip','materials'].includes(n.id)).map(n => <Button variant="navigation" type="button" key={n.id} onClick={() => navigate({ view: n.id, item: null, newKind: null })} aria-current={route.view === n.id || n.id === 'projects' && projectViews.includes(route.view) ? 'page' : undefined}><n.icon size={19} strokeWidth={1.6} /><span>{n.label}</span></Button>)}</nav>
+-    <div className="cw-nav-footer"><Button variant="navigation" type="button" onClick={() => navigate({view:'connection',item:null,newKind:null})} aria-current={route.view==='connection'?'page':undefined}><Link2 size={17}/><span>连接</span></Button><details><summary>更多工具</summary><a href={researchHref} onClick={event => { event.preventDefault(); attempt(() => window.location.assign(researchHref)); }}>选题研发<ArrowUpRight size={14}/></a><a href="/studio" onClick={event => { event.preventDefault(); attempt(() => window.location.assign('/studio')); }}>高级工作台<ArrowUpRight size={14}/></a><a href="/sound" onClick={event => { event.preventDefault(); attempt(() => window.location.assign('/sound')); }}>声音工具<ArrowUpRight size={14}/></a></details></div></>;
++    <div className="cw-nav-footer"><div className="cw-global-services"><a href={planningHref} onClick={event => { event.preventDefault(); navigate({view:'planning',item:null,newKind:null}); }}><FolderOpen size={17}/><span>创作规划</span></a><a href={managementHref} onClick={event => { event.preventDefault(); attempt(() => window.location.assign(managementHref)); }}><Clapperboard size={17}/><span>创作管理</span></a><a href="/sound" onClick={event => { event.preventDefault(); attempt(() => window.location.assign('/sound')); }}><Music2 size={17}/><span>声音</span></a></div><Button variant="navigation" type="button" onClick={() => navigate({view:'connection',item:null,newKind:null})} aria-current={route.view==='connection'?'page':undefined}><Link2 size={17}/><span>连接</span></Button></div></>;
+   const inspector = <ItemInspector api={api} projectId={route.project} onBusy={moduleBusy} onReview={() => navigate({view:'review',item:null,newKind:null})} item={selected} newKind={route.newKind} history={history} loading={historyLoading} busy={busy || readbackPending} readbackPending={readbackPending} media={mediaByItem} items={items} acceptedItems={acceptedGraph?.nodes || []} onClose={closeInspector} onActors={(actor) => navigate({view:'ip',actor:actor||null,item:null,newKind:null})} onSelect={select} onDirty={moduleDirty} onAttempt={attempt} onSave={save} onDecision={decide} onSource={inspectSource} />;
+   const actorShowcase = route.view === 'ip' && Boolean(route.actor);
+-  return <div className={`cw-workspace cw-theme cw-light cw-creative-flow cw-unified-shell ${actorShowcase ? 'cw-experience-actor' : ''} ${route.view === 'home' ? 'cw-experience-home' : ''}`} data-view={route.view} data-reduced-motion={reducedMotion ? 'true' : 'false'}>
++  return <div className={`cw-workspace cw-theme cw-light cw-creative-flow cw-unified-shell ${actorShowcase ? 'cw-experience-actor' : ''} ${route.view === 'home' ? 'cw-experience-home' : ''}`} data-view={route.view} data-project-work={inProject} data-reduced-motion={reducedMotion ? 'true' : 'false'}>
+     <aside className="cw-sidebar" aria-label="主导航"><a href="/workspace" className="cw-brand" onClick={event=>{event.preventDefault();navigate({view:'home',item:null,newKind:null});}}><span>CINEWEAVE<span>STUDIO</span></span></a>{navBody}</aside>
+     <header className="cw-topbar"><Button variant="ghost" size="icon-sm" className="cw-mobile-menu" onClick={() => setMobileNav(true)} aria-label="展开导航"><Menu /></Button><a href="/workspace" className="cw-mobile-brand" onClick={event=>{event.preventDefault();navigate({view:'home',item:null,newKind:null});}}>CINEWEAVE</a><span className="cw-topbar-context">{nav.find(n=>n.id===route.view)?.label}</span><span className="cw-topbar-private"><ShieldCheck size={14} />私有</span></header>
+     <Sheet open={mobileNav} onOpenChange={setMobileNav}><SheetContent side="left" className="cw-theme cw-light cw-mobile-sidebar"><SheetTitle className="sr-only">工作区导航</SheetTitle><SheetDescription className="sr-only">选择项目与创作模块</SheetDescription>{navBody}</SheetContent></Sheet>
+     <main className={`cw-main ${selectedOpen && !mobile ? 'has-inspector' : ''}`}>
+       {fixtureLabel && <div className="cw-fixture-banner"><ShieldCheck size={14} />{fixtureLabel} · 仅本地隔离数据 · 未连接模型</div>}
+-      <div className="cw-page-heading"><div><div className="cw-breadcrumb">{(inProject || route.view === 'projects') && project?.title || 'CineWeave Studio'}<ChevronDown size={12} />{nav.find(n => n.id === route.view)?.label}</div><h1>{route.view === 'canvas' ? '角色与场景' : nav.find(n => n.id === route.view)?.label}</h1></div><div className="cw-heading-actions">{route.view!=='connection'&&(<Button variant="ghost" size="icon-sm" aria-label="重新读取工作区" disabled={loading || busy} onClick={() => attempt(() => void refreshWorkspace())}><RefreshCw className={loading ? 'animate-spin' : ''} /></Button>)}{route.view==='canvas'&&(<DropdownMenu><DropdownMenuTrigger asChild><Button disabled={!project}><Plus size={16} />添加<ChevronDown size={13} /></Button></DropdownMenuTrigger><DropdownMenuContent align="end">{primaryKinds.map(kind => <DropdownMenuItem key={kind} disabled={!project} onSelect={() => navigate({ newKind: kind, item: null })}>{kindLabels[kind]}</DropdownMenuItem>)}<DropdownMenuSub><DropdownMenuSubTrigger>更多类型</DropdownMenuSubTrigger><DropdownMenuSubContent>{allCanvasKinds.filter(kind=>!primaryKinds.includes(kind)).map(kind => <DropdownMenuItem key={kind} disabled={!project} onSelect={() => navigate({ newKind: kind, item: null })}>{kindLabels[kind]}</DropdownMenuItem>)}</DropdownMenuSubContent></DropdownMenuSub></DropdownMenuContent></DropdownMenu>)}{route.view==='novel'&&<Button className="cw-primary" disabled={!project} onClick={()=>navigate({newKind:route.view==='novel'?'chapter':'scene',item:null})}><Plus size={16}/>{route.view==='novel'?'新建章节':'新建场次'}</Button>}</div></div>
+-      {inProject && <section className="cw-project-context" aria-label="当前项目流程"><label className="cw-context-picker" htmlFor="cw-project"><FolderOpen size={16}/><NativeSelect id="cw-project" aria-label="选择项目" value={route.project} onChange={event => navigate({ project: event.target.value, item: null, newKind: null })}><option value="">选择项目</option>{projects.map(p => <option key={p.id} value={p.id}>{p.title}</option>)}</NativeSelect></label>{route.view !== 'connection' && <FloatingTabs className="cw-workspace-modes" label="创作工作区" panelId="cw-active-work" items={workflowStages} value={workflowStage(route.view)} onChange={view=>navigate({view:view as WorkspaceView,item:null,newKind:null})}/>}<details className="cw-workflow-secondary"><summary>更多</summary>{([{view:'novel',label:'小说与大纲'},{view:'tasks',label:'写作任务'},{view:'review',label:'候选审阅'},{view:'canvas',label:'角色与场景'},{view:'production',label:'制作交付'},{view:'delivery',label:'交付记录'},{view:'connection',label:'连接'}] as const).map(v=><Button key={v.view} variant="ghost" onClick={()=>navigate({view:v.view,item:null,newKind:null})}>{v.label}</Button>)}<a href={researchHref} onClick={e=>{e.preventDefault();attempt(()=>window.location.assign(researchHref));}}>选题研发</a></details></section>}
++      <div className="cw-page-heading"><div className="cw-project-heading-copy"><h1 key={inProject?route.project:route.view} className={inProject?'cw-project-title':undefined}>{inProject ? project?.title || '选择项目' : nav.find(n => n.id === route.view)?.label}</h1>{inProject&&<div className="cw-project-meta">{project&&<span>{directoryKindLabel(project.kind)}</span>}<span>{nav.find(n=>n.id===route.view)?.label}</span></div>}</div><div className="cw-heading-actions">{inProject&&<ProjectSwitcher projects={projects} project={project} loaded={projectsLoaded} loadError={!projectsLoaded&&!!error} onReload={()=>void loadProjects()} onChoose={next=>navigate({project:next.id,item:null,newKind:null,head:false})}/>} {route.view!=='connection'&&<Button variant="ghost" size="icon-sm" aria-label="重新读取工作区" disabled={loading || busy} onClick={() => attempt(() => void refreshWorkspace())}><RefreshCw className={loading ? 'animate-spin' : ''} /></Button>}{route.view==='canvas'&&<Button disabled={!project} onClick={()=>setCreatePicker(true)}><Plus size={16}/>新建记录</Button>}{route.view==='novel'&&<Button className="cw-primary" disabled={!project} onClick={()=>navigate({newKind:'chapter',item:null})}><Plus size={16}/>新建章节</Button>}</div></div>
++      {inProject&&<ProjectNavigation view={route.view} onNavigate={view=>navigate({view:view as WorkspaceView,item:null,newKind:null,head:false})}/>}
++      <Dialog open={createPicker} onOpenChange={setCreatePicker}><DialogContent className="cw-theme"><DialogTitle>新建记录</DialogTitle><DialogDescription className="sr-only">选择要创建的故事记录类型。</DialogDescription><div className="cw-record-kind-grid">{[...primaryKinds,...allCanvasKinds.filter(kind=>!primaryKinds.includes(kind))].map(kind=><Button key={kind} variant="outline" onClick={()=>{setCreatePicker(false);navigate({newKind:kind,item:null});}}>{kindLabels[kind]}</Button>)}</div></DialogContent></Dialog>
+ 
+       {error && route.view!=='connection' && <div className="cw-error-banner" role="alert"><span>{error}</span><Button variant="ghost" size="sm" onClick={() => attempt(() => void refreshWorkspace())}>重新读取</Button></div>}
+       <WorkspaceFeedback notice={notice} announcement={announcement} onDismiss={readbackPending?undefined:()=>setNotice('')}/>
+-      <FeatureBoundary key={route.view+':'+route.project}><div id="cw-active-work" role={projectViews.includes(route.view) ? 'tabpanel' : undefined} aria-label={nav.find(n=>n.id===route.view)?.label} tabIndex={projectViews.includes(route.view) ? 0 : undefined}>
++      <FeatureBoundary key={route.view+':'+route.project}><div id="cw-active-work" role={projectViews.includes(route.view) ? 'region' : undefined} aria-label={nav.find(n=>n.id===route.view)?.label} tabIndex={projectViews.includes(route.view) ? 0 : undefined}>
+       {route.view === 'canvas' ? <>
+-        {project&&<ProjectRelations key={project.id} projectId={project.id} graph={graph} onSelect={select} onAttempt={attempt} onProduction={()=>navigate({view:'production',item:null,newKind:null})}/>}
+         <div className="cw-workspace-controls"><div className="cw-view-title"><Network size={18} /><span>角色与场景</span><Button variant="ghost" size="sm" aria-pressed={showGraph} onClick={()=>setShowGraph(v=>!v)}>{showGraph?'卡片':'关系图'}</Button></div><label className="cw-search"><Search size={14} /><Input type="search" value={search} onChange={e => setSearch(e.target.value)} placeholder="查找角色、场景" aria-label="查找角色与场景" /></label><label className="cw-candidate-toggle"><Checkbox  checked={candidates} onCheckedChange={checked => attempt(() => setCandidates((checked === true)))} />包含候选</label></div>
+         {!project ? <div className="cw-project-empty"><FolderOpen size={42} strokeWidth={1} /><h2>{projectsLoaded && !projects.length ? '从一个真实作品开始' : '选择要继续的作品'}</h2><p>{projectsLoaded && !projects.length ? '项目列表为空。现有素材仍保留在素材库；尚未入库的文稿不会自动变成正式故事。' : '选择项目，读取已保存的角色、事件与场次。'}</p><Button className="cw-primary" onClick={() => navigate({ view: 'projects' })}>前往项目<ArrowRight /></Button></div> : loading && !graph ? <div className="cw-canvas-loading" role="status"><LoaderCircle className="animate-spin" /><p>正在读取「{project.title}」的故事快照…</p></div> : graph ? !showGraph ? <div className="cw-cast-scene-list">{items.filter(n=>['character','scene'].includes(n.kind)&&(!search||`${n.content.title} ${n.content.body}`.toLocaleLowerCase().includes(search.toLocaleLowerCase()))).map(n=><Button key={n.id} variant="record" size="record" aria-pressed={route.item===n.id} onClick={()=>select(n.id)}><div><small>{n.kind==='character'?'角色':'场景'}{n.needs_review?.length?' · 引用需核对':''}</small><h3>{n.content.title}</h3><MarkdownExcerpt content={n.content.body} /></div><ArrowRight size={16}/></Button>)}{!items.some(n=>['character','scene'].includes(n.kind))&&<p>尚未建立角色或场景。可从已有故事继续添加，不会自动指定演员。</p>}</div> : <Suspense fallback={<div className="cw-canvas-loading" role="status">正在载入画布组件…</div>}><RelationshipCanvas key={project.id} items={items} query={search} selectedId={route.item} onSelect={select} onClear={closeInspector} media={mediaByItem} reducedMotion={reducedMotion} compact={mobile} /></Suspense> : <div className="cw-canvas-loading">故事快照尚未读取，请恢复连接后重试。</div>}
+         {project && showGraph && <section className="cw-scenes"><header><div><Clapperboard size={18} /><h2>剧情场次</h2><span>{scenes.length} 场</span></div><Button variant="ghost" size="sm" onClick={() => setShowAllScenes(!showAllScenes)}>{selected && !showAllScenes ? '查看全部场次' : '查看关联场次'}<ArrowRight /></Button></header><div className="cw-scene-strip">{scenes.map((scene, index) => { const picture = safeMedia(mediaByItem, scene.id); return <Button variant="record" size="record" type="button" className={`cw-scene-card ${route.item === scene.id ? 'is-selected' : ''}`} aria-pressed={route.item === scene.id} key={scene.id} onClick={() => select(scene.id)}><div className="cw-scene-picture">{picture ? <img src={picture.src} alt={picture.alt} width={130} height={86} loading="lazy" /> : <Clapperboard strokeWidth={1} size={28} />}</div><div><span>场 {index + 1}<small>{scene.status === 'accepted' ? '已采纳' : '候选'}</small></span><h3>{scene.content.title}</h3><MarkdownExcerpt content={scene.content.body}/></div></Button>; })}{!scenes.length && <p className="cw-scenes-empty">{selected && !showAllScenes ? '此卡片尚无明确关联的场次，可切换查看全部。' : '暂无场次'}</p>}</div></section>}
+@@ -186,7 +184,7 @@ export default function Workspace({ api: injectedApi, mediaByItem = EmptyMedia,
+       </div></FeatureBoundary>
+     </main>
+     {selectedOpen && (mobile ? <Sheet open onOpenChange={open => { if (!open) closeInspector(); }}><SheetContent className="cw-theme cw-light cw-inspector-sheet" showCloseButton={false} onCloseAutoFocus={event => { event.preventDefault(); requestAnimationFrame(() => { const trigger = lastTrigger.current; if (trigger?.isConnected) trigger.focus(); else document.querySelector<HTMLElement>('.cw-flow')?.focus(); }); }}><SheetTitle className="sr-only">卡片与准确来源</SheetTitle><SheetDescription className="sr-only">检查设定、版本与审阅候选</SheetDescription>{inspector}</SheetContent></Sheet> : <aside className="cw-inspector" aria-label="卡片检查器">{inspector}</aside>)}
+-    <AlertDialog open={!!pendingNavigation} onOpenChange={open => { if (!open) setPendingNavigation(null); }}><AlertDialogContent className="cw-theme cw-light cw-confirm"><AlertDialogHeader><AlertDialogTitle>保留尚未保存的编辑？</AlertDialogTitle><AlertDialogDescription>修改尚未保存。返回保存，或放弃修改后继续。</AlertDialogDescription></AlertDialogHeader><AlertDialogFooter><AlertDialogCancel>返回编辑</AlertDialogCancel><AlertDialogAction onClick={() => { const next = pendingNavigation; setPendingNavigation(null); setDirty(false); dirtyRef.current = false; next?.(); }}>放弃修改并继续</AlertDialogAction></AlertDialogFooter></AlertDialogContent></AlertDialog>
++    <AlertDialog open={!!pendingNavigation} onOpenChange={open => { if (!open) setPendingNavigation(null); }}><AlertDialogContent className="cw-theme cw-light cw-confirm" onCloseAutoFocus={event=>{event.preventDefault();requestAnimationFrame(()=>{const previous=navigationTrigger.current;if(previous?.isConnected)previous.focus();else document.querySelector<HTMLElement>('.cw-project-switch-trigger, #cw-active-work')?.focus();});}}><AlertDialogHeader><AlertDialogTitle>保留尚未保存的编辑？</AlertDialogTitle><AlertDialogDescription>修改尚未保存。返回保存，或放弃修改后继续。</AlertDialogDescription></AlertDialogHeader><AlertDialogFooter><AlertDialogCancel>返回编辑</AlertDialogCancel><AlertDialogAction onClick={() => { const next = pendingNavigation; setPendingNavigation(null); setDirty(false); dirtyRef.current = false; next?.(); }}>放弃修改并继续</AlertDialogAction></AlertDialogFooter></AlertDialogContent></AlertDialog>
+     <Dialog open={!!sourcePreview} onOpenChange={open => { if (!open) setSourcePreview(null); }}><DialogContent className="cw-theme cw-light cw-source-dialog"><DialogTitle>{sourcePreview?.title}</DialogTitle><DialogDescription>来源内容</DialogDescription><MarkdownContent content={sourcePreview?.text || ''} /></DialogContent></Dialog>
+   </div>;
+ }
+diff --git a/docs/project-workspace-20261109.md b/docs/project-workspace-20261109.md
+new file mode 100644
+index 0000000..d4e484b
+--- /dev/null
++++ b/docs/project-workspace-20261109.md
+@@ -0,0 +1,26 @@
++# 项目工作区改版 · 2026-11-09
++
++基线：现有私有 Site v104，源码 `77887cc95e1152e1f1f1a2f0e52c22390bd8b481`。当前请求：修正进入项目后的多条“项目关系查阅”，改善页面布局、控件和项目切换，将功能作为平级产品入口。
++
++## 原因与实施
++
++线上真实会话确认同一故事页存在四个关系 disclosure；前三个残留未加载快照，最后一个为已加载状态。ProductionWorkspace 的 ProjectRelations 与 DocumentEditor 同为直接兄弟，分别用 `key={pid}` 与 `key={project.id}`，两者值相同。异步前置子节点变化触发不可靠的 React reconciliation。现在故事页只呈现文稿和故事操作，关系成为单独 route，文稿无此 key 冲突；回归测试检查真实 JSX 同层 key 唯一性。
++
++项目标题成为页面主标题；十二项功能以平级导航常驻：故事、剧集、分镜、提示词、角色场景、项目关系、小说大纲、创作规划、候选审阅、协作任务、制作、交付。旧路由保持可用，新 relations/planning 路由继承项目与未保存保护。
++
++原 FloatingTabs 的固定高度与 overflow:auto 导致窄导航内出现纵向滚动条。项目导航改为自然换行网格、细线选中反馈，移除移动高亮块和此层滚动。项目切换为可搜索、可筛选、完整分页的选片面板，无下拉箭头；卡片仅使用真实项目标题、类型和日期。局部光效与一次性曝光转场响应操作，减少动态时移除装饰运动。
++
++文稿目录可搜索、分页，正文同屏；类型为平铺选择。分集结构、规划与关系分别在对应功能中。制作依据、导演输入与交付记录保留真实服务能力并平级显示。长列表在外层滚动，按钮不形成滚动容器。必要的文稿归集动态选择仍采用原生选择器。
++
++关系页提供记录目录、类型筛选、包含候选、直接关联、准确版本与已声明外部引用；冻结交接的资产引用保留在所选交接中。无数据库/媒体/身份/所有项目权限/协议修改。原有 React Bits 展示能力与演员模糊背景不受本次范围影响。
++
++## 验证
++
++- Site tests：861/861；最终焦点修复后相关导航、切换、关系、文稿测试 26/26。
++- Core review：161/161；TypeScript 与完整 Worker 构建通过；source-only readiness complete，非部署凭证。
++- 本地已标记隔离数据浏览器：桌面导航、故事文稿、独立关系页；连续刷新三次，故事页始终一个编辑器且无关系 disclosure。关系页异步刷新始终一份关系面板。
++- 项目切换搜索/分页单测，手机真实点击保留当前关系功能；未保存确认取消后标题仍在，焦点回到切换项目按钮。
++- 390px 窄屏：正文无水平溢出，导航按钮无内部滚动；切换面板在视口内，卡片按钮不滚动。自适应覆盖与减少动态分支均保留。
++- 独立代码审阅发现 Portal 根选择器和规划 href 路由不一致，已修正；键盘焦点问题由真实浏览器发现并修复。
++
++生产环境仅执行读取核验。部署版本、源提交、回执和最终线上截图在 Director 仓库对应发布记录中登记。测试截图保存在忽略目录，未写入站点公开资产或 Git。
+diff --git a/studio-core/review-report.json b/studio-core/review-report.json
+index e87948e..986ff37 100644
+--- a/studio-core/review-report.json
++++ b/studio-core/review-report.json
+@@ -1,6 +1,6 @@
+ {
+   "stage": "CineWeave Studio Core: 0+1+2+3+4+5+6+7",
+-  "generated_at": "2026-11-09T02:27:43.957Z",
++  "generated_at": "2026-11-09T03:08:27.066Z",
+   "checks": [
+     {
+       "label": "syntax:src/dashboard.mjs",
+@@ -804,7 +804,7 @@
+       "label": "mcp:legacy-asset-readonly-security",
+       "passed": true,
+       "status": 0,
+-      "details": "k 1 - Scene MCP search includes architecture once and keeps the legacy child and saved records intact\n  ---\n  duration_ms: 74.4187\n  type: 'test'\n  ...\n# Subtest: discovery is static and stateless; no identity, private IDs or storage reads\nok 2 - discovery is static and stateless; no identity, private IDs or storage reads\n  ---\n  duration_ms: 3.8905\n  type: 'test'\n  ...\n# Subtest: missing identity/service bypass is 401 and another subject is 403 before any storage read\nok 3 - missing identity/service bypass is 401 and another subject is 403 before any storage read\n  ---\n  duration_ms: 28.3231\n  type: 'test'\n  ...\n# Subtest: search/get read current records and exclude trash, without changing any table\nok 4 - search/get read current records and exclude trash, without changing any table\n  ---\n  duration_ms: 65.6072\n  type: 'test'\n  ...\n# Subtest: image tool returns verified ImageContent bytes, not a URL, and refuses corruption/oversize\nok 5 - image tool returns verified ImageContent bytes, not a URL, and refuses corruption/oversize\n  ---\n  duration_ms: 33.7167\n  type: 'test'\n  ...\n# Subtest: no write tool, arbitrary URL, SQL injection or cross-origin bypass\nok 6 - no write tool, arbitrary URL, SQL injection or cross-origin bypass\n  ---\n  duration_ms: 34.2472\n  type: 'test'\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 458.1077\n\n"
++      "details": "k 1 - Scene MCP search includes architecture once and keeps the legacy child and saved records intact\n  ---\n  duration_ms: 55.6699\n  type: 'test'\n  ...\n# Subtest: discovery is static and stateless; no identity, private IDs or storage reads\nok 2 - discovery is static and stateless; no identity, private IDs or storage reads\n  ---\n  duration_ms: 3.2978\n  type: 'test'\n  ...\n# Subtest: missing identity/service bypass is 401 and another subject is 403 before any storage read\nok 3 - missing identity/service bypass is 401 and another subject is 403 before any storage read\n  ---\n  duration_ms: 29.2895\n  type: 'test'\n  ...\n# Subtest: search/get read current records and exclude trash, without changing any table\nok 4 - search/get read current records and exclude trash, without changing any table\n  ---\n  duration_ms: 45.8757\n  type: 'test'\n  ...\n# Subtest: image tool returns verified ImageContent bytes, not a URL, and refuses corruption/oversize\nok 5 - image tool returns verified ImageContent bytes, not a URL, and refuses corruption/oversize\n  ---\n  duration_ms: 22.4203\n  type: 'test'\n  ...\n# Subtest: no write tool, arbitrary URL, SQL injection or cross-origin bypass\nok 6 - no write tool, arbitrary URL, SQL injection or cross-origin bypass\n  ---\n  duration_ms: 28.8786\n  type: 'test'\n  ...\n1..6\n# tests 6\n# suites 0\n# pass 6\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 361.2641\n\n"
+     },
+     {
+       "label": "syntax:src/material-frame-adapter.mjs",
+@@ -858,19 +858,19 @@
+       "label": "materials:ingest-and-human-field-regressions",
+       "passed": true,
+       "status": 0,
+-      "details": "uration_ms: 52.1776\n  type: 'test'\n  ...\n# (node:23952) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n# (Use `node --trace-warnings ...` to show where the warning was created)\n# Subtest: objects and catalog are persistent and idempotent\nok 38 - objects and catalog are persistent and idempotent\n  ---\n  duration_ms: 151.0158\n  type: 'test'\n  ...\n# Subtest: changed batch identity and unchecked assets are rejected\nok 39 - changed batch identity and unchecked assets are rejected\n  ---\n  duration_ms: 97.1247\n  type: 'test'\n  ...\n# Subtest: content hash mismatches rejected\nok 40 - content hash mismatches rejected\n  ---\n  duration_ms: 71.0506\n  type: 'test'\n  ...\n# Subtest: database triggers pin alias even if competing reads become stale\nok 41 - database triggers pin alias even if competing reads become stale\n  ---\n  duration_ms: 76.7371\n  type: 'test'\n  ...\n# Subtest: catalog ingestion never changes saved selections\nok 42 - catalog ingestion never changes saved selections\n  ---\n  duration_ms: 78.7592\n  type: 'test'\n  ...\n# Subtest: transient storage faults are retryable rather than hidden validation failures\nok 43 - transient storage faults are retryable rather than hidden validation failures\n  ---\n  duration_ms: 60.9116\n  type: 'test'\n  ...\n1..43\n# tests 43\n# suites 0\n# pass 43\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 1093.5736\n\n"
++      "details": " duration_ms: 36.0666\n  type: 'test'\n  ...\n# (node:61916) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n# (Use `node --trace-warnings ...` to show where the warning was created)\n# Subtest: objects and catalog are persistent and idempotent\nok 38 - objects and catalog are persistent and idempotent\n  ---\n  duration_ms: 97.6841\n  type: 'test'\n  ...\n# Subtest: changed batch identity and unchecked assets are rejected\nok 39 - changed batch identity and unchecked assets are rejected\n  ---\n  duration_ms: 58.9232\n  type: 'test'\n  ...\n# Subtest: content hash mismatches rejected\nok 40 - content hash mismatches rejected\n  ---\n  duration_ms: 47.1483\n  type: 'test'\n  ...\n# Subtest: database triggers pin alias even if competing reads become stale\nok 41 - database triggers pin alias even if competing reads become stale\n  ---\n  duration_ms: 49.9537\n  type: 'test'\n  ...\n# Subtest: catalog ingestion never changes saved selections\nok 42 - catalog ingestion never changes saved selections\n  ---\n  duration_ms: 55.5275\n  type: 'test'\n  ...\n# Subtest: transient storage faults are retryable rather than hidden validation failures\nok 43 - transient storage faults are retryable rather than hidden validation failures\n  ---\n  duration_ms: 45.2609\n  type: 'test'\n  ...\n1..43\n# tests 43\n# suites 0\n# pass 43\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 813.0909\n\n"
+     },
+     {
+       "label": "primary-category:catalog-and-ui-regressions",
+       "passed": true,
+       "status": 0,
+-      "details": "t retains the chosen primary root\nok 33 - category UI starts in apparel with no mixed query and reset retains the chosen primary root\n  ---\n  duration_ms: 31.7771\n  type: 'test'\n  ...\n# Subtest: category switch clears incompatible pending filters, page, counts and groups while retaining user records\nok 34 - category switch clears incompatible pending filters, page, counts and groups while retaining user records\n  ---\n  duration_ms: 13.7729\n  type: 'test'\n  ...\n# Subtest: category history contexts cannot restore another root filters and a bad category receipt cannot enter the gallery\nok 35 - category history contexts cannot restore another root filters and a bad category receipt cannot enter the gallery\n  ---\n  duration_ms: 17.4291\n  type: 'test'\n  ...\n# Subtest: quick category switching rejects late search/page responses and keeps only the newest category result\nok 36 - quick category switching rejects late search/page responses and keeps only the newest category result\n  ---\n  duration_ms: 30.0738\n  type: 'test'\n  ...\n# Subtest: a successful empty category request replaces its loading placeholder with a scoped empty state\nok 37 - a successful empty category request replaces its loading placeholder with a scoped empty state\n  ---\n  duration_ms: 14.596\n  type: 'test'\n  ...\n1..37\n# tests 37\n# suites 0\n# pass 37\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 1540.6579\n\n"
++      "details": "t retains the chosen primary root\nok 33 - category UI starts in apparel with no mixed query and reset retains the chosen primary root\n  ---\n  duration_ms: 29.762\n  type: 'test'\n  ...\n# Subtest: category switch clears incompatible pending filters, page, counts and groups while retaining user records\nok 34 - category switch clears incompatible pending filters, page, counts and groups while retaining user records\n  ---\n  duration_ms: 14.8272\n  type: 'test'\n  ...\n# Subtest: category history contexts cannot restore another root filters and a bad category receipt cannot enter the gallery\nok 35 - category history contexts cannot restore another root filters and a bad category receipt cannot enter the gallery\n  ---\n  duration_ms: 17.7483\n  type: 'test'\n  ...\n# Subtest: quick category switching rejects late search/page responses and keeps only the newest category result\nok 36 - quick category switching rejects late search/page responses and keeps only the newest category result\n  ---\n  duration_ms: 40.9376\n  type: 'test'\n  ...\n# Subtest: a successful empty category request replaces its loading placeholder with a scoped empty state\nok 37 - a successful empty category request replaces its loading placeholder with a scoped empty state\n  ---\n  duration_ms: 17.0796\n  type: 'test'\n  ...\n1..37\n# tests 37\n# suites 0\n# pass 37\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 1860.6298\n\n"
+     },
+     {
+       "label": "stage1+stage2+stage3+stage4+stage5:unit-and-contract-tests",
+       "passed": true,
+       "status": 0,
+-      "details": "h real entry points\nok 586 - explicit workspace consent, immutable candidate, owner review and exact readback through real entry points\n  ---\n  duration_ms: 124.0757\n  type: 'test'\n  ...\n# Subtest: candidate sealing rejects altered content and version; revoked or expired grants cannot submit\nok 587 - candidate sealing rejects altered content and version; revoked or expired grants cannot submit\n  ---\n  duration_ms: 65.5248\n  type: 'test'\n  ...\n# Subtest: revocation interleaved at candidate insert prevents the write\nok 588 - revocation interleaved at candidate insert prevents the write\n  ---\n  duration_ms: 55.132\n  type: 'test'\n  ...\n# Subtest: project and receipt roll back together on interrupted batch\nok 589 - project and receipt roll back together on interrupted batch\n  ---\n  duration_ms: 56.8924\n  type: 'test'\n  ...\n# Subtest: same decision racing at the same clock instant replays one receipt\nok 590 - same decision racing at the same clock instant replays one receipt\n  ---\n  duration_ms: 52.7463\n  type: 'test'\n  ...\n# Subtest: committed creation can be verified after a transient readback failure without another write\nok 591 - committed creation can be verified after a transient readback failure without another write\n  ---\n  duration_ms: 45.3203\n  type: 'test'\n  ...\n1..591\n# tests 591\n# suites 0\n# pass 580\n# fail 0\n# cancelled 0\n# skipped 11\n# todo 0\n# duration_ms 11884.5984\n\n"
++      "details": " real entry points\nok 586 - explicit workspace consent, immutable candidate, owner review and exact readback through real entry points\n  ---\n  duration_ms: 118.0834\n  type: 'test'\n  ...\n# Subtest: candidate sealing rejects altered content and version; revoked or expired grants cannot submit\nok 587 - candidate sealing rejects altered content and version; revoked or expired grants cannot submit\n  ---\n  duration_ms: 50.7936\n  type: 'test'\n  ...\n# Subtest: revocation interleaved at candidate insert prevents the write\nok 588 - revocation interleaved at candidate insert prevents the write\n  ---\n  duration_ms: 50.9564\n  type: 'test'\n  ...\n# Subtest: project and receipt roll back together on interrupted batch\nok 589 - project and receipt roll back together on interrupted batch\n  ---\n  duration_ms: 54.3878\n  type: 'test'\n  ...\n# Subtest: same decision racing at the same clock instant replays one receipt\nok 590 - same decision racing at the same clock instant replays one receipt\n  ---\n  duration_ms: 44.0423\n  type: 'test'\n  ...\n# Subtest: committed creation can be verified after a transient readback failure without another write\nok 591 - committed creation can be verified after a transient readback failure without another write\n  ---\n  duration_ms: 46.5444\n  type: 'test'\n  ...\n1..591\n# tests 591\n# suites 0\n# pass 580\n# fail 0\n# cancelled 0\n# skipped 11\n# todo 0\n# duration_ms 12061.5827\n\n"
+     },
+     {
+       "label": "organization:syntax:lib/material-organization-policy.mjs",
+@@ -900,31 +900,31 @@
+       "label": "organization:policy-atomicity-and-client",
+       "passed": true,
+       "status": 0,
+-      "details": "uration_ms: 5.6815\n  type: 'test'\n  ...\n# Subtest: bounded body and JSON validation reject malformed input before touching any ledger\nok 112 - bounded body and JSON validation reject malformed input before touching any ledger\n  ---\n  duration_ms: 6.6028\n  type: 'test'\n  ...\n# Subtest: oversized Unicode operation response is rejected before writing rather than hitting D1 bind limits\nok 113 - oversized Unicode operation response is rejected before writing rather than hitting D1 bind limits\n  ---\n  duration_ms: 43.447\n  type: 'test'\n  ...\n# Subtest: history paging preserves records beyond 100 entries and initial null defaults appear only at end\nok 114 - history paging preserves records beyond 100 entries and initial null defaults appear only at end\n  ---\n  duration_ms: 15.7693\n  type: 'test'\n  ...\n# Subtest: audit guards deny update/delete/replace and source absence leaves original fields null\nok 115 - audit guards deny update/delete/replace and source absence leaves original fields null\n  ---\n  duration_ms: 11.7462\n  type: 'test'\n  ...\n# Subtest: unknown storage failure uses a fixed safe error and never exposes source text or SQL\nok 116 - unknown storage failure uses a fixed safe error and never exposes source text or SQL\n  ---\n  duration_ms: 3.4442\n  type: 'test'\n  ...\n1..116\n# tests 116\n# suites 0\n# pass 116\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 11843.7465\n\n"
++      "details": " duration_ms: 5.0636\n  type: 'test'\n  ...\n# Subtest: bounded body and JSON validation reject malformed input before touching any ledger\nok 112 - bounded body and JSON validation reject malformed input before touching any ledger\n  ---\n  duration_ms: 8.8995\n  type: 'test'\n  ...\n# Subtest: oversized Unicode operation response is rejected before writing rather than hitting D1 bind limits\nok 113 - oversized Unicode operation response is rejected before writing rather than hitting D1 bind limits\n  ---\n  duration_ms: 48.07\n  type: 'test'\n  ...\n# Subtest: history paging preserves records beyond 100 entries and initial null defaults appear only at end\nok 114 - history paging preserves records beyond 100 entries and initial null defaults appear only at end\n  ---\n  duration_ms: 11.644\n  type: 'test'\n  ...\n# Subtest: audit guards deny update/delete/replace and source absence leaves original fields null\nok 115 - audit guards deny update/delete/replace and source absence leaves original fields null\n  ---\n  duration_ms: 11.5649\n  type: 'test'\n  ...\n# Subtest: unknown storage failure uses a fixed safe error and never exposes source text or SQL\nok 116 - unknown storage failure uses a fixed safe error and never exposes source text or SQL\n  ---\n  duration_ms: 4.1064\n  type: 'test'\n  ...\n1..116\n# tests 116\n# suites 0\n# pass 116\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 10203.8974\n\n"
+     },
+     {
+       "label": "organization:python-collector",
+       "passed": true,
+       "status": 0,
+-      "details": "\ntest_committed_readback_pending_permits_only_reads (test_material_organization_client.OrganizationClientTests.test_committed_readback_pending_permits_only_reads) ... ok\r\ntest_confirmed_result_is_reconciled_without_another_write (test_material_organization_client.OrganizationClientTests.test_confirmed_result_is_reconciled_without_another_write) ... ok\r\ntest_dry_run_is_only_a_read_plan_and_does_not_checkpoint (test_material_organization_client.OrganizationClientTests.test_dry_run_is_only_a_read_plan_and_does_not_checkpoint) ... ok\r\ntest_known_absent_job_resumes_identical_request_after_lost_transport (test_material_organization_client.OrganizationClientTests.test_known_absent_job_resumes_identical_request_after_lost_transport) ... ok\r\ntest_same_key_different_content_is_rejected_before_transport (test_material_organization_client.OrganizationClientTests.test_same_key_different_content_is_rejected_before_transport) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 5 tests in 0.002s\r\n\r\nOK\r\n"
++      "details": "\ntest_committed_readback_pending_permits_only_reads (test_material_organization_client.OrganizationClientTests.test_committed_readback_pending_permits_only_reads) ... ok\r\ntest_confirmed_result_is_reconciled_without_another_write (test_material_organization_client.OrganizationClientTests.test_confirmed_result_is_reconciled_without_another_write) ... ok\r\ntest_dry_run_is_only_a_read_plan_and_does_not_checkpoint (test_material_organization_client.OrganizationClientTests.test_dry_run_is_only_a_read_plan_and_does_not_checkpoint) ... ok\r\ntest_known_absent_job_resumes_identical_request_after_lost_transport (test_material_organization_client.OrganizationClientTests.test_known_absent_job_resumes_identical_request_after_lost_transport) ... ok\r\ntest_same_key_different_content_is_rejected_before_transport (test_material_organization_client.OrganizationClientTests.test_same_key_different_content_is_rejected_before_transport) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 5 tests in 0.001s\r\n\r\nOK\r\n"
+     },
+     {
+       "label": "creative-unit:hosted-additive-migration-review",
+       "passed": true,
+       "status": 0,
+-      "details": "\ntest_additive_migration_preserves_every_old_table_and_record (test_document_episode_migration.DocumentEpisodeMigrationTests.test_additive_migration_preserves_every_old_table_and_record) ... ok\r\ntest_core_and_hosted_migrations_create_identical_objects (test_document_episode_migration.DocumentEpisodeMigrationTests.test_core_and_hosted_migrations_create_identical_objects) ... ok\r\ntest_foreign_keys_restrict_missing_targets_and_existing_parent_deletion (test_document_episode_migration.DocumentEpisodeMigrationTests.test_foreign_keys_restrict_missing_targets_and_existing_parent_deletion) ... ok\r\ntest_nullable_unassigned_link_and_positive_revisions (test_document_episode_migration.DocumentEpisodeMigrationTests.test_nullable_unassigned_link_and_positive_revisions) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.268s\r\n\r\nOK\r\n"
++      "details": "\ntest_additive_migration_preserves_every_old_table_and_record (test_document_episode_migration.DocumentEpisodeMigrationTests.test_additive_migration_preserves_every_old_table_and_record) ... ok\r\ntest_core_and_hosted_migrations_create_identical_objects (test_document_episode_migration.DocumentEpisodeMigrationTests.test_core_and_hosted_migrations_create_identical_objects) ... ok\r\ntest_foreign_keys_restrict_missing_targets_and_existing_parent_deletion (test_document_episode_migration.DocumentEpisodeMigrationTests.test_foreign_keys_restrict_missing_targets_and_existing_parent_deletion) ... ok\r\ntest_nullable_unassigned_link_and_positive_revisions (test_document_episode_migration.DocumentEpisodeMigrationTests.test_nullable_unassigned_link_and_positive_revisions) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.188s\r\n\r\nOK\r\n"
+     },
+     {
+       "label": "stage0+stage1:additive-sql-migration-review",
+       "passed": true,
+       "status": 0,
+-      "details": "\ntest_foreign_keys_reject_orphan_documents (test_migrations.StudioMigrationReview.test_foreign_keys_reject_orphan_documents) ... ok\r\ntest_migration_is_additive_idempotent (test_migrations.StudioMigrationReview.test_migration_is_additive_idempotent) ... ok\r\ntest_no_destructive_legacy_media_sql (test_migrations.StudioMigrationReview.test_no_destructive_legacy_media_sql) ... ok\r\ntest_rejects_unsupported_video_editing_entities (test_migrations.StudioMigrationReview.test_rejects_unsupported_video_editing_entities) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.007s\r\n\r\nOK\r\n"
++      "details": "\ntest_foreign_keys_reject_orphan_documents (test_migrations.StudioMigrationReview.test_foreign_keys_reject_orphan_documents) ... ok\r\ntest_migration_is_additive_idempotent (test_migrations.StudioMigrationReview.test_migration_is_additive_idempotent) ... ok\r\ntest_no_destructive_legacy_media_sql (test_migrations.StudioMigrationReview.test_no_destructive_legacy_media_sql) ... ok\r\ntest_rejects_unsupported_video_editing_entities (test_migrations.StudioMigrationReview.test_rejects_unsupported_video_editing_entities) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.005s\r\n\r\nOK\r\n"
+     },
+     {
+       "label": "stage2:handoff-sql-migration-review",
+       "passed": true,
+       "status": 0,
+-      "details": "\ntest_additive_idempotent_and_meta_gate (test_handoff_migrations.HandoffMigrationReview.test_additive_idempotent_and_meta_gate) ... ok\r\ntest_external_status_manual_only (test_handoff_migrations.HandoffMigrationReview.test_external_status_manual_only) ... ok\r\ntest_foreign_keys_reject_orphan (test_handoff_migrations.HandoffMigrationReview.test_foreign_keys_reject_orphan) ... ok\r\ntest_no_legacy_media_mutations (test_handoff_migrations.HandoffMigrationReview.test_no_legacy_media_mutations) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.011s\r\n\r\nOK\r\n"
++      "details": "\ntest_additive_idempotent_and_meta_gate (test_handoff_migrations.HandoffMigrationReview.test_additive_idempotent_and_meta_gate) ... ok\r\ntest_external_status_manual_only (test_handoff_migrations.HandoffMigrationReview.test_external_status_manual_only) ... ok\r\ntest_foreign_keys_reject_orphan (test_handoff_migrations.HandoffMigrationReview.test_foreign_keys_reject_orphan) ... ok\r\ntest_no_legacy_media_mutations (test_handoff_migrations.HandoffMigrationReview.test_no_legacy_media_mutations) ... ok\r\n\r\n----------------------------------------------------------------------\r\nRan 4 tests in 0.008s\r\n\r\nOK\r\n"
+     },
+     {
+       "label": "stage5:next-route-syntax:app/materials/route.ts",
+diff --git a/tests/dashboard-shell.test.mjs b/tests/dashboard-shell.test.mjs
+index abd294e..2a184f7 100644
+--- a/tests/dashboard-shell.test.mjs
++++ b/tests/dashboard-shell.test.mjs
+@@ -19,7 +19,7 @@ function harness(search,{headFixture=false}={}){
+  const projects=[{id:'a',title:'First',kind:'series'},{id:'b',title:'Second',kind:'series'}];
+  const api={listProjects:async()=>{calls.push(['projects']);return projects;},newIdempotencyKey:()=> 'fixture'};
+  const symbols=new Proxy({__esModule:true,default:'Component'},{get:(o,k)=>k in o?o[k]:String(k)});
+- const importModule=name=>name==='react'?react:name==='react/jsx-runtime'?require(name):name==='./workspace-feedback'?{useWorkspaceFeedback:()=>{const [notice,setNotice]=react.useState('');return[notice,setNotice,''];},WorkspaceFeedback:'WorkspaceFeedback'}:name==='./api'?{createWorkspaceApi:()=>api,readGraph:async(_api,pid)=>{calls.push(['graph',pid]);return{nodes:headFixture?[{id:'scene-b',version:1,kind:'scene',status:'accepted',content:{title:'Accepted old title',body:'fixture'}}]:[],canon_revision:0};},readHistory:async(_api,pid,id)=>{calls.push(['history',pid,id]);return headFixture?{item:{id,kind:'scene',head_version:2,accepted_version:1},versions:[{version:2,content:{title:'Pending new title',body:'fixture'}},{version:1,content:{title:'Accepted old title',body:'fixture'}}],decisions:[{version:2,action:'submit'},{version:1,action:'accept'}]}:{item:{id,kind:'scene',head_version:1,accepted_version:null},versions:[{version:1,content:{title:id,body:'fixture'}}]};}}:name==='./dashboard-target.mjs'?dashboardTarget:name==='./model'?{relatedScenes:()=>[],emptyContent:()=>({title:'',body:''}),kindLabels:{},safeMedia:()=>null}:name==='./workflow-navigation.mjs'?{workflowStages:[],workflowStage:view=>view}:name==='./intro-session.mjs'?{markIntroSession(){}}:name==='./item-inspector'?{__esModule:true,default:'ItemInspector'}:symbols;
++ const importModule=name=>name==='react'?react:name==='react/jsx-runtime'?require(name):name==='./workspace-feedback'?{useWorkspaceFeedback:()=>{const [notice,setNotice]=react.useState('');return[notice,setNotice,''];},WorkspaceFeedback:'WorkspaceFeedback'}:name==='./api'?{createWorkspaceApi:()=>api,readGraph:async(_api,pid)=>{calls.push(['graph',pid]);return{nodes:headFixture?[{id:'scene-b',version:1,kind:'scene',status:'accepted',content:{title:'Accepted old title',body:'fixture'}}]:[],canon_revision:0};},readHistory:async(_api,pid,id)=>{calls.push(['history',pid,id]);return headFixture?{item:{id,kind:'scene',head_version:2,accepted_version:1},versions:[{version:2,content:{title:'Pending new title',body:'fixture'}},{version:1,content:{title:'Accepted old title',body:'fixture'}}],decisions:[{version:2,action:'submit'},{version:1,action:'accept'}]}:{item:{id,kind:'scene',head_version:1,accepted_version:null},versions:[{version:1,content:{title:id,body:'fixture'}}]};}}:name==='./dashboard-target.mjs'?dashboardTarget:name==='./model'?{relatedScenes:()=>[],emptyContent:()=>({title:'',body:''}),kindLabels:{},safeMedia:()=>null}:name==='./project-directory.mjs'?{directoryKindLabel:kind=>kind||'项目'}:name==='./workflow-navigation.mjs'?{workflowStages:[],workflowStage:view=>view}:name==='./intro-session.mjs'?{markIntroSession(){}}:name==='./item-inspector'?{__esModule:true,default:'ItemInspector'}:symbols;
+  const window={location,history,addEventListener:(name,fn)=>events[name]=fn,removeEventListener:name=>delete events[name],matchMedia:()=>({matches:false,addEventListener(){},removeEventListener(){}})};
+  const exports={};new Function('require','exports','window','document','sessionStorage','requestAnimationFrame',ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,target:ts.ScriptTarget.ES2022}}).outputText)(importModule,exports,window,{activeElement:null,querySelector:()=>null},{},fn=>fn());
+  function render(){cursor=0;dirty=false;tree=exports.default({api});return tree;}
+@@ -45,3 +45,20 @@ test('busy state blocks dashboard navigation and home refresh has its own key',a
+ test('dashboard pending and recent latest rows open pending v2 rather than accepted graph v1',async()=>{
+  const h=harness('?view=home',{headFixture:true});await h.settle();h.find('WorkspaceModules').props.onDashboardOpen('b','canvas','scene-b');await h.settle();const inspector=h.find('ItemInspector');assert.equal(inspector.props.item.version,2);assert.equal(inspector.props.item.content.title,'Pending new title');assert.equal(inspector.props.item.status,'pending');assert.match(h.location.search,/head=1/);
+ });
++
++
++test('project switching preserves active feature and protects dirty and busy work',async()=>{
++ const h=harness('?view=prompts&project=a');await h.settle();
++ h.find('WorkspaceModules').props.onDirty(true);await h.settle();h.find('ProjectSwitcher').props.onChoose({id:'b'});await h.settle();
++ assert.equal(h.find('AlertDialog').props.open,true);assert.match(h.location.search,/project=a/);
++ h.find('AlertDialog').props.onOpenChange(false);await h.settle();assert.equal(h.find('WorkspaceModules').props.project.id,'a');
++ h.find('ProjectSwitcher').props.onChoose({id:'b'});await h.settle();h.find('AlertDialogAction').props.onClick();await h.settle();
++ assert.equal(h.find('WorkspaceModules').props.project.id,'b');assert.equal(h.find('WorkspaceModules').props.view,'prompts');
++ h.find('WorkspaceModules').props.onBusy(true);await h.settle();h.find('ProjectSwitcher').props.onChoose({id:'a'});await h.settle();assert.equal(h.find('WorkspaceModules').props.project.id,'b');
++});
++test('peer features use guarded routing and respond to browser Back',async()=>{
++ const h=harness('?view=screenplay&project=a');await h.settle();h.find('WorkspaceModules').props.onDirty(true);await h.settle();
++ h.find('ProjectNavigation').props.onNavigate('planning');await h.settle();assert.equal(h.find('AlertDialog').props.open,true);
++ h.find('AlertDialogAction').props.onClick();await h.settle();assert.equal(h.find('WorkspaceModules').props.view,'planning');assert.match(h.location.search,/project=a/);
++ h.location.search='?view=relations&project=a';h.events.popstate();await h.settle();assert.equal(h.find('WorkspaceModules').props.view,'relations');
++});
+diff --git a/tests/project-content-ui.test.mjs b/tests/project-content-ui.test.mjs
+new file mode 100644
+index 0000000..6262a46
+--- /dev/null
++++ b/tests/project-content-ui.test.mjs
+@@ -0,0 +1,60 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import {readFileSync} from 'node:fs';
++import {createRequire} from 'node:module';
++import ts from 'typescript';
++import * as recovery from '../components/workspace/document-editor-recovery.mjs';
++import * as production from '../components/workspace/production-workspace-ux.mjs';
++
++const require=createRequire(import.meta.url);
++const source=file=>readFileSync(new URL('../components/workspace/'+file,import.meta.url),'utf8');
++const walk=node=>Array.isArray(node)?node.flatMap(walk):node&&typeof node==='object'?[node,...walk(node.props?.children)]:[];
++const text=node=>Array.isArray(node)?node.map(text).join(''):node&&typeof node==='object'?text(node.props?.children):typeof node==='string'?node:'';
++function harness(file,{docs=[],saved=null}={}){
++ let cursor=0,tree,props;const states=[],effects=[],requests=[],attempts=[],dirty=[];
++ const storage=new Map(saved?[['cw-document-pending:project',JSON.stringify(saved)]]:[]);
++ const sessionStorage={getItem:key=>storage.get(key)||null,setItem:(key,value)=>storage.set(key,value),removeItem:key=>storage.delete(key)};
++ const react={useState(initial){const i=cursor++;if(!(i in states))states[i]=typeof initial==='function'?initial():initial;return[states[i],value=>{states[i]=typeof value==='function'?value(states[i]):value;}];},useRef(initial){const i=cursor++;if(!(i in states))states[i]={current:initial};return states[i];},useEffect(fn,deps){const i=cursor++;if(!states[i]||deps.some((dep,n)=>dep!==states[i][n])){states[i]=deps;effects.push(fn);}}};
++ const ownerRequest=async path=>{requests.push(path);if(path.startsWith('/api/studio/documents?')){const q=new URL('http://local'+path).searchParams;return docs.slice(Number(q.get('offset')),Number(q.get('offset'))+Number(q.get('limit')));}if(path.startsWith('/api/studio/documents/'))return docs.find(d=>path==='/api/studio/documents/'+d.id);if(path.startsWith('/api/studio/handoffs?'))return [];throw Error('Unexpected request '+path);};
++ const names=new Proxy({},{get:(_,key)=>String(key)});
++ const imports=name=>name==='react'?react:name==='react/jsx-runtime'?require(name):name==='./document-editor-recovery.mjs'?recovery:name==='./production-workspace-ux.mjs'?production:name==='./advanced-api'?{ownerRequest,errorMessage:e=>e.message,isKnownRejection:()=>false}:name==='./document-editor'?{default:'DocumentEditor'}:name==='./creative-structure'?{default:'CreativeStructure'}:name==='./episode-shot-plan'?{default:'EpisodeShotPlan'}:name==='./development-plan-list'?{default:'DevelopmentPlanList'}:name==='./markdown-content'?{default:'MarkdownContent'}:name==='./project-relations'?{HandoffAssetReferences:'HandoffAssetReferences'}:names;
++ const exported={};new Function('require','exports','sessionStorage',ts.transpileModule(source(file),{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,target:ts.ScriptTarget.ES2022}}).outputText)(imports,exported,sessionStorage);
++ props={project:{id:'project',kind:'drama'},api:{},stage:'story',items:[],acceptedItems:[],graph:null,candidates:false,onCandidates(){},onError(){},onNotice(){},onDirty:value=>dirty.push(value),onBusy(){},onSelect(){},onCreateItem(){},onNavigate(){},onAttempt:fn=>attempts.push(fn)};
++ const render=overrides=>{props={...props,...overrides};cursor=0;tree=exported.default(props);return tree;};
++ const settle=async()=>{for(const fn of effects.splice(0))fn();for(let i=0;i<8;i++)await Promise.resolve();return render();};
++ render();return{render,settle,requests,attempts,dirty,nodes:()=>walk(tree),button:label=>walk(tree).find(n=>n.type==='Button'&&text(n)===label),byLabel:label=>walk(tree).find(n=>n.props?.['aria-label']===label)};
++}
++
++test('story begins with one document editor and planning remains its own reachable product stage',()=>{
++ const ui=harness('production-workspace.tsx');
++ assert.equal(ui.nodes().filter(n=>n.type==='DocumentEditor').length,1);
++ assert.equal(ui.nodes().filter(n=>n.type==='CreativeStructure'||n.type==='EpisodeShotPlan'||n.type==='ProjectRelations').length,0);
++ assert.ok(ui.button('新建大纲'));assert.ok(ui.button('新建章节'));assert.ok(ui.button('新建场次'));assert.ok(ui.button('新建剧集'));
++ assert.equal(ui.nodes().filter(n=>n.type==='details').length,0);
++ ui.render({stage:'planning'});assert.equal(ui.nodes().filter(n=>n.type==='DevelopmentPlanList').length,1);assert.equal(ui.nodes().filter(n=>n.type==='DocumentEditor').length,0);
++ ui.render({stage:'storyboard'});assert.equal(ui.nodes().filter(n=>n.type==='CreativeStructure').length,1);
++});
++
++test('document directory keeps later pages searchable and selection waits for the dirty-navigation guard',async()=>{
++ const docs=Array.from({length:121},(_,i)=>({id:'doc-'+i,project_id:'project',name:'文稿 '+i,kind:'script',current_revision:1,body:'正文 '+i}));
++ const ui=harness('document-editor.tsx',{docs});await ui.settle();
++ assert.equal(ui.nodes().filter(n=>n.props?.className==='cw-document-record').length,121);
++ ui.byLabel('搜索文稿').props.onChange({target:{value:'文稿 120'}});ui.render();
++ assert.equal(ui.nodes().filter(n=>n.props?.className==='cw-document-record').length,1);
++ const row=ui.nodes().find(n=>n.props?.className==='cw-document-record');row.props.onClick();
++ assert.equal(ui.attempts.length,1);assert.ok(!ui.requests.includes('/api/studio/documents/doc-120'));
++ ui.attempts.shift()();await ui.settle();
++ assert.ok(ui.requests.includes('/api/studio/documents/doc-120'));
++ assert.ok(ui.nodes().some(n=>n.type==='Textarea'&&n.props.value==='正文 120'));
++});
++
++test('new document types are direct choices while a recovered write keeps its editor protected',async()=>{
++ const ui=harness('document-editor.tsx');await ui.settle();ui.button('新建文稿').props.onClick();ui.attempts.shift()();ui.render();
++ assert.equal(ui.nodes().filter(n=>n.type==='NativeSelect'||n.type==='select').length,0);
++ const group=ui.byLabel('文稿类型');assert.ok(group);
++ walk(group).find(n=>n.type==='Button'&&text(n)==='故事').props.onClick();ui.render();assert.equal(ui.dirty.at(-1),true);
++ const pending={kind:'create',projectId:'project',input:{project_id:'project',name:'恢复标题',kind:'script',body:'未确认的正文'},key:'original-key'};
++ const recovered=harness('document-editor.tsx',{saved:pending});await recovered.settle();
++ assert.equal(recovered.nodes().find(n=>n.type==='fieldset'&&n.props.className==='cw-document-layout').props.disabled,true);
++ assert.ok(recovered.nodes().some(n=>n.type==='Textarea'&&n.props.readOnly&&n.props.value==='未确认的正文'));
++});
+diff --git a/tests/project-relations-ui.test.mjs b/tests/project-relations-ui.test.mjs
+new file mode 100644
+index 0000000..020066b
+--- /dev/null
++++ b/tests/project-relations-ui.test.mjs
+@@ -0,0 +1,92 @@
++import test,{after} from 'node:test';
++import assert from 'node:assert/strict';
++import {mkdtemp,rm,readFile} from 'node:fs/promises';
++import {fileURLToPath,pathToFileURL} from 'node:url';
++import path from 'node:path';
++import {build} from 'esbuild';
++import React from 'react';
++import {renderToStaticMarkup} from 'react-dom/server';
++import ts from 'typescript';
++import {projectRelations} from '../components/workspace/project-relations.mjs';
++
++const site=fileURLToPath(new URL('..',import.meta.url));
++const temp=await mkdtemp(path.join(site,'node_modules','.relations-ui-test-'));
++after(()=>rm(temp,{recursive:true,force:true}));
++const entry=path.join(temp,'relations.mjs');
++await build({entryPoints:[path.join(site,'components/workspace/project-relations.tsx')],bundle:true,packages:'external',platform:'node',format:'esm',outfile:entry,jsx:'automatic',logLevel:'silent',plugins:[{name:'ui-elements',setup(builder){
++ builder.onResolve({filter:/^@\/components\/ui\//},args=>({path:args.path,namespace:'test-ui'}));
++ builder.onLoad({filter:/.*/,namespace:'test-ui'},()=>({contents:"import {createElement} from 'react'; export function Button({variant,size,...props}){return createElement('button',props)}; export const Input='input';",loader:'js',resolveDir:site}));
++ builder.onLoad({filter:/\.css$/},()=>({contents:'',loader:'css'}));
++ }}]});
++const {default:Relations,relationBrowser,HandoffAssetReferences}=await import(pathToFileURL(entry).href);
++const hash='a'.repeat(64),asset='b'.repeat(64);
++const record=(id,kind,title,spec={},sources=[])=>({id,project_id:'project',branch:'main',timeline:'main',kind,version:1,sha256:hash,status:'accepted',content:{title,body:'',spec,fields:{},sources}});
++const graph={project_id:'project',perspective:'author',canon_revision:3,nodes:[record('role','character','旅人'),record('scene','scene','夜渡',{},[{kind:'item',item_id:'role',version:2,sha256:hash},{kind:'document',item_id:'source-doc',version:7}]),record('scene-other','scene','夜渡') ]};
++const props={projectId:'project',graph,onSelect:()=>{},onAttempt:action=>action()};
++
++test('relations renders once as a visible product surface with direct search and type controls',()=>{
++ const html=renderToStaticMarkup(React.createElement(Relations,props));
++ assert.equal((html.match(/class="cw-project-relations"/g)||[]).length,1);
++ assert.doesNotMatch(html,/<details|<summary|<select|项目关系查阅/);
++ assert.match(html,/aria-label="记录类型"/);assert.match(html,/搜索关系记录/);
++ assert.match(html,/aria-label="当前记录关系"/);assert.match(html,/打开记录/);
++ assert.doesNotMatch(html,/冻结资产引用/);
++ const candidateScope=renderToStaticMarkup(React.createElement(Relations,{...props,candidates:true,onCandidates:()=>{}}));
++ assert.match(candidateScope,/aria-pressed="true">包含候选/);
++});
++
++test('search and type changes cannot keep an invisible stale focused record',()=>{
++ const data=projectRelations('project',graph),before=JSON.stringify(data);
++ assert.equal(relationBrowser(data,'all','','scene-other').focus.id,'scene-other');
++ assert.equal(relationBrowser(data,'character','','scene').focus.id,'role');
++ assert.equal(relationBrowser(data,'all','SCENE-OTHER','role').focus.id,'scene-other');
++ assert.equal(relationBrowser(data,'all','不存在','scene').focus,undefined);
++ assert.deepEqual(relationBrowser(data,'scene','夜渡','role').records.map(record=>record.id),['scene','scene-other']);
++ assert.equal(JSON.stringify(data),before);
++});
++
++test('record details preserve fixed versus current versions and unresolved external provenance',()=>{
++ const before=JSON.stringify(graph),html=renderToStaticMarkup(React.createElement(Relations,props));
++ assert.match(html,/固定来源 v2/);assert.match(html,/当前 v1/);assert.match(html,/与当前显示版本不同/);
++ assert.match(html,/固定 v7/);assert.match(html,/准确历史版本尚未展开/);
++ assert.match(html,/尚无结构化分集/);assert.match(html,/尚无镜头计划/);
++ assert.equal(JSON.stringify(graph),before);
++ const foreign=renderToStaticMarkup(React.createElement(Relations,{...props,graph:{...graph,project_id:'foreign'}}));
++ assert.match(foreign,/关系尚未读取/);assert.doesNotMatch(foreign,/夜渡|旅人/);
++});
++
++test('selected handoff evidence remains frozen and rejects wrong project or branch',()=>{
++ const handoff={project_id:'project',stale:true,manifest:{project:{id:'project'},assets:[{frame_asset_id:asset,usage:'服装'}]}},before=JSON.stringify(handoff);
++ const render=value=>renderToStaticMarkup(React.createElement(HandoffAssetReferences,{projectId:'project',graph,handoff:value}));
++ const html=render(handoff);assert.match(html,/来源已有变化/);assert.ok(html.includes(asset));assert.match(html,/服装/);
++ for(const value of [{...handoff,project_id:'foreign'},{...handoff,manifest:{...handoff.manifest,production:{branch:'other',timeline:'main',assets:[asset]}}}]){
++  const rejected=render(value);assert.doesNotMatch(rejected,new RegExp(asset));assert.match(rejected,/交接范围与当前快照不同/);
++ }
++ assert.equal(JSON.stringify(handoff),before);
++});
++
++test('production composition cannot reintroduce duplicate project keys that retain stale relation DOM',async()=>{
++ // The former ProjectRelations key={pid} and DocumentEditor key={project.id}
++ // were sibling aliases of the same key. Async loading inserts caused React to
++ // retain old relation DOM. Inspect actual JSX sibling groups, not string count.
++ const file=await readFile(path.join(site,'components/workspace/production-workspace.tsx'),'utf8');
++ const tree=ts.createSourceFile('production-workspace.tsx',file,ts.ScriptTarget.Latest,true,ts.ScriptKind.TSX);
++ function keyOf(node){
++  if(ts.isJsxExpression(node)&&node.expression)return keyOf(node.expression);
++  if(ts.isBinaryExpression(node)&&node.operatorToken.kind===ts.SyntaxKind.AmpersandAmpersandToken)return keyOf(node.right);
++  const opening=ts.isJsxElement(node)?node.openingElement:ts.isJsxSelfClosingElement(node)?node:null;
++  if(!opening)return null;
++  const key=opening.attributes.properties.find(attr=>ts.isJsxAttribute(attr)&&attr.name.text==='key');
++  if(!key?.initializer)return null;
++  const value=ts.isJsxExpression(key.initializer)?key.initializer.expression?.getText(tree):key.initializer.getText(tree);
++  return value==='pid'||value==='project.id'?'project-identity':value;
++ }
++ function visit(node){
++  if(ts.isJsxElement(node)||ts.isJsxFragment(node)){
++   const keys=node.children.map(keyOf).filter(Boolean);
++   assert.equal(new Set(keys).size,keys.length,'Duplicate sibling keys at '+tree.getLineAndCharacterOfPosition(node.pos).line+': '+keys.join(', '));
++  }
++  ts.forEachChild(node,visit);
++ }
++ visit(tree);
++});
+diff --git a/tests/project-switcher.test.mjs b/tests/project-switcher.test.mjs
+new file mode 100644
+index 0000000..324cebf
+--- /dev/null
++++ b/tests/project-switcher.test.mjs
+@@ -0,0 +1,16 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import fs from 'node:fs';
++import ts from 'typescript';
++import {createRequire} from 'node:module';
++import * as directory from '../components/workspace/project-directory.mjs';
++import * as navigation from '../components/workspace/workflow-navigation.mjs';
++const require=createRequire(import.meta.url);
++const source=fs.readFileSync('components/workspace/project-navigation.tsx','utf8');
++const walk=node=>!node||typeof node!=='object'?[]:[node,...[node.props?.children].flat(Infinity).flatMap(walk)];
++const projects=Array.from({length:31},(_,i)=>({id:`p${i}`,title:`项目 ${i}`,description:i===28?'唯一雪山故事':'',kind:i%2?'film':'series'}));
++function harness(){let cursor=0,tree;const states=[],chosen=[];const react={useState(v){const i=cursor++;if(!(i in states))states[i]=v;return[states[i],v=>states[i]=typeof v==='function'?v(states[i]):v];},useMemo:fn=>fn(),useRef:v=>({current:v})};const symbols=new Proxy({},{get:(_,key)=>String(key)});const imports=name=>name==='react'?react:name==='react/jsx-runtime'?require(name):name==='./project-directory.mjs'?directory:name==='./workflow-navigation.mjs'?navigation:symbols;const exports={};new Function('require','exports',ts.transpileModule(source,{compilerOptions:{module:ts.ModuleKind.CommonJS,jsx:ts.JsxEmit.ReactJSX,target:ts.ScriptTarget.ES2022}}).outputText)(imports,exports);const render=()=>{cursor=0;tree=exports.ProjectSwitcher({projects,project:projects[0],loaded:true,onChoose:p=>chosen.push(p.id)});return tree;};render();return{render,chosen,nodes:()=>walk(tree),find:label=>walk(tree).find(n=>n.props?.['aria-label']===label),dialog:()=>walk(tree).find(n=>n.type==='Dialog'),nav:props=>exports.ProjectNavigation(props)};}
++test('switcher searches entire directory beyond first page and returns exact project',()=>{const h=harness();h.dialog().props.onOpenChange(true);h.render();h.find('搜索切换项目').props.onChange({target:{value:'雪山'}});h.render();const cards=h.nodes().filter(n=>n.props?.className==='cw-project-switch-card');assert.equal(cards.length,1);cards[0].props.onClick();assert.deepEqual(h.chosen,['p28']);assert.equal(h.render().props.open,false);});
++test('switcher pagination preserves reachability and selecting current is a no-op',()=>{const h=harness();assert.equal(h.nodes().filter(n=>n.props?.className==='cw-project-switch-card').length,12);h.find('切换到项目：项目 0').props.onClick();assert.deepEqual(h.chosen,[]);h.find('下一页项目').props.onClick();h.render();assert.equal(h.find('上一页项目').props.disabled,false);assert.equal(h.nodes().filter(n=>n.props?.className==='cw-project-switch-card').length,12);});
++test('closing and reopening clears filters without switching projects',()=>{const h=harness();h.find('搜索切换项目').props.onChange({target:{value:'no match'}});h.render();assert.equal(h.nodes().filter(n=>n.props?.className==='cw-project-switch-card').length,0);h.find('关闭项目切换').props.onClick();h.dialog().props.onOpenChange(true);h.render();assert.equal(h.find('搜索切换项目').props.value,'');assert.deepEqual(h.chosen,[]);});
++test('all project functions are equal-level navigation with one exact active destination',()=>{const h=harness(),calls=[];const nodes=walk(h.nav({view:'planning',onNavigate:v=>calls.push(v)}));assert.equal(nodes.filter(n=>n.type==='Button').length,12);assert.equal(nodes.filter(n=>n.props?.['aria-current']==='page').length,1);for(const node of nodes.filter(n=>n.type==='Button'))node.props.onClick();assert.deepEqual(calls,navigation.workflowStages.map(s=>s.value));assert.ok(!nodes.some(n=>['details','select'].includes(n.type)));});
+diff --git a/tests/workflow-navigation.test.mjs b/tests/workflow-navigation.test.mjs
+index d42335c..fa463d6 100644
+--- a/tests/workflow-navigation.test.mjs
++++ b/tests/workflow-navigation.test.mjs
+@@ -2,15 +2,15 @@ import test from 'node:test';
+ import assert from 'node:assert/strict';
+ import {readFileSync} from 'node:fs';
+ import {workflowStages,workflowStage} from '../components/workspace/workflow-navigation.mjs';
+-test('four creative entries keep legacy tools accessible',()=>{
+- assert.deepEqual(workflowStages.map(x=>x.value),['screenplay','episodes','storyboard','prompts']);
+- for(const view of ['novel','review','tasks'])assert.equal(workflowStage(view),'screenplay');
++test('all project functions have distinct peer destinations',()=>{
++ assert.deepEqual(workflowStages.map(x=>x.value),['screenplay','episodes','storyboard','prompts','canvas','relations','novel','planning','review','tasks','production','delivery']);
++ for(const {value} of workflowStages)assert.equal(workflowStage(value),value);
+  assert.equal(workflowStage('delivery'),'delivery');assert.equal(workflowStage('storyboard'),'storyboard');assert.equal(workflowStage('canvas'),'canvas');
+ });
+-test('primary writing actions adapt to the project and retain separate review paths',()=>{
++test('writing actions remain visible and retain separate review paths',()=>{
+  const s=readFileSync('components/workspace/production-workspace.tsx','utf8');
+  for(const action of ["onCreateItem('outline')","onCreateItem('chapter')","onCreateItem('scene')","onNavigate('review')"])assert.ok(s.includes(action),action);
+- assert.match(s,/project.kind==='long_form'/);assert.match(s,/project.kind==='daily'/);
++ assert.doesNotMatch(s,/更多创作工具/);
+  const editor=readFileSync('components/workspace/document-editor.tsx','utf8');assert.ok(editor.includes('#review'));
+  const shell=readFileSync('components/workspace/workspace.tsx','utf8');
+  assert.match(shell,/allCanvasKinds\.filter/);assert.match(shell,/onCreateItem=\{kind => navigate/);
+@@ -25,4 +25,4 @@ test('existing editor keeps document contracts in progressive disclosure',()=>{c
+ test('workflow is actual document and external handoff, not synthetic media',()=>{const s=readFileSync('components/workspace/production-workspace.tsx','utf8');assert.match(s,/未上传或审核成片/);assert.match(s,/onAttempt/);assert.match(s,/source-item/);assert.match(s,/场次制作/);assert.match(s,/文字 \/ 图文资料/);assert.match(s,/persistHandoffRequest/);assert.doesNotMatch(s,/onAttempt\(\(\)=>onSelect\(/);});
+ test('legacy project switching clears stale text before loading and checks returned ownership',()=>{const s=readFileSync('studio-core/web/studio.js','utf8');const change=s.slice(s.indexOf('async function selectProject'),s.indexOf('function selectedOptions'));assert.match(change,/state.document=null/);assert.match(change,/state.editingText=null/);assert.match(change,/正在读取当前作品/);assert.match(s,/documentData.project_id!==state.projectId/);});
+ 
+-test('writing and story-item editing are mutually exclusive even for old item deep links',()=>{const s=readFileSync('components/workspace/workspace.tsx','utf8');assert.match(s,/route.view==='screenplay' && selectedOpen \? <section/);assert.match(s,/onClick=\{closeInspector\}>返回文稿写作/);assert.match(s,/if \(busyRef.current\)/);assert.match(s,/if \(dirtyRef.current\) setPendingNavigation/);assert.match(s,/setDirty\(false\); dirtyRef.current = false; next\?\.\(\)/);});
++test('writing and story-item editing are mutually exclusive even for old item deep links',()=>{const s=readFileSync('components/workspace/workspace.tsx','utf8');assert.match(s,/route.view==='screenplay' && selectedOpen \? <section/);assert.match(s,/onClick=\{closeInspector\}>返回文稿写作/);assert.match(s,/if \(busyRef.current\)/);assert.match(s,/if \(dirtyRef.current\) \{ navigationTrigger.current/);assert.match(s,/setDirty\(false\); dirtyRef.current = false; next\?\.\(\)/);});
+diff --git a/tests/workspace-unified-shell.test.mjs b/tests/workspace-unified-shell.test.mjs
+index d9c51eb..9d4a792 100644
+--- a/tests/workspace-unified-shell.test.mjs
++++ b/tests/workspace-unified-shell.test.mjs
+@@ -1,5 +1,5 @@
+ import test from 'node:test';import assert from 'node:assert/strict';import fs from 'node:fs';
+ const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url),'utf8'),shell=read('components/workspace/workspace.tsx'),css=read('components/workspace/workspace-shell.css'),actor=read('components/workspace/actor-wardrobe.tsx');
+-test('desktop navigation is on the left and every action keeps the guard',()=>{assert.match(shell,/<aside className="cw-sidebar" aria-label="主导航"/);assert.match(shell,/nav.filter\(n => \['home','projects','ip','materials'\]/);assert.match(shell,/onClick=\{\(\) => navigate/);assert.match(shell,/<Sheet open=\{mobileNav\}/);for(const label of ['连接','选题研发','高级工作台','声音工具'])assert.ok(shell.includes(label));assert.match(css,/--cw-shell-width:200px/);assert.match(css,/>\.cw-inspector\{grid-column:3;grid-row:1\}/);});
++test('desktop navigation is on the left and every action keeps the guard',()=>{assert.match(shell,/<aside className="cw-sidebar" aria-label="主导航"/);assert.match(shell,/nav.filter\(n => \['home','projects','ip','materials'\]/);assert.match(shell,/onClick=\{\(\) => navigate/);assert.match(shell,/<Sheet open=\{mobileNav\}/);for(const label of ['连接','创作规划','创作管理','声音'])assert.ok(shell.includes(label));assert.doesNotMatch(shell,/更多工具|更多创作工具/);assert.match(css,/--cw-shell-width:200px/);assert.match(css,/>\.cw-inspector\{grid-column:3;grid-row:1\}/);});
+ test('phone has a compact header and reachable navigation drawer',()=>{assert.match(css,/@media\(max-width:767px\)/);assert.match(css,/grid-template-rows:64px minmax\(0,1fr\)/);assert.match(css,/width:260px!important/);assert.match(shell,/aria-label="展开导航"/);});
+ test('actor codex remains below the portrait and tab changes keep local protection',()=>{assert.ok(actor.indexOf('className="cw-actor-introduction cw-actor-codex"')>actor.indexOf('cw-actor-visual-stage'));assert.doesNotMatch(actor,/<details className="cw-actor-biography"/);assert.match(actor,/attempt\(\(\)=>\{setEditingProfile\(false\);onTabSelect\(value\)/);assert.match(actor,/editingProfile \|\| blocked \|\| comparison/);assert.match(actor,/ref=\{contentRegion\}/);assert.match(actor,/expected_profile_version: info.character.profile_version/);});
