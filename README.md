@@ -114,6 +114,8 @@ node skills/cineweave-director/scripts/check-change-impact.mjs impact.json
 
 ## 维护与验证
 
+Studio 黑色看板、项目入口与演员衣橱的正式源码、验证和部署回执见 [2026-11-09 站点实施记录](tests/evaluations/studio-momentum-release-2026-11-09.md)。
+
 ```powershell
 npm run skills:sync
 npm run skills:sync:check
